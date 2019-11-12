@@ -1,32 +1,29 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "../forms-ns.js";
 
-import './item-list.less';
+import "./item-list.less";
+//@@viewOff:imports
 
 export default createReactClass({
-
   //@@viewOn:mixins
-  mixins: [
-    UU5.Common.BaseMixin,
-    UU5.Common.ElementaryMixin,
-    UU5.Common.SectionMixin
-  ],
+  mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.SectionMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -40,34 +37,32 @@ export default createReactClass({
       selectedItem: ns.css("item-list-selected uu5-common-bg")
     },
     defaults: {
-      childTagName: 'UU5.Forms.Select.Option'
+      childTagName: "UU5.Forms.Select.Option"
     }
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    allowTags: PropTypes.arrayOf(
-      PropTypes.string
-    )
+    allowTags: PropTypes.arrayOf(PropTypes.string)
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function () {
+  getDefaultProps: function() {
     return {
       allowTags: []
     };
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
-  changeValue (index, e, setStateCallback) {
-    let opt = {value: index, event: e, component: this, setStateCallback: setStateCallback};
-    if (typeof this.props.onChange === 'function') {
+  changeValue(index, e, setStateCallback) {
+    let opt = { value: index, event: e, component: this, setStateCallback: setStateCallback };
+    if (typeof this.props.onChange === "function") {
       this.props.onChange(opt);
     } else {
       this.onChangeDefault(opt);
@@ -75,7 +70,7 @@ export default createReactClass({
   },
 
   onChangeDefault(opt) {
-    typeof opt.setStateCallback === 'function' && opt.setStateCallback();
+    typeof opt.setStateCallback === "function" && opt.setStateCallback();
 
     return this;
   },
@@ -97,15 +92,18 @@ export default createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
+  //@@viewOn:overriding
   shouldChildRender_(child) {
     let childTagName = UU5.Common.Tools.getChildTagName(child);
     let defaultChildTagName = this.getDefault().childTagName;
     let childTagNames = this.props.allowTags.concat(defaultChildTagName);
     let result = childTagNames.indexOf(childTagName) > -1;
-    if (!result && (typeof child !== 'string' || child.trim())) {
-      if (childTagName) this.showError('childTagNotAllowed', [childTagName, this.getTagName(), childTagName, defaultChildTagName], { mixinName: 'UU5.Common.BaseMixin' });
-      else this.showError('childNotAllowed', [child, defaultChildTagName], { mixinName: 'UU5.Common.BaseMixin' });
+    if (!result && (typeof child !== "string" || child.trim())) {
+      if (childTagName)
+        this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagName], {
+          mixinName: "UU5.Common.BaseMixin"
+        });
+      else this.showError("childNotAllowed", [child, defaultChildTagName], { mixinName: "UU5.Common.BaseMixin" });
     }
     return result;
   },
@@ -115,15 +113,17 @@ export default createReactClass({
 
     if (this.props.value && this.props.value.find(value => value === child.props.value)) {
       props.selected = true;
-      props.className = props.className ? props.className + ' ' + this.getClassName().selectedItem : this.getClassName().selectedItem;
-      props.colorSchema = 'info';
+      props.className = props.className
+        ? props.className + " " + this.getClassName().selectedItem
+        : this.getClassName().selectedItem;
+      props.colorSchema = "info";
     }
 
     props.mainAttrs = props.mainAttrs || {};
-    props.mainAttrs.id = this.getId() + '-item-' + i;
+    props.mainAttrs.id = this.getId() + "-item-" + i;
 
     var childOnClick = props.onClick;
-    props.onClick = (opt) => {
+    props.onClick = opt => {
       this.changeValue(opt.value, opt.event, childOnClick);
     };
 
@@ -141,25 +141,21 @@ export default createReactClass({
   getRenderedChildrenNameList_() {
     return this._popover.getRenderedChildrenNameList();
   },
-  //@@viewOff:overridingMethods
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
-  _getHeader(){
+  //@@viewOn:private
+  _getHeader() {
     let result;
-    if(this.props.header) {
-      result = <div className={this.getClassName().header}>
-        {this.getHeader()}
-      </div>;
+    if (this.props.header) {
+      result = <div className={this.getClassName().header}>{this.getHeader()}</div>;
     }
     return result;
   },
 
-  _getFooter(){
+  _getFooter() {
     let result;
-    if(this.props.footer) {
-      result = <div className={this.getClassName().footer}>
-        {this.getFooter()}
-      </div>;
+    if (this.props.footer) {
+      result = <div className={this.getClassName().footer}>{this.getFooter()}</div>;
     }
     return result;
   },
@@ -167,7 +163,7 @@ export default createReactClass({
   _getMainProps() {
     let props = this.getMainPropsToPass();
 
-    props.ref_ = ref => this._popover = ref;
+    props.ref_ = ref => (this._popover = ref);
     props.forceRender = this.props.forceRender;
     props.disableBackdrop = true;
     props.shown = !this.isHidden();
@@ -178,15 +174,11 @@ export default createReactClass({
 
     return props;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
-  render: function () {
-    return (
-      <UU5.Bricks.Popover {...this._getMainProps()}>
-        {this.getChildren()}
-      </UU5.Bricks.Popover>
-    );
+  render: function() {
+    return <UU5.Bricks.Popover {...this._getMainProps()}>{this.getChildren()}</UU5.Bricks.Popover>;
   }
   //@@viewOn:render
 });

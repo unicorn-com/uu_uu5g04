@@ -11,6 +11,7 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import React from "react";
 import createReactClass from "create-react-class";
 import PropTypes from "prop-types";
@@ -18,6 +19,7 @@ import * as UU5 from "uu5g04";
 import Css from "./css.js";
 
 import ns from "../forms-ns.js";
+//@@viewOff:imports
 
 const AnimatedContainer = createReactClass({
   //@@viewOn:mixins
@@ -61,7 +63,7 @@ const AnimatedContainer = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     this._childContainerRef = React.createRef();
     return { opened: false, hidden: true, height: null };
@@ -93,7 +95,7 @@ const AnimatedContainer = createReactClass({
       }
     }
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   toggle() {
@@ -115,11 +117,11 @@ const AnimatedContainer = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOn:private
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {

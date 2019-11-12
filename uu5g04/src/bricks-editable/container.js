@@ -1,16 +1,17 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import React from "react";
 import PropTypes from "prop-types";
 import createReactClass from "create-react-class";
@@ -22,6 +23,7 @@ import ns from "./bricks-editable-ns.js";
 import EditationPanel from "./internal/editation-panel.js";
 import Lsi from "./bricks-editable-lsi.js";
 import Css from "./internal/css.js";
+//@@viewOff:imports
 
 const DEFAULT_PROPS_MAP = {
   contentEditable: false,
@@ -227,7 +229,7 @@ export const Container = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     this._defaultProps = { ...DEFAULT_PROPS_MAP };
     let values = this.props.component.getEditablePropsValues(Object.keys(this._defaultProps));
@@ -250,18 +252,18 @@ export const Container = createReactClass({
       showRichTextToolbar: false
     };
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
+  //@@viewOn:overriding
   getPropsToSave() {
     return this._getPropsToSave();
   },
-  //@@viewOff:overridingMethods
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   // props actions
   _onEndEditation() {
     this.props.component.endEditation(this._getPropsToSave());
@@ -407,7 +409,7 @@ export const Container = createReactClass({
   },
 
   _getHeaderMargin() {
-    let level = parseInt(this.state.level[0])
+    let level = parseInt(this.state.level[0]);
     if (isNaN(level)) return 32;
 
     switch (level) {
@@ -420,7 +422,7 @@ export const Container = createReactClass({
         return 32;
     }
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
@@ -550,8 +552,8 @@ export const Container = createReactClass({
             value: this._useContent
               ? this.state.content
               : this.state.children
-                ? "<uu5string />" + this.state.children
-                : undefined,
+              ? "<uu5string />" + this.state.children
+              : undefined,
             getToolbar: this._getRichTextToolbar,
             onFocus: this._showRichTextToolbar,
             onBlur: this._hideRichTextToolbar

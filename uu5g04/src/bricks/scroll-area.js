@@ -1,33 +1,31 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import ResizeObserver from "./resize-observer.js";
 
-import './scroll-area.less';
+import "./scroll-area.less";
+//@@viewOff:imports
 
 export const ScrollArea = createReactClass({
-
   //@@viewOn:mixins
-  mixins: [
-    UU5.Common.BaseMixin,
-    UU5.Common.ContentMixin
-  ],
+  mixins: [UU5.Common.BaseMixin, UU5.Common.ContentMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -68,7 +66,7 @@ export const ScrollArea = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
       hasScrollbar: false
@@ -80,13 +78,13 @@ export const ScrollArea = createReactClass({
     this._measureScrollbar();
 
     if (this._domNode) {
-      UU5.Environment.EventListener.addEvent(this._domNode, 'wheel', this.getId(), this._onWheel);
+      UU5.Environment.EventListener.addEvent(this._domNode, "wheel", this.getId(), this._onWheel);
     }
   },
 
   componentWillUnmount() {
     if (this._domNode) {
-      UU5.Environment.EventListener.removeEvent(this._domNode, 'wheel', this.getId());
+      UU5.Environment.EventListener.removeEvent(this._domNode, "wheel", this.getId());
     }
   },
 
@@ -94,7 +92,7 @@ export const ScrollArea = createReactClass({
     this._domNode = this.findDOMNode();
     this._measureScrollbar();
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   getScrollTop() {
@@ -110,13 +108,13 @@ export const ScrollArea = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _onWheel(e) {
     if (this.state.hasScrollbar) {
-      if (e.deltaY > 0 && (this._domNode.offsetHeight + this._domNode.scrollTop) >= this._domNode.scrollHeight) {
+      if (e.deltaY > 0 && this._domNode.offsetHeight + this._domNode.scrollTop >= this._domNode.scrollHeight) {
         e.preventDefault();
       } else if (e.deltaY < 0 && this._domNode.scrollTop <= 0) {
         e.preventDefault();
@@ -125,7 +123,8 @@ export const ScrollArea = createReactClass({
   },
 
   _measureScrollbar() {
-    let hasScrollbar = this._domNode && this._domNode.scrollHeight > Math.ceil(this._domNode.getBoundingClientRect().height);
+    let hasScrollbar =
+      this._domNode && this._domNode.scrollHeight > Math.ceil(this._domNode.getBoundingClientRect().height);
 
     if (this.state.hasScrollbar && !hasScrollbar) {
       this.setState({ hasScrollbar: false });
@@ -184,7 +183,7 @@ export const ScrollArea = createReactClass({
   _useCustomScrollbar() {
     return !UU5.Common.Tools.isMobileOrTablet && !UU5.Common.Tools.isMobileIOS();
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {

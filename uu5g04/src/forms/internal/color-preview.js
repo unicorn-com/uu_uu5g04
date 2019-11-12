@@ -11,6 +11,7 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import React from "react";
 import PropTypes from "prop-types";
 import createReactClass from "create-react-class";
@@ -18,6 +19,7 @@ import * as UU5 from "uu5g04";
 import Css from "./css.js";
 
 import ns from "../forms-ns.js";
+//@@viewOff:imports
 
 const SIZES = {
   s: { width: 72, height: 24, squareSize: 8 },
@@ -154,17 +156,17 @@ const ColorPreview = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOn:private
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {

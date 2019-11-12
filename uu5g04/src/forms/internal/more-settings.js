@@ -11,6 +11,7 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import React from "react";
 import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
@@ -18,6 +19,7 @@ import * as UU5 from "uu5g04";
 import ns from "../forms-ns.js";
 import AnimatedContainer from "./animated-container.js";
 import Css from "./css.js";
+//@@viewOff:imports
 
 const MoreSettings = createReactClass({
   mixins: [UU5.Common.BaseMixin],

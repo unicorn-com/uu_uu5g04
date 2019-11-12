@@ -16,7 +16,7 @@ class ScreenSize {
     s: S,
     m: M,
     l: L,
-    xl: XL,
+    xl: XL
   };
 
   static LISTENER_LIST = [];
@@ -38,31 +38,31 @@ class ScreenSize {
     }
 
     return result;
-  };
+  }
 
   static register(listener) {
     if (typeof listener === "function") {
       this.LISTENER_LIST.push(listener);
     }
-  };
+  }
 
   static unregister(listener) {
     let index = this.LISTENER_LIST.indexOf(listener);
     if (index > -1) {
       this.LISTENER_LIST.splice(index, 1);
     }
-  };
+  }
 
   static setSize(screenSize) {
     if (actualScreenSize !== screenSize) {
       actualScreenSize = screenSize;
       this.LISTENER_LIST.forEach(listener => listener(screenSize));
     }
-  };
+  }
 
   static getSize() {
     return actualScreenSize;
-  };
+  }
 
   static splitColumns(colWidth) {
     let result = {};
@@ -71,7 +71,7 @@ class ScreenSize {
       result[splitter[0]] = splitter[1];
     });
     return result;
-  };
+  }
 
   static getMediaQueries(screenSize, inner) {
     let result;
@@ -105,7 +105,7 @@ class ScreenSize {
     }
 
     return result;
-  };
+  }
 
   static getMinMediaQueries(screenSize, inner) {
     let result;
@@ -134,7 +134,7 @@ class ScreenSize {
     }
 
     return result;
-  };
+  }
 
   static getMaxMediaQueries(screenSize, inner) {
     let result;
@@ -163,7 +163,7 @@ class ScreenSize {
     }
 
     return result;
-  };
+  }
 }
 
 let actualScreenSize = ScreenSize.countSize();
@@ -171,7 +171,6 @@ let actualScreenSize = ScreenSize.countSize();
 //
 // window.addEventListener("resize", resizeFn);
 // window.addEventListener("orientationchange", resizeFn);
-
 
 export { ScreenSize };
 export default ScreenSize;

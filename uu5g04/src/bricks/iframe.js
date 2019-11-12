@@ -1,41 +1,37 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
-import Loading from './loading.js';
+import Loading from "./loading.js";
 
-import './iframe.less';
+import "./iframe.less";
+//@@viewOff:imports
 
 export const Iframe = createReactClass({
-
   //@@viewOn:mixins
-  mixins: [
-    UU5.Common.BaseMixin,
-    UU5.Common.PureRenderMixin,
-    UU5.Common.ElementaryMixin,
-    UU5.Common.NestingLevelMixin
-  ],
+  mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, UU5.Common.NestingLevelMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
   statics: {
     tagName: ns.name("Iframe"),
-    nestingLevelList: UU5.Environment.getNestingLevelList('bigBoxCollection', 'box'),
+    nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
       main: ns.css("iframe"),
       inline: ns.css("iframe-inline"),
@@ -48,7 +44,7 @@ export const Iframe = createReactClass({
       loadingTimeout: [3000, 3000, 4000, 8000]
     },
     warnings: {
-      cors: 'Url %s cannot be automatically resized because of another origin.'
+      cors: "Url %s cannot be automatically resized because of another origin."
     }
   },
   //@@viewOff:statics
@@ -67,7 +63,7 @@ export const Iframe = createReactClass({
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      src: 'https://unicorn.com',
+      src: "https://unicorn.com",
       resize: false,
       height: "250",
       syncTimeout: 1,
@@ -77,7 +73,7 @@ export const Iframe = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
       loading: this.props.resize,
@@ -97,7 +93,7 @@ export const Iframe = createReactClass({
     this._timeout && clearTimeout(this._timeout);
     this._resizeTimeout && clearTimeout(this._resizeTimeout);
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   resize(setStateCallback) {
@@ -111,10 +107,10 @@ export const Iframe = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _resize(counter, setStateCallback) {
     let height, width;
     counter = counter || 0;
@@ -137,39 +133,48 @@ export const Iframe = createReactClass({
 
         this._resizeTimeout && clearTimeout(this._resizeTimeout);
       } catch (ex) {
-        this.showWarning('cors', this.props.src.replace(this.getDefault().regexpBearer, 'Bearer...'), { context: { error: ex } });
+        this.showWarning("cors", this.props.src.replace(this.getDefault().regexpBearer, "Bearer..."), {
+          context: { error: ex }
+        });
         this.setAsyncState({ loading: false, height: this.props.height }, setStateCallback);
       }
     }
 
     if (height || width) {
-      this.setAsyncState({
-        loading: false,
-        height: height,
-        width: null
-      }, () => {
-        let body = this._iframe.contentWindow.document.body;
-        this.setAsyncState({ height: body.scrollHeight, width: body.scrollWidth }, setStateCallback);
-      });
+      this.setAsyncState(
+        {
+          loading: false,
+          height: height,
+          width: null
+        },
+        () => {
+          let body = this._iframe.contentWindow.document.body;
+          this.setAsyncState({ height: body.scrollHeight, width: body.scrollWidth }, setStateCallback);
+        }
+      );
     } else {
-      typeof setStateCallback === 'function' && setStateCallback();
+      typeof setStateCallback === "function" && setStateCallback();
     }
   },
 
   _onLoad(e) {
     if (this.state.loading) {
       this.resize(() => {
-        this.props.mainAttrs && typeof this.props.mainAttrs.onLoad === 'function' && typeof this.props.mainAttrs.onLoad(e);
+        this.props.mainAttrs &&
+          typeof this.props.mainAttrs.onLoad === "function" &&
+          typeof this.props.mainAttrs.onLoad(e);
       });
     } else {
-      this.props.mainAttrs && typeof this.props.mainAttrs.onLoad === 'function' && typeof this.props.mainAttrs.onLoad(e);
+      this.props.mainAttrs &&
+        typeof this.props.mainAttrs.onLoad === "function" &&
+        typeof this.props.mainAttrs.onLoad(e);
     }
 
     return this;
   },
 
   _getIframeId() {
-    return this.getId() + '-iframe';
+    return this.getId() + "-iframe";
   },
 
   _fillUnits(value) {
@@ -182,7 +187,7 @@ export const Iframe = createReactClass({
       let splitter = value.match(this.getDefault("regexpUnits"));
       let size = splitter[1];
       let unit = splitter[2] || "px";
-      result = [size, unit].join("")
+      result = [size, unit].join("");
     }
 
     return result;
@@ -219,14 +224,14 @@ export const Iframe = createReactClass({
 
   _getMainAttrs() {
     let mainAttrs = this.getMainAttrs();
-    this.props.inline && (mainAttrs.className += ' ' + this.getClassName().inline);
+    this.props.inline && (mainAttrs.className += " " + this.getClassName().inline);
     return mainAttrs;
   },
 
   _isUrl(string) {
     return !!string.match(this.getDefault().regexpIsUrl);
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {

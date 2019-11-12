@@ -11,19 +11,20 @@
  * at the email: info@unicorn.com.
  */
 
-
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
-import Header from './modal-header.js';
-import Body from './modal-body.js';
-import Footer from './modal-footer.js';
+import Header from "./modal-header.js";
+import Body from "./modal-body.js";
+import Footer from "./modal-footer.js";
 import Css from "./internal/css.js";
 
-import './modal.less';
+import "./modal.less";
+//@@viewOff:imports
 
 const MOUNT_CONTENT_VALUES = {
   onFirstRender: "onFirstRender",
@@ -37,7 +38,6 @@ const getMountContent = (props = {}, state = {}) => {
 };
 
 export const Modal = createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -52,12 +52,14 @@ export const Modal = createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("Modal"),
-    nestingLevelList: UU5.Environment.getNestingLevelList('bigBoxCollection', 'box'),
+    nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
       main: props => {
         let className = ns.css("modal");
         if (props.offsetTop === "auto") {
-          className += " " + Css.css(`
+          className +=
+            " " +
+            Css.css(`
             display: flex !important;
             flex-direction: column;
             justify-content: center;
@@ -68,16 +70,22 @@ export const Modal = createReactClass({
       dialog: props => {
         let className = ns.css("modal-dialog");
         if (typeof props.offsetTop === "number") {
-          className += " " + Css.css(`
+          className +=
+            " " +
+            Css.css(`
             margin-top: ${props.offsetTop}px;
           `);
         } else if (props.offsetTop === "auto") {
-          className += " " + Css.css(`
+          className +=
+            " " +
+            Css.css(`
             margin-top: 0;
             margin-bottom: 0;
           `);
         } else if (typeof props.offsetTop === "string") {
-          className += " " + Css.css(`
+          className +=
+            " " +
+            Css.css(`
             margin-top: ${props.offsetTop};
           `);
         }
@@ -89,13 +97,13 @@ export const Modal = createReactClass({
       bodyOverflow: ns.css("modal-body-overflow")
     },
     defaults: {
-      header: 'noHeader',
-      body: 'noBody',
+      header: "noHeader",
+      body: "noBody",
       animationDuration: 150, // ms
       closeTypes: {
-        closedButton: 'closedButton',
-        blur: 'blur',
-        ifc: 'interface'
+        closedButton: "closedButton",
+        blur: "blur",
+        ifc: "interface"
       }
     },
     opt: {
@@ -106,7 +114,7 @@ export const Modal = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    size: PropTypes.oneOf(['s', 'm', 'l', 'auto', 'max']),
+    size: PropTypes.oneOf(["s", "m", "l", "auto", "max"]),
     shown: PropTypes.bool,
     sticky: PropTypes.bool,
     stickyBackground: PropTypes.bool,
@@ -126,7 +134,7 @@ export const Modal = createReactClass({
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      size: 'm',
+      size: "m",
       shown: false,
       sticky: false,
       stickyBackground: false,
@@ -157,9 +165,9 @@ export const Modal = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   componentWillMount() {
-    this.setState({hidden: !this.props.shown});
+    this.setState({ hidden: !this.props.shown });
   },
 
   componentDidMount() {
@@ -167,13 +175,13 @@ export const Modal = createReactClass({
       this.open();
     }
     if (!this.isSticky()) {
-      UU5.Environment.EventListener.addWindowEvent('keydown', this.getId(), this._onCloseESC);
+      UU5.Environment.EventListener.addWindowEvent("keydown", this.getId(), this._onCloseESC);
     }
   },
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
-      this.setState(function (state) {
+      this.setState(function(state) {
         let newState = {};
 
         if (nextProps.shown && state.hidden) {
@@ -213,9 +221,9 @@ export const Modal = createReactClass({
       document.documentElement.classList.remove("uu5-common-no-scroll");
     }
 
-    UU5.Environment.EventListener.removeWindowEvent('keydown', this.getId(), this._onCloseESC);
+    UU5.Environment.EventListener.removeWindowEvent("keydown", this.getId(), this._onCloseESC);
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   isModal() {
@@ -263,7 +271,7 @@ export const Modal = createReactClass({
     if (this._shouldOpenPageModal()) {
       let centralModal = page.getModal();
       centralModal.close({ shouldOnClose, _referrer }, setStateCallback);
-    } else if (typeof this.state.onClose === 'function' && shouldOnClose !== false) {
+    } else if (typeof this.state.onClose === "function" && shouldOnClose !== false) {
       this.state.onClose({ component: this, closeType: this.getDefault().closeTypes.ifc, callback: setStateCallback });
     } else {
       this._close(setStateCallback);
@@ -304,12 +312,12 @@ export const Modal = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
+  //@@viewOn:overriding
   buildHeaderChild_(headerTypes) {
     let headerType = this.getHeaderType(headerTypes);
 
     let headerChild;
-    if (headerType === 'contentOfStandardHeader') {
+    if (headerType === "contentOfStandardHeader") {
       headerChild = <Header content={headerTypes.header} />;
       headerChild = this.cloneChild(headerChild, this.expandHeaderProps(headerChild));
     }
@@ -318,7 +326,7 @@ export const Modal = createReactClass({
   },
 
   expandHeaderProps_(headerChild) {
-    let extendedHeaderProps = this._extendPartProps(headerChild.props, 'header');
+    let extendedHeaderProps = this._extendPartProps(headerChild.props, "header");
     if (extendedHeaderProps) {
       extendedHeaderProps._sticky = this.state.sticky;
       extendedHeaderProps._onClose = this._onCloseHandler;
@@ -330,7 +338,7 @@ export const Modal = createReactClass({
     let footerType = this.getFooterType(footerTypes);
 
     let footerChild;
-    if (footerType === 'contentOfStandardFooter') {
+    if (footerType === "contentOfStandardFooter") {
       footerChild = <Footer content={footerTypes.footer} />;
       footerChild = this.cloneChild(footerChild, this.expandFooterProps(footerChild));
     }
@@ -339,11 +347,11 @@ export const Modal = createReactClass({
   },
 
   expandFooterProps_(footerChild) {
-    return this._extendPartProps(footerChild.props, 'footer');
+    return this._extendPartProps(footerChild.props, "footer");
   },
-  //@@viewOff:overridingMethods
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _onCloseESC(e) {
     e.which === 27 && !this.isHidden() && !this.isSticky() && this._blur(e);
     return this;
@@ -357,7 +365,7 @@ export const Modal = createReactClass({
   _onCloseHandler(e) {
     let opt = { component: this, event: e, closeType: this.getDefault().closeTypes.closedButton };
 
-    if (typeof this.state.onClose === 'function') {
+    if (typeof this.state.onClose === "function") {
       this.state.onClose(opt);
     } else {
       this.onCloseDefault(opt);
@@ -367,7 +375,7 @@ export const Modal = createReactClass({
   },
 
   _blur(e) {
-    if (typeof this.state.onClose === 'function') {
+    if (typeof this.state.onClose === "function") {
       this.state.onClose({ component: this, event: e, closeType: this.getDefault().closeTypes.blur });
     } else {
       this._close();
@@ -393,9 +401,9 @@ export const Modal = createReactClass({
       let div = document.createElement("div");
       div.style.overflow = "scroll";
       div.style.visibility = "hidden";
-      div.style.position = 'absolute';
-      div.style.width = '100px';
-      div.style.height = '100px';
+      div.style.position = "absolute";
+      div.style.width = "100px";
+      div.style.height = "100px";
 
       // temporarily creates a div into DOM
       document.body.appendChild(div);
@@ -413,8 +421,8 @@ export const Modal = createReactClass({
     // TODO: wrong, but not found better solution
     setTimeout(() => {
       if (!scrollableBackground) {
-        document.body.style.overflow = '';
-        document.documentElement.style.overflow = '';
+        document.body.style.overflow = "";
+        document.documentElement.style.overflow = "";
         // TODO: Currently reactivates the scrolling even if other modals are still opened
 
         if (typeof this._bodyScrollY === "number") {
@@ -423,18 +431,21 @@ export const Modal = createReactClass({
           delete this._bodyScrollY;
         }
       }
-      document.body.style.paddingRight = '';
+      document.body.style.paddingRight = "";
       !document.body.style.length && document.body.removeAttribute("style");
 
       document.documentElement.classList.remove("uu5-common-no-scroll");
 
       if (this.isRendered()) {
-        this.setState({
+        this.setState(
+          {
             header: this.state.renderContent ? this.state.header || this.getHeader() : null,
             content: this.state.renderContent ? this.state.content || this.getContent() || this.props.children : null,
             footer: this.state.renderContent ? this.state.footer || this.getFooter() : null,
             renderContent: true
-          }, setStateCallback);
+          },
+          setStateCallback
+        );
       }
     }, this.getDefault().animationDuration);
   },
@@ -444,17 +455,17 @@ export const Modal = createReactClass({
     if (!scrollableBackground) {
       this._bodyScrollY = window.scrollY || document.body.scrollTop || window.pageYOffset;
 
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
 
       // this breaks scroll position on MS Edge
       if (UU5.Common.Tools.isMobileIOS()) {
-        document.documentElement.style.overflow = 'hidden';
+        document.documentElement.style.overflow = "hidden";
       }
 
       document.body.scrollTop = this._bodyScrollY;
 
       let paddingRight = this._getScrollbarWidth();
-      paddingRight && (document.body.style.paddingRight = paddingRight + 'px');
+      paddingRight && (document.body.style.paddingRight = paddingRight + "px");
 
       document.documentElement.classList.add("uu5-common-no-scroll");
     }
@@ -474,9 +485,9 @@ export const Modal = createReactClass({
     let modalMatch = "[id='" + this.getId() + "'] .uu5-bricks-modal-dialog";
     let result = {
       dialog: false
-    }
+    };
     let eventPath = this._getEventPath(e);
-    eventPath.every((item) => {
+    eventPath.every(item => {
       let functionType = item.matches ? "matches" : "msMatchesSelector";
       if (item[functionType]) {
         if (item[functionType](modalMatch)) {
@@ -496,17 +507,17 @@ export const Modal = createReactClass({
 
     // id because of checking backdrop on click in _onBlurHandler function
     mainAttrs.id = this.getId();
-    this.state.footer && (mainAttrs.className += ' ' + this.getClassName("isFooter"));
-    this.state.className && (mainAttrs.className += ' ' + this.state.className);
+    this.state.footer && (mainAttrs.className += " " + this.getClassName("isFooter"));
+    this.state.className && (mainAttrs.className += " " + this.state.className);
     if (!this.state.sticky && !this.state.stickyBackground) {
       let allowBlur = true;
-      mainAttrs.onMouseDown = (e) => {
+      mainAttrs.onMouseDown = e => {
         let clickData = this._findTarget(e.nativeEvent);
         if (clickData.dialog) {
           allowBlur = false;
         }
       };
-      mainAttrs.onMouseUp = (e) => {
+      mainAttrs.onMouseUp = e => {
         if (allowBlur) {
           let clickData = this._findTarget(e.nativeEvent);
           if (clickData.dialog) {
@@ -514,7 +525,7 @@ export const Modal = createReactClass({
           }
         }
       };
-      mainAttrs.onClick = (e) => {
+      mainAttrs.onClick = e => {
         if (allowBlur) {
           this._onBlurHandler(e);
         }
@@ -526,7 +537,7 @@ export const Modal = createReactClass({
       mainAttrs.className += " " + this.getClassName("overflow");
     }
 
-    let sec = (this.getDefault().animationDuration / 1000) + 's';
+    let sec = this.getDefault().animationDuration / 1000 + "s";
     mainAttrs.style = mainAttrs.style || {};
     mainAttrs.style.WebkitTransitionDuration = sec;
     mainAttrs.style.MozTransitionDuration = sec;
@@ -536,7 +547,7 @@ export const Modal = createReactClass({
     return mainAttrs;
   },
 
-  _getOpenProps(props = {}){
+  _getOpenProps(props = {}) {
     let newProps = {};
     newProps.header = props.header === undefined ? this.props.header : props.header;
     newProps.footer = props.footer === undefined ? this.props.footer : props.footer;
@@ -544,8 +555,10 @@ export const Modal = createReactClass({
     newProps.className = props.className === undefined ? this.props.className : props.className;
     newProps.size = props.size === undefined ? this.props.size : props.size;
     newProps.sticky = props.sticky === undefined ? this.props.sticky : props.sticky;
-    newProps.stickyBackground = props.stickyBackground === undefined ? this.props.stickyBackground : props.stickyBackground;
-    newProps.scrollableBackground = props.scrollableBackground === undefined ? this.props.scrollableBackground : props.scrollableBackground;
+    newProps.stickyBackground =
+      props.stickyBackground === undefined ? this.props.stickyBackground : props.stickyBackground;
+    newProps.scrollableBackground =
+      props.scrollableBackground === undefined ? this.props.scrollableBackground : props.scrollableBackground;
     newProps.onClose = props.onClose === undefined ? this.props.onClose : props.onClose;
     newProps.overflow = props.overflow === undefined ? this.props.overflow : props.overflow;
     newProps.mountContent = props.mountContent === undefined ? this.props.mountContent : props.mountContent;
@@ -571,7 +584,7 @@ export const Modal = createReactClass({
   },
 
   _extendBodyProps(bodyProps) {
-    let id = this.getId() + '-body';
+    let id = this.getId() + "-body";
     let className = this.state.overflow ? this.getClassName("bodyOverflow") : null;
 
     let newProps = {
@@ -586,11 +599,11 @@ export const Modal = createReactClass({
 
     return UU5.Common.Tools.merge(newProps, { key: newProps.id });
   },
-  _shouldOpenPageModal(){
+  _shouldOpenPageModal() {
     let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
     return !this.props.forceRender && page && page.getModal() && page.getModal().getId() !== this.getId();
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   // Render
   _buildChildren() {
@@ -639,21 +652,18 @@ export const Modal = createReactClass({
     // }
 
     // disable rendering of modal if there is a modal on the page
-    if (this._shouldOpenPageModal()){
+    if (this._shouldOpenPageModal()) {
       return null;
     }
 
-    return (
-      this.getNestingLevel() ?
-        (
-          <div {...this._getMainAttrs()}>
-            <div className={this.getClassName("dialog") + " " + this.getClassName("modalSize") + this.state.size} >
-              {this._buildChildren()}
-              {this.getDisabledCover()}
-            </div>
-          </div>
-        ) : null
-    );
+    return this.getNestingLevel() ? (
+      <div {...this._getMainAttrs()}>
+        <div className={this.getClassName("dialog") + " " + this.getClassName("modalSize") + this.state.size}>
+          {this._buildChildren()}
+          {this.getDisabledCover()}
+        </div>
+      </div>
+    ) : null;
   }
   //@@viewOff:render
 });

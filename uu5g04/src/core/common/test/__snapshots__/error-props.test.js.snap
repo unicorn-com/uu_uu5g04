@@ -108,6 +108,36 @@ exports[`UU5.Common.Error props borderRadius="8px" 1`] = `
 </div>
 `;
 
+exports[`UU5.Common.Error props borderRadius=16 1`] = `
+<div
+  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": 16,
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-common-error-main-wrapper"
+  >
+    <div
+      className="uu5-common-error-icon-wrapper"
+    >
+      <span
+        className="mdi mdi-alert-circle uu5-common-error-icon"
+      />
+    </div>
+    <div
+      className="uu5-common-error-content"
+    >
+      Error
+    </div>
+  </div>
+</div>
+`;
+
 exports[`UU5.Common.Error props checkGrammar=false 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"

@@ -11,11 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import createReactClass from "create-react-class";
 import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-forms";
+//@@viewOff:imports
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 

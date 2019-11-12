@@ -11,17 +11,19 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
-import Button from './button.js';
-import TabsItem from './tabs-item';
-import Line from './line.js';
+import Button from "./button.js";
+import TabsItem from "./tabs-item";
+import Line from "./line.js";
 
-import './tabs.less';
+import "./tabs.less";
+//@@viewOff:imports
 
 const MOUNT_TAB_CONTENT_VALUES = {
   onFirstRender: "onFirstRender",
@@ -34,7 +36,6 @@ const getMountTabContent = props => {
 };
 
 export const Tabs = createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -50,7 +51,7 @@ export const Tabs = createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("Tabs"),
-    nestingLevelList: UU5.Environment.getNestingLevelList('bigBoxCollection', 'smallBox'),
+    nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "smallBox"),
     classNames: {
       main: ns.css("tabs"),
       ul: ns.css("tabs-list", "tabs-list-"),
@@ -62,7 +63,7 @@ export const Tabs = createReactClass({
       active: ns.css("tabs-list-active")
     },
     defaults: {
-      childTagName: 'UU5.Bricks.Tabs.Item'
+      childTagName: "UU5.Bricks.Tabs.Item"
     },
     opt: {
       nestingLevelWrapper: true
@@ -72,7 +73,7 @@ export const Tabs = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    type: PropTypes.oneOf(['tabs', 'pills']),
+    type: PropTypes.oneOf(["tabs", "pills"]),
     stacked: PropTypes.oneOfType([
       PropTypes.bool,
       PropTypes.shape({
@@ -87,14 +88,12 @@ export const Tabs = createReactClass({
     justified: PropTypes.bool,
     fade: PropTypes.bool,
     activeName: PropTypes.string,
-    allowTags: PropTypes.arrayOf(
-      PropTypes.string
-    ),
-    size: PropTypes.oneOf(['s', 'm', 'l', 'xl']),
+    allowTags: PropTypes.arrayOf(PropTypes.string),
+    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
     onChange: PropTypes.func,
     borderRadius: PropTypes.string,
-    elevation: PropTypes.oneOf(['0', '1', '2', '3', '4', '5', 0, 1, 2, 3, 4, 5]),
-    elevationHover: PropTypes.oneOf(['0', '1', '2', '3', '4', '5', 0, 1, 2, 3, 4, 5]),
+    elevation: PropTypes.oneOf(["0", "1", "2", "3", "4", "5", 0, 1, 2, 3, 4, 5]),
+    elevationHover: PropTypes.oneOf(["0", "1", "2", "3", "4", "5", 0, 1, 2, 3, 4, 5]),
     underline: PropTypes.bool,
     lineProps: PropTypes.object,
     getButton: PropTypes.func,
@@ -109,13 +108,13 @@ export const Tabs = createReactClass({
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      type: 'tabs',
+      type: "tabs",
       stacked: false,
       justified: false,
       fade: false,
       activeName: null,
       allowTags: [],
-      size: 'm',
+      size: "m",
       onChange: null,
       borderRadius: null,
       elevation: null,
@@ -127,7 +126,7 @@ export const Tabs = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     this._btn = {};
 
@@ -138,7 +137,7 @@ export const Tabs = createReactClass({
     this.setState(state => this._getState(nextProps, state));
   },
 
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   isTabs() {
@@ -156,7 +155,12 @@ export const Tabs = createReactClass({
   },
 
   getActive() {
-    return this.state.activeName || (this.getChildren() && this.getChildren()[0] && (this.getChildren()[0].props.name || this.getChildren()[0].props.id));
+    return (
+      this.state.activeName ||
+      (this.getChildren() &&
+        this.getChildren()[0] &&
+        (this.getChildren()[0].props.name || this.getChildren()[0].props.id))
+    );
   },
 
   onChangeDefault(tab) {
@@ -171,15 +175,18 @@ export const Tabs = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
+  //@@viewOn:overriding
   shouldChildRender_(child) {
     let childTagName = UU5.Common.Tools.getChildTagName(child);
     let defaultChildTagName = this.getDefault().childTagName;
     let childTagNames = this.props.allowTags.concat(defaultChildTagName);
     let result = childTagNames.indexOf(childTagName) > -1;
-    if (!result && (typeof child !== 'string' || child.trim())) {
-      if (childTagName) this.showError('childTagNotAllowed', [childTagName, this.getTagName(), childTagName, defaultChildTagName], { mixinName: 'UU5.Common.BaseMixin' });
-      else this.showError('childNotAllowed', [child, defaultChildTagName], { mixinName: 'UU5.Common.BaseMixin' });
+    if (!result && (typeof child !== "string" || child.trim())) {
+      if (childTagName)
+        this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagName], {
+          mixinName: "UU5.Common.BaseMixin"
+        });
+      else this.showError("childNotAllowed", [child, defaultChildTagName], { mixinName: "UU5.Common.BaseMixin" });
     }
 
     return result;
@@ -187,7 +194,7 @@ export const Tabs = createReactClass({
 
   expandChildProps_(child, childIndex) {
     let newChildProps = { ...child.props };
-    newChildProps.id = newChildProps.name || newChildProps.id || this.getId() + '-' + childIndex;
+    newChildProps.id = newChildProps.name || newChildProps.id || this.getId() + "-" + childIndex;
 
     let active = false;
     let activeName = this.state ? this.state.activeName : null;
@@ -212,9 +219,9 @@ export const Tabs = createReactClass({
       stacked: this._isStacked(actualScreenSize)
     });
   },
-  //@@viewOff:overridingMethods
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _getState(props = this.props, state = this.state) {
     let result = {
       ...state,
@@ -270,7 +277,7 @@ export const Tabs = createReactClass({
     let result = props.stacked;
 
     if (typeof props.stacked === "boolean") {
-      result = actualScreenSize === 'xs' ? true : props.stacked;
+      result = actualScreenSize === "xs" ? true : props.stacked;
     } else if (typeof props.stacked === "string") {
       let splitter = props.stacked.split(" ");
 
@@ -286,7 +293,7 @@ export const Tabs = createReactClass({
 
   _onChange(tab) {
     let opt = { tab: tab, component: this };
-    if (typeof this.props.onChange === 'function') {
+    if (typeof this.props.onChange === "function") {
       this.props.onChange(opt);
     } else {
       this.onChangeDefault(tab);
@@ -325,12 +332,18 @@ export const Tabs = createReactClass({
     let children = this.getChildren();
     if (!children) children = [];
     else if (!Array.isArray(children)) children = [children];
-    let bgStyle = (this.props.type === "pills" || this.state.stacked && this.props.justified) ? 'filled' : 'transparent';
+    let bgStyle =
+      this.props.type === "pills" || (this.state.stacked && this.props.justified) ? "filled" : "transparent";
 
     //fix - in first render may occurs that first Tab.Item can't be set as active because first child of Tabs component can be string
     let defaultChildTagName = this.getDefault().childTagName;
     let childTagNames = this.props.allowTags.concat(defaultChildTagName);
-    if (!this.state.activeName && children[0] && !children[0].props._active && childTagNames.indexOf(UU5.Common.Tools.getChildTagName(children[0])) !== -1) {
+    if (
+      !this.state.activeName &&
+      children[0] &&
+      !children[0].props._active &&
+      childTagNames.indexOf(UU5.Common.Tools.getChildTagName(children[0])) !== -1
+    ) {
       children[0] = React.cloneElement(children[0], { _active: true, mountContent: this.props.mountContent });
     }
 
@@ -338,7 +351,7 @@ export const Tabs = createReactClass({
       const activeItem = (
         <li key={i} className={this.getClassName("active")}>
           <Button
-            ref_={(btn) => this._btn[i] = btn}
+            ref_={btn => (this._btn[i] = btn)}
             bgStyle={bgStyle}
             size={this.props.size}
             disabled={tab.props.disabled}
@@ -363,7 +376,7 @@ export const Tabs = createReactClass({
       return (
         <li key={i}>
           <Button
-            ref_={(btn) => this._btn[i] = btn}
+            ref_={btn => (this._btn[i] = btn)}
             bgStyle={bgStyle}
             size={this.props.size}
             onClick={() => this._onChange(tab)}
@@ -383,45 +396,44 @@ export const Tabs = createReactClass({
   _buildUlAttributes() {
     let ulClassName = this.getClassName().ul;
 
-    if (this.state.stacked && (this.props.justified || this.props.type === 'pills')) {
-      ulClassName += 'pills ' + this.getClassName('stacked');
-    } else if (this.state.stacked && this.props.type !== 'pills') {
-      ulClassName += 'tabs ' + this.getClassName('stacked');
+    if (this.state.stacked && (this.props.justified || this.props.type === "pills")) {
+      ulClassName += "pills " + this.getClassName("stacked");
+    } else if (this.state.stacked && this.props.type !== "pills") {
+      ulClassName += "tabs " + this.getClassName("stacked");
     } else {
       ulClassName += this.props.type;
     }
 
-    this.props.justified && (ulClassName += ' ' + this.getClassName().justified);
+    this.props.justified && (ulClassName += " " + this.getClassName().justified);
     return ulClassName;
   },
 
   _getLineProps() {
-    return { ...(!this.props.stacked ? { size: "1px" } : { vertical: true, size: "s" }), colorSchema: "custom", ...this.props.lineProps };
+    return {
+      ...(!this.props.stacked ? { size: "1px" } : { vertical: true, size: "s" }),
+      colorSchema: "custom",
+      ...this.props.lineProps
+    };
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
-    const {items, children} = this._getItems();
+    const { items, children } = this._getItems();
     const mainAttrs = this.getMainAttrs();
-    mainAttrs.className += ' ' + this.getClassName('size') + this.props.size;
+    mainAttrs.className += " " + this.getClassName("size") + this.props.size;
 
-    return (
-      this.getNestingLevel()
-        ? (
-          <div {...mainAttrs} >
-            <ul className={this._buildUlAttributes()}>
-              {items}
-              {this.props.underline ? <Line {...this._getLineProps()} /> : null}
-            </ul>
+    return this.getNestingLevel() ? (
+      <div {...mainAttrs}>
+        <ul className={this._buildUlAttributes()}>
+          {items}
+          {this.props.underline ? <Line {...this._getLineProps()} /> : null}
+        </ul>
 
-            <div className={this.getClassName().content}>
-              {children}
-            </div>
-            {this.getDisabledCover()}
-          </div>
-        ) : null
-    )
+        <div className={this.getClassName().content}>{children}</div>
+        {this.getDisabledCover()}
+      </div>
+    ) : null;
   }
   //@@viewOff:render
 });

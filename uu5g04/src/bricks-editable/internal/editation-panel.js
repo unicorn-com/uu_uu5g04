@@ -11,6 +11,7 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import React from "react";
 import createReactClass from "create-react-class";
 import PropTypes from "prop-types";
@@ -19,6 +20,7 @@ import "uu5g04-bricks";
 import ns from "../bricks-editable-ns.js";
 import Lsi from "../bricks-editable-lsi.js";
 import Css from "./css.js";
+//@@viewOff:imports
 
 const MAIN_CLASS_NAME = ns.css("editation-panel");
 
@@ -74,8 +76,8 @@ export const EditationPanel = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   openSettings(...args) {
@@ -96,10 +98,10 @@ export const EditationPanel = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _registerModal(modal) {
     this._modal = modal;
   },
@@ -122,7 +124,7 @@ export const EditationPanel = createReactClass({
     }
     this.setState({ openedSettings: false });
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
@@ -158,7 +160,14 @@ export const EditationPanel = createReactClass({
               <UU5.Bricks.Icon icon="mdi-settings" />
             </UU5.Bricks.Button>,
             this.props.settingsInModal && (
-              <UU5.Bricks.Modal key="edit-modal" ref_={this._registerModal} forceRender controlled={false} size="m" onClose={this._onCloseModal}>
+              <UU5.Bricks.Modal
+                key="edit-modal"
+                ref_={this._registerModal}
+                forceRender
+                controlled={false}
+                size="m"
+                onClose={this._onCloseModal}
+              >
                 {this.props.settingsContent}
               </UU5.Bricks.Modal>
             ),

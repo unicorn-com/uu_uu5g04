@@ -1,30 +1,31 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
-import Link from './link.js';
-import Icon from './icon.js'
-import Span from './span.js';
+import Link from "./link.js";
+import Icon from "./icon.js";
+import Span from "./span.js";
 
-import './dropdown-item.less'
+import "./dropdown-item.less";
+//@@viewOff:imports
 
 export default createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -38,7 +39,7 @@ export default createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("Dropdown.Item"),
-    nestingLevelList: UU5.Environment.getNestingLevelList('smallBoxCollection'),
+    nestingLevelList: UU5.Environment.getNestingLevelList("smallBoxCollection"),
     classNames: {
       main: ns.css("dropdown-item"),
       link: ns.css("dropdown-item-link"),
@@ -47,14 +48,14 @@ export default createReactClass({
       subMenu: ns.css("dropdown-submenu", "dropdown-menu"),
       subMenuItem: ns.css("dropdown-item-submenu"),
       dropup: ns.css("dropdown-item-submenu-dropup"),
-      disabledItem: 'disabled'
+      disabledItem: "disabled"
     },
     defaults: {
-      childTagName: 'UU5.Bricks.Dropdown.Item'
+      childTagName: "UU5.Bricks.Dropdown.Item"
     },
     errors: {
-      maxLevel: 'Max submenu level is 3!',
-      invalidParent: 'Parent of this component is not Dropdown.'
+      maxLevel: "Max submenu level is 3!",
+      invalidParent: "Parent of this component is not Dropdown."
     }
   },
   //@@viewOff:statics
@@ -88,25 +89,25 @@ export default createReactClass({
       onWheelClick: null,
       smoothScroll: 1000,
       offset: null,
-      target: '_self',
+      target: "_self",
       dropup: false,
       linkProps: null
     };
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   componentWillMount() {
-    if (!this.getParentByType('isDropdown')) {
+    if (!this.getParentByType("isDropdown")) {
       this.showError("invalidParent");
     }
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
+  //@@viewOn:overriding
   expandChildProps_(child) {
     let newChildProps = { ...child.props };
 
@@ -114,11 +115,11 @@ export default createReactClass({
 
     return newChildProps;
   },
-  //@@viewOff:overridingMethods
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _onClickHandler() {
-    var parent = this.getParentByType('isDropdown');
+    var parent = this.getParentByType("isDropdown");
     parent && parent.close();
     return this;
   },
@@ -129,13 +130,18 @@ export default createReactClass({
       content: this.props.label,
       parent: this,
       disabled: this.isDisabled(),
-      colorSchema: 'custom'
+      colorSchema: "custom"
     };
 
     if (!this.isDisabled()) {
-      linkProps.onClick = typeof this.props.onClick === "function" ? (component, event) => this.props.onClick(this, event) : null;
-      linkProps.onCtrlClick = typeof this.props.onCtrlClick === "function" ? (component, event) => this.props.onCtrlClick(this, event) : null;
-      linkProps.onWheelClick = typeof this.props.onWheelClick === "function" ? (component, event) => this.props.onWheelClick(this, event) : null;
+      linkProps.onClick =
+        typeof this.props.onClick === "function" ? (component, event) => this.props.onClick(this, event) : null;
+      linkProps.onCtrlClick =
+        typeof this.props.onCtrlClick === "function" ? (component, event) => this.props.onCtrlClick(this, event) : null;
+      linkProps.onWheelClick =
+        typeof this.props.onWheelClick === "function"
+          ? (component, event) => this.props.onWheelClick(this, event)
+          : null;
       linkProps.href = this.props.href;
       linkProps.smoothScroll = this.props.smoothScroll;
       linkProps.offset = this.props.offset;
@@ -157,12 +163,12 @@ export default createReactClass({
   },
 
   _getDividerItem(props) {
-    props.className += ' ' + this.getClassName().divider;
+    props.className += " " + this.getClassName().divider;
     return <li {...props} />;
   },
 
   _getHeaderItem(props) {
-    props.className += ' ' + this.getClassName().header;
+    props.className += " " + this.getClassName().header;
     return (
       <li {...props}>
         <Span content={this.props.label} />
@@ -171,25 +177,28 @@ export default createReactClass({
   },
 
   _getContentItem(props) {
-    return (
-      <li {...props}>{this.getChildren()}</li>
-    );
+    return <li {...props}>{this.getChildren()}</li>;
   },
 
   _getSubMenuItem(props) {
-    let content = [this.props.label, <Icon icon='mdi-menu-right' key="icon" />];
+    let content = [this.props.label, <Icon icon="mdi-menu-right" key="icon" />];
     let linkProps = {
       className: this.getClassName().link,
       content: content,
       parent: this,
       disabled: this.isDisabled(),
-      colorSchema: 'custom'
+      colorSchema: "custom"
     };
 
     if (!this.isDisabled()) {
-      linkProps.onClick = typeof this.props.onClick === "function" ? (component, event) => this.props.onClick(this, event) : null;
-      linkProps.onCtrlClick = typeof this.props.onCtrlClick === "function" ? (component, event) => this.props.onCtrlClick(this, event) : null;
-      linkProps.onWheelClick = typeof this.props.onWheelClick === "function" ? (component, event) => this.props.onWheelClick(this, event) : null;
+      linkProps.onClick =
+        typeof this.props.onClick === "function" ? (component, event) => this.props.onClick(this, event) : null;
+      linkProps.onCtrlClick =
+        typeof this.props.onCtrlClick === "function" ? (component, event) => this.props.onCtrlClick(this, event) : null;
+      linkProps.onWheelClick =
+        typeof this.props.onWheelClick === "function"
+          ? (component, event) => this.props.onWheelClick(this, event)
+          : null;
       linkProps.href = this.props.href;
       linkProps.smoothScroll = this.props.smoothScroll;
       linkProps.offset = this.props.offset;
@@ -197,18 +206,29 @@ export default createReactClass({
       this.props.onClick && (props.onClick = this._onClickHandler);
     }
 
-    props.className += ' ' + this.getClassName().subMenuItem;
+    props.className += " " + this.getClassName().subMenuItem;
 
     if (this.props.linkProps) {
       linkProps = UU5.Common.Tools.merge(linkProps, this.props.linkProps);
       linkProps.content = content;
     }
 
-    if (this.getParent() !== null && this.getParent().getParent() !== null && this.getParent().getParent().getParent() !== null) {
-      if (this.getParent().getParent().getParent().getTagName() === 'UU5.Bricks.Dropdown') {
-        this.showError('maxLevel');
+    if (
+      this.getParent() !== null &&
+      this.getParent().getParent() !== null &&
+      this.getParent()
+        .getParent()
+        .getParent() !== null
+    ) {
+      if (
+        this.getParent()
+          .getParent()
+          .getParent()
+          .getTagName() === "UU5.Bricks.Dropdown"
+      ) {
+        this.showError("maxLevel");
         return (
-          <li {...props} >
+          <li {...props}>
             <Link {...linkProps} content={this.props.label} />
           </li>
         );
@@ -219,7 +239,7 @@ export default createReactClass({
       <li {...props}>
         <Link {...linkProps} />
 
-        <ul className={this.getClassName().subMenu + (this.props.dropup ? ' ' + this.getClassName().dropup : '')}>
+        <ul className={this.getClassName().subMenu + (this.props.dropup ? " " + this.getClassName().dropup : "")}>
           {this._getChildren()}
         </ul>
       </li>
@@ -247,14 +267,14 @@ export default createReactClass({
 
     return this.buildChildren(contentProps);
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
     let mainAttrs = this.getMainAttrs();
 
     if (this.isDisabled()) {
-      mainAttrs.className += ' ' + this.getClassName().disabledItem;
+      mainAttrs.className += " " + this.getClassName().disabledItem;
     }
 
     let result = null;

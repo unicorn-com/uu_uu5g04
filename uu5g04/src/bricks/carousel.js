@@ -11,17 +11,17 @@
  * at the email: info@unicorn.com.
  */
 
-//@@viewOn:import
+//@@viewOn:imports
 import React from "react";
-import createReactClass from 'create-react-class';
-import PropTypes from "prop-types"
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
-import "./carousel.less"
-import CarouselItem from './carousel-item.js';
-import Icon from './icon.js';
-//@@viewOff:import
+import "./carousel.less";
+import CarouselItem from "./carousel-item.js";
+import Icon from "./icon.js";
+//@@viewOff:imports
 
 export const Carousel = createReactClass({
   //@@viewOn:mixins
@@ -48,7 +48,7 @@ export const Carousel = createReactClass({
     },
     defaults: {
       minAngle: 22.5,
-      childTagName: 'UU5.Bricks.Carousel.Item',
+      childTagName: "UU5.Bricks.Carousel.Item",
       colorSchema: "default"
     }
   },
@@ -62,12 +62,10 @@ export const Carousel = createReactClass({
     nextIcon: PropTypes.string,
     prevIcon: PropTypes.string,
     displayedItems: PropTypes.number,
-    type: PropTypes.oneOf(['circular', 'final', 'rewind']),
+    type: PropTypes.oneOf(["circular", "final", "rewind"]),
     interval: PropTypes.number,
     stepByOne: PropTypes.bool,
-    allowTags: PropTypes.arrayOf(
-      PropTypes.string
-    )
+    allowTags: PropTypes.arrayOf(PropTypes.string)
   },
   //@@viewOff:propTypes
 
@@ -77,10 +75,10 @@ export const Carousel = createReactClass({
       hideControls: false,
       hideIndicators: false,
       activeIndex: 0,
-      nextIcon: 'mdi-chevron-right',
-      prevIcon: 'mdi-chevron-left',
+      nextIcon: "mdi-chevron-right",
+      prevIcon: "mdi-chevron-left",
       displayedItems: 1,
-      type: 'final',
+      type: "final",
       interval: 5000,
       stepByOne: false,
       allowTags: []
@@ -88,12 +86,12 @@ export const Carousel = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
       activeIndex: this.props.activeIndex,
       rowHeight: 0,
-      renderedChildren: [],
+      renderedChildren: []
     };
   },
 
@@ -101,7 +99,7 @@ export const Carousel = createReactClass({
     const children = this.getChildren();
     this.setState({
       children: children,
-      tmpChildren: children,
+      tmpChildren: children
     });
   },
 
@@ -127,7 +125,6 @@ export const Carousel = createReactClass({
 
     let newProps = this.props !== prevProps;
     if (newProps || this.state.disabled !== prevState.disabled) {
-
       if (newProps) {
         this._resetShifts();
         this._newProps = true;
@@ -135,12 +132,15 @@ export const Carousel = createReactClass({
 
       if (this.props.controlled && newProps) {
         const children = this.getChildren();
-        this.setAsyncState({
-          activeIndex: this.props.activeIndex,
-          children: children,
-          tmpChildren: children,
-          renderedChildren: []
-        }, () => this._prepareChildren());
+        this.setAsyncState(
+          {
+            activeIndex: this.props.activeIndex,
+            children: children,
+            tmpChildren: children,
+            renderedChildren: []
+          },
+          () => this._prepareChildren()
+        );
       } else {
         this._prepareChildren(this.state.activeIndex);
       }
@@ -167,7 +167,7 @@ export const Carousel = createReactClass({
       list.forEach(setStateCallback => this.setPrevious(setStateCallback));
     }
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   setActiveIndex(activeIndex, setStateCallback) {
@@ -180,7 +180,7 @@ export const Carousel = createReactClass({
   },
 
   setNext(setStateCallback) {
-    if (this.props.type === 'final' && this.getActiveIndex() >= this._getSlidesLength() - 1) return this;
+    if (this.props.type === "final" && this.getActiveIndex() >= this._getSlidesLength() - 1) return this;
 
     if (this.state.hadSwiped) {
       this._delayedNext.push(setStateCallback);
@@ -193,7 +193,7 @@ export const Carousel = createReactClass({
   },
 
   setPrevious(setStateCallback) {
-    if (this.props.type === 'final' && this.getActiveIndex() <= 0) return this;
+    if (this.props.type === "final" && this.getActiveIndex() <= 0) return this;
 
     if (this.state.hadSwiped) {
       this._delayedPrev.push(setStateCallback);
@@ -206,15 +206,18 @@ export const Carousel = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
+  //@@viewOn:overriding
   shouldChildRender_(child) {
     let childTagName = UU5.Common.Tools.getChildTagName(child);
     let defaultChildTagName = this.getDefault().childTagName;
     let childTagNames = this.props.allowTags.concat(defaultChildTagName);
     let result = childTagNames.indexOf(childTagName) > -1;
-    if (!result && (typeof child !== 'string' || child.trim())) {
-      if (childTagName) this.showError('childTagNotAllowed', [childTagName, this.getTagName(), childTagName, defaultChildTagName], { mixinName: 'UU5.Common.BaseMixin' });
-      else this.showError('childNotAllowed', [child, defaultChildTagName], { mixinName: 'UU5.Common.BaseMixin' });
+    if (!result && (typeof child !== "string" || child.trim())) {
+      if (childTagName)
+        this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagName], {
+          mixinName: "UU5.Common.BaseMixin"
+        });
+      else this.showError("childNotAllowed", [child, defaultChildTagName], { mixinName: "UU5.Common.BaseMixin" });
     }
     return result;
   },
@@ -222,23 +225,23 @@ export const Carousel = createReactClass({
   expandChildProps_(child) {
     const newChildProps = { ...child.props };
     newChildProps.style = { ...newChildProps.style };
-    newChildProps.style.width = 100 / this.props.displayedItems + '%';
+    newChildProps.style.width = 100 / this.props.displayedItems + "%";
     newChildProps.disabled = newChildProps.disabled ? newChildProps.disabled : this.isDisabled();
 
     return newChildProps;
   },
-  //@@viewOff:overridingMethods
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _getMaxHeight() {
     let maxHeight = 0;
-    this.eachRenderedChild((child) => {
+    this.eachRenderedChild(child => {
       if (child) {
         let height = UU5.Common.Tools.getOuterHeight(child, true);
         maxHeight = height > maxHeight ? height : maxHeight;
       }
     });
-    return maxHeight
+    return maxHeight;
   },
 
   _prepareChildren(activeIndex) {
@@ -248,14 +251,14 @@ export const Carousel = createReactClass({
       index: activeIndex * steps,
       position: 0,
       height: this._getMaxHeight(),
-      noOfElements: this.props.displayedItems,
+      noOfElements: this.props.displayedItems
     };
 
     this.setAsyncState({
       activeIndex: activeIndex,
       tmpChildren: [],
       renderedChildren: this._getContent(properties),
-      rowHeight: properties.height,
+      rowHeight: properties.height
     });
   },
 
@@ -269,7 +272,7 @@ export const Carousel = createReactClass({
 
   _clickHandler(func) {
     let lastSlide = new Date();
-    if (!this.lastSlide || (lastSlide - this.lastSlide) > 750) {
+    if (!this.lastSlide || lastSlide - this.lastSlide > 750) {
       func && func();
       this.lastSlide = lastSlide;
     }
@@ -279,50 +282,61 @@ export const Carousel = createReactClass({
   _addRenderedChild(nextIndex, setStateCallback) {
     const newRenderedChildren = this.state.renderedChildren.slice();
     const prevIndex = this.state.activeIndex;
-    let isDirectionRight = (nextIndex - prevIndex) >= 0;
+    let isDirectionRight = nextIndex - prevIndex >= 0;
     const steps = this.props.stepByOne ? 1 : this.props.displayedItems;
     const no = Math.abs(nextIndex - prevIndex) * steps;
 
-    if (this.props.type === 'circular' && nextIndex === 0 && prevIndex === this._getSlidesLength() - 1) {
-      newRenderedChildren.push(...this._getContent({
-        index: this.props.stepByOne ? this.props.displayedItems - 1 : 0,
-        position: this.props.displayedItems,
-        noOfElements: steps,
-        newShift: 1,
-      }));
+    if (this.props.type === "circular" && nextIndex === 0 && prevIndex === this._getSlidesLength() - 1) {
+      newRenderedChildren.push(
+        ...this._getContent({
+          index: this.props.stepByOne ? this.props.displayedItems - 1 : 0,
+          position: this.props.displayedItems,
+          noOfElements: steps,
+          newShift: 1
+        })
+      );
 
       isDirectionRight = true;
-    } else if (this.props.type === 'circular' && prevIndex === 0 && nextIndex === this._getSlidesLength() - 1) {
-      newRenderedChildren.unshift(...this._getContent({
-        index: nextIndex * steps,
-        position: -1 * steps,
-        noOfElements: steps,
-        newShift: -1,
-      }));
+    } else if (this.props.type === "circular" && prevIndex === 0 && nextIndex === this._getSlidesLength() - 1) {
+      newRenderedChildren.unshift(
+        ...this._getContent({
+          index: nextIndex * steps,
+          position: -1 * steps,
+          noOfElements: steps,
+          newShift: -1
+        })
+      );
 
       isDirectionRight = false;
     } else {
       if (isDirectionRight) {
-        newRenderedChildren.push(...this._getContent({
-          index: (prevIndex + 1) * steps + (this.props.displayedItems - steps),
-          position: this.props.displayedItems,
-          noOfElements: no,
-        }));
+        newRenderedChildren.push(
+          ...this._getContent({
+            index: (prevIndex + 1) * steps + (this.props.displayedItems - steps),
+            position: this.props.displayedItems,
+            noOfElements: no
+          })
+        );
       } else {
-        newRenderedChildren.unshift(...this._getContent({
-          index: nextIndex * steps,
-          position: -1 * no,
-          noOfElements: no,
-        }));
+        newRenderedChildren.unshift(
+          ...this._getContent({
+            index: nextIndex * steps,
+            position: -1 * no,
+            noOfElements: no
+          })
+        );
       }
     }
 
-    this.setAsyncState({
-      activeIndex: nextIndex,
-      renderedChildren: newRenderedChildren,
-      isDirectionRight: isDirectionRight,
-      hadSwiped: false
-    }, setStateCallback);
+    this.setAsyncState(
+      {
+        activeIndex: nextIndex,
+        renderedChildren: newRenderedChildren,
+        isDirectionRight: isDirectionRight,
+        hadSwiped: false
+      },
+      setStateCallback
+    );
   },
 
   _swipeRenderedChild() {
@@ -331,12 +345,12 @@ export const Carousel = createReactClass({
       const size = this.state.renderedChildren.length;
 
       newRenderedChildren = newRenderedChildren.map((item, i) => {
-        const newPosition = this.state.isDirectionRight ? ((i - (size - this.props.displayedItems)) * 100) : (i * 100);
+        const newPosition = this.state.isDirectionRight ? (i - (size - this.props.displayedItems)) * 100 : i * 100;
         const newProps = {
           style: UU5.Common.Tools.mergeDeep({}, item.props.style, this._getChildrenStyle(newPosition)),
           position: newPosition
         };
-        return React.cloneElement(item, newProps)
+        return React.cloneElement(item, newProps);
       });
 
       this.setAsyncState({
@@ -349,12 +363,15 @@ export const Carousel = createReactClass({
   _removeRenderedChild() {
     setTimeout(() => {
       let newRenderedChildren = this.state.renderedChildren.filter(item => {
-        return item.props.position >= 0 && item.props.position < 100 * this.props.displayedItems
+        return item.props.position >= 0 && item.props.position < 100 * this.props.displayedItems;
       });
-      this.setAsyncState({
-        renderedChildren: newRenderedChildren,
-        hadSwiped: false
-      }, this._setDelayed);
+      this.setAsyncState(
+        {
+          renderedChildren: newRenderedChildren,
+          hadSwiped: false
+        },
+        this._setDelayed
+      );
     }, 500);
   },
 
@@ -362,9 +379,11 @@ export const Carousel = createReactClass({
     const children = this.state.children ? this.state.children : this.getChildren();
     const length = children ? children.length : 0;
 
-    return this.props.stepByOne && this.props.displayedItems > 1 ?
-      this.props.type === 'circular' ? length : Math.ceil(length - (this.props.displayedItems - 1)) :
-      Math.ceil(length / this.props.displayedItems)
+    return this.props.stepByOne && this.props.displayedItems > 1
+      ? this.props.type === "circular"
+        ? length
+        : Math.ceil(length - (this.props.displayedItems - 1))
+      : Math.ceil(length / this.props.displayedItems);
   },
 
   _resetShifts() {
@@ -397,7 +416,7 @@ export const Carousel = createReactClass({
     const childrenToRender = [];
     for (let i = 0; i < noOfElements; ++i) {
       let index = properties.index + i;
-      if (this.props.type === 'circular') {
+      if (this.props.type === "circular") {
         index += this._shiftCirc * rest;
 
         if (index >= children.length || index < 0) {
@@ -411,24 +430,29 @@ export const Carousel = createReactClass({
         newProps.disabled = newProps.disabled ? newProps.disabled : this.isDisabled();
         newProps.position = position;
         newProps.key = this._getKey(children[index].key);
-        newProps.style = UU5.Common.Tools.mergeDeep({}, newProps.style, this._getChildrenStyle(position, displayedItems, properties.height));
+        newProps.style = UU5.Common.Tools.mergeDeep(
+          {},
+          newProps.style,
+          this._getChildrenStyle(position, displayedItems, properties.height)
+        );
         childrenToRender.push(React.cloneElement(children[index], newProps));
       } else {
-        if (this.props.type !== 'circular' && !this._shiftFin && !this.props.stepByOne) {
+        if (this.props.type !== "circular" && !this._shiftFin && !this.props.stepByOne) {
           this._shiftFin = noOfElements - i;
         }
       }
     }
 
-    return childrenToRender
+    return childrenToRender;
   },
 
   _getKey(key) {
-    this.state.renderedChildren && this.state.renderedChildren.forEach(item => {
-      if (key === item.key) {
-        key += '-copy';
-      }
-    });
+    this.state.renderedChildren &&
+      this.state.renderedChildren.forEach(item => {
+        if (key === item.key) {
+          key += "-copy";
+        }
+      });
     return key;
   },
 
@@ -437,10 +461,10 @@ export const Carousel = createReactClass({
     !height && (height = this.state.rowHeight);
 
     return {
-      width: 100 / displayedItems + '%',
-      transform: `translateX(${ position }%)`,
-      height: height > 0 ? height + 'px' : null
-    }
+      width: 100 / displayedItems + "%",
+      transform: `translateX(${position}%)`,
+      height: height > 0 ? height + "px" : null
+    };
   },
 
   _customTouchEndHandler() {
@@ -448,12 +472,12 @@ export const Carousel = createReactClass({
     let lastSlide = new Date();
 
     if (this.isSwipedRight() && absAngle <= this.getDefault().minAngle) {
-      if (!this.lastSlide || (lastSlide - this.lastSlide) > 750) {
+      if (!this.lastSlide || lastSlide - this.lastSlide > 750) {
         this.setPrevious();
         this.lastSlide = lastSlide;
       }
     } else if (this.isSwipedLeft() && absAngle >= 180 - this.getDefault().minAngle) {
-      if (!this.lastSlide || (lastSlide - this.lastSlide) > 750) {
+      if (!this.lastSlide || lastSlide - this.lastSlide > 750) {
         this.setNext();
         this.lastSlide = lastSlide;
       }
@@ -483,13 +507,14 @@ export const Carousel = createReactClass({
   _buildIndicators() {
     let indicators = [];
     for (let i = 0; i < this._getSlidesLength(); i++) {
-      let className = i === this.getActiveIndex() ? this.getClassName('active') : '';
-      indicators.push(<li key={i} className={className}
-                          onClick={() => this._clickHandler(() => this.setActiveIndex(i))} />)
+      let className = i === this.getActiveIndex() ? this.getClassName("active") : "";
+      indicators.push(
+        <li key={i} className={className} onClick={() => this._clickHandler(() => this.setActiveIndex(i))} />
+      );
     }
-    return indicators
+    return indicators;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
@@ -497,39 +522,35 @@ export const Carousel = createReactClass({
     const colorSchemaClassName = colorSchema ? " color-schema-" + colorSchema : "";
 
     let classNameLeft = this.getClassName().leftArrow;
-    if (this.props.type === 'final' && this.getActiveIndex() === 0) {
-      classNameLeft += ' ' + this.getClassName().lastArrow
+    if (this.props.type === "final" && this.getActiveIndex() === 0) {
+      classNameLeft += " " + this.getClassName().lastArrow;
     }
 
     let classNameRight = this.getClassName().rightArrow;
-    if (this.props.type === 'final' && this.getActiveIndex() === (this._getSlidesLength() - 1)) {
-      classNameRight += ' ' + this.getClassName().lastArrow
+    if (this.props.type === "final" && this.getActiveIndex() === this._getSlidesLength() - 1) {
+      classNameRight += " " + this.getClassName().lastArrow;
     }
 
     return this.props.children ? (
-        <div {...this._buildMainAttrs()}>
-          {this.state.renderedChildren}
-          {this.state.tmpChildren}
-          <div className={this.getClassName().controls + colorSchemaClassName}>
-            {!this.props.hideControls && (
-              <a className={classNameLeft} role='button' onClick={() => this._clickHandler(this.setPrevious)}>
-                <Icon icon={this.props.prevIcon} />
-              </a>
-            )}
-            {!this.props.hideIndicators && (
-              <ol className={this.getClassName().indicators}>
-                {this._buildIndicators()}
-              </ol>
-            )}
-            {!this.props.hideControls && (
-              <a className={classNameRight} role='button' onClick={() => this._clickHandler(this.setNext)}>
-                <Icon icon={this.props.nextIcon} />
-              </a>
-            )}
-          </div>
-            {this.getDisabledCover()}
+      <div {...this._buildMainAttrs()}>
+        {this.state.renderedChildren}
+        {this.state.tmpChildren}
+        <div className={this.getClassName().controls + colorSchemaClassName}>
+          {!this.props.hideControls && (
+            <a className={classNameLeft} role="button" onClick={() => this._clickHandler(this.setPrevious)}>
+              <Icon icon={this.props.prevIcon} />
+            </a>
+          )}
+          {!this.props.hideIndicators && <ol className={this.getClassName().indicators}>{this._buildIndicators()}</ol>}
+          {!this.props.hideControls && (
+            <a className={classNameRight} role="button" onClick={() => this._clickHandler(this.setNext)}>
+              <Icon icon={this.props.nextIcon} />
+            </a>
+          )}
         </div>
-      ) : null;
+        {this.getDisabledCover()}
+      </div>
+    ) : null;
   }
   //@@viewOff:render
 });

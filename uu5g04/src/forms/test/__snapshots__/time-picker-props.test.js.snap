@@ -3034,6 +3034,7 @@ exports[`UU5.Forms.TimePicker props size="l" 1`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="l"
     />
     <Popover
       disableBackdrop={true}
@@ -3112,6 +3113,7 @@ exports[`UU5.Forms.TimePicker props size="s" 1`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -3206,6 +3208,189 @@ exports[`UU5.Forms.TimePicker props style={"backgroundColor":"red","color":"blue
       forceRender={true}
       ref_={[Function]}
     />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TimePicker props timeFrom, timeTo 1`] = `
+<div
+  className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-timepicker-open uu5-forms-timepicker-seconds"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
+      icon="mdi-clock-outline"
+      iconClickable={false}
+      id="uuID-input"
+      mainAttrs={
+        Object {
+          "autoComplete": "off",
+        }
+      }
+      name="uuID-input"
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+    />
+    <Popover
+      disableBackdrop={true}
+      forceRender={true}
+      ref_={[Function]}
+      shown={true}
+    >
+      <Time
+        className="uu5-forms-input-menu"
+        format="24"
+        onChange={[Function]}
+        seconds={true}
+        timeFrom={
+          Object {
+            "hours": 6,
+            "minutes": 30,
+            "seconds": 15,
+          }
+        }
+        timeTo={
+          Object {
+            "hours": 18,
+            "minutes": 15,
+            "seconds": 30,
+          }
+        }
+      />
+    </Popover>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TimePicker props timeFrom, timeTo 2`] = `
+<div
+  className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-timepicker-open uu5-forms-timepicker-seconds"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
+      icon="mdi-clock-outline"
+      iconClickable={false}
+      id="uuID-input"
+      mainAttrs={
+        Object {
+          "autoComplete": "off",
+        }
+      }
+      name="uuID-input"
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+    />
+    <Popover
+      disableBackdrop={true}
+      forceRender={true}
+      ref_={[Function]}
+      shown={true}
+    >
+      <Time
+        className="uu5-forms-input-menu"
+        format="24"
+        onChange={[Function]}
+        seconds={true}
+        timeFrom={
+          Object {
+            "hours": 6,
+            "minutes": 0,
+            "seconds": 0,
+          }
+        }
+        timeTo={
+          Object {
+            "hours": 6,
+            "minutes": 0,
+            "seconds": 0,
+          }
+        }
+      />
+    </Popover>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TimePicker props timeFrom, timeTo 3`] = `
+<div
+  className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-timepicker-open uu5-forms-timepicker-seconds"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <text-input
+      feedback="initial"
+      icon="mdi-clock-outline"
+      iconClickable={false}
+      id="uuID-input"
+      mainAttrs={
+        Object {
+          "autoComplete": "off",
+        }
+      }
+      name="uuID-input"
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readonly={false}
+      ref_={[Function]}
+    />
+    <Popover
+      disableBackdrop={true}
+      forceRender={true}
+      ref_={[Function]}
+      shown={true}
+    >
+      <Time
+        className="uu5-forms-input-menu"
+        format="24"
+        onChange={[Function]}
+        seconds={true}
+        timeFrom={
+          Object {
+            "hours": 6,
+            "minutes": 50,
+            "seconds": 0,
+          }
+        }
+        timeTo={
+          Object {
+            "hours": 7,
+            "minutes": 10,
+            "seconds": 0,
+          }
+        }
+      />
+    </Popover>
   </InputWrapper>
 </div>
 `;

@@ -1,27 +1,28 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
-import 'uu5g04-bricks';
-import FormMixin from './mixins/form-mixin.js';
+import "uu5g04-bricks";
+import FormMixin from "./mixins/form-mixin.js";
 
-import './form.less';
+import "./form.less";
+//@@viewOff:imports
 
 export const Form = createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -47,52 +48,48 @@ export const Form = createReactClass({
   //@@viewOn:getDefaultProps
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   componentDidMount() {
     this.props.disabled && this.disable();
   },
 
   componentDidUpdate(prevProps, prevState) {
     if (this.props.controlled && this.props.disabled !== prevState.disabled) {
-        this.props.disabled ? this.disable() : this.enable()
-    }    
+      this.props.disabled ? this.disable() : this.enable();
+    }
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
+  //@@viewOn:overriding
   disable_(setStateCallback) {
     let inputs = this.getInputs();
-    Object.keys(inputs).forEach((key) => {
+    Object.keys(inputs).forEach(key => {
       inputs[key].disable();
     });
-    this.eachFormControls((formControls) => formControls.disable(setStateCallback));
+    this.eachFormControls(formControls => formControls.disable(setStateCallback));
     return this;
   },
 
   enable_(setStateCallback) {
     let inputs = this.getInputs();
-    Object.keys(inputs).forEach((key) => {
+    Object.keys(inputs).forEach(key => {
       inputs[key].enable();
     });
-    this.eachFormControls((formControls) => formControls.enable(setStateCallback));
+    this.eachFormControls(formControls => formControls.enable(setStateCallback));
     return this;
   },
-  //@@viewOff:overridingMethods
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOn:private
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
     return this.getFormChildren(() => {
-      return [
-        this.getHeaderChild(),
-        this.getChildren(),
-        this.getFooterChild()
-      ]
+      return [this.getHeaderChild(), this.getChildren(), this.getFooterChild()];
     });
   }
   //@@viewOff:render

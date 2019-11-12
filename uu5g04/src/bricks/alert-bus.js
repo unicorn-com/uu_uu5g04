@@ -11,18 +11,19 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
-import Alert from './alert.js';
+import Alert from "./alert.js";
 
-import './alert-bus.less';
+import "./alert-bus.less";
+//@@viewOff:imports
 
 export const AlertBus = createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -36,7 +37,7 @@ export const AlertBus = createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("AlertBus"),
-    nestingLevelList: UU5.Environment.getNestingLevelList('bigBoxCollection', 'box'),
+    nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
       main: ns.css("alert-bus")
     },
@@ -64,10 +65,10 @@ export const AlertBus = createReactClass({
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function () {
+  getDefaultProps: function() {
     return {
       colorSchema: null,
-      position: 'center',
+      position: "center",
       closeTimer: 10000,
       closeDisabled: false,
       block: false,
@@ -77,23 +78,23 @@ export const AlertBus = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  getInitialState: function () {
+  //@@viewOn:reactLifeCycle
+  getInitialState: function() {
     return {
       alertStack: []
     };
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
-  addAlert: function (alertProps, setStateCallback) {
+  addAlert: function(alertProps, setStateCallback) {
     if (alertProps.content) {
       let messageProps = this._getMessageProps(null, alertProps);
       let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
       if (!this.props.forceRender && page && page.getAlertBus() && page.getAlertBus().getId() !== this.getId()) {
         page.getAlertBus().addAlert(messageProps, setStateCallback);
       } else {
-        this.setState(function (state) {
+        this.setState(function(state) {
           let alertStack = state.alertStack.slice();
           if (alertProps.priority) {
             alertStack.splice(0, 0, messageProps);
@@ -104,32 +105,32 @@ export const AlertBus = createReactClass({
         }, setStateCallback);
       }
     } else {
-      this.showWarning('noMessage', alertProps.content, { alertProps: alertProps });
+      this.showWarning("noMessage", alertProps.content, { alertProps: alertProps });
     }
     return this;
   },
 
-  addAlertToPosition: function (alertIndex, alertProps, setStateCallback) {
+  addAlertToPosition: function(alertIndex, alertProps, setStateCallback) {
     if (alertProps.content) {
       let messageProps = this._getMessageProps(null, alertProps);
       let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
       if (!this.props.forceRender && page && page.getAlertBus() && page.getAlertBus().getId() !== this.getId()) {
         page.getAlertBus().addAlertToPosition(alertIndex, messageProps, setStateCallback);
       } else {
-        this.setState(function (state) {
+        this.setState(function(state) {
           let alertStack = state.alertStack.slice();
           alertStack.splice(alertIndex, 0, messageProps);
           return { alertStack: alertStack };
         }, setStateCallback);
       }
     } else {
-      this.showWarning('noMessage', alertProps.content, { alertProps: alertProps });
+      this.showWarning("noMessage", alertProps.content, { alertProps: alertProps });
     }
 
     return this;
   },
 
-  setAlert: function (alertProps, setStateCallback) {
+  setAlert: function(alertProps, setStateCallback) {
     if (alertProps.content) {
       let messageProps = this._getMessageProps(null, alertProps);
       let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
@@ -139,12 +140,12 @@ export const AlertBus = createReactClass({
         this.setState({ alertStack: [messageProps] }, setStateCallback);
       }
     } else {
-      this.showWarning('noMessage', alertProps.content, { alertProps: alertProps });
+      this.showWarning("noMessage", alertProps.content, { alertProps: alertProps });
     }
     return this;
   },
 
-  setAlerts: function (alertStack, setStateCallback) {
+  setAlerts: function(alertStack, setStateCallback) {
     let stateAlertStack = alertStack.slice();
     let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
     if (!this.props.forceRender && page && page.getAlertBus() && page.getAlertBus().getId() !== this.getId()) {
@@ -155,12 +156,12 @@ export const AlertBus = createReactClass({
     return this;
   },
 
-  removeAlert: function (alertId, setStateCallback) {
+  removeAlert: function(alertId, setStateCallback) {
     let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
     if (!this.props.forceRender && page && page.getAlertBus() && page.getAlertBus().getId() !== this.getId()) {
       page.getAlertBus().removeAlert(alertId, setStateCallback);
     } else {
-      this.setState(function (state) {
+      this.setState(function(state) {
         let alertStack = state.alertStack.slice();
         let index = null;
 
@@ -179,7 +180,7 @@ export const AlertBus = createReactClass({
     return this;
   },
 
-  clearAlerts: function (setStateCallback) {
+  clearAlerts: function(setStateCallback) {
     let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
     if (!this.props.forceRender && page && page.getAlertBus() && page.getAlertBus().getId() !== this.getId()) {
       page.getAlertBus().clearAlerts(setStateCallback);
@@ -188,26 +189,24 @@ export const AlertBus = createReactClass({
       if (props) {
         props.hidden = true;
 
-        this.setState({
+        this.setState(
+          {
             alertStack: [props]
           },
           () => {
-            setTimeout(
-              () => {
-                this.setAsyncState({ alertStack: [] }, setStateCallback)
-              },
-              Alert.defaults.transitionDuration
-            )
+            setTimeout(() => {
+              this.setAsyncState({ alertStack: [] }, setStateCallback);
+            }, Alert.defaults.transitionDuration);
           }
         );
       } else {
-        typeof setStateCallback === 'function' && setStateCallback();
+        typeof setStateCallback === "function" && setStateCallback();
       }
     }
     return this;
   },
 
-  getAlerts: function () {
+  getAlerts: function() {
     let result = this.state.alertStack;
 
     let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
@@ -219,11 +218,11 @@ export const AlertBus = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
-  _getMessageProps: function (message, alertProps) {
+  //@@viewOn:private
+  _getMessageProps: function(message, alertProps) {
     alertProps = alertProps || {};
     var alertBus = this;
     var messageId = alertProps.id || UU5.Common.Tools.generateUUID();
@@ -234,30 +233,30 @@ export const AlertBus = createReactClass({
 
       content: alertProps.content,
       header: alertProps.header,
-      colorSchema: typeof alertProps.colorSchema === 'string' ? alertProps.colorSchema : this.props.colorSchema,
-      closeTimer: typeof alertProps.closeTimer === 'number' ? alertProps.closeTimer : this.props.closeTimer,
+      colorSchema: typeof alertProps.colorSchema === "string" ? alertProps.colorSchema : this.props.colorSchema,
+      closeTimer: typeof alertProps.closeTimer === "number" ? alertProps.closeTimer : this.props.closeTimer,
       closeDisabled: alertProps.closeDisabled === undefined ? this.props.closeDisabled : alertProps.closeDisabled,
       key: messageId,
       onClose: alert => {
         var onClose;
-        if (typeof alertProps.onClose === 'function') {
-          onClose = function () {
+        if (typeof alertProps.onClose === "function") {
+          onClose = function() {
             alertProps.onClose(alert);
-          }
-        } else if (typeof alertBus.props.onClose === 'function') {
-          onClose = function () {
+          };
+        } else if (typeof alertBus.props.onClose === "function") {
+          onClose = function() {
             alertBus.props.onClose(alert);
-          }
+          };
         }
 
         alertBus.removeAlert(messageId, onClose);
       }
     };
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   // Render
-  _getProps: function () {
+  _getProps: function() {
     // use only local alert stack - do not use alert stack from page. It leads to show alerts from page alert bus.
     const alertStack = this.state.alertStack;
 
@@ -269,7 +268,7 @@ export const AlertBus = createReactClass({
       alertProps = UU5.Common.Tools.merge({}, alertProps, alertStack[0]);
     }
 
-    alertProps.id = this.getId() + '-alert';
+    alertProps.id = this.getId() + "-alert";
     alertProps.position = this.props.position;
     alertProps.block = this.props.block;
 
@@ -277,8 +276,8 @@ export const AlertBus = createReactClass({
   },
 
   //@@viewOn:render
-  render: function () {
-    return (this.getNestingLevel() ? <Alert {...this._getProps()} /> : null)
+  render: function() {
+    return this.getNestingLevel() ? <Alert {...this._getProps()} /> : null;
   }
   //@@viewOff:render
 });

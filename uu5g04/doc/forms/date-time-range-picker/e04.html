@@ -50,7 +50,23 @@
   import "uu5g04-bricks";
   import "uu5g04-forms";
 
+  let valueStart = new Date();
+  valueStart.setHours(10);
+  valueStart.setMinutes(0);
+  valueStart.setSeconds(0);
+
+  let valueEnd = new Date();
+  valueEnd.setHours(12);
+  valueEnd.setMinutes(0);
+  valueEnd.setSeconds(0);
+
   const Page = createReactClass({
+    getInitialState() {
+      return {
+        value: [valueStart, valueEnd]
+      }
+    },
+
     render() {
       return (
         <UU5.Bricks.Container>
@@ -146,6 +162,16 @@
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
 
+          <UU5.Bricks.Section header="timeZone">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimeRangePicker
+              label="2019-11-01 10:00 - 12:00 of GMT in +3 time zone"
+              value={["2019-11-01T10:00:00Z", "2019-11-01T12:00:00Z"]}
+              timeZone={3}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
           <UU5.Bricks.Section header="nanMessage & beforeRangeMessage & afterRangeMessage">
             {/*@@viewOn:0*/}
             <UU5.Forms.DateTimeRangePicker
@@ -190,6 +216,12 @@
           <UU5.Bricks.Section header="labelFrom & labelTo">
             {/*@@viewOn:0*/}
             <UU5.Forms.DateTimeRangePicker label="Reservation" labelFrom="From" labelTo="To" />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="pickerLabelFrom & pickerLabelTo">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimeRangePicker label="Reservation" pickerLabelFrom="From" pickerLabelTo="To" />
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
 

@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -30,7 +30,7 @@ const CONFIG = {
     }
   },
   requiredProps: {
-    parent: shallow(<UU5.Bricks.ScreenSize id={"parent"}/>).instance(),
+    parent: shallow(<UU5.Bricks.ScreenSize id={"parent"} />).instance(),
     screenSize: "xs"
   },
   opt: {
@@ -40,34 +40,30 @@ const CONFIG = {
   }
 };
 
-
 describe(`UU5.Bricks.ScreenSize.Item`, () => {
   UU5.Test.Tools.testProperties(UU5.Bricks.ScreenSize.Item, CONFIG);
 });
 
-
-describe('Test UU5.bricks.ScreenSize.items own props', () => {
-
-  it('props.ScreeSize - test', () => {
+describe("Test UU5.bricks.ScreenSize.items own props", () => {
+  it("props.ScreeSize - test", () => {
     //component wil be render only if you set screeSize L.
     const wrapper = shallow(
       <UU5.Bricks.ScreenSize id="uuIDroot">
         <UU5.Bricks.ScreenSize.Item id={"uuID4"} screenSize={"l"}>
-          <UU5.Bricks.Span content="Content for M-XL"/>
+          <UU5.Bricks.Span content="Content for M-XL" />
         </UU5.Bricks.ScreenSize.Item>
       </UU5.Bricks.ScreenSize>
     );
     expect(wrapper).toMatchSnapshot();
-    wrapper.setProps({screenSize: "xl"});
+    wrapper.setProps({ screenSize: "xl" });
     expect(wrapper).toMatchSnapshot();
-    wrapper.setProps({screenSize: "m"});
+    wrapper.setProps({ screenSize: "m" });
     expect(wrapper).toMatchSnapshot();
-    wrapper.setProps({screenSize: "s"});
+    wrapper.setProps({ screenSize: "s" });
     expect(wrapper).toMatchSnapshot();
-    wrapper.setProps({screenSize: "xs"});
+    wrapper.setProps({ screenSize: "xs" });
     expect(wrapper).toMatchSnapshot();
   });
-
 });
 
 let baseMixinprops = {
@@ -77,7 +73,7 @@ let baseMixinprops = {
   className: "my-classname",
   style: "padding:8px; borderRadius: 2px",
   mainAttrs: {
-    style: [{backgroundColor: "red", color: "blue"}]
+    style: [{ backgroundColor: "red", color: "blue" }]
   },
   // parent: {},
   // ref_: {},
@@ -106,56 +102,51 @@ let nestingLevelMixinprops = {
   nestingLevel: "boxCollection"
 };
 
-
-describe('Mixin Props testing', () => {
-
-  it('Default values', () => {
+describe("Mixin Props testing", () => {
+  it("Default values", () => {
     const wrapper = shallow(
       <UU5.Bricks.ScreenSize id="uuIDroot">
         <UU5.Bricks.ScreenSize.Item id={"uuID4"} screenSize={"l"}>
-          <UU5.Bricks.Span content="Content for M-XL"/>
+          <UU5.Bricks.Span content="Content for M-XL" />
         </UU5.Bricks.ScreenSize.Item>
       </UU5.Bricks.ScreenSize>
     );
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('props of BaseMixin', () => {
+  it("props of BaseMixin", () => {
     const wrapper = shallow(
       <UU5.Bricks.ScreenSize id="uuIDroot">
         <UU5.Bricks.ScreenSize.Item id={"uuID4"} screenSize={"l"} {...baseMixinprops}>
-          <UU5.Bricks.Span content="Content for M-XL"/>
+          <UU5.Bricks.Span content="Content for M-XL" />
         </UU5.Bricks.ScreenSize.Item>
       </UU5.Bricks.ScreenSize>
     );
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('props of ElementaryMixin', () => {
+  it("props of ElementaryMixin", () => {
     const wrapper = shallow(
       <UU5.Bricks.ScreenSize id="uuIDroot">
         <UU5.Bricks.ScreenSize.Item id={"uuID4"} screenSize={"l"} {...elementaryMixinprops}>
-          <UU5.Bricks.Span content="Content for M-XL"/>
+          <UU5.Bricks.Span content="Content for M-XL" />
         </UU5.Bricks.ScreenSize.Item>
       </UU5.Bricks.ScreenSize>
     );
     expect(wrapper).toMatchSnapshot();
   });
 
-
-  it('props of NestingLevelMixin', () => {
+  it("props of NestingLevelMixin", () => {
     const wrapper = shallow(
       <UU5.Bricks.ScreenSize id="uuIDroot">
         <UU5.Bricks.ScreenSize.Item id={"uuID4"} screenSize={"l"} {...nestingLevelMixinprops}>
-          <UU5.Bricks.Span content="Content for M-XL"/>
+          <UU5.Bricks.Span content="Content for M-XL" />
         </UU5.Bricks.ScreenSize.Item>
       </UU5.Bricks.ScreenSize>
     );
     expect(wrapper).toMatchSnapshot();
   });
-
 });
-
 
 describe(`UU5.Bricks.ScreenSize.Item docKit examples`, () => {
   it(`UU5.Bricks.ScreenSize.Item should render without crash`, () => {
@@ -175,13 +166,3 @@ describe(`UU5.Bricks.ScreenSize.Item docKit examples`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
-
-
-
-
-
-
-
-
-
-

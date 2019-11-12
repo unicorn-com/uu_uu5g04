@@ -11,19 +11,18 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import createReactClass from "create-react-class";
 import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-forms";
+//@@viewOff:imports
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MixinPropsFunction = createReactClass({
-
-  mixins: [
-    UU5.Common.BaseMixin,
-  ],
+  mixins: [UU5.Common.BaseMixin],
 
   getInitialState: () => {
     return {
@@ -32,29 +31,27 @@ const MixinPropsFunction = createReactClass({
     };
   },
 
-
   validateOnChangeHandler(event) {
     alert("ValidateOnChange event has been called.");
-    this.setState({isCalled: true});
+    this.setState({ isCalled: true });
   },
 
   onChangeHandler(event) {
     alert("onChange event has been called.");
-    this.setState({isCalled: true});
-    this.setState({isChecked: event.target.value})
+    this.setState({ isCalled: true });
+    this.setState({ isChecked: event.target.value });
   },
 
   onValidateHandler(event) {
     alert("onValidate event has been called.");
-    this.setState({isCalled: true});
+    this.setState({ isCalled: true });
   },
 
   onChangeFeedbackHandler(event) {
     alert("onChangeFeedback event has been called.");
-    this.setState({isCalled: true});
-    this.setState({isChecked: event.target.value})
+    this.setState({ isCalled: true });
+    this.setState({ isChecked: event.target.value });
   },
-
 
   render() {
     return (
@@ -117,23 +114,20 @@ const CONFIG = {
   }
 };
 
-
 describe(`UU5.Forms.TriStateCheckbox props`, () => {
   UU5.Test.Tools.testProperties(UU5.Forms.TriStateCheckbox, CONFIG);
 });
 
-
 describe(`UU5.Forms.TriStateCheckbox props function -> Forms.InputMixin`, () => {
-
-  it('onChange()', () => {
+  it("onChange()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<MixinPropsFunction/>);
+    const wrapper = shallow(<MixinPropsFunction />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.state().isChecked).toBeFalsy();
     expect(wrapper.state().isCalled).toBeFalsy();
-    wrapper.simulate('change', {target: {value: null}});
+    wrapper.simulate("change", { target: { value: null } });
     expect(window.alert).toBeCalled();
-    expect(window.alert).toHaveBeenCalledWith('onChange event has been called.');
+    expect(window.alert).toHaveBeenCalledWith("onChange event has been called.");
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(wrapper.state().isChecked).toBeNull();
     expect(window.alert.mock.calls[0][0]).toEqual("onChange event has been called.");
@@ -147,39 +141,36 @@ describe(`UU5.Forms.TriStateCheckbox props function -> Forms.InputMixin`, () => 
     expect(callback).toBeCalled();
   });
 
-  it('onValidate()', () => {
+  it("onValidate()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<MixinPropsFunction/>);
+    const wrapper = shallow(<MixinPropsFunction />);
     expect(wrapper.state().isCalled).toBeFalsy();
-    wrapper.simulate('validate');
+    wrapper.simulate("validate");
     expect(window.alert).toBeCalled();
-    expect(window.alert).toHaveBeenCalledWith('onValidate event has been called.');
+    expect(window.alert).toHaveBeenCalledWith("onValidate event has been called.");
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onValidate event has been called.");
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('onChangeFeedback()', () => {
+  it("onChangeFeedback()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<MixinPropsFunction/>);
+    const wrapper = shallow(<MixinPropsFunction />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.state().isCalled).toBeFalsy();
     expect(wrapper.state().isChecked).toBeFalsy();
-    wrapper.simulate('changeFeedback', {target: {value: true}});
+    wrapper.simulate("changeFeedback", { target: { value: true } });
     expect(wrapper.state().isChecked).toBeTruthy();
     expect(window.alert).toBeCalled();
-    expect(window.alert).toHaveBeenCalledWith('onChangeFeedback event has been called.');
+    expect(window.alert).toHaveBeenCalledWith("onChangeFeedback event has been called.");
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onChangeFeedback event has been called.");
     expect(wrapper).toMatchSnapshot();
   });
-
 });
 
-
-describe('Check default props value', () => {
-
-  it('Forms.TriStateCheckbox own props', () => {
+describe("Check default props value", () => {
+  it("Forms.TriStateCheckbox own props", () => {
     const wrapper = shallow(
       <UU5.Forms.TriStateCheckbox
         id={"checkID"}
@@ -194,12 +185,8 @@ describe('Check default props value', () => {
     expect(wrapper.instance().props.indeterminateIcon).toEqual("");
   });
 
-  it('UU5.Commons - Base,Elementary,Color,Pure', () => {
-    const wrapper = shallow(
-      <UU5.Forms.TriStateCheckbox
-        id={"uuID"}
-      />
-    );
+  it("UU5.Commons - Base,Elementary,Color,Pure", () => {
+    const wrapper = shallow(<UU5.Forms.TriStateCheckbox id={"uuID"} />);
     //Check UU5.Common.Elementary.Mixin default props
     expect(wrapper.instance().props.hidden).toBeFalsy();
     expect(wrapper.instance().props.disabled).toBeFalsy();
@@ -221,12 +208,8 @@ describe('Check default props value', () => {
     expect(wrapper.instance().props.colorSchema).toBe(null);
   });
 
-  it('Forms.InputMixin', () => {
-    const wrapper = shallow(
-      <UU5.Forms.TriStateCheckbox
-        id={"uuID"}
-      />
-    );
+  it("Forms.InputMixin", () => {
+    const wrapper = shallow(<UU5.Forms.TriStateCheckbox id={"uuID"} />);
     expect(wrapper.instance().props.inputAttrs).toBe(null);
     expect(wrapper.instance().props.size).toEqual("m");
     expect(wrapper.instance().props.readOnly).toBeFalsy();
@@ -240,7 +223,4 @@ describe('Check default props value', () => {
     expect(wrapper.instance().props.inputColWidth).toMatchObject({ xs: 12, s: 7 });
     expect(wrapper.instance().props.labelColWidth).toMatchObject({ xs: 12, s: 5 });
   });
-
 });
-
-

@@ -1,25 +1,27 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
-import LsiItem from './lsi-item.js';
+import LsiItem from "./lsi-item.js";
 
-import './lsi.less';
+import "./lsi.less";
+//@@viewOff:imports
 
 export const Lsi = UU5.Common.LsiMixin.withContext(
   createReactClass({
@@ -37,12 +39,12 @@ export const Lsi = UU5.Common.LsiMixin.withContext(
     //@@viewOn:statics
     statics: {
       tagName: ns.name("Lsi"),
-      nestingLevelList: UU5.Environment.getNestingLevelList('bigBoxCollection', 'inline'),
+      nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "inline"),
       classNames: {
         main: ns.css("lsi")
       },
       defaults: {
-        childTagName: 'UU5.Bricks.Lsi.Item'
+        childTagName: "UU5.Bricks.Lsi.Item"
       },
       opt: {
         nestingLevelWrapper: true
@@ -53,18 +55,13 @@ export const Lsi = UU5.Common.LsiMixin.withContext(
     //@@viewOn:propTypes
     propTypes: {
       lsi: PropTypes.object,
-      allowTags: PropTypes.arrayOf(
-        PropTypes.string
-      ),
-      params: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.array
-      ])
+      allowTags: PropTypes.arrayOf(PropTypes.string),
+      params: PropTypes.oneOfType([PropTypes.string, PropTypes.array])
     },
     //@@viewOff:propTypes
 
     //@@viewOn:getDefaultProps
-    getDefaultProps: function () {
+    getDefaultProps: function() {
       return {
         lsi: null,
         allowTags: [],
@@ -73,8 +70,8 @@ export const Lsi = UU5.Common.LsiMixin.withContext(
     },
     //@@viewOff:getDefaultProps
 
-    //@@viewOn:standardComponentLifeCycle
-    //@@viewOff:standardComponentLifeCycle
+    //@@viewOn:reactLifeCycle
+    //@@viewOff:reactLifeCycle
 
     //@@viewOn:interface
     isLsi() {
@@ -82,14 +79,14 @@ export const Lsi = UU5.Common.LsiMixin.withContext(
     },
     //@@viewOff:interface
 
-    //@@viewOn:overridingMethods
-    //@@viewOff:overridingMethods
+    //@@viewOn:overriding
+    //@@viewOff:overriding
 
-    //@@viewOn:componentSpecificHelpers
-    _expandChildProps: function (child) {
+    //@@viewOn:private
+    _expandChildProps: function(child) {
       let newChildProps = child ? { ...child.props } : {};
 
-      newChildProps.id = newChildProps.id || (this.getId() + '-inner');
+      newChildProps.id = newChildProps.id || this.getId() + "-inner";
       newChildProps.controlled = true;
       newChildProps.hidden = this.isHidden();
       newChildProps.disabled = this.isDisabled();
@@ -103,7 +100,7 @@ export const Lsi = UU5.Common.LsiMixin.withContext(
       let child;
 
       if (typeof this.props.children === "function") {
-        child = this.props.children({ language: this.getLanguage() })
+        child = this.props.children({ language: this.getLanguage() });
       } else {
         let children = this.getChildren();
 
@@ -145,10 +142,10 @@ export const Lsi = UU5.Common.LsiMixin.withContext(
 
       return child;
     },
-    //@@viewOff:componentSpecificHelpers
+    //@@viewOff:private
 
     //@@viewOn:render
-    render: function () {
+    render: function() {
       return this.getNestingLevel() ? this._getChildren() : null;
     }
     //@@viewOff:render

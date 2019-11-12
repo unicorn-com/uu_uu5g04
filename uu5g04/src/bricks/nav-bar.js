@@ -1,27 +1,29 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 const ClassNames = UU5.Common.ClassNames;
 
-import Header from './nav-bar-header.js';
-import Nav from './nav-bar-nav.js';
-import NavBarNavItem from './nav-bar-nav-item.js';
-import './nav-bar.less';
+import Header from "./nav-bar-header.js";
+import Nav from "./nav-bar-nav.js";
+import NavBarNavItem from "./nav-bar-nav-item.js";
+import "./nav-bar.less";
+//@@viewOff:imports
 
 export const NavBar = createReactClass({
   //@@viewOn:mixins
@@ -38,7 +40,7 @@ export const NavBar = createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("NavBar"),
-    nestingLevelList: UU5.Environment.getNestingLevelList('bigBoxCollection', 'box'),
+    nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
       main: ns.css("nav-bar"),
       body: ns.css("nav-bar-body"),
@@ -50,15 +52,15 @@ export const NavBar = createReactClass({
     },
     defaults: {
       tagNames: {
-        header: 'UU5.Bricks.NavBar.Header',
-        nav: 'UU5.Bricks.NavBar.Nav'
+        header: "UU5.Bricks.NavBar.Header",
+        nav: "UU5.Bricks.NavBar.Nav"
       },
       duration: 250
     },
     warnings: {
-      cannotOpenIfAlwaysOpen: 'Cannot open navBar if alwaysOpen is set to true.',
-      cannotCloseIfAlwaysOpen: 'Cannot close navBar if alwaysOpen is set to true.',
-      cannotToggleIfAlwaysOpen: 'Cannot toggle navBar if alwaysOpen is set to true.'
+      cannotOpenIfAlwaysOpen: "Cannot open navBar if alwaysOpen is set to true.",
+      cannotCloseIfAlwaysOpen: "Cannot close navBar if alwaysOpen is set to true.",
+      cannotToggleIfAlwaysOpen: "Cannot toggle navBar if alwaysOpen is set to true."
     },
     opt: {
       nestingLevelWrapper: true
@@ -68,7 +70,7 @@ export const NavBar = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    fixed: PropTypes.oneOf(['top', 'bottom']),
+    fixed: PropTypes.oneOf(["top", "bottom"]),
     smoothScroll: PropTypes.number,
     offset: PropTypes.number,
     open: PropTypes.bool,
@@ -77,8 +79,8 @@ export const NavBar = createReactClass({
     iconClosed: PropTypes.string,
     onOpen: PropTypes.func,
     onClose: PropTypes.func,
-    size: PropTypes.oneOf(['s', 'm', 'l', 'xl']),
-    elevation: PropTypes.oneOf(['-1', '0', '1', '2', '3', '4', '5', -1, 0, 1, 2, 3, 4, 5])
+    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
+    elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
   },
   //@@viewOff:propTypes
 
@@ -90,17 +92,17 @@ export const NavBar = createReactClass({
       offset: null,
       open: false,
       alwaysOpen: false,
-      iconOpen: 'mdi-menu',
-      iconClosed: 'mdi-menu',
+      iconOpen: "mdi-menu",
+      iconClosed: "mdi-menu",
       onOpen: null,
       onClose: null,
-      size: 'm',
+      size: "m",
       elevation: null
     };
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
       height: this._getHeight(this.props.open),
@@ -123,7 +125,7 @@ export const NavBar = createReactClass({
   componentDidMount() {
     var newState = {};
 
-    if (this.props.fixed === 'top' && !this.state.offset) {
+    if (this.props.fixed === "top" && !this.state.offset) {
       newState.offset = UU5.Common.Tools.getOuterHeight(this);
     }
 
@@ -134,7 +136,7 @@ export const NavBar = createReactClass({
 
     Object.keys(newState).length && this.setState(newState);
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   isNavBar() {
@@ -153,29 +155,27 @@ export const NavBar = createReactClass({
           this.setState({ height: height }, () => {
             this._timer && clearTimeout(this._timer);
             this._timer = setTimeout(
-              () => this.setAsyncState({height: null}, setStateCallback),
+              () => this.setAsyncState({ height: null }, setStateCallback),
               this.getDefault().duration
             );
           });
         });
       }
-    } else if (typeof setStateCallback === 'function') {
-      this.showWarning('cannotOpenIfAlwaysOpen');
+    } else if (typeof setStateCallback === "function") {
+      this.showWarning("cannotOpenIfAlwaysOpen");
     }
     return this;
   },
 
   close(setStateCallback) {
     if (!this.props.alwaysOpen) {
-
       var height = this._getHeight(true);
       this.setState({ height: height }, () => {
         // TODO: must to be timeout because of animation
-        setTimeout(() => this.setAsyncState({height: 0, expanded: false}, setStateCallback), 0);
+        setTimeout(() => this.setAsyncState({ height: 0, expanded: false }, setStateCallback), 0);
       });
-
-    } else if (typeof setStateCallback === 'function') {
-      this.showWarning('cannotCloseIfAlwaysOpen');
+    } else if (typeof setStateCallback === "function") {
+      this.showWarning("cannotCloseIfAlwaysOpen");
     }
     return this;
   },
@@ -184,8 +184,8 @@ export const NavBar = createReactClass({
     if (!this.props.alwaysOpen) {
       // TODO: to setState function
       this.state.expanded ? this.close(setStateCallback) : this.open(setStateCallback);
-    } else if (typeof setStateCallback === 'function') {
-      this.showWarning('cannotToggleIfAlwaysOpen', null);
+    } else if (typeof setStateCallback === "function") {
+      this.showWarning("cannotToggleIfAlwaysOpen", null);
     }
     return this;
   },
@@ -195,35 +195,40 @@ export const NavBar = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
+  //@@viewOn:overriding
   expandChildProps_(child) {
     const newChildProps = { ...child.props };
     newChildProps._size = this.props.size;
     return newChildProps;
   },
-  //@@viewOff:overridingMethods
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _getHeight(expanded) {
-    return (expanded && this._container) ? UU5.Common.Tools.getOuterHeight(this._container, true) : 0;
+    return expanded && this._container ? UU5.Common.Tools.getOuterHeight(this._container, true) : 0;
   },
 
   _getMainAttrs() {
     const mainAttrs = this.getMainAttrs();
-    mainAttrs.className += ' ' + this.getClassName('size') + this.props.size;
+    mainAttrs.className += " " + this.getClassName("size") + this.props.size;
 
     if (this.props.elevation) {
       mainAttrs.className += " " + ClassNames.elevation + this.props.elevation;
     }
 
-    this.props.fixed && (mainAttrs.className += ' ' + this.getClassName('fixed') + this.props.fixed);
-    this.isOpen() && (mainAttrs.className += ' ' + this.getClassName().open);
+    this.props.fixed && (mainAttrs.className += " " + this.getClassName("fixed") + this.props.fixed);
+    this.isOpen() && (mainAttrs.className += " " + this.getClassName().open);
 
     mainAttrs.style = mainAttrs.style || {};
     const time = this.getDefault().duration / 1000;
-    ['WebkitTransitionDuration', 'MozTransitionDuration', 'MsTransitionDuration',
-      'OTransitionDuration', 'transitionDuration'].forEach(function (style) {
-      mainAttrs.style[style] = time + 's';
+    [
+      "WebkitTransitionDuration",
+      "MozTransitionDuration",
+      "MsTransitionDuration",
+      "OTransitionDuration",
+      "transitionDuration"
+    ].forEach(function(style) {
+      mainAttrs.style[style] = time + "s";
     });
 
     return mainAttrs;
@@ -231,23 +236,23 @@ export const NavBar = createReactClass({
 
   _prepareHeader(headerProps) {
     const headerPropsToPass = {
-      id: this.getId() + '-header',
+      id: this.getId() + "-header",
       parent: this
     };
 
     var newHeaderProps = headerProps ? UU5.Common.Tools.mergeDeep(headerPropsToPass, headerProps) : headerPropsToPass;
     newHeaderProps._icon = this.isOpen() ? this.props.iconOpen : this.props.iconClosed;
     newHeaderProps._hamburger = !this.props.alwaysOpen;
-    newHeaderProps._onOpen = typeof this.props.onOpen === 'function' ? this.props.onOpen : null;
-    newHeaderProps._onClose = typeof this.props.onClose === 'function' ? this.props.onClose : null;
+    newHeaderProps._onOpen = typeof this.props.onOpen === "function" ? this.props.onOpen : null;
+    newHeaderProps._onClose = typeof this.props.onClose === "function" ? this.props.onClose : null;
     newHeaderProps._size = this.props.size;
 
     return <Header {...newHeaderProps} />;
   },
 
   _prepareNavs(navsProps) {
-    return navsProps.map(function (props, i) {
-      props.key = props.key || 'nav-' + i;
+    return navsProps.map(function(props, i) {
+      props.key = props.key || "nav-" + i;
       return <Nav {...props} />;
     });
   },
@@ -261,7 +266,7 @@ export const NavBar = createReactClass({
 
     if (children) {
       if (!Array.isArray(children)) children = [children];
-      children.map((child) => {
+      children.map(child => {
         switch (UU5.Common.Tools.getChildTagName(child)) {
           case this.getDefault().tagNames.header:
             headerProps = child.props;
@@ -288,11 +293,11 @@ export const NavBar = createReactClass({
   },
 
   _getNavContainerId() {
-    return this.getId() + '-navContainer';
+    return this.getId() + "-navContainer";
   },
 
   _getNavCoverId() {
-    return this.getId() + '-navCover';
+    return this.getId() + "-navCover";
   },
 
   _getNavHeight() {
@@ -323,9 +328,9 @@ export const NavBar = createReactClass({
   _getNavBodyProps() {
     return {
       className: this.getClassName().body
-    }
+    };
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
@@ -336,7 +341,7 @@ export const NavBar = createReactClass({
         <div {...this._getNavBodyProps()}>
           {childrenObject.header}
           <div {...this._getNavCoverProps()}>
-            <div {...this._getNavContainerProps()} ref={(navContainer) => this._container = navContainer}>
+            <div {...this._getNavContainerProps()} ref={navContainer => (this._container = navContainer)}>
               {childrenObject.navs}
             </div>
           </div>

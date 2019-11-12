@@ -1,28 +1,32 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
-import ContextMenuItem from './context-menu-item.js';
-import Popover from './popover.js';
+import ContextMenuItem from "./context-menu-item.js";
+import Popover from "./popover.js";
+import ScreenSize from "./screen-size.js";
+import CompactContextMenu from "./internal/compact-context-menu.js";
+import { Helpers } from "./internal/context-menu-helpers.js";
 
-import './context-menu.less';
+import "./context-menu.less";
+//@@viewOff:imports
 
 export const ContextMenu = createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -37,13 +41,12 @@ export const ContextMenu = createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("ContextMenu"),
-    nestingLevelList: UU5.Environment.getNestingLevelList('bigBoxCollection', 'box'),
+    nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
-      main: ns.css("context-menu"),
-      ul: ns.css("context-menu-ul")
+      main: ns.css("context-menu")
     },
     defaults: {
-      childTagName: 'UU5.Bricks.ContextMenu.Item'
+      childTagName: "UU5.Bricks.ContextMenu.Item"
     },
     opt: {
       nestingLevelRoot: true
@@ -56,9 +59,8 @@ export const ContextMenu = createReactClass({
     shown: PropTypes.bool,
     forceRender: PropTypes.bool,
     parentElement: PropTypes.object,
-    allowTags: PropTypes.arrayOf(
-      PropTypes.string
-    )
+    allowTags: PropTypes.arrayOf(PropTypes.string),
+    compactSubmenu: PropTypes.oneOfType([PropTypes.bool, PropTypes.string])
   },
   //@@viewOff:propTypes
 
@@ -68,13 +70,14 @@ export const ContextMenu = createReactClass({
       shown: false,
       forceRender: false,
       parentElement: null,
-      allowTags: []
+      allowTags: [],
+      compactSubmenu: "xs"
     };
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   isContextMenu() {
@@ -83,7 +86,7 @@ export const ContextMenu = createReactClass({
 
   open(opt, setStateCallback) {
     if (!this.isOpen()) {
-      opt && (opt.content = this._getChildren(opt.content));
+      opt && (opt.content = this._getPopoverContent(opt.content));
     }
     this._popover.open(opt, setStateCallback);
     return this;
@@ -99,28 +102,34 @@ export const ContextMenu = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
+  //@@viewOn:overriding
   shouldChildRender_(child) {
     let childTagName = UU5.Common.Tools.getChildTagName(child);
     let defaultChildTagName = this.getDefault().childTagName;
     let childTagNames = this.props.allowTags.concat(defaultChildTagName);
     let result = childTagNames.indexOf(childTagName) > -1;
-    if (!result && (typeof child !== 'string' || child.trim())) {
-      if (childTagName) this.showError('childTagNotAllowed', [childTagName, this.getTagName(), childTagName, defaultChildTagName], { mixinName: 'UU5.Common.BaseMixin' });
-      else this.showError('childNotAllowed', [child, defaultChildTagName], { mixinName: 'UU5.Common.BaseMixin' });
+    if (!result && (typeof child !== "string" || child.trim())) {
+      if (childTagName)
+        this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagName], {
+          mixinName: "UU5.Common.BaseMixin"
+        });
+      else this.showError("childNotAllowed", [child, defaultChildTagName], { mixinName: "UU5.Common.BaseMixin" });
     }
     return result;
   },
-  //@@viewOff:overridingMethods
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
+  _registerCompactMenu(ref) {
+    this._compactMenu = ref;
+  },
+
+  _getPopoverContent(content) {
+    return <ScreenSize>{opt => this._renderMenuType(opt, content)}</ScreenSize>;
+  },
+
   _getChildren(content) {
-    let result = null;
-    let children = this.buildChildren({ content: content, children: this.props.children });
-    if (children && children.length) {
-      result = <ul className={this.getClassName().ul}>{children}</ul>;
-    }
-    return result;
+    return Helpers.wrapSubmenu(this.buildChildren({ content, children: this.props.children }));
   },
 
   _getMainProps() {
@@ -132,17 +141,39 @@ export const ContextMenu = createReactClass({
     props.header = this.getHeader();
     props.footer = this.getFooter();
     props.nestingLevel = this.getNestingLevel();
-    props.ref_ = ref => this._popover = ref;
-    props.content = this._getChildren(this.props.content);
+    props.ref_ = ref => (this._popover = ref);
 
     return props;
   },
 
-  //@@viewOff:componentSpecificHelpers
+  _renderMenuType({ screenSize }, content) {
+    if (!content) {
+      content = this.props.content || this.props.children;
+    }
+
+    let screenSizeRegExp = new RegExp(`\\b${screenSize}\\b`);
+    if (this.props.compactSubmenu === true || this.props.compactSubmenu.match(screenSizeRegExp)) {
+      return (
+        <CompactContextMenu
+          key={UU5.Common.Tools.generateUUID()}
+          ref_={this._registerCompactMenu}
+          content={this.buildChildren({ content })}
+          parent={this}
+        />
+      );
+    } else {
+      return this._getChildren(content);
+    }
+  },
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
-    return <Popover {...this._getMainProps()} />;
+    return (
+      <Popover {...this._getMainProps()}>
+        <ScreenSize>{this._renderMenuType}</ScreenSize>
+      </Popover>
+    );
   }
   //@@viewOff:render
 });

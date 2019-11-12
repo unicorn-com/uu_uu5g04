@@ -11,6 +11,7 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import React from "react";
 import createReactClass from "create-react-class";
 import PropTypes from "prop-types";
@@ -18,6 +19,7 @@ import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./resize-observer.less";
+//@@viewOff:imports
 
 let ResizeObserver;
 if (window.ResizeObserver) {
@@ -99,7 +101,7 @@ if (window.ResizeObserver) {
     },
     //@@viewOff:getDefaultProps
 
-    //@@viewOn:standardComponentLifeCycle
+    //@@viewOn:reactLifeCycle
     componentDidMount() {
       this._attachResizeEvent();
       this._reset();
@@ -112,15 +114,15 @@ if (window.ResizeObserver) {
     componentDidUpdate() {
       this._reset();
     },
-    //@@viewOff:standardComponentLifeCycle
+    //@@viewOff:reactLifeCycle
 
     //@@viewOn:interface
     //@@viewOff:interface
 
-    //@@viewOn:overridingMethods
-    //@@viewOff:overridingMethods
+    //@@viewOn:overriding
+    //@@viewOff:overriding
 
-    //@@viewOn:componentSpecificHelpers
+    //@@viewOn:private
     _attachResizeEvent() {
       if (!this._rootElement) return;
 
@@ -203,7 +205,7 @@ if (window.ResizeObserver) {
         height: Math.round(rect.height)
       };
     },
-    //@@viewOff:componentSpecificHelpers
+    //@@viewOff:private
 
     //@@viewOn:render
     render() {

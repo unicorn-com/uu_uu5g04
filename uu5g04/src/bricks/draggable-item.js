@@ -1,28 +1,29 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
-import DraggableMixin from './draggable-mixin.js';
+import DraggableMixin from "./draggable-mixin.js";
 
-import './draggable-item.less'
+import "./draggable-item.less";
+//@@viewOff:imports
 
 export const DraggableItem = createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -36,7 +37,7 @@ export const DraggableItem = createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("DraggableItem"),
-    nestingLevelList: UU5.Environment.getNestingLevelList('bigBoxCollection', 'box'),
+    nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
       main: ns.css("draggable-item")
     },
@@ -68,7 +69,7 @@ export const DraggableItem = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
       x: this.props.x,
@@ -77,20 +78,28 @@ export const DraggableItem = createReactClass({
   },
 
   componentWillMount() {
-    this.draggableParent = this.getParentByType('hasUU5_Bricks_DraggableMixin');
+    this.draggableParent = this.getParentByType("hasUU5_Bricks_DraggableMixin");
     return this;
   },
 
   componentDidMount() {
     if (this.draggableParent) {
-      this.setState((state) => {
+      this.setState(state => {
         return {
-          x: state.x + this.draggableParent.getXOffset() + this.draggableParent.getClientLeft() + this.draggableParent.getPaddingLeft(),
-          y: state.y + this.draggableParent.getYOffset() + this.draggableParent.getClientTop() + this.draggableParent.getPaddingTop()
-        }
+          x:
+            state.x +
+            this.draggableParent.getXOffset() +
+            this.draggableParent.getClientLeft() +
+            this.draggableParent.getPaddingLeft(),
+          y:
+            state.y +
+            this.draggableParent.getYOffset() +
+            this.draggableParent.getClientTop() +
+            this.draggableParent.getPaddingTop()
+        };
       });
     } else {
-      this.showError('invalidParentType')
+      this.showError("invalidParentType");
     }
     return this;
   },
@@ -105,13 +114,13 @@ export const DraggableItem = createReactClass({
     return this;
   },
 
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   moveToPosition(x, y) {
     if (x || y) {
       let opt = { component: this, x: x, y: y };
-      if (typeof this.props.onMove === 'function') {
+      if (typeof this.props.onMove === "function") {
         this.props.onMove(opt);
       } else {
         this.onMoveDefault(opt);
@@ -123,11 +132,11 @@ export const DraggableItem = createReactClass({
   setPosition(x, y, setStateCallback) {
     x = isNaN(x) ? 0 : x;
     y = isNaN(y) ? 0 : y;
-    this.setState((state) => {
+    this.setState(state => {
       return {
         x: x + state.x,
         y: y + state.y
-      }
+      };
     }, setStateCallback);
     return this;
   },
@@ -138,7 +147,7 @@ export const DraggableItem = createReactClass({
   },
 
   moveEnd() {
-    typeof this.props.onMoveEnd === 'function' && this.props.onMoveEnd();
+    typeof this.props.onMoveEnd === "function" && this.props.onMoveEnd();
     return this;
   },
 
@@ -149,13 +158,13 @@ export const DraggableItem = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _onMouseDown(e) {
     var onStart;
-    if (typeof this.props.onMoveStart === 'function') {
+    if (typeof this.props.onMoveStart === "function") {
       onStart = this.props.onMoveStart();
     }
     if (onStart !== false) {
@@ -167,30 +176,28 @@ export const DraggableItem = createReactClass({
 
     return this;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   // Render
 
   //@@viewOn:render
   render() {
-    return (
-      this.getNestingLevel() ? (
-        <div
-          {...this.getMainAttrs()}
-          onMouseDown={this._onMouseDown}
-          onTouchStart={this._onMouseDown}
-          style={{
-            left: this.state.x,
-            top: this.state.y
-          }}
-        >
-          <UU5.Bricks.Div parent={this} content={this.props.content} pureRender>
-            {this.props.children}
-          </UU5.Bricks.Div>
-          {this.getDisabledCover()}
-        </div>
-      ) : null
-    );
+    return this.getNestingLevel() ? (
+      <div
+        {...this.getMainAttrs()}
+        onMouseDown={this._onMouseDown}
+        onTouchStart={this._onMouseDown}
+        style={{
+          left: this.state.x,
+          top: this.state.y
+        }}
+      >
+        <UU5.Bricks.Div parent={this} content={this.props.content} pureRender>
+          {this.props.children}
+        </UU5.Bricks.Div>
+        {this.getDisabledCover()}
+      </div>
+    ) : null;
   }
   //@@viewOff:render
 });

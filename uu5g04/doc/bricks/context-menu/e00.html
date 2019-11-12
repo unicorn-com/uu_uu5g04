@@ -54,57 +54,134 @@
     render() {
       return (
         <UU5.Bricks.Container>
-          {/*@@viewOn:0*/}
-          <UU5.Bricks.ContextMenu ref_={(menu) => this._menu = menu} header='Header' footer='Footer' >
-            <UU5.Bricks.ContextMenu.Item
-              label="Ráno"
-              onClick={(opt) => {
-                opt.component.close();
-              }}
-              icon="mdi-weather-sunset-up"
-              space
-            />
-            <UU5.Bricks.ContextMenu.Item
-              label="Dopoledne"
-              space
-            />
-            <UU5.Bricks.ContextMenu.Item
-              label="V poledne"
-              icon="mdi-weather-sunny"
-              space
-              disabled
-            />
-            <UU5.Bricks.ContextMenu.Item
-              label="Odpoledne"
-              space
-            />
-            <UU5.Bricks.ContextMenu.Item
-              label="Večer"
-              icon="mdi-weather-sunset"
-            />
-            <UU5.Bricks.ContextMenu.Item
-              divider
-            />
-            <UU5.Bricks.ContextMenu.Item
-              label="Vlastní"
-            />
-            <UU5.Bricks.ContextMenu.Item
-              label="Nějaké další"
-            />
-            <UU5.Bricks.ContextMenu.Item
-              label="Úplně jiné"
-              disabled
-            />
-          </UU5.Bricks.ContextMenu>
+          <UU5.Bricks.Row className="padding-s">
+            {/*@@viewOn:0*/}
+            <UU5.Bricks.ContextMenu ref_={(menu) => this._menu = menu} header='Header' footer='Footer' >
+              <UU5.Bricks.ContextMenu.Item
+                label="Submenu"
+                space
+              >
+                <UU5.Bricks.ContextMenu.Item
+                  label="Submenu Item"
+                  space
+                />
+                <UU5.Bricks.ContextMenu.Item
+                  label="Submenu Item"
+                  space
+                />
+              </UU5.Bricks.ContextMenu.Item>
+              <UU5.Bricks.ContextMenu.Item
+                label="Submenu"
+                space
+              >
+                <UU5.Bricks.ContextMenu.Item
+                  label="Submenu Item"
+                  space
+                />
+                <UU5.Bricks.ContextMenu.Item
+                  label="Submenu Item"
+                  space
+                />
+              </UU5.Bricks.ContextMenu.Item>
+            </UU5.Bricks.ContextMenu>
 
-          <UU5.Bricks.Button
-            onClick={(button, e) => {
-              this._menu.open({
-                event: e
-              });
-            }}
-            content="Show contex menu"
-          />
+            <UU5.Bricks.Button
+              onClick={(button, e) => {
+                this._menu.open({
+                  event: e
+                });
+              }}
+              content="Show contex menu"
+            />
+          </UU5.Bricks.Row>
+          <UU5.Bricks.Row className="padding-s">
+            <UU5.Bricks.ContextMenu ref_={(menu) => this._menuWithSubmenu = menu} header='Header' footer='Footer' >
+              <UU5.Bricks.ContextMenu.Item
+                label="Submenu"
+                space
+              >
+                <UU5.Bricks.ContextMenu.Item
+                  label="Submenu Item"
+                  space
+                />
+                <UU5.Bricks.ContextMenu.Item
+                  label="Submenu Item"
+                  space
+                />
+              </UU5.Bricks.ContextMenu.Item>
+              <UU5.Bricks.ContextMenu.Item
+                label="Submenu"
+                space
+              >
+                <UU5.Bricks.ContextMenu.Item
+                  label="Submenu Item"
+                  space
+                />
+                <UU5.Bricks.ContextMenu.Item
+                  label="Submenu Item"
+                  space
+                />
+              </UU5.Bricks.ContextMenu.Item>
+            </UU5.Bricks.ContextMenu>
+
+            <UU5.Bricks.Button
+              onClick={(button, e) => {
+                this._menuWithSubmenu.open({
+                  event: e
+                });
+              }}
+              content="Show contex menu with submenu"
+            />
+          </UU5.Bricks.Row>
+          <UU5.Bricks.Row className="padding-s">
+            <UU5.Bricks.ContextMenu compactSubmenu={true} ref_={(menu) => this._menuWithCompactSubmenu = menu} header='Header' footer='Footer' >
+              <UU5.Bricks.ContextMenu.Item
+                label="Normal item"
+                icon="mdi-check"
+                space
+              />
+              <UU5.Bricks.ContextMenu.Item
+                label="1. Level 0"
+                space
+              >
+                <UU5.Bricks.ContextMenu.Item
+                  label="1. Level 1"
+                  space
+                >
+                  <UU5.Bricks.ContextMenu.Item
+                    label="1. Level 2"
+                    space
+                  />
+                </UU5.Bricks.ContextMenu.Item>
+                <UU5.Bricks.ContextMenu.Item
+                  label="2. Level 1"
+                  space
+                />
+              </UU5.Bricks.ContextMenu.Item>
+              <UU5.Bricks.ContextMenu.Item
+                label="2. Level 0"
+                space
+              >
+                <UU5.Bricks.ContextMenu.Item
+                  label="3. Level 1"
+                  space
+                />
+                <UU5.Bricks.ContextMenu.Item
+                  label="4. Level 1"
+                  space
+                />
+              </UU5.Bricks.ContextMenu.Item>
+            </UU5.Bricks.ContextMenu>
+
+            <UU5.Bricks.Button
+              onClick={(button, e) => {
+                this._menuWithCompactSubmenu.open({
+                  event: e
+                });
+              }}
+              content="Show contex menu with compact submenu"
+            />
+          </UU5.Bricks.Row>
           {/*@@viewOff:0*/}
         </UU5.Bricks.Container>
       );

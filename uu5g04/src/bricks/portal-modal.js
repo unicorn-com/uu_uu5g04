@@ -121,13 +121,17 @@ export const PortalModal = UU5.Common.VisualComponent.create({
           }}
           onClose={opt => {
             this._modal.onCloseDefault();
-            setTimeout(() => this._close(() => {
-              if (typeof this.props.onClose === "function") {
-                this.props.onClose(opt);
-              } else if (typeof opt.callback === "function") {
-                opt.callback();
-              }
-            }), 500);
+            setTimeout(
+              () =>
+                this._close(() => {
+                  if (typeof this.props.onClose === "function") {
+                    this.props.onClose(opt);
+                  } else if (typeof opt.callback === "function") {
+                    opt.callback();
+                  }
+                }),
+              500
+            );
           }}
           forceRender
         />,

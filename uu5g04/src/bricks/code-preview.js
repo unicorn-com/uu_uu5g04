@@ -1,32 +1,29 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./code-preview.less";
+//@@viewOff:imports
 
 export const CodePreview = createReactClass({
-
   //@@viewOn:mixins
-  mixins: [
-    UU5.Common.BaseMixin,
-    UU5.Common.ElementaryMixin,
-    UU5.Common.PureRenderMixin
-  ],
+  mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.PureRenderMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -60,7 +57,7 @@ export const CodePreview = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
       props: this.props.props,
@@ -73,10 +70,10 @@ export const CodePreview = createReactClass({
       this.setState({
         props: nextProps.props,
         uu5string: nextProps.uu5string
-      })
+      });
     }
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   setProp(name, value) {
@@ -89,18 +86,21 @@ export const CodePreview = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _indentRows(text, indent = "  ", skipFirst = true) {
-    return text.split("\n").map((line, i) => {
-      if (skipFirst && i === 0) {
-        return line;
-      } else {
-        return `${indent}${line}`;
-      }
-    }).join("\n");
+    return text
+      .split("\n")
+      .map((line, i) => {
+        if (skipFirst && i === 0) {
+          return line;
+        } else {
+          return `${indent}${line}`;
+        }
+      })
+      .join("\n");
   },
 
   _getJson(object) {
@@ -112,7 +112,7 @@ export const CodePreview = createReactClass({
   _getUu5String(uu5string) {
     let result;
     if (this.state.uu5string) {
-      result = `"${uu5string.replace(/\n/g, "\\n").replace(/"/g, "\\\"")}"`;
+      result = `"${uu5string.replace(/\n/g, "\\n").replace(/"/g, '\\"')}"`;
     } else {
       result = this._indentRows(uu5string.replace(/^<uu5string *\/>/, ""), "    ");
       result = `{\n    ${result}\n  }`;
@@ -202,7 +202,7 @@ export const CodePreview = createReactClass({
 
     return value;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
@@ -221,9 +221,13 @@ export const CodePreview = createReactClass({
               </UU5.Bricks.Button>
             </UU5.Bricks.ButtonGroup>
           </UU5.Bricks.Div>
-          {UU5.Common.Tools.findComponent("UU5.CodeKit.CodeViewer", { codeStyle: "js", showGutter: false, value: this._getValue() })}
+          {UU5.Common.Tools.findComponent("UU5.CodeKit.CodeViewer", {
+            codeStyle: "js",
+            showGutter: false,
+            value: this._getValue()
+          })}
         </UU5.Bricks.Div>
-      )
+      );
     }
 
     return result;

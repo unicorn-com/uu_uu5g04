@@ -2,6 +2,14 @@ import { Session as TestSession } from "./session.js";
 
 // TODO Mocking UuApp Session should be somewhere else (uu_appg01-test?).
 try {
+  // NOTE Mocking uu_appg01_oidc via jest.doMock can be done only if that module is actually
+  // installed. If it is not, Jest resolver will throw an error which has no code so
+  // we would have to check the message to identify this scenario (this is the case if the module
+  // is re-mapped via moduleNameMapper)
+  //   => instead try to resolve the module's package.json which will throw standard error
+  // with code MODULE_NOT_FOUND and skip mocking in such case.
+  require.resolve("uu_appg01_oidc/package.json");
+
   jest.doMock("uu_appg01_oidc", () => {
     let Oidc = jest.requireActual("uu_appg01_oidc");
 
@@ -308,7 +316,6 @@ try {
 
     // mock Session with extra API for manipulating with session state
     class MockSession extends Session {
-
       mockSetPending() {
         MockAuthenticationService.initComplete = false;
         MockAuthenticationService.initPromise = new Promise((resolve, reject) => {
@@ -338,9 +345,13 @@ try {
         MockAuthenticationService._expiring = expiring;
         MockAuthenticationService._expiresAt = expiring ? Date.now() + 5 * 60 * 1000 : Date.now() + 12 * 60 * 60 * 1000;
         if (expiring) {
-          MockAuthenticationService._triggerEvent("sessionExpiring", { expiresAt: MockAuthenticationService._expiresAt });
+          MockAuthenticationService._triggerEvent("sessionExpiring", {
+            expiresAt: MockAuthenticationService._expiresAt
+          });
         } else if (oidcSession._identity) {
-          MockAuthenticationService._triggerEvent("sessionExtended", { expiresAt: MockAuthenticationService._expiresAt });
+          MockAuthenticationService._triggerEvent("sessionExtended", {
+            expiresAt: MockAuthenticationService._expiresAt
+          });
         }
       }
       mockReset() {

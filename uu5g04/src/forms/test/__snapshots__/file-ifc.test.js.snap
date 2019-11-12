@@ -47,7 +47,6 @@ exports[`UU5.Forms.File interface testing addValue(value, setStateCallBack) 1`] 
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -135,7 +134,6 @@ exports[`UU5.Forms.File interface testing addValue(value, setStateCallBack) 2`] 
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
       <Button
         bgStyle="transparent"
@@ -242,7 +240,6 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 1`] =
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -332,7 +329,6 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 2`] =
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
       <Button
         bgStyle="transparent"
@@ -405,7 +401,6 @@ exports[`UU5.Forms.InputMixin interface testing getChangeFeedback() 1`] = `
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -459,7 +454,6 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 1`] = `
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -514,7 +508,6 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 2`] = `
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -604,7 +597,6 @@ exports[`UU5.Forms.InputMixin interface testing getInputWrapper(inpuid) 1`] = `
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
       <Button
         bgStyle="transparent"
@@ -711,7 +703,6 @@ exports[`UU5.Forms.InputMixin interface testing getLabel(idinput) 1`] = `
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
       <Button
         bgStyle="transparent"
@@ -782,7 +773,6 @@ exports[`UU5.Forms.InputMixin interface testing getMessage() should return null,
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -870,7 +860,6 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return value 1
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
       <Button
         bgStyle="transparent"
@@ -941,7 +930,6 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return value 2
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -999,7 +987,6 @@ exports[`UU5.Forms.InputMixin interface testing isError() 1`] = `
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -1133,7 +1120,9 @@ exports[`UU5.Forms.InputMixin interface testing isError() 2`] = `
                 offset={0}
                 onBlur={[Function]}
                 onClick={[Function]}
+                onCtrlClick={null}
                 onFocus={[Function]}
+                onWheelClick={null}
                 parent={null}
                 pressed={false}
                 pureRender={false}
@@ -1178,7 +1167,6 @@ exports[`UU5.Forms.InputMixin interface testing isError() 2`] = `
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
       <Button
         bgStyle="transparent"
@@ -1249,7 +1237,6 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() 1`] = `
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -1339,7 +1326,6 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() 2`] = `
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
       <Button
         bgStyle="transparent"
@@ -1410,7 +1396,6 @@ exports[`UU5.Forms.InputMixin interface testing isInput() 1`] = `
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -1464,7 +1449,6 @@ exports[`UU5.Forms.InputMixin interface testing isLoading() 1`] = `
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -1520,7 +1504,6 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 1`] = `
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -1576,7 +1559,6 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 2`] = `
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -1710,7 +1692,9 @@ exports[`UU5.Forms.InputMixin interface testing isSuccess() fisr return false, s
                 offset={0}
                 onBlur={[Function]}
                 onClick={[Function]}
+                onCtrlClick={null}
                 onFocus={[Function]}
+                onWheelClick={null}
                 parent={null}
                 pressed={false}
                 pureRender={false}
@@ -1755,7 +1739,6 @@ exports[`UU5.Forms.InputMixin interface testing isSuccess() fisr return false, s
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
       <Button
         bgStyle="transparent"
@@ -1830,7 +1813,6 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 1`] = `
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -1964,7 +1946,9 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 2`] = `
                 offset={0}
                 onBlur={[Function]}
                 onClick={[Function]}
+                onCtrlClick={null}
                 onFocus={[Function]}
+                onWheelClick={null}
                 parent={null}
                 pressed={false}
                 pureRender={false}
@@ -2009,7 +1993,6 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 2`] = `
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
       <Button
         bgStyle="transparent"
@@ -2116,7 +2099,6 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 1`] =
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
       <Button
         bgStyle="transparent"
@@ -2223,7 +2205,6 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 2`] =
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -2344,7 +2325,6 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 1`] = `
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -2400,7 +2380,6 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 2`] = `
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -2534,7 +2513,9 @@ exports[`UU5.Forms.InputMixin interface testing setChangeFeedback() 1`] = `
                 offset={0}
                 onBlur={[Function]}
                 onClick={[Function]}
+                onCtrlClick={null}
                 onFocus={[Function]}
+                onWheelClick={null}
                 parent={null}
                 pressed={false}
                 pureRender={false}
@@ -2579,7 +2560,6 @@ exports[`UU5.Forms.InputMixin interface testing setChangeFeedback() 1`] = `
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
       <Button
         bgStyle="transparent"
@@ -2686,7 +2666,6 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
       <Button
         bgStyle="transparent"
@@ -2793,7 +2772,6 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -2883,7 +2861,6 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
       <Button
         bgStyle="transparent"
@@ -2990,7 +2967,6 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
       <Button
         bgStyle="transparent"
@@ -3061,7 +3037,6 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -3193,7 +3168,9 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
                 offset={0}
                 onBlur={[Function]}
                 onClick={[Function]}
+                onCtrlClick={null}
                 onFocus={[Function]}
+                onWheelClick={null}
                 parent={null}
                 pressed={false}
                 pureRender={false}
@@ -3238,7 +3215,6 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
       <Button
         bgStyle="transparent"
@@ -3311,7 +3287,6 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -3445,7 +3420,9 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
                 offset={0}
                 onBlur={[Function]}
                 onClick={[Function]}
+                onCtrlClick={null}
                 onFocus={[Function]}
+                onWheelClick={null}
                 parent={null}
                 pressed={false}
                 pureRender={false}
@@ -3490,7 +3467,6 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
       <Button
         bgStyle="transparent"
@@ -3565,7 +3541,6 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -3698,7 +3673,9 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
                 offset={0}
                 onBlur={[Function]}
                 onClick={[Function]}
+                onCtrlClick={null}
                 onFocus={[Function]}
+                onWheelClick={null}
                 parent={null}
                 pressed={false}
                 pureRender={false}
@@ -3743,7 +3720,6 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
       <Button
         bgStyle="transparent"
@@ -3814,7 +3790,6 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -3948,7 +3923,9 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
                 offset={0}
                 onBlur={[Function]}
                 onClick={[Function]}
+                onCtrlClick={null}
                 onFocus={[Function]}
+                onWheelClick={null}
                 parent={null}
                 pressed={false}
                 pureRender={false}
@@ -3993,7 +3970,6 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
       <Button
         bgStyle="transparent"
@@ -4064,7 +4040,6 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -4119,7 +4094,6 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -4173,7 +4147,6 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -4305,7 +4278,9 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
                 offset={0}
                 onBlur={[Function]}
                 onClick={[Function]}
+                onCtrlClick={null}
                 onFocus={[Function]}
+                onWheelClick={null}
                 parent={null}
                 pressed={false}
                 pureRender={false}
@@ -4350,7 +4325,6 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
       <Button
         bgStyle="transparent"
@@ -4421,7 +4395,6 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -4551,7 +4524,9 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
                 offset={0}
                 onBlur={[Function]}
                 onClick={[Function]}
+                onCtrlClick={null}
                 onFocus={[Function]}
+                onWheelClick={null}
                 parent={null}
                 pressed={false}
                 pureRender={false}
@@ -4596,7 +4571,6 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
       <Button
         bgStyle="transparent"
@@ -4667,7 +4641,6 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
     </Div>
   </InputWrapper>
@@ -4799,7 +4772,9 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
                 offset={0}
                 onBlur={[Function]}
                 onClick={[Function]}
+                onCtrlClick={null}
                 onFocus={[Function]}
+                onWheelClick={null}
                 parent={null}
                 pressed={false}
                 pureRender={false}
@@ -4844,7 +4819,6 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
         multiple={false}
         onChange={[Function]}
         type="file"
-        value=""
       />
       <Button
         bgStyle="transparent"

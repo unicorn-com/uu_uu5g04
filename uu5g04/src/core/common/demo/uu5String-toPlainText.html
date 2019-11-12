@@ -66,16 +66,16 @@
       var Page = createReactClass({
         mixins: [UU5.Common.BaseMixin],
 
-        //@@viewOn:standardComponentLifeCycle
+        //@@viewOn:reactLifeCycle
         getInitialState() {
           UU5.Environment.EventListener.registerLsi(this.getId(), this._updatePlainText);
           return {
             plainText: UU5.Common.UU5String.toPlainText(uu5string, undefined, filterFn)
           };
         },
-        //@@viewOff:standardComponentLifeCycle
+        //@@viewOff:reactLifeCycle
 
-        //@@viewOn:componentSpecificHelpers
+        //@@viewOn:private
         _registerEditor(editor) {
           this._editor = editor;
         },
@@ -88,7 +88,7 @@
             this._editor.setError("Invalid uu5string");
           }
         },
-        //@@viewOn:componentSpecificHelpers
+        //@@viewOn:private
 
         //@@viewOn:render
         render(){

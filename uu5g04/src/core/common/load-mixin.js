@@ -11,18 +11,16 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import CallsMixin from './calls-mixin.js';
-import Error from './error.js';
-import Tools from './tools.js';
-import Environment from '../environment/environment.js';
+import React from "react";
+import PropTypes from "prop-types";
+import CallsMixin from "./calls-mixin.js";
+import Error from "./error.js";
+import Tools from "./tools.js";
+import Environment from "../environment/environment.js";
 
 export const LoadMixin = {
   //@@viewOn:mixins
-  mixins: [
-    CallsMixin
-  ],
+  mixins: [CallsMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -30,16 +28,16 @@ export const LoadMixin = {
     "UU5.Common.LoadMixin": {
       defaults: {
         minReloadInterval: 10 * 1000, // 10s
-        onLoadCall: 'onLoad',
-        onReloadCall: 'onReload'
+        onLoadCall: "onLoad",
+        onReloadCall: "onReload"
       },
       errors: {
-        onLoad: 'Error during loading data from server by call %s.',
-        onReload: 'Error during reloading data from server by call %s.'
+        onLoad: "Error during loading data from server by call %s.",
+        onReload: "Error during reloading data from server by call %s."
       },
-      lsi: () => (Environment.Lsi.Common.loadMixin)
+      lsi: () => Environment.Lsi.Common.loadMixin
     }
-  },//@@viewOff:statics
+  }, //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
@@ -63,7 +61,7 @@ export const LoadMixin = {
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     // initialize
     this.registerMixin("UU5.Common.LoadMixin");
@@ -71,7 +69,7 @@ export const LoadMixin = {
     this._pageVisible = Environment.isPageVisible();
     // state
     return {
-      loadFeedback: 'loading',
+      loadFeedback: "loading",
       dtoOut: null,
       errorDtoOut: null
     };
@@ -79,7 +77,7 @@ export const LoadMixin = {
 
   componentWillMount() {
     if (this.props.dtoOut) {
-      if (typeof this.onLoadSuccess_ === 'function') {
+      if (typeof this.onLoadSuccess_ === "function") {
         this.onLoadSuccess_(this.props.dtoOut);
       } else {
         this.onLoadSuccessDefault(this.props.dtoOut);
@@ -90,11 +88,14 @@ export const LoadMixin = {
   componentDidMount() {
     Environment.EventListener.registerPageVisibility(this.getId(), this._onPageVisibilityChange);
     if (!this.props.dtoOut) {
-      this.setState({
-        loadFeedback: 'loading',
-        dtoOut: null,
-        errorDtoOut: null
-      }, () => this._onLoad(this.props));
+      this.setState(
+        {
+          loadFeedback: "loading",
+          dtoOut: null,
+          errorDtoOut: null
+        },
+        () => this._onLoad(this.props)
+      );
     }
   },
 
@@ -108,7 +109,7 @@ export const LoadMixin = {
     this._unregisterReloading();
     Environment.EventListener.unregisterPageVisibility(this.getId());
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   getUri() {
@@ -128,20 +129,20 @@ export const LoadMixin = {
   },
 
   isLoading() {
-    return this.getLoadFeedback() === 'loading';
+    return this.getLoadFeedback() === "loading";
   },
 
   isReady() {
-    return this.getLoadFeedback() === 'ready';
+    return this.getLoadFeedback() === "ready";
   },
 
   isError() {
-    return this.getLoadFeedback() === 'error';
+    return this.getLoadFeedback() === "error";
   },
 
   onLoadSuccess(dtoOut, setStateCallback) {
     this._lastLoadOrReloadTime = Date.now();
-    this.setAsyncState({ loadFeedback: 'ready', dtoOut: dtoOut, errorDtoOut: null }, () => {
+    this.setAsyncState({ loadFeedback: "ready", dtoOut: dtoOut, errorDtoOut: null }, () => {
       if (setStateCallback) return setStateCallback.apply(this, arguments);
     });
     return this;
@@ -149,13 +150,13 @@ export const LoadMixin = {
 
   onReloadSuccess(dtoOut, setStateCallback) {
     this._lastLoadOrReloadTime = Date.now();
-    this.setAsyncState({ loadFeedback: 'ready', dtoOut: dtoOut, errorDtoOut: null }, setStateCallback);
+    this.setAsyncState({ loadFeedback: "ready", dtoOut: dtoOut, errorDtoOut: null }, setStateCallback);
     return this;
   },
 
   onLoadError(dtoOut, setStateCallback) {
     this._lastLoadOrReloadTime = Date.now();
-    this.setAsyncState({ loadFeedback: 'error', errorDtoOut: dtoOut }, setStateCallback);
+    this.setAsyncState({ loadFeedback: "error", errorDtoOut: dtoOut }, setStateCallback);
     return this;
   },
 
@@ -169,18 +170,14 @@ export const LoadMixin = {
     let children;
 
     switch (this.getLoadFeedback()) {
-      case 'loading':
-        children = Tools.findComponent('UU5.Bricks.Loading');
+      case "loading":
+        children = Tools.findComponent("UU5.Bricks.Loading");
         break;
-      case 'ready':
+      case "ready":
         children = getChildren(this.getDtoOut());
         break;
-      case 'error':
-        children = (
-          <Error>
-            {this.getLsiComponent('error', "UU5.Common.LoadMixin")}
-          </Error>
-        );
+      case "error":
+        children = <Error>{this.getLsiComponent("error", "UU5.Common.LoadMixin")}</Error>;
         break;
     }
 
@@ -188,7 +185,7 @@ export const LoadMixin = {
   },
 
   reload(callName, dtoIn) {
-    this.setState({ loadFeedback: 'loading' }, () => {
+    this.setState({ loadFeedback: "loading" }, () => {
       this.forceReload(callName, dtoIn);
     });
 
@@ -204,9 +201,9 @@ export const LoadMixin = {
   },
   //@@viewOff:interface
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _getOnLoadCall() {
-    return this.getCall(this.getDefault('onLoadCall', "UU5.Common.LoadMixin"));
+    return this.getCall(this.getDefault("onLoadCall", "UU5.Common.LoadMixin"));
   },
 
   _getOnReloadCall() {
@@ -214,7 +211,7 @@ export const LoadMixin = {
 
     let callNames = this.constructor.calls;
     if (callNames) {
-      let callName = callNames[this.getDefault('onReloadCall', "UU5.Common.LoadMixin")];
+      let callName = callNames[this.getDefault("onReloadCall", "UU5.Common.LoadMixin")];
 
       if (callName) {
         result = this.getCalls()[callName];
@@ -237,12 +234,12 @@ export const LoadMixin = {
       dtoIn.uri = props.uri;
     }
 
-    if (typeof this.getOnLoadData_ === 'function') {
+    if (typeof this.getOnLoadData_ === "function") {
       dtoIn.data = this.getOnLoadData_(props);
     }
 
     dtoIn.done = dtoOut => {
-      if (typeof this.onLoadSuccess_ === 'function') {
+      if (typeof this.onLoadSuccess_ === "function") {
         this.onLoadSuccess_(dtoOut);
       } else {
         this.onLoadSuccessDefault(dtoOut);
@@ -250,9 +247,9 @@ export const LoadMixin = {
       this._scrollToFragment();
     };
 
-    let callKey = this.getDefault('onLoadCall', "UU5.Common.LoadMixin");
+    let callKey = this.getDefault("onLoadCall", "UU5.Common.LoadMixin");
     dtoIn.fail = dtoOut => {
-      this.showError('onLoad', this.getCallName(callKey), {
+      this.showError("onLoad", this.getCallName(callKey), {
         mixinName: "UU5.Common.LoadMixin",
         context: {
           calls: this.getCalls(),
@@ -262,7 +259,7 @@ export const LoadMixin = {
           data: dtoIn.data
         }
       });
-      if (typeof this.onLoadError_ === 'function') {
+      if (typeof this.onLoadError_ === "function") {
         this.onLoadError_(dtoOut);
       } else {
         this.onLoadErrorDefault(dtoOut);
@@ -291,13 +288,13 @@ export const LoadMixin = {
     }
 
     let getData = this.getOnReloadData_ || this.getOnLoadData_;
-    if (typeof getData === 'function') {
+    if (typeof getData === "function") {
       dtoIn.data = getData(props);
     }
 
     dtoIn.done = dtoOut => {
       let loadSuccess = this.onReloadSuccess_ || this.onLoadSuccess_;
-      if (typeof loadSuccess === 'function') {
+      if (typeof loadSuccess === "function") {
         loadSuccess(dtoOut);
       } else {
         this.onReloadSuccess(dtoOut);
@@ -306,11 +303,11 @@ export const LoadMixin = {
     };
 
     let calls = this.constructor.calls;
-    let callKey = this.getDefault('onReloadCall', "UU5.Common.LoadMixin");
-    calls && !calls[callKey] && (callKey = this.getDefault('onLoadCall', "UU5.Common.LoadMixin"));
+    let callKey = this.getDefault("onReloadCall", "UU5.Common.LoadMixin");
+    calls && !calls[callKey] && (callKey = this.getDefault("onLoadCall", "UU5.Common.LoadMixin"));
 
     dtoIn.fail = dtoOut => {
-      this.showError('onReload', this.getCallName(callKey), {
+      this.showError("onReload", this.getCallName(callKey), {
         mixinName: "UU5.Common.LoadMixin",
         context: {
           calls: this.getCalls(),
@@ -322,7 +319,7 @@ export const LoadMixin = {
       });
 
       let loadError = this.onReloadError_ || this.onLoadError_;
-      if (typeof loadError === 'function') {
+      if (typeof loadError === "function") {
         loadError(dtoOut);
       } else {
         this.onReloadError(dtoOut);
@@ -353,7 +350,8 @@ export const LoadMixin = {
   },
   _getUsedReloadInterval() {
     let value = this.props.reloadInterval || this.getOpt("reloadInterval");
-    if (value && !this.props.overrideMinReloadInterval) value = Math.max(value, this.getDefault("minReloadInterval", "UU5.Common.LoadMixin"));
+    if (value && !this.props.overrideMinReloadInterval)
+      value = Math.max(value, this.getDefault("minReloadInterval", "UU5.Common.LoadMixin"));
     return value;
   },
   _getUsedReloadCall(loadCall) {
@@ -382,7 +380,10 @@ export const LoadMixin = {
       if (visible) {
         // became visible => plan "reload" with respect to the last (re)load time
         if (this._isReloadable()) {
-          let delay = Math.max(0, this._getUsedReloadInterval() - (this._lastLoadOrReloadTime ? Date.now() - this._lastLoadOrReloadTime : 0));
+          let delay = Math.max(
+            0,
+            this._getUsedReloadInterval() - (this._lastLoadOrReloadTime ? Date.now() - this._lastLoadOrReloadTime : 0)
+          );
           this._resumeReloadingTimeout = setTimeout(() => this._registerReloading(true), delay);
         }
       } else {
@@ -397,7 +398,7 @@ export const LoadMixin = {
       if (router) router.scrollToFragment();
     });
   }
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 };
 
 export default LoadMixin;

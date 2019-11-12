@@ -93,7 +93,8 @@ expect.addSnapshotSerializer({
       if (typeof val.props.id === "string" && val.props.id.match(/^[0-9a-f]{32}(-|$)/)) propsToRemove.push("id");
       if (IGNORE_DEFAULT_PROPS && val.node && val.node.type) {
         let defaultProps = val.node.type.defaultProps;
-        if (!defaultProps && typeof val.node.type.getDefaultProps === "function") defaultProps = val.node.type.getDefaultProps();
+        if (!defaultProps && typeof val.node.type.getDefaultProps === "function")
+          defaultProps = val.node.type.getDefaultProps();
         if (defaultProps && typeof defaultProps === "object") {
           for (let k in defaultProps) {
             if (val.props[k] === defaultProps[k] && val.props[k] !== undefined) propsToRemove.push(k);

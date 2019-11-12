@@ -137,6 +137,7 @@ module.exports = {
     // "UU5.Common.CcrWriterMixin",
     // "UU5.Common.ColorSchemaMixin",
     // "UU5.Common.ContentMixin",
+    // "UU5.Common.Context",
     // "UU5.Common.Crud",
     // "UU5.Common.DataManager",
     // "UU5.Common.DnD",
@@ -149,7 +150,7 @@ module.exports = {
     // "UU5.Common.Identity.Item",
     // "UU5.Common.IdentityMixin",
     // "UU5.Common.LevelMixin",
-    // "UU5.Common.ListDataManager", // TODO: Beta
+    // "UU5.Common.ListDataManager",
     // "UU5.Common.LoadMixin",
     // "UU5.Common.LsiMixin",
     // "UU5.Common.NestingLevelMixin",
@@ -167,7 +168,7 @@ module.exports = {
     // "UU5.Common.UU5Json",
     // "UU5.Common.UU5String",
     // "UU5.Common.VucMixin",
-    // "UU5.Environment.Speech", // TODO: Beta
+    // "UU5.Environment.Speech",
     // "UU5.Forms.ColorPicker",
     // "UU5.Forms.ContextSection",
     // "UU5.Forms.ContextModal",

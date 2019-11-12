@@ -11,21 +11,22 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "./forms-ns.js";
 
-import './time.less';
+import "./time.less";
+//@@viewOff:imports
 
-const FORMAT_AM = 'AM';
-const FORMAT_PM = 'PM';
-const FORMAT_12 = '12';
-const FORMAT_24 = '24';
+const FORMAT_AM = "AM";
+const FORMAT_PM = "PM";
+const FORMAT_12 = "12";
+const FORMAT_24 = "24";
 export const Time = createReactClass({
-
   mixins: [
     UU5.Common.BaseMixin,
     UU5.Common.PureRenderMixin,
@@ -68,10 +69,10 @@ export const Time = createReactClass({
       screenSizeBehaviour: ns.css("screen-size-behaviour")
     },
     defaults: {
-      upIcon: 'mdi-menu-up',
-      downIcon: 'mdi-menu-down'
+      upIcon: "mdi-menu-up",
+      downIcon: "mdi-menu-down"
     },
-    lsi: () => (UU5.Environment.Lsi.Forms.time)
+    lsi: () => UU5.Environment.Lsi.Forms.time
   },
 
   propTypes: {
@@ -85,11 +86,14 @@ export const Time = createReactClass({
     onChange: PropTypes.func,
     seconds: PropTypes.bool,
     step: PropTypes.number,
-    type: PropTypes.oneOf(['single-column','multi-column']),
-    mobileDisplay: PropTypes.bool
+    type: PropTypes.oneOf(["single-column", "multi-column"]),
+    mobileDisplay: PropTypes.bool,
+    timeFrom: PropTypes.object,
+    timeTo: PropTypes.object,
+    show24: PropTypes.bool
   },
 
-  // Setting defaults
+  //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
       value: null,
@@ -98,20 +102,52 @@ export const Time = createReactClass({
       seconds: null,
       step: 1,
       type: "multi-column",
-      mobileDisplay: false
+      mobileDisplay: false,
+      timeFrom: undefined,
+      timeTo: undefined,
+      show24: false
     };
   },
+  //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
-    return this._parseTime();
+    this._setUpLimits(this.props);
+
+    let value = this.props.value ? { ...this.props.value } : null;
+
+    if (this.props.show24 && value && value.hours === 24 && this._overMidnight) {
+      value.hours = 0;
+    }
+
+    return {
+      ...this._parseTime(value),
+      valid: this._validateTime(value)
+    };
   },
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
-      if (!this.state.hours || !this.state.minutes || !this.state.seconds || !this.state.dayPart || (nextProps.value && (this.state.minutes !== nextProps.value.minutes || this.state.hours !== nextProps.value.hours || this.state.seconds !== nextProps.value.seconds || this.state.dayPart !== nextProps.value.dayPart))) {
-        let state = this._parseTime(nextProps);
-        this.setState(state);
+      this._setUpLimits(nextProps);
+
+      if (
+        !this.state.hours ||
+        !this.state.minutes ||
+        !this.state.seconds ||
+        !this.state.dayPart ||
+        (nextProps.value &&
+          (this.state.minutes !== nextProps.value.minutes ||
+            this.state.hours !== nextProps.value.hours ||
+            this.state.seconds !== nextProps.value.seconds ||
+            this.state.dayPart !== nextProps.value.dayPart))
+      ) {
+        let value = nextProps.value ? { ...nextProps.value } : null;
+
+        if (nextProps.show24 && value && value.hours === 24 && this._overMidnight) {
+          value.hours = 0;
+        }
+
+        this.setState({ ...this._parseTime(value), valid: this._validateTime(value, nextProps) });
       }
     }
     return this;
@@ -126,34 +162,117 @@ export const Time = createReactClass({
       this._updateScrolls();
     }
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   // Interface
   onChangeDefault(opt, setStateCallback) {
     let type = opt._data.type,
-        value = opt._data.value;
+      value = opt._data.value;
 
-    if (type == 'secondsUp') {
+    if (type == "secondsUp") {
       is12 && (value.pm = pm);
       this.setState(value, setStateCallback);
-    } else if (type == 'secondsDown') {
+    } else if (type == "secondsDown") {
       is12 && (value.pm = pm);
       this.setState(value, setStateCallback);
-    } else if (type == 'switchDayPart') {
-      this.setState((state) => ({ pm: !state.pm }), setStateCallback);
-    } else if (type == 'setTime') {
+    } else if (type == "switchDayPart") {
+      this.setState(state => ({ pm: !state.pm }), setStateCallback);
+    } else if (type == "setTime") {
       this.setState(value, setStateCallback);
     }
 
     return this;
   },
 
-
   // Overriding Functions
 
-  // Component Specific Helpers
+  //@@viewOn:private
+  _validateTime(time, props = this.props) {
+    let result = true;
+
+    if (time) {
+      let timeFrom = this._timeFrom;
+      let timeTo = this._timeTo;
+      time = { ...time };
+      time = (time.hours + (time.dayPart == FORMAT_PM ? 12 : 0)) * 60 * 60 + time.minutes * 60 + time.seconds;
+
+      if (time < timeFrom || time > timeTo) {
+        if (this._overMidnight) {
+          time += 86400; // + 24:00
+
+          if (time < timeFrom || time > timeTo) {
+            result = false;
+          }
+        } else {
+          result = false;
+        }
+      }
+    }
+
+    return result;
+  },
+
   _registerSinglePickerWrapper(ref) {
     this._singlePickerWrapper = ref;
+  },
+
+  _setUpLimits(props) {
+    // set defaults
+    this._hoursFrom = undefined;
+    this._minutesFrom = undefined;
+    this._secondsFrom = undefined;
+    this._timeFrom = undefined;
+    this._hoursTo = undefined;
+    this._minutesTo = undefined;
+    this._secondsTo = undefined;
+    this._timeTo = undefined;
+    this._show24 = false;
+    this._overMidnight = false;
+    let hasSteps = props.step > 1;
+
+    if (props.timeFrom) {
+      this._timeFrom =
+        props.timeFrom.hours * 60 * 60 + props.timeFrom.minutes * 60 + (hasSteps ? 0 : props.timeFrom.seconds);
+    } else {
+      this._timeFrom = 24 * 60 * 60;
+    }
+
+    this._hoursFrom = Math.floor(this._timeFrom / 3600);
+    this._minutesFrom = Math.floor((this._timeFrom % 3600) / 60);
+    this._secondsFrom = Math.floor((this._timeFrom % 3600) % 60);
+
+    if (props.timeTo) {
+      this._timeTo = props.timeTo.hours * 60 * 60 + props.timeTo.minutes * 60 + (hasSteps ? 0 : props.timeTo.seconds);
+    } else {
+      this._timeTo = 24 * 60 * 60 + 59 * 60 + 59;
+    }
+
+    this._hoursTo = Math.floor(this._timeTo / 3600);
+    this._minutesTo = Math.floor((this._timeTo % 3600) / 60);
+    this._secondsTo = Math.floor((this._timeTo % 3600) % 60);
+
+    if (this._timeFrom === this._timeTo) {
+      this._overMidnight = true;
+      this._timeTo = this._timeTo + 86399; // + 23:59:59
+    } else if (this._timeFrom > this._timeTo) {
+      this._overMidnight = true;
+      this._timeTo = this._timeTo + 86400; // + 24:00:00
+    }
+
+    if (!this._isFormat12()) {
+      if (this._isDefaultLimit() && props.show24) {
+        this._show24 = true;
+      }
+    }
+  },
+
+  _isDefaultLimit() {
+    // from = 0, to = 24
+    if (this._timeFrom === 0 && this._timeTo === 86400) {
+      return true;
+    } else {
+      return false;
+    }
   },
 
   _updateScrolls() {
@@ -171,14 +290,16 @@ export const Time = createReactClass({
 
   _setInitialPickerScroll(picker) {
     if (picker) {
-      let selectedButton = picker.getElementsByClassName("uu5-forms-time-button uu5-bricks-button-filled")[0] || picker.getElementsByClassName("uu5-forms-time-single-column-view-button uu5-bricks-button-filled")[0];
+      let selectedButton =
+        picker.getElementsByClassName("uu5-forms-time-button uu5-bricks-button-filled")[0] ||
+        picker.getElementsByClassName("uu5-forms-time-single-column-view-button uu5-bricks-button-filled")[0];
       if (selectedButton) {
         let buttonPosTop = Math.round(selectedButton.getBoundingClientRect().top);
         let pickerPosTop = Math.round(picker.getBoundingClientRect().top);
         let pickerHeight = Math.round(picker.getBoundingClientRect().height);
         let pickerScrollTop = picker.scrollTop;
         let buttonHeight = selectedButton.clientHeight;
-        let targetPos = pickerPosTop + (pickerHeight / 2) - (buttonHeight / 2);
+        let targetPos = pickerPosTop + pickerHeight / 2 - buttonHeight / 2;
         let posDiff = buttonPosTop - targetPos;
         let newScrollTop = pickerScrollTop + posDiff;
 
@@ -190,35 +311,36 @@ export const Time = createReactClass({
   _updateArrowButton(scrollElement, prefix) {
     if (scrollElement) {
       if (scrollElement.scrollTop <= 0 && !this.state[prefix + "TopMax"]) {
-        this.setState({[prefix + "TopMax"]: true});
-      } else if ((scrollElement.scrollTop + scrollElement.clientHeight) - scrollElement.scrollHeight >= -1 && !this.state[prefix + "BottomMax"]) {
-        this.setState({[prefix + "BottomMax"]: true});
+        this.setState({ [prefix + "TopMax"]: true });
+      } else if (
+        scrollElement.scrollTop + scrollElement.clientHeight - scrollElement.scrollHeight >= -1 &&
+        !this.state[prefix + "BottomMax"]
+      ) {
+        this.setState({ [prefix + "BottomMax"]: true });
       }
 
       if (scrollElement.scrollTop > 0 && this.state[prefix + "TopMax"]) {
-        this.setState({[prefix + "TopMax"]: false});
-      } else if ((scrollElement.scrollTop + scrollElement.clientHeight) - scrollElement.scrollHeight <= 1 && this.state[prefix + "BottomMax"]) {
-        this.setState({[prefix + "BottomMax"]: false});
+        this.setState({ [prefix + "TopMax"]: false });
+      } else if (
+        scrollElement.scrollTop + scrollElement.clientHeight - scrollElement.scrollHeight <= 1 &&
+        this.state[prefix + "BottomMax"]
+      ) {
+        this.setState({ [prefix + "BottomMax"]: false });
       }
     }
   },
 
-  _parseTime(props) {
-    props = props || this.props;
+  _parseTime(value) {
+    let result;
 
-    let result = {
-      hours: this._isFormat12() ? 1 : 0,
-      minutes: 0,
-      seconds: 0
-    };
-
-    if (props.value !== null) {
-      result.hours = props.value.hours || result.hours;
-      result.minutes = props.value.minutes || result.minutes;
-      result.seconds = props.value.seconds || result.seconds;
+    if (value !== null) {
+      result = { ...value };
 
       if (this._isFormat12()) {
-        result.pm = props.value && props.value.dayPart === FORMAT_PM;
+        if (result.hours === 0) {
+          result.hours = 1;
+        }
+        result.pm = value && value.dayPart === FORMAT_PM;
         result.hours > 12 && (result.hours -= 12);
       }
     } else {
@@ -247,14 +369,13 @@ export const Time = createReactClass({
 
   _setTime(time, type, e) {
     let is12 = this._isFormat12();
-    let pm = typeof time === "string" ? !!time.match(/PM$/) : false;
     let value;
     if (type === "single-column") {
       value = {
         hours: parseInt(time.split(":")[0]),
         minutes: parseInt(time.split(":")[1]),
         seconds: 0
-      }
+      };
     } else {
       value = {
         hours: type == "hours" ? time : this.state.hours || 0,
@@ -263,67 +384,188 @@ export const Time = createReactClass({
       };
     }
 
-    let opt = { value: value, event: e, component: this, _data: { type: 'picker', changeType: type, value: UU5.Common.Tools.merge({pm: pm}, value) } };
-    is12 && this._addDayPart(value, pm);
+    if (this._show24 && value.hours === 24) {
+      value.minutes = 0;
+      value.seconds = 0;
+    } else if (
+      this.props.show24 &&
+      value.hours === 0 &&
+      value.minutes === 0 &&
+      value.seconds === 0 &&
+      this._overMidnight
+    ) {
+      value.hours = 24;
+    } else if (value.hours === this._hoursTo) {
+      if (value.minutes > this._minutesTo) {
+        value.minutes = this._minutesTo;
+      }
 
-    if (typeof this.props.onChange === 'function') {
+      if (value.minutes === this._minutesTo && value.seconds > this._secondsTo) {
+        value.seconds = this._secondsTo;
+      }
+    } else if (value.hours === this._hoursFrom) {
+      if (value.minutes < this._minutesFrom) {
+        value.minutes = this._minutesFrom;
+      }
+
+      if (value.minutes === this._minutesFrom && value.seconds < this._secondsFrom) {
+        value.seconds = this._secondsFrom;
+      }
+    }
+
+    let opt = {
+      value,
+      event: e,
+      component: this,
+      _data: {
+        overMidnight: value.hours > 24,
+        type: "picker",
+        changeType: type,
+        value: UU5.Common.Tools.merge({ pm: this.state.pm }, value)
+      }
+    };
+
+    if (is12) this._addDayPart(value, this.state.pm);
+
+    if (typeof this.props.onChange === "function") {
       this.props.onChange(opt);
     } else {
-      this.onChangeDefault(opt)
+      this.onChangeDefault(opt);
     }
 
     return this;
   },
 
-  _getButtons(from, to, step, selected, type) {
-    let result = [];
-    for (let i = from; i <= to; i++) {
-      if (i % step === 0) {
-        result.push(
-          <UU5.Bricks.Button
-            colorSchema={selected === i ? this.getColorSchema() : 'default'}
-            className={this.getClassName("button")}
-            bgStyle={selected === i ? 'filled' : 'transparent'}
-            content={UU5.Common.Tools.rjust(i, 2, '0')}
-            key={i}
-            onClick={(component, e) => this._setTime(i, type, e)}
-          />
-        );
+  _getHours() {
+    let hours = [];
+    let hoursFrom = Math.floor(this._timeFrom / 60 / 60);
+    let hoursTo = Math.floor(this._timeTo / 60 / 60);
+
+    if (this._isFormat12()) {
+      for (let i = hoursFrom; i <= 12 && i <= hoursTo; i++) {
+        hours.push(i % 12 || 12);
+      }
+    } else {
+      for (let i = hoursFrom; i - hoursFrom <= 24 && i <= hoursTo; i++) {
+        let hour = i % (this._show24 ? 25 : 24);
+
+        if (this.props.step <= 60 || hour % (this.props.step % 60)) {
+          hours.push(hour);
+        }
       }
     }
-    return result;
-  },
 
-  _getHours() {
-    return this._isFormat12() ? this._getButtons(1, 12, Math.floor(this.props.step / 60) || 1, this.state.hours, "hours") : this._getButtons(0, 23, Math.floor(this.props.step / 60) || 1, this.state.hours, "hours");
+    return this._isFormat12()
+      ? this._getButtons(hours, Math.floor(this.props.step / 60) || 1, this.state.hours, "hours")
+      : this._getButtons(hours, Math.floor(this.props.step / 60) || 1, this.state.hours, "hours");
   },
 
   _getMinutes() {
-    return this._getButtons(0, 59, this.props.step, this.state.minutes, "minutes");
+    let minutes = [];
+    let minutesFrom = Math.floor(this._timeFrom / 60);
+    let minutesTo = Math.floor(this._timeTo / 60);
+
+    if (this.state.hours === this._hoursFrom || this.state.hours === this._hoursTo) {
+      if (this.state.hours === this._hoursFrom) {
+        minutesFrom = this.props.timeFrom.minutes;
+        minutesTo = 59;
+      }
+
+      if (this.state.hours === this._hoursTo) {
+        minutesFrom = 0;
+        minutesTo = this._minutesTo;
+      }
+
+      for (let i = minutesFrom; minutesFrom - i < 60 && i <= minutesTo; i++) {
+        let minute = ((minutesFrom % 60) + (i - minutesFrom)) % 60;
+
+        if (minute % this.props.step === 0) {
+          minutes.push(minute);
+        }
+      }
+    } else {
+      for (let i = minutesFrom; i - minutesFrom < 60 && i <= minutesTo; i++) {
+        let minute = ((minutesFrom % 60) + (i - minutesFrom)) % 60;
+
+        if (minute % this.props.step === 0) {
+          minutes.push(minute);
+        }
+      }
+    }
+
+    minutes.sort((a, b) => a - b);
+
+    return this._getButtons(minutes, this.props.step, this.state.minutes, "minutes");
   },
 
   _getSeconds() {
-    return this._getButtons(0, 59, 1, this.state.seconds, "seconds");
+    let seconds = [];
+    let secondsFrom = this._timeFrom;
+    let secondsTo = this._timeTo;
+    let minutesTo = Math.floor(secondsFrom / 60);
+
+    if (
+      (this.state.hours === this._hoursFrom && this.state.minutes === this._minutesFrom) ||
+      (this.state.hours === this._hoursTo && this.state.minutes === this._minutesTo)
+    ) {
+      if (this.state.hours === this._hoursFrom && this.state.minutes === this._minutesFrom) {
+        secondsFrom = this.props.timeFrom.seconds;
+        secondsTo = 59;
+      }
+
+      if (this.state.hours === this._hoursTo && this.state.minutes === this._minutesTo) {
+        secondsFrom = 0;
+        secondsTo = this._secondsTo;
+      }
+
+      for (let i = secondsFrom; secondsFrom - i < 60 && i <= secondsTo; i++) {
+        seconds.push(((secondsFrom % 60) + (i - secondsFrom)) % 60);
+      }
+    } else {
+      for (let i = secondsFrom; i - secondsFrom < 60 && i <= secondsTo; i++) {
+        seconds.push(((secondsFrom % 60) + (i - minutesTo)) % 60);
+      }
+    }
+
+    seconds.sort((a, b) => a - b);
+
+    return this._getButtons(seconds, 1, this.state.seconds, "seconds");
+  },
+
+  _getButtons(itemList, step, selected, type) {
+    selected = this.state.valid ? selected : null;
+
+    return itemList.map((item, index) => {
+      return (
+        <UU5.Bricks.Button
+          colorSchema={selected === item ? this.getColorSchema() : "default"}
+          className={this.getClassName("button")}
+          bgStyle={selected === item ? "filled" : "transparent"}
+          content={UU5.Common.Tools.rjust(item, 2, "0")}
+          key={index}
+          onClick={(component, e) => this._setTime(item, type, e)}
+        />
+      );
+    });
   },
 
   _getSingleColumnItems() {
     let result = [];
-    for (let i = 0; i <= (24 * 60 / this.props.step); i++) {
-      let minutes = 0;
-      let hours = 0;
+    let stepInSeconds = this.props.step * 60;
+    let timeSpan = this._timeTo - this._timeFrom;
+    let time = this._timeFrom;
+    for (let i = 0; i <= timeSpan / stepInSeconds; i++) {
+      let hours = Math.floor(time / 60 / 60);
+      let minutes = Math.floor((time - hours * 60 * 60) / 60);
       let format;
-      if (i * this.props.step < 60) {
-        minutes = i * this.props.step;
-      } else {
-        hours = Math.floor((i * this.props.step) / 60);
-        minutes = (i * this.props.step) % (hours * 60);
-      }
-
-      if (hours >= 24) {
-        break;
-      }
 
       if (this.props.format == FORMAT_12) {
+        hours -= 1;
+
+        if (hours === 24) {
+          break;
+        }
+
         if (hours >= 12) {
           format = FORMAT_PM;
           hours -= 12;
@@ -334,10 +576,13 @@ export const Time = createReactClass({
         if (hours === 0) {
           hours = 12;
         }
+      } else {
+        if (hours >= 24) {
+          hours = hours % 24;
+        }
       }
 
-      let value = UU5.Common.Tools.rjust(hours, 2, '0') + ":" + UU5.Common.Tools.rjust(minutes, 2, '0');
-      let content = value;
+      let value = UU5.Common.Tools.rjust(hours, 2, "0") + ":" + UU5.Common.Tools.rjust(minutes, 2, "0");
       if (format) {
         value += " " + format;
       }
@@ -353,16 +598,32 @@ export const Time = createReactClass({
         }
       }
 
+      const onClick = (component, e) => {
+        if (format) {
+          if (format === FORMAT_AM && this.state.pm) {
+            this.setState({ pm: false }, () => this._setTime(value, "single-column", e));
+          } else if (format === FORMAT_PM && !this.state.pm) {
+            this.setState({ pm: true }, () => this._setTime(value, "single-column", e));
+          } else {
+            this._setTime(value, "single-column", e);
+          }
+        } else {
+          this._setTime(value, "single-column", e);
+        }
+      };
+
       result.push(
         <UU5.Bricks.Button
           className={this.getClassName("singleColumnViewButton")}
-          colorSchema={selected ? this.getColorSchema() : 'default'}
-          bgStyle={selected ? 'filled' : 'transparent'}
+          colorSchema={selected ? this.getColorSchema() : "default"}
+          bgStyle={selected ? "filled" : "transparent"}
           content={value}
           key={i}
-          onClick={(component, e) => this._setTime(value, "single-column", e)}
+          onClick={onClick}
         />
       );
+
+      time += stepInSeconds;
     }
     return result;
   },
@@ -405,23 +666,29 @@ export const Time = createReactClass({
 
   _switchDayPart(e) {
     this._buttonSwitch.toggle(() => {
-      this.setState((state) => {
+      this.setState(state => {
         let pm = !state.pm;
         let value = {
           hours: state.hours,
           minutes: state.minutes,
           seconds: state.seconds
         };
-        let opt = { value: value, event: e, component: this, _data: { type: 'switchDayPart', value: UU5.Common.Tools.merge({pm: pm}, value) } };
+
+        let opt = {
+          value,
+          event: e,
+          component: this,
+          _data: { type: "switchDayPart", value: UU5.Common.Tools.merge({ pm }, value) }
+        };
+
         this._addDayPart(value, pm);
 
-        if (typeof this.props.onChange === 'function') {
+        if (typeof this.props.onChange === "function") {
           this.props.onChange(opt);
         } else {
-          this.onChangeDefault(opt)
+          this.onChangeDefault(opt);
         }
-
-      })
+      });
     });
     return this;
   },
@@ -440,18 +707,18 @@ export const Time = createReactClass({
     let bottomMax;
     let content;
 
-    if (unit == 'seconds') {
-      wrapperId = this.getId() + '-secondsPickerWrapper';
+    if (unit == "seconds") {
+      wrapperId = this.getId() + "-secondsPickerWrapper";
       topMax = this.getClassName("nav") + (this.state.secondsTopMax ? " " + this.getClassName("navMax") : "");
       bottomMax = this.getClassName("nav") + (this.state.secondsBottomMax ? " " + this.getClassName("navMax") : "");
       content = this._getSeconds();
-    } else if (unit == 'minutes') {
-      wrapperId = this.getId() + '-minutesPickerWrapper';
+    } else if (unit == "minutes") {
+      wrapperId = this.getId() + "-minutesPickerWrapper";
       topMax = this.getClassName("nav") + (this.state.minutesTopMax ? " " + this.getClassName("navMax") : "");
       bottomMax = this.getClassName("nav") + (this.state.minutesBottomMax ? " " + this.getClassName("navMax") : "");
       content = this._getMinutes();
-    } else if (unit == 'hours') {
-      wrapperId = this.getId() + '-hoursPickerWrapper';
+    } else if (unit == "hours") {
+      wrapperId = this.getId() + "-hoursPickerWrapper";
       topMax = this.getClassName("nav") + (this.state.hoursTopMax ? " " + this.getClassName("navMax") : "");
       bottomMax = this.getClassName("nav") + (this.state.hoursBottomMax ? " " + this.getClassName("navMax") : "");
       content = this._getHours();
@@ -474,7 +741,7 @@ export const Time = createReactClass({
         <div
           className={this.getClassName("hoursPickerWrapper")}
           id={wrapperId}
-          ref={(picker) => {
+          ref={picker => {
             if (unit === "hours") {
               this._hoursPickerWrapper = picker;
             } else if (unit === "minutes") {
@@ -483,11 +750,11 @@ export const Time = createReactClass({
               this._secondsPickerWrapper = picker;
             }
           }}
-          onScroll={(e) => {this._updateArrowButton(e.nativeEvent.target, unit)}}
+          onScroll={e => {
+            this._updateArrowButton(e.nativeEvent.target, unit);
+          }}
         >
-          <div className={this.getClassName(unit)}>
-            {content}
-          </div>
+          <div className={this.getClassName(unit)}>{content}</div>
         </div>
         <UU5.Bricks.Button
           colorSchema="custom"
@@ -513,46 +780,48 @@ export const Time = createReactClass({
         <div {...this._getMainAttrs()}>
           <div className={this.getClassName("pickerWrapper")}>
             <div className={this.getClassName("hoursWrapper")}>
-              {this._getHeader('hours')}
-              {this._getBody('hours')}
+              {this._getHeader("hours")}
+              {this._getBody("hours")}
             </div>
             <div className={this.getClassName("timeSeparator")}></div>
             <div className={this.getClassName("minutesWrapper")}>
-              {this._getHeader('minutes')}
-              {this._getBody('minutes')}
+              {this._getHeader("minutes")}
+              {this._getBody("minutes")}
             </div>
 
-            {this.props.seconds && (this.props.step <= 1 || !this.props.step) ? [
-              <div className={this.getClassName("timeSeparator")} key={"separator"}></div>,
-              <div className={this.getClassName("secondsWrapper")} key={"wrapper"}>
-                {this._getHeader('seconds')}
-                {this._getBody('seconds')}
-              </div>
-            ] : null}
+            {this.props.seconds && (this.props.step <= 1 || !this.props.step)
+              ? [
+                  <div className={this.getClassName("timeSeparator")} key={"separator"}></div>,
+                  <div className={this.getClassName("secondsWrapper")} key={"wrapper"}>
+                    {this._getHeader("seconds")}
+                    {this._getBody("seconds")}
+                  </div>
+                ]
+              : null}
           </div>
           {this._isFormat12() && (
             <div className={this.getClassName("timePart")}>
-              <span className={this.getClassName("am") + (!this.state.pm ? " " + this.getClassName("amSelected") : "")}>AM</span>
+              <span className={this.getClassName("am") + (!this.state.pm ? " " + this.getClassName("amSelected") : "")}>
+                AM
+              </span>
               <UU5.Bricks.Switch
                 size="m"
                 onIcon="mdi-chevron-right"
                 offIcon="mdi-chevron-left"
                 className={this.getClassName("timePartSwitch")}
-                ref_={(buttonSwitch) => this._buttonSwitch = buttonSwitch}
+                ref_={buttonSwitch => (this._buttonSwitch = buttonSwitch)}
                 onChange={() => this._switchDayPart()}
                 switchedOn={!!this.state.pm}
               />
-              <span className={this.getClassName("pm") + (this.state.pm ? " " + this.getClassName("pmSelected") : "")}>PM</span>
+              <span className={this.getClassName("pm") + (this.state.pm ? " " + this.getClassName("pmSelected") : "")}>
+                PM
+              </span>
             </div>
           )}
         </div>
       );
     } else {
-      result = (
-        <div {...this._getMainAttrs()}>
-          {this._getSingleColumnItems()}
-        </div>
-      )
+      result = <div {...this._getMainAttrs()}>{this._getSingleColumnItems()}</div>;
     }
 
     return result;
@@ -572,10 +841,13 @@ export const Time = createReactClass({
 
     return attrs;
   },
+  //@@viewOff:private
 
+  //@@viewOn:render
   render() {
     return this._getType();
   }
+  //@@viewOff:render
 });
 
 export default Time;

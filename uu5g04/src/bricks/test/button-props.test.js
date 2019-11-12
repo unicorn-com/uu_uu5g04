@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -47,8 +47,7 @@ const CONFIG = {
     }
   },
   requiredProps: {},
-  opt: {
-  }
+  opt: {}
 };
 
 describe(`UU5.Bricks.Button props testing`, () => {
@@ -56,19 +55,14 @@ describe(`UU5.Bricks.Button props testing`, () => {
 
   it(`UU5.Bricks.Button prop onClick`, () => {
     const This = {};
-    const event = {target: {value: "On click function"}};
+    const event = { target: { value: "On click function" } };
     const mockFunc = jest.fn();
 
-    const wrapper = shallow(
-      <UU5.Bricks.Button
-        ref_={button => This._button = button}
-        onClick={mockFunc}
-      />
-    );
+    const wrapper = shallow(<UU5.Bricks.Button ref_={button => (This._button = button)} onClick={mockFunc} />);
 
     // event simulate event object of button element
     // call click event
-    wrapper.find("button").simulate('click', event);
+    wrapper.find("button").simulate("click", event);
 
     // check if click was called
     expect(mockFunc).toBeCalled();
@@ -80,6 +74,4 @@ describe(`UU5.Bricks.Button props testing`, () => {
     expect(mockFunc.mock.calls[0][0]).toBe(This._button);
     expect(mockFunc.mock.calls[0][1].target).toBe(event.target);
   });
-
-
 });

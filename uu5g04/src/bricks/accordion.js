@@ -1,25 +1,27 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
-import Panel from './panel.js';
+import Panel from "./panel.js";
 
-import './accordion.less';
+import "./accordion.less";
+//@@viewOff:imports
 
 const MOUNT_CONTENT_VALUES = {
   onFirstRender: "onFirstRender",
@@ -28,7 +30,6 @@ const MOUNT_CONTENT_VALUES = {
 };
 
 export const Accordion = createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -43,16 +44,16 @@ export const Accordion = createReactClass({
 
   //@@viewOn:statics
   statics: {
-    tagName: ns.name('Accordion'),
-    nestingLevelList: UU5.Environment.getNestingLevelList('bigBoxCollection','box'),
+    tagName: ns.name("Accordion"),
+    nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
-      main: ns.css('accordion')
+      main: ns.css("accordion")
     },
     defaults: {
-      childTagName: 'UU5.Bricks.Panel'
+      childTagName: "UU5.Bricks.Panel"
     },
     warnings: {
-      unsupportedType: 'Type %s of parameter %s is not supported. Allowed types are: %s.'
+      unsupportedType: "Type %s of parameter %s is not supported. Allowed types are: %s."
     },
     opt: {
       nestingLevelWrapper: true
@@ -65,19 +66,11 @@ export const Accordion = createReactClass({
   propTypes: {
     panels: PropTypes.arrayOf(PropTypes.object),
     onClickNotCollapseOthers: PropTypes.bool,
-    iconExpanded: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.object
-    ]),
-    iconCollapsed: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.object
-    ]),
+    iconExpanded: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    iconCollapsed: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     onClick: PropTypes.func,
-    allowTags: PropTypes.arrayOf(
-      PropTypes.string
-    ),
-    size: PropTypes.oneOf(['s', 'm', 'l', 'xl']),
+    allowTags: PropTypes.arrayOf(PropTypes.string),
+    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
     iconAlign: PropTypes.oneOf(["right", "after", "left"]),
     openClick: PropTypes.oneOf(["header", "icon", "none"]),
     preRender: PropTypes.bool,
@@ -90,7 +83,7 @@ export const Accordion = createReactClass({
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function () {
+  getDefaultProps: function() {
     return {
       panels: null,
       iconExpanded: null,
@@ -98,7 +91,7 @@ export const Accordion = createReactClass({
       onClickNotCollapseOthers: false,
       onClick: null,
       allowTags: [],
-      size: 'm',
+      size: "m",
       iconAlign: null,
       openClick: null,
       mountPanelContent: undefined
@@ -106,23 +99,23 @@ export const Accordion = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
-  getPanelById: function (panelId) {
+  getPanelById: function(panelId) {
     return this.getRenderedChildById(panelId);
   },
 
-  getPanelByName: function (panelName) {
+  getPanelByName: function(panelName) {
     return this.getRenderedChildByName(panelName);
   },
 
-  getPanels: function () {
+  getPanels: function() {
     return this.getRenderedChildren();
   },
 
-  eachPanel: function (callback) {
+  eachPanel: function(callback) {
     var panels = this.getPanels();
     for (var i = 0; i < panels.length; i++) {
       var result = callback(panels[i], i);
@@ -133,7 +126,7 @@ export const Accordion = createReactClass({
     return this;
   },
 
-  eachPanelByIds: function (ids, callback) {
+  eachPanelByIds: function(ids, callback) {
     for (var i = 0; i < ids.length; i++) {
       var result = callback(this.getPanelById(ids[i]), i);
       if (result === false) {
@@ -143,7 +136,7 @@ export const Accordion = createReactClass({
     return this;
   },
 
-  eachPanelByNames: function (names, callback) {
+  eachPanelByNames: function(names, callback) {
     for (var i = 0; i < names.length; i++) {
       var result = callback(this.getPanelByName(names[i]), i);
       if (result === false) {
@@ -153,84 +146,84 @@ export const Accordion = createReactClass({
     return this;
   },
 
-  expandPanelById: function (panelId, setStateCallback) {
-    this._eachPanelByIdWithCallback(panelId, setStateCallback, function (panel, i, newSetStateCallback) {
+  expandPanelById: function(panelId, setStateCallback) {
+    this._eachPanelByIdWithCallback(panelId, setStateCallback, function(panel, i, newSetStateCallback) {
       panel.expand(newSetStateCallback);
     });
     return this;
   },
 
-  expandPanelByName: function (panelName, setStateCallback) {
-    this._eachPanelByNameWithCallback(panelName, setStateCallback, function (panel, i, newSetStateCallback) {
+  expandPanelByName: function(panelName, setStateCallback) {
+    this._eachPanelByNameWithCallback(panelName, setStateCallback, function(panel, i, newSetStateCallback) {
       panel.expand(newSetStateCallback);
     });
     return this;
   },
 
-  collapsePanelById: function (panelId, setStateCallback) {
-    this._eachPanelByIdWithCallback(panelId, setStateCallback, function (panel, i, newSetStateCallback) {
+  collapsePanelById: function(panelId, setStateCallback) {
+    this._eachPanelByIdWithCallback(panelId, setStateCallback, function(panel, i, newSetStateCallback) {
       panel.collapse(newSetStateCallback);
     });
     return this;
   },
 
-  collapsePanelByName: function (panelName, setStateCallback) {
-    this._eachPanelByNameWithCallback(panelName, setStateCallback, function (panel, i, newSetStateCallback) {
+  collapsePanelByName: function(panelName, setStateCallback) {
+    this._eachPanelByNameWithCallback(panelName, setStateCallback, function(panel, i, newSetStateCallback) {
       panel.collapse(newSetStateCallback);
     });
     return this;
   },
 
-  togglePanelById: function (panelId, setStateCallback) {
-    this._eachPanelByIdWithCallback(panelId, setStateCallback, function (panel, i, newSetStateCallback) {
+  togglePanelById: function(panelId, setStateCallback) {
+    this._eachPanelByIdWithCallback(panelId, setStateCallback, function(panel, i, newSetStateCallback) {
       panel.toggle(newSetStateCallback);
     });
     return this;
   },
 
-  togglePanelByName: function (panelName, setStateCallback) {
-    this._eachPanelByNameWithCallback(panelName, setStateCallback, function (panel, i, newSetStateCallback) {
+  togglePanelByName: function(panelName, setStateCallback) {
+    this._eachPanelByNameWithCallback(panelName, setStateCallback, function(panel, i, newSetStateCallback) {
       panel.toggle(newSetStateCallback);
     });
     return this;
   },
 
-  expandAll: function (setStateCallback) {
-    this._eachPanelWithCallback(setStateCallback, function (panel, i, newSetStateCallback) {
+  expandAll: function(setStateCallback) {
+    this._eachPanelWithCallback(setStateCallback, function(panel, i, newSetStateCallback) {
       panel.expand(newSetStateCallback);
     });
     return this;
   },
 
-  collapseAll: function (setStateCallback) {
-    this._eachPanelWithCallback(setStateCallback, function (panel, i, newSetStateCallback) {
+  collapseAll: function(setStateCallback) {
+    this._eachPanelWithCallback(setStateCallback, function(panel, i, newSetStateCallback) {
       panel.collapse(newSetStateCallback);
     });
     return this;
   },
 
-  toggleAll: function (setStateCallback) {
-    this._eachPanelWithCallback(setStateCallback, function (panel, i, newSetStateCallback) {
+  toggleAll: function(setStateCallback) {
+    this._eachPanelWithCallback(setStateCallback, function(panel, i, newSetStateCallback) {
       panel.toggle(newSetStateCallback);
     });
     return this;
   },
 
-  shouldCollapseOthers: function () {
+  shouldCollapseOthers: function() {
     return !this.props.onClickNotCollapseOthers;
   },
 
-  collapseOthers: function (panelId, setStateCallback) {
+  collapseOthers: function(panelId, setStateCallback) {
     var panels = this.getPanels();
 
     var counter = 0;
-    panels.forEach(function (panel) {
+    panels.forEach(function(panel) {
       panel.getId() !== panelId && panel.isExpandable() && counter++;
     });
 
     if (counter > 0) {
       var newSetStateCallback = UU5.Common.Tools.buildCounterCallback(setStateCallback, counter);
-      panels.forEach(function (panel) {
+      panels.forEach(function(panel) {
         panel.getId() !== panelId && panel.isExpandable() && panel.collapse(newSetStateCallback);
       });
     } else if (typeof setStateCallback === "function") {
@@ -241,26 +234,37 @@ export const Accordion = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  shouldChildRender_: function (child) {
+  //@@viewOn:overriding
+  shouldChildRender_: function(child) {
     let childTagName = UU5.Common.Tools.getChildTagName(child);
     let defaultChildTagName = this.getDefault().childTagName;
     let childTagNames = this.props.allowTags.concat(defaultChildTagName);
     let result = childTagNames.indexOf(childTagName) > -1;
-    if (!result && (typeof child !== 'string' || child.trim())) {
-      if (childTagName) this.showError('childTagNotAllowed', [childTagName, this.getTagName(), childTagName, defaultChildTagName], { mixinName: 'UU5.Common.BaseMixin' });
-      else this.showError('childNotAllowed', [child, defaultChildTagName], { mixinName: 'UU5.Common.BaseMixin' });
+    if (!result && (typeof child !== "string" || child.trim())) {
+      if (childTagName)
+        this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagName], {
+          mixinName: "UU5.Common.BaseMixin"
+        });
+      else this.showError("childNotAllowed", [child, defaultChildTagName], { mixinName: "UU5.Common.BaseMixin" });
     }
     return result;
   },
 
-  expandChildProps_: function (child, i) {
+  expandChildProps_: function(child, i) {
     var newChildProps = { ...child.props };
     var onClick = newChildProps.onClick || this.props.onClick;
 
-    newChildProps.onClick = this.shouldCollapseOthers() ? (panel) => {
-        (panel && panel.isExpanded()) ? this.collapseOthers(panel.getId(), () => onClick && onClick(panel)) : child.props.onClick ? child.props.onClick(panel) : this.props.onClick ? this.props.onClick(panel) : null
-      } : child.props.onClick || this.props.onClick;
+    newChildProps.onClick = this.shouldCollapseOthers()
+      ? panel => {
+          panel && panel.isExpanded()
+            ? this.collapseOthers(panel.getId(), () => onClick && onClick(panel))
+            : child.props.onClick
+            ? child.props.onClick(panel)
+            : this.props.onClick
+            ? this.props.onClick(panel)
+            : null;
+        }
+      : child.props.onClick || this.props.onClick;
     newChildProps.iconExpanded = newChildProps.iconExpanded || this.props.iconExpanded;
     newChildProps.iconCollapsed = newChildProps.iconCollapsed || this.props.iconCollapsed;
     newChildProps.colorSchema = newChildProps.colorSchema || this.props.colorSchema;
@@ -275,24 +279,24 @@ export const Accordion = createReactClass({
       newChildProps.mountContent !== undefined ? newChildProps.mountContent : this.props.mountPanelContent;
     return newChildProps;
   },
-  //@@viewOff:overridingMethods
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
-  _getValuesAsArray: function (value, name) {
+  //@@viewOn:private
+  _getValuesAsArray: function(value, name) {
     var values = [];
 
-    if (typeof value === 'string') {
+    if (typeof value === "string") {
       values = [value];
     } else if (Array.isArray(value)) {
       values = value;
     } else {
-      this.showWarning('unsupportedType', [typeof value, name, 'string, array']);
+      this.showWarning("unsupportedType", [typeof value, name, "string, array"]);
     }
 
-    return values
+    return values;
   },
 
-  _eachPanelWithCallback: function (setStateCallback, callback) {
+  _eachPanelWithCallback: function(setStateCallback, callback) {
     var panels = this.getPanels();
     var newSetStateCallback = UU5.Common.Tools.buildCounterCallback(setStateCallback, panels.length);
 
@@ -306,31 +310,31 @@ export const Accordion = createReactClass({
     return this;
   },
 
-  _eachPanelByIdWithCallback: function (panelId, setStateCallback, callback) {
-    var ids = this._getValuesAsArray(panelId, 'panelId');
+  _eachPanelByIdWithCallback: function(panelId, setStateCallback, callback) {
+    var ids = this._getValuesAsArray(panelId, "panelId");
     var newSetStateCallback = UU5.Common.Tools.buildCounterCallback(setStateCallback, ids.length);
 
-    this.eachPanelByIds(ids, function (panel, i) {
+    this.eachPanelByIds(ids, function(panel, i) {
       return callback(panel, i, newSetStateCallback);
     });
 
     return this;
   },
 
-  _eachPanelByNameWithCallback: function (panelName, setStateCallback, callback) {
-    var names = this._getValuesAsArray(panelName, 'panelName');
+  _eachPanelByNameWithCallback: function(panelName, setStateCallback, callback) {
+    var names = this._getValuesAsArray(panelName, "panelName");
     var newSetStateCallback = UU5.Common.Tools.buildCounterCallback(setStateCallback, names.length);
 
-    this.eachPanelByNames(names, function (panel, i) {
+    this.eachPanelByNames(names, function(panel, i) {
       return callback(panel, i, newSetStateCallback);
     });
 
     return this;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //Render
-  _buildChildren: function () {
+  _buildChildren: function() {
     var childrenProps = {};
     if (this.props.panels) {
       childrenProps.content = { tag: this.getDefault().childTagName, propsArray: this.props.panels };
@@ -346,16 +350,13 @@ export const Accordion = createReactClass({
   },
 
   //@@viewOn:render
-  render: function () {
-    return (
-      this.getNestingLevel()
-        ? (
-          <div {...this.getMainAttrs()}>
-            {this._buildChildren()}
-            {this.getDisabledCover()}
-          </div>
-        ) : null
-    );
+  render: function() {
+    return this.getNestingLevel() ? (
+      <div {...this.getMainAttrs()}>
+        {this._buildChildren()}
+        {this.getDisabledCover()}
+      </div>
+    ) : null;
   }
   //@@viewOff:render
 });

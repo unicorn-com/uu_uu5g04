@@ -11,28 +11,26 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "../forms-ns.js";
 import ClassNames from "../../core/common/class-names.js";
 import Css from "./css.js";
 
-import Loading from './loading.js';
+import Loading from "./loading.js";
 
-import './items-input.less';
+import "./items-input.less";
+//@@viewOff:imports
 
 export default UU5.Common.LsiMixin.withContext(
   createReactClass({
     displayName: "items-input",
     //@@viewOn:mixins
-    mixins: [
-      UU5.Common.BaseMixin,
-      UU5.Common.ElementaryMixin,
-      UU5.Common.LsiMixin
-    ],
+    mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.LsiMixin],
     //@@viewOff:mixins
 
     //@@viewOn:statics
@@ -60,24 +58,21 @@ export default UU5.Common.LsiMixin.withContext(
         PropTypes.arrayOf(PropTypes.object)
       ]),
       multiple: PropTypes.bool,
-      placeholder: PropTypes.oneOfType([
-        PropTypes.object,
-        PropTypes.string
-      ]),
+      placeholder: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
       loading: PropTypes.bool,
       onItemClick: PropTypes.func,
       feedback: PropTypes.string,
       borderRadius: PropTypes.string,
-      bgStyle: PropTypes.oneOf(['filled', 'outline', 'transparent', 'underline']),
-      elevation: PropTypes.oneOf(['-1', '0', '1', '2', '3', '4', '5', -1, 0, 1, 2, 3, 4, 5]),
+      bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+      elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
       colorSchema: PropTypes.string
     },
     //@@viewOff:propTypes
 
     //@@viewOn:getDefaultProps
-    getDefaultProps: function () {
+    getDefaultProps: function() {
       return {
-        value: '',
+        value: "",
         multiple: false,
         placeholder: null,
         loading: false,
@@ -91,30 +86,30 @@ export default UU5.Common.LsiMixin.withContext(
     },
     //@@viewOff:getDefaultProps
 
-    //@@viewOn:standardComponentLifeCycle
+    //@@viewOn:reactLifeCycle
     componentDidMount() {
       UU5.Environment.getColorSchema("blue");
     },
-    //@@viewOff:standardComponentLifeCycle
+    //@@viewOff:reactLifeCycle
 
     //@@viewOn:interface
     changeValue(index, e, setStateCallback) {
-      if (typeof this.props.onChange === 'function') {
+      if (typeof this.props.onChange === "function") {
         this.props.onChange({ value: index, event: e, component: this, setStateCallback: setStateCallback });
       }
     },
     //@@viewOff:interface
 
-    //@@viewOn:overridingMethods
-    //@@viewOff:overridingMethods
+    //@@viewOn:overriding
+    //@@viewOff:overriding
 
-    //@@viewOn:componentSpecificHelpers
+    //@@viewOn:private
     _getPlaceholder() {
       let placeholder;
       if (this.props.placeholder) {
-        if (typeof this.props.placeholder === 'string') {
+        if (typeof this.props.placeholder === "string") {
           placeholder = this.props.placeholder;
-        } else if (typeof this.props.placeholder === 'object') {
+        } else if (typeof this.props.placeholder === "object") {
           placeholder = this.getLsiItem(this.props.placeholder);
         }
       }
@@ -134,25 +129,24 @@ export default UU5.Common.LsiMixin.withContext(
       let value = this.props.value;
       if (this.props.multiple && this.props.value && this.props.value instanceof Array) {
         value = this.props.value.map((item, key) => {
-            return (
-              <UU5.Bricks.Span
-                className={this.getClassName("item")}
-                key={key}
-              >
-                {React.Children.toArray(item)}
-                {!this.props.readonly && <UU5.Bricks.Link
+          return (
+            <UU5.Bricks.Span className={this.getClassName("item")} key={key}>
+              {React.Children.toArray(item)}
+              {!this.props.readonly && (
+                <UU5.Bricks.Link
                   className={this.getClassName("link")}
                   onClick={(link, e) => {
                     e.stopPropagation();
-                    !this.props.disabled && this.props.onItemClick({ component: this, event: e, value: item, index: key });
+                    !this.props.disabled &&
+                      this.props.onItemClick({ component: this, event: e, value: item, index: key });
                   }}
                 >
                   <UU5.Bricks.Icon icon="mdi-close" className={this.getClassName("icon")} />
-                </UU5.Bricks.Link>}
-              </UU5.Bricks.Span>
-            )
-          }
-        )
+                </UU5.Bricks.Link>
+              )}
+            </UU5.Bricks.Span>
+          );
+        });
       } else {
         value = React.Children.toArray(this.props.value);
       }
@@ -219,7 +213,9 @@ export default UU5.Common.LsiMixin.withContext(
         mainAttrs.className += " " + ClassNames[this.props.bgStyle];
       } else if (["success", "warning", "error"].indexOf(this.props.feedback) > -1) {
         mainAttrs.className += " " + ClassNames["outline"];
-        mainAttrs.className += " " + Css.css(`
+        mainAttrs.className +=
+          " " +
+          Css.css(`
           &&&& {
             background-color: #FFFFFF;
           }
@@ -232,10 +228,10 @@ export default UU5.Common.LsiMixin.withContext(
 
       return mainAttrs;
     },
-    //@@viewOff:componentSpecificHelpers
+    //@@viewOff:private
 
     //@@viewOn:render
-    render: function () {
+    render: function() {
       let valueClass = this.getClassName().value;
       if (this.props.value.length < 1) {
         valueClass += " " + this.getClassName().placeholder;

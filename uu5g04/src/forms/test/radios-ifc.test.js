@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -18,19 +18,18 @@ import "uu5g04-forms";
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
-describe('UU5.Forms.InputMixin interface testing', () => {
-
-  it('isInput()', () => {
+describe("UU5.Forms.InputMixin interface testing", () => {
+  it("isInput()", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
         label="What kind of pets do you like?"
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: true},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: true },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
@@ -38,17 +37,17 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getValue() should return value', () => {
+  it("getValue() should return value", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
         label="What kind of pets do you like?"
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: true},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: true },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
@@ -56,17 +55,17 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getValue() should return null', () => {
+  it("getValue() should return null", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
         label="What kind of pets do you like?"
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: false},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: false },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
@@ -74,17 +73,17 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setValue(value,setStateCallBack)', () => {
+  it("setValue(value,setStateCallBack)", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
         label="What kind of pets do you like?"
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: true},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: true },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
@@ -100,37 +99,37 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getMessage() should return null, second: shoudl return new mesage', () => {
+  it("getMessage() should return null, second: shoudl return new mesage", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
         label="What kind of pets do you like?"
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: true},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: true },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
     expect(wrapper.instance().getMessage()).toBe(null);
     expect(wrapper).toMatchSnapshot();
-    wrapper.setProps({message: "New Setting message"});
+    wrapper.setProps({ message: "New Setting message" });
     expect(wrapper.instance().getMessage()).toEqual("New Setting message");
   });
 
-  it('setMessage(msg, setStateCallBack)', () => {
+  it("setMessage(msg, setStateCallBack)", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
         label="What kind of pets do you like?"
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: true},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: true },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
@@ -146,40 +145,39 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getFeedBack()', () => {
+  it("getFeedBack()", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
         label="What kind of pets do you like?"
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: true},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: true },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
     expect(wrapper.instance().getFeedback()).toEqual("initial");
     expect(wrapper).toMatchSnapshot();
-    wrapper.setProps({feedback: "success"});
+    wrapper.setProps({ feedback: "success" });
     wrapper.update();
     expect(wrapper.instance().getFeedback()).toEqual("success");
     expect(wrapper).toMatchSnapshot();
   });
 
-
-  it('setFeedBack(feedback, message, value, setStateCallBack)', () => {
+  it("setFeedBack(feedback, message, value, setStateCallBack)", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
         label="What kind of pets do you like?"
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: true},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: true },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
@@ -199,18 +197,17 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-
-  it('setInitial(msg, value, setStateCallBack)', () => {
+  it("setInitial(msg, value, setStateCallBack)", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
         label="What kind of pets do you like?"
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: false},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: false },
+          { label: "Hamsters", name: "hamsters" }
         ]}
         message={"This input is required"}
         feedback={"error"}
@@ -221,7 +218,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getFeedback()).toEqual("error");
     expect(wrapper.instance().getValue()).toBe(null);
-    expect(wrapper.instance().getMessage()).toEqual("This input is required")
+    expect(wrapper.instance().getMessage()).toEqual("This input is required");
     expect(wrapper.instance().isInitial()).toBeFalsy();
     const returnValue = wrapper.instance().setInitial("Initial Message", "rabbits", mockFunc);
     wrapper.update();
@@ -230,22 +227,22 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().getFeedback()).toEqual("initial");
     expect(wrapper.instance().getValue()).toMatch(/rabbits/);
-    expect(wrapper.instance().getMessage()).toEqual("Initial Message")
+    expect(wrapper.instance().getMessage()).toEqual("Initial Message");
     expect(wrapper.instance().isInitial()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isInitial()', () => {
+  it("isInitial()", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
         label="What kind of pets do you like?"
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: false},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: false },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
@@ -258,17 +255,17 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setLoading(message, value, setStateCallBack)', () => {
+  it("setLoading(message, value, setStateCallBack)", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
         label="What kind of pets do you like?"
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: true},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: true },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
@@ -288,17 +285,17 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isLoading()', () => {
+  it("isLoading()", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
         label="What kind of pets do you like?"
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: true},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: true },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
@@ -306,18 +303,17 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-
-  it('setSuccess(message, value, setStateCallBack)', () => {
+  it("setSuccess(message, value, setStateCallBack)", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
         label="What kind of pets do you like?"
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: false},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: false },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
@@ -332,24 +328,24 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().getFeedback()).toEqual("success");
-    expect(wrapper.instance().getMessage()).toEqual("This is success message")
+    expect(wrapper.instance().getMessage()).toEqual("This is success message");
     expect(wrapper.instance().getValue()).toEqual("rabbits");
     expect(wrapper.instance().isSuccess()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isSuccess() fisr return false, second return true', () => {
+  it("isSuccess() fisr return false, second return true", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
         label="What kind of pets do you like?"
         required={true}
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: false},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: false },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
@@ -361,25 +357,24 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().getFeedback()).toEqual("success");
-    expect(wrapper.instance().getMessage()).toEqual("This is success message")
+    expect(wrapper.instance().getMessage()).toEqual("This is success message");
     expect(wrapper.instance().getValue()).toEqual("rabbits");
     expect(wrapper.instance().isSuccess()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
 
-
-  it('setWarning(message, value, setStateCallBack)', () => {
+  it("setWarning(message, value, setStateCallBack)", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
         label="What kind of pets do you like?"
         required={false}
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: false},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: false },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
@@ -396,14 +391,14 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().getFeedback()).toEqual("warning");
-    expect(wrapper.instance().getMessage()).toEqual("This is warning message")
+    expect(wrapper.instance().getMessage()).toEqual("This is warning message");
     expect(wrapper.instance().getValue()).toMatch(/cats/);
     expect(wrapper.instance().isWarning()).toBeTruthy();
     expect(wrapper.instance().isSuccess()).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isWarning()', () => {
+  it("isWarning()", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
@@ -412,11 +407,11 @@ describe('UU5.Forms.InputMixin interface testing', () => {
         feedback={"warning"}
         message={"Warning message"}
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: false},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: false },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
@@ -433,18 +428,18 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setError(message, value, setStateCallBack)', () => {
+  it("setError(message, value, setStateCallBack)", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
         label="What kind of pets do you like?"
         required={true}
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: false},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: false },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
@@ -472,7 +467,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isError()', () => {
+  it("isError()", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
@@ -481,11 +476,11 @@ describe('UU5.Forms.InputMixin interface testing', () => {
         feedback={"error"}
         message={"Error message"}
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: false},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: false },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
@@ -502,18 +497,18 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('reset(setStateCallBack)', () => {
+  it("reset(setStateCallBack)", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
         label="What kind of pets do you like?"
         required={true}
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: false},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: false },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
@@ -541,55 +536,62 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getChangeFeedback()', () => {
+  it("getChangeFeedback()", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
         label="What kind of pets do you like?"
         required={true}
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: true},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: true },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
-    expect(wrapper.instance().getChangeFeedback({})).toEqual(expect.objectContaining({
-      "feedback": "initial",
-      "message": null,
-      "value": "rabbits"
-    }));
+    expect(wrapper.instance().getChangeFeedback({})).toEqual(
+      expect.objectContaining({
+        feedback: "initial",
+        message: null,
+        value: "rabbits"
+      })
+    );
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setChangeFeedback()', () => {
+  it("setChangeFeedback()", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
         label="What kind of pets do you like?"
         required={true}
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: true},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: true },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
     const mockFunc = jest.fn();
-    expect(wrapper.instance().getChangeFeedback({})).toEqual(expect.objectContaining({
-      "feedback": "initial",
-      "message": null,
-      "value": "rabbits"
-    }));
-    const returnValue = wrapper.instance().setChangeFeedback({
-      feedback: 'success',
-      message: 'Success message from setChangeFeedback',
-      value: "cats"
-    }, mockFunc);
+    expect(wrapper.instance().getChangeFeedback({})).toEqual(
+      expect.objectContaining({
+        feedback: "initial",
+        message: null,
+        value: "rabbits"
+      })
+    );
+    const returnValue = wrapper.instance().setChangeFeedback(
+      {
+        feedback: "success",
+        message: "Success message from setChangeFeedback",
+        value: "cats"
+      },
+      mockFunc
+    );
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(returnValue).toBe(wrapper.instance());
@@ -597,22 +599,20 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper.instance().state.feedback).toEqual("success");
     expect(wrapper.instance().state.message).toEqual("Success message from setChangeFeedback");
     expect(wrapper).toMatchSnapshot();
-
   });
 
-
-  it('isReadOnly()', () => {
+  it("isReadOnly()", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
         label="What kind of pets do you like?"
         required={true}
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: true},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: true },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
@@ -627,18 +627,18 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setEditableValue(true, setStateCallback)', () => {
+  it("setEditableValue(true, setStateCallback)", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
         label="What kind of pets do you like?"
         required={true}
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: true},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: true },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
@@ -659,18 +659,18 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(mockFunc).toHaveBeenCalledTimes(4);
   });
 
-  it('setEditableValue(false, setStateCallback)', () => {
+  it("setEditableValue(false, setStateCallback)", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
         label="What kind of pets do you like?"
         required={true}
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: true},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: true },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
@@ -690,19 +690,18 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(mockFunc).toHaveBeenCalledTimes(3);
   });
 
-
-  it('readOnly(setStatecallback)', () => {
+  it("readOnly(setStatecallback)", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
         label="What kind of pets do you like?"
         required={true}
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: true},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: true },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
@@ -718,19 +717,18 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-
-  it('editable(setStatecallback)', () => {
+  it("editable(setStatecallback)", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
         label="What kind of pets do you like?"
         required={true}
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: true},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: true },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
@@ -752,18 +750,18 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getLabel(idinput)', () => {
+  it("getLabel(idinput)", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
         label="What kind of pets do you like?"
         required={true}
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: true},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: true },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
@@ -775,18 +773,18 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getInputWrapper(inpuid)', () => {
+  it("getInputWrapper(inpuid)", () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID01"}
         label="What kind of pets do you like?"
         required={true}
         value={[
-          {label: 'Dogs', name: 'dogs'},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'},
-          {label: 'Rabbits', name: 'rabbits', value: true},
-          {label: 'Hamsters', name: 'hamsters'}
+          { label: "Dogs", name: "dogs" },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" },
+          { label: "Rabbits", name: "rabbits", value: true },
+          { label: "Hamsters", name: "hamsters" }
         ]}
       />
     );
@@ -797,6 +795,4 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper.instance().getInputWrapper()).toBeInstanceOf(Object);
     expect(wrapper).toMatchSnapshot();
   });
-
-
 });

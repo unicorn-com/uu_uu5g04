@@ -62,6 +62,13 @@
           UU5.Common.BaseMixin
         ],
 
+        getInitialState() {
+          return {
+            leftResizable: true,
+            rightResizable: true
+          };
+        },
+
         render() {
           return (
             /*@@viewOn:0*/
@@ -124,6 +131,8 @@
               rightWidth="!xs-10 !s-10 !m-10 !l-10 !xl-10"
               leftRelative="m l xl"
               rightRelative="m l xl"
+              leftResizable={this.state.leftResizable}
+              rightResizable={this.state.rightResizable}
             >
               <UU5.Bricks.Container>
                 <UU5.Bricks.Header level="1" content="Page content" />
@@ -139,7 +148,41 @@
                     onClick={() => this._page.toggleRight()}
                   />
                 </UU5.Bricks.ButtonGroup>
-                <UU5.Bricks.Paragraph />
+                <UU5.Bricks.Line />
+                <UU5.Bricks.Paragraph>
+                  Write values <UU5.Bricks.Code content="open" /> or <UU5.Bricks.Code content="closed" /> to enable resizing of columns in their respective states,
+                  or use <UU5.Bricks.Code content="true" /> and <UU5.Bricks.Code content="false" /> to completely enable/disable their resizing.
+                </UU5.Bricks.Paragraph>
+                <UU5.Forms.Text
+                  inputColWidth="xs-12"
+                  labelColWidth="xs-12"
+                  label="leftResizable"
+                  value={this.state.leftResizable === true ? "true" : (this.state.leftResizable === false ? "false" : this.state.leftResizable)}
+                  onBlur={(opt) => {
+                    if (opt.value === "true") {
+                      this.setState({ leftResizable: true });
+                    } else if (opt.value === "false") {
+                      this.setState({ leftResizable: false });
+                    } else {
+                      this.setState({ leftResizable: opt.value });
+                    }
+                  }}
+                />
+                <UU5.Forms.Text
+                  inputColWidth="xs-12"
+                  labelColWidth="xs-12"
+                  label="rightResizable"
+                  value={this.state.rightResizable === true ? "true" : (this.state.rightResizable === false ? "false" : this.state.rightResizable)}
+                  onBlur={(opt) => {
+                    if (opt.value === "true") {
+                      this.setState({ rightResizable: true });
+                    } else if (opt.value === "false") {
+                      this.setState({ rightResizable: false });
+                    } else {
+                      this.setState({ rightResizable: opt.value });
+                    }
+                  }}
+                />
               </UU5.Bricks.Container>
             </UU5.Bricks.Page>
             /*@@viewOff:0*/

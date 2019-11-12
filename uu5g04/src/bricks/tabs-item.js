@@ -1,28 +1,27 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
-
-
-import './tabs-item.less';
+import "./tabs-item.less";
+//@@viewOff:imports
 
 export default createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -36,7 +35,7 @@ export default createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("Tabs.Item"),
-    nestingLevelList: UU5.Environment.getNestingLevelList('bigBoxCollection', 'smallBox'),
+    nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "smallBox"),
     classNames: {
       main: ns.css("tabs-item", "tabs-item-pane"),
       visible: ns.css("tabs-item-visible"),
@@ -46,7 +45,7 @@ export default createReactClass({
       nestingLevelWrapper: true
     },
     errors: {
-      invalidParent: 'Parent of this component is not Tabs.'
+      invalidParent: "Parent of this component is not Tabs."
     }
   },
   //@@viewOff:statics
@@ -60,7 +59,7 @@ export default createReactClass({
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function () {
+  getDefaultProps: function() {
     return {
       _fade: false,
       _active: false,
@@ -69,8 +68,8 @@ export default createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  componentWillMount: function () {
+  //@@viewOn:reactLifeCycle
+  componentWillMount: function() {
     let parent = this.getParent();
 
     if (parent) {
@@ -83,12 +82,12 @@ export default createReactClass({
       this.showError("invalidParent");
     }
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
+  //@@viewOn:overriding
   setDisabledValue_(value, setStateCallback) {
     if (typeof this.props.getButton === "function") {
       let button = this.props.getButton();
@@ -136,10 +135,10 @@ export default createReactClass({
 
     this.toggleHiddenDefault(setStateCallback);
   },
-  //@@viewOff:overridingMethods
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOn:private
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
@@ -150,18 +149,15 @@ export default createReactClass({
     }
 
     if (this.props._fade) {
-      mainAttrs.className += ' ' + this.getClassName("fade");
+      mainAttrs.className += " " + this.getClassName("fade");
     }
 
-    return (
-      this.getNestingLevel()
-        ? (
-        <div {...mainAttrs}>
-          {this.getChildren()}
-          {this.getDisabledCover()}
-        </div>
-      ) : null
-    )
+    return this.getNestingLevel() ? (
+      <div {...mainAttrs}>
+        {this.getChildren()}
+        {this.getDisabledCover()}
+      </div>
+    ) : null;
   }
 
   //@@viewOff:render

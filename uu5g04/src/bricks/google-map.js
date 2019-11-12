@@ -1,67 +1,63 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
+import ReactDOM from "react-dom";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
+import Link from "./link.js";
+import Modal from "./modal.js";
 
-
-import Link from './link.js'
-import Modal from './modal.js'
-
-import './google-map.less';
+import "./google-map.less";
+//@@viewOff:imports
 
 export const GoogleMap = createReactClass({
-
   //@@viewOn:mixins
-  mixins: [
-    UU5.Common.BaseMixin,
-    UU5.Common.ElementaryMixin,
-    UU5.Common.NestingLevelMixin,
-    UU5.Common.PureRenderMixin
-  ],
+  mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.NestingLevelMixin, UU5.Common.PureRenderMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
   statics: {
     tagName: ns.name("GoogleMap"),
-    nestingLevelList: UU5.Environment.getNestingLevelList('bigBoxCollection', 'inline'),
+    nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "inline"),
     classNames: {
       main: ns.css("google-map")
     },
     defaults: {
       loadLibsEvent: ns.css("google-map-load-libs"),
-      apiKeyUrl: 'https://maps.googleapis.com/maps/api/js'
+      apiKeyUrl: "https://maps.googleapis.com/maps/api/js"
     }
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    mapType: PropTypes.oneOf(['satellite', 'roadmap']),
+    mapType: PropTypes.oneOf(["satellite", "roadmap"]),
     mapRef: PropTypes.func,
     latitude: PropTypes.number,
     longitude: PropTypes.number,
-    markers: PropTypes.arrayOf(PropTypes.shape({
-      latitude: PropTypes.number,
-      longitude: PropTypes.number,
-      title: PropTypes.string,
-      label: PropTypes.string
-    })),
+    markers: PropTypes.arrayOf(
+      PropTypes.shape({
+        latitude: PropTypes.number,
+        longitude: PropTypes.number,
+        title: PropTypes.string,
+        label: PropTypes.string
+      })
+    ),
     zoom: PropTypes.number,
     disableZoom: PropTypes.bool,
     draggable: PropTypes.bool,
@@ -78,7 +74,7 @@ export const GoogleMap = createReactClass({
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      mapType: 'roadmap',
+      mapType: "roadmap",
       latitude: 50.107799,
       longitude: 14.453689,
       markers: [],
@@ -87,14 +83,14 @@ export const GoogleMap = createReactClass({
       draggable: true,
       disableDefaultUI: false,
       googleApiKey: null,
-      height: '400px',
-      width: '100%',
+      height: "400px",
+      width: "100%",
       mapStyle: null
     };
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   componentDidMount() {
     this._initialize();
   },
@@ -104,21 +100,20 @@ export const GoogleMap = createReactClass({
   componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
       let newMapOptions = {};
-      (nextProps.draggable !== undefined) && (newMapOptions.draggable = nextProps.draggable);
-      (nextProps.disableZoom !== undefined) && (newMapOptions.scrollwheel = !nextProps.disableZoom);
-      (nextProps.disableDefaultUI !== undefined) && (newMapOptions.disableDefaultUI = nextProps.disableDefaultUI);
+      nextProps.draggable !== undefined && (newMapOptions.draggable = nextProps.draggable);
+      nextProps.disableZoom !== undefined && (newMapOptions.scrollwheel = !nextProps.disableZoom);
+      nextProps.disableDefaultUI !== undefined && (newMapOptions.disableDefaultUI = nextProps.disableDefaultUI);
       Object.keys(newMapOptions).length && this.setMapOptions(newMapOptions);
       if (this.props.markers !== nextProps.markers) {
         this._initialize(nextProps.markers);
       }
     }
-
   },
 
-  componentWillUnmount: function () {
+  componentWillUnmount: function() {
     UU5.Environment.EventListener.unregisterLoadLibs(this.getId(), this._initMap);
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   getMap() {
@@ -126,7 +121,7 @@ export const GoogleMap = createReactClass({
   },
 
   setMapOptions(options) {
-    if (typeof options === 'object' && options !== null) {
+    if (typeof options === "object" && options !== null) {
       if (this._googleMap) {
         this._googleMap.setOptions(options);
       } else {
@@ -137,22 +132,20 @@ export const GoogleMap = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
-  _initialize(markers){
+  //@@viewOn:private
+  _initialize(markers) {
     markers = markers || this.props.markers;
-    if (typeof google === 'undefined' && !window.googleMapApiLoading) {
+    if (typeof google === "undefined" && !window.googleMapApiLoading) {
       this._loadLibraries(markers, this._initMap);
-
     } else if (googleMapApiLoading) {
       if (window.googleMapApiLoaded) {
         this._initMap(markers);
       } else {
         UU5.Environment.EventListener.registerLoadLibs(this.getId(), this._initMap);
       }
-
     } else {
       this._loadLibraries(markers).this._initMap(markers);
     }
@@ -163,17 +156,16 @@ export const GoogleMap = createReactClass({
 
     window.google = false;
     window.googleMapApiLoading = true;
-    let script = document.createElement('script');
+    let script = document.createElement("script");
     document.head.appendChild(script);
 
-    script.onload = function () {
+    script.onload = function() {
       window.googleMapApiLoaded = true;
       UU5.Environment.EventListener.triggerLoadLibs(markers);
-      typeof callback === 'function' && callback();
+      typeof callback === "function" && callback();
     };
 
-    script.src = this.getDefault().apiKeyUrl +
-      (this.props.googleApiKey ? '?key=' + this.props.googleApiKey : '');
+    script.src = this.getDefault().apiKeyUrl + (this.props.googleApiKey ? "?key=" + this.props.googleApiKey : "");
   },
 
   _initMap(markers) {
@@ -194,20 +186,20 @@ export const GoogleMap = createReactClass({
     delete this._pendingMapOptions;
 
     let newMapCreated = false;
-    if (!this._googleMap){
+    if (!this._googleMap) {
       this._googleMap = new google.maps.Map(ReactDOM.findDOMNode(this._map), mapProps);
       newMapCreated = true;
     }
     if (this._markers && this._markers.length > 0) {
-      this._markers.forEach((marker) => {
+      this._markers.forEach(marker => {
         marker.setMap(null); //clear old markers
-      })
+      });
     }
 
     if (this.props.mapStyle) {
       let styledMap = new google.maps.StyledMapType(this.props.mapStyle);
-      this._googleMap.mapTypes.set('map_style', styledMap);
-      this._googleMap.setMapTypeId('map_style');
+      this._googleMap.mapTypes.set("map_style", styledMap);
+      this._googleMap.setMapTypeId("map_style");
     }
 
     if (markers !== null) {
@@ -220,7 +212,7 @@ export const GoogleMap = createReactClass({
         this._markers.push(marker);
         marker.setMap(this._googleMap);
       } else {
-        markers.forEach((markerProps) => {
+        markers.forEach(markerProps => {
           let position = new google.maps.LatLng(markerProps.latitude, markerProps.longitude);
           let animation = markerProps.animation ? google.maps.Animation[markerProps.animation.toUpperCase()] : null;
           let newMarker = new google.maps.Marker({
@@ -231,8 +223,8 @@ export const GoogleMap = createReactClass({
             icon: markerProps.icon,
             animation: animation
           });
-          if (typeof markerProps.onClick === 'function') {
-            newMarker.addListener('click', (e) => markerProps.onClick(this, newMarker, e))
+          if (typeof markerProps.onClick === "function") {
+            newMarker.addListener("click", e => markerProps.onClick(this, newMarker, e));
           }
 
           this._markers.push(newMarker);
@@ -241,27 +233,27 @@ export const GoogleMap = createReactClass({
       }
     }
 
-    if (typeof this.props.mapRef === "function" && newMapCreated){
+    if (typeof this.props.mapRef === "function" && newMapCreated) {
       this.props.mapRef(this._googleMap);
     }
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
     let mainAttrs = this.getMainAttrs();
 
     let mapAttrs = {
-      ref: (ref) => this._map = ref,
-      style: {height: this.props.height, width: this.props.width}
+      ref: ref => (this._map = ref),
+      style: { height: this.props.height, width: this.props.width }
     };
 
     let component;
     switch (this.getNestingLevel()) {
-      case 'bigBoxCollection':
-      case 'bigBox':
-      case 'boxCollection':
-      case 'box':
+      case "bigBoxCollection":
+      case "bigBox":
+      case "boxCollection":
+      case "box":
         component = (
           <div {...mainAttrs}>
             <div {...mapAttrs} />
@@ -269,16 +261,16 @@ export const GoogleMap = createReactClass({
           </div>
         );
         break;
-      case 'inline':
+      case "inline":
         component = (
           <span>
-            <Modal disabled={this.isDisabled()} ref_={(modal) => this._modal = modal}>
+            <Modal disabled={this.isDisabled()} ref_={modal => (this._modal = modal)}>
               <div {...mainAttrs}>
                 <div {...mapAttrs} />
                 {/* {this.getDisabledCover()} */}
               </div>
             </Modal>
-            <Link disabled={this.isDisabled()} onClick={()=>this._modal.open()} content={this.props.src} />
+            <Link disabled={this.isDisabled()} onClick={() => this._modal.open()} content={this.props.src} />
           </span>
         );
         break;

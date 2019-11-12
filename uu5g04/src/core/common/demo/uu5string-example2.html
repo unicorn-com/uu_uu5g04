@@ -78,10 +78,10 @@
       var Page = createReactClass({
         mixins: [UU5.Common.BaseMixin],
 
-        //@@viewOn:standardComponentLifeCycle
-        //@@viewOff:standardComponentLifeCycle
+        //@@viewOn:reactLifeCycle
+        //@@viewOff:reactLifeCycle
 
-        //@@viewOn:componentSpecificHelpers
+        //@@viewOn:private
         _renderUU5Strings(){
           return data.map((item, index) => {
             return (
@@ -94,7 +94,7 @@
             );
           });
         },
-        //@@viewOff:componentSpecificHelpers
+        //@@viewOff:private
 
         //@@viewOn:render
         render(){

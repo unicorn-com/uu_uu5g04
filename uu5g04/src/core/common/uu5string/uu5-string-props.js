@@ -16,7 +16,7 @@ import UU5StringTools from "./tools.js";
 import UU5Data from "./uu5-data.js";
 
 const DEFAULT_SEPARATOR = " ";
-const DEFAULT_BOUNDARIES = "\"";
+const DEFAULT_BOUNDARIES = '"';
 const DEFAULT_VALUE_DELIMITER = "=";
 
 export const UU5StringProps = class UU5StringProps {
@@ -39,13 +39,13 @@ export const UU5StringProps = class UU5StringProps {
     */
     this.toObject = () => {
       let result = {};
-      this.props.forEach(item => result[item.name] = item.value);
+      this.props.forEach(item => (result[item.name] = item.value));
       return result;
     };
 
     this.toChildren = (data, filterFn) => {
       let result = {};
-      this.props.forEach((item) => result[item.name] = UU5StringProps._renderItemValueToChildren(item, data, filterFn));
+      this.props.forEach(item => (result[item.name] = UU5StringProps._renderItemValueToChildren(item, data, filterFn)));
       return result;
     };
 
@@ -57,7 +57,11 @@ export const UU5StringProps = class UU5StringProps {
     this.toString = (data, filterFn) => {
       let result = "";
       this.props.forEach(item => {
-        result += `${item.separator || DEFAULT_SEPARATOR}${item.name}${UU5StringProps._renderItemValueToString(item, data, filterFn)}`
+        result += `${item.separator || DEFAULT_SEPARATOR}${item.name}${UU5StringProps._renderItemValueToString(
+          item,
+          data,
+          filterFn
+        )}`;
       });
       result += this.lastSeparator;
       return result;
@@ -76,12 +80,12 @@ export const UU5StringProps = class UU5StringProps {
       return result.join(" ");
     };
 
-    this.clone = (initFn) => {
+    this.clone = initFn => {
       let newPropsObject = new UU5StringProps();
       // set last separator
       newPropsObject.lastSeparator = this.lastSeparator;
       // set all props as a new array
-      newPropsObject.props = this.props.map((item) => {
+      newPropsObject.props = this.props.map(item => {
         let newItem = {};
         // clone all attributes
         for (let attr in item) {
@@ -117,7 +121,7 @@ export const UU5StringProps = class UU5StringProps {
 
   /* static methods */
   static parse(attrsString, buildItem) {
-   return UU5StringTools.parseUU5StringProps(attrsString, buildItem);
+    return UU5StringTools.parseUU5StringProps(attrsString, buildItem);
   }
 
   /* private static methods */
@@ -146,7 +150,7 @@ export const UU5StringProps = class UU5StringProps {
       // escape content
       if (boundaries === "'") {
         result = result.replace(/([\\'])/g, "\\$1");
-      } else if (boundaries === "\"") {
+      } else if (boundaries === '"') {
         result = result.replace(/([\\"])/g, "\\$1");
       }
     }
@@ -181,7 +185,6 @@ export const UU5StringProps = class UU5StringProps {
 
     return typeof item.value === "string" ? UU5StringTools.printTemplateToChildren(item.value, data) : item.value;
   }
-
 };
 
 export default UU5StringProps;

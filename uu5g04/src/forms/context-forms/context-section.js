@@ -23,7 +23,7 @@ import Css from "./css.js";
 
 export const ContextSection = UU5.Common.Reference.forward(({ className, ...props }, ref) => {
   const classNames = [
-   Css.css`
+    Css.css`
       & > .uu5-bricks-header {
         display: flex;
         align-items: center;

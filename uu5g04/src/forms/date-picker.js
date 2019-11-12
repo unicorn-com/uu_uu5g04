@@ -11,17 +11,19 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
-import TextInput from './internal/text-input.js';
-import TextInputMixin from './mixins/text-input-mixin.js'
+import TextInput from "./internal/text-input.js";
+import TextInputMixin from "./mixins/text-input-mixin.js";
 
 import Context from "./form-context.js";
 
-import './date-picker.less';
+import "./date-picker.less";
+//@@viewOff:imports
 
 export const DatePicker = Context.withContext(
   createReactClass({
@@ -47,24 +49,15 @@ export const DatePicker = Context.withContext(
       defaults: {
         inputColWidth: "xs12 s4 m4 l3 xl3"
       },
-      lsi: () => (UU5.Environment.Lsi.Forms.message)
+      lsi: () => UU5.Environment.Lsi.Forms.message
     },
     //@@viewOff:statics
 
     //@@viewOn:propTypes
     propTypes: {
-      value: PropTypes.oneOfType([
-        PropTypes.object,
-        PropTypes.string
-      ]),
-      dateFrom: PropTypes.oneOfType([
-        PropTypes.object,
-        PropTypes.string
-      ]),
-      dateTo: PropTypes.oneOfType([
-        PropTypes.object,
-        PropTypes.string
-      ]),
+      value: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+      dateFrom: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+      dateTo: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
       iconOpen: PropTypes.string,
       iconClosed: PropTypes.string,
       format: PropTypes.string,
@@ -74,7 +67,7 @@ export const DatePicker = Context.withContext(
       afterRangeMessage: PropTypes.any,
       parseDate: PropTypes.func,
       disableBackdrop: PropTypes.bool,
-      valueType: PropTypes.oneOf(['string','date']),
+      valueType: PropTypes.oneOf(["string", "date"]),
       openToContent: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
       hideFormatPlaceholder: PropTypes.bool,
       showTodayButton: PropTypes.bool
@@ -87,15 +80,15 @@ export const DatePicker = Context.withContext(
         value: null,
         dateFrom: null,
         dateTo: null,
-        iconOpen: 'mdi-calendar',
-        iconClosed: 'mdi-calendar',
+        iconOpen: "mdi-calendar",
+        iconClosed: "mdi-calendar",
         format: null,
         country: null,
-        nanMessage: 'Please insert a valid date.',
-        beforeRangeMessage: 'Date is out of range.',
-        afterRangeMessage: 'Date is out of range.',
+        nanMessage: "Please insert a valid date.",
+        beforeRangeMessage: "Date is out of range.",
+        afterRangeMessage: "Date is out of range.",
         parseDate: null,
-        icon: 'mdi-calendar',
+        icon: "mdi-calendar",
         disableBackdrop: false,
         valueType: null,
         openToContent: "xs",
@@ -105,7 +98,7 @@ export const DatePicker = Context.withContext(
     },
     //@@viewOff:getDefaultProps
 
-    //@@viewOn:standardComponentLifeCycle
+    //@@viewOn:reactLifeCycle
     getInitialState() {
       return {
         format: this.props.format,
@@ -140,7 +133,10 @@ export const DatePicker = Context.withContext(
 
     componentWillReceiveProps(nextProps) {
       if (nextProps.controlled) {
-        let value = this._hasInputFocus() && !(nextProps.value instanceof Date) ? nextProps.value : this._getDateString(nextProps.value) || nextProps.value;
+        let value =
+          this._hasInputFocus() && !(nextProps.value instanceof Date)
+            ? nextProps.value
+            : this._getDateString(nextProps.value) || nextProps.value;
         let validationResult = this._validateOnChange({ value, event: null, component: this }, true);
 
         if (validationResult) {
@@ -167,16 +163,19 @@ export const DatePicker = Context.withContext(
 
     componentDidUpdate(prevProps, prevState) {
       if (this.isOpen()) {
-        if ((this.state.screenSize === "xs" && prevState.screenSize !== "xs") || (this.state.screenSize !== "xs" && prevState.screenSize === "xs")) {
+        if (
+          (this.state.screenSize === "xs" && prevState.screenSize !== "xs") ||
+          (this.state.screenSize !== "xs" && prevState.screenSize === "xs")
+        ) {
           this._open();
         }
       }
     },
-    //@@viewOff:standardComponentLifeCycle
+    //@@viewOff:reactLifeCycle
 
     //@@viewOn:interface
     toggle(setStateCallback) {
-      this.setState((state) => {
+      this.setState(state => {
         if (state.open) {
           this._removeEvent();
         } else {
@@ -197,7 +196,7 @@ export const DatePicker = Context.withContext(
     },
     //@@viewOff:interface
 
-    //@@viewOn:overridingMethods
+    //@@viewOn:overriding
     setFeedback_(feedback, message, value, setStateCallback) {
       value = this._hasInputFocus() && !(value instanceof Date) ? value : this._getDateString(value) || value;
       this.setFeedbackDefault(feedback, message, value, setStateCallback);
@@ -284,9 +283,9 @@ export const DatePicker = Context.withContext(
       this._removeEvent();
       this.closeDefault(() => this._close(setStateCallback));
     },
-    //@@viewOff:overridingMethods
+    //@@viewOff:overriding
 
-    //@@viewOn:componentSpecificHelpers
+    //@@viewOn:private
     _getEventPath(e) {
       let path = [];
       let node = e.target;
@@ -306,9 +305,9 @@ export const DatePicker = Context.withContext(
         input: false,
         label: false,
         picker: false
-      }
+      };
       let eventPath = this._getEventPath(e);
-      eventPath.every((item) => {
+      eventPath.every(item => {
         let functionType = item.matches ? "matches" : "msMatchesSelector";
         if (item[functionType]) {
           if (item[functionType](labelMatch)) {
@@ -418,24 +417,31 @@ export const DatePicker = Context.withContext(
 
     _onChangeFormat(opt, setStateCallback) {
       let format = opt.format === undefined ? this.state.format : opt.format;
-      let country = opt.country === undefined ? this.state.country : (opt.country ? opt.country.toLowerCase() : opt.country);
+      let country =
+        opt.country === undefined ? this.state.country : opt.country ? opt.country.toLowerCase() : opt.country;
       let value = this._getDateString(this.state.value, format, country);
-      this._updateState({
-        value,
-        format,
-        country,
-      }, setStateCallback);
+      this._updateState(
+        {
+          value,
+          format,
+          country
+        },
+        setStateCallback
+      );
     },
 
     _open(setStateCallback) {
       if (this._popover) {
-        this._popover.open({
-        onClose: this._close,
-        aroundElement: this._textInput.findDOMNode(),
-        position: "bottom",
-        offset: this._shouldOpenToContent() ? 0 : 4,
-        preventPositioning: this._shouldOpenToContent()
-      }, setStateCallback);
+        this._popover.open(
+          {
+            onClose: this._close,
+            aroundElement: this._textInput.findDOMNode(),
+            position: "bottom",
+            offset: this._shouldOpenToContent() ? 0 : 4,
+            preventPositioning: this._shouldOpenToContent()
+          },
+          setStateCallback
+        );
       } else if (typeof setStateCallback === "function") {
         setStateCallback();
       }
@@ -454,14 +460,17 @@ export const DatePicker = Context.withContext(
 
       if (typeof this.props.openToContent === "string") {
         let screenSize = this.getScreenSize();
-        this.props.openToContent.trim().split(" ").some((size) => {
-          if (screenSize == size) {
-            result = true;
-            return true;
-          } else {
-            return false;
-          }
-        })
+        this.props.openToContent
+          .trim()
+          .split(" ")
+          .some(size => {
+            if (screenSize == size) {
+              result = true;
+              return true;
+            } else {
+              return false;
+            }
+          });
       } else if (typeof this.props.openToContent === "boolean") {
         result = this.props.openToContent;
       }
@@ -496,8 +505,8 @@ export const DatePicker = Context.withContext(
         if (!this.isComputedDisabled() && !this.isReadOnly()) {
           opt.required = this.props.required;
           let result = this.getChangeFeedback(opt);
-          opt._data = { type: 'input', required: this.props.required, result: result, value: e.target.value };
-          if (typeof this.props.onChange === 'function') {
+          opt._data = { type: "input", required: this.props.required, result: result, value: e.target.value };
+          if (typeof this.props.onChange === "function") {
             if (this.props.valueType == "date") {
               opt.value = date;
             }
@@ -557,7 +566,7 @@ export const DatePicker = Context.withContext(
         this._addKeyEvents();
         this._hasFocus = true;
         if (!this.isReadOnly() && !this.isComputedDisabled()) {
-          if (typeof this.props.onFocus === 'function') {
+          if (typeof this.props.onFocus === "function") {
             this.props.onFocus(opt);
           } else {
             this.onFocusDefault(opt);
@@ -570,7 +579,7 @@ export const DatePicker = Context.withContext(
       if (this._hasFocus) {
         this._removeKeyEvents();
         this._hasFocus = false;
-        if (typeof this.props.onBlur === 'function') {
+        if (typeof this.props.onBlur === "function") {
           this.props.onBlur(opt);
         } else {
           this.onBlurDefault(opt);
@@ -589,7 +598,7 @@ export const DatePicker = Context.withContext(
     },
 
     _getDate(date) {
-      if (typeof date === 'string') {
+      if (typeof date === "string") {
         date = this._parseDate(date);
       }
       return date;
@@ -602,7 +611,7 @@ export const DatePicker = Context.withContext(
       result.message = result.message || null;
 
       if (opt.value && !date) {
-        result.feedback = 'error';
+        result.feedback = "error";
         result.message = this.props.nanMessage;
       }
 
@@ -610,10 +619,10 @@ export const DatePicker = Context.withContext(
         let dateFrom = this._getDateFrom(result.dateFrom);
         let dateTo = this._getDateTo(result.dateTo);
         if (dateFrom && date < dateFrom) {
-          result.feedback = 'error';
+          result.feedback = "error";
           result.message = this.props.beforeRangeMessage;
         } else if (dateTo && date > dateTo) {
-          result.feedback = 'error';
+          result.feedback = "error";
           result.message = this.props.afterRangeMessage;
         } else {
           result.feedback = result.feedback || "initial";
@@ -636,8 +645,8 @@ export const DatePicker = Context.withContext(
           opt.value = this._parseDate(opt.value);
         }
 
-        result = typeof this.props.onValidate === 'function' ? this.props.onValidate(opt) : null;
-        if (result && typeof result === 'object' && result.feedback) {
+        result = typeof this.props.onValidate === "function" ? this.props.onValidate(opt) : null;
+        if (result && typeof result === "object" && result.feedback) {
           _callCallback = false;
           this._updateState(result, setStateCallback);
         }
@@ -656,11 +665,11 @@ export const DatePicker = Context.withContext(
 
     _onCalendarChange(opt) {
       let date = this._getDateString(opt.value);
-      opt = { value: opt.value, event: opt.event, component: this, _data: { type: 'picker', value: date } };
+      opt = { value: opt.value, event: opt.event, component: this, _data: { type: "picker", value: date } };
       if (this.props.valueType === null || this.props.valueType == "string") {
         opt.value = date;
       }
-      if (typeof this.props.onChange === 'function') {
+      if (typeof this.props.onChange === "function") {
         this.setState({ open: false }, () => this.props.onChange(opt));
       } else {
         this.onChangeDefault(opt);
@@ -671,7 +680,7 @@ export const DatePicker = Context.withContext(
     _getDateFrom() {
       let dateFrom;
       if (this.props.dateFrom) {
-        if (typeof this.props.dateFrom === 'string') {
+        if (typeof this.props.dateFrom === "string") {
           dateFrom = this._parseDate(this.props.dateFrom);
         } else if (this.props.dateFrom instanceof Date) {
           dateFrom = this.props.dateFrom;
@@ -683,7 +692,7 @@ export const DatePicker = Context.withContext(
     _getDateTo() {
       let dateTo;
       if (this.props.dateTo) {
-        if (typeof this.props.dateTo === 'string') {
+        if (typeof this.props.dateTo === "string") {
           dateTo = this._parseDate(this.props.dateTo);
         } else if (this.props.dateTo instanceof Date) {
           dateTo = this.props.dateTo;
@@ -693,7 +702,7 @@ export const DatePicker = Context.withContext(
     },
 
     _getCalendarProps() {
-      let date = typeof this.getValue() === 'string' ? this._parseDate(this.getValue()) : this.getValue();
+      let date = typeof this.getValue() === "string" ? this._parseDate(this.getValue()) : this.getValue();
 
       return {
         className: this.getClassName().menu,
@@ -742,16 +751,16 @@ export const DatePicker = Context.withContext(
       attrs.id = this.getId();
 
       if (this.isOpen()) {
-        attrs.className += ' ' + this.getClassName().open;
+        attrs.className += " " + this.getClassName().open;
       }
 
       if (this._shouldOpenToContent()) {
-        attrs.className += ' ' + this.getClassName().screenSizeBehaviour;
+        attrs.className += " " + this.getClassName().screenSizeBehaviour;
       }
 
       if (!this.isReadOnly() && !this.isComputedDisabled()) {
         let allowOpening = true;
-        let handleMobileClick = (e) => {
+        let handleMobileClick = e => {
           if (this.isOpen()) {
             e.target.focus();
             this.close();
@@ -760,10 +769,15 @@ export const DatePicker = Context.withContext(
             e.target.blur();
           }
 
-          UU5.Common.Tools.scrollToTarget(this.getId() + "-input", false, UU5.Environment._fixedOffset + 20);
+          UU5.Common.Tools.scrollToTarget(
+            this.getId() + "-input",
+            false,
+            UU5.Environment._fixedOffset + 20,
+            this._findScrollElement(this._root)
+          );
         };
 
-        let handleClick = (e) => {
+        let handleClick = e => {
           let clickData = this._findTarget(e.nativeEvent);
 
           if (this._shouldOpenToContent() && clickData.input) {
@@ -785,7 +799,7 @@ export const DatePicker = Context.withContext(
           }
         };
 
-        attrs.onClick = (e) => {
+        attrs.onClick = e => {
           handleClick(e);
         };
       }
@@ -798,7 +812,7 @@ export const DatePicker = Context.withContext(
       format && (format = format.replace(/Y+/, "YYYY").replace(/y+/, "yy"));
       let placeholder;
       if (this.props.placeholder && format && !this.props.hideFormatPlaceholder) {
-        placeholder = this.props.placeholder + ' - ' + format;
+        placeholder = this.props.placeholder + " - " + format;
       } else if (format && !this.props.hideFormatPlaceholder) {
         placeholder = format;
       } else {
@@ -810,25 +824,25 @@ export const DatePicker = Context.withContext(
     _getPopoverProps() {
       let props = {};
 
-      props.ref_ = ref => this._popover = ref;
+      props.ref_ = ref => (this._popover = ref);
       props.forceRender = true;
       props.disableBackdrop = true;
       props.shown = this.isOpen();
 
       return props;
     },
-    //@@viewOff:componentSpecificHelpers
+    //@@viewOff:private
 
     //@@viewOn:render
     render() {
-      let inputId = this.getId() + '-input';
+      let inputId = this.getId() + "-input";
 
       let inputAttrs = this.props.inputAttrs;
       inputAttrs = UU5.Common.Tools.merge({ autoComplete: "off" }, inputAttrs);
 
       inputAttrs.className === "" ? delete inputAttrs.className : null;
       return (
-        <div {...this._getMainAttrs()} ref={(comp) => this._root = comp}>
+        <div {...this._getMainAttrs()} ref={comp => (this._root = comp)}>
           {this.getLabel(inputId)}
           {this.getInputWrapper([
             <TextInput
@@ -836,7 +850,7 @@ export const DatePicker = Context.withContext(
               name={this.props.name || inputId}
               value={this.state.value || ""}
               placeholder={this._getPlaceholder()}
-              type='text'
+              type="text"
               onChange={this._onChange}
               onFocus={!this.isReadOnly() && !this.isComputedDisabled() ? this._onFocus : null}
               onKeyDown={this.onKeyDown}
@@ -846,20 +860,17 @@ export const DatePicker = Context.withContext(
               icon={this._getFeedbackIcon()}
               iconClickable={false}
               loading={this.isLoading()}
-              ref_={(item) => this._textInput = item}
+              ref_={item => (this._textInput = item)}
               feedback={this.getFeedback()}
               borderRadius={this.props.borderRadius}
               elevation={this.props.elevation}
               bgStyle={this.props.bgStyle}
               inputWidth={this._getInputWidth()}
               colorSchema={this.props.colorSchema}
+              size={this.props.size}
             />,
             <UU5.Bricks.Popover {...this._getPopoverProps()}>
-              {
-                this.isOpen() ? (
-                    <UU5.Bricks.Calendar {...this._getCalendarProps()} />
-                ) : null
-              }
+              {this.isOpen() ? <UU5.Bricks.Calendar {...this._getCalendarProps()} /> : null}
             </UU5.Bricks.Popover>
           ])}
         </div>

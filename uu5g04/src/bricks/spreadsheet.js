@@ -1,37 +1,31 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
+import DataTable from "./data-table.js";
 
-
-import DataTable from './data-table.js';
-
-import './spreadsheet.less';
+import "./spreadsheet.less";
+//@@viewOff:imports
 
 export const Spreadsheet = createReactClass({
-
   //@@viewOn:mixins
-  mixins: [
-    UU5.Common.BaseMixin,
-    UU5.Common.PureRenderMixin,
-    UU5.Common.ElementaryMixin,
-    UU5.Common.SectionMixin
-  ],
+  mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, UU5.Common.SectionMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -40,9 +34,10 @@ export const Spreadsheet = createReactClass({
     classNames: {
       main: ns.css("spreadsheet")
     },
-    lsi: () => (UU5.Environment.Lsi.Bricks.spreadsheet),
+    lsi: () => UU5.Environment.Lsi.Bricks.spreadsheet,
     errors: {
-      invalidDataType: "Data type of cell '%s' is not of type of '%s' of is not one of ('string', 'number' or 'date'). Cell value: '%s'"
+      invalidDataType:
+        "Data type of cell '%s' is not of type of '%s' of is not one of ('string', 'number' or 'date'). Cell value: '%s'"
     },
     defaults: {
       regExpNumbers: /[0-9]/g,
@@ -70,7 +65,7 @@ export const Spreadsheet = createReactClass({
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function () {
+  getDefaultProps: function() {
     return {
       striped: false,
       bordered: false,
@@ -83,8 +78,8 @@ export const Spreadsheet = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  getInitialState: function () {
+  //@@viewOn:reactLifeCycle
+  getInitialState: function() {
     return {
       sortedCells: this._getSortedCells(),
       headerRowIndex: this._getHeaderRowIndex(),
@@ -92,8 +87,8 @@ export const Spreadsheet = createReactClass({
     };
   },
 
-  componentWillReceiveProps(nextProps){
-    if(nextProps.controlled){
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.controlled) {
       this.setState({
         sortedCells: this._getSortedCells(nextProps),
         headerRowIndex: this._getHeaderRowIndex(nextProps),
@@ -103,16 +98,16 @@ export const Spreadsheet = createReactClass({
     return this;
   },
 
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
-  _checkCellProp: function (prop, cell, coll, row) {
+  //@@viewOn:private
+  _checkCellProp: function(prop, cell, coll, row) {
     var result = undefined;
     if (cell[prop] !== undefined) {
       result = cell[prop];
@@ -130,7 +125,7 @@ export const Spreadsheet = createReactClass({
     let hasValidData = true;
     let cellsArray = [];
 
-    Object.keys(props.cells).forEach((key) => {
+    Object.keys(props.cells).forEach(key => {
       let rowIndex = this._getRowNumber(key) - 1;
       let rowArray = cellsArray[rowIndex] || [];
 
@@ -143,14 +138,18 @@ export const Spreadsheet = createReactClass({
         type: props.cells[key].type || (coll && coll.type) || (row && row.type) || null,
         format: props.cells[key].format || (coll && coll.format) || (row && row.format) || null,
         formula: props.cells[key].formula || (coll && coll.formula) || (row && row.formula) || null,
-        colorSchema: this._checkCellProp('colorSchema', props.cells[key], coll, row),
+        colorSchema: this._checkCellProp("colorSchema", props.cells[key], coll, row),
         //background: spreadSheet._checkCellProp('background', cells[key], coll, row),
-        className: props.cells[key].className ? props.cells[key].className : '' + ((coll && coll.className) ? ' ' + coll.className : '') + ((row && row.className) ? ' ' + row.className : ''),
+        className: props.cells[key].className
+          ? props.cells[key].className
+          : "" +
+            (coll && coll.className ? " " + coll.className : "") +
+            (row && row.className ? " " + row.className : "")
       };
 
       let isValid = true;
       cell.type && (isValid = this._isValidCellValueType(cell.value, cell.type));
-      !isValid && this.showError('invalidDataType', [key, cell.type, cell.value]);
+      !isValid && this.showError("invalidDataType", [key, cell.type, cell.value]);
       hasValidData && (hasValidData = isValid);
 
       rowArray.push(cell);
@@ -160,28 +159,28 @@ export const Spreadsheet = createReactClass({
     return hasValidData ? cellsArray : null;
   },
 
-  _getColumnCharacter: function (cellKey) {
-    return cellKey.replace(this.getDefault().regExpNumbers, '');
+  _getColumnCharacter: function(cellKey) {
+    return cellKey.replace(this.getDefault().regExpNumbers, "");
   },
 
-  _getRowNumber: function (cellKey) {
-    return cellKey.replace(this.getDefault().regExpChars, '');
+  _getRowNumber: function(cellKey) {
+    return cellKey.replace(this.getDefault().regExpChars, "");
   },
 
-  _isValidCellValueType: function (value, type) {
+  _isValidCellValueType: function(value, type) {
     var result = false;
     switch (type) {
-      case 'string':
-        result = typeof  value === 'string' || value === null;
+      case "string":
+        result = typeof value === "string" || value === null;
         break;
-      case 'number':
-        result = typeof value === 'number';
+      case "number":
+        result = typeof value === "number";
         break;
-      case 'date':
-        result = typeof value === 'string' && value.match(this.getDefault().regExpIsoDate);
+      case "date":
+        result = typeof value === "string" && value.match(this.getDefault().regExpIsoDate);
         break;
       default:
-        result = false
+        result = false;
     }
 
     return result;
@@ -217,7 +216,7 @@ export const Spreadsheet = createReactClass({
     return index;
   },
 
-  _getBodyRows: function () {
+  _getBodyRows: function() {
     var sortedCells = this.state.sortedCells;
     var headerRowIndex = this.state.headerRowIndex;
     var footerRowIndex = this.state.footerRowIndex;
@@ -226,9 +225,9 @@ export const Spreadsheet = createReactClass({
     var rows = [];
     var row = [];
 
-    sortedCells.forEach(function (cellsRow, i) {
-      if ((i + 1) != headerRowIndex && (i + 1) != footerRowIndex) {
-        cellsRow.forEach(function (cell, i) {
+    sortedCells.forEach(function(cellsRow, i) {
+      if (i + 1 != headerRowIndex && i + 1 != footerRowIndex) {
+        cellsRow.forEach(function(cell, i) {
           row.push(spreadSheet._getCell(cell));
         });
         rows.push(row);
@@ -239,69 +238,69 @@ export const Spreadsheet = createReactClass({
     return rows;
   },
 
-  _getHeaderRow: function () {
+  _getHeaderRow: function() {
     var sortedCells = this.state.sortedCells;
     var headerRowIndex = this.state.headerRowIndex;
     var spreadSheet = this;
 
     var row = [];
-    sortedCells[headerRowIndex - 1].forEach(function (cell) {
+    sortedCells[headerRowIndex - 1].forEach(function(cell) {
       row.push(spreadSheet._getCell(cell));
     });
 
     return row.length > 0 ? row : null;
   },
 
-  _getFooterRow: function () {
+  _getFooterRow: function() {
     var sortedCells = this.state.sortedCells;
     var footerRowIndex = this.state.footerRowIndex;
     var spreadSheet = this;
 
     var row = [];
-    sortedCells[footerRowIndex - 1].forEach(function (cell) {
+    sortedCells[footerRowIndex - 1].forEach(function(cell) {
       row.push(spreadSheet._getCell(cell));
     });
 
     return row.length > 0 ? row : null;
   },
 
-  _getCell: function (cell) {
+  _getCell: function(cell) {
     var formattedValue = cell.formula ? this._getFormulaResult(cell.formula) : cell.value;
 
-    if (cell.format && cell.type === 'date') {
+    if (cell.format && cell.type === "date") {
       formattedValue = this._formatDate(new Date(formattedValue), cell.format);
     }
 
     return {
       className: cell.className,
       content: formattedValue,
-      colorSchema: cell.colorSchema,
+      colorSchema: cell.colorSchema
       //background: cell.background
     };
   },
 
-  _getFormulaResult: function (formula) {
+  _getFormulaResult: function(formula) {
     var spreadSheet = this;
     var cellsKeys = formula.match(this.getDefault().regExpCellKey);
     var formulaResultType = spreadSheet._getFormulaResultType(cellsKeys);
 
     var result;
 
-    if (formulaResultType === 'string') {
-      cellsKeys.forEach(function (key) {
+    if (formulaResultType === "string") {
+      cellsKeys.forEach(function(key) {
         formula = formula.replace(key, spreadSheet.props.cells[key].value.toString());
       });
       result = formula;
-    } else if (formulaResultType === 'date') {
-      cellsKeys.forEach(function (key) {
+    } else if (formulaResultType === "date") {
+      cellsKeys.forEach(function(key) {
         formula = formula.replace(key, new Date(spreadSheet.props.cells[key].value).getTime());
       });
       try {
         result = new Date(eval(formula)).toISOString();
       } finally {
       }
-    } else if (formulaResultType === 'number') {
-      cellsKeys.forEach(function (key) {
+    } else if (formulaResultType === "number") {
+      cellsKeys.forEach(function(key) {
         formula = formula.replace(key, spreadSheet.props.cells[key].value);
       });
       try {
@@ -317,41 +316,41 @@ export const Spreadsheet = createReactClass({
   // if any is string -> returns string
   // if members are date or numbers -> returns date
   // if all members are number -> returns number
-  _getFormulaResultType: function (cellsKeys) {
+  _getFormulaResultType: function(cellsKeys) {
     var formulaResultType;
     var spreadSheet = this;
 
     // check all formula keys value
-    cellsKeys.forEach(function (key) {
+    cellsKeys.forEach(function(key) {
       var cellValue = spreadSheet.props.cells[key].value;
       var cellType;
 
       // for each key returns their type
-      if (typeof cellValue === 'number') {
-        cellType = 'number';
-      } else if (typeof cellValue === 'string') {
+      if (typeof cellValue === "number") {
+        cellType = "number";
+      } else if (typeof cellValue === "string") {
         if (new Date(cellValue).getTime() > 0 && cellValue.match(spreadSheet.getDefault().regExpIsoDate)) {
-          cellType = 'date';
+          cellType = "date";
         } else {
-          cellType = 'string'
+          cellType = "string";
         }
-      } else if (typeof cellValue === 'object' && cellValue === null) {
-        cellType = 'string';
+      } else if (typeof cellValue === "object" && cellValue === null) {
+        cellType = "string";
       }
 
       // for date and number must check previous formula key type
       switch (cellType) {
-        case 'string': // for string always -> string
+        case "string": // for string always -> string
           formulaResultType = cellType;
           break;
-        case 'date': // for date and number -> date
-          if (!formulaResultType || formulaResultType === 'date' || formulaResultType === 'number') {
-            formulaResultType = 'date';
+        case "date": // for date and number -> date
+          if (!formulaResultType || formulaResultType === "date" || formulaResultType === "number") {
+            formulaResultType = "date";
           }
           break;
-        case 'number': // for number -> number
-          if (!formulaResultType || formulaResultType === 'number') {
-            formulaResultType = 'number';
+        case "number": // for number -> number
+          if (!formulaResultType || formulaResultType === "number") {
+            formulaResultType = "number";
           }
           break;
         default:
@@ -362,29 +361,32 @@ export const Spreadsheet = createReactClass({
     return formulaResultType;
   },
 
-  _formatDate: function (date, format) {
+  _formatDate: function(date, format) {
     var config = {
-      'M+': date.getMonth() + 1, //month
-      'd+': date.getDate(),    //day
-      'h+': date.getHours(),   //hour
-      'm+': date.getMinutes(), //minute
-      's+': date.getSeconds(), //second
-      'q+': Math.floor((date.getMonth() + 3) / 3),  //quarter
-      'S': date.getMilliseconds(), //millisecond
+      "M+": date.getMonth() + 1, //month
+      "d+": date.getDate(), //day
+      "h+": date.getHours(), //hour
+      "m+": date.getMinutes(), //minute
+      "s+": date.getSeconds(), //second
+      "q+": Math.floor((date.getMonth() + 3) / 3), //quarter
+      S: date.getMilliseconds() //millisecond
     };
 
     if (this.getDefault().regExpY.test(format)) {
-      format = format.replace(RegExp.$1, (date.getFullYear() + '').substr(4 - RegExp.$1.length));
+      format = format.replace(RegExp.$1, (date.getFullYear() + "").substr(4 - RegExp.$1.length));
     }
     for (var k in config) {
-      if (new RegExp('(' + k + ')').test(format)) {
-        format = format.replace(RegExp.$1, RegExp.$1.length === 1 ? config[k] : ('00' + config[k]).substr(('' + config[k]).length));
+      if (new RegExp("(" + k + ")").test(format)) {
+        format = format.replace(
+          RegExp.$1,
+          RegExp.$1.length === 1 ? config[k] : ("00" + config[k]).substr(("" + config[k]).length)
+        );
       }
     }
     return format;
   },
 
-  _getMainProps: function () {
+  _getMainProps: function() {
     var mainProps = this.getMainPropsToPass([
       "UU5.Common.BaseMixin",
       "UU5.Common.ElementaryMixin",
@@ -405,16 +407,16 @@ export const Spreadsheet = createReactClass({
     return mainProps;
   },
 
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
-  render: function () {
+  render: function() {
     var result;
 
     if (this.state.sortedCells && this.props.cells) {
       result = <DataTable {...this._getMainProps()} />;
     } else {
-      result = <UU5.Common.Error content={this.getLsiComponent('invalidDataLabel')} />
+      result = <UU5.Common.Error content={this.getLsiComponent("invalidDataLabel")} />;
     }
 
     return result;

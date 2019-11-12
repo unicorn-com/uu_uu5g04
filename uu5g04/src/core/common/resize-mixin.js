@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -42,7 +42,7 @@ export const ResizeMixin = {
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     // initialize
     this.registerMixin("UU5.Common.ResizeMixin");
@@ -64,7 +64,7 @@ export const ResizeMixin = {
   componentWillUnmount() {
     this._resizeMixinInterval && Environment.TimeManager.clearInterval(this._resizeMixinInterval);
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   hasUU5CommonResizeMixin() {
@@ -82,10 +82,10 @@ export const ResizeMixin = {
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _startResize() {
     this._resizeWidth = 0;
     this._resizeHeight = 0;
@@ -105,7 +105,6 @@ export const ResizeMixin = {
             this.onResizeEnd_(oldWidth, newHeight);
           }
         }
-
       } else {
         this._resizeWidth = newWidth;
         this._resizeHeight = newHeight;
@@ -137,7 +136,7 @@ export const ResizeMixin = {
 
     return Math.max(interval, this.getDefault("minResizeInterval", "UU5.Common.ResizeMixin"));
   }
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 };
 
 export default ResizeMixin;

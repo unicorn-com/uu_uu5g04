@@ -11,15 +11,16 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import createReactClass from "create-react-class";
+//@@viewOff:imports
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyDateTimeComponent = createReactClass({
-
   getInitialState: () => {
     return {
       isCalled: false
@@ -28,13 +29,11 @@ const MyDateTimeComponent = createReactClass({
 
   onChangeAlert(event) {
     alert("onChange Alert in dateTimeComponent");
-    this.setState({isCalled: true})
+    this.setState({ isCalled: true });
   },
 
   render() {
-    return (
-      <UU5.Bricks.DateTime id={"uuID"} onChange={this.onChangeAlert}/>
-    );
+    return <UU5.Bricks.DateTime id={"uuID"} onChange={this.onChangeAlert} />;
   }
 });
 
@@ -96,12 +95,10 @@ describe(`UU5.Bricks.DateTime`, () => {
 
   //Separately test value.
   it(`UU5.Bricks.DateTime - props value`, () => {
-    const wrapper = shallow(
-      <UU5.Bricks.DateTime id={"uuID"} value={"2018-3-1 21:29:51"}/>
-    );
+    const wrapper = shallow(<UU5.Bricks.DateTime id={"uuID"} value={"2018-3-1 21:29:51"} />);
     expect(wrapper.instance().props.value).toMatch(/2018-3-1 21:29:51/);
     expect(wrapper).toMatchSnapshot();
-    wrapper.setProps({value: '2019-3-1 21:29:51'});
+    wrapper.setProps({ value: "2019-3-1 21:29:51" });
     wrapper.update();
     expect(wrapper.instance().props.value).toMatch(/2019-3-1 21:29:51/);
     expect(wrapper).toMatchSnapshot();
@@ -119,18 +116,14 @@ describe(`UU5.Bricks.DateTime`, () => {
 });
 
 describe(`UU5.Bricks.DateTime props function`, () => {
-
-  it('onClose() - window.alert.onClose()', () => {
+  it("onClose() - window.alert.onClose()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(
-      <MyDateTimeComponent/>
-    );
+    const wrapper = shallow(<MyDateTimeComponent />);
     expect(wrapper.state().isCalled).toBeFalsy();
-    wrapper.simulate('change');
+    wrapper.simulate("change");
     expect(window.alert).toBeCalled();
-    expect(window.alert).toHaveBeenCalledWith('onChange Alert in dateTimeComponent');
+    expect(window.alert).toHaveBeenCalledWith("onChange Alert in dateTimeComponent");
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onChange Alert in dateTimeComponent");
   });
-
 });

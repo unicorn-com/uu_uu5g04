@@ -1,28 +1,30 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
 import ns from "./common-ns.js";
-import PropTypes from 'prop-types';
-import BaseMixin from './base-mixin.js';
-import ElementaryMixin from './elementary-mixin.js';
-import Tools from './tools.js';
-import Environment from '../environment/environment.js';
+import PropTypes from "prop-types";
+import BaseMixin from "./base-mixin.js";
+import ElementaryMixin from "./elementary-mixin.js";
+import Tools from "./tools.js";
+import Environment from "../environment/environment.js";
 import PureRenderMixin from "./pure-render-mixin.js";
 import { withTextCorrectorContext } from "./context.js";
 
-import './text-corrector.less';
+import "./text-corrector.less";
+//@@viewOff:imports
 
 export const TextCorrectorContextConsumer = withTextCorrectorContext(props => {
   if (props.checkGrammar || props.checkHighlight || props.checkSpaces || Environment.textCorrector) {
@@ -44,11 +46,7 @@ TextCorrectorContextConsumer.isStateless = true;
 
 export const TextCorrectorComponent = createReactClass({
   //@@viewOn:mixins
-  mixins: [
-    BaseMixin,
-    ElementaryMixin,
-    PureRenderMixin
-  ],
+  mixins: [BaseMixin, ElementaryMixin, PureRenderMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -78,7 +76,7 @@ export const TextCorrectorComponent = createReactClass({
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      text: '',
+      text: "",
       language: null,
       checkSpaces: false,
       checkGrammar: false,
@@ -87,7 +85,7 @@ export const TextCorrectorComponent = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
       text: this._correctSpaces(this.props, this.props.text)
@@ -106,15 +104,15 @@ export const TextCorrectorComponent = createReactClass({
   componentWillUnmount() {
     this._switchHighlight(false);
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _correctSpaces(props, text) {
     let newText = text;
     if (props.checkSpaces) {
@@ -128,7 +126,7 @@ export const TextCorrectorComponent = createReactClass({
 
     let text = /[A-Za-z]+/i.exec(word);
     if (text) {
-      result = text[0].toLowerCase() !== 'vidra';
+      result = text[0].toLowerCase() !== "vidra";
     }
 
     return result;
@@ -142,15 +140,15 @@ export const TextCorrectorComponent = createReactClass({
     let newTextChildren = [];
     let spaceTmp = [];
 
-    let spaceSplitter = text.split(' ');
-    spaceSplitter.forEach((word) => {
+    let spaceSplitter = text.split(" ");
+    spaceSplitter.forEach(word => {
       if (word.indexOf(Environment.hardSpace.nbSpace) > -1) {
         let nbspSplitter = word.split(Environment.hardSpace.nbSpace);
         let nbspTmp = [];
 
-        nbspSplitter.forEach((word) => {
+        nbspSplitter.forEach(word => {
           let newWord = this._checkWord(props, word, searchedTexts);
-          if (typeof newWord === 'string') {
+          if (typeof newWord === "string") {
             nbspTmp.push(newWord);
           } else {
             if (nbspTmp.length) {
@@ -159,11 +157,14 @@ export const TextCorrectorComponent = createReactClass({
             }
 
             if (spaceTmp.length) {
-              newTextChildren.push((newTextChildren.length ? ' ' : '') + spaceTmp.join(' ') + Environment.hardSpace.nbSpace);
+              newTextChildren.push(
+                (newTextChildren.length ? " " : "") + spaceTmp.join(" ") + Environment.hardSpace.nbSpace
+              );
               spaceTmp = [];
             }
 
-            typeof newTextChildren[newTextChildren.length - 1] !== 'string' && newTextChildren.push(Environment.hardSpace.nbSpace);
+            typeof newTextChildren[newTextChildren.length - 1] !== "string" &&
+              newTextChildren.push(Environment.hardSpace.nbSpace);
             newTextChildren.push(newWord);
           }
         });
@@ -175,21 +176,21 @@ export const TextCorrectorComponent = createReactClass({
       } else {
         let newWord = this._checkWord(props, word, searchedTexts);
 
-        if (typeof newWord === 'string') {
+        if (typeof newWord === "string") {
           spaceTmp.push(newWord);
         } else {
           if (spaceTmp.length) {
-            newTextChildren.push((newTextChildren.length ? ' ' : '') + spaceTmp.join(' ') + ' ');
+            newTextChildren.push((newTextChildren.length ? " " : "") + spaceTmp.join(" ") + " ");
             spaceTmp = [];
           }
-          typeof newTextChildren[newTextChildren.length - 1] === 'object' && newTextChildren.push(' ');
+          typeof newTextChildren[newTextChildren.length - 1] === "object" && newTextChildren.push(" ");
           newTextChildren.push(newWord);
         }
       }
     });
 
     if (spaceTmp.length) {
-      newTextChildren.push((newTextChildren.length ? ' ' : '') + spaceTmp.join(' '));
+      newTextChildren.push((newTextChildren.length ? " " : "") + spaceTmp.join(" "));
       spaceTmp = [];
     }
 
@@ -224,7 +225,7 @@ export const TextCorrectorComponent = createReactClass({
       }
     }
 
-    if ((props.checkGrammar) && !this._isValidWord(word)) {
+    if (props.checkGrammar && !this._isValidWord(word)) {
       result = (
         <span className={this.getClassName().error}>
           {Array.isArray(result) ? React.Children.toArray(result) : result}
@@ -237,7 +238,7 @@ export const TextCorrectorComponent = createReactClass({
 
   _correctText(props, text, searchedTexts, isDidMount) {
     let newText = text;
-    if (!isDidMount && (props.checkSpaces)) {
+    if (!isDidMount && props.checkSpaces) {
       newText = this._correctSpaces(props, text);
     }
 
@@ -246,7 +247,7 @@ export const TextCorrectorComponent = createReactClass({
     }
 
     if (!isDidMount || text !== newText) {
-      this.setState({text: newText, searchedTexts: searchedTexts});
+      this.setState({ text: newText, searchedTexts: searchedTexts });
     }
 
     return this;
@@ -288,7 +289,7 @@ export const TextCorrectorComponent = createReactClass({
 
     return this;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {

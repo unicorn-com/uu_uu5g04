@@ -11,62 +11,58 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import createReactClass from "create-react-class";
 import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-forms";
+//@@viewOff:imports
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyAllowTagsComponents = createReactClass({
   mixins: [UU5.Common.BaseMixin],
-  statics: {tagName: "UU5.Example.MyCompButton", classNames: {main: "mytr"}},
+  statics: { tagName: "UU5.Example.MyCompButton", classNames: { main: "mytr" } },
   render() {
-    return (
-      <UU5.Example.MyCompButton {...this.getMainPropsToPass()}/>
-    );
+    return <UU5.Example.MyCompButton {...this.getMainPropsToPass()} />;
   }
 });
 
 const MixinPropsFunction = createReactClass({
-
-  mixins: [
-    UU5.Common.BaseMixin,
-  ],
+  mixins: [UU5.Common.BaseMixin],
 
   getInitialState: () => {
     return {
       isCalled: false,
-      value: '',
-      message: '',
-      feedback: 'initial'
+      value: "",
+      message: "",
+      feedback: "initial"
     };
   },
   onChangeHandler(event) {
     alert("onChange event has been called.");
-    this.setState({isCalled: true});
-    this.setState({value: event.target.value})
-    this.setState({message: 'Is valid.'})
-    this.setState({feedback: 'success'})
+    this.setState({ isCalled: true });
+    this.setState({ value: event.target.value });
+    this.setState({ message: "Is valid." });
+    this.setState({ feedback: "success" });
   },
 
   onValidateHandler(event) {
     alert("onValidate event has been called.");
-    this.setState({isCalled: true});
-    this.setState({value: event.target.value})
-    this.setState({message: 'Is valid.'})
-    this.setState({feedback: 'success'})
+    this.setState({ isCalled: true });
+    this.setState({ value: event.target.value });
+    this.setState({ message: "Is valid." });
+    this.setState({ feedback: "success" });
   },
 
   onChangeFeedbackHandler(event) {
     alert("onChangeFeedback event has been called.");
-    this.setState({isCalled: true});
-    this.setState({value: event.target.value})
-    this.setState({message: 'Is valid.'})
-    this.setState({feedback: 'success'})
+    this.setState({ isCalled: true });
+    this.setState({ value: event.target.value });
+    this.setState({ message: "Is valid." });
+    this.setState({ feedback: "success" });
   },
-
 
   render() {
     return (
@@ -100,7 +96,7 @@ const CONFIG = {
       values: ["item_1", "item_2", "item_3"]
     },
     multiple: {
-      values: [true,false]
+      values: [true, false]
     },
     selectAllEnabled: {
       values: [true, false]
@@ -108,12 +104,15 @@ const CONFIG = {
     allowTags: {
       values: [["UU5.Example.MyCompButton"]]
     },
-    disableBackdrop:{
+    disableBackdrop: {
       values: [true, false]
     }
   },
   requiredProps: {
-    children: [<UU5.Forms.Select.Option key="item_1" value="item_1" id="idChild_1" />, <UU5.Forms.Select.Option key="item_2" value="item_2" id="idChild_2" />]
+    children: [
+      <UU5.Forms.Select.Option key="item_1" value="item_1" id="idChild_1" />,
+      <UU5.Forms.Select.Option key="item_2" value="item_2" id="idChild_2" />
+    ]
   },
   opt: {
     shallowOpt: {
@@ -127,33 +126,27 @@ describe(`UU5.Forms.Select props`, () => {
 
   it(`UU5.Forms.Select Component from allow tags is used in example`, () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"uuID"}
-        allowTags={["UU5.Example.MyCompButton"]}
-      >
-        <MyAllowTagsComponents id={"allowID"} content={"Allow content"}/>
-        <UU5.Forms.Select.Option id={"uuItem"} value="Info"/>
+      <UU5.Forms.Select id={"uuID"} allowTags={["UU5.Example.MyCompButton"]}>
+        <MyAllowTagsComponents id={"allowID"} content={"Allow content"} />
+        <UU5.Forms.Select.Option id={"uuItem"} value="Info" />
       </UU5.Forms.Select>
     );
     expect(wrapper).toMatchSnapshot();
   });
-
 });
 
-
 describe(`UU5.Forms.Select props function -> InputMixin`, () => {
-
-  it('onChange()', () => {
+  it("onChange()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<MixinPropsFunction/>);
+    const wrapper = shallow(<MixinPropsFunction />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.isCalled).toBeFalsy();
     expect(wrapper.instance().state.value).toEqual("");
     expect(wrapper.instance().state.message).toEqual("");
     expect(wrapper.instance().state.feedback).toMatch(/initial/);
-    wrapper.simulate('change', {target: {value: "Testing react in jest"}});
+    wrapper.simulate("change", { target: { value: "Testing react in jest" } });
     expect(window.alert).toBeCalled();
-    expect(window.alert).toHaveBeenCalledWith('onChange event has been called.');
+    expect(window.alert).toHaveBeenCalledWith("onChange event has been called.");
     expect(window.alert.mock.calls[0][0]).toEqual("onChange event has been called.");
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(wrapper.instance().state.value).toEqual("Testing react in jest");
@@ -173,17 +166,17 @@ describe(`UU5.Forms.Select props function -> InputMixin`, () => {
     expect(callback).toBeCalled();
   });
 
-  it('onValidate()', () => {
+  it("onValidate()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<MixinPropsFunction/>);
+    const wrapper = shallow(<MixinPropsFunction />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.isCalled).toBeFalsy();
     expect(wrapper.instance().state.value).toEqual("");
     expect(wrapper.instance().state.message).toEqual("");
     expect(wrapper.instance().state.feedback).toMatch(/initial/);
-    wrapper.simulate('validate', {target: {value: "Testing react in jest"}});
+    wrapper.simulate("validate", { target: { value: "Testing react in jest" } });
     expect(window.alert).toBeCalled();
-    expect(window.alert).toHaveBeenCalledWith('onValidate event has been called.');
+    expect(window.alert).toHaveBeenCalledWith("onValidate event has been called.");
     expect(window.alert.mock.calls[0][0]).toEqual("onValidate event has been called.");
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(wrapper.instance().state.value).toEqual("Testing react in jest");
@@ -192,17 +185,17 @@ describe(`UU5.Forms.Select props function -> InputMixin`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('onChangeFeedback()', () => {
+  it("onChangeFeedback()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<MixinPropsFunction/>);
+    const wrapper = shallow(<MixinPropsFunction />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.isCalled).toBeFalsy();
     expect(wrapper.instance().state.value).toEqual("");
     expect(wrapper.instance().state.message).toEqual("");
     expect(wrapper.instance().state.feedback).toMatch(/initial/);
-    wrapper.simulate('changeFeedback', {target: {value: "Testing react in jest"}});
+    wrapper.simulate("changeFeedback", { target: { value: "Testing react in jest" } });
     expect(window.alert).toBeCalled();
-    expect(window.alert).toHaveBeenCalledWith('onChangeFeedback event has been called.');
+    expect(window.alert).toHaveBeenCalledWith("onChangeFeedback event has been called.");
     expect(window.alert.mock.calls[0][0]).toEqual("onChangeFeedback event has been called.");
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(wrapper.instance().state.value).toEqual("Testing react in jest");
@@ -210,18 +203,13 @@ describe(`UU5.Forms.Select props function -> InputMixin`, () => {
     expect(wrapper.instance().state.feedback).toEqual("success");
     expect(wrapper).toMatchSnapshot();
   });
-
 });
 
-
 describe(`UU5.Forms.Select default props`, () => {
-
   it(`UU5.Forms.Select check default props`, () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"uuID"}
-      >
-        <UU5.Forms.Select.Option value="Info"/>
+      <UU5.Forms.Select id={"uuID"}>
+        <UU5.Forms.Select.Option value="Info" />
       </UU5.Forms.Select>
     );
     expect(wrapper).toMatchSnapshot();
@@ -233,13 +221,10 @@ describe(`UU5.Forms.Select default props`, () => {
 });
 
 describe(`UU5.Forms.Select check default default props from Mixins`, () => {
-
   it(`UU5.Forms.ChoiceMixin`, () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-       id={"uuID"}
-      >
-        <UU5.Forms.Select.Option value="Info"/>
+      <UU5.Forms.Select id={"uuID"}>
+        <UU5.Forms.Select.Option value="Info" />
       </UU5.Forms.Select>
     );
     expect(wrapper.instance().props.placeholder).toBe(null);
@@ -252,10 +237,8 @@ describe(`UU5.Forms.Select check default default props from Mixins`, () => {
 
   it(`UU5.Forms.InputMixin`, () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"uuID"}
-      >
-        <UU5.Forms.Select.Option value="Info"/>
+      <UU5.Forms.Select id={"uuID"}>
+        <UU5.Forms.Select.Option value="Info" />
       </UU5.Forms.Select>
     );
     expect(wrapper.instance().props.inputAttrs).toBe(null);
@@ -273,10 +256,8 @@ describe(`UU5.Forms.Select check default default props from Mixins`, () => {
 
   it(`UU5.Common.Base,Elementary,Pure,Color,Lsi`, () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"uuID"}
-      >
-        <UU5.Forms.Select.Option value="Info"/>
+      <UU5.Forms.Select id={"uuID"}>
+        <UU5.Forms.Select.Option value="Info" />
       </UU5.Forms.Select>
     );
     //Check UU5.Common.Elementary.Mixin default props
@@ -301,10 +282,8 @@ describe(`UU5.Forms.Select check default default props from Mixins`, () => {
 
   it(`UU5.Common.ContentMixin`, () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"uuID"}
-      >
-        <UU5.Forms.Select.Option value="Info"/>
+      <UU5.Forms.Select id={"uuID"}>
+        <UU5.Forms.Select.Option value="Info" />
       </UU5.Forms.Select>
     );
     expect(wrapper.instance().props.content).toBe(null);
@@ -315,6 +294,4 @@ describe(`UU5.Forms.Select check default default props from Mixins`, () => {
     expect(wrapper.instance().props.textCorrector).toBeFalsy();
     expect(wrapper.instance().props.dynamic).toBeFalsy();
   });
-
-
 });

@@ -1,31 +1,28 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import SessionMixin from './session-mixin.js';
-import Error from './error.js';
-import Environment from '../environment/environment.js';
+import React from "react";
+import SessionMixin from "./session-mixin.js";
+import Error from "./error.js";
+import Environment from "../environment/environment.js";
 
-const AUTH = 'authenticated';
-const NOT_AUTH = 'notAuthenticated';
-const PENDING = 'pending';
+const AUTH = "authenticated";
+const NOT_AUTH = "notAuthenticated";
+const PENDING = "pending";
 
 export const IdentityMixin = {
-
   //@@viewOn:mixins
-  mixins: [
-    SessionMixin
-  ],
+  mixins: [SessionMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -34,8 +31,8 @@ export const IdentityMixin = {
       requiredMixins: ["UU5.Common.BaseMixin"],
       lsi: {
         login: {
-          cs: 'Uživatel je odhlášen...',
-          en: 'User is logged out...'
+          cs: "Uživatel je odhlášen...",
+          en: "User is logged out..."
         }
       }
     }
@@ -48,7 +45,7 @@ export const IdentityMixin = {
   //@@viewOn:getDefaultProps
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     // initialize
     this.registerMixin("UU5.Common.IdentityMixin");
@@ -75,7 +72,11 @@ export const IdentityMixin = {
         session.initPromise.then(() => {
           if (this.isRendered()) {
             this._onChangeIdentity();
-            window.UU5.Environment.EventListener.addIdentityChangeListener(session, this.getId(), this._onChangeIdentity);
+            window.UU5.Environment.EventListener.addIdentityChangeListener(
+              session,
+              this.getId(),
+              this._onChangeIdentity
+            );
             //session.addIdentityChangeListener(this._onChangeIdentity);
           }
         });
@@ -91,7 +92,7 @@ export const IdentityMixin = {
     session && window.UU5.Environment.EventListener.removeIdentityChangeListener(session, this.getId());
     //session && session.removeIdentityChangeListener(this._onChangeIdentity);
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   hasUU5CommonIdentityMixin() {
@@ -133,10 +134,14 @@ export const IdentityMixin = {
 
   changeIdentity(setStateCallback) {
     let session = this.getSession();
-    session && this.setState({
-      identity: session.getIdentity(),
-      identityFeedback: this._setAuthenticated(session)
-    }, setStateCallback);
+    session &&
+      this.setState(
+        {
+          identity: session.getIdentity(),
+          identityFeedback: this._setAuthenticated(session)
+        },
+        setStateCallback
+      );
     return this;
   },
 
@@ -154,10 +159,10 @@ export const IdentityMixin = {
           {...this.getMainPropsToPass()}
           silent={opt.silent}
           inline={opt.inline}
-          content={opt.message || this.getLsiComponent('login', "UU5.Common.IdentityMixin")}
+          content={opt.message || this.getLsiComponent("login", "UU5.Common.IdentityMixin")}
         />
       );
-    } else if (typeof getChild === 'function') {
+    } else if (typeof getChild === "function") {
       result = getChild();
     }
 
@@ -165,14 +170,14 @@ export const IdentityMixin = {
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _setAuthenticated(session) {
     let result = PENDING;
     if (session) {
-      result = session.isAuthenticated() ? AUTH : NOT_AUTH
+      result = session.isAuthenticated() ? AUTH : NOT_AUTH;
     }
 
     return result;
@@ -181,15 +186,15 @@ export const IdentityMixin = {
   _onChangeIdentity() {
     let session = this.getSession();
     if (session) {
-      if (typeof this.onChangeIdentity_ === 'function') {
+      if (typeof this.onChangeIdentity_ === "function") {
         this.onChangeIdentity_(session);
       } else {
         this.onChangeIdentityDefault(session);
       }
     }
     return this;
-  },
-  //@@viewOff:componentSpecificHelpers
+  }
+  //@@viewOff:private
 };
 
 export default IdentityMixin;

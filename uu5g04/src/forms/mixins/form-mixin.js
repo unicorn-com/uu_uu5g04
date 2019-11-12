@@ -11,8 +11,8 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import { FormContext } from "../form-context.js";
@@ -27,19 +27,22 @@ export const FormMixin = {
   statics: {
     "UU5.Forms.FormMixin": {
       classNames: {
-        form: props => "uu5-common-form" + " " + Css.css(`
+        form: props =>
+          "uu5-common-form" +
+          " " +
+          Css.css(`
           padding: ${UU5.Common.Tools.fillUnit(props.padding)};
         `)
       },
       warnings: {
-        formInForm: 'Form control %s should not be placed in other form control %s.',
-        nonRegistered: 'Form control with ID %s cannot be unregistered. Component with the ID is not registered.',
-        noName: 'Form control has not any name. It will be used its ID %s.'
+        formInForm: "Form control %s should not be placed in other form control %s.",
+        nonRegistered: "Form control with ID %s cannot be unregistered. Component with the ID is not registered.",
+        noName: "Form control has not any name. It will be used its ID %s."
       },
       errors: {
-        duplicateId: 'Duplicate id \'%s\' of a form control.'
+        duplicateId: "Duplicate id '%s' of a form control."
       },
-      lsi: () => (UU5.Environment.Lsi.Forms.formMixin)
+      lsi: () => UU5.Environment.Lsi.Forms.formMixin
     }
   },
   //@@viewOff:statics
@@ -86,7 +89,7 @@ export const FormMixin = {
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function () {
+  getDefaultProps: function() {
     return {
       values: null,
       progressIndicator: null,
@@ -110,7 +113,7 @@ export const FormMixin = {
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
       readOnly: this.props.readOnly,
@@ -130,9 +133,9 @@ export const FormMixin = {
     this.formControls = {};
     this.pendingComponents = {};
 
-    var parentForm = this.getParentByType('isForm');
+    var parentForm = this.getParentByType("isForm");
     if (parentForm) {
-      this.showWarning('formInForm', [this.getTagName(), parentForm.getTagName()], {
+      this.showWarning("formInForm", [this.getTagName(), parentForm.getTagName()], {
         mixinName: "UU5.Forms.FormMixin"
       });
     }
@@ -172,11 +175,11 @@ export const FormMixin = {
       typeof this.props.onInit === "function" && this.props.onInit({ component: this });
     }
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   setValues(values) {
-    Object.keys(values).forEach(key => values[key] === undefined ? delete values[key] : '');
+    Object.keys(values).forEach(key => (values[key] === undefined ? delete values[key] : ""));
     let formContextValue = { ...this.state.formContextValue, ...{ values } };
     this.setState({ values, formContextValue }, () => {
       this.eachFormInput(input => {
@@ -216,9 +219,9 @@ export const FormMixin = {
   isValid() {
     let result = true;
 
-    if (typeof this.isValid_ === 'function') {
+    if (typeof this.isValid_ === "function") {
       result = this.isValid_();
-    } else if (typeof this.props.onValidate === 'function') {
+    } else if (typeof this.props.onValidate === "function") {
       result = this.props.onValidate({ component: this });
     } else {
       result = this.isValidDefault();
@@ -230,8 +233,8 @@ export const FormMixin = {
   isValidDefault() {
     let result = true;
 
-    this.eachFormInput((formControl) => {
-      let newResult = typeof formControl.isValid !== 'function' || formControl.isValid();
+    this.eachFormInput(formControl => {
+      let newResult = typeof formControl.isValid !== "function" || formControl.isValid();
 
       if (result) {
         result = newResult;
@@ -249,7 +252,7 @@ export const FormMixin = {
   registerFormInput(id, formInput) {
     var registeredControl = this.formInputs[id];
     if (registeredControl) {
-      this.showError('duplicateId', id, {
+      this.showError("duplicateId", id, {
         mixinName: "UU5.Forms.FormMixin",
         context: {
           registeredFormInput: {
@@ -271,7 +274,7 @@ export const FormMixin = {
 
   unregisterFormInput(id) {
     if (!this.formInputs[id]) {
-      this.showWarning('nonRegistered', id, {
+      this.showWarning("nonRegistered", id, {
         mixinName: "UU5.Forms.FormMixin"
       });
     } else {
@@ -282,7 +285,7 @@ export const FormMixin = {
   registerFormControls(id, formControl) {
     var registeredControl = this.formControls[id];
     if (registeredControl) {
-      this.showError('duplicateId', id, {
+      this.showError("duplicateId", id, {
         mixinName: "UU5.Forms.FormMixin",
         context: {
           registeredFormControl: {
@@ -304,7 +307,7 @@ export const FormMixin = {
 
   unregisterFormControls(id) {
     if (!this.formControls[id]) {
-      this.showWarning('nonRegistered', id, {
+      this.showWarning("nonRegistered", id, {
         mixinName: "UU5.Forms.FormMixin"
       });
     } else {
@@ -314,7 +317,7 @@ export const FormMixin = {
 
   getValues() {
     var values = {};
-    this._eachFormInputWithName(function (name, input) {
+    this._eachFormInputWithName(function(name, input) {
       values[name] = input.getValue();
     });
     return values;
@@ -322,7 +325,7 @@ export const FormMixin = {
 
   getInputs() {
     var inputs = {};
-    this._eachFormInputWithName(function (name, input) {
+    this._eachFormInputWithName(function(name, input) {
       inputs[name] = input;
     });
     return inputs;
@@ -334,7 +337,7 @@ export const FormMixin = {
     this._eachFormInputWithName((k, input) => {
       var compare = k === name;
       compare && (result = input);
-      return !compare
+      return !compare;
     });
 
     return result;
@@ -353,7 +356,7 @@ export const FormMixin = {
             child.forEach((child2, j) => {
               if (typeof child2 === "object") {
                 let newProps = UU5.Common.Tools.merge({}, child2.props);
-                newProps.key = newProps.key || (i + "-" + j);
+                newProps.key = newProps.key || i + "-" + j;
                 newProps.parent = newProps.parent || this;
                 children.push(React.cloneElement(child2, newProps));
               } else {
@@ -375,16 +378,23 @@ export const FormMixin = {
     }
 
     let attrs = this._getMainAttrs();
-    attrs.className = UU5.Common.Tools.joinClassNames(attrs.className, this.getClassName("form", "UU5.Forms.FormMixin"));
+    attrs.className = UU5.Common.Tools.joinClassNames(
+      attrs.className,
+      this.getClassName("form", "UU5.Forms.FormMixin")
+    );
 
     // <button type="submit"> is required so that "submit" event is launched by browser on Enter key
     return (
       <form {...attrs}>
-        <UU5.Bricks.AlertBus ref_={(alertBus) => this._alertBus = alertBus} closeTimer={null} forceRender={!this.props.usePageAlertBus} />
+        <UU5.Bricks.AlertBus
+          ref_={alertBus => (this._alertBus = alertBus)}
+          closeTimer={null}
+          forceRender={!this.props.usePageAlertBus}
+        />
         <FormContext.Provider value={this.state.formContextValue}>{children}</FormContext.Provider>
-        <button type="submit" style={{display: "none"}} />
+        <button type="submit" style={{ display: "none" }} />
       </form>
-    )
+    );
   },
 
   getAlertBus() {
@@ -393,7 +403,7 @@ export const FormMixin = {
 
   save(values) {
     values = values || this.getValues();
-    if (typeof this.save_ === 'function') {
+    if (typeof this.save_ === "function") {
       this.save_(values);
     } else {
       this.saveDefault(values);
@@ -406,8 +416,8 @@ export const FormMixin = {
     values = values || this.getValues();
 
     if (this.isValid()) {
-      if (typeof this.props.onSave === 'function') {
-        if (typeof this.props.onSaveDone === 'function') {
+      if (typeof this.props.onSave === "function") {
+        if (typeof this.props.onSaveDone === "function") {
           this.setPending(() => this.props.onSave({ component: this, values: values }));
         } else {
           this.props.onSave({ component: this, values: values });
@@ -421,7 +431,7 @@ export const FormMixin = {
   },
 
   saveDone(dtoOut) {
-    if (typeof this.saveDone_ === 'function') {
+    if (typeof this.saveDone_ === "function") {
       this.saveDone_(dtoOut);
     } else {
       this.saveDoneDefault(dtoOut);
@@ -431,17 +441,19 @@ export const FormMixin = {
   },
 
   saveDoneDefault(dtoOut) {
-    if (typeof this.props.onSaveDone === 'function') {
-      this.setReady(() => this.props.onSaveDone({
-        component: this,
-        dtoOut: dtoOut
-      }));
+    if (typeof this.props.onSaveDone === "function") {
+      this.setReady(() =>
+        this.props.onSaveDone({
+          component: this,
+          dtoOut: dtoOut
+        })
+      );
     }
     return this;
   },
 
   saveFail(dtoOut) {
-    if (typeof this.saveFail_ === 'function') {
+    if (typeof this.saveFail_ === "function") {
       this.saveFail_(dtoOut);
     } else {
       this.saveFailDefault(dtoOut);
@@ -450,11 +462,13 @@ export const FormMixin = {
   },
 
   saveFailDefault(dtoOut) {
-    if (typeof this.props.onSaveFail === 'function') {
-      this.setReady(() => this.props.onSaveFail({
-        component: this,
-        dtoOut: dtoOut
-      }));
+    if (typeof this.props.onSaveFail === "function") {
+      this.setReady(() =>
+        this.props.onSaveFail({
+          component: this,
+          dtoOut: dtoOut
+        })
+      );
     }
     return this;
   },
@@ -463,22 +477,27 @@ export const FormMixin = {
     let result = false;
     result = this.isValid();
     let alertBus = this.getAlertBus();
-    alertBus && alertBus.setAlert(result ? {
-      colorSchema: 'success',
-      closeTimer: 1000,
-      content: this.getLsiComponent('validContent', "UU5.Forms.FormMixin")
-    } : {
-      colorSchema: 'danger',
-      closeTimer: 5000,
-      content: this.getLsiComponent('invalidContent', "UU5.Forms.FormMixin")
-    });
+    alertBus &&
+      alertBus.setAlert(
+        result
+          ? {
+              colorSchema: "success",
+              closeTimer: 1000,
+              content: this.getLsiComponent("validContent", "UU5.Forms.FormMixin")
+            }
+          : {
+              colorSchema: "danger",
+              closeTimer: 5000,
+              content: this.getLsiComponent("invalidContent", "UU5.Forms.FormMixin")
+            }
+      );
     return this;
   },
 
   setPending(setStateCallback) {
     let inputs = this.getInputs();
     this.pendingComponents = {};
-    Object.keys(inputs).forEach((key) => {
+    Object.keys(inputs).forEach(key => {
       let component = inputs[key];
       if (!component.isDisabled()) {
         this.pendingComponents[component.getId()] = component;
@@ -504,7 +523,7 @@ export const FormMixin = {
 
   setReady(setStateCallback) {
     let inputs = this.getInputs();
-    Object.keys(inputs).forEach((key) => {
+    Object.keys(inputs).forEach(key => {
       let component = inputs[key];
       if (this.pendingComponents[component.getId()]) {
         delete this.pendingComponents[component.getId()];
@@ -524,9 +543,9 @@ export const FormMixin = {
   },
 
   reset(setStateCallback) {
-    if (typeof this.reset_ === 'function') {
+    if (typeof this.reset_ === "function") {
       this.reset_(setStateCallback);
-    } else if (typeof this.props.onReset === 'function') {
+    } else if (typeof this.props.onReset === "function") {
       this.props.onReset({ component: this });
     } else {
       this.resetDefault(setStateCallback);
@@ -537,33 +556,34 @@ export const FormMixin = {
   resetDefault(setStateCallback) {
     let counter = 0;
     for (let id in this.formInputs) {
-      typeof this.formInputs[id].reset === 'function' && counter++;
+      typeof this.formInputs[id].reset === "function" && counter++;
     }
 
     let newSetStateCallback = UU5.Common.Tools.buildCounterCallback(setStateCallback, counter);
 
     for (let id in this.formInputs) {
-      typeof this.formInputs[id].reset === 'function' && this.formInputs[id].reset(newSetStateCallback);
+      typeof this.formInputs[id].reset === "function" && this.formInputs[id].reset(newSetStateCallback);
     }
 
     return this;
   },
 
   cancel() {
-    if (typeof this.cancel_ === 'function') {
+    if (typeof this.cancel_ === "function") {
       this.cancel_();
-    } else if (typeof this.props.onCancel === 'function') {
+    } else if (typeof this.props.onCancel === "function") {
       this.props.onCancel({ component: this });
     }
     return this;
   },
 
   getSaveFormEvents(func) {
-    const CTRL_KEY = 17, S_KEY = 83;
+    const CTRL_KEY = 17,
+      S_KEY = 83;
     let down = false;
 
     return {
-      onKeyDown: (e) => {
+      onKeyDown: e => {
         let key = e.which || e.keyCode;
         let isMetaKey = UU5.Common.Tools.isMac() ? e.metaKey : null;
         let isCtrlPressed = e.ctrlKey || isMetaKey ? true : key === CTRL_KEY;
@@ -579,12 +599,12 @@ export const FormMixin = {
 
             if (!down) {
               down = true;
-              func({ component: this, event: e })
+              func({ component: this, event: e });
             }
           }
         }
       },
-      onKeyUp: (e) => {
+      onKeyUp: e => {
         let key = e.which || e.keyCode;
         let isMetaKey = UU5.Common.Tools.isMac() ? e.metaKey : null;
         let isCtrlPressed = e.ctrlKey || isMetaKey ? true : key === CTRL_KEY;
@@ -615,16 +635,16 @@ export const FormMixin = {
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _eachFormInputWithName(func) {
     var form = this;
-    this.eachFormInput((input) => {
+    this.eachFormInput(input => {
       var name = input.getName();
       if (!name) {
-        form.showWarning('noName', input.getId(), {
+        form.showWarning("noName", input.getId(), {
           mixinName: "UU5.Forms.FormMixin",
           context: {
             input: {
@@ -660,19 +680,23 @@ export const FormMixin = {
       let saveEvents = this.getSaveFormEvents(this.props.onSaveByKey);
       Object.keys(saveEvents).forEach(key => {
         let fce = mainAttrs[key];
-        mainAttrs[key] = (e) => {
+        mainAttrs[key] = e => {
           typeof fce === "function" && fce(e);
           saveEvents[key](e);
-        }
+        };
       });
     }
 
     if (typeof this.props.spacing === "number") {
-      mainAttrs.className += " " + UU5.Common.Css.css`
+      mainAttrs.className +=
+        " " +
+        UU5.Common.Css.css`
         .uu5-forms-input:not(.uu5-forms-input-inner) {
           margin-top: ${this.props.spacing + "px"};
 
-          ${this.props.spacing <= 8 ? `& .uu5-forms-checkbox {
+          ${
+            this.props.spacing <= 8
+              ? `& .uu5-forms-checkbox {
             margin-bottom: 0px;
           }
 
@@ -683,14 +707,16 @@ export const FormMixin = {
 
           & .uu5-forms-label {
             padding-bottom: 0px;
-          }` : null}
+          }`
+              : null
+          }
         }
       `;
     }
 
     return mainAttrs;
-  },
-  //@@viewOff:componentSpecificHelpers
+  }
+  //@@viewOff:private
 
   //@@viewOn:render
   //@@viewOff:render

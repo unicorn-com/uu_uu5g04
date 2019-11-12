@@ -1,33 +1,29 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
-import './switch.less';
+import "./switch.less";
+//@@viewOff:imports
 
 export const Switch = createReactClass({
-
   //@@viewOn:mixins
-  mixins: [
-    UU5.Common.BaseMixin,
-    UU5.Common.PureRenderMixin,
-    UU5.Common.ElementaryMixin,
-    UU5.Common.ColorSchemaMixin
-  ],
+  mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, UU5.Common.ColorSchemaMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -52,7 +48,7 @@ export const Switch = createReactClass({
   //@@viewOn:propTypes
   propTypes: {
     switchedOn: PropTypes.bool,
-    size: PropTypes.oneOf(['s', 'm', 'l', 'xl']),
+    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
     offIcon: PropTypes.string,
     onIcon: PropTypes.string,
     onChange: PropTypes.func,
@@ -65,7 +61,7 @@ export const Switch = createReactClass({
   getDefaultProps() {
     return {
       switchedOn: false,
-      size: 'm',
+      size: "m",
       offIcon: this.defaults.offIcon,
       onIcon: this.defaults.onIcon,
       onChange: null,
@@ -75,13 +71,13 @@ export const Switch = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
       switchedOn: this.props.switchedOn
-    }
+    };
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
   componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
       this.setState({ switchedOn: nextProps.switchedOn });
@@ -120,13 +116,13 @@ export const Switch = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _getMainPropsToPass() {
     let props = this.getMainPropsToPass();
-    props.onClick = (e) => {
+    props.onClick = e => {
       this._onChange(e);
     };
     props.className += " " + (this.state.switchedOn ? this.getClassName("on") : this.getClassName("off"));
@@ -147,10 +143,12 @@ export const Switch = createReactClass({
     let opt = { switchedOn: !this.state.switchedOn, event: e, component: this };
     if (!this.isDisabled()) {
       e.stopPropagation();
-      if (typeof this.props.onChange === 'function') {
+      if (typeof this.props.onChange === "function") {
         this.props.onChange(opt);
-      } else if (typeof this.props.onClick === 'function') {
-        UU5.Common.Tools.warning("Property 'onClick' of the UU5.Bricks.Switch component is deprecated! Use 'onChange' instead.");
+      } else if (typeof this.props.onClick === "function") {
+        UU5.Common.Tools.warning(
+          "Property 'onClick' of the UU5.Bricks.Switch component is deprecated! Use 'onChange' instead."
+        );
         this.props.onClick(this, e);
       } else {
         this.onChangeDefault(opt);
@@ -164,7 +162,10 @@ export const Switch = createReactClass({
     let xPos = this.isSwitchedOn() ? "200" : "100";
     let holeId = this.getId() + "-hole";
     return (
-      <svg style={{ width: "100%", height: "100%", position: "absolute", left: "0px", top: "0px" }} viewBox="0 0 300 200">
+      <svg
+        style={{ width: "100%", height: "100%", position: "absolute", left: "0px", top: "0px" }}
+        viewBox="0 0 300 200"
+      >
         <defs>
           <mask id={holeId}>
             <rect width="100%" height="100%" fill="white" />
@@ -196,21 +197,51 @@ export const Switch = createReactClass({
           <svg width="24" height="24" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <defs key="defs">
               <linearGradient key="gradient1" id={"gradient1_" + this.getId()} x1="0" y1="0" x2="1" y2="1">
-                <stop key="stop1" offset="0%" stopColor="rgba(0, 0, 0, 0)"/>
-                <stop key="stop2" offset="100%" stopColor="rgba(0, 0, 0, 0.33)"/>
+                <stop key="stop1" offset="0%" stopColor="rgba(0, 0, 0, 0)" />
+                <stop key="stop2" offset="100%" stopColor="rgba(0, 0, 0, 0.33)" />
               </linearGradient>
               <linearGradient key="gradient2" id={"gradient2_" + this.getId()} x1="1" y1="0" x2="0" y2="1">
-                <stop key="stop1" offset="0%" stopColor="rgba(0, 0, 0, 0.33)"/>
-                <stop key="stop2" offset="100%" stopColor="rgba(0, 0, 0, 0.66)"/>
+                <stop key="stop1" offset="0%" stopColor="rgba(0, 0, 0, 0.33)" />
+                <stop key="stop2" offset="100%" stopColor="rgba(0, 0, 0, 0.66)" />
               </linearGradient>
               <linearGradient key="gradient3" id={"gradient3_" + this.getId()} x1="1" y1="1" x2="0" y2="0">
-                <stop key="stop1" offset="0%" stopColor="rgba(0, 0, 0, 0.66)"/>
-                <stop key="stop2" offset="100%" stopColor="rgba(0, 0, 0, 1)"/>
+                <stop key="stop1" offset="0%" stopColor="rgba(0, 0, 0, 0.66)" />
+                <stop key="stop2" offset="100%" stopColor="rgba(0, 0, 0, 1)" />
               </linearGradient>
             </defs>
-            <path key="path1" d="M50 10 a40 40 0 0 1 40 40" fill="none" stroke={(navigator.userAgent.match("Safari") && !navigator.userAgent.match("Chrome/") ? `url(${location.href.replace(/#.*/, "")}` :`url(` )+ `${"#gradient1_" + this.getId()})`} strokeWidth="20"/>
-            <path key="path2" d="M90 50 a40 40 0 0 1 -40 40" fill="none" stroke={(navigator.userAgent.match("Safari") && !navigator.userAgent.match("Chrome/") ? `url(${location.href.replace(/#.*/, "")}` :`url(` )+ `${"#gradient2_" + this.getId()})`} strokeWidth="20" />
-            <path key="path3" d="M50 90 a40 40 0 0 1 -40 -40" fill="none" stroke={(navigator.userAgent.match("Safari") && !navigator.userAgent.match("Chrome/") ? `url(${location.href.replace(/#.*/, "")}` :`url(` )+ `${"#gradient3_" + this.getId()})`} strokeWidth="20" />
+            <path
+              key="path1"
+              d="M50 10 a40 40 0 0 1 40 40"
+              fill="none"
+              stroke={
+                (navigator.userAgent.match("Safari") && !navigator.userAgent.match("Chrome/")
+                  ? `url(${location.href.replace(/#.*/, "")}`
+                  : `url(`) + `${"#gradient1_" + this.getId()})`
+              }
+              strokeWidth="20"
+            />
+            <path
+              key="path2"
+              d="M90 50 a40 40 0 0 1 -40 40"
+              fill="none"
+              stroke={
+                (navigator.userAgent.match("Safari") && !navigator.userAgent.match("Chrome/")
+                  ? `url(${location.href.replace(/#.*/, "")}`
+                  : `url(`) + `${"#gradient2_" + this.getId()})`
+              }
+              strokeWidth="20"
+            />
+            <path
+              key="path3"
+              d="M50 90 a40 40 0 0 1 -40 -40"
+              fill="none"
+              stroke={
+                (navigator.userAgent.match("Safari") && !navigator.userAgent.match("Chrome/")
+                  ? `url(${location.href.replace(/#.*/, "")}`
+                  : `url(`) + `${"#gradient3_" + this.getId()})`
+              }
+              strokeWidth="20"
+            />
           </svg>
         </span>
       );
@@ -219,7 +250,11 @@ export const Switch = createReactClass({
         React.Fragment,
         this._getFill(),
         <UU5.Bricks.Icon
-          icon={this.state.switchedOn ? this.props.onIcon || this.getDefault().onIcon : this.props.offIcon || this.getDefault().offIcon}
+          icon={
+            this.state.switchedOn
+              ? this.props.onIcon || this.getDefault().onIcon
+              : this.props.offIcon || this.getDefault().offIcon
+          }
           className={this.getClassName("icon")}
         />
       );
@@ -227,14 +262,14 @@ export const Switch = createReactClass({
 
     return content;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
     return (
       <UU5.Bricks.Button
         {...this._getMainPropsToPass()}
-        ref_={(buttonSwitch) => this._buttonSwitch = buttonSwitch}
+        ref_={buttonSwitch => (this._buttonSwitch = buttonSwitch)}
         size={this.props.size}
         onClick={this._onChange}
         colorSchema={this.isSwitchedOn() ? this.props.colorSchema : this.props.colorSchemaOff}

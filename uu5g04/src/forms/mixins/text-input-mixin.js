@@ -11,22 +11,18 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import * as UU5 from 'uu5g04';
+import React from "react";
+import PropTypes from "prop-types";
+import * as UU5 from "uu5g04";
 import ns from "../forms-ns.js";
 
-import InputMixin from './input-mixin.js'
+import InputMixin from "./input-mixin.js";
 
-import Option from './../select-option.js';
+import Option from "./../select-option.js";
 
 export const TextInputMixin = {
-
   //@@viewOn:mixins
-  mixins: [
-    UU5.Common.ColorSchemaMixin,
-    InputMixin
-  ],
+  mixins: [UU5.Common.ColorSchemaMixin, InputMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -34,7 +30,7 @@ export const TextInputMixin = {
     "UU5.Forms.TextInputMixin": {
       classNames: {
         main: ns.css("text-input"),
-        item: ns.css("auto-complete-item", "group-item"),
+        item: ns.css("auto-complete-item", "group-item")
       }
     }
   },
@@ -42,10 +38,7 @@ export const TextInputMixin = {
 
   //@@viewOn:propTypes
   propTypes: {
-    placeholder: PropTypes.oneOfType([
-      PropTypes.object,
-      PropTypes.string
-    ]),
+    placeholder: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     required: PropTypes.bool,
     requiredMessage: PropTypes.any,
     focusMessage: PropTypes.any,
@@ -62,13 +55,13 @@ export const TextInputMixin = {
     onEnter: PropTypes.func,
     validateOnChange: PropTypes.bool,
     borderRadius: PropTypes.string,
-    bgStyle: PropTypes.oneOf(['filled', 'outline', 'transparent', 'underline']),
-    elevation: PropTypes.oneOf(['-1', '0', '1', '2', '3', '4', '5', -1, 0, 1, 2, 3, 4, 5])
+    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+    elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function () {
+  getDefaultProps: function() {
     return {
       placeholder: null,
       required: false,
@@ -87,14 +80,14 @@ export const TextInputMixin = {
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
       autocompleteItems: this.props.autocompleteItems,
       foundAutocompleteItems: null,
       selectedIndex: null,
       open: false
-    }
+    };
   },
 
   componentWillReceiveProps(nextProps) {
@@ -102,13 +95,12 @@ export const TextInputMixin = {
       this.setState({ autocompleteItems: nextProps.autocompleteItems });
     }
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   isTextInput() {
     return true;
   },
-
 
   getInput() {
     return this._textInput;
@@ -119,19 +111,19 @@ export const TextInputMixin = {
     var value = this.getValue();
     var result = true;
 
-    if (this.props.required && (value === '' || value === null)) {
-      this.setError(this.props.requiredMessage || this.getLsiValue('requiredMessage'));
+    if (this.props.required && (value === "" || value === null)) {
+      this.setError(this.props.requiredMessage || this.getLsiValue("requiredMessage"));
       result = false;
-    } else if (feedback === 'error') {
+    } else if (feedback === "error") {
       result = false;
-    } else if (typeof this.isValid_ === 'function') {
+    } else if (typeof this.isValid_ === "function") {
       result = this.isValid_();
     }
 
     if (result && this.props.onValidate) {
       var validation = this.props.onValidate({ value: value, component: this });
-      if (validation && typeof validation === 'object') {
-        if (validation.feedback === 'error') {
+      if (validation && typeof validation === "object") {
+        if (validation.feedback === "error") {
           result = false;
         }
       }
@@ -205,8 +197,8 @@ export const TextInputMixin = {
       value = {
         message: this.props.focusMessage,
         value: this.state.value,
-        feedback: 'initial'
-      }
+        feedback: "initial"
+      };
     }
     return value;
   },
@@ -221,7 +213,7 @@ export const TextInputMixin = {
         feedback: this.state.feedback,
         message: this.state.message,
         value: opt.value
-      }
+      };
     }
     return result;
   },
@@ -232,12 +224,12 @@ export const TextInputMixin = {
       let r = new RegExp(this.props.pattern);
       if (!r.test(opt.value)) {
         result = {
-          feedback: 'error',
-          message: this.props.patternMessage || this.getLsiComponent('patternMessage'),
+          feedback: "error",
+          message: this.props.patternMessage || this.getLsiComponent("patternMessage"),
           value: opt.value
-        }
+        };
       }
-    } else if (typeof this.props.onValidate === 'function') {
+    } else if (typeof this.props.onValidate === "function") {
       result = this.props.onValidate(opt);
     }
 
@@ -267,7 +259,7 @@ export const TextInputMixin = {
 
   onFocus(e) {
     let opt = { value: e.target.value, event: e, component: this };
-    if (typeof this.props.onFocus === 'function') {
+    if (typeof this.props.onFocus === "function") {
       this.props.onFocus(opt);
     } else {
       this.onFocusDefault(opt);
@@ -277,7 +269,7 @@ export const TextInputMixin = {
   },
 
   onFocusDefault(opt) {
-    if (typeof this.onFocusDefault_ === 'function') {
+    if (typeof this.onFocusDefault_ === "function") {
       this.onFocusDefault_(opt);
     } else {
       let result = this.getFocusFeedback(opt);
@@ -290,7 +282,7 @@ export const TextInputMixin = {
     let opt = { value: e.target.value, event: e, component: this };
 
     if (!this.isComputedDisabled() && !this.isReadOnly()) {
-      if (typeof this.props.onChange === 'function') {
+      if (typeof this.props.onChange === "function") {
         this.props.onChange(opt);
       } else {
         this.onChangeDefault(opt);
@@ -300,25 +292,32 @@ export const TextInputMixin = {
   },
 
   onChangeDefault(opt, setStateCallback) {
-    if (typeof this.onChangeDefault_ === 'function') {
+    if (typeof this.onChangeDefault_ === "function") {
       this.onChangeDefault_(opt, setStateCallback);
     } else if (this.props.validateOnChange) {
       this._validateOnChange(opt, false, setStateCallback);
     } else {
       let result = this.getChangeFeedback(opt);
       let callback = setStateCallback;
-      if (!(opt._data && opt._data.closeOnCallback) && result.foundAutocompleteItems && result.foundAutocompleteItems.length > 0) {
+      if (
+        !(opt._data && opt._data.closeOnCallback) &&
+        result.foundAutocompleteItems &&
+        result.foundAutocompleteItems.length > 0
+      ) {
         callback = () => this.open(setStateCallback);
       } else {
         callback = () => this.close(setStateCallback);
       }
-      this.setState({
-        feedback: result.feedback,
-        message: result.message,
-        value: result.value,
-        foundAutocompleteItems: result.foundAutocompleteItems,
-        selectedIndex: result.selectedIndex
-      }, callback);
+      this.setState(
+        {
+          feedback: result.feedback,
+          message: result.message,
+          value: result.value,
+          foundAutocompleteItems: result.foundAutocompleteItems,
+          selectedIndex: result.selectedIndex
+        },
+        callback
+      );
     }
     return this;
   },
@@ -326,7 +325,7 @@ export const TextInputMixin = {
   onBlur(e) {
     let opt = { value: e.target.value, event: e, component: this };
 
-    if (typeof this.props.onBlur === 'function') {
+    if (typeof this.props.onBlur === "function") {
       this.props.onBlur(opt);
     } else {
       this.onBlurDefault(opt);
@@ -335,7 +334,7 @@ export const TextInputMixin = {
   },
 
   onBlurDefault(opt) {
-    if (typeof this.onBlurDefault_ === 'function') {
+    if (typeof this.onBlurDefault_ === "function") {
       this.onBlurDefault_(opt);
     } else if (this._checkRequired({ value: opt.value }) && !this.props.validateOnChange) {
       opt.required = this.props.required;
@@ -349,11 +348,11 @@ export const TextInputMixin = {
     let opt = { value: e.target.value, event: e, component: this };
 
     // param is user function passed to inputAttrs.onKeyDown
-    if (typeof param === 'function') {
+    if (typeof param === "function") {
       param(e, opt);
     }
 
-    if (typeof this.props.onEnter === 'function' && (e.keyCode || e.which) === 13 && !e.shiftKey && !e.ctrlKey) {
+    if (typeof this.props.onEnter === "function" && (e.keyCode || e.which) === 13 && !e.shiftKey && !e.ctrlKey) {
       this.props.onEnter(opt);
     }
 
@@ -361,7 +360,7 @@ export const TextInputMixin = {
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
+  //@@viewOn:overriding
   focus_() {
     this._textInput && this._textInput.focus();
   },
@@ -391,26 +390,29 @@ export const TextInputMixin = {
       let result = this.getChangeFeedback(opt);
       let open = !!(Array.isArray(result.foundAutocompleteItems) && result.foundAutocompleteItems.length);
 
-      this.setState({
-        feedback: result.feedback,
-        message: result.message,
-        value: result.value,
-        foundAutocompleteItems: result.foundAutocompleteItems,
-        selectedIndex: result.selectedIndex,
-        open
-      }, setStateCallback);
+      this.setState(
+        {
+          feedback: result.feedback,
+          message: result.message,
+          value: result.value,
+          foundAutocompleteItems: result.foundAutocompleteItems,
+          selectedIndex: result.selectedIndex,
+          open
+        },
+        setStateCallback
+      );
     }
 
     return this;
   },
-  //@@viewOff:overridingMethods
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _checkRequired(opt, setStateCallback) {
     let result = true;
     if (this.props.required && !opt.value && this.shouldValidateRequired()) {
       result = false;
-      this.setError(this.props.requiredMessage || this.getLsiComponent('requiredMessage'), opt.value, setStateCallback);
+      this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessage"), opt.value, setStateCallback);
     }
 
     return result;
@@ -420,7 +422,7 @@ export const TextInputMixin = {
     let values = { first: [], last: [] };
     if (foundValue) {
       let foundValueLower = foundValue.toLowerCase();
-      items.forEach(function (item) {
+      items.forEach(function(item) {
         let itemValueLower = item.value.toLowerCase();
         if (itemValueLower.substring(0, foundValueLower.length) === foundValueLower) {
           values.first.push(item);
@@ -450,8 +452,8 @@ export const TextInputMixin = {
     };
 
     props.hidden = !this.state.foundAutocompleteItems;
-    props.ref = (itemList) => this._itemList = itemList;
-    props.onChange = (opt) => {
+    props.ref = itemList => (this._itemList = itemList);
+    props.onChange = opt => {
       if (opt.value !== null && this.state.foundAutocompleteItems) {
         opt.autocompleteItem = this.state.foundAutocompleteItems.find(it => it.value === opt.value);
       }
@@ -461,7 +463,7 @@ export const TextInputMixin = {
         if (typeof this._onBlur === "function") {
           this._onBlur(opt);
         } else {
-          if (typeof this.props.onBlur === 'function') {
+          if (typeof this.props.onBlur === "function") {
             this.props.onBlur(opt);
           } else {
             this.onBlurDefault(opt);
@@ -469,8 +471,8 @@ export const TextInputMixin = {
         }
       };
 
-      opt._data ? opt._data.closeOnCallback = true : opt._data = {closeOnCallback : true};
-      if (typeof this.props.onChange === 'function') {
+      opt._data ? (opt._data.closeOnCallback = true) : (opt._data = { closeOnCallback: true });
+      if (typeof this.props.onChange === "function") {
         this.props.onChange(opt);
       } else {
         this.onChangeDefault(opt);
@@ -484,21 +486,24 @@ export const TextInputMixin = {
   },
 
   _getChildren() {
-    return this.state.foundAutocompleteItems && this.state.foundAutocompleteItems.map((item, i) => {
-      let className = this.getClassName().item;
-      this.state.selectedIndex === i && (className += ' ' + this.getClassName().selected);
-      return (
-        <Option
-          className={className}
-          key={i}
-          value={item.value || item.content}
-          content={item.content || item.value}
-          mainAttrs={{ id: this.getId() + '-item-' + i, tabIndex: 0 }}
-        />
-      );
-    });
-  },
-  //@@viewOff:componentSpecificHelpers
+    return (
+      this.state.foundAutocompleteItems &&
+      this.state.foundAutocompleteItems.map((item, i) => {
+        let className = this.getClassName().item;
+        this.state.selectedIndex === i && (className += " " + this.getClassName().selected);
+        return (
+          <Option
+            className={className}
+            key={i}
+            value={item.value || item.content}
+            content={item.content || item.value}
+            mainAttrs={{ id: this.getId() + "-item-" + i, tabIndex: 0 }}
+          />
+        );
+      })
+    );
+  }
+  //@@viewOff:private
 
   //@@viewOn:render
   //@@viewOff:render

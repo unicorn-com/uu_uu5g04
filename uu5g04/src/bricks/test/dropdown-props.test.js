@@ -1,20 +1,22 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import createReactClass from "create-react-class";
+//@@viewOff:imports
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
@@ -24,16 +26,13 @@ const { mount, shallow, wait } = UU5.Test.Tools;
  */
 const MyAllowTagsDropDown = createReactClass({
   mixins: [UU5.Common.BaseMixin],
-  statics: {tagName: "UU5.Example.MyCompButton", classNames: {main: "mytr"}},
+  statics: { tagName: "UU5.Example.MyCompButton", classNames: { main: "mytr" } },
   render() {
-    return (
-      <UU5.Example.MyCompButton {...this.getMainPropsToPass()}/>
-    );
+    return <UU5.Example.MyCompButton {...this.getMainPropsToPass()} />;
   }
 });
 
 const MyDropDownHandlers = createReactClass({
-
   getInitialState: () => {
     return {
       isCalled: false
@@ -42,24 +41,17 @@ const MyDropDownHandlers = createReactClass({
 
   onClickHandler(event) {
     alert("You Clicked to DropDown");
-    this.setState({isCalled: true})
+    this.setState({ isCalled: true });
   },
 
   render() {
     return (
-      <UU5.Bricks.Dropdown
-        id={"dropID"}
-        label="onClickEvent"
-        size="l"
-        colorSchema="pink"
-        onClick={this.onClickHandler}
-      >
-        <UU5.Bricks.Dropdown.Item id={"itemID"} label="{user name}" header/>
+      <UU5.Bricks.Dropdown id={"dropID"} label="onClickEvent" size="l" colorSchema="pink" onClick={this.onClickHandler}>
+        <UU5.Bricks.Dropdown.Item id={"itemID"} label="{user name}" header />
       </UU5.Bricks.Dropdown>
     );
   }
 });
-
 
 const CONFIG = {
   mixins: [
@@ -88,13 +80,7 @@ const CONFIG = {
       values: [true, false]
     },
     items: {
-      values: [
-        [
-          {label: "Rock", href: "#Rock"},
-          {label: "Metal", href: "#Metal"},
-          {label: "Jazz", href: "#Jazz"}
-        ]
-      ]
+      values: [[{ label: "Rock", href: "#Rock" }, { label: "Metal", href: "#Metal" }, { label: "Jazz", href: "#Jazz" }]]
     },
     pullRight: {
       values: [true, false]
@@ -122,10 +108,10 @@ const CONFIG = {
     },
     disableBackdrop: {
       values: [true, false]
-    },
+    }
   },
   requiredProps: {
-    children: [<UU5.Bricks.Dropdown.Item id={"childID"} label="Profile"/>]
+    children: [<UU5.Bricks.Dropdown.Item id={"childID"} label="Profile" />]
   },
   opt: {
     shallowOpt: {
@@ -134,54 +120,51 @@ const CONFIG = {
   }
 };
 
-
 describe(`UU5.Bricks.Dropdown`, () => {
   UU5.Test.Tools.testProperties(UU5.Bricks.Dropdown, CONFIG);
 });
 
 describe(`UU5.Bricks.Dropdown`, () => {
-
   it(`UU5.Bricks.Dropdown - onClick()`, () => {
     window.alert = jest.fn();
-    const wrapper = shallow(
-      <MyDropDownHandlers/>
-    );
+    const wrapper = shallow(<MyDropDownHandlers />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.state().isCalled).toBeFalsy();
-    wrapper.find('Dropdown').simulate('click');
+    wrapper.find("Dropdown").simulate("click");
     expect(window.alert).toBeCalled();
-    expect(window.alert).toHaveBeenCalledWith('You Clicked to DropDown');
+    expect(window.alert).toHaveBeenCalledWith("You Clicked to DropDown");
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("You Clicked to DropDown");
     expect(wrapper).toMatchSnapshot();
-
   });
-
 });
 
-
 describe(`UU5.Bricks.Dropdown AllowTags + Dockit example`, () => {
-
-  it('UU5.Bricks.DropDown - props.allowTags contain myComponent', () => {
+  it("UU5.Bricks.DropDown - props.allowTags contain myComponent", () => {
     const wrapper = shallow(
-      <UU5.Bricks.Dropdown id={"uuID"} label="User account" size="l" colorSchema="green" iconClosed="mdi-eye"
-                           allowTags={["UU5.Example.MyCompButton"]}>
-        <MyAllowTagsDropDown id={"allowID"} content={"Allow Tags Contentn in Button"}/>
-        <UU5.Bricks.Dropdown.Item id={"uuID2"} label="{user name}" header/>
+      <UU5.Bricks.Dropdown
+        id={"uuID"}
+        label="User account"
+        size="l"
+        colorSchema="green"
+        iconClosed="mdi-eye"
+        allowTags={["UU5.Example.MyCompButton"]}
+      >
+        <MyAllowTagsDropDown id={"allowID"} content={"Allow Tags Contentn in Button"} />
+        <UU5.Bricks.Dropdown.Item id={"uuID2"} label="{user name}" header />
       </UU5.Bricks.Dropdown>
     );
     expect(wrapper).toMatchSnapshot();
   });
 
-
   it(`UU5.Bricks.Dropdown example make snapshot`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Dropdown id={"uuID"}>
-        <UU5.Bricks.Dropdown.Item id={"uuID2"} label="{user name}" header/>
-        <UU5.Bricks.Dropdown.Item id={"uuID3"} label="Profile"/>
-        <UU5.Bricks.Dropdown.Item id={"uuID4"} label="Settings"/>
-        <UU5.Bricks.Dropdown.Item id={"uuID5"} divider/>
-        <UU5.Bricks.Dropdown.Item id={"uuID6"} label="Logout"/>
+        <UU5.Bricks.Dropdown.Item id={"uuID2"} label="{user name}" header />
+        <UU5.Bricks.Dropdown.Item id={"uuID3"} label="Profile" />
+        <UU5.Bricks.Dropdown.Item id={"uuID4"} label="Settings" />
+        <UU5.Bricks.Dropdown.Item id={"uuID5"} divider />
+        <UU5.Bricks.Dropdown.Item id={"uuID6"} label="Logout" />
       </UU5.Bricks.Dropdown>
     );
     expect(wrapper.instance().props.label).toMatch(/Dropdown/);
@@ -213,13 +196,3 @@ describe(`UU5.Bricks.Dropdown AllowTags + Dockit example`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
-
-
-
-
-
-
-
-
-
-

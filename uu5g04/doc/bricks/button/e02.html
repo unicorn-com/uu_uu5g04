@@ -57,31 +57,38 @@
 
           <UU5.Bricks.Section id="top" header="displayBlock">
             {/*@@viewOn:0*/}
-
             <UU5.Bricks.Button displayBlock={true}>Display block</UU5.Bricks.Button>
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
 
           <UU5.Bricks.Section header="pressed">
             {/*@@viewOn:0*/}
-
             <UU5.Bricks.Button pressed={false}>Not pressed</UU5.Bricks.Button>
+            {/*@@viewOff:0*/}
             <br/><br/>
+            {/*@@viewOn:0*/}
             <UU5.Bricks.Button pressed={true}>Pressed</UU5.Bricks.Button>
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
 
           <UU5.Bricks.Section header="bgStyle">
             {/*@@viewOn:0*/}
-
             <UU5.Bricks.Button bgStyle="filled">Filled<UU5.Bricks.Icon icon="mdi-magnify"/></UU5.Bricks.Button>
+            {/*@@viewOff:0*/}
             <br/><br/>
+            {/*@@viewOn:0*/}
             <UU5.Bricks.Button bgStyle="outline">Outline<UU5.Bricks.Icon icon="mdi-magnify"/></UU5.Bricks.Button>
+            {/*@@viewOff:0*/}
             <br/><br/>
+            {/*@@viewOn:0*/}
             <UU5.Bricks.Button bgStyle="transparent">Transparent<UU5.Bricks.Icon icon="mdi-magnify"/></UU5.Bricks.Button>
+            {/*@@viewOff:0*/}
             <br/><br/>
+            {/*@@viewOn:0*/}
             <UU5.Bricks.Button bgStyle="link">Link<UU5.Bricks.Icon icon="mdi-magnify"/></UU5.Bricks.Button>
+            {/*@@viewOff:0*/}
             <br/><br/>
+            {/*@@viewOn:0*/}
             <UU5.Bricks.Button bgStyle="underline">Underline<UU5.Bricks.Icon icon="mdi-magnify"/></UU5.Bricks.Button>
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
@@ -89,28 +96,40 @@
           <UU5.Bricks.Section header="elevation">
             {/*@@viewOn:0*/}
             <UU5.Bricks.Button elevation="3">Elevation<UU5.Bricks.Icon icon="mdi-magnify"/></UU5.Bricks.Button>
-            <br/><br/>
+            {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
           <UU5.Bricks.Section header="borderRadius">
             {/*@@viewOn:0*/}
             <UU5.Bricks.Button borderRadius="8px">borderRadius<UU5.Bricks.Icon icon="mdi-magnify"/></UU5.Bricks.Button>
-            <br/><br/>
+            {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
 
           <UU5.Bricks.Section header="baseline">
             {/*@@viewOn:0*/}
             <UU5.Bricks.Button content="button" size="l"/> <UU5.Bricks.Link content="link"/>
-                <br/>
-                <br/>
-                <UU5.Bricks.Button content="button" size="l" baseline={true}/> <UU5.Bricks.Link content="link"/>
+            {/*@@viewOff:0*/}
+            <br/>
+            <br/>
+            {/*@@viewOn:0*/}
+            <UU5.Bricks.Button content="button" size="l" baseline={true}/> <UU5.Bricks.Link content="link"/>
+            {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
 
           <UU5.Bricks.Section header="onClick">
             {/*@@viewOn:0*/}
+            <UU5.Bricks.Button onClick={() => alert("onClick")} content="onClick" />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
 
-            <UU5.Bricks.Button onClick={() => {
-              alert("onClick");
-            }}>onClick</UU5.Bricks.Button>
+          <UU5.Bricks.Section header="onWheelClick">
+            {/*@@viewOn:0*/}
+            <UU5.Bricks.Button onWheelClick={() => alert("onWheelClick")} content="onWheelClick" />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="onCtrlClick">
+            {/*@@viewOn:0*/}
+            <UU5.Bricks.Button onCtrlClick={() => alert("onCtrlClick")} content="onCtrlClick" />
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
 

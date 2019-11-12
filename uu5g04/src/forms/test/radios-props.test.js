@@ -11,19 +11,18 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import createReactClass from "create-react-class";
 import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-forms";
+//@@viewOff:imports
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MixinPropsFunction = createReactClass({
-
-  mixins: [
-    UU5.Common.BaseMixin,
-  ],
+  mixins: [UU5.Common.BaseMixin],
 
   getInitialState: () => {
     return {
@@ -32,31 +31,29 @@ const MixinPropsFunction = createReactClass({
     };
   },
 
-
   onChangeHandler(event) {
     alert("onChange event has been called.");
-    this.setState({isCalled: true});
-    this.setState({defaultValue: event.target.value})
+    this.setState({ isCalled: true });
+    this.setState({ defaultValue: event.target.value });
   },
 
   onValidateHandler(event) {
     alert("onValidate event has been called.");
-    this.setState({isCalled: true});
-    this.setState({defaultValue: event.target.value})
+    this.setState({ isCalled: true });
+    this.setState({ defaultValue: event.target.value });
   },
 
   onChangeFeedbackHandler(event) {
     alert("onChangeFeedback event has been called.");
-    this.setState({isCalled: true});
-    this.setState({defaultValue: event.target.value})
+    this.setState({ isCalled: true });
+    this.setState({ defaultValue: event.target.value });
   },
-
 
   render() {
     return (
       <UU5.Forms.Radios
         id={"checkID"}
-        value={[{label: "Radio 1", name: "box1", value: this.state.defaultValue}]}
+        value={[{ label: "Radio 1", name: "box1", value: this.state.defaultValue }]}
         onChange={this.onChangeHandler}
         onValidate={this.onValidateHandler}
         onChangeFeedback={this.onChangeFeedbackHandler}
@@ -100,17 +97,16 @@ describe(`UU5.Forms.Radios props`, () => {
 });
 
 describe(`UU5.Forms.Radios props function -> Forms.InputMixin`, () => {
-
-  it('onChange()', () => {
+  it("onChange()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<MixinPropsFunction/>);
+    const wrapper = shallow(<MixinPropsFunction />);
     expect(wrapper.state().defaultValue).toBeFalsy();
     expect(wrapper.state().isCalled).toBeFalsy();
-    wrapper.simulate('change', {target: {value: true}});
+    wrapper.simulate("change", { target: { value: true } });
     expect(window.alert).toBeCalled();
-    expect(window.alert).toHaveBeenCalledWith('onChange event has been called.');
+    expect(window.alert).toHaveBeenCalledWith("onChange event has been called.");
     expect(wrapper.state().isCalled).toBeTruthy();
-    expect(wrapper.state().defaultValue).toBeTruthy()
+    expect(wrapper.state().defaultValue).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onChange event has been called.");
     expect(wrapper).toMatchSnapshot();
   });
@@ -127,46 +123,39 @@ describe(`UU5.Forms.Radios props function -> Forms.InputMixin`, () => {
     expect(callback).toBeCalled();
   });
 
-  it('onValidate()', () => {
+  it("onValidate()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<MixinPropsFunction/>);
+    const wrapper = shallow(<MixinPropsFunction />);
     expect(wrapper.state().isCalled).toBeFalsy();
     expect(wrapper.state().defaultValue).toBeFalsy();
-    wrapper.simulate('validate', {target: {value: true}});
+    wrapper.simulate("validate", { target: { value: true } });
     expect(wrapper.state().defaultValue).toBeTruthy();
     expect(window.alert).toBeCalled();
-    expect(window.alert).toHaveBeenCalledWith('onValidate event has been called.');
+    expect(window.alert).toHaveBeenCalledWith("onValidate event has been called.");
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onValidate event has been called.");
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('onChangeFeedback()', () => {
+  it("onChangeFeedback()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<MixinPropsFunction/>);
+    const wrapper = shallow(<MixinPropsFunction />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.state().isCalled).toBeFalsy();
     expect(wrapper.state().defaultValue).toBeFalsy();
-    wrapper.simulate('changeFeedback', {target: {value: true}});
+    wrapper.simulate("changeFeedback", { target: { value: true } });
     expect(wrapper.state().defaultValue).toBeTruthy();
     expect(window.alert).toBeCalled();
-    expect(window.alert).toHaveBeenCalledWith('onChangeFeedback event has been called.');
+    expect(window.alert).toHaveBeenCalledWith("onChangeFeedback event has been called.");
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onChangeFeedback event has been called.");
     expect(wrapper).toMatchSnapshot();
   });
-
 });
 
-
 describe(`UU5.Forms.Radios check default default props from Mixins`, () => {
-
   it(`UU5.Forms.GroupMixin`, () => {
-    const wrapper = shallow(
-      <UU5.Forms.Radios
-        id={"uuID"}
-      />
-    );
+    const wrapper = shallow(<UU5.Forms.Radios id={"uuID"} />);
     expect(wrapper).toMatchSnapshot();
     //value of default props is in the snapshot
     expect(wrapper.instance().props.required).toBeFalsy();
@@ -178,11 +167,7 @@ describe(`UU5.Forms.Radios check default default props from Mixins`, () => {
   });
 
   it(`UU5.Forms.InputMixin`, () => {
-    const wrapper = shallow(
-      <UU5.Forms.Radios
-        id={"uuID2"}
-      />
-    );
+    const wrapper = shallow(<UU5.Forms.Radios id={"uuID2"} />);
     expect(wrapper.instance().props.inputAttrs).toBe(null);
     expect(wrapper.instance().props.size).toEqual("m");
     expect(wrapper.instance().props.readOnly).toBeFalsy();
@@ -197,11 +182,7 @@ describe(`UU5.Forms.Radios check default default props from Mixins`, () => {
   });
 
   it(`UU5.Forms.Radios Common.Mixins`, () => {
-    const wrapper = shallow(
-      <UU5.Forms.Radios
-        id={"uuID2"}
-      />
-    );
+    const wrapper = shallow(<UU5.Forms.Radios id={"uuID2"} />);
     expect(wrapper).toMatchSnapshot();
     //Check UU5.Common.Elementary.Mixin default props
     expect(wrapper.instance().props.hidden).toBeFalsy();
@@ -222,6 +203,4 @@ describe(`UU5.Forms.Radios check default default props from Mixins`, () => {
     expect(wrapper.instance().props.noIndex).toBeFalsy();
     //default value of colorSchema and LSI language props are in snapshot.
   });
-
-
 });

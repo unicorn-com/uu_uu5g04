@@ -1,44 +1,40 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import YoutubeUrlBuilder from "./models/youtube-url-builder";
 
-import './youtube-video.less';
+import "./youtube-video.less";
+//@@viewOff:imports
 
 export const YoutubeVideo = createReactClass({
-
   //@@viewOn:mixins
-  mixins: [
-    UU5.Common.BaseMixin,
-    UU5.Common.PureRenderMixin,
-    UU5.Common.ElementaryMixin,
-    UU5.Common.NestingLevelMixin
-  ],
+  mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, UU5.Common.NestingLevelMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
   statics: {
     tagName: ns.name("YoutubeVideo"),
-    nestingLevelList: UU5.Environment.getNestingLevelList('bigBox', 'box'),
+    nestingLevelList: UU5.Environment.getNestingLevelList("bigBox", "box"),
     classNames: {
       main: ns.css("youtube-video"),
       size: ns.css("youtube-video-")
-    },
+    }
   },
   //@@viewOff:statics
 
@@ -50,53 +46,53 @@ export const YoutubeVideo = createReactClass({
     disableInfo: PropTypes.bool,
     src: PropTypes.string.isRequired,
     disableRelatedVideos: PropTypes.bool,
-    size: PropTypes.oneOf(['s', 'm', 'l', 'xl']),
+    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
     disableFullscreen: PropTypes.bool,
     muted: PropTypes.bool
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function () {
+  getDefaultProps: function() {
     return {
       autoplay: undefined,
       disableControls: undefined,
       loop: undefined,
       disableInfo: undefined,
-      src: '',
+      src: "",
       disableRelatedVideos: undefined,
-      size: 'm',
+      size: "m",
       disableFullscreen: undefined,
       muted: undefined
     };
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
-  _buildLink: function () {
+  //@@viewOn:private
+  _buildLink: function() {
     if (!this.props.src) {
       return;
     }
 
     let builder;
-    try{
+    try {
       builder = new YoutubeUrlBuilder(this.props.src);
-    }catch(err){
+    } catch (err) {
       UU5.Common.Tools.error(err.message, {
         component: "UU5.Bricks.YoutubeVideo",
         id: this.getId(),
         function: "YoutubeUrlBuilder"
-      })
-        return undefined;
+      });
+      return undefined;
     }
     this.props.autoplay !== undefined && builder.setAutoplay(this.props.autoplay ? 1 : 0);
     this.props.loop !== undefined && builder.setLoop(this.props.loop ? 1 : 0);
@@ -114,24 +110,28 @@ export const YoutubeVideo = createReactClass({
     return builder.toEmbedString();
   },
 
-  _buildMainAttrs: function () {
+  _buildMainAttrs: function() {
     let mainProps = this.getMainAttrs();
 
-    mainProps.className += ' ' + this.getClassName().size + this.props.size;
+    mainProps.className += " " + this.getClassName().size + this.props.size;
 
     mainProps.src = this._buildLink();
 
     return mainProps;
   },
 
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   // Render
 
   //@@viewOn:render
-  render: function () {
-    return this.getNestingLevel() ? <UU5.Bricks.Span {...this.getMainPropsToPass()}>{this.getDisabledCover()}<iframe {...this._buildMainAttrs()} /></UU5.Bricks.Span> : null;
-
+  render: function() {
+    return this.getNestingLevel() ? (
+      <UU5.Bricks.Span {...this.getMainPropsToPass()}>
+        {this.getDisabledCover()}
+        <iframe {...this._buildMainAttrs()} />
+      </UU5.Bricks.Span>
+    ) : null;
   }
   //@@viewOff:render
 });

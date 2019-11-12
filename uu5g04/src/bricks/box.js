@@ -1,29 +1,30 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 const ClassNames = UU5.Common.ClassNames;
 
-import Modal from './modal.js';
+import Modal from "./modal.js";
 
-import './box.less';
+import "./box.less";
+//@@viewOff:imports
 
 export const Box = createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -38,7 +39,7 @@ export const Box = createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("Box"),
-    nestingLevelList: UU5.Environment.getNestingLevelList('bigBoxCollection', 'inline'),
+    nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "inline"),
     classNames: {
       main: ns.css("box", "text"),
       nestingLevelSmallBox: ns.css("box-nesting-level-small-box uu5-common-padding-s"),
@@ -57,17 +58,17 @@ export const Box = createReactClass({
     infoHeader: PropTypes.any,
     infoContent: PropTypes.any,
     disableClick: PropTypes.bool,
-    bgStyle: PropTypes.oneOf(['filled', 'outline', 'transparent', 'underline']),
+    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
     borderRadius: PropTypes.string,
-    elevation: PropTypes.oneOf(['-1', '0', '1', '2', '3', '4', '5', -1, 0, 1, 2, 3, 4, 5]),
-    elevationHover: PropTypes.oneOf(['-1', '0', '1', '2', '3', '4', '5', -1, 0, 1, 2, 3, 4, 5]),
+    elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+    elevationHover: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      infoHeader: 'Info',
+      infoHeader: "Info",
       infoContent: null,
       disableClick: false,
       bgStyle: "filled",
@@ -78,8 +79,8 @@ export const Box = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   openInfo(modalProps, setStateCallback) {
@@ -95,10 +96,10 @@ export const Box = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _getMainAttrs() {
     var attrs = this.getMainAttrs();
 
@@ -120,31 +121,27 @@ export const Box = createReactClass({
 
     if (this.props.infoContent && !this.props.disableClick) {
       attrs.onClick = () => !this.isDisabled() && this.modal.open();
-      attrs.className += ' ' + this.getClassName().click + " " + ClassNames.hover;
+      attrs.className += " " + this.getClassName().click + " " + ClassNames.hover;
     }
 
     switch (this.getNestingLevel()) {
-      case 'inline':
-        attrs.className += ' ' + this.getClassName().nestingLevelInline;
+      case "inline":
+        attrs.className += " " + this.getClassName().nestingLevelInline;
         break;
       default:
-        attrs.className += ' ' + this.getClassName().nestingLevelSmallBox;
+        attrs.className += " " + this.getClassName().nestingLevelSmallBox;
     }
 
     return attrs;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
     let component = null;
     if (this.getNestingLevel()) {
       if (this.getNestingLevel() === "inline") {
-        component = (
-          <UU5.Bricks.Text {...this.getMainPropsToPass()} >
-            {this.getChildren()}
-          </UU5.Bricks.Text>
-        );
+        component = <UU5.Bricks.Text {...this.getMainPropsToPass()}>{this.getChildren()}</UU5.Bricks.Text>;
       } else {
         let modal;
 
@@ -152,7 +149,7 @@ export const Box = createReactClass({
           modal = (
             <Modal
               className={this.getClassName().modal}
-              ref_={(modal) => this.modal = modal}
+              ref_={modal => (this.modal = modal)}
               content={this.props.infoContent}
               header={this.props.infoHeader}
               parent={this}
@@ -162,7 +159,7 @@ export const Box = createReactClass({
 
         component = (
           <div>
-            <div {...this._getMainAttrs()} >
+            <div {...this._getMainAttrs()}>
               {this.getChildren()}
               {this.getDisabledCover()}
             </div>

@@ -1,35 +1,31 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
 import ns from "./common-ns.js";
-import PropTypes from 'prop-types';
-import BaseMixin from './base-mixin.js';
-import ElementaryMixin from './elementary-mixin.js';
-import Tools from './tools.js';
+import PropTypes from "prop-types";
+import BaseMixin from "./base-mixin.js";
+import ElementaryMixin from "./elementary-mixin.js";
+import Tools from "./tools.js";
 import PureRenderMixin from "./pure-render-mixin";
-import ContentMixin from './content-mixin.js';
+import ContentMixin from "./content-mixin.js";
+//@@viewOff:imports
 
 export const Help = createReactClass({
-
   //@@viewOn:mixins
-  mixins: [
-    BaseMixin,
-    ElementaryMixin,
-    PureRenderMixin,
-    ContentMixin
-  ],
+  mixins: [BaseMixin, ElementaryMixin, PureRenderMixin, ContentMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -44,7 +40,7 @@ export const Help = createReactClass({
   //@@viewOn:propTypes
   propTypes: {
     tagName: PropTypes.string,
-    target: PropTypes.oneOf(['_blank', '_parent', '_top', '_self'])
+    target: PropTypes.oneOf(["_blank", "_parent", "_top", "_self"])
   },
   //@@viewOff:propTypes
 
@@ -57,7 +53,7 @@ export const Help = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
       errorDetails: false,
@@ -66,8 +62,8 @@ export const Help = createReactClass({
   },
 
   componentWillMount() {
-    let tagNameArr = this.props.tagName.split('.');
-    let libraryName = tagNameArr[0] + '.' + tagNameArr[1];
+    let tagNameArr = this.props.tagName.split(".");
+    let libraryName = tagNameArr[0] + "." + tagNameArr[1];
     let pageName = "/page?code=" + tagNameArr[0].toLowerCase() + tagNameArr[1] + tagNameArr[2];
     Tools.loadLibrary(libraryName, (response, error) => {
       if (!error && response && response.doc) {
@@ -75,33 +71,33 @@ export const Help = createReactClass({
       }
     });
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _getLink() {
     if (this.state.responseLink) {
-      return (Tools.findComponent(
-        'UU5.Bricks.Link',
+      return Tools.findComponent(
+        "UU5.Bricks.Link",
         UU5.Common.Tools.merge(this.getMainPropsToPass(), {
           href: this.state.responseLink,
           content: this.props.content || this.props.children || this.props.tagName,
           target: this.props.target
         })
-      ));
+      );
     } else {
-      return this.props.tagName
+      return this.props.tagName;
     }
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
-  render: function () {
+  render: function() {
     return this._getLink();
   }
   //@@viewOff:render

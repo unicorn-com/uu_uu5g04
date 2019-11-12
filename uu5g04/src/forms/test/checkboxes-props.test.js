@@ -11,19 +11,18 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import createReactClass from "create-react-class";
 import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-forms";
+//@@viewOff:imports
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MixinPropsFunction = createReactClass({
-
-  mixins: [
-    UU5.Common.BaseMixin,
-  ],
+  mixins: [UU5.Common.BaseMixin],
 
   getInitialState() {
     return {
@@ -34,28 +33,27 @@ const MixinPropsFunction = createReactClass({
 
   onChangeHandler(event) {
     alert("onChange event has been called.");
-    this.setState({isCalled: true});
-    this.setState({isChecked: event.target.value})
+    this.setState({ isCalled: true });
+    this.setState({ isChecked: event.target.value });
   },
 
   onValidateHandler(event) {
     alert("onValidate event has been called.");
-    this.setState({isCalled: true});
+    this.setState({ isCalled: true });
   },
 
   onChangeFeedbackHandler(event) {
     alert("onChangeFeedback event has been called.");
-    this.setState({isCalled: true});
-    this.setState({isChecked: event.target.value})
+    this.setState({ isCalled: true });
+    this.setState({ isChecked: event.target.value });
   },
-
 
   render() {
     return (
       <UU5.Forms.Checkboxes
         id={"checkID"}
         colorSchema={"default"}
-        value={[{label: "Checkbox 1", name: "box1", value: this.state.isChecked}]}
+        value={[{ label: "Checkbox 1", name: "box1", value: this.state.isChecked }]}
         onChange={this.onChangeHandler}
         onValidate={this.onValidateHandler}
         onChangeFeedback={this.onChangeFeedbackHandler}
@@ -102,23 +100,20 @@ const CONFIG = {
   }
 };
 
-
 describe(`UU5.Forms.Checkboxes props`, () => {
   UU5.Test.Tools.testProperties(UU5.Forms.Checkboxes, CONFIG);
 });
 
-
 describe(`UU5.Forms.Checkboxes props function -> Forms.InputMixin`, () => {
-
-  it('onChange()', () => {
+  it("onChange()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<MixinPropsFunction/>);
+    const wrapper = shallow(<MixinPropsFunction />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.state().isChecked).toBeFalsy();
     expect(wrapper.state().isCalled).toBeFalsy();
-    wrapper.simulate('change', {target: {value: true}});
+    wrapper.simulate("change", { target: { value: true } });
     expect(window.alert).toBeCalled();
-    expect(window.alert).toHaveBeenCalledWith('onChange event has been called.');
+    expect(window.alert).toHaveBeenCalledWith("onChange event has been called.");
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(wrapper.state().isChecked).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onChange event has been called.");
@@ -127,46 +122,42 @@ describe(`UU5.Forms.Checkboxes props function -> Forms.InputMixin`, () => {
 
   it(`onChangeDefault() with callback`, () => {
     let callback = jest.fn();
-    let wrapper = shallow(<UU5.Forms.Checkboxes value={[{label: "Checkbox 1", name: "box1", value: false}]} />);
+    let wrapper = shallow(<UU5.Forms.Checkboxes value={[{ label: "Checkbox 1", name: "box1", value: false }]} />);
     wrapper.instance().onChangeDefault({}, callback);
     expect(callback).toBeCalled();
   });
 
-  it('onValidate()', () => {
+  it("onValidate()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<MixinPropsFunction/>);
+    const wrapper = shallow(<MixinPropsFunction />);
     expect(wrapper.state().isCalled).toBeFalsy();
-    wrapper.simulate('validate');
+    wrapper.simulate("validate");
     expect(window.alert).toBeCalled();
-    expect(window.alert).toHaveBeenCalledWith('onValidate event has been called.');
+    expect(window.alert).toHaveBeenCalledWith("onValidate event has been called.");
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onValidate event has been called.");
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('onChangeFeedback()', () => {
+  it("onChangeFeedback()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<MixinPropsFunction/>);
+    const wrapper = shallow(<MixinPropsFunction />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.state().isCalled).toBeFalsy();
     expect(wrapper.state().isChecked).toBeFalsy();
-    wrapper.simulate('changeFeedback', {target: {value: true}});
+    wrapper.simulate("changeFeedback", { target: { value: true } });
     expect(wrapper.state().isChecked).toBeTruthy();
     expect(window.alert).toBeCalled();
-    expect(window.alert).toHaveBeenCalledWith('onChangeFeedback event has been called.');
+    expect(window.alert).toHaveBeenCalledWith("onChangeFeedback event has been called.");
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onChangeFeedback event has been called.");
     expect(wrapper).toMatchSnapshot();
   });
-
 });
 
-describe('Default values from mixins', () => {
-
+describe("Default values from mixins", () => {
   it(`UU5.Commons.Mixin Base,Elementary`, () => {
-    const wrapper = shallow(
-      <UU5.Forms.Checkboxes id={"uuID"}/>
-    );
+    const wrapper = shallow(<UU5.Forms.Checkboxes id={"uuID"} />);
     //Check UU5.Common.Elementary.Mixin default props
     expect(wrapper.instance().props.hidden).toBeFalsy();
     expect(wrapper.instance().props.disabled).toBeFalsy();
@@ -187,9 +178,7 @@ describe('Default values from mixins', () => {
   });
 
   it(`UU5.Forms.GroupMixin`, () => {
-    const wrapper = shallow(
-      <UU5.Forms.Checkboxes id={"uuID"}/>
-    );
+    const wrapper = shallow(<UU5.Forms.Checkboxes id={"uuID"} />);
     expect(wrapper).toMatchSnapshot();
     //value of default props is in the snapshot
     expect(wrapper.instance().props.required).toBeFalsy();
@@ -201,9 +190,7 @@ describe('Default values from mixins', () => {
   });
 
   it(`UU5.Forms.InputMixin`, () => {
-    const wrapper = shallow(
-      <UU5.Forms.Checkboxes id={"uuID"}/>
-    );
+    const wrapper = shallow(<UU5.Forms.Checkboxes id={"uuID"} />);
     expect(wrapper.instance().props.inputAttrs).toBe(null);
     expect(wrapper.instance().props.size).toEqual("m");
     expect(wrapper.instance().props.readOnly).toBeFalsy();
@@ -217,12 +204,9 @@ describe('Default values from mixins', () => {
     expect(wrapper.instance().props.inputColWidth).toMatchObject({ xs: 12, s: 7 });
     expect(wrapper.instance().props.labelColWidth).toMatchObject({ xs: 12, s: 5 });
   });
-
 });
 
-
 describe(`UU5.Forms.Checkboxes docKit example`, () => {
-
   it(`UU5.Forms.Checkboxes should render as type 1`, () => {
     const wrapper = shallow(
       <UU5.Forms.Checkboxes
@@ -230,9 +214,9 @@ describe(`UU5.Forms.Checkboxes docKit example`, () => {
         label="What kind of pets do you like?"
         size="s"
         value={[
-          {label: 'Dogs', name: 'dogs', value: true},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'}
+          { label: "Dogs", name: "dogs", value: true },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" }
         ]}
       />
     );
@@ -247,14 +231,12 @@ describe(`UU5.Forms.Checkboxes docKit example`, () => {
         size="s"
         type={2}
         value={[
-          {label: 'Dogs', name: 'dogs', value: true},
-          {label: 'Cats', name: 'cats'},
-          {label: 'Yaks', name: 'yaks'}
+          { label: "Dogs", name: "dogs", value: true },
+          { label: "Cats", name: "cats" },
+          { label: "Yaks", name: "yaks" }
         ]}
       />
     );
     expect(wrapper).toMatchSnapshot();
   });
-
-
 });

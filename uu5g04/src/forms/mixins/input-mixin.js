@@ -11,23 +11,23 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 import ns from "../forms-ns.js";
 import * as UU5 from "uu5g04";
 
-import './input-mixin.less';
-import '../col.less';
+import "./input-mixin.less";
+import "../col.less";
 
-import Label from './../internal/label.js';
-import InputWrapper from './../internal/input-wrapper.js';
+import Label from "./../internal/label.js";
+import InputWrapper from "./../internal/input-wrapper.js";
 import Css from "../internal/css.js";
 
-export const INITIAL_FEEDBACK = 'initial';
-export const SUCCESS_FEEDBACK = 'success';
-export const WARNING_FEEDBACK = 'warning';
-export const ERROR_FEEDBACK = 'error';
-export const LOADING_FEEDBACK = 'loading';
+export const INITIAL_FEEDBACK = "initial";
+export const SUCCESS_FEEDBACK = "success";
+export const WARNING_FEEDBACK = "warning";
+export const ERROR_FEEDBACK = "error";
+export const LOADING_FEEDBACK = "loading";
 
 export const InputMixin = {
   //@@viewOn:mixins
@@ -65,7 +65,7 @@ export const InputMixin = {
 
     readOnly: PropTypes.bool,
 
-    size: PropTypes.oneOf(['s', 'm', 'l', 'xl']),
+    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
 
     onChange: PropTypes.func,
     onValidate: PropTypes.func,
@@ -104,13 +104,13 @@ export const InputMixin = {
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function () {
+  getDefaultProps: function() {
     return {
       label: null,
       message: null,
       feedback: INITIAL_FEEDBACK,
       readOnly: false,
-      size: 'm',
+      size: "m",
       onChange: null,
       onValidate: null,
       labelColWidth: InputMixin.statics["UU5.Forms.InputMixin"].defaults.labelColWidth,
@@ -125,8 +125,8 @@ export const InputMixin = {
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  getInitialState: function () {
+  //@@viewOn:reactLifeCycle
+  getInitialState: function() {
     return {
       message: this.props.message,
       feedback: this.props.feedback,
@@ -135,12 +135,12 @@ export const InputMixin = {
     };
   },
 
-  componentDidMount: function () {
+  componentDidMount: function() {
     var parentForm = this._getForm();
     parentForm && parentForm.registerFormInput(this.getId(), this);
   },
 
-  componentWillReceiveProps: function (nextProps) {
+  componentWillReceiveProps: function(nextProps) {
     if (nextProps.id && nextProps.id !== this.props.id) {
       var parentForm = this._getForm();
       if (parentForm) {
@@ -150,15 +150,17 @@ export const InputMixin = {
     }
     if (nextProps.controlled) {
       //TODO: jine komponenty jak text zkontrolovat willRecievePros (byude se modifikovat jen value), vsude musi byt nextProps.controled
-      this.setFeedback(nextProps.feedback, nextProps.message, nextProps.value, ()=> this.setState({readOnly: nextProps.readOnly}));
+      this.setFeedback(nextProps.feedback, nextProps.message, nextProps.value, () =>
+        this.setState({ readOnly: nextProps.readOnly })
+      );
     }
   },
 
-  componentWillUnmount: function () {
+  componentWillUnmount: function() {
     var parentForm = this._getForm();
     parentForm && parentForm.unregisterFormInput(this.getId());
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   isInput() {
@@ -167,7 +169,7 @@ export const InputMixin = {
 
   getValue(...params) {
     let value;
-    if (typeof this.getValue_ === 'function') {
+    if (typeof this.getValue_ === "function") {
       value = this.getValue_(...params);
     } else {
       value = this.getValueDefault();
@@ -179,18 +181,19 @@ export const InputMixin = {
     return this.state.value;
   },
 
-  setValue(value, ...args /* (opts = null,)? setStateCallback */) { // setStateCallback always last
+  setValue(value, ...args /* (opts = null,)? setStateCallback */) {
+    // setStateCallback always last
     // opts can contain flag "shouldValidateRequired" for skipping validation of "required"
     // (used from FormMixin's setValues) - we can't send that flag to setValue_ due to
     // backward compatibility (they expect only 2 arguments so if they called setValueDefault, we wouldn't
     // get the flag) => remember it in internal field and we'll read the field inside _checkRequired (which
     // is defined elsewhere) via shouldValidateRequired() method
-    let setStateCallback = typeof args[args.length - 1] === 'function' ? args.pop() : undefined;
+    let setStateCallback = typeof args[args.length - 1] === "function" ? args.pop() : undefined;
     let opts = args.shift() || {};
     let origShouldValidateRequired = this._shouldValidateRequired;
     this._shouldValidateRequired = opts.shouldValidateRequired;
 
-    if (typeof this.setValue_ === 'function') {
+    if (typeof this.setValue_ === "function") {
       this.setValue_(value, setStateCallback);
     } else {
       this.setValueDefault(value, setStateCallback);
@@ -207,7 +210,7 @@ export const InputMixin = {
 
   getMessage() {
     let message;
-    if (typeof this.getMessage_ === 'function') {
+    if (typeof this.getMessage_ === "function") {
       message = this.getMessage_();
     } else {
       message = this.getMessageDefault();
@@ -220,7 +223,7 @@ export const InputMixin = {
   },
 
   setMessage(message, setStateCallback) {
-    if (typeof this.setMessage_ === 'function') {
+    if (typeof this.setMessage_ === "function") {
       this.setMessage_(message, setStateCallback);
     } else {
       this.setMessageDefault(message, setStateCallback);
@@ -235,7 +238,7 @@ export const InputMixin = {
 
   getFeedback() {
     let feedback;
-    if (typeof this.getFeedback_ === 'function') {
+    if (typeof this.getFeedback_ === "function") {
       feedback = this.getFeedback_();
     } else {
       feedback = this.getFeedbackDefault();
@@ -258,7 +261,7 @@ export const InputMixin = {
       message = null;
     }
 
-    if (typeof this.setFeedback_ === 'function') {
+    if (typeof this.setFeedback_ === "function") {
       this.setFeedback_(feedback, message, value, setStateCallback);
     } else {
       this.setFeedbackDefault(feedback, message, value, setStateCallback);
@@ -268,11 +271,14 @@ export const InputMixin = {
   },
 
   setFeedbackDefault(feedback, message, value, setStateCallback) {
-    this.setState({
-      feedback: feedback,
-      message: message,
-      value: value
-    }, setStateCallback);
+    this.setState(
+      {
+        feedback: feedback,
+        message: message,
+        value: value
+      },
+      setStateCallback
+    );
     return this;
   },
 
@@ -281,7 +287,7 @@ export const InputMixin = {
       message = null;
     }
 
-    if (typeof this.setInitial_ === 'function') {
+    if (typeof this.setInitial_ === "function") {
       this.setInitial_(message, value, setStateCallback);
     } else {
       this.setInitialDefault(message, value, setStateCallback);
@@ -303,7 +309,7 @@ export const InputMixin = {
   },
 
   setLoading(message, value, setStateCallback) {
-    if (typeof this.setLoading_ === 'function') {
+    if (typeof this.setLoading_ === "function") {
       this.setLoading_(message, value, setStateCallback);
     } else {
       this.setLoadingDefault(message, value, setStateCallback);
@@ -322,7 +328,7 @@ export const InputMixin = {
   },
 
   setSuccess(message, value, setStateCallback) {
-    if (typeof this.setSuccess_ === 'function') {
+    if (typeof this.setSuccess_ === "function") {
       this.setSuccess_(message, value, setStateCallback);
     } else {
       this.setSuccessDefault(message, value, setStateCallback);
@@ -340,7 +346,7 @@ export const InputMixin = {
   },
 
   setWarning(message, value, setStateCallback) {
-    if (typeof this.setWarning_ === 'function') {
+    if (typeof this.setWarning_ === "function") {
       this.setWarning_(message, value, setStateCallback);
     } else {
       this.setWarningDefault(message, value, setStateCallback);
@@ -358,7 +364,7 @@ export const InputMixin = {
   },
 
   setError(message, value, setStateCallback) {
-    if (typeof this.setError_ === 'function') {
+    if (typeof this.setError_ === "function") {
       this.setError_(message, value, setStateCallback);
     } else {
       this.setErrorDefault(message, value, setStateCallback);
@@ -376,7 +382,7 @@ export const InputMixin = {
   },
 
   reset(setStateCallback) {
-    if (typeof this.reset_ === 'function') {
+    if (typeof this.reset_ === "function") {
       this.reset_(setStateCallback);
     } else {
       this.resetDefault(setStateCallback);
@@ -385,12 +391,15 @@ export const InputMixin = {
   },
 
   resetDefault(setStateCallback) {
-    this.setState({
-      message: this.props.message,
-      feedback: this.props.feedback,
-      value: this.props.value,
-      readOnly: this.props.readOnly
-    }, setStateCallback);
+    this.setState(
+      {
+        message: this.props.message,
+        feedback: this.props.feedback,
+        value: this.props.value,
+        readOnly: this.props.readOnly
+      },
+      setStateCallback
+    );
     return this;
   },
 
@@ -399,7 +408,7 @@ export const InputMixin = {
   getChangeFeedback(opt) {
     let result;
 
-    if (typeof this.getChangeFeedback_ === 'function') {
+    if (typeof this.getChangeFeedback_ === "function") {
       result = this.getChangeFeedback_(opt);
     } else {
       result = this.getChangeFeedbackDefault(opt);
@@ -417,7 +426,7 @@ export const InputMixin = {
   },
 
   setChangeFeedback(opt, setStateCallback) {
-    if (typeof this.setChangeFeedback_ === 'function') {
+    if (typeof this.setChangeFeedback_ === "function") {
       this.setChangeFeedback_(opt, setStateCallback);
     } else {
       this.setChangeFeedbackDefault(opt, setStateCallback);
@@ -429,11 +438,14 @@ export const InputMixin = {
   setChangeFeedbackDefault(opt, setStateCallback) {
     let result = this.getChangeFeedback(opt);
 
-    this.setState({
-      feedback: result.feedback,
-      message: result.message,
-      value: result.value
-    }, setStateCallback);
+    this.setState(
+      {
+        feedback: result.feedback,
+        message: result.message,
+        value: result.value
+      },
+      setStateCallback
+    );
   },
 
   isReadOnly() {
@@ -441,7 +453,7 @@ export const InputMixin = {
   },
 
   setEditableValue(value, setStateCallback) {
-    if (typeof this.setEditableValue_ === 'function') {
+    if (typeof this.setEditableValue_ === "function") {
       this.setEditableValue_(value, setStateCallback);
     } else {
       this.setEditableValueDefault(value, setStateCallback);
@@ -455,7 +467,7 @@ export const InputMixin = {
   },
 
   readOnly(setStateCallback) {
-    if (typeof this.readOnly_ === 'function') {
+    if (typeof this.readOnly_ === "function") {
       this.readOnly_(setStateCallback);
     } else {
       this.readOnlyDefault(setStateCallback);
@@ -469,7 +481,7 @@ export const InputMixin = {
   },
 
   editable(setStateCallback) {
-    if (typeof this.editable_ === 'function') {
+    if (typeof this.editable_ === "function") {
       this.editable_(setStateCallback);
     } else {
       this.editableDefault(setStateCallback);
@@ -485,7 +497,7 @@ export const InputMixin = {
   getLabel(inputId) {
     let result = null;
     if (this.props.label !== null) {
-      result = <Label {...this._getLabelProps(inputId)} />
+      result = <Label {...this._getLabelProps(inputId)} />;
     }
     return result;
   },
@@ -495,7 +507,7 @@ export const InputMixin = {
   },
 
   focus() {
-    if (typeof this.focus_ === 'function') {
+    if (typeof this.focus_ === "function") {
       this.focus_();
     } else {
       this.findDOMNode().focus();
@@ -513,17 +525,17 @@ export const InputMixin = {
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
-  _getForm: function () {
+  //@@viewOn:private
+  _getForm: function() {
     var form = null;
     var parent = this.getParent && this.getParent();
     while (parent) {
-      if (typeof parent.isInput === 'function' && parent.isInput()) {
+      if (typeof parent.isInput === "function" && parent.isInput()) {
         break;
-      } else if (typeof parent.isForm === 'function' && parent.isForm()) {
+      } else if (typeof parent.isForm === "function" && parent.isForm()) {
         form = parent;
         break;
       } else {
@@ -533,15 +545,15 @@ export const InputMixin = {
     return form;
   },
 
-  _setFeedback: function (feedback, message, value, setStateCallback) {
+  _setFeedback: function(feedback, message, value, setStateCallback) {
     let opt = {
       feedback: feedback,
       message: message,
       value: value,
       callback: setStateCallback,
       component: this
-    }
-    if (typeof this.props.onChangeFeedback === 'function') {
+    };
+    if (typeof this.props.onChangeFeedback === "function") {
       this.props.onChangeFeedback(opt);
     } else {
       this.onChangeFeedbackDefault(opt);
@@ -550,7 +562,7 @@ export const InputMixin = {
   },
 
   onChangeFeedbackDefault(opt) {
-    if (typeof this.onChangeFeedbackDefault_ === 'function') {
+    if (typeof this.onChangeFeedbackDefault_ === "function") {
       this.onChangeFeedbackDefault_(opt);
     } else {
       this.setFeedback(opt.feedback, opt.message, opt.value, opt.callback);
@@ -565,26 +577,26 @@ export const InputMixin = {
       mainAttrs = { className: "" };
     } else {
       mainAttrs = this.getMainAttrs();
-      mainAttrs.className += ' ';
+      mainAttrs.className += " ";
     }
 
     if (this.props.label) {
       delete mainAttrs.title;
     }
 
-    mainAttrs.className += this.getClassName('main', "UU5.Forms.InputMixin");
-    mainAttrs.className += ' ' + this.getClassName('input', "UU5.Forms.InputMixin") + this.props.size;
-    mainAttrs.className += ' ' + this.getClassName('input', "UU5.Forms.InputMixin") + this.state.feedback;
+    mainAttrs.className += this.getClassName("main", "UU5.Forms.InputMixin");
+    mainAttrs.className += " " + this.getClassName("input", "UU5.Forms.InputMixin") + this.props.size;
+    mainAttrs.className += " " + this.getClassName("input", "UU5.Forms.InputMixin") + this.state.feedback;
     if (this.isReadOnly()) {
-      mainAttrs.className += ' ' + this.getClassName('readOnly', "UU5.Forms.InputMixin");
+      mainAttrs.className += " " + this.getClassName("readOnly", "UU5.Forms.InputMixin");
     }
 
     if (this.state.feedback != INITIAL_FEEDBACK || this.props.required) {
-      mainAttrs.className += ' ' + this.getClassName('hasIcon', "UU5.Forms.InputMixin");
+      mainAttrs.className += " " + this.getClassName("hasIcon", "UU5.Forms.InputMixin");
     }
 
     if (this.isLoading() && !this.isDisabled()) {
-      mainAttrs.className += ' ' + this.getClassName("disabled", "UU5.Common.ElementaryMixin");
+      mainAttrs.className += " " + this.getClassName("disabled", "UU5.Common.ElementaryMixin");
     }
 
     if (this.props.nestingLevel === "inline" || this.props.inputWidth) {
@@ -600,11 +612,15 @@ export const InputMixin = {
     }
 
     if (typeof this.props.spacing === "number") {
-      mainAttrs.className += " " + UU5.Common.Css.css`
+      mainAttrs.className +=
+        " " +
+        UU5.Common.Css.css`
         &.uu5-forms-input.uu5-forms-input {
           margin-top: ${this.props.spacing + "px"};
 
-          ${this.props.spacing <= 8 ? `& .uu5-forms-checkbox {
+          ${
+            this.props.spacing <= 8
+              ? `& .uu5-forms-checkbox {
             margin-bottom: 0px;
             margin-top: 0px;
           }
@@ -620,7 +636,9 @@ export const InputMixin = {
 
           & .uu5-forms-label {
             padding-bottom: 0px;
-          }` : null}
+          }`
+              : null
+          }
         }
       `;
     }
@@ -657,7 +675,9 @@ export const InputMixin = {
       const isL = "screen and (min-width: 993px) and (max-width: 1360px)";
       const isXl = "screen and (min-width: 1361px)";
 
-      className = (className ? className + " " : "") + Css.css(`
+      className =
+        (className ? className + " " : "") +
+        Css.css(`
         &.uu5-forms-label {
           @media ${isXs} {
             text-align: ${alignments.xs}
@@ -682,7 +702,7 @@ export const InputMixin = {
       `);
     }
 
-    if (this.props.labelPosition === 'right') {
+    if (this.props.labelPosition === "right") {
       className = (className ? className + " " : "") + ns.css("input-label-right");
     }
 
@@ -803,7 +823,7 @@ export const InputMixin = {
     let inputColWidth = this.props.inputColWidth || this.getDefault("inputColWidth", "UU5.Forms.InputMixin");
 
     if (!this.props.inputWidth && !this.props.labelWidth) {
-      colWidth = UU5.Common.Tools.buildColWidthClassName(hasLabel ? inputColWidth : 'xs12');
+      colWidth = UU5.Common.Tools.buildColWidthClassName(hasLabel ? inputColWidth : "xs12");
     }
 
     let feedback = this.getFeedback();
@@ -832,9 +852,9 @@ export const InputMixin = {
       required: this.props.required,
       buttons: buttons,
       children: children,
-      slider: this.getTagName() === 'UU5.Forms.Slider',
-      datetimepicker: this.getTagName() === 'UU5.Forms.DateTimePicker',
-      daterangepicker: this.getTagName() === 'UU5.Forms.DateRangePicker',
+      slider: this.getTagName() === "UU5.Forms.Slider",
+      datetimepicker: this.getTagName() === "UU5.Forms.DateTimePicker",
+      daterangepicker: this.getTagName() === "UU5.Forms.DateRangePicker",
       readonly: this.state.readOnly,
       disabled: this.isDisabled()
     };
@@ -861,8 +881,23 @@ export const InputMixin = {
     }
 
     return result;
+  },
+
+  _findScrollElement(element) {
+    let result = null;
+
+    while (element && element.tagName) {
+      if (element.classList.contains("uu5-bricks-modal-body") || element === document.documentElement) {
+        result = element;
+        element = null;
+      } else {
+        element = element.parentNode;
+      }
+    }
+
+    return result;
   }
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   //@@viewOff:render

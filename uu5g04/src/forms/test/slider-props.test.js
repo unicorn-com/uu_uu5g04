@@ -11,62 +11,59 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import createReactClass from "create-react-class";
 import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-forms";
+//@@viewOff:imports
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
 const SliderFunctionProps = createReactClass({
-
-  mixins: [
-    UU5.Common.BaseMixin,
-  ],
+  mixins: [UU5.Common.BaseMixin],
 
   getInitialState: () => {
     return {
       isCalled: false,
       value: 0,
-      message: '',
-      feedback: 'initial'
+      message: "",
+      feedback: "initial"
     };
   },
 
-
   onChangeHandler(event) {
-    alert("props.onChange is done.")
-    this.setState({isCalled: true})
-    this.setState({value: event.target.value})
-    this.setState({message: 'Is valid.'})
-    this.setState({feedback: 'success'})
+    alert("props.onChange is done.");
+    this.setState({ isCalled: true });
+    this.setState({ value: event.target.value });
+    this.setState({ message: "Is valid." });
+    this.setState({ feedback: "success" });
   },
 
   onChangedHandler(event) {
-    alert("props.onChanged is done.")
-    this.setState({isCalled: true})
-    this.setState({value: event.target.value})
-    this.setState({message: 'Is valid.'})
-    this.setState({feedback: 'success'})
+    alert("props.onChanged is done.");
+    this.setState({ isCalled: true });
+    this.setState({ value: event.target.value });
+    this.setState({ message: "Is valid." });
+    this.setState({ feedback: "success" });
   },
 
   onValidateHandler(event) {
-    alert("onValidate is done.")
-    this.setState({isCalled: true})
-    this.setState({value: event.target.value})
-    this.setState({message: 'Is valid.'})
-    this.setState({feedback: 'success'})
+    alert("onValidate is done.");
+    this.setState({ isCalled: true });
+    this.setState({ value: event.target.value });
+    this.setState({ message: "Is valid." });
+    this.setState({ feedback: "success" });
   },
 
   onChangeFeedbackHandler(event) {
-    alert("onChangeFeedback is done.")
-    this.setState({isCalled: true})
-    this.setState({value: event.target.value})
-    this.setState({message: 'Is valid.'})
-    this.setState({feedback: 'success'})
+    alert("onChangeFeedback is done.");
+    this.setState({ isCalled: true });
+    this.setState({ value: event.target.value });
+    this.setState({ message: "Is valid." });
+    this.setState({ feedback: "success" });
   },
-
 
   render() {
     return (
@@ -106,7 +103,7 @@ const CONFIG = {
     },
     max: {
       values: [700]
-    },
+    }
     //onChange
     //onChanged
   },
@@ -121,19 +118,17 @@ const CONFIG = {
 describe(`UU5.Forms.Slider props`, () => {
   UU5.Test.Tools.testProperties(UU5.Forms.Slider, CONFIG);
 
-  it('onChange()', () => {
+  it("onChange()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(
-      <SliderFunctionProps/>
-    );
+    const wrapper = shallow(<SliderFunctionProps />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.isCalled).toBeFalsy();
     expect(wrapper.instance().state.value).toBe(0);
     expect(wrapper.instance().state.message).toEqual("");
     expect(wrapper.instance().state.feedback).toMatch(/initial/);
-    wrapper.simulate('change', {target: {value: 5}});
+    wrapper.simulate("change", { target: { value: 5 } });
     expect(window.alert).toBeCalled();
-    expect(window.alert).toHaveBeenCalledWith('props.onChange is done.');
+    expect(window.alert).toHaveBeenCalledWith("props.onChange is done.");
     expect(window.alert.mock.calls[0][0]).toEqual("props.onChange is done.");
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(wrapper.instance().state.value).toBe(5);
@@ -149,19 +144,17 @@ describe(`UU5.Forms.Slider props`, () => {
     expect(callback).toBeCalled();
   });
 
-  it('onChanged()', () => {
+  it("onChanged()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(
-      <SliderFunctionProps/>
-    );
+    const wrapper = shallow(<SliderFunctionProps />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.isCalled).toBeFalsy();
     expect(wrapper.instance().state.value).toBe(0);
     expect(wrapper.instance().state.message).toEqual("");
     expect(wrapper.instance().state.feedback).toMatch(/initial/);
-    wrapper.simulate('changed', {target: {value: 5}});
+    wrapper.simulate("changed", { target: { value: 5 } });
     expect(window.alert).toBeCalled();
-    expect(window.alert).toHaveBeenCalledWith('props.onChanged is done.');
+    expect(window.alert).toHaveBeenCalledWith("props.onChanged is done.");
     expect(window.alert.mock.calls[0][0]).toEqual("props.onChanged is done.");
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(wrapper.instance().state.value).toBe(5);
@@ -169,24 +162,20 @@ describe(`UU5.Forms.Slider props`, () => {
     expect(wrapper.instance().state.feedback).toEqual("success");
     expect(wrapper).toMatchSnapshot();
   });
-
 });
 
-
 describe(`UU5.Forms.Slider props function -> Forms.InputMixin`, () => {
-
-
-  it('onValidate()', () => {
+  it("onValidate()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<SliderFunctionProps/>);
+    const wrapper = shallow(<SliderFunctionProps />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.isCalled).toBeFalsy();
     expect(wrapper.instance().state.value).toBe(0);
     expect(wrapper.instance().state.message).toEqual("");
     expect(wrapper.instance().state.feedback).toMatch(/initial/);
-    wrapper.simulate('validate', {target: {value: 5}});
+    wrapper.simulate("validate", { target: { value: 5 } });
     expect(window.alert).toBeCalled();
-    expect(window.alert).toHaveBeenCalledWith('onValidate is done.');
+    expect(window.alert).toHaveBeenCalledWith("onValidate is done.");
     expect(window.alert.mock.calls[0][0]).toEqual("onValidate is done.");
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(wrapper.instance().state.value).toBe(5);
@@ -195,17 +184,17 @@ describe(`UU5.Forms.Slider props function -> Forms.InputMixin`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('onChangeFeedback()', () => {
+  it("onChangeFeedback()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<SliderFunctionProps/>);
+    const wrapper = shallow(<SliderFunctionProps />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.isCalled).toBeFalsy();
     expect(wrapper.instance().state.value).toBe(0);
     expect(wrapper.instance().state.message).toEqual("");
     expect(wrapper.instance().state.feedback).toMatch(/initial/);
-    wrapper.simulate('changeFeedback', {target: {value: 5}});
+    wrapper.simulate("changeFeedback", { target: { value: 5 } });
     expect(window.alert).toBeCalled();
-    expect(window.alert).toHaveBeenCalledWith('onChangeFeedback is done.');
+    expect(window.alert).toHaveBeenCalledWith("onChangeFeedback is done.");
     expect(window.alert.mock.calls[0][0]).toEqual("onChangeFeedback is done.");
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(wrapper.instance().state.value).toBe(5);
@@ -213,17 +202,11 @@ describe(`UU5.Forms.Slider props function -> Forms.InputMixin`, () => {
     expect(wrapper.instance().state.feedback).toEqual("success");
     expect(wrapper).toMatchSnapshot();
   });
-
 });
-
 
 describe(`UU5.Forms.Slider default props`, () => {
   it(`UU5.Forms.Slider check default props`, () => {
-    const wrapper = shallow(
-      <UU5.Forms.Slider
-        id={"uuID"}
-      />
-    );
+    const wrapper = shallow(<UU5.Forms.Slider id={"uuID"} />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().props.value).toBe(0);
     expect(wrapper.instance().props.step).toBe(1);
@@ -235,14 +218,8 @@ describe(`UU5.Forms.Slider default props`, () => {
 });
 
 describe(`UU5.Forms.Slider check default default props from Mixins`, () => {
-
-
   it(`UU5.Forms.InputMixin`, () => {
-    const wrapper = shallow(
-      <UU5.Forms.Slider
-        id={"uuID"}
-      />
-    );
+    const wrapper = shallow(<UU5.Forms.Slider id={"uuID"} />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().props.inputAttrs).toBe(null);
     expect(wrapper.instance().props.size).toEqual("m");
@@ -258,11 +235,7 @@ describe(`UU5.Forms.Slider check default default props from Mixins`, () => {
   });
 
   it(`UU5.Commons.Base,Elementary,PureRender,Color`, () => {
-    const wrapper = shallow(
-      <UU5.Forms.Slider
-        id={"uuID"}
-      />
-    );
+    const wrapper = shallow(<UU5.Forms.Slider id={"uuID"} />);
     expect(wrapper).toMatchSnapshot();
     //Check UU5.Common.Elementary.Mixin default props
     expect(wrapper.instance().props.hidden).toBeFalsy();
@@ -286,11 +259,7 @@ describe(`UU5.Forms.Slider check default default props from Mixins`, () => {
   });
 
   it(`UU5.Common.ContentMixin`, () => {
-    const wrapper = shallow(
-      <UU5.Forms.Slider
-        id={"uuID"}
-      />
-    );
+    const wrapper = shallow(<UU5.Forms.Slider id={"uuID"} />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().props.content).toBe(null);
     expect(wrapper.instance().props.ignoreInnerHTML).toBeFalsy();
@@ -300,6 +269,4 @@ describe(`UU5.Forms.Slider check default default props from Mixins`, () => {
     expect(wrapper.instance().props.textCorrector).toBeFalsy();
     expect(wrapper.instance().props.dynamic).toBeFalsy();
   });
-
-
 });

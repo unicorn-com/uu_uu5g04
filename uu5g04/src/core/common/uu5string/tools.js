@@ -12,7 +12,15 @@
  */
 
 import SYMBOLS from "./symbols";
-import { TAG, TEMPLATE_REG_EXP, UU5STRING_REGEXP, ATTR_REGEXP, ATTR_VALUE_TYPE_REGEXP, UU5DATA_REGEXP, JSCODE_REGEXP } from "./constants";
+import {
+  TAG,
+  TEMPLATE_REG_EXP,
+  UU5STRING_REGEXP,
+  ATTR_REGEXP,
+  ATTR_VALUE_TYPE_REGEXP,
+  UU5DATA_REGEXP,
+  JSCODE_REGEXP
+} from "./constants";
 import Environment from "../../environment/environment";
 import _Tools from "../tools.js";
 import UU5Data from "./uu5-data.js";
@@ -50,11 +58,10 @@ const Tools = {
     if (!content || !content.length) {
       return null;
     }
-    return content.map(
-      (item, index) =>
-        typeof item === "string"
-          ? Tools.printTemplateToChildren(Environment.textEntityMap.replace(item), data)
-          : Tools._contentWithKeyToChildren(item, index, data, filterFn)
+    return content.map((item, index) =>
+      typeof item === "string"
+        ? Tools.printTemplateToChildren(Environment.textEntityMap.replace(item), data)
+        : Tools._contentWithKeyToChildren(item, index, data, filterFn)
     );
   },
 
@@ -91,7 +98,10 @@ const Tools = {
       return Tools.printTemplateToString(content, data);
     }
     let result = "";
-    content.forEach((item) => result += typeof item === "string" ? Tools.printTemplateToString(item, data) : item.toString(data, filterFn));
+    content.forEach(
+      item =>
+        (result += typeof item === "string" ? Tools.printTemplateToString(item, data) : item.toString(data, filterFn))
+    );
     return result;
   },
 
@@ -110,7 +120,7 @@ const Tools = {
       return Tools.printTemplateToString(content, data);
     }
     let result = "";
-    content.forEach( item => {
+    content.forEach(item => {
       result +=
         (result ? " " : "") +
         (typeof item === "string" ? Tools.printTemplateToString(item, data) : item.toPlainText(data, filterFn));
@@ -232,11 +242,13 @@ const Tools = {
 
     let tagsRegExp = Environment.uu5StringTagsRegExp || null;
 
-    let childStack = [{
-      tag: '_root',
-      children: [],
-      index: 0
-    }];
+    let childStack = [
+      {
+        tag: "_root",
+        children: [],
+        index: 0
+      }
+    ];
 
     let pointer = childStack[0];
 
@@ -248,7 +260,6 @@ const Tools = {
     let matchS;
     let matchUu5String = uu5string.match(UU5STRING_REGEXP);
     if (matchUu5String) {
-
       // !!!!! Never put uu5stringRe to constants, otherwise it gets stuck - because of exec method on regexp
       // groups: comp name, attrs, -, -, -, self-closing, closing tag comp name, content upto next tag
       let tagRe = new RegExp(TAG, "g");
@@ -274,7 +285,6 @@ const Tools = {
           // let text = Environment.textEntityMap.replaceHtmlEntity(matchS[0]);
           pointer.children.push(typeof buildItem === "function" ? buildItem(null, null, text) : text);
         } else {
-
           if (isClosing) {
             //closing tag
 
@@ -293,23 +303,23 @@ const Tools = {
               pre = false;
               let text = tagObj.children.join("");
               // let text = Environment.textEntityMap.replaceHtmlEntity(tagObj.children.join(''));
-              pointer.children[pointer.children.length - 1] = typeof buildItem === "function" ? buildItem(tagObj.tag, tagObj.attrs, text) : text;
+              pointer.children[pointer.children.length - 1] =
+                typeof buildItem === "function" ? buildItem(tagObj.tag, tagObj.attrs, text) : text;
             } else {
               if (tagObj.forbidden) {
                 tagObj.children = `Error: Tag <${tagObj.tag} /> is not allowed.`;
                 tagObj.tag = "Error";
               }
-              pointer.children[pointer.children.length - 1] = typeof buildItem === "function" ? buildItem(tagObj.tag, tagObj.attrs, tagObj.children, true) : tagObj;
+              pointer.children[pointer.children.length - 1] =
+                typeof buildItem === "function" ? buildItem(tagObj.tag, tagObj.attrs, tagObj.children, true) : tagObj;
             }
-
           } else {
             // prevent parsing json inside uu5json
             pre = childTag === "uu5string.pre" || childTag === "uu5json";
             preTag = childTag;
             tagObj = { tag: childTag, children: [], index: matchS.index };
 
-            if (tagsRegExp && !tagsRegExp.test(childTag))
-              tagObj.forbidden = true;
+            if (tagsRegExp && !tagsRegExp.test(childTag)) tagObj.forbidden = true;
             else if (attrs) {
               tagObj.attrs = attrs;
             }
@@ -318,12 +328,17 @@ const Tools = {
               //self-closing tag
               pre = false;
 
-              if (childTag.indexOf('uu5string.') === 0) {
+              if (childTag.indexOf("uu5string.") === 0) {
                 //meta-tag uu5string.*
                 let s = Tools.execMetaTag(childTag, tagObj.attrs);
-                if (s) s.forEach(item => pointer.children.push(typeof buildItem === "function" ? buildItem(null, null, item) : item));
+                if (s)
+                  s.forEach(item =>
+                    pointer.children.push(typeof buildItem === "function" ? buildItem(null, null, item) : item)
+                  );
               } else {
-                pointer.children.push(typeof buildItem === "function" ? buildItem(tagObj.tag, tagObj.attrs, tagObj.children, false) : tagObj);
+                pointer.children.push(
+                  typeof buildItem === "function" ? buildItem(tagObj.tag, tagObj.attrs, tagObj.children, false) : tagObj
+                );
               }
             } else {
               //common tag
@@ -351,7 +366,6 @@ const Tools = {
         err.context = { uu5string, tag: tagObj.tag, index: tagObj.index };
         throw err;
       }
-
     } else {
       pointer.children.push(typeof buildItem === "function" ? buildItem(null, null, uu5string) : uu5string);
     }
@@ -359,7 +373,7 @@ const Tools = {
     return pointer.children;
   },
 
-  parseUU5StringProps(attrsString, buildItem){
+  parseUU5StringProps(attrsString, buildItem) {
     let attrs = [];
 
     // group1 = separator
@@ -382,13 +396,17 @@ const Tools = {
       let isUnquoted = !!matchAttrs[5];
 
       if (isUnquoted) {
-        if (matchValue === "true") { //true
+        if (matchValue === "true") {
+          //true
           value = true;
-        } else if (matchValue === "false") { //false
+        } else if (matchValue === "false") {
+          //false
           value = false;
-        } else if (isFinite(matchValue)) { //number
+        } else if (isFinite(matchValue)) {
+          //number
           value = +matchValue;
-        } else { //any other -> null
+        } else {
+          //any other -> null
           value = null;
         }
       } else if (matchValue != null) {
@@ -397,12 +415,13 @@ const Tools = {
           valueBoundaries = "'";
           matchValue = matchValue.substr(1, matchValue.length - 2).replace(/\\([\\'])/g, "$1");
         } else if (matchValue[0] === '"') {
-          valueBoundaries = "\"";
+          valueBoundaries = '"';
           matchValue = matchValue.substr(1, matchValue.length - 2).replace(/\\([\\"])/g, "$1");
         }
 
         let matchValueType = matchValue.match(ATTR_VALUE_TYPE_REGEXP);
-        if (matchValueType[1]) { //uu5JSON
+        if (matchValueType[1]) {
+          //uu5JSON
           valueType = "uu5json";
           try {
             value = UU5Json.parse(matchValue);
@@ -410,14 +429,17 @@ const Tools = {
             e.context.prop = name;
             throw e;
           }
-        } else if (matchValueType[2]) { //uu5String
+        } else if (matchValueType[2]) {
+          //uu5String
           valueType = "uu5string";
           value = Tools.parseUu5String(matchValue, buildItem);
-        } else if (matchValueType[3]) { //uu5Data
+        } else if (matchValueType[3]) {
+          //uu5Data
           valueType = "uu5data";
-          uu5DataKey = matchValue.replace(UU5DATA_REGEXP, '');
+          uu5DataKey = matchValue.replace(UU5DATA_REGEXP, "");
           value = UU5Data.parse(matchValue);
-        } else { //as-is
+        } else {
+          //as-is
           if (name === "href") {
             matchValue = matchValue.replace(JSCODE_REGEXP, "");
           }
@@ -438,13 +460,13 @@ const Tools = {
     let metaTag = tag.slice(10);
     let r = [];
     switch (metaTag) {
-      case 'now':
+      case "now":
         r.push(SYMBOLS.now());
         break;
-      case 'codeHex32':
+      case "codeHex32":
         r.push(SYMBOLS.idHex32());
         break;
-      case 'codeHex64':
+      case "codeHex64":
         r.push(SYMBOLS.idHex64());
         break;
       default:
@@ -458,7 +480,10 @@ const Tools = {
     // TODO Maybe unescape emojis too.
     // NOTE Environment.textEntityMap doesn't have unescaping mechanism and it contains
     // multiple mappings to the same character, e.g. &lt; and &#060; are both mapped to ">".
-    return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    return text
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
   }
 };
 

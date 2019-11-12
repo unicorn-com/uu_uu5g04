@@ -11,25 +11,26 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
 import "uu5g04-bricks";
 
-import ControlsMixin from './mixins/controls-mixin.js';
-import './controls.less';
+import ControlsMixin from "./mixins/controls-mixin.js";
+import "./controls.less";
+//@@viewOff:imports
 
 const buttonPropTypes = PropTypes.shape({
-  size: PropTypes.oneOf(['s', 'm', 'l', 'xl']),
+  size: PropTypes.oneOf(["s", "m", "l", "xl"]),
   content: PropTypes.any,
   colorSchema: PropTypes.oneOf(UU5.Environment.colorSchema),
-  bgStyle: PropTypes.oneOf(['filled', 'outline', 'transparent', 'underline'])
+  bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"])
 });
 
 export const Controls = createReactClass({
-
   //@@viewOn:mixins
   mixins: [ControlsMixin],
   //@@viewOff:mixins
@@ -40,12 +41,12 @@ export const Controls = createReactClass({
     classNames: {
       main: ns.css("controls")
     },
-    lsi: () => (UU5.Environment.Lsi.Forms.controls),
+    lsi: () => UU5.Environment.Lsi.Forms.controls,
     defaults: {
       reset: { bgStyle: "transparent" },
       validate: { bgStyle: "transparent" },
       submit: { colorSchema: "primary" },
-      cancel: { }
+      cancel: {}
     }
   },
   //@@viewOff:statics
@@ -59,40 +60,40 @@ export const Controls = createReactClass({
     buttonReset: PropTypes.bool,
     buttonValidate: PropTypes.bool
   },
- //@@viewOff:propTypes
+  //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps () {
+  getDefaultProps() {
     return {
       buttonReset: false,
       buttonValidate: false,
-      buttonSubmitProps:null,
-      buttonCancelProps:null,
-      buttonValidateProps:null,
-      buttonResetProps:null
+      buttonSubmitProps: null,
+      buttonCancelProps: null,
+      buttonValidateProps: null,
+      buttonResetProps: null
     };
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     return this._mergeButtonsState();
   },
 
-  componentWillReceiveProps(nextProps){
-    if(this.props.controlled){
+  componentWillReceiveProps(nextProps) {
+    if (this.props.controlled) {
       this.setState(this._mergeButtonsState(nextProps));
     }
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _save() {
     let form = this.getForm();
     form.save();
@@ -113,7 +114,11 @@ export const Controls = createReactClass({
   },
 
   _constructButtonState(buttonName, props = this.props) {
-    let buttonState = UU5.Common.Tools.merge({}, this.getDefault(buttonName), props[this._getButtonKeyName(buttonName)]);
+    let buttonState = UU5.Common.Tools.merge(
+      {},
+      this.getDefault(buttonName),
+      props[this._getButtonKeyName(buttonName)]
+    );
     buttonState.content = buttonState.content || this.getLsiComponent(buttonName === "submit" ? "ok" : buttonName); // For some reason Lsi for a submit button is called "ok"
     return buttonState;
   },
@@ -133,31 +138,21 @@ export const Controls = createReactClass({
 
     return newState;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
     return (
       <UU5.Common.Div {...this._getMainPropsToPass()}>
-        {(this.props.buttonReset) &&
-          <UU5.Bricks.Button
-            {...this._getButtonState("reset")}
-            onClick={() => this.getForm().reset()}
-          />
-        }
+        {this.props.buttonReset && (
+          <UU5.Bricks.Button {...this._getButtonState("reset")} onClick={() => this.getForm().reset()} />
+        )}
 
-        {(this.props.buttonValidate) && <UU5.Bricks.Button
-          {...this._getButtonState("validate")}
-            onClick={() => this.getForm().validate()}
-        />}
-        <UU5.Bricks.Button
-          {...this._getButtonState("cancel")}
-          onClick={() => this.getForm().cancel()}
-        />
-        <UU5.Bricks.Button
-          {...this._getButtonState("submit")}
-          onClick={this._save}
-        />
+        {this.props.buttonValidate && (
+          <UU5.Bricks.Button {...this._getButtonState("validate")} onClick={() => this.getForm().validate()} />
+        )}
+        <UU5.Bricks.Button {...this._getButtonState("cancel")} onClick={() => this.getForm().cancel()} />
+        <UU5.Bricks.Button {...this._getButtonState("submit")} onClick={this._save} />
       </UU5.Common.Div>
     );
   }

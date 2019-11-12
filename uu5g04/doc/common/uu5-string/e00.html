@@ -62,16 +62,16 @@
       var Page = createReactClass({
         mixins: [UU5.Common.BaseMixin],
 
-        //@@viewOn:standardComponentLifeCycle
+        //@@viewOn:reactLifeCycle
         getInitialState(){
           return {
             uu5string: defaultUU5String,
             data: defaultData
           }
         },
-        //@@viewOff:standardComponentLifeCycle
+        //@@viewOff:reactLifeCycle
 
-        //@@viewOn:componentSpecificHelpers
+        //@@viewOn:private
         /*@@viewOn:0*/
         _renderUU5String(){
           if (!this.state.uu5string) return null;
@@ -96,7 +96,7 @@
         },
         _registerTextEditor(editor){ this._uu5stringEditor = editor; },
         _registerJsonEditor(editor){ this._jsonEditor = editor; },
-        //@@viewOff:componentSpecificHelpers
+        //@@viewOff:private
 
         //@@viewOn:render
         render(){

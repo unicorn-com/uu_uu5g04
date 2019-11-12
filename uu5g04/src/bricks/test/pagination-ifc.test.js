@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -18,8 +18,7 @@ import "uu5g04-bricks";
 const { mount, shallow, wait } = UU5.Test.Tools;
 
 describe(`UU5.Bricks.Pagination interface testing`, () => {
-
-  it('getItemsLength()', () => {
+  it("getItemsLength()", () => {
     const wrapper = shallow(
       <UU5.Bricks.Pagination
         id={"uuID"}
@@ -37,7 +36,7 @@ describe(`UU5.Bricks.Pagination interface testing`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getActiveIndex()', () => {
+  it("getActiveIndex()", () => {
     const wrapper = shallow(
       <UU5.Bricks.Pagination
         id={"uuID"}
@@ -55,7 +54,7 @@ describe(`UU5.Bricks.Pagination interface testing`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setActiveIndex(true, setStateCallback)', () => {
+  it("setActiveIndex(true, setStateCallback)", () => {
     const wrapper = shallow(
       <UU5.Bricks.Pagination
         id={"uuID"}
@@ -80,7 +79,7 @@ describe(`UU5.Bricks.Pagination interface testing`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setActiveIndex(false, setStateCallback)', () => {
+  it("setActiveIndex(false, setStateCallback)", () => {
     const wrapper = shallow(
       <UU5.Bricks.Pagination
         id={"uuID"}
@@ -105,7 +104,7 @@ describe(`UU5.Bricks.Pagination interface testing`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setActiveIndex(number, setStateCallback)', () => {
+  it("setActiveIndex(number, setStateCallback)", () => {
     const wrapper = shallow(
       <UU5.Bricks.Pagination
         id={"uuID"}
@@ -130,7 +129,7 @@ describe(`UU5.Bricks.Pagination interface testing`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('increaseActiveIndex(setStateCallBack) increase from 11 to max_range', () => {
+  it("increaseActiveIndex(setStateCallBack) increase from 11 to max_range", () => {
     const wrapper = shallow(
       <UU5.Bricks.Pagination
         id={"uuID"}
@@ -164,7 +163,7 @@ describe(`UU5.Bricks.Pagination interface testing`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('decreaseActiveIndex(setStateCallBack) when activeIndex is 0', () => {
+  it("decreaseActiveIndex(setStateCallBack) when activeIndex is 0", () => {
     const wrapper = shallow(
       <UU5.Bricks.Pagination
         id={"uuID"}
@@ -186,7 +185,7 @@ describe(`UU5.Bricks.Pagination interface testing`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('decreaseActiveIndex(setStateCallBack)', () => {
+  it("decreaseActiveIndex(setStateCallBack)", () => {
     const wrapper = shallow(
       <UU5.Bricks.Pagination
         id={"uuID"}
@@ -209,6 +208,4 @@ describe(`UU5.Bricks.Pagination interface testing`, () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper).toMatchSnapshot();
   });
-
-
 });

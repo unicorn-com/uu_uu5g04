@@ -11,15 +11,16 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import createReactClass from "create-react-class";
+//@@viewOff:imports
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyModalComponent = createReactClass({
-
   getInitialState: () => {
     return {
       isCalled: false
@@ -28,17 +29,12 @@ const MyModalComponent = createReactClass({
 
   onCloseAlert(event) {
     alert("You closed modal window.");
-    this.setState({isCalled: true})
+    this.setState({ isCalled: true });
   },
 
   render() {
     return (
-      <UU5.Bricks.Modal
-        shown={true}
-        header="sticky"
-        id={"idModal"}
-        onClose={this.onCloseAlert}
-      >
+      <UU5.Bricks.Modal shown={true} header="sticky" id={"idModal"} onClose={this.onCloseAlert}>
         This modal has props shown = true and onClose eventn handlers.
       </UU5.Bricks.Modal>
     );
@@ -121,23 +117,19 @@ const CONFIG = {
 
 const This = {};
 
-
 describe(`UU5.Bricks.Modal props`, () => {
   UU5.Test.Tools.testProperties(UU5.Bricks.Modal, CONFIG);
 });
 
 describe(`UU5.Bricks.Modal props.Function`, () => {
-
   it(`UU5.Bricks.Modal -  onClose() should be called`, () => {
     window.alert = jest.fn();
-    const wrapper = shallow(
-      <MyModalComponent/>
-    );
+    const wrapper = shallow(<MyModalComponent />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.state().isCalled).toBeFalsy();
-    wrapper.simulate('close');
+    wrapper.simulate("close");
     expect(window.alert).toBeCalled();
-    expect(window.alert).toHaveBeenCalledWith('You closed modal window.');
+    expect(window.alert).toHaveBeenCalledWith("You closed modal window.");
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("You closed modal window.");
     expect(wrapper).toMatchSnapshot();
@@ -336,12 +328,8 @@ describe(`UU5.Bricks.Modal props.Function`, () => {
 describe(`UU5.Bricks.Modal docKit example`, () => {
   it(`UU5.Bricks.Modal example01`, () => {
     const wrapper = shallow(
-      <UU5.Bricks.Modal
-        id={"modalID"}
-        shown={true}
-        header="shown"
-      >
-        This modal has props <UU5.Bricks.Code id={"idCODE"} content='shown'/> and therefore is displayed right away.
+      <UU5.Bricks.Modal id={"modalID"} shown={true} header="shown">
+        This modal has props <UU5.Bricks.Code id={"idCODE"} content="shown" /> and therefore is displayed right away.
       </UU5.Bricks.Modal>
     );
     expect(wrapper).toMatchSnapshot();

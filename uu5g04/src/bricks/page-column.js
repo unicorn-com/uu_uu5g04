@@ -11,6 +11,7 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import React from "react";
 import createReactClass from "create-react-class";
 import PropTypes from "prop-types";
@@ -26,6 +27,7 @@ import ScrollArea from "./scroll-area.js";
 import Css from "./internal/css.js";
 
 import "./page-column.less";
+//@@viewOff:imports
 
 export const PageColumn = createReactClass({
   //@@viewOn:mixins
@@ -82,6 +84,7 @@ export const PageColumn = createReactClass({
     overlayTop: PropTypes.bool,
     overlayBottom: PropTypes.bool,
     relative: PropTypes.bool,
+    resizable: PropTypes.oneOfType([PropTypes.bool, PropTypes.oneOf(["open", "closed"])]),
     onUpdate: PropTypes.func,
     onResize: PropTypes.func
   },
@@ -111,6 +114,7 @@ export const PageColumn = createReactClass({
       overlayTop: false,
       overlayBottom: false,
       relative: false,
+      resizable: false,
       onUpdate: null,
       onResize: null,
       topOverlaysContent: false
@@ -118,7 +122,7 @@ export const PageColumn = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     let width = this._getWidth(false, this.props);
     let ghostWidth = this._getGhostWidth(this.props, this.props.open, width);
@@ -148,7 +152,11 @@ export const PageColumn = createReactClass({
     if (nextProps.controlled) {
       this._prevWidth = width;
       this.setState({ open: nextProps.block || nextProps.open, width, ghostWidth });
-    } else if (nextProps.minWidth !== this.props.minWidth || nextProps.maxWidth !== this.props.maxWidth || nextProps.width !== this.props.width) {
+    } else if (
+      nextProps.minWidth !== this.props.minWidth ||
+      nextProps.maxWidth !== this.props.maxWidth ||
+      nextProps.width !== this.props.width
+    ) {
       this.setState({ width, ghostWidth });
     }
 
@@ -177,7 +185,11 @@ export const PageColumn = createReactClass({
 
       UU5.Environment.EventListener.registerEvent("hidePageBottom", this.getId(), this._onHidePageBottom);
       UU5.Environment.EventListener.registerEvent("fixPageBottom", this.getId(), this._onFixPageBottom);
-      UU5.Environment.EventListener.registerEvent("changePageBottomHeight", this.getId(), this._onChangePageBottomHeight);
+      UU5.Environment.EventListener.registerEvent(
+        "changePageBottomHeight",
+        this.getId(),
+        this._onChangePageBottomHeight
+      );
     }
   },
 
@@ -232,7 +244,7 @@ export const PageColumn = createReactClass({
       }
     }
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   isFloat() {
@@ -241,8 +253,17 @@ export const PageColumn = createReactClass({
 
   open(setStateCallback) {
     if (!this.props.block) {
-      setStateCallback = this.props.parent._swiper ? () => this.props.parent._swiper[this.props.right ? "openRightMenu" : "openLeftMenu"](setStateCallback) : setStateCallback;
-      this.setState({ open: true, width: this._getWidth(false, this.props, null, true), ghostWidth: this._getGhostWidth(this.props, true) }, setStateCallback);
+      setStateCallback = this.props.parent._swiper
+        ? () => this.props.parent._swiper[this.props.right ? "openRightMenu" : "openLeftMenu"](setStateCallback)
+        : setStateCallback;
+      this.setState(
+        {
+          open: true,
+          width: this._getWidth(false, this.props, null, true),
+          ghostWidth: this._getGhostWidth(this.props, true)
+        },
+        setStateCallback
+      );
     } else if (typeof setStateCallback === "function") {
       setStateCallback();
     }
@@ -252,8 +273,17 @@ export const PageColumn = createReactClass({
 
   close(setStateCallback) {
     if (!this.props.block) {
-      setStateCallback = this.props.parent._swiper ? () => this.props.parent._swiper[this.props.right ? "closeRightMenu" : "closeLeftMenu"](setStateCallback) : setStateCallback;
-      this.setState({ open: false, width: this._getWidth(false, this.props, null, false), ghostWidth: this._getGhostWidth(this.props, false) }, setStateCallback);
+      setStateCallback = this.props.parent._swiper
+        ? () => this.props.parent._swiper[this.props.right ? "closeRightMenu" : "closeLeftMenu"](setStateCallback)
+        : setStateCallback;
+      this.setState(
+        {
+          open: false,
+          width: this._getWidth(false, this.props, null, false),
+          ghostWidth: this._getGhostWidth(this.props, false)
+        },
+        setStateCallback
+      );
     } else if (typeof setStateCallback === "function") {
       setStateCallback();
     }
@@ -271,7 +301,7 @@ export const PageColumn = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
+  //@@viewOn:overriding
   shouldComponentUpdate_(nextProps, nextState) {
     let shouldUpdate = this.shouldComponentUpdateDefault(nextProps, nextState);
 
@@ -281,9 +311,9 @@ export const PageColumn = createReactClass({
 
     return shouldUpdate;
   },
-  //@@viewOff:overridingMethods
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _registerStandardEvents() {
     UU5.Environment.EventListener.addWindowEvent("scroll", this.getId(), this._onEvent);
     UU5.Environment.EventListener.addWindowEvent("wheel", this.getId(), this._onEvent);
@@ -346,7 +376,10 @@ export const PageColumn = createReactClass({
     this._pageTop = document.getElementById(props.topId);
     this._pageBottom = document.getElementById(props.bottomId);
     this._pageContent = document.getElementById(props.contentId);
-    this._domNode = this._columnRef === undefined || this._columnRef instanceof HTMLElement ? this._columnRef : this._columnRef.findDOMNode();
+    this._domNode =
+      this._columnRef === undefined || this._columnRef instanceof HTMLElement
+        ? this._columnRef
+        : this._columnRef.findDOMNode();
     return this;
   },
 
@@ -451,7 +484,11 @@ export const PageColumn = createReactClass({
     e.preventDefault();
     e.stopPropagation();
 
-    this._prevWidth = (this._columnRef === undefined || this._columnRef instanceof HTMLElement ? this._columnRef : this._columnRef.findDOMNode()).getBoundingClientRect().width + "px";
+    this._prevWidth =
+      (this._columnRef === undefined || this._columnRef instanceof HTMLElement
+        ? this._columnRef
+        : this._columnRef.findDOMNode()
+      ).getBoundingClientRect().width + "px";
 
     UU5.Environment.EventListener.addWindowEvent("mouseup", this.getId(), this._onDragMouseUp);
     UU5.Environment.EventListener.addWindowEvent("mousemove", this.getId(), this._onDrag);
@@ -472,7 +509,9 @@ export const PageColumn = createReactClass({
 
     this._preventContentRender = true;
     if (this._resized) {
-      this.setState({ resizing: false }, () => this.props.onResize(e, this._prevWidth, this.state.width, this.props.right));
+      this.setState({ resizing: false }, () =>
+        this.props.onResize(e, this._prevWidth, this.state.width, this.props.right)
+      );
       this._resized = false;
     } else {
       this.setState({ resizing: false });
@@ -498,7 +537,9 @@ export const PageColumn = createReactClass({
 
     this._resized = true;
     this._preventContentRender = true;
-    this.setState({ width: newWidth + "px", ghostWidth }, () => UU5.Environment.EventListener.triggerEvent("pageColumnChanged"));
+    this.setState({ width: newWidth + "px", ghostWidth }, () =>
+      UU5.Environment.EventListener.triggerEvent("pageColumnChanged")
+    );
   },
 
   _getDynamicStyles(isWrapper, isGhost) {
@@ -545,7 +586,9 @@ export const PageColumn = createReactClass({
         }
 
         if (this.state.bottomFixed && this.props.fixed && this.state.animateBottom) {
-          marginTransitions = marginTransitions ? marginTransitions + ", 0.3s ease margin-bottom" : "0.3s ease margin-bottom";
+          marginTransitions = marginTransitions
+            ? marginTransitions + ", 0.3s ease margin-bottom"
+            : "0.3s ease margin-bottom";
           heightTransitions = "0.3s ease height";
         }
       }
@@ -573,7 +616,13 @@ export const PageColumn = createReactClass({
 
     return Css.css(`
       & {
-        transition: ${buildTransitionRule(transformTransitions, visibilityTransitions, widthTransitions, marginTransitions, heightTransitions)};
+        transition: ${buildTransitionRule(
+          transformTransitions,
+          visibilityTransitions,
+          widthTransitions,
+          marginTransitions,
+          heightTransitions
+        )};
         transform: ${transform};
       }
 
@@ -808,7 +857,10 @@ export const PageColumn = createReactClass({
   _getMainGhostProps(getStyles) {
     let props = this.getMainPropsToPass();
     let style = getStyles
-      ? UU5.Common.Tools.merge(props.style || {}, this.state.style, { width: this.state.width, maxWidth: this.state.width })
+      ? UU5.Common.Tools.merge(props.style || {}, this.state.style, {
+          width: this.state.width,
+          maxWidth: this.state.width
+        })
       : {};
 
     props.id = this.getId();
@@ -855,12 +907,26 @@ export const PageColumn = createReactClass({
     };
   },
 
+  _isResizable() {
+    if (typeof this.props.resizable === "boolean") {
+      return this.props.resizable;
+    } else if (this.props.resizable === "open" && this.state.open) {
+      return true;
+    } else if (this.props.resizable === "closed" && !this.state.open) {
+      return true;
+    } else {
+      return false;
+    }
+  },
+
   _getDragElement() {
-    return (typeof this.props.onResize === "function" ? <div
-      onMouseDown={this._onDragMouseDown}
-      onTouchStart={this._onDragMouseDown}
-      className={this.getClassName("draggable")}
-    /> : null);
+    return this._isResizable() ? (
+      <div
+        onMouseDown={this._onDragMouseDown}
+        onTouchStart={this._onDragMouseDown}
+        className={this.getClassName("draggable")}
+      />
+    ) : null;
   },
   //@@viewOff:componentSpecificHelpers
 

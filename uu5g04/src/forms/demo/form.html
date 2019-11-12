@@ -139,6 +139,15 @@
     }
   });
 
+
+  const level = 4;
+  const tooltip = {
+    cs: "česky",
+    en: "english"
+  }
+  const tooltipIcon = "mdi-check";
+  const colWidth = undefined
+
   const Page = createReactClass({
 
     getInitialState() {
@@ -147,91 +156,92 @@
       };
     },
 
-    render() {
-      let level = 4;
-      let tooltip = {
-        cs: "česky",
-        en: "english"
-      }
-      let tooltipIcon = "mdi-check";
-      let colWidth = undefined
+    _getCompleteForm() {
+      return (
+        <UU5.Forms.Form
+          onSave={(opt) => alert(JSON.stringify(opt.values, null, 2))}
+          // values={{
+          //   text: "", "textarea": "", textbuttons: "", texticon: "", number: null, DatePicker: "", TimePicker: "", dateTimePicker: "",
+          //   checkbox: false, checkboxes: {one:false,two:false,three:false,four:false,five:false}, radios: "", select: "", file: null, slider: 0
+          // }}
+        >
+          <UU5.Forms.Text size="s" label="Text" name="text1" placeholder="Placeholder" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
+          <UU5.Forms.Text size="m" label="Text" name="text2" placeholder="Placeholder" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
+          <UU5.Forms.Text size="l" label="Text" name="text3" placeholder="Placeholder" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
+          <UU5.Forms.Text size="xl" label="Text" name="text4" placeholder="Placeholder" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
+          <UU5.Forms.TextArea label="TextArea" name="textarea" placeholder="Placeholder" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
+          <UU5.Forms.TextButton
+            label="TextButtons"
+            name="textbuttons"
+            placeholder="Placeholder"
+            buttons={[{ "icon": "uu5-ok", "colorSchema": "success" }, {
+              "icon": "uu5-cross",
+              "colorSchema": "danger"
+            }]}
+            tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
+          <UU5.Forms.TextIcon label="TextIcon" name="texticon" placeholder="Placeholder" icon="uu5-finder"
+                              tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
 
+          <UU5.Forms.Number label="Number" name="number" placeholder="Placeholder" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
+
+          <UU5.Forms.DatePicker label="DatePicker" name="DatePicker" placeholder="Placeholder" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
+          <UU5.Forms.TimePicker label="TimePicker" name="TimePicker" placeholder="Placeholder" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
+          <UU5.Forms.DateTimePicker label="DateTimePicker" name="dateTimePicker" placeholder="Placeholder"
+                                    tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
+          <UU5.Forms.DateRangePicker label="DateRangePicker" name="DateRangePicker" placeholder="Placeholder" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
+          <UU5.Forms.DateTimeRangePicker label="DateTimeRangePicker" name="DateTimeRangePicker" placeholder="Placeholder" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
+
+          <UU5.Forms.Checkbox label="Checkbox" name="checkbox" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
+          <UU5.Forms.Checkboxes
+            label="Checkboxes"
+            name="checkboxes"
+            value={[
+              { "label": "One", "name": "one" },
+              { "label": "Two", "name": "two" },
+              { "label": "Three", "name": "three" },
+              { "label": "Four", "name": "four" },
+              { "label": "Five", "name": "five" }
+            ]}
+            tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
+          <UU5.Forms.Radios
+            label="Radios"
+            name="radios"
+            value={[
+              { "label": "One", "name": "one" },
+              { "label": "Two", "name": "two" },
+              { "label": "Three", "name": "three" },
+              { "label": "Four", "name": "four" },
+              { "label": "Five", "name": "five" }
+            ]}
+            tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
+
+          <UU5.Forms.Select label="Select" name="select" placeholder="Placeholder" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default">
+            <UU5.Forms.Select.Option value="One" />
+            <UU5.Forms.Select.Option value="Two" />
+            <UU5.Forms.Select.Option value="Three" />
+            <UU5.Forms.Select.Option value="Four" />
+            <UU5.Forms.Select.Option value="Five" />
+            <UU5.Forms.Select.Option value="Six" />
+          </UU5.Forms.Select>
+
+          <UU5.Forms.File label="File" name="file" placeholder="Placeholder" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
+
+          <UU5.Forms.Slider label="Slider" name="slider" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
+
+          <UU5.Forms.Controls buttonReset buttonValidate />
+        </UU5.Forms.Form>
+      );
+    },
+
+    render() {
       return (
         <UU5.Bricks.Container>
           <UU5.Bricks.Button onClick={() => UU5.Common.Tools.setLanguage("en")} content="set english" />
           <UU5.Bricks.Button onClick={() => UU5.Common.Tools.setLanguage("cs")} content="set czech" />
-          <UU5.Forms.Form
-            onSave={(opt) => alert(JSON.stringify(opt.values, null, 2))}
-            // values={{
-            //   text: "", "textarea": "", textbuttons: "", texticon: "", number: null, DatePicker: "", TimePicker: "", dateTimePicker: "",
-            //   checkbox: false, checkboxes: {one:false,two:false,three:false,four:false,five:false}, radios: "", select: "", file: null, slider: 0
-            // }}
-          >
-            <UU5.Forms.Text size="s" label="Text" name="text1" placeholder="Placeholder" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
-            <UU5.Forms.Text size="m" label="Text" name="text2" placeholder="Placeholder" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
-            <UU5.Forms.Text size="l" label="Text" name="text3" placeholder="Placeholder" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
-            <UU5.Forms.Text size="xl" label="Text" name="text4" placeholder="Placeholder" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
-            <UU5.Forms.TextArea label="TextArea" name="textarea" placeholder="Placeholder" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
-            <UU5.Forms.TextButton
-              label="TextButtons"
-              name="textbuttons"
-              placeholder="Placeholder"
-              buttons={[{ "icon": "uu5-ok", "colorSchema": "success" }, {
-                "icon": "uu5-cross",
-                "colorSchema": "danger"
-              }]}
-              tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
-            <UU5.Forms.TextIcon label="TextIcon" name="texticon" placeholder="Placeholder" icon="uu5-finder"
-                                tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
-
-            <UU5.Forms.Number label="Number" name="number" placeholder="Placeholder" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
-
-            <UU5.Forms.DatePicker label="DatePicker" name="DatePicker" placeholder="Placeholder" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
-            <UU5.Forms.TimePicker label="TimePicker" name="TimePicker" placeholder="Placeholder" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
-            <UU5.Forms.DateTimePicker label="DateTimePicker" name="dateTimePicker" placeholder="Placeholder"
-                                      tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
-            <UU5.Forms.DateRangePicker label="DateRangePicker" name="DateRangePicker" placeholder="Placeholder" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
-            <UU5.Forms.DateTimeRangePicker label="DateTimeRangePicker" name="DateTimeRangePicker" placeholder="Placeholder" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
-
-            <UU5.Forms.Checkbox label="Checkbox" name="checkbox" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
-            <UU5.Forms.Checkboxes
-              label="Checkboxes"
-              name="checkboxes"
-              value={[
-                { "label": "One", "name": "one" },
-                { "label": "Two", "name": "two" },
-                { "label": "Three", "name": "three" },
-                { "label": "Four", "name": "four" },
-                { "label": "Five", "name": "five" }
-              ]}
-              tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
-            <UU5.Forms.Radios
-              label="Radios"
-              name="radios"
-              value={[
-                { "label": "One", "name": "one" },
-                { "label": "Two", "name": "two" },
-                { "label": "Three", "name": "three" },
-                { "label": "Four", "name": "four" },
-                { "label": "Five", "name": "five" }
-              ]}
-              tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
-
-            <UU5.Forms.Select label="Select" name="select" placeholder="Placeholder" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default">
-              <UU5.Forms.Select.Option value="One" />
-              <UU5.Forms.Select.Option value="Two" />
-              <UU5.Forms.Select.Option value="Three" />
-              <UU5.Forms.Select.Option value="Four" />
-              <UU5.Forms.Select.Option value="Five" />
-              <UU5.Forms.Select.Option value="Six" />
-            </UU5.Forms.Select>
-
-            <UU5.Forms.File label="File" name="file" placeholder="Placeholder" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
-
-            <UU5.Forms.Slider label="Slider" name="slider" tooltip={tooltip} labelColWidth={colWidth} tooltipIcon={tooltipIcon} bgStyle="outline" colorSchema="default" />
-
-            <UU5.Forms.Controls buttonReset buttonValidate />
-          </UU5.Forms.Form>
+          <UU5.Bricks.Button onClick={() => this._modal.open()} content="form in modal" />
+          <UU5.Bricks.Line />
+          <UU5.Bricks.Modal size="m" ref_={(ref) => this._modal = ref} content={this._getCompleteForm()} />
+          {this._getCompleteForm()}
 
           <UU5.Bricks.Section level={level} header="values">
             {/*@@viewOn:0*/}

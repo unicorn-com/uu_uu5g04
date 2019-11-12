@@ -11,15 +11,17 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Css from "./internal/css.js";
 import ButtonStyles from "./button-styles.js";
 
-import './button.less';
+import "./button.less";
+//@@viewOff:imports
 
 const ClassNames = UU5.Common.ClassNames;
 const Styles = {
@@ -75,10 +77,9 @@ const Styles = {
 
     return Css.css(styles.join(" "));
   }
-}
+};
 
 export const Button = createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -94,19 +95,19 @@ export const Button = createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("Button"),
-    nestingLevel: 'smallBox',
+    nestingLevel: "smallBox",
     classNames: {
       main: ns.css("button"),
       bgStyle: ns.css("button-"),
       text: ns.css("button-text"),
       block: ns.css("button-block"),
-      active: 'active',
+      active: "active",
       size: ns.css("button-"),
       baseline: ns.css("button-baseline"),
       errorButton: Styles.errorButton
     },
     defaults: {
-      content: 'Button',
+      content: "Button",
       regexpHash: /^#/,
       httpRegexp: /^(\/|[a-z0-9\-+.]+:)/
     },
@@ -116,18 +117,20 @@ export const Button = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    size: PropTypes.oneOf(['s', 'm', 'l', 'xl']),
+    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
     displayBlock: PropTypes.bool,
     pressed: PropTypes.bool,
-    bgStyle: PropTypes.oneOf(['filled', 'outline', 'transparent', 'underline', 'link']),
+    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline", "link"]),
     onClick: PropTypes.func,
+    onWheelClick: PropTypes.func,
+    onCtrlClick: PropTypes.func,
     href: PropTypes.string,
-    target: PropTypes.oneOf(['_blank', '_parent', '_top', '_self']),
+    target: PropTypes.oneOf(["_blank", "_parent", "_top", "_self"]),
     smoothScroll: PropTypes.number,
     offset: PropTypes.number,
     borderRadius: PropTypes.string,
-    elevation: PropTypes.oneOf(['-1', '0', '1', '2', '3', '4', '5', -1, 0, 1, 2, 3, 4, 5]),
-    elevationHover: PropTypes.oneOf(['-1', '0', '1', '2', '3', '4', '5', -1, 0, 1, 2, 3, 4, 5]),
+    elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+    elevationHover: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
     baseline: PropTypes.bool
   },
   //@@viewOff:propTypes
@@ -135,13 +138,15 @@ export const Button = createReactClass({
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      size: 'm',
+      size: "m",
       displayBlock: false,
       pressed: false,
-      bgStyle: 'filled',
+      bgStyle: "filled",
       onClick: null,
+      onWheelClick: null,
+      onCtrlClick: null,
       href: null,
-      target: '_self',
+      target: "_self",
       smoothScroll: 1000,
       offset: 0,
       borderRadius: null,
@@ -152,7 +157,7 @@ export const Button = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
       pressed: this.props.pressed
@@ -170,7 +175,7 @@ export const Button = createReactClass({
       UU5.Common.Tools.warning('Value "inverted" of property "bgStyle" is deprecated! Use "outline" instead.');
     }
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   setActive(pressed, setStateCallback) {
@@ -200,16 +205,11 @@ export const Button = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
   //@@viewOn:componentSpecificHelpers
-  _onClickHandler(e) {
-    this.props.onClick && this.props.onClick(this, e);
-    return this;
-  },
-
-  _onClickLinkHandler(e, middleClick) {
+  _onClickLink(e, middleClick) {
     let isRouterLink = this._isRoute() && UU5.Environment.getRouter();
     if (e.button === 0 || middleClick) {
       e.preventDefault();
@@ -229,9 +229,9 @@ export const Button = createReactClass({
         }
       }
 
-      if (typeof this.props.onClick === 'function') {
+      if (typeof this.props.onClick === "function") {
         this.props.onClick(this, e);
-      } else if (typeof this.props.href === 'string' && !isRouterLink) {
+      } else if (typeof this.props.href === "string" && !isRouterLink) {
         if (e.ctrlKey || (UU5.Common.Tools.isMac() && e.metaKey) || e.button === 1) {
           let href = this.props.href.match(/^#.*/)
             ? window.location.href.split("#")[0] + this.props.href
@@ -250,10 +250,27 @@ export const Button = createReactClass({
     return this;
   },
 
-  _onWheelClickHandler(e) {
+  _onClick(e) {
+    if (e.button === 0 && e.ctrlKey && typeof this.props.onCtrlClick === "function") {
+      this.props.onCtrlClick(this, e);
+    } else if (e.button === 1 && typeof this.props.onWheelClick === "function") {
+      this.props.onWheelClick(this, e);
+    } else if (typeof this.props.onClick === "function") {
+      this.props.onClick(this, e);
+    } else if (typeof this.props.href === "string") {
+      this._onClickLink(e);
+    }
+  },
+
+  _onMouseUp(e) {
     if (e.button === 1) {
       e.stopPropagation();
-      this._onClickLinkHandler(e, true);
+
+      if (e.button === 1 && typeof this.props.onWheelClick === "function") {
+        this.props.onWheelClick(this, e);
+      } else if (typeof this.props.href === "string") {
+        this._onClickLink(e, true);
+      }
     }
     return this;
   },
@@ -262,11 +279,11 @@ export const Button = createReactClass({
     e.preventDefault();
     //let basePath = location.href.replace(/#.*/, "");
 
-    let id = this.props.href.replace('#', '');
+    let id = this.props.href.replace("#", "");
     let foundElement = document.getElementById(id);
 
     if (!foundElement) {
-      id = id.replace('-inner', '');
+      id = id.replace("-inner", "");
       foundElement = document.getElementById(id);
     }
 
@@ -300,17 +317,20 @@ export const Button = createReactClass({
     let usedHref = href.charAt(0) === "?" ? (UU5.Common.Url.parse(location.href).useCase || "") + href : href;
     return basePath ? basePath.replace(/\/*$/, "/") + usedHref.replace(/^\/+/, "") : usedHref;
   },
-  //@@viewOff:componentSpecificHelpers
 
-  // Render
   _buildMainAttrs() {
     let mainAttrs = this.getMainAttrs();
 
-    mainAttrs.className += ' ' + this.getClassName('size') + this.props.size +
-      ' ' + this.getClassName().bgStyle + (this.props.bgStyle || 'filled') +
-      (this.props.displayBlock ? ' ' + this.getClassName('block') : '') +
-      (this.isPressed() ? ' ' + this.getClassName('active') : '') +
-      (this.props.baseline ? ' ' + this.getClassName('baseline') : '');
+    mainAttrs.className +=
+      " " +
+      this.getClassName("size") +
+      this.props.size +
+      " " +
+      this.getClassName().bgStyle +
+      (this.props.bgStyle || "filled") +
+      (this.props.displayBlock ? " " + this.getClassName("block") : "") +
+      (this.isPressed() ? " " + this.getClassName("active") : "") +
+      (this.props.baseline ? " " + this.getClassName("baseline") : "");
 
     mainAttrs.className += " " + this.getClassName("errorButton");
 
@@ -327,17 +347,18 @@ export const Button = createReactClass({
     }
 
     if (this.isDisabled()) {
-      mainAttrs.disabled = true
+      mainAttrs.disabled = true;
     } else {
-      if (typeof this.props.onClick === 'function') {
-        mainAttrs.onClick = this._onClickHandler;
-      } else if (typeof this.props.href === 'string') {
-        mainAttrs.href = this._containsHash(this.props.href) ?
-          location.href.split('#')[0] + this.props.href :
-          this.props.href;
+      mainAttrs.onClick = this._onClick;
 
-        mainAttrs.onClick = this._onClickLinkHandler;
-        mainAttrs.onMouseUp = this._onWheelClickHandler;
+      if (typeof this.props.href === "string") {
+        mainAttrs.href = this._containsHash(this.props.href)
+          ? location.href.split("#")[0] + this.props.href
+          : this.props.href;
+      }
+
+      if (typeof this.props.href === "string" || typeof this.props.onWheelClick === "function") {
+        mainAttrs.onMouseUp = this._onMouseUp;
       }
     }
 
@@ -353,7 +374,10 @@ export const Button = createReactClass({
     children.forEach((child, i) => {
       let childType = typeof child;
       let isTextCorrector =
-        childType === "object" && child && child.type && child.type.displayName === "UU5.Common.TextCorrectorContextConsumer";
+        childType === "object" &&
+        child &&
+        child.type &&
+        child.type.displayName === "UU5.Common.TextCorrectorContextConsumer";
       if (isTextCorrector) {
         childType = typeof child.props.text;
       }
@@ -372,10 +396,18 @@ export const Button = createReactClass({
           childLength = child.length;
         }
         if (childLength) {
-          newChildren.push(<span key={i} className={this.getClassName().text}>{child}</span>);
+          newChildren.push(
+            <span key={i} className={this.getClassName().text}>
+              {child}
+            </span>
+          );
         }
       } else if (childType === "number") {
-        newChildren.push(<span key={i} className={this.getClassName().text}>{child}</span>);
+        newChildren.push(
+          <span key={i} className={this.getClassName().text}>
+            {child}
+          </span>
+        );
       } else {
         newChildren.push(child);
       }
@@ -383,12 +415,12 @@ export const Button = createReactClass({
 
     return newChildren.length > 0 ? newChildren : children;
   },
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
-    let component;
-    component = (
-      <button {...this._buildMainAttrs()} ref={(button) => this._button = button}>
+    let component = (
+      <button {...this._buildMainAttrs()} ref={button => (this._button = button)}>
         {this._getChildren()}
       </button>
     );

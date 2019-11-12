@@ -11,6 +11,7 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import React from "react";
 import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
@@ -24,10 +25,24 @@ import InputMixin, {
   LOADING_FEEDBACK
 } from "./mixins/input-mixin.js";
 import Context from "./form-context.js";
+//@@viewOff:imports
 
 const { width, ...propTypes } = UU5.Bricks.SwitchSelector.propTypes;
 const {
-  id, name, className, mainAttrs, tooltip, noIndex, style, parent, ref_, hidden, disabled, selected, controlled, ...defaultProps
+  id,
+  name,
+  className,
+  mainAttrs,
+  tooltip,
+  noIndex,
+  style,
+  parent,
+  ref_,
+  hidden,
+  disabled,
+  selected,
+  controlled,
+  ...defaultProps
 } = UU5.Bricks.SwitchSelector.getDefaultProps();
 delete defaultProps.onChange;
 delete defaultProps.width;
@@ -39,11 +54,7 @@ delete defaultProps.borderWidthFocus;
 export const SwitchSelector = Context.withContext(
   createReactClass({
     //@@viewOn:mixins
-    mixins: [
-      UU5.Common.BaseMixin,
-      UU5.Common.ElementaryMixin,
-      InputMixin
-    ],
+    mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, InputMixin],
     //@@viewOff:mixins
 
     //@@viewOn:statics
@@ -65,7 +76,7 @@ export const SwitchSelector = Context.withContext(
     },
     //@@viewOff:getDefaultProps
 
-    //@@viewOn:standardComponentLifeCycle
+    //@@viewOn:reactLifeCycle
     componentWillMount() {
       let value = this._getInitialValue();
       if (typeof this.props.onValidate === "function") {
@@ -85,7 +96,7 @@ export const SwitchSelector = Context.withContext(
         }
       }
     },
-    //@@viewOff:standardComponentLifeCycle
+    //@@viewOff:reactLifeCycle
 
     //@@viewOn:interface
     onChangeDefault(opt, setStateCallback) {
@@ -94,28 +105,31 @@ export const SwitchSelector = Context.withContext(
     },
     //@@viewOff:interface
 
-    //@@viewOn:overridingMethods
+    //@@viewOn:overriding
     reset_(setStateCallback) {
-      this.setState({
-        message: this.props.message,
-        feedback: this.props.feedback,
-        value: this._getInitialValue(),
-        readOnly: this.props.readOnly
-      }, setStateCallback);
+      this.setState(
+        {
+          message: this.props.message,
+          feedback: this.props.feedback,
+          value: this._getInitialValue(),
+          readOnly: this.props.readOnly
+        },
+        setStateCallback
+      );
       return this;
     },
 
     setValue_(value, setStateCallback) {
-      if (typeof this.props.onValidate === 'function') {
+      if (typeof this.props.onValidate === "function") {
         this._validateOnChange({ value, component: this });
       } else {
         this.setInitial(null, value, setStateCallback);
       }
       return this;
     },
-    //@@viewOff:overridingMethods
+    //@@viewOff:overriding
 
-    //@@viewOn:componentSpecificHelpers
+    //@@viewOn:private
     _validateOnChange(opt, checkValue, setStateCallback) {
       let _callCallback = typeof setStateCallback === "function";
 
@@ -149,7 +163,7 @@ export const SwitchSelector = Context.withContext(
       return this;
     },
 
-    _getInitialValue: function (props = this.props) {
+    _getInitialValue: function(props = this.props) {
       return props.value || props.items[0].value;
     },
 
@@ -181,6 +195,7 @@ export const SwitchSelector = Context.withContext(
 
     _getSwitchProps() {
       return {
+        mainAttrs: this.props.inputAttrs,
         items: this.props.items,
         value: this.state.value,
         onChange: this._onChange,
@@ -195,11 +210,11 @@ export const SwitchSelector = Context.withContext(
         width: this.props.inputWidth
       };
     },
-    //@@viewOff:componentSpecificHelpers
+    //@@viewOff:private
 
     //@@viewOn:render
     render() {
-      let inputId = this.getId() + '-input';
+      let inputId = this.getId() + "-input";
 
       return (
         <div {...this._getInputAttrs()}>
@@ -208,7 +223,7 @@ export const SwitchSelector = Context.withContext(
         </div>
       );
     }
-    //@@viewOn:render
+    //@@viewOff:render
   })
 );
 

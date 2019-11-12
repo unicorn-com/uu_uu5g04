@@ -58,10 +58,10 @@
       var Page = createReactClass({
         mixins: [UU5.Common.BaseMixin],
 
-        //@@viewOn:standardComponentLifeCycle
-        //@@viewOff:standardComponentLifeCycle
+        //@@viewOn:reactLifeCycle
+        //@@viewOff:reactLifeCycle
 
-        //@@viewOn:componentSpecificHelpers
+        //@@viewOn:private
         _renderTemplate() {
           let filterFn = ({tag, props}) => {
             return !props.content && props.children.length === 0 ? false : {tag, props};
@@ -74,7 +74,7 @@
           let firstSection = uu5string.content[1]; // first child is "\n"
           return UU5.Common.UU5String.contentToChildren([firstSection]);
         },
-        //@@viewOff:componentSpecificHelpers
+        //@@viewOff:private
 
         //@@viewOn:render
         render(){

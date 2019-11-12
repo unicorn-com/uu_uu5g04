@@ -47,6 +47,7 @@ exports[`UU5.Bricks.Page alertBus={"key":"0","ref":null,"props":{"id":"uuBUS","c
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -73,6 +74,7 @@ exports[`UU5.Bricks.Page alertBus={"key":"0","ref":null,"props":{"id":"uuBUS","c
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -88,7 +90,7 @@ exports[`UU5.Bricks.Page alertBus={"key":"0","ref":null,"props":{"id":"uuBUS","c
 </Div>
 `;
 
-exports[`UU5.Bricks.Page appLayerContent={"key":"0","ref":null,"props":{"id":"uuAlertID","colorSchema":"red-rich","children":"appLayerContent","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"header":null,"footer":null,"underline":false,"pureRender":false,"position":"center","closeTimer":null,"closeDisabled":false,"block":false,"onClose":null,"onCloseAfter":null,"onCloseBefore":null},"_owner":null,"_store":{}} 1`] = `
+exports[`UU5.Bricks.Page appLayerContent={"key":"0","ref":null,"props":{"id":"uuAlertID","colorSchema":"red-rich","children":"appLayerContent","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"increaseLevel":false,"header":null,"footer":null,"underline":false,"pureRender":false,"position":"center","closeTimer":null,"closeDisabled":false,"block":false,"onClose":null,"onCloseAfter":null,"onCloseBefore":null},"_owner":null,"_store":{}} 1`] = `
 <Div
   className="uu5-bricks-page uu5-bricks-page-type-1 uu5-bricks-page-full"
   id="uuID-inner"
@@ -127,6 +129,7 @@ exports[`UU5.Bricks.Page appLayerContent={"key":"0","ref":null,"props":{"id":"uu
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -153,6 +156,7 @@ exports[`UU5.Bricks.Page appLayerContent={"key":"0","ref":null,"props":{"id":"uu
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -212,6 +216,7 @@ exports[`UU5.Bricks.Page appLayerWrapperProps={"style":{"backgroundColor":"#2111
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -238,6 +243,7 @@ exports[`UU5.Bricks.Page appLayerWrapperProps={"style":{"backgroundColor":"#2111
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -292,6 +298,7 @@ exports[`UU5.Bricks.Page bottom={"key":"0","ref":null,"props":{"id":"uuIDBOX2","
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -318,6 +325,7 @@ exports[`UU5.Bricks.Page bottom={"key":"0","ref":null,"props":{"id":"uuIDBOX2","
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -418,6 +426,7 @@ exports[`UU5.Bricks.Page bottomFixed="always" 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -445,6 +454,7 @@ exports[`UU5.Bricks.Page bottomFixed="always" 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -500,6 +510,7 @@ exports[`UU5.Bricks.Page bottomFixed="smart" 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -527,6 +538,7 @@ exports[`UU5.Bricks.Page bottomFixed="smart" 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -581,6 +593,7 @@ exports[`UU5.Bricks.Page bottomFixed=false 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -607,6 +620,7 @@ exports[`UU5.Bricks.Page bottomFixed=false 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -662,6 +676,7 @@ exports[`UU5.Bricks.Page bottomFixed=true 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -689,6 +704,7 @@ exports[`UU5.Bricks.Page bottomFixed=true 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -743,6 +759,7 @@ exports[`UU5.Bricks.Page bottomWrapperProps={"style":{"backgroundColor":"#2196F3
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -769,6 +786,7 @@ exports[`UU5.Bricks.Page bottomWrapperProps={"style":{"backgroundColor":"#2196F3
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -823,6 +841,7 @@ exports[`UU5.Bricks.Page ccrKey="<UU5.Parrot.Page ccrKey='UU5.Parrot.Page' />" 1
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -849,6 +868,7 @@ exports[`UU5.Bricks.Page ccrKey="<UU5.Parrot.Page ccrKey='UU5.Parrot.Page' />" 1
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -904,6 +924,7 @@ exports[`UU5.Bricks.Page checkGrammar=false 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -930,6 +951,7 @@ exports[`UU5.Bricks.Page checkGrammar=false 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -985,6 +1007,7 @@ exports[`UU5.Bricks.Page checkGrammar=true 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -1011,6 +1034,7 @@ exports[`UU5.Bricks.Page checkGrammar=true 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -1066,6 +1090,7 @@ exports[`UU5.Bricks.Page checkHighlight=false 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -1092,6 +1117,7 @@ exports[`UU5.Bricks.Page checkHighlight=false 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -1147,6 +1173,7 @@ exports[`UU5.Bricks.Page checkHighlight=true 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -1173,6 +1200,7 @@ exports[`UU5.Bricks.Page checkHighlight=true 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -1228,6 +1256,7 @@ exports[`UU5.Bricks.Page checkSpaces=false 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -1254,6 +1283,7 @@ exports[`UU5.Bricks.Page checkSpaces=false 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -1309,6 +1339,7 @@ exports[`UU5.Bricks.Page checkSpaces=true 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -1335,6 +1366,7 @@ exports[`UU5.Bricks.Page checkSpaces=true 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -1389,6 +1421,7 @@ exports[`UU5.Bricks.Page className="my-classname" 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -1415,6 +1448,7 @@ exports[`UU5.Bricks.Page className="my-classname" 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -1469,6 +1503,7 @@ exports[`UU5.Bricks.Page content="This is Content from ContentMixin" 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -1497,6 +1532,7 @@ exports[`UU5.Bricks.Page content="This is Content from ContentMixin" 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -1551,6 +1587,7 @@ exports[`UU5.Bricks.Page content=12345 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -1579,6 +1616,7 @@ exports[`UU5.Bricks.Page content=12345 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -1633,6 +1671,7 @@ exports[`UU5.Bricks.Page contentWrapperProps={"style":{"backgroundColor":"#2111E
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -1664,6 +1703,7 @@ exports[`UU5.Bricks.Page contentWrapperProps={"style":{"backgroundColor":"#2111E
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -1718,6 +1758,7 @@ exports[`UU5.Bricks.Page controlled=false 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -1744,6 +1785,7 @@ exports[`UU5.Bricks.Page controlled=false 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -1798,6 +1840,7 @@ exports[`UU5.Bricks.Page controlled=true 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -1824,6 +1867,7 @@ exports[`UU5.Bricks.Page controlled=true 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -1878,6 +1922,7 @@ exports[`UU5.Bricks.Page default props 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -1904,6 +1949,7 @@ exports[`UU5.Bricks.Page default props 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -1958,6 +2004,7 @@ exports[`UU5.Bricks.Page disabled=false 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -1984,6 +2031,7 @@ exports[`UU5.Bricks.Page disabled=false 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -2039,6 +2087,7 @@ exports[`UU5.Bricks.Page disabled=true 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -2065,6 +2114,7 @@ exports[`UU5.Bricks.Page disabled=true 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -2119,6 +2169,7 @@ exports[`UU5.Bricks.Page dynamic=false 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -2145,6 +2196,7 @@ exports[`UU5.Bricks.Page dynamic=false 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -2200,6 +2252,7 @@ exports[`UU5.Bricks.Page dynamic=true 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -2226,6 +2279,7 @@ exports[`UU5.Bricks.Page dynamic=true 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -2280,6 +2334,7 @@ exports[`UU5.Bricks.Page fullPage=false 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -2306,6 +2361,7 @@ exports[`UU5.Bricks.Page fullPage=false 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -2360,6 +2416,7 @@ exports[`UU5.Bricks.Page fullPage=true 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -2386,6 +2443,7 @@ exports[`UU5.Bricks.Page fullPage=true 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -2440,6 +2498,7 @@ exports[`UU5.Bricks.Page hidden=false 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -2466,6 +2525,7 @@ exports[`UU5.Bricks.Page hidden=false 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -2521,6 +2581,7 @@ exports[`UU5.Bricks.Page hidden=true 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -2547,6 +2608,7 @@ exports[`UU5.Bricks.Page hidden=true 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -2601,6 +2663,7 @@ exports[`UU5.Bricks.Page id="myId" 1`] = `
       className=" uu5-bricks-page-left"
       contentId="myId-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -2627,6 +2690,7 @@ exports[`UU5.Bricks.Page id="myId" 1`] = `
       className=" uu5-bricks-page-right"
       contentId="myId-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -2681,6 +2745,7 @@ exports[`UU5.Bricks.Page ignoreHTML=false 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -2707,6 +2772,7 @@ exports[`UU5.Bricks.Page ignoreHTML=false 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -2761,6 +2827,7 @@ exports[`UU5.Bricks.Page ignoreHTML=true 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -2787,6 +2854,7 @@ exports[`UU5.Bricks.Page ignoreHTML=true 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -2841,6 +2909,7 @@ exports[`UU5.Bricks.Page isLeftOpen=false 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -2867,6 +2936,7 @@ exports[`UU5.Bricks.Page isLeftOpen=false 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -2921,6 +2991,7 @@ exports[`UU5.Bricks.Page isLeftOpen=true 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       open={true}
       overlayBottom={true}
       overlayTop={true}
@@ -2948,6 +3019,7 @@ exports[`UU5.Bricks.Page isLeftOpen=true 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -3002,6 +3074,7 @@ exports[`UU5.Bricks.Page isRightOpen=false 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -3028,6 +3101,7 @@ exports[`UU5.Bricks.Page isRightOpen=false 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -3082,6 +3156,7 @@ exports[`UU5.Bricks.Page isRightOpen=true 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -3108,6 +3183,7 @@ exports[`UU5.Bricks.Page isRightOpen=true 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       open={true}
       overlayBottom={true}
       overlayTop={true}
@@ -3124,7 +3200,7 @@ exports[`UU5.Bricks.Page isRightOpen=true 1`] = `
 </Div>
 `;
 
-exports[`UU5.Bricks.Page left={"key":"0","ref":null,"props":{"id":"uuIDdiv","children":[{"key":null,"ref":null,"props":{"id":"menuBox","colorSchema":"primary","content":"Menu","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"infoHeader":"Info","infoContent":null,"disableClick":false,"bgStyle":"filled","borderRadius":null,"elevation":null,"elevationHover":null},"_owner":null,"_store":{}},{"key":null,"ref":null,"props":{"id":"menuUl","children":[{"key":null,"ref":null,"props":{"id":"liItem1","children":"Home","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"content":null,"ignoreInnerHTML":false,"dynamic":false,"nestingLevel":null,"icon":null,"markerIcon":null,"iconColorSchema":null},"_owner":null,"_store":{}},{"key":null,"ref":null,"props":{"id":"liItem2","children":"Content","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"content":null,"ignoreInnerHTML":false,"dynamic":false,"nestingLevel":null,"icon":null,"markerIcon":null,"iconColorSchema":null},"_owner":null,"_store":{}},{"key":null,"ref":null,"props":{"id":"liItem3","children":"About","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"content":null,"ignoreInnerHTML":false,"dynamic":false,"nestingLevel":null,"icon":null,"markerIcon":null,"iconColorSchema":null},"_owner":null,"_store":{}}],"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"header":null,"footer":null,"underline":false,"nestingLevel":null,"allowTags":[],"type":null,"icon":null,"markerIcon":null,"iconColorSchema":null},"_owner":null,"_store":{}}],"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"content":null,"ignoreInnerHTML":false,"dynamic":false,"nestingLevel":null,"pureRender":false},"_owner":null,"_store":{}} 1`] = `
+exports[`UU5.Bricks.Page left={"key":"0","ref":null,"props":{"id":"uuIDdiv","children":[{"key":null,"ref":null,"props":{"id":"menuBox","colorSchema":"primary","content":"Menu","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"infoHeader":"Info","infoContent":null,"disableClick":false,"bgStyle":"filled","borderRadius":null,"elevation":null,"elevationHover":null},"_owner":null,"_store":{}},{"key":null,"ref":null,"props":{"id":"menuUl","children":[{"key":null,"ref":null,"props":{"id":"liItem1","children":"Home","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"content":null,"ignoreInnerHTML":false,"dynamic":false,"nestingLevel":null,"icon":null,"markerIcon":null,"iconColorSchema":null},"_owner":null,"_store":{}},{"key":null,"ref":null,"props":{"id":"liItem2","children":"Content","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"content":null,"ignoreInnerHTML":false,"dynamic":false,"nestingLevel":null,"icon":null,"markerIcon":null,"iconColorSchema":null},"_owner":null,"_store":{}},{"key":null,"ref":null,"props":{"id":"liItem3","children":"About","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"content":null,"ignoreInnerHTML":false,"dynamic":false,"nestingLevel":null,"icon":null,"markerIcon":null,"iconColorSchema":null},"_owner":null,"_store":{}}],"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"increaseLevel":false,"header":null,"footer":null,"underline":false,"nestingLevel":null,"allowTags":[],"type":null,"icon":null,"markerIcon":null,"iconColorSchema":null},"_owner":null,"_store":{}}],"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"content":null,"ignoreInnerHTML":false,"dynamic":false,"nestingLevel":null,"pureRender":false},"_owner":null,"_store":{}} 1`] = `
 <Div
   className="uu5-bricks-page uu5-bricks-page-type-1 uu5-bricks-page-full"
   id="uuID-inner"
@@ -3224,6 +3300,7 @@ exports[`UU5.Bricks.Page left={"key":"0","ref":null,"props":{"id":"uuIDdiv","chi
             iconColorSchema={null}
             id="menuUl"
             ignoreInnerHTML={false}
+            increaseLevel={false}
             level={null}
             mainAttrs={null}
             markerIcon={null}
@@ -3318,6 +3395,7 @@ exports[`UU5.Bricks.Page left={"key":"0","ref":null,"props":{"id":"uuIDdiv","chi
       }
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       openContent={
         <Div
           className={null}
@@ -3381,6 +3459,7 @@ exports[`UU5.Bricks.Page left={"key":"0","ref":null,"props":{"id":"uuIDdiv","chi
             iconColorSchema={null}
             id="menuUl"
             ignoreInnerHTML={false}
+            increaseLevel={false}
             level={null}
             mainAttrs={null}
             markerIcon={null}
@@ -3499,6 +3578,7 @@ exports[`UU5.Bricks.Page left={"key":"0","ref":null,"props":{"id":"uuIDdiv","chi
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -3514,7 +3594,7 @@ exports[`UU5.Bricks.Page left={"key":"0","ref":null,"props":{"id":"uuIDdiv","chi
 </Div>
 `;
 
-exports[`UU5.Bricks.Page leftClosed={"key":"0","ref":null,"props":{"id":"S01","children":[{"type":"br","key":null,"ref":null,"props":{},"_owner":null,"_store":{}},{"key":null,"ref":null,"props":{"id":"C01","children":{"key":null,"ref":null,"props":{"id":"BTN01","vertical":true,"children":{"key":null,"ref":null,"props":{"colorSchema":"primary","id":"toggleRight","children":{"key":null,"ref":null,"props":{"id":"uuIcon","icon":"mdi-arrow-left-bold-circle-outline","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"clickable":true,"src":"","authenticate":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","displayBlock":false,"pressed":false,"bgStyle":"filled","onClick":null,"href":null,"target":"_self","smoothScroll":1000,"offset":0,"borderRadius":null,"elevation":null,"elevationHover":null,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"colorSchema":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","allowTags":[],"borderRadius":null,"elevation":null,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"header":null,"footer":null,"underline":false,"pureRender":false,"noSpacing":false,"width":null,"colWidth":null},"_owner":null,"_store":{}}],"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"header":null,"footer":null,"underline":false,"colorSchema":null},"_owner":null,"_store":{}} 1`] = `
+exports[`UU5.Bricks.Page leftClosed={"key":"0","ref":null,"props":{"id":"S01","children":[{"type":"br","key":null,"ref":null,"props":{},"_owner":null,"_store":{}},{"key":null,"ref":null,"props":{"id":"C01","children":{"key":null,"ref":null,"props":{"id":"BTN01","vertical":true,"children":{"key":null,"ref":null,"props":{"colorSchema":"primary","id":"toggleRight","children":{"key":null,"ref":null,"props":{"id":"uuIcon","icon":"mdi-arrow-left-bold-circle-outline","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"clickable":true,"src":"","authenticate":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","displayBlock":false,"pressed":false,"bgStyle":"filled","onClick":null,"onWheelClick":null,"onCtrlClick":null,"href":null,"target":"_self","smoothScroll":1000,"offset":0,"borderRadius":null,"elevation":null,"elevationHover":null,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"colorSchema":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","allowTags":[],"borderRadius":null,"elevation":null,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"increaseLevel":false,"header":null,"footer":null,"underline":false,"pureRender":false,"noSpacing":false,"width":null,"colWidth":null},"_owner":null,"_store":{}}],"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"increaseLevel":false,"header":null,"footer":null,"underline":false,"colorSchema":null},"_owner":null,"_store":{}} 1`] = `
 <Div
   className="uu5-bricks-page uu5-bricks-page-type-1 uu5-bricks-page-full"
   id="uuID-inner"
@@ -3564,6 +3644,7 @@ exports[`UU5.Bricks.Page leftClosed={"key":"0","ref":null,"props":{"id":"S01","c
           hidden={false}
           id="S01"
           ignoreInnerHTML={false}
+          increaseLevel={false}
           level={null}
           mainAttrs={null}
           name={null}
@@ -3590,6 +3671,7 @@ exports[`UU5.Bricks.Page leftClosed={"key":"0","ref":null,"props":{"id":"S01","c
             hidden={false}
             id="C01"
             ignoreInnerHTML={false}
+            increaseLevel={false}
             level={null}
             mainAttrs={null}
             name={null}
@@ -3655,6 +3737,8 @@ exports[`UU5.Bricks.Page leftClosed={"key":"0","ref":null,"props":{"id":"S01","c
                 noIndex={false}
                 offset={0}
                 onClick={null}
+                onCtrlClick={null}
+                onWheelClick={null}
                 parent={null}
                 pressed={false}
                 pureRender={false}
@@ -3694,6 +3778,7 @@ exports[`UU5.Bricks.Page leftClosed={"key":"0","ref":null,"props":{"id":"S01","c
       }
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -3720,6 +3805,7 @@ exports[`UU5.Bricks.Page leftClosed={"key":"0","ref":null,"props":{"id":"S01","c
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -3774,6 +3860,7 @@ exports[`UU5.Bricks.Page leftFixed=false 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -3800,6 +3887,7 @@ exports[`UU5.Bricks.Page leftFixed=false 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -3855,6 +3943,7 @@ exports[`UU5.Bricks.Page leftFixed=true 1`] = `
       contentId="uuID-content"
       controlled={false}
       fixed={true}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -3881,6 +3970,7 @@ exports[`UU5.Bricks.Page leftFixed=true 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -3896,7 +3986,7 @@ exports[`UU5.Bricks.Page leftFixed=true 1`] = `
 </Div>
 `;
 
-exports[`UU5.Bricks.Page leftOpen={"key":"0","ref":null,"props":{"id":"idSection1","children":[{"type":"br","key":null,"ref":null,"props":{},"_owner":null,"_store":{}},{"key":null,"ref":null,"props":{"id":"uuIDColumn1","children":{"key":null,"ref":null,"props":{"id":"butGRPPID","vertical":true,"children":{"key":null,"ref":null,"props":{"id":"idBTN","colorSchema":"primary","children":"Home","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","displayBlock":false,"pressed":false,"bgStyle":"filled","onClick":null,"href":null,"target":"_self","smoothScroll":1000,"offset":0,"borderRadius":null,"elevation":null,"elevationHover":null,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"colorSchema":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","allowTags":[],"borderRadius":null,"elevation":null,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"header":null,"footer":null,"underline":false,"pureRender":false,"noSpacing":false,"width":null,"colWidth":null},"_owner":null,"_store":{}}],"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"header":null,"footer":null,"underline":false,"colorSchema":null},"_owner":null,"_store":{}} 1`] = `
+exports[`UU5.Bricks.Page leftOpen={"key":"0","ref":null,"props":{"id":"idSection1","children":[{"type":"br","key":null,"ref":null,"props":{},"_owner":null,"_store":{}},{"key":null,"ref":null,"props":{"id":"uuIDColumn1","children":{"key":null,"ref":null,"props":{"id":"butGRPPID","vertical":true,"children":{"key":null,"ref":null,"props":{"id":"idBTN","colorSchema":"primary","children":"Home","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","displayBlock":false,"pressed":false,"bgStyle":"filled","onClick":null,"onWheelClick":null,"onCtrlClick":null,"href":null,"target":"_self","smoothScroll":1000,"offset":0,"borderRadius":null,"elevation":null,"elevationHover":null,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"colorSchema":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","allowTags":[],"borderRadius":null,"elevation":null,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"increaseLevel":false,"header":null,"footer":null,"underline":false,"pureRender":false,"noSpacing":false,"width":null,"colWidth":null},"_owner":null,"_store":{}}],"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"increaseLevel":false,"header":null,"footer":null,"underline":false,"colorSchema":null},"_owner":null,"_store":{}} 1`] = `
 <Div
   className="uu5-bricks-page uu5-bricks-page-type-1 uu5-bricks-page-full"
   id="uuID-inner"
@@ -3935,6 +4025,7 @@ exports[`UU5.Bricks.Page leftOpen={"key":"0","ref":null,"props":{"id":"idSection
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       openContent={
         <Section
           className={null}
@@ -3948,6 +4039,7 @@ exports[`UU5.Bricks.Page leftOpen={"key":"0","ref":null,"props":{"id":"idSection
           hidden={false}
           id="idSection1"
           ignoreInnerHTML={false}
+          increaseLevel={false}
           level={null}
           mainAttrs={null}
           name={null}
@@ -3974,6 +4066,7 @@ exports[`UU5.Bricks.Page leftOpen={"key":"0","ref":null,"props":{"id":"idSection
             hidden={false}
             id="uuIDColumn1"
             ignoreInnerHTML={false}
+            increaseLevel={false}
             level={null}
             mainAttrs={null}
             name={null}
@@ -4039,6 +4132,8 @@ exports[`UU5.Bricks.Page leftOpen={"key":"0","ref":null,"props":{"id":"idSection
                 noIndex={false}
                 offset={0}
                 onClick={null}
+                onCtrlClick={null}
+                onWheelClick={null}
                 parent={null}
                 pressed={false}
                 pureRender={false}
@@ -4082,6 +4177,7 @@ exports[`UU5.Bricks.Page leftOpen={"key":"0","ref":null,"props":{"id":"idSection
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -4136,6 +4232,7 @@ exports[`UU5.Bricks.Page leftRelative="xs s m l xl" 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -4163,6 +4260,7 @@ exports[`UU5.Bricks.Page leftRelative="xs s m l xl" 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -4217,6 +4315,7 @@ exports[`UU5.Bricks.Page leftRelative="xs s m l" 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -4244,6 +4343,7 @@ exports[`UU5.Bricks.Page leftRelative="xs s m l" 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -4298,6 +4398,7 @@ exports[`UU5.Bricks.Page leftRelative="xs s m" 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -4324,6 +4425,7 @@ exports[`UU5.Bricks.Page leftRelative="xs s m" 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -4378,6 +4480,7 @@ exports[`UU5.Bricks.Page leftRelative="xs s" 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -4404,6 +4507,7 @@ exports[`UU5.Bricks.Page leftRelative="xs s" 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -4458,6 +4562,7 @@ exports[`UU5.Bricks.Page leftRelative="xs" 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -4484,6 +4589,7 @@ exports[`UU5.Bricks.Page leftRelative="xs" 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -4538,6 +4644,7 @@ exports[`UU5.Bricks.Page leftRelative=null 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -4564,6 +4671,7 @@ exports[`UU5.Bricks.Page leftRelative=null 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -4618,6 +4726,7 @@ exports[`UU5.Bricks.Page leftResizable=false 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -4644,6 +4753,7 @@ exports[`UU5.Bricks.Page leftResizable=false 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -4703,6 +4813,7 @@ exports[`UU5.Bricks.Page leftResizable=true 1`] = `
       overlayTop={true}
       pureRender={true}
       ref_={[Function]}
+      resizable={true}
       topId="uuID-top"
       width="0%"
     />
@@ -4725,6 +4836,7 @@ exports[`UU5.Bricks.Page leftResizable=true 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -4779,6 +4891,7 @@ exports[`UU5.Bricks.Page leftSwipe=false 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -4805,6 +4918,7 @@ exports[`UU5.Bricks.Page leftSwipe=false 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -4858,6 +4972,7 @@ exports[`UU5.Bricks.Page leftSwipe=true 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -4884,6 +4999,7 @@ exports[`UU5.Bricks.Page leftSwipe=true 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -4938,6 +5054,7 @@ exports[`UU5.Bricks.Page leftWidth="!xs-10-30 s-10em !m-10-20 l-15 xl-15" 1`] = 
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -4964,6 +5081,7 @@ exports[`UU5.Bricks.Page leftWidth="!xs-10-30 s-10em !m-10-20 l-15 xl-15" 1`] = 
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -5018,6 +5136,7 @@ exports[`UU5.Bricks.Page leftWidth="xs-10em-50px s-20 m-15px-60 l-15-60rem xl-15
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -5044,6 +5163,7 @@ exports[`UU5.Bricks.Page leftWidth="xs-10em-50px s-20 m-15px-60 l-15-60rem xl-15
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -5098,6 +5218,7 @@ exports[`UU5.Bricks.Page leftWrapperProps={"style":{"backgroundColor":"#2196F3"}
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -5129,6 +5250,7 @@ exports[`UU5.Bricks.Page leftWrapperProps={"style":{"backgroundColor":"#2196F3"}
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -5183,6 +5305,7 @@ exports[`UU5.Bricks.Page mainAttrs=undefined 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -5209,6 +5332,7 @@ exports[`UU5.Bricks.Page mainAttrs=undefined 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -5224,7 +5348,7 @@ exports[`UU5.Bricks.Page mainAttrs=undefined 1`] = `
 </Div>
 `;
 
-exports[`UU5.Bricks.Page modal={"key":"0","ref":null,"props":{"id":"uuMODAL","content":"Content","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"ignoreInnerHTML":false,"dynamic":false,"level":null,"header":null,"footer":null,"underline":false,"nestingLevel":null,"size":"m","shown":false,"sticky":false,"stickyBackground":false,"scrollableBackground":false,"forceRender":false,"onClose":null,"overflow":false,"mountContent":"onFirstRender","offsetTop":null},"_owner":null,"_store":{}} 1`] = `
+exports[`UU5.Bricks.Page modal={"key":"0","ref":null,"props":{"id":"uuMODAL","content":"Content","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"ignoreInnerHTML":false,"dynamic":false,"level":null,"increaseLevel":false,"header":null,"footer":null,"underline":false,"nestingLevel":null,"size":"m","shown":false,"sticky":false,"stickyBackground":false,"scrollableBackground":false,"forceRender":false,"onClose":null,"overflow":false,"mountContent":"onFirstRender","offsetTop":null},"_owner":null,"_store":{}} 1`] = `
 <Div
   className="uu5-bricks-page uu5-bricks-page-type-1 uu5-bricks-page-full"
   id="uuID-inner"
@@ -5272,6 +5396,7 @@ exports[`UU5.Bricks.Page modal={"key":"0","ref":null,"props":{"id":"uuMODAL","co
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -5298,6 +5423,7 @@ exports[`UU5.Bricks.Page modal={"key":"0","ref":null,"props":{"id":"uuMODAL","co
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -5353,6 +5479,7 @@ exports[`UU5.Bricks.Page name="myName" 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -5379,6 +5506,7 @@ exports[`UU5.Bricks.Page name="myName" 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -5446,6 +5574,7 @@ exports[`UU5.Bricks.Page nestingLevel="page" 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -5472,6 +5601,7 @@ exports[`UU5.Bricks.Page nestingLevel="page" 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -5531,6 +5661,7 @@ exports[`UU5.Bricks.Page nestingLevel="spa" 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -5557,6 +5688,7 @@ exports[`UU5.Bricks.Page nestingLevel="spa" 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -5611,6 +5743,7 @@ exports[`UU5.Bricks.Page noIndex=false 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -5637,6 +5770,7 @@ exports[`UU5.Bricks.Page noIndex=false 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -5691,6 +5825,7 @@ exports[`UU5.Bricks.Page noIndex=true 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -5717,6 +5852,7 @@ exports[`UU5.Bricks.Page noIndex=true 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -5877,6 +6013,7 @@ exports[`UU5.Bricks.Page prop overlayTop 1`] = `
             iconColorSchema={null}
             id="menuUl"
             ignoreInnerHTML={false}
+            increaseLevel={false}
             level={null}
             mainAttrs={null}
             markerIcon={null}
@@ -5971,6 +6108,7 @@ exports[`UU5.Bricks.Page prop overlayTop 1`] = `
       }
       contentId="pageId-content"
       controlled={false}
+      onResize={[Function]}
       openContent={
         <Div
           className={null}
@@ -6034,6 +6172,7 @@ exports[`UU5.Bricks.Page prop overlayTop 1`] = `
             iconColorSchema={null}
             id="menuUl"
             ignoreInnerHTML={false}
+            increaseLevel={false}
             level={null}
             mainAttrs={null}
             markerIcon={null}
@@ -6237,6 +6376,7 @@ exports[`UU5.Bricks.Page prop overlayTop 1`] = `
             iconColorSchema={null}
             id="menuUl_R_R_R"
             ignoreInnerHTML={false}
+            increaseLevel={false}
             level={null}
             mainAttrs={null}
             markerIcon={null}
@@ -6331,6 +6471,7 @@ exports[`UU5.Bricks.Page prop overlayTop 1`] = `
       }
       contentId="pageId-content"
       controlled={false}
+      onResize={[Function]}
       openContent={
         <Div
           className={null}
@@ -6394,6 +6535,7 @@ exports[`UU5.Bricks.Page prop overlayTop 1`] = `
             iconColorSchema={null}
             id="menuUl_R_R_R"
             ignoreInnerHTML={false}
+            increaseLevel={false}
             level={null}
             mainAttrs={null}
             markerIcon={null}
@@ -6541,6 +6683,7 @@ exports[`UU5.Bricks.Page pureRender=false 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -6567,6 +6710,7 @@ exports[`UU5.Bricks.Page pureRender=false 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -6622,6 +6766,7 @@ exports[`UU5.Bricks.Page pureRender=true 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -6648,6 +6793,7 @@ exports[`UU5.Bricks.Page pureRender=true 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -6663,7 +6809,7 @@ exports[`UU5.Bricks.Page pureRender=true 1`] = `
 </Div>
 `;
 
-exports[`UU5.Bricks.Page right={"key":"0","ref":null,"props":{"id":"uuIDdiv_R_R_R","children":[{"key":null,"ref":null,"props":{"id":"menuBox_R_R_R","colorSchema":"primary","content":"Menu","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"infoHeader":"Info","infoContent":null,"disableClick":false,"bgStyle":"filled","borderRadius":null,"elevation":null,"elevationHover":null},"_owner":null,"_store":{}},{"key":null,"ref":null,"props":{"id":"menuUl_R_R_R","children":[{"key":null,"ref":null,"props":{"id":"liItem1_R_R_R","children":"Home","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"content":null,"ignoreInnerHTML":false,"dynamic":false,"nestingLevel":null,"icon":null,"markerIcon":null,"iconColorSchema":null},"_owner":null,"_store":{}},{"key":null,"ref":null,"props":{"id":"liItem2_R_R_R","children":"Content","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"content":null,"ignoreInnerHTML":false,"dynamic":false,"nestingLevel":null,"icon":null,"markerIcon":null,"iconColorSchema":null},"_owner":null,"_store":{}},{"key":null,"ref":null,"props":{"id":"liItem3_R_R_R","children":"About","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"content":null,"ignoreInnerHTML":false,"dynamic":false,"nestingLevel":null,"icon":null,"markerIcon":null,"iconColorSchema":null},"_owner":null,"_store":{}}],"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"header":null,"footer":null,"underline":false,"nestingLevel":null,"allowTags":[],"type":null,"icon":null,"markerIcon":null,"iconColorSchema":null},"_owner":null,"_store":{}}],"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"content":null,"ignoreInnerHTML":false,"dynamic":false,"nestingLevel":null,"pureRender":false},"_owner":null,"_store":{}} 1`] = `
+exports[`UU5.Bricks.Page right={"key":"0","ref":null,"props":{"id":"uuIDdiv_R_R_R","children":[{"key":null,"ref":null,"props":{"id":"menuBox_R_R_R","colorSchema":"primary","content":"Menu","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"infoHeader":"Info","infoContent":null,"disableClick":false,"bgStyle":"filled","borderRadius":null,"elevation":null,"elevationHover":null},"_owner":null,"_store":{}},{"key":null,"ref":null,"props":{"id":"menuUl_R_R_R","children":[{"key":null,"ref":null,"props":{"id":"liItem1_R_R_R","children":"Home","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"content":null,"ignoreInnerHTML":false,"dynamic":false,"nestingLevel":null,"icon":null,"markerIcon":null,"iconColorSchema":null},"_owner":null,"_store":{}},{"key":null,"ref":null,"props":{"id":"liItem2_R_R_R","children":"Content","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"content":null,"ignoreInnerHTML":false,"dynamic":false,"nestingLevel":null,"icon":null,"markerIcon":null,"iconColorSchema":null},"_owner":null,"_store":{}},{"key":null,"ref":null,"props":{"id":"liItem3_R_R_R","children":"About","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"content":null,"ignoreInnerHTML":false,"dynamic":false,"nestingLevel":null,"icon":null,"markerIcon":null,"iconColorSchema":null},"_owner":null,"_store":{}}],"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"increaseLevel":false,"header":null,"footer":null,"underline":false,"nestingLevel":null,"allowTags":[],"type":null,"icon":null,"markerIcon":null,"iconColorSchema":null},"_owner":null,"_store":{}}],"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"content":null,"ignoreInnerHTML":false,"dynamic":false,"nestingLevel":null,"pureRender":false},"_owner":null,"_store":{}} 1`] = `
 <Div
   className="uu5-bricks-page uu5-bricks-page-type-1 uu5-bricks-page-full"
   id="uuID-inner"
@@ -6702,6 +6848,7 @@ exports[`UU5.Bricks.Page right={"key":"0","ref":null,"props":{"id":"uuIDdiv_R_R_
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -6789,6 +6936,7 @@ exports[`UU5.Bricks.Page right={"key":"0","ref":null,"props":{"id":"uuIDdiv_R_R_
             iconColorSchema={null}
             id="menuUl_R_R_R"
             ignoreInnerHTML={false}
+            increaseLevel={false}
             level={null}
             mainAttrs={null}
             markerIcon={null}
@@ -6883,6 +7031,7 @@ exports[`UU5.Bricks.Page right={"key":"0","ref":null,"props":{"id":"uuIDdiv_R_R_
       }
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       openContent={
         <Div
           className={null}
@@ -6946,6 +7095,7 @@ exports[`UU5.Bricks.Page right={"key":"0","ref":null,"props":{"id":"uuIDdiv_R_R_
             iconColorSchema={null}
             id="menuUl_R_R_R"
             ignoreInnerHTML={false}
+            increaseLevel={false}
             level={null}
             mainAttrs={null}
             markerIcon={null}
@@ -7053,7 +7203,7 @@ exports[`UU5.Bricks.Page right={"key":"0","ref":null,"props":{"id":"uuIDdiv_R_R_
 </Div>
 `;
 
-exports[`UU5.Bricks.Page rightClosed={"key":"0","ref":null,"props":{"id":"S01_R","children":[{"type":"br","key":null,"ref":null,"props":{},"_owner":null,"_store":{}},{"key":null,"ref":null,"props":{"id":"C01_R","children":{"key":null,"ref":null,"props":{"id":"BTN01_R","vertical":true,"children":{"key":null,"ref":null,"props":{"colorSchema":"primary","id":"toggleRight_R","children":{"key":null,"ref":null,"props":{"id":"uuIcon_R","icon":"mdi-arrow-left-bold-circle-outline","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"clickable":true,"src":"","authenticate":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","displayBlock":false,"pressed":false,"bgStyle":"filled","onClick":null,"href":null,"target":"_self","smoothScroll":1000,"offset":0,"borderRadius":null,"elevation":null,"elevationHover":null,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"colorSchema":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","allowTags":[],"borderRadius":null,"elevation":null,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"header":null,"footer":null,"underline":false,"pureRender":false,"noSpacing":false,"width":null,"colWidth":null},"_owner":null,"_store":{}}],"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"header":null,"footer":null,"underline":false,"colorSchema":null},"_owner":null,"_store":{}} 1`] = `
+exports[`UU5.Bricks.Page rightClosed={"key":"0","ref":null,"props":{"id":"S01_R","children":[{"type":"br","key":null,"ref":null,"props":{},"_owner":null,"_store":{}},{"key":null,"ref":null,"props":{"id":"C01_R","children":{"key":null,"ref":null,"props":{"id":"BTN01_R","vertical":true,"children":{"key":null,"ref":null,"props":{"colorSchema":"primary","id":"toggleRight_R","children":{"key":null,"ref":null,"props":{"id":"uuIcon_R","icon":"mdi-arrow-left-bold-circle-outline","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"clickable":true,"src":"","authenticate":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","displayBlock":false,"pressed":false,"bgStyle":"filled","onClick":null,"onWheelClick":null,"onCtrlClick":null,"href":null,"target":"_self","smoothScroll":1000,"offset":0,"borderRadius":null,"elevation":null,"elevationHover":null,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"colorSchema":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","allowTags":[],"borderRadius":null,"elevation":null,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"increaseLevel":false,"header":null,"footer":null,"underline":false,"pureRender":false,"noSpacing":false,"width":null,"colWidth":null},"_owner":null,"_store":{}}],"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"increaseLevel":false,"header":null,"footer":null,"underline":false,"colorSchema":null},"_owner":null,"_store":{}} 1`] = `
 <Div
   className="uu5-bricks-page uu5-bricks-page-type-1 uu5-bricks-page-full"
   id="uuID-inner"
@@ -7092,6 +7242,7 @@ exports[`UU5.Bricks.Page rightClosed={"key":"0","ref":null,"props":{"id":"S01_R"
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -7129,6 +7280,7 @@ exports[`UU5.Bricks.Page rightClosed={"key":"0","ref":null,"props":{"id":"S01_R"
           hidden={false}
           id="S01_R"
           ignoreInnerHTML={false}
+          increaseLevel={false}
           level={null}
           mainAttrs={null}
           name={null}
@@ -7155,6 +7307,7 @@ exports[`UU5.Bricks.Page rightClosed={"key":"0","ref":null,"props":{"id":"S01_R"
             hidden={false}
             id="C01_R"
             ignoreInnerHTML={false}
+            increaseLevel={false}
             level={null}
             mainAttrs={null}
             name={null}
@@ -7220,6 +7373,8 @@ exports[`UU5.Bricks.Page rightClosed={"key":"0","ref":null,"props":{"id":"S01_R"
                 noIndex={false}
                 offset={0}
                 onClick={null}
+                onCtrlClick={null}
+                onWheelClick={null}
                 parent={null}
                 pressed={false}
                 pureRender={false}
@@ -7259,6 +7414,7 @@ exports[`UU5.Bricks.Page rightClosed={"key":"0","ref":null,"props":{"id":"S01_R"
       }
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -7313,6 +7469,7 @@ exports[`UU5.Bricks.Page rightFixed=false 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -7339,6 +7496,7 @@ exports[`UU5.Bricks.Page rightFixed=false 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -7393,6 +7551,7 @@ exports[`UU5.Bricks.Page rightFixed=true 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -7420,6 +7579,7 @@ exports[`UU5.Bricks.Page rightFixed=true 1`] = `
       contentId="uuID-content"
       controlled={false}
       fixed={true}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -7435,7 +7595,7 @@ exports[`UU5.Bricks.Page rightFixed=true 1`] = `
 </Div>
 `;
 
-exports[`UU5.Bricks.Page rightOpen={"key":"0","ref":null,"props":{"id":"idSection1_R_R","children":[{"type":"br","key":null,"ref":null,"props":{},"_owner":null,"_store":{}},{"key":null,"ref":null,"props":{"id":"uuIDColumn1_R_R","children":{"key":null,"ref":null,"props":{"id":"butGRPPID_R_R","vertical":true,"children":{"key":null,"ref":null,"props":{"id":"idBTN_R_R","colorSchema":"primary","children":"Home","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","displayBlock":false,"pressed":false,"bgStyle":"filled","onClick":null,"href":null,"target":"_self","smoothScroll":1000,"offset":0,"borderRadius":null,"elevation":null,"elevationHover":null,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"colorSchema":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","allowTags":[],"borderRadius":null,"elevation":null,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"header":null,"footer":null,"underline":false,"pureRender":false,"noSpacing":false,"width":null,"colWidth":null},"_owner":null,"_store":{}}],"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"header":null,"footer":null,"underline":false,"colorSchema":null},"_owner":null,"_store":{}} 1`] = `
+exports[`UU5.Bricks.Page rightOpen={"key":"0","ref":null,"props":{"id":"idSection1_R_R","children":[{"type":"br","key":null,"ref":null,"props":{},"_owner":null,"_store":{}},{"key":null,"ref":null,"props":{"id":"uuIDColumn1_R_R","children":{"key":null,"ref":null,"props":{"id":"butGRPPID_R_R","vertical":true,"children":{"key":null,"ref":null,"props":{"id":"idBTN_R_R","colorSchema":"primary","children":"Home","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","displayBlock":false,"pressed":false,"bgStyle":"filled","onClick":null,"onWheelClick":null,"onCtrlClick":null,"href":null,"target":"_self","smoothScroll":1000,"offset":0,"borderRadius":null,"elevation":null,"elevationHover":null,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"colorSchema":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","allowTags":[],"borderRadius":null,"elevation":null,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"increaseLevel":false,"header":null,"footer":null,"underline":false,"pureRender":false,"noSpacing":false,"width":null,"colWidth":null},"_owner":null,"_store":{}}],"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"increaseLevel":false,"header":null,"footer":null,"underline":false,"colorSchema":null},"_owner":null,"_store":{}} 1`] = `
 <Div
   className="uu5-bricks-page uu5-bricks-page-type-1 uu5-bricks-page-full"
   id="uuID-inner"
@@ -7474,6 +7634,7 @@ exports[`UU5.Bricks.Page rightOpen={"key":"0","ref":null,"props":{"id":"idSectio
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -7500,6 +7661,7 @@ exports[`UU5.Bricks.Page rightOpen={"key":"0","ref":null,"props":{"id":"idSectio
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       openContent={
         <Section
           className={null}
@@ -7513,6 +7675,7 @@ exports[`UU5.Bricks.Page rightOpen={"key":"0","ref":null,"props":{"id":"idSectio
           hidden={false}
           id="idSection1_R_R"
           ignoreInnerHTML={false}
+          increaseLevel={false}
           level={null}
           mainAttrs={null}
           name={null}
@@ -7539,6 +7702,7 @@ exports[`UU5.Bricks.Page rightOpen={"key":"0","ref":null,"props":{"id":"idSectio
             hidden={false}
             id="uuIDColumn1_R_R"
             ignoreInnerHTML={false}
+            increaseLevel={false}
             level={null}
             mainAttrs={null}
             name={null}
@@ -7604,6 +7768,8 @@ exports[`UU5.Bricks.Page rightOpen={"key":"0","ref":null,"props":{"id":"idSectio
                 noIndex={false}
                 offset={0}
                 onClick={null}
+                onCtrlClick={null}
+                onWheelClick={null}
                 parent={null}
                 pressed={false}
                 pureRender={false}
@@ -7675,6 +7841,7 @@ exports[`UU5.Bricks.Page rightRelative="xs s m l xl" 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -7701,6 +7868,7 @@ exports[`UU5.Bricks.Page rightRelative="xs s m l xl" 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -7756,6 +7924,7 @@ exports[`UU5.Bricks.Page rightRelative="xs s m l" 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -7782,6 +7951,7 @@ exports[`UU5.Bricks.Page rightRelative="xs s m l" 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -7837,6 +8007,7 @@ exports[`UU5.Bricks.Page rightRelative="xs s m" 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -7863,6 +8034,7 @@ exports[`UU5.Bricks.Page rightRelative="xs s m" 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -7917,6 +8089,7 @@ exports[`UU5.Bricks.Page rightRelative="xs s" 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -7943,6 +8116,7 @@ exports[`UU5.Bricks.Page rightRelative="xs s" 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -7997,6 +8171,7 @@ exports[`UU5.Bricks.Page rightRelative="xs" 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -8023,6 +8198,7 @@ exports[`UU5.Bricks.Page rightRelative="xs" 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -8077,6 +8253,7 @@ exports[`UU5.Bricks.Page rightRelative=null 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -8103,6 +8280,7 @@ exports[`UU5.Bricks.Page rightRelative=null 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -8157,6 +8335,7 @@ exports[`UU5.Bricks.Page rightResizable=false 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -8183,6 +8362,7 @@ exports[`UU5.Bricks.Page rightResizable=false 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -8237,6 +8417,7 @@ exports[`UU5.Bricks.Page rightResizable=true 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -8268,6 +8449,7 @@ exports[`UU5.Bricks.Page rightResizable=true 1`] = `
       overlayTop={true}
       pureRender={true}
       ref_={[Function]}
+      resizable={true}
       right={true}
       topId="uuID-top"
       width="0%"
@@ -8318,6 +8500,7 @@ exports[`UU5.Bricks.Page rightSwipe=false 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -8344,6 +8527,7 @@ exports[`UU5.Bricks.Page rightSwipe=false 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -8397,6 +8581,7 @@ exports[`UU5.Bricks.Page rightSwipe=true 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -8423,6 +8608,7 @@ exports[`UU5.Bricks.Page rightSwipe=true 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -8477,6 +8663,7 @@ exports[`UU5.Bricks.Page rightWidth="!xs-10-30 s-10em !m-10-20 l-15 xl-15" 1`] =
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -8503,6 +8690,7 @@ exports[`UU5.Bricks.Page rightWidth="!xs-10-30 s-10em !m-10-20 l-15 xl-15" 1`] =
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -8557,6 +8745,7 @@ exports[`UU5.Bricks.Page rightWidth="!xs-10-30 s-10em !m-10-20 l-15 xl-15" 2`] =
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -8583,6 +8772,7 @@ exports[`UU5.Bricks.Page rightWidth="!xs-10-30 s-10em !m-10-20 l-15 xl-15" 2`] =
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -8637,6 +8827,7 @@ exports[`UU5.Bricks.Page rightWrapperProps={"style":{"backgroundColor":"#2111EE"
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -8663,6 +8854,7 @@ exports[`UU5.Bricks.Page rightWrapperProps={"style":{"backgroundColor":"#2111EE"
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -8722,6 +8914,7 @@ exports[`UU5.Bricks.Page selected=false 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -8748,6 +8941,7 @@ exports[`UU5.Bricks.Page selected=false 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -8803,6 +8997,7 @@ exports[`UU5.Bricks.Page selected=true 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -8829,6 +9024,7 @@ exports[`UU5.Bricks.Page selected=true 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -8889,6 +9085,7 @@ exports[`UU5.Bricks.Page style="padding:8px; borderRadius: 2px" 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -8915,6 +9112,7 @@ exports[`UU5.Bricks.Page style="padding:8px; borderRadius: 2px" 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -8975,6 +9173,7 @@ exports[`UU5.Bricks.Page style={"backgroundColor":"red","color":"blue"} 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -9001,6 +9200,7 @@ exports[`UU5.Bricks.Page style={"backgroundColor":"red","color":"blue"} 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -9055,6 +9255,7 @@ exports[`UU5.Bricks.Page switchElevationLeftRight=false 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -9081,6 +9282,7 @@ exports[`UU5.Bricks.Page switchElevationLeftRight=false 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -9135,6 +9337,7 @@ exports[`UU5.Bricks.Page switchElevationLeftRight=true 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -9161,6 +9364,7 @@ exports[`UU5.Bricks.Page switchElevationLeftRight=true 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -9215,6 +9419,7 @@ exports[`UU5.Bricks.Page switchElevationTopBottom=false 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -9241,6 +9446,7 @@ exports[`UU5.Bricks.Page switchElevationTopBottom=false 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -9295,6 +9501,7 @@ exports[`UU5.Bricks.Page switchElevationTopBottom=true 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -9321,6 +9528,7 @@ exports[`UU5.Bricks.Page switchElevationTopBottom=true 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -9375,6 +9583,7 @@ exports[`UU5.Bricks.Page systemLayerContent="Obsah který se zobrazí před page
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -9401,6 +9610,7 @@ exports[`UU5.Bricks.Page systemLayerContent="Obsah který se zobrazí před page
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -9460,6 +9670,7 @@ exports[`UU5.Bricks.Page systemLayerWrapperProps={"style":{"backgroundColor":"#2
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -9486,6 +9697,7 @@ exports[`UU5.Bricks.Page systemLayerWrapperProps={"style":{"backgroundColor":"#2
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -9541,6 +9753,7 @@ exports[`UU5.Bricks.Page textCorrector=false 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -9567,6 +9780,7 @@ exports[`UU5.Bricks.Page textCorrector=false 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -9622,6 +9836,7 @@ exports[`UU5.Bricks.Page textCorrector=true 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -9648,6 +9863,7 @@ exports[`UU5.Bricks.Page textCorrector=true 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -9707,6 +9923,7 @@ exports[`UU5.Bricks.Page tooltip="My Tooltip" 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -9733,6 +9950,7 @@ exports[`UU5.Bricks.Page tooltip="My Tooltip" 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -9831,6 +10049,7 @@ exports[`UU5.Bricks.Page top={"key":"0","ref":null,"props":{"id":"uuIDBOX","colo
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -9857,6 +10076,7 @@ exports[`UU5.Bricks.Page top={"key":"0","ref":null,"props":{"id":"uuIDBOX","colo
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -9911,6 +10131,7 @@ exports[`UU5.Bricks.Page topFixed="always" 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -9938,6 +10159,7 @@ exports[`UU5.Bricks.Page topFixed="always" 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -9993,6 +10215,7 @@ exports[`UU5.Bricks.Page topFixed="smart" 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -10020,6 +10243,7 @@ exports[`UU5.Bricks.Page topFixed="smart" 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -10075,6 +10299,7 @@ exports[`UU5.Bricks.Page topFixed=false 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -10101,6 +10326,7 @@ exports[`UU5.Bricks.Page topFixed=false 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -10155,6 +10381,7 @@ exports[`UU5.Bricks.Page topFixed=true 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -10182,6 +10409,7 @@ exports[`UU5.Bricks.Page topFixed=true 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -10237,6 +10465,7 @@ exports[`UU5.Bricks.Page topWrapperProps={"style":{"backgroundColor":"#2196F3"}}
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -10263,6 +10492,7 @@ exports[`UU5.Bricks.Page topWrapperProps={"style":{"backgroundColor":"#2196F3"}}
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -10362,6 +10592,7 @@ exports[`UU5.Bricks.Page type=1 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -10388,6 +10619,7 @@ exports[`UU5.Bricks.Page type=1 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       overlayTop={true}
       pureRender={true}
@@ -10442,6 +10674,7 @@ exports[`UU5.Bricks.Page type=2 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayTop={true}
       pureRender={true}
       ref_={[Function]}
@@ -10475,6 +10708,7 @@ exports[`UU5.Bricks.Page type=2 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayTop={true}
       pureRender={true}
       ref_={[Function]}
@@ -10525,6 +10759,7 @@ exports[`UU5.Bricks.Page type=3 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       pureRender={true}
       ref_={[Function]}
       topId="uuID-top"
@@ -10557,6 +10792,7 @@ exports[`UU5.Bricks.Page type=3 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       pureRender={true}
       ref_={[Function]}
       right={true}
@@ -10606,6 +10842,7 @@ exports[`UU5.Bricks.Page type=4 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       pureRender={true}
       ref_={[Function]}
@@ -10636,6 +10873,7 @@ exports[`UU5.Bricks.Page type=4 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       pureRender={true}
       ref_={[Function]}
@@ -10689,6 +10927,7 @@ exports[`UU5.Bricks.Page type=5 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayTop={true}
       pureRender={true}
       ref_={[Function]}
@@ -10721,6 +10960,7 @@ exports[`UU5.Bricks.Page type=5 1`] = `
           className=" uu5-bricks-page-right"
           contentId="uuID-content"
           controlled={false}
+          onResize={[Function]}
           overlayBottom={true}
           overlayTop={true}
           pureRender={true}
@@ -10783,6 +11023,7 @@ exports[`UU5.Bricks.Page type=6 1`] = `
           className=" uu5-bricks-page-left"
           contentId="uuID-content"
           controlled={false}
+          onResize={[Function]}
           overlayBottom={true}
           overlayTop={true}
           pureRender={true}
@@ -10814,6 +11055,7 @@ exports[`UU5.Bricks.Page type=6 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayTop={true}
       pureRender={true}
       ref_={[Function]}
@@ -10870,6 +11112,7 @@ exports[`UU5.Bricks.Page type=7 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       pureRender={true}
       ref_={[Function]}
@@ -10902,6 +11145,7 @@ exports[`UU5.Bricks.Page type=7 1`] = `
           className=" uu5-bricks-page-right"
           contentId="uuID-content"
           controlled={false}
+          onResize={[Function]}
           overlayBottom={true}
           overlayTop={true}
           pureRender={true}
@@ -10970,6 +11214,7 @@ exports[`UU5.Bricks.Page type=8 1`] = `
           className=" uu5-bricks-page-left"
           contentId="uuID-content"
           controlled={false}
+          onResize={[Function]}
           overlayBottom={true}
           overlayTop={true}
           pureRender={true}
@@ -10998,6 +11243,7 @@ exports[`UU5.Bricks.Page type=8 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       overlayBottom={true}
       pureRender={true}
       ref_={[Function]}
@@ -11051,6 +11297,7 @@ exports[`UU5.Bricks.Page type=9 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       pureRender={true}
       ref_={[Function]}
       topId="uuID-top"
@@ -11082,6 +11329,7 @@ exports[`UU5.Bricks.Page type=9 1`] = `
           className=" uu5-bricks-page-right"
           contentId="uuID-content"
           controlled={false}
+          onResize={[Function]}
           overlayBottom={true}
           overlayTop={true}
           pureRender={true}
@@ -11138,6 +11386,7 @@ exports[`UU5.Bricks.Page type=10 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       pureRender={true}
       ref_={[Function]}
       topId="uuID-top"
@@ -11176,6 +11425,7 @@ exports[`UU5.Bricks.Page type=10 1`] = `
           className=" uu5-bricks-page-right"
           contentId="uuID-content"
           controlled={false}
+          onResize={[Function]}
           overlayTop={true}
           pureRender={true}
           ref_={[Function]}
@@ -11228,6 +11478,7 @@ exports[`UU5.Bricks.Page type=11 1`] = `
       className=" uu5-bricks-page-left"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       pureRender={true}
       ref_={[Function]}
       topId="uuID-top"
@@ -11263,6 +11514,7 @@ exports[`UU5.Bricks.Page type=11 1`] = `
           className=" uu5-bricks-page-right"
           contentId="uuID-content"
           controlled={false}
+          onResize={[Function]}
           overlayBottom={true}
           pureRender={true}
           ref_={[Function]}
@@ -11330,6 +11582,7 @@ exports[`UU5.Bricks.Page type=12 1`] = `
           className=" uu5-bricks-page-left"
           contentId="uuID-content"
           controlled={false}
+          onResize={[Function]}
           overlayBottom={true}
           overlayTop={true}
           pureRender={true}
@@ -11361,6 +11614,7 @@ exports[`UU5.Bricks.Page type=12 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       pureRender={true}
       ref_={[Function]}
       right={true}
@@ -11422,6 +11676,7 @@ exports[`UU5.Bricks.Page type=13 1`] = `
           className=" uu5-bricks-page-left"
           contentId="uuID-content"
           controlled={false}
+          onResize={[Function]}
           overlayTop={true}
           pureRender={true}
           ref_={[Function]}
@@ -11456,6 +11711,7 @@ exports[`UU5.Bricks.Page type=13 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       pureRender={true}
       ref_={[Function]}
       right={true}
@@ -11517,6 +11773,7 @@ exports[`UU5.Bricks.Page type=14 1`] = `
           className=" uu5-bricks-page-left"
           contentId="uuID-content"
           controlled={false}
+          onResize={[Function]}
           overlayBottom={true}
           pureRender={true}
           ref_={[Function]}
@@ -11551,6 +11808,7 @@ exports[`UU5.Bricks.Page type=14 1`] = `
       className=" uu5-bricks-page-right"
       contentId="uuID-content"
       controlled={false}
+      onResize={[Function]}
       pureRender={true}
       ref_={[Function]}
       right={true}

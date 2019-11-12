@@ -558,7 +558,7 @@ describe("UU5.Forms.ColorPicker interface", () => {
     // open
     wrapper.instance().toggle(callback);
     expect(callback).toBeCalledTimes(3);
-    expect(wrapper.instance().isOpen()).toBeTruthy()
+    expect(wrapper.instance().isOpen()).toBeTruthy();
 
     // close
     wrapper.instance().toggle(callback);
@@ -574,7 +574,6 @@ describe("UU5.Forms.ColorPicker interface", () => {
   });
 
   it("UU5.Forms.ColorPicker - set invalid values", () => {
-
     const wrapper = shallow(<UU5.Forms.ColorPicker value="#FFFFFF" />);
     expect(wrapper.instance().getValue()).toEqual("#FFFFFF");
     // set invalid color -> component reset value to empty value

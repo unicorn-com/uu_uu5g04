@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -17,9 +17,8 @@ import "uu5g04-bricks";
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
-describe('UU5.Bricks.Panel ifc testing', () => {
-
-  it('setExpandedValue(true, setStateCallBack)', () => {
+describe("UU5.Bricks.Panel ifc testing", () => {
+  it("setExpandedValue(true, setStateCallBack)", () => {
     const wrapper = shallow(
       <UU5.Bricks.Panel
         id="panel0"
@@ -44,8 +43,7 @@ describe('UU5.Bricks.Panel ifc testing', () => {
     expect(returnValue).toBe(wrapper.instance());
   });
 
-
-  it('setExpandedValue(false, setStateCallBack)', () => {
+  it("setExpandedValue(false, setStateCallBack)", () => {
     const wrapper = shallow(
       <UU5.Bricks.Panel
         id="panel0"
@@ -69,7 +67,7 @@ describe('UU5.Bricks.Panel ifc testing', () => {
     expect(returnValue).toBe(wrapper.instance());
   });
 
-  it('expand(setStateCallBack)', () => {
+  it("expand(setStateCallBack)", () => {
     const wrapper = shallow(
       <UU5.Bricks.Panel
         id="panel0"
@@ -93,7 +91,7 @@ describe('UU5.Bricks.Panel ifc testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('collapse(setStateCallBack)', () => {
+  it("collapse(setStateCallBack)", () => {
     const wrapper = shallow(
       <UU5.Bricks.Panel
         id="panel0"
@@ -122,7 +120,7 @@ describe('UU5.Bricks.Panel ifc testing', () => {
    * First call toggle() open panel.
    * Second call toggle() close opened panel.
    */
-  it('toggle(setStateCallBack)', () => {
+  it("toggle(setStateCallBack)", () => {
     const wrapper = shallow(
       <UU5.Bricks.Panel
         id="panel0"
@@ -153,7 +151,7 @@ describe('UU5.Bricks.Panel ifc testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isExpanded() return true', () => {
+  it("isExpanded() return true", () => {
     const wrapper = shallow(
       <UU5.Bricks.Panel
         id="panel0"
@@ -168,7 +166,7 @@ describe('UU5.Bricks.Panel ifc testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isExpanded() return false', () => {
+  it("isExpanded() return false", () => {
     const wrapper = shallow(
       <UU5.Bricks.Panel
         id="panel0"
@@ -182,7 +180,7 @@ describe('UU5.Bricks.Panel ifc testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isExpandable() return true', () => {
+  it("isExpandable() return true", () => {
     const wrapper = shallow(
       <UU5.Bricks.Panel
         id="panel0"
@@ -196,7 +194,7 @@ describe('UU5.Bricks.Panel ifc testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isExpandable() return false', () => {
+  it("isExpandable() return false", () => {
     const wrapper = shallow(
       <UU5.Bricks.Panel
         id="panel0"
@@ -212,7 +210,7 @@ describe('UU5.Bricks.Panel ifc testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isExpandable() return true when alwaysExpanded is true and disabled is false', () => {
+  it("isExpandable() return true when alwaysExpanded is true and disabled is false", () => {
     const wrapper = shallow(
       <UU5.Bricks.Panel
         id="panel0"
@@ -227,6 +225,4 @@ describe('UU5.Bricks.Panel ifc testing', () => {
     expect(wrapper.instance().isExpandable()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
-
-
 });

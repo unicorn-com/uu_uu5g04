@@ -40,6 +40,8 @@ exports[`UU5.Common.Tools interface findComponent(tag, props, content) should re
   noIndex={false}
   offset={0}
   onClick={null}
+  onCtrlClick={null}
+  onWheelClick={null}
   parent={null}
   pressed={false}
   pureRender={false}

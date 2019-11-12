@@ -25,7 +25,7 @@ if (!React.lazy || !React.Suspense) {
 
 const UU5 = window.UU5 || {};
 
-import Environment from './environment/environment.js';
+import Environment from "./environment/environment.js";
 
 let environment = Environment;
 
@@ -33,32 +33,32 @@ import Speech from "./environment/speech.js";
 
 Environment.Speech = new Speech();
 
-import * as Common from './common/common.js';
+import * as Common from "./common/common.js";
 
-export {Common};
+export { Common };
 UU5.Common = Common;
 
-import EventListener from './common/event-listener.js';
+import EventListener from "./common/event-listener.js";
 
 environment.EventListener = new EventListener();
 
-import CommonLsi from './common/common-lsi.js';
+import CommonLsi from "./common/common-lsi.js";
 
 environment.Lsi.Common = CommonLsi;
 
-export {environment as Environment};
+export { environment as Environment };
 UU5.Environment = environment;
 
-import * as Icons from './environment/icons.js';
+import * as Icons from "./environment/icons.js";
 
-export {Icons};
+export { Icons };
 UU5.Icons = Icons;
 
-import * as PropTypes from './prop-types/prop-types.js';
+import * as PropTypes from "./prop-types/prop-types.js";
 export { PropTypes };
 UU5.PropTypes = PropTypes;
 
-import * as Utils from './utils/utils.js';
+import * as Utils from "./utils/utils.js";
 export { Utils };
 UU5.Utils = Utils;
 
@@ -69,59 +69,59 @@ UU5.Utils = Utils;
 // then uu5g04-forms (UU5 module) wants to add "Forms" key into "root" of uu5g04 exports which
 // isn't possible (exports are frozen by SystemJS), so instead uu5g04-forms will inject its components into
 // pre-existing "Forms" key within uu5g04 exports
-const Bricks = UU5.Bricks = {};
-export {Bricks};
+const Bricks = (UU5.Bricks = {});
+export { Bricks };
 
-const BricksEditable = UU5.BricksEditable = {};
-export {BricksEditable};
+const BricksEditable = (UU5.BricksEditable = {});
+export { BricksEditable };
 
-const Forms = UU5.Forms = {};
-export {Forms};
+const Forms = (UU5.Forms = {});
+export { Forms };
 
-const CodeKit = UU5.CodeKit = {};
-export {CodeKit};
+const CodeKit = (UU5.CodeKit = {});
+export { CodeKit };
 
-const Calendar = UU5.Calendar = {};
-export {Calendar};
+const Calendar = (UU5.Calendar = {});
+export { Calendar };
 
-const Imaging = UU5.Imaging = {};
-export {Imaging};
+const Imaging = (UU5.Imaging = {});
+export { Imaging };
 
-const ParamQuery = UU5.ParamQuery = {};
-export {ParamQuery};
+const ParamQuery = (UU5.ParamQuery = {});
+export { ParamQuery };
 
-const Math = UU5.Math = {};
-export {Math};
+const Math = (UU5.Math = {});
+export { Math };
 
-const Tree = UU5.Tree = {};
-export {Tree};
+const Tree = (UU5.Tree = {});
+export { Tree };
 
-const DataTable = UU5.DataTable = {};
-export {DataTable};
+const DataTable = (UU5.DataTable = {});
+export { DataTable };
 
-const Chart = UU5.Chart = {};
-export {Chart};
+const Chart = (UU5.Chart = {});
+export { Chart };
 
-const SimpleChart = UU5.SimpleChart = {};
-export {SimpleChart};
+const SimpleChart = (UU5.SimpleChart = {});
+export { SimpleChart };
 
-const LibraryRegistry = UU5.LibraryRegistry = {};
-export {LibraryRegistry};
+const LibraryRegistry = (UU5.LibraryRegistry = {});
+export { LibraryRegistry };
 
-const ComponentCatalogue = UU5.ComponentCatalogue = {};
-export {ComponentCatalogue};
+const ComponentCatalogue = (UU5.ComponentCatalogue = {});
+export { ComponentCatalogue };
 
-const Tiles = UU5.Tiles = {};
-export {Tiles};
+const Tiles = (UU5.Tiles = {});
+export { Tiles };
 
-const RichText = UU5.RichText = {};
-export {RichText};
+const RichText = (UU5.RichText = {});
+export { RichText };
 
-const BlockLayout = UU5.BlockLayout = {};
-export {BlockLayout};
+const BlockLayout = (UU5.BlockLayout = {});
+export { BlockLayout };
 
-const Test = UU5.Test = {};
-export {Test};
+const Test = (UU5.Test = {});
+export { Test };
 
 window.UU5 = UU5;
 export default UU5;

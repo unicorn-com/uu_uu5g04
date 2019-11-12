@@ -109,7 +109,7 @@
             {/*@@viewOn:0*/}
             <UU5.Forms.TimePicker
               label="Time of meeting"
-              step="15"
+              step={15}
             />
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
@@ -128,7 +128,7 @@
             {/*@@viewOn:0*/}
             <UU5.Forms.TimePicker
               label="Time of meeting"
-              step="15"
+              step={15}
               pickerType="single-column"
             />
             {/*@@viewOff:0*/}
@@ -136,7 +136,26 @@
 
           <UU5.Bricks.Section header="openToContent">
             {/*@@viewOn:0*/}
-            <UU5.Forms.TimePicker  label="Time of meeting" openToContent={true} />
+            <UU5.Forms.TimePicker label="Time of meeting" openToContent={true} />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="timeFrom & timeTo">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.TimePicker label="06:30:15 - 18:15:30" timeFrom="06:30:15" timeTo="18:15:30" seconds />
+            <UU5.Forms.TimePicker label="06:00:00 - 06:00:00" timeFrom="06:00:00" timeTo="06:00:00" seconds />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="show24">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.TimePicker label="Time of meeting" seconds show24 />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="suffix">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.TimePicker label="With suffix" suffix="suffix" value="15:00" />
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
         </UU5.Bricks.Container>

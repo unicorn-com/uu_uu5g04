@@ -46,50 +46,39 @@ const CONFIG = {
 describe(`UU5.Forms.Controls props`, () => {
   UU5.Test.Tools.testProperties(UU5.Forms.Controls, CONFIG);
 
-  it('buttonProps', () => {
-    const wrapper = mount(<UU5.Forms.Controls id={"controlsID"} buttonSubmitProps={{ className: "submit-button", disabled: true }} />);
+  it("buttonProps", () => {
+    const wrapper = mount(
+      <UU5.Forms.Controls id={"controlsID"} buttonSubmitProps={{ className: "submit-button", disabled: true }} />
+    );
     let submitButton = wrapper.find("button").find(".submit-button");
     expect(submitButton.hasClass("uu5-common-disabled")).toBeTruthy();
   });
 });
 
 describe(`UU5.Forms.Controls docKit example`, () => {
-
-  it('Example forms with formcontrols', () => {
+  it("Example forms with formcontrols", () => {
     const wrapper = shallow(
       <UU5.Forms.Form
         id={"idRoot"}
-        header={<UU5.Bricks.Box
-          id={"idBox"}
-          content='Basic registration form demo'
-          colorSchema='green'
-          className='font-size-m'/>}
+        header={
+          <UU5.Bricks.Box
+            id={"idBox"}
+            content="Basic registration form demo"
+            colorSchema="green"
+            className="font-size-m"
+          />
+        }
       >
-        <UU5.Forms.Text
-          id={"idText"}
-          label='Name'
-          name='name'
-          placeholder='John'
-          required
-        />
-        <UU5.Forms.Text
-          id={"idText2"}
-          label='SubName'
-          name='subname'
-          placeholder='Smith'
-          required
-        />
+        <UU5.Forms.Text id={"idText"} label="Name" name="name" placeholder="John" required />
+        <UU5.Forms.Text id={"idText2"} label="SubName" name="subname" placeholder="Smith" required />
         <UU5.Forms.Controls id={"controlsID"} buttonReset buttonValidate />
       </UU5.Forms.Form>
     );
     expect(wrapper).toMatchSnapshot();
   });
 
-
   it(`UU5.Commons.Mixin Base,Elementary`, () => {
-    const wrapper = shallow(
-      <UU5.Forms.Controls id={"controlsID"} buttonReset buttonValidate />
-    );
+    const wrapper = shallow(<UU5.Forms.Controls id={"controlsID"} buttonReset buttonValidate />);
     //Check UU5.Common.Elementary.Mixin default props
     expect(wrapper.instance().props.hidden).toBeFalsy();
     expect(wrapper.instance().props.disabled).toBeFalsy();
@@ -109,5 +98,3 @@ describe(`UU5.Forms.Controls docKit example`, () => {
     expect(wrapper.instance().props.pureRender).toBeFalsy();
   });
 });
-
-

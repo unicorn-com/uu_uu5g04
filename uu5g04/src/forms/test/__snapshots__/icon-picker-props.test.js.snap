@@ -2,7 +2,7 @@
 
 exports[`UU5.Forms.IconPicker default props UU5.Forms.IconPicker check default props 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap color-schema-red"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -47,6 +47,7 @@ exports[`UU5.Forms.IconPicker default props UU5.Forms.IconPicker check default p
           hidden={false}
           id={null}
           ignoreInnerHTML={false}
+          increaseLevel={false}
           level={null}
           mainAttrs={null}
           name={null}

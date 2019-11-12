@@ -1,25 +1,26 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
-import './text.less';
+import "./text.less";
+//@@viewOff:imports
 
 export const Text = createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -34,11 +35,11 @@ export const Text = createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("Text"),
-    nestingLevelList: UU5.Environment.getNestingLevelList('smallBox', 'inline'),
+    nestingLevelList: UU5.Environment.getNestingLevelList("smallBox", "inline"),
     classNames: {
       main: ns.css("text uu5-common-text"),
       nestingLevelSmallBox: ns.css("text-nesting-level-small-box"),
-      nestingLevelInline: ns.css("text-nesting-level-inline"),
+      nestingLevelInline: ns.css("text-nesting-level-inline")
     }
   },
   //@@viewOff:statics
@@ -49,46 +50,46 @@ export const Text = createReactClass({
   //@@viewOn:getDefaultProps
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
-  _getMainAttrs: function () {
+  //@@viewOn:private
+  _getMainAttrs: function() {
     let attrs = this.getMainAttrs();
 
     switch (this.getNestingLevel()) {
-      case 'inline':
-        attrs.className += ' ' + this.getClassName().nestingLevelInline;
+      case "inline":
+        attrs.className += " " + this.getClassName().nestingLevelInline;
         break;
       default:
-        attrs.className += ' ' + this.getClassName().nestingLevelSmallBox;
+        attrs.className += " " + this.getClassName().nestingLevelSmallBox;
     }
 
     return attrs;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
-  render: function () {
+  render: function() {
     let component;
     switch (this.getNestingLevel()) {
-      case 'smallBox':
+      case "smallBox":
         component = (
-          <div {...this._getMainAttrs()} >
+          <div {...this._getMainAttrs()}>
             {this.getChildren()}
             {this.getDisabledCover()}
           </div>
         );
         break;
-      case 'inline':
+      case "inline":
         component = (
-          <span {...this._getMainAttrs()} >
+          <span {...this._getMainAttrs()}>
             {this.getChildren()}
             {this.getDisabledCover()}
           </span>
@@ -99,7 +100,6 @@ export const Text = createReactClass({
     }
 
     return component;
-
   }
   //@@viewOff:render
 });

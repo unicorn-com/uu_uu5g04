@@ -11,21 +11,23 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "./forms-ns.js";
-import TextInput from './internal/text-input.js';
+import TextInput from "./internal/text-input.js";
 
-import TextInputMixin from './mixins/text-input-mixin.js'
+import TextInputMixin from "./mixins/text-input-mixin.js";
 
-import ItemList from './internal/item-list.js';
+import ItemList from "./internal/item-list.js";
 
 import Context from "./form-context.js";
 
-import './number.less';
+import "./number.less";
+//@@viewOff:imports
 
 export const Number = Context.withContext(
   createReactClass({
@@ -50,16 +52,13 @@ export const Number = Context.withContext(
         regexpNumberParts: /\B(?=(\d{3})+(?!\d))/g,
         inputColWidth: "xs12 s4 m4 l3 xl3"
       },
-      lsi: () => (UU5.Common.Tools.merge({}, UU5.Environment.Lsi.Forms.number, UU5.Environment.Lsi.Forms.message))
+      lsi: () => UU5.Common.Tools.merge({}, UU5.Environment.Lsi.Forms.number, UU5.Environment.Lsi.Forms.message)
     },
     //@@viewOff:statics
 
     //@@viewOn:propTypes
     propTypes: {
-      value: PropTypes.oneOfType([
-        PropTypes.number,
-        PropTypes.string
-      ]),
+      value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
       step: PropTypes.number,
       min: PropTypes.number,
       max: PropTypes.number,
@@ -89,7 +88,7 @@ export const Number = Context.withContext(
         min: null,
         max: null,
         decimals: null,
-        decimalSeparator: ',',
+        decimalSeparator: ",",
         thousandSeparator: "",
         rounded: false,
         nanMessage: null,
@@ -107,7 +106,7 @@ export const Number = Context.withContext(
     },
     //@@viewOff:getDefaultProps
 
-    //@@viewOn:standardComponentLifeCycle
+    //@@viewOn:reactLifeCycle
     componentWillMount() {
       this._isNaN = false;
       let value;
@@ -115,15 +114,18 @@ export const Number = Context.withContext(
         value = this.state.value;
       } else {
         const multiplicator = Math.pow(10, this.props.decimals);
-        value = this.props.rounded && this.props.decimals ? Math.round(this.state.value * multiplicator) / multiplicator : this.state.value;
+        value =
+          this.props.rounded && this.props.decimals
+            ? Math.round(this.state.value * multiplicator) / multiplicator
+            : this.state.value;
       }
 
       let result = this._setNumberResult({ value });
       value = result.value;
 
-      if (this.props.onValidate && typeof this.props.onValidate === 'function') {
+      if (this.props.onValidate && typeof this.props.onValidate === "function") {
         if (result) {
-          if (typeof result === 'object') {
+          if (typeof result === "object") {
             if (result.feedback) {
               this.setFeedback(result.feedback, result.message, result.value);
             } else {
@@ -141,10 +143,10 @@ export const Number = Context.withContext(
       if (this.props.controlled) {
         let result = this._setNumberResult({ value: nextProps.value });
 
-        if (this.props.onValidate && typeof this.props.onValidate === 'function') {
+        if (this.props.onValidate && typeof this.props.onValidate === "function") {
           this._validateOnChange({ value: result.value, event: null, component: this }, true);
         } else if (result) {
-          if (typeof result === 'object') {
+          if (typeof result === "object") {
             if (result.feedback) {
               this.setFeedback(result.feedback, result.message, result.value);
             } else {
@@ -163,16 +165,16 @@ export const Number = Context.withContext(
       }
     },
 
-    //@@viewOff:standardComponentLifeCycle
+    //@@viewOff:reactLifeCycle
 
     //@@viewOn:interface
     //@@viewOff:interface
 
-    //@@viewOn:overridingMethods
+    //@@viewOn:overriding
     // TODO: tohle je ještě otázka - je potřeba nastavit hodnotu z jiné komponenty (musí být validace) a z onChange (neměla by být validace)
     setValue_(value, setStateCallback) {
       if (this._checkRequired({ value })) {
-        if (typeof this.props.onValidate === 'function') {
+        if (typeof this.props.onValidate === "function") {
           this._validateOnChange({ value: value, event: null, component: this });
         } else {
           this.setInitial(null, value, setStateCallback);
@@ -184,11 +186,11 @@ export const Number = Context.withContext(
 
     onChangeDefault_(opt, setStateCallback) {
       let type = opt._data.type;
-      if (type == 'increase') {
+      if (type == "increase") {
         this._onIncreaseDefault(opt, setStateCallback);
-      } else if (type == 'decrease') {
+      } else if (type == "decrease") {
         this._onDecreaseDefault(opt, setStateCallback);
-      } else if (type == 'input') {
+      } else if (type == "input") {
         this._onChangeInputDefault(opt, setStateCallback);
       }
 
@@ -215,7 +217,7 @@ export const Number = Context.withContext(
           this.setFeedback(setNumberResult.feedback, setNumberResult.message, setNumberResult.value);
         }
       } else if (!this.props.validateOnChange) {
-        this.setError(this.props.requiredMessage || this.getLsiComponent('requiredMessage'), setNumberResult.value);
+        this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessage"), setNumberResult.value);
       } else {
         this.setFeedback(setNumberResult.feedback, setNumberResult.message, setNumberResult.value);
       }
@@ -240,9 +242,9 @@ export const Number = Context.withContext(
 
       return value;
     },
-    //@@viewOff:overridingMethods
+    //@@viewOff:overriding
 
-    //@@viewOn:componentSpecificHelpers
+    //@@viewOn:private
     _getOutputResult(result) {
       if (result.value !== undefined) {
         if (typeof result._data === "object") {
@@ -275,7 +277,7 @@ export const Number = Context.withContext(
         // To get cursor position, get empty selection range
         var oSel = document.selection.createRange();
         // Move selection start to 0 position
-        oSel.moveStart('character', -inputNode.value.length);
+        oSel.moveStart("character", -inputNode.value.length);
         // The caret position is selection length
         iCaretPos = oSel.text.length;
       }
@@ -290,7 +292,7 @@ export const Number = Context.withContext(
       if (elem != null) {
         if (elem.createTextRange) {
           let range = elem.createTextRange();
-          range.move('character', caretPosStart);
+          range.move("character", caretPosStart);
           range.select();
         } else {
           if (elem.selectionStart >= 0) {
@@ -336,16 +338,26 @@ export const Number = Context.withContext(
         e.persist();
         if (!e.shiftKey) {
           let cursorPosition = this._doGetCaretPosition();
-          let maxPosition = this.props.suffix ? e.target.value.length - this.props.suffix.length : e.target.value.length;
+          let maxPosition = this.props.suffix
+            ? e.target.value.length - this.props.suffix.length
+            : e.target.value.length;
           let minPosition = this.props.prefix ? this.props.prefix.length : 0;
           // 36 - Home, 40 - ArrowDown, 37 - ArrowLeft
-          if (!this.props.hidePrefixOnFocus && this._isFocused && e.keyCode === 36 || e.keyCode === 38 || (e.metaKey && e.keyCode === 37)) {
+          if (
+            (!this.props.hidePrefixOnFocus && this._isFocused && e.keyCode === 36) ||
+            e.keyCode === 38 ||
+            (e.metaKey && e.keyCode === 37)
+          ) {
             e.preventDefault();
             this._setCaretPosition(minPosition);
             return;
           }
           // 35 - End, 38 - ArrowUp, 39 - ArrowRight
-          if (!this.props.hideSuffixOnFocus && this._isFocused && e.keyCode === 35 || e.keyCode === 40 || (e.metaKey && e.keyCode === 39)) {
+          if (
+            (!this.props.hideSuffixOnFocus && this._isFocused && e.keyCode === 35) ||
+            e.keyCode === 40 ||
+            (e.metaKey && e.keyCode === 39)
+          ) {
             e.preventDefault();
             this._setCaretPosition(maxPosition);
             return;
@@ -376,7 +388,11 @@ export const Number = Context.withContext(
       }
     },
 
-    _parseNumberFromString(value = this.state.value, decimalSeparator = this.props.decimalSeparator, thousandSeparator = this.props.thousandSeparator) {
+    _parseNumberFromString(
+      value = this.state.value,
+      decimalSeparator = this.props.decimalSeparator,
+      thousandSeparator = this.props.thousandSeparator
+    ) {
       let parsedNumber = UU5.Common.Tools.normalizeNumberSeparators(value, { thousandSeparator, decimalSeparator });
       parsedNumber = parsedNumber || parsedNumber === 0 ? parsedNumber.toString() : parsedNumber;
       return this._removePrefixandSuffix(parsedNumber);
@@ -450,7 +466,9 @@ export const Number = Context.withContext(
           }, 0);
         } else if (this.props.suffix || this.props.prefix) {
           let minPosition = this.props.prefix ? this.props.prefix.length : 0;
-          let maxPosition = this.props.suffix ? e.target.value.length - this.props.suffix.length : e.target.value.length;
+          let maxPosition = this.props.suffix
+            ? e.target.value.length - this.props.suffix.length
+            : e.target.value.length;
           if ((isFireFox || isIE) && cursorPosition > minPosition && cursorPosition < maxPosition) {
             setTimeout(() => {
               this._setCaretPosition(cursorPosition);
@@ -466,11 +484,13 @@ export const Number = Context.withContext(
       if (this.props.prefix || this.props.suffix) {
         let cursorPosition = this._doGetCaretPosition();
         let suffixRegExp = new RegExp("\\" + this.props.suffix, "g");
-        let hasSuffix = !!(e.target.value.match(suffixRegExp));
+        let hasSuffix = !!e.target.value.match(suffixRegExp);
         let minPosition = this.props.prefix ? this.props.prefix.length : 0;
-        let maxPosition = this.props.suffix ? e.target.value.length - (hasSuffix ? this.props.suffix.length : 0) : e.target.value.length;
+        let maxPosition = this.props.suffix
+          ? e.target.value.length - (hasSuffix ? this.props.suffix.length : 0)
+          : e.target.value.length;
         if (this._isFocused && !this.props.hidePrefixOnFocus) {
-          if ((cursorPosition < minPosition)) {
+          if (cursorPosition < minPosition) {
             setTimeout(() => {
               this._setCaretPosition(minPosition);
             }, 0);
@@ -489,19 +509,19 @@ export const Number = Context.withContext(
     _checkNumberResultChange(opt) {
       if (opt.value) {
         opt.value = opt.value.toString();
-        let isComma = opt.value.indexOf(',') > 0;
+        let isComma = opt.value.indexOf(",") > 0;
         opt.value = this._parseNumberFromString(opt.value, this.props.decimalSeparator, this.props.thousandSeparator);
         let isNan = isNaN(opt.value);
-        if (isNan && opt.value != '-') {
+        if (isNan && opt.value != "-") {
           this._updateRange = this._doGetCaretPosition() - 1;
           opt.value = this.state.value;
-          opt.feedback = 'warning';
+          opt.feedback = "warning";
           opt.message = this.props.nanMessage || this.getLsiValue("nanMessage");
           this._isNaN = true;
         } else {
           this._isNaN = false;
         }
-        isComma && (opt.value = opt.value.replace('.', ','));
+        isComma && (opt.value = opt.value.replace(".", ","));
       }
       return opt;
     },
@@ -511,22 +531,21 @@ export const Number = Context.withContext(
 
       if (opt.value || opt.value === 0) {
         opt = this._checkNumberResultChange(opt);
-        let isComma = opt.value && opt.value.indexOf(',') > 0;
+        let isComma = opt.value && opt.value.indexOf(",") > 0;
         opt.value = this._parseNumberFromString(opt.value);
         let number = parseFloat(opt.value);
 
         if ((this.props.min || this.props.min === 0) && number < this.props.min) {
-          opt.feedback = 'error';
-          opt.message = this.props.lowerMessage || this.getLsiValue('lowerMessage') + " " + this.props.min + ".";
+          opt.feedback = "error";
+          opt.message = this.props.lowerMessage || this.getLsiValue("lowerMessage") + " " + this.props.min + ".";
         }
 
         if ((this.props.max || this.props.max === 0) && number > this.props.max) {
-          opt.feedback = 'error';
-          opt.message = this.props.upperMessage || this.getLsiValue('upperMessage') + " " + this.props.max + ".";
+          opt.feedback = "error";
+          opt.message = this.props.upperMessage || this.getLsiValue("upperMessage") + " " + this.props.max + ".";
         }
 
-        isComma && (opt.value = opt.value.replace('.', ','));
-
+        isComma && (opt.value = opt.value.replace(".", ","));
       }
 
       return opt;
@@ -543,7 +562,7 @@ export const Number = Context.withContext(
           number = UU5.Common.Tools.round10(parseFloat(number), exp).toString();
         }
 
-        let numberParts = number.split('.');
+        let numberParts = number.split(".");
 
         if (this.props.thousandSeparator) {
           numberParts[0] = numberParts[0].replace(this.getDefault().regexpNumberParts, this.props.thousandSeparator);
@@ -565,15 +584,15 @@ export const Number = Context.withContext(
 
     _onChange(e) {
       this._correctCursorPosition(e);
-      let opt = { value: e.target.value, event: e, component: this, _data: { type: 'input' } };
+      let opt = { value: e.target.value, event: e, component: this, _data: { type: "input" } };
       this.props.prefix || this.props.suffix ? (opt.value = this._removePrefixandSuffix(opt.value)) : null;
       let checkNumberResult = this._checkNumberResultChange(opt);
-      if (checkNumberResult.feedback && checkNumberResult.feedback === 'warning') {
+      if (checkNumberResult.feedback && checkNumberResult.feedback === "warning") {
         this.setFeedback(checkNumberResult.feedback, checkNumberResult.message, checkNumberResult.value);
       } else {
         opt = this._getOutputResult(opt);
         if (!this.isComputedDisabled() && !this.isReadOnly()) {
-          if (typeof this.props.onChange === 'function') {
+          if (typeof this.props.onChange === "function") {
             this.props.onChange(opt);
           } else {
             this.onChangeDefault(opt);
@@ -610,7 +629,7 @@ export const Number = Context.withContext(
       opt = { ...opt };
       opt.value = opt._data.value;
 
-      if (feedback === 'error') {
+      if (feedback === "error") {
         this.setValue_(opt.value, () => {
           this._decreaseEnd();
           if (typeof setStateCallback === "function") {
@@ -629,7 +648,7 @@ export const Number = Context.withContext(
       opt = { ...opt };
       opt.value = opt._data.value;
 
-      if (feedback === 'error') {
+      if (feedback === "error") {
         this.setValue_(opt.value, () => {
           this._increaseEnd();
           if (typeof setStateCallback === "function") {
@@ -649,7 +668,7 @@ export const Number = Context.withContext(
       opt.value = opt.value ? this._parseNumberFromString(opt.value) : opt.value;
       opt = this._getOutputResult(opt);
 
-      if (typeof this.props.onBlur === 'function') {
+      if (typeof this.props.onBlur === "function") {
         this.props.onBlur(opt);
       } else {
         this.onBlurDefault(opt);
@@ -664,7 +683,7 @@ export const Number = Context.withContext(
       let opt = { value: e.target.value, event: e, component: this };
       opt = this._getOutputResult(opt);
 
-      if (typeof this.props.onFocus === 'function') {
+      if (typeof this.props.onFocus === "function") {
         this.props.onFocus(opt);
       } else {
         this.onFocusDefault(opt);
@@ -677,9 +696,9 @@ export const Number = Context.withContext(
       let _callCallback = typeof setStateCallback === "function";
 
       if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
-        let result = typeof this.props.onValidate === 'function' ? this.props.onValidate(opt) : null;
+        let result = typeof this.props.onValidate === "function" ? this.props.onValidate(opt) : null;
         if (result) {
-          if (typeof result === 'object') {
+          if (typeof result === "object") {
             if (result.feedback) {
               _callCallback = false;
               this.setFeedback(result.feedback, result.message, result.value, setStateCallback);
@@ -690,7 +709,7 @@ export const Number = Context.withContext(
               this.setState({ value: opt.value }, setStateCallback);
             }
           } else {
-            this.showError('validateError', null, {
+            this.showError("validateError", null, {
               context: {
                 event: e,
                 func: this.props.onValidate,
@@ -825,26 +844,40 @@ export const Number = Context.withContext(
       this._decreaseTimeout && clearTimeout(this._decreaseTimeout);
       this._decreaseTimer && UU5.Environment.TimeManager.clearInterval(this._decreaseTimer);
     },
-    //@@viewOff:componentSpecificHelpers
+    //@@viewOff:private
 
     //@@viewOn:render
     render() {
-      let inputId = this.getId() + '-input';
-      let buttons = (!this.isReadOnly() && !this.props.buttonHidden) ? [{
-        icon: 'mdi-minus',
-        disabled: this.isComputedDisabled() || this._isDisabled('min'),
-        onClick: (component, e) => this._decrease(e),
-        size: this.props.size,
-        colorSchema: this.props.colorSchema,
-        mainAttrs: { onMouseDown: this._decreaseStart, onMouseUp: this._decreaseEnd, onMouseOut: this._decreaseEnd }
-      }, {
-        icon: 'mdi-plus',
-        disabled: this.isComputedDisabled() || this._isDisabled('max'),
-        onClick: (component, e) => this._increase(e),
-        size: this.props.size,
-        colorSchema: this.props.colorSchema,
-        mainAttrs: { onMouseDown: this._increaseStart, onMouseUp: this._increaseEnd, onMouseOut: this._increaseEnd }
-      }] : null;
+      let inputId = this.getId() + "-input";
+      let buttons =
+        !this.isReadOnly() && !this.props.buttonHidden
+          ? [
+              {
+                icon: "mdi-minus",
+                disabled: this.isComputedDisabled() || this._isDisabled("min"),
+                onClick: (component, e) => this._decrease(e),
+                size: this.props.size,
+                colorSchema: this.props.colorSchema,
+                mainAttrs: {
+                  onMouseDown: this._decreaseStart,
+                  onMouseUp: this._decreaseEnd,
+                  onMouseOut: this._decreaseEnd
+                }
+              },
+              {
+                icon: "mdi-plus",
+                disabled: this.isComputedDisabled() || this._isDisabled("max"),
+                onClick: (component, e) => this._increase(e),
+                size: this.props.size,
+                colorSchema: this.props.colorSchema,
+                mainAttrs: {
+                  onMouseDown: this._increaseStart,
+                  onMouseUp: this._increaseEnd,
+                  onMouseOut: this._increaseEnd
+                }
+              }
+            ]
+          : null;
 
       let inputAttrs = this.props.inputAttrs || {};
       inputAttrs.className === "" ? delete inputAttrs.className : null;
@@ -872,13 +905,14 @@ export const Number = Context.withContext(
       return (
         <div {...attrs}>
           {this.getLabel(inputId)}
-          {this.getInputWrapper([
+          {this.getInputWrapper(
+            [
               <TextInput
                 id={inputId}
                 name={this.props.name || inputId}
                 value={value}
                 placeholder={this.props.placeholder}
-                type='text'
+                type="text"
                 onChange={this._onChange}
                 onBlur={this._onBlur}
                 onFocus={this._onFocus}
@@ -887,21 +921,21 @@ export const Number = Context.withContext(
                 disabled={this.isComputedDisabled()}
                 readonly={this.isReadOnly()}
                 loading={this.isLoading()}
-                ref_={(item) => this._textInput = item}
+                ref_={item => (this._textInput = item)}
                 feedback={this.getFeedback()}
                 borderRadius={this.props.borderRadius}
                 elevation={this.props.elevation}
                 bgStyle={this.props.bgStyle}
                 inputWidth={this._getInputWidth()}
                 colorSchema={this.props.colorSchema}
+                size={this.props.size}
               />,
 
-              <ItemList {...this._getItemListProps()}>
-                {this._getChildren()}
-              </ItemList>,
+              <ItemList {...this._getItemListProps()}>{this._getChildren()}</ItemList>,
               <UU5.Bricks.Backdrop {...this._getBackdropProps()} />
             ],
-            buttons)}
+            buttons
+          )}
         </div>
       );
     }

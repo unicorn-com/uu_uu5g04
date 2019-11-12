@@ -1,33 +1,31 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import React from "react";
 import createReactClass from "create-react-class";
 import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Icon from "./icon.js";
+import Css from "./internal/css.js";
 
 import "./floating-box.less";
+//@@viewOff:imports
 
 export const FloatingBox = createReactClass({
   //@@viewOn:mixins
-  mixins: [
-    UU5.Common.BaseMixin,
-    UU5.Common.ElementaryMixin,
-    UU5.Common.ColorSchemaMixin,
-    UU5.Common.ContentMixin
-  ],
+  mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.ColorSchemaMixin, UU5.Common.ContentMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -39,7 +37,8 @@ export const FloatingBox = createReactClass({
       dragIcon: ns.css("floating-box-drag-icon"),
       header: ns.css("floating-box-header"),
       notDraggable: ns.css("floating-box-not-draggable"),
-      headerText: ns.css("floating-box-header-only-text")
+      headerText: ns.css("floating-box-header-only-text"),
+      isDragged: () => Css.css("opacity: 0.8; > * {pointer-events: none;}")
     }
   },
   //@@viewOff:statics
@@ -52,7 +51,10 @@ export const FloatingBox = createReactClass({
     width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     header: PropTypes.any,
     position: PropTypes.string,
-    draggable: PropTypes.bool
+    draggable: PropTypes.bool,
+    onDragStart: PropTypes.func,
+    onDragMove: PropTypes.func,
+    onDragEnd: PropTypes.func
   },
   //@@viewOff:propTypes
   //@@viewOn:getDefaultProps
@@ -64,12 +66,15 @@ export const FloatingBox = createReactClass({
       width: 184,
       header: null,
       draggable: true,
-      position: null
+      position: null,
+      onDragStart: null,
+      onDragMove: null,
+      onDragEnd: null
     };
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     const firstPosition = this._firstPosition();
     return {
@@ -80,7 +85,8 @@ export const FloatingBox = createReactClass({
       renderLeft: undefined,
       renderTop: undefined,
       renderBottom: undefined,
-      renderRight: undefined
+      renderRight: undefined,
+      isDragged: false
     };
   },
 
@@ -92,15 +98,15 @@ export const FloatingBox = createReactClass({
   componentWillUnmount() {
     UU5.Environment.EventListener.removeWindowEvent("resize", this.getId());
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _elementFitToViewPort(synthetic) {
     const rect = this._getElement().getBoundingClientRect();
     const newState = {};
@@ -149,11 +155,17 @@ export const FloatingBox = createReactClass({
     return this.setState(newState);
   },
 
-  _removeEvents() {
+  _removeEvents(e) {
     UU5.Environment.EventListener.removeWindowEvent("mouseup", this.getId());
     UU5.Environment.EventListener.removeWindowEvent("mousemove", this.getId());
     UU5.Environment.EventListener.removeWindowEvent("touchend", this.getId());
     UU5.Environment.EventListener.removeWindowEvent("touchmove", this.getId());
+
+    if (typeof this.props.onDragEnd === "function") {
+      this.props.onDragEnd(e);
+    }
+
+    this.setState({ isDragged: false });
   },
 
   _getXOffset() {
@@ -184,6 +196,10 @@ export const FloatingBox = createReactClass({
 
       UU5.Environment.EventListener.addWindowEvent("touchend", this.getId(), this._removeEvents, { passive: false });
       UU5.Environment.EventListener.addWindowEvent("touchmove", this.getId(), this._elementDrag, { passive: false });
+
+      if (typeof this.props.onDragStart === "function") {
+        this.props.onDragStart(e);
+      }
     }
   },
 
@@ -198,7 +214,7 @@ export const FloatingBox = createReactClass({
     let elementWidth = element.offsetWidth;
     let maxTop = window.innerHeight - elementHeight;
     let maxLeft = window.innerWidth - elementWidth;
-    let newState = {};
+    let newState = { isDragged: true };
 
     newState.left = Math.max(0, Math.min(maxLeft, this.startXOffset - pos1));
     newState.renderLeft = newState.left;
@@ -209,6 +225,10 @@ export const FloatingBox = createReactClass({
     newState.renderBottom = null;
 
     this.setState(newState);
+
+    if (typeof this.props.onDragMove === "function") {
+      this.props.onDragMove(e);
+    }
   },
 
   _firstPosition() {
@@ -236,6 +256,9 @@ export const FloatingBox = createReactClass({
   _getMainAttrs() {
     let attrs = this.getMainAttrs();
     attrs.className += " " + this.getClassName("main");
+    if (this.state.isDragged) {
+      attrs.className += " " + this.getClassName("isDragged");
+    }
 
     if (this.props.elevation) {
       attrs.className += " " + UU5.Common.ClassNames.elevation + this.props.elevation;
@@ -265,7 +288,7 @@ export const FloatingBox = createReactClass({
 
     return attrs;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
@@ -274,7 +297,11 @@ export const FloatingBox = createReactClass({
         <div
           onMouseDown={!this.isDisabled() ? this._handleMouseDown : null}
           onTouchStart={!this.isDisabled() ? this._handleMouseDown : null}
-          className={(this.props.draggable === true ? this.getClassName("draggable") : this.getClassName("notDraggable")) + " " + this.getClassName("header")}
+          className={
+            (this.props.draggable === true ? this.getClassName("draggable") : this.getClassName("notDraggable")) +
+            " " +
+            this.getClassName("header")
+          }
           id={this.getId() + "-draggable"}
         >
           {this.props.draggable === true ? <Icon icon="mdi-drag" className={this.getClassName("dragIcon")} /> : null}

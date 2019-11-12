@@ -11,32 +11,63 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "../forms-ns.js";
 import ClassNames from "../../core/common/class-names.js";
 import Css from "./css.js";
+import Loading from "./loading.js";
+import Label from "./label.js";
 
-import Loading from './loading.js';
+import "./text-input.less";
+//@@viewOff:imports
 
-import './text-input.less';
+const INPUT_TYPE_TEXT = "text";
+const INPUT_TYPE_PASSWORD = "password";
+const INPUT_TYPE_TEXTAREA = "textarea";
 
-const INPUT_TYPE_TEXT = 'text';
-const INPUT_TYPE_PASSWORD = 'password';
-const INPUT_TYPE_TEXTAREA = 'textarea';
+const PADDINGS = {
+  s: {
+    top: 3,
+    bottom: 5
+  },
+  m: {
+    top: 6,
+    bottom: 6
+  },
+  l: {
+    top: 9,
+    bottom: 10
+  },
+  xl: {
+    top: 11,
+    bottom: 13
+  }
+};
+
+const FONT_SIZES = {
+  s: 12,
+  m: 14,
+  l: 16,
+  xl: 18
+};
+
+const ICON_WIDTHS = {
+  s: 24,
+  m: 32,
+  l: 40,
+  xl: 48
+};
 
 export default UU5.Common.LsiMixin.withContext(
   createReactClass({
     displayName: "text-input",
     //@@viewOn:mixins
-    mixins: [
-      UU5.Common.BaseMixin,
-      UU5.Common.ElementaryMixin,
-      UU5.Common.LsiMixin
-    ],
+    mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.LsiMixin],
     //@@viewOff:mixins
 
     //@@viewOn:statics
@@ -53,7 +84,90 @@ export default UU5.Common.LsiMixin.withContext(
         autoResizeTextarea: ns.css("input-auto-resize-textarea"),
         iconLink: ns.css("text-icon-link"),
         iconLinkReadOnly: ns.css("text-icon-link-read-only"),
-        inputError: ns.css("input-error")
+        inputError: ns.css("input-error"),
+        inputWithPrefix: (props, state) => {
+          let styles = [];
+
+          if (props.prefix) {
+            let width = state.prefixWidth;
+
+            if (props.icon) {
+              width += ICON_WIDTHS[props.size];
+            }
+
+            if (width > 0) {
+              styles.push(`padding-left: ${width}px;`);
+            }
+          }
+
+          return Css.css(`
+            &&&&& {
+              ${styles.join(" ")}
+            }
+          `);
+        },
+        prefix: props => {
+          let left = 0;
+          let sidePaddings = 8;
+
+          if (props.icon) {
+            left += ICON_WIDTHS[props.size];
+            sidePaddings = 2;
+          }
+
+          return Css.css(`
+            display: inline-block;
+            position: absolute;
+            height: 100%;
+            pointer-events: none;
+            white-space: pre;
+            left: ${left}px;
+
+            &&&& {
+              padding-top: ${PADDINGS[props.size].top};
+              padding-bottom: ${PADDINGS[props.size].bottom};
+              padding-left: ${sidePaddings}px;
+              padding-right: ${sidePaddings}px;
+            }
+          `);
+        },
+        suffix: (props, state) => {
+          let styles = [
+            `
+              display: inline-block;
+              position: absolute;
+              height: 100%;
+              right: 0;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              pointer-events: none;
+              white-space: pre;
+
+              && {
+                text-align: left;
+              }
+            `
+          ];
+
+          let left = state.assumedValueWidth + state.prefixWidth;
+
+          if (props.icon) {
+            left += ICON_WIDTHS[props.size];
+          }
+
+          styles.push(`
+            left: ${left}px;
+
+            &&&& {
+              padding-top: ${PADDINGS[props.size].top};
+              padding-bottom: ${PADDINGS[props.size].bottom};
+              padding-left: 1px;
+              padding-right: 6px;
+            }
+          `);
+
+          return Css.css(styles.join(" "));
+        }
       }
     },
     //@@viewOff:statics
@@ -61,10 +175,7 @@ export default UU5.Common.LsiMixin.withContext(
     //@@viewOn:propTypes
     propTypes: {
       value: PropTypes.string,
-      placeholder: PropTypes.oneOfType([
-        PropTypes.object,
-        PropTypes.string
-      ]),
+      placeholder: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
       type: PropTypes.oneOf([INPUT_TYPE_TEXT, INPUT_TYPE_PASSWORD, INPUT_TYPE_TEXTAREA]),
       onChange: PropTypes.func,
       onBlur: PropTypes.func,
@@ -78,17 +189,20 @@ export default UU5.Common.LsiMixin.withContext(
       maxRows: PropTypes.number,
       feedback: PropTypes.string,
       borderRadius: PropTypes.string,
-      bgStyle: PropTypes.oneOf(['filled', 'outline', 'transparent', 'underline']),
-      elevation: PropTypes.oneOf(['-1', '0', '1', '2', '3', '4', '5', -1, 0, 1, 2, 3, 4, 5]),
+      bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+      elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
       inputWidth: PropTypes.string,
-      colorSchema: PropTypes.string
+      colorSchema: PropTypes.string,
+      size: PropTypes.string,
+      prefix: PropTypes.any,
+      suffix: PropTypes.any
     },
     //@@viewOff:propTypes
 
     //@@viewOn:getDefaultProps
     getDefaultProps() {
       return {
-        value: '',
+        value: "",
         placeholder: null,
         type: INPUT_TYPE_TEXT,
         onChange: null,
@@ -106,20 +220,36 @@ export default UU5.Common.LsiMixin.withContext(
         bgStyle: null,
         elevation: null,
         inputWidth: null,
-        colorSchema: null
+        colorSchema: null,
+        size: "m",
+        prefix: undefined,
+        suffix: undefined
       };
     },
     //@@viewOff:getDefaultProps
 
-    //@@viewOn:standardComponentLifeCycle
+    //@@viewOn:reactLifeCycle
+    getInitialState() {
+      return {
+        height: undefined,
+        autoResizeOverflow: undefined,
+        prefixWidth: 0,
+        assumedValueWidth: 0
+      };
+    },
+
     componentDidMount() {
       if (this.props.autoResize || this.props.maxRows) {
-        this._setHeight()
+        this._setHeight();
       }
 
       if (this.props.type === "password") {
         // disabled bfcache in FF so that it doesnt remember password value when navigating back
         UU5.Environment.EventListener.addWindowEvent("unload", this.getId(), () => {});
+      }
+
+      if (this._prefix || this._suffix) {
+        this._calculateWidths();
       }
     },
 
@@ -134,10 +264,14 @@ export default UU5.Common.LsiMixin.withContext(
         this._setHeight(() => {
           let textArea = document.getElementById(this.getId());
           textArea && (textArea.scrollTop = textArea.scrollHeight);
-        })
+        });
+      }
+
+      if (this.props.prefix || this.props.suffix) {
+        this._calculateWidths();
       }
     },
-    //@@viewOff:standardComponentLifeCycle
+    //@@viewOff:reactLifeCycle
 
     //@@viewOn:interface
     focus() {
@@ -153,16 +287,46 @@ export default UU5.Common.LsiMixin.withContext(
     },
     //@@viewOff:interface
 
-    //@@viewOn:overridingMethods
-    //@@viewOff:overridingMethods
+    //@@viewOn:overriding
+    //@@viewOff:overriding
 
-    //@@viewOn:componentSpecificHelpers
+    //@@viewOn:private
+    _registerPrefix(ref) {
+      this._prefix = UU5.Common.DOM.findNode(ref);
+    },
+
+    _registerSuffix(ref) {
+      this._suffix = UU5.Common.DOM.findNode(ref);
+    },
+
+    _calculateWidths() {
+      let result = {
+        prefixWidth: this.state.prefixWidth,
+        assumedValueWidth: this.state.assumedValueWidth
+      };
+
+      if (this._prefix) {
+        result.prefixWidth = Math.ceil(this._prefix.getBoundingClientRect().width);
+      }
+
+      if (this._suffix && this._textInput) {
+        result.assumedValueWidth = UU5.Common.Tools.calculateValueWidth(
+          this._textInput.value,
+          `${FONT_SIZES[this.props.size]}px`
+        );
+      }
+
+      if (result.prefixWidth !== this.state.prefixWidth || result.assumedValueWidth !== this.state.assumedValueWidth) {
+        this.setState({ ...result });
+      }
+    },
+
     _getPlaceholder() {
       let placeholder;
       if (this.props.placeholder) {
-        if (typeof this.props.placeholder === 'string') {
+        if (typeof this.props.placeholder === "string") {
           placeholder = this.props.placeholder;
-        } else if (typeof this.props.placeholder === 'object') {
+        } else if (typeof this.props.placeholder === "object") {
           placeholder = this.getLsiItem(this.props.placeholder);
         }
       }
@@ -192,9 +356,9 @@ export default UU5.Common.LsiMixin.withContext(
       let input;
       let className = this.getClassName().item;
       if (this.props.type === INPUT_TYPE_TEXT || this.props.type === INPUT_TYPE_PASSWORD) {
-        className += ' ' + this.getClassName().text;
+        className += " " + this.getClassName().text;
       } else if (this.props.type === INPUT_TYPE_TEXTAREA) {
-        className += ' ' + this.getClassName().textarea;
+        className += " " + this.getClassName().textarea;
       }
 
       if (this.props.bgStyle) {
@@ -205,7 +369,9 @@ export default UU5.Common.LsiMixin.withContext(
         }
       } else if (["success", "warning", "error"].indexOf(this.props.feedback) > -1) {
         className += " " + ClassNames["outline"];
-        className += " " + Css.css(`
+        className +=
+          " " +
+          Css.css(`
           &&& {
             background-color: #FFFFFF;
           }
@@ -219,9 +385,9 @@ export default UU5.Common.LsiMixin.withContext(
       let mainAttrs = this.props.mainAttrs ? UU5.Common.Tools.merge({}, this.props.mainAttrs) : null;
       let onKeyDown = this.props.onKeyDown;
 
-      if (mainAttrs && typeof mainAttrs.onKeyDown === 'function') {
+      if (mainAttrs && typeof mainAttrs.onKeyDown === "function") {
         let mainAttrsKeyDown = mainAttrs.onKeyDown;
-        onKeyDown = (e) => {
+        onKeyDown = e => {
           this.props.onKeyDown(e);
           mainAttrsKeyDown(e);
         };
@@ -263,16 +429,18 @@ export default UU5.Common.LsiMixin.withContext(
         onFocus: this.props.onFocus,
         readOnly: this.props.readonly,
         disabled: this.props.disabled,
-        className: className,
-        onKeyDown: onKeyDown,
-        tabIndex: this.props.readonly ? '-1' : undefined,
-        ref: item => this._textInput = item,
+        className,
+        onKeyDown,
+        tabIndex: this.props.readonly ? "-1" : undefined,
+        ref: item => (this._textInput = item),
         style: { ...(mainAttrs || {}).style, ...{ borderRadius: this.props.borderRadius } }
       };
 
       mainAttrs && (inputProps = UU5.Common.Tools.merge(inputProps, mainAttrs));
 
       if (this.props.type === INPUT_TYPE_TEXT || this.props.type === INPUT_TYPE_PASSWORD) {
+        inputProps.className += " " + this.getClassName("inputWithPrefix");
+
         input = <input {...inputProps} />;
       } else if (this.props.type === INPUT_TYPE_TEXTAREA) {
         if (this.props.autoResize || this.props.maxRows) {
@@ -281,17 +449,16 @@ export default UU5.Common.LsiMixin.withContext(
             ...{
               maxHeight: this._getMaxHeight(),
               height: this.state.height,
-              overflow: this.state.autoResizeOverflow ? this.state.autoResizeOverflow : 'hidden'
+              overflow: this.state.autoResizeOverflow ? this.state.autoResizeOverflow : "hidden"
             }
           };
 
           input = [
-            <textarea key="textarea" {...inputProps} rows={this.props.rows}
-                      style={style} />,
+            <textarea key="textarea" {...inputProps} rows={this.props.rows} style={style} />,
             this._createHiddenTextarea(inputProps.className, this.props.value)
-          ]
+          ];
         } else {
-          input = <textarea {...inputProps} rows={this.props.rows} />
+          input = <textarea {...inputProps} rows={this.props.rows} />;
         }
       }
       return input;
@@ -302,8 +469,8 @@ export default UU5.Common.LsiMixin.withContext(
       if (this.props.loading) {
         result = <Loading className={this.getClassName("loading")} id={this.getId()} />;
       } else if (this.props.clickable) {
-        let className = this.getClassName('iconLink');
-        this.props.readonly && (className += ' ' + this.getClassName('iconLinkReadOnly'));
+        let className = this.getClassName("iconLink");
+        this.props.readonly && (className += " " + this.getClassName("iconLinkReadOnly"));
         result = (
           <UU5.Bricks.Link
             className={className}
@@ -313,7 +480,7 @@ export default UU5.Common.LsiMixin.withContext(
             }}
             mainAttrs={{
               tabIndex: this.props.clickable ? 0 : null,
-              onKeyDown: (e) => {
+              onKeyDown: e => {
                 if ((e.keyCode || e.which) === 13) {
                   e.stopPropagation();
                   this.props.iconOnClick();
@@ -332,27 +499,42 @@ export default UU5.Common.LsiMixin.withContext(
       return result;
     },
 
+    _getPrefix() {
+      return this.props.prefix ? (
+        <Label content={this.props.prefix} className={this.getClassName("prefix")} ref_={this._registerPrefix} />
+      ) : null;
+    },
+
+    _getSuffix() {
+      return this.props.suffix && this.props.value ? (
+        <Label content={this.props.suffix} className={this.getClassName("suffix")} ref_={this._registerSuffix} />
+      ) : null;
+    },
+
     _createHiddenTextarea(style, value) {
       return (
         <div key="textarea-hidden" className={this.getClassName().hiddenDiv}>
           <textarea
-            className={`${this.getClassName().hiddenTextarea} ${style}`}
+            className={this.getClassName().hiddenTextarea + " " + style}
             value={value}
             readOnly
-            ref={(item) => this._hiddenTextarea = item}
+            ref={item => (this._hiddenTextarea = item)}
             rows={this.props.rows}
           />
         </div>
-      )
+      );
     },
 
     _getNewHeightOfTextarea() {
       let calculatedHeight = this._hiddenTextarea.scrollHeight;
 
       let textareaStyle = window.getComputedStyle(this._textInput);
-      let minHeight = (parseFloat(textareaStyle.lineHeight) * this.props.rows) +
-        parseFloat(textareaStyle.paddingTop) + parseFloat(textareaStyle.paddingBottom) +
-        parseFloat(textareaStyle.borderTopWidth) + parseFloat(textareaStyle.borderBottomWidth);
+      let minHeight =
+        parseFloat(textareaStyle.lineHeight) * this.props.rows +
+        parseFloat(textareaStyle.paddingTop) +
+        parseFloat(textareaStyle.paddingBottom) +
+        parseFloat(textareaStyle.borderTopWidth) +
+        parseFloat(textareaStyle.borderBottomWidth);
 
       return Math.max(minHeight, calculatedHeight);
     },
@@ -362,7 +544,7 @@ export default UU5.Common.LsiMixin.withContext(
       let maxHeight = parseFloat(textareaStyle.maxHeight);
       isNaN(maxHeight) && (maxHeight = this._getMaxHeight());
 
-      return (calculatedHeight > maxHeight) ? 'auto' : 'hidden';
+      return calculatedHeight > maxHeight ? "auto" : "hidden";
     },
 
     _setHeight(setStateCallback) {
@@ -376,9 +558,12 @@ export default UU5.Common.LsiMixin.withContext(
       let maxHeight;
       if (this.props.maxRows && this._textInput) {
         let textareaStyle = window.getComputedStyle(this._textInput);
-        maxHeight = (parseFloat(textareaStyle.lineHeight) * this.props.maxRows) +
-          parseFloat(textareaStyle.paddingTop) + parseFloat(textareaStyle.paddingBottom) +
-          parseFloat(textareaStyle.borderTopWidth) + parseFloat(textareaStyle.borderBottomWidth);
+        maxHeight =
+          parseFloat(textareaStyle.lineHeight) * this.props.maxRows +
+          parseFloat(textareaStyle.paddingTop) +
+          parseFloat(textareaStyle.paddingBottom) +
+          parseFloat(textareaStyle.borderTopWidth) +
+          parseFloat(textareaStyle.borderBottomWidth);
       }
 
       return maxHeight;
@@ -388,17 +573,17 @@ export default UU5.Common.LsiMixin.withContext(
       let className = this.getFullClassName();
 
       switch (!this.props.disabled && !this.props.readonly && this.props.feedback) {
-        case 'success':
+        case "success":
           className = className.replace(/ ?color-schema-[a-z-]+ ?/, "");
-          className += ' color-schema-' + UU5.Environment.getColorSchema('success');
+          className += " color-schema-" + UU5.Environment.getColorSchema("success");
           break;
-        case 'warning':
+        case "warning":
           className = className.replace(/ ?color-schema-[a-z-]+ ?/, "");
-          className += ' color-schema-' + UU5.Environment.getColorSchema('warning');
+          className += " color-schema-" + UU5.Environment.getColorSchema("warning");
           break;
-        case 'error':
+        case "error":
           className = className.replace(/ ?color-schema-[a-z-]+ ?/, "");
-          className += ' color-schema-' + UU5.Environment.getColorSchema('danger');
+          className += " color-schema-" + UU5.Environment.getColorSchema("danger");
           break;
       }
 
@@ -417,17 +602,19 @@ export default UU5.Common.LsiMixin.withContext(
 
       return attrs;
     },
-    //@@viewOff:componentSpecificHelpers
+    //@@viewOff:private
 
     //@@viewOn:render
     render() {
       return (
         <div {...this._getWrapperAttrs()}>
+          {this._getPrefix()}
           {this._getTextInput()}
+          {this._getSuffix()}
           {this._getFeedbackIcon()}
         </div>
       );
     }
-    //@@viewOn:render
+    //@@viewOff:render
   })
 );

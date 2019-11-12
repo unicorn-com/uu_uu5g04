@@ -11,25 +11,28 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
 
-import TextInput from './internal/text-input.js';
-import Time from './time.js';
+import TextInput from "./internal/text-input.js";
+import Time from "./time.js";
 
-import TextInputMixin from './mixins/text-input-mixin.js';
+import TextInputMixin from "./mixins/text-input-mixin.js";
 
 import Context from "./form-context.js";
+import DateTools from "./internal/date-tools.js";
 
-import './time-picker.less';
+import "./time-picker.less";
+//@@viewOff:imports
 
-const TIME_FORMAT_AM = 'AM';
-const TIME_FORMAT_PM = 'PM';
-const TIME_FORMAT_12 = '12';
-const TIME_FORMAT_24 = '24';
+const TIME_FORMAT_AM = "AM";
+const TIME_FORMAT_PM = "PM";
+const TIME_FORMAT_12 = "12";
+const TIME_FORMAT_24 = "24";
 
 export const TimePicker = Context.withContext(
   createReactClass({
@@ -60,7 +63,7 @@ export const TimePicker = Context.withContext(
         regexpAm: /(AM|am|Am)/,
         inputColWidth: "xs12 s4 m4 l3 xl3"
       },
-      lsi: () => (UU5.Environment.Lsi.Forms.message)
+      lsi: () => UU5.Environment.Lsi.Forms.message
     },
     //@@viewOff:statics
 
@@ -72,35 +75,47 @@ export const TimePicker = Context.withContext(
       format: PropTypes.oneOf([TIME_FORMAT_24, TIME_FORMAT_12]),
       nanMessage: PropTypes.any,
       seconds: PropTypes.bool,
-      valueType: PropTypes.oneOf(['string','date']),
+      valueType: PropTypes.oneOf(["string", "date"]),
       openToContent: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
       step: PropTypes.number,
       strictStep: PropTypes.bool,
-      pickerType: PropTypes.oneOf(['single-column','multi-column'])
+      pickerType: PropTypes.oneOf(["single-column", "multi-column"]),
+      suffix: PropTypes.string,
+      timeFrom: PropTypes.string,
+      timeTo: PropTypes.string,
+      show24: PropTypes.bool
     },
     //@@viewOff:propTypes
 
     //@@viewOn:getDefaultProps
     getDefaultProps() {
       return {
-        value: '',
-        iconOpen: 'mdi-clock-outline',
-        iconClosed: 'mdi-clock-outline',
+        value: "",
+        iconOpen: "mdi-clock-outline",
+        iconClosed: "mdi-clock-outline",
         format: TIME_FORMAT_24,
-        nanMessage: 'Please insert a valid time.',
+        nanMessage: "Please insert a valid time.",
         seconds: false,
         valueType: null,
         openToContent: "xs",
         step: 1,
         strictStep: false,
-        pickerType: "multi-column"
+        pickerType: "multi-column",
+        suffix: undefined,
+        timeFrom: undefined,
+        timeTo: undefined,
+        show24: false
       };
     },
     //@@viewOff:getDefaultProps
 
-    //@@viewOn:standardComponentLifeCycle
+    //@@viewOn:reactLifeCycle
     componentWillMount() {
+      this._valueOverMidnight = false;
       this._hasFocus = false;
+
+      this._setUpLimits(this.props);
+
       let value = this._formatTime(this.props.value, false) || this.props.value;
       let validationResult = this._validateOnChange({ value, event: null, component: this });
 
@@ -121,7 +136,12 @@ export const TimePicker = Context.withContext(
 
     componentWillReceiveProps(nextProps) {
       if (nextProps.controlled) {
-        let value = this._hasInputFocus() && !(nextProps.value instanceof Date) ? nextProps.value : this._formatTime(nextProps.value, false) || nextProps.value;
+        this._setUpLimits(nextProps);
+
+        let value =
+          this._hasInputFocus() && !(nextProps.value instanceof Date)
+            ? nextProps.value
+            : this._formatTime(nextProps.value, false) || nextProps.value;
         let validationResult = this._validateOnChange({ value, event: null, component: this }, true);
 
         if (validationResult) {
@@ -146,16 +166,19 @@ export const TimePicker = Context.withContext(
 
     componentDidUpdate(prevProps, prevState) {
       if (this.isOpen()) {
-        if ((this.state.screenSize === "xs" && prevState.screenSize !== "xs") || (this.state.screenSize !== "xs" && prevState.screenSize === "xs")) {
+        if (
+          (this.state.screenSize === "xs" && prevState.screenSize !== "xs") ||
+          (this.state.screenSize !== "xs" && prevState.screenSize === "xs")
+        ) {
           this._open();
         }
       }
     },
-    //@@viewOff:standardComponentLifeCycle
+    //@@viewOff:reactLifeCycle
 
     //@@viewOn:interface
     toggle(setStateCallback) {
-      this.setState((state) => {
+      this.setState(state => {
         if (state.open) {
           this._removeEvent();
         } else {
@@ -167,7 +190,7 @@ export const TimePicker = Context.withContext(
     },
     //@@viewOff:interface
 
-    //@@viewOn:overridingMethods
+    //@@viewOn:overriding
     setFeedback_(feedback, message, value, setStateCallback) {
       value = this._hasInputFocus() && !(value instanceof Date) ? value : this._formatTime(value, false) || value;
       this.setFeedbackDefault(feedback, message, value, setStateCallback);
@@ -197,16 +220,25 @@ export const TimePicker = Context.withContext(
 
       if (time && this.props.valueType == "date") {
         let date = new Date(Date.now());
-        let hours = (timeObject && typeof timeObject.hours == "number" && UU5.Common.Tools.rjust(timeObject.hours, 2, "0")) || this.state.value.split(/:| +/)[0] || "00";
-        let minutes = (timeObject && typeof timeObject.minutes == "number" && UU5.Common.Tools.rjust(timeObject.minutes, 2, "0")) || this.state.value.split(/:| +/)[1] || "00";
-        let seconds = (timeObject && typeof timeObject.seconds == "number" && UU5.Common.Tools.rjust(timeObject.seconds, 2, "0")) || this.state.value.split(/:| +/)[2] || "00";
+        let hours =
+          (timeObject && typeof timeObject.hours == "number" && UU5.Common.Tools.rjust(timeObject.hours, 2, "0")) ||
+          this.state.value.split(/:| +/)[0] ||
+          "00";
+        let minutes =
+          (timeObject && typeof timeObject.minutes == "number" && UU5.Common.Tools.rjust(timeObject.minutes, 2, "0")) ||
+          this.state.value.split(/:| +/)[1] ||
+          "00";
+        let seconds =
+          (timeObject && typeof timeObject.seconds == "number" && UU5.Common.Tools.rjust(timeObject.seconds, 2, "0")) ||
+          this.state.value.split(/:| +/)[2] ||
+          "00";
         if (hours) {
           if (this.props.format == "12") {
             let dayPart = (timeObject && timeObject.dayPart) || this.state.value.split(/:| +/)[3];
             if (dayPart == "AM" && hours == 12) {
               hours = 0;
             } else {
-              hours = hours % 12 + (dayPart == "PM" ? 12 : 0);
+              hours = (hours % 12) + (dayPart == "PM" ? 12 : 0);
             }
           }
           date = new Date(date.setHours(hours));
@@ -227,9 +259,9 @@ export const TimePicker = Context.withContext(
       let type = opt._data.type;
       opt.value = opt._data.value;
 
-      if (type == 'input') {
+      if (type == "input") {
         this._onChangeInputDefault(opt, setStateCallback);
-      } else if (type == 'picker' || type == 'switchDayPart') {
+      } else if (type == "picker" || type == "switchDayPart") {
         this._onChangePickerDefault(opt, setStateCallback);
       }
     },
@@ -264,9 +296,16 @@ export const TimePicker = Context.withContext(
       this._removeEvent();
       this.closeDefault(() => this._close(setStateCallback));
     },
-    //@@viewOff:overridingMethods
+    //@@viewOff:overriding
 
-    //@@viewOn:componentSpecificHelpers
+    //@@viewOn:private
+    _setUpLimits(props) {
+      let { timeFrom, timeTo, show24 } = DateTools.setupLimits(props);
+      this._timeFrom = timeFrom;
+      this._timeTo = timeTo;
+      this._show24 = show24;
+    },
+
     _getEventPath(e) {
       let path = [];
       let node = e.target;
@@ -286,9 +325,9 @@ export const TimePicker = Context.withContext(
         input: false,
         label: false,
         picker: false
-      }
+      };
       let eventPath = this._getEventPath(e);
-      eventPath.every((item) => {
+      eventPath.every(item => {
         let functionType = item.matches ? "matches" : "msMatchesSelector";
         if (item[functionType]) {
           if (item[functionType](labelMatch)) {
@@ -392,13 +431,16 @@ export const TimePicker = Context.withContext(
 
     _open(setStateCallback) {
       if (this._popover) {
-        this._popover.open({
-          onClose: this._close,
-          aroundElement: this._textInput.findDOMNode(),
-          position: "bottom",
-          offset: this._shouldOpenToContent() ? 0 : 4,
-          preventPositioning: this._shouldOpenToContent()
-        }, setStateCallback);
+        this._popover.open(
+          {
+            onClose: this._close,
+            aroundElement: this._textInput.findDOMNode(),
+            position: "bottom",
+            offset: this._shouldOpenToContent() ? 0 : 4,
+            preventPositioning: this._shouldOpenToContent()
+          },
+          setStateCallback
+        );
       } else if (typeof setStateCallback === "function") {
         setStateCallback();
       }
@@ -417,14 +459,17 @@ export const TimePicker = Context.withContext(
 
       if (typeof this.props.openToContent === "string") {
         let screenSize = this.getScreenSize();
-        this.props.openToContent.trim().split(" ").some((size) => {
-          if (screenSize == size) {
-            result = true;
-            return true;
-          } else {
-            return false;
-          }
-        })
+        this.props.openToContent
+          .trim()
+          .split(" ")
+          .some(size => {
+            if (screenSize == size) {
+              result = true;
+              return true;
+            } else {
+              return false;
+            }
+          });
       } else if (typeof this.props.openToContent === "boolean") {
         result = this.props.openToContent;
       }
@@ -433,14 +478,15 @@ export const TimePicker = Context.withContext(
     },
 
     _onChange(e, opt) {
+      this._valueOverMidnight = false;
       opt = opt || { value: e.target.value, event: e, component: this };
 
-      if (opt.value === '' || this._parseTime(opt.value)) {
+      if (opt.value === "" || this._parseTime(opt.value)) {
         if (!this.isComputedDisabled() && !this.isReadOnly()) {
           opt.required = this.props.required;
           let result = this.getChangeFeedback(opt);
-          opt._data = { type: 'input', required: this.props.required, result: result };
-          if (typeof this.props.onChange === 'function') {
+          opt._data = { type: "input", required: this.props.required, result: result };
+          if (typeof this.props.onChange === "function") {
             this.props.onChange(opt);
           } else {
             this.onChangeDefault(opt);
@@ -460,7 +506,7 @@ export const TimePicker = Context.withContext(
         _callCallback = false;
         this._validateOnChange(opt._data.result, false, setStateCallback);
       } else {
-        if (opt._data.result.value === '') {
+        if (opt._data.result.value === "") {
           _callCallback = false;
           this.setState({ value: opt.value }, setStateCallback);
         } else if (this._checkRequired({ value: opt._data.result.value })) {
@@ -468,11 +514,19 @@ export const TimePicker = Context.withContext(
           let result = opt._data.result || this.getChangeFeedback(opt);
           //let result = this.getChangeFeedback(opt._data.result);
 
-          if (!result.value ||
+          if (
+            !result.value ||
             (this.props.format === TIME_FORMAT_12 && result.value.match(/^\d{1,2}:?\d{0,2} ?[PpAa]?\.?[Mm]?\.?$/)) ||
-            (this.props.seconds && this.props.step === 1 && this.props.format === TIME_FORMAT_12 && result.value.match(/^\d{1,2}:?\d{0,2}:?\d{0,2} ?[PpAa]?\.?[Mm]?\.?$/)) ||
+            (this.props.seconds &&
+              this.props.step === 1 &&
+              this.props.format === TIME_FORMAT_12 &&
+              result.value.match(/^\d{1,2}:?\d{0,2}:?\d{0,2} ?[PpAa]?\.?[Mm]?\.?$/)) ||
             (this.props.format === TIME_FORMAT_24 && result.value.match(/^\d{1,2}:?\d{0,2}$/)) ||
-            (this.props.seconds && this.props.step === 1 && this.props.format === TIME_FORMAT_24 && result.value.match(/^\d{1,2}:?\d{0,2}:?\d{0,2}$/))) {
+            (this.props.seconds &&
+              this.props.step === 1 &&
+              this.props.format === TIME_FORMAT_24 &&
+              result.value.match(/^\d{1,2}:?\d{0,2}:?\d{0,2}$/))
+          ) {
             _callCallback = false;
             this._updateState(result, setStateCallback);
           }
@@ -489,8 +543,11 @@ export const TimePicker = Context.withContext(
     _onChangePickerDefault(opt, setStateCallback) {
       this.setValue_(
         this._formatTime(opt.value),
-        this.props.pickerType === "single-column" ? () => this.close(setStateCallback) : typeof setStateCallback === "function" ?
-          setStateCallback() : null
+        this.props.pickerType === "single-column"
+          ? () => this.close(setStateCallback)
+          : typeof setStateCallback === "function"
+          ? setStateCallback()
+          : null
       );
 
       return this;
@@ -501,7 +558,7 @@ export const TimePicker = Context.withContext(
         this._addKeyEvents();
         this._hasFocus = true;
         if (!this.isReadOnly() && !this.isComputedDisabled()) {
-          if (typeof this.props.onFocus === 'function') {
+          if (typeof this.props.onFocus === "function") {
             this.props.onFocus(opt);
           } else {
             this.onFocusDefault(opt);
@@ -514,7 +571,7 @@ export const TimePicker = Context.withContext(
       if (this._hasFocus) {
         this._removeKeyEvents();
         this._hasFocus = false;
-        if (typeof this.props.onBlur === 'function') {
+        if (typeof this.props.onBlur === "function") {
           this.props.onBlur(opt);
         } else {
           this.onBlurDefault(opt);
@@ -532,19 +589,28 @@ export const TimePicker = Context.withContext(
       return result;
     },
 
+    _validateLimits(time) {
+      return DateTools.validateLimits(time, this._timeFrom, this._timeTo);
+    },
+
     _validateTime(opt) {
       let result = { ...opt };
       let parsedTime = opt.value ? this._parseTime(opt.value, false) : null;
 
       if (opt.value && !parsedTime) {
-        result.feedback = 'error';
+        result.feedback = "error";
         result.message = this.props.nanMessage;
       } else if (parsedTime && this.props.strictStep && parsedTime.minutes % this.props.step > 0) {
         result.feedback = "error";
         result.message = this.props.nanMessage;
       } else {
-        result.feedback = result.feedback || "initial";
-        result.message = result.message || null;
+        if (!this._validateLimits(parsedTime)) {
+          result.feedback = "error";
+          result.message = this.props.nanMessage;
+        } else {
+          result.feedback = result.feedback || "initial";
+          result.message = result.message || null;
+        }
       }
 
       return result;
@@ -562,8 +628,8 @@ export const TimePicker = Context.withContext(
           opt.value = this.getValue_(this._parseTime(opt.value));
         }
 
-        result = typeof this.props.onValidate === 'function' ? this.props.onValidate(opt) : null;
-        if (result && typeof result === 'object' && result.feedback) {
+        result = typeof this.props.onValidate === "function" ? this.props.onValidate(opt) : null;
+        if (result && typeof result === "object" && result.feedback) {
           _callCallback = false;
           this._updateState(result, setStateCallback);
         }
@@ -582,16 +648,29 @@ export const TimePicker = Context.withContext(
 
     _onTimeChange(opt) {
       opt.component = this;
-      opt._data = { type: 'picker', value: UU5.Common.Tools.merge({}, opt.value) };
+      opt._data = { type: "picker", value: UU5.Common.Tools.merge({}, opt.value) };
+
+      if (opt.value && opt.value.hours > 24) {
+        this._valueOverMidnight = true;
+        opt.value.hours = opt.value.hours % 24;
+        opt._data.value.hours = opt._data.value.hours % 24;
+      } else {
+        this._valueOverMidnight = false;
+      }
+
       if (!this.isComputedDisabled() && !this.isReadOnly()) {
         if (this.props.valueType == "date") {
           opt.value = this.getValue_(opt.value);
         } else {
-          opt.value = this._formatTime(opt.value);
+          if (opt.value.hours === null) {
+            opt.value = null;
+          } else {
+            opt.value = this._formatTime(opt.value);
+          }
         }
 
-        if (typeof this.props.onChange === 'function') {
-          this.props.onChange(opt)
+        if (typeof this.props.onChange === "function") {
+          this.props.onChange(opt);
         } else {
           this.onChangeDefault(opt);
         }
@@ -603,9 +682,14 @@ export const TimePicker = Context.withContext(
       if (!this.state.value || this.state.value.trim() === "") {
         value = null;
       }
+
+      if (this._valueOverMidnight && value) {
+        value.hours = value.hours + 24;
+      }
+
       return {
         className: this.getClassName().menu,
-        value: value,
+        value,
         hidden: !this.isOpen(),
         onChange: this._onTimeChange,
         format: this.props.format,
@@ -614,7 +698,10 @@ export const TimePicker = Context.withContext(
         step: this.props.step,
         type: this.props.pickerType,
         colorSchema: this.getColorSchema(),
-        mobileDisplay: this.isXs()
+        mobileDisplay: this.isXs(),
+        timeFrom: this._timeFrom,
+        timeTo: this._timeTo,
+        show24: this.props.show24
       };
     },
 
@@ -645,7 +732,7 @@ export const TimePicker = Context.withContext(
     },
 
     _parseTime(timeString, autofill = true) {
-      return UU5.Common.Tools.parseTime(timeString, this.props.format, autofill);
+      return UU5.Common.Tools.parseTime(timeString, this.props.format, autofill, this.props.show24);
     },
 
     _getMainAttrs() {
@@ -653,20 +740,20 @@ export const TimePicker = Context.withContext(
       attrs.id = this.getId();
 
       if (this.isOpen()) {
-        attrs.className += ' ' + this.getClassName().open;
+        attrs.className += " " + this.getClassName().open;
       }
 
       if (this.props.seconds) {
-        attrs.className += ' ' + this.getClassName().seconds;
+        attrs.className += " " + this.getClassName().seconds;
       }
 
       if (this._shouldOpenToContent()) {
-        attrs.className += ' ' + this.getClassName().screenSizeBehaviour;
+        attrs.className += " " + this.getClassName().screenSizeBehaviour;
       }
 
       if (!this.isReadOnly() && !this.isComputedDisabled()) {
         let allowOpening = true;
-        let handleMobileClick = (e) => {
+        let handleMobileClick = e => {
           if (this.isOpen()) {
             e.target.focus();
             this.close();
@@ -675,10 +762,15 @@ export const TimePicker = Context.withContext(
             e.target.blur();
           }
 
-          UU5.Common.Tools.scrollToTarget(this.getId() + "-input", false, UU5.Environment._fixedOffset + 20);
-        }
+          UU5.Common.Tools.scrollToTarget(
+            this.getId() + "-input",
+            false,
+            UU5.Environment._fixedOffset + 20,
+            this._findScrollElement(this._root)
+          );
+        };
 
-        let handleClick = (e) => {
+        let handleClick = e => {
           let clickData = this._findTarget(e.nativeEvent);
 
           if (this._shouldOpenToContent() && clickData.input) {
@@ -697,9 +789,9 @@ export const TimePicker = Context.withContext(
           } else if (clickData.label) {
             allowOpening = false;
           }
-        }
+        };
 
-        attrs.onClick = (e) => {
+        attrs.onClick = e => {
           handleClick(e);
         };
       }
@@ -710,7 +802,7 @@ export const TimePicker = Context.withContext(
     _getPopoverProps() {
       let props = {};
 
-      props.ref_ = ref => this._popover = ref;
+      props.ref_ = ref => (this._popover = ref);
       props.forceRender = true;
       props.disableBackdrop = true;
       props.shown = this.isOpen();
@@ -718,26 +810,26 @@ export const TimePicker = Context.withContext(
 
       return props;
     },
-    //@@viewOff:componentSpecificHelpers
+    //@@viewOff:private
 
     //@@viewOn:render
     render() {
-      let inputId = this.getId() + '-input';
+      let inputId = this.getId() + "-input";
 
       let inputAttrs = this.props.inputAttrs;
       inputAttrs = UU5.Common.Tools.merge({ autoComplete: "off" }, inputAttrs);
 
       inputAttrs.className === "" ? delete inputAttrs.className : null;
       return (
-        <div {...this._getMainAttrs()} ref={(comp) => this._root = comp}>
+        <div {...this._getMainAttrs()} ref={comp => (this._root = comp)}>
           {this.getLabel(inputId)}
           {this.getInputWrapper([
             <TextInput
               id={inputId}
               name={this.props.name || inputId}
-              value={this.state.value || ''}
+              value={this.state.value || ""}
               placeholder={this.props.placeholder}
-              type='text'
+              type="text"
               onChange={this._onChange}
               onFocus={!this.isReadOnly() && !this.isComputedDisabled() ? this._onFocus : null}
               onKeyDown={this.onKeyDown}
@@ -747,26 +839,24 @@ export const TimePicker = Context.withContext(
               icon={this._getFeedbackIcon()}
               iconClickable={false}
               loading={this.isLoading()}
-              ref_={(item) => this._textInput = item}
+              ref_={item => (this._textInput = item)}
               feedback={this.getFeedback()}
               borderRadius={this.props.borderRadius}
               elevation={this.props.elevation}
               bgStyle={this.props.bgStyle}
               inputWidth={this._getInputWidth()}
               colorSchema={this.props.colorSchema}
+              suffix={this.props.suffix}
+              size={this.props.size}
             />,
             <UU5.Bricks.Popover {...this._getPopoverProps()}>
-              {
-                this.isOpen() ? (
-                    <Time {...this._getTimeProps(this._parseTime(this.state.value))} />
-                ) : null
-              }
+              {this.isOpen() ? <Time {...this._getTimeProps(this._parseTime(this.state.value))} /> : null}
             </UU5.Bricks.Popover>
           ])}
         </div>
       );
     }
-    //@@viewOn:render
+    //@@viewOff:render
   })
 );
 

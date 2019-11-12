@@ -1,21 +1,20 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 export const PureRenderMixin = {
-
   //@@viewOn:statics
   statics: {
     "UU5.Common.PureRenderMixin": {
@@ -38,7 +37,7 @@ export const PureRenderMixin = {
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     // initialize
     this.registerMixin("UU5.Common.PureRenderMixin");
@@ -50,7 +49,7 @@ export const PureRenderMixin = {
     let shouldUpdate;
     if (!this.props.pureRender && !this.getOpt("pureRender")) {
       shouldUpdate = true;
-    } else if (typeof this.shouldComponentUpdate_ === 'function') {
+    } else if (typeof this.shouldComponentUpdate_ === "function") {
       shouldUpdate = this.shouldComponentUpdate_(nextProps, nextState);
     } else {
       shouldUpdate = this.shouldComponentUpdateDefault(nextProps, nextState);
@@ -61,7 +60,7 @@ export const PureRenderMixin = {
   shouldComponentUpdateDefault(nextProps, nextState) {
     return this.shouldRender(nextProps, nextState);
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   hasUU5CommonPureRenderMixin() {
@@ -76,14 +75,14 @@ export const PureRenderMixin = {
 
   getUU5CommonPureRenderMixinPropsToPass() {
     return this.getUU5CommonPureRenderMixinProps();
-  },
+  }
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOn:private
+  //@@viewOff:private
 };
 
 export default PureRenderMixin;

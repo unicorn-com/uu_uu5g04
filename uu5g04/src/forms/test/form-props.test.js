@@ -11,16 +11,17 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import createReactClass from "create-react-class";
 import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-forms";
+//@@viewOff:imports
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyCustomForms = createReactClass({
-
   mixins: [
     UU5.Common.BaseMixin,
     UU5.Common.ElementaryMixin,
@@ -32,65 +33,65 @@ const MyCustomForms = createReactClass({
   getInitialState: () => {
     return {
       isCalled: false,
-      message: '',
-      feedback: 'initial'
+      message: "",
+      feedback: "initial"
     };
   },
 
   onSaveDoneHandler(event) {
     alert("onSaveDone event has been called.");
-    this.setState({isCalled: true});
-    this.setState({message: 'Is valid.'})
-    this.setState({feedback: 'success'})
+    this.setState({ isCalled: true });
+    this.setState({ message: "Is valid." });
+    this.setState({ feedback: "success" });
   },
 
   onSaveFailHandler(event) {
     alert("onSaveFail event has been called.");
-    this.setState({isCalled: true});
-    this.setState({message: 'Is valid.'})
-    this.setState({feedback: 'success'})
+    this.setState({ isCalled: true });
+    this.setState({ message: "Is valid." });
+    this.setState({ feedback: "success" });
   },
 
   onSaveByKeyHandler(event) {
     alert("onSaveByKey event has been called.");
-    this.setState({isCalled: true});
-    this.setState({message: 'Is valid.'})
-    this.setState({feedback: 'success'})
+    this.setState({ isCalled: true });
+    this.setState({ message: "Is valid." });
+    this.setState({ feedback: "success" });
   },
 
   onSaveHandler(event) {
     alert("onSave event has been called.");
-    this.setState({isCalled: true});
-    this.setState({message: 'Is valid.'})
-    this.setState({feedback: 'success'})
+    this.setState({ isCalled: true });
+    this.setState({ message: "Is valid." });
+    this.setState({ feedback: "success" });
   },
 
   onInitHandler(event) {
     alert("onInit event has been called.");
-    this.setState({isCalled: true});
-    this.setState({message: 'Is valid.'})
-    this.setState({feedback: 'success'})
+    this.setState({ isCalled: true });
+    this.setState({ message: "Is valid." });
+    this.setState({ feedback: "success" });
   },
 
   onResetHandler(event) {
     alert("onReset event has been called.");
-    this.setState({isCalled: true});
-    this.setState({message: 'Is valid.'})
-    this.setState({feedback: 'success'})
+    this.setState({ isCalled: true });
+    this.setState({ message: "Is valid." });
+    this.setState({ feedback: "success" });
   },
 
   onValidateHandler(event) {
     alert("onValidate event has been called.");
-    this.setState({isCalled: true});
-    this.setState({message: 'Is valid.'})
-    this.setState({feedback: 'success'})
+    this.setState({ isCalled: true });
+    this.setState({ message: "Is valid." });
+    this.setState({ feedback: "success" });
   },
 
   onCancelHandler(event) {
     alert("onCancel event has been called.");
-    this.setState({isCalled: true});
-    this.setState({message: 'Is valid.'})
-    this.setState({feedback: 'success'})
+    this.setState({ isCalled: true });
+    this.setState({ message: "Is valid." });
+    this.setState({ feedback: "success" });
   },
 
   render() {
@@ -98,24 +99,29 @@ const MyCustomForms = createReactClass({
       <UU5.Bricks.Container>
         {/*@@viewOn:0*/}
         <UU5.Forms.Form
-          onInit={this.onInitHandler} onSave={this.onSaveHandler} onSaveDone={this.onSaveDoneHandler}
-          onSaveFail={this.onSaveFailHandler} onSaveByKey={this.onSaveByKeyHandler} onValidate={this.onValidateHandler}
-          onReset={this.onResetHandler} onCancel={this.onCancelHandler}
+          onInit={this.onInitHandler}
+          onSave={this.onSaveHandler}
+          onSaveDone={this.onSaveDoneHandler}
+          onSaveFail={this.onSaveFailHandler}
+          onSaveByKey={this.onSaveByKeyHandler}
+          onValidate={this.onValidateHandler}
+          onReset={this.onResetHandler}
+          onCancel={this.onCancelHandler}
           id={"uuID06"}
-          header={<UU5.Bricks.Box id={"uuID04"} content='Registration form' colorSchema='green'
-                                  className='font-size-m'/>}
-          footer={<UU5.Bricks.Box id={"uuID05"} content='Unicorn 2018' colorSchema='grey' className='font-size-xs'/>}
+          header={
+            <UU5.Bricks.Box id={"uuID04"} content="Registration form" colorSchema="green" className="font-size-m" />
+          }
+          footer={<UU5.Bricks.Box id={"uuID05"} content="Unicorn 2018" colorSchema="grey" className="font-size-xs" />}
         >
-          <UU5.Forms.Text id={"uuID03"} name="name" label="Name" placeholder="John" required/>
-          <UU5.Forms.TextArea id={"uuID02"} name="description" label="Description" placeholder="Some text..."/>
-          <UU5.Forms.Controls id={"uuID01"}/>
+          <UU5.Forms.Text id={"uuID03"} name="name" label="Name" placeholder="John" required />
+          <UU5.Forms.TextArea id={"uuID02"} name="description" label="Description" placeholder="Some text..." />
+          <UU5.Forms.Controls id={"uuID01"} />
         </UU5.Forms.Form>
         {/*@@viewOff:0*/}
       </UU5.Bricks.Container>
     );
   }
 });
-
 
 const CONFIG = {
   mixins: [
@@ -129,7 +135,7 @@ const CONFIG = {
     //The component does not have any own props
   },
   requiredProps: {
-    children: [<UU5.Forms.Text name="name" label="Name" id={"uuID-child"} placeholder="John" required/>]
+    children: [<UU5.Forms.Text name="name" label="Name" id={"uuID-child"} placeholder="John" required />]
   },
   opt: {
     shallowOpt: {
@@ -141,26 +147,25 @@ const CONFIG = {
 describe(`UU5.Forms.Form props`, () => {
   UU5.Test.Tools.testProperties(UU5.Forms.Form, CONFIG);
 
-  it('padding', () => {
+  it("padding", () => {
     const wrapper = mount(<UU5.Forms.Form padding="8px 8px" />);
     const element = wrapper.find(".uu5-forms-form").instance();
     expect(window.getComputedStyle(element).padding).toBe("8px 8px");
   });
 });
 
-describe('UU5.Forms.FormMixin props.function testing', () => {
-
-  it('onInit()', () => {
+describe("UU5.Forms.FormMixin props.function testing", () => {
+  it("onInit()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<MyCustomForms/>);
+    const wrapper = shallow(<MyCustomForms />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.isCalled).toBeFalsy();
     expect(wrapper.instance().state.message).toEqual("");
     expect(wrapper.instance().state.feedback).toMatch(/initial/);
-    wrapper.find('Form').simulate('init');
+    wrapper.find("Form").simulate("init");
     expect(window.alert).toBeCalled();
     expect(window.alert).toHaveBeenCalledTimes(1);
-    expect(window.alert).toHaveBeenCalledWith('onInit event has been called.');
+    expect(window.alert).toHaveBeenCalledWith("onInit event has been called.");
     expect(window.alert.mock.calls[0][0]).toEqual("onInit event has been called.");
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(wrapper.instance().state.message).toEqual("Is valid.");
@@ -168,17 +173,17 @@ describe('UU5.Forms.FormMixin props.function testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('onSave()', () => {
+  it("onSave()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<MyCustomForms/>);
+    const wrapper = shallow(<MyCustomForms />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.isCalled).toBeFalsy();
     expect(wrapper.instance().state.message).toEqual("");
     expect(wrapper.instance().state.feedback).toMatch(/initial/);
-    wrapper.find('Form').simulate('save');
+    wrapper.find("Form").simulate("save");
     expect(window.alert).toBeCalled();
     expect(window.alert).toHaveBeenCalledTimes(1);
-    expect(window.alert).toHaveBeenCalledWith('onSave event has been called.');
+    expect(window.alert).toHaveBeenCalledWith("onSave event has been called.");
     expect(window.alert.mock.calls[0][0]).toEqual("onSave event has been called.");
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(wrapper.instance().state.message).toEqual("Is valid.");
@@ -186,17 +191,17 @@ describe('UU5.Forms.FormMixin props.function testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('onSaveDone()', () => {
+  it("onSaveDone()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<MyCustomForms/>);
+    const wrapper = shallow(<MyCustomForms />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.isCalled).toBeFalsy();
     expect(wrapper.instance().state.message).toEqual("");
     expect(wrapper.instance().state.feedback).toMatch(/initial/);
-    wrapper.find('Form').simulate('saveDone');
+    wrapper.find("Form").simulate("saveDone");
     expect(window.alert).toBeCalled();
     expect(window.alert).toHaveBeenCalledTimes(1);
-    expect(window.alert).toHaveBeenCalledWith('onSaveDone event has been called.');
+    expect(window.alert).toHaveBeenCalledWith("onSaveDone event has been called.");
     expect(window.alert.mock.calls[0][0]).toEqual("onSaveDone event has been called.");
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(wrapper.instance().state.message).toEqual("Is valid.");
@@ -204,17 +209,17 @@ describe('UU5.Forms.FormMixin props.function testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('onSaveFail()', () => {
+  it("onSaveFail()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<MyCustomForms/>);
+    const wrapper = shallow(<MyCustomForms />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.isCalled).toBeFalsy();
     expect(wrapper.instance().state.message).toEqual("");
     expect(wrapper.instance().state.feedback).toMatch(/initial/);
-    wrapper.find('Form').simulate('saveFail');
+    wrapper.find("Form").simulate("saveFail");
     expect(window.alert).toBeCalled();
     expect(window.alert).toHaveBeenCalledTimes(1);
-    expect(window.alert).toHaveBeenCalledWith('onSaveFail event has been called.');
+    expect(window.alert).toHaveBeenCalledWith("onSaveFail event has been called.");
     expect(window.alert.mock.calls[0][0]).toEqual("onSaveFail event has been called.");
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(wrapper.instance().state.message).toEqual("Is valid.");
@@ -222,17 +227,17 @@ describe('UU5.Forms.FormMixin props.function testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('onSaveByKey()', () => {
+  it("onSaveByKey()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<MyCustomForms/>);
+    const wrapper = shallow(<MyCustomForms />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.isCalled).toBeFalsy();
     expect(wrapper.instance().state.message).toEqual("");
     expect(wrapper.instance().state.feedback).toMatch(/initial/);
-    wrapper.find('Form').simulate('saveByKey');
+    wrapper.find("Form").simulate("saveByKey");
     expect(window.alert).toBeCalled();
     expect(window.alert).toHaveBeenCalledTimes(1);
-    expect(window.alert).toHaveBeenCalledWith('onSaveByKey event has been called.');
+    expect(window.alert).toHaveBeenCalledWith("onSaveByKey event has been called.");
     expect(window.alert.mock.calls[0][0]).toEqual("onSaveByKey event has been called.");
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(wrapper.instance().state.message).toEqual("Is valid.");
@@ -240,34 +245,34 @@ describe('UU5.Forms.FormMixin props.function testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('onValidate()', () => {
+  it("onValidate()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<MyCustomForms/>);
+    const wrapper = shallow(<MyCustomForms />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.isCalled).toBeFalsy();
     expect(wrapper.instance().state.message).toEqual("");
     expect(wrapper.instance().state.feedback).toMatch(/initial/);
-    wrapper.find('Form').simulate('validate');
+    wrapper.find("Form").simulate("validate");
     expect(window.alert).toBeCalled();
     expect(window.alert).toHaveBeenCalledTimes(1);
-    expect(window.alert).toHaveBeenCalledWith('onValidate event has been called.');
+    expect(window.alert).toHaveBeenCalledWith("onValidate event has been called.");
     expect(window.alert.mock.calls[0][0]).toEqual("onValidate event has been called.");
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(wrapper.instance().state.message).toEqual("Is valid.");
     expect(wrapper.instance().state.feedback).toEqual("success");
     expect(wrapper).toMatchSnapshot();
   });
-  it('onReset()', () => {
+  it("onReset()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<MyCustomForms/>);
+    const wrapper = shallow(<MyCustomForms />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.isCalled).toBeFalsy();
     expect(wrapper.instance().state.message).toEqual("");
     expect(wrapper.instance().state.feedback).toMatch(/initial/);
-    wrapper.find('Form').simulate('reset');
+    wrapper.find("Form").simulate("reset");
     expect(window.alert).toBeCalled();
     expect(window.alert).toHaveBeenCalledTimes(1);
-    expect(window.alert).toHaveBeenCalledWith('onReset event has been called.');
+    expect(window.alert).toHaveBeenCalledWith("onReset event has been called.");
     expect(window.alert.mock.calls[0][0]).toEqual("onReset event has been called.");
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(wrapper.instance().state.message).toEqual("Is valid.");
@@ -275,17 +280,17 @@ describe('UU5.Forms.FormMixin props.function testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('onCancel()', () => {
+  it("onCancel()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<MyCustomForms/>);
+    const wrapper = shallow(<MyCustomForms />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.isCalled).toBeFalsy();
     expect(wrapper.instance().state.message).toEqual("");
     expect(wrapper.instance().state.feedback).toMatch(/initial/);
-    wrapper.find('Form').simulate('cancel');
+    wrapper.find("Form").simulate("cancel");
     expect(window.alert).toBeCalled();
     expect(window.alert).toHaveBeenCalledTimes(1);
-    expect(window.alert).toHaveBeenCalledWith('onCancel event has been called.');
+    expect(window.alert).toHaveBeenCalledWith("onCancel event has been called.");
     expect(window.alert.mock.calls[0][0]).toEqual("onCancel event has been called.");
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(wrapper.instance().state.message).toEqual("Is valid.");
@@ -294,15 +299,9 @@ describe('UU5.Forms.FormMixin props.function testing', () => {
   });
 });
 
-
 describe(`UU5.Forms.Form check default default props from Mixins`, () => {
-
   it(`UU5.Forms.FormMixin`, () => {
-    const wrapper = shallow(
-      <UU5.Forms.Form
-        id={"uuID"}
-      />
-    );
+    const wrapper = shallow(<UU5.Forms.Form id={"uuID"} />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().props.values).toBe(null);
     expect(wrapper.instance().props.progressIndicator).toBe(null);
@@ -319,13 +318,8 @@ describe(`UU5.Forms.Form check default default props from Mixins`, () => {
     expect(wrapper.instance().props.saveOnEnter).not.toBeUndefined();
   });
 
-
   it(`UU5.Commons. Elementary, Base, Pure,Section`, () => {
-    const wrapper = shallow(
-      <UU5.Forms.Form
-        id={"uuID"}
-      />
-    );
+    const wrapper = shallow(<UU5.Forms.Form id={"uuID"} />);
     //Check UU5.Common.Elementary.Mixin default props
     expect(wrapper.instance().props.hidden).toBeFalsy();
     expect(wrapper.instance().props.disabled).toBeFalsy();
@@ -348,7 +342,4 @@ describe(`UU5.Forms.Form check default default props from Mixins`, () => {
     expect(wrapper.instance().props.footer).toBe(null);
     expect(wrapper.instance().props.underline).toBeFalsy();
   });
-
-
 });
-

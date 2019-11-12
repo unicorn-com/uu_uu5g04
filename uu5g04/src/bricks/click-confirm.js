@@ -1,29 +1,28 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
+import { Div } from "./factory.js";
 
-
-import {Div} from './factory.js';
-
-import './click-confirm.less';
+import "./click-confirm.less";
+//@@viewOff:imports
 
 export const ClickConfirm = createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -38,7 +37,7 @@ export const ClickConfirm = createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("ClickConfirm"),
-    nestingLevelList: UU5.Environment.getNestingLevelList('bigBoxCollection', 'inline'),
+    nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "inline"),
     classNames: {
       main: ns.css("click-confirm"),
       open: ns.css("click-confirm-shown")
@@ -58,11 +57,11 @@ export const ClickConfirm = createReactClass({
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function () {
+  getDefaultProps: function() {
     return {};
   },
 
-  getInitialState: function () {
+  getInitialState: function() {
     return {
       content: null,
       pageX: null,
@@ -71,19 +70,19 @@ export const ClickConfirm = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  componentWillMount: function () {
-    this.setState({hidden: true});
+  //@@viewOn:reactLifeCycle
+  componentWillMount: function() {
+    this.setState({ hidden: true });
   },
 
-  componentWillUnmount: function () {
+  componentWillUnmount: function() {
     this.showTimeout && clearTimeout(this.showTimeout);
     this.closeTimeout && clearTimeout(this.closeTimeout);
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
-  open: function (openAttrs) {
+  open: function(openAttrs) {
     var pageX = openAttrs.pageX;
     var pageY = openAttrs.pageY;
 
@@ -96,35 +95,35 @@ export const ClickConfirm = createReactClass({
     this.closeTimeout && clearTimeout(this.closeTimeout);
 
     var _this = this;
-    this.showTimeout = setTimeout(function () {
-      _this.setAsyncState({content: openAttrs.content, hidden: false, pageX: pageX, pageY: pageY}, function () {
-        typeof openAttrs.onOpenCallback === 'function' && openAttrs.onOpenCallback();
+    this.showTimeout = setTimeout(function() {
+      _this.setAsyncState({ content: openAttrs.content, hidden: false, pageX: pageX, pageY: pageY }, function() {
+        typeof openAttrs.onOpenCallback === "function" && openAttrs.onOpenCallback();
 
-        _this.closeTimeout = setTimeout(function () {
+        _this.closeTimeout = setTimeout(function() {
           _this.close(openAttrs.onClosedCallback);
-        }, _this.getDefault().closeTimeout)
+        }, _this.getDefault().closeTimeout);
       });
     }, _this.getDefault().showTimeout);
 
     return this;
   },
 
-  close: function (setStateCallback) {
+  close: function(setStateCallback) {
     this.showTimeout && clearTimeout(this.showTimeout);
     this.closeTimeout && clearTimeout(this.closeTimeout);
-    this.setState({content: null, hidden: true, pageX: null, pageY: null}, setStateCallback);
+    this.setState({ content: null, hidden: true, pageX: null, pageY: null }, setStateCallback);
     return this;
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
-  _getMainAttrs: function () {
+  //@@viewOn:private
+  _getMainAttrs: function() {
     var props = this.getMainAttrs();
 
-    !this.isHidden() && (props.className += ' ' + this.getClassName().open);
+    !this.isHidden() && (props.className += " " + this.getClassName().open);
 
     if (this.state.pageX !== null) {
       props.style = {
@@ -136,14 +135,14 @@ export const ClickConfirm = createReactClass({
 
     return props;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
-  render: function () {
+  render: function() {
     return (
-       <Div {...this._getMainAttrs()} disabled={this.isDisabled()}>
-       {this.state.content}
-     </Div>
+      <Div {...this._getMainAttrs()} disabled={this.isDisabled()}>
+        {this.state.content}
+      </Div>
     );
   }
   //@@viewOff:render

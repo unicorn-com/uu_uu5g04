@@ -1,26 +1,27 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
-import './column.less'
+import "./column.less";
+//@@viewOff:imports
 
 export const Column = createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -34,7 +35,7 @@ export const Column = createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("Column"),
-    nestingLevelList: UU5.Environment.getNestingLevelList('spa', 'smallBoxCollection'),
+    nestingLevelList: UU5.Environment.getNestingLevelList("spa", "smallBoxCollection"),
     classNames: {
       main: ns.css("column"),
       spacing: ns.css("column-spacing"),
@@ -53,10 +54,7 @@ export const Column = createReactClass({
   //@@viewOn:propTypes
   propTypes: {
     noSpacing: PropTypes.bool,
-    width: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number
-    ]),
+    width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     // BS Column magic
     colWidth: PropTypes.oneOfType([
       PropTypes.shape({
@@ -67,7 +65,7 @@ export const Column = createReactClass({
         xl: PropTypes.number
       }),
       PropTypes.string
-    ]),
+    ])
   },
   //@@viewOff:propTypes
 
@@ -81,16 +79,16 @@ export const Column = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _getMainAttrs() {
     let mainAttrs = this.getMainAttrs();
     mainAttrs.className += " " + this.getClassName(this.props.noSpacing ? "noSpacing" : "spacing");
@@ -98,27 +96,26 @@ export const Column = createReactClass({
     if (this.props.width) {
       mainAttrs.style = UU5.Common.Tools.merge(mainAttrs.style, { width: this.props.width });
     } else {
-      mainAttrs.className = mainAttrs.className + ' ' +
+      mainAttrs.className =
+        mainAttrs.className +
+        " " +
         UU5.Common.Tools.buildColWidthClassName(this.props.colWidth || this.getDefault().colWidth);
     }
 
     return mainAttrs;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
-    return (
-      this.getNestingLevel()
-        ? (
-          <div {...this._getMainAttrs()}>
-            {this.getHeaderChild()}
-            {this.getChildren()}
-            {this.getFooterChild()}
-            {this.getDisabledCover()}
-          </div>
-        ) : null
-    );
+    return this.getNestingLevel() ? (
+      <div {...this._getMainAttrs()}>
+        {this.getHeaderChild()}
+        {this.getChildren()}
+        {this.getFooterChild()}
+        {this.getDisabledCover()}
+      </div>
+    ) : null;
   }
   //@@viewOff:render
 });

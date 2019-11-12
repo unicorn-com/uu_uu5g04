@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -19,8 +19,8 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 
 const itemProps = {
   code: "SK001",
-  colorSchema: 'info',
-  message: 'Some message',
+  colorSchema: "info",
+  message: "Some message",
   pending: true,
   closeDisabled: true,
   timeout: 10000,
@@ -30,8 +30,8 @@ const itemProps = {
 
 const itemSecondProps = {
   code: "SK002",
-  colorSchema: 'warning',
-  message: 'Second message',
+  colorSchema: "warning",
+  message: "Second message",
   pending: false,
   closeDisabled: false,
   timeout: 20000,
@@ -39,13 +39,9 @@ const itemSecondProps = {
   onClose: null
 };
 
-
 describe(`UU5.Bricks.ProgressBus interface testing`, () => {
-
-  it('addItem(itemprops, setStateCallBack)', () => {
-    const wrapper = shallow(
-      <UU5.Bricks.ProgressBus key={"openID"} id={"uuID01"} verticalPosition="bottom"/>
-    );
+  it("addItem(itemprops, setStateCallBack)", () => {
+    const wrapper = shallow(<UU5.Bricks.ProgressBus key={"openID"} id={"uuID01"} verticalPosition="bottom" />);
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getItemList()).toEqual(expect.arrayContaining([]));
@@ -55,13 +51,16 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toEqual(expect.any(String));
-    const lastItem = wrapper.instance().getItemList().pop();
+    const lastItem = wrapper
+      .instance()
+      .getItemList()
+      .pop();
     const returnValueOfGetItem = wrapper.instance().getItem(lastItem.id);
     expect(returnValueOfGetItem).toEqual(
       expect.objectContaining({
-        code: 'SK001',
-        message: 'Some message',
-        colorSchema: 'info',
+        code: "SK001",
+        message: "Some message",
+        colorSchema: "info",
         pending: true,
         closeDisabled: true,
         timeout: 10000,
@@ -75,10 +74,8 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
    * The test adds one item to the progressBus component using addAlert and removes it from it after removing it.
    * The final state of the component is that the progressBuss component is empty.
    */
-  it('removeItem(itemID, setStateCallBack)', () => {
-    const wrapper = shallow(
-      <UU5.Bricks.ProgressBus key={"openID"} id={"uuID01"} verticalPosition="bottom"/>
-    );
+  it("removeItem(itemID, setStateCallBack)", () => {
+    const wrapper = shallow(<UU5.Bricks.ProgressBus key={"openID"} id={"uuID01"} verticalPosition="bottom" />);
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getItemList()).toEqual(expect.arrayContaining([]));
@@ -88,13 +85,16 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toEqual(expect.any(String));
-    const lastItem = wrapper.instance().getItemList().pop();
+    const lastItem = wrapper
+      .instance()
+      .getItemList()
+      .pop();
     const returnValueOfGetItem = wrapper.instance().getItem(lastItem.id);
     expect(returnValueOfGetItem).toEqual(
       expect.objectContaining({
-        code: 'SK001',
-        message: 'Some message',
-        colorSchema: 'info',
+        code: "SK001",
+        message: "Some message",
+        colorSchema: "info",
         pending: true,
         closeDisabled: true,
         timeout: 10000,
@@ -102,7 +102,10 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
         onClose: null
       })
     );
-    const lastItemRemove = wrapper.instance().getItemList().pop();
+    const lastItemRemove = wrapper
+      .instance()
+      .getItemList()
+      .pop();
     const removeItemReturnValue = wrapper.instance().removeItem(lastItemRemove.id, mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
@@ -111,10 +114,8 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getItem(itemID)', () => {
-    const wrapper = shallow(
-      <UU5.Bricks.ProgressBus key={"openID"} id={"uuID01"} verticalPosition="bottom"/>
-    );
+  it("getItem(itemID)", () => {
+    const wrapper = shallow(<UU5.Bricks.ProgressBus key={"openID"} id={"uuID01"} verticalPosition="bottom" />);
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getItemList()).toEqual(expect.arrayContaining([]));
@@ -123,13 +124,16 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    const lastItem = wrapper.instance().getItemList().pop();
+    const lastItem = wrapper
+      .instance()
+      .getItemList()
+      .pop();
     const returnValueOfGetItem = wrapper.instance().getItem(lastItem.id);
     expect(returnValueOfGetItem).toEqual(
       expect.objectContaining({
-        code: 'SK001',
-        message: 'Some message',
-        colorSchema: 'info',
+        code: "SK001",
+        message: "Some message",
+        colorSchema: "info",
         pending: true,
         closeDisabled: true,
         timeout: 10000,
@@ -139,10 +143,8 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     );
   });
 
-  it('getItemByCode(itemCode)', () => {
-    const wrapper = shallow(
-      <UU5.Bricks.ProgressBus key={"openID"} id={"uuID01"} verticalPosition="bottom"/>
-    );
+  it("getItemByCode(itemCode)", () => {
+    const wrapper = shallow(<UU5.Bricks.ProgressBus key={"openID"} id={"uuID01"} verticalPosition="bottom" />);
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getItemList()).toEqual(expect.arrayContaining([]));
@@ -155,9 +157,9 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     const retGetItemByCode = wrapper.instance().getItemByCode("SK001");
     expect(retGetItemByCode).toEqual(
       expect.objectContaining({
-        code: 'SK001',
-        message: 'Some message',
-        colorSchema: 'info',
+        code: "SK001",
+        message: "Some message",
+        colorSchema: "info",
         pending: true,
         closeDisabled: true,
         timeout: 10000,
@@ -167,10 +169,8 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     );
   });
 
-  it('getItemsByCode(code)', () => {
-    const wrapper = shallow(
-      <UU5.Bricks.ProgressBus key={"openID"} id={"uuID01"} verticalPosition="bottom"/>
-    );
+  it("getItemsByCode(code)", () => {
+    const wrapper = shallow(<UU5.Bricks.ProgressBus key={"openID"} id={"uuID01"} verticalPosition="bottom" />);
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getItemList()).toEqual(expect.arrayContaining([]));
@@ -188,10 +188,8 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     expect(retGetItemsByCode).toEqual(expect.anything());
   });
 
-  it('setItem(itemID, itemProps, setStateCallBack)', () => {
-    const wrapper = shallow(
-      <UU5.Bricks.ProgressBus key={"openID"} id={"uuID01"} verticalPosition="bottom"/>
-    );
+  it("setItem(itemID, itemProps, setStateCallBack)", () => {
+    const wrapper = shallow(<UU5.Bricks.ProgressBus key={"openID"} id={"uuID01"} verticalPosition="bottom" />);
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getItemList()).toEqual(expect.arrayContaining([]));
@@ -201,13 +199,16 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toEqual(expect.any(String));
 
-    const lastItem = wrapper.instance().getItemList().pop();
+    const lastItem = wrapper
+      .instance()
+      .getItemList()
+      .pop();
     const returnValueOfGetItem = wrapper.instance().getItem(lastItem.id);
     expect(returnValueOfGetItem).toEqual(
       expect.objectContaining({
-        code: 'SK001',
-        message: 'Some message',
-        colorSchema: 'info',
+        code: "SK001",
+        message: "Some message",
+        colorSchema: "info",
         pending: true,
         closeDisabled: true,
         timeout: 10000,
@@ -223,23 +224,20 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     const returnValueOfGetItemTwice = wrapper.instance().getItem(lastItem.id);
     expect(returnValueOfGetItemTwice).toEqual(
       expect.objectContaining({
-          code: 'SK002',
-          colorSchema: 'warning',
-          message: 'Second message',
-          pending: false,
-          closeDisabled: false,
-          timeout: 20000,
-          onClick: null,
-          onClose: null
-        }
-      )
+        code: "SK002",
+        colorSchema: "warning",
+        message: "Second message",
+        pending: false,
+        closeDisabled: false,
+        timeout: 20000,
+        onClick: null,
+        onClose: null
+      })
     );
   });
 
-  it('updateItem(itemID, updateItem, setStateCallBack)', () => {
-    const wrapper = shallow(
-      <UU5.Bricks.ProgressBus key={"openID"} id={"uuID01"} verticalPosition="bottom"/>
-    );
+  it("updateItem(itemID, updateItem, setStateCallBack)", () => {
+    const wrapper = shallow(<UU5.Bricks.ProgressBus key={"openID"} id={"uuID01"} verticalPosition="bottom" />);
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getItemList()).toEqual(expect.arrayContaining([]));
@@ -248,13 +246,16 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toEqual(expect.any(String));
-    const lastItem = wrapper.instance().getItemList().pop();
+    const lastItem = wrapper
+      .instance()
+      .getItemList()
+      .pop();
     const returnValueOfGetItem = wrapper.instance().getItem(lastItem.id);
     expect(returnValueOfGetItem).toEqual(
       expect.objectContaining({
-        code: 'SK001',
-        message: 'Some message',
-        colorSchema: 'info',
+        code: "SK001",
+        message: "Some message",
+        colorSchema: "info",
         pending: true,
         closeDisabled: true,
         timeout: 10000,
@@ -270,23 +271,20 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     const returnValueOfGetItemTwice = wrapper.instance().getItem(lastItem.id);
     expect(returnValueOfGetItemTwice).toEqual(
       expect.objectContaining({
-          code: 'SK002',
-          message: 'Second message',
-          colorSchema: 'warning',
-          pending: false,
-          closeDisabled: false,
-          timeout: 20000,
-          onClick: null,
-          onClose: null
-        }
-      )
+        code: "SK002",
+        message: "Second message",
+        colorSchema: "warning",
+        pending: false,
+        closeDisabled: false,
+        timeout: 20000,
+        onClick: null,
+        onClose: null
+      })
     );
   });
 
-  it('getItemList()', () => {
-    const wrapper = shallow(
-      <UU5.Bricks.ProgressBus key={"openID"} id={"uuID01"} verticalPosition="bottom"/>
-    );
+  it("getItemList()", () => {
+    const wrapper = shallow(<UU5.Bricks.ProgressBus key={"openID"} id={"uuID01"} verticalPosition="bottom" />);
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getItemList()).toEqual(expect.arrayContaining([]));
@@ -306,9 +304,9 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     expect(returnOfGetItemList).toEqual(
       expect.arrayContaining([
         {
-          code: 'SK001',
-          message: 'Some message',
-          colorSchema: 'info',
+          code: "SK001",
+          message: "Some message",
+          colorSchema: "info",
           pending: true,
           closeDisabled: true,
           timeout: 10000,
@@ -317,9 +315,9 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
           id: expect.any(String)
         },
         {
-          code: 'SK002',
-          message: 'Second message',
-          colorSchema: 'warning',
+          code: "SK002",
+          message: "Second message",
+          colorSchema: "warning",
           pending: false,
           closeDisabled: false,
           timeout: 20000,
@@ -331,10 +329,8 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     );
   });
 
-  it('showAlert(itemId, setStateCallBack)', () => {
-    const wrapper = shallow(
-      <UU5.Bricks.ProgressBus key={"openID"} id={"uuID01"} verticalPosition="bottom"/>
-    );
+  it("showAlert(itemId, setStateCallBack)", () => {
+    const wrapper = shallow(<UU5.Bricks.ProgressBus key={"openID"} id={"uuID01"} verticalPosition="bottom" />);
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.openId).toBeNull();
     expect(wrapper).toMatchSnapshot();
@@ -344,13 +340,16 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toEqual(expect.any(String));
-    const lastItem = wrapper.instance().getItemList().pop();
+    const lastItem = wrapper
+      .instance()
+      .getItemList()
+      .pop();
     const returnValueOfGetItem = wrapper.instance().getItem(lastItem.id);
     expect(returnValueOfGetItem).toEqual(
       expect.objectContaining({
-        code: 'SK001',
-        message: 'Some message',
-        colorSchema: 'info',
+        code: "SK001",
+        message: "Some message",
+        colorSchema: "info",
         pending: true,
         closeDisabled: true,
         timeout: 10000,
@@ -367,11 +366,8 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     expect(wrapper.instance().state.openId).not.toBeNull();
   });
 
-
-  it('hideAlert(itemID, setStateCallBack)', () => {
-    const wrapper = shallow(
-      <UU5.Bricks.ProgressBus key={"openID"} id={"uuID01"} verticalPosition="bottom"/>
-    );
+  it("hideAlert(itemID, setStateCallBack)", () => {
+    const wrapper = shallow(<UU5.Bricks.ProgressBus key={"openID"} id={"uuID01"} verticalPosition="bottom" />);
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.openId).toBeNull();
     expect(wrapper).toMatchSnapshot();
@@ -381,13 +377,16 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toEqual(expect.any(String));
-    const lastItem = wrapper.instance().getItemList().pop();
+    const lastItem = wrapper
+      .instance()
+      .getItemList()
+      .pop();
     const returnValueOfGetItem = wrapper.instance().getItem(lastItem.id);
     expect(returnValueOfGetItem).toEqual(
       expect.objectContaining({
-        code: 'SK001',
-        message: 'Some message',
-        colorSchema: 'info',
+        code: "SK001",
+        message: "Some message",
+        colorSchema: "info",
         pending: true,
         closeDisabled: true,
         timeout: 10000,
@@ -409,5 +408,4 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     expect(returnOfHideAlert).toBe(wrapper.instance());
     expect(wrapper.instance().state.openId).toBeNull();
   });
-
 });

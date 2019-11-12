@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -19,24 +19,16 @@ import createReactClass from "create-react-class";
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
-describe('UU5.Forms.InputMixin interface', () => {
-
-  it('isInput()', () => {
+describe("UU5.Forms.InputMixin interface", () => {
+  it("isInput()", () => {
     const wrapper = shallow(
-      <UU5.Forms.TextArea
-        label="Desctiption"
-        id={"idTextArea"}
-        value={""}
-        rows={5}
-        autoResize={true}
-        maxRows={10}
-      />
+      <UU5.Forms.TextArea label="Desctiption" id={"idTextArea"} value={""} rows={5} autoResize={true} maxRows={10} />
     );
     expect(wrapper.instance().isInput()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getValue() should return value', () => {
+  it("getValue() should return value", () => {
     const wrapper = shallow(
       <UU5.Forms.TextArea
         label="Desctiption"
@@ -51,31 +43,17 @@ describe('UU5.Forms.InputMixin interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getValue() value is empty. Should return empty string.', () => {
+  it("getValue() value is empty. Should return empty string.", () => {
     const wrapper = shallow(
-      <UU5.Forms.TextArea
-        label="Desctiption"
-        id={"idTextArea"}
-        value={""}
-        rows={5}
-        autoResize={true}
-        maxRows={10}
-      />
+      <UU5.Forms.TextArea label="Desctiption" id={"idTextArea"} value={""} rows={5} autoResize={true} maxRows={10} />
     );
     expect(wrapper.instance().getValue()).toEqual("");
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setValue(value,setStateCallBack)', () => {
+  it("setValue(value,setStateCallBack)", () => {
     const wrapper = shallow(
-      <UU5.Forms.TextArea
-        label="Desctiption"
-        id={"idTextArea"}
-        value={""}
-        rows={5}
-        autoResize={true}
-        maxRows={10}
-      />
+      <UU5.Forms.TextArea label="Desctiption" id={"idTextArea"} value={""} rows={5} autoResize={true} maxRows={10} />
     );
     expect(wrapper.instance().getValue()).toEqual("");
     const mockFunc = jest.fn();
@@ -89,33 +67,19 @@ describe('UU5.Forms.InputMixin interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getMessage() should return null, second: shoudl return new mesage', () => {
+  it("getMessage() should return null, second: shoudl return new mesage", () => {
     const wrapper = shallow(
-      <UU5.Forms.TextArea
-        label="Desctiption"
-        id={"idTextArea"}
-        value={""}
-        rows={5}
-        autoResize={true}
-        maxRows={10}
-      />
+      <UU5.Forms.TextArea label="Desctiption" id={"idTextArea"} value={""} rows={5} autoResize={true} maxRows={10} />
     );
     expect(wrapper.instance().getMessage()).toBe(null);
     expect(wrapper).toMatchSnapshot();
-    wrapper.setProps({message: "New Setting message"});
+    wrapper.setProps({ message: "New Setting message" });
     expect(wrapper.instance().getMessage()).toEqual("New Setting message");
   });
 
-  it('setMessage(msg, setStateCallBack)', () => {
+  it("setMessage(msg, setStateCallBack)", () => {
     const wrapper = shallow(
-      <UU5.Forms.TextArea
-        label="Desctiption"
-        id={"idTextArea"}
-        value={""}
-        rows={5}
-        autoResize={true}
-        maxRows={10}
-      />
+      <UU5.Forms.TextArea label="Desctiption" id={"idTextArea"} value={""} rows={5} autoResize={true} maxRows={10} />
     );
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
@@ -129,27 +93,19 @@ describe('UU5.Forms.InputMixin interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getFeedBack()', () => {
+  it("getFeedBack()", () => {
     const wrapper = shallow(
-      <UU5.Forms.TextArea
-        label="Desctiption"
-        id={"idTextArea"}
-        value={""}
-        rows={5}
-        autoResize={true}
-        maxRows={10}
-      />
+      <UU5.Forms.TextArea label="Desctiption" id={"idTextArea"} value={""} rows={5} autoResize={true} maxRows={10} />
     );
     expect(wrapper.instance().getFeedback()).toEqual("initial");
     expect(wrapper).toMatchSnapshot();
-    wrapper.setProps({feedback: "success"});
+    wrapper.setProps({ feedback: "success" });
     wrapper.update();
     expect(wrapper.instance().getFeedback()).toEqual("success");
     expect(wrapper).toMatchSnapshot();
   });
 
-
-  it('setFeedBack(feedback, message, value, setStateCallBack)', () => {
+  it("setFeedBack(feedback, message, value, setStateCallBack)", () => {
     const wrapper = shallow(
       <UU5.Forms.TextArea
         label="Desctiption"
@@ -166,7 +122,9 @@ describe('UU5.Forms.InputMixin interface', () => {
     expect(wrapper.instance().getValue()).toEqual("");
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
-    const returnValue = wrapper.instance().setFeedback("success", "This is valid message.", "This is valid value", mockFunc);
+    const returnValue = wrapper
+      .instance()
+      .setFeedback("success", "This is valid message.", "This is valid value", mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
@@ -177,7 +135,7 @@ describe('UU5.Forms.InputMixin interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setInitial(msg, value, setStateCallBack)', () => {
+  it("setInitial(msg, value, setStateCallBack)", () => {
     const wrapper = shallow(
       <UU5.Forms.TextArea
         id={"idText"}
@@ -203,21 +161,14 @@ describe('UU5.Forms.InputMixin interface', () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().getFeedback()).toEqual("initial");
     expect(wrapper.instance().getValue()).toEqual("");
-    expect(wrapper.instance().getMessage()).toEqual("Initial Message")
+    expect(wrapper.instance().getMessage()).toEqual("Initial Message");
     expect(wrapper.instance().isInitial()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isInitial()', () => {
+  it("isInitial()", () => {
     const wrapper = shallow(
-      <UU5.Forms.TextArea
-        id={"idText"}
-        label="Full name"
-        placeholder="John Smith"
-        value=""
-        required={false}
-        size="s"
-      />
+      <UU5.Forms.TextArea id={"idText"} label="Full name" placeholder="John Smith" value="" required={false} size="s" />
     );
     const mockFunc = jest.fn();
     expect(wrapper.instance().isInitial()).toBeTruthy();
@@ -228,16 +179,9 @@ describe('UU5.Forms.InputMixin interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setLoading(message, value, setStateCallBack)', () => {
+  it("setLoading(message, value, setStateCallBack)", () => {
     const wrapper = shallow(
-      <UU5.Forms.TextArea
-        id={"idText"}
-        label="Full name"
-        placeholder="John Smith"
-        value=""
-        required={false}
-        size="s"
-      />
+      <UU5.Forms.TextArea id={"idText"} label="Full name" placeholder="John Smith" value="" required={false} size="s" />
     );
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
@@ -255,31 +199,17 @@ describe('UU5.Forms.InputMixin interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isLoading()', () => {
+  it("isLoading()", () => {
     const wrapper = shallow(
-      <UU5.Forms.TextArea
-        id={"idText"}
-        label="Full name"
-        placeholder="John Smith"
-        value=""
-        required={false}
-        size="s"
-      />
+      <UU5.Forms.TextArea id={"idText"} label="Full name" placeholder="John Smith" value="" required={false} size="s" />
     );
     expect(wrapper.instance().isLoading()).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setSuccess(message, value, setStateCallBack)', () => {
+  it("setSuccess(message, value, setStateCallBack)", () => {
     const wrapper = shallow(
-      <UU5.Forms.TextArea
-        id={"idText"}
-        label="Full name"
-        placeholder="John Smith"
-        value=""
-        required={false}
-        size="s"
-      />
+      <UU5.Forms.TextArea id={"idText"} label="Full name" placeholder="John Smith" value="" required={false} size="s" />
     );
     const mockFunc = jest.fn();
     expect(wrapper.instance().getFeedback()).toEqual("initial");
@@ -298,16 +228,9 @@ describe('UU5.Forms.InputMixin interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isSuccess() fisr return false, second return true', () => {
+  it("isSuccess() fisr return false, second return true", () => {
     const wrapper = shallow(
-      <UU5.Forms.TextArea
-        id={"idText"}
-        label="Full name"
-        placeholder="John Smith"
-        value=""
-        required={true}
-        size="s"
-      />
+      <UU5.Forms.TextArea id={"idText"} label="Full name" placeholder="John Smith" value="" required={true} size="s" />
     );
     const mockFunc = jest.fn();
     expect(wrapper.instance().isSuccess()).toBeFalsy();
@@ -323,16 +246,9 @@ describe('UU5.Forms.InputMixin interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setWarning(message, value, setStateCallBack)', () => {
+  it("setWarning(message, value, setStateCallBack)", () => {
     const wrapper = shallow(
-      <UU5.Forms.TextArea
-        id={"idText"}
-        label="Full name"
-        placeholder="John Smith"
-        value=""
-        required={false}
-        size="s"
-      />
+      <UU5.Forms.TextArea id={"idText"} label="Full name" placeholder="John Smith" value="" required={false} size="s" />
     );
     const mockFunc = jest.fn();
     expect(wrapper.instance().getFeedback()).toEqual("initial");
@@ -354,8 +270,7 @@ describe('UU5.Forms.InputMixin interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-
-  it('isWarning()', () => {
+  it("isWarning()", () => {
     const wrapper = shallow(
       <UU5.Forms.TextArea
         id={"idText"}
@@ -381,15 +296,9 @@ describe('UU5.Forms.InputMixin interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setError(message, value, setStateCallBack)', () => {
+  it("setError(message, value, setStateCallBack)", () => {
     const wrapper = shallow(
-      <UU5.Forms.TextArea
-        id={"idText"}
-        label="Full name"
-        placeholder="John Smith"
-        value=""
-        size="s"
-      />
+      <UU5.Forms.TextArea id={"idText"} label="Full name" placeholder="John Smith" value="" size="s" />
     );
     const mockFunc = jest.fn();
     expect(wrapper.instance().isError()).toBeFalsy();
@@ -415,7 +324,7 @@ describe('UU5.Forms.InputMixin interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isError()', () => {
+  it("isError()", () => {
     const wrapper = shallow(
       <UU5.Forms.TextArea
         id={"idText"}
@@ -441,16 +350,9 @@ describe('UU5.Forms.InputMixin interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('reset(setStateCallBack)', () => {
+  it("reset(setStateCallBack)", () => {
     const wrapper = shallow(
-      <UU5.Forms.TextArea
-        id={"idText"}
-        label="Full name"
-        placeholder="John Smith"
-        value=""
-        required={true}
-        size="s"
-      />
+      <UU5.Forms.TextArea id={"idText"} label="Full name" placeholder="John Smith" value="" required={true} size="s" />
     );
     const mockFunc = jest.fn();
     wrapper.instance().setFeedback("success", "New Message", "New Value", mockFunc);
@@ -476,51 +378,44 @@ describe('UU5.Forms.InputMixin interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getChangeFeedback()', () => {
+  it("getChangeFeedback()", () => {
     const wrapper = shallow(
-      <UU5.Forms.TextArea
-        id={"idText"}
-        label="Full name"
-        placeholder="John Smith"
-        value=""
-        required={true}
-        size="s"
-      />
+      <UU5.Forms.TextArea id={"idText"} label="Full name" placeholder="John Smith" value="" required={true} size="s" />
     );
-    expect(wrapper.instance().getChangeFeedback({})).toEqual(expect.objectContaining({
-      feedback: 'initial',
-      message: null,
-      value: '',
-      foundAutocompleteItems: null,
-      selectedIndex: null
-    }));
+    expect(wrapper.instance().getChangeFeedback({})).toEqual(
+      expect.objectContaining({
+        feedback: "initial",
+        message: null,
+        value: "",
+        foundAutocompleteItems: null,
+        selectedIndex: null
+      })
+    );
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setChangeFeedback()', () => {
+  it("setChangeFeedback()", () => {
     const wrapper = shallow(
-      <UU5.Forms.TextArea
-        id={"idText"}
-        label="Full name"
-        placeholder="John Smith"
-        value=""
-        required={true}
-        size="s"
-      />
+      <UU5.Forms.TextArea id={"idText"} label="Full name" placeholder="John Smith" value="" required={true} size="s" />
     );
     const mockFunc = jest.fn();
-    expect(wrapper.instance().getChangeFeedback({})).toEqual(expect.objectContaining({
-      feedback: 'initial',
-      message: null,
-      value: '',
-      foundAutocompleteItems: null,
-      selectedIndex: null
-    }));
-    const returnValue = wrapper.instance().setChangeFeedback({
-      feedback: 'error',
-      message: 'Error message from setChangeFeedback',
-      value: 'Error text'
-    }, mockFunc);
+    expect(wrapper.instance().getChangeFeedback({})).toEqual(
+      expect.objectContaining({
+        feedback: "initial",
+        message: null,
+        value: "",
+        foundAutocompleteItems: null,
+        selectedIndex: null
+      })
+    );
+    const returnValue = wrapper.instance().setChangeFeedback(
+      {
+        feedback: "error",
+        message: "Error message from setChangeFeedback",
+        value: "Error text"
+      },
+      mockFunc
+    );
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(returnValue).toBe(wrapper.instance());
@@ -530,17 +425,9 @@ describe('UU5.Forms.InputMixin interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-
-  it('isReadOnly()', () => {
+  it("isReadOnly()", () => {
     const wrapper = shallow(
-      <UU5.Forms.TextArea
-        id={"idText"}
-        label="Full name"
-        placeholder="John Smith"
-        value=""
-        required={true}
-        size="s"
-      />
+      <UU5.Forms.TextArea id={"idText"} label="Full name" placeholder="John Smith" value="" required={true} size="s" />
     );
     const mockFunc = jest.fn();
     expect(wrapper.instance().isReadOnly()).toBeFalsy();
@@ -553,7 +440,7 @@ describe('UU5.Forms.InputMixin interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setEditableValue(true, setStateCallback)', () => {
+  it("setEditableValue(true, setStateCallback)", () => {
     const wrapper = shallow(
       <UU5.Forms.TextArea
         id={"idText"}
@@ -581,8 +468,7 @@ describe('UU5.Forms.InputMixin interface', () => {
     expect(mockFunc).toHaveBeenCalledTimes(4);
   });
 
-
-  it('setEditableValue(false, setStateCallback)', () => {
+  it("setEditableValue(false, setStateCallback)", () => {
     const wrapper = shallow(
       <UU5.Forms.TextArea
         id={"idText"}
@@ -609,8 +495,7 @@ describe('UU5.Forms.InputMixin interface', () => {
     expect(mockFunc).toHaveBeenCalledTimes(3);
   });
 
-
-  it('readOnly(setStatecallback)', () => {
+  it("readOnly(setStatecallback)", () => {
     const wrapper = shallow(
       <UU5.Forms.TextArea
         id={"idText"}
@@ -633,7 +518,7 @@ describe('UU5.Forms.InputMixin interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('editable(setStatecallback)', () => {
+  it("editable(setStatecallback)", () => {
     const wrapper = shallow(
       <UU5.Forms.TextArea
         id={"idText"}
@@ -662,7 +547,7 @@ describe('UU5.Forms.InputMixin interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getLabel(idinput)', () => {
+  it("getLabel(idinput)", () => {
     const wrapper = shallow(
       <UU5.Forms.TextArea
         id={"idText"}
@@ -681,7 +566,7 @@ describe('UU5.Forms.InputMixin interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getInputWrapper(inpuid)', () => {
+  it("getInputWrapper(inpuid)", () => {
     const wrapper = shallow(
       <UU5.Forms.TextArea
         id={"idText"}
@@ -699,52 +584,30 @@ describe('UU5.Forms.InputMixin interface', () => {
     expect(wrapper.instance().getInputWrapper()).toBeInstanceOf(Object);
     expect(wrapper).toMatchSnapshot();
   });
-
-
 });
 
-
-describe('UU5.Forms.TextInputMixin interface', () => {
-
-  it('isTextInput() should return true', () => {
+describe("UU5.Forms.TextInputMixin interface", () => {
+  it("isTextInput() should return true", () => {
     const wrapper = shallow(
-      <UU5.Forms.TextArea
-        id={"idText"}
-        label="Full name"
-        placeholder="John Smith"
-        value="Anna Simpson"
-        size="s"
-      />
+      <UU5.Forms.TextArea id={"idText"} label="Full name" placeholder="John Smith" value="Anna Simpson" size="s" />
     );
     expect(wrapper.instance().isTextInput()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getInput()', () => {
+  it("getInput()", () => {
     const wrapper = mount(
-      <UU5.Forms.TextArea
-        id={"idText"}
-        label="Full name"
-        placeholder="John Smith"
-        value="Anna Simpson"
-        size="s"
-      />
+      <UU5.Forms.TextArea id={"idText"} label="Full name" placeholder="John Smith" value="Anna Simpson" size="s" />
     );
-    expect(wrapper.instance().getInput()).toBe(wrapper.find('text-input').instance());
+    expect(wrapper.instance().getInput()).toBe(wrapper.find("text-input").instance());
     expect(wrapper.instance().getInput()).toEqual(expect.any(Object));
     expect(wrapper.instance().getInput()).toBeInstanceOf(Object);
     expect(wrapper.instance().getInput()).not.toBe(undefined);
   });
 
-  it('focus()', () => {
+  it("focus()", () => {
     const wrapper = shallow(
-      <UU5.Forms.TextArea
-        id={"idText"}
-        label="Full name"
-        placeholder="John Smith"
-        value="Anna Simpson"
-        size="s"
-      />
+      <UU5.Forms.TextArea id={"idText"} label="Full name" placeholder="John Smith" value="Anna Simpson" size="s" />
     );
     expect(wrapper).toMatchSnapshot();
     wrapper.instance().focus();
@@ -752,7 +615,7 @@ describe('UU5.Forms.TextInputMixin interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isValid()', () => {
+  it("isValid()", () => {
     const wrapper = shallow(
       <UU5.Forms.TextArea
         id={"idText"}
@@ -767,38 +630,35 @@ describe('UU5.Forms.TextInputMixin interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isValid() should return false', () => {
+  it("isValid() should return false", () => {
     const wrapper = shallow(
-      <UU5.Forms.TextArea
-        id={"idText"}
-        label="Full name"
-        placeholder="John Smith"
-        value=""
-        required={true}
-        size="s"
-      />
+      <UU5.Forms.TextArea id={"idText"} label="Full name" placeholder="John Smith" value="" required={true} size="s" />
     );
     expect(wrapper.instance().isValid()).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
   });
 
-
-  it('isOpen() should return false', () => {
+  it("isOpen() should return false", () => {
     const wrapper = shallow(
       <UU5.Forms.TextArea
         id={"idText"}
         label="Full name"
         placeholder="John Smith"
         value=""
-        autocompleteItems={[{
-          value: 'Aneta'
-        }, {
-          value: 'Albert'
-        }, {
-          value: 'Honza'
-        }, {
-          value: 'Alzbeta'
-        }]}
+        autocompleteItems={[
+          {
+            value: "Aneta"
+          },
+          {
+            value: "Albert"
+          },
+          {
+            value: "Honza"
+          },
+          {
+            value: "Alzbeta"
+          }
+        ]}
         required={true}
         size="s"
       />
@@ -807,7 +667,7 @@ describe('UU5.Forms.TextInputMixin interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getFocusFeedback()', () => {
+  it("getFocusFeedback()", () => {
     const focusMessage = "Message";
     const wrapper = shallow(
       <UU5.Forms.TextArea
@@ -822,64 +682,56 @@ describe('UU5.Forms.TextInputMixin interface', () => {
     );
     wrapper.instance().focus();
     wrapper.update();
-    expect(wrapper.instance().getFocusFeedback({})).toEqual({feedback: "initial", value: "", message: focusMessage});
+    expect(wrapper.instance().getFocusFeedback({})).toEqual({ feedback: "initial", value: "", message: focusMessage });
   });
 
-  it('getBlurFeedback()', () => {
+  it("getBlurFeedback()", () => {
     const wrapper = shallow(
-      <UU5.Forms.TextArea
-        id={"idText"}
-        label="Full name"
-        placeholder="John Smith"
-        value=""
-        required={true}
-        size="s"
-      />
+      <UU5.Forms.TextArea id={"idText"} label="Full name" placeholder="John Smith" value="" required={true} size="s" />
     );
-    expect(wrapper.instance().getBlurFeedback({})).toEqual(expect.objectContaining({
-      feedback: 'initial',
-      message: null,
-      value: undefined
-    }));
+    expect(wrapper.instance().getBlurFeedback({})).toEqual(
+      expect.objectContaining({
+        feedback: "initial",
+        message: null,
+        value: undefined
+      })
+    );
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setAutocompleteItems(items,opt,setStateCallBack)', () => {
+  it("setAutocompleteItems(items,opt,setStateCallBack)", () => {
     const wrapper = shallow(
-      <UU5.Forms.TextArea
-        id={"idText"}
-        label="Full name"
-        placeholder="John Smith"
-        value=""
-        required={false}
-        size="s"
-      />
+      <UU5.Forms.TextArea id={"idText"} label="Full name" placeholder="John Smith" value="" required={false} size="s" />
     );
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.autocompleteItems).toBe(null);
-    const returnValue = wrapper.instance().setAutoCompleteItems([{
-      value: 'Kovar'
-    }, {
-      value: 'Novak'
-    }, {
-      value: 'Novotny'
-    }, {
-      value: 'Svacina'
-    }], null, mockFunc)
+    const returnValue = wrapper.instance().setAutoCompleteItems(
+      [
+        {
+          value: "Kovar"
+        },
+        {
+          value: "Novak"
+        },
+        {
+          value: "Novotny"
+        },
+        {
+          value: "Svacina"
+        }
+      ],
+      null,
+      mockFunc
+    );
     wrapper.update();
     expect(wrapper.instance().state.autocompleteItems).not.toBe(null);
-    expect(wrapper.instance().state.autocompleteItems).toEqual(expect.arrayContaining(
-      [{value: 'Kovar'},
-        {value: 'Novak'},
-        {value: 'Novotny'},
-        {value: 'Svacina'}]
-    ));
+    expect(wrapper.instance().state.autocompleteItems).toEqual(
+      expect.arrayContaining([{ value: "Kovar" }, { value: "Novak" }, { value: "Novotny" }, { value: "Svacina" }])
+    );
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper).toMatchSnapshot();
   });
-
-
 });

@@ -11,16 +11,17 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
+//@@viewOn:imports
+import React from "react";
 import PropTypes from "prop-types";
-import createReactClass from 'create-react-class';
+import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import { TAG, css } from "./config.js";
 import Row from "./row.js";
 import LsiButton from "./_lsi-button.js";
+//@@viewOff:imports
 
 export const Block = createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -63,24 +64,33 @@ export const Block = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    actions: PropTypes.arrayOf(PropTypes.shape({
-      onClick: PropTypes.func.isRequired,
-      icon: PropTypes.string,
-      content: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-      active: PropTypes.bool,
-      activeIcon: PropTypes.string,
-      activeContent: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-      bgStyle: PropTypes.string,
-      borderRadius: PropTypes.string,
-      disabled: PropTypes.bool
-    }))
+    actions: PropTypes.arrayOf(
+      PropTypes.shape({
+        onClick: PropTypes.func.isRequired,
+        icon: PropTypes.string,
+        content: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+        active: PropTypes.bool,
+        activeIcon: PropTypes.string,
+        activeContent: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+        bgStyle: PropTypes.string,
+        borderRadius: PropTypes.string,
+        disabled: PropTypes.bool,
+        colorSchema: PropTypes.string
+      })
+    ),
+    menuColorSchema: PropTypes.string,
+    menuBgStyle: PropTypes.string,
+    menuBorderRadius: PropTypes.string
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      actions: []
+      actions: [],
+      menuColorSchema: "default",
+      menuBgStyle: "outline",
+      menuBorderRadius: undefined
     };
   },
   //@@viewOff:getDefaultProps
@@ -118,6 +128,7 @@ export const Block = createReactClass({
         disabled={item.disabled}
         tooltip={item.content}
         content={content}
+        colorSchema={item.colorSchema}
       />
     );
   },
@@ -134,7 +145,7 @@ export const Block = createReactClass({
           label: typeof item.content === "string" ? item.content : <UU5.Bricks.Lsi lsi={item.content} />,
           onClick: item.onClick,
           disabled: item.disabled
-        })
+        });
       }
     });
 
@@ -142,15 +153,16 @@ export const Block = createReactClass({
       buttons.push(
         <UU5.Bricks.Dropdown
           key="other"
-          bgStyle="outline"
           label={<UU5.Bricks.Icon icon="mdi-dots-vertical" />}
           className={this.getClassName("button")}
-          colorSchema="default"
+          colorSchema={this.props.menuColorSchema}
+          bgStyle={this.props.menuBgStyle}
+          borderRadius={this.props.menuBorderRadius}
           iconHidden
           items={dropdownItems}
           pullRight
         />
-      )
+      );
     }
 
     return buttons;
@@ -159,34 +171,34 @@ export const Block = createReactClass({
   _getChildren() {
     let children = this.getChildren();
 
-    if (this.props.actions.length) {
-      let firstRowIndex;
-      for (let i = 0; i < children.length; i++) {
-        if (children[i].type && children[i].type.tagName === TAG + "Row") {
-          firstRowIndex = i;
-          break;
+    if (children && typeof children.find === "function") {
+      if (this.props.actions.length) {
+        let firstRowIndex;
+        for (let i = 0; i < children.length; i++) {
+          if (children[i].type && children[i].type.tagName === TAG + "Row") {
+            firstRowIndex = i;
+            break;
+          }
         }
-      }
 
-      if (firstRowIndex !== undefined) {
-        let buttons;
+        if (firstRowIndex !== undefined) {
+          let buttons;
 
-        if (this.props.actions.length > 1) {
-          buttons = (
-            <div className={this.getClassName("buttons")}>
-              {this._getButtons(this.props.actions)}
+          if (this.props.actions.length > 1) {
+            buttons = <div className={this.getClassName("buttons")}>{this._getButtons(this.props.actions)}</div>;
+          } else {
+            buttons = this._getButton(this.props.actions[0]);
+          }
+
+          children.splice(
+            firstRowIndex,
+            1,
+            <div key="cover" className={this.getClassName("firstRow")}>
+              {children[firstRowIndex]}
+              {buttons}
             </div>
-          )
-        } else {
-          buttons = this._getButton(this.props.actions[0]);
+          );
         }
-
-        children.splice(firstRowIndex, 1, (
-          <div key="cover" className={this.getClassName("firstRow")}>
-            {children[firstRowIndex]}
-            {buttons}
-          </div>
-        ));
       }
     }
 
@@ -196,15 +208,12 @@ export const Block = createReactClass({
 
   //@@viewOn:render
   render() {
-    return (
-      this.getNestingLevel()
-        ? (
-          <div {...this.getMainAttrs()}>
-            {this._getChildren()}
-            {this.getDisabledCover()}
-          </div>
-        ) : null
-    );
+    return this.getNestingLevel() ? (
+      <div {...this.getMainAttrs()}>
+        {this._getChildren()}
+        {this.getDisabledCover()}
+      </div>
+    ) : null;
   }
   //@@viewOff:render
 });

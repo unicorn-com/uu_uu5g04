@@ -11,6 +11,7 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import React from "react";
 import PropTypes from "prop-types";
 import createReactClass from "create-react-class";
@@ -20,13 +21,11 @@ import ns from "./bricks-ns.js";
 import ScrollArea from "./scroll-area.js";
 
 import "./virtual-list.less";
+//@@viewOff:imports
 
 export const VirtualList = createReactClass({
   //@@viewOn:mixins
-  mixins: [
-    UU5.Common.BaseMixin,
-    UU5.Common.ElementaryMixin
-  ],
+  mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -37,7 +36,7 @@ export const VirtualList = createReactClass({
       content: ns.css("virtuallist-content"),
       scrollBox: ns.css("virtuallist-scrollbox"),
       renderBox: ns.css("virtuallist-renderbox"),
-      item: ns.css("virtuallist-item"),
+      item: ns.css("virtuallist-item")
     }
   },
   //@@viewOff:statics
@@ -100,7 +99,8 @@ export const VirtualList = createReactClass({
       }
     }, 100);
 
-    this._scrollbarWidth = UU5.Common.Tools.isChrome() && !UU5.Common.Tools.isMobileOrTablet ? 8 : UU5.Environment.getScrollBarWidth();
+    this._scrollbarWidth =
+      UU5.Common.Tools.isChrome() && !UU5.Common.Tools.isMobileOrTablet ? 8 : UU5.Environment.getScrollBarWidth();
   },
 
   componentWillUnmount() {
@@ -154,7 +154,7 @@ export const VirtualList = createReactClass({
   _getTableData() {
     let colCount = this.props.itemWidth ? Math.floor(this._getWidth() / this.props.itemWidth) : 1;
     let rowCount = this._getAllRows(colCount);
-    let scrollbar = rowCount * this.props.itemHeight > this.props.height
+    let scrollbar = rowCount * this.props.itemHeight > this.props.height;
     if (scrollbar) {
       // has scrollbar so we need to recalculate number of columns
       colCount = this.props.itemWidth ? Math.floor(this._getWidth(true) / this.props.itemWidth) : 1;
@@ -170,7 +170,12 @@ export const VirtualList = createReactClass({
   },
 
   _getWidth(excludeScrollbar) {
-    return this.state.width - this.props.boxPadding.right - this.props.boxPadding.left - (excludeScrollbar ? this._scrollbarWidth : 0);
+    return (
+      this.state.width -
+      this.props.boxPadding.right -
+      this.props.boxPadding.left -
+      (excludeScrollbar ? this._scrollbarWidth : 0)
+    );
   },
   //@@viewOff:private
 
@@ -200,9 +205,10 @@ export const VirtualList = createReactClass({
       let item;
 
       if (itemData !== undefined) {
-        item = typeof this.props.item === "function" ?
-          this.props.item({ data: itemData, loading: this.state.loading }, i) :
-          React.cloneElement(this.props.item, itemData);
+        item =
+          typeof this.props.item === "function"
+            ? this.props.item({ data: itemData, loading: this.state.loading }, i)
+            : React.cloneElement(this.props.item, itemData);
       }
 
       items.push(

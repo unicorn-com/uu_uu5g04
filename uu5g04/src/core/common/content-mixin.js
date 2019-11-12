@@ -1,42 +1,43 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import Tools, {REGEXP} from './tools.js';
-import Environment from '../environment/environment.js';
+import React from "react";
+import PropTypes from "prop-types";
+import Tools, { REGEXP } from "./tools.js";
+import Environment from "../environment/environment.js";
 import UU5String from "./uu5string/uu5-string.js";
 import { TextCorrectorContextConsumer } from "./text-corrector-context-consumer.js";
 
 export const ContentMixin = {
-
   //@@viewOn:statics
   statics: {
     "UU5.Common.ContentMixin": {
       requiredMixins: ["UU5.Common.BaseMixin"],
       defaults: {
-        standardMode: 'standard',
-        outlineMode: 'outline',
+        standardMode: "standard",
+        outlineMode: "outline",
         regexpUu5: /^\s*<(uu5json|uu5string|uu5data)\s*\/>/
       },
       errors: {
         unexpectedContentType: 'Type "%s" of content property is unexpected.',
-        dynamicOnly: 'Method %s can be used just for dynamic content.',
-        insertedchildIdNotExists: 'Child with ID %s does not exist.',
-        childIdNotExists: 'Child with ID %s does not exist.',
-        indexNotSet: 'In this case index has to be specified.',
-        addRenderedChildToIdList_IdDuplicity: 'There is duplicity ID %s in adding rendered child to the list of children by ID.',
-        addRenderedChildToNameList_IdDuplicity: 'There is Name duplicity in adding rendered child to the list children by Name.'
+        dynamicOnly: "Method %s can be used just for dynamic content.",
+        insertedchildIdNotExists: "Child with ID %s does not exist.",
+        childIdNotExists: "Child with ID %s does not exist.",
+        indexNotSet: "In this case index has to be specified.",
+        addRenderedChildToIdList_IdDuplicity:
+          "There is duplicity ID %s in adding rendered child to the list of children by ID.",
+        addRenderedChildToNameList_IdDuplicity:
+          "There is Name duplicity in adding rendered child to the list children by Name."
       }
     }
   },
@@ -87,7 +88,7 @@ export const ContentMixin = {
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     // initialize
     this.registerMixin("UU5.Common.ContentMixin");
@@ -127,7 +128,7 @@ export const ContentMixin = {
       }
     }
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   hasUU5CommonContentMixin() {
@@ -178,7 +179,7 @@ export const ContentMixin = {
 
       this.isDynamic() && (newChildProps.id = newChildProps.id || Tools.generateUUID());
 
-      if (typeof this.expandChildProps_ === 'function') {
+      if (typeof this.expandChildProps_ === "function") {
         let tempChild = React.cloneElement(prevChild, newChildProps);
         newChildProps = this.expandChildProps_(tempChild, childIndex);
       }
@@ -187,7 +188,7 @@ export const ContentMixin = {
     if (!prevChild.key) newChildProps.key = newChildProps.key || key;
 
     if (isUU5Child && !isStateless) {
-      newChildProps.ref = function (renderedChild) {
+      newChildProps.ref = function(renderedChild) {
         if (renderedChild) {
           let index = childIndex; // childIndex might be "old" if component is dynamic and multiple new children were added via API
           if (newChildProps.id && this.isDynamic() && this.state.children) {
@@ -208,14 +209,14 @@ export const ContentMixin = {
   buildChild(childTag, childProps, children) {
     if (childProps && childProps.href && childProps.href.match(/^javascript:/i)) {
       childProps = Tools.merge({}, childProps);
-      childProps.href = childProps.href.replace(REGEXP.jsCode, "")
+      childProps.href = childProps.href.replace(REGEXP.jsCode, "");
     }
     return Tools.findComponent(childTag, childProps, children);
   },
 
   cloneChild(child, props) {
     let clonedChild;
-    if (typeof this.expandChild_ === 'function') {
+    if (typeof this.expandChild_ === "function") {
       clonedChild = this.expandChild_(React.cloneElement(child, props), props.key);
     } else {
       clonedChild = this.expandChildDefault(React.cloneElement(child, props), props.key);
@@ -235,7 +236,7 @@ export const ContentMixin = {
         if (this.shouldChildRender(child)) {
           let newChild;
 
-          if (typeof child === 'object') {
+          if (typeof child === "object") {
             let newChildProps = childPropsExpander(child, i);
             newChild = this.cloneChild(child, newChildProps);
 
@@ -268,13 +269,11 @@ export const ContentMixin = {
     return newChildren;
   },
 
-  shouldChildRender: function (child) {
+  shouldChildRender: function(child) {
     let childTag = Tools.getChildTag(child);
-    let result = Environment.nestingLevelStrict
-      ? (childTag && !!childTag["UU5.Common.NestingLevelMixin"])
-      : true;
+    let result = Environment.nestingLevelStrict ? childTag && !!childTag["UU5.Common.NestingLevelMixin"] : true;
 
-    if (result && typeof this.shouldChildRender_ === 'function') {
+    if (result && typeof this.shouldChildRender_ === "function") {
       result = this.shouldChildRender_(child);
     }
     return result;
@@ -283,7 +282,7 @@ export const ContentMixin = {
   buildChildren(contentProps, childPropsExpander, childIndex) {
     let children = null;
 
-    if (typeof this.buildChildren_ === 'function') {
+    if (typeof this.buildChildren_ === "function") {
       children = this.buildChildren_(contentProps, childPropsExpander);
     } else {
       children = this.buildChildrenDefault(contentProps, childPropsExpander, childIndex);
@@ -301,25 +300,26 @@ export const ContentMixin = {
     let contentValue = contentProps.content;
     let contentType = this._getContentType(contentValue);
 
-    if (contentType === 'uu5json') {
+    if (contentType === "uu5json") {
       contentValue = Tools.parseFromUu5JSON(contentValue);
       contentType = this._getContentType(contentValue);
-    } else if (contentType === 'uu5data') {
+    } else if (contentType === "uu5data") {
       contentValue = Tools.parseFromUu5Data(contentValue);
       contentType = this._getContentType(contentValue);
     }
 
     switch (contentType) {
-      case 'bodyItem':
+      case "bodyItem":
         let bodyItemChild = this.buildChild(contentValue.tag, contentValue.props);
-        this.shouldChildRender(bodyItemChild) && (children = [this.cloneChild(bodyItemChild, childPropsExpander(bodyItemChild, childIndex))]);
+        this.shouldChildRender(bodyItemChild) &&
+          (children = [this.cloneChild(bodyItemChild, childPropsExpander(bodyItemChild, childIndex))]);
         break;
-      case 'array':
+      case "array":
         children = contentValue.map((bodyItem, i) => {
-          return this.buildChildren({ content: bodyItem }, childPropsExpander, i)
+          return this.buildChildren({ content: bodyItem }, childPropsExpander, i);
         });
         break;
-      case 'items':
+      case "items":
         let tag = Tools.checkTag(contentValue.tag, true);
         children = [];
         contentValue.propsArray.forEach((props, i) => {
@@ -328,43 +328,56 @@ export const ContentMixin = {
           this.shouldChildRender(child) && children.push(child);
         });
         break;
-      case 'string':
+      case "string":
         if (!this.__isTextCorrector(contentValue)) {
           this.shouldChildRender(contentValue) && (children = contentValue);
         } else {
           let child = (
-            <TextCorrectorContextConsumer parent={this} text={contentValue} {...this.__getTextCorrectorProps()} key={childIndex} />
+            <TextCorrectorContextConsumer
+              parent={this}
+              text={contentValue}
+              {...this.__getTextCorrectorProps()}
+              key={childIndex}
+            />
           );
-          this.shouldChildRender(child) && (children = child)
+          this.shouldChildRender(child) && (children = child);
         }
         break;
-      case 'number':
+      case "number":
         this.shouldChildRender(contentValue) && (children = contentValue);
         break;
-      case 'element': {
+      case "element": {
         let child = this.cloneChild(contentValue, childPropsExpander(contentValue, childIndex));
         this.shouldChildRender(child) && (children = child);
         break;
       }
-      case 'bool': {
-        let child = contentValue ? 'true' : 'false';
+      case "bool": {
+        let child = contentValue ? "true" : "false";
         this.shouldChildRender(child) && (children = child);
         break;
       }
-      case 'uu5string':
+      case "uu5string":
         let stringChildren;
         try {
           stringChildren = UU5String.toChildren(contentValue);
-        } catch(e) {
+        } catch (e) {
           if (e.code === "uu5StringInvalid") {
-            stringChildren = Tools.findComponent("UU5.Common.Error", null, <div>{e.message}<br />{contentValue}</div>);
+            stringChildren = Tools.findComponent(
+              "UU5.Common.Error",
+              null,
+              <div>
+                {e.message}
+                <br />
+                {contentValue}
+              </div>
+            );
           } else {
             throw e;
           }
         }
         children = this.buildNodeChildren(stringChildren, childPropsExpander);
         break;
-      case 'children':
+      case "children":
       default:
         if (contentProps.children) {
           children = this.buildNodeChildren(contentProps.children, childPropsExpander);
@@ -388,7 +401,7 @@ export const ContentMixin = {
 
   getRenderedChildren() {
     let result;
-    if (typeof this.getRenderedChildren_ === 'function') {
+    if (typeof this.getRenderedChildren_ === "function") {
       result = this.getRenderedChildren_();
     } else {
       result = this.getRenderedChildrenDefault();
@@ -407,7 +420,7 @@ export const ContentMixin = {
 
   addRenderedChild(renderedChild, index) {
     if (index === undefined || index === null) {
-      this.showError('indexNotSet', null, {
+      this.showError("indexNotSet", null, {
         mixinName: "UU5.Common.ContentMixin",
         context: {
           index: index,
@@ -431,7 +444,7 @@ export const ContentMixin = {
 
   getRenderedChildrenIdList() {
     let result;
-    if (typeof this.getRenderedChildrenIdList_ === 'function') {
+    if (typeof this.getRenderedChildrenIdList_ === "function") {
       result = this.getRenderedChildrenIdList_();
     } else {
       result = this.getRenderedChildrenIdListDefault();
@@ -453,7 +466,7 @@ export const ContentMixin = {
     if (!this.getRenderedChildById(id)) {
       this.getRenderedChildrenIdList()[id] = renderedChild;
     } else if (this.getRenderedChildById(id) !== renderedChild) {
-      this.showError('addRenderedChildToIdList_IdDuplicity', id, {
+      this.showError("addRenderedChildToIdList_IdDuplicity", id, {
         mixinName: "UU5.Common.ContentMixin",
         context: {
           renderedChildrenIdList: this.getRenderedChildrenIdList(),
@@ -475,7 +488,7 @@ export const ContentMixin = {
 
   getRenderedChildrenNameList() {
     let result;
-    if (typeof this.getRenderedChildrenNameList_ === 'function') {
+    if (typeof this.getRenderedChildrenNameList_ === "function") {
       result = this.getRenderedChildrenNameList_();
     } else {
       result = this.getRenderedChildrenNameListDefault();
@@ -496,10 +509,14 @@ export const ContentMixin = {
     var name = renderedChild.getName();
     if (name) {
       var nameList = this.getRenderedChildrenNameList();
-      if (!nameList[name] || nameList[name].map(function (rChild) {
-        return rChild.getId();
-      }).indexOf(renderedChild.getId()) === -1) {
-
+      if (
+        !nameList[name] ||
+        nameList[name]
+          .map(function(rChild) {
+            return rChild.getId();
+          })
+          .indexOf(renderedChild.getId()) === -1
+      ) {
         nameList[name] = nameList[name] || [];
         nameList[name].push(renderedChild);
       }
@@ -510,9 +527,11 @@ export const ContentMixin = {
   removeRenderedChildFromNameList(renderedChild) {
     var nameChildren = this.getRenderedChildrenByName(renderedChild.getName());
     if (nameChildren) {
-      var childIndex = nameChildren.map(function (rChild) {
-        return rChild.getId();
-      }).indexOf(renderedChild.getId());
+      var childIndex = nameChildren
+        .map(function(rChild) {
+          return rChild.getId();
+        })
+        .indexOf(renderedChild.getId());
 
       childIndex > -1 && nameChildren.splice(childIndex, 1);
     }
@@ -522,7 +541,7 @@ export const ContentMixin = {
   getChildIndexById(childId) {
     var childIndex;
 
-    if (typeof this.getChildIndexById_ === 'function') {
+    if (typeof this.getChildIndexById_ === "function") {
       childIndex = this.getChildIndexById_(childId);
     } else {
       childIndex = this.getChildIndexByIdDefault(childId);
@@ -535,9 +554,13 @@ export const ContentMixin = {
     var childIndex;
     var children = this.getRenderedChildren();
 
-    var index = childId && children.map((child) => {
-      return child.getId() === childId;
-    }).indexOf(true);
+    var index =
+      childId &&
+      children
+        .map(child => {
+          return child.getId() === childId;
+        })
+        .indexOf(true);
 
     childIndex = index === -1 ? null : index;
 
@@ -547,7 +570,7 @@ export const ContentMixin = {
   getRenderedChildById(childId) {
     var renderedChild;
 
-    if (typeof this.getRenderedChildById_ === 'function') {
+    if (typeof this.getRenderedChildById_ === "function") {
       renderedChild = this.getRenderedChildById_(childId);
     } else {
       renderedChild = this.getRenderedChildByIdDefault(childId);
@@ -567,7 +590,7 @@ export const ContentMixin = {
   getRenderedChildByName(childName) {
     var renderedChild;
 
-    if (typeof this.getRenderedChildByName_ === 'function') {
+    if (typeof this.getRenderedChildByName_ === "function") {
       renderedChild = this.getRenderedChildByName_(childName);
     } else {
       renderedChild = this.getRenderedChildByNameDefault(childName);
@@ -586,7 +609,7 @@ export const ContentMixin = {
   getRenderedChildByIndex(index) {
     var renderedChild;
 
-    if (typeof this.getRenderedChildByIndex_ === 'function') {
+    if (typeof this.getRenderedChildByIndex_ === "function") {
       renderedChild = this.getRenderedChildByIndex_(index);
     } else {
       renderedChild = this.getRenderedChildByIndexDefault(index);
@@ -602,7 +625,7 @@ export const ContentMixin = {
   getRenderedChildByTagName(tagName) {
     var foundChild = null;
 
-    if (typeof this.getRenderedChildByTagName_ === 'function') {
+    if (typeof this.getRenderedChildByTagName_ === "function") {
       foundChild = this.getRenderedChildByTagName_(tagName);
     } else {
       foundChild = this.getRenderedChildByTagNameDefault(tagName);
@@ -614,7 +637,7 @@ export const ContentMixin = {
   getRenderedChildByTagNameDefault(tagName) {
     var foundChild;
 
-    this.eachRenderedChild((renderedChild) => {
+    this.eachRenderedChild(renderedChild => {
       var condition = renderedChild.getTagName() === tagName;
       condition && (foundChild = renderedChild);
       return !condition; // false <=> end of cycle
@@ -626,7 +649,7 @@ export const ContentMixin = {
   getFirstRenderedChild() {
     var renderedChild = null;
 
-    if (typeof this.getFirstRenderedChild_ === 'function') {
+    if (typeof this.getFirstRenderedChild_ === "function") {
       renderedChild = this.getFirstRenderedChild_();
     } else {
       renderedChild = this.getFirstRenderedChildDefault();
@@ -642,7 +665,7 @@ export const ContentMixin = {
   getLastRenderedChild() {
     var renderedChild = null;
 
-    if (typeof this.getLastRenderedChild_ === 'function') {
+    if (typeof this.getLastRenderedChild_ === "function") {
       renderedChild = this.getLastRenderedChild_();
     } else {
       renderedChild = this.getLastRenderedChildDefault();
@@ -657,7 +680,7 @@ export const ContentMixin = {
 
   eachRenderedChild(callback) {
     // function callbackFunction( renderedChild, renderedChildIndex );
-    if (typeof this.eachRenderedChild_ === 'function') {
+    if (typeof this.eachRenderedChild_ === "function") {
       this.eachRenderedChild_(callback);
     } else {
       this.eachRenderedChildDefault(callback);
@@ -670,7 +693,7 @@ export const ContentMixin = {
 
     // same as: for(var i = 0; i < renderedChildren.length; i++) {
     //          var renderedChild = renderedChildren[i];
-    for (var i = 0, renderedChild; renderedChild = renderedChildren[i]; ++i) {
+    for (var i = 0, renderedChild; (renderedChild = renderedChildren[i]); ++i) {
       var result = callback(renderedChild, i);
       if (result === false) {
         break;
@@ -703,13 +726,13 @@ export const ContentMixin = {
     let props = args.shift() || this.props;
 
     if (props.dynamic) {
-      if (typeof this.setChildren_ === 'function') {
+      if (typeof this.setChildren_ === "function") {
         this.setChildren_(newChildren, setStateCallback);
       } else {
         this.setChildrenDefault(newChildren, setStateCallback);
       }
     } else {
-      this.showError('dynamicOnly', 'setChildren', {
+      this.showError("dynamicOnly", "setChildren", {
         mixinName: "UU5.Common.ContentMixin"
       });
     }
@@ -744,13 +767,13 @@ export const ContentMixin = {
      }
      */
     if (this.isDynamic()) {
-      if (typeof this.insertChild_ === 'function') {
+      if (typeof this.insertChild_ === "function") {
         this.insertChild_(child, opt);
       } else {
         this.insertChildDefault(child, opt);
       }
     } else {
-      this.showError('dynamicOnly', 'insertChild', {
+      this.showError("dynamicOnly", "insertChild", {
         mixinName: "UU5.Common.ContentMixin"
       });
     }
@@ -784,9 +807,11 @@ export const ContentMixin = {
               // NOTE We cannot use rendered children because their "index" might be already bad
               // (e.g. if user called insertChild successively multiple times without re-rendering
               // in-between).
-              let relativeChildIndex = children.map(child => child && child.props && child.props.id).indexOf(relativeChildId);
+              let relativeChildIndex = children
+                .map(child => child && child.props && child.props.id)
+                .indexOf(relativeChildId);
               if (relativeChildIndex === -1) {
-                this.showError('insertedchildIdNotExists', relativeChildId, {
+                this.showError("insertedchildIdNotExists", relativeChildId, {
                   mixinName: "UU5.Common.ContentMixin"
                 });
                 doNothing = true;
@@ -797,7 +822,7 @@ export const ContentMixin = {
             let result = null;
             if (!doNothing) {
               if (usedPosition == null) usedPosition = opt.position;
-              if (typeof usedPosition !== 'number') usedPosition = children.length;
+              if (typeof usedPosition !== "number") usedPosition = children.length;
               else usedPosition = Math.max(0, Math.min(usedPosition, children.length));
 
               newChild = this.cloneChild(newChild, this.expandChildProps(newChild, usedPosition));
@@ -807,9 +832,11 @@ export const ContentMixin = {
 
             return result;
           },
-          typeof opt.setStateCallback === 'function' ? () => {
-            opt.setStateCallback(this.getRenderedChildById(newChild.props.id));
-          } : null
+          typeof opt.setStateCallback === "function"
+            ? () => {
+                opt.setStateCallback(this.getRenderedChildById(newChild.props.id));
+              }
+            : null
         );
       }
     }
@@ -832,13 +859,13 @@ export const ContentMixin = {
    */
   insertChildBefore(child, opt) {
     if (this.isDynamic()) {
-      if (typeof this.insertChildBefore_ === 'function') {
+      if (typeof this.insertChildBefore_ === "function") {
         this.insertChildBefore_(child, opt);
       } else {
         this.insertChildBeforeDefault(child, opt);
       }
     } else {
-      this.showError('dynamicOnly', 'insertChildBefore', {
+      this.showError("dynamicOnly", "insertChildBefore", {
         mixinName: "UU5.Common.ContentMixin"
       });
     }
@@ -847,7 +874,7 @@ export const ContentMixin = {
   },
 
   insertChildBeforeDefault(child, opt) {
-    if (typeof this.insertChild_ === 'function') {
+    if (typeof this.insertChild_ === "function") {
       // TODO This whole if-branch is for backward compatibility for components having
       // "insertChild_", i.e. we compute position of new child right away (from possibly
       // stale children). Do differently in next major version.
@@ -862,7 +889,7 @@ export const ContentMixin = {
       }
 
       if (childIndex === null) {
-        this.showError('insertedchildIdNotExists', opt.childAfterId, {
+        this.showError("insertedchildIdNotExists", opt.childAfterId, {
           mixinName: "UU5.Common.ContentMixin"
         });
       } else {
@@ -894,13 +921,13 @@ export const ContentMixin = {
    */
   insertChildAfter(child, opt) {
     if (this.isDynamic()) {
-      if (typeof this.insertChildAfter_ === 'function') {
+      if (typeof this.insertChildAfter_ === "function") {
         this.insertChildAfter_(child, opt);
       } else {
         this.insertChildAfterDefault(child, opt);
       }
     } else {
-      this.showError('dynamicOnly', 'insertChildAfter', {
+      this.showError("dynamicOnly", "insertChildAfter", {
         mixinName: "UU5.Common.ContentMixin"
       });
     }
@@ -909,7 +936,7 @@ export const ContentMixin = {
   },
 
   insertChildAfterDefault(child, opt) {
-    if (typeof this.insertChild_ === 'function') {
+    if (typeof this.insertChild_ === "function") {
       // TODO This whole if-branch is for backward compatibility for components having
       // "insertChild_", i.e. we compute position of new child right away (from possibly
       // stale children). Do differently in next major version.
@@ -924,7 +951,7 @@ export const ContentMixin = {
       }
 
       if (opt.childBeforeId && opt.position === undefined) {
-        this.showError('insertedchildIdNotExists', opt.childBeforeId, {
+        this.showError("insertedchildIdNotExists", opt.childBeforeId, {
           mixinName: "UU5.Common.ContentMixin"
         });
       } else {
@@ -958,13 +985,13 @@ export const ContentMixin = {
    */
   updateChild(childId, newProps, opt) {
     if (this.isDynamic()) {
-      if (typeof this.updateChild_ === 'function') {
+      if (typeof this.updateChild_ === "function") {
         this.updateChild_(childId, newProps, opt);
       } else {
         this.updateChildDefault(childId, newProps, opt);
       }
     } else {
-      this.showError('dynamicOnly', 'updateChild', {
+      this.showError("dynamicOnly", "updateChild", {
         mixinName: "UU5.Common.ContentMixin"
       });
     }
@@ -982,7 +1009,7 @@ export const ContentMixin = {
 
         let result = null;
         if (childIndex === -1) {
-          this.showError('childIdNotExists', 'updateChild', {
+          this.showError("childIdNotExists", "updateChild", {
             mixinName: "UU5.Common.ContentMixin"
           });
         } else {
@@ -1014,13 +1041,13 @@ export const ContentMixin = {
    */
   replaceChild(childId, child, opt) {
     if (this.isDynamic()) {
-      if (typeof this.replaceChild_ === 'function') {
+      if (typeof this.replaceChild_ === "function") {
         this.replaceChild_(childId, child, opt);
       } else {
         this.replaceChildDefault(childId, child, opt);
       }
     } else {
-      this.showError('dynamicOnly', 'replaceChild', {
+      this.showError("dynamicOnly", "replaceChild", {
         mixinName: "UU5.Common.ContentMixin"
       });
     }
@@ -1040,7 +1067,7 @@ export const ContentMixin = {
 
           let result = null;
           if (childIndex === -1) {
-            this.showError('childIdNotExists', 'replaceChild', {
+            this.showError("childIdNotExists", "replaceChild", {
               mixinName: "UU5.Common.ContentMixin"
             });
           } else {
@@ -1071,13 +1098,13 @@ export const ContentMixin = {
    */
   deleteChild(childId, opt) {
     if (this.isDynamic()) {
-      if (typeof this.deleteChild_ === 'function') {
+      if (typeof this.deleteChild_ === "function") {
         this.deleteChild_(childId, opt);
       } else {
         this.deleteChildDefault(childId, opt);
       }
     } else {
-      this.showError('dynamicOnly', 'deleteChild', {
+      this.showError("dynamicOnly", "deleteChild", {
         mixinName: "UU5.Common.ContentMixin"
       });
     }
@@ -1095,7 +1122,7 @@ export const ContentMixin = {
 
         let result = null;
         if (childIndex === -1) {
-          this.showError('childIdNotExists', 'deleteChild', {
+          this.showError("childIdNotExists", "deleteChild", {
             mixinName: "UU5.Common.ContentMixin"
           });
         } else {
@@ -1122,13 +1149,13 @@ export const ContentMixin = {
    */
   clearChildren(opt) {
     if (this.isDynamic()) {
-      if (typeof this.clearChildren_ === 'function') {
+      if (typeof this.clearChildren_ === "function") {
         this.clearChildren_(opt);
       } else {
         this.clearChildrenDefault(opt);
       }
     } else {
-      this.showError('dynamicOnly', 'clearChildren', {
+      this.showError("dynamicOnly", "clearChildren", {
         mixinName: "UU5.Common.ContentMixin"
       });
     }
@@ -1163,19 +1190,29 @@ export const ContentMixin = {
   },
 
   setFilterAndSorter(filter, sorter, setStateCallback) {
-    this.setState({
-      filter: filter, filteredProps: this._getFilteredChildrenProps(filter),
-      sorter: sorter, sortedIds: this._getSortedChildIds(sorter)
-    }, setStateCallback);
+    this.setState(
+      {
+        filter: filter,
+        filteredProps: this._getFilteredChildrenProps(filter),
+        sorter: sorter,
+        sortedIds: this._getSortedChildIds(sorter)
+      },
+      setStateCallback
+    );
 
     return this;
   },
 
   resetFilterAndSorter(setStateCallback) {
-    this.setState({
-      filter: null, filteredProps: null,
-      sorter: null, sortedIds: null
-    }, setStateCallback);
+    this.setState(
+      {
+        filter: null,
+        filteredProps: null,
+        sorter: null,
+        sortedIds: null
+      },
+      setStateCallback
+    );
 
     return this;
   },
@@ -1188,7 +1225,7 @@ export const ContentMixin = {
 
     if (children) {
       children = Array.isArray(children) ? children : [children];
-      children.forEach((child) => {
+      children.forEach(child => {
         if (child) {
           var childId = child.props && child.props.id;
           var index = container.state.sortedIds && container.state.sortedIds.indexOf(childId);
@@ -1197,9 +1234,11 @@ export const ContentMixin = {
             var newProps = container.state.filteredProps && container.state.filteredProps[childId];
 
             if (!container.state.filteredProps || newProps) {
-              newProps && Object.keys(newProps).length !== 0 && (child = React.cloneElement(child, Tools.mergeDeep({}, child.props, newProps)));
+              newProps &&
+                Object.keys(newProps).length !== 0 &&
+                (child = React.cloneElement(child, Tools.mergeDeep({}, child.props, newProps)));
 
-              if (typeof index === 'number') {
+              if (typeof index === "number") {
                 newChildren[index] = child;
               } else {
                 newChildren.push(child);
@@ -1216,53 +1255,53 @@ export const ContentMixin = {
   // Mode
   setStandardMode(setStateCallback) {
     this.showWarning('The property "mode" is deprecated!');
-    this.setState({ mode: this.getDefault('standardMode', "UU5.Common.ContentMixin") }, setStateCallback);
+    this.setState({ mode: this.getDefault("standardMode", "UU5.Common.ContentMixin") }, setStateCallback);
     return this;
   },
 
   setOutlineMode(setStateCallback) {
     this.showWarning('The property "mode" is deprecated!');
-    this.setState({ mode: this.getDefault('outlineMode', "UU5.Common.ContentMixin") }, setStateCallback);
+    this.setState({ mode: this.getDefault("outlineMode", "UU5.Common.ContentMixin") }, setStateCallback);
     return this;
   },
 
   getMode() {
-    return this.state.mode || this.getDefault('standardMode', "UU5.Common.ContentMixin");
+    return this.state.mode || this.getDefault("standardMode", "UU5.Common.ContentMixin");
   },
 
   isStandardMode() {
-    return this.getMode() === this.getDefault('standardMode', "UU5.Common.ContentMixin");
+    return this.getMode() === this.getDefault("standardMode", "UU5.Common.ContentMixin");
   },
 
   isOutlineMode() {
-    return this.getMode() === this.getDefault('outlineMode', "UU5.Common.ContentMixin");
+    return this.getMode() === this.getDefault("outlineMode", "UU5.Common.ContentMixin");
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _getContentType(content) {
     let type = null; // one of ['children','uu5json','uu5string','uu5data','string','number','array','items','bodyItem','element','bool']
 
     if (content === undefined || content === null) {
       // children
-      type = 'children';
-    } else if (typeof content === 'string') {
-      let match = this.getDefault('regexpUu5', "UU5.Common.ContentMixin").exec(content);
-      type = (match) ? match[1] : 'string';
-    } else if (typeof content === 'number') {
-      type = 'number';
-    } else if (typeof content === 'boolean') {
-      type = 'bool';
+      type = "children";
+    } else if (typeof content === "string") {
+      let match = this.getDefault("regexpUu5", "UU5.Common.ContentMixin").exec(content);
+      type = match ? match[1] : "string";
+    } else if (typeof content === "number") {
+      type = "number";
+    } else if (typeof content === "boolean") {
+      type = "bool";
     } else if (Array.isArray(content)) {
-      type = 'array';
-    } else if (content && typeof content === 'object') {
+      type = "array";
+    } else if (content && typeof content === "object") {
       // bodyItem, items or node
-      type = content.tag ? content.propsArray ? 'items' : 'bodyItem' : 'element';
+      type = content.tag ? (content.propsArray ? "items" : "bodyItem") : "element";
     } else {
-      this.showError('unexpectedContentType', typeof content, {
+      this.showError("unexpectedContentType", typeof content, {
         mixinName: "UU5.Common.ContentMixin",
         context: {
           content: content
@@ -1291,13 +1330,13 @@ export const ContentMixin = {
 
   _getSortedChildIds(sorter) {
     let sortedChildren = this.getRenderedChildren().sort(sorter);
-    return sortedChildren.map((renderedChild) => {
+    return sortedChildren.map(renderedChild => {
       return renderedChild.getId();
     });
   },
 
   _setChildrenInTransaction(getNewChildrenStateFn, setStateCallback) {
-    if (typeof this.setChildren_ === 'function') {
+    if (typeof this.setChildren_ === "function") {
       let newState = getNewChildrenStateFn(this.state);
       if (newState) this.setChildren_(newState.children, setStateCallback);
     } else {
@@ -1309,10 +1348,10 @@ export const ContentMixin = {
     var children = null;
 
     switch (this._getUU5CommonContentMixinMode(state)) {
-      case this.getDefault('standardMode', "UU5.Common.ContentMixin"):
+      case this.getDefault("standardMode", "UU5.Common.ContentMixin"):
         children = this._getUU5CommonContentMixinStandardChildren(state);
         break;
-      case this.getDefault('outlineMode', "UU5.Common.ContentMixin"):
+      case this.getDefault("outlineMode", "UU5.Common.ContentMixin"):
         children = this._getUU5CommonContentMixinOutlineChildren(state);
         break;
     }
@@ -1326,7 +1365,7 @@ export const ContentMixin = {
     return this.isDynamic() ? state.children : this.buildChildren();
   },
   _getUU5CommonContentMixinOutlineChildren(state) {
-    return Tools.findComponent('UU5.Common.Outline', { element: this, key: 0 });
+    return Tools.findComponent("UU5.Common.Outline", { element: this, key: 0 });
   },
 
   __isTextCorrector(value) {
@@ -1350,7 +1389,7 @@ export const ContentMixin = {
       language: this.props.language
     };
   }
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 };
 
 export default ContentMixin;

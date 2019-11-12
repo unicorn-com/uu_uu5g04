@@ -31,6 +31,8 @@ Array [
     noIndex={false}
     offset={0}
     onClick={null}
+    onCtrlClick={null}
+    onWheelClick={null}
     parent={null}
     pressed={false}
     pureRender={false}
@@ -332,6 +334,8 @@ Array [
     noIndex={false}
     offset={0}
     onClick={null}
+    onCtrlClick={null}
+    onWheelClick={null}
     parent={null}
     pressed={false}
     pureRender={false}
@@ -361,6 +365,7 @@ Array [
     hidden={false}
     id={null}
     ignoreInnerHTML={false}
+    increaseLevel={false}
     level={null}
     mainAttrs={null}
     name={null}

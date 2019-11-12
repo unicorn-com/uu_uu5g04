@@ -19,7 +19,9 @@ const CONFIG = {
   mixins: ["UU5.Common.BaseMixin"],
   props: {
     value: {
-      values: ["https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksQRCode"]
+      values: [
+        "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksQRCode"
+      ]
     }
   },
   requiredProps: {},

@@ -36,8 +36,8 @@ function buildChildren(children) {
         if (Array.isArray(children)) {
           result = children.map(child => buildChildren(child));
         } else {
-          result = ((children.tag && children.props) || children.propsArray) ?
-            <UU5.Bricks.Span content={children} /> : children;
+          result =
+            (children.tag && children.props) || children.propsArray ? <UU5.Bricks.Span content={children} /> : children;
         }
         break;
       default:
@@ -117,8 +117,11 @@ export const ContextHeader = UU5.Common.VisualComponent.create({
           <UU5.Common.Fragment>
             {buildChildren(this.props.content || this.props.children)}
             {this.props.info && (
-              <UU5.Bricks.Icon icon={this.props.icon} mainAttrs={{ onClick: () => this._getOnClickFunction(getForm) }}
-                               className={this.constructor.classNames.icon()} />
+              <UU5.Bricks.Icon
+                icon={this.props.icon}
+                mainAttrs={{ onClick: () => this._getOnClickFunction(getForm) }}
+                className={this.constructor.classNames.icon()}
+              />
             )}
           </UU5.Common.Fragment>
         )}

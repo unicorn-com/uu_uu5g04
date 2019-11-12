@@ -78,22 +78,48 @@ const CONFIG = {
             activeIcon: "mdi-check",
             icon: "mdi-phone"
           }
-        ]
+        ],
+        [
+          {
+            icon: "mdi-settings",
+            content: "Settings",
+            active: true,
+            colorSchema: "primary"
+          }
+        ],
+        [{ icon: "mdi-email", content: "Send E-mail" }, { icon: "mdi-settings", content: "Settings" }]
       ]
     }
   },
   requiredProps: {
     onClick: () => "TODO",
-    children: (
-      <UU5.BlockLayout.Row>
-        Test
-      </UU5.BlockLayout.Row>
-    )
+    children: <UU5.BlockLayout.Row>Test</UU5.BlockLayout.Row>
   },
-  opt: {
-  }
+  opt: {}
 };
 
 describe(`UU5.BlockLayout.Block props testing`, () => {
   UU5.Test.Tools.testProperties(UU5.BlockLayout.Block, CONFIG);
+
+  it(`UU5.BlockLayout.Block menuBgStyle, menuColorSchema, menuBorderRadius`, () => {
+    const wrapper = shallow(
+      <UU5.BlockLayout.Block
+        menuColorSchema="success"
+        menuBgStyle="filled"
+        menuBorderRadius="8px"
+        actions={[
+          {
+            icon: "mdi-settings",
+            content: "Settings",
+            active: true,
+            colorSchema: "primary"
+          },
+          { icon: "mdi-email", content: "Send E-mail" },
+          { icon: "mdi-settings", content: "Settings" }
+        ]}
+      />
+    );
+
+    expect(wrapper).toMatchSnapshot();
+  });
 });

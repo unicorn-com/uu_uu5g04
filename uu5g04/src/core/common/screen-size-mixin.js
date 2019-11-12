@@ -1,27 +1,26 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import Tools from './tools.js';
+import React from "react";
+import Tools from "./tools.js";
 
 export const ScreenSizeMixin = {
-
   //@@viewOn:statics
   statics: {
     "UU5.Common.ScreenSizeMixin": {
       requiredMixins: ["UU5.Common.BaseMixin"],
       defaults: {
-        screenSizeEvent: 'UU5_Common_screenSize'
+        screenSizeEvent: "UU5_Common_screenSize"
       }
     }
   },
@@ -33,7 +32,7 @@ export const ScreenSizeMixin = {
   //@@viewOn:getDefaultProps
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     // initialize
     this.registerMixin("UU5.Common.ScreenSizeMixin");
@@ -50,7 +49,7 @@ export const ScreenSizeMixin = {
   componentWillUnmount() {
     window.UU5.Environment.EventListener.unregisterScreenSize(this.getId(), this._onChangeScreenSize);
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   hasUU5CommonScreenSizeMixinProps() {
@@ -72,23 +71,23 @@ export const ScreenSizeMixin = {
   },
 
   isXs() {
-    return this.getScreenSize() === 'xs';
+    return this.getScreenSize() === "xs";
   },
 
   isS() {
-    return this.getScreenSize() === 's';
+    return this.getScreenSize() === "s";
   },
 
   isM() {
-    return this.getScreenSize() === 'm';
+    return this.getScreenSize() === "m";
   },
 
   isL() {
-    return this.getScreenSize() === 'l';
+    return this.getScreenSize() === "l";
   },
 
   isXl() {
-    return this.getScreenSize() === 'xl';
+    return this.getScreenSize() === "xl";
   },
 
   onChangeScreenSizeDefault(e, actualScreenSize) {
@@ -97,19 +96,19 @@ export const ScreenSizeMixin = {
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _onChangeScreenSize(e, actualScreenSize) {
-    if (typeof this.onChangeScreenSize_ === 'function') {
+    if (typeof this.onChangeScreenSize_ === "function") {
       this.onChangeScreenSize_(actualScreenSize, e);
     } else {
       this.onChangeScreenSizeDefault(e, actualScreenSize);
     }
     return this;
   }
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 };
 
 export default ScreenSizeMixin;

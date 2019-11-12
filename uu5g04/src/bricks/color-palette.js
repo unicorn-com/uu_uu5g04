@@ -11,12 +11,14 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import React from "react";
 import createReactClass from "create-react-class";
 import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Css from "./internal/css.js";
+//@@viewOff:imports
 
 // styles
 const colorButton = () =>
@@ -166,7 +168,7 @@ export const ColorPalette = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     return this._getColorState(this.props.color);
   },
@@ -174,7 +176,7 @@ export const ColorPalette = createReactClass({
   componentWillReceiveProps(nextProps) {
     this.setState(this._getColorState(nextProps.color));
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   getColor() {
@@ -182,10 +184,10 @@ export const ColorPalette = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _getColorState(color, modifiedFormat) {
     if (!color) return { colorSchema: null, color: null };
 
@@ -317,22 +319,24 @@ export const ColorPalette = createReactClass({
     return (
       <div className={this.getClassName("advancedColorMain")} key="advanced-color-palette">
         {shades.map(shade => {
-          return colors.filter(colorSchema => colorSchema !== "grey").map(colorSchema => {
-            const colorCode = this._getColorCode(colorSchema, shade);
-            return (
-              <div
-                // eslint-disable-next-line react/jsx-no-bind
-                onClick={() => this._onColorClick(colorCode, colorSchema)}
-                key={`color_${colorSchema}_${shade}`}
-                className={`${this.getClassName("colorButton")} ${this._styleColorButton(colorCode.toUpperCase())}`}
-              />
-            );
-          });
+          return colors
+            .filter(colorSchema => colorSchema !== "grey")
+            .map(colorSchema => {
+              const colorCode = this._getColorCode(colorSchema, shade);
+              return (
+                <div
+                  // eslint-disable-next-line react/jsx-no-bind
+                  onClick={() => this._onColorClick(colorCode, colorSchema)}
+                  key={`color_${colorSchema}_${shade}`}
+                  className={`${this.getClassName("colorButton")} ${this._styleColorButton(colorCode.toUpperCase())}`}
+                />
+              );
+            });
         })}
       </div>
     );
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render: function() {

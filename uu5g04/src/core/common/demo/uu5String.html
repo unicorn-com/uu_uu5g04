@@ -44,7 +44,7 @@
       var Page = createReactClass({
         mixins: [UU5.Common.BaseMixin],
 
-        //@@viewOn:standardComponentLifeCycle
+        //@@viewOn:reactLifeCycle
         getInitialState(){
           this._uu5stringValue = defaultUU5String;
           return {
@@ -61,9 +61,9 @@
         componentDidCatch(error, info){
           this.setState({error: true, errorMessage: error.message, errorStack: error.stack});
         },
-        //@@viewOff:standardComponentLifeCycle
+        //@@viewOff:reactLifeCycle
 
-        //@@viewOn:componentSpecificHelpers
+        //@@viewOn:private
         // set initial data to editors
         _onUU5StringEditorLoad(editor){
           console.log("uu5string editor loaded");
@@ -172,7 +172,7 @@
             });
           }
         },
-        //@@viewOn:componentSpecificHelpers
+        //@@viewOn:private
 
         //@@viewOn:render
         render(){

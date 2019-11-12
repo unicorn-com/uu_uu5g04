@@ -11,52 +11,50 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import createReactClass from "create-react-class";
 import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-forms";
+//@@viewOff:imports
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MixinPropsFunction = createReactClass({
-
-  mixins: [
-    UU5.Common.BaseMixin,
-  ],
+  mixins: [UU5.Common.BaseMixin],
 
   getInitialState: () => {
     return {
       isCalled: false,
-      value: '',
-      message: '',
-      feedback: 'initial'
+      value: "",
+      message: "",
+      feedback: "initial"
     };
   },
   onChangeHandler(event) {
     alert("onChange event has been called.");
-    this.setState({isCalled: true});
-    this.setState({value: event.target.value})
-    this.setState({message: 'Is valid.'})
-    this.setState({feedback: 'success'})
+    this.setState({ isCalled: true });
+    this.setState({ value: event.target.value });
+    this.setState({ message: "Is valid." });
+    this.setState({ feedback: "success" });
   },
 
   onValidateHandler(event) {
     alert("onValidate event has been called.");
-    this.setState({isCalled: true});
-    this.setState({value: event.target.value})
-    this.setState({message: 'Is valid.'})
-    this.setState({feedback: 'success'})
+    this.setState({ isCalled: true });
+    this.setState({ value: event.target.value });
+    this.setState({ message: "Is valid." });
+    this.setState({ feedback: "success" });
   },
 
   onChangeFeedbackHandler(event) {
     alert("onChangeFeedback event has been called.");
-    this.setState({isCalled: true});
-    this.setState({value: event.target.value})
-    this.setState({message: 'Is valid.'})
-    this.setState({feedback: 'success'})
+    this.setState({ isCalled: true });
+    this.setState({ value: event.target.value });
+    this.setState({ message: "Is valid." });
+    this.setState({ feedback: "success" });
   },
-
 
   render() {
     return (
@@ -104,18 +102,17 @@ const CONFIG = {
 };
 
 describe(`UU5.Forms.IconPicker props function -> InputMixin`, () => {
-
-  it('onChange()', () => {
+  it("onChange()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<MixinPropsFunction/>);
+    const wrapper = shallow(<MixinPropsFunction />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.isCalled).toBeFalsy();
     expect(wrapper.instance().state.value).toEqual("");
     expect(wrapper.instance().state.message).toEqual("");
     expect(wrapper.instance().state.feedback).toMatch(/initial/);
-    wrapper.simulate('change', {target: {value: "Testing react in jest"}});
+    wrapper.simulate("change", { target: { value: "Testing react in jest" } });
     expect(window.alert).toBeCalled();
-    expect(window.alert).toHaveBeenCalledWith('onChange event has been called.');
+    expect(window.alert).toHaveBeenCalledWith("onChange event has been called.");
     expect(window.alert.mock.calls[0][0]).toEqual("onChange event has been called.");
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(wrapper.instance().state.value).toEqual("Testing react in jest");
@@ -131,17 +128,17 @@ describe(`UU5.Forms.IconPicker props function -> InputMixin`, () => {
     expect(callback).toBeCalled();
   });
 
-  it('onValidate()', () => {
+  it("onValidate()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<MixinPropsFunction/>);
+    const wrapper = shallow(<MixinPropsFunction />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.isCalled).toBeFalsy();
     expect(wrapper.instance().state.value).toEqual("");
     expect(wrapper.instance().state.message).toEqual("");
     expect(wrapper.instance().state.feedback).toMatch(/initial/);
-    wrapper.simulate('validate', {target: {value: "Testing react in jest"}});
+    wrapper.simulate("validate", { target: { value: "Testing react in jest" } });
     expect(window.alert).toBeCalled();
-    expect(window.alert).toHaveBeenCalledWith('onValidate event has been called.');
+    expect(window.alert).toHaveBeenCalledWith("onValidate event has been called.");
     expect(window.alert.mock.calls[0][0]).toEqual("onValidate event has been called.");
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(wrapper.instance().state.value).toEqual("Testing react in jest");
@@ -150,17 +147,17 @@ describe(`UU5.Forms.IconPicker props function -> InputMixin`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('onChangeFeedback()', () => {
+  it("onChangeFeedback()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<MixinPropsFunction/>);
+    const wrapper = shallow(<MixinPropsFunction />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.isCalled).toBeFalsy();
     expect(wrapper.instance().state.value).toEqual("");
     expect(wrapper.instance().state.message).toEqual("");
     expect(wrapper.instance().state.feedback).toMatch(/initial/);
-    wrapper.simulate('changeFeedback', {target: {value: "Testing react in jest"}});
+    wrapper.simulate("changeFeedback", { target: { value: "Testing react in jest" } });
     expect(window.alert).toBeCalled();
-    expect(window.alert).toHaveBeenCalledWith('onChangeFeedback event has been called.');
+    expect(window.alert).toHaveBeenCalledWith("onChangeFeedback event has been called.");
     expect(window.alert.mock.calls[0][0]).toEqual("onChangeFeedback event has been called.");
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(wrapper.instance().state.value).toEqual("Testing react in jest");
@@ -168,18 +165,11 @@ describe(`UU5.Forms.IconPicker props function -> InputMixin`, () => {
     expect(wrapper.instance().state.feedback).toEqual("success");
     expect(wrapper).toMatchSnapshot();
   });
-
 });
 
-
 describe(`UU5.Forms.IconPicker default props`, () => {
-
   it(`UU5.Forms.IconPicker check default props`, () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"uuID"}
-      />
-    );
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"uuID"} />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().props.value).toBe(null);
     expect(wrapper.instance().props.categories).toEqual(["mdi"]);
@@ -191,11 +181,7 @@ describe(`UU5.Forms.IconPicker default props`, () => {
 
 describe(`UU5.Forms.IconPicker check default default props from Mixins`, () => {
   it(`UU5.Forms.InputMixin`, () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"uuID"}
-      />
-    );
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"uuID"} />);
     expect(wrapper.instance().props.inputAttrs).toBe(null);
     expect(wrapper.instance().props.size).toEqual("m");
     expect(wrapper.instance().props.readOnly).toBeFalsy();
@@ -210,11 +196,7 @@ describe(`UU5.Forms.IconPicker check default default props from Mixins`, () => {
   });
 
   it(`UU5.Common.Base,Elementary,Pure,Color`, () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"uuID"}
-      />
-    );
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"uuID"} />);
     //Check UU5.Common.Elementary.Mixin default props
     expect(wrapper.instance().props.hidden).toBeFalsy();
     expect(wrapper.instance().props.disabled).toBeFalsy();
@@ -234,5 +216,4 @@ describe(`UU5.Forms.IconPicker check default default props from Mixins`, () => {
     expect(wrapper.instance().props.noIndex).toBeFalsy();
     //default value of colorSchema and LSI language props are in snapshot.
   });
-
 });

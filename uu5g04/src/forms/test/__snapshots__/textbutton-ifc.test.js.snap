@@ -29,6 +29,7 @@ exports[`UU5.Forms.InputMixin interface editable(setStatecallback) 1`] = `
       placeholder="John Smith"
       readonly={true}
       ref_={[Function]}
+      size="m"
       value="John Doe"
     />
   </InputWrapper>
@@ -78,6 +79,7 @@ exports[`UU5.Forms.InputMixin interface editable(setStatecallback) 2`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
       value="John Doe"
     />
   </InputWrapper>
@@ -127,6 +129,7 @@ exports[`UU5.Forms.InputMixin interface getChangeFeedback() 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -172,6 +175,7 @@ exports[`UU5.Forms.InputMixin interface getFeedBack() 1`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -218,6 +222,7 @@ exports[`UU5.Forms.InputMixin interface getFeedBack() 2`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -266,6 +271,7 @@ exports[`UU5.Forms.InputMixin interface getInputWrapper(inpuid) 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
       value="John Doe"
     />
   </InputWrapper>
@@ -315,6 +321,7 @@ exports[`UU5.Forms.InputMixin interface getLabel(idinput) 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
       value="John Doe"
     />
   </InputWrapper>
@@ -361,6 +368,7 @@ exports[`UU5.Forms.InputMixin interface getMessage() should return null, second:
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -406,6 +414,7 @@ exports[`UU5.Forms.InputMixin interface getValue() should return value 1`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="m"
       value="My Value"
     />
   </InputWrapper>
@@ -452,6 +461,7 @@ exports[`UU5.Forms.InputMixin interface getValue() value is empty. Should return
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -502,6 +512,7 @@ exports[`UU5.Forms.InputMixin interface isError() 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -552,6 +563,7 @@ exports[`UU5.Forms.InputMixin interface isError() 2`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
       value="Default value"
     />
   </InputWrapper>
@@ -599,6 +611,7 @@ exports[`UU5.Forms.InputMixin interface isInitial() 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -647,6 +660,7 @@ exports[`UU5.Forms.InputMixin interface isInitial() 2`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -692,6 +706,7 @@ exports[`UU5.Forms.InputMixin interface isInput() 1`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -738,6 +753,7 @@ exports[`UU5.Forms.InputMixin interface isLoading() 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -786,6 +802,7 @@ exports[`UU5.Forms.InputMixin interface isReadOnly() 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -820,6 +837,7 @@ exports[`UU5.Forms.InputMixin interface isReadOnly() 2`] = `
       placeholder="John Smith"
       readonly={true}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -870,6 +888,7 @@ exports[`UU5.Forms.InputMixin interface isSuccess() fisr return false, second re
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
       value="Success Value"
     />
   </InputWrapper>
@@ -921,6 +940,7 @@ exports[`UU5.Forms.InputMixin interface isWarning() 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -971,6 +991,7 @@ exports[`UU5.Forms.InputMixin interface isWarning() 2`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
       value="Default value"
     />
   </InputWrapper>
@@ -1020,6 +1041,7 @@ exports[`UU5.Forms.InputMixin interface readOnly(setStatecallback) 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
       value="John Doe"
     />
   </InputWrapper>
@@ -1055,6 +1077,7 @@ exports[`UU5.Forms.InputMixin interface readOnly(setStatecallback) 2`] = `
       placeholder="John Smith"
       readonly={true}
       ref_={[Function]}
+      size="m"
       value="John Doe"
     />
   </InputWrapper>
@@ -1092,6 +1115,7 @@ exports[`UU5.Forms.InputMixin interface reset(setStateCallBack) 1`] = `
       placeholder="John Smith"
       readonly={true}
       ref_={[Function]}
+      size="m"
       value="New Value"
     />
   </InputWrapper>
@@ -1141,6 +1165,7 @@ exports[`UU5.Forms.InputMixin interface reset(setStateCallBack) 2`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -1191,6 +1216,7 @@ exports[`UU5.Forms.InputMixin interface setChangeFeedback() 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
       value="Error value"
     />
   </InputWrapper>
@@ -1240,6 +1266,7 @@ exports[`UU5.Forms.InputMixin interface setEditableValue(false, setStateCallback
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
       value="John Doe"
     />
   </InputWrapper>
@@ -1275,6 +1302,7 @@ exports[`UU5.Forms.InputMixin interface setEditableValue(false, setStateCallback
       placeholder="John Smith"
       readonly={true}
       ref_={[Function]}
+      size="m"
       value="John Doe"
     />
   </InputWrapper>
@@ -1324,6 +1352,7 @@ exports[`UU5.Forms.InputMixin interface setEditableValue(true, setStateCallback)
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
       value="John Doe"
     />
   </InputWrapper>
@@ -1373,6 +1402,7 @@ exports[`UU5.Forms.InputMixin interface setEditableValue(true, setStateCallback)
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
       value="John Doe"
     />
   </InputWrapper>
@@ -1420,6 +1450,7 @@ exports[`UU5.Forms.InputMixin interface setError(message, value, setStateCallBac
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -1468,6 +1499,7 @@ exports[`UU5.Forms.InputMixin interface setError(message, value, setStateCallBac
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
       value="Error value"
     />
   </InputWrapper>
@@ -1514,6 +1546,7 @@ exports[`UU5.Forms.InputMixin interface setFeedBack(feedback, message, value, se
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -1561,6 +1594,7 @@ exports[`UU5.Forms.InputMixin interface setFeedBack(feedback, message, value, se
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="m"
       value="This is valid value"
     />
   </InputWrapper>
@@ -1612,6 +1646,7 @@ exports[`UU5.Forms.InputMixin interface setInitial(msg, value, setStateCallBack)
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -1661,6 +1696,7 @@ exports[`UU5.Forms.InputMixin interface setInitial(msg, value, setStateCallBack)
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -1707,6 +1743,7 @@ exports[`UU5.Forms.InputMixin interface setLoading(message, value, setStateCallB
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -1756,6 +1793,7 @@ exports[`UU5.Forms.InputMixin interface setLoading(message, value, setStateCallB
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
       value="Value is loaded"
     />
   </InputWrapper>
@@ -1802,6 +1840,7 @@ exports[`UU5.Forms.InputMixin interface setMessage(msg, setStateCallBack) 1`] = 
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -1848,6 +1887,7 @@ exports[`UU5.Forms.InputMixin interface setMessage(msg, setStateCallBack) 2`] = 
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -1894,6 +1934,7 @@ exports[`UU5.Forms.InputMixin interface setSuccess(message, value, setStateCallB
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -1942,6 +1983,7 @@ exports[`UU5.Forms.InputMixin interface setSuccess(message, value, setStateCallB
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
       value="Success Value"
     />
   </InputWrapper>
@@ -1988,6 +2030,7 @@ exports[`UU5.Forms.InputMixin interface setValue(value,setStateCallBack) 1`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -2033,6 +2076,7 @@ exports[`UU5.Forms.InputMixin interface setValue(value,setStateCallBack) 2`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="m"
       value="My New Set Value"
     />
   </InputWrapper>
@@ -2068,6 +2112,7 @@ exports[`UU5.Forms.InputMixin interface setWarning(message, value, setStateCallB
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
   </InputWrapper>
 </div>
@@ -2104,6 +2149,7 @@ exports[`UU5.Forms.InputMixin interface setWarning(message, value, setStateCallB
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="Warning Value"
     />
   </InputWrapper>
@@ -2151,6 +2197,7 @@ exports[`UU5.Forms.TextInputMixin interface focus() 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
       value="Anna Simpson"
     />
   </InputWrapper>
@@ -2198,6 +2245,7 @@ exports[`UU5.Forms.TextInputMixin interface focus() 2`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
       value="Anna Simpson"
     />
   </InputWrapper>
@@ -2247,6 +2295,7 @@ exports[`UU5.Forms.TextInputMixin interface getBlurFeedback() 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -2444,6 +2493,7 @@ exports[`UU5.Forms.TextInputMixin interface isOpen() should return false 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -2490,6 +2540,7 @@ exports[`UU5.Forms.TextInputMixin interface isTextInput() should return true 1`]
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
       value="Anna Simpson"
     />
   </InputWrapper>
@@ -2539,6 +2590,7 @@ exports[`UU5.Forms.TextInputMixin interface isValid() 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
       value="Anna Simpson"
     />
   </InputWrapper>
@@ -2590,6 +2642,7 @@ exports[`UU5.Forms.TextInputMixin interface isValid() should return false 1`] = 
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -2636,6 +2689,7 @@ exports[`UU5.Forms.TextInputMixin interface setAutocompleteItems(items,opt,setSt
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>
@@ -2818,6 +2872,7 @@ exports[`UU5.Forms.TextInputMixin interface setAutocompleteItems(items,opt,setSt
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="m"
     />
   </InputWrapper>
 </div>

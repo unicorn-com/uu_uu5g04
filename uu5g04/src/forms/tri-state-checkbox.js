@@ -11,20 +11,22 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "./forms-ns.js";
 import ClassNames from "../core/common/class-names.js";
 
-import InputMixin from './mixins/input-mixin.js';
-import Loading from './internal/loading.js';
+import InputMixin from "./mixins/input-mixin.js";
+import Loading from "./internal/loading.js";
 
 import Context from "./form-context.js";
 
-import './tri-state-checkbox.less';
+import "./tri-state-checkbox.less";
+//@@viewOff:imports
 
 export const TriStateCheckbox = Context.withContext(
   createReactClass({
@@ -52,7 +54,7 @@ export const TriStateCheckbox = Context.withContext(
         loading: ns.css("input-loading-icon")
       },
       defaults: {
-        onIcon: 'mdi-check',
+        onIcon: "mdi-check",
         indeterminateIcon: "mdi-stop",
         offIcon: ""
       },
@@ -66,27 +68,27 @@ export const TriStateCheckbox = Context.withContext(
       onIcon: PropTypes.string,
       offIcon: PropTypes.string,
       indeterminateIcon: PropTypes.string,
-      labelPosition: PropTypes.oneOf(['left', 'right']),
+      labelPosition: PropTypes.oneOf(["left", "right"]),
       bgStyleChecked: PropTypes.oneOf(["filled", "outline"]),
       bgStyleIndeterminate: PropTypes.oneOf(["filled", "outline"])
     },
     //@@viewOff:propTypes
 
     //@@viewOn:getDefaultProps
-    getDefaultProps () {
+    getDefaultProps() {
       return {
         value: null,
-        onIcon: '',
-        offIcon: '',
-        indeterminateIcon: '',
-        labelPosition: 'left',
+        onIcon: "",
+        offIcon: "",
+        indeterminateIcon: "",
+        labelPosition: "left",
         bgStyleChecked: "outline",
         bgStyleIndeterminate: "outline"
       };
     },
     //@@viewOff:getDefaultProps
 
-    //@@viewOn:standardComponentLifeCycle
+    //@@viewOn:reactLifeCycle
     componentWillMount() {
       if (this.props.onValidate && typeof this.props.onValidate === "function") {
         this._validateOnChange({ value: this.state.value, event: null, component: this });
@@ -95,15 +97,14 @@ export const TriStateCheckbox = Context.withContext(
 
     componentWillReceiveProps(nextProps) {
       if (nextProps.controlled) {
-        if (this.props.onValidate && typeof this.props.onValidate === 'function') {
+        if (this.props.onValidate && typeof this.props.onValidate === "function") {
           this._validateOnChange({ value: nextProps.value, event: null, component: this }, true);
         } else {
           this.setState({ value: nextProps.value });
         }
       }
     },
-
-    //@@viewOff:standardComponentLifeCycle
+    //@@viewOff:reactLifeCycle
 
     //@@viewOn:interface
     onChangeDefault(opt, setStateCallback) {
@@ -111,17 +112,44 @@ export const TriStateCheckbox = Context.withContext(
         this._validateOnChange({ value: opt.value, event: opt.event, component: this }, setStateCallback);
       } else {
         let result = this.getChangeFeedback(opt);
-        this.setState({
-          feedback: result.feedback,
-          message: result.message,
-          value: result.value
-        }, setStateCallback);
+        this.setState(
+          {
+            feedback: result.feedback,
+            message: result.message,
+            value: result.value
+          },
+          setStateCallback
+        );
       }
       return this;
     },
+
+    isValid() {
+      let feedback = this.getFeedback();
+      let result = true;
+
+      if (this.props.required && this.state.value === null) {
+        this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessage"));
+        result = false;
+      } else if (feedback === "error") {
+        result = false;
+      } else if (typeof this.isValid_ === "function") {
+        result = this.isValid_();
+      }
+
+      if (result && typeof this.props.onValidate === "function") {
+        let validation = this.props.onValidate(value, this);
+        if (validation && typeof validation === "object") {
+          if (validation.feedback === "error") {
+            result = false;
+          }
+        }
+      }
+      return result;
+    },
     //@@viewOff:interface
 
-    //@@viewOn:overridingMethods
+    //@@viewOn:overriding
     focus_() {
       this._focusElement.focus();
       return this;
@@ -130,16 +158,17 @@ export const TriStateCheckbox = Context.withContext(
     getInputWidth_() {
       return this.props.inputWidth === "auto" ? null : this.props.inputWidth;
     },
-    //@@viewOff:overridingMethods
+    //@@viewOff:overriding
 
-    //@@viewOn:componentSpecificHelpers
+    //@@viewOn:private
     _validateOnChange(opt, checkValue, setStateCallback) {
       let _callCallback = typeof setStateCallback === "function";
 
       if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
-        let result = this.props.onValidate && typeof this.props.onValidate === "function" ? this.props.onValidate(opt) : null;
+        let result =
+          this.props.onValidate && typeof this.props.onValidate === "function" ? this.props.onValidate(opt) : null;
         if (result) {
-          if (typeof result === 'object') {
+          if (typeof result === "object") {
             if (result.feedback) {
               _callCallback = false;
               this.setFeedback(result.feedback, result.message, result.value, setStateCallback);
@@ -148,7 +177,9 @@ export const TriStateCheckbox = Context.withContext(
               this.setState({ value: opt.value }, setStateCallback);
             }
           } else {
-            this.showError('validateError', null, { context: { event: opt.event, func: this.props.onValidate, result: result } });
+            this.showError("validateError", null, {
+              context: { event: opt.event, func: this.props.onValidate, result: result }
+            });
           }
         }
       }
@@ -170,10 +201,10 @@ export const TriStateCheckbox = Context.withContext(
       return value;
     },
 
-    _onChange(e){
+    _onChange(e) {
       let opt = { value: this._changeValueOnChange(), event: e, component: this };
       if (!this.isComputedDisabled() && !this.isReadOnly() && !this.isLoading()) {
-        if (typeof this.props.onChange === 'function') {
+        if (typeof this.props.onChange === "function") {
           this.props.onChange(opt);
         } else {
           this.onChangeDefault(opt);
@@ -181,30 +212,6 @@ export const TriStateCheckbox = Context.withContext(
       }
 
       return this;
-    },
-
-    isValid() {
-      let feedback = this.getFeedback();
-      let result = true;
-
-      if (this.props.required && this.state.value === null) {
-        this.setError(this.props.requiredMessage || this.getLsiComponent('requiredMessage'));
-        result = false;
-      } else if (feedback === 'error') {
-        result = false;
-      } else if (typeof this.isValid_ === 'function') {
-        result = this.isValid_();
-      }
-
-      if (result && typeof this.props.onValidate === 'function') {
-        let validation = this.props.onValidate(value, this);
-        if (validation && typeof validation === 'object') {
-          if (validation.feedback === 'error') {
-            result = false;
-          }
-        }
-      }
-      return result;
     },
 
     _getEventPath(e) {
@@ -217,11 +224,11 @@ export const TriStateCheckbox = Context.withContext(
       return path;
     },
 
-    _getMainAttrs(){
+    _getMainAttrs() {
       let mainAttrs = this._getInputAttrs();
 
       if (this.state.value === null) {
-        mainAttrs.className += ' ' + this.getClassName("indeterminate");
+        mainAttrs.className += " " + this.getClassName("indeterminate");
 
         if (this.props.bgStyleIndeterminate) {
           mainAttrs.className += " " + ClassNames[this.props.bgStyleIndeterminate];
@@ -229,7 +236,7 @@ export const TriStateCheckbox = Context.withContext(
       }
 
       if (this.state.value === true) {
-        mainAttrs.className += ' ' + this.getClassName("checked");
+        mainAttrs.className += " " + this.getClassName("checked");
 
         if (this.props.bgStyleChecked) {
           mainAttrs.className += " " + ClassNames[this.props.bgStyleChecked];
@@ -237,17 +244,17 @@ export const TriStateCheckbox = Context.withContext(
       }
 
       if (this.state.value === false) {
-        mainAttrs.className += ' ' + this.getClassName("unChecked");
+        mainAttrs.className += " " + this.getClassName("unChecked");
 
         mainAttrs.className += " " + ClassNames["outline"];
       }
 
-      if (this.props.labelPosition === 'right') {
-        mainAttrs.className += ' ' + this.getClassName().right;
+      if (this.props.labelPosition === "right") {
+        mainAttrs.className += " " + this.getClassName().right;
       }
 
-      let handleClick = (e) => {
-        let matches = this._getEventPath(e).some((item) => {
+      let handleClick = e => {
+        let matches = this._getEventPath(e).some(item => {
           let functionType = item.matches ? "matches" : "msMatchesSelector";
           if (item[functionType]) {
             return item[functionType]("button.uu5-forms-tri-state-checkbox-button, .uu5-forms-label");
@@ -258,9 +265,9 @@ export const TriStateCheckbox = Context.withContext(
         if (matches) {
           this._onChange(e);
         }
-      }
+      };
 
-      mainAttrs.onClick = (e) => {
+      mainAttrs.onClick = e => {
         handleClick(e);
       };
 
@@ -292,40 +299,45 @@ export const TriStateCheckbox = Context.withContext(
 
       return attrs;
     },
-    //@@viewOff:componentSpecificHelpers
+    //@@viewOff:private
+
     //@@viewOn:render
     render() {
-      let inputId = this.getId() + '-input';
+      let inputId = this.getId() + "-input";
       let label = this.getLabel(inputId);
       let result;
 
       if (this.isLoading()) {
         result = <Loading className={this.getClassName("loading")} id={this.getId()} />;
       } else {
-        result =
-          (<UU5.Bricks.Button
+        result = (
+          <UU5.Bricks.Button
             className={this.getClassName().button}
             colorSchema="custom"
             disabled={this.isComputedDisabled()}
-            mainAttrs={UU5.Common.Tools.merge({disabled: this.isReadOnly() || this.isComputedDisabled()},this.props.inputAttrs)}
+            mainAttrs={UU5.Common.Tools.merge(
+              { disabled: this.isReadOnly() || this.isComputedDisabled() },
+              this.props.inputAttrs
+            )}
             content={this._getIcon()}
-            ref_={(button) => this._focusElement = button}
-          />)
-        }
+            ref_={button => (this._focusElement = button)}
+          />
+        );
+      }
 
       return (
         <div {...this._getMainAttrs()}>
-          {this.props.labelPosition === 'left' && label}
+          {this.props.labelPosition === "left" && label}
           {this.getInputWrapper(
             <UU5.Bricks.Div {...this._getWrapperAttrs()}>
               {result}
-              {this.props.labelPosition === 'right' && label}
+              {this.props.labelPosition === "right" && label}
             </UU5.Bricks.Div>
           )}
         </div>
       );
     }
-    //@@viewOn:render
+    //@@viewOff:render
   })
 );
 

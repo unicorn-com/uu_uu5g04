@@ -34,6 +34,7 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 1`] =
       onKeyDown={[Function]}
       readonly={true}
       ref_={[Function]}
+      size="s"
       value="100"
     />
     <item-list
@@ -122,6 +123,7 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 2`] =
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="100"
     />
     <item-list
@@ -210,6 +212,7 @@ exports[`UU5.Forms.InputMixin interface testing getChangeFeedback() 1`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <item-list
       hidden={true}
@@ -456,6 +459,7 @@ exports[`UU5.Forms.InputMixin interface testing getInputWrapper(inpuid) 1`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="100"
     />
     <item-list
@@ -544,6 +548,7 @@ exports[`UU5.Forms.InputMixin interface testing getLabel(idinput) 1`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="100"
     />
     <item-list
@@ -882,6 +887,7 @@ exports[`UU5.Forms.InputMixin interface testing isError() 1`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <item-list
       hidden={true}
@@ -967,6 +973,7 @@ exports[`UU5.Forms.InputMixin interface testing isError() 2`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="100"
     />
     <item-list
@@ -1053,6 +1060,7 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() 1`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <item-list
       hidden={true}
@@ -1136,6 +1144,7 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() 2`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="1000"
     />
     <item-list
@@ -1303,6 +1312,7 @@ exports[`UU5.Forms.InputMixin interface testing isLoading() 1`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <item-list
       hidden={true}
@@ -1386,6 +1396,7 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 1`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <item-list
       hidden={true}
@@ -1435,6 +1446,7 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 2`] = `
       onKeyDown={[Function]}
       readonly={true}
       ref_={[Function]}
+      size="s"
     />
     <item-list
       hidden={true}
@@ -1520,6 +1532,7 @@ exports[`UU5.Forms.InputMixin interface testing isSuccess() fisr return false, s
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="100"
     />
     <item-list
@@ -1610,6 +1623,7 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 1`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <item-list
       hidden={true}
@@ -1695,6 +1709,7 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 2`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="100"
     />
     <item-list
@@ -1783,6 +1798,7 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 1`] =
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="100"
     />
     <item-list
@@ -1837,6 +1853,7 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 2`] =
       onKeyDown={[Function]}
       readonly={true}
       ref_={[Function]}
+      size="s"
       value="100"
     />
     <item-list
@@ -1893,6 +1910,7 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 1`] = `
       onKeyDown={[Function]}
       readonly={true}
       ref_={[Function]}
+      size="s"
       value="100"
     />
     <item-list
@@ -1981,6 +1999,7 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 2`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <item-list
       hidden={true}
@@ -2066,6 +2085,7 @@ exports[`UU5.Forms.InputMixin interface testing setChangeFeedback() 1`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="NaN"
     />
     <item-list
@@ -2154,6 +2174,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="100"
     />
     <item-list
@@ -2208,6 +2229,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
       onKeyDown={[Function]}
       readonly={true}
       ref_={[Function]}
+      size="s"
       value="100"
     />
     <item-list
@@ -2296,6 +2318,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="100"
     />
     <item-list
@@ -2384,6 +2407,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="100"
     />
     <item-list
@@ -2470,6 +2494,7 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <item-list
       hidden={true}
@@ -2553,6 +2578,7 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="100"
     />
     <item-list
@@ -2812,6 +2838,7 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <item-list
       hidden={true}
@@ -2896,6 +2923,7 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="666"
     />
     <item-list
@@ -2982,6 +3010,7 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <item-list
       hidden={true}
@@ -3067,6 +3096,7 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="100"
     />
     <item-list
@@ -3316,6 +3346,7 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <item-list
       hidden={true}
@@ -3399,6 +3430,7 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="69"
     />
     <item-list
@@ -3652,6 +3684,7 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <item-list
       hidden={true}
@@ -3735,6 +3768,7 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="100"
     />
     <item-list
@@ -3821,6 +3855,7 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 1`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="100"
     />
     <item-list
@@ -3907,6 +3942,7 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 2`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="100"
     />
     <item-list
@@ -3995,6 +4031,7 @@ exports[`UU5.Forms.TextInputMixin interface testing getBlurFeedback() 1`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <item-list
       hidden={true}
@@ -4078,6 +4115,7 @@ exports[`UU5.Forms.TextInputMixin interface testing getFocusFeedback() 1`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="0"
     />
     <item-list
@@ -4166,6 +4204,7 @@ exports[`UU5.Forms.TextInputMixin interface testing getFocusFeedback() 2`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="0"
     />
     <item-list
@@ -4252,6 +4291,7 @@ exports[`UU5.Forms.TextInputMixin interface testing isTextInput() should return 
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="100"
     />
     <item-list
@@ -4340,6 +4380,7 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() 1`] = `
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="100"
     />
     <item-list
@@ -4430,6 +4471,7 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() should return fals
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <item-list
       hidden={true}
@@ -4511,6 +4553,7 @@ exports[`UU5.Forms.TextInputMixin interface testing setAutocompleteItems(items,o
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <item-list
       hidden={true}
@@ -4592,6 +4635,7 @@ exports[`UU5.Forms.TextInputMixin interface testing setAutocompleteItems(items,o
       onKeyDown={[Function]}
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <item-list
       hidden={true}

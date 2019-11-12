@@ -1,38 +1,36 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
 import ns from "./common-ns.js";
-import PropTypes from 'prop-types';
-import BaseMixin from './base-mixin.js';
-import ElementaryMixin from './elementary-mixin.js';
-import Tools from './tools.js';
-import Environment from '../environment/environment.js';
-import NotFoundTag from './not-found-tag.js';
+import PropTypes from "prop-types";
+import BaseMixin from "./base-mixin.js";
+import ElementaryMixin from "./elementary-mixin.js";
+import Tools from "./tools.js";
+import Environment from "../environment/environment.js";
+import NotFoundTag from "./not-found-tag.js";
 import Version from "./version.js";
+//@@viewOff:imports
 
 //import './tag-placeholder.less';
 
 let importLibraryCache = {};
 
 export const TagPlaceholder = createReactClass({
-
   //@@viewOn:mixins
-  mixins: [
-    BaseMixin,
-    ElementaryMixin
-  ],
+  mixins: [BaseMixin, ElementaryMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -42,7 +40,7 @@ export const TagPlaceholder = createReactClass({
       main: ns.css("tag-placeholder")
     },
     errors: {
-      serverError: 'Unexpected error: %s.'
+      serverError: "Unexpected error: %s."
     },
     defaults: {
       regexpVersion: /\/\d*\.\d*\.\d*(?:-[a-z]+\d+(?:\.\d){0,2})?\//g,
@@ -59,10 +57,7 @@ export const TagPlaceholder = createReactClass({
   propTypes: {
     tagName: PropTypes.string,
     props: PropTypes.object,
-    content: PropTypes.oneOfType([
-      PropTypes.arrayOf(PropTypes.node),
-      PropTypes.node
-    ]),
+    content: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
     error: PropTypes.oneOfType([PropTypes.func, PropTypes.string, PropTypes.element])
   },
   //@@viewOff:propTypes
@@ -77,11 +72,11 @@ export const TagPlaceholder = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
       component: null
-    }
+    };
   },
 
   componentDidMount() {
@@ -89,7 +84,7 @@ export const TagPlaceholder = createReactClass({
   },
 
   componentWillReceiveProps(nextProps) {
-    let component = (nextProps.tagName && Tools.checkTag(nextProps.tagName));
+    let component = nextProps.tagName && Tools.checkTag(nextProps.tagName);
     component ? this._setComponent(component, nextProps.props) : this._findLib(nextProps);
 
     return this;
@@ -98,24 +93,24 @@ export const TagPlaceholder = createReactClass({
   componentWillUnmount() {
     this._unmounted = true;
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _findLib(props) {
     props = props || this.props;
-    let tagNameArr = props.tagName.split('.');
-    let libraryName = tagNameArr[0] + '.' + tagNameArr[1];
+    let tagNameArr = props.tagName.split(".");
+    let libraryName = tagNameArr[0] + "." + tagNameArr[1];
     let libraryReady = (exports, error) => {
       if (error) {
         let library = Environment.getLibrary(libraryName);
         if (!library || !library.error) {
-          this.showError('serverError', error, {
+          this.showError("serverError", error, {
             component: this.getTagName(),
             searchedTag: props.tagName,
             library: libraryName
@@ -155,7 +150,15 @@ export const TagPlaceholder = createReactClass({
       let baseName = sourceName.replace(/-.*/, ""); // remove -bricks, ... suffix
       if (baseName.indexOf("_") === -1 && baseName.startsWith("uu")) baseName = "uu_" + baseName; // baseName needs duplicit uu (vendor)
       baseName = baseName.replace(/_/g, "-");
-      result = Environment.CDN_URL + "/" + baseName + "/" + library.version + "/" + sourceName + (process.env.NODE_ENV === "production" ? ".min.js" : ".js");
+      result =
+        Environment.CDN_URL +
+        "/" +
+        baseName +
+        "/" +
+        library.version +
+        "/" +
+        sourceName +
+        (process.env.NODE_ENV === "production" ? ".min.js" : ".js");
     }
     return result;
   },
@@ -236,14 +239,23 @@ export const TagPlaceholder = createReactClass({
     return { configuredUrl, configuredVersion };
   },
 
-  _validateAndRegisterLibrary(name, version, url, code, dependencyOf, runtimeLibraries = Environment.getRuntimeLibraries()) {
+  _validateAndRegisterLibrary(
+    name,
+    version,
+    url,
+    code,
+    dependencyOf,
+    runtimeLibraries = Environment.getRuntimeLibraries()
+  ) {
     let { configuredUrl, configuredVersion } = this._getModuleConfig(name, code, runtimeLibraries);
 
     // special case - for submodules within single product (e.g. uu5g04-forms within uu5g04) force the version
     // according to the main module, i.e. if requesting uu5g04-forms@1.15.3 and the page has uu5g04@1.15.2 we'll
     // force 1.15.2 for uu5g04-forms.
     let usedUrl = configuredUrl || url;
-    let isSubmodule = name.match(/^(uu5g04-(bricks|forms|bricks-editable|block-layout)|uu_plus4u5g01-(app|bricks|uubmldraw))$/); // limiting only for our known submodules because there're libraries with names that look like submodules but are not (e.g. uu_plus4u5g01-uuforum)
+    let isSubmodule = name.match(
+      /^(uu5g04-(bricks|forms|bricks-editable|block-layout)|uu_plus4u5g01-(app|bricks|uubmldraw))$/
+    ); // limiting only for our known submodules because there're libraries with names that look like submodules but are not (e.g. uu_plus4u5g01-uuforum)
     let isForcedSubmoduleVersion = false;
     if (isSubmodule) {
       let mainModule = name.replace(/-.*/, "");
@@ -254,8 +266,13 @@ export const TagPlaceholder = createReactClass({
         isForcedSubmoduleVersion = true;
         configuredVersion = mainVersion;
         if (!dependencyOf) version = configuredVersion; // force compatibility if loading directly a submodule (if validating as a dependency of a normal module then configure too but still check for compatibility - which should pass as the deps should be using major version only)
-        if (!configuredUrl) { // if the lib URL has been already configured, we'll assume it's already correct (if we changed it and the lib was already loaded then it would get re-imported from this new URL & re-executed)
-          if (usedUrl) configuredUrl = usedUrl.replace(/\/\d+\.\d+\.\d+[^/]*/, m => "/" + this._getUrlVersionFromLogical(configuredVersion, usedUrl));
+        if (!configuredUrl) {
+          // if the lib URL has been already configured, we'll assume it's already correct (if we changed it and the lib was already loaded then it would get re-imported from this new URL & re-executed)
+          if (usedUrl)
+            configuredUrl = usedUrl.replace(
+              /\/\d+\.\d+\.\d+[^/]*/,
+              m => "/" + this._getUrlVersionFromLogical(configuredVersion, usedUrl)
+            );
           else configuredUrl = this._getSourceUrl({ name, version: this._getUrlVersionFromLogical(configuredVersion) });
           if (window.SystemJS) window.SystemJS.config({ paths: { [name]: configuredUrl } });
         }
@@ -280,9 +297,19 @@ export const TagPlaceholder = createReactClass({
     }
 
     let compatible = !configuredVersion || isForcedSubmoduleVersion || Version.compare(version, configuredVersion) <= 0;
-    if (compatible && configuredVersion && !isForcedSubmoduleVersion && new Version(version).major < new Version(configuredVersion).major) {
+    if (
+      compatible &&
+      configuredVersion &&
+      !isForcedSubmoduleVersion &&
+      new Version(version).major < new Version(configuredVersion).major
+    ) {
       Tools.error(
-        `Page contains ${name} in version ${configuredVersion.replace(/^(\d+)\.999\.0$/, "latest $1.x")}, dynamically-loaded component ${this.props.tagName} requested to use ${dependencyOf ? "library " + dependencyOf + " requiring dependency " + name + " in " : ""}OLDER version ${version}. ` +
+        `Page contains ${name} in version ${configuredVersion.replace(
+          /^(\d+)\.999\.0$/,
+          "latest $1.x"
+        )}, dynamically-loaded component ${this.props.tagName} requested to use ${
+          dependencyOf ? "library " + dependencyOf + " requiring dependency " + name + " in " : ""
+        }OLDER version ${version}. ` +
           "The already-present (newer) version of the library / dependency will be used, i.e. request for older version is skipped. " +
           "The library should update its dependencies to newer versions to prevent this error.",
         {
@@ -309,7 +336,12 @@ export const TagPlaceholder = createReactClass({
       ) {
         // don't allow overwriting of uu5g04 / uu_plus4u5g01
         Tools.error(
-          `Page contains ${name} in version ${configuredVersion.replace(/^(\d+)\.999\.0$/, "latest $1.x")}, dynamically-loaded component ${this.props.tagName} requested to use ${dependencyOf ? "library " + dependencyOf + " requiring dependency " + name + " in " : ""}NEWER version ${version}. ` +
+          `Page contains ${name} in version ${configuredVersion.replace(
+            /^(\d+)\.999\.0$/,
+            "latest $1.x"
+          )}, dynamically-loaded component ${this.props.tagName} requested to use ${
+            dependencyOf ? "library " + dependencyOf + " requiring dependency " + name + " in " : ""
+          }NEWER version ${version}. ` +
             "The already-present (older) version of the library / dependency will be used, i.e. request for newer version is skipped. Application should " +
             "update its dependencies configuration to use newest versions or it should restrict versions of dynamically loaded libraries " +
             "using UU5.Environment.addLibrary API.",
@@ -330,7 +362,12 @@ export const TagPlaceholder = createReactClass({
         // 3. All existing apps which use A@1.x and do dynamic loading will start failing because library registry will now
         //    be returning newest B with dependency A@2.0.0 (i.e. major versions don't match).
         Tools.error(
-          `Page contains ${name} in version ${configuredVersion.replace(/^(\d+)\.999\.0$/, "latest $1.x")}, dynamically-loaded component ${this.props.tagName} requested to use ${dependencyOf ? "library " + dependencyOf + " requiring dependency " + name + " in " : ""}NEWER version ${version}. ` +
+          `Page contains ${name} in version ${configuredVersion.replace(
+            /^(\d+)\.999\.0$/,
+            "latest $1.x"
+          )}, dynamically-loaded component ${this.props.tagName} requested to use ${
+            dependencyOf ? "library " + dependencyOf + " requiring dependency " + name + " in " : ""
+          }NEWER version ${version}. ` +
             "Library / dependency in NEWER version will be loaded and will overwrite already present one. Application should " +
             "update its dependencies configuration to use newest versions or it should restrict versions of dynamically loaded libraries " +
             "using UU5.Environment.addLibrary API.",
@@ -351,7 +388,12 @@ export const TagPlaceholder = createReactClass({
     // and use already-present one.
     if (!compatible) {
       Tools.error(
-        `Page contains ${name} in version ${configuredVersion.replace(/^(\d+)\.999\.0$/, "latest $1.x")}, dynamically-loaded component ${this.props.tagName} requested to use ${dependencyOf ? "library " + dependencyOf + " requiring dependency " + name + " in " : ""}NEWER version ${version}. ` +
+        `Page contains ${name} in version ${configuredVersion.replace(
+          /^(\d+)\.999\.0$/,
+          "latest $1.x"
+        )}, dynamically-loaded component ${this.props.tagName} requested to use ${
+          dependencyOf ? "library " + dependencyOf + " requiring dependency " + name + " in " : ""
+        }NEWER version ${version}. ` +
           "The already-present (older) version of the library / dependency will be used, i.e. request for newer version is skipped. Application should " +
           "update its dependencies configuration to use newest versions or it should restrict versions of dynamically loaded libraries " +
           "using UU5.Environment.addLibrary API.",
@@ -427,7 +469,14 @@ export const TagPlaceholder = createReactClass({
         let depVersion = isVersionOnly ? value : (value.match(Version.REGEX) || {})[0];
         let depCode = null;
 
-        let { compatible, configuredUrl } = this._validateAndRegisterLibrary(depName, depVersion, depUrl, depCode, name, runtimeLibraries);
+        let { compatible, configuredUrl } = this._validateAndRegisterLibrary(
+          depName,
+          depVersion,
+          depUrl,
+          depCode,
+          name,
+          runtimeLibraries
+        );
         if (!compatible) depsCompatible = false;
         else if (!configuredUrl) paths[depName] = depUrl;
       });
@@ -493,13 +542,17 @@ export const TagPlaceholder = createReactClass({
     }
     return this;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
-    return this.state.component ? React.createElement(this.state.component,
-      Tools.merge({}, this.state.props, { parent: this.getParent() }),
-      this.props.content) : null;
+    return this.state.component
+      ? React.createElement(
+          this.state.component,
+          Tools.merge({}, this.state.props, { parent: this.getParent() }),
+          this.props.content
+        )
+      : null;
   }
   //@@viewOff:render
 });

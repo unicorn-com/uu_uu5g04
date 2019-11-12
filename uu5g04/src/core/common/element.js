@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -15,6 +15,13 @@ import React from "react";
 
 export class Element {
   static create(...args) {
+    if (process.env.NODE_ENV === "test" && args[0] == null) {
+      throw new Error(
+        "Element type is: " +
+          args[0] +
+          ". You likely forgot to import necessary library, or forgot to export your component from the file it's defined in, or you might have mixed up default and named imports."
+      );
+    }
     return React.createElement(...args);
   }
   static clone(...args) {

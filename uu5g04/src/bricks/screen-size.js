@@ -1,27 +1,28 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
-import ScreenSizeItem from './screen-size-item.js';
+import ScreenSizeItem from "./screen-size-item.js";
 
-import './screen-size.less';
+import "./screen-size.less";
+//@@viewOff:imports
 
 export const ScreenSize = createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -35,12 +36,12 @@ export const ScreenSize = createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("ScreenSize"),
-    nestingLevelList: UU5.Environment.getNestingLevelList('spa'),
+    nestingLevelList: UU5.Environment.getNestingLevelList("spa"),
     classNames: {
       main: ns.css("screen-size")
     },
     defaults: {
-      childTagName: 'UU5.Bricks.ScreenSize.Item'
+      childTagName: "UU5.Bricks.ScreenSize.Item"
     },
     opt: {
       nestingLevelWrapper: true
@@ -55,15 +56,15 @@ export const ScreenSize = createReactClass({
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function () {
+  getDefaultProps: function() {
     return {
       screenSize: null
     };
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   isScreenSize() {
@@ -71,14 +72,14 @@ export const ScreenSize = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
-  _expandChildProps: function (child) {
+  //@@viewOn:private
+  _expandChildProps: function(child) {
     let newChildProps = { ...child.props };
 
-    newChildProps.id = newChildProps.id || (this.getId() + '-inner');
+    newChildProps.id = newChildProps.id || this.getId() + "-inner";
     newChildProps.controlled = true;
     newChildProps.hidden = this.isHidden();
     newChildProps.disabled = this.isDisabled();
@@ -135,10 +136,10 @@ export const ScreenSize = createReactClass({
 
     return children || null;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
-  render: function () {
+  render: function() {
     return this.getNestingLevel() ? this._getChildren() : null;
   }
   //@@viewOff:render

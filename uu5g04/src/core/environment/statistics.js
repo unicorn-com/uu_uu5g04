@@ -25,9 +25,9 @@ export function Statistics(url, isStatistics) {
   let href =
     (baseUriCookie
       ? baseUriCookie
-        .substr(BASE_URI_COOKIE_NAME.length + 1)
-        .split(",")[0]
-        .trim()
+          .substr(BASE_URI_COOKIE_NAME.length + 1)
+          .split(",")[0]
+          .trim()
       : null) || location.href;
   if (href === "about:srcdoc") href = parent.location.href;
   let match = href.match(PRODUCT_AWID_REGEXP);
@@ -55,7 +55,13 @@ export function Statistics(url, isStatistics) {
 
   function addLibrary(library) {
     runtimeLibraryMap[library.name] = library;
-    if (isStatistics() && (!window.UU5 || !window.UU5.Environment || !window.UU5.Environment.isStatistics || window.UU5.Environment.isStatistics())) {
+    if (
+      isStatistics() &&
+      (!window.UU5 ||
+        !window.UU5.Environment ||
+        !window.UU5.Environment.isStatistics ||
+        window.UU5.Environment.isStatistics())
+    ) {
       librarySet.add(library.name);
     }
   }
@@ -67,7 +73,7 @@ export function Statistics(url, isStatistics) {
   if (process.env.NODE_ENV === "production" && location.hostname !== "localhost") {
     setInterval(logLibraries, TIMEOUT);
 
-    window.addEventListener("beforeunload", function () {
+    window.addEventListener("beforeunload", function() {
       logLibraries();
     });
   }

@@ -11,11 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import Environment from '../environment/environment.js'
+import React from "react";
+import Environment from "../environment/environment.js";
 
 // FIXME MODULES Commented out due to dependencies "common => forms".
-import './color-schema.less';
+import "./color-schema.less";
 // import './color-schema/default.less';
 // import './color-schema/yellow.less';
 // import './color-schema/yellow-rich.less';
@@ -39,15 +39,14 @@ import './color-schema.less';
 // import './color-schema/grey-rich.less';
 
 export const ColorSchemaMixin = {
-
   //@@viewOn:statics
   statics: {
     "UU5.Common.ColorSchemaMixin": {
       classNames: {
-        main: 'getMainClassUU5CommonColorSchemaMixin'
+        main: "getMainClassUU5CommonColorSchemaMixin"
       },
       defaults: {
-        mainClassPrefix: 'color-schema-'
+        mainClassPrefix: "color-schema-"
       }
     }
   },
@@ -56,11 +55,17 @@ export const ColorSchemaMixin = {
   //@@viewOn:propTypes
   propTypes: {
     // must be function because of dynamic adding color into colorSchema
-    colorSchema: function (props, propName, componentName) {
+    colorSchema: function(props, propName, componentName) {
       if (props[propName] && !Environment.colorSchemaMap[props[propName]]) {
         return new Error(
-          'Invalid prop `' + propName + '` with value `' + props[propName] + '` supplied to' +
-          ' `' + componentName + '`. Validation failed.'
+          "Invalid prop `" +
+            propName +
+            "` with value `" +
+            props[propName] +
+            "` supplied to" +
+            " `" +
+            componentName +
+            "`. Validation failed."
         );
       }
     }
@@ -68,24 +73,24 @@ export const ColorSchemaMixin = {
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function () {
+  getDefaultProps: function() {
     return {
       colorSchema: null
     };
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  getInitialState: function () {
+  //@@viewOn:reactLifeCycle
+  getInitialState: function() {
     this.registerMixin("UU5.Common.ColorSchemaMixin");
 
     // in state, so every component can change color dynamically
     return {};
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
-  hasUU5CommonColorSchemaMixin: function () {
+  hasUU5CommonColorSchemaMixin: function() {
     return this.hasMixin("UU5.Common.ColorSchemaMixin");
   },
 
@@ -94,24 +99,24 @@ export const ColorSchemaMixin = {
     return Environment.getColorSchema(colorSchema);
   },
 
-  getUU5CommonColorSchemaMixinProps: function () {
+  getUU5CommonColorSchemaMixinProps: function() {
     return {
       colorSchema: this.props.colorSchema
     };
   },
 
-  getUU5CommonColorSchemaMixinPropsToPass: function () {
+  getUU5CommonColorSchemaMixinPropsToPass: function() {
     return {};
   },
 
-  getMainClassUU5CommonColorSchemaMixin: function () {
+  getMainClassUU5CommonColorSchemaMixin: function() {
     let colorSchema = this.getColorSchema();
-    let result = '';
+    let result = "";
     if (colorSchema) {
-      result = this.getDefault('mainClassPrefix', "UU5.Common.ColorSchemaMixin") + colorSchema;
+      result = this.getDefault("mainClassPrefix", "UU5.Common.ColorSchemaMixin") + colorSchema;
 
       if (this.props.colorSchema !== this._getOriginalColorSchema() && this.props.colorSchema) {
-        result += ' ' + this.getDefault('mainClassPrefix', "UU5.Common.ColorSchemaMixin") + this.props.colorSchema;
+        result += " " + this.getDefault("mainClassPrefix", "UU5.Common.ColorSchemaMixin") + this.props.colorSchema;
       }
     }
 
@@ -119,10 +124,10 @@ export const ColorSchemaMixin = {
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _getOriginalColorSchema() {
     let color = null;
     let colorSchema = this.props.colorSchema || (this.getDefault() ? this.getDefault().colorSchema : null);
@@ -132,7 +137,7 @@ export const ColorSchemaMixin = {
     }
     return color;
   }
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 };
 
 export default ColorSchemaMixin;

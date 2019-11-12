@@ -11,23 +11,25 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "./forms-ns.js";
 
-import ItemsInput from './internal/items-input.js';
-import Message from './internal/message.js';
+import ItemsInput from "./internal/items-input.js";
+import Message from "./internal/message.js";
 
-import ChoiceMixin from './mixins/choice-mixin.js';
-import InputMixin from './mixins/input-mixin.js';
+import ChoiceMixin from "./mixins/choice-mixin.js";
+import InputMixin from "./mixins/input-mixin.js";
 import ClassNames from "../core/common/class-names.js";
 
 import Context from "./form-context.js";
 
-import './file.less';
+import "./file.less";
+//@@viewOff:imports
 
 const Fragment = React.Fragment || (props => props.children);
 
@@ -76,28 +78,22 @@ export const File = Context.withContext(
         noValue: ns.css("file-no-value"),
         indicateDrop: ns.css("file-indicate-drop")
       },
-      lsi: () => (UU5.Common.Tools.merge({}, UU5.Environment.Lsi.Forms.file, UU5.Environment.Lsi.Forms.message))
+      lsi: () => UU5.Common.Tools.merge({}, UU5.Environment.Lsi.Forms.file, UU5.Environment.Lsi.Forms.message)
     },
     //@@viewOff:statics
 
     //@@viewOn:propTypes
     propTypes: {
-      value: PropTypes.oneOfType([
-        PropTypes.object,
-        PropTypes.arrayOf(PropTypes.object)
-      ]),
+      value: PropTypes.oneOfType([PropTypes.object, PropTypes.arrayOf(PropTypes.object)]),
       multiple: PropTypes.bool,
       closeIcon: PropTypes.string,
       downloadIcon: PropTypes.string,
       selectedIcon: PropTypes.string,
       borderRadius: PropTypes.string,
-      bgStyle: PropTypes.oneOf(['filled', 'outline', 'transparent', 'underline']),
-      elevation: PropTypes.oneOf(['-1', '0', '1', '2', '3', '4', '5', -1, 0, 1, 2, 3, 4, 5]),
+      bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+      elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
       authenticate: PropTypes.bool,
-      dndAreaPlaceholder: PropTypes.oneOfType([
-        PropTypes.object,
-        PropTypes.string
-      ]),
+      dndAreaPlaceholder: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
     },
     //@@viewOff:propTypes
 
@@ -106,10 +102,10 @@ export const File = Context.withContext(
       return {
         value: null,
         multiple: false,
-        icon: 'mdi-cloud-upload',
-        closeIcon: 'mdi-window-close',
-        downloadIcon: 'mdi-content-save',
-        selectedIcon: 'mdi-attachment',
+        icon: "mdi-cloud-upload",
+        closeIcon: "mdi-window-close",
+        downloadIcon: "mdi-content-save",
+        selectedIcon: "mdi-attachment",
         borderRadius: null,
         bgStyle: null,
         elevation: null,
@@ -119,7 +115,7 @@ export const File = Context.withContext(
     },
     //@@viewOff:getDefaultProps
 
-    //@@viewOn:standardComponentLifeCycle
+    //@@viewOn:reactLifeCycle
     getInitialState() {
       return {
         indicateDrop: null
@@ -127,16 +123,16 @@ export const File = Context.withContext(
     },
 
     componentWillMount() {
-      if (this.props.onValidate && typeof this.props.onValidate === 'function') {
-        this._validateOnChange({ value: this.state.value, event: null, component: this })
+      if (this.props.onValidate && typeof this.props.onValidate === "function") {
+        this._validateOnChange({ value: this.state.value, event: null, component: this });
       }
     },
 
     componentDidMount() {
       let dropZone = this._getDropZoneNode();
       if (dropZone) {
-        UU5.Environment.EventListener.addEvent(dropZone, 'dragover', this.getId(), this._handleDragOver);
-        UU5.Environment.EventListener.addEvent(dropZone, 'drop', this.getId(), this._handleFileSelect);
+        UU5.Environment.EventListener.addEvent(dropZone, "dragover", this.getId(), this._handleDragOver);
+        UU5.Environment.EventListener.addEvent(dropZone, "drop", this.getId(), this._handleFileSelect);
       }
       document.documentElement.addEventListener("dragleave", this._handleBodyDragLeave, true);
       document.documentElement.addEventListener("dragover", this._handleBodyDragOver, true);
@@ -148,8 +144,8 @@ export const File = Context.withContext(
       this._unmounted = true;
       let dropZone = this._getDropZoneNode();
       if (dropZone) {
-        UU5.Environment.EventListener.removeEvent(dropZone, 'dragover', this.getId());
-        UU5.Environment.EventListener.removeEvent(dropZone, 'drop', this.getId());
+        UU5.Environment.EventListener.removeEvent(dropZone, "dragover", this.getId());
+        UU5.Environment.EventListener.removeEvent(dropZone, "drop", this.getId());
       }
       document.documentElement.removeEventListener("dragleave", this._handleBodyDragLeave, true);
       document.documentElement.removeEventListener("dragover", this._handleBodyDragOver, true);
@@ -161,12 +157,12 @@ export const File = Context.withContext(
 
     componentWillReceiveProps(nextProps) {
       if (this.props.controlled) {
-        if (this.props.onValidate && typeof this.props.onValidate === 'function') {
+        if (this.props.onValidate && typeof this.props.onValidate === "function") {
           this._validateOnChange({ value: nextProps.value, event: null, component: this }, true);
         }
       }
     },
-    //@@viewOff:standardComponentLifeCycle
+    //@@viewOff:reactLifeCycle
 
     //@@viewOn:interface
     addValue(file, setStateCallback) {
@@ -179,11 +175,14 @@ export const File = Context.withContext(
         this._validateOnChange({ value: opt.value, event: opt.event, component: this }, false, setStateCallback);
       } else {
         let result = this.getChangeFeedback(opt);
-        this.setState({
-          feedback: result.feedback,
-          message: result.message,
-          value: result.value
-        }, setStateCallback);
+        this.setState(
+          {
+            feedback: result.feedback,
+            message: result.message,
+            value: result.value
+          },
+          setStateCallback
+        );
       }
 
       return this;
@@ -200,11 +199,11 @@ export const File = Context.withContext(
     },
     //@@viewOff:interface
 
-    //@@viewOn:overridingMethods
+    //@@viewOn:overriding
     setValue_(value, setStateCallback) {
       if (this._checkRequired({ value: value })) {
-        if (typeof this.props.onValidate === 'function') {
-          this._validateOnChange({ value: value, event: null, component: this })
+        if (typeof this.props.onValidate === "function") {
+          this._validateOnChange({ value: value, event: null, component: this });
         } else {
           this.setInitial(null, value, setStateCallback);
         }
@@ -214,15 +213,18 @@ export const File = Context.withContext(
     },
 
     setFeedback_(feedback, message, value, setStateCallback) {
-      if (value === '') {
+      if (value === "") {
         value = null;
       }
 
-      this.setState({
-        feedback: feedback,
-        message: message,
-        value: value
-      }, setStateCallback);
+      this.setState(
+        {
+          feedback: feedback,
+          message: message,
+          value: value
+        },
+        setStateCallback
+      );
 
       return this;
     },
@@ -236,9 +238,9 @@ export const File = Context.withContext(
       wrapperProps.ref_ = this._setInputWrapperRef;
       return wrapperProps;
     },
-    //@@viewOff:overridingMethods
+    //@@viewOff:overriding
 
-    //@@viewOn:componentSpecificHelpers
+    //@@viewOn:private
     _getDndAreaPlaceholder() {
       return this.props.dndAreaPlaceholder !== undefined
         ? this.props.dndAreaPlaceholder
@@ -268,7 +270,7 @@ export const File = Context.withContext(
         this._onBlur();
       }
 
-      if (typeof this.props.onChange === 'function') {
+      if (typeof this.props.onChange === "function") {
         this.props.onChange(opt);
       } else {
         this.onChangeDefault(opt);
@@ -292,11 +294,13 @@ export const File = Context.withContext(
           let prevValue = newValue.slice();
 
           for (let i = 0; i < file.length; i++) {
-            if (!prevValue.some(item => {
-              return file[i].name === item.name &&
-                file[i].size === item.size &&
-                file[i].lastModified === item.lastModified
-            })) {
+            if (
+              !prevValue.some(item => {
+                return (
+                  file[i].name === item.name && file[i].size === item.size && file[i].lastModified === item.lastModified
+                );
+              })
+            ) {
               newValue.push(file[i]);
             }
           }
@@ -313,7 +317,7 @@ export const File = Context.withContext(
       var props = {};
 
       if (!this.state.isReadOnly && !this.isComputedDisabled()) {
-        props.onClick = () => this._open()
+        props.onClick = () => this._open();
       }
 
       return props;
@@ -322,16 +326,16 @@ export const File = Context.withContext(
     _getMainAttrs() {
       let attrs = this._getInputAttrs();
       if (this.props.multiple) {
-        attrs.className += ' ' + this.getClassName().multiple;
+        attrs.className += " " + this.getClassName().multiple;
       }
       if (!this.props.multiple && this.state.value) {
-        attrs.className += ' ' + this.getClassName().selected;
+        attrs.className += " " + this.getClassName().selected;
       }
       if (this._getIcon() == null) {
-        attrs.className += ' ' + this.getClassName().noIcon;
+        attrs.className += " " + this.getClassName().noIcon;
       }
       if (!this.state.value) {
-        attrs.className += ' ' + this.getClassName().noValue;
+        attrs.className += " " + this.getClassName().noValue;
       }
       return attrs;
     },
@@ -340,9 +344,9 @@ export const File = Context.withContext(
       let _callCallback = typeof setStateCallback === "function";
 
       if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
-        let result = typeof this.props.onValidate === 'function' ? this.props.onValidate(opt) : null;
+        let result = typeof this.props.onValidate === "function" ? this.props.onValidate(opt) : null;
         if (result) {
-          if (typeof result === 'object') {
+          if (typeof result === "object") {
             if (result.feedback) {
               _callCallback = false;
               this.setFeedback(result.feedback, result.message, result.value, setStateCallback);
@@ -351,7 +355,7 @@ export const File = Context.withContext(
               this.setState({ value: opt.value }, setStateCallback);
             }
           } else {
-            this.showError('validateError', null, {
+            this.showError("validateError", null, {
               context: {
                 event: e,
                 func: this.props.onValidate,
@@ -370,11 +374,11 @@ export const File = Context.withContext(
     },
 
     _getIcon() {
-      return (!this.props.multiple && this.state.value) ? this.props.selectedIcon : this.props.icon;
+      return !this.props.multiple && this.state.value ? this.props.selectedIcon : this.props.icon;
     },
 
     _open() {
-      document.getElementById(this.getId() + '-file').click();
+      document.getElementById(this.getId() + "-file").click();
       return this;
     },
 
@@ -433,7 +437,9 @@ export const File = Context.withContext(
         let node = e.target;
         while (node && node !== myDropZoneNode) node = node.parentNode;
         let newIndicateDrop = node === myDropZoneNode ? "over" : "near";
-        this.setState(state => (state.indicateDrop !== newIndicateDrop ? { indicateDrop: newIndicateDrop } : undefined));
+        this.setState(state =>
+          state.indicateDrop !== newIndicateDrop ? { indicateDrop: newIndicateDrop } : undefined
+        );
       }
     },
 
@@ -448,7 +454,7 @@ export const File = Context.withContext(
     },
 
     _getFilesName() {
-      let result = '';
+      let result = "";
       let value = this.state.value;
 
       if (value) {
@@ -493,21 +499,25 @@ export const File = Context.withContext(
                     )}
                     {progress != null ? this._renderProgress(progress) : null}
                     {size != null ? this._renderSize(size) : null}
-                    {(file || url) && (progress == null || progress >= 1) && this.props.downloadIcon ?
+                    {(file || url) && (progress == null || progress >= 1) && this.props.downloadIcon ? (
                       <UU5.Bricks.Link
                         disabled={this.isDisabled()}
-                        className={this.getClassName().downloadButton + " uu5-bricks-button uu5-bricks-button-transparent uu5-bricks-button-" + this.props.size}
+                        className={
+                          this.getClassName().downloadButton +
+                          " uu5-bricks-button uu5-bricks-button-transparent uu5-bricks-button-" +
+                          this.props.size
+                        }
                         colorSchema={this.getColorSchema()}
                         {...this._getItemDownloadLinkProps({ url, file, name })}
-                        onFocus={(!this.isReadOnly() && !this.isDisabled()) ? () => this._onFocusExit(i) : null}
-                        onBlur={(!this.isReadOnly() && !this.isDisabled()) ? () => this._onBlur() : null}
+                        onFocus={!this.isReadOnly() && !this.isDisabled() ? () => this._onFocusExit(i) : null}
+                        onBlur={!this.isReadOnly() && !this.isDisabled() ? () => this._onBlur() : null}
                       >
                         <UU5.Bricks.Icon className={this.getClassName().downloadIcon} icon={this.props.downloadIcon} />
-                      </UU5.Bricks.Link> : null
-                    }
+                      </UU5.Bricks.Link>
+                    ) : null}
                   </Fragment>
                 )}
-                {!this.isReadOnly() ?
+                {!this.isReadOnly() ? (
                   <UU5.Bricks.Button
                     disabled={this.isDisabled()}
                     className={this.getClassName().closeButton}
@@ -518,14 +528,15 @@ export const File = Context.withContext(
                         this._changeValue(this._getFileValuesOnly(this.state.value.filter(it => it !== item)), e);
                       }
                     }}
-                    onFocus={(!this.isReadOnly() && !this.isDisabled()) ? () => this._onFocusExit(i) : null}
-                    onBlur={(!this.isReadOnly() && !this.isDisabled()) ? () => this._onBlur() : null}
+                    onFocus={!this.isReadOnly() && !this.isDisabled() ? () => this._onFocusExit(i) : null}
+                    onBlur={!this.isReadOnly() && !this.isDisabled() ? () => this._onBlur() : null}
                   >
                     <UU5.Bricks.Icon
                       className={this.getClassName().closeIcon}
                       icon={this.props.closeIcon || this.constructor.getDefaultProps().closeIcon}
                     />
-                  </UU5.Bricks.Button> : null}
+                  </UU5.Bricks.Button>
+                ) : null}
               </li>
             );
           });
@@ -624,7 +635,7 @@ export const File = Context.withContext(
       let result = true;
       if (this.props.required && !opt.value && this.shouldValidateRequired()) {
         result = false;
-        this.setError(this.props.requiredMessage || this.getLsiComponent('requiredMessage'), opt.value);
+        this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessage"), opt.value);
       }
 
       return result;
@@ -664,24 +675,26 @@ export const File = Context.withContext(
       return (
         <input
           key="fileinput"
-          value=""
           type="file"
-          id={this.getId() + '-file'}
+          id={this.getId() + "-file"}
           multiple={this.props.multiple}
           onChange={this._onChange}
           className={this.getClassName().input}
-          ref={item => this._inputVal = item}
+          ref={item => (this._inputVal = item)}
         />
-      )
+      );
     },
 
     _getSingleInput(inputId) {
       let inputAttrs = this.props.inputAttrs || {};
-      inputAttrs.onFocus = (!this.isReadOnly() && !this.isComputedDisabled()) ? () => this._onFocus() : null;
-      inputAttrs.onBlur = (!this.isReadOnly() && !this.isComputedDisabled()) ? () => this._onBlur() : null;
+      inputAttrs.onFocus = !this.isReadOnly() && !this.isComputedDisabled() ? () => this._onFocus() : null;
+      inputAttrs.onBlur = !this.isReadOnly() && !this.isComputedDisabled() ? () => this._onBlur() : null;
       inputAttrs.tabIndex =
         !this.isReadOnly() && !this.isComputedDisabled() && !this.isLoading() && this.state.value === null ? "0" : null;
-      inputAttrs.onClick = (!this.isReadOnly() && !this.isComputedDisabled() && !this.isLoading() && this.state.value === null) ? () => this._open() : null;
+      inputAttrs.onClick =
+        !this.isReadOnly() && !this.isComputedDisabled() && !this.isLoading() && this.state.value === null
+          ? () => this._open()
+          : null;
 
       let { url, file, size, name, progress, message } = this._normalizeValueItem(this.state.value);
       let showError = message && !this.isReadOnly() && !this.isDisabled();
@@ -714,48 +727,59 @@ export const File = Context.withContext(
 
       return (
         <UU5.Bricks.Div {...inputRowAttrs}>
-          {!showError ? <ItemsInput
-            id={inputId}
-            key={inputId}
-            name={this.props.name || inputId}
-            value={this._getFilesName()}
-            className={inputClassNames.join(" ") || undefined}
-            placeholder={showIndicateDrop ? this._getDndAreaPlaceholder() : this.props.placeholder}
-            multiple={this.props.multiple}
-            mainAttrs={inputAttrs}
-            disabled={this.isComputedDisabled()}
-            readonly={this.isReadOnly()}
-            loading={this.isLoading()}
-            onItemClick={(opt) => {
-              this.removeItem(opt)
-            }}
-            icon={this._getIcon()}
-            iconClassName={this.state.value ? this.getClassName("itemIcon") + (progress != null && progress < 1 ? +" " + this.getClassName("itemInProgress") : "") : this.getClassName("icon")}
-            feedback={this.getFeedback()}
-            borderRadius={this.props.borderRadius}
-            elevation={this.props.multiple ? this.props.elevation : null}
-            bgStyle={showIndicateDrop || !this.state.value ? this.props.bgStyle : undefined}
-            inputWidth={this._getInputWidth()}
-            colorSchema={this.props.colorSchema}
-          /> : this._renderItemError(message)}
+          {!showError ? (
+            <ItemsInput
+              id={inputId}
+              key={inputId}
+              name={this.props.name || inputId}
+              value={this._getFilesName()}
+              className={inputClassNames.join(" ") || undefined}
+              placeholder={showIndicateDrop ? this._getDndAreaPlaceholder() : this.props.placeholder}
+              multiple={this.props.multiple}
+              mainAttrs={inputAttrs}
+              disabled={this.isComputedDisabled()}
+              readonly={this.isReadOnly()}
+              loading={this.isLoading()}
+              onItemClick={opt => {
+                this.removeItem(opt);
+              }}
+              icon={this._getIcon()}
+              iconClassName={
+                this.state.value
+                  ? this.getClassName("itemIcon") +
+                    (progress != null && progress < 1 ? +" " + this.getClassName("itemInProgress") : "")
+                  : this.getClassName("icon")
+              }
+              feedback={this.getFeedback()}
+              borderRadius={this.props.borderRadius}
+              elevation={this.props.multiple ? this.props.elevation : null}
+              bgStyle={showIndicateDrop || !this.state.value ? this.props.bgStyle : undefined}
+              inputWidth={this._getInputWidth()}
+              colorSchema={this.props.colorSchema}
+            />
+          ) : (
+            this._renderItemError(message)
+          )}
           {!showError ? this._getFileInput() : null}
           {!showError && progress != null ? this._renderProgress(progress) : null}
           {!showError && size != null ? this._renderSize(size) : null}
-          {!showError && (file || url) && (progress == null || progress >= 1) && this.props.downloadIcon ?
+          {!showError && (file || url) && (progress == null || progress >= 1) && this.props.downloadIcon ? (
             <UU5.Bricks.Link
               disabled={this.isDisabled()}
-              className={this.getClassName().downloadButton + " uu5-bricks-button uu5-bricks-button-transparent uu5-bricks-button-" + this.props.size}
+              className={
+                this.getClassName().downloadButton +
+                " uu5-bricks-button uu5-bricks-button-transparent uu5-bricks-button-" +
+                this.props.size
+              }
               colorSchema={this.getColorSchema()}
               {...this._getItemDownloadLinkProps({ url, file, name })}
-              onFocus={(!this.isReadOnly() && !this.isDisabled()) ? () => this._onFocusExit(i) : null}
-              onBlur={(!this.isReadOnly() && !this.isDisabled()) ? () => this._onBlur() : null}
+              onFocus={!this.isReadOnly() && !this.isDisabled() ? () => this._onFocusExit(i) : null}
+              onBlur={!this.isReadOnly() && !this.isDisabled() ? () => this._onBlur() : null}
             >
-              <UU5.Bricks.Icon
-                className={this.getClassName().downloadIcon}
-                icon={this.props.downloadIcon}
-              />
-            </UU5.Bricks.Link> : null}
-          {!this.isReadOnly() && this.state.value !== null ?
+              <UU5.Bricks.Icon className={this.getClassName().downloadIcon} icon={this.props.downloadIcon} />
+            </UU5.Bricks.Link>
+          ) : null}
+          {!this.isReadOnly() && this.state.value !== null ? (
             <UU5.Bricks.Button
               className={this.getClassName().closeButton}
               bgStyle="transparent"
@@ -766,25 +790,26 @@ export const File = Context.withContext(
                   this._changeValue(null, e);
                 }
               }}
-              mainAttrs={{ tabIndex: (!this.isReadOnly() && !this.isComputedDisabled()) ? '0' : null }}
-              onFocus={(!this.isReadOnly() && !this.isComputedDisabled()) ? () => this._onFocusExit() : null}
-              onBlur={(!this.isReadOnly() && !this.isComputedDisabled()) ? () => this._onBlur() : null}
+              mainAttrs={{ tabIndex: !this.isReadOnly() && !this.isComputedDisabled() ? "0" : null }}
+              onFocus={!this.isReadOnly() && !this.isComputedDisabled() ? () => this._onFocusExit() : null}
+              onBlur={!this.isReadOnly() && !this.isComputedDisabled() ? () => this._onBlur() : null}
             >
               <UU5.Bricks.Icon
                 className={this.getClassName().closeIcon}
                 icon={this.props.closeIcon || this.constructor.getDefaultProps().closeIcon}
               />
-            </UU5.Bricks.Button> : null}
+            </UU5.Bricks.Button>
+          ) : null}
         </UU5.Bricks.Div>
       );
     },
 
     _getMultipleInput(inputId) {
       let inputAttrs = this.props.inputAttrs || {};
-      inputAttrs.onFocus = (!this.isReadOnly() && !this.isComputedDisabled()) ? () => this._onFocus() : null;
-      inputAttrs.onBlur = (!this.isReadOnly() && !this.isComputedDisabled()) ? () => this._onBlur() : null;
-      inputAttrs.tabIndex = (!this.isReadOnly() && !this.isComputedDisabled()) ? '0' : null;
-      inputAttrs.onClick = (!this.isReadOnly() && !this.isComputedDisabled()) ? () => this._open() : null;
+      inputAttrs.onFocus = !this.isReadOnly() && !this.isComputedDisabled() ? () => this._onFocus() : null;
+      inputAttrs.onBlur = !this.isReadOnly() && !this.isComputedDisabled() ? () => this._onBlur() : null;
+      inputAttrs.tabIndex = !this.isReadOnly() && !this.isComputedDisabled() ? "0" : null;
+      inputAttrs.onClick = !this.isReadOnly() && !this.isComputedDisabled() ? () => this._open() : null;
       let showIndicateDrop = this.state.indicateDrop && !this.isReadOnly() && !this.isDisabled();
       let inputClassNames = [this.getClassName("placeholder")];
       if (showIndicateDrop) {
@@ -821,8 +846,8 @@ export const File = Context.withContext(
             disabled={this.isComputedDisabled()}
             readonly={this.isReadOnly()}
             loading={this.isLoading()}
-            onItemClick={(opt) => {
-              this.removeItem(opt)
+            onItemClick={opt => {
+              this.removeItem(opt);
             }}
             icon={this._getIcon()}
             iconClassName={this.getClassName("icon")}
@@ -844,14 +869,14 @@ export const File = Context.withContext(
     },
 
     _onFocus() {
-      UU5.Environment.EventListener.addWindowEvent('keyup', this.getId(), e => {
+      UU5.Environment.EventListener.addWindowEvent("keyup", this.getId(), e => {
         const isEnter = e.which === 13;
         isEnter && !this.isDisabled() && this._inputVal.click();
       });
     },
 
     _onFocusExit(position) {
-      UU5.Environment.EventListener.addWindowEvent('keyup', this.getId(), e => {
+      UU5.Environment.EventListener.addWindowEvent("keyup", this.getId(), e => {
         const isEnter = e.which === 13;
 
         if (isEnter && !this.isDisabled()) {
@@ -865,19 +890,17 @@ export const File = Context.withContext(
     },
 
     _onBlur() {
-      UU5.Environment.EventListener.removeWindowEvent('keyup', this.getId());
+      UU5.Environment.EventListener.removeWindowEvent("keyup", this.getId());
     },
-    //@@viewOff:componentSpecificHelpers
+    //@@viewOff:private
 
     //@@viewOn:render
     render() {
-      let inputId = this.getId() + '-input';
+      let inputId = this.getId() + "-input";
       return (
         <div {...this._getMainAttrs()} id={this.getId()}>
           {this.getLabel(inputId)}
-          {this.getInputWrapper(
-            (this.props.multiple) ? this._getMultipleInput(inputId) : this._getSingleInput(inputId)
-          )}
+          {this.getInputWrapper(this.props.multiple ? this._getMultipleInput(inputId) : this._getSingleInput(inputId))}
         </div>
       );
     }

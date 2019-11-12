@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -18,24 +18,29 @@ import "uu5g04-forms";
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
-describe('UU5.Forms.Form interface testing', () => {
-
-  it('setValues(values)', () => {
+describe("UU5.Forms.Form interface testing", () => {
+  it("setValues(values)", () => {
     const wrapper = mount(
       <UU5.Forms.Form>
-        <UU5.Forms.Text name="name" className="nameClass" required={true} id={"nameID"} label="Name"
-                        placeholder="John"/>
-        <UU5.Forms.TextArea name="description" label="Description" required={true} placeholder="Some text..."/>
-        <UU5.Forms.Controls/>
+        <UU5.Forms.Text
+          name="name"
+          className="nameClass"
+          required={true}
+          id={"nameID"}
+          label="Name"
+          placeholder="John"
+        />
+        <UU5.Forms.TextArea name="description" label="Description" required={true} placeholder="Some text..." />
+        <UU5.Forms.Controls />
       </UU5.Forms.Form>
     );
-    expect(wrapper.instance().getValues()).toEqual(expect.objectContaining({name: '', description: ''}));
-    const returnValue = wrapper.instance().setValues({name: 'Jest', description: 'Testing'});
+    expect(wrapper.instance().getValues()).toEqual(expect.objectContaining({ name: "", description: "" }));
+    const returnValue = wrapper.instance().setValues({ name: "Jest", description: "Testing" });
     wrapper.update();
-    expect(wrapper.instance().getValues()).toEqual(expect.objectContaining({name: 'Jest', description: 'Testing'}));
+    expect(wrapper.instance().getValues()).toEqual(expect.objectContaining({ name: "Jest", description: "Testing" }));
   });
 
-  it('eachFormInput(func)', () => {
+  it("eachFormInput(func)", () => {
     const wrapper = mount(
       <UU5.Forms.Form>
         <UU5.Forms.Text
@@ -54,7 +59,7 @@ describe('UU5.Forms.Form interface testing', () => {
           required={true}
           placeholder="Some text..."
         />
-        <UU5.Forms.Controls/>
+        <UU5.Forms.Controls />
       </UU5.Forms.Form>
     );
     const mockFunc = jest.fn();
@@ -63,13 +68,13 @@ describe('UU5.Forms.Form interface testing', () => {
     expect(mockFunc).toBeCalled();
     //In form are two inputs. Mock func must be called twice !
     expect(mockFunc).toHaveBeenCalledTimes(2);
-    const instanceOfText = wrapper.find('Text').instance();
-    const instanceOfArea = wrapper.find('TextArea').instance();
+    const instanceOfText = wrapper.find("Text").instance();
+    const instanceOfArea = wrapper.find("TextArea").instance();
     expect(mockFunc.mock.calls[0][0]).toBe(instanceOfText);
     expect(mockFunc.mock.calls[1][0]).toBe(instanceOfArea);
   });
 
-  it('eachFormControls(func)', () => {
+  it("eachFormControls(func)", () => {
     const wrapper = mount(
       <UU5.Forms.Form>
         <UU5.Forms.Text
@@ -88,7 +93,7 @@ describe('UU5.Forms.Form interface testing', () => {
           required={true}
           placeholder="Some text..."
         />
-        <UU5.Forms.Controls id={"idControls"} name={"controlName"} className="form-controls-jest"/>
+        <UU5.Forms.Controls id={"idControls"} name={"controlName"} className="form-controls-jest" />
       </UU5.Forms.Form>
     );
     const mockFunc = jest.fn();
@@ -97,19 +102,30 @@ describe('UU5.Forms.Form interface testing', () => {
     expect(mockFunc).toBeCalled();
     //Control component are in form only once. MockFunc must be called only once too.
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    const instanceOfControls = wrapper.find('Controls').instance();
+    const instanceOfControls = wrapper.find("Controls").instance();
     expect(mockFunc.mock.calls[0][0]).toBe(instanceOfControls);
   });
 
-
-  it('isValid() should return false', () => {
+  it("isValid() should return false", () => {
     const wrapper = mount(
       <UU5.Forms.Form>
-        <UU5.Forms.Text name="name" value={""} className="nameClass" required={true} id={"nameID"} label="Name"
-                        placeholder="John"/>
-        <UU5.Forms.TextArea name="description" value={""} label="Description" required={true}
-                            placeholder="Some text..."/>
-        <UU5.Forms.Controls/>
+        <UU5.Forms.Text
+          name="name"
+          value={""}
+          className="nameClass"
+          required={true}
+          id={"nameID"}
+          label="Name"
+          placeholder="John"
+        />
+        <UU5.Forms.TextArea
+          name="description"
+          value={""}
+          label="Description"
+          required={true}
+          placeholder="Some text..."
+        />
+        <UU5.Forms.Controls />
       </UU5.Forms.Form>
     );
     expect(wrapper.instance().isValid()).toBeFalsy();
@@ -118,13 +134,24 @@ describe('UU5.Forms.Form interface testing', () => {
     expect(wrapper.instance().isValid()).not.toBeUndefined();
   });
 
-  it('isValid()', () => {
+  it("isValid()", () => {
     const wrapper = mount(
       <UU5.Forms.Form>
-        <UU5.Forms.Text name="name" value={"John"} className="nameClass" id={"nameID"} label="Name" placeholder="John"/>
-        <UU5.Forms.TextArea name="description" value={"This is my text."} label="Description"
-                            placeholder="Some text..."/>
-        <UU5.Forms.Controls/>
+        <UU5.Forms.Text
+          name="name"
+          value={"John"}
+          className="nameClass"
+          id={"nameID"}
+          label="Name"
+          placeholder="John"
+        />
+        <UU5.Forms.TextArea
+          name="description"
+          value={"This is my text."}
+          label="Description"
+          placeholder="Some text..."
+        />
+        <UU5.Forms.Controls />
       </UU5.Forms.Form>
     );
     expect(wrapper.instance().isValid()).toBeTruthy();
@@ -133,13 +160,24 @@ describe('UU5.Forms.Form interface testing', () => {
     expect(wrapper.instance().isValid()).not.toBeUndefined();
   });
 
-  it('isForms()', () => {
+  it("isForms()", () => {
     const wrapper = mount(
       <UU5.Forms.Form>
-        <UU5.Forms.Text name="name" value={"John"} className="nameClass" id={"nameID"} label="Name" placeholder="John"/>
-        <UU5.Forms.TextArea name="description" value={"This is my text."} label="Description"
-                            placeholder="Some text..."/>
-        <UU5.Forms.Controls/>
+        <UU5.Forms.Text
+          name="name"
+          value={"John"}
+          className="nameClass"
+          id={"nameID"}
+          label="Name"
+          placeholder="John"
+        />
+        <UU5.Forms.TextArea
+          name="description"
+          value={"This is my text."}
+          label="Description"
+          placeholder="Some text..."
+        />
+        <UU5.Forms.Controls />
       </UU5.Forms.Form>
     );
     expect(wrapper.instance().isForm()).toBeTruthy();
@@ -148,28 +186,37 @@ describe('UU5.Forms.Form interface testing', () => {
     expect(wrapper.instance().isForm()).not.toBeUndefined();
   });
 
-
-  it('getValues()', () => {
+  it("getValues()", () => {
     const wrapper = mount(
       <UU5.Forms.Form>
-        <UU5.Forms.Text name="name" value={"John"} className="nameClass" id={"nameID"} label="Name" placeholder="John"/>
-        <UU5.Forms.TextArea name="description" value={"This is my text."} label="Description"
-                            placeholder="Some text..."/>
-        <UU5.Forms.Controls/>
+        <UU5.Forms.Text
+          name="name"
+          value={"John"}
+          className="nameClass"
+          id={"nameID"}
+          label="Name"
+          placeholder="John"
+        />
+        <UU5.Forms.TextArea
+          name="description"
+          value={"This is my text."}
+          label="Description"
+          placeholder="Some text..."
+        />
+        <UU5.Forms.Controls />
       </UU5.Forms.Form>
     );
     const returnValue = wrapper.instance().getValues();
     expect(() => wrapper.instance().getValues()).not.toThrow();
-    expect(returnValue).toEqual(expect.objectContaining({name: 'John', description: 'This is my text.'}))
+    expect(returnValue).toEqual(expect.objectContaining({ name: "John", description: "This is my text." }));
   });
 
-
-  it('getInputs()', () => {
+  it("getInputs()", () => {
     const wrapper = mount(
       <UU5.Forms.Form>
-        <UU5.Forms.Text name="name" label="Name" placeholder="John"/>
-        <UU5.Forms.TextArea name="description" label="Description" placeholder="Some text..."/>
-        <UU5.Forms.Controls/>
+        <UU5.Forms.Text name="name" label="Name" placeholder="John" />
+        <UU5.Forms.TextArea name="description" label="Description" placeholder="Some text..." />
+        <UU5.Forms.Controls />
       </UU5.Forms.Form>
     );
     expect(() => wrapper.instance().getInputs()).not.toThrow();
@@ -179,16 +226,16 @@ describe('UU5.Forms.Form interface testing', () => {
     expect(wrapper.instance().getInputs()).toBeInstanceOf(Object);
   });
 
-  it('getInputsByName(name)', () => {
+  it("getInputsByName(name)", () => {
     const wrapper = mount(
       <UU5.Forms.Form>
-        <UU5.Forms.Text name="name" className="nameClass" id={"nameID"} label="Name" placeholder="John"/>
-        <UU5.Forms.TextArea name="description" label="Description" placeholder="Some text..."/>
-        <UU5.Forms.Controls/>
+        <UU5.Forms.Text name="name" className="nameClass" id={"nameID"} label="Name" placeholder="John" />
+        <UU5.Forms.TextArea name="description" label="Description" placeholder="Some text..." />
+        <UU5.Forms.Controls />
       </UU5.Forms.Form>
     );
-    const instanceOfText = wrapper.find('Text').instance();
-    const instanceOfArea = wrapper.find('TextArea').instance();
+    const instanceOfText = wrapper.find("Text").instance();
+    const instanceOfArea = wrapper.find("TextArea").instance();
     expect(() => wrapper.instance().getInputByName("name")).not.toThrow();
     expect(() => wrapper.instance().getInputByName("description")).not.toThrow();
     const returnOfIfc = wrapper.instance().getInputByName("name");
@@ -197,12 +244,12 @@ describe('UU5.Forms.Form interface testing', () => {
     expect(returnOfIfcArea).toBe(instanceOfArea);
   });
 
-  it('getFormChildren(fce)', () => {
+  it("getFormChildren(fce)", () => {
     const wrapper = mount(
       <UU5.Forms.Form>
-        <UU5.Forms.Text name="name" className="nameClass" id={"nameID"} label="Name" placeholder="John"/>
-        <UU5.Forms.TextArea name="description" label="Description" placeholder="Some text..."/>
-        <UU5.Forms.Controls/>
+        <UU5.Forms.Text name="name" className="nameClass" id={"nameID"} label="Name" placeholder="John" />
+        <UU5.Forms.TextArea name="description" label="Description" placeholder="Some text..." />
+        <UU5.Forms.Controls />
       </UU5.Forms.Form>
     );
     expect(() => wrapper.instance().getFormChildren()).not.toThrow();
@@ -210,23 +257,25 @@ describe('UU5.Forms.Form interface testing', () => {
     expect(wrapper.instance().getFormChildren()).not.toBeUndefined();
     expect(wrapper.instance().getFormChildren()).toEqual(expect.any(Object));
     expect(wrapper.instance().getFormChildren()).toBeInstanceOf(Object);
-    expect(wrapper.instance().getFormChildren()).toEqual(expect.objectContaining({
-      type: 'form',
-      key: null,
-      ref: null
-    }));
+    expect(wrapper.instance().getFormChildren()).toEqual(
+      expect.objectContaining({
+        type: "form",
+        key: null,
+        ref: null
+      })
+    );
   });
 
-  it('getAlertBus()', () => {
+  it("getAlertBus()", () => {
     const wrapper = mount(
       <UU5.Forms.Form>
-        <UU5.Forms.Text name="name" className="nameClass" id={"nameID"} label="Name" placeholder="John"/>
-        <UU5.Forms.TextArea name="description" label="Description" placeholder="Some text..."/>
-        <UU5.Forms.Controls/>
+        <UU5.Forms.Text name="name" className="nameClass" id={"nameID"} label="Name" placeholder="John" />
+        <UU5.Forms.TextArea name="description" label="Description" placeholder="Some text..." />
+        <UU5.Forms.Controls />
       </UU5.Forms.Form>
     );
     expect(() => wrapper.instance().getAlertBus()).not.toThrow();
-    const instanceOfAlertBus = wrapper.find('AlertBus').instance();
+    const instanceOfAlertBus = wrapper.find("AlertBus").instance();
     const returnValue = wrapper.instance().getAlertBus();
     expect(returnValue).not.toBeNull();
     expect(returnValue).not.toBeUndefined();
@@ -234,14 +283,25 @@ describe('UU5.Forms.Form interface testing', () => {
     expect(returnValue).toBe(instanceOfAlertBus);
   });
 
-  it('save(values)', () => {
+  it("save(values)", () => {
     const mockFunc = jest.fn();
     const wrapper = mount(
       <UU5.Forms.Form onSave={mockFunc}>
-        <UU5.Forms.Text name="name" value={"John"} className="nameClass" id={"nameID"} label="Name" placeholder="John"/>
-        <UU5.Forms.TextArea name="description" value={"This is my text."} label="Description"
-                            placeholder="Some text..."/>
-        <UU5.Forms.Controls/>
+        <UU5.Forms.Text
+          name="name"
+          value={"John"}
+          className="nameClass"
+          id={"nameID"}
+          label="Name"
+          placeholder="John"
+        />
+        <UU5.Forms.TextArea
+          name="description"
+          value={"This is my text."}
+          label="Description"
+          placeholder="Some text..."
+        />
+        <UU5.Forms.Controls />
       </UU5.Forms.Form>
     );
     const returnValue = wrapper.instance().save();
@@ -252,55 +312,72 @@ describe('UU5.Forms.Form interface testing', () => {
     expect(() => wrapper.instance().save()).not.toThrow();
   });
 
-  it('saveDone(dtoOut)', () => {
+  it("saveDone(dtoOut)", () => {
     const mockFunc = jest.fn();
     const wrapper = mount(
       <UU5.Forms.Form onSaveDone={mockFunc}>
-        <UU5.Forms.Text name="name" value={"John"} className="nameClass" id={"nameID"} label="Name" placeholder="John"/>
-        <UU5.Forms.TextArea name="description" value={"This is my text."} label="Description"
-                            placeholder="Some text..."/>
-        <UU5.Forms.Controls/>
+        <UU5.Forms.Text
+          name="name"
+          value={"John"}
+          className="nameClass"
+          id={"nameID"}
+          label="Name"
+          placeholder="John"
+        />
+        <UU5.Forms.TextArea
+          name="description"
+          value={"This is my text."}
+          label="Description"
+          placeholder="Some text..."
+        />
+        <UU5.Forms.Controls />
       </UU5.Forms.Form>
     );
-    const returnValue = wrapper.instance().saveDone({data: 'My data'});
+    const returnValue = wrapper.instance().saveDone({ data: "My data" });
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(returnValue).toBe(wrapper.instance());
     expect(mockFunc.mock.calls[0][0].component).toBe(wrapper.instance());
-    expect(mockFunc.mock.calls[0][0].dtoOut).toEqual(expect.objectContaining(
-      {data: 'My data'}
-    ));
+    expect(mockFunc.mock.calls[0][0].dtoOut).toEqual(expect.objectContaining({ data: "My data" }));
     expect(() => wrapper.instance().saveDone()).not.toThrow();
   });
 
-
-  it('saveFail(dtoOut)', () => {
+  it("saveFail(dtoOut)", () => {
     const mockFunc = jest.fn();
     const wrapper = mount(
       <UU5.Forms.Form onSaveFail={mockFunc}>
-        <UU5.Forms.Text name="name" className="nameClass" id={"nameID"} label="Name" placeholder="John"/>
-        <UU5.Forms.TextArea name="description" label="Description" placeholder="Some text..."/>
-        <UU5.Forms.Controls/>
+        <UU5.Forms.Text name="name" className="nameClass" id={"nameID"} label="Name" placeholder="John" />
+        <UU5.Forms.TextArea name="description" label="Description" placeholder="Some text..." />
+        <UU5.Forms.Controls />
       </UU5.Forms.Form>
     );
-    const returnValue = wrapper.instance().saveFail({data: 'My data'});
+    const returnValue = wrapper.instance().saveFail({ data: "My data" });
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(returnValue).toBe(wrapper.instance());
     expect(mockFunc.mock.calls[0][0].component).toBe(wrapper.instance());
-    expect(mockFunc.mock.calls[0][0].dtoOut).toEqual(expect.objectContaining(
-      {data: 'My data'}
-    ));
+    expect(mockFunc.mock.calls[0][0].dtoOut).toEqual(expect.objectContaining({ data: "My data" }));
     expect(() => wrapper.instance().saveFail()).not.toThrow();
   });
 
-  it('validate()', () => {
+  it("validate()", () => {
     const wrapper = mount(
       <UU5.Forms.Form>
-        <UU5.Forms.Text name="name" value={"John"} className="nameClass" id={"nameID"} label="Name" placeholder="John"/>
-        <UU5.Forms.TextArea name="description" value={"This is my text."} label="Description"
-                            placeholder="Some text..."/>
-        <UU5.Forms.Controls/>
+        <UU5.Forms.Text
+          name="name"
+          value={"John"}
+          className="nameClass"
+          id={"nameID"}
+          label="Name"
+          placeholder="John"
+        />
+        <UU5.Forms.TextArea
+          name="description"
+          value={"This is my text."}
+          label="Description"
+          placeholder="Some text..."
+        />
+        <UU5.Forms.Controls />
       </UU5.Forms.Form>
     );
     expect(() => wrapper.instance().validate()).not.toThrow();
@@ -312,17 +389,28 @@ describe('UU5.Forms.Form interface testing', () => {
 
   //The simulation and verification of the correct effect of the setReady interface call is as follows
   //1 / I call the setPending () interface. Before this call, input elements are not disabled. After calling setPending, they are disabled.
-  it('setPending(setStateCallBack)', () => {
+  it("setPending(setStateCallBack)", () => {
     const wrapper = mount(
       <UU5.Forms.Form>
-        <UU5.Forms.Text name="name" value={"John"} className="nameClass" id={"nameID"} label="Name" placeholder="John"/>
-        <UU5.Forms.TextArea name="description" value={"This is my text."} label="Description"
-                            placeholder="Some text..."/>
-        <UU5.Forms.Controls/>
+        <UU5.Forms.Text
+          name="name"
+          value={"John"}
+          className="nameClass"
+          id={"nameID"}
+          label="Name"
+          placeholder="John"
+        />
+        <UU5.Forms.TextArea
+          name="description"
+          value={"This is my text."}
+          label="Description"
+          placeholder="Some text..."
+        />
+        <UU5.Forms.Controls />
       </UU5.Forms.Form>
     );
-    const instanceText = wrapper.find('Text').instance();
-    const instanceArea = wrapper.find('TextArea').instance();
+    const instanceText = wrapper.find("Text").instance();
+    const instanceArea = wrapper.find("TextArea").instance();
     expect(instanceText.isDisabled()).toBeFalsy();
     expect(instanceArea.isDisabled()).toBeFalsy();
     const mockFunc = jest.fn();
@@ -337,18 +425,29 @@ describe('UU5.Forms.Form interface testing', () => {
   //The simulation and verification of the correct effect of the setReady interface call is as follows
   //1 / I call the setPending () interface. Before this call, input elements are not disabled. After calling setPending, they are disabled.
   //2 / call ifc setReady (). If text element inputs and textarea are not disabled, the input elements are OK.
-  it('setReady(setStateCallBack)', () => {
+  it("setReady(setStateCallBack)", () => {
     const wrapper = mount(
       <UU5.Forms.Form>
-        <UU5.Forms.Text name="name" value={"John"} className="nameClass" id={"nameID"} label="Name" placeholder="John"/>
-        <UU5.Forms.TextArea name="description" value={"This is my text."} label="Description"
-                            placeholder="Some text..."/>
-        <UU5.Forms.Controls/>
+        <UU5.Forms.Text
+          name="name"
+          value={"John"}
+          className="nameClass"
+          id={"nameID"}
+          label="Name"
+          placeholder="John"
+        />
+        <UU5.Forms.TextArea
+          name="description"
+          value={"This is my text."}
+          label="Description"
+          placeholder="Some text..."
+        />
+        <UU5.Forms.Controls />
       </UU5.Forms.Form>
     );
     const mockFunc = jest.fn();
-    const instanceText = wrapper.find('Text').instance();
-    const instanceArea = wrapper.find('TextArea').instance();
+    const instanceText = wrapper.find("Text").instance();
+    const instanceArea = wrapper.find("TextArea").instance();
     expect(instanceText.isDisabled()).toBeFalsy();
     expect(instanceArea.isDisabled()).toBeFalsy();
     const returnValue = wrapper.instance().setPending(mockFunc);
@@ -365,38 +464,38 @@ describe('UU5.Forms.Form interface testing', () => {
     expect(instanceArea.isDisabled()).toBeFalsy();
   });
 
-  it('reset(setStateCallBack)', () => {
+  it("reset(setStateCallBack)", () => {
     const wrapper = mount(
       <UU5.Forms.Form>
-        <UU5.Forms.Text name="name" className="nameClass" id={"nameID"} label="Name" placeholder="John"/>
-        <UU5.Forms.TextArea name="description" label="Description"
-                            placeholder="Some text..."/>
-        <UU5.Forms.Controls/>
+        <UU5.Forms.Text name="name" className="nameClass" id={"nameID"} label="Name" placeholder="John" />
+        <UU5.Forms.TextArea name="description" label="Description" placeholder="Some text..." />
+        <UU5.Forms.Controls />
       </UU5.Forms.Form>
     );
     const mockFunc = jest.fn();
-    expect(wrapper.instance().getValues()).toEqual(expect.objectContaining({name: '', description: ''}));
-    wrapper.instance().setValues({name: 'John', description: 'This is my text.'});
+    expect(wrapper.instance().getValues()).toEqual(expect.objectContaining({ name: "", description: "" }));
+    wrapper.instance().setValues({ name: "John", description: "This is my text." });
     wrapper.update();
-    expect(wrapper.instance().getValues()).toEqual(expect.objectContaining({
-      name: 'John',
-      description: 'This is my text.'
-    }));
+    expect(wrapper.instance().getValues()).toEqual(
+      expect.objectContaining({
+        name: "John",
+        description: "This is my text."
+      })
+    );
     const returnValue = wrapper.instance().reset(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(returnValue).toBe(wrapper.instance());
-    expect(wrapper.instance().getValues()).toEqual(expect.objectContaining({name: '', description: ''}));
+    expect(wrapper.instance().getValues()).toEqual(expect.objectContaining({ name: "", description: "" }));
   });
 
-  it('cancel()', () => {
+  it("cancel()", () => {
     const mockFunc = jest.fn();
     const wrapper = mount(
       <UU5.Forms.Form onCancel={mockFunc}>
-        <UU5.Forms.Text name="name" className="nameClass" id={"nameID"} label="Name" placeholder="John"/>
-        <UU5.Forms.TextArea name="description" label="Description"
-                            placeholder="Some text..."/>
-        <UU5.Forms.Controls/>
+        <UU5.Forms.Text name="name" className="nameClass" id={"nameID"} label="Name" placeholder="John" />
+        <UU5.Forms.TextArea name="description" label="Description" placeholder="Some text..." />
+        <UU5.Forms.Controls />
       </UU5.Forms.Form>
     );
     const returnValue = wrapper.instance().cancel();
@@ -406,5 +505,4 @@ describe('UU5.Forms.Form interface testing', () => {
     expect(mockFunc.mock.calls[0][0].component).toBe(wrapper.instance());
     expect(() => wrapper.instance().cancel()).not.toThrow();
   });
-
 });

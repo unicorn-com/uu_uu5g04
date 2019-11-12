@@ -1,28 +1,30 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 const ClassNames = UU5.Common.ClassNames;
 
-import Button from './button.js';
-import Icon from './icon.js';
-import DropdownItem from './dropdown-item.js';
+import Button from "./button.js";
+import Icon from "./icon.js";
+import DropdownItem from "./dropdown-item.js";
 
-import './dropdown.less';
+import "./dropdown.less";
+//@@viewOff:imports
 
 export const Dropdown = createReactClass({
   //@@viewOn:mixins
@@ -40,7 +42,7 @@ export const Dropdown = createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("Dropdown"),
-    nestingLevelList: UU5.Environment.getNestingLevelList('bigBoxCollection', 'box'),
+    nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
       main: ns.css("dropdown"),
       dropdown: ns.css("dropdown-dropdown"),
@@ -77,7 +79,7 @@ export const Dropdown = createReactClass({
     label: PropTypes.any, // content
     size: PropTypes.string,
     onClick: PropTypes.func,
-    bgStyle: PropTypes.oneOf(['filled', 'outline', 'transparent', 'underline', 'link']),
+    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline", "link"]),
 
     // icon props
     iconOpen: PropTypes.string,
@@ -85,9 +87,7 @@ export const Dropdown = createReactClass({
     iconHidden: PropTypes.bool,
 
     // dropdown props
-    items: PropTypes.arrayOf(
-      PropTypes.object
-    ),
+    items: PropTypes.arrayOf(PropTypes.object),
     pullRight: PropTypes.bool,
     dropup: PropTypes.bool,
     split: PropTypes.bool,
@@ -98,14 +98,12 @@ export const Dropdown = createReactClass({
 
     closedOnLeave: PropTypes.bool,
     openOnHover: PropTypes.bool,
-    allowTags: PropTypes.arrayOf(
-      PropTypes.string
-    ),
+    allowTags: PropTypes.arrayOf(PropTypes.string),
     disableBackdrop: PropTypes.bool,
     menuClassName: PropTypes.string,
     borderRadius: PropTypes.string,
-    elevation: PropTypes.oneOf(['-1', '0', '1', '2', '3', '4', '5', -1, 0, 1, 2, 3, 4, 5]),
-    elevationHover: PropTypes.oneOf(['-1', '0', '1', '2', '3', '4', '5', -1, 0, 1, 2, 3, 4, 5]),
+    elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+    elevationHover: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
     buttonProps: PropTypes.object,
     splitButtonProps: PropTypes.object,
     baseline: PropTypes.bool,
@@ -116,12 +114,12 @@ export const Dropdown = createReactClass({
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      label: 'Dropdown',
-      size: 'm',
+      label: "Dropdown",
+      size: "m",
       onClick: null,
       bgStyle: "filled",
-      iconOpen: 'mdi-menu-down',
-      iconClosed: 'mdi-menu-down',
+      iconOpen: "mdi-menu-down",
+      iconClosed: "mdi-menu-down",
       items: [],
       iconHidden: false,
       pullRight: false,
@@ -145,15 +143,15 @@ export const Dropdown = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
       open: false,
       pullRight: false,
-      block: false,
+      block: false
     };
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   isDropdown() {
@@ -161,20 +159,23 @@ export const Dropdown = createReactClass({
   },
 
   open(setStateCallback) {
-    if(this.isOpen()) return this;
-    this.setState({open: true}, () => this._open(setStateCallback));
+    if (this.isOpen()) return this;
+    this.setState({ open: true }, () => this._open(setStateCallback));
     return this;
   },
 
   close(setStateCallback) {
-    this.setState({open: false}, setStateCallback);
+    this.setState({ open: false }, setStateCallback);
     return this;
   },
 
   toggle(setStateCallback) {
-    this.setState(state => {
-      return { open: !state.open };
-    }, () => this.isOpen() && this._open(setStateCallback));
+    this.setState(
+      state => {
+        return { open: !state.open };
+      },
+      () => this.isOpen() && this._open(setStateCallback)
+    );
     return this;
   },
 
@@ -183,15 +184,18 @@ export const Dropdown = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
+  //@@viewOn:overriding
   shouldChildRender_(child) {
     let childTagName = UU5.Common.Tools.getChildTagName(child);
     let defaultChildTagName = this.getDefault().childTagName;
     let childTagNames = this.props.allowTags.concat(defaultChildTagName);
     let result = childTagNames.indexOf(childTagName) > -1;
-    if (!result && (typeof child !== 'string' || child.trim())) {
-      if (childTagName) this.showError('childTagNotAllowed', [childTagName, this.getTagName(), childTagName, defaultChildTagName], { mixinName: 'UU5.Common.BaseMixin' });
-      else this.showError('childNotAllowed', [child, defaultChildTagName], { mixinName: 'UU5.Common.BaseMixin' });
+    if (!result && (typeof child !== "string" || child.trim())) {
+      if (childTagName)
+        this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagName], {
+          mixinName: "UU5.Common.BaseMixin"
+        });
+      else this.showError("childNotAllowed", [child, defaultChildTagName], { mixinName: "UU5.Common.BaseMixin" });
     }
     return result;
   },
@@ -205,9 +209,9 @@ export const Dropdown = createReactClass({
 
     return newChildProps;
   },
-  //@@viewOff:overridingMethods
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _findTarget(item) {
     let result = false;
     let id = this.getId();
@@ -225,7 +229,7 @@ export const Dropdown = createReactClass({
     let icon = null;
     if (!this.props.iconHidden) {
       var iconName = this.isOpen() ? this.props.iconOpen : this.props.iconClosed;
-      icon = <Icon icon={iconName}/>;
+      icon = <Icon icon={iconName} />;
     }
     return icon;
   },
@@ -241,26 +245,30 @@ export const Dropdown = createReactClass({
         }
       };
     } else if (this.props.children) {
-      contentProps = {children: this.props.children};
+      contentProps = { children: this.props.children };
     } else if (this.props.content) {
-      contentProps = {content: this.props.content};
+      contentProps = { content: this.props.content };
     }
     let menuClassName = this.getClassName("menu");
     if (this.state.block) {
       menuClassName += " " + this.getClassName("block");
     }
 
-    return <div className={menuClassName}><ul className={this.getClassName('menuList')}>{this.buildChildren(contentProps)}</ul></div>;
+    return (
+      <div className={menuClassName}>
+        <ul className={this.getClassName("menuList")}>{this.buildChildren(contentProps)}</ul>
+      </div>
+    );
   },
 
   _getButton() {
     const dropdown = this;
     let onClick = null;
     if (this.props.split) {
-      if (typeof this.props.onClick === 'function') {
-        onClick = function (button, event) {
+      if (typeof this.props.onClick === "function") {
+        onClick = function(button, event) {
           dropdown.props.onClick(dropdown, event);
-        }
+        };
       }
     } else {
       onClick = this._onClickHandler;
@@ -291,11 +299,9 @@ export const Dropdown = createReactClass({
     if (Array.isArray(this.props.label)) {
       content = this.props.label.concat([icon]);
     } else {
-      content = [this.props.label, icon]
+      content = [this.props.label, icon];
     }
-    return (
-      <Button {...buttonProps} content={content}/>
-    );
+    return <Button {...buttonProps} content={content} />;
   },
 
   _getIconButton() {
@@ -332,35 +338,40 @@ export const Dropdown = createReactClass({
     mainAttrs.id = this.getId();
 
     if (this.isOpen()) {
-      mainAttrs.className += ' ' + this.getClassName().open;
+      mainAttrs.className += " " + this.getClassName().open;
     }
     if (this.props.baseline) {
-      mainAttrs.className += ' uu5-bricks-button-baseline';
+      mainAttrs.className += " uu5-bricks-button-baseline";
     }
 
-    this.props.pullRight && (mainAttrs.className += ' ' + this.getClassName().pullRight);
+    this.props.pullRight && (mainAttrs.className += " " + this.getClassName().pullRight);
 
     if (this.props.split) {
-      mainAttrs.className += ' ' + this.getClassName().split;
+      mainAttrs.className += " " + this.getClassName().split;
     } else if (this.props.dropup) {
-      mainAttrs.className += ' ' + this.getClassName().dropup;
+      mainAttrs.className += " " + this.getClassName().dropup;
     } else {
-      mainAttrs.className += ' ' + this.getClassName().dropdown;
+      mainAttrs.className += " " + this.getClassName().dropdown;
     }
 
     if (this.state.dropup) {
-      mainAttrs.className += ' ' + this.getClassName().autoDropup;
+      mainAttrs.className += " " + this.getClassName().autoDropup;
     } else {
-      mainAttrs.className += ' ' + this.getClassName().autoDropdown;
+      mainAttrs.className += " " + this.getClassName().autoDropdown;
     }
 
-    mainAttrs.onMouseLeave = this.props.closedOnLeave || this.props.openOnHover ? () => {
-      this.close();
-    } : null;
+    mainAttrs.onMouseLeave =
+      this.props.closedOnLeave || this.props.openOnHover
+        ? () => {
+            this.close();
+          }
+        : null;
 
-    mainAttrs.onMouseOver = this.props.openOnHover ? () => {
-      this.open();
-    } : null;
+    mainAttrs.onMouseOver = this.props.openOnHover
+      ? () => {
+          this.open();
+        }
+      : null;
 
     return mainAttrs;
   },
@@ -393,36 +404,51 @@ export const Dropdown = createReactClass({
 
     let bodyClassName = this.getClassName("menuWrapper");
     if (this._popover) {
-      this._popover.open({
-        onClose: this.close,
-        disableBackdrop: this.props.disableBackdrop,
-        aroundElement: this._button,
-        position: this._getPosition(),
-        offset: this.getDefault().offset,
-        content: this._getChildren(),
-        className: className,
-        bodyClassName: bodyClassName,
-        fitHeightToViewport: this.props.fitMenuToViewport
-      }, setStateCallback);
+      this._popover.open(
+        {
+          onClose: this.close,
+          disableBackdrop: this.props.disableBackdrop,
+          aroundElement: this._button,
+          position: this._getPosition(),
+          offset: this.getDefault().offset,
+          content: this._getChildren(),
+          className: className,
+          bodyClassName: bodyClassName,
+          fitHeightToViewport: this.props.fitMenuToViewport
+        },
+        setStateCallback
+      );
     } else if (typeof setStateCallback === "function") {
       setStateCallback();
     }
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
     return (
       <div {...this._getMainAttrs()}>
-        <div className={this.getClassName().buttonCover} id={this.getId() + '-cover'}
-             ref={button => this._button = button}>
+        <div
+          className={this.getClassName().buttonCover}
+          id={this.getId() + "-cover"}
+          ref={button => (this._button = button)}
+        >
           {this._getButton()}
-          {this.props.bgStyle === "link" ? <span className={this.getClassName("linkSplit") + " " + this.getClassName("size") + this.props.size} /> : null}
+          {this.props.bgStyle === "link" ? (
+            <span className={this.getClassName("linkSplit") + " " + this.getClassName("size") + this.props.size} />
+          ) : null}
           {this._getIconButton()}
           {this.getDisabledCover()}
         </div>
 
-        {this.isOpen() ? <UU5.Bricks.Popover shown={this.state.open} disabled={this.isDisabled()} forceRender ref={popover => this._popover = popover} /> : null}
+        {this.isOpen() ? (
+          <UU5.Bricks.Popover
+            shown={this.state.open}
+            disabled={this.isDisabled()}
+            forceRender
+            ref={popover => (this._popover = popover)}
+          />
+        ) : null}
       </div>
     );
   }

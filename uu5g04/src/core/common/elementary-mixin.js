@@ -1,23 +1,22 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 import ns from "./common-ns.js";
-import Tools from './tools.js'
+import Tools from "./tools.js";
 
 export const ElementaryMixin = {
-
   //@@viewOn:statics
   statics: {
     "UU5.Common.ElementaryMixin": {
@@ -53,7 +52,7 @@ export const ElementaryMixin = {
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     // initialize
     this.registerMixin("UU5.Common.ElementaryMixin");
@@ -74,7 +73,7 @@ export const ElementaryMixin = {
       });
     }
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   hasUU5CommonElementaryMixin() {
@@ -99,7 +98,7 @@ export const ElementaryMixin = {
   },
 
   setHiddenValue(value, setStateCallback) {
-    if (typeof this.setHiddenValue_ === 'function') {
+    if (typeof this.setHiddenValue_ === "function") {
       this.setHiddenValue_(value, setStateCallback);
     } else {
       this.setHiddenValueDefault(value, setStateCallback);
@@ -113,7 +112,7 @@ export const ElementaryMixin = {
   },
 
   hide(setStateCallback) {
-    if (typeof this.hide_ === 'function') {
+    if (typeof this.hide_ === "function") {
       this.hide_(setStateCallback);
     } else {
       this.hideDefault(setStateCallback);
@@ -126,7 +125,7 @@ export const ElementaryMixin = {
   },
 
   show(setStateCallback) {
-    if (typeof this.show_ === 'function') {
+    if (typeof this.show_ === "function") {
       this.show_(setStateCallback);
     } else {
       this.showDefault(setStateCallback);
@@ -144,7 +143,7 @@ export const ElementaryMixin = {
   },
 
   toggleHidden(setStateCallback) {
-    if (typeof this.toggleHidden_ === 'function') {
+    if (typeof this.toggleHidden_ === "function") {
       this.toggleHidden_(setStateCallback);
     } else {
       this.toggleHiddenDefault(setStateCallback);
@@ -153,13 +152,13 @@ export const ElementaryMixin = {
   },
 
   toggleHiddenDefault(setStateCallback) {
-    this.setState((state) => {
+    this.setState(state => {
       return { hidden: !state.hidden };
     }, setStateCallback);
   },
 
   setDisabledValue(value, setStateCallback) {
-    if (typeof this.setDisabledValue_ === 'function') {
+    if (typeof this.setDisabledValue_ === "function") {
       this.setDisabledValue_(value, setStateCallback);
     } else {
       this.setDisabledValueDefault(value, setStateCallback);
@@ -173,7 +172,7 @@ export const ElementaryMixin = {
   },
 
   disable(setStateCallback) {
-    if (typeof this.disable_ === 'function') {
+    if (typeof this.disable_ === "function") {
       this.disable_(setStateCallback);
     } else {
       this.disableDefault(setStateCallback);
@@ -187,7 +186,7 @@ export const ElementaryMixin = {
   },
 
   enable(setStateCallback) {
-    if (typeof this.enable_ === 'function') {
+    if (typeof this.enable_ === "function") {
       this.enable_(setStateCallback);
     } else {
       this.enableDefault(setStateCallback);
@@ -205,16 +204,16 @@ export const ElementaryMixin = {
   },
 
   toggleDisabled(setStateCallback) {
-    if (typeof this.toggleDisabled_ === 'function') {
+    if (typeof this.toggleDisabled_ === "function") {
       this.toggleDisabled_(setStateCallback);
     } else {
-      this.toggleDisabledDefault(setStateCallback)
+      this.toggleDisabledDefault(setStateCallback);
     }
     return this;
   },
 
   toggleDisabledDefault(setStateCallback) {
-    this.setState((state) => {
+    this.setState(state => {
       return { disabled: !state.disabled };
     }, setStateCallback);
     return this;
@@ -226,7 +225,7 @@ export const ElementaryMixin = {
   },
 
   select(setStateCallback) {
-    if (typeof this.select_ === 'function') {
+    if (typeof this.select_ === "function") {
       this.select_(setStateCallback);
     } else {
       this.selectDefault(setStateCallback);
@@ -240,7 +239,7 @@ export const ElementaryMixin = {
   },
 
   deselect(setStateCallback) {
-    if (typeof this.deselect_ === 'function') {
+    if (typeof this.deselect_ === "function") {
       this.deselect_(setStateCallback);
     } else {
       this.deselectDefault(setStateCallback);
@@ -258,7 +257,7 @@ export const ElementaryMixin = {
   },
 
   toggleSelected(setStateCallback) {
-    if (typeof this.toggleSelected_ === 'function') {
+    if (typeof this.toggleSelected_ === "function") {
       this.toggleSelected_(setStateCallback);
     } else {
       this.toggleSelectedDefault(setStateCallback);
@@ -267,69 +266,78 @@ export const ElementaryMixin = {
   },
 
   toggleSelectedDefault(setStateCallback) {
-    this.setState((state) => {
+    this.setState(state => {
       return { selected: !state.selected };
     }, setStateCallback);
     return this;
   },
 
   buildMainAttrs(mainAttrs) {
-    var newMainAttrs = Tools.mergeDeep({}, mainAttrs || this.getUU5CommonBaseMixinProps && this.getUU5CommonBaseMixinProps().mainAttrs, {
-      title: this.getTooltip(),
-      className: this.getFullClassName()
-    });
+    var newMainAttrs = Tools.mergeDeep(
+      {},
+      mainAttrs || (this.getUU5CommonBaseMixinProps && this.getUU5CommonBaseMixinProps().mainAttrs),
+      {
+        title: this.getTooltip(),
+        className: this.getFullClassName()
+      }
+    );
     newMainAttrs.className = this.getHiddenClassName(newMainAttrs.className);
     newMainAttrs.className = this.getDisabledClassName(newMainAttrs.className);
     newMainAttrs.className = this.getSelectedClassName(newMainAttrs.className);
 
-    let style = typeof this.props.style === 'string' ?
-      this.__styleStringToObject(this.props.style) : this.props.style;
+    let style = typeof this.props.style === "string" ? this.__styleStringToObject(this.props.style) : this.props.style;
 
     newMainAttrs.style = Tools.mergeDeep({}, newMainAttrs.style, style);
     return newMainAttrs;
   },
 
   getHiddenClassName(className) {
-    var hiddenClassName = '';
+    var hiddenClassName = "";
     if (this.isHidden()) {
-      hiddenClassName = this.getClassName('hidden') || this.getClassName(null, "UU5.Common.ElementaryMixin").hidden;
+      hiddenClassName = this.getClassName("hidden") || this.getClassName(null, "UU5.Common.ElementaryMixin").hidden;
     }
-    return className ? (className + ' ' + hiddenClassName).trim() : hiddenClassName;
+    return className ? (className + " " + hiddenClassName).trim() : hiddenClassName;
   },
 
   getDisabledClassName(className) {
-    var disabledClassName = '';
+    var disabledClassName = "";
     if (this.isDisabled()) {
-      disabledClassName = this.getClassName('disabled') || this.getClassName(null, "UU5.Common.ElementaryMixin").disabled;
+      disabledClassName =
+        this.getClassName("disabled") || this.getClassName(null, "UU5.Common.ElementaryMixin").disabled;
     }
-    return className ? (className + ' ' + disabledClassName).trim() : disabledClassName;
+    return className ? (className + " " + disabledClassName).trim() : disabledClassName;
   },
 
   getSelectedClassName(className) {
-    var selectedClassName = '';
+    var selectedClassName = "";
     if (this.isSelected()) {
-      selectedClassName = this.getClassName('selected') || this.getClassName(null, "UU5.Common.ElementaryMixin").selected;
+      selectedClassName =
+        this.getClassName("selected") || this.getClassName(null, "UU5.Common.ElementaryMixin").selected;
     }
-    return className ? (className + ' ' + selectedClassName).trim() : selectedClassName;
+    return className ? (className + " " + selectedClassName).trim() : selectedClassName;
   },
 
   getDisabledCover() {
-    var className = this.getClassName('disabledCover') || this.getClassName(null, "UU5.Common.ElementaryMixin").disabledCover;
-    return this.isDisabled() ? React.createElement('span', { className: className, key: "disabledCover" }) : null;
+    var className =
+      this.getClassName("disabledCover") || this.getClassName(null, "UU5.Common.ElementaryMixin").disabledCover;
+    return this.isDisabled() ? React.createElement("span", { className: className, key: "disabledCover" }) : null;
   },
 
   getDisabledCoverTransparent() {
-    var className = this.getClassName('disabledCoverTransparent') || this.getClassName(null, "UU5.Common.ElementaryMixin").disabledCoverTransparent;
-    return this.isDisabled() ? React.createElement('span', { className: className, key: "disabledCoverTransparent" }) : null;
+    var className =
+      this.getClassName("disabledCoverTransparent") ||
+      this.getClassName(null, "UU5.Common.ElementaryMixin").disabledCoverTransparent;
+    return this.isDisabled()
+      ? React.createElement("span", { className: className, key: "disabledCoverTransparent" })
+      : null;
   }
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
-  //@@viewOff:componentSpecificHelpers
-
+  //@@viewOn:private
+  //@@viewOff:private
 };
 
 export default ElementaryMixin;

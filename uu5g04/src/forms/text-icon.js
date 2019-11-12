@@ -11,28 +11,25 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "./forms-ns.js";
 
-import AutocompleteTextInput from './internal/autocomplete-text-input.js';
-import TextInputMixin from './mixins/text-input-mixin.js';
+import AutocompleteTextInput from "./internal/autocomplete-text-input.js";
+import TextInputMixin from "./mixins/text-input-mixin.js";
 import Context from "./form-context.js";
 
-import './text-icon.less';
+import "./text-icon.less";
+//@@viewOff:imports
 
 export const TextIcon = Context.withContext(
   createReactClass({
     //@@viewOn:mixins
-    mixins: [
-      UU5.Common.BaseMixin,
-      UU5.Common.PureRenderMixin,
-      UU5.Common.ElementaryMixin,
-      TextInputMixin
-    ],
+    mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, TextInputMixin],
     //@@viewOff:mixins
 
     //@@viewOn:statics
@@ -41,12 +38,12 @@ export const TextIcon = Context.withContext(
       classNames: {
         main: ns.css("text-icon"),
         left: ns.css("text-icon-left"),
-        right: ns.css("text-icon-right"),
+        right: ns.css("text-icon-right")
       },
       errors: {
-        validateError: 'Validated result is not object.'
+        validateError: "Validated result is not object."
       },
-      lsi: () => (UU5.Environment.Lsi.Forms.message)
+      lsi: () => UU5.Environment.Lsi.Forms.message
     },
     //@@viewOff:statics
 
@@ -55,7 +52,7 @@ export const TextIcon = Context.withContext(
       value: PropTypes.string,
       password: PropTypes.bool,
       icon: PropTypes.string,
-      iconPosition: PropTypes.oneOf(['left', 'right']),
+      iconPosition: PropTypes.oneOf(["left", "right"]),
       onClick: PropTypes.func,
       pattern: PropTypes.string,
       actionOnEnter: PropTypes.bool
@@ -63,12 +60,12 @@ export const TextIcon = Context.withContext(
     //@@viewOff:propTypes
 
     //@@viewOn:getDefaultProps
-    getDefaultProps: function () {
+    getDefaultProps: function() {
       return {
-        value: '',
+        value: "",
         password: false,
         icon: null,
-        iconPosition: 'right',
+        iconPosition: "right",
         onClick: null,
         pattern: null,
         actionOnEnter: false
@@ -76,10 +73,10 @@ export const TextIcon = Context.withContext(
     },
     //@@viewOff:getDefaultProps
 
-    //@@viewOn:standardComponentLifeCycle
+    //@@viewOn:reactLifeCycle
     componentWillMount() {
-      if (this.props.onValidate && typeof this.props.onValidate === 'function') {
-        this._validateOnChange({ value: this.state.value, event: null, component: this })
+      if (this.props.onValidate && typeof this.props.onValidate === "function") {
+        this._validateOnChange({ value: this.state.value, event: null, component: this });
       }
 
       return this;
@@ -87,7 +84,7 @@ export const TextIcon = Context.withContext(
 
     componentWillReceiveProps(nextProps) {
       if (nextProps.controlled) {
-        if (this.props.onValidate && typeof this.props.onValidate === 'function') {
+        if (this.props.onValidate && typeof this.props.onValidate === "function") {
           this._validateOnChange({ value: nextProps.value, event: null, component: this }, true);
         } else {
           this.setFeedback(nextProps.feedback, nextProps.message, nextProps.value);
@@ -96,16 +93,16 @@ export const TextIcon = Context.withContext(
       return this;
     },
 
-    //@@viewOff:standardComponentLifeCycle
+    //@@viewOff:reactLifeCycle
 
     //@@viewOn:interface
     //@@viewOff:interface
 
-    //@@viewOn:overridingMethods
+    //@@viewOn:overriding
     // TODO: tohle je ještě otázka - je potřeba nastavit hodnotu z jiné komponenty (musí být validace) a z onChange (neměla by být validace)
     setValue_(value, setStateCallback) {
       if (this._checkRequired({ value })) {
-        if (typeof this.props.onValidate === 'function') {
+        if (typeof this.props.onValidate === "function") {
           this._validateOnChange({ value, event: null, component: this });
         } else {
           this.setInitial(null, value, setStateCallback);
@@ -130,19 +127,26 @@ export const TextIcon = Context.withContext(
       } else {
         let result = this.getChangeFeedback(opt);
         let callback = setStateCallback;
-        if (!(opt._data && opt._data.closeOnCallback) && result.foundAutocompleteItems && result.foundAutocompleteItems.length > 0) {
+        if (
+          !(opt._data && opt._data.closeOnCallback) &&
+          result.foundAutocompleteItems &&
+          result.foundAutocompleteItems.length > 0
+        ) {
           callback = () => this.open(setStateCallback);
         } else {
           callback = () => this.close(setStateCallback);
           this.focus();
         }
-        this.setState({
-          feedback: result.feedback,
-          message: result.message,
-          value: result.value,
-          foundAutocompleteItems: result.foundAutocompleteItems,
-          selectedIndex: result.selectedIndex
-        }, callback);
+        this.setState(
+          {
+            feedback: result.feedback,
+            message: result.message,
+            value: result.value,
+            foundAutocompleteItems: result.foundAutocompleteItems,
+            selectedIndex: result.selectedIndex
+          },
+          callback
+        );
       }
 
       return this;
@@ -156,16 +160,16 @@ export const TextIcon = Context.withContext(
 
       this.resetDefault(setStateCallback);
     },
-    //@@viewOff:overridingMethods
+    //@@viewOff:overriding
 
-    //@@viewOn:componentSpecificHelpers
+    //@@viewOn:private
     _validateOnChange(opt, checkValue, setStateCallback) {
       let _callCallback = typeof setStateCallback === "function";
 
       if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
         let result = this.onValidate(opt);
         if (result) {
-          if (typeof result === 'object') {
+          if (typeof result === "object") {
             if (result.feedback) {
               _callCallback = false;
               this.setFeedback(result.feedback, result.message, result.value, setStateCallback);
@@ -174,7 +178,9 @@ export const TextIcon = Context.withContext(
               this.setState({ value: opt.value }, setStateCallback);
             }
           } else {
-            this.showError('validateError', null, { context: { event: e, func: this.props.onValidate, result: result } });
+            this.showError("validateError", null, {
+              context: { event: e, func: this.props.onValidate, result: result }
+            });
           }
         }
       }
@@ -189,7 +195,7 @@ export const TextIcon = Context.withContext(
     _onBlur(opt) {
       opt.component = this;
 
-      if (typeof this.props.onBlur === 'function') {
+      if (typeof this.props.onBlur === "function") {
         this.props.onBlur(opt);
       } else {
         this.onBlurDefault(opt);
@@ -199,7 +205,7 @@ export const TextIcon = Context.withContext(
     _onFocus(opt) {
       opt.component = this;
 
-      if (typeof this.props.onFocus === 'function') {
+      if (typeof this.props.onFocus === "function") {
         this.props.onFocus(opt);
       } else {
         this.onFocusDefault(opt);
@@ -213,14 +219,15 @@ export const TextIcon = Context.withContext(
     },
 
     _onIconClick() {
-      if (typeof this.props.onClick === 'function') {
+      if (typeof this.props.onClick === "function") {
         this.props.onClick({ value: this.state.value, component: this });
       }
     },
 
     _getMainAttrs() {
       let attrs = this._getInputAttrs();
-      attrs.className += ' ' + (this.props.iconPosition === 'left' ? this.getClassName().left : this.getClassName().right);
+      attrs.className +=
+        " " + (this.props.iconPosition === "left" ? this.getClassName().left : this.getClassName().right);
       return attrs;
     },
 
@@ -252,7 +259,7 @@ export const TextIcon = Context.withContext(
         readonly: this.isReadOnly(),
         loading: this.isLoading(),
         feedback: this.getFeedback(),
-        ref_: (item) => this._textInput = item,
+        ref_: item => (this._textInput = item),
         borderRadius: this.props.borderRadius,
         elevation: this.props.elevation,
         bgStyle: this.props.bgStyle,
@@ -260,7 +267,8 @@ export const TextIcon = Context.withContext(
         colorSchema: this.props.colorSchema,
         icon: this.props.icon,
         iconOnClick: this._onIconClick,
-        clickable: typeof this.props.onClick === "function"
+        clickable: typeof this.props.onClick === "function",
+        size: this.props.size
       };
 
       if (this.state.autocompleteItems) {
@@ -283,7 +291,7 @@ export const TextIcon = Context.withContext(
     _getInput(inputId) {
       return <AutocompleteTextInput {...this._getInputProps(inputId)} />;
     },
-    //@@viewOff:componentSpecificHelpers
+    //@@viewOff:private
 
     //@@viewOn:render
     render() {

@@ -1,37 +1,33 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
-import Link from './link.js';
-import Icon from './icon.js';
+import Link from "./link.js";
+import Icon from "./icon.js";
 
-import './context-menu-item.less'
+import "./context-menu-item.less";
 import Span from "./span";
+//@@viewOff:imports
 
 export const ContextMenuItem = createReactClass({
-
   //@@viewOn:mixins
-  mixins: [
-    UU5.Common.BaseMixin,
-    UU5.Common.ElementaryMixin,
-    UU5.Common.ContentMixin,
-    UU5.Common.PureRenderMixin
-  ],
+  mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.ContentMixin, UU5.Common.PureRenderMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -62,9 +58,7 @@ export const ContextMenuItem = createReactClass({
     space: PropTypes.bool,
     header: PropTypes.bool,
     divider: PropTypes.bool,
-    allowTags: PropTypes.arrayOf(
-      PropTypes.string
-    )
+    allowTags: PropTypes.arrayOf(PropTypes.string)
   },
   //@@viewOff:propTypes
 
@@ -76,7 +70,7 @@ export const ContextMenuItem = createReactClass({
       onClick: null,
       smoothScroll: 1000,
       offset: null,
-      target: '_self',
+      target: "_self",
       icon: null,
       space: false,
       divider: false,
@@ -86,25 +80,25 @@ export const ContextMenuItem = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   onClickDefault(opt) {
-    if(!opt){
+    if (!opt) {
       return null;
     }
     let parent = opt.component;
-    
+
     parent && parent.close ? parent.close() : this._getCloseableParent(parent);
-    return this;  
-  },  
+    return this;
+  },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _getLinkProps() {
     const linkProps = {
       className: this.getClassName().link,
@@ -121,15 +115,15 @@ export const ContextMenuItem = createReactClass({
       linkProps.target = this.props.target;
     }
 
-    return linkProps
+    return linkProps;
   },
 
   _getStandardItem(props) {
     const linkProps = this._getLinkProps();
 
-    this.props.space && !this.props.icon && (props.className += ' ' + this.getClassName('space'));
+    this.props.space && !this.props.icon && (props.className += " " + this.getClassName("space"));
     let content = [this.props.label];
-    this.props.icon && content.unshift(<Icon icon={this.props.icon} className={this.getClassName('icon')} />);
+    this.props.icon && content.unshift(<Icon icon={this.props.icon} className={this.getClassName("icon")} />);
     linkProps.content = content;
 
     return (
@@ -141,22 +135,25 @@ export const ContextMenuItem = createReactClass({
 
   _getNestingItem(props) {
     props.className += ` ${this.getClassName("link")} ${this.getClassName("nestedItem")}`;
-    this.props.space && !this.props.icon && (props.className += ' ' + this.getClassName('space'));
-    let content = [<span key='nestedLabel'>{this.props.label}</span>];
-    this.props.icon && content.unshift(<Icon icon={this.props.icon} className={this.getClassName('icon')} />);
-    content.push(<Icon key='nestedIcon' icon="mdi-menu-right" className={this.getClassName('nestedIcon')} />);
+    this.props.space && !this.props.icon && (props.className += " " + this.getClassName("space"));
+    let content = [<span key="nestedLabel">{this.props.label}</span>];
+    this.props.icon && content.unshift(<Icon icon={this.props.icon} className={this.getClassName("icon")} />);
+    content.push(<Icon key="nestedIcon" icon="mdi-menu-right" className={this.getClassName("nestedIcon")} />);
 
     return (
-      <li {...props}
-        onMouseEnter={!this.isDisabled() && ((e) => {
-          const rect = e.currentTarget.getBoundingClientRect();
-          this._nestedMenu.open({ 
-            aroundElement: this._nestingItem,
-            position: "right-bottom"
-          });
-        })}
+      <li
+        {...props}
+        onMouseEnter={
+          !this.isDisabled() &&
+          (e => {
+            this._nestedMenu.open({
+              aroundElement: this._nestingItem,
+              position: "right-bottom"
+            });
+          })
+        }
         onMouseLeave={!this.isDisabled() && (() => this._nestedMenu.close())}
-        ref={(item) => this._nestingItem = item}
+        ref={item => (this._nestingItem = item)}
       >
         {content}
         {this._getNestedContextMenu()}
@@ -166,13 +163,13 @@ export const ContextMenuItem = createReactClass({
 
   _getCloseableParent(parent) {
     if (parent.close) return parent.close();
-    this._getCloseableParent(parent.getParent())
+    this._getCloseableParent(parent.getParent());
   },
 
   _onItemClick(target, event) {
-    const parent = this.getParentByType('isContextMenu') || this.getParent();
+    const parent = this.getParentByType("isContextMenu") || this.getParent();
     let opt = { component: parent, item: this, target: target, event: event, value: this.props.label };
-    if (typeof this.props.onClick === 'function') {
+    if (typeof this.props.onClick === "function") {
       this.props.onClick(opt);
     } else {
       this.onClickDefault(opt);
@@ -181,18 +178,16 @@ export const ContextMenuItem = createReactClass({
   },
 
   _getContentItem(props) {
-    return (
-      <li {...props}>{this.getChildren()}</li>
-    );
+    return <li {...props}>{this.getChildren()}</li>;
   },
 
   _getDividerItem(props) {
-    props.className += ' ' + this.getClassName().divider;
+    props.className += " " + this.getClassName().divider;
     return <li {...props} />;
   },
 
   _getHeaderItem(props) {
-    props.className += ' ' + this.getClassName().header;
+    props.className += " " + this.getClassName().header;
     return (
       <li {...props}>
         <Span content={this.props.label} />
@@ -203,12 +198,18 @@ export const ContextMenuItem = createReactClass({
   _getNestedContextMenu() {
     let ContextMenu = UU5.Common.Tools.checkTag("UU5.Bricks.ContextMenu", false);
     return (
-      <ContextMenu ref_={cm => this._nestedMenu = cm} parent={this} content={this.props.content} forceRender allowTags={this.props.allowTags}>
+      <ContextMenu
+        ref_={cm => (this._nestedMenu = cm)}
+        parent={this}
+        content={this.props.content}
+        forceRender
+        allowTags={this.props.allowTags}
+      >
         {React.Children.toArray(this.props.children)}
       </ContextMenu>
-    )
+    );
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {

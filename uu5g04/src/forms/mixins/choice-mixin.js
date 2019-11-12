@@ -11,11 +11,10 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 export const ChoiceMixin = {
-
   //@@viewOn:mixins
   //@@viewOff:mixins
 
@@ -34,7 +33,7 @@ export const ChoiceMixin = {
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function () {
+  getDefaultProps: function() {
     return {
       placeholder: null,
       required: false,
@@ -46,8 +45,8 @@ export const ChoiceMixin = {
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   isValid() {
@@ -56,32 +55,32 @@ export const ChoiceMixin = {
     var result = true;
 
     if (this.props.required && (!value || value.length < 1)) {
-      this.setError(this.props.requiredMessage || this.getLsiComponent('requiredMessageChoice'));
+      this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessageChoice"));
       result = false;
-    } else if (feedback === 'error') {
+    } else if (feedback === "error") {
       result = false;
-    } else if (typeof this.isValid_ === 'function') {
+    } else if (typeof this.isValid_ === "function") {
       result = this.isValid_();
     }
 
-    if (result && typeof this.props.onValidate === 'function') {
+    if (result && typeof this.props.onValidate === "function") {
       var validation = this.props.onValidate(value, this);
-      if (validation && typeof validation === 'object') {
-        if (validation.feedback === 'error') {
+      if (validation && typeof validation === "object") {
+        if (validation.feedback === "error") {
           result = false;
         }
       }
     }
 
     return result;
-  },
-//@@viewOff:interface
+  }
+  //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOn:private
+  //@@viewOff:private
 
   //@@viewOn:render
   //@@viewOff:render

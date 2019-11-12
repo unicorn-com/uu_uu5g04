@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -18,25 +18,18 @@ import "uu5g04-bricks";
 const { mount, shallow, wait } = UU5.Test.Tools;
 
 var props = {
-  colorSchema: 'yellow',
+  colorSchema: "yellow",
   id: "ID_OF_ALERT",
-  content: <UU5.Bricks.Strong>This is content in Bricks.Alert</UU5.Bricks.Strong>,
+  content: <UU5.Bricks.Strong>This is content in Bricks.Alert</UU5.Bricks.Strong>
 };
 
 describe(`UU5.Bricks.AlertBus interface testing`, () => {
-
-
   /**
    * First it is tested that alertStack is empty. No component alert was inserted into the stack.
    * After that, the addAlert interface is called and it is verified that the Alert component has been inserted object of alert components.
    */
   it(`UU5.Bricks.AlertBus addAlert()`, () => {
-    const wrapper = shallow(
-      <UU5.Bricks.AlertBus
-        id={"uuID01"}
-        closeTimer={3000}
-      />
-    );
+    const wrapper = shallow(<UU5.Bricks.AlertBus id={"uuID01"} closeTimer={3000} />);
     const mockFunc = jest.fn();
     //make a snapshot before calling interface
     expect(wrapper).toMatchSnapshot();
@@ -45,7 +38,7 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
     expect(wrapper.instance().state.alertStack).toHaveLength(0);
     //Here you have to fill out an alert id that is inserted into the alertBus component,
     //otherwise the new ID and Snapshot snapshots will be assigned to each rendering.
-    const returnValue = wrapper.instance().addAlert({id: "id_alert_bus", content: "Obsah alertu"}, mockFunc);
+    const returnValue = wrapper.instance().addAlert({ id: "id_alert_bus", content: "Obsah alertu" }, mockFunc);
     //for render changes to snapshots
     wrapper.update();
     expect(wrapper.instance().getAlerts()).not.toBeNull();
@@ -64,12 +57,7 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
    * a snapshot is taken to see that two alert components have been added to the alertStack.
    */
   it(`UU5.Bricks.AlertBus addAlertToPosition()`, () => {
-    const wrapper = shallow(
-      <UU5.Bricks.AlertBus
-        id={"uuID01"}
-        closeTimer={3000}
-      />
-    );
+    const wrapper = shallow(<UU5.Bricks.AlertBus id={"uuID01"} closeTimer={3000} />);
     const mockFunc = jest.fn();
     //make a snapshot before calling interface
     expect(wrapper).toMatchSnapshot();
@@ -78,14 +66,22 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
     expect(wrapper.instance().state.alertStack).toHaveLength(0);
     //Here you have to fill out an alert id that is inserted into the alertBus component,
     //otherwise the new ID and Snapshot snapshots will be assigned to each rendering.
-    const returnValue = wrapper.instance().addAlertToPosition(1, {
-      id: "id_alert_in_busFIRST",
-      content: "Obsah alertu na první pozici"
-    }, mockFunc);
-    const returnValue2 = wrapper.instance().addAlertToPosition(2, {
-      id: "id_alert_in_busSECOND",
-      content: "Obsah alertu na druhé pozici"
-    }, mockFunc);
+    const returnValue = wrapper.instance().addAlertToPosition(
+      1,
+      {
+        id: "id_alert_in_busFIRST",
+        content: "Obsah alertu na první pozici"
+      },
+      mockFunc
+    );
+    const returnValue2 = wrapper.instance().addAlertToPosition(
+      2,
+      {
+        id: "id_alert_in_busSECOND",
+        content: "Obsah alertu na druhé pozici"
+      },
+      mockFunc
+    );
     //for render changes to snapshots
     wrapper.update();
     expect(wrapper.instance().state.alertStack).toHaveLength(2);
@@ -103,12 +99,7 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
    */
 
   it(`UU5.Bricks.AlertBus addAlert() with header`, () => {
-    const wrapper = shallow(
-      <UU5.Bricks.AlertBus
-        id={"uuID01"}
-        closeTimer={3000}
-      />
-    );
+    const wrapper = shallow(<UU5.Bricks.AlertBus id={"uuID01"} closeTimer={3000} />);
     const withHeaderProps = UU5.Common.Tools.merge(
       {
         header: <UU5.Bricks.Strong>Alert header</UU5.Bricks.Strong>
@@ -140,12 +131,7 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
    */
 
   it(`UU5.Bricks.AlertBus setAlert()`, () => {
-    const wrapper = shallow(
-      <UU5.Bricks.AlertBus
-        id={"uuID01"}
-        closeTimer={3000}
-      />
-    );
+    const wrapper = shallow(<UU5.Bricks.AlertBus id={"uuID01"} closeTimer={3000} />);
     const mockFunc = jest.fn();
     //make a snapshot before calling interface
     expect(wrapper).toMatchSnapshot();
@@ -173,27 +159,26 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
    */
 
   it(`UU5.Bricks.AlertBus setAlerts()`, () => {
-    const wrapper = shallow(
-      <UU5.Bricks.AlertBus
-        id={"uuID01"}
-        closeTimer={3000}
-      />
-    );
+    const wrapper = shallow(<UU5.Bricks.AlertBus id={"uuID01"} closeTimer={3000} />);
 
     const mockFunc = jest.fn();
 
     var alertStack = wrapper.instance().getAlerts();
-    alertStack.map((alert) => {
-      alert.colorSchema = 'blue';
+    alertStack.map(alert => {
+      alert.colorSchema = "blue";
     });
 
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.alertStack).toEqual([]);
     expect(wrapper.instance().state.alertStack).toHaveLength(0);
-    const returnValue2 = wrapper.instance().addAlertToPosition(1, {
-      id: "id_alert_in_busSECOND",
-      content: "Obsah alertu na druhé pozici"
-    }, mockFunc);
+    const returnValue2 = wrapper.instance().addAlertToPosition(
+      1,
+      {
+        id: "id_alert_in_busSECOND",
+        content: "Obsah alertu na druhé pozici"
+      },
+      mockFunc
+    );
     wrapper.update();
     expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().setAlerts(alertStack, mockFunc);
@@ -211,27 +196,22 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
    * and the getPanel method returns an empty array. This is the expected end as the component alert has been removed using removeAlert.
    */
   it(`UU5.Bricks.AlertBus removeAlert()`, () => {
-    const wrapper = shallow(
-      <UU5.Bricks.AlertBus
-        id={"uuID01"}
-        closeTimer={3000}
-      />
-    );
+    const wrapper = shallow(<UU5.Bricks.AlertBus id={"uuID01"} closeTimer={3000} />);
 
     const mockFunc = jest.fn();
-    expect(wrapper).toMatchSnapshot();//Here is alertStack empty in the snapshot
+    expect(wrapper).toMatchSnapshot(); //Here is alertStack empty in the snapshot
     expect(wrapper.instance().state.alertStack).toEqual([]);
     expect(wrapper.instance().state.alertStack).toHaveLength(0);
     wrapper.instance().setAlert(props, mockFunc);
     wrapper.update();
     expect(wrapper.instance().getAlerts()).not.toBeNull();
-    expect(wrapper).toMatchSnapshot();//In alertStack are one Alert Components in the snapshot
+    expect(wrapper).toMatchSnapshot(); //In alertStack are one Alert Components in the snapshot
     const returnValue = wrapper.instance().removeAlert("ID_OF_ALERT", mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(2);
     expect(returnValue).toBe(wrapper.instance());
-    expect(wrapper).toMatchSnapshot();//After calling removeAlert is alertStack empty in the snapshot
+    expect(wrapper).toMatchSnapshot(); //After calling removeAlert is alertStack empty in the snapshot
     let getValue = wrapper.instance().getAlerts(mockFunc);
     //After calling removeAlerts return getAlerts empty array.
     expect(getValue).toEqual([]);
@@ -244,18 +224,13 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
    * However, here is a field that returns getPanel () full. Contains an object that passed in the addAlert method.
    */
   it(`UU5.Bricks.AlertBus clearAlert()`, () => {
-    const wrapper = shallow(
-      <UU5.Bricks.AlertBus
-        id={"uuID01"}
-        closeTimer={3000}
-      />
-    );
+    const wrapper = shallow(<UU5.Bricks.AlertBus id={"uuID01"} closeTimer={3000} />);
 
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.alertStack).toEqual([]);
     expect(wrapper.instance().state.alertStack).toHaveLength(0);
-    const returnValue = wrapper.instance().addAlert({id: "id_alert_bus", content: "Obsah alertu"}, mockFunc);
+    const returnValue = wrapper.instance().addAlert({ id: "id_alert_bus", content: "Obsah alertu" }, mockFunc);
     wrapper.update();
     expect(wrapper).toMatchSnapshot();
     expect(mockFunc).toBeCalled();
@@ -275,12 +250,7 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
    * Then, we called removeAlert () method, which removes component alert from the stack, and the getAlert method finds that the returned array is empty.
    */
   it(`UU5.Bricks.AlertBus getAlerts()`, () => {
-    const wrapper = shallow(
-      <UU5.Bricks.AlertBus
-        id={"uuID01"}
-        closeTimer={3000}
-      />
-    );
+    const wrapper = shallow(<UU5.Bricks.AlertBus id={"uuID01"} closeTimer={3000} />);
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.alertStack).toEqual([]);
@@ -294,7 +264,4 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
     expect(wrapper.instance().getAlerts()).toEqual([]);
     expect(wrapper).toMatchSnapshot();
   });
-
 });
-
-

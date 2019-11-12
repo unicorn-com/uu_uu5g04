@@ -11,33 +11,31 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
-import TextInput from './internal/text-input.js';
-import Time from './time.js';
-import TextInputMixin from './mixins/text-input-mixin.js';
+import TextInput from "./internal/text-input.js";
+import Time from "./time.js";
+import TextInputMixin from "./mixins/text-input-mixin.js";
 
 import Context from "./form-context.js";
+import DateTools from "./internal/date-tools.js";
 
-import './date-time-picker.less';
+import "./date-time-picker.less";
+//@@viewOff:imports
 
-const TIME_FORMAT_AM = 'AM';
-const TIME_FORMAT_PM = 'PM';
-const TIME_FORMAT_12 = '12';
-const TIME_FORMAT_24 = '24';
+const TIME_FORMAT_AM = "AM";
+const TIME_FORMAT_PM = "PM";
+const TIME_FORMAT_12 = "12";
+const TIME_FORMAT_24 = "24";
 
 export const DateTimePicker = Context.withContext(
   createReactClass({
     //@@viewOn:mixins
-    mixins: [
-      UU5.Common.BaseMixin,
-      UU5.Common.ElementaryMixin,
-      UU5.Common.ScreenSizeMixin,
-      TextInputMixin
-    ],
+    mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.ScreenSizeMixin, TextInputMixin],
     //@@viewOff:mixins
 
     //@@viewOn:statics
@@ -67,24 +65,15 @@ export const DateTimePicker = Context.withContext(
         regexpSpace: / /g,
         inputColWidth: "xs12 s4 m4 l3 xl3"
       },
-      lsi: () => (UU5.Environment.Lsi.Forms.message)
+      lsi: () => UU5.Environment.Lsi.Forms.message
     },
     //@@viewOff:statics
 
     //@@viewOn:propTypes
     propTypes: {
-      value: PropTypes.oneOfType([
-        PropTypes.instanceOf(Date),
-        PropTypes.string
-      ]),
-      dateFrom: PropTypes.oneOfType([
-        PropTypes.instanceOf(Date),
-        PropTypes.string
-      ]),
-      dateTo: PropTypes.oneOfType([
-        PropTypes.instanceOf(Date),
-        PropTypes.string
-      ]),
+      value: PropTypes.oneOfType([PropTypes.instanceOf(Date), PropTypes.string]),
+      dateFrom: PropTypes.oneOfType([PropTypes.instanceOf(Date), PropTypes.string]),
+      dateTo: PropTypes.oneOfType([PropTypes.instanceOf(Date), PropTypes.string]),
       format: PropTypes.string,
       timeFormat: PropTypes.string,
       country: PropTypes.string,
@@ -96,15 +85,16 @@ export const DateTimePicker = Context.withContext(
       dateIcon: PropTypes.string,
       timeIcon: PropTypes.string,
       seconds: PropTypes.bool,
-      valueType: PropTypes.oneOf(['string','date']),
+      valueType: PropTypes.oneOf(["string", "date"]),
       openToContent: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-      timePickerType: PropTypes.oneOf(['single-column','multi-column']),
+      timePickerType: PropTypes.oneOf(["single-column", "multi-column"]),
       timeStep: PropTypes.number,
       strictTimeStep: PropTypes.bool,
       hideFormatPlaceholder: PropTypes.bool,
       showTodayButton: PropTypes.bool,
       dateInputAttrs: PropTypes.object,
-      timeInputAttrs: PropTypes.object
+      timeInputAttrs: PropTypes.object,
+      timeZone: PropTypes.number
     },
     //@@viewOff:propTypes
 
@@ -117,13 +107,13 @@ export const DateTimePicker = Context.withContext(
         format: null,
         timeFormat: null,
         country: null,
-        nanMessage: 'Please insert a valid date and time.',
-        beforeRangeMessage: 'Date and time is out of range.',
-        afterRangeMessage: 'Date and time is out of range.',
+        nanMessage: "Please insert a valid date and time.",
+        beforeRangeMessage: "Date and time is out of range.",
+        afterRangeMessage: "Date and time is out of range.",
         parseDate: null,
         placeholderTime: null,
-        dateIcon: 'mdi-calendar',
-        timeIcon: 'mdi-clock-outline',
+        dateIcon: "mdi-calendar",
+        timeIcon: "mdi-clock-outline",
         valueType: null,
         seconds: false,
         openToContent: "xs",
@@ -131,12 +121,13 @@ export const DateTimePicker = Context.withContext(
         timeStep: 1,
         strictTimeStep: false,
         hideFormatPlaceholder: false,
-        showTodayButton: false
+        showTodayButton: false,
+        timeZone: undefined
       };
     },
     //@@viewOff:getDefaultProps
 
-    //@@viewOn:standardComponentLifeCycle
+    //@@viewOn:reactLifeCycle
     getInitialState() {
       let initialData = this._getInitialData(this.props.value);
 
@@ -153,15 +144,24 @@ export const DateTimePicker = Context.withContext(
     componentWillMount() {
       this._hasFocus = false;
       this._allowOpening = true;
+      this._allowTimeZoneAdjustment = true;
 
-      let value = this.props.value;
-      let validationResult = this._validateOnChange({ value, event: null, component: this });
+      this._setUpLimits(this.props);
+
+      let value = this._parseDate(this.props.value);
+      let validationResult = this._validateOnChange({
+        value: this._getOutputValue(value),
+        event: null,
+        component: this,
+        _data: { value, timeZoneAdjusted: true }
+      });
 
       if (validationResult) {
         this._updateState(validationResult);
       } else {
-        let dateString = this._getDateString(value);
-        let timeString = this._getTimeString(value);
+        let dateObject = this._parseDate(value);
+        let dateString = this._getDateString(dateObject);
+        let timeString = this._getTimeString(dateObject);
         if (dateString && !timeString) {
           value = dateString + " " + this._getAutofilledTime();
         } else if (dateString) {
@@ -188,8 +188,19 @@ export const DateTimePicker = Context.withContext(
 
     componentWillReceiveProps(nextProps) {
       if (nextProps.controlled) {
-        let value = nextProps.value;
-        let validationResult = this._validateOnChange({ value, event: null, component: this }, true);
+        this._setUpLimits(nextProps);
+
+        this._allowTimeZoneAdjustment = true;
+        let value = this._parseDate(nextProps.value, undefined, undefined, nextProps.timeZone);
+        let validationResult = this._validateOnChange(
+          {
+            value: this._getOutputValue(value, nextProps),
+            event: null,
+            component: this,
+            _data: { value, timeZoneAdjusted: true }
+          },
+          true
+        );
 
         if (validationResult) {
           this._updateState(validationResult);
@@ -218,18 +229,24 @@ export const DateTimePicker = Context.withContext(
 
     componentDidUpdate(prevProps, prevState) {
       if (this._isCalendarOpen()) {
-        if ((this.state.screenSize === "xs" && prevState.screenSize !== "xs") || (this.state.screenSize !== "xs" && prevState.screenSize === "xs")) {
+        if (
+          (this.state.screenSize === "xs" && prevState.screenSize !== "xs") ||
+          (this.state.screenSize !== "xs" && prevState.screenSize === "xs")
+        ) {
           this._openCalendar();
         }
       }
 
       if (this._isTimeOpen()) {
-        if ((this.state.screenSize === "xs" && prevState.screenSize !== "xs") || (this.state.screenSize !== "xs" && prevState.screenSize === "xs")) {
+        if (
+          (this.state.screenSize === "xs" && prevState.screenSize !== "xs") ||
+          (this.state.screenSize !== "xs" && prevState.screenSize === "xs")
+        ) {
           this._openTime();
         }
       }
     },
-    //@@viewOff:standardComponentLifeCycle
+    //@@viewOff:reactLifeCycle
 
     //@@viewOn:interface
     openCalendar(setStateCallback) {
@@ -269,50 +286,69 @@ export const DateTimePicker = Context.withContext(
     },
     //@@viewOff:interface
 
-    //@@viewOn:overridingMethods
+    //@@viewOn:overriding
     getValue_() {
       let value;
       let date = this.state.dateString;
       let time = this.state.timeString;
 
       if (date && time) {
-        if (this.props.valueType === "date") {
-          date = this._parseDate(date);
-          time = this._parseTime(time);
+        date = this._parseDate(date);
+        time = this._parseTime(time);
 
-          if (date && time) {
-            value = new Date(date.getFullYear(), date.getMonth(), date.getDate(), time.hours, time.minutes, time.seconds);
-          } else if (date && !time) {
-            value = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 0, 0, 0);
-          } else if (!date && time) {
-            let today = new Date(Date.now());
-            value = new Date(today.getFullYear(), today.getMonth(), today.getDate(), time.hours, time.minutes, time.seconds);
-          }
-        } else {
-          value = date + " " + time;
+        if (date && time) {
+          value = new Date(date.getFullYear(), date.getMonth(), date.getDate(), time.hours, time.minutes, time.seconds);
+        } else if (date && !time) {
+          value = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 0, 0, 0);
+        } else if (!date && time) {
+          let today = new Date(Date.now());
+          value = new Date(
+            today.getFullYear(),
+            today.getMonth(),
+            today.getDate(),
+            time.hours,
+            time.minutes,
+            time.seconds
+          );
         }
       } else {
         value = null;
       }
 
-      return value;
+      return this._getOutputValue(value);
     },
 
     setFeedback_(feedback, message, value, setStateCallback) {
-      let { dateString, timeString } = this._getInitialData(value, undefined, undefined, undefined, this._hasInputFocus());
+      this._allowTimeZoneAdjustment = true;
+      let { dateString, timeString } = this._getInitialData(
+        value,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        this._hasInputFocus()
+      );
 
       if (this.state.dateString !== dateString || this.state.timeString !== timeString) {
-        this._updateState({
-          dateString,
-          timeString,
-          feedback,
-          message
-        }, this._hasInputFocus(), setStateCallback);
+        this._updateState(
+          {
+            dateString,
+            timeString,
+            feedback,
+            message
+          },
+          this._hasInputFocus(),
+          setStateCallback
+        );
       } else {
-        this._updateState({
-          feedback,
-          message
-        }, this._hasInputFocus(), setStateCallback);
+        this._updateState(
+          {
+            feedback,
+            message
+          },
+          this._hasInputFocus(),
+          setStateCallback
+        );
       }
     },
 
@@ -321,13 +357,17 @@ export const DateTimePicker = Context.withContext(
     },
 
     setValue_(value, setStateCallback) {
+      this._allowTimeZoneAdjustment = true;
+      value = this._parseDate(value);
+
       if (value instanceof Date) {
         value = this._getFullDate(this._getDateString(value), this._getTimeString(value), false) || value;
       }
 
       let _callCallback = typeof setStateCallback === "function";
+      let opt = { value: this._getOutputValue(value), _data: { value, timeZoneAdjusted: true } };
 
-      if (!this._validateOnChange({ value }, false)) {
+      if (!this._validateOnChange(opt, false)) {
         if (this._checkRequiredDateTime({ value })) {
           _callCallback = false;
           this._updateState(this._validateDateTime({ value }), this._hasInputFocus(), setStateCallback);
@@ -348,7 +388,8 @@ export const DateTimePicker = Context.withContext(
     },
 
     onBlurDefault_(opt) {
-      let value = this.state.value;
+      let value = opt._data ? opt._data.value : opt.value;
+
       if (this._checkRequiredDateTime({ value }) && !this.props.validateOnChange) {
         let validationResult = this._getBlurFeedback(opt);
         validationResult.value = value;
@@ -359,20 +400,22 @@ export const DateTimePicker = Context.withContext(
     onChangeDefault_(opt, setStateCallback) {
       let type = opt._data.type;
 
-      if (type == 'calendarInput') {
+      if (type == "calendarInput") {
         this._onChangeDateInputDefault(opt, setStateCallback);
-      } else if (type == 'calendarPicker') {
+      } else if (type == "calendarPicker") {
         this._onChangeDatePickerDefault(opt, setStateCallback);
-      } else if (type == 'timeInput') {
+      } else if (type == "timeInput") {
         this._onChangeTimeInputDefault(opt, setStateCallback);
-      } else if (type == 'timePicker') {
+      } else if (type == "timePicker") {
         this._onChangeTimePickerDefault(opt, setStateCallback);
       }
     },
 
     open_(setStateCallback) {
-      UU5.Common.Tools.warning("To open a UU5.Forms.DateTimePicker component, use one of openCalendar() or openTime() interfaces instead of the open() interface.");
-      if (typeof setStateCallback === 'function') {
+      UU5.Common.Tools.warning(
+        "To open a UU5.Forms.DateTimePicker component, use one of openCalendar() or openTime() interfaces instead of the open() interface."
+      );
+      if (typeof setStateCallback === "function") {
         setStateCallback();
       }
     },
@@ -391,9 +434,9 @@ export const DateTimePicker = Context.withContext(
 
           // date input is 60% and time input 40% of the width. Take 4px from each of them because of margins
           if (opt.pickerType === "date") {
-            width = ((parseInt(this.props.inputWidth) / 100) * 60 - 4) + unit;
+            width = (parseInt(this.props.inputWidth) / 100) * 60 - 4 + unit;
           } else if (opt.pickerType === "time") {
-            width = ((parseInt(this.props.inputWidth) / 100) * 40 - 4) + unit;
+            width = (parseInt(this.props.inputWidth) / 100) * 40 - 4 + unit;
           }
         } else if (this.props.nestingLevel === "inline") {
           width = "auto";
@@ -404,11 +447,8 @@ export const DateTimePicker = Context.withContext(
     },
 
     reset_(setStateCallback) {
-      let date = this._getDateString(this.props.value) || null;
-      let time = this._getTimeString(this.props.value) || null;
+      this._allowTimeZoneAdjustment = true;
       let newState = {
-        dateString: date,
-        timeString: time,
         value: this.props.value,
         message: this.props.message,
         feedback: this.props.feedback,
@@ -416,34 +456,51 @@ export const DateTimePicker = Context.withContext(
       };
       this._updateState(newState, false, setStateCallback);
     },
-    //@@viewOff:overridingMethods
+    //@@viewOff:overriding
 
-    //@@viewOn:componentSpecificHelpers
+    //@@viewOn:private
+    _getOutputValue(value, props = this.props) {
+      if (value) {
+        let dateObject;
+
+        if (value instanceof Date && props.valueType === "date") {
+          dateObject = value;
+        } else {
+          dateObject = this._parseDate(value);
+        }
+
+        value = UU5.Common.Tools.adjustForTimezone(dateObject, UU5.Environment.dateTimeZone, props.timeZone);
+
+        if (props.valueType !== "date") {
+          let date = this._getDateString(value);
+          let time = this._getTimeString(value);
+          value = date + " " + time;
+        }
+      }
+
+      return value;
+    },
+
+    _setUpLimits(props) {
+      let { timeFrom, timeTo, show24 } = DateTools.setupLimits(props);
+      this._timeFrom = timeFrom;
+      this._timeTo = timeTo;
+      this._show24 = show24;
+    },
+
     _getInitialData(value, props, format, country) {
       props = props || this.props;
       format = format || this.state ? this.state.format : this.props.format;
       country = country || this.state ? this.state.country : this.props.country;
-      let result = {
-        dateString: null,
-        timeString: null
-      };
 
-      let parseString = string => {
-        let timeString = this._getTimeString(string, props, props.timeFormat == TIME_FORMAT_12);
-        let dateString = typeof string === "string" && !UU5.Common.Tools.isISODateString(string) ? string.replace(timeString, "").trim() : string;
-        let dateObject = this._parseDate(dateString);
-        dateString = this._getDateString(dateObject, format, country);
+      let parseString = dateObject => {
+        let timeString = this._getTimeString(dateObject, props, props.timeFormat == TIME_FORMAT_12);
+        let dateString = this._getDateString(dateObject, format, country);
 
         return { dateString, timeString };
       };
 
-      if (typeof value === "string") {
-        result = parseString(value);
-      } else if (value instanceof Date) {
-        result = parseString(this._parseDate(value));
-      }
-
-      return result;
+      return parseString(this._parseDate(value));
     },
 
     _setDayPart(date, dayPart) {
@@ -467,12 +524,19 @@ export const DateTimePicker = Context.withContext(
         newState.timeString = null;
       }
 
+      if (newState.value) {
+        newState.value = this._parseDate(newState.value);
+      }
+
       if (newState.dateString === undefined) {
-        newState.dateString = (newState.value && this._getDateString(newState.value, undefined, undefined, preventFormatting)) || this.state.dateString;
+        newState.dateString =
+          (newState.value && this._getDateString(newState.value, undefined, undefined, preventFormatting)) ||
+          this.state.dateString;
       }
 
       if (newState.timeString === undefined) {
-        newState.timeString = (newState.value && this._getTimeString(newState.value, undefined, undefined)) ||  this.state.timeString;
+        newState.timeString =
+          (newState.value && this._getTimeString(newState.value, undefined, undefined)) || this.state.timeString;
 
         if (!preventFormatting && !newState.timeString && (newState.dateString !== null || this.state.dateString)) {
           newState.timeString = this._getAutofilledTime();
@@ -537,7 +601,7 @@ export const DateTimePicker = Context.withContext(
       // in a way, that mouseDown is in input and mouseUp is outside -> triggers blur (which it shouldnt)
       if (document.activeElement) eventPath.unshift(document.activeElement);
 
-      eventPath.every((item) => {
+      eventPath.every(item => {
         let functionType = item.matches ? "matches" : "msMatchesSelector";
         if (item[functionType]) {
           if (item[functionType](labelMatch)) {
@@ -584,7 +648,12 @@ export const DateTimePicker = Context.withContext(
       let handleKeyUp = e => {
         let focusResult = this._findTarget(e);
         let doBlur = !focusResult.component;
-        let opt = { value: this.state.value, event: e, component: this };
+        let opt = {
+          value: this._getOutputValue(this.state.value),
+          event: e,
+          component: this,
+          _data: { value: this.state.value, timeZoneAdjusted: true }
+        };
         if (e.which === 13) {
           // enter
           if (!this.isOpen()) {
@@ -635,7 +704,12 @@ export const DateTimePicker = Context.withContext(
     _handleClick(e) {
       // This function can be called twice if clicking inside the component but it doesnt do anything in that case
       let clickData = this._findTarget(e);
-      let opt = { value: this.state.value, event: e, component: this };
+      let opt = {
+        value: this._getOutputValue(this.state.value),
+        event: e,
+        component: this,
+        _data: { value: this.state.value, timeZoneAdjusted: true }
+      };
 
       if (!(clickData.input || clickData.picker)) {
         if (this.isOpen()) {
@@ -658,12 +732,15 @@ export const DateTimePicker = Context.withContext(
 
     _openCalendar(setStateCallback) {
       if (this._calendarPopover) {
-        this._calendarPopover.open({
-          onClose: this._closeCalendar,
-          aroundElement: this._calendarTextInput.findDOMNode(),
-          position: "bottom",
-          offset: this._shouldOpenToContent() ? 0 : 4
-        }, () => this._closeTime(setStateCallback));
+        this._calendarPopover.open(
+          {
+            onClose: this._closeCalendar,
+            aroundElement: this._calendarTextInput.findDOMNode(),
+            position: "bottom",
+            offset: this._shouldOpenToContent() ? 0 : 4
+          },
+          () => this._closeTime(setStateCallback)
+        );
       } else if (typeof setStateCallback === "function") {
         setStateCallback();
       }
@@ -671,13 +748,16 @@ export const DateTimePicker = Context.withContext(
 
     _openTime(setStateCallback) {
       if (this._timePopover) {
-        this._timePopover.open({
-          onClose: this._closeTime,
-          aroundElement: this._timeTextInput.findDOMNode(),
-          position: "bottom",
-          offset: this._shouldOpenToContent() ? 0 : 4,
-          horizontalOnly: this._shouldOpenToContent()
-        }, () => this._closeCalendar(setStateCallback));
+        this._timePopover.open(
+          {
+            onClose: this._closeTime,
+            aroundElement: this._timeTextInput.findDOMNode(),
+            position: "bottom",
+            offset: this._shouldOpenToContent() ? 0 : 4,
+            horizontalOnly: this._shouldOpenToContent()
+          },
+          () => this._closeCalendar(setStateCallback)
+        );
       } else if (typeof setStateCallback === "function") {
         setStateCallback();
       }
@@ -704,14 +784,17 @@ export const DateTimePicker = Context.withContext(
 
       if (typeof this.props.openToContent === "string") {
         let screenSize = this.getScreenSize();
-        this.props.openToContent.trim().split(" ").some((size) => {
-          if (screenSize == size) {
-            result = true;
-            return true;
-          } else {
-            return false;
-          }
-        })
+        this.props.openToContent
+          .trim()
+          .split(" ")
+          .some(size => {
+            if (screenSize == size) {
+              result = true;
+              return true;
+            } else {
+              return false;
+            }
+          });
       } else if (typeof this.props.openToContent === "boolean") {
         result = this.props.openToContent;
       }
@@ -725,13 +808,18 @@ export const DateTimePicker = Context.withContext(
 
     _onChangeFormat(opt, setStateCallback) {
       let format = opt.format === undefined ? this.state.format : opt.format;
-      let country = opt.country === undefined ? this.state.country : (opt.country ? opt.country.toLowerCase() : opt.country);
+      let country =
+        opt.country === undefined ? this.state.country : opt.country ? opt.country.toLowerCase() : opt.country;
       let dateString = this._getDateString(this.state.value, format, country);
-      this._updateState({
-        dateString,
-        format,
-        country,
-      }, undefined, setStateCallback);
+      this._updateState(
+        {
+          dateString,
+          format,
+          country
+        },
+        undefined,
+        setStateCallback
+      );
     },
 
     _onResize() {
@@ -742,70 +830,12 @@ export const DateTimePicker = Context.withContext(
       }
     },
 
-    _onChangeDate(e) {
-      let opt = { value: e.target.value, event: e, component: this, _data: { type: 'calendarInput' } };
-      let date = this._parseDate(opt.value);
-      let formatedDate = date ? this._getDateString(date) : null;
-      let isEmpty = !opt.value;
-
-      if (formatedDate || isEmpty) {
-        let time = this.state.timeString || this._getAutofilledTime();
-        opt.value = isEmpty ? null : (this.props.valueType == "date" ? this._getFullDate(formatedDate, time, true) : e.target.value + " " + time);
-        opt._data.dateString = isEmpty ? null : e.target.value;
-        if (!this.isComputedDisabled() && !this.isReadOnly()) {
-          if (typeof this.props.onChange === 'function') {
-            this.props.onChange(opt);
-          } else {
-            this.onChangeDefault(opt);
-          }
-        }
-      } else {
-        this._updateState({ dateString: opt.value });
-      }
-    },
-
-    _onChangeTime(e) {
-      let opt = { value: e.target.value, event: e, component: this, _data: { type: 'timeInput' } };
-      let isValidValue;
-      let isEmpty = !opt.value;
-      let hours = (opt.value && opt.value.split(":")[0] || "").split(" ")[0];
-      let minutes = (opt.value && opt.value.split(":")[1] || "").split(" ")[0];
-      let seconds = this.props.seconds && this.props.timeStep === 1 && opt.value && (opt.value.split(":")[2] || "").split(" ")[0];
-      let dayPart = this.props.timeFormat == "12" && opt.value && (opt.value.slice(-2) == "AM" || opt.value.slice(-2) == "PM") && opt.value.slice(-2);
-
-      if (this.props.seconds && this.props.timeStep === 1) {
-        isValidValue = !!(hours && hours.length == 2 && minutes && minutes.length == 2 && seconds && seconds.length == 2) && (this.props.timeFormat == "12" ? dayPart : true);
-        if (!hours && !minutes && !seconds && !dayPart) {
-          isValidValue = true;
-        }
-      } else {
-        isValidValue = !!(hours && hours.length == 2 && minutes && minutes.length == 2) && (this.props.timeFormat == "12" ? dayPart : true)
-        if (!hours && !minutes && !dayPart) {
-          isValidValue = true;
-        }
-      }
-
-      if (opt.value === '' || this._parseTime(opt.value)) {
-        if (!this.isComputedDisabled() && !this.isReadOnly()) {
-          opt._data.timeString = opt.value;
-          opt.value = isEmpty ? null : this._getFullDate(this.state.dateString || this._getDateString(new Date(Date.now())), opt.value, this.props.valueType == "date");
-          if (typeof this.props.onChange === 'function' && isValidValue) {
-            this.props.onChange(opt);
-          } else {
-            this.onChangeDefault(opt);
-          }
-        }
-      } else {
-        this._updateState({ timeString: opt.value });
-      }
-    },
-
     _onFocus(opt) {
       if (!this._hasFocus) {
         this._addKeyEvents();
         this._hasFocus = true;
         if (!this.isReadOnly() && !this.isComputedDisabled()) {
-          if (typeof this.props.onFocus === 'function') {
+          if (typeof this.props.onFocus === "function") {
             this.props.onFocus(opt);
           } else {
             this.onFocusDefault(opt);
@@ -818,7 +848,7 @@ export const DateTimePicker = Context.withContext(
       if (this._hasFocus) {
         this._removeKeyEvents();
         this._hasFocus = false;
-        if (typeof this.props.onBlur === 'function') {
+        if (typeof this.props.onBlur === "function") {
           this.props.onBlur(opt);
         } else {
           this.onBlurDefault(opt);
@@ -852,34 +882,63 @@ export const DateTimePicker = Context.withContext(
         result = false;
         this._updateState({
           value: null,
-          feedback: 'error',
-          message: this.props.requiredMessage || this.getLsiComponent('requiredMessage')
+          feedback: "error",
+          message: this.props.requiredMessage || this.getLsiComponent("requiredMessage")
         });
       }
 
       return result;
     },
 
-    _validateDate(opt) {
+    _validateDate(opt, props = this.props) {
       let result = { ...opt };
       let date = this._parseDate(opt.value ? opt.value : this.state.dateString);
       result.feedback = result.feedback || "initial";
       result.message = result.message || null;
 
       if (opt.value && !date) {
-        result.feedback = 'error';
-        result.message = this.props.nanMessage;
+        result.feedback = "error";
+        result.message = props.nanMessage;
       }
 
       if (date && result.feedback !== "error") {
-        let dateFrom = this._getDateFrom(result.dateFrom);
-        let dateTo = this._getDateTo(result.dateTo);
+        let dateFrom = this._getDateFrom(result.dateFrom, props);
+        let dateTo = this._getDateTo(result.dateTo, props);
         if (dateFrom && date < dateFrom) {
-          result.feedback = 'error';
-          result.message = this.props.beforeRangeMessage;
+          result.feedback = "error";
+          result.message = props.beforeRangeMessage;
         } else if (dateTo && date > dateTo) {
-          result.feedback = 'error';
-          result.message = this.props.afterRangeMessage;
+          result.feedback = "error";
+          result.message = props.afterRangeMessage;
+        } else {
+          result.feedback = result.feedback || "initial";
+          result.message = result.message || null;
+          result.value = date;
+        }
+      }
+
+      return result;
+    },
+
+    _validateLimits(time) {
+      return DateTools.validateLimits(time, this._timeFrom, this._timeTo);
+    },
+
+    _validateTime(opt, props = this.props) {
+      let result = { ...opt };
+      let timeString = opt.value ? this._getTimeString(opt.value) : null;
+      let parsedTime = timeString ? UU5.Common.Tools.parseTime(timeString) : null;
+
+      if (opt.value && !timeString) {
+        result.feedback = "error";
+        result.message = props.nanMessage;
+      } else if (parsedTime && props.strictTimeStep && parsedTime.minutes % props.timeStep > 0) {
+        result.feedback = "error";
+        result.message = props.nanMessage;
+      } else {
+        if (!this._validateLimits(parsedTime)) {
+          result.feedback = "error";
+          result.message = props.nanMessage;
         } else {
           result.feedback = result.feedback || "initial";
           result.message = result.message || null;
@@ -889,28 +948,9 @@ export const DateTimePicker = Context.withContext(
       return result;
     },
 
-    _validateTime(opt) {
-      let result = { ...opt };
-      let timeString = opt.value ? this._getTimeString(opt.value) : null;
-      let parsedTime = timeString ? UU5.Common.Tools.parseTime(timeString) : null;
-
-      if (opt.value && !timeString) {
-        result.feedback = 'error';
-        result.message = this.props.nanMessage;
-      } else if (parsedTime && this.props.strictTimeStep && (parsedTime.minutes % this.props.timeStep) > 0) {
-        result.feedback = "error";
-        result.message = this.props.nanMessage;
-      } else {
-        result.feedback = result.feedback || "initial";
-        result.message = result.message || null;
-      }
-
-      return result;
-    },
-
-    _validateDateTime(opt) {
-      let dateResult = this._validateDate(opt);
-      let timeResult = this._validateTime(opt);
+    _validateDateTime(opt, props = this.props) {
+      let dateResult = this._validateDate(opt, props);
+      let timeResult = this._validateTime(opt, props);
       let result;
 
       if (timeResult.feedback === "error") {
@@ -925,18 +965,21 @@ export const DateTimePicker = Context.withContext(
     _validateOnChange(opt, checkValue, setStateCallback) {
       let _callCallback = typeof setStateCallback === "function";
       let result;
+      opt = { ...opt };
+      let value = opt._data ? opt._data.value : opt.value;
 
-      if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
+      if (!checkValue || this._hasValueChanged(this.state.value, value)) {
         opt.component = this;
         opt.required = this.props.required;
 
-        if (this.props.valueType == "date" && opt.value) {
-          opt.value = this._parseDate(opt.value);
+        if (this.props.valueType == "date" && value) {
+          opt.value = this._parseDate(value);
         }
 
-        result = typeof this.props.onValidate === 'function' ? this.props.onValidate(opt) : null;
-        if (result && typeof result === 'object' && result.feedback) {
+        result = typeof this.props.onValidate === "function" ? this.props.onValidate(opt) : null;
+        if (result && typeof result === "object" && result.feedback) {
           _callCallback = false;
+          this._allowTimeZoneAdjustment = true;
           this._updateState(result, undefined, setStateCallback);
         }
       }
@@ -958,8 +1001,10 @@ export const DateTimePicker = Context.withContext(
 
     _getFullDate(dateString, timeString, objectDate) {
       let value = null;
-      timeString = timeString !== undefined ? timeString : this.state && this.state.timeString || this._getAutofilledTime();
-      dateString = dateString !== undefined ? dateString : this.state && this.state.dateString || new Date(Date.now());
+      timeString =
+        timeString !== undefined ? timeString : (this.state && this.state.timeString) || this._getAutofilledTime();
+      dateString =
+        dateString !== undefined ? dateString : (this.state && this.state.dateString) || new Date(Date.now());
 
       if (objectDate) {
         value = this._parseDate(dateString);
@@ -976,6 +1021,104 @@ export const DateTimePicker = Context.withContext(
       return value;
     },
 
+    _onChangeDate(e) {
+      let value = e.target.value;
+      let isEmpty = !value;
+      let date = this._parseDate(value);
+      let dateString = date ? this._getDateString(date) : null;
+
+      if (dateString || isEmpty) {
+        dateString = isEmpty ? null : value;
+        let time = this.state.timeString || this._getAutofilledTime();
+
+        if (isEmpty) {
+          value = null;
+        } else if (this.props.valueType == "date") {
+          value = this._getFullDate(dateString, time, true);
+        } else {
+          value = value + " " + time;
+        }
+
+        if (!this.isComputedDisabled() && !this.isReadOnly()) {
+          let opt = {
+            value: this._getOutputValue(value),
+            event: e,
+            component: this,
+            _data: { type: "calendarInput", dateString, value, timeZoneAdjusted: true }
+          };
+
+          if (typeof this.props.onChange === "function") {
+            this.props.onChange(opt);
+          } else {
+            this.onChangeDefault(opt);
+          }
+        }
+      } else {
+        this._updateState({ dateString: value });
+      }
+    },
+
+    _onChangeTime(e) {
+      let value = e.target.value;
+      let timeString = e.target.value;
+      let isValidValue;
+      let isEmpty = !value;
+      let hours = ((value && value.split(":")[0]) || "").split(" ")[0];
+      let minutes = ((value && value.split(":")[1]) || "").split(" ")[0];
+      let seconds =
+        this.props.seconds && this.props.timeStep === 1 && value && (value.split(":")[2] || "").split(" ")[0];
+      let dayPart =
+        this.props.timeFormat == "12" &&
+        value &&
+        (value.slice(-2) == "AM" || value.slice(-2) == "PM") &&
+        value.slice(-2);
+
+      if (this.props.seconds && this.props.timeStep === 1) {
+        isValidValue =
+          !!(hours && hours.length == 2 && minutes && minutes.length == 2 && seconds && seconds.length == 2) &&
+          (this.props.timeFormat == "12" ? dayPart : true);
+        if (!hours && !minutes && !seconds && !dayPart) {
+          isValidValue = true;
+        }
+      } else {
+        isValidValue =
+          !!(hours && hours.length == 2 && minutes && minutes.length == 2) &&
+          (this.props.timeFormat == "12" ? dayPart : true);
+        if (!hours && !minutes && !dayPart) {
+          isValidValue = true;
+        }
+      }
+
+      if (value === "" || this._parseTime(value)) {
+        if (!this.isComputedDisabled() && !this.isReadOnly()) {
+          if (isEmpty) {
+            value = null;
+          } else {
+            value = this._getFullDate(
+              this.state.dateString || this._getDateString(new Date(Date.now())),
+              timeString,
+              this.props.valueType == "date"
+            );
+          }
+
+          let opt = {
+            value: this._getOutputValue(value),
+            event: e,
+            component: this,
+            _data: { type: "timeInput", timeString, value, timeZoneAdjusted: true }
+          };
+
+          if (typeof this.props.onChange === "function" && isValidValue) {
+            this.props.onChange(opt);
+          } else {
+            this.onChangeDefault(opt);
+          }
+        }
+      } else {
+        this._updateState({ timeString: value });
+      }
+    },
+
     _onDatePickerChange(opt) {
       let timeValue;
       let dateString = this._getDateString(opt.value);
@@ -984,9 +1127,13 @@ export const DateTimePicker = Context.withContext(
       else timeValue = this._getAutofilledTime();
 
       let value = this._getFullDate(dateString, timeValue, this.props.valueType == "date");
-      opt = { component: this, value, _data: { type: 'calendarPicker', dateString } };
+      opt = {
+        component: this,
+        value: this._getOutputValue(value),
+        _data: { type: "calendarPicker", dateString, value, timeZoneAdjusted: true }
+      };
 
-      if (typeof this.props.onChange === 'function') {
+      if (typeof this.props.onChange === "function") {
         this.props.onChange(opt);
       } else {
         this.onChangeDefault(opt);
@@ -995,10 +1142,18 @@ export const DateTimePicker = Context.withContext(
 
     _onTimePickerChange(opt) {
       let timeString = this._getTimeString(opt.value, this.props, true);
-      let value = this._getFullDate(this.state.dateString || this._getDateString(new Date(Date.now())), timeString, this.props.valueType == "date");
-      opt = { component: this, value, _data: { type: 'timePicker', timeString } };
+      let value = this._getFullDate(
+        this.state.dateString || this._getDateString(new Date(Date.now())),
+        timeString,
+        this.props.valueType == "date"
+      );
+      opt = {
+        component: this,
+        value: this._getOutputValue(value),
+        _data: { type: "timePicker", timeString, value, timeZoneAdjusted: true }
+      };
 
-      if (typeof this.props.onChange === 'function') {
+      if (typeof this.props.onChange === "function") {
         this.props.onChange(opt);
       } else {
         this.onChangeDefault(opt);
@@ -1006,7 +1161,9 @@ export const DateTimePicker = Context.withContext(
     },
 
     _onChangeDateInputDefault(opt, setStateCallback) {
+      let value = opt._data ? opt._data.value : opt.value;
       let _callCallback = typeof setStateCallback === "function";
+
       if (this.props.validateOnChange) {
         if (!this._validateOnChange(opt, false)) {
           if (this._checkRequiredDateTime(opt)) {
@@ -1014,7 +1171,7 @@ export const DateTimePicker = Context.withContext(
             this._updateState(this._validateDateTime(opt), false, setStateCallback);
           }
         }
-      } else if (this._checkRequiredDateTime({ value: opt.value })) {
+      } else if (this._checkRequiredDateTime({ value })) {
         _callCallback = false;
         this._updateState({ dateString: opt._data.dateString }, false, setStateCallback);
       }
@@ -1037,6 +1194,7 @@ export const DateTimePicker = Context.withContext(
 
     _onChangeTimeInputDefault(opt, setStateCallback) {
       let _callCallback = typeof setStateCallback === "function";
+      let value = opt._data ? opt._data.value : opt.value;
 
       if (this.props.validateOnChange) {
         if (!this._validateOnChange(opt)) {
@@ -1046,9 +1204,9 @@ export const DateTimePicker = Context.withContext(
           }
         }
       } else {
-        if (opt._data.value === '') {
+        if (value === "") {
           this._updateState({ timeString: opt._data.timeString });
-        } else if (this._checkRequiredDateTime({ value: opt._data.timeString })) {
+        } else if (this._checkRequiredDateTime({ value })) {
           opt.required = this.props.required;
           let result = this.getChangeFeedback(opt);
 
@@ -1072,12 +1230,18 @@ export const DateTimePicker = Context.withContext(
     },
 
     _onChangeTimePickerDefault(opt, setStateCallback) {
-      this._updateState({ timeOpen: this.props.timePickerType === "single-column" ? false : true, timeString: opt._data.timeString }, undefined, this.props.timePickerType === "single-column" ? () => {
-        this._onBlur(opt);
-        if (typeof setStateCallback === "function") {
-          setStateCallback();
-        }
-      } : setStateCallback);
+      this._updateState(
+        { timeOpen: this.props.timePickerType === "single-column" ? false : true, timeString: opt._data.timeString },
+        undefined,
+        this.props.timePickerType === "single-column"
+          ? () => {
+              this._onBlur(opt);
+              if (typeof setStateCallback === "function") {
+                setStateCallback();
+              }
+            }
+          : setStateCallback
+      );
     },
 
     _getDatePickerProps(date) {
@@ -1119,24 +1283,49 @@ export const DateTimePicker = Context.withContext(
         type: this.props.timePickerType,
         colorSchema: this.getColorSchema(),
         mobileDisplay: this.isXs(),
-        horizontalOnly: this._shouldOpenToContent()
+        horizontalOnly: this._shouldOpenToContent(),
+        timeFrom: this._timeFrom,
+        timeTo: this._timeTo
       };
     },
 
-    _parseDate(dateString, format, country) {
+    _adjustTimeZone(date, outputTimeZone) {
+      if (typeof outputTimeZone !== "number") {
+        outputTimeZone = this.props.timeZone;
+      }
+
+      if (date && typeof outputTimeZone === "number" && this._allowTimeZoneAdjustment) {
+        this._allowTimeZoneAdjustment = false;
+        let inputTimeZone = -(date.getTimezoneOffset() / 60);
+
+        return UU5.Common.Tools.adjustForTimezone(date, outputTimeZone, inputTimeZone);
+      } else {
+        return date;
+      }
+    },
+
+    _parseDate(dateString, format, country, timeZone) {
       let date = null;
 
       if (UU5.Common.Tools.isISODateString(dateString)) {
         date = new Date(dateString);
-      } else {
+        date = this._adjustTimeZone(date, timeZone);
+      } else if (typeof dateString === "string") {
         let timeString = this._getTimeString(dateString, this.props, this.props.timeFormat == TIME_FORMAT_12);
-        dateString = typeof dateString === "string" ? dateString.replace(timeString, "").trim() : dateString;
 
         if (this.props.parseDate && typeof this.props.parseDate === "function") {
+          let dateStringMatch = dateString && dateString.match(/.+ /);
+
+          if (dateStringMatch) {
+            dateString = dateStringMatch[0].trim();
+          }
+
           date = this.props.parseDate(dateString);
         } else {
           date = this._parseDateDefault(dateString, format, country);
         }
+
+        dateString = this._getDateString(date);
 
         if (typeof dateString === "string" && date instanceof Date && timeString) {
           let timeObject = this._parseTime(timeString);
@@ -1146,16 +1335,18 @@ export const DateTimePicker = Context.withContext(
             date.setSeconds(timeObject.seconds);
           }
         }
+      } else {
+        date = dateString;
       }
 
-      return date;
+      return this._adjustTimeZone(date, timeZone);
     },
 
     _parseTime(timeString) {
       return UU5.Common.Tools.parseTime(timeString, this.props.timeFormat);
     },
 
-    _parseDateDefault(stringDate, format, country) {
+    _parseDateDefault(stringDate, format, country, timeZone) {
       format = format || (this.state ? this.state.format : this.props.format);
       country = country || (this.state ? this.state.country : this.props.country);
       return UU5.Common.Tools.parseDate(stringDate, { format, country });
@@ -1171,12 +1362,11 @@ export const DateTimePicker = Context.withContext(
       let result = null;
 
       if (!(value instanceof Date) && preventFormatting) {
-        if (UU5.Common.Tools.isISODateString(value)) {
-          result = UU5.Common.Tools.getDateString(new Date(value), { format: newFormat, country: newCountry });
-        } else {
-          let timeString = this._getTimeString(value, this.props, this.props.timeFormat == TIME_FORMAT_12);
-          result = typeof value === "string" ? value.replace(timeString, "").trim() : UU5.Common.Tools.getDateString(value, { format: newFormat, country: newCountry });
-        }
+        let timeString = this._getTimeString(value, this.props, this.props.timeFormat == TIME_FORMAT_12);
+        result =
+          typeof value === "string"
+            ? value.replace(timeString, "").trim()
+            : UU5.Common.Tools.getDateString(value, { format: newFormat, country: newCountry });
       } else {
         let oldFormat = this.state ? this.state.format : this.props.format;
         let oldCountry = this.state ? this.state.country : this.props.country;
@@ -1194,12 +1384,12 @@ export const DateTimePicker = Context.withContext(
       return result;
     },
 
-    _getDateFrom(newDateFrom) {
-      let dateFromProp = newDateFrom || this.props.dateFrom;
+    _getDateFrom(newDateFrom, props = this.props) {
+      let dateFromProp = newDateFrom || props.dateFrom;
       let dateFrom;
 
       if (dateFromProp) {
-        if (typeof dateFromProp === 'string') {
+        if (typeof dateFromProp === "string") {
           dateFrom = this._parseDate(dateFromProp);
         } else if (dateFromProp instanceof Date) {
           dateFrom = dateFromProp;
@@ -1209,12 +1399,12 @@ export const DateTimePicker = Context.withContext(
       return dateFrom;
     },
 
-    _getDateTo(newDateTo) {
-      let dateToProp = newDateTo || this.props.dateTo;
+    _getDateTo(newDateTo, props = this.props) {
+      let dateToProp = newDateTo || props.dateTo;
       let dateTo;
 
       if (dateToProp) {
-        if (typeof dateToProp === 'string') {
+        if (typeof dateToProp === "string") {
           dateTo = this._parseDate(dateToProp);
         } else if (dateToProp instanceof Date) {
           dateTo = dateToProp;
@@ -1231,7 +1421,7 @@ export const DateTimePicker = Context.withContext(
       props.className === "" ? delete props.className : null;
 
       if (!this.isReadOnly() && !this.isComputedDisabled()) {
-        let handleMobileClick = (e) => {
+        let handleMobileClick = e => {
           if (this._isCalendarOpen()) {
             e.target.focus();
             this.close();
@@ -1240,16 +1430,26 @@ export const DateTimePicker = Context.withContext(
             e.target.blur();
           }
 
-          UU5.Common.Tools.scrollToTarget(this.getId() + "-date-input", false, UU5.Environment._fixedOffset + 20);
+          UU5.Common.Tools.scrollToTarget(
+            this.getId() + "-date-input",
+            false,
+            UU5.Environment._fixedOffset + 20,
+            this._findScrollElement(this._root)
+          );
         };
 
-        let handleClick = (e) => {
+        let handleClick = e => {
           e.preventDefault();
           if (this._shouldOpenToContent()) {
             handleMobileClick(e);
           }
 
-          let opt = { value: this.state.value, event: e, component: this, _data: { type: 'date' } };
+          let opt = {
+            value: this._getOutputValue(this.state.value),
+            event: e,
+            component: this,
+            _data: { type: "date", value: this.state.value, timeZoneAdjusted: true }
+          };
           if (this._allowOpening && !this._isCalendarOpen()) {
             this.openCalendar(() => this._onFocus(opt));
           } else if (!this.isOpen()) {
@@ -1259,7 +1459,7 @@ export const DateTimePicker = Context.withContext(
           this._allowOpening = true;
         };
 
-        props.onClick = (e) => {
+        props.onClick = e => {
           handleClick(e);
         };
       }
@@ -1271,11 +1471,13 @@ export const DateTimePicker = Context.withContext(
       let props = this.props.timeInputAttrs || {};
       props = UU5.Common.Tools.merge({ autoComplete: "off" }, props);
 
-      props.className = (props.className ? props.className += " "  : "" ) + (this.getColorSchema() ? "color-schema-" + this.getColorSchema() : "");
+      props.className =
+        (props.className ? (props.className += " ") : "") +
+        (this.getColorSchema() ? "color-schema-" + this.getColorSchema() : "");
       props.className === "" ? delete props.className : null;
 
       if (!this.isReadOnly() && !this.isComputedDisabled()) {
-        let handleMobileClick = (e) => {
+        let handleMobileClick = e => {
           document.activeElement.blur();
           if (this._isTimeOpen()) {
             e.target.focus();
@@ -1285,16 +1487,26 @@ export const DateTimePicker = Context.withContext(
             e.target.blur();
           }
 
-          UU5.Common.Tools.scrollToTarget(this.getId() + "-time-input", false, UU5.Environment._fixedOffset + 20);
+          UU5.Common.Tools.scrollToTarget(
+            this.getId() + "-time-input",
+            false,
+            UU5.Environment._fixedOffset + 20,
+            this._findScrollElement(this._root)
+          );
         };
 
-        let handleClick = (e) => {
+        let handleClick = e => {
           e.preventDefault();
           if (this._shouldOpenToContent()) {
             handleMobileClick(e);
           }
 
-          let opt = { value: this.state.value, event: e, component: this, _data: { type: 'time' } };
+          let opt = {
+            value: this._getOutputValue(this.state.value),
+            event: e,
+            component: this,
+            _data: { type: "time", value: this.state.value, timeZoneAdjusted: true }
+          };
           if (!this._isTimeOpen()) {
             this.openTime(() => this._onFocus(opt));
           }
@@ -1302,7 +1514,7 @@ export const DateTimePicker = Context.withContext(
           this._allowOpening = true;
         };
 
-        props.onClick = (e) => {
+        props.onClick = e => {
           handleClick(e);
         };
       }
@@ -1315,22 +1527,22 @@ export const DateTimePicker = Context.withContext(
       attrs.id = this.getId();
 
       if (this._isCalendarOpen()) {
-        attrs.className += ' ' + this.getClassName().datepickerOpen;
+        attrs.className += " " + this.getClassName().datepickerOpen;
       } else if (this._isTimeOpen()) {
-        attrs.className += ' ' + this.getClassName().timepickerOpen;
+        attrs.className += " " + this.getClassName().timepickerOpen;
       }
 
       if (this._shouldOpenToContent()) {
-        attrs.className += ' ' + this.getClassName().screenSizeBehaviour;
+        attrs.className += " " + this.getClassName().screenSizeBehaviour;
       }
 
       if (!this.isReadOnly() && !this.isComputedDisabled()) {
-        attrs.onClick = (e) => {
+        attrs.onClick = e => {
           let clickData = this._findTarget(e.nativeEvent);
           if (clickData.label) {
             this._allowOpening = false;
           }
-        }
+        };
       }
 
       if (this.props.seconds) {
@@ -1349,7 +1561,7 @@ export const DateTimePicker = Context.withContext(
       format && (format = format.replace(/Y+/, "YYYY").replace(/y+/, "yy"));
       let placeholder;
       if (this.props.placeholder && format && !this.props.hideFormatPlaceholder) {
-        placeholder = this.props.placeholder + ' - ' + format;
+        placeholder = this.props.placeholder + " - " + format;
       } else if (format && !this.props.hideFormatPlaceholder) {
         placeholder = format;
       } else {
@@ -1361,7 +1573,7 @@ export const DateTimePicker = Context.withContext(
     _getDatePopoverProps() {
       let props = {};
 
-      props.ref_ = ref => this._calendarPopover = ref;
+      props.ref_ = ref => (this._calendarPopover = ref);
       props.forceRender = true;
       props.disableBackdrop = true;
       props.shown = this._isCalendarOpen();
@@ -1372,7 +1584,7 @@ export const DateTimePicker = Context.withContext(
     _getTimePopoverProps() {
       let props = {};
 
-      props.ref_ = ref => this._timePopover = ref;
+      props.ref_ = ref => (this._timePopover = ref);
       props.forceRender = true;
       props.disableBackdrop = true;
       props.shown = this._isTimeOpen();
@@ -1380,7 +1592,7 @@ export const DateTimePicker = Context.withContext(
 
       return props;
     },
-    //@@viewOff:componentSpecificHelpers
+    //@@viewOff:private
 
     //@@viewOn:render
     render() {
@@ -1394,16 +1606,16 @@ export const DateTimePicker = Context.withContext(
       }
 
       return (
-        <div {...this._getMainAttrs()} ref={(comp) => this._root = comp}>
+        <div {...this._getMainAttrs()} ref={comp => (this._root = comp)}>
           {this.getLabel(this.getId() + "-date-input")}
           {this.getInputWrapper([
             <div className={this.getClassName("dateWrapper")} key="1">
               <TextInput
                 id={this.getId() + "-date-input"}
                 name={this.props.name || this.getId() + "-date-input"}
-                value={date || ''}
+                value={date || ""}
                 placeholder={this._getPlacehoder()}
-                type='text'
+                type="text"
                 onChange={this._onChangeDate}
                 onFocus={!this.isReadOnly() && !this.isComputedDisabled() ? this._onFocus : null}
                 onKeyDown={this.onKeyDown}
@@ -1425,15 +1637,16 @@ export const DateTimePicker = Context.withContext(
                 bgStyle={this.props.bgStyle}
                 inputWidth={this._getInputWidth({ pickerType: "date" })}
                 colorSchema={this.props.colorSchema}
+                size={this.props.size}
               />
             </div>,
             <div className={this.getClassName("timeWrapper")} key="2">
               <TextInput
                 id={this.getId() + "-time-input"}
                 name={this.props.name || this.getId() + "-time-input"}
-                value={time || ''}
+                value={time || ""}
                 placeholder={this.props.placeholderTime}
-                type='text'
+                type="text"
                 onChange={this._onChangeTime}
                 onFocus={!this.isReadOnly() && !this.isComputedDisabled() ? this._onFocus : null}
                 onKeyDown={this.onKeyDown}
@@ -1445,29 +1658,24 @@ export const DateTimePicker = Context.withContext(
                 feedback={this.state.feedback}
                 message={this.state.message}
                 iconClickable={false}
-                ref_={item => this._timeTextInput = item}
-                className={this.getClassName("timeInput") + (this.props.seconds ? " " + this.getClassName("seconds") : "")}
+                ref_={item => (this._timeTextInput = item)}
+                className={
+                  this.getClassName("timeInput") + (this.props.seconds ? " " + this.getClassName("seconds") : "")
+                }
                 borderRadius={this.props.borderRadius}
                 elevation={this.props.elevation}
                 bgStyle={this.props.bgStyle}
                 inputWidth={this._getInputWidth({ pickerType: "time" })}
                 colorSchema={this.props.colorSchema}
+                size={this.props.size}
               />
             </div>,
             <div className={popoverWrapperClass} key="3">
               <UU5.Bricks.Popover {...this._getDatePopoverProps()}>
-                {
-                  this._isCalendarOpen() ? (
-                    <UU5.Bricks.Calendar {...this._getDatePickerProps(date)} />
-                  ) : null
-                }
+                {this._isCalendarOpen() ? <UU5.Bricks.Calendar {...this._getDatePickerProps(date)} /> : null}
               </UU5.Bricks.Popover>
               <UU5.Bricks.Popover {...this._getTimePopoverProps()}>
-              {
-                this._isTimeOpen() ? (
-                  <Time {...this._getTimePickerProps(this._parseTime(time))} />
-                ) : null
-              }
+                {this._isTimeOpen() ? <Time {...this._getTimePickerProps(this._parseTime(time))} /> : null}
               </UU5.Bricks.Popover>
             </div>
           ])}

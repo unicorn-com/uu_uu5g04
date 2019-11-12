@@ -1,32 +1,33 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
-import Link from './link.js';
-import Icon from './icon.js';
-import Span from './span.js';
-import { Div } from './factory.js';
-import List from './tree-list.js';
+import Link from "./link.js";
+import Icon from "./icon.js";
+import Span from "./span.js";
+import { Div } from "./factory.js";
+import List from "./tree-list.js";
 
-import './tree-item.less';
+import "./tree-item.less";
+//@@viewOff:imports
 
 const TreeItem = createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -40,7 +41,7 @@ const TreeItem = createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("Tree.Item"),
-    nestingLevelList: UU5.Environment.getNestingLevelList('box', 'smallBox'),
+    nestingLevelList: UU5.Environment.getNestingLevelList("box", "smallBox"),
     classNames: {
       main: ns.css("tree-item"),
       link: ns.css("tree-item-link"),
@@ -49,11 +50,11 @@ const TreeItem = createReactClass({
       nav: ns.css("tree-item-nav")
     },
     defaults: {
-      iconExpanded: 'mdi-menu-down',
-      iconCollapsed: 'mdi-menu-right'
+      iconExpanded: "mdi-menu-down",
+      iconCollapsed: "mdi-menu-right"
     },
     errors: {
-      invalidParent: 'Parent of this component is not Tree, Tree.Item or Tree.List.'
+      invalidParent: "Parent of this component is not Tree, Tree.Item or Tree.List."
     }
   },
   //@@viewOff:statics
@@ -69,7 +70,7 @@ const TreeItem = createReactClass({
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function () {
+  getDefaultProps: function() {
     return {
       label: null,
       items: null,
@@ -80,56 +81,60 @@ const TreeItem = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  getInitialState: function () {
+  //@@viewOn:reactLifeCycle
+  getInitialState: function() {
     return {
       expanded: this.props.expanded
     };
   },
 
-  componentWillMount: function () {
+  componentWillMount: function() {
     if (!this.getParentByType("isTreeList")) {
       this.showError("invalidParent");
     }
   },
 
-  componentWillReceiveProps: function (nextProps) {
-    if (nextProps.controlled && nextProps.expanded !== this.props.expanded && nextProps.expanded !== this.isExpanded()) {
+  componentWillReceiveProps: function(nextProps) {
+    if (
+      nextProps.controlled &&
+      nextProps.expanded !== this.props.expanded &&
+      nextProps.expanded !== this.isExpanded()
+    ) {
       this.setState({ expanded: nextProps.expanded });
     }
   },
 
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   isTreeItem() {
     return true;
   },
 
-  expand: function (setStateCallback) {
+  expand: function(setStateCallback) {
     this.setState({ expanded: true }, setStateCallback);
   },
 
-  collapse: function (setStateCallback) {
+  collapse: function(setStateCallback) {
     this.setState({ expanded: false }, setStateCallback);
   },
 
-  toggleExpanded: function (setStateCallback) {
-    this.setState(function (state) {
+  toggleExpanded: function(setStateCallback) {
+    this.setState(function(state) {
       return { expanded: !state.expanded };
     }, setStateCallback);
   },
 
-  isExpanded: function () {
+  isExpanded: function() {
     return this.state.expanded;
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
-  _getItems: function () {
+  //@@viewOn:private
+  _getItems: function() {
     let result = null;
 
     if (this.props.items || this.props.content || this.props.children) {
@@ -145,7 +150,9 @@ const TreeItem = createReactClass({
           controlled
           content={this.props.content}
         >
-          {!this.props.item && !this.props.content ? this.buildChildren({ content: this.props.content, children: this.props.children }) : null}
+          {!this.props.item && !this.props.content
+            ? this.buildChildren({ content: this.props.content, children: this.props.children })
+            : null}
         </List>
       );
     }
@@ -153,53 +160,52 @@ const TreeItem = createReactClass({
     return result;
   },
 
-  _onToggle: function () {
+  _onToggle: function() {
     this.toggleExpanded();
     return this;
   },
 
-  _getIcon: function () {
+  _getIcon: function() {
     let icon;
 
-    if (this.props.items || this.props.content || (this.props.children
-      && (!Array.isArray(this.props.children) || this.props.children.length))) {
-
+    if (
+      this.props.items ||
+      this.props.content ||
+      (this.props.children && (!Array.isArray(this.props.children) || this.props.children.length))
+    ) {
       if (this.isExpanded()) {
         icon = this.props.iconExpanded || this.getDefault("iconExpanded");
       } else {
-        icon = this.props.iconCollapsed || this.getDefault("iconCollapsed")
+        icon = this.props.iconCollapsed || this.getDefault("iconCollapsed");
       }
     }
 
     let link = null;
     if (icon) {
       link = (
-        <Link className={this.getClassName('link')} onClick={this._onToggle} parent={this}>
-          <Icon className={this.getClassName('icon')} icon={icon} />
+        <Link className={this.getClassName("link")} onClick={this._onToggle} parent={this}>
+          <Icon className={this.getClassName("icon")} icon={icon} />
         </Link>
       );
     } else {
-      link = <Icon className={this.getClassName('iconHidden')} />
+      link = <Icon className={this.getClassName("iconHidden")} />;
     }
 
     return link;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
-  render: function () {
-    return (
-      this.getNestingLevel()
-        ? (
-        <li {...this.getMainAttrs()}>
-          <Div className={this.getClassName('nav')}>
-            {this._getIcon()} <Span content={this.props.label} />
-          </Div>
-          {this._getItems()}
-          {this.getDisabledCover()}
-        </li>
-      ) : null
-    );
+  render: function() {
+    return this.getNestingLevel() ? (
+      <li {...this.getMainAttrs()}>
+        <Div className={this.getClassName("nav")}>
+          {this._getIcon()} <Span content={this.props.label} />
+        </Div>
+        {this._getItems()}
+        {this.getDisabledCover()}
+      </li>
+    ) : null;
   }
   //@@viewOff:render
 });

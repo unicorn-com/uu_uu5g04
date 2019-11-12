@@ -122,6 +122,22 @@
             John Smith
           </UU5.BlockLayout.Row>
         </UU5.BlockLayout.Block>
+        /*@@viewOff:example*/,
+        /*@@viewOn:example*/
+        <UU5.BlockLayout.Block
+          menuColorSchema="success"
+          menuBgStyle="filled"
+          menuBorderRadius="8px"
+          actions={[
+            { icon: "mdi-settings", content: "Settings", active: true, onClick: () => alert("settings"), colorSchema: "primary", borderRadius: "8px" },
+            { icon: "mdi-email", content: "Send E-mail", onClick: () => alert("email") },
+            { icon: "mdi-settings", content: "Settings", onClick: () => alert("settings") }
+          ]}
+        >
+          <UU5.BlockLayout.Row className="row">
+            John Smith
+          </UU5.BlockLayout.Row>
+        </UU5.BlockLayout.Block>
         /*@@viewOff:example*/
       ];
 

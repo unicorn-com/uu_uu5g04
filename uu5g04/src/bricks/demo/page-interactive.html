@@ -371,23 +371,49 @@
 
         _getOtherProps() {
           let result = (
-            <UU5.Forms.Checkboxes
-              type={2}
-              size="m"
-              colorSchema="blue"
-              onChange={(opt) => {
-                this.setState(opt.value);
-                opt.component.onChangeDefault(opt);
-              }}
-              value={[
-                {label: 'leftFixed', name: 'leftFixed', value: this.state.leftFixed},
-                {label: 'rightFixed', name: 'rightFixed', value: this.state.rightFixed},
-                {label: 'fullPage', name: 'fullPage', value: this.state.fullPage},
-                {label: 'leftResizable', name: 'leftResizable', value: this.state.leftResizable},
-                {label: 'rightResizable', name: 'rightResizable', value: this.state.rightResizable},
-                {label: 'overlayTop', name: 'overlayTop', value: this.state.overlayTop}
-              ]}
-            />
+            <React.Fragment>
+              <UU5.Forms.Checkboxes
+                type={2}
+                size="m"
+                colorSchema="blue"
+                onChange={(opt) => {
+                  this.setState(opt.value);
+                  opt.component.onChangeDefault(opt);
+                }}
+                value={[
+                  {label: 'leftFixed', name: 'leftFixed', value: this.state.leftFixed},
+                  {label: 'rightFixed', name: 'rightFixed', value: this.state.rightFixed},
+                  {label: 'fullPage', name: 'fullPage', value: this.state.fullPage},
+                  {label: 'overlayTop', name: 'overlayTop', value: this.state.overlayTop}
+                ]}
+              />
+              <UU5.Forms.Text
+                label="leftResizable"
+                value={this.state.leftResizable === true ? "true" : (this.state.leftResizable === false ? "false" : this.state.leftResizable)}
+                onBlur={(opt) => {
+                  if (opt.value === "true") {
+                    this.setState({ leftResizable: true });
+                  } else if (opt.value === "false") {
+                    this.setState({ leftResizable: false });
+                  } else {
+                    this.setState({ leftResizable: opt.value  });
+                  }
+                }}
+              />
+              <UU5.Forms.Text
+                label="rightResizable"
+                value={this.state.rightResizable === true ? "true" : (this.state.rightResizable === false ? "false" : this.state.rightResizable)}
+                onBlur={(opt) => {
+                  if (opt.value === "true") {
+                    this.setState({ rightResizable: true });
+                  } else if (opt.value === "false") {
+                    this.setState({ rightResizable: false });
+                  } else {
+                    this.setState({ rightResizable: opt.value  });
+                  }
+                }}
+              />
+            </React.Fragment>
           )
           return result;
         },

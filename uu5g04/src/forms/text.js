@@ -11,40 +11,37 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "./forms-ns.js";
 
-import AutocompleteTextInput from './internal/autocomplete-text-input.js';
-import TextInputMixin from './mixins/text-input-mixin.js';
+import AutocompleteTextInput from "./internal/autocomplete-text-input.js";
+import TextInputMixin from "./mixins/text-input-mixin.js";
 import Context from "./form-context.js";
 
-import './text.less';
+import "./text.less";
+//@@viewOff:imports
 
 export const Text = Context.withContext(
   createReactClass({
     //@@viewOn:mixins
-    mixins: [
-      UU5.Common.BaseMixin,
-      UU5.Common.PureRenderMixin,
-      UU5.Common.ElementaryMixin,
-      TextInputMixin
-    ],
+    mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, TextInputMixin],
     //@@viewOff:mixins
 
     //@@viewOn:statics
     statics: {
       tagName: ns.name("Text"),
       classNames: {
-        main: ns.css("text"),
+        main: ns.css("text")
       },
       errors: {
-        validateError: 'Validated result is not object.'
+        validateError: "Validated result is not object."
       },
-      lsi: () => (UU5.Environment.Lsi.Forms.message)
+      lsi: () => UU5.Environment.Lsi.Forms.message
     },
     //@@viewOff:statics
 
@@ -52,23 +49,23 @@ export const Text = Context.withContext(
     propTypes: {
       value: PropTypes.string,
       password: PropTypes.bool,
-      pattern: PropTypes.string,
+      pattern: PropTypes.string
     },
     //@@viewOff:propTypes
 
     //@@viewOn:getDefaultProps
     getDefaultProps() {
       return {
-        value: '',
+        value: "",
         password: false,
         pattern: null
       };
     },
     //@@viewOff:getDefaultProps
 
-    //@@viewOn:standardComponentLifeCycle
+    //@@viewOn:reactLifeCycle
     componentWillMount() {
-      if (this.props.onValidate && typeof this.props.onValidate === 'function') {
+      if (this.props.onValidate && typeof this.props.onValidate === "function") {
         this._validateOnChange({ value: this.state.value, event: null, component: this });
       }
 
@@ -77,7 +74,7 @@ export const Text = Context.withContext(
 
     componentWillReceiveProps(nextProps) {
       if (nextProps.controlled) {
-        if (this.props.onValidate && typeof this.props.onValidate === 'function') {
+        if (this.props.onValidate && typeof this.props.onValidate === "function") {
           this._validateOnChange({ value: nextProps.value, event: null, component: this }, true);
         } else {
           this.setFeedback(nextProps.feedback, nextProps.message, nextProps.value);
@@ -86,16 +83,16 @@ export const Text = Context.withContext(
 
       return this;
     },
-    //@@viewOff:standardComponentLifeCycle
+    //@@viewOff:reactLifeCycle
 
     //@@viewOn:interface
     //@@viewOff:interface
 
-    //@@viewOn:overridingMethods
+    //@@viewOn:overriding
     // TODO: tohle je ještě otázka - je potřeba nastavit hodnotu z jiné komponenty (musí být validace) a z onChange (neměla by být validace)
     setValue_(value, setStateCallback) {
       if (this._checkRequired({ value })) {
-        if (typeof this.props.onValidate === 'function') {
+        if (typeof this.props.onValidate === "function") {
           this._validateOnChange({ value, event: null, component: this });
         } else {
           this.setInitial(null, value, setStateCallback);
@@ -122,19 +119,26 @@ export const Text = Context.withContext(
       } else {
         let result = this.getChangeFeedback(opt);
         let callback = setStateCallback;
-        if (!(opt._data && opt._data.closeOnCallback) && result.foundAutocompleteItems && result.foundAutocompleteItems.length > 0) {
+        if (
+          !(opt._data && opt._data.closeOnCallback) &&
+          result.foundAutocompleteItems &&
+          result.foundAutocompleteItems.length > 0
+        ) {
           callback = () => this.open(setStateCallback);
         } else {
           callback = () => this.close(setStateCallback);
           this.focus();
         }
-        this.setState({
-          feedback: result.feedback,
-          message: result.message,
-          value: result.value,
-          foundAutocompleteItems: result.foundAutocompleteItems,
-          selectedIndex: result.selectedIndex
-        }, callback);
+        this.setState(
+          {
+            feedback: result.feedback,
+            message: result.message,
+            value: result.value,
+            foundAutocompleteItems: result.foundAutocompleteItems,
+            selectedIndex: result.selectedIndex
+          },
+          callback
+        );
       }
 
       return this;
@@ -148,16 +152,16 @@ export const Text = Context.withContext(
 
       this.resetDefault(setStateCallback);
     },
-    //@@viewOff:overridingMethods
+    //@@viewOff:overriding
 
-    //@@viewOn:componentSpecificHelpers
+    //@@viewOn:private
     _validateOnChange(opt, checkValue, setStateCallback) {
       let _callCallback = typeof setStateCallback === "function";
 
       if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
         let result = this.onValidate(opt);
         if (result) {
-          if (typeof result === 'object') {
+          if (typeof result === "object") {
             if (result.feedback) {
               _callCallback = false;
               this.setFeedback(result.feedback, result.message, result.value, setStateCallback);
@@ -166,7 +170,7 @@ export const Text = Context.withContext(
               this.setState({ value: opt.value }, setStateCallback);
             }
           } else {
-            this.showError('validateError', null, {
+            this.showError("validateError", null, {
               context: {
                 event: e,
                 func: this.props.onValidate,
@@ -187,7 +191,7 @@ export const Text = Context.withContext(
     _onBlur(opt) {
       opt.component = this;
 
-      if (typeof this.props.onBlur === 'function') {
+      if (typeof this.props.onBlur === "function") {
         this.props.onBlur(opt);
       } else {
         this.onBlurDefault(opt);
@@ -197,7 +201,7 @@ export const Text = Context.withContext(
     _onFocus(opt) {
       opt.component = this;
 
-      if (typeof this.props.onFocus === 'function') {
+      if (typeof this.props.onFocus === "function") {
         this.props.onFocus(opt);
       } else {
         this.onFocusDefault(opt);
@@ -224,7 +228,7 @@ export const Text = Context.withContext(
         name: this.props.name || inputId,
         value: this.state.value,
         placeholder: this.props.placeholder,
-        type: this.props.password ? 'password' : this.props.type || 'text',
+        type: this.props.password ? "password" : this.props.type || "text",
         onChange: !this.isReadOnly() && !this.isComputedDisabled() ? this.onChange : null,
         onFocus: !this.isReadOnly() && !this.isComputedDisabled() ? this._onFocus : null,
         onBlur: this._onBlur,
@@ -234,12 +238,13 @@ export const Text = Context.withContext(
         readonly: this.isReadOnly(),
         loading: this.isLoading(),
         feedback: this.getFeedback(),
-        ref_: (item) => this._textInput = item,
+        ref_: item => (this._textInput = item),
         borderRadius: this.props.borderRadius,
         elevation: this.props.elevation,
         bgStyle: this.props.bgStyle,
         inputWidth: this._getInputWidth(),
-        colorSchema: this.props.colorSchema
+        colorSchema: this.props.colorSchema,
+        size: this.props.size
       };
 
       if (this.state.autocompleteItems) {
@@ -262,11 +267,11 @@ export const Text = Context.withContext(
     _getInput(inputId) {
       return <AutocompleteTextInput {...this._getInputProps(inputId)} />;
     },
-    //@@viewOff:componentSpecificHelpers
+    //@@viewOff:private
 
     //@@viewOn:render
     render() {
-      let inputId = this.getId() + '-input';
+      let inputId = this.getId() + "-input";
 
       return (
         <div {...this._getMainAttrs()}>

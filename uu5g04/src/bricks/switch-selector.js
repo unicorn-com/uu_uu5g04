@@ -11,12 +11,14 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import React from "react";
 import createReactClass from "create-react-class";
 import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import SwitchSelectorItem from "./switch-selector-item.js";
+//@@viewOff:imports
 
 const DEFAULT_COLOR = "blue";
 const DEFAULT_PADDING = 4;
@@ -71,7 +73,8 @@ function getColors(colorSchema, bgStyle = "outline") {
   let styles = {
     borderColor: UU5.Environment.colors.grey.c400
   };
-  const colorSchemaMap = UU5.Environment.colorSchemaMap[colorSchema === "default" ? DEFAULT_COLOR : (colorSchema || DEFAULT_COLOR)];
+  const colorSchemaMap =
+    UU5.Environment.colorSchemaMap[colorSchema === "default" ? DEFAULT_COLOR : colorSchema || DEFAULT_COLOR];
   const color = colorSchemaMap.color.replace(/-rich$/, "");
   const shades = color === "grey" ? greyShades : UU5.Environment.colors[color];
 
@@ -103,8 +106,20 @@ function getColors(colorSchema, bgStyle = "outline") {
   return styles;
 }
 
-function getClassName({ width, borderWidth, borderWidthFocus, colorSchema, bgStyle, borderRadius, className, disabled, readOnly, elevation }) {
-  const classNames = [UU5.Common.Css.css`
+function getClassName({
+  width,
+  borderWidth,
+  borderWidthFocus,
+  colorSchema,
+  bgStyle,
+  borderRadius,
+  className,
+  disabled,
+  readOnly,
+  elevation
+}) {
+  const classNames = [
+    UU5.Common.Css.css`
     display: inline-flex;
     outline: none;
     border-style: solid;
@@ -112,7 +127,8 @@ function getClassName({ width, borderWidth, borderWidthFocus, colorSchema, bgSty
     ns.css("switch-selector")
   ];
 
-  (disabled || readOnly) && classNames.push(UU5.Common.Css.css`
+  (disabled || readOnly) &&
+    classNames.push(UU5.Common.Css.css`
     &[disabled], &[readonly] {
       position: relative;
       cursor: default !important;
@@ -161,14 +177,18 @@ function getClassName({ width, borderWidth, borderWidthFocus, colorSchema, bgSty
     border-color: ${styles.borderColor};
     border-radius: ${UU5.Common.Tools.fillUnit(borderRadius)};
 
-    ${disabled || readOnly ? "" : `
+    ${
+      disabled || readOnly
+        ? ""
+        : `
     &:focus, &:active {
       padding: ${styles.paddingFocus};
       ${styles.backgroundColorFocus ? "background-color: " + styles.backgroundColorFocus : ""};
       border-width: ${styles.borderWidthFocus};
       border-color: ${styles.borderColorFocus};
     }
-    `}
+    `
+    }
   `);
 
   if (className) classNames.push(className);
@@ -178,10 +198,7 @@ function getClassName({ width, borderWidth, borderWidthFocus, colorSchema, bgSty
 
 export const SwitchSelector = createReactClass({
   //@@viewOn:mixins
-  mixins: [
-    UU5.Common.BaseMixin,
-    UU5.Common.ElementaryMixin
-  ],
+  mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -192,13 +209,15 @@ export const SwitchSelector = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    items: PropTypes.arrayOf(PropTypes.shape({
-      value: PropTypes.string.isRequired,
-      content: PropTypes.any,
-      colorSchema: PropTypes.string,
-      bgStyle: PropTypes.string,
-      borderRadius: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
-    })).isRequired,
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        value: PropTypes.string.isRequired,
+        content: PropTypes.any,
+        colorSchema: PropTypes.string,
+        bgStyle: PropTypes.string,
+        borderRadius: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+      })
+    ).isRequired,
     value: PropTypes.string,
     onChange: PropTypes.func,
 
@@ -234,22 +253,22 @@ export const SwitchSelector = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     let items = this.props.items || this.getDefault("items");
     let value = this.props.value || items[0].value;
 
     return { value };
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _getValue() {
     return this.props.value || this.props.items[0].value;
   },
@@ -329,19 +348,15 @@ export const SwitchSelector = createReactClass({
     this.props.readOnly && (attrs.readOnly = true);
     attrs.onFocus = this._onFocusWrapper;
     attrs.onBlur = this._onBlurWrapper;
-    attrs.ref = root => this._root = root;
+    attrs.ref = root => (this._root = root);
 
     return attrs;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
-    return (
-      <div {...this._getMainAttrs()}>
-        {this._getButtons()}
-      </div>
-    );
+    return <div {...this._getMainAttrs()}>{this._getButtons()}</div>;
   }
   //@@viewOn:render
 });

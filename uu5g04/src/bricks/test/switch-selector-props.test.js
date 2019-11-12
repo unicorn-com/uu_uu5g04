@@ -20,10 +20,7 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 const items = [{ label: "Low", value: "low" }, { label: "Normal", value: "normal" }, { label: "High", value: "high" }];
 
 const CONFIG = {
-  mixins: [
-    "UU5.Common.BaseMixin",
-    "UU5.Common.ElementaryMixin"
-  ],
+  mixins: ["UU5.Common.BaseMixin", "UU5.Common.ElementaryMixin"],
   props: {
     value: {
       values: [undefined, "low", "normal", "high"]
@@ -71,9 +68,7 @@ describe(`UU5.Bricks.SwitchSelector props testing`, () => {
 
   it(`UU5.Bricks.SwitchSelector onChange with items()`, () => {
     const onChangeFn = jest.fn();
-    const wrapper = mount(
-      <UU5.Bricks.SwitchSelector items={items} onChange={onChangeFn} />
-    );
+    const wrapper = mount(<UU5.Bricks.SwitchSelector items={items} onChange={onChangeFn} />);
     const button = wrapper.find("button").at(2);
 
     button.simulate("click");

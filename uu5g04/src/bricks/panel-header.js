@@ -1,29 +1,30 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 const ClassNames = UU5.Common.ClassNames;
 
-import Icon from './icon.js';
+import Icon from "./icon.js";
 
-import './panel-header.less';
+import "./panel-header.less";
+//@@viewOff:imports
 
 export default createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -50,10 +51,10 @@ export default createReactClass({
       icon: ns.css("panel-header-icon")
     },
     defaults: {
-      parentTagName: 'UU5.Bricks.Panel'
+      parentTagName: "UU5.Bricks.Panel"
     },
     errors: {
-      invalidParent: 'Parent of this component is not Panel.'
+      invalidParent: "Parent of this component is not Panel."
     }
   },
   //@@viewOff:statics
@@ -65,7 +66,7 @@ export default createReactClass({
     _disableHeaderClick: PropTypes.bool,
     iconAlign: PropTypes.oneOf(["right", "after", "left"]),
     openClick: PropTypes.oneOf(["header", "icon", "none"]),
-    bgStyle: PropTypes.oneOf(['filled', 'outline', 'transparent', 'underline'])
+    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"])
   },
   //@@viewOff:propTypes
 
@@ -87,7 +88,7 @@ export default createReactClass({
     }
   },
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   componentWillMount() {
     let parent = this.getParent();
 
@@ -102,25 +103,25 @@ export default createReactClass({
     }
   },
 
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _onClickHandler(comp, e) {
     if (e && e.currentTarget && e.currentTarget.blur) e.currentTarget.blur();
     this.props._onClick(comp, e);
     return this;
   },
 
-  _getBorderRadiusButton(){
-    if(this.props.openClick === "icon"){
+  _getBorderRadiusButton() {
+    if (this.props.openClick === "icon") {
       if (this.props.style.borderRadius) {
-        if ( this.props.iconAlign === "left"){
+        if (this.props.iconAlign === "left") {
           let borderRadius;
           let border = this.props.style.borderRadius;
           let splitBorderLeft = border.split(" ");
@@ -134,7 +135,7 @@ export default createReactClass({
             return (borderRadius = splitBorderLeft[0] + " " + 0 + " " + 0 + " " + splitBorderLeft[3]);
           }
         }
-        if ( this.props.iconAlign === "right"){
+        if (this.props.iconAlign === "right") {
           let borderRadius;
           let border = this.props.style.borderRadius;
           let splitBorderRight = border.split(" ");
@@ -155,14 +156,14 @@ export default createReactClass({
 
     if (this.props._icon && this.props.openClick === "icon" && !this.props._disableHeaderClick) {
       icon = (
-        <div className={this.getClassName().iconButton} >
+        <div className={this.getClassName().iconButton}>
           <UU5.Bricks.Button
             borderRadius={this._getBorderRadiusButton()}
             colorSchema={"custom"}
             onClick={this._onClickHandler}
           >
-        <Icon className={this.getClassName().icon} icon={this.props._icon} />
-        </UU5.Bricks.Button>
+            <Icon className={this.getClassName().icon} icon={this.props._icon} />
+          </UU5.Bricks.Button>
         </div>
       );
     } else if (this.props._icon) {
@@ -191,16 +192,20 @@ export default createReactClass({
     if (this.props.bgStyle) {
       mainAttrs.className += " " + ClassNames[this.props.bgStyle];
     }
-    if(this.props._icon){
-      mainAttrs.className += ' ' +
-      (this.props.iconAlign === 'after' ? this.getClassName().after :
-      this.props.iconAlign === "left" ? this.getClassName().left :
-      this.props.iconAlign === 'right' ? this.getClassName().right :
-      null);
+    if (this.props._icon) {
+      mainAttrs.className +=
+        " " +
+        (this.props.iconAlign === "after"
+          ? this.getClassName().after
+          : this.props.iconAlign === "left"
+          ? this.getClassName().left
+          : this.props.iconAlign === "right"
+          ? this.getClassName().right
+          : null);
     }
-      return mainAttrs;
+    return mainAttrs;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {

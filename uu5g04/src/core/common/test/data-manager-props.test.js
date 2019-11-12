@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -106,7 +106,7 @@ const getChildrenFn = () => "test";
 describe(`UU5.Common.DataManager onLoad`, () => {
   const loadDataParams = { param: "load" };
 
-  it('optimistic', async () => {
+  it("optimistic", async () => {
     let onLoadFn = jest.fn().mockImplementation(loadFn);
     let childrenFn = jest.fn().mockImplementation(getChildrenFn);
 
@@ -125,7 +125,7 @@ describe(`UU5.Common.DataManager onLoad`, () => {
     await testHandle("load", wrapper, childrenFn, onLoadFn, 2, loadDataParams, data);
   });
 
-  it('pessimistic', async () => {
+  it("pessimistic", async () => {
     let onLoadFn = jest.fn().mockImplementation(loadFn);
     let childrenFn = jest.fn().mockImplementation(getChildrenFn);
 
@@ -150,7 +150,7 @@ describe(`UU5.Common.DataManager onReload`, () => {
   const reloadDataParams = { param: "reload" };
   const reloadFn = () => new Promise((resolve, reject) => resolve(dataReload));
 
-  it('optimistic', async () => {
+  it("optimistic", async () => {
     let onLoadFn = jest.fn().mockImplementation(loadFn);
     let childrenFn = jest.fn().mockImplementation(getChildrenFn);
     let onReloadFn = jest.fn().mockImplementation(reloadFn);
@@ -170,7 +170,7 @@ describe(`UU5.Common.DataManager onReload`, () => {
     await testHandle("reload", wrapper, childrenFn, onReloadFn, 1, reloadDataParams, dataReload);
   });
 
-  it('pessimistic', async () => {
+  it("pessimistic", async () => {
     let onLoadFn = jest.fn().mockImplementation(loadFn);
     let childrenFn = jest.fn().mockImplementation(getChildrenFn);
     let onReloadFn = jest.fn().mockImplementation(reloadFn);
@@ -195,7 +195,7 @@ describe(`UU5.Common.DataManager onUpdate`, () => {
   const dataUpdate = { name: "AppNameUpdate" };
   const updateFn = () => new Promise((resolve, reject) => resolve(dataUpdate));
 
-  it('optimistic', async () => {
+  it("optimistic", async () => {
     let onLoadFn = jest.fn().mockImplementation(loadFn);
     let childrenFn = jest.fn().mockImplementation(getChildrenFn);
     let onUpdateFn = jest.fn().mockImplementation(updateFn);
@@ -215,7 +215,7 @@ describe(`UU5.Common.DataManager onUpdate`, () => {
     await testHandle("update", wrapper, childrenFn, onUpdateFn, 1, dataUpdate, dataUpdate);
   });
 
-  it('pessimistic', async () => {
+  it("pessimistic", async () => {
     let onLoadFn = jest.fn().mockImplementation(loadFn);
     let childrenFn = jest.fn().mockImplementation(getChildrenFn);
     let onUpdateFn = jest.fn().mockImplementation(updateFn);

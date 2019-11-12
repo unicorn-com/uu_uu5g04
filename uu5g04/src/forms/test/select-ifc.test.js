@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -18,19 +18,13 @@ import "uu5g04-forms";
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
-describe('UU5.Forms.Select interface test', () => {
-
-  it('isOpen() should return false', () => {
+describe("UU5.Forms.Select interface test", () => {
+  it("isOpen() should return false", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-        disableBackdrop
-        multiple
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category" disableBackdrop multiple>
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     expect(wrapper.instance().state.open).toBeFalsy();
@@ -38,17 +32,12 @@ describe('UU5.Forms.Select interface test', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isOpen() should return true', () => {
+  it("isOpen() should return true", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-        disableBackdrop
-        multiple
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category" disableBackdrop multiple>
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     const mockFunc = jest.fn();
@@ -64,17 +53,12 @@ describe('UU5.Forms.Select interface test', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('open(setStateCallBack)', () => {
+  it("open(setStateCallBack)", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-        disableBackdrop
-        multiple
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category" disableBackdrop multiple>
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     const mockFunc = jest.fn();
@@ -90,17 +74,12 @@ describe('UU5.Forms.Select interface test', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('close(setStateCallBack)', () => {
+  it("close(setStateCallBack)", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-        disableBackdrop
-        multiple
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category" disableBackdrop multiple>
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     const mockFunc = jest.fn();
@@ -123,17 +102,12 @@ describe('UU5.Forms.Select interface test', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('toggle(setStateCallBack)', () => {
+  it("toggle(setStateCallBack)", () => {
     const wrapper = mount(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-        disableBackdrop
-        multiple
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category" disableBackdrop multiple>
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     const mockFunc = jest.fn();
@@ -155,18 +129,12 @@ describe('UU5.Forms.Select interface test', () => {
     expect(wrapper.instance().isOpen()).toBeFalsy();
   });
 
-
-  it('addValue(value, setStateCallBack)', () => {
+  it("addValue(value, setStateCallBack)", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-        disableBackdrop
-        multiple
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category" disableBackdrop multiple>
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     const mockFunc = jest.fn();
@@ -180,18 +148,12 @@ describe('UU5.Forms.Select interface test', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-
-  it('removeValue(opt, setStateCallBack)', () => {
+  it("removeValue(opt, setStateCallBack)", () => {
     const wrapper = mount(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-        disableBackdrop
-        multiple
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category" disableBackdrop multiple>
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     const mockFunc = jest.fn();
@@ -201,44 +163,33 @@ describe('UU5.Forms.Select interface test', () => {
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().state.value).toEqual(expect.arrayContaining(["Task"]));
-    const removeReturValue = wrapper.instance().removeValue({index: 0}, mockFunc);
+    const removeReturValue = wrapper.instance().removeValue({ index: 0 }, mockFunc);
     wrapper.update();
     expect(mockFunc).toHaveBeenCalledTimes(2);
     expect(wrapper.instance().state.value).toEqual(expect.arrayContaining([]));
     //expect(wrapper).toMatchSnapshot();
   });
-
 });
 
-describe('UU5.Forms.InputMixin interface test', () => {
-
-  it('isInput()', () => {
+describe("UU5.Forms.InputMixin interface test", () => {
+  it("isInput()", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-        disableBackdrop
-        multiple
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category" disableBackdrop multiple>
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     expect(wrapper.instance().isInput()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getValue() should return value', () => {
+  it("getValue() should return value", () => {
     const wrapper = mount(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-        value={"Info"}
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category" value={"Info"}>
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
 
@@ -246,30 +197,24 @@ describe('UU5.Forms.InputMixin interface test', () => {
     expect(wrapper.instance().getValue()).toEqual("Info");
   });
 
-  it('getValue() value is empty. Should return empty string.', () => {
+  it("getValue() value is empty. Should return empty string.", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category">
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     expect(wrapper.instance().getValue()).toEqual(expect.arrayContaining([]));
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setValue(value,setStateCallBack)', () => {
+  it("setValue(value,setStateCallBack)", () => {
     const wrapper = mount(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category">
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     expect(wrapper.instance().getValue()).toEqual(expect.arrayContaining([]));
@@ -283,32 +228,26 @@ describe('UU5.Forms.InputMixin interface test', () => {
     expect(wrapper.instance().getValue()).toEqual("Task");
   });
 
-  it('getMessage() should return null, second: shoudl return new mesage', () => {
+  it("getMessage() should return null, second: shoudl return new mesage", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category">
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     expect(wrapper.instance().getMessage()).toBe(null);
     expect(wrapper).toMatchSnapshot();
-    wrapper.setProps({message: "New Setting message"});
+    wrapper.setProps({ message: "New Setting message" });
     expect(wrapper.instance().getMessage()).toEqual("New Setting message");
   });
 
-  it('setMessage(msg, setStateCallBack)', () => {
+  it("setMessage(msg, setStateCallBack)", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category">
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     const mockFunc = jest.fn();
@@ -323,35 +262,28 @@ describe('UU5.Forms.InputMixin interface test', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getFeedBack()', () => {
+  it("getFeedBack()", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category">
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     expect(wrapper.instance().getFeedback()).toEqual("initial");
     expect(wrapper).toMatchSnapshot();
-    wrapper.setProps({feedback: "success"});
+    wrapper.setProps({ feedback: "success" });
     wrapper.update();
     expect(wrapper.instance().getFeedback()).toEqual("success");
     expect(wrapper).toMatchSnapshot();
   });
 
-
-  it('setFeedBack(feedback, message, value, setStateCallBack)', () => {
+  it("setFeedBack(feedback, message, value, setStateCallBack)", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category">
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     expect(wrapper.instance().getFeedback()).toEqual("initial");
@@ -370,8 +302,7 @@ describe('UU5.Forms.InputMixin interface test', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-
-  it('setInitial(msg, value, setStateCallBack)', () => {
+  it("setInitial(msg, value, setStateCallBack)", () => {
     const wrapper = shallow(
       <UU5.Forms.Select
         id={"idSelect"}
@@ -380,16 +311,16 @@ describe('UU5.Forms.InputMixin interface test', () => {
         feedback={"error"}
         required={true}
       >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getFeedback()).toEqual("error");
     expect(wrapper.instance().state.value).toEqual(expect.arrayContaining([]));
-    expect(wrapper.instance().getMessage()).toEqual("This input is required")
+    expect(wrapper.instance().getMessage()).toEqual("This input is required");
     expect(wrapper.instance().isInitial()).toBeFalsy();
     const returnValue = wrapper.instance().setInitial("Initial Message", "Task", mockFunc);
     wrapper.update();
@@ -398,20 +329,17 @@ describe('UU5.Forms.InputMixin interface test', () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().getFeedback()).toEqual("initial");
     expect(wrapper.instance().state.value).toEqual(expect.arrayContaining(["Task"]));
-    expect(wrapper.instance().getMessage()).toEqual("Initial Message")
+    expect(wrapper.instance().getMessage()).toEqual("Initial Message");
     expect(wrapper.instance().isInitial()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isInitial()', () => {
+  it("isInitial()", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category">
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     const mockFunc = jest.fn();
@@ -423,15 +351,12 @@ describe('UU5.Forms.InputMixin interface test', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setLoading(message, value, setStateCallBack)', () => {
+  it("setLoading(message, value, setStateCallBack)", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category">
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     const mockFunc = jest.fn();
@@ -450,32 +375,24 @@ describe('UU5.Forms.InputMixin interface test', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-
-  it('isLoading()', () => {
+  it("isLoading()", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category">
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     expect(wrapper.instance().isLoading()).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
   });
 
-
-  it('setSuccess(message, value, setStateCallBack)', () => {
+  it("setSuccess(message, value, setStateCallBack)", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category">
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     const mockFunc = jest.fn();
@@ -489,22 +406,18 @@ describe('UU5.Forms.InputMixin interface test', () => {
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().getFeedback()).toEqual("success");
-    expect(wrapper.instance().getMessage()).toEqual("This is success message")
+    expect(wrapper.instance().getMessage()).toEqual("This is success message");
     expect(wrapper.instance().state.value).toEqual(expect.arrayContaining(["Task"]));
     expect(wrapper.instance().isSuccess()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isSuccess() fisr return false, second return true', () => {
+  it("isSuccess() fisr return false, second return true", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-        required={true}
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category" required={true}>
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     const mockFunc = jest.fn();
@@ -516,23 +429,18 @@ describe('UU5.Forms.InputMixin interface test', () => {
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().getFeedback()).toEqual("success");
-    expect(wrapper.instance().getMessage()).toEqual("This is success message")
+    expect(wrapper.instance().getMessage()).toEqual("This is success message");
     expect(wrapper.instance().state.value).toEqual(expect.arrayContaining(["Task"]));
     expect(wrapper.instance().isSuccess()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
 
-
-  it('setWarning(message, value, setStateCallBack)', () => {
+  it("setWarning(message, value, setStateCallBack)", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-        required={true}
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category" required={true}>
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     const mockFunc = jest.fn();
@@ -548,14 +456,14 @@ describe('UU5.Forms.InputMixin interface test', () => {
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().getFeedback()).toEqual("warning");
-    expect(wrapper.instance().getMessage()).toEqual("This is warning message")
+    expect(wrapper.instance().getMessage()).toEqual("This is warning message");
     expect(wrapper.instance().state.value).toEqual(expect.arrayContaining(["Task"]));
     expect(wrapper.instance().isWarning()).toBeTruthy();
     expect(wrapper.instance().isSuccess()).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isWarning()', () => {
+  it("isWarning()", () => {
     const wrapper = shallow(
       <UU5.Forms.Select
         id={"idSelect"}
@@ -564,9 +472,9 @@ describe('UU5.Forms.InputMixin interface test', () => {
         feedback={"warning"}
         message={"Warning message"}
       >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     const mockFunc = jest.fn();
@@ -582,16 +490,12 @@ describe('UU5.Forms.InputMixin interface test', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setError(message, value, setStateCallBack)', () => {
+  it("setError(message, value, setStateCallBack)", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-        required={true}
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category" required={true}>
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     const mockFunc = jest.fn();
@@ -618,8 +522,7 @@ describe('UU5.Forms.InputMixin interface test', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-
-  it('isError()', () => {
+  it("isError()", () => {
     const wrapper = shallow(
       <UU5.Forms.Select
         id={"idSelect"}
@@ -628,9 +531,9 @@ describe('UU5.Forms.InputMixin interface test', () => {
         feedback={"error"}
         message={"Error message"}
       >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     const mockFunc = jest.fn();
@@ -646,16 +549,12 @@ describe('UU5.Forms.InputMixin interface test', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('reset(setStateCallBack)', () => {
+  it("reset(setStateCallBack)", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-        required={true}
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category" required={true}>
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     const mockFunc = jest.fn();
@@ -682,51 +581,49 @@ describe('UU5.Forms.InputMixin interface test', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getChangeFeedback()', () => {
+  it("getChangeFeedback()", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-        required={true}
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category" required={true}>
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
 
-    expect(wrapper.instance().getChangeFeedback({})).toEqual(expect.objectContaining({
-      feedback: 'initial',
-      message: null,
-      value: []
-    }));
+    expect(wrapper.instance().getChangeFeedback({})).toEqual(
+      expect.objectContaining({
+        feedback: "initial",
+        message: null,
+        value: []
+      })
+    );
     expect(wrapper).toMatchSnapshot();
-
   });
 
-  it('setChangeFeedback()', () => {
+  it("setChangeFeedback()", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-        required={true}
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category" required={true}>
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     const mockFunc = jest.fn();
-    expect(wrapper.instance().getChangeFeedback({})).toEqual(expect.objectContaining({
-      feedback: 'initial',
-      message: null,
-      value: []
-    }));
-    const returnValue = wrapper.instance().setChangeFeedback({
-      feedback: 'success',
-      message: 'Success message from setChangeFeedback',
-      value: "Task"
-    }, mockFunc);
+    expect(wrapper.instance().getChangeFeedback({})).toEqual(
+      expect.objectContaining({
+        feedback: "initial",
+        message: null,
+        value: []
+      })
+    );
+    const returnValue = wrapper.instance().setChangeFeedback(
+      {
+        feedback: "success",
+        message: "Success message from setChangeFeedback",
+        value: "Task"
+      },
+      mockFunc
+    );
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(returnValue).toBe(wrapper.instance());
@@ -736,16 +633,12 @@ describe('UU5.Forms.InputMixin interface test', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isReadOnly()', () => {
+  it("isReadOnly()", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-        required={true}
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category" required={true}>
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     const mockFunc = jest.fn();
@@ -759,17 +652,12 @@ describe('UU5.Forms.InputMixin interface test', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setEditableValue(true, setStateCallback)', () => {
+  it("setEditableValue(true, setStateCallback)", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-        value={"Task"}
-        required={true}
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category" value={"Task"} required={true}>
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     const mockFunc = jest.fn();
@@ -789,17 +677,12 @@ describe('UU5.Forms.InputMixin interface test', () => {
     expect(mockFunc).toHaveBeenCalledTimes(4);
   });
 
-  it('setEditableValue(false, setStateCallback)', () => {
+  it("setEditableValue(false, setStateCallback)", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-        value={"Task"}
-        required={true}
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category" value={"Task"} required={true}>
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     const mockFunc = jest.fn();
@@ -818,18 +701,12 @@ describe('UU5.Forms.InputMixin interface test', () => {
     expect(mockFunc).toHaveBeenCalledTimes(3);
   });
 
-
-  it('readOnly(setStatecallback)', () => {
+  it("readOnly(setStatecallback)", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-        value={"Task"}
-        required={true}
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category" value={"Task"} required={true}>
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     expect(wrapper.instance().isReadOnly()).toBeFalsy();
@@ -844,17 +721,12 @@ describe('UU5.Forms.InputMixin interface test', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('editable(setStatecallback)', () => {
+  it("editable(setStatecallback)", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-        value={"Task"}
-        required={true}
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category" value={"Task"} required={true}>
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     const mockFunc = jest.fn();
@@ -875,17 +747,12 @@ describe('UU5.Forms.InputMixin interface test', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getLabel(idinput)', () => {
+  it("getLabel(idinput)", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-        value={"Task"}
-        required={true}
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category" value={"Task"} required={true}>
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     expect(wrapper.instance().getLabel()).not.toBeNull();
@@ -896,17 +763,12 @@ describe('UU5.Forms.InputMixin interface test', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getInputWrapper(inpuid)', () => {
+  it("getInputWrapper(inpuid)", () => {
     const wrapper = shallow(
-      <UU5.Forms.Select
-        id={"idSelect"}
-        label="Issue category"
-        value={"Task"}
-        required={true}
-      >
-        <UU5.Forms.Select.Option id={"item01"} value="Info"/>
-        <UU5.Forms.Select.Option id={"item02"} value="Bug"/>
-        <UU5.Forms.Select.Option id={"item03"} value="Task"/>
+      <UU5.Forms.Select id={"idSelect"} label="Issue category" value={"Task"} required={true}>
+        <UU5.Forms.Select.Option id={"item01"} value="Info" />
+        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
+        <UU5.Forms.Select.Option id={"item03"} value="Task" />
       </UU5.Forms.Select>
     );
     expect(wrapper.instance().getInputWrapper()).not.toBeNull();
@@ -916,8 +778,4 @@ describe('UU5.Forms.InputMixin interface test', () => {
     expect(wrapper.instance().getInputWrapper()).toBeInstanceOf(Object);
     expect(wrapper).toMatchSnapshot();
   });
-
-
 });
-
-

@@ -1,24 +1,25 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
+//@@viewOn:imports
+import React from "react";
 import PropTypes from "prop-types";
-import createReactClass from 'create-react-class';
+import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import { TAG, css } from "./config.js";
+//@@viewOff:imports
 
 export const Tile = createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -40,8 +41,8 @@ export const Tile = createReactClass({
         max-width: 100%;
 
         &.uu5-common-bg-style-filled {
-          background-color: #FAFAFA;
-          border: 1px solid #E0E0E0;
+          background-color: #fafafa;
+          border: 1px solid #e0e0e0;
         }
       `,
       bgStyle: "uu5-common-bg-style-",
@@ -56,11 +57,11 @@ export const Tile = createReactClass({
   //@@viewOn:propTypes
   propTypes: {
     bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-    elevation: PropTypes.oneOf(['-1', '0', '1', '2', '3', '4', '5', -1, 0, 1, 2, 3, 4, 5]),
+    elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
     borderRadius: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     padding: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    margin: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    margin: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
   },
   //@@viewOff:propTypes
 
@@ -72,7 +73,7 @@ export const Tile = createReactClass({
       borderRadius: undefined,
       width: undefined,
       padding: undefined,
-      margin: undefined,
+      margin: undefined
     };
   },
   //@@viewOff:getDefaultProps
@@ -107,15 +108,12 @@ export const Tile = createReactClass({
 
   //@@viewOn:render
   render() {
-    return (
-      this.getNestingLevel()
-        ? (
-          <div {...this._getMainAttrs()}>
-            {this.getChildren()}
-            {this.getDisabledCover()}
-          </div>
-        ) : null
-    );
+    return this.getNestingLevel() ? (
+      <div {...this._getMainAttrs()}>
+        {this.getChildren()}
+        {this.getDisabledCover()}
+      </div>
+    ) : null;
   }
   //@@viewOff:render
 });

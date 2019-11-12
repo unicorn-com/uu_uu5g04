@@ -88,9 +88,8 @@ export const ListDataManager = createReactClass({
 
   componentDidMount() {
     this._load(this.props.onLoad, this.props.data)
-    // promise must have catch, in other way there is written error to console
-      .catch(() => {
-      });
+      // promise must have catch, in other way there is written error to console
+      .catch(() => {});
     // this._startReload();
   },
 
@@ -223,17 +222,17 @@ export const ListDataManager = createReactClass({
             }
 
             this.isRendered() &&
-            this.setState(
-              { viewState: "ready", errorState: null, errorData: null, data, pageInfo, response },
-              typeof resolve === "function" ? () => resolve(data) : undefined
-            );
+              this.setState(
+                { viewState: "ready", errorState: null, errorData: null, data, pageInfo, response },
+                typeof resolve === "function" ? () => resolve(data) : undefined
+              );
           })
           .catch(response => {
             this.isRendered() &&
-            this.setState(
-              { errorData: response, viewState: "error", errorState, response },
-              typeof reject === "function" ? () => reject(response) : undefined
-            );
+              this.setState(
+                { errorData: response, viewState: "error", errorState, response },
+                typeof reject === "function" ? () => reject(response) : undefined
+              );
           });
       }
     });
@@ -355,7 +354,9 @@ export const ListDataManager = createReactClass({
     promise.then(
       response => {
         // array or object for backward compatibility
-        const dtoOut = Array.isArray(response) ? response : ((response && typeof response === "object" && response.data) || response);
+        const dtoOut = Array.isArray(response)
+          ? response
+          : (response && typeof response === "object" && response.data) || response;
         if (this.isRendered()) {
           this.setState(
             // NOTE We're updating data even when optimistic because server can send us updated
@@ -376,7 +377,7 @@ export const ListDataManager = createReactClass({
                 let index = data.indexOf(origItem);
                 const newItem = { ...origItem, ...dtoOutItem };
                 // optimistic?
-                index > -1 ? data[index] = newItem : data.push(newItem);
+                index > -1 ? (data[index] = newItem) : data.push(newItem);
               });
 
               return { viewState: "ready", errorState: null, errorData: null, data, pageInfo, response };
@@ -430,7 +431,9 @@ export const ListDataManager = createReactClass({
     promise.then(
       response => {
         // array for backward compatibility
-        const dtoOut = Array.isArray(response) ? response : ((response && typeof response === "object" && response.data) || response);
+        const dtoOut = Array.isArray(response)
+          ? response
+          : (response && typeof response === "object" && response.data) || response;
         // NOTE We're updating data even when optimistic because server can send us updated
         // information.
         if (this.isRendered()) {
@@ -487,31 +490,31 @@ export const ListDataManager = createReactClass({
         .then(response => {
           const dtoOut = response && typeof response === "object" ? response.data : undefined;
           this.isRendered() &&
-          this.setState(state => {
-            let data = [...state.data];
-            let deleteCount = 0;
-            let dtoOutItems = bulk ? (dtoOut || []) : [dtoOut];
-            identifiers.forEach((identifier, i) => {
-              let index = data.findIndex(
-                typeof identifier === "function" ? identifier : item => item.id === identifier
-              );
-              if (index > -1) {
-                if (dtoOutItems[i] == null) {
-                  data.splice(index, 1);
-                  deleteCount++;
-                } else {
-                  data.splice(index, 1, { ...data[index], ...dtoOutItems[i] });
+            this.setState(state => {
+              let data = [...state.data];
+              let deleteCount = 0;
+              let dtoOutItems = bulk ? dtoOut || [] : [dtoOut];
+              identifiers.forEach((identifier, i) => {
+                let index = data.findIndex(
+                  typeof identifier === "function" ? identifier : item => item.id === identifier
+                );
+                if (index > -1) {
+                  if (dtoOutItems[i] == null) {
+                    data.splice(index, 1);
+                    deleteCount++;
+                  } else {
+                    data.splice(index, 1, { ...data[index], ...dtoOutItems[i] });
+                  }
                 }
+              });
+
+              let pageInfo = state.pageInfo ? { ...state.pageInfo } : null;
+              if (pageInfo && typeof pageInfo.total === "number") {
+                pageInfo.total -= deleteCount;
               }
-            });
 
-            let pageInfo = state.pageInfo ? { ...state.pageInfo } : null;
-            if (pageInfo && typeof pageInfo.total === "number") {
-              pageInfo.total -= deleteCount;
-            }
-
-            return { viewState: "ready", errorState: null, errorData: null, data, pageInfo, response };
-          }, this._getPromiseCallback(resolve, response));
+              return { viewState: "ready", errorState: null, errorData: null, data, pageInfo, response };
+            }, this._getPromiseCallback(resolve, response));
         })
         .catch(response => {
           this.showError("serverUpdate", "deleting", { context: { response } });
@@ -522,48 +525,48 @@ export const ListDataManager = createReactClass({
       promise
         .then(response => {
           const dtoOut = response && typeof response === "object" ? response.data : undefined;
-          let dtoOutItems = bulk ? (dtoOut || []) : [dtoOut];
+          let dtoOutItems = bulk ? dtoOut || [] : [dtoOut];
           this.isRendered() &&
-          this.setState(state => {
-            let data = [...state.data];
-            let restoredCount = 0;
-            let mergedOldSorted = oldItems.map((oldItem, i) => ({ oldItem, i, index: indices[i] }));
-            mergedOldSorted.sort((a, b) => a.index - b.index);
-            mergedOldSorted.forEach(({ oldItem, index, i }) => {
-              // backward compatibility if dtoOut is undefined
-              if (index > -1 && dtoOutItems[i] != null) {
-                data.splice(index, 0, { ...oldItem, ...dtoOutItems[i] });
-                restoredCount++;
+            this.setState(state => {
+              let data = [...state.data];
+              let restoredCount = 0;
+              let mergedOldSorted = oldItems.map((oldItem, i) => ({ oldItem, i, index: indices[i] }));
+              mergedOldSorted.sort((a, b) => a.index - b.index);
+              mergedOldSorted.forEach(({ oldItem, index, i }) => {
+                // backward compatibility if dtoOut is undefined
+                if (index > -1 && dtoOutItems[i] != null) {
+                  data.splice(index, 0, { ...oldItem, ...dtoOutItems[i] });
+                  restoredCount++;
+                }
+              });
+              let pageInfo = state.pageInfo ? { ...state.pageInfo } : null;
+              if (pageInfo && typeof pageInfo.total === "number") {
+                pageInfo.total += restoredCount;
               }
-            });
-            let pageInfo = state.pageInfo ? { ...state.pageInfo } : null;
-            if (pageInfo && typeof pageInfo.total === "number") {
-              pageInfo.total += restoredCount;
-            }
-            return { data, pageInfo, response };
-          }, this._getPromiseCallback(resolve, response));
+              return { data, pageInfo, response };
+            }, this._getPromiseCallback(resolve, response));
         })
         .catch(response => {
           this.showError("serverUpdate", "deleting", { context: { response } });
           let newState = { viewState: "error", errorState: "update", errorData: response, response };
           this.isRendered() &&
-          this.setState(state => {
-            let data = [...state.data];
-            let restoredCount = 0;
-            let mergedOldSorted = oldItems.map((oldItem, i) => ({ oldItem, index: indices[i] }));
-            mergedOldSorted.sort((a, b) => a.index - b.index);
-            mergedOldSorted.forEach(({ oldItem, index }) => {
-              if (index > -1) {
-                data.splice(index, 0, oldItem);
-                restoredCount++;
+            this.setState(state => {
+              let data = [...state.data];
+              let restoredCount = 0;
+              let mergedOldSorted = oldItems.map((oldItem, i) => ({ oldItem, index: indices[i] }));
+              mergedOldSorted.sort((a, b) => a.index - b.index);
+              mergedOldSorted.forEach(({ oldItem, index }) => {
+                if (index > -1) {
+                  data.splice(index, 0, oldItem);
+                  restoredCount++;
+                }
+              });
+              let pageInfo = state.pageInfo ? { ...state.pageInfo } : null;
+              if (pageInfo && typeof pageInfo.total === "number") {
+                pageInfo.total += restoredCount;
               }
-            });
-            let pageInfo = state.pageInfo ? { ...state.pageInfo } : null;
-            if (pageInfo && typeof pageInfo.total === "number") {
-              pageInfo.total += restoredCount;
-            }
-            return { ...newState, data, pageInfo };
-          }, this._getPromiseCallback(reject, response));
+              return { ...newState, data, pageInfo };
+            }, this._getPromiseCallback(reject, response));
         });
     }
   },

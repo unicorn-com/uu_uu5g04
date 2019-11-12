@@ -11,11 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import React from "react";
 import createReactClass from "create-react-class";
 import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+//@@viewOff:imports
 
 const DEFAULT_COLOR = "blue";
 
@@ -33,23 +35,35 @@ const greyShades = {
 function getBlackColors(active, dark) {
   return {
     backgroundColor: active ? (dark ? "#fff" : "#000") : "transparent",
-    color: active ? (dark ? "#000" : "#fff") : (dark ? "#fff" : "#000"),
-    backgroundColorHover: active ? (dark ? "rgba(255,255,255,.6)" : "rgba(0,0,0,.6)") : (dark ? "rgba(255,255,255,.4)" : "rgba(0,0,0,.2)"),
-    colorHover: active ? (dark ? "rgba(0,0,0,.87)" : "#fff") : (dark ? "#fff" : "rgba(0,0,0,.87)"),
+    color: active ? (dark ? "#000" : "#fff") : dark ? "#fff" : "#000",
+    backgroundColorHover: active
+      ? dark
+        ? "rgba(255,255,255,.6)"
+        : "rgba(0,0,0,.6)"
+      : dark
+      ? "rgba(255,255,255,.4)"
+      : "rgba(0,0,0,.2)",
+    colorHover: active ? (dark ? "rgba(0,0,0,.87)" : "#fff") : dark ? "#fff" : "rgba(0,0,0,.87)",
     backgroundColorActive: dark ? "rgba(0,0,0,.4)" : "rgba(255,255,255,.6)",
-    colorActive: active ? (dark ? "rgba(0,0,0,.87)" : "#fff") : (dark ? "#fff" : "rgba(0,0,0,.87)")
-  }
+    colorActive: active ? (dark ? "rgba(0,0,0,.87)" : "#fff") : dark ? "#fff" : "rgba(0,0,0,.87)"
+  };
 }
 
 function getWhiteColors(active, dark) {
   return {
     backgroundColor: active ? (dark ? "#000" : "#fff") : "transparent",
-    color: active ? (dark ? "#fff" : "#000") : (dark ? "#000" : "#fff"),
-    backgroundColorHover: active ? (dark ? "rgba(0,0,0,.6)" : "rgba(255,255,255,.8)") : (dark ? "rgba(0,0,0,.2)" : "rgba(255,255,255,.2)"),
-    colorHover: active ? (dark ? "#fff" : "rgba(0,0,0,.87)") : (dark ? "rgba(0,0,0,.87)" : "#fff"),
+    color: active ? (dark ? "#fff" : "#000") : dark ? "#000" : "#fff",
+    backgroundColorHover: active
+      ? dark
+        ? "rgba(0,0,0,.6)"
+        : "rgba(255,255,255,.8)"
+      : dark
+      ? "rgba(0,0,0,.2)"
+      : "rgba(255,255,255,.2)",
+    colorHover: active ? (dark ? "#fff" : "rgba(0,0,0,.87)") : dark ? "rgba(0,0,0,.87)" : "#fff",
     backgroundColorActive: dark ? "rgba(0,0,0,.4)" : "rgba(255,255,255,.6)",
-    colorActive: active ? (dark ? "#fff" : "rgba(0,0,0,.87)") : (dark ? "rgba(0,0,0,.87)" : "#fff")
-  }
+    colorActive: active ? (dark ? "#fff" : "rgba(0,0,0,.87)") : dark ? "rgba(0,0,0,.87)" : "#fff"
+  };
 }
 
 function getClassName({ active, dark, colorSchema, bgStyle, size, borderRadius, className }) {
@@ -89,7 +103,8 @@ function getClassName({ active, dark, colorSchema, bgStyle, size, borderRadius, 
   ];
 
   if (colorSchema !== "custom") {
-    const colorSchemaMap = UU5.Environment.colorSchemaMap[colorSchema === "default" ? DEFAULT_COLOR : (colorSchema || DEFAULT_COLOR)];
+    const colorSchemaMap =
+      UU5.Environment.colorSchemaMap[colorSchema === "default" ? DEFAULT_COLOR : colorSchema || DEFAULT_COLOR];
     const isRich = /-rich$/.test(colorSchema);
     const color = colorSchemaMap.color.replace(/-rich$/, "");
     const shades = color === "grey" ? greyShades : UU5.Environment.colors[color];
@@ -110,9 +125,17 @@ function getClassName({ active, dark, colorSchema, bgStyle, size, borderRadius, 
           // filled
           default:
             colors = {
-              backgroundColor: active ? (isRich ? shades.c500 : (dark ? shades.c100 : shades.c50)) : "transparent",
+              backgroundColor: active ? (isRich ? shades.c500 : dark ? shades.c100 : shades.c50) : "transparent",
               color: active ? (isRich ? shades.inverse : shades.c900) : undefined,
-              backgroundColorHover: active ? (isRich ? shades.c700 : (dark ? shades.c300 : shades.c100)) : (dark ? shades.c100 : shades.c50),
+              backgroundColorHover: active
+                ? isRich
+                  ? shades.c700
+                  : dark
+                  ? shades.c300
+                  : shades.c100
+                : dark
+                ? shades.c100
+                : shades.c50,
               colorHover: active ? (isRich ? shades.inverse : darkText) : undefined,
               backgroundColorActive: isRich ? shades.c900 : shades.c500,
               colorActive: isRich ? shades.inverse : darkText
@@ -134,7 +157,7 @@ function getClassName({ active, dark, colorSchema, bgStyle, size, borderRadius, 
         background-color: ${colors.backgroundColorActive};
         color: ${colors.colorActive};
       }
-    `)
+    `);
   }
 
   if (className) css.push(className);
@@ -144,10 +167,7 @@ function getClassName({ active, dark, colorSchema, bgStyle, size, borderRadius, 
 
 const SwitchSelectorItem = createReactClass({
   //@@viewOn:mixins
-  mixins: [
-    UU5.Common.BaseMixin,
-    UU5.Common.ContentMixin
-  ],
+  mixins: [UU5.Common.BaseMixin, UU5.Common.ContentMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -186,17 +206,17 @@ const SwitchSelectorItem = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOn:private
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {

@@ -214,6 +214,26 @@
               <UU5.Forms.TimePicker label="step" step={30} />
               <UU5.Forms.TimePicker label="valueType='string'" valueType="string" />
               <UU5.Forms.TimePicker label="valueType='date'" valueType="date" />
+
+              <UU5.Bricks.Section header="timeFrom & timeTo">
+                {/*@@viewOn:0*/}
+                <UU5.Forms.TimePicker label="06:30:15 - 18:15:30" timeFrom="06:30:15" timeTo="18:15:30" seconds />
+                <UU5.Forms.TimePicker label="06:00:00 - 06:00:00" timeFrom="06:00:00" timeTo="06:00:00" seconds />
+                <UU5.Forms.TimePicker label="06:00:00 - 04:00:00" timeFrom="06:00:00" timeTo="04:00:00" seconds />
+                <UU5.Forms.TimePicker label="06:50:00 - 07:10:00" timeFrom="06:50:00" timeTo="07:10:00" seconds />
+                <UU5.Forms.TimePicker label="00:00:00 - 01:10:10" timeFrom="00:00:00" timeTo="01:10:10" seconds />
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section header="timeFrom & timeTo with show24">
+                {/*@@viewOn:0*/}
+                <UU5.Forms.TimePicker label="06:30:15 - 18:15:30" timeFrom="06:30:15" timeTo="18:15:30" seconds show24 />
+                <UU5.Forms.TimePicker label="06:00:00 - 06:00:00" timeFrom="06:00:00" timeTo="06:00:00" seconds show24 />
+                <UU5.Forms.TimePicker label="06:00:00 - 04:00:00" timeFrom="06:00:00" timeTo="04:00:00" seconds show24 />
+                <UU5.Forms.TimePicker label="06:50:00 - 07:10:00" timeFrom="06:50:00" timeTo="07:10:00" seconds show24 />
+                <UU5.Forms.TimePicker label="00:00:00 - 01:10:10" timeFrom="00:00:00" timeTo="01:10:10" seconds show24 />
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
             </UU5.Bricks.Container>
           );
         }

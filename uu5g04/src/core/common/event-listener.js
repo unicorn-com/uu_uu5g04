@@ -11,8 +11,8 @@
  * at the email: info@unicorn.com.
  */
 
-import Tools from './tools.js';
-import { Environment } from '../environment/environment.js';
+import Tools from "./tools.js";
+import { Environment } from "../environment/environment.js";
 
 // main visibility API function
 // use visibility API to check if current tab is active or not
@@ -33,10 +33,10 @@ const visibility = (() => {
     }
   }
 
-  return (c) => {
+  return c => {
     if (c) document.addEventListener(eventKey, c);
     return !document[stateKey];
-  }
+  };
 })();
 
 export class EventListener {
@@ -55,24 +55,30 @@ export class EventListener {
     };
 
     this.addWindowEvent("resize", Tools.generateUUID(), this._onScreenSizeChange.bind(this));
-    this.addWindowEvent('orientationchange', Tools.generateUUID(), this._onScreenSizeChange.bind(this));
+    this.addWindowEvent("orientationchange", Tools.generateUUID(), this._onScreenSizeChange.bind(this));
 
-    visibility(() => this.triggerEvent("pageVisibility", {
-      visible: visibility(),
-      focus: Environment.isPageFocused()
-    }));
-    this.addWindowEvent("focus", "windowFocus", () => this.triggerEvent("pageVisibility", {
-      visible: Environment.isPageVisible(),
-      focus: true
-    }));
-    this.addWindowEvent("blur", "windowBlur", () => this.triggerEvent("pageVisibility", {
-      visible: Environment.isPageVisible(),
-      focus: false
-    }));
+    visibility(() =>
+      this.triggerEvent("pageVisibility", {
+        visible: visibility(),
+        focus: Environment.isPageFocused()
+      })
+    );
+    this.addWindowEvent("focus", "windowFocus", () =>
+      this.triggerEvent("pageVisibility", {
+        visible: Environment.isPageVisible(),
+        focus: true
+      })
+    );
+    this.addWindowEvent("blur", "windowBlur", () =>
+      this.triggerEvent("pageVisibility", {
+        visible: Environment.isPageVisible(),
+        focus: false
+      })
+    );
   }
 
   registerEvent(key, id, fce) {
-    if (typeof fce === 'function') {
+    if (typeof fce === "function") {
       this._listeners[key] = this._listeners[key] || {};
       this._listeners[key][id] = fce;
     } else {
@@ -98,7 +104,7 @@ export class EventListener {
   }
 
   addEvent(object, key, id, fce) {
-    if (typeof fce === 'function') {
+    if (typeof fce === "function") {
       let targetMap = this._events.get(object);
       if (!targetMap) {
         this._events.set(object, {});
@@ -131,12 +137,16 @@ export class EventListener {
   }
 
   createEvent(object, key, id, fce) {
-    UU5.Common.Tools.warning("UU5.Environment.EventListener.createEvent is deprecated! Use UU5.Environment.EventListener.addEvent instead.");
+    UU5.Common.Tools.warning(
+      "UU5.Environment.EventListener.createEvent is deprecated! Use UU5.Environment.EventListener.addEvent instead."
+    );
     this.addEvent(object, key, id, fce);
   }
 
   deleteEvent(object, key, id) {
-    UU5.Common.Tools.warning("UU5.Environment.EventListener.deleteEvent is deprecated! Use UU5.Environment.EventListener.removeEvent instead.");
+    UU5.Common.Tools.warning(
+      "UU5.Environment.EventListener.deleteEvent is deprecated! Use UU5.Environment.EventListener.removeEvent instead."
+    );
     this.removeEvent(object, key, id);
   }
 
@@ -165,27 +175,27 @@ export class EventListener {
   }
 
   addIdentityChangeListener(session, id, fce) {
-    this._addSessionEvent(session, 'identityChange', id, fce);
+    this._addSessionEvent(session, "identityChange", id, fce);
   }
 
   removeIdentityChangeListener(session, id) {
-    this._removeSessionEvent(session, 'identityChange', id);
+    this._removeSessionEvent(session, "identityChange", id);
   }
 
   addSessionExpiringListener(session, id, fce) {
-    this._addSessionEvent(session, 'sessionExpiring', id, fce);
+    this._addSessionEvent(session, "sessionExpiring", id, fce);
   }
 
   removeSessionExpiringListener(session, id) {
-    this._removeSessionEvent(session, 'sessionExpiring', id);
+    this._removeSessionEvent(session, "sessionExpiring", id);
   }
 
   addSessionExtendedListener(session, id, fce) {
-    this._addSessionEvent(session, 'sessionExtended', id, fce);
+    this._addSessionEvent(session, "sessionExtended", id, fce);
   }
 
   removeSessionExtendedListener(session, id) {
-    this._removeSessionEvent(session, 'sessionExtended', id);
+    this._removeSessionEvent(session, "sessionExtended", id);
   }
 
   addWindowEvent(key, id, fce) {
@@ -199,79 +209,79 @@ export class EventListener {
   }
 
   registerLsi(id, fce) {
-    this.registerEvent('lsi', id, fce);
+    this.registerEvent("lsi", id, fce);
   }
 
   triggerLsi(lang) {
-    this.triggerEvent('lsi', lang);
+    this.triggerEvent("lsi", lang);
   }
 
   unregisterLsi(id) {
-    this.unregisterEvent('lsi', id);
+    this.unregisterEvent("lsi", id);
   }
 
   registerScreenSize(id, fce) {
-    this.registerEvent('screenSize', id, fce);
+    this.registerEvent("screenSize", id, fce);
   }
 
   triggerScreenSize(e, screenSize) {
-    this.triggerEvent('screenSize', e, screenSize);
+    this.triggerEvent("screenSize", e, screenSize);
   }
 
   unregisterScreenSize(id) {
-    this.unregisterEvent('screenSize', id);
+    this.unregisterEvent("screenSize", id);
   }
 
   registerHighlight(id, fce) {
-    this.registerEvent('highlight', id, fce);
+    this.registerEvent("highlight", id, fce);
   }
 
   triggerHighlight(searchedTexts) {
-    this.triggerEvent('highlight', searchedTexts);
+    this.triggerEvent("highlight", searchedTexts);
   }
 
   unregisterHighlight(id) {
-    this.unregisterEvent('highlight', id);
+    this.unregisterEvent("highlight", id);
   }
 
   registerDateTime(id, fce) {
-    this.registerEvent('dateTime', id, fce);
+    this.registerEvent("dateTime", id, fce);
   }
 
   triggerDateTime(opt) {
-    this.triggerEvent('dateTime', opt);
+    this.triggerEvent("dateTime", opt);
   }
 
   unregisterDateTime(id) {
-    this.unregisterEvent('dateTime', id);
+    this.unregisterEvent("dateTime", id);
   }
 
   registerNumber(id, fce) {
-    this.registerEvent('number', id, fce);
+    this.registerEvent("number", id, fce);
   }
 
   triggerNumber(opt) {
-    this.triggerEvent('number', opt);
+    this.triggerEvent("number", opt);
   }
 
   unregisterNumber(id) {
-    this.unregisterEvent('number', id);
+    this.unregisterEvent("number", id);
   }
 
   registerLoadLibs(id, fce) {
-    this.registerEvent('loadLibs', id, fce);
+    this.registerEvent("loadLibs", id, fce);
   }
 
   triggerLoadLibs(markers) {
-    this.triggerEvent('loadLibs', markers);
+    this.triggerEvent("loadLibs", markers);
   }
 
   unregisterLoadLibs(id) {
-    this.unregisterEvent('loadLibs', id);
+    this.unregisterEvent("loadLibs", id);
   }
 
   _addSessionEvent(session, key, id, fce) {
-    if (typeof fce === 'function') {
+    if (typeof fce === "function") {
       let targetMap = this._events.get(session);
       if (!targetMap) {
         this._events.set(session, {});
@@ -311,7 +321,7 @@ export class EventListener {
 
   _writeError(key, id, fce) {
     Tools.error(`In event "${key}" parameter is not function.`, {
-      component: 'EventListener',
+      component: "EventListener",
       id: id,
       function: fce,
       key: key

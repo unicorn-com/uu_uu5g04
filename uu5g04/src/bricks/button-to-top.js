@@ -1,26 +1,28 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
-import Button from './button.js';
-import Icon from './icon.js';
+import Button from "./button.js";
+import Icon from "./icon.js";
 
-import './button-to-top.less';
+import "./button-to-top.less";
+//@@viewOff:imports
 
 export const ButtonToTop = createReactClass({
   //@@viewOn:mixins
@@ -36,7 +38,7 @@ export const ButtonToTop = createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("ButtonToTop"),
-    nestingLevel: 'smallBox',
+    nestingLevel: "smallBox",
     classNames: {
       main: ns.css("button-to-top"),
       stickyButton: ns.css("button-to-top-sticky")
@@ -52,18 +54,18 @@ export const ButtonToTop = createReactClass({
     icon: PropTypes.string,
     offset: PropTypes.number,
     scrollDuration: PropTypes.number,
-    size: PropTypes.oneOf(['s', 'm', 'l', 'xl']),
-    bgStyle: PropTypes.oneOf(['filled', 'outline', 'transparent']),
+    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
+    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent"]),
     borderRadius: PropTypes.string,
-    elevation: PropTypes.oneOf(['-1', '0', '1', '2', '3', '4', '5', -1, 0, 1, 2, 3, 4, 5]),
-    elevationHover: PropTypes.oneOf(['-1', '0', '1', '2', '3', '4', '5', -1, 0, 1, 2, 3, 4, 5]),
+    elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+    elevationHover: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      icon: 'mdi-chevron-up',
+      icon: "mdi-chevron-up",
       offset: 150,
       scrollDuration: 800,
       size: "m",
@@ -75,7 +77,7 @@ export const ButtonToTop = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
       visible: false
@@ -114,15 +116,15 @@ export const ButtonToTop = createReactClass({
     }
     clearInterval(this._updateInterval);
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _scrollCalculate(scrollElement = this._scrollElement || document.scrollingElement || document.documentElement) {
     let offset = scrollElement.scrollTop;
     if (!this._visible) {
@@ -136,7 +138,10 @@ export const ButtonToTop = createReactClass({
     }
     if (this._scrollElement && (UU5.Common.Tools.isIE() || this._isSafari())) {
       if (this.state.isInside) {
-        let offsetY = this._scrollElement.scrollTop + this._scrollElement.getBoundingClientRect().height - (this.props.size === "s" ? 32 : (this.props.size === "m" ? 40 : (this.props.size === "l" ? 48 : 56)));
+        let offsetY =
+          this._scrollElement.scrollTop +
+          this._scrollElement.getBoundingClientRect().height -
+          (this.props.size === "s" ? 32 : this.props.size === "m" ? 40 : this.props.size === "l" ? 48 : 56);
         this.setState({
           offsetY: offsetY
         });
@@ -149,14 +154,19 @@ export const ButtonToTop = createReactClass({
   },
 
   _scroll() {
-    UU5.Common.Tools.scrollToTarget((UU5.Environment.scrollElementId || null), this.props.scrollDuration, 0 , this._scrollElement);
+    UU5.Common.Tools.scrollToTarget(
+      UU5.Environment.scrollElementId || null,
+      this.props.scrollDuration,
+      0,
+      this._scrollElement
+    );
   },
 
   _isSafari() {
     // Replace Tools.isSafari() with this function when ready
     return navigator.userAgent.match("Safari") && !navigator.userAgent.match("Chrome/");
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   // Render
   _buildMainAttrs() {

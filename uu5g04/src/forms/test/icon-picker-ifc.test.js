@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -18,16 +18,9 @@ import "uu5g04-forms";
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
-describe('UU5.Form.IconPicker intreface testing', () => {
-  it('toggle(setStateCallBack, e)', () => {
-    const wrapper = mount(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value=""
-        size="s"
-      />
-    );
+describe("UU5.Form.IconPicker intreface testing", () => {
+  it("toggle(setStateCallBack, e)", () => {
+    const wrapper = mount(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="" size="s" />);
     expect(wrapper.instance().state.open).toBeFalsy();
     const returnValue = wrapper.instance().toggle();
     wrapper.update();
@@ -38,15 +31,8 @@ describe('UU5.Form.IconPicker intreface testing', () => {
     expect(wrapper.instance().state.open).toBeFalsy();
   });
 
-  it('open(setStateCallBack, e)', () => {
-    const wrapper = mount(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value=""
-        size="s"
-      />
-    );
+  it("open(setStateCallBack, e)", () => {
+    const wrapper = mount(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="" size="s" />);
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.open).toBeFalsy();
     wrapper.instance().open(mockFunc);
@@ -59,15 +45,8 @@ describe('UU5.Form.IconPicker intreface testing', () => {
     expect(wrapper.instance().state.open).toBeFalsy();
   });
 
-  it('close(setStateCallBack, e)', () => {
-    const wrapper = mount(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value=""
-        size="s"
-      />
-    );
+  it("close(setStateCallBack, e)", () => {
+    const wrapper = mount(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="" size="s" />);
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.open).toBeFalsy();
     wrapper.instance().open(mockFunc);
@@ -80,15 +59,8 @@ describe('UU5.Form.IconPicker intreface testing', () => {
     expect(wrapper.instance().state.open).toBeFalsy();
   });
 
-  it('isOpen()', () => {
-    const wrapper = mount(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value=""
-        size="s"
-      />
-    );
+  it("isOpen()", () => {
+    const wrapper = mount(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="" size="s" />);
     expect(wrapper.instance().state.open).toBeFalsy();
     wrapper.instance().open();
     wrapper.update();
@@ -98,56 +70,27 @@ describe('UU5.Form.IconPicker intreface testing', () => {
   });
 });
 
-describe('UU5.Forms.IconPicker interface', () => {
-  it('isInput()', () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value=""
-        size="s"
-      />
-    );
+describe("UU5.Forms.IconPicker interface", () => {
+  it("isInput()", () => {
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="" size="s" />);
     expect(wrapper.instance().isInput()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getValue() should return value', () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value="mdi-check"
-        size="s"
-      />
-    );
+  it("getValue() should return value", () => {
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="mdi-check" size="s" />);
     expect(wrapper.instance().getValue()).toMatch("mdi-check");
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getValue() value is empty. Should return empty string.', () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value=""
-        size="s"
-      />
-    );
+  it("getValue() value is empty. Should return empty string.", () => {
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="" size="s" />);
     expect(wrapper.instance().getValue()).toEqual("");
     expect(wrapper).toMatchSnapshot();
   });
 
-
-  it('setValue(value,setStateCallBack)', () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value=""
-        size="s"
-      />
-    );
+  it("setValue(value,setStateCallBack)", () => {
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="" size="s" />);
     expect(wrapper.instance().getValue()).toEqual("");
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
@@ -160,30 +103,16 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getMessage()', () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value=""
-        size="s"
-      />
-    );
+  it("getMessage()", () => {
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="" size="s" />);
     expect(wrapper.instance().getMessage()).toBe(null);
     expect(wrapper).toMatchSnapshot();
-    wrapper.setProps({message: "New Setting message"});
+    wrapper.setProps({ message: "New Setting message" });
     expect(wrapper.instance().getMessage()).toEqual("New Setting message");
   });
 
-  it('setMessage(msg, setStateCallBack)', () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value=""
-        size="s"
-      />
-    );
+  it("setMessage(msg, setStateCallBack)", () => {
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="" size="s" />);
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getMessage()).toBeNull();
@@ -196,32 +125,18 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getFeedBack()', () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value=""
-        size="s"
-      />
-    );
+  it("getFeedBack()", () => {
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="" size="s" />);
     expect(wrapper.instance().getFeedback()).toEqual("initial");
     expect(wrapper).toMatchSnapshot();
-    wrapper.setProps({feedback: "success"});
+    wrapper.setProps({ feedback: "success" });
     wrapper.update();
     expect(wrapper.instance().getFeedback()).toEqual("success");
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setFeedBack(feedback, message, value, setStateCallBack)', () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value=""
-        size="s"
-      />
-    );
+  it("setFeedBack(feedback, message, value, setStateCallBack)", () => {
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="" size="s" />);
     expect(wrapper.instance().getFeedback()).toEqual("initial");
     expect(wrapper.instance().getMessage()).toBe(null);
     expect(wrapper.instance().getValue()).toEqual("");
@@ -238,7 +153,7 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setInitial(msg, value, setStateCallBack)', () => {
+  it("setInitial(msg, value, setStateCallBack)", () => {
     const wrapper = shallow(
       <UU5.Forms.IconPicker
         id={"idIconpicker"}
@@ -253,7 +168,7 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getFeedback()).toEqual("error");
     expect(wrapper.instance().getValue()).toEqual("");
-    expect(wrapper.instance().getMessage()).toEqual("This input is required")
+    expect(wrapper.instance().getMessage()).toEqual("This input is required");
     expect(wrapper.instance().isInitial()).toBeFalsy();
     const returnValue = wrapper.instance().setInitial("Initial Message", "", mockFunc);
     wrapper.update();
@@ -262,20 +177,13 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().getFeedback()).toEqual("initial");
     expect(wrapper.instance().getValue()).toEqual("");
-    expect(wrapper.instance().getMessage()).toEqual("Initial Message")
+    expect(wrapper.instance().getMessage()).toEqual("Initial Message");
     expect(wrapper.instance().isInitial()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isInitial()', () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value=""
-        size="s"
-      />
-    );
+  it("isInitial()", () => {
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="" size="s" />);
     const mockFunc = jest.fn();
     expect(wrapper.instance().isInitial()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
@@ -285,15 +193,8 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setLoading(message, value, setStateCallBack)', () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value=""
-        size="s"
-      />
-    );
+  it("setLoading(message, value, setStateCallBack)", () => {
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="" size="s" />);
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getValue()).toEqual("");
@@ -310,28 +211,14 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isLoading()', () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value=""
-        size="s"
-      />
-    );
+  it("isLoading()", () => {
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="" size="s" />);
     expect(wrapper.instance().isLoading()).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setSuccess(message, value, setStateCallBack)', () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value=""
-        size="s"
-      />
-    );
+  it("setSuccess(message, value, setStateCallBack)", () => {
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="" size="s" />);
     const mockFunc = jest.fn();
     expect(wrapper.instance().getFeedback()).toEqual("initial");
     expect(wrapper.instance().getMessage()).toBe(null);
@@ -343,21 +230,14 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().getFeedback()).toEqual("success");
-    expect(wrapper.instance().getMessage()).toEqual("This is success message")
+    expect(wrapper.instance().getMessage()).toEqual("This is success message");
     expect(wrapper.instance().getValue()).toEqual("mdi-check");
     expect(wrapper.instance().isSuccess()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isSuccess() fisr return false, second return true', () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value=""
-        size="s"
-      />
-    );
+  it("isSuccess() fisr return false, second return true", () => {
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="" size="s" />);
     const mockFunc = jest.fn();
     expect(wrapper.instance().isSuccess()).toBeFalsy();
     const returnValue = wrapper.instance().setSuccess("This is success message", "mdi-check", mockFunc);
@@ -366,21 +246,14 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().getFeedback()).toEqual("success");
-    expect(wrapper.instance().getMessage()).toEqual("This is success message")
+    expect(wrapper.instance().getMessage()).toEqual("This is success message");
     expect(wrapper.instance().getValue()).toEqual("mdi-check");
     expect(wrapper.instance().isSuccess()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setWarning(message, value, setStateCallBack)', () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value=""
-        size="s"
-      />
-    );
+  it("setWarning(message, value, setStateCallBack)", () => {
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="" size="s" />);
     const mockFunc = jest.fn();
     expect(wrapper.instance().getFeedback()).toEqual("initial");
     expect(wrapper.instance().getMessage()).toBe(null);
@@ -394,14 +267,14 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().getFeedback()).toEqual("warning");
-    expect(wrapper.instance().getMessage()).toEqual("This is warning message")
+    expect(wrapper.instance().getMessage()).toEqual("This is warning message");
     expect(wrapper.instance().getValue()).toEqual("mdi-check");
     expect(wrapper.instance().isWarning()).toBeTruthy();
     expect(wrapper.instance().isSuccess()).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isWarning()', () => {
+  it("isWarning()", () => {
     const wrapper = shallow(
       <UU5.Forms.IconPicker
         id={"idIconpicker"}
@@ -425,15 +298,8 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setError(message, value, setStateCallBack)', () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value=""
-        size="s"
-      />
-    );
+  it("setError(message, value, setStateCallBack)", () => {
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="" size="s" />);
     const mockFunc = jest.fn();
     expect(wrapper.instance().isError()).toBeFalsy();
     expect(wrapper.instance().isWarning()).toBeFalsy();
@@ -458,7 +324,7 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isError()', () => {
+  it("isError()", () => {
     const wrapper = shallow(
       <UU5.Forms.IconPicker
         id={"idIconpicker"}
@@ -482,15 +348,8 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('reset(setStateCallBack)', () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value=""
-        size="s"
-      />
-    );
+  it("reset(setStateCallBack)", () => {
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="" size="s" />);
     const mockFunc = jest.fn();
     wrapper.instance().setFeedback("success", "New Message", "mdi-check", mockFunc);
     wrapper.update();
@@ -515,43 +374,36 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getChangeFeedback()', () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value=""
-        size="s"
-      />
+  it("getChangeFeedback()", () => {
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="" size="s" />);
+    expect(wrapper.instance().getChangeFeedback({})).toEqual(
+      expect.objectContaining({
+        feedback: "initial",
+        message: null,
+        value: ""
+      })
     );
-    expect(wrapper.instance().getChangeFeedback({})).toEqual(expect.objectContaining({
-      feedback: 'initial',
-      message: null,
-      value: ''
-    }));
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setChangeFeedback()', () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value=""
-        size="s"
-      />
-    );
+  it("setChangeFeedback()", () => {
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="" size="s" />);
     const mockFunc = jest.fn();
-    expect(wrapper.instance().getChangeFeedback({})).toEqual(expect.objectContaining({
-      feedback: 'initial',
-      message: null,
-      value: ''
-    }));
-    const returnValue = wrapper.instance().setChangeFeedback({
-      feedback: 'error',
-      message: 'Error message from setChangeFeedback',
-      value: 'wrong value'
-    }, mockFunc);
+    expect(wrapper.instance().getChangeFeedback({})).toEqual(
+      expect.objectContaining({
+        feedback: "initial",
+        message: null,
+        value: ""
+      })
+    );
+    const returnValue = wrapper.instance().setChangeFeedback(
+      {
+        feedback: "error",
+        message: "Error message from setChangeFeedback",
+        value: "wrong value"
+      },
+      mockFunc
+    );
     wrapper.update();
     expect(returnValue).toBe(wrapper.instance());
     expect(mockFunc).toBeCalled();
@@ -561,16 +413,8 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-
-  it('isReadOnly()', () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value=""
-        size="s"
-      />
-    );
+  it("isReadOnly()", () => {
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="" size="s" />);
     const mockFunc = jest.fn();
     expect(wrapper.instance().isReadOnly()).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
@@ -582,15 +426,8 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setEditableValue(true, setStateCallback)', () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value="mdi-check"
-        size="s"
-      />
-    );
+  it("setEditableValue(true, setStateCallback)", () => {
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="mdi-check" size="s" />);
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().isReadOnly()).toBeFalsy();
@@ -608,16 +445,8 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(mockFunc).toHaveBeenCalledTimes(4);
   });
 
-
-  it('setEditableValue(false, setStateCallback)', () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value="mdi-check"
-        size="s"
-      />
-    );
+  it("setEditableValue(false, setStateCallback)", () => {
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="mdi-check" size="s" />);
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().isReadOnly()).toBeFalsy();
@@ -634,16 +463,8 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(mockFunc).toHaveBeenCalledTimes(3);
   });
 
-
-  it('readOnly(setStatecallback)', () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value="mdi-check"
-        size="s"
-      />
-    );
+  it("readOnly(setStatecallback)", () => {
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="mdi-check" size="s" />);
     expect(wrapper.instance().isReadOnly()).toBeFalsy();
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
@@ -656,15 +477,8 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('editable(setStatecallback)', () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value="mdi-check"
-        size="s"
-      />
-    );
+  it("editable(setStatecallback)", () => {
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="mdi-check" size="s" />);
     const mockFunc = jest.fn();
     expect(wrapper.instance().isReadOnly()).toBeFalsy();
     expect(wrapper.instance().state.readOnly).toBeFalsy();
@@ -683,15 +497,8 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getLabel(idinput)', () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value="mdi-check"
-        size="s"
-      />
-    );
+  it("getLabel(idinput)", () => {
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="mdi-check" size="s" />);
     expect(wrapper.instance().getLabel()).not.toBeNull();
     expect(wrapper.instance().getLabel()).not.toBeUndefined();
     expect(() => wrapper.instance().getLabel()).not.toThrow();
@@ -700,15 +507,8 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getInputWrapper(inpuid)', () => {
-    const wrapper = shallow(
-      <UU5.Forms.IconPicker
-        id={"idIconpicker"}
-        label="icon"
-        value="mdi-check"
-        size="s"
-      />
-    );
+  it("getInputWrapper(inpuid)", () => {
+    const wrapper = shallow(<UU5.Forms.IconPicker id={"idIconpicker"} label="icon" value="mdi-check" size="s" />);
     expect(wrapper.instance().getInputWrapper()).not.toBeNull();
     expect(wrapper.instance().getInputWrapper()).not.toBeUndefined();
     expect(() => wrapper.instance().getInputWrapper()).not.toThrow();

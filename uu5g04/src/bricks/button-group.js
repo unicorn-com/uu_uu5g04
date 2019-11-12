@@ -1,29 +1,30 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 const ClassNames = UU5.Common.ClassNames;
 
-import {Div} from './factory.js';
+import { Div } from "./factory.js";
 
-import './button-group.less';
+import "./button-group.less";
+//@@viewOff:imports
 
 export const ButtonGroup = createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -38,7 +39,7 @@ export const ButtonGroup = createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("ButtonGroup"),
-    nestingLevel: 'smallBox',
+    nestingLevel: "smallBox",
     classNames: {
       main: ns.css("button-group"),
       horizontal: ns.css("button-group-horizontal"),
@@ -46,7 +47,12 @@ export const ButtonGroup = createReactClass({
       bgStyle: ns.css("button-group-bg-")
     },
     defaults: {
-      childTagNames: ['UU5.Bricks.Button', 'UU5.Bricks.Dropdown', 'UU5.Bricks.ButtonSwitch', 'UU5.Bricks.LanguageSelector']
+      childTagNames: [
+        "UU5.Bricks.Button",
+        "UU5.Bricks.Dropdown",
+        "UU5.Bricks.ButtonSwitch",
+        "UU5.Bricks.LanguageSelector"
+      ]
     },
     opt: {
       nestingLevelWrapper: true
@@ -58,12 +64,10 @@ export const ButtonGroup = createReactClass({
   propTypes: {
     size: PropTypes.string,
     vertical: PropTypes.bool,
-    allowTags: PropTypes.arrayOf(
-      PropTypes.string
-    ),
-    bgStyle: PropTypes.oneOf(['filled', 'outline', 'transparent', 'underline', 'link']),
+    allowTags: PropTypes.arrayOf(PropTypes.string),
+    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline", "link"]),
     borderRadius: PropTypes.string,
-    elevation: PropTypes.oneOf(['0', '1', '2', '3', '4', '5', 0, 1, 2, 3, 4, 5]),
+    elevation: PropTypes.oneOf(["0", "1", "2", "3", "4", "5", 0, 1, 2, 3, 4, 5]),
     baseline: PropTypes.bool
 
     // TODO: not possible for button, but for <a> element
@@ -74,7 +78,7 @@ export const ButtonGroup = createReactClass({
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      size: 'm',
+      size: "m",
       vertical: false,
       allowTags: [],
       bgStyle: undefined,
@@ -85,7 +89,7 @@ export const ButtonGroup = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   // componentWillReceiveProps(nextProps) {
   //   if (nextProps.controlled) {
   //     if (nextProps.borderRadius !== this.props.borderRadius) {
@@ -102,20 +106,23 @@ export const ButtonGroup = createReactClass({
   // componentWillUnmount() {
   //   this._removeElevationRadius();
   // },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
+  //@@viewOn:overriding
   shouldChildRender_(child) {
     let childTagName = UU5.Common.Tools.getChildTagName(child);
     let defaultChildTagNames = this.getDefault().childTagNames;
     let childTagNames = this.props.allowTags.concat(defaultChildTagNames);
     let result = childTagNames.indexOf(childTagName) > -1;
-    if (!result && (typeof child !== 'string' || child.trim())) {
-      if (childTagName) this.showError('childTagNotAllowed', [childTagName, this.getTagName(), childTagName, defaultChildTagNames[0]], { mixinName: 'UU5.Common.BaseMixin' });
-      else this.showError('childNotAllowed', [child, defaultChildTagNames[0]], { mixinName: 'UU5.Common.BaseMixin' });
+    if (!result && (typeof child !== "string" || child.trim())) {
+      if (childTagName)
+        this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagNames[0]], {
+          mixinName: "UU5.Common.BaseMixin"
+        });
+      else this.showError("childNotAllowed", [child, defaultChildTagNames[0]], { mixinName: "UU5.Common.BaseMixin" });
     }
     return result;
   },
@@ -125,7 +132,7 @@ export const ButtonGroup = createReactClass({
 
     let childTagName = UU5.Common.Tools.getChildTagName(child);
     if (childTagName === this.getDefault().childTagNames[1]) {
-      let className = newChildProps.className ? newChildProps.className + ' ' : '';
+      let className = newChildProps.className ? newChildProps.className + " " : "";
       newChildProps.className = className;
     }
 
@@ -141,9 +148,9 @@ export const ButtonGroup = createReactClass({
 
     return newChildProps;
   },
-  //@@viewOff:overridingMethods
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   // _createElevationRadius() {
   //   if (this.props.elevation === "-1" || this.props.elevation === -1) {
   //     UU5.Common.Tools.createStyleTag(
@@ -161,7 +168,7 @@ export const ButtonGroup = createReactClass({
 
   _getPropsToPass() {
     let newProps = this.getMainPropsToPass();
-    newProps.className += ' ' + this.getClassName(this.props.vertical ? 'vertical' : 'horizontal');
+    newProps.className += " " + this.getClassName(this.props.vertical ? "vertical" : "horizontal");
 
     if (this.props.elevation) {
       newProps.className += " " + ClassNames.elevation + this.props.elevation;
@@ -176,23 +183,16 @@ export const ButtonGroup = createReactClass({
     }
 
     if (this.props.baseline) {
-      newProps.className += ' uu5-bricks-button-baseline';
+      newProps.className += " uu5-bricks-button-baseline";
     }
 
     return newProps;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
-    return (
-      this.getNestingLevel()
-        ? (
-          <Div {...this._getPropsToPass()}>
-            {this.getChildren()}
-          </Div>
-        ) : null
-    );
+    return this.getNestingLevel() ? <Div {...this._getPropsToPass()}>{this.getChildren()}</Div> : null;
   }
   //@@viewOff:render
 });

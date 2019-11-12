@@ -1,21 +1,23 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import React from "react";
 import createReactClass from "create-react-class";
 import Tools from "./tools.js";
 import Context from "./context.js";
 import BaseMixin from "./base-mixin.js";
+//@@viewOff:imports
 
 const DnDContext = Context.create({});
 
@@ -38,7 +40,11 @@ const Provider = createReactClass({
       if (typeof SystemJS !== "undefined") {
         let reactDnd = SystemJS.get(SystemJS.normalizeSync("react-dnd"));
         if (reactDnd && reactDnd.DragDropContext) {
-          let backend = SystemJS.get(SystemJS.normalizeSync(UU5.Common.Tools.isMobileOrTablet ? "react-dnd-touch-backend" : "react-dnd-html5-backend"));
+          let backend = SystemJS.get(
+            SystemJS.normalizeSync(
+              UU5.Common.Tools.isMobileOrTablet ? "react-dnd-touch-backend" : "react-dnd-html5-backend"
+            )
+          );
           if (backend) {
             if (backend.default) backend = backend.default;
 
@@ -87,7 +93,9 @@ const Provider = createReactClass({
         if (!this._unmounted) {
           let partialDragDropContext = this.constructor._getDragDropContextFromReactDnD();
           if (!partialDragDropContext) {
-            Tools.error("Unable to initialize drag&drop because react-dnd is not loaded in the page. Make sure that the application imports react-dnd, react-dnd-html5-backend and react-dnd-touch-backend.");
+            Tools.error(
+              "Unable to initialize drag&drop because react-dnd is not loaded in the page. Make sure that the application imports react-dnd, react-dnd-html5-backend and react-dnd-touch-backend."
+            );
           }
           this.setState({
             partialDragDropContext,

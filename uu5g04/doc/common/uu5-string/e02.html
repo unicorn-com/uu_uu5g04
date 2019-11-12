@@ -54,15 +54,15 @@
       var Page = createReactClass({
         mixins: [UU5.Common.BaseMixin],
 
-        //@@viewOn:standardComponentLifeCycle
+        //@@viewOn:reactLifeCycle
         getInitialState() {
           return {
             plainText: UU5.Common.UU5String.toPlainText(uu5string)
           };
         },
-        //@@viewOff:standardComponentLifeCycle
+        //@@viewOff:reactLifeCycle
 
-        //@@viewOn:componentSpecificHelpers
+        //@@viewOn:private
         /*@@viewOn:0*/
         _updatePlainText(opt) {
           let uu5string = opt.value;
@@ -73,7 +73,7 @@
           }
         },
         /*@@viewOff:0*/
-        //@@viewOn:componentSpecificHelpers
+        //@@viewOn:private
 
         //@@viewOn:render
         render(){

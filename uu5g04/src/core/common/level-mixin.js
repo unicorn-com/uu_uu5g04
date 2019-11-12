@@ -1,21 +1,20 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 export const LevelMixin = {
-
   //@@viewOn:statics
   statics: {
     "UU5.Common.LevelMixin": {
@@ -25,8 +24,8 @@ export const LevelMixin = {
         maxLevel: 6
       },
       warnings: {
-        levelMismatch: 'Component level %s is lower than parent level %s.',
-        levelMax: 'Maximum level of component is 6 but is set %d.'
+        levelMismatch: "Component level %s is lower than parent level %s.",
+        levelMax: "Maximum level of component is 6 but is set %d."
       }
     }
   },
@@ -34,19 +33,21 @@ export const LevelMixin = {
 
   //@@viewOn:propTypes
   propTypes: {
-    level: PropTypes.oneOf(['0', '1', '2', '3', '4', '5', '6', 0, 1, 2, 3, 4, 5, 6])
+    level: PropTypes.oneOf(["0", "1", "2", "3", "4", "5", "6", 0, 1, 2, 3, 4, 5, 6]),
+    increaseLevel: PropTypes.bool
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps: function () {
     return {
-      level: null
+      level: null,
+      increaseLevel: false
     };
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState: function () {
     // initialize
     this.registerMixin("UU5.Common.LevelMixin");
@@ -59,7 +60,7 @@ export const LevelMixin = {
   componentWillReceiveProps: function (nextProps) {
     this.getLevel() !== nextProps.level && this.setState({ level: this.checkLevel(nextProps) });
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   hasUU5CommonLevelMixin: function () {
@@ -81,63 +82,59 @@ export const LevelMixin = {
   },
 
   shouldIncreaseLevel: function (parentLevelComponent, props = this.props) {
-    return !parentLevelComponent || parentLevelComponent && parentLevelComponent.getOpt('dummyLevel')
+    return !parentLevelComponent || (parentLevelComponent && parentLevelComponent.getOpt("dummyLevel"))
       ? false
-      : (
-      this.getOpt('increaseLevel') ||
-      this.getHeader && this.getHeader(props) ||
-      this.getFooter && this.getFooter(props)
-    );
+      : this.getOpt("increaseLevel") || props.increaseLevel ||
+      (this.getHeader && this.getHeader(props)) ||
+      (this.getFooter && this.getFooter(props));
   },
 
   checkLevel: function (props = this.props) {
-    var level = typeof props.level === 'string' ? parseInt(props.level) : props.level;
-    var maxLevel = this.getDefault('maxLevel', "UU5.Common.LevelMixin");
-    var parentLevelComponent = this.getParentByType('hasUU5CommonLevelMixin');
-    var calculatedLevel = parentLevelComponent ? parentLevelComponent.getLevel() : this.getDefault('minLevel', "UU5.Common.LevelMixin");
+    var level = typeof props.level === "string" ? parseInt(props.level) : props.level;
+    var maxLevel = this.getDefault("maxLevel", "UU5.Common.LevelMixin");
+    var parentLevelComponent = this.getParentByType("hasUU5CommonLevelMixin");
+    var calculatedLevel = parentLevelComponent
+      ? parentLevelComponent.getLevel()
+      : this.getDefault("minLevel", "UU5.Common.LevelMixin");
     this.shouldIncreaseLevel(parentLevelComponent, props) && calculatedLevel++;
     level = typeof level === "number" ? level : calculatedLevel;
 
     //check level hierarchy
     if (level < calculatedLevel) {
-      this.showWarning(
-        'levelMismatch', [level, calculatedLevel], {
-          mixinName: "UU5.Common.LevelMixin",
-          context: {
-            parent: {
-              tagName: parentLevelComponent ? parentLevelComponent.getTagName() : null,
-              component: parentLevelComponent
-            }
+      this.showWarning("levelMismatch", [level, calculatedLevel], {
+        mixinName: "UU5.Common.LevelMixin",
+        context: {
+          parent: {
+            tagName: parentLevelComponent ? parentLevelComponent.getTagName() : null,
+            component: parentLevelComponent
           }
         }
-      );
+      });
     }
 
     //check maxLevel
     if (level > maxLevel) {
-      this.showWarning(
-        'levelMax', level, {
-          mixinName: "UU5.Common.LevelMixin",
-          context: {
-            parent: {
-              tagName: parentLevelComponent && parentLevelComponent.getTagName(),
-              component: parentLevelComponent
-            }
+      this.showWarning("levelMax", level, {
+        mixinName: "UU5.Common.LevelMixin",
+        context: {
+          parent: {
+            tagName: parentLevelComponent && parentLevelComponent.getTagName(),
+            component: parentLevelComponent
           }
         }
-      );
+      });
       level = maxLevel;
     }
+
     return level;
   }
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
-  //@@viewOff:componentSpecificHelpers
-
+  //@@viewOn:private
+  //@@viewOff:private
 };
 
 export default LevelMixin;

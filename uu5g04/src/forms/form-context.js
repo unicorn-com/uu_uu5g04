@@ -38,11 +38,17 @@ export class Context {
               readOnly = props.readOnly;
             }
 
-            if (props.labelColWidth && UU5.Forms.InputMixin.statics["UU5.Forms.InputMixin"].defaults.labelColWidth !== props.labelColWidth) {
+            if (
+              props.labelColWidth &&
+              UU5.Forms.InputMixin.statics["UU5.Forms.InputMixin"].defaults.labelColWidth !== props.labelColWidth
+            ) {
               labelColWidth = props.labelColWidth;
             }
 
-            if (props.inputColWidth && UU5.Forms.InputMixin.statics["UU5.Forms.InputMixin"].defaults.inputColWidth !== props.inputColWidth) {
+            if (
+              props.inputColWidth &&
+              UU5.Forms.InputMixin.statics["UU5.Forms.InputMixin"].defaults.inputColWidth !== props.inputColWidth
+            ) {
               inputColWidth = props.inputColWidth;
             }
 
@@ -50,17 +56,21 @@ export class Context {
               labelAlignment = props.labelAlignment;
             }
 
-            return <Component
-              {...props}
-              ref={ref}
-              readOnly={readOnly}
-              value={value}
-              labelColWidth={labelColWidth || defaults.labelColWidth}
-              inputColWidth={inputColWidth || (Component.defaults && Component.defaults.inputColWidth) || defaults.inputColWidth}
-              labelAlignment={labelAlignment}
-              _hasFormContext={true}
-            />
-        }}
+            return (
+              <Component
+                {...props}
+                ref={ref}
+                readOnly={readOnly}
+                value={value}
+                labelColWidth={labelColWidth || defaults.labelColWidth}
+                inputColWidth={
+                  inputColWidth || (Component.defaults && Component.defaults.inputColWidth) || defaults.inputColWidth
+                }
+                labelAlignment={labelAlignment}
+                _hasFormContext={true}
+              />
+            );
+          }}
         </FormContext.Consumer>
       );
     });

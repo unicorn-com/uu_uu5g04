@@ -11,6 +11,7 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import React from "react";
 import createReactClass from "create-react-class";
 import PropTypes from "prop-types";
@@ -19,6 +20,7 @@ import ns from "./bricks-ns.js";
 import StepperItem from "./stepper-item.js";
 const ClassNames = UU5.Common.ClassNames;
 import "./stepper.less";
+//@@viewOff:imports
 
 const StepperContext = UU5.Common.Context.create();
 
@@ -84,7 +86,7 @@ export const Stepper = createReactClass({
     itemProps: PropTypes.shape({
       bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
       borderRadius: PropTypes.string,
-      elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+      elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
     })
   },
   //@@viewOff:propTypes
@@ -105,7 +107,7 @@ export const Stepper = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
       firstRender: true
@@ -118,23 +120,24 @@ export const Stepper = createReactClass({
       let domNodeSibling = domNode.nextSibling;
       let parentNode = domNode.parentNode;
       parentNode.removeChild(domNode);
-      parentNode.insertBefore(domNode, domNodeSibling)
+      parentNode.insertBefore(domNode, domNodeSibling);
     }
-
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
+  //@@viewOn:overriding
   onResize_(oldWidth, newWidth) {
     this.setState(nextState => {
       let hideText;
       if (this.props.orientation === "horizontal") {
         hideText = this._getComponentWidth() > newWidth;
       } else {
-        hideText = this._getComponentWidth() < (this.props.size === "s" ? 81 : (this.props.size === "m" ? 100 : (this.props.size === "l" ? 130 : 140 )));
+        hideText =
+          this._getComponentWidth() <
+          (this.props.size === "s" ? 81 : this.props.size === "m" ? 100 : this.props.size === "l" ? 130 : 140);
       }
       if (nextState.hideText !== hideText) {
         return {
@@ -150,9 +153,9 @@ export const Stepper = createReactClass({
       }
     });
   },
-  //@@viewOff:overridingMethods
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _getMainAttrs() {
     let mainAttrs = this.getMainAttrs();
     let hideText = this.props.hideText === undefined ? this.state.hideText : this.props.hideText;
@@ -168,8 +171,13 @@ export const Stepper = createReactClass({
       mainAttrs.className += " " + this.getClassName().mini;
     }
     if (this.props.alignment) {
-      mainAttrs.className += " " +
-      ((this.props.alignment === "center") ? this.getClassName().centerAlignment : (this.props.alignment === "right") ? this.getClassName().rightAlignment : this.getClassName().leftAlignment);
+      mainAttrs.className +=
+        " " +
+        (this.props.alignment === "center"
+          ? this.getClassName().centerAlignment
+          : this.props.alignment === "right"
+          ? this.getClassName().rightAlignment
+          : this.getClassName().leftAlignment);
     }
     return mainAttrs;
   },
@@ -206,7 +214,7 @@ export const Stepper = createReactClass({
       bgStyle: this.props.bgStyle,
       borderRadius: this.props.borderRadius,
       ...this.props.itemProps
-    }
+    };
 
     let children = this.props.children;
     if (!Array.isArray(children)) children = [children];
@@ -235,7 +243,7 @@ export const Stepper = createReactClass({
     });
     return result;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
   //@@viewOn:render
   render() {
     let innerClassNames = [this.getClassName().inner];
@@ -247,12 +255,12 @@ export const Stepper = createReactClass({
     } else if (this.props.orientation === "vertical") {
       innerClassNames.push(this.getClassName().vertical);
     }
-    return this.getNestingLevel() ?
+    return this.getNestingLevel() ? (
       <div {...this._getMainAttrs()}>
         <div className={innerClassNames.join(" ")}>{this._renderChildren()}</div>
         {this.getDisabledCover()}
       </div>
-      : null;
+    ) : null;
   }
   //@@viewOff:render
 });

@@ -11,6 +11,7 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import React from "react";
 import createReactClass from "create-react-class";
 import PropTypes from "prop-types";
@@ -20,6 +21,7 @@ import "uu5g04-bricks";
 import ItemList from "./item-list.js";
 import TextInput from "./text-input.js";
 import ns from "../forms-ns.js";
+//@@viewOff:imports
 
 const INPUT_TYPE_TEXT = "text";
 const INPUT_TYPE_PASSWORD = "password";
@@ -113,7 +115,7 @@ export const AutocompleteTextInput = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   componentWillMount() {
     this._hasFocus = false;
   },
@@ -129,7 +131,7 @@ export const AutocompleteTextInput = createReactClass({
       this._close();
     }
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   focus() {
@@ -145,10 +147,10 @@ export const AutocompleteTextInput = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _getEventPath(e) {
     let path = [];
     let node = e.target;
@@ -213,7 +215,7 @@ export const AutocompleteTextInput = createReactClass({
         } else {
           setTimeout(() => {
             this._onFocus();
-          })
+          });
         }
       } else if (items && (e.which === 38 || e.which === 40)) {
         // top / bottom
@@ -313,12 +315,15 @@ export const AutocompleteTextInput = createReactClass({
 
   _open(setStateCallback) {
     if (this._itemList) {
-      this._itemList.open({
-        onClose: this._close,
-        aroundElement: this._textInput.findDOMNode(),
-        position: "bottom",
-        offset: 4
-      }, setStateCallback);
+      this._itemList.open(
+        {
+          onClose: this._close,
+          aroundElement: this._textInput.findDOMNode(),
+          position: "bottom",
+          offset: 4
+        },
+        setStateCallback
+      );
     } else if (typeof setStateCallback === "function") {
       setStateCallback();
     }
@@ -391,7 +396,7 @@ export const AutocompleteTextInput = createReactClass({
       clickable: this.props.clickable
     };
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
@@ -407,6 +412,6 @@ export const AutocompleteTextInput = createReactClass({
     );
   }
   //@@viewOn:render
-})
+});
 
 export default AutocompleteTextInput;

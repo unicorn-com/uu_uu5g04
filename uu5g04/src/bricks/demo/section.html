@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
-    <title>Code Demo</title>
+    <title>Section Demo</title>
 
     <script>
       // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
@@ -28,7 +28,8 @@
           "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
 
           "uu5g04": "/uu5g04.js",
-          "uu5g04-bricks": "/uu5g04-bricks.js"
+          "uu5g04-bricks": "/uu5g04-bricks.js",
+          "uu5g04-bricks-editable": "/uu5g04-bricks-editable.js"
         }
       });
 
@@ -52,75 +53,20 @@
 
       const Page = createReactClass({
         render() {
-          let header = "ĚŠČŘŽÝÁÍÉ fgjqý ĚŠČŘŽÝÁÍÉ fgjqý ĚŠČŘŽÝÁÍÉ fgjqý";
           return (
-            <UU5.Bricks.Container header="0. Container">
-              {document.documentElement.className}
-              <UU5.Bricks.Row>
-                <UU5.Bricks.Column colWidth="m-6">
-                  <UU5.Bricks.Section header={"1. " + header}>
-                    <UU5.Bricks.Paragraph />
-                    <UU5.Bricks.Paragraph />
-
-                    <UU5.Bricks.Section header={"2. " + header}>
-                      <UU5.Bricks.Paragraph />
-                      <UU5.Bricks.Paragraph />
-
-                      <UU5.Bricks.Section header={"3. " + header}>
-                        <UU5.Bricks.Paragraph />
-                        <UU5.Bricks.Paragraph />
-
-                        <UU5.Bricks.Section header={"4. " + header}>
-                          <UU5.Bricks.Paragraph />
-                          <UU5.Bricks.Paragraph />
-
-                          <UU5.Bricks.Section header={"5. " + header}>
-                            <UU5.Bricks.Paragraph />
-                            <UU5.Bricks.Paragraph />
-
-                            <UU5.Bricks.Section header={"6. " + header}>
-                              <UU5.Bricks.Paragraph />
-                              <UU5.Bricks.Paragraph />
-                            </UU5.Bricks.Section>
-                          </UU5.Bricks.Section>
-                        </UU5.Bricks.Section>
-                      </UU5.Bricks.Section>
-                    </UU5.Bricks.Section>
-                  </UU5.Bricks.Section>
-                </UU5.Bricks.Column>
-                <UU5.Bricks.Column colWidth="m-6">
-                  <UU5.Bricks.Section header={"1. " + header} underline>
-                    <UU5.Bricks.Paragraph />
-                    <UU5.Bricks.Paragraph />
-
-                    <UU5.Bricks.Section header={"2. " + header} underline>
-                      <UU5.Bricks.Paragraph />
-                      <UU5.Bricks.Paragraph />
-
-                      <UU5.Bricks.Section header={"3. " + header} underline>
-                        <UU5.Bricks.Paragraph />
-                        <UU5.Bricks.Paragraph />
-
-                        <UU5.Bricks.Section header={"4. " + header} underline>
-                          <UU5.Bricks.Paragraph />
-                          <UU5.Bricks.Paragraph />
-
-                          <UU5.Bricks.Section header={"5. " + header} underline>
-                            <UU5.Bricks.Paragraph />
-                            <UU5.Bricks.Paragraph />
-
-                            <UU5.Bricks.Section header={"6. " + header} underline>
-                              <UU5.Bricks.Paragraph />
-                              <UU5.Bricks.Paragraph />
-                            </UU5.Bricks.Section>
-                          </UU5.Bricks.Section>
-                        </UU5.Bricks.Section>
-                      </UU5.Bricks.Section>
-                    </UU5.Bricks.Section>
-                  </UU5.Bricks.Section>
-                </UU5.Bricks.Column>
-              </UU5.Bricks.Row>
-            </UU5.Bricks.Container>
+            <UU5.Bricks.Section level={1}>
+              <UU5.Bricks.Button onClick={() => this._section.startEditation()} />
+              <UU5.Bricks.Section name={"test"} ref_={s => this._section = s}>
+                <UU5.Bricks.Section header={"aho"}>
+                Robust and reliable hardware and software infrastructure, whether your own or in the cloud, is
+                essential for the operation of information systems and all other application software equipment. Also
+                of importance is the management of infrastructure security linked with to access of users to the
+                company’s ICT environment and data. The fulfilment of the company’s business plan depends on choosing
+                the right components for ICT infrastructure, deploying them quickly with optimum settings, and
+                ensuring secure and continued operation.
+                </UU5.Bricks.Section>
+              </UU5.Bricks.Section>
+            </UU5.Bricks.Section>
           );
         }
       });

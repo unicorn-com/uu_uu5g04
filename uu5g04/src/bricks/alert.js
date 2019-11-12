@@ -11,19 +11,20 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
-import Link from './link.js';
-import Icon from './icon.js';
+import Link from "./link.js";
+import Icon from "./icon.js";
 
-import './alert.less';
+import "./alert.less";
+//@@viewOff:imports
 
 export const Alert = createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -38,7 +39,7 @@ export const Alert = createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("Alert"),
-    nestingLevelList: UU5.Environment.getNestingLevelList('bigBoxCollection', 'box'),
+    nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
       main: ns.css("alert"),
       withHeader: ns.css("alert-with-header"),
@@ -53,7 +54,7 @@ export const Alert = createReactClass({
     },
     defaults: {
       transitionDuration: 150,
-      closeIcon: 'mdi-close'
+      closeIcon: "mdi-close"
     },
     opt: {
       nestingLevelWrapper: true
@@ -63,11 +64,7 @@ export const Alert = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    position: PropTypes.oneOf([
-      'left',
-      'center',
-      'right'
-    ]),
+    position: PropTypes.oneOf(["left", "center", "right"]),
     closeTimer: PropTypes.number,
     closeDisabled: PropTypes.bool,
     block: PropTypes.bool,
@@ -78,9 +75,9 @@ export const Alert = createReactClass({
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function () {
+  getDefaultProps: function() {
     return {
-      position: 'center',
+      position: "center",
       closeTimer: null,
       closeDisabled: false,
       block: false,
@@ -91,25 +88,25 @@ export const Alert = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  componentWillReceiveProps: function (nextProps) {
+  //@@viewOn:reactLifeCycle
+  componentWillReceiveProps: function(nextProps) {
     // it is needed to compare by deepEqual function because pureRenderMixin uses this function in shouldCOmponentRender to compare equality of props.
     !UU5.Common.Tools.deepEqual(nextProps.content, this.props.content) && this._clearTimeout();
   },
 
-  componentWillUnmount: function () {
+  componentWillUnmount: function() {
     this._clearTimeout();
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
-  _clearTimeout: function () {
+  //@@viewOn:private
+  _clearTimeout: function() {
     if (this.timeout) {
       clearTimeout(this.timeout);
       this.timeout = null;
@@ -117,11 +114,11 @@ export const Alert = createReactClass({
     return this;
   },
 
-  _hide: function () {
+  _hide: function() {
     var alert = this;
     this._clearTimeout();
 
-    if (typeof this.props.onCloseBefore === 'function') {
+    if (typeof this.props.onCloseBefore === "function") {
       this.props.onCloseBefore(alert);
     }
 
@@ -130,38 +127,46 @@ export const Alert = createReactClass({
     return this;
   },
 
-  _hideFunc: function () {
+  _hideFunc: function() {
     var alert = this;
     this.hide(
-      (typeof this.props.onClose === 'function' || typeof this.props.onCloseAfter === 'function') ? function () {
-          setTimeout(function () {
-            (typeof alert.props.onCloseAfter === 'function') ?
-              alert.props.onCloseAfter(alert) :
-              alert.props.onClose(alert);
-          }, this.getDefault().transitionDuration);
-        } : null);
+      typeof this.props.onClose === "function" || typeof this.props.onCloseAfter === "function"
+        ? function() {
+            setTimeout(function() {
+              typeof alert.props.onCloseAfter === "function"
+                ? alert.props.onCloseAfter(alert)
+                : alert.props.onClose(alert);
+            }, this.getDefault().transitionDuration);
+          }
+        : null
+    );
   },
 
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   // Render
-  _getMainAttrs: function () {
+  _getMainAttrs: function() {
     var mainAttrs = this.getMainAttrs();
-    mainAttrs.className += ' ' + this.getClassName().position + this.props.position;
-    this.props.block && (mainAttrs.className += ' ' + this.getClassName().block);
+    mainAttrs.className += " " + this.getClassName().position + this.props.position;
+    this.props.block && (mainAttrs.className += " " + this.getClassName().block);
 
     mainAttrs.style = mainAttrs.style || {};
 
     var time = this.getDefault().transitionDuration / 1000;
-    ['WebkitTransitionDuration', 'MozTransitionDuration', 'MsTransitionDuration',
-      'OTransitionDuration', 'transitionDuration'].forEach(function (style) {
-      mainAttrs.style[style] = time + 's';
+    [
+      "WebkitTransitionDuration",
+      "MozTransitionDuration",
+      "MsTransitionDuration",
+      "OTransitionDuration",
+      "transitionDuration"
+    ].forEach(function(style) {
+      mainAttrs.style[style] = time + "s";
     });
 
     return mainAttrs;
   },
 
-  _manageTimeout: function () {
+  _manageTimeout: function() {
     if (this.props.closeTimer) {
       if (this.isHidden()) {
         this._clearTimeout();
@@ -176,40 +181,43 @@ export const Alert = createReactClass({
 
     if (header && content) {
       result.push(
-        <div className={this.getClassName('headerWrapper')} key="header">
-          <div className={this.getClassName('header')}> {this.getHeader()} </div>
-          {!this.props.closeDisabled &&
-          <Link className={this.getClassName().close} onClick={this._hide} parent={this} colorSchema="custom">
-            <Icon icon={this.getDefault('closeIcon')} />
-          </Link>}
+        <div className={this.getClassName("headerWrapper")} key="header">
+          <div className={this.getClassName("header")}> {this.getHeader()} </div>
+          {!this.props.closeDisabled && (
+            <Link className={this.getClassName().close} onClick={this._hide} parent={this} colorSchema="custom">
+              <Icon icon={this.getDefault("closeIcon")} />
+            </Link>
+          )}
         </div>
       );
     } else if (header && !content) {
       result.push(
-        <div className={this.getClassName('headerWrapper')} key="content">
+        <div className={this.getClassName("headerWrapper")} key="content">
           <div className={this.getClassName("content")}>{header}</div>
-          {!this.props.closeDisabled &&
-          <Link className={this.getClassName().close} onClick={this._hide} parent={this} colorSchema="custom">
-            <Icon icon={this.getDefault('closeIcon')} />
-          </Link>}
+          {!this.props.closeDisabled && (
+            <Link className={this.getClassName().close} onClick={this._hide} parent={this} colorSchema="custom">
+              <Icon icon={this.getDefault("closeIcon")} />
+            </Link>
+          )}
         </div>
       );
     }
 
     if (content && header) {
       result.push(
-        <div className={this.getClassName('content')} key="content">
+        <div className={this.getClassName("content")} key="content">
           {content}
         </div>
       );
     } else if (content && !header) {
       result.push(
-        <div className={this.getClassName('headerWrapper')} key="content">
+        <div className={this.getClassName("headerWrapper")} key="content">
           <div className={this.getClassName("content")}>{content}</div>
-          {!this.props.closeDisabled &&
-          <Link className={this.getClassName().close} onClick={this._hide} parent={this} colorSchema="custom">
-            <Icon icon={this.getDefault('closeIcon')} />
-          </Link>}
+          {!this.props.closeDisabled && (
+            <Link className={this.getClassName().close} onClick={this._hide} parent={this} colorSchema="custom">
+              <Icon icon={this.getDefault("closeIcon")} />
+            </Link>
+          )}
         </div>
       );
     }
@@ -220,14 +228,14 @@ export const Alert = createReactClass({
   },
 
   //@@viewOn:render
-  render: function () {
+  render: function() {
     let mainAttrs = this._getMainAttrs();
     let header = this.getHeader();
     let content = this.getChildren();
     if (header && content) {
-      mainAttrs.className += ' ' + this.getClassName('withHeader');
+      mainAttrs.className += " " + this.getClassName("withHeader");
     } else {
-      mainAttrs.className += ' ' + this.getClassName('withoutHeader');
+      mainAttrs.className += " " + this.getClassName("withoutHeader");
     }
 
     if (this.props.closeDisabled) {
@@ -236,14 +244,7 @@ export const Alert = createReactClass({
 
     this._manageTimeout();
 
-    return (
-      this.getNestingLevel()
-        ? (
-          <div {...mainAttrs}>
-            {this._getChildren(header, content)}
-          </div>
-        ) : null
-    );
+    return this.getNestingLevel() ? <div {...mainAttrs}>{this._getChildren(header, content)}</div> : null;
   }
   //@@viewOff:render
 });

@@ -1,27 +1,28 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
+import ReactDOM from "react-dom";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
-import './popover.less';
+import "./popover.less";
+//@@viewOff:imports
 
 export const Popover = createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -36,7 +37,7 @@ export const Popover = createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("Popover"),
-    nestingLevelList: UU5.Environment.getNestingLevelList('bigBoxCollection', 'box'),
+    nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
       main: ns.css("popover"),
       open: ns.css("popover-shown"),
@@ -77,7 +78,7 @@ export const Popover = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
       header: null,
@@ -121,9 +122,9 @@ export const Popover = createReactClass({
   },
 
   componentWillUnmount() {
-    UU5.Environment.EventListener.removeWindowEvent('click', this.getId());
+    this._removeEvent();
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   open(opt, setStateCallback) {
@@ -178,7 +179,8 @@ export const Popover = createReactClass({
         pageY = 0;
       }
 
-      this.setState({
+      this.setState(
+        {
           disableBackdrop: !!opt.disableBackdrop,
           disabled: opt.disabled || this.state.disabled,
           header: opt.header,
@@ -196,7 +198,8 @@ export const Popover = createReactClass({
           removeHeight: false,
           onClose: onClose,
           onBeforeClose: onBeforeClose
-        }, () => {
+        },
+        () => {
           this._addEvent(onBeforeClose, onClose);
 
           if (aroundElement) {
@@ -206,18 +209,26 @@ export const Popover = createReactClass({
             let aroundElementRect = aroundElement.getBoundingClientRect();
 
             if (!opt.preventPositioning) {
-              ({ pageX, pageY, maxHeight, position } = this._getPosition(requiredPosition, aroundElementRect, offset, fitHeightToViewport, horizontalOnly));
+              ({ pageX, pageY, maxHeight, position } = this._getPosition(
+                requiredPosition,
+                aroundElementRect,
+                offset,
+                fitHeightToViewport,
+                horizontalOnly
+              ));
             }
 
-            this.setState({
-              hidden: false,
-              display: true,
-              pageX: pageX,
-              pageY: pageY,
-              maxHeight: maxHeight,
-              position: position
-            }, setStateCallback);
-
+            this.setState(
+              {
+                hidden: false,
+                display: true,
+                pageX: pageX,
+                pageY: pageY,
+                maxHeight: maxHeight,
+                position: position
+              },
+              setStateCallback
+            );
           } else {
             let aroundElementRect = {
               left: left,
@@ -229,21 +240,30 @@ export const Popover = createReactClass({
             };
 
             if (!opt.preventPositioning) {
-              ({ pageX, pageY, maxHeight, position } = this._getPosition(requiredPosition, aroundElementRect, offset, fitHeightToViewport, horizontalOnly));
+              ({ pageX, pageY, maxHeight, position } = this._getPosition(
+                requiredPosition,
+                aroundElementRect,
+                offset,
+                fitHeightToViewport,
+                horizontalOnly
+              ));
             }
 
-            this.setState({
-              hidden: false,
-              display: true,
-              pageX: pageX,
-              pageY: pageY,
-              maxHeight: maxHeight,
-              position: position
-            }, setStateCallback);
+            this.setState(
+              {
+                hidden: false,
+                display: true,
+                pageX: pageX,
+                pageY: pageY,
+                maxHeight: maxHeight,
+                position: position
+              },
+              setStateCallback
+            );
           }
 
           // This is a workaround. Otherwise the first click outside of popover after opening it doesnt close it
-          setTimeout(() => this._stopPropagation = false);
+          setTimeout(() => (this._stopPropagation = false));
         }
       );
     }
@@ -259,7 +279,7 @@ export const Popover = createReactClass({
         this.setState({ removeHeight: true }, () => {
           typeof setStateCallback === "function" && setStateCallback();
         });
-      }
+      };
       this._removeEvent();
       this.hide(callback);
     }
@@ -272,13 +292,13 @@ export const Popover = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
+  //@@viewOn:overriding
   hide_(setStateCallback) {
     this.setState({ hidden: true, display: false }, setStateCallback);
   },
-  //@@viewOff:overridingMethods
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _getOffsetParentRect(element, relative) {
     let rect;
     if (relative) {
@@ -306,7 +326,10 @@ export const Popover = createReactClass({
     let availableAreaRect = { top: 0, bottom: window.innerHeight, height: window.innerHeight };
 
     if (isRelative) {
-      availableAreaRect = { top: document.body.getBoundingClientRect().top, height: (document.scrollingElement || document.body).scrollHeight };
+      availableAreaRect = {
+        top: document.body.getBoundingClientRect().top,
+        height: (document.scrollingElement || document.body).scrollHeight
+      };
       availableAreaRect.bottom = availableAreaRect.top + availableAreaRect.height;
     }
 
@@ -423,13 +446,14 @@ export const Popover = createReactClass({
     pageX -= parentOffset.left;
     pageY -= parentOffset.top;
 
-    result.top !== undefined ? result.top -= parentOffset.top : null;
-    result.bottom !== undefined ? result.bottom -= parentOffset.top : null;
-    result.left !== undefined ? result.left -= parentOffset.left : null;
-    result.right !== undefined ? result.right -= parentOffset.left : null;
+    result.top !== undefined ? (result.top -= parentOffset.top) : null;
+    result.bottom !== undefined ? (result.bottom -= parentOffset.top) : null;
+    result.left !== undefined ? (result.left -= parentOffset.left) : null;
+    result.right !== undefined ? (result.right -= parentOffset.left) : null;
 
     let parsedPosition = this._parsePosition(requiredPosition);
-    let newPageX, position = {};
+    let newPageX,
+      position = {};
     if (parsedPosition.left) {
       if (result.left !== undefined) {
         newPageX = result.left;
@@ -448,7 +472,7 @@ export const Popover = createReactClass({
       }
     }
 
-    pageX = (newPageX === undefined ? pageX : newPageX);
+    pageX = newPageX === undefined ? pageX : newPageX;
 
     let newPageY;
     if (parsedPosition.top) {
@@ -469,7 +493,7 @@ export const Popover = createReactClass({
       }
     }
 
-    pageY = horizontalOnly ? undefined : (newPageY === undefined ? pageY : newPageY);
+    pageY = horizontalOnly ? undefined : newPageY === undefined ? pageY : newPageY;
 
     return { pageX, pageY, maxHeight, position };
   },
@@ -520,7 +544,7 @@ export const Popover = createReactClass({
     let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
     let result = false;
     if (!this.props.forceRender && page && page.getPopover() && page.getPopover().getId() === this.getId()) {
-      result = true
+      result = true;
     }
     return result;
   },
@@ -549,38 +573,31 @@ export const Popover = createReactClass({
 
   _addEvent(onBeforeClose, onClose) {
     this._stopPropagation = true;
-    !this.state.disableBackdrop && !this.props.disableBackdrop && UU5.Environment.EventListener.addWindowEvent('click', this.getId(), (e) => {
-      let isPopover = this._findTarget(e.target);
 
-      if (!this._stopPropagation && !isPopover && !this.isHidden()) {
-        if (typeof onBeforeClose === "function") {
-          onBeforeClose();
+    if (!this.state.disableBackdrop && !this.props.disableBackdrop) {
+      this._closeListener = e => {
+        let isPopover = this._findTarget(e.target);
+
+        if (!this._stopPropagation && !isPopover && !this.isHidden()) {
+          if (typeof onBeforeClose === "function") {
+            onBeforeClose();
+          }
+          this.close(onClose);
+        } else {
+          this._stopPropagation = false;
         }
-        this.close(onClose);
-      } else {
-        this._stopPropagation = false;
-      }
-    });
+      };
 
-    !this.state.disableBackdrop && !this.props.disableBackdrop && UU5.Environment.EventListener.addWindowEvent('contextmenu', this.getId(), (e) => {
-      let isPopover = this._findTarget(e.target);
-
-      if (!this._stopPropagation && !isPopover && !this.isHidden()) {
-        if (typeof onBeforeClose === "function") {
-          onBeforeClose();
-        }
-        this.close(onClose);
-      } else {
-        this._stopPropagation = false;
-      }
-    });
-    return this;
+      window.addEventListener("click", this._closeListener);
+      window.addEventListener("contextmenu", this._closeListener);
+    }
   },
 
   _removeEvent() {
-    UU5.Environment.EventListener.removeWindowEvent('click', this.getId());
-    UU5.Environment.EventListener.removeWindowEvent('contextmenu', this.getId());
-    return this;
+    if (this._closeListener) {
+      window.removeEventListener("click", this._closeListener);
+      window.removeEventListener("contextmenu", this._closeListener);
+    }
   },
 
   _getMainAttrs() {
@@ -588,11 +605,11 @@ export const Popover = createReactClass({
 
     props.id = this.getId();
 
-    this.isOpen() && (props.className += ' ' + this.getClassName().open);
-    props.className += this.state.position.top ? ' ' + this.getClassName('top') : ' ' + this.getClassName('bottom');
-    props.className += this.state.position.left ? ' ' + this.getClassName('left') : ' ' + this.getClassName('right');
-    props.className += this.state.removeHeight ? ' ' + this.getClassName('removeHeight') : '';
-    props.className += this.state.display ? ' ' + this.getClassName('displayed') : '';
+    this.isOpen() && (props.className += " " + this.getClassName().open);
+    props.className += this.state.position.top ? " " + this.getClassName("top") : " " + this.getClassName("bottom");
+    props.className += this.state.position.left ? " " + this.getClassName("left") : " " + this.getClassName("right");
+    props.className += this.state.removeHeight ? " " + this.getClassName("removeHeight") : "";
+    props.className += this.state.display ? " " + this.getClassName("displayed") : "";
     this.state.className && (props.className += ` ${this.state.className}`);
 
     props.style = props.style || {};
@@ -613,7 +630,11 @@ export const Popover = createReactClass({
       if (this.state.headerClassName) {
         className += " " + this.state.headerClassName;
       }
-      header = <div className={className} key="header">{header}</div>;
+      header = (
+        <div className={className} key="header">
+          {header}
+        </div>
+      );
     }
     return header;
   },
@@ -625,13 +646,20 @@ export const Popover = createReactClass({
       if (this.state.footerClassName) {
         className += " " + this.state.footerClassName;
       }
-      footer = <div className={className} key="footer">{footer}</div>;
+      footer = (
+        <div className={className} key="footer">
+          {footer}
+        </div>
+      );
     }
     return footer;
   },
 
   _getBody() {
-    let children = this.buildChildren({ content: this.state.content || this.props.content, children: this.props.children });
+    let children = this.buildChildren({
+      content: this.state.content || this.props.content,
+      children: this.props.children
+    });
     if (children) {
       let props = {};
       if (this.state.maxHeight) {
@@ -647,17 +675,19 @@ export const Popover = createReactClass({
     return children;
   },
 
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
-    return !this._getCentralPopover() && (
-      <div {...this._getMainAttrs()}>
-        {this._getHeader()}
-        {this._getBody()}
-        {this._getFooter()}
-        {this.getDisabledCover()}
-      </div>
+    return (
+      !this._getCentralPopover() && (
+        <div {...this._getMainAttrs()}>
+          {this._getHeader()}
+          {this._getBody()}
+          {this._getFooter()}
+          {this.getDisabledCover()}
+        </div>
+      )
     );
   }
   //@@viewOff:render

@@ -11,8 +11,9 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
 import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
@@ -21,31 +22,26 @@ import Form from "./form.js";
 import Controls from "./controls.js";
 import Select from "./select.js";
 
-import './props-form.less';
+import "./props-form.less";
+//@@viewOff:imports
 
 const DEFAULT_VALUES = {
-  "text": "",
-  "textarea": "",
-  "bool": false,
-  "number": null,
-  "date": "",
-  "time": "",
-  "datetime": "",
-  "uu5string": "",
-  "uu5json": null,
-  "select": null
+  text: "",
+  textarea: "",
+  bool: false,
+  number: null,
+  date: "",
+  time: "",
+  datetime: "",
+  uu5string: "",
+  uu5json: null,
+  select: null
 };
 const DEFAULT_TYPE = "text";
 
 export const PropsForm = createReactClass({
-
   //@@viewOn:mixins
-  mixins: [
-    UU5.Common.BaseMixin,
-    UU5.Common.PureRenderMixin,
-    UU5.Common.ElementaryMixin,
-    UU5.Common.SectionMixin
-  ],
+  mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, UU5.Common.SectionMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -69,19 +65,32 @@ export const PropsForm = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    props: PropTypes.arrayOf(PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      placeholder: PropTypes.string,
-      type: PropTypes.oneOfType([
-        PropTypes.array,
-        PropTypes.oneOf(["text", "textarea", "bool", "number", "date", "time", "datetime", "uu5string", "uu5json", "texticon"]),
-        PropTypes.node
-      ]),
-      value: PropTypes.any,
-      defaultValue: PropTypes.any,
-      props: PropTypes.object,
-      required: PropTypes.bool
-    })).isRequired,
+    props: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        placeholder: PropTypes.string,
+        type: PropTypes.oneOfType([
+          PropTypes.array,
+          PropTypes.oneOf([
+            "text",
+            "textarea",
+            "bool",
+            "number",
+            "date",
+            "time",
+            "datetime",
+            "uu5string",
+            "uu5json",
+            "texticon"
+          ]),
+          PropTypes.node
+        ]),
+        value: PropTypes.any,
+        defaultValue: PropTypes.any,
+        props: PropTypes.object,
+        required: PropTypes.bool
+      })
+    ).isRequired,
     onSave: PropTypes.func.isRequired,
     onCancel: PropTypes.func,
     labelColWidth: PropTypes.string,
@@ -101,20 +110,20 @@ export const PropsForm = createReactClass({
       inputColWidth: undefined,
       tagName: null,
       uu5string: false
-    }
+    };
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _getDefaultPropValue(prop) {
     let defaultValue;
     // take default value set by component in props
@@ -149,7 +158,7 @@ export const PropsForm = createReactClass({
 
       // TODO repaired in Number
       if (prop.type === "number") {
-        if (opt.value === ""){
+        if (opt.value === "") {
           opt.value = DEFAULT_VALUES.number;
         } else if (opt.value !== undefined) {
           opt.value = +opt.value.replace((prop.props && prop.props.decimalSeparator) || ",", ".");
@@ -204,7 +213,7 @@ export const PropsForm = createReactClass({
         result.Component = "UU5.Forms.Select";
         result.props.onChange = this._onChangeHandler(prop);
         result.children = prop.type.map(typeValue => {
-          return <Select.Option value={typeValue} key={typeValue} />
+          return <Select.Option value={typeValue} key={typeValue} />;
         });
 
         break;
@@ -213,8 +222,10 @@ export const PropsForm = createReactClass({
         result.props.onChange = this._onChangeHandler(prop);
         result.props.value = prop.type.map(typeValue => {
           return {
-            label: typeValue, name: typeValue, value: typeValue === prop.value
-          }
+            label: typeValue,
+            name: typeValue,
+            value: typeValue === prop.value
+          };
         });
         break;
       case "custom":
@@ -233,7 +244,8 @@ export const PropsForm = createReactClass({
 
       result.props.onBlur = opt => {
         if (typeof onBlur === "function") onBlur(opt);
-        else if (opt && opt.component && typeof opt.component.onBlurDefault === "function") opt.component.onBlurDefault(opt);
+        else if (opt && opt.component && typeof opt.component.onBlurDefault === "function")
+          opt.component.onBlurDefault(opt);
 
         if (this._result) {
           let value = opt.value;
@@ -256,7 +268,7 @@ export const PropsForm = createReactClass({
 
           // TODO repaired in Number
           if (prop.type === "number") {
-            if (opt.value === ""){
+            if (opt.value === "") {
               opt.value = DEFAULT_VALUES.number;
             } else if (opt.value !== undefined) {
               opt.value = +opt.value.replace((prop.props && prop.props.decimalSeparator) || ",", ".");
@@ -265,7 +277,7 @@ export const PropsForm = createReactClass({
 
           this._setProp(prop, value);
         }
-      }
+      };
     }
 
     return result;
@@ -296,7 +308,7 @@ export const PropsForm = createReactClass({
     value = value.replace(UU5.Common.REGEXP.uu5string, "");
     return `<uu5string/>${value}`;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
@@ -320,17 +332,26 @@ export const PropsForm = createReactClass({
 
       tagProps[prop.name] = this._getNewValue(prop, prop.value);
 
-      let result = UU5.Common.Tools.findComponent(Component, UU5.Common.Tools.merge({}, {
-        name: prop.name,
-        label: prop.label === undefined ? prop.name : prop.label,
-        value: value,
-        placeholder: prop.placeholder,
-        required: prop.required,
-        key: prop.name,
-        labelColWidth: this.props.labelColWidth,
-        inputColWidth: this.props.inputColWidth,
-        controlled: false
-      }, props, prop.props), children);
+      let result = UU5.Common.Tools.findComponent(
+        Component,
+        UU5.Common.Tools.merge(
+          {},
+          {
+            name: prop.name,
+            label: prop.label === undefined ? prop.name : prop.label,
+            value: value,
+            placeholder: prop.placeholder,
+            required: prop.required,
+            key: prop.name,
+            labelColWidth: this.props.labelColWidth,
+            inputColWidth: this.props.inputColWidth,
+            controlled: false
+          },
+          props,
+          prop.props
+        ),
+        children
+      );
 
       if (prop.visible === false) {
         collapsedChildren.push(result);
@@ -351,14 +372,17 @@ export const PropsForm = createReactClass({
             header={this.getLsiComponent("panelHeader")}
             className={this.getClassName("additionalPropsPanel")}
           >
-          {collapsedChildren}
-        </UU5.Bricks.Panel>)}
-        {this.props.tagName && <UU5.Bricks.CodePreview
+            {collapsedChildren}
+          </UU5.Bricks.Panel>
+        )}
+        {this.props.tagName && (
+          <UU5.Bricks.CodePreview
             tagName={this.props.tagName}
             props={tagProps}
             uu5string={this.props.uu5string}
-            ref_={ref => this._result = ref}
-          />}
+            ref_={ref => (this._result = ref)}
+          />
+        )}
         <Controls />
       </Form>
     );

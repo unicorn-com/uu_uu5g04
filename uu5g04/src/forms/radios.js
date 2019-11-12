@@ -11,22 +11,24 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import ClassNames from "../core/common/class-names.js";
 import Css from "./internal/css.js";
 
-import InputMixin from './mixins/input-mixin.js'
-import GroupMixin from './mixins/group-mixin.js'
+import InputMixin from "./mixins/input-mixin.js";
+import GroupMixin from "./mixins/group-mixin.js";
 
-import Checkbox from './checkbox.js';
+import Checkbox from "./checkbox.js";
 
 import Context from "./form-context.js";
 
-import './radios.less';
+import "./radios.less";
+//@@viewOff:imports
 
 export const Radios = Context.withContext(
   createReactClass({
@@ -49,7 +51,10 @@ export const Radios = Context.withContext(
         main: ns.css("radios"),
         inline: ns.css("inputs-inline"),
         loading: ns.css("input-loading-icon"),
-        inner: props => ns.css("input-inner") + " " + Css.css(`
+        inner: props =>
+          ns.css("input-inner") +
+          " " +
+          Css.css(`
           border-radius: ${UU5.Common.Tools.fillUnit(props.selectionBorderRadius)};
         `),
         selectionBackground: ns.css("radios-selection-background"),
@@ -58,7 +63,7 @@ export const Radios = Context.withContext(
       defaults: {
         columnRegexp: /^((?:offset-)?[a-z]+)(?:-)?(\d+)$/
       },
-      lsi: () => (UU5.Environment.Lsi.Forms.message)
+      lsi: () => UU5.Environment.Lsi.Forms.message
     },
     //@@viewOff:statics
 
@@ -80,13 +85,13 @@ export const Radios = Context.withContext(
     },
     //@@viewOff:getDefaultProps
 
-    //@@viewOn:standardComponentLifeCycle
-    componentWillMount(){
+    //@@viewOn:reactLifeCycle
+    componentWillMount() {
       this._itemsRefs = [];
       this._currentFocus = 0;
       let value = this._getInitialValue();
-      if (this.props.onValidate && typeof this.props.onValidate === 'function') {
-        this._validateOnChange({ value, event: null, component: this })
+      if (this.props.onValidate && typeof this.props.onValidate === "function") {
+        this._validateOnChange({ value, event: null, component: this });
       } else {
         this.setState({ value });
       }
@@ -98,7 +103,7 @@ export const Radios = Context.withContext(
       let value = this._getInitialValue(nextProps);
       if (nextProps.controlled) {
         if (nextProps.value !== undefined) {
-          if (this.props.onValidate && typeof this.props.onValidate === 'function') {
+          if (this.props.onValidate && typeof this.props.onValidate === "function") {
             this._validateOnChange({ value, event: null, component: this }, true);
           } else {
             this.setState({ value });
@@ -108,7 +113,7 @@ export const Radios = Context.withContext(
       return this;
     },
 
-    //@@viewOff:standardComponentLifeCycle
+    //@@viewOff:reactLifeCycle
 
     //@@viewOn:interface
     onChangeDefault(opt, setStateCallback) {
@@ -117,14 +122,17 @@ export const Radios = Context.withContext(
     },
     //@@viewOff:interface
 
-    //@@viewOn:overridingMethods
-    reset_(setStateCallback){
-      this.setState({
-        message: this.props.message,
-        feedback: this.props.feedback,
-        value: this._getInitialValue(),
-        readOnly: this.props.readOnly
-      }, setStateCallback);
+    //@@viewOn:overriding
+    reset_(setStateCallback) {
+      this.setState(
+        {
+          message: this.props.message,
+          feedback: this.props.feedback,
+          value: this._getInitialValue(),
+          readOnly: this.props.readOnly
+        },
+        setStateCallback
+      );
       return this;
     },
 
@@ -132,7 +140,7 @@ export const Radios = Context.withContext(
       let _callCallback = typeof setStateCallback === "function";
 
       if (this._checkRequired({ value: value, event: null, component: this })) {
-        if (typeof this.props.onValidate === 'function') {
+        if (typeof this.props.onValidate === "function") {
           _callCallback = false;
           this._validateOnChange({ value: value, event: null, component: this }, false, setStateCallback);
         } else {
@@ -147,10 +155,10 @@ export const Radios = Context.withContext(
 
       return this;
     },
-    //@@viewOff:overridingMethods
+    //@@viewOff:overriding
 
-    //@@viewOn:componentSpecificHelpers
-    _getInitialValue: function (props) {
+    //@@viewOn:private
+    _getInitialValue: function(props) {
       props = props || this.props;
       var value = null;
 
@@ -167,21 +175,30 @@ export const Radios = Context.withContext(
       let _callCallback = typeof setStateCallback === "function";
 
       if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
-        let result = typeof this.props.onValidate === 'function' ? this.props.onValidate(opt) : null;
+        let result = typeof this.props.onValidate === "function" ? this.props.onValidate(opt) : null;
         if (result) {
-          if (typeof result === 'object') {
-            let selectedIndex = result.value && result.value.findIndex((item) => {
-              return item.value === true;
-            });
+          if (typeof result === "object") {
+            let selectedIndex =
+              result.value &&
+              result.value.findIndex(item => {
+                return item.value === true;
+              });
             if (result.feedback) {
               _callCallback = false;
-              this.setFeedback(result.feedback, result.message, selectedIndex ? this.props.value[selectedIndex].name : null, setStateCallback);
+              this.setFeedback(
+                result.feedback,
+                result.message,
+                selectedIndex ? this.props.value[selectedIndex].name : null,
+                setStateCallback
+              );
             } else {
               _callCallback = false;
               this.setState({ value: opt.value }, setStateCallback);
             }
           } else {
-            this.showError("validateError", null, { context: { event: opt.event, func: this.props.onValidate, result: result } });
+            this.showError("validateError", null, {
+              context: { event: opt.event, func: this.props.onValidate, result: result }
+            });
           }
         }
       }
@@ -195,19 +212,19 @@ export const Radios = Context.withContext(
 
     _onChange(opt, setStateCallback) {
       if (!this.isComputedDisabled() && !this.isReadOnly() && !this.isLoading() && opt.value) {
-        if (typeof this.props.onChange === 'function') {
+        if (typeof this.props.onChange === "function") {
           var result = this._checkRequired(opt.value); // return null || object (error)
 
           let radioName = this._getRadioName(opt);
-          if (result && typeof result === 'object' && result.feedback === 'error') {
+          if (result && typeof result === "object" && result.feedback === "error") {
             //this.setError(result.message, opt.value);
-          } else if (typeof this.props.onValidate === 'function') {
-            result = this.props.onValidate({value: radioName, event: opt.event, component: opt.component});
+          } else if (typeof this.props.onValidate === "function") {
+            result = this.props.onValidate({ value: radioName, event: opt.event, component: opt.component });
           } else {
-            result = this.props.onChange({value: radioName, event: opt.event, component: opt.component});
+            result = this.props.onChange({ value: radioName, event: opt.event, component: opt.component });
           }
 
-          if (result && typeof result === 'object') {
+          if (result && typeof result === "object") {
             this.setFeedback(result.feedback, result.message, radioName, setStateCallback);
           } else {
             this._setValue(opt, setStateCallback);
@@ -220,12 +237,12 @@ export const Radios = Context.withContext(
       return this;
     },
 
-    _setValue(opt, setStateCallback){
+    _setValue(opt, setStateCallback) {
       opt.value = this._getRadioName(opt);
       let result = this._checkRequired(opt.value);
-      if (result && typeof result === 'object' && result.feedback === 'error') {
+      if (result && typeof result === "object" && result.feedback === "error") {
         this.setError(result.message, opt.value, setStateCallback);
-      } else if (typeof this.props.onValidate === 'function') {
+      } else if (typeof this.props.onValidate === "function") {
         result = this.props.onValidate(opt);
         if (typeof result === "object") {
           if (result.feedback) {
@@ -235,11 +252,11 @@ export const Radios = Context.withContext(
           }
         } else {
           this._currentFocus = this._getIndexByName(opt.value);
-          this.setInitial('', opt.value, setStateCallback);
+          this.setInitial("", opt.value, setStateCallback);
         }
       } else {
         this._currentFocus = this._getIndexByName(opt.value);
-        this.setInitial('', opt.value, setStateCallback);
+        this.setInitial("", opt.value, setStateCallback);
       }
       return this;
     },
@@ -249,14 +266,14 @@ export const Radios = Context.withContext(
     },
 
     _getIndexByName(name) {
-      let index = this._itemsRefs.findIndex((item) => {
+      let index = this._itemsRefs.findIndex(item => {
         return item.getName() === name;
       });
       return index;
     },
 
     _getSelectedIndex() {
-      let index = this._itemsRefs.findIndex((item) => {
+      let index = this._itemsRefs.findIndex(item => {
         return !!item.getValue();
       });
       return index;
@@ -266,7 +283,7 @@ export const Radios = Context.withContext(
       let result = true;
       if (this.props.required) {
         if (value) {
-          if (typeof this.props.onChange !== 'function') {
+          if (typeof this.props.onChange !== "function") {
             result = { feedback: "initial", message: "", value: value };
           }
         } else {
@@ -284,15 +301,15 @@ export const Radios = Context.withContext(
       let items = this._itemsRefs;
       this._currentFocus = this._getSelectedIndex();
 
-      let handleKeyDown = (e) => {
+      let handleKeyDown = e => {
         if (e.which === 38 || e.which === 40) {
           e.preventDefault();
         }
-      }
+      };
 
-      let handleKeyUp = (e) => {
+      let handleKeyUp = e => {
         if (e.which === 38 || e.which === 40) {
-          let move = (e) => {
+          let move = e => {
             if (e.which === 38) {
               this._currentFocus = this._currentFocus - 1 < 0 ? items.length - 1 : this._currentFocus - 1;
             } else {
@@ -319,14 +336,14 @@ export const Radios = Context.withContext(
         }
 
         return this;
-      }
-      UU5.Environment.EventListener.addWindowEvent('keydown', this.getId(), handleKeyDown);
-      UU5.Environment.EventListener.addWindowEvent('keyup', this.getId(), handleKeyUp);
+      };
+      UU5.Environment.EventListener.addWindowEvent("keydown", this.getId(), handleKeyDown);
+      UU5.Environment.EventListener.addWindowEvent("keyup", this.getId(), handleKeyUp);
     },
 
     _removeEvent() {
-      UU5.Environment.EventListener.removeWindowEvent('keydown', this.getId());
-      UU5.Environment.EventListener.removeWindowEvent('keyup', this.getId());
+      UU5.Environment.EventListener.removeWindowEvent("keydown", this.getId());
+      UU5.Environment.EventListener.removeWindowEvent("keyup", this.getId());
     },
 
     _onFocus() {
@@ -340,15 +357,17 @@ export const Radios = Context.withContext(
     _getNumberOfColumns() {
       let currentScreenSize = this.getScreenSize();
       let newBsColWidth = this.props.colWidth;
-      if (typeof newBsColWidth === 'string') {
-        let colWidthArray = newBsColWidth.split(' ');
+      if (typeof newBsColWidth === "string") {
+        let colWidthArray = newBsColWidth.split(" ");
         newBsColWidth = {};
         colWidthArray.forEach(colWidth => {
           let match = colWidth.match(this.getDefault().columnRegexp);
           newBsColWidth[match[1]] = parseInt(match[2]);
         });
       }
-      return newBsColWidth && newBsColWidth[currentScreenSize] !== undefined ? Math.round(12 / newBsColWidth[currentScreenSize]) : null;
+      return newBsColWidth && newBsColWidth[currentScreenSize] !== undefined
+        ? Math.round(12 / newBsColWidth[currentScreenSize])
+        : null;
     },
 
     _getCheckbox(key, box, selectedIndex) {
@@ -361,33 +380,35 @@ export const Radios = Context.withContext(
         tabIndex = "-1";
       }
 
-      return <Checkbox
-        size={this.props.size}
-        key={key}
-        value={this.getValue() === checkboxProps.name}
-        label={box.label}
-        onChange={this._onChange}
-        onIcon={box.onIcon || this.props.onIcon || null}
-        offIcon={box.offIcon || this.props.offIcon || null}
-        name={box.name}
-        _radio
-        labelPosition={this.props.labelPosition}
-        disabled={disabled}
-        readOnly={this.isReadOnly()}
-        feedback={this.isLoading() && key === 0 ? "loading" : "initial"}
-        inputAttrs={{
-          onFocus: this._onFocus,
-          onBlur: this._onBlur,
-          tabIndex: tabIndex
-        }}
-        ref_={(checkbox) => {
-          this._itemsRefs.push(checkbox);
-        }}
-        inputWidth={this._getInputWidth()}
-        nestingLevel={this.props.nestingLevel}
-        className={this.getClassName("inner")}
-        bgStyleChecked={this.props.bgStyleChecked}
-      />
+      return (
+        <Checkbox
+          size={this.props.size}
+          key={key}
+          value={this.getValue() === checkboxProps.name}
+          label={box.label}
+          onChange={this._onChange}
+          onIcon={box.onIcon || this.props.onIcon || null}
+          offIcon={box.offIcon || this.props.offIcon || null}
+          name={box.name}
+          _radio
+          labelPosition={this.props.labelPosition}
+          disabled={disabled}
+          readOnly={this.isReadOnly()}
+          feedback={this.isLoading() && key === 0 ? "loading" : "initial"}
+          inputAttrs={{
+            onFocus: this._onFocus,
+            onBlur: this._onBlur,
+            tabIndex: tabIndex
+          }}
+          ref_={checkbox => {
+            this._itemsRefs.push(checkbox);
+          }}
+          inputWidth={this._getInputWidth()}
+          nestingLevel={this.props.nestingLevel}
+          className={this.getClassName("inner")}
+          bgStyleChecked={this.props.bgStyleChecked}
+        />
+      );
     },
 
     _getColumns(amount, selectedIndex) {
@@ -404,12 +425,12 @@ export const Radios = Context.withContext(
     },
 
     _getCheckboxes() {
-      let selectedIndex = this.props.value.findIndex((item) => {
+      let selectedIndex = this.props.value.findIndex(item => {
         return item.name === this.getValue() && !item.disabled;
       });
 
       if (selectedIndex === -1) {
-        selectedIndex = this.props.value.findIndex((item) => {
+        selectedIndex = this.props.value.findIndex(item => {
           return !item.disabled;
         });
       }
@@ -419,12 +440,12 @@ export const Radios = Context.withContext(
         let columns;
         let numberOfColumns = this._getNumberOfColumns();
         columns = this._getColumns(numberOfColumns, selectedIndex);
-        columns.forEach((column) => {
+        columns.forEach(column => {
           result.push(
             <UU5.Bricks.Column colWidth={this.props.colWidth} className={this.getClassName("column")}>
               {column}
             </UU5.Bricks.Column>
-          )
+          );
         });
       } else {
         result = this.props.value.map((box, key) => {
@@ -439,7 +460,7 @@ export const Radios = Context.withContext(
       let attrs = this._getInputAttrs();
 
       if (this.props.inline) {
-        attrs.className += ' ' + this.getClassName().inline;
+        attrs.className += " " + this.getClassName().inline;
       }
 
       if (this.props.bgStyleChecked) {
@@ -452,11 +473,11 @@ export const Radios = Context.withContext(
 
       return attrs;
     },
-    //@@viewOff:componentSpecificHelpers
+    //@@viewOff:private
 
     //@@viewOn:render
-    render () {
-      let inputId = this.getId() + '-input';
+    render() {
+      let inputId = this.getId() + "-input";
 
       return (
         <div {...this._getMainAttrs()}>

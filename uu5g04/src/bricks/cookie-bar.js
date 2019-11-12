@@ -1,32 +1,33 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
-import {Div} from './factory.js';
-import Span from './span.js';
-import Link from './link.js';
-import Button from './button.js';
-import Icon from './icon.js';
+import { Div } from "./factory.js";
+import Span from "./span.js";
+import Link from "./link.js";
+import Button from "./button.js";
+import Icon from "./icon.js";
 
-import './cookie-bar.less';
+import "./cookie-bar.less";
+//@@viewOff:imports
 
 export const CookieBar = createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -41,7 +42,7 @@ export const CookieBar = createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("CookieBar"),
-    nestingLevelList: UU5.Environment.getNestingLevelList('bigBoxCollection', 'box'),
+    nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
       main: ns.css("cookie-bar uu5-common-bg"),
       top: ns.css("cookie-bar-top"),
@@ -50,7 +51,8 @@ export const CookieBar = createReactClass({
       link: ns.css("cookie-bar-link")
     },
     defaults: {
-      content: 'Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use.',
+      content:
+        "Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use.",
       expireDays: 10 * 365.25
     },
     opt: {
@@ -63,8 +65,8 @@ export const CookieBar = createReactClass({
   propTypes: {
     infoText: PropTypes.any,
     infoHref: PropTypes.string,
-    infoTarget: PropTypes.oneOf(['_blank', '_parent', '_top', '_self']),
-    fixed: PropTypes.oneOf(['top', 'bottom']),
+    infoTarget: PropTypes.oneOf(["_blank", "_parent", "_top", "_self"]),
+    fixed: PropTypes.oneOf(["top", "bottom"]),
     onClose: PropTypes.func,
     expireDays: PropTypes.number,
     cookieKey: PropTypes.string,
@@ -77,17 +79,17 @@ export const CookieBar = createReactClass({
     return {
       infoText: null,
       infoHref: null,
-      infoTarget: '_blank',
-      fixed: 'bottom',
+      infoTarget: "_blank",
+      fixed: "bottom",
       onClose: null,
       expireDays: null,
-      cookieKey: 'uu5-cookies',
-      cookieValue: 'yes'
+      cookieKey: "uu5-cookies",
+      cookieValue: "yes"
     };
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   componentWillMount() {
     this.props.expireDays ? this._checkCookies() : this._checkLocalStorageItem();
   },
@@ -95,7 +97,7 @@ export const CookieBar = createReactClass({
   componentWillReceiveProps(nextProps) {
     this.props.expireDays ? this._checkCookies() : this._checkLocalStorageItem();
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   // Interface
 
@@ -104,14 +106,14 @@ export const CookieBar = createReactClass({
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _checkCookies() {
     if (UU5.Common.Tools.getCookie(this.props.cookieKey) === this.props.cookieValue && !this._isAgreed) {
       this._isAgreed = true;
-      this.setState({hidden: true}, this.props.onClose);
+      this.setState({ hidden: true }, this.props.onClose);
     }
     return this;
   },
@@ -119,18 +121,22 @@ export const CookieBar = createReactClass({
   _checkLocalStorageItem() {
     const item = localStorage.getItem(this.props.cookieKey);
     if (item === this.props.cookieValue) {
-      this.setState({hidden: true}, this.props.onClose);
+      this.setState({ hidden: true }, this.props.onClose);
     }
     return this;
   },
 
   _setLocalStorageItem() {
-    localStorage.setItem((this.props.cookieKey), this.props.cookieValue);
+    localStorage.setItem(this.props.cookieKey, this.props.cookieValue);
     this.hide(this.props.onClose);
   },
 
   _confirm() {
-    UU5.Common.Tools.setCookie(this.props.cookieKey, this.props.cookieValue, this.props.expireDays || this.getDefault().expireDays);
+    UU5.Common.Tools.setCookie(
+      this.props.cookieKey,
+      this.props.cookieValue,
+      this.props.expireDays || this.getDefault().expireDays
+    );
     this.hide(this.props.onClose);
   },
 
@@ -147,13 +153,13 @@ export const CookieBar = createReactClass({
   _getButton() {
     return (
       <Button
-        className={this.getClassName('button')}
+        className={this.getClassName("button")}
         bgStyle="transparent"
         colorSchema={this.props.colorSchema !== "black" ? "custom" : null}
         size="s"
         onClick={this.props.expireDays ? this._confirm : this._setLocalStorageItem}
       >
-        <Icon icon="mdi-close"/>
+        <Icon icon="mdi-close" />
       </Button>
     );
   },
@@ -163,12 +169,14 @@ export const CookieBar = createReactClass({
 
     if (this.props.infoText) {
       // href -> linkHref || undefined -> if undefined, default prop of link is set - other way, null is set
-      link = <Link
-        content={this.props.infoText}
-        href={this.props.infoHref || undefined}
-        className={this.getClassName().link}
-        target={this.props.infoTarget}
-      />;
+      link = (
+        <Link
+          content={this.props.infoText}
+          href={this.props.infoHref || undefined}
+          className={this.getClassName().link}
+          target={this.props.infoTarget}
+        />
+      );
     }
 
     return link;
@@ -176,13 +184,13 @@ export const CookieBar = createReactClass({
 
   _getMainProps() {
     var mainProps = this.getMainPropsToPass(["UU5.Common.BaseMixin", "UU5.Common.ElementaryMixin"]);
-    this.props.fixed && (mainProps.className += ' ' + this.getClassName(this.props.fixed));
+    this.props.fixed && (mainProps.className += " " + this.getClassName(this.props.fixed));
 
     mainProps.nestingLevel = this.getNestingLevel();
 
     return mainProps;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {

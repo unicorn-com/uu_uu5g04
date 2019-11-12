@@ -1,0 +1,711 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.BlockLayout.Column props testing checkGrammar=false 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    checkGrammar={false}
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing checkGrammar=true 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    checkGrammar={true}
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing checkHighlight=false 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    checkHighlight={false}
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing checkHighlight=true 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    checkHighlight={true}
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing checkSpaces=false 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    checkSpaces={false}
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing checkSpaces=true 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    checkSpaces={true}
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing className="my-classname" 1`] = `
+<div
+  className="uublocklayout-1mtb9qv my-classname"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing content="This is Content from ContentMixin" 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="This is Content from ContentMixin"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing content=12345 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  12345
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing controlled=false 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing controlled=true 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing default props 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing disabled=false 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing disabled=true 1`] = `
+<div
+  className="uublocklayout-1mtb9qv uu5-common-disabled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing dynamic=false 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing dynamic=true 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing hidden=false 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing hidden=true 1`] = `
+<div
+  className="uublocklayout-1mtb9qv uu5-common-hidden"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing id="myId" 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="myId"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing ignoreHTML=false 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing ignoreHTML=true 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing mainAttrs=undefined 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing name="myName" 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  name="myName"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing nestingLevel="bigBox" 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing nestingLevel="bigBoxCollection" 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing nestingLevel="box" 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing nestingLevel="boxCollection" 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing nestingLevel="container" 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing nestingLevel="inline" 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing nestingLevel="page" 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing nestingLevel="smallBox" 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing nestingLevel="smallBoxCollection" 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing nestingLevel="spa" 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing noIndex=false 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing noIndex=true 1`] = `
+<div
+  className="uublocklayout-1mtb9qv uu5-noindex"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing pureRender=false 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing pureRender=true 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing selected=false 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing selected=true 1`] = `
+<div
+  className="uublocklayout-1mtb9qv uu5-common-selected"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing style="padding:8px; borderRadius: 2px" 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": "2px",
+      "padding": "8px",
+    }
+  }
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing style={"backgroundColor":"red","color":"blue"} 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={
+    Object {
+      "backgroundColor": "red",
+      "color": "blue",
+    }
+  }
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing textAlign="center" 1`] = `
+<div
+  className="uublocklayout-zr7shg"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing textAlign="left" 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing textAlign="right" 1`] = `
+<div
+  className="uublocklayout-xgd146"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing textCorrector=false 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    checkGrammar={false}
+    checkHighlight={false}
+    checkSpaces={false}
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing textCorrector=true 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    checkGrammar={true}
+    checkHighlight={true}
+    checkSpaces={true}
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing tooltip="My Tooltip" 1`] = `
+<div
+  className="uublocklayout-1mtb9qv"
+  id="uuID"
+  style={Object {}}
+  title="My Tooltip"
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing width="200px" 1`] = `
+<div
+  className="uublocklayout-nudcf3"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Column props testing width=200 1`] = `
+<div
+  className="uublocklayout-nudcf3"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;

@@ -1,16 +1,17 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import React from "react";
 import createReactClass from "create-react-class";
 import PropTypes from "prop-types";
@@ -18,6 +19,7 @@ import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./stepper-item.less";
+//@@viewOff:imports
 
 export const StepperItem = createReactClass({
   //@@viewOn:mixins
@@ -61,20 +63,20 @@ export const StepperItem = createReactClass({
       index: 0
     };
   },
-  //@@viewOn:standardComponentLifeCycle
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
-  _handleClick(button,e){
+  //@@viewOn:private
+  _handleClick(button, e) {
     button.findDOMNode().blur();
     if (typeof this.props.onClick === "function") {
-      this.props.onClick({ component: this, event: e, value: this.props.index })
+      this.props.onClick({ component: this, event: e, value: this.props.index });
     }
   },
 
@@ -99,9 +101,21 @@ export const StepperItem = createReactClass({
             </text>
           </mask>
 
-          <circle cx="50%" cy="50%" r="40%" fill="currentColor" strokeWidth="2" mask={ (navigator.userAgent.match("Safari") && !navigator.userAgent.match("Chrome/") ? `url(${location.href.replace(/#.*/, "")}` :`url(` )+ `#${this.getId() + "-svgMaskFilled"})`} />
+          <circle
+            cx="50%"
+            cy="50%"
+            r="40%"
+            fill="currentColor"
+            strokeWidth="2"
+            mask={
+              (navigator.userAgent.match("Safari") && !navigator.userAgent.match("Chrome/")
+                ? `url(${location.href.replace(/#.*/, "")}`
+                : `url(`) + `#${this.getId() + "-svgMaskFilled"})`
+            }
+          />
         </svg>
-      );}
+      );
+    }
     //transparent check with filled background (completed check)
     else if (this.props.topVisitedStep > this.props.index && this.props.currentStep !== this.props.index) {
       return (
@@ -120,11 +134,23 @@ export const StepperItem = createReactClass({
             <rect fill="white" x="0" y="0" width="100%" height="100%" />
             <path fill="black" d="M11,16.5L6.5,12L7.91,10.59L11,13.67L16.59,8.09L18,9.5L11,16.5Z" />
           </mask>
-          <circle cx="50%" cy="50%" r="40%" fill="currentColor" strokeWidth="2" mask={(navigator.userAgent.match("Safari") && !navigator.userAgent.match("Chrome/") ? `url(${location.href.replace(/#.*/, "")}` :`url(` )+ `#${this.getId() + "-svgMask"})`} />
+          <circle
+            cx="50%"
+            cy="50%"
+            r="40%"
+            fill="currentColor"
+            strokeWidth="2"
+            mask={
+              (navigator.userAgent.match("Safari") && !navigator.userAgent.match("Chrome/")
+                ? `url(${location.href.replace(/#.*/, "")}`
+                : `url(`) + `#${this.getId() + "-svgMask"})`
+            }
+          />
         </svg>
       );
     } else {
-      return (  // transparent text with border (not active steps)
+      return (
+        // transparent text with border (not active steps)
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <circle cx="50%" cy="50%" r="40%" stroke="currentColor" strokeWidth="2" fill="transparent" />
           <text
@@ -133,7 +159,6 @@ export const StepperItem = createReactClass({
             y="50%"
             dominantBaseline="middle"
             textAnchor="middle"
-            
             dy={UU5.Common.Tools.isEdge() || UU5.Common.Tools.isIE() ? "0.3em" : "0.05em"}
             fontSize="14"
             fontWeight="bold"
@@ -149,8 +174,8 @@ export const StepperItem = createReactClass({
     mainProps.className += " " + this.getClassName().stepperItemButton;
     return mainProps;
   },
-  
-  //@@viewOff:componentSpecificHelpers
+
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {

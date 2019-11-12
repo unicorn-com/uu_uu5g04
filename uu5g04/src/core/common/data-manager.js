@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -29,7 +29,7 @@ export const DataManager = createReactClass({
     tagName: "UU5.Common.DataManager",
     errors: {
       serverLoad: "Error during %s data from server.",
-      serverUpdate: "Error during %s data on server.",
+      serverUpdate: "Error during %s data on server."
     }
   },
   //@@viewOff:statics
@@ -77,9 +77,8 @@ export const DataManager = createReactClass({
 
   componentDidMount() {
     this.load(this.props.data, false)
-    // promise must have catch, in other way there is written error to console
-      .catch(() => {
-      });
+      // promise must have catch, in other way there is written error to console
+      .catch(() => {});
     // this._startReload();
   },
 
@@ -99,7 +98,7 @@ export const DataManager = createReactClass({
             .then(dtoOut => this._getPromiseCallback(resolve, dtoOut)())
             .catch(dtoOut => {
               this.showError("serverLoad", "loading", { context: { dtoOut } });
-              this._getPromiseCallback(reject, dtoOut)()
+              this._getPromiseCallback(reject, dtoOut)();
             });
         });
       } else {
@@ -122,7 +121,7 @@ export const DataManager = createReactClass({
             .then(dtoOut => this._getPromiseCallback(resolve, dtoOut)())
             .catch(dtoOut => {
               this.showError("serverLoad", "reloading", { context: { dtoOut } });
-              this._getPromiseCallback(reject, dtoOut)()
+              this._getPromiseCallback(reject, dtoOut)();
             });
         });
       } else {
@@ -130,7 +129,7 @@ export const DataManager = createReactClass({
           .then(dtoOut => this._getPromiseCallback(resolve, dtoOut)())
           .catch(dtoOut => {
             this.showError("serverLoad", "reloading", { context: { dtoOut } });
-            this._getPromiseCallback(reject, dtoOut)()
+            this._getPromiseCallback(reject, dtoOut)();
           });
       }
     });
@@ -147,7 +146,9 @@ export const DataManager = createReactClass({
       // this._stopReload();
 
       let [newState, oldData] = this._getUpdatedViewData(newData, pessimistic);
-      this.setState(newState, () => this._updateServer(key, newData, pessimistic, oldData, serverParams, resolve, reject))
+      this.setState(newState, () =>
+        this._updateServer(key, newData, pessimistic, oldData, serverParams, resolve, reject)
+      );
     });
   },
 
@@ -168,27 +169,30 @@ export const DataManager = createReactClass({
       if (typeof call === "function") {
         call(data || null)
           .then(data => {
-            this.isRendered() && this.setState(
-              { viewState: "ready", errorState: null, errorData: null, data },
-              typeof resolve === "function" ? () => resolve(data) : undefined
-            )
+            this.isRendered() &&
+              this.setState(
+                { viewState: "ready", errorState: null, errorData: null, data },
+                typeof resolve === "function" ? () => resolve(data) : undefined
+              );
           })
           .catch(errorData => {
-            this.isRendered() && this.setState(
-              { errorData, viewState: "error", errorState },
-              typeof reject === "function" ? () => reject(errorData) : undefined
-            )
+            this.isRendered() &&
+              this.setState(
+                { errorData, viewState: "error", errorState },
+                typeof reject === "function" ? () => reject(errorData) : undefined
+              );
           });
       }
     });
   },
 
   _getUpdatedViewData(data, pessimistic) {
-    let state, oldData = this.state.data;
+    let state,
+      oldData = this.state.data;
     if (pessimistic) {
       state = { viewState: "update", errorState: null, errorData: null };
     } else {
-      state = { data, errorState: null, errorData: null }
+      state = { data, errorState: null, errorData: null };
     }
     return [state, oldData];
   },
@@ -201,10 +205,11 @@ export const DataManager = createReactClass({
       promise
         .then(dtoOut => {
           // update just client data - data returns from server was not displayed
-          this.isRendered() && this.setState(
-            { viewState: "ready", errorState: null, errorData: null, data: dtoOut },
-            this._getPromiseCallback(resolve, dtoOut)
-          );
+          this.isRendered() &&
+            this.setState(
+              { viewState: "ready", errorState: null, errorData: null, data: dtoOut },
+              this._getPromiseCallback(resolve, dtoOut)
+            );
         })
         .catch(errorData => {
           this.showError("serverLoad", "updating", { context: { dtoOut: errorData } });
@@ -217,10 +222,8 @@ export const DataManager = createReactClass({
         .catch(errorData => {
           this.showError("serverLoad", "updating", { context: { dtoOut: errorData } });
           let newState = { viewState: "error", errorState: "update", errorData };
-          this.isRendered() && this.setState(
-            { ...newState, errorData, data: oldData },
-            this._getPromiseCallback(reject, errorData)
-          );
+          this.isRendered() &&
+            this.setState({ ...newState, errorData, data: oldData }, this._getPromiseCallback(reject, errorData));
         });
     }
   },
@@ -239,7 +242,7 @@ export const DataManager = createReactClass({
     return () => {
       // this._startReload();
       typeof callback === "function" && callback(data);
-    }
+    };
   },
 
   // _startReload() {

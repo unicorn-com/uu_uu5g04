@@ -1,36 +1,34 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "../forms-ns.js";
 
-import Message from './message.js';
+import Message from "./message.js";
 
-import './input-wrapper.less';
+import "./input-wrapper.less";
+//@@viewOff:imports
 
-const INITIAL_FEEDBACK = 'initial';
+const INITIAL_FEEDBACK = "initial";
 
 export const InputWrapper = createReactClass({
-
   //@@viewOn:mixins
-  mixins: [
-    UU5.Common.BaseMixin,
-    UU5.Common.PureRenderMixin
-  ],
+  mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -53,13 +51,15 @@ export const InputWrapper = createReactClass({
     required: PropTypes.bool,
     feedback: PropTypes.string,
     message: PropTypes.any,
-    buttons: PropTypes.arrayOf(PropTypes.shape({
-      icon: PropTypes.string,
-      disabled: PropTypes.bool,
-      onClick: PropTypes.func,
-      pressed: PropTypes.bool,
-      size: PropTypes.string
-    })),
+    buttons: PropTypes.arrayOf(
+      PropTypes.shape({
+        icon: PropTypes.string,
+        disabled: PropTypes.bool,
+        onClick: PropTypes.func,
+        pressed: PropTypes.bool,
+        size: PropTypes.string
+      })
+    ),
     slider: PropTypes.bool,
     datetimepicker: PropTypes.bool,
     daterangepicker: PropTypes.bool
@@ -67,10 +67,10 @@ export const InputWrapper = createReactClass({
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function () {
+  getDefaultProps: function() {
     return {
       required: false,
-      feedback: 'initial',
+      feedback: "initial",
       message: null,
       buttons: null,
       slider: false,
@@ -80,23 +80,28 @@ export const InputWrapper = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   shouldComponentUpdate_(newProps, newState) {
     let result = false;
-    if (newProps.children != this.props.children || newProps.required != this.props.required || newProps.feedback != this.props.feedback || newProps.message != this.props.message) {
+    if (
+      newProps.children != this.props.children ||
+      newProps.required != this.props.required ||
+      newProps.feedback != this.props.feedback ||
+      newProps.message != this.props.message
+    ) {
       result = true;
     }
     return result;
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _getMainAttrs() {
     let mainAttrs = this.getMainAttrs();
 
@@ -108,37 +113,32 @@ export const InputWrapper = createReactClass({
   },
 
   _getButtons() {
-    return (this.props.buttons && this.props.buttons.length > 0) ? this.props.buttons.map((button, i) => {
-      let className = this.getClassName("wrapper");
-      this.props.datetimepicker && i === 0 && (className = " " + this.getClassName("paddingRight"));
-      return (
-        <span key={i} className={className}>
-          <UU5.Bricks.Button
-            {...button}
-            className={this.getClassName("inputButton")}
-            icon={null}
-          >
-            <UU5.Bricks.Icon
-              icon={button.icon}
-              className={this.getClassName("inputButtonIcon")}
-            />
-          </UU5.Bricks.Button>
-        </span>
-      );
-    }) : null;
+    return this.props.buttons && this.props.buttons.length > 0
+      ? this.props.buttons.map((button, i) => {
+          let className = this.getClassName("wrapper");
+          this.props.datetimepicker && i === 0 && (className = " " + this.getClassName("paddingRight"));
+          return (
+            <span key={i} className={className}>
+              <UU5.Bricks.Button {...button} className={this.getClassName("inputButton")} icon={null}>
+                <UU5.Bricks.Icon icon={button.icon} className={this.getClassName("inputButtonIcon")} />
+              </UU5.Bricks.Button>
+            </span>
+          );
+        })
+      : null;
   },
 
   _getFeedbackColorSchema() {
     let result;
     switch (this.props.feedback) {
-      case 'warning':
-        result = 'warning';
+      case "warning":
+        result = "warning";
         break;
-      case 'error':
-        result = 'danger';
+      case "error":
+        result = "danger";
         break;
-      case 'success':
-        result = 'success';
+      case "success":
+        result = "success";
         break;
     }
     return result;
@@ -148,53 +148,61 @@ export const InputWrapper = createReactClass({
     let result;
 
     let messageClass;
-    if(this.props.feedback === 'initial') {
+    if (this.props.feedback === "initial") {
       messageClass = this.getClassName("feedbackInitial");
     }
 
-    let message = !this.props.readonly && !this.props.disabled && this.props.message && <Message colorSchema={this._getFeedbackColorSchema()} content={this.props.message} className={messageClass} />;
+    let message = !this.props.readonly && !this.props.disabled && this.props.message && (
+      <Message colorSchema={this._getFeedbackColorSchema()} content={this.props.message} className={messageClass} />
+    );
 
     if (this.props.datetimepicker || this.props.daterangepicker) {
       let children = React.Children.toArray(this.props.children);
       let buttons = this._getButtons();
-      result = <div {...this._getMainAttrs()}>
-        <div className={this.getClassName("cover")}>
-          {children[0]}
-          {buttons && buttons[0]}
-          {children.slice(1)}
-          {buttons && buttons[1]}
+      result = (
+        <div {...this._getMainAttrs()}>
+          <div className={this.getClassName("cover")}>
+            {children[0]}
+            {buttons && buttons[0]}
+            {children.slice(1)}
+            {buttons && buttons[1]}
+          </div>
+          {message}
         </div>
-        {message}
-      </div>;
+      );
     } else if (this.props.buttons && this.props.buttons.length > 0) {
-      result = <div {...this._getMainAttrs()}>
-        <div className={this.getClassName("cover")}>
-          {React.Children.toArray(this.props.children)}
-          {this._getButtons()}
+      result = (
+        <div {...this._getMainAttrs()}>
+          <div className={this.getClassName("cover")}>
+            {React.Children.toArray(this.props.children)}
+            {this._getButtons()}
+          </div>
+          {message}
         </div>
-        {message}
-      </div>;
+      );
     } else if (this.props.slider) {
-      result = <div {...this._getMainAttrs()}>
-        <div className={this.getClassName("cover")}>
-          {React.Children.toArray(this.props.children)}
+      result = (
+        <div {...this._getMainAttrs()}>
+          <div className={this.getClassName("cover")}>{React.Children.toArray(this.props.children)}</div>
+          {message}
         </div>
-        {message}
-      </div>;
+      );
     } else {
-      result = <div {...this._getMainAttrs()}>
-        {React.Children.toArray(this.props.children)}
-        {message}
-      </div>
+      result = (
+        <div {...this._getMainAttrs()}>
+          {React.Children.toArray(this.props.children)}
+          {message}
+        </div>
+      );
     }
 
     return result;
   },
 
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
-  render: function () {
+  render: function() {
     return this._getRenderResult();
   }
   //@@viewOn:render

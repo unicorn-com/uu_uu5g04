@@ -1,31 +1,32 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 const ClassNames = UU5.Common.ClassNames;
 
-import Icon from './icon.js';
-import Link from './link.js';
-import Button from './button.js';
+import Icon from "./icon.js";
+import Link from "./link.js";
+import Button from "./button.js";
 
-import './pagination.less';
+import "./pagination.less";
+//@@viewOff:imports
 
 export const Pagination = createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -39,7 +40,7 @@ export const Pagination = createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("Pagination"),
-    nestingLevelList: UU5.Environment.getNestingLevelList('bigBoxCollection', 'smallBox'),
+    nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "smallBox"),
     classNames: {
       main: ns.css("pagination"),
       item: ns.css("pagination-item"),
@@ -50,7 +51,7 @@ export const Pagination = createReactClass({
       inactiveButton: ns.css("pagination-button-inactive"),
       activeButton: ns.css("pagination-button-active"),
       navButton: ns.css("pagination-button-nav"),
-      disabledItem: 'disabled',
+      disabledItem: "disabled",
       background: ns.css("pagination-background"),
       label: ns.css("pagination-label"),
       dots: ns.css("pagination-dots"),
@@ -75,10 +76,10 @@ export const Pagination = createReactClass({
     firstLabel: PropTypes.node,
     lastIcon: PropTypes.string,
     lastLabel: PropTypes.node,
-    size: PropTypes.oneOf(['s', 'm', 'l', 'xl']),
+    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
     onChange: PropTypes.func,
     onChanged: PropTypes.func,
-    bgStyle: PropTypes.oneOf(['filled', 'outline', 'transparent', 'underline']),
+    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
     colorSchemaInactive: PropTypes.string,
     borderRadius: PropTypes.string,
     ellipsisIcon: PropTypes.string
@@ -91,15 +92,15 @@ export const Pagination = createReactClass({
       items: [1, 2, 3, 4, 5],
       activeIndex: 0,
       range: 5,
-      prevIcon: 'mdi-chevron-left',
+      prevIcon: "mdi-chevron-left",
       prevLabel: null,
-      nextIcon: 'mdi-chevron-right',
+      nextIcon: "mdi-chevron-right",
       nextLabel: null,
       firstIcon: null,
       firstLabel: null,
       lastIcon: null,
       lastLabel: null,
-      size: 'm',
+      size: "m",
       onChange: null,
       onChanged: null,
       bgStyle: null,
@@ -110,21 +111,20 @@ export const Pagination = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
-      activeIndex: parseInt(this.props.activeIndex),
+      activeIndex: parseInt(this.props.activeIndex)
     };
   },
 
-
-  componentWillReceiveProps(nextProps){
+  componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
       this.setState({ activeIndex: nextProps.activeIndex });
     }
     return this;
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   getItemsLength() {
@@ -144,7 +144,7 @@ export const Pagination = createReactClass({
 
   increaseActiveIndex(setStateCallback) {
     var pagination = this;
-    this.setState(function (state) {
+    this.setState(function(state) {
       var newState = null;
       if (pagination.getItemsLength() - 1 > state.activeIndex) {
         newState = { activeIndex: state.activeIndex + 1 };
@@ -155,7 +155,7 @@ export const Pagination = createReactClass({
   },
 
   decreaseActiveIndex(setStateCallback) {
-    this.setState(function (state) {
+    this.setState(function(state) {
       var newState = null;
       if (0 < state.activeIndex) {
         newState = { activeIndex: state.activeIndex - 1 };
@@ -168,9 +168,9 @@ export const Pagination = createReactClass({
   onChangeDefault(component, newActive, event) {
     event.preventDefault();
     var onChanged;
-    if (typeof this.props.onChanged === 'function') {
+    if (typeof this.props.onChanged === "function") {
       var pagination = this;
-      onChanged = function () {
+      onChanged = function() {
         pagination.props.onChanged(this, this.getActiveIndex(), newActive, event);
       };
     }
@@ -187,14 +187,14 @@ export const Pagination = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _getMainAttrs() {
     var mainAttrs = this.getMainAttrs();
-    mainAttrs.className += ' ' + this.getClassName().size + this.props.size;
-    this.props.background ? mainAttrs.className += ' ' + this.getClassName().background : null;
+    mainAttrs.className += " " + this.getClassName().size + this.props.size;
+    this.props.background ? (mainAttrs.className += " " + this.getClassName().background) : null;
     return mainAttrs;
   },
 
@@ -203,12 +203,12 @@ export const Pagination = createReactClass({
     var rangeArray = [start];
 
     while (start + step <= end) {
-      rangeArray.push(start += step);
+      rangeArray.push((start += step));
     }
 
     return rangeArray;
   },
-  _getPropRange(){
+  _getPropRange() {
     return this.props.range + 2;
   },
   // return [] of index from props.items
@@ -219,7 +219,7 @@ export const Pagination = createReactClass({
 
     let countBefore = step;
     let countAfter = step;
-    if ( range % 2 === 0 ) {
+    if (range % 2 === 0) {
       countBefore--;
     }
 
@@ -232,9 +232,9 @@ export const Pagination = createReactClass({
     // check if we are in range of items
     if (end - start + 1 < range) {
       let delta = range - (end - start + 1);
-      if ( start === minIndex ) {
+      if (start === minIndex) {
         end = Math.min(end + delta, maxIndex);
-      } else if ( end === maxIndex ) {
+      } else if (end === maxIndex) {
         start = Math.max(minIndex, start - delta);
       }
     }
@@ -243,7 +243,7 @@ export const Pagination = createReactClass({
   },
 
   _onChange(newActive, link, event) {
-    if (typeof this.props.onChange === 'function') {
+    if (typeof this.props.onChange === "function") {
       this.props.onChange(this, newActive, event);
     } else {
       this.onChangeDefault(this, newActive, event);
@@ -253,15 +253,15 @@ export const Pagination = createReactClass({
 
   _getItemValue(value) {
     var newValue = null;
-    var label = this.props[value + 'Label'];
-    var icon = this.props[value + 'Icon'];
+    var label = this.props[value + "Label"];
+    var icon = this.props[value + "Icon"];
 
     if (label) {
       // if array of nodes -> set keys
       newValue = Array.isArray(label) ? React.Children.toArray(label) : label;
       // newValue = <span className={this.getClassName().label}>{Array.isArray(label) ? React.Children.toArray(label) : label}</span>;
     } else if (icon) {
-      newValue = <Icon icon={icon} />
+      newValue = <Icon icon={icon} />;
     }
 
     return newValue;
@@ -285,11 +285,11 @@ export const Pagination = createReactClass({
     }
 
     if (i === this.getActiveIndex()) {
-      liAttrs.className += ' ' + this.getClassName().active;
-      linkAttrs.className += ' ' + this.getClassName().activeButton;
+      liAttrs.className += " " + this.getClassName().active;
+      linkAttrs.className += " " + this.getClassName().activeButton;
       linkAttrs.bgStyle = this.props.bgStyle || "filled";
     } else {
-      linkAttrs.className += ' ' + this.getClassName().inactiveButton;
+      linkAttrs.className += " " + this.getClassName().inactiveButton;
       linkAttrs.colorSchema = this.props.colorSchemaInactive;
       linkAttrs.onClick = this._onChange.bind(null, i);
     }
@@ -304,7 +304,7 @@ export const Pagination = createReactClass({
   _createNavItem(key, disabled, index) {
     let liAttrs = {
       key: key,
-      className: this.getClassName().item + ' ' + this.getClassName().nav + ' ' + this.getClassName().nav + '-' + key
+      className: this.getClassName().item + " " + this.getClassName().nav + " " + this.getClassName().nav + "-" + key
     };
 
     let linkAttrs = {
@@ -317,8 +317,8 @@ export const Pagination = createReactClass({
     };
 
     if (disabled) {
-      liAttrs.className += ' ' + this.getClassName().disabledItem;
-      linkAttrs.href = '';
+      liAttrs.className += " " + this.getClassName().disabledItem;
+      linkAttrs.href = "";
     } else {
       linkAttrs.onClick = this._onChange.bind(null, index === undefined ? key : index);
     }
@@ -331,12 +331,9 @@ export const Pagination = createReactClass({
       linkAttrs.bgStyle = "transparent";
     }
 
-
     return (
       <li {...liAttrs}>
-        <Button {...linkAttrs}>
-          {this._getItemValue(key)}
-        </Button>
+        <Button {...linkAttrs}>{this._getItemValue(key)}</Button>
       </li>
     );
   },
@@ -345,13 +342,16 @@ export const Pagination = createReactClass({
 
     let range = this._getRange();
 
-    let items = this.getItemsLength() > 0 ? range.map(function (i) {
-      return pagination._createItem(i, pagination.props.items[i]);
-    }) : null;
+    let items =
+      this.getItemsLength() > 0
+        ? range.map(function(i) {
+            return pagination._createItem(i, pagination.props.items[i]);
+          })
+        : null;
 
     if (this.getItemsLength() > this._getPropRange()) {
       let dotsRight = false;
-      if (Math.ceil((this._getPropRange() - 1) / 2 + this.getActiveIndex()) < (this.getItemsLength() - 1)) {
+      if (Math.ceil((this._getPropRange() - 1) / 2 + this.getActiveIndex()) < this.getItemsLength() - 1) {
         dotsRight = true;
       }
       let dotsLeft = false;
@@ -364,9 +364,11 @@ export const Pagination = createReactClass({
         if (this.props.ellipsisIcon !== "mdi-dots-horizontal") {
           dotsClass += " " + this.getClassName("customDots");
         }
-        items[0] = (<li key="dotsLeft" className={this.getClassName().item}><UU5.Bricks.Icon icon={this.props.ellipsisIcon}
-                                                                                className={dotsClass} />
-        </li>);
+        items[0] = (
+          <li key="dotsLeft" className={this.getClassName().item}>
+            <UU5.Bricks.Icon icon={this.props.ellipsisIcon} className={dotsClass} />
+          </li>
+        );
       }
 
       if (dotsRight) {
@@ -374,36 +376,39 @@ export const Pagination = createReactClass({
         if (this.props.ellipsisIcon !== "mdi-dots-horizontal") {
           dotsClass += " " + this.getClassName("customDots");
         }
-        items[items.length - 1] = (<li key="dotsRight" className={this.getClassName().item}><UU5.Bricks.Icon icon={this.props.ellipsisIcon}
-                                                                             className={dotsClass} />
-        </li>);
+        items[items.length - 1] = (
+          <li key="dotsRight" className={this.getClassName().item}>
+            <UU5.Bricks.Icon icon={this.props.ellipsisIcon} className={dotsClass} />
+          </li>
+        );
       }
 
       let prevDisabled = this.getActiveIndex() === 0;
       let nextDisabled = this.getActiveIndex() === this.getItemsLength() - 1;
 
-      items.unshift(this._createNavItem('prev', prevDisabled));
-      items.push(this._createNavItem('next', nextDisabled));
+      items.unshift(this._createNavItem("prev", prevDisabled));
+      items.push(this._createNavItem("next", nextDisabled));
 
-      (this.props.firstIcon || this.props.firstLabel) && items.unshift(this._createNavItem('first', prevDisabled, 0));
-      (this.props.lastIcon || this.props.lastLabel) && items.push(this._createNavItem('last', nextDisabled, this.getItemsLength() - 1));
+      (this.props.firstIcon || this.props.firstLabel) && items.unshift(this._createNavItem("first", prevDisabled, 0));
+      (this.props.lastIcon || this.props.lastLabel) &&
+        items.push(this._createNavItem("last", nextDisabled, this.getItemsLength() - 1));
     }
 
     return items;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
     var mainAttrs = this._getMainAttrs();
     var items = this._getItems();
 
-    return (
-      items && this.props.range ? <ul {...mainAttrs}>
+    return items && this.props.range ? (
+      <ul {...mainAttrs}>
         {items}
         {this.getDisabledCover()}
-      </ul> : null
-    );
+      </ul>
+    ) : null;
   }
   //@@viewOff:render
 });

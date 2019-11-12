@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -30,14 +30,13 @@ const CONFIG = {
     },
     target: {
       values: ["_blank", "_parent", "_top", "_self"]
-    },
-
+    }
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
+    }
   }
 };
 
@@ -57,20 +56,20 @@ let origLoadLibrary = UU5.Common.Tools.loadLibrary;
 beforeEach(() => {
   // mock, which data should be returned from the server
   let response = {
-    "id": "5ad8c6042a8c4d00051c8201",
-    "code": "UU5.Common",
-    "name": "uu_uu5g04",
-    "vendor": "UU",
-    "dependencies": {},
-    "version": "1.11.0",
-    "source": "https://cdn.plus4u.net/uu-uu5g04/1.11.0/uu5g04.min.js",
-    "doc": "https://uuos9.plus4u.net/uu-dockitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book",
-    "awid": "fe96c133c895434bbd4d5b24831483f3",
-    "sys": {"cts": "2018-04-19T16:38:28.917Z", "mts": "2018-04-19T16:38:28.917Z", "rev": 0},
-    "uuAppErrorMap": {}
+    id: "5ad8c6042a8c4d00051c8201",
+    code: "UU5.Common",
+    name: "uu_uu5g04",
+    vendor: "UU",
+    dependencies: {},
+    version: "1.11.0",
+    source: "https://cdn.plus4u.net/uu-uu5g04/1.11.0/uu5g04.min.js",
+    doc: "https://uuos9.plus4u.net/uu-dockitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book",
+    awid: "fe96c133c895434bbd4d5b24831483f3",
+    sys: { cts: "2018-04-19T16:38:28.917Z", mts: "2018-04-19T16:38:28.917Z", rev: 0 },
+    uuAppErrorMap: {}
   };
 
-  UU5.Common.Tools.loadLibrary = function (libName, callback) {
+  UU5.Common.Tools.loadLibrary = function(libName, callback) {
     setTimeout(() => callback(response), 10);
   };
 });
@@ -78,105 +77,93 @@ afterEach(() => {
   UU5.Common.Tools.loadLibrary = origLoadLibrary;
 });
 
-
 describe(`UU5.Common.Help component props testing`, () => {
-
-  it('test01 - default props', () => {
+  it("test01 - default props", () => {
     jest.useFakeTimers();
-    const wrapper = shallow(
-      <UU5.Common.Help id={"helpID01"}/>
-    );
+    const wrapper = shallow(<UU5.Common.Help id={"helpID01"} />);
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.html()).toMatchSnapshot();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('test02 - props tagName', () => {
+  it("test02 - props tagName", () => {
     //respons for UU5.Bricks.Button component
     const responseBrickButton = {
-      "id": "5ad8c60e2a8c4d00051c8202",
-      "code": "UU5.Bricks",
-      "name": "uu_uu5g04-bricks",
-      "vendor": "UU",
-      "dependencies": {"uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.11.0/uu5g04.min.js"},
-      "version": "1.11.0",
-      "source": "https://cdn.plus4u.net/uu-uu5g04/1.11.0/uu5g04-bricks.min.js",
-      "doc": "https://uuos9.plus4u.net/uu-dockitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book",
-      "awid": "fe96c133c895434bbd4d5b24831483f3",
-      "sys": {"cts": "2018-04-19T16:38:38.136Z", "mts": "2018-04-19T16:38:38.136Z", "rev": 0},
-      "uuAppErrorMap": {}
+      id: "5ad8c60e2a8c4d00051c8202",
+      code: "UU5.Bricks",
+      name: "uu_uu5g04-bricks",
+      vendor: "UU",
+      dependencies: { uu5g04: "https://cdn.plus4u.net/uu-uu5g04/1.11.0/uu5g04.min.js" },
+      version: "1.11.0",
+      source: "https://cdn.plus4u.net/uu-uu5g04/1.11.0/uu5g04-bricks.min.js",
+      doc: "https://uuos9.plus4u.net/uu-dockitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book",
+      awid: "fe96c133c895434bbd4d5b24831483f3",
+      sys: { cts: "2018-04-19T16:38:38.136Z", mts: "2018-04-19T16:38:38.136Z", rev: 0 },
+      uuAppErrorMap: {}
     };
     //mock of loadLibrary
-    UU5.Common.Tools.loadLibrary = function (libName, callback) {
+    UU5.Common.Tools.loadLibrary = function(libName, callback) {
       setTimeout(() => callback(responseBrickButton), 10);
     };
     jest.useFakeTimers();
-    const wrapper = shallow(
-      <UU5.Common.Help id={"helpID01"}/>
-    );
+    const wrapper = shallow(<UU5.Common.Help id={"helpID01"} />);
     //Check default value of tagName
     expect(wrapper.instance().props.tagName).toEqual("UU5.Common.Help");
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.html()).toMatchSnapshot();
-    wrapper.setProps({tagName: "UU5.Bricks.Button"});
+    wrapper.setProps({ tagName: "UU5.Bricks.Button" });
     jest.runOnlyPendingTimers();
     wrapper.update();
-    expect(wrapper.instance().props.tagName).toEqual("UU5.Bricks.Button")
+    expect(wrapper.instance().props.tagName).toEqual("UU5.Bricks.Button");
     expect(wrapper.html()).toMatchSnapshot();
     expect(wrapper).toMatchSnapshot();
     //return originaly implementation
     UU5.Common.Tools.loadLibrary = origLoadLibrary;
   });
 
-  it('test03 - target props', () => {
+  it("test03 - target props", () => {
     jest.useFakeTimers();
-    const wrapper = shallow(
-      <UU5.Common.Help id={"helpID01"}/>
-    );
+    const wrapper = shallow(<UU5.Common.Help id={"helpID01"} />);
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.target).toMatch(/blank/);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.html()).toMatchSnapshot();
-    wrapper.setProps({target: "_parent"});
+    wrapper.setProps({ target: "_parent" });
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.target).toMatch(/parent/);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.html()).toMatchSnapshot();
-    wrapper.setProps({target: "_top"});
+    wrapper.setProps({ target: "_top" });
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.target).toMatch(/top/);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.html()).toMatchSnapshot();
-    wrapper.setProps({target: "_self"});
+    wrapper.setProps({ target: "_self" });
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.target).toMatch(/self/);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.html()).toMatchSnapshot();
   });
-
 });
 
 describe(`UU5.Common.Help BaseMixin props testing`, () => {
-
-  it('test01 - props id', () => {
+  it("test01 - props id", () => {
     jest.useFakeTimers();
-    const wrapper = shallow(
-      <UU5.Common.Help id={"helpID01"}/>
-    );
+    const wrapper = shallow(<UU5.Common.Help id={"helpID01"} />);
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.id).toMatch(/helpID01/);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.html()).toMatchSnapshot();
     //Here we set new props
-    wrapper.setProps({id: "helpID02"});
+    wrapper.setProps({ id: "helpID02" });
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.id).toMatch(/helpID02/);
@@ -184,11 +171,9 @@ describe(`UU5.Common.Help BaseMixin props testing`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('test02 - props name', () => {
+  it("test02 - props name", () => {
     jest.useFakeTimers();
-    const wrapper = shallow(
-      <UU5.Common.Help id={"helpID01"}/>
-    );
+    const wrapper = shallow(<UU5.Common.Help id={"helpID01"} />);
     //Check default value
     jest.runOnlyPendingTimers();
     wrapper.update();
@@ -196,7 +181,7 @@ describe(`UU5.Common.Help BaseMixin props testing`, () => {
     expect(wrapper.html()).toMatchSnapshot();
     expect(wrapper).toMatchSnapshot();
     //Here we set new props
-    wrapper.setProps({name: "uu5-common-help-my-name"});
+    wrapper.setProps({ name: "uu5-common-help-my-name" });
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.name).toMatch(/uu5-common-help-my-name/);
@@ -204,17 +189,15 @@ describe(`UU5.Common.Help BaseMixin props testing`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('test03 - props tooltip', () => {
+  it("test03 - props tooltip", () => {
     jest.useFakeTimers();
-    const wrapper = shallow(
-      <UU5.Common.Help id={"helpID01"}/>
-    );
+    const wrapper = shallow(<UU5.Common.Help id={"helpID01"} />);
     //Check default value
     jest.runOnlyPendingTimers();
     expect(wrapper.instance().props.tooltip).toBeNull();
     expect(wrapper).toMatchSnapshot();
     //Here we set new props
-    wrapper.setProps({name: "This is tooltip of common.help component."});
+    wrapper.setProps({ name: "This is tooltip of common.help component." });
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.name).toMatch(/This is tooltip of common.help component./);
@@ -222,11 +205,9 @@ describe(`UU5.Common.Help BaseMixin props testing`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('test04 - props className', () => {
+  it("test04 - props className", () => {
     jest.useFakeTimers();
-    const wrapper = shallow(
-      <UU5.Common.Help id={"helpID01"}/>
-    );
+    const wrapper = shallow(<UU5.Common.Help id={"helpID01"} />);
     jest.runOnlyPendingTimers();
     //Check default value of tagName
     wrapper.update();
@@ -235,7 +216,7 @@ describe(`UU5.Common.Help BaseMixin props testing`, () => {
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.html()).toMatchSnapshot();
     //Here we set new props
-    wrapper.setProps({className: "MyCommonHelpClassName"});
+    wrapper.setProps({ className: "MyCommonHelpClassName" });
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.className).toMatch(/MyCommonHelpClassName/);
@@ -243,11 +224,9 @@ describe(`UU5.Common.Help BaseMixin props testing`, () => {
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  it('test05 - props style', () => {
+  it("test05 - props style", () => {
     jest.useFakeTimers();
-    const wrapper = shallow(
-      <UU5.Common.Help id={"helpID01"}/>
-    );
+    const wrapper = shallow(<UU5.Common.Help id={"helpID01"} />);
     jest.runOnlyPendingTimers();
     //Check default value of tagName
     wrapper.update();
@@ -255,7 +234,7 @@ describe(`UU5.Common.Help BaseMixin props testing`, () => {
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.html()).toMatchSnapshot();
     //Here we set new props
-    wrapper.setProps({style: "padding:8px; borderRadius: 2px"});
+    wrapper.setProps({ style: "padding:8px; borderRadius: 2px" });
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.style).toMatch(/padding:8px; borderRadius: 2px/);
@@ -263,11 +242,9 @@ describe(`UU5.Common.Help BaseMixin props testing`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('test06 - props mainAttrs', () => {
+  it("test06 - props mainAttrs", () => {
     jest.useFakeTimers();
-    const wrapper = shallow(
-      <UU5.Common.Help id={"helpID01"}/>
-    );
+    const wrapper = shallow(<UU5.Common.Help id={"helpID01"} />);
     jest.runOnlyPendingTimers();
     wrapper.update();
     //Check default value of tagName
@@ -275,7 +252,7 @@ describe(`UU5.Common.Help BaseMixin props testing`, () => {
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.html()).toMatchSnapshot();
     //Here we set new props
-    wrapper.setProps({mainAttrs: {style: {backgroundColor: "red", color: "blue"}}});
+    wrapper.setProps({ mainAttrs: { style: { backgroundColor: "red", color: "blue" } } });
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.mainAttrs).not.toBeNull();
@@ -284,11 +261,9 @@ describe(`UU5.Common.Help BaseMixin props testing`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('test07 - props noindex', () => {
+  it("test07 - props noindex", () => {
     jest.useFakeTimers();
-    const wrapper = shallow(
-      <UU5.Common.Help id={"helpID01"}/>
-    );
+    const wrapper = shallow(<UU5.Common.Help id={"helpID01"} />);
     jest.runOnlyPendingTimers();
     wrapper.update();
     //Check default value
@@ -296,30 +271,26 @@ describe(`UU5.Common.Help BaseMixin props testing`, () => {
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.html()).toMatchSnapshot();
     //Here we set new props
-    wrapper.setProps({noIndex: true});
+    wrapper.setProps({ noIndex: true });
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.noIndex).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.html()).toMatchSnapshot();
   });
-
 });
 
 describe(`UU5.Common.Help ElementaryMixin props testing`, () => {
-
-  it('test01 - props hidden', () => {
+  it("test01 - props hidden", () => {
     jest.useFakeTimers();
-    const wrapper = shallow(
-      <UU5.Common.Help id={"helpID01"}/>
-    );
+    const wrapper = shallow(<UU5.Common.Help id={"helpID01"} />);
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.hidden).toBeFalsy();
     expect(wrapper.instance().state.hidden).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.html()).toMatchSnapshot();
-    wrapper.setProps({hidden: true});
+    wrapper.setProps({ hidden: true });
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.hidden).toBeTruthy();
@@ -328,18 +299,16 @@ describe(`UU5.Common.Help ElementaryMixin props testing`, () => {
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  it('test02 - props disabled', () => {
+  it("test02 - props disabled", () => {
     jest.useFakeTimers();
-    const wrapper = shallow(
-      <UU5.Common.Help id={"helpID01"}/>
-    );
+    const wrapper = shallow(<UU5.Common.Help id={"helpID01"} />);
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.disabled).toBeFalsy();
     expect(wrapper.instance().state.disabled).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.html()).toMatchSnapshot();
-    wrapper.setProps({disabled: true});
+    wrapper.setProps({ disabled: true });
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.disabled).toBeTruthy();
@@ -348,19 +317,16 @@ describe(`UU5.Common.Help ElementaryMixin props testing`, () => {
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-
-  it('test03 - props selected', () => {
+  it("test03 - props selected", () => {
     jest.useFakeTimers();
-    const wrapper = shallow(
-      <UU5.Common.Help id={"helpID01"}/>
-    );
+    const wrapper = shallow(<UU5.Common.Help id={"helpID01"} />);
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.selected).toBeFalsy();
     expect(wrapper.instance().state.selected).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.html()).toMatchSnapshot();
-    wrapper.setProps({selected: true});
+    wrapper.setProps({ selected: true });
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.selected).toBeTruthy();
@@ -369,37 +335,31 @@ describe(`UU5.Common.Help ElementaryMixin props testing`, () => {
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  it('test04 - props controlled', () => {
+  it("test04 - props controlled", () => {
     jest.useFakeTimers();
-    const wrapper = shallow(
-      <UU5.Common.Help id={"helpID01"}/>
-    );
+    const wrapper = shallow(<UU5.Common.Help id={"helpID01"} />);
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.html()).toMatchSnapshot();
-    wrapper.setProps({controlled: false});
+    wrapper.setProps({ controlled: false });
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.html()).toMatchSnapshot();
   });
-
 });
 
 describe(`UU5.Common.Help ContentMixin props testing`, () => {
-
-  it('test01 - props content', () => {
+  it("test01 - props content", () => {
     jest.useFakeTimers();
-    const wrapper = shallow(
-      <UU5.Common.Help id={"helpID01"}/>
-    );
+    const wrapper = shallow(<UU5.Common.Help id={"helpID01"} />);
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.content).toBeNull();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.html()).toMatchSnapshot();
-    wrapper.setProps({content: "Content String"});
+    wrapper.setProps({ content: "Content String" });
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.content).toMatch(/Content String/);
@@ -407,20 +367,15 @@ describe(`UU5.Common.Help ContentMixin props testing`, () => {
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  it('test02 - props ignoreInnerHTML', () => {
+  it("test02 - props ignoreInnerHTML", () => {
     jest.useFakeTimers();
-    const wrapper = shallow(
-      <UU5.Common.Help
-        id={"helpID01"}
-        content={"<UU5.Bricks.Icon />"}
-      />
-    );
+    const wrapper = shallow(<UU5.Common.Help id={"helpID01"} content={"<UU5.Bricks.Icon />"} />);
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.ignoreInnerHTML).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.html()).toMatchSnapshot();
-    wrapper.setProps({ignoreInnerHTML: true});
+    wrapper.setProps({ ignoreInnerHTML: true });
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.ignoreInnerHTML).toBeTruthy();
@@ -428,20 +383,17 @@ describe(`UU5.Common.Help ContentMixin props testing`, () => {
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  it('test03 - props checkSpaces', () => {
+  it("test03 - props checkSpaces", () => {
     jest.useFakeTimers();
     const wrapper = shallow(
-      <UU5.Common.Help
-        id={"helpID01"}
-        content={"V ceně 5 000 000 Kč není zahrnuto vše, i když to bylo slíbeno."}
-      />
+      <UU5.Common.Help id={"helpID01"} content={"V ceně 5 000 000 Kč není zahrnuto vše, i když to bylo slíbeno."} />
     );
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.checkSpaces).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.html()).toMatchSnapshot();
-    wrapper.setProps({checkSpaces: true});
+    wrapper.setProps({ checkSpaces: true });
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.checkSpaces).toBeTruthy();
@@ -449,21 +401,17 @@ describe(`UU5.Common.Help ContentMixin props testing`, () => {
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  it('test04 - props checkGrammar', () => {
+  it("test04 - props checkGrammar", () => {
     jest.useFakeTimers();
     const wrapper = shallow(
-      <UU5.Common.Help
-        id={"helpID01"}
-        textCorrector={false}
-        content={"V potoce plave vidra."}
-      />
+      <UU5.Common.Help id={"helpID01"} textCorrector={false} content={"V potoce plave vidra."} />
     );
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.checkGrammar).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.html()).toMatchSnapshot();
-    wrapper.setProps({checkGrammar: true});
+    wrapper.setProps({ checkGrammar: true });
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.checkGrammar).toBeTruthy();
@@ -471,19 +419,15 @@ describe(`UU5.Common.Help ContentMixin props testing`, () => {
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  it('test05 - props checkHighlight', () => {
+  it("test05 - props checkHighlight", () => {
     jest.useFakeTimers();
-    const wrapper = shallow(
-      <UU5.Common.Help
-        id={"helpID01"}
-        content={"V potoce plave vydra."}/>
-    );
+    const wrapper = shallow(<UU5.Common.Help id={"helpID01"} content={"V potoce plave vydra."} />);
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.checkHighlight).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.html()).toMatchSnapshot();
-    wrapper.setProps({checkHighlight: true});
+    wrapper.setProps({ checkHighlight: true });
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.checkHighlight).toBeTruthy();
@@ -491,20 +435,15 @@ describe(`UU5.Common.Help ContentMixin props testing`, () => {
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  it('test06 - props textCorrector', () => {
+  it("test06 - props textCorrector", () => {
     jest.useFakeTimers();
-    const wrapper = shallow(
-      <UU5.Common.Help
-        id={"helpID01"}
-        content={"V potoce plave vidra."}
-      />
-    );
+    const wrapper = shallow(<UU5.Common.Help id={"helpID01"} content={"V potoce plave vidra."} />);
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.textCorrector).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.html()).toMatchSnapshot();
-    wrapper.setProps({textCorrector: true});
+    wrapper.setProps({ textCorrector: true });
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.textCorrector).toBeTruthy();
@@ -512,17 +451,15 @@ describe(`UU5.Common.Help ContentMixin props testing`, () => {
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  it('test07 - props dynamic', () => {
+  it("test07 - props dynamic", () => {
     jest.useFakeTimers();
-    const wrapper = shallow(
-      <UU5.Common.Help id={"helpID01"}/>
-    );
+    const wrapper = shallow(<UU5.Common.Help id={"helpID01"} />);
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.dynamic).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.html()).toMatchSnapshot();
-    wrapper.setProps({dynamic: true});
+    wrapper.setProps({ dynamic: true });
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.dynamic).toBeTruthy();
@@ -530,52 +467,35 @@ describe(`UU5.Common.Help ContentMixin props testing`, () => {
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  it('test08 - props mode', () => {
+  it("test08 - props mode", () => {
     jest.useFakeTimers();
-    const wrapper = shallow(
-      <UU5.Common.Help id={"helpID01"}/>
-    );
+    const wrapper = shallow(<UU5.Common.Help id={"helpID01"} />);
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.mode).toBe(undefined);
     expect(wrapper).toMatchSnapshot();
-    wrapper.setProps({mode: "outline"});
+    wrapper.setProps({ mode: "outline" });
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.mode).toMatch(/outline/);
     expect(wrapper).toMatchSnapshot();
   });
-
-
 });
 
-describe('UU5.Common.Help PureRenderMixin props testing', () => {
-
-  it('test01 - pureRender props', () => {
+describe("UU5.Common.Help PureRenderMixin props testing", () => {
+  it("test01 - pureRender props", () => {
     jest.useFakeTimers();
-    const wrapper = shallow(
-      <UU5.Common.Help
-        id={"helpID01"}
-      />
-    );
+    const wrapper = shallow(<UU5.Common.Help id={"helpID01"} />);
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.pureRender).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.html()).toMatchSnapshot();
-    wrapper.setProps({pureRender: true});
+    wrapper.setProps({ pureRender: true });
     jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.instance().props.pureRender).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.html()).toMatchSnapshot();
   });
-
 });
-
-
-
-
-
-
-

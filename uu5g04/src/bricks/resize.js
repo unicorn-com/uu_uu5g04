@@ -11,6 +11,7 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import React from "react";
 import createReactClass from "create-react-class";
 import PropTypes from "prop-types";
@@ -21,6 +22,7 @@ import ResizeObserver from "./resize-observer.js";
 import ResizeItem from "./resize-item.js";
 
 import "./resize.less";
+//@@viewOff:imports
 
 export const Resize = createReactClass({
   //@@viewOn:mixins
@@ -58,7 +60,7 @@ export const Resize = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
       width: 0,
@@ -73,7 +75,7 @@ export const Resize = createReactClass({
       }
     }
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   isResize() {
@@ -81,7 +83,7 @@ export const Resize = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
+  //@@viewOn:overriding
   expandChildProps_(child, index) {
     let childProps = { ...child.props };
     if (child.type && (!child.type.tagName || child.type.tagName !== ResizeItem.tagName)) {
@@ -90,9 +92,9 @@ export const Resize = createReactClass({
     }
     return childProps;
   },
-  //@@viewOff:overridingMethods
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _onResize({ width, height }) {
     if (this.state.width !== width || this.state.height !== height) {
       this.setState({ width: width, height: height });
@@ -144,7 +146,7 @@ export const Resize = createReactClass({
 
     return result;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {

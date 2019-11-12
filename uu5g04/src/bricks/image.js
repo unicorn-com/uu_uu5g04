@@ -11,6 +11,7 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import React from "react";
 import createReactClass from "create-react-class";
 import PropTypes from "prop-types";
@@ -19,6 +20,7 @@ import ns from "./bricks-ns.js";
 const ClassNames = UU5.Common.ClassNames;
 
 import "./image.less";
+//@@viewOff:imports
 
 const withVisibilityCheck = function(Component, reserve = 500) {
   if (typeof IntersectionObserver === "undefined") return Component;
@@ -74,11 +76,7 @@ const withVisibilityCheck = function(Component, reserve = 500) {
       return visible ? (
         <Component {...this.props} />
       ) : (
-        <span
-          ref={this._setRef}
-          className={this.getClassName("placeholder")}
-          style={style}
-        />
+        <span ref={this._setRef} className={this.getClassName("placeholder")} style={style} />
       );
     }
   });
@@ -137,7 +135,7 @@ let Image = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     let { preloading, preloadedUri } = this._preloadImage(this.props);
     return {
@@ -168,15 +166,15 @@ let Image = createReactClass({
   // componentWillUnmount() {
   //   this._removeElevationRadius();
   // },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   // _createElevationRadius() {
   //   if (this.props.elevation === "-1" || this.props.elevation === -1) {
   //     UU5.Common.Tools.createStyleTag(
@@ -271,7 +269,7 @@ let Image = createReactClass({
       xhr.send(null);
     });
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {

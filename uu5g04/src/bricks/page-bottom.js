@@ -1,32 +1,29 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./page-bottom.less";
+//@@viewOff:imports
 
 export const PageBottom = createReactClass({
-
   //@@viewOn:mixins
-  mixins: [
-    UU5.Common.BaseMixin,
-    UU5.Common.PureRenderMixin,
-    UU5.Common.ContentMixin,
-  ],
+  mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ContentMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -68,7 +65,7 @@ export const PageBottom = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
       initialPosition: !this.props.alwaysFixed,
@@ -109,7 +106,11 @@ export const PageBottom = createReactClass({
       // This is necessary because the width has to be changed
       UU5.Environment.EventListener.addWindowEvent("resize", this.getId(), () => this.forceUpdate());
 
-      UU5.Environment.EventListener.registerEvent("preventScrollTrigger", this.getId(), (prevent) => this._scrollPrevented = prevent);
+      UU5.Environment.EventListener.registerEvent(
+        "preventScrollTrigger",
+        this.getId(),
+        prevent => (this._scrollPrevented = prevent)
+      );
       UU5.Environment.EventListener.registerEvent("pageContentResize", this.getId(), () => this.forceUpdate());
       UU5.Environment.EventListener.registerEvent("pageColumnChanged", this.getId(), () => this.forceUpdate());
 
@@ -122,7 +123,11 @@ export const PageBottom = createReactClass({
   componentDidUpdate(prevProps, prevState) {
     this._pageTop = document.getElementById(this.props.topId);
 
-    let height = this.state.onScrollHidden ? 0 : this.state.transform ? this._height - this.state.transform : this._height;
+    let height = this.state.onScrollHidden
+      ? 0
+      : this.state.transform
+      ? this._height - this.state.transform
+      : this._height;
     if (prevState.onScrollHidden !== this.state.onScrollHidden || prevState.transform !== this.state.transform) {
       UU5.Environment.EventListener.triggerEvent("hidePageBottom", this.state.onScrollHidden, height);
     }
@@ -138,7 +143,7 @@ export const PageBottom = createReactClass({
     this._pageTop = document.getElementById(nextProps.topId);
     this._onScroll(nextProps);
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   isInInitialPosition() {
@@ -150,10 +155,10 @@ export const PageBottom = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _getTopVisibility() {
     let result = 0;
     if (this._pageTop) {
@@ -216,33 +221,71 @@ export const PageBottom = createReactClass({
     let rootRect = this._root && this._root.getBoundingClientRect();
 
     if (!this.isInInitialPosition()) {
-      if (scrollDirection === "down" && !this.state.onScrollHidden && ghostRect.top > document.documentElement.clientHeight) {
+      if (
+        scrollDirection === "down" &&
+        !this.state.onScrollHidden &&
+        ghostRect.top > document.documentElement.clientHeight
+      ) {
         this.setState({ onScrollHidden: true, animate: true, transform: this._height });
       } else if (scrollDirection === "down" && ghostRect.top <= document.documentElement.clientHeight) {
-        this.setState({ onScrollHidden: false, animate: false, transform: this._height + (ghostRect.top - document.documentElement.clientHeight), initialPosition: true });
+        this.setState({
+          onScrollHidden: false,
+          animate: false,
+          transform: this._height + (ghostRect.top - document.documentElement.clientHeight),
+          initialPosition: true
+        });
       } else if (scrollDirection === "up" && this.state.onScrollHidden && this._lastScrollPositionDown) {
         if (this._lastScrollPositionDown - scrollPosition >= this.getDefault().hideOnScrollOffset) {
-          this.setState({ onScrollHidden: false, animate: true, transform: this.props.fixedHeight ? this._height - this.props.fixedHeight : null });
+          this.setState({
+            onScrollHidden: false,
+            animate: true,
+            transform: this.props.fixedHeight ? this._height - this.props.fixedHeight : null
+          });
         }
       }
     } else {
-      if (scrollDirection === "down" && rootRect.bottom === document.documentElement.clientHeight - this.props.fixedHeight) {
+      if (
+        scrollDirection === "down" &&
+        rootRect.bottom === document.documentElement.clientHeight - this.props.fixedHeight
+      ) {
         this.setState({ initialPosition: false, transform: null, animate: false });
       } else if (this.props.fixedHeight) {
         if (scrollDirection === "down" && ghostRect.top > 0) {
-          this.setState({ transform: this._height + (ghostRect.top - document.documentElement.clientHeight), animate: false });
-        } else if (scrollDirection === "up" && ghostRect.top + this.props.fixedHeight < document.documentElement.clientHeight) {
-          this.setState({ transform: this._height + (ghostRect.top - document.documentElement.clientHeight), animate: false });
-        } else if (scrollDirection === "up" && ghostRect.top + this.props.fixedHeight > document.documentElement.clientHeight) {
+          this.setState({
+            transform: this._height + (ghostRect.top - document.documentElement.clientHeight),
+            animate: false
+          });
+        } else if (
+          scrollDirection === "up" &&
+          ghostRect.top + this.props.fixedHeight < document.documentElement.clientHeight
+        ) {
+          this.setState({
+            transform: this._height + (ghostRect.top - document.documentElement.clientHeight),
+            animate: false
+          });
+        } else if (
+          scrollDirection === "up" &&
+          ghostRect.top + this.props.fixedHeight > document.documentElement.clientHeight
+        ) {
           this.setState({ initialPosition: false, transform: this._height - this.props.fixedHeight, animate: true });
         }
       } else if (!this.props.fixedHeight) {
         if (scrollDirection === "down" && ghostRect.bottom === document.documentElement.clientHeight) {
-          this.setState({ transform: this._height + (ghostRect.top - document.documentElement.clientHeight), animate: false, initialPosition: true });
+          this.setState({
+            transform: this._height + (ghostRect.top - document.documentElement.clientHeight),
+            animate: false,
+            initialPosition: true
+          });
         } else if (scrollDirection === "down" && ghostRect.top > 0) {
-          this.setState({ transform: this._height + (ghostRect.top - document.documentElement.clientHeight), animate: false });
+          this.setState({
+            transform: this._height + (ghostRect.top - document.documentElement.clientHeight),
+            animate: false
+          });
         } else if (scrollDirection === "up" && rootRect.top >= document.documentElement.clientHeight) {
-          this.setState({ transform: ghostRect.bottom - document.documentElement.clientHeight, initialPosition: false });
+          this.setState({
+            transform: ghostRect.bottom - document.documentElement.clientHeight,
+            initialPosition: false
+          });
         } else if (scrollDirection === "up" && ghostRect.bottom >= document.documentElement.clientHeight) {
           this.setState({ transform: ghostRect.bottom - document.documentElement.clientHeight });
         }
@@ -297,7 +340,7 @@ export const PageBottom = createReactClass({
 
     return mainAttrs;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {

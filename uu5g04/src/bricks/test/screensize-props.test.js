@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -36,7 +36,7 @@ const CONFIG = {
       <UU5.Bricks.ScreenSize.Item id={"childID"} screenSize={["m", "l", "xl"]}>
         <UU5.Bricks.Span id={"childID02"} content="Content for M-XL" />
       </UU5.Bricks.ScreenSize.Item>
-    ],
+    ]
   },
   opt: {
     shallowOpt: {
@@ -45,15 +45,12 @@ const CONFIG = {
   }
 };
 
-
 describe(`UU5.Bricks.ScreenSize`, () => {
   UU5.Test.Tools.testProperties(UU5.Bricks.ScreenSize, CONFIG);
 });
 
-
-describe('Test UU5.bricks.ScreenSize own props', () => {
-
-  it('props.ScreeSize - test', () => {
+describe("Test UU5.bricks.ScreenSize own props", () => {
+  it("props.ScreeSize - test", () => {
     //component wil be rendere only if you set screeSize L.
     const wrapper = shallow(
       <UU5.Bricks.ScreenSize id="uuIDroot">
@@ -73,7 +70,6 @@ describe('Test UU5.bricks.ScreenSize own props', () => {
     wrapper.setProps({ screenSize: "xs" });
     expect(wrapper).toMatchSnapshot();
   });
-
 });
 
 let baseMixinprops = {
@@ -114,9 +110,8 @@ let nestingLevelMixinprops = {
 
 let screenSizeMixinprops = {};
 
-describe('Mixin Props testing', () => {
-
-  it('Default values', () => {
+describe("Mixin Props testing", () => {
+  it("Default values", () => {
     const wrapper = shallow(
       <UU5.Bricks.ScreenSize id="uuIDroot">
         <UU5.Bricks.ScreenSize.Item id={"uuID4"} screenSize={"l"}>
@@ -128,7 +123,7 @@ describe('Mixin Props testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('props of BaseMixin', () => {
+  it("props of BaseMixin", () => {
     const wrapper = shallow(
       <UU5.Bricks.ScreenSize id="uuIDroot" {...baseMixinprops}>
         <UU5.Bricks.ScreenSize.Item id={"uuID4"} screenSize={"l"}>
@@ -140,7 +135,7 @@ describe('Mixin Props testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('props of ElementaryMixin', () => {
+  it("props of ElementaryMixin", () => {
     const wrapper = shallow(
       <UU5.Bricks.ScreenSize id="uuIDroot" {...elementaryMixinprops}>
         <UU5.Bricks.ScreenSize.Item id={"uuID4"} screenSize={"l"}>
@@ -152,7 +147,7 @@ describe('Mixin Props testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('props of ContentMixin', () => {
+  it("props of ContentMixin", () => {
     const wrapper = shallow(
       <UU5.Bricks.ScreenSize id="uuIDroot" {...contentMixinprops}>
         <UU5.Bricks.ScreenSize.Item id={"uuID4"} screenSize={"xl"}>
@@ -164,7 +159,7 @@ describe('Mixin Props testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('props of ScreenSize', () => {
+  it("props of ScreenSize", () => {
     const wrapper = shallow(
       <UU5.Bricks.ScreenSize id="uuIDroot" {...screenSizeMixinprops}>
         <UU5.Bricks.ScreenSize.Item id={"uuID4"} screenSize={"l"}>
@@ -176,7 +171,7 @@ describe('Mixin Props testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('props of NestingLevelMixin', () => {
+  it("props of NestingLevelMixin", () => {
     const wrapper = shallow(
       <UU5.Bricks.ScreenSize id="uuIDroot" {...nestingLevelMixinprops}>
         <UU5.Bricks.ScreenSize.Item id={"uuID4"} screenSize={"l"}>
@@ -187,7 +182,6 @@ describe('Mixin Props testing', () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
-
 });
 
 describe(`UU5.Bricks.ScreenSize docKit examples`, () => {
@@ -227,13 +221,3 @@ describe(`UU5.Bricks.ScreenSize children as fn`, () => {
     expect.stringContaining(mockFn.mock.calls[0][0].screenSize);
   });
 });
-
-
-
-
-
-
-
-
-
-

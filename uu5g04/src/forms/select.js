@@ -11,23 +11,25 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "./forms-ns.js";
 
-import ItemList from './internal/item-list.js';
-import ItemsInput from './internal/items-input.js';
-import ChoiceMixin from './mixins/choice-mixin.js';
-import InputMixin from './mixins/input-mixin.js';
+import ItemList from "./internal/item-list.js";
+import ItemsInput from "./internal/items-input.js";
+import ChoiceMixin from "./mixins/choice-mixin.js";
+import InputMixin from "./mixins/input-mixin.js";
 
-import SelectOption from './select-option.js';
+import SelectOption from "./select-option.js";
 
 import Context from "./form-context.js";
 
-import './select.less';
+import "./select.less";
+//@@viewOff:imports
 
 export const Select = Context.withContext(
   createReactClass({
@@ -58,25 +60,22 @@ export const Select = Context.withContext(
         inputOpen: ns.css("items-input-open")
       },
       defaults: {
-        childTagName: 'UU5.Forms.Select.Option'
+        childTagName: "UU5.Forms.Select.Option"
       },
-      lsi: () => (UU5.Common.Tools.merge({}, UU5.Environment.Lsi.Forms.select, UU5.Environment.Lsi.Forms.message))
+      lsi: () => UU5.Common.Tools.merge({}, UU5.Environment.Lsi.Forms.select, UU5.Environment.Lsi.Forms.message)
     },
     //@@viewOff:statics
 
     //@@viewOn:propTypes
     propTypes: {
-      value: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.arrayOf(PropTypes.string)
-      ]),
+      value: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
       multiple: PropTypes.bool,
       selectAllEnabled: PropTypes.bool,
       allowTags: PropTypes.array,
       disableBackdrop: PropTypes.bool,
       borderRadius: PropTypes.string,
-      bgStyle: PropTypes.oneOf(['filled', 'outline', 'transparent', 'underline']),
-      elevation: PropTypes.oneOf(['-1', '0', '1', '2', '3', '4', '5', -1, 0, 1, 2, 3, 4, 5]),
+      bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+      elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
       openToContent: PropTypes.oneOfType([PropTypes.bool, PropTypes.string])
     },
     //@@viewOff:propTypes
@@ -97,7 +96,7 @@ export const Select = Context.withContext(
     },
     //@@viewOff:getDefaultProps
 
-    //@@viewOn:standardComponentLifeCycle
+    //@@viewOn:reactLifeCycle
     getInitialState() {
       return {
         open: false
@@ -109,7 +108,7 @@ export const Select = Context.withContext(
       if (this.props.value) {
         value = this._valuesToValuesArray(this.props.value);
       }
-      if (this.props.onValidate && typeof this.props.onValidate === 'function') {
+      if (this.props.onValidate && typeof this.props.onValidate === "function") {
         this._validateOnChange({ value, event: null, component: this });
       } else {
         this._onChangeFeedback(this.props.feedback, this.props.message, value);
@@ -122,8 +121,8 @@ export const Select = Context.withContext(
       let value = this._valuesToValuesArray(nextProps.value, this.buildChildren(nextProps));
       if (nextProps.controlled) {
         if (nextProps.required && this.state.value.length > 0 && (value.length < 1 || value === null)) {
-          this.setError(nextProps.requiredMessage || this.getLsiComponent('requiredMessageChoice'));
-        } else if (this.props.onValidate && typeof this.props.onValidate === 'function') {
+          this.setError(nextProps.requiredMessage || this.getLsiComponent("requiredMessageChoice"));
+        } else if (this.props.onValidate && typeof this.props.onValidate === "function") {
           this._validateOnChange({ value, event: null, component: this }, true);
         } else {
           this._onChangeFeedback(nextProps.feedback, nextProps.message, value);
@@ -166,12 +165,15 @@ export const Select = Context.withContext(
 
     componentDidUpdate(prevProps, prevState) {
       if (this.isOpen()) {
-        if ((this.state.screenSize === "xs" && prevState.screenSize !== "xs") || (this.state.screenSize !== "xs" && prevState.screenSize === "xs")) {
+        if (
+          (this.state.screenSize === "xs" && prevState.screenSize !== "xs") ||
+          (this.state.screenSize !== "xs" && prevState.screenSize === "xs")
+        ) {
           this._open();
         }
       }
     },
-    //@@viewOff:standardComponentLifeCycle
+    //@@viewOff:reactLifeCycle
 
     //@@viewOn:interface
     isSelect() {
@@ -194,13 +196,16 @@ export const Select = Context.withContext(
     },
 
     toggle(setStateCallback) {
-      this.setState(state => {
-        if (!state.open) {
-          this._addEvent();
-        }
+      this.setState(
+        state => {
+          if (!state.open) {
+            this._addEvent();
+          }
 
-        return { open: !state.open };
-      }, () => this.isOpen() ? this._onOpen(setStateCallback) : this._onClose(setStateCallback));
+          return { open: !state.open };
+        },
+        () => (this.isOpen() ? this._onOpen(setStateCallback) : this._onClose(setStateCallback))
+      );
       return this;
     },
 
@@ -225,19 +230,21 @@ export const Select = Context.withContext(
           setStateCallback();
         }
       } else {
-        this.showWarning('notMultiple', 'addValue');
+        this.showWarning("notMultiple", "addValue");
       }
       return this;
     },
 
     removeValue(opt, setStateCallback) {
       if (this.props.required && this.state.value.length === 1) {
-        this.setError(this.props.requiredMessage || this.getLsiComponent('requiredMessageChoice'), null);
+        this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessageChoice"), null);
       }
       opt.component = this;
-      opt._data = { type: 'remove', callback: setStateCallback, value: opt.value };
-      this._getChildren().forEach((child) => {
-        let value = child ? child.props.selectedContent || child.props.content || child.props.children || child.props.value : null;
+      opt._data = { type: "remove", callback: setStateCallback, value: opt.value };
+      this._getChildren().forEach(child => {
+        let value = child
+          ? child.props.selectedContent || child.props.content || child.props.children || child.props.value
+          : null;
         if (value === opt.value) {
           opt.value = child.props.value;
         }
@@ -255,7 +262,7 @@ export const Select = Context.withContext(
       //   }
       // });
 
-      if (typeof this.props.onChange === 'function') {
+      if (typeof this.props.onChange === "function") {
         this.props.multiple ? this.props.onChange(opt) : this.close(() => this.props.onChange(opt));
       } else {
         this.onChangeDefault(opt);
@@ -267,11 +274,11 @@ export const Select = Context.withContext(
       let type = opt._data.type;
       opt.value = opt._data.value;
 
-      if (type == 'changeValue') {
+      if (type == "changeValue") {
         this._onSelectDefault(opt, setStateCallback);
-      } else if (type == 'selectAll') {
+      } else if (type == "selectAll") {
         this._onSelectAllDefault(opt, setStateCallback);
-      } else if (type == 'remove') {
+      } else if (type == "remove") {
         this._onRemoveDefault(opt, setStateCallback);
       }
 
@@ -279,7 +286,7 @@ export const Select = Context.withContext(
     },
     //@@viewOff:interface
 
-    //@@viewOn:overridingMethods
+    //@@viewOn:overriding
     setValue_(value, setStateCallback) {
       value = this._valuesToValuesArray(value);
 
@@ -314,9 +321,12 @@ export const Select = Context.withContext(
       let defaultChildTagName = this.getDefault().childTagName;
       let childTagNames = this.props.allowTags.concat(defaultChildTagName);
       let result = childTagNames.indexOf(childTagName) > -1;
-      if (!result && (typeof child !== 'string' || child.trim())) {
-        if (childTagName) this.showError('childTagNotAllowed', [childTagName, this.getTagName(), childTagName, defaultChildTagName], { mixinName: 'UU5.Common.BaseMixin' });
-        else this.showError('childNotAllowed', [child, defaultChildTagName], { mixinName: 'UU5.Common.BaseMixin' });
+      if (!result && (typeof child !== "string" || child.trim())) {
+        if (childTagName)
+          this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagName], {
+            mixinName: "UU5.Common.BaseMixin"
+          });
+        else this.showError("childNotAllowed", [child, defaultChildTagName], { mixinName: "UU5.Common.BaseMixin" });
       }
       return result;
     },
@@ -334,16 +344,19 @@ export const Select = Context.withContext(
     },
 
     reset_(setStateCallback) {
-      this.setState({
-        message: this.props.message,
-        feedback: this.props.feedback,
-        value: this._valuesToValuesArray(this.props.value),
-        readOnly: this.props.readOnly
-      }, setStateCallback);
+      this.setState(
+        {
+          message: this.props.message,
+          feedback: this.props.feedback,
+          value: this._valuesToValuesArray(this.props.value),
+          readOnly: this.props.readOnly
+        },
+        setStateCallback
+      );
     },
-    //@@viewOff:overridingMethods
+    //@@viewOff:overriding
 
-    //@@viewOn:componentSpecificHelpers
+    //@@viewOn:private
     _valuesToValuesArray(newValue, newChildren) {
       let value = [];
       let children = newChildren || this.getChildren();
@@ -353,7 +366,7 @@ export const Select = Context.withContext(
 
         for (let i = 0; i < children.length; i++) {
           let childValue = children[i].props.value;
-          if (typeof newValue === 'string') {
+          if (typeof newValue === "string") {
             if (newValue === childValue) {
               value.push(newValue);
             }
@@ -391,9 +404,9 @@ export const Select = Context.withContext(
         item: false,
         label: false,
         picker: false
-      }
+      };
       let eventPath = this._getEventPath(e);
-      eventPath.every((item) => {
+      eventPath.every(item => {
         let functionType = item.matches ? "matches" : "msMatchesSelector";
         if (item[functionType]) {
           if (item[functionType](labelMatch)) {
@@ -445,8 +458,8 @@ export const Select = Context.withContext(
 
     _removeEvent(notKeys) {
       if (!notKeys) {
-        UU5.Environment.EventListener.removeWindowEvent('keydown', this.getId());
-        UU5.Environment.EventListener.removeWindowEvent('keyup', this.getId());
+        UU5.Environment.EventListener.removeWindowEvent("keydown", this.getId());
+        UU5.Environment.EventListener.removeWindowEvent("keyup", this.getId());
       }
 
       window.removeEventListener("click", this._handleClick, true);
@@ -458,7 +471,7 @@ export const Select = Context.withContext(
       let itemList = this._itemList;
       let items = itemList.getRenderedChildren();
 
-      let handleKeyDown = (e) => {
+      let handleKeyDown = e => {
         if (e.which === 13) {
           e.preventDefault();
         } else if (e.which === 38 || e.which === 40) {
@@ -470,9 +483,9 @@ export const Select = Context.withContext(
           this._removeEvent();
           this.close(this._validateRequired);
         }
-      }
+      };
 
-      let handleKeyUp = (e) => {
+      let handleKeyUp = e => {
         switch (e.which) {
           case 13: // enter
             if (!this.isOpen()) {
@@ -500,10 +513,10 @@ export const Select = Context.withContext(
           default:
             break;
         }
-      }
+      };
 
-      UU5.Environment.EventListener.addWindowEvent('keydown', this.getId(), (e) => handleKeyDown(e));
-      UU5.Environment.EventListener.addWindowEvent('keyup', this.getId(), (e) => handleKeyUp(e));
+      UU5.Environment.EventListener.addWindowEvent("keydown", this.getId(), e => handleKeyDown(e));
+      UU5.Environment.EventListener.addWindowEvent("keyup", this.getId(), e => handleKeyUp(e));
     },
 
     _onChangeFeedback(feedback, message, value, setStateCallback) {
@@ -538,9 +551,9 @@ export const Select = Context.withContext(
       let _callCallback = typeof setStateCallback === "function";
 
       if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
-        let result = typeof this.props.onValidate === 'function' ? this.props.onValidate(opt) : null;
+        let result = typeof this.props.onValidate === "function" ? this.props.onValidate(opt) : null;
         if (result) {
-          if (typeof result === 'object') {
+          if (typeof result === "object") {
             if (result.feedback) {
               _callCallback = false;
               this._onChangeFeedback(result.feedback, result.message, result.value, setStateCallback);
@@ -550,7 +563,9 @@ export const Select = Context.withContext(
               this.setState({ value: value }, setStateCallback);
             }
           } else {
-            this.showError('validateError', null, { context: { event: e, func: this.props.onValidate, result: result } });
+            this.showError("validateError", null, {
+              context: { event: e, func: this.props.onValidate, result: result }
+            });
           }
         } else {
           _callCallback = false;
@@ -581,8 +596,8 @@ export const Select = Context.withContext(
       let props = {};
 
       props.hidden = !this.isOpen();
-      props.ref_ = (itemList) => this._itemList = itemList;
-      props.onChange = (opt) => this._onItem(opt);
+      props.ref_ = itemList => (this._itemList = itemList);
+      props.onChange = opt => this._onItem(opt);
       props.value = this.state.value;
       props.multiple = this.props.multiple;
       props.allowTags = this.props.allowTags;
@@ -598,14 +613,17 @@ export const Select = Context.withContext(
 
       if (typeof this.props.openToContent === "string") {
         let screenSize = this.getScreenSize();
-        this.props.openToContent.trim().split(" ").some((size) => {
-          if (screenSize == size) {
-            result = true;
-            return true;
-          } else {
-            return false;
-          }
-        })
+        this.props.openToContent
+          .trim()
+          .split(" ")
+          .some(size => {
+            if (screenSize == size) {
+              result = true;
+              return true;
+            } else {
+              return false;
+            }
+          });
       } else if (typeof this.props.openToContent === "boolean") {
         result = this.props.openToContent;
       }
@@ -615,11 +633,32 @@ export const Select = Context.withContext(
 
     _onInput(opt, checkRequired) {
       let requiredResult = checkRequired ? this._checkRequired(opt.value) : true;
+      let scrollElement = this._findScrollElement(this._root);
 
       if (requiredResult) {
-        this.toggle(() => this.isOpen() && this._shouldOpenToContent() ? UU5.Common.Tools.scrollToTarget(this.getId() + "-input", false, UU5.Environment._fixedOffset + 20) : null);
+        this.toggle(() =>
+          this.isOpen() && this._shouldOpenToContent()
+            ? UU5.Common.Tools.scrollToTarget(
+                this.getId() + "-input",
+                false,
+                UU5.Environment._fixedOffset + 20,
+                scrollElement
+              )
+            : null
+        );
       } else {
-        this.setError(this.props.requiredMessage || this.getLsiComponent('requiredMessageChoice'), null, () => this.toggle(() => this.isOpen() && this._shouldOpenToContent() ? UU5.Common.Tools.scrollToTarget(this.getId() + "-input", false, UU5.Environment._fixedOffset + 20) : null));
+        this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessageChoice"), null, () =>
+          this.toggle(() =>
+            this.isOpen() && this._shouldOpenToContent()
+              ? UU5.Common.Tools.scrollToTarget(
+                  this.getId() + "-input",
+                  false,
+                  UU5.Environment._fixedOffset + 20,
+                  scrollElement
+                )
+              : null
+          )
+        );
       }
     },
 
@@ -666,7 +705,7 @@ export const Select = Context.withContext(
           opt.value = this._getChildren()[opt.value].props.value;
         }
 
-        if (typeof this.props.onChange === 'function') {
+        if (typeof this.props.onChange === "function") {
           multiple ? this.props.onChange(opt) : this.toggle(() => this.props.onChange(opt));
         } else if (!requiredResult) {
           this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessageChoice"), null);
@@ -686,8 +725,10 @@ export const Select = Context.withContext(
 
       if (!requiredResult) {
         _callCallback = false;
-        this.setError(this.props.requiredMessage || this.getLsiComponent('requiredMessageChoice'), null, () => this.close(setStateCallback));
-      } else if (typeof this.props.onValidate === 'function') {
+        this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessageChoice"), null, () =>
+          this.close(setStateCallback)
+        );
+      } else if (typeof this.props.onValidate === "function") {
         opt.component = this;
         opt.value = result;
 
@@ -696,7 +737,7 @@ export const Select = Context.withContext(
         }
 
         result = this.props.onValidate(opt);
-        if (result && typeof result === 'object') {
+        if (result && typeof result === "object") {
           let callback = () => {
             if (typeof result.setStateCallback === "function") {
               result.setStateCallback();
@@ -707,10 +748,13 @@ export const Select = Context.withContext(
             }
           };
           let onChangeFeedbackOpt = {
-            feedback: result.feedback, message: result.message, value: result.value,
-            callback, component: this
+            feedback: result.feedback,
+            message: result.message,
+            value: result.value,
+            callback,
+            component: this
           };
-          if (typeof this.props.onChangeFeedback === 'function') {
+          if (typeof this.props.onChangeFeedback === "function") {
             _callCallback = false;
             this.props.onChangeFeedback(onChangeFeedbackOpt);
           } else {
@@ -745,12 +789,12 @@ export const Select = Context.withContext(
       let _callCallback = typeof setStateCallback === "function";
       let value = this.getValue_(opt.value);
       if (this._checkRequired(opt.value)) {
-        if (typeof this.props.onValidate === 'function') {
+        if (typeof this.props.onValidate === "function") {
           opt.component = this;
           opt.value = value;
 
           let result = this.props.onValidate(opt);
-          if (result && typeof result === 'object') {
+          if (result && typeof result === "object") {
             let setStateCallbackComposed = () => {
               if (typeof result.setStateCallback === "function") {
                 result.setStateCallback();
@@ -761,10 +805,13 @@ export const Select = Context.withContext(
               }
             };
             let onChangeFeedbackOpt = {
-              feedback: result.feedback, message: result.message, value: result.value,
-              callback: setStateCallbackComposed, component: this
+              feedback: result.feedback,
+              message: result.message,
+              value: result.value,
+              callback: setStateCallbackComposed,
+              component: this
             };
-            if (typeof this.props.onChangeFeedback === 'function') {
+            if (typeof this.props.onChangeFeedback === "function") {
               _callCallback = false;
               this.props.onChangeFeedback(onChangeFeedbackOpt);
             } else {
@@ -800,7 +847,7 @@ export const Select = Context.withContext(
         }
       };
 
-      let index = opt.index !== undefined ? opt.index : values.indexOf(opt.value)
+      let index = opt.index !== undefined ? opt.index : values.indexOf(opt.value);
 
       if (index > -1) {
         values.splice(index, 1);
@@ -841,28 +888,28 @@ export const Select = Context.withContext(
       attrs.id = this.getId();
 
       if (this.isOpen()) {
-        attrs.className += ' ' + this.getClassName().open;
+        attrs.className += " " + this.getClassName().open;
       }
 
       if (this.props.multiple) {
-        attrs.className += ' ' + this.getClassName().multiple;
+        attrs.className += " " + this.getClassName().multiple;
       }
 
       if (this.props.selectAllEnabled) {
-        attrs.className += ' ' + this.getClassName().selectAllEnabled;
+        attrs.className += " " + this.getClassName().selectAllEnabled;
       }
 
       if (this.state.value && this.state.value.length) {
-        attrs.className += ' ' + this.getClassName().hasValue;
+        attrs.className += " " + this.getClassName().hasValue;
       }
 
       if (this._shouldOpenToContent()) {
-        attrs.className += ' ' + this.getClassName().screenSizeBehaviour;
+        attrs.className += " " + this.getClassName().screenSizeBehaviour;
       }
 
-      let handleClick = (e) => {
+      let handleClick = e => {
         let clickData = this._findTarget(e.nativeEvent);
-        if (clickData.input && ((this.isOpen() && !clickData.item) || !this.isOpen()) ) {
+        if (clickData.input && ((this.isOpen() && !clickData.item) || !this.isOpen())) {
           document.activeElement.blur();
           e.preventDefault();
           let opt = { value: this.state.value, event: e, component: this };
@@ -872,7 +919,7 @@ export const Select = Context.withContext(
 
       if (!this.isReadOnly() && !this.isComputedDisabled()) {
         let originalOnClick = attrs.onClick;
-        attrs.onClick = (e) => {
+        attrs.onClick = e => {
           if (typeof originalOnClick === "function") {
             originalOnClick(e);
           }
@@ -893,10 +940,13 @@ export const Select = Context.withContext(
       }
 
       if (!this.isReadOnly() && !this.isComputedDisabled()) {
-        attrs = UU5.Common.Tools.merge({
-          tabIndex: (!this.isReadOnly() && !this.isComputedDisabled()) ? '0' : undefined,
-          onFocus: (!this.isReadOnly() && !this.isComputedDisabled()) ? () => this._onFocus() : null
-        }, attrs);
+        attrs = UU5.Common.Tools.merge(
+          {
+            tabIndex: !this.isReadOnly() && !this.isComputedDisabled() ? "0" : undefined,
+            onFocus: !this.isReadOnly() && !this.isComputedDisabled() ? () => this._onFocus() : null
+          },
+          attrs
+        );
       }
       return attrs;
     },
@@ -904,13 +954,15 @@ export const Select = Context.withContext(
     _getItemValues(children) {
       let result = [];
       if (this.props.placeholder && children === null) {
-        result.push(<UU5.Bricks.Span className={this.getClassName('placeholder')} content={this.props.placeholder} />);
+        result.push(<UU5.Bricks.Span className={this.getClassName("placeholder")} content={this.props.placeholder} />);
       }
       if (children && this.state.value) {
         if (Array.isArray(this.state.value)) {
           for (let i = 0; i < this.state.value.length; i++) {
             let child = children.find(child => child.props.value === this.state.value[i]);
-            let childContent = child ? child.props.selectedContent || child.props.content || child.props.children || child.props.value : null;
+            let childContent = child
+              ? child.props.selectedContent || child.props.content || child.props.children || child.props.value
+              : null;
             result.push(childContent);
           }
         } else {
@@ -923,15 +975,15 @@ export const Select = Context.withContext(
     _getHeader() {
       let result;
       if (this.props.selectAllEnabled && this.props.multiple) {
-        let label = this._isSelectedAll() ? this.getLsiComponent('unselectAll') : this.getLsiComponent('selectAll');
+        let label = this._isSelectedAll() ? this.getLsiComponent("unselectAll") : this.getLsiComponent("selectAll");
         result = (
           <UU5.Bricks.Link
             content={label}
             onClick={this._selectAll}
-            className={this.getClassName('link')}
-            colorSchema='grey'
+            className={this.getClassName("link")}
+            colorSchema="grey"
           />
-        )
+        );
       }
       return result;
     },
@@ -955,9 +1007,9 @@ export const Select = Context.withContext(
       }
 
       let value = this.getValue_(result);
-      let opt = { value: value, component: this, _data: { type: 'selectAll', value: result } };
+      let opt = { value: value, component: this, _data: { type: "selectAll", value: result } };
 
-      if (typeof this.props.onChange === 'function') {
+      if (typeof this.props.onChange === "function") {
         this.props.onChange(opt);
       } else {
         this.onChangeDefault(opt);
@@ -967,13 +1019,16 @@ export const Select = Context.withContext(
 
     _onOpen(setStateCallback) {
       if (this._itemList) {
-        this._itemList.open({
-          onClose: this._onClose,
-          aroundElement: this._textInput.findDOMNode(),
-          position: "bottom",
-          offset: this._shouldOpenToContent() ? 0 : 4,
-          preventPositioning: this._shouldOpenToContent()
-        }, setStateCallback);
+        this._itemList.open(
+          {
+            onClose: this._onClose,
+            aroundElement: this._textInput.findDOMNode(),
+            position: "bottom",
+            offset: this._shouldOpenToContent() ? 0 : 4,
+            preventPositioning: this._shouldOpenToContent()
+          },
+          setStateCallback
+        );
       } else if (typeof setStateCallback === "function") {
         setStateCallback();
       }
@@ -999,28 +1054,28 @@ export const Select = Context.withContext(
       let children = [];
       if (this.props.children) {
         let childTagNames = this.props.allowTags.concat(this.getDefault().childTagName);
-        React.Children.toArray(this.props.children).forEach((child) => {
+        React.Children.toArray(this.props.children).forEach(child => {
           let childTagName = UU5.Common.Tools.getChildTagName(child);
           const newProps = UU5.Common.Tools.merge({}, child.props);
           newProps.mainAttrs = newProps.mainAttrs || {};
-          newProps.mainAttrs.tabIndex = '-1';
+          newProps.mainAttrs.tabIndex = "-1";
           child = this.cloneChild(child, newProps);
           if (childTagNames.indexOf(childTagName) > -1) {
             children.push(child);
           }
-        })
+        });
       }
       return children;
     },
-    //@@viewOff:componentSpecificHelpers
+    //@@viewOff:private
 
     //@@viewOn:render
     render() {
-      let inputId = this.getId() + '-input';
+      let inputId = this.getId() + "-input";
       let children = this._getChildren();
 
       return (
-        <div {...this._getMainAttrs()} ref={(comp) => this._root = comp}>
+        <div {...this._getMainAttrs()} ref={comp => (this._root = comp)}>
           {this.getLabel(inputId)}
           {this.getInputWrapper([
             <ItemsInput
@@ -1033,19 +1088,23 @@ export const Select = Context.withContext(
               disabled={this.isDisabled() || this.isLoading()}
               readonly={this.isReadOnly()}
               loading={this.isLoading()}
-              onItemClick={(!this.isReadOnly() && !this.isComputedDisabled()) ? (opt) => this.removeValue(opt) : null}
-              icon={ (!this.props.multiple || !this.state.value || !this.state.value.length) && !this.isComputedDisabled() && !this.isReadOnly() ? this._getIcon() : null}
+              onItemClick={!this.isReadOnly() && !this.isComputedDisabled() ? opt => this.removeValue(opt) : null}
+              icon={
+                (!this.props.multiple || !this.state.value || !this.state.value.length) &&
+                !this.isComputedDisabled() &&
+                !this.isReadOnly()
+                  ? this._getIcon()
+                  : null
+              }
               feedback={this.getFeedback()}
-              ref_={(item) => this._textInput = item}
+              ref_={item => (this._textInput = item)}
               borderRadius={this.props.borderRadius}
               elevation={this.props.elevation}
               bgStyle={this.props.bgStyle}
               inputWidth={this._getInputWidth()}
               colorSchema={this.props.colorSchema}
             />,
-            <ItemList {...this._getItemListProps()}>
-              {this.isOpen() && children}
-            </ItemList>
+            <ItemList {...this._getItemListProps()}>{this.isOpen() && children}</ItemList>
           ])}
         </div>
       );

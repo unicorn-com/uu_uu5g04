@@ -19,7 +19,6 @@ import Environment from "../../environment/environment.js";
 export const UU5StringObject = class UU5StringObject {
   /* constructor */
   constructor(tag, propsString, children = [], isPairedTag = true, initFn = null, parent = null) {
-
     /* public methods */
 
     /*
@@ -96,7 +95,7 @@ export const UU5StringObject = class UU5StringObject {
         tag = resultTag;
         // remove children from props
         resultProps = resultProps.filter(item => {
-          if (item.name === "children"){
+          if (item.name === "children") {
             children = item.value;
             return false;
           }
@@ -207,7 +206,7 @@ export const UU5StringObject = class UU5StringObject {
         let { resultTag, resultProps } = _result;
         // remove children from props
         resultProps = resultProps.filter(item => {
-          if (item.name === "children"){
+          if (item.name === "children") {
             children = item.value;
             return false;
           }
@@ -220,7 +219,7 @@ export const UU5StringObject = class UU5StringObject {
         // return original props
         this.props.props = propsArray;
       } else {
-        result = { tag: this.tag, props: this.props.toChildren(data) }
+        result = { tag: this.tag, props: this.props.toChildren(data) };
       }
       return Tools.findComponent(result.tag, result.props, UU5StringTools.contentToChildren(children, data, filterFn));
     };
@@ -234,7 +233,7 @@ export const UU5StringObject = class UU5StringObject {
       // filter props by filter function
       let result = { tag: this.tag, props: this.props.clone(initFn) };
       // clone children at first
-      result.children = this.children.map((item) => typeof item === "string" ? item : item.clone(initFn));
+      result.children = this.children.map(item => (typeof item === "string" ? item : item.clone(initFn)));
       // create new object - props are already cloned so do not send them into constructor
       let newUu5stringObject = new UU5StringObject(result.tag, null, result.children, this._isPairTag(), initFn);
       newUu5stringObject.props = result.props;
@@ -259,7 +258,7 @@ export const UU5StringObject = class UU5StringObject {
         });
       }
       if (this.props && this.props.props) {
-        let content = this.props.props.find((item) => item.name === "content");
+        let content = this.props.props.find(item => item.name === "content");
         if (content && Array.isArray(content.value)) {
           content.value.forEach(item => {
             if (item && typeof item === "object") item.parent = this;
@@ -281,14 +280,14 @@ export const UU5StringObject = class UU5StringObject {
         filteredProps[propName] = counter++;
       }
       // filter result by obj
-      let propsArray = this.props.props.filter((prop) => filteredProps[prop.name]);
+      let propsArray = this.props.props.filter(prop => filteredProps[prop.name]);
 
       if (preserveObjectOrder) {
         propsArray.sort((prop1, prop2) => filteredProps[prop1.name] - filteredProps[prop2.name]);
       }
       // update values
       for (let propName in propsObj.props) {
-        let prop = propsArray.find((item) => item.name === propName);
+        let prop = propsArray.find(item => item.name === propName);
         if (prop) {
           // update value
           prop.value = propsObj.props[propName];

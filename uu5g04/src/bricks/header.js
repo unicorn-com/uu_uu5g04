@@ -1,28 +1,29 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
-import Jumbotron from './jumbotron.js'
+import Jumbotron from "./jumbotron.js";
 
-import './header.less';
+import "./header.less";
+//@@viewOff:imports
 
 export const Header = createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -39,10 +40,10 @@ export const Header = createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("Header"),
-    nestingLevelList: UU5.Environment.getNestingLevelList('bigBoxCollection', 'box'),
+    nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
       main: ns.css("header"),
-      text: 'uu5-common-text',
+      text: "uu5-common-text",
       underline: ns.css("header-underline"),
       jumbotronContent: ns.css("header-jumbotron-content")
     },
@@ -64,34 +65,29 @@ export const Header = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOn:private
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
     const level = this.getLevel();
     let result;
     let attrs = this.getMainAttrs();
-    attrs.className += ' ' + this.getClassName("text");
+    attrs.className += " " + this.getClassName("text");
 
     if (level > 0) {
-      this.props.underline && (attrs.className += ' ' + this.getClassName("underline"));
+      this.props.underline && (attrs.className += " " + this.getClassName("underline"));
 
-      result = React.createElement(
-        'h' + level,
-        attrs,
-        this.getChildren(),
-        this.getDisabledCover()
-      );
+      result = React.createElement("h" + level, attrs, this.getChildren(), this.getDisabledCover());
     } else {
       result = (
         <Jumbotron
@@ -103,9 +99,11 @@ export const Header = createReactClass({
           mainAttrs={attrs}
           tooltip={attrs.title}
         >
-          <h1 className={this.getClassName('jumbotronContent') + " " + this.getClassName("text")}>{this.getChildren()}</h1>
+          <h1 className={this.getClassName("jumbotronContent") + " " + this.getClassName("text")}>
+            {this.getChildren()}
+          </h1>
         </Jumbotron>
-      )
+      );
     }
 
     return this.getNestingLevel() ? result : null;

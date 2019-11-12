@@ -1,23 +1,25 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
-import './calendar.less';
+import "./calendar.less";
+//@@viewOff:imports
 
 export const Calendar = UU5.Common.LsiMixin.withContext(
   createReactClass({
@@ -73,7 +75,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
         xsCell: ns.css("calendar-xs-cell col-xs-3 uu5-forms-calendar-xs-cell"),
         specCell: ns.css("calendar-spec-cell uu5-forms-calendar-spec-cell"),
         underline: ns.css("calendar-underline uu5-forms-calendar-underline"),
-        disabled: 'uu5-common-disabled',
+        disabled: "uu5-common-disabled",
         hideWeekNumber: ns.css("calendar-hide-week-number uu5-forms-calendar-hide-week-number"),
         range: ns.css("calendar-range uu5-forms-calendar-range"),
         weekColumnHighlight: ns.css("calendar-week-highlight uu5-forms-calendar-week-highlight"),
@@ -81,9 +83,9 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
         otherSectionsHidden: ns.css("calendar-hide-other-sections")
       },
       defaults: {
-        prevIcon: 'mdi-chevron-left',
-        nextIcon: 'mdi-chevron-right',
-        format: 'dd.mm.Y'
+        prevIcon: "mdi-chevron-left",
+        nextIcon: "mdi-chevron-right",
+        format: "dd.mm.Y"
       },
       errors: {
         rangeNotSupported: "This calendar doesn's support date range selection",
@@ -93,7 +95,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
         beforeRangeMessage: "The begining value of the date range (%s) is out of allowed range.",
         afterRangeMessage: "The ending value of the date range (%s) is out of allowed range."
       },
-      lsi: () => (UU5.Environment.Lsi.Bricks.calendar)
+      lsi: () => UU5.Environment.Lsi.Bricks.calendar
     },
     //@@viewOff:statics
 
@@ -102,25 +104,11 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
       value: PropTypes.oneOfType([
         PropTypes.object,
         PropTypes.string,
-        PropTypes.arrayOf(
-          PropTypes.oneOfType([
-            PropTypes.object,
-            PropTypes.string
-          ])
-        )
+        PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object, PropTypes.string]))
       ]),
-      dateFrom: PropTypes.oneOfType([
-        PropTypes.object,
-        PropTypes.string
-      ]),
-      dateTo: PropTypes.oneOfType([
-        PropTypes.object,
-        PropTypes.string
-      ]),
-      displayDate: PropTypes.oneOfType([
-        PropTypes.object,
-        PropTypes.string
-      ]),
+      dateFrom: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+      dateTo: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+      displayDate: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
       selectionMode: PropTypes.oneOf(["single", "range"]),
       minSelection: PropTypes.oneOf(["days", "months", "years"]),
       showTodayButton: PropTypes.bool,
@@ -155,9 +143,11 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
     },
     //@@viewOff:getDefaultProps
 
-    //@@viewOn:standardComponentLifeCycle
+    //@@viewOn:reactLifeCycle
     getInitialState() {
-      let value = Array.isArray(this.props.value) ? [this._parseDate(this.props.value[0]), this._parseDate(this.props.value[1])] : this._parseDate(this.props.value);
+      let value = Array.isArray(this.props.value)
+        ? [this._parseDate(this.props.value[0]), this._parseDate(this.props.value[1])]
+        : this._parseDate(this.props.value);
       let dateFrom = this._parseDate(this.props.dateFrom);
       let dateTo = this._parseDate(this.props.dateTo);
 
@@ -178,7 +168,9 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
 
     componentWillReceiveProps(nextProps) {
       if (nextProps.controlled) {
-        let value = Array.isArray(nextProps.value) ? [this._parseDate(nextProps.value[0]), this._parseDate(nextProps.value[1])] : this._parseDate(nextProps.value);
+        let value = Array.isArray(nextProps.value)
+          ? [this._parseDate(nextProps.value[0]), this._parseDate(nextProps.value[1])]
+          : this._parseDate(nextProps.value);
         let dateFrom = this._parseDate(nextProps.dateFrom);
         let dateTo = this._parseDate(nextProps.dateTo);
 
@@ -196,7 +188,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
         this.setState({ ...state });
       }
     },
-    //@@viewOff:standardComponentLifeCycle
+    //@@viewOff:reactLifeCycle
 
     //@@viewOn:interface
     setPrevious(setStateCallback) {
@@ -246,7 +238,10 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
 
       if (this.props.selectionMode === "range") {
         if (this.state.value && this.state.value.length === 1) {
-          if (this._compareDates(value, this.state.value[0], "greater") || this._compareDates(value, this.state.value[0], "equals")) {
+          if (
+            this._compareDates(value, this.state.value[0], "greater") ||
+            this._compareDates(value, this.state.value[0], "equals")
+          ) {
             value = [this.state.value[0], value];
           } else {
             value = [value];
@@ -280,10 +275,10 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
     },
     //@@viewOff:interface
 
-    //@@viewOn:overridingMethods
-    //@@viewOff:overridingMethods
+    //@@viewOn:overriding
+    //@@viewOff:overriding
 
-    //@@viewOn:componentSpecificHelpers
+    //@@viewOn:private
     _parseDate(dates) {
       let result;
 
@@ -315,7 +310,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
     },
 
     _getDisplayedDate(displayDate, props = this.props) {
-      if (typeof displayDate === 'string') {
+      if (typeof displayDate === "string") {
         displayDate = this._parseDate(displayDate);
       } else if (!displayDate) {
         displayDate = new Date(Date.now());
@@ -323,7 +318,10 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
 
       let result = {
         allowDisplayMonths: (!props.minSelection || props.minSelection != "years") && props.selectionMode === "single",
-        allowDisplayDays: !props.minSelection || (props.minSelection != "months" && props.minSelection != "years") || props.selectionMode === "range"
+        allowDisplayDays:
+          !props.minSelection ||
+          (props.minSelection != "months" && props.minSelection != "years") ||
+          props.selectionMode === "range"
       };
 
       if (result.allowDisplayDays) {
@@ -358,12 +356,12 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
       let state = this.state;
 
       if (state.displayMode == "days") {
-        result = this.getLsiValue('monthNames')[state.month - 1] + ' ' + state.year;
+        result = this.getLsiValue("monthNames")[state.month - 1] + " " + state.year;
       } else if (state.displayMode == "months") {
-        result = state.year + '';
+        result = state.year + "";
       } else if (state.displayMode == "years") {
         let century = state.century * 100;
-        result = (century + (state.decade * 10)) + ' - ' + (century + ((state.decade + 1) * 10 - 1));
+        result = century + state.decade * 10 + " - " + (century + ((state.decade + 1) * 10 - 1));
       }
 
       return result;
@@ -437,12 +435,14 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
     },
 
     _isValidMonth(date) {
-      let dateFromValid = true, dateToValid = true;
+      let dateFromValid = true,
+        dateToValid = true;
 
       if (this.state.dateFrom) {
         dateFromValid =
           this.state.dateFrom.getFullYear() < date.getFullYear() ||
-          (this.state.dateFrom.getMonth() <= date.getMonth() && this.state.dateFrom.getFullYear() === date.getFullYear());
+          (this.state.dateFrom.getMonth() <= date.getMonth() &&
+            this.state.dateFrom.getFullYear() === date.getFullYear());
       }
 
       if (this.state.dateTo) {
@@ -461,10 +461,12 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
     },
 
     _isValidDecade(date) {
-      const dateFromValid = this.state.dateFrom ?
-        parseInt(this.state.dateFrom.getFullYear()/10) <= parseInt(date.getFullYear()/10) : true;
-      const dateToValid = this.state.dateTo ?
-        parseInt(this.state.dateTo.getFullYear()/10) >= parseInt(date.getFullYear()/10) : true;
+      const dateFromValid = this.state.dateFrom
+        ? parseInt(this.state.dateFrom.getFullYear() / 10) <= parseInt(date.getFullYear() / 10)
+        : true;
+      const dateToValid = this.state.dateTo
+        ? parseInt(this.state.dateTo.getFullYear() / 10) >= parseInt(date.getFullYear() / 10)
+        : true;
 
       return dateFromValid && dateToValid;
     },
@@ -500,7 +502,6 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
         } else {
           return this;
         }
-
       } else if (state.displayMode == "months") {
         newDate = new Date(state.year + value, 0);
 
@@ -509,7 +510,6 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
         } else {
           return this;
         }
-
       } else if (state.displayMode == "years") {
         let newDecade = state.decade + value;
         let century = state.century;
@@ -554,16 +554,17 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
     },
 
     _isDateInRange(date) {
-      return this._compareDates(date, this.state.value[0], "greater") && this._compareDates(date, this.state.value[1], "lesser");
+      return (
+        this._compareDates(date, this.state.value[0], "greater") &&
+        this._compareDates(date, this.state.value[1], "lesser")
+      );
     },
 
     _getWeeks() {
-      let ths = this.getLsiValue('dayNames').map(dayName => {
+      let ths = this.getLsiValue("dayNames").map(dayName => {
         return (
           <th className={this.getClassName().dayName} title={dayName} key={dayName}>
-            <div className={this.getClassName("dayCell")}>
-              {dayName.substr(0, 2)}
-            </div>
+            <div className={this.getClassName("dayCell")}>{dayName.substr(0, 2)}</div>
           </th>
         );
       });
@@ -643,17 +644,25 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
       let trs = [];
       let tds = [];
       while (activeDate <= lastSundayDate) {
-        let className = this.getClassName().cell + ' ' + this.getClassName().day;
+        let className = this.getClassName().cell + " " + this.getClassName().day;
         let colorSchema = this.getColorSchema();
         if (colorSchema) dayCellClassName += " " + "color-schema-" + colorSchema;
         if (this.isDisabled()) className += " " + this.getClassName("disabled");
-        let enabled = (!this.state.dateFrom || this.state.dateFrom <= activeDate) && (!this.state.dateTo || this.state.dateTo >= activeDate);
+        let enabled =
+          (!this.state.dateFrom || this.state.dateFrom <= activeDate) &&
+          (!this.state.dateTo || this.state.dateTo >= activeDate);
 
-        !enabled && (className += ' ' + this.getClassName().disabled + ' ' + this.getClassName().anotherSection);
+        !enabled && (className += " " + this.getClassName().disabled + " " + this.getClassName().anotherSection);
 
-        let isActive = Array.isArray(this.state.value) ? this._compareDates(this.state.value[0], activeDate, "equals") || this._compareDates(this.state.value[1], activeDate, "equals") : this._compareDates(this.state.value, activeDate, "equals");
+        let isActive = Array.isArray(this.state.value)
+          ? this._compareDates(this.state.value[0], activeDate, "equals") ||
+            this._compareDates(this.state.value[1], activeDate, "equals")
+          : this._compareDates(this.state.value, activeDate, "equals");
         let onClick = enabled ? this._setDay.bind(this, activeDate) : null;
-        let isInRange = Array.isArray(this.state.value) && (activeDate.getMonth() === activeMonthIndex) ? this._isDateInRange(activeDate) : false;
+        let isInRange =
+          Array.isArray(this.state.value) && activeDate.getMonth() === activeMonthIndex
+            ? this._isDateInRange(activeDate)
+            : false;
 
         if (isInRange) {
           className += " " + this.getClassName().activeSelection;
@@ -665,14 +674,20 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
         let cellWrapperClassName = this.getClassName("selection");
         if (this.isDisabled()) cellWrapperClassName += " " + this.getClassName("disabled");
         if (colorSchema) cellWrapperClassName += " " + "color-schema-" + colorSchema;
-        if (isActive && ((this.props.selectionMode === "range" && activeDate.getMonth() === activeMonthIndex) || this.props.selectionMode === "single")) {
-          className += ' ' + this.getClassName().active;
+        if (
+          isActive &&
+          ((this.props.selectionMode === "range" && activeDate.getMonth() === activeMonthIndex) ||
+            this.props.selectionMode === "single")
+        ) {
+          className += " " + this.getClassName().active;
           if (this.props.selectionMode === "single") {
             onClick = null;
           }
 
-          let isSelectionStart = Array.isArray(this.state.value) && this._compareDates(this.state.value[0], activeDate, "equals");
-          let isSelectionEnd = Array.isArray(this.state.value) && this._compareDates(this.state.value[1], activeDate, "equals");
+          let isSelectionStart =
+            Array.isArray(this.state.value) && this._compareDates(this.state.value[0], activeDate, "equals");
+          let isSelectionEnd =
+            Array.isArray(this.state.value) && this._compareDates(this.state.value[1], activeDate, "equals");
 
           if (isSelectionStart) {
             className += " " + this.getClassName().activeSelectionStart;
@@ -680,13 +695,13 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
             className += " " + this.getClassName().activeSelectionEnd;
           }
         } else if (this._compareDates(today, activeDate, "equals")) {
-          className += ' ' + this.getClassName().today;
+          className += " " + this.getClassName().today;
         } else if (activeDate.getMonth() === activeMonthIndex) {
-          className += ' ' + this.getClassName().activeSection;
+          className += " " + this.getClassName().activeSection;
         }
 
         if (activeDate.getMonth() !== activeMonthIndex) {
-          className += ' ' + this.getClassName().anotherSection;
+          className += " " + this.getClassName().anotherSection;
 
           if (this.props.hidePrevSelection && activeDate.getMonth() < activeMonthIndex) {
             onClick = null;
@@ -698,7 +713,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
         }
 
         let content;
-        if (this._compareDates(activeDate, today, "equals") && (activeDate.getMonth() === activeMonthIndex)) {
+        if (this._compareDates(activeDate, today, "equals") && activeDate.getMonth() === activeMonthIndex) {
           content = <span className={this.getClassName("underline")}>{activeDate.getDate()}</span>;
         } else if (activeDate.getMonth() === activeMonthIndex) {
           content = activeDate.getDate();
@@ -710,7 +725,11 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
         }
 
         tds.push(
-          <td key={'day-' + activeDate.toISOString()} className={className} onClick={this.isDisabled() ? null : onClick}>
+          <td
+            key={"day-" + activeDate.toISOString()}
+            className={className}
+            onClick={this.isDisabled() ? null : onClick}
+          >
             <div className={cellWrapperClassName}>
               <div className={dayCellClassName}>{content}</div>
             </div>
@@ -719,14 +738,14 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
         if (activeDate.getDay() === 1 && !this.props.hideWeekNumber) {
           let weekNum = this._getWeek(activeDate);
           tds.unshift(
-            <th key={'week-' + weekNum} className={this.getClassName("weekNumber")}>
-              <div className={this.getClassName("dayCell")}>{weekNum + '.'}</div>
+            <th key={"week-" + weekNum} className={this.getClassName("weekNumber")}>
+              <div className={this.getClassName("dayCell")}>{weekNum + "."}</div>
             </th>
           );
         }
         if (activeDate.getDay() === 0) {
           trs.push(
-            <tr key={'row-' + activeDate.toISOString()} className={this.getClassName().week}>
+            <tr key={"row-" + activeDate.toISOString()} className={this.getClassName().week}>
               {tds}
             </tr>
           );
@@ -747,7 +766,8 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
 
       /*this.getLsiValue('monthNames')*/
       ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"].forEach((name, i) => {
-        let className = calendar.getClassName().cell + ' ' + calendar.getClassName().xsCell + ' ' + calendar.getClassName().month;
+        let className =
+          calendar.getClassName().cell + " " + calendar.getClassName().xsCell + " " + calendar.getClassName().month;
         let colorSchema = this.getColorSchema();
 
         if (this.isDisabled()) {
@@ -760,23 +780,24 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
 
         const enabled = this._isValidMonth(new Date(calendar.state.year, i));
 
-        !enabled && (className += ' ' + calendar.getClassName().disabled + ' ' + this.getClassName().anotherSection);
+        !enabled && (className += " " + calendar.getClassName().disabled + " " + this.getClassName().anotherSection);
 
         let onClick = enabled ? calendar._setMonth.bind(calendar, i + 1) : null;
 
         if (displayDate && calendar.state.year === displayDate.getFullYear() && i === displayDate.getMonth()) {
-          className += ' ' + calendar.getClassName().active;
+          className += " " + calendar.getClassName().active;
         } else if (calendar.state.year === today.getFullYear() && i === today.getMonth()) {
-          className += ' ' + calendar.getClassName().today;
+          className += " " + calendar.getClassName().today;
         }
 
         tds.push(
-          <td className={calendar.getClassName().specCell} key={i} >
+          <td className={calendar.getClassName().specCell} key={i}>
             <div className={className} title={name} onClick={this.isDisabled() ? null : onClick}>
-              {
-                (calendar.state.year === today.getFullYear() && i === today.getMonth()) ?
-                  <span className={this.getClassName("underline")}>{name}</span> : name
-              }
+              {calendar.state.year === today.getFullYear() && i === today.getMonth() ? (
+                <span className={this.getClassName("underline")}>{name}</span>
+              ) : (
+                name
+              )}
             </div>
           </td>
         );
@@ -801,7 +822,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
       let displayDate = this.getValue();
 
       for (let i = 0; i < 13; i++) {
-        let className = this.getClassName().cell + ' ' + this.getClassName().xsCell + ' ' + this.getClassName().year;
+        let className = this.getClassName().cell + " " + this.getClassName().xsCell + " " + this.getClassName().year;
         let colorSchema = this.getColorSchema();
 
         if (this.isDisabled()) {
@@ -815,23 +836,26 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
         let year = this.state.century * 100 + this.state.decade * 10 + i - 1;
 
         let enabled = false;
-        if ((!this.state.dateFrom || this.state.dateFrom.getFullYear() <= year) && (!this.state.dateTo || this.state.dateTo.getFullYear() >= year)) {
+        if (
+          (!this.state.dateFrom || this.state.dateFrom.getFullYear() <= year) &&
+          (!this.state.dateTo || this.state.dateTo.getFullYear() >= year)
+        ) {
           enabled = true;
         }
 
-        !enabled && (className += ' ' + this.getClassName().disabled + ' ' + this.getClassName().anotherSection);
+        !enabled && (className += " " + this.getClassName().disabled + " " + this.getClassName().anotherSection);
 
         let onClick = enabled ? this._setYear.bind(this, year) : null;
         let content = year;
 
         if (displayDate && year === displayDate.getFullYear()) {
-          className += ' ' + this.getClassName().active;
+          className += " " + this.getClassName().active;
         } else if (year === today.getFullYear()) {
-          className += ' ' + this.getClassName().today;
+          className += " " + this.getClassName().today;
         } else if (i > 0 && i < 11) {
-          className += ' ' + this.getClassName().activeSection;
+          className += " " + this.getClassName().activeSection;
         } else {
-          className += ' ' + this.getClassName().anotherSection;
+          className += " " + this.getClassName().anotherSection;
           if (this.props.hideOtherSections) {
             content = null;
             onClick = null;
@@ -845,12 +869,13 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
         }
 
         tds.push(
-          <td className={this.getClassName().specCell}key={i} >
+          <td className={this.getClassName().specCell} key={i}>
             <div className={className} onClick={this.isDisabled() ? null : onClick}>
-              {
-                (year === today.getFullYear()) ?
-                  <span className={this.getClassName("underline")}>{content}</span> : content
-              }
+              {year === today.getFullYear() ? (
+                <span className={this.getClassName("underline")}>{content}</span>
+              ) : (
+                content
+              )}
             </div>
           </td>
         );
@@ -876,7 +901,9 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
         let state = {};
         let value = null;
         if (formatedDate) {
-          value = Array.isArray(opt.value) ? [this._parseDate(opt.value[0]), this._parseDate(opt.value[1])] : this._parseDate(opt.value);
+          value = Array.isArray(opt.value)
+            ? [this._parseDate(opt.value[0]), this._parseDate(opt.value[1])]
+            : this._parseDate(opt.value);
           state = { ...dateInfo, ...{ value: value } };
         }
         opt.value = value;
@@ -919,7 +946,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
       let colSpan = this.state.displayMode == "days" ? 6 : 2;
 
       if ((!prevActive && !this.props.hidePrevSelection) || this.isDisabled()) {
-        prevClassName += ' ' + this.getClassName().disabled
+        prevClassName += " " + this.getClassName().disabled;
       }
 
       if (this.props.hidePrevSelection) {
@@ -927,7 +954,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
       }
 
       if ((!nextActive && !this.props.hideNextSelection) || this.isDisabled()) {
-        nextClassName += ' ' + this.getClassName().disabled
+        nextClassName += " " + this.getClassName().disabled;
       }
 
       if (this.props.hideNextSelection) {
@@ -950,14 +977,25 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
         <thead className={this.getClassName().thead}>
           <tr className={this.getClassName().headRow}>
             <th className={prevClassName} onClick={prevActive && !this.isDisabled() ? this._prevClick : null}>
-              {this.props.hidePrevSelection ? null : <UU5.Bricks.Icon className={this.getClassName().icon} icon={this.getDefault().prevIcon} />}
+              {this.props.hidePrevSelection ? null : (
+                <UU5.Bricks.Icon className={this.getClassName().icon} icon={this.getDefault().prevIcon} />
+              )}
             </th>
-            <th className={headCellClassName} colSpan={colSpan}
-                onClick={this.state.displayMode == "years" || this.props.selectionMode === "range" || this.isDisabled() ? null : this._headerClick}>
+            <th
+              className={headCellClassName}
+              colSpan={colSpan}
+              onClick={
+                this.state.displayMode == "years" || this.props.selectionMode === "range" || this.isDisabled()
+                  ? null
+                  : this._headerClick
+              }
+            >
               {this._getHeaderText()}
             </th>
             <th className={nextClassName} onClick={nextActive && !this.isDisabled() ? this._nextClick : null}>
-              {this.props.hideNextSelection ? null : <UU5.Bricks.Icon className={this.getClassName().icon} icon={this.getDefault().nextIcon} />}
+              {this.props.hideNextSelection ? null : (
+                <UU5.Bricks.Icon className={this.getClassName().icon} icon={this.getDefault().nextIcon} />
+              )}
             </th>
           </tr>
           {this.state.displayMode == "days" ? this._getWeeks() : null}
@@ -983,9 +1021,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
       let result = null;
 
       if (!this.props.hideWeekNumber && this.state.displayMode === "days") {
-        result = (
-          <span className={this.getClassName("weekColumnHighlight")} />
-        );
+        result = <span className={this.getClassName("weekColumnHighlight")} />;
       }
 
       return result;
@@ -1000,11 +1036,11 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
       let className = this.getClassName().table;
 
       if (this.state.displayMode == "days") {
-        className += ' ' + this.getClassName().monthTable;
+        className += " " + this.getClassName().monthTable;
       } else if (this.state.displayMode == "months") {
-        className += ' ' + this.getClassName().yearTable;
+        className += " " + this.getClassName().yearTable;
       } else if (this.state.displayMode == "years") {
-        className += ' ' + this.getClassName().decadeTable;
+        className += " " + this.getClassName().decadeTable;
       }
 
       if (this.props.hideWeekNumber) {
@@ -1045,7 +1081,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
 
       return result;
     },
-    //@@viewOff:componentSpecificHelpers
+    //@@viewOff:private
 
     //@@viewOn:render
     render() {

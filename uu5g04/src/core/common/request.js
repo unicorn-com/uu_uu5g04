@@ -15,11 +15,10 @@ const ERRORS = {
   "uu5/e001": "No internet connection",
   "uu5/e002": "Unknown Error",
   "uu5/e004": "Client Error",
-  "uu5/e005": "Server Error",
+  "uu5/e005": "Server Error"
 };
 
 class UU5Request {
-
   static call(method, url, data, opt = {}) {
     let headers = { ...opt.headers };
     headers["Content-Type"] = headers["Content-Type"] || "application/json";
@@ -57,7 +56,7 @@ class UU5Request {
             dataPromise = contentType.startsWith("text/") ? response.text() : response.blob();
           }
 
-          return { response, dataPromise }
+          return { response, dataPromise };
         })
         .then(({ response, dataPromise }) => {
           if (response.status === 200) {
@@ -110,28 +109,28 @@ class UU5Request {
     }
 
     return dtoOut;
-  };
+  }
 
-  static _encodeValue = (value) => {
-    let result = value + '';
+  static _encodeValue = value => {
+    let result = value + "";
 
-    if (value && (Array.isArray(value) || typeof value === 'object')) {
+    if (value && (Array.isArray(value) || typeof value === "object")) {
       result = JSON.stringify(value);
     }
 
     return encodeURIComponent(result);
   };
 
-  static _encodeQuery = (params) => {
-    let query = '?';
+  static _encodeQuery = params => {
+    let query = "?";
 
     for (let name in params) {
-      query += name + '=' + UU5Request._encodeValue(params[name]) + '&';
+      query += name + "=" + UU5Request._encodeValue(params[name]) + "&";
     }
 
     return query.substr(0, query.length - 1);
   };
 }
 
-export {UU5Request as Request}
-export default UU5Request
+export { UU5Request as Request };
+export default UU5Request;

@@ -63,6 +63,14 @@
   var Page = createReactClass({
     render() {
       let menuActions = [
+        {
+          icon: "mdi-settings-outline",
+          content: "Settings",
+          active: true,
+          onClick: () => console.log("settings"),
+          colorSchema: "primary",
+          bgStyle: "filled"
+        },
         { icon: "mdi-phone", content: "Call", onClick: () => console.log("phone") },
         { icon: "mdi-email", content: "Send E-mail", onClick: () => console.log("email") }
       ];
@@ -260,22 +268,58 @@
         <UU5.Bricks.Container>
           <UU5.Bricks.LanguageSelector />
 
-          {examples.map((component, i) => (
-            <UU5.Bricks.Row key={"row-" + i}>
-              <UU5.Bricks.Column colWidth="m-6">
-                <div className="tile colored">
-                  <div className="margin">
-                    {component}
-                  </div>
-                </div>
-              </UU5.Bricks.Column>
-              <UU5.Bricks.Column colWidth="m-6">
-                <div className="tile">
-                  {component}
-                </div>
-              </UU5.Bricks.Column>
-            </UU5.Bricks.Row>
-          ))}
+          <br />
+
+          <UU5.BlockLayout.Tile width={400}>
+            <UU5.BlockLayout.Block actions={menuActions}>
+              <UU5.BlockLayout.Row>
+                <UU5.BlockLayout.Column width={72}>
+                  <UU5.BlockLayout.Text content={"Test"} weight="primary" />
+                </UU5.BlockLayout.Column>
+                <UU5.BlockLayout.Column>
+                  <UU5.BlockLayout.Text content={"Bla bla"} />
+                </UU5.BlockLayout.Column>
+              </UU5.BlockLayout.Row>
+              <UU5.BlockLayout.Row className="css-grid">
+                <UU5.BlockLayout.Column width={72}>
+                  <UU5.BlockLayout.Text content={"Test 2"} weight="primary" />
+                </UU5.BlockLayout.Column>
+                <UU5.BlockLayout.Column>
+                  <UU5.BlockLayout.Text content={"Bla bla 2"} />
+                </UU5.BlockLayout.Column>
+              </UU5.BlockLayout.Row>
+            </UU5.BlockLayout.Block>
+          </UU5.BlockLayout.Tile>
+
+          <br />
+
+          <UU5.BlockLayout.Tile width={400}>
+            <UU5.BlockLayout.Block actions={[
+              { icon: "mdi-phone", content: "Call", onClick: () => console.log("phone") },
+              { icon: "mdi-email", content: "Send E-mail", onClick: () => console.log("email") }
+            ]}>
+              <UU5.BlockLayout.Row>
+                <UU5.Bricks.Row className={UU5.Common.Css.css`margin: 0 -8px;`}>
+                  <UU5.Bricks.Column colWidth="s-6">
+                    <UU5.BlockLayout.Text content={"Test"} weight="primary" />
+                  </UU5.Bricks.Column>
+                  <UU5.Bricks.Column colWidth="s-6">
+                    <UU5.BlockLayout.Text content={"Bla bla"} />
+                  </UU5.Bricks.Column>
+                </UU5.Bricks.Row>
+              </UU5.BlockLayout.Row>
+              <UU5.BlockLayout.Row>
+                <UU5.Bricks.Row className={UU5.Common.Css.css`margin: 0 -8px;`}>
+                  <UU5.Bricks.Column colWidth="s-6">
+                    <UU5.BlockLayout.Text content={"Test"} weight="primary" />
+                  </UU5.Bricks.Column>
+                  <UU5.Bricks.Column colWidth="s-6">
+                    <UU5.BlockLayout.Text content={"Bla bla"} />
+                  </UU5.Bricks.Column>
+                </UU5.Bricks.Row>
+              </UU5.BlockLayout.Row>
+            </UU5.BlockLayout.Block>
+          </UU5.BlockLayout.Tile>
         </UU5.Bricks.Container>
       );
     }

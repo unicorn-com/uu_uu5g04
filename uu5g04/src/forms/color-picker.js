@@ -11,6 +11,7 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import React from "react";
 import createReactClass from "create-react-class";
 import PropTypes from "prop-types";
@@ -25,6 +26,7 @@ import Loading from "./internal/loading.js";
 import Css from "./internal/css.js";
 
 import Context from "./form-context.js";
+//@@viewOff:imports
 
 export const ColorPicker = Context.withContext(
   createReactClass({
@@ -44,7 +46,8 @@ export const ColorPicker = Context.withContext(
       tagName: ns.name("ColorPicker"),
       classNames: {
         main: ns.css("color-picker"),
-        loading: () => Css.css(`
+        loading: () =>
+          Css.css(`
           position: absolute;
           top: 0;
           right: 0;
@@ -54,7 +57,8 @@ export const ColorPicker = Context.withContext(
           width: 24px;
           height: 24px;
         `),
-        pickerButton: () => Css.css(`
+        pickerButton: () =>
+          Css.css(`
           padding: 4px;
           color: black;
           text-align: left;
@@ -87,8 +91,8 @@ export const ColorPicker = Context.withContext(
       required: PropTypes.bool,
       requiredMessage: PropTypes.any,
       borderRadius: PropTypes.string,
-      bgStyle: PropTypes.oneOf(['filled', 'outline', 'transparent', 'underline']),
-      elevation: PropTypes.oneOf(['-1', '0', '1', '2', '3', '4', '5', -1, 0, 1, 2, 3, 4, 5]),
+      bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+      elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
       openToContent: PropTypes.oneOfType([PropTypes.bool, PropTypes.string])
     },
     //@@viewOff:propTypes
@@ -109,7 +113,7 @@ export const ColorPicker = Context.withContext(
     },
     //@@viewOff:getDefaultProps
 
-    //@@viewOn:standardComponentLifeCycle
+    //@@viewOn:reactLifeCycle
     getInitialState() {
       return {
         open: false
@@ -127,7 +131,7 @@ export const ColorPicker = Context.withContext(
         }
       }
     },
-    //@@viewOff:standardComponentLifeCycle
+    //@@viewOff:reactLifeCycle
 
     //@@viewOn:interface
     open(setStateCallback) {
@@ -137,7 +141,12 @@ export const ColorPicker = Context.withContext(
       this.setState(state => (state.open ? null : { open: true }), setStateCallback);
 
       if (this._shouldOpenToContent()) {
-        UU5.Common.Tools.scrollToTarget(this.getId() + "-button", false, UU5.Environment._fixedOffset + 20);
+        UU5.Common.Tools.scrollToTarget(
+          this.getId() + "-button",
+          false,
+          UU5.Environment._fixedOffset + 20,
+          this._findScrollElement(this._root)
+        );
       }
 
       return this;
@@ -156,9 +165,14 @@ export const ColorPicker = Context.withContext(
       this.setState(state => {
         // state open will be changed in future but now is false
         if (!state.open && this._shouldOpenToContent()) {
-          UU5.Common.Tools.scrollToTarget(this.getId() + "-button", false, UU5.Environment._fixedOffset + 20);
+          UU5.Common.Tools.scrollToTarget(
+            this.getId() + "-button",
+            false,
+            UU5.Environment._fixedOffset + 20,
+            this._findScrollElement(this._root)
+          );
         }
-        return { open: !state.open }
+        return { open: !state.open };
       }, setStateCallback);
       return this;
     },
@@ -168,11 +182,17 @@ export const ColorPicker = Context.withContext(
     },
 
     onChangeDefault(opt, setStateCallback) {
-      this.setValue(opt.value, () => this.isOpen() ? this.close(setStateCallback) : (typeof setStateCallback === "function" ? setStateCallback() : null));
+      this.setValue(opt.value, () =>
+        this.isOpen()
+          ? this.close(setStateCallback)
+          : typeof setStateCallback === "function"
+          ? setStateCallback()
+          : null
+      );
     },
     //@@viewOff:interface
 
-    //@@viewOn:overridingMethods
+    //@@viewOn:overriding
     setValue_(value, setStateCallback) {
       let result;
       if (typeof this.props.onValidate === "function") {
@@ -212,9 +232,13 @@ export const ColorPicker = Context.withContext(
       this.close();
       this.setDisabledValueDefault(value, setStateCallback);
     },
-    //@@viewOff:overridingMethods
+    //@@viewOff:overriding
 
-    //@@viewOn:componentSpecificHelpers
+    //@@viewOn:private
+    _registerRoot(ref) {
+      this._root = ref;
+    },
+
     _shouldOpenToContent() {
       let result = false;
 
@@ -315,16 +339,21 @@ export const ColorPicker = Context.withContext(
 
       return (
         <UU5.Bricks.Button {...props}>
-          {
-            this.isLoading() ?
-              <Loading className={this.getClassName("loading") + " " + ns.css("input-loading-icon")} id={this.getId()} /> :
-              UU5.Common.Tools.wrapIfExists(
-                React.Fragment,
-                <ColorPreview color={this.getValue() || null} size="s" width={24} borderRadius={this.props.borderRadius} />,
-                <UU5.Bricks.Icon icon="mdi-menu-down" />,
-                <span className="uu5-common-hidden" /> /* Disable special styles for icon:last-child from UU5  */
-              )
-          }
+          {this.isLoading() ? (
+            <Loading className={this.getClassName("loading") + " " + ns.css("input-loading-icon")} id={this.getId()} />
+          ) : (
+            UU5.Common.Tools.wrapIfExists(
+              React.Fragment,
+              <ColorPreview
+                color={this.getValue() || null}
+                size="s"
+                width={24}
+                borderRadius={this.props.borderRadius}
+              />,
+              <UU5.Bricks.Icon icon="mdi-menu-down" />,
+              <span className="uu5-common-hidden" /> /* Disable special styles for icon:last-child from UU5  */
+            )
+          )}
         </UU5.Bricks.Button>
       );
     },
@@ -332,6 +361,7 @@ export const ColorPicker = Context.withContext(
     _getMainAttrs() {
       let mainAttrs = this._getInputAttrs();
       mainAttrs.id = this.getId();
+      mainAttrs.ref = this._registerRoot;
 
       if (this.isOpen()) {
         mainAttrs.className += " " + this.getClassName("open");
@@ -365,7 +395,7 @@ export const ColorPicker = Context.withContext(
         this.props.onChange({ value: opt.value, component: this });
       }
     },
-    //@@viewOff:componentSpecificHelpers
+    //@@viewOff:private
 
     //@@viewOn:render
     render() {

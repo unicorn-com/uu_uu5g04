@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -14,20 +14,24 @@
 export const BricksLsi = {
   dataTable: {
     invalidDataLabel: {
-      en: 'Invalid data',
-      cs: 'Chybná data'
+      en: "Invalid data",
+      cs: "Chybná data"
     }
   },
   homeScreen: {
-    'cs-cs': {
-      iOS: '<uu5string/>Pro vytvoření zástupce této webové aplikace otevřte menu sdílení a vyberte <strong>Přidat na Plochu</strong>.',
-      android: '<uu5string/>Pro vytvoření zástupce této webové aplikace otevřte menu prohlížeče a vyberte <strong>Přidat na plochu</strong>.'
+    "cs-cs": {
+      iOS:
+        "<uu5string/>Pro vytvoření zástupce této webové aplikace otevřte menu sdílení a vyberte <strong>Přidat na Plochu</strong>.",
+      android:
+        "<uu5string/>Pro vytvoření zástupce této webové aplikace otevřte menu prohlížeče a vyberte <strong>Přidat na plochu</strong>."
     },
 
-    'en': {
-      iOS: '<uu5string/>To create a shortcut of this web app open the share menu and tap on <strong>Add to homescreen</strong>.',
-      android: '<uu5string/>To create a shortcut of this web app open the browser option menu and tap on <strong>Add to homescreen</strong>.'
-    },
+    en: {
+      iOS:
+        "<uu5string/>To create a shortcut of this web app open the share menu and tap on <strong>Add to homescreen</strong>.",
+      android:
+        "<uu5string/>To create a shortcut of this web app open the browser option menu and tap on <strong>Add to homescreen</strong>."
+    }
 
     /*'cs-cs': {
       iOS: '<uu5string/>Pro přidáni této webové aplikace na úvodní obrazovku: stlačte %icon a pak <strong>Přidat na úvodní obrazovku</strong>.',
@@ -151,48 +155,204 @@ export const BricksLsi = {
   },
   spreadsheet: {
     invalidDataLabel: {
-      cs: 'Chybná data',
-      nl: 'Onjuiste data',
-      en: 'Invalid data',
-      'en-gb': 'Invalid data',
-      'en-us': 'Invalid data',
-      fr:'Données invalides',
-      de:'Ungültige Daten',
-      pl:'Nieprawidłowe dane',
-      ru:'Неверные данные',
-      sk:'Neplatné údaje',
-      es:'Datos inválidos',
-      uk:'недостовірні дані'
+      cs: "Chybná data",
+      nl: "Onjuiste data",
+      en: "Invalid data",
+      "en-gb": "Invalid data",
+      "en-us": "Invalid data",
+      fr: "Données invalides",
+      de: "Ungültige Daten",
+      pl: "Nieprawidłowe dane",
+      ru: "Неверные данные",
+      sk: "Neplatné údaje",
+      es: "Datos inválidos",
+      uk: "недостовірні дані"
     }
   },
   calendar: {
     dayNames: {
-      cs: ['Pondělí', 'Úterý', 'Středa', 'Čtvrtek', 'Pátek', 'Sobota', 'Neděle'],
-      nl: ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag', 'Zondag'],
-      en: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      'en-gb': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      'en-us': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      fr: ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'],
-      de: ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag'],
-      pl: ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota', 'Niedziela'],
-      ru: ['Понедельник', 'Вторник', 'Cреда', 'Четверг', 'Пятница', 'Cуббота', 'Воскресенье'],
-      sk: ['Pondelok', 'Utorok', 'Streda', 'Štvrtok', 'Piatok', 'Sobota', 'Nedeľa'],
-      es: ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'],
-      uk: ['Понеділок', 'Вівторок', 'Cереда', 'Четвер', "П'ятниця", 'Cубота', 'Неділя']
+      cs: ["Pondělí", "Úterý", "Středa", "Čtvrtek", "Pátek", "Sobota", "Neděle"],
+      nl: ["Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag"],
+      en: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "en-gb": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "en-us": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      fr: ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"],
+      de: ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"],
+      pl: ["Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela"],
+      ru: ["Понедельник", "Вторник", "Cреда", "Четверг", "Пятница", "Cуббота", "Воскресенье"],
+      sk: ["Pondelok", "Utorok", "Streda", "Štvrtok", "Piatok", "Sobota", "Nedeľa"],
+      es: ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"],
+      uk: ["Понеділок", "Вівторок", "Cереда", "Четвер", "П'ятниця", "Cубота", "Неділя"]
     },
     monthNames: {
-      cs: ['Leden', 'Únor', 'Březen', 'Duben', 'Květen', 'Červen', 'Červenec', 'Srpen', 'Září', 'Říjen', 'Listopad', 'Prosinec'],
-      nl: ['Januari', 'Februari', 'Maart', 'April', 'Mei', 'Juni', 'Juli', 'Augustus', 'September', 'Oktober', 'November', 'December'],
-      en: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-      'en-gb': ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-      'en-us': ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-      fr: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
-      de: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
-      pl: ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień'],
-      ru: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-      sk: ['Január', 'Február', 'Marec', 'Apríl', 'Máj', 'Jún', 'Júl', 'August', 'September', 'Október', 'November', 'December'],
-      es: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-      uk: ['Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень']
+      cs: [
+        "Leden",
+        "Únor",
+        "Březen",
+        "Duben",
+        "Květen",
+        "Červen",
+        "Červenec",
+        "Srpen",
+        "Září",
+        "Říjen",
+        "Listopad",
+        "Prosinec"
+      ],
+      nl: [
+        "Januari",
+        "Februari",
+        "Maart",
+        "April",
+        "Mei",
+        "Juni",
+        "Juli",
+        "Augustus",
+        "September",
+        "Oktober",
+        "November",
+        "December"
+      ],
+      en: [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+      ],
+      "en-gb": [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+      ],
+      "en-us": [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+      ],
+      fr: [
+        "Janvier",
+        "Février",
+        "Mars",
+        "Avril",
+        "Mai",
+        "Juin",
+        "Juillet",
+        "Août",
+        "Septembre",
+        "Octobre",
+        "Novembre",
+        "Décembre"
+      ],
+      de: [
+        "Januar",
+        "Februar",
+        "März",
+        "April",
+        "Mai",
+        "Juni",
+        "Juli",
+        "August",
+        "September",
+        "Oktober",
+        "November",
+        "Dezember"
+      ],
+      pl: [
+        "Styczeń",
+        "Luty",
+        "Marzec",
+        "Kwiecień",
+        "Maj",
+        "Czerwiec",
+        "Lipiec",
+        "Sierpień",
+        "Wrzesień",
+        "Październik",
+        "Listopad",
+        "Grudzień"
+      ],
+      ru: [
+        "Январь",
+        "Февраль",
+        "Март",
+        "Апрель",
+        "Май",
+        "Июнь",
+        "Июль",
+        "Август",
+        "Сентябрь",
+        "Октябрь",
+        "Ноябрь",
+        "Декабрь"
+      ],
+      sk: [
+        "Január",
+        "Február",
+        "Marec",
+        "Apríl",
+        "Máj",
+        "Jún",
+        "Júl",
+        "August",
+        "September",
+        "Október",
+        "November",
+        "December"
+      ],
+      es: [
+        "Enero",
+        "Febrero",
+        "Marzo",
+        "Abril",
+        "Mayo",
+        "Junio",
+        "Julio",
+        "Agosto",
+        "Septiembre",
+        "Octubre",
+        "Noviembre",
+        "Diciembre"
+      ],
+      uk: [
+        "Січень",
+        "Лютий",
+        "Березень",
+        "Квітень",
+        "Травень",
+        "Червень",
+        "Липень",
+        "Серпень",
+        "Вересень",
+        "Жовтень",
+        "Листопад",
+        "Грудень"
+      ]
     },
     today: {
       cs: "Dnes",
@@ -250,8 +410,13 @@ export const BricksLsi = {
       cs: "Tato barva nemá žádné odstíny.",
       en: "Shades not available for this color."
     }
+  },
+  contextMenu: {
+    backButton: {
+      cs: "Zpět",
+      en: "Back"
+    }
   }
 };
 
 export default BricksLsi;
-

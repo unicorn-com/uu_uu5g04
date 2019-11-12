@@ -63,7 +63,7 @@ export const UU5String = class UU5String {
     this.clone = (data = this.data, initFn = this.initFn) => {
       let result = new UU5String(null, data);
       if (!this.content) return result;
-      result.content = this.content.map((item) => typeof item === "string" ? item : item.clone(initFn));
+      result.content = this.content.map(item => (typeof item === "string" ? item : item.clone(initFn)));
       return result;
     };
 
@@ -92,11 +92,11 @@ export const UU5String = class UU5String {
     return new UU5String(uu5string).toPlainText(data, filterFn);
   }
 
-  static contentToChildren(content, data, filterFn){
+  static contentToChildren(content, data, filterFn) {
     return UU5StringTools.contentToChildren(content, data, filterFn);
   }
 
-  static contentToString(content, data, filterFn){
+  static contentToString(content, data, filterFn) {
     return UU5StringTools.contentToString(content, data, filterFn);
   }
 

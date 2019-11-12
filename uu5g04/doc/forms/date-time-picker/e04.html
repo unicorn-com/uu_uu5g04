@@ -50,6 +50,11 @@
   import "uu5g04-bricks";
   import "uu5g04-forms";
 
+  let value = new Date();
+  value.setHours(10);
+  value.setMinutes(0);
+  value.setSeconds(0);
+
   const Page = createReactClass({
     render() {
       return (
@@ -119,6 +124,16 @@
             <UU5.Forms.DateTimePicker
               label="Date of appointment"
               country="en-us"
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="timeZone">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimePicker
+              label="2019-11-01 10:00 of GMT in +3 time zone"
+              value="2019-11-01T10:00:00Z"
+              timeZone={3}
             />
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>

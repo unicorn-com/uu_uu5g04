@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -18,8 +18,7 @@ import "uu5g04-bricks";
 const { mount, shallow, wait } = UU5.Test.Tools;
 
 describe(`UU5.Bricks.DateTime interface testing`, () => {
-
-  it('getFormat()', () => {
+  it("getFormat()", () => {
     const wrapper = shallow(
       <UU5.Bricks.DateTime
         id={"uuID01"}
@@ -32,13 +31,8 @@ describe(`UU5.Bricks.DateTime interface testing`, () => {
     expect(returnValue).toEqual("mm.dd.y HH:MM:SS T Z (w/52)");
   });
 
-  it('setFormat()', () => {
-    const wrapper = shallow(
-      <UU5.Bricks.DateTime
-        id={"uuID01"}
-        value={new Date(2017, 2, 10, 13, 20, 15, 356)}
-      />
-    );
+  it("setFormat()", () => {
+    const wrapper = shallow(<UU5.Bricks.DateTime id={"uuID01"} value={new Date(2017, 2, 10, 13, 20, 15, 356)} />);
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getFormat()).toBeNull();
@@ -54,7 +48,7 @@ describe(`UU5.Bricks.DateTime interface testing`, () => {
 
   //country="en-us
 
-  it('getCountry()', () => {
+  it("getCountry()", () => {
     const wrapper = shallow(
       <UU5.Bricks.DateTime
         country={"en-us"}
@@ -67,7 +61,7 @@ describe(`UU5.Bricks.DateTime interface testing`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setCountry(country, setStateCallBack)', () => {
+  it("setCountry(country, setStateCallBack)", () => {
     const wrapper = shallow(
       <UU5.Bricks.DateTime
         id={"uuID01"}
@@ -88,7 +82,7 @@ describe(`UU5.Bricks.DateTime interface testing`, () => {
     expect(wrapper.instance().getCountry()).toMatch(/en-us/);
   });
 
-  it('getTimeZone() default values is 1', () => {
+  it("getTimeZone() default values is 1", () => {
     const wrapper = shallow(
       <UU5.Bricks.DateTime
         id={"uuID01"}
@@ -97,12 +91,11 @@ describe(`UU5.Bricks.DateTime interface testing`, () => {
         language={"en-us"}
       />
     );
-    expect(wrapper.instance().getTimeZone()).toBe(-new Date().getTimezoneOffset()/60);
+    expect(wrapper.instance().getTimeZone()).toBe(-new Date().getTimezoneOffset() / 60);
     expect(wrapper).toMatchSnapshot();
   });
 
-
-  it('getTimeZone()', () => {
+  it("getTimeZone()", () => {
     const wrapper = shallow(
       <UU5.Bricks.DateTime
         id={"uuID01"}
@@ -116,7 +109,7 @@ describe(`UU5.Bricks.DateTime interface testing`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setTimeZone(timeZone,setStateCallBack)', () => {
+  it("setTimeZone(timeZone,setStateCallBack)", () => {
     const wrapper = shallow(
       <UU5.Bricks.DateTime
         id={"uuID01"}
@@ -126,7 +119,7 @@ describe(`UU5.Bricks.DateTime interface testing`, () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(wrapper.instance().getTimeZone()).toBe(-new Date().getTimezoneOffset()/60);
+    expect(wrapper.instance().getTimeZone()).toBe(-new Date().getTimezoneOffset() / 60);
     expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().setTimeZone(12.0, mockFunc);
     wrapper.update();
@@ -137,23 +130,21 @@ describe(`UU5.Bricks.DateTime interface testing`, () => {
     expect(wrapper.instance().getTimeZone()).toBe(12.0);
   });
 
-  it('setOptions(opt,setStateCallBack)', () => {
-    const wrapper = shallow(
-      <UU5.Bricks.DateTime
-        id={"uuID01"}
-        value={new Date(2017, 2, 10, 13, 20, 15, 356)}
-      />
-    );
+  it("setOptions(opt,setStateCallBack)", () => {
+    const wrapper = shallow(<UU5.Bricks.DateTime id={"uuID01"} value={new Date(2017, 2, 10, 13, 20, 15, 356)} />);
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getFormat()).toBeNull();
     expect(wrapper.instance().getCountry()).toBeNull();
-    expect(wrapper.instance().getTimeZone()).toBe(-new Date().getTimezoneOffset()/60);
-    const returnValue = wrapper.instance().setOptions({
-      format: "mm.dd.y HH:MM:SS",
-      country: "en-us",
-      timeZone: 5.0
-    }, mockFunc);
+    expect(wrapper.instance().getTimeZone()).toBe(-new Date().getTimezoneOffset() / 60);
+    const returnValue = wrapper.instance().setOptions(
+      {
+        format: "mm.dd.y HH:MM:SS",
+        country: "en-us",
+        timeZone: 5.0
+      },
+      mockFunc
+    );
     wrapper.update();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getFormat()).not.toBeNull();
@@ -166,5 +157,4 @@ describe(`UU5.Bricks.DateTime interface testing`, () => {
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
   });
-
 });

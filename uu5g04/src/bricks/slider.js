@@ -1,28 +1,29 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
-import Backdrop from './backdrop.js';
-import './slider.less';
-import SliderItem from './slider-item.js';
+import Backdrop from "./backdrop.js";
+import "./slider.less";
+import SliderItem from "./slider-item.js";
+//@@viewOff:imports
 
 export const Slider = createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -37,7 +38,7 @@ export const Slider = createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("Slider"),
-    nestingLevelList: UU5.Environment.getNestingLevelList('bigBoxCollection', 'box'),
+    nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
       main: ns.css("slider"),
       vertical: ns.css("slider-vertical"),
@@ -48,7 +49,7 @@ export const Slider = createReactClass({
       size: ns.css("slider-size-")
     },
     defaults: {
-      childTagName: 'UU5.Bricks.Slider.Item'
+      childTagName: "UU5.Bricks.Slider.Item"
     }
   },
   //@@viewOff:statics
@@ -59,14 +60,11 @@ export const Slider = createReactClass({
     min: PropTypes.number,
     max: PropTypes.number,
     step: PropTypes.number,
-    value: PropTypes.oneOfType([
-      PropTypes.number,
-      PropTypes.arrayOf(PropTypes.number)
-    ]),
+    value: PropTypes.oneOfType([PropTypes.number, PropTypes.arrayOf(PropTypes.number)]),
     onChange: PropTypes.func,
     onChanged: PropTypes.func,
-    size: PropTypes.oneOf(['s', 'm', 'l', 'xl']),
-    allowTags: PropTypes.array,
+    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
+    allowTags: PropTypes.array
   },
   //@@viewOff:propTypes
 
@@ -79,14 +77,14 @@ export const Slider = createReactClass({
       step: 1,
       onChange: null,
       onChanged: null,
-      size: 'm',
+      size: "m",
       allowTags: [],
-      value: null, // default: min
+      value: null // default: min
     };
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     this._pointers = [];
 
@@ -102,7 +100,7 @@ export const Slider = createReactClass({
     }
   },
 
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   getPointers() {
@@ -121,7 +119,7 @@ export const Slider = createReactClass({
     let values = this._getValueArray(value);
 
     values.forEach((item, i) => {
-      this._pointers[i] && this._pointers[i].setValue(item, setStateCallback)
+      this._pointers[i] && this._pointers[i].setValue(item, setStateCallback);
     });
 
     return this;
@@ -131,7 +129,7 @@ export const Slider = createReactClass({
     let values = this._getValueArray(value);
 
     values.forEach((item, i) => {
-      this._pointers[i] && this._pointers[i].increase(item, setStateCallback)
+      this._pointers[i] && this._pointers[i].increase(item, setStateCallback);
     });
 
     return this;
@@ -141,14 +139,14 @@ export const Slider = createReactClass({
     let values = this._getValueArray(value);
 
     values.forEach((item, i) => {
-      this._pointers[i] && this._pointers[i].decrease(item, setStateCallback)
+      this._pointers[i] && this._pointers[i].decrease(item, setStateCallback);
     });
 
     return this;
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
+  //@@viewOn:overriding
   expandChildProps_(child, childIndex) {
     const newChildProps = { ...child.props };
     newChildProps.name = newChildProps.name || (this.props.name ? this.props.name + "-" + childIndex : null);
@@ -179,37 +177,45 @@ export const Slider = createReactClass({
     let defaultChildTagName = this.getDefault().childTagName;
     let childTagNames = this.props.allowTags.concat(defaultChildTagName);
     let result = childTagNames.indexOf(childTagName) > -1;
-    if (!result && (typeof child !== 'string' || child.trim())) {
-      if (childTagName) this.showError('childTagNotAllowed', [childTagName, this.getTagName(), childTagName, defaultChildTagName], { mixinName: 'UU5.Common.BaseMixin' });
-      else this.showError('childNotAllowed', [child, defaultChildTagName], { mixinName: 'UU5.Common.BaseMixin' });
+    if (!result && (typeof child !== "string" || child.trim())) {
+      if (childTagName)
+        this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagName], {
+          mixinName: "UU5.Common.BaseMixin"
+        });
+      else this.showError("childNotAllowed", [child, defaultChildTagName], { mixinName: "UU5.Common.BaseMixin" });
     }
     return result;
   },
-  //@@viewOff:overridingMethods
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _getValueArray(value) {
     value === undefined && (value = this.props.value);
     return Array.isArray(value) ? value.slice(0, 2) : [value];
   },
 
   _checkValue(value) {
-
-    if(typeof value == "string" && value !== "" && value !== "-"){
-      value = parseFloat(value)
+    if (typeof value == "string" && value !== "" && value !== "-") {
+      value = parseFloat(value);
     }
-    if(isNaN(value)){
+    if (isNaN(value)) {
       value = null;
     }
-    if(this.props.step > 1){
-     value =  (Math.round((value - this.props.min) / this.props.step)) * this.props.step + this.props.min;
+    if (this.props.step > 1) {
+      value = Math.round((value - this.props.min) / this.props.step) * this.props.step + this.props.min;
     }
 
-    return value > this.props.max ? this.props.max : value < this.props.min ? this.props.min : value === "" || value == null ? 0 : value;
+    return value > this.props.max
+      ? this.props.max
+      : value < this.props.min
+      ? this.props.min
+      : value === "" || value == null
+      ? 0
+      : value;
   },
 
   _prepareIfcValue(value, nearestPointer) {
-    const values = this._pointers.map(item => item === nearestPointer ? value : item.getValue());
+    const values = this._pointers.map(item => (item === nearestPointer ? value : item.getValue()));
 
     return values.length === 1 ? values[0] : values;
   },
@@ -217,7 +223,7 @@ export const Slider = createReactClass({
   onChangeDefault(opt) {
     let type = opt._data && opt._data.type;
 
-    if (type == 'change') {
+    if (type == "change") {
       let onChanged = opt._data.onChanged;
       let value = opt.value;
 
@@ -228,11 +234,14 @@ export const Slider = createReactClass({
   _changeValue(value, e) {
     if (this.state.nearestPointer.getValue() !== value) {
       const values = this._prepareIfcValue(value, this.state.nearestPointer);
-      let onChangedOpt = { value: value, component: this, event: e, _data: { type: 'change', onChanged: null } };
+      let onChangedOpt = { value: value, component: this, event: e, _data: { type: "change", onChanged: null } };
       let onChangeOpt = { value: value, component: this, event: e };
-      onChangeOpt._data = { type: 'change', onChanged: typeof this.props.onChanged === 'function' ? () => this.props.onChanged(onChangedOpt) : null };
+      onChangeOpt._data = {
+        type: "change",
+        onChanged: typeof this.props.onChanged === "function" ? () => this.props.onChanged(onChangedOpt) : null
+      };
 
-      if (typeof this.props.onChange === 'function') {
+      if (typeof this.props.onChange === "function") {
         this.props.onChange(onChangeOpt);
       } else {
         this.onChangeDefault(onChangeOpt);
@@ -243,7 +252,9 @@ export const Slider = createReactClass({
   },
 
   _activate(e) {
-    let value = this._countValue(e), onChange, onChanged;
+    let value = this._countValue(e),
+      onChange,
+      onChanged;
     const nearestPointer = this._getNearestPointer(value);
     let values;
 
@@ -255,10 +266,13 @@ export const Slider = createReactClass({
 
     nearestPointer.setValue(value);
 
-    this.setState({
-      active: true,
-      nearestPointer: nearestPointer,
-    }, (onChange || onChanged) ? (() => onChange ? onChange() : onChanged()) : null);
+    this.setState(
+      {
+        active: true,
+        nearestPointer: nearestPointer
+      },
+      onChange || onChanged ? () => (onChange ? onChange() : onChanged()) : null
+    );
     return this;
   },
 
@@ -280,9 +294,9 @@ export const Slider = createReactClass({
 
   _getOnChange(values, e) {
     let onChange;
-    if (typeof this.props.onChange === 'function') {
+    if (typeof this.props.onChange === "function") {
       onChange = () => {
-        this.props.onChange({value: values, component: this, event: e, _data: {}});
+        this.props.onChange({ value: values, component: this, event: e, _data: {} });
       };
     }
     return onChange;
@@ -290,9 +304,9 @@ export const Slider = createReactClass({
 
   _getOnChanged(values, e) {
     let onChanged;
-    if (typeof this.props.onChanged === 'function') {
+    if (typeof this.props.onChanged === "function") {
       onChanged = () => {
-        this.props.onChanged({value: values, component: this, event: e, _data: {}});
+        this.props.onChanged({ value: values, component: this, event: e, _data: {} });
       };
     }
     return onChanged;
@@ -331,7 +345,7 @@ export const Slider = createReactClass({
     const realValue = absolutePosition / (end / absoluteMax);
     let value = min + Math.round(realValue / step) * step;
 
-    this.props.vertical && (value = (this.props.max + this.props.min) - value);
+    this.props.vertical && (value = this.props.max + this.props.min - value);
     value > this.props.max && (value = this.props.max);
     value < this.props.min && (value = this.props.min);
 
@@ -341,11 +355,11 @@ export const Slider = createReactClass({
   _getMainAttrs() {
     const attrs = this.getMainAttrs();
 
-    attrs.className += ' ' + this.getClassName('size') + this.props.size;
-    this.props.vertical && (attrs.className += ' ' + this.getClassName('vertical'));
+    attrs.className += " " + this.getClassName("size") + this.props.size;
+    this.props.vertical && (attrs.className += " " + this.getClassName("vertical"));
 
     if (!this.isDisabled()) {
-      this._isActive() && (attrs.className += ' ' + this.getClassName().active);
+      this._isActive() && (attrs.className += " " + this.getClassName().active);
 
       attrs.onMouseDown = this._activate;
       attrs.onMouseMove = this._move;
@@ -377,12 +391,13 @@ export const Slider = createReactClass({
   },
 
   _getStyle(value) {
-    const size = (this._checkValue(value) - this.props.min) / (this.props.max - this.props.min) * 100 + '%';
+    const size = ((this._checkValue(value) - this.props.min) / (this.props.max - this.props.min)) * 100 + "%";
     return this.props.vertical ? { height: size } : { width: size };
   },
 
   _getNearestPointer(newValue) {
-    let min = Infinity, nearestPointer;
+    let min = Infinity,
+      nearestPointer;
     this._pointers.forEach(item => {
       const value = Math.abs(newValue - item.getValue());
 
@@ -394,7 +409,7 @@ export const Slider = createReactClass({
 
     return nearestPointer;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
@@ -403,23 +418,20 @@ export const Slider = createReactClass({
     if (!pointers || pointers.length === 0) {
       const values = this._getValueArray();
       pointers = this.buildChildren({
-        children: values.map((value, i) => (<SliderItem id={this.getId() + "-" + i} value={value} />))
+        children: values.map((value, i) => <SliderItem id={this.getId() + "-" + i} value={value} />)
       });
     } else if (pointers && pointers.length > 2) {
       pointers = pointers.slice(0, 2);
     }
 
-    return (
-      this.getNestingLevel()
-        ? (
-          <div {...this._getMainAttrs()}>
-            <Backdrop {...this._getBackdropProps()} />
-            <div className={this.getClassName('track')} ref={item => this._track = item}>
-              {pointers}
-            </div>
-          </div>
-        ) : null
-    );
+    return this.getNestingLevel() ? (
+      <div {...this._getMainAttrs()}>
+        <Backdrop {...this._getBackdropProps()} />
+        <div className={this.getClassName("track")} ref={item => (this._track = item)}>
+          {pointers}
+        </div>
+      </div>
+    ) : null;
   }
   //@@viewOff:render
 });

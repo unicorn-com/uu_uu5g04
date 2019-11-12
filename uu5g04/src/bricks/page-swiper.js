@@ -1,21 +1,23 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+//@@viewOff:imports
 
 const PageSwiper = createReactClass({
   //@@viewOn:mixins
@@ -32,7 +34,7 @@ const PageSwiper = createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("PageSwiper"),
-    nestingLevelList: UU5.Environment.getNestingLevelList('bigBoxCollection', 'box'),
+    nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
       main: ns.css("page-swiper")
     },
@@ -58,22 +60,22 @@ const PageSwiper = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   componentDidMount() {
     this._allowLeftMenuAction = false;
     this._allowRightMenuAction = false;
     this._allowLeftMenuClose = false;
     this._allowRightMenuClose = false;
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _getSwipePositionLimit(right) {
     let propValue = this.props[right ? "rightSwipe" : "leftSwipe"];
     let result = typeof propValue === "number" ? propValue : this.getDefault().swipePositionLimit;
@@ -99,15 +101,14 @@ const PageSwiper = createReactClass({
     let rightColumn = UU5.Environment.page.getRight();
     let rightColumnNode = leftColumn && rightColumn.findDOMNode();
 
-
     let result = {
       input: e.target instanceof HTMLInputElement,
       leftColumn: false,
       rightColumn: false,
       otherSwiper: false
-    }
+    };
     let eventPath = this._getEventPath(e);
-    eventPath.every((item) => {
+    eventPath.every(item => {
       let functionType = item.matches ? "matches" : "msMatchesSelector";
       if (leftColumnNode && item === leftColumnNode) {
         result.leftColumn = true;
@@ -129,32 +130,37 @@ const PageSwiper = createReactClass({
 
     if (!result.input && !result.otherSwiper) {
       if (this.props.leftSwipe) {
-        columnAlwaysShown = leftColumn && leftColumn.props.minWidth && leftColumn.props.maxWidth && !leftColumn.props.block;       
+        columnAlwaysShown =
+          leftColumn && leftColumn.props.minWidth && leftColumn.props.maxWidth && !leftColumn.props.block;
         if (columnAlwaysShown) {
           if (result.leftColumn) {
             this._allowLeftMenuOpen = true;
-            this._allowLeftMenuClose = true
+            this._allowLeftMenuClose = true;
           }
         } else if (!this._getSwipePositionLimit() || touchPosX <= this._getSwipePositionLimit()) {
           this._allowLeftMenuOpen = true;
-          this._allowLeftMenuClose = true
+          this._allowLeftMenuClose = true;
         } else {
-          this._allowLeftMenuClose = true
+          this._allowLeftMenuClose = true;
         }
       }
-  
+
       if (this.props.rightSwipe) {
-        columnAlwaysShown = rightColumn && rightColumn.props.minWidth && rightColumn.props.maxWidth && !rightColumn.props.block;
+        columnAlwaysShown =
+          rightColumn && rightColumn.props.minWidth && rightColumn.props.maxWidth && !rightColumn.props.block;
         if (columnAlwaysShown) {
           if (result.rightColumn) {
             this._allowRightMenuOpen = true;
-            this._allowRightMenuClose = true
+            this._allowRightMenuClose = true;
           }
-        } else if (!this._getSwipePositionLimit(true) || touchPosX >= (document.documentElement.clientWidth - this._getSwipePositionLimit(true))) {
+        } else if (
+          !this._getSwipePositionLimit(true) ||
+          touchPosX >= document.documentElement.clientWidth - this._getSwipePositionLimit(true)
+        ) {
           this._allowRightMenuOpen = true;
-          this._allowRightMenuClose = true
+          this._allowRightMenuClose = true;
         } else {
-          this._allowRightMenuClose = true
+          this._allowRightMenuClose = true;
         }
       }
     }
@@ -170,13 +176,13 @@ const PageSwiper = createReactClass({
         }
       } else if (this.isSwipedLeft()) {
         if (this._isLeftOpen() && this._allowLeftMenuClose) {
-          this._close()
+          this._close();
         } else if (this._allowRightMenuOpen) {
           this._open(true);
         }
       }
     }
-  
+
     this._allowLeftMenuOpen = false;
     this._allowRightMenuOpen = false;
     this._allowLeftMenuClose = false;
@@ -210,7 +216,7 @@ const PageSwiper = createReactClass({
   _isRightOpen() {
     return UU5.Environment.page.isRightOpen();
   },
-  
+
   _getPropsToPass() {
     let newProps = this.getMainPropsToPass();
     newProps.mainAttrs = {
@@ -220,15 +226,11 @@ const PageSwiper = createReactClass({
     };
     return newProps;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
-    return (
-      <UU5.Bricks.Div {...this._getPropsToPass()}>
-        {this.getChildren()}
-      </UU5.Bricks.Div>
-    );
+    return <UU5.Bricks.Div {...this._getPropsToPass()}>{this.getChildren()}</UU5.Bricks.Div>;
   }
   //@@viewOff:render
 });

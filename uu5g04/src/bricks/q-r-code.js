@@ -11,6 +11,7 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import React from "react";
 import createReactClass from "create-react-class";
 import PropTypes from "prop-types";
@@ -18,6 +19,7 @@ import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Null from "./null.js";
 import Css from "./internal/css.js";
+//@@viewOff:imports
 
 const QRCodeGenerator = React.lazy ? React.lazy(() => import("qrcode.react")) : Null;
 
@@ -30,7 +32,10 @@ export const QRCode = createReactClass({
   statics: {
     tagName: ns.name("QRCode"),
     classNames: {
-      main: ns.css("q-r-code") + " " + Css.css(`
+      main:
+        ns.css("q-r-code") +
+        " " +
+        Css.css(`
         display: inline-block;
       `)
     }
@@ -55,16 +60,16 @@ export const QRCode = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _getCorrectionLevel() {
     switch (this.props.correction) {
       case "low":
@@ -79,7 +84,7 @@ export const QRCode = createReactClass({
         return "L";
     }
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {

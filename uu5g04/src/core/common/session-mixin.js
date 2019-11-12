@@ -1,28 +1,27 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import Environment from '../environment/environment.js';
+import React from "react";
+import PropTypes from "prop-types";
+import Environment from "../environment/environment.js";
 
 export const SessionMixin = {
-
   //@@viewOn:statics
   statics: {
     "UU5.Common.SessionMixin": {
       requiredMixins: ["UU5.Common.BaseMixin"],
       errors: {
-        sessionNotFound: 'Session has to be set.'
+        sessionNotFound: "Session has to be set."
       }
     }
   },
@@ -49,7 +48,7 @@ export const SessionMixin = {
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     // initialize
     this.registerMixin("UU5.Common.SessionMixin");
@@ -62,8 +61,16 @@ export const SessionMixin = {
       if (!session.initComplete) {
         session.initPromise.then(() => {
           if (this._unmount) return;
-          window.UU5.Environment.EventListener.addSessionExpiringListener(session, this.getId(), this._onSessionExpiring);
-          window.UU5.Environment.EventListener.addSessionExtendedListener(session, this.getId(), this._onSessionExtended);
+          window.UU5.Environment.EventListener.addSessionExpiringListener(
+            session,
+            this.getId(),
+            this._onSessionExpiring
+          );
+          window.UU5.Environment.EventListener.addSessionExtendedListener(
+            session,
+            this.getId(),
+            this._onSessionExtended
+          );
         });
       } else {
         window.UU5.Environment.EventListener.addSessionExpiringListener(session, this.getId(), this._onSessionExpiring);
@@ -80,7 +87,7 @@ export const SessionMixin = {
       window.UU5.Environment.EventListener.removeSessionExtendedListener(session, this.getId());
     }
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   hasUU5CommonSessionMixin() {
@@ -99,7 +106,7 @@ export const SessionMixin = {
 
   getSession() {
     let session = this.props.session || Environment.getSession();
-    !session && this.showError('sessionNotFound', null, { mixinName: "UU5.Common.SessionMixin" });
+    !session && this.showError("sessionNotFound", null, { mixinName: "UU5.Common.SessionMixin" });
     return session;
   },
 
@@ -111,37 +118,43 @@ export const SessionMixin = {
 
   logout() {
     let session = this.getSession();
-    session && session.logout().catch((e) => {
-      // TODO
-    });
+    session &&
+      session.logout().catch(e => {
+        // TODO
+      });
     return this;
   },
 
   isSessionExpiring() {
     let session = this.getSession();
     let result;
-    if (session && session.isExpiring) result = session.isExpiring(); // uu_oidcg01 >= 3.5.0
+    if (session && session.isExpiring) result = session.isExpiring();
+    // uu_oidcg01 >= 3.5.0
     else result = session && session.isAuthenticated() && this._sessionExpiring;
     return result;
   },
 
   sessionExpiring(event) {
-    window.UU5.Common.Tools.warning("Method '[component].sessionExpiring()' is deprecated! Use '[component].onSessionExpiringDefault()' instead.");
+    window.UU5.Common.Tools.warning(
+      "Method '[component].sessionExpiring()' is deprecated! Use '[component].onSessionExpiringDefault()' instead."
+    );
     this.onSessionExpiringDefault(event);
   },
 
   sessionExtended(event) {
-    window.UU5.Common.Tools.warning("Method '[component].sessionExtended()' is deprecated! Use '[component].onSessionExtendedDefault()' instead.");
+    window.UU5.Common.Tools.warning(
+      "Method '[component].sessionExtended()' is deprecated! Use '[component].onSessionExtendedDefault()' instead."
+    );
     this.onSessionExtendedDefault(event);
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _onSessionExpiring(event) {
-    if (typeof this.onSessionExpiring_ === 'function') {
+    if (typeof this.onSessionExpiring_ === "function") {
       this.onSessionExpiring_(event);
     } else {
       this.onSessionExpiringDefault(event);
@@ -154,7 +167,7 @@ export const SessionMixin = {
   },
 
   _onSessionExtended(event) {
-    if (typeof this.onSessionExtended_ === 'function') {
+    if (typeof this.onSessionExtended_ === "function") {
       this.onSessionExtended_(event);
     } else {
       this.onSessionExtendedDefault(event);
@@ -165,7 +178,7 @@ export const SessionMixin = {
     this._sessionExpiring = false;
     return this;
   }
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 };
 
 export default SessionMixin;

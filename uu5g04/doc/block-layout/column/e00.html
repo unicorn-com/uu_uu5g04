@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 00</title>
+
+  <script>
+    if (!location.href.match(/^(about:|file:)/)) {
+      var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+      var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+      if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+      var appBaseUrlPath = (location.pathname.split(/\//).slice(0, 1 + bplSegmentCount).join("/") + "/").replace(/\/+/g, "/").replace(/"/g, "");
+      var appAssetsRelativeUrlPath = "public/0.0.0/";
+      document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    }
+  </script>
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-block-layout": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-block-layout.min.js"
+      }
+    });
+  </script>
+
+  <style>
+    .colored .margin {
+      display: inline-block;
+      width: 100%;
+      background-color: #FFCDD2;
+    }
+
+    .colored .block {
+      background-color: #F44336;
+    }
+
+    .colored .row {
+      background-color: #FAFAFA;
+    }
+  </style>
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import React from "react";
+  import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-block-layout";
+
+  const Page = createReactClass({
+
+    getInitialState() {
+      return {
+        margin: false
+      };
+    },
+
+    render() {
+      return (
+        <UU5.Bricks.Container>
+          Show margin <UU5.Bricks.Switch
+          onChange={(opt) => this.setState({ margin: opt.switchedOn })}
+          switchedOn={this.state.margin}
+        />
+          <UU5.BlockLayout.Tile className={this.state.margin ? " colored" : undefined} margin="32px 0 0">
+            <div className={(this.state.margin ? "margin" : undefined)}>
+              <UU5.BlockLayout.Block
+                className="block"
+                actions={[
+                  { icon: "mdi-settings", content: "Settings", active: true, onClick: () => alert("settings") }
+                ]}
+              >
+                <UU5.BlockLayout.Row>
+                  <UU5.BlockLayout.Column width={150}>
+                    John Smith
+                  </UU5.BlockLayout.Column>
+                  <UU5.BlockLayout.Column>
+                    john.smith@plus4u.net
+                  </UU5.BlockLayout.Column>
+                </UU5.BlockLayout.Row>
+                <UU5.BlockLayout.Row>
+                  <UU5.BlockLayout.Column>
+                    aligned to the left
+                  </UU5.BlockLayout.Column>
+                  <UU5.BlockLayout.Column textAlign="right">
+                    aligned to the right
+                  </UU5.BlockLayout.Column>
+                </UU5.BlockLayout.Row>
+                <UU5.BlockLayout.Row>
+                  <UU5.BlockLayout.Column>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Vestibulum fermentum tortor id mi. Etiam commodo dui eget wisi. Integer malesuada. Fusce consectetuer risus a nunc. Nullam eget nisl. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Aenean placerat. Etiam neque. Fusce suscipit libero eget elit.
+                  </UU5.BlockLayout.Column>
+                  <UU5.BlockLayout.Column textAlign="right">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Vestibulum fermentum tortor id mi. Etiam commodo dui eget wisi. Integer malesuada. Fusce consectetuer risus a nunc. Nullam eget nisl. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Aenean placerat. Etiam neque. Fusce suscipit libero eget elit.
+                  </UU5.BlockLayout.Column>
+                </UU5.BlockLayout.Row>
+              </UU5.BlockLayout.Block>
+            </div>
+          </UU5.BlockLayout.Tile>
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  ReactDOM.render(<Page />, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

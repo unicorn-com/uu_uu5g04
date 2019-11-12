@@ -1,16 +1,17 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import React from "react";
 import createReactClass from "create-react-class";
 import PropTypes from "prop-types";
@@ -18,6 +19,7 @@ import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./video.less";
+//@@viewOff:imports
 
 const VideoHls = React.lazy ? React.lazy(() => import("./video-hls.js")) : props => <video {...props.mainAttrs} />;
 
@@ -69,7 +71,7 @@ export const Video = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState: function() {
     return {
       muted: this.props.muted
@@ -81,7 +83,7 @@ export const Video = createReactClass({
       this.setState({ muted: nextProps.muted });
     }
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   toggleMuted: function() {
@@ -90,10 +92,10 @@ export const Video = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _getType: function(props = this.props) {
     let type;
     if (props.type) {
@@ -117,7 +119,7 @@ export const Video = createReactClass({
     }
     return result;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   // Render
   _buildMainAttrs: function() {
@@ -137,7 +139,7 @@ export const Video = createReactClass({
   },
 
   //@@viewOn:render
-  render: function () {
+  render: function() {
     let { src, authenticate } = this.props;
     let url = src;
     let useHlsComponent = this._isHls() && React.Suspense;

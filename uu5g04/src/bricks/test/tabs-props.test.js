@@ -58,9 +58,8 @@ const CONFIG = {
   },
   requiredProps: {
     children: [
-      <UU5.Bricks.Tabs.Item header='Tab 1' name={"active"} id={"childID"}>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-        litora
+      <UU5.Bricks.Tabs.Item header="Tab 1" name={"active"} id={"childID"}>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </UU5.Bricks.Tabs.Item>
     ]
   },
@@ -81,7 +80,6 @@ const getTabItems = (items, testFn) => {
     );
   });
 };
-
 
 describe(`UU5.Bricks.Tabs`, () => {
   UU5.Test.Tools.testProperties(UU5.Bricks.Tabs, CONFIG);
@@ -120,9 +118,7 @@ describe(`UU5.Bricks.Tabs`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it(`UU5.Bricks.Tabs - mountTabContent: ${
-    MOUNT_TAB_CONTENT_VALUES.onFirstRender
-    } (mounted before open, never unmount`, () => {
+  it(`UU5.Bricks.Tabs - mountTabContent: ${MOUNT_TAB_CONTENT_VALUES.onFirstRender} (mounted before open, never unmount`, () => {
     const mountFn = jest.fn();
     mount(<UU5.Bricks.Tabs mountTabContent="onFirstRender">{getTabItems([1, 2, 3], mountFn)}</UU5.Bricks.Tabs>);
     expect(mountFn).toBeCalledTimes(3);
@@ -131,9 +127,7 @@ describe(`UU5.Bricks.Tabs`, () => {
     expect(mountFn.mock.calls[2][0]).toBe(2); // third tab mounted
   });
 
-  it(`UU5.Bricks.Tabs - mountTabContent: ${
-    MOUNT_TAB_CONTENT_VALUES.onFirstActive
-    } (mounted when open, never unmount)`, () => {
+  it(`UU5.Bricks.Tabs - mountTabContent: ${MOUNT_TAB_CONTENT_VALUES.onFirstActive} (mounted when open, never unmount)`, () => {
     const mountFn = jest.fn();
     const wrapper = mount(
       <UU5.Bricks.Tabs mountTabContent="onFirstActive">{getTabItems([1, 2, 3], mountFn)}</UU5.Bricks.Tabs>
@@ -185,30 +179,23 @@ describe(`UU5.Bricks.Tabs docKit examples`, () => {
   it(`UU5.Bricks.Tabs should render without crash`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Tabs id={"uuID1"} fade>
-        <UU5.Bricks.Tabs.Item id={"uuID2"} header='Tab 1'>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-          litora
+        <UU5.Bricks.Tabs.Item id={"uuID2"} header="Tab 1">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
         </UU5.Bricks.Tabs.Item>
-        <UU5.Bricks.Tabs.Item id={"uuID3"} header='Tab 2'>
-          torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in,
-          auctor et,
-          scelerisque sed, est.
+        <UU5.Bricks.Tabs.Item id={"uuID3"} header="Tab 2">
+          torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque
+          sed, est.
         </UU5.Bricks.Tabs.Item>
-        <UU5.Bricks.Tabs.Item id={"uuID4"} header='Tab 3'>
-          torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in,
-          auctor et,
-          scelerisque sed, est.
-          torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in,
-          auctor et,
+        <UU5.Bricks.Tabs.Item id={"uuID4"} header="Tab 3">
+          torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque
+          sed, est. torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et,
           scelerisque sed, est.
         </UU5.Bricks.Tabs.Item>
       </UU5.Bricks.Tabs>
     );
     expect(wrapper).toMatchSnapshot();
   });
-
 });
-
 
 describe(`UU5.Bricks.Tabs render from uu5string`, () => {
   const uu5string = `<uu5string/>
@@ -225,12 +212,7 @@ describe(`UU5.Bricks.Tabs render from uu5string`, () => {
       </UU5.Bricks.Tabs>`;
 
   it(`UU5.Bricks.Tabs active first tab with string as first child `, () => {
-    const wrapper = shallow(
-    <UU5.Bricks.Div content={uu5string} />
-    );
+    const wrapper = shallow(<UU5.Bricks.Div content={uu5string} />);
     expect(wrapper).toMatchSnapshot();
   });
-
 });
-
-

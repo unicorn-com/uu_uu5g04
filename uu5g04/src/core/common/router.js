@@ -1,42 +1,38 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
 import ns from "./common-ns.js";
-import PropTypes from 'prop-types';
-import Tools from './tools.js';
-import Environment from '../environment/environment.js';
-import BaseMixin from './base-mixin.js';
-import ElementaryMixin from './elementary-mixin.js';
-import CcrWriterMixin from './ccr-writer-mixin.js';
-import Url from './url.js';
+import PropTypes from "prop-types";
+import Tools from "./tools.js";
+import Environment from "../environment/environment.js";
+import BaseMixin from "./base-mixin.js";
+import ElementaryMixin from "./elementary-mixin.js";
+import CcrWriterMixin from "./ccr-writer-mixin.js";
+import Url from "./url.js";
 import PureRenderMixin from "./pure-render-mixin";
 import Uu5CommonError from "./error.js";
 
-import './router.less';
+import "./router.less";
+//@@viewOff:imports
 
 const REACT_LAZY_TYPEOF = React.lazy && React.lazy(() => ({ default: props => "" })).$$typeof;
 
 export const Router = createReactClass({
-
   //@@viewOn:mixins
-  mixins: [
-    BaseMixin,
-    ElementaryMixin,
-    CcrWriterMixin,
-    PureRenderMixin
-  ],
+  mixins: [BaseMixin, ElementaryMixin, CcrWriterMixin, PureRenderMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -52,7 +48,7 @@ export const Router = createReactClass({
       leaveConfirmationButtonConfirm: ns.css("router-leave-confirmation-button-confirm"),
       leaveConfirmationButtonDeny: ns.css("router-leave-confirmation-button-deny")
     },
-    lsi: () => (Environment.Lsi.Common.router),
+    lsi: () => Environment.Lsi.Common.router,
     getDerivedStateFromError(error) {
       return { routeError: error };
     }
@@ -62,17 +58,23 @@ export const Router = createReactClass({
   //@@viewOn:propTypes
   propTypes: {
     basePath: PropTypes.string,
-    route: PropTypes.oneOfType([PropTypes.string, // path
-      PropTypes.element, PropTypes.shape({
+    route: PropTypes.oneOfType([
+      PropTypes.string, // path
+      PropTypes.element,
+      PropTypes.shape({
         tag: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
         props: PropTypes.object,
         source: PropTypes.string
-      })]),
-    notFoundRoute: PropTypes.oneOfType([PropTypes.string, // path
-      PropTypes.element, PropTypes.shape({
+      })
+    ]),
+    notFoundRoute: PropTypes.oneOfType([
+      PropTypes.string, // path
+      PropTypes.element,
+      PropTypes.shape({
         tag: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
         props: PropTypes.object
-      })]),
+      })
+    ]),
     showNotFoundRouteInUrl: PropTypes.bool,
     routes: PropTypes.object,
     urlBuilder: PropTypes.func,
@@ -95,7 +97,7 @@ export const Router = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     Environment.router = this;
     this._history = [];
@@ -111,10 +113,14 @@ export const Router = createReactClass({
   },
 
   componentWillMount() {
-    if (window.location.pathname && this.props.routes && (typeof this.props.route === 'string' || this.props.route === undefined)) {
+    if (
+      window.location.pathname &&
+      this.props.routes &&
+      (typeof this.props.route === "string" || this.props.route === undefined)
+    ) {
       let path = window.location.pathname;
       let basePath = this._getBasePath(path, this.props);
-      basePath && (path = path.replace(basePath, ''));
+      basePath && (path = path.replace(basePath, ""));
 
       let params = null;
       if (window.location.search) {
@@ -156,14 +162,14 @@ export const Router = createReactClass({
     // 4. we don't want the scroll event to be considered as a user action, i.e. after new route loads, we still want to scroll to new fragment
     // => remember this situation with a timed flag and use it in _onWindowScroll for skipping fragment removal
     this._isScrollDueToRender = true;
-    setTimeout(() => this._isScrollDueToRender = false, 50);
+    setTimeout(() => (this._isScrollDueToRender = false), 50);
   },
 
   componentWillUnmount() {
     window.removeEventListener("scroll", this._onWindowScroll);
     Environment.EventListener.unregisterBeforeUnload();
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   // newRoute =
@@ -223,17 +229,17 @@ export const Router = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _getBasePath(path, props) {
     let result;
     if (props.basePath === null) {
       result = Environment.getAppBasePath();
       if (result === null) {
         path = path || window.location.pathname;
-        result = (path ? path.replace(/(\/.*?\/.*?)\/.*/, "$1") : '');
+        result = path ? path.replace(/(\/.*?\/.*?)\/.*/, "$1") : "";
       }
     } else {
       result = props.basePath;
@@ -244,40 +250,43 @@ export const Router = createReactClass({
   },
 
   _shouldImport(route) {
-    return route && typeof route === 'object' && route.tag && !Tools.findComponent(route.tag, true);
+    return route && typeof route === "object" && route.tag && !Tools.findComponent(route.tag, true);
   },
 
   _importRoute(route, params, setStateCallback) {
     if (window.SystemJS && window.SystemJS.import) {
       if (route.source) {
-        SystemJS.import(route.source).then(exports => {
-          let tagArray = route.tag.split('.');
-          let calculatedTag = window;
-          while (calculatedTag && tagArray.length > 1) {
-            let moduleName = tagArray.shift();
-            calculatedTag[moduleName] = calculatedTag[moduleName] || {};
-            calculatedTag = calculatedTag[moduleName];
+        SystemJS.import(route.source).then(
+          exports => {
+            let tagArray = route.tag.split(".");
+            let calculatedTag = window;
+            while (calculatedTag && tagArray.length > 1) {
+              let moduleName = tagArray.shift();
+              calculatedTag[moduleName] = calculatedTag[moduleName] || {};
+              calculatedTag = calculatedTag[moduleName];
+            }
+            let tagName = tagArray.shift();
+            let tagExport = exports[tagName];
+            tagExport = tagExport || exports.default;
+            calculatedTag[tagName] = tagExport;
+            this._setRoute(route, params, null, null, setStateCallback);
+          },
+          error => {
+            Tools.error('Loading package "' + route.source + '" failed with error:', {
+              error: error,
+              tagName: this.constructor.tagName
+            });
           }
-          let tagName = tagArray.shift();
-          let tagExport = exports[tagName];
-          tagExport = tagExport || exports.default;
-          calculatedTag[tagName] = tagExport;
-          this._setRoute(route, params, null, null, setStateCallback);
-        }, error => {
-          Tools.error('Loading package "' + route.source + '" failed with error:', {
-            error: error,
-            tagName: this.constructor.tagName
-          });
-        });
+        );
       } else {
-        Tools.error('Route was not found and has not set any source to import.', {
+        Tools.error("Route was not found and has not set any source to import.", {
           route: route,
           tagName: this.constructor.tagName
         });
         this._setRoute(route.notFoundRoute, { requestedRoute: route });
       }
     } else {
-      Tools.error('SystemJS is not defined in window! Cannot import source:', {
+      Tools.error("SystemJS is not defined in window! Cannot import source:", {
         source: route.source,
         tagName: this.constructor.tagName
       });
@@ -287,10 +296,19 @@ export const Router = createReactClass({
 
   _setRoute(newRoute, params, props, frag, setStateCallback) {
     props = props || this.props;
-    let { route, fragment, applyRouteFn } = this._buildRoute(newRoute, params, null, props, frag, null, null, setStateCallback);
+    let { route, fragment, applyRouteFn } = this._buildRoute(
+      newRoute,
+      params,
+      null,
+      props,
+      frag,
+      null,
+      null,
+      setStateCallback
+    );
     this._pendingFragmentToScrollTo = fragment;
     this._showPageLeaveConfirmation(() => {
-      let applyToState = (typeof applyRouteFn !== "function" || applyRouteFn());
+      let applyToState = typeof applyRouteFn !== "function" || applyRouteFn();
       applyToState && this.setState({ route: route, requestedRoute: newRoute, routeError: null }, setStateCallback);
     });
     return this;
@@ -299,28 +317,33 @@ export const Router = createReactClass({
   _showPageLeaveConfirmation(continueWithPageLeaveCallback) {
     if (this._displayLeaveConfirmation) {
       let processed = false;
-      let customModalProps = {};
-      let processResultFn = (confirmed) => {
-        if (!processed) { // process only first call of this method
+      let customModalProps;
+      let modalOpen = false;
+      let processResultFn = confirmed => {
+        if (!processed) {
+          // process only first call of this method
           processed = true;
           if (confirmed) {
             this.allowPageLeave();
             continueWithPageLeaveCallback();
           }
-          if (this._pageLeaveModal && customModalProps) this._pageLeaveModal.close();
+          if (this._pageLeaveModal && modalOpen) this._pageLeaveModal.close();
         }
       };
 
       if (this._pageLeaveModal) {
-        customModalProps = typeof this._getPageLeaveModalProps === "function"
-          ? this._getPageLeaveModalProps(processResultFn) : {};
+        if (typeof this._getPageLeaveModalProps === "function") {
+          customModalProps = this._getPageLeaveModalProps(processResultFn);
+        }
 
         if (customModalProps !== false) {
-          let modalProps = Object.assign(
-            this._getPageLeaveModalDefaultProps(processResultFn),
-            customModalProps
-          );
+          let modalProps = Object.assign(this._getPageLeaveModalDefaultProps(processResultFn), customModalProps);
+          modalOpen = true;
           this._pageLeaveModal.open(modalProps);
+        } else {
+          processed = true;
+          this.allowPageLeave();
+          continueWithPageLeaveCallback();
         }
       } else {
         let wantToLeave = confirm(this.getLsiValue("pageLeaveConfirmationBody"));
@@ -336,18 +359,27 @@ export const Router = createReactClass({
     return {
       header: this.getLsiComponent("pageLeaveConfirmationHeader"),
       className: this.getClassName("leaveConfirmationModal"),
-      onClose: (opt) => {
+      onClose: opt => {
         opt.component._close(); // .closeDefault()
         callback(false);
       },
       content: [
-        <UU5.Bricks.Div className={this.getClassName("leaveConfirmationBody")} key="body"
-                        content={this.getLsiComponent("pageLeaveConfirmationBody")} />,
+        <UU5.Bricks.Div
+          className={this.getClassName("leaveConfirmationBody")}
+          key="body"
+          content={this.getLsiComponent("pageLeaveConfirmationBody")}
+        />,
         <UU5.Bricks.Div className={this.getClassName("leaveConfirmationFooter")} key="footer">
-          <UU5.Bricks.Button className={this.getClassName("leaveConfirmationButtonConfirm")}
-                             onClick={() => callback(true)} content={this.getLsiComponent("pageLeaveConfirm")} />
-          <UU5.Bricks.Button className={this.getClassName("leaveConfirmationButtonDeny")}
-                             onClick={() => callback(false)} content={this.getLsiComponent("pageLeaveDeny")} />
+          <UU5.Bricks.Button
+            className={this.getClassName("leaveConfirmationButtonConfirm")}
+            onClick={() => callback(true)}
+            content={this.getLsiComponent("pageLeaveConfirm")}
+          />
+          <UU5.Bricks.Button
+            className={this.getClassName("leaveConfirmationButtonDeny")}
+            onClick={() => callback(false)}
+            content={this.getLsiComponent("pageLeaveDeny")}
+          />
         </UU5.Bricks.Div>
       ]
     };
@@ -356,12 +388,12 @@ export const Router = createReactClass({
   _getRouteByPath(searchedPath, props) {
     let route = props.routes[searchedPath];
     if (route === undefined) {
-      if (!props.strictRoutes) route = props.routes[searchedPath.replace(/\/?$/, m => m ? "" : "/")];
+      if (!props.strictRoutes) route = props.routes[searchedPath.replace(/\/?$/, m => (m ? "" : "/"))];
       if (route === undefined) {
         // prepend with "/" for backward compatibility
         route = props.routes["/" + searchedPath];
         if (route === undefined) {
-          if (!props.strictRoutes) route = props.routes[searchedPath.replace(/\/?$/, m => m ? "" : "/")];
+          if (!props.strictRoutes) route = props.routes[searchedPath.replace(/\/?$/, m => (m ? "" : "/"))];
         }
       }
     }
@@ -380,22 +412,27 @@ export const Router = createReactClass({
       }
       followedPaths.add(nextPath);
       let route = this._getRouteByPath(nextPath, props);
-      if (typeof route === "string") { // rewrite
+      if (typeof route === "string") {
+        // rewrite
         if (useCase == null) useCase = nextPath;
         nextPath = route;
-      } else if (route && route.url && route.url.useCase != null) { // redirect
+      } else if (route && route.url && route.url.useCase != null) {
+        // redirect
         config = Object.assign({}, route, config);
         nextPath = route.url.useCase;
-      } else if (route) { // normal config
+      } else if (route) {
+        // normal config
         config = Object.assign({}, route, config);
         if (useCase == null) {
           useCase = nextPath;
           config.url = route.url; // URL is taken from the final path (after all redirects)
-        } else { // there was a rewrite => clear explicit url
+        } else {
+          // there was a rewrite => clear explicit url
           delete config.url;
         }
         nextPath = null;
-      } else { // missing route
+      } else {
+        // missing route
         if (useCase == null) useCase = nextPath;
         nextPath = null;
       }
@@ -440,7 +477,7 @@ export const Router = createReactClass({
             if ("component" in newRoute) route = this._buildComponent(newRoute.component);
             else ({ route, fragment, applyRouteFn } = that._buildRoute(newRoute, null, true, null, null, false, true)); // TODO "that" - required due to some babel issue (it doesn't use proper "this")
             this._pendingFragmentToScrollTo = fragment;
-            let applyToState = (typeof applyRouteFn !== "function" || applyRouteFn());
+            let applyToState = typeof applyRouteFn !== "function" || applyRouteFn();
             applyToState && this.setState({ route: route, requestedRoute: newRoute, routeError: null });
           });
           isSynchronousPageLeave = false;
@@ -466,7 +503,7 @@ export const Router = createReactClass({
 
   _getUrl(route, params, props, fragment) {
     props = props || this.props;
-    let url = document.location.origin + (this._getBasePath(null, props) || '') + "/" + route;
+    let url = document.location.origin + (this._getBasePath(null, props) || "") + "/" + route;
     params && (url += Tools.encodeQuery(params));
     fragment && (url += "#" + fragment);
     return url;
@@ -475,7 +512,7 @@ export const Router = createReactClass({
   _buildComponent(newRoute, params) {
     let newRouteChild;
 
-    if (newRoute && typeof newRoute === 'object') {
+    if (newRoute && typeof newRoute === "object") {
       let newProps = {
         parent: this.getParent()
       };
@@ -511,12 +548,12 @@ export const Router = createReactClass({
           isFromHistory = route.isFromHistory;
           delete route.isFromHistory;
         }
-        route = ("component" in route ? route.component : route.useCase);
+        route = "component" in route ? route.component : route.useCase;
         if (ignoreGoTo == null) ignoreGoTo = true;
       }
 
       let newRoute = route;
-      if (typeof route === 'string' && this.props.routes) {
+      if (typeof route === "string" && this.props.routes) {
         if (useCase === undefined) {
           if (route[0] === "/") route = route.substr(1);
           let routeInfo = this._getRouteAfterRewritesAndRedirects(route, props);
@@ -535,17 +572,18 @@ export const Router = createReactClass({
         }
 
         if (useCase !== undefined) {
-
           // we won't apply the route immediately, because it can be stopped by page-leave confirmation yet
           applyRouteFn = () => {
             let result = true;
             // if a route descriptor in "routes" props contains goTo method, pass resolved route there
             // and don't do anything with router state (the goTo method is supposed to call
             // router.setRoute(newRoute) by itself)
-            if (config && typeof config.goTo === 'function' && !ignoreGoTo) {
+            if (config && typeof config.goTo === "function" && !ignoreGoTo) {
               result = false;
               let oldHistoryEntry = this._history[this._routeIndex || 0];
-              let oldRoute = oldHistoryEntry && Object.assign({}, oldHistoryEntry, { config: Tools.mergeDeep({}, oldHistoryEntry.config) }); // prevent modification of config
+              let oldRoute =
+                oldHistoryEntry &&
+                Object.assign({}, oldHistoryEntry, { config: Tools.mergeDeep({}, oldHistoryEntry.config) }); // prevent modification of config
               let newRoute = {
                 useCase: useCase,
                 params: params,
@@ -555,7 +593,7 @@ export const Router = createReactClass({
               };
               config.goTo(oldRoute, newRoute, setStateCallback);
             } else if (!isFromHistory) {
-              let method = 'replaceState';
+              let method = "replaceState";
               if (this._routeIndex === null) {
                 this._routeIndex = 0;
                 this._history.push({ useCase, params, config, fragment: usedFragment });
@@ -564,7 +602,7 @@ export const Router = createReactClass({
                 let leavingFromNoHistory = leavingRoute && leavingRoute.config && leavingRoute.config.noHistory;
                 if (!leavingFromNoHistory) {
                   this._routeIndex++;
-                  method = 'pushState';
+                  method = "pushState";
                 }
                 this._history.splice(this._routeIndex, this._history.length - 1);
                 this._history.push({ useCase, params, config, fragment: usedFragment });
@@ -572,10 +610,14 @@ export const Router = createReactClass({
 
               // console.log(method, route, this._routeIndex, this._history);
               try {
-                history[method]({
-                  path: route,
-                  index: this._routeIndex
-                }, document.title, this._getUrl(useCase, params, props, usedFragment));
+                history[method](
+                  {
+                    path: route,
+                    index: this._routeIndex
+                  },
+                  document.title,
+                  this._getUrl(useCase, params, props, usedFragment)
+                );
               } catch (e) {
                 if (!(window.frameElement && e instanceof DOMException)) throw e; // cannot do replace/pushState when in <iframe srcdoc="&lt;html..." (ends with DOMException so ignore it), e.g. in BookKit examples
               }
@@ -593,12 +635,15 @@ export const Router = createReactClass({
           params = params || {};
         }
         let path;
-        let method = 'replaceState';
+        let method = "replaceState";
 
-        if (params.url && typeof params.url === 'object') {
+        if (params.url && typeof params.url === "object") {
           let urlBuilder = this.props.urlBuilder;
           if (urlBuilder) {
-            path = urlBuilder.parse(window.location.href.replace(/#.*/, "")).set(params.url).toString();
+            path = urlBuilder
+              .parse(window.location.href.replace(/#.*/, ""))
+              .set(params.url)
+              .toString();
           } else {
             let basePath = this._getBasePath(null, props);
             if (typeof basePath === "string") {
@@ -606,7 +651,8 @@ export const Router = createReactClass({
               let urlParts = { parameters: null };
               params.url.useCase && (urlParts.pathName = basePath + "/" + params.url.useCase);
               path = Url.parse(window.location.href.replace(/#.*/, ""))
-                .set(Tools.merge(urlParts, params.url)).toString();
+                .set(Tools.merge(urlParts, params.url))
+                .toString();
             }
           }
         }
@@ -636,17 +682,21 @@ export const Router = createReactClass({
               let leavingFromNoHistory = leavingRoute && leavingRoute.config && leavingRoute.config.noHistory;
               if (!leavingFromNoHistory) {
                 this._routeIndex++;
-                method = 'pushState';
+                method = "pushState";
               }
               this._history.splice(this._routeIndex, this._history.length - 1);
               this._history.push({ path: path, component: foundRoute, fragment: usedFragment, config });
             }
 
             try {
-              history[method]({
-                path: path,
-                index: this._routeIndex
-              }, params.title || document.title, path + (usedFragment ? "#" + usedFragment : ""));
+              history[method](
+                {
+                  path: path,
+                  index: this._routeIndex
+                },
+                params.title || document.title,
+                path + (usedFragment ? "#" + usedFragment : "")
+              );
             } catch (e) {
               if (!(window.frameElement && e instanceof DOMException)) throw e; // cannot do replace/pushState when in <iframe srcdoc="&lt;html..." (ends with DOMException so ignore it), e.g. in BookKit examples
             }
@@ -660,8 +710,14 @@ export const Router = createReactClass({
       newRouteChild = this._buildComponent(newRoute, params);
     }
 
-    if (newRouteChild && (!newRouteChild.type || (!newRouteChild.type["UU5.Common.VucMixin"] && !newRouteChild.type["UU5.Common.RouteMixin"] && newRouteChild.type.$$typeof !== REACT_LAZY_TYPEOF))) {
-      Tools.error('Route component which should be set is not Visual Use Case.', {
+    if (
+      newRouteChild &&
+      (!newRouteChild.type ||
+        (!newRouteChild.type["UU5.Common.VucMixin"] &&
+          !newRouteChild.type["UU5.Common.RouteMixin"] &&
+          newRouteChild.type.$$typeof !== REACT_LAZY_TYPEOF))
+    ) {
+      Tools.error("Route component which should be set is not Visual Use Case.", {
         routeParam: route,
         routeChild: newRouteChild,
         tagName: this.constructor.tagName
@@ -687,14 +743,20 @@ export const Router = createReactClass({
       children.push(this._buildRoute(this.props.notFoundRoute, { requestedRoute: this.state.requestedRoute }).route);
     } else {
       children.push(<div />);
-      Tools.error(this.constructor.tagName, 'Router has no content.');
+      Tools.error(this.constructor.tagName, "Router has no content.");
     }
-    if (REACT_LAZY_TYPEOF && children[0] && children[0].type && children[0].type.$$typeof === REACT_LAZY_TYPEOF && this.props.loading !== null) {
+    if (
+      REACT_LAZY_TYPEOF &&
+      children[0] &&
+      children[0].type &&
+      children[0].type.$$typeof === REACT_LAZY_TYPEOF &&
+      this.props.loading !== null
+    ) {
       children[0] = <React.Suspense fallback={this.props.loading}>{children[0]}</React.Suspense>;
     }
 
     let PortalModal = Tools.checkTag("UU5.Bricks.PortalModal", true);
-    if (PortalModal) children.push(<PortalModal ref_={modal => this._pageLeaveModal = modal} />);
+    if (PortalModal) children.push(<PortalModal ref_={modal => (this._pageLeaveModal = modal)} />);
 
     return React.Fragment ? (
       <React.Fragment>{React.Children.toArray(children)}</React.Fragment>
@@ -708,7 +770,7 @@ export const Router = createReactClass({
     // (we don't want to re-scroll elsewhere if user scrolled somewhere)
     if (!this._isScrollDueToRender) delete this._pendingFragmentToScrollTo;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {

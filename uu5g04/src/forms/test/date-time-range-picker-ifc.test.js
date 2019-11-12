@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -29,16 +29,9 @@ afterEach(() => {
   UU5.Common.Tools.getLanguage = origGetLanguage;
 });
 
-describe('UU5.Form.DateTimeRangePicker intreface testing', () => {
-
-  it('parseDate(date)', () => {
-    const wrapper = shallow(
-      <UU5.Forms.DateTimeRangePicker
-        label='Date of birth'
-        disableBackdrop
-        id={"uuID01"}
-      />
-    );
+describe("UU5.Form.DateTimeRangePicker intreface testing", () => {
+  it("parseDate(date)", () => {
+    const wrapper = shallow(<UU5.Forms.DateTimeRangePicker label="Date of birth" disableBackdrop id={"uuID01"} />);
     expect(wrapper.instance().parseDate(["1.1.2019", "5.5.2020"])).toEqual(expect.any(Object));
     const returnValue = wrapper.instance().parseDate(["1.1.2019", "5.5.2020"]);
     expect(Array.isArray(returnValue)).toBeTruthy();
@@ -49,15 +42,8 @@ describe('UU5.Form.DateTimeRangePicker intreface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-
-  it('toggle(setStateCallBack, e)', () => {
-    const wrapper = mount(
-      <UU5.Forms.DateTimeRangePicker
-        label='Date of birth'
-        disableBackdrop
-        id={"uuID01"}
-      />
-    );
+  it("toggle(setStateCallBack, e)", () => {
+    const wrapper = mount(<UU5.Forms.DateTimeRangePicker label="Date of birth" disableBackdrop id={"uuID01"} />);
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.open).toBeFalsy();
     expect(wrapper.instance().state.open).toBeFalsy();
@@ -69,18 +55,11 @@ describe('UU5.Form.DateTimeRangePicker intreface testing', () => {
     expect(wrapper.instance().state.open).toBeTruthy();
     wrapper.instance().toggle(); //close component
     wrapper.update();
-    expect(wrapper.instance().state.open).toBeFalsy()
+    expect(wrapper.instance().state.open).toBeFalsy();
   });
 
-
-  it('close(setStateCallBack, e)', () => {
-    const wrapper = mount(
-      <UU5.Forms.DateTimeRangePicker
-        label='Date of birth'
-        disableBackdrop
-        id={"uuID01"}
-      />
-    );
+  it("close(setStateCallBack, e)", () => {
+    const wrapper = mount(<UU5.Forms.DateTimeRangePicker label="Date of birth" disableBackdrop id={"uuID01"} />);
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.open).toBeFalsy();
     wrapper.instance().toggle(mockFunc);
@@ -92,25 +71,18 @@ describe('UU5.Form.DateTimeRangePicker intreface testing', () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().state.open).toBeFalsy();
   });
-
 });
 
-describe('UU5.Forms.InputMixin interface testing', () => {
-
-  it('isInput()', () => {
+describe("UU5.Forms.InputMixin interface testing", () => {
+  it("isInput()", () => {
     const wrapper = shallow(
-      <UU5.Forms.DateTimeRangePicker
-        id={"idText"}
-        label="Valid time"
-        placeholder="Enter time"
-        required={false}
-      />
+      <UU5.Forms.DateTimeRangePicker id={"idText"} label="Valid time" placeholder="Enter time" required={false} />
     );
     expect(wrapper.instance().isInput()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getValue() should return value', () => {
+  it("getValue() should return value", () => {
     const wrapper = shallow(
       <UU5.Forms.DateTimeRangePicker
         id={"idText"}
@@ -126,14 +98,9 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper.instance().getValue()[1]).toBeInstanceOf(Date);
   });
 
-  it('setValue(value,setStateCallBack)', () => {
+  it("setValue(value,setStateCallBack)", () => {
     const wrapper = shallow(
-      <UU5.Forms.DateTimeRangePicker
-        id={"idText"}
-        label="Valid time"
-        placeholder="Enter time"
-        required={false}
-      />
+      <UU5.Forms.DateTimeRangePicker id={"idText"} label="Valid time" placeholder="Enter time" required={false} />
     );
     expect(wrapper.instance().state.value).toEqual(null);
     const mockFunc = jest.fn();
@@ -150,30 +117,19 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-
-  it('getMessage()', () => {
+  it("getMessage()", () => {
     const wrapper = shallow(
-      <UU5.Forms.DateTimeRangePicker
-        id={"idText"}
-        label="Enter valid time"
-        placeholder="Valid time"
-        required={false}
-      />
+      <UU5.Forms.DateTimeRangePicker id={"idText"} label="Enter valid time" placeholder="Valid time" required={false} />
     );
     expect(wrapper.instance().getMessage()).toBe(null);
     expect(wrapper).toMatchSnapshot();
-    wrapper.setProps({message: "New Setting message"});
+    wrapper.setProps({ message: "New Setting message" });
     expect(wrapper.instance().getMessage()).toMatch(/New Setting message/);
   });
 
-  it('setMessage(msg, setStateCallBack)', () => {
+  it("setMessage(msg, setStateCallBack)", () => {
     const wrapper = shallow(
-      <UU5.Forms.DateTimeRangePicker
-        id={"idText"}
-        label="Enter valid time"
-        placeholder="Valid time"
-        required={false}
-      />
+      <UU5.Forms.DateTimeRangePicker id={"idText"} label="Enter valid time" placeholder="Valid time" required={false} />
     );
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
@@ -187,39 +143,30 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-
-  it('getFeedBack()', () => {
+  it("getFeedBack()", () => {
     const wrapper = shallow(
-      <UU5.Forms.DateTimeRangePicker
-        id={"idText"}
-        label="Enter valid time"
-        placeholder="Valid time"
-        required={false}
-      />
+      <UU5.Forms.DateTimeRangePicker id={"idText"} label="Enter valid time" placeholder="Valid time" required={false} />
     );
     expect(wrapper.instance().getFeedback()).toMatch(/initial/);
     expect(wrapper).toMatchSnapshot();
-    wrapper.setProps({feedback: "success"});
+    wrapper.setProps({ feedback: "success" });
     wrapper.update();
     expect(wrapper.instance().getFeedback()).toMatch(/success/);
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setFeedBack(feedback, message, value, setStateCallBack)', () => {
+  it("setFeedBack(feedback, message, value, setStateCallBack)", () => {
     const wrapper = shallow(
-      <UU5.Forms.DateTimeRangePicker
-        id={"idText"}
-        label="Enter valid time"
-        placeholder="Valid time"
-        required={false}
-      />
+      <UU5.Forms.DateTimeRangePicker id={"idText"} label="Enter valid time" placeholder="Valid time" required={false} />
     );
     expect(wrapper.instance().getFeedback()).toMatch(/initial/);
     expect(wrapper.instance().getMessage()).toBe(null);
     expect(wrapper.instance().state.value).toEqual(null);
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
-    const returnValue = wrapper.instance().setFeedback("success", "This is valid message.", ["1.1.2019", "5.5.2020"], mockFunc);
+    const returnValue = wrapper
+      .instance()
+      .setFeedback("success", "This is valid message.", ["1.1.2019", "5.5.2020"], mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
@@ -233,7 +180,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setInitial(msg, value, setStateCallBack)', () => {
+  it("setInitial(msg, value, setStateCallBack)", () => {
     const wrapper = shallow(
       <UU5.Forms.DateTimeRangePicker
         id={"idText"}
@@ -248,7 +195,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getFeedback()).toEqual("error");
     expect(wrapper.instance().state.value).toEqual(null);
-    expect(wrapper.instance().getMessage()).toEqual("This input is required")
+    expect(wrapper.instance().getMessage()).toEqual("This input is required");
     expect(wrapper.instance().isInitial()).toBeFalsy();
     const returnValue = wrapper.instance().setInitial("Initial Message", null, mockFunc);
     wrapper.update();
@@ -257,24 +204,19 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().getFeedback()).toEqual("initial");
     expect(wrapper.instance().state.value).toEqual(null);
-    expect(wrapper.instance().getMessage()).toEqual("Initial Message")
+    expect(wrapper.instance().getMessage()).toEqual("Initial Message");
     expect(wrapper.instance().isInitial()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isInitial() shoud return true', () => {
+  it("isInitial() shoud return true", () => {
     const wrapper = shallow(
-      <UU5.Forms.DateTimeRangePicker
-        id={"idText"}
-        label="Enter valid time"
-        placeholder="Valid time"
-        required={false}
-      />
+      <UU5.Forms.DateTimeRangePicker id={"idText"} label="Enter valid time" placeholder="Valid time" required={false} />
     );
     expect(wrapper.instance().isInitial()).toBeTruthy();
   });
 
-  it('isInitial() should return false', () => {
+  it("isInitial() should return false", () => {
     const wrapper = shallow(
       <UU5.Forms.DateTimeRangePicker
         id={"idText"}
@@ -288,14 +230,9 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper.instance().isInitial()).toBeFalsy();
   });
 
-  it('setLoading(message, value, setStateCallBack)', () => {
+  it("setLoading(message, value, setStateCallBack)", () => {
     const wrapper = shallow(
-      <UU5.Forms.DateTimeRangePicker
-        id={"idText"}
-        label="Enter valid time"
-        placeholder="Valid time"
-        required={false}
-      />
+      <UU5.Forms.DateTimeRangePicker id={"idText"} label="Enter valid time" placeholder="Valid time" required={false} />
     );
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
@@ -316,27 +253,17 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isLoading()', () => {
+  it("isLoading()", () => {
     const wrapper = shallow(
-      <UU5.Forms.DateTimeRangePicker
-        id={"idText"}
-        label="Enter valid time"
-        placeholder="Valid time"
-        required={false}
-      />
+      <UU5.Forms.DateTimeRangePicker id={"idText"} label="Enter valid time" placeholder="Valid time" required={false} />
     );
     expect(wrapper.instance().isLoading()).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setSuccess(message, value, setStateCallBack)', () => {
+  it("setSuccess(message, value, setStateCallBack)", () => {
     const wrapper = shallow(
-      <UU5.Forms.DateTimeRangePicker
-        id={"idText"}
-        label="Enter valid time"
-        placeholder="Valid time"
-        required={false}
-      />
+      <UU5.Forms.DateTimeRangePicker id={"idText"} label="Enter valid time" placeholder="Valid time" required={false} />
     );
     const mockFunc = jest.fn();
     expect(wrapper.instance().getFeedback()).toEqual("initial");
@@ -349,7 +276,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().getFeedback()).toEqual("success");
-    expect(wrapper.instance().getMessage()).toEqual("This is success message")
+    expect(wrapper.instance().getMessage()).toEqual("This is success message");
     expect(Array.isArray(wrapper.instance().getValue())).toBeTruthy();
     expect(wrapper.instance().getValue().length).toBe(2);
     expect(wrapper.instance().getValue()[0]).toBeInstanceOf(Date);
@@ -358,14 +285,9 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isSuccess() fisr return false, second return true', () => {
+  it("isSuccess() fisr return false, second return true", () => {
     const wrapper = shallow(
-      <UU5.Forms.DateTimeRangePicker
-        id={"idText"}
-        label="Enter valid time"
-        placeholder="Valid time"
-        required={true}
-      />
+      <UU5.Forms.DateTimeRangePicker id={"idText"} label="Enter valid time" placeholder="Valid time" required={true} />
     );
     const mockFunc = jest.fn();
     expect(wrapper.instance().isSuccess()).toBeFalsy();
@@ -375,7 +297,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().getFeedback()).toEqual("success");
-    expect(wrapper.instance().getMessage()).toEqual("This is success message")
+    expect(wrapper.instance().getMessage()).toEqual("This is success message");
     expect(Array.isArray(wrapper.instance().getValue())).toBeTruthy();
     expect(wrapper.instance().getValue().length).toBe(2);
     expect(wrapper.instance().getValue()[0]).toBeInstanceOf(Date);
@@ -384,14 +306,9 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setWarning(message, value, setStateCallBack)', () => {
+  it("setWarning(message, value, setStateCallBack)", () => {
     const wrapper = shallow(
-      <UU5.Forms.DateTimeRangePicker
-        id={"idText"}
-        label="Enter valid time"
-        placeholder="Valid time"
-        required={false}
-      />
+      <UU5.Forms.DateTimeRangePicker id={"idText"} label="Enter valid time" placeholder="Valid time" required={false} />
     );
     const mockFunc = jest.fn();
     expect(wrapper.instance().getFeedback()).toEqual("initial");
@@ -406,7 +323,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().getFeedback()).toEqual("warning");
-    expect(wrapper.instance().getMessage()).toEqual("This is warning message")
+    expect(wrapper.instance().getMessage()).toEqual("This is warning message");
     expect(Array.isArray(wrapper.instance().getValue())).toBeTruthy();
     expect(wrapper.instance().getValue().length).toBe(2);
     expect(wrapper.instance().getValue()[0]).toBeInstanceOf(Date);
@@ -416,8 +333,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-
-  it('isWarning()', () => {
+  it("isWarning()", () => {
     const wrapper = shallow(
       <UU5.Forms.DateTimeRangePicker
         id={"idText"}
@@ -441,14 +357,8 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setError(message, value, setStateCallBack)', () => {
-    const wrapper = shallow(
-      <UU5.Forms.DateTimeRangePicker
-        id={"idText"}
-        label="Full name"
-        placeholder="John Smith"
-      />
-    );
+  it("setError(message, value, setStateCallBack)", () => {
+    const wrapper = shallow(<UU5.Forms.DateTimeRangePicker id={"idText"} label="Full name" placeholder="John Smith" />);
     const mockFunc = jest.fn();
     expect(wrapper.instance().isError()).toBeFalsy();
     expect(wrapper.instance().isWarning()).toBeFalsy();
@@ -476,7 +386,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isError()', () => {
+  it("isError()", () => {
     const wrapper = shallow(
       <UU5.Forms.DateTimeRangePicker
         id={"idText"}
@@ -500,14 +410,9 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('reset(setStateCallBack)', () => {
+  it("reset(setStateCallBack)", () => {
     const wrapper = shallow(
-      <UU5.Forms.DateTimeRangePicker
-        id={"idText"}
-        label="Enter valid time"
-        placeholder="Valid time"
-        required={true}
-      />
+      <UU5.Forms.DateTimeRangePicker id={"idText"} label="Enter valid time" placeholder="Valid time" required={true} />
     );
     const mockFunc = jest.fn();
     wrapper.instance().setFeedback("success", "New Message", ["1.1.2019", "5.5.2020"], mockFunc);
@@ -536,54 +441,51 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getChangeFeedback()', () => {
+  it("getChangeFeedback()", () => {
     const wrapper = shallow(
-      <UU5.Forms.DateTimeRangePicker
-        id={"idText"}
-        label="Enter valid time"
-        placeholder="Valid time"
-        required={true}
-      />
+      <UU5.Forms.DateTimeRangePicker id={"idText"} label="Enter valid time" placeholder="Valid time" required={true} />
     );
-    expect(wrapper.instance().getChangeFeedback({})).toEqual(expect.objectContaining({
-      feedback: 'initial',
-      message: null,
-      value: null,
-      foundAutocompleteItems: null,
-      selectedIndex: null
-    }));
+    expect(wrapper.instance().getChangeFeedback({})).toEqual(
+      expect.objectContaining({
+        feedback: "initial",
+        message: null,
+        value: null,
+        foundAutocompleteItems: null,
+        selectedIndex: null
+      })
+    );
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setChangeFeedback()', () => {
+  it("setChangeFeedback()", () => {
     const wrapper = shallow(
-      <UU5.Forms.DateTimeRangePicker
-        id={"idText"}
-        label="Enter valid time"
-        placeholder="Valid time"
-        required={true}
-      />
+      <UU5.Forms.DateTimeRangePicker id={"idText"} label="Enter valid time" placeholder="Valid time" required={true} />
     );
     const mockFunc = jest.fn();
-    expect(wrapper.instance().getChangeFeedback({})).toEqual(expect.objectContaining({
-      feedback: 'initial',
-      message: null,
-      value: null,
-      foundAutocompleteItems: null,
-      selectedIndex: null
-    }));
-    const returnValue = wrapper.instance().setChangeFeedback({
-      feedback: 'success',
-      message: 'Success message from setChangeFeedback',
-      value: ["1.1.2019 12:00", "5.5.2020 13:00"]
-    }, mockFunc);
+    expect(wrapper.instance().getChangeFeedback({})).toEqual(
+      expect.objectContaining({
+        feedback: "initial",
+        message: null,
+        value: null,
+        foundAutocompleteItems: null,
+        selectedIndex: null
+      })
+    );
+    const returnValue = wrapper.instance().setChangeFeedback(
+      {
+        feedback: "success",
+        message: "Success message from setChangeFeedback",
+        value: ["1.1.2019 12:00", "5.5.2020 13:00"]
+      },
+      mockFunc
+    );
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(returnValue).toBe(wrapper.instance());
     expect(Array.isArray(wrapper.instance().getValue())).toBeTruthy();
     expect(wrapper.instance().state.value.length).toBe(2);
-    let expectedValue1 = (new Date("2019-01-01T12:00")).getTime();
-    let expectedValue2 = (new Date("2020-05-05T13:00")).getTime();
+    let expectedValue1 = new Date("2019-01-01T12:00").getTime();
+    let expectedValue2 = new Date("2020-05-05T13:00").getTime();
     expect(wrapper.instance().state.value[0].getTime() === expectedValue1).toBeTruthy();
     expect(wrapper.instance().state.value[1].getTime() === expectedValue2).toBeTruthy();
     expect(wrapper.instance().state.feedback).toEqual("success");
@@ -591,15 +493,9 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-
-  it('isReadOnly()', () => {
+  it("isReadOnly()", () => {
     const wrapper = shallow(
-      <UU5.Forms.DateTimeRangePicker
-        id={"idText"}
-        label="Enter valid time"
-        placeholder="Valid time"
-        required={true}
-      />
+      <UU5.Forms.DateTimeRangePicker id={"idText"} label="Enter valid time" placeholder="Valid time" required={true} />
     );
     const mockFunc = jest.fn();
     expect(wrapper.instance().isReadOnly()).toBeFalsy();
@@ -612,7 +508,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setEditableValue(true, setStateCallback)', () => {
+  it("setEditableValue(true, setStateCallback)", () => {
     const wrapper = shallow(
       <UU5.Forms.DateTimeRangePicker
         id={"idText"}
@@ -639,8 +535,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(mockFunc).toHaveBeenCalledTimes(4);
   });
 
-
-  it('setEditableValue(false, setStateCallback)', () => {
+  it("setEditableValue(false, setStateCallback)", () => {
     const wrapper = shallow(
       <UU5.Forms.DateTimeRangePicker
         id={"idText"}
@@ -666,8 +561,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(mockFunc).toHaveBeenCalledTimes(3);
   });
 
-
-  it('readOnly(setStatecallback)', () => {
+  it("readOnly(setStatecallback)", () => {
     const wrapper = shallow(
       <UU5.Forms.DateTimeRangePicker
         id={"idText"}
@@ -689,7 +583,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('editable(setStatecallback)', () => {
+  it("editable(setStatecallback)", () => {
     const wrapper = shallow(
       <UU5.Forms.DateTimeRangePicker
         id={"idText"}
@@ -717,7 +611,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getLabel(idinput)', () => {
+  it("getLabel(idinput)", () => {
     const wrapper = shallow(
       <UU5.Forms.DateTimeRangePicker
         id={"idText"}
@@ -733,10 +627,9 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper.instance().getLabel()).toEqual(expect.any(Object));
     expect(wrapper.instance().getLabel()).toBeInstanceOf(Object);
     expect(wrapper).toMatchSnapshot();
-
   });
 
-  it('getInputWrapper(inpuid)', () => {
+  it("getInputWrapper(inpuid)", () => {
     const wrapper = shallow(
       <UU5.Forms.DateTimeRangePicker
         id={"idText"}
@@ -753,14 +646,10 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper.instance().getInputWrapper()).toBeInstanceOf(Object);
     expect(wrapper).toMatchSnapshot();
   });
-
-
 });
 
-
-describe('UU5.Forms.TextInputMixin interface testing', () => {
-
-  it('isTextInput() should return true', () => {
+describe("UU5.Forms.TextInputMixin interface testing", () => {
+  it("isTextInput() should return true", () => {
     const wrapper = shallow(
       <UU5.Forms.DateTimeRangePicker
         id={"idText"}
@@ -773,7 +662,7 @@ describe('UU5.Forms.TextInputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getInput()', () => {
+  it("getInput()", () => {
     const wrapper = mount(
       <UU5.Forms.DateTimeRangePicker
         id={"idText"}
@@ -782,10 +671,17 @@ describe('UU5.Forms.TextInputMixin interface testing', () => {
         value={["1.1.2019", "5.5.2020"]}
       />
     );
-    expect(wrapper.instance().getInput() === wrapper.find('.uu5-forms-datetimerangepicker-main-input').first().instance().findDOMNode()).toBeTruthy();
+    expect(
+      wrapper.instance().getInput() ===
+        wrapper
+          .find(".uu5-forms-datetimerangepicker-main-input")
+          .first()
+          .instance()
+          .findDOMNode()
+    ).toBeTruthy();
   });
 
-  it('focus()', () => {
+  it("focus()", () => {
     const wrapper = shallow(
       <UU5.Forms.DateTimeRangePicker
         id={"idText"}
@@ -800,7 +696,7 @@ describe('UU5.Forms.TextInputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isValid()', () => {
+  it("isValid()", () => {
     const wrapper = shallow(
       <UU5.Forms.DateTimeRangePicker
         id={"idText"}
@@ -814,20 +710,15 @@ describe('UU5.Forms.TextInputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isValid() should return false', () => {
+  it("isValid() should return false", () => {
     const wrapper = shallow(
-      <UU5.Forms.DateTimeRangePicker
-        id={"idText"}
-        label="Enter valid time"
-        placeholder="Valid time"
-        required={true}
-      />
+      <UU5.Forms.DateTimeRangePicker id={"idText"} label="Enter valid time" placeholder="Valid time" required={true} />
     );
     expect(wrapper.instance().isValid()).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('open(setStateCallBack)', () => {
+  it("open(setStateCallBack)", () => {
     const wrapper = mount(
       <UU5.Forms.DateTimeRangePicker
         id={"idText"}
@@ -847,7 +738,7 @@ describe('UU5.Forms.TextInputMixin interface testing', () => {
     expect(wrapper.instance().isOpen()).toBeTruthy();
   });
 
-  it('isOpen() should return false', () => {
+  it("isOpen() should return false", () => {
     const wrapper = shallow(
       <UU5.Forms.DateTimeRangePicker
         id={"idText"}
@@ -861,7 +752,7 @@ describe('UU5.Forms.TextInputMixin interface testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('getFocusFeedback()', () => {
+  it("getFocusFeedback()", () => {
     const focusMessage = "Message";
     const wrapper = mount(
       <UU5.Forms.DateTimeRangePicker
@@ -874,26 +765,24 @@ describe('UU5.Forms.TextInputMixin interface testing', () => {
     );
     wrapper.instance().focus();
     wrapper.update();
-    expect(wrapper.instance().getFocusFeedback({})).toEqual({feedback: "initial", value: null, message: focusMessage});
+    expect(wrapper.instance().getFocusFeedback({})).toEqual({
+      feedback: "initial",
+      value: null,
+      message: focusMessage
+    });
   });
 
-  it('getBlurFeedback()', () => {
+  it("getBlurFeedback()", () => {
     const wrapper = shallow(
-      <UU5.Forms.DateTimeRangePicker
-        id={"idText"}
-        label="Enter valid time"
-        placeholder="Valid time"
-        required={true}
-      />
+      <UU5.Forms.DateTimeRangePicker id={"idText"} label="Enter valid time" placeholder="Valid time" required={true} />
     );
-    expect(wrapper.instance().getBlurFeedback({})).toEqual(expect.objectContaining({
-      feedback: 'initial',
-      message: null,
-      value: undefined
-    }));
+    expect(wrapper.instance().getBlurFeedback({})).toEqual(
+      expect.objectContaining({
+        feedback: "initial",
+        message: null,
+        value: undefined
+      })
+    );
     expect(wrapper).toMatchSnapshot();
   });
-
 });
-
-

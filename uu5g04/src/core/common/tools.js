@@ -11,10 +11,10 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Environment from '../environment/environment.js';
-import EnvTools from '../environment/tools.js';
+import React from "react";
+import ReactDOM from "react-dom";
+import Environment from "../environment/environment.js";
+import EnvTools from "../environment/tools.js";
 import Context from "./context.js";
 import ScreenSize from "../utils/screen-size.js";
 
@@ -53,7 +53,9 @@ let COMPONENT_NAME = String.raw`[-\w.]+`;
 let ATTR = String.raw`([-\w]+)(?:\s*=\s*("(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|([^"'>\s/][^>\s/]*)))?`; // groups: attr name, attr value, indication whether without quotes
 let TAG = String.raw`<(${COMPONENT_NAME})((?:\s+(?:${ATTR}))*)\s*(/)?>|</(${COMPONENT_NAME})>`; // groups: comp name, attrs, -, -, -, self-closing, closing tag
 let ATTR_REGEXP = new RegExp(ATTR); // groups: see ATTR
-let ATTR_VALUE_TYPE_REGEXP = new RegExp(String.raw`(${REGEXP.uu5json.source})|(${REGEXP.uu5string.source})|(${REGEXP.uu5data.source})|`); // groups: uu5json, uu5string, uu5data
+let ATTR_VALUE_TYPE_REGEXP = new RegExp(
+  String.raw`(${REGEXP.uu5json.source})|(${REGEXP.uu5string.source})|(${REGEXP.uu5data.source})|`
+); // groups: uu5json, uu5string, uu5data
 const TIME_FORMAT_AM = "AM";
 const TIME_FORMAT_PM = "PM";
 const TIME_FORMAT_12 = "12";
@@ -71,10 +73,10 @@ export const Tools = {
 };
 
 Tools.events = {
-  lsi: 'UU5_Common_LsiMixin_lsiEvent',
-  highlight: 'UU5_Bricks_TextCorrector_highlightEvent',
-  dateTime: 'UU5_Bricks_DateTime_event',
-  number: 'UU5_Bricks_Number_event'
+  lsi: "UU5_Common_LsiMixin_lsiEvent",
+  highlight: "UU5_Bricks_TextCorrector_highlightEvent",
+  dateTime: "UU5_Bricks_DateTime_event",
+  number: "UU5_Bricks_Number_event"
 };
 
 Tools.screenSize = {
@@ -89,13 +91,13 @@ Tools.getPage = () => {
   return Environment.page;
 };
 
-Tools.checkTag = function (tag, hideError) {
+Tools.checkTag = function(tag, hideError) {
   let result = null;
   switch (typeof tag) {
     case "string":
       result = tag;
 
-      let tagArray = tag.split('.');
+      let tagArray = tag.split(".");
       let isSimpleString = tagArray.length === 1;
 
       if (!isSimpleString) {
@@ -105,14 +107,12 @@ Tools.checkTag = function (tag, hideError) {
         }
         result = calculatedTag || null;
 
-        if (typeof result !== 'function' && (result && !result.isUu5PureComponent && !result["$$typeof"])) {
+        if (typeof result !== "function" && (result && !result.isUu5PureComponent && !result["$$typeof"])) {
           if (!hideError) {
-            Tools.error(
-              'Unknown tag ' + tag + ' - element was not found.', {
-                notFoundObject: result,
-                notFoundObjectType: typeof result
-              }
-            );
+            Tools.error("Unknown tag " + tag + " - element was not found.", {
+              notFoundObject: result,
+              notFoundObjectType: typeof result
+            });
           }
           result = null;
         }
@@ -133,7 +133,7 @@ Tools.checkTag = function (tag, hideError) {
 
 Tools.findComponent = (tag, props, content, error) => {
   let newTag = tag;
-  if (typeof tag === 'object' && tag.tag) {
+  if (typeof tag === "object" && tag.tag) {
     newTag = tag.tag;
     props = tag.props;
   }
@@ -147,15 +147,22 @@ Tools.findComponent = (tag, props, content, error) => {
     if (fTag) {
       result = React.createElement(fTag, props, content);
     } else {
-      let module = newTag.split('.');
+      let module = newTag.split(".");
       module.splice(-1, 1);
 
-      if (module.length === 2 && window[module[0]] && window[module[0]][module[1]] && Object.keys(window[module[0]][module[1]]).length) {
-        result =
-          <UU5.Common.NotFoundTag key={props.key} tagName={newTag} id={props.id} ref_={props.ref_} error={error} />;
+      if (
+        module.length === 2 &&
+        window[module[0]] &&
+        window[module[0]][module[1]] &&
+        Object.keys(window[module[0]][module[1]]).length
+      ) {
+        result = (
+          <UU5.Common.NotFoundTag key={props.key} tagName={newTag} id={props.id} ref_={props.ref_} error={error} />
+        );
       } else {
-        result =
-          <UU5.Common.TagPlaceholder key={props.key} tagName={newTag} props={props} content={content} error={error} />;
+        result = (
+          <UU5.Common.TagPlaceholder key={props.key} tagName={newTag} props={props} content={content} error={error} />
+        );
       }
 
       // let fModule = Tools.checkTag(module.join('.'), true);
@@ -164,8 +171,11 @@ Tools.findComponent = (tag, props, content, error) => {
     }
   } else {
     let component = Tools.checkTag(newTag, false);
-    result = component ? React.createElement(component, props, content) :
-      <UU5.Common.NotFoundTag key={props.key} tagName={newTag} id={props.id} ref_={props.ref_} error={error} />;
+    result = component ? (
+      React.createElement(component, props, content)
+    ) : (
+      <UU5.Common.NotFoundTag key={props.key} tagName={newTag} id={props.id} ref_={props.ref_} error={error} />
+    );
   }
 
   return result;
@@ -200,14 +210,14 @@ Tools.loadLibrary = (libraryName, callback) => {
             error = e;
           }
         } else {
-          error = new Error("Loading library ended with status " + request.status + " on url:" + url)
+          error = new Error("Loading library ended with status " + request.status + " on url:" + url);
         }
         cache[query].result = result;
         cache[query].error = error;
         cache[query].pendingCallback.forEach(fn => fn(result, error));
       }
     };
-    request.open('GET', url, true);
+    request.open("GET", url, true);
     request.setRequestHeader("Content-Type", "application/json");
     request.send(JSON.stringify(dtoIn.code));
   } else if (cache[query].result || cache[query].error) {
@@ -219,7 +229,7 @@ Tools.loadLibrary = (libraryName, callback) => {
 
 Tools.loadLibraryCache = {};
 
-Tools.buildAttributes = function (attrsString) {
+Tools.buildAttributes = function(attrsString) {
   Tools.warning("UU5.Common.Tools.buildAttributes is deprecated. Use UU5.Common.UU5String.buildAttributes instead.");
 
   let attrs = {};
@@ -237,33 +247,42 @@ Tools.buildAttributes = function (attrsString) {
     let isUnquoted = !!matchAttrs[3];
 
     if (isUnquoted) {
-      if (matchValue === "true") { //true
+      if (matchValue === "true") {
+        //true
         value = true;
-      } else if (matchValue === "false") { //false
+      } else if (matchValue === "false") {
+        //false
         value = false;
-      } else if (isFinite(matchValue)) { //number
+      } else if (isFinite(matchValue)) {
+        //number
         value = +matchValue;
-      } else { //any other -> null
+      } else {
+        //any other -> null
         value = null;
       }
     } else if (matchValue != null) {
       // unescape quoted value
       if (matchValue[0] === "'") matchValue = matchValue.substr(1, matchValue.length - 2).replace(/\\([\\'])/g, "$1");
-      else if (matchValue[0] === '"') matchValue = matchValue.substr(1, matchValue.length - 2).replace(/\\([\\"])/g, "$1");
+      else if (matchValue[0] === '"')
+        matchValue = matchValue.substr(1, matchValue.length - 2).replace(/\\([\\"])/g, "$1");
 
       let matchValueType = matchValue.match(ATTR_VALUE_TYPE_REGEXP);
-      if (matchValueType[1]) { //uu5JSON
+      if (matchValueType[1]) {
+        //uu5JSON
         try {
           value = this.parseFromUu5JSON(matchValue);
         } catch (e) {
           e.context.prop = name;
           throw e;
         }
-      } else if (matchValueType[2]) { //uu5String
+      } else if (matchValueType[2]) {
+        //uu5String
         value = this.getChildrenFromUu5String(matchValue);
-      } else if (matchValueType[3]) { //uu5Data
+      } else if (matchValueType[3]) {
+        //uu5Data
         value = this.parseFromUu5Data(matchValue);
-      } else { //as-is
+      } else {
+        //as-is
         if (name === "href") {
           matchValue = matchValue.replace(REGEXP.jsCode, "");
         }
@@ -279,12 +298,12 @@ Tools.buildAttributes = function (attrsString) {
   return attrs;
 };
 
-Tools.isUU5String = (uu5String) => {
+Tools.isUU5String = uu5String => {
   Tools.warning("UU5.Common.Tools.isUU5String is deprecated. Use UU5.Common.UU5String.isValid instead.");
-  return typeof uu5String === 'string' && !!uu5String.match(REGEXP.uu5string);
+  return typeof uu5String === "string" && !!uu5String.match(REGEXP.uu5string);
 };
 
-Tools.getChildrenFromUu5String = function (uu5String, opt) {
+Tools.getChildrenFromUu5String = function(uu5String, opt) {
   Tools.warning("UU5.Common.Tools.getChildrenFromUu5String is deprecated. Use UU5.Common.UU5String instead.");
 
   // opt (Object) - tagsRegExp, checkSpaces, checkGrammar, language - defaults from UU5.Common.TextCorrector
@@ -297,11 +316,13 @@ Tools.getChildrenFromUu5String = function (uu5String, opt) {
 
   let tagsRegExp = opt.tagsRegExp || Environment.uu5StringTagsRegExp || null;
 
-  let childStack = [{
-    tag: '_root',
-    content: [],
-    index: 0
-  }];
+  let childStack = [
+    {
+      tag: "_root",
+      content: [],
+      index: 0
+    }
+  ];
 
   let pointer = childStack[0];
 
@@ -312,7 +333,6 @@ Tools.getChildrenFromUu5String = function (uu5String, opt) {
   let matchS;
   let matchUu5String = uu5String.match(REGEXP.uu5string);
   if (matchUu5String) {
-
     // !!!!! Never put uu5stringRe to constants, otherwise it gets stuck - because of exec method on regexp
     // groups: comp name, attrs, -, -, -, self-closing, closing tag comp name, content upto next tag
     let tagRe = new RegExp(TAG, "g");
@@ -331,10 +351,9 @@ Tools.getChildrenFromUu5String = function (uu5String, opt) {
       let isSelfClosing = !!matchS[6];
       let tagObj;
 
-      if (pre && !(childTag === 'uu5string.pre' && isClosing) || (childTag && childTag.match(/^script$/i))) {
+      if ((pre && !(childTag === "uu5string.pre" && isClosing)) || (childTag && childTag.match(/^script$/i))) {
         pointer.content.push(Environment.textEntityMap.replaceHtmlEntity(matchS[0]));
       } else {
-
         if (isClosing) {
           //closing tag
 
@@ -346,7 +365,11 @@ Tools.getChildrenFromUu5String = function (uu5String, opt) {
             return React.createElement(
               window.UU5.Common.Error, // eslint-disable-line no-undef
               null,
-              <div>Invalid uu5string: Tag {tagObj.tag} at position {tagObj.index} is not closed.<br />{uu5String}</div>
+              <div>
+                Invalid uu5string: Tag {tagObj.tag} at position {tagObj.index} is not closed.
+                <br />
+                {uu5String}
+              </div>
             );
           }
 
@@ -354,7 +377,9 @@ Tools.getChildrenFromUu5String = function (uu5String, opt) {
 
           if (pre) {
             pre = false;
-            pointer.content[pointer.content.length - 1] = Environment.textEntityMap.replaceHtmlEntity(tagObj.content.join(''));
+            pointer.content[pointer.content.length - 1] = Environment.textEntityMap.replaceHtmlEntity(
+              tagObj.content.join("")
+            );
           } else {
             if (tagObj.forbidden) {
               tagObj.content = [`Error: Tag <${tagObj.tag}/> is not allowed.`];
@@ -365,18 +390,18 @@ Tools.getChildrenFromUu5String = function (uu5String, opt) {
               props = tagObj.attrs || {};
               props.content = props.content || tagObj.content;
             }
-            pointer.content[pointer.content.length - 1] = body ? {
-              tag: tagObj.tag,
-              props: props
-            } : this.findComponent(tagObj.tag, tagObj.attrs, React.Children.toArray(tagObj.content));
+            pointer.content[pointer.content.length - 1] = body
+              ? {
+                  tag: tagObj.tag,
+                  props: props
+                }
+              : this.findComponent(tagObj.tag, tagObj.attrs, React.Children.toArray(tagObj.content));
           }
-
         } else {
-          pre = (childTag === 'uu5string.pre');
+          pre = childTag === "uu5string.pre";
           tagObj = { tag: childTag, content: [], index: matchS.index };
 
-          if (tagsRegExp && !tagsRegExp.test(childTag))
-            tagObj.forbidden = true;
+          if (tagsRegExp && !tagsRegExp.test(childTag)) tagObj.forbidden = true;
           else if (attrs) {
             try {
               tagObj.attrs = this.buildAttributes(attrs);
@@ -389,9 +414,14 @@ Tools.getChildrenFromUu5String = function (uu5String, opt) {
                   content: [],
                   index: matchS.index,
                   attrs: {
-                    content: <div>Invalid uu5json: Component {tag} has invalid
-                      property {err.context.prop + `='<uu5json/>${err.context.json}'`}. {err.message}<br />{uu5String}
-                    </div>
+                    content: (
+                      <div>
+                        Invalid uu5json: Component {tag} has invalid property{" "}
+                        {err.context.prop + `='<uu5json/>${err.context.json}'`}. {err.message}
+                        <br />
+                        {uu5String}
+                      </div>
+                    )
                   }
                 };
               } else {
@@ -404,15 +434,17 @@ Tools.getChildrenFromUu5String = function (uu5String, opt) {
             //self-closing tag
             pre = false;
 
-            if (childTag.indexOf('uu5string.') === 0) {
+            if (childTag.indexOf("uu5string.") === 0) {
               //meta-tag uu5string.*
               let s = this.execMetaTag(childTag, tagObj.attrs);
               if (s) s.forEach(item => pointer.content.push(item));
             } else
-              body ? pointer.content.push({
-                tag: tagObj.tag,
-                props: tagObj.attrs
-              }) : pointer.content.push(this.findComponent(tagObj.tag, tagObj.attrs, null));
+              body
+                ? pointer.content.push({
+                    tag: tagObj.tag,
+                    props: tagObj.attrs
+                  })
+                : pointer.content.push(this.findComponent(tagObj.tag, tagObj.attrs, null));
           } else {
             //common tag
             pointer.content.push(tagObj);
@@ -426,7 +458,9 @@ Tools.getChildrenFromUu5String = function (uu5String, opt) {
     }
     if (pIndex < uu5String.length) {
       let content = uu5String.substr(pIndex);
-      pointer.content.push(pre ? Environment.textEntityMap.replaceHtmlEntity(content) : Tools.replaceTextEntity(content));
+      pointer.content.push(
+        pre ? Environment.textEntityMap.replaceHtmlEntity(content) : Tools.replaceTextEntity(content)
+      );
     }
 
     if (childStack.length > 1) {
@@ -436,14 +470,18 @@ Tools.getChildrenFromUu5String = function (uu5String, opt) {
       return React.createElement(
         window.UU5.Common.Error, // eslint-disable-line no-undef
         null,
-        <div>Invalid uu5string: Tag {tagObj.tag} at position {tagObj.index} is not closed.<br />{uu5String}</div>
+        <div>
+          Invalid uu5string: Tag {tagObj.tag} at position {tagObj.index} is not closed.
+          <br />
+          {uu5String}
+        </div>
       );
     }
   } else {
     pointer.content.push(uu5String);
   }
 
-  return body ? pointer.content : React.Children.toArray(pointer.content)
+  return body ? pointer.content : React.Children.toArray(pointer.content);
 };
 
 Tools.execMetaTag = (tag, args) => {
@@ -451,13 +489,13 @@ Tools.execMetaTag = (tag, args) => {
   let metaTag = tag.slice(10);
   let r = [];
   switch (metaTag) {
-    case 'now':
+    case "now":
       r.push(Tools.toLocaleString(new Date(Date.now())));
       break;
-    case 'codeHex32':
+    case "codeHex32":
       r.push(Tools.generateUUID());
       break;
-    case 'codeHex64':
+    case "codeHex64":
       r.push(Tools.generateUUID() + Tools.generateUUID());
       break;
     default:
@@ -466,37 +504,35 @@ Tools.execMetaTag = (tag, args) => {
   return r;
 };
 
-Tools.parseFromUu5JSON = function (uu5Json) {
-  uu5Json = uu5Json.replace(REGEXP.uu5json, '');
+Tools.parseFromUu5JSON = function(uu5Json) {
+  uu5Json = uu5Json.replace(REGEXP.uu5json, "");
   let value = null;
   try {
     value = JSON.parse(uu5Json);
   } catch (err) {
-    Tools.error(
-      'Error uu5JSON parse.', {
-        uu5Json: uu5Json,
-        cause: err
-      }
-    );
+    Tools.error("Error uu5JSON parse.", {
+      uu5Json: uu5Json,
+      cause: err
+    });
 
     err.code = "uu5jsonInvalid";
     err.context = {
       json: uu5Json
     };
-    throw err
+    throw err;
   }
   return value;
 };
 
-Tools.parseFromUu5Data = function (uu5data) {
-  uu5data = uu5data.replace(REGEXP.uu5data, '');
+Tools.parseFromUu5Data = function(uu5data) {
+  uu5data = uu5data.replace(REGEXP.uu5data, "");
   let parts = uu5data.split(".");
   let data = UU5.Environment.uu5DataMap;
   while (data != null && parts.length > 0) data = data[parts.shift()];
-  (typeof data === "undefined") &&
-  Tools.warning(`There is no component data in UU5.Environment.uu5DataMap for uu5Data: ${uu5data} !`, {
-    string: uu5data
-  });
+  typeof data === "undefined" &&
+    Tools.warning(`There is no component data in UU5.Environment.uu5DataMap for uu5Data: ${uu5data} !`, {
+      string: uu5data
+    });
   return data;
 };
 
@@ -504,30 +540,30 @@ Tools.replaceTextEntity = text => {
   return Environment.textEntityReplace ? Environment.textEntityMap.replace(text) : text; // eslint-disable-line no-undef
 };
 
-Tools.pad = function (n, width, z) {
+Tools.pad = function(n, width, z) {
   //return width times leading z for n ... pad(99,5,'-') -> '---99'
-  z = z || '0';
-  n = n + '';
+  z = z || "0";
+  n = n + "";
   return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
 };
 
-Tools.getServerRequest = function (src, parameters, contentType, done, fail) {
+Tools.getServerRequest = function(src, parameters, contentType, done, fail) {
   let request = new XMLHttpRequest();
-  request.open('GET', src, true);
+  request.open("GET", src, true);
 
   contentType && request.setRequestHeader("Content-type", contentType);
   parameters && request.setRequestHeader("Content-length", parameters.length);
 
   request.onload = () => {
     if (request.status >= 200 && request.status < 300) {
-      typeof done === 'function' && done(request.response);
-    } else if (typeof fail === 'function') {
+      typeof done === "function" && done(request.response);
+    } else if (typeof fail === "function") {
       fail(request);
     }
   };
 
   request.onerror = () => {
-    if (typeof fail === 'function') {
+    if (typeof fail === "function") {
       fail(request);
     }
   };
@@ -535,7 +571,7 @@ Tools.getServerRequest = function (src, parameters, contentType, done, fail) {
   request.send(parameters);
 };
 
-Tools._merge = function (args, deep) {
+Tools._merge = function(args, deep) {
   //   var result;
   //   if(args.length){
   //     result = window.Immutable.fromJS(args[0]);
@@ -561,40 +597,40 @@ Tools._merge = function (args, deep) {
   return result;
 };
 
-Tools.mergeDeep = function () {
+Tools.mergeDeep = function() {
   return Tools._merge(arguments, true);
 };
 
-Tools.merge = function () {
+Tools.merge = function() {
   return Tools._merge(arguments);
 };
 
-Tools.mergeEnvironmentUu5DataMap = function (uu5DataMap) {
+Tools.mergeEnvironmentUu5DataMap = function(uu5DataMap) {
   Environment.uu5DataMap = UU5.Common.Tools.merge(Environment.uu5DataMap || {}, uu5DataMap); // eslint-disable-line no-undef
 };
 
-Tools.getUrlParam = function (name) {
-  var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+Tools.getUrlParam = function(name) {
+  var results = new RegExp("[?&]" + name + "=([^&#]*)").exec(window.location.href);
   return results ? results[1] : null;
 };
 
 // used for error context which is sent to server
-Tools.getBasicObject = function (object) {
+Tools.getBasicObject = function(object) {
   var result = {};
 
-  if (object['$$typeof']) {
-    result = typeof object.type === 'function' ? object.type.tagName : object.type;
-  } else if (object['updater']) {
-    result = object['getTagName'] ? object.getTagName() : '[React.element]';
+  if (object["$$typeof"]) {
+    result = typeof object.type === "function" ? object.type.tagName : object.type;
+  } else if (object["updater"]) {
+    result = object["getTagName"] ? object.getTagName() : "[React.element]";
   } else {
     for (var key in object) {
-      if (key !== '__proto__') {
+      if (key !== "__proto__") {
         var value = object[key];
 
-        if (value && typeof value === 'object') {
+        if (value && typeof value === "object") {
           value = this.getBasicObject(value);
-        } else if (typeof value === 'function') {
-          value = '[function]';
+        } else if (typeof value === "function") {
+          value = "[function]";
         }
 
         result[key] = value;
@@ -604,7 +640,7 @@ Tools.getBasicObject = function (object) {
   return result;
 };
 
-Tools.getNavigator = function () {
+Tools.getNavigator = function() {
   var navigator = window.navigator;
   return {
     vendor: navigator.vendor,
@@ -645,36 +681,36 @@ Tools.getNavigator = function () {
 //   );
 // };
 
-Tools.getFileName = function (path) {
-  return path.replace(REGEXP.slashes, '');
+Tools.getFileName = function(path) {
+  return path.replace(REGEXP.slashes, "");
 };
 
-Tools.getCamelCase = function (string) {
-  var camelCase = '';
+Tools.getCamelCase = function(string) {
+  var camelCase = "";
   if (string) {
     camelCase = string.charAt(0).toUpperCase() + string.slice(1);
-    camelCase = camelCase.replace(REGEXP.char, function ($1) {
-      return $1.toUpperCase().replace('-', '');
+    camelCase = camelCase.replace(REGEXP.char, function($1) {
+      return $1.toUpperCase().replace("-", "");
     });
   }
   return camelCase;
 };
 
-Tools.getDashCase = (string) => {
-  let dashCase = '';
+Tools.getDashCase = string => {
+  let dashCase = "";
   if (string) {
-    dashCase = string.replace(/\B[A-Z]/g, ($1) => {
-      return '-' + $1.toLowerCase();
+    dashCase = string.replace(/\B[A-Z]/g, $1 => {
+      return "-" + $1.toLowerCase();
     });
   }
   return dashCase;
 };
 
-Tools.getSnakeCase = (string) => {
-  let snakeCase = '';
+Tools.getSnakeCase = string => {
+  let snakeCase = "";
   if (string) {
-    snakeCase = string.replace(/\B[A-Z]/g, ($1) => {
-      return '_' + $1.toLowerCase();
+    snakeCase = string.replace(/\B[A-Z]/g, $1 => {
+      return "_" + $1.toLowerCase();
     });
   }
   return snakeCase;
@@ -695,99 +731,161 @@ Tools.getDocumentWidth = () => {
   return Math.max(body.scrollWidth, body.offsetWidth, html.clientWidth, html.scrollWidth, html.offsetWidth);
 };
 
-Tools.getWidth = function (element) {
-  let paddingLeft = parseInt(window.getComputedStyle(ReactDOM.findDOMNode(element), null).getPropertyValue('padding-left').replace('px', '') || "0");
-  let paddingRight = parseInt(window.getComputedStyle(ReactDOM.findDOMNode(element), null).getPropertyValue('padding-right').replace('px', '') || "0");
+Tools.getWidth = function(element) {
+  let paddingLeft = parseInt(
+    window
+      .getComputedStyle(ReactDOM.findDOMNode(element), null)
+      .getPropertyValue("padding-left")
+      .replace("px", "") || "0"
+  );
+  let paddingRight = parseInt(
+    window
+      .getComputedStyle(ReactDOM.findDOMNode(element), null)
+      .getPropertyValue("padding-right")
+      .replace("px", "") || "0"
+  );
   return ReactDOM.findDOMNode(element).clientWidth - paddingLeft - paddingRight;
 };
 
-Tools.getInnerWidth = function (element) {
+Tools.getInnerWidth = function(element) {
   return ReactDOM.findDOMNode(element).clientWidth;
 };
 
-Tools.getOuterWidth = function (element, withMargin) {
+Tools.getOuterWidth = function(element, withMargin) {
   let result = ReactDOM.findDOMNode(element).offsetWidth;
   if (withMargin) {
-    let marginLeft = parseInt(window.getComputedStyle(ReactDOM.findDOMNode(element), null).getPropertyValue('margin-left').replace('px', '') || "0");
-    let marginRight = parseInt(window.getComputedStyle(ReactDOM.findDOMNode(element), null).getPropertyValue('margin-right').replace('px', '') || "0");
+    let marginLeft = parseInt(
+      window
+        .getComputedStyle(ReactDOM.findDOMNode(element), null)
+        .getPropertyValue("margin-left")
+        .replace("px", "") || "0"
+    );
+    let marginRight = parseInt(
+      window
+        .getComputedStyle(ReactDOM.findDOMNode(element), null)
+        .getPropertyValue("margin-right")
+        .replace("px", "") || "0"
+    );
     result += marginLeft + marginRight;
   }
   return result;
 };
 
-Tools.getHeight = function (element) {
-  let paddingTop = parseInt(window.getComputedStyle(ReactDOM.findDOMNode(element), null).getPropertyValue('padding-top').replace('px', '') || "0");
-  let paddingBottom = parseInt(window.getComputedStyle(ReactDOM.findDOMNode(element), null).getPropertyValue('padding-bottom').replace('px', '') || "0");
+Tools.getHeight = function(element) {
+  let paddingTop = parseInt(
+    window
+      .getComputedStyle(ReactDOM.findDOMNode(element), null)
+      .getPropertyValue("padding-top")
+      .replace("px", "") || "0"
+  );
+  let paddingBottom = parseInt(
+    window
+      .getComputedStyle(ReactDOM.findDOMNode(element), null)
+      .getPropertyValue("padding-bottom")
+      .replace("px", "") || "0"
+  );
   return ReactDOM.findDOMNode(element).clientHeight - paddingTop - paddingBottom;
 };
 
-Tools.getInnerHeight = function (element) {
+Tools.getInnerHeight = function(element) {
   return ReactDOM.findDOMNode(element).clientHeight;
 };
 
-Tools.getOuterHeight = function (element, withMargin) {
+Tools.getOuterHeight = function(element, withMargin) {
   let result = ReactDOM.findDOMNode(element).offsetHeight;
   if (withMargin) {
-    let marginTop = parseInt(window.getComputedStyle(ReactDOM.findDOMNode(element), null).getPropertyValue('margin-top').replace('px', '') || "0");
-    let marginBottom = parseInt(window.getComputedStyle(ReactDOM.findDOMNode(element), null).getPropertyValue('margin-bottom').replace('px', '') || "0");
+    let marginTop = parseInt(
+      window
+        .getComputedStyle(ReactDOM.findDOMNode(element), null)
+        .getPropertyValue("margin-top")
+        .replace("px", "") || "0"
+    );
+    let marginBottom = parseInt(
+      window
+        .getComputedStyle(ReactDOM.findDOMNode(element), null)
+        .getPropertyValue("margin-bottom")
+        .replace("px", "") || "0"
+    );
     result += marginTop + marginBottom;
   }
   return result;
 };
 
-Tools.getOffsetTop = function (element) {
+Tools.calculateValueWidth = function(text, fontSize = "12px") {
+  let tempElement = document.createElement("div");
+  tempElement.style = `
+    position: absolute;
+    visibility: hidden;
+    height: auto;
+    width: auto;
+    white-space: nowrap;
+    font-size: ${fontSize};
+  `;
+  tempElement.textContent = text;
+  document.documentElement.appendChild(tempElement);
+  let width = tempElement.clientWidth;
+  document.documentElement.removeChild(tempElement);
+  return width;
+};
+
+Tools.getOffsetTop = function(offsetElement, scrollElement) {
   let offsetTop = 0;
 
-  if (element) {
-    offsetTop = element.getBoundingClientRect().top + (window.scrollY || document.body.scrollTop || window.pageYOffset);
-
+  if (offsetElement) {
+    let scrollTop = scrollElement
+      ? scrollElement.scrollTop
+      : window.scrollY || document.body.scrollTop || window.pageYOffset;
+    offsetTop = offsetElement.getBoundingClientRect().top + scrollTop;
   }
+
   return offsetTop;
 };
 
-Tools.getOffsetLeft = function (element) {
+Tools.getOffsetLeft = function(offsetElement, scrollElement) {
   let offsetLeft = 0;
 
-  if (element) {
-    offsetLeft = element.getBoundingClientRect().left + (window.scrollX || document.body.scrollLeft || window.pageXOffset);
-
+  if (offsetElement) {
+    let scrollLeft = scrollElement
+      ? scrollElement.scrollTop
+      : window.scrollX || document.body.scrollLeft || window.pageXOffset;
+    offsetLeft = offsetElement.getBoundingClientRect().left + scrollLeft;
   }
+
   return offsetLeft;
 };
 
-Tools.getChildTag = function (child) {
+Tools.getChildTag = function(child) {
   // react child type
   return child.type;
 };
 
-Tools.getChildDisplayName = function (child) {
+Tools.getChildDisplayName = function(child) {
   var tag = Tools.getChildTag(child);
-  return typeof tag === 'function' ? tag.displayName : tag;
+  return typeof tag === "function" ? tag.displayName : tag;
 };
 
-Tools.getChildTagName = function (child) {
+Tools.getChildTagName = function(child) {
   // UU5 tagNames or standard DOM tags ('div', 'span',...)
   var tag = Tools.getChildTag(child);
   return tag && tag.tagName ? tag.tagName : tag;
 };
 
 // Environment
-Tools.isMobileOrTablet = function () {
+Tools.isMobileOrTablet = (function() {
   var check = false;
-  (function (a) {
+  (function(a) {
     if (REGEXP.mobile1.test(a) || REGEXP.mobile2.test(a.substr(0, 4))) check = true;
   })(navigator.userAgent || navigator.vendor || window.opera);
   return check;
-}();
+})();
 
-Tools.getMobileOS = function () {
+Tools.getMobileOS = function() {
   var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-  var os = 'unknown';
+  var os = "unknown";
 
   // Windows Phone must come first because its UA also contains "Android"
   if (REGEXP.windowsPhone.test(userAgent)) {
     os = "windowsPhone";
-
   } else if (REGEXP.android.test(userAgent)) {
     os = "android";
 
@@ -799,98 +897,92 @@ Tools.getMobileOS = function () {
   return os;
 };
 
-Tools.isMobileIOS = function () {
-  return this.getMobileOS() === 'iOS';
-},
-  Tools.isMobileAndroid = function () {
-    return this.getMobileOS() === 'android';
-  },
-
-  Tools.isSafari = function () {
+(Tools.isMobileIOS = function() {
+  return this.getMobileOS() === "iOS";
+}),
+  (Tools.isMobileAndroid = function() {
+    return this.getMobileOS() === "android";
+  }),
+  (Tools.isSafari = function() {
     var userAgent = window.navigator.userAgent;
-    return this.isMobileIOS() && userAgent.indexOf('Safari') > -1 && userAgent.indexOf('CriOS') === -1;
-  },
-
-  Tools.isChrome = function () {
+    return this.isMobileIOS() && userAgent.indexOf("Safari") > -1 && userAgent.indexOf("CriOS") === -1;
+  }),
+  (Tools.isChrome = function() {
     var userAgent = window.navigator.userAgent;
-    return (REGEXP.chrome).test(userAgent) && userAgent.indexOf("Version") === -1 && !Tools.isEdge();
-  },
-
-  Tools.isEdge = function () {
+    return REGEXP.chrome.test(userAgent) && userAgent.indexOf("Version") === -1 && !Tools.isEdge();
+  }),
+  (Tools.isEdge = function() {
     var userAgent = window.navigator.userAgent;
-    return (REGEXP.edge).test(userAgent) && userAgent.indexOf("Version") === -1;
-  },
-  Tools.isIE = function () {
+    return REGEXP.edge.test(userAgent) && userAgent.indexOf("Version") === -1;
+  }),
+  (Tools.isIE = function() {
     var userAgent = window.navigator.userAgent;
-    return (REGEXP.ie).test(userAgent) && userAgent.indexOf("Version") === -1;
-  },
-
-  Tools.isAndroidChrome = function () {
+    return REGEXP.ie.test(userAgent) && userAgent.indexOf("Version") === -1;
+  }),
+  (Tools.isAndroidChrome = function() {
     return this.isMobileAndroid() && this.isChrome();
-  },
-
-  Tools.isMac = function () {
+  }),
+  (Tools.isMac = function() {
     return window.navigator.platform && window.navigator.platform.match(/Mac/) ? true : false;
-  },
-
-  Tools.getBrowserLanguage = function () {
-    return window.navigator.language ? window.navigator.language.toLowerCase() : 'en';
-  },
-
-  Tools.getMobileOSVersion = function () {
+  }),
+  (Tools.getBrowserLanguage = function() {
+    return window.navigator.language ? window.navigator.language.toLowerCase() : "en";
+  }),
+  (Tools.getMobileOSVersion = function() {
     var version = window.navigator.userAgent.match(REGEXP.mobile);
-    return version && version[2] ? +version[2].replace('_', '.') : 0;
-  },
-
-  Tools.isTablet = function () {
+    return version && version[2] ? +version[2].replace("_", ".") : 0;
+  }),
+  (Tools.isTablet = function() {
     var userAgent = window.navigator.userAgent;
-    return (this.isSafari() && userAgent.indexOf('iPad') > -1) || (this.isAndroidChrome() && userAgent.indexOf('Mobile') === -1);
-  },
-
-// Cookies
-  Tools.setCookie = function (cookieName, cookieValue, expireDays) {
+    return (
+      (this.isSafari() && userAgent.indexOf("iPad") > -1) ||
+      (this.isAndroidChrome() && userAgent.indexOf("Mobile") === -1)
+    );
+  }),
+  // Cookies
+  (Tools.setCookie = function(cookieName, cookieValue, expireDays) {
     var d = new Date();
     d.setTime(d.getTime() + expireDays * 24 * 60 * 60 * 1000);
-    var expires = 'expires=' + d.toUTCString();
-    document.cookie = cookieName + '=' + cookieValue + '; ' + expires;
-  };
+    var expires = "expires=" + d.toUTCString();
+    document.cookie = cookieName + "=" + cookieValue + "; " + expires;
+  });
 
-Tools.getCookie = function (cookieName) {
-  var name = cookieName + '=';
-  var ca = document.cookie.split(';');
+Tools.getCookie = function(cookieName) {
+  var name = cookieName + "=";
+  var ca = document.cookie.split(";");
   for (var i = 0; i < ca.length; i++) {
     var c = ca[i];
-    while (c.charAt(0) == ' ') {
+    while (c.charAt(0) == " ") {
       c = c.substring(1);
     }
     if (c.indexOf(name) == 0) {
       return c.substring(name.length, c.length);
     }
   }
-  return '';
+  return "";
 };
 
 // languagesString = 'cs-CZ,en;q=0.6,sk;q=0.8' => [{language: 'cs', location: 'cs-cz', q: 1.0}, {language: 'sk', q:
 // 0.8}, {language: 'en', q: 0.6}] languagesString = 'cs' => [{language: 'cs', q: 1.0}] languagesString =
 // 'en;q=0.6,sk;q=0.8' => [{language: 'sk', q: 0.8}, {language: 'en', q: 0.6}]
-Tools.sortLanguages = function (languagesString) {
+Tools.sortLanguages = function(languagesString) {
   // languagesString = 'cs-CZ,en;q=0.6,sk;q=0.8' => languagesSplitter = ['cs-CZ', 'en;q=0.6', 'sk;q=0.8']
-  var languagesSplitter = languagesString.toLowerCase().split(',');
+  var languagesSplitter = languagesString.toLowerCase().split(",");
 
   var languages = {};
-  languagesSplitter.forEach(function (lang) {
+  languagesSplitter.forEach(function(lang) {
     var lang = lang.trim();
     var language = {};
 
-    var langOpt = lang.split(';');
+    var langOpt = lang.split(";");
     var langStr = langOpt[0];
     var q = 1; // quality factor
     if (langOpt.length > 1) {
       langStr = langOpt[0];
-      q = parseFloat(langOpt[1].split('=')[1]);
+      q = parseFloat(langOpt[1].split("=")[1]);
     }
 
-    var langStrSplitter = langStr.split('-');
+    var langStrSplitter = langStr.split("-");
     language.language = langStrSplitter[0];
     langStrSplitter[1] && (language.location = langStr);
 
@@ -904,18 +996,20 @@ Tools.sortLanguages = function (languagesString) {
 
   // languagesArray = [{language: 'cs', location: 'cs-CZ', q: 1.0}, {language: 'en', q: 0.6}, {language: 'sk', q:
   // 0.8}]
-  var languagesArray = Object.keys(languages).map(lang => (languages[lang])).sort((langA, langB) => {
-    if (langA.q < langB.q) {
-      return -1;
-    }
-    if (langA.q > langB.q) {
-      return 1;
-    }
-    return 0;
-  });
+  var languagesArray = Object.keys(languages)
+    .map(lang => languages[lang])
+    .sort((langA, langB) => {
+      if (langA.q < langB.q) {
+        return -1;
+      }
+      if (langA.q > langB.q) {
+        return 1;
+      }
+      return 0;
+    });
 
   // [{language: 'cs', location: 'cs-CZ', q: 1.0}, {language: 'sk', q: 0.8}, {language: 'en', q: 0.6}]
-  return languagesArray.sort(function (lang1, lang2) {
+  return languagesArray.sort(function(lang1, lang2) {
     var result = 0;
     if (lang1.q < lang2.q) {
       result = 1;
@@ -926,24 +1020,28 @@ Tools.sortLanguages = function (languagesString) {
   });
 };
 
-Tools.generateUUID = (length) => {
+Tools.generateUUID = length => {
   return EnvTools.generateId(length);
 };
 
 Tools.joinClassNames = (className1, className2) => {
-  return [className1, className2].join(' ').replace(REGEXP.whiteSpaces, ' ').trim();
+  return [className1, className2]
+    .join(" ")
+    .replace(REGEXP.whiteSpaces, " ")
+    .trim();
 };
 
-Tools.buildClasses = function (classes, keys) {
-  var className = '';
-  classes && keys.forEach(function (v) {
-    classes[v] && (className += ' ' + classes[v]);
-  });
+Tools.buildClasses = function(classes, keys) {
+  var className = "";
+  classes &&
+    keys.forEach(function(v) {
+      classes[v] && (className += " " + classes[v]);
+    });
   return className.trim();
 };
 
-Tools.isInClasses = function (classes, regExp) {
-  var classesArray = classes ? classes.split(' ') : [];
+Tools.isInClasses = function(classes, regExp) {
+  var classesArray = classes ? classes.split(" ") : [];
   var result = false;
   while (!result && classesArray.length) {
     classesArray[0].match(regExp) && (result = true);
@@ -952,7 +1050,7 @@ Tools.isInClasses = function (classes, regExp) {
   return result;
 };
 
-Tools.buildCounterCallback = function (callback, count) {
+Tools.buildCounterCallback = function(callback, count) {
   /*
    Method wrap (function) callback by newCallBack.
    If newCallBack is used, increase closureCounter
@@ -962,9 +1060,9 @@ Tools.buildCounterCallback = function (callback, count) {
    See examples!!!
    */
   var newCallback = null;
-  if (typeof callback === 'function') {
+  if (typeof callback === "function") {
     var closureCounter = 0;
-    newCallback = function () {
+    newCallback = function() {
       closureCounter++;
       closureCounter === count && callback.apply(null, arguments);
     };
@@ -972,12 +1070,12 @@ Tools.buildCounterCallback = function (callback, count) {
   return newCallback;
 };
 
-Tools._replaceParamsInString = function (string, stringParams) {
+Tools._replaceParamsInString = function(string, stringParams) {
   var i = 0;
   let result;
 
   if (Array.isArray(stringParams)) {
-    result = string.replace(REGEXP.stringParamsArray, function (match, group1, group2) {
+    result = string.replace(REGEXP.stringParamsArray, function(match, group1, group2) {
       // match is the matched format, e.g. %s, %d
       var val = null;
       if (group2) {
@@ -986,15 +1084,15 @@ Tools._replaceParamsInString = function (string, stringParams) {
         val = stringParams[i];
         // A switch statement so that the formatter can be extended. Default is %s
         switch (match) {
-          case '%d':
+          case "%d":
             var parsedVal = parseFloat(val);
             if (isNaN(parsedVal)) {
               // cannot use showWarning because of this method is used in showWarning !!!
-              Tools.warning('Value ' + val + ' is not number!', {
+              Tools.warning("Value " + val + " is not number!", {
                 string: string,
                 stringParams: stringParams
               });
-              val = '%d';
+              val = "%d";
             }
             break;
         }
@@ -1003,7 +1101,7 @@ Tools._replaceParamsInString = function (string, stringParams) {
       return val;
     });
   } else if (typeof stringParams === "object") {
-    result = string.replace(REGEXP.stringParamsObject, function (match) {
+    result = string.replace(REGEXP.stringParamsObject, function(match) {
       // match is the matched format, e.g. ${name}
       var val = null;
       if (match) {
@@ -1021,16 +1119,16 @@ Tools._replaceParamsInString = function (string, stringParams) {
   return result;
 };
 
-Tools._setParamsToString = function (string, stringParams) {
-  return string.replace(REGEXP.digitInBracket, function (match, number) {
-    return stringParams && typeof stringParams[number] != 'undefined' ? stringParams[number] : match;
+Tools._setParamsToString = function(string, stringParams) {
+  return string.replace(REGEXP.digitInBracket, function(match, number) {
+    return stringParams && typeof stringParams[number] != "undefined" ? stringParams[number] : match;
   });
 };
 
-Tools.formatString = function (string, stringParams) {
+Tools.formatString = function(string, stringParams) {
   let result;
 
-  if (string.indexOf('%s') > -1 || string.indexOf('%d') > -1 || string.match(/\$\{\w+\}/)) {
+  if (string.indexOf("%s") > -1 || string.indexOf("%d") > -1 || string.match(/\$\{\w+\}/)) {
     if (stringParams != null && typeof stringParams !== "object") {
       // it is not array or object but next method accepts only array or object -> wrap single string into array
       stringParams = [stringParams];
@@ -1045,7 +1143,7 @@ Tools.formatString = function (string, stringParams) {
 
 let postponedScrollToTarget;
 Tools.scrollToTarget = (id, smoothScroll, offset, scrollElement, stickToPosition) => {
-  let element = id ? document.getElementById(id.replace('#', '')) : document.body;
+  let element = id ? document.getElementById(id.replace("#", "")) : document.body;
   if (!element) {
     return this;
   }
@@ -1069,28 +1167,31 @@ Tools.scrollToTarget = (id, smoothScroll, offset, scrollElement, stickToPosition
   // then it makes no sense to scroll the body because the elements position relative to viewport won't change
   let elem = element;
   let hasFixed = false;
-  while (elem && elem.tagName) {
-    let computedStyle = getComputedStyle(elem);
-    if (computedStyle.transform !== "none") hasFixed = false;
-    if (!hasFixed) hasFixed = computedStyle.position === "fixed";
-    elem = elem.parentNode;
-  }
-  if (hasFixed) {
-    return this;
+  if (!scrollElement) {
+    while (elem && elem.tagName) {
+      let computedStyle = getComputedStyle(elem);
+      if (computedStyle.transform !== "none") hasFixed = false;
+      if (!hasFixed) hasFixed = computedStyle.position === "fixed";
+      elem = elem.parentNode;
+    }
+
+    if (hasFixed) {
+      return this;
+    }
   }
 
   //stop scroll on this events: scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove
   let html = scrollElement || document.documentElement;
   // window.UU5.Environment.EventListener.addEvent(html, 'scroll', id, cancel);
 
-  window.UU5.Environment.EventListener.addEvent(html, 'mousedown', id, cancel);
-  window.UU5.Environment.EventListener.addEvent(html, 'wheel', id, cancel);
-  window.UU5.Environment.EventListener.addEvent(html, 'DOMMouseScroll', id, cancel);
-  window.UU5.Environment.EventListener.addEvent(html, 'mousewheel', id, cancel);
-  window.UU5.Environment.EventListener.addEvent(html, 'keyup', id, cancel);
-  window.UU5.Environment.EventListener.addEvent(html, 'touchmove', id, cancel);
+  window.UU5.Environment.EventListener.addEvent(html, "mousedown", id, cancel);
+  window.UU5.Environment.EventListener.addEvent(html, "wheel", id, cancel);
+  window.UU5.Environment.EventListener.addEvent(html, "DOMMouseScroll", id, cancel);
+  window.UU5.Environment.EventListener.addEvent(html, "mousewheel", id, cancel);
+  window.UU5.Environment.EventListener.addEvent(html, "keyup", id, cancel);
+  window.UU5.Environment.EventListener.addEvent(html, "touchmove", id, cancel);
 
-  let y = scrollElement ? offset || 0 : (Tools.getOffsetTop(element) || 0) - (offset || 0);
+  let y = scrollElement ? offset || 0 : (Tools.getOffsetTop(element, scrollElement) || 0) - (offset || 0);
 
   let _update;
   let _from = scroll();
@@ -1103,13 +1204,13 @@ Tools.scrollToTarget = (id, smoothScroll, offset, scrollElement, stickToPosition
   // x, y coordinates
   let _to = { top: y, left: 0 };
 
-  let _ease = (n) => {
+  let _ease = n => {
     n *= 2;
     if (n < 1) return 0.5 * n * n;
     return -0.5 * (--n * (n - 2) - 1);
   };
 
-  update((o) => {
+  update(o => {
     if (scrollElement) {
       scrollElement.scrollTop = o.top || 0;
       scrollElement.scrollLeft = o.left || 0;
@@ -1137,7 +1238,7 @@ Tools.scrollToTarget = (id, smoothScroll, offset, scrollElement, stickToPosition
 
       function checkPositionChange() {
         checkPositionChangeAnimFrame = requestAnimationFrame(checkPositionChange);
-        let curTop = (Tools.getOffsetTop(element) || 0) - (offset || 0);
+        let curTop = (Tools.getOffsetTop(element, scrollElement) || 0) - (offset || 0);
         if (curTop !== _to.top) {
           replanUnstick();
           _to.top = curTop;
@@ -1163,26 +1264,25 @@ Tools.scrollToTarget = (id, smoothScroll, offset, scrollElement, stickToPosition
 
   function cancel() {
     _done = true;
-    window.UU5.Environment.EventListener.removeEvent(html, 'scroll', id);
-    window.UU5.Environment.EventListener.removeEvent(html, 'mousedown', id);
-    window.UU5.Environment.EventListener.removeEvent(html, 'wheel', id);
-    window.UU5.Environment.EventListener.removeEvent(html, 'DOMMouseScroll', id);
-    window.UU5.Environment.EventListener.removeEvent(html, 'mousewheel', id);
-    window.UU5.Environment.EventListener.removeEvent(html, 'keyup', id);
-    window.UU5.Environment.EventListener.removeEvent(html, 'touchmove', id);
+    window.UU5.Environment.EventListener.removeEvent(html, "scroll", id);
+    window.UU5.Environment.EventListener.removeEvent(html, "mousedown", id);
+    window.UU5.Environment.EventListener.removeEvent(html, "wheel", id);
+    window.UU5.Environment.EventListener.removeEvent(html, "DOMMouseScroll", id);
+    window.UU5.Environment.EventListener.removeEvent(html, "mousewheel", id);
+    window.UU5.Environment.EventListener.removeEvent(html, "keyup", id);
+    window.UU5.Environment.EventListener.removeEvent(html, "touchmove", id);
     return this;
   }
 
   function step() {
     if (!_done) {
-
       // duration
       let duration = _duration;
       let now = Date.now();
       let delta = now - _start;
       let done = delta >= duration;
       // Fix for a situation when the position of the element is changed during the animation
-      _to.top = scrollElement ? offset || 0 : (Tools.getOffsetTop(element) || 0) - (offset || 0);
+      _to.top = (Tools.getOffsetTop(element, scrollElement) || 0) - (offset || 0);
       // complete
       if (done) {
         _from = _to;
@@ -1199,7 +1299,7 @@ Tools.scrollToTarget = (id, smoothScroll, offset, scrollElement, stickToPosition
       let n = fn(p);
 
       for (let k in from) {
-        curr[k] = ((to[k] - origFrom[k]) * n) + origFrom[k];
+        curr[k] = (to[k] - origFrom[k]) * n + origFrom[k];
       }
 
       _update(curr);
@@ -1226,10 +1326,8 @@ Tools.scrollToTarget = (id, smoothScroll, offset, scrollElement, stickToPosition
   }
 
   function animate() {
-    let raf = window.requestAnimationFrame
-      || window.webkitRequestAnimationFrame
-      || window.mozRequestAnimationFrame
-      || fallback;
+    let raf =
+      window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || fallback;
     !_done && raf(animate);
     update();
   }
@@ -1248,7 +1346,7 @@ Tools.scrollToTarget = (id, smoothScroll, offset, scrollElement, stickToPosition
   return this;
 };
 
-Tools.error = function (msg, context) {
+Tools.error = function(msg, context) {
   // if (Environment.isProduction()) {
   //   console.error('For debugging use development mode.');
   // } else {
@@ -1263,11 +1361,12 @@ Tools.error = function (msg, context) {
       stackTrace: new Error().stack
     };
 
-    if (typeof Environment.logErrorFunction === 'function') {
+    if (typeof Environment.logErrorFunction === "function") {
       Environment.logErrorFunction(data);
     } else {
       //Tools.logError(data);
-      console.error(`Please add to "UU5.Environment.logErrorFunction" your own function as:
+      console.error(
+        `Please add to "UU5.Environment.logErrorFunction" your own function as:
       function (data) {
         $.ajax(
           {
@@ -1286,22 +1385,24 @@ Tools.error = function (msg, context) {
             UU5.Common.Tools.error('Cannot send error to server', {failDtoIn: failDtoIn});
           }
         );
-      }`, context);
+      }`,
+        context
+      );
     }
   }
 };
 
-Tools.warning = function (msg, context = {}) {
+Tools.warning = function(msg, context = {}) {
   if (!Environment.isProduction() || (Environment.isProduction() && Environment.showProductionWarning)) {
     console.warn(msg, context);
   }
 };
 
 Tools.repeat = (value, count) => {
-  let rpt = '';
-  let str = value + '';
+  let rpt = "";
+  let str = value + "";
 
-  for (; ;) {
+  for (;;) {
     if ((count & 1) == 1) {
       rpt += str;
     }
@@ -1316,8 +1417,8 @@ Tools.repeat = (value, count) => {
 };
 
 Tools.rjust = (string, length, padding) => {
-  string = '' + string;
-  padding = padding || ' ';
+  string = "" + string;
+  padding = padding || " ";
   let newString = string;
 
   if (string.length < length) {
@@ -1328,8 +1429,8 @@ Tools.rjust = (string, length, padding) => {
 };
 
 Tools.ljust = (string, length, padding) => {
-  string = '' + string;
-  padding = padding || ' ';
+  string = "" + string;
+  padding = padding || " ";
   let newString = string;
 
   if (string.length < length) {
@@ -1342,57 +1443,57 @@ Tools.ljust = (string, length, padding) => {
 // type: round, floor, ceil, trunc
 Tools.decimalAdjust = (type = "round", value, exp) => {
   // If the exp is undefined or zero...
-  if (typeof exp === 'undefined' || +exp === 0) {
+  if (typeof exp === "undefined" || +exp === 0) {
     return Math[type](value);
   }
   value = +value;
   exp = +exp;
   // If the value is not a number or the exp is not an integer...
-  if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
+  if (isNaN(value) || !(typeof exp === "number" && exp % 1 === 0)) {
     return NaN;
   }
   // Shift
-  value = value.toString().split('e');
-  value = Math[type](+(value[0] + 'e' + (value[1] ? (+value[1] - exp) : -exp)));
+  value = value.toString().split("e");
+  value = Math[type](+(value[0] + "e" + (value[1] ? +value[1] - exp : -exp)));
   // Shift back
-  value = value.toString().split('e');
-  return +(value[0] + 'e' + (value[1] ? (+value[1] + exp) : exp));
+  value = value.toString().split("e");
+  return +(value[0] + "e" + (value[1] ? +value[1] + exp : exp));
 };
 
 // Decimal round
-Tools.round10 = function (value, exp) {
-  return Tools.decimalAdjust('round', value, exp);
+Tools.round10 = function(value, exp) {
+  return Tools.decimalAdjust("round", value, exp);
 };
 // Decimal floor
-Tools.floor10 = function (value, exp) {
-  return Tools.decimalAdjust('floor', value, exp);
+Tools.floor10 = function(value, exp) {
+  return Tools.decimalAdjust("floor", value, exp);
 };
 // Decimal ceil
-Tools.ceil10 = function (value, exp) {
-  return Tools.decimalAdjust('ceil', value, exp);
+Tools.ceil10 = function(value, exp) {
+  return Tools.decimalAdjust("ceil", value, exp);
 };
 
-Tools.encodeValue = (value) => {
-  let result = value + '';
+Tools.encodeValue = value => {
+  let result = value + "";
 
-  if (value && (Array.isArray(value) || typeof value === 'object')) {
+  if (value && (Array.isArray(value) || typeof value === "object")) {
     result = JSON.stringify(value);
   }
 
   return encodeURIComponent(result);
 };
 
-Tools.encodeQuery = (params) => {
-  let query = '?';
+Tools.encodeQuery = params => {
+  let query = "?";
 
   for (let name in params) {
-    query += name + '=' + Tools.encodeValue(params[name]) + '&';
+    query += name + "=" + Tools.encodeValue(params[name]) + "&";
   }
 
   return query.substr(0, query.length - 1);
 };
 
-Tools.isJson = (str) => {
+Tools.isJson = str => {
   try {
     return JSON.parse(str);
   } catch (e) {
@@ -1400,15 +1501,15 @@ Tools.isJson = (str) => {
   }
 };
 
-Tools.decodeValue = (value) => {
+Tools.decodeValue = value => {
   value = decodeURIComponent(value);
   let result = value;
 
   if (!isNaN(value)) {
     result = +value;
-  } else if (value === 'true') {
+  } else if (value === "true") {
     result = true;
-  } else if (value === 'false') {
+  } else if (value === "false") {
     result = false;
   } else {
     let json = Tools.isJson(value);
@@ -1421,25 +1522,28 @@ Tools.decodeValue = (value) => {
   return result;
 };
 
-Tools.decodeQuery = (query) => {
+Tools.decodeQuery = query => {
   let params = {};
 
-  query.substr(1, query.length - 1).split('&').forEach(value => {
-    let valueSplitter = value.split('=');
-    params[valueSplitter[0]] = Tools.decodeValue(valueSplitter[1]);
-  });
+  query
+    .substr(1, query.length - 1)
+    .split("&")
+    .forEach(value => {
+      let valueSplitter = value.split("=");
+      params[valueSplitter[0]] = Tools.decodeValue(valueSplitter[1]);
+    });
 
   return params;
 };
 
-Tools.copyToClipboard = (content) => {
+Tools.copyToClipboard = content => {
   let actualScroll = window.scrollY || document.body.scrollTop || window.pageYOffset;
-  let tempElement = document.createElement('textarea');
+  let tempElement = document.createElement("textarea");
   tempElement.className = "uu5-common-temp-textarea";
   tempElement.value = content;
   document.body.appendChild(tempElement);
   tempElement.select();
-  document.execCommand('copy');
+  document.execCommand("copy");
 
   if (tempElement.remove) {
     tempElement.remove();
@@ -1451,11 +1555,11 @@ Tools.copyToClipboard = (content) => {
   document.body.scrollTop = actualScroll;
 };
 
-Tools.getWeekNumber = (date) => {
+Tools.getWeekNumber = date => {
   let d = new Date(+date);
   d.setHours(0, 0, 0);
   d.setDate(d.getDate() + 4 - (d.getDay() || 7));
-  return Math.ceil((((d - new Date(d.getFullYear(), 0, 1)) / 8.64e7) + 1) / 7);
+  return Math.ceil(((d - new Date(d.getFullYear(), 0, 1)) / 8.64e7 + 1) / 7);
 };
 
 Tools.formatDate = (date, format, timeZone) => {
@@ -1473,40 +1577,40 @@ Tools.formatDate = (date, format, timeZone) => {
   }
 
   let config = {
-    'd+': date.getDate(),    //day
-    'm+': month, //month
-    'y': (year + '').substr(2, 2), // year end
-    'Y': year, // year full
-    'h+': date.getHours() > 12 ? date.getHours() - 12 : (date.getHours() === 0 ? 12 : date.getHours()),   //hour 1 - 12
-    'H+': date.getHours(),   //hour
-    'M+': date.getMinutes(), //minute
-    'S+': date.getSeconds(), //second
-    's+': date.getMilliseconds(), //millisecond
-    't': date.getHours() > 12 || date.getHours() < 1 ? 'p.m.' : 'a.m.',
-    'T': date.getHours() > 12 || date.getHours() < 1 ? 'PM' : 'AM',
-    'w+': week,
-    'q': Math.floor((date.getMonth() + 3) / 3),  //quarter
-    'Z': typeof timeZone === "number" ? timeZone * 60 : -date.getTimezoneOffset()
+    "d+": date.getDate(), //day
+    "m+": month, //month
+    y: (year + "").substr(2, 2), // year end
+    Y: year, // year full
+    "h+": date.getHours() > 12 ? date.getHours() - 12 : date.getHours() === 0 ? 12 : date.getHours(), //hour 1 - 12
+    "H+": date.getHours(), //hour
+    "M+": date.getMinutes(), //minute
+    "S+": date.getSeconds(), //second
+    "s+": date.getMilliseconds(), //millisecond
+    t: date.getHours() > 12 || date.getHours() < 1 ? "p.m." : "a.m.",
+    T: date.getHours() > 12 || date.getHours() < 1 ? "PM" : "AM",
+    "w+": week,
+    q: Math.floor((date.getMonth() + 3) / 3), //quarter
+    Z: typeof timeZone === "number" ? timeZone * 60 : -date.getTimezoneOffset()
   };
 
   for (let k in config) {
-    if (new RegExp('(' + k + ')').test(format)) {
+    if (new RegExp("(" + k + ")").test(format)) {
       let _formatValue = (chars, value) => {
         let result = value;
 
-        if (chars === 'Z') {
+        if (chars === "Z") {
           if (value > 0) {
-            result = '+';
+            result = "+";
           } else {
-            result = '-';
+            result = "-";
             value *= -1;
           }
-          result += Tools.rjust(Math.floor(value / 60), 2, '0') + ':' + Tools.rjust(Math.floor(value % 60), 2, '0');
+          result += Tools.rjust(Math.floor(value / 60), 2, "0") + ":" + Tools.rjust(Math.floor(value % 60), 2, "0");
         } else if (chars.length === 2) {
-          if (chars === 'ss') {
-            result = Tools.rjust(value, 3, '0');
+          if (chars === "ss") {
+            result = Tools.rjust(value, 3, "0");
           } else {
-            result = Tools.rjust(value, 2, '0');
+            result = Tools.rjust(value, 2, "0");
           }
         }
         return result;
@@ -1518,8 +1622,13 @@ Tools.formatDate = (date, format, timeZone) => {
   return format;
 };
 
-Tools.extend = function () {
-  let src, copyIsArray, copy, name, options, clone,
+Tools.extend = function() {
+  let src,
+    copyIsArray,
+    copy,
+    name,
+    options,
+    clone,
     target = arguments[0] || {},
     i = 1,
     length = arguments.length,
@@ -1611,14 +1720,14 @@ Tools.extend = function () {
   return target;
 };
 
-Tools.isPlainObject = (obj) => {
+Tools.isPlainObject = obj => {
   let result = false;
-  if (typeof obj == 'object' && obj !== null) {
-    if (typeof Object.getPrototypeOf == 'function') {
+  if (typeof obj == "object" && obj !== null) {
+    if (typeof Object.getPrototypeOf == "function") {
       let proto = Object.getPrototypeOf(obj);
       result = proto === Object.prototype || proto === null;
     } else {
-      result = Object.prototype.toString.call(obj) === '[object Object]';
+      result = Object.prototype.toString.call(obj) === "[object Object]";
     }
   }
   return result;
@@ -1643,7 +1752,7 @@ Tools.deepEqual = (objA, objB) => {
     return true;
   }
 
-  if (typeof objA !== 'object' || objA === null || typeof objB !== 'object' || objB === null) {
+  if (typeof objA !== "object" || objA === null || typeof objB !== "object" || objB === null) {
     return false;
   }
 
@@ -1659,12 +1768,12 @@ Tools.deepEqual = (objA, objB) => {
       return false;
     }
 
-    if (objA[keysA[i]] && objB[keysA[i]] && typeof objA[keysA[i]] === 'object' && typeof objB[keysA[i]] === 'object') {
+    if (objA[keysA[i]] && objB[keysA[i]] && typeof objA[keysA[i]] === "object" && typeof objB[keysA[i]] === "object") {
       // must be condition because in React 16 _owner is FiberNode which is recursive
       if ((!objA.$$typeof || keysA[i] !== "_owner") && !Tools.deepEqual(objA[keysA[i]], objB[keysA[i]])) {
         return false;
       }
-    } else if (keysA[i] !== 'ref_' && !Tools.isSame(objA[keysA[i]], objB[keysA[i]])) {
+    } else if (keysA[i] !== "ref_" && !Tools.isSame(objA[keysA[i]], objB[keysA[i]])) {
       return false;
     }
   }
@@ -1672,9 +1781,10 @@ Tools.deepEqual = (objA, objB) => {
   return true;
 };
 
-Tools.prettyJson = (object, space) => (JSON.stringify(typeof object === 'string' ? JSON.parse(object) : object, null, space || 2));
+Tools.prettyJson = (object, space) =>
+  JSON.stringify(typeof object === "string" ? JSON.parse(object) : object, null, space || 2);
 
-Tools.childToBodyItem = (child) => {
+Tools.childToBodyItem = child => {
   return { tag: Tools.getChildTagName(child), props: Tools.mergeDeep({}, child.props) };
 };
 
@@ -1683,7 +1793,11 @@ Tools.getElementByComputedStyle = (element, styleProperty, value) => {
   let parent = element.parentElement;
   if (parent) {
     let style = window.getComputedStyle(parent);
-    if (Array.isArray(value) ? value.indexOf(style.getPropertyValue(styleProperty)) > -1 : style.getPropertyValue(styleProperty) === value) {
+    if (
+      Array.isArray(value)
+        ? value.indexOf(style.getPropertyValue(styleProperty)) > -1
+        : style.getPropertyValue(styleProperty) === value
+    ) {
       result = parent;
     } else {
       result = Tools.getElementByComputedStyle(parent, styleProperty, value);
@@ -1723,30 +1837,34 @@ Tools.removeStyleTag = id => {
 };
 
 Tools.hasProfile = (sourceProfileList, requestedProfile) => {
-  return sourceProfileList ? sourceProfileList.indexOf(requestedProfile) > -1 : false
+  return sourceProfileList ? sourceProfileList.indexOf(requestedProfile) > -1 : false;
 };
 
 Tools.hasProfileOnly = (sourceProfileList, requestedProfile) => {
-  return sourceProfileList ? sourceProfileList.indexOf(requestedProfile) > -1 && sourceProfileList.length === 1 : false
+  return sourceProfileList ? sourceProfileList.indexOf(requestedProfile) > -1 && sourceProfileList.length === 1 : false;
 };
 
 Tools.hasSomeProfiles = (sourceProfileList, requestedProfileList) => {
-  return requestedProfileList ? requestedProfileList.some((v) => {
-    return Tools.hasProfile(sourceProfileList, v)
-  }) : false
+  return requestedProfileList
+    ? requestedProfileList.some(v => {
+        return Tools.hasProfile(sourceProfileList, v);
+      })
+    : false;
 };
 
 Tools.hasEveryProfiles = (sourceProfileList, requestedProfileList) => {
-  return requestedProfileList ? requestedProfileList.every((v) => {
-    return Tools.hasProfile(sourceProfileList, v)
-  }) : false
+  return requestedProfileList
+    ? requestedProfileList.every(v => {
+        return Tools.hasProfile(sourceProfileList, v);
+      })
+    : false;
 };
 
 Tools.getScreenSize = () => {
   return ScreenSize.countSize();
 };
 
-Tools.getLanguages = (language) => {
+Tools.getLanguages = language => {
   return language ? Tools.sortLanguages(language) : Environment.languages;
 };
 
@@ -1754,7 +1872,7 @@ Tools.getLanguage = () => {
   return EnvTools.getLanguage();
 };
 
-Tools.setLanguage = (language) => {
+Tools.setLanguage = language => {
   Tools.setLanguages(language);
   let lang = Environment.languages[0];
   if (lang) {
@@ -1765,14 +1883,14 @@ Tools.setLanguage = (language) => {
   return this;
 };
 
-Tools.setLanguages = (languages) => {
-  if (typeof languages === 'string') {
+Tools.setLanguages = languages => {
+  if (typeof languages === "string") {
     languages = Tools.sortLanguages(languages);
     Environment.languages = languages;
   } else if (Array.isArray(languages)) {
     languages.forEach(language => {
-      if (!(typeof language.language === 'string') || !(0 < language.q && language.q < 1)) {
-        Tools.error('The provided language array is not allowed.');
+      if (!(typeof language.language === "string") || !(0 < language.q && language.q < 1)) {
+        Tools.error("The provided language array is not allowed.");
         return this;
       }
     });
@@ -1805,7 +1923,7 @@ Tools.getLsiKey = (lsi, languages, language, defaultLanguage) => {
         resLang = lang.language;
         break;
       } else {
-        let lsiKeys = keys.filter(function (key) {
+        let lsiKeys = keys.filter(function(key) {
           return key.match("^" + lang.language);
         });
 
@@ -1818,8 +1936,8 @@ Tools.getLsiKey = (lsi, languages, language, defaultLanguage) => {
             if (lsi[defaultLanguage]) {
               resLang = defaultLanguage;
               break;
-            } else if (lsi[defaultLanguage.split('-')[0]]) {
-              resLang = defaultLanguage.split('-')[0];
+            } else if (lsi[defaultLanguage.split("-")[0]]) {
+              resLang = defaultLanguage.split("-")[0];
               break;
             }
           }
@@ -1827,7 +1945,7 @@ Tools.getLsiKey = (lsi, languages, language, defaultLanguage) => {
       }
     }
 
-    lsiKey = lsi[resLang] ? resLang : (lsi[keys[0]] ? keys[0] : null);
+    lsiKey = lsi[resLang] ? resLang : lsi[keys[0]] ? keys[0] : null;
   }
 
   return lsiKey;
@@ -1837,7 +1955,7 @@ Tools.getLsiItemByLanguage = (lsi, params, languages) => {
   let lsiKey = Tools.getLsiKey(lsi, languages);
   let result = lsiKey ? lsi[lsiKey] : null;
 
-  if (typeof result === 'string' && params) {
+  if (typeof result === "string" && params) {
     result = Tools.formatString(result, params);
   }
 
@@ -1848,7 +1966,7 @@ Tools.getLsiValueByLanguage = (lsi, language, params) => {
   let lsiKey = Tools.getLsiKey(lsi, null, language);
   let result = lsiKey ? lsi[lsiKey] : null;
 
-  if (typeof result === 'string' && params) {
+  if (typeof result === "string" && params) {
     result = Tools.formatString(result, params);
   }
 
@@ -1857,23 +1975,37 @@ Tools.getLsiValueByLanguage = (lsi, language, params) => {
 
 Tools.toLocaleDateString = (date, country, opt) => {
   // because of IE
-  return date.toLocaleDateString(country, opt).replace(/\u200E/g, '');
+  return date.toLocaleDateString(country, opt).replace(/\u200E/g, "");
 };
 
 Tools.toLocaleTimeString = (date, country, opt) => {
   // because of IE
-  return date.toLocaleTimeString(country, opt).replace(/\u200E/g, '');
+  return date.toLocaleTimeString(country, opt).replace(/\u200E/g, "");
 };
 
 Tools.toLocaleString = (date, country, opt) => {
   // because of IE
-  return date.toLocaleString(country, opt).replace(/\u200E/g, '');
+  return date.toLocaleString(country, opt).replace(/\u200E/g, "");
 };
 
-Tools.adjustForTimezone = (date) => {
-  let timeOffsetInMS = date.getTimezoneOffset() * 60000;
-  date.setTime(date.getTime() - timeOffsetInMS);
-  return date;
+Tools.adjustForTimezone = (date, outputTimeZone, inputTimeZone) => {
+  inputTimeZone = typeof inputTimeZone === "number" ? inputTimeZone : Environment.dateTimeZone;
+
+  if (date) {
+    inputTimeZone = -inputTimeZone * 60 * 60000 || date.getTimezoneOffset() * 60000;
+
+    if (typeof outputTimeZone === "number") {
+      date = Tools.cloneDateObject(date);
+      let utc = new Date(date.getTime() + inputTimeZone);
+      date = new Date(utc.getTime() + outputTimeZone * 60 * 60000);
+      return date;
+    } else {
+      date.setTime(date.getTime() - inputTimeZone);
+      return date;
+    }
+  } else {
+    return date;
+  }
 };
 
 Tools.formatDateByCountry = (date, country) => {
@@ -1881,7 +2013,7 @@ Tools.formatDateByCountry = (date, country) => {
   if (Environment.dateTimeFormat[country]) {
     result = Tools.formatDate(date, Environment.dateTimeFormat[country]);
   } else {
-    result = Tools.toLocaleDateString(Tools.adjustForTimezone(new Date(date)), country, { timeZone: "UTC" });
+    result = Tools.toLocaleDateString(new Date(date), country);
   }
   return result;
 };
@@ -1892,12 +2024,12 @@ Tools.streamToString = (stream, encoding = "utf-8") => {
     : decodeURIComponent(escape(stream.map(char => String.fromCharCode(char)).join("")));
 };
 
-Tools.isDateReversed = (country) => {
+Tools.isDateReversed = country => {
   const dateFormat = country || UU5.Common.Tools.getLanguage();
-  return dateFormat.toLowerCase() === 'en' || dateFormat.toLowerCase() === 'en-us';
+  return dateFormat.toLowerCase() === "en" || dateFormat.toLowerCase() === "en-us";
 };
 
-Tools.getLocaleFormat = (locale) => {
+Tools.getLocaleFormat = locale => {
   let result;
   let dateTimeFormat = new Intl.DateTimeFormat(locale, { year: "numeric", month: "2-digit", day: "2-digit" });
   if (dateTimeFormat.formatToParts) {
@@ -1928,7 +2060,7 @@ Tools.getDateString = (date, opt = {}) => {
     } else if (country) {
       result = Tools.formatDateByCountry(date, country);
     } else {
-      result = Tools.toLocaleDateString(Tools.adjustForTimezone(new Date(date)), Tools.getLanguage(), { timeZone: "UTC" });
+      result = Tools.toLocaleDateString(new Date(date), Tools.getLanguage());
     }
   }
 
@@ -1951,9 +2083,15 @@ Tools.getTimeString = (dateTime, displaySeconds, timeFormat, includeTimeFormat, 
       }
 
       let timeFull = dateTime.trim().split(/(\s+)(?!.*\s+)/)[2] || ""; // assume that date is always last after last space
+
+      // check if its actually a valid time
+      if (!(/\d{1,2}:\d{1,2}(:\d{1,2})?/).test(timeFull)) {
+        timeFull = null;
+      }
+
       let time = timeFull;
 
-      if (!dayPart) {
+      if (!dayPart && time) {
         [time, dayPart] = timeFull.split(/\s+/);
       }
 
@@ -1974,12 +2112,19 @@ Tools.getTimeString = (dateTime, displaySeconds, timeFormat, includeTimeFormat, 
       if (Tools.isPlainObject(dateObject)) {
         result = Tools.formatTime(dateObject, displaySeconds, timeFormat, includeTimeFormat, timeStep, true);
       } else if (dateObject instanceof Date && !isNaN(dateObject.getDate())) {
-        result = Tools.formatTime({
-          hours: dateObject.getHours(),
-          minutes: dateObject.getMinutes(),
-          seconds: dateObject.getSeconds(),
-          dayPart: dayPart || Tools.getDayPart(dateObject)
-        }, displaySeconds, timeFormat, includeTimeFormat, timeStep, true);
+        result = Tools.formatTime(
+          {
+            hours: dateObject.getHours(),
+            minutes: dateObject.getMinutes(),
+            seconds: dateObject.getSeconds(),
+            dayPart: dayPart || Tools.getDayPart(dateObject)
+          },
+          displaySeconds,
+          timeFormat,
+          includeTimeFormat,
+          timeStep,
+          true
+        );
       }
     }
 
@@ -2088,10 +2233,7 @@ Tools.parseDate = (stringDate = null, opt = {}) => {
   let result = null;
   if (typeof stringDate === "string") {
     // parse the date according to the format string (fallback to coutnry then to default format by locale)
-    format =
-      format ||
-      Environment.dateTimeFormat[country] ||
-      Tools.getLocaleFormat(country || Tools.getLanguage());
+    format = format || Environment.dateTimeFormat[country] || Tools.getLocaleFormat(country || Tools.getLanguage());
     format = format
       .replace(/m+/gi, "MM")
       .replace(/d+/gi, "dd")
@@ -2100,8 +2242,18 @@ Tools.parseDate = (stringDate = null, opt = {}) => {
     // Always allow ISO date format
     if (stringDate.match(/^(\d{4})-(\d{2})-(\d{2})$/)) {
       format = "yyyy-MM-dd";
-    } else if (Tools.isISODateString(stringDate)) {
+    } else if (
+      Tools.isISODateString(stringDate) ||
+      Tools.isISODateString(stringDate.replace(/ \d{1,2}:\d{1,2}(:\d{1,2})?/, ""))
+    ) {
       return new Date(stringDate);
+    } else {
+      // this is a fix for a format yyyy-MM-dd hours:minutes:seconds
+      let assumedStringDate = stringDate.replace(/ \d{1,2}:\d{1,2}(:\d{1,2})?/, "");
+      if (assumedStringDate.match(/^(\d{4})-(\d{2})-(\d{2})$/)) {
+        stringDate = assumedStringDate;
+        format = "yyyy-MM-dd";
+      }
     }
 
     let date = new Date(Date.now());
@@ -2109,7 +2261,7 @@ Tools.parseDate = (stringDate = null, opt = {}) => {
     // let val = { y: date.getFullYear(), M: date.getMonth() + 1, d: date.getDate(), q: Math.floor(date.getMonth() / 3) };
     let val = { y: 0, M: 0, d: 0, q: 0 };
     let formatIdx = 0;
-    for (let i = 0, len = stringDate.length; i < len && formatIdx < format.length;) {
+    for (let i = 0, len = stringDate.length; i < len && formatIdx < format.length; ) {
       // skip whitespaces and get format portion (e.g. "MMM")
       while (formatIdx < format.length && format.charAt(formatIdx).match(/\s/)) ++formatIdx;
       if (formatIdx == format.length) break;
@@ -2162,7 +2314,20 @@ Tools.parseDate = (stringDate = null, opt = {}) => {
     if (val.y < 1000 || val.y > 9999) return null;
     if (!val.M || val.M > 12) return null; // invalid month
     let y = val.y;
-    let monthDays = [31, (y % 400 === 0 || (y % 4 === 0 && y % 100 !== 0)) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    let monthDays = [
+      31,
+      y % 400 === 0 || (y % 4 === 0 && y % 100 !== 0) ? 29 : 28,
+      31,
+      30,
+      31,
+      30,
+      31,
+      31,
+      30,
+      31,
+      30,
+      31
+    ];
     if (!val.d || val.d > monthDays[val.M - 1]) return null; // invalid day
     result = new Date(val.y, val.M - 1, val.d, 0, 0, 0, 0);
   } else if (typeof stringDate === "object" && stringDate !== null) {
@@ -2176,8 +2341,22 @@ Tools.compareDates = (firstDate, secondDate, method) => {
   let result = false;
 
   if (firstDate && secondDate) {
-    firstDate = Date.UTC(firstDate.getFullYear(), firstDate.getMonth(), firstDate.getDate(), firstDate.getHours(), firstDate.getMinutes(), firstDate.getSeconds());
-    secondDate = Date.UTC(secondDate.getFullYear(), secondDate.getMonth(), secondDate.getDate(), secondDate.getHours(), secondDate.getMinutes(), secondDate.getSeconds());
+    firstDate = Date.UTC(
+      firstDate.getFullYear(),
+      firstDate.getMonth(),
+      firstDate.getDate(),
+      firstDate.getHours(),
+      firstDate.getMinutes(),
+      firstDate.getSeconds()
+    );
+    secondDate = Date.UTC(
+      secondDate.getFullYear(),
+      secondDate.getMonth(),
+      secondDate.getDate(),
+      secondDate.getHours(),
+      secondDate.getMinutes(),
+      secondDate.getSeconds()
+    );
     if (method === "equals") {
       result = firstDate === secondDate;
     } else if (method === "greater") {
@@ -2210,7 +2389,11 @@ Tools.formatTime = (timeObject, displaySeconds, timeFormat, includeTimeFormat, t
     }
 
     if (fill0) {
-      formatedTime = Tools.rjust(timeObject.hours, 2, "0") + ":" + Tools.rjust(timeObject.minutes, 2, "0") + (displaySeconds && timeStep === 1 ? ":" + Tools.rjust(timeObject.seconds, 2, "0") : "");
+      formatedTime =
+        Tools.rjust(timeObject.hours, 2, "0") +
+        ":" +
+        Tools.rjust(timeObject.minutes, 2, "0") +
+        (displaySeconds && timeStep === 1 ? ":" + Tools.rjust(timeObject.seconds, 2, "0") : "");
     } else {
       formatedTime = timeObject.hours + ":" + timeObject.minutes + ":" + timeObject.seconds;
     }
@@ -2223,10 +2406,11 @@ Tools.formatTime = (timeObject, displaySeconds, timeFormat, includeTimeFormat, t
   return formatedTime;
 };
 
-Tools.parseTime = (stringTime, timeFormat, autofill) => {
+Tools.parseTime = (stringTime, timeFormat, autofill, allow24) => {
   stringTime = stringTime || "00:00:00";
   stringTime = stringTime.trim();
   let parsedTime = null;
+  let maxHours = allow24 ? 24 : 23;
 
   if (typeof stringTime === "string" && stringTime !== "") {
     parsedTime = {
@@ -2237,9 +2421,9 @@ Tools.parseTime = (stringTime, timeFormat, autofill) => {
 
     if (stringTime.indexOf(":") !== -1) {
       let dateArray = stringTime.split(":");
-      parsedTime.hours = dateArray[0] && parseInt(dateArray[0].trim()) || 0;
-      parsedTime.minutes = dateArray[1] && parseInt(dateArray[1].trim()) || 0;
-      parsedTime.seconds = dateArray[2] && parseInt(dateArray[2].trim()) || 0;
+      parsedTime.hours = (dateArray[0] && parseInt(dateArray[0].trim())) || 0;
+      parsedTime.minutes = (dateArray[1] && parseInt(dateArray[1].trim())) || 0;
+      parsedTime.seconds = (dateArray[2] && parseInt(dateArray[2].trim())) || 0;
     } else if (autofill) {
       parsedTime.hours = parseInt(stringTime) || 0;
     } else {
@@ -2247,7 +2431,14 @@ Tools.parseTime = (stringTime, timeFormat, autofill) => {
     }
 
     if (parsedTime) {
-      if (parsedTime.hours < 0 || parsedTime.hours > 23 || parsedTime.minutes < 0 || parsedTime.minutes > 59 || parsedTime.seconds < 0 || parsedTime.seconds > 59) {
+      if (
+        parsedTime.hours < 0 ||
+        parsedTime.hours > maxHours ||
+        parsedTime.minutes < 0 ||
+        parsedTime.minutes > 59 ||
+        parsedTime.seconds < 0 ||
+        parsedTime.seconds > 59
+      ) {
         parsedTime = null;
       } else if (timeFormat == 12) {
         if (parsedTime.hours > 12) {
@@ -2268,6 +2459,48 @@ Tools.parseTime = (stringTime, timeFormat, autofill) => {
   return parsedTime;
 };
 
+Tools.changeTimeFormat = (timeString, format) => {
+  let result = null;
+  let inputFormat = timeString.match(/AM$|PM$/) ? 12 : 24;
+  let timeObject = Tools.parseTime(timeString, inputFormat, true, false);
+
+  if (format == TIME_FORMAT_24 && inputFormat == TIME_FORMAT_12) {
+    if (timeObject.dayPart === "PM") {
+      timeObject.hours += 12;
+    }
+
+    result = Tools.formatTime(timeObject, !!timeString.match(/:/)[2], 24, true, 0, true);
+  }
+  // TODO
+  // else if (format == TIME_FORMAT_24) {
+
+  // }
+
+  return result;
+};
+
+Tools.compareTimeObjects = (firstTime, secondTime, method) => {
+  let result = true;
+  firstTime = firstTime.hours * 60 * 60 + firstTime.minutes * 60 + firstTime.seconds;
+  secondTime = secondTime.hours * 60 * 60 + secondTime.minutes * 60 + secondTime.seconds;
+
+  if (method === "equals") {
+    if (firstTime !== secondTime) {
+      result = false;
+    }
+  } else if (method === "greater") {
+    if (firstTime <= secondTime) {
+      result = false;
+    }
+  } else if (method === "lesser") {
+    if (firstTime >= secondTime) {
+      result = false;
+    }
+  }
+
+  return result;
+};
+
 Tools.cloneDateObject = dateObject => {
   let result = null;
 
@@ -2278,7 +2511,10 @@ Tools.cloneDateObject = dateObject => {
   return result;
 };
 
-Tools.formatNumber = (number, { maxDecimals, roundType, country, thousandSeparator, decimalSeparator, minDecimals } = {}) => {
+Tools.formatNumber = (
+  number,
+  { maxDecimals, roundType, country, thousandSeparator, decimalSeparator, minDecimals } = {}
+) => {
   const roundedNum = maxDecimals == null ? number : Tools.decimalAdjust(roundType, number, maxDecimals * -1);
   let formattedNum;
 
@@ -2286,8 +2522,18 @@ Tools.formatNumber = (number, { maxDecimals, roundType, country, thousandSeparat
     const [num, numDecimals] = (roundedNum + "").split(".");
 
     const numberFormat = Environment.numberFormat[country] || {};
-    const thousandSep = thousandSeparator == null ? (numberFormat.thousandSeparator == null ? "" : numberFormat.thousandSeparator) : thousandSeparator;
-    const decimalSep = decimalSeparator == null ? (numberFormat.decimalSeparator == null ? "." : numberFormat.decimalSeparator) : decimalSeparator;
+    const thousandSep =
+      thousandSeparator == null
+        ? numberFormat.thousandSeparator == null
+          ? ""
+          : numberFormat.thousandSeparator
+        : thousandSeparator;
+    const decimalSep =
+      decimalSeparator == null
+        ? numberFormat.decimalSeparator == null
+          ? "."
+          : numberFormat.decimalSeparator
+        : decimalSeparator;
 
     const formattedArr = [num.replace(REGEXP.numberParts, thousandSep)];
 
@@ -2300,7 +2546,7 @@ Tools.formatNumber = (number, { maxDecimals, roundType, country, thousandSeparat
     formattedNum = roundedNum.toLocaleString(country, {
       minimumFractionDigits: minDecimals,
       maximumFractionDigits: maxDecimals == null ? 20 : maxDecimals
-    })
+    });
   }
 
   return formattedNum;
@@ -2312,7 +2558,10 @@ Tools.normalizeNumberSeparators = (number, opt = {}) => {
 
   if (number) {
     if (thousandSeparator) {
-      number = number.toString().trim().replace(new RegExp(thousandSeparator.replace(/[.?*+^$[\]\\(){}|]/g, "\\$&"), "g"), "");
+      number = number
+        .toString()
+        .trim()
+        .replace(new RegExp(thousandSeparator.replace(/[.?*+^$[\]\\(){}|]/g, "\\$&"), "g"), "");
     }
 
     if (decimalSeparator) {
@@ -2329,7 +2578,9 @@ Tools.parseNumber = (number, opt = {}) => {
 
 // TODO: deprecated
 Tools.getLSIItemByLanguage = (lsi, params, languages) => {
-  Tools.warning("Method UU5.Common.Tools.getLSIItemByLanguage is deprecated. Use UU5.Common.Tools.getLsiItemByLanguage instead.");
+  Tools.warning(
+    "Method UU5.Common.Tools.getLSIItemByLanguage is deprecated. Use UU5.Common.Tools.getLsiItemByLanguage instead."
+  );
   return Tools.getLsiItemByLanguage(lsi, params, languages);
 };
 
@@ -2399,17 +2650,17 @@ Tools.debounce = (func, wait = 0, options = {}) => {
     maxing = false,
     trailing = true;
 
-  if (typeof func !== 'function') {
+  if (typeof func !== "function") {
     throw new TypeError("Expected a function");
   }
   //wait = toNumber(wait) || 0;
   //if (isObject(options)) {
   if (typeof options === "object") {
     leading = !!options.leading;
-    maxing = 'maxWait' in options;
+    maxing = "maxWait" in options;
     //maxWait = maxing ? nativeMax(toNumber(options.maxWait) || 0, wait) : maxWait;
     maxWait = options.maxWait ? Math.max(options.maxWait, wait) : maxWait;
-    trailing = 'trailing' in options ? !!options.trailing : trailing;
+    trailing = "trailing" in options ? !!options.trailing : trailing;
   }
 
   function invokeFunc(time) {
@@ -2446,8 +2697,12 @@ Tools.debounce = (func, wait = 0, options = {}) => {
     // Either this is the first call, activity has stopped and we're at the
     // trailing edge, the system time has gone backwards and we're treating
     // it as the trailing edge, or we've hit the `maxWait` limit.
-    return (lastCallTime === undefined || (timeSinceLastCall >= wait) ||
-      (timeSinceLastCall < 0) || (maxing && timeSinceLastInvoke >= maxWait));
+    return (
+      lastCallTime === undefined ||
+      timeSinceLastCall >= wait ||
+      timeSinceLastCall < 0 ||
+      (maxing && timeSinceLastInvoke >= maxWait)
+    );
   }
 
   function timerExpired() {
@@ -2565,20 +2820,20 @@ Tools.throttle = (func, wait, options = {}) => {
   //}
   //if (isObject(options)) {
   if (typeof options === "object") {
-    leading = 'leading' in options ? !!options.leading : leading;
-    trailing = 'trailing' in options ? !!options.trailing : trailing;
+    leading = "leading" in options ? !!options.leading : leading;
+    trailing = "trailing" in options ? !!options.trailing : trailing;
   }
   return Tools.debounce(func, wait, {
-    'leading': leading,
-    'maxWait': wait,
-    'trailing': trailing
+    leading: leading,
+    maxWait: wait,
+    trailing: trailing
   });
 };
 
-Tools.buildColWidthClassName = (colWidth) => {
+Tools.buildColWidthClassName = colWidth => {
   var newBsColWidth = colWidth;
 
-  if (typeof newBsColWidth === 'string') {
+  if (typeof newBsColWidth === "string") {
     var colWidthArray = newBsColWidth.trim().split(REGEXP.splitByWhiteSpace);
     newBsColWidth = {};
     colWidthArray.forEach(colWidthPart => {
@@ -2597,12 +2852,15 @@ Tools.buildColWidthClassName = (colWidth) => {
 
   ["xs", "s", "m", "l", "xl"].forEach(size => {
     typeof newBsColWidth[size] !== "number" && typeof lowerWidth === "number" && (newBsColWidth[size] = lowerWidth);
-    (lowerWidth = newBsColWidth[size]) && typeof lowerWidth === "number" && sizeClassNames.push(`uu5-col-${size}` + newBsColWidth[size]);
+    (lowerWidth = newBsColWidth[size]) &&
+      typeof lowerWidth === "number" &&
+      sizeClassNames.push(`uu5-col-${size}` + newBsColWidth[size]);
 
-    typeof newBsColWidth[`offset-${size}`] === "number" && sizeClassNames.push(`uu5-col-offset-${size}` + newBsColWidth[`offset-${size}`]);
+    typeof newBsColWidth[`offset-${size}`] === "number" &&
+      sizeClassNames.push(`uu5-col-offset-${size}` + newBsColWidth[`offset-${size}`]);
   });
 
-  return sizeClassNames.join(' ');
+  return sizeClassNames.join(" ");
 };
 
 // deprecated! use UU5.Common.Context.create

@@ -1,40 +1,40 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom';
-import Tools from './tools.js';
-import Environment from '../environment/environment.js';
+import React from "react";
+import PropTypes from "prop-types";
+import ReactDOM from "react-dom";
+import Tools from "./tools.js";
+import Environment from "../environment/environment.js";
 
 export const BaseMixin = {
-
   //@@viewOn:statics
   statics: {
     "UU5.Common.BaseMixin": {
       warnings: {
-        colWidthNotUsed: 'Property colWidth was not used. Component was not covered itself by column.',
-        overflowNotUsed: 'Property overflow was not used. Component was not covered itself by flc.'
+        colWidthNotUsed: "Property colWidth was not used. Component was not covered itself by column.",
+        overflowNotUsed: "Property overflow was not used. Component was not covered itself by flc."
       },
       errors: {
-        idMissing: 'Id %s was not set.',
-        parentMissing: 'Parent was not found in props.',
-        childrenAreNotIndexedByParent: 'Children are not indexed by parent %s.',
-        tagIsWrong: 'Wrong tag %s - element was not found.',
-        notRequiredMixin: 'Registered mixin %s needs to require mixin %s in component %s!',
-        invalidParentTagName: 'Parent %s is not %s.',
-        invalidParentType: 'Parent %s has not function %s.',
-        childTagNotAllowed: 'Child tag %s is by default not allowed here. Use <%s allowTags={["%s"]} ...> if you really want to allow it, or wrap it into %s.',
+        idMissing: "Id %s was not set.",
+        parentMissing: "Parent was not found in props.",
+        childrenAreNotIndexedByParent: "Children are not indexed by parent %s.",
+        tagIsWrong: "Wrong tag %s - element was not found.",
+        notRequiredMixin: "Registered mixin %s needs to require mixin %s in component %s!",
+        invalidParentTagName: "Parent %s is not %s.",
+        invalidParentType: "Parent %s has not function %s.",
+        childTagNotAllowed:
+          'Child tag %s is by default not allowed here. Use <%s allowTags={["%s"]} ...> if you really want to allow it, or wrap it into %s.',
         childNotAllowed: 'Child "%s" is by default not allowed here. Wrap it into %s.'
       },
       defaults: {
@@ -61,7 +61,7 @@ export const BaseMixin = {
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function () {
+  getDefaultProps: function() {
     return {
       id: null,
       name: null,
@@ -78,8 +78,8 @@ export const BaseMixin = {
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  getInitialState: function () {
+  //@@viewOn:reactLifeCycle
+  getInitialState: function() {
     // initialize
     this._isMounted = true;
     this.registerMixin("UU5.Common.BaseMixin");
@@ -88,8 +88,11 @@ export const BaseMixin = {
     return null;
   },
 
-  componentDidMount: function () {
-    if ((typeof this.props.ref_ === "function" || (typeof this.props.ref_ === "object" && this.props.ref_ !== null)) && (!this.constructor.opt || !this.constructor.opt.hoc)) {
+  componentDidMount: function() {
+    if (
+      (typeof this.props.ref_ === "function" || (typeof this.props.ref_ === "object" && this.props.ref_ !== null)) &&
+      (!this.constructor.opt || !this.constructor.opt.hoc)
+    ) {
       if ("current" in this.props.ref_) {
         this.props.ref_.current = this;
       } else {
@@ -98,7 +101,7 @@ export const BaseMixin = {
     }
   },
 
-  componentWillReceiveProps: function (nextProps) {
+  componentWillReceiveProps: function(nextProps) {
     // set id only if it was set in nextProps
     if (nextProps.id !== undefined && nextProps.id !== null && nextProps.id !== this.getId()) {
       var parent = this.getParent();
@@ -114,36 +117,36 @@ export const BaseMixin = {
     }
   },
 
-  componentWillUnmount: function () {
+  componentWillUnmount: function() {
     // if parent support rendered children register - unregisterRenderedChild
     var parent = this.getParent();
     parent && parent.unregisterRenderedChild && parent.unregisterRenderedChild(this);
     this._isMounted = false;
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
-  hasUU5CommonBaseMixin: function () {
+  hasUU5CommonBaseMixin: function() {
     return this.hasMixin("UU5.Common.BaseMixin");
   },
 
-  getTagName: function () {
-    return this.constructor.tagName || 'unknownTagName';
+  getTagName: function() {
+    return this.constructor.tagName || "unknownTagName";
   },
 
-  getMixinRegister: function () {
-    return this.mixinRegister = this.mixinRegister || [];
+  getMixinRegister: function() {
+    return (this.mixinRegister = this.mixinRegister || []);
   },
 
-  registerMixin: function (mixinName) {
+  registerMixin: function(mixinName) {
     this.getMixinRegister().push(mixinName);
 
     var component = this;
     var requiredMixins = this.constructor[mixinName].requiredMixins;
     if (requiredMixins && requiredMixins.length) {
-      requiredMixins.forEach(function (mixin) {
+      requiredMixins.forEach(function(mixin) {
         if (!component.hasMixin(mixin)) {
-          component.showError('notRequiredMixin', [mixinName, mixin, component.getTagName()], {
+          component.showError("notRequiredMixin", [mixinName, mixin, component.getTagName()], {
             mixinName: "UU5.Common.BaseMixin",
             context: { requiredMixins: requiredMixins }
           });
@@ -154,29 +157,37 @@ export const BaseMixin = {
     return this;
   },
 
-  hasMixin: function (mixinName) {
+  hasMixin: function(mixinName) {
     return this.getMixinRegister().indexOf(mixinName) !== -1;
   },
 
-  getClassName: function (item, mixinName) {
-    var classNames = mixinName ? this.constructor[mixinName] ? this.constructor[mixinName].classNames : null : this.constructor.classNames;
+  getClassName: function(item, mixinName) {
+    var classNames = mixinName
+      ? this.constructor[mixinName]
+        ? this.constructor[mixinName].classNames
+        : null
+      : this.constructor.classNames;
     // var resultValue = classNames && item ? classNames[item] || (classNames['main'] && classNames['main'] + '-' + Tools.getDashCase(item)) : null;
     var resultValue = classNames && item ? classNames[item] : null;
-    if (typeof this[resultValue] === 'function') {
+    if (typeof this[resultValue] === "function") {
       resultValue = this[resultValue](this.props, this.state);
-    } else if (typeof resultValue === 'function') {
+    } else if (typeof resultValue === "function") {
       resultValue = resultValue(this.props, this.state);
     }
     return classNames && item ? resultValue : classNames;
   },
 
-  getDefault: function (item, mixinName) {
-    var defaults = mixinName ? this.constructor[mixinName] ? this.constructor[mixinName].defaults : null : this.constructor.defaults;
+  getDefault: function(item, mixinName) {
+    var defaults = mixinName
+      ? this.constructor[mixinName]
+        ? this.constructor[mixinName].defaults
+        : null
+      : this.constructor.defaults;
     return defaults && item ? defaults[item] : defaults;
   },
 
-  getOpt: function (item, mixinName) {
-    var opt = mixinName ? this.constructor[mixinName] ? this.constructor[mixinName].opt : null : this.constructor.opt;
+  getOpt: function(item, mixinName) {
+    var opt = mixinName ? (this.constructor[mixinName] ? this.constructor[mixinName].opt : null) : this.constructor.opt;
     return opt && item ? opt[item] : opt;
   },
 
@@ -184,9 +195,9 @@ export const BaseMixin = {
     let lsi;
     if (mixinName) {
       lsi = this.constructor[mixinName] ? this.constructor[mixinName].lsi : null;
-      typeof lsi === 'function' && (lsi = lsi());
+      typeof lsi === "function" && (lsi = lsi());
     } else {
-      lsi = typeof this.constructor.lsi === 'function' ? this.constructor.lsi() : this.constructor.lsi;
+      lsi = typeof this.constructor.lsi === "function" ? this.constructor.lsi() : this.constructor.lsi;
     }
     return lsi && item ? lsi[item] : lsi;
   },
@@ -198,7 +209,7 @@ export const BaseMixin = {
   },
 
   getLsiComponent(item, mixin, params) {
-    return Tools.findComponent('UU5.Bricks.Lsi', { lsi: this.getLsi(item, mixin), params: params });
+    return Tools.findComponent("UU5.Bricks.Lsi", { lsi: this.getLsi(item, mixin), params: params });
   },
 
   // TODO: deprecated
@@ -218,7 +229,7 @@ export const BaseMixin = {
   },
 
   getLsiItem(value, params) {
-    return typeof value === 'object' ? Tools.getLsiItemByLanguage(value, params, this.__getContextLanguages()) : value;
+    return typeof value === "object" ? Tools.getLsiItemByLanguage(value, params, this.__getContextLanguages()) : value;
   },
 
   // TODO: deprecated
@@ -227,7 +238,7 @@ export const BaseMixin = {
     return this.getLsiItem(value, params);
   },
 
-  isRendered: function () {
+  isRendered: function() {
     return this._isMounted;
   },
 
@@ -238,39 +249,56 @@ export const BaseMixin = {
     return this;
   },
 
-  getLimit: function (item, mixinName) {
-    var limits = mixinName ? Environment.limits[mixinName] : this.constructor[mixinName] ? this.constructor[mixinName].limits : this.constructor.limits;
+  getLimit: function(item, mixinName) {
+    var limits = mixinName
+      ? Environment.limits[mixinName]
+      : this.constructor[mixinName]
+      ? this.constructor[mixinName].limits
+      : this.constructor.limits;
     return limits && item ? limits[item] : limits;
   },
 
-  getError: function (item, mixinName) {
-    var errors = mixinName ? this.constructor[mixinName] ? this.constructor[mixinName].errors || {} : {} : this.constructor.errors || {};
+  getError: function(item, mixinName) {
+    var errors = mixinName
+      ? this.constructor[mixinName]
+        ? this.constructor[mixinName].errors || {}
+        : {}
+      : this.constructor.errors || {};
     return item ? errors[item] || item : errors;
   },
 
-  getWarning: function (item, mixinName) {
-    var warnings = mixinName ? this.constructor[mixinName] ? this.constructor[mixinName].warnings || {} : {} : this.constructor.warnings || {};
+  getWarning: function(item, mixinName) {
+    var warnings = mixinName
+      ? this.constructor[mixinName]
+        ? this.constructor[mixinName].warnings || {}
+        : {}
+      : this.constructor.warnings || {};
     return item ? warnings[item] || item : warnings;
   },
 
-  getCallName: function (item, mixinName) {
-    var calls = mixinName ? this.constructor[mixinName] ? this.constructor[mixinName].calls || {} : {} : this.constructor.calls || {};
+  getCallName: function(item, mixinName) {
+    var calls = mixinName
+      ? this.constructor[mixinName]
+        ? this.constructor[mixinName].calls || {}
+        : {}
+      : this.constructor.calls || {};
     return item ? calls[item] || null : calls;
   },
 
-  getId: function () {
+  getId: function() {
     var id = this.id;
-    !id && this.showError('idMissing', id, {
-      mixinName: "UU5.Common.BaseMixin"
-    });
+    !id &&
+      this.showError("idMissing", id, {
+        mixinName: "UU5.Common.BaseMixin"
+      });
     return id;
   },
 
-  getName: function () {
+  getName: function() {
     return this.props.name;
   },
 
-  getTooltip: function () {
+  getTooltip: function() {
     let tooltip;
 
     if (typeof this.props.tooltip === "string") {
@@ -282,12 +310,12 @@ export const BaseMixin = {
     return tooltip;
   },
 
-  getProps: function (prop) {
+  getProps: function(prop) {
     UU5.Common.Tools.warning('Interface "getProps" is deprecated!');
-    return this.props ? prop ? this.props[prop] : this.props : null;
+    return this.props ? (prop ? this.props[prop] : this.props) : null;
   },
 
-  getUU5CommonBaseMixinProps: function () {
+  getUU5CommonBaseMixinProps: function() {
     return {
       id: this.getId(),
       name: this.getName(),
@@ -299,16 +327,19 @@ export const BaseMixin = {
     };
   },
 
-  getUU5CommonBaseMixinPropsToPass: function (suffix) {
-    suffix = suffix || 'inner';
+  getUU5CommonBaseMixinPropsToPass: function(suffix) {
+    suffix = suffix || "inner";
     let style = typeof this.props.style === "string" ? this.__styleStringToObject(this.props.style) : this.props.style;
 
     var props = {
-      id: this.getId() + '-' + suffix,
-      name: this.getName() ? this.getName() + '-' + suffix : null,
+      id: this.getId() + "-" + suffix,
+      name: this.getName() ? this.getName() + "-" + suffix : null,
       tooltip: this.getTooltip(),
       className: this.getFullClassName(),
-      style: style && this.props.mainAttrs && this.props.mainAttrs.style ? Tools.mergeDeep(this.props.mainAttrs.style, style) : style,
+      style:
+        style && this.props.mainAttrs && this.props.mainAttrs.style
+          ? Tools.mergeDeep(this.props.mainAttrs.style, style)
+          : style,
       parent: this
     };
 
@@ -333,28 +364,28 @@ export const BaseMixin = {
   },
 
   // mixinNames = mixins to choose from
-  getMainPropsToPass: function (mixinNames) {
+  getMainPropsToPass: function(mixinNames) {
     var params = [{}];
 
     var component = this;
     mixinNames = mixinNames || this.getMixinRegister();
-    mixinNames.forEach(function (mixinName) {
-      var propsToPassFunction = component['get' + mixinName.replace(/\./g, "") + 'PropsToPass'];
-      typeof propsToPassFunction === 'function' && params.push(propsToPassFunction());
+    mixinNames.forEach(function(mixinName) {
+      var propsToPassFunction = component["get" + mixinName.replace(/\./g, "") + "PropsToPass"];
+      typeof propsToPassFunction === "function" && params.push(propsToPassFunction());
     });
 
     return Tools.mergeDeep.apply(null, params);
   },
 
-  getMainAttrs: function () {
+  getMainAttrs: function() {
     var newMainAttrs = Tools.mergeDeep({}, this.getUU5CommonBaseMixinProps().mainAttrs, {
       className: this.getFullClassName()
     });
 
     if (this.getTooltip()) newMainAttrs.title = this.getTooltip();
     if (this.props.style) {
-      let style = typeof this.props.style === 'string' ?
-        this.__styleStringToObject(this.props.style) : this.props.style;
+      let style =
+        typeof this.props.style === "string" ? this.__styleStringToObject(this.props.style) : this.props.style;
 
       newMainAttrs.style = Tools.mergeDeep({}, newMainAttrs.style, style);
     }
@@ -365,51 +396,51 @@ export const BaseMixin = {
     return newMainAttrs;
   },
 
-  getParent: function () {
+  getParent: function() {
     return this.props.parent;
   },
 
-  getParentByType: function (typeFunction) {
+  getParentByType: function(typeFunction) {
     var parent = this.getParent && this.getParent();
-    while (parent && (typeof parent[typeFunction] !== 'function' || !parent[typeFunction]())) {
+    while (parent && (typeof parent[typeFunction] !== "function" || !parent[typeFunction]())) {
       parent = parent.getParent && parent.getParent();
     }
     return parent;
   },
 
-  checkParentTagName: function (parentTagNames) {
+  checkParentTagName: function(parentTagNames) {
     parentTagNames = Array.isArray(parentTagNames) ? parentTagNames : [parentTagNames];
     var parent = this.getParent();
     var currentParentTagName = parent && parent.getTagName();
     var result = !currentParentTagName || parentTagNames.indexOf(currentParentTagName) == -1;
     if (result) {
-      this.showError('invalidParentTagName', [currentParentTagName, parentTagNames.join(' or ')], {
+      this.showError("invalidParentTagName", [currentParentTagName, parentTagNames.join(" or ")], {
         mixinName: "UU5.Common.BaseMixin"
       });
     }
     return result;
   },
 
-  checkParentType: function (typeFunction) {
+  checkParentType: function(typeFunction) {
     var parent = this.getParent();
     var parentTypeFunction = parent && parent[typeFunction];
-    var result = parentTypeFunction !== 'function' || !parentTypeFunction();
+    var result = parentTypeFunction !== "function" || !parentTypeFunction();
     if (result) {
-      this.showError('invalidParentType', [parent ? parent.getTagName() : null, typeFunction], {
+      this.showError("invalidParentType", [parent ? parent.getTagName() : null, typeFunction], {
         mixinName: "UU5.Common.BaseMixin"
       });
     }
     return result;
   },
 
-  getIndex: function () {
+  getIndex: function() {
     var parent = this.getParent();
     var index = null;
     // parent should support children index - method getChildIndexById
     if (parent && parent.getChildIndexById) {
       index = parent.getChildIndexById(this.getId());
     } else {
-      this.showError('childrenAreNotIndexedByParent', parent ? parent.getTagName() : null, {
+      this.showError("childrenAreNotIndexedByParent", parent ? parent.getTagName() : null, {
         mixinName: "UU5.Common.BaseMixin",
         context: { parent: parent }
       });
@@ -418,9 +449,9 @@ export const BaseMixin = {
   },
 
   // Component helpers for React
-  getFullClassName: function (className) {
+  getFullClassName: function(className) {
     var component = this;
-    var myClassName = className || 'main';
+    var myClassName = className || "main";
     var classArray = [];
     var classes = {
       main: this.getClassName(myClassName),
@@ -432,28 +463,28 @@ export const BaseMixin = {
       classes.main += " uu5-noindex";
     }
 
-    this.getMixinRegister().forEach(function (v) {
-      var mixinClassName = v + '_' + myClassName;
+    this.getMixinRegister().forEach(function(v) {
+      var mixinClassName = v + "_" + myClassName;
       classes[mixinClassName] = component.getClassName(myClassName, v);
       classArray.push(mixinClassName);
     });
     classArray.push(myClassName);
-    classArray.push('props');
-    classArray.push('mainAttrs');
+    classArray.push("props");
+    classArray.push("mainAttrs");
 
     return Tools.buildClasses(classes, classArray);
   },
 
-  stringToObjectType: function (string, type, prefix) {
+  stringToObjectType: function(string, type, prefix) {
     var calculated = prefix || window;
-    if (typeof string === 'string') {
-      var sArray = string.split('.');
+    if (typeof string === "string") {
+      var sArray = string.split(".");
       while (calculated && sArray.length > 0) {
         calculated = calculated[sArray.shift()];
       }
     }
     if (typeof calculated !== type) {
-      this.showError('tagIsWrong', string, {
+      this.showError("tagIsWrong", string, {
         mixinName: "UU5.Common.BaseMixin",
         context: {
           notFoundObject: calculated,
@@ -467,7 +498,7 @@ export const BaseMixin = {
     return calculated;
   },
 
-  switchChildrenToBody: function (props) {
+  switchChildrenToBody: function(props) {
     var newProps = Tools.mergeDeep({}, props || this.props);
     var children = newProps.children;
     newProps.children = null;
@@ -475,17 +506,20 @@ export const BaseMixin = {
     return newProps;
   },
 
-  findDOMNode: process.env.NODE_ENV === "test" ? function () {
-    try {
-      return ReactDOM.findDOMNode(this);
-    } catch (error) {
-      return null;
-    }
-  } : function () {
-    return ReactDOM.findDOMNode(this);
-  },
+  findDOMNode:
+    process.env.NODE_ENV === "test"
+      ? function() {
+          try {
+            return ReactDOM.findDOMNode(this);
+          } catch (error) {
+            return null;
+          }
+        }
+      : function() {
+          return ReactDOM.findDOMNode(this);
+        },
 
-  exportToObject: function () {
+  exportToObject: function() {
     return {
       tag: this.getTagName(),
       props: Tools.mergeDeep({}, this.props),
@@ -494,7 +528,7 @@ export const BaseMixin = {
   },
 
   // msgParams could be array of params or just one param
-  showError: function (msgKey, msgParams, opt) {
+  showError: function(msgKey, msgParams, opt) {
     opt = opt || {};
     var msg = this.getError(msgKey, opt.mixinName);
     Tools.error.apply(null, this.__getLogParams(msg, msgParams, opt.context));
@@ -502,14 +536,14 @@ export const BaseMixin = {
   },
 
   // msgParams could be array of params or just one param
-  showWarning: function (msgKey, msgParams, opt) {
+  showWarning: function(msgKey, msgParams, opt) {
     opt = opt || {};
     var msg = this.getWarning(msgKey, opt.mixinName);
     Tools.warning.apply(null, this.__getLogParams(msg, msgParams, opt.context));
     return this;
   },
 
-  replaceByHardSpace: function (text, language) {
+  replaceByHardSpace: function(text, language) {
     var replacer = language ? Environment.hardSpace.lsiReplacer[language] : null;
     replacer = replacer || Tools.getLsiItemByLanguage(Environment.hardSpace.lsiReplacer);
     return replacer ? replacer(text) : text;
@@ -524,12 +558,12 @@ export const BaseMixin = {
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
-  __getLogParams: function (msg, msgParams, context) {
-    let title = this.getTagName() + ' [' + this.getId() + ']: ';
+  //@@viewOn:private
+  __getLogParams: function(msg, msgParams, context) {
+    let title = this.getTagName() + " [" + this.getId() + "]: ";
     let msgWithParams = msg ? Tools.formatString(msg, msgParams) : msgParams || null;
 
     context = context || {};
@@ -542,13 +576,13 @@ export const BaseMixin = {
   },
 
   __styleStringToObject(style) {
-    if (typeof style !== 'string') return;
+    if (typeof style !== "string") return;
 
     let obj = {};
-    let properties = style.split(';');
+    let properties = style.split(";");
 
-    properties.forEach((item) => {
-      let keysAndValues = item.split(':');
+    properties.forEach(item => {
+      let keysAndValues = item.split(":");
       if (keysAndValues.length > 1) {
         obj[keysAndValues[0].trim()] = keysAndValues[1].trim();
       }
@@ -563,14 +597,14 @@ export const BaseMixin = {
       let language = [
         {
           language: langParts[0],
-          location: langParts[1] || null,
+          location: langParts[1] ? this.state.language : null,
           q: 1
         }
       ];
       return language;
     }
   }
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 };
 
 export default BaseMixin;

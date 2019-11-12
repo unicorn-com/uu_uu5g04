@@ -31,6 +31,7 @@ exports[`UU5.Forms.InputMixin interface editable(setStatecallback) 1`] = `
       readonly={true}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
       value="John Doe"
     />
@@ -69,6 +70,7 @@ exports[`UU5.Forms.InputMixin interface editable(setStatecallback) 2`] = `
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
       value="John Doe"
     />
@@ -107,6 +109,7 @@ exports[`UU5.Forms.InputMixin interface getChangeFeedback() 1`] = `
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
     />
   </InputWrapper>
@@ -217,6 +220,7 @@ exports[`UU5.Forms.InputMixin interface getInputWrapper(inpuid) 1`] = `
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
       value="John Doe"
     />
@@ -255,6 +259,7 @@ exports[`UU5.Forms.InputMixin interface getLabel(idinput) 1`] = `
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
       value="John Doe"
     />
@@ -404,6 +409,7 @@ exports[`UU5.Forms.InputMixin interface isError() 1`] = `
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
     />
   </InputWrapper>
@@ -443,6 +449,7 @@ exports[`UU5.Forms.InputMixin interface isError() 2`] = `
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
       value="Default value"
     />
@@ -479,6 +486,7 @@ exports[`UU5.Forms.InputMixin interface isInitial() 1`] = `
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
     />
   </InputWrapper>
@@ -516,6 +524,7 @@ exports[`UU5.Forms.InputMixin interface isInitial() 2`] = `
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
     />
   </InputWrapper>
@@ -587,6 +596,7 @@ exports[`UU5.Forms.InputMixin interface isLoading() 1`] = `
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
     />
   </InputWrapper>
@@ -624,6 +634,7 @@ exports[`UU5.Forms.InputMixin interface isReadOnly() 1`] = `
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
     />
   </InputWrapper>
@@ -661,6 +672,7 @@ exports[`UU5.Forms.InputMixin interface isReadOnly() 2`] = `
       readonly={true}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
     />
   </InputWrapper>
@@ -700,6 +712,7 @@ exports[`UU5.Forms.InputMixin interface isSuccess() fisr return false, second re
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
       value="Success Value"
     />
@@ -740,6 +753,7 @@ exports[`UU5.Forms.InputMixin interface isWarning() 1`] = `
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
     />
   </InputWrapper>
@@ -779,6 +793,7 @@ exports[`UU5.Forms.InputMixin interface isWarning() 2`] = `
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
       value="Default value"
     />
@@ -817,6 +832,7 @@ exports[`UU5.Forms.InputMixin interface readOnly(setStatecallback) 1`] = `
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
       value="John Doe"
     />
@@ -855,6 +871,7 @@ exports[`UU5.Forms.InputMixin interface readOnly(setStatecallback) 2`] = `
       readonly={true}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
       value="John Doe"
     />
@@ -895,6 +912,7 @@ exports[`UU5.Forms.InputMixin interface reset(setStateCallBack) 1`] = `
       readonly={true}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
       value="New Value"
     />
@@ -933,6 +951,7 @@ exports[`UU5.Forms.InputMixin interface reset(setStateCallBack) 2`] = `
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
     />
   </InputWrapper>
@@ -972,6 +991,7 @@ exports[`UU5.Forms.InputMixin interface setChangeFeedback() 1`] = `
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
       value="Error text"
     />
@@ -1010,6 +1030,7 @@ exports[`UU5.Forms.InputMixin interface setEditableValue(false, setStateCallback
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
       value="John Doe"
     />
@@ -1048,6 +1069,7 @@ exports[`UU5.Forms.InputMixin interface setEditableValue(false, setStateCallback
       readonly={true}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
       value="John Doe"
     />
@@ -1086,6 +1108,7 @@ exports[`UU5.Forms.InputMixin interface setEditableValue(true, setStateCallback)
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
       value="John Doe"
     />
@@ -1124,6 +1147,7 @@ exports[`UU5.Forms.InputMixin interface setEditableValue(true, setStateCallback)
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
       value="John Doe"
     />
@@ -1160,6 +1184,7 @@ exports[`UU5.Forms.InputMixin interface setError(message, value, setStateCallBac
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
     />
   </InputWrapper>
@@ -1197,6 +1222,7 @@ exports[`UU5.Forms.InputMixin interface setError(message, value, setStateCallBac
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
       value="Error value"
     />
@@ -1312,6 +1338,7 @@ exports[`UU5.Forms.InputMixin interface setInitial(msg, value, setStateCallBack)
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
     />
   </InputWrapper>
@@ -1350,6 +1377,7 @@ exports[`UU5.Forms.InputMixin interface setInitial(msg, value, setStateCallBack)
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
     />
   </InputWrapper>
@@ -1385,6 +1413,7 @@ exports[`UU5.Forms.InputMixin interface setLoading(message, value, setStateCallB
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
     />
   </InputWrapper>
@@ -1424,6 +1453,7 @@ exports[`UU5.Forms.InputMixin interface setLoading(message, value, setStateCallB
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
       value="Value is loaded"
     />
@@ -1533,6 +1563,7 @@ exports[`UU5.Forms.InputMixin interface setSuccess(message, value, setStateCallB
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
     />
   </InputWrapper>
@@ -1570,6 +1601,7 @@ exports[`UU5.Forms.InputMixin interface setSuccess(message, value, setStateCallB
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
       value="Success Value"
     />
@@ -1679,6 +1711,7 @@ exports[`UU5.Forms.InputMixin interface setWarning(message, value, setStateCallB
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
     />
   </InputWrapper>
@@ -1716,6 +1749,7 @@ exports[`UU5.Forms.InputMixin interface setWarning(message, value, setStateCallB
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
       value="Warning Value"
     />
@@ -1752,6 +1786,7 @@ exports[`UU5.Forms.TextInputMixin interface focus() 1`] = `
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
       value="Anna Simpson"
     />
@@ -1788,6 +1823,7 @@ exports[`UU5.Forms.TextInputMixin interface focus() 2`] = `
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
       value="Anna Simpson"
     />
@@ -1826,6 +1862,7 @@ exports[`UU5.Forms.TextInputMixin interface getBlurFeedback() 1`] = `
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
     />
   </InputWrapper>
@@ -1863,6 +1900,7 @@ exports[`UU5.Forms.TextInputMixin interface isOpen() should return false 1`] = `
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
     />
   </InputWrapper>
@@ -1898,6 +1936,7 @@ exports[`UU5.Forms.TextInputMixin interface isTextInput() should return true 1`]
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
       value="Anna Simpson"
     />
@@ -1936,6 +1975,7 @@ exports[`UU5.Forms.TextInputMixin interface isValid() 1`] = `
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
       value="Anna Simpson"
     />
@@ -1976,6 +2016,7 @@ exports[`UU5.Forms.TextInputMixin interface isValid() should return false 1`] = 
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
     />
   </InputWrapper>
@@ -2011,6 +2052,7 @@ exports[`UU5.Forms.TextInputMixin interface setAutocompleteItems(items,opt,setSt
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
     />
   </InputWrapper>
@@ -2046,6 +2088,7 @@ exports[`UU5.Forms.TextInputMixin interface setAutocompleteItems(items,opt,setSt
       readonly={false}
       ref_={[Function]}
       rows={3}
+      size="s"
       type="textarea"
     />
   </InputWrapper>

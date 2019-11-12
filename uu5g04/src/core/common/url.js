@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -17,7 +17,7 @@ const regexp = {
   url: /^((http[s]?|ftp):\/)?\/?([^:\/\s]+):?(\d+)?([^?#]+)?\??([^#]+)?#?(.*)$/,
   colon: /:$/,
   slash: /^[/]/,
-  hash: /^#/,
+  hash: /^#/
 };
 
 export class Url {
@@ -25,7 +25,7 @@ export class Url {
     url = url || window.location.href;
     let result = new Url();
 
-    if (typeof url === 'string') {
+    if (typeof url === "string") {
       let parser;
       try {
         parser = new URL(url);
@@ -42,18 +42,17 @@ export class Url {
           hash: matcher[7]
         };
       }
-      parser.protocol && (result.protocol = parser.protocol.replace(regexp.colon, ''));
+      parser.protocol && (result.protocol = parser.protocol.replace(regexp.colon, ""));
       parser.hostname && (result.hostName = parser.hostname);
       parser.port && (result.port = parser.port);
-      parser.pathname && (result.pathName = parser.pathname.replace(regexp.slash, ''));
+      parser.pathname && (result.pathName = parser.pathname.replace(regexp.slash, ""));
       parser.search && (result.parameters = parser.search);
       parser.hash && (result.hash = parser.hash);
-
-    } else if (typeof url === 'object') {
+    } else if (typeof url === "object") {
       url.protocol && (result.protocol = url.protocol);
       url.hostName && (result.hostName = url.hostName);
       url.port && (result.port = url.port);
-      url.pathName && (result.pathName = url.pathName.replace(regexp.slash, ''));
+      url.pathName && (result.pathName = url.pathName.replace(regexp.slash, ""));
       url.parameters && (result.parameters = url.parameters);
       url.hash && (result.hash = url.hash);
     }
@@ -62,9 +61,9 @@ export class Url {
   }
 
   static encodeValue(value) {
-    let result = value + '';
+    let result = value + "";
 
-    if (value && (Array.isArray(value) || typeof value === 'object')) {
+    if (value && (Array.isArray(value) || typeof value === "object")) {
       result = JSON.stringify(value);
     }
 
@@ -72,10 +71,10 @@ export class Url {
   }
 
   static encodeQuery(params) {
-    let query = '?';
+    let query = "?";
 
     for (let name in params) {
-      query += name + '=' + Url.encodeValue(params[name]) + '&';
+      query += name + "=" + Url.encodeValue(params[name]) + "&";
     }
 
     return query.substr(0, query.length - 1);
@@ -87,9 +86,9 @@ export class Url {
 
     if (!isNaN(value)) {
       result = value;
-    } else if (value === 'true') {
+    } else if (value === "true") {
       result = true;
-    } else if (value === 'false') {
+    } else if (value === "false") {
       result = false;
     } else {
       let json = Url._checkJson(value);
@@ -106,8 +105,8 @@ export class Url {
     let params = {};
 
     query = query.replace(/^\?/, "");
-    query.split('&').forEach(value => {
-      let valueSplitter = value.split('=');
+    query.split("&").forEach(value => {
+      let valueSplitter = value.split("=");
       params[valueSplitter[0]] = Url.decodeValue(valueSplitter[1]);
     });
 
@@ -154,7 +153,7 @@ export class Url {
     let baseName = null;
     let basePath = Environment.getAppBasePath();
     if (basePath) {
-      basePath = basePath.replace(regexp.slash, '');
+      basePath = basePath.replace(regexp.slash, "");
       if (this._pathName.indexOf(basePath) > -1) {
         baseName = basePath;
       }
@@ -167,7 +166,7 @@ export class Url {
   }
 
   set pathName(pathName) {
-    this._pathName = pathName.replace(regexp.slash, '');
+    this._pathName = pathName.replace(regexp.slash, "");
     return this;
   }
 
@@ -176,7 +175,7 @@ export class Url {
   }
 
   set parameters(parameters) {
-    if (typeof parameters === 'string') {
+    if (typeof parameters === "string") {
       this._parameters = Url.decodeQuery(parameters);
     } else {
       this._parameters = parameters || null;
@@ -189,21 +188,21 @@ export class Url {
   }
 
   set hash(hash) {
-    this._hash = typeof hash === "string" ? hash.replace(regexp.hash, '') : null;
+    this._hash = typeof hash === "string" ? hash.replace(regexp.hash, "") : null;
     return this;
   }
 
   get host() {
-    let host = '';
+    let host = "";
     this.hostName && (host += this.hostName);
-    this.port && (host += ':' + this.port);
+    this.port && (host += ":" + this.port);
     return host || null;
   }
 
   get origin() {
-    let origin = '';
+    let origin = "";
 
-    this.protocol && (origin += this.protocol + '://');
+    this.protocol && (origin += this.protocol + "://");
 
     let host = this.host;
     host && (origin += host);
@@ -224,9 +223,9 @@ export class Url {
 
   toString() {
     let url = this.origin;
-    this.pathName && (url += '/' + this.pathName);
+    this.pathName && (url += "/" + this.pathName);
     this.parameters && (url += Url.encodeQuery(this.parameters));
-    this.hash && (url += '#' + this.hash);
+    this.hash && (url += "#" + this.hash);
     return url;
   }
 }

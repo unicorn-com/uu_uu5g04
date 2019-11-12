@@ -17,7 +17,7 @@ UU5.Common.Css.createCssModule("uublocklayout");
 export const css = UU5.Common.Css.uublocklayout.css;
 
 const normalFont = () => css`
-  color: rgba(0,0,0,0.87);
+  color: rgba(0, 0, 0, 0.87);
 `;
 
 export const Font = {
@@ -40,4 +40,4 @@ export default {
   TAG,
   css,
   Font
-}
+};

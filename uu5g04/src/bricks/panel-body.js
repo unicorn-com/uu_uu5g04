@@ -11,18 +11,19 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 const ClassNames = UU5.Common.ClassNames;
 import UpdateWrapper from "./update-wrapper.js";
 
-import './panel-body.less';
+import "./panel-body.less";
+//@@viewOff:imports
 
 export default createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -43,11 +44,11 @@ export default createReactClass({
       expanding: ns.css("panel-body-expanding")
     },
     defaults: {
-      parentTagName: 'UU5.Bricks.Panel',
+      parentTagName: "UU5.Bricks.Panel",
       duration: 250
     },
     errors: {
-      invalidParent: 'Parent of this component is not Panel.'
+      invalidParent: "Parent of this component is not Panel."
     }
   },
   //@@viewOff:statics
@@ -56,12 +57,12 @@ export default createReactClass({
   propTypes: {
     _expanded: PropTypes.bool,
     _preventUpdateChild: PropTypes.bool,
-    bgStyle: PropTypes.oneOf(['filled', 'outline', 'transparent', 'underline']),
+    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"])
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function () {
+  getDefaultProps: function() {
     return {
       _expanded: false,
       _preventUpdateChild: false,
@@ -70,15 +71,15 @@ export default createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  getInitialState: function () {
+  //@@viewOn:reactLifeCycle
+  getInitialState: function() {
     this._preventUpdateChild = false;
     return {
       height: this.props._expanded ? null : this._getHeight(this.props)
     };
   },
 
-  componentWillMount: function () {
+  componentWillMount: function() {
     let parent = this.getParent();
 
     if (parent) {
@@ -92,7 +93,7 @@ export default createReactClass({
     }
   },
 
-  componentWillReceiveProps: function (nextProps) {
+  componentWillReceiveProps: function(nextProps) {
     var body = this;
     var height = this._getHeight(nextProps);
 
@@ -137,24 +138,24 @@ export default createReactClass({
     }
   },
 
-  componentWillUnmount: function () {
+  componentWillUnmount: function() {
     this.timer && clearTimeout(this.timer);
   },
 
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
-  _getPanelBodyId: function () {
-    return this.getId() + '-content';
+  //@@viewOn:private
+  _getPanelBodyId: function() {
+    return this.getId() + "-content";
   },
 
-  _getHeight: function (props) {
+  _getHeight: function(props) {
     let result;
     if (props._expanded) {
       let element = this._panelBody;
@@ -164,54 +165,62 @@ export default createReactClass({
     }
     return result;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   // Render
-  _getMainAttrs: function () {
+  _getMainAttrs: function() {
     var mainAttrs = this.getMainAttrs();
 
     if (this.state.height === null) {
-      mainAttrs.className += ' ' + this.getClassName().block;
+      mainAttrs.className += " " + this.getClassName().block;
     } else {
-      this.state.height > 0 && (mainAttrs.className += ' ' + this.getClassName().expanding);
+      this.state.height > 0 && (mainAttrs.className += " " + this.getClassName().expanding);
 
       mainAttrs.style = mainAttrs.style || {};
-      mainAttrs.style.height = this.state.height + 'px';
+      mainAttrs.style.height = this.state.height + "px";
 
       var time = this.getDefault().duration / 1000;
-      ['WebkitTransitionDuration', 'MozTransitionDuration', 'MsTransitionDuration',
-        'OTransitionDuration', 'transitionDuration'].forEach(function (style) {
-        mainAttrs.style[style] = time + 's';
+      [
+        "WebkitTransitionDuration",
+        "MozTransitionDuration",
+        "MsTransitionDuration",
+        "OTransitionDuration",
+        "transitionDuration"
+      ].forEach(function(style) {
+        mainAttrs.style[style] = time + "s";
       });
     }
 
     if (this.props.bgStyle && !this.props.bgStyleContent) {
       mainAttrs.className += " " + ClassNames[this.props.bgStyle];
-    } else if(this.props.bgStyleContent){
+    } else if (this.props.bgStyleContent) {
       mainAttrs.className += " " + ClassNames[this.props.bgStyleContent];
     }
-    if(this.props.borderRadius){
+    if (this.props.borderRadius) {
       mainAttrs.style.borderRadius = this.props.borderRadius;
     }
-    if(!this.props.bgStyleContent && this.props.colorSchema){
+    if (!this.props.bgStyleContent && this.props.colorSchema) {
       mainAttrs.className += " " + ClassNames["filled"];
     }
 
     return mainAttrs;
   },
 
-  _buildChildren: function () {
+  _buildChildren: function() {
     return this.buildChildren();
   },
 
   //@@viewOn:render
-  render: function () {
+  render: function() {
     // console.log(`prevent render in panel body: this: ${this._preventUpdateChild}, props: ${this.props._preventUpdateChild}`);
     return (
       <div {...this._getMainAttrs()}>
         <UpdateWrapper preventRender={this._preventUpdateChild || this.props._preventUpdateChild}>
-          <div className={this.getClassName().body} id={this._getPanelBodyId()}
-                ref={(panelBody) => this._panelBody = panelBody}>
+          <div
+            className={this.getClassName().body}
+            id={this._getPanelBodyId()}
+            ref={panelBody => (this._panelBody = panelBody)}
+          >
             {this._buildChildren()}
           </div>
         </UpdateWrapper>

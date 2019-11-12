@@ -1,17 +1,17 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-//@viewOn:imports
+//@@viewOn:imports
 import React from "react";
 import PropTypes from "prop-types";
 import createReactClass from "create-react-class";
@@ -22,7 +22,7 @@ import Tools from "./tools.js";
 import Error from "./error.js";
 import Request from "./request.js";
 import Context from "./context.js";
-//@viewOff:imports
+//@@viewOff:imports
 
 export const Loader = createReactClass({
   //@@viewOn:mixins
@@ -74,11 +74,11 @@ export const Loader = createReactClass({
         />
       ),
       reloadInterval: undefined
-    }
+    };
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     return this._shouldLoad() ? { loaderState: "loading" } : { loaderState: "ready", data: this.props.data };
   },
@@ -96,15 +96,15 @@ export const Loader = createReactClass({
       this._initLoading(nextProps);
     }
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _shouldLoad(props = this.props) {
     return !(!props.onLoad && !props.uri && props.data);
   },
@@ -171,17 +171,18 @@ export const Loader = createReactClass({
     if (typeof children === "function") {
       result = children({ data: this.state.data });
     } else {
-      result = React.Children.map(children, child => {
-        if (React.isValidElement(child)) {
-          return React.cloneElement(child, { data: this.state.data });
-        } else {
-          return child;
-        }
-      }) || null;
+      result =
+        React.Children.map(children, child => {
+          if (React.isValidElement(child)) {
+            return React.cloneElement(child, { data: this.state.data });
+          } else {
+            return child;
+          }
+        }) || null;
     }
     return result;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {

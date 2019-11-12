@@ -1,26 +1,28 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 const ClassNames = UU5.Common.ClassNames;
 
-import Header from './panel-header.js';
-import Body from './panel-body.js';
-import './panel.less';
+import Header from "./panel-header.js";
+import Body from "./panel-body.js";
+import "./panel.less";
+//@@viewOff:imports
 
 const MOUNT_CONTENT_VALUES = {
   onFirstRender: "onFirstRender",
@@ -47,7 +49,7 @@ export const Panel = createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("Panel"),
-    nestingLevelList: UU5.Environment.getNestingLevelList('bigBoxCollection', 'box'),
+    nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
       main: ns.css("panel"),
       expanded: ns.css("panel-expanded"),
@@ -55,9 +57,9 @@ export const Panel = createReactClass({
       default: ns.css("panel-default")
     },
     defaults: {
-      parentTagName: 'UU5.Bricks.Accordion',
-      header: 'noHeader',
-      body: 'noBody'
+      parentTagName: "UU5.Bricks.Accordion",
+      header: "noHeader",
+      body: "noBody"
     }
   },
   //@@viewOff:statics
@@ -70,14 +72,14 @@ export const Panel = createReactClass({
     iconCollapsed: PropTypes.string,
     onClick: PropTypes.func,
     disableHeaderClick: PropTypes.bool,
-    size: PropTypes.oneOf(['s', 'm', 'l', 'xl']),
-    bgStyle: PropTypes.oneOf(['filled', 'outline', 'transparent', 'underline']),
-    bgStyleHeader: PropTypes.oneOf(['filled', 'outline', 'transparent', 'underline']),
-    bgStyleContent: PropTypes.oneOf(['filled', 'outline', 'transparent', 'underline']),
+    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
+    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+    bgStyleHeader: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+    bgStyleContent: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
     colorSchemaHeader: PropTypes.string,
     colorSchemaContent: PropTypes.string,
     borderRadius: PropTypes.string,
-    elevation: PropTypes.oneOf(['0', '1', '2', '3', '4', '5', 0, 1, 2, 3, 4, 5]),
+    elevation: PropTypes.oneOf(["0", "1", "2", "3", "4", "5", 0, 1, 2, 3, 4, 5]),
     iconAlign: PropTypes.oneOf(["right", "after", "left"]),
     openClick: PropTypes.oneOf(["header", "icon", "none"]),
     mountContent: PropTypes.oneOf([
@@ -102,7 +104,7 @@ export const Panel = createReactClass({
       borderRadius: null,
       elevation: null,
       disableHeaderClick: undefined,
-      size: 'm',
+      size: "m",
       iconAlign: null,
       openClick: null,
       mountContent: undefined
@@ -110,7 +112,7 @@ export const Panel = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     this._blockNextChildUpdate = false;
     const expanded = this.props.alwaysExpanded || this.props.expanded;
@@ -122,7 +124,6 @@ export const Panel = createReactClass({
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
-
       if (nextProps.alwaysExpanded) {
         !this.isExpanded() && this.setState({ expanded: true, renderChild: true });
       } else if (nextProps.expanded !== this.props.expanded && nextProps.expanded !== this.isExpanded()) {
@@ -135,7 +136,7 @@ export const Panel = createReactClass({
   componentDidUpdate() {
     this._blockNextChildUpdate = false;
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   isPanel() {
@@ -171,12 +172,12 @@ export const Panel = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
+  //@@viewOn:overriding
   buildHeaderChild_(headerTypes) {
     var headerType = this.getHeaderType(headerTypes);
 
     var headerChild;
-    if (headerType === 'contentOfStandardHeader') {
+    if (headerType === "contentOfStandardHeader") {
       headerChild = <Header content={headerTypes.header} />;
       headerChild = this.cloneChild(headerChild, this.expandHeaderProps(headerChild));
     }
@@ -201,13 +202,21 @@ export const Panel = createReactClass({
       style: { borderRadius: this.props.borderRadius },
       openClick: this.props.openClick || "header",
       iconAlign: icon ? this.props.iconAlign || "right" : null,
-      bgStyle: this.props.bgStyleHeader ? this.props.bgStyleHeader : (this.props.colorSchemaHeader && !this.props.bgStyle ? "filled" : null),
-      colorSchema: this.props.colorSchemaHeader ? this.props.colorSchemaHeader : (this.props.bgStyle ? this.props.colorSchema : null)
+      bgStyle: this.props.bgStyleHeader
+        ? this.props.bgStyleHeader
+        : this.props.colorSchemaHeader && !this.props.bgStyle
+        ? "filled"
+        : null,
+      colorSchema: this.props.colorSchemaHeader
+        ? this.props.colorSchemaHeader
+        : this.props.bgStyle
+        ? this.props.colorSchema
+        : null
     });
   },
-  //@@viewOff:overridingMethods
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _updateExpandedValue(expanded, setStateCallback) {
     this.setState(function(state) {
       expanded = expanded !== undefined ? expanded : !state.expanded;
@@ -260,7 +269,7 @@ export const Panel = createReactClass({
   _findChildByTagName(tagName) {
     var children = Array.isArray(this.props.children) ? this.props.children : [this.props.children];
 
-    var result = children.filter(function (child) {
+    var result = children.filter(function(child) {
       return child.type && child.type.tagName === tagName;
     });
 
@@ -272,7 +281,7 @@ export const Panel = createReactClass({
     this.toggle(() => {
       var onClick;
 
-      if (typeof this.props.onClick === 'function') {
+      if (typeof this.props.onClick === "function") {
         onClick = () => panel.props.onClick(this);
       }
 
@@ -284,7 +293,7 @@ export const Panel = createReactClass({
   },
 
   _getBodyId() {
-    return this.getId() + '-body';
+    return this.getId() + "-body";
   },
 
   _getBodyChild() {
@@ -328,9 +337,9 @@ export const Panel = createReactClass({
         parent = parent.getParent();
       }
     }
-    return parent && (parent.getTagName() === this.getDefault().parentTagName);
+    return parent && parent.getTagName() === this.getDefault().parentTagName;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   // Render
   _buildChildren() {
@@ -344,8 +353,8 @@ export const Panel = createReactClass({
   //@@viewOn:render
   render() {
     var mainProps = this.getMainAttrs();
-    this.isExpanded() && (mainProps.className += ' ' + this.getClassName().expanded);
-    mainProps.className += ' ' + this.getClassName('size') + this.props.size;
+    this.isExpanded() && (mainProps.className += " " + this.getClassName().expanded);
+    mainProps.className += " " + this.getClassName("size") + this.props.size;
 
     if (this.props.elevation) {
       mainProps.className += " " + ClassNames.elevation + this.props.elevation;
@@ -363,15 +372,12 @@ export const Panel = createReactClass({
       mainProps.style = { borderRadius: this.props.borderRadius };
     }
 
-    return (
-      this.getNestingLevel()
-        ? (
-        <div {...mainProps} >
-          {this._buildChildren()}
-          {this.getDisabledCover()}
-        </div>
-      ) : null
-    );
+    return this.getNestingLevel() ? (
+      <div {...mainProps}>
+        {this._buildChildren()}
+        {this.getDisabledCover()}
+      </div>
+    ) : null;
   }
   //@@viewOff:render
 });

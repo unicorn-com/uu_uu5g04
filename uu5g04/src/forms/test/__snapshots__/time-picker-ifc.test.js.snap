@@ -34,6 +34,7 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 1`] =
       placeholder="Valid time"
       readonly={true}
       ref_={[Function]}
+      size="s"
       value="12:00"
     />
     <Popover
@@ -81,6 +82,7 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 2`] =
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="12:00"
     />
     <Popover
@@ -128,6 +130,7 @@ exports[`UU5.Forms.InputMixin interface testing getChangeFeedback() 1`] = `
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -172,6 +175,7 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 1`] = `
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -217,6 +221,7 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 2`] = `
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -263,6 +268,7 @@ exports[`UU5.Forms.InputMixin interface testing getInputWrapper(inpuid) 1`] = `
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="12:00"
     />
     <Popover
@@ -310,6 +316,7 @@ exports[`UU5.Forms.InputMixin interface testing getLabel(idinput) 1`] = `
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="12:00"
     />
     <Popover
@@ -355,6 +362,7 @@ exports[`UU5.Forms.InputMixin interface testing getMessage() 1`] = `
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -399,6 +407,7 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return value 1
       placeholder="Enter time"
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="12:30"
     />
     <Popover
@@ -444,6 +453,7 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return value w
       placeholder="Enter time"
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="12:30:00"
     />
     <Popover
@@ -489,6 +499,7 @@ exports[`UU5.Forms.InputMixin interface testing getValue() value is empty. Shoul
       placeholder="Enter time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -537,6 +548,7 @@ exports[`UU5.Forms.InputMixin interface testing isError() 1`] = `
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -585,6 +597,7 @@ exports[`UU5.Forms.InputMixin interface testing isError() 2`] = `
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="12:00"
     />
     <Popover
@@ -632,6 +645,7 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() should return false 
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -676,6 +690,7 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() should return true 1
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -720,6 +735,7 @@ exports[`UU5.Forms.InputMixin interface testing isInput() 1`] = `
       placeholder="Enter time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -764,6 +780,7 @@ exports[`UU5.Forms.InputMixin interface testing isLoading() 1`] = `
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -810,6 +827,7 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 1`] = `
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -854,6 +872,7 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 2`] = `
       placeholder="Valid time"
       readonly={true}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -902,6 +921,7 @@ exports[`UU5.Forms.InputMixin interface testing isSuccess() first return false, 
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="12:00"
     />
     <Popover
@@ -951,6 +971,7 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 1`] = `
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -999,6 +1020,7 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 2`] = `
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="12:00"
     />
     <Popover
@@ -1046,6 +1068,7 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 1`] =
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="12:30"
     />
     <Popover
@@ -1091,6 +1114,7 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 2`] =
       placeholder="Valid time"
       readonly={true}
       ref_={[Function]}
+      size="s"
       value="12:30"
     />
     <Popover
@@ -1138,6 +1162,7 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 1`] = `
       placeholder="Valid time"
       readonly={true}
       ref_={[Function]}
+      size="s"
       value="12:00"
     />
     <Popover
@@ -1185,6 +1210,7 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 2`] = `
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -1233,6 +1259,7 @@ exports[`UU5.Forms.InputMixin interface testing setChangeFeedback() 1`] = `
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="NaN"
     />
     <Popover
@@ -1280,6 +1307,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="12:00"
     />
     <Popover
@@ -1325,6 +1353,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
       placeholder="Valid time"
       readonly={true}
       ref_={[Function]}
+      size="s"
       value="12:00"
     />
     <Popover
@@ -1372,6 +1401,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="12:30"
     />
     <Popover
@@ -1419,6 +1449,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="12:30"
     />
     <Popover
@@ -1464,6 +1495,7 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -1510,6 +1542,7 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="12:00"
     />
     <Popover
@@ -1555,6 +1588,7 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -1601,6 +1635,7 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="12:30"
     />
     <Popover
@@ -1650,6 +1685,7 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -1697,6 +1733,7 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -1741,6 +1778,7 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -1787,6 +1825,7 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="23:00"
     />
     <Popover
@@ -1832,6 +1871,7 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -1877,6 +1917,7 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -1921,6 +1962,7 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -1967,6 +2009,7 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="12:30"
     />
     <Popover
@@ -2012,6 +2055,7 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
       placeholder="Enter time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -2056,6 +2100,7 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
       placeholder="Enter time"
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="12:30"
     />
     <Popover
@@ -2101,6 +2146,7 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -2147,6 +2193,7 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="23:59"
     />
     <Popover
@@ -2192,6 +2239,7 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 1`] = `
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="12:30"
     />
     <Popover
@@ -2237,6 +2285,7 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 2`] = `
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="12:30"
     />
     <Popover
@@ -2284,6 +2333,7 @@ exports[`UU5.Forms.TextInputMixin interface testing getBlurFeedback() 1`] = `
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -2330,6 +2380,7 @@ exports[`UU5.Forms.TextInputMixin interface testing isOpen() should return false
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -2374,6 +2425,7 @@ exports[`UU5.Forms.TextInputMixin interface testing isTextInput() should return 
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="12:30"
     />
     <Popover
@@ -2421,6 +2473,7 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() 1`] = `
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
       value="12:30"
     />
     <Popover
@@ -2470,6 +2523,7 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() should return fals
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -2514,6 +2568,7 @@ exports[`UU5.Forms.TextInputMixin interface testing setAutocompleteItems(items,o
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}
@@ -2558,6 +2613,7 @@ exports[`UU5.Forms.TextInputMixin interface testing setAutocompleteItems(items,o
       placeholder="Valid time"
       readonly={false}
       ref_={[Function]}
+      size="s"
     />
     <Popover
       disableBackdrop={true}

@@ -11,65 +11,63 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import createReactClass from "create-react-class";
 import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-forms";
+//@@viewOff:imports
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MixinPropsFunction = createReactClass({
-
-  mixins: [
-    UU5.Common.BaseMixin,
-  ],
+  mixins: [UU5.Common.BaseMixin],
 
   getInitialState() {
     return {
       isCalled: false,
-      defaultValue: '09.02.2013 12:00:00'
-    }
+      defaultValue: "09.02.2013 12:00:00"
+    };
   },
 
   onFocusHandler(event) {
     alert("onFocus event has been called.");
-    this.setState({isCalled: true});
+    this.setState({ isCalled: true });
   },
 
   onBlurHandler(event) {
     alert("onBlur event has been called.");
-    this.setState({isCalled: true});
+    this.setState({ isCalled: true });
   },
 
   onEnterHandler(event) {
     alert("onEnter event has been called.");
-    this.setState({isCalled: true});
+    this.setState({ isCalled: true });
   },
 
   validateOnChangeHandler(event) {
     alert("ValidateOnChange event has been called.");
-    this.setState({isCalled: true});
+    this.setState({ isCalled: true });
   },
 
   onChangeHandler(event) {
     alert("onChange event has been called.");
-    this.setState({isCalled: true});
-    this.setState({defaultValue: event.target.value})
+    this.setState({ isCalled: true });
+    this.setState({ defaultValue: event.target.value });
   },
 
   onValidateHandler(event) {
     alert("onValidate event has been called.");
-    this.setState({isCalled: true});
-    this.setState({defaultValue: event.target.value})
+    this.setState({ isCalled: true });
+    this.setState({ defaultValue: event.target.value });
   },
 
   onChangeFeedbackHandler(event) {
     alert("onChangeFeedback event has been called.");
-    this.setState({isCalled: true});
-    this.setState({defaultValue: event.target.value})
+    this.setState({ isCalled: true });
+    this.setState({ defaultValue: event.target.value });
   },
-
 
   render() {
     return (
@@ -179,8 +177,14 @@ const CONFIG = {
 const ISOFormatTest = (props, country, expectedValue) => {
   const wrapper = mount(<UU5.Forms.DateTimePicker {...props} country={country} id="uuID" />);
 
-  let dateValue = wrapper.find("#uuID-date-input").at(1).getDOMNode().value;
-  let timeValue = wrapper.find("#uuID-time-input").at(1).getDOMNode().value;
+  let dateValue = wrapper
+    .find("#uuID-date-input")
+    .at(1)
+    .getDOMNode().value;
+  let timeValue = wrapper
+    .find("#uuID-time-input")
+    .at(1)
+    .getDOMNode().value;
 
   expect(dateValue + " " + timeValue).toBe(expectedValue);
 };
@@ -199,9 +203,8 @@ describe(`UU5.Forms.DateTimePicker props`, () => {
   });
 });
 
-describe('TextInputMixin props.function', () => {
-
-  it('validateOnChange() -  input is invalid', () => {
+describe("TextInputMixin props.function", () => {
+  it("validateOnChange() -  input is invalid", () => {
     const wrapper = shallow(
       <UU5.Forms.DateTimePicker
         id={"uuID"}
@@ -211,14 +214,14 @@ describe('TextInputMixin props.function', () => {
           let feedback;
           if (opt.value) {
             feedback = {
-              feedback: 'success',
-              message: 'Is valid.',
+              feedback: "success",
+              message: "Is valid.",
               value: opt.value
             };
           } else {
             feedback = {
-              feedback: 'error',
-              message: 'Not valid.',
+              feedback: "error",
+              message: "Not valid.",
               value: opt.value
             };
           }
@@ -228,14 +231,13 @@ describe('TextInputMixin props.function', () => {
     );
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.feedback).toEqual("error");
-    expect(wrapper.instance().state.message).toEqual("Not valid.")
-    expect(wrapper.instance().state.value).toBe(null);
+    expect(wrapper.instance().state.message).toEqual("Not valid.");
+    expect(wrapper.instance().getValue()).toBe(null);
     expect(wrapper.instance().state.dateString).toEqual(null);
     expect(wrapper.instance().state.timeString).toEqual(null);
   });
 
-
-  it('validateOnChange() -  input is valid', () => {
+  it("validateOnChange() -  input is valid", () => {
     const wrapper = shallow(
       <UU5.Forms.DateTimePicker
         id={"uuID"}
@@ -246,14 +248,14 @@ describe('TextInputMixin props.function', () => {
           let feedback;
           if (opt.value) {
             feedback = {
-              feedback: 'success',
-              message: 'Is valid.',
+              feedback: "success",
+              message: "Is valid.",
               value: opt.value
             };
           } else {
             feedback = {
-              feedback: 'error',
-              message: 'Not valid.',
+              feedback: "error",
+              message: "Not valid.",
               value: opt.value
             };
           }
@@ -263,8 +265,8 @@ describe('TextInputMixin props.function', () => {
     );
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.feedback).toEqual("success");
-    expect(wrapper.instance().state.message).toEqual("Is valid.")
-    expect(wrapper.instance().state.value).toMatch(/9.11.2013 12:00/);
+    expect(wrapper.instance().state.message).toEqual("Is valid.");
+    expect(wrapper.instance().getValue()).toMatch(/9.11.2013 12:00/);
     expect(wrapper.instance().state.dateString).toBe("9/11/2013");
     expect(wrapper.instance().state.timeString).toBe("12:00");
   });
@@ -276,48 +278,50 @@ describe('TextInputMixin props.function', () => {
     expect(callback).toBeCalled();
   });
 
-  it('onFocus()', () => {
+  it("onFocus()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<MixinPropsFunction/>);
+    const wrapper = shallow(<MixinPropsFunction />);
     expect(wrapper.state().isCalled).toBeFalsy();
-    wrapper.simulate('focus');
+    wrapper.simulate("focus");
     expect(window.alert).toBeCalled();
-    expect(window.alert).toHaveBeenCalledWith('onFocus event has been called.');
+    expect(window.alert).toHaveBeenCalledWith("onFocus event has been called.");
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onFocus event has been called.");
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('onBlur()', () => {
+  it("onBlur()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<MixinPropsFunction/>);
+    const wrapper = shallow(<MixinPropsFunction />);
     expect(wrapper.state().isCalled).toBeFalsy();
-    wrapper.simulate('blur');
+    wrapper.simulate("blur");
     expect(window.alert).toBeCalled();
-    expect(window.alert).toHaveBeenCalledWith('onBlur event has been called.');
+    expect(window.alert).toHaveBeenCalledWith("onBlur event has been called.");
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onBlur event has been called.");
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('onEnter()', () => {
+  it("onEnter()", () => {
     window.alert = jest.fn();
-    const wrapper = shallow(<MixinPropsFunction/>);
+    const wrapper = shallow(<MixinPropsFunction />);
     expect(wrapper.state().isCalled).toBeFalsy();
-    wrapper.simulate('enter');
+    wrapper.simulate("enter");
     expect(window.alert).toBeCalled();
-    expect(window.alert).toHaveBeenCalledWith('onEnter event has been called.');
+    expect(window.alert).toHaveBeenCalledWith("onEnter event has been called.");
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onEnter event has been called.");
     expect(wrapper).toMatchSnapshot();
   });
 
+  it("timeZone", () => {
+    const wrapper = shallow(<UU5.Forms.DateTimePicker timeZone={3} value={"2019-11-01T10:00:00Z"} />);
+    expect(wrapper.instance().getValue()).toBe("11/1/2019 11:00");
+  });
 });
 
-
 describe(`UU5.Forms.DateTimePicker props function`, () => {
-
-  it("parseDate(), valueType is null", function () {
+  it("parseDate(), valueType is null", function() {
     const dateValue = "2013-08-02";
     const timeValue = "01:20";
     const method = jest.fn(() => new Date(2019, 2, 14, 5, 23, 0, 0));
@@ -325,13 +329,16 @@ describe(`UU5.Forms.DateTimePicker props function`, () => {
     method.mockClear();
     // according to docs, parseDate is for parsing passed value, i.e. calling getValue()
     // should trigger it (though maybe multiple times so we'll check only last invocation)
-    let value = wrapper.setProps({ value: dateValue + " " + timeValue }).instance().getValue();
+    let value = wrapper
+      .setProps({ value: dateValue + " " + timeValue })
+      .instance()
+      .getValue();
     expect(method).toBeCalled();
     expect(value == "3/14/2019 01:20").toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it("parseDate(), valueType is string", function () {
+  it("parseDate(), valueType is string", function() {
     const dateValue = "2013-08-02";
     const timeValue = "01:20";
     const method = jest.fn(() => new Date(2019, 2, 14, 5, 23, 0, 0));
@@ -339,13 +346,16 @@ describe(`UU5.Forms.DateTimePicker props function`, () => {
     method.mockClear();
     // according to docs, parseDate is for parsing passed value, i.e. calling getValue()
     // should trigger it (though maybe multiple times so we'll check only last invocation)
-    let value = wrapper.setProps({ value: dateValue + " " + timeValue }).instance().getValue();
+    let value = wrapper
+      .setProps({ value: dateValue + " " + timeValue })
+      .instance()
+      .getValue();
     expect(method).toBeCalled();
     expect(value == "3/14/2019 01:20").toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it("parseDate(), valueType is date", function () {
+  it("parseDate(), valueType is date", function() {
     const dateValue = "2013-08-02";
     const timeValue = "01:20";
     const method = jest.fn(() => new Date(2019, 2, 14, 5, 23, 0, 0));
@@ -353,26 +363,22 @@ describe(`UU5.Forms.DateTimePicker props function`, () => {
     method.mockClear();
     // according to docs, parseDate is for parsing passed value, i.e. calling getValue()
     // should trigger it (though maybe multiple times so we'll check only last invocation)
-    let value = wrapper.setProps({ value: dateValue + " " + timeValue }).instance().getValue();
+    let value = wrapper
+      .setProps({ value: dateValue + " " + timeValue })
+      .instance()
+      .getValue();
     expect(method).toBeCalled();
-    let expectedValue = (new Date(2019, 2, 14, 5, 23, 0, 0));
+    let expectedValue = new Date(2019, 2, 14, 5, 23, 0, 0);
     expectedValue.setHours(1);
     expectedValue.setMinutes(20);
-    expect(value.getTime() == (expectedValue).getTime()).toBeTruthy();
+    expect(value.getTime() == expectedValue.getTime()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
-
 });
 
-
 describe(`UU5.Forms.DateTimePicker default props check`, () => {
-
   it(`UU5.Forms.DateTimePicker daf props values`, () => {
-    const wrapper = shallow(
-      <UU5.Forms.DateTimePicker
-        id={"uuID"}
-      />
-    );
+    const wrapper = shallow(<UU5.Forms.DateTimePicker id={"uuID"} />);
 
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().props.value).toBe(null);
@@ -393,16 +399,9 @@ describe(`UU5.Forms.DateTimePicker default props check`, () => {
   });
 });
 
-
 describe(`UU5.Forms.DateTimePicker check default default props from Mixins`, () => {
-
-
   it(`UU5.Forms.InputMixin`, () => {
-    const wrapper = shallow(
-      <UU5.Forms.DateTimePicker
-        id={"uuID"}
-      />
-    );
+    const wrapper = shallow(<UU5.Forms.DateTimePicker id={"uuID"} />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().props.inputAttrs).toBe(null);
     expect(wrapper.instance().props.size).toEqual("m");
@@ -418,11 +417,7 @@ describe(`UU5.Forms.DateTimePicker check default default props from Mixins`, () 
   });
 
   it(`UU5.Forms.TextInputMixin`, () => {
-    const wrapper = shallow(
-      <UU5.Forms.DateTimePicker
-        id={"uuID"}
-      />
-    );
+    const wrapper = shallow(<UU5.Forms.DateTimePicker id={"uuID"} />);
     expect(wrapper.instance().props.placeholder).toBe(null);
     expect(wrapper.instance().props.required).toBeFalsy();
     expect(wrapper.instance().props.requiredMessage).toBe(null);
@@ -436,11 +431,7 @@ describe(`UU5.Forms.DateTimePicker check default default props from Mixins`, () 
   });
 
   it(`UU5.Commons.Mixin Base,Elementary`, () => {
-    const wrapper = shallow(
-      <UU5.Forms.DateTimePicker
-        id={"uuID"}
-      />
-    );
+    const wrapper = shallow(<UU5.Forms.DateTimePicker id={"uuID"} />);
     //Check UU5.Common.Elementary.Mixin default props
     expect(wrapper.instance().props.hidden).toBeFalsy();
     expect(wrapper.instance().props.disabled).toBeFalsy();
@@ -457,7 +448,4 @@ describe(`UU5.Forms.DateTimePicker check default default props from Mixins`, () 
     expect(wrapper.instance().props.ref_).toBe(null);
     expect(wrapper.instance().props.noIndex).toBeFalsy();
   });
-
-
 });
-

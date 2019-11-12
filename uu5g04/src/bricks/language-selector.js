@@ -1,28 +1,30 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
-import Dropdown from './dropdown.js';
-import DropdownItem from './dropdown-item.js';
+import Dropdown from "./dropdown.js";
+import DropdownItem from "./dropdown-item.js";
 
-import Span from './span.js';
-import Button from './button.js';
+import Span from "./span.js";
+import Button from "./button.js";
 
-import './language-selector.less';
+import "./language-selector.less";
+//@@viewOff:imports
 
 export const LanguageSelector = UU5.Common.LsiMixin.withContext(
   createReactClass({
@@ -41,7 +43,7 @@ export const LanguageSelector = UU5.Common.LsiMixin.withContext(
     //@@viewOn:statics
     statics: {
       tagName: ns.name("LanguageSelector"),
-      nestingLevelList: UU5.Environment.getNestingLevelList('box', 'inline'),
+      nestingLevelList: UU5.Environment.getNestingLevelList("box", "inline"),
       classNames: {
         main: ns.css("language-selector"),
         left: ns.css("language-selector-left"),
@@ -64,14 +66,9 @@ export const LanguageSelector = UU5.Common.LsiMixin.withContext(
 
     //@@viewOn:propTypes
     propTypes: {
-      headerMode: PropTypes.oneOf(['all', 'flag', 'label', 'code']),
-      bodyMode: PropTypes.oneOf(['all', 'flag', 'label', 'label-code']),
-      displayedLanguages: PropTypes.oneOfType([
-        PropTypes.arrayOf(
-          PropTypes.string
-        ),
-        PropTypes.string,
-      ]),
+      headerMode: PropTypes.oneOf(["all", "flag", "label", "code"]),
+      bodyMode: PropTypes.oneOf(["all", "flag", "label", "label-code"]),
+      displayedLanguages: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.string), PropTypes.string]),
       languages: PropTypes.shape({
         languageCode: PropTypes.shape({
           flag: PropTypes.string,
@@ -80,12 +77,12 @@ export const LanguageSelector = UU5.Common.LsiMixin.withContext(
       }),
       defaultLanguage: PropTypes.string,
       size: PropTypes.string,
-      bgStyle: PropTypes.oneOf(['filled', 'outline', 'transparent', 'underline']),
+      bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
       pullRight: PropTypes.bool,
       dropup: PropTypes.bool,
       borderRadius: PropTypes.string,
-      elevation: PropTypes.oneOf(['-1', '0', '1', '2', '3', '4', '5', -1, 0, 1, 2, 3, 4, 5]),
-      elevationHover: PropTypes.oneOf(['-1', '0', '1', '2', '3', '4', '5', -1, 0, 1, 2, 3, 4, 5]),
+      elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+      elevationHover: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
       baseline: PropTypes.bool
     },
     //@@viewOff:propTypes
@@ -94,11 +91,11 @@ export const LanguageSelector = UU5.Common.LsiMixin.withContext(
     getDefaultProps() {
       return {
         languages: null,
-        headerMode: 'all',
-        bodyMode: 'all',
+        headerMode: "all",
+        bodyMode: "all",
         displayedLanguages: null,
         defaultLanguage: null,
-        size: 'm',
+        size: "m",
         bgStyle: "transparent",
         pullRight: false,
         dropup: false,
@@ -108,9 +105,9 @@ export const LanguageSelector = UU5.Common.LsiMixin.withContext(
         baseline: false
       };
     },
-    // @@viewOff:getDefaultProps
+    //@@viewOff:getDefaultProps
 
-    //@@viewOn:standardComponentLifeCycle
+    //@@viewOn:reactLifeCycle
     getInitialState() {
       return {
         languages: this._getFilteredLanguages(this.props)
@@ -119,7 +116,12 @@ export const LanguageSelector = UU5.Common.LsiMixin.withContext(
 
     componentWillMount() {
       if (!this.state.languages[this.state.language]) {
-        let newLang = UU5.Common.Tools.getLsiKey(this.state.languages, null, this.state.language, this.props.defaultLanguage);
+        let newLang = UU5.Common.Tools.getLsiKey(
+          this.state.languages,
+          null,
+          this.state.language,
+          this.props.defaultLanguage
+        );
         this.setState({ language: newLang });
       }
     },
@@ -142,27 +144,29 @@ export const LanguageSelector = UU5.Common.LsiMixin.withContext(
         });
       }
     },
-    //@@viewOff:standardComponentLifeCycle
+    //@@viewOff:reactLifeCycle
 
     //@@viewOn:interface
     //@@viewOff:interface
 
-    //@@viewOn:overridingMethods
+    //@@viewOn:overriding
     onChangeLanguage_(language) {
       if (this.state.languages[language]) {
         this.setState({ language: language });
       }
       return this;
     },
-    //@@viewOff:overridingMethods
+    //@@viewOff:overriding
 
-    //@@viewOn:componentSpecificHelpers
+    //@@viewOn:private
     _getFilteredLanguages(props) {
       let languages = props.languages || UU5.Environment.languageList;
       let result;
       if (props.displayedLanguages) {
-        let displayedLanguages = typeof props.displayedLanguages === 'string' ?
-          props.displayedLanguages.replace(this.getDefault().regexpSpace, '').split(',') : props.displayedLanguages;
+        let displayedLanguages =
+          typeof props.displayedLanguages === "string"
+            ? props.displayedLanguages.replace(this.getDefault().regexpSpace, "").split(",")
+            : props.displayedLanguages;
 
         result = result || {};
         let languagesCodes = Object.keys(languages);
@@ -176,61 +180,52 @@ export const LanguageSelector = UU5.Common.LsiMixin.withContext(
     },
 
     _getFlag(language) {
-      return (
-        <img src={this.state.languages[language].flag} className={this.getClassName().flag} />
-      );
+      return <img src={this.state.languages[language].flag} className={this.getClassName().flag} />;
     },
 
     _getLabel(languageDescription) {
-      return (
-        <Span content={languageDescription} className={this.getClassName().label} />
-      );
+      return <Span content={languageDescription} className={this.getClassName().label} />;
     },
 
     _getCode(languageCode) {
-      return (
-        <Span content={languageCode} className={this.getClassName('codeText')} />
-      );
+      return <Span content={languageCode} className={this.getClassName("codeText")} />;
     },
 
     _getLabelCode(languageCode, languageDescription) {
       return (
         <Span>
-          <Span content={languageDescription} className={this.getClassName('label')} />
-          <Span content={languageCode} className={this.getClassName('labelCodeText')} />
+          <Span content={languageDescription} className={this.getClassName("label")} />
+          <Span content={languageCode} className={this.getClassName("labelCodeText")} />
         </Span>
       );
     },
 
     _getItemContent(language, languageDescription) {
-      return [
-        this._getFlag(language),
-        <Span content={languageDescription} className={this.getClassName().text} />
-      ];
+      return [this._getFlag(language), <Span content={languageDescription} className={this.getClassName().text} />];
     },
 
     _getItems(language = this.state.language, languages = this.state.languages) {
       let this_ = this;
       let items = [];
       let className;
-      if (this.props.bodyMode === 'all') className = this.getClassName('left');
-      else if (this.props.bodyMode === 'label-code') className = this.getClassName('code');
+      if (this.props.bodyMode === "all") className = this.getClassName("left");
+      else if (this.props.bodyMode === "label-code") className = this.getClassName("code");
 
       Object.keys(languages).forEach((key, i) => {
-        let cls  = className;
+        let cls = className;
         if (key === language) {
-          cls = cls ? cls + ' ' + this.getClassName('selected') : this.getClassName('selected');
+          cls = cls ? cls + " " + this.getClassName("selected") : this.getClassName("selected");
         }
         items.push(
-          <DropdownItem label={this_._getModalItem(key)}
-                        key={i}
-                        className={cls}
-                        onClick={() => {
-                          this_._setGlobalLanguage(key)
-                        }}
+          <DropdownItem
+            label={this_._getModalItem(key)}
+            key={i}
+            className={cls}
+            onClick={() => {
+              this_._setGlobalLanguage(key);
+            }}
           />
         );
-
       });
       return items;
     },
@@ -241,7 +236,7 @@ export const LanguageSelector = UU5.Common.LsiMixin.withContext(
     // },
 
     _setGlobalLanguage(language) {
-      if (typeof this.props.setLanguage === "function"){
+      if (typeof this.props.setLanguage === "function") {
         this.props.setLanguage(language);
       } else {
         UU5.Common.Tools.setLanguage(language);
@@ -279,19 +274,19 @@ export const LanguageSelector = UU5.Common.LsiMixin.withContext(
     _getModalItem(key) {
       var item;
       switch (this.props.bodyMode) {
-        case('all'):
+        case "all":
           item = this._getItemContent(key, this.state.languages[key].language);
           break;
-        case('flag'):
+        case "flag":
           item = this._getFlag(key);
           break;
-        case('label'):
+        case "label":
           item = this._getLabel(this.state.languages[key].language);
           break;
-        case('code'):
+        case "code":
           item = this._getCode(key);
           break;
-        case('label-code'):
+        case "label-code":
           item = this._getLabelCode(key, this.state.languages[key].language);
           break;
       }
@@ -301,25 +296,25 @@ export const LanguageSelector = UU5.Common.LsiMixin.withContext(
     _getContent(mode, language = this.state.language) {
       var content;
       switch (mode) {
-        case('all'):
+        case "all":
           content = this._getItemContent(language, this.state.languages[language].language);
           break;
-        case('flag'):
+        case "flag":
           content = this._getFlag(language);
           break;
-        case('label'):
+        case "label":
           content = this._getLabel(this.state.languages[language].language);
           break;
-        case('code'):
+        case "code":
           content = this._getCode(language);
           break;
-        case('label-code'):
+        case "label-code":
           content = this._getLabelCode(language, this.state.languages[language].language);
           break;
       }
       return content;
     },
-    //@@viewOff:componentSpecificHelpers
+    //@@viewOff:private
 
     //@@viewOn:render
     render() {
@@ -353,7 +348,7 @@ export const LanguageSelector = UU5.Common.LsiMixin.withContext(
           elevation={this.props.elevation}
           elevationHover={this.props.elevationHover}
           baseline={this.props.baseline}
-          >
+        >
           {this._getItems()}
         </Dropdown>
       );

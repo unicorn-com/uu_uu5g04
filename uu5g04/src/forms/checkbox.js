@@ -11,20 +11,22 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "./forms-ns.js";
 import ClassNames from "../core/common/class-names.js";
 
-import InputMixin from './mixins/input-mixin.js'
-import Loading from './internal/loading.js';
+import InputMixin from "./mixins/input-mixin.js";
+import Loading from "./internal/loading.js";
 
 import Context from "./form-context.js";
 
-import './checkbox.less';
+import "./checkbox.less";
+//@@viewOff:imports
 
 export const Checkbox = Context.withContext(
   createReactClass({
@@ -53,7 +55,7 @@ export const Checkbox = Context.withContext(
         typeSwitch: ns.css("checkbox-type-switch")
       },
       defaults: {
-        onIcon: 'mdi-check'
+        onIcon: "mdi-check"
       }
     },
     //@@viewOff:statics
@@ -63,7 +65,7 @@ export const Checkbox = Context.withContext(
       value: PropTypes.bool,
       onIcon: PropTypes.string,
       offIcon: PropTypes.string,
-      labelPosition: PropTypes.oneOf(['left', 'right']),
+      labelPosition: PropTypes.oneOf(["left", "right"]),
       _radio: PropTypes.bool,
       type: PropTypes.number,
       bgStyleChecked: PropTypes.oneOf(["filled", "outline"])
@@ -74,9 +76,9 @@ export const Checkbox = Context.withContext(
     getDefaultProps() {
       return {
         value: false,
-        onIcon: '',
-        offIcon: '',
-        labelPosition: 'left',
+        onIcon: "",
+        offIcon: "",
+        labelPosition: "left",
         _radio: false,
         type: 1,
         bgStyleChecked: "outline"
@@ -84,7 +86,7 @@ export const Checkbox = Context.withContext(
     },
     //@@viewOff:getDefaultProps
 
-    //@@viewOn:standardComponentLifeCycle
+    //@@viewOn:reactLifeCycle
     componentWillMount() {
       if (this.props.onValidate && typeof this.props.onValidate === "function") {
         this._validateOnChange({ value: this.state.value, event: null, component: this });
@@ -93,7 +95,7 @@ export const Checkbox = Context.withContext(
 
     componentWillReceiveProps(nextProps) {
       if (nextProps.controlled) {
-        if (this.props.onValidate && typeof this.props.onValidate === 'function') {
+        if (this.props.onValidate && typeof this.props.onValidate === "function") {
           this._validateOnChange({ value: nextProps.value, event: null, component: this }, true);
         } else {
           this.setState({ value: nextProps.value });
@@ -101,7 +103,7 @@ export const Checkbox = Context.withContext(
       }
     },
 
-    //@@viewOff:standardComponentLifeCycle
+    //@@viewOff:reactLifeCycle
 
     //@@viewOn:interface
     onChangeDefault(opt, setStateCallback) {
@@ -109,17 +111,20 @@ export const Checkbox = Context.withContext(
         this._validateOnChange({ value: opt.value, event: opt.event, component: this }, false, setStateCallback);
       } else {
         let result = this.getChangeFeedback(opt);
-        this.setState({
-          feedback: result.feedback,
-          message: result.message,
-          value: result.value
-        }, setStateCallback);
+        this.setState(
+          {
+            feedback: result.feedback,
+            message: result.message,
+            value: result.value
+          },
+          setStateCallback
+        );
       }
       return this;
     },
     //@@viewOff:interface
 
-    //@@viewOn:overridingMethods
+    //@@viewOn:overriding
     focus_() {
       this._focusElement.focus();
       return this;
@@ -128,9 +133,9 @@ export const Checkbox = Context.withContext(
     getInputWidth_() {
       return this.props.inputWidth === "auto" ? null : this.props.inputWidth;
     },
-    //@@viewOff:overridingMethods
+    //@@viewOff:overriding
 
-    //@@viewOn:componentSpecificHelpers
+    //@@viewOn:private
     _validateOnChange(opt, checkValue, setStateCallback) {
       let _callCallback = typeof setStateCallback === "function";
 
@@ -161,10 +166,10 @@ export const Checkbox = Context.withContext(
       return this;
     },
 
-    _onChange(e){
+    _onChange(e) {
       let opt = { value: !this.state.value, event: e, component: this };
       if (!this.isComputedDisabled() && !this.isReadOnly() && !this.isLoading()) {
-        if (typeof this.props.onChange === 'function') {
+        if (typeof this.props.onChange === "function") {
           this.props.onChange(opt);
         } else {
           this.onChangeDefault(opt);
@@ -180,7 +185,7 @@ export const Checkbox = Context.withContext(
       }
 
       if (!this.isDisabled() && !this.isReadOnly()) {
-        if (typeof this.props.onChange === 'function') {
+        if (typeof this.props.onChange === "function") {
           opt.component = this;
           this.props.onChange(opt);
         } else {
@@ -201,27 +206,27 @@ export const Checkbox = Context.withContext(
       return path;
     },
 
-    _getMainAttrs(){
+    _getMainAttrs() {
       let mainAttrs = this._getInputAttrs();
-      mainAttrs.className += this.state.value ? ' ' + this.getClassName().checked : '';
+      mainAttrs.className += this.state.value ? " " + this.getClassName().checked : "";
       if (this.props._radio) {
-        mainAttrs.className += ' ' + this.getClassName().radio;
+        mainAttrs.className += " " + this.getClassName().radio;
       }
 
-      if (this.props.labelPosition === 'right') {
-        mainAttrs.className += ' ' + this.getClassName().right;
+      if (this.props.labelPosition === "right") {
+        mainAttrs.className += " " + this.getClassName().right;
       }
 
       if (this.props.type === 2) {
-        mainAttrs.className += ' ' + this.getClassName().typeSwitch;
+        mainAttrs.className += " " + this.getClassName().typeSwitch;
       }
 
       if (this.props.bgStyleChecked && this.props.type !== 2) {
         mainAttrs.className += " " + ClassNames[this.props.bgStyleChecked];
       }
 
-      let handleClick = (e) => {
-        let matches = this._getEventPath(e).some((item) => {
+      let handleClick = e => {
+        let matches = this._getEventPath(e).some(item => {
           let functionType = item.matches ? "matches" : "msMatchesSelector";
           if (item[functionType]) {
             return item[functionType]("button.uu5-forms-checkbox-button, .uu5-forms-label");
@@ -232,9 +237,9 @@ export const Checkbox = Context.withContext(
         if (matches) {
           this._onChange(e);
         }
-      }
+      };
 
-      mainAttrs.onClick = (e) => {
+      mainAttrs.onClick = e => {
         handleClick(e);
       };
 
@@ -245,9 +250,13 @@ export const Checkbox = Context.withContext(
       let icon;
 
       if (this.props._radio && this.state.value && !this.props.onIcon) {
-        icon = <span className={this.getClassName('dot')} />;
+        icon = <span className={this.getClassName("dot")} />;
       } else {
-        icon = <UU5.Bricks.Icon icon={this.state.value ? this.props.onIcon || this.getDefault('onIcon') : this.props.offIcon} />;
+        icon = (
+          <UU5.Bricks.Icon
+            icon={this.state.value ? this.props.onIcon || this.getDefault("onIcon") : this.props.offIcon}
+          />
+        );
       }
 
       return icon;
@@ -264,53 +273,63 @@ export const Checkbox = Context.withContext(
 
       return attrs;
     },
-    //@@viewOff:componentSpecificHelpers
+    //@@viewOff:private
     //@@viewOn:render
     render() {
-      let inputId = this.getId() + '-input';
+      let inputId = this.getId() + "-input";
       let label = this.getLabel(inputId);
       let result;
 
       if (this.props.type === 2) {
-        result = <UU5.Bricks.Switch
-          className={this.getClassName().button}
-          colorSchema={this.props.colorSchema}
-          disabled={this.isComputedDisabled()}
-          content={this._getIcon()}
-          switchedOn={this.state.value}
-          onChange={this._onSwitchChange}
-          size={this.props.size}
-          onIcon={this.props.onIcon}
-          offIcon={this.props.offIcon}
-          loading={this.isLoading()}
-          ref_={(switchComponent) => this._focusElement = switchComponent}
-          mainAttrs={UU5.Common.Tools.merge({
-            disabled: this.isReadOnly() || this.isComputedDisabled()
-          }, this.props.inputAttrs)}
-        />
+        result = (
+          <UU5.Bricks.Switch
+            className={this.getClassName().button}
+            colorSchema={this.props.colorSchema}
+            disabled={this.isComputedDisabled()}
+            content={this._getIcon()}
+            switchedOn={this.state.value}
+            onChange={this._onSwitchChange}
+            size={this.props.size}
+            onIcon={this.props.onIcon}
+            offIcon={this.props.offIcon}
+            loading={this.isLoading()}
+            ref_={switchComponent => (this._focusElement = switchComponent)}
+            mainAttrs={UU5.Common.Tools.merge(
+              {
+                disabled: this.isReadOnly() || this.isComputedDisabled()
+              },
+              this.props.inputAttrs
+            )}
+          />
+        );
       } else if (this.isLoading()) {
         result = <Loading className={this.getClassName("loading")} id={this.getId()} />;
       } else {
-        result = <UU5.Bricks.Button
-          className={this.getClassName().button}
-          colorSchema='custom'
-          disabled={this.isComputedDisabled()}
-          mainAttrs={UU5.Common.Tools.merge({
-            disabled: this.isReadOnly() || this.isComputedDisabled()
-          }, this.props.inputAttrs)}
-          content={this._getIcon()}
-          ref_={(button) => this._focusElement = button}
-          bgStyle={this.props.bgStyleChecked}
-        />
+        result = (
+          <UU5.Bricks.Button
+            className={this.getClassName().button}
+            colorSchema="custom"
+            disabled={this.isComputedDisabled()}
+            mainAttrs={UU5.Common.Tools.merge(
+              {
+                disabled: this.isReadOnly() || this.isComputedDisabled()
+              },
+              this.props.inputAttrs
+            )}
+            content={this._getIcon()}
+            ref_={button => (this._focusElement = button)}
+            bgStyle={this.props.bgStyleChecked}
+          />
+        );
       }
 
       return (
         <div {...this._getMainAttrs()}>
-          {this.props.labelPosition === 'left' && label}
+          {this.props.labelPosition === "left" && label}
           {this.getInputWrapper(
             <UU5.Bricks.Div {...this._getWrapperAttrs()}>
               {result}
-              {this.props.labelPosition === 'right' && label}
+              {this.props.labelPosition === "right" && label}
             </UU5.Bricks.Div>
           )}
         </div>

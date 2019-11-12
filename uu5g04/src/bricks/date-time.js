@@ -11,33 +11,29 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+//@@viewOn:imports
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
-import './date-time.less';
+import "./date-time.less";
+//@@viewOff:imports
 
 export const DateTime = createReactClass({
-
   //@@viewOn:mixins
-  mixins: [
-    UU5.Common.BaseMixin,
-    UU5.Common.ElementaryMixin,
-    UU5.Common.NestingLevelMixin,
-    UU5.Common.PureRenderMixin
-  ],
+  mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.NestingLevelMixin, UU5.Common.PureRenderMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
   statics: {
     tagName: ns.name("DateTime"),
-    nestingLevel: 'inline',
+    nestingLevel: "inline",
     classNames: {
       main: ns.css("date-time"),
       timeOnly: ns.css("date-time-timeonly"),
-      dateOnly: ns.css("date-time-dateonly"),
+      dateOnly: ns.css("date-time-dateonly")
     },
     defaults: {
       event: UU5.Common.Tools.events.dateTime,
@@ -45,17 +41,14 @@ export const DateTime = createReactClass({
       regexpSeconds2: /[S]+/
     },
     warnings: {
-      rangeTimeZone: 'Time zone must be in range from -12 to +12. Your time zone was %s.'
+      rangeTimeZone: "Time zone must be in range from -12 to +12. Your time zone was %s."
     }
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    value: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.instanceOf(Date)
-    ]),
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)]),
     format: PropTypes.string,
     country: PropTypes.string,
     timeZone: PropTypes.number,
@@ -81,7 +74,7 @@ export const DateTime = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     let timeZone;
     let getTimeZoneFromValue = false;
@@ -130,7 +123,7 @@ export const DateTime = createReactClass({
   componentWillUnmount() {
     UU5.Environment.EventListener.unregisterDateTime(this.getId(), this._change);
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   getFormat() {
@@ -171,12 +164,15 @@ export const DateTime = createReactClass({
       getTimeZoneFromValue = true;
     }
 
-    this.setState({
-      format: opt.format === undefined ? this.state.format : opt.format,
-      country: opt.country === undefined ? this.state.country : (opt.country ? opt.country.toLowerCase() : opt.country),
-      timeZone: this._validateTimeZone(timeZone),
-      getTimeZoneFromValue
-    }, setStateCallback);
+    this.setState(
+      {
+        format: opt.format === undefined ? this.state.format : opt.format,
+        country: opt.country === undefined ? this.state.country : opt.country ? opt.country.toLowerCase() : opt.country,
+        timeZone: this._validateTimeZone(timeZone),
+        getTimeZoneFromValue
+      },
+      setStateCallback
+    );
     return this;
   },
 
@@ -187,15 +183,15 @@ export const DateTime = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _change(opt) {
     // if (typeof this.props.onChange === 'function') {
     //   this.props.onChange(this, opt);
     // } else {
-      this.onChangeDefault(opt);
+    this.onChangeDefault(opt);
     // }
     return this;
   },
@@ -212,7 +208,7 @@ export const DateTime = createReactClass({
 
   _formatDateTime(date, format) {
     if (this.props.secondsDisabled && format) {
-      format = format.replace(this.getDefault().regexpSeconds, '').replace(this.getDefault().regexpSeconds2, '');
+      format = format.replace(this.getDefault().regexpSeconds, "").replace(this.getDefault().regexpSeconds2, "");
     }
     return UU5.Common.Tools.formatDate(date, format, this.state.timeZone);
   },
@@ -222,10 +218,10 @@ export const DateTime = createReactClass({
     let result, opt;
 
     if (this.props.secondsDisabled) {
-      opt = { hour: 'numeric', minute: 'numeric' };
+      opt = { hour: "numeric", minute: "numeric" };
 
       if (!this.props.timeOnly) {
-        opt = UU5.Common.Tools.merge({ year: 'numeric', month: 'numeric', day: 'numeric' }, opt);
+        opt = UU5.Common.Tools.merge({ year: "numeric", month: "numeric", day: "numeric" }, opt);
       }
     }
 
@@ -279,10 +275,10 @@ export const DateTime = createReactClass({
 
   _validateTimeZone(timeZone) {
     if (timeZone < -12) {
-      this.showWarning('rangeTimeZone', timeZone);
+      this.showWarning("rangeTimeZone", timeZone);
       timeZone = -12;
     } else if (timeZone > 12) {
-      this.showWarning('rangeTimeZone', timeZone);
+      this.showWarning("rangeTimeZone", timeZone);
       timeZone = 12;
     }
     return timeZone;
@@ -292,14 +288,14 @@ export const DateTime = createReactClass({
     let mainAttrs = this.getMainAttrs();
 
     if (this.props.timeOnly) {
-      mainAttrs.className += ' ' + this.getClassName().timeOnly;
+      mainAttrs.className += " " + this.getClassName().timeOnly;
     } else if (this.props.dateOnly) {
-      mainAttrs.className += ' ' + this.getClassName().dateOnly;
+      mainAttrs.className += " " + this.getClassName().dateOnly;
     }
 
-    return mainAttrs
+    return mainAttrs;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {

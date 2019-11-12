@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -22,11 +22,8 @@ const { mount, shallow, wait } = UU5.Test.Tools;
  */
 
 describe(`UU5.Bricks.Switch interface testing`, () => {
-
-  it('setSwitched(switchedOn, setStateCallback)', () => {
-    const wrapper = shallow(
-      <UU5.Bricks.Switch size="xl" id={"uuID"}/>
-    );
+  it("setSwitched(switchedOn, setStateCallback)", () => {
+    const wrapper = shallow(<UU5.Bricks.Switch size="xl" id={"uuID"} />);
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.switchedOn).toBeFalsy();
@@ -41,10 +38,8 @@ describe(`UU5.Bricks.Switch interface testing`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('setSwitched(switchedOff, setStateCallback)', () => {
-    const wrapper = shallow(
-      <UU5.Bricks.Switch size="xl" id={"uuID"} switchedOn={true}/>
-    );
+  it("setSwitched(switchedOff, setStateCallback)", () => {
+    const wrapper = shallow(<UU5.Bricks.Switch size="xl" id={"uuID"} switchedOn={true} />);
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.switchedOn).toBeTruthy();
@@ -59,10 +54,8 @@ describe(`UU5.Bricks.Switch interface testing`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('switchOn(setStateCallback)', () => {
-    const wrapper = shallow(
-      <UU5.Bricks.Switch size="xl" id={"uuID"}/>
-    );
+  it("switchOn(setStateCallback)", () => {
+    const wrapper = shallow(<UU5.Bricks.Switch size="xl" id={"uuID"} />);
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.switchedOn).toBeFalsy();
@@ -77,10 +70,8 @@ describe(`UU5.Bricks.Switch interface testing`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('switchOff(setStateCallback)', () => {
-    const wrapper = shallow(
-      <UU5.Bricks.Switch size="xl" id={"uuID"} switchedOn={true}/>
-    );
+  it("switchOff(setStateCallback)", () => {
+    const wrapper = shallow(<UU5.Bricks.Switch size="xl" id={"uuID"} switchedOn={true} />);
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.switchedOn).toBeTruthy();
@@ -95,10 +86,8 @@ describe(`UU5.Bricks.Switch interface testing`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('toggle(setStateCallback)', () => {
-    const wrapper = shallow(
-      <UU5.Bricks.Switch size="xl" id={"uuID"}/>
-    );
+  it("toggle(setStateCallback)", () => {
+    const wrapper = shallow(<UU5.Bricks.Switch size="xl" id={"uuID"} />);
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.switchedOn).toBeFalsy();
@@ -121,24 +110,19 @@ describe(`UU5.Bricks.Switch interface testing`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isSwitchedOn() should return false', () => {
-    const wrapper = shallow(
-      <UU5.Bricks.Switch size="xl" id={"uuID"} switchedOn={false}/>
-    );
+  it("isSwitchedOn() should return false", () => {
+    const wrapper = shallow(<UU5.Bricks.Switch size="xl" id={"uuID"} switchedOn={false} />);
     expect(wrapper.instance().isSwitchedOn()).toBeFalsy();
     expect(wrapper.instance().isSwitchedOn()).not.toBeUndefined();
     expect(wrapper.instance().isSwitchedOn()).not.toBeNull();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('isSwitchedOn() should return true', () => {
-    const wrapper = shallow(
-      <UU5.Bricks.Switch size="xl" id={"uuID"} switchedOn={true}/>
-    );
+  it("isSwitchedOn() should return true", () => {
+    const wrapper = shallow(<UU5.Bricks.Switch size="xl" id={"uuID"} switchedOn={true} />);
     expect(wrapper.instance().isSwitchedOn()).toBeTruthy();
     expect(wrapper.instance().isSwitchedOn()).not.toBeUndefined();
     expect(wrapper.instance().isSwitchedOn()).not.toBeNull();
     expect(wrapper).toMatchSnapshot();
   });
-
 });

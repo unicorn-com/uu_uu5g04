@@ -11,6 +11,7 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import React from "react";
 import createReactClass from "create-react-class";
 import PropTypes from "prop-types";
@@ -18,9 +19,9 @@ import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./link.less";
+//@@viewOff:imports
 
 export const Link = createReactClass({
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -77,8 +78,8 @@ export const Link = createReactClass({
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   focus() {
@@ -86,10 +87,10 @@ export const Link = createReactClass({
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _isFragmentLink() {
     return this.props.href && this.props.href.length > 1 && this.props.href.lastIndexOf("#", 0) === 0;
   },
@@ -98,11 +99,11 @@ export const Link = createReactClass({
     e.preventDefault();
     //let basePath = location.href.replace(/#.*/, "");
 
-    let id = this.props.href.replace('#', '');
+    let id = this.props.href.replace("#", "");
     let foundElement = document.getElementById(id);
 
     if (!foundElement) {
-      id = id.replace('-inner', '');
+      id = id.replace("-inner", "");
       foundElement = document.getElementById(id);
     }
 
@@ -199,7 +200,7 @@ export const Link = createReactClass({
 
     return href;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
@@ -223,19 +224,19 @@ export const Link = createReactClass({
 
         if (this._shouldOnWheelClick()) {
           let onMouseDown = mainAttrs.onMouseDown;
-          mainAttrs.onMouseDown = (e) => {
+          mainAttrs.onMouseDown = e => {
             e.button === 1 && e.preventDefault();
             typeof onMouseDown === "function" && onMouseDown(e, this);
           };
 
           let onMouseUp = mainAttrs.onMouseUp;
-          mainAttrs.onMouseUp = (e) => {
+          mainAttrs.onMouseUp = e => {
             if (e.button === 1) {
               e.preventDefault();
               this._onWheelClick(e);
 
               // stop pending "click" event because e.preventDefault() doesn't stop it in FF
-              let clickHandler = (e) => {
+              let clickHandler = e => {
                 e.stopPropagation();
                 document.removeEventListener("click", clickHandler, true);
               };
@@ -253,14 +254,11 @@ export const Link = createReactClass({
     let children = this.getChildren();
     children = children == null ? this.props.href || this.getDefault().content : children;
 
-    return (
-      this.getNestingLevel()
-        ? (
-          <a {...mainAttrs} ref={(link) => this._link = link}>
-            {children}
-          </a>
-        ) : null
-    );
+    return this.getNestingLevel() ? (
+      <a {...mainAttrs} ref={link => (this._link = link)}>
+        {children}
+      </a>
+    ) : null;
   }
   //@@viewOff:render
 });

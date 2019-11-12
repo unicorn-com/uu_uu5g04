@@ -1,25 +1,24 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 import createReactClass from "create-react-class";
-import Tools from './tools.js';
-import Environment from '../environment/environment.js';
-import {LsiContext, withLsiContext} from "./context.js";
+import Tools from "./tools.js";
+import Environment from "../environment/environment.js";
+import { LsiContext, withLsiContext } from "./context.js";
 
 export const LsiMixin = {
-
   //@@viewOn:statics
   statics: {
     "UU5.Common.LsiMixin": {
@@ -39,7 +38,6 @@ export const LsiMixin = {
   },
   //@@viewOff:propTypes
 
-
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
@@ -48,7 +46,7 @@ export const LsiMixin = {
   },
   //@@viewOff:getDefaultProps
 
-  //@@viewOn:standardComponentLifeCycle
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     // initialize
     this.registerMixin("UU5.Common.LsiMixin");
@@ -63,7 +61,7 @@ export const LsiMixin = {
   },
 
   componentDidMount() {
-    if (typeof this.props.registerLsi === "function"){
+    if (typeof this.props.registerLsi === "function") {
       this.props.registerLsi(this.getId(), this._changeLanguage);
     } else {
       window.UU5.Environment.EventListener.registerLsi(this.getId(), this._changeLanguage);
@@ -71,13 +69,13 @@ export const LsiMixin = {
   },
 
   componentWillUnmount() {
-    if (typeof this.props.unregisterLsi === "function"){
+    if (typeof this.props.unregisterLsi === "function") {
       this.props.unregisterLsi(this.getId(), this._changeLanguage);
     } else {
       window.UU5.Environment.EventListener.unregisterLsi(this.getId(), this._changeLanguage);
     }
   },
-  //@@viewOff:standardComponentLifeCycle
+  //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   hasUU5CommonLsiMixin() {
@@ -103,10 +101,10 @@ export const LsiMixin = {
   },
   //@@viewOff:interface
 
-  //@@viewOn:overridingMethods
-  //@@viewOff:overridingMethods
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   // TODO: 'cs-CZ,en;q=0.8...' is set to state and never will be used, necessary is doing setState and render the component
   _setLanguage(language, setStateCallback) {
     this.setState({ language: language }, setStateCallback);
@@ -115,7 +113,7 @@ export const LsiMixin = {
 
   _changeLanguage(language) {
     if (this.getLanguage() !== language) {
-      if (typeof this.onChangeLanguage_ === 'function') {
+      if (typeof this.onChangeLanguage_ === "function") {
         this.onChangeLanguage_(language);
       } else {
         this.onChangeLanguageDefault(language);
@@ -127,7 +125,7 @@ export const LsiMixin = {
     this._setLanguage(language);
     return this;
   }
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 };
 
 LsiMixin.Context = LsiContext;
