@@ -17,11 +17,47 @@ import createReactClass from "create-react-class";
 import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
-const ClassNames = UU5.Common.ClassNames;
+
 import UpdateWrapper from "./update-wrapper.js";
+import Css from "./internal/css.js";
+import PanelStyles from "./internal/panel-styles.js";
 
 import "./panel-body.less";
 //@@viewOff:imports
+
+const ClassNames = UU5.Common.ClassNames;
+const Styles = {
+  bgStyles: props => {
+    // Only default colorSchema is here right now. Others are in .less files
+    // let styles = Object.keys(UU5.Environment.colorSchemaMap).map(colorSchema => {
+    let styles = ["default"].map(colorSchema => {
+      let colors = PanelStyles.getColors(colorSchema, props.bgStyle);
+
+      if (!colors) {
+        // Something went wrong. Maybe the colorSchema doesn't exist
+        return "";
+      }
+
+      let style = `
+        &.uu5-bricks-panel-body.uu5-bricks-panel-body {
+          color: ${colors.textColor};
+          background-color: ${colors.bgColor};
+          border-color: ${colors.borderColor};
+        }
+      `;
+
+      return `
+        &:not([class*="color-schema-"]),
+        &.color-schema-${colorSchema},
+        .color-schema-${colorSchema}  &:not([class*="color-schema-"]) {
+          ${style}
+        }
+      `;
+    });
+
+    return Css.css(styles.join(" "));
+  }
+};
 
 export default createReactClass({
   //@@viewOn:mixins
@@ -41,7 +77,11 @@ export default createReactClass({
       main: ns.css("panel-body"),
       body: ns.css("panel-body-body"),
       block: ns.css("panel-body-block"),
-      expanding: ns.css("panel-body-expanding")
+      expanding: ns.css("panel-body-expanding"),
+      bgStyles: Styles.bgStyles,
+      preventOverflow: Css.css(`
+        overflow: hidden;
+      `)
     },
     defaults: {
       parentTagName: "UU5.Bricks.Panel",
@@ -75,7 +115,8 @@ export default createReactClass({
   getInitialState: function() {
     this._preventUpdateChild = false;
     return {
-      height: this.props._expanded ? null : this._getHeight(this.props)
+      height: this.props._expanded ? null : this._getHeight(this.props),
+      isAnimating: this.props._expanded
     };
   },
 
@@ -94,33 +135,34 @@ export default createReactClass({
   },
 
   componentWillReceiveProps: function(nextProps) {
-    var body = this;
-    var height = this._getHeight(nextProps);
+    let body = this;
+    let height = this._getHeight(nextProps);
+    let isAnimating = this.props._expanded !== nextProps._expanded;
 
     if (height) {
       // open panel body
       this._preventUpdateChild = false;
-      this.setState({ height: height }, function() {
+      this.setState({ height, isAnimating }, function() {
         body.timer && clearTimeout(body.timer);
         body.timer = setTimeout(() => {
           // block rerender of childs - only change styles of current component
           this._preventUpdateChild = true;
-          body.setAsyncState({ height: null }, () => (this._preventUpdateChild = false));
+          body.setAsyncState({ height: null, isAnimating: false }, () => (this._preventUpdateChild = false));
         }, body.getDefault().duration);
       });
-    } else if (nextProps._expanded !== this.props._expanded) {
+    } else if (isAnimating) {
       // close panel body
       // prevent rerendering of children until end of animation
       this._preventUpdateChild = true;
-      this.setState({ height: this._getHeight(this.props) }, () => {
+      this.setState({ height: this._getHeight(this.props), isAnimating: true }, () => {
         body.timer && clearTimeout(body.timer);
         body.timer = setTimeout(() => {
           this._preventUpdateChild = true;
-          body.setAsyncState({ height: height });
+          body.setAsyncState({ height });
           body.timer = setTimeout(() => {
             // rerender panel after end of animation
             this._preventUpdateChild = false;
-            this.forceUpdate();
+            this.setAsyncState({ isAnimating: false });
           }, body.getDefault().duration);
         }, 1);
       });
@@ -129,7 +171,7 @@ export default createReactClass({
         body.timer && clearTimeout(body.timer);
         body.timer = setTimeout(() => {
           this._preventUpdateChild = true;
-          body.setAsyncState({ height: height }, () => {
+          body.setAsyncState({ height }, () => {
             this._preventUpdateChild = false;
             this.forceUpdate();
           });
@@ -141,7 +183,6 @@ export default createReactClass({
   componentWillUnmount: function() {
     this.timer && clearTimeout(this.timer);
   },
-
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
@@ -171,10 +212,18 @@ export default createReactClass({
   _getMainAttrs: function() {
     var mainAttrs = this.getMainAttrs();
 
+    mainAttrs.className += " " + this.getClassName("bgStyles");
+
     if (this.state.height === null) {
-      mainAttrs.className += " " + this.getClassName().block;
+      mainAttrs.className += " " + this.getClassName("block");
     } else {
-      this.state.height > 0 && (mainAttrs.className += " " + this.getClassName().expanding);
+      if (this.state.height > 0) {
+        mainAttrs.className += " " + this.getClassName("expanding");
+      }
+
+      if (this.state.isAnimating || !this.state.height) {
+        mainAttrs.className += " " + this.getClassName("preventOverflow");
+      }
 
       mainAttrs.style = mainAttrs.style || {};
       mainAttrs.style.height = this.state.height + "px";
@@ -209,10 +258,10 @@ export default createReactClass({
   _buildChildren: function() {
     return this.buildChildren();
   },
+  //@@viewOff:private
 
   //@@viewOn:render
   render: function() {
-    // console.log(`prevent render in panel body: this: ${this._preventUpdateChild}, props: ${this.props._preventUpdateChild}`);
     return (
       <div {...this._getMainAttrs()}>
         <UpdateWrapper preventRender={this._preventUpdateChild || this.props._preventUpdateChild}>

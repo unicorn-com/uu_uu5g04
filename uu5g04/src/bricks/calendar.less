@@ -20,7 +20,7 @@
 
   &.@{name}-calendar-range {
     .@{name}-calendar-active-selection-start, .@{name}-calendar-active-selection-end {
-      .@{name}-calendar-day-cell-selection {
+      .@{name}-calendar-range-selection {
         background-color: #E3F2FD;
         border-radius: 0;
 
@@ -39,7 +39,7 @@
       }
     }
 
-    .@{name}-calendar-active-selection .@{name}-calendar-day-cell-selection {
+    .@{name}-calendar-active-selection .@{name}-calendar-range-selection {
       background-color: #E3F2FD;
       color: rgba(0, 0, 0, 0.87);
       border-radius: 0;
@@ -69,11 +69,11 @@
     }
   }
 
-  .@{name}-calendar-active-selection-start .@{name}-calendar-day-cell-selection {
+  .@{name}-calendar-active-selection-start .@{name}-calendar-range-selection {
     border-radius: 3px 0 0 0;
   }
 
-  .@{name}-calendar-active-selection-end .@{name}-calendar-day-cell-selection {
+  .@{name}-calendar-active-selection-end .@{name}-calendar-range-selection {
     border-radius: 0 0 3px 0;
   }
 
@@ -223,8 +223,8 @@
 }
 
 .@{name}-calendar-month, .@{name}-calendar-year {
-  width: 56px;
-  height: 56px;
+  width: 62px;
+  height: 62px;
   line-height: 28px;
   display: flex;
   align-items: center;
@@ -237,7 +237,7 @@
   cursor: default;
 }
 
-.@{name}-calendar-month-table .@{name}-calendar-day-cell-selection:not(.uu5-common-disabled) {
+.@{name}-calendar-month-table .@{name}-calendar-range-selection:not(.uu5-common-disabled) {
   &:hover, &:active {
     background-color: #f2f2f2;
   }
@@ -251,7 +251,7 @@
   }
 }
 
-.@{name}-calendar-month-table .@{name}-calendar-active .@{name}-calendar-day-cell-selection {
+.@{name}-calendar-month-table .@{name}-calendar-active .@{name}-calendar-range-selection {
   background-color: #2196F3;
   color: #fff;
   font-weight: 800;
@@ -262,7 +262,7 @@
 }
 
 .@{name}-calendar-year-table, .@{name}-calendar-decade-table {
-  .@{name}-calendar-cell.@{name}-calendar-active {
+  .@{name}-calendar-cell.@{name}-calendar-active:not(.@{name}-calendar-another-section) {
     background-color: #2196F3;
     color: #fff;
     font-weight: 800;
@@ -291,16 +291,20 @@
 }
 
 .@{name}-calendar-table:not(.@{name}-calendar-month-table) {
-  td div {
-    margin: 8px 0 0 8px;
+  td:first-child div {
+    margin-left: 8px;
+  }
+
+  td:last-child div {
+    margin-right: 8px;
+  }
+
+  tr:first-child td div {
+    margin-top: 8px;
   }
 
   tr:last-child td div {
     margin-bottom: 8px;
-  }
-
-  td div:last-child {
-    margin-right: 8px;
   }
 }
 
@@ -335,6 +339,10 @@
   tbody tr:last-child td {
     padding-bottom: 4px;
   }
+
+  .@{name}-calendar-filler-day-row {
+    height: 36px;
+  }
 }
 
 .@{name}-calendar-hide-week-number.@{name}-calendar-table.@{name}-calendar-month-table {
@@ -362,7 +370,7 @@
 
 .@{name}-calendar-decade-table, .@{name}-calendar-year-table {
   .@{name}-calendar-head-row {
-    height: 62px;
+    height: 64px;
   }
 }
 
@@ -423,6 +431,10 @@
       line-height: normal;
       width: auto;
     }
+
+    .@{name}-calendar-filler-day-row {
+      height: 40px;
+    }
   }
 
   .@{name}-calendar-table.@{name}-calendar-year-table,
@@ -477,6 +489,10 @@ html:not(.uu5-ua-ie) {
 
     .@{name}-calendar-table {
       width: 100%;
+    }
+
+    .@{name}-calendar-month, .@{name}-calendar-year {
+      height: 84px;
     }
   }
 }

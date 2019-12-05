@@ -88,23 +88,6 @@
   background-color: transparent;
 }
 
-.@{name}-error-silent {
-  background-color: #F5F5F5;
-  color: rgba(0,0,0,0.87);
-
-  &.@{name}-error-details {
-    background-color: #F5F5F5;
-
-    & .@{name}-error-details-body {
-      background-color: #F5F5F5;
-    }
-
-    & .@{name}-error-pre-wrapper {
-      background-color: #F5F5F5;
-    }
-  }
-}
-
 .@{name}-error-small-box {
   min-height: 48px;
   display: flex;
@@ -196,5 +179,37 @@
 .color-schema-white.uu5-common-error:not(.uu5-common-bg-style-transparent) {
   .uu5-common-error-pre.uu5-common-error-pre {
     color: rgba(0, 0, 0, 0.87);
+  }
+}
+
+.@{name}-error.@{name}-error.@{name}-error-silent {
+  color: rgba(0,0,0,0.87);
+
+  &.uu5-common-bg-style-filled {
+    background-color: #F5F5F5;
+  }
+  &.uu5-common-bg-style-outline,
+  &.uu5-common-bg-style-transparent,
+  &.uu5-common-bg-style-underline {
+    border-color: #BDBDBD;
+  }
+
+  &.@{name}-error {
+    .@{name}-error-icon-wrapper,
+    .@{name}-error-content {
+      color: rgba(0,0,0,0.87);
+    }
+  }
+
+  &.@{name}-error-details {
+    background-color: #F5F5F5;
+
+    & .@{name}-error-details-body {
+      background-color: #F5F5F5;
+    }
+
+    & .@{name}-error-pre-wrapper {
+      background-color: #F5F5F5;
+    }
   }
 }

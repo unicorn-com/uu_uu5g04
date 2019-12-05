@@ -17,10 +17,12 @@ import createReactClass from "create-react-class";
 import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
-const ClassNames = UU5.Common.ClassNames;
 
 import Header from "./panel-header.js";
 import Body from "./panel-body.js";
+import Css from "./internal/css.js";
+import PanelStyles from "./internal/panel-styles.js";
+
 import "./panel.less";
 //@@viewOff:imports
 
@@ -32,6 +34,38 @@ const MOUNT_CONTENT_VALUES = {
 
 const getMountContent = props => {
   return props.mountContent === undefined ? MOUNT_CONTENT_VALUES.onFirstRender : props.mountContent;
+};
+
+const ClassNames = UU5.Common.ClassNames;
+const Styles = {
+  bgStyles: props => {
+    // Only default colorSchema is here right now. Others are in .less files
+    // let styles = Object.keys(UU5.Environment.colorSchemaMap).map(colorSchema => {
+    let styles = ["default"].map(colorSchema => {
+      let colors = PanelStyles.getColors(colorSchema, props.bgStyle);
+
+      if (!colors) {
+        // Something went wrong. Maybe the colorSchema doesn't exist
+        return "";
+      }
+
+      let style = `
+        color: ${colors.textColor};
+        background-color: ${colors.bgColor};
+        border-color: ${colors.borderColor};
+      `;
+
+      return `
+        ${colorSchema === "default" ? `&,` : ""}
+        &.color-schema-${colorSchema},
+        .color-schema-${colorSchema}  &:not([class*="color-schema-"]) {
+          ${style}
+        }
+      `;
+    });
+
+    return Css.css(styles.join(" "));
+  }
 };
 
 export const Panel = createReactClass({
@@ -54,7 +88,8 @@ export const Panel = createReactClass({
       main: ns.css("panel"),
       expanded: ns.css("panel-expanded"),
       size: ns.css("panel-size-"),
-      default: ns.css("panel-default")
+      default: ns.css("panel-default"),
+      bgStyles: Styles.bgStyles
     },
     defaults: {
       parentTagName: "UU5.Bricks.Accordion",
@@ -194,6 +229,16 @@ export const Panel = createReactClass({
       headerProps[key] !== null && headerProps[key] !== undefined && (newProps[key] = headerProps[key]);
     }
     let icon = this.isExpanded() ? this.props.iconExpanded : this.props.iconCollapsed;
+
+    let _bgStyle = this.props.bgStyleHeader;
+    if (!_bgStyle) {
+      if (this.props.bgStyle === "filled" || !this.props.bgStyle) {
+        _bgStyle = "filled";
+      } else {
+        _bgStyle = "transparent";
+      }
+    }
+
     return UU5.Common.Tools.merge(newProps, {
       key: newProps.id,
       _onClick: this._onClickToggle,
@@ -211,7 +256,9 @@ export const Panel = createReactClass({
         ? this.props.colorSchemaHeader
         : this.props.bgStyle
         ? this.props.colorSchema
-        : null
+        : null,
+      _bgStyle,
+      _colorSchema: this.props.colorSchemaHeader ? this.props.colorSchemaHeader : this.props.colorSchema
     });
   },
   //@@viewOff:overriding
@@ -302,8 +349,6 @@ export const Panel = createReactClass({
 
     var bodyId = this._getBodyId();
 
-    // console.log("Block next child update: " + this.state.renderChild);
-
     var bodyProps = {
       controlled: true,
       id: bodyId,
@@ -354,7 +399,7 @@ export const Panel = createReactClass({
   render() {
     var mainProps = this.getMainAttrs();
     this.isExpanded() && (mainProps.className += " " + this.getClassName().expanded);
-    mainProps.className += " " + this.getClassName("size") + this.props.size;
+    mainProps.className += " " + this.getClassName("size") + this.props.size + " " + this.getClassName("bgStyles");
 
     if (this.props.elevation) {
       mainProps.className += " " + ClassNames.elevation + this.props.elevation;

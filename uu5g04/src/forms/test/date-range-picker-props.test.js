@@ -131,6 +131,32 @@ describe(`UU5.Forms.DateRangePicker props`, () => {
     expect(wrapper.findWhere(node => node.text() === "From")).not.toBe(0);
     expect(wrapper.findWhere(node => node.text() === "To")).not.toBe(0);
   });
+
+  it(`step`, () => {
+    // default value "days"
+    let wrapper = mount(<UU5.Forms.DateRangePicker />);
+    wrapper.instance().open();
+    wrapper.update();
+    expect(wrapper.find(".uu5-forms-calendar-month-table").length).toBe(2);
+
+    wrapper = mount(<UU5.Forms.DateRangePicker value={["2015-01", "2019-05"]} step="months" />);
+    wrapper.instance().open();
+    wrapper.update();
+    expect(wrapper.find(".uu5-forms-calendar-year-table").length).toBe(2);
+    let value = wrapper.instance().getValue();
+    expect(Array.isArray(value)).toBeTruthy();
+    expect(value[0]).toBe("2015-01");
+    expect(value[1]).toBe("2019-05");
+
+    wrapper = mount(<UU5.Forms.DateRangePicker value={["2015", "2022"]} step="years" />);
+    wrapper.instance().open();
+    wrapper.update();
+    expect(wrapper.find(".uu5-forms-calendar-decade-table").length).toBe(2);
+    value = wrapper.instance().getValue();
+    expect(Array.isArray(value)).toBeTruthy();
+    expect(value[0]).toBe("2015");
+    expect(value[1]).toBe("2022");
+  });
 });
 
 describe(`UU5.Forms.DateRangePicker props function -> Text.InputMixin`, () => {

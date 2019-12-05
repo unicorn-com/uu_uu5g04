@@ -88,8 +88,9 @@ export const ListDataManager = createReactClass({
 
   componentDidMount() {
     this._load(this.props.onLoad, this.props.data)
-      // promise must have catch, in other way there is written error to console
-      .catch(() => {});
+    // promise must have catch, in other way there is written error to console
+      .catch(() => {
+      });
     // this._startReload();
   },
 
@@ -222,17 +223,17 @@ export const ListDataManager = createReactClass({
             }
 
             this.isRendered() &&
-              this.setState(
-                { viewState: "ready", errorState: null, errorData: null, data, pageInfo, response },
-                typeof resolve === "function" ? () => resolve(data) : undefined
-              );
+            this.setState(
+              { viewState: "ready", errorState: null, errorData: null, data, pageInfo, response },
+              typeof resolve === "function" ? () => resolve(data) : undefined
+            );
           })
           .catch(response => {
             this.isRendered() &&
-              this.setState(
-                { errorData: response, viewState: "error", errorState, response },
-                typeof reject === "function" ? () => reject(response) : undefined
-              );
+            this.setState(
+              { errorData: response, viewState: "error", errorState, response },
+              typeof reject === "function" ? () => reject(response) : undefined
+            );
           });
       }
     });
@@ -490,31 +491,31 @@ export const ListDataManager = createReactClass({
         .then(response => {
           const dtoOut = response && typeof response === "object" ? response.data : undefined;
           this.isRendered() &&
-            this.setState(state => {
-              let data = [...state.data];
-              let deleteCount = 0;
-              let dtoOutItems = bulk ? dtoOut || [] : [dtoOut];
-              identifiers.forEach((identifier, i) => {
-                let index = data.findIndex(
-                  typeof identifier === "function" ? identifier : item => item.id === identifier
-                );
-                if (index > -1) {
-                  if (dtoOutItems[i] == null) {
-                    data.splice(index, 1);
-                    deleteCount++;
-                  } else {
-                    data.splice(index, 1, { ...data[index], ...dtoOutItems[i] });
-                  }
+          this.setState(state => {
+            let data = [...state.data];
+            let deleteCount = 0;
+            let dtoOutItems = bulk ? dtoOut || [] : [dtoOut];
+            identifiers.forEach((identifier, i) => {
+              let index = data.findIndex(
+                typeof identifier === "function" ? identifier : item => item.id === identifier
+              );
+              if (index > -1) {
+                if (dtoOutItems[i] == null) {
+                  data.splice(index, 1);
+                  deleteCount++;
+                } else {
+                  data.splice(index, 1, { ...data[index], ...dtoOutItems[i] });
                 }
-              });
-
-              let pageInfo = state.pageInfo ? { ...state.pageInfo } : null;
-              if (pageInfo && typeof pageInfo.total === "number") {
-                pageInfo.total -= deleteCount;
               }
+            });
 
-              return { viewState: "ready", errorState: null, errorData: null, data, pageInfo, response };
-            }, this._getPromiseCallback(resolve, response));
+            let pageInfo = state.pageInfo ? { ...state.pageInfo } : null;
+            if (pageInfo && typeof pageInfo.total === "number") {
+              pageInfo.total -= deleteCount;
+            }
+
+            return { viewState: "ready", errorState: null, errorData: null, data, pageInfo, response };
+          }, this._getPromiseCallback(resolve, response));
         })
         .catch(response => {
           this.showError("serverUpdate", "deleting", { context: { response } });
@@ -527,46 +528,46 @@ export const ListDataManager = createReactClass({
           const dtoOut = response && typeof response === "object" ? response.data : undefined;
           let dtoOutItems = bulk ? dtoOut || [] : [dtoOut];
           this.isRendered() &&
-            this.setState(state => {
-              let data = [...state.data];
-              let restoredCount = 0;
-              let mergedOldSorted = oldItems.map((oldItem, i) => ({ oldItem, i, index: indices[i] }));
-              mergedOldSorted.sort((a, b) => a.index - b.index);
-              mergedOldSorted.forEach(({ oldItem, index, i }) => {
-                // backward compatibility if dtoOut is undefined
-                if (index > -1 && dtoOutItems[i] != null) {
-                  data.splice(index, 0, { ...oldItem, ...dtoOutItems[i] });
-                  restoredCount++;
-                }
-              });
-              let pageInfo = state.pageInfo ? { ...state.pageInfo } : null;
-              if (pageInfo && typeof pageInfo.total === "number") {
-                pageInfo.total += restoredCount;
+          this.setState(state => {
+            let data = [...state.data];
+            let restoredCount = 0;
+            let mergedOldSorted = oldItems.map((oldItem, i) => ({ oldItem, i, index: indices[i] }));
+            mergedOldSorted.sort((a, b) => a.index - b.index);
+            mergedOldSorted.forEach(({ oldItem, index, i }) => {
+              // backward compatibility if dtoOut is undefined
+              if (index > -1 && dtoOutItems[i] != null) {
+                data.splice(index, 0, { ...oldItem, ...dtoOutItems[i] });
+                restoredCount++;
               }
-              return { data, pageInfo, response };
-            }, this._getPromiseCallback(resolve, response));
+            });
+            let pageInfo = state.pageInfo ? { ...state.pageInfo } : null;
+            if (pageInfo && typeof pageInfo.total === "number") {
+              pageInfo.total += restoredCount;
+            }
+            return { data, pageInfo, response };
+          }, this._getPromiseCallback(resolve, response));
         })
         .catch(response => {
           this.showError("serverUpdate", "deleting", { context: { response } });
           let newState = { viewState: "error", errorState: "update", errorData: response, response };
           this.isRendered() &&
-            this.setState(state => {
-              let data = [...state.data];
-              let restoredCount = 0;
-              let mergedOldSorted = oldItems.map((oldItem, i) => ({ oldItem, index: indices[i] }));
-              mergedOldSorted.sort((a, b) => a.index - b.index);
-              mergedOldSorted.forEach(({ oldItem, index }) => {
-                if (index > -1) {
-                  data.splice(index, 0, oldItem);
-                  restoredCount++;
-                }
-              });
-              let pageInfo = state.pageInfo ? { ...state.pageInfo } : null;
-              if (pageInfo && typeof pageInfo.total === "number") {
-                pageInfo.total += restoredCount;
+          this.setState(state => {
+            let data = [...state.data];
+            let restoredCount = 0;
+            let mergedOldSorted = oldItems.map((oldItem, i) => ({ oldItem, index: indices[i] }));
+            mergedOldSorted.sort((a, b) => a.index - b.index);
+            mergedOldSorted.forEach(({ oldItem, index }) => {
+              if (index > -1) {
+                data.splice(index, 0, oldItem);
+                restoredCount++;
               }
-              return { ...newState, data, pageInfo };
-            }, this._getPromiseCallback(reject, response));
+            });
+            let pageInfo = state.pageInfo ? { ...state.pageInfo } : null;
+            if (pageInfo && typeof pageInfo.total === "number") {
+              pageInfo.total += restoredCount;
+            }
+            return { ...newState, data, pageInfo };
+          }, this._getPromiseCallback(reject, response));
         });
     }
   },
@@ -599,15 +600,13 @@ export const ListDataManager = createReactClass({
 ListDataManager.createContext = () => {
   let ListDataManagerContext = Context.create();
 
-  const Provider = props => (
+  const Provider = ({ children, ...props }) => (
     <ListDataManager {...props}>
-      {values => <ListDataManagerContext.Provider value={values}>{props.children}</ListDataManagerContext.Provider>}
+      {values => <ListDataManagerContext.Provider value={values}>{children}</ListDataManagerContext.Provider>}
     </ListDataManager>
   );
 
-  const Consumer = props => <ListDataManagerContext.Consumer>{props.children}</ListDataManagerContext.Consumer>;
-
-  return { Provider, Consumer };
+  return { Provider, Consumer: ListDataManagerContext.Consumer, Context: ListDataManagerContext };
 };
 
 export default ListDataManager;

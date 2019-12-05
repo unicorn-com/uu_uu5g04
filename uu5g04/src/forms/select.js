@@ -169,7 +169,7 @@ export const Select = Context.withContext(
           (this.state.screenSize === "xs" && prevState.screenSize !== "xs") ||
           (this.state.screenSize !== "xs" && prevState.screenSize === "xs")
         ) {
-          this._open();
+          this._onOpen();
         }
       }
     },

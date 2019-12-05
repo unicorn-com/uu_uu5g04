@@ -63,6 +63,16 @@ export const CommonLsi = {
       cs: "Při zobrazování uuRoute došlo k chybě.",
       en: "There was an error while displaying uuRoute."
     }
+  },
+  notFoundTag: {
+    offline: {
+      cs: "Komponenta %s nemohla být načtená, protože jste offline.",
+      en: "Component %s cannot be load because you are offline."
+    },
+    notFound: {
+      cs: "Komponenta %s neexistuje.",
+      en: "Component %s is not exist."
+    }
   }
 };
 

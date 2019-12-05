@@ -19,6 +19,7 @@ import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
 import TextInput from "./internal/text-input.js";
 import TextInputMixin from "./mixins/text-input-mixin.js";
+import DateTools from "./internal/date-tools.js";
 
 import Context from "./form-context.js";
 
@@ -70,7 +71,8 @@ export const DatePicker = Context.withContext(
       valueType: PropTypes.oneOf(["string", "date"]),
       openToContent: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
       hideFormatPlaceholder: PropTypes.bool,
-      showTodayButton: PropTypes.bool
+      showTodayButton: PropTypes.bool,
+      step: PropTypes.oneOf(["days", "months", "years"])
     },
     //@@viewOff:propTypes
 
@@ -93,7 +95,8 @@ export const DatePicker = Context.withContext(
         valueType: null,
         openToContent: "xs",
         hideFormatPlaceholder: false,
-        showTodayButton: false
+        showTodayButton: false,
+        step: "days"
       };
     },
     //@@viewOff:getDefaultProps
@@ -204,6 +207,7 @@ export const DatePicker = Context.withContext(
 
     setValue_(value, setStateCallback) {
       let _callCallback = typeof setStateCallback === "function";
+      value = this._parseDate(value);
       value = this._hasInputFocus() && !(value instanceof Date) ? value : this._getDateString(value) || value;
       if (!this._validateOnChange({ value }, false)) {
         if (this._checkRequired({ value })) {
@@ -240,7 +244,7 @@ export const DatePicker = Context.withContext(
         }
       }
 
-      return date;
+      return this._getOutputValue(date);
     },
 
     onChangeDefault_(opt, setStateCallback) {
@@ -286,6 +290,19 @@ export const DatePicker = Context.withContext(
     //@@viewOff:overriding
 
     //@@viewOn:private
+    _getOutputValue(value) {
+      if (value) {
+        if (this.props.step === "years" || this.props.step === "months") {
+          let parsedDate = this._parseDate(value);
+          value = DateTools.getShortenedValueDateString(parsedDate, "-", this.props.step === "years");
+        } else {
+          // value = value;
+        }
+      }
+
+      return value;
+    },
+
     _getEventPath(e) {
       let path = [];
       let node = e.target;
@@ -497,19 +514,25 @@ export const DatePicker = Context.withContext(
     },
 
     _onChange(e) {
-      let opt = { value: e.target.value, event: e, component: this };
+      let opt = {
+        value: e.target.value,
+        event: e,
+        component: this,
+        required: this.props.required,
+        _data: { type: "input", required: this.props.required, value: e.target.value }
+      };
       let date = this._parseDate(opt.value);
       let formatedDate = date ? this._getDateString(date) : null;
 
       if (!opt.value || formatedDate) {
         if (!this.isComputedDisabled() && !this.isReadOnly()) {
-          opt.required = this.props.required;
           let result = this.getChangeFeedback(opt);
-          opt._data = { type: "input", required: this.props.required, result: result, value: e.target.value };
+          opt._data.result = result;
+          if (this.props.valueType == "date") {
+            opt.value = date;
+          }
+          opt.value = this._getOutputValue(opt.value);
           if (typeof this.props.onChange === "function") {
-            if (this.props.valueType == "date") {
-              opt.value = date;
-            }
             this.props.onChange(opt);
           } else {
             this.onChangeDefault(opt);
@@ -535,7 +558,7 @@ export const DatePicker = Context.withContext(
         }
       } else {
         if (value) {
-          if (this._checkRequired({ value: value })) {
+          if (this._checkRequired({ value })) {
             opt.required = this.props.required;
             opt.value = value;
             let result = this.getChangeFeedback(opt);
@@ -556,7 +579,8 @@ export const DatePicker = Context.withContext(
     },
 
     _onChangePickerDefault(opt, setStateCallback) {
-      this.setValue(opt.value, () => this.close(setStateCallback));
+      let value = opt._data ? opt._data.value : opt.value;
+      this.setValue(value, () => this.close(setStateCallback));
 
       return this;
     },
@@ -565,6 +589,15 @@ export const DatePicker = Context.withContext(
       if (!this._hasFocus) {
         this._addKeyEvents();
         this._hasFocus = true;
+
+        if (opt._data) {
+          opt._data.value = opt.value;
+          opt.value = this._getOutputValue(opt.value);
+        } else {
+          opt._data = { value: opt.value };
+          opt.value = this._getOutputValue(opt.value);
+        }
+
         if (!this.isReadOnly() && !this.isComputedDisabled()) {
           if (typeof this.props.onFocus === "function") {
             this.props.onFocus(opt);
@@ -579,6 +612,15 @@ export const DatePicker = Context.withContext(
       if (this._hasFocus) {
         this._removeKeyEvents();
         this._hasFocus = false;
+
+        if (opt._data) {
+          opt._data.value = opt.value;
+          opt.value = this._getOutputValue(opt.value);
+        } else {
+          opt._data = { value: opt.value };
+          opt.value = this._getOutputValue(opt.value);
+        }
+
         if (typeof this.props.onBlur === "function") {
           this.props.onBlur(opt);
         } else {
@@ -669,6 +711,7 @@ export const DatePicker = Context.withContext(
       if (this.props.valueType === null || this.props.valueType == "string") {
         opt.value = date;
       }
+      opt.value = this._getOutputValue(opt.value);
       if (typeof this.props.onChange === "function") {
         this.setState({ open: false }, () => this.props.onChange(opt));
       } else {
@@ -702,7 +745,7 @@ export const DatePicker = Context.withContext(
     },
 
     _getCalendarProps() {
-      let date = typeof this.getValue() === "string" ? this._parseDate(this.getValue()) : this.getValue();
+      let date = this._parseDate(this.state.value);
 
       return {
         className: this.getClassName().menu,
@@ -712,7 +755,8 @@ export const DatePicker = Context.withContext(
         hidden: !this.isOpen(),
         onChange: this._onCalendarChange,
         colorSchema: this.getColorSchema(),
-        showTodayButton: this.props.showTodayButton
+        showTodayButton: this.props.showTodayButton,
+        step: this.props.step
       };
     },
 
@@ -831,16 +875,28 @@ export const DatePicker = Context.withContext(
 
       return props;
     },
+
+    _getInputValue() {
+      let value = this.state.value;
+
+      if (this.props.step === "months" || this.props.step === "years") {
+        value = this._parseDate(value);
+        if (value) {
+          value = DateTools.getShortenedInputDateString(value, "/", this.props.step === "years");
+        }
+      }
+
+      return value || this.state.value;
+    },
     //@@viewOff:private
 
     //@@viewOn:render
     render() {
       let inputId = this.getId() + "-input";
-
       let inputAttrs = this.props.inputAttrs;
       inputAttrs = UU5.Common.Tools.merge({ autoComplete: "off" }, inputAttrs);
-
       inputAttrs.className === "" ? delete inputAttrs.className : null;
+
       return (
         <div {...this._getMainAttrs()} ref={comp => (this._root = comp)}>
           {this.getLabel(inputId)}
@@ -848,7 +904,7 @@ export const DatePicker = Context.withContext(
             <TextInput
               id={inputId}
               name={this.props.name || inputId}
-              value={this.state.value || ""}
+              value={this._getInputValue()}
               placeholder={this._getPlaceholder()}
               type="text"
               onChange={this._onChange}

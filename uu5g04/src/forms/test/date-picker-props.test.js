@@ -161,6 +161,9 @@ const CONFIG = {
     },
     showTodayButton: {
       values: [true, false]
+    },
+    calendarStartView: {
+      values: ["days", "months", "years"]
     }
     // parseDate - In agreement with developers, this props need not be tested.
   },
@@ -183,12 +186,34 @@ const ISOFormatTest = (props, country, expectedValue) => {
 describe(`UU5.Forms.DatePicker props`, () => {
   UU5.Test.Tools.testProperties(UU5.Forms.DatePicker, CONFIG);
 
-  it(`UU5.Forms.DatePicker - ISO format value`, () => {
+  it(`ISO format value`, () => {
     let defaultCountry = "en-US";
     ISOFormatTest({ value: "2019-07-20" }, defaultCountry, "7/20/2019");
     ISOFormatTest({ value: "2019-07-20T07:00:00.000Z" }, defaultCountry, "7/20/2019");
     ISOFormatTest({ value: "2019-07-20T07:00:00.000+02:00" }, defaultCountry, "7/20/2019");
     ISOFormatTest({ value: "2019-07-20T07:00:00.000+02:00" }, "cs-CZ", "2019-7-20"); // this might be wrong
+  });
+
+  it(`step`, () => {
+    // default value "days"
+    let wrapper = mount(<UU5.Forms.DatePicker />);
+    wrapper.instance().open();
+    wrapper.update();
+    expect(wrapper.find(".uu5-forms-calendar-month-table").length).toBe(1);
+
+    wrapper = mount(<UU5.Forms.DatePicker value="2015-01" step="months" />);
+    wrapper.instance().open();
+    wrapper.update();
+    expect(wrapper.find(".uu5-forms-calendar-year-table").length).toBe(1);
+    let value = wrapper.instance().getValue();
+    expect(value).toBe("2015-01");
+
+    wrapper = mount(<UU5.Forms.DatePicker value="2015" step="years" />);
+    wrapper.instance().open();
+    wrapper.update();
+    expect(wrapper.find(".uu5-forms-calendar-decade-table").length).toBe(1);
+    value = wrapper.instance().getValue();
+    expect(value).toBe("2015");
   });
 });
 

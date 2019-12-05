@@ -33,12 +33,10 @@ export const NotFoundTag = createReactClass({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("NotFoundTag"),
-    defaults: {
-      body: "Tag not found: "
-    },
     classNames: {
       main: ns.css("not-found-tag")
-    }
+    },
+    lsi: () => UU5.Environment.Lsi.Common.notFoundTag
   },
   //@@viewOff:statics
 
@@ -50,7 +48,7 @@ export const NotFoundTag = createReactClass({
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       tagName: null,
       error: null
@@ -86,13 +84,16 @@ export const NotFoundTag = createReactClass({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
-    let value = this.getDefault().body;
-    this.props.tagName && (value += " " + this.props.tagName);
+  render: function () {
+    // cannot be getLsiComponent, because UU5.Bricks.Lsi is in Bricks and it could not be loaded and without
+    // internet it will be loop
+    const value = Tools.getLsiValueByLanguage(
+      this.getLsi(window.navigator.onLine ? "notFound" : "offline"),
+      UU5.Common.Tools.getLanguage(),
+      this.props.tagName || ""
+    );
 
-    return this.props.error ? (
-      this._getCustomError()
-    ) : (
+    return this.props.error ? this._getCustomError() : (
       <Error {...this.getMainPropsToPass()} id={this.props.id}>
         {value}
       </Error>

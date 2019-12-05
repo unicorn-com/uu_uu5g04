@@ -18,61 +18,174 @@ import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Css from "./internal/css.js";
-import ButtonStyles from "./button-styles.js";
+import ButtonStyles from "./internal/button-styles.js";
+import { elevationMixin } from "./internal/styles.js";
 
 import "./button.less";
 //@@viewOff:imports
 
 const ClassNames = UU5.Common.ClassNames;
 const Styles = {
-  errorButton: props => {
-    let styles = Object.keys(UU5.Environment.colorSchemaMap).map(colorSchemaName => {
-      let colorSchema = UU5.Environment.colorSchemaMap[colorSchemaName].color.replace(/-rich/, "");
-      if (!colorSchema || !UU5.Environment.colors[colorSchema]) return "";
-      if (colorSchema === "default") colorSchema = "grey";
-      const colors = ButtonStyles.getColors(colorSchema);
-      let borderColor = UU5.Environment.colors[colorSchema][`c${colors.borderColor.standard}`];
+  errorStyles: props => {
+    let colorSchema = UU5.Environment.colorSchemaMap.danger.color;
+    let colors = ButtonStyles.getColors(colorSchema, props.bgStyle);
 
-      let style = `
-        &.color-schema-${colorSchemaName},
-        .color-schema-${colorSchemaName} &:not([class*="color-schema-"]) {
-          &.uu5-forms-button-error {
-            box-shadow: inset 0 0 0 1px ${borderColor};
+    if (!colors) {
+      // Something went wrong. Maybe the colorSchema doesn't exist
+      return "";
+    }
+
+    let style = `
+      box-shadow: inset 0 0 0 1px ${colors.borderColor};
+    `;
+
+    if (props.bgStyle === "filled") {
+      style += `
+        border-color: ${colors.borderColor};
+        box-shadow: none;
+        ${elevationMixin(`inset 0 0 0 1px ${colors.borderColor}`)};
+
+        &:hover, &:focus {
+          border-color: ${colors.borderColorHover};
+          ${elevationMixin(`inset 0 0 0 1px ${colors.borderColorHover}`)};
+        }
+
+        &:active, &:active:hover, &:active:focus,
+        &.active, &.active:hover, &.active:focus {
+          border-color: ${colors.borderColorActive};
+          ${elevationMixin(`inset 0 0 0 1px ${colors.borderColorActive}`)};
+        }
       `;
+    } else if (props.bgStyle === "outline") {
+      style += `
+        box-shadow: inset 0 0 0 1px ${colors.borderColor};
+        ${elevationMixin(`inset 0 0 0 1px ${colors.borderColor}`)};
 
-      if (props.bgStyle === "filled") {
-        style += `
-          border-color: ${borderColor};
-          box-shadow: none;
-          ${ButtonStyles.elevationMixin(`inset 0 0 0 1px ${borderColor}`)};
-        `;
-      } else if (props.bgStyle === "outline") {
-        style += `
-          box-shadow: inset 0 0 0 1px ${borderColor};
-          ${ButtonStyles.elevationMixin(`inset 0 0 0 1px ${borderColor}`)};
-        `;
-      } else if (props.bgStyle === "underline") {
-        style += `
-          background: linear-gradient(to right, ${borderColor}, ${borderColor}) 0 100% no-repeat;
-          background-size: 100% 1px;
-          box-shadow: none;
-          ${ButtonStyles.elevationMixin(`inset 0 0 0 0 transparent`)};
-        `;
-      } else if (props.bgStyle === "transparent") {
-        style += `
-          background: linear-gradient(to right, ${borderColor}, ${borderColor}) 0 100% no-repeat;
-          background-size: 100% 1px;
-          box-shadow: none;
-          ${ButtonStyles.elevationMixin(`inset 0 0 0 0 transparent`)};
-        `;
+        &:hover, &:focus {
+          box-shadow: inset 0 0 0 1px ${colors.borderColorHover};
+          ${elevationMixin(`inset 0 0 0 1px ${colors.borderColorHover}`)};
+        }
+
+        &:active, &:active:hover, &:active:focus,
+        &.active, &.active:hover, &.active:focus {
+          box-shadow: inset 0 0 0 1px ${colors.borderColorActive};
+          ${elevationMixin(`inset 0 0 0 1px ${colors.borderColorActive}`)};
+        }
+      `;
+    } else if (props.bgStyle === "underline") {
+      style += `
+        background: linear-gradient(to right, ${colors.borderColor}, ${colors.borderColor}) 0 100% no-repeat;
+        background-size: 100% 1px;
+        box-shadow: none;
+        ${elevationMixin(`inset 0 0 0 0 transparent`)};
+
+        &:hover, &:focus {
+          background: linear-gradient(to right, ${colors.borderColorHover}, ${colors.borderColorHover}) 0 100% no-repeat;
+        }
+
+        &:active, &:active:hover, &:active:focus,
+        &.active, &.active:hover, &.active:focus {
+          background: linear-gradient(to right, ${colors.borderColorActive}, ${colors.borderColorActive}) 0 100% no-repeat;
+        }
+      `;
+    } else if (props.bgStyle === "transparent") {
+      style += `
+        background: linear-gradient(to right, ${colors.borderColor}, ${colors.borderColor}) 0 100% no-repeat;
+        background-size: 100% 1px;
+        box-shadow: none;
+        ${elevationMixin(`inset 0 0 0 0 transparent`)};
+
+        &:hover, &:focus {
+          background: linear-gradient(to right, ${colors.borderColorHover}, ${colors.borderColorHover}) 0 100% no-repeat;
+        }
+
+        &:active, &:active:hover, &:active:focus,
+        &.active, &.active:hover, &.active:focus {
+          background: linear-gradient(to right, ${colors.borderColorActive}, ${colors.borderColorActive}) 0 100% no-repeat;
+        }
+      `;
+    }
+
+    return Css.css(`
+      &.color-schema-${colorSchema},
+      .color-schema-${colorSchema} &:not([class*="color-schema-"]) {
+        &.uu5-forms-button-error {
+          ${style}
+        }
+      }
+    `);
+  },
+  bgStyles: props => {
+    // Only default colorSchema is here right now. Others are in .less files
+    // let styles = Object.keys(UU5.Environment.colorSchemaMap).map(colorSchema => {
+    let styles = ["default"].map(colorSchema => {
+      let colors = ButtonStyles.getColors(colorSchema, props.bgStyle);
+
+      if (!colors) {
+        // Something went wrong. Maybe the colorSchema doesn't exist
+        return "";
       }
 
-      style += `
+      let dropdownSplitColor = colors.textColor;
+      let dropdownSplitColorHover = colors.textColorHover;
+      let dropdownSplitColorActive = colors.textColorActive;
+
+      if (props.bgStyle === "transparent") {
+        dropdownSplitColor = colors.borderColor;
+        dropdownSplitColorHover = colors.borderColorHover;
+        dropdownSplitColorActive = colors.borderColorActive;
+      }
+
+      let style = `
+        background-color: ${colors.bgColor};
+        color: ${colors.textColor};
+        border-color: ${colors.borderColor};
+
+        &::before {
+          border-color: ${colors.textColor};
+        }
+
+        + .uu5-bricks-dropdown-link-split {
+          background-color: ${dropdownSplitColor};
+        }
+
+        &:hover, &:focus {
+          background-color: ${colors.bgColorHover};
+          color: ${colors.textColorHover};
+          border-color: ${colors.borderColorHover};
+
+          &::before {
+            border-color: ${colors.borderColorHover};
+          }
+
+          + .uu5-bricks-dropdown-link-split {
+            background-color: ${dropdownSplitColorHover};
+          }
+        }
+
+        &:active, &:active:hover, &:active:focus,
+        &.active, &.active:hover, &.active:focus {
+          background-color: ${colors.bgColorActive};
+          color: ${colors.textColorActive};
+          border-color: ${colors.borderColorActive};
+
+          &::before {
+            border-color: ${colors.borderColorActive};
+          }
+
+          + .uu5-bricks-dropdown-link-split {
+            background-color: ${dropdownSplitColorActive};
           }
         }
       `;
 
-      return style;
+      return `
+        ${colorSchema === "default" ? `&,` : ""}
+        &.color-schema-${colorSchema},
+        .color-schema-${colorSchema} &:not([class*="color-schema-"]) {
+          ${style}
+        }
+      `;
     });
 
     return Css.css(styles.join(" "));
@@ -97,14 +210,15 @@ export const Button = createReactClass({
     tagName: ns.name("Button"),
     nestingLevel: "smallBox",
     classNames: {
-      main: ns.css("button"),
+      main: Css.css`border: none;` + " " + ns.css("button"),
       bgStyle: ns.css("button-"),
       text: ns.css("button-text"),
       block: ns.css("button-block"),
       active: "active",
       size: ns.css("button-"),
       baseline: ns.css("button-baseline"),
-      errorButton: Styles.errorButton
+      errorStyles: Styles.errorStyles,
+      bgStyles: Styles.bgStyles
     },
     defaults: {
       content: "Button",
@@ -332,7 +446,7 @@ export const Button = createReactClass({
       (this.isPressed() ? " " + this.getClassName("active") : "") +
       (this.props.baseline ? " " + this.getClassName("baseline") : "");
 
-    mainAttrs.className += " " + this.getClassName("errorButton");
+    mainAttrs.className += " " + this.getClassName("errorStyles") + " " + this.getClassName("bgStyles");
 
     if (this.props.elevation) {
       mainAttrs.className += " " + ClassNames.elevation + this.props.elevation;

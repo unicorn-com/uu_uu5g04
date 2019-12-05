@@ -2,13 +2,15 @@
 
 exports[`UU5.Bricks.Panel ifc testing collapse(setStateCallBack) 1`] = `
 <div
-  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-expanded uu5-bricks-panel-size-m"
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-expanded uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="panel0"
   name="Panel"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="primary"
     _onClick={[Function]}
     content="Large team"
     iconAlign={null}
@@ -33,13 +35,15 @@ exports[`UU5.Bricks.Panel ifc testing collapse(setStateCallBack) 1`] = `
 
 exports[`UU5.Bricks.Panel ifc testing collapse(setStateCallBack) 2`] = `
 <div
-  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="panel0"
   name="Panel"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="primary"
     _onClick={[Function]}
     content="Large team"
     iconAlign={null}
@@ -63,13 +67,15 @@ exports[`UU5.Bricks.Panel ifc testing collapse(setStateCallBack) 2`] = `
 
 exports[`UU5.Bricks.Panel ifc testing expand(setStateCallBack) 1`] = `
 <div
-  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="panel0"
   name="Panel"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="primary"
     _onClick={[Function]}
     content="Large team"
     iconAlign={null}
@@ -93,13 +99,15 @@ exports[`UU5.Bricks.Panel ifc testing expand(setStateCallBack) 1`] = `
 
 exports[`UU5.Bricks.Panel ifc testing expand(setStateCallBack) 2`] = `
 <div
-  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-expanded uu5-bricks-panel-size-m"
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-expanded uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="panel0"
   name="Panel"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="primary"
     _onClick={[Function]}
     content="Large team"
     iconAlign={null}
@@ -124,13 +132,15 @@ exports[`UU5.Bricks.Panel ifc testing expand(setStateCallBack) 2`] = `
 
 exports[`UU5.Bricks.Panel ifc testing isExpandable() return false 1`] = `
 <div
-  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-common-disabled uu5-bricks-panel-size-m"
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-common-disabled uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="panel0"
   name="Panel"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="primary"
     _onClick={[Function]}
     content="Large team"
     iconAlign={null}
@@ -158,13 +168,15 @@ exports[`UU5.Bricks.Panel ifc testing isExpandable() return false 1`] = `
 
 exports[`UU5.Bricks.Panel ifc testing isExpandable() return true 1`] = `
 <div
-  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="panel0"
   name="Panel"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="primary"
     _onClick={[Function]}
     content="Large team"
     iconAlign={null}
@@ -188,13 +200,15 @@ exports[`UU5.Bricks.Panel ifc testing isExpandable() return true 1`] = `
 
 exports[`UU5.Bricks.Panel ifc testing isExpandable() return true when alwaysExpanded is true and disabled is false 1`] = `
 <div
-  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="panel0"
   name="Panel"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="primary"
     _onClick={[Function]}
     content="Large team"
     iconAlign={null}
@@ -218,13 +232,15 @@ exports[`UU5.Bricks.Panel ifc testing isExpandable() return true when alwaysExpa
 
 exports[`UU5.Bricks.Panel ifc testing isExpanded() return false 1`] = `
 <div
-  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="panel0"
   name="Panel"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="primary"
     _onClick={[Function]}
     content="Large team"
     iconAlign={null}
@@ -248,13 +264,15 @@ exports[`UU5.Bricks.Panel ifc testing isExpanded() return false 1`] = `
 
 exports[`UU5.Bricks.Panel ifc testing isExpanded() return true 1`] = `
 <div
-  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-expanded uu5-bricks-panel-size-m"
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-expanded uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="panel0"
   name="Panel"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="primary"
     _onClick={[Function]}
     content="Large team"
     iconAlign={null}
@@ -279,13 +297,15 @@ exports[`UU5.Bricks.Panel ifc testing isExpanded() return true 1`] = `
 
 exports[`UU5.Bricks.Panel ifc testing setExpandedValue(false, setStateCallBack) 1`] = `
 <div
-  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="panel0"
   name="Panel"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="primary"
     _onClick={[Function]}
     content="Large team"
     iconAlign={null}
@@ -309,13 +329,15 @@ exports[`UU5.Bricks.Panel ifc testing setExpandedValue(false, setStateCallBack) 
 
 exports[`UU5.Bricks.Panel ifc testing setExpandedValue(true, setStateCallBack) 1`] = `
 <div
-  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="panel0"
   name="Panel"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="primary"
     _onClick={[Function]}
     content="Large team"
     iconAlign={null}
@@ -339,13 +361,15 @@ exports[`UU5.Bricks.Panel ifc testing setExpandedValue(true, setStateCallBack) 1
 
 exports[`UU5.Bricks.Panel ifc testing toggle(setStateCallBack) 1`] = `
 <div
-  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="panel0"
   name="Panel"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="primary"
     _onClick={[Function]}
     content="Large team"
     iconAlign={null}
@@ -369,13 +393,15 @@ exports[`UU5.Bricks.Panel ifc testing toggle(setStateCallBack) 1`] = `
 
 exports[`UU5.Bricks.Panel ifc testing toggle(setStateCallBack) 2`] = `
 <div
-  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-expanded uu5-bricks-panel-size-m"
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-expanded uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="panel0"
   name="Panel"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="primary"
     _onClick={[Function]}
     content="Large team"
     iconAlign={null}
@@ -400,13 +426,15 @@ exports[`UU5.Bricks.Panel ifc testing toggle(setStateCallBack) 2`] = `
 
 exports[`UU5.Bricks.Panel ifc testing toggle(setStateCallBack) 3`] = `
 <div
-  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="panel0"
   name="Panel"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="primary"
     _onClick={[Function]}
     content="Large team"
     iconAlign={null}

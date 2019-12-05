@@ -114,7 +114,7 @@ export const FloatingBox = createReactClass({
     let innerWidth = window.innerWidth;
     if (this.state.left !== undefined && this.state.left !== null) {
       !synthetic && (newState.left = rect.left);
-      if (innerWidth - rect.width - (synthetic ? this.state.left : rect.left) > 0) {
+      if (innerWidth - rect.width - (synthetic ? this.state.left : rect.left) >= 0) {
         newState.renderLeft = rect.left;
         newState.renderRight = null;
       } else {
@@ -124,7 +124,7 @@ export const FloatingBox = createReactClass({
     }
     if (this.state.top !== undefined && this.state.top !== null) {
       !synthetic && (newState.top = rect.top);
-      if (innerHeight - rect.height - (synthetic ? this.state.top : rect.top) > 0) {
+      if (innerHeight - rect.height - (synthetic ? this.state.top : rect.top) >= 0) {
         newState.renderTop = rect.top;
         newState.renderBottom = null;
       } else {
@@ -133,9 +133,10 @@ export const FloatingBox = createReactClass({
       }
     }
     if (this.state.right !== undefined && this.state.right !== null) {
-      !synthetic && (newState.right = rect.right);
-      if ((synthetic ? innerWidth - rect.right : rect.left) > 0) {
-        newState.renderRight = innerWidth - rect.right;
+      let right = parseInt(this.state.right);
+      !synthetic && (newState.right = innerWidth - rect.right);
+      if ((synthetic ? innerWidth - rect.width - (innerWidth - rect.right) : rect.left) >= 0) {
+        newState.renderRight = Math.min(right, innerWidth - rect.width);
         newState.renderLeft = null;
       } else {
         newState.renderLeft = 0;
@@ -144,8 +145,8 @@ export const FloatingBox = createReactClass({
     }
     if (this.state.bottom !== undefined && this.state.bottom !== null) {
       !synthetic && (newState.bottom = rect.bottom);
-      if ((synthetic ? innerHeight - rect.height : rect.top) > 0) {
-        newState.renderBottom = innerHeight - rect.bottom;
+      if ((synthetic ? innerHeight - rect.height : rect.top) >= 0) {
+        newState.renderBottom = Math.max(0, innerHeight - rect.bottom);
         newState.renderTop = null;
       } else {
         newState.renderTop = 0;
@@ -224,6 +225,10 @@ export const FloatingBox = createReactClass({
     newState.renderTop = newState.top;
     newState.renderBottom = null;
 
+    if (this.state.right !== undefined && this.state.right !== null) {
+      newState.right = window.innerWidth - newState.left - elementWidth;
+    }
+
     this.setState(newState);
 
     if (typeof this.props.onDragMove === "function") {
@@ -237,6 +242,7 @@ export const FloatingBox = createReactClass({
       let splitPosition = this.props.position.split(" ");
       let checkIfTopOrBottom = parseInt(splitPosition[0]);
       let checkIfLeftOrRight = parseInt(splitPosition[1]);
+
       if (checkIfTopOrBottom >= 0 && !Object.is(-0, checkIfTopOrBottom)) {
         result.top = splitPosition[0];
       } else {

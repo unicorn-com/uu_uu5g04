@@ -350,6 +350,7 @@ export const LanguageSelector = UU5.Common.LsiMixin.withContext(
           baseline={this.props.baseline}
         >
           {this._getItems()}
+          {this.props.children}
         </Dropdown>
       );
       // }

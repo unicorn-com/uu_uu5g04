@@ -140,6 +140,7 @@ export * from "./session-watch.js";
 export * from "./q-r-code.js";
 
 export * from "./portal-modal.js";
+export * from "./rich-link.js";
 
 // Aliases
 import * as UU5 from "uu5g04";
@@ -152,3 +153,5 @@ export const bookKitUrl =
   "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page";
 
 import "./color-schema/default.less";
+
+import "./internal/bg-styles.js";

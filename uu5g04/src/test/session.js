@@ -11,7 +11,7 @@ const TEST_IDENTITY = {
 };
 
 // minimal Session class (copying API of OIDC Session)
-export class MockSession {
+class MockSession {
   constructor() {
     this.mockReset();
   }

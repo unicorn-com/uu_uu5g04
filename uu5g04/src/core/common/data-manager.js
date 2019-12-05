@@ -77,8 +77,9 @@ export const DataManager = createReactClass({
 
   componentDidMount() {
     this.load(this.props.data, false)
-      // promise must have catch, in other way there is written error to console
-      .catch(() => {});
+    // promise must have catch, in other way there is written error to console
+      .catch(() => {
+      });
     // this._startReload();
   },
 
@@ -170,17 +171,17 @@ export const DataManager = createReactClass({
         call(data || null)
           .then(data => {
             this.isRendered() &&
-              this.setState(
-                { viewState: "ready", errorState: null, errorData: null, data },
-                typeof resolve === "function" ? () => resolve(data) : undefined
-              );
+            this.setState(
+              { viewState: "ready", errorState: null, errorData: null, data },
+              typeof resolve === "function" ? () => resolve(data) : undefined
+            );
           })
           .catch(errorData => {
             this.isRendered() &&
-              this.setState(
-                { errorData, viewState: "error", errorState },
-                typeof reject === "function" ? () => reject(errorData) : undefined
-              );
+            this.setState(
+              { errorData, viewState: "error", errorState },
+              typeof reject === "function" ? () => reject(errorData) : undefined
+            );
           });
       }
     });
@@ -206,10 +207,10 @@ export const DataManager = createReactClass({
         .then(dtoOut => {
           // update just client data - data returns from server was not displayed
           this.isRendered() &&
-            this.setState(
-              { viewState: "ready", errorState: null, errorData: null, data: dtoOut },
-              this._getPromiseCallback(resolve, dtoOut)
-            );
+          this.setState(
+            { viewState: "ready", errorState: null, errorData: null, data: dtoOut },
+            this._getPromiseCallback(resolve, dtoOut)
+          );
         })
         .catch(errorData => {
           this.showError("serverLoad", "updating", { context: { dtoOut: errorData } });
@@ -223,7 +224,7 @@ export const DataManager = createReactClass({
           this.showError("serverLoad", "updating", { context: { dtoOut: errorData } });
           let newState = { viewState: "error", errorState: "update", errorData };
           this.isRendered() &&
-            this.setState({ ...newState, errorData, data: oldData }, this._getPromiseCallback(reject, errorData));
+          this.setState({ ...newState, errorData, data: oldData }, this._getPromiseCallback(reject, errorData));
         });
     }
   },
@@ -281,17 +282,15 @@ export const DataManager = createReactClass({
 DataManager.createContext = () => {
   const DataManagerContext = Context.create();
 
-  const createProvider = (props, ref) => (
+  const createProvider = ({ children, ...props }, ref) => (
     <DataManager {...props} ref_={ref}>
-      {values => <DataManagerContext.Provider value={values}>{props.children}</DataManagerContext.Provider>}
+      {values => <DataManagerContext.Provider value={values}>{children}</DataManagerContext.Provider>}
     </DataManager>
   );
 
   const Provider = React.forwardRef(createProvider);
 
-  const Consumer = props => <DataManagerContext.Consumer>{props.children}</DataManagerContext.Consumer>;
-
-  return { Provider, Consumer };
+  return { Provider, Consumer: DataManagerContext.Consumer, Context: DataManagerContext };
 };
 
 export default DataManager;

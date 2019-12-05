@@ -210,17 +210,15 @@ export const Loader = createReactClass({
 Loader.createContext = () => {
   const LoaderContext = Context.create();
 
-  const createProvider = (props, ref) => (
+  const createProvider = ({ children, ...props }, ref) => (
     <Loader {...props} ref_={ref}>
-      {values => <LoaderContext.Provider value={values}>{props.children}</LoaderContext.Provider>}
+      {values => <LoaderContext.Provider value={values}>{children}</LoaderContext.Provider>}
     </Loader>
   );
 
   const Provider = React.forwardRef(createProvider);
 
-  const Consumer = props => <LoaderContext.Consumer>{props.children}</LoaderContext.Consumer>;
-
-  return { Provider, Consumer };
+  return { Provider, Consumer: LoaderContext.Consumer, Context: LoaderContext };
 };
 
 export default Loader;

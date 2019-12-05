@@ -1050,6 +1050,21 @@ Tools.isInClasses = function(classes, regExp) {
   return result;
 };
 
+Tools.addClassName = function(newClassName, classes) {
+  if (classes && classes.indexOf(newClassName) > -1) {
+    classes = classes.replace(newClassName, "");
+    classes = classes.replace(REGEXP.whiteSpaces, " ");
+  }
+
+  if (classes) {
+    classes += " " + newClassName;
+  } else {
+    classes = newClassName;
+  }
+
+  return classes;
+};
+
 Tools.buildCounterCallback = function(callback, count) {
   /*
    Method wrap (function) callback by newCallBack.
@@ -2232,7 +2247,19 @@ Tools.parseDate = (stringDate = null, opt = {}) => {
 
   let result = null;
   if (typeof stringDate === "string") {
-    // parse the date according to the format string (fallback to coutnry then to default format by locale)
+    // attempt to match a shortened date formats
+    if (stringDate.match(/^\d{4}-\d{2}$/)) {
+      // matches YYYY-MM
+      return Tools.parseMonth(stringDate);
+    } else if (stringDate.match(/^\d{2}\/\d{4}$/)) {
+      // matches MM/YYYY
+      return Tools.parseMonth(stringDate);
+    } else if (stringDate.match(/^\d{4}$/)) {
+      // matches YYYY
+      return Tools.parseYear(stringDate);
+    }
+
+    // parse the date according to the format string (fallback to country then to default format by locale)
     format = format || Environment.dateTimeFormat[country] || Tools.getLocaleFormat(country || Tools.getLanguage());
     format = format
       .replace(/m+/gi, "MM")
@@ -2337,26 +2364,78 @@ Tools.parseDate = (stringDate = null, opt = {}) => {
   return result;
 };
 
-Tools.compareDates = (firstDate, secondDate, method) => {
+Tools.parseMonth = stringDate => {
+  let day = 1;
+  let month, year, parts;
+
+  if (/^\d{2}\/\d{4}$/.test(stringDate)) {
+    // 02/2019
+    parts = stringDate.split("/");
+    month = parts[0] - 1;
+    year = parts[1];
+  } else if (/^\d{4}-\d{2}$/.test(stringDate)) {
+    // 2019-02
+    parts = stringDate.split("-");
+    month = parts[1] - 1;
+    year = parts[0];
+  }
+
+  return new Date(year, month, day);
+};
+
+Tools.parseYear = stringDate => {
+  let day = 1;
+  let month = 0;
+  let year = parseInt(stringDate.match(/^\d{4}$/)[0]);
+
+  return new Date(year, month, day);
+};
+
+Tools.compareDates = (firstDate, secondDate, method, depth = "seconds") => {
   let result = false;
 
   if (firstDate && secondDate) {
-    firstDate = Date.UTC(
-      firstDate.getFullYear(),
-      firstDate.getMonth(),
-      firstDate.getDate(),
-      firstDate.getHours(),
-      firstDate.getMinutes(),
-      firstDate.getSeconds()
-    );
-    secondDate = Date.UTC(
-      secondDate.getFullYear(),
-      secondDate.getMonth(),
-      secondDate.getDate(),
-      secondDate.getHours(),
-      secondDate.getMinutes(),
-      secondDate.getSeconds()
-    );
+    let firstMonth = 0;
+    let firstDay = 0;
+    let firstHour = 0;
+    let firstMinute = 0;
+    let firstSecond = 0;
+
+    let secondMonth = 0;
+    let secondDay = 0;
+    let secondHour = 0;
+    let secondMinute = 0;
+    let secondSecond = 0;
+
+    if (depth === "seconds" || depth === "minutes" || depth === "hours" || depth === "days" || depth === "months") {
+      firstMonth = firstDate.getMonth();
+      secondMonth = secondDate.getMonth();
+    }
+
+    if (depth === "seconds" || depth === "minutes" || depth === "hours" || depth === "days") {
+      firstDay = firstDate.getDate();
+      secondDay = secondDate.getDate();
+    }
+
+    if (depth === "seconds" || depth === "minutes" || depth === "hours") {
+      firstHour = firstDate.getHours();
+      secondHour = secondDate.getHours();
+    }
+
+    if (depth === "seconds" || depth === "minutes") {
+      firstMinute = firstDate.getMinutes();
+      secondMinute = secondDate.getMinutes();
+    }
+
+    if (depth === "seconds") {
+      firstSecond = firstDate.getSeconds();
+      secondSecond = secondDate.getSeconds();
+    }
+
+    firstDate = Date.UTC(firstDate.getFullYear(), firstMonth, firstDay, firstHour, firstMinute, firstSecond);
+
+    secondDate = Date.UTC(secondDate.getFullYear(), secondMonth, secondDay, secondHour, secondMinute, secondSecond);
+
     if (method === "equals") {
       result = firstDate === secondDate;
     } else if (method === "greater") {

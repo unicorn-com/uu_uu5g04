@@ -1,9 +1,6 @@
 import * as UU5 from "uu5g04";
 
-const TIME_FORMAT_AM = "AM";
-const TIME_FORMAT_PM = "PM";
 const TIME_FORMAT_12 = "12";
-const TIME_FORMAT_24 = "24";
 
 export const DateTools = {
   setupLimits: props => {
@@ -82,6 +79,25 @@ export const DateTools = {
 
     return result;
   },
+  setDate(date, day, month, year) {
+    let days = date.getDate();
+    let months = date.getMonth();
+    let years = date.getFullYear();
+
+    if (typeof day === "number") {
+      days = day;
+    }
+
+    if (typeof month === "number") {
+      months = month;
+    }
+
+    if (typeof year === "number") {
+      years = year;
+    }
+
+    return new Date(years, months, days);
+  },
   increaseDate(date, dayIncrease, monthIncrease, yearIncrease) {
     let days = date.getDate();
     let months = date.getMonth();
@@ -119,6 +135,72 @@ export const DateTools = {
     }
 
     return new Date(years, months, days);
+  },
+  getShortenedInputDateString(date, separator = "/", excludeMonth) {
+    if (date instanceof Date) {
+      let year = "" + date.getFullYear();
+      let month = UU5.Common.Tools.rjust(date.getMonth() + 1, 2, "0");
+
+      if (excludeMonth) {
+        return year;
+      } else {
+        return `${month}${separator}${year}`;
+      }
+    } else {
+      return null;
+    }
+  },
+  getShortenedValueDateString(date, separator = "-", excludeMonth) {
+    if (date instanceof Date) {
+      let year = "" + date.getFullYear();
+      let month = UU5.Common.Tools.rjust(date.getMonth() + 1, 2, "0");
+
+      if (excludeMonth) {
+        return year;
+      } else {
+        return `${year}${separator}${month}`;
+      }
+    } else {
+      return null;
+    }
+  },
+  getCalendarStartView(props) {
+    let startView;
+
+    if (props.step === "days" || !props.step) {
+      startView = props.calendarStartView || "days";
+    } else if (props.step === "months") {
+      startView = props.calendarStartView !== "days" ? props.calendarStartView || "months" : "months";
+    } else if (props.step === "years") {
+      startView = "years";
+    }
+
+    return startView;
+  },
+  getDisplayDates(dateValue, view) {
+    let dateFrom;
+    let dateTo;
+
+    if (Array.isArray(dateValue)) {
+      dateFrom = dateValue[0];
+    } else if (dateValue) {
+      dateFrom = dateValue;
+    } else {
+      dateFrom = new Date();
+    }
+
+    if (view === "days" || !view) {
+      dateTo = DateTools.increaseDate(dateFrom, undefined, 1);
+    } else if (view === "months") {
+      dateTo = DateTools.increaseDate(dateFrom, undefined, undefined, 1);
+    } else if (view === "years") {
+      dateTo = DateTools.increaseDate(dateFrom, undefined, undefined, 10);
+    }
+
+    return {
+      dateFrom,
+      dateTo
+    };
   }
 };
 

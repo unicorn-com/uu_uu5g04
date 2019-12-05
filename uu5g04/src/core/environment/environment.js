@@ -504,7 +504,8 @@ Environment.iconLibraries = {
   uu5: "https://cdn.plus4u.net/uu-uu5g04-icons/1.0.0/uu5g04_icons.min.css",
   plus4u: "https://cdn.plus4u.net/plus4u-iconsg01/1.0.0/plus4u_iconsg01.min.css",
   plus4u5: "https://cdn.plus4u.net/uu-plus4u5g01-icons/1.0.0/uu_plus4u5g01_icons.min.css",
-  uubml: "https://cdn.plus4u.net/uu-uubmldrawg03-icons/1.0.0/uubmldrawg03_icons.min.css"
+  uubml: "https://cdn.plus4u.net/uu-uubmldrawg03-icons/1.0.0/uubmldrawg03_icons.min.css",
+  uubmlicon: "https://uuappg01-eu-w-1.plus4u.net/uu-uubmldraw-stencilcatalogueg01/c168bd044ce044d48ba284c89eeb573b/stencil/getCss?code="
 };
 
 Environment.IconManager = new IconManager(Environment.iconLibraries);

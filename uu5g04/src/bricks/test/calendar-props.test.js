@@ -49,6 +49,9 @@ const CONFIG = {
     minSelection: {
       values: ["days", "months", "years"]
     },
+    step: {
+      values: ["days", "months", "years"]
+    },
     showTodayButton: {
       values: [true, false]
     },

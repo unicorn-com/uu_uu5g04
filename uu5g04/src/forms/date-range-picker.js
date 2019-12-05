@@ -25,6 +25,7 @@ import Label from "./internal/label.js";
 import Context from "./form-context.js";
 
 import "./date-range-picker.less";
+import DateTools from "./internal/date-tools.js";
 //@@viewOff:imports
 
 export const DateRangePicker = Context.withContext(
@@ -110,7 +111,8 @@ export const DateRangePicker = Context.withContext(
       labelTo: PropTypes.any,
       pickerLabelFrom: PropTypes.any,
       pickerLabelTo: PropTypes.any,
-      innerLabel: PropTypes.bool
+      innerLabel: PropTypes.bool,
+      step: PropTypes.oneOf(["days", "months", "years"])
     },
     //@@viewOff:propTypes
 
@@ -137,7 +139,8 @@ export const DateRangePicker = Context.withContext(
         labelTo: null,
         pickerLabelFrom: undefined,
         pickerLabelTo: undefined,
-        innerLabel: false
+        innerLabel: false,
+        step: "days"
       };
     },
     //@@viewOff:getDefaultProps
@@ -145,8 +148,10 @@ export const DateRangePicker = Context.withContext(
     //@@viewOn:reactLifeCycle
     getInitialState() {
       let propValue = Array.isArray(this.props.value) && this.props.value.length > 1 ? this.props.value : null;
+      propValue = this.parseDate(propValue);
       let fromInputValue = null;
       let toInputValue = null;
+      let calendarView = DateTools.getCalendarStartView(this.props);
 
       if (propValue) {
         let devValidation = this._validateDevProps(propValue, this.props.dateFrom, this.props.dateTo);
@@ -156,8 +161,8 @@ export const DateRangePicker = Context.withContext(
           else if (Array.isArray(propValue) && propValue.length === 1) propValue = null;
 
           if (propValue) {
-            fromInputValue = UU5.Common.Tools.getDateString(this._getFromValue(propValue));
-            toInputValue = UU5.Common.Tools.getDateString(this._getToValue(propValue));
+            fromInputValue = this._getDateString(this._getFromValue(propValue));
+            toInputValue = this._getDateString(this._getToValue(propValue));
           }
         } else {
           propValue = null;
@@ -165,39 +170,44 @@ export const DateRangePicker = Context.withContext(
         }
       }
       let fromDisplayDate, toDisplayDate;
+      let displayDates = DateTools.getDisplayDates(propValue, calendarView);
+      let today = new Date(Date.now());
+
       if (propValue) {
-        fromDisplayDate = this._getFromValue(propValue);
-        toDisplayDate = new Date(fromDisplayDate.getFullYear(), fromDisplayDate.getMonth() + 1, 1);
+        fromDisplayDate = displayDates.dateFrom;
+        toDisplayDate = displayDates.dateTo;
       } else if (this.props.dateFrom || this.props.dateTo) {
-        let today = new Date(Date.now());
         if (
           (!this.props.dateFrom ||
             (this.props.dateFrom && this._compareDates(today, this.props.dateFrom, "greater"))) &&
           (!this.props.dateTo || (this.props.dateTo && this._compareDates(today, this.props.dateTo, "lesser")))
         ) {
-          fromDisplayDate = this._getFromValue(today);
-          toDisplayDate = new Date(fromDisplayDate.getFullYear(), fromDisplayDate.getMonth() + 1, 1);
+          displayDates = DateTools.getDisplayDates(today, calendarView);
+          fromDisplayDate = displayDates.dateFrom;
+          toDisplayDate = displayDates.dateTo;
         } else {
-          fromDisplayDate = this._getFromValue(this.parseDate(this.props.dateFrom || this.props.dateTo));
-          toDisplayDate = new Date(fromDisplayDate.getFullYear(), fromDisplayDate.getMonth() + 1, 1);
+          displayDates = DateTools.getDisplayDates(this.parseDate(this.props.dateFrom || this.props.dateTo), calendarView);
+          fromDisplayDate = displayDates.dateFrom;
+          toDisplayDate = displayDates.dateTo;
         }
       } else {
-        let today = new Date(Date.now());
-        fromDisplayDate = this._getFromValue(today);
-        toDisplayDate = new Date(fromDisplayDate.getFullYear(), fromDisplayDate.getMonth() + 1, 1);
+        displayDates = DateTools.getDisplayDates(today, calendarView);
+        fromDisplayDate = displayDates.dateFrom;
+        toDisplayDate = displayDates.dateTo;
       }
 
       return {
-        fromDisplayDate: fromDisplayDate,
-        fromInputValue: fromInputValue,
+        fromDisplayDate,
+        fromInputValue,
         fromFeedback: { feedback: "initial", message: null },
-        toDisplayDate: toDisplayDate,
-        toInputValue: toInputValue,
+        toDisplayDate,
+        toInputValue,
         toFeedback: { feedback: "initial", message: null },
         country: this.props.country,
         format: this.props.format,
         toInputActive: false,
-        tempValue: null
+        tempValue: null,
+        calendarView
       };
     },
 
@@ -205,7 +215,7 @@ export const DateRangePicker = Context.withContext(
       this._hasFocus = false;
 
       let value;
-      let devValidation = this._validateDevProps(this.props.value, this.props.dateFrom, this.props.dateTo);
+      let devValidation = this._validateDevProps(this.parseDate(this.props.value), this.props.dateFrom, this.props.dateTo);
       if (devValidation.valid) {
         if (this.state.value) {
           // value is probably valid
@@ -216,7 +226,7 @@ export const DateRangePicker = Context.withContext(
           }
         } else if (this.props.value) {
           // value probably isnt valid
-          value = this.props.value;
+          value = this.parseDate(this.props.value);
 
           if (this.props.onValidate && typeof this.props.onValidate === "function") {
             this._validateOnChange({ value, event: null, component: this });
@@ -386,7 +396,8 @@ export const DateRangePicker = Context.withContext(
         date = this.state.value;
       }
 
-      return this.parseDate(date);
+      date = this.parseDate(date);
+      return this._getOutputValue(date);
     },
 
     getInputWidth_(opt) {
@@ -407,7 +418,7 @@ export const DateRangePicker = Context.withContext(
 
     onChangeDefault_(opt, setStateCallback) {
       if (opt._data.type === "calendar") {
-        this._onCalendarChangeDefault(opt, setStateCallback);
+        this._onCalendarValueChangeDefault(opt, setStateCallback);
       } else if (opt._data.type === "input") {
         this._onInputChangeDefault(opt, setStateCallback);
       }
@@ -447,6 +458,7 @@ export const DateRangePicker = Context.withContext(
       let stateValue = !Array.isArray(propValue) || propValue.length < 2 ? null : propValue;
 
       if (stateValue) {
+        stateValue = this.parseDate(stateValue);
         let devValidation = this._validateDevProps(stateValue, this.props.dateFrom, this.props.dateTo);
         if (devValidation.valid) {
           let validateResult = this._validateDateRangeResult({ value: stateValue });
@@ -456,11 +468,31 @@ export const DateRangePicker = Context.withContext(
         }
       }
 
-      return this.parseDate(stateValue);
+      return stateValue;
     },
     //@@viewOff:overriding
 
     //@@viewOn:private
+    _getOutputValue(value) {
+      if (value) {
+        let parsedDate = this._parseDate(value);
+
+        if (this.props.step === "years" || this.props.step === "months") {
+          if (Array.isArray(parsedDate)) {
+            value = parsedDate.map(singleValue =>
+              DateTools.getShortenedValueDateString(singleValue, "-", this.props.step === "years")
+            );
+          } else {
+            value = DateTools.getShortenedValueDateString(parsedDate, "-", this.props.step === "years");
+          }
+        } else {
+          value = parsedDate;
+        }
+      }
+
+      return value;
+    },
+
     _isSorXs() {
       return this.isS() || this.isXs();
     },
@@ -479,6 +511,19 @@ export const DateRangePicker = Context.withContext(
       }
 
       return date;
+    },
+
+    _getDateString(date, props = this.props) {
+      if (props.step === "years") {
+        return DateTools.getShortenedInputDateString(date, "/", true);
+      } else if (props.step === "months") {
+        return DateTools.getShortenedInputDateString(date, "/");
+      } else {
+        let format = this.state ? this.state.format : props.format;
+        let country = this.state ? this.state.country : props.country;
+
+        return UU5.Common.Tools.getDateString(date, { format, country });
+      }
     },
 
     _getDateFrom(date) {
@@ -559,6 +604,7 @@ export const DateRangePicker = Context.withContext(
 
       if (opt) {
         let date = this.parseDate(opt.value);
+        date = this._getOutputValue(date);
 
         if (!opt.value || date) {
           if (this._compareDates(date, props.dateFrom, "lesser")) {
@@ -611,7 +657,7 @@ export const DateRangePicker = Context.withContext(
 
       if (Array.isArray(value) && value.length === 2) {
         // Currently only 2 values are relevant
-        if (this._compareDates(this.parseDate(value[0]), value[1], "greater")) {
+        if (this._compareDates(value[0], value[1], "greater")) {
           result.valid = false;
           result.error = "firstGreaterThanSecond";
         } else if (dateFrom && dateTo && this._compareDates(dateFrom, dateTo, "greater")) {
@@ -647,6 +693,13 @@ export const DateRangePicker = Context.withContext(
     },
 
     _onClose(setStateCallback) {
+      let displayDates = DateTools.getDisplayDates(this.state.value || this.state.tempValue, this.state.calendarView);
+      this.setState({
+        calendarView: DateTools.getCalendarStartView(this.props),
+        fromDisplayDate: displayDates.dateFrom,
+        toDisplayDate: displayDates.dateTo
+      });
+
       if (this._popover) {
         this._popover.close(setStateCallback);
       } else if (typeof setStateCallback === "function") {
@@ -706,17 +759,39 @@ export const DateRangePicker = Context.withContext(
       }
     },
 
+    _onCalendarViewChange(opt) {
+      let fromDisplayDate = this.state.fromDisplayDate;
+      let toDisplayDate = this.state.toDisplayDate;
+      let displayData = opt._data;
+
+      if (opt.view === "days") {
+        fromDisplayDate = DateTools.setDate(fromDisplayDate, displayData.day, displayData.month - 1, displayData.year);
+        toDisplayDate = DateTools.increaseDate(fromDisplayDate, undefined, 1);
+      } else if (opt.view === "months") {
+        if (this.state.calendarView === "days") {
+          toDisplayDate = DateTools.increaseDate(fromDisplayDate, undefined, undefined, 1);
+        } else if (this.state.calendarView === "years") {
+          fromDisplayDate = DateTools.setDate(fromDisplayDate, undefined, displayData.month - 1, displayData.year);
+          toDisplayDate = DateTools.increaseDate(fromDisplayDate, undefined, undefined, 1);
+        }
+      } else if (opt.view === "years") {
+        toDisplayDate = DateTools.increaseDate(fromDisplayDate, undefined, undefined, 10);
+      }
+
+      this.setState({ calendarView: opt.view, fromDisplayDate, toDisplayDate });
+    },
+
     _onChange(opt) {
       opt.component = this;
 
       if (opt._data.type === "calendar") {
-        this._onCalendarChange(opt);
+        this._onCalendarValueChange(opt);
       } else if (opt._data.type === "input") {
         this._onInputChange(opt);
       }
     },
 
-    _onCalendarChange(opt) {
+    _onCalendarValueChange(opt) {
       let value = opt.value;
       let executeOnChange = false;
 
@@ -734,7 +809,7 @@ export const DateRangePicker = Context.withContext(
         value = [value];
       }
 
-      opt.value = value;
+      opt.value = this._getOutputValue(value);
       opt._data.value = value;
       opt._data.executeOnChange = executeOnChange;
       if (executeOnChange && typeof this.props.onChange === "function") {
@@ -749,9 +824,7 @@ export const DateRangePicker = Context.withContext(
       // If the second (right) value (date) isnt greater than the first (left) value (date), then
       // the value isnt valid and thus it basically is null. It means that onChange cannot be executed
       let newValue = this.parseDate(opt.value);
-      let formatedDate = newValue
-        ? UU5.Common.Tools.getDateString(newValue, { format: this.state.format, country: this.state.country })
-        : null;
+      let formatedDate = newValue ? this._getDateString(newValue) : null;
       let state = {
         fromFeedback: this.state.fromFeedback,
         toFeedback: this.state.toFeedback
@@ -774,11 +847,24 @@ export const DateRangePicker = Context.withContext(
           validateResult = this._getInputValidationResult(fromInputValue, newValue);
 
           if (!isSameMonth && validateResult.toFeedback.feedback !== "error") {
-            state.toDisplayDate = newValue;
-            let fromDisplayDate = this._cloneDate(newValue);
-            fromDisplayDate.setDate(1);
-            fromDisplayDate.setMonth(newValue.getMonth() - 1);
-            state.fromDisplayDate = fromDisplayDate;
+            let displayData;
+
+            if (this.props.step === "months") {
+              displayData = DateTools.getDisplayDates(
+                DateTools.decreaseDate(newValue, undefined, undefined, 1),
+                this.state.calendarView
+              );
+            } else if (this.props.step === "years") {
+              displayData = DateTools.getDisplayDates(
+                DateTools.decreaseDate(newValue, undefined, undefined, 10),
+                this.state.calendarView
+              );
+            } else {
+              displayData = DateTools.getDisplayDates(DateTools.decreaseDate(newValue, 0, 1), this.state.calendarView);
+            }
+
+            state.fromDisplayDate = displayData.dateFrom;
+            state.toDisplayDate = displayData.dateTo;
           }
         } else {
           fromInputValue = this.parseDate(newValue);
@@ -786,11 +872,9 @@ export const DateRangePicker = Context.withContext(
           validateResult = this._getInputValidationResult(newValue, toInputValue);
 
           if (validateResult.fromFeedback.feedback !== "error") {
-            state.fromDisplayDate = newValue;
-            let toDisplayDate = this._cloneDate(newValue);
-            toDisplayDate.setDate(1);
-            toDisplayDate.setMonth(newValue.getMonth() + 1);
-            state.toDisplayDate = toDisplayDate;
+            let displayData = DateTools.getDisplayDates(newValue, this.state.calendarView);
+            state.fromDisplayDate = displayData.dateFrom;
+            state.toDisplayDate = displayData.dateTo;
           }
         }
 
@@ -868,7 +952,7 @@ export const DateRangePicker = Context.withContext(
       if (!this.isComputedDisabled() && !this.isReadOnly()) {
         opt._data.state = state;
         opt._data.executeOnChange = executeOnChange;
-        opt.value = state.value;
+        opt.value = this._getOutputValue(state.value);
         if (executeOnChange && typeof this.props.onChange === "function") {
           this.props.onChange(opt);
         } else {
@@ -877,7 +961,7 @@ export const DateRangePicker = Context.withContext(
       }
     },
 
-    _onCalendarChangeDefault(opt, setStateCallback) {
+    _onCalendarValueChangeDefault(opt, setStateCallback) {
       let right = (this.isXs() || this.isS()) && opt._data._right;
       let value = right && Array.isArray(opt.value) && opt.value.length === 1 ? [null, opt.value[0]] : opt.value;
       let innerState = this._getInnerState(value);
@@ -929,12 +1013,15 @@ export const DateRangePicker = Context.withContext(
           _callCallback = false;
           this._validateOnChange(opt, false, setStateCallback);
         } else if (this.shouldValidateRequired()) {
-          if (this.props.required && !opt.value) {
+          let value = opt._data.state ? opt._data.state.value : null;
+
+          if (this.props.required && !value) {
             opt.feedback = "error";
             opt.message = this.props.requiredMessage || this.getLsiComponent("requiredMessage");
           }
+
           opt.required = this.props.required;
-          let result = this.getChangeFeedback(opt);
+          let result = this.getChangeFeedback({ ...opt, value });
           _callCallback = false;
           this.setState({ ...opt._data.state, ...result }, setStateCallback);
         }
@@ -969,14 +1056,8 @@ export const DateRangePicker = Context.withContext(
           delete fromInputValidateResult.value;
           delete toInputValidateResult.value;
           state.value = [fromValue, toValue];
-          state.fromInputValue = UU5.Common.Tools.getDateString(fromValue, {
-            format: this.state.format,
-            country: this.state.country
-          });
-          state.toInputValue = UU5.Common.Tools.getDateString(toValue, {
-            format: this.state.format,
-            country: this.state.country
-          });
+          state.fromInputValue = this._getDateString(fromValue);
+          state.toInputValue = this._getDateString(toValue);
         } else if (Array.isArray(value)) {
           // value is array
           fromValue = this.parseDate(value[0]);
@@ -1008,62 +1089,35 @@ export const DateRangePicker = Context.withContext(
                 if (!this._compareDates(toValue, fromValue, "lesser")) {
                   state.value = [fromValue, toValue];
                   state.tempValue = null;
-                  state.fromInputValue = UU5.Common.Tools.getDateString(fromValue, {
-                    format: this.state.format,
-                    country: this.state.country
-                  });
-                  state.toInputValue = UU5.Common.Tools.getDateString(toValue, {
-                    format: this.state.format,
-                    country: this.state.country
-                  });
+                  state.fromInputValue = this._getDateString(fromValue);
+                  state.toInputValue = this._getDateString(toValue);
                 } else {
                   state.value = null;
                   state.tempValue = null;
-                  state.fromInputValue = UU5.Common.Tools.getDateString(fromValue, {
-                    format: this.state.format,
-                    country: this.state.country
-                  });
+                  state.fromInputValue = this._getDateString(fromValue);
                   state.toInputValue = null;
                 }
               } else {
                 state.value = null;
                 state.tempValue = fromValue;
-                state.fromInputValue = UU5.Common.Tools.getDateString(fromValue, {
-                  format: this.state.format,
-                  country: this.state.country
-                });
+                state.fromInputValue = this._getDateString(fromValue);
               }
             } else {
               state.value = null;
               state.tempValue = fromValue;
-              state.fromInputValue = UU5.Common.Tools.getDateString(fromValue, {
-                format: this.state.format,
-                country: this.state.country
-              });
+              state.fromInputValue = this._getDateString(fromValue);
               state.toInputValue = null;
             }
           } else if (!fromValue) {
             state.value = null;
             state.tempValue = null;
-            state.fromInputValue = UU5.Common.Tools.getDateString(fromValue, {
-              format: this.state.format,
-              country: this.state.country
-            });
-            state.toInputValue = UU5.Common.Tools.getDateString(toValue, {
-              format: this.state.format,
-              country: this.state.country
-            });
+            state.fromInputValue = this._getDateString(fromValue);
+            state.toInputValue = this._getDateString(toValue);
           } else {
             state.value = [fromValue, toValue];
             state.tempValue = null;
-            state.fromInputValue = UU5.Common.Tools.getDateString(fromValue, {
-              format: this.state.format,
-              country: this.state.country
-            });
-            state.toInputValue = UU5.Common.Tools.getDateString(toValue, {
-              format: this.state.format,
-              country: this.state.country
-            });
+            state.fromInputValue = this._getDateString(fromValue);
+            state.toInputValue = this._getDateString(toValue);
           }
         }
 
@@ -1078,17 +1132,10 @@ export const DateRangePicker = Context.withContext(
         state.toFeedback = initialFeedback;
       }
 
-      if (adjustDisplayDate && state.value) {
-        if (fromValue && toValue) {
-          state.fromDisplayDate = fromValue;
-          state.toDisplayDate = new Date(this._cloneDate(fromValue).setMonth(fromValue.getMonth() + 1));
-        } else if (fromValue) {
-          state.fromDisplayDate = fromValue;
-          state.toDisplayDate = new Date(this._cloneDate(fromValue).setMonth(fromValue.getMonth() + 1));
-        } else if (toValue) {
-          state.toDisplayDate = toValue;
-          state.fromDisplayDate = new Date(this._cloneDate(toValue).setMonth(toValue.getMonth() - 1));
-        }
+      if (adjustDisplayDate) {
+        let displayDates = DateTools.getDisplayDates(state.value || state.tempValue, this.state.calendarView);
+        state.fromDisplayDate = displayDates.dateFrom;
+        state.toDisplayDate = displayDates.dateTo;
       }
 
       return state;
@@ -1163,10 +1210,8 @@ export const DateRangePicker = Context.withContext(
     },
 
     _goToToday() {
-      let leftDate = new Date();
-      let rightDate = new Date();
-      rightDate.setMonth(rightDate.getMonth() + 1);
-      this.setState({ fromDisplayDate: leftDate, toDisplayDate: rightDate });
+      let displayDates = DateTools.getDisplayDates(new Date(), this.state.calendarView);
+      this.setState({ fromDisplayDate: displayDates.dateFrom, toDisplayDate: displayDates.dateTo });
     },
 
     _getWeeksInMonth(date) {
@@ -1181,18 +1226,22 @@ export const DateRangePicker = Context.withContext(
     },
 
     _onNextSelection() {
-      let fromDisplayDate = this._cloneDate(this.state.toDisplayDate);
-      let toDisplayDate = this._cloneDate(this.state.toDisplayDate);
-      toDisplayDate.setMonth(this.state.toDisplayDate.getMonth() + 1);
-      this.setState({ fromDisplayDate: fromDisplayDate, toDisplayDate: toDisplayDate });
+      let displayDates = DateTools.getDisplayDates(this.state.toDisplayDate, this.state.calendarView);
+      this.setState({ fromDisplayDate: displayDates.dateFrom, toDisplayDate: displayDates.dateTo });
     },
 
     _onPrevSelection() {
-      let fromDisplayDate = this._cloneDate(this.state.fromDisplayDate);
-      fromDisplayDate.setMonth(this.state.fromDisplayDate.getMonth() - 1);
-      let toDisplayDate = this._cloneDate(this.state.toDisplayDate);
-      toDisplayDate.setMonth(this.state.toDisplayDate.getMonth() - 1);
-      this.setState({ fromDisplayDate: fromDisplayDate, toDisplayDate: toDisplayDate });
+      let dateFrom = this.state.fromDisplayDate;
+
+      if (this.state.calendarView === "days") {
+        dateFrom = DateTools.decreaseDate(this.state.fromDisplayDate, undefined, 1);
+      } else if (this.state.calendarView === "months") {
+        dateFrom = DateTools.decreaseDate(this.state.fromDisplayDate, undefined, undefined, 1);
+      } else if (this.state.calendarView === "years") {
+        dateFrom = DateTools.decreaseDate(this.state.fromDisplayDate, undefined, undefined, 10);
+      }
+      let displayDates = DateTools.getDisplayDates(dateFrom, this.state.calendarView);
+      this.setState({ fromDisplayDate: displayDates.dateFrom, toDisplayDate: displayDates.dateTo });
     },
 
     _onFocus(opt) {
@@ -1201,6 +1250,15 @@ export const DateRangePicker = Context.withContext(
       if (!this._hasFocus) {
         this._addKeyEvents();
         this._hasFocus = true;
+
+        if (opt._data) {
+          opt._data.value = opt.value;
+          opt.value = this._getOutputValue(opt.value);
+        } else {
+          opt._data = { value: opt.value };
+          opt.value = this._getOutputValue(opt.value);
+        }
+
         if (!this.isReadOnly() && !this.isComputedDisabled()) {
           if (typeof this.props.onFocus === "function") {
             setStateCallback = () => this.props.onFocus(opt);
@@ -1222,8 +1280,16 @@ export const DateRangePicker = Context.withContext(
       if (this._hasFocus) {
         this._hasFocus = false;
         let state = { toInputActive: false };
-
         let callback;
+
+        if (opt._data) {
+          opt._data.value = opt.value;
+          opt.value = this._getOutputValue(opt.value);
+        } else {
+          opt._data = { value: opt.value };
+          opt.value = this._getOutputValue(opt.value);
+        }
+
         if (typeof this.props.onBlur === "function") {
           callback = opt => this.props.onBlur(opt);
         } else {
@@ -1461,40 +1527,9 @@ export const DateRangePicker = Context.withContext(
       if (value && value.length === 2) {
         firstDate = this._cloneDate(value[0]);
         secondDate = this._cloneDate(value[1]);
-        let multiMonth = !this._isSameMonth(firstDate, secondDate);
-
-        if (multiMonth) {
-          value = [firstDate, secondDate];
-        } else {
-          if (right) {
-            if (this._isSameMonth(firstDate, this.state.toDisplayDate)) {
-              // value = value;
-            } else {
-              value = null;
-            }
-          } else {
-            if (this._isSameMonth(firstDate, this.state.fromDisplayDate)) {
-              // value = value;
-            } else {
-              value = null;
-            }
-          }
-        }
+        value = [firstDate, secondDate];
       } else if (this.state.tempValue) {
-        firstDate = this._cloneDate(this.state.tempValue);
-        if (right) {
-          if (this.state.toDisplayDate.getMonth() === firstDate.getMonth()) {
-            value = this.state.tempValue;
-          } else {
-            value = null;
-          }
-        } else {
-          if (this.state.fromDisplayDate.getMonth() === firstDate.getMonth()) {
-            value = this.state.tempValue;
-          } else {
-            value = null;
-          }
-        }
+        value = this.state.tempValue;
       }
 
       return value;
@@ -1512,9 +1547,12 @@ export const DateRangePicker = Context.withContext(
         selectionMode: "range",
         onChange: opt =>
           this._onChange({ ...opt, ...{ _data: { right: this.state.toInputActive || right, type: "calendar" } } }),
+        onViewChange: this._onCalendarViewChange,
+        view: this.state.calendarView,
         hideWeekNumber: this.props.hideWeekNumber,
         hideOtherSections: true,
-        colorSchema: this.getColorSchema()
+        colorSchema: this.getColorSchema(),
+        step: this.props.step
       };
 
       if (mobile) {
@@ -1712,17 +1750,22 @@ export const DateRangePicker = Context.withContext(
             shouldOpen = handleMobileClick(e, clickData);
           }
 
-          let opt = { value: this.state.value || null, event: e, component: this };
+          let opt = {
+            value: this.state.value,
+            event: e,
+            component: this,
+            _data: {}
+          };
 
           if (clickData.input) {
             e.preventDefault();
 
             if (clickData.fromInput) {
-              opt._data = { toInputActive: false };
+              opt._data.toInputActive = false;
 
               if (this.props.disableBackdrop && this.isOpen() && !this.state.toInputActive) shouldClose = true;
             } else if (clickData.toInput) {
-              opt._data = { toInputActive: true };
+              opt._data.toInputActive = true;
 
               if (this.props.disableBackdrop && this.isOpen() && this.state.toInputActive) shouldClose = true;
             } else if (this.isOpen()) {
@@ -1753,19 +1796,14 @@ export const DateRangePicker = Context.withContext(
       let secondDate = this._getToValue();
 
       if (firstDate && secondDate) {
-        let stringDate1 = UU5.Common.Tools.getDateString(firstDate, {
-          format: this.state.format,
-          country: this.state.country
-        });
-        let stringDate2 = UU5.Common.Tools.getDateString(secondDate, {
-          format: this.state.format,
-          country: this.state.country
-        });
-        let separator = this.state.format
-          ? this.state.format.match(/[^dmy]/i)[0]
-          : stringDate1
-          ? stringDate1.match(/\W/)[0]
-          : ".";
+        let stringDate1 = this._getDateString(firstDate);
+        let stringDate2 = this._getDateString(secondDate);
+        let separator =
+          this.state.format && this.props.step === "days"
+            ? this.state.format.match(/[^dmy]/i)[0]
+            : stringDate1
+            ? stringDate1.match(/\W/) && stringDate1.match(/\W/)[0]
+            : ".";
         let partialyShortenValue = separator === "." && !UU5.Common.Tools.isDateReversed();
         let regExp;
 
@@ -1783,10 +1821,7 @@ export const DateRangePicker = Context.withContext(
 
         result = stringDate1 + (stringDate1 ? " - " : "") + stringDate2;
       } else if (firstDate) {
-        let stringDate1 = UU5.Common.Tools.getDateString(firstDate, {
-          format: this.state.format,
-          country: this.state.country
-        });
+        let stringDate1 = this._getDateString(firstDate);
         result = stringDate1;
       }
 

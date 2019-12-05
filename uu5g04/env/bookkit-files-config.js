@@ -4,10 +4,13 @@ module.exports = {
   FILES: {
     // "test00000": "doc/bricks/accordion/e00.html",
   },
+  // npm run docUpdateExamples
+  // npm run docUpdateSources
   COMPONENTS: [
     // "UU5.BlockLayout.Block",
     // "UU5.BlockLayout.Line",
     // "UU5.BlockLayout.Row",
+    // "UU5.BlockLayout.Column",
     // "UU5.BlockLayout.Text",
     // "UU5.BlockLayout.Tile",
     // "UU5.Bricks.Accordion",
@@ -92,6 +95,7 @@ module.exports = {
     // "UU5.Bricks.Rating",
     // "UU5.Bricks.Resize",
     // "UU5.Bricks.ResizeItem",
+    // "UU5.Bricks.RichLink",
     // "UU5.Bricks.Row",
     // "UU5.Bricks.ScreenSize",
     // "UU5.Bricks.ScreenSizeItem",

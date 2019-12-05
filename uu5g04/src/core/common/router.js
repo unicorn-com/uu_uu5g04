@@ -317,7 +317,6 @@ export const Router = createReactClass({
   _showPageLeaveConfirmation(continueWithPageLeaveCallback) {
     if (this._displayLeaveConfirmation) {
       let processed = false;
-      let customModalProps;
       let modalOpen = false;
       let processResultFn = confirmed => {
         if (!processed) {
@@ -332,6 +331,7 @@ export const Router = createReactClass({
       };
 
       if (this._pageLeaveModal) {
+        let customModalProps;
         if (typeof this._getPageLeaveModalProps === "function") {
           customModalProps = this._getPageLeaveModalProps(processResultFn);
         }
@@ -340,10 +340,6 @@ export const Router = createReactClass({
           let modalProps = Object.assign(this._getPageLeaveModalDefaultProps(processResultFn), customModalProps);
           modalOpen = true;
           this._pageLeaveModal.open(modalProps);
-        } else {
-          processed = true;
-          this.allowPageLeave();
-          continueWithPageLeaveCallback();
         }
       } else {
         let wantToLeave = confirm(this.getLsiValue("pageLeaveConfirmationBody"));

@@ -15,6 +15,7 @@ import React from "react";
 import SessionMixin from "./session-mixin.js";
 import Error from "./error.js";
 import Environment from "../environment/environment.js";
+import Tools from "./tools.js";
 
 const AUTH = "authenticated";
 const NOT_AUTH = "notAuthenticated";
@@ -47,7 +48,6 @@ export const IdentityMixin = {
 
   //@@viewOn:reactLifeCycle
   getInitialState() {
-    // initialize
     this.registerMixin("UU5.Common.IdentityMixin");
 
     let identityState = {
@@ -77,12 +77,10 @@ export const IdentityMixin = {
               this.getId(),
               this._onChangeIdentity
             );
-            //session.addIdentityChangeListener(this._onChangeIdentity);
           }
         });
       } else {
         window.UU5.Environment.EventListener.addIdentityChangeListener(session, this.getId(), this._onChangeIdentity);
-        //session.addIdentityChangeListener(this._onChangeIdentity);
       }
     }
   },
@@ -90,7 +88,6 @@ export const IdentityMixin = {
   componentWillUnmount() {
     let session = this.getSession();
     session && window.UU5.Environment.EventListener.removeIdentityChangeListener(session, this.getId());
-    //session && session.removeIdentityChangeListener(this._onChangeIdentity);
   },
   //@@viewOff:reactLifeCycle
 
@@ -135,13 +132,18 @@ export const IdentityMixin = {
   changeIdentity(setStateCallback) {
     let session = this.getSession();
     session &&
-      this.setState(
-        {
-          identity: session.getIdentity(),
-          identityFeedback: this._setAuthenticated(session)
-        },
-        setStateCallback
-      );
+      this.setState(state => {
+        let result;
+        let identity = session.getIdentity();
+        let identityFeedback = this._getIdentityFeedback(session);
+        if (
+          identityFeedback !== state.identityFeedback ||
+          (identity !== state.identity && !Tools.deepEqual(identity, state.identity))
+        ) {
+          result = { identity, identityFeedback };
+        }
+        return result;
+      }, setStateCallback);
     return this;
   },
 
@@ -174,7 +176,7 @@ export const IdentityMixin = {
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _setAuthenticated(session) {
+  _getIdentityFeedback(session) {
     let result = PENDING;
     if (session) {
       result = session.isAuthenticated() ? AUTH : NOT_AUTH;

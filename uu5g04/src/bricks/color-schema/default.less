@@ -3,64 +3,6 @@
 @import '../../color-schema/default.less';
 @import '../../color-schema/common.less';
 
-@import "../bg-style-func.less";
-.bg-style(
-  @color-schema,
-
-  transparent, // bg filled
-  @dark-text, // color filled
-  transparent, // border filled
-  @grey-200, // bg filled hover/focus
-  @dark-text, // text filled hover/focus
-  @grey-200, // border filled hover/focus
-  @grey-300, // bg filled active
-  @dark-text, // color filled active
-  @grey-300, // border filled active
-
-  transparent, // bg outline
-  @dark-text, // text outline
-  @grey-400, // border outline
-  @grey-200, // bg outline hover/focus
-  @dark-text, // text outline hover/focus
-  @grey-400, // border outline hover/focus
-  @grey-300, // bg outline active
-  @dark-text, // text outline active
-  @grey-400 // border outline active
-);
-
-@import "../panel-func.less";
-.panel(
-  @color-schema,
-
-  @grey-300, // bg filled
-  @dark-text, // text filled
-  @grey-300, // border filled
-  @grey-400, // bg filled hover/focus
-  @dark-text, // text filled hover/focus
-  @grey-400, // border filled hover/focus
-  @grey-500, // bg filled active
-  @dark-text, // text filled active
-  @grey-500, // border filled active
-
-  transparent, // bg inverted
-  @dark-text, // text inverted
-  @grey-400, // border inverted
-  @grey-200, // bg inverted hover/focus
-  @dark-text, // text inverted hover/focus
-  @grey-400, // border inverted hover/focus
-  @grey-300, // bg inverted active
-  @dark-text, // text inverted active
-  @grey-400, // border inverted active
-
-  transparent, //bg
-  @dark-text,  // color
-  @grey-400,  // bg hover
-  @dark-text,  // color hover
-  @grey-500,  // bg active
-  @dark-text   // color active
-
-);
-
 @import "../alert-func.less";
 .alert(
   @color-schema,
@@ -97,36 +39,6 @@
   @dark-text, // barva textu v pruhledne variante citace
   fade(@black, 54%), // barva textu footeru v průhledné variantě
   fade(@black, 54%) // barva textu footeru v plné variantě
-);
-
-@import "../button-func.less";
-.button(
-  @color-schema,
-
-  @grey-300, // bg filled
-  @dark-text, // text filled
-  @grey-400, // border filled
-  @grey-400, // bg filled hover/focus
-  @dark-text, // text filled hover/focus
-  @grey-500, // border filled hover/focus
-  @grey-500, // bg filled active
-  @dark-text, // text filled active
-  @grey-500, // border filled active
-
-  @white, // bg inverted
-  @dark-text, // text inverted
-  @grey-400, // border inverted
-  @grey-200, // bg inverted hover/focus
-  @dark-text, // text inverted hover/focus
-  @grey-400, // border inverted hover/focus
-  @grey-300, // bg inverted active
-  @dark-text, // text inverted active
-  @grey-400, // border inverted active
-
-  transparent, // bg transparent
-
-  @dark-text, // text link
-  @black // text link active
 );
 
 @import "../calendar-func.less";

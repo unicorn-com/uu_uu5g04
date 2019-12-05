@@ -198,7 +198,12 @@ export const Icon = createReactClass({
       let splitter = this.props.icon.split("-");
       if (splitter) {
         let iconsName = splitter[0];
-        UU5.Environment.IconManager.addIcons(iconsName);
+        if (iconsName === "uubmlicon") {
+          const stencil = splitter[1];
+          UU5.Environment.DocumentManager.addUniqueCss(UU5.Environment.iconLibraries.uubmlicon + stencil);
+        } else {
+          UU5.Environment.IconManager.addIcons(iconsName);
+        }
         mainProps.className += " " + iconsName;
       }
       mainProps.className += " " + this.props.icon;

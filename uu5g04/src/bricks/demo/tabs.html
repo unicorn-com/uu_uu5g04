@@ -58,6 +58,27 @@
   import UU5 from "uu5g04";
   import "uu5g04-bricks";
 
+  const Logger = createReactClass({
+    componentDidMount() {
+      console.log(`mountType: ${this.props.mountType}; tab ${this.props.item} mounted.`);
+    },
+
+    componentWillUnmount() {
+      console.log(`mountType: ${this.props.mountType}; tab ${this.props.item} unmounted.`);
+    },
+
+    render() {
+      return (
+        <div>
+          <UU5.Bricks.Label>Tab number {this.props.item}</UU5.Bricks.Label>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent
+          per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed,
+          est.
+        </div>
+      )
+    }
+  });
+
   let Page = createReactClass({
     _getTabs(items) {
       return items.map((item, i) => {
@@ -76,10 +97,7 @@
       return items.map((item, i) => {
         return (
           <UU5.Bricks.Tabs.Item key={i} name={`${i}`} header={`tab number ${item}`} disabled={ i == 1 ? this.state.disabledItem : false}  >
-            <UU5.Bricks.Label ref_={() => console.log(`mountType: ${mountType}; tab ${item} rendered.`)}>Tab number {item}</UU5.Bricks.Label>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent
-            per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed,
-            est.
+            <Logger item={item} mountType={mountType} />
           </UU5.Bricks.Tabs.Item>
         );
       });
@@ -88,13 +106,14 @@
     getInitialState() {
       return {
         disabledItem: false,
-        disabledTabs: false
+        disabledTabs: false,
+        activeName: "2"
       };
     },
 
     render() {
       return (
-        <UU5.Bricks.Container>
+        <UU5.Bricks.Container ref={(ref) => this._demoRoot = ref}>
           <UU5.Bricks.Section header="Size (with fade prop)" colorSchema="warning">
             <UU5.Bricks.Button onClick={() => {this.setState({ disabledTabs : !this.state.disabledTabs})}} content="Toggle disabled Tabs" colorSchema="default" />
             <UU5.Bricks.Button onClick={() => {this.setState({ disabledItem : !this.state.disabledItem})}} content="Toggle disabled Tabs Item" colorSchema="default"/>
@@ -203,26 +222,28 @@
             <UU5.Bricks.Ul>
               <UU5.Bricks.Li>
                 <UU5.Bricks.Header level={2} content="onFirstRender"/>
-                <UU5.Bricks.Tabs mountTabContent="onFirstRender" activeName="2">
+                <UU5.Bricks.Tabs mountTabContent="onFirstRender" activeName={this.state.activeName}>
                   {this._getTabsWithLogging("onFirstRender", [1, 2, 3])}
                 </UU5.Bricks.Tabs>
               </UU5.Bricks.Li>
 
               <UU5.Bricks.Li>
                 <UU5.Bricks.Header level={2} content="onFirstActive"/>
-                <UU5.Bricks.Tabs mountTabContent="onFirstActive" activeName="2">
+                <UU5.Bricks.Tabs mountTabContent="onFirstActive" activeName={this.state.activeName}>
                   {this._getTabsWithLogging("onFirstActive", [1, 2, 3])}
                 </UU5.Bricks.Tabs>
               </UU5.Bricks.Li>
 
               <UU5.Bricks.Li>
                 <UU5.Bricks.Header level={2} content="onActive"/>
-                <UU5.Bricks.Tabs mountTabContent="onActive" activeName="2">
+                <UU5.Bricks.Tabs mountTabContent="onActive" activeName={this.state.activeName}>
                   {this._getTabsWithLogging("onActive", [1, 2, 3])}
                 </UU5.Bricks.Tabs>
               </UU5.Bricks.Li>
             </UU5.Bricks.Ul>
           </UU5.Bricks.Section>
+          <UU5.Bricks.Button onClick={() => this._demoRoot.forceUpdate()} content="re-render root" />
+          <UU5.Bricks.Button onClick={() => this.setState({ activeName: "1" })} content="change active name" />
         </UU5.Bricks.Container>
       );
     }

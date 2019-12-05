@@ -224,6 +224,7 @@ export const Tabs = createReactClass({
   //@@viewOn:private
   _getState(props = this.props, state = this.state) {
     let result = {
+      renderedTabs: [],
       ...state,
       activeName: props.controlled || !state ? props.activeName : state.activeName,
       stacked: props.controlled || !state ? this._isStacked(this.getScreenSize(), props) : state.stacked
@@ -231,15 +232,42 @@ export const Tabs = createReactClass({
 
     let builtChildren = this.buildChildren(props);
     if (builtChildren) {
+      if (!Array.isArray(builtChildren)) {
+        builtChildren = [builtChildren];
+      }
       if (getMountTabContent(props) === MOUNT_TAB_CONTENT_VALUES.onFirstRender) {
         result.renderedTabs = builtChildren.map(tab => ({ id: tab.props.id, name: tab.props.name }));
-      } else if (result.activeName) {
+      } else if (getMountTabContent(props) === MOUNT_TAB_CONTENT_VALUES.onFirstActive) {
+        result.renderedTabs = result.renderedTabs.filter(tab =>
+          builtChildren.some(builtChild => builtChild.props.name === tab.name || builtChild.props.id === tab.id)
+        );
+
+        // check if active item is in result.renderedTabs and add it if needed
+        if (result.activeName) {
+          let activeItem = builtChildren
+            .map(tab => ({ id: tab.props.id, name: tab.props.name }))
+            .find(tab => tab.name === result.activeName || tab.id === result.activeName);
+
+          if (!result.renderedTabs.some(tab => tab.name === activeItem.name || tab.id === activeItem.id)) {
+            result.renderedTabs.push(activeItem);
+          }
+        }
+      } else if (getMountTabContent(props) === MOUNT_TAB_CONTENT_VALUES.onActive) {
         let activeItem = builtChildren.find(
           tab => tab.props.name === result.activeName || tab.props.id === result.activeName
         );
         result.renderedTabs = activeItem ? [{ id: activeItem.props.id, name: activeItem.props.name }] : [];
-      } else {
-        let { id, name } = builtChildren[0].props;
+      }
+
+      if (!result.renderedTabs || !result.renderedTabs.length) {
+        let activeIndex = 0;
+        if (result.activeName) {
+          activeIndex = builtChildren.findIndex(
+            tab => tab.props.name === result.activeName || tab.props.id === result.activeName
+          );
+        }
+
+        let { id, name } = builtChildren[activeIndex].props;
         result.renderedTabs = [{ id, name }];
       }
     }

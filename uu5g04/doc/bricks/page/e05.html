@@ -40,6 +40,9 @@
         padding: 31px;
       }
 
+      .left-test {
+        position: absolute;
+      }
     </style>
 
   </head>
@@ -67,7 +70,10 @@
             /*@@viewOn:0*/
             <UU5.Bricks.Page
               ref_={(page) => this._page = page}
-              type="1"
+              type="3"
+              leftResizable
+              leftRelative={"xl l m"}
+              isLeftOpen
               leftWrapperProps={{ style: { backgroundColor: '#fafafa' } }}
               top={
                 <UU5.Bricks.Div>
@@ -78,6 +84,7 @@
               bottom={<UU5.Bricks.Box colorSchema="grey">Bottom Panel</UU5.Bricks.Box>}
               left={
                 <UU5.Bricks.Div>
+                  <UU5.Bricks.Page.MenuButton className={"left-test"} />
                   <UU5.Bricks.Box colorSchema='primary' content='Left menu' />
                   <UU5.Bricks.Ul>
                     <UU5.Bricks.Li>
@@ -104,27 +111,11 @@
                   <UU5.Bricks.Paragraph /><br/>
                 </UU5.Bricks.Div>
               }
-              right={
-                <UU5.Bricks.Div>
-                  <UU5.Bricks.Box colorSchema='primary' content='Right menu' />
-                  <UU5.Bricks.Paragraph /><br/>
-                  <UU5.Bricks.Paragraph /><br/>
-                  <UU5.Bricks.Paragraph /><br/>
-                  <UU5.Bricks.Paragraph /><br/>
-                  <UU5.Bricks.Paragraph /><br/>
-                  <UU5.Bricks.Paragraph /><br/>
-                  <UU5.Bricks.Paragraph /><br/>
-                  <UU5.Bricks.Paragraph /><br/>
-                  <UU5.Bricks.Paragraph /><br/>
-                </UU5.Bricks.Div>
-              }
-              leftWidth="xs-20 s-20 m-15 l-15 xl-15"
+              leftWidth="!xs-20 !s-20 !m-15 !l-15 !xl-15"
               rightWidth="xs-20 s-20 m-15 l-15 xl-15"
               leftFixed={true}
               rightFixed={true}
               topFixed={"smart"}
-              bottomFixed={true}
-              topFixedHeight={35}
             >
               <UU5.Bricks.Container>
                 <UU5.Bricks.Header level="1" content="Page content" />

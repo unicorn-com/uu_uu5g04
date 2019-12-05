@@ -7,7 +7,7 @@
       color: @color;
 
       .@{bricks-name}-calendar-active {
-        &.@{bricks-name}-calendar-month, &.@{bricks-name}-calendar-year, .@{bricks-name}-calendar-day-cell-selection {
+        &.@{bricks-name}-calendar-month, &.@{bricks-name}-calendar-year, .@{bricks-name}-calendar-range-selection {
           background-color: @rangeStartEnd;
 
           &:not(.uu5-common-disabled) {
@@ -22,7 +22,9 @@
         }
       }
 
-      .@{bricks-name}-calendar-active-selection-start .@{bricks-name}-calendar-day-cell-selection {
+      .@{bricks-name}-calendar-active-selection-start .@{bricks-name}-calendar-range-selection,
+      .@{bricks-name}-calendar-month.@{bricks-name}-calendar-active-selection:not(.@{bricks-name}-calendar-another-section),
+      .@{bricks-name}-calendar-year.@{bricks-name}-calendar-active-selection:not(.@{bricks-name}-calendar-another-section) {
         background-color: @rangeBetween;
 
         .@{bricks-name}-calendar-day-cell {
@@ -41,7 +43,9 @@
         }
       }
 
-      .@{bricks-name}-calendar-active-selection-end .@{bricks-name}-calendar-day-cell-selection {
+      .@{bricks-name}-calendar-active-selection-end .@{bricks-name}-calendar-range-selection,
+      .@{bricks-name}-calendar-month.@{bricks-name}-calendar-active-selection:not(.@{bricks-name}-calendar-another-section),
+      .@{bricks-name}-calendar-year.@{bricks-name}-calendar-active-selection:not(.@{bricks-name}-calendar-another-section) {
         background-color: @rangeBetween;
 
         .@{bricks-name}-calendar-day-cell {
@@ -60,7 +64,9 @@
         }
       }
 
-      .@{bricks-name}-calendar-active-selection .@{bricks-name}-calendar-day-cell-selection {
+      .@{bricks-name}-calendar-active-selection .@{bricks-name}-calendar-range-selection,
+      .@{bricks-name}-calendar-month.@{bricks-name}-calendar-active-selection:not(.@{bricks-name}-calendar-another-section),
+      .@{bricks-name}-calendar-year.@{bricks-name}-calendar-active-selection:not(.@{bricks-name}-calendar-another-section) {
         background-color: @rangeBetween;
         color: @colorBetween;
 

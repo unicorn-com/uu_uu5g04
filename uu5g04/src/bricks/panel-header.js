@@ -17,12 +17,71 @@ import createReactClass from "create-react-class";
 import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
-const ClassNames = UU5.Common.ClassNames;
 
 import Icon from "./icon.js";
+import Css from "./internal/css.js";
+import PanelStyles from "./internal/panel-styles.js";
 
 import "./panel-header.less";
 //@@viewOff:imports
+
+const ClassNames = UU5.Common.ClassNames;
+const Styles = {
+  bgStyles: props => {
+    // Only default colorSchema is here right now. Others are in .less files
+    // let styles = Object.keys(UU5.Environment.colorSchemaMap).map(colorSchema => {
+    let styles = ["default"].map(colorSchema => {
+      let colors = PanelStyles.getColors(colorSchema, props._bgStyle);
+
+      if (!colors) {
+        // Something went wrong. Maybe the colorSchema doesn't exist
+        return "";
+      }
+
+      let style = `
+        &.uu5-bricks-panel-header {
+          color: ${colors.textColor};
+          background-color: ${colors.bgColor};
+          border-color: ${colors.borderColor};
+
+          &.uu5-bricks-panel-header-open-click {
+            ${PanelStyles.getHoverStyles(
+              colorSchema,
+              colors.bgColorActive,
+              colors.textColorActive,
+              colors.borderColorActive,
+              colors.bgColorHover,
+              colors.textColorHover,
+              colors.borderColorHover
+            )}
+          }
+
+          .uu5-bricks-panel-header-button-icon .uu5-bricks-button {
+            color: ${colors.buttonTextColor};
+            background-color: ${colors.buttonBgColor};
+            ${PanelStyles.getButtonActiveStyles(
+              colorSchema,
+              colors.buttonBgColorHover,
+              colors.buttonTextColorHover,
+              colors.buttonBgColorActive,
+              colors.buttonTextColorActive
+            )}
+          }
+        }
+      `;
+
+      return `
+        ${colorSchema === "default" ? `&,` : ""}
+        &.color-schema-${colorSchema},
+        .color-schema-${colorSchema}  &:not([class*="color-schema-"]) {
+          ${style}
+        }
+      `;
+    });
+
+    return Css.css(styles.join(" "));
+  }
+};
 
 export default createReactClass({
   //@@viewOn:mixins
@@ -48,7 +107,8 @@ export default createReactClass({
       openClickIcon: ns.css("panel-icon-open-click"),
       openClickHeader: ns.css("panel-header-open-click"),
       iconButton: ns.css("panel-header-button-icon"),
-      icon: ns.css("panel-header-icon")
+      icon: ns.css("panel-header-icon"),
+      bgStyles: Styles.bgStyles
     },
     defaults: {
       parentTagName: "UU5.Bricks.Panel"
@@ -175,6 +235,9 @@ export default createReactClass({
 
   _buildMainAttrs() {
     let mainAttrs = this.getMainAttrs();
+
+    mainAttrs.className += " " + this.getClassName("bgStyles");
+
     if (!this.props._disableHeaderClick) {
       if (this.props._icon && this.props.openClick === "icon") {
         mainAttrs.className += " " + this.getClassName().openClickIcon + " " + this.getClassName().click;

@@ -23,7 +23,8 @@
           "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
 
           "uu5g04": "/uu5g04.js",
-          "uu5g04-bricks": "/uu5g04-bricks.js"
+          "uu5g04-bricks": "/uu5g04-bricks.js",
+          "uu5g04-forms": "/uu5g04-forms.js",
         }
       });
 
@@ -52,9 +53,15 @@
       import ReactDOM from "react-dom";
       import UU5 from "uu5g04";
       import "uu5g04-bricks";
+      import "uu5g04-forms";
 
       var Page = createReactClass(
         {
+          getInitialState() {
+            return {
+              bgStyle: "filled"
+            };
+          },
           render: function () {
 
             let errorData = {
@@ -67,12 +74,19 @@
 
             return (
               <UU5.Bricks.Container>
+                <UU5.Forms.Select value={this.state.bgStyle} onChange={({value}) => this.setState({bgStyle: value})}>
+                  <UU5.Forms.Select.Option value="filled" />
+                  <UU5.Forms.Select.Option value="outline" />
+                  <UU5.Forms.Select.Option value="transparent" />
+                  <UU5.Forms.Select.Option value="underline" />
+                </UU5.Forms.Select>
                 <UU5.Bricks.LanguageSelector />
                 <UU5.Bricks.Header level="4">Error inline</UU5.Bricks.Header>
                 <span>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. <UU5.Bricks.Error
                   content="invalidToken"
                   inline
+                  bgStyle={this.state.bgStyle}
                 /> Nunc semper sagittis metus sed condimentum. Vivamus pellentesque urna nisl, vitae malesuada est egestas aliquam. Fusce nec nisl ut est pellentesque cursus et non erat. Nam porta semper nibh, et aliquam ex sodales ac. Nunc orci quam, consectetur et purus pharetra, finibus facilisis sapien.
                 </span>
 
@@ -82,6 +96,7 @@
                   content="invalidToken"
                   inline
                   silent
+                  bgStyle={this.state.bgStyle}
                 /> Nunc semper sagittis metus sed condimentum. Vivamus pellentesque urna nisl, vitae malesuada est egestas aliquam. Fusce nec nisl ut est pellentesque cursus et non erat. Nam porta semper nibh, et aliquam ex sodales ac. Nunc orci quam, consectetur et purus pharetra, finibus facilisis sapien.
                 </span>
 
@@ -91,6 +106,7 @@
                   errorData={errorData}
                   moreInfo
                   errorInfo="Kontaktujte prosím +4U Helpdesk"
+                  bgStyle={this.state.bgStyle}
                 />
 
                 <UU5.Bricks.Header level="4">Error moreInfo silent</UU5.Bricks.Header>
@@ -100,13 +116,14 @@
                   moreInfo
                   errorInfo="<uu5string/>Kontaktujte prosím <a href='/ahohj'>+4U Helpdesk</a>"
                   silent
+                  bgStyle={this.state.bgStyle}
                 />
 
                 <UU5.Bricks.Header level="4">Error errorData</UU5.Bricks.Header>
-                <UU5.Bricks.Error content='uu-oidc/invalidToken' errorData={errorData} />
+                <UU5.Bricks.Error content='uu-oidc/invalidToken' errorData={errorData} bgStyle={this.state.bgStyle} />
 
                 <UU5.Bricks.Header level="4">Error errorData silent</UU5.Bricks.Header>
-                <UU5.Bricks.Error content='uu-oidc/invalidToken' errorData={errorData} silent errorDataSpace={4} />
+                <UU5.Bricks.Error content='uu-oidc/invalidToken' errorData={errorData} silent errorDataSpace={4} bgStyle={this.state.bgStyle} />
               </UU5.Bricks.Container>
             );
           }

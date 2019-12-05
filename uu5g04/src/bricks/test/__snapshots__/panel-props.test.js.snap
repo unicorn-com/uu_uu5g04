@@ -61,12 +61,14 @@ exports[`UU5.Bricks.Panel alwaysExpanded=true 1`] = `
 
 exports[`UU5.Bricks.Panel checkGrammar=false 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -90,12 +92,14 @@ exports[`UU5.Bricks.Panel checkGrammar=false 1`] = `
 
 exports[`UU5.Bricks.Panel checkGrammar=true 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -119,12 +123,14 @@ exports[`UU5.Bricks.Panel checkGrammar=true 1`] = `
 
 exports[`UU5.Bricks.Panel checkHighlight=false 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -148,12 +154,14 @@ exports[`UU5.Bricks.Panel checkHighlight=false 1`] = `
 
 exports[`UU5.Bricks.Panel checkHighlight=true 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -177,12 +185,14 @@ exports[`UU5.Bricks.Panel checkHighlight=true 1`] = `
 
 exports[`UU5.Bricks.Panel checkSpaces=false 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -206,12 +216,14 @@ exports[`UU5.Bricks.Panel checkSpaces=false 1`] = `
 
 exports[`UU5.Bricks.Panel checkSpaces=true 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -235,12 +247,14 @@ exports[`UU5.Bricks.Panel checkSpaces=true 1`] = `
 
 exports[`UU5.Bricks.Panel className="my-classname" 1`] = `
 <div
-  className="uu5-bricks-panel my-classname uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel my-classname uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -264,12 +278,14 @@ exports[`UU5.Bricks.Panel className="my-classname" 1`] = `
 
 exports[`UU5.Bricks.Panel colorSchema="brown" 1`] = `
 <div
-  className="color-schema-brown uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-brown uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="brown"
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -293,12 +309,14 @@ exports[`UU5.Bricks.Panel colorSchema="brown" 1`] = `
 
 exports[`UU5.Bricks.Panel colorSchema="brown-rich" 1`] = `
 <div
-  className="color-schema-brown-rich uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-brown-rich uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="brown-rich"
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -322,12 +340,14 @@ exports[`UU5.Bricks.Panel colorSchema="brown-rich" 1`] = `
 
 exports[`UU5.Bricks.Panel colorSchema="cyan" 1`] = `
 <div
-  className="color-schema-cyan uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-cyan uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="cyan"
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -351,12 +371,14 @@ exports[`UU5.Bricks.Panel colorSchema="cyan" 1`] = `
 
 exports[`UU5.Bricks.Panel colorSchema="cyan-rich" 1`] = `
 <div
-  className="color-schema-cyan-rich uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-cyan-rich uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="cyan-rich"
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -380,12 +402,14 @@ exports[`UU5.Bricks.Panel colorSchema="cyan-rich" 1`] = `
 
 exports[`UU5.Bricks.Panel colorSchema="default" 1`] = `
 <div
-  className="color-schema-default uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-default uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="default"
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -409,12 +433,14 @@ exports[`UU5.Bricks.Panel colorSchema="default" 1`] = `
 
 exports[`UU5.Bricks.Panel colorSchema="green" 1`] = `
 <div
-  className="color-schema-green uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-green uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="green"
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -438,12 +464,14 @@ exports[`UU5.Bricks.Panel colorSchema="green" 1`] = `
 
 exports[`UU5.Bricks.Panel colorSchema="green-rich" 1`] = `
 <div
-  className="color-schema-green-rich uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-green-rich uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="green-rich"
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -467,12 +495,14 @@ exports[`UU5.Bricks.Panel colorSchema="green-rich" 1`] = `
 
 exports[`UU5.Bricks.Panel colorSchema="grey" 1`] = `
 <div
-  className="color-schema-grey uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-grey uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="grey"
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -496,12 +526,14 @@ exports[`UU5.Bricks.Panel colorSchema="grey" 1`] = `
 
 exports[`UU5.Bricks.Panel colorSchema="grey-rich" 1`] = `
 <div
-  className="color-schema-grey-rich uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-grey-rich uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="grey-rich"
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -525,12 +557,14 @@ exports[`UU5.Bricks.Panel colorSchema="grey-rich" 1`] = `
 
 exports[`UU5.Bricks.Panel colorSchema="orange" 1`] = `
 <div
-  className="color-schema-orange uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-orange uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="orange"
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -554,12 +588,14 @@ exports[`UU5.Bricks.Panel colorSchema="orange" 1`] = `
 
 exports[`UU5.Bricks.Panel colorSchema="orange-rich" 1`] = `
 <div
-  className="color-schema-orange-rich uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-orange-rich uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="orange-rich"
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -583,12 +619,14 @@ exports[`UU5.Bricks.Panel colorSchema="orange-rich" 1`] = `
 
 exports[`UU5.Bricks.Panel colorSchema="pink" 1`] = `
 <div
-  className="color-schema-pink uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-pink uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="pink"
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -612,12 +650,14 @@ exports[`UU5.Bricks.Panel colorSchema="pink" 1`] = `
 
 exports[`UU5.Bricks.Panel colorSchema="pink-rich" 1`] = `
 <div
-  className="color-schema-pink-rich uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-pink-rich uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="pink-rich"
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -641,12 +681,14 @@ exports[`UU5.Bricks.Panel colorSchema="pink-rich" 1`] = `
 
 exports[`UU5.Bricks.Panel colorSchema="purple" 1`] = `
 <div
-  className="color-schema-purple uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-purple uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="purple"
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -670,12 +712,14 @@ exports[`UU5.Bricks.Panel colorSchema="purple" 1`] = `
 
 exports[`UU5.Bricks.Panel colorSchema="purple-rich" 1`] = `
 <div
-  className="color-schema-purple-rich uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-purple-rich uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="purple-rich"
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -699,12 +743,14 @@ exports[`UU5.Bricks.Panel colorSchema="purple-rich" 1`] = `
 
 exports[`UU5.Bricks.Panel colorSchema="red" 1`] = `
 <div
-  className="color-schema-red uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-red uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="red"
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -728,12 +774,14 @@ exports[`UU5.Bricks.Panel colorSchema="red" 1`] = `
 
 exports[`UU5.Bricks.Panel colorSchema="red-rich" 1`] = `
 <div
-  className="color-schema-red-rich uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-red-rich uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="red-rich"
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -757,12 +805,14 @@ exports[`UU5.Bricks.Panel colorSchema="red-rich" 1`] = `
 
 exports[`UU5.Bricks.Panel colorSchema="yellow" 1`] = `
 <div
-  className="color-schema-yellow uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-yellow uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="yellow"
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -786,12 +836,14 @@ exports[`UU5.Bricks.Panel colorSchema="yellow" 1`] = `
 
 exports[`UU5.Bricks.Panel colorSchema="yellow-rich" 1`] = `
 <div
-  className="color-schema-yellow-rich uu5-bricks-panel uu5-bricks-panel-size-m"
+  className="color-schema-yellow-rich uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema="yellow-rich"
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -815,12 +867,14 @@ exports[`UU5.Bricks.Panel colorSchema="yellow-rich" 1`] = `
 
 exports[`UU5.Bricks.Panel content="This is Content from ContentMixin" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -844,12 +898,14 @@ exports[`UU5.Bricks.Panel content="This is Content from ContentMixin" 1`] = `
 
 exports[`UU5.Bricks.Panel content=12345 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -873,12 +929,14 @@ exports[`UU5.Bricks.Panel content=12345 1`] = `
 
 exports[`UU5.Bricks.Panel controlled=false 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -902,12 +960,14 @@ exports[`UU5.Bricks.Panel controlled=false 1`] = `
 
 exports[`UU5.Bricks.Panel controlled=true 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -931,12 +991,14 @@ exports[`UU5.Bricks.Panel controlled=true 1`] = `
 
 exports[`UU5.Bricks.Panel default props 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -960,12 +1022,14 @@ exports[`UU5.Bricks.Panel default props 1`] = `
 
 exports[`UU5.Bricks.Panel disableHeaderClick=false 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _disableHeaderClick={false}
     _onClick={[Function]}
     content="noHeader"
@@ -990,12 +1054,14 @@ exports[`UU5.Bricks.Panel disableHeaderClick=false 1`] = `
 
 exports[`UU5.Bricks.Panel disableHeaderClick=true 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _disableHeaderClick={true}
     _onClick={[Function]}
     content="noHeader"
@@ -1020,12 +1086,14 @@ exports[`UU5.Bricks.Panel disableHeaderClick=true 1`] = `
 
 exports[`UU5.Bricks.Panel disabled=false 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1049,12 +1117,14 @@ exports[`UU5.Bricks.Panel disabled=false 1`] = `
 
 exports[`UU5.Bricks.Panel disabled=true 1`] = `
 <div
-  className="uu5-bricks-panel uu5-common-disabled uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-common-disabled uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1082,12 +1152,14 @@ exports[`UU5.Bricks.Panel disabled=true 1`] = `
 
 exports[`UU5.Bricks.Panel dynamic=false 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1111,12 +1183,14 @@ exports[`UU5.Bricks.Panel dynamic=false 1`] = `
 
 exports[`UU5.Bricks.Panel dynamic=true 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1140,12 +1214,14 @@ exports[`UU5.Bricks.Panel dynamic=true 1`] = `
 
 exports[`UU5.Bricks.Panel expanded=false 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1169,12 +1245,14 @@ exports[`UU5.Bricks.Panel expanded=false 1`] = `
 
 exports[`UU5.Bricks.Panel expanded=true 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-expanded uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-expanded uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1199,12 +1277,14 @@ exports[`UU5.Bricks.Panel expanded=true 1`] = `
 
 exports[`UU5.Bricks.Panel footer={"type":"div","key":null,"ref":null,"props":{"children":"Footer of section"},"_owner":null,"_store":{}} 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1228,12 +1308,14 @@ exports[`UU5.Bricks.Panel footer={"type":"div","key":null,"ref":null,"props":{"c
 
 exports[`UU5.Bricks.Panel header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content={
       <div>
@@ -1261,12 +1343,14 @@ exports[`UU5.Bricks.Panel header={"type":"div","key":null,"ref":null,"props":{"c
 
 exports[`UU5.Bricks.Panel hidden=false 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1290,12 +1374,14 @@ exports[`UU5.Bricks.Panel hidden=false 1`] = `
 
 exports[`UU5.Bricks.Panel hidden=true 1`] = `
 <div
-  className="uu5-bricks-panel uu5-common-hidden uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-common-hidden uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1319,12 +1405,14 @@ exports[`UU5.Bricks.Panel hidden=true 1`] = `
 
 exports[`UU5.Bricks.Panel iconCollapsed="uu5-minus" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _icon="uu5-minus"
     _onClick={[Function]}
     content="noHeader"
@@ -1348,12 +1436,14 @@ exports[`UU5.Bricks.Panel iconCollapsed="uu5-minus" 1`] = `
 
 exports[`UU5.Bricks.Panel iconExpanded="uu5-plus" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1377,12 +1467,14 @@ exports[`UU5.Bricks.Panel iconExpanded="uu5-plus" 1`] = `
 
 exports[`UU5.Bricks.Panel id="myId" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="myId"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1406,12 +1498,14 @@ exports[`UU5.Bricks.Panel id="myId" 1`] = `
 
 exports[`UU5.Bricks.Panel ignoreHTML=false 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1435,12 +1529,14 @@ exports[`UU5.Bricks.Panel ignoreHTML=false 1`] = `
 
 exports[`UU5.Bricks.Panel ignoreHTML=true 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1464,12 +1560,14 @@ exports[`UU5.Bricks.Panel ignoreHTML=true 1`] = `
 
 exports[`UU5.Bricks.Panel level="0" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1493,12 +1591,14 @@ exports[`UU5.Bricks.Panel level="0" 1`] = `
 
 exports[`UU5.Bricks.Panel level="1" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1522,12 +1622,14 @@ exports[`UU5.Bricks.Panel level="1" 1`] = `
 
 exports[`UU5.Bricks.Panel level="2" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1551,12 +1653,14 @@ exports[`UU5.Bricks.Panel level="2" 1`] = `
 
 exports[`UU5.Bricks.Panel level="3" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1580,12 +1684,14 @@ exports[`UU5.Bricks.Panel level="3" 1`] = `
 
 exports[`UU5.Bricks.Panel level="4" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1609,12 +1715,14 @@ exports[`UU5.Bricks.Panel level="4" 1`] = `
 
 exports[`UU5.Bricks.Panel level="5" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1638,12 +1746,14 @@ exports[`UU5.Bricks.Panel level="5" 1`] = `
 
 exports[`UU5.Bricks.Panel level="6" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1667,12 +1777,14 @@ exports[`UU5.Bricks.Panel level="6" 1`] = `
 
 exports[`UU5.Bricks.Panel level=0 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1696,12 +1808,14 @@ exports[`UU5.Bricks.Panel level=0 1`] = `
 
 exports[`UU5.Bricks.Panel level=1 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1725,12 +1839,14 @@ exports[`UU5.Bricks.Panel level=1 1`] = `
 
 exports[`UU5.Bricks.Panel level=2 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1754,12 +1870,14 @@ exports[`UU5.Bricks.Panel level=2 1`] = `
 
 exports[`UU5.Bricks.Panel level=3 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1783,12 +1901,14 @@ exports[`UU5.Bricks.Panel level=3 1`] = `
 
 exports[`UU5.Bricks.Panel level=4 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1812,12 +1932,14 @@ exports[`UU5.Bricks.Panel level=4 1`] = `
 
 exports[`UU5.Bricks.Panel level=5 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1841,12 +1963,14 @@ exports[`UU5.Bricks.Panel level=5 1`] = `
 
 exports[`UU5.Bricks.Panel level=6 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1870,12 +1994,14 @@ exports[`UU5.Bricks.Panel level=6 1`] = `
 
 exports[`UU5.Bricks.Panel mainAttrs=undefined 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1899,12 +2025,14 @@ exports[`UU5.Bricks.Panel mainAttrs=undefined 1`] = `
 
 exports[`UU5.Bricks.Panel mountContent="onEachExpand" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1927,12 +2055,14 @@ exports[`UU5.Bricks.Panel mountContent="onEachExpand" 1`] = `
 
 exports[`UU5.Bricks.Panel mountContent="onFirstExpand" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1955,12 +2085,14 @@ exports[`UU5.Bricks.Panel mountContent="onFirstExpand" 1`] = `
 
 exports[`UU5.Bricks.Panel mountContent="onFirstRender" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -1984,13 +2116,15 @@ exports[`UU5.Bricks.Panel mountContent="onFirstRender" 1`] = `
 
 exports[`UU5.Bricks.Panel name="myName" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   name="myName"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -2014,12 +2148,14 @@ exports[`UU5.Bricks.Panel name="myName" 1`] = `
 
 exports[`UU5.Bricks.Panel nestingLevel="bigBox" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -2043,12 +2179,14 @@ exports[`UU5.Bricks.Panel nestingLevel="bigBox" 1`] = `
 
 exports[`UU5.Bricks.Panel nestingLevel="bigBoxCollection" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -2072,12 +2210,14 @@ exports[`UU5.Bricks.Panel nestingLevel="bigBoxCollection" 1`] = `
 
 exports[`UU5.Bricks.Panel nestingLevel="box" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -2101,12 +2241,14 @@ exports[`UU5.Bricks.Panel nestingLevel="box" 1`] = `
 
 exports[`UU5.Bricks.Panel nestingLevel="boxCollection" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -2130,12 +2272,14 @@ exports[`UU5.Bricks.Panel nestingLevel="boxCollection" 1`] = `
 
 exports[`UU5.Bricks.Panel nestingLevel="container" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -2161,12 +2305,14 @@ exports[`UU5.Bricks.Panel nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.Panel nestingLevel="page" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -2194,12 +2340,14 @@ exports[`UU5.Bricks.Panel nestingLevel="smallBoxCollection" 1`] = `""`;
 
 exports[`UU5.Bricks.Panel nestingLevel="spa" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -2223,12 +2371,14 @@ exports[`UU5.Bricks.Panel nestingLevel="spa" 1`] = `
 
 exports[`UU5.Bricks.Panel noIndex=false 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -2252,12 +2402,14 @@ exports[`UU5.Bricks.Panel noIndex=false 1`] = `
 
 exports[`UU5.Bricks.Panel noIndex=true 1`] = `
 <div
-  className="uu5-bricks-panel uu5-noindex uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-noindex uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -2290,12 +2442,14 @@ exports[`UU5.Bricks.Panel props.Function UU5.Bricks.Panel -  onClick() should be
 
 exports[`UU5.Bricks.Panel pureRender=false 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -2319,12 +2473,14 @@ exports[`UU5.Bricks.Panel pureRender=false 1`] = `
 
 exports[`UU5.Bricks.Panel pureRender=true 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -2348,12 +2504,14 @@ exports[`UU5.Bricks.Panel pureRender=true 1`] = `
 
 exports[`UU5.Bricks.Panel selected=false 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -2377,12 +2535,14 @@ exports[`UU5.Bricks.Panel selected=false 1`] = `
 
 exports[`UU5.Bricks.Panel selected=true 1`] = `
 <div
-  className="uu5-bricks-panel uu5-common-selected uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-common-selected uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -2406,12 +2566,14 @@ exports[`UU5.Bricks.Panel selected=true 1`] = `
 
 exports[`UU5.Bricks.Panel size="l" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-l uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-l uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -2435,12 +2597,14 @@ exports[`UU5.Bricks.Panel size="l" 1`] = `
 
 exports[`UU5.Bricks.Panel size="m" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -2464,12 +2628,14 @@ exports[`UU5.Bricks.Panel size="m" 1`] = `
 
 exports[`UU5.Bricks.Panel size="s" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-s uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-s uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -2493,12 +2659,14 @@ exports[`UU5.Bricks.Panel size="s" 1`] = `
 
 exports[`UU5.Bricks.Panel size="xl" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-xl uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-xl uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -2522,7 +2690,7 @@ exports[`UU5.Bricks.Panel size="xl" 1`] = `
 
 exports[`UU5.Bricks.Panel style="padding:8px; borderRadius: 2px" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={
     Object {
@@ -2533,6 +2701,8 @@ exports[`UU5.Bricks.Panel style="padding:8px; borderRadius: 2px" 1`] = `
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -2556,7 +2726,7 @@ exports[`UU5.Bricks.Panel style="padding:8px; borderRadius: 2px" 1`] = `
 
 exports[`UU5.Bricks.Panel style={"backgroundColor":"red","color":"blue"} 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={
     Object {
@@ -2567,6 +2737,8 @@ exports[`UU5.Bricks.Panel style={"backgroundColor":"red","color":"blue"} 1`] = `
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -2590,12 +2762,14 @@ exports[`UU5.Bricks.Panel style={"backgroundColor":"red","color":"blue"} 1`] = `
 
 exports[`UU5.Bricks.Panel textCorrector=false 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -2619,12 +2793,14 @@ exports[`UU5.Bricks.Panel textCorrector=false 1`] = `
 
 exports[`UU5.Bricks.Panel textCorrector=true 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -2648,12 +2824,14 @@ exports[`UU5.Bricks.Panel textCorrector=true 1`] = `
 
 exports[`UU5.Bricks.Panel tooltip="My Tooltip" 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title="My Tooltip"
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -2677,12 +2855,14 @@ exports[`UU5.Bricks.Panel tooltip="My Tooltip" 1`] = `
 
 exports[`UU5.Bricks.Panel underline=false 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}
@@ -2706,12 +2886,14 @@ exports[`UU5.Bricks.Panel underline=false 1`] = `
 
 exports[`UU5.Bricks.Panel underline=true 1`] = `
 <div
-  className="uu5-bricks-panel uu5-bricks-panel-size-m uu5-bricks-panel-default"
+  className="uu5-bricks-panel uu5-bricks-panel-size-m uu-bricks-rv9efr uu5-bricks-panel-default"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <panel-header
+    _bgStyle="filled"
+    _colorSchema={null}
     _onClick={[Function]}
     content="noHeader"
     iconAlign={null}

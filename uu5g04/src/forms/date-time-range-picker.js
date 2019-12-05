@@ -506,6 +506,8 @@ export const DateTimeRangePicker = Context.withContext(
     },
 
     onFocusDefault_(opt) {
+      let value = opt._data ? opt._data.value : opt.value;
+      opt.value = value;
       let result = this.getFocusFeedback(opt);
 
       if (result || opt._data) {
@@ -521,6 +523,9 @@ export const DateTimeRangePicker = Context.withContext(
     },
 
     onBlurDefault_(opt) {
+      let value = opt._data ? opt._data.value : opt.value;
+      opt.value = value;
+
       if (this._checkRequired({ value: opt.value }) && !this.props.validateOnChange) {
         opt.required = this.props.required;
         let blurResult = this.getBlurFeedback(opt);
@@ -1061,6 +1066,11 @@ export const DateTimeRangePicker = Context.withContext(
           this.state.activeInput ? this._onOpen(this.state.activeInput) : this._onClose();
         }, 500)();
       }
+    },
+
+    _onCalendarViewChange(opt) {
+      // do nothing
+      return undefined;
     },
 
     _onChange(opt) {
@@ -1739,6 +1749,15 @@ export const DateTimeRangePicker = Context.withContext(
       if (!this._hasFocus) {
         this._addKeyEvents();
         this._hasFocus = true;
+
+        if (opt._data) {
+          opt._data.value = opt.value;
+          opt.value = this._getOutputValue(opt.value);
+        } else {
+          opt._data = { value: opt.value };
+          opt.value = this._getOutputValue(opt.value);
+        }
+
         if (!this.isReadOnly() && !this.isComputedDisabled()) {
           if (typeof this.props.onFocus === "function") {
             setStateCallback = () => this.props.onFocus(opt);
@@ -1760,8 +1779,16 @@ export const DateTimeRangePicker = Context.withContext(
       if (this._hasFocus) {
         this._hasFocus = false;
         let state = preserveActiveInput ? {} : { activeInput: undefined };
-
         let callback;
+
+        if (opt._data) {
+          opt._data.value = opt.value;
+          opt.value = this._getOutputValue(opt.value);
+        } else {
+          opt._data = { value: opt.value };
+          opt.value = this._getOutputValue(opt.value);
+        }
+
         if (typeof this.props.onBlur === "function") {
           callback = opt => this.props.onBlur(opt);
         } else {
@@ -2211,6 +2238,7 @@ export const DateTimeRangePicker = Context.withContext(
         hidden: !isOpen,
         selectionMode: "range",
         onChange: opt => this._onChange({ ...opt, ...{ _data: { right, type: "calendar" } } }),
+        onViewChange: this._onCalendarViewChange,
         hideWeekNumber: this.props.hideWeekNumber,
         hideOtherSections: true,
         colorSchema: this.getColorSchema()

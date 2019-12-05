@@ -51,6 +51,8 @@ export const PortalModal = UU5.Common.VisualComponent.create({
 
   //@@viewOn:reactLifeCycle
   getInitialState() {
+    this._preventOnCloseCall = false;
+
     return {
       props: undefined,
       open: this.props.shown
@@ -63,8 +65,13 @@ export const PortalModal = UU5.Common.VisualComponent.create({
     this.setState({ props, open: true }, setStateCallback);
   },
 
-  close(...args) {
-    this._modal.close(...args);
+  close(shouldOnClose, ...args) {
+    if (shouldOnClose === false) {
+      shouldOnClose = true;
+      this._preventOnCloseCall = true;
+    }
+
+    this._modal.close(shouldOnClose, ...args);
   },
 
   isOpen() {
@@ -124,11 +131,14 @@ export const PortalModal = UU5.Common.VisualComponent.create({
             setTimeout(
               () =>
                 this._close(() => {
-                  if (typeof this.props.onClose === "function") {
-                    this.props.onClose(opt);
-                  } else if (typeof opt.callback === "function") {
-                    opt.callback();
+                  if (!this._preventOnCloseCall) {
+                    if (typeof props.onClose === "function") {
+                      props.onClose(opt);
+                    } else if (typeof opt.callback === "function") {
+                      opt.callback();
+                    }
                   }
+                  this._preventOnCloseCall = false;
                 }),
               500
             );

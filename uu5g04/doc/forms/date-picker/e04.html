@@ -170,6 +170,26 @@
             <UU5.Forms.DatePicker label="Date of birth" showTodayButton={true} />
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="step">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DatePicker
+              label="days"
+              value={new Date("2019-02-02T00:00Z")}
+              step="days"
+            />
+            <UU5.Forms.DatePicker
+              label="months"
+              value="2015-01"
+              step="months"
+            />
+            <UU5.Forms.DatePicker
+              label="year"
+              value="2022"
+              step="years"
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
         </UU5.Bricks.Container>
       );
     }

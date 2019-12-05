@@ -59,19 +59,21 @@
 
     getInitialState() {
           return {
-            bgStyle: null,
-            bgStyleHeader: null,
-            bgStyleContent: null,
-            colorSchema: null,
-            colorSchemaHeader: null,
-            colorSchemaContent: null
+            bgStyle: "null",
+            bgStyleHeader: "null",
+            bgStyleContent: "null",
+            colorSchema: "null",
+            colorSchemaHeader: "null",
+            colorSchemaContent: "null",
+            openClick: "null"
           }
         },
 
       render() {
           const colors = ['null'].concat(Object.keys(UU5.Environment.colorSchemaMap));
           let color = UU5.Environment.getColorSchema(this.state.color);
-          let bgStyle = [null, "filled", "outline", "transparent", "underline"];
+          let bgStyle = ["null", "filled", "outline", "transparent", "underline"];
+          let openClick = ["null", "header", "icon", "none"];
 
           return (
         <UU5.Bricks.Container>
@@ -79,13 +81,13 @@
           <UU5.Bricks.Column header="colorSchema" width="33%">
             <UU5.Forms.Select
               name="color"
-              value={this.state.color}
+              value={this.state.colorSchema}
               onChange={(opt) => {
-                this.setState({ color: opt.value });
+                this.setState({ colorSchema: opt.value });
               }}
               >    {colors.map(name => {
                 return (
-                  <UU5.Forms.Select.Option content={name === null ? "null" : name} value={name === "null" ? null : name} key={name} />
+                  <UU5.Forms.Select.Option content={name === null ? "null" : null} value={name} key={name} />
                 )
               })}</UU5.Forms.Select>
             </UU5.Bricks.Column>
@@ -93,13 +95,13 @@
             <UU5.Bricks.Column header="colorSchemaHeader" width="33%">
                 <UU5.Forms.Select
                 name="color2"
-                value={this.state.color2}
+                value={this.state.colorSchemaHeader}
                 onChange={(opt) => {
-                  this.setState({ color2: opt.value });
+                  this.setState({ colorSchemaHeader: opt.value });
               }}
                 >    {colors.map(name => {
                 return (
-                  <UU5.Forms.Select.Option  content={name === null ? "null" : name} value={name === "null" ? null : name} key={name} />
+                  <UU5.Forms.Select.Option  content={name === null ? "null" : null} value={name} key={name} />
                 )
               })}</UU5.Forms.Select>
             </UU5.Bricks.Column>
@@ -107,13 +109,13 @@
             <UU5.Bricks.Column className="header" header="colorSchemaContent" width="33%">
               <UU5.Forms.Select
                 name="color3"
-                value={this.state.color3}
+                value={this.state.colorSchemaContent}
                 onChange={(opt) => {
-                this.setState({ color3: opt.value });
+                this.setState({ colorSchemaContent: opt.value });
               }}
                 >    {colors.map(name => {
                 return (
-                  <UU5.Forms.Select.Option content={name === null ? "null" : name} value={name === "null" ? null : name}  key={name} />
+                  <UU5.Forms.Select.Option content={name === null ? "null" : null} value={name}  key={name} />
                 )
               })}</UU5.Forms.Select>
               </UU5.Bricks.Column>
@@ -138,9 +140,9 @@
               <UU5.Bricks.Column header="bgStyleHeader" width="33%">
                   <UU5.Forms.Select
                 name="bgStyle"
-                value={this.state.bgStyle2}
+                value={this.state.bgStyleHeader}
                 onChange={(opt) => {
-                  this.setState({ bgStyle2: opt.value});
+                  this.setState({ bgStyleHeader: opt.value});
                 }}
                 > {bgStyle.map(bgStyle => {
                   return (
@@ -153,9 +155,9 @@
             <UU5.Bricks.Column header="bgStyleContent" width="33%">
                 <UU5.Forms.Select
                 name="bgStyle"
-                value={this.state.bgStyle3}
+                value={this.state.bgStyleContent}
                 onChange={(opt) => {
-                  this.setState({ bgStyle3: opt.value});
+                  this.setState({ bgStyleContent: opt.value});
                 }}
                 > {bgStyle.map(bgStyle => {
                   return (
@@ -166,17 +168,35 @@
             </UU5.Bricks.Column>
           </UU5.Bricks.Row>
 
+          <UU5.Bricks.Row>
+            <UU5.Bricks.Column header="openClick" width="33%">
+                <UU5.Forms.Select
+                name="bgStyle"
+                value={this.state.openClick}
+                onChange={(opt) => {
+                  this.setState({ openClick: opt.value});
+                }}
+                > {openClick.map(openClick => {
+                  return (
+                  <UU5.Forms.Select.Option content={openClick === null ? "null" : null} value={openClick} key={openClick}/>
+                  )
+                })}
+                </UU5.Forms.Select>
+            </UU5.Bricks.Column>
+          </UU5.Bricks.Row>
+
             <br/>
               <UU5.Bricks.Panel
                   header="Nam efficitur aliquam justo, ac rhoncus dolor gravida sed."
                   content="Ut nec nunc dui. Praesent eget urna rhoncus, facilisis sem at, vestibulum nibh. Aliquam cursus purus sapien, ac facilisis est malesuada at. Fusce accumsan, mi ut volutpat posuere, neque elit tincidunt arcu, vel venenatis odio elit sed mi. Sed porttitor, orci quis dignissim elementum, velit nunc tristique tellus, at ullamcorper orci ex eget lacus."
-                  colorSchema={this.state.color}
-                  colorSchemaHeader={this.state.color2}
-                  colorSchemaContent={this.state.color3}
-                  bgStyle={this.state.bgStyle}
-                  bgStyleHeader={this.state.bgStyle2}
-                  bgStyleContent={this.state.bgStyle3}
+                  colorSchema={this.state.colorSchema === "null" ? null : this.state.colorSchema}
+                  colorSchemaHeader={this.state.colorSchemaHeader === "null" ? null : this.state.colorSchemaHeader}
+                  colorSchemaContent={this.state.colorSchemaContent === "null" ? null : this.state.colorSchemaContent}
+                  bgStyle={this.state.bgStyle === "null" ? null : this.state.bgStyle}
+                  bgStyleHeader={this.state.bgStyleHeader === "null" ? null : this.state.bgStyleHeader}
+                  bgStyleContent={this.state.bgStyleContent === "null" ? null : this.state.bgStyleContent}
                   iconExpanded="mdi-chevron-up" iconCollapsed="mdi-chevron-down"
+                  openClick={this.state.openClick === "null" ? null : this.state.openClick}
               />
               <br/><br/>
 

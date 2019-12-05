@@ -31,22 +31,6 @@
       }
     });
   </script>
-
-  <style>
-    .colored .margin {
-      display: inline-block;
-      width: 100%;
-      background-color: #FFCDD2;
-    }
-
-    .colored .block {
-      background-color: #F44336;
-    }
-
-    .colored .row {
-      background-color: #FAFAFA;
-    }
-  </style>
 </head>
 <body>
 
@@ -63,53 +47,58 @@
 
   const Page = createReactClass({
 
-    getInitialState() {
-      return {
-        margin: false
-      };
-    },
-
     render() {
       return (
         <UU5.Bricks.Container>
-          Show margin <UU5.Bricks.Switch
-          onChange={(opt) => this.setState({ margin: opt.switchedOn })}
-          switchedOn={this.state.margin}
-        />
-          <UU5.BlockLayout.Tile className={this.state.margin ? " colored" : undefined} margin="32px 0 0">
-            <div className={(this.state.margin ? "margin" : undefined)}>
-              <UU5.BlockLayout.Block
-                className="block"
-                actions={[
-                  { icon: "mdi-settings", content: "Settings", active: true, onClick: () => alert("settings") }
-                ]}
-              >
-                <UU5.BlockLayout.Row>
-                  <UU5.BlockLayout.Column width={150}>
-                    John Smith
-                  </UU5.BlockLayout.Column>
-                  <UU5.BlockLayout.Column>
-                    john.smith@plus4u.net
-                  </UU5.BlockLayout.Column>
-                </UU5.BlockLayout.Row>
-                <UU5.BlockLayout.Row>
-                  <UU5.BlockLayout.Column>
-                    aligned to the left
-                  </UU5.BlockLayout.Column>
-                  <UU5.BlockLayout.Column textAlign="right">
-                    aligned to the right
-                  </UU5.BlockLayout.Column>
-                </UU5.BlockLayout.Row>
-                <UU5.BlockLayout.Row>
-                  <UU5.BlockLayout.Column>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Vestibulum fermentum tortor id mi. Etiam commodo dui eget wisi. Integer malesuada. Fusce consectetuer risus a nunc. Nullam eget nisl. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Aenean placerat. Etiam neque. Fusce suscipit libero eget elit.
-                  </UU5.BlockLayout.Column>
-                  <UU5.BlockLayout.Column textAlign="right">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Vestibulum fermentum tortor id mi. Etiam commodo dui eget wisi. Integer malesuada. Fusce consectetuer risus a nunc. Nullam eget nisl. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Aenean placerat. Etiam neque. Fusce suscipit libero eget elit.
-                  </UU5.BlockLayout.Column>
-                </UU5.BlockLayout.Row>
-              </UU5.BlockLayout.Block>
-            </div>
+          <UU5.BlockLayout.Tile margin="32px 0 0">
+            <UU5.BlockLayout.Block
+              actions={[
+                { icon: "mdi-dots-vertical", content: "Settings", active: true, onClick: () => alert("settings") }
+              ]}
+            >
+              <UU5.BlockLayout.Row weight="primary">
+                Ing. Alexandra Henderson Alsop Ph.D.
+              </UU5.BlockLayout.Row>
+            </UU5.BlockLayout.Block>
+            <UU5.BlockLayout.Block>
+              <UU5.BlockLayout.Row>
+                <UU5.BlockLayout.Column width={150}>
+                  <UU5.BlockLayout.Text weight="secondary">
+                     Phone
+                  </UU5.BlockLayout.Text>
+                </UU5.BlockLayout.Column>
+                <UU5.BlockLayout.Column>
+                  +420 722 430 696
+                </UU5.BlockLayout.Column>
+              </UU5.BlockLayout.Row>
+              <UU5.BlockLayout.Row>
+                <UU5.BlockLayout.Column width={150}>
+                  <UU5.BlockLayout.Text weight="secondary">
+                    E-mail
+                  </UU5.BlockLayout.Text>
+                </UU5.BlockLayout.Column>
+                <UU5.BlockLayout.Column>
+                  <UU5.Bricks.Link content="alexandra.alsop@gmail.com" />
+                </UU5.BlockLayout.Column>
+              </UU5.BlockLayout.Row>
+            </UU5.BlockLayout.Block>
+            <UU5.BlockLayout.Line />
+            <UU5.BlockLayout.Block
+              actions={[
+                { icon: "mdi-account-network", content: "Account Settings", active: true, onClick: () => alert("settings") }
+              ]}
+            >
+              <UU5.BlockLayout.Row>
+                <UU5.BlockLayout.Column width={150}>
+                  <UU5.BlockLayout.Text weight="secondary">
+                    Plus4U Person
+                  </UU5.BlockLayout.Text>
+                </UU5.BlockLayout.Column>
+                <UU5.BlockLayout.Column>
+                  <UU5.Bricks.Link content="Alexandra Henderson Alsop" />
+                </UU5.BlockLayout.Column>
+              </UU5.BlockLayout.Row>
+            </UU5.BlockLayout.Block>
           </UU5.BlockLayout.Tile>
         </UU5.Bricks.Container>
       );

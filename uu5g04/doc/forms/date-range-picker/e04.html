@@ -194,6 +194,26 @@
             <UU5.Forms.DateRangePicker innerLabel={true} label="Reservation" />
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="step">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateRangePicker
+              label="days"
+              value={[new Date("2019-02-02T00:00Z"), new Date("2019-04-04T00:00Z")]}
+              step="days"
+            />
+            <UU5.Forms.DateRangePicker
+              label="months"
+              value={["2015-01", "2019-05"]}
+              step="months"
+            />
+            <UU5.Forms.DateRangePicker
+              label="year"
+              value={["2015", "2022"]}
+              step="years"
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
         </UU5.Bricks.Container>
       );
     }

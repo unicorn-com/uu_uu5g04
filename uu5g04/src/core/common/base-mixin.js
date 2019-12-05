@@ -459,7 +459,7 @@ export const BaseMixin = {
       mainAttrs: this.props.mainAttrs && this.props.mainAttrs.className
     };
 
-    if (this.props.noIndex) {
+    if (this.props.noIndex && !this.getOpt("hoc")) {
       classes.main += " uu5-noindex";
     }
 
