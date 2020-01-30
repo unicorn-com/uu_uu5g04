@@ -5,6 +5,8 @@ import ReactDOM from "react-dom";
 import MixinProps from "./mixin-props.js";
 
 const DEFAULT_TIMEOUT = 100;
+let setTimeout = global.setTimeout;
+let clearTimeout = global.clearTimeout;
 
 export const cleanupErrorStack = (message, stack) => {
   // remove stacktrace rows containing tools.js & regenerator-runtime so that Jest

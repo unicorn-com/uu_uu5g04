@@ -1,8 +1,4 @@
-import React from "react";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
-import PropTypes from "prop-types";
-
 import ns from "./bricks-editable-ns.js";
 import Css from "./css.js";
 import Lsi from "./bricks-editable-lsi.js";
@@ -33,7 +29,7 @@ const COLOR_SCHEMAS = [
   "white"
 ];
 
-export const ColorPicker = createReactClass({
+export const ColorPicker = UU5.Common.VisualComponent.create({
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin],
   //@@viewOff:mixins
@@ -79,10 +75,10 @@ export const ColorPicker = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    value: PropTypes.string,
-    onApply: PropTypes.func,
-    colorSchema: PropTypes.string,
-    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline", "link"])
+    value: UU5.PropTypes.string,
+    onApply: UU5.PropTypes.func,
+    colorSchema: UU5.PropTypes.string,
+    bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline", "link"])
   },
   //@@viewOff:propTypes
 

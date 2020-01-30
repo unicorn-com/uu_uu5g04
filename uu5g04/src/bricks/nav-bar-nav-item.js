@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -23,7 +20,8 @@ import Button from "./button.js";
 import "./nav-bar-nav-item.less";
 //@@viewOff:imports
 
-export default createReactClass({
+export default UU5.Common.VisualComponent.create({
+  displayName: "nav-bar-nav-item", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -51,10 +49,10 @@ export default createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    onClick: PropTypes.func,
-    href: PropTypes.string,
-    target: PropTypes.oneOf(["_blank", "_parent", "_top", "_self"]),
-    _size: PropTypes.string
+    onClick: UU5.PropTypes.func,
+    href: UU5.PropTypes.string,
+    target: UU5.PropTypes.oneOf(["_blank", "_parent", "_top", "_self"]),
+    _size: UU5.PropTypes.string
   },
   //@@viewOff:propTypes
 

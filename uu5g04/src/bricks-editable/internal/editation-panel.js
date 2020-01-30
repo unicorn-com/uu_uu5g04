@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "../bricks-editable-ns.js";
@@ -31,7 +28,8 @@ const DEFAULT_ITEM_PROPS = {
   colorSchema: "default"
 };
 
-export const EditationPanel = createReactClass({
+export const EditationPanel = UU5.Common.VisualComponent.create({
+  displayName: "EditationPanel", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin],
   //@@viewOff:mixins
@@ -106,12 +104,12 @@ export const EditationPanel = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    onEndEditation: PropTypes.func,
-    settingsItems: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object, PropTypes.element])),
-    moreSettings: PropTypes.func,
-    onSettingsClick: PropTypes.func,
-    onMoreSettingsClick: PropTypes.func,
-    activeInput: PropTypes.object
+    onEndEditation: UU5.PropTypes.func,
+    settingsItems: UU5.PropTypes.arrayOf(UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.element])),
+    moreSettings: UU5.PropTypes.func,
+    onSettingsClick: UU5.PropTypes.func,
+    onMoreSettingsClick: UU5.PropTypes.func,
+    activeInput: UU5.PropTypes.object
   },
   //@@viewOff:propTypes
 
@@ -244,7 +242,7 @@ export const EditationPanel = createReactClass({
   },
 
   _onMoreSettingsModalClose(opt) {
-    this.setState({ moreSettingsOpen: false }, opt.component.onCloseDefault);
+    this.setState({ moreSettingsOpen: false }, () => opt.component.onCloseDefault(opt));
   },
 
   _openMoreSettings(setStateCallback) {

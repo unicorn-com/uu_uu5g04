@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Icon from "./icon.js";
@@ -23,7 +20,8 @@ import Css from "./internal/css.js";
 import "./floating-box.less";
 //@@viewOff:imports
 
-export const FloatingBox = createReactClass({
+export const FloatingBox = UU5.Common.VisualComponent.create({
+  displayName: "FloatingBox", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.ColorSchemaMixin, UU5.Common.ContentMixin],
   //@@viewOff:mixins
@@ -45,16 +43,16 @@ export const FloatingBox = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    elevation: PropTypes.oneOf(["0", "1", "2", "3", "4", "5", 0, 1, 2, 3, 4, 5]),
-    borderRadius: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-    width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    header: PropTypes.any,
-    position: PropTypes.string,
-    draggable: PropTypes.bool,
-    onDragStart: PropTypes.func,
-    onDragMove: PropTypes.func,
-    onDragEnd: PropTypes.func
+    elevation: UU5.PropTypes.oneOf(["0", "1", "2", "3", "4", "5", 0, 1, 2, 3, 4, 5]),
+    borderRadius: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
+    bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+    width: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
+    header: UU5.PropTypes.any,
+    position: UU5.PropTypes.string,
+    draggable: UU5.PropTypes.bool,
+    onDragStart: UU5.PropTypes.func,
+    onDragMove: UU5.PropTypes.func,
+    onDragEnd: UU5.PropTypes.func
   },
   //@@viewOff:propTypes
   //@@viewOn:getDefaultProps

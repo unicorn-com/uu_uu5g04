@@ -12,8 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Css from "./internal/css.js";
@@ -22,7 +20,7 @@ import Image from "./image.js";
 import Icon from "./icon.js";
 //@@viewOff:imports
 
-export const RichLink = createReactClass({
+export const RichLink = UU5.Common.VisualComponent.create({
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin],
   //@@viewOff:mixins

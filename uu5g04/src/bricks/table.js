@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -30,7 +27,9 @@ import TableTr from "./table-tr.js";
 import "./table.less";
 //@@viewOff:imports
 
-export const Table = createReactClass({
+export const Table = UU5.Common.VisualComponent.create({
+  displayName: "Table", // for backward compatibility (test snapshots)
+
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -72,12 +71,12 @@ export const Table = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    striped: PropTypes.bool,
-    bordered: PropTypes.bool,
-    hover: PropTypes.bool,
-    condensed: PropTypes.bool,
-    responsive: PropTypes.bool,
-    allowTags: PropTypes.arrayOf(PropTypes.string)
+    striped: UU5.PropTypes.bool,
+    bordered: UU5.PropTypes.bool,
+    hover: UU5.PropTypes.bool,
+    condensed: UU5.PropTypes.bool,
+    responsive: UU5.PropTypes.bool,
+    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string)
   },
   //@@viewOff:propTypes
 

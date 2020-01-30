@@ -12,16 +12,14 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./link.less";
 //@@viewOff:imports
 
-export const Link = createReactClass({
+export const Link = UU5.Common.VisualComponent.create({
+  displayName: "Link", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -50,15 +48,15 @@ export const Link = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    href: PropTypes.string,
-    onClick: PropTypes.func,
-    onCtrlClick: PropTypes.func,
-    onWheelClick: PropTypes.func,
-    smoothScroll: PropTypes.number,
-    offset: PropTypes.number,
-    target: PropTypes.oneOf(["_blank", "_parent", "_top", "_self"]),
-    download: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-    authenticate: PropTypes.bool
+    href: UU5.PropTypes.string,
+    onClick: UU5.PropTypes.func,
+    onCtrlClick: UU5.PropTypes.func,
+    onWheelClick: UU5.PropTypes.func,
+    smoothScroll: UU5.PropTypes.number,
+    offset: UU5.PropTypes.number,
+    target: UU5.PropTypes.oneOf(["_blank", "_parent", "_top", "_self"]),
+    download: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string]),
+    authenticate: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 

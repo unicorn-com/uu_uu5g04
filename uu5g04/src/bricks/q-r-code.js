@@ -12,18 +12,16 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Null from "./null.js";
 import Css from "./internal/css.js";
 //@@viewOff:imports
 
-const QRCodeGenerator = React.lazy ? React.lazy(() => import("qrcode.react")) : Null;
+const QRCodeGenerator = UU5.Common.Component.lazy ? UU5.Common.Component.lazy(() => import("qrcode.react")) : Null;
 
-export const QRCode = createReactClass({
+export const QRCode = UU5.Common.VisualComponent.create({
+  displayName: "QRCode", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin],
   //@@viewOff:mixins
@@ -44,9 +42,9 @@ export const QRCode = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    value: PropTypes.string.isRequired,
-    size: PropTypes.number,
-    correction: PropTypes.oneOf(["low", "medium", "quartile", "high"])
+    value: UU5.PropTypes.string.isRequired,
+    size: UU5.PropTypes.number,
+    correction: UU5.PropTypes.oneOf(["low", "medium", "quartile", "high"])
   },
   //@@viewOff:propTypes
 
@@ -90,14 +88,14 @@ export const QRCode = createReactClass({
   render() {
     return (
       <span {...this.getMainAttrs()}>
-        <React.Suspense fallback="">
+        <UU5.Common.Suspense fallback="">
           <QRCodeGenerator
             value={this.props.value}
             level={this._getCorrectionLevel()}
             size={this.props.size}
             renderAs="svg"
           />
-        </React.Suspense>
+        </UU5.Common.Suspense>
       </span>
     );
   }

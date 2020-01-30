@@ -44,14 +44,11 @@
 <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
 <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
 <script type="text/babel">
-  import React from "react";
-      import createReactClass from "create-react-class";
-  import ReactDOM from "react-dom";
   import UU5 from "uu5g04";
   import "uu5g04-bricks";
 
 
-  var Page = createReactClass(
+  var Page = UU5.Common.VisualComponent.create(
     {
 
       mixins: [
@@ -119,7 +116,7 @@
             leftWidth='!xs-10-30 s-40px !m-10-20 l-15 xl-20'
             rightWidth='!xs-30 s-25 m-20 l-15 xl-20'
             alertBus={{tag: 'UU5.Bricks.AlertBus'}}
-            modal={React.createElement(UU5.Common.Tools.checkTag('UU5.Bricks.Modal'))}
+            modal={UU5.Common.Element.create(UU5.Common.Tools.checkTag('UU5.Bricks.Modal'))}
           >
             <UU5.Bricks.Dropdown
               label={[<UU5.Bricks.Icon key="1"/>, "Top rated destinations"]}
@@ -210,7 +207,7 @@
     }
   );
 
-  ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+  UU5.Common.DOM.render(UU5.Common.Element.create(Page, null), document.getElementById('renderHere'));
 </script>
 </body>
 </html>

@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -23,7 +20,8 @@ import Loading from "./loading.js";
 import "./iframe.less";
 //@@viewOff:imports
 
-export const Iframe = createReactClass({
+export const Iframe = UU5.Common.VisualComponent.create({
+  displayName: "Iframe", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, UU5.Common.NestingLevelMixin],
   //@@viewOff:mixins
@@ -51,12 +49,12 @@ export const Iframe = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    src: PropTypes.string,
-    resize: PropTypes.bool,
-    height: PropTypes.string,
-    syncTimeout: PropTypes.number,
-    inline: PropTypes.bool,
-    iframeAttrs: PropTypes.object
+    src: UU5.PropTypes.string,
+    resize: UU5.PropTypes.bool,
+    height: UU5.PropTypes.string,
+    syncTimeout: UU5.PropTypes.number,
+    inline: UU5.PropTypes.bool,
+    iframeAttrs: UU5.PropTypes.object
   },
   //@@viewOff:propTypes
 

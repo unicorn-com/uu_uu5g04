@@ -12,14 +12,12 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 //@@viewOff:imports
 
-export const UpdateWrapper = createReactClass({
+export const UpdateWrapper = UU5.Common.VisualComponent.create({
+  displayName: "UpdateWrapper", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ContentMixin],
   //@@viewOff:mixins
@@ -35,7 +33,7 @@ export const UpdateWrapper = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    preventRender: PropTypes.bool
+    preventRender: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 

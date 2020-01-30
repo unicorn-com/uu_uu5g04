@@ -14,7 +14,6 @@
 //@@viewOn:imports
 import React from "react";
 import PropTypes from "prop-types";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import Environment from "../environment/environment.js";
 import BaseMixin from "./base-mixin.js";
@@ -22,9 +21,11 @@ import Tools from "./tools.js";
 import Error from "./error.js";
 import Request from "./request.js";
 import Context from "./context.js";
+import Component from "./component.js";
 //@@viewOff:imports
 
-export const Loader = createReactClass({
+export const Loader = Component.create({
+  displayName: "Loader", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [BaseMixin],
   //@@viewOff:mixins

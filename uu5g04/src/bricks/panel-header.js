@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -83,7 +80,8 @@ const Styles = {
   }
 };
 
-export default createReactClass({
+export default UU5.Common.VisualComponent.create({
+  displayName: "panel-header", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -121,12 +119,12 @@ export default createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    _icon: PropTypes.string,
-    _onClick: PropTypes.func,
-    _disableHeaderClick: PropTypes.bool,
-    iconAlign: PropTypes.oneOf(["right", "after", "left"]),
-    openClick: PropTypes.oneOf(["header", "icon", "none"]),
-    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"])
+    _icon: UU5.PropTypes.string,
+    _onClick: UU5.PropTypes.func,
+    _disableHeaderClick: UU5.PropTypes.bool,
+    iconAlign: UU5.PropTypes.oneOf(["right", "after", "left"]),
+    openClick: UU5.PropTypes.oneOf(["header", "icon", "none"]),
+    bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"])
   },
   //@@viewOff:propTypes
 

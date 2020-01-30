@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import SwitchSelectorItem from "./switch-selector-item.js";
@@ -196,7 +193,8 @@ function getClassName({
   return classNames.join(" ");
 }
 
-export const SwitchSelector = createReactClass({
+export const SwitchSelector = UU5.Common.VisualComponent.create({
+  displayName: "SwitchSelector", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin],
   //@@viewOff:mixins
@@ -209,27 +207,27 @@ export const SwitchSelector = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    items: PropTypes.arrayOf(
-      PropTypes.shape({
-        value: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]).isRequired,
-        content: PropTypes.any,
-        colorSchema: PropTypes.string,
-        bgStyle: PropTypes.string,
-        borderRadius: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+    items: UU5.PropTypes.arrayOf(
+      UU5.PropTypes.shape({
+        value: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.bool]).isRequired,
+        content: UU5.PropTypes.any,
+        colorSchema: UU5.PropTypes.string,
+        bgStyle: UU5.PropTypes.string,
+        borderRadius: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string])
       })
     ).isRequired,
-    value: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
-    onChange: PropTypes.func,
+    value: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.bool]),
+    onChange: UU5.PropTypes.func,
 
-    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
-    width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    readOnly: PropTypes.bool,
-    colorSchema: PropTypes.oneOf(UU5.Environment.colorSchema),
-    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-    elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-    borderRadius: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    borderWidth: PropTypes.number,
-    borderWidthFocus: PropTypes.number
+    size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
+    width: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
+    readOnly: UU5.PropTypes.bool,
+    colorSchema: UU5.PropTypes.oneOf(UU5.Environment.colorSchema),
+    bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+    elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+    borderRadius: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
+    borderWidth: UU5.PropTypes.number,
+    borderWidthFocus: UU5.PropTypes.number
   },
   //@@viewOff:propTypes
 

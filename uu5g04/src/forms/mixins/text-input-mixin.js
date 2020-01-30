@@ -11,8 +11,6 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "../forms-ns.js";
 
@@ -38,25 +36,25 @@ export const TextInputMixin = {
 
   //@@viewOn:propTypes
   propTypes: {
-    placeholder: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    required: PropTypes.bool,
-    requiredMessage: PropTypes.any,
-    focusMessage: PropTypes.any,
-    patternMessage: PropTypes.any,
-    autocompleteItems: PropTypes.arrayOf(
-      PropTypes.shape({
-        value: PropTypes.string,
-        params: PropTypes.object,
-        content: PropTypes.any
+    placeholder: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string]),
+    required: UU5.PropTypes.bool,
+    requiredMessage: UU5.PropTypes.any,
+    focusMessage: UU5.PropTypes.any,
+    patternMessage: UU5.PropTypes.any,
+    autocompleteItems: UU5.PropTypes.arrayOf(
+      UU5.PropTypes.shape({
+        value: UU5.PropTypes.string,
+        params: UU5.PropTypes.object,
+        content: UU5.PropTypes.any
       })
     ),
-    onFocus: PropTypes.func,
-    onBlur: PropTypes.func,
-    onEnter: PropTypes.func,
-    validateOnChange: PropTypes.bool,
-    borderRadius: PropTypes.string,
-    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-    elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
+    onFocus: UU5.PropTypes.func,
+    onBlur: UU5.PropTypes.func,
+    onEnter: UU5.PropTypes.func,
+    validateOnChange: UU5.PropTypes.bool,
+    borderRadius: UU5.PropTypes.string,
+    bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+    elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
   },
   //@@viewOff:propTypes
 

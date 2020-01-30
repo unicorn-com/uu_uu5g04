@@ -12,15 +12,13 @@
  */
 
 //@@viewOn:imports
-import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import createReactClass from "create-react-class";
 //@@viewOff:imports
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
-const MyAllowTagsComponents = createReactClass({
+const MyAllowTagsComponents = UU5.Common.VisualComponent.create({
   mixins: [UU5.Common.BaseMixin],
   statics: { tagName: "UU5.Example.MyCompLi", classNames: { main: "mytr" } },
   render() {

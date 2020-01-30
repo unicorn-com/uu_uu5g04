@@ -16,6 +16,7 @@ import PropTypes from "prop-types";
 import ReactDOM from "react-dom";
 import Tools from "./tools.js";
 import Environment from "../environment/environment.js";
+import Style from "../utils/style.js";
 
 export const BaseMixin = {
   //@@viewOn:statics
@@ -578,17 +579,7 @@ export const BaseMixin = {
   __styleStringToObject(style) {
     if (typeof style !== "string") return;
 
-    let obj = {};
-    let properties = style.split(";");
-
-    properties.forEach(item => {
-      let keysAndValues = item.split(":");
-      if (keysAndValues.length > 1) {
-        obj[keysAndValues[0].trim()] = keysAndValues[1].trim();
-      }
-    });
-
-    return obj;
+    return Style.parse(style);
   },
 
   __getContextLanguages() {

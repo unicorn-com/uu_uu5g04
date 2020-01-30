@@ -12,8 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Link from "./link";
@@ -23,28 +21,21 @@ import "./factory.less";
 
 export const Factory = {
   createTag: function(tag, uu5Name, className, defaultContent, levelFrom, levelTo) {
-    return createReactClass({
+    let nestingLevelList = UU5.Environment.getNestingLevelList(levelFrom, levelTo);
+    let mainClassName = ns.css((uu5Name || tag).toLowerCase()) + (className ? " " + className : "");
+    let statics = {
+      displayName: uu5Name || tag,
+      nestingLevel: nestingLevelList
+    };
+
+    return UU5.Common.VisualComponent.create({
       displayName: uu5Name || tag,
       //@@viewOn:mixins
-      mixins: [
-        UU5.Common.BaseMixin,
-        UU5.Common.ElementaryMixin,
-        UU5.Common.ContentMixin,
-        UU5.Common.NestingLevelMixin,
-        UU5.Common.PureRenderMixin
-      ],
       //@@viewOff:mixins
 
       //@@viewOn:statics
       statics: {
-        tagName: ns.name(uu5Name || tag),
-        nestingLevelList: UU5.Environment.getNestingLevelList(levelFrom, levelTo),
-        classNames: {
-          main: ns.css((uu5Name || tag).toLowerCase()) + (className ? " " + className : "")
-        },
-        defaults: {
-          content: defaultContent || null
-        }
+        tagName: ns.name(uu5Name || tag)
       },
       //@@viewOff:statics
 
@@ -68,12 +59,14 @@ export const Factory = {
 
       //@@viewOn:render
       render: function() {
-        return this.getNestingLevel()
-          ? React.createElement(
+        let nestingLevel = UU5.Utils.NestingLevel.getNestingLevel(this.props, statics);
+        return nestingLevel
+          ? UU5.Common.Element.create(
               tag.toLowerCase(),
-              this.getMainAttrs(),
-              this.getChildren() || this.getDefault().content,
-              this.getDisabledCover()
+              UU5.Common.VisualComponent.getAttrs(this.props, mainClassName),
+              UU5.Utils.Content.getChildren(this.props.content || this.props.children, this.props, nestingLevelList) ||
+                defaultContent ||
+                null
             )
           : null;
       }
@@ -81,27 +74,22 @@ export const Factory = {
     });
   },
   createLink: function(uu5Name, href, defaultContent, target) {
-    return createReactClass({
+    let nestingLevelList = ["inline"];
+    let mainClassName = ns.css("link") + uu5Name.toLowerCase();
+    let tagName = "UU5.Bricks.Link" + uu5Name;
+    let statics = {
+      displayName: tagName,
+      nestingLevel: nestingLevelList
+    };
+    if (!defaultContent) defaultContent = uu5Name;
+
+    return UU5.Common.VisualComponent.create({
       //@@viewOn:mixins
-      mixins: [
-        UU5.Common.BaseMixin,
-        UU5.Common.ElementaryMixin,
-        UU5.Common.ContentMixin,
-        UU5.Common.NestingLevelMixin,
-        UU5.Common.PureRenderMixin
-      ],
       //@@viewOff:mixins
 
       //@@viewOn:statics
       statics: {
-        tagName: "UU5.Bricks.Link" + uu5Name,
-        nestingLevel: "inline",
-        classNames: {
-          main: ns.css("link") + uu5Name.toLowerCase()
-        },
-        defaults: {
-          content: defaultContent || uu5Name
-        }
+        tagName
       },
       //@@viewOn:propTypes
       //@@viewOff:propTypes
@@ -123,12 +111,18 @@ export const Factory = {
 
       //@@viewOn:render
       render: function() {
-        var mainProps = this.getMainPropsToPass();
-        mainProps.href = href;
-        mainProps.target = target || "_blank";
+        let nestingLevel = UU5.Utils.NestingLevel.getNestingLevel(this.props, statics);
 
-        return this.getNestingLevel() ? (
-          <Link {...mainProps}>{this.props.children || this.getDefault().content}</Link>
+        return nestingLevel ? (
+          <Link
+            {...this.props}
+            href={href}
+            target={target || "_blank"}
+            nestingLevel={nestingLevel}
+            className={[mainClassName, this.props.className].filter(Boolean).join(" ")}
+          >
+            {this.props.children || defaultContent}
+          </Link>
         ) : null;
       }
       //@@viewOn:render

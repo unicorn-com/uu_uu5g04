@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import PropTypes from "prop-types";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -23,7 +20,8 @@ import ScrollArea from "./scroll-area.js";
 import "./virtual-list.less";
 //@@viewOff:imports
 
-export const VirtualList = createReactClass({
+export const VirtualList = UU5.Common.VisualComponent.create({
+  displayName: "VirtualList", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin],
   //@@viewOff:mixins
@@ -43,20 +41,20 @@ export const VirtualList = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    data: PropTypes.array.isRequired,
-    height: PropTypes.number,
-    width: PropTypes.number,
-    boxPadding: PropTypes.shape({
-      left: PropTypes.number,
-      right: PropTypes.number,
-      top: PropTypes.number,
-      bottom: PropTypes.number
+    data: UU5.PropTypes.array.isRequired,
+    height: UU5.PropTypes.number,
+    width: UU5.PropTypes.number,
+    boxPadding: UU5.PropTypes.shape({
+      left: UU5.PropTypes.number,
+      right: UU5.PropTypes.number,
+      top: UU5.PropTypes.number,
+      bottom: UU5.PropTypes.number
     }),
-    item: PropTypes.oneOfType([PropTypes.func, PropTypes.element]),
-    itemHeight: PropTypes.number.isRequired,
-    itemWidth: PropTypes.number,
-    overscanRowCount: PropTypes.number,
-    initialScrollTop: PropTypes.number
+    item: UU5.PropTypes.oneOfType([UU5.PropTypes.func, UU5.PropTypes.element]),
+    itemHeight: UU5.PropTypes.number.isRequired,
+    itemWidth: UU5.PropTypes.number,
+    overscanRowCount: UU5.PropTypes.number,
+    initialScrollTop: UU5.PropTypes.number
   },
   //@@viewOff:propTypes
 
@@ -208,7 +206,7 @@ export const VirtualList = createReactClass({
         item =
           typeof this.props.item === "function"
             ? this.props.item({ data: itemData, loading: this.state.loading }, i)
-            : React.cloneElement(this.props.item, itemData);
+            : UU5.Common.Element.clone(this.props.item, itemData);
       }
 
       items.push(

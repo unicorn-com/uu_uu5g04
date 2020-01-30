@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Css from "./internal/css.js";
@@ -23,7 +20,8 @@ import "./calendar.less";
 //@@viewOff:imports
 
 export const Calendar = UU5.Common.LsiMixin.withContext(
-  createReactClass({
+  UU5.Common.VisualComponent.create({
+    displayName: "Calendar", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
     mixins: [
       UU5.Common.BaseMixin,
@@ -118,26 +116,26 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
 
     //@@viewOn:propTypes
     propTypes: {
-      value: PropTypes.oneOfType([
-        PropTypes.object,
-        PropTypes.string,
-        PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object, PropTypes.string]))
+      value: UU5.PropTypes.oneOfType([
+        UU5.PropTypes.object,
+        UU5.PropTypes.string,
+        UU5.PropTypes.arrayOf(UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string]))
       ]),
-      dateFrom: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-      dateTo: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-      displayDate: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-      selectionMode: PropTypes.oneOf(["single", "range"]),
-      step: PropTypes.oneOf(["days", "months", "years"]),
-      view: PropTypes.oneOf(["days", "months", "years"]),
-      showTodayButton: PropTypes.bool,
-      hideWeekNumber: PropTypes.bool,
-      hidePrevSelection: PropTypes.bool,
-      hideNextSelection: PropTypes.bool,
-      hideOtherSections: PropTypes.bool,
-      onChange: PropTypes.func,
-      onViewChange: PropTypes.func,
-      onNextSelection: PropTypes.func,
-      onPrevSelection: PropTypes.func
+      dateFrom: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string]),
+      dateTo: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string]),
+      displayDate: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string]),
+      selectionMode: UU5.PropTypes.oneOf(["single", "range"]),
+      step: UU5.PropTypes.oneOf(["days", "months", "years"]),
+      view: UU5.PropTypes.oneOf(["days", "months", "years"]),
+      showTodayButton: UU5.PropTypes.bool,
+      hideWeekNumber: UU5.PropTypes.bool,
+      hidePrevSelection: UU5.PropTypes.bool,
+      hideNextSelection: UU5.PropTypes.bool,
+      hideOtherSections: UU5.PropTypes.bool,
+      onChange: UU5.PropTypes.func,
+      onViewChange: UU5.PropTypes.func,
+      onNextSelection: UU5.PropTypes.func,
+      onPrevSelection: UU5.PropTypes.func
     },
     //@@viewOff:propTypes
 

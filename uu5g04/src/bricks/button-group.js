@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 const ClassNames = UU5.Common.ClassNames;
@@ -24,7 +21,8 @@ import { Div } from "./factory.js";
 import "./button-group.less";
 //@@viewOff:imports
 
-export const ButtonGroup = createReactClass({
+export const ButtonGroup = UU5.Common.VisualComponent.create({
+  displayName: "ButtonGroup", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -62,16 +60,16 @@ export const ButtonGroup = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    size: PropTypes.string,
-    vertical: PropTypes.bool,
-    allowTags: PropTypes.arrayOf(PropTypes.string),
-    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline", "link"]),
-    borderRadius: PropTypes.string,
-    elevation: PropTypes.oneOf(["0", "1", "2", "3", "4", "5", 0, 1, 2, 3, 4, 5]),
-    baseline: PropTypes.bool
+    size: UU5.PropTypes.string,
+    vertical: UU5.PropTypes.bool,
+    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
+    bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline", "link"]),
+    borderRadius: UU5.PropTypes.string,
+    elevation: UU5.PropTypes.oneOf(["0", "1", "2", "3", "4", "5", 0, 1, 2, 3, 4, 5]),
+    baseline: UU5.PropTypes.bool
 
     // TODO: not possible for button, but for <a> element
-    //displayBlock: PropTypes.bool
+    //displayBlock: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 

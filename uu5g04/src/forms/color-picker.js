@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
 
@@ -29,7 +26,8 @@ import Context from "./form-context.js";
 //@@viewOff:imports
 
 export const ColorPicker = Context.withContext(
-  createReactClass({
+  UU5.Common.VisualComponent.create({
+    displayName: "ColorPicker", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
     mixins: [
       UU5.Common.BaseMixin,
@@ -85,15 +83,15 @@ export const ColorPicker = Context.withContext(
 
     //@@viewOn:propTypes
     propTypes: {
-      value: PropTypes.string,
-      enableCustomColor: PropTypes.bool,
-      simplePalette: PropTypes.bool,
-      required: PropTypes.bool,
-      requiredMessage: PropTypes.any,
-      borderRadius: PropTypes.string,
-      bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-      elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-      openToContent: PropTypes.oneOfType([PropTypes.bool, PropTypes.string])
+      value: UU5.PropTypes.string,
+      enableCustomColor: UU5.PropTypes.bool,
+      simplePalette: UU5.PropTypes.bool,
+      required: UU5.PropTypes.bool,
+      requiredMessage: UU5.PropTypes.any,
+      borderRadius: UU5.PropTypes.string,
+      bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+      elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+      openToContent: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string])
     },
     //@@viewOff:propTypes
 
@@ -343,7 +341,7 @@ export const ColorPicker = Context.withContext(
             <Loading className={this.getClassName("loading") + " " + ns.css("input-loading-icon")} id={this.getId()} />
           ) : (
             UU5.Common.Tools.wrapIfExists(
-              React.Fragment,
+              UU5.Common.Fragment,
               <ColorPreview
                 color={this.getValue() || null}
                 size="s"

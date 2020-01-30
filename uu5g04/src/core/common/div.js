@@ -13,7 +13,6 @@
 
 //@@viewOn:imports
 import React from "react";
-import createReactClass from "create-react-class";
 import ns from "./common-ns.js";
 import BaseMixin from "./base-mixin.js";
 import ElementaryMixin from "./elementary-mixin.js";
@@ -21,11 +20,13 @@ import ContentMixin from "./content-mixin.js";
 import NestingLevelMixin from "./nesting-level-mixin.js";
 import Environment from "../environment/environment.js";
 import PureRenderMixin from "./pure-render-mixin";
+import VisualComponent from "./visual-component.js";
 
 import "./div.less";
 //@@viewOff:imports
 
-export const Div = createReactClass({
+export const Div = VisualComponent.create({
+  displayName: "Div", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [BaseMixin, ElementaryMixin, ContentMixin, NestingLevelMixin, PureRenderMixin],
   //@@viewOff:mixins

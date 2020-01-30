@@ -1,4 +1,3 @@
-import React from "react";
 import Icon from "../icon.js";
 import Css from "./css.js";
 
@@ -58,7 +57,7 @@ export const Helpers = {
   },
 
   wrapSubmenu: content => {
-    let result = null;
+    let result = content;
     if (content && content.length) {
       result = <ul className={ClassNames.submenu()}>{content}</ul>;
     }

@@ -11,9 +11,6 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
-import PropTypes from "prop-types";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 
@@ -39,7 +36,7 @@ const DEFAULT_PROPS_MAP = {
 const MAIN_CLASS_NAME = ns.css("blockquote");
 const NAME = ns.name("Blockquote");
 
-export const Blockquote = createReactClass({
+export const Blockquote = UU5.Common.VisualComponent.create({
   displayName: NAME,
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin],
@@ -118,7 +115,7 @@ export const Blockquote = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    component: PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired
   },
   //@@viewOff:propTypes
 

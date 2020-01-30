@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -24,7 +21,8 @@ import Item from "./progress-bar-item.js";
 import "./progress-bar.less";
 //@@viewOff:imports
 
-export const ProgressBar = createReactClass({
+export const ProgressBar = UU5.Common.VisualComponent.create({
+  displayName: "ProgressBar", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -57,11 +55,11 @@ export const ProgressBar = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    progress: PropTypes.number,
-    striped: PropTypes.bool,
-    animated: PropTypes.bool,
-    allowTags: PropTypes.arrayOf(PropTypes.string),
-    size: PropTypes.oneOf(["s", "m", "l", "xl"])
+    progress: UU5.PropTypes.number,
+    striped: UU5.PropTypes.bool,
+    animated: UU5.PropTypes.bool,
+    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
+    size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"])
   },
   //@@viewOff:propTypes
 

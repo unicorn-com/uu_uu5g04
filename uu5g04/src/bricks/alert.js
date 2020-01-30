@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -24,7 +21,9 @@ import Icon from "./icon.js";
 import "./alert.less";
 //@@viewOff:imports
 
-export const Alert = createReactClass({
+export const Alert = UU5.Common.VisualComponent.create({
+  displayName: "Alert", // for backward compatibility (test snapshots)
+
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -64,13 +63,13 @@ export const Alert = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    position: PropTypes.oneOf(["left", "center", "right"]),
-    closeTimer: PropTypes.number,
-    closeDisabled: PropTypes.bool,
-    block: PropTypes.bool,
-    onClose: PropTypes.func,
-    onCloseAfter: PropTypes.func,
-    onCloseBefore: PropTypes.func
+    position: UU5.PropTypes.oneOf(["left", "center", "right"]),
+    closeTimer: UU5.PropTypes.number,
+    closeDisabled: UU5.PropTypes.bool,
+    block: UU5.PropTypes.bool,
+    onClose: UU5.PropTypes.func,
+    onCloseAfter: UU5.PropTypes.func,
+    onCloseBefore: UU5.PropTypes.func
   },
   //@@viewOff:propTypes
 

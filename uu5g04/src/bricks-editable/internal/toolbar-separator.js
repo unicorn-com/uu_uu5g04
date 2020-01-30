@@ -1,4 +1,4 @@
-import React from "react";
+import UU5 from "uu5g04";
 import ns from "../bricks-editable-ns.js";
 import Css from "./css.js";
 
@@ -20,7 +20,7 @@ const getProps = props => {
   return propsToPass;
 };
 
-export const ToolbarSeparator = React.forwardRef((props, ref) => {
+export const ToolbarSeparator = UU5.Common.Reference.forward((props, ref) => {
   return <span {...getProps(props)} ref={ref} />;
 });
 

@@ -12,14 +12,12 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 //@@viewOff:imports
 
-export const Authenticated = createReactClass({
+export const Authenticated = UU5.Common.VisualComponent.create({
+  displayName: "Authenticated", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.IdentityMixin, UU5.Common.ContentMixin],
   //@@viewOff:mixins
@@ -36,9 +34,9 @@ export const Authenticated = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    authenticated: PropTypes.bool,
-    notAuthenticated: PropTypes.bool,
-    pending: PropTypes.bool
+    authenticated: UU5.PropTypes.bool,
+    notAuthenticated: UU5.PropTypes.bool,
+    pending: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 

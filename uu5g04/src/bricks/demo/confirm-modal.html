@@ -47,14 +47,11 @@
     <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
     <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
     <script type="text/babel">
-      import React from "react";
-      import createReactClass from "create-react-class";
-      import ReactDOM from "react-dom";
       import UU5 from "uu5g04";
       import "uu5g04-bricks";
       import "uu5g04-forms";
 
-      var Page = createReactClass({
+      var Page = UU5.Common.VisualComponent.create({
         render: function () {
 
           return (
@@ -80,10 +77,10 @@
                   confirmButtonLeft: true,
                   header: "Uděluješ souhlas s podmínkami",
                   content: (
-                    <React.Fragment>
+                    <UU5.Common.Fragment>
                       <UU5.Bricks.Paragraph />
                       <UU5.Bricks.P>Souhlasíš nebo souhlasíš?</UU5.Bricks.P>
-                    </React.Fragment>
+                    </UU5.Common.Fragment>
                   ),
                   size: "m"
                 }) }>open with everything</UU5.Bricks.Button>
@@ -94,7 +91,7 @@
         }
       });
 
-      ReactDOM.render(React.createElement(Page), document.getElementById('renderHere'));
+      UU5.Common.DOM.render(UU5.Common.Element.create(Page), document.getElementById('renderHere'));
     </script>
   </body>
 </html>

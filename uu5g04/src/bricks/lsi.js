@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -24,7 +21,8 @@ import "./lsi.less";
 //@@viewOff:imports
 
 export const Lsi = UU5.Common.LsiMixin.withContext(
-  createReactClass({
+  UU5.Common.VisualComponent.create({
+    displayName: "Lsi", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
     mixins: [
       UU5.Common.BaseMixin,
@@ -54,9 +52,9 @@ export const Lsi = UU5.Common.LsiMixin.withContext(
 
     //@@viewOn:propTypes
     propTypes: {
-      lsi: PropTypes.object,
-      allowTags: PropTypes.arrayOf(PropTypes.string),
-      params: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.object])
+      lsi: UU5.PropTypes.object,
+      allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
+      params: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.array, UU5.PropTypes.object])
     },
     //@@viewOff:propTypes
 
@@ -110,13 +108,13 @@ export const Lsi = UU5.Common.LsiMixin.withContext(
           child = children.map(child => {
             let newChild = child;
 
-            if (React.isValidElement(child)) {
+            if (UU5.Common.Element.isValid(child)) {
               if (child.type.tagName === this.getDefault("childTagName")) {
                 // Lsi.Item
                 lsi[child.props.language] = child;
               } else {
                 // language as prop
-                newChild = React.cloneElement(child, { language: this.getLanguage() });
+                newChild = UU5.Common.Element.clone(child, { language: this.getLanguage() });
               }
             }
 
@@ -125,7 +123,7 @@ export const Lsi = UU5.Common.LsiMixin.withContext(
 
           if (Object.keys(lsi).length) {
             child = this.getLsiItem(lsi, this.props.params, this.getLanguage());
-            child = child ? React.cloneElement(child, this._expandChildProps(child)) : null;
+            child = child ? UU5.Common.Element.clone(child, this._expandChildProps(child)) : null;
           }
         } else {
           child = (

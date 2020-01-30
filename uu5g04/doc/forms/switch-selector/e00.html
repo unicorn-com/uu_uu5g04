@@ -39,9 +39,6 @@
 <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
 <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
 <script type="text/babel">
-  import React from "react";
-  import createReactClass from "create-react-class";
-  import ReactDOM from "react-dom";
   import UU5 from "uu5g04";
   import "uu5g04-bricks";
   import "uu5g04-forms";
@@ -55,7 +52,7 @@
 
   const defaultProps = { ...UU5.Forms.InputMixin.getDefaultProps(), ...UU5.Bricks.SwitchSelector.getDefaultProps() };
 
-  const SwitchSelectorStateFull = createReactClass({
+  const SwitchSelectorStateFull = UU5.Common.VisualComponent.create({
     getInitialState() {
       return { value: this.props.value || (this.props.items || UU5.Bricks.SwitchSelector.getDefaultProps().items)[0].value }
     },
@@ -79,7 +76,7 @@
   }
 
   //@@viewOn:example
-  const Page = createReactClass({
+  const Page = UU5.Common.VisualComponent.create({
 
     getInitialState() {
       return {
@@ -299,7 +296,7 @@
   });
   //@@viewOff:example
 
-  ReactDOM.render(<Page />, document.getElementById('renderHere'));
+  UU5.Common.DOM.render(<Page />, document.getElementById('renderHere'));
 </script>
 </body>
 </html>

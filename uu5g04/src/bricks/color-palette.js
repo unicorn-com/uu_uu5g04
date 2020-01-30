@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Css from "./internal/css.js";
@@ -88,7 +85,8 @@ const ADVANCED_WHITE = {
   c900: "#000000" // black
 };
 
-export const ColorPalette = createReactClass({
+export const ColorPalette = UU5.Common.VisualComponent.create({
+  displayName: "ColorPalette", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin],
   //@@viewOff:mixins
@@ -155,10 +153,10 @@ export const ColorPalette = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    simplePalette: PropTypes.bool,
-    onChange: PropTypes.func,
-    onColorSchemaChange: PropTypes.func,
-    color: PropTypes.string
+    simplePalette: UU5.PropTypes.bool,
+    onChange: UU5.PropTypes.func,
+    onColorSchemaChange: UU5.PropTypes.func,
+    color: UU5.PropTypes.string
   },
   //@@viewOff:propTypes
 

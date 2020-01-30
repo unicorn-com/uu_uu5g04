@@ -12,15 +12,13 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import PropTypes from "prop-types";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 
 import ns from "./bricks-ns.js";
 //@@viewOff:imports
 
-export const LsiContext = createReactClass({
+export const LsiContext = UU5.Common.VisualComponent.create({
+  displayName: "LsiContext", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ContentMixin],
   //@@viewOff:mixins
@@ -36,7 +34,7 @@ export const LsiContext = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    localLsi: PropTypes.bool
+    localLsi: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 

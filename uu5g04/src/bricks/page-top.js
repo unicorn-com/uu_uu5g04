@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import ResizeObserver from "./resize-observer.js";
@@ -23,7 +20,8 @@ import Css from "./internal/css.js";
 import "./page-top.less";
 //@@viewOff:imports
 
-export const PageTop = createReactClass({
+export const PageTop = UU5.Common.VisualComponent.create({
+  displayName: "PageTop", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ContentMixin, UU5.Common.CcrWriterMixin],
   //@@viewOff:mixins
@@ -65,13 +63,13 @@ export const PageTop = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    fixed: PropTypes.bool,
-    fixedHeight: PropTypes.number,
-    bottomId: PropTypes.string,
-    leftFixed: PropTypes.bool,
-    rightFixed: PropTypes.bool,
-    alwaysFixed: PropTypes.bool,
-    overlayContent: PropTypes.bool
+    fixed: UU5.PropTypes.bool,
+    fixedHeight: UU5.PropTypes.number,
+    bottomId: UU5.PropTypes.string,
+    leftFixed: UU5.PropTypes.bool,
+    rightFixed: UU5.PropTypes.bool,
+    alwaysFixed: UU5.PropTypes.bool,
+    overlayContent: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 
@@ -395,7 +393,7 @@ export const PageTop = createReactClass({
 
     if (this.props.fixed || this._simulateRelativePosition()) {
       result = UU5.Common.Tools.wrapIfExists(
-        React.Fragment,
+        UU5.Common.Fragment,
         <div {...this._getMainAttrs()} key="main">
           <ResizeObserver onResize={this._setGhostHeight} />
           {this.getChildren()}

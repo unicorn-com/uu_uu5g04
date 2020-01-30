@@ -47,9 +47,6 @@
     <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
     <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
     <script type="text/babel">
-      import React from "react";
-      import createReactClass from "create-react-class";
-      import ReactDOM from "react-dom";
       import UU5 from "uu5g04";
       import "uu5g04-bricks";
       import "uu5g04-forms";
@@ -60,7 +57,7 @@
         { label: "High", value: "high" }
       ];
 
-      const SwitchSelectorStateFull = createReactClass({
+      const SwitchSelectorStateFull = UU5.Common.VisualComponent.create({
         getInitialState() {
           return { value: this.props.value || (this.props.items || UU5.Bricks.SwitchSelector.getDefaultProps().items)[0].value }
         },
@@ -121,7 +118,7 @@
         );
       };
 
-      var Page = createReactClass({
+      var Page = UU5.Common.VisualComponent.create({
         render: function () {
           return (
             <UU5.Bricks.Container level="3" header="UU5.Bricks.SwitchSelector">
@@ -146,7 +143,7 @@
         }
       });
 
-      ReactDOM.render(React.createElement(Page), document.getElementById('renderHere'));
+      UU5.Common.DOM.render(UU5.Common.Element.create(Page), document.getElementById('renderHere'));
     </script>
   </body>
 </html>

@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 const ClassNames = UU5.Common.ClassNames;
@@ -22,69 +19,8 @@ const ClassNames = UU5.Common.ClassNames;
 import "./image.less";
 //@@viewOff:imports
 
-const withVisibilityCheck = function(Component, reserve = 500) {
-  if (typeof IntersectionObserver === "undefined") return Component;
-
-  const VisibilityCheck = createReactClass({
-    mixins: [UU5.Common.BaseMixin],
-    statics: {
-      tagName: ns.name("Image.withVisibilityCheck"),
-      classNames: {
-        placeholder: ns.css("image-visibility-placeholder")
-      },
-      opt: {
-        hoc: true
-      }
-    },
-    getInitialState() {
-      return { visible: false };
-    },
-    componentDidMount() {
-      let domNodeRect = this._domNode.getBoundingClientRect();
-      let isVisible = domNodeRect.top <= window.innerHeight + reserve && domNodeRect.bottom >= -reserve;
-      if (isVisible) {
-        this.setState({ visible: true });
-      } else {
-        this._observer = new IntersectionObserver(this._onIntersected, { rootMargin: reserve + "px" });
-        this._observer.observe(this._domNode);
-      }
-    },
-    componentWillUnmount() {
-      if (this._observer) this._observer.disconnect();
-    },
-    _onIntersected(entries, observer) {
-      let entry = entries[entries.length - 1];
-      if (entry && entry.isIntersecting) {
-        observer.disconnect();
-        this.setState({ visible: true });
-      }
-    },
-    _setRef(comp) {
-      this._domNode = comp;
-    },
-    render() {
-      let { visible } = this.state;
-      let style = this.getMainAttrs().style || {};
-      if (this.props.width) {
-        style.width = this.props.width;
-      }
-
-      if (this.props.height) {
-        style.height = this.props.height;
-      }
-
-      return visible ? (
-        <Component {...this.props} />
-      ) : (
-        <span ref={this._setRef} className={this.getClassName("placeholder")} style={style} />
-      );
-    }
-  });
-
-  return VisibilityCheck;
-};
-
-let Image = createReactClass({
+let Image = UU5.Common.VisualComponent.create({
+  displayName: "Image", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, UU5.Common.NestingLevelMixin],
   //@@viewOff:mixins
@@ -107,15 +43,15 @@ let Image = createReactClass({
   // TODO: strictCircle -> no ellipse but cut a circle from different image size - e.g. http://sixrevisions.com/css/circular-images-css/
   //@@viewOn:propTypes
   propTypes: {
-    type: PropTypes.oneOf(["rounded", "circle", "thumbnail"]),
-    src: PropTypes.string,
-    responsive: PropTypes.bool,
-    alt: PropTypes.string,
-    authenticate: PropTypes.bool,
-    borderRadius: PropTypes.string,
-    elevation: PropTypes.oneOf(["0", "1", "2", "3", "4", "5", 0, 1, 2, 3, 4, 5]),
-    width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    height: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+    type: UU5.PropTypes.oneOf(["rounded", "circle", "thumbnail"]),
+    src: UU5.PropTypes.string,
+    responsive: UU5.PropTypes.bool,
+    alt: UU5.PropTypes.string,
+    authenticate: UU5.PropTypes.bool,
+    borderRadius: UU5.PropTypes.string,
+    elevation: UU5.PropTypes.oneOf(["0", "1", "2", "3", "4", "5", 0, 1, 2, 3, 4, 5]),
+    width: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
+    height: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string])
   },
   //@@viewOff:propTypes
 
@@ -334,7 +270,7 @@ let Image = createReactClass({
   }
   //@@viewOff:render
 });
-Image = withVisibilityCheck(Image);
+Image = UU5.Common.withVisibilityCheck(Image);
 
 export { Image };
 export default Image;

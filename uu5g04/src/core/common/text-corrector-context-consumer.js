@@ -13,7 +13,6 @@
 
 //@@viewOn:imports
 import React from "react";
-import createReactClass from "create-react-class";
 import ns from "./common-ns.js";
 import PropTypes from "prop-types";
 import BaseMixin from "./base-mixin.js";
@@ -22,6 +21,7 @@ import Tools from "./tools.js";
 import Environment from "../environment/environment.js";
 import PureRenderMixin from "./pure-render-mixin.js";
 import { withTextCorrectorContext } from "./context.js";
+import VisualComponent from "./visual-component.js";
 
 import "./text-corrector.less";
 //@@viewOff:imports
@@ -44,7 +44,8 @@ TextCorrectorContextConsumer.isUu5PureComponent = true;
 TextCorrectorContextConsumer.displayName = ns.name("TextCorrectorContextConsumer");
 TextCorrectorContextConsumer.isStateless = true;
 
-export const TextCorrectorComponent = createReactClass({
+export const TextCorrectorComponent = VisualComponent.create({
+  displayName: "TextCorrectorComponent", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [BaseMixin, ElementaryMixin, PureRenderMixin],
   //@@viewOff:mixins

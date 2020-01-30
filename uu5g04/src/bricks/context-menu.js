@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import ContextMenuItem from "./context-menu-item.js";
@@ -26,7 +23,9 @@ import { Helpers } from "./internal/context-menu-helpers.js";
 import "./context-menu.less";
 //@@viewOff:imports
 
-export const ContextMenu = createReactClass({
+export const ContextMenu = UU5.Common.VisualComponent.create({
+  displayName: "ContextMenu", // for backward compatibility (test snapshots)
+
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -56,11 +55,11 @@ export const ContextMenu = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    shown: PropTypes.bool,
-    forceRender: PropTypes.bool,
-    parentElement: PropTypes.object,
-    allowTags: PropTypes.arrayOf(PropTypes.string),
-    compactSubmenu: PropTypes.oneOfType([PropTypes.bool, PropTypes.string])
+    shown: UU5.PropTypes.bool,
+    forceRender: UU5.PropTypes.bool,
+    parentElement: UU5.PropTypes.object,
+    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
+    compactSubmenu: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string])
   },
   //@@viewOff:propTypes
 

@@ -43,14 +43,11 @@
 <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
 <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
 <script type="text/babel">
-  import React from "react";
-      import createReactClass from "create-react-class";
-  import ReactDOM from "react-dom";
   import UU5 from "uu5g04";
   import "uu5g04-bricks";
 
 
-  var Page = createReactClass({
+  var Page = UU5.Common.VisualComponent.create({
 
         mixins: [
           UU5.Common.BaseMixin,
@@ -268,9 +265,9 @@
         }
       });
 
-      ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+      UU5.Common.DOM.render(UU5.Common.Element.create(Page, null), document.getElementById('renderHere'));
 
-      var Page2 = createReactClass({
+      var Page2 = UU5.Common.VisualComponent.create({
 
         mixins: [
           UU5.Common.BaseMixin,
@@ -287,7 +284,7 @@
           return this.mapColor((color) => {
             color && (props.colorSchema = color);
             props.key = color;
-            return React.createElement(tag, props);
+            return UU5.Common.Element.create(tag, props);
           })
         },
 
@@ -640,7 +637,7 @@
         }
       });
 
-      ReactDOM.render(React.createElement(Page2, null), document.getElementById('renderHere2'));
+      UU5.Common.DOM.render(UU5.Common.Element.create(Page2, null), document.getElementById('renderHere2'));
     </script>
   </body>
 </html>

@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "./forms-ns.js";
@@ -32,7 +29,8 @@ import "./select.less";
 //@@viewOff:imports
 
 export const Select = Context.withContext(
-  createReactClass({
+  UU5.Common.VisualComponent.create({
+    displayName: "Select", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
     mixins: [
       UU5.Common.BaseMixin,
@@ -68,15 +66,15 @@ export const Select = Context.withContext(
 
     //@@viewOn:propTypes
     propTypes: {
-      value: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
-      multiple: PropTypes.bool,
-      selectAllEnabled: PropTypes.bool,
-      allowTags: PropTypes.array,
-      disableBackdrop: PropTypes.bool,
-      borderRadius: PropTypes.string,
-      bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-      elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-      openToContent: PropTypes.oneOfType([PropTypes.bool, PropTypes.string])
+      value: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.arrayOf(UU5.PropTypes.string)]),
+      multiple: UU5.PropTypes.bool,
+      selectAllEnabled: UU5.PropTypes.bool,
+      allowTags: UU5.PropTypes.array,
+      disableBackdrop: UU5.PropTypes.bool,
+      borderRadius: UU5.PropTypes.string,
+      bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+      elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+      openToContent: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string])
     },
     //@@viewOff:propTypes
 
@@ -130,7 +128,7 @@ export const Select = Context.withContext(
       } else {
         let currentValue = this.getValue();
         if (currentValue) {
-          let itemValues = React.Children.map(nextProps.children, child => child.props.value);
+          let itemValues = UU5.Common.Children.map(nextProps.children, child => child.props.value);
 
           if (Array.isArray(currentValue)) {
             let newValue = [];
@@ -1054,7 +1052,7 @@ export const Select = Context.withContext(
       let children = [];
       if (this.props.children) {
         let childTagNames = this.props.allowTags.concat(this.getDefault().childTagName);
-        React.Children.toArray(this.props.children).forEach(child => {
+        UU5.Common.Children.toArray(this.props.children).forEach(child => {
           let childTagName = UU5.Common.Tools.getChildTagName(child);
           const newProps = UU5.Common.Tools.merge({}, child.props);
           newProps.mainAttrs = newProps.mainAttrs || {};

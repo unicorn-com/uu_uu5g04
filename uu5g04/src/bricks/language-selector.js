@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Dropdown from "./dropdown.js";
@@ -27,7 +24,8 @@ import "./language-selector.less";
 //@@viewOff:imports
 
 export const LanguageSelector = UU5.Common.LsiMixin.withContext(
-  createReactClass({
+  UU5.Common.VisualComponent.create({
+    displayName: "LanguageSelector", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
     mixins: [
       UU5.Common.BaseMixin,
@@ -66,24 +64,24 @@ export const LanguageSelector = UU5.Common.LsiMixin.withContext(
 
     //@@viewOn:propTypes
     propTypes: {
-      headerMode: PropTypes.oneOf(["all", "flag", "label", "code"]),
-      bodyMode: PropTypes.oneOf(["all", "flag", "label", "label-code"]),
-      displayedLanguages: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.string), PropTypes.string]),
-      languages: PropTypes.shape({
-        languageCode: PropTypes.shape({
-          flag: PropTypes.string,
-          language: PropTypes.string
+      headerMode: UU5.PropTypes.oneOf(["all", "flag", "label", "code"]),
+      bodyMode: UU5.PropTypes.oneOf(["all", "flag", "label", "label-code"]),
+      displayedLanguages: UU5.PropTypes.oneOfType([UU5.PropTypes.arrayOf(UU5.PropTypes.string), UU5.PropTypes.string]),
+      languages: UU5.PropTypes.shape({
+        languageCode: UU5.PropTypes.shape({
+          flag: UU5.PropTypes.string,
+          language: UU5.PropTypes.string
         })
       }),
-      defaultLanguage: PropTypes.string,
-      size: PropTypes.string,
-      bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-      pullRight: PropTypes.bool,
-      dropup: PropTypes.bool,
-      borderRadius: PropTypes.string,
-      elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-      elevationHover: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-      baseline: PropTypes.bool
+      defaultLanguage: UU5.PropTypes.string,
+      size: UU5.PropTypes.string,
+      bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+      pullRight: UU5.PropTypes.bool,
+      dropup: UU5.PropTypes.bool,
+      borderRadius: UU5.PropTypes.string,
+      elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+      elevationHover: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+      baseline: UU5.PropTypes.bool
     },
     //@@viewOff:propTypes
 

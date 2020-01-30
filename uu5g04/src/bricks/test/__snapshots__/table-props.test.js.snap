@@ -60,7 +60,7 @@ exports[`UU5.Bricks.Table - docKitExamples props-allowTags 1`] = `
       <table-tr
         id="uuID10"
       >
-        <MyColumnComponent
+        <UU5.Example.MyColumnComponent
           colorSchema="blue"
           id="allowID"
           span={1}
@@ -136,7 +136,7 @@ exports[`UU5.Bricks.Table - docKitExamples props-hover/Conseded 1`] = `
       <table-tr
         id="uuID10"
       >
-        <MyColumnComponent
+        <UU5.Example.MyColumnComponent
           colorSchema="blue"
           id="allowID"
           span={1}
@@ -212,7 +212,7 @@ exports[`UU5.Bricks.Table - docKitExamples props-responsive 1`] = `
       <table-tr
         id="uuID10"
       >
-        <MyColumnComponent
+        <UU5.Example.MyColumnComponent
           colorSchema="blue"
           id="allowID"
           span={1}
@@ -288,7 +288,7 @@ exports[`UU5.Bricks.Table - docKitExamples props-striped/Bordered 1`] = `
       <table-tr
         id="uuID10"
       >
-        <MyColumnComponent
+        <UU5.Example.MyColumnComponent
           colorSchema="blue"
           id="allowID"
           span={1}

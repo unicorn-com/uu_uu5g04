@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -27,7 +24,8 @@ import Icon from "./icon.js";
 import "./cookie-bar.less";
 //@@viewOff:imports
 
-export const CookieBar = createReactClass({
+export const CookieBar = UU5.Common.VisualComponent.create({
+  displayName: "CookieBar", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -63,14 +61,14 @@ export const CookieBar = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    infoText: PropTypes.any,
-    infoHref: PropTypes.string,
-    infoTarget: PropTypes.oneOf(["_blank", "_parent", "_top", "_self"]),
-    fixed: PropTypes.oneOf(["top", "bottom"]),
-    onClose: PropTypes.func,
-    expireDays: PropTypes.number,
-    cookieKey: PropTypes.string,
-    cookieValue: PropTypes.string
+    infoText: UU5.PropTypes.any,
+    infoHref: UU5.PropTypes.string,
+    infoTarget: UU5.PropTypes.oneOf(["_blank", "_parent", "_top", "_self"]),
+    fixed: UU5.PropTypes.oneOf(["top", "bottom"]),
+    onClose: UU5.PropTypes.func,
+    expireDays: UU5.PropTypes.number,
+    cookieKey: UU5.PropTypes.string,
+    cookieValue: UU5.PropTypes.string
   },
   //@@viewOff:propTypes
 
@@ -147,7 +145,7 @@ export const CookieBar = createReactClass({
       content = this.getDefault().content;
     }
 
-    return <Span content={content}>{this.props.children && React.Children.toArray(this.props.children)}</Span>;
+    return <Span content={content}>{this.props.children && UU5.Common.Children.toArray(this.props.children)}</Span>;
   },
 
   _getButton() {

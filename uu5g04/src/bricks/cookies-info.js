@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -25,7 +22,8 @@ import Section from "./section";
 import "./cookies-info.less";
 //@@viewOff:imports
 
-export const CookiesInfo = createReactClass({
+export const CookiesInfo = UU5.Common.VisualComponent.create({
+  displayName: "CookiesInfo", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.NestingLevelMixin, UU5.Common.PureRenderMixin],
   //@@viewOff:mixins
@@ -45,18 +43,18 @@ export const CookiesInfo = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    data: PropTypes.shape({
-      header: PropTypes.any,
-      chapters: PropTypes.arrayOf(
-        PropTypes.shape({
-          header: PropTypes.any,
+    data: UU5.PropTypes.shape({
+      header: UU5.PropTypes.any,
+      chapters: UU5.PropTypes.arrayOf(
+        UU5.PropTypes.shape({
+          header: UU5.PropTypes.any,
           // array of contents
-          rows: PropTypes.arrayOf(PropTypes.any)
+          rows: UU5.PropTypes.arrayOf(UU5.PropTypes.any)
         })
       )
     }),
-    headerLevel: PropTypes.oneOf(["0", "1", "2", "3", "4", "5", "6", 0, 1, 2, 3, 4, 5, 6]),
-    chapterLevel: PropTypes.oneOf(["0", "1", "2", "3", "4", "5", "6", 0, 1, 2, 3, 4, 5, 6])
+    headerLevel: UU5.PropTypes.oneOf(["0", "1", "2", "3", "4", "5", "6", 0, 1, 2, 3, 4, 5, 6]),
+    chapterLevel: UU5.PropTypes.oneOf(["0", "1", "2", "3", "4", "5", "6", 0, 1, 2, 3, 4, 5, 6])
   },
   //@@viewOff:propTypes
 

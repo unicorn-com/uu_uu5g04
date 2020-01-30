@@ -12,8 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "./forms-ns.js";
@@ -27,32 +25,9 @@ import InputMixin, {
 import Context from "./form-context.js";
 //@@viewOff:imports
 
-const { width, ...propTypes } = UU5.Bricks.SwitchSelector.propTypes;
-const {
-  id,
-  name,
-  className,
-  mainAttrs,
-  tooltip,
-  noIndex,
-  style,
-  parent,
-  ref_,
-  hidden,
-  disabled,
-  selected,
-  controlled,
-  ...defaultProps
-} = UU5.Bricks.SwitchSelector.getDefaultProps();
-delete defaultProps.onChange;
-delete defaultProps.width;
-delete defaultProps.size;
-delete defaultProps.readOnly;
-delete defaultProps.borderWidth;
-delete defaultProps.borderWidthFocus;
-
 export const SwitchSelector = Context.withContext(
-  createReactClass({
+  UU5.Common.VisualComponent.create({
+    displayName: "SwitchSelector", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
     mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, InputMixin],
     //@@viewOff:mixins
@@ -67,12 +42,42 @@ export const SwitchSelector = Context.withContext(
     //@@viewOff:statics
 
     //@@viewOn:propTypes
-    propTypes,
+    propTypes: {
+      items: UU5.PropTypes.arrayOf(
+        UU5.PropTypes.shape({
+          value: UU5.PropTypes.string.isRequired,
+          content: UU5.PropTypes.any,
+          colorSchema: UU5.PropTypes.string,
+          bgStyle: UU5.PropTypes.string,
+          borderRadius: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string])
+        })
+      ).isRequired,
+      value: UU5.PropTypes.string,
+      onChange: UU5.PropTypes.func,
+
+      size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
+      width: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
+      readOnly: UU5.PropTypes.bool,
+      colorSchema: UU5.PropTypes.oneOf(UU5.Environment.colorSchema),
+      bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+      elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+      borderRadius: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
+      borderWidth: UU5.PropTypes.number,
+      borderWidthFocus: UU5.PropTypes.number
+    },
     //@@viewOff:propTypes
 
     //@@viewOn:getDefaultProps
     getDefaultProps() {
-      return defaultProps;
+      return {
+        items: [{ value: "1" }, { value: "2" }, { value: "3" }],
+        value: undefined,
+
+        colorSchema: undefined,
+        bgStyle: "outline",
+        elevation: undefined,
+        borderRadius: 2
+      };
     },
     //@@viewOff:getDefaultProps
 

@@ -13,22 +13,24 @@
 
 //@@viewOn:imports
 import React from "react";
-import createReactClass from "create-react-class";
 import Tools from "./tools.js";
 import Context from "./context.js";
 import BaseMixin from "./base-mixin.js";
+import Component from "./component.js";
 //@@viewOff:imports
 
 const DnDContext = Context.create({});
 
-const PassThrough = createReactClass({
+const PassThrough = Component.create({
+  displayName: "PassThrough", // for backward compatibility (test snapshots)
   render() {
     return this.props.children || null;
   }
 });
 
 /** Initializes react-dnd's DragDropContext and provides it to drag&drop context. */
-const Provider = createReactClass({
+const Provider = Component.create({
+  displayName: "Provider", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   //@@viewOff:mixins
 
@@ -165,7 +167,8 @@ const Provider = createReactClass({
  * Receives initialized DragDropContext and passes dragDropManager prop to the Component in prop "component".
  * If there's no DnDProvider in hierarchy above, it'll initialize one.
  */
-const DnDConsumerWrapper = createReactClass({
+const DnDConsumerWrapper = Component.create({
+  displayName: "DnDConsumerWrapper", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [BaseMixin],
   //@@viewOff:mixins

@@ -12,16 +12,14 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./line.less";
 //@@viewOff:imports
 
-export const Line = createReactClass({
+export const Line = UU5.Common.VisualComponent.create({
+  displayName: "Line", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -49,9 +47,9 @@ export const Line = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    borderRadius: PropTypes.string,
-    vertical: PropTypes.bool
+    size: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
+    borderRadius: UU5.PropTypes.string,
+    vertical: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 

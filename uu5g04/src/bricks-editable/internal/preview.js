@@ -1,6 +1,3 @@
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "../bricks-editable-ns.js";
 
@@ -8,7 +5,7 @@ import Css from "./css.js";
 
 //TODO FOR NOW, this component should be from uu5
 const POPOVERS_ID = "uu5-popover";
-export const Preview = createReactClass({
+export const Preview = UU5.Common.VisualComponent.create({
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin],
   //@@viewOff:mixins
@@ -54,9 +51,9 @@ export const Preview = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    props: PropTypes.object,
-    component: PropTypes.func,
-    itemComponent: PropTypes.func
+    props: UU5.PropTypes.object,
+    component: UU5.PropTypes.func,
+    itemComponent: UU5.PropTypes.func
   },
   //@@viewOff:propTypes
 

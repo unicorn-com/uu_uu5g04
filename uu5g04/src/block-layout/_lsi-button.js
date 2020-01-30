@@ -12,14 +12,12 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import PropTypes from "prop-types";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import { TAG } from "./config.js";
 //@@viewOff:imports
 
-const LsiButton = createReactClass({
+const LsiButton = UU5.Common.VisualComponent.create({
+  displayName: "LsiButton", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.LsiMixin],
   //@@viewOff:mixins
@@ -32,7 +30,7 @@ const LsiButton = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    tooltip: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
+    tooltip: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.object])
   },
   //@@viewOff:propTypes
 

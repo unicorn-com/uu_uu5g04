@@ -4,8 +4,6 @@ exports[`UU5.Bricks.U checkGrammar=false 1`] = `
 <u
   className="uu5-bricks-u"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -13,8 +11,6 @@ exports[`UU5.Bricks.U checkGrammar=true 1`] = `
 <u
   className="uu5-bricks-u"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -22,8 +18,6 @@ exports[`UU5.Bricks.U checkHighlight=false 1`] = `
 <u
   className="uu5-bricks-u"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -31,8 +25,6 @@ exports[`UU5.Bricks.U checkHighlight=true 1`] = `
 <u
   className="uu5-bricks-u"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -40,8 +32,6 @@ exports[`UU5.Bricks.U checkSpaces=false 1`] = `
 <u
   className="uu5-bricks-u"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -49,8 +39,6 @@ exports[`UU5.Bricks.U checkSpaces=true 1`] = `
 <u
   className="uu5-bricks-u"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -58,8 +46,6 @@ exports[`UU5.Bricks.U className="my-classname" 1`] = `
 <u
   className="uu5-bricks-u my-classname"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -67,8 +53,6 @@ exports[`UU5.Bricks.U content="This is Content from ContentMixin" 1`] = `
 <u
   className="uu5-bricks-u"
   id="uuID"
-  style={Object {}}
-  title={null}
 >
   <UU5.Common.TextCorrectorContextConsumer
     key="0"
@@ -81,8 +65,6 @@ exports[`UU5.Bricks.U content=12345 1`] = `
 <u
   className="uu5-bricks-u"
   id="uuID"
-  style={Object {}}
-  title={null}
 >
   12345
 </u>
@@ -92,8 +74,6 @@ exports[`UU5.Bricks.U controlled=false 1`] = `
 <u
   className="uu5-bricks-u"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -101,8 +81,6 @@ exports[`UU5.Bricks.U controlled=true 1`] = `
 <u
   className="uu5-bricks-u"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -110,32 +88,23 @@ exports[`UU5.Bricks.U default props 1`] = `
 <u
   className="uu5-bricks-u"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
 exports[`UU5.Bricks.U disabled=false 1`] = `
 <u
   className="uu5-bricks-u"
+  disabled={false}
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
 exports[`UU5.Bricks.U disabled=true 1`] = `
 <u
-  className="uu5-bricks-u uu5-common-disabled"
+  className="uu5-bricks-u"
+  disabled={true}
   id="uuID"
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</u>
+/>
 `;
 
 exports[`UU5.Bricks.U docKit examples UU5.Bricks.U should render without crash 1`] = `
@@ -169,8 +138,6 @@ exports[`UU5.Bricks.U dynamic=false 1`] = `
 <u
   className="uu5-bricks-u"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -178,26 +145,22 @@ exports[`UU5.Bricks.U dynamic=true 1`] = `
 <u
   className="uu5-bricks-u"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
 exports[`UU5.Bricks.U hidden=false 1`] = `
 <u
   className="uu5-bricks-u"
+  hidden={false}
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
 exports[`UU5.Bricks.U hidden=true 1`] = `
 <u
-  className="uu5-bricks-u uu5-common-hidden"
+  className="uu5-bricks-u"
+  hidden={true}
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -205,8 +168,6 @@ exports[`UU5.Bricks.U id="myId" 1`] = `
 <u
   className="uu5-bricks-u"
   id="myId"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -214,8 +175,6 @@ exports[`UU5.Bricks.U ignoreHTML=false 1`] = `
 <u
   className="uu5-bricks-u"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -223,8 +182,6 @@ exports[`UU5.Bricks.U ignoreHTML=true 1`] = `
 <u
   className="uu5-bricks-u"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -232,8 +189,6 @@ exports[`UU5.Bricks.U mainAttrs=undefined 1`] = `
 <u
   className="uu5-bricks-u"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -241,9 +196,6 @@ exports[`UU5.Bricks.U name="myName" 1`] = `
 <u
   className="uu5-bricks-u"
   id="uuID"
-  name="myName"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -251,8 +203,6 @@ exports[`UU5.Bricks.U noIndex=false 1`] = `
 <u
   className="uu5-bricks-u"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -260,8 +210,6 @@ exports[`UU5.Bricks.U noIndex=true 1`] = `
 <u
   className="uu5-bricks-u uu5-noindex"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -269,17 +217,13 @@ exports[`UU5.Bricks.U selected=false 1`] = `
 <u
   className="uu5-bricks-u"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
 exports[`UU5.Bricks.U selected=true 1`] = `
 <u
-  className="uu5-bricks-u uu5-common-selected"
+  className="uu5-bricks-u"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -293,7 +237,6 @@ exports[`UU5.Bricks.U style="padding:8px; borderRadius: 2px" 1`] = `
       "padding": "8px",
     }
   }
-  title={null}
 />
 `;
 
@@ -307,7 +250,6 @@ exports[`UU5.Bricks.U style={"backgroundColor":"red","color":"blue"} 1`] = `
       "color": "blue",
     }
   }
-  title={null}
 />
 `;
 
@@ -315,8 +257,6 @@ exports[`UU5.Bricks.U textCorrector=false 1`] = `
 <u
   className="uu5-bricks-u"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -324,8 +264,6 @@ exports[`UU5.Bricks.U textCorrector=true 1`] = `
 <u
   className="uu5-bricks-u"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -333,7 +271,5 @@ exports[`UU5.Bricks.U tooltip="My Tooltip" 1`] = `
 <u
   className="uu5-bricks-u"
   id="uuID"
-  style={Object {}}
-  title="My Tooltip"
 />
 `;

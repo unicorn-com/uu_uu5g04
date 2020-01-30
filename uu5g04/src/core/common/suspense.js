@@ -15,7 +15,6 @@ import React from "react";
 import createReactClass from "create-react-class";
 import PropTypes from "prop-types";
 import Context from "./context.js";
-import BaseMixin from "./base-mixin.js";
 
 const LazyContext = Context.create({ loading: "" });
 
@@ -29,7 +28,7 @@ export const Suspense =
   });
 
 const LazyComponent = createReactClass({
-  mixins: [BaseMixin],
+  mixins: [],
   statics: {
     getDerivedStateFromError(error) {
       return { error };

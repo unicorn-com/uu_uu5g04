@@ -54,14 +54,11 @@
 
 <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
 <script type="text/babel">
-  import React from "react";
-  import createReactClass from "create-react-class";
-  import ReactDOM from "react-dom";
   import UU5 from "uu5g04";
   import "uu5g04-bricks";
   import "uu5g04-block-layout";
 
-  const Page = createReactClass({
+  const Page = UU5.Common.VisualComponent.create({
 
     getInitialState() {
       return {
@@ -152,7 +149,7 @@
               <UU5.Bricks.Column key={i} colWidth="m-4">
                 <UU5.BlockLayout.Tile className={this.state.margin ? " colored" : undefined}>
                   <div className={(this.state.margin ? "margin" : undefined)}>
-                    {React.cloneElement(component, { className: "block" })}
+                    {UU5.Common.Element.clone(component, { className: "block" })}
                   </div>
                 </UU5.BlockLayout.Tile>
               </UU5.Bricks.Column>
@@ -163,7 +160,7 @@
     }
   });
 
-  ReactDOM.render(<Page />, document.getElementById('uu5Example'));
+  UU5.Common.DOM.render(<Page />, document.getElementById('uu5Example'));
 </script>
 </body>
 </html>

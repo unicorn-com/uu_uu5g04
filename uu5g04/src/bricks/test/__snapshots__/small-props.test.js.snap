@@ -4,8 +4,6 @@ exports[`UU5.Bricks.Small checkGrammar=false 1`] = `
 <small
   className="uu5-bricks-small"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -13,8 +11,6 @@ exports[`UU5.Bricks.Small checkGrammar=true 1`] = `
 <small
   className="uu5-bricks-small"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -22,8 +18,6 @@ exports[`UU5.Bricks.Small checkHighlight=false 1`] = `
 <small
   className="uu5-bricks-small"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -31,8 +25,6 @@ exports[`UU5.Bricks.Small checkHighlight=true 1`] = `
 <small
   className="uu5-bricks-small"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -40,8 +32,6 @@ exports[`UU5.Bricks.Small checkSpaces=false 1`] = `
 <small
   className="uu5-bricks-small"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -49,8 +39,6 @@ exports[`UU5.Bricks.Small checkSpaces=true 1`] = `
 <small
   className="uu5-bricks-small"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -58,8 +46,6 @@ exports[`UU5.Bricks.Small className="my-classname" 1`] = `
 <small
   className="uu5-bricks-small my-classname"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -67,8 +53,6 @@ exports[`UU5.Bricks.Small content="This is Content from ContentMixin" 1`] = `
 <small
   className="uu5-bricks-small"
   id="uuID"
-  style={Object {}}
-  title={null}
 >
   <UU5.Common.TextCorrectorContextConsumer
     key="0"
@@ -81,8 +65,6 @@ exports[`UU5.Bricks.Small content=12345 1`] = `
 <small
   className="uu5-bricks-small"
   id="uuID"
-  style={Object {}}
-  title={null}
 >
   12345
 </small>
@@ -92,8 +74,6 @@ exports[`UU5.Bricks.Small controlled=false 1`] = `
 <small
   className="uu5-bricks-small"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -101,8 +81,6 @@ exports[`UU5.Bricks.Small controlled=true 1`] = `
 <small
   className="uu5-bricks-small"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -110,32 +88,23 @@ exports[`UU5.Bricks.Small default props 1`] = `
 <small
   className="uu5-bricks-small"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
 exports[`UU5.Bricks.Small disabled=false 1`] = `
 <small
   className="uu5-bricks-small"
+  disabled={false}
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
 exports[`UU5.Bricks.Small disabled=true 1`] = `
 <small
-  className="uu5-bricks-small uu5-common-disabled"
+  className="uu5-bricks-small"
+  disabled={true}
   id="uuID"
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</small>
+/>
 `;
 
 exports[`UU5.Bricks.Small docKit examples UU5.Bricks.Small should render without crash 1`] = `
@@ -168,8 +137,6 @@ exports[`UU5.Bricks.Small dynamic=false 1`] = `
 <small
   className="uu5-bricks-small"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -177,26 +144,22 @@ exports[`UU5.Bricks.Small dynamic=true 1`] = `
 <small
   className="uu5-bricks-small"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
 exports[`UU5.Bricks.Small hidden=false 1`] = `
 <small
   className="uu5-bricks-small"
+  hidden={false}
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
 exports[`UU5.Bricks.Small hidden=true 1`] = `
 <small
-  className="uu5-bricks-small uu5-common-hidden"
+  className="uu5-bricks-small"
+  hidden={true}
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -204,8 +167,6 @@ exports[`UU5.Bricks.Small id="myId" 1`] = `
 <small
   className="uu5-bricks-small"
   id="myId"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -213,8 +174,6 @@ exports[`UU5.Bricks.Small ignoreHTML=false 1`] = `
 <small
   className="uu5-bricks-small"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -222,8 +181,6 @@ exports[`UU5.Bricks.Small ignoreHTML=true 1`] = `
 <small
   className="uu5-bricks-small"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -231,8 +188,6 @@ exports[`UU5.Bricks.Small mainAttrs=undefined 1`] = `
 <small
   className="uu5-bricks-small"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -240,9 +195,6 @@ exports[`UU5.Bricks.Small name="myName" 1`] = `
 <small
   className="uu5-bricks-small"
   id="uuID"
-  name="myName"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -250,8 +202,6 @@ exports[`UU5.Bricks.Small noIndex=false 1`] = `
 <small
   className="uu5-bricks-small"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -259,8 +209,6 @@ exports[`UU5.Bricks.Small noIndex=true 1`] = `
 <small
   className="uu5-bricks-small uu5-noindex"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -268,17 +216,13 @@ exports[`UU5.Bricks.Small selected=false 1`] = `
 <small
   className="uu5-bricks-small"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
 exports[`UU5.Bricks.Small selected=true 1`] = `
 <small
-  className="uu5-bricks-small uu5-common-selected"
+  className="uu5-bricks-small"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -292,7 +236,6 @@ exports[`UU5.Bricks.Small style="padding:8px; borderRadius: 2px" 1`] = `
       "padding": "8px",
     }
   }
-  title={null}
 />
 `;
 
@@ -306,7 +249,6 @@ exports[`UU5.Bricks.Small style={"backgroundColor":"red","color":"blue"} 1`] = `
       "color": "blue",
     }
   }
-  title={null}
 />
 `;
 
@@ -314,8 +256,6 @@ exports[`UU5.Bricks.Small textCorrector=false 1`] = `
 <small
   className="uu5-bricks-small"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -323,8 +263,6 @@ exports[`UU5.Bricks.Small textCorrector=true 1`] = `
 <small
   className="uu5-bricks-small"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -332,7 +270,5 @@ exports[`UU5.Bricks.Small tooltip="My Tooltip" 1`] = `
 <small
   className="uu5-bricks-small"
   id="uuID"
-  style={Object {}}
-  title="My Tooltip"
 />
 `;

@@ -12,16 +12,15 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./dl.less";
 //@@viewOff:imports
 
-export const Dl = createReactClass({
+export const Dl = UU5.Common.VisualComponent.create({
+  displayName: "Dl", // for backward compatibility (test snapshots)
+
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -47,7 +46,7 @@ export const Dl = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    allowTags: PropTypes.arrayOf(PropTypes.string)
+    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string)
   },
   //@@viewOff:propTypes
 

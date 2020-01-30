@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -24,7 +21,8 @@ import Icon from "./icon.js";
 import "./touch-icon.less";
 //@@viewOff:imports
 
-export const TouchIcon = createReactClass({
+export const TouchIcon = UU5.Common.VisualComponent.create({
+  displayName: "TouchIcon", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -54,14 +52,14 @@ export const TouchIcon = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    icon: PropTypes.string,
-    href: PropTypes.string,
-    target: PropTypes.oneOf(["_blank", "_parent", "_top", "_self"]),
-    onClick: PropTypes.func,
-    onCtrlClick: PropTypes.func,
-    onWheelClick: PropTypes.func,
-    borderRadius: PropTypes.string,
-    bgStyle: PropTypes.oneOf(["filled", "transparent"])
+    icon: UU5.PropTypes.string,
+    href: UU5.PropTypes.string,
+    target: UU5.PropTypes.oneOf(["_blank", "_parent", "_top", "_self"]),
+    onClick: UU5.PropTypes.func,
+    onCtrlClick: UU5.PropTypes.func,
+    onWheelClick: UU5.PropTypes.func,
+    borderRadius: UU5.PropTypes.string,
+    bgStyle: UU5.PropTypes.oneOf(["filled", "transparent"])
   },
   //@@viewOff:propTypes
 

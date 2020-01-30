@@ -12,14 +12,12 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 //@@viewOff:imports
 
-const PageSwiper = createReactClass({
+const PageSwiper = UU5.Common.VisualComponent.create({
+  displayName: "PageSwiper", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -46,8 +44,8 @@ const PageSwiper = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    leftSwipe: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
-    rightSwipe: PropTypes.oneOfType([PropTypes.bool, PropTypes.number])
+    leftSwipe: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.number]),
+    rightSwipe: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.number])
   },
   //@@viewOff:propTypes
 

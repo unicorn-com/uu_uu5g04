@@ -12,34 +12,17 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import StepperItem from "./stepper-item.js";
-const ClassNames = UU5.Common.ClassNames;
+import StepperContext from "./stepper-context.js";
 import "./stepper.less";
 //@@viewOff:imports
 
-const StepperContext = UU5.Common.Context.create();
+const ClassNames = UU5.Common.ClassNames;
 
-export const withStepperContext = Component => {
-  if (!UU5.Common.Context.isSupported()) return Component;
-  let forwardRef = React.forwardRef((props, ref) => {
-    return (
-      <StepperContext.Consumer>{context => <Component {...context} {...props} ref={ref} />}</StepperContext.Consumer>
-    );
-  });
-
-  forwardRef.isUu5PureComponent = true;
-  forwardRef.displayName = `forwardRef(${Component.displayName || Component.name || "Component"})`;
-  forwardRef.tagName = Component.tagName;
-
-  return forwardRef;
-};
-
-export const Stepper = createReactClass({
+export const Stepper = UU5.Common.VisualComponent.create({
+  displayName: "Stepper", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -75,18 +58,18 @@ export const Stepper = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
-    orientation: PropTypes.oneOf(["horizontal", "vertical"]),
-    onClick: PropTypes.func,
-    elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-    topVisitedStep: PropTypes.number,
-    currentStep: PropTypes.number,
-    hideText: PropTypes.bool,
-    alignment: PropTypes.oneOf(["left", "center", "right"]),
-    itemProps: PropTypes.shape({
-      bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-      borderRadius: PropTypes.string,
-      elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
+    size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
+    orientation: UU5.PropTypes.oneOf(["horizontal", "vertical"]),
+    onClick: UU5.PropTypes.func,
+    elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+    topVisitedStep: UU5.PropTypes.number,
+    currentStep: UU5.PropTypes.number,
+    hideText: UU5.PropTypes.bool,
+    alignment: UU5.PropTypes.oneOf(["left", "center", "right"]),
+    itemProps: UU5.PropTypes.shape({
+      bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+      borderRadius: UU5.PropTypes.string,
+      elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
     })
   },
   //@@viewOff:propTypes
@@ -265,6 +248,6 @@ export const Stepper = createReactClass({
   //@@viewOff:render
 });
 
-Stepper.Item = withStepperContext(StepperItem);
+Stepper.Item = StepperItem;
 Stepper.Context = StepperContext;
 export default Stepper;

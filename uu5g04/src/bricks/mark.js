@@ -12,15 +12,14 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./mark.less";
 //@@viewOff:imports
 
-export const Mark = createReactClass({
+export const Mark = UU5.Common.VisualComponent.create({
+  displayName: "Mark", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,

@@ -12,7 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -90,7 +89,7 @@ export const PortalModal = UU5.Common.VisualComponent.create({
   },
 
   _onClose(opt, props) {
-    this._modal.onCloseDefault();
+    this._modal.onCloseDefault(opt);
     setTimeout(
       () =>
         this._close(() => {

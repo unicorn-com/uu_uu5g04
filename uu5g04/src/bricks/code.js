@@ -12,8 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -24,7 +22,8 @@ import "./code.less";
 
 const Code_ = Factory.createTag("code", "_code");
 
-export const Code = createReactClass({
+export const Code = UU5.Common.VisualComponent.create({
+  displayName: "Code", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -75,7 +74,7 @@ export const Code = createReactClass({
   //@@viewOn:render
   render: function() {
     return this.getNestingLevel() ? (
-      <Code_ {...this._getMainProps()}>{this.props.children && React.Children.toArray(this.props.children)}</Code_>
+      <Code_ {...this._getMainProps()}>{this.props.children && UU5.Common.Children.toArray(this.props.children)}</Code_>
     ) : null;
   }
   //@@viewOff:render

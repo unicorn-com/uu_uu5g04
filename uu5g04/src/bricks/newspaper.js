@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -23,7 +20,9 @@ import Section from "./section.js";
 import "./newspaper.less";
 //@@viewOff:imports
 
-export const Newspaper = createReactClass({
+export const Newspaper = UU5.Common.VisualComponent.create({
+  displayName: "Newspaper", // for backward compatibility (test snapshots)
+
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -49,8 +48,8 @@ export const Newspaper = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    columnsCount: PropTypes.oneOf([1, 2, 3, 4, 5, 6])
-    //background: PropTypes.bool
+    columnsCount: UU5.PropTypes.oneOf([1, 2, 3, 4, 5, 6])
+    //background: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 
@@ -84,7 +83,7 @@ export const Newspaper = createReactClass({
   //@@viewOn:render
   render: function() {
     return this.getNestingLevel() ? (
-      <Section {...this._getMainProps()}>{this.props.children && React.Children.toArray(this.props.children)}</Section>
+      <Section {...this._getMainProps()}>{this.props.children && UU5.Common.Children.toArray(this.props.children)}</Section>
     ) : null;
   }
   //@@viewOff:render

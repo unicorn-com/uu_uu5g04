@@ -44,18 +44,14 @@
     <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
     <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
     <script type="text/babel">
-      import React from "react";
-      import createReactClass from "create-react-class";
-      import ReactDOM from "react-dom";
       import UU5 from "uu5g04";
-      import PropTypes from "prop-types";
       import "uu5g04-bricks";
       import "uu5g04-forms";
       import "uu5g04-bricks-editable";
 
       /*@@viewOn:0*/
       const CustomEditableHeader = UU5.BricksEditable.Toolbar.withContext(
-        createReactClass({
+        UU5.Common.VisualComponent.create({
           statics: {
             tagName: "CustomEditableHeader"
           },
@@ -63,11 +59,11 @@
           mixins: [UU5.Common.BaseMixin],
 
           propTypes: {
-            value: PropTypes.string,
-            open: PropTypes.func,
-            close: PropTypes.func,
-            onChange: PropTypes.func,
-            editable: PropTypes.bool
+            value: UU5.PropTypes.string,
+            open: UU5.PropTypes.func,
+            close: UU5.PropTypes.func,
+            onChange: UU5.PropTypes.func,
+            editable: UU5.PropTypes.bool
           },
 
           getDefaultProps() {
@@ -150,7 +146,7 @@
       );
 
       const CustomEditableBox = UU5.BricksEditable.Toolbar.withContext(
-        createReactClass({
+        UU5.Common.VisualComponent.create({
           statics: {
             tagName: "CustomEditableBox"
           },
@@ -158,11 +154,11 @@
           mixins: [UU5.Common.BaseMixin],
 
           propTypes: {
-            value: PropTypes.string,
-            open: PropTypes.func,
-            close: PropTypes.func,
-            onChange: PropTypes.func,
-            editable: PropTypes.bool
+            value: UU5.PropTypes.string,
+            open: UU5.PropTypes.func,
+            close: UU5.PropTypes.func,
+            onChange: UU5.PropTypes.func,
+            editable: UU5.PropTypes.bool
           },
 
           getDefaultProps() {
@@ -252,7 +248,7 @@
         })
       );
 
-      const Page = createReactClass({
+      const Page = UU5.Common.VisualComponent.create({
         getInitialState() {
           return {
             editation: true,
@@ -304,7 +300,7 @@
 
         _getPageContent() {
           return (
-            <React.Fragment>
+            <UU5.Common.Fragment>
               <UU5.Bricks.Row>
                 <CustomEditableHeader editable={this.state.editation} ref_={(ref) => this._header = ref} value={this.state.headerData.value} underline={this.state.headerData.underline} onChange={this._onChange} />
               </UU5.Bricks.Row>,
@@ -312,7 +308,7 @@
               <UU5.Bricks.Row>,
                 <CustomEditableBox editable={this.state.editation} ref_={(ref) => this._box = ref} value={this.state.boxData.value} bgStyle={this.state.boxData.bgStyle} onChange={this._onChange} />
               </UU5.Bricks.Row>
-            </React.Fragment>
+            </UU5.Common.Fragment>
           );
         },
 
@@ -332,7 +328,7 @@
         }
       });
 
-      ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+      UU5.Common.DOM.render(UU5.Common.Element.create(Page, null), document.getElementById('renderHere'));
       /*@@viewOff:0*/
 
     </script>

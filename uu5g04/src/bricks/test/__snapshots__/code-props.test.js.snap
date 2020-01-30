@@ -4,10 +4,20 @@ exports[`UU5.Bricks.Code DOCKIT example UU5.Bricks.Code example 01 1`] = `
 <_code
   className="uu5-bricks-code"
   content="<UU5.Bricks.Code/>"
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
@@ -15,10 +25,21 @@ exports[`UU5.Bricks.Code checkGrammar=false 1`] = `
 <_code
   checkGrammar={false}
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
@@ -26,10 +47,21 @@ exports[`UU5.Bricks.Code checkGrammar=true 1`] = `
 <_code
   checkGrammar={true}
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
@@ -37,10 +69,21 @@ exports[`UU5.Bricks.Code checkHighlight=false 1`] = `
 <_code
   checkHighlight={false}
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
@@ -48,10 +91,21 @@ exports[`UU5.Bricks.Code checkHighlight=true 1`] = `
 <_code
   checkHighlight={true}
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
@@ -59,10 +113,21 @@ exports[`UU5.Bricks.Code checkSpaces=false 1`] = `
 <_code
   checkSpaces={false}
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
@@ -70,20 +135,42 @@ exports[`UU5.Bricks.Code checkSpaces=true 1`] = `
 <_code
   checkSpaces={true}
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code className="my-classname" 1`] = `
 <_code
   className="uu5-bricks-code my-classname"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
@@ -91,10 +178,20 @@ exports[`UU5.Bricks.Code content="This is Content from ContentMixin" 1`] = `
 <_code
   className="uu5-bricks-code"
   content="This is Content from ContentMixin"
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
@@ -102,386 +199,757 @@ exports[`UU5.Bricks.Code content=12345 1`] = `
 <_code
   className="uu5-bricks-code"
   content={12345}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code controlled=false 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code controlled=true 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code default props 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code disabled=false 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code disabled=true 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
   disabled={true}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code dynamic=false 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code dynamic=true 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
   dynamic={true}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code hidden=false 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code hidden=true 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
   hidden={true}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code id="myId" 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="myId-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code ignoreHTML=false 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code ignoreHTML=true 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code mainAttrs=undefined 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code name="myName" 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
   name="myName-inner"
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code nestingLevel="bigBox" 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
   nestingLevel="bigBox"
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code nestingLevel="bigBoxCollection" 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
   nestingLevel="bigBoxCollection"
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code nestingLevel="box" 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
   nestingLevel="box"
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code nestingLevel="boxCollection" 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
   nestingLevel="boxCollection"
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code nestingLevel="container" 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
   nestingLevel="container"
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code nestingLevel="inline" 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
   nestingLevel="inline"
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code nestingLevel="page" 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
   nestingLevel="page"
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code nestingLevel="smallBox" 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
   nestingLevel="smallBox"
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code nestingLevel="smallBoxCollection" 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
   nestingLevel="smallBoxCollection"
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code nestingLevel="spa" 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
   nestingLevel="spa"
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code noIndex=false 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code noIndex=true 1`] = `
 <_code
   className="uu5-bricks-code uu5-noindex"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code pureRender=false 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code pureRender=true 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
   pureRender={true}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code selected=false 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code selected=true 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
   selected={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code style="padding:8px; borderRadius: 2px" 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
   style={
     Object {
       "borderRadius": "2px",
       "padding": "8px",
     }
   }
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code style={"backgroundColor":"red","color":"blue"} 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
   style={
     Object {
       "backgroundColor": "red",
       "color": "blue",
     }
   }
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code textCorrector=false 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
   textCorrector={false}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code textCorrector=true 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
   mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
   textCorrector={true}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Code tooltip="My Tooltip" 1`] = `
 <_code
   className="uu5-bricks-code"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
   id="uuID-code"
   ignoreInnerHTML={true}
   language="code"
@@ -490,6 +958,11 @@ exports[`UU5.Bricks.Code tooltip="My Tooltip" 1`] = `
       "title": "My Tooltip",
     }
   }
+  name={null}
+  nestingLevel={null}
+  pureRender={false}
+  selected={false}
+  style={null}
   tooltip="My Tooltip"
 />
 `;

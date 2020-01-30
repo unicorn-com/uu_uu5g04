@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
 import TextInputMixin from "./mixins/text-input-mixin.js";
@@ -35,7 +32,8 @@ const TIME_FORMAT_12 = "12";
 const TIME_FORMAT_24 = "24";
 
 export const DateTimeRangePicker = Context.withContext(
-  createReactClass({
+  UU5.Common.VisualComponent.create({
+    displayName: "DateTimeRangePicker", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
     mixins: [
       UU5.Common.BaseMixin,
@@ -106,34 +104,34 @@ export const DateTimeRangePicker = Context.withContext(
 
     //@@viewOn:propTypes
     propTypes: {
-      value: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object, PropTypes.string])),
-      dateFrom: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-      dateTo: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-      format: PropTypes.string,
-      country: PropTypes.string,
-      beforeRangeMessage: PropTypes.any,
-      afterRangeMessage: PropTypes.any,
-      parseDate: PropTypes.func,
-      icon: PropTypes.string,
-      iconOpen: PropTypes.string,
-      iconClosed: PropTypes.string,
-      dateIcon: PropTypes.string,
-      timeIcon: PropTypes.string,
-      disableBackdrop: PropTypes.bool,
-      openToContent: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-      placeholderTime: PropTypes.string,
-      hideFormatPlaceholder: PropTypes.bool,
-      hideWeekNumber: PropTypes.bool,
-      showTodayButton: PropTypes.bool,
-      labelFrom: PropTypes.any,
-      labelTo: PropTypes.any,
-      pickerLabelFrom: PropTypes.any,
-      pickerLabelTo: PropTypes.any,
-      innerLabel: PropTypes.bool,
-      timeFormat: PropTypes.oneOf(["12", "24", 12, 24]),
-      timeStep: PropTypes.number,
-      timePickerType: PropTypes.oneOf(["single-column", "multi-column"]),
-      timeZone: PropTypes.number
+      value: UU5.PropTypes.arrayOf(UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string])),
+      dateFrom: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string]),
+      dateTo: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string]),
+      format: UU5.PropTypes.string,
+      country: UU5.PropTypes.string,
+      beforeRangeMessage: UU5.PropTypes.any,
+      afterRangeMessage: UU5.PropTypes.any,
+      parseDate: UU5.PropTypes.func,
+      icon: UU5.PropTypes.string,
+      iconOpen: UU5.PropTypes.string,
+      iconClosed: UU5.PropTypes.string,
+      dateIcon: UU5.PropTypes.string,
+      timeIcon: UU5.PropTypes.string,
+      disableBackdrop: UU5.PropTypes.bool,
+      openToContent: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string]),
+      placeholderTime: UU5.PropTypes.string,
+      hideFormatPlaceholder: UU5.PropTypes.bool,
+      hideWeekNumber: UU5.PropTypes.bool,
+      showTodayButton: UU5.PropTypes.bool,
+      labelFrom: UU5.PropTypes.any,
+      labelTo: UU5.PropTypes.any,
+      pickerLabelFrom: UU5.PropTypes.any,
+      pickerLabelTo: UU5.PropTypes.any,
+      innerLabel: UU5.PropTypes.bool,
+      timeFormat: UU5.PropTypes.oneOf(["12", "24", 12, 24]),
+      timeStep: UU5.PropTypes.number,
+      timePickerType: UU5.PropTypes.oneOf(["single-column", "multi-column"]),
+      timeZone: UU5.PropTypes.number
     },
     //@@viewOff:propTypes
 
@@ -2529,7 +2527,7 @@ export const DateTimeRangePicker = Context.withContext(
 
       if (result) {
         result = UU5.Common.Tools.wrapIfExists(
-          React.Fragment,
+          UU5.Common.Fragment,
           <span className={this.getClassName("inputText")}>
             {this.props.innerLabel && this.props.label ? this.props.label + "\xa0" : null}
           </span>,
@@ -2537,7 +2535,7 @@ export const DateTimeRangePicker = Context.withContext(
         );
       } else {
         result = UU5.Common.Tools.wrapIfExists(
-          React.Fragment,
+          UU5.Common.Fragment,
           <span className={this.getClassName("inputText")}>
             {this.props.innerLabel && this.props.label ? this.props.label + "\xa0" : null}
           </span>,
@@ -2660,7 +2658,7 @@ export const DateTimeRangePicker = Context.withContext(
             <UU5.Bricks.Popover {...this._getPopoverProps()} key="popover">
               {this.isOpen()
                 ? UU5.Common.Tools.wrapIfExists(
-                    React.Fragment,
+                    UU5.Common.Fragment,
                     <div className={this.getClassName("calendars") + " uu5-forms-input-m"}>
                       <div className={this.getClassName("firstRow")}>
                         <div className={this.getClassName("fromWrapper")}>

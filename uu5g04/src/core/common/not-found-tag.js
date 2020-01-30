@@ -13,7 +13,6 @@
 
 //@@viewOn:imports
 import React from "react";
-import createReactClass from "create-react-class";
 import ns from "./common-ns.js";
 import PropTypes from "prop-types";
 import BaseMixin from "./base-mixin.js";
@@ -21,11 +20,13 @@ import ElementaryMixin from "./elementary-mixin.js";
 import Error from "./error.js";
 import PureRenderMixin from "./pure-render-mixin";
 import Tools from "./tools.js";
+import VisualComponent from "./visual-component.js";
 
 import "./not-found-tag.less";
 //@@viewOff:imports
 
-export const NotFoundTag = createReactClass({
+export const NotFoundTag = VisualComponent.create({
+  displayName: "NotFoundTag", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [BaseMixin, ElementaryMixin, PureRenderMixin],
   //@@viewOff:mixins

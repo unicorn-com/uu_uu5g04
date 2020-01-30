@@ -230,7 +230,7 @@ exports[`UU5.Bricks.NavBar.Nav props UU5.Bricks.NavBar.Nav - props.AllowTags 1`]
             />
             Home
           </nav-bar-nav-item>
-          <MyAllowTagsComponents
+          <UU5.Example.MyCompButton
             content="allowTags Content"
             id="allowID"
           />

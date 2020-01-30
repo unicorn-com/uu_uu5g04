@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "./forms-ns.js";
@@ -30,7 +27,8 @@ import "./number.less";
 //@@viewOff:imports
 
 export const Number = Context.withContext(
-  createReactClass({
+  UU5.Common.VisualComponent.create({
+    displayName: "Number", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
     mixins: [
       UU5.Common.BaseMixin,
@@ -58,25 +56,25 @@ export const Number = Context.withContext(
 
     //@@viewOn:propTypes
     propTypes: {
-      value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-      step: PropTypes.number,
-      min: PropTypes.number,
-      max: PropTypes.number,
-      decimals: PropTypes.number,
-      decimalSeparator: PropTypes.string,
-      thousandSeparator: PropTypes.string,
-      rounded: PropTypes.bool,
-      nanMessage: PropTypes.any,
-      lowerMessage: PropTypes.any,
-      upperMessage: PropTypes.any,
-      buttonHidden: PropTypes.bool,
-      suffix: PropTypes.string,
-      prefix: PropTypes.string,
-      hideSuffixOnFocus: PropTypes.bool,
-      hidePrefixOnFocus: PropTypes.bool,
-      decimalsView: PropTypes.number,
-      decimalsViewRounded: PropTypes.oneOf(["round", "floor", "ceil"]),
-      valueType: PropTypes.oneOf(["number", "string"])
+      value: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
+      step: UU5.PropTypes.number,
+      min: UU5.PropTypes.number,
+      max: UU5.PropTypes.number,
+      decimals: UU5.PropTypes.number,
+      decimalSeparator: UU5.PropTypes.string,
+      thousandSeparator: UU5.PropTypes.string,
+      rounded: UU5.PropTypes.bool,
+      nanMessage: UU5.PropTypes.any,
+      lowerMessage: UU5.PropTypes.any,
+      upperMessage: UU5.PropTypes.any,
+      buttonHidden: UU5.PropTypes.bool,
+      suffix: UU5.PropTypes.string,
+      prefix: UU5.PropTypes.string,
+      hideSuffixOnFocus: UU5.PropTypes.bool,
+      hidePrefixOnFocus: UU5.PropTypes.bool,
+      decimalsView: UU5.PropTypes.number,
+      decimalsViewRounded: UU5.PropTypes.oneOf(["round", "floor", "ceil"]),
+      valueType: UU5.PropTypes.oneOf(["number", "string"])
     },
     //@@viewOff:propTypes
 

@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
 import TextInput from "./internal/text-input.js";
@@ -33,7 +30,8 @@ const TIME_FORMAT_12 = "12";
 const TIME_FORMAT_24 = "24";
 
 export const DateTimePicker = Context.withContext(
-  createReactClass({
+  UU5.Common.VisualComponent.create({
+    displayName: "DateTimePicker", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
     mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.ScreenSizeMixin, TextInputMixin],
     //@@viewOff:mixins
@@ -71,30 +69,30 @@ export const DateTimePicker = Context.withContext(
 
     //@@viewOn:propTypes
     propTypes: {
-      value: PropTypes.oneOfType([PropTypes.instanceOf(Date), PropTypes.string]),
-      dateFrom: PropTypes.oneOfType([PropTypes.instanceOf(Date), PropTypes.string]),
-      dateTo: PropTypes.oneOfType([PropTypes.instanceOf(Date), PropTypes.string]),
-      format: PropTypes.string,
-      timeFormat: PropTypes.string,
-      country: PropTypes.string,
-      nanMessage: PropTypes.any,
-      beforeRangeMessage: PropTypes.any,
-      afterRangeMessage: PropTypes.any,
-      parseDate: PropTypes.func,
-      placeholderTime: PropTypes.string,
-      dateIcon: PropTypes.string,
-      timeIcon: PropTypes.string,
-      seconds: PropTypes.bool,
-      valueType: PropTypes.oneOf(["string", "date"]),
-      openToContent: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-      timePickerType: PropTypes.oneOf(["single-column", "multi-column"]),
-      timeStep: PropTypes.number,
-      strictTimeStep: PropTypes.bool,
-      hideFormatPlaceholder: PropTypes.bool,
-      showTodayButton: PropTypes.bool,
-      dateInputAttrs: PropTypes.object,
-      timeInputAttrs: PropTypes.object,
-      timeZone: PropTypes.number
+      value: UU5.PropTypes.oneOfType([UU5.PropTypes.instanceOf(Date), UU5.PropTypes.string]),
+      dateFrom: UU5.PropTypes.oneOfType([UU5.PropTypes.instanceOf(Date), UU5.PropTypes.string]),
+      dateTo: UU5.PropTypes.oneOfType([UU5.PropTypes.instanceOf(Date), UU5.PropTypes.string]),
+      format: UU5.PropTypes.string,
+      timeFormat: UU5.PropTypes.string,
+      country: UU5.PropTypes.string,
+      nanMessage: UU5.PropTypes.any,
+      beforeRangeMessage: UU5.PropTypes.any,
+      afterRangeMessage: UU5.PropTypes.any,
+      parseDate: UU5.PropTypes.func,
+      placeholderTime: UU5.PropTypes.string,
+      dateIcon: UU5.PropTypes.string,
+      timeIcon: UU5.PropTypes.string,
+      seconds: UU5.PropTypes.bool,
+      valueType: UU5.PropTypes.oneOf(["string", "date"]),
+      openToContent: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string]),
+      timePickerType: UU5.PropTypes.oneOf(["single-column", "multi-column"]),
+      timeStep: UU5.PropTypes.number,
+      strictTimeStep: UU5.PropTypes.bool,
+      hideFormatPlaceholder: UU5.PropTypes.bool,
+      showTodayButton: UU5.PropTypes.bool,
+      dateInputAttrs: UU5.PropTypes.object,
+      timeInputAttrs: UU5.PropTypes.object,
+      timeZone: UU5.PropTypes.number
     },
     //@@viewOff:propTypes
 

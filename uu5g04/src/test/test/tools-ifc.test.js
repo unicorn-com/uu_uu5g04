@@ -122,7 +122,7 @@ describe("UU5.Test.Tools", () => {
     expect(wrapper.text()).toBe("loaded");
 
     // test timed wait
-    wrapper = UU5.Test.Tools.mount(<AsyncComponent timeout={50} />);
+    wrapper = UU5.Test.Tools.mount(<AsyncComponent timeout={10} />);
     expect(wrapper.text()).toBe("loading");
     await UU5.Test.Tools.waitWhile(() => wrapper.text() === "loading");
     expect(wrapper.text()).toBe("loaded");

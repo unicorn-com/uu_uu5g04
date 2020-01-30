@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 const ClassNames = UU5.Common.ClassNames;
@@ -24,7 +21,8 @@ import Modal from "./modal.js";
 import "./box.less";
 //@@viewOff:imports
 
-export const Box = createReactClass({
+export const Box = UU5.Common.VisualComponent.create({
+  displayName: "Box", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -55,13 +53,13 @@ export const Box = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    infoHeader: PropTypes.any,
-    infoContent: PropTypes.any,
-    disableClick: PropTypes.bool,
-    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-    borderRadius: PropTypes.string,
-    elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-    elevationHover: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
+    infoHeader: UU5.PropTypes.any,
+    infoContent: UU5.PropTypes.any,
+    disableClick: UU5.PropTypes.bool,
+    bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+    borderRadius: UU5.PropTypes.string,
+    elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+    elevationHover: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
   },
   //@@viewOff:propTypes
 

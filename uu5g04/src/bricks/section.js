@@ -12,8 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -30,7 +28,9 @@ let editationLazyLoaded = false;
 import "./section.less";
 //@@viewOff:imports
 
-export const Section = createReactClass({
+export const Section = UU5.Common.VisualComponent.create({
+  displayName: "Section", // for backward compatibility (test snapshots)
+
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,

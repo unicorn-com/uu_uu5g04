@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -68,7 +65,8 @@ const Styles = {
   }
 };
 
-export const Panel = createReactClass({
+export const Panel = UU5.Common.VisualComponent.create({
+  displayName: "Panel", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -101,23 +99,23 @@ export const Panel = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    expanded: PropTypes.bool,
-    alwaysExpanded: PropTypes.bool,
-    iconExpanded: PropTypes.string,
-    iconCollapsed: PropTypes.string,
-    onClick: PropTypes.func,
-    disableHeaderClick: PropTypes.bool,
-    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
-    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-    bgStyleHeader: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-    bgStyleContent: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-    colorSchemaHeader: PropTypes.string,
-    colorSchemaContent: PropTypes.string,
-    borderRadius: PropTypes.string,
-    elevation: PropTypes.oneOf(["0", "1", "2", "3", "4", "5", 0, 1, 2, 3, 4, 5]),
-    iconAlign: PropTypes.oneOf(["right", "after", "left"]),
-    openClick: PropTypes.oneOf(["header", "icon", "none"]),
-    mountContent: PropTypes.oneOf([
+    expanded: UU5.PropTypes.bool,
+    alwaysExpanded: UU5.PropTypes.bool,
+    iconExpanded: UU5.PropTypes.string,
+    iconCollapsed: UU5.PropTypes.string,
+    onClick: UU5.PropTypes.func,
+    disableHeaderClick: UU5.PropTypes.bool,
+    size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
+    bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+    bgStyleHeader: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+    bgStyleContent: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+    colorSchemaHeader: UU5.PropTypes.string,
+    colorSchemaContent: UU5.PropTypes.string,
+    borderRadius: UU5.PropTypes.string,
+    elevation: UU5.PropTypes.oneOf(["0", "1", "2", "3", "4", "5", 0, 1, 2, 3, 4, 5]),
+    iconAlign: UU5.PropTypes.oneOf(["right", "after", "left"]),
+    openClick: UU5.PropTypes.oneOf(["header", "icon", "none"]),
+    mountContent: UU5.PropTypes.oneOf([
       MOUNT_CONTENT_VALUES.onEachExpand,
       MOUNT_CONTENT_VALUES.onFirstExpand,
       MOUNT_CONTENT_VALUES.onFirstRender
@@ -354,10 +352,10 @@ export const Panel = createReactClass({
     };
 
     return this.buildChildren({
-      children: React.createElement(
+      children: UU5.Common.Element.create(
         Body,
         bodyProps,
-        this.state.renderChild ? React.Children.toArray(this.props.children) : undefined
+        this.state.renderChild ? UU5.Common.Children.toArray(this.props.children) : undefined
       )
     });
   },

@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -29,7 +26,8 @@ import Css from "./internal/css.js";
 import "./page-column.less";
 //@@viewOff:imports
 
-export const PageColumn = createReactClass({
+export const PageColumn = UU5.Common.VisualComponent.create({
+  displayName: "PageColumn", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin],
   //@@viewOff:mixins
@@ -65,28 +63,29 @@ export const PageColumn = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    minWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    maxWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    right: PropTypes.bool,
-    button: PropTypes.bool,
-    open: PropTypes.bool,
-    block: PropTypes.bool,
-    openContent: PropTypes.any,
-    closedContent: PropTypes.any,
-    elevation: PropTypes.number,
-    topId: PropTypes.string,
-    fixed: PropTypes.bool,
-    topFixed: PropTypes.bool,
-    topFixedHeight: PropTypes.number,
-    bottomFixed: PropTypes.bool,
-    bottomFixedHeight: PropTypes.number,
-    overlayTop: PropTypes.bool,
-    overlayBottom: PropTypes.bool,
-    relative: PropTypes.bool,
-    resizable: PropTypes.oneOfType([PropTypes.bool, PropTypes.oneOf(["open", "closed"])]),
-    onUpdate: PropTypes.func,
-    onResize: PropTypes.func
+    width: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
+    minWidth: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
+    maxWidth: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
+    right: UU5.PropTypes.bool,
+    button: UU5.PropTypes.bool,
+    open: UU5.PropTypes.bool,
+    block: UU5.PropTypes.bool,
+    openContent: UU5.PropTypes.any,
+    closedContent: UU5.PropTypes.any,
+    elevation: UU5.PropTypes.number,
+    topId: UU5.PropTypes.string,
+    fixed: UU5.PropTypes.bool,
+    topFixed: UU5.PropTypes.bool,
+    topFixedHeight: UU5.PropTypes.number,
+    bottomFixed: UU5.PropTypes.bool,
+    bottomFixedHeight: UU5.PropTypes.number,
+    overlayTop: UU5.PropTypes.bool,
+    overlayBottom: UU5.PropTypes.bool,
+    relative: UU5.PropTypes.bool,
+    resizable: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.oneOf(["open", "closed"])]),
+    onUpdate: UU5.PropTypes.func,
+    onResize: UU5.PropTypes.func,
+    showToggleButton: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 
@@ -117,7 +116,8 @@ export const PageColumn = createReactClass({
       resizable: false,
       onUpdate: null,
       onResize: null,
-      topOverlaysContent: false
+      topOverlaysContent: false,
+      showToggleButton: false
     };
   },
   //@@viewOff:getDefaultProps
@@ -370,6 +370,72 @@ export const PageColumn = createReactClass({
 
   _onChangePageBottomHeight(height) {
     this.setState({ bottomHeight: height });
+  },
+
+  _onPressToggleButton() {
+    this.toggle();
+  },
+
+  _getToggleButton() {
+    let result = null;
+
+    if (this.props.showToggleButton) {
+      let icon;
+
+      if (this.isOpen()) icon = this.props.right ? "mdi-chevron-right" : "mdi-chevron-left";
+      else icon = this.props.right ? "mdi-chevron-left" : "mdi-chevron-right";
+
+      let transformXFirst = "0vw";
+      let transformXSecond = this.props.right ? `- 100%` : `+ 100%`;
+      let transformXThird = this.props.right ? `- 1px` : `+ 1px`;
+
+      if (!this.isOpen()) {
+        let hasClosedWidth = !!(this.props.minWidth && this.props.maxWidth);
+        if (!hasClosedWidth) {
+          transformXFirst = this.props.right ? this.state.width : `-${this.state.width}`;
+        } else {
+          transformXThird = "+ 0px";
+        }
+      }
+
+      let buttonStyle = Css.css`
+        && {
+          position: absolute;
+          top: 50%;
+          ${this.props.right ? "left: 0" : "right: 0"};
+          transform: translateY(-50%) translateX(calc(${transformXFirst} ${transformXSecond} ${transformXThird}));
+          visibility: visible;
+          transition: transform 0.3s linear;
+          width: 24px;
+          height: 32px;
+          border: solid 1px rgba(33,33,33,0.12);
+          border-radius: ${this.props.right ? "4px 0 0 4px" : "0 4px 4px 0"};
+          background-color: white;
+          color: #757575;
+          padding: 0 11px;
+
+          & > .uu5-bricks-icon {
+            font-size: 12px;
+          }
+        }
+      `;
+
+      buttonStyle += " " + this.getClassName("zIndex") + this.props.elevation;
+
+      result = (
+        <UU5.Bricks.Button
+          key="toggle-button"
+          onClick={this._onPressToggleButton}
+          content={<UU5.Bricks.Icon icon={icon} />}
+          className={buttonStyle}
+          colorSchema="custom"
+          bgStyle="transparent"
+          size="s"
+        />
+      );
+    }
+
+    return result;
   },
 
   _getPageElements(props) {
@@ -958,15 +1024,15 @@ export const PageColumn = createReactClass({
           }
           break;
         default:
-          content = React.cloneElement(content, { open: this.state.open, block: this.props.block });
+          content = UU5.Common.Element.clone(content, { open: this.state.open, block: this.props.block });
       }
     }
 
-    let AreaWrapper = !this.props.block || this.props.fixed ? ScrollArea : React.Fragment;
+    let AreaWrapper = !this.props.block || this.props.fixed ? ScrollArea : UU5.Common.Fragment;
     if (content) {
       if (!this.props.block) {
         result = UU5.Common.Tools.wrapIfExists(
-          React.Fragment,
+          UU5.Common.Fragment,
           <div {...this._getWrapperProps()} ref={comp => (this._columnRef = comp)}>
             {!this.props.relative ? <Backdrop {...this._getBackdropProps()} /> : null}
             <Column {...this._getMainProps()}>
@@ -981,6 +1047,7 @@ export const PageColumn = createReactClass({
               )}
               {this._getDragElement()}
             </Column>
+            {this._getToggleButton()}
           </div>,
           <div {...this._getWrapperGhostProps()} ref={element => (this._ghost = element)}>
             <Column {...this._getMainGhostProps()} />
@@ -988,7 +1055,7 @@ export const PageColumn = createReactClass({
         );
       } else {
         result = UU5.Common.Tools.wrapIfExists(
-          React.Fragment,
+          UU5.Common.Fragment,
           <Column {...this._getMainProps(true)} ref={comp => (this._columnRef = comp)}>
             {UU5.Common.Tools.wrapIfExists(
               AreaWrapper,

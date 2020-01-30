@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import { Div } from "./factory.js";
@@ -25,7 +22,8 @@ import "./home-screen.less";
 //@@viewOff:imports
 
 export const HomeScreen = UU5.Common.LsiMixin.withContext(
-  createReactClass({
+  UU5.Common.VisualComponent.create({
+    displayName: "HomeScreen", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
     mixins: [
       UU5.Common.BaseMixin,
@@ -65,14 +63,14 @@ export const HomeScreen = UU5.Common.LsiMixin.withContext(
 
     //@@viewOn:propTypes
     propTypes: {
-      appID: PropTypes.string, // local storage name
-      skipFirstVisit: PropTypes.bool, // show only to returning visitors (ie: skip the first time you visit)
-      startDelay: PropTypes.number, // display the message after that many seconds from page load
-      lifespan: PropTypes.number, // life of the message in seconds
-      displayPace: PropTypes.number, // minutes before the message is shown again (0: display every time, default 24 hours)
-      maxDisplayCount: PropTypes.number, // absolute maximum number of times the message will be shown to the user (0: no limit)
-      message: PropTypes.any, // the message can be customized
-      detectHomescreen: PropTypes.oneOf(["hash", "query", "smart", false]) // try to detect if the site has been added to the homescreen (false | true | 'hash' | 'queryString' | 'smartURL')
+      appID: UU5.PropTypes.string, // local storage name
+      skipFirstVisit: UU5.PropTypes.bool, // show only to returning visitors (ie: skip the first time you visit)
+      startDelay: UU5.PropTypes.number, // display the message after that many seconds from page load
+      lifespan: UU5.PropTypes.number, // life of the message in seconds
+      displayPace: UU5.PropTypes.number, // minutes before the message is shown again (0: display every time, default 24 hours)
+      maxDisplayCount: UU5.PropTypes.number, // absolute maximum number of times the message will be shown to the user (0: no limit)
+      message: UU5.PropTypes.any, // the message can be customized
+      detectHomescreen: UU5.PropTypes.oneOf(["hash", "query", "smart", false]) // try to detect if the site has been added to the homescreen (false | true | 'hash' | 'queryString' | 'smartURL')
     },
     //@@viewOff:propTypes
 

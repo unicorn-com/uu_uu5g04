@@ -12,16 +12,14 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./blockquote-footer.less";
 //@@viewOff:imports
 
-export default createReactClass({
+export default UU5.Common.VisualComponent.create({
+  displayName: "blockquote-footer", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -49,7 +47,7 @@ export default createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    alignment: PropTypes.oneOf(["left", "right"])
+    alignment: UU5.PropTypes.oneOf(["left", "right"])
   },
   //@@viewOff:propTypes
 

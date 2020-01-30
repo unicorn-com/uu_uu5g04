@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import PropTypes from "prop-types";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import Css from "./css.js";
 
@@ -28,7 +25,8 @@ const SIZES = {
   xl: { width: 96, height: 40, squareSize: 14 }
 };
 
-const ColorPreview = createReactClass({
+const ColorPreview = UU5.Common.VisualComponent.create({
+  displayName: "ColorPreview", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin],
   //@@viewOff:mixins
@@ -141,12 +139,12 @@ const ColorPreview = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    color: PropTypes.string,
-    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
-    width: PropTypes.number,
-    height: PropTypes.number,
-    squareSize: PropTypes.number,
-    borderRadius: PropTypes.string
+    color: UU5.PropTypes.string,
+    size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
+    width: UU5.PropTypes.number,
+    height: UU5.PropTypes.number,
+    squareSize: UU5.PropTypes.number,
+    borderRadius: UU5.PropTypes.string
   },
   //@@viewOff:propTypes
 

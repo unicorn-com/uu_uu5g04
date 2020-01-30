@@ -441,6 +441,20 @@ template {
 [hidden] {
   display: none;
 }
+[disabled] {
+  position: relative;
+  opacity: .4;
+  cursor: default !important;
+}
+
+[disabled]::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 
 // iOS doesnt trigger click event on element that arent normally clickable (i.e. inputs, buttons, etc.).
 // Adding pointer cursor makes the system think it is clickable, thus triggering all click events.

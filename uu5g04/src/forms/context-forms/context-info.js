@@ -12,7 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "../forms-ns.js";
@@ -72,10 +71,10 @@ export const ContextInfo = UU5.Common.VisualComponent.create({
   //@@viewOn:render
   render() {
     return (
-      <React.Fragment>
+      <UU5.Common.Fragment>
         <UU5.Bricks.Icon icon={this.props.icon} className={this.constructor.classNames.icon()} />
         <UU5.Bricks.Div content={this.props.content} className={this.constructor.classNames.content()} />
-      </React.Fragment>
+      </UU5.Common.Fragment>
     );
   }
   //@@viewOff:render

@@ -50,6 +50,9 @@ export const LsiMixin = {
   getInitialState() {
     // initialize
     this.registerMixin("UU5.Common.LsiMixin");
+    if (typeof this.props.registerLsi !== "function") {
+      window.UU5.Environment.EventListener.registerLsi(this.getId(), this._changeLanguage);
+    }
     // state
     return {
       language:
@@ -63,8 +66,6 @@ export const LsiMixin = {
   componentDidMount() {
     if (typeof this.props.registerLsi === "function") {
       this.props.registerLsi(this.getId(), this._changeLanguage);
-    } else {
-      window.UU5.Environment.EventListener.registerLsi(this.getId(), this._changeLanguage);
     }
   },
 
@@ -112,11 +113,20 @@ export const LsiMixin = {
   },
 
   _changeLanguage(language) {
-    if (this.getLanguage() !== language) {
-      if (typeof this.onChangeLanguage_ === "function") {
-        this.onChangeLanguage_(language);
-      } else {
-        this.onChangeLanguageDefault(language);
+    // NOTE If a component has LsiMixin and it calls Tools.setLanguage() in its getInitialState, then
+    // the flow will get here and the component has no state yet and it has actually no way to alter
+    // its language in the state (it cannot call setState because its getInitialState didn't finish yet).
+    // We will do nothing in this case.
+    // (This started happening when language change listener registration got moved from componentDidMount
+    // to getInitialState. However, end result in that flow had been exactly same - the component didn't
+    // end up having intended language in its state, so this solution isn't worse than before.)
+    if (this.state) {
+      if (this.getLanguage() !== language) {
+        if (typeof this.onChangeLanguage_ === "function") {
+          this.onChangeLanguage_(language);
+        } else {
+          this.onChangeLanguageDefault(language);
+        }
       }
     }
   },

@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -25,7 +22,8 @@ import Span from "./span.js";
 import "./dropdown-item.less";
 //@@viewOff:imports
 
-export default createReactClass({
+export default UU5.Common.VisualComponent.create({
+  displayName: "dropdown-item", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -62,18 +60,18 @@ export default createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    header: PropTypes.bool,
-    divider: PropTypes.bool,
-    label: PropTypes.any, // content
-    href: PropTypes.string,
-    onClick: PropTypes.func,
-    onCtrlClick: PropTypes.func,
-    onWheelClick: PropTypes.func,
-    smoothScroll: PropTypes.number,
-    offset: PropTypes.number,
-    target: PropTypes.string,
-    dropup: PropTypes.bool,
-    linkProps: PropTypes.object
+    header: UU5.PropTypes.bool,
+    divider: UU5.PropTypes.bool,
+    label: UU5.PropTypes.any, // content
+    href: UU5.PropTypes.string,
+    onClick: UU5.PropTypes.func,
+    onCtrlClick: UU5.PropTypes.func,
+    onWheelClick: UU5.PropTypes.func,
+    smoothScroll: UU5.PropTypes.number,
+    offset: UU5.PropTypes.number,
+    target: UU5.PropTypes.string,
+    dropup: UU5.PropTypes.bool,
+    linkProps: UU5.PropTypes.object
   },
   //@@viewOff:propTypes
 

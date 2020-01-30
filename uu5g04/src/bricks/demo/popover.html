@@ -38,13 +38,10 @@
       }
     </style>
     <script type="text/babel">
-      import React from "react";
-      import createReactClass from "create-react-class";
-      import ReactDOM from "react-dom";
       import UU5 from "uu5g04";
       import "uu5g04-bricks";
 
-      const Page = createReactClass({
+      const Page = UU5.Common.VisualComponent.create({
         render() {
           let colWidth = "xs-3";
           return (
@@ -267,7 +264,7 @@
         }
       });
 
-      ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+      UU5.Common.DOM.render(UU5.Common.Element.create(Page, null), document.getElementById('renderHere'));
     </script>
   </body>
 </html>

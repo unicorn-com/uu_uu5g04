@@ -11,9 +11,6 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
-import PropTypes from "prop-types";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 
@@ -25,7 +22,7 @@ const DEFAULT_PROPS_MAP = {
   contentEditable: false,
   noSpacing: false,
   underline: false,
-  level: "",
+  level: null,
   colWidth: "",
   width: "",
   header: "",
@@ -90,7 +87,7 @@ const EditModal = UU5.Common.Component.lazy(async () => {
   return { default: BricksEditableExports.Modal };
 });
 
-export const Column = createReactClass({
+export const Column = UU5.Common.VisualComponent.create({
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin],
   //@@viewOff:mixins
@@ -183,7 +180,7 @@ export const Column = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    component: PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired
   },
   //@@viewOff:propTypes
 
@@ -228,7 +225,7 @@ export const Column = createReactClass({
   _getPropsToSave(state = this.state) {
     // unused vars are here just to separate them from the result
     // eslint-disable-next-line no-unused-vars
-    let { showFooter, showHeader, children, content, ...result } = state;
+    let { showFooter, showHeader, editModalOpen, children, content, ...result } = state;
 
     for (let propName in DEFAULT_PROPS_MAP) {
       if (result[propName] !== undefined && result[propName] === DEFAULT_PROPS_MAP[propName]) {
@@ -347,7 +344,7 @@ export const Column = createReactClass({
       content: `${this.getLsiValue("level")} ${level}`,
       value: `${level}`
     }));
-    levelItems.unshift({ content: this.getLsiValue("defaultLevel"), value: "" });
+    levelItems.unshift({ content: this.getLsiValue("defaultLevel"), value: null });
 
     return [
       {

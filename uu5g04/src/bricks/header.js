@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -23,7 +20,9 @@ import Jumbotron from "./jumbotron.js";
 import "./header.less";
 //@@viewOff:imports
 
-export const Header = createReactClass({
+export const Header = UU5.Common.VisualComponent.create({
+  displayName: "Header", // for backward compatibility (test snapshots)
+
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -53,7 +52,7 @@ export const Header = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    underline: PropTypes.bool
+    underline: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 
@@ -87,7 +86,7 @@ export const Header = createReactClass({
     if (level > 0) {
       this.props.underline && (attrs.className += " " + this.getClassName("underline"));
 
-      result = React.createElement("h" + level, attrs, this.getChildren(), this.getDisabledCover());
+      result = UU5.Common.Element.create("h" + level, attrs, this.getChildren(), this.getDisabledCover());
     } else {
       result = (
         <Jumbotron

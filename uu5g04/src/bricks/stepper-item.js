@@ -12,16 +12,15 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+import { withStepperContext } from "./stepper-context.js";
 
 import "./stepper-item.less";
 //@@viewOff:imports
 
-export const StepperItem = createReactClass({
+const StepperItemBase = UU5.Common.VisualComponent.create({
+  displayName: "StepperItem", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ColorSchemaMixin, UU5.Common.ElementaryMixin],
   //@@viewOff:mixins
@@ -39,14 +38,14 @@ export const StepperItem = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
-    onClick: PropTypes.func,
-    borderRadius: PropTypes.string,
-    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-    elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-    topVisitedStep: PropTypes.number,
-    currentStep: PropTypes.number,
-    index: PropTypes.number
+    size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
+    onClick: UU5.PropTypes.func,
+    borderRadius: UU5.PropTypes.string,
+    bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+    elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+    topVisitedStep: UU5.PropTypes.number,
+    currentStep: UU5.PropTypes.number,
+    index: UU5.PropTypes.number
   },
   //@@viewOff:propTypes
 
@@ -63,6 +62,8 @@ export const StepperItem = createReactClass({
       index: 0
     };
   },
+  //@@viewOff:getDefaultProps
+
   //@@viewOn:reactLifeCycle
   //@@viewOff:reactLifeCycle
 
@@ -174,7 +175,6 @@ export const StepperItem = createReactClass({
     mainProps.className += " " + this.getClassName().stepperItemButton;
     return mainProps;
   },
-
   //@@viewOff:private
 
   //@@viewOn:render
@@ -196,7 +196,8 @@ export const StepperItem = createReactClass({
       </UU5.Bricks.Button>
     );
   }
+  //@@viewOff:render
 });
-//@@viewOff:render
 
+export const StepperItem = withStepperContext(StepperItemBase);
 export default StepperItem;

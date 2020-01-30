@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -23,7 +20,8 @@ import Span from "./span.js";
 import "./lsi-item.less";
 //@@viewOff:imports
 
-export default createReactClass({
+export default UU5.Common.VisualComponent.create({
+  displayName: "lsi-item", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, UU5.Common.ContentMixin],
   //@@viewOff:mixins
@@ -42,7 +40,7 @@ export default createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    language: PropTypes.string.isRequired
+    language: UU5.PropTypes.string.isRequired
   },
   //@@viewOff:propTypes
 
@@ -84,7 +82,7 @@ export default createReactClass({
   render: function() {
     return (
       <Span {...this.getMainPropsToPass()} content={this.props.content}>
-        {this.props.children && React.Children.toArray(this.props.children)}
+        {this.props.children && UU5.Common.Children.toArray(this.props.children)}
       </Span>
     );
   }

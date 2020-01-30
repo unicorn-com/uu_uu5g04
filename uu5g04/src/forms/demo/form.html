@@ -47,9 +47,6 @@
 <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
 <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
 <script type="text/babel">
-  import React from "react";
-  import createReactClass from "create-react-class";
-  import ReactDOM from "react-dom";
   import UU5 from "uu5g04";
   import "uu5g04-bricks";
   import "uu5g04-forms";
@@ -69,7 +66,7 @@
     }
   };
 
-  const CustomFormContextComponent = createReactClass({
+  const CustomFormContextComponent = UU5.Common.VisualComponent.create({
     mixins: [
       UU5.Common.BaseMixin,
       UU5.Common.PureRenderMixin,
@@ -83,7 +80,7 @@
     }
   });
 
-  const CustomFormComponent = createReactClass({
+  const CustomFormComponent = UU5.Common.VisualComponent.create({
     mixins: [
       UU5.Common.BaseMixin,
       UU5.Common.PureRenderMixin,
@@ -98,7 +95,7 @@
   });
 
   const CustomInputContextComponent = UU5.Forms.Context.withContext(
-    createReactClass({
+    UU5.Common.VisualComponent.create({
       mixins: [
         UU5.Common.BaseMixin,
         UU5.Common.PureRenderMixin,
@@ -116,7 +113,7 @@
     })
   );
 
-  const CustomInputComponent = createReactClass({
+  const CustomInputComponent = UU5.Common.VisualComponent.create({
     mixins: [
       UU5.Common.BaseMixin,
       UU5.Common.PureRenderMixin,
@@ -148,7 +145,7 @@
   const tooltipIcon = "mdi-check";
   const colWidth = undefined
 
-  const Page = createReactClass({
+  const Page = UU5.Common.VisualComponent.create({
 
     getInitialState() {
       return {
@@ -486,7 +483,7 @@
     }
   });
 
-  ReactDOM.render(<Page />, document.getElementById('renderHere'));
+  UU5.Common.DOM.render(<Page />, document.getElementById('renderHere'));
 </script>
 </body>
 </html>

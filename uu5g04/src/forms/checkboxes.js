@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
 import ClassNames from "../core/common/class-names.js";
@@ -30,7 +27,8 @@ import "./checkboxes.less";
 //@@viewOff:imports
 
 export const Checkboxes = Context.withContext(
-  createReactClass({
+  UU5.Common.VisualComponent.create({
+    displayName: "Checkboxes", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
     mixins: [
       UU5.Common.BaseMixin,
@@ -68,10 +66,10 @@ export const Checkboxes = Context.withContext(
 
     //@@viewOn:propTypes
     propTypes: {
-      type: PropTypes.number,
-      bgStyleChecked: PropTypes.oneOf(["filled", "outline"]),
-      selectionBackground: PropTypes.bool,
-      selectionBorderRadius: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+      type: UU5.PropTypes.number,
+      bgStyleChecked: UU5.PropTypes.oneOf(["filled", "outline"]),
+      selectionBackground: UU5.PropTypes.bool,
+      selectionBorderRadius: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number])
     },
     //@@viewOff:propTypes
 

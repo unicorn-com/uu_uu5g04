@@ -50,9 +50,6 @@
 <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
 <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
 <script type="text/babel">
-  import React from "react";
-      import createReactClass from "create-react-class";
-  import ReactDOM from "react-dom";
   import UU5 from "uu5g04";
   import "uu5g04-bricks";
 
@@ -72,7 +69,7 @@
     }
   };
 
-  var Page = createReactClass({
+  var Page = UU5.Common.VisualComponent.create({
 
     mixins: [
       UU5.Common.BaseMixin,
@@ -159,7 +156,7 @@
     }
   });
 
-  ReactDOM.render(<Page calls={calls}/>, document.getElementById('renderHere'));
+  UU5.Common.DOM.render(<Page calls={calls}/>, document.getElementById('renderHere'));
 </script>
 </body>
 </html>

@@ -1,5 +1,4 @@
 //@@viewOn:imports
-import React from "react";
 import UU5 from "uu5g04";
 
 import TabsItem from "../tabs-item.js";
@@ -20,7 +19,8 @@ const getEditableItemLabel = (item, itemIndex) => {
 const newEditableItem = {
   tagName: "UU5.Bricks.Tabs.Item",
   props: {
-    header: "New Item"
+    header: "New Item",
+    contentEditable: true
   }
 };
 

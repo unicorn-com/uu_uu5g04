@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
 import TextInput from "./internal/text-input.js";
@@ -27,7 +24,8 @@ import "./date-picker.less";
 //@@viewOff:imports
 
 export const DatePicker = Context.withContext(
-  createReactClass({
+  UU5.Common.VisualComponent.create({
+    displayName: "DatePicker", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
     mixins: [
       UU5.Common.BaseMixin,
@@ -56,23 +54,23 @@ export const DatePicker = Context.withContext(
 
     //@@viewOn:propTypes
     propTypes: {
-      value: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-      dateFrom: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-      dateTo: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-      iconOpen: PropTypes.string,
-      iconClosed: PropTypes.string,
-      format: PropTypes.string,
-      country: PropTypes.string,
-      nanMessage: PropTypes.any,
-      beforeRangeMessage: PropTypes.any,
-      afterRangeMessage: PropTypes.any,
-      parseDate: PropTypes.func,
-      disableBackdrop: PropTypes.bool,
-      valueType: PropTypes.oneOf(["string", "date"]),
-      openToContent: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-      hideFormatPlaceholder: PropTypes.bool,
-      showTodayButton: PropTypes.bool,
-      step: PropTypes.oneOf(["days", "months", "years"])
+      value: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string]),
+      dateFrom: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string]),
+      dateTo: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string]),
+      iconOpen: UU5.PropTypes.string,
+      iconClosed: UU5.PropTypes.string,
+      format: UU5.PropTypes.string,
+      country: UU5.PropTypes.string,
+      nanMessage: UU5.PropTypes.any,
+      beforeRangeMessage: UU5.PropTypes.any,
+      afterRangeMessage: UU5.PropTypes.any,
+      parseDate: UU5.PropTypes.func,
+      disableBackdrop: UU5.PropTypes.bool,
+      valueType: UU5.PropTypes.oneOf(["string", "date"]),
+      openToContent: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string]),
+      hideFormatPlaceholder: UU5.PropTypes.bool,
+      showTodayButton: UU5.PropTypes.bool,
+      step: UU5.PropTypes.oneOf(["days", "months", "years"])
     },
     //@@viewOff:propTypes
 

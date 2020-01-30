@@ -12,16 +12,14 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./icon.less";
 //@@viewOff:imports
 
-export const Icon = createReactClass({
+export const Icon = UU5.Common.VisualComponent.create({
+  displayName: "Icon", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, UU5.Common.NestingLevelMixin],
   //@@viewOff:mixins
@@ -43,10 +41,10 @@ export const Icon = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    icon: PropTypes.string,
-    clickable: PropTypes.bool,
-    src: PropTypes.string,
-    authenticate: PropTypes.bool
+    icon: UU5.PropTypes.string,
+    clickable: UU5.PropTypes.bool,
+    src: UU5.PropTypes.string,
+    authenticate: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 
@@ -216,7 +214,7 @@ export const Icon = createReactClass({
     return this.getNestingLevel() ? (
       <span {...mainProps}>
         {this.props.src ? this._renderSvg() : null}
-        {this.props.children && React.Children.toArray(this.props.children)}
+        {this.props.children && UU5.Common.Children.toArray(this.props.children)}
         {this.getDisabledCover()}
       </span>
     ) : null;

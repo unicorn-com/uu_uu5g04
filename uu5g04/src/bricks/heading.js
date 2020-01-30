@@ -12,16 +12,14 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./heading.less";
 //@@viewOff:imports
 
-export const Heading = createReactClass({
+export const Heading = UU5.Common.VisualComponent.create({
+  displayName: "Heading", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -48,13 +46,13 @@ export const Heading = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    fixed: PropTypes.bool,
-    fixedOnScroll: PropTypes.bool,
-    hideOnScroll: PropTypes.bool,
-    hideOnScrollOffset: PropTypes.number,
-    onScrollToFixed: PropTypes.func, // not called in interface, just on scroll
-    onScrollToBlocked: PropTypes.func, // not called in interface, just on scroll
-    spaceHolder: PropTypes.bool
+    fixed: UU5.PropTypes.bool,
+    fixedOnScroll: UU5.PropTypes.bool,
+    hideOnScroll: UU5.PropTypes.bool,
+    hideOnScrollOffset: UU5.PropTypes.number,
+    onScrollToFixed: UU5.PropTypes.func, // not called in interface, just on scroll
+    onScrollToBlocked: UU5.PropTypes.func, // not called in interface, just on scroll
+    spaceHolder: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 
@@ -304,7 +302,7 @@ export const Heading = createReactClass({
   render() {
     return this.getNestingLevel()
       ? UU5.Common.Tools.wrapIfExists(
-          React.Fragment,
+          UU5.Common.Fragment,
           <div {...this._getMainAttrs()} key="main">
             {this.getChildren()}
             {this.getDisabledCover()}

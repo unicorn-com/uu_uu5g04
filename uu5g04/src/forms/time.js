@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "./forms-ns.js";
@@ -26,7 +23,8 @@ const FORMAT_AM = "AM";
 const FORMAT_PM = "PM";
 const FORMAT_12 = "12";
 const FORMAT_24 = "24";
-export const Time = createReactClass({
+export const Time = UU5.Common.VisualComponent.create({
+  displayName: "Time", // for backward compatibility (test snapshots)
   mixins: [
     UU5.Common.BaseMixin,
     UU5.Common.PureRenderMixin,
@@ -76,21 +74,21 @@ export const Time = createReactClass({
   },
 
   propTypes: {
-    value: PropTypes.shape({
-      hours: PropTypes.number,
-      minutes: PropTypes.number,
-      seconds: PropTypes.number,
-      dayPart: PropTypes.oneOf([FORMAT_AM, FORMAT_PM])
+    value: UU5.PropTypes.shape({
+      hours: UU5.PropTypes.number,
+      minutes: UU5.PropTypes.number,
+      seconds: UU5.PropTypes.number,
+      dayPart: UU5.PropTypes.oneOf([FORMAT_AM, FORMAT_PM])
     }),
-    format: PropTypes.oneOf([FORMAT_12, FORMAT_24, 12, 24]),
-    onChange: PropTypes.func,
-    seconds: PropTypes.bool,
-    step: PropTypes.number,
-    type: PropTypes.oneOf(["single-column", "multi-column"]),
-    mobileDisplay: PropTypes.bool,
-    timeFrom: PropTypes.object,
-    timeTo: PropTypes.object,
-    show24: PropTypes.bool
+    format: UU5.PropTypes.oneOf([FORMAT_12, FORMAT_24, 12, 24]),
+    onChange: UU5.PropTypes.func,
+    seconds: UU5.PropTypes.bool,
+    step: UU5.PropTypes.number,
+    type: UU5.PropTypes.oneOf(["single-column", "multi-column"]),
+    mobileDisplay: UU5.PropTypes.bool,
+    timeFrom: UU5.PropTypes.object,
+    timeTo: UU5.PropTypes.object,
+    show24: UU5.PropTypes.bool
   },
 
   //@@viewOn:getDefaultProps

@@ -12,18 +12,16 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./video.less";
 //@@viewOff:imports
 
-const VideoHls = React.lazy ? React.lazy(() => import("./video-hls.js")) : props => <video {...props.mainAttrs} />;
+const VideoHls = UU5.Common.Component.lazy ? UU5.Common.Component.lazy(() => import("./video-hls.js")) : props => <video {...props.mainAttrs} />;
 
-export const Video = createReactClass({
+export const Video = UU5.Common.VisualComponent.create({
+  displayName: "Video", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, UU5.Common.NestingLevelMixin],
   //@@viewOff:mixins
@@ -43,15 +41,15 @@ export const Video = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    autoPlay: PropTypes.bool,
-    disableControls: PropTypes.bool,
-    loop: PropTypes.bool,
-    poster: PropTypes.string,
-    preload: PropTypes.oneOf(["auto", "metadata", "none"]),
-    src: PropTypes.string.isRequired,
-    muted: PropTypes.bool,
-    type: PropTypes.oneOf(["mp4", "webm", "ogg", "m3u8"]),
-    authenticate: PropTypes.bool
+    autoPlay: UU5.PropTypes.bool,
+    disableControls: UU5.PropTypes.bool,
+    loop: UU5.PropTypes.bool,
+    poster: UU5.PropTypes.string,
+    preload: UU5.PropTypes.oneOf(["auto", "metadata", "none"]),
+    src: UU5.PropTypes.string.isRequired,
+    muted: UU5.PropTypes.bool,
+    type: UU5.PropTypes.oneOf(["mp4", "webm", "ogg", "m3u8"]),
+    authenticate: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 
@@ -114,7 +112,7 @@ export const Video = createReactClass({
 
   _isHls(type = this._getType()) {
     let result = type === "m3u8";
-    if (result && !React.Suspense && !this.constructor._warnedHlsOldReact) {
+    if (result && !UU5.Common.Suspense && !this.constructor._warnedHlsOldReact) {
       this.constructor._warnedHlsOldReact = true;
       UU5.Common.Tools.error("Using HTTP Live Streaming videos is supported only with React >= 16.6.0.");
     }
@@ -169,7 +167,7 @@ export const Video = createReactClass({
   render: function() {
     let { src, authenticate } = this.props;
     let url = src;
-    let useHlsComponent = this._isHls() && React.Suspense;
+    let useHlsComponent = this._isHls() && UU5.Common.Suspense;
     if (authenticate && !useHlsComponent) {
       let session = UU5.Environment.getSession();
       if (session && session.isAuthenticated() && UU5.Environment.isTrustedDomain(url)) {
@@ -181,9 +179,9 @@ export const Video = createReactClass({
       <UU5.Bricks.Span {...this.getMainPropsToPass()}>
         {url ? (
           useHlsComponent ? (
-            <React.Suspense fallback="">
+            <UU5.Common.Suspense fallback="">
               <VideoHls mainAttrs={{ ...this._buildMainAttrs(), src: url }} authenticate={this.props.authenticate} />
-            </React.Suspense>
+            </UU5.Common.Suspense>
           ) : (
             <video {...this._buildMainAttrs()}>
               <source src={url} />

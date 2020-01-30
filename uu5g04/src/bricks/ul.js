@@ -12,15 +12,11 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+import ListContext from "./list-context.js";
 
 import "./ul.less";
-
-import { ListContext } from "./li.js";
 //@@viewOff:imports
 
 const typeIconMap = {
@@ -29,7 +25,9 @@ const typeIconMap = {
   square: "mdi-square"
 };
 
-export const Ul = createReactClass({
+export const Ul = UU5.Common.VisualComponent.create({
+  displayName: "Ul", // for backward compatibility (test snapshots)
+
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.SectionMixin, UU5.Common.NestingLevelMixin],
   //@@viewOff:mixins
@@ -51,10 +49,10 @@ export const Ul = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    allowTags: PropTypes.arrayOf(PropTypes.string),
-    type: PropTypes.oneOf(["disc", "circle", "square", "none"]),
-    markerIcon: PropTypes.string,
-    iconColorSchema: PropTypes.string
+    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
+    type: UU5.PropTypes.oneOf(["disc", "circle", "square", "none"]),
+    markerIcon: UU5.PropTypes.string,
+    iconColorSchema: UU5.PropTypes.string
   },
   //@@viewOff:propTypes
 

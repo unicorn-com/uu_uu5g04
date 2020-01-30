@@ -11,8 +11,6 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
-import PropTypes from "prop-types";
 import ns from "../forms-ns.js";
 import * as UU5 from "uu5g04";
 
@@ -58,48 +56,48 @@ export const InputMixin = {
 
   //@@viewOn:propTypes
   propTypes: {
-    label: PropTypes.any,
-    message: PropTypes.any,
+    label: UU5.PropTypes.any,
+    message: UU5.PropTypes.any,
 
-    feedback: PropTypes.oneOf([INITIAL_FEEDBACK, SUCCESS_FEEDBACK, WARNING_FEEDBACK, ERROR_FEEDBACK, LOADING_FEEDBACK]),
+    feedback: UU5.PropTypes.oneOf([INITIAL_FEEDBACK, SUCCESS_FEEDBACK, WARNING_FEEDBACK, ERROR_FEEDBACK, LOADING_FEEDBACK]),
 
-    readOnly: PropTypes.bool,
+    readOnly: UU5.PropTypes.bool,
 
-    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
+    size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
 
-    onChange: PropTypes.func,
-    onValidate: PropTypes.func,
-    onChangeFeedback: PropTypes.func,
+    onChange: UU5.PropTypes.func,
+    onValidate: UU5.PropTypes.func,
+    onChangeFeedback: UU5.PropTypes.func,
 
-    labelColWidth: PropTypes.oneOfType([
-      PropTypes.shape({
-        xs: PropTypes.number,
-        s: PropTypes.number,
-        m: PropTypes.number,
-        l: PropTypes.number,
-        xl: PropTypes.number
+    labelColWidth: UU5.PropTypes.oneOfType([
+      UU5.PropTypes.shape({
+        xs: UU5.PropTypes.number,
+        s: UU5.PropTypes.number,
+        m: UU5.PropTypes.number,
+        l: UU5.PropTypes.number,
+        xl: UU5.PropTypes.number
       }),
-      PropTypes.string
+      UU5.PropTypes.string
     ]),
-    inputColWidth: PropTypes.oneOfType([
-      PropTypes.shape({
-        xs: PropTypes.number,
-        s: PropTypes.number,
-        m: PropTypes.number,
-        l: PropTypes.number,
-        xl: PropTypes.number
+    inputColWidth: UU5.PropTypes.oneOfType([
+      UU5.PropTypes.shape({
+        xs: UU5.PropTypes.number,
+        s: UU5.PropTypes.number,
+        m: UU5.PropTypes.number,
+        l: UU5.PropTypes.number,
+        xl: UU5.PropTypes.number
       }),
-      PropTypes.string
+      UU5.PropTypes.string
     ]),
-    inputWidth: PropTypes.string,
-    labelWidth: PropTypes.string,
+    inputWidth: UU5.PropTypes.string,
+    labelWidth: UU5.PropTypes.string,
 
-    inputAttrs: PropTypes.object,
+    inputAttrs: UU5.PropTypes.object,
 
-    spacing: PropTypes.number,
+    spacing: UU5.PropTypes.number,
 
-    tooltipIcon: PropTypes.string,
-    labelAlignment: PropTypes.string
+    tooltipIcon: UU5.PropTypes.string,
+    labelAlignment: UU5.PropTypes.string
   },
   //@@viewOff:propTypes
 

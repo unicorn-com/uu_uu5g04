@@ -106,6 +106,7 @@ export const NestingLevelMixin = {
 
     //step 2 - check nestingLevelList
     let nestingLevelList = this.getNestingLevelList();
+    let origNestingLevelList = nestingLevelList;
     //console.log("step 2 requestedNestingLevel:",nestingLevel,"nestingLevelList:",nestingLevelList,"parent::",parentNestingLevelComponent);
 
     if (props.nestingLevel && nestingLevelEnvIndex === -1) {
@@ -118,24 +119,15 @@ export const NestingLevelMixin = {
     if (nestingLevel) {
       nestingLevelEnvIndex = Environment.nestingLevelList.indexOf(nestingLevel);
 
-      //because ie11 dont know .find()
-      let nestingLevelLocIndex;
-      if (typeof nestingLevelList.find === "function") {
-        nestingLevelLocIndex = nestingLevelList.indexOf(
-          nestingLevelList.find(nestingLevel => {
-            return Environment.nestingLevelList.indexOf(nestingLevel) >= nestingLevelEnvIndex;
-          })
-        );
-      } else {
-        for (let i = 0; i < nestingLevelList.lenght; i++) {
-          let level = nestingLevelList[i];
-          if (Environment.nestingLevelList.indexOf(level) >= nestingLevelEnvIndex) {
-            nestingLevelLocIndex = nestingLevelList.indexOf(level);
-          }
-        }
-      }
+      let nestingLevelLoc = nestingLevelList.find(nestingLevel => {
+        return Environment.nestingLevelList.indexOf(nestingLevel) >= nestingLevelEnvIndex;
+      });
+      let nestingLevelLocIndex = nestingLevelList.indexOf(nestingLevelLoc);
 
-      nestingLevelList = nestingLevelLocIndex > -1 ? nestingLevelList.slice(nestingLevelLocIndex) : nestingLevelList;
+      if (nestingLevelLocIndex > -1) {
+        nestingLevelList = nestingLevelList.slice(nestingLevelLocIndex);
+        nestingLevelEnvIndex = Environment.nestingLevelList.indexOf(nestingLevelLoc);
+      }
     }
 
     //check nestingLevel rule incorrectRequestedNestingLevel
@@ -145,11 +137,11 @@ export const NestingLevelMixin = {
     ) {
       this.showError(
         "incorrectRequestedNestingLevel",
-        [this.getTagName(), nestingLevel, JSON.stringify(nestingLevelList)],
+        [this.getTagName(), nestingLevel, JSON.stringify(origNestingLevelList)],
         {
           mixinName: "UU5.Common.NestingLevelMixin",
           context: {
-            nestingLevelList: nestingLevelList
+            nestingLevelList: origNestingLevelList
           }
         }
       );
@@ -185,20 +177,9 @@ export const NestingLevelMixin = {
 
     //step 5 - find the lowest requested nestingLevel as possible if is not requested or is not requested correctly
     if (!nestingLevel) {
-      //because ie11 dont know .find()
-      if (typeof nestingLevelList.find === "function") {
-        nestingLevel = nestingLevelList.find(nestingLevel => {
-          return Environment.nestingLevelList.indexOf(nestingLevel) >= calculatedNestingLevelIndex;
-        });
-      } else {
-        for (let i = 0; i < nestingLevelList.length; i++) {
-          let level = nestingLevelList[i];
-          if (Environment.nestingLevelList.indexOf(level) >= calculatedNestingLevelIndex) {
-            nestingLevel = level;
-            break;
-          }
-        }
-      }
+      nestingLevel = nestingLevelList.find(nestingLevel => {
+        return Environment.nestingLevelList.indexOf(nestingLevel) >= calculatedNestingLevelIndex;
+      });
 
       nestingLevelEnvIndex = Environment.nestingLevelList.indexOf(nestingLevel);
       //console.log("step 5",nestingLevel)
@@ -231,7 +212,7 @@ export const NestingLevelMixin = {
           "nestingLevelMismatch",
           [
             this.getTagName(),
-            JSON.stringify(nestingLevelList),
+            JSON.stringify(origNestingLevelList),
             parentNestingLevelComponent.getTagName(),
             parentNestingLevel,
             JSON.stringify(calculatedNestingLevelList)
@@ -250,21 +231,9 @@ export const NestingLevelMixin = {
     }
 
     //step 6 - find the lowest nestingLevel as possible for render into parent
-
-    //because ie11 dont know .find()
-    if (typeof nestingLevelList.find === "function") {
-      nestingLevel = nestingLevelList.find(nestingLevel => {
-        return calculatedNestingLevelList.indexOf(nestingLevel) > -1;
-      });
-    } else {
-      for (let i = 0; i < nestingLevelList.length; i++) {
-        let level = nestingLevelList[i];
-        if (calculatedNestingLevelList.indexOf(level) > -1) {
-          nestingLevel = level;
-          break;
-        }
-      }
-    }
+    nestingLevel = nestingLevelList.find(nestingLevel => {
+      return calculatedNestingLevelList.indexOf(nestingLevel) > -1;
+    });
 
     //console.log("step 6",this.getTagName(),nestingLevel || null);
 

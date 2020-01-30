@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -23,7 +20,8 @@ import "./slider.less";
 import SliderItem from "./slider-item.js";
 //@@viewOff:imports
 
-export const Slider = createReactClass({
+export const Slider = UU5.Common.VisualComponent.create({
+  displayName: "Slider", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -56,15 +54,15 @@ export const Slider = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    vertical: PropTypes.bool,
-    min: PropTypes.number,
-    max: PropTypes.number,
-    step: PropTypes.number,
-    value: PropTypes.oneOfType([PropTypes.number, PropTypes.arrayOf(PropTypes.number)]),
-    onChange: PropTypes.func,
-    onChanged: PropTypes.func,
-    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
-    allowTags: PropTypes.array
+    vertical: UU5.PropTypes.bool,
+    min: UU5.PropTypes.number,
+    max: UU5.PropTypes.number,
+    step: UU5.PropTypes.number,
+    value: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.arrayOf(UU5.PropTypes.number)]),
+    onChange: UU5.PropTypes.func,
+    onChanged: UU5.PropTypes.func,
+    size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
+    allowTags: UU5.PropTypes.array
   },
   //@@viewOff:propTypes
 

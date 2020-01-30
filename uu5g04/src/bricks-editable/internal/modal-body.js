@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import PropTypes from "prop-types";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 
@@ -34,16 +31,16 @@ const FORM_PROPS = {
   labelColWidth: "xs-12",
   labelAlignment: "left"
 };
-const EDITATION_COMPONENT_PROPS = PropTypes.oneOfType([
-  PropTypes.arrayOf(
-    PropTypes.oneOfType([
-      PropTypes.func,
-      PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        placeholder: PropTypes.string,
-        type: PropTypes.oneOfType([
-          PropTypes.array,
-          PropTypes.oneOf([
+const EDITATION_COMPONENT_PROPS = UU5.PropTypes.oneOfType([
+  UU5.PropTypes.arrayOf(
+    UU5.PropTypes.oneOfType([
+      UU5.PropTypes.func,
+      UU5.PropTypes.shape({
+        name: UU5.PropTypes.string.isRequired,
+        placeholder: UU5.PropTypes.string,
+        type: UU5.PropTypes.oneOfType([
+          UU5.PropTypes.array,
+          UU5.PropTypes.oneOf([
             "text",
             "textarea",
             "number",
@@ -53,15 +50,15 @@ const EDITATION_COMPONENT_PROPS = PropTypes.oneOfType([
             "bool",
             "separator"
           ]),
-          PropTypes.node
+          UU5.PropTypes.node
         ]).isRequired,
-        required: PropTypes.bool,
-        label: PropTypes.oneOfType([PropTypes.node, PropTypes.object]),
-        getProps: PropTypes.func
+        required: UU5.PropTypes.bool,
+        label: UU5.PropTypes.oneOfType([UU5.PropTypes.node, UU5.PropTypes.object]),
+        getProps: UU5.PropTypes.func
       })
     ])
   ),
-  PropTypes.elementType
+  UU5.PropTypes.elementType
 ]);
 
 function isCompactVersion(screenSize) {
@@ -72,7 +69,7 @@ function isMobileVersion(screenSize) {
   return isCompactVersion(screenSize) || UU5.Common.Tools.isMobileOrTablet;
 }
 
-const ModalBody = createReactClass({
+const ModalBody = UU5.Common.VisualComponent.create({
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin],
   //@@viewOff:mixins
@@ -242,36 +239,36 @@ const ModalBody = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    component: PropTypes.object.isRequired,
-    getPropValues: PropTypes.func,
-    itemComponent: PropTypes.func,
-    propsSetup: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: PropTypes.oneOfType([PropTypes.string, PropTypes.object]), // string or lsi object
-        icon: PropTypes.string,
-        info: PropTypes.node,
-        formProps: PropTypes.object,
+    component: UU5.PropTypes.object.isRequired,
+    getPropValues: UU5.PropTypes.func,
+    itemComponent: UU5.PropTypes.func,
+    propsSetup: UU5.PropTypes.arrayOf(
+      UU5.PropTypes.shape({
+        name: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.object]), // string or lsi object
+        icon: UU5.PropTypes.string,
+        info: UU5.PropTypes.node,
+        formProps: UU5.PropTypes.object,
         setup: EDITATION_COMPONENT_PROPS
       })
     ),
-    itemPropsSetup: PropTypes.shape({
-      info: PropTypes.node,
-      formProps: PropTypes.object,
+    itemPropsSetup: UU5.PropTypes.shape({
+      info: UU5.PropTypes.node,
+      formProps: UU5.PropTypes.object,
       setup: EDITATION_COMPONENT_PROPS
     }),
-    newItemProps: PropTypes.shape({
-      formProps: PropTypes.object,
-      tagName: PropTypes.string,
-      props: PropTypes.object
+    newItemProps: UU5.PropTypes.shape({
+      formProps: UU5.PropTypes.object,
+      tagName: UU5.PropTypes.string,
+      props: UU5.PropTypes.object
     }),
-    itemsSource: PropTypes.string,
-    getItemLabel: PropTypes.func,
-    header: PropTypes.node,
-    screenSize: PropTypes.oneOf(["xs", "s", "m", "l", "xl"]),
-    shown: PropTypes.bool,
-    size: PropTypes.oneOf(["s", "m", "l", "auto", "max"]),
-    onSaveAndClose: PropTypes.func,
-    onCancel: PropTypes.func
+    itemsSource: UU5.PropTypes.string,
+    getItemLabel: UU5.PropTypes.func,
+    header: UU5.PropTypes.node,
+    screenSize: UU5.PropTypes.oneOf(["xs", "s", "m", "l", "xl"]),
+    shown: UU5.PropTypes.bool,
+    size: UU5.PropTypes.oneOf(["s", "m", "l", "auto", "max"]),
+    onSaveAndClose: UU5.PropTypes.func,
+    onCancel: UU5.PropTypes.func
   },
   //@@viewOff:propTypes
 
@@ -297,8 +294,9 @@ const ModalBody = createReactClass({
 
   //@@viewOn:reactLifeCycle
   getInitialState() {
-    this._itemsSource; // save the name of a prop from which we have taken the items
-    this._itemsInUU5String = false; // remember whether the component's items were in uu5string
+    this._itemsSource = "children"; // save the name of a prop from which we have taken the items
+    this._itemsInUU5String = true; // remember whether the component's items were in uu5string
+    this._contentChanged = false; // remember whether the content was changed and should be saved
     this._propsToReturn = []; // remember props that were edited so that we can only return those
     this._itemsPropsToReturn = {}; // remember props that were edited for each of the items so that we can only return those
     this._movingItemIndex = undefined;
@@ -337,9 +335,9 @@ const ModalBody = createReactClass({
       if (typeof items === "string") {
         items = this._stringToUu5String(items);
         items = this._Uu5StringToItems(items);
-        this._itemsInUU5String = true;
       } else {
         if (Array.isArray(items)) {
+          this._itemsInUU5String = false;
           items = items.map(item => ({
             tagName: item.type.tagName,
             props: UU5.Common.Tools.mergeDeep({}, item.props)
@@ -414,14 +412,16 @@ const ModalBody = createReactClass({
       });
     }
 
-    if (this._itemsSource) {
+    if (this._itemsSource && this._contentChanged) {
       let items;
 
-      if (this._itemsInUU5String) {
-        items = this._filterOutUnchangedItemProps(this.state.items);
-        items = this._itemsToUu5String(items);
-      } else {
-        items = this.state.items.map(item => UU5.Common.Tools.findComponent(item.tagName, item.props));
+      if (this.state.items) {
+        if (this._itemsInUU5String) {
+          items = this._filterOutUnchangedItemProps(this.state.items);
+          items = this._itemsToUu5String(items);
+        } else {
+          items = this.state.items.map(item => UU5.Common.Tools.findComponent(item.tagName, item.props));
+        }
       }
 
       if (!props) {
@@ -476,7 +476,7 @@ const ModalBody = createReactClass({
   },
 
   _getItemIndexById(items = this.state.items, id = this.state.activeItemId) {
-    return items.findIndex(item => item.id === id);
+    return items ? items.findIndex(item => item.id === id) : undefined;
   },
 
   _toggleEditMenu() {
@@ -692,6 +692,8 @@ const ModalBody = createReactClass({
   },
 
   _onCustomChangeProps(newPropValues) {
+    this._contentChanged = true;
+
     Object.keys(newPropValues).forEach(changedPropName => {
       if (this._propsToReturn.indexOf(changedPropName) === -1) {
         this._propsToReturn.push(changedPropName);
@@ -702,6 +704,8 @@ const ModalBody = createReactClass({
   },
 
   _onCustomChangeItems(editedItems) {
+    this._contentChanged = true;
+
     this.setState(state => {
       // get edited items' props and merge with state.items' props
       let newItems = editedItems.map(item => {
@@ -709,7 +713,11 @@ const ModalBody = createReactClass({
           item.id = UU5.Common.Tools.generateUUID();
         }
 
-        let matchingStateItem = state.items[this._getItemIndexById(state.items, item.id)];
+        let matchingStateItem = state.items ? state.items[this._getItemIndexById(state.items, item.id)] : null;
+
+        if (this.props.newItemProps) {
+          item.props = { ...this.props.newItemProps.props, ...item.props };
+        }
 
         if (item.props) {
           if (!this._itemsPropsToReturn[item.id]) {
@@ -737,6 +745,8 @@ const ModalBody = createReactClass({
   },
 
   _itemInsertBefore(index) {
+    this._contentChanged = true;
+
     this.setState(state => {
       let items = [...state.items];
       let newItem = this._getNewItem();
@@ -751,6 +761,8 @@ const ModalBody = createReactClass({
   },
 
   _itemInsertAfter(index) {
+    this._contentChanged = true;
+
     this.setState(state => {
       let items = [...state.items];
       let newItem = this._getNewItem();
@@ -789,6 +801,8 @@ const ModalBody = createReactClass({
 
   // Currently not used
   _itemMoveUp(index) {
+    this._contentChanged = true;
+
     if (this._canMoveItemUp(index)) {
       this.setState(state => {
         let items = [...state.items];
@@ -801,6 +815,8 @@ const ModalBody = createReactClass({
 
   // Currently not used
   _itemMoveDown(index) {
+    this._contentChanged = true;
+
     if (this._canMoveItemDown()) {
       this.setState(state => {
         let items = [...state.items];
@@ -812,6 +828,8 @@ const ModalBody = createReactClass({
   },
 
   _itemDuplicate(index) {
+    this._contentChanged = true;
+
     this.setState(state => {
       let items = [...state.items];
       let newItem = this._getNewItem();
@@ -827,6 +845,8 @@ const ModalBody = createReactClass({
   },
 
   _itemRemove(index) {
+    this._contentChanged = true;
+
     this.setState(state => {
       let items = [...state.items];
       let removedItemId = items[index].id;
@@ -834,7 +854,10 @@ const ModalBody = createReactClass({
       items.splice(index, 1);
 
       if (removedItemId === activeItemId) {
-        activeItemId = items[items.length - 1].id;
+        let newActiveItem = items[items.length - 1];
+        if (newActiveItem) {
+          activeItemId = newActiveItem.id;
+        }
       }
 
       let newState = { items, activeItemId };
@@ -850,8 +873,10 @@ const ModalBody = createReactClass({
   },
 
   _addItem() {
+    this._contentChanged = true;
+
     this.setState(state => {
-      let items = [...state.items];
+      let items = state.items ? [...state.items] : null;
 
       if (!Array.isArray(items)) {
         items = [];
@@ -1016,7 +1041,7 @@ const ModalBody = createReactClass({
 
         return {
           content: <span>{itemLabel}</span>,
-          infoIcons: this._getMenuItemIcons(this.state.itemsValidation[index])
+          infoIcons: this._getMenuItemIcons(this.state.itemsValidation ? this.state.itemsValidation[index] : null)
         };
       });
     }
@@ -1140,7 +1165,7 @@ const ModalBody = createReactClass({
       formProps = { ...formProps, ...this.props.itemPropsSetup.formProps };
       valueSource = this.state.items[this._getItemIndexById()].props;
       tagName = this.props.itemComponent.tagName;
-      validationSource = this.state.itemsValidation[this._getItemIndexById()];
+      validationSource = this.state.itemsValidation ? this.state.itemsValidation[this._getItemIndexById()] : undefined;
     } else {
       return null;
     }

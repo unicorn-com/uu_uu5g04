@@ -12,16 +12,14 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./switch.less";
 //@@viewOff:imports
 
-export const Switch = createReactClass({
+export const Switch = UU5.Common.VisualComponent.create({
+  displayName: "Switch", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, UU5.Common.ColorSchemaMixin],
   //@@viewOff:mixins
@@ -47,13 +45,13 @@ export const Switch = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    switchedOn: PropTypes.bool,
-    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
-    offIcon: PropTypes.string,
-    onIcon: PropTypes.string,
-    onChange: PropTypes.func,
-    loading: PropTypes.bool,
-    colorSchemaOff: PropTypes.string
+    switchedOn: UU5.PropTypes.bool,
+    size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
+    offIcon: UU5.PropTypes.string,
+    onIcon: UU5.PropTypes.string,
+    onChange: UU5.PropTypes.func,
+    loading: UU5.PropTypes.bool,
+    colorSchemaOff: UU5.PropTypes.string
   },
   //@@viewOff:propTypes
 
@@ -247,7 +245,7 @@ export const Switch = createReactClass({
       );
     } else {
       content = UU5.Common.Tools.wrapIfExists(
-        React.Fragment,
+        UU5.Common.Fragment,
         this._getFill(),
         <UU5.Bricks.Icon
           icon={

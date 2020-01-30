@@ -13,8 +13,6 @@
 
 //@@viewOn:imports
 import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -25,8 +23,8 @@ let ResizeObserver;
 if (window.ResizeObserver) {
   ResizeObserver = class extends React.Component {
     static propTypes = {
-      onResize: PropTypes.func.isRequired,
-      onInitialSize: PropTypes.func
+      onResize: UU5.PropTypes.func.isRequired,
+      onInitialSize: UU5.PropTypes.func
     };
     static defaultProps = {
       onResize: undefined,
@@ -64,7 +62,8 @@ if (window.ResizeObserver) {
     }
   };
 } else {
-  ResizeObserver = createReactClass({
+  ResizeObserver = UU5.Common.VisualComponent.create({
+    displayName: "ResizeObserver", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
     mixins: [UU5.Common.BaseMixin],
     //@@viewOff:mixins
@@ -87,8 +86,8 @@ if (window.ResizeObserver) {
 
     //@@viewOn:propTypes
     propTypes: {
-      onResize: PropTypes.func.isRequired,
-      onInitialSize: PropTypes.func
+      onResize: UU5.PropTypes.func.isRequired,
+      onInitialSize: UU5.PropTypes.func
     },
     //@@viewOff:propTypes
 

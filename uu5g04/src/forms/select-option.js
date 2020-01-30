@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "./forms-ns.js";
@@ -22,7 +19,8 @@ import ns from "./forms-ns.js";
 import "./select-option.less";
 //@@viewOff:imports
 
-export default createReactClass({
+export default UU5.Common.VisualComponent.create({
+  displayName: "select-option", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, UU5.Common.ContentMixin],
   //@@viewOff:mixins
@@ -41,9 +39,9 @@ export default createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    value: PropTypes.string.isRequired,
-    selectedContent: PropTypes.any,
-    onClick: PropTypes.func
+    value: UU5.PropTypes.string.isRequired,
+    selectedContent: UU5.PropTypes.any,
+    onClick: UU5.PropTypes.func
   },
   //@@viewOff:propTypes
 
@@ -93,7 +91,7 @@ export default createReactClass({
     }
 
     props.content =
-      props.content == null ? this.props.children && React.Children.toArray(this.props.children) : props.content;
+      props.content == null ? this.props.children && UU5.Common.Children.toArray(this.props.children) : props.content;
 
     return props;
   },

@@ -331,7 +331,7 @@ exports[`UU5.Bricks.Table.ColGroup docKit examples props-allowTags 1`] = `
       id="uuIDGroup"
       key="uuIDGroup"
     >
-      <MyColumnComponent
+      <UU5.Example.MyColumnComponent
         id="myIDs"
       />
       <TableCol
@@ -576,7 +576,7 @@ exports[`UU5.Bricks.Table.ColGroup props-allowTags 1`] = `
       <TableCol
         id="uuID03"
       />
-      <MyColumnComponent
+      <UU5.Example.MyColumnComponent
         id="allowID"
       />
     </table-col-group>

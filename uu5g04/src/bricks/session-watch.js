@@ -12,10 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import ReactDOM from "react-dom";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -24,7 +20,8 @@ import "./session-watch.less";
 
 const PORTAL_ID = "uu5-bricks-session-watch-portal";
 
-export const SessionWatch = createReactClass({
+export const SessionWatch = UU5.Common.VisualComponent.create({
+  displayName: "SessionWatch", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.ContentMixin, UU5.Common.IdentityMixin],
   //@@viewOff:mixins
@@ -44,7 +41,7 @@ export const SessionWatch = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    header: PropTypes.node
+    header: UU5.PropTypes.node
   },
   //@@viewOff:propTypes
 
@@ -146,7 +143,7 @@ export const SessionWatch = createReactClass({
     // NOTE Not using UU5.Bricks.ConfirmModal because we don't want to close the modal
     // when "Log in" button is clicked and currently there's no way to prevent that.
     // => create portal just like ConfirmModal does
-    return ReactDOM.createPortal(
+    return UU5.Common.Portal.create(
       <UU5.Bricks.Modal
         {...propsToPass}
         header={header != null ? header : this._renderDefaultHeader()}

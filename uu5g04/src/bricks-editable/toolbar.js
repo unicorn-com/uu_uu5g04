@@ -1,6 +1,3 @@
-import React from "react";
-import PropTypes from "prop-types";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-forms";
@@ -20,7 +17,7 @@ const DEFAULT_ITEM_PROPS = {
   colorSchema: "default"
 };
 
-export const Toolbar = createReactClass({
+export const Toolbar = UU5.Common.VisualComponent.create({
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ContentMixin],
   //@@viewOff:mixins
@@ -45,19 +42,19 @@ export const Toolbar = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    items: PropTypes.arrayOf(
-      PropTypes.oneOfType([
-        PropTypes.shape({
-          type: PropTypes.oneOfType([PropTypes.oneOf(["button", "dropdown"]), PropTypes.func]),
-          props: PropTypes.oneOfType([PropTypes.func, PropTypes.object])
+    items: UU5.PropTypes.arrayOf(
+      UU5.PropTypes.oneOfType([
+        UU5.PropTypes.shape({
+          type: UU5.PropTypes.oneOfType([UU5.PropTypes.oneOf(["button", "dropdown"]), UU5.PropTypes.func]),
+          props: UU5.PropTypes.oneOfType([UU5.PropTypes.func, UU5.PropTypes.object])
         }),
-        PropTypes.element
+        UU5.PropTypes.element
       ])
     ),
-    settingsItems: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object, PropTypes.element])),
-    moreSettings: PropTypes.func,
-    onMoreSettingsClick: PropTypes.func,
-    onClose: PropTypes.func
+    settingsItems: UU5.PropTypes.arrayOf(UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.element])),
+    moreSettings: UU5.PropTypes.func,
+    onMoreSettingsClick: UU5.PropTypes.func,
+    onClose: UU5.PropTypes.func
   },
   //@@viewOff:propTypes
 

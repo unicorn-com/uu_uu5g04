@@ -1,3 +1,4 @@
+import UU5 from "uu5g04";
 /**
  * Copyright (C) 2019 Unicorn a.s.
  *
@@ -11,9 +12,6 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
-import PropTypes from "prop-types";
-
 import "./group-mixin.less";
 
 export const GroupMixin = {
@@ -25,30 +23,30 @@ export const GroupMixin = {
 
   //@@viewOn:propTypes
   propTypes: {
-    value: PropTypes.arrayOf(
-      PropTypes.shape({
-        label: PropTypes.any.isRequired,
-        name: PropTypes.string,
-        value: PropTypes.bool,
-        disabled: PropTypes.bool,
-        hidden: PropTypes.bool
+    value: UU5.PropTypes.arrayOf(
+      UU5.PropTypes.shape({
+        label: UU5.PropTypes.any.isRequired,
+        name: UU5.PropTypes.string,
+        value: UU5.PropTypes.bool,
+        disabled: UU5.PropTypes.bool,
+        hidden: UU5.PropTypes.bool
       })
     ),
-    required: PropTypes.bool,
-    requiredMessage: PropTypes.any,
-    onIcon: PropTypes.string,
-    offIcon: PropTypes.string,
-    labelPosition: PropTypes.oneOf(["left", "right"]),
-    inline: PropTypes.bool,
-    colWidth: PropTypes.oneOfType([
-      PropTypes.shape({
-        xs: PropTypes.number,
-        s: PropTypes.number,
-        m: PropTypes.number,
-        l: PropTypes.number,
-        xl: PropTypes.number
+    required: UU5.PropTypes.bool,
+    requiredMessage: UU5.PropTypes.any,
+    onIcon: UU5.PropTypes.string,
+    offIcon: UU5.PropTypes.string,
+    labelPosition: UU5.PropTypes.oneOf(["left", "right"]),
+    inline: UU5.PropTypes.bool,
+    colWidth: UU5.PropTypes.oneOfType([
+      UU5.PropTypes.shape({
+        xs: UU5.PropTypes.number,
+        s: UU5.PropTypes.number,
+        m: UU5.PropTypes.number,
+        l: UU5.PropTypes.number,
+        xl: UU5.PropTypes.number
       }),
-      PropTypes.string
+      UU5.PropTypes.string
     ])
   },
   //@@viewOff:propTypes

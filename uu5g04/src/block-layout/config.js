@@ -1,3 +1,4 @@
+import UU5 from "uu5g04";
 /**
  * Copyright (C) 2019 Unicorn a.s.
  *

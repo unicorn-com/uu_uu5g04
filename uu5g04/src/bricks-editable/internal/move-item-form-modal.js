@@ -1,9 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "../bricks-editable-ns.js";
 
-export const MoveItemFormModal = React.forwardRef((props, ref) => {
+export const MoveItemFormModal = UU5.Common.Reference.forward((props, ref) => {
   let { onSave, onCancel, maxPosition, currentPosition, ...modalProps } = props;
 
   return (
@@ -21,11 +19,11 @@ MoveItemFormModal.displayName = ns.name("MoveItemFormModal");
 MoveItemFormModal.tagName = ns.name("MoveItemFormModal");
 MoveItemFormModal.isStateless = true;
 MoveItemFormModal.propTypes = {
-  onClose: PropTypes.func,
-  onSave: PropTypes.func,
-  onCancel: PropTypes.func,
-  currentPosition: PropTypes.number,
-  maxPosition: PropTypes.number
+  onClose: UU5.PropTypes.func,
+  onSave: UU5.PropTypes.func,
+  onCancel: UU5.PropTypes.func,
+  currentPosition: UU5.PropTypes.number,
+  maxPosition: UU5.PropTypes.number
 };
 MoveItemFormModal.defaultProps = {
   onClose: undefined,

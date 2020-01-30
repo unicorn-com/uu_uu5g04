@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import YoutubeUrlBuilder from "./models/youtube-url-builder";
@@ -22,7 +19,8 @@ import YoutubeUrlBuilder from "./models/youtube-url-builder";
 import "./youtube-video.less";
 //@@viewOff:imports
 
-export const YoutubeVideo = createReactClass({
+export const YoutubeVideo = UU5.Common.VisualComponent.create({
+  displayName: "YoutubeVideo", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, UU5.Common.NestingLevelMixin],
   //@@viewOff:mixins
@@ -40,15 +38,15 @@ export const YoutubeVideo = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    autoplay: PropTypes.bool,
-    disableControls: PropTypes.bool,
-    loop: PropTypes.bool,
-    disableInfo: PropTypes.bool,
-    src: PropTypes.string.isRequired,
-    disableRelatedVideos: PropTypes.bool,
-    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
-    disableFullscreen: PropTypes.bool,
-    muted: PropTypes.bool
+    autoplay: UU5.PropTypes.bool,
+    disableControls: UU5.PropTypes.bool,
+    loop: UU5.PropTypes.bool,
+    disableInfo: UU5.PropTypes.bool,
+    src: UU5.PropTypes.string.isRequired,
+    disableRelatedVideos: UU5.PropTypes.bool,
+    size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
+    disableFullscreen: UU5.PropTypes.bool,
+    muted: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 

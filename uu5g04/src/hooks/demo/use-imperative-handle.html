@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2,minimum-scale=0.5">
+  <title>useImperativeHandle Demo</title>
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.6.1/prop-types.js"
+      }
+    });
+  </script>
+
+  <style>
+    /*just for demo*/
+    button {
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+<div id="uu5">Loading...</div>
+
+<script src="https://cdn.plus4u.net/uu-app-templateg01/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import React, { useState, useRef, useImperativeHandle } from "react";
+  import ReactDOM from "react-dom";
+
+  //@@viewOn:example
+  function CounterRef(props, ref) {
+    const [count, setCount] = useState(0);
+
+    // interface
+    useImperativeHandle(ref, () => ({
+      increase: () => {
+        setCount(prevCount => prevCount + 1);
+      },
+      decrease: () => {
+        setCount(prevCount => prevCount - 1);
+      }
+    }));
+
+    return (
+      <span>{count}</span>
+    )
+  }
+
+  const Counter = React.forwardRef(CounterRef);
+
+  //@@viewOff:example
+
+  function Demo() {
+    const counterRef = useRef();
+
+    return (
+      <div>
+        {/*@@viewOn:example*/}
+        <button onClick={() => counterRef.current.increase()}>
+          Increase
+        </button>
+        <Counter ref={counterRef} />
+        {/*@@viewOff:example*/}
+      </div>
+    )
+  }
+
+  ReactDOM.render(<Demo />, document.getElementById('uu5'));
+</script>
+</body>
+</html>

@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 const ClassNames = UU5.Common.ClassNames;
@@ -26,7 +23,8 @@ import DropdownItem from "./dropdown-item.js";
 import "./dropdown.less";
 //@@viewOff:imports
 
-export const Dropdown = createReactClass({
+export const Dropdown = UU5.Common.VisualComponent.create({
+  displayName: "Dropdown", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -76,38 +74,38 @@ export const Dropdown = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    label: PropTypes.any, // content
-    size: PropTypes.string,
-    onClick: PropTypes.func,
-    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline", "link"]),
+    label: UU5.PropTypes.any, // content
+    size: UU5.PropTypes.string,
+    onClick: UU5.PropTypes.func,
+    bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline", "link"]),
 
     // icon props
-    iconOpen: PropTypes.string,
-    iconClosed: PropTypes.string,
-    iconHidden: PropTypes.bool,
+    iconOpen: UU5.PropTypes.string,
+    iconClosed: UU5.PropTypes.string,
+    iconHidden: UU5.PropTypes.bool,
 
     // dropdown props
-    items: PropTypes.arrayOf(PropTypes.object),
-    pullRight: PropTypes.bool,
-    dropup: PropTypes.bool,
-    split: PropTypes.bool,
+    items: UU5.PropTypes.arrayOf(UU5.PropTypes.object),
+    pullRight: UU5.PropTypes.bool,
+    dropup: UU5.PropTypes.bool,
+    split: UU5.PropTypes.bool,
 
     // link child props
-    smoothScroll: PropTypes.number,
-    offset: PropTypes.number,
+    smoothScroll: UU5.PropTypes.number,
+    offset: UU5.PropTypes.number,
 
-    closedOnLeave: PropTypes.bool,
-    openOnHover: PropTypes.bool,
-    allowTags: PropTypes.arrayOf(PropTypes.string),
-    disableBackdrop: PropTypes.bool,
-    menuClassName: PropTypes.string,
-    borderRadius: PropTypes.string,
-    elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-    elevationHover: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-    buttonProps: PropTypes.object,
-    splitButtonProps: PropTypes.object,
-    baseline: PropTypes.bool,
-    fitMenuToViewport: PropTypes.bool
+    closedOnLeave: UU5.PropTypes.bool,
+    openOnHover: UU5.PropTypes.bool,
+    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
+    disableBackdrop: UU5.PropTypes.bool,
+    menuClassName: UU5.PropTypes.string,
+    borderRadius: UU5.PropTypes.string,
+    elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+    elevationHover: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+    buttonProps: UU5.PropTypes.object,
+    splitButtonProps: UU5.PropTypes.object,
+    baseline: UU5.PropTypes.bool,
+    fitMenuToViewport: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 

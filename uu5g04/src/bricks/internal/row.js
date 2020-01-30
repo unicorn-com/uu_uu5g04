@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import PropTypes from "prop-types";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 
@@ -104,14 +101,17 @@ const editableItemPropsSetup = {
 };
 
 const newEditableItem = {
-  tagName: "UU5.Bricks.Column"
+  tagName: "UU5.Bricks.Column",
+  props: {
+    contentEditable: true
+  }
 };
 
 function getEditableItemLabel(item, itemIndex) {
   return `Column ${itemIndex + 1}`;
 }
 
-export const Row = createReactClass({
+export const Row = UU5.Common.VisualComponent.create({
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin],
   //@@viewOff:mixins
@@ -168,7 +168,7 @@ export const Row = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    component: PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired
   },
   //@@viewOff:propTypes
 
@@ -288,7 +288,7 @@ export const Row = createReactClass({
       content: `${this.getLsiValue("level")} ${level}`,
       value: `${level}`
     }));
-    levelItems.unshift({ content: this.getLsiComponent("defaultLevel"), value: "" });
+    levelItems.unshift({ content: this.getLsiComponent("defaultLevel"), value: null });
 
     return [
       {

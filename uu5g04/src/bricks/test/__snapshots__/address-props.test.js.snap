@@ -4,8 +4,6 @@ exports[`UU5.Bricks.Address UU5.Bricks.Address docKit example 1`] = `
 <address
   className="uu5-bricks-address"
   id="uuID"
-  style={Object {}}
-  title={null}
 >
   <UU5.Common.TextCorrectorContextConsumer
     key="0"
@@ -18,8 +16,6 @@ exports[`UU5.Bricks.Address checkGrammar=false 1`] = `
 <address
   className="uu5-bricks-address"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -27,8 +23,6 @@ exports[`UU5.Bricks.Address checkGrammar=true 1`] = `
 <address
   className="uu5-bricks-address"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -36,8 +30,6 @@ exports[`UU5.Bricks.Address checkHighlight=false 1`] = `
 <address
   className="uu5-bricks-address"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -45,8 +37,6 @@ exports[`UU5.Bricks.Address checkHighlight=true 1`] = `
 <address
   className="uu5-bricks-address"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -54,8 +44,6 @@ exports[`UU5.Bricks.Address checkSpaces=false 1`] = `
 <address
   className="uu5-bricks-address"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -63,8 +51,6 @@ exports[`UU5.Bricks.Address checkSpaces=true 1`] = `
 <address
   className="uu5-bricks-address"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -72,8 +58,6 @@ exports[`UU5.Bricks.Address className="my-classname" 1`] = `
 <address
   className="uu5-bricks-address my-classname"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -81,8 +65,6 @@ exports[`UU5.Bricks.Address content="This is Content from ContentMixin" 1`] = `
 <address
   className="uu5-bricks-address"
   id="uuID"
-  style={Object {}}
-  title={null}
 >
   <UU5.Common.TextCorrectorContextConsumer
     key="0"
@@ -95,8 +77,6 @@ exports[`UU5.Bricks.Address content=12345 1`] = `
 <address
   className="uu5-bricks-address"
   id="uuID"
-  style={Object {}}
-  title={null}
 >
   12345
 </address>
@@ -106,8 +86,6 @@ exports[`UU5.Bricks.Address controlled=false 1`] = `
 <address
   className="uu5-bricks-address"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -115,8 +93,6 @@ exports[`UU5.Bricks.Address controlled=true 1`] = `
 <address
   className="uu5-bricks-address"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -124,40 +100,29 @@ exports[`UU5.Bricks.Address default props 1`] = `
 <address
   className="uu5-bricks-address"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
 exports[`UU5.Bricks.Address disabled=false 1`] = `
 <address
   className="uu5-bricks-address"
+  disabled={false}
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
 exports[`UU5.Bricks.Address disabled=true 1`] = `
 <address
-  className="uu5-bricks-address uu5-common-disabled"
+  className="uu5-bricks-address"
+  disabled={true}
   id="uuID"
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</address>
+/>
 `;
 
 exports[`UU5.Bricks.Address dynamic=false 1`] = `
 <address
   className="uu5-bricks-address"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -165,26 +130,22 @@ exports[`UU5.Bricks.Address dynamic=true 1`] = `
 <address
   className="uu5-bricks-address"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
 exports[`UU5.Bricks.Address hidden=false 1`] = `
 <address
   className="uu5-bricks-address"
+  hidden={false}
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
 exports[`UU5.Bricks.Address hidden=true 1`] = `
 <address
-  className="uu5-bricks-address uu5-common-hidden"
+  className="uu5-bricks-address"
+  hidden={true}
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -192,8 +153,6 @@ exports[`UU5.Bricks.Address id="myId" 1`] = `
 <address
   className="uu5-bricks-address"
   id="myId"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -201,8 +160,6 @@ exports[`UU5.Bricks.Address ignoreHTML=false 1`] = `
 <address
   className="uu5-bricks-address"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -210,8 +167,6 @@ exports[`UU5.Bricks.Address ignoreHTML=true 1`] = `
 <address
   className="uu5-bricks-address"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -219,8 +174,6 @@ exports[`UU5.Bricks.Address mainAttrs=undefined 1`] = `
 <address
   className="uu5-bricks-address"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -228,9 +181,6 @@ exports[`UU5.Bricks.Address name="myName" 1`] = `
 <address
   className="uu5-bricks-address"
   id="uuID"
-  name="myName"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -238,8 +188,6 @@ exports[`UU5.Bricks.Address noIndex=false 1`] = `
 <address
   className="uu5-bricks-address"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -247,8 +195,6 @@ exports[`UU5.Bricks.Address noIndex=true 1`] = `
 <address
   className="uu5-bricks-address uu5-noindex"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -256,17 +202,13 @@ exports[`UU5.Bricks.Address selected=false 1`] = `
 <address
   className="uu5-bricks-address"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
 exports[`UU5.Bricks.Address selected=true 1`] = `
 <address
-  className="uu5-bricks-address uu5-common-selected"
+  className="uu5-bricks-address"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -280,7 +222,6 @@ exports[`UU5.Bricks.Address style="padding:8px; borderRadius: 2px" 1`] = `
       "padding": "8px",
     }
   }
-  title={null}
 />
 `;
 
@@ -294,7 +235,6 @@ exports[`UU5.Bricks.Address style={"backgroundColor":"red","color":"blue"} 1`] =
       "color": "blue",
     }
   }
-  title={null}
 />
 `;
 
@@ -302,8 +242,6 @@ exports[`UU5.Bricks.Address textCorrector=false 1`] = `
 <address
   className="uu5-bricks-address"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -311,8 +249,6 @@ exports[`UU5.Bricks.Address textCorrector=true 1`] = `
 <address
   className="uu5-bricks-address"
   id="uuID"
-  style={Object {}}
-  title={null}
 />
 `;
 
@@ -320,7 +256,5 @@ exports[`UU5.Bricks.Address tooltip="My Tooltip" 1`] = `
 <address
   className="uu5-bricks-address"
   id="uuID"
-  style={Object {}}
-  title="My Tooltip"
 />
 `;

@@ -1,10 +1,10 @@
 {
   "name": "uu5g04",
-  "version": "1.26.0",
+  "version": "1.27.5",
   "description": "",
   "license": "UAF",
   "namespace": "UU5",
-  "spec": "uu5-lib; uu_appg01@1.1.1",
+  "spec": "uu5-lib; uu_appg01@1.3.0",
   "dependencies": {
     "browser-update": "3.1.13",
     "core-js": "^2.0.0",
@@ -17,6 +17,7 @@
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "regenerator-runtime": "0.13.1",
+    "resize-observer-polyfill": "1.5.1",
     "whatwg-fetch": "3.0.0"
   },
   "uuBuildSettings": {
@@ -69,6 +70,13 @@
         ],
         "libraryGlobalVariable": "UU5.BlockLayout",
         "outputFile": "uu5g04-block-layout.js"
+      },
+      {
+        "entryPoints": [
+          "hooks/hooks-build.js"
+        ],
+        "libraryGlobalVariable": "UU5.Hooks",
+        "outputFile": "uu5g04-hooks.js"
       },
       {
         "entryPoints": [
@@ -378,12 +386,17 @@
       "uu5g04-bricks-editable": {
         "globalVariable": "UU5.BricksEditable",
         "uri": ""
+      },
+      "uu5g04-hooks": {
+        "globalVariable": "",
+        "uri": ""
       }
     },
     "nodeBuildIncludes": "/test-tmp/**/*.js"
   },
   "devDependencies": {
     "babel-plugin-emotion": "^9.2.8",
+    "eslint-plugin-react-hooks": "2.3.0",
     "react-dnd": "7.0.2",
     "react-dnd-html5-backend": "7.0.2",
     "systemjs": "0.19.47",
@@ -392,7 +405,7 @@
     "write-file-atomic": "2.3.0"
   },
   "engines": {
-    "node": ">=8.9.0"
+    "node": ">=10.16.0"
   },
   "scripts": {
     "clean": "uu_appg01_devkit clean",

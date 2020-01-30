@@ -14,7 +14,7 @@ exports[`UU5.Bricks.Swiper AllowMenuTags + AllowBodyTags example 1`] = `
     id="uuID4"
     key="uuID4"
   >
-    <MyAllowTagsComponents
+    <UU5.Example.MyCompButton
       content="allow tags component"
       id="allowID"
     />
@@ -23,7 +23,7 @@ exports[`UU5.Bricks.Swiper AllowMenuTags + AllowBodyTags example 1`] = `
     id="uuID6"
     key="uuID6"
   >
-    <MyAllowTagsComponents
+    <UU5.Example.MyCompButton
       content="allow tags component2"
       id="allowID2"
     />

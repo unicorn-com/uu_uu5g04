@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -29,7 +26,8 @@ let editationLazyLoaded = false;
 import "./block.less";
 //@@viewOff:imports
 
-export const Block = createReactClass({
+export const Block = UU5.Common.VisualComponent.create({
+  displayName: "Block", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -59,7 +57,7 @@ export const Block = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    background: PropTypes.bool
+    background: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 

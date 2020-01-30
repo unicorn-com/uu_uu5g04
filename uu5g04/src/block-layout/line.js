@@ -12,13 +12,12 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import { TAG, css } from "./config.js";
 //@@viewOff:imports
 
-export const Line = createReactClass({
+export const Line = UU5.Common.VisualComponent.create({
+  displayName: "Line", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,

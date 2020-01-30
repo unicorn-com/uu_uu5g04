@@ -19,6 +19,28 @@ import { lazy as _lazy } from "./suspense.js";
 
 export class Component {
   static create(componentDescriptor) {
+    let { defaultProps, displayName } = componentDescriptor;
+
+    // replace defaultProps with getDefaultProps() method as required by createReactClass
+    if (defaultProps) {
+      if (process.env.NODE_ENV !== "production" && componentDescriptor.getDefaultProps) {
+        let name = (componentDescriptor.statics || {}).tagName || displayName;
+        console.warn(
+          `Component ${name} is specified with 'defaultProps' as well as with 'getDefaultProps'. Only 'defaultProps' will be used, you should remove 'getDefaultProps'.`
+        );
+      }
+      delete componentDescriptor.defaultProps;
+      componentDescriptor.getDefaultProps = function() {
+        return defaultProps;
+      };
+    }
+
+    // add tagName so that ContentMixin still considers this a uu5 component
+    if (displayName && (!componentDescriptor.statics || !componentDescriptor.statics.tagName)) {
+      componentDescriptor.statics || (componentDescriptor.statics = {});
+      componentDescriptor.statics.tagName = displayName;
+    }
+
     let result = createReactClass(componentDescriptor);
     if (result.tagName && !result.displayName) {
       result.displayName = result.tagName;

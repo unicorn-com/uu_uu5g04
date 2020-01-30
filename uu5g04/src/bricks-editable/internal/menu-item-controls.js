@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import PropTypes from "prop-types";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 
@@ -26,7 +23,7 @@ function isMobileVersion(screenSize) {
   return ["xs", "s", "m"].indexOf(screenSize) > -1 || UU5.Common.Tools.isMobileOrTablet;
 }
 
-const MenuItemControls = createReactClass({
+const MenuItemControls = UU5.Common.VisualComponent.create({
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ColorSchemaMixin],
   //@@viewOff:mixins
@@ -77,9 +74,9 @@ const MenuItemControls = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    items: PropTypes.array,
-    screenSize: PropTypes.oneOf(["xs", "s", "m", "l", "xl"]),
-    isActive: PropTypes.bool
+    items: UU5.PropTypes.array,
+    screenSize: UU5.PropTypes.oneOf(["xs", "s", "m", "l", "xl"]),
+    isActive: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 

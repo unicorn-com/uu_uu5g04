@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -31,7 +28,8 @@ let editationLazyLoaded = false;
 import "./blockquote.less";
 //@@viewOff:imports
 
-export const Blockquote = createReactClass({
+export const Blockquote = UU5.Common.VisualComponent.create({
+  displayName: "Blockquote", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -63,11 +61,11 @@ export const Blockquote = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    background: PropTypes.bool,
-    alignment: PropTypes.oneOf(["left", "right"]),
-    footer: PropTypes.any,
-    footerAlignment: PropTypes.oneOf(["left", "right"]),
-    noSpacing: PropTypes.bool
+    background: UU5.PropTypes.bool,
+    alignment: UU5.PropTypes.oneOf(["left", "right"]),
+    footer: UU5.PropTypes.any,
+    footerAlignment: UU5.PropTypes.oneOf(["left", "right"]),
+    noSpacing: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 

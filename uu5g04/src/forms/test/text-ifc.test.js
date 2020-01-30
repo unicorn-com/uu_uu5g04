@@ -12,16 +12,14 @@
  */
 
 //@@viewOn:imports
-import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-forms";
-import createReactClass from "create-react-class";
 //@@viewOff:imports
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
-const MyTextComponent = createReactClass({
+const MyTextComponent = UU5.Common.VisualComponent.create({
   mixins: [UU5.Common.BaseMixin],
 
   render() {

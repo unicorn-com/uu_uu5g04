@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import PropTypes from "prop-types";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 
@@ -29,7 +26,7 @@ const ITEM_COLOR_SCHEMA_ACTIVE = "blue-rich";
 const CONTROLS_COLOR_SCHEMA = "grey-rich";
 const CONTROLS_COLOR_SCHEMA_ACTIVE = "blue-rich";
 
-const Menu = createReactClass({
+const Menu = UU5.Common.VisualComponent.create({
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin],
   //@@viewOff:mixins
@@ -74,12 +71,12 @@ const Menu = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    items: PropTypes.array,
-    activeItemIndex: PropTypes.number,
-    controls: PropTypes.array,
-    withDnD: PropTypes.bool,
-    onItemClick: PropTypes.func,
-    onAddItem: PropTypes.func
+    items: UU5.PropTypes.array,
+    activeItemIndex: UU5.PropTypes.number,
+    controls: UU5.PropTypes.array,
+    withDnD: UU5.PropTypes.bool,
+    onItemClick: UU5.PropTypes.func,
+    onAddItem: UU5.PropTypes.func
   },
   //@@viewOff:propTypes
 

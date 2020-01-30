@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -29,7 +26,8 @@ const MOUNT_CONTENT_VALUES = {
   onEachExpand: "onEachExpand"
 };
 
-export const Accordion = createReactClass({
+export const Accordion = UU5.Common.VisualComponent.create({
+  displayName: "Accordion", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -64,17 +62,17 @@ export const Accordion = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    panels: PropTypes.arrayOf(PropTypes.object),
-    onClickNotCollapseOthers: PropTypes.bool,
-    iconExpanded: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-    iconCollapsed: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-    onClick: PropTypes.func,
-    allowTags: PropTypes.arrayOf(PropTypes.string),
-    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
-    iconAlign: PropTypes.oneOf(["right", "after", "left"]),
-    openClick: PropTypes.oneOf(["header", "icon", "none"]),
-    preRender: PropTypes.bool,
-    mountPanelContent: PropTypes.oneOf([
+    panels: UU5.PropTypes.arrayOf(UU5.PropTypes.object),
+    onClickNotCollapseOthers: UU5.PropTypes.bool,
+    iconExpanded: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.object]),
+    iconCollapsed: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.object]),
+    onClick: UU5.PropTypes.func,
+    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
+    size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
+    iconAlign: UU5.PropTypes.oneOf(["right", "after", "left"]),
+    openClick: UU5.PropTypes.oneOf(["header", "icon", "none"]),
+    preRender: UU5.PropTypes.bool,
+    mountPanelContent: UU5.PropTypes.oneOf([
       MOUNT_CONTENT_VALUES.onEachExpand,
       MOUNT_CONTENT_VALUES.onFirstExpand,
       MOUNT_CONTENT_VALUES.onFirstRender

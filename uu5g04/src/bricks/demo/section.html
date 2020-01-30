@@ -32,46 +32,91 @@
           "uu5g04-bricks-editable": "/uu5g04-bricks-editable.js"
         }
       });
-
-      // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
-      //   "uuoidc.redirectUri":"callbacks/login-callback.html"
-      // }}));
     </script>
 
   </head>
   <body>
     <div id="renderHere"></div>
 
-    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
-    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <!--<script src="https://cdn.plus4u.net/uu-app-templateg01/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-app-templateg01/1.0.0/in-browser-transpilation.js"></script>
     <script type="text/babel">
-      import React from "react";
-      import createReactClass from "create-react-class";
-      import ReactDOM from "react-dom";
       import UU5 from "uu5g04";
       import "uu5g04-bricks";
 
-      const Page = createReactClass({
+      const Page = UU5.Common.VisualComponent.create({
         render() {
+          let header = "header";
           return (
-            <UU5.Bricks.Section level={1}>
-              <UU5.Bricks.Button onClick={() => this._section.startEditation()} />
-              <UU5.Bricks.Section name={"test"} ref_={s => this._section = s}>
-                <UU5.Bricks.Section header={"aho"}>
-                Robust and reliable hardware and software infrastructure, whether your own or in the cloud, is
-                essential for the operation of information systems and all other application software equipment. Also
-                of importance is the management of infrastructure security linked with to access of users to the
-                company’s ICT environment and data. The fulfilment of the company’s business plan depends on choosing
-                the right components for ICT infrastructure, deploying them quickly with optimum settings, and
-                ensuring secure and continued operation.
+            <UU5.Bricks.Container header="0. Container">
+              <UU5.Bricks.Section level={1}>
+                <UU5.Bricks.Button onClick={() => this._section.startEditation()} />
+                <UU5.Bricks.Section name={"test"} ref_={s => this._section = s}>
+                  <UU5.Bricks.Section header={"aho"}>
+                  Robust and reliable hardware and software infrastructure, whether your own or in the cloud, is
+                  essential for the operation of information systems and all other application software equipment. Also
+                  of importance is the management of infrastructure security linked with to access of users to the
+                  company’s ICT environment and data. The fulfilment of the company’s business plan depends on choosing
+                  the right components for ICT infrastructure, deploying them quickly with optimum settings, and
+                  ensuring secure and continued operation.
+                  </UU5.Bricks.Section>
                 </UU5.Bricks.Section>
               </UU5.Bricks.Section>
-            </UU5.Bricks.Section>
+
+              <UU5.Bricks.Header  content="Header with default props"/>
+              <UU5.Bricks.Section header={{element: <UU5.Bricks.Header  content="Header with default props inside section"/>}}>
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Line />
+
+              <UU5.Bricks.Row>
+                <UU5.Bricks.Column colWidth="m-4">
+                  Sections only.<br/>
+                  {"\xa0"}
+                  <UU5.Bricks.Section header={"1. " + header} underline>
+                    <UU5.Bricks.Section header={"2. " + header} underline>
+                      <UU5.Bricks.Section header={"3. " + header} underline>
+                        <UU5.Bricks.Section header={"4. " + header} underline>
+                          <UU5.Bricks.Section header={"5. " + header} underline>
+                            <UU5.Bricks.Section header={"6. " + header} underline>
+                            </UU5.Bricks.Section>
+                          </UU5.Bricks.Section>
+                        </UU5.Bricks.Section>
+                      </UU5.Bricks.Section>
+                    </UU5.Bricks.Section>
+                  </UU5.Bricks.Section>
+                </UU5.Bricks.Column>
+                <UU5.Bricks.Column colWidth="m-4">
+                  Sections and Levels.<br/>
+                  Numbers and odd header styles should match with previous column. 
+                  <UU5.Bricks.Section header={"1. " + header} underline>
+                    <UU5.Common.Level>{({level}) => 
+                      <div>
+                        {level + ". " + header + " (UU5.Common.Level)"}
+                        <UU5.Bricks.Section header={"3. " + header} underline>
+                          <UU5.Common.Level>{({level}) => 
+                            <div>
+                              {level + ". " + header + " (UU5.Common.Level)"}
+                              <UU5.Bricks.Section header={"5. " + header} underline>
+                                <UU5.Common.Level>{({level}) => 
+                                  <div>
+                                    {level + ". " + header + " (UU5.Common.Level)"}
+                                  </div>
+                                }</UU5.Common.Level>
+                              </UU5.Bricks.Section>
+                            </div>
+                          }</UU5.Common.Level>
+                        </UU5.Bricks.Section>
+                      </div>
+                    }</UU5.Common.Level>
+                  </UU5.Bricks.Section>
+                </UU5.Bricks.Column>
+              </UU5.Bricks.Row>
+            </UU5.Bricks.Container>
           );
         }
       });
 
-      ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+      UU5.Common.DOM.render(UU5.Common.Element.create(Page, null), document.getElementById('renderHere'));
     </script>
   </body>
 </html>

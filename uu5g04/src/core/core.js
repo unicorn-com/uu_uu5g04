@@ -62,6 +62,12 @@ import * as Utils from "./utils/utils.js";
 export { Utils };
 UU5.Utils = Utils;
 
+export const createVisualComponent = Common.VisualComponent.create;
+UU5.createVisualComponent = createVisualComponent;
+
+export const createComponent = Common.Component.create;
+UU5.createComponent = createComponent;
+
 // workaround so that on-demand loaded UU5 modules can insert their own components
 // into UU5 exports; i.e. if an application uses following:
 //  import * as UU5 from "uu5g04";  // UU5 is a local variable containing new (separate) instance of exports

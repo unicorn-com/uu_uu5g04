@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -29,7 +26,8 @@ import Modal from "./modal.js";
 import "./file-viewer.less";
 //@@viewOff:imports
 
-export const FileViewer = createReactClass({
+export const FileViewer = UU5.Common.VisualComponent.create({
+  displayName: "FileViewer", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.NestingLevelMixin, UU5.Common.PureRenderMixin],
   //@@viewOff:mixins
@@ -56,13 +54,13 @@ export const FileViewer = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    src: PropTypes.string,
-    parameters: PropTypes.object,
-    numbered: PropTypes.bool,
-    trimmed: PropTypes.bool,
-    blockKey: PropTypes.string,
-    blockStart: PropTypes.string,
-    blockEnd: PropTypes.string
+    src: UU5.PropTypes.string,
+    parameters: UU5.PropTypes.object,
+    numbered: UU5.PropTypes.bool,
+    trimmed: UU5.PropTypes.bool,
+    blockKey: UU5.PropTypes.string,
+    blockStart: UU5.PropTypes.string,
+    blockEnd: UU5.PropTypes.string
   },
   //@@viewOff:propTypes
 

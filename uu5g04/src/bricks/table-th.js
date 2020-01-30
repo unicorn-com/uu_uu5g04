@@ -12,16 +12,14 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./table-th.less";
 //@@viewOff:imports
 
-export default createReactClass({
+export default UU5.Common.VisualComponent.create({
+  displayName: "table-th", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -55,8 +53,8 @@ export default createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    colSpan: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    rowSpan: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+    colSpan: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
+    rowSpan: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string])
   },
 
   getDefaultProps: function() {

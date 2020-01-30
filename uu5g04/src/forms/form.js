@@ -12,8 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
 import "uu5g04-bricks";
@@ -22,7 +20,9 @@ import FormMixin from "./mixins/form-mixin.js";
 import "./form.less";
 //@@viewOff:imports
 
-export const Form = createReactClass({
+export const Form = UU5.Common.VisualComponent.create({
+  displayName: "Form", // for backward compatibility (test snapshots)
+
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,

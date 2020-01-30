@@ -13,6 +13,8 @@
 
 import React from "react";
 import PropTypes from "prop-types";
+import Level from "./level.js";
+import { preprocessors, postprocessors } from "./visual-component-processors.js";
 
 export const LevelMixin = {
   //@@viewOn:statics
@@ -82,22 +84,25 @@ export const LevelMixin = {
   },
 
   shouldIncreaseLevel: function(parentLevelComponent, props = this.props) {
-    return !parentLevelComponent || (parentLevelComponent && parentLevelComponent.getOpt("dummyLevel"))
-      ? false
-      : this.getOpt("increaseLevel") ||
-          props.increaseLevel ||
-          (this.getHeader && this.getHeader(props)) ||
-          (this.getFooter && this.getFooter(props));
+    return this._shouldIncreaseLevel(parentLevelComponent, props, false);
   },
 
   checkLevel: function(props = this.props) {
+    let { _parentLevelComponent, _parentLevel, _isDummyLevel } = props;
     var level = typeof props.level === "string" ? parseInt(props.level) : props.level;
     var maxLevel = this.getDefault("maxLevel", "UU5.Common.LevelMixin");
-    var parentLevelComponent = this.getParentByType("hasUU5CommonLevelMixin");
-    var calculatedLevel = parentLevelComponent
-      ? parentLevelComponent.getLevel()
-      : this.getDefault("minLevel", "UU5.Common.LevelMixin");
-    this.shouldIncreaseLevel(parentLevelComponent, props) && calculatedLevel++;
+    var parentLevelComponent =
+      _parentLevelComponent !== undefined ? _parentLevelComponent : this.getParentByType("hasUU5CommonLevelMixin");
+    let isFromConsumer = _parentLevelComponent === null && _parentLevel != null; // for integration with UU5.Common.Level.Consumer & Provider
+    var calculatedLevel =
+      _parentLevel != null
+        ? _parentLevel
+        : parentLevelComponent
+        ? parentLevelComponent.getLevel()
+        : this.getDefault("minLevel", "UU5.Common.LevelMixin");
+    if (!(isFromConsumer && _isDummyLevel)) {
+      if (this._shouldIncreaseLevel(parentLevelComponent, props, isFromConsumer)) calculatedLevel++;
+    }
     level = typeof level === "number" ? level : calculatedLevel;
 
     //check level hierarchy
@@ -128,14 +133,106 @@ export const LevelMixin = {
     }
 
     return level;
-  }
+  },
   //@@viewOff:interface
 
   //@@viewOn:overriding
   //@@viewOff:overriding
 
   //@@viewOn:private
+  _shouldIncreaseLevel(parentLevelComponent, props, ignoreParent) {
+    return !ignoreParent &&
+      (!parentLevelComponent || (parentLevelComponent && parentLevelComponent.getOpt("dummyLevel")))
+      ? false
+      : this.getOpt("increaseLevel") ||
+          props.increaseLevel ||
+          (this.getHeader && this.getHeader(props)) ||
+          (this.getFooter && this.getFooter(props));
+  },
+
+  _isUsingDummyLevel() {
+    return this.getOpt("dummyLevel");
+  }
   //@@viewOff:private
 };
+
+export const MIXINS_WITH_LEVEL_MIXIN = new Set([LevelMixin]);
+
+preprocessors.push(function LevelMixinVCPreprocessor(componentDescriptor, ctx) {
+  let { mixins } = componentDescriptor;
+  if (Array.isArray(mixins)) {
+    if (
+      process.env.NODE_ENV !== "test" && // disabled for tests because shallow rendering of components with LevelMixin would be useless (only wrapper with Level.Consumer would be visible)
+      React.forwardRef
+    ) {
+      for (let i = 0; i < mixins.length; i++) {
+        if (MIXINS_WITH_LEVEL_MIXIN.has(mixins[i])) {
+          ctx["UU5.Common.LevelMixin"] = true;
+
+          // change render() method to render Level Provider with level based on LevelMixin
+          let origRender = componentDescriptor.render || function() {};
+          componentDescriptor.render = function() {
+            return (
+              <LevelProvider level={this.state.level} isDummyLevel={this._isUsingDummyLevel()}>
+                {origRender.apply(this)}
+              </LevelProvider>
+            );
+          };
+          break;
+        }
+      }
+    }
+  }
+  return componentDescriptor;
+});
+
+postprocessors.push(function LevelMixinVCPostprocessor(Component, componentDescriptor, ctx) {
+  if (ctx["UU5.Common.LevelMixin"]) {
+    // wrap with level consumer
+    let ResultComponent = React.forwardRef(function(props, ref) {
+      return (
+        <Level.Consumer>
+          {({ level, isDummyLevel }) => {
+            return (
+              <Component
+                {...props}
+                ref={ref}
+                _parentLevel={level}
+                _parentLevelComponent={null}
+                _isDummyLevel={isDummyLevel}
+              />
+            );
+          }}
+        </Level.Consumer>
+      );
+    });
+    for (let k of Object.getOwnPropertyNames(Component)) {
+      try {
+        if (!(k in ResultComponent)) ResultComponent[k] = Component[k];
+      } catch (e) {} // needed for IE for special properties like "caller"
+    }
+    ResultComponent.isUu5PureComponent = true;
+    return ResultComponent;
+  }
+  return Component;
+});
+
+// helper component which does not re-render its subtree if level does not change
+class LevelProvider extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = { level: props.level, isDummyLevel: props.isDummyLevel };
+  }
+  static propTypes = {
+    level: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    isDummyLevel: PropTypes.bool // needed for interoperability with LevelMixin
+  };
+  static getDerivedStateFromProps(props, state) {
+    return props.level !== state.level ? { level: props.level } : null;
+  }
+  render() {
+    return <Level.Provider value={this.state}>{this.props.children}</Level.Provider>;
+  }
+}
 
 export default LevelMixin;

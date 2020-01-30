@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "../forms-ns.js";
@@ -27,7 +24,7 @@ import "./items-input.less";
 //@@viewOff:imports
 
 export default UU5.Common.LsiMixin.withContext(
-  createReactClass({
+  UU5.Common.VisualComponent.create({
     displayName: "items-input",
     //@@viewOn:mixins
     mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.LsiMixin],
@@ -51,21 +48,21 @@ export default UU5.Common.LsiMixin.withContext(
 
     //@@viewOn:propTypes
     propTypes: {
-      value: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.object,
-        PropTypes.arrayOf(PropTypes.string),
-        PropTypes.arrayOf(PropTypes.object)
+      value: UU5.PropTypes.oneOfType([
+        UU5.PropTypes.string,
+        UU5.PropTypes.object,
+        UU5.PropTypes.arrayOf(UU5.PropTypes.string),
+        UU5.PropTypes.arrayOf(UU5.PropTypes.object)
       ]),
-      multiple: PropTypes.bool,
-      placeholder: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-      loading: PropTypes.bool,
-      onItemClick: PropTypes.func,
-      feedback: PropTypes.string,
-      borderRadius: PropTypes.string,
-      bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-      elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-      colorSchema: PropTypes.string
+      multiple: UU5.PropTypes.bool,
+      placeholder: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string]),
+      loading: UU5.PropTypes.bool,
+      onItemClick: UU5.PropTypes.func,
+      feedback: UU5.PropTypes.string,
+      borderRadius: UU5.PropTypes.string,
+      bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+      elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+      colorSchema: UU5.PropTypes.string
     },
     //@@viewOff:propTypes
 
@@ -131,7 +128,7 @@ export default UU5.Common.LsiMixin.withContext(
         value = this.props.value.map((item, key) => {
           return (
             <UU5.Bricks.Span className={this.getClassName("item")} key={key}>
-              {React.Children.toArray(item)}
+              {UU5.Common.Children.toArray(item)}
               {!this.props.readonly && (
                 <UU5.Bricks.Link
                   className={this.getClassName("link")}
@@ -148,7 +145,7 @@ export default UU5.Common.LsiMixin.withContext(
           );
         });
       } else {
-        value = React.Children.toArray(this.props.value);
+        value = UU5.Common.Children.toArray(this.props.value);
       }
 
       this.props.value.length < 1 && (value = this._getPlaceholder());

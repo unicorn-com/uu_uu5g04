@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "../forms-ns.js";
 import Css from "./css.js";
@@ -25,7 +22,8 @@ import Color from "./color.js";
 import FormMixin from "../mixins/form-mixin.js";
 //@@viewOff:imports
 
-export const ColorPaletteForm = createReactClass({
+export const ColorPaletteForm = UU5.Common.VisualComponent.create({
+  displayName: "ColorPaletteForm", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, FormMixin],
   //@@viewOff:mixins
@@ -211,8 +209,8 @@ export const ColorPaletteForm = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    enableCustomColor: PropTypes.bool,
-    value: PropTypes.string
+    enableCustomColor: UU5.PropTypes.bool,
+    value: UU5.PropTypes.string
   },
   //@@viewOff:propTypes
 

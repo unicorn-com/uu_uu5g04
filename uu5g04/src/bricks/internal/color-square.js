@@ -11,8 +11,6 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 
@@ -69,13 +67,13 @@ const ColorSquare = props => {
 };
 
 ColorSquare.propTypes = {
-  label: PropTypes.string,
-  depth: PropTypes.number,
-  onClick: PropTypes.func,
-  title: PropTypes.string,
-  colorSchema: PropTypes.string,
-  height: PropTypes.string,
-  width: PropTypes.string
+  label: UU5.PropTypes.string,
+  depth: UU5.PropTypes.number,
+  onClick: UU5.PropTypes.func,
+  title: UU5.PropTypes.string,
+  colorSchema: UU5.PropTypes.string,
+  height: UU5.PropTypes.string,
+  width: UU5.PropTypes.string
 };
 
 ColorSquare.defaultProps = {

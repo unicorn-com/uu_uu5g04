@@ -12,8 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import "./camera.less";
@@ -22,7 +20,8 @@ import "./camera.less";
 // TODO
 // quality of picture -> jpg, png, ...
 // choice of camera devices if pc has more cameras
-export const Camera = createReactClass({
+export const Camera = UU5.Common.VisualComponent.create({
+  displayName: "Camera", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.NestingLevelMixin, UU5.Common.PureRenderMixin],
   //@@viewOff:mixins

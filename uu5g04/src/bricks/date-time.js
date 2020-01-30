@@ -12,16 +12,14 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./date-time.less";
 //@@viewOff:imports
 
-export const DateTime = createReactClass({
+export const DateTime = UU5.Common.VisualComponent.create({
+  displayName: "DateTime", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.NestingLevelMixin, UU5.Common.PureRenderMixin],
   //@@viewOff:mixins
@@ -48,14 +46,14 @@ export const DateTime = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    value: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)]),
-    format: PropTypes.string,
-    country: PropTypes.string,
-    timeZone: PropTypes.number,
-    onChange: PropTypes.func,
-    dateOnly: PropTypes.bool,
-    timeOnly: PropTypes.bool,
-    secondsDisabled: PropTypes.bool
+    value: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.instanceOf(Date)]),
+    format: UU5.PropTypes.string,
+    country: UU5.PropTypes.string,
+    timeZone: UU5.PropTypes.number,
+    onChange: UU5.PropTypes.func,
+    dateOnly: UU5.PropTypes.bool,
+    timeOnly: UU5.PropTypes.bool,
+    secondsDisabled: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 

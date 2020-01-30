@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "./forms-ns.js";
@@ -27,7 +24,8 @@ import "./text-button.less";
 //@@viewOff:imports
 
 export const TextButton = Context.withContext(
-  createReactClass({
+  UU5.Common.VisualComponent.create({
+    displayName: "TextButton", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
     mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, TextInputMixin],
     //@@viewOff:mixins
@@ -44,19 +42,19 @@ export const TextButton = Context.withContext(
 
     //@@viewOn:propTypes
     propTypes: {
-      value: PropTypes.string,
-      buttons: PropTypes.arrayOf(
-        PropTypes.shape({
-          icon: PropTypes.string,
-          onClick: PropTypes.func,
-          colorSchema: PropTypes.string,
-          bgStyle: PropTypes.string,
-          borderRadius: PropTypes.string,
-          elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
+      value: UU5.PropTypes.string,
+      buttons: UU5.PropTypes.arrayOf(
+        UU5.PropTypes.shape({
+          icon: UU5.PropTypes.string,
+          onClick: UU5.PropTypes.func,
+          colorSchema: UU5.PropTypes.string,
+          bgStyle: UU5.PropTypes.string,
+          borderRadius: UU5.PropTypes.string,
+          elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
         })
       ),
-      pattern: PropTypes.string,
-      actionOnEnter: PropTypes.bool
+      pattern: UU5.PropTypes.string,
+      actionOnEnter: UU5.PropTypes.bool
     },
     //@@viewOff:propTypes
 

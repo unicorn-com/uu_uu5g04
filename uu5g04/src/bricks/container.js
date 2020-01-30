@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -29,7 +26,9 @@ let editationLazyLoaded = false;
 import "./container.less";
 //@@viewOff:imports
 
-export const Container = createReactClass({
+export const Container = UU5.Common.VisualComponent.create({
+  displayName: "Container", // for backward compatibility (test snapshots)
+
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -56,7 +55,7 @@ export const Container = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    noSpacing: PropTypes.bool
+    noSpacing: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 

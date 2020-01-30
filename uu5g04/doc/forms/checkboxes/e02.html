@@ -43,14 +43,11 @@
 
 <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
 <script type="text/babel">
-  import React from "react";
-  import createReactClass from "create-react-class";
-  import ReactDOM from "react-dom";
   import UU5 from "uu5g04";
   import "uu5g04-bricks";
   import "uu5g04-forms";
 
-  const Page = createReactClass({
+  const Page = UU5.Common.VisualComponent.create({
     getInitialState() {
       return {
         value: [
@@ -333,7 +330,7 @@
     }
   });
 
-  ReactDOM.render(<Page/>, document.getElementById('uu5Example'));
+  UU5.Common.DOM.render(<Page/>, document.getElementById('uu5Example'));
 </script>
 </body>
 </html>

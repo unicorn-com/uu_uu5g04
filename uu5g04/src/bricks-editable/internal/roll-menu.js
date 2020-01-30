@@ -1,7 +1,4 @@
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 
@@ -9,7 +6,7 @@ import ns from "../bricks-editable-ns.js";
 import Css from "./css.js";
 //@@viewOff:imports
 
-export const RollMenu = createReactClass({
+export const RollMenu = UU5.Common.VisualComponent.create({
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.ContentMixin],
   //@@viewOff:mixins
@@ -67,12 +64,12 @@ export const RollMenu = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    open: PropTypes.bool,
-    animatedWrapperProps: PropTypes.object,
-    zIndex: PropTypes.number,
-    direction: PropTypes.oneOf(["horizontal", "vertical"]),
-    backgroundLayerClassName: PropTypes.string,
-    header: PropTypes.node
+    open: UU5.PropTypes.bool,
+    animatedWrapperProps: UU5.PropTypes.object,
+    zIndex: UU5.PropTypes.number,
+    direction: UU5.PropTypes.oneOf(["horizontal", "vertical"]),
+    backgroundLayerClassName: UU5.PropTypes.string,
+    header: UU5.PropTypes.node
   },
   //@@viewOff:propTypes
 

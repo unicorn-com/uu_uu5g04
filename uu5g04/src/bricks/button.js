@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Css from "./internal/css.js";
@@ -192,7 +189,8 @@ const Styles = {
   }
 };
 
-export const Button = createReactClass({
+export const Button = UU5.Common.VisualComponent.create({
+  displayName: "Button", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -250,21 +248,21 @@ export const Button = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
-    displayBlock: PropTypes.bool,
-    pressed: PropTypes.bool,
-    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline", "link"]),
-    onClick: PropTypes.func,
-    onWheelClick: PropTypes.func,
-    onCtrlClick: PropTypes.func,
-    href: PropTypes.string,
-    target: PropTypes.oneOf(["_blank", "_parent", "_top", "_self"]),
-    smoothScroll: PropTypes.number,
-    offset: PropTypes.number,
-    borderRadius: PropTypes.string,
-    elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-    elevationHover: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-    baseline: PropTypes.bool
+    size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
+    displayBlock: UU5.PropTypes.bool,
+    pressed: UU5.PropTypes.bool,
+    bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline", "link"]),
+    onClick: UU5.PropTypes.func,
+    onWheelClick: UU5.PropTypes.func,
+    onCtrlClick: UU5.PropTypes.func,
+    href: UU5.PropTypes.string,
+    target: UU5.PropTypes.oneOf(["_blank", "_parent", "_top", "_self"]),
+    smoothScroll: UU5.PropTypes.number,
+    offset: UU5.PropTypes.number,
+    borderRadius: UU5.PropTypes.string,
+    elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+    elevationHover: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+    baseline: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 
@@ -521,7 +519,7 @@ export const Button = createReactClass({
           let replacedText = text.replace(/\n/g, "");
           if (text.length !== replacedText.length) {
             // clone child with new text prop
-            child = React.cloneElement(child, { text: replacedText });
+            child = UU5.Common.Element.clone(child, { text: replacedText });
           }
           childLength = replacedText.length;
         } else {

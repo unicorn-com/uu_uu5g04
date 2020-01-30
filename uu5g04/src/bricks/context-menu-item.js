@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -25,7 +22,8 @@ import "./context-menu-item.less";
 import Span from "./span";
 //@@viewOff:imports
 
-export const ContextMenuItem = createReactClass({
+export const ContextMenuItem = UU5.Common.VisualComponent.create({
+  displayName: "ContextMenuItem", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.ContentMixin, UU5.Common.PureRenderMixin],
   //@@viewOff:mixins
@@ -48,17 +46,17 @@ export const ContextMenuItem = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    label: PropTypes.any, // content
-    href: PropTypes.string,
-    onClick: PropTypes.func,
-    smoothScroll: PropTypes.number,
-    offset: PropTypes.number,
-    target: PropTypes.string,
-    icon: PropTypes.string,
-    space: PropTypes.bool,
-    header: PropTypes.bool,
-    divider: PropTypes.bool,
-    allowTags: PropTypes.arrayOf(PropTypes.string)
+    label: UU5.PropTypes.any, // content
+    href: UU5.PropTypes.string,
+    onClick: UU5.PropTypes.func,
+    smoothScroll: UU5.PropTypes.number,
+    offset: UU5.PropTypes.number,
+    target: UU5.PropTypes.string,
+    icon: UU5.PropTypes.string,
+    space: UU5.PropTypes.bool,
+    header: UU5.PropTypes.bool,
+    divider: UU5.PropTypes.bool,
+    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string)
   },
   //@@viewOff:propTypes
 
@@ -137,7 +135,9 @@ export const ContextMenuItem = createReactClass({
     props.className += ` ${this.getClassName("link")} ${this.getClassName("nestedItem")}`;
     this.props.space && !this.props.icon && (props.className += " " + this.getClassName("space"));
     let content = [<span key="nestedLabel">{this.props.label}</span>];
-    this.props.icon && content.unshift(<Icon icon={this.props.icon} className={this.getClassName("icon")} />);
+    if (this.props.icon) {
+      content.unshift(<Icon key="icon" icon={this.props.icon} className={this.getClassName("icon")} />);
+    }
     content.push(<Icon key="nestedIcon" icon="mdi-menu-right" className={this.getClassName("nestedIcon")} />);
 
     return (
@@ -205,7 +205,7 @@ export const ContextMenuItem = createReactClass({
         forceRender
         allowTags={this.props.allowTags}
       >
-        {React.Children.toArray(this.props.children)}
+        {UU5.Common.Children.toArray(this.props.children)}
       </ContextMenu>
     );
   },

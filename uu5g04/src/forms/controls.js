@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
 import "uu5g04-bricks";
@@ -23,14 +20,15 @@ import ControlsMixin from "./mixins/controls-mixin.js";
 import "./controls.less";
 //@@viewOff:imports
 
-const buttonPropTypes = PropTypes.shape({
-  size: PropTypes.oneOf(["s", "m", "l", "xl"]),
-  content: PropTypes.any,
-  colorSchema: PropTypes.oneOf(UU5.Environment.colorSchema),
-  bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"])
+const buttonPropTypes = UU5.PropTypes.shape({
+  size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
+  content: UU5.PropTypes.any,
+  colorSchema: UU5.PropTypes.oneOf(UU5.Environment.colorSchema),
+  bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"])
 });
 
-export const Controls = createReactClass({
+export const Controls = UU5.Common.VisualComponent.create({
+  displayName: "Controls", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [ControlsMixin],
   //@@viewOff:mixins
@@ -57,8 +55,8 @@ export const Controls = createReactClass({
     buttonCancelProps: buttonPropTypes,
     buttonResetProps: buttonPropTypes,
     buttonValidateProps: buttonPropTypes,
-    buttonReset: PropTypes.bool,
-    buttonValidate: PropTypes.bool
+    buttonReset: UU5.PropTypes.bool,
+    buttonValidate: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 

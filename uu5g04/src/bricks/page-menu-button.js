@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -23,7 +20,8 @@ import Button from "./button.js";
 import "./page-menu-button.less";
 //@@viewOff:imports
 
-export const MenuButton = createReactClass({
+export const MenuButton = UU5.Common.VisualComponent.create({
+  displayName: "MenuButton", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -52,16 +50,16 @@ export const MenuButton = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    menu: PropTypes.oneOf(["left", "right"]),
-    onClick: PropTypes.func,
-    pageKey: PropTypes.string,
-    size: PropTypes.string,
-    displayBlock: PropTypes.bool,
-    pressed: PropTypes.bool,
-    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline", "link"]),
-    borderRadius: PropTypes.string,
-    elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-    elevationHover: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
+    menu: UU5.PropTypes.oneOf(["left", "right"]),
+    onClick: UU5.PropTypes.func,
+    pageKey: UU5.PropTypes.string,
+    size: UU5.PropTypes.string,
+    displayBlock: UU5.PropTypes.bool,
+    pressed: UU5.PropTypes.bool,
+    bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline", "link"]),
+    borderRadius: UU5.PropTypes.string,
+    elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+    elevationHover: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
   },
   //@@viewOff:propTypes
 

@@ -12,16 +12,14 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./resize-item.less";
 //@@viewOff:imports
 
-export const ResizeItem = createReactClass({
+export const ResizeItem = UU5.Common.VisualComponent.create({
+  displayName: "ResizeItem", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.ContentMixin, UU5.Common.NestingLevelMixin],
   //@@viewOff:mixins
@@ -43,7 +41,7 @@ export const ResizeItem = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    max: PropTypes.number
+    max: UU5.PropTypes.number
   },
   //@@viewOff:propTypes
 
@@ -82,7 +80,7 @@ export const ResizeItem = createReactClass({
 
   //@@viewOn:render
   render: function() {
-    return this.props.content || (this.props.children && React.Children.toArray(this.props.children));
+    return this.props.content || (this.props.children && UU5.Common.Children.toArray(this.props.children));
   }
   //@@viewOff:render
 });

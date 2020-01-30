@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -42,7 +39,8 @@ const getMountTabContent = props => {
   return props.mountTabContent === undefined ? MOUNT_TAB_CONTENT_VALUES.onFirstRender : props.mountTabContent;
 };
 
-export const Tabs = createReactClass({
+export const Tabs = UU5.Common.VisualComponent.create({
+  displayName: "Tabs", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -81,31 +79,31 @@ export const Tabs = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    type: PropTypes.oneOf(["tabs", "pills"]),
-    stacked: PropTypes.oneOfType([
-      PropTypes.bool,
-      PropTypes.shape({
-        xs: PropTypes.number,
-        s: PropTypes.number,
-        m: PropTypes.number,
-        l: PropTypes.number,
-        xl: PropTypes.number
+    type: UU5.PropTypes.oneOf(["tabs", "pills"]),
+    stacked: UU5.PropTypes.oneOfType([
+      UU5.PropTypes.bool,
+      UU5.PropTypes.shape({
+        xs: UU5.PropTypes.number,
+        s: UU5.PropTypes.number,
+        m: UU5.PropTypes.number,
+        l: UU5.PropTypes.number,
+        xl: UU5.PropTypes.number
       }),
-      PropTypes.string
+      UU5.PropTypes.string
     ]),
-    justified: PropTypes.bool,
-    fade: PropTypes.bool,
-    activeName: PropTypes.string,
-    allowTags: PropTypes.arrayOf(PropTypes.string),
-    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
-    onChange: PropTypes.func,
-    borderRadius: PropTypes.string,
-    elevation: PropTypes.oneOf(["0", "1", "2", "3", "4", "5", 0, 1, 2, 3, 4, 5]),
-    elevationHover: PropTypes.oneOf(["0", "1", "2", "3", "4", "5", 0, 1, 2, 3, 4, 5]),
-    underline: PropTypes.bool,
-    lineProps: PropTypes.object,
-    getButton: PropTypes.func,
-    mountTabContent: PropTypes.oneOf([
+    justified: UU5.PropTypes.bool,
+    fade: UU5.PropTypes.bool,
+    activeName: UU5.PropTypes.string,
+    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
+    size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
+    onChange: UU5.PropTypes.func,
+    borderRadius: UU5.PropTypes.string,
+    elevation: UU5.PropTypes.oneOf(["0", "1", "2", "3", "4", "5", 0, 1, 2, 3, 4, 5]),
+    elevationHover: UU5.PropTypes.oneOf(["0", "1", "2", "3", "4", "5", 0, 1, 2, 3, 4, 5]),
+    underline: UU5.PropTypes.bool,
+    lineProps: UU5.PropTypes.object,
+    getButton: UU5.PropTypes.func,
+    mountTabContent: UU5.PropTypes.oneOf([
       MOUNT_TAB_CONTENT_VALUES.onFirstRender,
       MOUNT_TAB_CONTENT_VALUES.onFirstActive,
       MOUNT_TAB_CONTENT_VALUES.onActive
@@ -401,7 +399,7 @@ export const Tabs = createReactClass({
       !children[0].props._active &&
       childTagNames.indexOf(UU5.Common.Tools.getChildTagName(children[0])) !== -1
     ) {
-      children[0] = React.cloneElement(children[0], { _active: true, mountContent: this.props.mountContent });
+      children[0] = UU5.Common.Element.clone(children[0], { _active: true, mountContent: this.props.mountContent });
     }
 
     let items = children.map((tab, i) => {

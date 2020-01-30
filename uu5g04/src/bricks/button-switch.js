@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -23,7 +20,8 @@ import Button from "./button.js";
 import "./button-switch.less";
 //@@viewOff:imports
 
-export const ButtonSwitch = createReactClass({
+export const ButtonSwitch = UU5.Common.VisualComponent.create({
+  displayName: "ButtonSwitch", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -49,10 +47,10 @@ export const ButtonSwitch = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    onProps: PropTypes.object,
-    offProps: PropTypes.object,
-    switchedOn: PropTypes.bool,
-    props: PropTypes.object
+    onProps: UU5.PropTypes.object,
+    offProps: UU5.PropTypes.object,
+    switchedOn: UU5.PropTypes.bool,
+    props: UU5.PropTypes.object
   },
   //@@viewOff:propTypes
 

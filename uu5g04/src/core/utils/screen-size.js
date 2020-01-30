@@ -53,10 +53,10 @@ class ScreenSize {
     }
   }
 
-  static setSize(screenSize) {
+  static setSize(event, screenSize) {
     if (actualScreenSize !== screenSize) {
       actualScreenSize = screenSize;
-      this.LISTENER_LIST.forEach(listener => listener(screenSize));
+      this.LISTENER_LIST.forEach(listener => listener(event, screenSize));
     }
   }
 
@@ -167,10 +167,10 @@ class ScreenSize {
 }
 
 let actualScreenSize = ScreenSize.countSize();
-// const resizeFn = () => ScreenSize.setSize(ScreenSize.countSize());
-//
-// window.addEventListener("resize", resizeFn);
-// window.addEventListener("orientationchange", resizeFn);
+const resizeFn = e => ScreenSize.setSize(e, ScreenSize.countSize());
+
+window.addEventListener("resize", resizeFn);
+window.addEventListener("orientationchange", resizeFn);
 
 export { ScreenSize };
 export default ScreenSize;

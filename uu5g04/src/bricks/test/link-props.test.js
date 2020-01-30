@@ -12,10 +12,8 @@
  */
 
 //@@viewOn:imports
-import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import createReactClass from "create-react-class";
 //@@viewOff:imports
 
 const { mount, shallow, wait } = UU5.Test.Tools;
@@ -23,7 +21,7 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 /**
  * This is the Link component that contains the onClick handler that is used to test the function type props.
  */
-const MyLink = createReactClass({
+const MyLink = UU5.Common.VisualComponent.create({
   getInitialState: () => {
     return {
       isCalled: false

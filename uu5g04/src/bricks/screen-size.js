@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import ScreenSizeItem from "./screen-size-item.js";
@@ -22,7 +19,8 @@ import ScreenSizeItem from "./screen-size-item.js";
 import "./screen-size.less";
 //@@viewOff:imports
 
-export const ScreenSize = createReactClass({
+export const ScreenSize = UU5.Common.VisualComponent.create({
+  displayName: "ScreenSize", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -51,7 +49,7 @@ export const ScreenSize = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    screenSize: PropTypes.string
+    screenSize: UU5.PropTypes.string
   },
   //@@viewOff:propTypes
 
@@ -105,7 +103,7 @@ export const ScreenSize = createReactClass({
         children = allChildren.map((child, index) => {
           let newChild = child;
 
-          if (React.isValidElement(child)) {
+          if (UU5.Common.Element.isValid(child)) {
             if (child.type.tagName === this.getDefault("childTagName")) {
               // ScreenSize.Item
               let childScreenSizes;
@@ -120,7 +118,7 @@ export const ScreenSize = createReactClass({
               newChild = null;
             } else {
               // language as prop
-              newChild = React.cloneElement(child, { screenSize });
+              newChild = UU5.Common.Element.clone(child, { screenSize });
             }
           }
 
@@ -130,7 +128,7 @@ export const ScreenSize = createReactClass({
 
       if (Object.keys(screenSizes).length > 0) {
         let { child, index } = screenSizes[screenSize] || screenSizes["*"] || {};
-        if (child) children[index] = React.cloneElement(child, this._expandChildProps(child));
+        if (child) children[index] = UU5.Common.Element.clone(child, this._expandChildProps(child));
       }
     }
 

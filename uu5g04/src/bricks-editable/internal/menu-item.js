@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import PropTypes from "prop-types";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 
@@ -32,7 +29,7 @@ function getColorSchemaClassName(colorSchema) {
   }
 }
 
-const MenuItem = createReactClass({
+const MenuItem = UU5.Common.VisualComponent.create({
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ContentMixin],
   //@@viewOff:mixins
@@ -138,15 +135,15 @@ const MenuItem = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    icon: PropTypes.string,
-    onClick: PropTypes.func,
-    controls: PropTypes.array,
-    infoIcons: PropTypes.array,
-    isActive: PropTypes.bool,
-    colorSchema: PropTypes.string,
-    colorSchemaActive: PropTypes.string,
-    controlsColorSchema: PropTypes.string,
-    controlsColorSchemaActive: PropTypes.string
+    icon: UU5.PropTypes.string,
+    onClick: UU5.PropTypes.func,
+    controls: UU5.PropTypes.array,
+    infoIcons: UU5.PropTypes.array,
+    isActive: UU5.PropTypes.bool,
+    colorSchema: UU5.PropTypes.string,
+    colorSchemaActive: UU5.PropTypes.string,
+    controlsColorSchema: UU5.PropTypes.string,
+    controlsColorSchemaActive: UU5.PropTypes.string
   },
   //@@viewOff:propTypes
 

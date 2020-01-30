@@ -16,7 +16,9 @@ import ReactDOM from "react-dom";
 import Environment from "../environment/environment.js";
 import EnvTools from "../environment/tools.js";
 import Context from "./context.js";
+import Element from "./element.js";
 import ScreenSize from "../utils/screen-size.js";
+import Lsi from "../utils/lsi.js";
 
 export const REGEXP = {
   /** @deprecated Remove in 2.0.0. */
@@ -145,7 +147,7 @@ Tools.findComponent = (tag, props, content, error) => {
   if (Environment.useComponentRegistry && Environment.useLibraryRegistry) {
     let fTag = Tools.checkTag(newTag, true);
     if (fTag) {
-      result = React.createElement(fTag, props, content);
+      result = Element.create(fTag, props, content);
     } else {
       let module = newTag.split(".");
       module.splice(-1, 1);
@@ -172,7 +174,7 @@ Tools.findComponent = (tag, props, content, error) => {
   } else {
     let component = Tools.checkTag(newTag, false);
     result = component ? (
-      React.createElement(component, props, content)
+      Element.create(component, props, content)
     ) : (
       <UU5.Common.NotFoundTag key={props.key} tagName={newTag} id={props.id} ref_={props.ref_} error={error} />
     );
@@ -362,7 +364,7 @@ Tools.getChildrenFromUu5String = function(uu5String, opt) {
           if (tagObj.tag !== childTag) {
             //ERROR
             Tools.error("Invalid uu5string", { uu5String: uu5String, tag: tagObj.tag, position: tagObj.index });
-            return React.createElement(
+            return Element.create(
               window.UU5.Common.Error, // eslint-disable-line no-undef
               null,
               <div>
@@ -467,7 +469,7 @@ Tools.getChildrenFromUu5String = function(uu5String, opt) {
       let tagObj = childStack.pop();
 
       Tools.error("Invalid uu5string", { uu5String: uu5String, tag: tagObj.tag, position: tagObj.index });
-      return React.createElement(
+      return Element.create(
         window.UU5.Common.Error, // eslint-disable-line no-undef
         null,
         <div>
@@ -1675,9 +1677,9 @@ Tools.extend = function() {
     if ((options = arguments[i]) != null) {
       // Extend the base object
 
-      // merge React elements via React.cloneElement (clone props separately, then do cloneElement)
+      // merge React elements via Element.clone (clone props separately, then do cloneElement)
       // because React Context elements are cyclic...
-      if (deep && options && typeof options === "object" && React.isValidElement(options)) {
+      if (deep && options && typeof options === "object" && Element.isValid(options)) {
         let newProps = {};
         if (options.props) {
           for (let k in options.props) {
@@ -1689,13 +1691,13 @@ Tools.extend = function() {
         }
         let newChildren = newProps.children;
         delete newProps.children;
-        let clonedReactEl = React.cloneElement(options, newProps, newChildren);
+        let clonedReactEl = Element.clone(options, newProps, newChildren);
         if (clonedReactEl._store && options._store) {
           clonedReactEl._store.validated = options._store.validated; // to prevent extra warnings about missing "key"
         }
         // if the target is a React element, then "merge" by actually replacing the element,
         // otherwise just copy all keys
-        if (target && typeof target === "object" && React.isValidElement(target)) {
+        if (target && typeof target === "object" && Element.isValid(target)) {
           for (let k in target) delete target[k];
         }
         for (let k in clonedReactEl) target[k] = clonedReactEl[k];
@@ -1891,7 +1893,7 @@ Tools.setLanguage = language => {
   Tools.setLanguages(language);
   let lang = Environment.languages[0];
   if (lang) {
-    Environment.EventListener.triggerLsi(lang.location || lang.language);
+    Lsi.setLanguage(lang.location || lang.language);
     Environment.setDateTimeCountry(lang.language);
     Environment.setNumberCountry(lang.language);
   }
@@ -2947,7 +2949,7 @@ Tools.createContext = Context.create;
 
 Tools.wrapIfExists = (Wrapper, ...content) => {
   if (Wrapper) {
-    return React.createElement(Wrapper, null, ...content);
+    return Element.create(Wrapper, null, ...content);
   } else {
     return content;
   }

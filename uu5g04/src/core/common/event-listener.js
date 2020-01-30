@@ -12,6 +12,8 @@
  */
 
 import Tools from "./tools.js";
+import Lsi from "../utils/lsi.js";
+import ScreenSize from "../utils/screen-size.js";
 import { Environment } from "../environment/environment.js";
 
 // main visibility API function
@@ -41,8 +43,6 @@ const visibility = (() => {
 
 export class EventListener {
   constructor() {
-    this._screenSize = Tools.getScreenSize();
-
     this._events = new Map();
 
     this._listeners = {
@@ -53,9 +53,6 @@ export class EventListener {
       number: {},
       loadLibs: {}
     };
-
-    this.addWindowEvent("resize", Tools.generateUUID(), this._onScreenSizeChange.bind(this));
-    this.addWindowEvent("orientationchange", Tools.generateUUID(), this._onScreenSizeChange.bind(this));
 
     visibility(() =>
       this.triggerEvent("pageVisibility", {
@@ -79,8 +76,17 @@ export class EventListener {
 
   registerEvent(key, id, fce) {
     if (typeof fce === "function") {
+      let usedFce = fce;
+      if (key === "lsi") {
+        // TODO because of backward compatibility
+        usedFce = function(lang) {
+          return fce(lang && typeof lang === "object" ? lang.language : lang); // new API (UU5.Utils.Lsi.setLanguage) sends object { language: "..." }, EventListener's listeners expect string
+        };
+        if (this._listeners[key] && this._listeners[key][id]) Lsi.unregister(this._listeners[key][id]);
+        Lsi.register(usedFce);
+      }
       this._listeners[key] = this._listeners[key] || {};
-      this._listeners[key][id] = fce;
+      this._listeners[key][id] = usedFce;
     } else {
       this._writeError(key, id, fce);
     }
@@ -90,14 +96,19 @@ export class EventListener {
   triggerEvent() {
     // i.e. arguments = ['lsi', 'cs-cz']
     let [key, ...params] = arguments;
-    for (let id in this._listeners[key]) {
-      this._listeners[key][id].apply(null, params);
+    if (key === "screenSize") ScreenSize.setSize(...params);
+    else {
+      for (let id in this._listeners[key]) {
+        this._listeners[key][id].apply(null, params);
+      }
     }
     return this;
   }
 
   unregisterEvent(key, id) {
     if (this._listeners[key]) {
+      // TODO because of backward compatibility
+      if (key === "lsi") Lsi.unregister(this._listeners[key][id]);
       delete this._listeners[key][id];
     }
     return this;
@@ -221,7 +232,9 @@ export class EventListener {
   }
 
   registerScreenSize(id, fce) {
+    if ((this._listeners["screenSize"] || {})[id]) ScreenSize.unregister(this._listeners["screenSize"][id]);
     this.registerEvent("screenSize", id, fce);
+    ScreenSize.register(fce);
   }
 
   triggerScreenSize(e, screenSize) {
@@ -229,6 +242,7 @@ export class EventListener {
   }
 
   unregisterScreenSize(id) {
+    if ((this._listeners["screenSize"] || {})[id]) ScreenSize.unregister(this._listeners["screenSize"][id]);
     this.unregisterEvent("screenSize", id);
   }
 
@@ -308,14 +322,6 @@ export class EventListener {
     if (targetMap && targetMap[key] && targetMap[key][id]) {
       session.removeListener(key, targetMap[key][id]);
       delete targetMap[key][id];
-    }
-  }
-
-  _onScreenSizeChange(e) {
-    let actualScreenSize = Tools.getScreenSize();
-    if (actualScreenSize !== this._screenSize) {
-      this._screenSize = actualScreenSize;
-      this.triggerScreenSize(e, actualScreenSize);
     }
   }
 

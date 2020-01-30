@@ -11,8 +11,6 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import { FormContext } from "../form-context.js";
@@ -49,42 +47,42 @@ export const FormMixin = {
 
   //@@viewOn:propTypes
   propTypes: {
-    values: PropTypes.object,
-    progressIndicator: PropTypes.any, // loading
-    onInit: PropTypes.func,
-    onSave: PropTypes.func,
-    onSaveDone: PropTypes.func,
-    onSaveFail: PropTypes.func,
-    onSaveByKey: PropTypes.func,
-    onValidate: PropTypes.func,
-    onReset: PropTypes.func,
-    onCancel: PropTypes.func,
-    saveOnEnter: PropTypes.bool,
-    usePageAlertBus: PropTypes.bool,
-    spacing: PropTypes.number,
-    readOnly: PropTypes.bool,
-    labelColWidth: PropTypes.oneOfType([
-      PropTypes.shape({
-        xs: PropTypes.number,
-        s: PropTypes.number,
-        m: PropTypes.number,
-        l: PropTypes.number,
-        xl: PropTypes.number
+    values: UU5.PropTypes.object,
+    progressIndicator: UU5.PropTypes.any, // loading
+    onInit: UU5.PropTypes.func,
+    onSave: UU5.PropTypes.func,
+    onSaveDone: UU5.PropTypes.func,
+    onSaveFail: UU5.PropTypes.func,
+    onSaveByKey: UU5.PropTypes.func,
+    onValidate: UU5.PropTypes.func,
+    onReset: UU5.PropTypes.func,
+    onCancel: UU5.PropTypes.func,
+    saveOnEnter: UU5.PropTypes.bool,
+    usePageAlertBus: UU5.PropTypes.bool,
+    spacing: UU5.PropTypes.number,
+    readOnly: UU5.PropTypes.bool,
+    labelColWidth: UU5.PropTypes.oneOfType([
+      UU5.PropTypes.shape({
+        xs: UU5.PropTypes.number,
+        s: UU5.PropTypes.number,
+        m: UU5.PropTypes.number,
+        l: UU5.PropTypes.number,
+        xl: UU5.PropTypes.number
       }),
-      PropTypes.string
+      UU5.PropTypes.string
     ]),
-    inputColWidth: PropTypes.oneOfType([
-      PropTypes.shape({
-        xs: PropTypes.number,
-        s: PropTypes.number,
-        m: PropTypes.number,
-        l: PropTypes.number,
-        xl: PropTypes.number
+    inputColWidth: UU5.PropTypes.oneOfType([
+      UU5.PropTypes.shape({
+        xs: UU5.PropTypes.number,
+        s: UU5.PropTypes.number,
+        m: UU5.PropTypes.number,
+        l: UU5.PropTypes.number,
+        xl: UU5.PropTypes.number
       }),
-      PropTypes.string
+      UU5.PropTypes.string
     ]),
-    labelAlignment: PropTypes.string,
-    padding: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+    labelAlignment: UU5.PropTypes.string,
+    padding: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number])
   },
   //@@viewOff:propTypes
 
@@ -358,7 +356,7 @@ export const FormMixin = {
                 let newProps = UU5.Common.Tools.merge({}, child2.props);
                 newProps.key = newProps.key || i + "-" + j;
                 newProps.parent = newProps.parent || this;
-                children.push(React.cloneElement(child2, newProps));
+                children.push(UU5.Common.Element.clone(child2, newProps));
               } else {
                 children.push(child2);
               }
@@ -367,7 +365,7 @@ export const FormMixin = {
             let newProps = UU5.Common.Tools.merge({}, child.props);
             newProps.key = newProps.key || i;
             newProps.parent = newProps.parent || this;
-            children.push(React.cloneElement(child, newProps));
+            children.push(UU5.Common.Element.clone(child, newProps));
           } else {
             children.push(child);
           }

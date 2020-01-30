@@ -12,16 +12,14 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./nav-bar-nav.less";
 //@@viewOff:imports
 
-export default createReactClass({
+export default UU5.Common.VisualComponent.create({
+  displayName: "nav-bar-nav", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, UU5.Common.ContentMixin],
   //@@viewOff:mixins
@@ -45,11 +43,11 @@ export default createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    aligned: PropTypes.oneOf(["left", "right"]),
-    smoothScroll: PropTypes.number,
-    offset: PropTypes.number,
-    allowTags: PropTypes.arrayOf(PropTypes.string),
-    _size: PropTypes.string
+    aligned: UU5.PropTypes.oneOf(["left", "right"]),
+    smoothScroll: UU5.PropTypes.number,
+    offset: UU5.PropTypes.number,
+    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
+    _size: UU5.PropTypes.string
   },
   //@@viewOff:propTypes
 

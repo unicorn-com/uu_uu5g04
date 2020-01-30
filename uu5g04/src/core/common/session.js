@@ -14,15 +14,16 @@
 //@@viewOn:imports
 import React from "react";
 import PropTypes from "prop-types";
-import createReactClass from "create-react-class";
 import Context from "./context.js";
 import BaseMixin from "./base-mixin.js";
 import IdentityMixin from "./identity-mixin.js";
+import Component from "./component.js";
 //@@viewOff:imports
 
 export const SessionContext = Context.create();
 
-export const Session = createReactClass({
+export const Session = Component.create({
+  displayName: "Session", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [BaseMixin, IdentityMixin],
   //@@viewOff:mixins

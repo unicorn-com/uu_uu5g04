@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "./forms-ns.js";
@@ -27,7 +24,8 @@ import "./text-icon.less";
 //@@viewOff:imports
 
 export const TextIcon = Context.withContext(
-  createReactClass({
+  UU5.Common.VisualComponent.create({
+    displayName: "TextIcon", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
     mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, TextInputMixin],
     //@@viewOff:mixins
@@ -49,13 +47,13 @@ export const TextIcon = Context.withContext(
 
     //@@viewOn:propTypes
     propTypes: {
-      value: PropTypes.string,
-      password: PropTypes.bool,
-      icon: PropTypes.string,
-      iconPosition: PropTypes.oneOf(["left", "right"]),
-      onClick: PropTypes.func,
-      pattern: PropTypes.string,
-      actionOnEnter: PropTypes.bool
+      value: UU5.PropTypes.string,
+      password: UU5.PropTypes.bool,
+      icon: UU5.PropTypes.string,
+      iconPosition: UU5.PropTypes.oneOf(["left", "right"]),
+      onClick: UU5.PropTypes.func,
+      pattern: UU5.PropTypes.string,
+      actionOnEnter: UU5.PropTypes.bool
     },
     //@@viewOff:propTypes
 

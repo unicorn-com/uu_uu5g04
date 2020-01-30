@@ -23,7 +23,6 @@ let it = global.it.skip; // let it = (name) => global.it("(IGNORED) " + name, ()
  * @jest-environment <rootDir>/src/core/test/unsafe-environment.js
  */
 
-import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 

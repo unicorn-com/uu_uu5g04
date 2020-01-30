@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -27,7 +24,8 @@ import List from "./tree-list.js";
 import "./tree-item.less";
 //@@viewOff:imports
 
-const TreeItem = createReactClass({
+const TreeItem = UU5.Common.VisualComponent.create({
+  displayName: "TreeItem", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -61,11 +59,11 @@ const TreeItem = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    label: PropTypes.any,
-    items: PropTypes.array,
-    iconExpanded: PropTypes.string,
-    iconCollapsed: PropTypes.string,
-    expanded: PropTypes.bool
+    label: UU5.PropTypes.any,
+    items: UU5.PropTypes.array,
+    iconExpanded: UU5.PropTypes.string,
+    iconCollapsed: UU5.PropTypes.string,
+    expanded: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 

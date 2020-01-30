@@ -12,15 +12,14 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./badge.less";
 //@@viewOff:imports
 
-export const Badge = createReactClass({
+export const Badge = UU5.Common.VisualComponent.create({
+  displayName: "Badge", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,

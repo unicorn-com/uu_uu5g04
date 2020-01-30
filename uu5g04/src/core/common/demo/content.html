@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Content Demo</title>
+
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+          "uu5g04": "/uu5g04.js",
+          "uu5g04-bricks": "/uu5g04-bricks.js",
+          "uu5g04-forms": "/uu5g04-forms.js"
+        }
+      });
+    </script>
+
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+
+      UU5.Environment.uu5DataMap["abc"] = 'data for "abc"';
+
+      function toString(obj) {
+        try {
+          return JSON.stringify(obj);
+        } catch (e) {
+          return obj + "";
+        }
+      }
+      
+      const Example = UU5.Common.VisualComponent.create({
+        render() {
+          let children = UU5.Utils.Content.getChildren(this.props.children, { nestingLevel: "boxCollection", parent: "foo", ...this.props }, this.constructor);
+
+          return (
+            <UU5.Bricks.Row style={{background: "#eee", margin: "10px"}}>
+              <UU5.Bricks.Column colWidth="s-6"><pre>{this.props.info}</pre></UU5.Bricks.Column>
+              <UU5.Bricks.Column colWidth="s-6"><div>{children}</div></UU5.Bricks.Column>
+            </UU5.Bricks.Row>
+          );
+        }
+      });
+      const JSX = props => {
+        return <div>JSX, props: {Object.keys(props).map(it => it + "=" + toString(props[it])).join(", ")}</div>
+      };
+      UU5.Demo = { JSX };
+
+      const NestingLevelComponent = UU5.Common.VisualComponent.create({
+        statics: {
+          nestingLevel: UU5.Environment.getNestingLevelList("boxCollection", "smallBox")
+        },
+        render() {
+          let nestingLevel = UU5.Utils.NestingLevel.getNestingLevel(this.props, this.constructor);
+
+          let result;
+          if (!nestingLevel) result = null;
+          else if (nestingLevel.startsWith("smallBox")) result = <UU5.Bricks.Span>Span, used nestingLevel is {nestingLevel} (out of {JSON.stringify(this.constructor.nestingLevel)}).</UU5.Bricks.Span>;
+          else result = <UU5.Bricks.Div>Div, used nestingLevel is {nestingLevel} (out of {JSON.stringify(this.constructor.nestingLevel)}).</UU5.Bricks.Div>;
+          return  result;
+        }
+      })
+
+      const Page = createReactClass({
+        getInitialState() {
+          return { nestingLevel: "box" };
+        },
+        _onNestingLevelClick(nestingLevel) {
+          this.setState({ nestingLevel });
+        },
+        render() {
+          const nestingLevelItems = UU5.Environment.nestingLevelList.map(it => ({
+            label: it,
+            value: it,
+            onClick: () => this._onNestingLevelClick(it)
+          }));
+
+          return (
+            <div>
+              <UU5.Bricks.Header level={1}>nestingLevel</UU5.Bricks.Header>
+              <UU5.Bricks.Dropdown items={nestingLevelItems} label={this.state.nestingLevel} /><br/>
+              <NestingLevelComponent nestingLevel={this.state.nestingLevel} />{" "}
+              <NestingLevelComponent nestingLevel={this.state.nestingLevel} />
+
+              <UU5.Bricks.Section level={1} header="UU5.Utils.Content.getChildren()">
+                <ul>
+                  <li>Things in left column should be rendered into right column</li>
+                  <li>JSX components rendered in right column should have props "parent" and "nestingLevel" set to "boxCollection".</li>
+                </ul>
+                <UU5.Bricks.Line />
+
+                <Example info='null'>{null}</Example>
+                <Example info='undefined'>{undefined}</Example>
+                <Example info='0'>{0}</Example>
+                <Example info='true'>{true}</Example>
+                <Example info='false'>{false}</Example>
+                <Example info='""'>{""}</Example>
+                <Example info='"text"'>text</Example>
+                <Example info='"<uu5string/><UU5.Bricks.Button/>"'>{`<uu5string/><UU5.Bricks.Button/>`}</Example>
+                <Example info='"<uu5string/><UU5.Demo.JSX foo="bar"/>"'>{`<uu5string/><UU5.Demo.JSX foo="bar"/>`}</Example>
+                <Example info='"<uu5data/>abc"'>{`<uu5data/>abc`}</Example>
+                <Example info='"<uu5json/>[1,2,true,"text"]"'>{`<uu5json/>[1,2,true,"text"]`}</Example>
+                <Example info='<JSX/>'><JSX/></Example>
+                <Example info='[<JSX key="0"/>,"text",<JSX key="1"/>]'>{[<JSX/>,"text",<JSX/>]}</Example>
+                <Example info='{tag:"UU5.Bricks.Button", props:{content:"tag+props"}}'>{{tag:"UU5.Bricks.Button", props:{content:"tag+props"}}}</Example>
+                <Example info='{tag:"UU5.Bricks.Button", propsArray:[{content:"tag+propsArray"}]}'>{{tag:"UU5.Bricks.Button", propsArray:[{content:"tag+propsArray"}]}}</Example>
+              </UU5.Bricks.Section>
+            </div>
+          );
+        }
+      });
+
+      ReactDOM.render(<Page />, document.getElementById('renderHere'));
+    </script>
+  </body>
+</html>

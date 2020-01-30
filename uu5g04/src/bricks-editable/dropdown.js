@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import PropTypes from "prop-types";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-forms";
@@ -206,7 +203,8 @@ const DEFAULT_PROPS = [
   }
 ];
 
-export const Dropdown = createReactClass({
+export const Dropdown = UU5.Common.VisualComponent.create({
+  displayName: "Dropdown", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin],
   //@@viewOff:mixins
@@ -223,7 +221,7 @@ export const Dropdown = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    component: PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired
   },
   //@@viewOff:propTypes
 

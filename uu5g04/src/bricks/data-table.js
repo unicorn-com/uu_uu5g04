@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -30,7 +27,9 @@ import "./data-table.less";
 //@@viewOff:imports
 
 export const DataTable = UU5.Common.LsiMixin.withContext(
-  createReactClass({
+  UU5.Common.VisualComponent.create({
+    displayName: "DataTable", // for backward compatibility (test snapshots)
+
     //@@viewOn:mixins
     mixins: [
       UU5.Common.BaseMixin,
@@ -63,19 +62,19 @@ export const DataTable = UU5.Common.LsiMixin.withContext(
 
     //@@viewOn:propTypes
     propTypes: {
-      striped: PropTypes.bool,
-      bordered: PropTypes.bool,
-      hover: PropTypes.bool,
-      condensed: PropTypes.bool,
-      headerRow: PropTypes.arrayOf(
-        PropTypes.any //content props
+      striped: UU5.PropTypes.bool,
+      bordered: UU5.PropTypes.bool,
+      hover: UU5.PropTypes.bool,
+      condensed: UU5.PropTypes.bool,
+      headerRow: UU5.PropTypes.arrayOf(
+        UU5.PropTypes.any //content props
       ),
-      footerRow: PropTypes.arrayOf(
-        PropTypes.any //content props
+      footerRow: UU5.PropTypes.arrayOf(
+        UU5.PropTypes.any //content props
       ),
-      rows: PropTypes.arrayOf(
-        PropTypes.arrayOf(
-          PropTypes.any //content props
+      rows: UU5.PropTypes.arrayOf(
+        UU5.PropTypes.arrayOf(
+          UU5.PropTypes.any //content props
         )
       )
     },
@@ -193,7 +192,7 @@ export const DataTable = UU5.Common.LsiMixin.withContext(
         } else {
           props = { content: dataTable._checkLsiContent(cell), key: i };
         }
-        return React.createElement(brick, props);
+        return UU5.Common.Element.create(brick, props);
       });
     },
 
@@ -202,7 +201,7 @@ export const DataTable = UU5.Common.LsiMixin.withContext(
         typeof cell === "string" ||
         typeof cell === "number" || // number or string
         (typeof cell === "object" && (cell.lsi || cell === null)) || // empty string or lsi content
-        (typeof cell === "object" && typeof cell.type === "function")
+        UU5.Common.Element.isValid(cell)
       ); // react.element
     },
 

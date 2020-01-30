@@ -1,6 +1,3 @@
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 
@@ -12,7 +9,7 @@ const NAME = ns.name("Input");
 
 export const Input = withContext(
   UU5.Common.LsiMixin.withContext(
-    createReactClass({
+    UU5.Common.VisualComponent.create({
       displayName: NAME,
       //@@viewOn:mixins
       mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin],
@@ -50,22 +47,22 @@ export const Input = withContext(
 
       //@@viewOn:propTypes
       propTypes: {
-        value: PropTypes.string,
-        toolbarItems: PropTypes.arrayOf(
-          PropTypes.oneOfType([
-            PropTypes.shape({
-              type: PropTypes.oneOfType([PropTypes.oneOf(["button", "dropdown", "separator"]), PropTypes.func]),
-              props: PropTypes.oneOfType([PropTypes.func, PropTypes.object])
+        value: UU5.PropTypes.string,
+        toolbarItems: UU5.PropTypes.arrayOf(
+          UU5.PropTypes.oneOfType([
+            UU5.PropTypes.shape({
+              type: UU5.PropTypes.oneOfType([UU5.PropTypes.oneOf(["button", "dropdown", "separator"]), UU5.PropTypes.func]),
+              props: UU5.PropTypes.oneOfType([UU5.PropTypes.func, UU5.PropTypes.object])
             }),
-            PropTypes.element
+            UU5.PropTypes.element
           ])
         ),
-        placeholder: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-        readOnly: PropTypes.bool,
-        open: PropTypes.func,
-        close: PropTypes.func,
-        onBlur: PropTypes.func,
-        onChange: PropTypes.func
+        placeholder: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.object]),
+        readOnly: UU5.PropTypes.bool,
+        open: UU5.PropTypes.func,
+        close: UU5.PropTypes.func,
+        onBlur: UU5.PropTypes.func,
+        onChange: UU5.PropTypes.func
       },
       //@@viewOff:propTypes
 

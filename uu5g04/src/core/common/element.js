@@ -12,15 +12,26 @@
  */
 
 import React from "react";
+import { SYMBOL_COMPONENT, SYMBOL_INIT, SYMBOL_GUARD } from "./visual-component";
 
 export class Element {
   static create(...args) {
-    if (process.env.NODE_ENV === "test" && args[0] == null) {
+    let type = args[0];
+    if (process.env.NODE_ENV === "test" && type == null) {
       throw new Error(
         "Element type is: " +
-          args[0] +
+          type +
           ". You likely forgot to import necessary library, or forgot to export your component from the file it's defined in, or you might have mixed up default and named imports."
       );
+    }
+    if (type) {
+      let redirComponent = type[SYMBOL_COMPONENT];
+      if (redirComponent) {
+        args[0] = redirComponent;
+      } else {
+        let redirComponentInit = type[SYMBOL_INIT];
+        if (redirComponentInit && type[SYMBOL_GUARD] === type) args[0] = redirComponentInit();
+      }
     }
     return React.createElement(...args);
   }

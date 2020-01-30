@@ -11,8 +11,6 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 
 export const ControlsMixin = {
@@ -25,7 +23,7 @@ export const ControlsMixin = {
 
   //@@viewOn:propTypes
   propTypes: {
-    getForm: PropTypes.oneOfType([PropTypes.func, PropTypes.object])
+    getForm: UU5.PropTypes.oneOfType([UU5.PropTypes.func, UU5.PropTypes.object])
   },
   //@@viewOff:propTypes
 

@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "./forms-ns.js";
@@ -29,7 +26,8 @@ import "./checkbox.less";
 //@@viewOff:imports
 
 export const Checkbox = Context.withContext(
-  createReactClass({
+  UU5.Common.VisualComponent.create({
+    displayName: "Checkbox", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
     mixins: [
       UU5.Common.BaseMixin,
@@ -62,13 +60,13 @@ export const Checkbox = Context.withContext(
 
     //@@viewOn:propTypes
     propTypes: {
-      value: PropTypes.bool,
-      onIcon: PropTypes.string,
-      offIcon: PropTypes.string,
-      labelPosition: PropTypes.oneOf(["left", "right"]),
-      _radio: PropTypes.bool,
-      type: PropTypes.number,
-      bgStyleChecked: PropTypes.oneOf(["filled", "outline"])
+      value: UU5.PropTypes.bool,
+      onIcon: UU5.PropTypes.string,
+      offIcon: UU5.PropTypes.string,
+      labelPosition: UU5.PropTypes.oneOf(["left", "right"]),
+      _radio: UU5.PropTypes.bool,
+      type: UU5.PropTypes.number,
+      bgStyleChecked: UU5.PropTypes.oneOf(["filled", "outline"])
     },
     //@@viewOff:propTypes
 

@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -23,7 +20,8 @@ import Icon from "./icon.js";
 import "./rating.less";
 //@@viewOff:imports
 
-export const Rating = createReactClass({
+export const Rating = UU5.Common.VisualComponent.create({
+  displayName: "Rating", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -49,11 +47,11 @@ export const Rating = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    count: PropTypes.number,
-    value: PropTypes.number,
-    onClick: PropTypes.func,
-    icon: PropTypes.string,
-    size: PropTypes.oneOf(["s", "m", "l", "xl"])
+    count: UU5.PropTypes.number,
+    value: UU5.PropTypes.number,
+    onClick: UU5.PropTypes.func,
+    icon: UU5.PropTypes.string,
+    size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"])
   },
   //@@viewOff:propTypes
 
@@ -121,7 +119,8 @@ export const Rating = createReactClass({
 
 export default Rating;
 
-const RatingIcon = createReactClass({
+const RatingIcon = UU5.Common.VisualComponent.create({
+  displayName: "RatingIcon", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, UU5.Common.ColorSchemaMixin],
   //@@viewOff:mixins
@@ -148,9 +147,9 @@ const RatingIcon = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    onClick: PropTypes.func,
-    icon: PropTypes.string,
-    value: PropTypes.number
+    onClick: UU5.PropTypes.func,
+    icon: UU5.PropTypes.string,
+    value: UU5.PropTypes.number
   },
   //@@viewOff:propTypes
 

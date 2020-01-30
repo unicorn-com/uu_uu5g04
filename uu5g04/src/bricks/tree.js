@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -24,7 +21,8 @@ import Item from "./tree-item.js";
 import "./tree.less";
 //@@viewOff:imports
 
-export const Tree = createReactClass({
+export const Tree = UU5.Common.VisualComponent.create({
+  displayName: "Tree", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -51,11 +49,11 @@ export const Tree = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    items: PropTypes.array,
-    iconExpanded: PropTypes.string,
-    iconCollapsed: PropTypes.string,
-    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
-    allowTags: PropTypes.arrayOf(PropTypes.string)
+    items: UU5.PropTypes.array,
+    iconExpanded: UU5.PropTypes.string,
+    iconCollapsed: UU5.PropTypes.string,
+    size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
+    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string)
   },
   //@@viewOff:propTypes
 
@@ -103,7 +101,7 @@ export const Tree = createReactClass({
         iconExpanded={this.props.iconExpanded}
         iconCollapsed={this.props.iconCollapsed}
       >
-        {this.props.children && React.Children.toArray(this.props.children)}
+        {this.props.children && UU5.Common.Children.toArray(this.props.children)}
       </List>
     ) : null;
   }

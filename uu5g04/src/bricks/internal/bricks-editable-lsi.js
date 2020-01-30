@@ -1,3 +1,4 @@
+import UU5 from "uu5g04";
 export const FormsLsi = {
   common: {
     headerPlaceholder: {

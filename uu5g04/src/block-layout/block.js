@@ -12,16 +12,14 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import PropTypes from "prop-types";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import { TAG, css } from "./config.js";
 import Row from "./row.js";
 import LsiButton from "./_lsi-button.js";
 //@@viewOff:imports
 
-export const Block = createReactClass({
+export const Block = UU5.Common.VisualComponent.create({
+  displayName: "Block", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -64,23 +62,23 @@ export const Block = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    actions: PropTypes.arrayOf(
-      PropTypes.shape({
-        onClick: PropTypes.func.isRequired,
-        icon: PropTypes.string,
-        content: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-        active: PropTypes.bool,
-        activeIcon: PropTypes.string,
-        activeContent: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-        bgStyle: PropTypes.string,
-        borderRadius: PropTypes.string,
-        disabled: PropTypes.bool,
-        colorSchema: PropTypes.string
+    actions: UU5.PropTypes.arrayOf(
+      UU5.PropTypes.shape({
+        onClick: UU5.PropTypes.func.isRequired,
+        icon: UU5.PropTypes.string,
+        content: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string]),
+        active: UU5.PropTypes.bool,
+        activeIcon: UU5.PropTypes.string,
+        activeContent: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string]),
+        bgStyle: UU5.PropTypes.string,
+        borderRadius: UU5.PropTypes.string,
+        disabled: UU5.PropTypes.bool,
+        colorSchema: UU5.PropTypes.string
       })
     ),
-    menuColorSchema: PropTypes.string,
-    menuBgStyle: PropTypes.string,
-    menuBorderRadius: PropTypes.string
+    menuColorSchema: UU5.PropTypes.string,
+    menuBgStyle: UU5.PropTypes.string,
+    menuBorderRadius: UU5.PropTypes.string
   },
   //@@viewOff:propTypes
 

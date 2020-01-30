@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "../forms-ns.js";
@@ -64,7 +61,7 @@ const ICON_WIDTHS = {
 };
 
 export default UU5.Common.LsiMixin.withContext(
-  createReactClass({
+  UU5.Common.VisualComponent.create({
     displayName: "text-input",
     //@@viewOn:mixins
     mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.LsiMixin],
@@ -174,28 +171,28 @@ export default UU5.Common.LsiMixin.withContext(
 
     //@@viewOn:propTypes
     propTypes: {
-      value: PropTypes.string,
-      placeholder: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-      type: PropTypes.oneOf([INPUT_TYPE_TEXT, INPUT_TYPE_PASSWORD, INPUT_TYPE_TEXTAREA]),
-      onChange: PropTypes.func,
-      onBlur: PropTypes.func,
-      onFocus: PropTypes.func,
-      onKeyDown: PropTypes.func,
-      icon: PropTypes.string,
-      loading: PropTypes.bool,
-      rows: PropTypes.number,
-      iconOnClick: PropTypes.func,
-      autoResize: PropTypes.bool,
-      maxRows: PropTypes.number,
-      feedback: PropTypes.string,
-      borderRadius: PropTypes.string,
-      bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-      elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-      inputWidth: PropTypes.string,
-      colorSchema: PropTypes.string,
-      size: PropTypes.string,
-      prefix: PropTypes.any,
-      suffix: PropTypes.any
+      value: UU5.PropTypes.string,
+      placeholder: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string]),
+      type: UU5.PropTypes.oneOf([INPUT_TYPE_TEXT, INPUT_TYPE_PASSWORD, INPUT_TYPE_TEXTAREA]),
+      onChange: UU5.PropTypes.func,
+      onBlur: UU5.PropTypes.func,
+      onFocus: UU5.PropTypes.func,
+      onKeyDown: UU5.PropTypes.func,
+      icon: UU5.PropTypes.string,
+      loading: UU5.PropTypes.bool,
+      rows: UU5.PropTypes.number,
+      iconOnClick: UU5.PropTypes.func,
+      autoResize: UU5.PropTypes.bool,
+      maxRows: UU5.PropTypes.number,
+      feedback: UU5.PropTypes.string,
+      borderRadius: UU5.PropTypes.string,
+      bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+      elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+      inputWidth: UU5.PropTypes.string,
+      colorSchema: UU5.PropTypes.string,
+      size: UU5.PropTypes.string,
+      prefix: UU5.PropTypes.any,
+      suffix: UU5.PropTypes.any
     },
     //@@viewOff:propTypes
 

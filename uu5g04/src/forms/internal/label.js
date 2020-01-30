@@ -12,16 +12,14 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "../forms-ns.js";
 
 import "./label.less";
 //@@viewOff:imports
 
-export default createReactClass({
+export default UU5.Common.VisualComponent.create({
+  displayName: "label", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -48,10 +46,10 @@ export default createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    for: PropTypes.string,
-    required: PropTypes.bool,
-    width: PropTypes.string,
-    tooltipIcon: PropTypes.string
+    for: UU5.PropTypes.string,
+    required: UU5.PropTypes.bool,
+    width: UU5.PropTypes.string,
+    tooltipIcon: UU5.PropTypes.string
   },
   //@@viewOff:propTypes
 
@@ -141,7 +139,7 @@ export default createReactClass({
       <UU5.Bricks.Div {...mainAttrs}>
         <label {...labelAttrs}>
           {UU5.Common.Tools.wrapIfExists(
-            React.Fragment,
+            UU5.Common.Fragment,
             <span className={this.getClassName("labelContent")}>{this.getChildren()}</span>,
             this._getTooltip()
           )}

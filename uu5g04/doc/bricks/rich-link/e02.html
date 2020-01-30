@@ -43,14 +43,11 @@
 
   <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
   <script type="text/babel">
-    import React from "react";
-    import createReactClass from "create-react-class";
-    import ReactDOM from "react-dom";
     import UU5 from "uu5g04";
     import "uu5g04-bricks";
     import "uu5g04-forms";
 
-    const Page = createReactClass({
+    const Page = UU5.Common.VisualComponent.create({
       getInitialState() {
         return { error: null };
       },
@@ -71,48 +68,48 @@
         return (
           <UU5.Bricks.Container>
             <UU5.Bricks.Row header="href">
-              <UU5.Bricks.Column colWidth="xs-12 s-2">
+              <UU5.Bricks.Column colWidth="xs-12 s-6">
                 {/*@@viewOn:0*/}
                 <UU5.Bricks.RichLink href="https://www.unicorn.com/" />
                 {/*@@viewOff:0*/}
               </UU5.Bricks.Column>
             </UU5.Bricks.Row>
             <UU5.Bricks.Row header="type">
-              <UU5.Bricks.Column colWidth="xs-12 s-2" header="full">
+              <UU5.Bricks.Column colWidth="xs-12 m-6 l-4 xl-3" header="full">
                 {/*@@viewOn:0*/}
                 <UU5.Bricks.RichLink href="https://www.unicorn.com/" type="full" />
                 {/*@@viewOff:0*/}
               </UU5.Bricks.Column>
-              <UU5.Bricks.Column colWidth="xs-12 s-2" header="simple">
+              <UU5.Bricks.Column colWidth="xs-12 m-6 l-4 xl-3" header="simple">
                 {/*@@viewOn:0*/}
                 <UU5.Bricks.RichLink href="https://www.unicorn.com/" type="simple" />
                 {/*@@viewOff:0*/}
               </UU5.Bricks.Column>
             </UU5.Bricks.Row>
             <UU5.Bricks.Row header="target">
-              <UU5.Bricks.Column colWidth="xs-12 s-2" header="_blank">
+              <UU5.Bricks.Column colWidth="xs-12 m-6 l-4 xl-3" header="_blank">
                 {/*@@viewOn:0*/}
                 <UU5.Bricks.RichLink href="https://www.unicorn.com/" target="_blank" />
                 {/*@@viewOff:0*/}
               </UU5.Bricks.Column>
-              <UU5.Bricks.Column colWidth="xs-12 s-2" header="_parent">
+              <UU5.Bricks.Column colWidth="xs-12 m-6 l-4 xl-3" header="_parent">
                 {/*@@viewOn:0*/}
                 <UU5.Bricks.RichLink href="https://www.unicorn.com/" target="_parent" />
                 {/*@@viewOff:0*/}
               </UU5.Bricks.Column>
-              <UU5.Bricks.Column colWidth="xs-12 s-2" header="_self">
+              <UU5.Bricks.Column colWidth="xs-12 m-6 l-4 xl-3" header="_self">
                 {/*@@viewOn:0*/}
                 <UU5.Bricks.RichLink href="https://www.unicorn.com/" target="_self" />
                 {/*@@viewOff:0*/}
               </UU5.Bricks.Column>
-              <UU5.Bricks.Column colWidth="xs-12 s-2" header="_top">
+              <UU5.Bricks.Column colWidth="xs-12 m-6 l-4 xl-3" header="_top">
                 {/*@@viewOn:0*/}
                 <UU5.Bricks.RichLink href="https://www.unicorn.com/" target="_top" />
                 {/*@@viewOff:0*/}
               </UU5.Bricks.Column>
             </UU5.Bricks.Row>
             <UU5.Bricks.Row header="disabled">
-              <UU5.Bricks.Column colWidth="xs-12 s-2">
+              <UU5.Bricks.Column colWidth="xs-12 m-6 l-4 xl-3">
                 {/*@@viewOn:0*/}
                 <UU5.Bricks.RichLink href="https://www.unicorn.com/" disabled />
                 {/*@@viewOff:0*/}
@@ -124,7 +121,7 @@
     });
 
     try {
-      ReactDOM.render(<Page />, document.getElementById('uu5Example'));
+      UU5.Common.DOM.render(<Page />, document.getElementById('uu5Example'));
     } catch (e) {
       document.getElementById('uu5Example').innerHTML = "Demo will be available "
     }

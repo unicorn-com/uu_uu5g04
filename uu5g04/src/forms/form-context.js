@@ -11,7 +11,6 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
 import UU5 from "uu5g04";
 
 const defaults = {
@@ -24,8 +23,8 @@ export const FormContext = UU5.Common.Context.create();
 export class Context {
   static withContext(Component) {
     // disable context for jest tests - enzyme doesn't support React 16.3 Context API
-    if (!React.createContext || process.env.NODE_ENV === "test") return Component;
-    let forwardRef = React.forwardRef((props, ref) => {
+    if (!UU5.Common.Context.create || process.env.NODE_ENV === "test") return Component;
+    let forwardRef = UU5.Common.Reference.forward((props, ref) => {
       return (
         <FormContext.Consumer>
           {({ readOnly, values, labelColWidth, inputColWidth, labelAlignment }) => {

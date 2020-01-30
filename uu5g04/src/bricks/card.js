@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Section from "./section.js";
@@ -24,7 +21,9 @@ const ClassNames = UU5.Common.ClassNames;
 import "./card.less";
 //@@viewOff:imports
 
-export const Card = createReactClass({
+export const Card = UU5.Common.VisualComponent.create({
+  displayName: "Card", // for backward compatibility (test snapshots)
+
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -54,14 +53,14 @@ export const Card = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-    elevationHover: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-    inline: PropTypes.bool,
-    width: PropTypes.number,
-    minWidth: PropTypes.number,
-    noSpaces: PropTypes.bool,
-    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-    borderRadius: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+    elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+    elevationHover: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+    inline: UU5.PropTypes.bool,
+    width: UU5.PropTypes.number,
+    minWidth: UU5.PropTypes.number,
+    noSpaces: UU5.PropTypes.bool,
+    bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+    borderRadius: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number])
   },
   //@@viewOff:propTypes
 
@@ -144,7 +143,7 @@ export const Card = createReactClass({
   //@@viewOn:render
   render() {
     return this.getNestingLevel() ? (
-      <Section {...this._getMainProps()}>{React.Children.toArray(this.props.children)}</Section>
+      <Section {...this._getMainProps()}>{UU5.Common.Children.toArray(this.props.children)}</Section>
     ) : null;
   }
   //@@viewOff:render

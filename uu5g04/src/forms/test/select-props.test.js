@@ -12,8 +12,6 @@
  */
 
 //@@viewOn:imports
-import createReactClass from "create-react-class";
-import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-forms";
@@ -21,7 +19,7 @@ import "uu5g04-forms";
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
-const MyAllowTagsComponents = createReactClass({
+const MyAllowTagsComponents = UU5.Common.VisualComponent.create({
   mixins: [UU5.Common.BaseMixin],
   statics: { tagName: "UU5.Example.MyCompButton", classNames: { main: "mytr" } },
   render() {
@@ -29,7 +27,7 @@ const MyAllowTagsComponents = createReactClass({
   }
 });
 
-const MixinPropsFunction = createReactClass({
+const MixinPropsFunction = UU5.Common.VisualComponent.create({
   mixins: [UU5.Common.BaseMixin],
 
   getInitialState: () => {

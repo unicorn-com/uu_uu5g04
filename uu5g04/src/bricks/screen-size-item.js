@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -26,7 +23,8 @@ import "./screen-size-item.less";
 
 const SCREEN_SIZES = ["xs", "s", "m", "l", "xl"];
 
-export default createReactClass({
+export default UU5.Common.VisualComponent.create({
+  displayName: "screen-size-item", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.NestingLevelMixin, UU5.Common.ContentMixin],
   //@@viewOff:mixins
@@ -49,7 +47,7 @@ export default createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    screenSize: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.oneOf(SCREEN_SIZES))]).isRequired
+    screenSize: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.arrayOf(UU5.PropTypes.oneOf(SCREEN_SIZES))]).isRequired
   },
   //@@viewOff:propTypes
 
@@ -91,11 +89,11 @@ export default createReactClass({
     let children =
       this.getNestingLevel() === "inline" ? (
         <Span {...this.getMainPropsToPass()} content={this.props.content}>
-          {this.props.children && React.Children.toArray(this.props.children)}
+          {this.props.children && UU5.Common.Children.toArray(this.props.children)}
         </Span>
       ) : (
         <Div {...this.getMainPropsToPass()} content={this.props.content}>
-          {this.props.children && React.Children.toArray(this.props.children)}
+          {this.props.children && UU5.Common.Children.toArray(this.props.children)}
         </Div>
       );
     return children;

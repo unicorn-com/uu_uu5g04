@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -36,18 +33,41 @@ const RIGHT = "right";
 const TOP = "top";
 const BOTTOM = "bottom";
 const CONTENT = "content";
-const PAGE_CONTENT = PropTypes.oneOfType([
-  PropTypes.shape({
-    tag: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-    props: PropTypes.arrayOf(PropTypes.object)
+const PAGE_CONTENT = UU5.PropTypes.oneOfType([
+  UU5.PropTypes.shape({
+    tag: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.element]),
+    props: UU5.PropTypes.arrayOf(UU5.PropTypes.object)
   }),
-  PropTypes.node,
-  PropTypes.element,
-  PropTypes.string,
-  PropTypes.number
+  UU5.PropTypes.node,
+  UU5.PropTypes.element,
+  UU5.PropTypes.string,
+  UU5.PropTypes.number
 ]); //content (bodyItem, node, element, string, number)
 
-export const Page = createReactClass({
+function checkScreenSizeDependableProp(screenSize, propValue) {
+  let result = false;
+
+  if (typeof propValue === "string") {
+    propValue
+      .trim()
+      .split(" ")
+      .some(size => {
+        if (screenSize == size) {
+          result = true;
+          return true;
+        } else {
+          return false;
+        }
+      });
+  } else if (typeof propValue === "boolean") {
+    result = propValue;
+  }
+
+  return result;
+}
+
+export const Page = UU5.Common.VisualComponent.create({
+  displayName: "Page", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -62,7 +82,7 @@ export const Page = createReactClass({
 
   //@@viewOn:statics
   statics: {
-    tagName: ns.name("page"),
+    tagName: ns.name("Page"),
     nestingLevel: "page",
     classNames: {
       main: ns.css("page"),
@@ -114,7 +134,7 @@ export const Page = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    type: PropTypes.oneOf([
+    type: UU5.PropTypes.oneOf([
       "0",
       "1",
       "2",
@@ -146,19 +166,19 @@ export const Page = createReactClass({
       13,
       14
     ]),
-    fullPage: PropTypes.bool,
+    fullPage: UU5.PropTypes.bool,
 
-    topWrapperProps: PropTypes.object,
-    bottomWrapperProps: PropTypes.object,
-    leftWrapperProps: PropTypes.object,
-    rightWrapperProps: PropTypes.object,
-    contentWrapperProps: PropTypes.object,
-    appLayerWrapperProps: PropTypes.object,
-    systemLayerWrapperProps: PropTypes.object,
-    switchElevationTopBottom: PropTypes.bool,
-    switchElevationLeftRight: PropTypes.bool,
-    isLeftOpen: PropTypes.bool,
-    isRightOpen: PropTypes.bool,
+    topWrapperProps: UU5.PropTypes.object,
+    bottomWrapperProps: UU5.PropTypes.object,
+    leftWrapperProps: UU5.PropTypes.object,
+    rightWrapperProps: UU5.PropTypes.object,
+    contentWrapperProps: UU5.PropTypes.object,
+    appLayerWrapperProps: UU5.PropTypes.object,
+    systemLayerWrapperProps: UU5.PropTypes.object,
+    switchElevationTopBottom: UU5.PropTypes.bool,
+    switchElevationLeftRight: UU5.PropTypes.bool,
+    isLeftOpen: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string]),
+    isRightOpen: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string]),
 
     top: PAGE_CONTENT, //content (bodyItem, node, element, string, number)
     bottom: PAGE_CONTENT, //content (bodyItem, node, element, string, number)
@@ -169,44 +189,54 @@ export const Page = createReactClass({
     rightOpen: PAGE_CONTENT, //content (bodyItem, node, element, string, number)
     rightClosed: PAGE_CONTENT, //content (bodyItem, node, element, string, number)
 
-    alertBus: PropTypes.oneOfType([
-      PropTypes.shape({
-        tag: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-        props: PropTypes.arrayOf(PropTypes.object)
+    alertBus: UU5.PropTypes.oneOfType([
+      UU5.PropTypes.shape({
+        tag: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.element]),
+        props: UU5.PropTypes.arrayOf(UU5.PropTypes.object)
       }),
-      PropTypes.node,
-      PropTypes.element
+      UU5.PropTypes.node,
+      UU5.PropTypes.element
     ]), //content (bodyItem, node, element)
-    modal: PropTypes.oneOfType([
-      PropTypes.shape({
-        tag: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-        props: PropTypes.arrayOf(PropTypes.object)
+    modal: UU5.PropTypes.oneOfType([
+      UU5.PropTypes.shape({
+        tag: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.element]),
+        props: UU5.PropTypes.arrayOf(UU5.PropTypes.object)
       }),
-      PropTypes.node,
-      PropTypes.element
+      UU5.PropTypes.node,
+      UU5.PropTypes.element
     ]), //content (bodyItem, node, element)
-    appLayerContent: PropTypes.any, //content
-    systemLayerContent: PropTypes.any, //content
-    leftWidth: PropTypes.string, // 'xs-0 s-20 m-15 l-15 xl-30' [!|][xs|s|m|l|xl][-nn][-nn]
-    rightWidth: PropTypes.string, // 'xs-0 s-20 m-15 l-15 xl-30'
-    leftSwipe: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
-    rightSwipe: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
-    topFixed: PropTypes.oneOfType([PropTypes.bool, PropTypes.oneOf(["always", "smart", "none"])]),
-    topFixedHeight: PropTypes.number,
-    topFixedScrolledDownOffset: PropTypes.number,
-    bottomFixed: PropTypes.oneOfType([PropTypes.bool, PropTypes.oneOf(["always", "smart", "none"])]),
-    bottomFixedHeight: PropTypes.number,
-    leftFixed: PropTypes.bool,
-    rightFixed: PropTypes.bool,
-    leftRelative: PropTypes.string, // 'xs s m l xl'
-    rightRelative: PropTypes.string, // 'xs s m l xl'
-    leftResizable: PropTypes.oneOfType([PropTypes.bool, PropTypes.oneOf(["open", "closed"])]),
-    rightResizable: PropTypes.oneOfType([PropTypes.bool, PropTypes.oneOf(["open", "closed"])]),
-    onLeftResize: PropTypes.func,
-    onRightResize: PropTypes.func,
-    useDnD: PropTypes.bool,
-    overlayTop: PropTypes.bool,
-    content: PropTypes.any // property from content mixin
+    appLayerContent: UU5.PropTypes.any, //content
+    systemLayerContent: UU5.PropTypes.any, //content
+    leftWidth: UU5.PropTypes.string, // 'xs-0 s-20 m-15 l-15 xl-30' [!|][xs|s|m|l|xl][-nn][-nn]
+    rightWidth: UU5.PropTypes.string, // 'xs-0 s-20 m-15 l-15 xl-30'
+    leftSwipe: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.number]),
+    rightSwipe: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.number]),
+    topFixed: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.oneOf(["always", "smart", "none"])]),
+    topFixedHeight: UU5.PropTypes.number,
+    topFixedScrolledDownOffset: UU5.PropTypes.number,
+    bottomFixed: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.oneOf(["always", "smart", "none"])]),
+    bottomFixedHeight: UU5.PropTypes.number,
+    leftFixed: UU5.PropTypes.bool,
+    rightFixed: UU5.PropTypes.bool,
+    leftRelative: UU5.PropTypes.string, // 'xs s m l xl'
+    rightRelative: UU5.PropTypes.string, // 'xs s m l xl'
+    leftResizable: UU5.PropTypes.oneOfType([
+      UU5.PropTypes.bool,
+      UU5.PropTypes.string,
+      UU5.PropTypes.oneOf(["open", "closed"])
+    ]),
+    rightResizable: UU5.PropTypes.oneOfType([
+      UU5.PropTypes.bool,
+      UU5.PropTypes.string,
+      UU5.PropTypes.oneOf(["open", "closed"])
+    ]),
+    onLeftResize: UU5.PropTypes.func,
+    onRightResize: UU5.PropTypes.func,
+    useDnD: UU5.PropTypes.bool,
+    overlayTop: UU5.PropTypes.bool,
+    content: UU5.PropTypes.any, // property from content mixin
+    showLeftToggleButton: UU5.PropTypes.bool,
+    showRightToggleButton: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 
@@ -258,7 +288,9 @@ export const Page = createReactClass({
       onLeftResize: null,
       onRightResize: null,
       useDnD: false,
-      overlayTop: false
+      overlayTop: false,
+      showLeftToggleButton: false,
+      showRightToggleButton: false
     };
   },
   //@@viewOff:getDefaultProps
@@ -277,7 +309,8 @@ export const Page = createReactClass({
     // state
     return {
       widths: this._setWidths(),
-      scrolledDown: this.props.topFixed === "always" && window.pageYOffset >= this.props.topFixedScrolledDownOffset
+      scrolledDown: this.props.topFixed === "always" && window.pageYOffset >= this.props.topFixedScrolledDownOffset,
+      popoverProviderValue: { getPopover: this.getPopover }
     };
   },
 
@@ -541,7 +574,7 @@ export const Page = createReactClass({
       let [key, minWidth, maxWidth] = split.split("-");
       let match = key.match(this.getDefault().regexpEclMark);
       let float = match && match.length > 0;
-      if (float && (minWidth && !maxWidth)) {
+      if (float && minWidth && !maxWidth) {
         maxWidth = minWidth;
         minWidth = 0;
       }
@@ -685,45 +718,35 @@ export const Page = createReactClass({
   },
 
   _isLeftRelative() {
-    let result = false;
-
-    if (typeof this.props.leftRelative === "string") {
-      let screenSize = this.getScreenSize();
-      this.props.leftRelative
-        .trim()
-        .split(" ")
-        .some(size => {
-          if (screenSize == size) {
-            result = true;
-            return true;
-          } else {
-            return false;
-          }
-        });
-    }
-
-    return result;
+    return checkScreenSizeDependableProp(this.getScreenSize(), this.props.leftRelative);
   },
 
   _isRightRelative() {
-    let result = false;
+    return checkScreenSizeDependableProp(this.getScreenSize(), this.props.rightRelative);
+  },
 
-    if (typeof this.props.rightRelative === "string") {
-      let screenSize = this.getScreenSize();
-      this.props.rightRelative
-        .trim()
-        .split(" ")
-        .some(size => {
-          if (screenSize == size) {
-            result = true;
-            return true;
-          } else {
-            return false;
-          }
-        });
+  _isLeftResizable() {
+    if (this.props.leftResizable === "open" || this.props.leftResizable === "closed") {
+      return this.props.leftResizable;
+    } else {
+      return checkScreenSizeDependableProp(this.getScreenSize(), this.props.leftResizable);
     }
+  },
 
-    return result;
+  _isRightResizable() {
+    if (this.props.rightResizable === "open" || this.props.rightResizable === "closed") {
+      return this.props.rightResizable;
+    } else {
+      return checkScreenSizeDependableProp(this.getScreenSize(), this.props.rightResizable);
+    }
+  },
+
+  _isLeftOpen() {
+    return checkScreenSizeDependableProp(this.getScreenSize(), this.props.isLeftOpen);
+  },
+
+  _isRightOpen() {
+    return checkScreenSizeDependableProp(this.getScreenSize(), this.props.isRightOpen);
   },
 
   _getPageColumn(component, name) {
@@ -743,9 +766,9 @@ export const Page = createReactClass({
         }
 
         if (component.tag) {
-          result = React.createElement(UU5.Common.Tools.checkTag(component), newProps);
-        } else if (component.type && typeof component.type === "function") {
-          result = React.cloneElement(component, newProps);
+          result = UU5.Common.Element.create(UU5.Common.Tools.checkTag(component), newProps);
+        } else if (UU5.Common.Element.isValid(component)) {
+          result = UU5.Common.Element.clone(component, newProps);
         }
       } else {
         result = component;
@@ -835,8 +858,9 @@ export const Page = createReactClass({
         newProps.topOverlaysContent = this.props.overlayTop;
         newProps.relative = this._isLeftRelative();
         newProps.onUpdate = this._onLeftColumnUpdate;
-        newProps.resizable = this.props.leftResizable;
+        newProps.resizable = this._isLeftResizable();
         newProps.onResize = this._onColumnResize;
+        newProps.showToggleButton = this.props.showLeftToggleButton;
         newProps.ref_ = left => (this._pageLeft = left);
         break;
       case RIGHT:
@@ -860,8 +884,9 @@ export const Page = createReactClass({
         newProps.topOverlaysContent = this.props.overlayTop;
         newProps.relative = this._isRightRelative();
         newProps.onUpdate = this._onRightColumnUpdate;
-        newProps.resizable = this.props.rightResizable;
+        newProps.resizable = this._isRightResizable();
         newProps.onResize = this._onColumnResize;
+        newProps.showToggleButton = this.props.showRightToggleButton;
         newProps.ref_ = right => (this._pageRight = right);
         break;
       case TOP:
@@ -904,9 +929,9 @@ export const Page = createReactClass({
         ref_: alertBus => (this._alertBus = alertBus)
       });
       if (this.props.alertBus.tag) {
-        alertBus = React.createElement(UU5.Common.Tools.checkTag(this.props.alertBus.tag), props);
-      } else if (this.props.alertBus.type && typeof this.props.alertBus.type === "function") {
-        alertBus = React.cloneElement(this.props.alertBus, props);
+        alertBus = UU5.Common.Element.create(UU5.Common.Tools.checkTag(this.props.alertBus.tag), props);
+      } else if (UU5.Common.Element.isValid(this.props.alertBus)) {
+        alertBus = UU5.Common.Element.clone(this.props.alertBus, props);
       }
     }
     return alertBus;
@@ -975,9 +1000,9 @@ export const Page = createReactClass({
         controlled: false
       });
       if (this.props.modal.tag) {
-        modal = React.createElement(UU5.Common.Tools.checkTag(this.props.modal.tag), props);
-      } else if (this.props.modal.type && typeof this.props.modal.type === "function") {
-        modal = React.cloneElement(this.props.modal, props);
+        modal = UU5.Common.Element.create(UU5.Common.Tools.checkTag(this.props.modal.tag), props);
+      } else if (UU5.Common.Element.isValid(this.props.modal)) {
+        modal = UU5.Common.Element.clone(this.props.modal, props);
       }
     }
     return modal;
@@ -1073,9 +1098,9 @@ export const Page = createReactClass({
         ref_: top => (this._top = top)
       });
       if (this.props.top.tag) {
-        wrapperContent = React.createElement(UU5.Common.Tools.checkTag(this.props.top.tag), props);
-      } else if (this.props.top.type && typeof this.props.top.type === "function") {
-        wrapperContent = React.cloneElement(this.props.top, props);
+        wrapperContent = UU5.Common.Element.create(UU5.Common.Tools.checkTag(this.props.top.tag), props);
+      } else if (UU5.Common.Element.isValid(this.props.top)) {
+        wrapperContent = UU5.Common.Element.clone(this.props.top, props);
       }
     } else {
       wrapperContent = this.props.top;
@@ -1109,9 +1134,9 @@ export const Page = createReactClass({
         ref_: bottom => (this._bottom = bottom)
       });
       if (this.props.bottom.tag) {
-        wrapperContent = React.createElement(UU5.Common.Tools.checkTag(this.props.bottom.tag), props);
-      } else if (this.props.bottom.type && typeof this.props.bottom.type === "function") {
-        wrapperContent = React.cloneElement(this.props.bottom, props);
+        wrapperContent = UU5.Common.Element.create(UU5.Common.Tools.checkTag(this.props.bottom.tag), props);
+      } else if (UU5.Common.Element.isValid(this.props.bottom)) {
+        wrapperContent = UU5.Common.Element.clone(this.props.bottom, props);
       }
     } else {
       wrapperContent = this.props.bottom;
@@ -1329,12 +1354,7 @@ export const Page = createReactClass({
   _getContentDiv() {
     return (
       <Div className={this.getClassName("contentBody")} pureRender>
-        <UU5.Bricks.Popover.Context.Provider value={{ getPopover: this.getPopover }}>
-          <UpdateWrapper
-            preventRender={this._preventContentRender}
-            content={this.props.content || this.props.children}
-          />
-        </UU5.Bricks.Popover.Context.Provider>
+        <UpdateWrapper preventRender={this._preventContentRender} content={this.props.content || this.props.children} />
       </Div>
     );
   },
@@ -1393,7 +1413,7 @@ export const Page = createReactClass({
             openContent={this._getLeftContent().open}
             closedContent={this._getLeftContent().closed}
             block={!width.floatLeft}
-            open={this.props.isLeftOpen}
+            open={this._isLeftOpen()}
           />
           <Div
             {...this._getColumnProps(
@@ -1420,7 +1440,7 @@ export const Page = createReactClass({
             closedContent={this._getRightContent().closed}
             block={!width.floatRight}
             right={true}
-            open={this.props.isRightOpen && !this.props.isLeftOpen}
+            open={this._isRightOpen() && !this._isLeftOpen()}
           />
           <ResizeObserver onResize={this._onContentResize} />
         </Row>
@@ -1459,7 +1479,7 @@ export const Page = createReactClass({
             openContent={this._getLeftContent().open}
             closedContent={this._getLeftContent().closed}
             block={!width.floatLeft}
-            open={this.props.isLeftOpen}
+            open={this._isLeftOpen()}
           />
           <Div
             className={this.getClassName("flex") + " " + this.getClassName("flexBasis")}
@@ -1493,7 +1513,7 @@ export const Page = createReactClass({
             closedContent={this._getRightContent().closed}
             block={!width.floatRight}
             right={true}
-            open={this.props.isRightOpen && !this.props.isLeftOpen}
+            open={this._isRightOpen() && !this._isLeftOpen()}
           />
         </Row>
       </Wrapper>
@@ -1529,7 +1549,7 @@ export const Page = createReactClass({
             openContent={this._getLeftContent().open}
             closedContent={this._getLeftContent().closed}
             block={!width.floatLeft}
-            open={this.props.isLeftOpen}
+            open={this._isLeftOpen()}
           />
           <Div
             className={this.getClassName("flex") + " " + this.getClassName("flexBasis")}
@@ -1565,7 +1585,7 @@ export const Page = createReactClass({
             closedContent={this._getRightContent().closed}
             block={!width.floatRight}
             right={true}
-            open={this.props.isRightOpen && !this.props.isLeftOpen}
+            open={this._isRightOpen() && !this._isLeftOpen()}
           />
         </Row>
       </Wrapper>
@@ -1601,7 +1621,7 @@ export const Page = createReactClass({
             openContent={this._getLeftContent().open}
             closedContent={this._getLeftContent().closed}
             block={!width.floatLeft}
-            open={this.props.isLeftOpen}
+            open={this._isLeftOpen()}
           />
           <Div
             ref_={content => (this._pageContent = content)}
@@ -1634,7 +1654,7 @@ export const Page = createReactClass({
             closedContent={this._getRightContent().closed}
             block={!width.floatRight}
             right={true}
-            open={this.props.isRightOpen && !this.props.isLeftOpen}
+            open={this._isRightOpen() && !this._isLeftOpen()}
           />
           <ResizeObserver onResize={this._onContentResize} />
         </Row>
@@ -1674,7 +1694,7 @@ export const Page = createReactClass({
             openContent={this._getLeftContent().open}
             closedContent={this._getLeftContent().closed}
             block={!width.floatLeft}
-            open={this.props.isLeftOpen}
+            open={this._isLeftOpen()}
           />
           <Div
             className={this.getClassName("flex") + " " + this.getClassName("flexBasis")}
@@ -1705,7 +1725,7 @@ export const Page = createReactClass({
                 closedContent={this._getRightContent().closed}
                 block={!width.floatRight}
                 right={true}
-                open={this.props.isRightOpen && !this.props.isLeftOpen}
+                open={this._isRightOpen() && !this._isLeftOpen()}
               />
               <ResizeObserver onResize={this._onContentResize} />
             </Row>
@@ -1749,7 +1769,7 @@ export const Page = createReactClass({
                 openContent={this._getLeftContent().open}
                 closedContent={this._getLeftContent().closed}
                 block={!width.floatLeft}
-                open={this.props.isLeftOpen}
+                open={this._isLeftOpen()}
               />
               <Div
                 {...this._getColumnProps(
@@ -1780,7 +1800,7 @@ export const Page = createReactClass({
             closedContent={this._getRightContent().closed}
             block={!width.floatRight}
             right={true}
-            open={this.props.isRightOpen && !this.props.isLeftOpen}
+            open={this._isRightOpen() && !this._isLeftOpen()}
           />
         </Row>
 
@@ -1820,7 +1840,7 @@ export const Page = createReactClass({
             openContent={this._getLeftContent().open}
             closedContent={this._getLeftContent().closed}
             block={!width.floatLeft}
-            open={this.props.isLeftOpen}
+            open={this._isLeftOpen()}
           />
           <Div
             className={this.getClassName("flex") + " " + this.getClassName("flexBasis")}
@@ -1852,7 +1872,7 @@ export const Page = createReactClass({
                 closedContent={this._getRightContent().closed}
                 block={!width.floatRight}
                 right={true}
-                open={this.props.isRightOpen && !this.props.isLeftOpen}
+                open={this._isRightOpen() && !this._isLeftOpen()}
               />
               <ResizeObserver onResize={this._onContentResize} />
             </Row>
@@ -1895,7 +1915,7 @@ export const Page = createReactClass({
                 openContent={this._getLeftContent().open}
                 closedContent={this._getLeftContent().closed}
                 block={!width.floatLeft}
-                open={this.props.isLeftOpen}
+                open={this._isLeftOpen()}
               />
               <Div
                 {...this._getColumnProps(
@@ -1924,7 +1944,7 @@ export const Page = createReactClass({
             closedContent={this._getRightContent().closed}
             block={!width.floatRight}
             right={true}
-            open={this.props.isRightOpen && !this.props.isLeftOpen}
+            open={this._isRightOpen() && !this._isLeftOpen()}
           />
           <ResizeObserver onResize={this._onContentResize} />
         </Row>
@@ -1962,7 +1982,7 @@ export const Page = createReactClass({
             openContent={this._getLeftContent().open}
             closedContent={this._getLeftContent().closed}
             block={!width.floatLeft}
-            open={this.props.isLeftOpen}
+            open={this._isLeftOpen()}
           />
           <Div
             className={this.getClassName("flex") + " " + this.getClassName("flexBasis")}
@@ -1994,7 +2014,7 @@ export const Page = createReactClass({
                 closedContent={this._getRightContent().closed}
                 block={!width.floatRight}
                 right={true}
-                open={this.props.isRightOpen && !this.props.isLeftOpen}
+                open={this._isRightOpen() && !this._isLeftOpen()}
               />
             </Row>
             {this._getBottom()}
@@ -2034,7 +2054,7 @@ export const Page = createReactClass({
             openContent={this._getLeftContent().open}
             closedContent={this._getLeftContent().closed}
             block={!width.floatLeft}
-            open={this.props.isLeftOpen}
+            open={this._isLeftOpen()}
           />
           <Div
             className={this.getClassName("flex") + " " + this.getClassName("flexBasis")}
@@ -2070,7 +2090,7 @@ export const Page = createReactClass({
                 closedContent={this._getRightContent().closed}
                 block={!width.floatRight}
                 right={true}
-                open={this.props.isRightOpen && !this.props.isLeftOpen}
+                open={this._isRightOpen() && !this._isLeftOpen()}
               />
             </Row>
           </Div>
@@ -2108,7 +2128,7 @@ export const Page = createReactClass({
             openContent={this._getLeftContent().open}
             closedContent={this._getLeftContent().closed}
             block={!width.floatLeft}
-            open={this.props.isLeftOpen}
+            open={this._isLeftOpen()}
           />
           <Div
             className={this.getClassName("flex") + " " + this.getClassName("flexBasis")}
@@ -2142,7 +2162,7 @@ export const Page = createReactClass({
                 closedContent={this._getRightContent().closed}
                 block={!width.floatRight}
                 right={true}
-                open={this.props.isRightOpen && !this.props.isLeftOpen}
+                open={this._isRightOpen() && !this._isLeftOpen()}
               />
               <ResizeObserver onResize={this._onContentResize} />
             </Row>
@@ -2189,7 +2209,7 @@ export const Page = createReactClass({
                 openContent={this._getLeftContent().open}
                 closedContent={this._getLeftContent().closed}
                 block={!width.floatLeft}
-                open={this.props.isLeftOpen}
+                open={this._isLeftOpen()}
               />
               <Div
                 {...this._getColumnProps(
@@ -2220,7 +2240,7 @@ export const Page = createReactClass({
             closedContent={this._getRightContent().closed}
             block={!width.floatRight}
             right={true}
-            open={this.props.isRightOpen && !this.props.isLeftOpen}
+            open={this._isRightOpen() && !this._isLeftOpen()}
           />
         </Row>
       </Wrapper>
@@ -2259,7 +2279,7 @@ export const Page = createReactClass({
                 openContent={this._getLeftContent().open}
                 closedContent={this._getLeftContent().closed}
                 block={!width.floatLeft}
-                open={this.props.isLeftOpen}
+                open={this._isLeftOpen()}
               />
               <Div
                 className={this.getClassName("flex") + " " + this.getClassName("flexBasis")}
@@ -2294,7 +2314,7 @@ export const Page = createReactClass({
             closedContent={this._getRightContent().closed}
             block={!width.floatRight}
             right={true}
-            open={this.props.isRightOpen && !this.props.isLeftOpen}
+            open={this._isRightOpen() && !this._isLeftOpen()}
           />
         </Row>
       </Wrapper>
@@ -2336,7 +2356,7 @@ export const Page = createReactClass({
                 openContent={this._getLeftContent().open}
                 closedContent={this._getLeftContent().closed}
                 block={!width.floatLeft}
-                open={this.props.isLeftOpen}
+                open={this._isLeftOpen()}
               />
               <Div
                 className={this.getClassName("flex") + " " + this.getClassName("flexBasis")}
@@ -2372,7 +2392,7 @@ export const Page = createReactClass({
             closedContent={this._getRightContent().closed}
             block={!width.floatRight}
             right={true}
-            open={this.props.isRightOpen && !this.props.isLeftOpen}
+            open={this._isRightOpen() && !this._isLeftOpen()}
           />
         </Row>
       </Wrapper>
@@ -2430,6 +2450,11 @@ export const Page = createReactClass({
     }
 
     if (this.props.useDnD) result = <UU5.Common.DnD.Provider>{result}</UU5.Common.DnD.Provider>;
+    result = (
+      <UU5.Bricks.Popover.Context.Provider value={this.state.popoverProviderValue}>
+        {result}
+      </UU5.Bricks.Popover.Context.Provider>
+    );
     return result;
   },
   //@@viewOff:private

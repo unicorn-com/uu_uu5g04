@@ -12,16 +12,14 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./page-bottom.less";
 //@@viewOff:imports
 
-export const PageBottom = createReactClass({
+export const PageBottom = UU5.Common.VisualComponent.create({
+  displayName: "PageBottom", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ContentMixin],
   //@@viewOff:mixins
@@ -47,10 +45,10 @@ export const PageBottom = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    fixed: PropTypes.bool,
-    fixedHeight: PropTypes.number,
-    topId: PropTypes.string,
-    alwaysFixed: PropTypes.bool
+    fixed: UU5.PropTypes.bool,
+    fixedHeight: UU5.PropTypes.number,
+    topId: UU5.PropTypes.string,
+    alwaysFixed: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 
@@ -348,7 +346,7 @@ export const PageBottom = createReactClass({
 
     if (this.props.fixed) {
       result = UU5.Common.Tools.wrapIfExists(
-        React.Fragment,
+        UU5.Common.Fragment,
         <div {...this._getMainAttrs()} key="main">
           {this.getChildren()}
         </div>,

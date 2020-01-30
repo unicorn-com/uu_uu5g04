@@ -1,5 +1,6 @@
 /**
- * Copyright (C) 2019 Unicorn a.s.
+ * Copyright (C) import UU5 from "uu5g04";
+2019 Unicorn a.s.
  *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
@@ -12,7 +13,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
 import ns from "./bricks-ns.js";
 
 import Popover from "./popover.js";

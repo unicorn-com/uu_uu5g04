@@ -43,14 +43,11 @@
 
   <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
   <script type="text/babel">
-    import React from "react";
-    import createReactClass from "create-react-class";
-    import ReactDOM from "react-dom";
     import UU5 from "uu5g04";
     import "uu5g04-bricks";
     import "uu5g04-forms";
 
-    const Page = createReactClass({
+    const Page = UU5.Common.VisualComponent.create({
       getInitialState() {
         return { error: null };
       },
@@ -70,16 +67,29 @@
 
         return (
           <UU5.Bricks.Container>
-            {/*@@viewOn:0*/}
-            <UU5.Bricks.RichLink href="https://www.unicorn.com/" />{" "}
-            <UU5.Bricks.RichLink href="https://www.unicorn.com/" type="simple" />{" "}
-            {/*@@viewOff:0*/}
+            <UU5.Bricks.Row header="target">
+              <UU5.Bricks.Column colWidth="xs-12 m-6 l-4 xl-3">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.RichLink href="https://www.unicorn.com/" />
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Column>
+              <UU5.Bricks.Column colWidth="xs-12 m-6 l-4 xl-3">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.RichLink href="https://docs.plus4u.net/uaf/uuapp/uu5/book" />
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Column>
+              <UU5.Bricks.Column colWidth="xs-12 m-6 l-4 xl-3">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.RichLink href="https://www.unicorn.com/" type="simple" />
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Column>
+            </UU5.Bricks.Row>
           </UU5.Bricks.Container>
         );
       }
     });
 
-    ReactDOM.render(<Page/>, document.getElementById('uu5Example'));
+    UU5.Common.DOM.render(<Page/>, document.getElementById('uu5Example'));
   </script>
 </body>
 </html>

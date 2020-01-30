@@ -13,13 +13,14 @@
 
 //@@viewOn:imports
 import React from "react";
-import createReactClass from "create-react-class";
 import PropTypes from "prop-types";
 import Context from "./context.js";
 import BaseMixin from "./base-mixin.js";
+import Component from "./component.js";
 //@@viewOff:imports
 
-export const ListDataManager = createReactClass({
+export const ListDataManager = Component.create({
+  displayName: "ListDataManager", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [BaseMixin],
   //@@viewOff:mixins

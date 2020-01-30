@@ -12,16 +12,15 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./tabs-item.less";
 //@@viewOff:imports
 
-export default createReactClass({
+export default UU5.Common.VisualComponent.create({
+  displayName: "tabs-item", // for backward compatibility (test snapshots)
+
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -52,9 +51,9 @@ export default createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    _fade: PropTypes.bool,
-    _active: PropTypes.bool,
-    _onDisable: PropTypes.func
+    _fade: UU5.PropTypes.bool,
+    _active: UU5.PropTypes.bool,
+    _onDisable: UU5.PropTypes.func
   },
   //@@viewOff:propTypes
 

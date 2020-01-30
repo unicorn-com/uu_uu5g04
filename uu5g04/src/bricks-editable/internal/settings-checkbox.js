@@ -1,5 +1,3 @@
-import React from "react";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 
 import ns from "../bricks-editable-ns.js";
@@ -69,11 +67,11 @@ export const SettingsCheckbox = props => {
 SettingsCheckbox.displayName = ns.name("SettingsCheckbox");
 SettingsCheckbox.tagName = ns.name("SettingsCheckbox");
 SettingsCheckbox.propTypes = {
-  value: PropTypes.bool,
-  label: PropTypes.any,
-  colorSchema: PropTypes.string,
-  bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline", "link"]),
-  onApply: PropTypes.func
+  value: UU5.PropTypes.bool,
+  label: UU5.PropTypes.any,
+  colorSchema: UU5.PropTypes.string,
+  bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline", "link"]),
+  onApply: UU5.PropTypes.func
 };
 SettingsCheckbox.defaultProps = {
   value: false,

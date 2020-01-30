@@ -16,7 +16,7 @@ exports[`UU5.Bricks.ProgressBar UU5.Bricks.ProgressBar - props.Allowtags is used
     key="uuIDitems"
     progress={20}
   />
-  <MyAllowTagsComponents
+  <UU5.Example.MyCompButton
     content="I am allowTags component"
     id="allowID"
     key="allowID"

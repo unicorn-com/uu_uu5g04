@@ -20,11 +20,12 @@ export * from "./tools.js";
 export * from "./class-names.js";
 export * from "./base-mixin.js";
 export * from "./div.js";
+export * from "./level.js";
 export * from "./error.js";
 export * from "./not-found-tag.js";
 export * from "./elementary-mixin.js";
 export * from "./identity-mixin.js";
-export * from "./level-mixin.js";
+export { LevelMixin } from "./level-mixin.js";
 export * from "./nesting-level-mixin.js";
 export * from "./content-mixin.js";
 export * from "./color-schema-mixin.js";
@@ -71,12 +72,15 @@ export * from "./dom.js";
 export * from "./element.js";
 export * from "./portal.js";
 export * from "./reference.js";
-export * from "./visual-component.js";
+export { VisualComponent } from "./visual-component.js";
+
+export * from "./with-visibility-check.js";
 
 export { Children, Fragment } from "react";
 
 import React, { Suspense } from "react";
 const UU5Suspense = ({ loading, ...props }) => <Suspense {...props} fallback={props.fallback || props.loading || ""} />;
+UU5Suspense.displayName = "Suspense";
 export { UU5Suspense as Suspense };
 
 export const bookKitUrl =

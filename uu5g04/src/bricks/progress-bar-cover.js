@@ -12,15 +12,14 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./progress-bar-cover.less";
 //@@viewOff:imports
 
-export default createReactClass({
+export default UU5.Common.VisualComponent.create({
+  displayName: "progress-bar-cover", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin],
   //@@viewOff:mixins
@@ -73,7 +72,7 @@ export default createReactClass({
   render: function() {
     return (
       <div {...this.getMainAttrs()}>
-        {this.props.children && React.Children.toArray(this.props.children)}
+        {this.props.children && UU5.Common.Children.toArray(this.props.children)}
         {this.getDisabledCover()}
       </div>
     );

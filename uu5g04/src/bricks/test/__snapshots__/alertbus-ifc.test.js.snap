@@ -36,50 +36,12 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus addAlert() wi
   closeTimer={3000}
   colorSchema="yellow"
   content={
-    <Strong
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      parent={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    >
+    <Strong>
       This is content in Bricks.Alert
     </Strong>
   }
   header={
-    <Strong
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      parent={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    >
+    <Strong>
       Alert header
     </Strong>
   }
@@ -160,26 +122,7 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus getAlerts() 2
   closeTimer={3000}
   colorSchema="yellow"
   content={
-    <Strong
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      parent={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    >
+    <Strong>
       This is content in Bricks.Alert
     </Strong>
   }
@@ -214,26 +157,7 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus removeAlert()
   closeTimer={3000}
   colorSchema="yellow"
   content={
-    <Strong
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      parent={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    >
+    <Strong>
       This is content in Bricks.Alert
     </Strong>
   }
@@ -268,26 +192,7 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus setAlert() 2`
   closeTimer={3000}
   colorSchema="yellow"
   content={
-    <Strong
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      parent={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    >
+    <Strong>
       This is content in Bricks.Alert
     </Strong>
   }

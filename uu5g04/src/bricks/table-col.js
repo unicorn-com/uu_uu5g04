@@ -12,16 +12,14 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./table-col.less";
 //@@viewOff:imports
 
-const TableCol = createReactClass({
+const TableCol = UU5.Common.VisualComponent.create({
+  displayName: "TableCol", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -54,7 +52,7 @@ const TableCol = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    span: PropTypes.number
+    span: UU5.PropTypes.number
   },
   //@@viewOff:propTypes
 

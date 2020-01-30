@@ -14,12 +14,13 @@
 //@@viewOn:imports
 import React from "react";
 import PropTypes from "prop-types";
-import createReactClass from "create-react-class";
 import BaseMixin from "./base-mixin.js";
 import ContentMixin from "./content-mixin.js";
+import VisualComponent from "./visual-component.js";
 //@@viewOff:imports
 
-const IdentityItem = createReactClass({
+const IdentityItem = VisualComponent.create({
+  displayName: "IdentityItem", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [BaseMixin, ContentMixin],
   //@@viewOff:mixins

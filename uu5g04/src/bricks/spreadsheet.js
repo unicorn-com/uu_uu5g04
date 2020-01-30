@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -23,7 +20,9 @@ import DataTable from "./data-table.js";
 import "./spreadsheet.less";
 //@@viewOff:imports
 
-export const Spreadsheet = createReactClass({
+export const Spreadsheet = UU5.Common.VisualComponent.create({
+  displayName: "Spreadsheet", // for backward compatibility (test snapshots)
+
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, UU5.Common.SectionMixin],
   //@@viewOff:mixins
@@ -54,13 +53,13 @@ export const Spreadsheet = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    striped: PropTypes.bool,
-    bordered: PropTypes.bool,
-    hover: PropTypes.bool,
-    condensed: PropTypes.bool,
-    cols: PropTypes.object, //col props - 'A':{}
-    rows: PropTypes.object, //row props - '1':{} - rowType (header|body|footer)
-    cells: PropTypes.object //'A1':{'value':'','type':'','formula':'','format':'','colorSchema':'','className':''}
+    striped: UU5.PropTypes.bool,
+    bordered: UU5.PropTypes.bool,
+    hover: UU5.PropTypes.bool,
+    condensed: UU5.PropTypes.bool,
+    cols: UU5.PropTypes.object, //col props - 'A':{}
+    rows: UU5.PropTypes.object, //row props - '1':{} - rowType (header|body|footer)
+    cells: UU5.PropTypes.object //'A1':{'value':'','type':'','formula':'','format':'','colorSchema':'','className':''}
   },
   //@@viewOff:propTypes
 

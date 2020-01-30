@@ -12,14 +12,12 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 //@@viewOff:imports
 
-export default createReactClass({
+export default UU5.Common.VisualComponent.create({
+  displayName: "slider-item", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.ContentMixin],
   //@@viewOff:mixins
@@ -37,12 +35,12 @@ export default createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    value: PropTypes.number,
-    _min: PropTypes.number,
-    _max: PropTypes.number,
-    _step: PropTypes.number,
-    _getStyle: PropTypes.func,
-    _checkValue: PropTypes.func
+    value: UU5.PropTypes.number,
+    _min: UU5.PropTypes.number,
+    _max: UU5.PropTypes.number,
+    _step: UU5.PropTypes.number,
+    _getStyle: UU5.PropTypes.func,
+    _checkValue: UU5.PropTypes.func
   },
   //@@viewOff:propTypes
 

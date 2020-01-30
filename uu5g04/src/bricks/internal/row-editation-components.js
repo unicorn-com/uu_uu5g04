@@ -1,7 +1,4 @@
 //@@viewOn:imports
-import React from "react";
-import PropTypes from "prop-types";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "../../bricks-editable/bricks-editable-ns";
@@ -16,7 +13,7 @@ const COLUMN_PRESETS = {
   "1:1:1:1": ["s-6 m-3", "s-6 m-3", "s-6 m-3", "s-6 m-3"]
 };
 
-export const PresetEditComponent = createReactClass({
+export const PresetEditComponent = UU5.Common.VisualComponent.create({
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin],
   //@@viewOff:mixins
@@ -33,10 +30,10 @@ export const PresetEditComponent = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    componentProps: PropTypes.object,
-    items: PropTypes.arrayOf(PropTypes.object),
-    onChangeProps: PropTypes.func,
-    onChangeItems: PropTypes.func
+    componentProps: UU5.PropTypes.object,
+    items: UU5.PropTypes.arrayOf(UU5.PropTypes.object),
+    onChangeProps: UU5.PropTypes.func,
+    onChangeItems: UU5.PropTypes.func
   },
   //@@viewOff:propTypes
 
@@ -220,7 +217,7 @@ export const PresetEditComponent = createReactClass({
   //@@viewOff:render
 });
 
-export const ColWidthEditComponent = createReactClass({
+export const ColWidthEditComponent = UU5.Common.VisualComponent.create({
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin],
   //@@viewOff:mixins
@@ -237,11 +234,11 @@ export const ColWidthEditComponent = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    componentProps: PropTypes.object,
-    items: PropTypes.arrayOf(PropTypes.object),
-    onChangeProps: PropTypes.func,
-    onChangeItems: PropTypes.func,
-    editedItemId: PropTypes.string
+    componentProps: UU5.PropTypes.object,
+    items: UU5.PropTypes.arrayOf(UU5.PropTypes.object),
+    onChangeProps: UU5.PropTypes.func,
+    onChangeItems: UU5.PropTypes.func,
+    editedItemId: UU5.PropTypes.string
   },
   //@@viewOff:propTypes
 

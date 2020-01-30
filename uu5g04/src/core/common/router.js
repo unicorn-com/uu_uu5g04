@@ -13,7 +13,6 @@
 
 //@@viewOn:imports
 import React from "react";
-import createReactClass from "create-react-class";
 import ns from "./common-ns.js";
 import PropTypes from "prop-types";
 import Tools from "./tools.js";
@@ -24,13 +23,28 @@ import CcrWriterMixin from "./ccr-writer-mixin.js";
 import Url from "./url.js";
 import PureRenderMixin from "./pure-render-mixin";
 import Uu5CommonError from "./error.js";
+import VisualComponent from "./visual-component.js";
 
 import "./router.less";
 //@@viewOff:imports
 
 const REACT_LAZY_TYPEOF = React.lazy && React.lazy(() => ({ default: props => "" })).$$typeof;
 
-export const Router = createReactClass({
+function getParamsFromQuery(query) {
+  let result = {};
+  query.split(/&/).forEach(it => {
+    let eqlIdx = it.indexOf("=");
+    let key = decodeURIComponent((eqlIdx == -1 ? it.substr(0) : it.substr(0, eqlIdx)).replace(/\+/g, " "));
+    if (key) {
+      let value = decodeURIComponent((eqlIdx == -1 ? "" : it.substr(eqlIdx + 1)).replace(/\+/g, " "));
+      result[key] = value;
+    }
+  });
+  return Object.keys(result).length > 0 ? result : undefined;
+}
+
+export const Router = VisualComponent.create({
+  displayName: "Router", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [BaseMixin, ElementaryMixin, CcrWriterMixin, PureRenderMixin],
   //@@viewOff:mixins
@@ -450,6 +464,25 @@ export const Router = createReactClass({
           // console.log('goForward', this._history[this._routeIndex], event.state, this._routeIndex, this._history);
         }
         let newRoute = this._history[routeIndex];
+        if (newRoute === undefined) {
+          // we might be in a situation where we used Back in the browser (we were on different domain),
+          // we got back without having anything in this._history (this would be in _buildRoute) and then
+          // we hit Back again so we're popping history state without having this._history[] populated
+          // => try to re-create history entry from current URL only
+          let pathname = location.pathname;
+          let basePathPrefix = (this._getBasePath(null, this.props) || "") + "/";
+          let useCase = pathname.startsWith(basePathPrefix) ? pathname.substr(basePathPrefix.length) : undefined;
+          if (useCase != null && this.props.routes) {
+            let params = getParamsFromQuery(location.search.substr(1));
+            let fragment = location.hash.substr(1);
+            let routeInfo = this._getRouteAfterRewritesAndRedirects(useCase, this.props);
+            let config;
+            if (routeInfo) ({ useCase, config } = routeInfo);
+            while (routeIndex >= this._history.length) this._history.push(undefined);
+            newRoute = this._history[routeIndex] = { useCase, params, fragment, config };
+            this._routeIndex = routeIndex;
+          }
+        }
         if (newRoute) {
           // we're going to display confirmation whether to really navigate back / forward,
           // but the browser already updated current URL in address bar => go to the previous
@@ -534,6 +567,12 @@ export const Router = createReactClass({
     props = props || this.props;
 
     if (route != null) {
+      // :-/ 2nd part of the config.goTo issue - see below
+      if (typeof isFromHistory !== "boolean" && typeof this._isFromHistory === "boolean") {
+        isFromHistory = this._isFromHistory;
+        delete this._isFromHistory;
+      }
+
       let useCase, config;
       if (route && typeof route === "object" && "config" in route) {
         params = route.params;
@@ -587,12 +626,31 @@ export const Router = createReactClass({
                 fragment: usedFragment,
                 isFromHistory: isFromHistory
               };
-              config.goTo(oldRoute, newRoute, setStateCallback);
+
+              // 1st part of config.goTo issue - some apps don't simply call router.setRoute(newRoute) so we don't get
+              // info whether the new route comes from popping history or not - when that happens, it effectively removes
+              // forward history because without that info we simply perform history.pushState()
+              // => we'll remember it in instance field because most apps call router.setRoute(newRoute) synchronously during config.goTo
+              this._isFromHistory = !!isFromHistory;
+              try {
+                config.goTo(oldRoute, newRoute, setStateCallback);
+              } finally {
+                delete this._isFromHistory;
+              }
             } else if (!isFromHistory) {
               let method = "replaceState";
               if (this._routeIndex === null) {
-                this._routeIndex = 0;
-                this._history.push({ useCase, params, config, fragment: usedFragment });
+                if (history.state && history.state.index) {
+                  // we might be in a situation where we used Back in the browser (we were on different domain)
+                  // and now we got back without having anything in this._history
+                  // => use at least the proper index and prepare this._history to be using sufficient length
+                  this._routeIndex = history.state.index;
+                  while (this._routeIndex >= this._history.length) this._history.push(undefined);
+                  this._history[this._routeIndex] = { useCase, params, config, fragment: usedFragment };
+                } else {
+                  this._routeIndex = 0;
+                  this._history.push({ useCase, params, config, fragment: usedFragment });
+                }
               } else if (!replace) {
                 let leavingRoute = this._history[this._routeIndex];
                 let leavingFromNoHistory = leavingRoute && leavingRoute.config && leavingRoute.config.noHistory;
@@ -667,34 +725,50 @@ export const Router = createReactClass({
         if (foundRoute) {
           // we won't apply the route immediately, because it can be stopped by page-leave confirmation yet
           applyRouteFn = () => {
-            // NOTE _history entries with components have for some reasons different data than the ones
-            // handled via routes map. We need config object with noHistory there so let's add it.
-            let config = { noHistory: params.noHistory };
-            if (this._routeIndex === null) {
-              this._routeIndex = 0;
-              this._history.push({ path: path, component: foundRoute, fragment: usedFragment, config });
-            } else if (!replace) {
-              let leavingRoute = this._history[this._routeIndex];
-              let leavingFromNoHistory = leavingRoute && leavingRoute.config && leavingRoute.config.noHistory;
-              if (!leavingFromNoHistory) {
-                this._routeIndex++;
-                method = "pushState";
+            if (!isFromHistory) {
+              // NOTE _history entries with components have for some reasons different data than the ones
+              // handled via routes map. We need config object with noHistory there so let's add it.
+              let config = { noHistory: params.noHistory };
+              if (this._routeIndex === null) {
+                if (history.state && history.state.index) {
+                  // we might be in a situation where we used Back in the browser (we were on different domain)
+                  // and now we got back without having anything in this._history
+                  // => use at least the proper index and prepare this._history to be using sufficient length
+                  this._routeIndex = history.state.index;
+                  while (this._routeIndex >= this._history.length) this._history.push(undefined);
+                  this._history[this._routeIndex] = {
+                    path: path,
+                    component: foundRoute,
+                    fragment: usedFragment,
+                    config
+                  };
+                } else {
+                  this._routeIndex = 0;
+                  this._history.push({ path: path, component: foundRoute, fragment: usedFragment, config });
+                }
+              } else if (!replace) {
+                let leavingRoute = this._history[this._routeIndex];
+                let leavingFromNoHistory = leavingRoute && leavingRoute.config && leavingRoute.config.noHistory;
+                if (!leavingFromNoHistory) {
+                  this._routeIndex++;
+                  method = "pushState";
+                }
+                this._history.splice(this._routeIndex, this._history.length - 1);
+                this._history.push({ path: path, component: foundRoute, fragment: usedFragment, config });
               }
-              this._history.splice(this._routeIndex, this._history.length - 1);
-              this._history.push({ path: path, component: foundRoute, fragment: usedFragment, config });
-            }
 
-            try {
-              history[method](
-                {
-                  path: path,
-                  index: this._routeIndex
-                },
-                params.title || document.title,
-                path + (usedFragment ? "#" + usedFragment : "")
-              );
-            } catch (e) {
-              if (!(window.frameElement && e instanceof DOMException)) throw e; // cannot do replace/pushState when in <iframe srcdoc="&lt;html..." (ends with DOMException so ignore it), e.g. in BookKit examples
+              try {
+                history[method](
+                  {
+                    path: path,
+                    index: this._routeIndex
+                  },
+                  params.title || document.title,
+                  path + (usedFragment ? "#" + usedFragment : "")
+                );
+              } catch (e) {
+                if (!(window.frameElement && e instanceof DOMException)) throw e; // cannot do replace/pushState when in <iframe srcdoc="&lt;html..." (ends with DOMException so ignore it), e.g. in BookKit examples
+              }
             }
             return true;
           };

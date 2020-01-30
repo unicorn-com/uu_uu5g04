@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -23,7 +20,8 @@ import CarouselItem from "./carousel-item.js";
 import Icon from "./icon.js";
 //@@viewOff:imports
 
-export const Carousel = createReactClass({
+export const Carousel = UU5.Common.VisualComponent.create({
+  displayName: "Carousel", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -56,16 +54,16 @@ export const Carousel = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    hideControls: PropTypes.bool,
-    hideIndicators: PropTypes.bool,
-    activeIndex: PropTypes.number,
-    nextIcon: PropTypes.string,
-    prevIcon: PropTypes.string,
-    displayedItems: PropTypes.number,
-    type: PropTypes.oneOf(["circular", "final", "rewind"]),
-    interval: PropTypes.number,
-    stepByOne: PropTypes.bool,
-    allowTags: PropTypes.arrayOf(PropTypes.string)
+    hideControls: UU5.PropTypes.bool,
+    hideIndicators: UU5.PropTypes.bool,
+    activeIndex: UU5.PropTypes.number,
+    nextIcon: UU5.PropTypes.string,
+    prevIcon: UU5.PropTypes.string,
+    displayedItems: UU5.PropTypes.number,
+    type: UU5.PropTypes.oneOf(["circular", "final", "rewind"]),
+    interval: UU5.PropTypes.number,
+    stepByOne: UU5.PropTypes.bool,
+    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string)
   },
   //@@viewOff:propTypes
 
@@ -350,7 +348,7 @@ export const Carousel = createReactClass({
           style: UU5.Common.Tools.mergeDeep({}, item.props.style, this._getChildrenStyle(newPosition)),
           position: newPosition
         };
-        return React.cloneElement(item, newProps);
+        return UU5.Common.Element.clone(item, newProps);
       });
 
       this.setAsyncState({
@@ -435,7 +433,7 @@ export const Carousel = createReactClass({
           newProps.style,
           this._getChildrenStyle(position, displayedItems, properties.height)
         );
-        childrenToRender.push(React.cloneElement(children[index], newProps));
+        childrenToRender.push(UU5.Common.Element.clone(children[index], newProps));
       } else {
         if (this.props.type !== "circular" && !this._shiftFin && !this.props.stepByOne) {
           this._shiftFin = noOfElements - i;

@@ -1,5 +1,3 @@
-import React from "react";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 
 import ns from "../bricks-editable-ns.js";
@@ -38,8 +36,8 @@ export const ComponentInfo = props => {
 ComponentInfo.displayName = ns.name("ComponentInfo");
 ComponentInfo.tagName = ns.name("ComponentInfo");
 ComponentInfo.propTypes = {
-  icon: PropTypes.string,
-  iconFontSize: PropTypes.string
+  icon: UU5.PropTypes.string,
+  iconFontSize: UU5.PropTypes.string
 };
 ComponentInfo.defaultProps = {
   icon: "mdi-help-circle",

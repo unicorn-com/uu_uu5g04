@@ -12,7 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "../forms-ns.js";
@@ -24,9 +23,7 @@ export const ContextFormConsumer = Context.Consumer;
 
 export const ContextFormProvider = UU5.Common.VisualComponent.create({
   //@@viewOn:statics
-  statics: {
-    tagName: ns.name("ContextFormProvider")
-  },
+  displayName: ns.name("ContextFormProvider"),
   //@@viewOff:statics
 
   //@@viewOn:propTypes

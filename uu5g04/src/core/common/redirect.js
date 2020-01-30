@@ -12,13 +12,14 @@
  */
 
 //@@viewOn:imports
-import createReactClass from "create-react-class";
 import ns from "./common-ns.js";
 import PropTypes from "prop-types";
 import BaseMixin from "./base-mixin.js";
+import VisualComponent from "./visual-component.js";
 //@@viewOff:imports
 
-export const Redirect = createReactClass({
+export const Redirect = VisualComponent.create({
+  displayName: "Redirect", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [BaseMixin],
   //@@viewOff:mixins

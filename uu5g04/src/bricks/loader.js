@@ -12,7 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
 import * as UU5 from "uu5g04";
 //@@viewOff:imports
 

@@ -12,14 +12,12 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import PropTypes from "prop-types";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import { TAG, css, Font } from "./config.js";
 //@@viewOff:imports
 
-export const Text = createReactClass({
+export const Text = UU5.Common.VisualComponent.create({
+  displayName: "Text", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -58,9 +56,9 @@ export const Text = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    size: PropTypes.oneOf(["s", "m"]),
-    weight: PropTypes.oneOf(["primary", "normal", "secondary"]),
-    icon: PropTypes.string
+    size: UU5.PropTypes.oneOf(["s", "m"]),
+    weight: UU5.PropTypes.oneOf(["primary", "normal", "secondary"]),
+    icon: UU5.PropTypes.string
   },
   //@@viewOff:propTypes
 

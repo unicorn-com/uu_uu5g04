@@ -12,16 +12,14 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./tree-list.less";
 //@@viewOff:imports
 
-export default createReactClass({
+export default UU5.Common.VisualComponent.create({
+  displayName: "tree-list", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, UU5.Common.ContentMixin],
   //@@viewOff:mixins
@@ -43,9 +41,9 @@ export default createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    items: PropTypes.array,
-    iconExpanded: PropTypes.string,
-    iconCollapsed: PropTypes.string
+    items: UU5.PropTypes.array,
+    iconExpanded: UU5.PropTypes.string,
+    iconCollapsed: UU5.PropTypes.string
   },
   //@@viewOff:propTypes
 
@@ -119,7 +117,7 @@ export default createReactClass({
     if (this.props.items) {
       content = this.props.items.map(function(itemProps) {
         let result;
-        if (typeof itemProps.type === "function") {
+        if (UU5.Common.Element.isValid(itemProps)) {
           result = itemProps;
         } else {
           result = { tag: list.getDefault().childTagName, props: itemProps };

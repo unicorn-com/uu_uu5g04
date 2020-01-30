@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 //@@viewOff:imports
@@ -165,7 +162,8 @@ function getClassName({ active, dark, colorSchema, bgStyle, size, borderRadius, 
   return css.join(" ");
 }
 
-const SwitchSelectorItem = createReactClass({
+const SwitchSelectorItem = UU5.Common.VisualComponent.create({
+  displayName: "SwitchSelectorItem", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ContentMixin],
   //@@viewOff:mixins
@@ -178,15 +176,15 @@ const SwitchSelectorItem = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    onClick: PropTypes.func,
-    onMouseDown: PropTypes.func,
-    active: PropTypes.bool,
-    dark: PropTypes.bool,
-    colorSchema: PropTypes.oneOf(UU5.Environment.colorSchema),
-    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
-    borderRadius: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    tabIndex: PropTypes.number
+    onClick: UU5.PropTypes.func,
+    onMouseDown: UU5.PropTypes.func,
+    active: UU5.PropTypes.bool,
+    dark: UU5.PropTypes.bool,
+    colorSchema: UU5.PropTypes.oneOf(UU5.Environment.colorSchema),
+    bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+    size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
+    borderRadius: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
+    tabIndex: UU5.PropTypes.number
   },
   //@@viewOff:propTypes
 

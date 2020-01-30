@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "../forms-ns.js";
@@ -26,7 +23,8 @@ import "./input-wrapper.less";
 
 const INITIAL_FEEDBACK = "initial";
 
-export const InputWrapper = createReactClass({
+export const InputWrapper = UU5.Common.VisualComponent.create({
+  displayName: "InputWrapper", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin],
   //@@viewOff:mixins
@@ -48,21 +46,21 @@ export const InputWrapper = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    required: PropTypes.bool,
-    feedback: PropTypes.string,
-    message: PropTypes.any,
-    buttons: PropTypes.arrayOf(
-      PropTypes.shape({
-        icon: PropTypes.string,
-        disabled: PropTypes.bool,
-        onClick: PropTypes.func,
-        pressed: PropTypes.bool,
-        size: PropTypes.string
+    required: UU5.PropTypes.bool,
+    feedback: UU5.PropTypes.string,
+    message: UU5.PropTypes.any,
+    buttons: UU5.PropTypes.arrayOf(
+      UU5.PropTypes.shape({
+        icon: UU5.PropTypes.string,
+        disabled: UU5.PropTypes.bool,
+        onClick: UU5.PropTypes.func,
+        pressed: UU5.PropTypes.bool,
+        size: UU5.PropTypes.string
       })
     ),
-    slider: PropTypes.bool,
-    datetimepicker: PropTypes.bool,
-    daterangepicker: PropTypes.bool
+    slider: UU5.PropTypes.bool,
+    datetimepicker: UU5.PropTypes.bool,
+    daterangepicker: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 
@@ -157,7 +155,7 @@ export const InputWrapper = createReactClass({
     );
 
     if (this.props.datetimepicker || this.props.daterangepicker) {
-      let children = React.Children.toArray(this.props.children);
+      let children = UU5.Common.Children.toArray(this.props.children);
       let buttons = this._getButtons();
       result = (
         <div {...this._getMainAttrs()}>
@@ -174,7 +172,7 @@ export const InputWrapper = createReactClass({
       result = (
         <div {...this._getMainAttrs()}>
           <div className={this.getClassName("cover")}>
-            {React.Children.toArray(this.props.children)}
+            {UU5.Common.Children.toArray(this.props.children)}
             {this._getButtons()}
           </div>
           {message}
@@ -183,14 +181,14 @@ export const InputWrapper = createReactClass({
     } else if (this.props.slider) {
       result = (
         <div {...this._getMainAttrs()}>
-          <div className={this.getClassName("cover")}>{React.Children.toArray(this.props.children)}</div>
+          <div className={this.getClassName("cover")}>{UU5.Common.Children.toArray(this.props.children)}</div>
           {message}
         </div>
       );
     } else {
       result = (
         <div {...this._getMainAttrs()}>
-          {React.Children.toArray(this.props.children)}
+          {UU5.Common.Children.toArray(this.props.children)}
           {message}
         </div>
       );

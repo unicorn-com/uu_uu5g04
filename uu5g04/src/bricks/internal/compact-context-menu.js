@@ -12,15 +12,14 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import ns from "../bricks-ns.js";
 
 import { ClassNames, Helpers } from "./context-menu-helpers.js";
 //@@viewOff:imports
 
-export const CompactContextMenu = createReactClass({
+export const CompactContextMenu = UU5.Common.VisualComponent.create({
+  displayName: "CompactContextMenu", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ContentMixin],
   //@@viewOff:mixins
@@ -93,8 +92,8 @@ export const CompactContextMenu = createReactClass({
         ];
       }
 
-      React.Children.toArray(children).forEach(child => {
-        if (React.isValidElement(child)) {
+      UU5.Common.Children.toArray(children).forEach(child => {
+        if (UU5.Common.Element.isValid(child)) {
           let id = child.props.id || UU5.Common.Tools.generateUUID();
           let childProps = { ...child.props, content: null, children: null, parent: this.props.parent };
           childProps.id = id;
@@ -113,7 +112,7 @@ export const CompactContextMenu = createReactClass({
           }
 
           levels[key] = levelContent;
-          child = React.cloneElement(child, childProps);
+          child = UU5.Common.Element.clone(child, childProps);
         }
 
         levelContent.push(child);

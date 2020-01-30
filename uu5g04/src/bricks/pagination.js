@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 const ClassNames = UU5.Common.ClassNames;
@@ -26,7 +23,8 @@ import Button from "./button.js";
 import "./pagination.less";
 //@@viewOff:imports
 
-export const Pagination = createReactClass({
+export const Pagination = UU5.Common.VisualComponent.create({
+  displayName: "Pagination", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -65,24 +63,24 @@ export const Pagination = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    items: PropTypes.array,
-    activeIndex: PropTypes.number,
-    range: PropTypes.number,
-    prevIcon: PropTypes.string,
-    prevLabel: PropTypes.node,
-    nextIcon: PropTypes.string,
-    nextLabel: PropTypes.node,
-    firstIcon: PropTypes.string,
-    firstLabel: PropTypes.node,
-    lastIcon: PropTypes.string,
-    lastLabel: PropTypes.node,
-    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
-    onChange: PropTypes.func,
-    onChanged: PropTypes.func,
-    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-    colorSchemaInactive: PropTypes.string,
-    borderRadius: PropTypes.string,
-    ellipsisIcon: PropTypes.string
+    items: UU5.PropTypes.array,
+    activeIndex: UU5.PropTypes.number,
+    range: UU5.PropTypes.number,
+    prevIcon: UU5.PropTypes.string,
+    prevLabel: UU5.PropTypes.node,
+    nextIcon: UU5.PropTypes.string,
+    nextLabel: UU5.PropTypes.node,
+    firstIcon: UU5.PropTypes.string,
+    firstLabel: UU5.PropTypes.node,
+    lastIcon: UU5.PropTypes.string,
+    lastLabel: UU5.PropTypes.node,
+    size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
+    onChange: UU5.PropTypes.func,
+    onChanged: UU5.PropTypes.func,
+    bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+    colorSchemaInactive: UU5.PropTypes.string,
+    borderRadius: UU5.PropTypes.string,
+    ellipsisIcon: UU5.PropTypes.string
   },
   //@@viewOff:propTypes
 
@@ -258,8 +256,8 @@ export const Pagination = createReactClass({
 
     if (label) {
       // if array of nodes -> set keys
-      newValue = Array.isArray(label) ? React.Children.toArray(label) : label;
-      // newValue = <span className={this.getClassName().label}>{Array.isArray(label) ? React.Children.toArray(label) : label}</span>;
+      newValue = Array.isArray(label) ? UU5.Common.Children.toArray(label) : label;
+      // newValue = <span className={this.getClassName().label}>{Array.isArray(label) ? UU5.Common.Children.toArray(label) : label}</span>;
     } else if (icon) {
       newValue = <Icon icon={icon} />;
     }

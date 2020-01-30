@@ -12,14 +12,12 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import PropTypes from "prop-types";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import { TAG, css, Font } from "./config.js";
 //@@viewOff:imports
 
-export const Column = createReactClass({
+export const Column = UU5.Common.VisualComponent.create({
+  displayName: "Column", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -53,8 +51,8 @@ export const Column = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    textAlign: PropTypes.oneOf(["left", "center", "right"]),
-    width: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+    textAlign: UU5.PropTypes.oneOf(["left", "center", "right"]),
+    width: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string])
   },
   //@@viewOff:propTypes
 

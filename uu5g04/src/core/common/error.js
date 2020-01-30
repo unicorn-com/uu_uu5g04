@@ -13,7 +13,6 @@
 
 //@@viewOn:imports
 import React from "react";
-import createReactClass from "create-react-class";
 import ns from "./common-ns.js";
 import PropTypes from "prop-types";
 import Environment from "../environment/environment.js";
@@ -25,11 +24,13 @@ import Div from "./div.js";
 import PureRenderMixin from "./pure-render-mixin.js";
 import ColorSchemaMixin from "./color-schema-mixin.js";
 import ClassNames from "./class-names.js";
+import VisualComponent from "./visual-component.js";
 
 import "./error.less";
 //@@viewOff:imports
 
-export const Error = createReactClass({
+export const Error = VisualComponent.create({
+  displayName: "Error", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [BaseMixin, ElementaryMixin, NestingLevelMixin, ContentMixin, PureRenderMixin, ColorSchemaMixin],
   //@@viewOff:mixins

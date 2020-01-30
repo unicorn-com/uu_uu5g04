@@ -12,10 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import ReactDOM from "react-dom";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -26,7 +22,9 @@ import "./confirm-modal.less";
 
 const PORTAL_ID = "uu5-bricks-confirm-modal-portal";
 
-export const ConfirmModal = createReactClass({
+export const ConfirmModal = UU5.Common.VisualComponent.create({
+  displayName: "ConfirmModal", // for backward compatibility (test snapshots)
+
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, UU5.Common.SectionMixin],
   //@@viewOff:mixins
@@ -44,14 +42,14 @@ export const ConfirmModal = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    size: PropTypes.oneOf(["s", "m", "l", "auto"]),
-    onRefuse: PropTypes.func,
-    onConfirm: PropTypes.func,
-    confirmButtonProps: PropTypes.object,
-    refuseButtonProps: PropTypes.object,
-    confirmButtonLeft: PropTypes.bool,
-    sticky: PropTypes.bool,
-    stickyBackground: PropTypes.bool
+    size: UU5.PropTypes.oneOf(["s", "m", "l", "auto"]),
+    onRefuse: UU5.PropTypes.func,
+    onConfirm: UU5.PropTypes.func,
+    confirmButtonProps: UU5.PropTypes.object,
+    refuseButtonProps: UU5.PropTypes.object,
+    confirmButtonLeft: UU5.PropTypes.bool,
+    sticky: UU5.PropTypes.bool,
+    stickyBackground: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 
@@ -199,7 +197,7 @@ export const ConfirmModal = createReactClass({
     };
 
     return this.state.isOpened
-      ? ReactDOM.createPortal(
+      ? UU5.Common.Portal.create(
           <Modal
             {...props}
             ref_={this._registerModal}
@@ -220,4 +218,4 @@ export const ConfirmModal = createReactClass({
   //@@viewOff:render
 });
 
-export default Modal;
+export default ConfirmModal;

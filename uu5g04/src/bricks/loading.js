@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -24,7 +21,8 @@ import { Div } from "./factory.js";
 import "./loading.less";
 //@@viewOff:imports
 
-export const Loading = createReactClass({
+export const Loading = UU5.Common.VisualComponent.create({
+  displayName: "Loading", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -54,7 +52,7 @@ export const Loading = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    inline: PropTypes.bool
+    inline: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 
@@ -88,11 +86,11 @@ export const Loading = createReactClass({
   },
 
   _getDefaultContent: function() {
-    return React.Children.toArray([1, 2, 3].map(() => <span className={this.getClassName().dot} />));
+    return UU5.Common.Children.toArray([1, 2, 3].map(() => <span className={this.getClassName().dot} />));
   },
 
   _getInlineContent() {
-    return React.Children.toArray([1, 2, 3].map(() => <span className={this.getClassName().dot}>.</span>));
+    return UU5.Common.Children.toArray([1, 2, 3].map(() => <span className={this.getClassName().dot}>.</span>));
   },
   //@@viewOff:private
 

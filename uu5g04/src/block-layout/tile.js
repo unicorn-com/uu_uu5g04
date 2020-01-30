@@ -12,14 +12,12 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import PropTypes from "prop-types";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import { TAG, css } from "./config.js";
 //@@viewOff:imports
 
-export const Tile = createReactClass({
+export const Tile = UU5.Common.VisualComponent.create({
+  displayName: "Tile", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -56,12 +54,12 @@ export const Tile = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-    elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-    borderRadius: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    padding: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    margin: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+    bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+    elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+    borderRadius: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
+    width: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
+    padding: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
+    margin: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string])
   },
   //@@viewOff:propTypes
 

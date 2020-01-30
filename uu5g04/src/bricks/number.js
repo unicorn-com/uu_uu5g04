@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import "./number.less";
@@ -78,7 +75,8 @@ const getFormatByCountry = (number, country) => {
   return result;
 };
 
-export const Number = createReactClass({
+export const Number = UU5.Common.VisualComponent.create({
+  displayName: "Number", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, UU5.Common.NestingLevelMixin],
   //@@viewOff:mixins
@@ -105,14 +103,14 @@ export const Number = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    country: PropTypes.string,
-    value: PropTypes.number,
-    onChange: PropTypes.func,
-    thousandSeparator: PropTypes.string,
-    decimalSeparator: PropTypes.string,
-    minDecimalLength: PropTypes.number,
-    maxDecimalLength: PropTypes.number,
-    rounded: PropTypes.number
+    country: UU5.PropTypes.string,
+    value: UU5.PropTypes.number,
+    onChange: UU5.PropTypes.func,
+    thousandSeparator: UU5.PropTypes.string,
+    decimalSeparator: UU5.PropTypes.string,
+    minDecimalLength: UU5.PropTypes.number,
+    maxDecimalLength: UU5.PropTypes.number,
+    rounded: UU5.PropTypes.number
   },
   //@@viewOff:propTypes
 

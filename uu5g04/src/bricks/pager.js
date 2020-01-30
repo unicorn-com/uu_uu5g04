@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -25,7 +22,8 @@ import Button from "./button.js";
 import "./pager.less";
 //@@viewOff:imports
 
-export const Pager = createReactClass({
+export const Pager = UU5.Common.VisualComponent.create({
+  displayName: "Pager", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -62,33 +60,33 @@ export const Pager = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    leftLink: PropTypes.shape({
-      text: PropTypes.any,
-      href: PropTypes.string,
-      icon: PropTypes.string,
-      onClick: PropTypes.function
+    leftLink: UU5.PropTypes.shape({
+      text: UU5.PropTypes.any,
+      href: UU5.PropTypes.string,
+      icon: UU5.PropTypes.string,
+      onClick: UU5.PropTypes.function
     }),
-    rightLink: PropTypes.shape({
-      text: PropTypes.any,
-      href: PropTypes.string,
-      icon: PropTypes.string,
-      onClick: PropTypes.function
+    rightLink: UU5.PropTypes.shape({
+      text: UU5.PropTypes.any,
+      href: UU5.PropTypes.string,
+      icon: UU5.PropTypes.string,
+      onClick: UU5.PropTypes.function
     }),
-    upLink: PropTypes.shape({
-      text: PropTypes.any,
-      href: PropTypes.string,
-      icon: PropTypes.string,
-      onClick: PropTypes.function
+    upLink: UU5.PropTypes.shape({
+      text: UU5.PropTypes.any,
+      href: UU5.PropTypes.string,
+      icon: UU5.PropTypes.string,
+      onClick: UU5.PropTypes.function
     }),
-    downLink: PropTypes.shape({
-      text: PropTypes.any,
-      href: PropTypes.string,
-      icon: PropTypes.string,
-      onClick: PropTypes.function
+    downLink: UU5.PropTypes.shape({
+      text: UU5.PropTypes.any,
+      href: UU5.PropTypes.string,
+      icon: UU5.PropTypes.string,
+      onClick: UU5.PropTypes.function
     }),
-    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
-    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-    borderRadius: PropTypes.string
+    size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
+    bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+    borderRadius: UU5.PropTypes.string
   },
   //@@viewOff:propTypes
 

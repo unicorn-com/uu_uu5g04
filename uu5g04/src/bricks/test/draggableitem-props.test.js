@@ -12,15 +12,14 @@
  */
 
 //@@viewOn:imports
-import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import createReactClass from "create-react-class";
 //@@viewOff:imports
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
-const Draggable = createReactClass({
+const Draggable = UU5.Common.VisualComponent.create({
+  displayName: "Draggable",
   mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.ContentMixin, UU5.Bricks.DraggableMixin],
 
   render: function() {
@@ -33,7 +32,7 @@ const Draggable = createReactClass({
   }
 });
 
-const MyDragableItemComponent = createReactClass({
+const MyDragableItemComponent = UU5.Common.VisualComponent.create({
   getInitialState() {
     return {
       isCalled: false

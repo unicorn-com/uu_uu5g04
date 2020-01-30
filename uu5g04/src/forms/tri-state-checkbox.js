@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "./forms-ns.js";
@@ -29,7 +26,8 @@ import "./tri-state-checkbox.less";
 //@@viewOff:imports
 
 export const TriStateCheckbox = Context.withContext(
-  createReactClass({
+  UU5.Common.VisualComponent.create({
+    displayName: "TriStateCheckbox", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
     mixins: [
       UU5.Common.BaseMixin,
@@ -64,13 +62,13 @@ export const TriStateCheckbox = Context.withContext(
 
     //@@viewOn:propTypes
     propTypes: {
-      value: PropTypes.oneOf([true, false, null]),
-      onIcon: PropTypes.string,
-      offIcon: PropTypes.string,
-      indeterminateIcon: PropTypes.string,
-      labelPosition: PropTypes.oneOf(["left", "right"]),
-      bgStyleChecked: PropTypes.oneOf(["filled", "outline"]),
-      bgStyleIndeterminate: PropTypes.oneOf(["filled", "outline"])
+      value: UU5.PropTypes.oneOf([true, false, null]),
+      onIcon: UU5.PropTypes.string,
+      offIcon: UU5.PropTypes.string,
+      indeterminateIcon: UU5.PropTypes.string,
+      labelPosition: UU5.PropTypes.oneOf(["left", "right"]),
+      bgStyleChecked: UU5.PropTypes.oneOf(["filled", "outline"]),
+      bgStyleIndeterminate: UU5.PropTypes.oneOf(["filled", "outline"])
     },
     //@@viewOff:propTypes
 

@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 const ClassNames = UU5.Common.ClassNames;
@@ -22,7 +19,8 @@ const ClassNames = UU5.Common.ClassNames;
 import "./jumbotron.less";
 //@@viewOff:imports
 
-export const Jumbotron = createReactClass({
+export const Jumbotron = UU5.Common.VisualComponent.create({
+  displayName: "Jumbotron", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -47,9 +45,9 @@ export const Jumbotron = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-    borderRadius: PropTypes.string,
-    elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
+    bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+    borderRadius: UU5.PropTypes.string,
+    elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
   },
   //@@viewOff:propTypes
 

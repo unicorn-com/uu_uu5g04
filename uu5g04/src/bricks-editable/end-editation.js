@@ -1,8 +1,4 @@
-import React from "react";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
-import PropTypes from "prop-types";
-
 import ns from "./bricks-editable-ns.js";
 import Lsi from "./bricks-editable-lsi.js";
 import Css from "./internal/css.js";
@@ -10,7 +6,7 @@ import Css from "./internal/css.js";
 const NAME = ns.name("EndEditation");
 
 export const EndEditation = UU5.Common.LsiMixin.withContext(
-  createReactClass({
+  UU5.Common.VisualComponent.create({
     displayName: NAME,
     //@@viewOn:mixins
     mixins: [UU5.Common.BaseMixin],
@@ -47,7 +43,7 @@ export const EndEditation = UU5.Common.LsiMixin.withContext(
 
     //@@viewOn:propTypes
     propTypes: {
-      onClick: PropTypes.func
+      onClick: UU5.PropTypes.func
     },
     //@@viewOff:propTypes
 

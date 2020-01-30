@@ -12,16 +12,14 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./audio.less";
 //@@viewOff:imports
 
-export const Audio = createReactClass({
+export const Audio = UU5.Common.VisualComponent.create({
+  displayName: "Audio", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, UU5.Common.NestingLevelMixin],
   //@@viewOff:mixins
@@ -40,13 +38,13 @@ export const Audio = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    autoPlay: PropTypes.bool,
-    loop: PropTypes.bool,
-    preload: PropTypes.oneOf(["auto", "metadata", "none"]),
-    src: PropTypes.string.isRequired,
-    muted: PropTypes.bool,
-    playbackRate: PropTypes.number,
-    authenticate: PropTypes.bool
+    autoPlay: UU5.PropTypes.bool,
+    loop: UU5.PropTypes.bool,
+    preload: UU5.PropTypes.oneOf(["auto", "metadata", "none"]),
+    src: UU5.PropTypes.string.isRequired,
+    muted: UU5.PropTypes.bool,
+    playbackRate: UU5.PropTypes.number,
+    authenticate: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 

@@ -101,9 +101,6 @@
 
     <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
     <script type="text/babel">
-      import React from "react";
-      import createReactClass from "create-react-class";
-      import ReactDOM from "react-dom";
       import UU5 from "uu5g04";
       import "uu5g04-bricks";
       import "uu5g04-forms";
@@ -128,7 +125,7 @@
         </UU5.Bricks.Box>
       );
 
-      const Page = createReactClass({
+      const Page = UU5.Common.VisualComponent.create({
         mixins: [
           UU5.Common.BaseMixin,
           UU5.Common.ScreenSizeMixin
@@ -152,9 +149,11 @@
             rightSwipe: 0,
             tempLeftRelative: {xs: false, s: false, m: false, l: false, xl: false},
             tempRightRelative: {xs: false, s: false, m: false, l: false, xl: false},
-            leftWidth: "!xs-100px !s-100px m-150px !l-100px-300px !xl-10%-20%",
+            leftWidth: "!xs-100px !s-100px m-150px !l-100px-300px !xl-20%",
             rightWidth: "!xs-100px !s-100px m-150px !l-100px-150px !xl-10%-20%",
-            overlayTop: true
+            overlayTop: false,
+            showLeftToggleButton: true,
+            showRightToggleButton: true
           }
         },
 
@@ -260,6 +259,23 @@
             />
           ]
           return result;
+        },
+
+        _getColumnToggleButtons() {
+          return [
+            <UU5.Forms.Checkbox
+              type={2}
+              value={this.state.showLeftToggleButton}
+              onChange={(opt) => this.setState({ showLeftToggleButton: opt.value })}
+              label="showLeftToggleButton"
+            />,
+            <UU5.Forms.Checkbox
+              type={2}
+              value={this.state.showRightToggleButton}
+              onChange={(opt) => this.setState({ showRightToggleButton: opt.value })}
+              label="showRightToggleButton"
+            />
+          ];
         },
 
         _getSwipeProps() {
@@ -371,7 +387,7 @@
 
         _getOtherProps() {
           let result = (
-            <React.Fragment>
+            <UU5.Common.Fragment>
               <UU5.Forms.Checkboxes
                 type={2}
                 size="m"
@@ -413,7 +429,7 @@
                   }
                 }}
               />
-            </React.Fragment>
+            </UU5.Common.Fragment>
           )
           return result;
         },
@@ -441,7 +457,7 @@
                 items={[
                     { label: "local", href: "?" },
                     { label: "CDN 1.0.0", href: "?uu5g04=1.0.0" },
-                    { label: "CDN 1.14.0", href: "?uu5g04=1.14.0" }
+                    { label: "CDN 1.20.0", href: "?uu5g04=1.20.0" }
                 ]}
               />
             </div>,
@@ -472,6 +488,8 @@
               fullPage={this.state.fullPage}
               overlayTop={this.state.overlayTop}
               modal={<UU5.Bricks.Modal />}
+              showLeftToggleButton={this.state.showLeftToggleButton}
+              showRightToggleButton={this.state.showRightToggleButton}
             >
               <UU5.Bricks.Div className="center">
                 <UU5.Bricks.Section header="Page types" level={3}>
@@ -492,6 +510,9 @@
                 </UU5.Bricks.Section>
                 <UU5.Bricks.Section header="leftSwipe, rightSwipe" level={3} style={{overflow: "hidden"}}>
                   {this._getSwipeProps()}
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="showLeftToggleButton, showRightToggleButton" level={3}>
+                  {this._getColumnToggleButtons()}
                 </UU5.Bricks.Section>
                 <UU5.Bricks.Line colorSchema='primary' size='m'/>
                 <UU5.Bricks.Section header="fixedHeight" level={3} style={{overflow: "hidden"}}>
@@ -534,7 +555,7 @@
         }
       });
 
-      ReactDOM.render(<Page />, document.getElementById('uu5Example'));
+      UU5.Common.DOM.render(<Page />, document.getElementById('uu5Example'));
     </script>
   </body>
 </html>

@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -24,7 +21,8 @@ import Button from "./button.js";
 import "./progress-bus.less";
 //@@viewOff:imports
 
-export const ProgressBus = createReactClass({
+export const ProgressBus = UU5.Common.VisualComponent.create({
+  displayName: "ProgressBus", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -62,9 +60,9 @@ export const ProgressBus = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    position: PropTypes.oneOf(["left", "center", "right"]),
-    verticalPosition: PropTypes.oneOf(["top", "bottom"]),
-    alertPosition: PropTypes.oneOf(["top", "bottom"])
+    position: UU5.PropTypes.oneOf(["left", "center", "right"]),
+    verticalPosition: UU5.PropTypes.oneOf(["top", "bottom"]),
+    alertPosition: UU5.PropTypes.oneOf(["top", "bottom"])
   },
   //@@viewOff:propTypes
 

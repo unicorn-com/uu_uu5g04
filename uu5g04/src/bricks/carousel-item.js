@@ -12,14 +12,13 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import { Div } from "./factory.js";
 //@@viewOff:imports
 
-export default createReactClass({
+export default UU5.Common.VisualComponent.create({
+  displayName: "carousel-item", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.ContentMixin],
   //@@viewOff:mixins
@@ -53,7 +52,7 @@ export default createReactClass({
 
   //@@viewOn:render
   render() {
-    return <Div {...this.getMainPropsToPass()}>{React.Children.toArray(this.props.children)}</Div>;
+    return <Div {...this.getMainPropsToPass()}>{UU5.Common.Children.toArray(this.props.children)}</Div>;
   }
   //@@viewOff:render
 });

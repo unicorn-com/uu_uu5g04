@@ -12,10 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
-import ReactDOM from "react-dom";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -25,7 +21,8 @@ import Modal from "./modal.js";
 import "./google-map.less";
 //@@viewOff:imports
 
-export const GoogleMap = createReactClass({
+export const GoogleMap = UU5.Common.VisualComponent.create({
+  displayName: "GoogleMap", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.NestingLevelMixin, UU5.Common.PureRenderMixin],
   //@@viewOff:mixins
@@ -46,28 +43,28 @@ export const GoogleMap = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    mapType: PropTypes.oneOf(["satellite", "roadmap"]),
-    mapRef: PropTypes.func,
-    latitude: PropTypes.number,
-    longitude: PropTypes.number,
-    markers: PropTypes.arrayOf(
-      PropTypes.shape({
-        latitude: PropTypes.number,
-        longitude: PropTypes.number,
-        title: PropTypes.string,
-        label: PropTypes.string
+    mapType: UU5.PropTypes.oneOf(["satellite", "roadmap"]),
+    mapRef: UU5.PropTypes.func,
+    latitude: UU5.PropTypes.number,
+    longitude: UU5.PropTypes.number,
+    markers: UU5.PropTypes.arrayOf(
+      UU5.PropTypes.shape({
+        latitude: UU5.PropTypes.number,
+        longitude: UU5.PropTypes.number,
+        title: UU5.PropTypes.string,
+        label: UU5.PropTypes.string
       })
     ),
-    zoom: PropTypes.number,
-    disableZoom: PropTypes.bool,
-    draggable: PropTypes.bool,
-    disableDefaultUI: PropTypes.bool,
-    googleApiKey: PropTypes.string,
-    height: PropTypes.string,
-    width: PropTypes.string,
+    zoom: UU5.PropTypes.number,
+    disableZoom: UU5.PropTypes.bool,
+    draggable: UU5.PropTypes.bool,
+    disableDefaultUI: UU5.PropTypes.bool,
+    googleApiKey: UU5.PropTypes.string,
+    height: UU5.PropTypes.string,
+    width: UU5.PropTypes.string,
 
     // https://developers.google.com/maps/documentation/javascript/styling
-    mapStyle: PropTypes.arrayOf(PropTypes.object)
+    mapStyle: UU5.PropTypes.arrayOf(UU5.PropTypes.object)
   },
   //@@viewOff:propTypes
 
@@ -187,7 +184,7 @@ export const GoogleMap = createReactClass({
 
     let newMapCreated = false;
     if (!this._googleMap) {
-      this._googleMap = new google.maps.Map(ReactDOM.findDOMNode(this._map), mapProps);
+      this._googleMap = new google.maps.Map(UU5.Common.DOM.findNode(this._map), mapProps);
       newMapCreated = true;
     }
     if (this._markers && this._markers.length > 0) {

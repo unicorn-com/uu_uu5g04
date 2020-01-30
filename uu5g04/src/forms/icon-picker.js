@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
 
@@ -29,7 +26,8 @@ import "./icon-picker.less";
 let _icons = {};
 
 export const IconPicker = Context.withContext(
-  createReactClass({
+  UU5.Common.VisualComponent.create({
+    displayName: "IconPicker", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
     mixins: [
       UU5.Common.BaseMixin,
@@ -76,18 +74,18 @@ export const IconPicker = Context.withContext(
 
     //@@viewOn:propTypes
     propTypes: {
-      disableBackdrop: PropTypes.bool,
-      categories: PropTypes.arrayOf(PropTypes.string),
-      selectedCategory: PropTypes.oneOf(Object.keys(UU5.Environment.iconLibraries)),
-      placeholder: PropTypes.string,
-      required: PropTypes.bool,
-      requiredMessage: PropTypes.any,
-      value: PropTypes.string,
-      borderRadius: PropTypes.string,
-      bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-      elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-      openToContent: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-      onClose: PropTypes.func
+      disableBackdrop: UU5.PropTypes.bool,
+      categories: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
+      selectedCategory: UU5.PropTypes.oneOf(Object.keys(UU5.Environment.iconLibraries)),
+      placeholder: UU5.PropTypes.string,
+      required: UU5.PropTypes.bool,
+      requiredMessage: UU5.PropTypes.any,
+      value: UU5.PropTypes.string,
+      borderRadius: UU5.PropTypes.string,
+      bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+      elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+      openToContent: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string]),
+      onClose: UU5.PropTypes.func
     },
     //@@viewOff:propTypes
 

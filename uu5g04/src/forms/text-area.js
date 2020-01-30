@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "./forms-ns.js";
@@ -31,7 +28,8 @@ import "./text-area.less";
 //@@viewOff:imports
 
 export const TextArea = Context.withContext(
-  createReactClass({
+  UU5.Common.VisualComponent.create({
+    displayName: "TextArea", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
     mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, TextInputMixin],
     //@@viewOff:mixins
@@ -51,10 +49,10 @@ export const TextArea = Context.withContext(
 
     //@@viewOn:propTypes
     propTypes: {
-      value: PropTypes.string,
-      rows: PropTypes.number,
-      autoResize: PropTypes.bool,
-      maxRows: PropTypes.number
+      value: UU5.PropTypes.string,
+      rows: UU5.PropTypes.number,
+      autoResize: UU5.PropTypes.bool,
+      maxRows: UU5.PropTypes.number
     },
     //@@viewOff:propTypes
 

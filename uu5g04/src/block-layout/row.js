@@ -12,14 +12,12 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import PropTypes from "prop-types";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import { TAG, css, Font } from "./config.js";
 //@@viewOff:imports
 
-export const Row = createReactClass({
+export const Row = UU5.Common.VisualComponent.create({
+  displayName: "Row", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -57,9 +55,9 @@ export const Row = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    size: PropTypes.oneOf(["s", "m"]),
-    weight: PropTypes.oneOf(["primary", "normal", "secondary"]),
-    ellipsis: PropTypes.bool
+    size: UU5.PropTypes.oneOf(["s", "m"]),
+    weight: UU5.PropTypes.oneOf(["primary", "normal", "secondary"]),
+    ellipsis: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 

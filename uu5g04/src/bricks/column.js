@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -29,7 +26,8 @@ import "./column.less";
 
 let editationLazyLoaded = false;
 
-export const Column = createReactClass({
+export const Column = UU5.Common.VisualComponent.create({
+  displayName: "Column", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -69,18 +67,18 @@ export const Column = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    noSpacing: PropTypes.bool,
-    width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    noSpacing: UU5.PropTypes.bool,
+    width: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
     // BS Column magic
-    colWidth: PropTypes.oneOfType([
-      PropTypes.shape({
-        xs: PropTypes.number,
-        s: PropTypes.number,
-        m: PropTypes.number,
-        l: PropTypes.number,
-        xl: PropTypes.number
+    colWidth: UU5.PropTypes.oneOfType([
+      UU5.PropTypes.shape({
+        xs: UU5.PropTypes.number,
+        s: UU5.PropTypes.number,
+        m: UU5.PropTypes.number,
+        l: UU5.PropTypes.number,
+        xl: UU5.PropTypes.number
       }),
-      PropTypes.string
+      UU5.PropTypes.string
     ])
   },
   //@@viewOff:propTypes

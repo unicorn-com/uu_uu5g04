@@ -14,7 +14,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ContentMixin from "./content-mixin.js";
-import LevelMixin from "./level-mixin.js";
+import { LevelMixin, MIXINS_WITH_LEVEL_MIXIN } from "./level-mixin.js";
 import Tools from "./tools.js";
 
 export const SectionMixin = {
@@ -205,12 +205,13 @@ export const SectionMixin = {
     return this;
   },
 
-  expandHeaderProps(prevHeaderChild) {
+  expandHeaderProps(prevHeaderChild, level) {
     var newHeaderChildProps = prevHeaderChild.props;
     newHeaderChildProps = Tools.mergeDeep({}, newHeaderChildProps);
     newHeaderChildProps.parent = this;
     newHeaderChildProps.id = newHeaderChildProps.id || this.getId() + "-header";
     newHeaderChildProps.underline = newHeaderChildProps.underline || this.props.underline;
+    newHeaderChildProps.level = level;
 
     if (typeof this.expandHeaderProps_ === "function") {
       var tempHeaderChild = this.cloneChild(prevHeaderChild, newHeaderChildProps);
@@ -226,11 +227,12 @@ export const SectionMixin = {
     return newHeaderChildProps;
   },
 
-  expandFooterProps(prevFooterChild) {
+  expandFooterProps(prevFooterChild, level) {
     var newFooterChildProps = prevFooterChild.props;
     newFooterChildProps = Tools.mergeDeep({}, newFooterChildProps);
     newFooterChildProps.parent = this;
     newFooterChildProps.id = newFooterChildProps.id || this.getId() + "-footer";
+    newFooterChildProps.level = level;
 
     if (typeof this.expandFooterProps_ === "function") {
       var tempFooterChild = this.cloneChild(prevFooterChild, newFooterChildProps);
@@ -246,20 +248,20 @@ export const SectionMixin = {
     return newFooterChildProps;
   },
 
-  buildHeaderChild(header) {
+  buildHeaderChild(header, level) {
     header = header || this.getHeader();
 
     var headerChild = null;
 
     if (typeof this.buildHeaderChild_ === "function") {
-      headerChild = this.buildHeaderChild_(header);
+      headerChild = this.buildHeaderChild_(header, level);
     } else {
-      headerChild = this.buildHeaderChildDefault(header);
+      headerChild = this.buildHeaderChildDefault(header, level);
     }
     return headerChild;
   },
 
-  buildHeaderChildDefault(header) {
+  buildHeaderChildDefault(header, level) {
     header = header || this.getHeader();
     var headerChild = null;
     var headerValue = header;
@@ -273,17 +275,17 @@ export const SectionMixin = {
     switch (headerType) {
       case "headerBodyItem":
         headerChild = this.buildChild(headerValue.element.tag, headerValue.element.props);
-        headerChild = this.cloneChild(headerChild, this.expandHeaderProps(headerChild));
+        headerChild = this.cloneChild(headerChild, this.expandHeaderProps(headerChild, level));
         break;
       case "headerElement":
         headerChild = headerValue.element;
-        headerChild = this.cloneChild(headerChild, this.expandHeaderProps(headerChild));
+        headerChild = this.cloneChild(headerChild, this.expandHeaderProps(headerChild, level));
         break;
       case "contentOfStandardHeader":
         headerChild = this.buildChild(this.getDefault("headerTag", "UU5.Common.SectionMixin"), {
           content: headerValue
         });
-        headerChild = this.cloneChild(headerChild, this.expandHeaderProps(headerChild));
+        headerChild = this.cloneChild(headerChild, this.expandHeaderProps(headerChild, level));
         break;
       default:
       // there is no header
@@ -292,20 +294,20 @@ export const SectionMixin = {
     return headerChild;
   },
 
-  buildFooterChild(footer) {
+  buildFooterChild(footer, level) {
     footer = footer || this.getFooter();
 
     var footerChild = null;
 
     if (typeof this.buildFooterChild_ === "function") {
-      footerChild = this.buildFooterChild_(footer);
+      footerChild = this.buildFooterChild_(footer, level);
     } else {
-      footerChild = this.buildFooterChildDefault(footer);
+      footerChild = this.buildFooterChildDefault(footer, level);
     }
     return footerChild;
   },
 
-  buildFooterChildDefault(footer) {
+  buildFooterChildDefault(footer, level) {
     footer = footer || this.getFooter();
     var footerChild = null;
     var footerValue = footer;
@@ -319,17 +321,17 @@ export const SectionMixin = {
     switch (footerType) {
       case "footerBodyItem":
         footerChild = this.buildChild(footerValue.element.tag, footerValue.element.props);
-        footerChild = this.cloneChild(footerChild, this.expandFooterProps(footerChild));
+        footerChild = this.cloneChild(footerChild, this.expandFooterProps(footerChild, level));
         break;
       case "footerElement":
         footerChild = footerValue.element;
-        footerChild = this.cloneChild(footerChild, this.expandFooterProps(footerChild));
+        footerChild = this.cloneChild(footerChild, this.expandFooterProps(footerChild, level));
         break;
       case "contentOfStandardFooter":
         footerChild = this.buildChild(this.getDefault("footerTag", "UU5.Common.SectionMixin"), {
           content: footerValue
         });
-        footerChild = this.cloneChild(footerChild, this.expandFooterProps(footerChild));
+        footerChild = this.cloneChild(footerChild, this.expandFooterProps(footerChild, level));
         break;
       default:
       // there is no footer
@@ -338,12 +340,12 @@ export const SectionMixin = {
     return footerChild;
   },
 
-  getHeaderChild() {
-    return this.buildHeaderChild();
+  getHeaderChild(level) {
+    return this.buildHeaderChild(undefined, level);
   },
 
-  getFooterChild() {
-    return this.buildFooterChild();
+  getFooterChild(level) {
+    return this.buildFooterChild(undefined, level);
   },
 
   getRenderedHeaderChild() {
@@ -361,5 +363,7 @@ export const SectionMixin = {
   //@@viewOn:private
   //@@viewOff:private
 };
+
+MIXINS_WITH_LEVEL_MIXIN.add(SectionMixin);
 
 export default SectionMixin;

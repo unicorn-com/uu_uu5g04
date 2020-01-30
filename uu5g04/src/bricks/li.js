@@ -12,19 +12,16 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Icon from "./icon.js";
+import ListContext from "./list-context.js";
 
 import "./li.less";
 //@@viewOff:imports
 
-export const ListContext = UU5.Common.Context.create();
-
-export const Li = createReactClass({
+export const Li = UU5.Common.VisualComponent.create({
+  displayName: "Li", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -51,8 +48,8 @@ export const Li = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    markerIcon: PropTypes.string,
-    iconColorSchema: PropTypes.string
+    markerIcon: UU5.PropTypes.string,
+    iconColorSchema: UU5.PropTypes.string
   },
   //@@viewOff:propTypes
 

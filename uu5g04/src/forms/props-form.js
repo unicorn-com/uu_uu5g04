@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "./forms-ns.js";
@@ -39,7 +36,9 @@ const DEFAULT_VALUES = {
 };
 const DEFAULT_TYPE = "text";
 
-export const PropsForm = createReactClass({
+export const PropsForm = UU5.Common.VisualComponent.create({
+  displayName: "PropsForm", // for backward compatibility (test snapshots)
+
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, UU5.Common.SectionMixin],
   //@@viewOff:mixins
@@ -65,13 +64,13 @@ export const PropsForm = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    props: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        placeholder: PropTypes.string,
-        type: PropTypes.oneOfType([
-          PropTypes.array,
-          PropTypes.oneOf([
+    props: UU5.PropTypes.arrayOf(
+      UU5.PropTypes.shape({
+        name: UU5.PropTypes.string.isRequired,
+        placeholder: UU5.PropTypes.string,
+        type: UU5.PropTypes.oneOfType([
+          UU5.PropTypes.array,
+          UU5.PropTypes.oneOf([
             "text",
             "textarea",
             "bool",
@@ -83,20 +82,20 @@ export const PropsForm = createReactClass({
             "uu5json",
             "texticon"
           ]),
-          PropTypes.node
+          UU5.PropTypes.node
         ]),
-        value: PropTypes.any,
-        defaultValue: PropTypes.any,
-        props: PropTypes.object,
-        required: PropTypes.bool
+        value: UU5.PropTypes.any,
+        defaultValue: UU5.PropTypes.any,
+        props: UU5.PropTypes.object,
+        required: UU5.PropTypes.bool
       })
     ).isRequired,
-    onSave: PropTypes.func.isRequired,
-    onCancel: PropTypes.func,
-    labelColWidth: PropTypes.string,
-    inputColWidth: PropTypes.string,
-    tagName: PropTypes.string,
-    uu5string: PropTypes.bool
+    onSave: UU5.PropTypes.func.isRequired,
+    onCancel: UU5.PropTypes.func,
+    labelColWidth: UU5.PropTypes.string,
+    inputColWidth: UU5.PropTypes.string,
+    tagName: UU5.PropTypes.string,
+    uu5string: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 

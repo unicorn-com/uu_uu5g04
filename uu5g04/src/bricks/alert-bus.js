@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -23,7 +20,8 @@ import Alert from "./alert.js";
 import "./alert-bus.less";
 //@@viewOff:imports
 
-export const AlertBus = createReactClass({
+export const AlertBus = UU5.Common.VisualComponent.create({
+  displayName: "AlertBus", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -54,13 +52,13 @@ export const AlertBus = createReactClass({
   propTypes: {
     // has not color schema because color schema css class is added automatically to all alerts,
     // but we just need to set color schema of added alert
-    colorSchema: PropTypes.oneOf(UU5.Environment.colorSchema),
-    position: PropTypes.string,
-    closeTimer: PropTypes.number,
-    closeDisabled: PropTypes.bool,
-    block: PropTypes.bool,
-    forceRender: PropTypes.bool,
-    onClose: PropTypes.func
+    colorSchema: UU5.PropTypes.oneOf(UU5.Environment.colorSchema),
+    position: UU5.PropTypes.string,
+    closeTimer: UU5.PropTypes.number,
+    closeDisabled: UU5.PropTypes.bool,
+    block: UU5.PropTypes.bool,
+    forceRender: UU5.PropTypes.bool,
+    onClose: UU5.PropTypes.func
   },
   //@@viewOff:propTypes
 

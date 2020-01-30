@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -30,7 +27,8 @@ function getScrollBarWidth() {
   return UU5.Common.Tools.isChrome() ? 8 : UU5.Environment.getScrollBarWidth();
 }
 
-export const ScrollArea = createReactClass({
+export const ScrollArea = UU5.Common.VisualComponent.create({
+  displayName: "ScrollArea", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ContentMixin],
   //@@viewOff:mixins
@@ -52,7 +50,7 @@ export const ScrollArea = createReactClass({
           `
         ];
 
-        if (canUseCustomScrollbar) {
+        if (canUseCustomScrollbar()) {
           if (props.customScrollbar) {
             styles.push(`
               &::-webkit-scrollbar {
@@ -138,12 +136,12 @@ export const ScrollArea = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    customScrollbar: PropTypes.bool,
-    reserveSpace: PropTypes.bool,
-    hideOnBlur: PropTypes.bool,
-    onDisplayBar: PropTypes.func,
-    onHideBar: PropTypes.func,
-    initialScrollTop: PropTypes.number
+    customScrollbar: UU5.PropTypes.bool,
+    reserveSpace: UU5.PropTypes.bool,
+    hideOnBlur: UU5.PropTypes.bool,
+    onDisplayBar: UU5.PropTypes.func,
+    onHideBar: UU5.PropTypes.func,
+    initialScrollTop: UU5.PropTypes.number
   },
   //@@viewOff:propTypes
 

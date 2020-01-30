@@ -14,13 +14,13 @@
 //@@viewOn:imports
 import React from "react";
 import PropTypes from "prop-types";
-import createReactClass from "create-react-class";
-import * as UU5 from "uu5g04";
 import BaseMixin from "./base-mixin.js";
 import ns from "./common-ns.js";
+import Component from "./component.js";
 //@@viewOff:imports
 
-export const PropMapper = createReactClass({
+export const PropMapper = Component.create({
+  displayName: "PropMapper", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [BaseMixin],
   //@@viewOff:mixins

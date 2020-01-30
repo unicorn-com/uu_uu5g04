@@ -1,3 +1,4 @@
+import UU5 from "uu5g04";
 /**
  * Copyright (C) 2019 Unicorn a.s.
  *
@@ -11,9 +12,6 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
-import PropTypes from "prop-types";
-
 export const ChoiceMixin = {
   //@@viewOn:mixins
   //@@viewOff:mixins
@@ -23,12 +21,12 @@ export const ChoiceMixin = {
 
   //@@viewOn:propTypes
   propTypes: {
-    placeholder: PropTypes.any,
-    required: PropTypes.bool,
-    requiredMessage: PropTypes.any,
-    buttonHidden: PropTypes.bool,
-    iconOpen: PropTypes.string,
-    iconClosed: PropTypes.string
+    placeholder: UU5.PropTypes.any,
+    required: UU5.PropTypes.bool,
+    requiredMessage: UU5.PropTypes.any,
+    buttonHidden: UU5.PropTypes.bool,
+    iconOpen: UU5.PropTypes.string,
+    iconClosed: UU5.PropTypes.string
   },
   //@@viewOff:propTypes
 

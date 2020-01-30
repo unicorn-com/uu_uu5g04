@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 const ClassNames = UU5.Common.ClassNames;
@@ -25,7 +22,8 @@ import NavBarNavItem from "./nav-bar-nav-item.js";
 import "./nav-bar.less";
 //@@viewOff:imports
 
-export const NavBar = createReactClass({
+export const NavBar = UU5.Common.VisualComponent.create({
+  displayName: "NavBar", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -70,17 +68,17 @@ export const NavBar = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    fixed: PropTypes.oneOf(["top", "bottom"]),
-    smoothScroll: PropTypes.number,
-    offset: PropTypes.number,
-    open: PropTypes.bool,
-    alwaysOpen: PropTypes.bool,
-    iconOpen: PropTypes.string,
-    iconClosed: PropTypes.string,
-    onOpen: PropTypes.func,
-    onClose: PropTypes.func,
-    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
-    elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
+    fixed: UU5.PropTypes.oneOf(["top", "bottom"]),
+    smoothScroll: UU5.PropTypes.number,
+    offset: UU5.PropTypes.number,
+    open: UU5.PropTypes.bool,
+    alwaysOpen: UU5.PropTypes.bool,
+    iconOpen: UU5.PropTypes.string,
+    iconClosed: UU5.PropTypes.string,
+    onOpen: UU5.PropTypes.func,
+    onClose: UU5.PropTypes.func,
+    size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
+    elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
   },
   //@@viewOff:propTypes
 

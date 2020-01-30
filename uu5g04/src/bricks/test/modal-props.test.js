@@ -12,15 +12,13 @@
  */
 
 //@@viewOn:imports
-import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import createReactClass from "create-react-class";
 //@@viewOff:imports
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
-const MyModalComponent = createReactClass({
+const MyModalComponent = UU5.Common.VisualComponent.create({
   getInitialState: () => {
     return {
       isCalled: false
@@ -141,7 +139,7 @@ describe(`UU5.Bricks.Modal props.Function`, () => {
     const log = jest.fn();
     const mountLog = jest.fn();
     const unmountLog = jest.fn();
-    const Log = createReactClass({
+    const Log = UU5.Common.VisualComponent.create({
       componentDidMount() {
         mountLog();
       },
@@ -201,7 +199,7 @@ describe(`UU5.Bricks.Modal props.Function`, () => {
     const log = jest.fn();
     const mountLog = jest.fn();
     const unmountLog = jest.fn();
-    const Log = createReactClass({
+    const Log = UU5.Common.VisualComponent.create({
       componentDidMount() {
         mountLog();
       },
@@ -262,7 +260,7 @@ describe(`UU5.Bricks.Modal props.Function`, () => {
     const log = jest.fn();
     const mountLog = jest.fn();
     const unmountLog = jest.fn();
-    const Log = createReactClass({
+    const Log = UU5.Common.VisualComponent.create({
       componentDidMount() {
         mountLog();
       },

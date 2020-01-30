@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -29,7 +26,9 @@ let editationLazyLoaded = false;
 import "./row.less";
 //@@viewOff:imports
 
-export const Row = createReactClass({
+export const Row = UU5.Common.VisualComponent.create({
+  displayName: "Row", // for backward compatibility (test snapshots)
+
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -75,8 +74,8 @@ export const Row = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    noSpacing: PropTypes.bool,
-    display: PropTypes.oneOf(["standard", "flex"])
+    noSpacing: UU5.PropTypes.bool,
+    display: UU5.PropTypes.oneOf(["standard", "flex"])
   },
   //@@viewOff:propTypes
 

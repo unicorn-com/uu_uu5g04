@@ -1,5 +1,3 @@
-import React from "react";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 
 import ns from "../bricks-editable-ns.js";
@@ -55,7 +53,7 @@ const getProps = props => {
   return propsToPass;
 };
 
-export const ToolbarDropdown = React.forwardRef((props, ref) => {
+export const ToolbarDropdown = UU5.Common.Reference.forward((props, ref) => {
   return (
     <UU5.Bricks.Dropdown {...getProps(props)} ref={ref}>
       {getItems(props)}
@@ -66,19 +64,19 @@ export const ToolbarDropdown = React.forwardRef((props, ref) => {
 ToolbarDropdown.displayName = ns.name("ToolbarDropdown");
 ToolbarDropdown.tagName = ns.name("ToolbarDropdown");
 ToolbarDropdown.propTypes = {
-  value: PropTypes.string,
-  items: PropTypes.arrayOf(
-    PropTypes.oneOfType([
-      PropTypes.shape({
-        type: PropTypes.oneOfType([PropTypes.oneOf(["button", "dropdown"]), PropTypes.func]),
-        props: PropTypes.object
+  value: UU5.PropTypes.string,
+  items: UU5.PropTypes.arrayOf(
+    UU5.PropTypes.oneOfType([
+      UU5.PropTypes.shape({
+        type: UU5.PropTypes.oneOfType([UU5.PropTypes.oneOf(["button", "dropdown"]), UU5.PropTypes.func]),
+        props: UU5.PropTypes.object
       }),
-      PropTypes.element
+      UU5.PropTypes.element
     ])
   ),
-  colorSchema: PropTypes.string,
-  bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-  onApply: PropTypes.func
+  colorSchema: UU5.PropTypes.string,
+  bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+  onApply: UU5.PropTypes.func
 };
 ToolbarDropdown.defaultProps = {
   value: undefined,

@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
 
@@ -35,7 +32,8 @@ const TIME_FORMAT_12 = "12";
 const TIME_FORMAT_24 = "24";
 
 export const TimePicker = Context.withContext(
-  createReactClass({
+  UU5.Common.VisualComponent.create({
+    displayName: "TimePicker", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
     mixins: [
       UU5.Common.BaseMixin,
@@ -69,21 +67,21 @@ export const TimePicker = Context.withContext(
 
     //@@viewOn:propTypes
     propTypes: {
-      value: PropTypes.string,
-      iconOpen: PropTypes.string,
-      iconClosed: PropTypes.string,
-      format: PropTypes.oneOf([TIME_FORMAT_24, TIME_FORMAT_12]),
-      nanMessage: PropTypes.any,
-      seconds: PropTypes.bool,
-      valueType: PropTypes.oneOf(["string", "date"]),
-      openToContent: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-      step: PropTypes.number,
-      strictStep: PropTypes.bool,
-      pickerType: PropTypes.oneOf(["single-column", "multi-column"]),
-      suffix: PropTypes.string,
-      timeFrom: PropTypes.string,
-      timeTo: PropTypes.string,
-      show24: PropTypes.bool
+      value: UU5.PropTypes.string,
+      iconOpen: UU5.PropTypes.string,
+      iconClosed: UU5.PropTypes.string,
+      format: UU5.PropTypes.oneOf([TIME_FORMAT_24, TIME_FORMAT_12]),
+      nanMessage: UU5.PropTypes.any,
+      seconds: UU5.PropTypes.bool,
+      valueType: UU5.PropTypes.oneOf(["string", "date"]),
+      openToContent: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string]),
+      step: UU5.PropTypes.number,
+      strictStep: UU5.PropTypes.bool,
+      pickerType: UU5.PropTypes.oneOf(["single-column", "multi-column"]),
+      suffix: UU5.PropTypes.string,
+      timeFrom: UU5.PropTypes.string,
+      timeTo: UU5.PropTypes.string,
+      show24: UU5.PropTypes.bool
     },
     //@@viewOff:propTypes
 

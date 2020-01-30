@@ -13,14 +13,15 @@
 
 //@@viewOn:imports
 import React from "react";
-import createReactClass from "create-react-class";
 import { SessionContext } from "./session.js";
 import IdentityItem from "./identity-item.js";
 import BaseMixin from "./base-mixin.js";
 import ContentMixin from "./content-mixin.js";
+import VisualComponent from "./visual-component.js";
 //@@viewOff:imports
 
-export const Identity = createReactClass({
+export const Identity = VisualComponent.create({
+  displayName: "Identity", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [BaseMixin, ContentMixin],
   //@@viewOff:mixins

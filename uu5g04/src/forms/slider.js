@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "./forms-ns.js";
@@ -28,7 +25,8 @@ import "./slider.less";
 //@@viewOff:imports
 
 export const Slider = Context.withContext(
-  createReactClass({
+  UU5.Common.VisualComponent.create({
+    displayName: "Slider", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
     mixins: [
       UU5.Common.BaseMixin,
@@ -59,13 +57,13 @@ export const Slider = Context.withContext(
     //@@viewOn:propTypes
     propTypes: {
       // TODO
-      //position: PropTypes.oneOf(['horizontal', 'vertical']),
-      min: PropTypes.number,
-      max: PropTypes.number,
-      step: PropTypes.number,
-      value: PropTypes.number,
-      onChange: PropTypes.func,
-      onChanged: PropTypes.func
+      //position: UU5.PropTypes.oneOf(['horizontal', 'vertical']),
+      min: UU5.PropTypes.number,
+      max: UU5.PropTypes.number,
+      step: UU5.PropTypes.number,
+      value: UU5.PropTypes.number,
+      onChange: UU5.PropTypes.func,
+      onChanged: UU5.PropTypes.func
     },
     //@@viewOff:propTypes
 
@@ -322,7 +320,7 @@ export const Slider = Context.withContext(
           : this._getValueInInterval(this._slider ? this._slider.getValue() : this.props.value);
       if (typeof value !== "number") value = parseInt(value);
 
-      let content = this.getContent() || (this.props.children && React.Children.toArray(this.props.children));
+      let content = this.getContent() || (this.props.children && UU5.Common.Children.toArray(this.props.children));
       let className = this.getClassName("slider");
       this.isReadOnly() && (className += " " + this.getClassName("sliderReadOnly"));
 

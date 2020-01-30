@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "./forms-ns.js";
@@ -31,10 +28,11 @@ import Context from "./form-context.js";
 import "./file.less";
 //@@viewOff:imports
 
-const Fragment = React.Fragment || (props => props.children);
+const Fragment = UU5.Common.Fragment || (props => props.children);
 
 export const File = Context.withContext(
-  createReactClass({
+  UU5.Common.VisualComponent.create({
+    displayName: "File", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
     mixins: [
       UU5.Common.BaseMixin,
@@ -84,16 +82,16 @@ export const File = Context.withContext(
 
     //@@viewOn:propTypes
     propTypes: {
-      value: PropTypes.oneOfType([PropTypes.object, PropTypes.arrayOf(PropTypes.object)]),
-      multiple: PropTypes.bool,
-      closeIcon: PropTypes.string,
-      downloadIcon: PropTypes.string,
-      selectedIcon: PropTypes.string,
-      borderRadius: PropTypes.string,
-      bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-      elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-      authenticate: PropTypes.bool,
-      dndAreaPlaceholder: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
+      value: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.arrayOf(UU5.PropTypes.object)]),
+      multiple: UU5.PropTypes.bool,
+      closeIcon: UU5.PropTypes.string,
+      downloadIcon: UU5.PropTypes.string,
+      selectedIcon: UU5.PropTypes.string,
+      borderRadius: UU5.PropTypes.string,
+      bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+      elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+      authenticate: UU5.PropTypes.bool,
+      dndAreaPlaceholder: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string])
     },
     //@@viewOff:propTypes
 

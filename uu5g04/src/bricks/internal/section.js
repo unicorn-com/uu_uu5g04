@@ -11,9 +11,6 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
-import PropTypes from "prop-types";
-import createReactClass from "create-react-class";
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 
@@ -37,7 +34,7 @@ const DEFAULT_PROPS_MAP = {
 const MAIN_CLASS_NAME = ns.css("section");
 const NAME = ns.name("Section");
 
-export const Section = createReactClass({
+export const Section = UU5.Common.VisualComponent.create({
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin],
   //@@viewOff:mixins
@@ -60,7 +57,7 @@ export const Section = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    component: PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired
   },
   //@@viewOff:propTypes
 
@@ -168,7 +165,7 @@ export const Section = createReactClass({
       content: `${this.getLsiValue("level")} ${level}`,
       value: `${level}`
     }));
-    levelItems.unshift({ content: this.getLsiValue("defaultLevel"), value: "" });
+    levelItems.unshift({ content: this.getLsiValue("defaultLevel"), value: null });
 
     return [
       {

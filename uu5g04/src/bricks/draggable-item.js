@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -23,7 +20,8 @@ import DraggableMixin from "./draggable-mixin.js";
 import "./draggable-item.less";
 //@@viewOff:imports
 
-export const DraggableItem = createReactClass({
+export const DraggableItem = UU5.Common.VisualComponent.create({
+  displayName: "DraggableItem", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -49,11 +47,11 @@ export const DraggableItem = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    x: PropTypes.number,
-    y: PropTypes.number,
-    onMoveStart: PropTypes.func,
-    onMove: PropTypes.func,
-    onMoveEnd: PropTypes.func
+    x: UU5.PropTypes.number,
+    y: UU5.PropTypes.number,
+    onMoveStart: UU5.PropTypes.func,
+    onMove: UU5.PropTypes.func,
+    onMoveEnd: UU5.PropTypes.func
   },
   //@@viewOff:propTypes
 

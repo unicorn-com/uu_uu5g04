@@ -45,13 +45,10 @@
     <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
     <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
     <script type="text/babel">
-      import React from "react";
-      import createReactClass from "create-react-class";
-      import ReactDOM from "react-dom";
       import UU5 from "uu5g04";
       import "uu5g04-bricks";
 
-      const MyItem = createReactClass({
+      const MyItem = UU5.Common.VisualComponent.create({
         mixins: [UU5.Common.BaseMixin],
 
         statics: {
@@ -64,13 +61,13 @@
         render() {
           return (
             <UU5.Bricks.Tree.Item {...this.getMainPropsToPass()} label={this.props.label}>
-              {React.Children.toArray(this.props.children)}
+              {UU5.Common.Children.toArray(this.props.children)}
             </UU5.Bricks.Tree.Item>
           )
         },
       });
 
-      const Page = createReactClass({
+      const Page = UU5.Common.VisualComponent.create({
         render: function () {
           return (
             <UU5.Bricks.Container>
@@ -176,7 +173,7 @@
         }
       });
 
-      ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+      UU5.Common.DOM.render(UU5.Common.Element.create(Page, null), document.getElementById('renderHere'));
     </script>
   </body>
 </html>

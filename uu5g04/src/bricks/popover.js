@@ -12,10 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
-import ReactDOM from "react-dom";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -26,7 +22,7 @@ const PopoverContext = UU5.Common.Context.create({});
 
 const withContext = Component => {
   if (!UU5.Common.Context.isSupported()) return Component;
-  let forwardRef = React.forwardRef((props, ref) => {
+  let forwardRef = UU5.Common.Reference.forward((props, ref) => {
     return (
       <PopoverContext.Consumer>
         {({ getPopover }) => <Component getPopover={getPopover} {...props} ref={ref} />}
@@ -42,7 +38,8 @@ const withContext = Component => {
 };
 
 export const Popover = withContext(
-  createReactClass({
+  UU5.Common.VisualComponent.create({
+    displayName: "Popover", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
     mixins: [
       UU5.Common.BaseMixin,
@@ -82,10 +79,17 @@ export const Popover = withContext(
 
     //@@viewOn:propTypes
     propTypes: {
-      shown: PropTypes.bool,
-      forceRender: PropTypes.bool,
-      fitHeightToViewport: PropTypes.bool,
-      getPopover: PropTypes.func
+      shown: UU5.PropTypes.bool,
+      forceRender: UU5.PropTypes.bool,
+      fitHeightToViewport: UU5.PropTypes.bool,
+      getPopover: UU5.PropTypes.func,
+      hidden: UU5.Common.ElementaryMixin.propTypes.disabled,
+      controlled: UU5.Common.ElementaryMixin.propTypes.controlled,
+      disabled: UU5.Common.ElementaryMixin.propTypes.disabled,
+      header: UU5.Common.SectionMixin.propTypes.header,
+      content: UU5.Common.ContentMixin.propTypes.content,
+      footer: UU5.Common.SectionMixin.propTypes.footer,
+      className: UU5.Common.BaseMixin.propTypes.className
     },
     //@@viewOff:propTypes
 
@@ -340,7 +344,7 @@ export const Popover = withContext(
     },
 
     _getPosition(requiredPosition, aroundElementRect, offset = 0, fitHeightToViewport, horizontalOnly) {
-      let element = ReactDOM.findDOMNode(this);
+      let element = UU5.Common.DOM.findNode(this);
       let isRelative = getComputedStyle(element).position === "relative";
       let elementRect = UU5.Common.Tools.merge(element.getBoundingClientRect(), {});
       aroundElementRect = UU5.Common.Tools.merge(aroundElementRect, {});
@@ -563,11 +567,22 @@ export const Popover = withContext(
     },
 
     _isCentralPopover() {
-      return !!this._getCentralPopover();
+      let result = false;
+      if (!this.props.forceRender && typeof this.props.getPopover === "function") {
+        let centralPopover = this.props.getPopover();
+        if (centralPopover && centralPopover.getId() === this.getId()) result = true;
+      }
+      return result;
     },
 
     _getCentralPopover() {
-      return !this.props.forceRender && typeof this.props.getPopover === "function" ? this.props.getPopover() : null;
+      // NOTE The method is expected to return central popover but not if it is the same instance as this.
+      let result = null;
+      if (!this.props.forceRender && typeof this.props.getPopover === "function") {
+        let centralPopover = this.props.getPopover();
+        if (centralPopover && centralPopover.getId() !== this.getId()) result = centralPopover;
+      }
+      return result;
     },
 
     _findTarget(item) {
@@ -587,21 +602,23 @@ export const Popover = withContext(
       this._stopPropagation = true;
 
       if (!this.state.disableBackdrop && !this.props.disableBackdrop) {
-        this._closeListener = e => {
-          let isPopover = this._findTarget(e.target);
+        if (!this._closeListener) {
+          this._closeListener = e => {
+            let isPopover = this._findTarget(e.target);
 
-          if (!this._stopPropagation && !isPopover && !this.isHidden()) {
-            if (typeof onBeforeClose === "function") {
-              onBeforeClose();
+            if (!this._stopPropagation && !isPopover && !this.isHidden()) {
+              if (typeof onBeforeClose === "function") {
+                onBeforeClose();
+              }
+              this.close(onClose);
+            } else {
+              this._stopPropagation = false;
             }
-            this.close(onClose);
-          } else {
-            this._stopPropagation = false;
-          }
-        };
+          };
 
-        window.addEventListener("click", this._closeListener);
-        window.addEventListener("contextmenu", this._closeListener);
+          window.addEventListener("click", this._closeListener);
+          window.addEventListener("contextmenu", this._closeListener);
+        }
       }
     },
 
@@ -609,6 +626,7 @@ export const Popover = withContext(
       if (this._closeListener) {
         window.removeEventListener("click", this._closeListener);
         window.removeEventListener("contextmenu", this._closeListener);
+        this._closeListener = null;
       }
     },
 

@@ -12,16 +12,14 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import Css from "./css.js";
 
 import ns from "../forms-ns.js";
 //@@viewOff:imports
 
-const AnimatedContainer = createReactClass({
+const AnimatedContainer = UU5.Common.VisualComponent.create({
+  displayName: "AnimatedContainer", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin],
   //@@viewOff:mixins
@@ -47,9 +45,9 @@ const AnimatedContainer = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    opened: PropTypes.bool,
-    unmount: PropTypes.bool,
-    animationTime: PropTypes.number
+    opened: UU5.PropTypes.bool,
+    unmount: UU5.PropTypes.bool,
+    animationTime: UU5.PropTypes.number
   },
   //@@viewOff:propTypes
 
@@ -65,7 +63,7 @@ const AnimatedContainer = createReactClass({
 
   //@@viewOn:reactLifeCycle
   getInitialState() {
-    this._childContainerRef = React.createRef();
+    this._childContainerRef = UU5.Common.Reference.create();
     return { opened: false, hidden: true, height: null };
   },
 

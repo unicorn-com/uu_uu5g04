@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>useElementSize Demo</title>
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+        "uu5g04": "/uu5g04.js",
+        "uu5g04-bricks": "/uu5g04-bricks.js",
+        "uu5g04-hooks": "/uu5g04-hooks.js"
+      }
+    });
+  </script>
+
+  <style type="text/css">
+    div {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  </style>
+
+</head>
+<body>
+<div id="renderHere"></div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+
+  //@@viewOn:imports
+  import { createVisualComponent, useElementSize } from "uu5g04-hooks";
+  //@@viewOff:imports
+
+  //@@viewOn:statics
+  const STATICS = {
+    displayName: "UU5.Demo.ElementSize",
+    nestingLevel: "box"
+  };
+  //@@viewOff:statics
+
+  const ElementSize = createVisualComponent({
+    ...STATICS,
+
+    //@@viewOn:propTypes
+    propTypes: {},
+    //@@viewOff:propTypes
+
+    //@@viewOn:defaultProps
+    defaultProps: {},
+    //@@viewOff:defaultProps
+
+    render(props) {
+      // do NOT use keywords "this"!!!
+
+      //@@viewOn:hooks
+      let [ref, width, height] = useElementSize();
+      console.log("width x height:", width, height);
+      //@@viewOn:hooks
+
+      //@@viewOn:interface
+      //@@viewOff:interface
+
+      //@@viewOn:private
+      //@@viewOff:private
+
+      //@@viewOn:render
+
+      // { id, className, style, disabled, hidden }
+      let attrs = UU5.Common.VisualComponent.getAttrs(props);
+      let style = { ...attrs.style, height: "100%", width: "100%" };
+
+      return (
+        <div {...attrs} style={style} ref={ref}>
+          This element has size {width} x {height}.
+        </div>
+      );
+      //@@viewOff:render
+    }
+  });
+
+  function Page() {
+    return (
+      <div>
+        300 x 200
+        <div style={{ width: 300, height: 200 }}>
+          <ElementSize />
+        </div>
+
+        50vw x 20vh
+        <div style={{ width: "50vw", height: "20vh" }}>
+          <ElementSize />
+        </div>
+
+        auto x auto
+        <div style={{ width: "auto", height: "auto" }}>
+          <ElementSize />
+        </div>
+      </div>
+    );
+  }
+
+  UU5.Common.DOM.render(<Page />, document.getElementById('renderHere'));
+</script>
+</body>
+</html>

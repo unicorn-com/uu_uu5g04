@@ -13,18 +13,19 @@
 
 //@@viewOn:imports
 import React from "react";
-import createReactClass from "create-react-class";
 import ns from "./common-ns.js";
 import PropTypes from "prop-types";
 import BaseMixin from "./base-mixin.js";
 import ElementaryMixin from "./elementary-mixin.js";
 import Tools from "./tools.js";
 import PureRenderMixin from "./pure-render-mixin";
+import VisualComponent from "./visual-component.js";
 
 import "./outline.less";
 //@@viewOff:imports
 
-export const Outline = createReactClass({
+export const Outline = VisualComponent.create({
+  displayName: "Outline", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [BaseMixin, ElementaryMixin, PureRenderMixin],
   //@@viewOff:mixins

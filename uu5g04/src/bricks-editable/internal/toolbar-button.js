@@ -1,5 +1,3 @@
-import React from "react";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 
 import ns from "../bricks-editable-ns.js";
@@ -51,20 +49,20 @@ const getProps = props => {
   return propsToPass;
 };
 
-export const ToolbarButton = React.forwardRef((props, ref) => {
+export const ToolbarButton = UU5.Common.Reference.forward((props, ref) => {
   return <UU5.Bricks.Button {...getProps(props)} ref={ref} />;
 });
 
 ToolbarButton.displayName = ns.name("ToolbarButton");
 ToolbarButton.tagName = ns.name("ToolbarButton");
 ToolbarButton.propTypes = {
-  icon: PropTypes.string,
-  content: PropTypes.any, //TODO: specify
-  colorSchema: PropTypes.string,
-  bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline", "link"]),
-  baseline: PropTypes.bool,
-  onApply: PropTypes.func,
-  pressed: PropTypes.bool
+  icon: UU5.PropTypes.string,
+  content: UU5.PropTypes.any, //TODO: specify
+  colorSchema: UU5.PropTypes.string,
+  bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline", "link"]),
+  baseline: UU5.PropTypes.bool,
+  onApply: UU5.PropTypes.func,
+  pressed: UU5.PropTypes.bool
 };
 ToolbarButton.defaultProps = {
   icon: undefined,

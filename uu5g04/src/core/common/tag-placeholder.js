@@ -13,7 +13,6 @@
 
 //@@viewOn:imports
 import React from "react";
-import createReactClass from "create-react-class";
 import ns from "./common-ns.js";
 import PropTypes from "prop-types";
 import BaseMixin from "./base-mixin.js";
@@ -22,13 +21,15 @@ import Tools from "./tools.js";
 import Environment from "../environment/environment.js";
 import NotFoundTag from "./not-found-tag.js";
 import Version from "./version.js";
+import VisualComponent from "./visual-component.js";
 //@@viewOff:imports
 
 //import './tag-placeholder.less';
 
 let importLibraryCache = {};
 
-export const TagPlaceholder = createReactClass({
+export const TagPlaceholder = VisualComponent.create({
+  displayName: "TagPlaceholder", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [BaseMixin, ElementaryMixin],
   //@@viewOff:mixins

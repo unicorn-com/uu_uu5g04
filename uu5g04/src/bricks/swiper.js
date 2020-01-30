@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -24,7 +21,8 @@ import SwiperMenu from "./swiper-menu.js";
 import "./swiper.less";
 //@@viewOff:imports
 
-export const Swiper = createReactClass({
+export const Swiper = UU5.Common.VisualComponent.create({
+  displayName: "Swiper", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -57,14 +55,14 @@ export const Swiper = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    leftMenuOpen: PropTypes.bool,
-    rightMenuOpen: PropTypes.bool,
-    onSwipeOpenLeftMenu: PropTypes.func,
-    onSwipeCloseLeftMenu: PropTypes.func,
-    onSwipeOpenRightMenu: PropTypes.func,
-    onSwipeCloseRightMenu: PropTypes.func,
-    allowBodyTags: PropTypes.array,
-    allowMenuTags: PropTypes.array
+    leftMenuOpen: UU5.PropTypes.bool,
+    rightMenuOpen: UU5.PropTypes.bool,
+    onSwipeOpenLeftMenu: UU5.PropTypes.func,
+    onSwipeCloseLeftMenu: UU5.PropTypes.func,
+    onSwipeOpenRightMenu: UU5.PropTypes.func,
+    onSwipeCloseRightMenu: UU5.PropTypes.func,
+    allowBodyTags: UU5.PropTypes.array,
+    allowMenuTags: UU5.PropTypes.array
   },
   //@@viewOff:propTypes
 

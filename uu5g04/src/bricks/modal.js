@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -37,7 +34,9 @@ const getMountContent = (props = {}, state = {}) => {
   return mountContent === undefined ? MOUNT_CONTENT_VALUES.onFirstRender : mountContent;
 };
 
-export const Modal = createReactClass({
+export const Modal = UU5.Common.VisualComponent.create({
+  displayName: "Modal", // for backward compatibility (test snapshots)
+
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -114,20 +113,20 @@ export const Modal = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    size: PropTypes.oneOf(["s", "m", "l", "auto", "max"]),
-    shown: PropTypes.bool,
-    sticky: PropTypes.bool,
-    stickyBackground: PropTypes.bool,
-    scrollableBackground: PropTypes.bool,
-    forceRender: PropTypes.bool,
-    onClose: PropTypes.func,
-    overflow: PropTypes.bool,
-    mountContent: PropTypes.oneOf([
+    size: UU5.PropTypes.oneOf(["s", "m", "l", "auto", "max"]),
+    shown: UU5.PropTypes.bool,
+    sticky: UU5.PropTypes.bool,
+    stickyBackground: UU5.PropTypes.bool,
+    scrollableBackground: UU5.PropTypes.bool,
+    forceRender: UU5.PropTypes.bool,
+    onClose: UU5.PropTypes.func,
+    overflow: UU5.PropTypes.bool,
+    mountContent: UU5.PropTypes.oneOf([
       MOUNT_CONTENT_VALUES.onEachOpen,
       MOUNT_CONTENT_VALUES.onFirstOpen,
       MOUNT_CONTENT_VALUES.onFirstRender
     ]),
-    offsetTop: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+    offsetTop: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string])
   },
   //@@viewOff:propTypes
 
@@ -307,7 +306,7 @@ export const Modal = createReactClass({
     return this.state.sticky;
   },
 
-  onCloseDefault(setStateCallback) {
+  onCloseDefault(opt, setStateCallback) {
     this._close(setStateCallback);
 
     return this;
@@ -370,7 +369,7 @@ export const Modal = createReactClass({
     if (typeof this.state.onClose === "function") {
       this.state.onClose(opt);
     } else {
-      this.onCloseDefault();
+      this.onCloseDefault(opt);
     }
 
     return this;
@@ -628,7 +627,7 @@ export const Modal = createReactClass({
 
     if (bodyProps.content) {
       bodyChild = this.buildChildren({
-        children: React.createElement(Body, bodyProps)
+        children: UU5.Common.Element.create(Body, bodyProps)
       });
     }
 

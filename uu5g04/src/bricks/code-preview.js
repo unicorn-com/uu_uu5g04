@@ -12,16 +12,14 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./code-preview.less";
 //@@viewOff:imports
 
-export const CodePreview = createReactClass({
+export const CodePreview = UU5.Common.VisualComponent.create({
+  displayName: "CodePreview", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.PureRenderMixin],
   //@@viewOff:mixins
@@ -41,9 +39,9 @@ export const CodePreview = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    tagName: PropTypes.string,
-    props: PropTypes.object,
-    uu5string: PropTypes.bool
+    tagName: UU5.PropTypes.string,
+    props: UU5.PropTypes.object,
+    uu5string: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
 

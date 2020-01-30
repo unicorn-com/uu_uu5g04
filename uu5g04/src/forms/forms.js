@@ -11,7 +11,6 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
 import * as UU5 from "uu5g04";
 
 export * from "./mixins/choice-mixin.js";

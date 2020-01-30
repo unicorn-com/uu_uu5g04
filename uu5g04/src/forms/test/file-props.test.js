@@ -12,8 +12,6 @@
  */
 
 //@@viewOn:imports
-import createReactClass from "create-react-class";
-import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-forms";
@@ -30,7 +28,7 @@ afterEach(() => {
   UU5.Environment.isTrustedDomain = origIsTrustedDomain;
 });
 
-const MixinPropsFunction = createReactClass({
+const MixinPropsFunction = UU5.Common.VisualComponent.create({
   mixins: [UU5.Common.BaseMixin],
 
   getInitialState() {

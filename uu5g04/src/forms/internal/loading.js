@@ -11,8 +11,6 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
-
 const Loading = props => {
   return (
     <span className={props.className}>

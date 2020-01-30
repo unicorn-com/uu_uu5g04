@@ -12,9 +12,6 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -24,7 +21,8 @@ import Icon from "./icon.js";
 import "./button-to-top.less";
 //@@viewOff:imports
 
-export const ButtonToTop = createReactClass({
+export const ButtonToTop = UU5.Common.VisualComponent.create({
+  displayName: "ButtonToTop", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -51,14 +49,14 @@ export const ButtonToTop = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    icon: PropTypes.string,
-    offset: PropTypes.number,
-    scrollDuration: PropTypes.number,
-    size: PropTypes.oneOf(["s", "m", "l", "xl"]),
-    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent"]),
-    borderRadius: PropTypes.string,
-    elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-    elevationHover: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
+    icon: UU5.PropTypes.string,
+    offset: UU5.PropTypes.number,
+    scrollDuration: UU5.PropTypes.number,
+    size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
+    bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent"]),
+    borderRadius: UU5.PropTypes.string,
+    elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+    elevationHover: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
   },
   //@@viewOff:propTypes
 
