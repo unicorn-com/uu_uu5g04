@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Editable Toolbar Demo</title>
+
+    <script>
+      // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      // var appAssetsRelativeUrlPath = "public/";
+      // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    </script>
+
+    <!--<link type="text/css" rel="stylesheet" href="https://cdn.plus4u.net/libs/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+          "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+          "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+          "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+          "uu5g04": "/uu5g04.js",
+          "uu5g04-bricks": "/uu5g04-bricks.js",
+          "uu5g04-forms": "/uu5g04-forms.js",
+          "uu5g04-bricks-editable": "/uu5g04-bricks-editable.js"
+        }
+      });
+
+      // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+      //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+      // }}));
+    </script>
+
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import PropTypes from "prop-types";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+      import "uu5g04-bricks-editable";
+
+      /*@@viewOn:0*/
+      const CustomEditableHeader = UU5.BricksEditable.Toolbar.withContext(
+        createReactClass({
+          statics: {
+            tagName: "CustomEditableHeader"
+          },
+
+          mixins: [UU5.Common.BaseMixin],
+
+          propTypes: {
+            value: PropTypes.string,
+            open: PropTypes.func,
+            close: PropTypes.func,
+            onChange: PropTypes.func,
+            editable: PropTypes.bool
+          },
+
+          getDefaultProps() {
+            return {
+              value: undefined,
+              open: undefined,
+              close: undefined,
+              onChange: undefined,
+              editable: false
+            };
+          },
+
+          getInitialState() {
+            return {
+              value: this.props.value,
+              underline: false
+            };
+          },
+
+          _onChange(opt) {
+            this.setState({ value: opt.value }, () => typeof this.props.onChange === "function" ? this.props.onChange({ value: opt.value }, this) : null);
+          },
+
+          _toggleUnderline() {
+            this.setState(state => ({ underline: !state.underline }), () => typeof this.props.onChange === "function" ? this.props.onChange({ underline: this.state.underline }, this) : null);
+          },
+
+          _setToolbarItems() {
+            this.props.open([{ type: "button", props: { icon: "mdi-format-underline", onClick: this._toggleUnderline } }]);
+          },
+
+          render() {
+            let headerClass = UU5.Common.Css.css(`
+              && {
+                margin: 8px 0;
+              }
+            `);
+
+            let inputClass = UU5.Common.Css.css(`
+              && {
+                margin: 0;
+              }
+
+              input.uu5-forms-input-form-item.uu5-forms-input-form-item {
+                font-size: 40px;
+                font-weight: 500;
+                padding-left: 0px;
+                padding-top: 14px;
+              }
+            `);
+
+            let normalContent = (
+              <UU5.Bricks.Header
+                level="1"
+                underline={this.state.underline}
+                className={headerClass}
+                content={this.state.value}
+              />
+            );
+
+            let editableContent = (
+              <UU5.Bricks.Header
+                level="1"
+                underline={this.state.underline}
+                className={headerClass}
+              >
+                <UU5.Forms.Text
+                  value={this.state.value || ""}
+                  onChange={this._onChange}
+                  onFocus={() => this._setToolbarItems()}
+                  className={inputClass}
+                  size="xl"
+                />
+              </UU5.Bricks.Header>
+            );
+
+            return (this.props.editable ? editableContent : normalContent);
+          }
+        })
+      );
+
+      const CustomEditableBox = UU5.BricksEditable.Toolbar.withContext(
+        createReactClass({
+          statics: {
+            tagName: "CustomEditableBox"
+          },
+
+          mixins: [UU5.Common.BaseMixin],
+
+          propTypes: {
+            value: PropTypes.string,
+            open: PropTypes.func,
+            close: PropTypes.func,
+            onChange: PropTypes.func,
+            editable: PropTypes.bool
+          },
+
+          getDefaultProps() {
+            return {
+              value: undefined,
+              open: undefined,
+              close: undefined,
+              onChange: undefined,
+              editable: false
+            };
+          },
+
+          getInitialState() {
+            return {
+              value: this.props.value,
+              bgStyle: "filled"
+            };
+          },
+
+          _onChange(opt) {
+            this.setState({ value: opt.value }, () => typeof this.props.onChange === "function" ? this.props.onChange({ value: opt.value }, this) : null);
+          },
+
+          _changeBgStyle(opt) {
+            this.setState({ bgStyle: opt.value }, () => typeof this.props.onChange === "function" ? this.props.onChange({ bgStyle: this.state.bgStyle }, this) : null);
+          },
+
+          _setToolbarItems() {
+            this.props.open([{ type: "dropdown", props: { value: this.state.bgStyle, onChange: this._changeBgStyle, items: [
+                { value: "none" },
+                { value: "filled" },
+                { value: "underline" },
+                { value: "outline" },
+                { value: "transparent" }
+              ]
+            } }]);
+          },
+
+          render() {
+            let boxClass = UU5.Common.Css.css(`
+              && {
+                margin: 8px 0;
+              }
+            `);
+
+            let inputClass = UU5.Common.Css.css(`
+              && {
+                margin: 0;
+              }
+
+              input.uu5-forms-input-form-item.uu5-forms-input-form-item {
+                font-size: 15px;
+                padding-left: 0;
+              }
+            `);
+
+            let bgStyle = this.state.bgStyle === "none" ? null : this.state.bgStyle;
+
+            let normalContent = (
+              <UU5.Bricks.Box
+                level="1"
+                bgStyle={bgStyle}
+                background={this.state.background}
+                content={this.state.value}
+                colorSchema="light-blue"
+              />
+            );
+
+            let editableContent = (
+              <UU5.Bricks.Box
+                level="1"
+                bgStyle={bgStyle}
+                background={this.state.background}
+                colorSchema="light-blue"
+              >
+                <UU5.Forms.Text
+                  value={this.state.value || ""}
+                  onChange={this._onChange}
+                  onFocus={() => this._setToolbarItems()}
+                  className={inputClass}
+                />
+              </UU5.Bricks.Box>
+            );
+
+            return (this.props.editable ? editableContent : normalContent);
+          }
+        })
+      );
+
+      const Page = createReactClass({
+        getInitialState() {
+          return {
+            editation: true,
+            headerData: {
+              underline: false,
+              value: "My Header Content..."
+            },
+            boxData: {
+              bgStyle: undefined,
+              value: "My Box Content..."
+            }
+          };
+        },
+
+        _endEdit() {
+          this.setState({ editation: false }, () => {
+            this._header.toggleEdit();
+            this._box.toggleEdit();
+          });
+        },
+
+        _startEdit() {
+          this.setState({ editation: true }, () => {
+            this._header.toggleEdit();
+            this._box.toggleEdit();
+          });
+        },
+
+        _getToolbarItems() {
+          return this.state.editation ? [<UU5.Bricks.Div content="Panel placeholder" key="placeholder" />] : null;
+        },
+
+        _getToolbarSettings() {
+          let buttonClass = UU5.Common.Css.css(`width: 100%;`);
+
+          return [
+            <UU5.Bricks.Button className={buttonClass} bgStyle="transparent" onClick={() => {alert("click!"); this._toolbar.closeSettings()}} content="Settings item 1" key="settings_2" />,
+            <UU5.Bricks.Button className={buttonClass} bgStyle="transparent" onClick={() => {alert("click!"); this._toolbar.closeSettings()}} content="Settings item 2" key="settings_1" />
+          ];
+        },
+
+        _onChange(data, component) {
+          if (component.getTagName() === "CustomEditableHeader") {
+            this.setState(state => ({ headerData: { ...state.headerData, ...data } }));
+          } else if (component.getTagName() === "CustomEditableBox") {
+            this.setState(state => ({ boxData: { ...state.boxData, ...data } }));
+          }
+        },
+
+        _getPageContent() {
+          return (
+            <React.Fragment>
+              <UU5.Bricks.Row>
+                <CustomEditableHeader editable={this.state.editation} ref_={(ref) => this._header = ref} value={this.state.headerData.value} underline={this.state.headerData.underline} onChange={this._onChange} />
+              </UU5.Bricks.Row>,
+              <UU5.Bricks.Line />
+              <UU5.Bricks.Row>,
+                <CustomEditableBox editable={this.state.editation} ref_={(ref) => this._box = ref} value={this.state.boxData.value} bgStyle={this.state.boxData.bgStyle} onChange={this._onChange} />
+              </UU5.Bricks.Row>
+            </React.Fragment>
+          );
+        },
+
+        render() {
+          return (
+            <UU5.Bricks.Page>
+              <UU5.Bricks.Section level="3" header="<uu5string />Custom editation mode of components <UU5.Bricks.Code>UU5.Bricks.Header</UU5.Bricks.Code> and <UU5.Bricks.Code>UU5.Bricks.Box</UU5.Bricks.Code> with usage of a <UU5.Bricks.Code>UU5.BricksEditable.Toolbar</UU5.Bricks.Code>">
+              <UU5.Bricks.P>Editation is started automatically. After end of editing, there is available to start editation again by clicking on button '<i>Edit Components</i>'.</UU5.Bricks.P>
+                {
+                  this.state.editation ? <UU5.BricksEditable.Toolbar items={this._getToolbarItems()} settings={this._getToolbarSettings()} onClose={this.state.editation ? this._endEdit : null} ref_={(ref) => this._toolbar = ref}>{this._getPageContent()}</UU5.BricksEditable.Toolbar>
+                  : this._getPageContent()
+                }
+                <UU5.Bricks.Button disabled={this.state.editation} className={UU5.Common.Css.css(`margin-top: 8px;`)} onClick={this._startEdit} content="Edit Components" key="button" />
+              </UU5.Bricks.Section>
+            </UU5.Bricks.Page>
+          );
+        }
+      });
+
+      ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+      /*@@viewOff:0*/
+
+    </script>
+
+  </body>
+</html>

@@ -50,7 +50,10 @@ const CONFIG = {
       values: ["mp4", "webm", "ogg", "m3u8"]
     },
     authenticate: {
-      values: [false, true, null]
+      values: [false, true, null],
+      requiredProps: {
+        src: "https://plus4u.net/path/trusted.mp4" // to pass "trusted domain" check and therefore add access_token parameter based on the prop
+      }
     }
   },
   requiredProps: {

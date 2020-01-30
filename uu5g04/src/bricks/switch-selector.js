@@ -211,14 +211,14 @@ export const SwitchSelector = createReactClass({
   propTypes: {
     items: PropTypes.arrayOf(
       PropTypes.shape({
-        value: PropTypes.string.isRequired,
+        value: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]).isRequired,
         content: PropTypes.any,
         colorSchema: PropTypes.string,
         bgStyle: PropTypes.string,
         borderRadius: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
       })
     ).isRequired,
-    value: PropTypes.string,
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     onChange: PropTypes.func,
 
     size: PropTypes.oneOf(["s", "m", "l", "xl"]),
@@ -256,7 +256,7 @@ export const SwitchSelector = createReactClass({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     let items = this.props.items || this.getDefault("items");
-    let value = this.props.value || items[0].value;
+    let value = this.props.value || typeof this.props.value === "boolean" ? this.props.value : (items[0] || {}).value;
 
     return { value };
   },
@@ -270,7 +270,8 @@ export const SwitchSelector = createReactClass({
 
   //@@viewOn:private
   _getValue() {
-    return this.props.value || this.props.items[0].value;
+    let items = this.props.items || this.getDefault("items");
+    return this.props.value || typeof this.props.value === "boolean" ? this.props.value : (items[0] || {}).value;
   },
 
   _onChange(value) {

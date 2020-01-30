@@ -118,7 +118,8 @@ export const File = Context.withContext(
     //@@viewOn:reactLifeCycle
     getInitialState() {
       return {
-        indicateDrop: null
+        indicateDrop: null,
+        tokens: {}
       };
     },
 
@@ -187,7 +188,9 @@ export const File = Context.withContext(
 
       return this;
     },
+    //@@viewOff:interface
 
+    //@@viewOn:overriding
     isValid_() {
       let { value } = this.state;
       let valid = true;
@@ -197,9 +200,7 @@ export const File = Context.withContext(
       }
       return valid;
     },
-    //@@viewOff:interface
 
-    //@@viewOn:overriding
     setValue_(value, setStateCallback) {
       if (this._checkRequired({ value: value })) {
         if (typeof this.props.onValidate === "function") {
@@ -619,7 +620,7 @@ export const File = Context.withContext(
         let parameters = parsedUrl.parameters;
         let session = UU5.Environment.getSession();
         if (this.props.authenticate && session && session.isAuthenticated() && UU5.Environment.isTrustedDomain(url)) {
-          let token = session.getCallToken().token;
+          let token = this._getCallToken(url, session);
           parameters["access_token"] = token;
         }
         if (contentDisposition) {
@@ -627,6 +628,17 @@ export const File = Context.withContext(
         }
         parsedUrl.set({ parameters });
         result = parsedUrl.toString();
+      }
+      return result;
+    },
+
+    _getCallToken(url, session) {
+      let result = this.state.tokens[url];
+      if (!result) {
+        UU5.Common.Tools.getCallToken(url, session).then(token => {
+          if (this.isRendered()) this.setState(state => ({ tokens: { ...state.tokens, [url]: token } }));
+          // TODO Clean unused tokens from state.
+        });
       }
       return result;
     },

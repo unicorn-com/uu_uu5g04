@@ -79,6 +79,11 @@ export const Link = createReactClass({
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
+  getInitialState() {
+    return {
+      authenticatedUrl: undefined
+    };
+  },
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
@@ -192,13 +197,37 @@ export const Link = createReactClass({
     if (this.props.authenticate) {
       let session = UU5.Environment.getSession();
       if (session && session.isAuthenticated() && UU5.Environment.isTrustedDomain(href)) {
-        let token = session.getCallToken().token;
-        let parsedUrl = UU5.Common.Url.parse(href);
-        href = parsedUrl.set({ parameters: { ...parsedUrl.parameters, access_token: token } }).toString();
+        href = this._getAuthenticatedUrl(href, session);
       }
     }
 
     return href;
+  },
+
+  _getAuthenticatedUrl(url, session) {
+    let result = "";
+    if (this._authenticatedUrl === url) result = this.state.authenticatedUrl;
+    else if (this._authenticatingUrl !== url) {
+      this._authenticatingUrl = url;
+      let promise = (this._urlPromise = this._computeAuthenticatedUrl(url, session).then(
+        authenticatedUrl => {
+          delete this._authenticatingUrl;
+          this._authenticatedUrl = url;
+          if (this.isRendered() && promise === this._urlPromise) this.setState({ authenticatedUrl });
+        },
+        () => {
+          delete this._authenticatingUrl;
+        }
+      ));
+    }
+    return result;
+  },
+
+  async _computeAuthenticatedUrl(url, session) {
+    let token = await UU5.Common.Tools.getCallToken(url, session);
+    let parsedUrl = UU5.Common.Url.parse(url);
+    let result = parsedUrl.set({ parameters: { ...parsedUrl.parameters, access_token: token } }).toString();
+    return result;
   },
   //@@viewOff:private
 

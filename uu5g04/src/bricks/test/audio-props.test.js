@@ -41,7 +41,10 @@ const CONFIG = {
       values: [true, false]
     },
     authenticate: {
-      values: [false, true, null]
+      values: [false, true, null],
+      requiredProps: {
+        src: "https://plus4u.net/path/trusted.mp3" // to pass "trusted domain" check and therefore add access_token parameter based on the prop
+      }
     }
   },
   requiredProps: {

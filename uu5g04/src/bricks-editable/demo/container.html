@@ -66,9 +66,10 @@
         },
 
         /*@@viewOn:0*/
-        _editSection(event) {
-          this._section.startEditation((section, newProps) => this._saveEditation(newProps), (section, newProps) => this._saveEditationWithoutEnd(newProps));
+        _editContainer(event) {
+          this._container.startEditation((container, newProps) => this._saveEditation(newProps), (container, newProps) => this._saveEditationWithoutEnd(newProps));
         },
+
         _saveEditation(newProps){
           if (!newProps){
             this.setState({id: UU5.Common.Tools.generateUUID()});
@@ -76,9 +77,11 @@
           }
           this.setState(newProps);
         },
+
         _saveEditationWithoutEnd(newProps){
           this.setState(newProps);
         },
+
         _getEditablePropValue(propName){
           return this.state[propName];
         },
@@ -88,8 +91,8 @@
           return (
             <UU5.Bricks.Page>
               {/*@@viewOn:0*/}
-              <UU5.Bricks.Container ref_={(section) => this._section = section} {...this.state} getEditablePropValue={this._getEditablePropValue} />
-              <UU5.Bricks.Button colorSchema='primary' onClick={this._editSection} content='Edit Container' />
+              <UU5.Bricks.Container ref_={(container) => this._container = container} {...this.state} getEditablePropValue={this._getEditablePropValue} />
+              <UU5.Bricks.Button colorSchema='primary' onClick={this._editContainer} content='Edit Container' />
               {/*@@viewOff:0*/}
               <UU5.Bricks.Modal ref_={(modal) => this._modal = modal} />
             </UU5.Bricks.Page>

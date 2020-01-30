@@ -96,11 +96,12 @@ exports[`UU5.Forms.DateTimeRangePicker check default values UU5.Forms.DateTimeRa
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -202,11 +203,12 @@ exports[`UU5.Forms.DateTimeRangePicker props afterRangeMessage="Přestřelil jsi
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -308,11 +310,12 @@ exports[`UU5.Forms.DateTimeRangePicker props autocompleteItems=undefined 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -414,11 +417,12 @@ exports[`UU5.Forms.DateTimeRangePicker props beforeRangeMessage="Zkus zadat pozd
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -520,11 +524,12 @@ exports[`UU5.Forms.DateTimeRangePicker props buttonHidden=false 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -626,11 +631,12 @@ exports[`UU5.Forms.DateTimeRangePicker props buttonHidden=true 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -732,11 +738,12 @@ exports[`UU5.Forms.DateTimeRangePicker props checkGrammar=false 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -838,11 +845,12 @@ exports[`UU5.Forms.DateTimeRangePicker props checkGrammar=true 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -944,11 +952,12 @@ exports[`UU5.Forms.DateTimeRangePicker props checkHighlight=false 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -1050,11 +1059,12 @@ exports[`UU5.Forms.DateTimeRangePicker props checkHighlight=true 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -1156,11 +1166,12 @@ exports[`UU5.Forms.DateTimeRangePicker props checkSpaces=false 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -1262,11 +1273,12 @@ exports[`UU5.Forms.DateTimeRangePicker props checkSpaces=true 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -1368,11 +1380,12 @@ exports[`UU5.Forms.DateTimeRangePicker props className="my-classname" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -1475,11 +1488,12 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema="brown" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -1582,11 +1596,12 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema="brown-rich" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -1689,11 +1704,12 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema="cyan" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -1796,11 +1812,12 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema="cyan-rich" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -1903,11 +1920,12 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema="default" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -2010,11 +2028,12 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema="green" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -2117,11 +2136,12 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema="green-rich" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -2224,11 +2244,12 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema="grey" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -2331,11 +2352,12 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema="grey-rich" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -2438,11 +2460,12 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema="orange" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -2545,11 +2568,12 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema="orange-rich" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -2652,11 +2676,12 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema="pink" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -2759,11 +2784,12 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema="pink-rich" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -2866,11 +2892,12 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema="purple" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -2973,11 +3000,12 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema="purple-rich" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -3080,11 +3108,12 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema="red" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -3187,11 +3216,12 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema="red-rich" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -3294,11 +3324,12 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema="yellow" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -3401,11 +3432,12 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema="yellow-rich" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -3507,11 +3539,12 @@ exports[`UU5.Forms.DateTimeRangePicker props content="This is Content from Conte
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -3613,11 +3646,12 @@ exports[`UU5.Forms.DateTimeRangePicker props content=12345 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -3719,11 +3753,12 @@ exports[`UU5.Forms.DateTimeRangePicker props controlled=false 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -3825,11 +3860,12 @@ exports[`UU5.Forms.DateTimeRangePicker props controlled=true 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -3931,11 +3967,12 @@ exports[`UU5.Forms.DateTimeRangePicker props country="en-us" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -4037,11 +4074,12 @@ exports[`UU5.Forms.DateTimeRangePicker props dateFrom="10.25.2018" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -4143,11 +4181,12 @@ exports[`UU5.Forms.DateTimeRangePicker props dateIcon="uu5-plus" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -4249,11 +4288,12 @@ exports[`UU5.Forms.DateTimeRangePicker props dateTo="10.5.2020" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -4355,11 +4395,12 @@ exports[`UU5.Forms.DateTimeRangePicker props default props 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -4461,11 +4502,12 @@ exports[`UU5.Forms.DateTimeRangePicker props disableBackdrop=false 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -4567,11 +4609,12 @@ exports[`UU5.Forms.DateTimeRangePicker props disableBackdrop=true 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -4673,11 +4716,12 @@ exports[`UU5.Forms.DateTimeRangePicker props disabled=false 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -4758,11 +4802,12 @@ exports[`UU5.Forms.DateTimeRangePicker props disabled=true 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -4864,11 +4909,12 @@ exports[`UU5.Forms.DateTimeRangePicker props dynamic=false 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -4970,11 +5016,12 @@ exports[`UU5.Forms.DateTimeRangePicker props dynamic=true 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -5077,11 +5124,12 @@ exports[`UU5.Forms.DateTimeRangePicker props feedback="error" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -5183,11 +5231,12 @@ exports[`UU5.Forms.DateTimeRangePicker props feedback="initial" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -5270,11 +5319,12 @@ exports[`UU5.Forms.DateTimeRangePicker props feedback="loading" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -5377,11 +5427,12 @@ exports[`UU5.Forms.DateTimeRangePicker props feedback="success" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -5484,11 +5535,12 @@ exports[`UU5.Forms.DateTimeRangePicker props feedback="warning" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -5590,11 +5642,12 @@ exports[`UU5.Forms.DateTimeRangePicker props focusMessage="Bedlivě hlídám co 
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -5699,11 +5752,12 @@ exports[`UU5.Forms.DateTimeRangePicker props format="dd.mm.Y" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -5808,11 +5862,12 @@ exports[`UU5.Forms.DateTimeRangePicker props format="dd/mm/Y" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -5917,11 +5972,12 @@ exports[`UU5.Forms.DateTimeRangePicker props format="dd:mm:Y - q" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -6026,11 +6082,12 @@ exports[`UU5.Forms.DateTimeRangePicker props format="dd-mm-Y" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -6139,11 +6196,12 @@ exports[`UU5.Forms.DateTimeRangePicker props function -> Text.InputMixin validat
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -6254,11 +6312,12 @@ exports[`UU5.Forms.DateTimeRangePicker props function -> Text.InputMixin validat
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -6363,11 +6422,12 @@ exports[`UU5.Forms.DateTimeRangePicker props function parseDate() 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -6469,11 +6529,12 @@ exports[`UU5.Forms.DateTimeRangePicker props hidden=false 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -6575,11 +6636,12 @@ exports[`UU5.Forms.DateTimeRangePicker props hidden=true 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -6681,11 +6743,12 @@ exports[`UU5.Forms.DateTimeRangePicker props hideFormatPlaceholder=false 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -6787,11 +6850,12 @@ exports[`UU5.Forms.DateTimeRangePicker props hideFormatPlaceholder=true 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -6893,11 +6957,12 @@ exports[`UU5.Forms.DateTimeRangePicker props iconClosed="mdi-calendar" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -6999,11 +7064,12 @@ exports[`UU5.Forms.DateTimeRangePicker props iconOpen="mdi-clock-outline" 1`] = 
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -7105,11 +7171,12 @@ exports[`UU5.Forms.DateTimeRangePicker props id="myId" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -7211,11 +7278,12 @@ exports[`UU5.Forms.DateTimeRangePicker props ignoreHTML=false 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -7317,11 +7385,12 @@ exports[`UU5.Forms.DateTimeRangePicker props ignoreHTML=true 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -7425,11 +7494,12 @@ exports[`UU5.Forms.DateTimeRangePicker props inputAttrs={"type":"email","width":
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -7531,11 +7601,12 @@ exports[`UU5.Forms.DateTimeRangePicker props inputColWidth="xs12 s6 m8 l9" 1`] =
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -7637,11 +7708,12 @@ exports[`UU5.Forms.DateTimeRangePicker props inputColWidth="xs12 s9" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -7748,11 +7820,12 @@ exports[`UU5.Forms.DateTimeRangePicker props label="Your personal email" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -7854,11 +7927,12 @@ exports[`UU5.Forms.DateTimeRangePicker props labelAlignment="xs-left s-right" 1`
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -7960,11 +8034,12 @@ exports[`UU5.Forms.DateTimeRangePicker props labelAlignment="xs-right s-left" 1`
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -8066,11 +8141,12 @@ exports[`UU5.Forms.DateTimeRangePicker props labelColWidth="xs12 s3" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -8172,11 +8248,12 @@ exports[`UU5.Forms.DateTimeRangePicker props labelColWidth="xs12 s6 m4 l3" 1`] =
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -8278,11 +8355,12 @@ exports[`UU5.Forms.DateTimeRangePicker props mainAttrs=undefined 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -8385,11 +8463,12 @@ exports[`UU5.Forms.DateTimeRangePicker props message="Your password is too short
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -8492,11 +8571,12 @@ exports[`UU5.Forms.DateTimeRangePicker props name="myName" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -8598,11 +8678,12 @@ exports[`UU5.Forms.DateTimeRangePicker props noIndex=false 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -8704,11 +8785,12 @@ exports[`UU5.Forms.DateTimeRangePicker props noIndex=true 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -8810,11 +8892,12 @@ exports[`UU5.Forms.DateTimeRangePicker props patternMessage="Hodnota inputu nen�
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -8919,11 +9002,12 @@ exports[`UU5.Forms.DateTimeRangePicker props placeholder="Prosím vyplňte poža
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -9028,11 +9112,12 @@ exports[`UU5.Forms.DateTimeRangePicker props placeholder="např.: +420 000 000 0
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -9134,11 +9219,12 @@ exports[`UU5.Forms.DateTimeRangePicker props pureRender=false 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -9240,11 +9326,12 @@ exports[`UU5.Forms.DateTimeRangePicker props pureRender=true 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -9346,11 +9433,12 @@ exports[`UU5.Forms.DateTimeRangePicker props readOnly=false 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -9430,11 +9518,12 @@ exports[`UU5.Forms.DateTimeRangePicker props readOnly=true 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -9536,11 +9625,12 @@ exports[`UU5.Forms.DateTimeRangePicker props required=false 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -9643,11 +9733,12 @@ exports[`UU5.Forms.DateTimeRangePicker props required=true 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -9749,11 +9840,12 @@ exports[`UU5.Forms.DateTimeRangePicker props requiredMessage="Bez tohoto pole se
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -9855,11 +9947,12 @@ exports[`UU5.Forms.DateTimeRangePicker props seconds=false 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -9961,11 +10054,12 @@ exports[`UU5.Forms.DateTimeRangePicker props seconds=true 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -10067,11 +10161,12 @@ exports[`UU5.Forms.DateTimeRangePicker props selected=false 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -10173,11 +10268,12 @@ exports[`UU5.Forms.DateTimeRangePicker props selected=true 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -10279,11 +10375,12 @@ exports[`UU5.Forms.DateTimeRangePicker props size="l" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -10385,11 +10482,12 @@ exports[`UU5.Forms.DateTimeRangePicker props size="m" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -10491,11 +10589,12 @@ exports[`UU5.Forms.DateTimeRangePicker props size="s" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -10602,11 +10701,12 @@ exports[`UU5.Forms.DateTimeRangePicker props style="padding:8px; borderRadius: 2
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -10713,11 +10813,12 @@ exports[`UU5.Forms.DateTimeRangePicker props style={"backgroundColor":"red","col
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -10819,11 +10920,12 @@ exports[`UU5.Forms.DateTimeRangePicker props textCorrector=false 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -10925,11 +11027,12 @@ exports[`UU5.Forms.DateTimeRangePicker props textCorrector=true 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -11031,11 +11134,12 @@ exports[`UU5.Forms.DateTimeRangePicker props timeFormat=undefined 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -11137,11 +11241,12 @@ exports[`UU5.Forms.DateTimeRangePicker props timeIcon="uu5-clock" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -11243,11 +11348,12 @@ exports[`UU5.Forms.DateTimeRangePicker props tooltip="My Tooltip" 1`] = `
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -11351,11 +11457,12 @@ exports[`UU5.Forms.DateTimeRangePicker props value=["1.1.2019","5.5.2020"] 1`] =
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>
@@ -11459,11 +11566,12 @@ exports[`UU5.Forms.DateTimeRangePicker props value=["2019-01-01T11:15:30.000Z","
   <div
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     />
   </div>
 </div>

@@ -20,6 +20,15 @@ const { mount, wait } = UU5.Test.Tools;
 const TestReady = props => <pre>Ready: {JSON.stringify(props.data, null, 2) + ""}</pre>;
 const TestError = props => <pre>Error: {JSON.stringify(props.data, null, 2) + ""}</pre>;
 
+let origRequestCall;
+beforeEach(() => {
+  origRequestCall = UU5.Common.Request.call;
+  UU5.Common.Request.call = jest.fn(async () => ({ status: 500 }));
+});
+afterEach(() => {
+  UU5.Common.Request.call = origRequestCall;
+});
+
 const CONFIG = {
   mixins: ["UU5.Common.BaseMixin"],
   props: {
@@ -49,7 +58,19 @@ const CONFIG = {
 describe("UU5.Common.Loader props testing", () => {
   UU5.Test.Tools.testProperties(UU5.Common.Loader, CONFIG);
 
-  test("onLoad", () => {
+  it("authenticate=true", async () => {
+    UU5.Common.Request.call.mockImplementation(async () => ({ status: 200, data: {} }));
+    let data = { reqParam: "value" };
+
+    let wrapper = mount(<UU5.Common.Loader uri="https://plus4u.net/test" authenticate data={data} />);
+    await wait();
+    expect(UU5.Common.Request.call).toHaveBeenCalledTimes(1);
+    expect(UU5.Common.Request.call).toHaveBeenCalledWith("GET", "https://plus4u.net/test", data, {
+      headers: { Authorization: expect.stringMatching(/^Bearer .+$/) }
+    });
+  });
+
+  it("onLoad", () => {
     let onLoadFn = jest.fn(async () => "data");
     let wrapper = mount(<UU5.Common.Loader onLoad={onLoadFn} data={{ test: "value" }} />);
 

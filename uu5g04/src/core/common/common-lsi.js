@@ -67,11 +67,11 @@ export const CommonLsi = {
   notFoundTag: {
     offline: {
       cs: "Komponenta %s nemohla být načtená, protože jste offline.",
-      en: "Component %s cannot be load because you are offline."
+      en: "The component %s cannot be loaded because you are offline."
     },
     notFound: {
       cs: "Komponenta %s neexistuje.",
-      en: "Component %s is not exist."
+      en: "The component %s does not exist."
     }
   }
 };

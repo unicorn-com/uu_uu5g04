@@ -1,5 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`UU5.Bricks.Link authenticate=false 1`] = `
+<a
+  className="uu5-bricks-link"
+  download={false}
+  href="https://plus4u.net/uve"
+  id="uuID"
+  style={Object {}}
+  target="_self"
+  title={null}
+>
+  https://plus4u.net/uve
+</a>
+`;
+
+exports[`UU5.Bricks.Link authenticate=true 1`] = `
+<a
+  className="uu5-bricks-link"
+  download={false}
+  href="https://plus4u.net/uve?access_token=token-for-tests"
+  id="uuID"
+  style={Object {}}
+  target="_self"
+  title={null}
+>
+  https://plus4u.net/uve
+</a>
+`;
+
 exports[`UU5.Bricks.Link checkGrammar=false 1`] = `
 <a
   className="uu5-bricks-link"

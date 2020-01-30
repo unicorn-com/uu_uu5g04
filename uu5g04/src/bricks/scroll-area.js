@@ -18,10 +18,17 @@ import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
+import Css from "./internal/css.js";
 import ResizeObserver from "./resize-observer.js";
-
-import "./scroll-area.less";
 //@@viewOff:imports
+
+function canUseCustomScrollbar() {
+  return !UU5.Common.Tools.isMobileOrTablet && !UU5.Common.Tools.isMobileIOS();
+}
+
+function getScrollBarWidth() {
+  return UU5.Common.Tools.isChrome() ? 8 : UU5.Environment.getScrollBarWidth();
+}
 
 export const ScrollArea = createReactClass({
   //@@viewOn:mixins
@@ -32,12 +39,99 @@ export const ScrollArea = createReactClass({
   statics: {
     tagName: ns.name("ScrollArea"),
     classNames: {
-      main: ns.css("scroll-area"),
-      contentWrapper: ns.css("scroll-area-content-wrapper"),
-      reservedSpace: ns.css("scroll-area-reserved-space"),
-      hideOnBlur: ns.css("scroll-area-hide-on-blur"),
-      customScrollbar: ns.css("scroll-area-custom-scrollbar"),
-      inactive: ns.css("scroll-area-inactive")
+      main: (props, state) => {
+        let styles = [
+          `
+          overflow: hidden;
+          position: relative;
+          height: 100%;
+
+          & > .uu5-bricks-scroll-area-content-wrapper {
+            width: 100%;
+          }
+          `
+        ];
+
+        if (canUseCustomScrollbar) {
+          if (props.customScrollbar) {
+            styles.push(`
+              &::-webkit-scrollbar {
+                width: 8px;
+              }
+
+              &::-webkit-scrollbar-track {
+                background: transparent;
+              }
+
+              &::-webkit-scrollbar-thumb {
+                background: #BDBDBD;
+                border-radius: 4px;
+              }
+
+              &::-webkit-scrollbar-thumb:hover {
+                background: #555;
+              }
+            `);
+          }
+
+          if (props.hideOnBlur) {
+            styles.push(`
+
+              &:hover {
+                overflow-y: auto;
+              }
+            `);
+          } else {
+            styles.push("overflow-y: auto;");
+          }
+        } else {
+          styles.push("overflow-y: auto;");
+        }
+
+        if (state.hasScrollbar && !props.reserveSpace) {
+          const scrollbarWidth = getScrollBarWidth();
+          styles.push(`
+            &:hover > .uu5-bricks-scroll-area-content-wrapper {
+              width: calc(100% + ${scrollbarWidth}px)
+            }
+          `);
+        } else if (state.hasScrollbar && props.reserveSpace) {
+          const scrollbarWidth = getScrollBarWidth();
+
+          if (props.hideOnBlur) {
+            styles.push(`
+              &:not(:hover) > .uu5-bricks-scroll-area-content-wrapper {
+                width: calc(100% - ${scrollbarWidth}px)
+              }
+            `);
+          } else {
+            styles.push(`
+              & > .uu5-bricks-scroll-area-content-wrapper {
+                width: calc(100% - ${scrollbarWidth}px);
+              }
+            `);
+          }
+        } else {
+          styles.push(`
+            & > .uu5-bricks-scroll-area-content-wrapper {
+              width: 100%
+            }
+          `);
+        }
+
+        return `${ns.css("scroll-area")} ${Css.css(styles.join(" "))}`;
+      },
+      contentWrapper: (props, state) => {
+        let styles = [
+          `
+          overflow: visible;
+          display: inline-block;
+          position: relative;
+          `
+        ];
+
+        return `${ns.css("scroll-area-content-wrapper")} ${Css.css(styles.join(" "))}`;
+      }
     }
   },
   //@@viewOff:statics
@@ -68,13 +162,15 @@ export const ScrollArea = createReactClass({
 
   //@@viewOn:reactLifeCycle
   getInitialState() {
+    this._updateCount = 0;
+
     return {
       hasScrollbar: false
     };
   },
 
   componentDidMount() {
-    this._domNode = this.findDOMNode();
+    this._domNode = UU5.Common.DOM.findNode(this);
     this._measureScrollbar();
 
     if (this._domNode) {
@@ -89,8 +185,23 @@ export const ScrollArea = createReactClass({
   },
 
   componentDidUpdate() {
-    this._domNode = this.findDOMNode();
-    this._measureScrollbar();
+    // Here is fix to prevent triggering _measureScrollbar too many times in one stack and causing an exception being thrown.
+    // Bug was discovered when scrolling in a certain way in BookKit with a certain content in it's menu (can't always be simulated)
+    // and is also caused by the BookKit's usage of % value in padding of component BookKitLogo
+    this._updateCount++;
+    this._domNode = UU5.Common.DOM.findNode(this);
+
+    if (this._resetCountTimer) {
+      clearTimeout(this._resetCountTimer);
+    }
+
+    this._resetCountTimer = setTimeout(() => {
+      this._updateCount = 0;
+    }, 0);
+
+    if (this._updateCount <= 10 || !this.state.hasScrollbar) {
+      this._measureScrollbar();
+    }
   },
   //@@viewOff:reactLifeCycle
 
@@ -105,6 +216,10 @@ export const ScrollArea = createReactClass({
     }
 
     return this;
+  },
+
+  hasScrollbar() {
+    return this._hasScrollbar();
   },
   //@@viewOff:interface
 
@@ -123,41 +238,28 @@ export const ScrollArea = createReactClass({
   },
 
   _measureScrollbar() {
-    let hasScrollbar =
-      this._domNode && this._domNode.scrollHeight > Math.ceil(this._domNode.getBoundingClientRect().height);
+    let hasScrollbar = this._hasScrollbar();
 
     if (this.state.hasScrollbar && !hasScrollbar) {
       this.setState({ hasScrollbar: false });
     } else if (!this.state.hasScrollbar && hasScrollbar) {
       this.setState({ hasScrollbar: true });
     }
-    return this;
+  },
+
+  _hasScrollbar() {
+    return this._domNode && this._domNode.scrollHeight > Math.ceil(this._domNode.getBoundingClientRect().height);
+  },
+
+  _onResize() {
+    this._updateCount = 0;
+    this._measureScrollbar();
   },
 
   _getScrollAreaWrapper() {
     let attrs = this.getMainAttrs();
-    let width = "100%";
 
-    if (this._useCustomScrollbar()) {
-      let scrollbarWidth = UU5.Common.Tools.isChrome() ? 8 : UU5.Environment.getScrollBarWidth();
-      if (this.state.hasScrollbar && !this.props.reserveSpace) {
-        width = "calc(100%" + " + " + scrollbarWidth + "px)";
-      } else if (this.state.hasScrollbar && this.props.reserveSpace) {
-        width = "calc(100%" + " - " + scrollbarWidth + "px)";
-      }
-
-      if (this.props.customScrollbar) {
-        attrs.className += " " + this.getClassName("customScrollbar");
-      }
-
-      if (this.props.reserveSpace) {
-        attrs.className += " " + this.getClassName("reservedSpace");
-      }
-
-      if (this.props.hideOnBlur) {
-        attrs.className += " " + this.getClassName("hideOnBlur");
-      }
-
+    if (canUseCustomScrollbar()) {
       if (this.props.hideOnBlur && typeof this.props.onDisplayBar === "function") {
         attrs.onMouseEnter = this.props.onDisplayBar;
       }
@@ -165,23 +267,17 @@ export const ScrollArea = createReactClass({
       if (this.props.hideOnBlur && typeof this.props.onHideBar === "function") {
         attrs.onMouseLeave = this.props.onHideBar;
       }
-    } else {
-      attrs.className += " " + this.getClassName("inactive");
     }
 
     return (
       <div {...attrs}>
-        <span style={{ width }} className={this.getClassName("contentWrapper")}>
+        <span className={this.getClassName("contentWrapper")}>
           {this.getChildren()}
-          <ResizeObserver onResize={this._measureScrollbar} />
+          <ResizeObserver onResize={this._onResize} />
         </span>
-        <ResizeObserver onResize={this._measureScrollbar} />
+        <ResizeObserver onResize={this._onResize} />
       </div>
     );
-  },
-
-  _useCustomScrollbar() {
-    return !UU5.Common.Tools.isMobileOrTablet && !UU5.Common.Tools.isMobileIOS();
   },
   //@@viewOff:private
 

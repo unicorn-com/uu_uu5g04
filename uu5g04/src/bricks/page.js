@@ -205,7 +205,8 @@ export const Page = createReactClass({
     onLeftResize: PropTypes.func,
     onRightResize: PropTypes.func,
     useDnD: PropTypes.bool,
-    overlayTop: PropTypes.bool
+    overlayTop: PropTypes.bool,
+    content: PropTypes.any // property from content mixin
   },
   //@@viewOff:propTypes
 
@@ -1328,7 +1329,12 @@ export const Page = createReactClass({
   _getContentDiv() {
     return (
       <Div className={this.getClassName("contentBody")} pureRender>
-        <UpdateWrapper preventRender={this._preventContentRender} content={this.props.content || this.props.children} />
+        <UU5.Bricks.Popover.Context.Provider value={{ getPopover: this.getPopover }}>
+          <UpdateWrapper
+            preventRender={this._preventContentRender}
+            content={this.props.content || this.props.children}
+          />
+        </UU5.Bricks.Popover.Context.Provider>
       </Div>
     );
   },

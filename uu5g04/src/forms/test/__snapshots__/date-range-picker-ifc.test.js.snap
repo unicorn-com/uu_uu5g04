@@ -102,11 +102,12 @@ exports[`UU5.Form.DateRangePicker intreface testing parseDate(date) 1`] = `
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -151,7 +152,7 @@ exports[`UU5.Form.DateRangePicker intreface testing parseDate(date) 1`] = `
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -241,11 +242,12 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 1`] =
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -292,7 +294,7 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 1`] =
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -404,11 +406,12 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 2`] =
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -455,7 +458,7 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 2`] =
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -567,11 +570,12 @@ exports[`UU5.Forms.InputMixin interface testing getChangeFeedback() 1`] = `
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -616,7 +620,7 @@ exports[`UU5.Forms.InputMixin interface testing getChangeFeedback() 1`] = `
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -726,11 +730,12 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 1`] = `
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -775,7 +780,7 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 1`] = `
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -886,11 +891,12 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 2`] = `
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -935,7 +941,7 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 2`] = `
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -1047,11 +1053,12 @@ exports[`UU5.Forms.InputMixin interface testing getInputWrapper(inpuid) 1`] = `
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -1098,7 +1105,7 @@ exports[`UU5.Forms.InputMixin interface testing getInputWrapper(inpuid) 1`] = `
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -1210,11 +1217,12 @@ exports[`UU5.Forms.InputMixin interface testing getLabel(idinput) 1`] = `
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -1261,7 +1269,7 @@ exports[`UU5.Forms.InputMixin interface testing getLabel(idinput) 1`] = `
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -1371,11 +1379,12 @@ exports[`UU5.Forms.InputMixin interface testing getMessage() 1`] = `
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -1420,7 +1429,7 @@ exports[`UU5.Forms.InputMixin interface testing getMessage() 1`] = `
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -1534,11 +1543,12 @@ exports[`UU5.Forms.InputMixin interface testing isError() 1`] = `
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -1583,7 +1593,7 @@ exports[`UU5.Forms.InputMixin interface testing isError() 1`] = `
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -1697,11 +1707,12 @@ exports[`UU5.Forms.InputMixin interface testing isError() 2`] = `
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -1748,7 +1759,7 @@ exports[`UU5.Forms.InputMixin interface testing isError() 2`] = `
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -1858,11 +1869,12 @@ exports[`UU5.Forms.InputMixin interface testing isInput() 1`] = `
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -1907,7 +1919,7 @@ exports[`UU5.Forms.InputMixin interface testing isInput() 1`] = `
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -2017,11 +2029,12 @@ exports[`UU5.Forms.InputMixin interface testing isLoading() 1`] = `
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -2066,7 +2079,7 @@ exports[`UU5.Forms.InputMixin interface testing isLoading() 1`] = `
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -2178,11 +2191,12 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 1`] = `
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -2227,7 +2241,7 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 1`] = `
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -2317,11 +2331,12 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 2`] = `
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -2366,7 +2381,7 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 2`] = `
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -2480,11 +2495,12 @@ exports[`UU5.Forms.InputMixin interface testing isSuccess() fisr return false, s
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -2531,7 +2547,7 @@ exports[`UU5.Forms.InputMixin interface testing isSuccess() fisr return false, s
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -2645,11 +2661,12 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 1`] = `
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -2694,7 +2711,7 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 1`] = `
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -2808,11 +2825,12 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 2`] = `
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -2859,7 +2877,7 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 2`] = `
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -2971,11 +2989,12 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 1`] =
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -3022,7 +3041,7 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 1`] =
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -3112,11 +3131,12 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 2`] =
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -3163,7 +3183,7 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 2`] =
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -3255,11 +3275,12 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 1`] = `
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -3306,7 +3327,7 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 1`] = `
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -3418,11 +3439,12 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 2`] = `
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -3469,7 +3491,7 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 2`] = `
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -3583,11 +3605,12 @@ exports[`UU5.Forms.InputMixin interface testing setChangeFeedback() 1`] = `
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -3634,7 +3657,7 @@ exports[`UU5.Forms.InputMixin interface testing setChangeFeedback() 1`] = `
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -3746,11 +3769,12 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -3797,7 +3821,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -3887,11 +3911,12 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -3938,7 +3963,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -4050,11 +4075,12 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -4101,7 +4127,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -4213,11 +4239,12 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -4264,7 +4291,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -4374,11 +4401,12 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -4423,7 +4451,7 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -4535,11 +4563,12 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -4586,7 +4615,7 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -4696,11 +4725,12 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -4745,7 +4775,7 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -4857,11 +4887,12 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -4908,7 +4939,7 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -5022,11 +5053,12 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -5071,7 +5103,7 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -5184,11 +5216,12 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -5233,7 +5266,7 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -5343,11 +5376,12 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -5392,7 +5426,7 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -5484,11 +5518,12 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -5535,7 +5570,7 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -5645,11 +5680,12 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -5694,7 +5730,7 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -5805,11 +5841,12 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -5854,7 +5891,7 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -5964,11 +6001,12 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -6013,7 +6051,7 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -6125,11 +6163,12 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -6176,7 +6215,7 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -6286,11 +6325,12 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -6335,7 +6375,7 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -6445,11 +6485,12 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -6496,7 +6537,7 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -6606,11 +6647,12 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -6655,7 +6697,7 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -6767,11 +6809,12 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -6818,7 +6861,7 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -6928,11 +6971,12 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 1`] = `
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -6979,7 +7023,7 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 1`] = `
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -7089,11 +7133,12 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 2`] = `
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -7140,7 +7185,7 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 2`] = `
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -7252,11 +7297,12 @@ exports[`UU5.Forms.TextInputMixin interface testing getBlurFeedback() 1`] = `
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -7301,7 +7347,7 @@ exports[`UU5.Forms.TextInputMixin interface testing getBlurFeedback() 1`] = `
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -7413,11 +7459,12 @@ exports[`UU5.Forms.TextInputMixin interface testing isOpen() should return false
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -7464,7 +7511,7 @@ exports[`UU5.Forms.TextInputMixin interface testing isOpen() should return false
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -7574,11 +7621,12 @@ exports[`UU5.Forms.TextInputMixin interface testing isTextInput() should return 
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -7625,7 +7673,7 @@ exports[`UU5.Forms.TextInputMixin interface testing isTextInput() should return 
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -7737,11 +7785,12 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() 1`] = `
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -7788,7 +7837,7 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() 1`] = `
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;
@@ -7902,11 +7951,12 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() should return fals
   <div
     className="uu5-forms-daterangepicker-popover-wrapper"
   >
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
       forceRender={true}
       key="popover"
       ref_={[Function]}
+      shown={false}
     >
       <div
         className="uu5-forms-daterangepicker-calendars uu5-forms-input-m"
@@ -7951,7 +8001,7 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() should return fals
           </div>
         </div>
       </div>
-    </Popover>
+    </forwardRef(Popover)>
   </div>
 </div>
 `;

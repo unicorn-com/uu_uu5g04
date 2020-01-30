@@ -146,7 +146,9 @@ export const Modal = createReactClass({
       offsetTop: null
     };
   },
+  //@@viewOff:getDefaultProps
 
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     let renderContent = getMountContent(this.props) === MOUNT_CONTENT_VALUES.onFirstRender || this.props.shown;
 
@@ -163,9 +165,7 @@ export const Modal = createReactClass({
       overflow: this.props.overflow
     };
   },
-  //@@viewOff:getDefaultProps
 
-  //@@viewOn:reactLifeCycle
   componentWillMount() {
     this.setState({ hidden: !this.props.shown });
   },
@@ -230,7 +230,9 @@ export const Modal = createReactClass({
     return true;
   },
 
-  open({ _referrer, ...openProps } = {}, setStateCallback) {
+  open(openProps, setStateCallback) {
+    openProps = openProps || {};
+    let _referrer = openProps._referrer;
     this._openProps = openProps;
     let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
     if (this._shouldOpenPageModal()) {
@@ -305,8 +307,8 @@ export const Modal = createReactClass({
     return this.state.sticky;
   },
 
-  onCloseDefault() {
-    this._close();
+  onCloseDefault(setStateCallback) {
+    this._close(setStateCallback);
 
     return this;
   },
@@ -368,7 +370,7 @@ export const Modal = createReactClass({
     if (typeof this.state.onClose === "function") {
       this.state.onClose(opt);
     } else {
-      this.onCloseDefault(opt);
+      this.onCloseDefault();
     }
 
     return this;
@@ -603,9 +605,7 @@ export const Modal = createReactClass({
     let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
     return !this.props.forceRender && page && page.getModal() && page.getModal().getId() !== this.getId();
   },
-  //@@viewOff:private
 
-  // Render
   _buildChildren() {
     let header = this.state.header;
     let footer = this.state.footer;
@@ -634,6 +634,7 @@ export const Modal = createReactClass({
 
     return [headerChild, bodyChild, footerChild];
   },
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {

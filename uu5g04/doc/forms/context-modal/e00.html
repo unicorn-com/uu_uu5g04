@@ -61,7 +61,45 @@
 
     _getForm(modal) {
       return (
-        <UU5.Bricks.Button onClick={() => modal.close()} content={"CLose"} />
+        <UU5.Forms.ContextForm
+          onSave={opt => {
+            // TODO saving
+            console.log(opt.values);
+            modal && modal.close();
+          }}
+          onCancel={() => {
+            modal && modal.close();
+          }}
+        >
+          <UU5.Forms.Text name="name" label={<UU5.Bricks.Lsi lsi={{ en: "Name" }} />} required />
+
+          <UU5.Bricks.Row>
+            <UU5.Bricks.Column colWidth="s-6">
+              <UU5.Forms.Select name="productFlow" label="Product Flow Classification">
+                <UU5.Forms.Select.Option value="1" />
+                <UU5.Forms.Select.Option value="2" />
+              </UU5.Forms.Select>
+            </UU5.Bricks.Column>
+            <UU5.Bricks.Column colWidth="s-6">
+              <UU5.Forms.Select name="uuP" label="uuP Classification">
+                <UU5.Forms.Select.Option value="1" />
+                <UU5.Forms.Select.Option value="2" />
+              </UU5.Forms.Select>
+            </UU5.Bricks.Column>
+          </UU5.Bricks.Row>
+
+          <UU5.RichText.EditorInput name="desc" label="Description" labelColWidth="xs-12" inputColWidth="xs-12"
+                                    labelAlignment="xl-left" />
+
+          <UU5.Bricks.Row>
+            <UU5.Bricks.Column colWidth="s-6">
+              <UU5.Forms.TextButton name="icon" label="uuBml Icon" buttons={[{
+                icon: "mdi-magnify",
+                onClick: (opt) => console.log(opt),
+              }]} />
+            </UU5.Bricks.Column>
+          </UU5.Bricks.Row>
+        </UU5.Forms.ContextForm>
       )
     },
 

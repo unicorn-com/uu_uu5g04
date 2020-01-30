@@ -145,9 +145,8 @@ export const Icon = createReactClass({
         response: null,
         error: null
       };
-      let headers = {};
-      if (withCredentials) headers["Authorization"] = "Bearer " + UU5.Environment.getSession().getCallToken().token;
-      result.promise = this._fetchImage(url, { headers, responseType, withCredentials }).then(
+      let session = UU5.Environment.getSession();
+      result.promise = this._fetchImage(url, { responseType, withCredentials }, session).then(
         response => {
           result.preloading = false;
           result.response = response;
@@ -162,7 +161,11 @@ export const Icon = createReactClass({
     return { cacheKey, result, inCache };
   },
 
-  _fetchImage(url, { headers = {}, responseType, withCredentials } = {}) {
+  async _fetchImage(url, { headers = {}, responseType, withCredentials } = {}, session) {
+    if (withCredentials) {
+      let token = await UU5.Common.Tools.getCallToken(url, session);
+      if (token) headers["Authorization"] = "Bearer " + token;
+    }
     return new Promise((resolve, reject) => {
       let xhr = new XMLHttpRequest();
       xhr.open("GET", url, true);

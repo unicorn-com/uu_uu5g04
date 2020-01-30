@@ -37,7 +37,7 @@ exports[`UU5.Forms.IconPicker interface editable(setStatecallback) 1`] = `
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -182,7 +182,7 @@ exports[`UU5.Forms.IconPicker interface editable(setStatecallback) 2`] = `
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -325,7 +325,7 @@ exports[`UU5.Forms.IconPicker interface getChangeFeedback() 1`] = `
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -468,7 +468,7 @@ exports[`UU5.Forms.IconPicker interface getFeedBack() 1`] = `
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -612,7 +612,7 @@ exports[`UU5.Forms.IconPicker interface getFeedBack() 2`] = `
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -757,7 +757,7 @@ exports[`UU5.Forms.IconPicker interface getInputWrapper(inpuid) 1`] = `
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -902,7 +902,7 @@ exports[`UU5.Forms.IconPicker interface getLabel(idinput) 1`] = `
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -1045,7 +1045,7 @@ exports[`UU5.Forms.IconPicker interface getMessage() 1`] = `
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -1190,7 +1190,7 @@ exports[`UU5.Forms.IconPicker interface getValue() should return value 1`] = `
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -1333,7 +1333,7 @@ exports[`UU5.Forms.IconPicker interface getValue() value is empty. Should return
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -1478,7 +1478,7 @@ exports[`UU5.Forms.IconPicker interface isError() 1`] = `
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -1625,7 +1625,7 @@ exports[`UU5.Forms.IconPicker interface isError() 2`] = `
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -1768,7 +1768,7 @@ exports[`UU5.Forms.IconPicker interface isInitial() 1`] = `
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -1913,7 +1913,7 @@ exports[`UU5.Forms.IconPicker interface isInitial() 2`] = `
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -2056,7 +2056,7 @@ exports[`UU5.Forms.IconPicker interface isInput() 1`] = `
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -2199,7 +2199,7 @@ exports[`UU5.Forms.IconPicker interface isLoading() 1`] = `
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -2342,7 +2342,7 @@ exports[`UU5.Forms.IconPicker interface isReadOnly() 1`] = `
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -2486,7 +2486,7 @@ exports[`UU5.Forms.IconPicker interface isReadOnly() 2`] = `
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -2633,7 +2633,7 @@ exports[`UU5.Forms.IconPicker interface isSuccess() fisr return false, second re
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -2778,7 +2778,7 @@ exports[`UU5.Forms.IconPicker interface isWarning() 1`] = `
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -2925,7 +2925,7 @@ exports[`UU5.Forms.IconPicker interface isWarning() 2`] = `
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -3070,7 +3070,7 @@ exports[`UU5.Forms.IconPicker interface readOnly(setStatecallback) 1`] = `
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -3216,7 +3216,7 @@ exports[`UU5.Forms.IconPicker interface readOnly(setStatecallback) 2`] = `
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -3364,7 +3364,7 @@ exports[`UU5.Forms.IconPicker interface reset(setStateCallBack) 1`] = `
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -3507,7 +3507,7 @@ exports[`UU5.Forms.IconPicker interface reset(setStateCallBack) 2`] = `
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -3655,7 +3655,7 @@ exports[`UU5.Forms.IconPicker interface setChangeFeedback() 1`] = `
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -3800,7 +3800,7 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(false, setStateCallback
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -3946,7 +3946,7 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(false, setStateCallback
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -4091,7 +4091,7 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(true, setStateCallback)
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -4236,7 +4236,7 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(true, setStateCallback)
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -4379,7 +4379,7 @@ exports[`UU5.Forms.IconPicker interface setError(message, value, setStateCallBac
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -4526,7 +4526,7 @@ exports[`UU5.Forms.IconPicker interface setError(message, value, setStateCallBac
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -4669,7 +4669,7 @@ exports[`UU5.Forms.IconPicker interface setFeedBack(feedback, message, value, se
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -4816,7 +4816,7 @@ exports[`UU5.Forms.IconPicker interface setFeedBack(feedback, message, value, se
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -4961,7 +4961,7 @@ exports[`UU5.Forms.IconPicker interface setInitial(msg, value, setStateCallBack)
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -5105,7 +5105,7 @@ exports[`UU5.Forms.IconPicker interface setInitial(msg, value, setStateCallBack)
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -5248,7 +5248,7 @@ exports[`UU5.Forms.IconPicker interface setLoading(message, value, setStateCallB
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -5393,7 +5393,7 @@ exports[`UU5.Forms.IconPicker interface setLoading(message, value, setStateCallB
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -5536,7 +5536,7 @@ exports[`UU5.Forms.IconPicker interface setMessage(msg, setStateCallBack) 1`] = 
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -5680,7 +5680,7 @@ exports[`UU5.Forms.IconPicker interface setMessage(msg, setStateCallBack) 2`] = 
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -5823,7 +5823,7 @@ exports[`UU5.Forms.IconPicker interface setSuccess(message, value, setStateCallB
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -5970,7 +5970,7 @@ exports[`UU5.Forms.IconPicker interface setSuccess(message, value, setStateCallB
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -6113,7 +6113,7 @@ exports[`UU5.Forms.IconPicker interface setValue(value,setStateCallBack) 1`] = `
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -6258,7 +6258,7 @@ exports[`UU5.Forms.IconPicker interface setValue(value,setStateCallBack) 2`] = `
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -6401,7 +6401,7 @@ exports[`UU5.Forms.IconPicker interface setWarning(message, value, setStateCallB
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -6548,7 +6548,7 @@ exports[`UU5.Forms.IconPicker interface setWarning(message, value, setStateCallB
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}

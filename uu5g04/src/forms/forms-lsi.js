@@ -108,12 +108,12 @@ export const FormsLsi = {
       en: "Please insert a number."
     },
     lowerMessage: {
-      cs: "Zadejte prosím větší číslo. Minimální povolená hodnota je",
-      en: "Please type in bigger number. Minimum allowed value is"
+      cs: "Zadejte prosím větší číslo. Minimální povolená hodnota je %s.",
+      en: "Please type in bigger number. Minimum allowed value is %s."
     },
     upperMessage: {
-      cs: "Zadejte prosím menší číslo. Maximální povolená hodnota je",
-      en: "Please type in smaller number. Maximum allowed value is"
+      cs: "Zadejte prosím menší číslo. Maximální povolená hodnota je %s.",
+      en: "Please type in smaller number. Maximum allowed value is %s."
     }
   },
   file: {

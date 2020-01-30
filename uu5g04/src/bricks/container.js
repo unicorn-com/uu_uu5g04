@@ -18,6 +18,14 @@ import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
+const EditableContainer = UU5.Common.Component.lazy(async () => {
+  await SystemJS.import("uu5g04-forms");
+  await SystemJS.import("uu5g04-bricks-editable");
+  return import("./internal/container.js");
+});
+
+let editationLazyLoaded = false;
+
 import "./container.less";
 //@@viewOff:imports
 
@@ -61,6 +69,11 @@ export const Container = createReactClass({
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
+  getInitialState() {
+    return {
+      editationLazyLoaded: false
+    };
+  },
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
@@ -82,17 +95,29 @@ export const Container = createReactClass({
     return mainAttrs;
   },
 
+  _registerNull(inst) {
+    // unmount of component means that suspense is loaded and component should be rendered
+    if (!inst) {
+      this.setState(state => {
+        if (state.editationLazyLoaded) return;
+
+        // Edit component is loaded - need to set to static variable because other Edit component does not render fallback component
+        // editationLazyLoaded is stored in both state and static variable for cases such as when more edit modes are loaded at the same time
+        editationLazyLoaded = true;
+        return { editationLazyLoaded: true };
+      });
+    }
+  },
+
+  _isEditationLazyLoaded() {
+    return editationLazyLoaded;
+  },
+
   _renderEditationMode() {
     return (
-      <UU5.Common.TagPlaceholder
-        key="edit-mode"
-        id="edit-mode"
-        tagName="UU5.BricksEditable.Container"
-        props={{
-          component: this,
-          ref_: this._registerEditableContainer
-        }}
-      />
+      <UU5.Common.Suspense fallback={<span ref={this._registerNull} />}>
+        <EditableContainer component={this} ref_={this._registerEditableContainer} />
+      </UU5.Common.Suspense>
     );
   },
 
@@ -105,9 +130,10 @@ export const Container = createReactClass({
   render() {
     return this.getNestingLevel() ? (
       <div {...this._getMainAttrs()}>
-        {this.state.editation
-          ? this._renderEditationMode()
-          : [this.getHeaderChild(), this.getChildren(), this.getFooterChild(), this.getDisabledCover()]}
+        {this.state.editation ? this._renderEditationMode() : null}
+        {!this.state.editation || !this._isEditationLazyLoaded()
+          ? [this.getHeaderChild(), this.getChildren(), this.getFooterChild(), this.getDisabledCover()]
+          : null}
       </div>
     ) : null;
   }

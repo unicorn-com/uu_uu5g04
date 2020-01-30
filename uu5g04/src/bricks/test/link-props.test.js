@@ -83,6 +83,12 @@ const CONFIG = {
     },
     download: {
       values: [true, false]
+    },
+    authenticate: {
+      values: [true, false],
+      requiredProps: {
+        href: "https://plus4u.net/uve"
+      }
     }
   },
   requiredProps: {},

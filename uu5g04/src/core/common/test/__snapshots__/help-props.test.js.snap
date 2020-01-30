@@ -561,13 +561,13 @@ exports[`UU5.Common.Help component props testing test02 - props tagName 1`] = `
 
 exports[`UU5.Common.Help component props testing test02 - props tagName 2`] = `"<a class=\\"uu5-bricks-link uu5-common-help\\" id=\\"helpID01-inner\\" href=\\"https://uuos9.plus4u.net/uu-dockitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5CommonHelp\\" target=\\"_blank\\">UU5.Common.Help</a>"`;
 
-exports[`UU5.Common.Help component props testing test02 - props tagName 3`] = `"<a class=\\"uu5-bricks-link uu5-common-help\\" id=\\"helpID01-inner\\" href=\\"https://uuos9.plus4u.net/uu-dockitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5CommonHelp\\" target=\\"_blank\\">UU5.Bricks.Button</a>"`;
+exports[`UU5.Common.Help component props testing test02 - props tagName 3`] = `"<a class=\\"uu5-bricks-link uu5-common-help\\" id=\\"helpID01-inner\\" href=\\"https://uuos9.plus4u.net/uu-dockitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksButton\\" target=\\"_blank\\">UU5.Bricks.Button</a>"`;
 
 exports[`UU5.Common.Help component props testing test02 - props tagName 4`] = `
 <Link
   className="uu5-common-help"
   content="UU5.Bricks.Button"
-  href="https://uuos9.plus4u.net/uu-dockitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5CommonHelp"
+  href="https://uuos9.plus4u.net/uu-dockitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksButton"
   id="helpID01-inner"
   mainAttrs={Object {}}
   target="_blank"

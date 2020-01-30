@@ -13,6 +13,7 @@
 
 //@@viewOn:imports
 import React from "react";
+import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import Modal from "./modal";
@@ -83,6 +84,29 @@ export const PortalModal = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
+  _registerModal(ref) {
+    this._modal = ref;
+    ref.open();
+  },
+
+  _onClose(opt, props) {
+    this._modal.onCloseDefault();
+    setTimeout(
+      () =>
+        this._close(() => {
+          if (!this._preventOnCloseCall) {
+            if (typeof props.onClose === "function") {
+              props.onClose(opt);
+            } else if (typeof opt.callback === "function") {
+              opt.callback();
+            }
+          }
+          this._preventOnCloseCall = false;
+        }),
+      500
+    );
+  },
+
   _close(setStateCallback) {
     this.setState({ open: false }, () => {
       this._removePortal();
@@ -120,31 +144,9 @@ export const PortalModal = UU5.Common.VisualComponent.create({
     return (
       this.state.open &&
       UU5.Common.Portal.create(
-        <Modal
-          {...props}
-          ref_={modal => {
-            this._modal = modal;
-            modal.open();
-          }}
-          onClose={opt => {
-            this._modal.onCloseDefault();
-            setTimeout(
-              () =>
-                this._close(() => {
-                  if (!this._preventOnCloseCall) {
-                    if (typeof props.onClose === "function") {
-                      props.onClose(opt);
-                    } else if (typeof opt.callback === "function") {
-                      opt.callback();
-                    }
-                  }
-                  this._preventOnCloseCall = false;
-                }),
-              500
-            );
-          }}
-          forceRender
-        />,
+        // arrow fn has to be used because props has to be sent to the _onClose fn
+        // eslint-disable-next-line react/jsx-no-bind
+        <Modal {...props} ref_={this._registerModal} onClose={opt => this._onClose(opt, props)} forceRender />,
         this._getPortalElem(true)
       )
     );

@@ -48,14 +48,16 @@ export const Resize = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    height: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+    height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    onResize: PropTypes.func
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      height: null
+      height: null,
+      onResize: undefined
     };
   },
   //@@viewOff:getDefaultProps
@@ -97,7 +99,11 @@ export const Resize = createReactClass({
   //@@viewOn:private
   _onResize({ width, height }) {
     if (this.state.width !== width || this.state.height !== height) {
-      this.setState({ width: width, height: height });
+      this.setState({ width: width, height: height }, () => {
+        if (typeof this.props.onResize === "function") {
+          this.props.onResize({ width, height });
+        }
+      });
     }
   },
 

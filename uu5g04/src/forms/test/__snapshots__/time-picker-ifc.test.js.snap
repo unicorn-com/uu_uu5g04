@@ -37,10 +37,12 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 1`] =
       size="s"
       value="12:00"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -85,10 +87,12 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 2`] =
       size="s"
       value="12:00"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -132,10 +136,12 @@ exports[`UU5.Forms.InputMixin interface testing getChangeFeedback() 1`] = `
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -177,10 +183,12 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 1`] = `
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -223,10 +231,12 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 2`] = `
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -271,10 +281,12 @@ exports[`UU5.Forms.InputMixin interface testing getInputWrapper(inpuid) 1`] = `
       size="s"
       value="12:00"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -319,10 +331,12 @@ exports[`UU5.Forms.InputMixin interface testing getLabel(idinput) 1`] = `
       size="s"
       value="12:00"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -364,10 +378,12 @@ exports[`UU5.Forms.InputMixin interface testing getMessage() 1`] = `
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -410,10 +426,12 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return value 1
       size="s"
       value="12:30"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -456,10 +474,12 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return value w
       size="s"
       value="12:30:00"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -501,10 +521,12 @@ exports[`UU5.Forms.InputMixin interface testing getValue() value is empty. Shoul
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -550,10 +572,12 @@ exports[`UU5.Forms.InputMixin interface testing isError() 1`] = `
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -600,10 +624,12 @@ exports[`UU5.Forms.InputMixin interface testing isError() 2`] = `
       size="s"
       value="12:00"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -647,10 +673,12 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() should return false 
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -692,10 +720,12 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() should return true 1
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -737,10 +767,12 @@ exports[`UU5.Forms.InputMixin interface testing isInput() 1`] = `
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -782,10 +814,12 @@ exports[`UU5.Forms.InputMixin interface testing isLoading() 1`] = `
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -829,10 +863,12 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 1`] = `
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -874,10 +910,12 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 2`] = `
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -924,10 +962,12 @@ exports[`UU5.Forms.InputMixin interface testing isSuccess() first return false, 
       size="s"
       value="12:00"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -973,10 +1013,12 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 1`] = `
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -1023,10 +1065,12 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 2`] = `
       size="s"
       value="12:00"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -1071,10 +1115,12 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 1`] =
       size="s"
       value="12:30"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -1117,10 +1163,12 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 2`] =
       size="s"
       value="12:30"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -1165,10 +1213,12 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 1`] = `
       size="s"
       value="12:00"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -1212,10 +1262,12 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 2`] = `
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -1262,10 +1314,12 @@ exports[`UU5.Forms.InputMixin interface testing setChangeFeedback() 1`] = `
       size="s"
       value="NaN"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -1310,10 +1364,12 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
       size="s"
       value="12:00"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -1356,10 +1412,12 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
       size="s"
       value="12:00"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -1404,10 +1462,12 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
       size="s"
       value="12:30"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -1452,10 +1512,12 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
       size="s"
       value="12:30"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -1497,10 +1559,12 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -1545,10 +1609,12 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
       size="s"
       value="12:00"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -1590,10 +1656,12 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -1638,10 +1706,12 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
       size="s"
       value="12:30"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -1687,10 +1757,12 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -1735,10 +1807,12 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -1780,10 +1854,12 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -1828,10 +1904,12 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
       size="s"
       value="23:00"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -1873,10 +1951,12 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -1919,10 +1999,12 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -1964,10 +2046,12 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -2012,10 +2096,12 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
       size="s"
       value="12:30"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -2057,10 +2143,12 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -2103,10 +2191,12 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
       size="s"
       value="12:30"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -2148,10 +2238,12 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -2196,10 +2288,12 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
       size="s"
       value="23:59"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -2242,10 +2336,12 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 1`] = `
       size="s"
       value="12:30"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -2288,10 +2384,12 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 2`] = `
       size="s"
       value="12:30"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -2335,10 +2433,12 @@ exports[`UU5.Forms.TextInputMixin interface testing getBlurFeedback() 1`] = `
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -2382,10 +2482,12 @@ exports[`UU5.Forms.TextInputMixin interface testing isOpen() should return false
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -2428,10 +2530,12 @@ exports[`UU5.Forms.TextInputMixin interface testing isTextInput() should return 
       size="s"
       value="12:30"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -2476,10 +2580,12 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() 1`] = `
       size="s"
       value="12:30"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -2525,10 +2631,12 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() should return fals
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -2570,10 +2678,12 @@ exports[`UU5.Forms.TextInputMixin interface testing setAutocompleteItems(items,o
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>
@@ -2615,10 +2725,12 @@ exports[`UU5.Forms.TextInputMixin interface testing setAutocompleteItems(items,o
       ref_={[Function]}
       size="s"
     />
-    <Popover
+    <forwardRef(Popover)
       disableBackdrop={true}
+      fitHeightToViewport={false}
       forceRender={true}
       ref_={[Function]}
+      shown={false}
     />
   </InputWrapper>
 </div>

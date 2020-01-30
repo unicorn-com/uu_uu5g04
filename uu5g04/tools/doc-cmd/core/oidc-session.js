@@ -15,28 +15,22 @@ class OidcSession {
     return instance.get();
   }
 
-  async refresh() {
-    if (this.session || !(await this._loadTokenFromFile())) {
-      await this._interactiveLogin();
-    }
-    return this.session;
-  }
-
   async get() {
-    if (this.session == null) {
-      await this.refresh();
+    if ((await this.session) == null) {
+      this.session = this._initSession();
     }
-    return this.session;
+    return await this.session;
   }
 
-  _setSession(session) {
-    this.session = session;
-    return this.session;
+  async _initSession() {
+    let result = await this._initSessionFromTokenFile();
+    if (!result) result = await this._interactiveLogin();
+    return result;
   }
 
-  async _loadTokenFromFile() {
+  async _initSessionFromTokenFile() {
     if (!fs.existsSync(this.tokenPath)) {
-      return false;
+      return null;
     }
 
     var properties = PropertiesReader(this.tokenPath);
@@ -44,16 +38,15 @@ class OidcSession {
       let token = properties.get("id_token");
       try {
         let session = await AuthenticationService.authenticate(token);
-        this._setSession(session);
         // console.log("Auth: Using token from file.");
-        return true;
+        return session;
       } catch (e) {
         // console.log("Auth: Token from file is not valid or expired.");
-        return false;
+        return null;
       }
     }
 
-    return false;
+    return null;
   }
 
   async _interactiveLogin() {
@@ -73,7 +66,7 @@ class OidcSession {
       console.log("> Unable to save token to provided location: " + this.tokenPath);
     }
 
-    return this._setSession(session);
+    return session;
   }
 }
 

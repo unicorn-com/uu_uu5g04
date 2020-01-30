@@ -18,6 +18,14 @@ import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
+const EditableBlock = UU5.Common.Component.lazy(async () => {
+  await SystemJS.import("uu5g04-forms");
+  await SystemJS.import("uu5g04-bricks-editable");
+  return import("./internal/block.js");
+});
+
+let editationLazyLoaded = false;
+
 import "./block.less";
 //@@viewOff:imports
 
@@ -40,12 +48,12 @@ export const Block = createReactClass({
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
       main: ns.css("block"),
-      bg: ns.css("block-bg")
+      bg: ns.css("block-bg"),
+      editation: ns.css("block-editation")
     },
     opt: {
       nestingLevelWrapper: true
-    },
-    editableComponent: "UU5.BricksEditable.Block"
+    }
   },
   //@@viewOff:statics
 
@@ -64,12 +72,20 @@ export const Block = createReactClass({
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
+  getInitialState() {
+    return {
+      editationLazyLoaded: false
+    };
+  },
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
   //@@viewOn:overriding
+  onBeforeForceEndEditation_() {
+    return this._editableBlock ? this._editableBlock.getPropsToSave() : undefined;
+  },
   //@@viewOff:overriding
 
   //@@viewOn:private
@@ -78,14 +94,44 @@ export const Block = createReactClass({
     this.props.background && (mainAttrs.className += " " + this.getClassName().bg);
     return mainAttrs;
   },
+
+  _registerNull(inst) {
+    // unmount of component means that suspense is loaded and component should be rendered
+    if (!inst) {
+      this.setState(state => {
+        if (state.editationLazyLoaded) return;
+
+        // Edit component is loaded - need to set to static variable because other Edit component does not render fallback component
+        // editationLazyLoaded is stored in both state and static variable for cases such as when more edit modes are loaded at the same time
+        editationLazyLoaded = true;
+        return { editationLazyLoaded: true };
+      });
+    }
+  },
+
+  _isEditationLazyLoaded() {
+    return editationLazyLoaded;
+  },
+
+  _renderEditationMode() {
+    return (
+      <UU5.Common.Suspense fallback={<span ref={this._registerNull} />}>
+        <EditableBlock component={this} ref_={this._registerEditableBlock} />
+      </UU5.Common.Suspense>
+    );
+  },
+
+  _registerEditableBlock(block) {
+    this._editableBlock = block;
+  },
   //@@viewOff:private
 
   //@@viewOn:render
   render: function() {
     return this.getNestingLevel() ? (
       <div {...this._buildMainAttrs()}>
-        {this.getChildren()}
-        {this.getDisabledCover()}
+        {this.state.editation ? this._renderEditationMode() : null}
+        {!this.state.editation || !this._isEditationLazyLoaded() ? [this.getChildren(), this.getDisabledCover()] : null}
       </div>
     ) : null;
   }

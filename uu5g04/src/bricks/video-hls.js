@@ -14,8 +14,8 @@
 //@@viewOn:imports
 import React from "react";
 import createReactClass from "create-react-class";
-import UU5 from "uu5g04";
 import Hls from "hls.js";
+import UU5 from "uu5g04";
 //@@viewOff:imports
 
 const EMPTY_VIDEO_MP4 =
@@ -30,7 +30,7 @@ export const VideoHls = createReactClass({
   statics: {
     tagName: "UU5.Bricks.Video.Hls",
     errors: {
-      hlsVideoNotSupported: "This browser does not supported playing of HLS (HTTP Live Streaming) videos."
+      hlsVideoNotSupported: "This browser does not support playing of HLS (HTTP Live Streaming) videos."
     }
   },
   //@@viewOff:statics
@@ -52,21 +52,25 @@ export const VideoHls = createReactClass({
   componentDidMount() {
     if (this._usesHlsLib()) {
       let { mainAttrs } = this.props;
-      let hlsConfig = {
-        autoStartLoad: mainAttrs.autoPlay || mainAttrs.preload !== "none",
-        xhrSetup: this._hlsXhrSetup
-      };
-      let hls = (this._hls = new Hls(hlsConfig));
-      if (mainAttrs.src && (mainAttrs.autoPlay || mainAttrs.preload !== "none")) {
-        this._doPreload();
-      }
-      if (!hlsConfig.autoStartLoad || mainAttrs.preload === "metadata") {
-        UU5.Environment.EventListener.addEvent(this._video, "play", this.getId(), () => {
-          let fn = () => hls.startLoad();
-          let usedFn = !this._preloaded && this.props.mainAttrs.src ? () => this._doPreload(true, fn) : fn;
-          usedFn();
-        });
-      }
+      this._waitForToken(mainAttrs.src, () => {
+        if (!this.isRendered()) return;
+
+        let hlsConfig = {
+          autoStartLoad: mainAttrs.autoPlay || mainAttrs.preload !== "none",
+          xhrSetup: this._hlsXhrSetup
+        };
+        let hls = (this._hls = new Hls(hlsConfig));
+        if (mainAttrs.src && (mainAttrs.autoPlay || mainAttrs.preload !== "none")) {
+          this._doPreload();
+        }
+        if (!hlsConfig.autoStartLoad || mainAttrs.preload === "metadata") {
+          UU5.Environment.EventListener.addEvent(this._video, "play", this.getId(), () => {
+            let fn = () => hls.startLoad();
+            let usedFn = !this._preloaded && this.props.mainAttrs.src ? () => this._doPreload(true, fn) : fn;
+            usedFn();
+          });
+        }
+      });
     } else if (!this._canPlayNativeHls()) {
       this.showError("hlsVideoNotSupported");
     }
@@ -74,7 +78,11 @@ export const VideoHls = createReactClass({
 
   componentDidUpdate(prevProps, prevState) {
     if (this.props.mainAttrs.src !== prevProps.mainAttrs.src) {
-      if (this._preloaded) this._hls.loadSource(this.props.mainAttrs.src);
+      if (this._preloaded) {
+        this._waitForToken(this.props.mainAttrs.src, () => {
+          this._hls.loadSource(this.props.mainAttrs.src);
+        });
+      }
     }
   },
 
@@ -115,23 +123,12 @@ export const VideoHls = createReactClass({
     if (this.props.authenticate) {
       let session = UU5.Environment.getSession();
       if (session && session.isAuthenticated() && UU5.Environment.isTrustedDomain(url)) {
-        let token = session.getCallToken().token;
+        let token = this._authenticationToken;
         if (token) {
           xhr.setRequestHeader("Authorization", "Bearer " + token);
         }
       }
     }
-  },
-
-  _getAuthenticatedSrc(src) {
-    let url = src;
-    let session = UU5.Environment.getSession();
-    if (session && session.isAuthenticated() && UU5.Environment.isTrustedDomain(url)) {
-      let token = session.getCallToken().token;
-      let parsedUrl = UU5.Common.Url.parse(url);
-      url = parsedUrl.set({ parameters: { ...parsedUrl.parameters, access_token: token } }).toString();
-    }
-    return url;
   },
 
   _usesHlsLib() {
@@ -148,19 +145,72 @@ export const VideoHls = createReactClass({
   _setVideoRef(ref) {
     this._video = ref;
   },
+
+  _getAuthenticatedUrl(url, session) {
+    let result = "";
+    if (this._authenticatedUrl === url) result = this.state.authenticatedUrl;
+    else if (this._authenticatingUrl !== url) {
+      this._authenticatingUrl = url;
+      let promise = (this._urlPromise = this._computeAuthenticatedUrl(url, session).then(
+        ({ authenticatedUrl, authenticationToken }) => {
+          if (this.isRendered() && promise === this._urlPromise) {
+            delete this._authenticatingUrl;
+            this._authenticatedUrl = url;
+            this._authenticationToken = authenticationToken;
+            this.setState({ authenticatedUrl });
+          }
+        },
+        () => {
+          delete this._authenticatingUrl;
+        }
+      ));
+    }
+    return result;
+  },
+
+  async _computeAuthenticatedUrl(url, session) {
+    let token = await UU5.Common.Tools.getCallToken(url, session);
+    let parsedUrl = UU5.Common.Url.parse(url);
+    let authenticatedUrl = parsedUrl.set({ parameters: { ...parsedUrl.parameters, access_token: token } }).toString();
+    return { authenticatedUrl, authenticationToken: token };
+  },
+
+  async _waitForToken(url, callback) {
+    if (this._authenticatedUrl === url) {
+      // token is already prepared
+      callback();
+    } else if (this._authenticatingUrl === url) {
+      // token is being prepared
+      this._urlPromise.then(() => {
+        if (this.isRendered()) callback();
+      });
+    } else {
+      // there's no token used as it's not needed
+      callback();
+    }
+  },
   //@@viewOff:private
 
   //@@viewOn:render
   render() {
     let mainAttrs = this.getMainAttrs();
+
+    let authnUrl;
+    if (this.props.authenticate) {
+      let session = UU5.Environment.getSession();
+      if (session && session.isAuthenticated() && UU5.Environment.isTrustedDomain(mainAttrs.src)) {
+        // NOTE We're getting authenticated URL even if using Hls (because we'll need token).
+        authnUrl = this._getAuthenticatedUrl(mainAttrs.src, session);
+      }
+    }
     if (this._usesHlsLib()) {
       // don't propagate some props when using hls.js library (they're handled in JS instead of via DOM attrs)
       let { autoPlay, src, ...rest2 } = mainAttrs; // eslint-disable-line no-unused-vars
       mainAttrs = rest2;
       // NOTE If using preload="none", <video> must still have "src" otherwise it's not possible to click Play.
       if (!this._preloaded && mainAttrs.preload === "none") mainAttrs.src = EMPTY_VIDEO_MP4;
-    } else if (this.props.authenticate) {
-      mainAttrs.src = this._getAuthenticatedSrc(mainAttrs.src);
+    } else if (authnUrl) {
+      mainAttrs.src = authnUrl;
     }
     return <video {...mainAttrs} ref={this._setVideoRef} />;
   }

@@ -83,8 +83,11 @@ export const CompactContextMenu = createReactClass({
         levelContent = [
           <UU5.Bricks.ContextMenu.Item
             key="backButton"
+            // arrows fn necessary to pass parent key
+            // eslint-disable-next-line react/jsx-no-bind
             onClick={opt => this._changeLevel(parentKey, opt.event)}
             label={Helpers.getBackItemContent(this.getLsiComponent("backButton"))}
+            className={this.getClassName("backButton")}
           />,
           <UU5.Bricks.ContextMenu.Item key="divider" divider />
         ];
@@ -138,10 +141,10 @@ export const CompactContextMenu = createReactClass({
     let children = this.state.levels[this.state.currentLevel];
 
     if (!children) {
-      return this.state.levels[this.getId()];
-    } else {
-      return children;
+      children = this.state.levels[this.getId()];
     }
+
+    return Helpers.wrapSubmenu(children);
   },
   //@@viewOff:private
 

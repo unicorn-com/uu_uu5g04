@@ -14,6 +14,7 @@
 //@@viewOn:imports
 import React from "react";
 import createReactClass from "create-react-class";
+import { lazy as _lazy } from "./suspense.js";
 //@@viewOff:imports
 
 export class Component {
@@ -26,7 +27,7 @@ export class Component {
   }
 
   static lazy(...args) {
-    return React.lazy(...args);
+    return _lazy(...args);
   }
 
   static memo(...args) {

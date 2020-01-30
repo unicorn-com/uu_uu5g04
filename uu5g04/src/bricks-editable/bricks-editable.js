@@ -11,14 +11,15 @@
  * at the email: info@unicorn.com.
  */
 
-export * from "./section.js";
 export * from "./button.js";
 export * from "./dropdown.js";
 export * from "./touchicon.js";
 export * from "./header.js";
-export * from "./block.js";
 export * from "./accordion.js";
-export * from "./container.js";
+export * from "./toolbar.js";
+export * from "./end-editation.js";
+export * from "./input.js";
+export * from "./modal.js";
 
 export const bookKitUrl =
   "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page";

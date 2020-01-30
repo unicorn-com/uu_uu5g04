@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>BricksEditable.Column Demo</title>
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.js",
+        "uu5g04-bricks-editable": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks-editable.js",
+      }
+    });
+  </script>
+
+</head>
+<body>
+<div id="renderHere"></div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import React from "react";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+
+  const EditableComponent = UU5.Common.Component.lazy(async () => {
+    const Forms = await SystemJS.import("uu5g04-forms");
+
+    const EditableComponent = UU5.Common.VisualComponent.create({
+
+      getInitialState() {
+        let values = this.props.component.getEditablePropsValues(["content"]);
+
+        return {
+          ...values
+        };
+      },
+
+      render() {
+        return (
+          <Forms.TextButton
+            value={this.state.content}
+            onBlur={({ value }) => this.setState({ content: value })}
+            buttons={[{
+              icon: 'mdi-magnify',
+              onClick: (opt) => this.stopEditation()
+            }]}
+          />
+        )
+      }
+    });
+
+    return { default: EditableComponent };
+  });
+
+  const Component = UU5.Common.VisualComponent.create({
+
+    mixins: [
+      UU5.Common.BaseMixin,
+      UU5.Common.EditableMixin
+    ],
+
+    getInitialState() {
+      return {};
+    },
+
+    render() {
+      return (
+        <div>
+          {this.isInlineEdited() ? (
+            <UU5.Common.Suspense>
+              <EditableComponent component={this} />
+            </UU5.Common.Suspense>
+          ) : this.props.content}
+        </div>
+      )
+    }
+  });
+
+  const Page = UU5.Common.VisualComponent.create({
+
+    getInitialState() {
+      return {
+        header: "<uu5string />Column header",
+        content: "Text",
+        footer: null,
+        level: 1,
+        disableButton: false
+      };
+    },
+
+    /*@@viewOn:0*/
+    _editColumn() {
+      this._column.startEditation(this._endEditation, this._saveEditation);
+      this.setState({ disableButton: true })
+    },
+
+    _endEditation(column, newProps) {
+      newProps.disableButton = false;
+      this._saveEditation(column, newProps);
+    },
+
+    _saveEditation(column, newProps) {
+      this.setState(newProps);
+    },
+
+    _getEditablePropValue(propName) {
+      return this.state[propName];
+    },
+
+    _registerColumn(column) {
+      this._column = column;
+      // start editation when it is possible
+      // this._editColumn();
+    },
+    /*@@viewOff:0*/
+
+    render() {
+      let { disableButton, ...columnState } = this.state;
+
+      return (
+        <UU5.Bricks.Page>
+          {/*@@viewOn:0*/}
+          <Component ref_={this._registerColumn} {...columnState} getEditablePropValue={this._getEditablePropValue} />
+          <UU5.Bricks.Button disabled={disableButton} colorSchema='primary' onClick={this._editColumn}
+                             content='Edit Column' />
+          {/*@@viewOff:0*/}
+        </UU5.Bricks.Page>
+      );
+    }
+  });
+
+  ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+
+</script>
+
+</body>
+</html>

@@ -39,7 +39,7 @@ export const LevelMixin = {
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function () {
+  getDefaultProps: function() {
     return {
       level: null,
       increaseLevel: false
@@ -48,7 +48,7 @@ export const LevelMixin = {
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  getInitialState: function () {
+  getInitialState: function() {
     // initialize
     this.registerMixin("UU5.Common.LevelMixin");
     // state
@@ -57,39 +57,40 @@ export const LevelMixin = {
     };
   },
 
-  componentWillReceiveProps: function (nextProps) {
+  componentWillReceiveProps: function(nextProps) {
     this.getLevel() !== nextProps.level && this.setState({ level: this.checkLevel(nextProps) });
   },
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
-  hasUU5CommonLevelMixin: function () {
+  hasUU5CommonLevelMixin: function() {
     return this.hasMixin("UU5.Common.LevelMixin");
   },
 
-  getLevel: function () {
+  getLevel: function() {
     return this.state.level;
   },
 
-  getUU5CommonLevelMixinProps: function () {
+  getUU5CommonLevelMixinProps: function() {
     return {
       level: this.props.level
     };
   },
 
-  getUU5CommonLevelMixinPropsToPass: function () {
+  getUU5CommonLevelMixinPropsToPass: function() {
     return this.getUU5CommonLevelMixinProps();
   },
 
-  shouldIncreaseLevel: function (parentLevelComponent, props = this.props) {
+  shouldIncreaseLevel: function(parentLevelComponent, props = this.props) {
     return !parentLevelComponent || (parentLevelComponent && parentLevelComponent.getOpt("dummyLevel"))
       ? false
-      : this.getOpt("increaseLevel") || props.increaseLevel ||
-      (this.getHeader && this.getHeader(props)) ||
-      (this.getFooter && this.getFooter(props));
+      : this.getOpt("increaseLevel") ||
+          props.increaseLevel ||
+          (this.getHeader && this.getHeader(props)) ||
+          (this.getFooter && this.getFooter(props));
   },
 
-  checkLevel: function (props = this.props) {
+  checkLevel: function(props = this.props) {
     var level = typeof props.level === "string" ? parseInt(props.level) : props.level;
     var maxLevel = this.getDefault("maxLevel", "UU5.Common.LevelMixin");
     var parentLevelComponent = this.getParentByType("hasUU5CommonLevelMixin");

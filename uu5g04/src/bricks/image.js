@@ -217,11 +217,7 @@ let Image = createReactClass({
           preloadedUri: "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", // transparent 1x1 image
           promise: null
         };
-        let token = session.getCallToken().token;
-        let headers = {
-          Authorization: "Bearer " + token
-        };
-        result.promise = this._fetchImage(url, { headers }).then(
+        result.promise = this._fetchImage(url, session).then(
           blob => {
             result.preloading = false;
             result.preloadedUri = URL.createObjectURL(blob);
@@ -249,7 +245,13 @@ let Image = createReactClass({
     return result;
   },
 
-  _fetchImage(url, { headers = {} } = {}) {
+  async _fetchImage(url, session) {
+    let token = await UU5.Common.Tools.getCallToken(url, session);
+    let headers = token
+      ? {
+          Authorization: "Bearer " + token
+        }
+      : {};
     return new Promise((resolve, reject) => {
       let xhr = new XMLHttpRequest();
       xhr.open("GET", url, true);

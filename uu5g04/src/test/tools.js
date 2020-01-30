@@ -241,9 +241,9 @@ export const Tools = {
         if (nextValue === undefined && requiredProps) nextValue = requiredProps[propName];
         if (nextValue !== undefined && nextValue !== value) {
           wrapper.setProps({ [propName]: nextValue });
-          if (wait) await Tools.wait();
+          if (wait || wait === undefined) await Tools.wait();
           wrapper.setProps({ [propName]: value });
-          if (wait) await Tools.wait();
+          if (wait || wait === undefined) await Tools.wait();
           let snapshotString2 = toStringSerializer ? toStringSerializer.getSnapshotString(wrapper, opt) : null;
           if (snapshotString2 !== snapshotString) {
             let chainProp = `${propName}=${toSafeJson(value)} --> ${propName}=${toSafeJson(

@@ -82,7 +82,9 @@ export const EditableMixin = {
   getInitialState: function() {
     this.registerMixin(EDITABLE_MIXIN_NAME);
     this._resizeCallbacks = {};
-    return null;
+    return {
+      editation: false
+    };
   },
 
   componentDidMount() {

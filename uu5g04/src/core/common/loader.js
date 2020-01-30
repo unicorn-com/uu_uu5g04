@@ -135,20 +135,27 @@ export const Loader = createReactClass({
       //   this.showError("onLoadNoPromise");
       // }
     } else if (props.uri) {
-      let headers = props.headers;
-
-      let session = Environment.getSession();
-      if (props.authenticate && session && session.isAuthenticated() && Environment.isTrustedDomain(props.uri)) {
-        headers = {
-          ...headers,
-          Authorization: "Bearer " + session.getCallToken().token
-        };
-      }
-
-      Request.call(props.method.toUpperCase(), props.uri, props.data, { headers })
+      this._doLoad(props)
         .then(this._done)
         .catch(this._fail);
     }
+  },
+
+  async _doLoad(props) {
+    let headers = props.headers;
+
+    let session = Environment.getSession();
+    if (props.authenticate && session && session.isAuthenticated() && Environment.isTrustedDomain(props.uri)) {
+      let token = await Tools.getCallToken(props.uri, session);
+      if (token) {
+        headers = {
+          ...headers,
+          Authorization: "Bearer " + token
+        };
+      }
+    }
+
+    return Request.call(props.method.toUpperCase(), props.uri, props.data, { headers });
   },
 
   _initLoading(props = this.props) {

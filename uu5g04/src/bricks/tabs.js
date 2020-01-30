@@ -18,12 +18,19 @@ import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
+import TabsItem from "./tabs-item.js";
 import Button from "./button.js";
-import TabsItem from "./tabs-item";
 import Line from "./line.js";
+
+const EditationComponent = UU5.Common.Component.lazy(async () => {
+  await SystemJS.import("uu5g04-forms");
+  await SystemJS.import("uu5g04-bricks-editable");
+  return import("./internal/tabs-editable.js");
+});
 
 import "./tabs.less";
 //@@viewOff:imports
+
 
 const MOUNT_TAB_CONTENT_VALUES = {
   onFirstRender: "onFirstRender",
@@ -44,7 +51,8 @@ export const Tabs = createReactClass({
     UU5.Common.NestingLevelMixin,
     UU5.Common.ColorSchemaMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.ScreenSizeMixin
+    UU5.Common.ScreenSizeMixin,
+    UU5.Common.EditableMixin
   ],
   //@@viewOff:mixins
 
@@ -219,6 +227,24 @@ export const Tabs = createReactClass({
       stacked: this._isStacked(actualScreenSize)
     });
   },
+
+  onBeforeForceEndEditation_() {
+    return this._editableTabs ? this._editableTabs.getPropsToSave() : undefined;
+  },
+
+  getEditablePropsValues_(propsArray) {
+    let props = this.getEditablePropsValuesDefault(propsArray);
+
+    if (typeof props.elevation === "number") {
+      props.elevation = "" + props.elevation;
+    }
+
+    if (typeof props.elevationHover === "number") {
+      props.elevationHover = "" + props.elevationHover;
+    }
+
+    return props;
+  },
   //@@viewOff:overriding
 
   //@@viewOn:private
@@ -235,40 +261,43 @@ export const Tabs = createReactClass({
       if (!Array.isArray(builtChildren)) {
         builtChildren = [builtChildren];
       }
-      if (getMountTabContent(props) === MOUNT_TAB_CONTENT_VALUES.onFirstRender) {
-        result.renderedTabs = builtChildren.map(tab => ({ id: tab.props.id, name: tab.props.name }));
-      } else if (getMountTabContent(props) === MOUNT_TAB_CONTENT_VALUES.onFirstActive) {
-        result.renderedTabs = result.renderedTabs.filter(tab =>
-          builtChildren.some(builtChild => builtChild.props.name === tab.name || builtChild.props.id === tab.id)
-        );
 
-        // check if active item is in result.renderedTabs and add it if needed
-        if (result.activeName) {
-          let activeItem = builtChildren
-            .map(tab => ({ id: tab.props.id, name: tab.props.name }))
-            .find(tab => tab.name === result.activeName || tab.id === result.activeName);
+      if (builtChildren.length) {
+        if (getMountTabContent(props) === MOUNT_TAB_CONTENT_VALUES.onFirstRender) {
+          result.renderedTabs = builtChildren.map(tab => ({ id: tab.props.id, name: tab.props.name }));
+        } else if (getMountTabContent(props) === MOUNT_TAB_CONTENT_VALUES.onFirstActive) {
+          result.renderedTabs = result.renderedTabs.filter(tab =>
+            builtChildren.some(builtChild => builtChild.props.name === tab.name || builtChild.props.id === tab.id)
+          );
 
-          if (!result.renderedTabs.some(tab => tab.name === activeItem.name || tab.id === activeItem.id)) {
-            result.renderedTabs.push(activeItem);
+          // check if active item is in result.renderedTabs and add it if needed
+          if (result.activeName) {
+            let activeItem = builtChildren
+              .map(tab => ({ id: tab.props.id, name: tab.props.name }))
+              .find(tab => tab.name === result.activeName || tab.id === result.activeName);
+
+            if (!result.renderedTabs.some(tab => tab.name === activeItem.name || tab.id === activeItem.id)) {
+              result.renderedTabs.push(activeItem);
+            }
           }
-        }
-      } else if (getMountTabContent(props) === MOUNT_TAB_CONTENT_VALUES.onActive) {
-        let activeItem = builtChildren.find(
-          tab => tab.props.name === result.activeName || tab.props.id === result.activeName
-        );
-        result.renderedTabs = activeItem ? [{ id: activeItem.props.id, name: activeItem.props.name }] : [];
-      }
-
-      if (!result.renderedTabs || !result.renderedTabs.length) {
-        let activeIndex = 0;
-        if (result.activeName) {
-          activeIndex = builtChildren.findIndex(
+        } else if (getMountTabContent(props) === MOUNT_TAB_CONTENT_VALUES.onActive) {
+          let activeItem = builtChildren.find(
             tab => tab.props.name === result.activeName || tab.props.id === result.activeName
           );
+          result.renderedTabs = activeItem ? [{ id: activeItem.props.id, name: activeItem.props.name }] : [];
         }
 
-        let { id, name } = builtChildren[activeIndex].props;
-        result.renderedTabs = [{ id, name }];
+        if (!result.renderedTabs || !result.renderedTabs.length) {
+          let activeIndex = 0;
+          if (result.activeName) {
+            activeIndex = builtChildren.findIndex(
+              tab => tab.props.name === result.activeName || tab.props.id === result.activeName
+            );
+          }
+
+          let { id, name } = builtChildren[activeIndex].props;
+          result.renderedTabs = [{ id, name }];
+        }
       }
     }
 
@@ -443,6 +472,18 @@ export const Tabs = createReactClass({
       ...this.props.lineProps
     };
   },
+
+  _renderEditationMode() {
+    return (
+      <UU5.Common.Suspense fallback="">
+        <EditationComponent component={this} ref_={this._registerEditableComponent} />
+      </UU5.Common.Suspense>
+    );
+  },
+
+  _registerEditableComponent(tabs) {
+    this._editableTabs = tabs;
+  },
   //@@viewOff:private
 
   //@@viewOn:render
@@ -452,15 +493,18 @@ export const Tabs = createReactClass({
     mainAttrs.className += " " + this.getClassName("size") + this.props.size;
 
     return this.getNestingLevel() ? (
-      <div {...mainAttrs}>
-        <ul className={this._buildUlAttributes()}>
-          {items}
-          {this.props.underline ? <Line {...this._getLineProps()} /> : null}
-        </ul>
+      <UU5.Common.Fragment>
+        <div {...mainAttrs}>
+          <ul className={this._buildUlAttributes()}>
+            {items}
+            {this.props.underline ? <Line {...this._getLineProps()} /> : null}
+          </ul>
 
-        <div className={this.getClassName().content}>{children}</div>
-        {this.getDisabledCover()}
-      </div>
+          <div className={this.getClassName().content}>{children}</div>
+          {this.getDisabledCover()}
+        </div>
+        {this.state.editation ? this._renderEditationMode() : null}
+      </UU5.Common.Fragment>
     ) : null;
   }
   //@@viewOff:render

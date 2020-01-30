@@ -416,6 +416,132 @@ export const BricksLsi = {
       cs: "Zpět",
       en: "Back"
     }
+  },
+  tabsEditable: {
+    componentPropsLabel: {
+      cs: "Hlavní vlastnosti komponenty",
+      en: "Component Props"
+    },
+    additionalPropsLabel: {
+      cs: "Vedlejší vlastnosti komponenty",
+      en: "Additional Props"
+    },
+    typeLabel: {
+      cs: "Typ zobrazení záložek",
+      en: "Type"
+    },
+    typeValueTabs: {
+      cs: "Podrtžené záložky",
+      en: "tabs"
+    },
+    typeValuePills: {
+      cs: "Vyplněné záložky",
+      en: "pills"
+    },
+    sizeLabel: {
+      cs: "Velikost",
+      en: "Size"
+    },
+    sizeValueS: {
+      cs: "S",
+      en: "S"
+    },
+    sizeValueM: {
+      cs: "M",
+      en: "M"
+    },
+    sizeValueL: {
+      cs: "L",
+      en: "L"
+    },
+    sizeValueXL: {
+      cs: "XL",
+      en: "XL"
+    },
+    borderRadiusLabel: {
+      cs: "Zaoblení okrajů",
+      en: "Border Radius"
+    },
+    borderRadiusPlaceholder: {
+      cs: "Např. 16px 16px 0 0",
+      en: "For example 16px 16px 0 0"
+    },
+    elevationLabel: {
+      cs: "Úroveň vyvýšení aktivní záložky",
+      en: "Elevation of Active Tab"
+    },
+    elevationHoverLabel: {
+      cs: "Úroveň vyvýšení aktivní záložky při najetí",
+      en: "Elevation Hover of Active tab"
+    },
+    justifiedLabel: {
+      cs: "Zarovnání záložek",
+      en: "Justified"
+    },
+    justifiedValueFalse: {
+      cs: "Vypnuto",
+      en: "Disabled"
+    },
+    justifiedValueFTrue: {
+      cs: "Zapnuto",
+      en: "Enabled"
+    },
+    fadeLabel: {
+      cs: "Animace při změně aktivního tabu",
+      en: "Active tab change animation"
+    },
+    fadeValueFalse: {
+      cs: "Vypnuto",
+      en: "Disabled"
+    },
+    fadeValueTrue: {
+      cs: "Zapnuto",
+      en: "Enabled"
+    },
+    underlineLabel: {
+      cs: "Podtržení záhlaví",
+      en: "Underline"
+    },
+    underlineValueFalse: {
+      cs: "Vypnuto",
+      en: "Disabled"
+    },
+    underlineValueTrue: {
+      cs: "Zapnuto",
+      en: "Enabled"
+    },
+    colorSchemaLabel: {
+      cs: "Barevné schéma",
+      en: "Color Schema"
+    },
+    idLabel: {
+      cs: "Id komponenty",
+      en: "Component's id"
+    },
+    disabledLabel: {
+      cs: "Stav komponenty",
+      en: "Component's state"
+    },
+    disabledValueFalse: {
+      cs: "Aktivní",
+      en: "Enabled"
+    },
+    disabledValueTrue: {
+      cs: "Neaktivní",
+      en: "Disabled"
+    },
+    tabNameLabel: {
+      cs: "Název záložky",
+      en: "Tab's name"
+    },
+    tabHeaderLabel: {
+      cs: "Hlavička záložky",
+      en: "Tab's Header"
+    },
+    newItemHeader: {
+      cs: "Nová položka",
+      en: "New Item"
+    }
   }
 };
 

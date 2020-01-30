@@ -56,7 +56,7 @@ export const Lsi = UU5.Common.LsiMixin.withContext(
     propTypes: {
       lsi: PropTypes.object,
       allowTags: PropTypes.arrayOf(PropTypes.string),
-      params: PropTypes.oneOfType([PropTypes.string, PropTypes.array])
+      params: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.object])
     },
     //@@viewOff:propTypes
 

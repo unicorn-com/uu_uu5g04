@@ -1,1147 +1,285 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UU5.Bricks.Popover ccrKey="<UU5.Parrot.Page ccrKey='UU5.Parrot.Page' />" 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover checkGrammar=false 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover checkGrammar=true 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover checkHighlight=false 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover checkHighlight=true 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover checkSpaces=false 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover checkSpaces=true 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover className="my-classname" 1`] = `
-<div
-  className="uu5-bricks-popover my-classname uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover content="This is Content from ContentMixin" 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <UU5.Common.TextCorrectorContextConsumer
-      key="0"
-      text="This is Content from ContentMixin"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover content=12345 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    12345
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover controlled=false 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover controlled=true 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover default props 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover disabled=false 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover disabled=true 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-common-disabled uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover dynamic=false 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover dynamic=true 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover footer={"type":"div","key":null,"ref":null,"props":{"children":"Footer of section"},"_owner":null,"_store":{}} 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-  <div
-    className="uu5-bricks-popover-footer"
-    key="footer"
-  >
-    <div>
-      Footer of section
-    </div>
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-header"
-    key="header"
-  >
-    <div>
-      Header of section
-    </div>
-  </div>
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover hidden=false 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover hidden=true 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right uu5-bricks-popover-remove-height"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover id="myId" 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="myId"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover ignoreHTML=false 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover ignoreHTML=true 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover level="0" 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover level="1" 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover level="2" 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover level="3" 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover level="4" 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover level="5" 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover level="6" 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover level=0 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover level=1 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover level=2 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover level=3 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover level=4 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover level=5 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover level=6 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover mainAttrs=undefined 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover name="myName" 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  name="myName"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover noIndex=false 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover noIndex=true 1`] = `
-<div
-  className="uu5-bricks-popover uu5-noindex uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover parentElement=undefined 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover pureRender=false 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover pureRender=true 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover selected=false 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover selected=true 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-common-selected uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover shown=false 1`] = `
@@ -1193,173 +331,43 @@ exports[`UU5.Bricks.Popover shown=true 1`] = `
 `;
 
 exports[`UU5.Bricks.Popover style="padding:8px; borderRadius: 2px" 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover style={"backgroundColor":"red","color":"blue"} 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover textCorrector=false 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover textCorrector=true 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover tooltip="My Tooltip" 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title="My Tooltip"
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover underline=false 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`UU5.Bricks.Popover underline=true 1`] = `
-<div
-  className="uu5-bricks-popover uu5-common-hidden uu5-bricks-popover-menu-bottom uu5-bricks-popover-menu-right"
-  id="uuID"
-  style={
-    Object {
-      "width": null,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-popover-body"
-    key="children"
-  >
-    <Button
-      content="I am button in pop over"
-      id="childID"
-      key="childrenKey"
-    />
-  </div>
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;

@@ -9,7 +9,7 @@ exports[`UU5.Bricks.Audio authenticate=false 1`] = `
   title={null}
 >
   <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+    src="https://plus4u.net/path/trusted.mp3"
   />
 </audio>
 `;
@@ -23,7 +23,7 @@ exports[`UU5.Bricks.Audio authenticate=null 1`] = `
   title={null}
 >
   <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+    src="https://plus4u.net/path/trusted.mp3"
   />
 </audio>
 `;
@@ -37,7 +37,7 @@ exports[`UU5.Bricks.Audio authenticate=true 1`] = `
   title={null}
 >
   <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+    src="https://plus4u.net/path/trusted.mp3?access_token=token-for-tests"
   />
 </audio>
 `;

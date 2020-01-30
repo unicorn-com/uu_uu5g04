@@ -3,39 +3,39 @@ import Icon from "../icon.js";
 import Css from "./css.js";
 
 export const ClassNames = {
-  submenu: () =>
-    Css.css(`
+  submenu: () => Css.css`
     margin: 0;
-    padding: 0;
+    padding: 2px 0;
     width: 100%;
-  `),
-  icon: () =>
-    Css.css(`
+  `,
+  icon: () => Css.css`
     display: flex;
     align-items: center;
     width: 32px;
     font-size: 1.4em;
     color: rgba(0, 0, 0, 0.54);
-  `),
-  nestedIcon: () =>
-    Css.css(`
+  `,
+  nestedIcon: () => Css.css`
     .uu5-bricks-context-menu-item-nested-item > &.uu5-common-disabled {
       color: rgba(0, 0, 0, 0.24);
     }
-  `),
-  compactItem: () =>
-    Css.css(`
+  `,
+  compactItem: () => Css.css`
     & > .uu5-bricks-context-menu-item-link {
       min-height: 40px;
     }
-  `),
-  compactSubmenuItem: () =>
-    Css.css(`
+  `,
+  compactSubmenuItem: () => Css.css`
     & > .uu5-bricks-context-menu-item-link {
       padding: 8px 0 8px 16px;
       justify-content: space-between;
     }
-  `)
+  `,
+  backButton: () => Css.css`
+    & > .uu5-bricks-context-menu-item-link {
+      min-height: 40px;
+    }
+  `
 };
 
 export const Helpers = {

@@ -19,10 +19,17 @@ import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "../bricks-editable-ns.js";
 import Lsi from "../bricks-editable-lsi.js";
+
+import SettingsCheckbox from "./settings-checkbox.js";
 import Css from "./css.js";
+import { EndEditation } from "../end-editation.js";
 //@@viewOff:imports
 
 const MAIN_CLASS_NAME = ns.css("editation-panel");
+
+const DEFAULT_ITEM_PROPS = {
+  colorSchema: "default"
+};
 
 export const EditationPanel = createReactClass({
   //@@viewOn:mixins
@@ -40,19 +47,58 @@ export const EditationPanel = createReactClass({
           position: relative;
           display: flex;
           justify-content: space-between;
-          align-items: center;
+          align-items: stretch;
           border-bottom: 1px solid #E3E3E3;
-          height: 33px;
 
           > * {
             min-width: 0px;
           }
+        `),
+      leftToolbarSide: Css.css(`
+        flex: 1 1 auto;
+        padding: 4px;
+      `),
+      rightToolbarSide: Css.css(` flex: 0 0 auto; `),
+      cogwheelButton: Css.css(`
+        color: rgba(0,0,0,0.54);
+        background-color: transparent;
+        margin: 4px 8px 4px 0;
+      `),
+      separator: () =>
+        Css.css(`
+          margin: 0;
+          width: 100%;
+        `),
+      settingsButton: () =>
+        Css.css(`
+          &.uu5-bricks-button {
+            background-color: transparent;
+            width: 100%;
+            text-align: left;
+            margin-bottom: 4px;
 
-          > div:first-child {
-            flex-grow: 1;
+            &:hover {
+              background-color: #EEEEEE;
+            }
           }
         `),
-      defaultToolbar: Css.css(` flex: 0 0 auto; `)
+      settingsModal: () =>
+        Css.css(`
+          .uu5-bricks-modal-header {
+            font-size: 18px;
+            color: #303030;
+            border-bottom: solid 1px #BDBDBD;
+          }
+
+          .uu5-bricks-modal-footer {
+            padding: 0;
+            border-top: solid 1px #BDBDBD;
+          }
+
+          .uu5-bricks-modal-body {
+            padding: 0;
+          }
+        `)
     },
     lsi: Lsi.editablePanel
   },
@@ -61,8 +107,11 @@ export const EditationPanel = createReactClass({
   //@@viewOn:propTypes
   propTypes: {
     onEndEditation: PropTypes.func,
-    settingsContent: PropTypes.any,
-    settingsInModal: PropTypes.bool
+    settingsItems: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object, PropTypes.element])),
+    moreSettings: PropTypes.func,
+    onSettingsClick: PropTypes.func,
+    onMoreSettingsClick: PropTypes.func,
+    activeInput: PropTypes.object
   },
   //@@viewOff:propTypes
 
@@ -70,31 +119,53 @@ export const EditationPanel = createReactClass({
   getDefaultProps() {
     return {
       onEndEditation: null,
-      settingsContent: null,
-      settingsInModal: false
+      settingsItems: null,
+      moreSettings: null,
+      onSettingsClick: null,
+      onMoreSettingsClick: null,
+      activeInput: null
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
+  getInitialState() {
+    if (this.props.activeInput) {
+      this._hasListener = true;
+    } else {
+      this._hasListener = false;
+    }
+
+    return {
+      settingsOpen: false,
+      moreSettingsOpen: false
+    };
+  },
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.activeInput && !this._hasListener) {
+      this._addEvent();
+    } else if (!nextProps.activeInput && this._hasListener) {
+      this._removeEvent();
+    }
+  },
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
-  openSettings(...args) {
-    if (this.props.settingsInModal) {
-      this._modal.open(...args);
-    } else {
-      this._popover.open(...args);
-    }
-    this.setState({ openedSettings: true });
+  openSettings(setStateCallback) {
+    this._openSettings(this._button, setStateCallback);
   },
-  closeSettings(...args) {
-    if (this.props.settingsInModal) {
-      this._modal.close(...args);
-    } else {
-      this._popover.close(...args);
-    }
-    this.setState({ openedSettings: false });
+
+  closeSettings(setStateCallback) {
+    this._closeSettings(setStateCallback);
+  },
+
+  openMoreSettings(setStateCallback) {
+    this._openMoreSettings(setStateCallback);
+  },
+
+  closeMoreSettings(setStateCallback) {
+    this._closeMoreSettings(setStateCallback);
   },
   //@@viewOff:interface
 
@@ -102,81 +173,255 @@ export const EditationPanel = createReactClass({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _registerModal(modal) {
-    this._modal = modal;
+  _addEvent() {
+    this._hasListener = true;
+    window.addEventListener("mousedown", this._handleMouseDown, true);
+  },
+
+  _removeEvent() {
+    this._hasListener = false;
+    window.removeEventListener("mousedown", this._handleMouseDown, true);
+  },
+
+  _getEventPath(e) {
+    let path = [];
+    let node = e.target;
+    while (node != document.body && node != document.documentElement && node) {
+      path.push(node);
+      node = node.parentNode;
+    }
+    return path;
+  },
+
+  _isBlur(e) {
+    let result = true;
+    let eventPath = this._getEventPath(e);
+
+    eventPath.every(item => {
+      if (item.id === this.getId()) {
+        result = false;
+        return false;
+      }
+
+      return true;
+    });
+
+    return result;
+  },
+
+  _handleMouseDown(e) {
+    let isBlur = this._isBlur(e);
+
+    if (!isBlur) {
+      this._lockInput();
+    } else {
+      this._unlockInput();
+    }
+  },
+
+  _lockInput() {
+    if (this.props.activeInput) {
+      this.props.activeInput.setReadOnly(true);
+    }
+  },
+
+  _unlockInput() {
+    if (this.props.activeInput) {
+      this.props.activeInput.setReadOnly(false, this.props.activeInput.focus);
+    }
+  },
+
+  _registerButton(ref) {
+    this._button = ref;
   },
 
   _registerPopover(popover) {
     this._popover = popover;
   },
 
-  _openSettings(component) {
-    this.openSettings({
-      aroundElement: component.findDOMNode(),
-      position: "bottom-left",
-      onClose: this.props.settingsInModal ? undefined : this._onClose
-    });
+  _registerMoreSettingsModal(modal) {
+    this._moreSettingsModal = modal;
   },
 
-  _onClose(opt) {
-    if (this.props.settingsInModal) {
-      opt.component.close(false);
+  _onMoreSettingsModalClose(opt) {
+    this.setState({ moreSettingsOpen: false }, opt.component.onCloseDefault);
+  },
+
+  _openMoreSettings(setStateCallback) {
+    if (this._hasMoreSettings()) {
+      this.setState({ moreSettingsOpen: true }, () => {
+        if (this._moreSettingsModal) {
+          this._moreSettingsModal.open(null, setStateCallback);
+        } else if (typeof setStateCallback === "function") {
+          setStateCallback();
+        }
+      });
     }
-    this.setState({ openedSettings: false });
+  },
+
+  _closeMoreSettings(setStateCallback) {
+    if (this._hasMoreSettings()) {
+      if (this._moreSettingsModal) {
+        this._moreSettingsModal.close(null, this.setState({ moreSettingsOpen: false }, setStateCallback));
+      } else if (typeof setStateCallback === "function") {
+        this.setState({ moreSettingsOpen: false }, setStateCallback);
+      }
+    }
+  },
+
+  _openSettings(component, setStateCallback) {
+    if (this._hasSettings()) {
+      const opts = {
+        aroundElement: UU5.Common.DOM.findNode(component),
+        position: "bottom-right",
+        onClose: this._onClose
+      };
+
+      this.setState({ settingsOpen: true }, () => this._popover.open(opts, setStateCallback));
+    }
+  },
+
+  _closeSettings(setStateCallback) {
+    if (this._hasSettings()) {
+      this._popover.close(() => this.setState({ settingsOpen: false }, setStateCallback));
+    }
+  },
+
+  _hasMoreSettings() {
+    return this.props.moreSettings || typeof this.props.onMoreSettingsClick === "function";
+  },
+
+  _hasSettings() {
+    return this.props.settingsItems || typeof this.props.onSettingsClick === "function";
+  },
+
+  _onButtonClick(component) {
+    if (this._hasSettings()) {
+      this._toggleSettings(component, this.props.onSettingsClick);
+    } else if (this._hasMoreSettings()) {
+      this._toggleMoreSettings(this.props.onMoreSettingsClick);
+    }
+  },
+
+  _onMoreSettingsClick() {
+    if (this.state.moreSettingsOpen) {
+      this._closeMoreSettings(this.props.onMoreSettingsClick);
+    } else {
+      this._openMoreSettings(this.props.onMoreSettingsClick);
+    }
+
+    this._closeSettings();
+  },
+
+  _toggleSettings(component, setStateCallback) {
+    if (this.state.settingsOpen) {
+      this._closeSettings(setStateCallback);
+    } else {
+      this._openSettings(component, setStateCallback);
+    }
+  },
+
+  _toggleMoreSettings(setStateCallback) {
+    if (this.state.moreSettingsOpen) {
+      this._closeMoreSettings(setStateCallback);
+    } else {
+      this._openMoreSettings(setStateCallback);
+    }
+  },
+
+  _onClose() {
+    this._unlockInput();
+    this.setState({ settingsOpen: false });
+  },
+
+  _getSettingsComponents(items) {
+    let components = [];
+
+    if (Array.isArray(items)) {
+      components = items.map((itemProps, index) => {
+        let props = { ...DEFAULT_ITEM_PROPS, ...itemProps };
+
+        const key =
+          props.key ||
+          (this.props.activeInput ? this.props.activeInput.getId() + " " + index : UU5.Common.Tools.generateUUID());
+        const origOnApply = props.onApply;
+        props.onApply = (...args) => {
+          let result = origOnApply(...args);
+          Promise.resolve()
+            .then(() => result)
+            .then(() => {
+              this._closeSettings();
+              this._unlockInput();
+            });
+        };
+
+        return <SettingsCheckbox {...props} key={key} />;
+      });
+    }
+
+    if (this.props.moreSettings || typeof this.props.onMoreSettingsClick === "function") {
+      // TODO: Create a component Separator and SettingsButton
+      components.push(
+        <UU5.Bricks.Line key="separator" colorSchema="default" size={1} className={this.getClassName("separator")} />,
+        <UU5.Bricks.Button
+          key="moreSettings"
+          onClick={this._onMoreSettingsClick}
+          content={this.getLsiComponent("settingsButton")}
+          colorSchema="default"
+          className={this.getClassName("settingsButton")}
+        />
+      );
+    }
+
+    return components;
+  },
+
+  _getMainAttrs() {
+    let mainAttrs = this.getMainAttrs();
+
+    mainAttrs.id = this.getId();
+
+    return mainAttrs;
   },
   //@@viewOff:private
 
   //@@viewOn:render
   render() {
     return (
-      <div {...this.getMainAttrs()}>
-        <div>{this.props.children}</div>
-        <div className={this.getClassName("defaultToolbar")}>
-          {typeof this.props.onEndEditation === "function" && (
-            <UU5.Bricks.Button
-              onClick={this.props.onEndEditation}
-              bgStyle="transparent"
-              colorSchema="green"
-              borderRadius="12px"
-              size="s"
-            >
-              {this.getLsiValue("endEditation")}
-            </UU5.Bricks.Button>
-          )}
-          {this.props.settingsContent && [
+      <div {...this._getMainAttrs()}>
+        <div className={this.getClassName("leftToolbarSide")}>{this.props.children}</div>
+        <div className={this.getClassName("rightToolbarSide")}>
+          {typeof this.props.onEndEditation === "function" && <EndEditation onClick={this.props.onEndEditation} />}
+          {(this.props.settingsItems ||
+            this.props.moreSettings ||
+            typeof this.props.onMoreSettingsClick === "function") && [
             <UU5.Bricks.Button
               key="props-button"
               title={this.getLsiValue("propsButtonTitle")}
-              className={this.getClassName("leftButton")}
-              onClick={this._openSettings}
-              bgStyle="transparent"
-              size="s"
-              borderRadius="12px"
+              className={this.getClassName("cogwheelButton")}
+              onClick={this._onButtonClick}
               ref_={this._registerButton}
-              colorSchema="default"
-              pressed={this.state.openedSettings}
+              colorSchema="custom"
+              pressed={this.state.settingsOpen}
               tooltip={this.getLsiValue("moreSettingsTooltip")}
             >
               <UU5.Bricks.Icon icon="mdi-settings" />
             </UU5.Bricks.Button>,
-            this.props.settingsInModal && (
-              <UU5.Bricks.Modal
-                key="edit-modal"
-                ref_={this._registerModal}
-                forceRender
-                controlled={false}
-                size="m"
-                onClose={this._onCloseModal}
-              >
-                {this.props.settingsContent}
-              </UU5.Bricks.Modal>
-            ),
-            !this.props.settingsInModal && (
+            this.props.settingsItems && (
               <UU5.Bricks.Popover key="edit-popover" ref_={this._registerPopover} forceRender controlled={false}>
-                {this.props.settingsContent}
+                {this._getSettingsComponents(this.props.settingsItems)}
               </UU5.Bricks.Popover>
             )
           ]}
+          {this.props.moreSettings && (
+            <UU5.Bricks.Modal
+              controlled={false}
+              ref_={this._registerMoreSettingsModal}
+              className={this.getClassName("settingsModal")}
+              onClose={this._onMoreSettingsModalClose}
+              {...this.props.moreSettings(this._closeMoreSettings)}
+            />
+          )}
         </div>
       </div>
     );

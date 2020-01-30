@@ -109,19 +109,21 @@ export const Number = Context.withContext(
     //@@viewOn:reactLifeCycle
     componentWillMount() {
       this._isNaN = false;
-      let value;
-      if (isNaN(parseFloat(this.state.value))) {
-        value = this.state.value;
-      } else {
-        const multiplicator = Math.pow(10, this.props.decimals);
-        value =
-          this.props.rounded && this.props.decimals
-            ? Math.round(this.state.value * multiplicator) / multiplicator
-            : this.state.value;
+      let value = this.state.value;
+
+      if (typeof value === "number") {
+        // to string
+        value = value + "";
       }
 
+
+      const multiplicator = Math.pow(10, this.props.decimals);
+      value =
+        this.props.rounded && this.props.decimals
+          ? Math.round(value * multiplicator) / multiplicator
+          : value;
+
       let result = this._setNumberResult({ value });
-      value = result.value;
 
       if (this.props.onValidate && typeof this.props.onValidate === "function") {
         if (result) {
@@ -129,7 +131,7 @@ export const Number = Context.withContext(
             if (result.feedback) {
               this.setFeedback(result.feedback, result.message, result.value);
             } else {
-              this._validateOnChange({ value: value, event: null, component: this });
+              this._validateOnChange({ value, event: null, component: this });
             }
           }
         }
@@ -267,23 +269,27 @@ export const Number = Context.withContext(
     },
 
     _doGetCaretPosition() {
-      // Initialize
-      var iCaretPos = 0;
-      let inputNode = this._textInput.findDOMNode();
-      // IE Support
-      if (document.selection) {
-        // Set focus on the element
-        inputNode.focus();
-        // To get cursor position, get empty selection range
-        var oSel = document.selection.createRange();
-        // Move selection start to 0 position
-        oSel.moveStart("character", -inputNode.value.length);
-        // The caret position is selection length
-        iCaretPos = oSel.text.length;
+      let iCaretPos = 0;
+
+      if (this._textInput) {
+        // Initialize
+        let inputNode = this._textInput.findDOMNode();
+        // IE Support
+        if (document.selection) {
+          // Set focus on the element
+          inputNode.focus();
+          // To get cursor position, get empty selection range
+          let oSel = document.selection.createRange();
+          // Move selection start to 0 position
+          oSel.moveStart("character", -inputNode.value.length);
+          // The caret position is selection length
+          iCaretPos = oSel.text.length;
+        }
+        // Firefox support
+        else if (inputNode.selectionStart || inputNode.selectionStart == "0") iCaretPos = inputNode.selectionStart;
+        // Return results
       }
-      // Firefox support
-      else if (inputNode.selectionStart || inputNode.selectionStart == "0") iCaretPos = inputNode.selectionStart;
-      // Return results
+
       return iCaretPos;
     },
 
@@ -537,12 +543,12 @@ export const Number = Context.withContext(
 
         if ((this.props.min || this.props.min === 0) && number < this.props.min) {
           opt.feedback = "error";
-          opt.message = this.props.lowerMessage || this.getLsiValue("lowerMessage") + " " + this.props.min + ".";
+          opt.message = this.props.lowerMessage || this.getLsiValue("lowerMessage", undefined, this.props.min);
         }
 
         if ((this.props.max || this.props.max === 0) && number > this.props.max) {
           opt.feedback = "error";
-          opt.message = this.props.upperMessage || this.getLsiValue("upperMessage") + " " + this.props.max + ".";
+          opt.message = this.props.upperMessage || this.getLsiComponent("upperMessage", undefined, this.props.max);
         }
 
         isComma && (opt.value = opt.value.replace(".", ","));

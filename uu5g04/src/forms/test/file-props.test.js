@@ -19,7 +19,7 @@ import "uu5g04-bricks";
 import "uu5g04-forms";
 //@@viewOff:imports
 
-const { mount, shallow } = UU5.Test.Tools;
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 let origIsTrustedDomain;
 beforeEach(async () => {
@@ -129,7 +129,7 @@ describe(`UU5.Forms.File props`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it("authenticate", () => {
+  it("authenticate", async () => {
     let wrapper = shallow(
       <UU5.Forms.File
         id="uuID"
@@ -137,12 +137,15 @@ describe(`UU5.Forms.File props`, () => {
         value={{ name: "test.json", url: "http://localhost/getFile?code=test.json" }}
       />
     );
+    await wait();
     expect(wrapper).toMatchSnapshot();
 
     wrapper.setProps({ authenticate: false });
+    await wait();
     expect(wrapper).toMatchSnapshot();
 
     wrapper.setProps({ authenticate: null });
+    await wait();
     expect(wrapper).toMatchSnapshot();
   });
 });

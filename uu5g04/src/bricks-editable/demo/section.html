@@ -59,16 +59,17 @@
 
         getInitialState(){
           return {
-            header: "<uu5string />Section header",
+            header: "header",
             content: "<uu5string /><UU5.Bricks.Paragraph />",
-            footer: null
+            footer: "footer"
           };
         },
 
         /*@@viewOn:0*/
         _editSection(event) {
-          this._section.startEditation((section, newProps) => this._saveEditation(newProps));
+          this._section.startEditation((section, newProps) => this._saveEditation(newProps), (section, newProps) => this._saveEditationWithoutEnd(newProps));
         },
+
         _saveEditation(newProps){
           if (!newProps){
             this.setState({id: UU5.Common.Tools.generateUUID()});
@@ -77,6 +78,11 @@
           this.setState(newProps);
           this._modal.close();
         },
+
+        _saveEditationWithoutEnd(newProps){
+          this.setState(newProps);
+        },
+
         _getEditablePropValue(propName){
           return this.state[propName];
         },
@@ -85,6 +91,7 @@
         render(){
           return (
             <UU5.Bricks.Page>
+              <UU5.Bricks.LanguageSelector />
               {/*@@viewOn:0*/}
               <UU5.Bricks.Section ref_={(section) => this._section = section} {...this.state} getEditablePropValue={this._getEditablePropValue} />
               <UU5.Bricks.Button colorSchema='primary' onClick={this._editSection} content='Edit Section' />

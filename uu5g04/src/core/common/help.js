@@ -61,15 +61,14 @@ export const Help = createReactClass({
     };
   },
 
-  componentWillMount() {
-    let tagNameArr = this.props.tagName.split(".");
-    let libraryName = tagNameArr[0] + "." + tagNameArr[1];
-    let pageName = "/page?code=" + tagNameArr[0].toLowerCase() + tagNameArr[1] + tagNameArr[2];
-    Tools.loadLibrary(libraryName, (response, error) => {
-      if (!error && response && response.doc) {
-        this.setState({ responseLink: response.doc + pageName });
-      }
-    });
+  componentDidMount() {
+    this._loadLibrary();
+  },
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.tagName !== this.props.tagName) {
+      this._loadLibrary(nextProps);
+    }
   },
   //@@viewOff:reactLifeCycle
 
@@ -80,6 +79,17 @@ export const Help = createReactClass({
   //@@viewOff:overriding
 
   //@@viewOn:private
+  _loadLibrary(props = this.props) {
+    let tagNameArr = props.tagName.split(".");
+    let libraryName = tagNameArr[0] + "." + tagNameArr[1];
+    let pageName = "/page?code=" + tagNameArr[0].toLowerCase() + tagNameArr[1] + tagNameArr[2];
+    Tools.loadLibrary(libraryName, (response, error) => {
+      if (!error && response && response.doc) {
+        this.setState({ responseLink: response.doc + pageName });
+      }
+    });
+  },
+
   _getLink() {
     if (this.state.responseLink) {
       return Tools.findComponent(

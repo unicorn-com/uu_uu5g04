@@ -2100,7 +2100,7 @@ Tools.getTimeString = (dateTime, displaySeconds, timeFormat, includeTimeFormat, 
       let timeFull = dateTime.trim().split(/(\s+)(?!.*\s+)/)[2] || ""; // assume that date is always last after last space
 
       // check if its actually a valid time
-      if (!(/\d{1,2}:\d{1,2}(:\d{1,2})?/).test(timeFull)) {
+      if (!/\d{1,2}:\d{1,2}(:\d{1,2})?/.test(timeFull)) {
         timeFull = null;
       }
 
@@ -2959,6 +2959,22 @@ Tools.fillUnit = (value, defaultUnit = "px") => {
     value += "";
     return /\d$/.test(value) ? value + defaultUnit : value;
   }
+};
+
+Tools.getCallToken = async function (url, session) {
+  let token;
+  if (session) {
+    let a = document.createElement("a");
+    a.href = url || "";
+    let fullUrl = a.href.toString(); // browser-normalized URL (removed "../" sequences, ensured that protocol+domain is present, ...)
+    let scope =
+      typeof session.getCallTokenScope === "function"
+        ? await session.getCallTokenScope(fullUrl)
+        : fullUrl.replace(/[?#].*/, "");
+    let callToken = await session.getCallToken(scope, { excludeAuthenticationType: true }); // if using deprecated uu_oidcg01 the result will be an object (and "url" parameter got ignored), otherwise it's string
+    token = typeof callToken === "string" ? callToken : callToken ? callToken.token : undefined;
+  }
+  return token;
 };
 
 // userLanguage for IE

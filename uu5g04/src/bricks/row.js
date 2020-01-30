@@ -18,6 +18,14 @@ import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
+const EditableRow = UU5.Common.Component.lazy(async () => {
+  await SystemJS.import("uu5g04-forms");
+  await SystemJS.import("uu5g04-bricks-editable");
+  return import("./internal/row.js");
+});
+
+let editationLazyLoaded = false;
+
 import "./row.less";
 //@@viewOff:imports
 
@@ -28,7 +36,8 @@ export const Row = createReactClass({
     UU5.Common.PureRenderMixin,
     UU5.Common.ElementaryMixin,
     UU5.Common.NestingLevelMixin,
-    UU5.Common.SectionMixin
+    UU5.Common.SectionMixin,
+    UU5.Common.EditableMixin
   ],
   //@@viewOff:mixins
 
@@ -49,10 +58,17 @@ export const Row = createReactClass({
       spacing: ns.css("row-spacing"),
       noSpacing: ns.css("row-nospacing"),
       standard: ns.css("row-standard"),
-      flex: ns.css("row-flex")
+      flex: ns.css("row-flex"),
+      editation: ns.css("row-editation")
     },
     opt: {
       nestingLevelWrapper: true
+    },
+    editMode: {
+      name: { en: "Row", cs: "Řádek" },
+      backgroundColor: "rgba(209,196,233,.8)",
+      color: "#311B92",
+      highlightColor: "rgba(218,208,237,.45)"
     }
   },
   //@@viewOff:statics
@@ -74,12 +90,20 @@ export const Row = createReactClass({
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
+  getInitialState() {
+    return {
+      editationLazyLoaded: false
+    };
+  },
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
   //@@viewOn:overriding
+  onBeforeForceEndEditation_() {
+    return this._editableRow ? this._editableRow.getPropsToSave() : undefined;
+  },
   //@@viewOff:overriding
 
   //@@viewOn:private
@@ -87,7 +111,40 @@ export const Row = createReactClass({
     let mainAttrs = this.getMainAttrs();
     mainAttrs.className += " " + this.getClassName(this.props.display);
     mainAttrs.className += " " + this.getClassName(this.props.noSpacing ? "noSpacing" : "spacing");
+    if (this.state.editation) {
+      mainAttrs.className += ` ${this.getClassName("editation")}`;
+    }
     return mainAttrs;
+  },
+
+  _registerNull(inst) {
+    // unmount of component means that suspense is loaded and component should be rendered
+    if (!inst) {
+      this.setState(state => {
+        if (state.editationLazyLoaded) return;
+
+        // Edit component is loaded - need to set to static variable because other Edit component does not render fallback component
+        // editationLazyLoaded is stored in both state and static variable for cases such as when more edit modes are loaded at the same time
+        editationLazyLoaded = true;
+        return { editationLazyLoaded: true };
+      });
+    }
+  },
+
+  _isEditationLazyLoaded() {
+    return editationLazyLoaded;
+  },
+
+  _renderEditationMode() {
+    return (
+      <UU5.Common.Suspense fallback={<span ref={this._registerNull} />}>
+        <EditableRow component={this} ref_={this._registerEditableRow} />
+      </UU5.Common.Suspense>
+    );
+  },
+
+  _registerEditableRow(row) {
+    this._editableRow = row;
   },
   //@@viewOff:private
 
@@ -95,10 +152,10 @@ export const Row = createReactClass({
   render() {
     return this.getNestingLevel() ? (
       <div {...this._getMainAttrs()}>
-        {this.getHeaderChild()}
-        {this.getChildren()}
-        {this.getFooterChild()}
-        {this.getDisabledCover()}
+        {this.state.editation ? this._renderEditationMode() : null}
+        {!this.state.editation || !this._isEditationLazyLoaded()
+          ? [this.getHeaderChild(), this.getChildren(), this.getFooterChild(), this.getDisabledCover()]
+          : null}
       </div>
     ) : null;
   }

@@ -52,6 +52,14 @@ const CONFIG = {
     clickable: {
       values: [true, false]
     }
+    // // TODO Make SVG loading in UU5.Bricks.Icon mockable.
+    // authenticate: {
+    //   values: [true, false],
+    //   requiredProps: {
+    //     src:
+    //       "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/getBinaryData?code=testSvg" // to pass "trusted domain" check and therefore add access_token parameter based on the prop
+    //   }
+    // }
   },
   requiredProps: {},
   opt: {

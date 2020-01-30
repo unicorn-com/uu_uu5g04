@@ -18,86 +18,71 @@ import "uu5g04-bricks";
 const { mount, shallow, wait } = UU5.Test.Tools;
 
 describe("UU5.Bricks.Popover ifc testing", () => {
-  let container;
-  beforeEach(function() {
-    container = document.createElement("div");
-    document.body.appendChild(container);
-  });
-  afterEach(function() {
-    container.remove();
-  });
-
   // IFC methods require "mount" instead of "shallow" because they use document.getElementById...
   it("open()", () => {
+    let popover;
     const wrapper = mount(
-      <UU5.Bricks.Popover id={"uuID"} shown={false} header="Header" footer="Footer">
+      <UU5.Bricks.Popover id={"uuID"} shown={false} header="Header" footer="Footer" ref_={ref => (popover = ref)}>
         <UU5.Bricks.Div id={"uuID2"} style={{ textAlign: "center", width: "100%" }}>
           <UU5.Bricks.Button id={"uuID3"} bgStyle="transparent" content="OK" />
           <br />
           <UU5.Bricks.Button id={"uuID4"} bgStyle="transparent" content="Storno" />
         </UU5.Bricks.Div>
-      </UU5.Bricks.Popover>,
-      { attachTo: container }
+      </UU5.Bricks.Popover>
     );
-    const mockFunc = jest.fn();
-    expect(wrapper.instance().isOpen()).toBeFalsy();
-    expect(wrapper.instance().state.hidden).toBeTruthy();
-    const returnValue = wrapper.instance().open();
+    expect(popover.isOpen()).toBeFalsy();
+    const returnValue = popover.open();
     wrapper.update();
-    expect(wrapper.instance().isOpen()).toBeTruthy();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(popover.isOpen()).toBeTruthy();
+    expect(returnValue).toBe(popover);
   });
 
   it("close()", () => {
+    let popover;
     const wrapper = mount(
-      <UU5.Bricks.Popover id={"uuID"} shown header="Header" footer="Footer">
+      <UU5.Bricks.Popover id={"uuID"} shown header="Header" footer="Footer" ref_={ref => (popover = ref)}>
         <UU5.Bricks.Div id={"uuID2"} style={{ textAlign: "center", width: "100%" }}>
           <UU5.Bricks.Button id={"uuID3"} bgStyle="transparent" content="OK" />
           <br />
           <UU5.Bricks.Button id={"uuID4"} bgStyle="transparent" content="Storno" />
         </UU5.Bricks.Div>
-      </UU5.Bricks.Popover>,
-      { attachTo: container }
+      </UU5.Bricks.Popover>
     );
     const mockFunc = jest.fn();
-    expect(wrapper.instance().state.hidden).toBeFalsy();
-    expect(wrapper.instance().isOpen()).toBeTruthy();
-    const returnValue = wrapper.instance().close(mockFunc);
+    expect(popover.isOpen()).toBeTruthy();
+    const returnValue = popover.close(mockFunc);
     wrapper.update();
-    expect(wrapper.instance().state.hidden).toBeTruthy();
-    expect(wrapper.instance().isOpen()).toBeFalsy();
+    expect(popover.isOpen()).toBeFalsy();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue).toBe(popover);
   });
 
   it("isOpen() should return true", () => {
-    const wrapper = mount(
-      <UU5.Bricks.Popover id={"uuID"} shown header="Header" footer="Footer">
+    let popover;
+    mount(
+      <UU5.Bricks.Popover id={"uuID"} shown header="Header" footer="Footer" ref_={ref => (popover = ref)}>
         <UU5.Bricks.Div id={"uuID2"} style={{ textAlign: "center", width: "100%" }}>
           <UU5.Bricks.Button id={"uuID3"} bgStyle="transparent" content="OK" />
           <br />
           <UU5.Bricks.Button id={"uuID4"} bgStyle="transparent" content="Storno" />
         </UU5.Bricks.Div>
-      </UU5.Bricks.Popover>,
-      { attachTo: container }
+      </UU5.Bricks.Popover>
     );
-    expect(wrapper.instance().state.hidden).toBeFalsy();
-    expect(wrapper.instance().isOpen()).toBeTruthy();
+    expect(popover.isOpen()).toBeTruthy();
   });
 
   it("isOpen() should return false", () => {
-    const wrapper = mount(
-      <UU5.Bricks.Popover id={"uuID"} shown={false} header="Header" footer="Footer">
+    let popover;
+    mount(
+      <UU5.Bricks.Popover id={"uuID"} shown={false} header="Header" footer="Footer" ref_={ref => (popover = ref)}>
         <UU5.Bricks.Div id={"uuID2"} style={{ textAlign: "center", width: "100%" }}>
           <UU5.Bricks.Button id={"uuID3"} bgStyle="transparent" content="OK" />
           <br />
           <UU5.Bricks.Button id={"uuID4"} bgStyle="transparent" content="Storno" />
         </UU5.Bricks.Div>
-      </UU5.Bricks.Popover>,
-      { attachTo: container }
+      </UU5.Bricks.Popover>
     );
-    expect(wrapper.instance().state.hidden).toBeTruthy();
-    expect(wrapper.instance().isOpen()).toBeFalsy();
+    expect(popover.isOpen()).toBeFalsy();
   });
 });

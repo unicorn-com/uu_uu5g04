@@ -323,20 +323,12 @@ export const Panel = createReactClass({
     return result[0] || null;
   },
 
-  _onClickToggle(e) {
-    var panel = this;
+  _onClickToggle() {
     this.toggle(() => {
-      var onClick;
-
       if (typeof this.props.onClick === "function") {
-        onClick = () => panel.props.onClick(this);
-      }
-
-      if (onClick) {
-        onClick(this);
+        this.props.onClick(this);
       }
     });
-    return this;
   },
 
   _getBodyId() {

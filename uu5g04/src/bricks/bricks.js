@@ -132,6 +132,7 @@ export * from "./code-preview.js";
 export * from "./authenticated.js";
 
 export * from "./virtual-list.js";
+export * from "./scroll-area.js";
 
 export * from "./stepper.js";
 export * from "./floating-box.js";
@@ -141,6 +142,7 @@ export * from "./q-r-code.js";
 
 export * from "./portal-modal.js";
 export * from "./rich-link.js";
+export * from "./portal-popover.js";
 
 // Aliases
 import * as UU5 from "uu5g04";

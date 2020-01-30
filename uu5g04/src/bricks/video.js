@@ -74,7 +74,8 @@ export const Video = createReactClass({
   //@@viewOn:reactLifeCycle
   getInitialState: function() {
     return {
-      muted: this.props.muted
+      muted: this.props.muted,
+      authenticatedUrl: undefined
     };
   },
 
@@ -119,6 +120,32 @@ export const Video = createReactClass({
     }
     return result;
   },
+
+  _getAuthenticatedUrl(url, session) {
+    let result = "";
+    if (this._authenticatedUrl === url) result = this.state.authenticatedUrl;
+    else if (this._authenticatingUrl !== url) {
+      this._authenticatingUrl = url;
+      let promise = (this._urlPromise = this._computeAuthenticatedUrl(url, session).then(
+        authenticatedUrl => {
+          delete this._authenticatingUrl;
+          this._authenticatedUrl = url;
+          if (this.isRendered() && promise === this._urlPromise) this.setState({ authenticatedUrl });
+        },
+        () => {
+          delete this._authenticatingUrl;
+        }
+      ));
+    }
+    return result;
+  },
+
+  async _computeAuthenticatedUrl(url, session) {
+    let token = await UU5.Common.Tools.getCallToken(url, session);
+    let parsedUrl = UU5.Common.Url.parse(url);
+    let result = parsedUrl.set({ parameters: { ...parsedUrl.parameters, access_token: token } }).toString();
+    return result;
+  },
   //@@viewOff:private
 
   // Render
@@ -146,23 +173,23 @@ export const Video = createReactClass({
     if (authenticate && !useHlsComponent) {
       let session = UU5.Environment.getSession();
       if (session && session.isAuthenticated() && UU5.Environment.isTrustedDomain(url)) {
-        let token = session.getCallToken().token;
-        let parsedUrl = UU5.Common.Url.parse(url);
-        url = parsedUrl.set({ parameters: { ...parsedUrl.parameters, access_token: token } }).toString();
+        url = this._getAuthenticatedUrl(url, session);
       }
     }
 
     return this.getNestingLevel() ? (
       <UU5.Bricks.Span {...this.getMainPropsToPass()}>
-        {useHlsComponent ? (
-          <React.Suspense fallback="">
-            <VideoHls mainAttrs={{ ...this._buildMainAttrs(), src: url }} authenticate={this.props.authenticate} />
-          </React.Suspense>
-        ) : (
-          <video {...this._buildMainAttrs()}>
-            <source src={url} />
-          </video>
-        )}
+        {url ? (
+          useHlsComponent ? (
+            <React.Suspense fallback="">
+              <VideoHls mainAttrs={{ ...this._buildMainAttrs(), src: url }} authenticate={this.props.authenticate} />
+            </React.Suspense>
+          ) : (
+            <video {...this._buildMainAttrs()}>
+              <source src={url} />
+            </video>
+          )
+        ) : null}
       </UU5.Bricks.Span>
     ) : null;
   }

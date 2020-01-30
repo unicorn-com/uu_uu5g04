@@ -88,7 +88,16 @@ export const SwitchSelector = Context.withContext(
 
     componentWillReceiveProps(nextProps) {
       if (nextProps.controlled) {
-        let value = nextProps.value || this.state.value || nextProps.items[0].value;
+        let value = nextProps.value;
+
+        if (!value && typeof value !== "boolean") {
+          value = this.state.value;
+
+          if (!value && typeof value !== "boolean") {
+            value = nextProps.items[0].value;
+          }
+        }
+
         if (typeof this.props.onValidate === "function") {
           this._validateOnChange({ value, component: this }, true);
         } else {
@@ -164,7 +173,7 @@ export const SwitchSelector = Context.withContext(
     },
 
     _getInitialValue: function(props = this.props) {
-      return props.value || props.items[0].value;
+      return props.value || typeof props.value === "boolean" ? props.value : props.items[0].value;
     },
 
     _onChange(opt) {

@@ -68,7 +68,8 @@ export const Audio = createReactClass({
   getInitialState() {
     return {
       muted: this.props.muted,
-      playbackRate: this.props.playbackRate
+      playbackRate: this.props.playbackRate,
+      authenticatedUrl: undefined
     };
   },
 
@@ -125,6 +126,32 @@ export const Audio = createReactClass({
     this._audio.load();
   },
 
+  _getAuthenticatedUrl(url, session) {
+    let result = "";
+    if (this._authenticatedUrl === url) result = this.state.authenticatedUrl;
+    else if (this._authenticatingUrl !== url) {
+      this._authenticatingUrl = url;
+      let promise = (this._urlPromise = this._computeAuthenticatedUrl(url, session).then(
+        authenticatedUrl => {
+          delete this._authenticatingUrl;
+          this._authenticatedUrl = url;
+          if (this.isRendered() && promise === this._urlPromise) this.setState({ authenticatedUrl });
+        },
+        () => {
+          delete this._authenticatingUrl;
+        }
+      ));
+    }
+    return result;
+  },
+
+  async _computeAuthenticatedUrl(url, session) {
+    let token = await UU5.Common.Tools.getCallToken(url, session);
+    let parsedUrl = UU5.Common.Url.parse(url);
+    let result = parsedUrl.set({ parameters: { ...parsedUrl.parameters, access_token: token } }).toString();
+    return result;
+  },
+
   _getMainAttrs(removeMainClass) {
     let attrs = this.getMainAttrs();
     attrs.className += " " + this.getClassName("player");
@@ -153,13 +180,10 @@ export const Audio = createReactClass({
   render() {
     let result = null;
     let url = this.props.src;
-
     if (this.props.authenticate) {
       let session = UU5.Environment.getSession();
       if (session && session.isAuthenticated() && UU5.Environment.isTrustedDomain(url)) {
-        let token = session.getCallToken().token;
-        let parsedUrl = UU5.Common.Url.parse(url);
-        url = parsedUrl.set({ parameters: { ...parsedUrl.parameters, access_token: token } }).toString();
+        url = this._getAuthenticatedUrl(url, session);
       }
     }
 

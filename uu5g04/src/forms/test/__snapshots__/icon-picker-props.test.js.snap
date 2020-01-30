@@ -29,7 +29,7 @@ exports[`UU5.Forms.IconPicker default props UU5.Forms.IconPicker check default p
         />
       </Button>
     </Div>
-    <Popover
+    <forwardRef(Popover)
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}

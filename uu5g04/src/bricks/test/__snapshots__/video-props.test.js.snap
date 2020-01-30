@@ -16,7 +16,7 @@ exports[`UU5.Bricks.Video authenticate=false 1`] = `
     type="mp4"
   >
     <source
-      src="http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4"
+      src="https://plus4u.net/path/trusted.mp4"
     />
   </video>
 </Span>
@@ -38,7 +38,7 @@ exports[`UU5.Bricks.Video authenticate=null 1`] = `
     type="mp4"
   >
     <source
-      src="http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4"
+      src="https://plus4u.net/path/trusted.mp4"
     />
   </video>
 </Span>
@@ -60,7 +60,7 @@ exports[`UU5.Bricks.Video authenticate=true 1`] = `
     type="mp4"
   >
     <source
-      src="http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4"
+      src="https://plus4u.net/path/trusted.mp4?access_token=token-for-tests"
     />
   </video>
 </Span>

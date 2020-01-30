@@ -136,6 +136,9 @@ export const UU5StringProps = class UU5StringProps {
       result = "<uu5data/>" + item.uu5DataKey;
     } else if (typeof item.value === "string") {
       result = UU5StringTools.printTemplateToString(item.value, data);
+    } else if (item.value && typeof item.value === "object") {
+      // same as uu5json
+      result = "<uu5json/>" + UU5StringTools.printTemplateToString(JSON.stringify(item.value, undefined, 2), data);
     } else {
       result = item.value;
     }

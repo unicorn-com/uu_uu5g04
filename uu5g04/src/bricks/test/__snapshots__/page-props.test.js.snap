@@ -31,7 +31,7 @@ exports[`UU5.Bricks.Page alertBus={"key":"0","ref":null,"props":{"id":"uuBUS","c
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -65,7 +65,15 @@ exports[`UU5.Bricks.Page alertBus={"key":"0","ref":null,"props":{"id":"uuBUS","c
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -113,7 +121,7 @@ exports[`UU5.Bricks.Page appLayerContent={"key":"0","ref":null,"props":{"id":"uu
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -147,7 +155,15 @@ exports[`UU5.Bricks.Page appLayerContent={"key":"0","ref":null,"props":{"id":"uu
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -200,7 +216,7 @@ exports[`UU5.Bricks.Page appLayerWrapperProps={"style":{"backgroundColor":"#2111
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -234,7 +250,15 @@ exports[`UU5.Bricks.Page appLayerWrapperProps={"style":{"backgroundColor":"#2111
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -282,7 +306,7 @@ exports[`UU5.Bricks.Page bottom={"key":"0","ref":null,"props":{"id":"uuIDBOX2","
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -316,7 +340,15 @@ exports[`UU5.Bricks.Page bottom={"key":"0","ref":null,"props":{"id":"uuIDBOX2","
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -409,7 +441,7 @@ exports[`UU5.Bricks.Page bottomFixed="always" 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -444,7 +476,15 @@ exports[`UU5.Bricks.Page bottomFixed="always" 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -493,7 +533,7 @@ exports[`UU5.Bricks.Page bottomFixed="smart" 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -528,7 +568,15 @@ exports[`UU5.Bricks.Page bottomFixed="smart" 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -577,7 +625,7 @@ exports[`UU5.Bricks.Page bottomFixed=false 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -611,7 +659,15 @@ exports[`UU5.Bricks.Page bottomFixed=false 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -659,7 +715,7 @@ exports[`UU5.Bricks.Page bottomFixed=true 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -694,7 +750,15 @@ exports[`UU5.Bricks.Page bottomFixed=true 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -743,7 +807,7 @@ exports[`UU5.Bricks.Page bottomWrapperProps={"style":{"backgroundColor":"#2196F3
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -777,7 +841,15 @@ exports[`UU5.Bricks.Page bottomWrapperProps={"style":{"backgroundColor":"#2196F3
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -825,7 +897,7 @@ exports[`UU5.Bricks.Page ccrKey="<UU5.Parrot.Page ccrKey='UU5.Parrot.Page' />" 1
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -859,7 +931,15 @@ exports[`UU5.Bricks.Page ccrKey="<UU5.Parrot.Page ccrKey='UU5.Parrot.Page' />" 1
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -908,7 +988,7 @@ exports[`UU5.Bricks.Page checkGrammar=false 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -942,7 +1022,15 @@ exports[`UU5.Bricks.Page checkGrammar=false 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -991,7 +1079,7 @@ exports[`UU5.Bricks.Page checkGrammar=true 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -1025,7 +1113,15 @@ exports[`UU5.Bricks.Page checkGrammar=true 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -1074,7 +1170,7 @@ exports[`UU5.Bricks.Page checkHighlight=false 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -1108,7 +1204,15 @@ exports[`UU5.Bricks.Page checkHighlight=false 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -1157,7 +1261,7 @@ exports[`UU5.Bricks.Page checkHighlight=true 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -1191,7 +1295,15 @@ exports[`UU5.Bricks.Page checkHighlight=true 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -1240,7 +1352,7 @@ exports[`UU5.Bricks.Page checkSpaces=false 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -1274,7 +1386,15 @@ exports[`UU5.Bricks.Page checkSpaces=false 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -1323,7 +1443,7 @@ exports[`UU5.Bricks.Page checkSpaces=true 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -1357,7 +1477,15 @@ exports[`UU5.Bricks.Page checkSpaces=true 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -1405,7 +1533,7 @@ exports[`UU5.Bricks.Page className="my-classname" 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -1439,7 +1567,15 @@ exports[`UU5.Bricks.Page className="my-classname" 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -1487,7 +1623,7 @@ exports[`UU5.Bricks.Page content="This is Content from ContentMixin" 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -1521,9 +1657,17 @@ exports[`UU5.Bricks.Page content="This is Content from ContentMixin" 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper
-          content="This is Content from ContentMixin"
-        />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper
+            content="This is Content from ContentMixin"
+          />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -1571,7 +1715,7 @@ exports[`UU5.Bricks.Page content=12345 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -1605,9 +1749,17 @@ exports[`UU5.Bricks.Page content=12345 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper
-          content={12345}
-        />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper
+            content={12345}
+          />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -1655,7 +1807,7 @@ exports[`UU5.Bricks.Page contentWrapperProps={"style":{"backgroundColor":"#2111E
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -1694,7 +1846,15 @@ exports[`UU5.Bricks.Page contentWrapperProps={"style":{"backgroundColor":"#2111E
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -1742,7 +1902,7 @@ exports[`UU5.Bricks.Page controlled=false 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -1776,7 +1936,15 @@ exports[`UU5.Bricks.Page controlled=false 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -1824,7 +1992,7 @@ exports[`UU5.Bricks.Page controlled=true 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -1858,7 +2026,15 @@ exports[`UU5.Bricks.Page controlled=true 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -1906,7 +2082,7 @@ exports[`UU5.Bricks.Page default props 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -1940,7 +2116,15 @@ exports[`UU5.Bricks.Page default props 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -1988,7 +2172,7 @@ exports[`UU5.Bricks.Page disabled=false 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -2022,7 +2206,15 @@ exports[`UU5.Bricks.Page disabled=false 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -2071,7 +2263,7 @@ exports[`UU5.Bricks.Page disabled=true 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -2105,7 +2297,15 @@ exports[`UU5.Bricks.Page disabled=true 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -2153,7 +2353,7 @@ exports[`UU5.Bricks.Page dynamic=false 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -2187,7 +2387,15 @@ exports[`UU5.Bricks.Page dynamic=false 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -2236,7 +2444,7 @@ exports[`UU5.Bricks.Page dynamic=true 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -2270,7 +2478,15 @@ exports[`UU5.Bricks.Page dynamic=true 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -2318,7 +2534,7 @@ exports[`UU5.Bricks.Page fullPage=false 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -2352,7 +2568,15 @@ exports[`UU5.Bricks.Page fullPage=false 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -2400,7 +2624,7 @@ exports[`UU5.Bricks.Page fullPage=true 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -2434,7 +2658,15 @@ exports[`UU5.Bricks.Page fullPage=true 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -2482,7 +2714,7 @@ exports[`UU5.Bricks.Page hidden=false 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -2516,7 +2748,15 @@ exports[`UU5.Bricks.Page hidden=false 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -2565,7 +2805,7 @@ exports[`UU5.Bricks.Page hidden=true 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -2599,7 +2839,15 @@ exports[`UU5.Bricks.Page hidden=true 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -2647,7 +2895,7 @@ exports[`UU5.Bricks.Page id="myId" 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="myId_popover"
     pureRender={true}
@@ -2681,7 +2929,15 @@ exports[`UU5.Bricks.Page id="myId" 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -2729,7 +2985,7 @@ exports[`UU5.Bricks.Page ignoreHTML=false 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -2763,7 +3019,15 @@ exports[`UU5.Bricks.Page ignoreHTML=false 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -2811,7 +3075,7 @@ exports[`UU5.Bricks.Page ignoreHTML=true 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -2845,7 +3109,15 @@ exports[`UU5.Bricks.Page ignoreHTML=true 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -2893,7 +3165,7 @@ exports[`UU5.Bricks.Page isLeftOpen=false 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -2927,7 +3199,15 @@ exports[`UU5.Bricks.Page isLeftOpen=false 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -2975,7 +3255,7 @@ exports[`UU5.Bricks.Page isLeftOpen=true 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -3010,7 +3290,15 @@ exports[`UU5.Bricks.Page isLeftOpen=true 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -3058,7 +3346,7 @@ exports[`UU5.Bricks.Page isRightOpen=false 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -3092,7 +3380,15 @@ exports[`UU5.Bricks.Page isRightOpen=false 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -3140,7 +3436,7 @@ exports[`UU5.Bricks.Page isRightOpen=true 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -3174,7 +3470,15 @@ exports[`UU5.Bricks.Page isRightOpen=true 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -3223,7 +3527,7 @@ exports[`UU5.Bricks.Page left={"key":"0","ref":null,"props":{"id":"uuIDdiv","chi
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -3569,7 +3873,15 @@ exports[`UU5.Bricks.Page left={"key":"0","ref":null,"props":{"id":"uuIDdiv","chi
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -3617,7 +3929,7 @@ exports[`UU5.Bricks.Page leftClosed={"key":"0","ref":null,"props":{"id":"S01","c
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -3796,7 +4108,15 @@ exports[`UU5.Bricks.Page leftClosed={"key":"0","ref":null,"props":{"id":"S01","c
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -3844,7 +4164,7 @@ exports[`UU5.Bricks.Page leftFixed=false 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -3878,7 +4198,15 @@ exports[`UU5.Bricks.Page leftFixed=false 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -3926,7 +4254,7 @@ exports[`UU5.Bricks.Page leftFixed=true 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -3961,7 +4289,15 @@ exports[`UU5.Bricks.Page leftFixed=true 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -4009,7 +4345,7 @@ exports[`UU5.Bricks.Page leftOpen={"key":"0","ref":null,"props":{"id":"idSection
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -4168,7 +4504,15 @@ exports[`UU5.Bricks.Page leftOpen={"key":"0","ref":null,"props":{"id":"idSection
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -4216,7 +4560,7 @@ exports[`UU5.Bricks.Page leftRelative="xs s m l xl" 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -4251,7 +4595,15 @@ exports[`UU5.Bricks.Page leftRelative="xs s m l xl" 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -4299,7 +4651,7 @@ exports[`UU5.Bricks.Page leftRelative="xs s m l" 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -4334,7 +4686,15 @@ exports[`UU5.Bricks.Page leftRelative="xs s m l" 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -4382,7 +4742,7 @@ exports[`UU5.Bricks.Page leftRelative="xs s m" 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -4416,7 +4776,15 @@ exports[`UU5.Bricks.Page leftRelative="xs s m" 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -4464,7 +4832,7 @@ exports[`UU5.Bricks.Page leftRelative="xs s" 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -4498,7 +4866,15 @@ exports[`UU5.Bricks.Page leftRelative="xs s" 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -4546,7 +4922,7 @@ exports[`UU5.Bricks.Page leftRelative="xs" 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -4580,7 +4956,15 @@ exports[`UU5.Bricks.Page leftRelative="xs" 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -4628,7 +5012,7 @@ exports[`UU5.Bricks.Page leftRelative=null 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -4662,7 +5046,15 @@ exports[`UU5.Bricks.Page leftRelative=null 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -4710,7 +5102,7 @@ exports[`UU5.Bricks.Page leftResizable=false 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -4744,7 +5136,15 @@ exports[`UU5.Bricks.Page leftResizable=false 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -4792,7 +5192,7 @@ exports[`UU5.Bricks.Page leftResizable=true 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -4827,7 +5227,15 @@ exports[`UU5.Bricks.Page leftResizable=true 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -4875,7 +5283,7 @@ exports[`UU5.Bricks.Page leftSwipe=false 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -4909,7 +5317,15 @@ exports[`UU5.Bricks.Page leftSwipe=false 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -4956,7 +5372,7 @@ exports[`UU5.Bricks.Page leftSwipe=true 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -4990,7 +5406,15 @@ exports[`UU5.Bricks.Page leftSwipe=true 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -5038,7 +5462,7 @@ exports[`UU5.Bricks.Page leftWidth="!xs-10-30 s-10em !m-10-20 l-15 xl-15" 1`] = 
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -5072,7 +5496,15 @@ exports[`UU5.Bricks.Page leftWidth="!xs-10-30 s-10em !m-10-20 l-15 xl-15" 1`] = 
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -5120,7 +5552,7 @@ exports[`UU5.Bricks.Page leftWidth="xs-10em-50px s-20 m-15px-60 l-15-60rem xl-15
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -5154,7 +5586,15 @@ exports[`UU5.Bricks.Page leftWidth="xs-10em-50px s-20 m-15px-60 l-15-60rem xl-15
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -5202,7 +5642,7 @@ exports[`UU5.Bricks.Page leftWrapperProps={"style":{"backgroundColor":"#2196F3"}
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -5241,7 +5681,15 @@ exports[`UU5.Bricks.Page leftWrapperProps={"style":{"backgroundColor":"#2196F3"}
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -5289,7 +5737,7 @@ exports[`UU5.Bricks.Page mainAttrs=undefined 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -5323,7 +5771,15 @@ exports[`UU5.Bricks.Page mainAttrs=undefined 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -5380,7 +5836,7 @@ exports[`UU5.Bricks.Page modal={"key":"0","ref":null,"props":{"id":"uuMODAL","co
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -5414,7 +5870,15 @@ exports[`UU5.Bricks.Page modal={"key":"0","ref":null,"props":{"id":"uuMODAL","co
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -5463,7 +5927,7 @@ exports[`UU5.Bricks.Page name="myName" 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -5497,7 +5961,15 @@ exports[`UU5.Bricks.Page name="myName" 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -5558,7 +6030,7 @@ exports[`UU5.Bricks.Page nestingLevel="page" 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -5592,7 +6064,15 @@ exports[`UU5.Bricks.Page nestingLevel="page" 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -5645,7 +6125,7 @@ exports[`UU5.Bricks.Page nestingLevel="spa" 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -5679,7 +6159,15 @@ exports[`UU5.Bricks.Page nestingLevel="spa" 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -5727,7 +6215,7 @@ exports[`UU5.Bricks.Page noIndex=false 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -5761,7 +6249,15 @@ exports[`UU5.Bricks.Page noIndex=false 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -5809,7 +6305,7 @@ exports[`UU5.Bricks.Page noIndex=true 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -5843,7 +6339,15 @@ exports[`UU5.Bricks.Page noIndex=true 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -5891,7 +6395,7 @@ exports[`UU5.Bricks.Page prop overlayTop 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="pageId_popover"
     pureRender={true}
@@ -6283,30 +6787,38 @@ exports[`UU5.Bricks.Page prop overlayTop 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper
-          content={
-            <Paragraph
-              className={null}
-              content={null}
-              controlled={true}
-              disabled={false}
-              dynamic={false}
-              hidden={false}
-              id={null}
-              ignoreInnerHTML={false}
-              mainAttrs={null}
-              name={null}
-              nestingLevel={null}
-              noIndex={false}
-              parent={null}
-              pureRender={false}
-              ref_={null}
-              selected={false}
-              style={null}
-              tooltip={null}
-            />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
           }
-        />
+        >
+          <UpdateWrapper
+            content={
+              <Paragraph
+                className={null}
+                content={null}
+                controlled={true}
+                disabled={false}
+                dynamic={false}
+                hidden={false}
+                id={null}
+                ignoreInnerHTML={false}
+                mainAttrs={null}
+                name={null}
+                nestingLevel={null}
+                noIndex={false}
+                parent={null}
+                pureRender={false}
+                ref_={null}
+                selected={false}
+                style={null}
+                tooltip={null}
+              />
+            }
+          />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -6667,7 +7179,7 @@ exports[`UU5.Bricks.Page pureRender=false 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -6701,7 +7213,15 @@ exports[`UU5.Bricks.Page pureRender=false 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -6750,7 +7270,7 @@ exports[`UU5.Bricks.Page pureRender=true 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -6784,7 +7304,15 @@ exports[`UU5.Bricks.Page pureRender=true 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -6832,7 +7360,7 @@ exports[`UU5.Bricks.Page right={"key":"0","ref":null,"props":{"id":"uuIDdiv_R_R_
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -6866,7 +7394,15 @@ exports[`UU5.Bricks.Page right={"key":"0","ref":null,"props":{"id":"uuIDdiv_R_R_
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -7226,7 +7762,7 @@ exports[`UU5.Bricks.Page rightClosed={"key":"0","ref":null,"props":{"id":"S01_R"
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -7260,7 +7796,15 @@ exports[`UU5.Bricks.Page rightClosed={"key":"0","ref":null,"props":{"id":"S01_R"
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -7453,7 +7997,7 @@ exports[`UU5.Bricks.Page rightFixed=false 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -7487,7 +8031,15 @@ exports[`UU5.Bricks.Page rightFixed=false 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -7535,7 +8087,7 @@ exports[`UU5.Bricks.Page rightFixed=true 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -7569,7 +8121,15 @@ exports[`UU5.Bricks.Page rightFixed=true 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -7618,7 +8178,7 @@ exports[`UU5.Bricks.Page rightOpen={"key":"0","ref":null,"props":{"id":"idSectio
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -7652,7 +8212,15 @@ exports[`UU5.Bricks.Page rightOpen={"key":"0","ref":null,"props":{"id":"idSectio
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -7825,7 +8393,7 @@ exports[`UU5.Bricks.Page rightRelative="xs s m l xl" 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -7859,7 +8427,15 @@ exports[`UU5.Bricks.Page rightRelative="xs s m l xl" 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -7908,7 +8484,7 @@ exports[`UU5.Bricks.Page rightRelative="xs s m l" 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -7942,7 +8518,15 @@ exports[`UU5.Bricks.Page rightRelative="xs s m l" 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -7991,7 +8575,7 @@ exports[`UU5.Bricks.Page rightRelative="xs s m" 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -8025,7 +8609,15 @@ exports[`UU5.Bricks.Page rightRelative="xs s m" 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -8073,7 +8665,7 @@ exports[`UU5.Bricks.Page rightRelative="xs s" 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -8107,7 +8699,15 @@ exports[`UU5.Bricks.Page rightRelative="xs s" 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -8155,7 +8755,7 @@ exports[`UU5.Bricks.Page rightRelative="xs" 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -8189,7 +8789,15 @@ exports[`UU5.Bricks.Page rightRelative="xs" 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -8237,7 +8845,7 @@ exports[`UU5.Bricks.Page rightRelative=null 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -8271,7 +8879,15 @@ exports[`UU5.Bricks.Page rightRelative=null 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -8319,7 +8935,7 @@ exports[`UU5.Bricks.Page rightResizable=false 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -8353,7 +8969,15 @@ exports[`UU5.Bricks.Page rightResizable=false 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -8401,7 +9025,7 @@ exports[`UU5.Bricks.Page rightResizable=true 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -8435,7 +9059,15 @@ exports[`UU5.Bricks.Page rightResizable=true 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -8484,7 +9116,7 @@ exports[`UU5.Bricks.Page rightSwipe=false 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -8518,7 +9150,15 @@ exports[`UU5.Bricks.Page rightSwipe=false 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -8565,7 +9205,7 @@ exports[`UU5.Bricks.Page rightSwipe=true 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -8599,7 +9239,15 @@ exports[`UU5.Bricks.Page rightSwipe=true 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -8647,7 +9295,7 @@ exports[`UU5.Bricks.Page rightWidth="!xs-10-30 s-10em !m-10-20 l-15 xl-15" 1`] =
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -8681,7 +9329,15 @@ exports[`UU5.Bricks.Page rightWidth="!xs-10-30 s-10em !m-10-20 l-15 xl-15" 1`] =
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -8729,7 +9385,7 @@ exports[`UU5.Bricks.Page rightWidth="!xs-10-30 s-10em !m-10-20 l-15 xl-15" 2`] =
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -8763,7 +9419,15 @@ exports[`UU5.Bricks.Page rightWidth="!xs-10-30 s-10em !m-10-20 l-15 xl-15" 2`] =
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -8811,7 +9475,7 @@ exports[`UU5.Bricks.Page rightWrapperProps={"style":{"backgroundColor":"#2111EE"
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -8845,7 +9509,15 @@ exports[`UU5.Bricks.Page rightWrapperProps={"style":{"backgroundColor":"#2111EE"
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -8898,7 +9570,7 @@ exports[`UU5.Bricks.Page selected=false 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -8932,7 +9604,15 @@ exports[`UU5.Bricks.Page selected=false 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -8981,7 +9661,7 @@ exports[`UU5.Bricks.Page selected=true 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -9015,7 +9695,15 @@ exports[`UU5.Bricks.Page selected=true 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -9069,7 +9757,7 @@ exports[`UU5.Bricks.Page style="padding:8px; borderRadius: 2px" 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -9103,7 +9791,15 @@ exports[`UU5.Bricks.Page style="padding:8px; borderRadius: 2px" 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -9157,7 +9853,7 @@ exports[`UU5.Bricks.Page style={"backgroundColor":"red","color":"blue"} 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -9191,7 +9887,15 @@ exports[`UU5.Bricks.Page style={"backgroundColor":"red","color":"blue"} 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -9239,7 +9943,7 @@ exports[`UU5.Bricks.Page switchElevationLeftRight=false 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -9273,7 +9977,15 @@ exports[`UU5.Bricks.Page switchElevationLeftRight=false 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -9321,7 +10033,7 @@ exports[`UU5.Bricks.Page switchElevationLeftRight=true 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -9355,7 +10067,15 @@ exports[`UU5.Bricks.Page switchElevationLeftRight=true 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -9403,7 +10123,7 @@ exports[`UU5.Bricks.Page switchElevationTopBottom=false 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -9437,7 +10157,15 @@ exports[`UU5.Bricks.Page switchElevationTopBottom=false 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -9485,7 +10213,7 @@ exports[`UU5.Bricks.Page switchElevationTopBottom=true 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -9519,7 +10247,15 @@ exports[`UU5.Bricks.Page switchElevationTopBottom=true 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -9567,7 +10303,7 @@ exports[`UU5.Bricks.Page systemLayerContent="Obsah který se zobrazí před page
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -9601,7 +10337,15 @@ exports[`UU5.Bricks.Page systemLayerContent="Obsah který se zobrazí před page
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -9654,7 +10398,7 @@ exports[`UU5.Bricks.Page systemLayerWrapperProps={"style":{"backgroundColor":"#2
       }
     }
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -9688,7 +10432,15 @@ exports[`UU5.Bricks.Page systemLayerWrapperProps={"style":{"backgroundColor":"#2
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -9737,7 +10489,7 @@ exports[`UU5.Bricks.Page textCorrector=false 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -9771,7 +10523,15 @@ exports[`UU5.Bricks.Page textCorrector=false 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -9820,7 +10580,7 @@ exports[`UU5.Bricks.Page textCorrector=true 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -9854,7 +10614,15 @@ exports[`UU5.Bricks.Page textCorrector=true 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -9907,7 +10675,7 @@ exports[`UU5.Bricks.Page tooltip="My Tooltip" 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -9941,7 +10709,15 @@ exports[`UU5.Bricks.Page tooltip="My Tooltip" 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -9989,7 +10765,7 @@ exports[`UU5.Bricks.Page top={"key":"0","ref":null,"props":{"id":"uuIDBOX","colo
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -10067,7 +10843,15 @@ exports[`UU5.Bricks.Page top={"key":"0","ref":null,"props":{"id":"uuIDBOX","colo
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -10115,7 +10899,7 @@ exports[`UU5.Bricks.Page topFixed="always" 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -10150,7 +10934,15 @@ exports[`UU5.Bricks.Page topFixed="always" 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -10199,7 +10991,7 @@ exports[`UU5.Bricks.Page topFixed="smart" 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -10234,7 +11026,15 @@ exports[`UU5.Bricks.Page topFixed="smart" 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -10283,7 +11083,7 @@ exports[`UU5.Bricks.Page topFixed=false 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -10317,7 +11117,15 @@ exports[`UU5.Bricks.Page topFixed=false 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -10365,7 +11173,7 @@ exports[`UU5.Bricks.Page topFixed=true 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -10400,7 +11208,15 @@ exports[`UU5.Bricks.Page topFixed=true 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -10449,7 +11265,7 @@ exports[`UU5.Bricks.Page topWrapperProps={"style":{"backgroundColor":"#2196F3"}}
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -10483,7 +11299,15 @@ exports[`UU5.Bricks.Page topWrapperProps={"style":{"backgroundColor":"#2196F3"}}
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -10531,7 +11355,7 @@ exports[`UU5.Bricks.Page type=0 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -10547,7 +11371,15 @@ exports[`UU5.Bricks.Page type=0 1`] = `
       className="uu5-bricks-page-content-body"
       pureRender={true}
     >
-      <UpdateWrapper />
+      <ContextProvider
+        value={
+          Object {
+            "getPopover": [Function],
+          }
+        }
+      >
+        <UpdateWrapper />
+      </ContextProvider>
     </Div>
   </Div>
 </Div>
@@ -10576,7 +11408,7 @@ exports[`UU5.Bricks.Page type=1 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -10610,7 +11442,15 @@ exports[`UU5.Bricks.Page type=1 1`] = `
         className="uu5-bricks-page-content-body"
         pureRender={true}
       >
-        <UpdateWrapper />
+        <ContextProvider
+          value={
+            Object {
+              "getPopover": [Function],
+            }
+          }
+        >
+          <UpdateWrapper />
+        </ContextProvider>
       </Div>
     </Div>
     <PageColumn
@@ -10658,7 +11498,7 @@ exports[`UU5.Bricks.Page type=2 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -10695,7 +11535,15 @@ exports[`UU5.Bricks.Page type=2 1`] = `
           className="uu5-bricks-page-content-body"
           pureRender={true}
         >
-          <UpdateWrapper />
+          <ContextProvider
+            value={
+              Object {
+                "getPopover": [Function],
+              }
+            }
+          >
+            <UpdateWrapper />
+          </ContextProvider>
         </Div>
         <ResizeObserver
           onResize={[Function]}
@@ -10743,7 +11591,7 @@ exports[`UU5.Bricks.Page type=3 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -10779,7 +11627,15 @@ exports[`UU5.Bricks.Page type=3 1`] = `
           className="uu5-bricks-page-content-body"
           pureRender={true}
         >
-          <UpdateWrapper />
+          <ContextProvider
+            value={
+              Object {
+                "getPopover": [Function],
+              }
+            }
+          >
+            <UpdateWrapper />
+          </ContextProvider>
         </Div>
         <ResizeObserver
           onResize={[Function]}
@@ -10826,7 +11682,7 @@ exports[`UU5.Bricks.Page type=4 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -10863,7 +11719,15 @@ exports[`UU5.Bricks.Page type=4 1`] = `
           className="uu5-bricks-page-content-body"
           pureRender={true}
         >
-          <UpdateWrapper />
+          <ContextProvider
+            value={
+              Object {
+                "getPopover": [Function],
+              }
+            }
+          >
+            <UpdateWrapper />
+          </ContextProvider>
         </Div>
       </Row>
     </Div>
@@ -10911,7 +11775,7 @@ exports[`UU5.Bricks.Page type=5 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -10951,7 +11815,15 @@ exports[`UU5.Bricks.Page type=5 1`] = `
             className="uu5-bricks-page-content-body"
             pureRender={true}
           >
-            <UpdateWrapper />
+            <ContextProvider
+              value={
+                Object {
+                  "getPopover": [Function],
+                }
+              }
+            >
+              <UpdateWrapper />
+            </ContextProvider>
           </Div>
         </Div>
         <PageColumn
@@ -11041,7 +11913,15 @@ exports[`UU5.Bricks.Page type=6 1`] = `
             className="uu5-bricks-page-content-body"
             pureRender={true}
           >
-            <UpdateWrapper />
+            <ContextProvider
+              value={
+                Object {
+                  "getPopover": [Function],
+                }
+              }
+            >
+              <UpdateWrapper />
+            </ContextProvider>
           </Div>
         </Div>
         <ResizeObserver
@@ -11064,7 +11944,7 @@ exports[`UU5.Bricks.Page type=6 1`] = `
       width="0%"
     />
   </Row>
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -11096,7 +11976,7 @@ exports[`UU5.Bricks.Page type=7 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -11136,7 +12016,15 @@ exports[`UU5.Bricks.Page type=7 1`] = `
             className="uu5-bricks-page-content-body"
             pureRender={true}
           >
-            <UpdateWrapper />
+            <ContextProvider
+              value={
+                Object {
+                  "getPopover": [Function],
+                }
+              }
+            >
+              <UpdateWrapper />
+            </ContextProvider>
           </Div>
         </Div>
         <PageColumn
@@ -11186,7 +12074,7 @@ exports[`UU5.Bricks.Page type=8 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -11232,7 +12120,15 @@ exports[`UU5.Bricks.Page type=8 1`] = `
             className="uu5-bricks-page-content-body"
             pureRender={true}
           >
-            <UpdateWrapper />
+            <ContextProvider
+              value={
+                Object {
+                  "getPopover": [Function],
+                }
+              }
+            >
+              <UpdateWrapper />
+            </ContextProvider>
           </Div>
         </Div>
       </Row>
@@ -11281,7 +12177,7 @@ exports[`UU5.Bricks.Page type=9 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -11320,7 +12216,15 @@ exports[`UU5.Bricks.Page type=9 1`] = `
             className="uu5-bricks-page-content-body"
             pureRender={true}
           >
-            <UpdateWrapper />
+            <ContextProvider
+              value={
+                Object {
+                  "getPopover": [Function],
+                }
+              }
+            >
+              <UpdateWrapper />
+            </ContextProvider>
           </Div>
         </Div>
         <PageColumn
@@ -11370,7 +12274,7 @@ exports[`UU5.Bricks.Page type=10 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -11412,7 +12316,15 @@ exports[`UU5.Bricks.Page type=10 1`] = `
               className="uu5-bricks-page-content-body"
               pureRender={true}
             >
-              <UpdateWrapper />
+              <ContextProvider
+                value={
+                  Object {
+                    "getPopover": [Function],
+                  }
+                }
+              >
+                <UpdateWrapper />
+              </ContextProvider>
             </Div>
             <ResizeObserver
               onResize={[Function]}
@@ -11462,7 +12374,7 @@ exports[`UU5.Bricks.Page type=11 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -11504,7 +12416,15 @@ exports[`UU5.Bricks.Page type=11 1`] = `
               className="uu5-bricks-page-content-body"
               pureRender={true}
             >
-              <UpdateWrapper />
+              <ContextProvider
+                value={
+                  Object {
+                    "getPopover": [Function],
+                  }
+                }
+              >
+                <UpdateWrapper />
+              </ContextProvider>
             </Div>
           </Row>
         </Div>
@@ -11554,7 +12474,7 @@ exports[`UU5.Bricks.Page type=12 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -11600,7 +12520,15 @@ exports[`UU5.Bricks.Page type=12 1`] = `
             className="uu5-bricks-page-content-body"
             pureRender={true}
           >
-            <UpdateWrapper />
+            <ContextProvider
+              value={
+                Object {
+                  "getPopover": [Function],
+                }
+              }
+            >
+              <UpdateWrapper />
+            </ContextProvider>
           </Div>
         </Div>
         <ResizeObserver
@@ -11648,7 +12576,7 @@ exports[`UU5.Bricks.Page type=13 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -11696,7 +12624,15 @@ exports[`UU5.Bricks.Page type=13 1`] = `
               className="uu5-bricks-page-content-body"
               pureRender={true}
             >
-              <UpdateWrapper />
+              <ContextProvider
+                value={
+                  Object {
+                    "getPopover": [Function],
+                  }
+                }
+              >
+                <UpdateWrapper />
+              </ContextProvider>
             </Div>
             <ResizeObserver
               onResize={[Function]}
@@ -11745,7 +12681,7 @@ exports[`UU5.Bricks.Page type=14 1`] = `
     pureRender={true}
     ref_={[Function]}
   />
-  <Popover
+  <forwardRef(Popover)
     className="uu5-bricks-page-popover uu5-elevation-5"
     id="uuID_popover"
     pureRender={true}
@@ -11793,7 +12729,15 @@ exports[`UU5.Bricks.Page type=14 1`] = `
               className="uu5-bricks-page-content-body"
               pureRender={true}
             >
-              <UpdateWrapper />
+              <ContextProvider
+                value={
+                  Object {
+                    "getPopover": [Function],
+                  }
+                }
+              >
+                <UpdateWrapper />
+              </ContextProvider>
             </Div>
           </Row>
         </Div>

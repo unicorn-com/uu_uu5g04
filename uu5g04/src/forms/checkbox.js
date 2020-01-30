@@ -239,9 +239,11 @@ export const Checkbox = Context.withContext(
         }
       };
 
-      mainAttrs.onClick = e => {
-        handleClick(e);
-      };
+      if (!mainAttrs.onClick) {
+        mainAttrs.onClick = e => {
+          handleClick(e);
+        };
+      }
 
       return mainAttrs;
     },
@@ -335,7 +337,7 @@ export const Checkbox = Context.withContext(
         </div>
       );
     }
-    //@@viewOn:render
+    //@@viewOff:render
   })
 );
 

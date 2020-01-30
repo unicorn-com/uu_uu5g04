@@ -210,7 +210,26 @@ export const Button = createReactClass({
     tagName: ns.name("Button"),
     nestingLevel: "smallBox",
     classNames: {
-      main: Css.css`border: none;` + " " + ns.css("button"),
+      main:
+        ns.css("button") +
+        " " +
+        Css.css`
+        border: none;
+
+        &.uu5-bricks-button-link {
+          border: none;
+          background-color: transparent;
+
+          &:hover, &:focus {
+            border: none;
+            background-color: transparent;
+          }
+        }
+
+        .uu5-bricks-button.uu5-bricks-button-underline {
+          background: transparent;
+        }
+      `,
       bgStyle: ns.css("button-"),
       text: ns.css("button-text"),
       block: ns.css("button-block"),
@@ -322,7 +341,7 @@ export const Button = createReactClass({
   //@@viewOn:overriding
   //@@viewOff:overriding
 
-  //@@viewOn:componentSpecificHelpers
+  //@@viewOn:private
   _onClickLink(e, middleClick) {
     let isRouterLink = this._isRoute() && UU5.Environment.getRouter();
     if (e.button === 0 || middleClick) {

@@ -332,21 +332,34 @@ exports[`UU5.Bricks.ContextMenu.Item diviner=true 1`] = `
 `;
 
 exports[`UU5.Bricks.ContextMenu.Item docKit examples UU5.Bricks.ContextMenu.Item example make snapshot 1`] = `
-<Popover
+<forwardRef(Popover)
   className="uu5-bricks-context-menu"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
   footer="Footer"
+  forceRender={false}
   header="Header"
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
   mainAttrs={Object {}}
+  name={null}
   nestingLevel="bigBoxCollection"
   parentElement={null}
+  pureRender={false}
   ref_={[Function]}
+  selected={false}
   shown={true}
+  style={null}
+  tooltip={null}
 >
   <ScreenSize>
     <Component />
   </ScreenSize>
-</Popover>
+</forwardRef(Popover)>
 `;
 
 exports[`UU5.Bricks.ContextMenu.Item dynamic=false 1`] = `

@@ -13,101 +13,79 @@
 
 export const FormsLsi = {
   editablePanel: {
-    endEditation: {
-      cs: "Ukončit úpravy",
-      en: "Stop editing"
-    },
     moreSettingsTooltip: {
       cs: "Další nastavení",
       en: "More Settings"
+    },
+    settingsButton: {
+      cs: "Nastavení",
+      en: "Settings"
     }
   },
-  section: {
-    headerPlaceholder: {
-      cs: "Zde napište hlavičku",
-      en: "Type header here"
-    },
-    footerPlaceholder: {
-      cs: "Zde napište patičku",
-      en: "Type footer here"
-    },
-    defaultLevel: {
-      cs: "Výchozí úroveň",
-      en: "Default Level"
-    },
-    defaultColorSchema: {
-      cs: "Výchozí barva",
-      en: "Default Color"
-    },
-    showHeaderCheckboxLabel: {
-      cs: "Hlavičku",
+  editableHeader: {
+    placeholder: {
+      cs: "Hlavička",
       en: "Header"
-    },
-    showFooterCheckboxLabel: {
-      cs: "Patičku",
-      en: "Footer"
-    },
-    contenteditableCheckboxLabel: {
-      cs: "Editovatelný obsah",
-      en: "Content Editable"
-    },
-    level: {
-      cs: "Úroveň",
-      en: "Level"
-    },
-    underlineTooltip: {
-      cs: "Podtržení hlavičky",
-      en: "Header Underline"
-    },
-    colorSchemaTooltip: {
-      cs: "Barevnost",
-      en: "Color Schema"
-    },
-    levelTooltip: {
-      cs: "Úroveň hlavičky",
-      en: "Header Level"
     }
   },
-  container: {
-    headerPlaceholder: {
-      cs: "Zde napište hlavičku",
-      en: "Type header here"
-    },
-    footerPlaceholder: {
-      cs: "Zde napište patičku",
-      en: "Type footer here"
-    },
-    defaultLevel: {
-      cs: "Výchozí úroveň",
-      en: "Default Level"
-    },
-    showHeaderCheckboxLabel: {
-      cs: "Hlavičku",
-      en: "Header"
-    },
-    showFooterCheckboxLabel: {
-      cs: "Patičku",
+  editableFooter: {
+    placeholder: {
+      cs: "Patička",
       en: "Footer"
+    }
+  },
+  endEditation: {
+    label: {
+      cs: "Ukončit úpravy",
+      en: "Stop editing"
+    }
+  },
+  modal: {
+    componentInfo: {
+      cs: "Náhlédni do dokumentace",
+      en: "Consult documentation of"
     },
-    contenteditableCheckboxLabel: {
-      cs: "Editovatelný obsah",
-      en: "Content Editable"
+    menuItemInsertBefore: {
+      cs: "Vložit před",
+      en: "Insert Before"
     },
-    level: {
-      cs: "Úroveň",
-      en: "Level"
+    menuItemInsertAfter: {
+      cs: "Vložit za",
+      en: "Insert After"
     },
-    underlineTooltip: {
-      cs: "Podtržení hlavičky",
-      en: "Header Underline"
+    menuItemMoveToPosition: {
+      cs: "Posunout na pozici",
+      en: "Move to Position"
     },
-    indentTooltip: {
-      cs: "Bez odsazení",
-      en: "No Spacing"
+    menuItemDuplicate: {
+      cs: "Duplikovat komponentu",
+      en: "Duplicate Component"
     },
-    levelTooltip: {
-      cs: "Úroveň hlavičky",
-      en: "Header Level"
+    menuItemDelete: {
+      cs: "Smazat",
+      en: "Delete"
+    },
+    itemMoveModalHeader: {
+      cs: "Posun položky na pozici",
+      en: "Move Item to Position"
+    },
+    saveButton: {
+      cs: "Uložit",
+      en: "Save"
+    },
+    cancelButton: {
+      cs: "Zrušit",
+      en: "Cancel"
+    },
+    header: {
+      cs: "Editace ${name}",
+      en: "${name} Editation"
+    }
+  },
+  menu: {
+    addItemButton: {
+      cs: "Přidat položku",
+      en: "Add Item"
     }
   }
 };

@@ -1,2883 +1,3021 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UU5.Bricks.Tabs UU5.Bricks.Tabs stacked="s l" 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs uu5-bricks-tabs-list-stacked"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="s"
-      vertical={true}
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      key="uu5-content-0"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs uu5-bricks-tabs-list-stacked"
     >
-      Tab 1
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="s"
+        vertical={true}
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        key="uu5-content-0"
+      >
+        Tab 1
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs UU5.Bricks.Tabs stacked="s l" 2`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="s"
-      vertical={true}
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      key="uu5-content-0"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Tab 1
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="s"
+        vertical={true}
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        key="uu5-content-0"
+      >
+        Tab 1
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs UU5.Bricks.Tabs stacked=false 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      key="uu5-content-0"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Tab 1
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        key="uu5-content-0"
+      >
+        Tab 1
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs UU5.Bricks.Tabs stacked=false 2`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs uu5-bricks-tabs-list-stacked"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      key="uu5-content-0"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs uu5-bricks-tabs-list-stacked"
     >
-      Tab 1
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        key="uu5-content-0"
+      >
+        Tab 1
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs UU5.Bricks.Tabs stacked=true 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs uu5-bricks-tabs-list-stacked"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="s"
-      vertical={true}
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      key="uu5-content-0"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs uu5-bricks-tabs-list-stacked"
     >
-      Tab 1
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="s"
+        vertical={true}
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        key="uu5-content-0"
+      >
+        Tab 1
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs activeName="active" 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs checkGrammar=false 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs checkGrammar=true 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs checkHighlight=false 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs checkHighlight=true 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs checkSpaces=false 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs checkSpaces=true 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs className="my-classname" 1`] = `
-<div
-  className="uu5-bricks-tabs my-classname uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs my-classname uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs colorSchema="brown" 1`] = `
-<div
-  className="color-schema-brown uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="color-schema-brown uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs colorSchema="brown-rich" 1`] = `
-<div
-  className="color-schema-brown-rich uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="color-schema-brown-rich uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs colorSchema="cyan" 1`] = `
-<div
-  className="color-schema-cyan uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="color-schema-cyan uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs colorSchema="cyan-rich" 1`] = `
-<div
-  className="color-schema-cyan-rich uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="color-schema-cyan-rich uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs colorSchema="default" 1`] = `
-<div
-  className="color-schema-default uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="color-schema-default uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs colorSchema="green" 1`] = `
-<div
-  className="color-schema-green uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="color-schema-green uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs colorSchema="green-rich" 1`] = `
-<div
-  className="color-schema-green-rich uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="color-schema-green-rich uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs colorSchema="grey" 1`] = `
-<div
-  className="color-schema-grey uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="color-schema-grey uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs colorSchema="grey-rich" 1`] = `
-<div
-  className="color-schema-grey-rich uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="color-schema-grey-rich uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs colorSchema="orange" 1`] = `
-<div
-  className="color-schema-orange uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="color-schema-orange uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs colorSchema="orange-rich" 1`] = `
-<div
-  className="color-schema-orange-rich uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="color-schema-orange-rich uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs colorSchema="pink" 1`] = `
-<div
-  className="color-schema-pink uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="color-schema-pink uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs colorSchema="pink-rich" 1`] = `
-<div
-  className="color-schema-pink-rich uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="color-schema-pink-rich uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs colorSchema="purple" 1`] = `
-<div
-  className="color-schema-purple uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="color-schema-purple uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs colorSchema="purple-rich" 1`] = `
-<div
-  className="color-schema-purple-rich uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="color-schema-purple-rich uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs colorSchema="red" 1`] = `
-<div
-  className="color-schema-red uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="color-schema-red uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs colorSchema="red-rich" 1`] = `
-<div
-  className="color-schema-red-rich uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="color-schema-red-rich uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs colorSchema="yellow" 1`] = `
-<div
-  className="color-schema-yellow uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="color-schema-yellow uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs colorSchema="yellow-rich" 1`] = `
-<div
-  className="color-schema-yellow-rich uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="color-schema-yellow-rich uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs content="This is Content from ContentMixin" 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
-  />
-</div>
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
+    >
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    />
+  </div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs content=12345 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
-  />
-</div>
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
+    >
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    />
+  </div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs controlled=false 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs controlled=true 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs default props 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs disabled=false 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs disabled=true 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-common-disabled uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-common-disabled uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
+    <span
+      className="uu5-common-disabled-cover"
+      key="disabledCover"
+    />
   </div>
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs docKit examples UU5.Bricks.Tabs should render without crash 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID1"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <li
-      key="1"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 2"
-        onClick={[Function]}
-        ref_={[Function]}
-      />
-    </li>
-    <li
-      key="2"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 3"
-        onClick={[Function]}
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID1"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      _fade={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="uuID2"
-      key="uuID2"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
-    <tabs-item
-      _fade={true}
-      getButton={[Function]}
-      header="Tab 2"
-      id="uuID3"
-      key="uuID3"
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
     >
-      torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est.
-    </tabs-item>
-    <tabs-item
-      _fade={true}
-      getButton={[Function]}
-      header="Tab 3"
-      id="uuID4"
-      key="uuID4"
-    >
-      torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est.
-    </tabs-item>
+      <tabs-item
+        _active={true}
+        _fade={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="uuID2"
+        key="uuID2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        _fade={true}
+        getButton={[Function]}
+        header="Tab 2"
+        id="uuID3"
+        key="uuID3"
+      >
+        torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est.
+      </tabs-item>
+      <tabs-item
+        _fade={true}
+        getButton={[Function]}
+        header="Tab 3"
+        id="uuID4"
+        key="uuID4"
+      >
+        torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est.
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs dynamic=false 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs dynamic=true 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs fade=false 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs fade=true 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      _fade={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        _fade={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs hidden=false 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs hidden=true 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-common-hidden uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-common-hidden uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs id="myId" 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="myId"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="myId"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs ignoreHTML=false 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs ignoreHTML=true 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs justified=false 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs justified=true 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs uu5-bricks-tabs-list-justified"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs uu5-bricks-tabs-list-justified"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs mainAttrs=undefined 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs mountTabContent="onActive" 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs mountTabContent="onFirstActive" 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs mountTabContent="onFirstRender" 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs name="myName" 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  name="myName"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    name="myName"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs nestingLevel="bigBox" 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs nestingLevel="bigBoxCollection" 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs nestingLevel="box" 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs nestingLevel="boxCollection" 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs nestingLevel="container" 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.Tabs nestingLevel="page" 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs nestingLevel="smallBox" 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs nestingLevel="smallBoxCollection" 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs nestingLevel="spa" 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs noIndex=false 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs noIndex=true 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-noindex uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-noindex uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs pureRender=false 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs pureRender=true 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs render from uu5string UU5.Bricks.Tabs active first tab with string as first child  1`] = `
@@ -2933,473 +3071,495 @@ exports[`UU5.Bricks.Tabs render from uu5string UU5.Bricks.Tabs active first tab 
 `;
 
 exports[`UU5.Bricks.Tabs selected=false 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs selected=true 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-common-selected uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-common-selected uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs stacked=false 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs stacked=true 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs uu5-bricks-tabs-list-stacked"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="s"
-      vertical={true}
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs uu5-bricks-tabs-list-stacked"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="s"
+        vertical={true}
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs style="padding:8px; borderRadius: 2px" 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={
+      Object {
+        "borderRadius": "2px",
+        "padding": "8px",
+      }
+    }
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs style={"backgroundColor":"red","color":"blue"} 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={
+      Object {
+        "backgroundColor": "red",
+        "color": "blue",
+      }
+    }
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs textCorrector=false 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs textCorrector=true 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs tooltip="My Tooltip" 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title="My Tooltip"
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title="My Tooltip"
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs type="pills" 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-pills"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-pills"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Tabs type="tabs" 1`] = `
-<div
-  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <ul
-    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-  >
-    <li
-      className="uu5-bricks-tabs-list-active"
-      key="0"
-    >
-      <Button
-        bgStyle="transparent"
-        content="Tab 1"
-        ref_={[Function]}
-      />
-    </li>
-    <Line
-      colorSchema="custom"
-      size="1px"
-    />
-  </ul>
+<Fragment>
   <div
-    className="uu5-bricks-tabs-list-content"
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
   >
-    <tabs-item
-      _active={true}
-      getButton={[Function]}
-      header="Tab 1"
-      id="active"
-      key="childID"
-      name="active"
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-    </tabs-item>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 1"
+        id="active"
+        key="childID"
+        name="active"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
   </div>
-</div>
+</Fragment>
 `;

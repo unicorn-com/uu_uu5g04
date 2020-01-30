@@ -928,7 +928,7 @@ export const PageColumn = createReactClass({
       />
     ) : null;
   },
-  //@@viewOff:componentSpecificHelpers
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {

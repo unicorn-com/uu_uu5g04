@@ -252,6 +252,7 @@ export const VirtualList = createReactClass({
 
     let scrollAreaProps = {
       reserveSpace: true,
+      hideOnBlur: false,
       customScrollbar: true,
       initialScrollTop: this.props.initialScrollTop,
       ref_: comp => (this._scrollArea = comp)

@@ -20,6 +20,14 @@ import ns from "./bricks-ns.js";
 
 import Footer from "./blockquote-footer.js";
 
+const EditableBlockquote = UU5.Common.Component.lazy(async () => {
+  await SystemJS.import("uu5g04-forms");
+  await SystemJS.import("uu5g04-bricks-editable");
+  return import("./internal/blockquote.js");
+});
+
+let editationLazyLoaded = false;
+
 import "./blockquote.less";
 //@@viewOff:imports
 
@@ -31,7 +39,8 @@ export const Blockquote = createReactClass({
     UU5.Common.NestingLevelMixin,
     UU5.Common.ColorSchemaMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.PureRenderMixin
+    UU5.Common.PureRenderMixin,
+    UU5.Common.EditableMixin
   ],
   //@@viewOff:mixins
 
@@ -43,7 +52,8 @@ export const Blockquote = createReactClass({
       main: ns.css("blockquote"),
       bg: ns.css("blockquote-bg"),
       right: "blockquote-reverse",
-      noSpacing: ns.css("blockquote-nospacing")
+      noSpacing: ns.css("blockquote-nospacing"),
+      editation: ns.css("blockquote-editation")
     },
     opt: {
       nestingLevelWrapper: true
@@ -74,12 +84,20 @@ export const Blockquote = createReactClass({
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
+  getInitialState() {
+    return {
+      editationLazyLoaded: false
+    };
+  },
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
   //@@viewOn:overriding
+  onBeforeForceEndEditation_() {
+    return this._editableBlockquote ? this._editableBlockquote.getPropsToSave() : undefined;
+  },
   //@@viewOff:overriding
 
   //@@viewOn:private
@@ -94,15 +112,52 @@ export const Blockquote = createReactClass({
   _getFooterAlignment: function() {
     return this.props.footerAlignment || this.props.alignment;
   },
+
+  _registerNull(inst) {
+    // unmount of component means that suspense is loaded and component should be rendered
+    if (!inst) {
+      this.setState(state => {
+        if (state.editationLazyLoaded) return;
+
+        // Edit component is loaded - need to set to static variable because other Edit component does not render fallback component
+        // editationLazyLoaded is stored in both state and static variable for cases such as when more edit modes are loaded at the same time
+        editationLazyLoaded = true;
+        return { editationLazyLoaded: true };
+      });
+    }
+  },
+
+  _isEditationLazyLoaded() {
+    return editationLazyLoaded;
+  },
+
+  _renderEditationMode() {
+    return (
+      <UU5.Common.Suspense fallback={<span ref={this._registerNull} />}>
+        <EditableBlockquote component={this} ref_={this._registerEditableBlockquote} />
+      </UU5.Common.Suspense>
+    );
+  },
+
+  _registerEditableBlockquote(blockquote) {
+    this._editableBlockquote = blockquote;
+  },
   //@@viewOff:private
 
   //@@viewOn:render
   render: function() {
     return this.getNestingLevel() ? (
       <blockquote {...this._buildMainAttrs()}>
-        {this.getChildren()}
-        {this.props.footer && <Footer content={this.props.footer} alignment={this._getFooterAlignment()} />}
-        {this.getDisabledCover()}
+        {this.state.editation ? this._renderEditationMode() : null}
+        {!this.state.editation || !this._isEditationLazyLoaded()
+          ? [
+              this.getChildren(),
+              this.props.footer && (
+                <Footer content={this.props.footer} alignment={this._getFooterAlignment()} key="footer" />
+              ),
+              this.getDisabledCover()
+            ]
+          : null}
       </blockquote>
     ) : null;
   }
