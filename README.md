@@ -57,7 +57,7 @@ export default App;
 ```
 
 If using uu5strings, only components that are already loaded in the page can be used.
-I.e. if you want to use e.g. `<UU5.CodeKit.CodeViewer ... />` (which is in `uu_codekitg01`
-library) in uu5string, it is necessary that the application imports `uu_codekitg01` directly.
+I.e. if you want to use e.g. `<UU5.CodeKit.CodeViewer ... />` (which is in `uu5codekitg01`
+library) in uu5string, it is necessary that the application imports `uu5codekitg01` directly.
 On-demand loading of components would demand presence of SystemJS loader and more complex 
 configuration - in such case it is advised to use [uu_appg01_devkit](https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-e884539c8511447a977c7ff070e7f2cf/book) tooling.
