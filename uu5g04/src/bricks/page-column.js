@@ -26,6 +26,18 @@ import Css from "./internal/css.js";
 import "./page-column.less";
 //@@viewOff:imports
 
+function isResizable(props, state) {
+  if (typeof props.resizable === "boolean") {
+    return props.resizable;
+  } else if (props.resizable === "open" && state.open) {
+    return true;
+  } else if (props.resizable === "closed" && !state.open) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 export const PageColumn = UU5.Common.VisualComponent.create({
   displayName: "PageColumn", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
@@ -53,7 +65,14 @@ export const PageColumn = UU5.Common.VisualComponent.create({
       animateTop: ns.css("page-column-animate-top"),
       animateBottom: ns.css("page-column-animate-bottom"),
       draggable: ns.css("page-column-draggable"),
-      resizing: ns.css("page-column-resizing")
+      resizing: ns.css("page-column-resizing"),
+      relative: (props, state) => {
+        return Css.css`
+          && {
+            box-shadow: none;
+            border-${props.right ? "left" : "right"}: 1px solid rgba(33, 33, 33, 0.12)
+          }`;
+      }
     },
     errors: {
       invalidParent: "Parent of this component is not Page."
@@ -64,8 +83,6 @@ export const PageColumn = UU5.Common.VisualComponent.create({
   //@@viewOn:propTypes
   propTypes: {
     width: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
-    minWidth: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
-    maxWidth: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
     right: UU5.PropTypes.bool,
     button: UU5.PropTypes.bool,
     open: UU5.PropTypes.bool,
@@ -83,6 +100,8 @@ export const PageColumn = UU5.Common.VisualComponent.create({
     overlayBottom: UU5.PropTypes.bool,
     relative: UU5.PropTypes.bool,
     resizable: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.oneOf(["open", "closed"])]),
+    minResizableWidth: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
+    maxResizableWidth: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
     onUpdate: UU5.PropTypes.func,
     onResize: UU5.PropTypes.func,
     showToggleButton: UU5.PropTypes.bool
@@ -114,6 +133,8 @@ export const PageColumn = UU5.Common.VisualComponent.create({
       overlayBottom: false,
       relative: false,
       resizable: false,
+      minResizableWidth: undefined,
+      maxResizableWidth: undefined,
       onUpdate: null,
       onResize: null,
       topOverlaysContent: false,
@@ -386,25 +407,23 @@ export const PageColumn = UU5.Common.VisualComponent.create({
       else icon = this.props.right ? "mdi-chevron-left" : "mdi-chevron-right";
 
       let transformXFirst = "0vw";
-      let transformXSecond = this.props.right ? `- 100%` : `+ 100%`;
-      let transformXThird = this.props.right ? `- 1px` : `+ 1px`;
+      let transformXSecond = this.props.right ? `-100%` : `100%`;
 
       if (!this.isOpen()) {
         let hasClosedWidth = !!(this.props.minWidth && this.props.maxWidth);
         if (!hasClosedWidth) {
           transformXFirst = this.props.right ? this.state.width : `-${this.state.width}`;
-        } else {
-          transformXThird = "+ 0px";
         }
       }
+      let showOnHover = this.isOpen() && !UU5.Common.Tools.isMobileOrTablet && !UU5.Common.Tools.isMobileIOS();
 
       let buttonStyle = Css.css`
         && {
           position: absolute;
           top: 50%;
           ${this.props.right ? "left: 0" : "right: 0"};
-          transform: translateY(-50%) translateX(calc(${transformXFirst} ${transformXSecond} ${transformXThird}));
-          visibility: visible;
+          transform: translateY(-50%) translateX(${transformXFirst}) translateX(${transformXSecond});
+          visibility: ${showOnHover ? "hidden" : "visible"};
           transition: transform 0.3s linear;
           width: 24px;
           height: 32px;
@@ -418,6 +437,13 @@ export const PageColumn = UU5.Common.VisualComponent.create({
             font-size: 12px;
           }
         }
+        ${showOnHover &&
+          `
+          .uu5-bricks-page-column-wrapper:hover &,
+          &:hover {
+            visibility: visible;
+          }
+        `}
       `;
 
       buttonStyle += " " + this.getClassName("zIndex") + this.props.elevation;
@@ -599,13 +625,15 @@ export const PageColumn = UU5.Common.VisualComponent.create({
     // those 5 pixels are because of changing the cursor to the "resize" one, which is wider and the mouse position is counted from the left side of the cursor.
     newWidth += 5;
 
-    let ghostWidth = this._getGhostWidth(this.props, this.isOpen(), newWidth);
+    if (newWidth <= parseFloat(this.props.maxResizableWidth) && newWidth >= parseFloat(this.props.minResizableWidth)) {
+      let ghostWidth = this._getGhostWidth(this.props, this.isOpen(), newWidth);
 
-    this._resized = true;
-    this._preventContentRender = true;
-    this.setState({ width: newWidth + "px", ghostWidth }, () =>
-      UU5.Environment.EventListener.triggerEvent("pageColumnChanged")
-    );
+      this._resized = true;
+      this._preventContentRender = true;
+      this.setState({ width: newWidth + "px", ghostWidth }, () =>
+        UU5.Environment.EventListener.triggerEvent("pageColumnChanged")
+      );
+    }
   },
 
   _getDynamicStyles(isWrapper, isGhost) {
@@ -680,7 +708,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
       return resultRule;
     };
 
-    return Css.css(`
+    let styles = `
       & {
         transition: ${buildTransitionRule(
           transformTransitions,
@@ -695,7 +723,9 @@ export const PageColumn = UU5.Common.VisualComponent.create({
       & {
         visibility: ${visibility};
       }
-    `);
+    `;
+
+    return Css.css`${styles}`;
   },
 
   _getWidth(isWrapper, props = this.props, width, open) {
@@ -704,7 +734,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
     // Therefore we change % to vw
     if (!width) {
       if (this._shouldChangeWidth(props) || isWrapper) {
-        if (props.minWidth || props.maxWidth) {
+        if (!props.block && (props.minWidth || props.maxWidth)) {
           // its openable
 
           if ((typeof open === "boolean" && open) || (typeof open !== "boolean" && this.state && this.state.open)) {
@@ -865,6 +895,10 @@ export const PageColumn = UU5.Common.VisualComponent.create({
       props.className += " " + this.getClassName().float;
     }
 
+    if (this.props.relative) {
+      props.className += " " + this.getClassName("relative");
+    }
+
     props.mainAttrs = {
       onTransitionEnd: () => {
         UU5.Environment.EventListener.triggerEvent("preventScrollTrigger", false);
@@ -914,18 +948,30 @@ export const PageColumn = UU5.Common.VisualComponent.create({
 
     className += " " + this._getDynamicStyles(false, true);
 
+    let maxWidth = this.state.ghostWidth;
+
+    if (isResizable(this.props, this.state) && this.props.maxResizableWidth) {
+      maxWidth = UU5.Common.Tools.fillUnit(this.props.maxResizableWidth);
+    }
+
     return {
       className,
-      style: { width: this.state.ghostWidth, maxWidth: this.state.ghostWidth, right: this.props.right ? 0 : "auto" }
+      style: { width: this.state.ghostWidth, maxWidth, right: this.props.right ? 0 : "auto" }
     };
   },
 
   _getMainGhostProps(getStyles) {
     let props = this.getMainPropsToPass();
+    let maxWidth = this.state.width;
+
+    if (isResizable(this.props, this.state) && this.props.maxResizableWidth) {
+      maxWidth = UU5.Common.Tools.fillUnit(this.props.maxResizableWidth);
+    }
+
     let style = getStyles
       ? UU5.Common.Tools.merge(props.style || {}, this.state.style, {
           width: this.state.width,
-          maxWidth: this.state.width
+          maxWidth
         })
       : {};
 
@@ -973,20 +1019,8 @@ export const PageColumn = UU5.Common.VisualComponent.create({
     };
   },
 
-  _isResizable() {
-    if (typeof this.props.resizable === "boolean") {
-      return this.props.resizable;
-    } else if (this.props.resizable === "open" && this.state.open) {
-      return true;
-    } else if (this.props.resizable === "closed" && !this.state.open) {
-      return true;
-    } else {
-      return false;
-    }
-  },
-
   _getDragElement() {
-    return this._isResizable() ? (
+    return isResizable(this.props, this.state) ? (
       <div
         onMouseDown={this._onDragMouseDown}
         onTouchStart={this._onDragMouseDown}

@@ -109,7 +109,7 @@ Tools.checkTag = function(tag, hideError) {
         }
         result = calculatedTag || null;
 
-        if (typeof result !== "function" && (result && !result.isUu5PureComponent && !result["$$typeof"])) {
+        if (typeof result !== "function" && result && !result.isUu5PureComponent && !result["$$typeof"]) {
           if (!hideError) {
             Tools.error("Unknown tag " + tag + " - element was not found.", {
               notFoundObject: result,
@@ -813,9 +813,11 @@ Tools.getOuterHeight = function(element, withMargin) {
   return result;
 };
 
-Tools.calculateValueWidth = function(text, fontSize = "12px") {
+Tools.calculateTextWidth = function(text, style) {
+  let fontSize = style ? style.fontSize : "12px";
   let tempElement = document.createElement("div");
-  tempElement.style = `
+
+  tempElement.style.cssText = `
     position: absolute;
     visibility: hidden;
     height: auto;
@@ -823,10 +825,18 @@ Tools.calculateValueWidth = function(text, fontSize = "12px") {
     white-space: nowrap;
     font-size: ${fontSize};
   `;
-  tempElement.textContent = text;
+  Object.assign(tempElement.style, style);
+  tempElement.innerText = text;
   document.documentElement.appendChild(tempElement);
   let width = tempElement.clientWidth;
   document.documentElement.removeChild(tempElement);
+
+  if (Tools.isEdge()) {
+    width += 4;
+  } else if (Tools.isIE()) {
+    width += 2;
+  }
+
   return width;
 };
 
@@ -2963,7 +2973,7 @@ Tools.fillUnit = (value, defaultUnit = "px") => {
   }
 };
 
-Tools.getCallToken = async function (url, session) {
+Tools.getCallToken = async function(url, session) {
   let token;
   if (session) {
     let a = document.createElement("a");

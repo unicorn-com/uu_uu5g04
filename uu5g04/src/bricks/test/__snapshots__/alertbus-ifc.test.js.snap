@@ -4,7 +4,7 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus addAlert() 1`
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID01-alert"
+  id="uuID01-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -14,7 +14,7 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus addAlert() 2`
   className="uu5-bricks-alert-bus"
   closeTimer={3000}
   content="Obsah alertu"
-  id="uuID01-alert"
+  id="uuID01-alert-id_alert_bus"
   key="id_alert_bus"
   mainAttrs={Object {}}
   onClose={[Function]}
@@ -25,7 +25,7 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus addAlert() wi
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID01-alert"
+  id="uuID01-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -45,7 +45,7 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus addAlert() wi
       Alert header
     </Strong>
   }
-  id="uuID01-alert"
+  id="uuID01-alert-ID_OF_ALERT"
   key="ID_OF_ALERT"
   mainAttrs={Object {}}
   onClose={[Function]}
@@ -56,7 +56,7 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus addAlertToPos
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID01-alert"
+  id="uuID01-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -64,12 +64,9 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus addAlertToPos
 exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus addAlertToPosition() 2`] = `
 <Alert
   className="uu5-bricks-alert-bus"
-  closeTimer={3000}
-  content="Obsah alertu na první pozici"
-  id="uuID01-alert"
-  key="id_alert_in_busFIRST"
+  hidden={true}
+  id="uuID01-inner"
   mainAttrs={Object {}}
-  onClose={[Function]}
 />
 `;
 
@@ -77,7 +74,7 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus clearAlert() 
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID01-alert"
+  id="uuID01-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -87,7 +84,7 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus clearAlert() 
   className="uu5-bricks-alert-bus"
   closeTimer={3000}
   content="Obsah alertu"
-  id="uuID01-alert"
+  id="uuID01-alert-id_alert_bus"
   key="id_alert_bus"
   mainAttrs={Object {}}
   onClose={[Function]}
@@ -100,7 +97,7 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus clearAlert() 
   closeTimer={3000}
   content="Obsah alertu"
   hidden={true}
-  id="uuID01-alert"
+  id="uuID01-alert-id_alert_bus"
   key="id_alert_bus"
   mainAttrs={Object {}}
   onClose={[Function]}
@@ -111,7 +108,7 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus getAlerts() 1
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID01-alert"
+  id="uuID01-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -126,7 +123,7 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus getAlerts() 2
       This is content in Bricks.Alert
     </Strong>
   }
-  id="uuID01-alert"
+  id="uuID01-alert-ID_OF_ALERT"
   key="ID_OF_ALERT"
   mainAttrs={Object {}}
   onClose={[Function]}
@@ -137,7 +134,7 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus getAlerts() 3
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID01-alert"
+  id="uuID01-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -146,7 +143,7 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus removeAlert()
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID01-alert"
+  id="uuID01-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -161,7 +158,7 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus removeAlert()
       This is content in Bricks.Alert
     </Strong>
   }
-  id="uuID01-alert"
+  id="uuID01-alert-ID_OF_ALERT"
   key="ID_OF_ALERT"
   mainAttrs={Object {}}
   onClose={[Function]}
@@ -172,7 +169,7 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus removeAlert()
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID01-alert"
+  id="uuID01-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -181,7 +178,7 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus setAlert() 1`
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID01-alert"
+  id="uuID01-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -196,7 +193,7 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus setAlert() 2`
       This is content in Bricks.Alert
     </Strong>
   }
-  id="uuID01-alert"
+  id="uuID01-alert-ID_OF_ALERT"
   key="ID_OF_ALERT"
   mainAttrs={Object {}}
   onClose={[Function]}
@@ -207,7 +204,7 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus setAlerts() 1
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID01-alert"
+  id="uuID01-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -215,12 +212,9 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus setAlerts() 1
 exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus setAlerts() 2`] = `
 <Alert
   className="uu5-bricks-alert-bus"
-  closeTimer={3000}
-  content="Obsah alertu na druhé pozici"
-  id="uuID01-alert"
-  key="id_alert_in_busSECOND"
+  hidden={true}
+  id="uuID01-inner"
   mainAttrs={Object {}}
-  onClose={[Function]}
 />
 `;
 
@@ -228,7 +222,7 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus setAlerts() 3
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID01-alert"
+  id="uuID01-inner"
   mainAttrs={Object {}}
 />
 `;

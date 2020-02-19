@@ -36,6 +36,7 @@ export * from "./checkbox.js";
 export * from "./checkboxes.js";
 export * from "./radios.js";
 export * from "./select.js";
+export * from "./tag-select.js";
 export * from "./slider.js";
 export * from "./switch-selector.js";
 export * from "./form.js";
@@ -50,6 +51,9 @@ export * from "./context-forms/context-form.js";
 export * from "./context-forms/context-header.js";
 export * from "./context-forms/context-modal.js";
 export * from "./context-forms/context-section.js";
+
+import { ContextFormConsumer } from "./context-forms/context.js";
+export { ContextFormConsumer };
 
 import Context from "./form-context.js";
 export { Context };

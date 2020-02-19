@@ -108,18 +108,44 @@ export const FormsLsi = {
       en: "Please insert a number."
     },
     lowerMessage: {
-      cs: "Zadejte prosím větší číslo. Minimální povolená hodnota je %s.",
-      en: "Please type in bigger number. Minimum allowed value is %s."
+      cs: "Zadejte prosím větší číslo. Minimální povolená hodnota je",
+      en: "Please type in bigger number. Minimum allowed value is"
     },
     upperMessage: {
-      cs: "Zadejte prosím menší číslo. Maximální povolená hodnota je %s.",
-      en: "Please type in smaller number. Maximum allowed value is %s."
+      cs: "Zadejte prosím menší číslo. Maximální povolená hodnota je",
+      en: "Please type in smaller number. Maximum allowed value is"
     }
   },
   file: {
     dropHere: {
       cs: "Přesuňte soubor sem",
       en: "Move file here"
+    }
+  },
+  tagSelect: {
+    addButtonLabel: {
+      cs: "Přidat",
+      en: "Add"
+    },
+    tagIsAlreadyAdded: {
+      cs: 'Tag "$1" je již přidaný.',
+      en: 'The tag "$1" is already added.'
+    },
+    customTagIsNotAllowed: {
+      cs: "Není povolené přidávat vlastní tagy.",
+      en: "It is not allowed to create custom tags."
+    },
+    tagIsNotAllowed: {
+      cs: 'Tag "$1" není povolený.',
+      en: 'The tag "$1" is not allowed.'
+    },
+    placeholder: {
+      cs: "Název tagu",
+      en: "Tag Name"
+    },
+    noTagInfoText: {
+      cs: "Vložte tag pomocí vstupního pole níže",
+      en: "Insert a tag via input field lower"
     }
   }
 };

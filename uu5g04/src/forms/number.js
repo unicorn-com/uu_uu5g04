@@ -18,6 +18,7 @@ import ns from "./forms-ns.js";
 import TextInput from "./internal/text-input.js";
 
 import TextInputMixin from "./mixins/text-input-mixin.js";
+import InputMixin from "./mixins/input-mixin.js";
 
 import ItemList from "./internal/item-list.js";
 
@@ -114,12 +115,8 @@ export const Number = Context.withContext(
         value = value + "";
       }
 
-
       const multiplicator = Math.pow(10, this.props.decimals);
-      value =
-        this.props.rounded && this.props.decimals
-          ? Math.round(value * multiplicator) / multiplicator
-          : value;
+      value = this.props.rounded && this.props.decimals ? Math.round(value * multiplicator) / multiplicator : value;
 
       let result = this._setNumberResult({ value });
 
@@ -141,7 +138,27 @@ export const Number = Context.withContext(
 
     componentWillReceiveProps(nextProps) {
       if (this.props.controlled) {
-        let result = this._setNumberResult({ value: nextProps.value });
+        let result;
+
+        // if input is focused and current value is for example "-" and new value is NaN we can be sure that
+        // nextProps value was returned by onChange callback and set into props by updating state of the parent component
+        // that means that value wasn't change and we can use formated value from input as a new value
+        // otherwise is impossible to update value in prop in onChange callback
+        if (this._isFocused && nextProps.valueType === "number" && typeof nextProps.value === "number") {
+          let inputNode = UU5.Common.DOM.findNode(this._textInput);
+          let inputValue = inputNode && inputNode.querySelector("input");
+          let currentValue = inputValue ? parseFloat(inputValue.value) : NaN;
+          // check if both values are same
+          if (
+            (currentValue === nextProps.value && currentValue) || // check if both values are same, except 0 (0 === -0) and NaN (NaN !== NaN)
+            (isNaN(currentValue) && isNaN(nextProps.value)) || // check if both values are NaN
+            (currentValue === 0 && nextProps.value === 0 && 1 / currentValue === 1 / nextProps.value) // check if both values are same zero (positive or negative)
+          ) {
+            result = { value: inputValue.value };
+          }
+        }
+
+        result = result || this._setNumberResult({ value: nextProps.value });
 
         if (this.props.onValidate && typeof this.props.onValidate === "function") {
           this._validateOnChange({ value: result.value, event: null, component: this }, true);
@@ -150,7 +167,7 @@ export const Number = Context.withContext(
             if (result.feedback) {
               this.setFeedback(result.feedback, result.message, result.value);
             } else {
-              this.setFeedback(nextProps.feedback, nextProps.message, nextProps.value);
+              this.setFeedback(nextProps.feedback, nextProps.message, result.value);
             }
           }
         }
@@ -164,7 +181,6 @@ export const Number = Context.withContext(
         delete this._updateRange;
       }
     },
-
     //@@viewOff:reactLifeCycle
 
     //@@viewOn:interface
@@ -173,7 +189,7 @@ export const Number = Context.withContext(
     //@@viewOn:overriding
     // TODO: tohle je ještě otázka - je potřeba nastavit hodnotu z jiné komponenty (musí být validace) a z onChange (neměla by být validace)
     setValue_(value, setStateCallback) {
-      if (this._checkRequired({ value })) {
+      if (this._checkRequiredValue({ value })) {
         if (typeof this.props.onValidate === "function") {
           this._validateOnChange({ value: value, event: null, component: this });
         } else {
@@ -200,27 +216,30 @@ export const Number = Context.withContext(
     onBlurDefault_(opt) {
       let blurResult;
 
-      if (this._isNaN && !this.props.onValidate) {
-        blurResult = { feedback: "initial", message: null, value: this.state.value };
-      } else {
-        opt = this._getOutputResult(opt);
-        blurResult = this.getBlurFeedback(opt);
-      }
+      // set feedback runs all validations but in exception of onChange validation input isn"t marked as focused
+      this.setFeedback("initial", null, this.state.value, () => {
+        if (this._isNaN && !this.props.onValidate) {
+          blurResult = { feedback: "initial", message: null, value: this.state.value };
+        } else {
+          opt = this._getOutputResult(opt);
+          blurResult = this.getBlurFeedback(opt);
+        }
 
-      this._isNaN = false;
+        this._isNaN = false;
 
-      let setNumberResult = this._setNumberResult(blurResult);
-      let hasRequiredValue = this._checkRequired({ value: setNumberResult.value });
-      if (hasRequiredValue && !this.props.validateOnChange) {
-        setNumberResult.required = this.props.required;
-        if (setNumberResult.feedback && setNumberResult.feedback) {
+        let setNumberResult = this._setNumberResult(blurResult);
+        let hasRequiredValue = this._checkRequiredValue({ value: setNumberResult.value });
+        if (hasRequiredValue && !this.props.validateOnChange) {
+          setNumberResult.required = this.props.required;
+          if (setNumberResult.feedback && setNumberResult.feedback) {
+            this.setFeedback(setNumberResult.feedback, setNumberResult.message, setNumberResult.value);
+          }
+        } else if (!this.props.validateOnChange) {
+          this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessage"), setNumberResult.value);
+        } else {
           this.setFeedback(setNumberResult.feedback, setNumberResult.message, setNumberResult.value);
         }
-      } else if (!this.props.validateOnChange) {
-        this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessage"), setNumberResult.value);
-      } else {
-        this.setFeedback(setNumberResult.feedback, setNumberResult.message, setNumberResult.value);
-      }
+      });
 
       return this;
     },
@@ -245,6 +264,10 @@ export const Number = Context.withContext(
     //@@viewOff:overriding
 
     //@@viewOn:private
+    _registerInput(input) {
+      this._textInput = input;
+    },
+
     _getOutputResult(result) {
       if (result.value !== undefined) {
         if (typeof result._data === "object") {
@@ -267,32 +290,32 @@ export const Number = Context.withContext(
     },
 
     _doGetCaretPosition() {
-      let iCaretPos = 0;
-
-      if (this._textInput) {
-        // Initialize
-        let inputNode = this._textInput.findDOMNode();
-        // IE Support
-        if (document.selection) {
-          // Set focus on the element
-          inputNode.focus();
-          // To get cursor position, get empty selection range
-          let oSel = document.selection.createRange();
-          // Move selection start to 0 position
-          oSel.moveStart("character", -inputNode.value.length);
-          // The caret position is selection length
-          iCaretPos = oSel.text.length;
-        }
-        // Firefox support
-        else if (inputNode.selectionStart || inputNode.selectionStart == "0") iCaretPos = inputNode.selectionStart;
-        // Return results
+      // check if input is still focused
+      if (!this._isFocused) {
+        return;
       }
-
+      // Initialize
+      var iCaretPos = 0;
+      let inputNode = UU5.Common.DOM.findNode(this._textInput);
+      // IE Support
+      if (document.selection) {
+        // Set focus on the element
+        inputNode.focus();
+        // To get cursor position, get empty selection range
+        var oSel = document.selection.createRange();
+        // Move selection start to 0 position
+        oSel.moveStart("character", -inputNode.value.length);
+        // The caret position is selection length
+        iCaretPos = oSel.text.length;
+      }
+      // Firefox support
+      else if (inputNode.selectionStart || inputNode.selectionStart == "0") iCaretPos = inputNode.selectionStart;
+      // Return results
       return iCaretPos;
     },
 
     _setCaretPosition(caretPosStart, caretPosEnd = caretPosStart) {
-      let elem = this._textInput.findDOMNode().querySelector("input");
+      let elem = UU5.Common.DOM.findNode(this._textInput).querySelector("input");
       if (elem != null) {
         if (elem.createTextRange) {
           let range = elem.createTextRange();
@@ -392,13 +415,23 @@ export const Number = Context.withContext(
       }
     },
 
+    _transformNumberToString(number) {
+      if (typeof number !== "number") return number;
+
+      // check negative zero ... standard default toString function transform -0 to "0"
+      // -0 === 0
+      // 1 / -0 = NEGATIVE_INFINITY
+      if (number === 0 && 1 / number < 0) return "-0";
+      return number.toString();
+    },
+
     _parseNumberFromString(
       value = this.state.value,
       decimalSeparator = this.props.decimalSeparator,
       thousandSeparator = this.props.thousandSeparator
     ) {
       let parsedNumber = UU5.Common.Tools.normalizeNumberSeparators(value, { thousandSeparator, decimalSeparator });
-      parsedNumber = parsedNumber || parsedNumber === 0 ? parsedNumber.toString() : parsedNumber;
+      parsedNumber = this._transformNumberToString(parsedNumber);
       return this._removePrefixandSuffix(parsedNumber);
     },
 
@@ -409,7 +442,7 @@ export const Number = Context.withContext(
 
       let minDecimals;
       if (numberValue) {
-        let decimals = numberValue.toString().split(".");
+        let decimals = this._transformNumberToString(numberValue).split(".");
         if (decimals[1] && decimals[1].length >= maxDecimals) {
           minDecimals = maxDecimals;
         }
@@ -512,15 +545,17 @@ export const Number = Context.withContext(
 
     _checkNumberResultChange(opt) {
       if (opt.value) {
-        opt.value = opt.value.toString();
+        opt.value = this._transformNumberToString(opt.value);
         let isComma = opt.value.indexOf(",") > 0;
         opt.value = this._parseNumberFromString(opt.value, this.props.decimalSeparator, this.props.thousandSeparator);
         let isNan = isNaN(opt.value);
-        if (isNan && opt.value != "-") {
-          this._updateRange = this._doGetCaretPosition() - 1;
-          opt.value = this.state.value;
-          opt.feedback = "warning";
-          opt.message = this.props.nanMessage || this.getLsiValue("nanMessage");
+        if (isNan) {
+          if (opt.value !== "-") {
+            this._updateRange = this._doGetCaretPosition() - 1;
+            opt.value = "" + this.state.value; // update value to string
+            opt.feedback = "warning";
+            opt.message = this.props.nanMessage || this.getLsiValue("nanMessage");
+          }
           this._isNaN = true;
         } else {
           this._isNaN = false;
@@ -539,17 +574,19 @@ export const Number = Context.withContext(
         opt.value = this._parseNumberFromString(opt.value);
         let number = parseFloat(opt.value);
 
-        if ((this.props.min || this.props.min === 0) && number < this.props.min) {
-          opt.feedback = "error";
-          opt.message = this.props.lowerMessage || this.getLsiValue("lowerMessage", undefined, this.props.min);
-        }
+        if (!isNaN(number)) {
+          if ((this.props.min || this.props.min === 0) && number < this.props.min) {
+            opt.feedback = "error";
+            opt.message = this.props.lowerMessage || this.getLsiValue("lowerMessage") + " " + this.props.min + ".";
+          }
 
-        if ((this.props.max || this.props.max === 0) && number > this.props.max) {
-          opt.feedback = "error";
-          opt.message = this.props.upperMessage || this.getLsiComponent("upperMessage", undefined, this.props.max);
-        }
+          if ((this.props.max || this.props.max === 0) && number > this.props.max) {
+            opt.feedback = "error";
+            opt.message = this.props.upperMessage || this.getLsiValue("upperMessage") + " " + this.props.max + ".";
+          }
 
-        isComma && (opt.value = opt.value.replace(".", ","));
+          isComma && (opt.value = opt.value.replace(".", ","));
+        }
       }
 
       return opt;
@@ -557,44 +594,73 @@ export const Number = Context.withContext(
 
     _setNumberResult(opt) {
       opt = { ...opt };
-      let result = this._checkNumberResult(opt);
+      let resultValue;
       if (opt.value || opt.value === 0) {
         let number = this._parseNumberFromString(opt.value);
 
-        if (this.props.rounded && this.props.decimals && number) {
-          let exp = this.props.decimals ? -1 * this.props.decimals : 0;
-          number = UU5.Common.Tools.round10(parseFloat(number), exp).toString();
-        }
-
-        let numberParts = number.split(".");
-
-        if (this.props.thousandSeparator) {
-          numberParts[0] = numberParts[0].replace(this.getDefault().regexpNumberParts, this.props.thousandSeparator);
-        }
-        if (numberParts.length > 1) {
-          if (this.props.decimals && this.props.decimals < numberParts[1].length) {
-            numberParts[1] = numberParts[1].slice(0, this.props.decimals - numberParts[1].length);
+        // round only valid number value
+        if (number !== "NaN") {
+          // do not rounded a value if input is focused
+          if (this.props.rounded && this.props.decimals && number && !this._isFocused) {
+            let exp = this.props.decimals ? -1 * this.props.decimals : 0;
+            number = this._transformNumberToString(UU5.Common.Tools.round10(parseFloat(number), exp));
           }
-          result.value = numberParts[0] + this.props.decimalSeparator + numberParts[1];
-        } else {
-          result.value = numberParts[0];
+
+          let numberParts = number.split(".");
+
+          if (this.props.thousandSeparator) {
+            numberParts[0] = numberParts[0].replace(this.getDefault().regexpNumberParts, this.props.thousandSeparator);
+          }
+          // do not rounded a value if input is focused
+          if (numberParts.length > 1) {
+            if (this.props.decimals && this.props.decimals < numberParts[1].length && !this._isFocused) {
+              numberParts[1] = numberParts[1].slice(0, this.props.decimals - numberParts[1].length);
+            }
+            resultValue = numberParts[0] + this.props.decimalSeparator + numberParts[1];
+          } else {
+            resultValue = numberParts[0];
+          }
         }
       }
 
-      result = this._getOutputResult(result);
-
-      return result;
+      let result = this._checkNumberResult({ ...opt, value: resultValue || opt.value });
+      return this._getOutputResult(result);
     },
 
     _onChange(e) {
       this._correctCursorPosition(e);
-      let opt = { value: e.target.value, event: e, component: this, _data: { type: "input" } };
+      let inputValue = e.target.value;
+      let opt = { value: inputValue, event: e, component: this, _data: { type: "input" } };
       this.props.prefix || this.props.suffix ? (opt.value = this._removePrefixandSuffix(opt.value)) : null;
       let checkNumberResult = this._checkNumberResultChange(opt);
+
       if (checkNumberResult.feedback && checkNumberResult.feedback === "warning") {
         this.setFeedback(checkNumberResult.feedback, checkNumberResult.message, checkNumberResult.value);
       } else {
-        opt = this._getOutputResult(opt);
+        let currentValue = this._getOutputResult({ ...opt, value: this.state.value, _data: { ...opt._data } });
+        // prevent changing original value
+        let newValue = this._getOutputResult({ ...opt, _data: { ...opt._data } });
+
+        // check if value is changed
+        if (this.props.valueType === "string") {
+          if (currentValue.value === newValue.value) {
+            this.onChangeDefault({ ...opt, value: inputValue, _data: { ...opt._data, value: inputValue } });
+            return;
+          }
+        } else {
+          // valueType is number
+          let currentNumber = this._setNumberResult(currentValue).value;
+          let number = this._setNumberResult({ ...newValue, _data: { ...newValue._data } }).value;
+          if ((isNaN(currentNumber) && isNaN(number)) || currentNumber === number) {
+            // no change in component value -> don't call onChange callback
+            this.onChangeDefault({ ...opt, value: inputValue, _data: { ...opt._data, value: inputValue } });
+            return;
+          }
+
+          // update value in opt to number
+          opt = this._setNumberResult(opt);
+        }
+
         if (!this.isComputedDisabled() && !this.isReadOnly()) {
           if (typeof this.props.onChange === "function") {
             this.props.onChange(opt);
@@ -613,7 +679,7 @@ export const Number = Context.withContext(
         _callCallback = false;
         this._validateOnChange(opt, false, setStateCallback);
       } else {
-        if (this._checkRequired({ value: opt.value })) {
+        if (this._checkRequiredValue({ value: opt.value })) {
           opt = { ...opt };
           opt.value = opt._data.value !== undefined ? opt._data.value : opt.value;
           opt.required = this.props.required;
@@ -715,7 +781,6 @@ export const Number = Context.withContext(
           } else {
             this.showError("validateError", null, {
               context: {
-                event: e,
                 func: this.props.onValidate,
                 result: result
               }
@@ -731,22 +796,6 @@ export const Number = Context.withContext(
       return this;
     },
 
-    /*_getFeedbackIcon(){
-      let icon = this.props.required ? this.props.successIcon : null;
-      switch (this.getFeedback()) {
-        case 'success':
-          icon = this.props.successIcon;
-          break;
-        case 'warning':
-          icon = this.props.warningIcon;
-          break;
-        case 'error':
-          icon = this.props.errorIcon;
-          break;
-      }
-      return icon;
-    },*/
-
     _decrease(e) {
       //TODO: optimize
       let value = this.state.value || this.state.value === 0 ? this.state.value : this.props.min + 1;
@@ -761,7 +810,7 @@ export const Number = Context.withContext(
         number = parseInt(number) - this.props.step;
       }
 
-      let result = this._setNumberResult({ value: number.toString() });
+      let result = this._setNumberResult({ value: this._transformNumberToString(number) });
       let opt = {
         value: result.value,
         event: e,
@@ -791,7 +840,7 @@ export const Number = Context.withContext(
       } else {
         number = parseInt(number) + this.props.step;
       }
-      let result = this._setNumberResult({ value: number.toString() });
+      let result = this._setNumberResult({ value: this._transformNumberToString(number) });
       let opt = {
         value: result.value,
         event: e,
@@ -813,7 +862,7 @@ export const Number = Context.withContext(
 
       if (this.state.value || this.state.value === 0) {
         let value = this.state.value || 0;
-        let number = parseFloat(value.toString().replace(this.props.decimalSeparator, "."));
+        let number = parseFloat(this._transformNumberToString(value).replace(this.props.decimalSeparator, "."));
         if (type === "min" && typeof this.props.min === "number") {
           if (number <= this.props.min) {
             result = true;
@@ -847,6 +896,16 @@ export const Number = Context.withContext(
     _decreaseEnd() {
       this._decreaseTimeout && clearTimeout(this._decreaseTimeout);
       this._decreaseTimer && UU5.Environment.TimeManager.clearInterval(this._decreaseTimer);
+    },
+
+    _checkRequiredValue({ value }) {
+      // check required value as a string, number 0 is filled value
+      if (this.props.valueType === "number" && isNaN(value)) {
+        // manual validation ... there is no possible
+        this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessage"), value);
+        return false;
+      }
+      return this._checkRequired({ value: "" + value });
     },
     //@@viewOff:private
 
@@ -892,7 +951,7 @@ export const Number = Context.withContext(
       if (this.state.value || this.state.value === 0) {
         value = this._prefix();
         if (this._isFocused) {
-          value += this.state.value;
+          value += this._transformNumberToString(this.state.value);
         } else {
           value += this._formatOutput(this.state.value, this.props.decimalsView, true);
         }
@@ -913,6 +972,7 @@ export const Number = Context.withContext(
             [
               <TextInput
                 id={inputId}
+                key={inputId}
                 name={this.props.name || inputId}
                 value={value}
                 placeholder={this.props.placeholder}
@@ -925,7 +985,7 @@ export const Number = Context.withContext(
                 disabled={this.isComputedDisabled()}
                 readonly={this.isReadOnly()}
                 loading={this.isLoading()}
-                ref_={item => (this._textInput = item)}
+                ref_={this._registerInput}
                 feedback={this.getFeedback()}
                 borderRadius={this.props.borderRadius}
                 elevation={this.props.elevation}
@@ -935,15 +995,17 @@ export const Number = Context.withContext(
                 size={this.props.size}
               />,
 
-              <ItemList {...this._getItemListProps()}>{this._getChildren()}</ItemList>,
-              <UU5.Bricks.Backdrop {...this._getBackdropProps()} />
+              <ItemList key="item-list" {...this._getItemListProps()}>
+                {this._getChildren()}
+              </ItemList>,
+              <UU5.Bricks.Backdrop key="backdrop" {...this._getBackdropProps()} />
             ],
             buttons
           )}
         </div>
       );
     }
-    //@@viewOn:render
+    //@@viewOff:render
   })
 );
 

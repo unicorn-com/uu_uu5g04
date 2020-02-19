@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -35,10 +35,17 @@
             : "/";
 
         // reconfigure <name>.js as well as <name>-<anything>.js (-bricks, -forms, etc.)
+        // as well as <name>/<anything>
         paths[name] = depBase + name + ".js";
+        var origBase = (systemJsConfigPaths[name] || "").replace(/[^/]*$/, "");
         for (var k in systemJsConfigPaths) {
           if (k.substr(0, name.length + 1) === name + "-") {
             paths[k] = depBase + k + ".js";
+          } else if (
+            k.substr(0, name.length + 1) === name + "/" &&
+            (systemJsConfigPaths[k] || "").substr(0, origBase.length) === origBase
+          ) {
+            paths[k] = depBase + (systemJsConfigPaths[k] || "").substr(origBase.length);
           }
         }
       }

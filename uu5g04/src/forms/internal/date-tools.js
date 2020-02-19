@@ -2,6 +2,13 @@ import * as UU5 from "uu5g04";
 
 const TIME_FORMAT_12 = "12";
 
+export const REGEXP = {
+  timeFormat12: /^\d{1,2}:?\d{0,2} ?[PpAa]?\.?[Mm]?\.?$/,
+  timeFormat12seconds: /^\d{1,2}:?\d{0,2}:?\d{0,2} ?[PpAa]?\.?[Mm]?\.?$/,
+  timeFormat24: /^\d{1,2}:?\d{0,2}$/,
+  timeFormat24seconds: /^\d{1,2}:?\d{0,2}:?\d{0,2}$/
+};
+
 export const DateTools = {
   setupLimits: props => {
     let timeFrom = undefined;

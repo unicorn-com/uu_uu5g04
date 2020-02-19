@@ -11,7 +11,7 @@
  * at the email: info@unicorn.com.
  */
 
-const CMD = "logLibraries";
+const CMD = "product/logLibraries";
 const TIMEOUT = 60 * 1000; // one minute
 const BASE_URI_COOKIE_NAME = "uu.app.cbu";
 const PRODUCT_AWID_REGEXP = /^https?:\/\/[^/]+\/([^/]+)\/([^/]+)/;
@@ -49,7 +49,7 @@ export function Statistics(url, isStatistics) {
       };
       request.open("POST", cmd, true);
       request.setRequestHeader("Content-Type", "application/json");
-      request.send(JSON.stringify({ uuProduct, uuAwid, uuLibraryList }));
+      request.send(JSON.stringify({ product: uuProduct, subAppAwid: uuAwid, libraryList: uuLibraryList }));
     }
   };
 

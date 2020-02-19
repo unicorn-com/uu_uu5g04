@@ -17,9 +17,9 @@ import "uu5g04-bricks";
 import ns from "../forms-ns.js";
 //@@viewOff:imports
 
-const Context = UU5.Common.Context.create();
+export const FormContext = UU5.Common.Context.create();
 
-export const ContextFormConsumer = Context.Consumer;
+export const ContextFormConsumer = FormContext.Consumer;
 
 export const ContextFormProvider = UU5.Common.VisualComponent.create({
   //@@viewOn:statics
@@ -56,9 +56,9 @@ export const ContextFormProvider = UU5.Common.VisualComponent.create({
 
   //@@viewOn:render
   render() {
-    return <Context.Provider value={this.state}>{this.props.children}</Context.Provider>;
+    return <FormContext.Provider value={this.state}>{this.props.children}</FormContext.Provider>;
   }
   //@@viewOff:render
 });
 
-export default { ContextFormProvider, ContextFormConsumer };
+export default { FormContext, ContextFormProvider, ContextFormConsumer };

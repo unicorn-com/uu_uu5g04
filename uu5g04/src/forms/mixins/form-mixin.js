@@ -387,7 +387,7 @@ export const FormMixin = {
         <UU5.Bricks.AlertBus
           ref_={alertBus => (this._alertBus = alertBus)}
           closeTimer={null}
-          forceRender={!this.props.usePageAlertBus}
+          location={this.props.usePageAlertBus ? "page" : "local"}
         />
         <FormContext.Provider value={this.state.formContextValue}>{children}</FormContext.Provider>
         <button type="submit" style={{ display: "none" }} />

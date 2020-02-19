@@ -508,7 +508,7 @@ export const InputMixin = {
     if (typeof this.focus_ === "function") {
       this.focus_();
     } else {
-      this.findDOMNode().focus();
+      UU5.Common.DOM.findNode(this).focus();
     }
 
     return this;

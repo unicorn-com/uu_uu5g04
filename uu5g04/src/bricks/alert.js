@@ -14,16 +14,29 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
-
 import Link from "./link.js";
 import Icon from "./icon.js";
-
 import "./alert.less";
+import Countdown from "./internal/countdown.js";
+import Css from "./internal/css.js";
 //@@viewOff:imports
+
+function joinTranslateStyles(translateX, translateY) {
+  let result = "";
+
+  if (translateX && translateY) {
+    result = `transform: translate(${translateX}, ${translateY})`;
+  } else if (translateX) {
+    result = `transform: translateX(${translateX})`;
+  } else if (translateX) {
+    result = `transform: translateY(${translateY})`;
+  }
+
+  return result;
+}
 
 export const Alert = UU5.Common.VisualComponent.create({
   displayName: "Alert", // for backward compatibility (test snapshots)
-
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
@@ -40,7 +53,32 @@ export const Alert = UU5.Common.VisualComponent.create({
     tagName: ns.name("Alert"),
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
-      main: ns.css("alert"),
+      main: props => {
+        let translateX;
+        let translateY;
+        let className = "";
+
+        if (!props.block) {
+          if (props.offsetTop === "auto") {
+            translateY = "-50%";
+            className += `
+              top: 50%;
+            `;
+          } else {
+            className += `
+              top: ${UU5.Common.Tools.fillUnit(props.offsetTop)};
+            `;
+          }
+        }
+
+        if (props.position === "center") {
+          translateX = "-50%";
+        }
+
+        className += joinTranslateStyles(translateX, translateY);
+
+        return (className ? Css.css(className) + " " : "") + ns.css("alert");
+      },
       withHeader: ns.css("alert-with-header"),
       withoutHeader: ns.css("alert-without-header"),
       withoutClose: ns.css("alert-without-close"),
@@ -49,7 +87,15 @@ export const Alert = UU5.Common.VisualComponent.create({
       content: ns.css("alert-content"),
       position: ns.css("alert-"),
       block: ns.css("alert-block"),
-      close: ns.css("alert-close")
+      close: ns.css("alert-close"),
+      countdown: props =>
+        Css.css(`
+        margin: ${props.closeDisabled ? "8px 8px 8px 8px" : "8px 0px 8px 8px"};
+      `),
+      controls: () =>
+        Css.css(`
+        display: inline-flex;
+      `)
     },
     defaults: {
       transitionDuration: 150,
@@ -69,7 +115,10 @@ export const Alert = UU5.Common.VisualComponent.create({
     block: UU5.PropTypes.bool,
     onClose: UU5.PropTypes.func,
     onCloseAfter: UU5.PropTypes.func,
-    onCloseBefore: UU5.PropTypes.func
+    onCloseBefore: UU5.PropTypes.func,
+    countdown: UU5.PropTypes.bool,
+    offsetTop: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string, UU5.PropTypes.oneOf(["auto"])]),
+    content: UU5.PropTypes.any
   },
   //@@viewOff:propTypes
 
@@ -82,7 +131,9 @@ export const Alert = UU5.Common.VisualComponent.create({
       block: false,
       onClose: null,
       onCloseAfter: null,
-      onCloseBefore: null
+      onCloseBefore: null,
+      countdown: false,
+      offsetTop: 0
     };
   },
   //@@viewOff:getDefaultProps
@@ -141,9 +192,6 @@ export const Alert = UU5.Common.VisualComponent.create({
     );
   },
 
-  //@@viewOff:private
-
-  // Render
   _getMainAttrs: function() {
     var mainAttrs = this.getMainAttrs();
     mainAttrs.className += " " + this.getClassName().position + this.props.position;
@@ -181,23 +229,33 @@ export const Alert = UU5.Common.VisualComponent.create({
     if (header && content) {
       result.push(
         <div className={this.getClassName("headerWrapper")} key="header">
-          <div className={this.getClassName("header")}> {this.getHeader()} </div>
-          {!this.props.closeDisabled && (
-            <Link className={this.getClassName().close} onClick={this._hide} parent={this} colorSchema="custom">
-              <Icon icon={this.getDefault("closeIcon")} />
-            </Link>
-          )}
+          <div className={this.getClassName("header")}>{this.getHeader()}</div>
+          <div className={this.getClassName("controls")}>
+            {this.props.countdown ? (
+              <Countdown className={this.getClassName("countdown")} duration={this.props.closeTimer} />
+            ) : null}
+            {!this.props.closeDisabled && (
+              <Link className={this.getClassName().close} onClick={this._hide} parent={this} colorSchema="custom">
+                <Icon icon={this.getDefault("closeIcon")} />
+              </Link>
+            )}
+          </div>
         </div>
       );
     } else if (header && !content) {
       result.push(
         <div className={this.getClassName("headerWrapper")} key="content">
           <div className={this.getClassName("content")}>{header}</div>
-          {!this.props.closeDisabled && (
-            <Link className={this.getClassName().close} onClick={this._hide} parent={this} colorSchema="custom">
-              <Icon icon={this.getDefault("closeIcon")} />
-            </Link>
-          )}
+          <div className={this.getClassName("controls")}>
+            {this.props.countdown ? (
+              <Countdown className={this.getClassName("countdown")} duration={this.props.closeTimer} />
+            ) : null}
+            {!this.props.closeDisabled && (
+              <Link className={this.getClassName().close} onClick={this._hide} parent={this} colorSchema="custom">
+                <Icon icon={this.getDefault("closeIcon")} />
+              </Link>
+            )}
+          </div>
         </div>
       );
     }
@@ -212,11 +270,16 @@ export const Alert = UU5.Common.VisualComponent.create({
       result.push(
         <div className={this.getClassName("headerWrapper")} key="content">
           <div className={this.getClassName("content")}>{content}</div>
-          {!this.props.closeDisabled && (
-            <Link className={this.getClassName().close} onClick={this._hide} parent={this} colorSchema="custom">
-              <Icon icon={this.getDefault("closeIcon")} />
-            </Link>
-          )}
+          <div className={this.getClassName("controls")}>
+            {this.props.countdown ? (
+              <Countdown className={this.getClassName("countdown")} duration={this.props.closeTimer} />
+            ) : null}
+            {!this.props.closeDisabled && (
+              <Link className={this.getClassName().close} onClick={this._hide} parent={this} colorSchema="custom">
+                <Icon icon={this.getDefault("closeIcon")} />
+              </Link>
+            )}
+          </div>
         </div>
       );
     }
@@ -225,6 +288,7 @@ export const Alert = UU5.Common.VisualComponent.create({
 
     return result;
   },
+  //@@viewOff:private
 
   //@@viewOn:render
   render: function() {

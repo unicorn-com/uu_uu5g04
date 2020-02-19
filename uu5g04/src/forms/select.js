@@ -49,6 +49,7 @@ export const Select = Context.withContext(
       tagName: ns.name("Select"),
       classNames: {
         main: ns.css("select"),
+        stateHolder: ns.css("select-state-holder"),
         link: ns.css("select-link"),
         open: ns.css("select-open"),
         multiple: ns.css("select-multiple"),
@@ -883,6 +884,7 @@ export const Select = Context.withContext(
 
     _getMainAttrs() {
       let attrs = this._getInputAttrs();
+      attrs.className += " " + this.getClassName("stateHolder");
       attrs.id = this.getId();
 
       if (this.isOpen()) {

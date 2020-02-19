@@ -47,6 +47,7 @@ export const Resize = UU5.Common.VisualComponent.create({
   //@@viewOn:propTypes
   propTypes: {
     height: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
+    width: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
     onResize: UU5.PropTypes.func
   },
   //@@viewOff:propTypes
@@ -55,6 +56,7 @@ export const Resize = UU5.Common.VisualComponent.create({
   getDefaultProps() {
     return {
       height: null,
+      width: null,
       onResize: undefined
     };
   },
@@ -72,6 +74,10 @@ export const Resize = UU5.Common.VisualComponent.create({
     if (this.props.controlled) {
       if (this.state.height !== nextProps.height) {
         this.setState({ height: nextProps.height });
+      }
+
+      if (this.props.width !== nextProps.width) {
+        this.setState({ width: nextProps.width });
       }
     }
   },
@@ -97,7 +103,7 @@ export const Resize = UU5.Common.VisualComponent.create({
   //@@viewOn:private
   _onResize({ width, height }) {
     if (this.state.width !== width || this.state.height !== height) {
-      this.setState({ width: width, height: height }, () => {
+      this.setState({ width, height }, () => {
         if (typeof this.props.onResize === "function") {
           this.props.onResize({ width, height });
         }
@@ -161,6 +167,11 @@ export const Resize = UU5.Common.VisualComponent.create({
       props.style.height = this.props.height;
     }
 
+    if (this.props.width) {
+      props.style = props.style || {};
+      props.style.width = this.props.width;
+    }
+
     return (
       <UU5.Bricks.Div {...props}>
         {(!this.props.height || this.state.width) && this._renderChild()}
@@ -172,5 +183,34 @@ export const Resize = UU5.Common.VisualComponent.create({
 });
 
 Resize.Item = ResizeItem;
+
+Resize.withResize = (Component, ignoreWidthChange = false, ignoreHeightChange = false) => {
+  let PureComponent = UU5.Common.Component.memo(
+    UU5.Common.Reference.forward((props, ref) => {
+      return <Component {...props} ref={ref} />;
+    })
+  );
+
+  let forwardRef = UU5.Common.Reference.forward((props, ref) => {
+    return (
+      <Resize height={props.height} width={props.width}>
+        {({ width, height }) => (
+          <PureComponent
+            {...props}
+            ref={ref}
+            width={ignoreWidthChange ? undefined : width}
+            height={ignoreHeightChange ? undefined : height}
+          />
+        )}
+      </Resize>
+    );
+  });
+
+  forwardRef.isUu5PureComponent = true;
+  forwardRef.displayName = `forwardRef(${Component.displayName || Component.name || "Component"})`;
+  forwardRef.tagName = Component.tagName;
+
+  return forwardRef;
+};
 
 export default Resize;

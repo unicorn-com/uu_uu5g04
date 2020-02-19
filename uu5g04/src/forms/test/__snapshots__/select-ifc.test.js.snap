@@ -2,7 +2,7 @@
 
 exports[`UU5.Forms.InputMixin interface test editable(setStatecallback) 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-has-value"
   id="idSelect"
   style={Object {}}
 >
@@ -51,7 +51,7 @@ exports[`UU5.Forms.InputMixin interface test editable(setStatecallback) 1`] = `
 
 exports[`UU5.Forms.InputMixin interface test editable(setStatecallback) 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-has-value"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -107,7 +107,7 @@ exports[`UU5.Forms.InputMixin interface test editable(setStatecallback) 2`] = `
 
 exports[`UU5.Forms.InputMixin interface test getChangeFeedback() 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -155,7 +155,7 @@ exports[`UU5.Forms.InputMixin interface test getChangeFeedback() 1`] = `
 
 exports[`UU5.Forms.InputMixin interface test getFeedBack() 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -201,7 +201,7 @@ exports[`UU5.Forms.InputMixin interface test getFeedBack() 1`] = `
 
 exports[`UU5.Forms.InputMixin interface test getFeedBack() 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -248,7 +248,7 @@ exports[`UU5.Forms.InputMixin interface test getFeedBack() 2`] = `
 
 exports[`UU5.Forms.InputMixin interface test getInputWrapper(inpuid) 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-has-value"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -304,7 +304,7 @@ exports[`UU5.Forms.InputMixin interface test getInputWrapper(inpuid) 1`] = `
 
 exports[`UU5.Forms.InputMixin interface test getLabel(idinput) 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-has-value"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -360,7 +360,7 @@ exports[`UU5.Forms.InputMixin interface test getLabel(idinput) 1`] = `
 
 exports[`UU5.Forms.InputMixin interface test getMessage() should return null, second: shoudl return new mesage 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -406,7 +406,7 @@ exports[`UU5.Forms.InputMixin interface test getMessage() should return null, se
 
 exports[`UU5.Forms.InputMixin interface test getValue() value is empty. Should return empty string. 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -452,7 +452,7 @@ exports[`UU5.Forms.InputMixin interface test getValue() value is empty. Should r
 
 exports[`UU5.Forms.InputMixin interface test isError() 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -502,7 +502,7 @@ exports[`UU5.Forms.InputMixin interface test isError() 1`] = `
 
 exports[`UU5.Forms.InputMixin interface test isError() 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-has-value"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -560,7 +560,7 @@ exports[`UU5.Forms.InputMixin interface test isError() 2`] = `
 
 exports[`UU5.Forms.InputMixin interface test isInitial() 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -606,7 +606,7 @@ exports[`UU5.Forms.InputMixin interface test isInitial() 1`] = `
 
 exports[`UU5.Forms.InputMixin interface test isInitial() 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-has-value"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -662,7 +662,7 @@ exports[`UU5.Forms.InputMixin interface test isInitial() 2`] = `
 
 exports[`UU5.Forms.InputMixin interface test isInput() 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-multiple"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-multiple"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -709,7 +709,7 @@ exports[`UU5.Forms.InputMixin interface test isInput() 1`] = `
 
 exports[`UU5.Forms.InputMixin interface test isLoading() 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -755,7 +755,7 @@ exports[`UU5.Forms.InputMixin interface test isLoading() 1`] = `
 
 exports[`UU5.Forms.InputMixin interface test isReadOnly() 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -803,7 +803,7 @@ exports[`UU5.Forms.InputMixin interface test isReadOnly() 1`] = `
 
 exports[`UU5.Forms.InputMixin interface test isReadOnly() 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="idSelect"
   style={Object {}}
 >
@@ -844,7 +844,7 @@ exports[`UU5.Forms.InputMixin interface test isReadOnly() 2`] = `
 
 exports[`UU5.Forms.InputMixin interface test isSuccess() fisr return false, second return true 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -892,7 +892,7 @@ exports[`UU5.Forms.InputMixin interface test isSuccess() fisr return false, seco
 
 exports[`UU5.Forms.InputMixin interface test isSuccess() fisr return false, second return true 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-has-value"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -950,7 +950,7 @@ exports[`UU5.Forms.InputMixin interface test isSuccess() fisr return false, seco
 
 exports[`UU5.Forms.InputMixin interface test isWarning() 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -1000,7 +1000,7 @@ exports[`UU5.Forms.InputMixin interface test isWarning() 1`] = `
 
 exports[`UU5.Forms.InputMixin interface test isWarning() 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-has-value"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -1058,7 +1058,7 @@ exports[`UU5.Forms.InputMixin interface test isWarning() 2`] = `
 
 exports[`UU5.Forms.InputMixin interface test readOnly(setStatecallback) 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-has-value"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -1114,7 +1114,7 @@ exports[`UU5.Forms.InputMixin interface test readOnly(setStatecallback) 1`] = `
 
 exports[`UU5.Forms.InputMixin interface test readOnly(setStatecallback) 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-has-value"
   id="idSelect"
   style={Object {}}
 >
@@ -1163,7 +1163,7 @@ exports[`UU5.Forms.InputMixin interface test readOnly(setStatecallback) 2`] = `
 
 exports[`UU5.Forms.InputMixin interface test reset(setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-has-value"
   id="idSelect"
   style={Object {}}
 >
@@ -1214,7 +1214,7 @@ exports[`UU5.Forms.InputMixin interface test reset(setStateCallBack) 1`] = `
 
 exports[`UU5.Forms.InputMixin interface test reset(setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -1262,7 +1262,7 @@ exports[`UU5.Forms.InputMixin interface test reset(setStateCallBack) 2`] = `
 
 exports[`UU5.Forms.InputMixin interface test setChangeFeedback() 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-has-value"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -1316,7 +1316,7 @@ exports[`UU5.Forms.InputMixin interface test setChangeFeedback() 1`] = `
 
 exports[`UU5.Forms.InputMixin interface test setEditableValue(false, setStateCallback) 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-has-value"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -1372,7 +1372,7 @@ exports[`UU5.Forms.InputMixin interface test setEditableValue(false, setStateCal
 
 exports[`UU5.Forms.InputMixin interface test setEditableValue(false, setStateCallback) 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-has-value"
   id="idSelect"
   style={Object {}}
 >
@@ -1421,7 +1421,7 @@ exports[`UU5.Forms.InputMixin interface test setEditableValue(false, setStateCal
 
 exports[`UU5.Forms.InputMixin interface test setEditableValue(true, setStateCallback) 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-has-value"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -1477,7 +1477,7 @@ exports[`UU5.Forms.InputMixin interface test setEditableValue(true, setStateCall
 
 exports[`UU5.Forms.InputMixin interface test setEditableValue(true, setStateCallback) 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-has-value"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -1533,7 +1533,7 @@ exports[`UU5.Forms.InputMixin interface test setEditableValue(true, setStateCall
 
 exports[`UU5.Forms.InputMixin interface test setError(message, value, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -1581,7 +1581,7 @@ exports[`UU5.Forms.InputMixin interface test setError(message, value, setStateCa
 
 exports[`UU5.Forms.InputMixin interface test setError(message, value, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-has-value"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -1639,7 +1639,7 @@ exports[`UU5.Forms.InputMixin interface test setError(message, value, setStateCa
 
 exports[`UU5.Forms.InputMixin interface test setFeedBack(feedback, message, value, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -1685,7 +1685,7 @@ exports[`UU5.Forms.InputMixin interface test setFeedBack(feedback, message, valu
 
 exports[`UU5.Forms.InputMixin interface test setFeedBack(feedback, message, value, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-has-value"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -1741,7 +1741,7 @@ exports[`UU5.Forms.InputMixin interface test setFeedBack(feedback, message, valu
 
 exports[`UU5.Forms.InputMixin interface test setInitial(msg, value, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -1791,7 +1791,7 @@ exports[`UU5.Forms.InputMixin interface test setInitial(msg, value, setStateCall
 
 exports[`UU5.Forms.InputMixin interface test setInitial(msg, value, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-has-value"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -1848,7 +1848,7 @@ exports[`UU5.Forms.InputMixin interface test setInitial(msg, value, setStateCall
 
 exports[`UU5.Forms.InputMixin interface test setLoading(message, value, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -1894,7 +1894,7 @@ exports[`UU5.Forms.InputMixin interface test setLoading(message, value, setState
 
 exports[`UU5.Forms.InputMixin interface test setLoading(message, value, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-has-value"
   id="idSelect"
   style={Object {}}
 >
@@ -1945,7 +1945,7 @@ exports[`UU5.Forms.InputMixin interface test setLoading(message, value, setState
 
 exports[`UU5.Forms.InputMixin interface test setMessage(msg, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -1991,7 +1991,7 @@ exports[`UU5.Forms.InputMixin interface test setMessage(msg, setStateCallBack) 1
 
 exports[`UU5.Forms.InputMixin interface test setMessage(msg, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -2038,7 +2038,7 @@ exports[`UU5.Forms.InputMixin interface test setMessage(msg, setStateCallBack) 2
 
 exports[`UU5.Forms.InputMixin interface test setSuccess(message, value, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -2084,7 +2084,7 @@ exports[`UU5.Forms.InputMixin interface test setSuccess(message, value, setState
 
 exports[`UU5.Forms.InputMixin interface test setSuccess(message, value, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-has-value"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -2140,7 +2140,7 @@ exports[`UU5.Forms.InputMixin interface test setSuccess(message, value, setState
 
 exports[`UU5.Forms.InputMixin interface test setWarning(message, value, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -2188,7 +2188,7 @@ exports[`UU5.Forms.InputMixin interface test setWarning(message, value, setState
 
 exports[`UU5.Forms.InputMixin interface test setWarning(message, value, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-has-value"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -2246,7 +2246,7 @@ exports[`UU5.Forms.InputMixin interface test setWarning(message, value, setState
 
 exports[`UU5.Forms.Select interface test addValue(value, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-multiple"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-multiple"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -2293,7 +2293,7 @@ exports[`UU5.Forms.Select interface test addValue(value, setStateCallBack) 1`] =
 
 exports[`UU5.Forms.Select interface test addValue(value, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-multiple uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-multiple uu5-forms-select-has-value"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -2342,475 +2342,6 @@ exports[`UU5.Forms.Select interface test addValue(value, setStateCallBack) 2`] =
         ]
       }
     />
-  </InputWrapper>
-</div>
-`;
-
-exports[`UU5.Forms.Select interface test close(setStateCallBack) 1`] = `
-<div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-multiple"
-  id="idSelect"
-  onClick={[Function]}
-  style={Object {}}
->
-  <label
-    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    content="Issue category"
-    for="idSelect-input"
-  />
-  <InputWrapper
-    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    disabled={false}
-    readonly={false}
-  >
-    <items-input
-      feedback="initial"
-      icon="mdi-menu-down"
-      id="idSelect-input"
-      inputWidth={null}
-      mainAttrs={
-        Object {
-          "onFocus": [Function],
-          "tabIndex": "0",
-        }
-      }
-      multiple={true}
-      name="idSelect-input"
-      onItemClick={[Function]}
-      readonly={false}
-      ref_={[Function]}
-      value={Array []}
-    />
-    <item-list
-      allowTags={Array []}
-      hidden={true}
-      multiple={true}
-      onChange={[Function]}
-      ref_={[Function]}
-      value={Array []}
-    />
-  </InputWrapper>
-</div>
-`;
-
-exports[`UU5.Forms.Select interface test close(setStateCallBack) 2`] = `
-<div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-open uu5-forms-select-multiple"
-  id="idSelect"
-  onClick={[Function]}
-  style={Object {}}
->
-  <label
-    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    content="Issue category"
-    for="idSelect-input"
-  />
-  <InputWrapper
-    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    disabled={false}
-    readonly={false}
-  >
-    <items-input
-      feedback="initial"
-      icon="mdi-menu-up"
-      id="idSelect-input"
-      inputWidth={null}
-      mainAttrs={
-        Object {
-          "className": "undefined uu5-forms-items-input-open",
-          "onFocus": [Function],
-          "tabIndex": "0",
-        }
-      }
-      multiple={true}
-      name="idSelect-input"
-      onItemClick={[Function]}
-      readonly={false}
-      ref_={[Function]}
-      value={Array []}
-    />
-    <item-list
-      allowTags={Array []}
-      multiple={true}
-      onChange={[Function]}
-      ref_={[Function]}
-      value={Array []}
-    >
-      <select-option
-        id="item01"
-        key=".0"
-        mainAttrs={
-          Object {
-            "tabIndex": "-1",
-          }
-        }
-        value="Info"
-      />
-      <select-option
-        id="item02"
-        key=".1"
-        mainAttrs={
-          Object {
-            "tabIndex": "-1",
-          }
-        }
-        value="Bug"
-      />
-      <select-option
-        id="item03"
-        key=".2"
-        mainAttrs={
-          Object {
-            "tabIndex": "-1",
-          }
-        }
-        value="Task"
-      />
-    </item-list>
-  </InputWrapper>
-</div>
-`;
-
-exports[`UU5.Forms.Select interface test close(setStateCallBack) 3`] = `
-<div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-multiple"
-  id="idSelect"
-  onClick={[Function]}
-  style={Object {}}
->
-  <label
-    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    content="Issue category"
-    for="idSelect-input"
-  />
-  <InputWrapper
-    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    disabled={false}
-    readonly={false}
-  >
-    <items-input
-      feedback="initial"
-      icon="mdi-menu-down"
-      id="idSelect-input"
-      inputWidth={null}
-      mainAttrs={
-        Object {
-          "onFocus": [Function],
-          "tabIndex": "0",
-        }
-      }
-      multiple={true}
-      name="idSelect-input"
-      onItemClick={[Function]}
-      readonly={false}
-      ref_={[Function]}
-      value={Array []}
-    />
-    <item-list
-      allowTags={Array []}
-      hidden={true}
-      multiple={true}
-      onChange={[Function]}
-      ref_={[Function]}
-      value={Array []}
-    />
-  </InputWrapper>
-</div>
-`;
-
-exports[`UU5.Forms.Select interface test isOpen() should return false 1`] = `
-<div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-multiple"
-  id="idSelect"
-  onClick={[Function]}
-  style={Object {}}
->
-  <label
-    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    content="Issue category"
-    for="idSelect-input"
-  />
-  <InputWrapper
-    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    disabled={false}
-    readonly={false}
-  >
-    <items-input
-      feedback="initial"
-      icon="mdi-menu-down"
-      id="idSelect-input"
-      inputWidth={null}
-      mainAttrs={
-        Object {
-          "onFocus": [Function],
-          "tabIndex": "0",
-        }
-      }
-      multiple={true}
-      name="idSelect-input"
-      onItemClick={[Function]}
-      readonly={false}
-      ref_={[Function]}
-      value={Array []}
-    />
-    <item-list
-      allowTags={Array []}
-      hidden={true}
-      multiple={true}
-      onChange={[Function]}
-      ref_={[Function]}
-      value={Array []}
-    />
-  </InputWrapper>
-</div>
-`;
-
-exports[`UU5.Forms.Select interface test isOpen() should return true 1`] = `
-<div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-multiple"
-  id="idSelect"
-  onClick={[Function]}
-  style={Object {}}
->
-  <label
-    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    content="Issue category"
-    for="idSelect-input"
-  />
-  <InputWrapper
-    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    disabled={false}
-    readonly={false}
-  >
-    <items-input
-      feedback="initial"
-      icon="mdi-menu-down"
-      id="idSelect-input"
-      inputWidth={null}
-      mainAttrs={
-        Object {
-          "onFocus": [Function],
-          "tabIndex": "0",
-        }
-      }
-      multiple={true}
-      name="idSelect-input"
-      onItemClick={[Function]}
-      readonly={false}
-      ref_={[Function]}
-      value={Array []}
-    />
-    <item-list
-      allowTags={Array []}
-      hidden={true}
-      multiple={true}
-      onChange={[Function]}
-      ref_={[Function]}
-      value={Array []}
-    />
-  </InputWrapper>
-</div>
-`;
-
-exports[`UU5.Forms.Select interface test isOpen() should return true 2`] = `
-<div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-open uu5-forms-select-multiple"
-  id="idSelect"
-  onClick={[Function]}
-  style={Object {}}
->
-  <label
-    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    content="Issue category"
-    for="idSelect-input"
-  />
-  <InputWrapper
-    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    disabled={false}
-    readonly={false}
-  >
-    <items-input
-      feedback="initial"
-      icon="mdi-menu-up"
-      id="idSelect-input"
-      inputWidth={null}
-      mainAttrs={
-        Object {
-          "className": "undefined uu5-forms-items-input-open",
-          "onFocus": [Function],
-          "tabIndex": "0",
-        }
-      }
-      multiple={true}
-      name="idSelect-input"
-      onItemClick={[Function]}
-      readonly={false}
-      ref_={[Function]}
-      value={Array []}
-    />
-    <item-list
-      allowTags={Array []}
-      multiple={true}
-      onChange={[Function]}
-      ref_={[Function]}
-      value={Array []}
-    >
-      <select-option
-        id="item01"
-        key=".0"
-        mainAttrs={
-          Object {
-            "tabIndex": "-1",
-          }
-        }
-        value="Info"
-      />
-      <select-option
-        id="item02"
-        key=".1"
-        mainAttrs={
-          Object {
-            "tabIndex": "-1",
-          }
-        }
-        value="Bug"
-      />
-      <select-option
-        id="item03"
-        key=".2"
-        mainAttrs={
-          Object {
-            "tabIndex": "-1",
-          }
-        }
-        value="Task"
-      />
-    </item-list>
-  </InputWrapper>
-</div>
-`;
-
-exports[`UU5.Forms.Select interface test open(setStateCallBack) 1`] = `
-<div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-multiple"
-  id="idSelect"
-  onClick={[Function]}
-  style={Object {}}
->
-  <label
-    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    content="Issue category"
-    for="idSelect-input"
-  />
-  <InputWrapper
-    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    disabled={false}
-    readonly={false}
-  >
-    <items-input
-      feedback="initial"
-      icon="mdi-menu-down"
-      id="idSelect-input"
-      inputWidth={null}
-      mainAttrs={
-        Object {
-          "onFocus": [Function],
-          "tabIndex": "0",
-        }
-      }
-      multiple={true}
-      name="idSelect-input"
-      onItemClick={[Function]}
-      readonly={false}
-      ref_={[Function]}
-      value={Array []}
-    />
-    <item-list
-      allowTags={Array []}
-      hidden={true}
-      multiple={true}
-      onChange={[Function]}
-      ref_={[Function]}
-      value={Array []}
-    />
-  </InputWrapper>
-</div>
-`;
-
-exports[`UU5.Forms.Select interface test open(setStateCallBack) 2`] = `
-<div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-open uu5-forms-select-multiple"
-  id="idSelect"
-  onClick={[Function]}
-  style={Object {}}
->
-  <label
-    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    content="Issue category"
-    for="idSelect-input"
-  />
-  <InputWrapper
-    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    disabled={false}
-    readonly={false}
-  >
-    <items-input
-      feedback="initial"
-      icon="mdi-menu-up"
-      id="idSelect-input"
-      inputWidth={null}
-      mainAttrs={
-        Object {
-          "className": "undefined uu5-forms-items-input-open",
-          "onFocus": [Function],
-          "tabIndex": "0",
-        }
-      }
-      multiple={true}
-      name="idSelect-input"
-      onItemClick={[Function]}
-      readonly={false}
-      ref_={[Function]}
-      value={Array []}
-    />
-    <item-list
-      allowTags={Array []}
-      multiple={true}
-      onChange={[Function]}
-      ref_={[Function]}
-      value={Array []}
-    >
-      <select-option
-        id="item01"
-        key=".0"
-        mainAttrs={
-          Object {
-            "tabIndex": "-1",
-          }
-        }
-        value="Info"
-      />
-      <select-option
-        id="item02"
-        key=".1"
-        mainAttrs={
-          Object {
-            "tabIndex": "-1",
-          }
-        }
-        value="Bug"
-      />
-      <select-option
-        id="item03"
-        key=".2"
-        mainAttrs={
-          Object {
-            "tabIndex": "-1",
-          }
-        }
-        value="Task"
-      />
-    </item-list>
   </InputWrapper>
 </div>
 `;

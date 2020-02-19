@@ -15,10 +15,11 @@
 import React from "react";
 import createReactClass from "create-react-class";
 import { lazy as _lazy } from "./suspense.js";
+import Element from "./element";
 //@@viewOff:imports
 
-export class Component {
-  static create(componentDescriptor) {
+export const Component = {
+  create(componentDescriptor) {
     let { defaultProps, displayName } = componentDescriptor;
 
     // replace defaultProps with getDefaultProps() method as required by createReactClass
@@ -26,7 +27,8 @@ export class Component {
       if (process.env.NODE_ENV !== "production" && componentDescriptor.getDefaultProps) {
         let name = (componentDescriptor.statics || {}).tagName || displayName;
         console.warn(
-          `Component ${name} is specified with 'defaultProps' as well as with 'getDefaultProps'. Only 'defaultProps' will be used, you should remove 'getDefaultProps'.`
+          `Component ${name} is specified with 'defaultProps' as well as with 'getDefaultProps'. Only 'defaultProps' will be used, you should remove 'getDefaultProps'.`,
+          componentDescriptor
         );
       }
       delete componentDescriptor.defaultProps;
@@ -46,15 +48,43 @@ export class Component {
       result.displayName = result.tagName;
     }
     return result;
-  }
+  },
 
-  static lazy(...args) {
+  createHoc(args) {
+    let { getProps, component, ...comp } = args;
+    const Comp = component;
+
+    if (typeof getProps !== "function") {
+      const msg = 'Function "getProps" is missing.';
+      console.error(msg, args);
+      throw msg;
+    } else if (!Comp) {
+      const msg = "Component is missing.";
+      console.error(msg, args);
+      throw msg;
+    } else if (Element.isValid(Comp)) {
+      const msg = `Component is an element like <Component />. Set component without <>.`;
+      console.error(msg, args);
+      throw msg;
+    }
+
+    comp = {
+      ...comp,
+      render() {
+        return <Comp {...getProps(this.props)} />;
+      }
+    };
+
+    return Component.create(comp);
+  },
+
+  lazy(...args) {
     return _lazy(...args);
-  }
+  },
 
-  static memo(...args) {
+  memo(...args) {
     return React.memo(...args);
   }
-}
+};
 
 export default Component;

@@ -155,7 +155,7 @@ describe(`UU5.Forms.Select props function -> InputMixin`, () => {
 
   it(`onChangeDefault() with callback`, () => {
     let callback = jest.fn();
-    let wrapper = shallow(
+    let wrapper = mount(
       <UU5.Forms.Select>
         <UU5.Forms.Select.Option value="Info" />
       </UU5.Forms.Select>

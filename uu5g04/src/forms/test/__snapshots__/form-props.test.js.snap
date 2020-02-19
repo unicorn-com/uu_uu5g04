@@ -10,7 +10,7 @@ exports[`UU5.Forms.Form check default default props from Mixins UU5.Forms.FormMi
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -45,7 +45,7 @@ exports[`UU5.Forms.Form props className="my-classname" 1`] = `
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -89,7 +89,7 @@ exports[`UU5.Forms.Form props controlled=false 1`] = `
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -133,7 +133,7 @@ exports[`UU5.Forms.Form props controlled=true 1`] = `
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -177,7 +177,7 @@ exports[`UU5.Forms.Form props default props 1`] = `
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -221,7 +221,7 @@ exports[`UU5.Forms.Form props disabled=false 1`] = `
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -265,7 +265,7 @@ exports[`UU5.Forms.Form props disabled=true 1`] = `
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -309,7 +309,7 @@ exports[`UU5.Forms.Form props footer={"type":"div","key":null,"ref":null,"props"
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -362,7 +362,7 @@ exports[`UU5.Forms.Form props header={"type":"div","key":null,"ref":null,"props"
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -416,7 +416,7 @@ exports[`UU5.Forms.Form props hidden=false 1`] = `
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -460,7 +460,7 @@ exports[`UU5.Forms.Form props hidden=true 1`] = `
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -504,7 +504,7 @@ exports[`UU5.Forms.Form props id="myId" 1`] = `
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -548,7 +548,7 @@ exports[`UU5.Forms.Form props mainAttrs=undefined 1`] = `
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -593,7 +593,7 @@ exports[`UU5.Forms.Form props name="myName" 1`] = `
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -637,7 +637,7 @@ exports[`UU5.Forms.Form props noIndex=false 1`] = `
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -681,7 +681,7 @@ exports[`UU5.Forms.Form props noIndex=true 1`] = `
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -725,7 +725,7 @@ exports[`UU5.Forms.Form props progressIndicator="Libovolný vstup pro progressIn
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -769,7 +769,7 @@ exports[`UU5.Forms.Form props pureRender=false 1`] = `
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -813,7 +813,7 @@ exports[`UU5.Forms.Form props pureRender=true 1`] = `
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -857,7 +857,7 @@ exports[`UU5.Forms.Form props saveOnEnter=false 1`] = `
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -901,7 +901,7 @@ exports[`UU5.Forms.Form props saveOnEnter=true 1`] = `
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -945,7 +945,7 @@ exports[`UU5.Forms.Form props selected=false 1`] = `
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -989,7 +989,7 @@ exports[`UU5.Forms.Form props selected=true 1`] = `
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -1038,7 +1038,7 @@ exports[`UU5.Forms.Form props style="padding:8px; borderRadius: 2px" 1`] = `
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -1087,7 +1087,7 @@ exports[`UU5.Forms.Form props style={"backgroundColor":"red","color":"blue"} 1`]
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -1131,7 +1131,7 @@ exports[`UU5.Forms.Form props tooltip="My Tooltip" 1`] = `
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -1175,7 +1175,7 @@ exports[`UU5.Forms.Form props underline=false 1`] = `
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -1219,7 +1219,7 @@ exports[`UU5.Forms.Form props underline=true 1`] = `
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider
@@ -1263,7 +1263,7 @@ exports[`UU5.Forms.Form props values={"input0":"Jan"} 1`] = `
 >
   <AlertBus
     closeTimer={null}
-    forceRender={true}
+    location="local"
     ref_={[Function]}
   />
   <ContextProvider

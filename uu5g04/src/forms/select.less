@@ -9,16 +9,6 @@
     cursor: default !important;
   }
 
-  &:not(.@{name}-select-has-value) .@{name}-input-form-item-value {
-    color: rgba(0,0,0,0.24);
-  }
-
-  &.@{name}-select-has-value .@{name}-input-form-item-value {
-    .@{name}-items-input-item-icon.@{name}-items-input-item-icon {
-      color: rgba(0, 0, 0, 0.54);
-    }
-  }
-
   &.color-schema-black {
     .uu5-common-bg-style-filled {
       .uu5-bricks-icon, .uu5-forms-input-form-item-value {
@@ -43,7 +33,6 @@
       }
     }
   }
-
 }
 
 .@{name}-select:after{
@@ -53,7 +42,20 @@
   clear: both;
 }
 
-.@{name}-select-open .@{name}-items-input{
+.@{name}-select-state-holder {
+  &:not(.@{name}-select-has-value) .@{name}-input-form-item-value {
+    color: rgba(0,0,0,0.24);
+  }
+
+  &.@{name}-select-has-value .@{name}-input-form-item-value {
+    .@{name}-items-input-item-icon.@{name}-items-input-item-icon {
+      color: rgba(0, 0, 0, 0.54);
+    }
+  }
+}
+
+.@{name}-select-open .@{name}-items-input,
+.@{name}-select-open.@{name}-items-input {
   z-index: 10;
   .elevation-mixin(inset 0 0 0 1px #2196F3);
 

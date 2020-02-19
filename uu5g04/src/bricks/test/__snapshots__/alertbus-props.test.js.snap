@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.AlertBus UU5.Bricks.AlertBus  onClose() 1`] = `
+exports[`UU5.Bricks.AlertBus UU5.Bricks.AlertBus onClose() 1`] = `
 <AlertBus
   content="Alert in Bus"
   header="AlertBus-onClose"
@@ -9,7 +9,7 @@ exports[`UU5.Bricks.AlertBus UU5.Bricks.AlertBus  onClose() 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.AlertBus UU5.Bricks.AlertBus  onClose() 2`] = `
+exports[`UU5.Bricks.AlertBus UU5.Bricks.AlertBus onClose() 2`] = `
 <AlertBus
   content="Alert in Bus"
   header="AlertBus-onClose"
@@ -22,7 +22,7 @@ exports[`UU5.Bricks.AlertBus block=false 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -32,7 +32,7 @@ exports[`UU5.Bricks.AlertBus block=true 1`] = `
   block={true}
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -41,7 +41,7 @@ exports[`UU5.Bricks.AlertBus ccrKey="<UU5.Parrot.Page ccrKey='UU5.Parrot.Page' /
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -50,7 +50,7 @@ exports[`UU5.Bricks.AlertBus className="my-classname" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus my-classname"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -59,7 +59,7 @@ exports[`UU5.Bricks.AlertBus closeDisabled=false 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -68,7 +68,7 @@ exports[`UU5.Bricks.AlertBus closeDisabled=true 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -77,7 +77,7 @@ exports[`UU5.Bricks.AlertBus closeTimer=1500 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -86,7 +86,7 @@ exports[`UU5.Bricks.AlertBus closeTimer=3000 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -95,7 +95,7 @@ exports[`UU5.Bricks.AlertBus colorSchema="brown" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -104,7 +104,7 @@ exports[`UU5.Bricks.AlertBus colorSchema="brown-rich" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -113,7 +113,7 @@ exports[`UU5.Bricks.AlertBus colorSchema="cyan" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -122,7 +122,7 @@ exports[`UU5.Bricks.AlertBus colorSchema="cyan-rich" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -131,7 +131,7 @@ exports[`UU5.Bricks.AlertBus colorSchema="default" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -140,7 +140,7 @@ exports[`UU5.Bricks.AlertBus colorSchema="green" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -149,7 +149,7 @@ exports[`UU5.Bricks.AlertBus colorSchema="green-rich" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -158,7 +158,7 @@ exports[`UU5.Bricks.AlertBus colorSchema="grey" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -167,7 +167,7 @@ exports[`UU5.Bricks.AlertBus colorSchema="grey-rich" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -176,7 +176,7 @@ exports[`UU5.Bricks.AlertBus colorSchema="orange" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -185,7 +185,7 @@ exports[`UU5.Bricks.AlertBus colorSchema="orange-rich" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -194,7 +194,7 @@ exports[`UU5.Bricks.AlertBus colorSchema="pink" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -203,7 +203,7 @@ exports[`UU5.Bricks.AlertBus colorSchema="pink-rich" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -212,7 +212,7 @@ exports[`UU5.Bricks.AlertBus colorSchema="purple" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -221,7 +221,7 @@ exports[`UU5.Bricks.AlertBus colorSchema="purple-rich" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -230,7 +230,7 @@ exports[`UU5.Bricks.AlertBus colorSchema="red" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -239,7 +239,7 @@ exports[`UU5.Bricks.AlertBus colorSchema="red-rich" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -248,7 +248,7 @@ exports[`UU5.Bricks.AlertBus colorSchema="yellow" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -257,7 +257,7 @@ exports[`UU5.Bricks.AlertBus colorSchema="yellow-rich" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -266,7 +266,7 @@ exports[`UU5.Bricks.AlertBus controlled=false 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -275,7 +275,7 @@ exports[`UU5.Bricks.AlertBus controlled=true 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -284,7 +284,34 @@ exports[`UU5.Bricks.AlertBus default props 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.AlertBus descending=false 1`] = `
+<Alert
+  className="uu5-bricks-alert-bus"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.AlertBus descending=true 1`] = `
+<Alert
+  className="uu5-bricks-alert-bus"
+  hidden={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.AlertBus descending=undefined 1`] = `
+<Alert
+  className="uu5-bricks-alert-bus"
+  hidden={true}
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -293,7 +320,7 @@ exports[`UU5.Bricks.AlertBus disabled=false 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -303,7 +330,7 @@ exports[`UU5.Bricks.AlertBus disabled=true 1`] = `
   className="uu5-bricks-alert-bus"
   disabled={true}
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -312,7 +339,7 @@ exports[`UU5.Bricks.AlertBus forceRender=false 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -321,7 +348,7 @@ exports[`UU5.Bricks.AlertBus forceRender=true 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -330,7 +357,7 @@ exports[`UU5.Bricks.AlertBus hidden=false 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -339,7 +366,7 @@ exports[`UU5.Bricks.AlertBus hidden=true 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -348,7 +375,7 @@ exports[`UU5.Bricks.AlertBus id="myId" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="myId-alert"
+  id="myId-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -357,7 +384,7 @@ exports[`UU5.Bricks.AlertBus mainAttrs=undefined 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -366,7 +393,7 @@ exports[`UU5.Bricks.AlertBus name="myName" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
   name="myName-inner"
 />
@@ -376,7 +403,7 @@ exports[`UU5.Bricks.AlertBus nestingLevel="bigBox" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
   nestingLevel="bigBox"
 />
@@ -386,7 +413,7 @@ exports[`UU5.Bricks.AlertBus nestingLevel="bigBoxCollection" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
   nestingLevel="bigBoxCollection"
 />
@@ -396,7 +423,7 @@ exports[`UU5.Bricks.AlertBus nestingLevel="box" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
   nestingLevel="box"
 />
@@ -406,7 +433,7 @@ exports[`UU5.Bricks.AlertBus nestingLevel="boxCollection" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
   nestingLevel="boxCollection"
 />
@@ -416,7 +443,7 @@ exports[`UU5.Bricks.AlertBus nestingLevel="container" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
   nestingLevel="container"
 />
@@ -428,7 +455,7 @@ exports[`UU5.Bricks.AlertBus nestingLevel="page" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
   nestingLevel="page"
 />
@@ -442,7 +469,7 @@ exports[`UU5.Bricks.AlertBus nestingLevel="spa" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
   nestingLevel="spa"
 />
@@ -452,7 +479,7 @@ exports[`UU5.Bricks.AlertBus noIndex=false 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -461,7 +488,7 @@ exports[`UU5.Bricks.AlertBus noIndex=true 1`] = `
 <Alert
   className="uu5-bricks-alert-bus uu5-noindex"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -470,7 +497,7 @@ exports[`UU5.Bricks.AlertBus position="center" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -479,7 +506,7 @@ exports[`UU5.Bricks.AlertBus position="left" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
   position="left"
 />
@@ -489,7 +516,7 @@ exports[`UU5.Bricks.AlertBus position="right" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
   position="right"
 />
@@ -499,7 +526,7 @@ exports[`UU5.Bricks.AlertBus pureRender=false 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -508,7 +535,7 @@ exports[`UU5.Bricks.AlertBus pureRender=true 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
   pureRender={true}
 />
@@ -518,7 +545,7 @@ exports[`UU5.Bricks.AlertBus selected=false 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
 />
 `;
@@ -527,7 +554,7 @@ exports[`UU5.Bricks.AlertBus selected=true 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
   selected={true}
 />
@@ -537,7 +564,7 @@ exports[`UU5.Bricks.AlertBus style="padding:8px; borderRadius: 2px" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
   style={
     Object {
@@ -552,7 +579,7 @@ exports[`UU5.Bricks.AlertBus style={"backgroundColor":"red","color":"blue"} 1`] 
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={Object {}}
   style={
     Object {
@@ -567,7 +594,7 @@ exports[`UU5.Bricks.AlertBus tooltip="My Tooltip" 1`] = `
 <Alert
   className="uu5-bricks-alert-bus"
   hidden={true}
-  id="uuID-alert"
+  id="uuID-inner"
   mainAttrs={
     Object {
       "title": "My Tooltip",

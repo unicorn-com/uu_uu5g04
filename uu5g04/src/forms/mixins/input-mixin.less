@@ -7,7 +7,8 @@
   flex-wrap: wrap;
   margin-top: 24px;
 
-  &.@{name}-input-inline::before { // secures a vertical align to baseline when a component doesnt have a label
+  &.@{name}-input-inline::before {
+    // secures a vertical align to baseline when a component doesnt have a label
     content: "\200b";
     align-self: center;
   }
@@ -25,6 +26,7 @@
     font-size: inherit;
     position: relative;
   }
+  &.@{name}-tag-select .@{name}-input-loading-icon,
   &.@{name}-select .@{name}-input-loading-icon,
   &.@{name}-slider .@{name}-input-loading-icon {
     display: inline-block;
@@ -37,20 +39,29 @@
     flex-grow: 1;
     align-items: baseline;
 
-    &.@{name}-input-inline, &.@{name}-input-auto-width { /* bigger specificity */
+    &.@{name}-input-inline,
+    &.@{name}-input-auto-width {
+      /* bigger specificity */
       margin-top: 0;
       margin-bottom: 0;
     }
   }
 
-  &.@{name}-input-inline, &.@{name}-input-label-width {
+  &.@{name}-input-inline,
+  &.@{name}-input-label-width {
     .@{name}-label {
       padding-left: 0;
     }
   }
 
-  &.@{name}-input-auto-width, &.@{name}-input-label-width {
-    &:not(.@{name}-slider) .@{name}-text-input, &.@{name}-file .@{name}-items-input, .@{name}-items-input, &.@{name}-checkbox .@{name}-right-wrapper, &.@{name}-tri-state-checkbox .@{name}-right-wrapper, .@{name}-slider-slider {
+  &.@{name}-input-auto-width,
+  &.@{name}-input-label-width {
+    &:not(.@{name}-slider) .@{name}-text-input,
+    &.@{name}-file .@{name}-items-input,
+    .@{name}-items-input,
+    &.@{name}-checkbox .@{name}-right-wrapper,
+    &.@{name}-tri-state-checkbox .@{name}-right-wrapper,
+    .@{name}-slider-slider {
       .@{name}-input-s& {
         width: 136px;
       }
@@ -75,12 +86,15 @@
     flex-grow: 1;
     align-items: baseline;
 
-    &.@{name}-input-inline, &.@{name}-input-auto-width { /* bigger specificity */
+    &.@{name}-input-inline,
+    &.@{name}-input-auto-width {
+      /* bigger specificity */
       margin-top: 0;
       margin-bottom: 0;
     }
 
-    .@{name}-input-wrapper-cover, .uu5-forms-input-button-wrapper {
+    .@{name}-input-wrapper-cover,
+    .uu5-forms-input-button-wrapper {
       width: auto;
     }
 
@@ -112,7 +126,9 @@
   }
 }
 
-.@{name}-input:last-child, .@{name}-datetimerangepicker:last-child, .@{name}-daterangepicker:last-child {
+.@{name}-input:last-child,
+.@{name}-datetimerangepicker:last-child,
+.@{name}-daterangepicker:last-child {
   margin-bottom: 24px;
 }
 
@@ -129,7 +145,8 @@
     right: 4px;
     left: auto;
     top: 4px;
-    &, & > svg {
+    &,
+    & > svg {
       width: 16px;
       height: 16px;
     }
@@ -140,7 +157,8 @@
   &.@{name}-radios .@{name}-input-loading-icon {
     left: 0px;
     top: 1px;
-    &, & > svg {
+    &,
+    & > svg {
       width: 18px;
       height: 18px;
     }
@@ -149,7 +167,8 @@
   &.@{name}-checkbox.@{name}-checkbox-type-switch .@{name}-input-loading-icon {
     left: 4px;
     top: 0px;
-    &, & > svg {
+    &,
+    & > svg {
       width: 16px;
       height: 16px;
     }
@@ -163,18 +182,21 @@
   &.@{name}-timepicker .@{name}-input-loading-icon {
     left: 4px;
     top: 4px;
-    &, & > svg {
+    &,
+    & > svg {
       width: 16px;
       height: 16px;
     }
   }
+  &.@{name}-tag-select .@{name}-input-loading-icon,
   &.@{name}-select .@{name}-input-loading-icon,
   &.@{name}-slider .@{name}-input-loading-icon,
   &.@{name}-number .@{name}-input-loading-icon {
     right: 4px;
     top: 4px;
     left: auto;
-    &, & > svg {
+    &,
+    & > svg {
       width: 16px;
       height: 16px;
     }
@@ -194,7 +216,8 @@
     right: 7px;
     left: auto;
     top: 7px;
-    &, & > svg {
+    &,
+    & > svg {
       width: 18px;
       height: 18px;
     }
@@ -205,7 +228,8 @@
   &.@{name}-tri-state-checkbox .@{name}-input-loading-icon {
     left: 0px;
     top: 0px;
-    &, & > svg {
+    &,
+    & > svg {
       width: 18px;
       height: 18px;
     }
@@ -214,7 +238,8 @@
   &.@{name}-checkbox.@{name}-checkbox-type-switch .@{name}-input-loading-icon {
     left: 9px;
     top: 3px;
-    &, & > svg {
+    &,
+    & > svg {
       width: 18px;
       height: 18px;
     }
@@ -228,18 +253,21 @@
   &.@{name}-timepicker .@{name}-input-loading-icon {
     left: 7px;
     top: 7px;
-    &, & > svg {
+    &,
+    & > svg {
       width: 18px;
       height: 18px;
     }
   }
+  &.@{name}-tag-select .@{name}-input-loading-icon,
   &.@{name}-select .@{name}-input-loading-icon,
   &.@{name}-slider .@{name}-input-loading-icon,
   &.@{name}-number .@{name}-input-loading-icon {
     right: 7px;
     top: 7px;
     left: auto;
-    &, & > svg {
+    &,
+    & > svg {
       width: 18px;
       height: 18px;
     }
@@ -259,7 +287,8 @@
     right: 8px;
     left: auto;
     top: 8px;
-    &, & > svg {
+    &,
+    & > svg {
       width: 24px;
       height: 24px;
     }
@@ -270,7 +299,8 @@
   &.@{name}-tri-state-checkbox .@{name}-input-loading-icon {
     left: 0px;
     top: 1px;
-    &, & > svg {
+    &,
+    & > svg {
       width: 24px;
       height: 24px;
     }
@@ -279,7 +309,8 @@
   &.@{name}-checkbox.@{name}-checkbox-type-switch .@{name}-input-loading-icon {
     left: 6px;
     top: 0px;
-    &, & > svg {
+    &,
+    & > svg {
       width: 24px;
       height: 24px;
     }
@@ -293,19 +324,22 @@
   &.@{name}-timepicker .@{name}-input-loading-icon {
     left: 8px;
     top: 8px;
-    &, & > svg {
+    &,
+    & > svg {
       width: 24px;
       height: 24px;
     }
   }
 
+  &.@{name}-tag-select .@{name}-input-loading-icon,
   &.@{name}-select .@{name}-input-loading-icon,
   &.@{name}-slider .@{name}-input-loading-icon,
   &.@{name}-number .@{name}-input-loading-icon {
     right: 8px;
     top: 8px;
     left: auto;
-    &, & > svg {
+    &,
+    & > svg {
       width: 24px;
       height: 24px;
     }
@@ -325,7 +359,8 @@
     right: 11px;
     left: auto;
     top: 11px;
-    &, & > svg {
+    &,
+    & > svg {
       width: 24px;
       height: 24px;
     }
@@ -336,7 +371,8 @@
   &.@{name}-tri-state-checkbox .@{name}-input-loading-icon {
     left: 0px;
     top: 1px;
-    &, & > svg {
+    &,
+    & > svg {
       width: 24px;
       height: 24px;
     }
@@ -345,7 +381,8 @@
   &.@{name}-checkbox.@{name}-checkbox-type-switch .@{name}-input-loading-icon {
     left: 11px;
     top: 3px;
-    &, & > svg {
+    &,
+    & > svg {
       width: 26px;
       height: 26px;
     }
@@ -359,26 +396,32 @@
   &.@{name}-timepicker .@{name}-input-loading-icon {
     left: 11px;
     top: 11px;
-    &, & > svg {
+    &,
+    & > svg {
       width: 26px;
       height: 26px;
     }
   }
 
+  &.@{name}-tag-select .@{name}-input-loading-icon,
   &.@{name}-select .@{name}-input-loading-icon,
   &.@{name}-slider .@{name}-input-loading-icon,
   &.@{name}-number .@{name}-input-loading-icon {
     right: 11px;
     top: 11px;
     left: auto;
-    &, & > svg {
+    &,
+    & > svg {
       width: 26px;
       height: 26px;
     }
   }
 }
 
-.@{name}-input-s .@{name}-input-button, .@{name}-input-m .@{name}-input-button, .@{name}-input-l .@{name}-input-button, .@{name}-input-xl .@{name}-input-button {
+.@{name}-input-s .@{name}-input-button,
+.@{name}-input-m .@{name}-input-button,
+.@{name}-input-l .@{name}-input-button,
+.@{name}-input-xl .@{name}-input-button {
   font-size: 1em;
 }
 
@@ -412,7 +455,7 @@
   color: rgba(0, 0, 0, 0.87);
   background-color: #fff;
   background-image: none;
-  border: 1px solid #BDBDBD;
+  border: 1px solid #bdbdbd;
   border-radius: 2px;
   transition: ~"border-color ease-in-out .15s, box-shadow ease-in-out .15s";
 
@@ -421,27 +464,28 @@
     border-radius: 0;
   }
 
-  &.uu5-common-bg-style-filled, &.uu5-common-bg-style-transparent {
+  &.uu5-common-bg-style-filled,
+  &.uu5-common-bg-style-transparent {
     border-width: 0;
   }
 }
 
 .@{name}-input-form-item:focus {
-  border-color: #2196F3;
+  border-color: #2196f3;
   outline: 0;
 }
 
 .@{name}-input-read-only .@{name}-input-form-item,
 .@{name}-input-read-only .@{name}-input-form-item:focus {
-  background-color: fade(#FFFFFF, 24%);
-  border-color: fade(#BDBDBD, 24%);
+  background-color: fade(#ffffff, 24%);
+  border-color: fade(#bdbdbd, 24%);
   cursor: default;
 }
 
 .uu5-common-disabled .@{name}-input-form-item {
-  border-color: fade(#BDBDBD, 42%);
-  background-color: fade(#F5F5F5, 42%);;
-  color: rgba(0,0,0,0.24);
+  border-color: fade(#bdbdbd, 42%);
+  background-color: fade(#f5f5f5, 42%);
+  color: rgba(0, 0, 0, 0.24);
 }
 
 .@{name}-input-form-item.uu5-common-disabled,
@@ -485,13 +529,17 @@
   top: 1.1em;
 }
 
-.@{name}-datepicker, .@{name}-timepicker, .@{name}-daterangepicker, .@{name}-datetimerangepicker {
+.@{name}-datepicker,
+.@{name}-timepicker,
+.@{name}-daterangepicker,
+.@{name}-datetimerangepicker {
   .@{name}-text-input .uu5-bricks-icon {
     color: rgba(0, 0, 0, 0.54);
   }
 }
 
-.@{name}-datepicker.uu5-common-disabled, .@{name}-timepicker.uu5-common-disabled {
+.@{name}-datepicker.uu5-common-disabled,
+.@{name}-timepicker.uu5-common-disabled {
   .@{name}-text-input .uu5-bricks-icon {
     color: rgba(0, 0, 0, 0.24);
   }
@@ -557,7 +605,7 @@
 
 .@{name}-items-input .uu5-bricks-icon,
 .@{name}-text-input .uu5-bricks-icon {
-  color: rgba(0,0,0,0.54);
+  color: rgba(0, 0, 0, 0.54);
 }
 
 .@{name}-input:not(.@{name}-checkboxes):not(.@{name}-radios) .input-wrapper {
@@ -620,8 +668,8 @@
   // .@{name}-input {
   //    display: block;
 
-    .@{name}-label {
-      padding: 0 0 8px;
+  .@{name}-label {
+    padding: 0 0 8px;
     // }
   }
 

@@ -119,10 +119,6 @@ export const ContextMenu = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _registerCompactMenu(ref) {
-    this._compactMenu = ref;
-  },
-
   _getPopoverContent(content) {
     return <ScreenSize>{opt => this._renderMenuType(opt, content)}</ScreenSize>;
   },
@@ -155,7 +151,6 @@ export const ContextMenu = UU5.Common.VisualComponent.create({
       return (
         <CompactContextMenu
           key={UU5.Common.Tools.generateUUID()}
-          ref_={this._registerCompactMenu}
           content={this.buildChildren({ content })}
           parent={this}
         />

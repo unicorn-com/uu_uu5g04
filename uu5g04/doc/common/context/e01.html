@@ -15,7 +15,8 @@
         "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
 
         "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
-        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-hooks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-hooks.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js"
       }
     });
   </script>
@@ -26,41 +27,85 @@
 <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
 <script type="text/babel">
   import UU5 from "uu5g04";
+  import { createComponent, createVisualComponent, useContext, useMemo } from "uu5g04-hooks";
   import "uu5g04-bricks";
 
   /*@@viewOn:example*/
   const LevelContext = UU5.Common.Context.create({ level: 0 });
 
-  const Level = UU5.Common.VisualComponent.create({
-    render() {
-      return (
-        <LevelContext.Consumer>
-          {context => {
-            let level = this.props.level ? this.props.level : (context.level + 1);
+  function useLevel() {
+    return useContext(LevelContext);
+  }
 
-            return (
-              <LevelContext.Provider value={{ level }}>
-                {this.props.children({ level })}
-              </LevelContext.Provider>
-            )
-          }}
-        </LevelContext.Consumer>
-      )
+  const Level = createComponent({
+    //@@viewOn:statics
+    displayName: "UU5.Demo.Level",
+    //@@viewOff:statics
+
+    //@@viewOn:propTypes
+    //@@viewOff:propTypes
+
+    //@@viewOn:defaultProps
+    //@@viewOff:defaultProps
+
+    render(props) {
+      //@@viewOn:hooks
+      const levelCtx = useLevel();
+      const level = props.level ? props.level : (levelCtx.level + 1);
+
+      const value = useMemo(() => ({ level }), [level]);
+      //@@viewOff:hooks
+
+      //@@viewOn:interface
+      //@@viewOff:interface
+
+      //@@viewOn:private
+      //@@viewOff:private
+
+      //@@viewOn:render
+      return (
+        <LevelContext.Provider value={value}>
+          {props.children(value)}
+        </LevelContext.Provider>
+      );
+      //@@viewOff:render
     }
   });
 
-  const Section = UU5.Common.VisualComponent.create({
-    render() {
+  const Section = createVisualComponent({
+    //@@viewOn:statics
+    displayName: "UU5.Demo.Section",
+    nestingLevel: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
+    //@@viewOff:statics
+
+    //@@viewOn:propTypes
+    //@@viewOff:propTypes
+
+    //@@viewOn:defaultProps
+    //@@viewOff:defaultProps
+
+    render(props) {
+      //@@viewOn:hooks
+      //@@viewOff:hooks
+
+      //@@viewOn:interface
+      //@@viewOff:interface
+
+      //@@viewOn:private
+      //@@viewOff:private
+
+      //@@viewOn:render
       return (
-        <Level level={this.props.level}>
+        <Level level={props.level}>
           {({ level }) => (
             <div>
-              {UU5.Common.Element.create("h" + level, null, this.props.header)}
-              {this.props.children}
+              {UU5.Common.Element.create("h" + level, null, props.header)}
+              {props.children}
             </div>
           )}
         </Level>
       )
+      //@@viewOff:render
     }
   });
 

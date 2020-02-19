@@ -1,203 +1,280 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
-  <title>SwitchSelector Demo</title>
+  <head>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"
+    />
+    <title>SwitchSelector Demo</title>
 
-  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
-  <script>
-    SystemJS.config({
-      "paths": {
-        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
-        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
-        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
-        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
-        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
-
-        "uu5g04": "/uu5g04.js",
-        "uu5g04-bricks": "/uu5g04-bricks.js",
-        "uu5g04-forms": "/uu5g04-forms.js"
+    <script>
+      if (!location.href.match(/^(about:|file:)/)) {
+        var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+        var bplSegmentCount = bplCookie ? Number(bplCookie[2]) : null;
+        if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+        var appBaseUrlPath = (
+          location.pathname
+            .split(/\//)
+            .slice(0, 1 + bplSegmentCount)
+            .join("/") + "/"
+        )
+          .replace(/\/+/g, "/")
+          .replace(/"/g, "");
+        var appAssetsRelativeUrlPath = "public/0.0.0/";
+        document.write(
+          '<base href="' +
+            appBaseUrlPath +
+            appAssetsRelativeUrlPath +
+            '" data-uu-app-base="' +
+            appBaseUrlPath +
+            '" data-uu-app-assets-base="' +
+            appAssetsRelativeUrlPath +
+            '">'
+        );
       }
-    });
-  </script>
-</head>
-<body>
-<div id="renderHere"></div>
+    </script>
 
-<!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
-<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
-<script type="text/babel">
-  import UU5 from "uu5g04";
-  import "uu5g04-bricks";
-  import "uu5g04-forms";
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+    <script>
+      var uu5g04 = "";
+      location.search.replace(/[?&]uu5g04=([^&#]*)/, function(m, g1) {
+        uu5g04 = g1;
+      });
+      var uu5g04Base = uu5g04 === "" ? "/" : "https://cdn.plus4u.net/uu-uu5g04/" + uu5g04 + "/";
+      SystemJS.config({
+        paths: {
+          systemjs: "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          react: "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
 
-  const items = [
-    { content: "Apple", value: "apple" },
-    { content: "Banana", value: "banana" },
-    { content: "Kiwi", value: "kiwi" }
-  ];
+          uu5g04: "/uu5g04.js",
+          "uu5g04-bricks": "/uu5g04-bricks.js",
+          "uu5g04-forms": "/uu5g04-forms.js"
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="renderHere"></div>
 
-  const Page = UU5.Common.VisualComponent.create({
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
 
-    getInitialState() {
-      return {
-        label: "Label",
-        message: undefined,
-        feedback: "initial",
-        size: "m",
-        disabled: false,
-        readOnly: false,
-        labelColWidth: "s-5",
-        inputColWidth: "s-7",
-        inputWidth: undefined,
-        labelWidth: undefined,
-        spacing: undefined,
-        tooltip: undefined,
-        tooltipIcon: undefined,
-        labelAlignment: "xs-left s-right",
+      const items = [
+        { content: "Apple", value: "apple" },
+        { content: "Banana", value: "banana" },
+        { content: "Kiwi", value: "kiwi" },
+        { content: "Kiwi1", value: "kiwi1" },
+        { content: "Kiwi2", value: "kiwi2" },
+        { content: "Kiwi3", value: "kiwi3" },
+        { content: "Kiwi4", value: "kiwi4" },
+        { content: "Kiwi5", value: "kiwi5" },
+        { content: "Kiwi6", value: "kiwi6" },
+        { content: "Kiwi7", value: "kiwi7" },
+        { content: "Kiwi8", value: "kiwi8" },
+        { content: "Kiwi9", value: "kiwi9" }
+      ];
 
-        bgStyle: "outline",
-        colorSchema: undefined,
-        elevation: undefined,
-        borderRadius: undefined,
-      };
-    },
+      const Page = createReactClass({
+        getInitialState() {
+          return {
+            label: "Label",
+            message: undefined,
+            feedback: "initial",
+            size: "m",
+            disabled: false,
+            readOnly: false,
+            labelColWidth: "s-5",
+            inputColWidth: "s-7",
+            inputWidth: undefined,
+            labelWidth: undefined,
+            spacing: undefined,
+            tooltip: undefined,
+            tooltipIcon: undefined,
+            openToContent: false,
+            labelAlignment: "xs-left s-right",
 
-    render() {
-      return (
-        <UU5.Bricks.Container>
-          <UU5.Bricks.Row>
-            <UU5.Bricks.Column colWidth="s-6">
-              <UU5.Forms.Text
-                label="Label"
-                value={this.state.label}
-                onBlur={(opt) => this.setState({ label: opt.value || undefined })}
-              />
-              <UU5.Forms.Select
-                label="Feedback"
-                value={this.state.feedback}
-                onChange={({ value }) => this.setState({ feedback: value })}
-              >
-                {["initial", "error", "warning", "success", "loading"].map(value => (
-                  <UU5.Forms.Select.Option key={value} value={value} />
-                ))}
-              </UU5.Forms.Select>
-              <UU5.Forms.Text
-                label="Message"
-                value={this.state.message}
-                onBlur={({ value }) => this.setState({ message: value || undefined })}
-              />
-              <UU5.Forms.Select
-                label="Size"
-                value={this.state.size}
-                onChange={({ value }) => this.setState({ size: value })}
-              >
-                {["s", "m", "l", "xl"].map(value => (
-                  <UU5.Forms.Select.Option key={value} value={value} />
-                ))}
-              </UU5.Forms.Select>
-              <UU5.Forms.Text
-                label="Label ColWidth"
-                value={this.state.labelColWidth}
-                onBlur={({ value }) => this.setState({ labelColWidth: value || undefined })}
-              />
-              <UU5.Forms.Text
-                label="Input ColWidth"
-                value={this.state.inputColWidth}
-                onBlur={({ value }) => this.setState({ inputColWidth: value || undefined })}
-              />
-              <UU5.Forms.Text
-                label="Label Width"
-                value={this.state.labelWidth == null ? "" : this.state.labelWidth + ""}
-                onBlur={({ value }) => this.setState({ labelWidth: /^\d+$/.test(value) ? +value : (value || undefined) })}
-              />
-              <UU5.Forms.Text
-                label="Input Width"
-                value={this.state.inputWidth == null ? "" : this.state.inputWidth + ""}
-                onBlur={({ value }) => this.setState({ inputWidth: /^\d+$/.test(value) ? +value : (value || undefined) })}
-              />
-              <UU5.Forms.Number
-                label="Spacing"
-                value={this.state.spacing}
-                onBlur={({ value }) => this.setState({ spacing: value ? +value : undefined })}
-                buttonHidden
-              />
-              <UU5.Forms.Text
-                label="Tooltip"
-                value={this.state.tooltip}
-                onBlur={({ value }) => this.setState({ tooltip: value || undefined })}
-              />
-              <UU5.Forms.Text
-                label="Tooltip Icon"
-                value={this.state.tooltipIcon}
-                onBlur={({ value }) => this.setState({ tooltipIcon: value || undefined })}
-              />
-              <UU5.Forms.Text
-                label="Label Alignment"
-                value={this.state.labelAlignment}
-                onBlur={({ value }) => this.setState({ labelAlignment: value || undefined })}
-              />
-              <UU5.Forms.Checkbox
-                label="Disabled"
-                value={this.state.disabled}
-                onChange={({ value }) => this.setState({ disabled: value })}
-              />
-              <UU5.Forms.Checkbox
-                label="ReadOnly"
-                value={this.state.readOnly}
-                onChange={({ value }) => this.setState({ readOnly: value })}
-              />
-            </UU5.Bricks.Column>
-            <UU5.Bricks.Column colWidth="s-6">
-              <UU5.Forms.Select
-                label="BgStyle"
-                value={this.state.bgStyle}
-                onChange={({ value }) => this.setState({ bgStyle: value })}
-              >
-                {["filled", "outline", "transparent", "underline"].map(value => (
-                  <UU5.Forms.Select.Option key={value} value={value} />
-                ))}
-              </UU5.Forms.Select>
-              <UU5.Forms.Select
-                label="ColorSchema"
-                value={this.state.colorSchema || ""}
-                onChange={({ value }) => this.setState({ colorSchema: value || undefined })}
-              >
-                {["", ...UU5.Environment.colorSchema].map(value => (
-                  <UU5.Forms.Select.Option key={value} value={value || ""} content={value || "undefined"} />
-                ))}
-              </UU5.Forms.Select>
-              <UU5.Forms.Select
-                label="Elevation"
-                value={this.state.elevation ? this.state.elevation + "" : ""}
-                onChange={({ value }) => this.setState({ elevation: (value == null || value === "") ? undefined : +value })}
-              >
-                {["", -1, 1, 2, 3, 4, 5].map(value => (
-                  <UU5.Forms.Select.Option key={value} value={value + ""} content={value || "undefined"} />
-                ))}
-              </UU5.Forms.Select>
-              <UU5.Forms.Text
-                label="BorderRadius"
-                value={this.state.borderRadius == null ? "" : this.state.borderRadius + ""}
-                onBlur={({ value }) => this.setState({ borderRadius: /^\d+$/.test(value) ? +value : (value || undefined) })}
-              />
-            </UU5.Bricks.Column>
-          </UU5.Bricks.Row>
+            bgStyle: "outline",
+            colorSchema: undefined,
+            elevation: undefined,
+            borderRadius: undefined
+          };
+        },
 
-          <UU5.Bricks.Row>
-            {/*@@viewOn:0*/}
-            <UU5.Forms.SwitchSelector
-              items={items}
-              {...this.state}
-            />
-            {/*@@viewOff:0*/}
-          </UU5.Bricks.Row>
-        </UU5.Bricks.Container>
-      );
-    }
-  });
+        render() {
+          return (
+            <UU5.Bricks.Container>
+              <div style={{ position: "fixed", right: "0", top: "0", zIndex: "100000" }}>
+                <UU5.Bricks.Dropdown
+                  label={"uu5g04" + (uu5g04 ? " CDN " + uu5g04 : " local") + " (" + UU5.Environment.version + ")"}
+                  items={[
+                    { label: "local", href: "?" },
+                    { label: "CDN 1.0.0", href: "?uu5g04=1.0.0" },
+                    { label: "CDN 1.14.0", href: "?uu5g04=1.14.0" }
+                  ]}
+                />
+              </div>
+              <UU5.Bricks.Row>
+                <UU5.Bricks.Column colWidth="s-6">
+                  <UU5.Forms.Text
+                    label="Label"
+                    value={this.state.label}
+                    onBlur={opt => this.setState({ label: opt.value || undefined })}
+                  />
+                  <UU5.Forms.Select
+                    label="Feedback"
+                    value={this.state.feedback}
+                    onChange={({ value }) => this.setState({ feedback: value })}
+                  >
+                    {["initial", "error", "warning", "success", "loading"].map(value => (
+                      <UU5.Forms.Select.Option key={value} value={value} />
+                    ))}
+                  </UU5.Forms.Select>
+                  <UU5.Forms.Text
+                    label="Message"
+                    value={this.state.message}
+                    onBlur={({ value }) => this.setState({ message: value || undefined })}
+                  />
+                  <UU5.Forms.Select
+                    label="Size"
+                    value={this.state.size}
+                    onChange={({ value }) => this.setState({ size: value })}
+                  >
+                    {["s", "m", "l", "xl"].map(value => (
+                      <UU5.Forms.Select.Option key={value} value={value} />
+                    ))}
+                  </UU5.Forms.Select>
+                  <UU5.Forms.Text
+                    label="Label ColWidth"
+                    value={this.state.labelColWidth}
+                    onBlur={({ value }) => this.setState({ labelColWidth: value || undefined })}
+                  />
+                  <UU5.Forms.Text
+                    label="Input ColWidth"
+                    value={this.state.inputColWidth}
+                    onBlur={({ value }) => this.setState({ inputColWidth: value || undefined })}
+                  />
+                  <UU5.Forms.Text
+                    label="Label Width"
+                    value={this.state.labelWidth == null ? "" : this.state.labelWidth + ""}
+                    onBlur={({ value }) =>
+                      this.setState({ labelWidth: /^\d+$/.test(value) ? +value : value || undefined })
+                    }
+                  />
+                  <UU5.Forms.Text
+                    label="Input Width"
+                    value={this.state.inputWidth == null ? "" : this.state.inputWidth + ""}
+                    onBlur={({ value }) =>
+                      this.setState({ inputWidth: /^\d+$/.test(value) ? +value : value || undefined })
+                    }
+                  />
+                  <UU5.Forms.Number
+                    label="Spacing"
+                    value={this.state.spacing}
+                    onBlur={({ value }) => this.setState({ spacing: value ? +value : undefined })}
+                    buttonHidden
+                  />
+                  <UU5.Forms.Text
+                    label="Tooltip"
+                    value={this.state.tooltip}
+                    onBlur={({ value }) => this.setState({ tooltip: value || undefined })}
+                  />
+                  <UU5.Forms.Text
+                    label="Tooltip Icon"
+                    value={this.state.tooltipIcon}
+                    onBlur={({ value }) => this.setState({ tooltipIcon: value || undefined })}
+                  />
+                  <UU5.Forms.Text
+                    label="Label Alignment"
+                    value={this.state.labelAlignment}
+                    onBlur={({ value }) => this.setState({ labelAlignment: value || undefined })}
+                  />
+                  <UU5.Forms.Checkbox
+                    label="Disabled"
+                    value={this.state.disabled}
+                    onChange={({ value }) => this.setState({ disabled: value })}
+                  />
+                  <UU5.Forms.Checkbox
+                    label="ReadOnly"
+                    value={this.state.readOnly}
+                    onChange={({ value }) => this.setState({ readOnly: value })}
+                  />
+                  <UU5.Forms.Checkbox
+                    label="openToContent"
+                    value={this.state.openToContent}
+                    onChange={({ value }) => this.setState({ openToContent: value })}
+                  />
+                </UU5.Bricks.Column>
+                <UU5.Bricks.Column colWidth="s-6">
+                  <UU5.Forms.Select
+                    label="BgStyle"
+                    value={this.state.bgStyle}
+                    onChange={({ value }) => this.setState({ bgStyle: value })}
+                  >
+                    {["filled", "outline", "transparent", "underline"].map(value => (
+                      <UU5.Forms.Select.Option key={value} value={value} />
+                    ))}
+                  </UU5.Forms.Select>
+                  <UU5.Forms.Select
+                    label="ColorSchema"
+                    value={this.state.colorSchema || ""}
+                    onChange={({ value }) => this.setState({ colorSchema: value || undefined })}
+                  >
+                    {["", ...UU5.Environment.colorSchema].map(value => (
+                      <UU5.Forms.Select.Option key={value} value={value || ""} content={value || "undefined"} />
+                    ))}
+                  </UU5.Forms.Select>
+                  <UU5.Forms.Select
+                    label="Elevation"
+                    value={this.state.elevation ? this.state.elevation + "" : ""}
+                    onChange={({ value }) =>
+                      this.setState({ elevation: value == null || value === "" ? undefined : +value })
+                    }
+                  >
+                    {["", -1, 1, 2, 3, 4, 5].map(value => (
+                      <UU5.Forms.Select.Option key={value} value={value + ""} content={value || "undefined"} />
+                    ))}
+                  </UU5.Forms.Select>
+                  <UU5.Forms.Text
+                    label="BorderRadius"
+                    value={this.state.borderRadius == null ? "" : this.state.borderRadius + ""}
+                    onBlur={({ value }) =>
+                      this.setState({ borderRadius: /^\d+$/.test(value) ? +value : value || undefined })
+                    }
+                  />
+                </UU5.Bricks.Column>
+              </UU5.Bricks.Row>
 
-  UU5.Common.DOM.render(<Page />, document.getElementById('renderHere'));
-</script>
-</body>
+              <UU5.Bricks.Row style={{ marginBottom: "24px" }}>
+                {/*@@viewOn:0*/}
+                <UU5.Forms.SwitchSelector name="selector" items={items} {...this.state} />
+                <UU5.Forms.Select {...this.state}>
+                  {items.map(item => (
+                    <UU5.Forms.Select.Option
+                      key={item.value}
+                      value={item.value + ""}
+                      content={item.value || "undefined"}
+                    />
+                  ))}
+                </UU5.Forms.Select>
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Row>
+            </UU5.Bricks.Container>
+          );
+        }
+      });
+
+      UU5.Common.DOM.render(<Page />, document.getElementById("renderHere"));
+    </script>
+  </body>
 </html>

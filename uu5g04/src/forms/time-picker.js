@@ -18,16 +18,15 @@ import ns from "./forms-ns.js";
 import TextInput from "./internal/text-input.js";
 import Time from "./time.js";
 
+import InputMixin from "./mixins/input-mixin.js";
 import TextInputMixin from "./mixins/text-input-mixin.js";
 
 import Context from "./form-context.js";
-import DateTools from "./internal/date-tools.js";
+import DateTools, { REGEXP } from "./internal/date-tools.js";
 
 import "./time-picker.less";
 //@@viewOff:imports
 
-const TIME_FORMAT_AM = "AM";
-const TIME_FORMAT_PM = "PM";
 const TIME_FORMAT_12 = "12";
 const TIME_FORMAT_24 = "24";
 
@@ -297,6 +296,10 @@ export const TimePicker = Context.withContext(
     //@@viewOff:overriding
 
     //@@viewOn:private
+    _registerInput(ref) {
+      this._textInput = ref;
+    },
+
     _setUpLimits(props) {
       let { timeFrom, timeTo, show24 } = DateTools.setupLimits(props);
       this._timeFrom = timeFrom;
@@ -432,7 +435,7 @@ export const TimePicker = Context.withContext(
         this._popover.open(
           {
             onClose: this._close,
-            aroundElement: this._textInput.findDOMNode(),
+            aroundElement: UU5.Common.DOM.findNode(this._textInput),
             position: "bottom",
             offset: this._shouldOpenToContent() ? 0 : 4,
             preventPositioning: this._shouldOpenToContent()
@@ -510,20 +513,19 @@ export const TimePicker = Context.withContext(
         } else if (this._checkRequired({ value: opt._data.result.value })) {
           opt.required = this.props.required;
           let result = opt._data.result || this.getChangeFeedback(opt);
-          //let result = this.getChangeFeedback(opt._data.result);
 
           if (
             !result.value ||
-            (this.props.format === TIME_FORMAT_12 && result.value.match(/^\d{1,2}:?\d{0,2} ?[PpAa]?\.?[Mm]?\.?$/)) ||
+            (this.props.format === TIME_FORMAT_12 && result.value.match(REGEXP.timeFormat12)) ||
             (this.props.seconds &&
               this.props.step === 1 &&
               this.props.format === TIME_FORMAT_12 &&
-              result.value.match(/^\d{1,2}:?\d{0,2}:?\d{0,2} ?[PpAa]?\.?[Mm]?\.?$/)) ||
-            (this.props.format === TIME_FORMAT_24 && result.value.match(/^\d{1,2}:?\d{0,2}$/)) ||
+              result.value.match(REGEXP.timeFormat12seconds)) ||
+            (this.props.format === TIME_FORMAT_24 && result.value.match(REGEXP.timeFormat24)) ||
             (this.props.seconds &&
               this.props.step === 1 &&
               this.props.format === TIME_FORMAT_24 &&
-              result.value.match(/^\d{1,2}:?\d{0,2}:?\d{0,2}$/))
+              result.value.match(REGEXP.timeFormat24seconds))
           ) {
             _callCallback = false;
             this._updateState(result, setStateCallback);
@@ -837,7 +839,7 @@ export const TimePicker = Context.withContext(
               icon={this._getFeedbackIcon()}
               iconClickable={false}
               loading={this.isLoading()}
-              ref_={item => (this._textInput = item)}
+              ref_={this._registerInput}
               feedback={this.getFeedback()}
               borderRadius={this.props.borderRadius}
               elevation={this.props.elevation}
@@ -846,8 +848,9 @@ export const TimePicker = Context.withContext(
               colorSchema={this.props.colorSchema}
               suffix={this.props.suffix}
               size={this.props.size}
+              key="input"
             />,
-            <UU5.Bricks.Popover {...this._getPopoverProps()}>
+            <UU5.Bricks.Popover {...this._getPopoverProps()} key="popover">
               {this.isOpen() ? <Time {...this._getTimeProps(this._parseTime(this.state.value))} /> : null}
             </UU5.Bricks.Popover>
           ])}

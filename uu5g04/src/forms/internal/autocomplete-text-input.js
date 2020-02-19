@@ -369,6 +369,7 @@ export const AutocompleteTextInput = UU5.Common.VisualComponent.create({
 
   _getInputProps() {
     return {
+      className: this.props.className,
       id: this.props.id,
       name: this.props.name || this.props.id,
       value: this.props.value || "",

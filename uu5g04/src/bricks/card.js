@@ -127,13 +127,7 @@ export const Card = UU5.Common.VisualComponent.create({
     }
 
     if (this.props.header) {
-      mainProps.className +=
-        " " +
-        Css.css(`
-        [id="${this.getId()}-inner-header"] {
-          margin-top: 0px;
-        }
-      `);
+      mainProps.className += " " + Css.css`& > .uu5-bricks-header:first-child { margin-top: 0px; }`;
     }
 
     return mainProps;

@@ -52,7 +52,8 @@ export const FloatingBox = UU5.Common.VisualComponent.create({
     draggable: UU5.PropTypes.bool,
     onDragStart: UU5.PropTypes.func,
     onDragMove: UU5.PropTypes.func,
-    onDragEnd: UU5.PropTypes.func
+    onDragEnd: UU5.PropTypes.func,
+    minDragArea: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number])
   },
   //@@viewOff:propTypes
   //@@viewOn:getDefaultProps
@@ -67,7 +68,8 @@ export const FloatingBox = UU5.Common.VisualComponent.create({
       position: null,
       onDragStart: null,
       onDragMove: null,
-      onDragEnd: null
+      onDragEnd: null,
+      minDragArea: "auto"
     };
   },
   //@@viewOff:getDefaultProps
@@ -89,8 +91,8 @@ export const FloatingBox = UU5.Common.VisualComponent.create({
   },
 
   componentDidMount() {
-    UU5.Environment.EventListener.addWindowEvent("resize", this.getId(), () => this._elementFitToViewPort(true));
-    this._elementFitToViewPort();
+    UU5.Environment.EventListener.addWindowEvent("resize", this.getId(), () => this._elementFitToViewPort());
+    this._elementFitToViewPort(true);
   },
 
   componentWillUnmount() {
@@ -105,53 +107,39 @@ export const FloatingBox = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _elementFitToViewPort(synthetic) {
-    const rect = this._getElement().getBoundingClientRect();
-    const newState = {};
+  _elementFitToViewPort(updateWantedPosition = false) {
+    let newState = {};
+    let { minLeft, maxLeft, minTop, maxTop, width, height } = this._getClampRect();
     let innerHeight = window.innerHeight;
     let innerWidth = window.innerWidth;
-    if (this.state.left !== undefined && this.state.left !== null) {
-      !synthetic && (newState.left = rect.left);
-      if (innerWidth - rect.width - (synthetic ? this.state.left : rect.left) >= 0) {
-        newState.renderLeft = rect.left;
-        newState.renderRight = null;
-      } else {
-        newState.renderRight = 0;
-        newState.renderLeft = null;
-      }
+
+    // update wanted position (so that this.state.left, etc., contains number, not values such as "30%")
+    let specifiedLeft = this.state.left;
+    let specifiedTop = this.state.top;
+    if (updateWantedPosition) {
+      let elementRect = this._getElement().getBoundingClientRect();
+      specifiedLeft = newState.left = elementRect.left;
+      specifiedTop = newState.top = elementRect.top;
     }
-    if (this.state.top !== undefined && this.state.top !== null) {
-      !synthetic && (newState.top = rect.top);
-      if (innerHeight - rect.height - (synthetic ? this.state.top : rect.top) >= 0) {
-        newState.renderTop = rect.top;
-        newState.renderBottom = null;
-      } else {
-        newState.renderBottom = 0;
-        newState.renderTop = null;
-      }
-    }
-    if (this.state.right !== undefined && this.state.right !== null) {
-      let right = parseInt(this.state.right);
-      !synthetic && (newState.right = innerWidth - rect.right);
-      if ((synthetic ? innerWidth - rect.width - (innerWidth - rect.right) : rect.left) >= 0) {
-        newState.renderRight = Math.min(right, innerWidth - rect.width);
-        newState.renderLeft = null;
-      } else {
-        newState.renderLeft = 0;
-        newState.renderRight = null;
-      }
-    }
-    if (this.state.bottom !== undefined && this.state.bottom !== null) {
-      !synthetic && (newState.bottom = rect.bottom);
-      if ((synthetic ? innerHeight - rect.height : rect.top) >= 0) {
-        newState.renderBottom = Math.max(0, innerHeight - rect.bottom);
-        newState.renderTop = null;
-      } else {
-        newState.renderTop = 0;
-        newState.renderBottom = null;
-      }
-    }
-    return this.setState(newState);
+
+    // fit element to viewport / clamping rectangle
+    let wantedLeft =
+      (specifiedLeft != null ? parseFloat(specifiedLeft) : innerWidth - parseFloat(this.state.right) - width) || 0;
+    let newLeft = Math.max(minLeft, Math.min(maxLeft, wantedLeft));
+    let preferLeftAlign = wantedLeft < minLeft || (wantedLeft <= maxLeft && specifiedLeft != null);
+    newState.renderLeft = preferLeftAlign ? newLeft : null;
+    newState.renderRight = preferLeftAlign ? null : innerWidth - width - newLeft;
+
+    let wantedTop =
+      (specifiedTop != null ? parseFloat(specifiedTop) : innerHeight - parseFloat(this.state.bottom) - height) || 0;
+    let newTop = Math.max(minTop, Math.min(maxTop, wantedTop));
+    let preferTopAlign = wantedTop < minTop || (wantedTop <= maxTop && specifiedTop != null);
+    newState.renderTop = preferTopAlign ? newTop : null;
+    newState.renderBottom = preferTopAlign ? null : innerHeight - height - newTop;
+
+    return this.setState(state =>
+      Object.keys(newState).some(key => newState[key] !== state[key]) ? newState : undefined
+    );
   },
 
   _removeEvents(e) {
@@ -202,30 +190,50 @@ export const FloatingBox = UU5.Common.VisualComponent.create({
     }
   },
 
+  _getClampRect() {
+    let element = this._getElement();
+    let { height, width } = element.getBoundingClientRect();
+
+    let { minDragArea } = this.props;
+    let reserveLeft = minDragArea === "auto" ? "auto" : parseFloat(minDragArea);
+    let reserveRight = minDragArea === "auto" ? "auto" : parseFloat(minDragArea);
+    let reserveBottom = minDragArea === "auto" ? "auto" : parseFloat(minDragArea);
+    let reserveTop = minDragArea === "auto" ? "auto" : parseFloat(minDragArea);
+
+    let maxTop = window.innerHeight - (reserveBottom !== "auto" ? Math.min(height, reserveBottom) : height);
+    let maxLeft = window.innerWidth - (reserveRight !== "auto" ? Math.min(width, reserveRight) : width);
+    let minTop =
+      reserveTop !== "auto"
+        ? Math.min(0, reserveTop - (this._dragElement ? this._dragElement.getBoundingClientRect().height : 0))
+        : 0;
+    let minLeft = reserveLeft !== "auto" ? Math.min(0, reserveLeft - width) : 0;
+
+    // check if vertical scrollbar exists
+    if (UU5.Common.Tools.getDocumentHeight() > window.innerHeight) {
+      maxLeft -= UU5.Environment.getScrollBarWidth();
+    }
+
+    return { minLeft, maxLeft, minTop, maxTop, width, height };
+  },
+
   _elementDrag(e) {
     e.preventDefault();
     e.stopPropagation();
     let pos1, pos2;
-    const element = this._getElement();
     pos1 = this.startX - (e.touches !== undefined ? e.touches[0].clientX : e.clientX);
     pos2 = this.startY - (e.touches !== undefined ? e.touches[0].clientY : e.clientY);
-    let elementHeight = element.offsetHeight;
-    let elementWidth = element.offsetWidth;
-    let maxTop = window.innerHeight - elementHeight;
-    let maxLeft = window.innerWidth - elementWidth;
-    let newState = { isDragged: true };
+    let { minLeft, maxLeft, minTop, maxTop } = this._getClampRect();
 
-    newState.left = Math.max(0, Math.min(maxLeft, this.startXOffset - pos1));
+    let newState = { isDragged: true };
+    newState.left = Math.max(minLeft, Math.min(maxLeft, this.startXOffset - pos1));
+    newState.right = null;
     newState.renderLeft = newState.left;
     newState.renderRight = null;
 
-    newState.top = Math.max(0, Math.min(maxTop, this.startYOffset - pos2));
+    newState.top = Math.max(minTop, Math.min(maxTop, this.startYOffset - pos2));
+    newState.bottom = null;
     newState.renderTop = newState.top;
     newState.renderBottom = null;
-
-    if (this.state.right !== undefined && this.state.right !== null) {
-      newState.right = window.innerWidth - newState.left - elementWidth;
-    }
 
     this.setState(newState);
 
@@ -255,6 +263,10 @@ export const FloatingBox = UU5.Common.VisualComponent.create({
       }
     }
     return result;
+  },
+
+  _setDragElementRef(ref) {
+    this._dragElement = ref;
   },
 
   _getMainAttrs() {
@@ -307,6 +319,7 @@ export const FloatingBox = UU5.Common.VisualComponent.create({
             this.getClassName("header")
           }
           id={this.getId() + "-draggable"}
+          ref={this._setDragElementRef}
         >
           {this.props.draggable === true ? <Icon icon="mdi-drag" className={this.getClassName("dragIcon")} /> : null}
           {typeof this.props.header === "string" ? (

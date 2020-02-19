@@ -15,106 +15,285 @@
         "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
 
         "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-hooks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-hooks.min.js",
         "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js"
       }
     });
   </script>
-
 </head>
 <body>
-<div id="renderHere"></div>
+<div id="uu5Example"></div>
 
 <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
 <script type="text/babel">
   import UU5 from "uu5g04";
   import "uu5g04-bricks";
+  import {
+    createComponent,
+    createVisualComponent,
+    useState,
+    useEffect,
+    useContext,
+    useMemo,
+    useRef
+  } from "uu5g04-hooks";
+
+  const NAMES = ["Anabel", "Evangeline", "Dannielle", "Domenic", "Armida", "Myrl", "Emmett", "Tracey", "Valeri", "Abel"];
+  const { common, ...colorsConfig } = UU5.Environment.colors;
+  const COLORS = Object.keys(colorsConfig);
+
+  const NAME_INTERVAL = 4000;
+  const COLOR_INTERVAL = 3000;
 
   //@@viewOn:example
-  const NAMES = ["Anabel", "Evangeline", "Dannielle", "Domenic", "Armida", "Myrl", "Emmett", "Tracey", "Valeri", "Abel"];
-  const SURNAMES = ["Kissner", "Pettengill", "Bastarache", "Vrooman", "Wichman", "Rager", "Vath", "Otto", "Gressett", "Bulloch"];
+  const UserContext = UU5.Common.Context.create();
 
-  const UserNameContext = UU5.Common.Context.create();
+  const UserProvider = createComponent({
+    //@@viewOn:statics
+    displayName: "UU5.Demo.UserProvider",
+    //@@viewOff:statics
 
-  const UserNameProvider = UU5.Common.VisualComponent.create({
-    getInitialState() {
-      return {
-        user: {
-          name: NAMES[Math.floor(Math.random() * 10)]
-        }
-      }
-    },
+    //@@viewOn:propTypes
+    //@@viewOff:propTypes
 
-    componentDidMount() {
-      this._interval = setInterval(() => this.setState(
-        { user: { name: NAMES[Math.floor(Math.random() * 10)] } }
-      ), 4000);
-    },
+    //@@viewOn:defaultProps
+    //@@viewOff:defaultProps
 
-    componentWillUnmount() {
-      clearInterval(this._interval);
-    },
+    render(props) {
+      //@@viewOn:hooks
+      const [name, setName] = useState(NAMES[Math.floor(Math.random() * 10)]);
+      const user = useMemo(() => ({ name, setName }), [name]);
 
-    render() {
+      useEffect(() => {
+        const interval = setInterval(() => setName(NAMES[Math.floor(Math.random() * 10)]), NAME_INTERVAL);
+        return () => clearInterval(interval);
+      }, []);
+      //@@viewOff:hooks
+
+      //@@viewOn:interface
+      //@@viewOff:interface
+
+      //@@viewOn:private
+      //@@viewOff:private
+
+      //@@viewOn:render
       return (
-        <UserNameContext.Provider value={this.state.user}>
-          {this.props.children}
-        </UserNameContext.Provider>
-      )
+        <UserContext.Provider value={user}>
+          {props.children}
+        </UserContext.Provider>
+      );
+      //@@viewOff:render
     }
   });
 
-  const UserSurnameContext = UU5.Common.Context.create();
+  function useUser() {
+    return useContext(UserContext);
+  }
 
-  const UserSurnameProvider = UU5.Common.VisualComponent.create({
-    getInitialState() {
-      return {
-        user: { surname: SURNAMES[Math.floor(Math.random() * 10)] }
-      }
-    },
+  const UserName = createVisualComponent({
+    //@@viewOn:statics
+    displayName: "UU5.Demo.UserName",
+    nestingLevel: "inline",
+    //@@viewOn:statics
 
-    componentDidMount() {
-      this._interval = setInterval(() => this.setState(
-        { user: { surname: SURNAMES[Math.floor(Math.random() * 10)] } }
-      ), 3000);
-    },
+    //@@viewOn:propTypes
+    //@@viewOff:propTypes
 
-    componentWillUnmount() {
-      clearInterval(this._interval);
-    },
+    //@@viewOn:defaultProps
+    //@@viewOff:defaultProps
 
-    render() {
+    render(props) {
+      //@@viewOn:hooks
+      const user = useUser();
+
+      // just for count of renders
+      const counter = useRef(1);
+      useEffect(() => {
+        counter.current++
+      });
+      //@@viewOff:hooks
+
+      //@@viewOn:interface
+      //@@viewOff:interface
+
+      //@@viewOn:private
+      //@@viewOff:private
+
+      //@@viewOn:render
+      const attrs = UU5.Common.VisualComponent.getAttrs(props);
+      // TODO nestingLevel
+
       return (
-        <UserSurnameContext.Provider value={this.state.user}>
-          {this.props.children}
-        </UserSurnameContext.Provider>
-      )
+        <span {...attrs}>{user.name} ({counter.current}x rendered)</span>
+      );
+      //@@viewOff:render
+    }
+  });
+  //@@viewOff:example
+
+  const ColorContext = UU5.Common.Context.create();
+
+  const ColorProvider = createComponent({
+    //@@viewOn:statics
+    displayName: "UU5.Demo.ColorProvider",
+    //@@viewOff:statics
+
+    //@@viewOn:propTypes
+    //@@viewOff:propTypes
+
+    //@@viewOn:defaultProps
+    //@@viewOff:defaultProps
+
+    render(props) {
+      //@@viewOn:hooks
+      const [color, setColor] = useState(COLORS[Math.floor(Math.random() * COLORS.length)]);
+      const colorCtx = useMemo(() => ({ color, setColor }), [color]);
+
+      useEffect(() => {
+        const interval = setInterval(() => setColor(COLORS[Math.floor(Math.random() * COLORS.length)]), COLOR_INTERVAL);
+        return () => clearInterval(interval);
+      }, []);
+      //@@viewOff:hooks
+
+      //@@viewOn:interface
+      //@@viewOff:interface
+
+      //@@viewOn:private
+      //@@viewOff:private
+
+      //@@viewOn:render
+      return (
+        <ColorContext.Provider value={colorCtx}>
+          {props.children}
+        </ColorContext.Provider>
+      );
+      //@@viewOff:render
     }
   });
 
+  function useColor() {
+    return useContext(ColorContext);
+  }
+
+  const Color = createVisualComponent({
+    //@@viewOn:statics
+    displayName: "UU5.Demo.Color",
+    nestingLevel: "box",
+    //@@viewOn:statics
+
+    //@@viewOn:propTypes
+    //@@viewOff:propTypes
+
+    //@@viewOn:defaultProps
+    //@@viewOff:defaultProps
+
+    render(props) {
+      //@@viewOn:hooks
+      const colorCtx = useColor();
+
+      const counter = useRef(1);
+      useEffect(() => {
+        counter.current++
+      });
+      //@@viewOff:hooks
+
+      //@@viewOn:interface
+      //@@viewOff:interface
+
+      //@@viewOn:private
+      //@@viewOff:private
+
+      //@@viewOn:render
+      const attrs = UU5.Common.VisualComponent.getAttrs(props);
+      // TODO nestingLevel
+
+      return (
+        <UU5.Bricks.Box {...attrs} colorSchema={colorCtx.color}>
+          {colorCtx.color} ({counter.current}x rendered)
+        </UU5.Bricks.Box>
+      );
+      //@@viewOff:render
+    }
+  });
+
+  //@@viewOn:example
+
+  const ColoredUserName = createVisualComponent({
+    //@@viewOn:statics
+    displayName: "UU5.Demo.ColoredUserName",
+    nestingLevel: "box",
+    //@@viewOn:statics
+
+    //@@viewOn:propTypes
+    //@@viewOff:propTypes
+
+    //@@viewOn:defaultProps
+    //@@viewOff:defaultProps
+
+    render(props) {
+      //@@viewOn:hooks
+      const user = useUser();
+      const colorCtx = useColor();
+
+      const counter = useRef(1);
+      useEffect(() => {
+        counter.current++
+      }, [user, colorCtx.color]);
+      //@@viewOff:hooks
+
+      //@@viewOn:interface
+      //@@viewOff:interface
+
+      //@@viewOn:private
+      //@@viewOff:private
+
+      //@@viewOn:render
+      const attrs = UU5.Common.VisualComponent.getAttrs(props);
+      // TODO nestingLevel
+
+      return (
+        <UU5.Bricks.Box {...attrs} colorSchema={colorCtx.color}>
+          {user.name} ({counter.current}x rendered)
+        </UU5.Bricks.Box>
+      );
+      //@@viewOff:render
+    }
+  });
+  //@@viewOff:example
+
+  const Duration = createVisualComponent({
+    render(props) {
+      const [duration, setDuration] = useState(0);
+
+      useEffect(() => {
+        const interval = setInterval(() => setDuration(duration => ++duration), 1000);
+        return () => clearInterval(interval);
+      }, []);
+
+      return "Duration: " + duration + "s";
+    }
+  });
+
+  //@@viewOn:example
   function Page() {
     return (
-      <UU5.Bricks.Container>
-        <UserNameProvider>
-          <UserSurnameProvider>
-            <UU5.Bricks.Text colorSchema="orange" nestingLevel="inline">
-              <UserNameContext.Consumer>
-                {({ name }) => name}
-              </UserNameContext.Consumer>
-            </UU5.Bricks.Text>
-            &nbsp;
-            <UU5.Bricks.Text colorSchema="blue" nestingLevel="inline">
-              <UserSurnameContext.Consumer>
-                {({ surname }) => surname}
-              </UserSurnameContext.Consumer>
-            </UU5.Bricks.Text>
-          </UserSurnameProvider>
-        </UserNameProvider>
+      <UU5.Bricks.Container header={<Duration />} level={1}>
+        <UserProvider>
+          <ColorProvider>
+            Name is rendered each {NAME_INTERVAL / 1000}s: <UserName /><br /><br />
+            Color is rendered each {COLOR_INTERVAL / 1000}s:
+            <Color /><br /><br/>
+            Name and color are used together:
+            <ColoredUserName />
+          </ColorProvider>
+        </UserProvider>
       </UU5.Bricks.Container>
     )
   }
+
   //@@viewOff:example
 
-  UU5.Common.DOM.render(<Page />, document.getElementById('renderHere'));
+  UU5.Common.DOM.render(<Page />, document.getElementById('uu5Example'));
 </script>
 </body>
 </html>

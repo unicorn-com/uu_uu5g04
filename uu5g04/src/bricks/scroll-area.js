@@ -83,7 +83,10 @@ export const ScrollArea = UU5.Common.VisualComponent.create({
             styles.push("overflow-y: auto;");
           }
         } else {
-          styles.push("overflow-y: auto;");
+          styles.push(`
+            overflow-y: auto;
+            overscroll-behavior: contain;
+          `);
         }
 
         if (state.hasScrollbar && !props.reserveSpace) {

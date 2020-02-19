@@ -56,4 +56,32 @@ function createVisualComponentWithRef(component) {
   return createVisualComponent(component, true);
 }
 
-export { createComponent, createComponentWithRef, createVisualComponent, createVisualComponentWithRef };
+function createHoc(args) {
+  let { getProps, component, ...comp } = args;
+  const Component = component;
+
+  if (typeof getProps !== "function") {
+    const msg = 'Function "getProps" is missing.';
+    console.error(msg, args);
+    throw msg;
+  } else if (!Component) {
+    const msg = "Component is missing.";
+    console.error(msg, args);
+    throw msg;
+  } else if (UU5.Common.Element.isValid(Component)) {
+    const msg = `Component is an element like <Component />. Set component without <>.`;
+    console.error(msg, args);
+    throw msg;
+  }
+
+  comp = {
+    ...comp,
+    render(props, ref) {
+      return <Component ref={ref} {...getProps(props)} />;
+    }
+  };
+
+  return createComponentWithRef(comp);
+}
+
+export { createComponent, createComponentWithRef, createVisualComponent, createVisualComponentWithRef, createHoc };

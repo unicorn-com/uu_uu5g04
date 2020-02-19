@@ -16,6 +16,7 @@ import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
 import TextInput from "./internal/text-input.js";
 import Time from "./time.js";
+import InputMixin from "./mixins/input-mixin.js";
 import TextInputMixin from "./mixins/text-input-mixin.js";
 
 import Context from "./form-context.js";
@@ -457,6 +458,15 @@ export const DateTimePicker = Context.withContext(
     //@@viewOff:overriding
 
     //@@viewOn:private
+    _registerDateInput(ref) {
+      this._textInput = ref;
+      this._calendarTextInput = ref;
+    },
+
+    _registerTimeInput(ref) {
+      this._timeTextInput = ref;
+    },
+
     _getOutputValue(value, props = this.props) {
       if (value) {
         let dateObject;
@@ -733,7 +743,7 @@ export const DateTimePicker = Context.withContext(
         this._calendarPopover.open(
           {
             onClose: this._closeCalendar,
-            aroundElement: this._calendarTextInput.findDOMNode(),
+            aroundElement: UU5.Common.DOM.findNode(this._calendarTextInput),
             position: "bottom",
             offset: this._shouldOpenToContent() ? 0 : 4
           },
@@ -749,7 +759,7 @@ export const DateTimePicker = Context.withContext(
         this._timePopover.open(
           {
             onClose: this._closeTime,
-            aroundElement: this._timeTextInput.findDOMNode(),
+            aroundElement: UU5.Common.DOM.findNode(this._timeTextInput),
             position: "bottom",
             offset: this._shouldOpenToContent() ? 0 : 4,
             horizontalOnly: this._shouldOpenToContent()
@@ -1065,11 +1075,15 @@ export const DateTimePicker = Context.withContext(
       let minutes = ((value && value.split(":")[1]) || "").split(" ")[0];
       let seconds =
         this.props.seconds && this.props.timeStep === 1 && value && (value.split(":")[2] || "").split(" ")[0];
-      let dayPart =
-        this.props.timeFormat == "12" &&
-        value &&
-        (value.slice(-2) == "AM" || value.slice(-2) == "PM") &&
-        value.slice(-2);
+      let dayPart = value.slice(-2);
+
+      if (
+        !value ||
+        this.props.timeFormat != TIME_FORMAT_12 ||
+        !(dayPart === TIME_FORMAT_AM && dayPart === TIME_FORMAT_PM)
+      ) {
+        dayPart = null;
+      }
 
       if (this.props.seconds && this.props.timeStep === 1) {
         isValidValue =
@@ -1467,11 +1481,11 @@ export const DateTimePicker = Context.withContext(
 
     _getTimeInputAttrs() {
       let props = this.props.timeInputAttrs || {};
+      let colorSchema = this.getColorSchema();
       props = UU5.Common.Tools.merge({ autoComplete: "off" }, props);
 
       props.className =
-        (props.className ? (props.className += " ") : "") +
-        (this.getColorSchema() ? "color-schema-" + this.getColorSchema() : "");
+        (props.className ? (props.className += " ") : "") + (colorSchema ? "color-schema-" + colorSchema : "");
       props.className === "" ? delete props.className : null;
 
       if (!this.isReadOnly() && !this.isComputedDisabled()) {
@@ -1525,13 +1539,13 @@ export const DateTimePicker = Context.withContext(
       attrs.id = this.getId();
 
       if (this._isCalendarOpen()) {
-        attrs.className += " " + this.getClassName().datepickerOpen;
+        attrs.className += " " + this.getClassName("datepickerOpen");
       } else if (this._isTimeOpen()) {
-        attrs.className += " " + this.getClassName().timepickerOpen;
+        attrs.className += " " + this.getClassName("timepickerOpen");
       }
 
       if (this._shouldOpenToContent()) {
-        attrs.className += " " + this.getClassName().screenSizeBehaviour;
+        attrs.className += " " + this.getClassName("screenSizeBehaviour");
       }
 
       if (!this.isReadOnly() && !this.isComputedDisabled()) {
@@ -1625,10 +1639,7 @@ export const DateTimePicker = Context.withContext(
                 feedback={this.state.feedback}
                 message={this.state.message}
                 iconClickable={false}
-                ref_={item => {
-                  this._textInput = item;
-                  this._calendarTextInput = item;
-                }}
+                ref_={this._registerDateInput}
                 className={this.getClassName("dateInput")}
                 borderRadius={this.props.borderRadius}
                 elevation={this.props.elevation}
@@ -1656,7 +1667,7 @@ export const DateTimePicker = Context.withContext(
                 feedback={this.state.feedback}
                 message={this.state.message}
                 iconClickable={false}
-                ref_={item => (this._timeTextInput = item)}
+                ref_={this._registerTimeInput}
                 className={
                   this.getClassName("timeInput") + (this.props.seconds ? " " + this.getClassName("seconds") : "")
                 }
@@ -1680,7 +1691,7 @@ export const DateTimePicker = Context.withContext(
         </div>
       );
     }
-    //@@viewOn:render
+    //@@viewOff:render
   })
 );
 

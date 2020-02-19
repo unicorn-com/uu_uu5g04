@@ -18,42 +18,8 @@ import "uu5g04-forms";
 const { mount, shallow, wait } = UU5.Test.Tools;
 
 describe("UU5.Forms.Select interface test", () => {
-  it("isOpen() should return false", () => {
-    const wrapper = shallow(
-      <UU5.Forms.Select id={"idSelect"} label="Issue category" disableBackdrop multiple>
-        <UU5.Forms.Select.Option id={"item01"} value="Info" />
-        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
-        <UU5.Forms.Select.Option id={"item03"} value="Task" />
-      </UU5.Forms.Select>
-    );
-    expect(wrapper.instance().state.open).toBeFalsy();
-    expect(wrapper.instance().isOpen()).toBeFalsy();
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it("isOpen() should return true", () => {
-    const wrapper = shallow(
-      <UU5.Forms.Select id={"idSelect"} label="Issue category" disableBackdrop multiple>
-        <UU5.Forms.Select.Option id={"item01"} value="Info" />
-        <UU5.Forms.Select.Option id={"item02"} value="Bug" />
-        <UU5.Forms.Select.Option id={"item03"} value="Task" />
-      </UU5.Forms.Select>
-    );
-    const mockFunc = jest.fn();
-    expect(wrapper.instance().state.open).toBeFalsy();
-    expect(wrapper.instance().isOpen()).toBeFalsy();
-    expect(wrapper).toMatchSnapshot();
-    const returnOpen = wrapper.instance().open(mockFunc);
-    wrapper.update();
-    expect(wrapper.instance().state.open).toBeTruthy();
-    expect(wrapper.instance().isOpen()).toBeTruthy();
-    expect(mockFunc).toBeCalled();
-    expect(returnOpen).toBe(wrapper.instance());
-    expect(wrapper).toMatchSnapshot();
-  });
-
   it("open(setStateCallBack)", () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <UU5.Forms.Select id={"idSelect"} label="Issue category" disableBackdrop multiple>
         <UU5.Forms.Select.Option id={"item01"} value="Info" />
         <UU5.Forms.Select.Option id={"item02"} value="Bug" />
@@ -61,20 +27,16 @@ describe("UU5.Forms.Select interface test", () => {
       </UU5.Forms.Select>
     );
     const mockFunc = jest.fn();
-    expect(wrapper.instance().state.open).toBeFalsy();
     expect(wrapper.instance().isOpen()).toBeFalsy();
-    expect(wrapper).toMatchSnapshot();
     const returnOpen = wrapper.instance().open(mockFunc);
     wrapper.update();
-    expect(wrapper.instance().state.open).toBeTruthy();
     expect(wrapper.instance().isOpen()).toBeTruthy();
     expect(mockFunc).toBeCalled();
     expect(returnOpen).toBe(wrapper.instance());
-    expect(wrapper).toMatchSnapshot();
   });
 
   it("close(setStateCallBack)", () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <UU5.Forms.Select id={"idSelect"} label="Issue category" disableBackdrop multiple>
         <UU5.Forms.Select.Option id={"item01"} value="Info" />
         <UU5.Forms.Select.Option id={"item02"} value="Bug" />
@@ -82,23 +44,17 @@ describe("UU5.Forms.Select interface test", () => {
       </UU5.Forms.Select>
     );
     const mockFunc = jest.fn();
-    expect(wrapper.instance().state.open).toBeFalsy();
     expect(wrapper.instance().isOpen()).toBeFalsy();
-    expect(wrapper).toMatchSnapshot();
     const returnOpen = wrapper.instance().open(mockFunc);
     wrapper.update();
-    expect(wrapper.instance().state.open).toBeTruthy();
     expect(wrapper.instance().isOpen()).toBeTruthy();
     expect(mockFunc).toBeCalled();
     expect(returnOpen).toBe(wrapper.instance());
-    expect(wrapper).toMatchSnapshot();
     const returnClose = wrapper.instance().close(mockFunc);
     wrapper.update();
     expect(mockFunc).toHaveBeenCalledTimes(2);
     expect(returnClose).toBe(wrapper.instance());
-    expect(wrapper.instance().state.open).toBeFalsy();
     expect(wrapper.instance().isOpen()).toBeFalsy();
-    expect(wrapper).toMatchSnapshot();
   });
 
   it("toggle(setStateCallBack)", () => {
@@ -110,21 +66,18 @@ describe("UU5.Forms.Select interface test", () => {
       </UU5.Forms.Select>
     );
     const mockFunc = jest.fn();
-    expect(wrapper.instance().state.open).toBeFalsy();
     expect(wrapper.instance().isOpen()).toBeFalsy();
     const openMenu = wrapper.instance().toggle(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(openMenu).toBe(wrapper.instance());
-    expect(wrapper.instance().state.open).toBeTruthy();
     expect(wrapper.instance().isOpen()).toBeTruthy();
     const closeMenu = wrapper.instance().toggle(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(2);
     expect(closeMenu).toBe(wrapper.instance());
-    expect(wrapper.instance().state.open).toBeFalsy();
     expect(wrapper.instance().isOpen()).toBeFalsy();
   });
 

@@ -257,7 +257,9 @@ export const Environment = {
   COMPONENT_REGISTRY_URL:
     "https://uuos9.plus4u.net/uu-uu5libraryregistryg01-main/85849867896916817-fe96c133c895434bbd4d5b24831483f3/getLibrary", //PROD
   // COMPONENT_REGISTRY_URL: 'https://uuos9.plus4u.net/uu-uu5componentregistryg01-main/84723967990075193-eb48e82fb0ab409b9dd2fe4f956226dc/getLibrary', //DEV
+  STATISTICS_BASE_PATH: "https://uuapp.plus4u.net/uu-applibraryregistry-statsg01/8fc27ec054b340cb98c9f10789bd4f63/",
   CDN_URL: "https://cdn.plus4u.net",
+  COMPONENT_RENDER_UVE: "https://uuapp.plus4u.net/uu-plus4ugo-maing01/f34b62a867db4bd89490534bb26451ad/component/render",
   fontCssUrl: "https://cdn.plus4u.net/libs/clearsans/2.0.0/fonts/clear-sans.min.css",
   resizeInterval: 150,
   holdTimeout: 500,
@@ -542,7 +544,7 @@ Environment.disableStatistics = () => (Environment._statistics = false);
 Environment.enableStatistics = () => (Environment._statistics = true);
 Environment.isStatistics = () => Environment._statistics;
 
-const statistics = Statistics(Environment.COMPONENT_REGISTRY_URL.replace(/[^\/]+$/, ""), Environment.isStatistics);
+const statistics = Statistics(Environment.STATISTICS_BASE_PATH, Environment.isStatistics);
 
 // library = {name, version}
 Environment.addRuntimeLibrary = library => {

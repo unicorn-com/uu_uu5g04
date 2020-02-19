@@ -75,17 +75,18 @@ module.exports = class Component {
         params["contentType"] = "text/html";
       }
 
-      params["data"] = fs.readFileSync(filePath);
+      params["revisionStrategy"] = "NONE";
       params["filename"] = path.basename(filePath);
+      params["data"] = fs.readFileSync(filePath);
       try {
-        params["revisionStrategy"] = "NONE";
         await this._client().uuAppBinaryStore_updateBinaryData(params);
         console.log(`Binary file ${code} updated.`);
       } catch (e) {
         let err =
           e.dtoOut &&
           e.dtoOut.uuAppErrorMap &&
-          e.dtoOut.uuAppErrorMap["uu-app-binarystore/uuBinaryUpdateBinaryData/uuBinaryDaoUpdateByCodeFailed"];
+          (e.dtoOut.uuAppErrorMap["uu-app-binarystore/uuBinaryUpdateBinaryData/uuBinaryDaoUpdateByCodeFailed"] ||
+            e.dtoOut.uuAppErrorMap["uu-app-binarystore/updateBinaryData/uuBinaryDaoUpdateByCodeFailed"]);
         while (err && err.cause) err = err.cause.uuAppErrorMap;
         if (err && err["uu-app-binarystore/objectNotFound"]) {
           try {
@@ -94,11 +95,11 @@ module.exports = class Component {
             console.log(`Binary file ${code} added.`);
           } catch (e) {
             console.log(`\x1b[31mBinary file ${code} failed.\x1b[0m`);
-            console.error(e.uuAppErrorMap ? JSON.stringify(e, null, 2) : e);
+            console.error(e.dtoOut && e.dtoOut.uuAppErrorMap ? JSON.stringify(e.dtoOut, null, 2) : e);
             throw e;
           }
         } else {
-          console.error(e.uuAppErrorMap ? JSON.stringify(e, null, 2) : e);
+          console.error(e.dtoOut && e.dtoOut.uuAppErrorMap ? JSON.stringify(e.dtoOut, null, 2) : e);
           throw e;
         }
       }

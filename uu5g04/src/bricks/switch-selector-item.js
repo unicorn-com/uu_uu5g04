@@ -87,7 +87,8 @@ function getClassName({ active, dark, colorSchema, bgStyle, size, borderRadius, 
       border: 1px;
       /* because of stretch of item in wider parent*/
       flex: auto;
-      
+      white-space: nowrap;
+
       & + & {
         margin-left: 4px;
       }
@@ -144,12 +145,12 @@ function getClassName({ active, dark, colorSchema, bgStyle, size, borderRadius, 
       background-color: ${colors.backgroundColor};
       color: ${colors.color};
       border-color: transparent;
-      
+
       &:hover {
         background-color: ${colors.backgroundColorHover};
         color: ${colors.colorHover};
       }
-      
+
       &:active {
         background-color: ${colors.backgroundColorActive};
         color: ${colors.colorActive};

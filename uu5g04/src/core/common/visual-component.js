@@ -18,16 +18,13 @@ import Environment from "../environment/environment.js";
 import Component from "./component.js";
 import Style from "../utils/style.js";
 import { preprocessors, postprocessors } from "./visual-component-processors.js";
+import { SYMBOL_COMPONENT, SYMBOL_INIT, SYMBOL_GUARD } from "./component-symbols";
 //@@viewOff:imports
 
 preprocessors.push(addBasicVisualPropsPreprocessor);
 
-export const SYMBOL_COMPONENT = Symbol();
-export const SYMBOL_INIT = Symbol();
-export const SYMBOL_GUARD = Symbol();
-
 export class VisualComponent {
-  static propTypes = {
+  static propTypes = Object.freeze({
     id: PropTypes.string,
     className: PropTypes.string,
     style: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
@@ -36,9 +33,9 @@ export class VisualComponent {
     mainAttrs: PropTypes.object,
     noIndex: PropTypes.bool,
     nestingLevel: PropTypes.oneOf(Environment.nestingLevelList)
-  };
+  });
 
-  static defaultProps = {
+  static defaultProps = Object.freeze({
     id: undefined,
     className: undefined,
     style: undefined,
@@ -47,7 +44,7 @@ export class VisualComponent {
     mainAttrs: undefined,
     noIndex: undefined,
     nestingLevel: undefined
-  };
+  });
 
   static create(componentDescriptor) {
     return doCreate(componentDescriptor);
@@ -160,14 +157,24 @@ function addBasicVisualPropsPreprocessor(componentDescriptor) {
         ...VisualComponent.propTypes,
         ...propTypes
       };
-      let origGetDefaultProps = componentDescriptor.getDefaultProps;
-      componentDescriptor.getDefaultProps = function() {
-        let legacy = typeof origGetDefaultProps === "function" ? origGetDefaultProps.apply(this, arguments) : null;
-        return {
+
+      if (componentDescriptor.defaultProps) {
+        componentDescriptor.defaultProps = {
           ...VisualComponent.defaultProps,
-          ...legacy
+          ...componentDescriptor.defaultProps
         };
-      };
+      } else if (typeof componentDescriptor.getDefaultProps === "function") {
+        let origGDP = componentDescriptor.getDefaultProps;
+        componentDescriptor.getDefaultProps = function() {
+          let result = origGDP.apply(this);
+          return {
+            ...VisualComponent.defaultProps,
+            ...result
+          };
+        };
+      } else {
+        componentDescriptor.defaultProps = VisualComponent.defaultProps;
+      }
     }
   }
   return componentDescriptor;

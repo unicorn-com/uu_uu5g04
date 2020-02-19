@@ -116,8 +116,8 @@ export const Router = VisualComponent.create({
     Environment.router = this;
     this._history = [];
     this._routeIndex = null;
-    this._displayLeaveConfirmation = false;
-    this._getPageLeaveModalProps = null;
+    this._preventLeave = {};
+    this._preventLeaveUnkeyed = 0;
 
     return {
       route: null,
@@ -206,15 +206,20 @@ export const Router = VisualComponent.create({
     return this;
   },
 
-  allowPageLeave() {
-    this._displayLeaveConfirmation = false;
-    Environment.EventListener.unregisterBeforeUnload();
+  allowPageLeave(key = null) {
+    this._allowPageLeave(false, key);
   },
 
-  preventPageLeave(getPageLeaveModalPropsFn) {
-    this._displayLeaveConfirmation = true;
-    this._getPageLeaveModalProps = getPageLeaveModalPropsFn;
-    Environment.EventListener.registerBeforeUnload();
+  preventPageLeave(key = null, getPageLeaveModalPropsFn) {
+    if (typeof key === "function") {
+      getPageLeaveModalPropsFn = key;
+      key = null;
+    }
+    if (!key) key = "default_" + this._preventLeaveUnkeyed++;
+    key = "_" + key;
+    delete this._preventLeave[key]; // to update insertion-order
+    this._preventLeave[key] = getPageLeaveModalPropsFn;
+    if (Object.keys(this._preventLeave).length === 1) Environment.EventListener.registerBeforeUnload();
   },
 
   scrollToFragment(/* smoothScroll, offset */) {
@@ -247,6 +252,24 @@ export const Router = VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
+  _allowPageLeave(allowAll, key) {
+    if (allowAll) {
+      this._preventLeave = {};
+      this._preventLeaveUnkeyed = 0;
+    } else {
+      if (!key) key = "default_" + --this._preventLeaveUnkeyed;
+      key = "_" + key; // to ensure insertion-ordering (numeric keys would be inserted before non-numeric otherwise)
+      delete this._preventLeave[key];
+      if (typeof key === "string" && key.startsWith("_default_")) {
+        let curMaxValue = Object.keys(this._preventLeave)
+          .reverse()
+          .find(it => it.startsWith("_default_"));
+        this._preventLeaveUnkeyed = curMaxValue ? Number(curMaxValue.replace("_default_", "")) + 1 : 0;
+      }
+    }
+    if (!Object.keys(this._preventLeave).length) Environment.EventListener.unregisterBeforeUnload();
+  },
+
   _getBasePath(path, props) {
     let result;
     if (props.basePath === null) {
@@ -329,15 +352,18 @@ export const Router = VisualComponent.create({
   },
 
   _showPageLeaveConfirmation(continueWithPageLeaveCallback) {
-    if (this._displayLeaveConfirmation) {
+    if (Object.keys(this._preventLeave).length) {
       let processed = false;
       let modalOpen = false;
+
+      const preventKey = Object.keys(this._preventLeave).reverse()[0];
+
       let processResultFn = confirmed => {
         if (!processed) {
           // process only first call of this method
           processed = true;
           if (confirmed) {
-            this.allowPageLeave();
+            this._allowPageLeave(true);
             continueWithPageLeaveCallback();
           }
           if (this._pageLeaveModal && modalOpen) this._pageLeaveModal.close();
@@ -346,8 +372,9 @@ export const Router = VisualComponent.create({
 
       if (this._pageLeaveModal) {
         let customModalProps;
-        if (typeof this._getPageLeaveModalProps === "function") {
-          customModalProps = this._getPageLeaveModalProps(processResultFn);
+        const fn = this._preventLeave[preventKey];
+        if (typeof fn === "function") {
+          customModalProps = fn(processResultFn);
         }
 
         if (customModalProps !== false) {

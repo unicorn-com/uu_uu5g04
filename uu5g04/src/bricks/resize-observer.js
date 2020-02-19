@@ -38,7 +38,7 @@ if (window.ResizeObserver) {
       if (this._parentNode) {
         this._observer = new window.ResizeObserver(entries => {
           let rect = entries[entries.length - 1].contentRect;
-          this.props.onResize({ width: rect.width, height: rect.height });
+          if (rect) this.props.onResize({ width: rect.width, height: rect.height });
         });
         this._observer.observe(this._parentNode);
         if (typeof this.props.onInitialSize === "function") {

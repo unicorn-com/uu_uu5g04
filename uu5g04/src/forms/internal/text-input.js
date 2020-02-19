@@ -192,7 +192,8 @@ export default UU5.Common.LsiMixin.withContext(
       colorSchema: UU5.PropTypes.string,
       size: UU5.PropTypes.string,
       prefix: UU5.PropTypes.any,
-      suffix: UU5.PropTypes.any
+      suffix: UU5.PropTypes.any,
+      wrapperAttrs: UU5.PropTypes.object
     },
     //@@viewOff:propTypes
 
@@ -220,7 +221,8 @@ export default UU5.Common.LsiMixin.withContext(
         colorSchema: null,
         size: "m",
         prefix: undefined,
-        suffix: undefined
+        suffix: undefined,
+        wrapperAttrs: undefined
       };
     },
     //@@viewOff:getDefaultProps
@@ -307,10 +309,10 @@ export default UU5.Common.LsiMixin.withContext(
       }
 
       if (this._suffix && this._textInput) {
-        result.assumedValueWidth = UU5.Common.Tools.calculateValueWidth(
-          this._textInput.value,
-          `${FONT_SIZES[this.props.size]}px`
-        );
+        result.assumedValueWidth = UU5.Common.Tools.calculateTextWidth(this._textInput.value, {
+          fontSize: `${FONT_SIZES[this.props.size]}px`,
+          whiteSpace: "pre"
+        });
       }
 
       if (result.prefixWidth !== this.state.prefixWidth || result.assumedValueWidth !== this.state.assumedValueWidth) {
@@ -385,7 +387,9 @@ export default UU5.Common.LsiMixin.withContext(
       if (mainAttrs && typeof mainAttrs.onKeyDown === "function") {
         let mainAttrsKeyDown = mainAttrs.onKeyDown;
         onKeyDown = e => {
-          this.props.onKeyDown(e);
+          if (typeof this.props.onKeyDown === "function") {
+            this.props.onKeyDown(e);
+          }
           mainAttrsKeyDown(e);
         };
         delete mainAttrs.onKeyDown;
@@ -592,10 +596,15 @@ export default UU5.Common.LsiMixin.withContext(
     },
 
     _getWrapperAttrs() {
-      let attrs = {};
+      let attrs = { ...this.props.wrapperAttrs } || {};
 
-      attrs.className = this._getFullClassName();
-      attrs.style = { width: this._getInputWidth() };
+      if (attrs.className) {
+        attrs.className += " " + this._getFullClassName();
+      } else {
+        attrs.className = this._getFullClassName();
+      }
+
+      attrs.style = attrs.style || { width: this._getInputWidth() };
 
       return attrs;
     },

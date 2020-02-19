@@ -58,7 +58,11 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   componentWillMount() {
     // because of auto-completed items
-    if (!this.getParentByType("isSelect") && !this.getParentByType("isTextInput")) {
+    if (
+      !this.getParentByType("isSelect") &&
+      !this.getParentByType("isTextInput") &&
+      !this.getParentByType("isTagSelect")
+    ) {
       this.showError("invalidParent");
     }
   },

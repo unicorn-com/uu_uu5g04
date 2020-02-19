@@ -49,6 +49,7 @@ exports[`UU5.Forms.Number default props check UU5.Forms.Number daf props values 
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -65,12 +66,14 @@ exports[`UU5.Forms.Number default props check UU5.Forms.Number daf props values 
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -126,6 +129,7 @@ exports[`UU5.Forms.Number props buttonHidden=false 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -142,12 +146,14 @@ exports[`UU5.Forms.Number props buttonHidden=false 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -169,6 +175,7 @@ exports[`UU5.Forms.Number props buttonHidden=true 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -185,12 +192,14 @@ exports[`UU5.Forms.Number props buttonHidden=true 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -246,6 +255,7 @@ exports[`UU5.Forms.Number props className="my-classname" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -262,12 +272,14 @@ exports[`UU5.Forms.Number props className="my-classname" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -324,6 +336,7 @@ exports[`UU5.Forms.Number props colorSchema="brown" 1`] = `
       colorSchema="brown"
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -340,12 +353,14 @@ exports[`UU5.Forms.Number props colorSchema="brown" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -402,6 +417,7 @@ exports[`UU5.Forms.Number props colorSchema="brown-rich" 1`] = `
       colorSchema="brown-rich"
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -418,12 +434,14 @@ exports[`UU5.Forms.Number props colorSchema="brown-rich" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -480,6 +498,7 @@ exports[`UU5.Forms.Number props colorSchema="cyan" 1`] = `
       colorSchema="cyan"
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -496,12 +515,14 @@ exports[`UU5.Forms.Number props colorSchema="cyan" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -558,6 +579,7 @@ exports[`UU5.Forms.Number props colorSchema="cyan-rich" 1`] = `
       colorSchema="cyan-rich"
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -574,12 +596,14 @@ exports[`UU5.Forms.Number props colorSchema="cyan-rich" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -636,6 +660,7 @@ exports[`UU5.Forms.Number props colorSchema="default" 1`] = `
       colorSchema="default"
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -652,12 +677,14 @@ exports[`UU5.Forms.Number props colorSchema="default" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -714,6 +741,7 @@ exports[`UU5.Forms.Number props colorSchema="green" 1`] = `
       colorSchema="green"
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -730,12 +758,14 @@ exports[`UU5.Forms.Number props colorSchema="green" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -792,6 +822,7 @@ exports[`UU5.Forms.Number props colorSchema="green-rich" 1`] = `
       colorSchema="green-rich"
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -808,12 +839,14 @@ exports[`UU5.Forms.Number props colorSchema="green-rich" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -870,6 +903,7 @@ exports[`UU5.Forms.Number props colorSchema="grey" 1`] = `
       colorSchema="grey"
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -886,12 +920,14 @@ exports[`UU5.Forms.Number props colorSchema="grey" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -948,6 +984,7 @@ exports[`UU5.Forms.Number props colorSchema="grey-rich" 1`] = `
       colorSchema="grey-rich"
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -964,12 +1001,14 @@ exports[`UU5.Forms.Number props colorSchema="grey-rich" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -1026,6 +1065,7 @@ exports[`UU5.Forms.Number props colorSchema="orange" 1`] = `
       colorSchema="orange"
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -1042,12 +1082,14 @@ exports[`UU5.Forms.Number props colorSchema="orange" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -1104,6 +1146,7 @@ exports[`UU5.Forms.Number props colorSchema="orange-rich" 1`] = `
       colorSchema="orange-rich"
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -1120,12 +1163,14 @@ exports[`UU5.Forms.Number props colorSchema="orange-rich" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -1182,6 +1227,7 @@ exports[`UU5.Forms.Number props colorSchema="pink" 1`] = `
       colorSchema="pink"
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -1198,12 +1244,14 @@ exports[`UU5.Forms.Number props colorSchema="pink" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -1260,6 +1308,7 @@ exports[`UU5.Forms.Number props colorSchema="pink-rich" 1`] = `
       colorSchema="pink-rich"
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -1276,12 +1325,14 @@ exports[`UU5.Forms.Number props colorSchema="pink-rich" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -1338,6 +1389,7 @@ exports[`UU5.Forms.Number props colorSchema="purple" 1`] = `
       colorSchema="purple"
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -1354,12 +1406,14 @@ exports[`UU5.Forms.Number props colorSchema="purple" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -1416,6 +1470,7 @@ exports[`UU5.Forms.Number props colorSchema="purple-rich" 1`] = `
       colorSchema="purple-rich"
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -1432,12 +1487,14 @@ exports[`UU5.Forms.Number props colorSchema="purple-rich" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -1494,6 +1551,7 @@ exports[`UU5.Forms.Number props colorSchema="red" 1`] = `
       colorSchema="red"
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -1510,12 +1568,14 @@ exports[`UU5.Forms.Number props colorSchema="red" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -1572,6 +1632,7 @@ exports[`UU5.Forms.Number props colorSchema="red-rich" 1`] = `
       colorSchema="red-rich"
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -1588,12 +1649,14 @@ exports[`UU5.Forms.Number props colorSchema="red-rich" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -1650,6 +1713,7 @@ exports[`UU5.Forms.Number props colorSchema="yellow" 1`] = `
       colorSchema="yellow"
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -1666,12 +1730,14 @@ exports[`UU5.Forms.Number props colorSchema="yellow" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -1728,6 +1794,7 @@ exports[`UU5.Forms.Number props colorSchema="yellow-rich" 1`] = `
       colorSchema="yellow-rich"
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -1744,12 +1811,14 @@ exports[`UU5.Forms.Number props colorSchema="yellow-rich" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -1959,6 +2028,7 @@ exports[`UU5.Forms.Number props decimalSeparator="." 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -1975,12 +2045,14 @@ exports[`UU5.Forms.Number props decimalSeparator="." 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -2036,6 +2108,7 @@ exports[`UU5.Forms.Number props decimals=5 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -2052,12 +2125,14 @@ exports[`UU5.Forms.Number props decimals=5 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -2113,6 +2188,7 @@ exports[`UU5.Forms.Number props decimalsView=2 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -2129,12 +2205,14 @@ exports[`UU5.Forms.Number props decimalsView=2 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -2190,6 +2268,7 @@ exports[`UU5.Forms.Number props decimalsView=5 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -2206,12 +2285,14 @@ exports[`UU5.Forms.Number props decimalsView=5 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -2267,6 +2348,7 @@ exports[`UU5.Forms.Number props decimalsViewRounded="ceil" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -2283,12 +2365,14 @@ exports[`UU5.Forms.Number props decimalsViewRounded="ceil" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -2344,6 +2428,7 @@ exports[`UU5.Forms.Number props decimalsViewRounded="floor" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -2360,12 +2445,14 @@ exports[`UU5.Forms.Number props decimalsViewRounded="floor" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -2421,6 +2508,7 @@ exports[`UU5.Forms.Number props decimalsViewRounded="round" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -2437,12 +2525,14 @@ exports[`UU5.Forms.Number props decimalsViewRounded="round" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -2498,6 +2588,7 @@ exports[`UU5.Forms.Number props default props 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -2514,12 +2605,14 @@ exports[`UU5.Forms.Number props default props 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -2575,6 +2668,7 @@ exports[`UU5.Forms.Number props disabled=false 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -2591,12 +2685,14 @@ exports[`UU5.Forms.Number props disabled=false 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -2653,6 +2749,7 @@ exports[`UU5.Forms.Number props disabled=true 1`] = `
       disabled={true}
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -2669,12 +2766,14 @@ exports[`UU5.Forms.Number props disabled=true 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -2731,6 +2830,7 @@ exports[`UU5.Forms.Number props feedback="error" 1`] = `
     <text-input
       feedback="error"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -2747,12 +2847,14 @@ exports[`UU5.Forms.Number props feedback="error" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -2808,6 +2910,7 @@ exports[`UU5.Forms.Number props feedback="initial" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -2824,12 +2927,14 @@ exports[`UU5.Forms.Number props feedback="initial" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -2887,6 +2992,7 @@ exports[`UU5.Forms.Number props feedback="loading" 1`] = `
       disabled={true}
       feedback="loading"
       id="uuID-input"
+      key="uuID-input"
       loading={true}
       mainAttrs={
         Object {
@@ -2904,12 +3010,14 @@ exports[`UU5.Forms.Number props feedback="loading" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -2966,6 +3074,7 @@ exports[`UU5.Forms.Number props feedback="success" 1`] = `
     <text-input
       feedback="success"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -2982,12 +3091,14 @@ exports[`UU5.Forms.Number props feedback="success" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -3044,6 +3155,7 @@ exports[`UU5.Forms.Number props feedback="warning" 1`] = `
     <text-input
       feedback="warning"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -3060,12 +3172,14 @@ exports[`UU5.Forms.Number props feedback="warning" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -3325,6 +3439,7 @@ exports[`UU5.Forms.Number props function -> Text.InputMixin validateOnChange() -
     <text-input
       feedback="error"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -3341,12 +3456,14 @@ exports[`UU5.Forms.Number props function -> Text.InputMixin validateOnChange() -
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value=""
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -3408,6 +3525,7 @@ exports[`UU5.Forms.Number props function -> Text.InputMixin validateOnChange() -
     <text-input
       feedback="success"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -3425,6 +3543,7 @@ exports[`UU5.Forms.Number props function -> Text.InputMixin validateOnChange() -
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={
         Array [
@@ -3435,6 +3554,7 @@ exports[`UU5.Forms.Number props function -> Text.InputMixin validateOnChange() -
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -3490,6 +3610,7 @@ exports[`UU5.Forms.Number props hidden=false 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -3506,12 +3627,14 @@ exports[`UU5.Forms.Number props hidden=false 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -3567,6 +3690,7 @@ exports[`UU5.Forms.Number props hidden=true 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -3583,12 +3707,14 @@ exports[`UU5.Forms.Number props hidden=true 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -3644,6 +3770,7 @@ exports[`UU5.Forms.Number props hidePrefixOnFocus=false 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -3660,12 +3787,14 @@ exports[`UU5.Forms.Number props hidePrefixOnFocus=false 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -3721,6 +3850,7 @@ exports[`UU5.Forms.Number props hidePrefixOnFocus=true 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -3737,12 +3867,14 @@ exports[`UU5.Forms.Number props hidePrefixOnFocus=true 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -3798,6 +3930,7 @@ exports[`UU5.Forms.Number props hideSuffixOnFocus=false 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -3814,12 +3947,14 @@ exports[`UU5.Forms.Number props hideSuffixOnFocus=false 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -3875,6 +4010,7 @@ exports[`UU5.Forms.Number props hideSuffixOnFocus=true 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -3891,12 +4027,14 @@ exports[`UU5.Forms.Number props hideSuffixOnFocus=true 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -3952,6 +4090,7 @@ exports[`UU5.Forms.Number props id="myId" 1`] = `
     <text-input
       feedback="initial"
       id="myId-input"
+      key="myId-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -3968,12 +4107,14 @@ exports[`UU5.Forms.Number props id="myId" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="myId-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -4029,6 +4170,7 @@ exports[`UU5.Forms.Number props inputAttrs={"type":"email","width":"150px"} 1`] 
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -4047,12 +4189,14 @@ exports[`UU5.Forms.Number props inputAttrs={"type":"email","width":"150px"} 1`] 
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -4108,6 +4252,7 @@ exports[`UU5.Forms.Number props inputColWidth="xs12 s6 m8 l9" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -4124,12 +4269,14 @@ exports[`UU5.Forms.Number props inputColWidth="xs12 s6 m8 l9" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -4185,6 +4332,7 @@ exports[`UU5.Forms.Number props inputColWidth="xs12 s9" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -4201,12 +4349,14 @@ exports[`UU5.Forms.Number props inputColWidth="xs12 s9" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -4266,6 +4416,7 @@ exports[`UU5.Forms.Number props label="Your personal email" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -4282,12 +4433,14 @@ exports[`UU5.Forms.Number props label="Your personal email" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -4343,6 +4496,7 @@ exports[`UU5.Forms.Number props labelAlignment="xs-left s-right" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -4359,12 +4513,14 @@ exports[`UU5.Forms.Number props labelAlignment="xs-left s-right" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -4420,6 +4576,7 @@ exports[`UU5.Forms.Number props labelAlignment="xs-right s-left" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -4436,12 +4593,14 @@ exports[`UU5.Forms.Number props labelAlignment="xs-right s-left" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -4497,6 +4656,7 @@ exports[`UU5.Forms.Number props labelColWidth="xs12 s3" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -4513,12 +4673,14 @@ exports[`UU5.Forms.Number props labelColWidth="xs12 s3" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -4574,6 +4736,7 @@ exports[`UU5.Forms.Number props labelColWidth="xs12 s6 m4 l3" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -4590,12 +4753,14 @@ exports[`UU5.Forms.Number props labelColWidth="xs12 s6 m4 l3" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -4651,6 +4816,7 @@ exports[`UU5.Forms.Number props lowerMessage=null 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -4667,12 +4833,14 @@ exports[`UU5.Forms.Number props lowerMessage=null 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -4728,6 +4896,7 @@ exports[`UU5.Forms.Number props mainAttrs=undefined 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -4744,12 +4913,14 @@ exports[`UU5.Forms.Number props mainAttrs=undefined 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -4805,6 +4976,7 @@ exports[`UU5.Forms.Number props max=665 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -4821,12 +4993,14 @@ exports[`UU5.Forms.Number props max=665 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -4883,6 +5057,7 @@ exports[`UU5.Forms.Number props message="Your password is too short!" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -4899,12 +5074,14 @@ exports[`UU5.Forms.Number props message="Your password is too short!" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -4960,6 +5137,7 @@ exports[`UU5.Forms.Number props min=42 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -4976,12 +5154,14 @@ exports[`UU5.Forms.Number props min=42 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -5038,6 +5218,7 @@ exports[`UU5.Forms.Number props name="myName" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -5054,12 +5235,14 @@ exports[`UU5.Forms.Number props name="myName" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -5115,6 +5298,7 @@ exports[`UU5.Forms.Number props nanMessage=null 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -5131,12 +5315,14 @@ exports[`UU5.Forms.Number props nanMessage=null 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -5192,6 +5378,7 @@ exports[`UU5.Forms.Number props noIndex=false 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -5208,12 +5395,14 @@ exports[`UU5.Forms.Number props noIndex=false 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -5269,6 +5458,7 @@ exports[`UU5.Forms.Number props noIndex=true 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -5285,12 +5475,14 @@ exports[`UU5.Forms.Number props noIndex=true 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -5346,6 +5538,7 @@ exports[`UU5.Forms.Number props prefix="$" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -5362,12 +5555,14 @@ exports[`UU5.Forms.Number props prefix="$" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -5423,6 +5618,7 @@ exports[`UU5.Forms.Number props prefix="hodnota" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -5439,12 +5635,14 @@ exports[`UU5.Forms.Number props prefix="hodnota" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -5500,6 +5698,7 @@ exports[`UU5.Forms.Number props pureRender=false 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -5516,12 +5715,14 @@ exports[`UU5.Forms.Number props pureRender=false 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -5577,6 +5778,7 @@ exports[`UU5.Forms.Number props pureRender=true 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -5593,12 +5795,14 @@ exports[`UU5.Forms.Number props pureRender=true 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -5654,6 +5858,7 @@ exports[`UU5.Forms.Number props readOnly=false 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -5670,12 +5875,14 @@ exports[`UU5.Forms.Number props readOnly=false 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -5697,6 +5904,7 @@ exports[`UU5.Forms.Number props readOnly=true 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -5713,12 +5921,14 @@ exports[`UU5.Forms.Number props readOnly=true 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -5774,6 +5984,7 @@ exports[`UU5.Forms.Number props rounded=false 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -5790,12 +6001,14 @@ exports[`UU5.Forms.Number props rounded=false 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -5851,6 +6064,7 @@ exports[`UU5.Forms.Number props rounded=true 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -5867,12 +6081,14 @@ exports[`UU5.Forms.Number props rounded=true 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -5928,6 +6144,7 @@ exports[`UU5.Forms.Number props selected=false 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -5944,12 +6161,14 @@ exports[`UU5.Forms.Number props selected=false 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -6005,6 +6224,7 @@ exports[`UU5.Forms.Number props selected=true 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -6021,12 +6241,14 @@ exports[`UU5.Forms.Number props selected=true 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -6082,6 +6304,7 @@ exports[`UU5.Forms.Number props size="l" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -6099,12 +6322,14 @@ exports[`UU5.Forms.Number props size="l" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -6160,6 +6385,7 @@ exports[`UU5.Forms.Number props size="m" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -6176,12 +6402,14 @@ exports[`UU5.Forms.Number props size="m" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -6237,6 +6465,7 @@ exports[`UU5.Forms.Number props size="s" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -6254,12 +6483,14 @@ exports[`UU5.Forms.Number props size="s" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -6315,6 +6546,7 @@ exports[`UU5.Forms.Number props step=2 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -6331,12 +6563,14 @@ exports[`UU5.Forms.Number props step=2 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -6397,6 +6631,7 @@ exports[`UU5.Forms.Number props style="padding:8px; borderRadius: 2px" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -6413,12 +6648,14 @@ exports[`UU5.Forms.Number props style="padding:8px; borderRadius: 2px" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -6479,6 +6716,7 @@ exports[`UU5.Forms.Number props style={"backgroundColor":"red","color":"blue"} 1
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -6495,12 +6733,14 @@ exports[`UU5.Forms.Number props style={"backgroundColor":"red","color":"blue"} 1
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -6556,6 +6796,7 @@ exports[`UU5.Forms.Number props suffix="cm" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -6572,12 +6813,14 @@ exports[`UU5.Forms.Number props suffix="cm" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -6633,6 +6876,7 @@ exports[`UU5.Forms.Number props suffix="kč" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -6649,12 +6893,14 @@ exports[`UU5.Forms.Number props suffix="kč" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -6710,6 +6956,7 @@ exports[`UU5.Forms.Number props thousandSeparator="," 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -6726,12 +6973,14 @@ exports[`UU5.Forms.Number props thousandSeparator="," 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -6787,6 +7036,7 @@ exports[`UU5.Forms.Number props tooltip="My Tooltip" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -6803,12 +7053,14 @@ exports[`UU5.Forms.Number props tooltip="My Tooltip" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -6864,6 +7116,7 @@ exports[`UU5.Forms.Number props upperMessage=null 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -6880,12 +7133,14 @@ exports[`UU5.Forms.Number props upperMessage=null 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -6941,6 +7196,7 @@ exports[`UU5.Forms.Number props value="10" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -6958,6 +7214,7 @@ exports[`UU5.Forms.Number props value="10" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={
         Array [
@@ -6968,6 +7225,7 @@ exports[`UU5.Forms.Number props value="10" 1`] = `
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -7023,6 +7281,7 @@ exports[`UU5.Forms.Number props value=10 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -7040,6 +7299,7 @@ exports[`UU5.Forms.Number props value=10 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={
         Array [
@@ -7050,6 +7310,7 @@ exports[`UU5.Forms.Number props value=10 1`] = `
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -7105,6 +7366,7 @@ exports[`UU5.Forms.Number props valueType="number" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -7121,12 +7383,14 @@ exports[`UU5.Forms.Number props valueType="number" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>
@@ -7182,6 +7446,7 @@ exports[`UU5.Forms.Number props valueType="string" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="uuID-input"
       mainAttrs={
         Object {
           "onKeyDown": [Function],
@@ -7198,12 +7463,14 @@ exports[`UU5.Forms.Number props valueType="string" 1`] = `
     />
     <item-list
       hidden={true}
+      key="item-list"
       onChange={[Function]}
       value={null}
     />
     <Backdrop
       hidden={true}
       id="uuID-backdrop"
+      key="backdrop"
       onClick={[Function]}
     />
   </InputWrapper>

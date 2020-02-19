@@ -2,7 +2,7 @@
 
 exports[`UU5.Forms.Select default props UU5.Forms.Select check default props 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -44,7 +44,7 @@ exports[`UU5.Forms.Select default props UU5.Forms.Select check default props 1`]
 
 exports[`UU5.Forms.Select props UU5.Forms.Select Component from allow tags is used in example 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -90,7 +90,7 @@ exports[`UU5.Forms.Select props UU5.Forms.Select Component from allow tags is us
 
 exports[`UU5.Forms.Select props allowTags=["UU5.Example.MyCompButton"] 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -136,7 +136,7 @@ exports[`UU5.Forms.Select props allowTags=["UU5.Example.MyCompButton"] 1`] = `
 
 exports[`UU5.Forms.Select props buttonHidden=false 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -178,7 +178,7 @@ exports[`UU5.Forms.Select props buttonHidden=false 1`] = `
 
 exports[`UU5.Forms.Select props buttonHidden=true 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -220,7 +220,7 @@ exports[`UU5.Forms.Select props buttonHidden=true 1`] = `
 
 exports[`UU5.Forms.Select props checkGrammar=false 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -262,7 +262,7 @@ exports[`UU5.Forms.Select props checkGrammar=false 1`] = `
 
 exports[`UU5.Forms.Select props checkGrammar=true 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -304,7 +304,7 @@ exports[`UU5.Forms.Select props checkGrammar=true 1`] = `
 
 exports[`UU5.Forms.Select props checkHighlight=false 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -346,7 +346,7 @@ exports[`UU5.Forms.Select props checkHighlight=false 1`] = `
 
 exports[`UU5.Forms.Select props checkHighlight=true 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -388,7 +388,7 @@ exports[`UU5.Forms.Select props checkHighlight=true 1`] = `
 
 exports[`UU5.Forms.Select props checkSpaces=false 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -430,7 +430,7 @@ exports[`UU5.Forms.Select props checkSpaces=false 1`] = `
 
 exports[`UU5.Forms.Select props checkSpaces=true 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -472,7 +472,7 @@ exports[`UU5.Forms.Select props checkSpaces=true 1`] = `
 
 exports[`UU5.Forms.Select props className="my-classname" 1`] = `
 <div
-  className="uu5-forms-select my-classname uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select my-classname uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -514,7 +514,7 @@ exports[`UU5.Forms.Select props className="my-classname" 1`] = `
 
 exports[`UU5.Forms.Select props colorSchema="brown" 1`] = `
 <div
-  className="color-schema-brown uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="color-schema-brown uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -557,7 +557,7 @@ exports[`UU5.Forms.Select props colorSchema="brown" 1`] = `
 
 exports[`UU5.Forms.Select props colorSchema="brown-rich" 1`] = `
 <div
-  className="color-schema-brown-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="color-schema-brown-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -600,7 +600,7 @@ exports[`UU5.Forms.Select props colorSchema="brown-rich" 1`] = `
 
 exports[`UU5.Forms.Select props colorSchema="cyan" 1`] = `
 <div
-  className="color-schema-cyan uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="color-schema-cyan uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -643,7 +643,7 @@ exports[`UU5.Forms.Select props colorSchema="cyan" 1`] = `
 
 exports[`UU5.Forms.Select props colorSchema="cyan-rich" 1`] = `
 <div
-  className="color-schema-cyan-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="color-schema-cyan-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -686,7 +686,7 @@ exports[`UU5.Forms.Select props colorSchema="cyan-rich" 1`] = `
 
 exports[`UU5.Forms.Select props colorSchema="default" 1`] = `
 <div
-  className="color-schema-default uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="color-schema-default uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -729,7 +729,7 @@ exports[`UU5.Forms.Select props colorSchema="default" 1`] = `
 
 exports[`UU5.Forms.Select props colorSchema="green" 1`] = `
 <div
-  className="color-schema-green uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="color-schema-green uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -772,7 +772,7 @@ exports[`UU5.Forms.Select props colorSchema="green" 1`] = `
 
 exports[`UU5.Forms.Select props colorSchema="green-rich" 1`] = `
 <div
-  className="color-schema-green-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="color-schema-green-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -815,7 +815,7 @@ exports[`UU5.Forms.Select props colorSchema="green-rich" 1`] = `
 
 exports[`UU5.Forms.Select props colorSchema="grey" 1`] = `
 <div
-  className="color-schema-grey uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="color-schema-grey uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -858,7 +858,7 @@ exports[`UU5.Forms.Select props colorSchema="grey" 1`] = `
 
 exports[`UU5.Forms.Select props colorSchema="grey-rich" 1`] = `
 <div
-  className="color-schema-grey-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="color-schema-grey-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -901,7 +901,7 @@ exports[`UU5.Forms.Select props colorSchema="grey-rich" 1`] = `
 
 exports[`UU5.Forms.Select props colorSchema="orange" 1`] = `
 <div
-  className="color-schema-orange uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="color-schema-orange uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -944,7 +944,7 @@ exports[`UU5.Forms.Select props colorSchema="orange" 1`] = `
 
 exports[`UU5.Forms.Select props colorSchema="orange-rich" 1`] = `
 <div
-  className="color-schema-orange-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="color-schema-orange-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -987,7 +987,7 @@ exports[`UU5.Forms.Select props colorSchema="orange-rich" 1`] = `
 
 exports[`UU5.Forms.Select props colorSchema="pink" 1`] = `
 <div
-  className="color-schema-pink uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="color-schema-pink uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1030,7 +1030,7 @@ exports[`UU5.Forms.Select props colorSchema="pink" 1`] = `
 
 exports[`UU5.Forms.Select props colorSchema="pink-rich" 1`] = `
 <div
-  className="color-schema-pink-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="color-schema-pink-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1073,7 +1073,7 @@ exports[`UU5.Forms.Select props colorSchema="pink-rich" 1`] = `
 
 exports[`UU5.Forms.Select props colorSchema="purple" 1`] = `
 <div
-  className="color-schema-purple uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="color-schema-purple uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1116,7 +1116,7 @@ exports[`UU5.Forms.Select props colorSchema="purple" 1`] = `
 
 exports[`UU5.Forms.Select props colorSchema="purple-rich" 1`] = `
 <div
-  className="color-schema-purple-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="color-schema-purple-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1159,7 +1159,7 @@ exports[`UU5.Forms.Select props colorSchema="purple-rich" 1`] = `
 
 exports[`UU5.Forms.Select props colorSchema="red" 1`] = `
 <div
-  className="color-schema-red uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="color-schema-red uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1202,7 +1202,7 @@ exports[`UU5.Forms.Select props colorSchema="red" 1`] = `
 
 exports[`UU5.Forms.Select props colorSchema="red-rich" 1`] = `
 <div
-  className="color-schema-red-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="color-schema-red-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1245,7 +1245,7 @@ exports[`UU5.Forms.Select props colorSchema="red-rich" 1`] = `
 
 exports[`UU5.Forms.Select props colorSchema="yellow" 1`] = `
 <div
-  className="color-schema-yellow uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="color-schema-yellow uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1288,7 +1288,7 @@ exports[`UU5.Forms.Select props colorSchema="yellow" 1`] = `
 
 exports[`UU5.Forms.Select props colorSchema="yellow-rich" 1`] = `
 <div
-  className="color-schema-yellow-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="color-schema-yellow-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1331,7 +1331,7 @@ exports[`UU5.Forms.Select props colorSchema="yellow-rich" 1`] = `
 
 exports[`UU5.Forms.Select props content="This is Content from ContentMixin" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1373,7 +1373,7 @@ exports[`UU5.Forms.Select props content="This is Content from ContentMixin" 1`] 
 
 exports[`UU5.Forms.Select props content=12345 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1415,7 +1415,7 @@ exports[`UU5.Forms.Select props content=12345 1`] = `
 
 exports[`UU5.Forms.Select props controlled=false 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1457,7 +1457,7 @@ exports[`UU5.Forms.Select props controlled=false 1`] = `
 
 exports[`UU5.Forms.Select props controlled=true 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1499,7 +1499,7 @@ exports[`UU5.Forms.Select props controlled=true 1`] = `
 
 exports[`UU5.Forms.Select props default props 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1541,7 +1541,7 @@ exports[`UU5.Forms.Select props default props 1`] = `
 
 exports[`UU5.Forms.Select props disableBackdrop=false 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1583,7 +1583,7 @@ exports[`UU5.Forms.Select props disableBackdrop=false 1`] = `
 
 exports[`UU5.Forms.Select props disableBackdrop=true 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1625,7 +1625,7 @@ exports[`UU5.Forms.Select props disableBackdrop=true 1`] = `
 
 exports[`UU5.Forms.Select props disabled=false 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1667,7 +1667,7 @@ exports[`UU5.Forms.Select props disabled=false 1`] = `
 
 exports[`UU5.Forms.Select props disabled=true 1`] = `
 <div
-  className="uu5-forms-select uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1703,7 +1703,7 @@ exports[`UU5.Forms.Select props disabled=true 1`] = `
 
 exports[`UU5.Forms.Select props dynamic=false 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1745,7 +1745,7 @@ exports[`UU5.Forms.Select props dynamic=false 1`] = `
 
 exports[`UU5.Forms.Select props dynamic=true 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1787,7 +1787,7 @@ exports[`UU5.Forms.Select props dynamic=true 1`] = `
 
 exports[`UU5.Forms.Select props feedback="error" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1830,7 +1830,7 @@ exports[`UU5.Forms.Select props feedback="error" 1`] = `
 
 exports[`UU5.Forms.Select props feedback="initial" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1872,7 +1872,7 @@ exports[`UU5.Forms.Select props feedback="initial" 1`] = `
 
 exports[`UU5.Forms.Select props feedback="loading" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1910,7 +1910,7 @@ exports[`UU5.Forms.Select props feedback="loading" 1`] = `
 
 exports[`UU5.Forms.Select props feedback="success" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1953,7 +1953,7 @@ exports[`UU5.Forms.Select props feedback="success" 1`] = `
 
 exports[`UU5.Forms.Select props feedback="warning" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2065,7 +2065,7 @@ exports[`UU5.Forms.Select props function -> InputMixin onValidate() 2`] = `
 
 exports[`UU5.Forms.Select props hidden=false 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2107,7 +2107,7 @@ exports[`UU5.Forms.Select props hidden=false 1`] = `
 
 exports[`UU5.Forms.Select props hidden=true 1`] = `
 <div
-  className="uu5-forms-select uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2149,7 +2149,7 @@ exports[`UU5.Forms.Select props hidden=true 1`] = `
 
 exports[`UU5.Forms.Select props iconClosed="mdi-chevron-down" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2191,7 +2191,7 @@ exports[`UU5.Forms.Select props iconClosed="mdi-chevron-down" 1`] = `
 
 exports[`UU5.Forms.Select props iconOpen="mdi-chevron-up" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2233,7 +2233,7 @@ exports[`UU5.Forms.Select props iconOpen="mdi-chevron-up" 1`] = `
 
 exports[`UU5.Forms.Select props id="myId" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="myId"
   onClick={[Function]}
   style={Object {}}
@@ -2275,7 +2275,7 @@ exports[`UU5.Forms.Select props id="myId" 1`] = `
 
 exports[`UU5.Forms.Select props ignoreHTML=false 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2317,7 +2317,7 @@ exports[`UU5.Forms.Select props ignoreHTML=false 1`] = `
 
 exports[`UU5.Forms.Select props ignoreHTML=true 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2359,7 +2359,7 @@ exports[`UU5.Forms.Select props ignoreHTML=true 1`] = `
 
 exports[`UU5.Forms.Select props inputAttrs={"type":"email","width":"150px"} 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2403,7 +2403,7 @@ exports[`UU5.Forms.Select props inputAttrs={"type":"email","width":"150px"} 1`] 
 
 exports[`UU5.Forms.Select props inputColWidth="xs12 s6 m8 l9" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2445,7 +2445,7 @@ exports[`UU5.Forms.Select props inputColWidth="xs12 s6 m8 l9" 1`] = `
 
 exports[`UU5.Forms.Select props inputColWidth="xs12 s9" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2487,7 +2487,7 @@ exports[`UU5.Forms.Select props inputColWidth="xs12 s9" 1`] = `
 
 exports[`UU5.Forms.Select props label="Your personal email" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2533,7 +2533,7 @@ exports[`UU5.Forms.Select props label="Your personal email" 1`] = `
 
 exports[`UU5.Forms.Select props labelAlignment="xs-left s-right" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2575,7 +2575,7 @@ exports[`UU5.Forms.Select props labelAlignment="xs-left s-right" 1`] = `
 
 exports[`UU5.Forms.Select props labelAlignment="xs-right s-left" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2617,7 +2617,7 @@ exports[`UU5.Forms.Select props labelAlignment="xs-right s-left" 1`] = `
 
 exports[`UU5.Forms.Select props labelColWidth="xs12 s3" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2659,7 +2659,7 @@ exports[`UU5.Forms.Select props labelColWidth="xs12 s3" 1`] = `
 
 exports[`UU5.Forms.Select props labelColWidth="xs12 s6 m4 l3" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2701,7 +2701,7 @@ exports[`UU5.Forms.Select props labelColWidth="xs12 s6 m4 l3" 1`] = `
 
 exports[`UU5.Forms.Select props language="cs" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2743,7 +2743,7 @@ exports[`UU5.Forms.Select props language="cs" 1`] = `
 
 exports[`UU5.Forms.Select props language="de" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2785,7 +2785,7 @@ exports[`UU5.Forms.Select props language="de" 1`] = `
 
 exports[`UU5.Forms.Select props language="en" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2827,7 +2827,7 @@ exports[`UU5.Forms.Select props language="en" 1`] = `
 
 exports[`UU5.Forms.Select props language="en-gb" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2869,7 +2869,7 @@ exports[`UU5.Forms.Select props language="en-gb" 1`] = `
 
 exports[`UU5.Forms.Select props language="en-us" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2911,7 +2911,7 @@ exports[`UU5.Forms.Select props language="en-us" 1`] = `
 
 exports[`UU5.Forms.Select props language="es" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2953,7 +2953,7 @@ exports[`UU5.Forms.Select props language="es" 1`] = `
 
 exports[`UU5.Forms.Select props language="fr" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2995,7 +2995,7 @@ exports[`UU5.Forms.Select props language="fr" 1`] = `
 
 exports[`UU5.Forms.Select props language="ru" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3037,7 +3037,7 @@ exports[`UU5.Forms.Select props language="ru" 1`] = `
 
 exports[`UU5.Forms.Select props language="sk" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3079,7 +3079,7 @@ exports[`UU5.Forms.Select props language="sk" 1`] = `
 
 exports[`UU5.Forms.Select props language="uk" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3121,7 +3121,7 @@ exports[`UU5.Forms.Select props language="uk" 1`] = `
 
 exports[`UU5.Forms.Select props mainAttrs=undefined 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3163,7 +3163,7 @@ exports[`UU5.Forms.Select props mainAttrs=undefined 1`] = `
 
 exports[`UU5.Forms.Select props message="Your password is too short!" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3206,7 +3206,7 @@ exports[`UU5.Forms.Select props message="Your password is too short!" 1`] = `
 
 exports[`UU5.Forms.Select props multiple=false 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3248,7 +3248,7 @@ exports[`UU5.Forms.Select props multiple=false 1`] = `
 
 exports[`UU5.Forms.Select props multiple=true 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-multiple"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-multiple"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3291,7 +3291,7 @@ exports[`UU5.Forms.Select props multiple=true 1`] = `
 
 exports[`UU5.Forms.Select props name="myName" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   name="myName"
   onClick={[Function]}
@@ -3334,7 +3334,7 @@ exports[`UU5.Forms.Select props name="myName" 1`] = `
 
 exports[`UU5.Forms.Select props noIndex=false 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3376,7 +3376,7 @@ exports[`UU5.Forms.Select props noIndex=false 1`] = `
 
 exports[`UU5.Forms.Select props noIndex=true 1`] = `
 <div
-  className="uu5-forms-select uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3418,7 +3418,7 @@ exports[`UU5.Forms.Select props noIndex=true 1`] = `
 
 exports[`UU5.Forms.Select props placeholder="Vyplňte jméno včetně titulů" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3461,7 +3461,7 @@ exports[`UU5.Forms.Select props placeholder="Vyplňte jméno včetně titulů" 1
 
 exports[`UU5.Forms.Select props pureRender=false 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3503,7 +3503,7 @@ exports[`UU5.Forms.Select props pureRender=false 1`] = `
 
 exports[`UU5.Forms.Select props pureRender=true 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3545,7 +3545,7 @@ exports[`UU5.Forms.Select props pureRender=true 1`] = `
 
 exports[`UU5.Forms.Select props readOnly=false 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3587,7 +3587,7 @@ exports[`UU5.Forms.Select props readOnly=false 1`] = `
 
 exports[`UU5.Forms.Select props readOnly=true 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3622,7 +3622,7 @@ exports[`UU5.Forms.Select props readOnly=true 1`] = `
 
 exports[`UU5.Forms.Select props required=false 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3664,7 +3664,7 @@ exports[`UU5.Forms.Select props required=false 1`] = `
 
 exports[`UU5.Forms.Select props required=true 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3707,7 +3707,7 @@ exports[`UU5.Forms.Select props required=true 1`] = `
 
 exports[`UU5.Forms.Select props requiredMessage="Vyberte alespoň jednu možnost." 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3749,7 +3749,7 @@ exports[`UU5.Forms.Select props requiredMessage="Vyberte alespoň jednu možnost
 
 exports[`UU5.Forms.Select props selectAllEnabled=false 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3791,7 +3791,7 @@ exports[`UU5.Forms.Select props selectAllEnabled=false 1`] = `
 
 exports[`UU5.Forms.Select props selectAllEnabled=true 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-all"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-all"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3833,7 +3833,7 @@ exports[`UU5.Forms.Select props selectAllEnabled=true 1`] = `
 
 exports[`UU5.Forms.Select props selected=false 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3875,7 +3875,7 @@ exports[`UU5.Forms.Select props selected=false 1`] = `
 
 exports[`UU5.Forms.Select props selected=true 1`] = `
 <div
-  className="uu5-forms-select uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3917,7 +3917,7 @@ exports[`UU5.Forms.Select props selected=true 1`] = `
 
 exports[`UU5.Forms.Select props size="l" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-l uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-l uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3959,7 +3959,7 @@ exports[`UU5.Forms.Select props size="l" 1`] = `
 
 exports[`UU5.Forms.Select props size="m" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4001,7 +4001,7 @@ exports[`UU5.Forms.Select props size="m" 1`] = `
 
 exports[`UU5.Forms.Select props size="s" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4043,7 +4043,7 @@ exports[`UU5.Forms.Select props size="s" 1`] = `
 
 exports[`UU5.Forms.Select props style="padding:8px; borderRadius: 2px" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={
@@ -4090,7 +4090,7 @@ exports[`UU5.Forms.Select props style="padding:8px; borderRadius: 2px" 1`] = `
 
 exports[`UU5.Forms.Select props style={"backgroundColor":"red","color":"blue"} 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={
@@ -4137,7 +4137,7 @@ exports[`UU5.Forms.Select props style={"backgroundColor":"red","color":"blue"} 1
 
 exports[`UU5.Forms.Select props textCorrector=false 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4179,7 +4179,7 @@ exports[`UU5.Forms.Select props textCorrector=false 1`] = `
 
 exports[`UU5.Forms.Select props textCorrector=true 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4221,7 +4221,7 @@ exports[`UU5.Forms.Select props textCorrector=true 1`] = `
 
 exports[`UU5.Forms.Select props tooltip="My Tooltip" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4263,7 +4263,7 @@ exports[`UU5.Forms.Select props tooltip="My Tooltip" 1`] = `
 
 exports[`UU5.Forms.Select props value="item_1" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-has-value"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4313,7 +4313,7 @@ exports[`UU5.Forms.Select props value="item_1" 1`] = `
 
 exports[`UU5.Forms.Select props value="item_2" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder uu5-forms-select-has-value"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4363,7 +4363,7 @@ exports[`UU5.Forms.Select props value="item_2" 1`] = `
 
 exports[`UU5.Forms.Select props value="item_3" 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-state-holder"
   id="uuID"
   onClick={[Function]}
   style={Object {}}

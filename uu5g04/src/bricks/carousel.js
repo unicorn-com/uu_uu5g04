@@ -63,7 +63,8 @@ export const Carousel = UU5.Common.VisualComponent.create({
     type: UU5.PropTypes.oneOf(["circular", "final", "rewind"]),
     interval: UU5.PropTypes.number,
     stepByOne: UU5.PropTypes.bool,
-    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string)
+    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
+    onIndexChange: UU5.PropTypes.func
   },
   //@@viewOff:propTypes
 
@@ -79,7 +80,8 @@ export const Carousel = UU5.Common.VisualComponent.create({
       type: "final",
       interval: 5000,
       stepByOne: false,
-      allowTags: []
+      allowTags: [],
+      onIndexChange: undefined
     };
   },
   //@@viewOff:getDefaultProps
@@ -121,7 +123,13 @@ export const Carousel = UU5.Common.VisualComponent.create({
   componentDidUpdate(prevProps, prevState) {
     if (!this.props.children) return;
 
-    let newProps = this.props !== prevProps;
+    let newProps = false;
+    for (let key in this.props) {
+      if (this.props[key] !== prevProps[key] && key !== "mainAttrs") {
+        newProps = true;
+        break;
+      }
+    }
     if (newProps || this.state.disabled !== prevState.disabled) {
       if (newProps) {
         this._resetShifts();
@@ -253,7 +261,7 @@ export const Carousel = UU5.Common.VisualComponent.create({
     };
 
     this.setAsyncState({
-      activeIndex: activeIndex,
+      activeIndex,
       tmpChildren: [],
       renderedChildren: this._getContent(properties),
       rowHeight: properties.height
@@ -324,6 +332,10 @@ export const Carousel = UU5.Common.VisualComponent.create({
           })
         );
       }
+    }
+
+    if (typeof this.props.onIndexChange === "function") {
+      this.props.onIndexChange({ activeIndex: nextIndex, component: this });
     }
 
     this.setAsyncState(

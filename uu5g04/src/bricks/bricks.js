@@ -144,6 +144,9 @@ export * from "./portal-modal.js";
 export * from "./rich-link.js";
 export * from "./portal-popover.js";
 
+export * from "./link-modal.js";
+export * from "./link-uve.js";
+
 // Aliases
 import * as UU5 from "uu5g04";
 
@@ -157,3 +160,11 @@ export const bookKitUrl =
 import "./color-schema/default.less";
 
 import "./internal/bg-styles.js";
+
+import Css from "./internal/css.js";
+
+Css.injectGlobal`
+  #uu5-modals > * {
+    z-index: 0;
+  }
+`;

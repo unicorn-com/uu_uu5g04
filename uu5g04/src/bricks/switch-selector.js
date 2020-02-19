@@ -209,14 +209,14 @@ export const SwitchSelector = UU5.Common.VisualComponent.create({
   propTypes: {
     items: UU5.PropTypes.arrayOf(
       UU5.PropTypes.shape({
-        value: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.bool]).isRequired,
+        value: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.bool, UU5.PropTypes.number]).isRequired,
         content: UU5.PropTypes.any,
         colorSchema: UU5.PropTypes.string,
         bgStyle: UU5.PropTypes.string,
         borderRadius: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string])
       })
     ).isRequired,
-    value: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.bool]),
+    value: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.bool, UU5.PropTypes.number]),
     onChange: UU5.PropTypes.func,
 
     size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
@@ -252,12 +252,6 @@ export const SwitchSelector = UU5.Common.VisualComponent.create({
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  getInitialState() {
-    let items = this.props.items || this.getDefault("items");
-    let value = this.props.value || typeof this.props.value === "boolean" ? this.props.value : (items[0] || {}).value;
-
-    return { value };
-  },
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
@@ -329,6 +323,8 @@ export const SwitchSelector = UU5.Common.VisualComponent.create({
           size={this.props.size}
           dark={this.props.bgStyle === "filled"}
           onMouseDown={this._onItemMouseDown}
+          // arrow fn necessary to pass item.value
+          // eslint-disable-next-line react/jsx-no-bind
           onClick={() => this._onChange(item.value)}
           colorSchema={(this.props.disabled || this.props.readOnly) && colorSchema !== "white" ? "grey" : colorSchema}
           bgStyle={item.bgStyle}
@@ -357,6 +353,6 @@ export const SwitchSelector = UU5.Common.VisualComponent.create({
   render() {
     return <div {...this._getMainAttrs()}>{this._getButtons()}</div>;
   }
-  //@@viewOn:render
+  //@@viewOff:render
 });
 export default SwitchSelector;

@@ -1215,11 +1215,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
       let result = null;
 
       if (this.props.showTodayButton) {
-        result = (
-          <div className={this.getClassName("secondaryWrapper")}>
-            {this.props.showTodayButton ? this._getTodayButton() : null}
-          </div>
-        );
+        result = <div className={this.getClassName("secondaryWrapper")}>{this._getTodayButton()}</div>;
       }
 
       return result;

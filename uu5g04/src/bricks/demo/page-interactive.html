@@ -1,49 +1,74 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"
+    />
     <title>Example 01</title>
 
     <script>
       if (!location.href.match(/^(about:|file:)/)) {
         var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
-        var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+        var bplSegmentCount = bplCookie ? Number(bplCookie[2]) : null;
         if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
-        var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+bplSegmentCount).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+        var appBaseUrlPath = (
+          location.pathname
+            .split(/\//)
+            .slice(0, 1 + bplSegmentCount)
+            .join("/") + "/"
+        )
+          .replace(/\/+/g, "/")
+          .replace(/"/g, "");
         var appAssetsRelativeUrlPath = "public/0.0.0/";
-        document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+        document.write(
+          '<base href="' +
+            appBaseUrlPath +
+            appAssetsRelativeUrlPath +
+            '" data-uu-app-base="' +
+            appBaseUrlPath +
+            '" data-uu-app-assets-base="' +
+            appAssetsRelativeUrlPath +
+            '">'
+        );
       }
     </script>
 
-    <link type="text/css" rel="stylesheet"
-          href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css"
+    />
 
     <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
 
     <script>
       var uu5g04 = "";
-      location.search.replace(/[?&]uu5g04=([^&#]*)/, function (m, g1) { uu5g04 = g1; });
+      location.search.replace(/[?&]uu5g04=([^&#]*)/, function(m, g1) {
+        uu5g04 = g1;
+      });
       var uu5g04Base = uu5g04 === "" ? "/" : "https://cdn.plus4u.net/uu-uu5g04/" + uu5g04 + "/";
       SystemJS.config({
-        "paths": {
-          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
-          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        paths: {
+          systemjs: "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          react: "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
           "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
           "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
           "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
 
-          "uu5g04": uu5g04Base + "uu5g04.js",
+          uu5g04: uu5g04Base + "uu5g04.js",
           "uu5g04-bricks": uu5g04Base + "uu5g04-bricks.js",
           "uu5g04-forms": uu5g04Base + "uu5g04-forms.js",
 
-          "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.1/uu_appg01_core.min.js",
-          "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.1/uu_appg01-base.min.js",
-          "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.2/uu_oidcg01.min.js",
-          "uu5codekitg01": "https://cdn.plus4u.net/beta/uu-uu5codekitg01/0.1.0/uu5codekitg01.js",
+          uu_appg01_core: "https://cdn.plus4u.net/uu-appg01-core/3.0.1/uu_appg01_core.min.js",
+          uu_appg01: "https://cdn.plus4u.net/uu-appg01/3.0.1/uu_appg01-base.min.js",
+          uu_oidcg01: "https://cdn.plus4u.net/uu-oidcg01/3.0.2/uu_oidcg01.min.js",
+          uu5codekitg01: "https://cdn.plus4u.net/beta/uu-uu5codekitg01/0.1.0/uu5codekitg01.js",
 
-          "uu_plus4u5g01": "https://cdn.plus4u.net/uu-plus4u5g01/2.0.0/uu_plus4u5g01.js",
+          uu_plus4u5g01: "https://cdn.plus4u.net/uu-plus4u5g01/2.0.0/uu_plus4u5g01.js",
           "uu_plus4u5g01-bricks": "https://cdn.plus4u.net/uu-plus4u5g01/2.0.0/uu_plus4u5g01-bricks.js",
-          "uu_plus4u5g01-app": "https://cdn.plus4u.net/uu-plus4u5g01/2.0.0/uu_plus4u5g01-app.js",
+          "uu_plus4u5g01-app": "https://cdn.plus4u.net/uu-plus4u5g01/2.0.0/uu_plus4u5g01-app.js"
           // "uu_plus4u5g01": "http://localhost:4322/uu_plus4u5g01.js",
           // "uu_plus4u5g01-app": "http://localhost:4322/uu_plus4u5g01-app.js",
           // "uu_plus4u5g01-bricks": "http://localhost:4322/uu_plus4u5g01-bricks.js"
@@ -90,13 +115,11 @@
         position: absolute;
         top: 40px;
         left: 0;
-        color: rgb(28, 255, 0,);
+        color: rgb(28, 255, 0);
       }
     </style>
-
   </head>
   <body>
-
     <div id="uu5Example"></div>
 
     <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
@@ -126,10 +149,7 @@
       );
 
       const Page = UU5.Common.VisualComponent.create({
-        mixins: [
-          UU5.Common.BaseMixin,
-          UU5.Common.ScreenSizeMixin
-        ],
+        mixins: [UU5.Common.BaseMixin, UU5.Common.ScreenSizeMixin],
 
         getInitialState() {
           return {
@@ -143,18 +163,23 @@
             rightRelative: null,
             leftResizable: true,
             rightResizable: true,
+            leftResizableMinWidth: 100,
+            leftResizableMaxWidth: 200,
+            rightResizableMinWidth: 100,
+            rightResizableMaxWidth: 200,
             leftFixed: true,
             rightFixed: true,
             leftSwipe: 0,
             rightSwipe: 0,
-            tempLeftRelative: {xs: false, s: false, m: false, l: false, xl: false},
-            tempRightRelative: {xs: false, s: false, m: false, l: false, xl: false},
+            tempLeftRelative: { xs: false, s: false, m: false, l: false, xl: false },
+            tempRightRelative: { xs: false, s: false, m: false, l: false, xl: false },
             leftWidth: "!xs-100px !s-100px m-150px !l-100px-300px !xl-20%",
             rightWidth: "!xs-100px !s-100px m-150px !l-100px-150px !xl-10%-20%",
             overlayTop: false,
             showLeftToggleButton: true,
-            showRightToggleButton: true
-          }
+            showRightToggleButton: true,
+            key: Math.random()
+          };
         },
 
         _getTypes() {
@@ -183,7 +208,7 @@
                 key={0}
                 colorSchema="blue"
                 label="leftRelative"
-                onChange={(opt) => {
+                onChange={opt => {
                   let value = "";
                   for (let size in opt.value) {
                     if (opt.value[size]) {
@@ -191,15 +216,15 @@
                     }
                   }
 
-                  this.setState({leftRelative: value.trim(), tempLeftRelative: opt.value});
+                  this.setState({ leftRelative: value.trim(), tempLeftRelative: opt.value });
                   opt.component.onChangeDefault(opt);
                 }}
                 value={[
-                  {label: 'xs', name: 'xs', value: this.state.tempLeftRelative.xs},
-                  {label: 's', name: 's', value: this.state.tempLeftRelative.s},
-                  {label: 'm', name: 'm', value: this.state.tempLeftRelative.m},
-                  {label: 'l', name: 'l', value: this.state.tempLeftRelative.l},
-                  {label: 'xl', name: 'xl', value: this.state.tempLeftRelative.xl}
+                  { label: "xs", name: "xs", value: this.state.tempLeftRelative.xs },
+                  { label: "s", name: "s", value: this.state.tempLeftRelative.s },
+                  { label: "m", name: "m", value: this.state.tempLeftRelative.m },
+                  { label: "l", name: "l", value: this.state.tempLeftRelative.l },
+                  { label: "xl", name: "xl", value: this.state.tempLeftRelative.xl }
                 ]}
               />
             </UU5.Bricks.Column>,
@@ -210,7 +235,7 @@
                 key={1}
                 colorSchema="blue"
                 label="rightRelative"
-                onChange={(opt) => {
+                onChange={opt => {
                   let value = "";
                   for (let size in opt.value) {
                     if (opt.value[size]) {
@@ -218,19 +243,19 @@
                     }
                   }
 
-                  this.setState({rightRelative: value.trim(), tempRightRelative: opt.value});
+                  this.setState({ rightRelative: value.trim(), tempRightRelative: opt.value });
                   opt.component.onChangeDefault(opt);
                 }}
                 value={[
-                  {label: 'xs', name: 'xs', value: this.state.tempRightRelative.xs},
-                  {label: 's', name: 's', value: this.state.tempRightRelative.s},
-                  {label: 'm', name: 'm', value: this.state.tempRightRelative.m},
-                  {label: 'l', name: 'l', value: this.state.tempRightRelative.l},
-                  {label: 'xl', name: 'xl', value: this.state.tempRightRelative.xl}
+                  { label: "xs", name: "xs", value: this.state.tempRightRelative.xs },
+                  { label: "s", name: "s", value: this.state.tempRightRelative.s },
+                  { label: "m", name: "m", value: this.state.tempRightRelative.m },
+                  { label: "l", name: "l", value: this.state.tempRightRelative.l },
+                  { label: "xl", name: "xl", value: this.state.tempRightRelative.xl }
                 ]}
               />
             </UU5.Bricks.Column>
-          ]
+          ];
           return result;
         },
 
@@ -240,24 +265,24 @@
               label="leftWidth"
               value={this.state.leftWidth}
               inputColWidth="s-12 m-5"
-              ref_={(leftWidth) => this._leftWidth = leftWidth}
+              ref_={leftWidth => (this._leftWidth = leftWidth)}
               key={"1"}
             />,
             <UU5.Forms.Text
               label="rightWidth"
               value={this.state.rightWidth}
               inputColWidth="s-12 m-5"
-              ref_={(rightWidth) => this._rightWidth = rightWidth}
+              ref_={rightWidth => (this._rightWidth = rightWidth)}
               key={"2"}
             />,
             <UU5.Bricks.Button
               onClick={() => {
-                this.setState({leftWidth: this._leftWidth.getValue(), rightWidth: this._rightWidth.getValue()})
+                this.setState({ leftWidth: this._leftWidth.getValue(), rightWidth: this._rightWidth.getValue() });
               }}
               content="Save"
               key={"3"}
             />
-          ]
+          ];
           return result;
         },
 
@@ -266,13 +291,13 @@
             <UU5.Forms.Checkbox
               type={2}
               value={this.state.showLeftToggleButton}
-              onChange={(opt) => this.setState({ showLeftToggleButton: opt.value })}
+              onChange={opt => this.setState({ showLeftToggleButton: opt.value })}
               label="showLeftToggleButton"
             />,
             <UU5.Forms.Checkbox
               type={2}
               value={this.state.showRightToggleButton}
-              onChange={(opt) => this.setState({ showRightToggleButton: opt.value })}
+              onChange={opt => this.setState({ showRightToggleButton: opt.value })}
               label="showRightToggleButton"
             />
           ];
@@ -283,8 +308,8 @@
             <UU5.Forms.Text
               label="leftSwipe"
               inputColWidth="s-12 m-5"
-              value={(this.state.leftSwipe).toString()}
-              ref_={(leftSwipe) => this._leftSwipe = leftSwipe}
+              value={this.state.leftSwipe.toString()}
+              ref_={leftSwipe => (this._leftSwipe = leftSwipe)}
               key={"1"}
             />,
             <UU5.Forms.Checkbox
@@ -292,16 +317,16 @@
               value={this.state.leftSwipe === 8}
               label=" "
               key={"2"}
-              onChange={(opt) => {
-                this.setState({leftSwipe: opt.value ? 8 : 0});
+              onChange={opt => {
+                this.setState({ leftSwipe: opt.value ? 8 : 0 });
                 opt.component.onChangeDefault(opt);
               }}
             />,
             <UU5.Forms.Text
               label="rightSwipe"
               inputColWidth="s-12 m-5"
-              value={(this.state.rightSwipe).toString()}
-              ref_={(rightSwipe) => this._rightSwipe = rightSwipe}
+              value={this.state.rightSwipe.toString()}
+              ref_={rightSwipe => (this._rightSwipe = rightSwipe)}
               key={"3"}
             />,
             <UU5.Forms.Checkbox
@@ -309,19 +334,22 @@
               value={this.state.rightSwipe === 8}
               label=" "
               key={"4"}
-              onChange={(opt) => {
-                this.setState({rightSwipe: opt.value ? 8 : 0});
+              onChange={opt => {
+                this.setState({ rightSwipe: opt.value ? 8 : 0 });
                 opt.component.onChangeDefault(opt);
               }}
             />,
             <UU5.Bricks.Button
               onClick={() => {
-                this.setState({leftSwipe: parseInt(this._leftSwipe.getValue()), rightSwipe: parseInt(this._rightSwipe.getValue())})
+                this.setState({
+                  leftSwipe: parseInt(this._leftSwipe.getValue()),
+                  rightSwipe: parseInt(this._rightSwipe.getValue())
+                });
               }}
               content="Save"
               key={"5"}
             />
-          ]
+          ];
           return result;
         },
 
@@ -330,8 +358,8 @@
             <UU5.Forms.Number
               label="topFixedHeight"
               inputColWidth="s-12 m-5"
-              value={(this.state.topFixedHeight).toString()}
-              ref_={(topFixedHeight) => this._topFixedHeight = topFixedHeight}
+              value={this.state.topFixedHeight.toString()}
+              ref_={topFixedHeight => (this._topFixedHeight = topFixedHeight)}
               step={10}
               min={0}
               key={"0"}
@@ -339,27 +367,48 @@
             <UU5.Forms.Number
               label="bottomFixedHeight"
               inputColWidth="s-12 m-5"
-              value={(this.state.bottomFixedHeight).toString()}
-              ref_={(bottomFixedHeight) => this._bottomFixedHeight = bottomFixedHeight}
+              value={this.state.bottomFixedHeight.toString()}
+              ref_={bottomFixedHeight => (this._bottomFixedHeight = bottomFixedHeight)}
               step={10}
               min={0}
               key={"1"}
             />,
             <UU5.Bricks.Button
               onClick={() => {
-                this.setState({topFixedHeight: parseInt(this._topFixedHeight.getValue()), bottomFixedHeight: parseInt(this._bottomFixedHeight.getValue())})
+                this.setState({
+                  topFixedHeight: parseInt(this._topFixedHeight.getValue()),
+                  bottomFixedHeight: parseInt(this._bottomFixedHeight.getValue())
+                });
               }}
               content="Save"
               key={"2"}
             />
-          ]
+          ];
           return result;
         },
 
         _getFixedProps() {
-          return ([
-            <UU5.Forms.Text key="1" ref_={(opt) => this._topFixed = opt} value={this.state.topFixed === true || this.state.topFixed === false ? this.state.topFixed.toString() : this.state.topFixed} label="topFixed" />,
-            <UU5.Forms.Text key="2" ref_={(opt) => this._bottomFixed = opt} value={this.state.bottomFixed === true || this.state.bottomFixed === false ? this.state.bottomFixed.toString() : this.state.bottomFixed} label="bottomFixed" />,
+          return [
+            <UU5.Forms.Text
+              key="1"
+              ref_={opt => (this._topFixed = opt)}
+              value={
+                this.state.topFixed === true || this.state.topFixed === false
+                  ? this.state.topFixed.toString()
+                  : this.state.topFixed
+              }
+              label="topFixed"
+            />,
+            <UU5.Forms.Text
+              key="2"
+              ref_={opt => (this._bottomFixed = opt)}
+              value={
+                this.state.bottomFixed === true || this.state.bottomFixed === false
+                  ? this.state.bottomFixed.toString()
+                  : this.state.bottomFixed
+              }
+              label="bottomFixed"
+            />,
             <UU5.Bricks.Button
               onClick={() => {
                 let topFixedValue = this._topFixed.getValue();
@@ -372,17 +421,17 @@
                 }
 
                 if (bottomFixedValue === "true") {
-                  bottomFixedValue = true
+                  bottomFixedValue = true;
                 } else if (bottomFixedValue === "false") {
                   bottomFixedValue = false;
                 }
 
-                this.setState({topFixed: topFixedValue, bottomFixed: bottomFixedValue})
+                this.setState({ topFixed: topFixedValue, bottomFixed: bottomFixedValue });
               }}
               content="Save"
               key={"3"}
             />
-          ]);
+          ];
         },
 
         _getOtherProps() {
@@ -392,46 +441,95 @@
                 type={2}
                 size="m"
                 colorSchema="blue"
-                onChange={(opt) => {
+                onChange={opt => {
                   this.setState(opt.value);
                   opt.component.onChangeDefault(opt);
                 }}
                 value={[
-                  {label: 'leftFixed', name: 'leftFixed', value: this.state.leftFixed},
-                  {label: 'rightFixed', name: 'rightFixed', value: this.state.rightFixed},
-                  {label: 'fullPage', name: 'fullPage', value: this.state.fullPage},
-                  {label: 'overlayTop', name: 'overlayTop', value: this.state.overlayTop}
+                  { label: "leftFixed", name: "leftFixed", value: this.state.leftFixed },
+                  { label: "rightFixed", name: "rightFixed", value: this.state.rightFixed },
+                  { label: "fullPage", name: "fullPage", value: this.state.fullPage },
+                  { label: "overlayTop", name: "overlayTop", value: this.state.overlayTop }
                 ]}
               />
+            </UU5.Common.Fragment>
+          );
+          return result;
+        },
+
+        _getResizeProps() {
+          return (
+            <UU5.Common.Fragment>
               <UU5.Forms.Text
                 label="leftResizable"
-                value={this.state.leftResizable === true ? "true" : (this.state.leftResizable === false ? "false" : this.state.leftResizable)}
-                onBlur={(opt) => {
+                inputColWidth="s-12 m-5"
+                value={
+                  this.state.leftResizable === true
+                    ? "true"
+                    : this.state.leftResizable === false
+                    ? "false"
+                    : this.state.leftResizable
+                }
+                onBlur={opt => {
                   if (opt.value === "true") {
                     this.setState({ leftResizable: true });
                   } else if (opt.value === "false") {
                     this.setState({ leftResizable: false });
                   } else {
-                    this.setState({ leftResizable: opt.value  });
+                    this.setState({ leftResizable: opt.value });
                   }
                 }}
               />
               <UU5.Forms.Text
                 label="rightResizable"
-                value={this.state.rightResizable === true ? "true" : (this.state.rightResizable === false ? "false" : this.state.rightResizable)}
-                onBlur={(opt) => {
+                inputColWidth="s-12 m-5"
+                value={
+                  this.state.rightResizable === true
+                    ? "true"
+                    : this.state.rightResizable === false
+                    ? "false"
+                    : this.state.rightResizable
+                }
+                onBlur={opt => {
                   if (opt.value === "true") {
                     this.setState({ rightResizable: true });
                   } else if (opt.value === "false") {
                     this.setState({ rightResizable: false });
                   } else {
-                    this.setState({ rightResizable: opt.value  });
+                    this.setState({ rightResizable: opt.value });
                   }
                 }}
               />
+              <UU5.Forms.Text
+                label="leftResizableMinWidth"
+                value={this.state.leftResizableMinWidth || ""}
+                inputColWidth="s-12 m-5"
+                onBlur={opt => this.setState({ leftResizableMinWidth: parseFloat(opt.value) || undefined })}
+                message="insert a number with a unit"
+              />
+              <UU5.Forms.Text
+                label="leftResizableMaxWidth"
+                value={this.state.leftResizableMaxWidth || ""}
+                inputColWidth="s-12 m-5"
+                onBlur={opt => this.setState({ leftResizableMaxWidth: parseFloat(opt.value) || undefined })}
+                message="insert a number with a unit"
+              />
+              <UU5.Forms.Text
+                label="rightResizableMinWidth"
+                value={this.state.rightResizableMinWidth || ""}
+                inputColWidth="s-12 m-5"
+                onBlur={opt => this.setState({ rightResizableMinWidth: parseFloat(opt.value) || undefined })}
+                message="insert a number with a unit"
+              />
+              <UU5.Forms.Text
+                label="rightResizableMaxWidth"
+                value={this.state.rightResizableMaxWidth || ""}
+                inputColWidth="s-12 m-5"
+                onBlur={opt => this.setState({ rightResizableMaxWidth: parseFloat(opt.value) || undefined })}
+                message="insert a number with a unit"
+              />
             </UU5.Common.Fragment>
-          )
-          return result;
+          );
         },
 
         _getModals() {
@@ -449,23 +547,38 @@
         },
 
         render() {
-
-          return ([
-            <div style={{position: "fixed", right: "0", top: "0", zIndex: "100000"}}>
+          return [
+            <div style={{ position: "fixed", right: "0", top: "0", zIndex: "100000" }}>
               <UU5.Bricks.Dropdown
                 label={"uu5g04" + (uu5g04 ? " CDN " + uu5g04 : " local") + " (" + UU5.Environment.version + ")"}
                 items={[
-                    { label: "local", href: "?" },
-                    { label: "CDN 1.0.0", href: "?uu5g04=1.0.0" },
-                    { label: "CDN 1.20.0", href: "?uu5g04=1.20.0" }
+                  { label: "local", href: "?" },
+                  { label: "CDN 1.0.0", href: "?uu5g04=1.0.0" },
+                  { label: "CDN 1.20.0", href: "?uu5g04=1.20.0" }
                 ]}
               />
             </div>,
             <UU5.Bricks.Page
-              key={Math.random()}
+              key={this.state.key}
               type={this.state.type}
-              top={<UU5.Bricks.Box colorSchema="blue-rich" className="center">{"current screen size: " + this.getScreenSize().toUpperCase()}<br/>TEST<br/>TEST</UU5.Bricks.Box>}
-              bottom={<UU5.Bricks.Box colorSchema="blue-rich" className="center">{"current screen size: " + this.getScreenSize().toUpperCase()}<br/>TEST<br/>TEST</UU5.Bricks.Box>}
+              top={
+                <UU5.Bricks.Box colorSchema="blue-rich" className="center">
+                  {"current screen size: " + this.getScreenSize().toUpperCase()}
+                  <br />
+                  TEST
+                  <br />
+                  TEST
+                </UU5.Bricks.Box>
+              }
+              bottom={
+                <UU5.Bricks.Box colorSchema="blue-rich" className="center">
+                  {"current screen size: " + this.getScreenSize().toUpperCase()}
+                  <br />
+                  TEST
+                  <br />
+                  TEST
+                </UU5.Bricks.Box>
+              }
               left={leftColumnContent}
               right={rightColumnContent}
               contentWrapperProps={{ level: "1", style: { paddingLeft: "1%", paddingRight: "1%" } }}
@@ -481,6 +594,10 @@
               rightRelative={this.state.rightRelative}
               leftResizable={this.state.leftResizable}
               rightResizable={this.state.rightResizable}
+              leftResizableMinWidth={this.state.leftResizableMinWidth}
+              leftResizableMaxWidth={this.state.leftResizableMaxWidth}
+              rightResizableMinWidth={this.state.rightResizableMinWidth}
+              rightResizableMaxWidth={this.state.rightResizableMaxWidth}
               leftFixed={this.state.leftFixed}
               rightFixed={this.state.rightFixed}
               leftSwipe={this.state.leftSwipe}
@@ -492,39 +609,47 @@
               showRightToggleButton={this.state.showRightToggleButton}
             >
               <UU5.Bricks.Div className="center">
+                <UU5.Bricks.Section level={3}>
+                  <UU5.Bricks.Button content="re-mount Page" onClick={() => this.setState({ key: Math.random() })} />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Line colorSchema="primary" size="m" />
                 <UU5.Bricks.Section header="Page types" level={3}>
-                  <UU5.Bricks.ButtonGroup props={{size: "s"}} bordered>
+                  <UU5.Bricks.ButtonGroup props={{ size: "s" }} bordered>
                     {this._getTypes()}
                   </UU5.Bricks.ButtonGroup>
                 </UU5.Bricks.Section>
-                <UU5.Bricks.Line colorSchema='primary' size='m'/>
-                  <UU5.Bricks.Button onClick={() => UU5.Common.Tools.getPage().toggleLeft()} content="Toggle left" />
-                  <UU5.Bricks.Button onClick={() => UU5.Common.Tools.getPage().toggleRight()} content="Toggle right" />
-                <UU5.Bricks.Line colorSchema='primary' size='m'/>
+                <UU5.Bricks.Line colorSchema="primary" size="m" />
+                <UU5.Bricks.Button onClick={() => UU5.Common.Tools.getPage().toggleLeft()} content="Toggle left" />
+                <UU5.Bricks.Button onClick={() => UU5.Common.Tools.getPage().toggleRight()} content="Toggle right" />
+                <UU5.Bricks.Line colorSchema="primary" size="m" />
                 <UU5.Bricks.Section header="leftWidth, rightWidth" level={3}>
                   {this._getColumnWidthProps()}
                 </UU5.Bricks.Section>
-                <UU5.Bricks.Line colorSchema='primary' size='m'/>
-                <UU5.Bricks.Section header="leftRelative, rightRelative" level={3} style={{overflow: "hidden"}}>
+                <UU5.Bricks.Line colorSchema="primary" size="m" />
+                <UU5.Bricks.Section header="leftRelative, rightRelative" level={3} style={{ overflow: "hidden" }}>
                   {this._getRelativeProps()}
                 </UU5.Bricks.Section>
-                <UU5.Bricks.Section header="leftSwipe, rightSwipe" level={3} style={{overflow: "hidden"}}>
+                <UU5.Bricks.Section header="leftSwipe, rightSwipe" level={3} style={{ overflow: "hidden" }}>
                   {this._getSwipeProps()}
                 </UU5.Bricks.Section>
                 <UU5.Bricks.Section header="showLeftToggleButton, showRightToggleButton" level={3}>
                   {this._getColumnToggleButtons()}
                 </UU5.Bricks.Section>
-                <UU5.Bricks.Line colorSchema='primary' size='m'/>
-                <UU5.Bricks.Section header="fixedHeight" level={3} style={{overflow: "hidden"}}>
+                <UU5.Bricks.Line colorSchema="primary" size="m" />
+                <UU5.Bricks.Section header="fixedHeight" level={3} style={{ overflow: "hidden" }}>
                   {this._getFixedHeightProps()}
                 </UU5.Bricks.Section>
-                <UU5.Bricks.Line colorSchema='primary' size='m'/>
+                <UU5.Bricks.Line colorSchema="primary" size="m" />
                 <UU5.Bricks.Section header="Other props" level={3}>
                   {this._getOtherProps()}
                 </UU5.Bricks.Section>
-                <UU5.Bricks.Line colorSchema='primary' size='m'/>
+                <UU5.Bricks.Line colorSchema="primary" size="m" />
                 <UU5.Bricks.Section header="Fixed props" level={3}>
                   {this._getFixedProps()}
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Line colorSchema="primary" size="m" />
+                <UU5.Bricks.Section header="Resize props" level={3}>
+                  {this._getResizeProps()}
                 </UU5.Bricks.Section>
                 <UU5.Bricks.Section header="Modal" level={3}>
                   <UU5.Bricks.ButtonGroup size="s" bordered>
@@ -537,10 +662,10 @@
                   </UU5.Bricks.ButtonGroup>
                 </UU5.Bricks.Section>
               </UU5.Bricks.Div>
-              <UU5.Bricks.Modal ref_={(comp) => this._modal1 = comp} content="Normal" />
-              <UU5.Bricks.Modal ref_={(comp) => this._modal2 = comp} forceRender content="ForceRender" />
-              <UU5.Bricks.Popover ref_={(comp) => this._popover1 = comp} content="Normal" />
-              <UU5.Bricks.Popover ref_={(comp) => this._popover2 = comp} forceRender content="ForceRender" />
+              <UU5.Bricks.Modal ref_={comp => (this._modal1 = comp)} content="Normal" />
+              <UU5.Bricks.Modal ref_={comp => (this._modal2 = comp)} forceRender content="ForceRender" />
+              <UU5.Bricks.Popover ref_={comp => (this._popover1 = comp)} content="Normal" />
+              <UU5.Bricks.Popover ref_={comp => (this._popover2 = comp)} forceRender content="ForceRender" />
               <UU5.Bricks.Paragraph />
               <UU5.Forms.Datepicker />
               <UU5.Bricks.Paragraph />
@@ -551,11 +676,11 @@
               <UU5.Bricks.Paragraph />
               <UU5.Bricks.Paragraph />
             </UU5.Bricks.Page>
-          ]);
+          ];
         }
       });
 
-      UU5.Common.DOM.render(<Page />, document.getElementById('uu5Example'));
+      UU5.Common.DOM.render(<Page />, document.getElementById("uu5Example"));
     </script>
   </body>
 </html>

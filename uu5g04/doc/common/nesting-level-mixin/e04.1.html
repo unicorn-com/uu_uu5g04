@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 04</title>
+
+  <script>
+    if (!location.href.match(/^(about:|file:)/)) {
+      var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+      var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+      if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+      var appBaseUrlPath = (location.pathname.split(/\//).slice(0, 1 + bplSegmentCount).join("/") + "/").replace(/\/+/g, "/").replace(/"/g, "");
+      var appAssetsRelativeUrlPath = "public/0.0.0/";
+      document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    }
+  </script>
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js",
+        "uu5g04-hooks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-hooks.min.js"
+      }
+    });
+  </script>
+</head>
+<body class="clear-sans">
+
+<div id="uu5Example"></div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+  import { createVisualComponent, useCallback, useRef } from "uu5g04-hooks";
+
+  const LinkModal = createVisualComponent({
+
+    displayName: "UU5.Bricks.LinkModal",
+    nestingLevel: "inline",
+
+    propTypes: {
+      linkProps: UU5.PropTypes.object,
+
+      modalProps: UU5.PropTypes.object,
+      component: UU5.PropTypes.any // content
+    },
+
+    defaultProps: {
+      linkProps: undefined,
+
+      modalProps: undefined,
+      component: undefined
+    },
+
+    render(props) {
+      const { disabled, hidden, children, linkProps, modalProps, component } = props;
+
+      const open = useCallback(
+        () => modalRef.current.open({
+          header: children,
+          content: component
+        }),
+        [children, component]
+      );
+
+      const modalRef = useRef();
+
+      return !hidden && (
+        <UU5.Common.Fragment>
+          <UU5.Bricks.Link {...linkProps} disabled={disabled} content={children} onClick={open} />
+          <UU5.Bricks.PortalModal {...modalProps} ref_={modalRef} />
+        </UU5.Common.Fragment>
+      )
+    }
+  });
+
+  const LinkRoute = createVisualComponent({
+
+    displayName: "UU5.Bricks.LinkRoute",
+    nestingLevel: "inline",
+
+    propTypes: {
+      linkProps: UU5.PropTypes.object,
+
+      routeProps: UU5.PropTypes.shape({
+        route: UU5.PropTypes.any, // route
+        params: UU5.PropTypes.object,
+        fragment: UU5.PropTypes.string,
+        onChange: UU5.PropTypes.func
+      })
+    },
+
+    defaultProps: {
+      linkProps: undefined,
+
+      routeProps: undefined
+    },
+
+    render(props) {
+      const { disabled, hidden, children, linkProps, routeProps } = props;
+
+      const open = useCallback(
+        () => UU5.Environment.setRoute(routeProps.route, routeProps.params, routeProps.fragment, routeProps.onChange),
+        [children, routeProps.route, routeProps.params, routeProps.fragment, routeProps.onChange]
+      );
+
+      return !hidden && (
+        <UU5.Bricks.Link {...linkProps} disabled={disabled} content={children} onClick={open} />
+      )
+    }
+  });
+
+  const LinkPlus4UGo = createVisualComponent({
+
+    displayName: "UU5.Bricks.LinkPlus4UGo",
+    nestingLevel: "inline",
+
+    propTypes: {
+      linkProps: UU5.PropTypes.object,
+
+      uveProps: UU5.PropTypes.shape({
+        top: UU5.PropTypes.any, // lsi or string
+        languages: UU5.PropTypes.array,
+        title: UU5.PropTypes.any // lsi or string
+      }),
+      componentName: UU5.PropTypes.string,
+      componentProps: UU5.PropTypes.object
+    },
+
+    defaultProps: {
+      linkProps: undefined,
+
+      uveProps: undefined
+    },
+
+    render(props) {
+      const { disabled, hidden, children, linkProps, uveProps, componentName, componentProps } = props;
+
+      const { parent, ...compProps } = componentProps;
+
+      let href = "https://uuappg01-eu-w-1.plus4u.net/uu-plus4ugo-maing01/f34b62a867db4bd89490534bb26451ad/component/render?_component=";
+      const params = [componentName];
+
+      for (let prop in uveProps) {
+        if (uveProps[prop]) params.push(["_" + prop, JSON.stringify(uveProps[prop])].join("="));
+      }
+
+      for (let prop in compProps) {
+        if (compProps[prop]) params.push([prop, JSON.stringify(compProps[prop])].join("="));
+      }
+
+      href += params.join("&");
+
+      return !hidden && (
+        <UU5.Bricks.Link target="_blank" {...linkProps} href={href} disabled={disabled} content={children} />
+      )
+    }
+  });
+
+  const panels = [
+    { header: "Apple", content: "<uu5string/><UU5.Bricks.Paragraph />" },
+    { header: "Banana", content: "Bla bla bla bla bla blabl abla bla bla." }
+  ];
+
+  const AccordionComp = UU5.Common.VisualComponent.create({
+    mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin],
+
+    statics: {
+      tagName: "UU5.Demo.Accordion",
+      nestingLevelList: UU5.Environment.getNestingLevelList("bigBox", "box")
+    },
+
+    getDefaultProps() {
+      return {
+        panels
+      };
+    },
+
+    render() {
+      return (
+        <UU5.Bricks.Accordion {...this.props} parent={null} />
+      );
+    }
+  });
+
+  function withNestingLevel(Component, linkProps, modalProps, type = "modal") {
+    return UU5.Common.Component.create({
+      mixins: [UU5.Common.BaseMixin, UU5.Common.NestingLevelMixin],
+
+      statics: {
+        tagName: `withNestingLevelToModal(${Component.tagName})`,
+        nestingLevel: Component.nestingLevel,
+        nestingLevelList: Component.nestingLevelList
+      },
+
+      render() {
+        const component = <Component {...this.props} parent={null} />;
+
+        if (type === "modal")
+          return this.getNestingLevel() ? component : (
+            <LinkModal
+              disabled={this.props.disabled}
+              hidden={this.props.hidden}
+              component={component}
+              linkProps={linkProps}
+              modalProps={modalProps}
+            />
+          );
+
+        if (type === "route")
+          return this.getNestingLevel() ? component : (
+            <LinkRoute
+              children="Accordion"
+              disabled={this.isDisabled()}
+              hidden={this.isHidden()}
+              routeProps={{ route: "accordion", params: { panels: this.props.panels } }}
+            />
+          );
+
+        if (type === "plus4uGo")
+          return this.getNestingLevel() ? component : (
+            <LinkPlus4UGo
+              children="Accordion"
+              disabled={this.isDisabled()}
+              hidden={this.isHidden()}
+              componentName="UU5.Bricks.Accordion"
+              componentProps={{ panels: this.props.panels }}
+            />
+          );
+      }
+    })
+  }
+
+  const Accordion = withNestingLevel(AccordionComp, { children: "AccordionModal", colorSchema: "red" }, { size: "xl" });
+
+  const Home = UU5.Common.VisualComponent.create({
+    mixins: [UU5.Common.BaseMixin, UU5.Common.RouteMixin],
+
+    render() {
+      return (
+        <UU5.Bricks.Section header="Home">
+          <Accordion type="modal" />
+
+          <UU5.Bricks.Div nestingLevel="box">
+            <Accordion type="modal" /> <Accordion type="route" /> <Accordion type="plus4uGo" />
+          </UU5.Bricks.Div>
+        </UU5.Bricks.Section>
+      )
+    }
+  });
+
+  const AccordionRoute = UU5.Common.VisualComponent.create({
+    mixins: [UU5.Common.BaseMixin, UU5.Common.RouteMixin],
+
+    render() {
+      return (
+        <UU5.Bricks.Section header="Accordion">
+          <UU5.Bricks.Accordion {...this.props.params} />
+        </UU5.Bricks.Section>
+      )
+    }
+  });
+
+  function Page() {
+    const c = <UU5.Common.Router
+      routes={{
+        "": { component: <Home /> },
+        "/doc/common/nesting-level-mixin/e04.1.html": "",
+        "accordion": { component: <AccordionRoute /> }
+      }}
+      route=""
+    />;
+
+    return (
+      <UU5.Bricks.Container>
+        <Home />
+      </UU5.Bricks.Container>
+    );
+  }
+
+  UU5.Common.DOM.render(<Page />, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

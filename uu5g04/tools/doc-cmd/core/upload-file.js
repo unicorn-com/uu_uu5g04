@@ -23,8 +23,8 @@ const UuBookKit = {
       params.code = code;
 
       // params.data = fs.createReadStream(filePath, { highWaterMark: 30 << 20 }); // read 30MB as a single chunk because there's some issue with streaming on gateway
-      params.data = fs.readFileSync(filePath);
       params.filename = path.basename(filePath);
+      params.data = fs.readFileSync(filePath);
 
       await UuBookKit.client().uuAppBinaryStore_createBinary(params);
       console.log(`Binary file ${code} added.`);
@@ -40,7 +40,10 @@ const UuBookKit = {
       try {
         await UuBookKit.File._upload(filePath, code, params);
       } catch (e) {
-        if (e.code === "uu-app-binarystore/uuBinaryCreateBinary/duplicateCode") {
+        if (
+          e.code === "uu-app-binarystore/uuBinaryCreateBinary/duplicateCode" ||
+          e.code === "uu-app-binarystore/createBinary/duplicateCode"
+        ) {
           if (!rl && typeof overwrite !== "boolean") {
             rl = readline.createInterface({
               input: process.stdin,
@@ -58,8 +61,13 @@ const UuBookKit = {
                   });
                 });
           if (doOverwrite) {
-            await UuBookKit.File.delete(code);
-            await UuBookKit.File._upload(filePath, code, params);
+            try {
+              await UuBookKit.File.delete(code);
+              await UuBookKit.File._upload(filePath, code, params);
+            } catch (e) {
+              console.error(e.dtoOut && e.dtoOut.uuAppErrorMap ? JSON.stringify(e.dtoOut, null, 2) : e);
+              throw e;
+            }
           }
         } else {
           console.error(`Binary file ${code} failed.`, JSON.stringify(e, null, 2));

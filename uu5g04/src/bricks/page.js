@@ -230,6 +230,10 @@ export const Page = UU5.Common.VisualComponent.create({
       UU5.PropTypes.string,
       UU5.PropTypes.oneOf(["open", "closed"])
     ]),
+    leftResizableMinWidth: UU5.PropTypes.number,
+    leftResizableMaxWidth: UU5.PropTypes.number,
+    rightResizableMinWidth: UU5.PropTypes.number,
+    rightResizableMaxWidth: UU5.PropTypes.number,
     onLeftResize: UU5.PropTypes.func,
     onRightResize: UU5.PropTypes.func,
     useDnD: UU5.PropTypes.bool,
@@ -285,6 +289,10 @@ export const Page = UU5.Common.VisualComponent.create({
       rightRelative: null,
       leftResizable: false,
       rightResizable: false,
+      leftResizableMinWidth: undefined,
+      leftResizableMaxWidth: undefined,
+      rightResizableMinWidth: undefined,
+      rightResizableMaxWidth: undefined,
       onLeftResize: null,
       onRightResize: null,
       useDnD: false,
@@ -860,6 +868,8 @@ export const Page = UU5.Common.VisualComponent.create({
         newProps.onUpdate = this._onLeftColumnUpdate;
         newProps.resizable = this._isLeftResizable();
         newProps.onResize = this._onColumnResize;
+        newProps.minResizableWidth = this.props.leftResizableMinWidth;
+        newProps.maxResizableWidth = this.props.leftResizableMaxWidth;
         newProps.showToggleButton = this.props.showLeftToggleButton;
         newProps.ref_ = left => (this._pageLeft = left);
         break;
@@ -886,6 +896,8 @@ export const Page = UU5.Common.VisualComponent.create({
         newProps.onUpdate = this._onRightColumnUpdate;
         newProps.resizable = this._isRightResizable();
         newProps.onResize = this._onColumnResize;
+        newProps.minResizableWidth = this.props.rightResizableMinWidth;
+        newProps.maxResizableWidth = this.props.rightResizableMaxWidth;
         newProps.showToggleButton = this.props.showRightToggleButton;
         newProps.ref_ = right => (this._pageRight = right);
         break;
@@ -944,6 +956,7 @@ export const Page = UU5.Common.VisualComponent.create({
       parent: this,
       id: this._popoverId,
       ref_: this._initPopover,
+      controlled: false,
       className: this.getClassName("popover")
     };
 

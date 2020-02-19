@@ -411,6 +411,16 @@ export const BricksLsi = {
       en: "Shades not available for this color."
     }
   },
+  alertBus: {
+    showAll: {
+      cs: "Zobrazit všechny upozornění",
+      en: "Show all alerts"
+    },
+    clearAll: {
+      cs: "Vymazat vše",
+      en: "Clear all"
+    }
+  },
   contextMenu: {
     backButton: {
       cs: "Zpět",

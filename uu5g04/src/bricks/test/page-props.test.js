@@ -251,7 +251,11 @@ const CONFIG = {
     },
     rightResizable: {
       values: [true, false]
-    }
+    },
+    leftResizableMinWidth: [undefined, 100],
+    leftResizableMaxWidth: [undefined, 100],
+    rightResizableMinWidth: [undefined, 100],
+    rightResizableMaxWidth: [undefined, 100]
   },
   requiredProps: {},
   opt: {
@@ -375,4 +379,18 @@ describe(`UU5.Bricks.Page`, () => {
 
     expect(wrapper).toMatchSnapshot();
   });
+
+  // TODO: Test by simulating drag event, which should resize the Column to a bigger width than allowed,
+  // then check that the width didnt actually change
+  // it("prop resizable widths", function() {
+  //   let props = {
+  //     left,
+  //     right,
+  //     leftResizableMinWidth: 100,
+  //     leftResizableMaxWidth: 200,
+  //     rightResizableMinWidth: 100,
+  //     rightResizableMaxWidth: 200
+  //   };
+  //   let wrapper = mount(<UU5.Bricks.Page {...props} />);
+  // });
 });

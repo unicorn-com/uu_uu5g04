@@ -178,7 +178,10 @@ export default UU5.Common.LsiMixin.withContext(
       let mainAttrs = this.getMainAttrs();
 
       if (!this.props.disabled && !this.props.readonly && this._hasFeedback()) {
-        mainAttrs.className = mainAttrs.className.replace(/ ?color-schema-[a-z-]+ ?/, ""); // this might be unnecessary, but just in case ...
+        mainAttrs.className = mainAttrs.className
+          .replace(/color-schema-[a-z-]+/, "")
+          .replace(/ {2}/, " ")
+          .trim(); // this might be unnecessary, but just in case ...
 
         switch (this.props.feedback) {
           case "success":

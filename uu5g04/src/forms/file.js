@@ -524,6 +524,7 @@ export const File = Context.withContext(
                     colorSchema={this.getColorSchema()}
                     onClick={(component, e) => {
                       if (!this.isDisabled() && !this.isReadOnly()) {
+                        this._resetInputValue();
                         this._changeValue(this._getFileValuesOnly(this.state.value.filter(it => it !== item)), e);
                       }
                     }}
@@ -649,6 +650,12 @@ export const File = Context.withContext(
       }
 
       return result;
+    },
+
+    _resetInputValue() {
+      if (this._inputVal) {
+        this._inputVal.value = "";
+      }
     },
 
     _renderProgress(progress) {
@@ -797,6 +804,7 @@ export const File = Context.withContext(
               disabled={this.isDisabled()}
               onClick={(component, e) => {
                 if (!this.isDisabled() && !this.isReadOnly()) {
+                  this._resetInputValue();
                   this._changeValue(null, e);
                 }
               }}

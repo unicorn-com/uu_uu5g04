@@ -19,17 +19,22 @@ import "uu5g04-bricks";
 const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyAlertBus = UU5.Common.VisualComponent.create({
+  //@@viewOn:reactLifeCycle
   getInitialState: () => {
     return {
       isCalled: false
     };
   },
+  //@@viewOff:reactLifeCycle
 
+  //@@viewOn:interface
   onCloseAlert(event) {
     alert("Your close Alert in AlertBus");
     this.setState({ isCalled: true });
   },
+  //@@viewOff:interface
 
+  //@@viewOn:render
   render() {
     return (
       <UU5.Bricks.AlertBus
@@ -40,6 +45,7 @@ const MyAlertBus = UU5.Common.VisualComponent.create({
       />
     );
   }
+  //@@viewOff:render
 });
 
 const CONFIG = {
@@ -88,8 +94,10 @@ const CONFIG = {
     },
     forceRender: {
       values: [true, false]
+    },
+    descending: {
+      values: [undefined, true, false]
     }
-    //onClose:{}
   },
   requiredProps: {},
   opt: {}
@@ -98,7 +106,46 @@ const CONFIG = {
 describe(`UU5.Bricks.AlertBus`, () => {
   UU5.Test.Tools.testProperties(UU5.Bricks.AlertBus, CONFIG);
 
-  it(`UU5.Bricks.AlertBus  onClose()`, () => {
+  it(`UU5.Bricks.AlertBus rendering`, () => {
+    const wrapper = mount(<UU5.Bricks.AlertBus />);
+    wrapper.instance().setAlerts([{ content: "alert 1" }, { content: "alert 2" }]);
+    wrapper.update();
+    let alertList = wrapper.find(UU5.Bricks.Alert);
+    expect(alertList.at(0).text()).toBe("alert 1");
+  });
+
+  it(`UU5.Bricks.AlertBus stacked with descending`, () => {
+    let wrapper = mount(<UU5.Bricks.AlertBus stacked />);
+    // alerts sorted by colorSchema
+    wrapper.instance().setAlerts([
+      { content: "alert 1", colorSchema: "success" },
+      { content: "alert 2", colorSchema: "danger" }
+    ]);
+    wrapper.update();
+    let alertList = wrapper.find(UU5.Bricks.Alert);
+    // sorted by colorSchema
+    expect(alertList.at(0).text()).toBe("alert 2");
+    expect(alertList.at(1).text()).toBe("alert 1");
+
+    wrapper = mount(<UU5.Bricks.AlertBus stacked descending={true} />);
+    // new alerts are at the bottom
+    wrapper.instance().setAlerts([{ content: "alert 1" }, { content: "alert 2" }]);
+    wrapper.update();
+    alertList = wrapper.find(UU5.Bricks.Alert);
+    // second alert is shown
+    expect(alertList.at(0).text()).toBe("alert 2");
+    expect(alertList.at(1).text()).toBe("alert 1");
+
+    wrapper = mount(<UU5.Bricks.AlertBus stacked descending={false} />);
+    // new alerts are at the top
+    wrapper.instance().setAlerts([{ content: "alert 1" }, { content: "alert 2" }]);
+    wrapper.update();
+    alertList = wrapper.find(UU5.Bricks.Alert);
+    expect(alertList.at(0).text()).toBe("alert 1");
+    expect(alertList.at(1).text()).toBe("alert 2");
+  });
+
+  it(`UU5.Bricks.AlertBus onClose()`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(<MyAlertBus />);
     expect(wrapper).toMatchSnapshot();
@@ -109,5 +156,42 @@ describe(`UU5.Bricks.AlertBus`, () => {
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("Your close Alert in AlertBus");
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it(`UU5.Bricks.AlertBus location="local"`, () => {
+    let alertBus;
+    const wrapper = mount(
+      <UU5.Bricks.Page alertBus={<UU5.Bricks.AlertBus />}>
+        <UU5.Bricks.AlertBus ref_={ref => (alertBus = ref)} location="local" />
+      </UU5.Bricks.Page>
+    );
+    alertBus.addAlert({ content: "Alert Content" });
+    wrapper.update();
+    expect(alertBus.getAlerts().length).toBe(1);
+  });
+
+  it(`UU5.Bricks.AlertBus location="page"`, () => {
+    let alertBus;
+    let page;
+    const wrapper = mount(
+      <UU5.Bricks.Page ref_={ref => (page = ref)} alertBus={<UU5.Bricks.AlertBus />}>
+        <UU5.Bricks.AlertBus ref_={ref => (alertBus = ref)} location="page" />
+      </UU5.Bricks.Page>
+    );
+    alertBus.addAlert({ content: "Alert Content" });
+    wrapper.update();
+    expect(page.getAlertBus().getAlerts().length).toBe(1);
+  });
+
+  it(`UU5.Bricks.AlertBus location="portal"`, () => {
+    let alertBus;
+    const wrapper = mount(
+      <UU5.Bricks.Page alertBus={<UU5.Bricks.AlertBus />}>
+        <UU5.Bricks.AlertBus ref_={ref => (alertBus = ref)} location="portal" />
+      </UU5.Bricks.Page>
+    );
+    alertBus.addAlert({ content: "Alert Content" });
+    wrapper.update();
+    expect(UU5.Common.DOM.findNode(alertBus).parentElement.id === "uu5-modals").toBeTruthy();
   });
 });

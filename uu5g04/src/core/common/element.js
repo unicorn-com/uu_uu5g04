@@ -12,7 +12,7 @@
  */
 
 import React from "react";
-import { SYMBOL_COMPONENT, SYMBOL_INIT, SYMBOL_GUARD } from "./visual-component";
+import { SYMBOL_COMPONENT, SYMBOL_INIT, SYMBOL_GUARD } from "./component-symbols";
 
 export class Element {
   static create(...args) {
@@ -20,8 +20,8 @@ export class Element {
     if (process.env.NODE_ENV === "test" && type == null) {
       throw new Error(
         "Element type is: " +
-          type +
-          ". You likely forgot to import necessary library, or forgot to export your component from the file it's defined in, or you might have mixed up default and named imports."
+        type +
+        ". You likely forgot to import necessary library, or forgot to export your component from the file it's defined in, or you might have mixed up default and named imports."
       );
     }
     if (type) {
@@ -35,11 +35,14 @@ export class Element {
     }
     return React.createElement(...args);
   }
+
   static clone(...args) {
     return React.cloneElement(...args);
   }
+
   static isValid(...args) {
     return React.isValidElement(...args);
   }
 }
+
 export default Element;

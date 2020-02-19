@@ -33,8 +33,7 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
     //make a snapshot before calling interface
     expect(wrapper).toMatchSnapshot();
     //Alertbus array is empty before calling addAlert()
-    expect(wrapper.instance().state.alertStack).toEqual([]);
-    expect(wrapper.instance().state.alertStack).toHaveLength(0);
+    expect(wrapper.instance().getAlerts()).toEqual([]);
     //Here you have to fill out an alert id that is inserted into the alertBus component,
     //otherwise the new ID and Snapshot snapshots will be assigned to each rendering.
     const returnValue = wrapper.instance().addAlert({ id: "id_alert_bus", content: "Obsah alertu" }, mockFunc);
@@ -44,7 +43,7 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
     expect(mockFunc).toBeCalled();
     // test of returned value - in this case instance of tested component
     expect(returnValue).toBe(wrapper.instance());
-    expect(wrapper.instance().state.alertStack).toHaveLength(1);
+    expect(wrapper.instance().getAlerts()).toHaveLength(1);
     //changes: add alert to stack is in the snapshot.
     //The second snapshot contain id and content of alert.
     expect(wrapper).toMatchSnapshot();
@@ -61,8 +60,8 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
     //make a snapshot before calling interface
     expect(wrapper).toMatchSnapshot();
     //Alertbus array is empty before calling addAlert()
-    expect(wrapper.instance().state.alertStack).toEqual([]);
-    expect(wrapper.instance().state.alertStack).toHaveLength(0);
+    expect(wrapper.instance().getAlerts()).toEqual([]);
+    expect(wrapper.instance().getAlerts()).toHaveLength(0);
     //Here you have to fill out an alert id that is inserted into the alertBus component,
     //otherwise the new ID and Snapshot snapshots will be assigned to each rendering.
     const returnValue = wrapper.instance().addAlertToPosition(
@@ -83,7 +82,7 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
     );
     //for render changes to snapshots
     wrapper.update();
-    expect(wrapper.instance().state.alertStack).toHaveLength(2);
+    expect(wrapper.instance().getAlerts()).toHaveLength(2);
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(2);
     // test of returned value - in this case instance of tested component
@@ -109,12 +108,12 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
     //make a snapshot before calling interface
     expect(wrapper).toMatchSnapshot();
     //Alertbus array is empty before calling addAlert()
-    expect(wrapper.instance().state.alertStack).toEqual([]);
-    expect(wrapper.instance().state.alertStack).toHaveLength(0);
+    expect(wrapper.instance().getAlerts()).toEqual([]);
+    expect(wrapper.instance().getAlerts()).toHaveLength(0);
     const returnValue = wrapper.instance().addAlert(withHeaderProps, mockFunc);
     //for render changes to snapshots
     wrapper.update();
-    expect(wrapper.instance().state.alertStack).toHaveLength(1);
+    expect(wrapper.instance().getAlerts()).toHaveLength(1);
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     // test of returned value - in this case instance of tested component
@@ -135,12 +134,12 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
     //make a snapshot before calling interface
     expect(wrapper).toMatchSnapshot();
     //Alertbus array is empty before calling addAlert()
-    expect(wrapper.instance().state.alertStack).toEqual([]);
-    expect(wrapper.instance().state.alertStack).toHaveLength(0);
+    expect(wrapper.instance().getAlerts()).toEqual([]);
+    expect(wrapper.instance().getAlerts()).toHaveLength(0);
     const returnValue = wrapper.instance().setAlert(props, mockFunc);
     //for render changes to snapshots
     wrapper.update();
-    expect(wrapper.instance().state.alertStack).toHaveLength(1);
+    expect(wrapper.instance().getAlerts()).toHaveLength(1);
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     // test of returned value - in this case instance of tested component
@@ -168,8 +167,8 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
     });
 
     expect(wrapper).toMatchSnapshot();
-    expect(wrapper.instance().state.alertStack).toEqual([]);
-    expect(wrapper.instance().state.alertStack).toHaveLength(0);
+    expect(wrapper.instance().getAlerts()).toEqual([]);
+    expect(wrapper.instance().getAlerts()).toHaveLength(0);
     const returnValue2 = wrapper.instance().addAlertToPosition(
       1,
       {
@@ -199,8 +198,8 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
 
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot(); //Here is alertStack empty in the snapshot
-    expect(wrapper.instance().state.alertStack).toEqual([]);
-    expect(wrapper.instance().state.alertStack).toHaveLength(0);
+    expect(wrapper.instance().getAlerts()).toEqual([]);
+    expect(wrapper.instance().getAlerts()).toHaveLength(0);
     wrapper.instance().setAlert(props, mockFunc);
     wrapper.update();
     expect(wrapper.instance().getAlerts()).not.toBeNull();
@@ -227,8 +226,8 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
 
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
-    expect(wrapper.instance().state.alertStack).toEqual([]);
-    expect(wrapper.instance().state.alertStack).toHaveLength(0);
+    expect(wrapper.instance().getAlerts()).toEqual([]);
+    expect(wrapper.instance().getAlerts()).toHaveLength(0);
     const returnValue = wrapper.instance().addAlert({ id: "id_alert_bus", content: "Obsah alertu" }, mockFunc);
     wrapper.update();
     expect(wrapper).toMatchSnapshot();
@@ -252,8 +251,8 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
     const wrapper = shallow(<UU5.Bricks.AlertBus id={"uuID01"} closeTimer={3000} />);
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
-    expect(wrapper.instance().state.alertStack).toEqual([]);
-    expect(wrapper.instance().state.alertStack).toHaveLength(0);
+    expect(wrapper.instance().getAlerts()).toEqual([]);
+    expect(wrapper.instance().getAlerts()).toHaveLength(0);
     wrapper.instance().setAlert(props, mockFunc);
     wrapper.update();
     expect(wrapper.instance().getAlerts()).not.toBeNull();
@@ -262,5 +261,43 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
     wrapper.update();
     expect(wrapper.instance().getAlerts()).toEqual([]);
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it(`UU5.Bricks.AlertBus location="local"`, () => {
+    let alertBus;
+    let page;
+    const wrapper = mount(
+      <UU5.Bricks.Page ref_={ref => (page = ref)} alertBus={<UU5.Bricks.AlertBus />}>
+        <UU5.Bricks.AlertBus ref_={ref => (alertBus = ref)} location="local" />
+      </UU5.Bricks.Page>
+    );
+    alertBus.addAlert({ content: "Alert Content" });
+    wrapper.update();
+    expect(alertBus.getAlerts().length).toBe(1);
+  });
+
+  it(`UU5.Bricks.AlertBus location="page"`, () => {
+    let alertBus;
+    let page;
+    const wrapper = mount(
+      <UU5.Bricks.Page ref_={ref => (page = ref)} alertBus={<UU5.Bricks.AlertBus />}>
+        <UU5.Bricks.AlertBus ref_={ref => (alertBus = ref)} location="page" />
+      </UU5.Bricks.Page>
+    );
+    alertBus.addAlert({ content: "Alert Content" });
+    wrapper.update();
+    expect(page.getAlertBus().getAlerts().length).toBe(1);
+  });
+
+  it(`UU5.Bricks.AlertBus location="portal"`, () => {
+    let alertBus;
+    const wrapper = mount(
+      <UU5.Bricks.Page alertBus={<UU5.Bricks.AlertBus />}>
+        <UU5.Bricks.AlertBus ref_={ref => (alertBus = ref)} location="portal" />
+      </UU5.Bricks.Page>
+    );
+    alertBus.addAlert({ content: "Alert Content" });
+    wrapper.update();
+    expect(UU5.Common.DOM.findNode(alertBus).parentElement.id === "uu5-modals").toBeTruthy();
   });
 });
