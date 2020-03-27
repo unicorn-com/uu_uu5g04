@@ -119,6 +119,9 @@
 
   let Page = createReactClass({
     mixins: [ UU5.Common.BaseMixin, UU5.Common.ElementaryMixin ],
+    _onRouteChanged(opt) {
+      console.log("onRouteChanged", opt);
+    },
     render() {
       return (
         <UU5.Bricks.Container>
@@ -135,7 +138,11 @@
           <UU5.Bricks.Button onClick={() => UU5.Environment.getRouter().setRoute("lazyLoadError")} content={`lazyLoadError (${LAZY_DELAY}ms)`} />
 
           <UU5.Bricks.Div>
-            <UU5.Common.Router notFoundRoute="notFound" routes={routes} />
+            <UU5.Common.Router
+              notFoundRoute="notFound"
+              routes={routes}
+              onRouteChanged={this._onRouteChanged}
+            />
           </UU5.Bricks.Div>
         </UU5.Bricks.Container>
       );

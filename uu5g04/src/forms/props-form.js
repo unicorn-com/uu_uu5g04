@@ -164,7 +164,14 @@ export const PropsForm = UU5.Common.VisualComponent.create({
         }
       }
 
-      opt.component.setValue(opt.value, onChangeCallback);
+      if (prop.type === "datetime" && prop.props && prop.props.timeZone != null) {
+        // This is probably the best to use instead of the setValue ifc in all cases, but its only used here
+        // because of unpredictable changes to the functionality
+        opt.component.onChangeDefault(opt, onChangeCallback);
+      } else {
+        opt.component.setValue(opt.value, onChangeCallback);
+      }
+
       this._setProp(prop, opt.value);
     };
   },

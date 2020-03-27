@@ -26,9 +26,10 @@ export const NestingLevel = {
         let parentNestingLevel = parentNLComponent.getNestingLevel();
         let index = NestingLevel.values.indexOf(parentNestingLevel);
         if (index !== -1) {
-          let minIndex = /Collection$/.test(parentNestingLevel)
-            ? index
-            : Math.min(index + 1, NestingLevel.values.length - 1);
+          let minIndex =
+            /Collection$/.test(parentNestingLevel) || parentNLComponent.getOpt("nestingLevelWrapper")
+              ? index
+              : Math.min(index + 1, NestingLevel.values.length - 1);
           actualValidNestingLevel = nestingLevelList.find(it => NestingLevel.values.indexOf(it) >= minIndex);
           if (!actualValidNestingLevel) {
             actualValidNestingLevel = null;

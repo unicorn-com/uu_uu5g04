@@ -53,17 +53,21 @@
 
     render(props) {
 
-      const { identity, isExpiring, login, logout } = useSession();
+      const { sessionState, identity, isExpiring, login, logout } = useSession();
 
       const attrs = UU5.Common.VisualComponent.getAttrs(props);
       const currentNestingLevel = UU5.Utils.NestingLevel.getNestingLevel(props, STATICS);
 
       let name = null, buttonProps;
-      switch (identity) {
-        case undefined:
-          name = "Pending...";
+      switch (sessionState) {
+        case "authenticated":
+          name = identity.name;
+          buttonProps = {
+            onClick: () => logout(),
+            children: "Logout"
+          };
           break;
-        case null:
+        case "notAuthenticated":
           name = "Logged out";
           buttonProps = {
             onClick: () => login(),
@@ -71,14 +75,10 @@
           };
           break;
         default:
-          name = identity.name;
-          buttonProps = {
-            onClick: () => logout(),
-            children: "Logout"
-          };
+          name = "Pending...";
       }
 
-      console.log("identity", identity, isExpiring);
+      console.log("identity", identity, isExpiring, sessionState);
 
       return currentNestingLevel ? (
         <div {...attrs}>

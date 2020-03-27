@@ -54,10 +54,7 @@ exports[`UU5.Bricks.Small content="This is Content from ContentMixin" 1`] = `
   className="uu5-bricks-small"
   id="uuID"
 >
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
+  This is Content from ContentMixin
 </small>
 `;
 

@@ -231,8 +231,8 @@ export const FormMixin = {
   isValidDefault() {
     let result = true;
 
-    this.eachFormInput(formControl => {
-      let newResult = typeof formControl.isValid !== "function" || formControl.isValid();
+    this.eachFormInput(formInput => {
+      let newResult = typeof formInput.isValid !== "function" || formInput.isValid();
 
       if (result) {
         result = newResult;

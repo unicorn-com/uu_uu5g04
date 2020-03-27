@@ -23,7 +23,8 @@ function useScreenSize() {
     return () => UU5.Utils.ScreenSize.unregister(changeScreenSize);
   }, []);
 
-  return screenSize;
+  return { screenSize, setScreenSize };
 }
 
+export { useScreenSize };
 export default useScreenSize;

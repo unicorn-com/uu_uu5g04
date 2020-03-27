@@ -110,7 +110,7 @@ export const TextInputMixin = {
     var result = true;
 
     if (this.props.required && (value === "" || value === null)) {
-      this.setError(this.props.requiredMessage || this.getLsiValue("requiredMessage"));
+      this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessage"));
       result = false;
     } else if (feedback === "error") {
       result = false;
@@ -122,6 +122,7 @@ export const TextInputMixin = {
       var validation = this.props.onValidate({ value: value, component: this });
       if (validation && typeof validation === "object") {
         if (validation.feedback === "error") {
+          this.setError(validation.message);
           result = false;
         }
       }

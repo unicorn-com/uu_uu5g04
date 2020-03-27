@@ -648,7 +648,7 @@ export const IconPicker = Context.withContext(
     _getHeader() {
       let categories = [...this.props.categories];
       if (this.props.categories.length > 1) {
-        categories.unshift(this.getLsiValue("selectAll"));
+        categories.unshift(this.getLsiComponent("selectAll"));
       }
 
       return (
@@ -672,7 +672,7 @@ export const IconPicker = Context.withContext(
               onChange={opt => {
                 opt.component.onChangeDefault(opt);
                 let value = opt.value;
-                if (opt.value == this.getLsiValue("selectAll")) {
+                if (opt.value == this.getLsiComponent("selectAll")) {
                   value = [...this.props.categories];
                 } else {
                   value = [value];
@@ -681,7 +681,7 @@ export const IconPicker = Context.withContext(
               }}
               openToContent={false}
               value={
-                this.state.selectedCategory.length > 1 ? [this.getLsiValue("selectAll")] : this.state.selectedCategory
+                this.state.selectedCategory.length > 1 ? [this.getLsiComponent("selectAll")] : this.state.selectedCategory
               }
               className={this.getClassName("categoryInput")}
               readOnly={this.isReadOnly()}

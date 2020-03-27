@@ -50,10 +50,10 @@ const getProps = props => {
   propsToPass.className += (propsToPass.className ? " " : "") + classNames.main();
   propsToPass.labelPosition = "right";
 
-  if (propsToPass.onApply) {
-    delete propsToPass.onApply;
+  if (propsToPass.onClick) {
+    delete propsToPass.onClick;
     propsToPass.mainAttrs = {
-      onClick: () => props.onApply(!props.value)
+      onClick: () => props.onClick(!props.value)
     };
   }
 
@@ -71,14 +71,14 @@ SettingsCheckbox.propTypes = {
   label: UU5.PropTypes.any,
   colorSchema: UU5.PropTypes.string,
   bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline", "link"]),
-  onApply: UU5.PropTypes.func
+  onClick: UU5.PropTypes.func
 };
 SettingsCheckbox.defaultProps = {
   value: false,
   label: undefined,
   colorSchema: undefined,
   bgStyle: undefined,
-  onApply: undefined
+  onClick: undefined
 };
 SettingsCheckbox.isStateless = true;
 

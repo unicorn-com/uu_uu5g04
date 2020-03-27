@@ -46,17 +46,17 @@ export const Level = VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _getChildren(level) {
+  _getChildren(ctxValue) {
     let children;
 
     if (typeof this.props.children === "function") {
-      children = this.props.children({ level });
+      children = this.props.children(ctxValue);
     } else {
-      children = this._getChildren().map(child => {
+      children = this.getChildren().map(child => {
         let newChild = child;
 
         if (React.isValidElement(child)) {
-          newChild = React.cloneElement(child, { level });
+          newChild = React.cloneElement(child, ctxValue);
         }
 
         return newChild;
@@ -73,7 +73,9 @@ export const Level = VisualComponent.create({
       <Ctx.Consumer>
         {context => {
           let level = this.props.level != null ? +this.props.level : computeComponentLevel(context);
-          return <Ctx.Provider value={{ level }}>{this._getChildren(level)}</Ctx.Provider>;
+          const value = { ...context, level };
+          delete value.isDummyLevel;
+          return <Ctx.Provider value={value}>{this._getChildren(value)}</Ctx.Provider>;
         }}
       </Ctx.Consumer>
     );
@@ -81,10 +83,13 @@ export const Level = VisualComponent.create({
   //@@viewOff:render
 });
 
-function computeComponentLevel(contextValue) {
+function computeComponentLevel(contextValue, skipIncrease = false) {
   let level;
-  if (contextValue.level == null) level = 0;
-  else level = contextValue.level + (contextValue.isDummyLevel ? 0 : 1); // NOTE isDummyLevel is legacy flag from LevelMixin (for backward compatibility). Level component doesn't send it in Provider as it doesn't do "dummy" levels (it always increases the level).
+  if (contextValue.level == null) {
+    level = skipIncrease ? null : 0;
+  } else {
+    level = contextValue.level + (contextValue.isDummyLevel ? 0 : 1) + (skipIncrease ? -1 : 0);
+  } // NOTE isDummyLevel is legacy flag from LevelMixin (for backward compatibility). Level component doesn't send it in Provider as it doesn't do "dummy" levels (it always increases the level).
   return level;
 }
 

@@ -137,44 +137,46 @@ export default UU5.Common.VisualComponent.create({
     let height = this._getHeight(nextProps);
     let isAnimating = this.props._expanded !== nextProps._expanded;
 
-    if (height) {
-      // open panel body
-      this._preventUpdateChild = false;
-      this.setState({ height, isAnimating }, function() {
-        body.timer && clearTimeout(body.timer);
-        body.timer = setTimeout(() => {
-          // block rerender of childs - only change styles of current component
-          this._preventUpdateChild = true;
-          body.setAsyncState({ height: null, isAnimating: false }, () => (this._preventUpdateChild = false));
-        }, body.getDefault().duration);
-      });
-    } else if (isAnimating) {
-      // close panel body
-      // prevent rerendering of children until end of animation
-      this._preventUpdateChild = true;
-      this.setState({ height: this._getHeight(this.props), isAnimating: true }, () => {
-        body.timer && clearTimeout(body.timer);
-        body.timer = setTimeout(() => {
-          this._preventUpdateChild = true;
-          body.setAsyncState({ height });
+    if (nextProps._expanded !== this.props._expanded) {
+      if (height) {
+        // open panel body
+        this._preventUpdateChild = false;
+        this.setState({ height, isAnimating }, function() {
+          body.timer && clearTimeout(body.timer);
           body.timer = setTimeout(() => {
-            // rerender panel after end of animation
-            this._preventUpdateChild = false;
-            this.setAsyncState({ isAnimating: false });
+            // block rerender of childs - only change styles of current component
+            this._preventUpdateChild = true;
+            body.setAsyncState({ height: null, isAnimating: false }, () => (this._preventUpdateChild = false));
           }, body.getDefault().duration);
-        }, 1);
-      });
-    } else {
-      this.setState({ height: this._getHeight(this.props) }, () => {
-        body.timer && clearTimeout(body.timer);
-        body.timer = setTimeout(() => {
-          this._preventUpdateChild = true;
-          body.setAsyncState({ height }, () => {
-            this._preventUpdateChild = false;
-            this.forceUpdate();
-          });
-        }, 1);
-      });
+        });
+      } else if (isAnimating) {
+        // close panel body
+        // prevent rerendering of children until end of animation
+        this._preventUpdateChild = true;
+        this.setState({ height: this._getHeight(this.props), isAnimating: true }, () => {
+          body.timer && clearTimeout(body.timer);
+          body.timer = setTimeout(() => {
+            this._preventUpdateChild = true;
+            body.setAsyncState({ height });
+            body.timer = setTimeout(() => {
+              // rerender panel after end of animation
+              this._preventUpdateChild = false;
+              this.setAsyncState({ isAnimating: false });
+            }, body.getDefault().duration);
+          }, 1);
+        });
+      } else {
+        this.setState({ height: this._getHeight(this.props) }, () => {
+          body.timer && clearTimeout(body.timer);
+          body.timer = setTimeout(() => {
+            this._preventUpdateChild = true;
+            body.setAsyncState({ height }, () => {
+              this._preventUpdateChild = false;
+              this.forceUpdate();
+            });
+          }, 1);
+        });
+      }
     }
   },
 
@@ -221,21 +223,21 @@ export default UU5.Common.VisualComponent.create({
 
       if (this.state.isAnimating || !this.state.height) {
         mainAttrs.className += " " + this.getClassName("preventOverflow");
+
+        mainAttrs.style = mainAttrs.style || {};
+        mainAttrs.style.height = this.state.height + "px";
+
+        var time = this.getDefault().duration / 1000;
+        [
+          "WebkitTransitionDuration",
+          "MozTransitionDuration",
+          "MsTransitionDuration",
+          "OTransitionDuration",
+          "transitionDuration"
+        ].forEach(function(style) {
+          mainAttrs.style[style] = time + "s";
+        });
       }
-
-      mainAttrs.style = mainAttrs.style || {};
-      mainAttrs.style.height = this.state.height + "px";
-
-      var time = this.getDefault().duration / 1000;
-      [
-        "WebkitTransitionDuration",
-        "MozTransitionDuration",
-        "MsTransitionDuration",
-        "OTransitionDuration",
-        "transitionDuration"
-      ].forEach(function(style) {
-        mainAttrs.style[style] = time + "s";
-      });
     }
 
     if (this.props.bgStyle && !this.props.bgStyleContent) {

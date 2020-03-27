@@ -144,6 +144,14 @@
                   <UU5.Bricks.Paragraph />
                 </UU5.Bricks.Modal>
 
+                <UU5.Bricks.Modal ref_={(modal) => this._modalAutoOffset = modal} offsetTop="auto">
+                  <UU5.Bricks.Paragraph />
+                </UU5.Bricks.Modal>
+
+                <UU5.Bricks.Modal ref_={(modal) => this._modal100Offset = modal} offsetTop={100}>
+                  <UU5.Bricks.Paragraph />
+                </UU5.Bricks.Modal>
+
                 <UU5.Bricks.Button content="S header" onClick={() => this._modalS.open()} />
                 <UU5.Bricks.Button content="M content" onClick={() => this._modalM.open()} />
                 <UU5.Bricks.Button content="L footer" onClick={() => this._modalL.open()} />
@@ -156,6 +164,8 @@
                 <UU5.Bricks.Button content="onEachOpen" onClick={() => this._modalOnEachOpen.open()} />
                 <UU5.Bricks.Button content="onFirstOpen" onClick={() => this._modalOnFirstOpen.open()} />
                 <UU5.Bricks.Button content="onFirstRender" onClick={() => this._modalOnFirstRender.open()} />
+                <UU5.Bricks.Button content="offsetTop='auto'" onClick={() => this._modalAutoOffset.open()} />
+                <UU5.Bricks.Button content="offsetTop={100}" onClick={() => this._modal100Offset.open()} />
               </UU5.Bricks.Section>
 
               <UU5.Bricks.Section header="Interface">

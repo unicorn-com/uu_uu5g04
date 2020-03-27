@@ -163,7 +163,6 @@ export default UU5.Common.VisualComponent.create({
     let props = this.getMainPropsToPass();
 
     props.ref_ = ref => (this._popover = ref);
-    props.forceRender = this.props.forceRender;
     props.disableBackdrop = true;
     props.shown = !this.isHidden();
     props.fitHeightToViewport = true;

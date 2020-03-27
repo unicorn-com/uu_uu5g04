@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
-  <title>useParentElementSize Demo</title>
+  <title>useParentSize Demo</title>
 
   <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
   <script>
@@ -37,7 +37,7 @@
   import "uu5g04-bricks";
 
   //@@viewOn:imports
-  import { createVisualComponent, useParentElementSize } from "uu5g04-hooks";
+  import { createVisualComponent, useParentSize } from "uu5g04-hooks";
   //@@viewOff:imports
 
   //@@viewOn:statics
@@ -62,7 +62,7 @@
       // do NOT use keywords "this"!!!
 
       //@@viewOn:hooks
-      let [SizeObserver, width, height] = useParentElementSize();
+      let { Resizer, width, height } = useParentSize();
       console.log("parent width x height:", width, height);
       //@@viewOn:hooks
 
@@ -77,12 +77,19 @@
       // { id, className, style, disabled, hidden }
       let attrs = UU5.Common.VisualComponent.getAttrs(props);
 
+      let card;
+      if (width > 600) {
+        card = <div>Div</div>;
+      } else if (width > 300) {
+        card = <button>Button</button>;
+      } else {
+        card = <a href="#">Link</a>;
+      }
+
       return (
         <UU5.Common.Fragment>
-          <SizeObserver />
-          <div {...attrs}>
-            Parent element has size {width} x {height}.
-          </div>
+          <Resizer />
+          {card}
         </UU5.Common.Fragment>
       );
       //@@viewOff:render

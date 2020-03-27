@@ -694,7 +694,7 @@ export const Time = UU5.Common.VisualComponent.create({
   _getHeader(unit) {
     return (
       <div className={this.getClassName("timeHeader")}>
-        {this.isXs() ? this.getLsiValue(unit) : this.getLsiValue(unit)[0]}
+        {this.isXs() ? this.getLsiComponent(unit) : this.getLsiComponent(unit)[0]}
       </div>
     );
   },

@@ -636,12 +636,12 @@ export const Page = UU5.Common.VisualComponent.create({
     let item = newWidth[screenSize];
 
     if (isOpen) {
-      if (item.float && !item.maxWidth) {
-        item.minWidth = parseInt(width);
-        item.minUnit = "px";
-      } else {
+      if (item.float && item.maxWidth && item.maxUnit) {
         item.maxWidth = parseInt(width);
         item.maxUnit = "px";
+      } else {
+        item.minWidth = parseInt(width);
+        item.minUnit = "px";
       }
     } else {
       item.minWidth = parseInt(width);
@@ -908,7 +908,7 @@ export const Page = UU5.Common.VisualComponent.create({
         }
         break;
       case BOTTOM:
-        if (!this.props.bottomFixed) {
+        if (!this._isBottomFixed()) {
           newProps.className +=
             " " +
             this.getClassName("elevation" + elevation[position]) +

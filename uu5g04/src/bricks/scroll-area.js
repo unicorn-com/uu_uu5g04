@@ -234,6 +234,8 @@ export const ScrollArea = UU5.Common.VisualComponent.create({
         e.preventDefault();
       } else if (e.deltaY < 0 && this._domNode.scrollTop <= 0) {
         e.preventDefault();
+      } else {
+        e.stopPropagation();
       }
     }
   },

@@ -66,7 +66,7 @@ export const DatePicker = Context.withContext(
       afterRangeMessage: UU5.PropTypes.any,
       parseDate: UU5.PropTypes.func,
       disableBackdrop: UU5.PropTypes.bool,
-      valueType: UU5.PropTypes.oneOf(["string", "date"]),
+      valueType: UU5.PropTypes.oneOf(["string", "date", "iso"]),
       openToContent: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string]),
       hideFormatPlaceholder: UU5.PropTypes.bool,
       showTodayButton: UU5.PropTypes.bool,
@@ -109,7 +109,8 @@ export const DatePicker = Context.withContext(
 
     componentWillMount() {
       this._hasFocus = false;
-      let value = this._getDateString(this.props.value) || this.props.value;
+      let value = this._getIncomingValue(this.props.value);
+      value = this._getDateString(value) || value;
       let validationResult = this._validateOnChange({ value, event: null, component: this });
 
       if (validationResult) {
@@ -134,10 +135,8 @@ export const DatePicker = Context.withContext(
 
     componentWillReceiveProps(nextProps) {
       if (nextProps.controlled) {
-        let value =
-          this._hasInputFocus() && !(nextProps.value instanceof Date)
-            ? nextProps.value
-            : this._getDateString(nextProps.value) || nextProps.value;
+        let value = this._getIncomingValue(nextProps.value);
+        value = this._hasInputFocus() && !(value instanceof Date) ? value : this._getDateString(value) || value;
         let validationResult = this._validateOnChange({ value, event: null, component: this }, true);
 
         if (validationResult) {
@@ -242,7 +241,7 @@ export const DatePicker = Context.withContext(
         }
       }
 
-      return this._getOutputValue(date);
+      return this._getOutcomingValue(date);
     },
 
     onChangeDefault_(opt, setStateCallback) {
@@ -288,14 +287,35 @@ export const DatePicker = Context.withContext(
     //@@viewOff:overriding
 
     //@@viewOn:private
-    _getOutputValue(value) {
+    _getOutcomingValue(value, props = this.props) {
       if (value) {
         if (this.props.step === "years" || this.props.step === "months") {
-          let parsedDate = this._parseDate(value);
-          value = DateTools.getShortenedValueDateString(parsedDate, "-", this.props.step === "years");
+          let dateObject = this._parseDate(value);
+          value = DateTools.getShortenedValueDateString(dateObject, "-", this.props.step === "years");
+        } else if (props.valueType === "date") {
+          value = this._parseDate(value);
+        } else if (props.valueType === "iso") {
+          let dateObject = this._parseDate(value);
+          value = DateTools.getISO(dateObject);
         } else {
           // value = value;
         }
+      }
+
+      return value;
+    },
+
+    _getIncomingValue(value, props = this.props) {
+      if (value) {
+        let dateObject;
+
+        if (value instanceof Date) {
+          dateObject = value;
+        } else {
+          dateObject = this._parseDate(value, props.format, props.country);
+        }
+
+        value = dateObject;
       }
 
       return value;
@@ -529,7 +549,7 @@ export const DatePicker = Context.withContext(
           if (this.props.valueType == "date") {
             opt.value = date;
           }
-          opt.value = this._getOutputValue(opt.value);
+          opt.value = this._getOutcomingValue(opt.value);
           if (typeof this.props.onChange === "function") {
             this.props.onChange(opt);
           } else {
@@ -590,10 +610,10 @@ export const DatePicker = Context.withContext(
 
         if (opt._data) {
           opt._data.value = opt.value;
-          opt.value = this._getOutputValue(opt.value);
+          opt.value = this._getOutcomingValue(opt.value);
         } else {
           opt._data = { value: opt.value };
-          opt.value = this._getOutputValue(opt.value);
+          opt.value = this._getOutcomingValue(opt.value);
         }
 
         if (!this.isReadOnly() && !this.isComputedDisabled()) {
@@ -613,10 +633,10 @@ export const DatePicker = Context.withContext(
 
         if (opt._data) {
           opt._data.value = opt.value;
-          opt.value = this._getOutputValue(opt.value);
+          opt.value = this._getOutcomingValue(opt.value);
         } else {
           opt._data = { value: opt.value };
-          opt.value = this._getOutputValue(opt.value);
+          opt.value = this._getOutcomingValue(opt.value);
         }
 
         if (typeof this.props.onBlur === "function") {
@@ -709,7 +729,7 @@ export const DatePicker = Context.withContext(
       if (this.props.valueType === null || this.props.valueType == "string") {
         opt.value = date;
       }
-      opt.value = this._getOutputValue(opt.value);
+      opt.value = this._getOutcomingValue(opt.value);
       if (typeof this.props.onChange === "function") {
         this.setState({ open: false }, () => this.props.onChange(opt));
       } else {

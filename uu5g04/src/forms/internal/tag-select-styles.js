@@ -66,24 +66,45 @@ const ICON_MARGIN_TOP = {
   xl: "6px"
 };
 
+const INPUT_MIN_WIDTHS = {
+  s: "136px",
+  m: "160px",
+  l: "180px",
+  xl: "200px"
+};
+
 const CommonClassNames = {
-  main: () =>
-    ns.css("tag-select") +
-    " " +
-    Css.css(`
-    .uu5-bricks-button.uu5-forms-input-button {
-      width: auto; padding: 0 16px;
-    }
-    & .uu5-forms-select-option.uu5-forms-select-option.uu5-forms-select-option {
-      border: none;
-      padding: 9px 16px;
-      color: rgba(0,0,0,0.87) !important;
-    
-      &.uu5-common-disabled {
-        color: rgba(0,0,0,0.24);
+  main: props => {
+    let styles = `
+      .uu5-bricks-button.uu5-forms-input-button {
+        width: auto; padding: 0 16px;
       }
+
+      & .uu5-forms-select-option.uu5-forms-select-option.uu5-forms-select-option {
+        border: none;
+        padding: 9px 16px;
+        color: rgba(0,0,0,0.87) !important;
+
+        &.uu5-common-disabled {
+          color: rgba(0,0,0,0.24);
+        }
+      }
+    `;
+
+    if (props.inputWidth === "auto" || props.nestingLevel === "inline") {
+      styles += `
+        .uu5-forms-items-input {
+          &.uu5-forms-items-input.uu5-forms-items-input.uu5-forms-items-input {
+            width: auto
+          }
+
+          min-width: ${INPUT_MIN_WIDTHS[props.size]};
+        }
+      `;
     }
-  `),
+
+    return ns.css("tag-select") + " " + Css.css(styles);
+  },
   tag: props => {
     return Css.css(`
       && {
@@ -138,11 +159,16 @@ const CommonClassNames = {
       max-width: 100%;
     `);
   },
+  valueWrapper: () => Css.css`
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  `,
   inputValue: props => {
     return Css.css(`
       display: flex;
       flex: 1 1 auto;
-      flex-wrap: wrap;
+      flex-wrap: ${props.multiple ? "wrap" : "nowrap"};
       align-items: center;
       min-width: 0;
       min-height: ${INPUT_MIN_HEIGHT[props.size]}
@@ -172,10 +198,12 @@ const CommonClassNames = {
     let placeholder = showPlaceholder
       ? props.placeholder || UU5.Common.BaseMixin.getLsiItem(UU5.Environment.Lsi.Forms.tagSelect.placeholder)
       : null;
-    let valueWidth = UU5.Common.Tools.calculateTextWidth(showPlaceholder ? placeholder : state.searchValue, {
-      fontSize: `${INPUT_FONT_SIZE[props.size]}`,
-      whiteSpace: "pre"
-    });
+    let placeholderWidth = showPlaceholder
+      ? UU5.Common.Tools.calculateTextWidth(placeholder, {
+          fontSize: `${INPUT_FONT_SIZE[props.size]}`,
+          whiteSpace: "pre"
+        })
+      : undefined;
 
     if (props.multiple) {
       padding = parseInt(TAG_PADDING[props.size].split(" ")[3]) + "px";
@@ -185,10 +213,12 @@ const CommonClassNames = {
 
     let flex = "1 0 auto";
     let margin = TAG_SPACING[props.size];
+    let minWidth = 0;
 
     if (!props.multiple && !state.searchValue) {
       flex = "0 0 0";
-      margin = 0;
+      margin = "0 -1px 0 0";
+      minWidth = placeholderWidth || 1;
     }
 
     return Css.css(`
@@ -199,6 +229,7 @@ const CommonClassNames = {
       margin: ${margin};
       cursor: ${!state.readOnly && !isComputedDisabled(state) ? "text" : "default"};;
       max-width: 100%;
+      min-width: ${minWidth}px;
 
       &&&& > input {
         height: ${TAG_HEIGHT[props.size]};
@@ -206,17 +237,10 @@ const CommonClassNames = {
         max-width: 100%;
         background-color: transparent;
 
-        &::-ms-clear {
-          display: none;
-        }
-      }
+      ${UU5.Common.Tools.isIE() ? "&::-ms-clear { display: none; }" : ""}
 
       &&& > input:focus {
         background-color: transparent;
-      }
-
-      & > input {
-        width: ${(valueWidth || 1) + "px"};
       }
     `);
   },
@@ -224,7 +248,9 @@ const CommonClassNames = {
     const colors = getColors(props.colorSchema);
 
     return Css.css(`
-      display: block;
+      && {
+        display: block;
+      }
 
       .uu5-forms-auto-complete-item {
         text-overflow: ellipsis;

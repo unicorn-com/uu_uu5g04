@@ -1,5 +1,7 @@
 //@@viewOn:imports
 import UU5 from "uu5g04";
+//import "uu5g04-bricks";
+//import "uu5g04-bricks-editable";
 
 import TabsItem from "../tabs-item.js";
 import ns from "../bricks-ns.js";
@@ -8,9 +10,9 @@ import BricksLsi from "../bricks-lsi.js";
 
 const Lsi = BricksLsi.tabsEditable;
 
-const getEditableItemLabel = (item, itemIndex) => {
-  if (item.props.header) {
-    return item.props.header;
+const getEditableItemLabel = (itemProps, itemIndex) => {
+  if (itemProps.header) {
+    return itemProps.header;
   } else {
     return `Item ${itemIndex + 1}`;
   }
@@ -51,7 +53,7 @@ const editableComponentPropsSetup = [
   },
   {
     name: "borderRadius",
-    type: "test",
+    type: "text",
     label: <UU5.Bricks.Lsi lsi={Lsi.borderRadiusLabel} />,
     getProps: () => ({ placeholder: UU5.Common.BaseMixin.getLsiItem(Lsi.borderRadiusPlaceholder) })
   },
@@ -205,12 +207,15 @@ export const TabsEditable = UU5.Common.VisualComponent.create({
     return (
       <UU5.BricksEditable.Modal
         shown
-        component={this.props.component}
-        itemComponent={TabsItem}
+        componentName={this.props.component.getTagName()}
+        componentProps={this.props.component.getEditablePropsValues(Object.keys(this.props.component.props))}
+        onClose={this.props.component.endEditation}
+        itemName={TabsItem.tagName}
+        itemDefaultProps={TabsItem.defaultProps}
         ref_={this._registerEditModal}
-        propsSetup={editablePropsSetup}
-        itemPropsSetup={editableItemPropsSetup}
-        newItemProps={newEditableItem}
+        componentPropsForm={editablePropsSetup}
+        itemPropsForm={editableItemPropsSetup}
+        newItem={newEditableItem}
         itemsSource="children"
         getItemLabel={getEditableItemLabel}
       />

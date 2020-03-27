@@ -20,17 +20,23 @@ import "uu5g04-forms";
 describe("UU5.Common.Url - test interface of instance", () => {
   it("test01 - parse().toString()", () => {
     let myUrl = UU5.Common.Url.parse("http://example.com:3000/pathname/?search=test#hash");
-    expect(() => {
-      myUrl;
-    }).not.toThrow();
     expect(myUrl.toString()).toEqual("http://example.com:3000/pathname/?search=test#hash");
+
+    myUrl = UU5.Common.Url.parse("https://example.com/?search=test#hash");
+    expect(myUrl.toString()).toEqual("https://example.com/?search=test#hash");
+
+    myUrl = UU5.Common.Url.parse("https://example.com/");
+    expect(myUrl.toString()).toEqual("https://example.com/");
+
+    myUrl = UU5.Common.Url.parse("https://example.com/a#b");
+    expect(myUrl.toString()).toEqual("https://example.com/a#b");
+
+    myUrl = UU5.Common.Url.parse("https://example.com/#b");
+    expect(myUrl.toString()).toEqual("https://example.com/#b");
   });
 
   it("test02 - encodeValue(String)", () => {
     let myUrl = UU5.Common.Url.encodeValue("John Smith");
-    expect(() => {
-      myUrl;
-    }).not.toThrow();
     expect(myUrl).toMatch(/John%20Smith/);
   });
 
@@ -40,26 +46,17 @@ describe("UU5.Common.Url - test interface of instance", () => {
       surname: "smith"
     };
     let myUrl = UU5.Common.Url.encodeValue(mockObject);
-    expect(() => {
-      myUrl;
-    }).not.toThrow();
     expect(myUrl).toMatch(/%7B%22name%22%3A%22john%22%2C%22surname%22%3A%22smith%22%7D/);
   });
 
   it("test04 - encodeValue(Array)", () => {
     const mockArray = ["John", "Smith"];
     let myUrl = UU5.Common.Url.encodeValue(mockArray);
-    expect(() => {
-      myUrl;
-    }).not.toThrow();
     expect(myUrl).toMatch(/%5B%22John%22%2C%22Smith%22%5D/);
   });
 
   it("test05 - Url.encodeQuery(Object)", () => {
     let myUrl = UU5.Common.Tools.encodeQuery({ name: "John", surname: "Smith" });
-    expect(() => {
-      myUrl;
-    }).not.toThrow();
     expect(myUrl).toEqual("?name=John&surname=Smith");
   });
 
@@ -145,12 +142,30 @@ describe("UU5.Common.Url - test interface of class", () => {
   });
 
   it("test04 - useCase", () => {
-    const url = new UU5.Common.Url.parse(
+    let url = new UU5.Common.Url.parse(
       "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book"
     );
     expect(url.useCase).toBe("uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book");
     url.useCase = "book";
     expect(url.useCase).toBe("book");
     expect(url.toString()).toBe("https://uuos9.plus4u.net/book");
+
+    let origGABP = UU5.Environment.getAppBasePath;
+    UU5.Environment.getAppBasePath = () => "/a-b/c-d/";
+    try {
+      url = UU5.Common.Url.parse("http://example.com/a-b/c-d/book");
+      expect(url.useCase).toBe("book");
+      url.useCase = "my/book";
+      expect(url.toString()).toBe("http://example.com/a-b/c-d/my/book");
+      url.useCase = "";
+      expect(url.toString()).toBe("http://example.com/a-b/c-d/");
+
+      // special case when parsing URL which is baseUri with missing ending slash
+      url = UU5.Common.Url.parse("http://example.com/a-b/c-d");
+      expect(url.useCase).toBe("");
+      expect(url.toString()).toBe("http://example.com/a-b/c-d");
+    } finally {
+      UU5.Environment.getAppBasePath = origGABP;
+    }
   });
 });

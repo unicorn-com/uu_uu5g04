@@ -144,6 +144,7 @@ export * from "./portal-modal.js";
 export * from "./rich-link.js";
 export * from "./portal-popover.js";
 
+export * from "./component.js";
 export * from "./link-modal.js";
 export * from "./link-uve.js";
 
@@ -165,6 +166,6 @@ import Css from "./internal/css.js";
 
 Css.injectGlobal`
   #uu5-modals > * {
-    z-index: 0;
+    z-index: 1050;
   }
 `;

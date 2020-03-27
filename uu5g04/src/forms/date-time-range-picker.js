@@ -1052,7 +1052,7 @@ export const DateTimeRangePicker = Context.withContext(
       delete result.toFeedback.value;
 
       if (this._compareDates(fromValue, toValue, "greater")) {
-        result.toFeedback = { feedback: "error", message: this.getLsiValue("dateInPast") };
+        result.toFeedback = { feedback: "error", message: this.getLsiComponent("dateInPast") };
       }
 
       return result;
@@ -1800,12 +1800,30 @@ export const DateTimeRangePicker = Context.withContext(
         if (this.state.tempValue && !this._getToValue()) {
           value = [this.state.tempValue, this.state.tempValue];
           opt.value = value;
+          opt._data.value = value;
           state = { ...state, value, ...this._getInnerState(value) };
+          let origCallback = callback;
+          callback = opt => {
+            if (typeof this.props.onChange === "function") {
+              this.props.onChange({ ...opt, _data: { ...opt._data, type: "input" } });
+            }
+
+            origCallback(opt);
+          };
         } else if (this.state.toDateInputValue && !this.state.fromDateInputValue) {
           value = [this._parseDate(this.state.toDateInputValue), this._parseDate(this.state.toDateInputValue)];
           if (!value[0] || !value[1]) value = null;
           opt.value = value;
+          opt._data.value = value;
           state = { ...state, value, ...this._getInnerState(value) };
+          let origCallback = callback;
+          callback = opt => {
+            if (typeof this.props.onChange === "function") {
+              this.props.onChange(opt);
+            }
+
+            origCallback(opt);
+          };
         } else if (
           this.props.timeFormat == TIME_FORMAT_12 &&
           this.state.value &&
@@ -2686,7 +2704,7 @@ export const DateTimeRangePicker = Context.withContext(
                       {this.props.showTodayButton ? (
                         <div className={this.getClassName("secondRow")}>
                           <UU5.Bricks.Button
-                            content={this.getLsiValue("today")}
+                            content={this.getLsiComponent("today")}
                             className={this.getClassName("todayButton")}
                             onClick={this._goToToday}
                           />
@@ -2732,7 +2750,7 @@ export const DateTimeRangePicker = Context.withContext(
                     (this.state.activeInput.match(/date/i) && this.props.showTodayButton) ? (
                       <div className={this.getClassName("secondRow")}>
                         <UU5.Bricks.Button
-                          content={this.getLsiValue("today")}
+                          content={this.getLsiComponent("today")}
                           className={this.getClassName("todayButton")}
                           onClick={this._goToToday}
                         />
@@ -2770,7 +2788,7 @@ export const DateTimeRangePicker = Context.withContext(
                     (this.state.activeInput.match(/date/i) && this.props.showTodayButton) ? (
                       <div className={this.getClassName("secondRow")}>
                         <UU5.Bricks.Button
-                          content={this.getLsiValue("today")}
+                          content={this.getLsiComponent("today")}
                           className={this.getClassName("todayButton")}
                           onClick={this._goToToday}
                         />

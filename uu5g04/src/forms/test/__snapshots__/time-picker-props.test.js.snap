@@ -5,6 +5,7 @@ exports[`UU5.Forms.TimePicker Mixins default values of props UU5.Commons.Base_El
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -25,6 +26,7 @@ exports[`UU5.Forms.TimePicker Mixins default values of props UU5.Commons.Base_El
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -48,6 +50,7 @@ exports[`UU5.Forms.TimePicker Mixins default values of props UU5.Forms.InputMixi
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -68,6 +71,7 @@ exports[`UU5.Forms.TimePicker Mixins default values of props UU5.Forms.InputMixi
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -91,6 +95,7 @@ exports[`UU5.Forms.TimePicker Mixins default values of props UU5.Forms.TextInput
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -111,6 +116,7 @@ exports[`UU5.Forms.TimePicker Mixins default values of props UU5.Forms.TextInput
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -134,6 +140,7 @@ exports[`UU5.Forms.TimePicker default props check UU5.Forms.TimePicker 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -154,6 +161,7 @@ exports[`UU5.Forms.TimePicker default props check UU5.Forms.TimePicker 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -177,6 +185,7 @@ exports[`UU5.Forms.TimePicker props autocompleteItems=undefined 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -197,6 +206,7 @@ exports[`UU5.Forms.TimePicker props autocompleteItems=undefined 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -220,6 +230,7 @@ exports[`UU5.Forms.TimePicker props className="my-classname" 1`] = `
   className="uu5-forms-timepicker my-classname uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -240,6 +251,7 @@ exports[`UU5.Forms.TimePicker props className="my-classname" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -263,6 +275,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="brown" 1`] = `
   className="color-schema-brown uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -284,6 +297,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="brown" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -307,6 +321,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="brown-rich" 1`] = `
   className="color-schema-brown-rich uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -328,6 +343,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="brown-rich" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -351,6 +367,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="cyan" 1`] = `
   className="color-schema-cyan uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -372,6 +389,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="cyan" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -395,6 +413,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="cyan-rich" 1`] = `
   className="color-schema-cyan-rich uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -416,6 +435,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="cyan-rich" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -439,6 +459,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="default" 1`] = `
   className="color-schema-default uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -460,6 +481,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="default" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -483,6 +505,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="green" 1`] = `
   className="color-schema-green uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -504,6 +527,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="green" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -527,6 +551,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="green-rich" 1`] = `
   className="color-schema-green-rich uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -548,6 +573,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="green-rich" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -571,6 +597,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="grey" 1`] = `
   className="color-schema-grey uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -592,6 +619,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="grey" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -615,6 +643,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="grey-rich" 1`] = `
   className="color-schema-grey-rich uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -636,6 +665,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="grey-rich" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -659,6 +689,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="orange" 1`] = `
   className="color-schema-orange uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -680,6 +711,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="orange" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -703,6 +735,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="orange-rich" 1`] = `
   className="color-schema-orange-rich uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -724,6 +757,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="orange-rich" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -747,6 +781,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="pink" 1`] = `
   className="color-schema-pink uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -768,6 +803,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="pink" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -791,6 +827,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="pink-rich" 1`] = `
   className="color-schema-pink-rich uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -812,6 +849,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="pink-rich" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -835,6 +873,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="purple" 1`] = `
   className="color-schema-purple uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -856,6 +895,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="purple" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -879,6 +919,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="purple-rich" 1`] = `
   className="color-schema-purple-rich uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -900,6 +941,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="purple-rich" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -923,6 +965,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="red" 1`] = `
   className="color-schema-red uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -944,6 +987,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="red" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -967,6 +1011,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="red-rich" 1`] = `
   className="color-schema-red-rich uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -988,6 +1033,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="red-rich" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -1011,6 +1057,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="yellow" 1`] = `
   className="color-schema-yellow uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -1032,6 +1079,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="yellow" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -1055,6 +1103,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="yellow-rich" 1`] = `
   className="color-schema-yellow-rich uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -1076,6 +1125,7 @@ exports[`UU5.Forms.TimePicker props colorSchema="yellow-rich" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -1099,6 +1149,7 @@ exports[`UU5.Forms.TimePicker props controlled=false 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -1119,6 +1170,7 @@ exports[`UU5.Forms.TimePicker props controlled=false 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -1142,6 +1194,7 @@ exports[`UU5.Forms.TimePicker props controlled=true 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -1162,6 +1215,7 @@ exports[`UU5.Forms.TimePicker props controlled=true 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -1185,6 +1239,7 @@ exports[`UU5.Forms.TimePicker props default props 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -1205,6 +1260,7 @@ exports[`UU5.Forms.TimePicker props default props 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -1228,6 +1284,7 @@ exports[`UU5.Forms.TimePicker props disabled=false 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -1248,6 +1305,7 @@ exports[`UU5.Forms.TimePicker props disabled=false 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -1313,6 +1371,7 @@ exports[`UU5.Forms.TimePicker props feedback="error" 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -1334,6 +1393,7 @@ exports[`UU5.Forms.TimePicker props feedback="error" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -1357,6 +1417,7 @@ exports[`UU5.Forms.TimePicker props feedback="initial" 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -1377,6 +1438,7 @@ exports[`UU5.Forms.TimePicker props feedback="initial" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -1444,6 +1506,7 @@ exports[`UU5.Forms.TimePicker props feedback="success" 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -1465,6 +1528,7 @@ exports[`UU5.Forms.TimePicker props feedback="success" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -1488,6 +1552,7 @@ exports[`UU5.Forms.TimePicker props feedback="warning" 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -1509,6 +1574,7 @@ exports[`UU5.Forms.TimePicker props feedback="warning" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -1532,6 +1598,7 @@ exports[`UU5.Forms.TimePicker props focusMessage="Bedlivě hlídám co píšete.
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -1552,6 +1619,7 @@ exports[`UU5.Forms.TimePicker props focusMessage="Bedlivě hlídám co píšete.
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -1575,6 +1643,7 @@ exports[`UU5.Forms.TimePicker props format="12" 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -1595,6 +1664,7 @@ exports[`UU5.Forms.TimePicker props format="12" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -1618,6 +1688,7 @@ exports[`UU5.Forms.TimePicker props format="24" 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -1638,6 +1709,7 @@ exports[`UU5.Forms.TimePicker props format="24" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -1853,6 +1925,7 @@ exports[`UU5.Forms.TimePicker props function -> Text.InputMixin validateOnChange
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID01"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
 >
   <label
@@ -1879,6 +1952,7 @@ exports[`UU5.Forms.TimePicker props function -> Text.InputMixin validateOnChange
         }
       }
       name="uuID01-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -1902,6 +1976,7 @@ exports[`UU5.Forms.TimePicker props function -> Text.InputMixin validateOnChange
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID02"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
 >
   <label
@@ -1928,6 +2003,7 @@ exports[`UU5.Forms.TimePicker props function -> Text.InputMixin validateOnChange
         }
       }
       name="uuID02-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -1952,6 +2028,7 @@ exports[`UU5.Forms.TimePicker props hidden=false 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -1972,6 +2049,7 @@ exports[`UU5.Forms.TimePicker props hidden=false 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -1995,6 +2073,7 @@ exports[`UU5.Forms.TimePicker props hidden=true 1`] = `
   className="uu5-forms-timepicker uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -2015,6 +2094,7 @@ exports[`UU5.Forms.TimePicker props hidden=true 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -2038,6 +2118,7 @@ exports[`UU5.Forms.TimePicker props iconClosed="uu5-minus" 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -2058,6 +2139,7 @@ exports[`UU5.Forms.TimePicker props iconClosed="uu5-minus" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -2081,6 +2163,7 @@ exports[`UU5.Forms.TimePicker props iconOpen="mdi-calendar" 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -2101,6 +2184,7 @@ exports[`UU5.Forms.TimePicker props iconOpen="mdi-calendar" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -2124,6 +2208,7 @@ exports[`UU5.Forms.TimePicker props id="myId" 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="myId"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -2144,6 +2229,7 @@ exports[`UU5.Forms.TimePicker props id="myId" 1`] = `
         }
       }
       name="myId-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -2167,6 +2253,7 @@ exports[`UU5.Forms.TimePicker props inputAttrs={"type":"email","width":"150px"} 
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -2189,6 +2276,7 @@ exports[`UU5.Forms.TimePicker props inputAttrs={"type":"email","width":"150px"} 
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -2212,6 +2300,7 @@ exports[`UU5.Forms.TimePicker props inputColWidth="xs12 s6 m8 l9" 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -2232,6 +2321,7 @@ exports[`UU5.Forms.TimePicker props inputColWidth="xs12 s6 m8 l9" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -2255,6 +2345,7 @@ exports[`UU5.Forms.TimePicker props inputColWidth="xs12 s9" 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -2275,6 +2366,7 @@ exports[`UU5.Forms.TimePicker props inputColWidth="xs12 s9" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -2298,6 +2390,7 @@ exports[`UU5.Forms.TimePicker props label="Your personal email" 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
 >
   <label
@@ -2322,6 +2415,7 @@ exports[`UU5.Forms.TimePicker props label="Your personal email" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -2345,6 +2439,7 @@ exports[`UU5.Forms.TimePicker props labelAlignment="xs-left s-right" 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -2365,6 +2460,7 @@ exports[`UU5.Forms.TimePicker props labelAlignment="xs-left s-right" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -2388,6 +2484,7 @@ exports[`UU5.Forms.TimePicker props labelAlignment="xs-right s-left" 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -2408,6 +2505,7 @@ exports[`UU5.Forms.TimePicker props labelAlignment="xs-right s-left" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -2431,6 +2529,7 @@ exports[`UU5.Forms.TimePicker props labelColWidth="xs12 s3" 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -2451,6 +2550,7 @@ exports[`UU5.Forms.TimePicker props labelColWidth="xs12 s3" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -2474,6 +2574,7 @@ exports[`UU5.Forms.TimePicker props labelColWidth="xs12 s6 m4 l3" 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -2494,6 +2595,7 @@ exports[`UU5.Forms.TimePicker props labelColWidth="xs12 s6 m4 l3" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -2517,6 +2619,7 @@ exports[`UU5.Forms.TimePicker props mainAttrs=undefined 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -2537,6 +2640,7 @@ exports[`UU5.Forms.TimePicker props mainAttrs=undefined 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -2560,6 +2664,7 @@ exports[`UU5.Forms.TimePicker props message="Your password is too short!" 1`] = 
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -2581,6 +2686,7 @@ exports[`UU5.Forms.TimePicker props message="Your password is too short!" 1`] = 
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -2605,6 +2711,7 @@ exports[`UU5.Forms.TimePicker props name="myName" 1`] = `
   id="uuID"
   name="myName"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -2625,6 +2732,7 @@ exports[`UU5.Forms.TimePicker props name="myName" 1`] = `
         }
       }
       name="myName"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -2648,6 +2756,7 @@ exports[`UU5.Forms.TimePicker props nanMessage="Prosím zadejte validní čas." 
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -2668,6 +2777,7 @@ exports[`UU5.Forms.TimePicker props nanMessage="Prosím zadejte validní čas." 
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -2691,6 +2801,7 @@ exports[`UU5.Forms.TimePicker props noIndex=false 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -2711,6 +2822,7 @@ exports[`UU5.Forms.TimePicker props noIndex=false 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -2734,6 +2846,7 @@ exports[`UU5.Forms.TimePicker props noIndex=true 1`] = `
   className="uu5-forms-timepicker uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -2754,6 +2867,7 @@ exports[`UU5.Forms.TimePicker props noIndex=true 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -2777,6 +2891,7 @@ exports[`UU5.Forms.TimePicker props patternMessage="Hodnota inputu není validn�
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -2797,6 +2912,7 @@ exports[`UU5.Forms.TimePicker props patternMessage="Hodnota inputu není validn�
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -2820,6 +2936,7 @@ exports[`UU5.Forms.TimePicker props placeholder="Prosím vyplňte požadované p
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -2840,6 +2957,7 @@ exports[`UU5.Forms.TimePicker props placeholder="Prosím vyplňte požadované p
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -2864,6 +2982,7 @@ exports[`UU5.Forms.TimePicker props placeholder="např.: +420 000 000 000" 1`] =
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -2884,6 +3003,7 @@ exports[`UU5.Forms.TimePicker props placeholder="např.: +420 000 000 000" 1`] =
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -2908,6 +3028,7 @@ exports[`UU5.Forms.TimePicker props readOnly=false 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -2928,6 +3049,7 @@ exports[`UU5.Forms.TimePicker props readOnly=false 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -2992,6 +3114,7 @@ exports[`UU5.Forms.TimePicker props required=false 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -3012,6 +3135,7 @@ exports[`UU5.Forms.TimePicker props required=false 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -3035,6 +3159,7 @@ exports[`UU5.Forms.TimePicker props required=true 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -3056,6 +3181,7 @@ exports[`UU5.Forms.TimePicker props required=true 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -3079,6 +3205,7 @@ exports[`UU5.Forms.TimePicker props requiredMessage="Bez tohoto pole se nehnete 
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -3099,6 +3226,7 @@ exports[`UU5.Forms.TimePicker props requiredMessage="Bez tohoto pole se nehnete 
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -3122,6 +3250,7 @@ exports[`UU5.Forms.TimePicker props seconds=false 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -3142,6 +3271,7 @@ exports[`UU5.Forms.TimePicker props seconds=false 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -3165,6 +3295,7 @@ exports[`UU5.Forms.TimePicker props seconds=true 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-timepicker-seconds"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -3185,6 +3316,7 @@ exports[`UU5.Forms.TimePicker props seconds=true 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -3208,6 +3340,7 @@ exports[`UU5.Forms.TimePicker props selected=false 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -3228,6 +3361,7 @@ exports[`UU5.Forms.TimePicker props selected=false 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -3251,6 +3385,7 @@ exports[`UU5.Forms.TimePicker props selected=true 1`] = `
   className="uu5-forms-timepicker uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -3271,6 +3406,7 @@ exports[`UU5.Forms.TimePicker props selected=true 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -3294,6 +3430,7 @@ exports[`UU5.Forms.TimePicker props size="l" 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-l uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -3314,6 +3451,7 @@ exports[`UU5.Forms.TimePicker props size="l" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -3338,6 +3476,7 @@ exports[`UU5.Forms.TimePicker props size="m" 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -3358,6 +3497,7 @@ exports[`UU5.Forms.TimePicker props size="m" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -3381,6 +3521,7 @@ exports[`UU5.Forms.TimePicker props size="s" 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -3401,6 +3542,7 @@ exports[`UU5.Forms.TimePicker props size="s" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -3425,6 +3567,7 @@ exports[`UU5.Forms.TimePicker props style="padding:8px; borderRadius: 2px" 1`] =
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={
     Object {
       "borderRadius": "2px",
@@ -3450,6 +3593,7 @@ exports[`UU5.Forms.TimePicker props style="padding:8px; borderRadius: 2px" 1`] =
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -3473,6 +3617,7 @@ exports[`UU5.Forms.TimePicker props style={"backgroundColor":"red","color":"blue
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={
     Object {
       "backgroundColor": "red",
@@ -3498,6 +3643,7 @@ exports[`UU5.Forms.TimePicker props style={"backgroundColor":"red","color":"blue
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -3521,6 +3667,7 @@ exports[`UU5.Forms.TimePicker props timeFrom, timeTo 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-timepicker-open uu5-forms-timepicker-seconds"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -3541,6 +3688,7 @@ exports[`UU5.Forms.TimePicker props timeFrom, timeTo 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -3585,6 +3733,7 @@ exports[`UU5.Forms.TimePicker props timeFrom, timeTo 2`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-timepicker-open uu5-forms-timepicker-seconds"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -3605,6 +3754,7 @@ exports[`UU5.Forms.TimePicker props timeFrom, timeTo 2`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -3649,6 +3799,7 @@ exports[`UU5.Forms.TimePicker props timeFrom, timeTo 3`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-timepicker-open uu5-forms-timepicker-seconds"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -3669,6 +3820,7 @@ exports[`UU5.Forms.TimePicker props timeFrom, timeTo 3`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -3713,6 +3865,7 @@ exports[`UU5.Forms.TimePicker props tooltip="My Tooltip" 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title="My Tooltip"
 >
@@ -3733,6 +3886,7 @@ exports[`UU5.Forms.TimePicker props tooltip="My Tooltip" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -3756,6 +3910,7 @@ exports[`UU5.Forms.TimePicker props value="10:30 PM" 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -3776,6 +3931,7 @@ exports[`UU5.Forms.TimePicker props value="10:30 PM" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -3800,6 +3956,7 @@ exports[`UU5.Forms.TimePicker props value="10:30" 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -3820,6 +3977,7 @@ exports[`UU5.Forms.TimePicker props value="10:30" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -3844,6 +4002,7 @@ exports[`UU5.Forms.TimePicker props valueType="date" 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -3864,6 +4023,7 @@ exports[`UU5.Forms.TimePicker props valueType="date" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -3887,6 +4047,7 @@ exports[`UU5.Forms.TimePicker props valueType="string" 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -3907,6 +4068,7 @@ exports[`UU5.Forms.TimePicker props valueType="string" 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -3930,6 +4092,7 @@ exports[`UU5.Forms.TimePicker props valueType=null 1`] = `
   className="uu5-forms-timepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
+  onFocus={[Function]}
   style={Object {}}
   title={null}
 >
@@ -3950,6 +4113,7 @@ exports[`UU5.Forms.TimePicker props valueType=null 1`] = `
         }
       }
       name="uuID-input"
+      onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}

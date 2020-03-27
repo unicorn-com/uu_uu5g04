@@ -28,8 +28,8 @@ export const UU5String = class UU5String {
       @param filterFn({tag, props}) - function to change tag and props used for rendering into components. Function is called for each descendant UU5StringObject before creation of React component. This function cannot change data of UU5StringObjects.
       @returns array of React components
       */
-    this.toChildren = (data = this.data, filterFn) => {
-      return UU5StringTools.contentToChildren(this.content, data, filterFn);
+    this.toChildren = (data = this.data, filterFn, preferChildrenAsFunction = false) => {
+      return UU5StringTools.contentToChildren(this.content, data, filterFn, preferChildrenAsFunction);
     };
 
     /*
@@ -80,8 +80,8 @@ export const UU5String = class UU5String {
     return UU5StringTools.isValidUU5String(uu5string);
   }
 
-  static toChildren(uu5string, data, filterFn) {
-    return new UU5String(uu5string).toChildren(data, filterFn);
+  static toChildren(uu5string, data, filterFn, preferChildrenAsFunction = false) {
+    return new UU5String(uu5string).toChildren(data, filterFn, preferChildrenAsFunction);
   }
 
   static toString(uu5string, data, filterFn) {
@@ -92,8 +92,8 @@ export const UU5String = class UU5String {
     return new UU5String(uu5string).toPlainText(data, filterFn);
   }
 
-  static contentToChildren(content, data, filterFn) {
-    return UU5StringTools.contentToChildren(content, data, filterFn);
+  static contentToChildren(content, data, filterFn, preferChildrenAsFunction = false) {
+    return UU5StringTools.contentToChildren(content, data, filterFn, preferChildrenAsFunction);
   }
 
   static contentToString(content, data, filterFn) {

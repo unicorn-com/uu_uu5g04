@@ -84,7 +84,7 @@ export const DateTimePicker = Context.withContext(
       dateIcon: UU5.PropTypes.string,
       timeIcon: UU5.PropTypes.string,
       seconds: UU5.PropTypes.bool,
-      valueType: UU5.PropTypes.oneOf(["string", "date"]),
+      valueType: UU5.PropTypes.oneOf(["string", "date", "iso", "isoLocal"]),
       openToContent: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string]),
       timePickerType: UU5.PropTypes.oneOf(["single-column", "multi-column"]),
       timeStep: UU5.PropTypes.number,
@@ -149,7 +149,7 @@ export const DateTimePicker = Context.withContext(
 
       let value = this._parseDate(this.props.value);
       let validationResult = this._validateOnChange({
-        value: this._getOutputValue(value),
+        value: this._getOutcomingValue(value),
         event: null,
         component: this,
         _data: { value, timeZoneAdjusted: true }
@@ -193,7 +193,7 @@ export const DateTimePicker = Context.withContext(
         let value = this._parseDate(nextProps.value, undefined, undefined, nextProps.timeZone);
         let validationResult = this._validateOnChange(
           {
-            value: this._getOutputValue(value, nextProps),
+            value: this._getOutcomingValue(value, nextProps),
             event: null,
             component: this,
             _data: { value, timeZoneAdjusted: true }
@@ -314,7 +314,7 @@ export const DateTimePicker = Context.withContext(
         value = null;
       }
 
-      return this._getOutputValue(value);
+      return this._getOutcomingValue(value);
     },
 
     setFeedback_(feedback, message, value, setStateCallback) {
@@ -364,7 +364,7 @@ export const DateTimePicker = Context.withContext(
       }
 
       let _callCallback = typeof setStateCallback === "function";
-      let opt = { value: this._getOutputValue(value), _data: { value, timeZoneAdjusted: true } };
+      let opt = { value: this._getOutcomingValue(value), _data: { value, timeZoneAdjusted: true } };
 
       if (!this._validateOnChange(opt, false)) {
         if (this._checkRequiredDateTime({ value })) {
@@ -467,7 +467,7 @@ export const DateTimePicker = Context.withContext(
       this._timeTextInput = ref;
     },
 
-    _getOutputValue(value, props = this.props) {
+    _getOutcomingValue(value, props = this.props) {
       if (value) {
         let dateObject;
 
@@ -477,13 +477,34 @@ export const DateTimePicker = Context.withContext(
           dateObject = this._parseDate(value);
         }
 
-        value = UU5.Common.Tools.adjustForTimezone(dateObject, UU5.Environment.dateTimeZone, props.timeZone);
-
-        if (props.valueType !== "date") {
+        if (props.valueType === "string" || !props.valueType) {
+          value = UU5.Common.Tools.adjustForTimezone(dateObject, UU5.Environment.dateTimeZone, props.timeZone);
           let date = this._getDateString(value);
           let time = this._getTimeString(value);
           value = date + " " + time;
+        } else if (props.valueType === "date") {
+          value = UU5.Common.Tools.adjustForTimezone(dateObject, UU5.Environment.dateTimeZone, props.timeZone);
+        } else if (props.valueType === "iso") {
+          value = DateTools.getISO(dateObject);
+        } else if (props.valueType === "isoLocal") {
+          value = DateTools.getISOLocal(dateObject, props.timeZone);
         }
+      }
+
+      return value;
+    },
+
+    _getIncomingValue(value, props = this.props) {
+      if (value) {
+        let dateObject;
+
+        if (value instanceof Date) {
+          dateObject = value;
+        } else {
+          dateObject = this._parseDate(value, props.format, props.country);
+        }
+
+        value = dateObject;
       }
 
       return value;
@@ -657,7 +678,7 @@ export const DateTimePicker = Context.withContext(
         let focusResult = this._findTarget(e);
         let doBlur = !focusResult.component;
         let opt = {
-          value: this._getOutputValue(this.state.value),
+          value: this._getOutcomingValue(this.state.value),
           event: e,
           component: this,
           _data: { value: this.state.value, timeZoneAdjusted: true }
@@ -713,7 +734,7 @@ export const DateTimePicker = Context.withContext(
       // This function can be called twice if clicking inside the component but it doesnt do anything in that case
       let clickData = this._findTarget(e);
       let opt = {
-        value: this._getOutputValue(this.state.value),
+        value: this._getOutcomingValue(this.state.value),
         event: e,
         component: this,
         _data: { value: this.state.value, timeZoneAdjusted: true }
@@ -900,11 +921,12 @@ export const DateTimePicker = Context.withContext(
 
     _validateDate(opt, props = this.props) {
       let result = { ...opt };
-      let date = this._parseDate(opt.value ? opt.value : this.state.dateString);
+      let validationValue = opt._data ? opt._data.value : opt.value;
+      let date = this._parseDate(validationValue ? validationValue : this.state.dateString);
       result.feedback = result.feedback || "initial";
       result.message = result.message || null;
 
-      if (opt.value && !date) {
+      if (validationValue && !date) {
         result.feedback = "error";
         result.message = props.nanMessage;
       }
@@ -1049,7 +1071,7 @@ export const DateTimePicker = Context.withContext(
 
         if (!this.isComputedDisabled() && !this.isReadOnly()) {
           let opt = {
-            value: this._getOutputValue(value),
+            value: this._getOutcomingValue(value),
             event: e,
             component: this,
             _data: { type: "calendarInput", dateString, value, timeZoneAdjusted: true }
@@ -1114,7 +1136,7 @@ export const DateTimePicker = Context.withContext(
           }
 
           let opt = {
-            value: this._getOutputValue(value),
+            value: this._getOutcomingValue(value),
             event: e,
             component: this,
             _data: { type: "timeInput", timeString, value, timeZoneAdjusted: true }
@@ -1141,7 +1163,7 @@ export const DateTimePicker = Context.withContext(
       let value = this._getFullDate(dateString, timeValue, this.props.valueType == "date");
       opt = {
         component: this,
-        value: this._getOutputValue(value),
+        value: this._getOutcomingValue(value),
         _data: { type: "calendarPicker", dateString, value, timeZoneAdjusted: true }
       };
 
@@ -1161,7 +1183,7 @@ export const DateTimePicker = Context.withContext(
       );
       opt = {
         component: this,
-        value: this._getOutputValue(value),
+        value: this._getOutcomingValue(value),
         _data: { type: "timePicker", timeString, value, timeZoneAdjusted: true }
       };
 
@@ -1457,7 +1479,7 @@ export const DateTimePicker = Context.withContext(
           }
 
           let opt = {
-            value: this._getOutputValue(this.state.value),
+            value: this._getOutcomingValue(this.state.value),
             event: e,
             component: this,
             _data: { type: "date", value: this.state.value, timeZoneAdjusted: true }
@@ -1514,7 +1536,7 @@ export const DateTimePicker = Context.withContext(
           }
 
           let opt = {
-            value: this._getOutputValue(this.state.value),
+            value: this._getOutcomingValue(this.state.value),
             event: e,
             component: this,
             _data: { type: "time", value: this.state.value, timeZoneAdjusted: true }

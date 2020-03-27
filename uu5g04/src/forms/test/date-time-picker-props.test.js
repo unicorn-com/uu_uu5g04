@@ -199,6 +199,14 @@ describe(`UU5.Forms.DateTimePicker props`, () => {
     ISOFormatTest({ value: "2019-07-20T07:00:00.000+02:00", seconds: true }, defaultCountry, "7/20/2019 07:00:00");
     ISOFormatTest({ value: "2019-07-20T07:00:00.000+02:00", timeFormat: "12" }, defaultCountry, "7/20/2019 07:00 AM");
   });
+
+  it(`valueType`, () => {
+    let wrapper = mount(<UU5.Forms.DateTimePicker value="2.2.2020 10:00" valueType="iso" />);
+    expect(wrapper.instance().getValue()).toBe("2020-02-02T09:00:00.000Z");
+
+    wrapper = mount(<UU5.Forms.DateTimePicker value="2.2.2020 10:00" valueType="isoLocal" />);
+    expect(wrapper.instance().getValue()).toBe("2020-02-02T10:00:00");
+  });
 });
 
 describe("TextInputMixin props.function", () => {

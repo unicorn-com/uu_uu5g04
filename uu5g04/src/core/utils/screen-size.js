@@ -1,8 +1,12 @@
+import ListenerRegistry from "./internal/listener-registry";
+
 const XS = 480;
 const S = 768;
 const M = 992;
 const L = 1360;
 const XL = Infinity;
+
+const LISTENER_REGISTRY = new ListenerRegistry();
 
 class ScreenSize {
   static XS = XS;
@@ -18,8 +22,6 @@ class ScreenSize {
     l: L,
     xl: XL
   };
-
-  static LISTENER_LIST = [];
 
   static countSize(element = window) {
     let result;
@@ -41,22 +43,17 @@ class ScreenSize {
   }
 
   static register(listener) {
-    if (typeof listener === "function") {
-      this.LISTENER_LIST.push(listener);
-    }
+    return LISTENER_REGISTRY.register(listener);
   }
 
   static unregister(listener) {
-    let index = this.LISTENER_LIST.indexOf(listener);
-    if (index > -1) {
-      this.LISTENER_LIST.splice(index, 1);
-    }
+    return LISTENER_REGISTRY.unregister(listener);
   }
 
   static setSize(event, screenSize) {
     if (actualScreenSize !== screenSize) {
       actualScreenSize = screenSize;
-      this.LISTENER_LIST.forEach(listener => listener(event, screenSize));
+      LISTENER_REGISTRY.run(event, screenSize);
     }
   }
 

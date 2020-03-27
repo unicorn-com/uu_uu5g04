@@ -33,6 +33,7 @@ const selectExcludedProps = ["items", "children", "content"];
 export const SwitchSelector = UU5.Bricks.Resize.withResize(
   Context.withContext(
     UU5.Common.VisualComponent.create({
+      displayName: "SwitchSelector", // for backward compatibility (test snapshots)
       //@@viewOn:mixins
       mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, InputMixin],
       //@@viewOff:mixins
@@ -113,7 +114,14 @@ export const SwitchSelector = UU5.Bricks.Resize.withResize(
 
       componentWillReceiveProps(nextProps) {
         if (nextProps.controlled) {
-          let value = nextProps.value || this.state.value || nextProps.items[0].value;
+          let value;
+          if (nextProps.value !== null && nextProps.value !== undefined) {
+            value = nextProps.value;
+          } else if (this.state.value !== null && this.state.value !== undefined) {
+            value = this.state.value;
+          } else {
+            value = nextProps.items[0].value;
+          }
           if (typeof this.props.onValidate === "function") {
             this._validateOnChange({ value, component: this }, true);
           } else {

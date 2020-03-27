@@ -36,12 +36,16 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus addAlert() wi
   closeTimer={3000}
   colorSchema="yellow"
   content={
-    <Strong>
+    <Strong
+      ref_={null}
+    >
       This is content in Bricks.Alert
     </Strong>
   }
   header={
-    <Strong>
+    <Strong
+      ref_={null}
+    >
       Alert header
     </Strong>
   }
@@ -119,7 +123,9 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus getAlerts() 2
   closeTimer={3000}
   colorSchema="yellow"
   content={
-    <Strong>
+    <Strong
+      ref_={null}
+    >
       This is content in Bricks.Alert
     </Strong>
   }
@@ -154,7 +160,9 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus removeAlert()
   closeTimer={3000}
   colorSchema="yellow"
   content={
-    <Strong>
+    <Strong
+      ref_={null}
+    >
       This is content in Bricks.Alert
     </Strong>
   }
@@ -189,7 +197,9 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus setAlert() 2`
   closeTimer={3000}
   colorSchema="yellow"
   content={
-    <Strong>
+    <Strong
+      ref_={null}
+    >
       This is content in Bricks.Alert
     </Strong>
   }

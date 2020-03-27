@@ -1,4 +1,6 @@
 import * as UU5 from "uu5g04";
+//import "uu5g04-bricks";
+
 import ns from "./bricks-editable-ns.js";
 import Css from "./css.js";
 import Lsi from "./bricks-editable-lsi.js";
@@ -76,7 +78,7 @@ export const ColorPicker = UU5.Common.VisualComponent.create({
   //@@viewOn:propTypes
   propTypes: {
     value: UU5.PropTypes.string,
-    onApply: UU5.PropTypes.func,
+    onClick: UU5.PropTypes.func,
     colorSchema: UU5.PropTypes.string,
     bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline", "link"])
   },
@@ -86,7 +88,7 @@ export const ColorPicker = UU5.Common.VisualComponent.create({
   getDefaultProps() {
     return {
       value: undefined,
-      onApply: undefined,
+      onClick: undefined,
       colorSchema: undefined,
       bgStyle: undefined
     };
@@ -114,8 +116,8 @@ export const ColorPicker = UU5.Common.VisualComponent.create({
 
   _onChange(value) {
     this._togglePicker(undefined, () => {
-      if (typeof this.props.onApply === "function") {
-        this.props.onApply({ component: this, value });
+      if (typeof this.props.onClick === "function") {
+        this.props.onClick({ component: this, value });
       }
     });
   },

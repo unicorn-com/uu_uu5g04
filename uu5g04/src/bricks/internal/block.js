@@ -13,6 +13,7 @@
 
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
+//import "uu5g04-bricks-editable";
 
 import ns from "./bricks-editable-ns.js";
 import Lsi from "./bricks-editable-lsi.js";
@@ -163,7 +164,7 @@ export const Block = UU5.Common.VisualComponent.create({
         props: () => {
           return {
             value: this.state.colorSchema,
-            onApply: this._changeColorSchema,
+            onClick: this._changeColorSchema,
             tooltip: this.getLsiValue("colorSchemaTooltip")
           };
         }
@@ -175,7 +176,7 @@ export const Block = UU5.Common.VisualComponent.create({
     return [
       {
         value: this.state.background,
-        onApply: this._toggleBackground,
+        onClick: this._toggleBackground,
         label: this.getLsiComponent("backgroundCheckboxLabel")
       }
     ];

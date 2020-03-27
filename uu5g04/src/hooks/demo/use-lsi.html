@@ -16,6 +16,7 @@
 
         "uu5g04": "/uu5g04.js",
         "uu5g04-bricks": "/uu5g04-bricks.js",
+        "uu5g04-forms": "/uu5g04-forms.js",
         "uu5g04-hooks": "/uu5g04-hooks.js"
       }
     });
@@ -29,35 +30,31 @@
 <script type="text/babel">
   import UU5 from "uu5g04";
   import "uu5g04-bricks";
+  import "uu5g04-forms";
 
   //@@viewOn:imports
-  import { createVisualComponent, useLsi } from "uu5g04-hooks";
+  import { createComponent, useLsi } from "uu5g04-hooks";
   //@@viewOff:imports
 
-  //@@viewOn:statics
-  const STATICS = {
-    displayName: "UU5.Bricks.Lsi",
-    nestingLevel: "inline"
-  };
-  //@@viewOff:statics
-
-  const Lsi = createVisualComponent({
-    ...STATICS,
+  const NameInput = createComponent({
+    //@@viewOn:statics
+    displayName: "UU5.Demo.NameInput",
+    //@@viewOff:statics
 
     //@@viewOn:propTypes
-    propTypes: {},
     //@@viewOff:propTypes
 
     //@@viewOn:defaultProps
-    defaultProps: {},
     //@@viewOff:defaultProps
 
     render(props) {
-      // do NOT use keywords "this"!!!
-
       //@@viewOn:hooks
-      const [language, setLanguage] = useLsi();
-      console.log("language", language);
+      const { item } = useLsi({ cs: "Jméno", en: "Name" });
+      const { item: inputLsi } = useLsi({
+        cs: { placeholder: "Jméno Příjmení", message: "Vložte jméno a příjmení." },
+        en: { placeholder: "Name Surname", message: "Insert name and surname." }
+      });
+      console.log("NameInput render");
       //@@viewOn:hooks
 
       //@@viewOn:interface
@@ -67,12 +64,12 @@
       //@@viewOff:private
 
       //@@viewOn:render
-
-      // { id, className, style, disabled, hidden }
-      const attrs = UU5.Common.VisualComponent.getAttrs(props);
-
       return (
-        <span {...attrs}>{UU5.Utils.Lsi.getItem(props.lsi)}</span>
+        <UU5.Forms.Text
+          label={item}
+          placeholder={inputLsi.placeholder}
+          message={inputLsi.message}
+        />
       );
       //@@viewOff:render
     }
@@ -80,10 +77,10 @@
 
   function Page() {
     return (
-      <div>
-        <UU5.Bricks.LanguageSelector />
-        <Lsi lsi={{ cs: "Ahoj", en: "Hello" }} />
-      </div>
+      <UU5.Bricks.Container>
+        <UU5.Bricks.LanguageSelector displayedLanguages="cs,en" />
+        <NameInput />
+      </UU5.Bricks.Container>
     )
   }
 

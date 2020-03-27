@@ -135,7 +135,7 @@ export class Url {
     let baseName = this.baseName;
 
     if (baseName) {
-      useCase = this._pathName.replace(new RegExp(baseName), "");
+      useCase = this._pathName.substr(baseName.length);
     } else {
       useCase = this._pathName;
     }
@@ -152,9 +152,9 @@ export class Url {
   get baseName() {
     let baseName = null;
     let basePath = Environment.getAppBasePath();
-    if (basePath) {
+    if (basePath && this._pathName) {
       basePath = basePath.replace(regexp.slash, "");
-      if (this._pathName.indexOf(basePath) > -1) {
+      if (this._pathName.startsWith(basePath) || this._pathName === basePath.replace(/\/$/, "")) {
         baseName = basePath;
       }
     }
@@ -222,8 +222,9 @@ export class Url {
   }
 
   toString() {
-    let url = this.origin;
-    this.pathName && (url += "/" + this.pathName);
+    let url = this.origin || "";
+    url += "/";
+    this.pathName && (url += this.pathName);
     this.parameters && (url += Url.encodeQuery(this.parameters));
     this.hash && (url += "#" + this.hash);
     return url;

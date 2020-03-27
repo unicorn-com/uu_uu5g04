@@ -14,21 +14,20 @@
 export * from "./react-hooks";
 export * from "./component";
 
-import useScreenSize from "./use-screen-size";
+export { useScreenSize } from "./use-screen-size";
+export { useLanguage, LanguageProvider } from "./use-language";
+export { useSession, SessionProvider } from "./use-session";
+export { useLevel, LevelProvider } from "./use-level";
 
-export { useScreenSize };
-
-import useLsi, { LsiProvider, LsiContext } from "./use-lsi";
-
-export { useLsi, LsiProvider };
-
-import useSession, { SessionProvider, SessionContext } from "./use-session";
-
-export { useSession, SessionProvider };
-
-import useLevel, { LevelProvider, LevelContext } from "./use-level";
-
-export { useLevel, LevelProvider };
-
+export * from "./use-lsi";
 export * from "./use-element-size";
-export * from "./use-parent-element-size";
+export * from "./with-resize.js";
+
+// not necessary for now
+// export * from "./use-parent-size";
+
+export { useListData } from "./use-list-data";
+export { useData } from "./use-data";
+export { usePagingListData } from "./use-paging-list-data";
+
+export * from "./paging-auto-load";

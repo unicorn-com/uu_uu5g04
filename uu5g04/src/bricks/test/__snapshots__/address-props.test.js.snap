@@ -5,10 +5,7 @@ exports[`UU5.Bricks.Address UU5.Bricks.Address docKit example 1`] = `
   className="uu5-bricks-address"
   id="uuID"
 >
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text=" Stanley Stalion Sunny Street 42 Savannah States "
-  />
+   Stanley Stalion Sunny Street 42 Savannah States 
 </address>
 `;
 
@@ -66,10 +63,7 @@ exports[`UU5.Bricks.Address content="This is Content from ContentMixin" 1`] = `
   className="uu5-bricks-address"
   id="uuID"
 >
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
+  This is Content from ContentMixin
 </address>
 `;
 

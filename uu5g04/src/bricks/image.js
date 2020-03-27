@@ -191,7 +191,6 @@ let Image = UU5.Common.VisualComponent.create({
     return new Promise((resolve, reject) => {
       let xhr = new XMLHttpRequest();
       xhr.open("GET", url, true);
-      xhr.withCredentials = true;
       xhr.responseType = "blob";
       xhr.setRequestHeader("Accept", "image/*,*/*;q=0.8");
       for (var k in headers) if (headers[k] != null) xhr.setRequestHeader(k, headers[k]);

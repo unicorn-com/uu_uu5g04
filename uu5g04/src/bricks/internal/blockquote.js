@@ -13,6 +13,7 @@
 
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
+//import "uu5g04-bricks-editable";
 
 import ns from "./bricks-editable-ns.js";
 import Lsi from "./bricks-editable-lsi.js";
@@ -230,7 +231,7 @@ export const Blockquote = UU5.Common.VisualComponent.create({
         props: () => {
           return {
             value: this.state.colorSchema,
-            onApply: this._changeColorSchema,
+            onClick: this._changeColorSchema,
             tooltip: this.getLsiValue("colorSchemaTooltip")
           };
         }
@@ -254,7 +255,7 @@ export const Blockquote = UU5.Common.VisualComponent.create({
               { content: this.getLsiValue("footerAlignmentLeft"), value: "left" },
               { content: this.getLsiValue("footerAlignmentRight"), value: "right" }
             ],
-            onApply: this._changeFooterAlignment,
+            onClick: this._changeFooterAlignment,
             className: this.getClassName("footerAlignmentDropdown")
           };
         }
@@ -266,17 +267,17 @@ export const Blockquote = UU5.Common.VisualComponent.create({
     return [
       {
         value: this.state.background,
-        onApply: this._toggleBackground,
+        onClick: this._toggleBackground,
         label: this.getLsiComponent("backgroundCheckboxLabel")
       },
       {
         value: this.state.showFooter,
-        onApply: this._toggleFooter,
+        onClick: this._toggleFooter,
         label: this.getLsiComponent("showFooterCheckboxLabel")
       },
       {
         value: this.state.noSpacing,
-        onApply: this._toggleNoSpacing,
+        onClick: this._toggleNoSpacing,
         label: this.getLsiComponent("noSpacingTooltip")
       }
     ];

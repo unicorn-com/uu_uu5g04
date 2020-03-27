@@ -14,6 +14,7 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
+import "uu5g04-forms";
 
 import Css from "./css.js";
 import RollMenu from "./roll-menu.js";
@@ -32,31 +33,33 @@ const FORM_PROPS = {
   labelAlignment: "left"
 };
 const EDITATION_COMPONENT_PROPS = UU5.PropTypes.oneOfType([
+  UU5.PropTypes.func,
+  UU5.PropTypes.shape({
+    name: UU5.PropTypes.string.isRequired,
+    placeholder: UU5.PropTypes.string,
+    type: UU5.PropTypes.oneOfType([
+      UU5.PropTypes.array,
+      UU5.PropTypes.oneOf([
+        "text",
+        "textarea",
+        "number",
+        "colorSchemaPicker",
+        "uu5string",
+        "switchSelector",
+        "bool",
+        "separator"
+      ]),
+      UU5.PropTypes.node
+    ]).isRequired,
+    required: UU5.PropTypes.bool,
+    label: UU5.PropTypes.oneOfType([UU5.PropTypes.node, UU5.PropTypes.object]),
+    getProps: UU5.PropTypes.func
+  })
+]);
+
+const EDITATION_SETUP_PROPS = UU5.PropTypes.oneOfType([
   UU5.PropTypes.arrayOf(
-    UU5.PropTypes.oneOfType([
-      UU5.PropTypes.func,
-      UU5.PropTypes.shape({
-        name: UU5.PropTypes.string.isRequired,
-        placeholder: UU5.PropTypes.string,
-        type: UU5.PropTypes.oneOfType([
-          UU5.PropTypes.array,
-          UU5.PropTypes.oneOf([
-            "text",
-            "textarea",
-            "number",
-            "colorSchemaPicker",
-            "uu5string",
-            "switchSelector",
-            "bool",
-            "separator"
-          ]),
-          UU5.PropTypes.node
-        ]).isRequired,
-        required: UU5.PropTypes.bool,
-        label: UU5.PropTypes.oneOfType([UU5.PropTypes.node, UU5.PropTypes.object]),
-        getProps: UU5.PropTypes.func
-      })
-    ])
+    UU5.PropTypes.oneOfType([UU5.PropTypes.arrayOf(EDITATION_COMPONENT_PROPS), EDITATION_COMPONENT_PROPS])
   ),
   UU5.PropTypes.elementType
 ]);
@@ -83,11 +86,11 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
         classNames.push(
           Css.css(`
-            .uu5-bricks-modal-dialog {
+            & > .uu5-bricks-modal-dialog {
               ${isCompactVersion(props.screenSize) ? `min-height: ${state.menuHeight}px;` : ""}
             }
 
-            .uu5-bricks-modal-header {
+            & > * > .uu5-bricks-modal-header {
               padding: 0;
               border-bottom: solid 1px #E0E0E0;
 
@@ -96,7 +99,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
               }
             }
 
-            .uu5-bricks-modal-footer {
+            & > * > .uu5-bricks-modal-footer {
               border-top: solid 1px #E0E0E0;
               display: flex;
               justify-content: flex-end;
@@ -104,7 +107,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
               ${UU5.Common.Tools.isIE() ? "background-color: #FFFFFF" : ""}
             }
 
-            .uu5-bricks-modal-body {
+            & > * > .uu5-bricks-modal-body {
               padding: 0;
               height: 100%;
               display: flex;
@@ -136,7 +139,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
         Css.css(`
         margin-right: 8px;
       `),
-      standardEditMenu: () =>
+      standardEditMenu: props =>
         Css.css(`
         font-size: 15px;
         height: 100%;
@@ -145,8 +148,9 @@ const ModalBody = UU5.Common.VisualComponent.create({
         border-style: solid;
         border-color: #E0E0E0;
         border-width: 0 1px 0 0;
-        flex: none;
         background-color: #FAFAFA;
+        flex: 0 0 auto;
+        ${props.menuWidth ? `width: ${UU5.Common.Tools.fillUnit(props.menuWidth)};` : ""}
       `),
       compactEditMenu: () =>
         Css.css(`
@@ -205,6 +209,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
         height: 100%;
         overflow: auto;
         padding: 0;
+        flex: 1 1 auto;
       `),
       editForm: () =>
         Css.css(`
@@ -214,10 +219,14 @@ const ModalBody = UU5.Common.VisualComponent.create({
         Css.css(`
         padding: 0 64px 24px 64px;
       `),
-      switchSelector: () =>
-        Css.css(`
-        width: 100%;
-      `),
+      editationRow: () => Css.css`
+        margin: 0 -8px;
+      `,
+      editationInput: () => Css.css`
+        &:last-child {
+          margin-bottom: 0;
+        }
+      `,
       settingsButton: () =>
         Css.css(`
         text-align: left;
@@ -239,36 +248,47 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
   //@@viewOn:propTypes
   propTypes: {
-    component: UU5.PropTypes.object.isRequired,
-    getPropValues: UU5.PropTypes.func,
-    itemComponent: UU5.PropTypes.func,
-    propsSetup: UU5.PropTypes.arrayOf(
+    // component: UU5.PropTypes.object.isRequired,
+    // props (component.props), onClose (component.endEditation), componentName (component.getTagName)
+    onClose: UU5.PropTypes.func.isRequired,
+    componentName: UU5.PropTypes.string.isRequired,
+    componentProps: UU5.PropTypes.object.isRequired,
+    // getPropValues: UU5.PropTypes.func,
+    componentPropsForm: UU5.PropTypes.arrayOf(
       UU5.PropTypes.shape({
         name: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.object]), // string or lsi object
         icon: UU5.PropTypes.string,
         info: UU5.PropTypes.node,
         formProps: UU5.PropTypes.object,
-        setup: EDITATION_COMPONENT_PROPS
+        setup: EDITATION_SETUP_PROPS
       })
-    ),
-    itemPropsSetup: UU5.PropTypes.shape({
+    ).isRequired,
+
+    // itemComponent: UU5.PropTypes.elementType,
+    itemName: UU5.PropTypes.string,
+    itemDefaultProps: UU5.PropTypes.object,
+    itemPropsForm: UU5.PropTypes.shape({
       info: UU5.PropTypes.node,
       formProps: UU5.PropTypes.object,
-      setup: EDITATION_COMPONENT_PROPS
+      setup: EDITATION_SETUP_PROPS
     }),
-    newItemProps: UU5.PropTypes.shape({
+    newItem: UU5.PropTypes.shape({
       formProps: UU5.PropTypes.object,
       tagName: UU5.PropTypes.string,
       props: UU5.PropTypes.object
     }),
+    menuWidth: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
     itemsSource: UU5.PropTypes.string,
     getItemLabel: UU5.PropTypes.func,
     header: UU5.PropTypes.node,
     screenSize: UU5.PropTypes.oneOf(["xs", "s", "m", "l", "xl"]),
     shown: UU5.PropTypes.bool,
     size: UU5.PropTypes.oneOf(["s", "m", "l", "auto", "max"]),
-    onSaveAndClose: UU5.PropTypes.func,
-    onCancel: UU5.PropTypes.func
+    saveButtonProps: UU5.PropTypes.shape(UU5.Bricks.Button.propTypes || {})
+    // onClose
+    // onSaveAndClose: UU5.PropTypes.func,
+    // onCancel => onClose(null)
+    // onCancel: UU5.PropTypes.func
   },
   //@@viewOff:propTypes
 
@@ -278,8 +298,8 @@ const ModalBody = UU5.Common.VisualComponent.create({
       component: undefined,
       getPropValues: undefined,
       itemComponent: undefined,
-      propsSetup: undefined,
-      newItemProps: undefined,
+      propsForm: undefined,
+      newItem: undefined,
       itemsSource: undefined,
       getItemLabel: undefined,
       header: undefined,
@@ -287,7 +307,8 @@ const ModalBody = UU5.Common.VisualComponent.create({
       shown: false,
       size: undefined,
       onSaveAndClose: undefined,
-      onCancel: undefined
+      onCancel: undefined,
+      saveButtonProps: undefined
     };
   },
   //@@viewOff:getDefaultProps
@@ -302,33 +323,31 @@ const ModalBody = UU5.Common.VisualComponent.create({
     this._movingItemIndex = undefined;
 
     let items;
-    let propValues = [];
+    // let propValues = [];
+    let propValues = { ...this.props.componentProps };
 
-    if (typeof this.props.getPropValues === "function") {
-      propValues = this.props.getPropValues();
-    } else {
-      for (let propName in this.props.component.props) {
-        propValues.push(propName);
-      }
+    // if (typeof this.props.getPropValues === "function") {
+    //   propValues = this.props.getPropValues();
+    // } else {
+    //   for (let propName in this.props.component.props) {
+    //     propValues.push(propName);
+    //   }
+    //
+    //   propValues = this.props.component.getEditablePropsValues(propValues);
+    // }
 
-      propValues = this.props.component.getEditablePropsValues(propValues);
-    }
-
-    if (this.props.itemComponent) {
+    // if (this.props.itemComponent) {
+    if (this.props.itemName) {
       if (this.props.itemsSource) {
         items = propValues[this.props.itemsSource];
         this._itemsSource = this.props.itemsSource;
       } else if (propValues.content) {
         items = propValues.content;
         this._itemsSource = "content";
+        propValues.children = null;
       } else if (propValues.children) {
         items = propValues.children;
         this._itemsSource = "children";
-      }
-
-      if (this._itemsSource === "content") {
-        propValues.children = null;
-      } else if (this._itemsSource === "children") {
         propValues.content = null;
       }
 
@@ -338,17 +357,29 @@ const ModalBody = UU5.Common.VisualComponent.create({
       } else {
         if (Array.isArray(items)) {
           this._itemsInUU5String = false;
-          items = items.map(item => ({
-            tagName: item.type.tagName,
-            props: UU5.Common.Tools.mergeDeep({}, item.props)
-          }));
+          items = items.map(item => {
+            const isElement = UU5.Common.Element.isValid(item);
+            return {
+              tagName: isElement ? item.type.tagName : this.props.itemName,
+              props: isElement ? UU5.Common.Tools.mergeDeep({}, item.props) : item,
+              isElement
+            };
+          });
         } else if (items && typeof items === "object" && items.type) {
-          items = [{ tagName: items.type.tagName, props: UU5.Common.Tools.mergeDeep({}, items.props) }];
+          const isElement = UU5.Common.Element.isValid(items);
+          items = [
+            {
+              tagName: isElement ? items.type.tagName : this.props.itemName,
+              props: isElement ? UU5.Common.Tools.mergeDeep({}, items.props) : items,
+              isElement
+            }
+          ];
         }
       }
 
       if (Array.isArray(items)) {
-        items = items.filter(item => item.tagName === this.props.itemComponent.tagName);
+        // items = items.filter(item => item.tagName === this.props.itemComponent.tagName);
+        items = items.filter(item => item.tagName === this.props.itemName);
         items.forEach(item => (item.id = UU5.Common.Tools.generateUUID()));
       }
 
@@ -360,7 +391,8 @@ const ModalBody = UU5.Common.VisualComponent.create({
         });
 
         if (this._itemsInUU5String) {
-          let itemComponentProps = UU5.Common.Tools.findComponent(this.props.itemComponent.tagName).props;
+          // let itemComponentProps = UU5.Common.Tools.findComponent(this.props.itemComponent.tagName).props;
+          let itemComponentProps = UU5.Common.Tools.findComponent(this.props.itemName).props;
           items = items.map(item => ({ ...item, props: { ...itemComponentProps, ...item.props } }));
         }
       }
@@ -374,7 +406,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
       shown: false,
       editMenuOpen: false,
       menuHeight: undefined,
-      validation: this.props.propsSetup.map(() => undefined),
+      validation: this.props.componentPropsForm.map(() => undefined),
       itemsValidation: items ? items.map(() => undefined) : undefined
     };
   },
@@ -420,7 +452,9 @@ const ModalBody = UU5.Common.VisualComponent.create({
           items = this._filterOutUnchangedItemProps(this.state.items);
           items = this._itemsToUu5String(items);
         } else {
-          items = this.state.items.map(item => UU5.Common.Tools.findComponent(item.tagName, item.props));
+          items = this.state.items.map(item => {
+            return item.isElement ? UU5.Common.Tools.findComponent(item.tagName, item.props) : item.props;
+          });
         }
       }
 
@@ -464,7 +498,10 @@ const ModalBody = UU5.Common.VisualComponent.create({
   },
 
   _hasMenu() {
-    return (Array.isArray(this.props.propsSetup) && this.props.propsSetup.length > 1) || this.props.itemPropsSetup;
+    return (
+      (Array.isArray(this.props.componentPropsForm) && this.props.componentPropsForm.length > 1) ||
+      this.props.itemPropsForm
+    );
   },
 
   _setMenuHeight() {
@@ -483,24 +520,26 @@ const ModalBody = UU5.Common.VisualComponent.create({
     this.setState(state => ({ editMenuOpen: !state.editMenuOpen }));
   },
 
-  _onClose(save) {
-    let newProps = save ? this.getPropsToSave() : undefined;
-
-    if (save && typeof this.props.onSaveAndClose === "function") {
-      this.props.onSaveAndClose(newProps);
-    } else if (!save && typeof this.props.onCancel === "function") {
-      this.props.onCancel();
-    } else if (typeof this.props.component.endEditation === "function") {
-      this.props.component.endEditation(newProps);
-    }
-  },
+  // _onClose(save) {
+  //   let newProps = save ? this.getPropsToSave() : undefined;
+  //
+  //   if (save && typeof this.props.onSaveAndClose === "function") {
+  //     this.props.onSaveAndClose(newProps);
+  //   } else if (!save && typeof this.props.onCancel === "function") {
+  //     this.props.onCancel();
+  //   } else if (typeof this.props.component.endEditation === "function") {
+  //     this.props.component.endEditation(newProps);
+  //   }
+  // },
 
   _onSave() {
-    this._onClose(true);
+    // this._onClose(true);
+    this.props.onClose(this.getPropsToSave());
   },
 
   _onCancel() {
-    this._onClose(false);
+    // this._onClose(false);
+    this.props.onClose();
   },
 
   _onClickCloseButton() {
@@ -516,7 +555,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
       const isValid = this._isValid();
 
       if (isValid) {
-        this._modal.close(true, () => this._closeModal(true));
+        this._closeModal(true);
       } else {
         this._alertBus.setAlert({ content: "Atleast one of the editation forms is invalid!", colorSchema: "red" });
       }
@@ -549,10 +588,37 @@ const ModalBody = UU5.Common.VisualComponent.create({
     this._validateCategories(() => this._validateItems(setStateCallback));
   },
 
-  _validateCategories(setStateCallback) {
-    let validation = this.props.propsSetup.map(() => undefined);
+  _validateOneCategory(setup, validation, validatedItemIndex) {
+    let validationResult = Helpers.getComponentValidationResult(this.state.propValues[setup.name], setup.required);
 
-    this.props.propsSetup.forEach((validatedItem, validatedItemIndex) => {
+    if (validationResult) {
+      if (validation[validatedItemIndex]) {
+        validation[validatedItemIndex][setup.name] = validationResult;
+      } else {
+        validation[validatedItemIndex] = { [setup.name]: validationResult };
+      }
+    }
+  },
+
+  _validateOneItem(setup, itemsValidation, validatedItemIndex) {
+    let validationResult = Helpers.getComponentValidationResult(
+      this.state.items[validatedItemIndex].props[setup.name],
+      setup.required
+    );
+
+    if (validationResult) {
+      if (itemsValidation[validatedItemIndex]) {
+        itemsValidation[validatedItemIndex][setup.name] = validationResult;
+      } else {
+        itemsValidation[validatedItemIndex] = { [setup.name]: validationResult };
+      }
+    }
+  },
+
+  _validateCategories(setStateCallback) {
+    let validation = this.props.componentPropsForm.map(() => undefined);
+
+    this.props.componentPropsForm.forEach((validatedItem, validatedItemIndex) => {
       if (Helpers.isComponent(validatedItem.setup)) {
         if (typeof validatedItem.setup.isValid === "function") {
           validation[validatedItemIndex] = validatedItem.setup.isValid();
@@ -561,17 +627,12 @@ const ModalBody = UU5.Common.VisualComponent.create({
         }
       } else {
         validatedItem.setup.forEach(setup => {
-          let validationResult = Helpers.getComponentValidationResult(
-            this.state.propValues[setup.name],
-            setup.required
-          );
-
-          if (validationResult) {
-            if (validation[validatedItemIndex]) {
-              validation[validatedItemIndex][setup.name] = validationResult;
-            } else {
-              validation[validatedItemIndex] = { [setup.name]: validationResult };
-            }
+          if (Array.isArray(setup)) {
+            setup.forEach(setupItem => {
+              this._validateOneCategory(setupItem, validation, validatedItemIndex);
+            });
+          } else {
+            this._validateOneCategory(setup, validation, validatedItemIndex);
           }
         });
       }
@@ -585,25 +646,20 @@ const ModalBody = UU5.Common.VisualComponent.create({
       let itemsValidation = this.state.items.map(() => undefined);
 
       this.state.items.forEach((validatedItem, validatedItemIndex) => {
-        if (Helpers.isComponent(this.props.itemPropsSetup.setup)) {
-          if (typeof this.props.itemPropsSetup.setup.isValid === "function") {
-            itemsValidation[validatedItemIndex] = this.props.itemPropsSetup.setup.isValid();
+        if (Helpers.isComponent(this.props.itemPropsForm.setup)) {
+          if (typeof this.props.itemPropsForm.setup.isValid === "function") {
+            itemsValidation[validatedItemIndex] = this.props.itemPropsForm.setup.isValid();
           } else {
             itemsValidation[validatedItemIndex] = undefined;
           }
         } else {
-          this.props.itemPropsSetup.setup.forEach(setup => {
-            let validationResult = Helpers.getComponentValidationResult(
-              this.state.items[validatedItemIndex].props[setup.name],
-              setup.required
-            );
-
-            if (validationResult) {
-              if (itemsValidation[validatedItemIndex]) {
-                itemsValidation[validatedItemIndex][setup.name] = validationResult;
-              } else {
-                itemsValidation[validatedItemIndex] = { [setup.name]: validationResult };
-              }
+          this.props.itemPropsForm.setup.forEach(setup => {
+            if (Array.isArray(setup)) {
+              setup.forEach(setupItem => {
+                this._validateOneItem(setupItem, itemsValidation, validatedItemIndex);
+              });
+            } else {
+              this._validateOneItem(setup, itemsValidation, validatedItemIndex);
             }
           });
         }
@@ -666,6 +722,8 @@ const ModalBody = UU5.Common.VisualComponent.create({
   },
 
   _onChangeItemProps(propName, value, isRequired) {
+    this._contentChanged = true;
+
     this.setState(state => {
       let items = [...state.items];
       let activeIndex = items.findIndex(item => item.id === state.activeItemId);
@@ -715,8 +773,8 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
         let matchingStateItem = state.items ? state.items[this._getItemIndexById(state.items, item.id)] : null;
 
-        if (this.props.newItemProps) {
-          item.props = { ...this.props.newItemProps.props, ...item.props };
+        if (this.props.newItem) {
+          item.props = { ...this.props.newItem.props, ...item.props };
         }
 
         if (item.props) {
@@ -728,7 +786,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
         }
 
         return {
-          ...(matchingStateItem || { tagName: this.props.newItemProps.tagName, id: item.id }),
+          ...(matchingStateItem || { tagName: this.props.newItem.tagName, id: item.id }),
           props: { ...(matchingStateItem ? matchingStateItem.props : {}), ...item.props }
         };
       });
@@ -903,8 +961,8 @@ const ModalBody = UU5.Common.VisualComponent.create({
   },
 
   _getNewItem() {
-    let props = this.props.newItemProps.props || {};
-    return { tagName: this.props.newItemProps.tagName, props, id: UU5.Common.Tools.generateUUID() };
+    let props = this.props.newItem.props || {};
+    return { ...this.props.newItem, props, id: UU5.Common.Tools.generateUUID() };
   },
 
   _setActiveCategoryIndex(index) {
@@ -933,7 +991,8 @@ const ModalBody = UU5.Common.VisualComponent.create({
   },
 
   _itemToUu5String(item) {
-    let defaultItemProps = this.props.itemComponent ? this.props.itemComponent.defaultProps : undefined;
+    // let defaultItemProps = this.props.itemComponent ? this.props.itemComponent.defaultProps : undefined;
+    let defaultItemProps = this.props.itemName ? this.props.itemDefaultProps : undefined;
     let uu5stringObject = new UU5.Common.UU5String.Object();
     uu5stringObject.tag = item.tagName;
 
@@ -1034,7 +1093,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
       items = this.state.items.map((item, index) => {
         let itemLabel;
         if (typeof this.props.getItemLabel === "function") {
-          itemLabel = this.props.getItemLabel(item, index);
+          itemLabel = this.props.getItemLabel(item.isElement ? item : item.props, index);
         } else {
           itemLabel = `Item${index + 1}`;
         }
@@ -1098,7 +1157,6 @@ const ModalBody = UU5.Common.VisualComponent.create({
       case "switchSelector":
         result.Component = "UU5.Forms.SwitchSelector";
         result.props.inputAttrs = {
-          className: this.getClassName("switchSelector"),
           ...result.props.inputAttrs
         };
         changeType = "onChange";
@@ -1126,6 +1184,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
       }
       result.props.value = value;
       result.props.required = componentData.required;
+      result.props.className = this.getClassName("editationInput");
     }
 
     if (validation) {
@@ -1140,6 +1199,37 @@ const ModalBody = UU5.Common.VisualComponent.create({
     return result;
   },
 
+  _getEditationColumn(component, index, activeIdentifier, valueSource, validationSource) {
+    if (typeof component === "function") {
+      const Component = component;
+      return (
+        <Component
+          componentProps={this.state.propValues}
+          items={this.state.items}
+          onChangeProps={this._onCustomChangeProps}
+          onChangeItems={this._onCustomChangeItems}
+          editedItemId={activeIdentifier}
+          key={index}
+        />
+      );
+    } else {
+      let { Component, children, props = {} } = this._getEditationComponent(component, valueSource, validationSource);
+      props.key = index;
+
+      return UU5.Common.Tools.findComponent(Component, props, children);
+    }
+  },
+
+  _getEditationRow(setupSource, activeIdentifier, valueSource, validationSource) {
+    if (Array.isArray(setupSource)) {
+      return setupSource.map((setupColumn, index) =>
+        this._getEditationColumn(setupColumn, index, activeIdentifier, valueSource, validationSource)
+      );
+    } else {
+      return this._getEditationColumn(setupSource, 0, activeIdentifier, valueSource, validationSource);
+    }
+  },
+
   _getEditation() {
     let editationContent;
     let setupSource;
@@ -1150,49 +1240,47 @@ const ModalBody = UU5.Common.VisualComponent.create({
     let activeIdentifier;
     let tagName;
 
-    if (Array.isArray(this.props.propsSetup) && typeof this.state.activeCategoryIndex === "number") {
+    if (Array.isArray(this.props.componentPropsForm) && typeof this.state.activeCategoryIndex === "number") {
       activeIdentifier = this.state.activeCategoryIndex;
-      setupSource = this.props.propsSetup[activeIdentifier].setup;
-      info = this.props.propsSetup[activeIdentifier].info;
-      formProps = { ...formProps, ...this.props.propsSetup[activeIdentifier].formProps };
+      setupSource = this.props.componentPropsForm[activeIdentifier].setup;
+      info = this.props.componentPropsForm[activeIdentifier].info;
+      formProps = { ...formProps, ...this.props.componentPropsForm[activeIdentifier].formProps };
       valueSource = this.state.propValues;
-      tagName = this.props.component.getTagName();
+      // tagName = this.props.component.getTagName();
+      tagName = this.props.componentName;
       validationSource = this.state.validation[this.state.activeCategoryIndex];
     } else if (this.state.activeItemId) {
       activeIdentifier = this.state.activeItemId;
-      setupSource = this.props.itemPropsSetup.setup;
-      info = this.props.itemPropsSetup.info;
-      formProps = { ...formProps, ...this.props.itemPropsSetup.formProps };
+      setupSource = this.props.itemPropsForm.setup;
+      info = this.props.itemPropsForm.info;
+      formProps = { ...formProps, ...this.props.itemPropsForm.formProps };
       valueSource = this.state.items[this._getItemIndexById()].props;
-      tagName = this.props.itemComponent.tagName;
+      // tagName = this.props.itemComponent.tagName;
+      tagName = this.props.itemName;
       validationSource = this.state.itemsValidation ? this.state.itemsValidation[this._getItemIndexById()] : undefined;
     } else {
       return null;
     }
 
-    if (typeof setupSource === "object") {
-      editationContent = setupSource.map((component, index) => {
-        if (typeof component === "function") {
-          const Component = component;
-          return (
-            <Component
-              componentProps={this.state.propValues}
-              items={this.state.items}
-              onChangeProps={this._onCustomChangeProps}
-              onChangeItems={this._onCustomChangeItems}
-              editedItemId={activeIdentifier}
-              key={index}
-            />
+    if (Array.isArray(setupSource)) {
+      editationContent = [];
+      setupSource.forEach(setupSourceItem => {
+        if (Array.isArray(setupSourceItem)) {
+          let editRowContent = this._getEditationRow(setupSourceItem, activeIdentifier, valueSource, validationSource);
+          let colWidth = 12 / editRowContent.length;
+          editationContent.push(
+            <UU5.Bricks.Row className={this.getClassName("editationRow")}>
+              {editRowContent.map((editRow, index) => (
+                <UU5.Bricks.Column key={index} colWidth={`xs-${colWidth}`}>
+                  {editRow}
+                </UU5.Bricks.Column>
+              ))}
+            </UU5.Bricks.Row>
           );
         } else {
-          let { Component, children, props = {} } = this._getEditationComponent(
-            component,
-            valueSource,
-            validationSource
+          editationContent.push(
+            this._getEditationColumn(setupSourceItem, 0, activeIdentifier, valueSource, validationSource)
           );
-          props.key = index;
-
-          return UU5.Common.Tools.findComponent(Component, props, children);
         }
       });
     } else if (typeof setupSource === "function") {
@@ -1254,8 +1342,8 @@ const ModalBody = UU5.Common.VisualComponent.create({
   // },
 
   _getCategoriesMenu() {
-    if (Array.isArray(this.props.propsSetup)) {
-      let items = this.props.propsSetup.map((category, index) => {
+    if (Array.isArray(this.props.componentPropsForm)) {
+      let items = this.props.componentPropsForm.map((category, index) => {
         return {
           content: category.name,
           icon: category.icon,
@@ -1279,7 +1367,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
     const isCompactVersion = this._isCompactVersion();
     const headerText = this.props.header
       ? this.props.header
-      : this.getLsiComponent("header", undefined, { name: this.props.component.getTagName() });
+      : this.getLsiComponent("header", undefined, { name: this.props.componentName });
     const closeButton = (
       <UU5.Bricks.Button
         bgStyle="transparent"
@@ -1318,7 +1406,9 @@ const ModalBody = UU5.Common.VisualComponent.create({
     const menu = (
       <UU5.Common.Fragment>
         <UU5.Bricks.Row className={this.getClassName("categoriesRow")}>{this._getCategoriesMenu()}</UU5.Bricks.Row>
-        <UU5.Bricks.Row className={this.getClassName("itemListRow")}>{this._getItemsMenu()}</UU5.Bricks.Row>
+        {this.props.itemName && (
+          <UU5.Bricks.Row className={this.getClassName("itemListRow")}>{this._getItemsMenu()}</UU5.Bricks.Row>
+        )}
       </UU5.Common.Fragment>
     );
 
@@ -1404,7 +1494,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
             <UU5.Bricks.Button onClick={this._cancel} className={this.getClassName("cancelButton")}>
               {this.getLsiComponent("cancelButton")}
             </UU5.Bricks.Button>
-            <UU5.Bricks.Button onClick={this._save} colorSchema="blue">
+            <UU5.Bricks.Button colorSchema="blue" {...this.props.saveButtonProps} onClick={this._save}>
               {this.getLsiComponent("saveButton")}
             </UU5.Bricks.Button>
           </UU5.Common.Fragment>

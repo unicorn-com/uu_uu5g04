@@ -54,10 +54,7 @@ exports[`UU5.Bricks.Del content="This is Content from ContentMixin" 1`] = `
   className="uu5-bricks-del"
   id="uuID"
 >
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
+  This is Content from ContentMixin
 </del>
 `;
 
@@ -126,20 +123,13 @@ exports[`UU5.Bricks.Del example docKit UU5.Bricks.Del render without crash 1`] =
   className="uu5-bricks-p"
   id="uuID01"
 >
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is "
-  />
+  This is 
   <Del
     id="uuID02"
-    nestingLevel="page"
   >
     deleted
   </Del>
-  <UU5.Common.TextCorrectorContextConsumer
-    key="2"
-    text="text"
-  />
+  text
 </p>
 `;
 

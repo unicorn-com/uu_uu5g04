@@ -12,53 +12,12 @@
  */
 
 import UU5 from "uu5g04";
-import { useState, useEffect, useMemo } from "./react-hooks";
-import { createComponent } from "./component";
-import { createContext } from "./context";
+import useLanguage from "./use-language";
 
-const [LsiContext, useLsiContext] = createContext([]);
-
-const LsiProvider = createComponent({
-
-  displayName: "UU5.Hooks.LsiProvider",
-
-  propTypes: {
-    language: UU5.PropTypes.string,
-    onChange: UU5.PropTypes.func
-  },
-
-  defaultProps: {
-    language: undefined,
-    onChange: undefined
-  },
-
-  render({ onChange, language, children }) {
-    const [lang, setLang] = useState(language || UU5.Utils.Lsi.getLanguage());
-
-    useEffect(() => {
-      typeof onChange === "function" && onChange({ language });
-    }, [lang]);
-
-    const value = useMemo(() => [lang, language => setLang(language)], [lang]);
-
-    return <LsiContext.Provider value={value}>{children}</LsiContext.Provider>;
-  }
-});
-
-function useLsi(initLanguage) {
-  const [contextLang, setContextLang] = useLsiContext();
-  const [lang, setLang] = useState(initLanguage || UU5.Utils.Lsi.getLanguage());
-
-  useEffect(() => {
-    if (!contextLang) {
-      const changeLanguage = ({ language }) => setLang(language);
-      UU5.Utils.Lsi.register(changeLanguage);
-      return () => UU5.Utils.Lsi.unregister(changeLanguage);
-    }
-  }, []);
-
-  return [contextLang || lang, setContextLang || UU5.Utils.Lsi.setLanguage];
+function useLsi(lsi, initLanguage) {
+  const { language, setLanguage } = useLanguage(initLanguage);
+  return { language, setLanguage, item: UU5.Utils.Lsi.getItem(lsi, language) };
 }
 
-export { LsiProvider, LsiContext };
+export { useLsi };
 export default useLsi;

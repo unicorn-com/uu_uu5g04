@@ -45,10 +45,10 @@ describe("UU5.Utils.Content", () => {
     expect(children).toBeFalsy();
 
     children = UU5.Utils.Content.getChildren(true, props, statics);
-    expect(children).toEqual("true");
+    expect(children).toEqual(true);
 
     children = UU5.Utils.Content.getChildren(false, props, statics);
-    expect(children).toEqual("false");
+    expect(children).toEqual(false);
 
     children = UU5.Utils.Content.getChildren(0, props, statics);
     expect(children).toEqual(0);
@@ -60,22 +60,25 @@ describe("UU5.Utils.Content", () => {
     expect(children).toBe("");
 
     children = UU5.Utils.Content.getChildren("text", props, statics);
-    expect(children).toMatchObject({ props: { text: "text" } }); // text-corrector
+    expect(children).toBe("text"); // text-corrector is not used
 
     children = UU5.Utils.Content.getChildren("<uu5string/><UU5.D.Component a='b' />", props, statics);
     expect(Array.isArray(children)).toBeTruthy();
     expect(children[0]).toMatchObject({ props: { a: "b" }, type: Component });
 
     children = UU5.Utils.Content.getChildren("<uu5data/>testKey", props, statics);
-    expect(children).toMatchObject({ props: { text: "testValue" } });
+    expect(children).toBe("testValue");
 
     children = UU5.Utils.Content.getChildren('<uu5json/>[0, false, "text"]', props, statics);
     expect(Array.isArray(children)).toBeTruthy();
     expect(children[0]).toEqual(0);
-    expect(children[1]).toEqual("false");
-    expect(children[2]).toMatchObject({ props: { text: "text" } }); // text-corrector
+    expect(children[1]).toEqual(false);
+    expect(children[2]).toBe("text"); // text-corrector is not used
 
     children = UU5.Utils.Content.getChildren(<Component a="b" />, props, statics);
+    expect(children).toMatchObject({ props: { a: "b" } });
+
+    children = UU5.Utils.Content.getChildren(props => <Component a="b" {...props} />, props, statics);
     expect(children).toMatchObject({ props: { a: "b", nestingLevel: "boxCollection" } });
     // NOTE Returned "children" have prop "parent" set to the value in "props", not to the component instance
     // from where getChildren() was called. The reason is that current uu5g04 components (and other libraries)
@@ -86,15 +89,22 @@ describe("UU5.Utils.Content", () => {
 
     children = UU5.Utils.Content.getChildren([<Component a="b" key="abc" />, "text"], props, statics);
     expect(Array.isArray(children)).toBeTruthy();
+    expect(children[0]).toMatchObject({ props: { a: "b" } });
+    expect(children[1]).toBe("text"); // text-corrector is not used
+
+    children = UU5.Utils.Content.getChildren(
+      props => [<Component a="b" key="abc" {...props} />, "text"],
+      props,
+      statics
+    );
+    expect(Array.isArray(children)).toBeTruthy();
     expect(children[0]).toMatchObject({ props: { a: "b", nestingLevel: "boxCollection" } });
     expect(children[0].props.parent === props.parent).toBeTruthy();
     expect(children[0].key).toBe("abc");
-    expect(children[1]).toMatchObject({ props: { text: "text" } }); // text-corrector
-    expect(children[1].props.parent === props.parent).toBeTruthy();
+    expect(children[1]).toBe("text"); // text-corrector is not used
 
     children = UU5.Utils.Content.getChildren({ tag: "UU5.D.Component", props: { a: "b" } }, props, statics);
-    expect(Array.isArray(children)).toBeTruthy();
-    expect(children[0]).toMatchObject({ props: { a: "b" }, type: Component });
+    expect(children).toMatchObject({ props: { a: "b" }, type: Component });
 
     children = UU5.Utils.Content.getChildren(
       { tag: "UU5.D.Component", propsArray: [{ a: "b" }, { a: "c" }] },
@@ -102,9 +112,9 @@ describe("UU5.Utils.Content", () => {
       statics
     );
     expect(Array.isArray(children)).toBeTruthy();
-    expect(children[0]).toMatchObject({ props: { a: "b" }, type: Component });
+    expect(children[0]).toMatchObject({ props: { a: "b", nestingLevel: "boxCollection" }, type: Component });
     expect(children[0].props.parent === props.parent).toBeTruthy();
-    expect(children[1]).toMatchObject({ props: { a: "c" }, type: Component });
+    expect(children[1]).toMatchObject({ props: { a: "c", nestingLevel: "boxCollection" }, type: Component });
     expect(children[1].props.parent === props.parent).toBeTruthy();
   });
 });

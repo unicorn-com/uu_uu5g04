@@ -110,6 +110,7 @@ export const TimePicker = Context.withContext(
     componentWillMount() {
       this._valueOverMidnight = false;
       this._hasFocus = false;
+      this._allowBlur = false;
 
       this._setUpLimits(this.props);
 
@@ -387,6 +388,7 @@ export const TimePicker = Context.withContext(
         } else if (e.which === 9) {
           // tab
           if (doBlur) {
+            this._allowBlur = true;
             if (this.isOpen()) {
               this.close(() => this._onBlur(opt));
             } else {
@@ -417,6 +419,7 @@ export const TimePicker = Context.withContext(
 
       if (!(clickData.input || clickData.picker)) {
         if (this.isOpen()) {
+          this._allowBlur = true;
           this.close(() => this._onBlur(opt));
         }
       }
@@ -567,8 +570,13 @@ export const TimePicker = Context.withContext(
       }
     },
 
+    _trueOnBlur(e) {
+      this._onBlur({ component: this, event: e, value: this.state.value });
+    },
+
     _onBlur(opt) {
-      if (this._hasFocus) {
+      if (this._hasFocus && this._allowBlur) {
+        this._allowBlur = false;
         this._removeKeyEvents();
         this._hasFocus = false;
         if (typeof this.props.onBlur === "function") {
@@ -752,7 +760,6 @@ export const TimePicker = Context.withContext(
       }
 
       if (!this.isReadOnly() && !this.isComputedDisabled()) {
-        let allowOpening = true;
         let handleMobileClick = e => {
           if (this.isOpen()) {
             e.target.focus();
@@ -772,27 +779,29 @@ export const TimePicker = Context.withContext(
 
         let handleClick = e => {
           let clickData = this._findTarget(e.nativeEvent);
+          let opt = { value: this.state.value, event: e, component: this };
 
           if (this._shouldOpenToContent() && clickData.input) {
             handleMobileClick(e);
           }
-          let opt = { value: this.state.value, event: e, component: this };
+
           if (clickData.input) {
+            this._allowBlur = false;
             e.preventDefault();
-            if (allowOpening && !this.isOpen()) {
+            if (!this.isOpen()) {
               this.open(() => this._onFocus(opt));
             } else if (!this.isOpen()) {
               this._onFocus(opt);
             }
-
-            allowOpening = true;
-          } else if (clickData.label) {
-            allowOpening = false;
           }
         };
 
         attrs.onClick = e => {
           handleClick(e);
+        };
+
+        attrs.onFocus = () => {
+          this._allowBlur = true;
         };
       }
 
@@ -832,6 +841,7 @@ export const TimePicker = Context.withContext(
               type="text"
               onChange={this._onChange}
               onFocus={!this.isReadOnly() && !this.isComputedDisabled() ? this._onFocus : null}
+              onBlur={!this.isReadOnly() && !this.isComputedDisabled() ? this._trueOnBlur : null}
               onKeyDown={this.onKeyDown}
               mainAttrs={inputAttrs}
               disabled={this.isComputedDisabled()}

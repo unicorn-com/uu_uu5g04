@@ -54,10 +54,7 @@ exports[`UU5.Bricks.Var content="This is Content from ContentMixin" 1`] = `
   className="uu5-bricks-var"
   id="uuID"
 >
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
+  This is Content from ContentMixin
 </var>
 `;
 
@@ -114,14 +111,10 @@ exports[`UU5.Bricks.Var docKit examples UU5.Bricks.Var should render without cra
 >
   <Var
     id="uuID02"
-    nestingLevel="page"
   >
     redPill
   </Var>
-  <UU5.Common.TextCorrectorContextConsumer
-    key="1"
-    text=" is in this case variable."
-  />
+   is in this case variable.
 </p>
 `;
 

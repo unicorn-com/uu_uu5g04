@@ -113,10 +113,13 @@ export const Number = Context.withContext(
       if (typeof value === "number") {
         // to string
         value = value + "";
+        const multiplicator = Math.pow(10, this.props.decimals);
+        value =
+          this.props.rounded && typeof this.props.decimals === "number"
+            ? Math.round(value * multiplicator) / multiplicator
+            : value;
+        value = this.props.rounded && this.props.decimals ? Math.round(value * multiplicator) / multiplicator : value;
       }
-
-      const multiplicator = Math.pow(10, this.props.decimals);
-      value = this.props.rounded && this.props.decimals ? Math.round(value * multiplicator) / multiplicator : value;
 
       let result = this._setNumberResult({ value });
 
@@ -554,7 +557,7 @@ export const Number = Context.withContext(
             this._updateRange = this._doGetCaretPosition() - 1;
             opt.value = "" + this.state.value; // update value to string
             opt.feedback = "warning";
-            opt.message = this.props.nanMessage || this.getLsiValue("nanMessage");
+            opt.message = this.props.nanMessage || this.getLsiComponent("nanMessage");
           }
           this._isNaN = true;
         } else {
@@ -577,12 +580,12 @@ export const Number = Context.withContext(
         if (!isNaN(number)) {
           if ((this.props.min || this.props.min === 0) && number < this.props.min) {
             opt.feedback = "error";
-            opt.message = this.props.lowerMessage || this.getLsiValue("lowerMessage") + " " + this.props.min + ".";
+            opt.message = this.props.lowerMessage || this.getLsiComponent("lowerMessage", null, this.props.min);
           }
 
           if ((this.props.max || this.props.max === 0) && number > this.props.max) {
             opt.feedback = "error";
-            opt.message = this.props.upperMessage || this.getLsiValue("upperMessage") + " " + this.props.max + ".";
+            opt.message = this.props.upperMessage || this.getLsiComponent("upperMessage", null, this.props.max);
           }
 
           isComma && (opt.value = opt.value.replace(".", ","));
@@ -601,7 +604,7 @@ export const Number = Context.withContext(
         // round only valid number value
         if (number !== "NaN") {
           // do not rounded a value if input is focused
-          if (this.props.rounded && this.props.decimals && number && !this._isFocused) {
+          if (this.props.rounded && typeof this.props.decimals === "number" && number && !this._isFocused) {
             let exp = this.props.decimals ? -1 * this.props.decimals : 0;
             number = this._transformNumberToString(UU5.Common.Tools.round10(parseFloat(number), exp));
           }
@@ -613,7 +616,11 @@ export const Number = Context.withContext(
           }
           // do not rounded a value if input is focused
           if (numberParts.length > 1) {
-            if (this.props.decimals && this.props.decimals < numberParts[1].length && !this._isFocused) {
+            if (
+              typeof this.props.decimals === "number" &&
+              this.props.decimals < numberParts[1].length &&
+              !this._isFocused
+            ) {
               numberParts[1] = numberParts[1].slice(0, this.props.decimals - numberParts[1].length);
             }
             resultValue = numberParts[0] + this.props.decimalSeparator + numberParts[1];

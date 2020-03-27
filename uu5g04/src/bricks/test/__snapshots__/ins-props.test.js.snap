@@ -54,10 +54,7 @@ exports[`UU5.Bricks.Ins content="This is Content from ContentMixin" 1`] = `
   className="uu5-bricks-ins"
   id="uuID"
 >
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
+  This is Content from ContentMixin
 </ins>
 `;
 
@@ -112,10 +109,7 @@ exports[`UU5.Bricks.Ins docKit examples UU5.Bricks.Ins should render without cra
   className="uu5-bricks-ins"
   id="uuID"
 >
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="inserted"
-  />
+  inserted
 </ins>
 `;
 

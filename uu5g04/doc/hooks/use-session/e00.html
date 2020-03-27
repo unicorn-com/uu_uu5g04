@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2,minimum-scale=0.5">
+  <title>useSession Demo</title>
+
+  <script>
+    if (!location.href.match(/^(about:|file:)/)) {
+      var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+      var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+      if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+      var appBaseUrlPath = (location.pathname.split(/\//).slice(0, 1 + bplSegmentCount).join("/") + "/").replace(/\/+/g,
+        "/").replace(/"/g, "");
+      var appAssetsRelativeUrlPath = "public/0.0.0/";
+      document.write(
+        '<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath
+        + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    }
+  </script>
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.6.1/prop-types.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/4.0.0/uu_appg01_core.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/4.0.0/uu_appg01.js",
+        "uu_appg01_oidc": "https://cdn.plus4u.net/uu-appg01-oidc/2.0.0/uu_appg01_oidc.js",
+
+        "uu5g04": "https://cdn.plus4u.net/beta/uu-uu5g04/1.29.0-hooks.3/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/beta/uu-uu5g04/1.29.0-hooks.3/uu5g04-bricks.min.js",
+        "uu5g04-hooks": "https://cdn.plus4u.net/beta/uu-uu5g04/1.29.0-hooks.3/uu5g04-hooks.min.js"
+      }
+    });
+
+    var UU5 = {
+      Environment: {
+        uu_app_oidc_redirect_uri: "/callbacks/oidc-callback.html",
+        uu_app_oidc_primary_provider: "oidcg02",
+        uu_app_oidc_providers_oidcg02_uri: "https://uuidentity.plus4u.net/uu-oidc-maing02/bb977a99f4cc4c37a2afce3fd599d0a7/oidc"
+      }
+    };
+  </script>
+</head>
+<body>
+<div id="uu5">Loading...</div>
+
+<script src="https://cdn.plus4u.net/uu-app-templateg01/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import { Session } from 'uu_appg01_oidc';
+
+  //@@viewOn:example
+  //@@viewOn:imports
+  import { createVisualComponent, useSession, SessionProvider } from "uu5g04-hooks";
+  //@@viewOff:imports
+
+  const STATICS = {
+    //@@viewOn:statics
+    displayName: "UU5.Bricks.Identity",
+    nestingLevel: "box"
+    //@@viewOff:statics
+  };
+
+  const Identity = createVisualComponent({
+    ...STATICS,
+
+    //@@viewOn:propTypes
+    propTypes: {
+      lsi: UU5.PropTypes.object
+    },
+    //@@viewOff:propTypes
+
+    //@@viewOn:defaultProps
+    defaultProps: {
+      lsi: {}
+    },
+    //@@viewOff:defaultProps
+
+    render(props) {
+      //@@viewOn:hooks
+      const { sessionState, identity, isExpiring, login, logout } = useSession();
+      //@@viewOff:hooks
+
+      //@@viewOn:interface
+      //@@viewOff:interface
+
+      //@@viewOn:private
+      //@@viewOff:private
+
+      //@@viewOn:render
+      const attrs = UU5.Common.VisualComponent.getAttrs(props);
+      const currentNestingLevel = UU5.Utils.NestingLevel.getNestingLevel(props, STATICS);
+
+      let name = null, buttonProps;
+      switch (sessionState) {
+        case "authenticated":
+          name = identity.name;
+          buttonProps = {
+            onClick: () => logout(),
+            children: "Logout"
+          };
+          break;
+        case "notAuthenticated":
+          name = "Logged out";
+          buttonProps = {
+            onClick: () => login(),
+            children: "Login"
+          };
+          break;
+        default:
+          name = "Pending...";
+      }
+
+      console.log("identity", identity, isExpiring, sessionState);
+
+      return currentNestingLevel ? (
+        <div {...attrs}>
+          {name} {buttonProps && <UU5.Bricks.Button {...buttonProps} />}
+        </div>
+      ) : null;
+      //@@viewOn:render
+    }
+  });
+
+  //@@viewOff:example
+
+  function Demo() {
+    return (
+      <UU5.Bricks.Container>
+        <SessionProvider session={Session.currentSession}>
+          <Identity />
+        </SessionProvider>
+      </UU5.Bricks.Container>
+    );
+  }
+
+  UU5.Common.DOM.render(<Demo />, document.getElementById('uu5'));
+</script>
+</body>
+</html>

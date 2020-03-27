@@ -40,12 +40,33 @@ export const Factory = {
       //@@viewOff:statics
 
       //@@viewOn:propTypes
+      propTypes: {
+        ref_: UU5.PropTypes.oneOfType([UU5.PropTypes.func, UU5.PropTypes.shape({ current: UU5.PropTypes.any })])
+      },
       //@@viewOff:propTypes
 
       //@@viewOn:getDefaultProps
+      getDefaultProps: function() {
+        return {
+          ref_: null
+        };
+      },
       //@@viewOff:getDefaultProps
 
       //@@viewOn:reactLifeCycle
+      // TODO: uncomment when uuDCC will be ready to work with components without BaseMixin
+      // componentDidMount: function() {
+      //   if (
+      //     typeof this.props.ref_ === "function" ||
+      //     (typeof this.props.ref_ === "object" && this.props.ref_ !== null)
+      //   ) {
+      //     if ("current" in this.props.ref_) {
+      //       this.props.ref_.current = this;
+      //     } else {
+      //       this.props.ref_(this);
+      //     }
+      //   }
+      // },
       //@@viewOff:reactLifeCycle
 
       //@@viewOn:interface

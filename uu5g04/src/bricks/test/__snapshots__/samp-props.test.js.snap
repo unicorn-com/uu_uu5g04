@@ -54,10 +54,7 @@ exports[`UU5.Bricks.Samp content="This is Content from ContentMixin" 1`] = `
   className="uu5-bricks-samp"
   id="uuID"
 >
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
+  This is Content from ContentMixin
 </samp>
 `;
 

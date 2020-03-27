@@ -17,7 +17,8 @@ import { forwardRef } from "react";
 function createComponent(component, isRef = false) {
   const { render, ...statics } = component;
 
-  const Comp = isRef ? forwardRef(render) : render;
+  // If no ref is used (isRef === false) React sends bogus ref which causes warning in console => don't propagate ref
+  const Comp = isRef ? forwardRef(render) : (props, ref) => render(props);
   for (let [key, value] of Object.entries(statics)) Comp[key] = value;
 
   // FIXME backward compatibility - delete after death of mixins
@@ -43,11 +44,11 @@ function createVisualComponent(component, isRef = false) {
 
   const Comp = isRef ? createComponentWithRef(componentCfg) : createComponent(componentCfg);
 
-  if (process.env.NODE_ENV === "development") {
-    if (!Comp.nestingLevel) {
-      console.warn(`Visual Component ${Comp.displayName} has not defined nestingLevel.`, component);
-    }
-  }
+  // if (process.env.NODE_ENV === "development") {
+  //   if (!Comp.nestingLevel) {
+  //     console.warn(`Visual Component ${Comp.displayName} has not defined nestingLevel.`, component);
+  //   }
+  // }
 
   return Comp;
 }

@@ -93,7 +93,8 @@ export const Router = VisualComponent.create({
     routes: PropTypes.object,
     urlBuilder: PropTypes.func,
     strictRoutes: PropTypes.bool,
-    loading: PropTypes.node
+    loading: PropTypes.node,
+    onRouteChanged: PropTypes.func
   },
   //@@viewOff:propTypes
 
@@ -106,7 +107,8 @@ export const Router = VisualComponent.create({
       urlBuilder: null,
       showNotFoundRouteInUrl: false,
       strictRoutes: false,
-      loading: ""
+      loading: "",
+      onRouteChanged: null
     };
   },
   //@@viewOff:getDefaultProps
@@ -166,7 +168,7 @@ export const Router = VisualComponent.create({
     this.scrollToFragment();
   },
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps, prevState) {
     this.scrollToFragment();
 
     // flag below solves this scenario:
@@ -177,6 +179,12 @@ export const Router = VisualComponent.create({
     // => remember this situation with a timed flag and use it in _onWindowScroll for skipping fragment removal
     this._isScrollDueToRender = true;
     setTimeout(() => (this._isScrollDueToRender = false), 50);
+
+    if (typeof this.props.onRouteChanged === "function" && prevState.route !== this.state.route) {
+      let { useCase, params, config } = this.state;
+      let route = config || { component: this.state.route };
+      this.props.onRouteChanged({ route, useCase, parameters: params });
+    }
   },
 
   componentWillUnmount() {
@@ -345,8 +353,12 @@ export const Router = VisualComponent.create({
     );
     this._pendingFragmentToScrollTo = fragment;
     this._showPageLeaveConfirmation(() => {
-      let applyToState = typeof applyRouteFn !== "function" || applyRouteFn();
-      applyToState && this.setState({ route: route, requestedRoute: newRoute, routeError: null }, setStateCallback);
+      let applyToState =
+        typeof applyRouteFn !== "function"
+          ? { config: undefined, useCase: undefined, params: undefined }
+          : applyRouteFn();
+      applyToState &&
+        this.setState({ ...applyToState, route: route, requestedRoute: newRoute, routeError: null }, setStateCallback);
     });
     return this;
   },
@@ -533,8 +545,12 @@ export const Router = VisualComponent.create({
             if ("component" in newRoute) route = this._buildComponent(newRoute.component);
             else ({ route, fragment, applyRouteFn } = that._buildRoute(newRoute, null, true, null, null, false, true)); // TODO "that" - required due to some babel issue (it doesn't use proper "this")
             this._pendingFragmentToScrollTo = fragment;
-            let applyToState = typeof applyRouteFn !== "function" || applyRouteFn();
-            applyToState && this.setState({ route: route, requestedRoute: newRoute, routeError: null });
+            let applyToState =
+              typeof applyRouteFn !== "function"
+                ? { config: undefined, useCase: undefined, params: undefined }
+                : applyRouteFn();
+            applyToState &&
+              this.setState({ ...applyToState, route: route, requestedRoute: newRoute, routeError: null });
           });
           isSynchronousPageLeave = false;
           if (isWaitingForConfirmation && this._routeIndex !== routeIndex) {
@@ -636,12 +652,12 @@ export const Router = VisualComponent.create({
         if (useCase !== undefined) {
           // we won't apply the route immediately, because it can be stopped by page-leave confirmation yet
           applyRouteFn = () => {
-            let result = true;
+            let result = { useCase, params, config };
             // if a route descriptor in "routes" props contains goTo method, pass resolved route there
             // and don't do anything with router state (the goTo method is supposed to call
             // router.setRoute(newRoute) by itself)
             if (config && typeof config.goTo === "function" && !ignoreGoTo) {
-              result = false;
+              result = null;
               let oldHistoryEntry = this._history[this._routeIndex || 0];
               let oldRoute =
                 oldHistoryEntry &&
@@ -797,7 +813,7 @@ export const Router = VisualComponent.create({
                 if (!(window.frameElement && e instanceof DOMException)) throw e; // cannot do replace/pushState when in <iframe srcdoc="&lt;html..." (ends with DOMException so ignore it), e.g. in BookKit examples
               }
             }
-            return true;
+            return { config: { ...params, component: foundRoute }, useCase: undefined, params: undefined };
           };
 
           newRoute = foundRoute;

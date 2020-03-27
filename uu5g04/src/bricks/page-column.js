@@ -145,7 +145,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
 
   //@@viewOn:reactLifeCycle
   getInitialState() {
-    let width = this._getWidth(false, this.props);
+    let width = this._getWidth(this.props, undefined, this.props.open);
     let ghostWidth = this._getGhostWidth(this.props, this.props.open, width);
     this._prevWidth = width;
 
@@ -168,7 +168,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
 
   componentWillReceiveProps(nextProps) {
     let isOpen = nextProps.open !== this.props.open ? nextProps.open : this.isOpen();
-    let width = this._getWidth(false, nextProps);
+    let width = this._getWidth(nextProps);
     let ghostWidth = this._getGhostWidth(nextProps, isOpen, width);
     if (nextProps.controlled) {
       this._prevWidth = width;
@@ -280,7 +280,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
       this.setState(
         {
           open: true,
-          width: this._getWidth(false, this.props, null, true),
+          width: this._getWidth(this.props, null, true),
           ghostWidth: this._getGhostWidth(this.props, true)
         },
         setStateCallback
@@ -300,7 +300,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
       this.setState(
         {
           open: false,
-          width: this._getWidth(false, this.props, null, false),
+          width: this._getWidth(this.props, null, false),
           ghostWidth: this._getGhostWidth(this.props, false)
         },
         setStateCallback
@@ -407,7 +407,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
       else icon = this.props.right ? "mdi-chevron-left" : "mdi-chevron-right";
 
       let transformXFirst = "0vw";
-      let transformXSecond = this.props.right ? `-100%` : `100%`;
+      let transformXSecond = (this.props.right ? `-` : `+`) + (this.isOpen() ? `50%` : `100%`);
 
       if (!this.isOpen()) {
         let hasClosedWidth = !!(this.props.minWidth && this.props.maxWidth);
@@ -426,16 +426,9 @@ export const PageColumn = UU5.Common.VisualComponent.create({
           visibility: ${showOnHover ? "hidden" : "visible"};
           transition: transform 0.3s linear;
           width: 24px;
-          height: 32px;
-          border: solid 1px rgba(33,33,33,0.12);
-          border-radius: ${this.props.right ? "4px 0 0 4px" : "0 4px 4px 0"};
-          background-color: white;
-          color: #757575;
-          padding: 0 11px;
-
-          & > .uu5-bricks-icon {
-            font-size: 12px;
-          }
+          height: 24px;
+          // border: solid 1px rgba(33,33,33,0.12);
+          border-radius: 4px;
         }
         ${showOnHover &&
           `
@@ -454,8 +447,8 @@ export const PageColumn = UU5.Common.VisualComponent.create({
           onClick={this._onPressToggleButton}
           content={<UU5.Bricks.Icon icon={icon} />}
           className={buttonStyle}
-          colorSchema="custom"
-          bgStyle="transparent"
+          colorSchema="primary"
+          bgStyle="filled"
           size="s"
         />
       );
@@ -625,7 +618,10 @@ export const PageColumn = UU5.Common.VisualComponent.create({
     // those 5 pixels are because of changing the cursor to the "resize" one, which is wider and the mouse position is counted from the left side of the cursor.
     newWidth += 5;
 
-    if (newWidth <= parseFloat(this.props.maxResizableWidth) && newWidth >= parseFloat(this.props.minResizableWidth)) {
+    if (
+      (!this.props.maxResizableWidth || newWidth <= parseFloat(this.props.maxResizableWidth)) &&
+      (!this.props.minResizableWidth || newWidth >= parseFloat(this.props.minResizableWidth))
+    ) {
       let ghostWidth = this._getGhostWidth(this.props, this.isOpen(), newWidth);
 
       this._resized = true;
@@ -728,27 +724,23 @@ export const PageColumn = UU5.Common.VisualComponent.create({
     return Css.css`${styles}`;
   },
 
-  _getWidth(isWrapper, props = this.props, width, open) {
+  _getWidth(props = this.props, width, open) {
     // If column width is set to percentage value, it is not possible to set the same width on the ghost element
     // because the column (since its fixed) always has its width calculated towards the width of the whole document.
     // Therefore we change % to vw
     if (!width) {
-      if (this._shouldChangeWidth(props) || isWrapper) {
-        if (!props.block && (props.minWidth || props.maxWidth)) {
-          // its openable
+      if (!props.block && (props.minWidth || props.maxWidth)) {
+        // its openable
 
-          if ((typeof open === "boolean" && open) || (typeof open !== "boolean" && this.state && this.state.open)) {
-            // its opened
-            width = props.maxWidth || "0px";
-          } else {
-            // its closed
-            width = props.minWidth || "0px";
-          }
+        if ((typeof open === "boolean" && open) || (typeof open !== "boolean" && this.state && this.state.open)) {
+          // it's opened
+          width = props.maxWidth || "0px";
         } else {
-          width = props.width || "0px";
+          // it's closed
+          width = props.minWidth || "0px";
         }
       } else {
-        width = props.maxWidth || props.width || "0px";
+        width = props.minWidth || props.width || "0px";
       }
     }
 
@@ -810,7 +802,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
       }
     }
 
-    return this._getWidth(false, this.props, width);
+    return this._getWidth(this.props, width);
   },
 
   _getWrapperProps() {
@@ -950,10 +942,6 @@ export const PageColumn = UU5.Common.VisualComponent.create({
 
     let maxWidth = this.state.ghostWidth;
 
-    if (isResizable(this.props, this.state) && this.props.maxResizableWidth) {
-      maxWidth = UU5.Common.Tools.fillUnit(this.props.maxResizableWidth);
-    }
-
     return {
       className,
       style: { width: this.state.ghostWidth, maxWidth, right: this.props.right ? 0 : "auto" }
@@ -964,16 +952,18 @@ export const PageColumn = UU5.Common.VisualComponent.create({
     let props = this.getMainPropsToPass();
     let maxWidth = this.state.width;
 
-    if (isResizable(this.props, this.state) && this.props.maxResizableWidth) {
-      maxWidth = UU5.Common.Tools.fillUnit(this.props.maxResizableWidth);
-    }
-
     let style = getStyles
       ? UU5.Common.Tools.merge(props.style || {}, this.state.style, {
           width: this.state.width,
           maxWidth
         })
       : {};
+
+    // bottom and top margins destroys column layout. Ghoust is needed only to reflect width of the column, not height
+    if (getStyles) {
+      delete style.marginTop;
+      delete style.marginBottom;
+    }
 
     props.id = this.getId();
     props.pureRender = true;

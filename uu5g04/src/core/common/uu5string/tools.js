@@ -54,19 +54,19 @@ const Tools = {
     @param filterFn({tag, props}) - function to change tag and props used for rendering into components. Function is called for each descendant UU5StringObject before creation of React component. This function cannot change data of UU5StringObjects.
     @returns array of React components
    */
-  contentToChildren(content, data, filterFn) {
+  contentToChildren(content, data, filterFn, preferChildrenAsFunction = false) {
     if (!content || !content.length) {
       return null;
     }
     return content.map((item, index) =>
       typeof item === "string"
         ? Tools.printTemplateToChildren(Environment.textEntityMap.replace(item), data)
-        : Tools._contentWithKeyToChildren(item, index, data, filterFn)
+        : Tools._contentWithKeyToChildren(item, index, data, filterFn, preferChildrenAsFunction)
     );
   },
 
   // render all children with stable key derivated from child index
-  _contentWithKeyToChildren(item, index, data, filterFn) {
+  _contentWithKeyToChildren(item, index, data, filterFn, preferChildrenAsFunction) {
     // let props = item.props.clone();
     // let original = item.props;
     let props = item.props.toObject();
@@ -74,7 +74,7 @@ const Tools = {
       item.props.props.push({ name: "key", value: props.id || `uu5string-child_${index}` });
     }
     // item.props = props;
-    const result = item.toChildren(data, filterFn);
+    const result = item.toChildren(data, filterFn, preferChildrenAsFunction);
     // item.props = original;
     if (!props.key) {
       item.props.props.pop();

@@ -4610,7 +4610,37 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() should return fals
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
     disabled={false}
     feedback="error"
-    message="This field is required."
+    message={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Toto pole je povinné.",
+            "en": "This field is required.",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
     readonly={false}
     required={true}
   >

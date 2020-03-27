@@ -54,10 +54,7 @@ exports[`UU5.Bricks.Em content="This is Content from ContentMixin" 1`] = `
   className="uu5-bricks-em"
   id="uuID"
 >
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
+  This is Content from ContentMixin
 </em>
 `;
 
@@ -112,10 +109,7 @@ exports[`UU5.Bricks.Em docKit examples UU5.Bricks.Em should render without crash
   className="uu5-bricks-em"
   id="uuID"
 >
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="emphasised"
-  />
+  emphasised
 </em>
 `;
 

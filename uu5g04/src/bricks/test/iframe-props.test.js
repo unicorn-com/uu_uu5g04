@@ -34,7 +34,9 @@ const CONFIG = {
       values: ["400", "40em"]
     },
     syncTimeout: {
-      values: [3]
+      values: [3],
+      // make snapshots without waiting for timeout (to see that iframe is not present initially)
+      opt: { wait: false }
     },
     inline: {
       values: [true, false]

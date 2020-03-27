@@ -46,7 +46,8 @@ export const TagSelect = Context.withContext(
       multiple: UU5.PropTypes.bool,
       borderRadius: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
       bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-      elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
+      elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+      placeholder: UU5.PropTypes.string
     },
     //@@viewOff:propTypes
 
@@ -60,7 +61,8 @@ export const TagSelect = Context.withContext(
         multiple: false,
         borderRadius: undefined,
         bgStyle: undefined,
-        elevation: undefined
+        elevation: undefined,
+        placeholder: undefined
       };
     },
     //@@viewOff:getDefaultProps
@@ -285,23 +287,27 @@ export const TagSelect = Context.withContext(
       }, this._onOpen);
     },
 
-    _addTagValue({ value }) {
+    _getAddTagValueResult({ value }) {
       let newData = { state: {} };
       let isValid = true;
-      if (!value) return;
+      value = value.trim();
+      if (!value) return null;
       // validate value towards ignored tags
       if (this.props.ignoreTags && this.props.ignoreTags.find(ignoreTag => ignoreTag === value)) {
         this._hasTempFeedback = true;
-        newData.state = { feedback: "error", message: this.getLsiValue("tagIsNotAllowed").replace("$1", value) };
+        newData.state = { feedback: "error", message: this.getLsiComponent("tagIsNotAllowed").replace("$1", value) };
         isValid = false;
       } else if (this._hasValue() && this.state.value.indexOf(value) !== -1) {
         // validate value towards currently set tags
         this._hasTempFeedback = true;
-        newData.state = { feedback: "warning", message: this.getLsiValue("tagIsAlreadyAdded").replace("$1", value) };
+        newData.state = {
+          feedback: "warning",
+          message: this.getLsiComponent("tagIsAlreadyAdded").replace("$1", value)
+        };
         isValid = false;
       } else if (!this.props.allowCustomTags && !this._availableTags.find(tag => tag.value === value)) {
         this._hasTempFeedback = true;
-        newData.state = { feedback: "error", message: this.getLsiValue("customTagIsNotAllowed") };
+        newData.state = { feedback: "error", message: this.getLsiComponent("customTagIsNotAllowed") };
         isValid = false;
       } else {
         newData.state = { feedback: "initial", searchValue: "", message: null };
@@ -330,14 +336,30 @@ export const TagSelect = Context.withContext(
         if (!this.props.multiple) {
           newData.state.open = false;
         }
-
-        if (typeof this.props.onChange === "function") {
-          this.props.onChange({ component: this, value, _data: newData });
-          return;
-        }
       }
 
-      this.onChangeDefault({ value, _data: newData });
+      return newData;
+    },
+
+    _addTagValue({ value }) {
+      let newData = this._getAddTagValueResult({ value });
+
+      if (newData) {
+        let isValid = newData.state.feedback === "initial";
+
+        if (isValid) {
+          if (typeof this.props.onChange === "function") {
+            this.props.onChange({ component: this, value: newData.state.value, _data: newData });
+            return;
+          }
+        }
+
+        this.onChangeDefault({ value, _data: newData });
+      }
+    },
+
+    _getMatchingTags(searchedTag, availableTags = this._availableTags) {
+      return availableTags.filter(({ searchValue }) => searchValue.indexOf(searchedTag.toLowerCase()) !== -1);
     },
 
     _addKeyboardEvent() {
@@ -511,12 +533,27 @@ export const TagSelect = Context.withContext(
 
     _onTextInputBlur() {
       if (this._hasFocus) {
+        let callback = this._hasTempFeedback ? this.setInitial : undefined;
+
+        if (!this.props.multiple && this.state.searchValue && this.state.searchValue.trim()) {
+          let potentialValue;
+
+          if (this.props.allowCustomTags) {
+            potentialValue = this.state.searchValue.trim();
+          } else {
+            // if there is only one matching tag, set it as a value
+            let matchingTag = this._getMatchingTags(this.state.searchValue.trim());
+            potentialValue = Array.isArray(matchingTag) && matchingTag.length === 1 ? matchingTag[0].value : undefined;
+          }
+
+          if (potentialValue) {
+            callback = () => this._addTagValue({ value: potentialValue });
+          }
+        }
+
         this._hasFocus = false;
         this._removeEvent();
-        this.setState(
-          state => (state.open ? { open: false, searchValue: "" } : undefined),
-          this._hasTempFeedback ? this.setInitial : undefined
-        );
+        this.setState(state => (state.open ? { open: false, searchValue: "" } : undefined), callback);
       }
     },
 
@@ -537,10 +574,7 @@ export const TagSelect = Context.withContext(
     },
 
     _onInputClick() {
-      this.setState(
-        state => (!state.open ? { open: true } : undefined),
-        () => this._onOpen(this._focusInput)
-      );
+      this.setState(state => (!state.open ? { open: true } : undefined), () => this._onOpen(this._focusInput));
     },
 
     _onMainInputFocus() {
@@ -562,6 +596,7 @@ export const TagSelect = Context.withContext(
               }
               icon="mdi-close"
               className={this.getClassName("tag")}
+              tooltip={tag}
             >
               <span className={this.getClassName("tagTextWrapper")}>{tag}</span>
             </UU5.Bricks.Label>
@@ -611,10 +646,8 @@ export const TagSelect = Context.withContext(
         ? this._availableTags.filter(({ value }) => this.state.value.indexOf(value) === -1)
         : this._availableTags;
 
-      if (this.state.searchValue) {
-        foundAutocompleteItems = foundAutocompleteItems.filter(
-          ({ searchValue }) => searchValue.indexOf(this.state.searchValue.toLowerCase()) !== -1
-        );
+      if (this.state.searchValue && this.state.searchValue.trim()) {
+        foundAutocompleteItems = this._getMatchingTags(this.state.searchValue.trim(), foundAutocompleteItems);
       }
 
       return foundAutocompleteItems.map((item, i) => (
@@ -632,8 +665,13 @@ export const TagSelect = Context.withContext(
       if (this._hasValue()) {
         let content = [this._getTextInput()];
 
-        if (!this.state.searchValue) {
-          content.push(this._getTagList());
+        if (!this.state.searchValue && !this.state.searchValue.trim()) {
+          let value = this._getTagList();
+          content.push(
+            <div className={this.getClassName("valueWrapper")} title={value}>
+              {value}
+            </div>
+          );
         }
 
         return content;

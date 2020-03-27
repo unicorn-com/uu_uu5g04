@@ -379,7 +379,8 @@ exports[`UU5.Bricks.Page bottom={"key":"0","ref":null,"props":{"id":"uuIDBOX2","
       topId="uuID-top"
     >
       <Row
-        className=" uu5-bricks-page-bottom"
+        className=" uu5-bricks-page-bottom uu5-elevation-3 uu5-bricks-page-z-index-3"
+        id="uuID-bottom"
         pureRender={true}
       >
         <UpdateWrapper
@@ -7043,7 +7044,11 @@ exports[`UU5.Bricks.Page prop overlayTop 1`] = `
           pureRender={true}
         >
           <UpdateWrapper
-            content={<Paragraph />}
+            content={
+              <Paragraph
+                ref_={null}
+              />
+            }
           />
         </Div>
       </Div>

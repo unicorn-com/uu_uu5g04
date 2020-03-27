@@ -59,9 +59,11 @@ export const Modal = UU5.Common.VisualComponent.create({
           className +=
             " " +
             Css.css(`
-            display: flex !important;
-            flex-direction: column;
-            justify-content: center;
+            && {
+              display: flex !important;
+              flex-direction: column;
+              justify-content: center;
+            }
           `);
         }
         return className;
@@ -72,20 +74,26 @@ export const Modal = UU5.Common.VisualComponent.create({
           className +=
             " " +
             Css.css(`
-            margin-top: ${props.offsetTop}px;
+            && {
+              margin-top: ${props.offsetTop}px;
+            }
           `);
         } else if (props.offsetTop === "auto") {
           className +=
             " " +
             Css.css(`
-            margin-top: 0;
-            margin-bottom: 0;
+            && {
+              margin-top: 0;
+              margin-bottom: 0;
+            }
           `);
         } else if (typeof props.offsetTop === "string") {
           className +=
             " " +
             Css.css(`
-            margin-top: ${props.offsetTop};
+            && {
+              margin-top: ${props.offsetTop};
+            }
           `);
         }
         return className;
@@ -385,7 +393,7 @@ export const Modal = UU5.Common.VisualComponent.create({
   },
 
   _close(setStateCallback) {
-    this.setState(
+    this.isRendered() && this.setState(
       {
         hidden: true,
         renderContent: getMountContent(this.props, this.state) !== MOUNT_CONTENT_VALUES.onEachOpen

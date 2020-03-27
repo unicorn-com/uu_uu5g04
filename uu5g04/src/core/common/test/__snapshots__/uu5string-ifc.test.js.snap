@@ -44,7 +44,9 @@ Array [
     target="_self"
     tooltip={null}
   />,
-  <Paragraph>
+  <Paragraph
+    ref_={null}
+  >
     <Icon
       authenticate={false}
       className={null}
@@ -1611,9 +1613,14 @@ exports[`UU5.Common.Uu5String - test of interface instance instance.toChildren(d
 Array [
   <Paragraph
     content="Lorem ipsum ..."
+    ref_={null}
   />,
-  <Paragraph />,
-  <Paragraph>
+  <Paragraph
+    ref_={null}
+  />,
+  <Paragraph
+    ref_={null}
+  >
     Lorem ipsum ...
   </Paragraph>,
 ]

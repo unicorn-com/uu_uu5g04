@@ -255,7 +255,7 @@ export const Environment = {
   CCRKEY_PAGE: "UU5.Bricks.Page",
   CCRKEY_ROUTER: "UU5.Common.Router",
   COMPONENT_REGISTRY_URL:
-    "https://uuos9.plus4u.net/uu-uu5libraryregistryg01-main/85849867896916817-fe96c133c895434bbd4d5b24831483f3/getLibrary", //PROD
+    "https://uuapp.plus4u.net/uu-applibraryregistry-maing01/fe96c133c895434bbd4d5b24831483f3/library/get", //PROD
   // COMPONENT_REGISTRY_URL: 'https://uuos9.plus4u.net/uu-uu5componentregistryg01-main/84723967990075193-eb48e82fb0ab409b9dd2fe4f956226dc/getLibrary', //DEV
   STATISTICS_BASE_PATH: "https://uuapp.plus4u.net/uu-applibraryregistry-statsg01/8fc27ec054b340cb98c9f10789bd4f63/",
   CDN_URL: "https://cdn.plus4u.net",

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Component Editation 2 Demo</title>
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+        "uu5g04": "/uu5g04.js",
+        "uu5g04-bricks": "/uu5g04-bricks.js",
+        "uu5g04-forms": "/uu5g04-forms.js",
+        "uu5g04-bricks-editable": "/uu5g04-bricks-editable.js"
+      }
+    });
+  </script>
+
+</head>
+<body>
+<div id="renderHere"></div>
+
+<!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+
+  const ListEditable = UU5.Common.Component.lazy(async () => {
+    const BricksEditable = await SystemJS.import("uu5g04-bricks-editable");
+
+    function timeout(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    await timeout(1000);
+
+    /*@@viewOn:0*/
+    const ListEditable = UU5.Common.VisualComponent.create({
+
+      getPropsToSave() {
+        return this._modalRef ? this._modalRef.getPropsToSave() : undefined;
+      },
+
+      render() {
+        return (
+          <BricksEditable.Modal
+            shown
+            onClose={this.props.onClose}
+            props={this.props.props}
+            componentName="UU5.Bricks.Ul"
+            propsSetup={[
+              {
+                name: "Properties",
+                setup: [
+                  {
+                    name: "type",
+                    type: "switchSelector",
+                    label: "Type",
+                    getProps: () => ({
+                      items: [
+                        { value: "disc" },
+                        { value: "square" },
+                        { value: "circle" },
+                        { value: "none" },
+                      ]
+                    })
+                  }
+                ]
+              }
+            ]}
+            ref_={ref => this._modalRef = ref}
+          />
+        )
+      }
+    });
+    /*@@viewOff:0*/
+
+    return { default: ListEditable }
+  });
+
+  /*@@viewOn:0*/
+  export const List = UU5.Common.VisualComponent.create({
+
+    mixins: [UU5.Common.BaseMixin, UU5.Common.EditableMixin],
+
+    onBeforeForceEndEditation_() {
+      return this._editRef ? this._editRef.getPropsToSave() : undefined;
+    },
+
+    render() {
+      return (
+        <UU5.Common.Fragment>
+          {this.isInlineEdited() && (
+            <UU5.Common.Suspense fallback={this.getEditingLoading()}>
+              <ListEditable
+                props={this.props}
+                onClose={this.endEditation}
+                ref={ref => this._editRef = ref}
+              />
+            </UU5.Common.Suspense>
+          )}
+          <UU5.Bricks.Ul type={this.props.type}>
+            {this.props.items.map((item, i) => (
+              <UU5.Bricks.Li
+                key={i}
+                className={UU5.Common.Css.css`
+                  font-size: ${UU5.Common.Tools.fillUnit(item.fontSize)};
+                  font-weight: ${item.bold ? "bold" : undefined};
+                `}
+                content={item.text}
+              />
+            ))}
+          </UU5.Bricks.Ul>
+        </UU5.Common.Fragment>
+      );
+    }
+  });
+  /*@@viewOff:0*/
+
+  const Page = UU5.Common.VisualComponent.create({
+
+    getInitialState() {
+      return {
+        type: "disc",
+        items: [{ text: "Car" }]
+      };
+    },
+
+    _editComponent() {
+      this._component.startEditation(this._saveEditation, this._saveEditationWithoutEnd);
+    },
+
+    _saveEditation(component, newProps) {
+      this.setState(newProps);
+    },
+
+    _saveEditationWithoutEnd(component, newProps) {
+      this.setState(newProps);
+    },
+
+    render() {
+      return (
+        <div>
+          <List
+            ref_={component => this._component = component}
+            {...this.state}
+          />
+
+          <UU5.Bricks.Button colorSchema='primary' onClick={this._editComponent} content='Edit' />
+        </div>
+      );
+    }
+  });
+
+  UU5.Common.DOM.render(<Page />, document.getElementById('renderHere'));
+</script>
+
+</body>
+</html>

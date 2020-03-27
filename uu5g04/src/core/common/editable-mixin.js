@@ -83,7 +83,8 @@ export const EditableMixin = {
     this.registerMixin(EDITABLE_MIXIN_NAME);
     this._resizeCallbacks = {};
     return {
-      editation: false
+      editation: false,
+      editableComponentLazyLoaded: false
     };
   },
 
@@ -252,12 +253,33 @@ export const EditableMixin = {
     this.endEditation(props);
   },
 
+  isNotInlineEdited() {
+    return !this.state.editation || !this.constructor.editableComponentLazyLoaded;
+  },
+
+  getEditingLoading() {
+    return <span ref={this._registerLazyLoading} />;
+  },
   //@@viewOff:interface
 
   //@@viewOn:overriding
   //@@viewOff:overriding
 
   //@@viewOn:private
+  _registerLazyLoading(inst) {
+    // unmount of component means that suspense is loaded and component should be rendered
+    if (!inst) {
+      this.setState(state => {
+        if (state.editableComponentLazyLoaded) return;
+
+        // Edit component is loaded - need to set to static variable because other Edit component does not render fallback component
+        // editationLazyLoaded is stored in both state and static variable for cases such as when more edit modes are loaded at the same time
+        this.constructor.editableComponentLazyLoaded = true;
+        return { editableComponentLazyLoaded: true };
+      });
+    }
+  },
+
   /*
     Returns react components from uu5string template and data.
 

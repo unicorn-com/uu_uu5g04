@@ -13,6 +13,8 @@
 
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
+//import "uu5g04-forms";
+//import "uu5g04-bricks-editable";
 
 import ns from "./bricks-editable-ns.js";
 import Lsi from "./bricks-editable-lsi.js";
@@ -67,8 +69,8 @@ const propsSetup = [
         label: Lsi.column.horizontalPaddingLabel,
         getProps: () => ({
           items: [
-            { value: true, content: <UU5.Bricks.Lsi lsi={Lsi.column.horizontalPaddingValueStandard} /> },
-            { value: false, content: <UU5.Bricks.Lsi lsi={Lsi.column.horizontalPaddingValueNone} /> }
+            { value: false, content: <UU5.Bricks.Lsi lsi={Lsi.column.horizontalPaddingValueStandard} /> },
+            { value: true, content: <UU5.Bricks.Lsi lsi={Lsi.column.horizontalPaddingValueNone} /> }
           ]
         })
       },
@@ -80,12 +82,6 @@ const propsSetup = [
     ]
   }
 ];
-
-const EditModal = UU5.Common.Component.lazy(async () => {
-  await SystemJS.import("uu5g04-forms");
-  let BricksEditableExports = await SystemJS.import("uu5g04-bricks-editable");
-  return { default: BricksEditableExports.Modal };
-});
 
 export const Column = UU5.Common.VisualComponent.create({
   //@@viewOn:mixins
@@ -244,12 +240,12 @@ export const Column = UU5.Common.VisualComponent.create({
     return result;
   },
 
-  _onSaveEditationModal(newProps) {
-    this.setState({ ...newProps, editModalOpen: false }, () => this.props.component.saveEditation(newProps));
-  },
-
-  _onCancelEditationModal() {
-    this.setState({ editModalOpen: false });
+  _onCloseEditationModal(newProps) {
+    if (newProps) {
+      this.setState({ ...newProps, editModalOpen: false }, () => this.props.component.saveEditation(newProps));
+    } else {
+      this.setState({ editModalOpen: false });
+    }
   },
 
   _openEditModal() {
@@ -351,7 +347,7 @@ export const Column = UU5.Common.VisualComponent.create({
         type: "button",
         props: () => {
           return {
-            onApply: this._toggleUnderline,
+            onClick: this._toggleUnderline,
             tooltip: this.getLsiValue("underlineTooltip"),
             icon: "mdi-format-underline",
             pressed: this.state.underline
@@ -366,7 +362,7 @@ export const Column = UU5.Common.VisualComponent.create({
             : `${this.getLsiValue("defaultLevel")}`;
 
           return {
-            onApply: this._changeLevel,
+            onClick: this._changeLevel,
             value: this.state.level,
             label,
             tooltip: this.getLsiValue("levelTooltip"),
@@ -381,17 +377,17 @@ export const Column = UU5.Common.VisualComponent.create({
     return [
       {
         value: this.state.showHeader,
-        onApply: this._toggleHeader,
+        onClick: this._toggleHeader,
         label: this.getLsiComponent("showHeaderCheckboxLabel")
       },
       {
         value: this.state.showFooter,
-        onApply: this._toggleFooter,
+        onClick: this._toggleFooter,
         label: this.getLsiComponent("showFooterCheckboxLabel")
       },
       {
         value: this.state.noSpacing,
-        onApply: this._toggleNoSpacing,
+        onClick: this._toggleNoSpacing,
         label: this.getLsiComponent("noSpacingTooltip")
       }
     ];
@@ -411,12 +407,12 @@ export const Column = UU5.Common.VisualComponent.create({
   _renderEditModal() {
     return (
       <UU5.Common.Suspense fallback="">
-        <EditModal
-          component={this.props.component}
-          propsSetup={propsSetup}
-          onSaveAndClose={this._onSaveEditationModal}
-          onCancel={this._onCancelEditationModal}
+        <UU5.BricksEditable.Modal
           shown
+          componentProps={this.props.component.getEditablePropsValues(Object.keys(this.props.component.props))}
+          onClose={this._onCloseEditationModal}
+          componentName={this.props.component.getTagName()}
+          componentPropsForm={propsSetup}
         />
       </UU5.Common.Suspense>
     );

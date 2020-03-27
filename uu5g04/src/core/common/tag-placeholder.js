@@ -255,7 +255,7 @@ export const TagPlaceholder = VisualComponent.create({
     // force 1.15.2 for uu5g04-forms.
     let usedUrl = configuredUrl || url;
     let isSubmodule = name.match(
-      /^(uu5g04-(bricks|forms|bricks-editable|block-layout)|uu_plus4u5g01-(app|bricks|uubmldraw))$/
+      /^(uu5g04-(bricks|forms|bricks-editable|block-layout|hooks)|uu_plus4u5g01-(app|bricks|uubmldraw|hooks))$/
     ); // limiting only for our known submodules because there're libraries with names that look like submodules but are not (e.g. uu_plus4u5g01-uuforum)
     let isForcedSubmoduleVersion = false;
     if (isSubmodule) {

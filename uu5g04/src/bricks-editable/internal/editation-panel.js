@@ -19,7 +19,7 @@ import Lsi from "../bricks-editable-lsi.js";
 
 import SettingsCheckbox from "./settings-checkbox.js";
 import Css from "./css.js";
-import { EndEditation } from "../end-editation.js";
+import EndEditation from "../end-editation.js";
 //@@viewOff:imports
 
 const MAIN_CLASS_NAME = ns.css("editation-panel");
@@ -339,11 +339,9 @@ export const EditationPanel = UU5.Common.VisualComponent.create({
       components = items.map((itemProps, index) => {
         let props = { ...DEFAULT_ITEM_PROPS, ...itemProps };
 
-        const key =
-          props.key ||
-          (this.props.activeInput ? this.props.activeInput.getId() + " " + index : UU5.Common.Tools.generateUUID());
-        const origOnApply = props.onApply;
-        props.onApply = (...args) => {
+        const key = props.key || index;
+        const origOnApply = props.onClick;
+        props.onClick = (...args) => {
           let result = origOnApply(...args);
           Promise.resolve()
             .then(() => result)

@@ -68,10 +68,7 @@ exports[`UU5.Bricks.Paragraph content="This is Content from ContentMixin" 1`] = 
   className="uu5-bricks-paragraph"
   id="uuID"
 >
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
+  This is Content from ContentMixin
 </p>
 `;
 

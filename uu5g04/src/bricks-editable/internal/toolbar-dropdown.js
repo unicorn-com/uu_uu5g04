@@ -1,4 +1,5 @@
 import * as UU5 from "uu5g04";
+import "uu5g04-bricks";
 
 import ns from "../bricks-editable-ns.js";
 import Css from "./css.js";
@@ -31,34 +32,50 @@ const classNames = {
 const getItems = props => {
   return Array.isArray(props.items)
     ? props.items.map((item, index) => {
-        return (
-          <UU5.Bricks.Dropdown.Item
-            // eslint-disable-next-line react/jsx-no-bind
-            onClick={() => props.onApply(item.value)}
-            label={item.content}
-            key={index}
-          />
-        );
-      })
+      return (
+        <UU5.Bricks.Dropdown.Item
+          // eslint-disable-next-line react/jsx-no-bind
+          onClick={() => props.onClick(item.value)}
+          label={item.content || item.value}
+          key={index}
+        />
+      );
+    })
     : null;
 };
 
-const getProps = props => {
+function getProps(props, language) {
   let propsToPass = { ...props };
+
+  if (language && propsToPass.tooltip) {
+    propsToPass.tooltip = UU5.Common.Tools.getLsiValueByLanguage(propsToPass.tooltip, language);
+  }
 
   propsToPass.className += (propsToPass.className ? " " : "") + classNames.main();
   delete propsToPass.items;
-  delete propsToPass.onApply;
+  delete propsToPass.onClick;
 
   return propsToPass;
-};
+}
 
 export const ToolbarDropdown = UU5.Common.Reference.forward((props, ref) => {
-  return (
-    <UU5.Bricks.Dropdown {...getProps(props)} ref={ref}>
-      {getItems(props)}
-    </UU5.Bricks.Dropdown>
-  );
+  if (props.tooltip && typeof props.tooltip === "object") {
+    return (
+      <UU5.Bricks.Lsi>
+        {({ language }) => (
+          <UU5.Bricks.Dropdown {...getProps(props, language)} ref={ref}>
+            {getItems(props)}
+          </UU5.Bricks.Dropdown>
+        )}
+      </UU5.Bricks.Lsi>
+    );
+  } else {
+    return (
+      <UU5.Bricks.Dropdown {...getProps(props)} ref={ref}>
+        {getItems(props)}
+      </UU5.Bricks.Dropdown>
+    );
+  }
 });
 
 ToolbarDropdown.displayName = ns.name("ToolbarDropdown");
@@ -76,14 +93,14 @@ ToolbarDropdown.propTypes = {
   ),
   colorSchema: UU5.PropTypes.string,
   bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-  onApply: UU5.PropTypes.func
+  onClick: UU5.PropTypes.func,
+  tooltip: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string])
 };
 ToolbarDropdown.defaultProps = {
-  value: undefined,
   items: undefined,
   colorSchema: undefined,
   bgStyle: undefined,
-  onApply: undefined
+  onClick: undefined
 };
 ToolbarDropdown.isStateless = true;
 

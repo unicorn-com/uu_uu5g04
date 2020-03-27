@@ -18,6 +18,19 @@ import Environment from "../environment/environment.js";
 import UU5String from "./uu5string/uu5-string.js";
 import { TextCorrectorContextConsumer } from "./text-corrector-context-consumer.js";
 
+const PseudoUU5Component = () => null;
+PseudoUU5Component.isUu5PureComponent = true;
+PseudoUU5Component.isStateless = true;
+
+function deepFlattenList(list) {
+  let result = [];
+  for (let value of list) {
+    if (Array.isArray(value)) result = result.concat(deepFlattenList(value));
+    else result.push(value);
+  }
+  return result;
+}
+
 export const ContentMixin = {
   //@@viewOn:statics
   statics: {
@@ -231,14 +244,30 @@ export const ContentMixin = {
 
   buildNodeChildren(children, childPropsExpander) {
     let newChildren = [];
-    React.Children.forEach(children, (child, i) => {
-      if (child !== undefined && child !== null) {
+
+    // NOTE Cannot use React.Children.forEach as it skips items of type "function"
+    // which can now be present due to uustring parsing (child tags are FAACs).
+    let list = Array.isArray(children) ? children : [children];
+    let flatList = deepFlattenList(list);
+    flatList.forEach((child, i) => {
+      if (child !== undefined && child !== null && typeof child !== "boolean") {
+        let propsExpanded = false;
+        if (typeof child === "function") {
+          let extraProps = childPropsExpander(<PseudoUU5Component />, i);
+          child = child(extraProps);
+          propsExpanded = true;
+        }
+
         if (this.shouldChildRender(child)) {
           let newChild;
 
           if (typeof child === "object") {
-            let newChildProps = childPropsExpander(child, i);
-            newChild = this.cloneChild(child, newChildProps);
+            if (!propsExpanded) {
+              let newChildProps = childPropsExpander(child, i);
+              newChild = this.cloneChild(child, newChildProps);
+            } else {
+              newChild = child;
+            }
 
             // text
           } else {
@@ -356,10 +385,12 @@ export const ContentMixin = {
         this.shouldChildRender(child) && (children = child);
         break;
       }
-      case "uu5string":
+      case "uu5string": {
         let stringChildren;
         try {
-          stringChildren = UU5String.toChildren(contentValue);
+          // TODO Switch to using children as a function:
+          // stringChildren = UU5String.toChildren(contentValue, undefined, undefined, true);
+          stringChildren = UU5String.toChildren(contentValue, undefined, undefined, false);
         } catch (e) {
           if (e.code === "uu5StringInvalid") {
             stringChildren = Tools.findComponent(
@@ -377,6 +408,12 @@ export const ContentMixin = {
         }
         children = this.buildNodeChildren(stringChildren, childPropsExpander);
         break;
+      }
+      case "function": {
+        let propsToPass = childPropsExpander(<PseudoUU5Component />, childIndex);
+        children = contentValue(propsToPass);
+        break;
+      }
       case "children":
       default:
         if (contentProps.children) {
@@ -1298,8 +1335,13 @@ export const ContentMixin = {
     } else if (Array.isArray(content)) {
       type = "array";
     } else if (content && typeof content === "object") {
-      // bodyItem, items or node
-      type = content.tag ? (content.propsArray ? "items" : "bodyItem") : "element";
+      // fixed content = {} - from now it rendered as null
+      if (Object.keys(content).length) {
+        // bodyItem, items or node
+        type = content.tag ? (content.propsArray ? "items" : "bodyItem") : "element";
+      }
+    } else if (typeof content === "function") {
+      type = "function";
     } else {
       this.showError("unexpectedContentType", typeof content, {
         mixinName: "UU5.Common.ContentMixin",

@@ -38,18 +38,14 @@
   import "uu5g04-bricks";
 
   //@@viewOn:imports
-  import { createVisualComponent, useLevel, LevelProvider } from "uu5g04-hooks";
+  import { createVisualComponent, useLevel, useState, LevelProvider } from "uu5g04-hooks";
   //@@viewOff:imports
 
-  //@@viewOn:statics
-  const STATICS = {
-    displayName: "UU5.Demo.Level",
-    nestingLevel: "inline"
-  };
-  //@@viewOff:statics
-
   const Level = createVisualComponent({
-    ...STATICS,
+    //@@viewOn:statics
+    displayName: "UU5.Demo.Level",
+    nestingLevel: "inline",
+    //@@viewOff:statics
 
     //@@viewOn:propTypes
     propTypes: {},
@@ -63,9 +59,11 @@
       // do NOT use keywords "this"!!!
 
       //@@viewOn:hooks
-      let level = useLevel();
-      console.log("level", level);
-      //@@viewOn:hooks
+      let [forcedLevel, setForcedLevel] = useState();
+      let { level } = useLevel();
+      let usedLevel = forcedLevel != null ? forcedLevel : level != null ? level + 1 : 0;
+      console.log("Level", usedLevel);
+      //@@viewOff:hooks
 
       //@@viewOn:interface
       //@@viewOff:interface
@@ -80,8 +78,12 @@
 
       return (
         <div {...attrs}>
-          This is level {level}.
-          <LevelProvider level={level}>
+          This is level {usedLevel}.{" "}
+          <UU5.Bricks.Link
+            onClick={() => setForcedLevel(usedLevel + 1)}
+            content={`Increase level to ${usedLevel + 1}`}
+          />
+          <LevelProvider level={usedLevel}>
             {props.children}
           </LevelProvider>
         </div>
@@ -95,17 +97,23 @@
       <Level>
         <Level>
           <Level>
-            <Level>
-              <Level>
-                <Level>
-                </Level>
-              </Level>
-            </Level>
+            <UU5.Common.Level>
+              {({ level }) => (
+                <UU5.Common.Fragment>
+                  <div>
+                    UU5.Common.Level - level {level}
+                    <Level>
+                      <Level />
+                    </Level>
+                  </div>
+                </UU5.Common.Fragment>
+              )}
+            </UU5.Common.Level>
 
-            <UU5.Bricks.Section header="UU5.Bricks.Section - should be level 3 (<h3>).">
+            <UU5.Bricks.Section header="UU5.Bricks.Section - initially should be level 3 (<h3>).">
               <Level>
-                <UU5.Bricks.Section header="UU5.Bricks.Section - should be level 5 (<h5>).">
-                  <UU5.Bricks.Section header="UU5.Bricks.Section - should be level 6 (<h6>).">
+                <UU5.Bricks.Section header="UU5.Bricks.Section - initially should be level 5 (<h5>).">
+                  <UU5.Bricks.Section header="UU5.Bricks.Section - initially should be level 6 (<h6>).">
                   </UU5.Bricks.Section>
                 </UU5.Bricks.Section>
               </Level>

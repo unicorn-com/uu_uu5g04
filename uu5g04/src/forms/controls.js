@@ -123,8 +123,10 @@ export const Controls = UU5.Common.VisualComponent.create({
 
   _getButtonState(buttonName) {
     let buttonState = this.state[this._getButtonKeyName(buttonName)];
-    buttonState.disabled = typeof buttonState.disabled === "boolean" ? buttonState.disabled : this.isDisabled();
-    return buttonState;
+    return {
+      ...buttonState,
+      disabled: typeof buttonState.disabled === "boolean" ? buttonState.disabled : this.isDisabled()
+    };
   },
 
   _mergeButtonsState(props = this.props) {

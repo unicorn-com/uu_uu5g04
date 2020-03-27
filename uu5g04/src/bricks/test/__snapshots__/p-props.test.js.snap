@@ -54,10 +54,7 @@ exports[`UU5.Bricks.P content="This is Content from ContentMixin" 1`] = `
   className="uu5-bricks-p"
   id="uuID"
 >
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
+  This is Content from ContentMixin
 </p>
 `;
 
@@ -112,10 +109,7 @@ exports[`UU5.Bricks.P docKit examples UU5.Bricks.P should render without crash 1
   className="uu5-bricks-p"
   id="uuID"
 >
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is my custom Paragraph"
-  />
+  This is my custom Paragraph
 </p>
 `;
 

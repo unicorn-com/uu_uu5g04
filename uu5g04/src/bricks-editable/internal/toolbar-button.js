@@ -1,4 +1,5 @@
 import * as UU5 from "uu5g04";
+import "uu5g04-bricks";
 
 import ns from "../bricks-editable-ns.js";
 import Css from "./css.js";
@@ -31,8 +32,12 @@ const classNames = {
   `)
 };
 
-const getProps = props => {
+function getProps(props, language) {
   let propsToPass = { ...props };
+
+  if (language && propsToPass.tooltip) {
+    propsToPass.tooltip = UU5.Common.Tools.getLsiValueByLanguage(propsToPass.tooltip, language);
+  }
 
   propsToPass.className += (propsToPass.className ? " " : "") + classNames.main();
 
@@ -41,16 +46,23 @@ const getProps = props => {
   }
   delete propsToPass.icon;
 
-  if (propsToPass.onApply) {
-    delete propsToPass.onApply;
-    propsToPass.onClick = props.onApply;
-  }
-
   return propsToPass;
-};
+}
 
 export const ToolbarButton = UU5.Common.Reference.forward((props, ref) => {
-  return <UU5.Bricks.Button {...getProps(props)} ref={ref} />;
+  if (props.tooltip && typeof props.tooltip === "object") {
+    return (
+      <UU5.Bricks.Lsi>
+        {({ language }) => (
+          <UU5.Bricks.Button {...getProps(props, language)} ref={ref} />
+        )}
+      </UU5.Bricks.Lsi>
+    );
+  } else {
+    return (
+      <UU5.Bricks.Button {...getProps(props)} ref={ref} />
+    );
+  }
 });
 
 ToolbarButton.displayName = ns.name("ToolbarButton");
@@ -61,8 +73,9 @@ ToolbarButton.propTypes = {
   colorSchema: UU5.PropTypes.string,
   bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline", "link"]),
   baseline: UU5.PropTypes.bool,
-  onApply: UU5.PropTypes.func,
-  pressed: UU5.PropTypes.bool
+  onClick: UU5.PropTypes.func,
+  pressed: UU5.PropTypes.bool,
+  tooltip: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string])
 };
 ToolbarButton.defaultProps = {
   icon: undefined,
@@ -70,8 +83,9 @@ ToolbarButton.defaultProps = {
   colorSchema: undefined,
   bgStyle: undefined,
   baseline: true,
-  onApply: undefined,
-  pressed: false
+  onClick: undefined,
+  pressed: false,
+  tooltip: undefined
 };
 ToolbarButton.isStateless = true;
 

@@ -14,7 +14,6 @@
 //@@viewOn:imports
 import React from "react";
 import PropTypes from "prop-types";
-import * as UU5 from "uu5g04";
 import Environment from "../environment/environment.js";
 import BaseMixin from "./base-mixin.js";
 import Tools from "./tools.js";

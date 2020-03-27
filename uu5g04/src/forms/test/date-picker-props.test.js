@@ -213,6 +213,12 @@ describe(`UU5.Forms.DatePicker props`, () => {
     value = wrapper.instance().getValue();
     expect(value).toBe("2015");
   });
+
+  it(`valueType`, () => {
+    let onChangeFn = jest.fn();
+    let wrapper = mount(<UU5.Forms.DatePicker value="2.2.2020" valueType="iso" onChange={onChangeFn} />);
+    expect(wrapper.instance().getValue()).toBe("2020-02-01T23:00:00.000Z");
+  });
 });
 
 describe(`UU5.Forms.DatePicker props function -> Text.InputMixin`, () => {

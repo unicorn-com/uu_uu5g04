@@ -208,6 +208,22 @@ export const DateTools = {
       dateFrom,
       dateTo
     };
+  },
+  getISO(dateValue) {
+    return dateValue.toISOString();
+  },
+  getISOLocal(dateValue, timeZone) {
+    let utcDiff = -dateValue.getTimezoneOffset() / 60;
+
+    if (typeof timeZone === "number") {
+      dateValue = UU5.Common.Tools.adjustForTimezone(dateValue, utcDiff, timeZone - utcDiff);
+    } else {
+      dateValue = UU5.Common.Tools.adjustForTimezone(dateValue, 1, 0);
+    }
+
+    let iso = DateTools.getISO(dateValue);
+    iso = iso.replace(UU5.Common.REGEXP.isoTimeZone, "").replace(/\.\d\d\d$/, "");
+    return iso;
   }
 };
 

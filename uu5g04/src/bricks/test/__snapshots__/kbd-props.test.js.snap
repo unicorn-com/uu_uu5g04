@@ -54,10 +54,7 @@ exports[`UU5.Bricks.Kbd content="This is Content from ContentMixin" 1`] = `
   className="uu5-bricks-kbd"
   id="uuID"
 >
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
+  This is Content from ContentMixin
 </kbd>
 `;
 
@@ -111,10 +108,7 @@ exports[`UU5.Bricks.Kbd docKit examples UU5.Bricks.Kbd should render without cra
 <kbd
   className="uu5-bricks-kbd"
 >
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Enter"
-  />
+  Enter
 </kbd>
 `;
 

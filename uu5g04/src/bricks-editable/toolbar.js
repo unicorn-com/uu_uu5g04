@@ -78,13 +78,6 @@ export const Toolbar = UU5.Common.VisualComponent.create({
 
   //@@viewOn:interface
   open(dynamicContent, newActiveInput, setStateCallback) {
-    if (dynamicContent) {
-      dynamicContent.map((contentItem, index) => {
-        contentItem.key = contentItem.key || newActiveInput.getId() + " " + index;
-        return contentItem;
-      });
-    }
-
     this.setState({ dynamicContent, activeInput: newActiveInput || this.state.activeInput }, setStateCallback);
     return this;
   },
@@ -150,8 +143,8 @@ export const Toolbar = UU5.Common.VisualComponent.create({
 
         if (contentItem.type !== "separator") {
           // separator is an exception
-          const origOnApply = props.onApply;
-          props.onApply = (...args) => {
+          const origOnApply = props.onClick;
+          props.onClick = (...args) => {
             let result = typeof origOnApply === "function" && origOnApply(...args);
             Promise.resolve()
               .then(() => result)

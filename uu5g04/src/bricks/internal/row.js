@@ -14,11 +14,12 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
+//import "uu5g04-bricks-editable";
 
 import ns from "./bricks-editable-ns.js";
 import Lsi from "./bricks-editable-lsi.js";
 import Css from "./css.js";
-import { PresetEditComponent, ColWidthEditComponent } from "./row-editation-components.js";
+import {PresetEditComponent, ColWidthEditComponent} from "./row-editation-components.js";
 //@@viewOff:imports
 
 const DEFAULT_PROPS_MAP = {
@@ -35,12 +36,6 @@ const DEFAULT_PROPS_MAP = {
 
 const MAIN_CLASS_NAME = ns.css("row");
 const NAME = ns.name("Row");
-
-const EditModal = UU5.Common.Component.lazy(async () => {
-  await SystemJS.import("uu5g04-forms");
-  let BricksEditableExports = await SystemJS.import("uu5g04-bricks-editable");
-  return { default: BricksEditableExports.Modal };
-});
 
 const propsSetup = [
   {
@@ -64,8 +59,8 @@ const propsSetup = [
         label: Lsi.row.horizontalPaddingLabel,
         getProps: () => ({
           items: [
-            { value: true, content: <UU5.Bricks.Lsi lsi={Lsi.row.horizontalPaddingValueStandard} /> },
-            { value: false, content: <UU5.Bricks.Lsi lsi={Lsi.row.horizontalPaddingValueNone} /> }
+            { value: false, content: <UU5.Bricks.Lsi lsi={Lsi.row.horizontalPaddingValueStandard} /> },
+            { value: true, content: <UU5.Bricks.Lsi lsi={Lsi.row.horizontalPaddingValueNone} /> }
           ]
         })
       },
@@ -87,8 +82,8 @@ const editableItemPropsSetup = {
       label: Lsi.row.horizontalPaddingLabel,
       getProps: () => ({
         items: [
-          { value: true, content: <UU5.Bricks.Lsi lsi={Lsi.row.horizontalPaddingValueStandard} /> },
-          { value: false, content: <UU5.Bricks.Lsi lsi={Lsi.row.horizontalPaddingValueNone} /> }
+          { value: false, content: <UU5.Bricks.Lsi lsi={Lsi.row.horizontalPaddingValueStandard} /> },
+          { value: true, content: <UU5.Bricks.Lsi lsi={Lsi.row.horizontalPaddingValueNone} /> }
         ]
       })
     },
@@ -102,6 +97,7 @@ const editableItemPropsSetup = {
 
 const newEditableItem = {
   tagName: "UU5.Bricks.Column",
+  isElement: true,
   props: {
     contentEditable: true
   }
@@ -230,12 +226,12 @@ export const Row = UU5.Common.VisualComponent.create({
     return result;
   },
 
-  _onSaveEditationModal(newProps) {
-    this.setState({ ...newProps, editModalOpen: false }, () => this.props.component.saveEditation(newProps));
-  },
-
-  _onCancelEditationModal() {
-    this.setState({ editModalOpen: false });
+  _onCloseEditationModal(newProps) {
+    if (newProps) {
+      this.setState({ ...newProps, editModalOpen: false }, () => this.props.component.saveEditation(newProps));
+    } else {
+      this.setState({ editModalOpen: false });
+    }
   },
 
   _openEditModal() {
@@ -299,7 +295,7 @@ export const Row = UU5.Common.VisualComponent.create({
         props: () => {
           return {
             pressed: this.state.underline,
-            onApply: this._toggleUnderline,
+            onClick: this._toggleUnderline,
             tooltip: this.getLsiValue("underlineTooltip"),
             icon: "mdi-format-underline"
           };
@@ -317,7 +313,7 @@ export const Row = UU5.Common.VisualComponent.create({
             label,
             tooltip: this.getLsiValue("levelTooltip"),
             items: levelItems,
-            onApply: this._changeLevel
+            onClick: this._changeLevel
           };
         }
       }
@@ -332,7 +328,7 @@ export const Row = UU5.Common.VisualComponent.create({
           return {
             pressed: this.state.editModalOpen,
             icon: "mdi-view-column",
-            onApply: this._openEditModal,
+            onClick: this._openEditModal,
             tooltip: this.getLsiValue("layoutTooltip")
           };
         }
@@ -344,17 +340,17 @@ export const Row = UU5.Common.VisualComponent.create({
     return [
       {
         value: this.state.showHeader,
-        onApply: this._toggleHeader,
+        onClick: this._toggleHeader,
         label: this.getLsiComponent("showHeaderCheckboxLabel")
       },
       {
         value: this.state.showFooter,
-        onApply: this._toggleFooter,
+        onClick: this._toggleFooter,
         label: this.getLsiComponent("showFooterCheckboxLabel")
       },
       {
         value: this.state.display === "flex",
-        onApply: this._toggleDisplay,
+        onClick: this._toggleDisplay,
         label: this.getLsiComponent("flexCheckboxLabel")
       }
     ];
@@ -363,16 +359,17 @@ export const Row = UU5.Common.VisualComponent.create({
   _renderEditModal() {
     return (
       <UU5.Common.Suspense fallback="">
-        <EditModal
-          component={this.props.component}
-          itemComponent={UU5.Bricks.Column}
-          propsSetup={propsSetup}
-          itemPropsSetup={editableItemPropsSetup}
-          newItemProps={newEditableItem}
-          getItemLabel={getEditableItemLabel}
-          onSaveAndClose={this._onSaveEditationModal}
-          onCancel={this._onCancelEditationModal}
+        <UU5.BricksEditable.Modal
           shown
+          onClose={this._onCloseEditationModal}
+          componentName={this.props.component.getTagName()}
+          componentProps={this.props.component.getEditablePropsValues(Object.keys(this.props.component.props))}
+          componentPropsForm={propsSetup}
+          itemName={UU5.Bricks.Column.tagName}
+          itemDefaultProps={UU5.Bricks.Column.defaultProps}
+          itemPropsForm={editableItemPropsSetup}
+          newItem={newEditableItem}
+          getItemLabel={getEditableItemLabel}
         />
       </UU5.Common.Suspense>
     );

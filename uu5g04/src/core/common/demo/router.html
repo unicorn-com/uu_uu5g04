@@ -336,6 +336,7 @@
               notFoundRoute="notFound"
               loading={this.state.customLoading ? <UU5.Bricks.Loading /> : undefined}
               showNotFoundRouteInUrl={this.state.showNotFoundRouteInUrl}
+              onRouteChanged={opt => console.log("onRouteChanged", opt)}
             />
           </UU5.Bricks.Container>
         </UU5.Bricks.Page>

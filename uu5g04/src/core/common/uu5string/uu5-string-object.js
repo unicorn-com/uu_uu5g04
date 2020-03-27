@@ -184,7 +184,7 @@ export const UU5StringObject = class UU5StringObject {
     @param filterFn({tag, props}) - returns changed tag and props, if it returns false skip print of this component and its children - this method cannot change data of this component only change them for print
     @returns UU5StringObject as a React component
     */
-    this.toChildren = (data, filterFn) => {
+    this.toChildren = (data, filterFn, preferChildrenAsFunction) => {
       if (this.tag === "uu5string.pre") {
         return this.children.map(it => {
           if (typeof it === "string") return Environment.textEntityMap.replaceHtmlEntity(it);
@@ -221,7 +221,16 @@ export const UU5StringObject = class UU5StringObject {
       } else {
         result = { tag: this.tag, props: this.props.toChildren(data) };
       }
-      return Tools.findComponent(result.tag, result.props, UU5StringTools.contentToChildren(children, data, filterFn));
+
+      let returnValue;
+      let usedChildren = UU5StringTools.contentToChildren(children, data, filterFn, preferChildrenAsFunction);
+      if (preferChildrenAsFunction) {
+        returnValue = extraProps =>
+          Tools.findComponent(result.tag, extraProps ? { ...extraProps, ...result.props } : result.props, usedChildren);
+      } else {
+        returnValue = Tools.findComponent(result.tag, result.props, usedChildren);
+      }
+      return returnValue;
     };
 
     /*

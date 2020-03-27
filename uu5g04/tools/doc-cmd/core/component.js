@@ -10,7 +10,7 @@ module.exports = class Component {
 
   async update_example(i, file_name0 = null) {
     let file_name = file_name0 || this._get_file_name();
-    let base_code = `example${this.tag_name.replace(/\./g, "")}`;
+    let base_code = `example${this.tag_name.replace(/\.(.?)/g, (m, g) => g.toUpperCase())}`;
 
     let num = i.toString();
     if (num.length < 2) num = "0" + num;

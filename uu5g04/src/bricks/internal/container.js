@@ -13,6 +13,8 @@
 
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
+//import "uu5g04-forms";
+//import "uu5g04-bricks-editable";
 
 import ns from "./bricks-editable-ns.js";
 import Lsi from "./bricks-editable-lsi.js";
@@ -203,7 +205,7 @@ export const Container = UU5.Common.VisualComponent.create({
         props: () => {
           return {
             pressed: this.state.underline,
-            onApply: this._toggleUnderline,
+            onClick: this._toggleUnderline,
             tooltip: this.getLsiValue("underlineTooltip"),
             icon: "mdi-format-underline"
           };
@@ -221,7 +223,7 @@ export const Container = UU5.Common.VisualComponent.create({
             label,
             tooltip: this.getLsiValue("levelTooltip"),
             items: levelItems,
-            onApply: this._changeLevel
+            onClick: this._changeLevel
           };
         }
       }
@@ -232,17 +234,17 @@ export const Container = UU5.Common.VisualComponent.create({
     return [
       {
         value: this.state.showHeader,
-        onApply: this._toggleHeader,
+        onClick: this._toggleHeader,
         label: this.getLsiComponent("showHeaderCheckboxLabel")
       },
       {
         value: this.state.showFooter,
-        onApply: this._toggleFooter,
+        onClick: this._toggleFooter,
         label: this.getLsiComponent("showFooterCheckboxLabel")
       },
       {
         value: this.state.noSpacing,
-        onApply: this._toggleNoSpacing,
+        onClick: this._toggleNoSpacing,
         label: this.getLsiComponent("noSpacingTooltip")
       }
     ];

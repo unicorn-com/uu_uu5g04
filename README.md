@@ -4,10 +4,9 @@ See following guidelines:
 
 - [uuAppg01Devkit Documentation](https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-e884539c8511447a977c7ff070e7f2cf/book)
 - [uuSubApp Instance Descriptor](https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-289fcd2e11d34f3e9b2184bedb236ded/book/page?code=uuSubAppInstanceDescriptor)
-- [uu5 Library Project](https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-e884539c8511447a977c7ff070e7f2cf/book/page?code=stepByStepLib)
+- [UU5 Library Project](https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-e884539c8511447a977c7ff070e7f2cf/book/page?code=86405422)
 
 ## Using uu5g04
-- [uu5 Library Documentation](https://uuos9.plus4u.net/uu-dockitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book)
 
 Usage in applications created by other tools, such as create-react-app, is also possible.
 In such case the uu5g04 will be typically bundled into the main application file.
@@ -58,7 +57,7 @@ export default App;
 ```
 
 If using uu5strings, only components that are already loaded in the page can be used.
-I.e. if you want to use e.g. `<UU5.CodeKit.CodeViewer ... />` (which is in `uu5codekitg01`
-library) in uu5string, it is necessary that the application imports `uu5codekitg01` directly.
+I.e. if you want to use e.g. `<UU5.CodeKit.CodeViewer ... />` (which is in `uu_codekitg01`
+library) in uu5string, it is necessary that the application imports `uu_codekitg01` directly.
 On-demand loading of components would demand presence of SystemJS loader and more complex 
 configuration - in such case it is advised to use [uu_appg01_devkit](https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-e884539c8511447a977c7ff070e7f2cf/book) tooling.

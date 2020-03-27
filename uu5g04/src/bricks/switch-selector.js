@@ -209,14 +209,14 @@ export const SwitchSelector = UU5.Common.VisualComponent.create({
   propTypes: {
     items: UU5.PropTypes.arrayOf(
       UU5.PropTypes.shape({
-        value: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.bool, UU5.PropTypes.number]).isRequired,
+        value: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number, UU5.PropTypes.bool]).isRequired,
         content: UU5.PropTypes.any,
         colorSchema: UU5.PropTypes.string,
         bgStyle: UU5.PropTypes.string,
         borderRadius: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string])
       })
     ).isRequired,
-    value: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.bool, UU5.PropTypes.number]),
+    value: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number, UU5.PropTypes.bool]),
     onChange: UU5.PropTypes.func,
 
     size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),

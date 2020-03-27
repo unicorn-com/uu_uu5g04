@@ -184,7 +184,7 @@ export const Checkboxes = Context.withContext(
         }
 
         if (!result) {
-          this.setError(this.props.requiredMessage || this.getLsiValue("requiredMessage"));
+          this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessage"));
         }
       }
 

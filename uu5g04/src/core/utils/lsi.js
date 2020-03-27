@@ -1,24 +1,20 @@
 import Environment from "../environment/environment";
+import ListenerRegistry from "./internal/listener-registry";
 
-const LISTENER_LIST = [];
+const LISTENER_REGISTRY = new ListenerRegistry();
 
 const Lsi = {
   register(listener) {
-    if (typeof listener === "function") {
-      LISTENER_LIST.push(listener);
-    }
+    return LISTENER_REGISTRY.register(listener);
   },
 
   unregister(listener) {
-    const index = LISTENER_LIST.indexOf(listener);
-    if (index > -1) {
-      LISTENER_LIST.splice(index, 1);
-    }
+    return LISTENER_REGISTRY.unregister(listener);
   },
 
   setLanguage(language) {
     globalLanguage = language;
-    LISTENER_LIST.forEach(listener => listener({ language }));
+    LISTENER_REGISTRY.run({ language });
   },
 
   getLanguage() {
@@ -27,20 +23,20 @@ const Lsi = {
 
   parseLanguage(languagesString) {
     // languagesString = 'cs-CZ,en;q=0.6,sk;q=0.8' => languagesSplitter = ['cs-CZ', 'en;q=0.6', 'sk;q=0.8']
-    const languagesSplitter = languagesString.toLowerCase().split(',');
+    const languagesSplitter = languagesString.toLowerCase().split(",");
 
     let languages = {};
     languagesSplitter.forEach(lang => {
       lang = lang.trim();
 
-      const [langStr, qStr] = lang.split(';');
+      const [langStr, qStr] = lang.split(";");
       let q = 1; // quality factor
       if (qStr) {
-        q = +qStr.split('=')[1];
+        q = +qStr.split("=")[1];
       }
 
       const languageMap = { q, location: langStr };
-      const [language, region] = langStr.split('-');
+      const [language, region] = langStr.split("-");
       languageMap.language = language;
       if (region) {
         languageMap.region = region;
@@ -96,8 +92,8 @@ const Lsi = {
             if (lsi[defaultLanguage]) {
               resLang = defaultLanguage;
               break;
-            } else if (lsi[defaultLanguage.split('-')[0]]) {
-              resLang = defaultLanguage.split('-')[0];
+            } else if (lsi[defaultLanguage.split("-")[0]]) {
+              resLang = defaultLanguage.split("-")[0];
               break;
             }
           }
@@ -105,7 +101,7 @@ const Lsi = {
       }
     }
 
-    let lsiKey = lsi[resLang] ? resLang : (lsi[keys[0]] ? keys[0] : null);
+    let lsiKey = lsi[resLang] ? resLang : lsi[keys[0]] ? keys[0] : null;
 
     return lsi[lsiKey];
   }

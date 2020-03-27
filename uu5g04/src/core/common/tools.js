@@ -48,7 +48,8 @@ export const REGEXP = {
   iPhone: /iPad|iPhone|iPod/,
   mobile: /(OS|Android|Windows Phone) (\d+[_\.]\d+)/,
   weekYear: /^(w+[^dmhHMSstTqz]*[yY]+)|([yY]+[^dmhHMSstTqz]*w+)$/,
-  numberParts: /\B(?=(\d{3})+(?!\d))/g
+  numberParts: /\B(?=(\d{3})+(?!\d))/g,
+  isoTimeZone: /(Z|[+-](\d{2})\:(\d{2}))?$/
 };
 
 let COMPONENT_NAME = String.raw`[-\w.]+`;
@@ -2019,7 +2020,7 @@ Tools.adjustForTimezone = (date, outputTimeZone, inputTimeZone) => {
   inputTimeZone = typeof inputTimeZone === "number" ? inputTimeZone : Environment.dateTimeZone;
 
   if (date) {
-    inputTimeZone = -inputTimeZone * 60 * 60000 || date.getTimezoneOffset() * 60000;
+    inputTimeZone = -inputTimeZone * 60 * 60000;
 
     if (typeof outputTimeZone === "number") {
       date = Tools.cloneDateObject(date);
@@ -2185,7 +2186,7 @@ Tools.getISOTimeZone = string => {
     return null;
   }
 
-  let match = string.match(/(Z|[+-](\d{2})\:(\d{2}))?$/);
+  let match = string.match(REGEXP.isoTimeZone);
 
   if (match) {
     if (match[0] === "Z") {
