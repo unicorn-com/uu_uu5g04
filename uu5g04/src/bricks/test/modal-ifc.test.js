@@ -34,7 +34,7 @@ describe(`UU5.Bricks.Modal interface testing`, () => {
     expect(wrapper.instance().isHidden()).toBeFalsy();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -51,7 +51,7 @@ describe(`UU5.Bricks.Modal interface testing`, () => {
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.hidden).toBeTruthy();
     expect(wrapper.instance().isHidden()).toBeTruthy();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
   });
@@ -91,7 +91,7 @@ describe(`UU5.Bricks.Modal interface testing`, () => {
     expect(wrapper.instance().isHidden()).toBeTruthy();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
   });
 
   it("toggle() - should open window", () => {
@@ -109,6 +109,6 @@ describe(`UU5.Bricks.Modal interface testing`, () => {
     expect(wrapper.instance().isHidden()).toBeFalsy();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
   });
 });

@@ -209,8 +209,17 @@ export const DateTools = {
       dateTo
     };
   },
-  getISO(dateValue) {
-    return dateValue.toISOString();
+  getISO(dateValue, ignoreTime) {
+    let result;
+
+    if (ignoreTime) {
+      result = DateTools.getISOLocal(dateValue);
+      result = result.replace(/T.*$/, "");
+    } else {
+      result = dateValue.toISOString();
+    }
+
+    return result;
   },
   getISOLocal(dateValue, timeZone) {
     let utcDiff = -dateValue.getTimezoneOffset() / 60;
@@ -224,6 +233,16 @@ export const DateTools = {
     let iso = DateTools.getISO(dateValue);
     iso = iso.replace(UU5.Common.REGEXP.isoTimeZone, "").replace(/\.\d\d\d$/, "");
     return iso;
+  },
+
+  toISODateOnlyString(inexactDateInstance) {
+    return inexactDateInstance
+      ? `${inexactDateInstance.getFullYear()}-${UU5.Common.Tools.rjust(
+          inexactDateInstance.getMonth() + 1,
+          2,
+          "0"
+        )}-${UU5.Common.Tools.rjust(inexactDateInstance.getDate(), 2, "0")}`
+      : null;
   }
 };
 

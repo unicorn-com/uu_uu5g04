@@ -54,6 +54,7 @@
           {/*@@viewOn:0*/}
           <UU5.Forms.DatePicker
             label="Date of birth"
+            valueType="iso"
             ref_={input => this._input = input}
           />
           {/*@@viewOff:0*/}
@@ -61,9 +62,9 @@
           <UU5.Bricks.Row>
             <UU5.Bricks.ButtonGroup>
               <UU5.Bricks.Button
-                content='setValue() - "12/4/2017"'
+                content='setValue() - "1990-11-21"'
                 onClick={() => {
-                  this._input.setValue("12/4/2017");
+                  this._input.setValue("1990-11-21");
                 }}
               />
               <UU5.Bricks.Button
@@ -77,8 +78,8 @@
               <UU5.Bricks.Button
                 content='setMessage() - current date'
                 onClick={() => {
-                  let date = new Date;
-                  this._input.setMessage(date.toString());
+                  let date = new Date();
+                  this._input.setMessage(date);
                 }}
               />
               <UU5.Bricks.Button

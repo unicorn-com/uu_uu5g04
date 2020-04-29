@@ -149,7 +149,7 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function() {
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     //Verifying returnValue takes a long time here. The program falls on FATAL ERROR - lack of memory.
-    //expect(returnValue).toBe(wrapper.instance());
+    //expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.find("ProgressBarItem").instance().state.progress).toBe(68);
     expect(wrapper.find("ProgressBarItem").instance().state.content).toEqual("Jarda Jágr");
     expect(wrapper.find("ProgressBarItem").instance().state.striped).toBeTruthy();
@@ -179,7 +179,7 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function() {
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     //Verifying returnValue takes a long time here. The program falls on FATAL ERROR - lack of memory.
-    //expect(returnValue).toBe(wrapper.instance());
+    //expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.find("ProgressBarItem").instance().state.progress).toBe(70);
     expect(wrapper.find("ProgressBarItem").instance().state.content).toEqual("Jarda Jágr postupuje");
     expect(this.progress1.getProgressContent()).toEqual("Jarda Jágr postupuje");
@@ -211,7 +211,7 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function() {
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     //Verifying returnValue takes a long time here. The program falls on FATAL ERROR - lack of memory.
-    //expect(returnValue).toBe(wrapper.instance());
+    //expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.find("ProgressBarItem").instance().state.progress).toBe(2);
     expect(wrapper.find("ProgressBarItem").instance().state.content).toEqual("Jarda Jágr ustupuje");
     expect(this.progress1.getProgressContent()).toEqual("Jarda Jágr ustupuje");

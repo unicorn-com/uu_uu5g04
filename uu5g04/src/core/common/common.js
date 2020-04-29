@@ -14,6 +14,7 @@
 import "!style-loader?transform=src/core/common/normalize-css.js&insertAt=top!css-loader!postcss-loader??postcss!less-loader??less!./normalize.less";
 import "./common.less";
 import "./font-size.less";
+import "./internal/bg-styles.js";
 
 export * from "./css.js";
 export * from "./tools.js";
@@ -66,7 +67,7 @@ export * from "./redirect.js";
 import Context from "./context.js";
 export { Context };
 
-export * from "./component.js";
+export { Component } from "./component.js";
 export * from "./dn-d.js";
 export * from "./dom.js";
 export * from "./element.js";

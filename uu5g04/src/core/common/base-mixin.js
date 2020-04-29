@@ -102,7 +102,7 @@ export const BaseMixin = {
     }
   },
 
-  componentWillReceiveProps: function(nextProps) {
+  UNSAFE_componentWillReceiveProps: function(nextProps) {
     // set id only if it was set in nextProps
     if (nextProps.id !== undefined && nextProps.id !== null && nextProps.id !== this.getId()) {
       var parent = this.getParent();

@@ -93,7 +93,7 @@ export const RollMenu = UU5.Common.VisualComponent.create({
     };
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
       if (nextProps.open !== this.state.open) {
         this.toggle();

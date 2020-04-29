@@ -333,7 +333,7 @@ export const Page = UU5.Common.VisualComponent.create({
     this._setLayerContent(this.props.appLayerContent || this.props.userLayerContent, this._appLayer);
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
       this.setState({ widths: this._setWidths(nextProps) });
       this._setLayerContent(nextProps.systemLayerContent, this._systemLayer);

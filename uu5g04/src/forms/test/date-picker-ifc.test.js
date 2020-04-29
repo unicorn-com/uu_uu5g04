@@ -46,7 +46,7 @@ describe("UU5.Form.DatePicker intreface testing", () => {
     const returnValue = wrapper.instance().toggle(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().state.open).toBeTruthy();
     expect(wrapper.instance().state.open).toBeTruthy();
     wrapper.instance().toggle(); //close component
@@ -64,7 +64,7 @@ describe("UU5.Form.DatePicker intreface testing", () => {
     const returnValue = wrapper.instance().close(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().state.open).toBeFalsy();
   });
 });
@@ -96,9 +96,16 @@ describe("UU5.Forms.InputMixin interface testing", () => {
         size="s"
       />
     );
-    expect(wrapper.instance().getValue()).toEqual(expect.any(Object));
-    expect(wrapper.instance().getValue()).not.toBeNull();
-    expect(wrapper.instance().getValue()).toBeInstanceOf(Date);
+    let value = wrapper.instance().getValue();
+    expect(value).toEqual(expect.any(Object));
+    expect(value).not.toBeNull();
+    expect(value).toBeInstanceOf(Date);
+    expect(value.getFullYear()).toBe(2017);
+    expect(value.getMonth()).toBe(0);
+    expect(value.getDate()).toBe(1);
+    // NOTE Expect hours to be 0. If we left it to be arbitrary (according to time zone, e.g. 2 when in GMT+2)
+    // then users with negative timezone will have wrong day (e.g. in GMT-2, hours would be 22 but with previous day)
+    expect(value.getHours()).toBe(0);
   });
 
   it("setValue(value,setStateCallBack)", () => {
@@ -119,7 +126,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().state.value).toEqual("12/12/2012");
     expect(wrapper).toMatchSnapshot();
   });
@@ -159,7 +166,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().getMessage()).toMatch(/New Message/);
     expect(wrapper).toMatchSnapshot();
   });
@@ -203,7 +210,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().getFeedback()).toEqual("success");
     expect(wrapper.instance().getMessage()).toEqual("This is valid message.");
     expect(wrapper.instance().state.value).toEqual("12/12/2012");
@@ -233,7 +240,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().getFeedback()).toEqual("initial");
     expect(wrapper.instance().state.value).toEqual("");
     expect(wrapper.instance().getMessage()).toEqual("Initial Message");
@@ -295,7 +302,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().isLoading()).toBeTruthy();
     expect(wrapper.instance().getMessage()).toEqual("Loading messsagess");
     expect(wrapper.instance().state.value).toEqual("12/12/2012");
@@ -337,7 +344,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().getFeedback()).toEqual("success");
     expect(wrapper.instance().getMessage()).toEqual("This is success message");
     expect(wrapper.instance().state.value).toEqual("12/12/2012");
@@ -362,7 +369,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().getFeedback()).toEqual("success");
     expect(wrapper.instance().getMessage()).toEqual("This is success message");
     expect(wrapper.instance().state.value).toEqual("12/12/2012");
@@ -392,7 +399,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().getFeedback()).toEqual("warning");
     expect(wrapper.instance().getMessage()).toEqual("This is warning message");
     expect(wrapper.instance().state.value).toEqual("12/12/2012");
@@ -422,7 +429,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
     const setRetVal = wrapper.instance().setFeedback("success", "success message", "12/12/2012", mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
-    expect(setRetVal).toBe(wrapper.instance());
+    expect(setRetVal === wrapper.instance()).toBe(true);
     expect(wrapper.instance().isWarning()).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
   });
@@ -444,7 +451,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().isWarning()).toBeFalsy();
     expect(wrapper.instance().isSuccess()).toBeFalsy();
     expect(wrapper.instance().isInitial()).toBeFalsy;
@@ -476,7 +483,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
     const setRetVal = wrapper.instance().setFeedback("success", "success message", "12/12/2012", mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
-    expect(setRetVal).toBe(wrapper.instance());
+    expect(setRetVal === wrapper.instance()).toBe(true);
     expect(wrapper.instance().isError()).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
   });
@@ -508,7 +515,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(3);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().state.value).toEqual("");
     expect(wrapper.instance().getFeedback()).toEqual("initial");
     expect(wrapper.instance().getMessage()).toBe(null);
@@ -570,7 +577,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
     );
     wrapper.update();
     expect(mockFunc).toBeCalled();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().state.value).toMatch(/12.12.2012/);
     expect(wrapper.instance().state.feedback).toEqual("success");
     expect(wrapper.instance().state.message).toEqual("Success message from setChangeFeedback");
@@ -594,7 +601,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
     const returnValue = wrapper.instance().readOnly(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().isReadOnly()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
@@ -620,7 +627,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
     const returnValue = wrapper.instance().setEditableValue(true, mockFunc);
     wrapper.update();
     expect(mockFunc).toHaveBeenCalledTimes(3);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().isReadOnly()).toBeFalsy();
     expect(wrapper.instance().editable(mockFunc)).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
@@ -648,7 +655,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
     const returnValue = wrapper.instance().setEditableValue(false, mockFunc);
     wrapper.update();
     expect(mockFunc).toHaveBeenCalledTimes(3);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().isReadOnly()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
     expect(mockFunc).toHaveBeenCalledTimes(3);
@@ -672,7 +679,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().isReadOnly()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
@@ -700,7 +707,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(2);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().isReadOnly()).toBeFalsy();
     expect(wrapper.instance().state.readOnly).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
@@ -853,7 +860,7 @@ describe("UU5.Forms.TextInputMixin interface testing", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().isOpen()).toBeTruthy();
   });
 
@@ -969,7 +976,7 @@ describe("UU5.Forms.TextInputMixin interface testing", () => {
     );
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper).toMatchSnapshot();
   });
 });

@@ -1,87 +1,350 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UU5.Bricks.Li checkGrammar=false 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li checkGrammar=true 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li checkHighlight=false 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li checkHighlight=true 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li checkSpaces=false 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li checkSpaces=true 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li className="my-classname" 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve my-classname"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li content="This is Content from ContentMixin" 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span>
+      <UU5.Common.TextCorrectorContextConsumer
+        key="0"
+        text="This is Content from ContentMixin"
+      />
+    </span>
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li content=12345 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span>
+      12345
+    </span>
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li controlled=false 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li controlled=true 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li default props 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li disabled=false 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li disabled=true 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve uu5-common-disabled"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+    <span
+      className="uu5-common-disabled-cover"
+      key="disabledCover"
+    />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li docKit examples UU5.Bricks.Li should render without crash 1`] = `
@@ -116,181 +379,732 @@ exports[`UU5.Bricks.Li docKit examples UU5.Bricks.Li should render without crash
 `;
 
 exports[`UU5.Bricks.Li dynamic=false 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li dynamic=true 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li hidden=false 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li hidden=true 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve uu5-common-hidden"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li id="myId" 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="myId"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li ignoreHTML=false 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li ignoreHTML=true 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li mainAttrs=undefined 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li name="myName" 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    name="myName"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li nestingLevel="bigBox" 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li nestingLevel="bigBoxCollection" 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li nestingLevel="box" 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li nestingLevel="boxCollection" 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li nestingLevel="container" 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li nestingLevel="inline" 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li nestingLevel="page" 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li nestingLevel="smallBox" 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li nestingLevel="smallBoxCollection" 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li nestingLevel="spa" 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li noIndex=false 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li noIndex=true 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve uu5-noindex"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li pureRender=false 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li pureRender=true 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li selected=false 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li selected=true 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve uu5-common-selected"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li style="padding:8px; borderRadius: 2px" 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={
+      Object {
+        "borderRadius": "2px",
+        "padding": "8px",
+      }
+    }
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li style={"backgroundColor":"red","color":"blue"} 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={
+      Object {
+        "backgroundColor": "red",
+        "color": "blue",
+      }
+    }
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li textCorrector=false 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li textCorrector=true 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;
 
 exports[`UU5.Bricks.Li tooltip="My Tooltip" 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<ContextProvider
+  value={
+    Object {
+      "counterId": undefined,
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": undefined,
+    }
+  }
+>
+  <li
+    className="uu5-bricks-li uu-bricks-y4d1ve"
+    id="uuID"
+    style={Object {}}
+    title="My Tooltip"
+  >
+    <span />
+  </li>
+</ContextProvider>
 `;

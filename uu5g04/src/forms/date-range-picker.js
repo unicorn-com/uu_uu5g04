@@ -110,7 +110,8 @@ export const DateRangePicker = Context.withContext(
       pickerLabelFrom: UU5.PropTypes.any,
       pickerLabelTo: UU5.PropTypes.any,
       innerLabel: UU5.PropTypes.bool,
-      step: UU5.PropTypes.oneOf(["days", "months", "years"])
+      step: UU5.PropTypes.oneOf(["days", "months", "years"]),
+      monthNameFormat: UU5.PropTypes.oneOf(["abbr", "roman"])
     },
     //@@viewOff:propTypes
 
@@ -138,7 +139,8 @@ export const DateRangePicker = Context.withContext(
         pickerLabelFrom: undefined,
         pickerLabelTo: undefined,
         innerLabel: false,
-        step: "days"
+        step: "days",
+        monthNameFormat: "roman"
       };
     },
     //@@viewOff:getDefaultProps
@@ -184,7 +186,10 @@ export const DateRangePicker = Context.withContext(
           fromDisplayDate = displayDates.dateFrom;
           toDisplayDate = displayDates.dateTo;
         } else {
-          displayDates = DateTools.getDisplayDates(this.parseDate(this.props.dateFrom || this.props.dateTo), calendarView);
+          displayDates = DateTools.getDisplayDates(
+            this.parseDate(this.props.dateFrom || this.props.dateTo),
+            calendarView
+          );
           fromDisplayDate = displayDates.dateFrom;
           toDisplayDate = displayDates.dateTo;
         }
@@ -209,11 +214,15 @@ export const DateRangePicker = Context.withContext(
       };
     },
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
       this._hasFocus = false;
 
       let value;
-      let devValidation = this._validateDevProps(this.parseDate(this.props.value), this.props.dateFrom, this.props.dateTo);
+      let devValidation = this._validateDevProps(
+        this.parseDate(this.props.value),
+        this.props.dateFrom,
+        this.props.dateTo
+      );
       if (devValidation.valid) {
         if (this.state.value) {
           // value is probably valid
@@ -255,7 +264,7 @@ export const DateRangePicker = Context.withContext(
       UU5.Environment.EventListener.registerDateTime(this.getId(), this._change);
     },
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
       if (this.props.controlled) {
         let devValidation = this._validateDevProps(nextProps.value, nextProps.dateFrom, nextProps.dateTo);
         if (devValidation.valid) {
@@ -520,7 +529,8 @@ export const DateRangePicker = Context.withContext(
         let format = this.state ? this.state.format : props.format;
         let country = this.state ? this.state.country : props.country;
 
-        return UU5.Common.Tools.getDateString(date, { format, country });
+        let isoDateOnlyString = date instanceof Date ? DateTools.toISODateOnlyString(date) : date;
+        return UU5.Common.Tools.getDateString(isoDateOnlyString, { format, country });
       }
     },
 
@@ -1568,7 +1578,8 @@ export const DateRangePicker = Context.withContext(
         hideWeekNumber: this.props.hideWeekNumber,
         hideOtherSections: true,
         colorSchema: this.getColorSchema(),
-        step: this.props.step
+        step: this.props.step,
+        monthNameFormat: this.props.monthNameFormat
       };
 
       if (mobile) {

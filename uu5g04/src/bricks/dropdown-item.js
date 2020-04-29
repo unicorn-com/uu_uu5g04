@@ -95,7 +95,7 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     if (!this.getParentByType("isDropdown")) {
       this.showError("invalidParent");
     }

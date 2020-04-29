@@ -102,7 +102,7 @@ export const Select = Context.withContext(
       };
     },
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
       let value = [];
       if (this.props.value) {
         value = this._valuesToValuesArray(this.props.value);
@@ -116,7 +116,7 @@ export const Select = Context.withContext(
       return this;
     },
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
       let value = this._valuesToValuesArray(nextProps.value, this.buildChildren(nextProps));
       if (nextProps.controlled) {
         if (nextProps.required && this.state.value.length > 0 && (value.length < 1 || value === null)) {

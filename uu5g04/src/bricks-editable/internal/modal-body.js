@@ -24,7 +24,44 @@ import MoveItemFormModal from "./move-item-form-modal.js";
 import ns from "../bricks-editable-ns.js";
 import Helpers from "./helpers.js";
 import Lsi from "../bricks-editable-lsi.js";
+import LazyLoadedLibraries from "./lazy-loaded-libraries.js";
+import ConfirmModal from "./confirm-modal.js";
 //@@viewOff:imports
+
+// check if hooks is already loaded
+async function importHooks() {
+  let normalizedName = SystemJS.normalizeSync("uu5g04-hooks");
+  let isConfigured = !normalizedName.endsWith("uu5g04-hooks");
+  if (!isConfigured) {
+    SystemJS.config({
+      paths: {
+        "uu5g04-hooks":
+          UU5.Environment.basePath + "uu5g04-hooks" + (process.env.NODE_ENV === "production" ? ".min" : "") + ".js"
+      }
+    });
+  }
+  LazyLoadedLibraries["uu5g04-hooks"] = await SystemJS.import("uu5g04-hooks");
+}
+
+const ElevationInput = UU5.Common.Component.lazy(async () => {
+  await importHooks();
+  return import("./elevation-input.js");
+});
+
+const BgStyleInput = UU5.Common.Component.lazy(async () => {
+  await importHooks();
+  return import("./bg-style-input.js");
+});
+
+const BorderRadiusInput = UU5.Common.Component.lazy(async () => {
+  await importHooks();
+  return import("./border-radius-input.js");
+});
+
+const ColorSchemaPicker = UU5.Common.Component.lazy(async () => {
+  await importHooks();
+  return import("./color-schema-picker.js");
+});
 
 const FORM_PROPS = {
   spacing: 16,
@@ -47,10 +84,12 @@ const EDITATION_COMPONENT_PROPS = UU5.PropTypes.oneOfType([
         "uu5string",
         "switchSelector",
         "bool",
-        "separator"
+        "separator",
+        "richText",
+        "richTextExpandable"
       ]),
       UU5.PropTypes.node
-    ]).isRequired,
+    ]),
     required: UU5.PropTypes.bool,
     label: UU5.PropTypes.oneOfType([UU5.PropTypes.node, UU5.PropTypes.object]),
     getProps: UU5.PropTypes.func
@@ -94,7 +133,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
               padding: 0;
               border-bottom: solid 1px #E0E0E0;
 
-              &-title {
+              & > .uu5-bricks-modal-header-title {
                 flex-grow: 1;
               }
             }
@@ -104,6 +143,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
               display: flex;
               justify-content: flex-end;
               padding: 8px 64px;
+              ${UU5.Utils.ScreenSize.getMaxMediaQueries("m", `padding: 8px 32px;`)}
               ${UU5.Common.Tools.isIE() ? "background-color: #FFFFFF" : ""}
             }
 
@@ -217,7 +257,8 @@ const ModalBody = UU5.Common.VisualComponent.create({
       `),
       editationContent: () =>
         Css.css(`
-        padding: 0 64px 24px 64px;
+        padding: 0 64px 24px;
+        ${UU5.Utils.ScreenSize.getMaxMediaQueries("m", `padding: 0 32px 24px;`)}
       `),
       editationRow: () => Css.css`
         margin: 0 -8px;
@@ -407,7 +448,9 @@ const ModalBody = UU5.Common.VisualComponent.create({
       editMenuOpen: false,
       menuHeight: undefined,
       validation: this.props.componentPropsForm.map(() => undefined),
-      itemsValidation: items ? items.map(() => undefined) : undefined
+      itemsValidation: items ? items.map(() => undefined) : undefined,
+      itemMoveModalShown: false,
+      confirmModalProps: undefined
     };
   },
 
@@ -418,7 +461,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
     }
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.shown !== this.props.shown) {
       if (nextProps.shown) {
         this._modal.open(undefined, () => this.setState({ shown: true }));
@@ -903,31 +946,40 @@ const ModalBody = UU5.Common.VisualComponent.create({
   },
 
   _itemRemove(index) {
-    this._contentChanged = true;
+    let confirmModalProps = {
+      onConfirm: () => {
+        this._contentChanged = true;
 
-    this.setState(state => {
-      let items = [...state.items];
-      let removedItemId = items[index].id;
-      let activeItemId = state.activeItemId;
-      items.splice(index, 1);
+        this.setState(state => {
+          let items = [...state.items];
+          let removedItemId = items[index].id;
+          let activeItemId = state.activeItemId;
+          items.splice(index, 1);
 
-      if (removedItemId === activeItemId) {
-        let newActiveItem = items[items.length - 1];
-        if (newActiveItem) {
-          activeItemId = newActiveItem.id;
-        }
-      }
+          if (removedItemId === activeItemId) {
+            let newActiveItem = items[items.length - 1];
+            if (newActiveItem) {
+              activeItemId = newActiveItem.id;
+            }
+          }
 
-      let newState = { items, activeItemId };
+          let newState = { items, activeItemId, confirmModalProps: undefined };
 
-      if (!items.length) {
-        newState.items = undefined;
-        newState.activeItemId = undefined;
-        newState.activeCategoryIndex = 0;
-      }
+          if (!items.length) {
+            newState.items = undefined;
+            newState.activeItemId = undefined;
+            newState.activeCategoryIndex = 0;
+          }
 
-      return newState;
-    });
+          return newState;
+        });
+      },
+      onRefuse: () => this.setState({ confirmModalProps: undefined }),
+      headerContent: this.getLsiComponent("itemRemoveModalHeader"),
+      confirmButtonContent: this.getLsiComponent("itemRemoveModalConfirmButton")
+    };
+
+    this.setState({ confirmModalProps });
   },
 
   _addItem() {
@@ -1122,54 +1174,79 @@ const ModalBody = UU5.Common.VisualComponent.create({
     let result = { props: {} };
     let changeType = "onChange";
 
-    switch (componentData.type) {
-      case "separator":
-        result.Component = "UU5.Bricks.Line";
-        result.props.size = 1;
-        changeType = "onChange";
-        break;
-      case "text":
-        result.Component = "UU5.Forms.Text";
-        result.value = value || "";
-        changeType = "onBlur";
-        break;
-      case "textarea":
-        result.Component = "UU5.Forms.TextArea";
-        result.value = value || "";
-        changeType = "onBlur";
-        break;
-      case "uu5string":
-        result.Component = "UU5.CodeKit.Uu5StringEditor";
-        result.props.rows = 5;
-        result.props.showGutter = false;
-        value = this._stringToUu5String(value);
-        changeType = "onBlur";
-        break;
-      case "number":
-        result.Component = "UU5.Forms.Number";
-        changeType = "onChange"; // cant be onBlur because it won't be called when changing value by +- buttons
-        break;
-      case "bool":
-        result.Component = "UU5.Forms.Checkbox";
-        result.props.type = 2;
-        changeType = "onChange";
-        break;
-      case "switchSelector":
-        result.Component = "UU5.Forms.SwitchSelector";
-        result.props.inputAttrs = {
-          ...result.props.inputAttrs
-        };
-        changeType = "onChange";
-        break;
-      case "colorSchemaPicker":
-        result.Component = "UU5.Forms.Select";
-        result.children = [...UU5.Environment.colorSchema].map(colorSchema => (
-          <UU5.Forms.Select.Option key={colorSchema} value={colorSchema} content={colorSchema} />
-        ));
-        break;
-      default:
-        result.Component = "UU5.Forms.Text";
-        changeType = "onChange";
+    if (componentData.type) {
+      switch (componentData.type) {
+        case "separator":
+          result.Component = "UU5.Bricks.Line";
+          result.props.size = 1;
+          break;
+        case "text":
+          result.Component = "UU5.Forms.Text";
+          result.value = value || "";
+          changeType = "onBlur";
+          break;
+        case "textarea":
+          result.Component = "UU5.Forms.TextArea";
+          result.value = value || "";
+          changeType = "onBlur";
+          break;
+        case "uu5string":
+          result.Component = "UU5.CodeKit.Uu5StringEditor";
+          result.props.rows = 5;
+          result.props.showGutter = false;
+          value = this._stringToUu5String(value);
+          changeType = "onBlur";
+          break;
+        case "number":
+          result.Component = "UU5.Forms.Number";
+          // changeType can't be onBlur because it won't be called when changing value by +- buttons
+          break;
+        case "bool":
+          result.Component = "UU5.Forms.Checkbox";
+          result.props.type = 2;
+          break;
+        case "switchSelector":
+          result.Component = "UU5.Forms.SwitchSelector";
+          result.props.inputAttrs = {
+            ...result.props.inputAttrs
+          };
+          break;
+        case "colorSchemaPicker":
+          result.Component = "UU5.Forms.Select";
+          result.children = [...UU5.Environment.colorSchema].map(colorSchema => (
+            <UU5.Forms.Select.Option key={colorSchema} value={colorSchema} content={colorSchema} />
+          ));
+          break;
+        case "editorInput":
+          result.Component = "UU5.RichText.EditorInput";
+          break;
+        case "expandableEditorInput":
+          result.Component = "UU5.RichText.ExpandableEditorInput";
+          break;
+      }
+    } else if (componentData.name) {
+      switch (componentData.name) {
+        case "elevation":
+          result.Component = ElevationInput;
+          result.props.componentProps = this.state.propValues;
+          break;
+        case "borderRadius":
+          result.Component = BorderRadiusInput;
+          result.props.componentProps = this.state.propValues;
+          break;
+        case "bgStyle":
+          result.Component = BgStyleInput;
+          result.props.componentProps = this.state.propValues;
+          break;
+        case "colorSchema":
+          result.Component = ColorSchemaPicker;
+          result.props.componentProps = this.state.propValues;
+          break;
+      }
+    }
+
+    if (!result.Component) {
+      result.Component = "UU5.Forms.Text";
     }
 
     if (componentData.name) {
@@ -1200,6 +1277,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
   },
 
   _getEditationColumn(component, index, activeIdentifier, valueSource, validationSource) {
+    let key = "edit-component-" + index;
     if (typeof component === "function") {
       const Component = component;
       return (
@@ -1209,14 +1287,18 @@ const ModalBody = UU5.Common.VisualComponent.create({
           onChangeProps={this._onCustomChangeProps}
           onChangeItems={this._onCustomChangeItems}
           editedItemId={activeIdentifier}
-          key={index}
+          key={key}
         />
       );
     } else {
       let { Component, children, props = {} } = this._getEditationComponent(component, valueSource, validationSource);
-      props.key = index;
+      props.key = key;
 
-      return UU5.Common.Tools.findComponent(Component, props, children);
+      if (typeof Component === "string") {
+        return UU5.Common.Tools.findComponent(Component, props, children);
+      } else {
+        return <Component {...props}>{children}</Component>;
+      }
     }
   },
 
@@ -1264,12 +1346,12 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
     if (Array.isArray(setupSource)) {
       editationContent = [];
-      setupSource.forEach(setupSourceItem => {
+      setupSource.forEach((setupSourceItem, index) => {
         if (Array.isArray(setupSourceItem)) {
           let editRowContent = this._getEditationRow(setupSourceItem, activeIdentifier, valueSource, validationSource);
           let colWidth = 12 / editRowContent.length;
           editationContent.push(
-            <UU5.Bricks.Row className={this.getClassName("editationRow")}>
+            <UU5.Bricks.Row className={this.getClassName("editationRow")} key={"row-" + index}>
               {editRowContent.map((editRow, index) => (
                 <UU5.Bricks.Column key={index} colWidth={`xs-${colWidth}`}>
                   {editRow}
@@ -1279,7 +1361,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
           );
         } else {
           editationContent.push(
-            this._getEditationColumn(setupSourceItem, 0, activeIdentifier, valueSource, validationSource)
+            this._getEditationColumn(setupSourceItem, index, activeIdentifier, valueSource, validationSource)
           );
         }
       });
@@ -1310,7 +1392,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
         </UU5.Bricks.Row>
         <UU5.Bricks.Row className={this.getClassName("editationContent")}>
           <UU5.Forms.Form {...formProps} className={this.getClassName("editForm")}>
-            {editationContent}
+            <UU5.Common.Suspense>{editationContent}</UU5.Common.Suspense>
           </UU5.Forms.Form>
         </UU5.Bricks.Row>
       </UU5.Common.Fragment>
@@ -1514,6 +1596,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
             maxPosition={this.state.items.length}
           />
         ) : null}
+        {this.state.confirmModalProps ? <ConfirmModal {...this.state.confirmModalProps} /> : null}
       </UU5.Bricks.PortalModal>
     );
   }

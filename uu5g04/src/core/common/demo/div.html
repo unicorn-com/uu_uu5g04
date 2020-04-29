@@ -43,7 +43,7 @@
 
       const Component = createReactClass({
 
-        componentWillReceiveProps(nextProps) {
+        UNSAFE_componentWillReceiveProps(nextProps) {
           console.log("receiveProps", this.props, nextProps);
         },
 

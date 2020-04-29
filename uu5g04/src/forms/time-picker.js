@@ -107,7 +107,7 @@ export const TimePicker = Context.withContext(
     //@@viewOff:getDefaultProps
 
     //@@viewOn:reactLifeCycle
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
       this._valueOverMidnight = false;
       this._hasFocus = false;
       this._allowBlur = false;
@@ -132,7 +132,7 @@ export const TimePicker = Context.withContext(
       return this;
     },
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
       if (nextProps.controlled) {
         this._setUpLimits(nextProps);
 

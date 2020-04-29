@@ -47,7 +47,7 @@ describe("UU5.Bricks.Slider interface testing", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().getValue()).toBe(20);
     expect(
       wrapper
@@ -78,7 +78,7 @@ describe("UU5.Bricks.Slider interface testing", () => {
     ).toBe(100);
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     //this increase is out of range. Return value must be same. It must be 100.
     wrapper.instance().increase(10, mockFunc);
     wrapper.update();
@@ -107,7 +107,7 @@ describe("UU5.Bricks.Slider interface testing", () => {
     ).toBe(0);
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     //this increase is out of range. Return value must be same. It must be 100.
     wrapper.instance().decrease(10, mockFunc);
     wrapper.update();

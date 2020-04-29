@@ -3,6 +3,7 @@ import UU5 from "uu5g04";
 import { useState, useCallback } from "./react-hooks";
 import { createComponent } from "./component";
 import TriggerIfAlmostVisible from "./internal/trigger-if-almost-visible";
+import { array, func } from "prop-types";
 //@@viewOff:imports
 
 const STATICS = {
@@ -15,11 +16,24 @@ export const PagingAutoLoad = createComponent({
   ...STATICS,
 
   //@@viewOn:propTypes
-  propTypes: {},
+  propTypes: {
+    distance: UU5.PropTypes.number,
+    data: UU5.PropTypes.array,
+    pageSize: UU5.PropTypes.number.isRequired,
+    handleLoad: UU5.PropTypes.func,
+    error: UU5.PropTypes.oneOfType([UU5.PropTypes.func, UU5.PropTypes.element, UU5.PropTypes.array]),
+    children: UU5.PropTypes.oneOfType([UU5.PropTypes.func, UU5.PropTypes.element, UU5.PropTypes.array])
+  },
   //@@viewOff:propTypes
 
   //@@viewOn:defaultProps
-  defaultProps: {},
+  defaultProps: {
+    distance: 1000,
+    data: undefined,
+    pageSize: undefined,
+    handleLoad: undefined,
+    error: undefined
+  },
   //@@viewOff:defaultProps
 
   render({ distance, data, pageSize, handleLoad, error, children }) {

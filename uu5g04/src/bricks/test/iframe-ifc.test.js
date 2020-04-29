@@ -34,7 +34,7 @@ describe(`UU5.Bricks.Iframe interface testing`, () => {
     const returnValue = wrapper.instance().resize(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -49,7 +49,7 @@ describe(`UU5.Bricks.Iframe interface testing`, () => {
     expect(wrapper).toMatchSnapshot();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().state.height).toMatch(/450/);
     expect(wrapper.instance().state.width).toMatch(/450/);
   });

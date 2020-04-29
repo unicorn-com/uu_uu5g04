@@ -798,7 +798,7 @@ describe(`UU5.Bricks.Page interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().isLeftOpen()).toBeTruthy();
   });
 
@@ -839,7 +839,7 @@ describe(`UU5.Bricks.Page interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().isRightOpen()).toBeTruthy();
   });
 
@@ -881,7 +881,7 @@ describe(`UU5.Bricks.Page interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().isLeftOpen()).toBeFalsy();
   });
 
@@ -923,7 +923,7 @@ describe(`UU5.Bricks.Page interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().isRightOpen()).toBeFalsy();
   });
 
@@ -986,7 +986,7 @@ describe(`UU5.Bricks.Page interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().getLeftOpen()).toEqual(expect.any(Object));
     expect(wrapper.instance().getLeftClosed()).toEqual(expect.any(Object));
   });
@@ -1061,7 +1061,7 @@ describe(`UU5.Bricks.Page interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().getRightOpen()).not.toBe(undefined);
     expect(wrapper.instance().getRightOpen()).toEqual(expect.any(Object));
     expect(wrapper.instance().getLeftClosed()).not.toBe(undefined);

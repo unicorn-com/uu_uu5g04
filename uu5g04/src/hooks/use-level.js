@@ -31,5 +31,5 @@ const LevelProvider = createComponent({
   }
 });
 
-export { useLevel, LevelProvider, LevelContext };
+export { useLevel, LevelProvider };
 export default useLevel;

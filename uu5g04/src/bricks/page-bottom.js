@@ -72,7 +72,7 @@ export const PageBottom = UU5.Common.VisualComponent.create({
     };
   },
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this._lastScrollPosition = 0;
     this._lastScrollPositionDown = 0;
     this._lastScrollPositionUp = 0;
@@ -137,7 +137,7 @@ export const PageBottom = UU5.Common.VisualComponent.create({
     this._height = this._root ? this._root.getBoundingClientRect().height : 0;
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     this._pageTop = document.getElementById(nextProps.topId);
     this._onScroll(nextProps);
   },

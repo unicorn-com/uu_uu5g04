@@ -7,8 +7,10 @@ import Css from "./css";
 import Uu5Component from "./component";
 //@@viewOff:imports
 
+const VISIBILITY_CHECK_ALLOWED = !navigator.webdriver; // don't check visibility if running in headless browser (e.g. when generating PDFs on server)
+
 export const withVisibilityCheck = function(Component, reserve = 500) {
-  if (typeof IntersectionObserver === "undefined") return Component;
+  if (typeof IntersectionObserver === "undefined" || !VISIBILITY_CHECK_ALLOWED) return Component;
 
   const VisibilityCheck = Uu5Component.create({
     //@@viewOn:mixins

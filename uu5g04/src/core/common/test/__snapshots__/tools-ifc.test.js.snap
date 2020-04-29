@@ -57,27 +57,28 @@ exports[`UU5.Common.Tools interface findComponent(tag, props, content) should re
 
 exports[`UU5.Common.Tools interface findComponent(tag, props, content) should return tagplaceholder component 1`] = `
 <TagPlaceholder
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  error={null}
-  hidden={false}
-  id={null}
-  mainAttrs={null}
-  name={null}
-  noIndex={false}
-  parent={null}
-  props={
+  _content={null}
+  _error={null}
+  _fromFindComponent={true}
+  _props={
     Object {
       "content": "Je lepší bejt chytrej nežli hloupej.",
       "id": "componentRegistryId",
     }
   }
+  _tagName="UuDocKit.Bricks.BlockDanger"
+  className={null}
+  content={null}
+  error={null}
+  id={null}
+  mainAttrs={null}
+  name={null}
+  noIndex={false}
+  parent={null}
+  props={null}
   ref_={null}
-  selected={false}
   style={null}
-  tagName="UuDocKit.Bricks.BlockDanger"
+  tagName={null}
   tooltip={null}
 />
 `;

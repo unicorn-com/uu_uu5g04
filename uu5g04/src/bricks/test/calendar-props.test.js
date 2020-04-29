@@ -18,7 +18,7 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 
 let origDateNow = Date.now;
 beforeEach(() => {
-  Date.now = () => new Date(1548411167098);
+  Date.now = () => new Date(1548411167098); // Fri Jan 25 2019 11:12:47 GMT+0100
 });
 afterEach(() => {
   Date.now = origDateNow;
@@ -27,8 +27,8 @@ afterEach(() => {
 let mockElement = document.createElement("div");
 document.body.appendChild(mockElement);
 
-let firstDate = new Date("2019-01-01T00:00:00").getTime();
-let lastDate = new Date("2019-01-31T00:00:00").getTime();
+let firstDate = new Date(2019, 0, 1).getTime();
+let lastDate = new Date(2019, 0, 31).getTime();
 
 const CONFIG = {
   mixins: ["UU5.Common.BaseMixin", "UU5.Common.ElementaryMixin", "UU5.Common.SwipeMixin", "UU5.Common.LsiMixin"],
@@ -131,7 +131,7 @@ describe(`UU5.Bricks.Calendar props function`, () => {
     expect(onChangeFn).toBeCalled();
     let lastCall = onChangeFn.mock.calls[onChangeFn.mock.calls.length - 1];
     expect(lastCall[0]).toBeTruthy();
-    expect(lastCall[0].component).toBe(wrapper.instance());
+    expect(lastCall[0].component === wrapper.instance()).toBe(true);
     expect(lastCall[0].value.getTime()).toBe(firstDate);
     wrapper.unmount();
   });

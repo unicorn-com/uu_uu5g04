@@ -225,7 +225,7 @@ export const ColorPaletteForm = UU5.Common.VisualComponent.create({
     return { value: Color.getValid(this.props.value) || undefined };
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (Color.getValid(nextProps.value)) {
       if (nextProps.value !== Color.getValidString(this.state.value)) {
         this.setState({ value: Color.getValidObject(nextProps.value) });

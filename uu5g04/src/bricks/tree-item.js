@@ -86,13 +86,13 @@ const TreeItem = UU5.Common.VisualComponent.create({
     };
   },
 
-  componentWillMount: function() {
+  UNSAFE_componentWillMount: function() {
     if (!this.getParentByType("isTreeList")) {
       this.showError("invalidParent");
     }
   },
 
-  componentWillReceiveProps: function(nextProps) {
+  UNSAFE_componentWillReceiveProps: function(nextProps) {
     if (
       nextProps.controlled &&
       nextProps.expanded !== this.props.expanded &&

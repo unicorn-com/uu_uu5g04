@@ -21,7 +21,6 @@ import BaseMixin from "./base-mixin.js";
 import ElementaryMixin from "./elementary-mixin.js";
 import CcrWriterMixin from "./ccr-writer-mixin.js";
 import Url from "./url.js";
-import PureRenderMixin from "./pure-render-mixin";
 import Uu5CommonError from "./error.js";
 import VisualComponent from "./visual-component.js";
 
@@ -46,7 +45,7 @@ function getParamsFromQuery(query) {
 export const Router = VisualComponent.create({
   displayName: "Router", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
-  mixins: [BaseMixin, ElementaryMixin, CcrWriterMixin, PureRenderMixin],
+  mixins: [BaseMixin, ElementaryMixin, CcrWriterMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -128,7 +127,7 @@ export const Router = VisualComponent.create({
     };
   },
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     if (
       window.location.pathname &&
       this.props.routes &&
@@ -152,10 +151,14 @@ export const Router = VisualComponent.create({
     }
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
       this._setRoute(nextProps.route, null, nextProps);
     }
+  },
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextProps.controlled || nextState !== this.state;
   },
 
   componentDidMount() {
@@ -206,6 +209,10 @@ export const Router = VisualComponent.create({
     let setStateCallback = typeof args[args.length - 1] === "function" ? args.pop() : undefined; // always last
     let params = args.shift();
     let fragment = args.shift();
+    if (newRoute && typeof newRoute === "object" && newRoute.url && newRoute.url.fragment) {
+      // fix API of using this object in the rest of the compnent - copy url.fragment into deprecated url.hash
+      newRoute = { ...newRoute, url: { ...newRoute.url, hash: newRoute.url.fragment } };
+    }
     if (this._shouldImport(newRoute)) {
       this._importRoute(newRoute, params, setStateCallback);
     } else {
@@ -616,7 +623,7 @@ export const Router = VisualComponent.create({
         delete this._isFromHistory;
       }
 
-      let useCase, config;
+      let useCase, config, noHistory;
       if (route && typeof route === "object" && "config" in route) {
         params = route.params;
         usedFragment = route.fragment;
@@ -628,6 +635,18 @@ export const Router = VisualComponent.create({
         }
         route = "component" in route ? route.component : route.useCase;
         if (ignoreGoTo == null) ignoreGoTo = true;
+      } else if (typeof route === "object" && "url" in route && !("component" in route)) {
+        let url = route.url;
+        if (typeof route.url === "string") {
+          url = Url.parse(Url.getAbsoluteUri(route.url));
+        }
+
+        if (typeof url === "object" && typeof url.useCase === "string" && this.props.routes) {
+          params = url.parameters;
+          usedFragment = url.hash;
+          noHistory = route.noHistory;
+          route = url.useCase;
+        }
       }
 
       let newRoute = route;
@@ -636,6 +655,7 @@ export const Router = VisualComponent.create({
           if (route[0] === "/") route = route.substr(1);
           let routeInfo = this._getRouteAfterRewritesAndRedirects(route, props);
           if (routeInfo) ({ useCase, config } = routeInfo);
+          if (noHistory !== undefined) config.noHistory = noHistory;
           if (
             (!config || !config.component) &&
             props.showNotFoundRouteInUrl &&
@@ -830,7 +850,7 @@ export const Router = VisualComponent.create({
           !newRouteChild.type["UU5.Common.RouteMixin"] &&
           newRouteChild.type.$$typeof !== REACT_LAZY_TYPEOF))
     ) {
-      Tools.error("Route component which should be set is not Visual Use Case.", {
+      Tools.warning("Route component which should be set is not Visual Use Case.", {
         routeParam: route,
         routeChild: newRouteChild,
         tagName: this.constructor.tagName

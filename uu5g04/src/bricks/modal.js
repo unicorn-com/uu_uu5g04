@@ -173,7 +173,7 @@ export const Modal = UU5.Common.VisualComponent.create({
     };
   },
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.setState({ hidden: !this.props.shown });
   },
 
@@ -186,7 +186,7 @@ export const Modal = UU5.Common.VisualComponent.create({
     }
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
       this.setState(function(state) {
         let newState = {};

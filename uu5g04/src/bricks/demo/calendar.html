@@ -47,10 +47,33 @@
   import "uu5g04-bricks";
 
   const Page = UU5.Common.VisualComponent.create({
+    getInitialState() {
+      return { value: "", valueInOnChange: "" };
+    },
     render() {
+      let { value, valueInOnChange } = this.state;
       return (
         <UU5.Bricks.Container>
-          <UU5.Bricks.Calendar ref_={input => this._input = input} />
+          <UU5.Bricks.Calendar 
+            ref_={input => this._input = input}
+            controlled={false}
+            onChange={opt => {
+              opt.component.onChangeDefault(opt);
+              this.setState({ valueInOnChange: opt.value });
+              setTimeout(() => this.setState({ value: opt.component.getValue() }));
+            }}
+          />
+          {valueInOnChange ? (
+            <div>
+              Current value (in onChange opt): {valueInOnChange.getDate()}.{valueInOnChange.getMonth() + 1}.{valueInOnChange.getFullYear()} {valueInOnChange.getHours()}:{valueInOnChange.getMinutes()}
+            </div>
+          ) : null}
+          {value ? (
+            <div>
+              Current value: {value.getDate()}.{value.getMonth() + 1}.{value.getFullYear()} {value.getHours()}:{value.getMinutes()}
+            </div>
+          ) : null}
+
           <UU5.Bricks.Row>
             <UU5.Bricks.ButtonGroup>
               <UU5.Bricks.Button
@@ -66,12 +89,19 @@
             </UU5.Bricks.ButtonGroup>
           </UU5.Bricks.Row>
           <UU5.Bricks.Row>
-            <UU5.Bricks.Calendar onChange={(opt) => {
-              opt.component.onChangeDefault(opt);
-            }} selectionMode="range" value={["1.1.2011", new Date("2011-02-02")]} />
-            <UU5.Bricks.Calendar onChange={(opt) => {
-              opt.component.onChangeDefault(opt);
-            }} showTodayButton />
+            <UU5.Bricks.Calendar
+              onChange={(opt) => {
+                opt.component.onChangeDefault(opt);
+              }}
+              selectionMode="range"
+              value={["1.1.2011", new Date("2011-02-02")]}
+            />
+            <UU5.Bricks.Calendar
+              onChange={(opt) => {
+                opt.component.onChangeDefault(opt);
+              }}
+              showTodayButton
+            />
           </UU5.Bricks.Row>
         </UU5.Bricks.Container>
       );

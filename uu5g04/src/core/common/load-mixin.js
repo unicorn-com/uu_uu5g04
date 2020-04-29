@@ -75,7 +75,7 @@ export const LoadMixin = {
     };
   },
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     if (this.props.dtoOut) {
       if (typeof this.onLoadSuccess_ === "function") {
         this.onLoadSuccess_(this.props.dtoOut);
@@ -99,7 +99,7 @@ export const LoadMixin = {
     }
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.controlled && nextProps.refireLoad) {
       this._onLoad(nextProps);
     }

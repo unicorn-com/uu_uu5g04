@@ -22,7 +22,7 @@
         "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
         "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
         "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
-        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.6.1/prop-types.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
         "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
 
         "uu5g04": "https://cdn.plus4u.net/beta/uu-uu5g04/1.29.0-hooks.3/uu5g04.min.js",
@@ -42,7 +42,7 @@
 
   //@@viewOn:example
   //@@viewOn:imports
-  import { createVisualComponent, useScreenSize } from "uu5g04-hooks";
+  import { createVisualComponent, useScreenSize, ScreenSizeProvider } from "uu5g04-hooks";
   //@@viewOff:imports
 
   const STYLES = {
@@ -100,7 +100,17 @@
   function Demo() {
     return (
       <UU5.Bricks.Container>
-        <ScreenSize />
+        <UU5.Bricks.Section header="Based on screen width" level={2}>
+          <ScreenSize />
+        </UU5.Bricks.Section>
+
+        {ScreenSizeProvider && (
+          <UU5.Bricks.Section className={UU5.Common.Css.css`max-width: 900px;`} header="Based on element width" level={2}>
+            <ScreenSizeProvider>
+              <ScreenSize />
+            </ScreenSizeProvider>
+          </UU5.Bricks.Section>
+        )}
       </UU5.Bricks.Container>
     )
   }

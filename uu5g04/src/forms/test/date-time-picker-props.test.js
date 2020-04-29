@@ -17,7 +17,21 @@ import "uu5g04-bricks";
 import "uu5g04-forms";
 //@@viewOff:imports
 
-const { mount, shallow, wait } = UU5.Test.Tools;
+const { mount, shallow, wait, setInputValue } = UU5.Test.Tools;
+
+function accessCurrentValues(wrapper) {
+  return {
+    value: () => wrapper.instance().getValue(),
+    displayedDateValue: () => {
+      let inputs = wrapper.find("input");
+      return inputs.length > 0 ? inputs.at(0).getDOMNode().value : null;
+    },
+    displayedTimeValue: () => {
+      let inputs = wrapper.find("input");
+      return inputs.length > 1 ? inputs.at(1).getDOMNode().value : null;
+    },
+  };
+}
 
 const MixinPropsFunction = UU5.Common.VisualComponent.create({
   mixins: [UU5.Common.BaseMixin],
@@ -25,7 +39,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
   getInitialState() {
     return {
       isCalled: false,
-      defaultValue: "09.02.2013 12:00:00"
+      defaultValue: "09.02.2013 12:00:00",
     };
   },
 
@@ -82,7 +96,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
         onChangeFeedback={this.onChangeFeedbackHandler}
       />
     );
-  }
+  },
 });
 
 const CONFIG = {
@@ -91,98 +105,92 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Forms.TextInputMixin",
     "UU5.Common.ColorSchemaMixin",
-    "UU5.Forms.InputMixin"
+    "UU5.Forms.InputMixin",
   ],
   props: {
     value: {
-      values: ["1.1.2017"]
+      values: ["1.1.2017", "1994-10-10T10:00:00", "1994-10-10T10:00:00Z"],
     },
     dateFrom: {
-      values: ["1.1.1990"]
+      values: ["1.1.1990"],
     },
     dateTo: {
-      values: ["1.1.2020"]
+      values: ["1.1.2020"],
     },
     buttonHidden: {
-      values: [true, false]
+      values: [true, false],
     },
     calendarIconOpen: {
-      values: ["uu5-clock"]
+      values: ["uu5-clock"],
     },
     calendarIconClosed: {
-      values: ["uu5-clock"]
+      values: ["uu5-clock"],
     },
     timeIconOpen: {
-      values: ["uu5-arrow-right"]
+      values: ["uu5-arrow-right"],
     },
     timeIconClosed: {
-      values: ["uu5-arrow-left"]
+      values: ["uu5-arrow-left"],
     },
     format: {
-      values: ["dd.mm.Y", "dd/mm/Y", "dd-mm-Y", "dd:mm:Y - q"]
+      values: ["dd.mm.Y", "dd/mm/Y", "dd-mm-Y", "dd:mm:Y - q"],
     },
     hideFormatPlaceholder: {
-      values: [true, false]
+      values: [true, false],
     },
     timeFormat: {
-      values: ["12", "24"]
+      values: ["12", "24"],
     },
     seconds: {
-      values: [true, false]
+      values: [true, false],
     },
     country: {
-      values: ["en-us"]
+      values: ["en-us"],
     },
     nanMessage: {
-      values: ["Prosím zadejte validní datum a čas."]
+      values: ["Prosím zadejte validní datum a čas."],
     },
     beforeRangeMessage: {
-      values: ["Zkus zadat pozdější datum a čas."]
+      values: ["Zkus zadat pozdější datum a čas."],
     },
     afterRangeMessage: {
-      values: ["Přestřelil jsi, zkus trochu ubrat."]
+      values: ["Přestřelil jsi, zkus trochu ubrat."],
     },
     // parseDate -In agreement with developers, this props need not be tested.
     placeholderTime: {
-      values: ["15:00"]
+      values: ["15:00"],
     },
     dateIcon: {
-      values: ["uu5-plus"]
+      values: ["uu5-plus"],
     },
     timeIcon: {
-      values: ["uu5-clock"]
+      values: ["uu5-clock"],
     },
     valueType: {
-      values: [null, "date", "string"]
+      values: [null, "date", "string"],
     },
     dateInputAttrs: {
-      values: [null, { style: "background-color: red" }]
+      values: [null, { style: "background-color: red" }],
     },
     timeInputAttrs: {
-      values: [null, { style: "background-color: red" }]
-    }
+      values: [null, { style: "background-color: red" }],
+    },
   },
   requiredProps: {
     //The component does not have any required props
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 const ISOFormatTest = (props, country, expectedValue) => {
   const wrapper = mount(<UU5.Forms.DateTimePicker {...props} country={country} id="uuID" />);
 
-  let dateValue = wrapper
-    .find("#uuID-date-input")
-    .at(1)
-    .getDOMNode().value;
-  let timeValue = wrapper
-    .find("#uuID-time-input")
-    .at(1)
-    .getDOMNode().value;
+  let dateValue = wrapper.find("#uuID-date-input").at(1).getDOMNode().value;
+  let timeValue = wrapper.find("#uuID-time-input").at(1).getDOMNode().value;
 
   expect(dateValue + " " + timeValue).toBe(expectedValue);
 };
@@ -195,7 +203,8 @@ describe(`UU5.Forms.DateTimePicker props`, () => {
     ISOFormatTest({ value: "2019-07-20" }, defaultCountry, "7/20/2019 00:00");
     ISOFormatTest({ value: "2019-07-20T07:00:00.000Z" }, defaultCountry, "7/20/2019 09:00");
     ISOFormatTest({ value: "2019-07-20T07:00:00.000+02:00" }, defaultCountry, "7/20/2019 07:00");
-    ISOFormatTest({ value: "2019-07-20T07:00:00.000+02:00" }, "cs-CZ", "2019-7-20 07:00"); // this might be wrong
+    // FIXME Uncomment when Jest tests use full-icu so that Intl.DateTimeFormat works.
+    // ISOFormatTest({ value: "2019-07-20T07:00:00.000+02:00" }, "cs-CZ", "20. 7. 2019 07:00");
     ISOFormatTest({ value: "2019-07-20T07:00:00.000+02:00", seconds: true }, defaultCountry, "7/20/2019 07:00:00");
     ISOFormatTest({ value: "2019-07-20T07:00:00.000+02:00", timeFormat: "12" }, defaultCountry, "7/20/2019 07:00 AM");
   });
@@ -216,19 +225,19 @@ describe("TextInputMixin props.function", () => {
         id={"uuID"}
         label="Date of appointment"
         validateOnChange={true}
-        onValidate={opt => {
+        onValidate={(opt) => {
           let feedback;
           if (opt.value) {
             feedback = {
               feedback: "success",
               message: "Is valid.",
-              value: opt.value
+              value: opt.value,
             };
           } else {
             feedback = {
               feedback: "error",
               message: "Not valid.",
-              value: opt.value
+              value: opt.value,
             };
           }
           return feedback;
@@ -250,19 +259,19 @@ describe("TextInputMixin props.function", () => {
         label="Date of appointment"
         validateOnChange={true}
         value={"9.11.2013 12:00"}
-        onValidate={opt => {
+        onValidate={(opt) => {
           let feedback;
           if (opt.value) {
             feedback = {
               feedback: "success",
               message: "Is valid.",
-              value: opt.value
+              value: opt.value,
             };
           } else {
             feedback = {
               feedback: "error",
               message: "Not valid.",
-              value: opt.value
+              value: opt.value,
             };
           }
           return feedback;
@@ -321,13 +330,57 @@ describe("TextInputMixin props.function", () => {
   });
 
   it("timeZone", () => {
-    const wrapper = shallow(<UU5.Forms.DateTimePicker timeZone={3} value={"2019-11-01T10:00:00Z"} />);
+    let wrapper, value, displayedTimeValue;
+
+    wrapper = mount(<UU5.Forms.DateTimePicker timeZone={3} value={"2019-11-01T10:00:00Z"} />);
     expect(wrapper.instance().getValue()).toBe("11/1/2019 11:00");
+
+    // "iso"; displayed value should be adjusted by timeZone prop; getValue() should remain initial (but affected by valueType)
+    wrapper = mount(<UU5.Forms.DateTimePicker timeZone={5} value={"2019-11-01T10:00:00Z"} valueType="iso" />);
+    ({ value, displayedTimeValue } = accessCurrentValues(wrapper));
+    expect(displayedTimeValue()).toBe("15:00");
+    expect(value()).toBe("2019-11-01T10:00:00.000Z");
+    // changing time should parse the new time as if it was in timeZone
+    setInputValue(wrapper.find("input").at(1), "18:00"); // +3 from currently displayed
+    expect(displayedTimeValue()).toBe("18:00");
+    expect(value()).toBe("2019-11-01T13:00:00.000Z"); // +3 from initial
+
+    // "isoLocal"; displayed value should be adjusted by timeZone prop; getValue() should stay the same as initial (but affected by valueType)
+    wrapper = mount(<UU5.Forms.DateTimePicker timeZone={5} value={"2019-11-01T10:00:00Z"} valueType="isoLocal" />);
+    ({ value, displayedTimeValue } = accessCurrentValues(wrapper));
+    expect(displayedTimeValue()).toBe("15:00");
+    expect(value()).toBe("2019-11-01T11:00:00"); // local OS time zone (cs-CZ) for that date is GMT+1
+    // changing time should parse the new time as if it was in timeZone
+    setInputValue(wrapper.find("input").at(1), "18:00"); // +3 from currently displayed
+    expect(displayedTimeValue()).toBe("18:00");
+    expect(value()).toBe("2019-11-01T14:00:00"); // +3 from initial
+
+    // "string"; displayed value should be adjusted by timeZone prop; getValue() should stay the same as initial (but affected by valueType)
+    wrapper = mount(<UU5.Forms.DateTimePicker timeZone={5} value={"2019-11-01T10:00:00Z"} valueType="string" />);
+    ({ value, displayedTimeValue } = accessCurrentValues(wrapper));
+    expect(displayedTimeValue()).toBe("15:00");
+    expect(value()).toBe("11/1/2019 11:00"); // local OS time zone (cs-CZ) for that date is GMT+1
+    // changing time should parse the new time as if it was in timeZone
+    setInputValue(wrapper.find("input").at(1), "18:00"); // +3 from currently displayed
+    expect(displayedTimeValue()).toBe("18:00");
+    expect(value()).toBe("11/1/2019 14:00"); // +3 from initial
+
+    // "date"; displayed value should be adjusted by timeZone prop; getValue() should stay the same as initial (but affected by valueType)
+    wrapper = mount(<UU5.Forms.DateTimePicker timeZone={5} value={"2019-11-01T10:00:00Z"} valueType="date" />);
+    ({ value, displayedTimeValue } = accessCurrentValues(wrapper));
+    expect(displayedTimeValue()).toBe("15:00");
+    expect(value() + "").toBe(new Date("2019-11-01T10:00:00Z") + "");
+    // changing time should parse the new time as if it was in timeZone
+    setInputValue(wrapper.find("input").at(1), "18:00"); // +3 from currently displayed
+    expect(displayedTimeValue()).toBe("18:00");
+    expect(value() + "").toBe(new Date("2019-11-01T13:00:00Z") + ""); // +3 from initial
+
+    // TODO Negative timeZone.
   });
 });
 
 describe(`UU5.Forms.DateTimePicker props function`, () => {
-  it("parseDate(), valueType is null", function() {
+  it("parseDate(), valueType is null", function () {
     const dateValue = "2013-08-02";
     const timeValue = "01:20";
     const method = jest.fn(() => new Date(2019, 2, 14, 5, 23, 0, 0));
@@ -340,11 +393,11 @@ describe(`UU5.Forms.DateTimePicker props function`, () => {
       .instance()
       .getValue();
     expect(method).toBeCalled();
-    expect(value == "3/14/2019 01:20").toBeTruthy();
+    expect(value + "").toBe("3/14/2019 01:20");
     expect(wrapper).toMatchSnapshot();
   });
 
-  it("parseDate(), valueType is string", function() {
+  it("parseDate(), valueType is string", function () {
     const dateValue = "2013-08-02";
     const timeValue = "01:20";
     const method = jest.fn(() => new Date(2019, 2, 14, 5, 23, 0, 0));
@@ -357,11 +410,11 @@ describe(`UU5.Forms.DateTimePicker props function`, () => {
       .instance()
       .getValue();
     expect(method).toBeCalled();
-    expect(value == "3/14/2019 01:20").toBeTruthy();
+    expect(value + "").toBe("3/14/2019 01:20");
     expect(wrapper).toMatchSnapshot();
   });
 
-  it("parseDate(), valueType is date", function() {
+  it("parseDate(), valueType is date", function () {
     const dateValue = "2013-08-02";
     const timeValue = "01:20";
     const method = jest.fn(() => new Date(2019, 2, 14, 5, 23, 0, 0));
@@ -377,7 +430,7 @@ describe(`UU5.Forms.DateTimePicker props function`, () => {
     let expectedValue = new Date(2019, 2, 14, 5, 23, 0, 0);
     expectedValue.setHours(1);
     expectedValue.setMinutes(20);
-    expect(value.getTime() == expectedValue.getTime()).toBeTruthy();
+    expect(value.getTime()).toBe(expectedValue.getTime());
     expect(wrapper).toMatchSnapshot();
   });
 });

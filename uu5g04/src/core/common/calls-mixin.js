@@ -54,11 +54,11 @@ export const CallsMixin = {
     };
   },
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this._setCalls(this.props.calls);
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     this._setCalls(nextProps.calls);
   },
   //@@viewOff:reactLifeCycle

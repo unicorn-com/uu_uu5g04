@@ -109,7 +109,7 @@ export const HomeScreen = UU5.Common.LsiMixin.withContext(
       };
     },
 
-    componentWillMount: function() {
+    UNSAFE_componentWillMount: function() {
       this.hide();
     },
 
@@ -125,7 +125,7 @@ export const HomeScreen = UU5.Common.LsiMixin.withContext(
       }
     },
 
-    componentWillReceiveProps: function(nextProps) {
+    UNSAFE_componentWillReceiveProps: function(nextProps) {
       // cannot set visibility by receive props
       this.setState({ hidden: this.isHidden() });
     },

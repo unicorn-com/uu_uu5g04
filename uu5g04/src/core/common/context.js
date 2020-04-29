@@ -44,20 +44,40 @@ export const LsiContext = Context.create();
 
 export const withLsiContext = Component => {
   // disable context for jest tests - enzyme doesn't support React 16.3 Context API
-  if (!Context.isSupported() || process.env.NODE_ENV === "test") return Component;
+  if (!Context.isSupported() || (process.env.NODE_ENV === "test" && !Environment._allowTestContext)) return Component;
+
   let forwardRef = React.forwardRef((props, ref) => {
     return (
       <LsiContext.Consumer>
-        {({ registerLsi, unregisterLsi, setLanguage, getLanguage }) => (
-          <Component
-            {...props}
-            ref={ref}
-            registerLsi={registerLsi}
-            unregisterLsi={unregisterLsi}
-            setLanguage={setLanguage}
-            getLanguage={getLanguage}
-          />
-        )}
+        {({ registerLsi, unregisterLsi, setLanguage, getLanguage, source, language }) => {
+          let result;
+          let isFromHookProvider = typeof setLanguage === "function" && typeof registerLsi !== "function";
+          if (!isFromHookProvider) {
+            result = (
+              <Component
+                {...props}
+                ref={ref}
+                registerLsi={registerLsi}
+                unregisterLsi={unregisterLsi}
+                setLanguage={setLanguage}
+                getLanguage={getLanguage}
+              />
+            );
+          } else {
+            // from hooks (only setLanguage() and language is provided)
+            // => emulate registerLsi/unregisterLsi & triggerring of events
+            result = (
+              <LsiHookAdapter
+                componentProps={props}
+                componentRef={ref}
+                Component={Component}
+                setLanguage={setLanguage}
+                language={language}
+              />
+            );
+          }
+          return result;
+        }}
       </LsiContext.Consumer>
     );
   });
@@ -68,6 +88,44 @@ export const withLsiContext = Component => {
 
   return forwardRef;
 };
+class LsiHookAdapter extends React.Component {
+  constructor(props) {
+    super(props);
+    this._registrationMap = {};
+    this._registerLsi = this._registerLsi.bind(this);
+    this._unregisterLsi = this._unregisterLsi.bind(this);
+    this._getLanguage = this._getLanguage.bind(this);
+  }
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.language !== this.props.language) {
+      for (let k in this._registrationMap) {
+        this._registrationMap[k](this.props.language);
+      }
+    }
+  }
+  _registerLsi(id, fn) {
+    this._registrationMap[id] = fn;
+  }
+  _unregisterLsi(id) {
+    delete this._registrationMap[id];
+  }
+  _getLanguage() {
+    return this.props.language;
+  }
+  render() {
+    let { componentProps, componentRef, Component, setLanguage } = this.props;
+    return (
+      <Component
+        {...componentProps}
+        ref={componentRef}
+        setLanguage={setLanguage}
+        getLanguage={this._getLanguage}
+        registerLsi={this._registerLsi}
+        unregisterLsi={this._unregisterLsi}
+      />
+    );
+  }
+}
 
 export const TextCorrectorContext = Context.create();
 
@@ -89,7 +147,7 @@ const _getContextValue = (propValue, textCorrectorPropValue, contextValue, envir
 
 export const withTextCorrectorContext = Component => {
   // disable context for jest tests - enzyme doesn't support React 16.3 Context API
-  if (!Context.isSupported() || process.env.NODE_ENV === "test") return Component;
+  if (!Context.isSupported() || (process.env.NODE_ENV === "test" && !Environment._allowTestContext)) return Component;
   let forwardRef = React.forwardRef((props, ref) => {
     return (
       <TextCorrectorContext.Consumer>

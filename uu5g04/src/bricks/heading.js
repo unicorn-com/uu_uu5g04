@@ -78,7 +78,7 @@ export const Heading = UU5.Common.VisualComponent.create({
     };
   },
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.lastScrollPosition = 0;
     this.scrollStart = 0;
     return this;
@@ -137,7 +137,7 @@ export const Heading = UU5.Common.VisualComponent.create({
     }
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
       this._onScroll(nextProps);
     }

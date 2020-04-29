@@ -90,7 +90,7 @@ export const FileViewer = UU5.Common.VisualComponent.create({
     };
   },
 
-  componentWillMount: function() {
+  UNSAFE_componentWillMount: function() {
     !this.props.src && this.setState({ callFeedback: "ready" });
   },
 
@@ -101,7 +101,7 @@ export const FileViewer = UU5.Common.VisualComponent.create({
     }
   },
 
-  componentWillReceiveProps: function(nextProps) {
+  UNSAFE_componentWillReceiveProps: function(nextProps) {
     if (nextProps.src && (nextProps.src !== this.props.src || nextProps.parameters !== this.props.parameters)) {
       this.setState(
         {

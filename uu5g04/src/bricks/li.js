@@ -14,100 +14,182 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
-import Icon from "./icon.js";
-import ListContext from "./list-context.js";
+import Css from "./internal/css.js";
+import { ListContext, Context } from "./list-context.js";
+import { typeIconMap } from "./ul.js";
 
 import "./li.less";
 //@@viewOff:imports
 
-export const Li = UU5.Common.VisualComponent.create({
-  displayName: "Li", // for backward compatibility (test snapshots)
-  //@@viewOn:mixins
-  mixins: [
-    UU5.Common.BaseMixin,
-    UU5.Common.PureRenderMixin,
-    UU5.Common.ElementaryMixin,
-    UU5.Common.ContentMixin,
-    UU5.Common.NestingLevelMixin
-  ],
-  //@@viewOff:mixins
+export const Li = Context.withListItemContext(
+  UU5.Common.VisualComponent.create({
+    displayName: "Li", // for backward compatibility (test snapshots)
+    //@@viewOn:mixins
+    mixins: [
+      UU5.Common.BaseMixin,
+      UU5.Common.PureRenderMixin,
+      UU5.Common.ElementaryMixin,
+      UU5.Common.ContentMixin,
+      UU5.Common.NestingLevelMixin
+    ],
+    //@@viewOff:mixins
 
-  //@@viewOn:statics
-  statics: {
-    tagName: ns.name("Li"),
-    nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "inline"),
-    classNames: {
-      main: ns.css("li")
-    },
-    defaults: {
-      parentTagNames: ["UU5.Bricks.Ul", "UU5.Bricks.Ol"],
-      markerIcon: "mdi-default"
-    }
-  },
-  //@@viewOff:statics
+    //@@viewOn:statics
+    statics: {
+      tagName: ns.name("Li"),
+      nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "inline"),
+      classNames: {
+        main: props => {
+          let classNames = [ns.css("li")];
 
-  //@@viewOn:propTypes
-  propTypes: {
-    markerIcon: UU5.PropTypes.string,
-    iconColorSchema: UU5.PropTypes.string
-  },
-  //@@viewOff:propTypes
+          if (!props.ordered || (props.ordered && props.type === "1.1")) {
+            classNames.push(Css.css`
+              display: flex;
+              align-items: baseline;
+            `);
 
-  //@@viewOn:getDefaultProps
-  getDefaultProps() {
-    return {
-      icon: null,
-      markerIcon: null,
-      iconColorSchema: null
-    };
-  },
-  //@@viewOff:getDefaultProps
+            if (props.markerIcon === "mdi-default") {
+              classNames.push(Css.css`
+                &:before {
+                  top: -0.45em;
+                }
+              `);
+            }
+          }
 
-  //@@viewOn:reactLifeCycle
-  getInitialState() {
-    UU5.Environment.getColorSchema(this.props.iconColorSchema);
-  },
-  componentWillMount: function() {
-    this.checkParentTagName(this.getDefault().parentTagNames);
-  },
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.controlled) {
-      if (this.props.iconColorSchema !== nextProps.iconColorSchema) {
-        UU5.Environment.getColorSchema(nextProps.iconColorSchema);
+          if (props.ordered && props.type === "1.1" && props.counterId) {
+            classNames.push(Css.css`
+              &::before {
+                counter-increment: ${props.counterId};
+                content: counters(${props.counterId}, ".") ". ";
+                display: inline-block;
+                position: relative;
+                width: 0;
+                left: -${props.listLevel}.46em;
+                text-align: right;
+              }
+            `);
+          }
+
+          return classNames.join(" ");
+        }
+      },
+      defaults: {
+        parentTagNames: ["UU5.Bricks.Ul", "UU5.Bricks.Ol"],
+        markerIcon: "mdi-default"
       }
-    }
-  },
-  //@@viewOff:reactLifeCycle
+    },
+    //@@viewOff:statics
 
-  //@@viewOn:interface
-  //@@viewOff:interface
+    //@@viewOn:propTypes
+    propTypes: {
+      markerIcon: UU5.PropTypes.string,
+      iconColorSchema: UU5.PropTypes.string,
+      ordered: UU5.PropTypes.bool, // received from context
+      type: UU5.PropTypes.string, // received from context
+      counterId: UU5.PropTypes.string, // received from context
+      listLevel: UU5.PropTypes.number // received from context
+    },
+    //@@viewOff:propTypes
 
-  //@@viewOn:overriding
-  //@@viewOff:overriding
+    //@@viewOn:getDefaultProps
+    getDefaultProps() {
+      return {
+        markerIcon: null,
+        iconColorSchema: null,
+        ordered: false,
+        type: undefined,
+        counterId: undefined,
+        listLevel: 1
+      };
+    },
+    //@@viewOff:getDefaultProps
 
-  //@@viewOn:private
-  //@@viewOff:private
+    //@@viewOn:reactLifeCycle
+    getInitialState() {
+      UU5.Environment.getColorSchema(this.props.iconColorSchema);
+    },
 
-  //@@viewOn:render
-  render: function() {
-    return this.getNestingLevel() ? (
-      <ListContext.Consumer>
-        {({ tagName }) => (
-          <li {...this.getMainAttrs()}>
-            {tagName !== "UU5.Bricks.Ol" && this.props.markerIcon && (
-              <Icon
-                icon={this.props.markerIcon}
-                className={"uu5-common-text color-schema-" + this.props.iconColorSchema}
-              />
-            )}
-            {this.getChildren()}
+    UNSAFE_componentWillMount: function() {
+      this.checkParentTagName(this.getDefault().parentTagNames);
+    },
+
+    UNSAFE_componentWillReceiveProps(nextProps) {
+      if (nextProps.controlled) {
+        if (this.props.iconColorSchema !== nextProps.iconColorSchema) {
+          UU5.Environment.getColorSchema(nextProps.iconColorSchema);
+        }
+      }
+    },
+    //@@viewOff:reactLifeCycle
+
+    //@@viewOn:interface
+    //@@viewOff:interface
+
+    //@@viewOn:overriding
+    //@@viewOff:overriding
+
+    //@@viewOn:private
+    _getMarkerIcon() {
+      if (this.props.markerIcon) {
+        return this.props.markerIcon;
+      } else if (this.props.type) {
+        return typeIconMap[this.props.type];
+      } else {
+        return "mdi-default";
+      }
+    },
+
+    _getContextValues() {
+      return {
+        ordered: this.props.ordered,
+        markerIcon: this._getMarkerIcon(),
+        type: this.props.type,
+        iconColorSchema: this.props.iconColorSchema,
+        counterId: this.props.counterId,
+        listLevel: this.props.listLevel
+      };
+    },
+    //@@viewOff:private
+
+    //@@viewOn:render
+    render: function() {
+      return this.getNestingLevel() ? (
+        <ListContext.Provider value={this._getContextValues()}>
+          <li {...getMainAttrs(this.props, this.getMainAttrs())}>
+            <span>{this.getChildren()}</span>
             {this.getDisabledCover()}
           </li>
-        )}
-      </ListContext.Consumer>
-    ) : null;
+        </ListContext.Provider>
+      ) : null;
+    }
+    //@@viewOff:render
+  })
+);
+
+const getIconColor = colorSchema => {
+  colorSchema = colorSchema === "default" || !colorSchema ? "black" : colorSchema;
+  colorSchema = UU5.Environment.colorSchemaMap[colorSchema].color;
+  let colorShades = UU5.Environment.colors[colorSchema.split("-rich")[0]];
+
+  return UU5.Common.Css.css(`
+    ::before {
+      color: ${colorShades[colorSchema === "black" ? "c900" : "c500"]}
+    }
+  `);
+};
+
+const getMainAttrs = function(props, attrs) {
+  if (!props.ordered && props.markerIcon) {
+    let splitter = props.markerIcon.split("-");
+    if (splitter) {
+      let iconsName = splitter[0];
+      UU5.Environment.IconManager.addIcons(iconsName);
+      attrs.className += ` ${iconsName}`;
+    }
+    attrs.className += ` ${props.markerIcon} ${getIconColor(props.iconColorSchema)}`;
   }
-  //@@viewOff:render
-});
+  return attrs;
+};
 
 export default Li;

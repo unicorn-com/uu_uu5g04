@@ -75,7 +75,7 @@ export const DraggableItem = UU5.Common.VisualComponent.create({
     };
   },
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.draggableParent = this.getParentByType("hasUU5_Bricks_DraggableMixin");
     return this;
   },
@@ -102,7 +102,7 @@ export const DraggableItem = UU5.Common.VisualComponent.create({
     return this;
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
       this.setState({
         x: nextProps.x,

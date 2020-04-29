@@ -2475,6 +2475,8 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() should return fals
           Object {
             "cs": "Toto pole je povinné.",
             "en": "This field is required.",
+            "sk": "Toto pole je povinné.",
+            "uk": "Це поле є обов'язковим",
           }
         }
         mainAttrs={null}

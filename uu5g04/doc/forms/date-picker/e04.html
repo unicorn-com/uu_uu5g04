@@ -57,7 +57,7 @@
             {/*@@viewOn:0*/}
             <UU5.Forms.DatePicker
               label="Date of birth"
-              value="8/7/2017"
+              value="1990-11-21"
             />
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
@@ -66,10 +66,9 @@
             {/*@@viewOn:0*/}
             <UU5.Forms.DatePicker
               label="Date of birth"
-              value="7/5/2017"
-              value={new Date('2017-02-07')}
-              dateFrom={new Date('2017-01-07')}
-              dateTo={new Date('2017-02-07')}
+              value="1990-11-21"
+              dateFrom="1990-11-15"
+              dateTo="1990-12-22"
             />
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
@@ -91,11 +90,12 @@
               format="dd:mm:Y"
               parseDate={stringDate => {
                 let date = null;
-                stringDate = stringDate && stringDate.replace(/ /g, '');
+                stringDate = stringDate && stringDate.replace(/ /g, "");
                 let regExp = new RegExp("^(\\d{1,2})\\:(\\d{1,2})\\:(\\d{4})$");
                 if (regExp.test(stringDate)) {
-                  let replacedDate = stringDate.replace(regExp, '$3-$2-$1');
-                  date = Date.parse(replacedDate) ? new Date(replacedDate) : null;
+                  let match = stringDate.match(regExp);
+                  date = new Date(Number(match[3]), Number(match[2]) - 1, Number(match[1]));
+                  if (isNaN(date.getTime())) date = null;
                 }
                 return date;
               }}
@@ -110,11 +110,12 @@
               format="dd:mm:Y"
               parseDate={stringDate => {
                 let date = null;
-                stringDate = stringDate && stringDate.replace(/ /g, '');
+                stringDate = stringDate && stringDate.replace(/ /g, "");
                 let regExp = new RegExp("^(\\d{1,2})\\:(\\d{1,2})\\:(\\d{4})$");
                 if (regExp.test(stringDate)) {
-                  let replacedDate = stringDate.replace(regExp, '$3-$2-$1');
-                  date = Date.parse(replacedDate) ? new Date(replacedDate) : null;
+                  let match = stringDate.match(regExp);
+                  date = new Date(Number(match[3]), Number(match[2]) - 1, Number(match[1]));
+                  if (isNaN(date.getTime())) date = null;
                 }
                 return date;
               }}
@@ -140,9 +141,9 @@
               nanMessage="Date is not valid."
               beforeRangeMessage="Date is too small."
               afterRangeMessage="Date is too big."
-              value={new Date('2017-07-05')}
-              dateFrom={new Date('2017-07-01')}
-              dateTo={new Date('2017-07-31')}
+              value="1990-11-21"
+              dateFrom="1990-11-15"
+              dateTo="1990-12-22"
             />
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
@@ -172,7 +173,7 @@
             {/*@@viewOn:0*/}
             <UU5.Forms.DatePicker
               label="days"
-              value={new Date("2019-02-02T00:00Z")}
+              value="2015-01-02"
               step="days"
             />
             <UU5.Forms.DatePicker
@@ -182,7 +183,7 @@
             />
             <UU5.Forms.DatePicker
               label="year"
-              value="2022"
+              value="2015"
               step="years"
             />
             {/*@@viewOff:0*/}

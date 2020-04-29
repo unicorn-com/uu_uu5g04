@@ -113,7 +113,7 @@ export const AutocompleteTextInput = UU5.Common.VisualComponent.create({
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this._hasFocus = false;
   },
 

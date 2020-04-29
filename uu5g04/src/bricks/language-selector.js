@@ -112,7 +112,7 @@ export const LanguageSelector = UU5.Common.LsiMixin.withContext(
       };
     },
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
       if (!this.state.languages[this.state.language]) {
         let newLang = UU5.Common.Tools.getLsiKey(
           this.state.languages,
@@ -124,7 +124,7 @@ export const LanguageSelector = UU5.Common.LsiMixin.withContext(
       }
     },
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
       if (nextProps.controlled) {
         this.setState(state => {
           let newLanguage = state.language;

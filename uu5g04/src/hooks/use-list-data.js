@@ -16,61 +16,128 @@ import { useMemo, useRef } from "./react-hooks";
 import { useDataInternal } from "./use-data";
 import { combineReducers, performOperation } from "./internal/data-hooks-helper";
 
-function applyCreate(data, callArgs, callResult, callError) {
-  if (callError !== undefined && callError instanceof Error) return data;
-
+function applyCreate(data, callArgs, callResult, callError, opExtraInfo) {
+  let touchedItems; // items that were somehow processed during the operation
   let newItems = callArgs[0];
   if (!Array.isArray(newItems)) newItems = newItems ? [newItems] : [];
-  if (callError !== undefined) {
-    let callErrorItems = Array.isArray(callError) ? callError : callError != null ? [callError] : [];
-    newItems = newItems
-      .map((it, i) => (callErrorItems[i] != null ? { ...it, ...callErrorItems[i] } : null))
-      .filter(Boolean);
-  } else if (callResult !== undefined) {
-    let callResultItems = Array.isArray(callResult) ? callResult : callResult != null ? [callResult] : [];
-    newItems = newItems.map((it, i) => (callResultItems[i] != null ? { ...it, ...callResultItems[i] } : it));
+
+  let result;
+  if (callError !== undefined && _isRollbackError(callError)) {
+    result = data;
+    touchedItems = newItems;
+  } else {
+    if (callError !== undefined) {
+      let callErrorItems = Array.isArray(callError) ? callError : callError != null ? [callError] : [];
+      touchedItems = newItems.map((it, i) => (callErrorItems[i] != null ? { ...it, ...callErrorItems[i] } : it));
+      newItems = touchedItems.map((it, i) => (callErrorItems[i] != null ? it : null)).filter(Boolean);
+    } else if (callResult !== undefined) {
+      let callResultItems = Array.isArray(callResult) ? callResult : callResult != null ? [callResult] : [];
+      touchedItems = newItems.map((it, i) => (callResultItems[i] != null ? { ...it, ...callResultItems[i] } : it));
+      newItems = touchedItems;
+    } else {
+      touchedItems = newItems;
+    }
+    result = [...data, ...newItems];
   }
-  return [...data, ...newItems];
+  opExtraInfo.items = touchedItems;
+
+  return result;
 }
 
-function applyUpdate(data, callArgs, callResult, callError) {
-  if (callError !== undefined && callError instanceof Error) return data;
-
-  let updatedItems = callArgs[1];
+function applyUpdate(data, callArgs, callResult, callError, opExtraInfo) {
+  let touchedItems;
+  let hasIdMatchers =
+    (!Array.isArray(callArgs[0]) && typeof callArgs[0] === "object") ||
+    (Array.isArray(callArgs[0]) && typeof callArgs[0][0] === "object")
+      ? false
+      : true;
+  let updatedItems = hasIdMatchers ? callArgs[1] : callArgs[0];
   if (!Array.isArray(updatedItems)) updatedItems = updatedItems ? [updatedItems] : [];
-  if (callError !== undefined) {
-    let callErrorItems = Array.isArray(callError) ? callError : callError != null ? [callError] : [];
-    updatedItems = updatedItems.map((it, i) => (callErrorItems[i] != null ? { ...it, ...callErrorItems[i] } : null));
-  } else if (callResult !== undefined) {
-    let callResultItems = Array.isArray(callResult) ? callResult : callResult != null ? [callResult] : [];
-    updatedItems = updatedItems.map((it, i) => (callResultItems[i] != null ? { ...it, ...callResultItems[i] } : it));
+  let idMatchers = hasIdMatchers ? callArgs[0] : updatedItems.map(it => it && it.id);
+
+  let result;
+  if (callError !== undefined && _isRollbackError(callError)) {
+    result = data;
+    touchedItems = _mergeItems(data, updatedItems, idMatchers).touchedItems; // report
+  } else {
+    let toMerge;
+    if (callError !== undefined) {
+      let callErrorItems = Array.isArray(callError) ? callError : callError != null ? [callError] : [];
+      toMerge = updatedItems.map((it, i) => (callErrorItems[i] != null ? { ...it, ...callErrorItems[i] } : null));
+    } else if (callResult !== undefined) {
+      let callResultItems = Array.isArray(callResult) ? callResult : callResult != null ? [callResult] : [];
+      toMerge = updatedItems.map((it, i) => (callResultItems[i] != null ? { ...it, ...callResultItems[i] } : it));
+    } else {
+      toMerge = updatedItems;
+    }
+    let mergeResult = _mergeItems(data, toMerge, idMatchers);
+    result = mergeResult.data;
+    touchedItems = mergeResult.touchedItems.map((it, i) => (toMerge[i] == null ? { ...it, ...updatedItems[i] } : it));
   }
-  return _mergeItems(data, updatedItems, callArgs[0]);
+  opExtraInfo.items = touchedItems;
+
+  return result;
 }
 
-function applyDelete(data, callArgs, callResult, callError) {
-  if (callError !== undefined && callError instanceof Error) return data;
-
+function applyDelete(data, callArgs, callResult, callError, opExtraInfo) {
+  let touchedItems;
   let deleteItems = callArgs[0];
   if (!Array.isArray(deleteItems)) deleteItems = deleteItems ? [deleteItems] : [];
-  let callErrorItems = Array.isArray(callError) ? callError : callError != null ? [callError] : [];
-  let callResultItems = Array.isArray(callResult) ? callResult : callResult != null ? [callResult] : [];
-  let result = [...data];
-  for (let i = 0; i < deleteItems.length; i++) {
-    let item = deleteItems[i];
-    let index = _findItemIndex(item, result);
-    if (index !== -1) {
-      if (callError !== undefined) {
-        if (callErrorItems[i] != null) result[index] = { ...result[index], ...callErrorItems[i] };
-        else result.splice(index, 1);
-      } else if (callResult !== undefined) {
-        if (callResultItems[i] != null) result[index] = { ...result[index], ...callResultItems[i] };
-        else result.splice(index, 1);
+
+  let result;
+  if (callError !== undefined && _isRollbackError(callError)) {
+    result = data;
+    touchedItems = deleteItems.map(it => {
+      let index = _findItemIndex(it, result);
+      return index !== -1 ? result[index] : null;
+    });
+  } else {
+    // recognize callResult containing { uuAppErrorMap: {} } as if it was null (i.e. delete was successful)
+    if (callResult && typeof callResult === "object" && Object.keys(callResult).length === 1) {
+      let { uuAppErrorMap } = callResult;
+      if (
+        uuAppErrorMap &&
+        typeof uuAppErrorMap === "object" &&
+        Object.keys(uuAppErrorMap).every(k => (uuAppErrorMap[k] || {}).type !== "error")
+      ) {
+        callResult = null;
+      }
+    }
+
+    let callErrorItems = Array.isArray(callError) ? callError : callError != null ? [callError] : [];
+    let callResultItems = Array.isArray(callResult) ? callResult : callResult != null ? [callResult] : [];
+    result = [...data];
+    touchedItems = [];
+    for (let i = 0; i < deleteItems.length; i++) {
+      let item = deleteItems[i];
+      let index = _findItemIndex(item, result);
+      if (index !== -1) {
+        if (callError !== undefined) {
+          if (callErrorItems[i] != null) {
+            result[index] = { ...result[index], ...callErrorItems[i] };
+            touchedItems.push(result[index]);
+          } else {
+            let removed = result.splice(index, 1);
+            touchedItems.push(removed[0]);
+          }
+        } else if (callResult !== undefined) {
+          if (callResultItems[i] != null) {
+            result[index] = { ...result[index], ...callResultItems[i] };
+            touchedItems.push(result[index]);
+          } else {
+            let removed = result.splice(index, 1);
+            touchedItems.push(removed[0]);
+          }
+        } else {
+          let removed = result.splice(index, 1);
+          touchedItems.push(removed[0]);
+        }
       } else {
-        result.splice(index, 1);
+        touchedItems.push(null); // unmatchable item, report as null in operations[].items[] array
       }
     }
   }
+  opExtraInfo.items = touchedItems;
 
   return result;
 }
@@ -86,14 +153,20 @@ function _findItemIndex(item, data) {
 }
 
 function _mergeItems(targetList, sourceList, itemMatchers = null) {
+  let touchedItems = [];
   let result = Array.isArray(targetList) ? [...targetList] : targetList ? [targetList] : [];
   let list = Array.isArray(sourceList) ? sourceList : sourceList ? [sourceList] : [];
   let itemMatchersList = Array.isArray(itemMatchers) ? itemMatchers : itemMatchers ? [itemMatchers] : [];
   for (let i = 0; i < list.length; i++) {
     let index = _findItemIndex(itemMatchersList[i] || list[i], result);
     if (index !== -1) result[index] = list[i] != null ? { ...result[index], ...list[i] } : result[index];
+    touchedItems.push(index !== -1 ? result[index] : list[i]);
   }
-  return result;
+  return { data: result, touchedItems };
+}
+
+function _isRollbackError(error) {
+  return error instanceof Error || (error && "status" in error && typeof error.headers === "function");
 }
 
 function listDataHookReducer(state, action, nextReducer) {

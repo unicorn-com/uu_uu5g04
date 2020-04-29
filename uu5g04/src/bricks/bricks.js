@@ -160,8 +160,6 @@ export const bookKitUrl =
 
 import "./color-schema/default.less";
 
-import "./internal/bg-styles.js";
-
 import Css from "./internal/css.js";
 
 Css.injectGlobal`

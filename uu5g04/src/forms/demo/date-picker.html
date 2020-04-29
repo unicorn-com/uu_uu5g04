@@ -54,6 +54,8 @@
           dateValue.setYear(2020);
           dateValue.setHours(13);
           dateValue.setMinutes(30);
+          let onChangeInitialValue = "1994-10-10";
+          // let onChangeInitialValue = new Date(1994, 9, 10);
 
           return (
             <UU5.Bricks.Container>
@@ -175,7 +177,7 @@
               <UU5.Forms.DatePicker label="ISO string value" value="2019-07-31T10:00:00" />
               <UU5.Forms.DatePicker label="ISO string value" value="2019-07-31" />
               <UU5.Forms.DatePicker label="invalid value" value="Invalid value" />
-              <UU5.Forms.DatePicker label="onChange" onChange={(opt) => {
+              <UU5.Forms.DatePicker label="onChange" controlled={false} value={onChangeInitialValue} onChange={(opt) => {
                 console.log("onChange value: " + opt.value);
                 opt.component.onChangeDefault(opt);
               }} />

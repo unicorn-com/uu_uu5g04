@@ -14,7 +14,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Level from "./level.js";
-import { preprocessors, postprocessors } from "./visual-component-processors.js";
+import { preprocessors, postprocessors } from "./component-processors.js";
+import Environment from "../environment/environment.js";
 
 export const LevelMixin = {
   //@@viewOn:statics
@@ -59,7 +60,7 @@ export const LevelMixin = {
     };
   },
 
-  componentWillReceiveProps: function(nextProps) {
+  UNSAFE_componentWillReceiveProps: function(nextProps) {
     this.getLevel() !== nextProps.level && this.setState({ level: this.checkLevel(nextProps) });
   },
   //@@viewOff:reactLifeCycle
@@ -162,7 +163,7 @@ preprocessors.push(function LevelMixinVCPreprocessor(componentDescriptor, ctx) {
   let { mixins } = componentDescriptor;
   if (Array.isArray(mixins)) {
     if (
-      process.env.NODE_ENV !== "test" && // disabled for tests because shallow rendering of components with LevelMixin would be useless (only wrapper with Level.Consumer would be visible)
+      (process.env.NODE_ENV !== "test" || Environment._allowTestContext) && // disabled for tests because shallow rendering of components with LevelMixin would be useless (only wrapper with Level.Consumer would be visible)
       React.forwardRef
     ) {
       for (let i = 0; i < mixins.length; i++) {

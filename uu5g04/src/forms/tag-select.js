@@ -16,7 +16,7 @@ import Option from "./select-option.js";
 export const TagSelect = Context.withContext(
   UU5.Common.VisualComponent.create({
     //@@viewOn:mixins
-    mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, InputMixin],
+    mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.LsiMixin, InputMixin],
     //@@viewOff:mixins
 
     //@@viewOn:statics
@@ -37,7 +37,7 @@ export const TagSelect = Context.withContext(
       availableTags: UU5.PropTypes.arrayOf(
         UU5.PropTypes.shape({
           value: UU5.PropTypes.string,
-          content: UU5.PropTypes.string
+          content: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.object])
         })
       ),
       ignoreTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
@@ -78,13 +78,13 @@ export const TagSelect = Context.withContext(
       };
     },
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
       if (this.props.onValidate && typeof this.props.onValidate === "function") {
         this._validate({ value: this.state.value, event: null, component: this });
       }
     },
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
       this._initAvailableTags(nextProps);
 
       if (nextProps.controlled) {
@@ -203,9 +203,21 @@ export const TagSelect = Context.withContext(
         ? props.availableTags.map(tag => ({
             value: tag.value,
             content: tag.content || tag.value,
-            searchValue: tag.value ? tag.value.toLowerCase() : tag.value
+            searchValue: tag.content
+              ? this._getTagContent(tag).toLowerCase()
+              : tag.value
+              ? tag.value.toLowerCase()
+              : tag.value
           }))
         : [];
+    },
+
+    _getTagContent(tag) {
+      if (typeof tag.content === "object") {
+        return this.getLsiItem(tag.content);
+      } else {
+        return tag.content;
+      }
     },
 
     _hasValue() {
@@ -247,7 +259,12 @@ export const TagSelect = Context.withContext(
 
     _emptyValues(e) {
       e.stopPropagation();
-      this.setState({ value: [] });
+      let opt = { component: this, event: e, value: [], _data: { state: { value: [] } } };
+      if (typeof this.props.onChange === "function") {
+        this.props.onChange(opt);
+      } else {
+        this.onChangeDefault(opt);
+      }
     },
 
     _close(setStateCallback) {
@@ -295,14 +312,14 @@ export const TagSelect = Context.withContext(
       // validate value towards ignored tags
       if (this.props.ignoreTags && this.props.ignoreTags.find(ignoreTag => ignoreTag === value)) {
         this._hasTempFeedback = true;
-        newData.state = { feedback: "error", message: this.getLsiComponent("tagIsNotAllowed").replace("$1", value) };
+        newData.state = { feedback: "error", message: this.getLsiComponent("tagIsNotAllowed", null, value) };
         isValid = false;
       } else if (this._hasValue() && this.state.value.indexOf(value) !== -1) {
         // validate value towards currently set tags
         this._hasTempFeedback = true;
         newData.state = {
           feedback: "warning",
-          message: this.getLsiComponent("tagIsAlreadyAdded").replace("$1", value)
+          message: this.getLsiComponent("tagIsAlreadyAdded", null, value)
         };
         isValid = false;
       } else if (!this.props.allowCustomTags && !this._availableTags.find(tag => tag.value === value)) {
@@ -585,22 +602,26 @@ export const TagSelect = Context.withContext(
       let result;
       if (this._hasValue()) {
         if (this.props.multiple) {
-          result = this.state.value.map(tag => (
+          result = this.state.value.map(value => {
+            let tag = this._availableTags.find(availableTag => availableTag.value === value);
+            let content = this._getTagContent(tag);
+            return (
             <UU5.Bricks.Label
-              key={tag}
+                key={value}
               colorSchema="custom"
               // Arrow fn because sending tag is necessary
               // eslint-disable-next-line react/jsx-no-bind
               iconOnClick={
-                this.isReadOnly() || this.isComputedDisabled() ? null : (_, e) => this._removeTagValue(e, tag)
+                  this.isReadOnly() || this.isComputedDisabled() ? null : (_, e) => this._removeTagValue(e, value)
               }
               icon="mdi-close"
               className={this.getClassName("tag")}
-              tooltip={tag}
+                tooltip={content}
             >
-              <span className={this.getClassName("tagTextWrapper")}>{tag}</span>
+                <span className={this.getClassName("tagTextWrapper")}>{content}</span>
             </UU5.Bricks.Label>
-          ));
+            );
+          });
         } else {
           result = this.state.value[0];
         }
@@ -637,6 +658,7 @@ export const TagSelect = Context.withContext(
           className={this.getClassName("textInput")}
           readonly={this.isReadOnly()}
           onKeyDown={!this.isReadOnly() && !this.isComputedDisabled() ? this._onTextInputKeyPress : undefined}
+          colorSchema={this.props.colorSchema === "custom" ? this.props.colorSchema : undefined}
         />
       );
     },
@@ -655,7 +677,7 @@ export const TagSelect = Context.withContext(
           className={this.getClassName("item")}
           key={i}
           value={item.value}
-          content={item.content}
+          content={this._getTagContent(item)}
           mainAttrs={{ id: this.getId() + "-item-" + i, tabIndex: 0 }}
         />
       ));
@@ -663,18 +685,19 @@ export const TagSelect = Context.withContext(
 
     _getInputContent() {
       if (this._hasValue()) {
-        let content = [this._getTextInput()];
+        let inputContent = [this._getTextInput()];
 
         if (!this.state.searchValue && !this.state.searchValue.trim()) {
-          let value = this._getTagList();
-          content.push(
-            <div className={this.getClassName("valueWrapper")} title={value}>
-              {value}
+          let tag = this._availableTags.find(availableTag => availableTag.value === this._getTagList());
+          let content = this._getTagContent(tag);
+          inputContent.push(
+            <div className={this.getClassName("valueWrapper")} title={content} key="value">
+              {content}
             </div>
           );
         }
 
-        return content;
+        return inputContent;
       } else {
         return this._getTextInput();
       }
@@ -765,13 +788,23 @@ export const TagSelect = Context.withContext(
 
       return attrs;
     },
+
+    _getMainPropsToPass() {
+      let props = this._getInputAttrs();
+
+      if (this.props.colorSchema) {
+        props.className += " " + "color-schema-" + this.props.colorSchema;
+      }
+
+      return props;
+    },
     //@@viewOff:private
 
     //@@viewOn:render
     render() {
       let inputId = this.getId() + "-input";
       return (
-        <UU5.Bricks.Div {...this._getInputAttrs()}>
+        <UU5.Bricks.Div {...this._getMainPropsToPass()}>
           {this.getLabel(inputId)}
           {this.getInputWrapper(
             <>

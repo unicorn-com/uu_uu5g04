@@ -88,11 +88,11 @@ export const CookieBar = UU5.Common.VisualComponent.create({
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.props.expireDays ? this._checkCookies() : this._checkLocalStorageItem();
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     this.props.expireDays ? this._checkCookies() : this._checkLocalStorageItem();
   },
   //@@viewOff:reactLifeCycle

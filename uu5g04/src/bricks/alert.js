@@ -139,7 +139,7 @@ export const Alert = UU5.Common.VisualComponent.create({
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  componentWillReceiveProps: function(nextProps) {
+  UNSAFE_componentWillReceiveProps: function(nextProps) {
     // it is needed to compare by deepEqual function because pureRenderMixin uses this function in shouldCOmponentRender to compare equality of props.
     !UU5.Common.Tools.deepEqual(nextProps.content, this.props.content) && this._clearTimeout();
   },

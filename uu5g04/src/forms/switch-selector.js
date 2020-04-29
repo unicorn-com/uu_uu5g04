@@ -99,7 +99,7 @@ export const SwitchSelector = UU5.Bricks.Resize.withResize(
         return { displaySelect: false };
       },
 
-      componentWillMount() {
+      UNSAFE_componentWillMount() {
         let value = this._getInitialValue();
         if (typeof this.props.onValidate === "function") {
           this._validateOnChange({ value, component: this });
@@ -112,7 +112,7 @@ export const SwitchSelector = UU5.Bricks.Resize.withResize(
         this.setState(() => ({ displaySelect: this._isOverflowing() }));
       },
 
-      componentWillReceiveProps(nextProps) {
+      UNSAFE_componentWillReceiveProps(nextProps) {
         if (nextProps.controlled) {
           let value;
           if (nextProps.value !== null && nextProps.value !== undefined) {

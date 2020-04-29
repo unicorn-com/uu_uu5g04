@@ -59,7 +59,7 @@ describe(`UU5.Bricks.HomeScreen interface testing`, () => {
       expect(wrapper).toMatchSnapshot();
       expect(mockFunc).toBeCalled();
       expect(mockFunc).toHaveBeenCalledTimes(1);
-      expect(returnValue).toBe(wrapper.instance());
+      expect(returnValue === wrapper.instance()).toBe(true);
     } finally {
       window.navigator.userAgent = origUserAgent;
     }

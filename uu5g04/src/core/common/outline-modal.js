@@ -53,7 +53,7 @@ export const OutlineModal = VisualComponent.create({
     };
   },
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     if (!this.getParentByType("isOutline")) {
       this.showError("invalidParent");
     }

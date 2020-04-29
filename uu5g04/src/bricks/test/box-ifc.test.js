@@ -66,7 +66,7 @@ describe(`UU5.Bricks.Box interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     //State variables have changed now. Without snaphosts we need to verify them by expect.
     expect(wrapper.find("Modal").instance().state.hidden).toBeFalsy();
     expect(wrapper.find("Modal").instance().state.header).toMatch(/This is infoHeader from the Box/);
@@ -104,6 +104,6 @@ describe(`UU5.Bricks.Box interface testing`, () => {
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(wrapper.find("Modal").instance().state.hidden).toBeTruthy();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
   });
 });

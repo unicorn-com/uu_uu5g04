@@ -321,9 +321,7 @@ function getColors(colorSchema) {
   colorSchema = UU5.Environment.colorSchemaMap[colorSchema].color;
   let colorShades = getShades(colorSchema);
 
-  if (!colorSchema || colorSchema === "custom") {
-    return null;
-  } else if (colorSchema === "default") {
+  if (colorSchema === "default") {
     return getDefaultColors(colorShades);
   } else if (colorSchema === "white") {
     return getWhiteColors(colorShades);
@@ -340,7 +338,7 @@ function getColors(colorSchema) {
 
 function getShades(colorSchema) {
   // get the most commonly used shades of the given colorSchema
-  if (colorSchema === "default" || colorSchema === "blue" || !colorSchema) {
+  if (colorSchema === "default" || colorSchema === "blue" || colorSchema === "custom") {
     return UU5.Environment.colors["blue"];
   } else {
     return UU5.Environment.colors[colorSchema.replace(/-rich/, "")];

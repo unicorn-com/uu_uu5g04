@@ -44,7 +44,7 @@ describe(`UU5.Bricks.Dropdown interface testing`, () => {
     expect(wrapper.instance().isOpen()).toBeTruthy();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
   });
 
   it("close(setStateCallBack)", () => {
@@ -64,7 +64,7 @@ describe(`UU5.Bricks.Dropdown interface testing`, () => {
     expect(wrapper.instance().isOpen()).toBeTruthy();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     //Now we closed opened drop down
     const closeValue = wrapper.instance().close(mockFunc);
     wrapper.update();
@@ -73,7 +73,7 @@ describe(`UU5.Bricks.Dropdown interface testing`, () => {
     expect(wrapper.instance().state.open).toBeFalsy();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(2);
-    expect(closeValue).toBe(wrapper.instance());
+    expect(closeValue === wrapper.instance()).toBe(true);
   });
 
   it("toggle(setStateCallBack) first should open, second should close.", () => {

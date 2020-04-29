@@ -15,9 +15,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Environment from "../environment/environment.js";
-import Component from "./component.js";
+import { createComponent } from "./component.js";
+import { preprocessors } from "./component-processors.js";
 import Style from "../utils/style.js";
-import { preprocessors, postprocessors } from "./visual-component-processors.js";
 import { SYMBOL_COMPONENT, SYMBOL_INIT, SYMBOL_GUARD } from "./component-symbols";
 //@@viewOff:imports
 
@@ -47,7 +47,7 @@ export class VisualComponent {
   });
 
   static create(componentDescriptor) {
-    return doCreate(componentDescriptor);
+    return createComponent(componentDescriptor, true);
 
     // TODO Optimization is temporarily disabled, until it gets fully tested.
     // // NOTE Assuming that we perform postponing of createReactClass() calls also in "test" environment,
@@ -56,10 +56,10 @@ export class VisualComponent {
     // // is used and it replaces it with lazy-initialized original Button class, not forwardRef),
     // // therefore `wrapper.find(UU5.Bricks.Button)` wouldn't work.
     // //   => skip the optimization in "test" environments
-    // if (process.env.NODE_ENV === "test") return doCreate(componentDescriptor);
+    // if (process.env.NODE_ENV === "test") return createComponent(componentDescriptor, true);
 
     // // skip the optimization for simple components (not worth introducing forwardRef)
-    // if (!componentDescriptor.mixins) return doCreate(componentDescriptor);
+    // if (!componentDescriptor.mixins) return createComponent(componentDescriptor, true);
 
     // // postpone the actual component creation until its 1st render
     // let Component;
@@ -84,7 +84,7 @@ export class VisualComponent {
 
     // let init = function() {
     //   if (!Component) {
-    //     Component = doCreate(componentDescriptor);
+    //     Component = createComponent(componentDescriptor, true);
     //     for (let k of Object.getOwnPropertyNames(Wrapper)) {
     //       try {
     //         if (!(k in Component)) Component[k] = Wrapper[k];
@@ -137,16 +137,6 @@ export class VisualComponent {
   }
 }
 
-function doCreate(componentDescriptor) {
-  let ctx = {};
-
-  for (let processor of preprocessors) processor(componentDescriptor, ctx);
-  let result = Component.create(componentDescriptor);
-  for (let processor of postprocessors) result = processor(result, componentDescriptor, ctx);
-
-  return result;
-}
-
 function addBasicVisualPropsPreprocessor(componentDescriptor) {
   let { mixins, propTypes } = componentDescriptor;
 
@@ -179,5 +169,6 @@ function addBasicVisualPropsPreprocessor(componentDescriptor) {
   }
   return componentDescriptor;
 }
+addBasicVisualPropsPreprocessor.isVisual = true;
 
 export default VisualComponent;

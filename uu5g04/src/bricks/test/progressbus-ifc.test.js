@@ -219,7 +219,7 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(2);
-    expect(returnSetItem).toBe(wrapper.instance());
+    expect(returnSetItem === wrapper.instance()).toBe(true);
     const returnValueOfGetItemTwice = wrapper.instance().getItem(lastItem.id);
     expect(returnValueOfGetItemTwice).toEqual(
       expect.objectContaining({
@@ -266,7 +266,7 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(2);
-    expect(returnupdateItem).toBe(wrapper.instance());
+    expect(returnupdateItem === wrapper.instance()).toBe(true);
     const returnValueOfGetItemTwice = wrapper.instance().getItem(lastItem.id);
     expect(returnValueOfGetItemTwice).toEqual(
       expect.objectContaining({
@@ -360,7 +360,7 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(2);
-    expect(returnOfShowAlert).toBe(wrapper.instance());
+    expect(returnOfShowAlert === wrapper.instance()).toBe(true);
     expect(wrapper.instance().state.openId).toEqual(expect.any(String));
     expect(wrapper.instance().state.openId).not.toBeNull();
   });
@@ -397,14 +397,14 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(2);
-    expect(returnOfShowAlert).toBe(wrapper.instance());
+    expect(returnOfShowAlert === wrapper.instance()).toBe(true);
     expect(wrapper.instance().state.openId).toEqual(expect.any(String));
     expect(wrapper.instance().state.openId).not.toBeNull();
     const returnOfHideAlert = wrapper.instance().hideAlert(lastItem.id, mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(3);
-    expect(returnOfHideAlert).toBe(wrapper.instance());
+    expect(returnOfHideAlert === wrapper.instance()).toBe(true);
     expect(wrapper.instance().state.openId).toBeNull();
   });
 });

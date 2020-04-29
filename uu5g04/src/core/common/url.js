@@ -17,8 +17,19 @@ const regexp = {
   url: /^((http[s]?|ftp):\/)?\/?([^:\/\s]+):?(\d+)?([^?#]+)?\??([^#]+)?#?(.*)$/,
   colon: /:$/,
   slash: /^[/]/,
-  hash: /^#/
+  hash: /^#/,
+  http: /^(\/|[a-z0-9\-+.]+:)/
 };
+
+function isRoute(href) {
+  return href && !regexp.http.test(href) && !regexp.hash.test(href);
+}
+
+function getRouteUrl(href) {
+  let basePath = Environment.getAppBasePath();
+  let usedHref = href.charAt(0) === "?" ? (Url.parse(location.href).useCase || "") + href : href;
+  return basePath ? basePath.replace(/\/*$/, "/") + usedHref.replace(/^\/+/, "") : usedHref;
+}
 
 export class Url {
   static parse(url) {
@@ -119,6 +130,27 @@ export class Url {
     } catch (e) {
       return false;
     }
+  }
+
+  static getAbsoluteUri(uri) {
+    let resultUri;
+
+    if (uri != null) {
+      if (regexp.hash.test(uri)) {
+        resultUri = location.href.split("#")[0] + uri;
+      } else if (isRoute(uri)) {
+        resultUri = getRouteUrl(uri);
+      } else {
+        resultUri = uri;
+      }
+
+      if (!/^[a-z0-9\-+.]+:/i.test(resultUri)) {
+        if (!resultUri.startsWith("/")) resultUri = "/" + resultUri;
+        resultUri = location.protocol + "//" + location.host + resultUri;
+      }
+    }
+
+    return resultUri;
   }
 
   constructor() {

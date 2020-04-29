@@ -92,7 +92,7 @@ describe(`UU5.Bricks.Heading interface testing`, () => {
     expect(wrapper).toMatchSnapshot();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
   });
 
   it("setBlocked(setStateCallBack)", () => {
@@ -117,7 +117,7 @@ describe(`UU5.Bricks.Heading interface testing`, () => {
     expect(wrapper).toMatchSnapshot();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
   });
 
   it("setFixedValue(true, setStateCallBack)", () => {
@@ -141,7 +141,7 @@ describe(`UU5.Bricks.Heading interface testing`, () => {
     expect(wrapper.instance().state.fixed).toBeTruthy();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -167,7 +167,7 @@ describe(`UU5.Bricks.Heading interface testing`, () => {
     expect(wrapper.instance().state.fixed).toBeFalsy();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper).toMatchSnapshot();
   });
 });

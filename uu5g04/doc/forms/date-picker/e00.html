@@ -54,13 +54,14 @@
           {/*@@viewOn:0*/}
           <UU5.Forms.DatePicker
             label="Date of birth"
-            placeholder="1/1/1990"
+            valueType="iso"
+            placeholder={UU5.Common.Tools.getDateString("1990-11-21", { country: "cs-cz" })}
             size="s"
           />
 
           <UU5.Forms.DatePicker
             label="Date of birth"
-            placeholder="1/1/1990"
+            valueType="iso"
             size="m"
             feedback="success"
             message="success message"
@@ -69,13 +70,13 @@
 
           <UU5.Forms.DatePicker
             label="Date of birth"
-            placeholder="1/1/1990"
+            valueType="iso"
             size="l"
           />
 
           <UU5.Forms.DatePicker
             label="Date of birth"
-            placeholder="1/1/1990"
+            valueType="iso"
             size="xl"
           />
           {/*@@viewOff:0*/}

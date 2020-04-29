@@ -166,7 +166,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
     };
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     let isOpen = nextProps.open !== this.props.open ? nextProps.open : this.isOpen();
     let width = this._getWidth(nextProps);
     let ghostWidth = this._getGhostWidth(nextProps, isOpen, width);
@@ -188,7 +188,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
     );
   },
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     if (!this.getParentByType("isPage")) {
       this.showError("invalidParent");
     }

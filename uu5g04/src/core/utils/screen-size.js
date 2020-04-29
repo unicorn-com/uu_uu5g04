@@ -1,4 +1,5 @@
 import ListenerRegistry from "./internal/listener-registry";
+import Context from "../common/context";
 
 const XS = 480;
 const S = 768;
@@ -23,17 +24,16 @@ class ScreenSize {
     xl: XL
   };
 
-  static countSize(element = window) {
+  static countSize(width = window.innerWidth) {
     let result;
-    let screenWidth = element.innerWidth || element.clientWidth;
 
-    if (screenWidth <= this.XS) {
+    if (width <= this.XS) {
       result = "xs";
-    } else if (screenWidth <= this.S) {
+    } else if (width <= this.S) {
       result = "s";
-    } else if (screenWidth <= this.M) {
+    } else if (width <= this.M) {
       result = "m";
-    } else if (screenWidth <= this.L) {
+    } else if (width <= this.L) {
       result = "l";
     } else {
       result = "xl";
@@ -162,6 +162,14 @@ class ScreenSize {
     return result;
   }
 }
+
+// slightly "hide" this as we need it only for proper interoperability of ScreenSizeMixin and
+// hooks ScreenSizeProvider
+const ScreenSizeContext = Context.create(null);
+Object.defineProperty(ScreenSize, "Context", {
+  value: ScreenSizeContext,
+  enumerable: false
+});
 
 let actualScreenSize = ScreenSize.countSize();
 const resizeFn = e => ScreenSize.setSize(e, ScreenSize.countSize());

@@ -86,7 +86,7 @@ export const Slider = Context.withContext(
         step
       };
     },
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
       let value = this._getValueInInterval(this.props.value);
       if (this.props.onValidate && typeof this.props.onValidate === "function") {
         this._validateOnChange({ value: value, event: null, component: this });
@@ -100,7 +100,7 @@ export const Slider = Context.withContext(
       this._removeEvent();
     },
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
       if (nextProps.controlled) {
         let value = typeof nextProps.value === "number" ? nextProps.value : nextProps.min;
 

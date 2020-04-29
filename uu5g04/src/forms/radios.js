@@ -84,7 +84,7 @@ export const Radios = Context.withContext(
     //@@viewOff:getDefaultProps
 
     //@@viewOn:reactLifeCycle
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
       this._itemsRefs = [];
       this._currentFocus = 0;
       let value = this._getInitialValue();
@@ -97,7 +97,7 @@ export const Radios = Context.withContext(
       return this;
     },
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
       let value = this._getInitialValue(nextProps);
       if (nextProps.controlled) {
         if (nextProps.value !== undefined) {

@@ -85,7 +85,7 @@ export const Checkboxes = Context.withContext(
     //@@viewOff:getDefaultProps
 
     //@@viewOn:reactLifeCycle
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
       let value = this._getInitialValue();
 
       if (this.props.onValidate && typeof this.props.onValidate === "function") {
@@ -97,7 +97,7 @@ export const Checkboxes = Context.withContext(
       return this;
     },
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
       if (this.props.controlled) {
         if (nextProps.value !== undefined) {
           let newValue = this.state.value;

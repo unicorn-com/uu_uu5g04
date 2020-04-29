@@ -73,7 +73,7 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.checkParentTagName(this.getDefault().parentTagName);
 
     let parent = this.getParent();

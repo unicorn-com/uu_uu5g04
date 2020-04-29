@@ -126,7 +126,7 @@ export const Popover = withContext(
       };
     },
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
       this.setState({ hidden: !this.props.shown });
     },
 
@@ -136,7 +136,7 @@ export const Popover = withContext(
       }
     },
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
       if (nextProps.controlled) {
         this.setState({
           disabled: nextProps.disabled,

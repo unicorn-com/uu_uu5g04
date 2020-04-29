@@ -39,7 +39,7 @@ describe("UU5.Bricks.Panel ifc testing", () => {
     expect(wrapper.instance().isExpanded()).toBeTruthy();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
   });
 
   it("setExpandedValue(false, setStateCallBack)", () => {
@@ -63,7 +63,7 @@ describe("UU5.Bricks.Panel ifc testing", () => {
     expect(wrapper.instance().isExpanded()).toBeFalsy();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
   });
 
   it("expand(setStateCallBack)", () => {
@@ -84,7 +84,7 @@ describe("UU5.Bricks.Panel ifc testing", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().isExpanded()).toBeTruthy();
     expect(wrapper.instance().state.expanded).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
@@ -109,7 +109,7 @@ describe("UU5.Bricks.Panel ifc testing", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().isExpanded()).toBeFalsy();
     expect(wrapper.instance().state.expanded).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
@@ -137,7 +137,7 @@ describe("UU5.Bricks.Panel ifc testing", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().isExpanded()).toBeTruthy();
     expect(wrapper.instance().state.expanded).toBeTruthy();
     expect(wrapper).toMatchSnapshot();

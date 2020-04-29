@@ -78,7 +78,7 @@ describe(`UU5.Bricks.Carousel interface testing`, () => {
     expect(wrapper.instance().state.activeIndex).toBe(1);
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
   });
 
   it("getActiveIndex()", () => {
@@ -208,7 +208,7 @@ describe(`UU5.Bricks.Carousel interface testing`, () => {
     expect(wrapper.instance().getActiveIndex()).toBe(3);
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
   });
 
   it("setPrevious(setStateCallBack)", () => {
@@ -274,6 +274,6 @@ describe(`UU5.Bricks.Carousel interface testing`, () => {
     expect(wrapper.instance().getActiveIndex()).toBe(1);
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
   });
 });

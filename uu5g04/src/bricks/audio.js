@@ -77,7 +77,7 @@ export const Audio = UU5.Common.VisualComponent.create({
     }
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
       this.setState({ muted: nextProps.muted, playbackRate: nextProps.playbackRate });
     }

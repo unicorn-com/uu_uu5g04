@@ -93,7 +93,8 @@ export const DateTimePicker = Context.withContext(
       showTodayButton: UU5.PropTypes.bool,
       dateInputAttrs: UU5.PropTypes.object,
       timeInputAttrs: UU5.PropTypes.object,
-      timeZone: UU5.PropTypes.number
+      timeZone: UU5.PropTypes.number,
+      monthNameFormat: UU5.PropTypes.oneOf(["abbr", "roman"])
     },
     //@@viewOff:propTypes
 
@@ -121,7 +122,8 @@ export const DateTimePicker = Context.withContext(
         strictTimeStep: false,
         hideFormatPlaceholder: false,
         showTodayButton: false,
-        timeZone: undefined
+        timeZone: undefined,
+        monthNameFormat: "roman"
       };
     },
     //@@viewOff:getDefaultProps
@@ -140,7 +142,7 @@ export const DateTimePicker = Context.withContext(
       };
     },
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
       this._hasFocus = false;
       this._allowOpening = true;
       this._allowTimeZoneAdjustment = true;
@@ -185,7 +187,7 @@ export const DateTimePicker = Context.withContext(
       UU5.Environment.EventListener.registerDateTime(this.getId(), this._change);
     },
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
       if (nextProps.controlled) {
         this._setUpLimits(nextProps);
 
@@ -478,14 +480,39 @@ export const DateTimePicker = Context.withContext(
         }
 
         if (props.valueType === "string" || !props.valueType) {
-          value = UU5.Common.Tools.adjustForTimezone(dateObject, UU5.Environment.dateTimeZone, props.timeZone);
+          if (typeof props.timeZone === "number") {
+            value = UU5.Common.Tools.adjustForTimezone(
+              dateObject,
+              -dateObject.getTimezoneOffset() / 60,
+              props.timeZone
+            );
+          } else {
+            value = dateObject;
+          }
           let date = this._getDateString(value);
           let time = this._getTimeString(value);
           value = date + " " + time;
         } else if (props.valueType === "date") {
-          value = UU5.Common.Tools.adjustForTimezone(dateObject, UU5.Environment.dateTimeZone, props.timeZone);
+          if (typeof props.timeZone === "number") {
+            value = UU5.Common.Tools.adjustForTimezone(
+              dateObject,
+              -dateObject.getTimezoneOffset() / 60,
+              props.timeZone
+            );
+          } else {
+            value = dateObject;
+          }
         } else if (props.valueType === "iso") {
-          value = DateTools.getISO(dateObject);
+          if (typeof props.timeZone === "number") {
+            value = UU5.Common.Tools.adjustForTimezone(
+              dateObject,
+              -dateObject.getTimezoneOffset() / 60,
+              props.timeZone
+            );
+          } else {
+            value = dateObject;
+          }
+          value = DateTools.getISO(value);
         } else if (props.valueType === "isoLocal") {
           value = DateTools.getISOLocal(dateObject, props.timeZone);
         }
@@ -1290,7 +1317,8 @@ export const DateTimePicker = Context.withContext(
         hidden: !this._isCalendarOpen(),
         onChange: this._onDatePickerChange,
         colorSchema: this.getColorSchema(),
-        showTodayButton: this.props.showTodayButton
+        showTodayButton: this.props.showTodayButton,
+        monthNameFormat: this.props.monthNameFormat
       };
     },
 

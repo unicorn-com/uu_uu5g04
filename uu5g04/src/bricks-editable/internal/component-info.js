@@ -12,7 +12,7 @@ const classNames = {
     display: flex;
     align-items: center;
     color: #303030;
-    padding: 16px 40px;
+    padding: 16px;
   `),
   icon: props =>
     Css.css(`

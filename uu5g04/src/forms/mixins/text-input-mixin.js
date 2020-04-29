@@ -88,7 +88,7 @@ export const TextInputMixin = {
     };
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
       this.setState({ autocompleteItems: nextProps.autocompleteItems });
     }

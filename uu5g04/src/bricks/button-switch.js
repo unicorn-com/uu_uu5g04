@@ -72,7 +72,7 @@ export const ButtonSwitch = UU5.Common.VisualComponent.create({
     };
   },
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     if (this.props.bgStyle) {
       UU5.Common.Tools.warning('Property "bgStyle" is deprecated! Use "props" property instead.');
     }
@@ -82,7 +82,7 @@ export const ButtonSwitch = UU5.Common.VisualComponent.create({
     }
   },
 
-  componentWillReceiveProps: function(nextProps) {
+  UNSAFE_componentWillReceiveProps: function(nextProps) {
     if (nextProps.controlled) {
       this.setState({ switchedOn: nextProps.switchedOn });
     }

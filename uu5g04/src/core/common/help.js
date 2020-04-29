@@ -66,7 +66,7 @@ export const Help = VisualComponent.create({
     this._loadLibrary();
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.tagName !== this.props.tagName) {
       this._loadLibrary(nextProps);
     }

@@ -23,7 +23,7 @@ describe("UU5.Form.IconPicker intreface testing", () => {
     expect(wrapper.instance().state.open).toBeFalsy();
     const returnValue = wrapper.instance().toggle();
     wrapper.update();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().state.open).toBeTruthy();
     wrapper.instance().toggle(); //close component
     wrapper.update();
@@ -40,7 +40,7 @@ describe("UU5.Form.IconPicker intreface testing", () => {
     const returnValue = wrapper.instance().close(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().state.open).toBeFalsy();
   });
 
@@ -54,7 +54,7 @@ describe("UU5.Form.IconPicker intreface testing", () => {
     const returnValue = wrapper.instance().close(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().state.open).toBeFalsy();
   });
 
@@ -97,7 +97,7 @@ describe("UU5.Forms.IconPicker interface", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().getValue()).toMatch("mdi-check");
     expect(wrapper).toMatchSnapshot();
   });
@@ -119,7 +119,7 @@ describe("UU5.Forms.IconPicker interface", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().getMessage()).toEqual("New Message");
     expect(wrapper).toMatchSnapshot();
   });
@@ -145,7 +145,7 @@ describe("UU5.Forms.IconPicker interface", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().getFeedback()).toEqual("success");
     expect(wrapper.instance().getMessage()).toEqual("This is valid message.");
     expect(wrapper.instance().getValue()).toEqual("mdi-check");
@@ -173,7 +173,7 @@ describe("UU5.Forms.IconPicker interface", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().getFeedback()).toEqual("initial");
     expect(wrapper.instance().getValue()).toEqual("");
     expect(wrapper.instance().getMessage()).toEqual("Initial Message");
@@ -203,7 +203,7 @@ describe("UU5.Forms.IconPicker interface", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().isLoading()).toBeTruthy();
     expect(wrapper.instance().getMessage()).toEqual("Loading messsagess");
     expect(wrapper.instance().getValue()).toEqual("mdi-check");
@@ -227,7 +227,7 @@ describe("UU5.Forms.IconPicker interface", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().getFeedback()).toEqual("success");
     expect(wrapper.instance().getMessage()).toEqual("This is success message");
     expect(wrapper.instance().getValue()).toEqual("mdi-check");
@@ -243,7 +243,7 @@ describe("UU5.Forms.IconPicker interface", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().getFeedback()).toEqual("success");
     expect(wrapper.instance().getMessage()).toEqual("This is success message");
     expect(wrapper.instance().getValue()).toEqual("mdi-check");
@@ -264,7 +264,7 @@ describe("UU5.Forms.IconPicker interface", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().getFeedback()).toEqual("warning");
     expect(wrapper.instance().getMessage()).toEqual("This is warning message");
     expect(wrapper.instance().getValue()).toEqual("mdi-check");
@@ -292,7 +292,7 @@ describe("UU5.Forms.IconPicker interface", () => {
     const setRetVal = wrapper.instance().setFeedback("success", "success message", "mdi-check", mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
-    expect(setRetVal).toBe(wrapper.instance());
+    expect(setRetVal === wrapper.instance()).toBe(true);
     expect(wrapper.instance().isWarning()).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
   });
@@ -312,7 +312,7 @@ describe("UU5.Forms.IconPicker interface", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().isWarning()).toBeFalsy();
     expect(wrapper.instance().isSuccess()).toBeFalsy();
     expect(wrapper.instance().isInitial()).toBeFalsy();
@@ -342,7 +342,7 @@ describe("UU5.Forms.IconPicker interface", () => {
     const setRetVal = wrapper.instance().setFeedback("success", "success message", "mdi-check", mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
-    expect(setRetVal).toBe(wrapper.instance());
+    expect(setRetVal === wrapper.instance()).toBe(true);
     expect(wrapper.instance().isError()).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
   });
@@ -365,7 +365,7 @@ describe("UU5.Forms.IconPicker interface", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(3);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().getValue()).toEqual("");
     expect(wrapper.instance().getFeedback()).toEqual("initial");
     expect(wrapper.instance().getMessage()).toBe(null);
@@ -404,7 +404,7 @@ describe("UU5.Forms.IconPicker interface", () => {
       mockFunc
     );
     wrapper.update();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(mockFunc).toBeCalled();
     expect(wrapper.instance().state.value).toEqual("wrong value");
     expect(wrapper.instance().state.feedback).toEqual("error");
@@ -420,7 +420,7 @@ describe("UU5.Forms.IconPicker interface", () => {
     const returnValue = wrapper.instance().readOnly(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().isReadOnly()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
@@ -437,7 +437,7 @@ describe("UU5.Forms.IconPicker interface", () => {
     const returnValue = wrapper.instance().setEditableValue(true, mockFunc);
     wrapper.update();
     expect(mockFunc).toHaveBeenCalledTimes(3);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().isReadOnly()).toBeFalsy();
     expect(wrapper.instance().editable(mockFunc)).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
@@ -456,7 +456,7 @@ describe("UU5.Forms.IconPicker interface", () => {
     const returnValue = wrapper.instance().setEditableValue(false, mockFunc);
     wrapper.update();
     expect(mockFunc).toHaveBeenCalledTimes(3);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().isReadOnly()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
     expect(mockFunc).toHaveBeenCalledTimes(3);
@@ -471,7 +471,7 @@ describe("UU5.Forms.IconPicker interface", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().isReadOnly()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
@@ -490,7 +490,7 @@ describe("UU5.Forms.IconPicker interface", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(2);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().isReadOnly()).toBeFalsy();
     expect(wrapper.instance().state.readOnly).toBeFalsy();
     expect(wrapper).toMatchSnapshot();

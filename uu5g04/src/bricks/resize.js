@@ -70,7 +70,7 @@ export const Resize = UU5.Common.VisualComponent.create({
     };
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (this.props.controlled) {
       if (this.state.height !== nextProps.height) {
         this.setState({ height: nextProps.height });

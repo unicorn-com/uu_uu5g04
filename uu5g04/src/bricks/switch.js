@@ -76,7 +76,7 @@ export const Switch = UU5.Common.VisualComponent.create({
     };
   },
   //@@viewOff:reactLifeCycle
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
       this.setState({ switchedOn: nextProps.switchedOn });
     }

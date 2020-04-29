@@ -11,6 +11,7 @@
  * at the email: info@unicorn.com.
  */
 
+import ReactDOM from "react-dom";
 import Tools from "./tools.js";
 import Lsi from "../utils/lsi.js";
 import ScreenSize from "../utils/screen-size.js";
@@ -94,14 +95,16 @@ export class EventListener {
   }
 
   triggerEvent() {
-    // i.e. arguments = ['lsi', 'cs-cz']
-    let [key, ...params] = arguments;
-    if (key === "screenSize") ScreenSize.setSize(...params);
-    else {
-      for (let id in this._listeners[key]) {
-        this._listeners[key][id].apply(null, params);
+    ReactDOM.unstable_batchedUpdates(() => {
+      // i.e. arguments = ['lsi', 'cs-cz']
+      let [key, ...params] = arguments;
+      if (key === "screenSize") ScreenSize.setSize(...params);
+      else {
+        for (let id in this._listeners[key]) {
+          this._listeners[key][id].apply(null, params);
+        }
       }
-    }
+    });
     return this;
   }
 

@@ -87,7 +87,7 @@ export const Loader = Component.create({
     if (this._shouldLoad()) this._initLoading();
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (
       this._shouldLoad(nextProps) &&
       (this.props.onLoad !== nextProps.onLoad || this.props.uri !== nextProps.uri || this.props.data !== nextProps.data)

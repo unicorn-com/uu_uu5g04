@@ -42,7 +42,7 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
     expect(wrapper.instance().getAlerts()).not.toBeNull();
     expect(mockFunc).toBeCalled();
     // test of returned value - in this case instance of tested component
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().getAlerts()).toHaveLength(1);
     //changes: add alert to stack is in the snapshot.
     //The second snapshot contain id and content of alert.
@@ -86,8 +86,8 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(2);
     // test of returned value - in this case instance of tested component
-    expect(returnValue).toBe(wrapper.instance());
-    expect(returnValue2).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
+    expect(returnValue2 === wrapper.instance()).toBe(true);
     //changes: add alert to stack is in the snapshot.
     expect(wrapper).toMatchSnapshot();
   });
@@ -117,7 +117,7 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     // test of returned value - in this case instance of tested component
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     //changes: add alert to stack is in the snapshot.
     expect(wrapper).toMatchSnapshot();
   });
@@ -143,7 +143,7 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     // test of returned value - in this case instance of tested component
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     //changes: add alert to stack is in the snapshot.
     expect(wrapper).toMatchSnapshot();
   });
@@ -183,7 +183,7 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(2);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -208,7 +208,7 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(2);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper).toMatchSnapshot(); //After calling removeAlert is alertStack empty in the snapshot
     let getValue = wrapper.instance().getAlerts(mockFunc);
     //After calling removeAlerts return getAlerts empty array.
@@ -233,7 +233,7 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
     expect(wrapper).toMatchSnapshot();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     const retVal = wrapper.instance().clearAlerts(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();

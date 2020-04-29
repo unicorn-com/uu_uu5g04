@@ -106,7 +106,7 @@ export const Number = Context.withContext(
     //@@viewOff:getDefaultProps
 
     //@@viewOn:reactLifeCycle
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
       this._isNaN = false;
       let value = this.state.value;
 
@@ -139,7 +139,7 @@ export const Number = Context.withContext(
       return this;
     },
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
       if (this.props.controlled) {
         let result;
 
@@ -907,7 +907,7 @@ export const Number = Context.withContext(
 
     _checkRequiredValue({ value }) {
       // check required value as a string, number 0 is filled value
-      if (this.props.valueType === "number" && isNaN(value)) {
+      if (this.props.valueType === "number" && isNaN(value) && this.props.required) {
         // manual validation ... there is no possible
         this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessage"), value);
         return false;

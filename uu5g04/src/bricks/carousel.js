@@ -95,7 +95,7 @@ export const Carousel = UU5.Common.VisualComponent.create({
     };
   },
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     const children = this.getChildren();
     this.setState({
       children: children,
@@ -113,7 +113,7 @@ export const Carousel = UU5.Common.VisualComponent.create({
     }
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.interval > 0 && !this._autoChange) {
       this._autoChange = true;
       this._startAutoSlide();

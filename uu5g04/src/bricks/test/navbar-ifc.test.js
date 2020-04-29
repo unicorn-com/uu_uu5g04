@@ -69,7 +69,7 @@ describe(`UU5.Bricks.NavBar interface testing`, () => {
     expect(wrapper.instance().state.expanded).toBeTruthy();
     expect(wrapper.instance().isOpen()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(mockFunc).toHaveBeenCalledTimes(1);
   });
 
@@ -95,7 +95,7 @@ describe(`UU5.Bricks.NavBar interface testing`, () => {
     expect(wrapper.instance().state.expanded).toBeFalsy();
     expect(wrapper.instance().isOpen()).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(mockFunc).toHaveBeenCalledTimes(1);
   });
 
@@ -120,7 +120,7 @@ describe(`UU5.Bricks.NavBar interface testing`, () => {
     wrapper.update();
     expect(wrapper.instance().isOpen()).toBeTruthy();
     expect(wrapper.instance().state.expanded).toBeTruthy();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper).toMatchSnapshot();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(mockFunc).toBeCalled();

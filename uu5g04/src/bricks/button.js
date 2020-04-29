@@ -295,13 +295,13 @@ export const Button = UU5.Common.VisualComponent.create({
     };
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
       this.setState({ pressed: nextProps.pressed });
     }
   },
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     if (this.props.bgStyle === "inverted") {
       UU5.Common.Tools.warning('Value "inverted" of property "bgStyle" is deprecated! Use "outline" instead.');
     }

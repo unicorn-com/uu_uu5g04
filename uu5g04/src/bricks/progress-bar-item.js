@@ -74,7 +74,7 @@ const ProgressBarItem = UU5.Common.VisualComponent.create({
     };
   },
 
-  componentWillMount: function() {
+  UNSAFE_componentWillMount: function() {
     let parent = this.getParent();
 
     if (parent) {
@@ -88,7 +88,7 @@ const ProgressBarItem = UU5.Common.VisualComponent.create({
     }
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
       this.setState({
         progress: nextProps.progress,

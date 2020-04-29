@@ -68,7 +68,7 @@ export const Icon = UU5.Common.VisualComponent.create({
     };
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     let { preloading, response } = this._preloadImage(nextProps);
     this.setState({
       preloading,

@@ -126,13 +126,13 @@ export const ContentMixin = {
     return state;
   },
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     if (this.props.mode) {
       this.showWarning('The property "mode" is deprecated!');
     }
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
       nextProps.dynamic && this.setChildren(this.buildChildren(nextProps), nextProps);
       if (nextProps.mode !== this.props.mode) {

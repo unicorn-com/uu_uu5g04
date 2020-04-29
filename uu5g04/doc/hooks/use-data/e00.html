@@ -57,7 +57,7 @@
   import UU5, { createVisualComponent } from "uu5g04";
   import "uu5g04-bricks";
   import "uu5g04-forms";
-  import { useData } from "uu5g04-hooks";
+  import { useData, useEffect } from "uu5g04-hooks";
 
   let error = false;
   let localStorage = {};
@@ -128,8 +128,12 @@
       onLoad: Calls.load,
       onUpdate: Calls.update
     });
-    let { viewState, errorState, error, syncData, asyncData, handleLoad, handleUpdate } = dataValues;
+    let { viewState, errorState, error, syncData, asyncData, operations, handleLoad, handleUpdate } = dataValues;
     let data = pessimistic ? asyncData : syncData;
+
+    useEffect(() => {
+      console.table(operations, ["id", "type", "state", "result", "args"]);
+    }, [operations]);
 
     return (
       <UU5.Bricks.Div>

@@ -33,6 +33,14 @@ if (window.UU5 && window.UU5.Environment && typeof window.UU5.Environment.basePa
   uu5BaseUrl = uri ? uri.replace(/^(.*\/).*/, "$1") : "./";
 }
 
+let cdnBaseUri;
+if (window.UU5 && window.UU5.Environment && typeof window.UU5.Environment.cdnBaseUri === "string") {
+  cdnBaseUri = window.UU5.Environment.cdnBaseUri;
+  delete window.UU5.Environment.cdnBaseUri; // remove as we'll possibly update the value a bit and startup-environment.js then merges the environment from global (original) to our; // TODO Do full merging in this file.
+}
+if (!cdnBaseUri) cdnBaseUri = "https://cdn.plus4u.net/";
+else if (cdnBaseUri.charAt(cdnBaseUri.length - 1) !== "/") cdnBaseUri += "/";
+
 export const Environment = {
   name: process.env.NAME,
   mode: process.env.NODE_ENV,
@@ -258,9 +266,10 @@ export const Environment = {
     "https://uuapp.plus4u.net/uu-applibraryregistry-maing01/fe96c133c895434bbd4d5b24831483f3/library/get", //PROD
   // COMPONENT_REGISTRY_URL: 'https://uuos9.plus4u.net/uu-uu5componentregistryg01-main/84723967990075193-eb48e82fb0ab409b9dd2fe4f956226dc/getLibrary', //DEV
   STATISTICS_BASE_PATH: "https://uuapp.plus4u.net/uu-applibraryregistry-statsg01/8fc27ec054b340cb98c9f10789bd4f63/",
-  CDN_URL: "https://cdn.plus4u.net",
-  COMPONENT_RENDER_UVE: "https://uuapp.plus4u.net/uu-plus4ugo-maing01/f34b62a867db4bd89490534bb26451ad/component/render",
-  fontCssUrl: "https://cdn.plus4u.net/libs/clearsans/2.0.0/fonts/clear-sans.min.css",
+  CDN_URL: cdnBaseUri.replace(/^(.+?)\/+$/, "$1"), // for backward compatibility only
+  COMPONENT_RENDER_UVE:
+    "https://uuapp.plus4u.net/uu-plus4ugo-maing01/f34b62a867db4bd89490534bb26451ad/component/render",
+  fontCssUrl: cdnBaseUri + "libs/clearsans/2.0.0/fonts/clear-sans.min.css",
   resizeInterval: 150,
   holdTimeout: 500,
   holdDiff: 20,
@@ -489,7 +498,8 @@ export const Environment = {
   library: {},
   useLibraryRegistry: true,
   basePathAttrName: "data-uu-app-base",
-  trustedDomainRegexp: String.raw`^https://([^./]*[.])?plus4u[.]net(?=[:/]|$)` // it's string so that app can re-configure it via JSON during app deploy
+  trustedDomainRegexp: String.raw`^https://([^./]*[.])?plus4u[.]net(?=[:/]|$)`, // it's string so that app can re-configure it via JSON during app deploy
+  allowStatistics: true
 };
 
 // TODO: backward compatibility
@@ -500,14 +510,15 @@ Environment.TimeManager = new TimeManager();
 
 /********** ICONS start **********/
 Environment.iconLibraries = {
-  mdi: "https://cdn.plus4u.net/libs/materialdesignicons/3.5.95/css/materialdesignicons.min.css",
-  glyphicon: "https://cdn.plus4u.net/libs/bootstrap/3.3.7/fonts/glyphicons.min.css",
-  fa: "https://cdn.plus4u.net/libs/font-awsome/4.7.0/css/font-awesome.min.css",
-  uu5: "https://cdn.plus4u.net/uu-uu5g04-icons/1.0.0/uu5g04_icons.min.css",
-  plus4u: "https://cdn.plus4u.net/plus4u-iconsg01/1.0.0/plus4u_iconsg01.min.css",
-  plus4u5: "https://cdn.plus4u.net/uu-plus4u5g01-icons/1.0.0/uu_plus4u5g01_icons.min.css",
-  uubml: "https://cdn.plus4u.net/uu-uubmldrawg03-icons/1.0.0/uubmldrawg03_icons.min.css",
-  uubmlicon: "https://uuappg01-eu-w-1.plus4u.net/uu-uubmldraw-stencilcatalogueg01/c168bd044ce044d48ba284c89eeb573b/stencil/getCss?code="
+  mdi: cdnBaseUri + "libs/materialdesignicons/3.5.95/css/materialdesignicons.min.css",
+  glyphicon: cdnBaseUri + "libs/bootstrap/3.3.7/fonts/glyphicons.min.css",
+  fa: cdnBaseUri + "libs/font-awsome/4.7.0/css/font-awesome.min.css",
+  uu5: cdnBaseUri + "uu-uu5g04-icons/1.0.0/uu5g04_icons.min.css",
+  plus4u: cdnBaseUri + "plus4u-iconsg01/1.0.0/plus4u_iconsg01.min.css",
+  plus4u5: cdnBaseUri + "uu-plus4u5g01-icons/1.0.0/uu_plus4u5g01_icons.min.css",
+  uubml: cdnBaseUri + "uu-uubmldrawg03-icons/1.0.0/uubmldrawg03_icons.min.css",
+  uubmlicon:
+    "https://uuappg01-eu-w-1.plus4u.net/uu-uubmldraw-stencilcatalogueg01/c168bd044ce044d48ba284c89eeb573b/stencil/getCss?code="
 };
 
 Environment.IconManager = new IconManager(Environment.iconLibraries);
@@ -539,10 +550,9 @@ Environment.getLibrary = libraryName => {
   return library;
 };
 
-Environment._statistics = true;
-Environment.disableStatistics = () => (Environment._statistics = false);
-Environment.enableStatistics = () => (Environment._statistics = true);
-Environment.isStatistics = () => Environment._statistics;
+Environment.disableStatistics = () => (Environment.allowStatistics = false);
+Environment.enableStatistics = () => (Environment.allowStatistics = true);
+Environment.isStatistics = () => Environment.allowStatistics;
 
 const statistics = Statistics(Environment.STATISTICS_BASE_PATH, Environment.isStatistics);
 
@@ -941,5 +951,6 @@ Environment.numberOptions = {
 };
 
 Environment._fixedOffset = 0; // Height of the biggest permanently fixed element (usually Heading)
+if (process.env.NODE_ENV === "test") Environment._allowTestContext = false; // whether to allow using of context in tests; changeable per test file (e.g. when testing LsiMixin with context which is by default turned off to make shallow snapshots usable)
 
 export default Environment;

@@ -129,7 +129,7 @@ export const TouchIcon = UU5.Common.VisualComponent.create({
   getInitialState() {
     return this._getState();
   },
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (this.props.component !== nextProps.component) {
       this.setState(this._getState(nextProps));
     }

@@ -213,11 +213,12 @@ export const LinkUuPlus4U5 = Factory.createLink(
   docKitUrl + "78462435-b858ae7d7f8041249f4830277b674990/book",
   "uuPlus4U5"
 );
-export const LinkUu5LibraryRegistry = Factory.createLink(
-  "LinkUu5LibraryRegistry",
-  docKitUrl + "78462435-215c1674232d4634b367f20ad94349c0/book",
-  "uu5LibraryRegistry"
+export const LinkUuAppLibraryRegistry = Factory.createLink(
+  "LinkUuAppLibraryRegistry",
+  docKitUrl + "d7a56a17285748f7a5a743898958af23/book",
+  "uuAppLibraryRegistry"
 );
+export const LinkUu5LibraryRegistry = LinkUuAppLibraryRegistry;
 export const LinkUu5ComponentRegistry = LinkUu5LibraryRegistry;
 export const LinkUu5CodeKit = Factory.createLink(
   "Uu5CodeKit",

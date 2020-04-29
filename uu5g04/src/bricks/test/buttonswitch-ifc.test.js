@@ -49,7 +49,7 @@ describe(`UU5.Bricks.ButtonSwitch interface testing`, () => {
     expect(wrapper.instance().isSwitchOff()).toBeFalsy();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
   });
 
   it("switchOff(setStateCallBack)", () => {
@@ -84,7 +84,7 @@ describe(`UU5.Bricks.ButtonSwitch interface testing`, () => {
     expect(wrapper.instance().isSwitchOff()).toBeTruthy();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
   });
 
   it("toggle(setStateCallBack) set off to on", () => {
@@ -119,7 +119,7 @@ describe(`UU5.Bricks.ButtonSwitch interface testing`, () => {
     expect(wrapper.instance().isSwitchOff()).toBeFalsy();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
   });
 
   it("toggle(setStateCallBack) set on to off", () => {
@@ -154,7 +154,7 @@ describe(`UU5.Bricks.ButtonSwitch interface testing`, () => {
     expect(wrapper.instance().isSwitchOff()).toBeTruthy();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
   });
 
   it("isSwitchOn(boolean)", () => {

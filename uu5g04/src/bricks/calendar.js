@@ -19,6 +19,8 @@ import Css from "./internal/css.js";
 import "./calendar.less";
 //@@viewOff:imports
 
+const romanNumbers = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"];
+
 export const Calendar = UU5.Common.LsiMixin.withContext(
   UU5.Common.VisualComponent.create({
     displayName: "Calendar", // for backward compatibility (test snapshots)
@@ -135,7 +137,8 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
       onChange: UU5.PropTypes.func,
       onViewChange: UU5.PropTypes.func,
       onNextSelection: UU5.PropTypes.func,
-      onPrevSelection: UU5.PropTypes.func
+      onPrevSelection: UU5.PropTypes.func,
+      monthNameFormat: UU5.PropTypes.oneOf(["abbr", "roman"])
     },
     //@@viewOff:propTypes
 
@@ -157,7 +160,8 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
         hideWeekNumber: false,
         hidePrevSelection: false,
         hideNextSelection: false,
-        hideOtherSections: false
+        hideOtherSections: false,
+        monthNameFormat: "roman"
       };
     },
     //@@viewOff:getDefaultProps
@@ -190,7 +194,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
       return state;
     },
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
       if (nextProps.controlled) {
         let value = Array.isArray(nextProps.value)
           ? [this._parseDate(nextProps.value[0]), this._parseDate(nextProps.value[1])]
@@ -888,13 +892,23 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
           }
         }
 
+        let nameOfMonth;
+
+        let title = this.getLsiValue("monthNames")[i];
+
+        if (this.props.monthNameFormat === "abbr") {
+          nameOfMonth = this.getLsiValue("monthNamesShort")[i];
+        } else {
+          nameOfMonth = romanNumbers[i];
+        }
+
         tds.push(
           <td className={cellClassName} key={i}>
-            <div className={innerWrapperClassName} title={name} onClick={this.isDisabled() ? null : onClick}>
+            <div className={innerWrapperClassName} title={title} onClick={this.isDisabled() ? null : onClick}>
               {this.state.year === today.getFullYear() && i === today.getMonth() ? (
-                <span className={contentWrapperClassName}>{name}</span>
+                <span className={contentWrapperClassName}>{nameOfMonth}</span>
               ) : (
-                name
+                <span>{nameOfMonth}</span>
               )}
             </div>
           </td>
@@ -1127,11 +1141,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
             <th
               className={headCellClassName}
               colSpan={colSpan}
-              onClick={
-                this.state.view == "years" || this.isDisabled()
-                  ? null
-                  : this._headerClick
-              }
+              onClick={this.state.view == "years" || this.isDisabled() ? null : this._headerClick}
             >
               {this._getHeaderText()}
             </th>

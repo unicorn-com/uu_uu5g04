@@ -24,11 +24,7 @@ const INITIAL_DATA1 = {
   }
 };
 const LOAD_DATA1 = {
-  itemList: [
-    { id: "id1", value: "a" },
-    { id: "id2", value: "b" },
-    { id: "id3", value: "c" }
-  ],
+  itemList: [{ id: "id1", value: "a" }, { id: "id2", value: "b" }, { id: "id3", value: "c" }],
   pageInfo: {
     pageIndex: 0,
     pageSize: 3,
@@ -36,10 +32,7 @@ const LOAD_DATA1 = {
   }
 };
 const LOAD_DATA2 = {
-  itemList: [
-    { id: "idA", value: "1" },
-    { id: "idB", value: "2" }
-  ],
+  itemList: [{ id: "idA", value: "1" }, { id: "idB", value: "2" }],
   pageInfo: {
     pageIndex: 2,
     pageSize: 3,

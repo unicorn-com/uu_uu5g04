@@ -3033,13 +3033,37 @@ exports[`UU5.Bricks.Tabs render from uu5string UU5.Bricks.Tabs active first tab 
   >
     
       
-    <Component />
+    <tabs-item
+      header="Tab 1"
+      id="uuID6"
+      key="uuID6"
+    >
+      
+      First tab
+      
+    </tabs-item>
     
       
-    <Component />
+    <tabs-item
+      header="Tab 2"
+      id="uuID7"
+      key="uuID7"
+    >
+      
+      Second tab
+      
+    </tabs-item>
     
       
-    <Component />
+    <tabs-item
+      header="Tab 3"
+      id="uuID8"
+      key="uuID8"
+    >
+      
+      Third tab
+      
+    </tabs-item>
     
       
   </Tabs>

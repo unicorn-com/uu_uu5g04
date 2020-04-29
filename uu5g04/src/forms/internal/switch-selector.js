@@ -86,7 +86,7 @@ export const SwitchSelector = UU5.Bricks.Resize.withResize(
         this.setState(() => ({ displaySelect: this._isOverflowing() }));
       },
 
-      componentWillReceiveProps(nextProps) {
+      UNSAFE_componentWillReceiveProps(nextProps) {
         if (nextProps.controlled) {
           let value;
 

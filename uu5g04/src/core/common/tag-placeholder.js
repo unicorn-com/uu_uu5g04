@@ -16,7 +16,6 @@ import React from "react";
 import ns from "./common-ns.js";
 import PropTypes from "prop-types";
 import BaseMixin from "./base-mixin.js";
-import ElementaryMixin from "./elementary-mixin.js";
 import Tools from "./tools.js";
 import Environment from "../environment/environment.js";
 import NotFoundTag from "./not-found-tag.js";
@@ -31,35 +30,40 @@ let importLibraryCache = {};
 export const TagPlaceholder = VisualComponent.create({
   displayName: "TagPlaceholder", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
-  mixins: [BaseMixin, ElementaryMixin],
+  mixins: [BaseMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
   statics: {
     tagName: ns.name("TagPlaceholder"),
     classNames: {
-      main: ns.css("tag-placeholder")
+      main: ns.css("tag-placeholder"),
     },
     errors: {
-      serverError: "Unexpected error: %s."
+      serverError: "Unexpected error: %s.",
     },
     defaults: {
       regexpVersion: /\/\d*\.\d*\.\d*(?:-[a-z]+\d+(?:\.\d){0,2})?\//g,
       regexpSlash: /\//g,
-      regexpDigit: /^\d/g
+      regexpDigit: /^\d/g,
     },
     opt: {
-      hoc: true
-    }
+      hoc: true,
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    tagName: PropTypes.string,
-    props: PropTypes.object,
-    content: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
-    error: PropTypes.oneOfType([PropTypes.func, PropTypes.string, PropTypes.element])
+    tagName: PropTypes.string, // deprecated
+    props: PropTypes.object, // deprecated
+    content: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]), // deprecated
+    error: PropTypes.oneOfType([PropTypes.func, PropTypes.string, PropTypes.element]), // deprecated
+    _tagName: PropTypes.string,
+    _props: PropTypes.object,
+    _content: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
+    _error: PropTypes.oneOfType([PropTypes.func, PropTypes.string, PropTypes.element]),
+    _fromFindComponent: PropTypes.bool,
   },
   //@@viewOff:propTypes
   //@@viewOn:getDefaultProps
@@ -68,7 +72,12 @@ export const TagPlaceholder = VisualComponent.create({
       tagName: null,
       props: null,
       content: null,
-      error: null
+      error: null,
+      _tagName: null,
+      _props: null,
+      _content: null,
+      _error: null,
+      _fromFindComponent: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -76,17 +85,21 @@ export const TagPlaceholder = VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
-      component: null
+      component: null,
+      props: null,
     };
   },
 
   componentDidMount() {
+    if (!this.props._fromFindComponent) {
+      Tools.warning('Component "TagPlaceholder" is deprecated! Use "UU5.Common.Tools.findComponent()" method instead.');
+    }
     this._findLib();
   },
 
-  componentWillReceiveProps(nextProps) {
-    let component = nextProps.tagName && Tools.checkTag(nextProps.tagName);
-    component ? this._setComponent(component, nextProps.props) : this._findLib(nextProps);
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    let component = this._get("tagName", nextProps) && Tools.checkTag(this._get("tagName", nextProps));
+    component ? this._setComponent(component, this._get("props", nextProps)) : this._findLib(nextProps);
 
     return this;
   },
@@ -103,9 +116,13 @@ export const TagPlaceholder = VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
+  _get(key, props = this.props) {
+    return props._fromFindComponent ? props["_" + key] : props[key];
+  },
+
   _findLib(props) {
     props = props || this.props;
-    let tagNameArr = props.tagName.split(".");
+    let tagNameArr = this._get("tagName", props).split(".");
     let libraryName = tagNameArr[0] + "." + tagNameArr[1];
     let libraryReady = (exports, error) => {
       if (error) {
@@ -113,12 +130,12 @@ export const TagPlaceholder = VisualComponent.create({
         if (!library || !library.error) {
           this.showError("serverError", error, {
             component: this.getTagName(),
-            searchedTag: props.tagName,
-            library: libraryName
+            searchedTag: this._get("tagName", props),
+            library: libraryName,
           });
         }
         this._setLibError(libraryName);
-        this._setComponent(props.tagName, props.props);
+        this._setComponent(this._get("tagName", props), this._get("props", props));
       } else {
         // TODO We should take the component from exports instead of assuming that the library makes it available in a global variable.
         // let parts = libraryName.split(".");
@@ -129,7 +146,7 @@ export const TagPlaceholder = VisualComponent.create({
         // } else {
         //   parent[lastPart] = exports;
         // }
-        this._setComponent(props.tagName, props.props);
+        this._setComponent(this._get("tagName", props), this._get("props", props));
       }
     };
 
@@ -147,7 +164,7 @@ export const TagPlaceholder = VisualComponent.create({
   _getSourceUrl(library) {
     let result;
     if (library && library.name && library.version) {
-      let sourceName = library.name.replace(/^uu_uu/, "uu"); // some libraries include duplicit uu (vendor) in their registration (uu_uu5g04), most don't
+      let sourceName = library.name.replace(/^uu_uu5/, "uu5"); // some libraries include duplicit uu (vendor) in their registration (uu_uu5g04), most don't
       let baseName = sourceName.replace(/-.*/, ""); // remove -bricks, ... suffix
       if (baseName.indexOf("_") === -1 && baseName.startsWith("uu")) baseName = "uu_" + baseName; // baseName needs duplicit uu (vendor)
       baseName = baseName.replace(/_/g, "-");
@@ -172,17 +189,17 @@ export const TagPlaceholder = VisualComponent.create({
       if (!component) {
         component = NotFoundTag;
         props = Tools.merge({}, props);
-        props.tagName = props.tagName || tagName;
-        props.error = this.props.error;
+        props.tagName = this._get("tagName", props) || tagName;
+        props.error = this._get("error", this.props);
       }
 
-      component && this.setState({ component: component, props: props });
+      component && this.setState({ component, props });
     }
     return this;
   },
 
   _setNotFound(tagCalls) {
-    tagCalls.forEach(fce => fce());
+    tagCalls.forEach((fce) => fce());
     return this;
   },
 
@@ -216,8 +233,9 @@ export const TagPlaceholder = VisualComponent.create({
     let configuredUrl;
     let configuredVersion;
     let libConf = Environment.getLibrary(code);
-    if (runtimeLibraries[name]) configuredVersion = runtimeLibraries[name].version;
-    else if (libConf && libConf.version) configuredVersion = libConf.version;
+    if (runtimeLibraries[name]) {
+      configuredVersion = runtimeLibraries[name].version;
+    } else if (libConf && libConf.version) configuredVersion = libConf.version;
     if (window.SystemJS) {
       let systemUrl = window.SystemJS.normalizeSync(name);
       configuredUrl = !systemUrl.endsWith(name) ? systemUrl : null;
@@ -269,12 +287,14 @@ export const TagPlaceholder = VisualComponent.create({
         if (!dependencyOf) version = configuredVersion; // force compatibility if loading directly a submodule (if validating as a dependency of a normal module then configure too but still check for compatibility - which should pass as the deps should be using major version only)
         if (!configuredUrl) {
           // if the lib URL has been already configured, we'll assume it's already correct (if we changed it and the lib was already loaded then it would get re-imported from this new URL & re-executed)
-          if (usedUrl)
+          if (usedUrl) {
             configuredUrl = usedUrl.replace(
               /\/\d+\.\d+\.\d+[^/]*/,
-              m => "/" + this._getUrlVersionFromLogical(configuredVersion, usedUrl)
+              (m) => "/" + this._getUrlVersionFromLogical(configuredVersion, usedUrl)
             );
-          else configuredUrl = this._getSourceUrl({ name, version: this._getUrlVersionFromLogical(configuredVersion) });
+          } else {
+            configuredUrl = this._getSourceUrl({ name, version: this._getUrlVersionFromLogical(configuredVersion) });
+          }
           if (window.SystemJS) window.SystemJS.config({ paths: { [name]: configuredUrl } });
         }
       }
@@ -308,17 +328,17 @@ export const TagPlaceholder = VisualComponent.create({
         `Page contains ${name} in version ${configuredVersion.replace(
           /^(\d+)\.999\.0$/,
           "latest $1.x"
-        )}, dynamically-loaded component ${this.props.tagName} requested to use ${
+        )}, dynamically-loaded component ${this._get("tagName")} requested to use ${
           dependencyOf ? "library " + dependencyOf + " requiring dependency " + name + " in " : ""
         }OLDER version ${version}. ` +
           "The already-present (newer) version of the library / dependency will be used, i.e. request for older version is skipped. " +
           "The library should update its dependencies to newer versions to prevent this error.",
         {
-          tag: this.props.tagName,
+          tag: this._get("tagName"),
           libraryName: dependencyOf || name,
           dependencyName: dependencyOf ? name : null,
           requestedVersion: version,
-          inPageVersion: configuredVersion.replace(/^(\d+)\.999\.0$/, "latest $1.x")
+          inPageVersion: configuredVersion.replace(/^(\d+)\.999\.0$/, "latest $1.x"),
         }
       );
       version = configuredVersion;
@@ -340,18 +360,18 @@ export const TagPlaceholder = VisualComponent.create({
           `Page contains ${name} in version ${configuredVersion.replace(
             /^(\d+)\.999\.0$/,
             "latest $1.x"
-          )}, dynamically-loaded component ${this.props.tagName} requested to use ${
+          )}, dynamically-loaded component ${this._get("tagName")} requested to use ${
             dependencyOf ? "library " + dependencyOf + " requiring dependency " + name + " in " : ""
           }NEWER version ${version}. ` +
             "The already-present (older) version of the library / dependency will be used, i.e. request for newer version is skipped. Application should " +
             "update its dependencies configuration to use newest versions or it should restrict versions of dynamically loaded libraries " +
             "using UU5.Environment.addLibrary API.",
           {
-            tag: this.props.tagName,
+            tag: this._get("tagName"),
             libraryName: dependencyOf || name,
             dependencyName: dependencyOf ? name : null,
             requestedVersion: version,
-            inPageVersion: configuredVersion.replace(/^(\d+)\.999\.0$/, "latest $1.x")
+            inPageVersion: configuredVersion.replace(/^(\d+)\.999\.0$/, "latest $1.x"),
           }
         );
         compatible = true;
@@ -366,18 +386,18 @@ export const TagPlaceholder = VisualComponent.create({
           `Page contains ${name} in version ${configuredVersion.replace(
             /^(\d+)\.999\.0$/,
             "latest $1.x"
-          )}, dynamically-loaded component ${this.props.tagName} requested to use ${
+          )}, dynamically-loaded component ${this._get("tagName")} requested to use ${
             dependencyOf ? "library " + dependencyOf + " requiring dependency " + name + " in " : ""
           }NEWER version ${version}. ` +
             "Library / dependency in NEWER version will be loaded and will overwrite already present one. Application should " +
             "update its dependencies configuration to use newest versions or it should restrict versions of dynamically loaded libraries " +
             "using UU5.Environment.addLibrary API.",
           {
-            tag: this.props.tagName,
+            tag: this._get("tagName"),
             libraryName: dependencyOf || name,
             dependencyName: dependencyOf ? name : null,
             requestedVersion: version,
-            inPageVersion: configuredVersion.replace(/^(\d+)\.999\.0$/, "latest $1.x")
+            inPageVersion: configuredVersion.replace(/^(\d+)\.999\.0$/, "latest $1.x"),
           }
         );
         compatible = true;
@@ -392,18 +412,18 @@ export const TagPlaceholder = VisualComponent.create({
         `Page contains ${name} in version ${configuredVersion.replace(
           /^(\d+)\.999\.0$/,
           "latest $1.x"
-        )}, dynamically-loaded component ${this.props.tagName} requested to use ${
+        )}, dynamically-loaded component ${this._get("tagName")} requested to use ${
           dependencyOf ? "library " + dependencyOf + " requiring dependency " + name + " in " : ""
         }NEWER version ${version}. ` +
           "The already-present (older) version of the library / dependency will be used, i.e. request for newer version is skipped. Application should " +
           "update its dependencies configuration to use newest versions or it should restrict versions of dynamically loaded libraries " +
           "using UU5.Environment.addLibrary API.",
         {
-          tag: this.props.tagName,
+          tag: this._get("tagName"),
           libraryName: dependencyOf || name,
           dependencyName: dependencyOf ? name : null,
           requestedVersion: version,
-          inPageVersion: configuredVersion
+          inPageVersion: configuredVersion,
         }
       );
       compatible = true;
@@ -414,9 +434,9 @@ export const TagPlaceholder = VisualComponent.create({
       if (!runtimeLibraries[name] || !configuredVersion) Environment.addRuntimeLibrary({ name, version });
       if (!url) {
         Tools.error("Library / dependency does not have any source URL specified.", {
-          tagName: this.props.tagName,
+          tagName: this._get("tagName"),
           libraryName: dependencyOf || name,
-          dependencyName: dependencyOf ? name : null
+          dependencyName: dependencyOf ? name : null,
         });
       }
     }
@@ -429,7 +449,7 @@ export const TagPlaceholder = VisualComponent.create({
 
     // some libraries include duplicit uu (vendor) in their registration (uu_uu5g04), most don't => remove
     // it because "import" statements are without it
-    let name = library.name.replace(/^uu_uu/, "uu");
+    let name = library.name.replace(/^uu_uu5/, "uu5");
     let version = library.version;
     let url = library.source || this._getSourceUrl(library);
     let code = library.code;
@@ -439,7 +459,7 @@ export const TagPlaceholder = VisualComponent.create({
       configuredUrl,
       configuredVersion,
       isSubmodule,
-      isForcedSubmoduleVersion
+      isForcedSubmoduleVersion,
     } = this._validateAndRegisterLibrary(name, version, url, code, null, runtimeLibraries);
     let depsCompatible = true;
     if (compatible) {
@@ -453,7 +473,7 @@ export const TagPlaceholder = VisualComponent.create({
         dependencies = { ...dependencies };
         let productUrlBase = (configuredUrl || url).replace(/(\/\d+\.\d+\.\d+[^/]*\/).*/, "$1"); // strip what's after version
         let productUrlBaseNoVersion = productUrlBase.replace(/\/\d+\.\d+\.\d+[^/]*\/$/, "/");
-        Object.keys(dependencies).forEach(key => {
+        Object.keys(dependencies).forEach((key) => {
           let value = dependencies[key];
           if (value && value.startsWith(productUrlBaseNoVersion)) {
             dependencies[key] = productUrlBaseNoVersion + configuredVersion + value.substr(productUrlBase.length);
@@ -462,9 +482,9 @@ export const TagPlaceholder = VisualComponent.create({
       }
 
       // validate dependencies
-      Object.keys(dependencies).forEach(key => {
+      Object.keys(dependencies).forEach((key) => {
         let value = dependencies[key];
-        let depName = key.replace(/^uu_uu/, "uu");
+        let depName = key.replace(/^uu_uu5/, "uu5");
         let isVersionOnly = this.getDefault().regexpDigit.test(value);
         let depUrl = isVersionOnly ? this._getSourceUrl({ name: depName, version: value }) : value;
         let depVersion = isVersionOnly ? value : (value.match(Version.REGEX) || {})[0];
@@ -478,8 +498,9 @@ export const TagPlaceholder = VisualComponent.create({
           name,
           runtimeLibraries
         );
-        if (!compatible) depsCompatible = false;
-        else if (!configuredUrl) paths[depName] = depUrl;
+        if (!compatible) {
+          depsCompatible = false;
+        } else if (!configuredUrl) paths[depName] = depUrl;
       });
     }
     return {
@@ -488,7 +509,7 @@ export const TagPlaceholder = VisualComponent.create({
       depsCompatible,
       paths,
       url,
-      importName: name
+      importName: name,
     };
   },
 
@@ -499,7 +520,7 @@ export const TagPlaceholder = VisualComponent.create({
       cache[query] = {
         result: null,
         error: null,
-        pendingCallback: [callback]
+        pendingCallback: [callback],
       };
       let SystemJS = window.SystemJS;
       if (SystemJS) {
@@ -508,33 +529,33 @@ export const TagPlaceholder = VisualComponent.create({
           SystemJS.config({ paths });
 
           SystemJS.import(importName).then(
-            libraryComponents => {
+            (libraryComponents) => {
               cache[query].result = libraryComponents;
-              cache[query].pendingCallback.forEach(fn => fn(cache[query].result));
+              cache[query].pendingCallback.forEach((fn) => fn(cache[query].result));
             },
-            e => {
+            (e) => {
               Tools.error("Importing library from URL failed: " + e, {
                 source: SystemJS.normalizeSync(importName),
-                tagName: this.props.tagName,
-                cause: e
+                tagName: this._get("tagName"),
+                cause: e,
               });
               this._setLibError(library.code);
               cache[query].error = e;
-              cache[query].pendingCallback.forEach(fn => fn(null, cache[query].error));
+              cache[query].pendingCallback.forEach((fn) => fn(null, cache[query].error));
             }
           );
         } else {
           cache[query].error = new Error();
-          cache[query].pendingCallback.forEach(fn => fn(null, cache[query].error));
+          cache[query].pendingCallback.forEach((fn) => fn(null, cache[query].error));
         }
       } else {
         Tools.error("SystemJS is not defined in window! Cannot import library:", {
           libraryName: library.name,
-          tagName: this.props.tagName
+          tagName: this._get("tagName"),
         });
         this._setLibError(library.code);
         cache[query].error = new Error();
-        cache[query].pendingCallback.forEach(fn => fn(null, cache[query].error));
+        cache[query].pendingCallback.forEach((fn) => fn(null, cache[query].error));
       }
     } else if (cache[query].result || cache[query].error) {
       callback(cache[query].result, cache[query].error);
@@ -547,14 +568,17 @@ export const TagPlaceholder = VisualComponent.create({
 
   //@@viewOn:render
   render() {
-    return this.state.component
-      ? React.createElement(
-          this.state.component,
-          Tools.merge({}, this.state.props, { parent: this.getParent() }),
-          this.props.content
-        )
-      : null;
-  }
+    if (this.state.component) {
+      const { _tagName, _props, _content, _error, _fromFindComponent, ...restProps } = this.props;
+      return React.createElement(
+        this.state.component,
+        _fromFindComponent ? { ...restProps, ...this.state.props } : this.state.props,
+        _fromFindComponent ? _content : this.props.content
+      );
+    } else {
+      return null;
+    }
+  },
   //@@viewOff:render
 });
 

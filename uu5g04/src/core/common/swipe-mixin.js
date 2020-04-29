@@ -77,11 +77,11 @@ export const SwipeMixin = {
     return null;
   },
 
-  componentWillMount: function() {
+  UNSAFE_componentWillMount: function() {
     this.props.swiped && (this.lastSwipe = this._getUpdatedSwipe(this.props));
   },
 
-  componentWillReceiveProps: function(nextProps) {
+  UNSAFE_componentWillReceiveProps: function(nextProps) {
     nextProps.swiped && (this.lastSwipe = this._getUpdatedSwipe(nextProps));
   },
   //@@viewOff:reactLifeCycle

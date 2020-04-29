@@ -24,17 +24,12 @@ afterEach(() => {
   Date.now = origDateNow;
 });
 
-let mockElement = document.createElement("div");
-document.body.appendChild(mockElement);
-
-let firstDate = new Date("2019-01-01T00:00:00").getTime();
-let lastDate = new Date("2019-01-31T00:00:00").getTime();
+let firstDate = new Date(2019, 0, 1).getTime();
+let lastDate = new Date(2019, 0, 31).getTime();
 
 describe(`UU5.Bricks.Calendar interface function`, () => {
   it(`UU5.Bricks.Calendar getValue`, () => {
-    const wrapper = mount(<UU5.Bricks.Calendar value={new Date(firstDate)} />, {
-      attachTo: mockElement
-    });
+    const wrapper = mount(<UU5.Bricks.Calendar value={new Date(firstDate)} />);
     expect(
       wrapper
         .instance()
@@ -45,9 +40,7 @@ describe(`UU5.Bricks.Calendar interface function`, () => {
   });
 
   it(`UU5.Bricks.Calendar setValue`, () => {
-    const wrapper = mount(<UU5.Bricks.Calendar />, {
-      attachTo: mockElement
-    });
+    const wrapper = mount(<UU5.Bricks.Calendar />);
     expect(wrapper.instance().state.value).toBe(null);
     wrapper.instance().setValue(new Date(lastDate));
     expect(wrapper.instance().state.value.getTime()).toEqual(lastDate);
@@ -55,9 +48,7 @@ describe(`UU5.Bricks.Calendar interface function`, () => {
   });
 
   it(`UU5.Bricks.Calendar setNext`, () => {
-    const wrapper = mount(<UU5.Bricks.Calendar />, {
-      attachTo: mockElement
-    });
+    const wrapper = mount(<UU5.Bricks.Calendar />);
     let oldMonth = wrapper
       .find(".uu5-bricks-calendar-head-cell-header")
       .instance()
@@ -73,9 +64,7 @@ describe(`UU5.Bricks.Calendar interface function`, () => {
   });
 
   it(`UU5.Bricks.Calendar setPrevious`, () => {
-    const wrapper = mount(<UU5.Bricks.Calendar />, {
-      attachTo: mockElement
-    });
+    const wrapper = mount(<UU5.Bricks.Calendar />);
     let oldMonth = wrapper
       .find(".uu5-bricks-calendar-head-cell-header")
       .instance()

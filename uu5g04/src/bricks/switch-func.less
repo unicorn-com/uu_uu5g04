@@ -2,7 +2,7 @@
 
 .switch (@color-schema, @bg, @color, @color-hover-focus, @color-active, @icon-color-off, @bg-read-only) {
   .color-schema-@{color-schema}.@{bricks-name}-switch.@{bricks-name}-button,
-  .color-schema-@{color-schema} .@{bricks-name}-switch.@{bricks-name}-button {
+  .color-schema-@{color-schema} .@{bricks-name}-switch.@{bricks-name}-button:not([class*="color-schema-"]) {
 
     .switch-styles(@color-schema, @bg, @color, @color-hover-focus, @color-active, @icon-color-off, @bg-read-only, @bg-read-only);
   }

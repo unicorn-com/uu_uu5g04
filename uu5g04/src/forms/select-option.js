@@ -56,7 +56,7 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     // because of auto-completed items
     if (
       !this.getParentByType("isSelect") &&

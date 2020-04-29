@@ -23,7 +23,7 @@ describe(`UU5.Bricks.ClickConfirm interface testing`, () => {
     const returnValue = wrapper.instance().open({ content: <UU5.Bricks.Badge content="Verified" /> });
     wrapper.update();
     expect(wrapper).toMatchSnapshot();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
   });
 
   it("close(setStateCallBack)", () => {
@@ -35,6 +35,6 @@ describe(`UU5.Bricks.ClickConfirm interface testing`, () => {
     expect(wrapper).toMatchSnapshot();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
   });
 });

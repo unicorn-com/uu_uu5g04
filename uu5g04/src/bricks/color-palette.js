@@ -171,7 +171,7 @@ export const ColorPalette = UU5.Common.VisualComponent.create({
     return this._getColorState(this.props.color);
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     this.setState(this._getColorState(nextProps.color));
   },
   //@@viewOff:reactLifeCycle
@@ -280,8 +280,9 @@ export const ColorPalette = UU5.Common.VisualComponent.create({
             return (
               <div
                 // eslint-disable-next-line react/jsx-no-bind
-                onClick={() => this._onColorSchemaClick(colorCode, colorSchema)}
                 key={`color_${colorSchema}`}
+                title={`${colorSchema} (${colorCode})`}
+                onClick={() => this._onColorSchemaClick(colorCode, colorSchema)}
                 className={`${this.getClassName("colorButton")} ${this._styleColorButton(
                   colorCode.toUpperCase(),
                   colorSchema
@@ -294,18 +295,18 @@ export const ColorPalette = UU5.Common.VisualComponent.create({
           {this.state.colorSchema
             ? this._hasColorShades(this.state.colorSchema)
               ? shades.map(shade => {
-                  let colorCode = this._getColorCode(this.state.colorSchema, shade);
-                  return (
-                    <div
-                      // eslint-disable-next-line react/jsx-no-bind
-                      onClick={() => this._onColorClick(colorCode)}
-                      key={`color_${shade}`}
-                      className={`${this.getClassName("colorButton")} ${this._styleColorButton(
-                        colorCode.toUpperCase()
-                      )}`}
-                    />
-                  );
-                })
+                let colorCode = this._getColorCode(this.state.colorSchema, shade);
+                return (
+                  <div
+                    // eslint-disable-next-line react/jsx-no-bind
+                    onClick={() => this._onColorClick(colorCode)}
+                    key={`color_${shade}`}
+                    className={`${this.getClassName("colorButton")} ${this._styleColorButton(
+                      colorCode.toUpperCase()
+                    )}`}
+                  />
+                );
+              })
               : this.getLsiComponent("noShades")
             : this.getLsiComponent("selectSchema")}
         </UU5.Bricks.Section>
@@ -324,8 +325,9 @@ export const ColorPalette = UU5.Common.VisualComponent.create({
               return (
                 <div
                   // eslint-disable-next-line react/jsx-no-bind
-                  onClick={() => this._onColorClick(colorCode, colorSchema)}
                   key={`color_${colorSchema}_${shade}`}
+                  title={`${colorSchema} (${colorCode})`}
+                  onClick={() => this._onColorClick(colorCode, colorSchema)}
                   className={`${this.getClassName("colorButton")} ${this._styleColorButton(colorCode.toUpperCase())}`}
                 />
               );

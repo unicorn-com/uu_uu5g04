@@ -182,15 +182,7 @@ export const Link = UU5.Common.VisualComponent.create({
   },
 
   _getHref() {
-    let href;
-
-    if (this._containsHash(this.props.href)) {
-      href = location.href.split("#")[0] + this.props.href;
-    } else if (this._isRoute()) {
-      href = this._getRouteUrl();
-    } else {
-      href = this.props.href;
-    }
+    let href = UU5.Common.Url.getAbsoluteUri(this.props.href);
 
     if (this.props.authenticate) {
       let session = UU5.Environment.getSession();

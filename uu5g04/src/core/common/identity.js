@@ -13,7 +13,7 @@
 
 //@@viewOn:imports
 import React from "react";
-import { SessionContext } from "./session.js";
+import { Session } from "./session.js";
 import IdentityItem from "./identity-item.js";
 import BaseMixin from "./base-mixin.js";
 import ContentMixin from "./content-mixin.js";
@@ -88,7 +88,7 @@ export const Identity = VisualComponent.create({
 
   //@@viewOn:render
   render() {
-    return <SessionContext.Consumer>{this._getChildren}</SessionContext.Consumer>;
+    return <Session.Context.Consumer>{this._getChildren}</Session.Context.Consumer>;
   }
   //@@viewOff:render
 });

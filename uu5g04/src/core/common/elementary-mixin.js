@@ -64,7 +64,7 @@ export const ElementaryMixin = {
     };
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
       this.setState({
         hidden: nextProps.hidden,

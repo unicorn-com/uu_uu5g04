@@ -142,11 +142,11 @@ export const Number = UU5.Common.VisualComponent.create({
     };
   },
 
-  componentWillMount: function() {
+  UNSAFE_componentWillMount: function() {
     UU5.Environment.EventListener.registerNumber(this.getId(), this._onChange);
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
       this._specifiedThouSep = !!nextProps.thousandSeparator;
       this._specifiedDecSep = !!nextProps.decimalSeparator;

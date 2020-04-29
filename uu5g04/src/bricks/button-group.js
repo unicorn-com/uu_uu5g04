@@ -88,7 +88,7 @@ export const ButtonGroup = UU5.Common.VisualComponent.create({
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  // componentWillReceiveProps(nextProps) {
+  // UNSAFE_componentWillReceiveProps(nextProps) {
   //   if (nextProps.controlled) {
   //     if (nextProps.borderRadius !== this.props.borderRadius) {
   //       this._removeElevationRadius();
@@ -97,7 +97,7 @@ export const ButtonGroup = UU5.Common.VisualComponent.create({
   //   }
   // },
 
-  // componentWillMount() {
+  // UNSAFE_componentWillMount() {
   //   this._createElevationRadius();
   // },
 

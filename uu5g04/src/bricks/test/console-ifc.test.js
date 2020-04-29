@@ -29,7 +29,7 @@ describe(`UU5.Bricks.Console interface testing`, function() {
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(wrapper.instance().state.content).not.toBeNull();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
   });
 
   it("warning(input)", () => {
@@ -44,7 +44,7 @@ describe(`UU5.Bricks.Console interface testing`, function() {
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(wrapper.instance().state.content).not.toBeNull();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
   });
 
   it("error(input)", () => {
@@ -59,6 +59,6 @@ describe(`UU5.Bricks.Console interface testing`, function() {
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(wrapper.instance().state.content).not.toBeNull();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
   });
 });

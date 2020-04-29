@@ -166,7 +166,7 @@ export const PageTop = UU5.Common.VisualComponent.create({
     }
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     this._onScroll(nextProps);
   },
   //@@viewOff:reactLifeCycle

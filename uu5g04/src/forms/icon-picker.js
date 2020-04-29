@@ -122,7 +122,7 @@ export const IconPicker = Context.withContext(
       };
     },
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
       this._calls = [];
 
       if (this.props.onValidate && typeof this.props.onValidate === "function") {
@@ -132,7 +132,7 @@ export const IconPicker = Context.withContext(
       this._lastScroll = 0;
     },
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
       if (this.props.controlled) {
         if (nextProps.onValidate && typeof nextProps.onValidate === "function") {
           this._validateOnChange({ value: nextProps.value, event: null, component: this }, true);
@@ -646,9 +646,9 @@ export const IconPicker = Context.withContext(
     },
 
     _getHeader() {
-      let categories = [...this.props.categories];
+      let categories = this.props.categories.map(category => ({ content: category, value: category }));
       if (this.props.categories.length > 1) {
-        categories.unshift(this.getLsiComponent("selectAll"));
+        categories.unshift({ content: this.getLsiComponent("selectAll"), value: "selectAll" });
       }
 
       return (
@@ -672,7 +672,7 @@ export const IconPicker = Context.withContext(
               onChange={opt => {
                 opt.component.onChangeDefault(opt);
                 let value = opt.value;
-                if (opt.value == this.getLsiComponent("selectAll")) {
+                if (opt.value == "selectAll") {
                   value = [...this.props.categories];
                 } else {
                   value = [value];
@@ -680,9 +680,7 @@ export const IconPicker = Context.withContext(
                 this._changeCategory(value);
               }}
               openToContent={false}
-              value={
-                this.state.selectedCategory.length > 1 ? [this.getLsiComponent("selectAll")] : this.state.selectedCategory
-              }
+              value={this.state.selectedCategory.length > 1 ? "selectAll" : this.state.selectedCategory}
               className={this.getClassName("categoryInput")}
               readOnly={this.isReadOnly()}
               disabled={this.isComputedDisabled()}
@@ -694,8 +692,8 @@ export const IconPicker = Context.withContext(
                 }
               }}
             >
-              {categories.map((library, key) => (
-                <UU5.Forms.Select.Option content={library} key={key} value={library} />
+              {categories.map((category, key) => (
+                <UU5.Forms.Select.Option content={category.content} key={key} value={category.value} />
               ))}
             </UU5.Forms.Select>
           ) : null}

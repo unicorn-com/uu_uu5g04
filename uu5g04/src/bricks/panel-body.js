@@ -118,7 +118,7 @@ export default UU5.Common.VisualComponent.create({
     };
   },
 
-  componentWillMount: function() {
+  UNSAFE_componentWillMount: function() {
     let parent = this.getParent();
 
     if (parent) {
@@ -132,7 +132,7 @@ export default UU5.Common.VisualComponent.create({
     }
   },
 
-  componentWillReceiveProps: function(nextProps) {
+  UNSAFE_componentWillReceiveProps: function(nextProps) {
     let body = this;
     let height = this._getHeight(nextProps);
     let isAnimating = this.props._expanded !== nextProps._expanded;

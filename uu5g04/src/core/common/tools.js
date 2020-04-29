@@ -164,13 +164,13 @@ Tools.findComponent = (tag, props, content, error) => {
         );
       } else {
         result = (
-          <UU5.Common.TagPlaceholder key={props.key} tagName={newTag} props={props} content={content} error={error} />
+          <UU5.Common.TagPlaceholder key={props.key} _tagName={newTag} _props={props} _content={content} _error={error} _fromFindComponent />
         );
       }
 
       // let fModule = Tools.checkTag(module.join('.'), true);
       // result = fModule ? <UU5.Common.NotFoundTag tagName={tag} id={props.id} ref_={props.ref_} /> :
-      //   <UU5.Common.TagPlaceholder tagName={newTag} props={props} content={content} />;
+      //   <UU5.Common.TagPlaceholder _tagName={newTag} _props={props} _content={content} _fromFindComponent />;
     }
   } else {
     let component = Tools.checkTag(newTag, false);
@@ -609,7 +609,7 @@ Tools.merge = function() {
 };
 
 Tools.mergeEnvironmentUu5DataMap = function(uu5DataMap) {
-  Environment.uu5DataMap = UU5.Common.Tools.merge(Environment.uu5DataMap || {}, uu5DataMap); // eslint-disable-line no-undef
+  Environment.uu5DataMap = Tools.merge(Environment.uu5DataMap || {}, uu5DataMap);
 };
 
 Tools.getUrlParam = function(name) {
@@ -1590,8 +1590,9 @@ Tools.getWeekNumber = date => {
   return Math.ceil(((d - new Date(d.getFullYear(), 0, 1)) / 8.64e7 + 1) / 7);
 };
 
-Tools.formatDate = (date, format, timeZone) => {
-  if (timeZone) {
+// dateToDateString
+Tools.formatDate = (date, format, timeZone = null) => {
+  if (typeof timeZone === "number") {
     let utc = new Date(date.getTime() + date.getTimezoneOffset() * 60000);
     date = new Date(utc.getTime() + timeZone * 60 * 60000);
   }
@@ -2053,43 +2054,69 @@ Tools.streamToString = (stream, encoding = "utf-8") => {
 };
 
 Tools.isDateReversed = country => {
-  const dateFormat = country || UU5.Common.Tools.getLanguage();
+  const dateFormat = country || Tools.getLanguage();
   return dateFormat.toLowerCase() === "en" || dateFormat.toLowerCase() === "en-us";
 };
 
+const DATE_TIME_FORMAT_FALLBACK = { year: "numeric", month: "numeric", day: "numeric" };
 Tools.getLocaleFormat = locale => {
   let result;
-  let dateTimeFormat = new Intl.DateTimeFormat(locale, { year: "numeric", month: "2-digit", day: "2-digit" });
+  let dateTimeFormat = new Intl.DateTimeFormat(locale);
+  // use locale-specific format if it uses numeric/2-digit day & month & year,
+  // otherwise fall back to using DATE_TIME_FORMAT_CALLBACK format
+  let dateTimeFormatOpts = dateTimeFormat.resolvedOptions();
+  let initOpts = {};
+  let isNumericFormat = ["year", "month", "day"].every(key => {
+    initOpts[key] = dateTimeFormatOpts[key];
+    return dateTimeFormatOpts[key] === "numeric" || dateTimeFormatOpts[key] === "2-digit";
+  });
+  if (!isNumericFormat) initOpts = DATE_TIME_FORMAT_FALLBACK;
+  dateTimeFormat = new Intl.DateTimeFormat(locale, initOpts);
+
+  let formattingCharacters = {
+    day: initOpts.day === "numeric" ? "d" : "dd",
+    month: initOpts.month === "numeric" ? "m" : "mm",
+    year: "Y"
+  };
   if (dateTimeFormat.formatToParts) {
-    let TYPES = {
-      day: "dd",
-      month: "mm",
-      year: "Y"
-    };
     result = dateTimeFormat
       .formatToParts(new Date())
-      .map(it => (it.type === "literal" ? it.value : TYPES[it.type]))
+      .map(it =>
+        it.type === "literal"
+          ? typeof it.value === "string"
+            ? it.value.replace(/\u200E/g, "")
+            : it.value
+          : formattingCharacters[it.type]
+      )
       .filter(Boolean)
       .join("");
   } else {
-    result = "dd.mm.Y";
+    result = formattingCharacters.day + "." + formattingCharacters.month + "." + formattingCharacters.year;
   }
   return result;
 };
 
-Tools.getDateString = (date, opt = {}) => {
+// formatToDateString(dateTime or isoStringDateOnly)
+Tools.getDateString = (dateTime, opt = {}) => {
   let format = opt.format;
   let country = opt.country;
-  let result = date;
+  let result = dateTime;
 
-  if (date instanceof Date) {
+  if (dateTime instanceof Date) {
+    // backward-compatible behaviour
     if (format) {
-      result = Tools.formatDate(date, format);
+      result = Tools.formatDate(dateTime, format);
     } else if (country) {
-      result = Tools.formatDateByCountry(date, country);
+      result = Tools.formatDateByCountry(dateTime, country);
     } else {
-      result = Tools.toLocaleDateString(new Date(date), Tools.getLanguage());
+      result = Tools.toLocaleDateString(dateTime, Tools.getLanguage());
     }
+  } else if (typeof dateTime === "string" && dateTime.match(/^\d{4}-\d{2}-\d{2}$/)) {
+    let parsedDate = Tools.parseDate(dateTime); // dateTime is not exact point in time, it's a year+month+day with no time / time zone
+    result = Tools.formatDate(
+      parsedDate,
+      format || Environment.dateTimeFormat[country] || Tools.getLocaleFormat(country || Tools.getLanguage())
+    );
   }
 
   return result;
@@ -2252,14 +2279,19 @@ Tools.isValidTime = (timeString, format, seconds) => {
   return isValid;
 };
 
-Tools.parseDate = (stringDate = null, opt = {}) => {
-  let format = opt.format;
-  let country = opt.country;
+Tools.parseDate = (anyDate, opt = {}) => {
+  let result;
+  if (anyDate == null || anyDate === "") {
+    result = null;
+  } else if (anyDate instanceof Date) {
+    result = new Date(anyDate);
+  } else if (typeof anyDate === "number") {
+    result = new Date(anyDate);
+  } else if (typeof anyDate === "string") {
+    let stringDate = anyDate;
+    let format = opt.format;
+    let country = opt.country;
 
-  if (!stringDate) return null;
-
-  let result = null;
-  if (typeof stringDate === "string") {
     // attempt to match a shortened date formats
     if (stringDate.match(/^\d{4}-\d{2}$/)) {
       // matches YYYY-MM
@@ -2370,8 +2402,8 @@ Tools.parseDate = (stringDate = null, opt = {}) => {
     ];
     if (!val.d || val.d > monthDays[val.M - 1]) return null; // invalid day
     result = new Date(val.y, val.M - 1, val.d, 0, 0, 0, 0);
-  } else if (typeof stringDate === "object" && stringDate !== null) {
-    result = stringDate;
+  } else {
+    result = null;
   }
 
   return result;
@@ -2988,6 +3020,51 @@ Tools.getCallToken = async function(url, session) {
     token = typeof callToken === "string" ? callToken : callToken ? callToken.token : undefined;
   }
   return token;
+};
+
+Tools.deepSortObjectKeys = object => {
+  let sortedObject = {};
+
+  Object.keys(object)
+    .sort()
+    .forEach(function(key) {
+      let value = object[key];
+      sortedObject[key] = value && typeof value === "object" ? Tools.deepSortObjectKeys(value) : value;
+    });
+
+  return sortedObject;
+};
+
+const groupCallCache = {};
+Tools.groupCall = (uri, dtoIn, doLoadFn) => {
+  if (!groupCallCache.data) groupCallCache.data = {};
+  const cacheKey = uri + " " + JSON.stringify(Tools.deepSortObjectKeys(dtoIn));
+  let data = groupCallCache.data[cacheKey];
+
+  if (!data) {
+    data = groupCallCache.data[cacheKey] = {
+      result: null
+    };
+    const promise = doLoadFn().then(
+      result => {
+        data.result = result;
+        setTimeout(() => {
+          delete groupCallCache.data[cacheKey];
+        }, 100);
+        return result;
+      },
+      error => {
+        data.error = error;
+        setTimeout(() => {
+          delete groupCallCache.data[cacheKey];
+        }, 100);
+        return Promise.reject(error);
+      }
+    );
+    data.promise = promise;
+  }
+
+  return data.promise;
 };
 
 // userLanguage for IE

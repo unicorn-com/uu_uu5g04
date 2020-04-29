@@ -39,7 +39,7 @@ describe("UU5.Bricks.Swiper interface testing", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().state.leftMenuOpen).toBeTruthy();
     expect(wrapper.instance().isLeftMenuOpen()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
@@ -67,7 +67,7 @@ describe("UU5.Bricks.Swiper interface testing", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().state.leftMenuOpen).toBeFalsy();
     expect(wrapper.instance().isLeftMenuOpen()).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
@@ -95,7 +95,7 @@ describe("UU5.Bricks.Swiper interface testing", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().state.leftMenuOpen).toBeTruthy();
     expect(wrapper.instance().isLeftMenuOpen()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
@@ -130,7 +130,7 @@ describe("UU5.Bricks.Swiper interface testing", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().state.rightMenuOpen).toBeTruthy();
     expect(wrapper.instance().isRightMenuOpen()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
@@ -158,7 +158,7 @@ describe("UU5.Bricks.Swiper interface testing", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().state.rightMenuOpen).toBeFalsy();
     expect(wrapper.instance().isRightMenuOpen()).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
@@ -186,7 +186,7 @@ describe("UU5.Bricks.Swiper interface testing", () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().state.rightMenuOpen).toBeTruthy();
     expect(wrapper.instance().isRightMenuOpen()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();

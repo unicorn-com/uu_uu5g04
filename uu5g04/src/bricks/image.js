@@ -80,7 +80,7 @@ let Image = UU5.Common.VisualComponent.create({
     };
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     // if (nextProps.controlled) {
     //   if (nextProps.borderRadius !== this.props.borderRadius) {
     //     this._removeElevationRadius();
@@ -95,7 +95,7 @@ let Image = UU5.Common.VisualComponent.create({
     });
   },
 
-  // componentWillMount() {
+  // UNSAFE_componentWillMount() {
   //   this._createElevationRadius();
   // },
 

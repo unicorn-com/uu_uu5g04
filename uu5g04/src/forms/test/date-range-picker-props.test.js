@@ -116,11 +116,12 @@ describe(`UU5.Forms.DateRangePicker props`, () => {
       defaultCountry,
       "7/20/2019 - 7/25/2019"
     );
-    ISOFormatTest(
-      { value: ["2019-07-20T07:00:00.000+02:00", "2019-07-25T07:00:00.000+02:00"] },
-      "cs-CZ",
-      "2019-7-20 - 2019-7-25"
-    ); // this might be wrong
+    // FIXME Uncomment when Jest tests use full-icu so that Intl.DateTimeFormat works.
+    // ISOFormatTest(
+    //   { value: ["2019-07-20T07:00:00.000+02:00", "2019-07-25T07:00:00.000+02:00"] },
+    //   "cs-CZ",
+    //   "20. 7. 2019 - 25. 7. 2019"
+    // );
   });
 
   it(`pickerLabelFrom, pickerLabelTo`, () => {
@@ -331,7 +332,7 @@ describe(`UU5.Forms.DateRangePicker props function -> Forms.InputMixin`, () => {
     expect(onChangeFn).toBeCalled();
     let lastCall = onChangeFn.mock.calls[onChangeFn.mock.calls.length - 1];
     expect(lastCall[0]).toBeTruthy();
-    expect(lastCall[0].component).toBe(wrapper.instance());
+    expect(lastCall[0].component === wrapper.instance()).toBe(true);
     expect(Array.isArray(lastCall[0].value)).toBeTruthy();
     expect(lastCall[0].value.length).toBe(2);
     expect(lastCall[0].value[0]).toBeInstanceOf(Date);
@@ -369,7 +370,7 @@ describe(`UU5.Forms.DateRangePicker props function -> Forms.InputMixin`, () => {
     expect(onValidateFn).toBeCalled();
     let lastCall = onValidateFn.mock.calls[onValidateFn.mock.calls.length - 1];
     expect(lastCall[0]).toBeTruthy();
-    expect(lastCall[0].component).toBe(wrapper.instance());
+    expect(lastCall[0].component === wrapper.instance()).toBe(true);
     expect(Array.isArray(lastCall[0].value)).toBeTruthy();
     expect(lastCall[0].value.length).toBe(2);
     expect(lastCall[0].value[0]).toBeInstanceOf(Date);
@@ -404,7 +405,7 @@ describe(`UU5.Forms.DateRangePicker props function -> Forms.InputMixin`, () => {
     expect(onChangeFeedbackFn).toBeCalled();
     let lastCall = onChangeFeedbackFn.mock.calls[onChangeFeedbackFn.mock.calls.length - 1];
     expect(lastCall[0]).toBeTruthy();
-    expect(lastCall[0].component).toBe(wrapper.instance());
+    expect(lastCall[0].component === wrapper.instance()).toBe(true);
     expect(lastCall[0].feedback).toBe("error");
     expect(lastCall[0].message).toBeTruthy();
     wrapper.unmount();

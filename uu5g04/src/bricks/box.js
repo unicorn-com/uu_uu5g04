@@ -14,11 +14,16 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+import Modal from "./modal.js";
+import "./box.less";
+
 const ClassNames = UU5.Common.ClassNames;
 
-import Modal from "./modal.js";
-
-import "./box.less";
+const EditationComponent = UU5.Common.Component.lazy(async () => {
+  await SystemJS.import("uu5g04-forms");
+  await SystemJS.import("uu5g04-bricks-editable");
+  return import("./internal/box-editable.js");
+});
 //@@viewOff:imports
 
 export const Box = UU5.Common.VisualComponent.create({
@@ -30,7 +35,8 @@ export const Box = UU5.Common.VisualComponent.create({
     UU5.Common.NestingLevelMixin,
     UU5.Common.ContentMixin,
     UU5.Common.ColorSchemaMixin,
-    UU5.Common.PureRenderMixin
+    UU5.Common.PureRenderMixin,
+    UU5.Common.EditableMixin
   ],
   //@@viewOff:mixins
 
@@ -95,9 +101,38 @@ export const Box = UU5.Common.VisualComponent.create({
   //@@viewOff:interface
 
   //@@viewOn:overriding
+  onBeforeForceEndEditation_() {
+    return this._editableTabs ? this._editableTabs.getPropsToSave() : undefined;
+  },
+
+  getEditablePropsValues_(propsArray) {
+    let props = this.getEditablePropsValuesDefault(propsArray);
+
+    if (typeof props.elevation === "number") {
+      props.elevation = "" + props.elevation;
+    }
+
+    if (typeof props.elevationHover === "number") {
+      props.elevationHover = "" + props.elevationHover;
+    }
+
+    return props;
+  },
   //@@viewOff:overriding
 
   //@@viewOn:private
+  _renderEditationMode() {
+    return (
+      <UU5.Common.Suspense fallback="">
+        <EditationComponent component={this} ref_={this._registerEditableComponent} />
+      </UU5.Common.Suspense>
+    );
+  },
+
+  _registerEditableComponent(tabs) {
+    this._editableTabs = tabs;
+  },
+
   _getMainAttrs() {
     var attrs = this.getMainAttrs();
 
@@ -156,13 +191,16 @@ export const Box = UU5.Common.VisualComponent.create({
         }
 
         component = (
-          <div>
-            <div {...this._getMainAttrs()}>
-              {this.getChildren()}
-              {this.getDisabledCover()}
+          <UU5.Common.Fragment>
+            <div>
+              <div {...this._getMainAttrs()}>
+                {this.getChildren()}
+                {this.getDisabledCover()}
+              </div>
+              {modal}
             </div>
-            {modal}
-          </div>
+            {this.state.editation ? this._renderEditationMode() : null}
+          </UU5.Common.Fragment>
         );
       }
     }

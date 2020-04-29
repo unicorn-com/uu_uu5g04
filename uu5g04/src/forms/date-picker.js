@@ -70,7 +70,8 @@ export const DatePicker = Context.withContext(
       openToContent: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string]),
       hideFormatPlaceholder: UU5.PropTypes.bool,
       showTodayButton: UU5.PropTypes.bool,
-      step: UU5.PropTypes.oneOf(["days", "months", "years"])
+      step: UU5.PropTypes.oneOf(["days", "months", "years"]),
+      monthNameFormat: UU5.PropTypes.oneOf(["abbr", "roman"])
     },
     //@@viewOff:propTypes
 
@@ -94,7 +95,8 @@ export const DatePicker = Context.withContext(
         openToContent: "xs",
         hideFormatPlaceholder: false,
         showTodayButton: false,
-        step: "days"
+        step: "days",
+        monthNameFormat: "roman"
       };
     },
     //@@viewOff:getDefaultProps
@@ -107,7 +109,7 @@ export const DatePicker = Context.withContext(
       };
     },
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
       this._hasFocus = false;
       let value = this._getIncomingValue(this.props.value);
       value = this._getDateString(value) || value;
@@ -133,7 +135,7 @@ export const DatePicker = Context.withContext(
       UU5.Environment.EventListener.registerDateTime(this.getId(), this._change);
     },
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
       if (nextProps.controlled) {
         let value = this._getIncomingValue(nextProps.value);
         value = this._hasInputFocus() && !(value instanceof Date) ? value : this._getDateString(value) || value;
@@ -296,7 +298,7 @@ export const DatePicker = Context.withContext(
           value = this._parseDate(value);
         } else if (props.valueType === "iso") {
           let dateObject = this._parseDate(value);
-          value = DateTools.getISO(dateObject);
+          value = DateTools.toISODateOnlyString(dateObject);
         } else {
           // value = value;
         }
@@ -774,7 +776,8 @@ export const DatePicker = Context.withContext(
         onChange: this._onCalendarChange,
         colorSchema: this.getColorSchema(),
         showTodayButton: this.props.showTodayButton,
-        step: this.props.step
+        step: this.props.step,
+        monthNameFormat: this.props.monthNameFormat
       };
     },
 
@@ -787,7 +790,8 @@ export const DatePicker = Context.withContext(
         value = this._parseDate(value);
       }
 
-      return UU5.Common.Tools.getDateString(value, { format, country });
+      let isoDateOnlyString = value instanceof Date ? DateTools.toISODateOnlyString(value) : value;
+      return UU5.Common.Tools.getDateString(isoDateOnlyString, { format, country });
     },
 
     _parseDate(dateString, format, country) {

@@ -101,7 +101,7 @@ export const DataTable = UU5.Common.LsiMixin.withContext(
     //@@viewOff:getDefaultProps
 
     //@@viewOn:reactLifeCycle
-    componentWillReceiveProps: function(nextProps) {
+    UNSAFE_componentWillReceiveProps: function(nextProps) {
       if (
         this.props.headerRow !== nextProps.headerRow ||
         this.props.rows !== nextProps.rows ||

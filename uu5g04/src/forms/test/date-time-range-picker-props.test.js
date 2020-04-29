@@ -153,11 +153,12 @@ describe(`UU5.Forms.DateTimeRangePicker props`, () => {
       defaultCountry,
       "7/20/2019 07:00 - 7/25/2019 07:00"
     );
-    ISOFormatTest(
-      { value: ["2019-07-20T07:00:00.000+02:00", "2019-07-25T07:00:00.000+02:00"] },
-      "cs-CZ",
-      "2019-7-20 07:00 - 2019-7-25 07:00"
-    ); // this might be wrong
+    // FIXME Uncomment when Jest tests use full-icu so that Intl.DateTimeFormat works.
+    // ISOFormatTest(
+    //   { value: ["2019-07-20T07:00:00.000+02:00", "2019-07-25T07:00:00.000+02:00"] },
+    //   "cs-CZ",
+    //   "20. 7. 2019 07:00 - 25. 7. 2019 07:00"
+    // );
     ISOFormatTest(
       { value: ["2019-07-20T07:00:00.000+02:00", "2019-07-25T07:00:00.000+02:00"], seconds: true },
       defaultCountry,
@@ -335,13 +336,11 @@ describe(`UU5.Forms.DateTimeRangePicker props function -> Text.InputMixin`, () =
     const wrapper = shallow(
       <UU5.Forms.DateTimeRangePicker timeZone={3} value={["2019-11-01T10:00:00Z", "2019-11-01T12:00:00Z"]} />
     );
-    let firstExpectedDate = new Date(firstDate);
-    firstExpectedDate.setHours(7);
-    let secondExpectedDate = new Date(lastDate);
-    secondExpectedDate.setHours(7);
     let value = wrapper.instance().getValue();
     expect(value[0].getTime()).toBe(new Date("2019-11-01T10:00:00Z").getTime());
     expect(value[1].getTime()).toBe(new Date("2019-11-01T12:00:00Z").getTime());
+
+    // TODO More tests - valueType, negative timeZone.
   });
 });
 
@@ -365,7 +364,7 @@ describe(`UU5.Forms.DateTimeRangePicker props function -> Forms.InputMixin`, () 
     expect(onChangeFn).toBeCalled();
     let lastCall = onChangeFn.mock.calls[onChangeFn.mock.calls.length - 1];
     expect(lastCall[0]).toBeTruthy();
-    expect(lastCall[0].component).toBe(wrapper.instance());
+    expect(lastCall[0].component === wrapper.instance()).toBe(true);
     expect(Array.isArray(lastCall[0].value)).toBeTruthy();
     expect(lastCall[0].value.length).toBe(2);
     expect(lastCall[0].value[0]).toBeInstanceOf(Date);
@@ -403,7 +402,7 @@ describe(`UU5.Forms.DateTimeRangePicker props function -> Forms.InputMixin`, () 
     expect(onValidateFn).toBeCalled();
     let lastCall = onValidateFn.mock.calls[onValidateFn.mock.calls.length - 1];
     expect(lastCall[0]).toBeTruthy();
-    expect(lastCall[0].component).toBe(wrapper.instance());
+    expect(lastCall[0].component === wrapper.instance()).toBe(true);
     expect(Array.isArray(lastCall[0].value)).toBeTruthy();
     expect(lastCall[0].value.length).toBe(2);
     expect(lastCall[0].value[0]).toBeInstanceOf(Date);
@@ -438,7 +437,7 @@ describe(`UU5.Forms.DateTimeRangePicker props function -> Forms.InputMixin`, () 
     expect(onChangeFeedbackFn).toBeCalled();
     let lastCall = onChangeFeedbackFn.mock.calls[onChangeFeedbackFn.mock.calls.length - 1];
     expect(lastCall[0]).toBeTruthy();
-    expect(lastCall[0].component).toBe(wrapper.instance());
+    expect(lastCall[0].component === wrapper.instance()).toBe(true);
     expect(lastCall[0].feedback).toBe("error");
     expect(lastCall[0].message).toBeTruthy();
     wrapper.unmount();

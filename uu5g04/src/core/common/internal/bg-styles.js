@@ -1,8 +1,6 @@
-import * as UU5 from "uu5g04";
-import Css from "./css.js";
-
-const COLORS = UU5.Environment.colors;
-const ClassNames = UU5.Common.ClassNames;
+import Css from "../css";
+import ClassNames from "../class-names";
+import Environment from "../../environment/environment";
 
 const getDefaultColors = (colorShades, bgStyle) => {
   let definitions;
@@ -12,9 +10,9 @@ const getDefaultColors = (colorShades, bgStyle) => {
       bgColor: "transparent",
       bgColorHover: colorShades.c200,
       bgColorActive: colorShades.c300,
-      textColor: COLORS.common.darkText,
-      textColorHover: COLORS.common.darkText,
-      textColorActive: COLORS.common.darkText,
+      textColor: Environment.colors.common.darkText,
+      textColorHover: Environment.colors.common.darkText,
+      textColorActive: Environment.colors.common.darkText,
       borderColor: "transparent",
       borderColorHover: colorShades.c200,
       borderColorActive: colorShades.c300
@@ -24,9 +22,9 @@ const getDefaultColors = (colorShades, bgStyle) => {
       bgColor: "transparent",
       bgColorHover: colorShades.c200,
       bgColorActive: colorShades.c300,
-      textColor: COLORS.common.darkText,
-      textColorHover: COLORS.common.darkText,
-      textColorActive: COLORS.common.darkText,
+      textColor: Environment.colors.common.darkText,
+      textColorHover: Environment.colors.common.darkText,
+      textColorActive: Environment.colors.common.darkText,
       borderColor: colorShades.c400,
       borderColorHover: colorShades.c400,
       borderColorActive: colorShades.c400
@@ -37,7 +35,7 @@ const getDefaultColors = (colorShades, bgStyle) => {
 };
 
 const getColors = (colorSchema, bgStyle) => {
-  colorSchema = UU5.Environment.colorSchemaMap[colorSchema].color;
+  colorSchema = Environment.colorSchemaMap[colorSchema].color;
   let colorShades = getShades(colorSchema);
 
   if (!colorSchema || colorSchema === "custom") {
@@ -52,9 +50,9 @@ const getColors = (colorSchema, bgStyle) => {
 const getShades = colorSchema => {
   // get the most commonly used shades of the given colorSchema
   if (colorSchema === "default" || colorSchema === "grey" || !colorSchema) {
-    return UU5.Environment.colors["grey"];
+    return Environment.colors["grey"];
   } else {
-    return UU5.Environment.colors[colorSchema.replace(/-rich/, "")];
+    return Environment.colors[colorSchema.replace(/-rich/, "")];
   }
 };
 

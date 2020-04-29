@@ -46,6 +46,6 @@ describe("UU5.Forms.ControlsMixin intreface testing", function() {
     expect(this.controls.getForm()).not.toBe(null);
     expect(this.controls.getForm()).toEqual(expect.any(Object));
     expect(() => this.controls.getForm()).not.toThrow();
-    expect(this.controls.getForm()).toBe(wrapper.instance());
+    expect(this.controls.getForm() === wrapper.instance()).toBe(true);
   });
 });

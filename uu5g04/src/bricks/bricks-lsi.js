@@ -15,7 +15,9 @@ export const BricksLsi = {
   dataTable: {
     invalidDataLabel: {
       en: "Invalid data",
-      cs: "Chybná data"
+      cs: "Chybná data",
+      sk: "Chybné dáta",
+      uk: "Некоректні дані"
     }
   },
   homeScreen: {
@@ -31,6 +33,18 @@ export const BricksLsi = {
         "<uu5string/>To create a shortcut of this web app open the share menu and tap on <strong>Add to homescreen</strong>.",
       android:
         "<uu5string/>To create a shortcut of this web app open the browser option menu and tap on <strong>Add to homescreen</strong>."
+    },
+    sk: {
+      iOS:
+        "<uu5string/>Pre vytvorenie zástupcu tejto webovej aplikácie otvorte menu zdieľania a vyberte <strong>Pridať na plochu</strong>.",
+      android:
+        "<uu5string/>Pre vytvorenie zástupcu tejto webovej aplikácie otvorte menu prehliadača a vyberte <strong>Pridať na plochu</strong>."
+    },
+    uk: {
+      iOS:
+        "<uu5string/>Щоб створити посилання до цього веб-додатку, відкрийте меню Поділитись і натисніть <strong>Додати на домашній екран</strong>.",
+      android:
+        "<uu5string/>Щоб створити посилання до цього веб-додатку, відкрийте меню налаштувань браузера і натисніть <strong>Додати на домашній екран</strong>."
     }
 
     /*'cs-cs': {
@@ -166,7 +180,7 @@ export const BricksLsi = {
       ru: "Неверные данные",
       sk: "Neplatné údaje",
       es: "Datos inválidos",
-      uk: "недостовірні дані"
+      uk: "Невірні дані"
     }
   },
   calendar: {
@@ -186,18 +200,18 @@ export const BricksLsi = {
     },
     monthNames: {
       cs: [
-        "Leden",
-        "Únor",
-        "Březen",
-        "Duben",
-        "Květen",
-        "Červen",
-        "Červenec",
-        "Srpen",
-        "Září",
-        "Říjen",
-        "Listopad",
-        "Prosinec"
+        "leden",
+        "únor",
+        "březen",
+        "duben",
+        "květen",
+        "červen",
+        "červenec",
+        "srpen",
+        "září",
+        "říjen",
+        "listopad",
+        "prosinec"
       ],
       nl: [
         "Januari",
@@ -354,203 +368,330 @@ export const BricksLsi = {
         "Грудень"
       ]
     },
+    monthNamesShort: {
+      en: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      cs: ["led", "úno", "bře", "dub", "kvě", "čvn", "čvc", "srp", "zář", "říj", "lis", "pro"],
+      sk: ["Jan", "Feb", "Mar", "Apr", "Máj", "Jún", "Júl", "Aug", "Sep", "Okt", "Nov", "Dec"],
+      uk: ["Січ", "Лют", "Бер", "Кві", "Тра", "Чер", "Лип", "Сер", "Вер", "Жов", "Лис", "Гру"]
+    },
     today: {
       cs: "Dnes",
-      en: "Today"
+      en: "Today",
+      sk: "Dnes",
+      uk: "Сьогодні"
     },
     dateInPast: {
       cs: "Vybrané datum nemůže být v minulosti.",
-      en: "Selected date cannot be in the past."
+      en: "Selected date cannot be in the past.",
+      sk: "Vybraný dátum nemôže byť v minulosti",
+      uk: "Обрана дата не може бути в минулому."
     }
   },
   confirmModal: {
     confirmButtonText: {
       cs: "Souhlasím",
-      en: "Confirm"
+      en: "Confirm",
+      sk: "Súhlasím",
+      uk: "Підтвердити"
     },
     refuseButtonText: {
       cs: "Nesouhlasím",
-      en: "Refuse"
+      en: "Refuse",
+      sk: "Nesúhlasím",
+      uk: "Відхилити"
     }
   },
   sessionWatch: {
     header: {
       cs: "Relace brzy vyprší",
-      en: "Session Expiring"
+      en: "Session Expiring",
+      sk: "Relácia čoskoro vyprší",
+      uk: "Сесія скоро закінчиться"
     },
     content: {
       cs:
         "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
       en:
-        "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes."
+        "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+      sk:
+        "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+      uk:
+        "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни."
+
     },
     logInButton: {
       cs: "Přihlásit se",
-      en: "Log in"
+      en: "Log in",
+      sk: "Prihlásiť sa",
+      uk: "Увійти"
     },
     cancelButton: {
       cs: "Zrušit",
-      en: "Cancel"
+      en: "Cancel",
+      sk: "Zrušiť",
+      uk: "Відмінити"
     }
   },
   colorPalette: {
     baseColor: {
       cs: "Základní barva",
-      en: "Base color"
+      en: "Base color",
+      sk: "Základná farba",
+      uk: "Базовий колір"
     },
     shade: {
       cs: "Odstín",
-      en: "Shade"
+      en: "Shade",
+      sk: "Odtieň",
+      uk: "Відтінок"
     },
     selectSchema: {
       cs: "Odstíny se zobrazí po vybrání barvy.",
-      en: "Choose color to view shades."
+      en: "Choose color to view shades.",
+      sk: "Odtiene sa zobrazia po vybraní farby.",
+      uk: "Щоб переглянути відтінки оберіть колір."
     },
     noShades: {
       cs: "Tato barva nemá žádné odstíny.",
-      en: "Shades not available for this color."
+      en: "Shades not available for this color.",
+      sk: "Táto farba nemá žiadne odtiene.",
+      uk: "Для цього кольору немає доступних відтінків."
     }
   },
   alertBus: {
     showAll: {
       cs: "Zobrazit všechny upozornění",
-      en: "Show all alerts"
+      en: "Show all alerts",
+      sk: "Zobraziť všetky upozornenia",
+      uk: "Показати всі сповіщення"
     },
     clearAll: {
       cs: "Vymazat vše",
-      en: "Clear all"
+      en: "Clear all",
+      sk: "Vymazať všetko",
+      uk: "Очистити все"
     }
   },
   contextMenu: {
     backButton: {
       cs: "Zpět",
-      en: "Back"
+      en: "Back",
+      sk: "Späť",
+      uk: "Назад"
     }
   },
   tabsEditable: {
     componentPropsLabel: {
       cs: "Hlavní vlastnosti komponenty",
-      en: "Component Props"
+      en: "Component Props",
+      sk: "Hlavné vlastnosti komponenty",
+      uk: "Головні властивості компоненту"
     },
     additionalPropsLabel: {
       cs: "Vedlejší vlastnosti komponenty",
-      en: "Additional Props"
+      en: "Additional Props",
+      sk: "Vedľajšie vlastnosti komponenty",
+      uk: "Додаткові властивості компоненту"
     },
     typeLabel: {
       cs: "Typ zobrazení záložek",
-      en: "Type"
+      en: "Type",
+      sk: "Typ zobrazenia záložiek",
+      uk: "Тип відображення закладок"
     },
     typeValueTabs: {
-      cs: "Podrtžené záložky",
-      en: "tabs"
+      cs: "Podtržené záložky",
+      en: "tabs",
+      sk: "Podčiarknuté záložky",
+      uk: "Підкреслені закладки"
     },
     typeValuePills: {
       cs: "Vyplněné záložky",
-      en: "pills"
+      en: "pills",
+      sk: "Vyplnené záložky",
+      uk: "Заповнені закладки"
     },
     sizeLabel: {
       cs: "Velikost",
-      en: "Size"
+      en: "Size",
+      sk: "Veľkosť",
+      uk: "Розмір"
     },
     sizeValueS: {
       cs: "S",
-      en: "S"
+      en: "S",
+      sk: "S",
+      uk: "S"
     },
     sizeValueM: {
       cs: "M",
-      en: "M"
+      en: "M",
+      sk: "M",
+      uk: "M"
     },
     sizeValueL: {
       cs: "L",
-      en: "L"
+      en: "L",
+      sk: "L",
+      uk: "L"
     },
     sizeValueXL: {
       cs: "XL",
-      en: "XL"
+      en: "XL",
+      sk: "XL",
+      uk: "XL"
     },
     borderRadiusLabel: {
       cs: "Zaoblení okrajů",
-      en: "Border Radius"
+      en: "Border Radius",
+      sk: "Zaobalenie okrajov",
+      uk: "Радіус заокруглення"
     },
     borderRadiusPlaceholder: {
       cs: "Např. 16px 16px 0 0",
-      en: "For example 16px 16px 0 0"
+      en: "For example 16px 16px 0 0",
+      sk: "Napr. 16px 16px 0 0",
+      uk: "Напр. 16px 16px 0 0"
     },
     elevationLabel: {
       cs: "Úroveň vyvýšení aktivní záložky",
-      en: "Elevation of Active Tab"
+      en: "Elevation of Active Tab",
+      sk: "Úroveň vyvýšenia aktívnej záložky",
+      uk: "Рівень підйому активної закладки"
     },
     elevationHoverLabel: {
       cs: "Úroveň vyvýšení aktivní záložky při najetí",
-      en: "Elevation Hover of Active tab"
+      en: "Elevation Hover of Active tab",
+      sk: "Úroveň vyvýšenia aktívnej záložky pri nabehnutí",
+      uk: "Рівень підйому активної закладки при наведенні"
     },
     justifiedLabel: {
       cs: "Zarovnání záložek",
-      en: "Justified"
+      en: "Justified",
+      sk: "Zarovnanie záložiek",
+      uk: "Вирівнювання закладок"
     },
     justifiedValueFalse: {
       cs: "Vypnuto",
-      en: "Disabled"
+      en: "Disabled",
+      sk: "Vypnuté",
+      uk: "Вимкнено"
     },
     justifiedValueFTrue: {
       cs: "Zapnuto",
-      en: "Enabled"
+      en: "Enabled",
+      sk: "Zapnuté",
+      uk: "Увімкнено"
     },
     fadeLabel: {
       cs: "Animace při změně aktivního tabu",
-      en: "Active tab change animation"
+      en: "Active tab change animation",
+      sk: "Animácia pri zmene aktívneho tabu",
+      uk: "Анімація зміни активної закладки"
     },
     fadeValueFalse: {
       cs: "Vypnuto",
-      en: "Disabled"
+      en: "Disabled",
+      sk: "Vypnuté",
+      uk: "Вимкнено"
     },
     fadeValueTrue: {
       cs: "Zapnuto",
-      en: "Enabled"
+      en: "Enabled",
+      sk: "Zapnuté",
+      uk: "Увімкнено"
     },
     underlineLabel: {
       cs: "Podtržení záhlaví",
-      en: "Underline"
+      en: "Underline",
+      sk: "Podčiarknutie záhlavia",
+      uk: "Підкреслити заголовок"
     },
     underlineValueFalse: {
       cs: "Vypnuto",
-      en: "Disabled"
+      en: "Disabled",
+      sk: "Vypnuté",
+      uk: "Вимкнено"
     },
     underlineValueTrue: {
       cs: "Zapnuto",
-      en: "Enabled"
+      en: "Enabled",
+      sk: "Zapnuté",
+      uk: "Увімкнено"
     },
     colorSchemaLabel: {
       cs: "Barevné schéma",
-      en: "Color Schema"
+      en: "Color Schema",
+      sk: "Farebná schéma",
+      uk: "Схема кольорів"
     },
     idLabel: {
       cs: "Id komponenty",
-      en: "Component's id"
+      en: "Component's id",
+      sk: "Id komponenty",
+      uk: "Id компоненту"
     },
     disabledLabel: {
       cs: "Stav komponenty",
-      en: "Component's state"
+      en: "Component's state",
+      sk: "Stav komponenty",
+      uk: "Стани компоненту"
     },
     disabledValueFalse: {
       cs: "Aktivní",
-      en: "Enabled"
+      en: "Enabled",
+      sk: "Aktívny",
+      uk: "Активний"
     },
     disabledValueTrue: {
       cs: "Neaktivní",
-      en: "Disabled"
+      en: "Disabled",
+      sk: "Neaktívny",
+      uk: "Неактивний"
     },
     tabNameLabel: {
       cs: "Název záložky",
-      en: "Tab's name"
+      en: "Tab's name",
+      sk: "Názov záložky",
+      uk: "Назва закладки"
     },
     tabHeaderLabel: {
       cs: "Hlavička záložky",
-      en: "Tab's Header"
+      en: "Tab's Header",
+      sk: "Hlavička záložky",
+      uk: "Заголовок закладки"
     },
     newItemHeader: {
       cs: "Nová položka",
-      en: "New Item"
+      en: "New Item",
+      sk: "Nová položka",
+      uk: "Новий товар"
+    }
+  },
+  boxEditable: {
+    componentPropsLabel: {
+      cs: "Hlavní vlastnosti komponenty",
+      en: "Component Props",
+      sk: "Hlavné vlastnosti komponenty",
+      uk: "Властивості компонента"
+    },
+    additionalPropsLabel: {
+      cs: "Zobrazit",
+      en: "Display",
+      sk: "Zobraziť",
+      uk: "Показати"
+    },
+    infoHeaderLabel: {
+      cs: "Hlavička informačního modálu",
+      en: "Information Modal Header",
+      sk: "Hlavička informačného modalu",
+      uk: "Заголовок інформаційного вікна"
+    },
+    infoContentLabel: {
+      cs: "Obsah informačního modálu",
+      en: "Information Modal Content",
+      sk: "Obsah informačného modalu",
+      uk: "зміст інформаційного вікна"
     }
   }
 };

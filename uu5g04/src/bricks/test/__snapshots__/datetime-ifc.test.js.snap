@@ -7,7 +7,7 @@ exports[`UU5.Bricks.DateTime interface testing getCountry() 1`] = `
   style={Object {}}
   title={null}
 >
-  03.10.17 13:20:15 PM +01:00 (10/52)
+  03.10.17 15:20:15 PM +02:00 (10/52)
 </span>
 `;
 
@@ -18,7 +18,7 @@ exports[`UU5.Bricks.DateTime interface testing getFormat() 1`] = `
   style={Object {}}
   title={null}
 >
-  03.10.17 13:20:15 PM +01:00 (10/52)
+  03.10.17 15:20:15 PM +02:00 (10/52)
 </span>
 `;
 
@@ -40,7 +40,7 @@ exports[`UU5.Bricks.DateTime interface testing getTimeZone() default values is 1
   style={Object {}}
   title={null}
 >
-  03.10.17 13:20:15 PM +01:00 (10/52)
+  03.10.17 15:20:15 PM +02:00 (10/52)
 </span>
 `;
 
@@ -51,7 +51,7 @@ exports[`UU5.Bricks.DateTime interface testing setCountry(country, setStateCallB
   style={Object {}}
   title={null}
 >
-  03.10.17 13:20:15 PM +01:00 (10/52)
+  03.10.17 15:20:15 PM +02:00 (10/52)
 </span>
 `;
 
@@ -62,7 +62,7 @@ exports[`UU5.Bricks.DateTime interface testing setCountry(country, setStateCallB
   style={Object {}}
   title={null}
 >
-  03.10.17 13:20:15 PM +01:00 (10/52)
+  03.10.17 14:20:15 PM +02:00 (10/52)
 </span>
 `;
 
@@ -73,7 +73,7 @@ exports[`UU5.Bricks.DateTime interface testing setFormat() 1`] = `
   style={Object {}}
   title={null}
 >
-  2017-3-10 1:20:15 PM
+  2017-3-10 2:20:15 PM
 </span>
 `;
 
@@ -84,7 +84,7 @@ exports[`UU5.Bricks.DateTime interface testing setFormat() 2`] = `
   style={Object {}}
   title={null}
 >
-  10.03.17 13:20:15
+  10.03.17 14:20:15
 </span>
 `;
 
@@ -95,7 +95,7 @@ exports[`UU5.Bricks.DateTime interface testing setOptions(opt,setStateCallBack) 
   style={Object {}}
   title={null}
 >
-  2017-3-10 1:20:15 PM
+  2017-3-10 2:20:15 PM
 </span>
 `;
 
@@ -117,7 +117,7 @@ exports[`UU5.Bricks.DateTime interface testing setTimeZone(timeZone,setStateCall
   style={Object {}}
   title={null}
 >
-  03.10.17 13:20:15 PM +01:00 (10/52)
+  03.10.17 15:20:15 PM +02:00 (10/52)
 </span>
 `;
 

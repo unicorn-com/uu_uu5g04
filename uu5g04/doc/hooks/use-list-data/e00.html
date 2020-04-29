@@ -65,7 +65,7 @@
   import "uu5g04-block-layout";
   import { Session } from "uu_appg01_oidc";
   import { Client as UuAppClient } from "uu_appg01";
-  import { useListData, useRef } from "uu5g04-hooks";
+  import { useListData, useRef, useEffect } from "uu5g04-hooks";
 
   // import { Client } from "uu_appg01";
   // mock Client for example
@@ -267,9 +267,13 @@
       onUpdate: Calls.update,
       onDelete: Calls.delete
     });
-    let { viewState, errorState, error, syncData, asyncData, pageInfo, handleLoad, handleCreate, handleUpdate, handleDelete } = listDataValues;
+    let { viewState, errorState, error, syncData, asyncData, pageInfo, operations, handleLoad, handleCreate, handleUpdate, handleDelete } = listDataValues;
     let data = pessimistic ? asyncData : syncData;
     let modalRef = useRef();
+
+    useEffect(() => {
+      console.table(operations, ["id", "type", "state", "result", "items", "args"]);
+    }, [operations]);
 
     function showModal(joke) {
       let modal = modalRef.current;

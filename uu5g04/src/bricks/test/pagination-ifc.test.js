@@ -73,7 +73,7 @@ describe(`UU5.Bricks.Pagination interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().getActiveIndex()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
   });
@@ -98,7 +98,7 @@ describe(`UU5.Bricks.Pagination interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().getActiveIndex()).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
   });
@@ -123,7 +123,7 @@ describe(`UU5.Bricks.Pagination interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().getActiveIndex()).toBe(4);
     expect(wrapper).toMatchSnapshot();
   });
@@ -146,7 +146,7 @@ describe(`UU5.Bricks.Pagination interface testing`, () => {
     const returnValue = wrapper.instance().increaseActiveIndex(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().state.activeIndex).toBe(1);
     expect(wrapper).toMatchSnapshot();
     wrapper.instance().increaseActiveIndex(mockFunc);
@@ -180,7 +180,7 @@ describe(`UU5.Bricks.Pagination interface testing`, () => {
     wrapper.update();
     expect(wrapper.instance().state.activeIndex).toBe(0);
     expect(mockFunc).toBeCalled();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -204,7 +204,7 @@ describe(`UU5.Bricks.Pagination interface testing`, () => {
     wrapper.update();
     expect(wrapper.instance().state.activeIndex).toBe(3);
     expect(mockFunc).toBeCalled();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper).toMatchSnapshot();
   });
 });

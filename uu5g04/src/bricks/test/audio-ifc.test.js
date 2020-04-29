@@ -25,7 +25,7 @@ describe("UU5.Bricks.Audio interface testing", () => {
     expect(wrapper.instance().state.muted).toBeFalsy();
     const returtValue = wrapper.instance().toggleMuted();
     wrapper.update();
-    expect(returtValue).toBe(wrapper.instance());
+    expect(returtValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().state.muted).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
     wrapper.instance().toggleMuted();

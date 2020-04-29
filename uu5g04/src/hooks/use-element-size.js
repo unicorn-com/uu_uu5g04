@@ -2,7 +2,10 @@ import UU5 from "uu5g04";
 import { useState, useRef } from "./react-hooks";
 
 // TODO Remove polyfill when browsers are ready.
-if (!window.ResizeObserver) window.ResizeObserver = require("resize-observer-polyfill").default;
+if (!window.ResizeObserver) {
+  window.ResizeObserver = require("resize-observer-polyfill");
+  if (typeof window.ResizeObserver !== "function") window.ResizeObserver = window.ResizeObserver.default;
+}
 
 function useElementSize({ width, height, interval = UU5.Environment.resizeInterval } = {}) {
   const [rect, setRect] = useState({ width, height });
@@ -27,7 +30,12 @@ function useElementSize({ width, height, interval = UU5.Environment.resizeInterv
   if (refRef.current == null) {
     refRef.current = function(ref) {
       if (ref) {
-        setRect({ width: ref.clientWidth, height: ref.clientHeight });
+        let rect = typeof ref.getBoundingClientRect === "function" ? ref.getBoundingClientRect() : null;
+        if (rect) {
+          setRect(wh =>
+            wh.width !== rect.width || wh.height !== rect.height ? { width: rect.width, height: rect.height } : wh
+          );
+        }
       }
 
       if (observerRef.current) {

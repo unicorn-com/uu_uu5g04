@@ -18,7 +18,9 @@ import ns from "./bricks-ns.js";
 import "./video.less";
 //@@viewOff:imports
 
-const VideoHls = UU5.Common.Component.lazy ? UU5.Common.Component.lazy(() => import("./video-hls.js")) : props => <video {...props.mainAttrs} />;
+const VideoHls = UU5.Common.Component.lazy
+  ? UU5.Common.Component.lazy(() => import("./video-hls.js"))
+  : props => <video {...props.mainAttrs} />;
 
 export const Video = UU5.Common.VisualComponent.create({
   displayName: "Video", // for backward compatibility (test snapshots)
@@ -77,7 +79,7 @@ export const Video = UU5.Common.VisualComponent.create({
     };
   },
 
-  componentWillReceiveProps: function(nextProps) {
+  UNSAFE_componentWillReceiveProps: function(nextProps) {
     if (nextProps.controlled) {
       this.setState({ muted: nextProps.muted });
     }

@@ -94,7 +94,7 @@ export const GoogleMap = UU5.Common.VisualComponent.create({
 
   // setting map options through props
   // for additions see https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
       let newMapOptions = {};
       nextProps.draggable !== undefined && (newMapOptions.draggable = nextProps.draggable);

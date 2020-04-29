@@ -34,7 +34,55 @@ function dataHookReducer(state, action, nextReducer) {
   return nextReducer(state, action);
 }
 
-export function useDataInternal({ onLoad, onUpdate, dtoIn, data }, customReducer) {
+function useOperationsCleanup(dispatchAction, processBus, preserveOperations) {
+  let explicitPendingCleanupRef = useRef([]);
+  let clearOperations = useRef((...args) => {
+    explicitPendingCleanupRef.current.push(args);
+  }).current;
+
+  let prevProcessBusRef = useRef();
+  useEffect(() => {
+    prevProcessBusRef.current = processBus;
+  });
+
+  // cleanup finished operations from processBus (this is done in nearest render somewhere after committing current render);
+  // note that current processBus can have newly finished operations that we don't want to remove so we have to pass
+  // ID of the operation upto which to do the cleanup
+  if (prevProcessBusRef.current && (!preserveOperations || explicitPendingCleanupRef.current.length > 0)) {
+    let prevProcessBus = prevProcessBusRef.current;
+    prevProcessBusRef.current = undefined;
+    let finishedOpIds = prevProcessBus.filter(op => op.asyncData !== undefined).map(op => op.id);
+    let cleanupIds;
+    if (preserveOperations) {
+      cleanupIds = new Set();
+      let finishedOpIdsSet = new Set(finishedOpIds);
+      for (let cleanupArgs of explicitPendingCleanupRef.current) {
+        if (cleanupArgs.length === 0 || cleanupArgs[0] == null) {
+          cleanupIds = finishedOpIds;
+          break;
+        } else {
+          let cleanupItems = Array.isArray(cleanupArgs[0]) ? cleanupArgs[0] : [cleanupArgs[0]];
+          for (let item of cleanupItems) {
+            let id = item ? item.id || item : null;
+            if (id && finishedOpIdsSet.has(id)) cleanupIds.add(id);
+          }
+        }
+      }
+      if (!Array.isArray(cleanupIds)) cleanupIds = [...cleanupIds];
+    } else {
+      cleanupIds = finishedOpIds;
+    }
+    explicitPendingCleanupRef.current = [];
+    if (cleanupIds.length > 0) {
+      dispatchAction("clearOperations", { ids: cleanupIds });
+    }
+  }
+
+  return clearOperations;
+}
+
+export function useDataInternal({ onLoad, onUpdate, dtoIn, data, preserveOperations }, customReducer) {
+  // initialize state with processBus and state reducer(s)
   let reducer = useMemo(() => combineReducers(customReducer, dataHookReducer, initReducer, processBusReducer), [
     customReducer
   ]);
@@ -62,6 +110,31 @@ export function useDataInternal({ onLoad, onUpdate, dtoIn, data }, customReducer
       }
     });
   }, [state.processBus]);
+
+  let syncData = useMemo(
+    () =>
+      state.processBus.reduce(
+        (resultData, op) =>
+          op.asyncData !== undefined
+            ? op.asyncData
+            : op.applyOpToDataFn(resultData, op.callArgs, op.result, op.error, op.extraInfo),
+        state.asyncData
+      ),
+    [state.asyncData, state.processBus]
+  );
+  let operations = useMemo(
+    () =>
+      state.processBus.map(it => ({
+        ...it.extraInfo,
+        id: it.id,
+        type: it.type,
+        args: it.callArgs,
+        state: it.error !== undefined ? "error" : it.result !== undefined ? "success" : "pending",
+        result: it.error !== undefined ? it.error : it.result !== undefined ? it.result : undefined
+      })),
+    [state.processBus]
+  );
+  let clearOperations = useOperationsCleanup(dispatchAction, state.processBus, preserveOperations);
 
   let handleLoad = useCallback(
     (...callArgs) =>
@@ -98,25 +171,16 @@ export function useDataInternal({ onLoad, onUpdate, dtoIn, data }, customReducer
     mountRef.current = true;
   }, []);
 
-  let syncData = useMemo(
-    () =>
-      state.processBus.reduce(
-        (resultData, op) => op.applyOpToDataFn(resultData, op.callArgs, op.result, op.error),
-        state.asyncData
-      ),
-    [state.asyncData, state.processBus]
-  );
-
   let api = useMemo(() => {
-    let { processBus, ...restState } = state;
-    return { ...restState, syncData, handleLoad, handleUpdate, setData };
-  }, [handleLoad, handleUpdate, state, syncData, setData]);
+    let { processBus, lastFinishedOp, ...restState } = state;
+    return { ...restState, syncData, operations, handleLoad, handleUpdate, setData, clearOperations };
+  }, [state, syncData, operations, handleLoad, handleUpdate, setData, clearOperations]);
 
   return { api, dispatchAction };
 }
 
-export function useData({ onLoad, onUpdate, dtoIn, data } = {}) {
-  let { api } = useDataInternal({ onLoad, onUpdate, dtoIn, data }, null);
+export function useData({ onLoad, onUpdate, dtoIn, data, preserveOperations } = {}) {
+  let { api } = useDataInternal({ onLoad, onUpdate, dtoIn, data, preserveOperations }, null);
   return api;
 }
 

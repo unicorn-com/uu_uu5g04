@@ -96,7 +96,7 @@ export const RichLink = UU5.Common.VisualComponent.create({
     return this._prepareLinkData({});
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.href !== this.props.href) {
       this.setState(state => this._prepareLinkData(state, nextProps));
     }

@@ -16,38 +16,71 @@ import React from "react";
 import createReactClass from "create-react-class";
 import { lazy as _lazy } from "./suspense.js";
 import Element from "./element";
+import { preprocessors, postprocessors } from "./component-processors.js";
 //@@viewOff:imports
+
+export function createComponent(componentDescriptor, isVisual = false) {
+  let ctx = {};
+  for (let processor of preprocessors) {
+    if (isVisual || !processor.isVisual) processor(componentDescriptor, ctx); // non-visual processors are run always; visual processors only when creating visualComponent
+  }
+  let result = _doCreate(componentDescriptor);
+  for (let processor of postprocessors) {
+    if (isVisual || !processor.isVisual) result = processor(result, componentDescriptor, ctx);
+  }
+
+  return result;
+}
+
+function _doCreate(componentDescriptor) {
+  let { defaultProps, displayName } = componentDescriptor;
+
+  // replace defaultProps with getDefaultProps() method as required by createReactClass
+  if (defaultProps) {
+    if (process.env.NODE_ENV !== "production" && componentDescriptor.getDefaultProps) {
+      let name = (componentDescriptor.statics || {}).tagName || displayName;
+      console.warn(
+        `Component ${name} is specified with 'defaultProps' as well as with 'getDefaultProps'. Only 'defaultProps' will be used, you should remove 'getDefaultProps'.`,
+        componentDescriptor
+      );
+    }
+    delete componentDescriptor.defaultProps;
+    componentDescriptor.getDefaultProps = function() {
+      return defaultProps;
+    };
+  }
+
+  // add tagName so that ContentMixin still considers this a uu5 component
+  if (displayName && (!componentDescriptor.statics || !componentDescriptor.statics.tagName)) {
+    componentDescriptor.statics || (componentDescriptor.statics = {});
+    componentDescriptor.statics.tagName = displayName;
+  }
+
+  // rename relevant functions to UNSAFE_ to prevent deprecation warning in newer React
+  let { componentWillReceiveProps, componentWillMount, componentWillUpdate } = componentDescriptor;
+  if (componentWillReceiveProps) {
+    componentDescriptor.UNSAFE_componentWillReceiveProps = componentWillReceiveProps;
+    delete componentDescriptor.componentWillReceiveProps;
+  }
+  if (componentWillMount) {
+    componentDescriptor.UNSAFE_componentWillMount = componentWillMount;
+    delete componentDescriptor.componentWillMount;
+  }
+  if (componentWillUpdate) {
+    componentDescriptor.UNSAFE_componentWillUpdate = componentWillUpdate;
+    delete componentDescriptor.componentWillUpdate;
+  }
+
+  let result = createReactClass(componentDescriptor);
+  if (result.tagName && !result.displayName) {
+    result.displayName = result.tagName;
+  }
+  return result;
+}
 
 export const Component = {
   create(componentDescriptor) {
-    let { defaultProps, displayName } = componentDescriptor;
-
-    // replace defaultProps with getDefaultProps() method as required by createReactClass
-    if (defaultProps) {
-      if (process.env.NODE_ENV !== "production" && componentDescriptor.getDefaultProps) {
-        let name = (componentDescriptor.statics || {}).tagName || displayName;
-        console.warn(
-          `Component ${name} is specified with 'defaultProps' as well as with 'getDefaultProps'. Only 'defaultProps' will be used, you should remove 'getDefaultProps'.`,
-          componentDescriptor
-        );
-      }
-      delete componentDescriptor.defaultProps;
-      componentDescriptor.getDefaultProps = function() {
-        return defaultProps;
-      };
-    }
-
-    // add tagName so that ContentMixin still considers this a uu5 component
-    if (displayName && (!componentDescriptor.statics || !componentDescriptor.statics.tagName)) {
-      componentDescriptor.statics || (componentDescriptor.statics = {});
-      componentDescriptor.statics.tagName = displayName;
-    }
-
-    let result = createReactClass(componentDescriptor);
-    if (result.tagName && !result.displayName) {
-      result.displayName = result.tagName;
-    }
-    return result;
+    return createComponent(componentDescriptor, false);
   },
 
   createHoc(args) {

@@ -121,7 +121,7 @@ export const File = Context.withContext(
       };
     },
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
       if (this.props.onValidate && typeof this.props.onValidate === "function") {
         this._validateOnChange({ value: this.state.value, event: null, component: this });
       }
@@ -154,7 +154,7 @@ export const File = Context.withContext(
       return this;
     },
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
       if (this.props.controlled) {
         if (this.props.onValidate && typeof this.props.onValidate === "function") {
           this._validateOnChange({ value: nextProps.value, event: null, component: this }, true);

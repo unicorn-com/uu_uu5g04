@@ -67,14 +67,35 @@ export function processBusReducer(state, action, nextReducer) {
   let { type, payload } = action;
 
   let result;
-  if (!type.match(/(Start|Done|Fail)$/)) {
+  if (type === "clearOperations") {
+    let updatedState;
+    let { ids } = payload || {};
+    let cleanupIdsSet = new Set(ids);
+    let newProcessBus = state.processBus.filter(op => !cleanupIdsSet.has(op.id));
+    if (newProcessBus.length !== state.processBus.length) {
+      updatedState = {
+        ...state,
+        processBus: newProcessBus
+      };
+    }
+    result = nextReducer(updatedState || state, action);
+  } else if (!type.match(/(Start|Done|Fail)$/)) {
     result = nextReducer(state, action);
   } else {
     if (type.endsWith("Start")) {
       // starting an operation puts it into the process bus
       let eventType = type.replace(/(Start|Done|Fail)$/, "");
       let { id, applyOpToDataFn, callArgs, execFn } = payload;
-      let newOpItem = { id, type: eventType, applyOpToDataFn, execFn, callArgs, result: undefined, error: undefined };
+      let newOpItem = {
+        id,
+        type: eventType,
+        applyOpToDataFn,
+        execFn,
+        callArgs,
+        result: undefined,
+        error: undefined,
+        extraInfo: {}
+      };
       result = {
         ...state,
         processBus: [...state.processBus, newOpItem]
@@ -101,19 +122,25 @@ export function processBusReducer(state, action, nextReducer) {
       };
     }
 
-    // remove processed operations from the start of the process list
-    while (result.processBus.length > 0) {
-      let { error: opError, result: opResult, applyOpToDataFn, callArgs } = result.processBus[0];
+    // update asyncData & lastFinishedOp info - process all finished (but not-yet-processed) operations upto 1st non-finished
+    let i;
+    for (i = 0; i < result.processBus.length; i++) {
+      let op = result.processBus[i];
+      let { error: opError, result: opResult, applyOpToDataFn, callArgs } = op;
       if (opResult === undefined && opError === undefined) break; // still in progress
+      if (op.asyncData !== undefined) continue; // finished but already processed
+
       if (result === state) result = { ...state };
-      result.lastFinishedOp = result.processBus[0];
-      result.asyncData = applyOpToDataFn(result.asyncData, callArgs, opResult, opError);
-      result.processBus.shift();
+      if (result.processBus === state.processBus) result.processBus = [...state.processBus];
+      let extraInfo = {}; // extra information, typically the applyOpToDataFn can fill in "items" (final items that the operation was related to)
+      result.asyncData = applyOpToDataFn(result.asyncData, callArgs, opResult, opError, extraInfo);
+      result.processBus[i] = { ...op, asyncData: result.asyncData, extraInfo };
+      result.lastFinishedOp = result.processBus[i];
     }
 
     // compute viewState based on last finished operation or first pending operation
     let lastFinishedOp = result.lastFinishedOp;
-    let pendingOp = result.processBus[0];
+    let pendingOp = result.processBus[i];
     if (lastFinishedOp || pendingOp) {
       if (result === state) result = { ...state };
       Object.assign(result, {

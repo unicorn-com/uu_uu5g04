@@ -40,7 +40,7 @@ describe(`UU5.Bricks.DateTime interface testing`, () => {
     expect(wrapper).toMatchSnapshot();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().getFormat()).not.toBeNull();
     expect(wrapper.instance().getFormat()).toMatch(/dd.mm.y HH:MM:SS/);
   });
@@ -76,7 +76,7 @@ describe(`UU5.Bricks.DateTime interface testing`, () => {
     expect(wrapper).toMatchSnapshot();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().getCountry()).not.toBeNull();
     expect(wrapper.instance().getCountry()).toMatch(/en-us/);
   });
@@ -125,7 +125,7 @@ describe(`UU5.Bricks.DateTime interface testing`, () => {
     expect(wrapper).toMatchSnapshot();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().getTimeZone()).toBe(12.0);
   });
 
@@ -154,6 +154,6 @@ describe(`UU5.Bricks.DateTime interface testing`, () => {
     expect(wrapper.instance().getTimeZone()).toBe(5.0);
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
   });
 });

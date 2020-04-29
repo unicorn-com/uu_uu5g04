@@ -12,12 +12,15 @@
  */
 
 import UU5 from "uu5g04";
-import { useState, useLayoutEffect, useMemo } from "./react-hooks";
+import { useState, useLayoutEffect, useMemo, useContext } from "./react-hooks";
 import { createComponent } from "./component";
-import { createContext } from "./context";
+import { usePreviousValue } from "./internal/use-previous-value";
 
-const [SessionContext, useSession] = createContext();
-const EMPTY_SESSION = {};
+const SessionContext = UU5.Common.Session.Context;
+
+function useSession() {
+  return useContext(SessionContext);
+}
 
 const SessionProvider = createComponent({
   displayName: "UU5.Hooks.SessionProvider",
@@ -30,58 +33,56 @@ const SessionProvider = createComponent({
       removeListener: UU5.PropTypes.func,
       getIdentity: UU5.PropTypes.func,
       isAuthenticated: UU5.PropTypes.func,
-      isExpiring: UU5.PropTypes.func,
+      isExpiring: UU5.PropTypes.func
       // TODO login, logout
     }).isRequired
   },
 
   defaultProps: {
-    session: EMPTY_SESSION
+    session: undefined
   },
 
   render({ session, children }) {
-    let defaultIdentity,
-      defaultExpiring = false;
-    if (session.initComplete) {
-      defaultIdentity = session.getIdentity();
-      defaultExpiring = session.isExpiring();
+    const [identity, setIdentity] = useState(() =>
+      session && session.initComplete ? session.getIdentity() : undefined
+    );
+    const [isExpiring, setExpiring] = useState(() => (session && session.initComplete ? session.isExpiring() : false));
+
+    const prevSession = usePreviousValue(session, session);
+    if (session !== prevSession) {
+      setIdentity(session && session.initComplete ? session.getIdentity() : undefined);
+      setExpiring(session && session.initComplete ? session.isExpiring() : false);
     }
-
-    const [identity, setIdentity] = useState(defaultIdentity);
-    const [isExpiring, setExpiring] = useState(defaultExpiring);
-
     useLayoutEffect(() => {
       const unregister = UU5.Utils.Session.register(session, setIdentity, setExpiring);
       return () => unregister();
     }, [session]);
 
-    const value = useMemo(
-      () => {
-        let sessionState = "pending";
-        if (identity) sessionState = "authenticated";
-        else if (identity === null) sessionState = "notAuthenticated";
+    const value = useMemo(() => {
+      let sessionState = "pending";
+      if (identity) sessionState = "authenticated";
+      else if (identity === null) sessionState = "notAuthenticated";
 
-        return {
-          sessionState,
-          identity,
-          isExpiring,
-          session,
-          login: (...args) => (typeof session.login === "function" && session.login(...args)) || Promise.resolve(),
-          logout: (...args) =>
-            (typeof session.logout === "function" &&
-              session.logout(...args).catch(e => {
-                // TODO error
-                console.error(`User ${identity.uuIdentity} is not logged out.`, e);
-              })) ||
-            Promise.resolve()
-        };
-      },
-      [identity, isExpiring, session]
-    );
+      // NOTE Keep value in sync with core/common/session.js.
+      return {
+        sessionState,
+        identity,
+        isExpiring,
+        session,
+        login: (...args) => (typeof session.login === "function" && session.login(...args)) || Promise.resolve(),
+        logout: (...args) =>
+          (typeof session.logout === "function" &&
+            session.logout(...args).catch(e => {
+              // TODO error
+              console.error(`User ${identity.uuIdentity} is not logged out.`, e);
+            })) ||
+          Promise.resolve()
+      };
+    }, [identity, isExpiring, session]);
 
     return <SessionContext.Provider value={value}>{children}</SessionContext.Provider>;
   }
 });
 
-export { useSession, SessionProvider, SessionContext };
+export { useSession, SessionProvider };
 export default useSession;

@@ -140,7 +140,7 @@ export const EditationPanel = UU5.Common.VisualComponent.create({
     };
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.activeInput && !this._hasListener) {
       this._addEvent();
     } else if (!nextProps.activeInput && this._hasListener) {

@@ -16,6 +16,7 @@ import ns from "./common-ns.js";
 import PropTypes from "prop-types";
 import BaseMixin from "./base-mixin.js";
 import VisualComponent from "./visual-component.js";
+import Url from "./url.js";
 //@@viewOff:imports
 
 export const Redirect = VisualComponent.create({
@@ -51,7 +52,7 @@ export const Redirect = VisualComponent.create({
   //@@viewOn:reactLifeCycle
   componentDidMount() {
     if (this.props.uri) {
-      window.open(this.props.uri, this.props.target || "_self");
+      window.open(Url.getAbsoluteUri(this.props.uri), this.props.target || "_self");
     }
   },
   //@@viewOff:reactLifeCycle

@@ -72,7 +72,6 @@
             {/*@@viewOn:0*/}
             <UU5.Forms.DatePicker
               label="Date of birth"
-              placeholder="1/1/1990"
               feedback="warning"
               message="Warning message"
             />
@@ -80,12 +79,20 @@
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
 
+          <UU5.Bricks.Section header="placeholder">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DatePicker
+              label="Date of birth"
+              placeholder={UU5.Common.Tools.getDateString("1990-11-21", { country: "cs-cz" })}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
           <UU5.Bricks.Section header="readOnly">
             {/*@@viewOn:0*/}
             <UU5.Forms.DatePicker
               label="Date of birth"
-              placeholder="1/1/1990"
-              value='12/9/2017'
+              value="1990-11-21"
               readOnly
             />
 
@@ -121,7 +128,7 @@
             {/*@@viewOn:0*/}
             <UU5.Forms.DatePicker
               label="Date of birth"
-              placeholder="1/1/1990"
+              valueType="iso"
               onChange={opt => {
                 this.setState({
                   value1: opt.value
@@ -142,7 +149,7 @@
             {/*@@viewOn:0*/}
             <UU5.Forms.DatePicker
               label="Date of birth"
-              placeholder="1/1/1990"
+              valueType="iso"
               onChangeFeedback={opt => {
                 this.setState({feedback2: opt.feedback, message2: opt.message});
               }}
@@ -166,7 +173,7 @@
             {/*@@viewOn:0*/}
             <UU5.Forms.DatePicker
               label="Date of birth"
-              placeholder="1/1/1990"
+              valueType="iso"
               onValidate={opt => {
                 let feedback;
                 if (new Date(opt.value) < new Date()) {
@@ -194,7 +201,6 @@
             {/*@@viewOn:0*/}
             <UU5.Forms.DatePicker
               label="Date of birth"
-              placeholder="1/1/1990"
               inputColWidth="xs-12 s-9"
               labelColWidth="xs-12 s-3"
             />
@@ -206,7 +212,6 @@
             {/*@@viewOn:0*/}
             <UU5.Forms.Text
               label="Date of birth"
-              placeholder="1/1/1990"
               labelAlignment="xs-right s-left"
             />
 

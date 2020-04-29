@@ -189,7 +189,8 @@ describe(`UU5.Forms.DatePicker props`, () => {
     ISOFormatTest({ value: "2019-07-20" }, defaultCountry, "7/20/2019");
     ISOFormatTest({ value: "2019-07-20T07:00:00.000Z" }, defaultCountry, "7/20/2019");
     ISOFormatTest({ value: "2019-07-20T07:00:00.000+02:00" }, defaultCountry, "7/20/2019");
-    ISOFormatTest({ value: "2019-07-20T07:00:00.000+02:00" }, "cs-CZ", "2019-7-20"); // this might be wrong
+    // FIXME Uncomment when Jest tests use full-icu so that Intl.DateTimeFormat works.
+    // ISOFormatTest({ value: "2019-07-20T07:00:00.000+02:00" }, "cs-CZ", "20. 7. 2019");
   });
 
   it(`step`, () => {
@@ -217,7 +218,7 @@ describe(`UU5.Forms.DatePicker props`, () => {
   it(`valueType`, () => {
     let onChangeFn = jest.fn();
     let wrapper = mount(<UU5.Forms.DatePicker value="2.2.2020" valueType="iso" onChange={onChangeFn} />);
-    expect(wrapper.instance().getValue()).toBe("2020-02-01T23:00:00.000Z");
+    expect(wrapper.instance().getValue()).toBe("2020-02-02");
   });
 });
 

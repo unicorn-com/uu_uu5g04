@@ -15,77 +15,212 @@ export const FormsLsi = {
   editablePanel: {
     moreSettingsTooltip: {
       cs: "Další nastavení",
-      en: "More Settings"
+      en: "More Settings",
+      sk: "Ďalšie nastavenia",
+      uk: "Додаткові налаштування"
     },
     settingsButton: {
       cs: "Nastavení",
-      en: "Settings"
+      en: "Settings",
+      sk: "Nastavenia",
+      uk: "Налаштування"
     }
   },
   editableHeader: {
     placeholder: {
       cs: "Hlavička",
-      en: "Header"
+      en: "Header",
+      sk: "Hlavička",
+      uk: "Заголовок"
     }
   },
   editableFooter: {
     placeholder: {
       cs: "Patička",
-      en: "Footer"
+      en: "Footer",
+      sk: "Pätička",
+      uk: "Футер"
     }
   },
   endEditation: {
     label: {
       cs: "Ukončit úpravy",
-      en: "Stop editing"
+      en: "Stop editing",
+      sk: "Ukončiť úpravy",
+      uk: "Закінчити редагування"
     }
   },
   modal: {
     componentInfo: {
       cs: "Náhlédni do dokumentace",
-      en: "Consult documentation of"
+      en: "Consult documentation of",
+      sk: "Nahliadni do dokumentácie",
+      uk: "Перевірте документацію"
     },
     menuItemInsertBefore: {
       cs: "Vložit před",
-      en: "Insert Before"
+      en: "Insert Before",
+      sk: "Vložiť pred",
+      uk: "Вставити перед"
     },
     menuItemInsertAfter: {
       cs: "Vložit za",
-      en: "Insert After"
+      en: "Insert After",
+      sk: "Vložiť za",
+      uk: "Вставити після"
     },
     menuItemMoveToPosition: {
       cs: "Posunout na pozici",
-      en: "Move to Position"
+      en: "Move to Position",
+      sk: "Posunúť na pozíciu",
+      uk: "Перенести на позицію"
     },
     menuItemDuplicate: {
       cs: "Duplikovat komponentu",
-      en: "Duplicate Component"
+      en: "Duplicate Component",
+      sk: "Duplikovať komponentu",
+      uk: "Дублікувати компонент"
     },
     menuItemDelete: {
       cs: "Smazat",
-      en: "Delete"
+      en: "Delete",
+      sk: "Zmazať",
+      uk: "Видалити"
     },
     itemMoveModalHeader: {
       cs: "Posun položky na pozici",
-      en: "Move Item to Position"
+      en: "Move Item to Position",
+      sk: "Posuň položky na pozíciu",
+      uk: "Перенести товар на позицію"
     },
     saveButton: {
       cs: "Uložit",
-      en: "Save"
+      en: "Save",
+      sk: "Uložiť",
+      uk: "Зберегти"
     },
     cancelButton: {
       cs: "Zrušit",
-      en: "Cancel"
+      en: "Cancel",
+      sk: "Zrušiť",
+      uk: "Відмінити"
     },
     header: {
       cs: "Editace ${name}",
-      en: "${name} Editation"
+      en: "${name} Editation",
+      sk: "Editácia ${name}",
+      uk: "Редагування ${name}"
+    },
+    itemRemoveModalHeader: {
+      cs: "Smazání položky",
+      en: "Item Removal",
+      sk: "Zmazanie položky",
+      uk: "Видаліть елемент"
+    },
+    itemRemoveModalBody: {
+      cs: "Opravdu chcete smazat tuto položku?",
+      en: "Are you sure you want to remove the this item?",
+      sk: "Naozaj chcete odstrániť túto položku?",
+      uk: "Ви впевнені, що хочете видалити цей елемент?"
+    },
+    itemRemoveModalConfirmButton: {
+      cs: "Smazat",
+      en: "Remove",
+      sk: "Zmazať",
+      uk: "Видалити"
     }
   },
   menu: {
     addItemButton: {
       cs: "Přidat položku",
-      en: "Add Item"
+      en: "Add Item",
+      sk: "Pridať položku",
+      uk: "Додати товар"
+    }
+  },
+  bgStyleInput: {
+    label: { 
+      cs: "Styl pozadí", 
+      en: "Background style",
+      sk: "Štýl pozadia",
+      uk: "Фон стиль"
+    },
+    filled: { 
+      cs: "vyplněný", 
+      en: "filled",
+      sk: "vyplnený",
+      uk: "заповнене"
+    },
+    outline: { 
+      cs: "ohraničený", 
+      en: "outline",
+      sk: "ohraničený",
+      uk: "контур"
+    },
+    transparent: { 
+      cs: "transparentní", 
+      en: "transparent",
+      sk: "transparentné",
+      uk: "прозорий"
+    },
+    underline: { 
+      cs: "podtržený", 
+      en: "underline",
+      sk: "podčiarknutý",
+      uk: "підкреслення"
+    },
+    rounded: { 
+      cs: "kulaté", 
+      en: "rounded",
+      sk: "guľaté",
+      uk: "круглі"
+    }
+  },
+  elevationInput: {
+    label: { 
+      en: "Elevation"
+    }
+  },
+  borderRadiusInput: {
+    label: { 
+      cs: "Zaoblení rohů", 
+      en: "Border radius",
+      sk: "Zaoblenie rohov",
+      uk: "Закруглення кутів"
+    }
+  },
+  colorSchemaPicker: {
+    label: { 
+      cs: "Barevné schéma", 
+      en: "Color schema",
+      sk: "Farebná schéma",
+      uk: "Колірна гамма"
+    }
+  },
+  confirmModal: {
+    content: {
+      cs: "Chystáte se provést potenciálně destruktivní změny. Opravdu si přejete tuto změnu povést?",
+      en: "You are about to do a potentially destructive action. Are you sure you want to proceed?",
+      sk: "Chystáte sa vykonať potenciálne deštruktívne zmeny. Naozaj chcete túto zmenu podariť?",
+      uk: "Ви збираєтесь внести потенційно руйнівні зміни. Ви впевнені, що хочете внести цю зміну?"
+    },
+    header: {
+      cs: "Provést změny?",
+      en: "Execute changes?",
+      sk: "Vykonať zmeny?",
+      uk: "Внести зміни?"
+    },
+    confirm: {
+      cs: "Změnit",
+      en: "Change",
+      sk: "Zmeniť",
+      uk: "Зміна"
+    },
+    cancel: {
+      cs: "Zrušit",
+      en: "Cancel",
+      sk: "Zrušiť",
+      uk: "Відмінити"
     }
   }
 };

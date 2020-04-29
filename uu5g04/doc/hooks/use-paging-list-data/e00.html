@@ -290,12 +290,16 @@
       onDelete: Calls.delete,
       pageSize
     });
-    let { viewState, errorState, error, syncData, asyncData, pageInfo, handleLoad, handleCreate, handleUpdate, handleDelete } = listDataValues;
+    let { viewState, errorState, error, syncData, asyncData, pageInfo, operations, handleLoad, handleCreate, handleUpdate, handleDelete } = listDataValues;
     let data = pessimistic ? asyncData : syncData;
     let modalRef = useRef();
 
     let firstNotYetLoadedIndex = data ? data.findIndex(it => it == null) : 0;
     let dataToRender = data && firstNotYetLoadedIndex ? data.slice(0, firstNotYetLoadedIndex) : data || [];
+
+    useEffect(() => {
+      console.table(operations, ["id", "type", "state", "result", "args"]);
+    }, [operations]);
 
     function showModal(joke) {
       let modal = modalRef.current;

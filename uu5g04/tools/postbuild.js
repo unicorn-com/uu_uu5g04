@@ -41,10 +41,18 @@ async function run() {
     let testExports = exportsReader.getExportsFromFile("src/test/test-build.js");
     let typingsTest = new ExportsToTypings().serialize(testExports, "UU5.Test", "");
     let typings = fs.readFileSync("target/dist-root/index.d.ts", "utf-8");
-    let modTypings = typings.replace(/namespace Test\s+\{\s*\}/, () => {
+    let modTypings = typings.replace(/namespace Test\s+\{\s*\}/, m => {
       let from = typingsTest.indexOf("namespace Test");
-      let to = typingsTest.lastIndexOf("}");
-      return typingsTest.substr(from, to - from).trim();
+      let fromNewLine = typingsTest.lastIndexOf("\n", from);
+      let whitespaces = typingsTest.substr(fromNewLine + 1, from - fromNewLine).match(/^\s*/)[0];
+      let toMatch = typingsTest.substr(from).match(new RegExp("\\n" + whitespaces + "}"));
+      let to = toMatch ? from + toMatch.index + toMatch[0].length : null;
+      return to !== null
+        ? typingsTest
+            .substr(from, to - from)
+            .trim()
+            .replace(/(\r?\n)/g, "$1    ")
+        : m;
     });
     fs.writeFileSync("target/dist-root/index.d.ts", modTypings, "utf-8");
   } catch (e) {

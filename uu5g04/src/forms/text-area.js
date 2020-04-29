@@ -68,7 +68,7 @@ export const TextArea = Context.withContext(
     //@@viewOff:getDefaultProps
 
     //@@viewOn:reactLifeCycle
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
       if (this.props.onValidate && typeof this.props.onValidate === "function") {
         this._validateOnChange({ value: this.state.value, event: null, component: this });
       } else {
@@ -78,7 +78,7 @@ export const TextArea = Context.withContext(
       return this;
     },
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
       if (this.props.controlled) {
         if (this.props.onValidate && typeof this.props.onValidate === "function") {
           this._validateOnChange({ value: nextProps.value, event: null, component: this }, true);

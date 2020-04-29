@@ -155,7 +155,7 @@ export const Panel = UU5.Common.VisualComponent.create({
     };
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
       if (nextProps.alwaysExpanded) {
         !this.isExpanded() && this.setState({ expanded: true, renderChild: true });

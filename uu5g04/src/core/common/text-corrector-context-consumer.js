@@ -98,7 +98,7 @@ export const TextCorrectorComponent = VisualComponent.create({
     this._correctText(this.props, this.state.text, null, true);
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     this._correctText(nextProps, nextProps.text);
   },
 

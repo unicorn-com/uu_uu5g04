@@ -209,7 +209,7 @@ export const DateTimeRangePicker = Context.withContext(
         if (
           this.props.dateFrom &&
           this._compareDates(today, this.props.dateFrom, "greater") &&
-          (this.props.dateTo && this._compareDates(today, this.props.dateTo, "lesser"))
+          this.props.dateTo && this._compareDates(today, this.props.dateTo, "lesser")
         ) {
           fromDisplayDate = today;
         } else {
@@ -244,7 +244,7 @@ export const DateTimeRangePicker = Context.withContext(
       };
     },
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
       this._hasFocus = false;
 
       this._setUpLimits(this.props);
@@ -293,7 +293,7 @@ export const DateTimeRangePicker = Context.withContext(
       UU5.Environment.EventListener.registerDateTime(this.getId(), this._change);
     },
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
       if (this.props.controlled) {
         this._setUpLimits(nextProps);
 
@@ -591,11 +591,15 @@ export const DateTimeRangePicker = Context.withContext(
         if (singleValue) {
           let dateObject = this._parseDate(singleValue);
 
-          singleValue = UU5.Common.Tools.adjustForTimezone(
-            dateObject,
-            UU5.Environment.dateTimeZone,
-            this.props.timeZone
-          );
+          if (typeof this.props.timeZone === "number") {
+            singleValue = UU5.Common.Tools.adjustForTimezone(
+              dateObject,
+              -dateObject.getTimezoneOffset() / 60,
+              this.props.timeZone
+            );
+          } else {
+            singleValue = dateObject;
+          }
         }
 
         return singleValue;
@@ -742,7 +746,8 @@ export const DateTimeRangePicker = Context.withContext(
     },
 
     _getDateString(value, format = this.state.format, country = this.state.country) {
-      return UU5.Common.Tools.getDateString(value, { format, country });
+      let isoDateOnlyString = value instanceof Date ? DateTools.toISODateOnlyString(value) : value;
+      return UU5.Common.Tools.getDateString(isoDateOnlyString, { format, country });
     },
 
     _getFullDate(dateString, timeString, dayPart) {
@@ -2494,7 +2499,7 @@ export const DateTimeRangePicker = Context.withContext(
       }
 
       if (
-        (this.props.label && (!this.props.labelFrom && !this.props.labelTo)) ||
+        (this.props.label && !this.props.labelFrom && !this.props.labelTo) ||
         !(this.props.labelFrom && this.props.labelTo)
       ) {
         attrs.className += " " + this.getClassName("compactLayout");

@@ -65,7 +65,7 @@ export const LsiContext = UU5.Common.VisualComponent.create({
     window.UU5.Environment.EventListener.registerLsi(this.getId(), this._onChangeLanguage);
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (this.props.localLsi !== nextProps.localLsi) {
       this._fireEvent(this._getContextLanguage(nextProps));
     }

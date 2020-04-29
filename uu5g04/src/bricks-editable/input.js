@@ -90,7 +90,7 @@ export const Input = withContext(
         };
       },
 
-      componentWillReceiveProps(nextProps) {
+      UNSAFE_componentWillReceiveProps(nextProps) {
         if (this.props.controlled) {
           this.setState({ value: nextProps.value, readOnly: nextProps.readOnly });
         }

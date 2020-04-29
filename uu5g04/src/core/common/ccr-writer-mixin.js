@@ -58,11 +58,11 @@ export const CcrWriterMixin = {
     return null;
   },
 
-  componentWillMount: function() {
+  UNSAFE_componentWillMount: function() {
     this.getCcrKey() && this._registerToCcrByKey(this.getCcrKey());
   },
 
-  componentWillReceiveProps: function(nextProps) {
+  UNSAFE_componentWillReceiveProps: function(nextProps) {
     if (this.getCcrKey(nextProps) && this.getCcrKey(nextProps) !== this.getCcrKey()) {
       this.getCcrKey() && this.isCcrRegisteredByKey(this.getCcrKey()) && this._unregisterFromCcrByKey(this.getCcrKey());
       this._registerToCcrByKey(this.getCcrKey(nextProps));

@@ -66,7 +66,7 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  componentWillMount: function() {
+  UNSAFE_componentWillMount: function() {
     let parent = this.getParent();
 
     if (parent) {

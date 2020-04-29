@@ -67,16 +67,16 @@
           };
         },
 
-        componentWillMount() {
-          console.log('Component1 componentWillMount');
+        UNSAFE_componentWillMount() {
+          console.log('Component1 UNSAFE_componentWillMount');
         },
 
         componentDidMount() {
           console.log('Component1 componentDidMount');
         },
 
-        componentWillReceiveProps(nextProps) {
-          console.log('Component1 componentWillReceiveProps', this.props, nextProps);
+        UNSAFE_componentWillReceiveProps(nextProps) {
+          console.log('Component1 UNSAFE_componentWillReceiveProps', this.props, nextProps);
         },
 
         componentWillUpdate() {
@@ -125,9 +125,9 @@
           };
         },
 
-        componentWillMount() {
+        UNSAFE_componentWillMount() {
           this._objects = {};
-          console.log('Component2 componentWillMount');
+          console.log('Component2 UNSAFE_componentWillMount');
           for (let key in this.props) {
             if (this.props[key] && typeof this.props[key] === 'object') {
               this._objects[key] = UU5.Common.Tools.mergeDeep({}, this.props[key]);
@@ -139,8 +139,8 @@
           console.log('Component2 componentDidMount');
         },
 
-        componentWillReceiveProps(nextProps) {
-          console.log('Component2 componentWillReceiveProps', this.props, nextProps);
+        UNSAFE_componentWillReceiveProps(nextProps) {
+          console.log('Component2 UNSAFE_componentWillReceiveProps', this.props, nextProps);
         },
 
         shouldComponentUpdate(nextProps, nextState) {

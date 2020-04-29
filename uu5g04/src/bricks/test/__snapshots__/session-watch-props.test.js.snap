@@ -30,6 +30,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkGrammar=false 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -73,6 +75,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkGrammar=false 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -139,6 +143,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkGrammar=false 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -205,6 +211,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkGrammar=false 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -260,6 +268,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkGrammar=true 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -303,6 +313,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkGrammar=true 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -369,6 +381,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkGrammar=true 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -435,6 +449,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkGrammar=true 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -490,6 +506,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkHighlight=false 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -533,6 +551,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkHighlight=false 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -599,6 +619,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkHighlight=false 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -665,6 +687,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkHighlight=false 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -720,6 +744,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkHighlight=true 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -763,6 +789,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkHighlight=true 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -829,6 +857,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkHighlight=true 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -895,6 +925,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkHighlight=true 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -950,6 +982,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkSpaces=false 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -993,6 +1027,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkSpaces=false 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -1059,6 +1095,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkSpaces=false 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -1125,6 +1163,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkSpaces=false 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -1180,6 +1220,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkSpaces=true 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -1223,6 +1265,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkSpaces=true 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -1289,6 +1333,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkSpaces=true 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -1355,6 +1401,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkSpaces=true 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -1409,6 +1457,8 @@ exports[`UU5.Bricks.SessionWatch props testing className="my-classname" 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -1452,6 +1502,8 @@ exports[`UU5.Bricks.SessionWatch props testing className="my-classname" 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -1518,6 +1570,8 @@ exports[`UU5.Bricks.SessionWatch props testing className="my-classname" 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -1584,6 +1638,8 @@ exports[`UU5.Bricks.SessionWatch props testing className="my-classname" 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -1647,6 +1703,8 @@ exports[`UU5.Bricks.SessionWatch props testing content="This is Content from Con
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -1713,6 +1771,8 @@ exports[`UU5.Bricks.SessionWatch props testing content="This is Content from Con
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -1779,6 +1839,8 @@ exports[`UU5.Bricks.SessionWatch props testing content="This is Content from Con
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -1842,6 +1904,8 @@ exports[`UU5.Bricks.SessionWatch props testing content=12345 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -1908,6 +1972,8 @@ exports[`UU5.Bricks.SessionWatch props testing content=12345 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -1974,6 +2040,8 @@ exports[`UU5.Bricks.SessionWatch props testing content=12345 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -2028,6 +2096,8 @@ exports[`UU5.Bricks.SessionWatch props testing controlled=false 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -2071,6 +2141,8 @@ exports[`UU5.Bricks.SessionWatch props testing controlled=false 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -2137,6 +2209,8 @@ exports[`UU5.Bricks.SessionWatch props testing controlled=false 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -2203,6 +2277,8 @@ exports[`UU5.Bricks.SessionWatch props testing controlled=false 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -2257,6 +2333,8 @@ exports[`UU5.Bricks.SessionWatch props testing controlled=true 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -2300,6 +2378,8 @@ exports[`UU5.Bricks.SessionWatch props testing controlled=true 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -2366,6 +2446,8 @@ exports[`UU5.Bricks.SessionWatch props testing controlled=true 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -2432,6 +2514,8 @@ exports[`UU5.Bricks.SessionWatch props testing controlled=true 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -2486,6 +2570,8 @@ exports[`UU5.Bricks.SessionWatch props testing default props 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -2529,6 +2615,8 @@ exports[`UU5.Bricks.SessionWatch props testing default props 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -2595,6 +2683,8 @@ exports[`UU5.Bricks.SessionWatch props testing default props 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -2661,6 +2751,8 @@ exports[`UU5.Bricks.SessionWatch props testing default props 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -2715,6 +2807,8 @@ exports[`UU5.Bricks.SessionWatch props testing disabled=false 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -2758,6 +2852,8 @@ exports[`UU5.Bricks.SessionWatch props testing disabled=false 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -2824,6 +2920,8 @@ exports[`UU5.Bricks.SessionWatch props testing disabled=false 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -2890,6 +2988,8 @@ exports[`UU5.Bricks.SessionWatch props testing disabled=false 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -2944,6 +3044,8 @@ exports[`UU5.Bricks.SessionWatch props testing disabled=true 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -2988,6 +3090,8 @@ exports[`UU5.Bricks.SessionWatch props testing disabled=true 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -3054,6 +3158,8 @@ exports[`UU5.Bricks.SessionWatch props testing disabled=true 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -3120,6 +3226,8 @@ exports[`UU5.Bricks.SessionWatch props testing disabled=true 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -3174,6 +3282,8 @@ exports[`UU5.Bricks.SessionWatch props testing dynamic=false 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -3217,6 +3327,8 @@ exports[`UU5.Bricks.SessionWatch props testing dynamic=false 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -3283,6 +3395,8 @@ exports[`UU5.Bricks.SessionWatch props testing dynamic=false 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -3349,6 +3463,8 @@ exports[`UU5.Bricks.SessionWatch props testing dynamic=false 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -3403,6 +3519,8 @@ exports[`UU5.Bricks.SessionWatch props testing dynamic=true 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -3447,6 +3565,8 @@ exports[`UU5.Bricks.SessionWatch props testing dynamic=true 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -3513,6 +3633,8 @@ exports[`UU5.Bricks.SessionWatch props testing dynamic=true 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -3579,6 +3701,8 @@ exports[`UU5.Bricks.SessionWatch props testing dynamic=true 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -3633,6 +3757,8 @@ exports[`UU5.Bricks.SessionWatch props testing header="Custom header" 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -3676,6 +3802,8 @@ exports[`UU5.Bricks.SessionWatch props testing header="Custom header" 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -3742,6 +3870,8 @@ exports[`UU5.Bricks.SessionWatch props testing header="Custom header" 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -3828,6 +3958,8 @@ exports[`UU5.Bricks.SessionWatch props testing header=undefined 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -3871,6 +4003,8 @@ exports[`UU5.Bricks.SessionWatch props testing header=undefined 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -3937,6 +4071,8 @@ exports[`UU5.Bricks.SessionWatch props testing header=undefined 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -4003,6 +4139,8 @@ exports[`UU5.Bricks.SessionWatch props testing header=undefined 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -4057,6 +4195,8 @@ exports[`UU5.Bricks.SessionWatch props testing hidden=false 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -4100,6 +4240,8 @@ exports[`UU5.Bricks.SessionWatch props testing hidden=false 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -4166,6 +4308,8 @@ exports[`UU5.Bricks.SessionWatch props testing hidden=false 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -4232,6 +4376,8 @@ exports[`UU5.Bricks.SessionWatch props testing hidden=false 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -4286,6 +4432,8 @@ exports[`UU5.Bricks.SessionWatch props testing hidden=true 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -4329,6 +4477,8 @@ exports[`UU5.Bricks.SessionWatch props testing hidden=true 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -4395,6 +4545,8 @@ exports[`UU5.Bricks.SessionWatch props testing hidden=true 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -4461,6 +4613,8 @@ exports[`UU5.Bricks.SessionWatch props testing hidden=true 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -4516,6 +4670,8 @@ exports[`UU5.Bricks.SessionWatch props testing id="myId" 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -4559,6 +4715,8 @@ exports[`UU5.Bricks.SessionWatch props testing id="myId" 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -4625,6 +4783,8 @@ exports[`UU5.Bricks.SessionWatch props testing id="myId" 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -4691,6 +4851,8 @@ exports[`UU5.Bricks.SessionWatch props testing id="myId" 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -4745,6 +4907,8 @@ exports[`UU5.Bricks.SessionWatch props testing ignoreHTML=false 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -4788,6 +4952,8 @@ exports[`UU5.Bricks.SessionWatch props testing ignoreHTML=false 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -4854,6 +5020,8 @@ exports[`UU5.Bricks.SessionWatch props testing ignoreHTML=false 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -4920,6 +5088,8 @@ exports[`UU5.Bricks.SessionWatch props testing ignoreHTML=false 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -4974,6 +5144,8 @@ exports[`UU5.Bricks.SessionWatch props testing ignoreHTML=true 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -5017,6 +5189,8 @@ exports[`UU5.Bricks.SessionWatch props testing ignoreHTML=true 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -5083,6 +5257,8 @@ exports[`UU5.Bricks.SessionWatch props testing ignoreHTML=true 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -5149,6 +5325,8 @@ exports[`UU5.Bricks.SessionWatch props testing ignoreHTML=true 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -5203,6 +5381,8 @@ exports[`UU5.Bricks.SessionWatch props testing mainAttrs=undefined 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -5246,6 +5426,8 @@ exports[`UU5.Bricks.SessionWatch props testing mainAttrs=undefined 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -5312,6 +5494,8 @@ exports[`UU5.Bricks.SessionWatch props testing mainAttrs=undefined 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -5378,6 +5562,8 @@ exports[`UU5.Bricks.SessionWatch props testing mainAttrs=undefined 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -5432,6 +5618,8 @@ exports[`UU5.Bricks.SessionWatch props testing name="myName" 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -5475,6 +5663,8 @@ exports[`UU5.Bricks.SessionWatch props testing name="myName" 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -5541,6 +5731,8 @@ exports[`UU5.Bricks.SessionWatch props testing name="myName" 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -5607,6 +5799,8 @@ exports[`UU5.Bricks.SessionWatch props testing name="myName" 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -5662,6 +5856,8 @@ exports[`UU5.Bricks.SessionWatch props testing noIndex=false 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -5705,6 +5901,8 @@ exports[`UU5.Bricks.SessionWatch props testing noIndex=false 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -5771,6 +5969,8 @@ exports[`UU5.Bricks.SessionWatch props testing noIndex=false 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -5837,6 +6037,8 @@ exports[`UU5.Bricks.SessionWatch props testing noIndex=false 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -5891,6 +6093,8 @@ exports[`UU5.Bricks.SessionWatch props testing noIndex=true 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -5934,6 +6138,8 @@ exports[`UU5.Bricks.SessionWatch props testing noIndex=true 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -6000,6 +6206,8 @@ exports[`UU5.Bricks.SessionWatch props testing noIndex=true 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -6066,6 +6274,8 @@ exports[`UU5.Bricks.SessionWatch props testing noIndex=true 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -6120,6 +6330,8 @@ exports[`UU5.Bricks.SessionWatch props testing selected=false 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -6163,6 +6375,8 @@ exports[`UU5.Bricks.SessionWatch props testing selected=false 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -6229,6 +6443,8 @@ exports[`UU5.Bricks.SessionWatch props testing selected=false 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -6295,6 +6511,8 @@ exports[`UU5.Bricks.SessionWatch props testing selected=false 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -6349,6 +6567,8 @@ exports[`UU5.Bricks.SessionWatch props testing selected=true 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -6392,6 +6612,8 @@ exports[`UU5.Bricks.SessionWatch props testing selected=true 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -6458,6 +6680,8 @@ exports[`UU5.Bricks.SessionWatch props testing selected=true 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -6524,6 +6748,8 @@ exports[`UU5.Bricks.SessionWatch props testing selected=true 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -6579,6 +6805,8 @@ exports[`UU5.Bricks.SessionWatch props testing style="padding:8px; borderRadius:
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -6622,6 +6850,8 @@ exports[`UU5.Bricks.SessionWatch props testing style="padding:8px; borderRadius:
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -6688,6 +6918,8 @@ exports[`UU5.Bricks.SessionWatch props testing style="padding:8px; borderRadius:
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -6754,6 +6986,8 @@ exports[`UU5.Bricks.SessionWatch props testing style="padding:8px; borderRadius:
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -6814,6 +7048,8 @@ exports[`UU5.Bricks.SessionWatch props testing style={"backgroundColor":"red","c
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -6857,6 +7093,8 @@ exports[`UU5.Bricks.SessionWatch props testing style={"backgroundColor":"red","c
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -6923,6 +7161,8 @@ exports[`UU5.Bricks.SessionWatch props testing style={"backgroundColor":"red","c
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -6989,6 +7229,8 @@ exports[`UU5.Bricks.SessionWatch props testing style={"backgroundColor":"red","c
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -7049,6 +7291,8 @@ exports[`UU5.Bricks.SessionWatch props testing textCorrector=false 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -7092,6 +7336,8 @@ exports[`UU5.Bricks.SessionWatch props testing textCorrector=false 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -7158,6 +7404,8 @@ exports[`UU5.Bricks.SessionWatch props testing textCorrector=false 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -7224,6 +7472,8 @@ exports[`UU5.Bricks.SessionWatch props testing textCorrector=false 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -7279,6 +7529,8 @@ exports[`UU5.Bricks.SessionWatch props testing textCorrector=true 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -7322,6 +7574,8 @@ exports[`UU5.Bricks.SessionWatch props testing textCorrector=true 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -7388,6 +7642,8 @@ exports[`UU5.Bricks.SessionWatch props testing textCorrector=true 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -7454,6 +7710,8 @@ exports[`UU5.Bricks.SessionWatch props testing textCorrector=true 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}
@@ -7509,6 +7767,8 @@ exports[`UU5.Bricks.SessionWatch props testing tooltip="My Tooltip" 1`] = `
             Object {
               "cs": "Po vypršení budete z bezpečnostních důvodů automaticky odhlášeni. Přihlašte se, aby se relace prodloužila, nebo si uložte rozpracovaná data.",
               "en": "When your session expires you will be automatically logged out for security reasons. Please log in again to extend your session or save any unsaved changes.",
+              "sk": "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
+              "uk": "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
             }
           }
           mainAttrs={null}
@@ -7552,6 +7812,8 @@ exports[`UU5.Bricks.SessionWatch props testing tooltip="My Tooltip" 1`] = `
                 Object {
                   "cs": "Zrušit",
                   "en": "Cancel",
+                  "sk": "Zrušiť",
+                  "uk": "Відмінити",
                 }
               }
               mainAttrs={null}
@@ -7618,6 +7880,8 @@ exports[`UU5.Bricks.SessionWatch props testing tooltip="My Tooltip" 1`] = `
                 Object {
                   "cs": "Přihlásit se",
                   "en": "Log in",
+                  "sk": "Prihlásiť sa",
+                  "uk": "Увійти",
                 }
               }
               mainAttrs={null}
@@ -7684,6 +7948,8 @@ exports[`UU5.Bricks.SessionWatch props testing tooltip="My Tooltip" 1`] = `
             Object {
               "cs": "Relace brzy vyprší",
               "en": "Session Expiring",
+              "sk": "Relácia čoskoro vyprší",
+              "uk": "Сесія скоро закінчиться",
             }
           }
           mainAttrs={null}

@@ -60,7 +60,7 @@ export const NestingLevelMixin = {
     };
   },
 
-  componentWillReceiveProps: function(nextProps) {
+  UNSAFE_componentWillReceiveProps: function(nextProps) {
     this.getNestingLevel() !== nextProps.nestingLevel &&
       this.setState({ nestingLevel: this.checkNestingLevel(nextProps) });
   },

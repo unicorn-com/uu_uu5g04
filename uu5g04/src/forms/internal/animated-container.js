@@ -67,7 +67,7 @@ const AnimatedContainer = UU5.Common.VisualComponent.create({
     return { opened: false, hidden: true, height: null };
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (this.state.opened !== nextProps.opened) {
       this.toggle();
     }

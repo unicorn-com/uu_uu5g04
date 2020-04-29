@@ -31,7 +31,7 @@ describe(`UU5.Bricks.Switch interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().state.switchedOn).toBeTruthy();
     expect(wrapper.instance().isSwitchedOn()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
@@ -47,7 +47,7 @@ describe(`UU5.Bricks.Switch interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().state.switchedOn).toBeFalsy();
     expect(wrapper.instance().isSwitchedOn()).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
@@ -63,7 +63,7 @@ describe(`UU5.Bricks.Switch interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().state.switchedOn).toBeTruthy();
     expect(wrapper.instance().isSwitchedOn()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();
@@ -79,7 +79,7 @@ describe(`UU5.Bricks.Switch interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().state.switchedOn).toBeFalsy();
     expect(wrapper.instance().isSwitchedOn()).toBeFalsy();
     expect(wrapper).toMatchSnapshot();
@@ -95,7 +95,7 @@ describe(`UU5.Bricks.Switch interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().state.switchedOn).toBeTruthy();
     expect(wrapper.instance().isSwitchedOn()).toBeTruthy();
     expect(wrapper).toMatchSnapshot();

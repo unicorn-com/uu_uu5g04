@@ -126,7 +126,7 @@ export const FormMixin = {
     };
   },
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.formInputs = {};
     this.formControls = {};
     this.pendingComponents = {};
@@ -144,7 +144,7 @@ export const FormMixin = {
     typeof this.props.onInit === "function" && this.props.onInit({ component: this });
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
       this.setState({
         values: nextProps.values,

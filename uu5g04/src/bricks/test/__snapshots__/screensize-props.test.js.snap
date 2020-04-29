@@ -42,6 +42,7 @@ exports[`Mixin Props testing props of ContentMixin 1`] = `
         "UU5.Common.NestingLevelMixin",
       ],
       "props": Object {
+        "_contextScreenSize": undefined,
         "checkGrammar": true,
         "checkHighlight": true,
         "checkSpaces": true,

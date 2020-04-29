@@ -12,19 +12,78 @@
  */
 
 import UU5 from "uu5g04";
-import { useState, useLayoutEffect } from "./react-hooks";
+import { useState, useLayoutEffect, useContext, useMemo } from "./react-hooks";
+import { createComponent } from "./component";
+import { useParentSize } from "./use-parent-size";
 
-function useScreenSize() {
-  const [screenSize, setScreenSize] = useState(UU5.Utils.ScreenSize.getSize());
-
-  useLayoutEffect(() => {
-    const changeScreenSize = (e, screenSize) => setScreenSize(screenSize);
-    UU5.Utils.ScreenSize.register(changeScreenSize);
-    return () => UU5.Utils.ScreenSize.unregister(changeScreenSize);
-  }, []);
-
-  return { screenSize, setScreenSize };
+const ScreenSizeContext = UU5.Utils.ScreenSize.Context;
+function useScreenSizeContext() {
+  return useContext(ScreenSizeContext);
 }
 
-export { useScreenSize };
+const ScreenSizeProvider = createComponent({
+  //@@viewOn:statics
+  displayName: "UU5.Hooks.ScreenSizeProvider",
+  //@@viewOff:statics
+
+  //@@viewOn:propTypes
+  propTypes: {
+    screenSize: UU5.PropTypes.oneOf(Object.keys(UU5.Utils.ScreenSize.SIZE_MAP))
+  },
+  //@@viewOff:propTypes
+
+  //@@viewOn:defaultProps
+  defaultProps: {
+    screenSize: undefined
+  },
+  //@@viewOff:defaultProps
+
+  render({ screenSize, children }) {
+    //@@viewOn:hooks
+    const { Resizer, width } = useParentSize();
+    //@@viewOff:hooks
+
+    //@@viewOn:interface
+    //@@viewOff:interface
+
+    //@@viewOn:private
+    // screenSize prop:
+    //   undefined <=> compute from element
+    //   null <=> provide null (so that useScreenSize uses screen size)
+    //   others <=> as-is
+    const usedScreenSize =
+      screenSize !== undefined ? screenSize : width != null ? UU5.Utils.ScreenSize.countSize(width) : undefined;
+    const value = useMemo(() => (usedScreenSize ? { screenSize: usedScreenSize } : null), [usedScreenSize]);
+    //@@viewOff:private
+
+    //@@viewOn:render
+    return (
+      <>
+        <Resizer />
+        {usedScreenSize !== undefined ? (
+          <ScreenSizeContext.Provider value={value}>{children}</ScreenSizeContext.Provider>
+        ) : null}
+      </>
+    );
+    //@@viewOff:render
+  }
+});
+
+function useScreenSize() {
+  let contextValue = useScreenSizeContext();
+  const [screenSize, setScreenSize] = useState(() => UU5.Utils.ScreenSize.getSize());
+  let usedScreenSize = contextValue != null ? contextValue.screenSize : screenSize;
+
+  useLayoutEffect(() => {
+    if (contextValue == null) {
+      const changeScreenSize = (e, screenSize) => setScreenSize(screenSize);
+      UU5.Utils.ScreenSize.register(changeScreenSize);
+      return () => UU5.Utils.ScreenSize.unregister(changeScreenSize);
+    }
+  }, [contextValue]);
+
+  return { screenSize: usedScreenSize };
+}
+
+export { useScreenSize, ScreenSizeProvider };
 export default useScreenSize;

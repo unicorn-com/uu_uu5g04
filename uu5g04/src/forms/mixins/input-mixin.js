@@ -138,7 +138,7 @@ export const InputMixin = {
     parentForm && parentForm.registerFormInput(this.getId(), this);
   },
 
-  componentWillReceiveProps: function(nextProps) {
+  UNSAFE_componentWillReceiveProps: function(nextProps) {
     if (nextProps.id && nextProps.id !== this.props.id) {
       var parentForm = this._getForm();
       if (parentForm) {

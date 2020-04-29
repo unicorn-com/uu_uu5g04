@@ -4,7 +4,11 @@ exports[`UU5.Bricks.Ul AllowTagsComponent UU5.Bricks.Ul props - allowTags 1`] = 
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -19,13 +23,11 @@ exports[`UU5.Bricks.Ul AllowTagsComponent UU5.Bricks.Ul props - allowTags 1`] = 
       content="Buy milk"
       id="uuID03"
       key="uuID03"
-      markerIcon="mdi-default"
     />
     <UU5.Example.MyCompLi
       content="allow tags content"
       id="alloid"
       key="alloid"
-      markerIcon="mdi-default"
     />
   </ul>
 </ContextProvider>
@@ -35,7 +37,11 @@ exports[`UU5.Bricks.Ul allowTags=undefined 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -53,7 +59,11 @@ exports[`UU5.Bricks.Ul checkGrammar=false 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -71,7 +81,11 @@ exports[`UU5.Bricks.Ul checkGrammar=true 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -89,7 +103,11 @@ exports[`UU5.Bricks.Ul checkHighlight=false 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -107,7 +125,11 @@ exports[`UU5.Bricks.Ul checkHighlight=true 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -125,7 +147,11 @@ exports[`UU5.Bricks.Ul checkSpaces=false 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -143,7 +169,11 @@ exports[`UU5.Bricks.Ul checkSpaces=true 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -161,7 +191,11 @@ exports[`UU5.Bricks.Ul className="my-classname" 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -179,7 +213,11 @@ exports[`UU5.Bricks.Ul content="This is Content from ContentMixin" 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -197,7 +235,11 @@ exports[`UU5.Bricks.Ul content=12345 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -215,7 +257,11 @@ exports[`UU5.Bricks.Ul controlled=false 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -233,7 +279,11 @@ exports[`UU5.Bricks.Ul controlled=true 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -251,7 +301,11 @@ exports[`UU5.Bricks.Ul default props 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -269,7 +323,11 @@ exports[`UU5.Bricks.Ul disabled=false 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -287,7 +345,11 @@ exports[`UU5.Bricks.Ul disabled=true 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -310,7 +372,11 @@ exports[`UU5.Bricks.Ul dynamic=false 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -328,7 +394,11 @@ exports[`UU5.Bricks.Ul dynamic=true 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -346,7 +416,11 @@ exports[`UU5.Bricks.Ul footer={"type":"div","key":null,"ref":null,"props":{"chil
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -374,7 +448,11 @@ exports[`UU5.Bricks.Ul header={"type":"div","key":null,"ref":null,"props":{"chil
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -403,7 +481,11 @@ exports[`UU5.Bricks.Ul hidden=false 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -421,7 +503,11 @@ exports[`UU5.Bricks.Ul hidden=true 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -439,7 +525,11 @@ exports[`UU5.Bricks.Ul id="myId" 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -457,7 +547,11 @@ exports[`UU5.Bricks.Ul ignoreHTML=false 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -475,7 +569,11 @@ exports[`UU5.Bricks.Ul ignoreHTML=true 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -493,7 +591,11 @@ exports[`UU5.Bricks.Ul level="0" 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -511,7 +613,11 @@ exports[`UU5.Bricks.Ul level="1" 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -529,7 +635,11 @@ exports[`UU5.Bricks.Ul level="2" 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -547,7 +657,11 @@ exports[`UU5.Bricks.Ul level="3" 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -565,7 +679,11 @@ exports[`UU5.Bricks.Ul level="4" 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -583,7 +701,11 @@ exports[`UU5.Bricks.Ul level="5" 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -601,7 +723,11 @@ exports[`UU5.Bricks.Ul level="6" 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -619,7 +745,11 @@ exports[`UU5.Bricks.Ul level=0 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -637,7 +767,11 @@ exports[`UU5.Bricks.Ul level=1 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -655,7 +789,11 @@ exports[`UU5.Bricks.Ul level=2 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -673,7 +811,11 @@ exports[`UU5.Bricks.Ul level=3 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -691,7 +833,11 @@ exports[`UU5.Bricks.Ul level=4 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -709,7 +855,11 @@ exports[`UU5.Bricks.Ul level=5 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -727,7 +877,11 @@ exports[`UU5.Bricks.Ul level=6 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -745,7 +899,11 @@ exports[`UU5.Bricks.Ul mainAttrs=undefined 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -763,7 +921,11 @@ exports[`UU5.Bricks.Ul name="myName" 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -782,7 +944,11 @@ exports[`UU5.Bricks.Ul nestingLevel="bigBox" 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -800,7 +966,11 @@ exports[`UU5.Bricks.Ul nestingLevel="bigBoxCollection" 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -818,7 +988,11 @@ exports[`UU5.Bricks.Ul nestingLevel="box" 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -836,7 +1010,11 @@ exports[`UU5.Bricks.Ul nestingLevel="boxCollection" 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -854,7 +1032,11 @@ exports[`UU5.Bricks.Ul nestingLevel="container" 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -874,7 +1056,11 @@ exports[`UU5.Bricks.Ul nestingLevel="page" 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -896,7 +1082,11 @@ exports[`UU5.Bricks.Ul nestingLevel="spa" 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -914,7 +1104,11 @@ exports[`UU5.Bricks.Ul noIndex=false 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -932,7 +1126,11 @@ exports[`UU5.Bricks.Ul noIndex=true 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -950,7 +1148,11 @@ exports[`UU5.Bricks.Ul selected=false 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -968,7 +1170,11 @@ exports[`UU5.Bricks.Ul selected=true 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -986,7 +1192,11 @@ exports[`UU5.Bricks.Ul style="padding:8px; borderRadius: 2px" 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -1009,7 +1219,11 @@ exports[`UU5.Bricks.Ul style={"backgroundColor":"red","color":"blue"} 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -1032,7 +1246,11 @@ exports[`UU5.Bricks.Ul textCorrector=false 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -1050,7 +1268,11 @@ exports[`UU5.Bricks.Ul textCorrector=true 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -1068,7 +1290,11 @@ exports[`UU5.Bricks.Ul tooltip="My Tooltip" 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -1086,7 +1312,11 @@ exports[`UU5.Bricks.Ul type="circle" 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-circle-outline",
+      "ordered": false,
+      "type": "circle",
     }
   }
 >
@@ -1104,7 +1334,11 @@ exports[`UU5.Bricks.Ul type="disc" 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-circle",
+      "ordered": false,
+      "type": "disc",
     }
   }
 >
@@ -1122,7 +1356,11 @@ exports[`UU5.Bricks.Ul type="square" 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-square",
+      "ordered": false,
+      "type": "square",
     }
   }
 >
@@ -1140,7 +1378,11 @@ exports[`UU5.Bricks.Ul underline=false 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >
@@ -1158,7 +1400,11 @@ exports[`UU5.Bricks.Ul underline=true 1`] = `
 <ContextProvider
   value={
     Object {
-      "tagName": "UU5.Bricks.Ul",
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
     }
   }
 >

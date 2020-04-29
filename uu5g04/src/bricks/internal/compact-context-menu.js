@@ -51,7 +51,7 @@ export const CompactContextMenu = UU5.Common.VisualComponent.create({
     };
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     this.setState({ levels: this._getLevels(nextProps.content || nextProps.children) });
   },
   //@@viewOff:reactLifeCycle

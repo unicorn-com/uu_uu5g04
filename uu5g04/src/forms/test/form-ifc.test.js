@@ -306,8 +306,8 @@ describe("UU5.Forms.Form interface testing", () => {
     const returnValue = wrapper.instance().save();
     wrapper.update();
     expect(mockFunc).toBeCalled();
-    expect(returnValue).toBe(wrapper.instance());
-    expect(mockFunc.mock.calls[0][0].component).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
+    expect(mockFunc.mock.calls[0][0].component === wrapper.instance()).toBe(true);
     expect(() => wrapper.instance().save()).not.toThrow();
   });
 
@@ -335,8 +335,8 @@ describe("UU5.Forms.Form interface testing", () => {
     const returnValue = wrapper.instance().saveDone({ data: "My data" });
     wrapper.update();
     expect(mockFunc).toBeCalled();
-    expect(returnValue).toBe(wrapper.instance());
-    expect(mockFunc.mock.calls[0][0].component).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
+    expect(mockFunc.mock.calls[0][0].component === wrapper.instance()).toBe(true);
     expect(mockFunc.mock.calls[0][0].dtoOut).toEqual(expect.objectContaining({ data: "My data" }));
     expect(() => wrapper.instance().saveDone()).not.toThrow();
   });
@@ -353,8 +353,8 @@ describe("UU5.Forms.Form interface testing", () => {
     const returnValue = wrapper.instance().saveFail({ data: "My data" });
     wrapper.update();
     expect(mockFunc).toBeCalled();
-    expect(returnValue).toBe(wrapper.instance());
-    expect(mockFunc.mock.calls[0][0].component).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
+    expect(mockFunc.mock.calls[0][0].component === wrapper.instance()).toBe(true);
     expect(mockFunc.mock.calls[0][0].dtoOut).toEqual(expect.objectContaining({ data: "My data" }));
     expect(() => wrapper.instance().saveFail()).not.toThrow();
   });
@@ -383,7 +383,7 @@ describe("UU5.Forms.Form interface testing", () => {
     const returnValue = wrapper.instance().validate();
     wrapper.update();
     expect(wrapper.instance().isValid()).toBeTruthy();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
   });
 
   //The simulation and verification of the correct effect of the setReady interface call is as follows
@@ -418,7 +418,7 @@ describe("UU5.Forms.Form interface testing", () => {
     expect(instanceText.isDisabled()).toBeTruthy();
     expect(instanceArea.isDisabled()).toBeTruthy();
     expect(mockFunc).toBeCalled();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
   });
 
   //The simulation and verification of the correct effect of the setReady interface call is as follows
@@ -454,11 +454,11 @@ describe("UU5.Forms.Form interface testing", () => {
     expect(instanceText.isDisabled()).toBeTruthy();
     expect(instanceArea.isDisabled()).toBeTruthy();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     const returnValueReady = wrapper.instance().setReady(mockFunc);
     wrapper.update();
     expect(mockFunc).toHaveBeenCalledTimes(2);
-    expect(returnValueReady).toBe(wrapper.instance());
+    expect(returnValueReady === wrapper.instance()).toBe(true);
     expect(instanceText.isDisabled()).toBeFalsy();
     expect(instanceArea.isDisabled()).toBeFalsy();
   });
@@ -484,7 +484,7 @@ describe("UU5.Forms.Form interface testing", () => {
     const returnValue = wrapper.instance().reset(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().getValues()).toEqual(expect.objectContaining({ name: "", description: "" }));
   });
 
@@ -500,8 +500,8 @@ describe("UU5.Forms.Form interface testing", () => {
     const returnValue = wrapper.instance().cancel();
     wrapper.update();
     expect(mockFunc).toBeCalled();
-    expect(returnValue).toBe(wrapper.instance());
-    expect(mockFunc.mock.calls[0][0].component).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
+    expect(mockFunc.mock.calls[0][0].component === wrapper.instance()).toBe(true);
     expect(() => wrapper.instance().cancel()).not.toThrow();
   });
 });

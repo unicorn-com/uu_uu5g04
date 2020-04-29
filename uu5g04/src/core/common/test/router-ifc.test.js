@@ -49,7 +49,8 @@ let NotFoundRoute = createReactClass({
 });
 
 let routes = {
-  home: { component: <RouteComponent content="home" /> }
+  home: { component: <RouteComponent content="home" /> },
+  about: { component: <RouteComponent content="about" /> }
 };
 
 describe("UU5.Common.Router - Internal Interface test", () => {
@@ -79,8 +80,27 @@ describe("UU5.Common.Router - Internal Interface test", () => {
     wrapper.update();
     expect(setStateCallBack).toBeCalled();
     expect(setStateCallBack).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it("setRoute() noHistory", () => {
+    let historyStateIndex = history.state.index;
+    shallow(
+      <UU5.Common.Router
+        basePath="/vendor-app-subapp/tid-awid"
+        notFoundRoute={<NotFoundRoute />}
+        routes={routes}
+        urlBuilder={UU5.Common.Url}
+        route={<RouteComponent content="initial route" />}
+      />
+    );
+    UU5.Environment.setRoute({ url: { useCase: "home" }, noHistory: true });
+    historyStateIndex++;
+    expect(history.state.index).toBe(historyStateIndex);
+
+    UU5.Environment.setRoute({ url: { useCase: "about" } });
+    expect(history.state.index).toBe(historyStateIndex);
   });
 
   /**

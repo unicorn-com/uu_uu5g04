@@ -89,7 +89,7 @@ export const VirtualList = UU5.Common.VisualComponent.create({
     };
   },
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this._handleDebounced = UU5.Common.Tools.debounce(() => {
       if (this._handleDebounced) {
         // make sure that the component is mounted
@@ -112,7 +112,7 @@ export const VirtualList = UU5.Common.VisualComponent.create({
     }
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
       this.setState({ width: nextProps.width, height: nextProps.height });
     }

@@ -109,7 +109,7 @@ export const NavBar = UU5.Common.VisualComponent.create({
     };
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
       var newState = {};
       (nextProps.alwaysOpen || nextProps.open) && this.open();

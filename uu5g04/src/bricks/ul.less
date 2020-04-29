@@ -3,6 +3,7 @@
 
 .@{name}-ul {
   line-height: @standardLineHeight;
+  width: 100%;
 
   & > .@{name}-header {
     /* delete ul padding */
@@ -10,8 +11,8 @@
   }
 }
 
-.@{name}-ol .@{name}-ul >  .@{name}-header,
-.@{name}-ul .@{name}-ul >  .@{name}-header { 
+.@{name}-ol .@{name}-ul > .@{name}-header,
+.@{name}-ul .@{name}-ul > .@{name}-header {
   margin-left: -1.6em;
 }
 
@@ -20,25 +21,10 @@
   padding-left: 1.6em;
 }
 
-.@{name}-ul-type-circle > li {
-  .@{name}-icon.uu5-common-text.mdi-circle-outline {
-    font-size: 0.45em;
-    left: -2.66em;
-    top: 1.2em;
-  }
-}
-
-.@{name}-ul-type-disc > li {
-  .@{name}-icon.uu5-common-text.mdi-circle {
-    font-size: 0.45em;
-    left: -2.66em;
-    top: 1.2em;
-  }
-}
-.@{name}-ul-type-square > li {
-  .@{name}-icon.uu5-common-text.mdi-square {
-    font-size: 0.45em;
-    left: -2.66em;
-    top: 1.2em;
-  }
+.@{name}-ul-type-circle > li.mdi-circle-outline::before,
+.@{name}-ul-type-disc > li.mdi-circle::before,
+.@{name}-ul-type-square > li.mdi-square::before {
+  font-size: 0.45em;
+  left: -2.66em;
+  vertical-align: middle;
 }

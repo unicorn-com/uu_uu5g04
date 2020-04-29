@@ -1,3 +1,5 @@
+import ReactDOM from "react-dom";
+
 /**
  * Registers/unregisters listeners. Solves issues with listener unregistration while
  * listeners are running.
@@ -34,10 +36,12 @@ export class ListenerRegistry {
     // 3. (reentrancy; should not happen) If listener is running and it calls ScreenSize.setSize with different value then
     //    we have two (potentially not entirely same) lists of listeners and unregistration must remove listener
     //    from all of them. That's why RUNING_LISTENERS is a list of listener lists.
-    let listCopy = [...this.LISTENER_LIST];
-    this.RUNNING_LISTENERS.push(listCopy);
-    while (listCopy.length > 0) listCopy.shift()(...args);
-    this.RUNNING_LISTENERS.pop();
+    ReactDOM.unstable_batchedUpdates(() => {
+      let listCopy = [...this.LISTENER_LIST];
+      this.RUNNING_LISTENERS.push(listCopy);
+      while (listCopy.length > 0) listCopy.shift()(...args);
+      this.RUNNING_LISTENERS.pop();
+    });
   }
 }
 export default ListenerRegistry;

@@ -78,7 +78,7 @@ export const Controls = UU5.Common.VisualComponent.create({
     return this._mergeButtonsState();
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (this.props.controlled) {
       this.setState(this._mergeButtonsState(nextProps));
     }

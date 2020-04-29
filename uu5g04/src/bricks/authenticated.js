@@ -55,7 +55,7 @@ export const Authenticated = UU5.Common.VisualComponent.create({
     this._checkProps(this.props);
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     this._checkProps(nextProps);
   },
   //@@viewOff:reactLifeCycle

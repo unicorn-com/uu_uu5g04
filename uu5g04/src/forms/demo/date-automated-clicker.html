@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 04</title>
+
+  <script>
+    if (!location.href.match(/^(about:|file:)/)) {
+      var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+      var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+      if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+      var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+bplSegmentCount).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      var appAssetsRelativeUrlPath = "public/0.0.0/";
+      document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    }
+  </script>
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        // "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.29.2/uu5g04.min.js",
+        // "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.29.2/uu5g04-bricks.min.js",
+        // "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.29.2/uu5g04-forms.min.js",
+        // "uu5g04-hooks": "https://cdn.plus4u.net/uu-uu5g04/1.29.2/uu5g04-hooks.min.js",
+
+        "uu5g04": "/uu5g04.js",
+        "uu5g04-bricks": "/uu5g04-bricks.js",
+        "uu5g04-forms": "/uu5g04-forms.js",
+        "uu5g04-hooks": "/uu5g04-hooks.js",
+      }
+    });
+  </script>
+
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+
+  import {
+    createVisualComponent,
+    useEffect,
+    useRef,
+    useState,
+    useReducer,
+    useLayoutEffect,
+    useCallback
+  } from "uu5g04-hooks";
+
+  const ComponentTest = createVisualComponent({
+    render({ component, componentProps, onEnd }) {
+      let ref = useRef();
+      let [logItems, setLogItems] = useState([]);
+      let currentValuesRef = useRef();
+      currentValuesRef.current = { onChanges: [] };
+
+      let log = useCallback((...args) => {
+        setLogItems(v => v.concat([args]));
+      }, []);
+      let onChange = useCallback(opt => {
+        opt.component.onChangeDefault(opt);
+      }, []);
+
+      useEffect(() => {
+        let instance = ref.current;
+        let control = getControl(instance);
+
+        async function runTest() {
+          let { valueType, timeZone, value: initialValue } = instance.props;
+          log("after mount", { value: instance.getValue() + "", valueType, timeZone, initialValue })
+
+          await control.openPopover();
+          let popoverShownDay = control.getPopoverShownDay();
+          log("popover open", { popoverShownDay });
+
+          let chosenDay = "15";
+          await control.clickPopoverDay(chosenDay);
+          log("after popover choice (" + chosenDay + ")", { value: instance.getValue() + "" });
+
+          await control.openPopover();
+          popoverShownDay = control.getPopoverShownDay();
+          log("popover open (should be " + chosenDay + ")", { popoverShownDay });
+          await control.changePopoverMonth(-6);
+          chosenDay = "2";
+          await control.clickPopoverDay(chosenDay);
+          log("after popover choice (" + chosenDay + ")", { value: instance.getValue() + "" });
+
+          if (typeof onEnd === "function") onEnd();
+        }
+
+        runTest();
+      }, []);
+      let Component = component;
+      return (
+        <div>
+          <Component ref={ref} onChange={onChange} {...componentProps} controlled={false} />
+          {logItems.map((item, i) => (
+            <div key={i}>{item.map(it => JSON.stringify(it)).join(" --- ")}</div>
+          ))}
+        </div>
+      );
+    }
+  });
+
+  function getControl(component) {
+    async function waitABit() {
+      return new Promise(resolve =>
+        requestAnimationFrame(() => {
+          requestAnimationFrame(resolve);
+        })
+      );
+    }
+
+    function dom() {
+      return UU5.Common.DOM.findNode(component);
+    }
+    function dateInput() {
+      return dom().querySelector("input");
+    }
+    function popover() {
+      return dom().querySelector(".uu5-bricks-popover");
+    }
+
+    return {
+      async openPopover() {
+        dateInput().click();
+        await waitABit();
+      },
+      getPopoverShownDay() {
+        let popoverEl = popover();
+        let selectedEl = popoverEl.querySelector(".uu5-bricks-calendar-active");
+        if (selectedEl) return selectedEl.textContent;
+        let todayEl = popoverEl.querySelector(".uu5-bricks-calendar-today");
+        if (todayEl) return todayEl.textContent;
+        return "";
+      },
+      async clickPopoverDay(dayText) {
+        let dayEls = popover().querySelectorAll(".uu5-bricks-calendar-day.uu5-bricks-calendar-active-section .uu5-bricks-calendar-day-cell");
+        for (let el of dayEls) {
+          if (el.textContent === dayText) {
+            el.click();
+            await waitABit();
+          }
+        }
+      },
+      async changePopoverMonth(by) {
+        let el = popover().querySelector(".uu5-bricks-calendar-head-cell-" + (by < 0 ? "prev" : "next"));
+        for (let i = 0; i < Math.abs(by); i++) {
+          el.click();
+          await waitABit();
+        }
+      }
+    };
+  }
+
+  let tests = [];
+  [undefined, "1994-10-10", new Date(1994,9,10,0,0,0), "2019-11-01T00:00:00Z"].forEach(value => {
+    [undefined, "iso", "date", "string"].forEach(valueType => {
+      tests.push({ component: UU5.Forms.DatePicker, componentProps: { value, valueType } });
+    });
+  });
+  [undefined, "2019-11-01T10:00:00Z", new Date(2019,10,1,10,0,0), "2019-11-01T10:00:00"].forEach(value => {
+    [undefined, 5, -5].forEach(timeZone => {
+      [undefined, "iso", "date", "string"].forEach(valueType => {
+        tests.push({ component: UU5.Forms.DateTimePicker, componentProps: { value, valueType, timeZone } });
+      });
+    });
+  });
+  const ComponentTester = createVisualComponent({
+    render(props) {
+      let [activeTests, setActiveTests] = useState([]);
+      let activateNextTest = useCallback(() => {
+        setActiveTests(t => {
+          if (t.length < tests.length) {
+            let newTest = <ComponentTest key={t.length} {...tests[t.length]} onEnd={() => activateNextTest()} />;
+            return t.concat([newTest]);
+          }
+          return t;
+        });
+      }, []);
+
+      useEffect(() => {
+        activateNextTest();
+      }, []);
+
+      return (
+        <div>
+          {activeTests}
+        </div>
+      )
+    }
+  });
+
+
+  const Page = UU5.Common.VisualComponent.create({
+    render() {
+      return (
+        <UU5.Bricks.Container>
+          <UU5.Bricks.Section header="Auto-clicking test">
+            <div>How to diff: run, Ctrl+A, Ctrl+C, paste to VS Code, run with different uu5 version, Ctrl+A, Ctrl+C, in VS Code "compare with clipboard"</div>
+            <ComponentTester />
+          </UU5.Bricks.Section>
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  UU5.Common.DOM.render(<Page/>, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

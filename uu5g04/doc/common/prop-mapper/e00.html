@@ -9,9 +9,12 @@
       var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
       var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
       if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
-      var appBaseUrlPath = (location.pathname.split(/\//).slice(0, 1 + bplSegmentCount).join("/") + "/").replace(/\/+/g, "/").replace(/"/g, "");
+      var appBaseUrlPath = (location.pathname.split(/\//).slice(0, 1 + bplSegmentCount).join("/") + "/").replace(/\/+/g,
+        "/").replace(/"/g, "");
       var appAssetsRelativeUrlPath = "public/0.0.0/";
-      document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+      document.write(
+        '<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath
+        + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
     }
   </script>
 
@@ -25,10 +28,20 @@
         "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
         "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
 
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/4.0.0/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/4.0.0/uu_appg01.min.js",
+        "uu_appg01_oidc": "https://cdn.plus4u.net/uu-appg01-oidc/2.0.0/uu_appg01_oidc.min.js",
+
         "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
-        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js"
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5chartg01": "https://cdn.plus4u.net/uu-uu5chartg01/1.0.0/uu5chartg01.min.js"
       }
     });
+
+    var updatedUrl = location.href.replace(/([?&])access_token=[^&#]*(&)?/, (m, g1, g2) => (g2 ? g1 : ""));
+    if (updatedUrl !== location.href) {
+      history.replaceState(history.state, "", updatedUrl);
+    }
   </script>
 </head>
 <body>
@@ -36,86 +49,55 @@
 
 <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
 <script type="text/babel">
-  import React from "react";
-  import createReactClass from "create-react-class";
-  import ReactDOM from "react-dom";
   import UU5 from "uu5g04";
   import "uu5g04-bricks";
+  import "uu5chartg01";
+  import "uu_appg01_oidc";
 
-  /*@@viewOn:0*/
-  let mockData = {
-    name: 'John',
-    surname: 'Doe',
-    age: 25,
-    country: 'USA',
-    state: 'New York',
-    city: 'New York'
-  }
-  /*@@viewOff:0*/
+  const uu5string =
+    //@@viewOn:example
+    `
+<UU5.Common.Loader authenticate uri="https://uuos9.plus4u.net/uu-dockitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/getBinaryData?code=exampleUU5CommonPropMapper00Data">
+  <UU5.Common.PropMapper mapping='<uu5json/>{ "data": "data" }'>
+    <UU5.SimpleChart.LineChart
+      series='<uu5json/>[
+        {
+          "valueKey": "value",
+          "name": "První graf",
+          "colorSchema": "red",
+          "chartType": "linear"
+        },
+        {
+          "valueKey": "value2",
+          "name": "Druhý graf",
+          "colorSchema": "blue",
+          "chartType": "linear"
+        },
+        {
+          "valueKey": "value3",
+          "name": "Třetí graf"
+        }
+      ]'
+      labelKey="label"
+    />
+  </UU5.Common.PropMapper>
+</UU5.Common.Loader>
+  `;
+  //@@viewOff:example
 
-  var Page = createReactClass({
+  const Page = UU5.Common.Component.create({
     render() {
       return (
-        /*@@viewOn:0*/
         <UU5.Bricks.Container noSpacing>
           <UU5.Bricks.Section
-            content={
-              `<uu5string />
-              <UU5.Bricks.Loader uri="https://uuos9.plus4u.net/uu-uu5libraryregistryg01-main/85849867896916817-fe96c133c895434bbd4d5b24831483f3/getLibrary" data='<uu5json />{ "code": "UU5.Bricks" }'>
-                <UU5.Common.PropMapper mapping='<uu5json />{ "data.code": "content" }'>
-                  <UU5.Bricks.Row />
-                </UU5.Common.PropMapper>
-                <UU5.Common.PropMapper mapping='<uu5json />{ "data.image": ["src", "alt"] }'>
-                  <UU5.Bricks.Image authenticate style='<uu5json />{ "width": "100px" }' />
-                </UU5.Common.PropMapper>
-              </UU5.Bricks.Loader>`
-            }
-          />
-          <UU5.Bricks.Line />
-          <UU5.Bricks.Section
-            content={
-              `<uu5string />
-              <UU5.Bricks.Row>
-                <UU5.Bricks.Column colWidth="xs-6" content="name:" />
-                <UU5.Common.PropMapper data="<uu5json />${JSON.stringify(mockData).replace(/"/g, '\\"')}" mapping='<uu5json />{ "name": "content" }'>
-                  <UU5.Bricks.Column colWidth="xs-6" />
-                </UU5.Common.PropMapper>
-              </UU5.Bricks.Row>
-              <UU5.Bricks.Row>
-                <UU5.Bricks.Column colWidth="xs-6" content="surname:" />
-                <UU5.Common.PropMapper data="<uu5json />${JSON.stringify(mockData).replace(/"/g, '\\"')}" mapping='<uu5json />{ "surname": "content" }'>
-                  <UU5.Bricks.Column colWidth="xs-6" />
-                </UU5.Common.PropMapper>
-              </UU5.Bricks.Row>
-              <UU5.Bricks.Row>
-                <UU5.Bricks.Column colWidth="xs-6" content="age:" />
-                <UU5.Common.PropMapper data="<uu5json />${JSON.stringify(mockData).replace(/"/g, '\\"')}" mapping='<uu5json />{ "age": "content" }'>
-                  <UU5.Bricks.Column colWidth="xs-6" />
-                </UU5.Common.PropMapper>
-              </UU5.Bricks.Row>
-              <UU5.Bricks.Row>
-                <UU5.Bricks.Column colWidth="xs-6" content="location:" />
-                <UU5.Bricks.Column colWidth="xs-6">
-                  <UU5.Common.PropMapper data="<uu5json />${JSON.stringify(mockData).replace(/"/g, '\\"')}" mapping='<uu5json />{ "country": "content" }'>
-                  <UU5.Bricks.Text />
-                  </UU5.Common.PropMapper>
-                  <UU5.Common.PropMapper data="<uu5json />${JSON.stringify(mockData).replace(/"/g, '\\"')}" mapping='<uu5json />{ "state": "content" }'>
-                    <UU5.Bricks.Text />
-                  </UU5.Common.PropMapper>
-                  <UU5.Common.PropMapper data="<uu5json />${JSON.stringify(mockData).replace(/"/g, '\\"')}" mapping='<uu5json />{ "city": "content" }'>
-                    <UU5.Bricks.Text />
-                  </UU5.Common.PropMapper>
-                </UU5.Bricks.Column>
-              </UU5.Bricks.Row>`
-            }
+            content={`<uu5string/><UU5.Bricks.Authenticated authenticated>${uu5string}</UU5.Bricks.Authenticated>`}
           />
         </UU5.Bricks.Container>
-        /*@@viewOff:0*/
       );
     }
   });
 
-  ReactDOM.render(<Page />, document.getElementById('uu5Example'));
+  UU5.Common.DOM.render(<Page />, document.getElementById('uu5Example'));
 </script>
 </body>
 </html>

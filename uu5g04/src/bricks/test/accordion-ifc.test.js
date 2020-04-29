@@ -320,7 +320,7 @@ describe(`UU5.Bricks.Accordion interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.find({ className: "locationClass01" }).instance().state.expanded).toBeFalsy();
   });
 
@@ -356,7 +356,7 @@ describe(`UU5.Bricks.Accordion interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.find({ className: "locationClass01" }).instance().state.expanded).toBeFalsy();
   });
 
@@ -382,7 +382,7 @@ describe(`UU5.Bricks.Accordion interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.find({ className: "locationClass01" }).instance().state.expanded).toBeTruthy();
     wrapper.instance().togglePanelById("panel11", mockFunc);
     wrapper.update();
@@ -413,7 +413,7 @@ describe(`UU5.Bricks.Accordion interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.find({ className: "locationClass01" }).instance().state.expanded).toBeTruthy();
     wrapper.instance().togglePanelByName("panel1", mockFunc);
     wrapper.update();
@@ -455,7 +455,7 @@ describe(`UU5.Bricks.Accordion interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.find({ className: "locationClass01" }).instance().state.expanded).toBeTruthy();
     expect(wrapper.find({ className: "locationClass02" }).instance().state.expanded).toBeTruthy();
   });
@@ -493,7 +493,7 @@ describe(`UU5.Bricks.Accordion interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.find({ className: "locationClass01" }).instance().state.expanded).toBeFalsy();
     expect(wrapper.find({ className: "locationClass02" }).instance().state.expanded).toBeFalsy();
   });
@@ -531,7 +531,7 @@ describe(`UU5.Bricks.Accordion interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.find({ className: "locationClass01" }).instance().state.expanded).toBeFalsy();
     expect(wrapper.find({ className: "locationClass02" }).instance().state.expanded).toBeFalsy();
     wrapper.instance().toggleAll(mockFunc);
@@ -652,7 +652,7 @@ describe(`UU5.Bricks.Accordion interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.find({ className: "locationClass01" }).instance().state.expanded).toBeTruthy();
     expect(wrapper.find({ className: "locationClass02" }).instance().state.expanded).toBeFalsy();
   });

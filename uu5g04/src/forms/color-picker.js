@@ -118,7 +118,7 @@ export const ColorPicker = Context.withContext(
       };
     },
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
       // run custom validation
       if (nextProps.controlled && typeof nextProps.onValidate === "function") {
         if (this.state.value !== nextProps.value) {

@@ -14,6 +14,7 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+import "./column.less";
 
 const EditableColumn = UU5.Common.Component.lazy(async () => {
   await SystemJS.import("uu5g04-forms");
@@ -21,7 +22,6 @@ const EditableColumn = UU5.Common.Component.lazy(async () => {
   return import("./internal/column.js");
 });
 
-import "./column.less";
 //@@viewOff:imports
 
 let editationLazyLoaded = false;

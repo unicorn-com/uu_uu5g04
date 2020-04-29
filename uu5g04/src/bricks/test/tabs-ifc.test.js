@@ -37,6 +37,6 @@ describe("UU5.Bricks.Tabs interface testing", () => {
     wrapper.update();
     expect(wrapper.instance().state.activeName).toMatch(/tab2/);
     expect(wrapper).toMatchSnapshot();
-    expect(returnValue).toBe(wrapper.instance());
+    expect(returnValue === wrapper.instance()).toBe(true);
   });
 });

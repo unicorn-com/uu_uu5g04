@@ -28,7 +28,6 @@ const EditationComponent = UU5.Common.Component.lazy(async () => {
 import "./tabs.less";
 //@@viewOff:imports
 
-
 const MOUNT_TAB_CONTENT_VALUES = {
   onFirstRender: "onFirstRender",
   onFirstActive: "onFirstActive",
@@ -139,7 +138,7 @@ export const Tabs = UU5.Common.VisualComponent.create({
     return this._getState(this.props);
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     this.setState(state => this._getState(nextProps, state));
   },
 
@@ -220,10 +219,14 @@ export const Tabs = UU5.Common.VisualComponent.create({
   },
 
   onChangeScreenSize_(actualScreenSize, e) {
-    this.setState({
-      screenSize: actualScreenSize,
-      stacked: this._isStacked(actualScreenSize)
-    });
+    this.setState(state =>
+      state.screenSize !== actualScreenSize
+        ? {
+            screenSize: actualScreenSize,
+            stacked: this._isStacked(actualScreenSize)
+          }
+        : undefined
+    );
   },
 
   onBeforeForceEndEditation_() {

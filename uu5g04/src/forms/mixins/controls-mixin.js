@@ -41,7 +41,7 @@ export const ControlsMixin = {
     parentForm && parentForm.registerFormControls(this.getId(), this);
   },
 
-  componentWillReceiveProps: function(nextProps) {
+  UNSAFE_componentWillReceiveProps: function(nextProps) {
     if (nextProps.id && nextProps.id !== this.props.id) {
       let parentForm = this.getForm();
       if (parentForm) {

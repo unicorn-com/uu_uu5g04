@@ -17364,7 +17364,7 @@ exports[`UU5.Bricks.Calendar language="cs" 1`] = `
             colSpan="6"
             onClick={[Function]}
           >
-            Leden 2019
+            leden 2019
           </th>
           <th
             className="uu5-bricks-calendar-head-cell-next uu5-forms-calendar-head-cell-next"
@@ -26470,7 +26470,7 @@ exports[`UU5.Bricks.Calendar minSelection="months" 1`] = `
             <div
               className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-xs-cell col-xs-3 uu5-forms-calendar-xs-cell uu5-bricks-calendar-month uu5-forms-calendar-month uu5-bricks-calendar-today uu5-forms-calendar-today"
               onClick={[Function]}
-              title="I"
+              title="January"
             >
               <span
                 className="uu5-bricks-calendar-underline uu5-forms-calendar-underline"
@@ -26486,9 +26486,11 @@ exports[`UU5.Bricks.Calendar minSelection="months" 1`] = `
             <div
               className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-xs-cell col-xs-3 uu5-forms-calendar-xs-cell uu5-bricks-calendar-month uu5-forms-calendar-month"
               onClick={[Function]}
-              title="II"
+              title="February"
             >
-              II
+              <span>
+                II
+              </span>
             </div>
           </td>
           <td
@@ -26498,9 +26500,11 @@ exports[`UU5.Bricks.Calendar minSelection="months" 1`] = `
             <div
               className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-xs-cell col-xs-3 uu5-forms-calendar-xs-cell uu5-bricks-calendar-month uu5-forms-calendar-month"
               onClick={[Function]}
-              title="III"
+              title="March"
             >
-              III
+              <span>
+                III
+              </span>
             </div>
           </td>
           <td
@@ -26510,9 +26514,11 @@ exports[`UU5.Bricks.Calendar minSelection="months" 1`] = `
             <div
               className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-xs-cell col-xs-3 uu5-forms-calendar-xs-cell uu5-bricks-calendar-month uu5-forms-calendar-month"
               onClick={[Function]}
-              title="IV"
+              title="April"
             >
-              IV
+              <span>
+                IV
+              </span>
             </div>
           </td>
         </tr>
@@ -26527,9 +26533,11 @@ exports[`UU5.Bricks.Calendar minSelection="months" 1`] = `
             <div
               className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-xs-cell col-xs-3 uu5-forms-calendar-xs-cell uu5-bricks-calendar-month uu5-forms-calendar-month"
               onClick={[Function]}
-              title="V"
+              title="May"
             >
-              V
+              <span>
+                V
+              </span>
             </div>
           </td>
           <td
@@ -26539,9 +26547,11 @@ exports[`UU5.Bricks.Calendar minSelection="months" 1`] = `
             <div
               className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-xs-cell col-xs-3 uu5-forms-calendar-xs-cell uu5-bricks-calendar-month uu5-forms-calendar-month"
               onClick={[Function]}
-              title="VI"
+              title="June"
             >
-              VI
+              <span>
+                VI
+              </span>
             </div>
           </td>
           <td
@@ -26551,9 +26561,11 @@ exports[`UU5.Bricks.Calendar minSelection="months" 1`] = `
             <div
               className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-xs-cell col-xs-3 uu5-forms-calendar-xs-cell uu5-bricks-calendar-month uu5-forms-calendar-month"
               onClick={[Function]}
-              title="VII"
+              title="July"
             >
-              VII
+              <span>
+                VII
+              </span>
             </div>
           </td>
           <td
@@ -26563,9 +26575,11 @@ exports[`UU5.Bricks.Calendar minSelection="months" 1`] = `
             <div
               className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-xs-cell col-xs-3 uu5-forms-calendar-xs-cell uu5-bricks-calendar-month uu5-forms-calendar-month"
               onClick={[Function]}
-              title="VIII"
+              title="August"
             >
-              VIII
+              <span>
+                VIII
+              </span>
             </div>
           </td>
         </tr>
@@ -26580,9 +26594,11 @@ exports[`UU5.Bricks.Calendar minSelection="months" 1`] = `
             <div
               className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-xs-cell col-xs-3 uu5-forms-calendar-xs-cell uu5-bricks-calendar-month uu5-forms-calendar-month"
               onClick={[Function]}
-              title="IX"
+              title="September"
             >
-              IX
+              <span>
+                IX
+              </span>
             </div>
           </td>
           <td
@@ -26592,9 +26608,11 @@ exports[`UU5.Bricks.Calendar minSelection="months" 1`] = `
             <div
               className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-xs-cell col-xs-3 uu5-forms-calendar-xs-cell uu5-bricks-calendar-month uu5-forms-calendar-month"
               onClick={[Function]}
-              title="X"
+              title="October"
             >
-              X
+              <span>
+                X
+              </span>
             </div>
           </td>
           <td
@@ -26604,9 +26622,11 @@ exports[`UU5.Bricks.Calendar minSelection="months" 1`] = `
             <div
               className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-xs-cell col-xs-3 uu5-forms-calendar-xs-cell uu5-bricks-calendar-month uu5-forms-calendar-month"
               onClick={[Function]}
-              title="XI"
+              title="November"
             >
-              XI
+              <span>
+                XI
+              </span>
             </div>
           </td>
           <td
@@ -26616,9 +26636,11 @@ exports[`UU5.Bricks.Calendar minSelection="months" 1`] = `
             <div
               className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-xs-cell col-xs-3 uu5-forms-calendar-xs-cell uu5-bricks-calendar-month uu5-forms-calendar-month"
               onClick={[Function]}
-              title="XII"
+              title="December"
             >
-              XII
+              <span>
+                XII
+              </span>
             </div>
           </td>
         </tr>
@@ -32964,7 +32986,7 @@ exports[`UU5.Bricks.Calendar step="months" 1`] = `
             <div
               className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-xs-cell col-xs-3 uu5-forms-calendar-xs-cell uu5-bricks-calendar-month uu5-forms-calendar-month uu5-bricks-calendar-today uu5-forms-calendar-today"
               onClick={[Function]}
-              title="I"
+              title="January"
             >
               <span
                 className="uu5-bricks-calendar-underline uu5-forms-calendar-underline"
@@ -32980,9 +33002,11 @@ exports[`UU5.Bricks.Calendar step="months" 1`] = `
             <div
               className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-xs-cell col-xs-3 uu5-forms-calendar-xs-cell uu5-bricks-calendar-month uu5-forms-calendar-month"
               onClick={[Function]}
-              title="II"
+              title="February"
             >
-              II
+              <span>
+                II
+              </span>
             </div>
           </td>
           <td
@@ -32992,9 +33016,11 @@ exports[`UU5.Bricks.Calendar step="months" 1`] = `
             <div
               className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-xs-cell col-xs-3 uu5-forms-calendar-xs-cell uu5-bricks-calendar-month uu5-forms-calendar-month"
               onClick={[Function]}
-              title="III"
+              title="March"
             >
-              III
+              <span>
+                III
+              </span>
             </div>
           </td>
           <td
@@ -33004,9 +33030,11 @@ exports[`UU5.Bricks.Calendar step="months" 1`] = `
             <div
               className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-xs-cell col-xs-3 uu5-forms-calendar-xs-cell uu5-bricks-calendar-month uu5-forms-calendar-month"
               onClick={[Function]}
-              title="IV"
+              title="April"
             >
-              IV
+              <span>
+                IV
+              </span>
             </div>
           </td>
         </tr>
@@ -33021,9 +33049,11 @@ exports[`UU5.Bricks.Calendar step="months" 1`] = `
             <div
               className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-xs-cell col-xs-3 uu5-forms-calendar-xs-cell uu5-bricks-calendar-month uu5-forms-calendar-month"
               onClick={[Function]}
-              title="V"
+              title="May"
             >
-              V
+              <span>
+                V
+              </span>
             </div>
           </td>
           <td
@@ -33033,9 +33063,11 @@ exports[`UU5.Bricks.Calendar step="months" 1`] = `
             <div
               className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-xs-cell col-xs-3 uu5-forms-calendar-xs-cell uu5-bricks-calendar-month uu5-forms-calendar-month"
               onClick={[Function]}
-              title="VI"
+              title="June"
             >
-              VI
+              <span>
+                VI
+              </span>
             </div>
           </td>
           <td
@@ -33045,9 +33077,11 @@ exports[`UU5.Bricks.Calendar step="months" 1`] = `
             <div
               className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-xs-cell col-xs-3 uu5-forms-calendar-xs-cell uu5-bricks-calendar-month uu5-forms-calendar-month"
               onClick={[Function]}
-              title="VII"
+              title="July"
             >
-              VII
+              <span>
+                VII
+              </span>
             </div>
           </td>
           <td
@@ -33057,9 +33091,11 @@ exports[`UU5.Bricks.Calendar step="months" 1`] = `
             <div
               className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-xs-cell col-xs-3 uu5-forms-calendar-xs-cell uu5-bricks-calendar-month uu5-forms-calendar-month"
               onClick={[Function]}
-              title="VIII"
+              title="August"
             >
-              VIII
+              <span>
+                VIII
+              </span>
             </div>
           </td>
         </tr>
@@ -33074,9 +33110,11 @@ exports[`UU5.Bricks.Calendar step="months" 1`] = `
             <div
               className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-xs-cell col-xs-3 uu5-forms-calendar-xs-cell uu5-bricks-calendar-month uu5-forms-calendar-month"
               onClick={[Function]}
-              title="IX"
+              title="September"
             >
-              IX
+              <span>
+                IX
+              </span>
             </div>
           </td>
           <td
@@ -33086,9 +33124,11 @@ exports[`UU5.Bricks.Calendar step="months" 1`] = `
             <div
               className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-xs-cell col-xs-3 uu5-forms-calendar-xs-cell uu5-bricks-calendar-month uu5-forms-calendar-month"
               onClick={[Function]}
-              title="X"
+              title="October"
             >
-              X
+              <span>
+                X
+              </span>
             </div>
           </td>
           <td
@@ -33098,9 +33138,11 @@ exports[`UU5.Bricks.Calendar step="months" 1`] = `
             <div
               className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-xs-cell col-xs-3 uu5-forms-calendar-xs-cell uu5-bricks-calendar-month uu5-forms-calendar-month"
               onClick={[Function]}
-              title="XI"
+              title="November"
             >
-              XI
+              <span>
+                XI
+              </span>
             </div>
           </td>
           <td
@@ -33110,9 +33152,11 @@ exports[`UU5.Bricks.Calendar step="months" 1`] = `
             <div
               className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-xs-cell col-xs-3 uu5-forms-calendar-xs-cell uu5-bricks-calendar-month uu5-forms-calendar-month"
               onClick={[Function]}
-              title="XII"
+              title="December"
             >
-              XII
+              <span>
+                XII
+              </span>
             </div>
           </td>
         </tr>

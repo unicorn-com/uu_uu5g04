@@ -101,7 +101,7 @@ export const DateTime = UU5.Common.VisualComponent.create({
     UU5.Environment.EventListener.registerDateTime(this.getId(), this._change);
   },
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
       let timeZone = this.state.timeZone;
       if (typeof nextProps.timeZone === "number") {

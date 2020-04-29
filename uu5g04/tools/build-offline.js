@@ -33,7 +33,7 @@ async function run() {
     let workers = [];
 
     // 1. download & zip clearsans.min.css, clearsans.css, fonty
-    let fontStylesBaseUri = "https://cdn.plus4u.net/libs/clearsans/1.0.0/fonts/";
+    let fontStylesBaseUri = "https://cdn.plus4u.net/libs/clearsans/2.0.0/fonts/";
     let fontStylesFiles = [
       "clear-sans.css",
       "clear-sans.min.css",
@@ -45,7 +45,7 @@ async function run() {
       "ClearSans-MediumItalic.ttf",
       "ClearSans-Light.ttf"
     ];
-    let fontStylesInZipPrefix = "assets/clearsans/1.0.0/fonts/";
+    let fontStylesInZipPrefix = "assets/clearsans/2.0.0/fonts/";
     workers.push(
       ...fontStylesFiles.map(async file => {
         let content = await download(fontStylesBaseUri + file);
