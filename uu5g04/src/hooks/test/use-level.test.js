@@ -43,19 +43,17 @@ describe("[uu5g04-hooks] useLevel", () => {
 
   it("should return expected result API", () => {
     ({ lastResult } = mountHookInProvider(1));
-    expect(lastResult()).toMatchObject({
-      level: expect.any(Number)
-    });
+    expect(lastResult()).toEqual(expect.any(Number));
   });
 
   it("should return default level", async () => {
     ({ lastResult } = mountHook());
-    expect(lastResult()).toMatchObject({ level: null });
+    expect(lastResult()).toBe(null);
   });
 
   it("should return context level", async () => {
     ({ lastResult } = mountHookInProvider(2));
-    expect(lastResult()).toMatchObject({ level: 2 });
+    expect(lastResult()).toBe(2);
   });
 });
 
@@ -81,7 +79,7 @@ describe("[uu5g04-hooks] useLevel; legacy integration", () => {
       </LevelProvider>
     )));
     expect(mixinResult).toHaveBeenLastCalledWith(3);
-    expect(lastResult()).toMatchObject({ level: 3 });
+    expect(lastResult()).toBe(3);
   });
 
   it("should use level from LevelMixin component", async () => {
@@ -92,6 +90,6 @@ describe("[uu5g04-hooks] useLevel; legacy integration", () => {
       </LevelProvider>
     )));
     expect(mixinResult).toHaveBeenLastCalledWith(4);
-    expect(lastResult()).toMatchObject({ level: 4 });
+    expect(lastResult()).toBe(4);
   });
 });

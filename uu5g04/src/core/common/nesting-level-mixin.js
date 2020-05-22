@@ -127,6 +127,7 @@ export const NestingLevelMixin = {
       if (nestingLevelLocIndex > -1) {
         nestingLevelList = nestingLevelList.slice(nestingLevelLocIndex);
         nestingLevelEnvIndex = Environment.nestingLevelList.indexOf(nestingLevelLoc);
+        nestingLevel = null;
       }
     }
 

@@ -69,7 +69,7 @@
 
     render(props) {
       //@@viewOn:hooks
-      const { language, setLanguage } = useLanguage();
+      const [language, setLanguage] = useLanguage();
       console.log("language", language);
       //@@viewOn:hooks
 

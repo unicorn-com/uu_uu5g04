@@ -39,30 +39,20 @@ describe("[uu5g04-hooks] useLsi", () => {
   let lastResult;
 
   it("should return expected result API", () => {
-    ({ lastResult } = mountHook());
-    expect(lastResult()).toMatchObject({
-      value: undefined,
-      language: expect.any(String),
-      setLanguage: expect.any(Function)
-    });
+    ({ lastResult } = mountHook(LSI1));
+    expect(lastResult()).toEqual(expect.any(String));
   });
 
   it("should return value based on default language", async () => {
     ({ lastResult } = mountHook(LSI1));
-    expect(lastResult()).toMatchObject({
-      value: LSI1.en,
-      language: "en"
-    });
+    expect(lastResult()).toBe(LSI1.en);
   });
 
   it("should return value based on context language", async () => {
     ({ lastResult } = mountHookWithWrapper(
-      props => <LanguageProvider language="cs">{props.children}</LanguageProvider>,
+      props => <LanguageProvider initialLanguage="cs">{props.children}</LanguageProvider>,
       LSI1
     ));
-    expect(lastResult()).toMatchObject({
-      value: LSI1.cs,
-      language: "cs"
-    });
+    expect(lastResult()).toBe(LSI1.cs);
   });
 });

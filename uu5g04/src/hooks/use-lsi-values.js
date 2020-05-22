@@ -3,7 +3,7 @@ import { useLanguage } from "./use-language";
 import { useMemo } from "./react-hooks";
 
 function useLsiValues(lsi) {
-  const { language } = useLanguage();
+  const [language] = useLanguage();
   const result = useMemo(() => {
     let values = {};
     if (lsi && typeof lsi === "object") {

@@ -68,7 +68,7 @@
 
     render(props) {
       //@@viewOn:hooks
-      const { level } = useLevel(); // level used by parent
+      const level = useLevel(); // level used by parent
       let myLevel = level != null ? level + 1 : 0; // make my level bigger than parent's
       console.log("level", myLevel);
       //@@viewOff:hooks

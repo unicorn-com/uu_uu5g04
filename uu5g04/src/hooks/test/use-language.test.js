@@ -47,34 +47,31 @@ describe("[uu5g04-hooks] useLanguage", () => {
 
   it("should return expected result API", () => {
     ({ lastResult } = mountHook());
-    expect(lastResult()).toMatchObject({
-      language: expect.any(String),
-      setLanguage: expect.any(Function)
-    });
+    expect(lastResult()).toMatchObject([expect.any(String), expect.any(Function)]);
   });
 
   it("prop language; should return default language", async () => {
     ({ lastResult } = mountHook());
-    expect(lastResult()).toMatchObject({ language: "en" });
+    expect(lastResult()).toMatchObject(["en", expect.any(Function)]);
   });
 
   it("prop language; should return context language", async () => {
     ({ lastResult } = mountHookWithWrapper(props => (
-      <LanguageProvider language="es">{props.children}</LanguageProvider>
+      <LanguageProvider initialLanguage="es">{props.children}</LanguageProvider>
     )));
-    expect(lastResult()).toMatchObject({ language: "es" });
+    expect(lastResult()).toMatchObject(["es", expect.any(Function)]);
   });
 
   it("setLanguage; should re-render with new language", async () => {
     let onChangeFn = jest.fn();
     ({ lastResult } = mountHookWithWrapper(props => (
-      <LanguageProvider language="es" onChange={onChangeFn}>
+      <LanguageProvider initialLanguage="es" onChange={onChangeFn}>
         {props.children}
       </LanguageProvider>
     )));
-    lastResult().setLanguage("ru");
+    lastResult()[1]("ru");
     await wait(); // so that effects run
-    expect(lastResult()).toMatchObject({ language: "ru" });
+    expect(lastResult()).toMatchObject(["ru", expect.any(Function)]);
     expect(onChangeFn).toHaveBeenCalledTimes(1);
     expect(onChangeFn).toHaveBeenCalledWith({ language: "ru" });
   });
@@ -112,10 +109,10 @@ describe("[uu5g04-hooks] useLanguage; legacy integration", () => {
         {props.children}
       </UU5.Bricks.LsiContext>
     )));
-    expect(lastResult()).toMatchObject({ language: ctx.getLanguage() });
+    expect(lastResult()).toMatchObject([ctx.getLanguage(), expect.any(Function)]);
 
     ctx.setLanguage("ru");
-    expect(lastResult()).toMatchObject({ language: "ru" });
+    expect(lastResult()).toMatchObject(["ru", expect.any(Function)]);
     expect(ctx.getLanguage()).toBe("ru");
     expect(onChangeLanguageCheck).toHaveBeenLastCalledWith("ru"); // onChangeLanguage_ method in component should have been called after changing the language
   });
@@ -139,17 +136,17 @@ describe("[uu5g04-hooks] useLanguage; legacy integration", () => {
     );
     let mixinComponentProps = () => onReceiveContext.mock.calls.slice(-1)[0][0];
     expect(mixinComponentProps().getLanguage()).toBe("en");
-    expect(lastResult()).toMatchObject({ language: "en" });
+    expect(lastResult()).toMatchObject(["en", expect.any(Function)]);
 
     mixinComponentProps().setLanguage("ru");
     expect(mixinComponentProps().getLanguage()).toBe("ru");
     expect(onChangeLanguageCheck).toHaveBeenLastCalledWith("ru"); // onChangeLanguage_ method in component should have been called after changing the language
-    expect(lastResult()).toMatchObject({ language: "ru" });
+    expect(lastResult()).toMatchObject(["ru", expect.any(Function)]);
 
-    lastResult().setLanguage("es");
+    lastResult()[1]("es");
     expect(mixinComponentProps().getLanguage()).toBe("es");
     expect(onChangeLanguageCheck).toHaveBeenLastCalledWith("es"); // onChangeLanguage_ method in component should have been called after changing the language
-    expect(lastResult()).toMatchObject({ language: "es" });
+    expect(lastResult()).toMatchObject(["es", expect.any(Function)]);
   });
 
   it("should propagate global language if no providers are used", async () => {
@@ -164,16 +161,16 @@ describe("[uu5g04-hooks] useLanguage; legacy integration", () => {
       </div>
     )));
     expect(lsiHocComp.getLanguage()).toBe("en");
-    expect(lastResult()).toMatchObject({ language: "en" });
+    expect(lastResult()).toMatchObject(["en", expect.any(Function)]);
 
     UU5.Common.Tools.setLanguage("ru");
     expect(lsiHocComp.getLanguage()).toBe("ru");
     expect(onChangeLanguageCheck).toHaveBeenLastCalledWith("ru"); // onChangeLanguage_ method in component should have been called after changing the language
-    expect(lastResult()).toMatchObject({ language: "ru" });
+    expect(lastResult()).toMatchObject(["ru", expect.any(Function)]);
 
-    lastResult().setLanguage("es");
+    lastResult()[1]("es");
     expect(lsiHocComp.getLanguage()).toBe("es");
     expect(onChangeLanguageCheck).toHaveBeenLastCalledWith("es"); // onChangeLanguage_ method in component should have been called after changing the language
-    expect(lastResult()).toMatchObject({ language: "es" });
+    expect(lastResult()).toMatchObject(["es", expect.any(Function)]);
   });
 });

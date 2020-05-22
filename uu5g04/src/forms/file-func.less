@@ -19,17 +19,18 @@
       }
 
       & when (@color-schema = white) {
-        color: rgba(255,255,255,0.33);
+        color: rgba(255, 255, 255, 0.33);
 
         &.uu5-common-bg-style-filled:not(:hover):not(:active):not(:focus):not([class*="uu5-forms-file-indicate-drop-"]) {
-          color: rgba(0,0,0,0.24);
+          color: rgba(0, 0, 0, 0.24);
         }
       }
+
       & when (@color-schema = black) {
-        color: rgba(0,0,0,0.24);
+        color: rgba(0, 0, 0, 0.24);
 
         &.uu5-common-bg-style-filled:not(:hover):not(:active):not(:focus):not([class*="uu5-forms-file-indicate-drop-"]) {
-          color: rgba(255,255,255,0.33);
+          color: rgba(255, 255, 255, 0.33);
         }
       }
 
@@ -37,6 +38,7 @@
         background: @drop-near-bg;
         border-color: @drop-near-border;
       }
+
       &:focus:focus,
       &:active:active {
         background: @drop-over-bg;
@@ -49,27 +51,28 @@
       border-color: @drop-near-border;
       background: @drop-near-bg;
     }
+
     .@{forms-name}-file-indicate-drop-over {
       color: @drop-over-color;
       border-color: @drop-over-border;
       background: @drop-over-bg;
     }
 
-    &:not(.uu5-common-disabled) .@{forms-name}-file-item-name:not(.@{forms-name}-file-item-in-progress) {
-      color: @item-name-color;
-    }
+    &:not(.uu5-common-disabled) {
+      .@{forms-name}-file-item-name:not(.@{forms-name}-file-item-in-progress) {
+        color: @item-name-color;
+      }
 
-    &:not(.uu5-common-disabled) .@{forms-name}-file-item-name.@{forms-name}-file-item-in-progress {
-      color: @item-in-progress-name-color;
+      .@{forms-name}-file-item-name.@{forms-name}-file-item-in-progress {
+        color: @item-in-progress-name-color;
+      }
     }
 
     & when (@color-schema = white) {
       .@{forms-name}-file-item-in-progress {
-        color: rgba(256,256,256,0.87);
+        color: rgba(256, 256, 256, 0.87);
       }
-      .@{forms-name}-file-item-size {
-        color: #fff;
-      }
+
       .@{forms-name}-file-progress {
         background: #fff - #e0e0e0;
       }

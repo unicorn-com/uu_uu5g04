@@ -77,12 +77,16 @@ const Styles = {
         ${elevationMixin(`inset 0 0 0 0 transparent`)};
 
         &:hover, &:focus {
-          background: linear-gradient(to right, ${colors.borderColorHover}, ${colors.borderColorHover}) 0 100% no-repeat;
+          background: linear-gradient(to right, ${colors.borderColorHover}, ${
+        colors.borderColorHover
+      }) 0 100% no-repeat;
         }
 
         &:active, &:active:hover, &:active:focus,
         &.active, &.active:hover, &.active:focus {
-          background: linear-gradient(to right, ${colors.borderColorActive}, ${colors.borderColorActive}) 0 100% no-repeat;
+          background: linear-gradient(to right, ${colors.borderColorActive}, ${
+        colors.borderColorActive
+      }) 0 100% no-repeat;
         }
       `;
     } else if (props.bgStyle === "transparent") {
@@ -93,12 +97,16 @@ const Styles = {
         ${elevationMixin(`inset 0 0 0 0 transparent`)};
 
         &:hover, &:focus {
-          background: linear-gradient(to right, ${colors.borderColorHover}, ${colors.borderColorHover}) 0 100% no-repeat;
+          background: linear-gradient(to right, ${colors.borderColorHover}, ${
+        colors.borderColorHover
+      }) 0 100% no-repeat;
         }
 
         &:active, &:active:hover, &:active:focus,
         &.active, &.active:hover, &.active:focus {
-          background: linear-gradient(to right, ${colors.borderColorActive}, ${colors.borderColorActive}) 0 100% no-repeat;
+          background: linear-gradient(to right, ${colors.borderColorActive}, ${
+        colors.borderColorActive
+      }) 0 100% no-repeat;
         }
       `;
     }
@@ -367,12 +375,12 @@ export const Button = UU5.Common.VisualComponent.create({
           let href = this.props.href.match(/^#.*/)
             ? window.location.href.split("#")[0] + this.props.href
             : this.props.href;
-          window.open(href, "_blank");
+          UU5.Common.Tools.openWindow(href, "_blank");
         } else {
           if (this._isFragmentLink()) {
             this._onClickFragment(e);
           } else {
-            window.open(this.props.href, this.props.target);
+            UU5.Common.Tools.openWindow(this.props.href, this.props.target);
           }
         }
       }
@@ -429,7 +437,7 @@ export const Button = UU5.Common.VisualComponent.create({
   },
 
   _openRouteNewTab() {
-    window.open(this._getRouteUrl(), "_blank");
+    UU5.Common.Tools.openWindow(this._getRouteUrl(), "_blank");
   },
 
   _containsHash(url) {

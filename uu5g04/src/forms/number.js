@@ -328,7 +328,9 @@ export const Number = Context.withContext(
           if (elem.selectionStart >= 0) {
             elem.focus();
             elem.setSelectionRange(caretPosStart, caretPosEnd);
-          } else elem.focus();
+          } else {
+            elem.focus();
+          }
         }
       }
     },
@@ -553,11 +555,14 @@ export const Number = Context.withContext(
         opt.value = this._parseNumberFromString(opt.value, this.props.decimalSeparator, this.props.thousandSeparator);
         let isNan = isNaN(opt.value);
         if (isNan) {
-          if (opt.value !== "-") {
+          if (opt.value !== "-" || ((this.props.min || this.props.min === 0) && this.props.min >= 0)) {
             this._updateRange = this._doGetCaretPosition() - 1;
-            opt.value = "" + this.state.value; // update value to string
             opt.feedback = "warning";
-            opt.message = this.props.nanMessage || this.getLsiComponent("nanMessage");
+            opt.message = opt.value === "-" && this.props.min >= 0
+              ? this.props.lowerMessage || this.getLsiComponent("lowerMessage", null, this.props.min)
+              : this.props.nanMessage || this.getLsiComponent("nanMessage");
+
+            opt.value = "" + this.state.value; // update value to string
           }
           this._isNaN = true;
         } else {
@@ -589,6 +594,9 @@ export const Number = Context.withContext(
           }
 
           isComma && (opt.value = opt.value.replace(".", ","));
+        } else if (opt.value === "-" && this.props.min >= 0) {
+          opt.feedback = "error";
+          opt.message = this.props.lowerMessage || this.getLsiComponent("lowerMessage", null, this.props.min);
         }
       }
 
@@ -922,31 +930,31 @@ export const Number = Context.withContext(
       let buttons =
         !this.isReadOnly() && !this.props.buttonHidden
           ? [
-              {
-                icon: "mdi-minus",
-                disabled: this.isComputedDisabled() || this._isDisabled("min"),
-                onClick: (component, e) => this._decrease(e),
-                size: this.props.size,
-                colorSchema: this.props.colorSchema,
-                mainAttrs: {
-                  onMouseDown: this._decreaseStart,
-                  onMouseUp: this._decreaseEnd,
-                  onMouseOut: this._decreaseEnd
-                }
-              },
-              {
-                icon: "mdi-plus",
-                disabled: this.isComputedDisabled() || this._isDisabled("max"),
-                onClick: (component, e) => this._increase(e),
-                size: this.props.size,
-                colorSchema: this.props.colorSchema,
-                mainAttrs: {
-                  onMouseDown: this._increaseStart,
-                  onMouseUp: this._increaseEnd,
-                  onMouseOut: this._increaseEnd
-                }
+            {
+              icon: "mdi-minus",
+              disabled: this.isComputedDisabled() || this._isDisabled("min"),
+              onClick: (component, e) => this._decrease(e),
+              size: this.props.size,
+              colorSchema: this.props.colorSchema,
+              mainAttrs: {
+                onMouseDown: this._decreaseStart,
+                onMouseUp: this._decreaseEnd,
+                onMouseOut: this._decreaseEnd
               }
-            ]
+            },
+            {
+              icon: "mdi-plus",
+              disabled: this.isComputedDisabled() || this._isDisabled("max"),
+              onClick: (component, e) => this._increase(e),
+              size: this.props.size,
+              colorSchema: this.props.colorSchema,
+              mainAttrs: {
+                onMouseDown: this._increaseStart,
+                onMouseUp: this._increaseEnd,
+                onMouseOut: this._increaseEnd
+              }
+            }
+          ]
           : null;
 
       let inputAttrs = this.props.inputAttrs || {};

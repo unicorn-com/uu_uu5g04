@@ -27,7 +27,7 @@ const DEFAULT_PROPS = [
     props: {
       inputColWidth: "xs12 s7 m4",
       icon: "mdi-help-circle-outline",
-      onClick: () => window.open(Tools.iconDocLink, "_blank")
+      onClick: () => UU5.Common.Tools.openWindow(Tools.iconDocLink, "_blank")
     }
   },
   {

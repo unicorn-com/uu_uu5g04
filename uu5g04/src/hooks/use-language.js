@@ -66,17 +66,17 @@ const LanguageProvider = createComponent({
   displayName: "UU5.Hooks.LanguageProvider",
 
   propTypes: {
-    language: UU5.PropTypes.string,
+    initialLanguage: UU5.PropTypes.string,
     onChange: UU5.PropTypes.func
   },
 
   defaultProps: {
-    language: undefined,
+    initialLanguage: undefined,
     onChange: undefined
   },
 
-  render({ onChange, language, children }) {
-    const [lang, setLang] = useState(() => language || UU5.Utils.Lsi.getLanguage());
+  render({ onChange, initialLanguage, children }) {
+    const [lang, setLang] = useState(() => initialLanguage || UU5.Utils.Lsi.getLanguage());
     const currentValuesRef = useRef();
     currentValuesRef.current = { onChange };
 
@@ -115,7 +115,7 @@ function useLanguage() {
     }
   }, [language]);
 
-  return { language: language || lang, setLanguage: setLanguage || UU5.Utils.Lsi.setLanguage };
+  return [language || lang, setLanguage || UU5.Utils.Lsi.setLanguage];
 }
 
 export { useLanguage, LanguageProvider };

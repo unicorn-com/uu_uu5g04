@@ -1,7 +1,7 @@
 @import "./forms-ns.less";
 @import "../tools.less";
 @import "./select-func.less";
-@import '../color-schema/default.less';
+@import "../color-schema/default.less";
 
 /* UU5.Forms.Text */
 .@{name}-select {
@@ -11,8 +11,9 @@
 
   &.color-schema-black {
     .uu5-common-bg-style-filled {
-      .uu5-bricks-icon, .uu5-forms-input-form-item-value {
-        color: #FFFFFF;
+      .uu5-bricks-icon,
+      .uu5-forms-input-form-item-value {
+        color: #ffffff;
       }
     }
   }
@@ -23,7 +24,7 @@
       &.uu5-common-bg-style-underline,
       &.uu5-common-bg-style-transparent {
         .@{name}-input-form-item-value {
-          color: #FFFFFF;
+          color: #ffffff;
         }
       }
       &.uu5-common-bg-style-filled {
@@ -35,16 +36,16 @@
   }
 }
 
-.@{name}-select:after{
+.@{name}-select:after {
   display: block;
   position: relative;
-  content: '';
+  content: "";
   clear: both;
 }
 
 .@{name}-select-state-holder {
   &:not(.@{name}-select-has-value) .@{name}-input-form-item-value {
-    color: rgba(0,0,0,0.24);
+    color: rgba(0, 0, 0, 0.24);
   }
 
   &.@{name}-select-has-value .@{name}-input-form-item-value {
@@ -57,11 +58,7 @@
 .@{name}-select-open .@{name}-items-input,
 .@{name}-select-open.@{name}-items-input {
   z-index: 10;
-  .elevation-mixin(inset 0 0 0 1px #2196F3);
-
-  &:not(.uu5-common-bg-style-underline) {
-    box-shadow: inset 0 0 0 1px #2196F3;
-  }
+  .elevation-mixin(inset 0 0 0 1px #2196f3);
 }
 
 .@{name}-select-link {
@@ -78,7 +75,7 @@
 }
 
 .@{name}-select .@{name}-input-wrapper .uu5-bricks-icon {
-  color: rgba(0,0,0,0.87);
+  color: rgba(0, 0, 0, 0.87);
 }
 
 .@{name}-input.@{name}-select .@{name}-items-input:not(.uu5-common-bg-style-underline) {
@@ -86,15 +83,19 @@
 }
 
 .@{name}-select-option.uu5-bricks-link {
-  &:focus, &:active, &:hover {
+  &:focus,
+  &:active,
+  &:hover {
     background-color: @grey-300;
   }
 }
 
 .@{name}-select-multiple {
   .@{name}-item-list-header .@{name}-select-link {
-    &, &:focus, &:active {
-      color: rgba(0,0,0,0.87);
+    &,
+    &:focus,
+    &:active {
+      color: rgba(0, 0, 0, 0.87);
     }
     &:hover {
       color: rgb(158, 158, 158);
@@ -103,34 +104,34 @@
 }
 
 .@{name}-select .@{name}-items-input.uu5-common-disabled {
-  background-color: fade(#F5F5F5, 42%);
+  background-color: fade(#f5f5f5, 42%);
 
-    .@{name}-input-form-item-value {
-      color: rgba(0,0,0,0.24);
-    }
+  .@{name}-input-form-item-value {
+    color: rgba(0, 0, 0, 0.24);
+  }
 }
 
-.@{name}-select.uu5-common-disabled	.uu5-bricks-link {
-    cursor: default;
-    pointer-events: none;
+.@{name}-select.uu5-common-disabled .uu5-bricks-link {
+  cursor: default;
+  pointer-events: none;
 }
 
 .@{name}-select.@{name}-input-read-only .@{name}-items-input {
-  background-color: fade(#FFFFFF, 24%);
-  border-color: fade(#BDBDBD, 24%);
+  background-color: fade(#ffffff, 24%);
+  border-color: fade(#bdbdbd, 24%);
   .uu5-bricks-link {
     cursor: default;
   }
 }
 
 .@{name}-select.@{name}-input-read-only .@{name}-items-input {
-  border-color: fade(#BDBDBD, 24%);
+  border-color: fade(#bdbdbd, 24%);
   box-shadow: unset;
   cursor: default;
 }
 
 .@{name}-select.uu5-common-disabled .@{name}-items-input {
-  border-color: fade(#BDBDBD, 42%);
+  border-color: fade(#bdbdbd, 42%);
   box-shadow: unset;
   cursor: default;
 }

@@ -732,10 +732,15 @@ export const DatePicker = Context.withContext(
         opt.value = date;
       }
       opt.value = this._getOutcomingValue(opt.value);
-      if (typeof this.props.onChange === "function") {
-        this.setState({ open: false }, () => this.props.onChange(opt));
+
+      if (!this._hasValueChanged(this.state.value, date)) {
+        this.setState({ open: false });
       } else {
-        this.onChangeDefault(opt);
+        if (typeof this.props.onChange === "function") {
+          this.setState({ open: false }, () => this.props.onChange(opt));
+        } else {
+          this.onChangeDefault(opt);
+        }
       }
       return this;
     },

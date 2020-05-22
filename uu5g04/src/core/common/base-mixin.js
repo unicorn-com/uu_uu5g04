@@ -72,9 +72,7 @@ export const BaseMixin = {
       mainAttrs: null,
       parent: null,
       ref_: null,
-      noIndex: false,
-      editable: undefined,
-      contentEditable: undefined
+      noIndex: false
     };
   },
   //@@viewOff:getDefaultProps

@@ -65,8 +65,8 @@
 
     render(props) {
       //@@viewOn:hooks
-      const { item } = useLsi({ cs: "Jméno", en: "Name" });
-      const { item: inputLsi } = useLsi({
+      const item = useLsi({ cs: "Jméno", en: "Name" });
+      const inputLsi = useLsi({
         cs: { placeholder: "Jméno Příjmení", message: "Vložte jméno a příjmení." },
         en: { placeholder: "Name Surname", message: "Insert name and surname." }
       });

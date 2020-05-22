@@ -172,11 +172,13 @@ const getIconColor = colorSchema => {
   colorSchema = UU5.Environment.colorSchemaMap[colorSchema].color;
   let colorShades = UU5.Environment.colors[colorSchema.split("-rich")[0]];
 
-  return UU5.Common.Css.css(`
-    ::before {
-      color: ${colorShades[colorSchema === "black" ? "c900" : "c500"]}
-    }
-  `);
+  return colorShades
+    ? " " + UU5.Common.Css.css(`
+      ::before {
+        color: ${colorShades[colorSchema === "black" || colorSchema === "white" ? "c900" : "c500"]}
+      }
+    `)
+    : "";
 };
 
 const getMainAttrs = function(props, attrs) {
@@ -187,7 +189,7 @@ const getMainAttrs = function(props, attrs) {
       UU5.Environment.IconManager.addIcons(iconsName);
       attrs.className += ` ${iconsName}`;
     }
-    attrs.className += ` ${props.markerIcon} ${getIconColor(props.iconColorSchema)}`;
+    attrs.className += ` ${props.markerIcon}${getIconColor(props.iconColorSchema)}`;
   }
   return attrs;
 };

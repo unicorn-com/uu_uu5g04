@@ -106,7 +106,7 @@ const CommonClassNames = {
     return ns.css("tag-select") + " " + Css.css(styles);
   },
   tag: props => {
-    return Css.css(`
+    return Css.css`
       && {
         display: inline-flex;
         align-items: center;
@@ -123,7 +123,7 @@ const CommonClassNames = {
           padding: 2px 0 0 0;
         }
       }
-    `);
+    `;
   },
   tagTextWrapper: () => {
     return Css.css`
@@ -133,12 +133,12 @@ const CommonClassNames = {
     `;
   },
   itemsInput: () => {
-    return Css.css(`
+    return Css.css`
       & > .uu5-forms-input-form-item-value {
         display: flex;
         flex-grow: 1;
       }
-    `);
+    `;
   },
   inputValueWrapper: props => {
     let paddingLeft,
@@ -150,14 +150,14 @@ const CommonClassNames = {
       paddingLeft = parseInt(INPUT_PADDING[props.size]) + parseInt(TAG_PADDING[props.size].split(" ")[3]) + "px";
     }
 
-    return Css.css(`
+    return Css.css`
       display: flex;
       flex-grow: 1;
       align-items: center;
       padding-left: ${paddingLeft};
       padding-right: ${paddingRight};
       max-width: 100%;
-    `);
+    `;
   },
   valueWrapper: () => Css.css`
     max-width: 100%;
@@ -165,24 +165,33 @@ const CommonClassNames = {
     text-overflow: ellipsis;
   `,
   inputValue: props => {
-    return Css.css(`
+    return Css.css`
       display: flex;
       flex: 1 1 auto;
       flex-wrap: ${props.multiple ? "wrap" : "nowrap"};
       align-items: center;
       min-width: 0;
-      min-height: ${INPUT_MIN_HEIGHT[props.size]}
-    `);
+      min-height: ${INPUT_MIN_HEIGHT[props.size]};
+
+      && .uu5-bricks-icon {
+        right: initial;
+        top: initial;
+        padding: initial;
+        height: initial;
+        position: initial;
+        font-size: inherit;
+      }
+    `;
   },
   inputResetIconWrapper: () => {
-    return Css.css(`
+    return Css.css`
       &&& {
         height: 100%;
       }
-    `);
+    `;
   },
   inputResetIcon: (props, state) => {
-    return Css.css(`
+    return Css.css`
       &&& {
         height: 1em;
         padding: 0;
@@ -190,7 +199,7 @@ const CommonClassNames = {
         cursor: ${!state.readOnly && !isComputedDisabled(state) ? "pointer" : "default"};
         position: relative;
       }
-    `);
+    `;
   },
   textInput: (props, state) => {
     let padding;
@@ -221,7 +230,7 @@ const CommonClassNames = {
       minWidth = placeholderWidth || 1;
     }
 
-    return Css.css(`
+    return Css.css`
       flex: ${flex};
       display: inline-block;
       padding-left: ${padding};
@@ -242,12 +251,12 @@ const CommonClassNames = {
       &&& > input:focus {
         background-color: transparent;
       }
-    `);
+    `;
   },
   itemList: props => {
     const colors = getColors(props.colorSchema);
 
-    return Css.css(`
+    return Css.css`
       && {
         display: block;
       }
@@ -270,7 +279,7 @@ const CommonClassNames = {
         }
       }
 
-    `);
+    `;
   }
 };
 

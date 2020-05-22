@@ -11,7 +11,8 @@
  * at the email: info@unicorn.com.
  */
 
-import "!style-loader?transform=src/core/common/normalize-css.js&insertAt=top!css-loader!postcss-loader??postcss!less-loader??less!./normalize.less";
+import "./internal/font-css-url.js";
+import "./normalize.less";
 import "./common.less";
 import "./font-size.less";
 import "./internal/bg-styles.js";

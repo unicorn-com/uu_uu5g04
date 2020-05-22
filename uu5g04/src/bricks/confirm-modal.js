@@ -18,9 +18,8 @@ import ns from "./bricks-ns.js";
 import Modal from "./modal.js";
 
 import "./confirm-modal.less";
+import { getPortalElement } from "./internal/portal.js";
 //@@viewOff:imports
-
-const PORTAL_ID = "uu5-bricks-confirm-modal-portal";
 
 export const ConfirmModal = UU5.Common.VisualComponent.create({
   displayName: "ConfirmModal", // for backward compatibility (test snapshots)
@@ -146,22 +145,10 @@ export const ConfirmModal = UU5.Common.VisualComponent.create({
     );
   },
 
-  _getPortalElem(allowCreateElement) {
-    // create portal in DOM
-    let result = document.getElementById(PORTAL_ID);
-    if (!result && allowCreateElement) {
-      result = document.createElement("div");
-      result.setAttribute("id", PORTAL_ID);
-      document.body.appendChild(result);
-    }
-
-    return result;
-  },
-
   _tryToRemovePortal() {
     // try to remove portal from DOM if does not exists
     if (!this.state.isOpened) {
-      const portal = this._getPortalElem();
+      const portal = getPortalElement();
       if (portal && portal.childNodes.length === 0) {
         portal.parentNode.removeChild(portal);
       }
@@ -211,7 +198,7 @@ export const ConfirmModal = UU5.Common.VisualComponent.create({
               onConfirm: this._confirm
             })}
           />,
-          this._getPortalElem(true)
+          getPortalElement(true)
         )
       : null;
   }

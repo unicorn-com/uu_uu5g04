@@ -59,24 +59,22 @@ describe("[uu5g04-hooks] useScreenSize with window", () => {
 
   it("should return expected result API", () => {
     ({ lastResult } = mountHook());
-    expect(lastResult()).toMatchObject({
-      screenSize: expect.any(String)
-    });
+    expect(lastResult()).toEqual(expect.any(String));
   });
 
   it("should report size based on window size", async () => {
     await setWindowWidth(UU5.Utils.ScreenSize.XS);
     ({ lastResult } = mountHook());
 
-    expect(lastResult()).toMatchObject({ screenSize: "xs" });
+    expect(lastResult()).toBe("xs");
     await setWindowWidth(UU5.Utils.ScreenSize.S);
-    expect(lastResult()).toMatchObject({ screenSize: "s" });
+    expect(lastResult()).toBe("s");
     await setWindowWidth(UU5.Utils.ScreenSize.M);
-    expect(lastResult()).toMatchObject({ screenSize: "m" });
+    expect(lastResult()).toBe("m");
     await setWindowWidth(UU5.Utils.ScreenSize.L);
-    expect(lastResult()).toMatchObject({ screenSize: "l" });
+    expect(lastResult()).toBe("l");
     await setWindowWidth(UU5.Utils.ScreenSize.L + 1);
-    expect(lastResult()).toMatchObject({ screenSize: "xl" });
+    expect(lastResult()).toBe("xl");
   });
 });
 
@@ -85,9 +83,7 @@ describe("[uu5g04-hooks] useScreenSize with ScreenSizeProvider", () => {
 
   it("should return expected result API", () => {
     ({ lastResult } = mountHookWithProvider(200));
-    expect(lastResult()).toMatchObject({
-      screenSize: expect.any(String)
-    });
+    expect(lastResult()).toEqual(expect.any(String));
   });
 
   it("should report size based on provider value", async () => {
@@ -96,18 +92,18 @@ describe("[uu5g04-hooks] useScreenSize with ScreenSizeProvider", () => {
     // NOTE ResizeObserver doesn't work in Jest so we'll re-mount everytime
     // with different width on wrapping <div>.
     ({ lastResult } = mountHookWithProvider(UU5.Utils.ScreenSize.XS));
-    expect(lastResult()).toMatchObject({ screenSize: "xs" });
+    expect(lastResult()).toBe("xs");
 
     ({ lastResult } = mountHookWithProvider(UU5.Utils.ScreenSize.S));
-    expect(lastResult()).toMatchObject({ screenSize: "s" });
+    expect(lastResult()).toBe("s");
 
     ({ lastResult } = mountHookWithProvider(UU5.Utils.ScreenSize.M));
-    expect(lastResult()).toMatchObject({ screenSize: "m" });
+    expect(lastResult()).toBe("m");
 
     ({ lastResult } = mountHookWithProvider(UU5.Utils.ScreenSize.L));
-    expect(lastResult()).toMatchObject({ screenSize: "l" });
+    expect(lastResult()).toBe("l");
 
     ({ lastResult } = mountHookWithProvider(UU5.Utils.ScreenSize.L + 1));
-    expect(lastResult()).toMatchObject({ screenSize: "xl" });
+    expect(lastResult()).toBe("xl");
   });
 });

@@ -51,7 +51,8 @@ export const withLsiContext = Component => {
       <LsiContext.Consumer>
         {({ registerLsi, unregisterLsi, setLanguage, getLanguage, source, language }) => {
           let result;
-          let isFromHookProvider = typeof setLanguage === "function" && typeof registerLsi !== "function";
+          // NOTE Plus4U5.App.LanguageSelector currently uses Provider where it sets only setLanguage into the context value...
+          let isFromHookProvider = typeof setLanguage === "function" && language !== undefined;
           if (!isFromHookProvider) {
             result = (
               <Component

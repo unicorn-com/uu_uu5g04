@@ -14,6 +14,8 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+import { getPortalElement } from "./internal/portal.js";
+import { disableBodyScrolling, enableBodyScrolling } from "./internal/page-utils.js";
 
 import "./popover.less";
 //@@viewOff:imports
@@ -37,6 +39,20 @@ const withContext = Component => {
   return forwardRef;
 };
 
+function getStackTraceCallerRow() {
+  // stack is e.g.:
+  // Error: ------
+  //   at getStackTraceCallerRow (popover.js:52)
+  //   at Object._open (popover.js:226)
+  //   at Object.open (popover.js:181)
+  //   at Object._registerPopover (color-picker.js:335) <------ this is what we want
+  //   ...
+  let err = new Error("------");
+  let stack = err.stack;
+  return stack ? stack.replace(/(?:\s|\S)*?------(?:.*\r?\n){4}/, "").split("\n")[0] : "";
+}
+
+let warnedMixingControlledAndApi;
 export const Popover = withContext(
   UU5.Common.VisualComponent.create({
     displayName: "Popover", // for backward compatibility (test snapshots)
@@ -89,7 +105,8 @@ export const Popover = withContext(
       header: UU5.Common.SectionMixin.propTypes.header,
       content: UU5.Common.ContentMixin.propTypes.content,
       footer: UU5.Common.SectionMixin.propTypes.footer,
-      className: UU5.Common.BaseMixin.propTypes.className
+      className: UU5.Common.BaseMixin.propTypes.className,
+      location: UU5.PropTypes.oneOf(["local", "portal"])
     },
     //@@viewOff:propTypes
 
@@ -99,13 +116,15 @@ export const Popover = withContext(
         shown: false,
         forceRender: false,
         fitHeightToViewport: false,
-        getToolbar: undefined
+        getToolbar: undefined,
+        location: undefined
       };
     },
     //@@viewOff:getDefaultProps
 
     //@@viewOn:reactLifeCycle
     getInitialState() {
+      this._canOpenOnMount = true;
       return {
         header: null,
         content: null,
@@ -131,8 +150,25 @@ export const Popover = withContext(
     },
 
     componentDidMount() {
-      if (this._getCentralPopover() && this.props.shown) {
-        this.open();
+      // NOTE Some components call popover.open() inside of ref_ handler which means that
+      // our setState performed inside of open() is batched for after mount - we don't want
+      // to call this.open() ourselves here in such case
+      // (but cannot detect it here using this.state.xyz because there is nothing there yet)
+      // => detect it using private field this._canOpenOnMount
+      if (this.props.shown && this._canOpenOnMount) {
+        // NOTE We should do same logic for open() and for props.shown=true but we don't (to preserve backward compatibility)...
+        if (this._getCentralPopover() || this.props.location) this._open(false);
+      }
+    },
+
+    componentDidUpdate(prevProps, prevState) {
+      // if opening to portal/page then hide/show scrollbars on body
+      if (this.props.location === "portal" || this.state.isPagePopover) {
+        if (this.state.display && !prevState.display) {
+          disableBodyScrolling("popover-" + this.getId());
+        } else if (!this.state.display && prevState.display) {
+          enableBodyScrolling("popover-" + this.getId());
+        }
       }
     },
 
@@ -149,17 +185,72 @@ export const Popover = withContext(
 
     componentWillUnmount() {
       this._removeEvent();
+      enableBodyScrolling("popover-" + this.getId(), true);
     },
     //@@viewOff:reactLifeCycle
 
     //@@viewOn:interface
     open(opt, setStateCallback) {
+      return this._open(true, opt, setStateCallback);
+    },
+
+    close(setStateCallback) {
+      let centralPopover = this._getCentralPopover();
+      if (centralPopover) {
+        centralPopover.close(() => typeof setStateCallback === "function" && setStateCallback());
+      } else {
+        let callback = () => {
+          this.setState({ removeHeight: true }, () => {
+            typeof setStateCallback === "function" && setStateCallback();
+          });
+        };
+        this._removeEvent();
+        this.hide(callback);
+      }
+
+      return this;
+    },
+
+    isOpen() {
+      return this._getCentralPopover() ? !this._getCentralPopover().isHidden() : !this.isHidden();
+    },
+    //@@viewOff:interface
+
+    //@@viewOn:overriding
+    hide_(setStateCallback) {
+      this.setState({ hidden: true, display: false }, setStateCallback);
+    },
+    //@@viewOff:overriding
+
+    //@@viewOn:private
+    _open(checkWrongUsage, opt, setStateCallback) {
+      // check temporarily disabled because we have it wrong in:
+      //   - context-menu.js, date-*-picker.js, time-picker.js, item-list.js, color-picker.js
+
+      //       if (
+      //         process.env.NODE_ENV === "development" &&
+      //         checkWrongUsage &&
+      //         this.props.controlled &&
+      //         (this.props.shown || this.props.disabled) &&
+      //         !warnedMixingControlledAndApi
+      //       ) {
+      //         warnedMixingControlledAndApi = true;
+      //         UU5.Common.Tools
+      //           .warning(`Bad usage of ${this.getTagName()} detected - props "shown" and "disabled" should not be set on JSX element if using API method popoverRef.open(). Proper usage is one of:
+      // a) Use prop "controlled={false}" and method popoverRef.open(). If you need to pass prop "disabled", pass it using popoverRef.open({ disabled: true }), not as a prop in JSX element.
+      // b) Use props "shown" and "onClose" (and any other) and keep the state about whether the popover is open in your component. Do not call popoverRef.open().
+
+      // The method was called from:
+      // ${getStackTraceCallerRow()}`);
+      //       }
+
+      this._canOpenOnMount = false;
       opt = opt || {};
 
       let centralPopover = this._getCentralPopover();
       if (centralPopover) {
         opt = UU5.Common.Tools.merge({}, opt);
-        opt.disabled = this.state.disabled;
+        opt.disabled = opt.disabled || this.state.disabled;
         opt.header = opt.header || this.props.header;
         opt.content = opt.content || this.props.content || this.props.children;
         opt.footer = opt.footer || this.props.footer;
@@ -223,7 +314,8 @@ export const Popover = withContext(
             maxHeight: null,
             removeHeight: false,
             onClose: onClose,
-            onBeforeClose: onBeforeClose
+            onBeforeClose: onBeforeClose,
+            isPagePopover: !!opt.customPopover
           },
           () => {
             this._addEvent(onBeforeClose, onClose);
@@ -296,35 +388,6 @@ export const Popover = withContext(
       return this;
     },
 
-    close(setStateCallback) {
-      let centralPopover = this._getCentralPopover();
-      if (centralPopover) {
-        centralPopover.close(() => typeof setStateCallback === "function" && setStateCallback());
-      } else {
-        let callback = () => {
-          this.setState({ removeHeight: true }, () => {
-            typeof setStateCallback === "function" && setStateCallback();
-          });
-        };
-        this._removeEvent();
-        this.hide(callback);
-      }
-
-      return this;
-    },
-
-    isOpen() {
-      return this._getCentralPopover() ? !this._getCentralPopover().isHidden() : !this.isHidden();
-    },
-    //@@viewOff:interface
-
-    //@@viewOn:overriding
-    hide_(setStateCallback) {
-      this.setState({ hidden: true, display: false }, setStateCallback);
-    },
-    //@@viewOff:overriding
-
-    //@@viewOn:private
     _getOffsetParentRect(element, relative) {
       let rect;
       if (relative) {
@@ -568,7 +631,7 @@ export const Popover = withContext(
 
     _isCentralPopover() {
       let result = false;
-      if (!this.props.forceRender && typeof this.props.getPopover === "function") {
+      if (!this.props.location && !this.props.forceRender && typeof this.props.getPopover === "function") {
         let centralPopover = this.props.getPopover();
         if (centralPopover && centralPopover.getId() === this.getId()) result = true;
       }
@@ -578,7 +641,7 @@ export const Popover = withContext(
     _getCentralPopover() {
       // NOTE The method is expected to return central popover but not if it is the same instance as this.
       let result = null;
-      if (!this.props.forceRender && typeof this.props.getPopover === "function") {
+      if (!this.props.location && !this.props.forceRender && typeof this.props.getPopover === "function") {
         let centralPopover = this.props.getPopover();
         if (centralPopover && centralPopover.getId() !== this.getId()) result = centralPopover;
       }
@@ -601,24 +664,23 @@ export const Popover = withContext(
     _addEvent(onBeforeClose, onClose) {
       this._stopPropagation = true;
 
+      if (this._closeListener) this._removeEvent();
       if (!this.state.disableBackdrop && !this.props.disableBackdrop) {
-        if (!this._closeListener) {
-          this._closeListener = e => {
-            let isPopover = this._findTarget(e.target);
+        this._closeListener = e => {
+          let isPopover = this._findTarget(e.target);
 
-            if (!this._stopPropagation && !isPopover && !this.isHidden()) {
-              if (typeof onBeforeClose === "function") {
-                onBeforeClose();
-              }
-              this.close(onClose);
-            } else {
-              this._stopPropagation = false;
+          if (!this._stopPropagation && !isPopover && !this.isHidden()) {
+            if (typeof onBeforeClose === "function") {
+              onBeforeClose();
             }
-          };
+            this.close(onClose);
+          } else {
+            this._stopPropagation = false;
+          }
+        };
 
-          window.addEventListener("click", this._closeListener);
-          window.addEventListener("contextmenu", this._closeListener);
-        }
+        window.addEventListener("click", this._closeListener);
+        window.addEventListener("contextmenu", this._closeListener);
       }
     },
 
@@ -709,16 +771,28 @@ export const Popover = withContext(
 
     //@@viewOn:render
     render() {
-      return (
-        !this._getCentralPopover() && (
+      let result;
+      let centralPopover = this._getCentralPopover();
+      if (!centralPopover) {
+        let { location } = this.props;
+        result = (
           <div {...this._getMainAttrs()}>
             {this._getHeader()}
             {this._getBody()}
             {this._getFooter()}
             {this.getDisabledCover()}
           </div>
-        )
-      );
+        );
+        if (location === "portal") {
+          result =
+            this.state.display || this.isOpen()
+              ? UU5.Common.Portal.create(result, getPortalElement(true, "popover"))
+              : null;
+        }
+      } else {
+        result = null;
+      }
+      return result;
     }
     //@@viewOff:render
   })

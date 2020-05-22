@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
-  <title>useScreenSize Demo</title>
+  <title>useLanguage Demo</title>
 
   <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
   <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
@@ -54,7 +54,7 @@
       // do NOT use keywords "this"!!!
 
       //@@viewOn:hooks
-      const { language, setLanguage } = useLanguage();
+      const [language, setLanguage] = useLanguage();
       console.log("language", language);
       //@@viewOn:hooks
 

@@ -19,83 +19,83 @@ export const FormsLsi = {
       sk: "Zadajte hodnotu, ktorá odpovedá požadovanému formátu.",
       uk: "Введіть значення яке відповідає заданому формату."
     },
-    requiredMessage: { 
-      en: "This field is required.", 
-      cs: "Toto pole je povinné.", 
-      sk: "Toto pole je povinné.", 
-      uk: "Це поле є обов'язковим" 
+    requiredMessage: {
+      en: "This field is required.",
+      cs: "Toto pole je povinné.",
+      sk: "Toto pole je povinné.",
+      uk: "Це поле є обов'язковим"
     },
-    requiredMessageChoice: { 
-      en: "Select some item.", 
-      cs: "Vyberte položku.", 
-      sk: "Vyberte položku.", 
-      uk: "Виберіть значення." 
+    requiredMessageChoice: {
+      en: "Select some item.",
+      cs: "Vyberte položku.",
+      sk: "Vyberte položku.",
+      uk: "Виберіть значення."
     },
-    requiredMessageGroup: { 
-      en: "Choose at least one option.", 
-      cs: "Vyberte alespoň jednu položku.", 
-      sk: "Vyberte aspoň jednu položku.", 
-      uk: "Виберіть принаймні одне значення." 
+    requiredMessageGroup: {
+      en: "Choose at least one option.",
+      cs: "Vyberte alespoň jednu položku.",
+      sk: "Vyberte aspoň jednu položku.",
+      uk: "Виберіть принаймні одне значення."
     }
   },
   formMixin: {
-    validContent: { 
-      en: "Form is valid.", 
-      cs: "Formulář je validní.", 
-      sk: "Formulár je validný.", 
-      uk: "Форма є дійсна." 
+    validContent: {
+      en: "Form is valid.",
+      cs: "Formulář je validní.",
+      sk: "Formulár je validný.",
+      uk: "Форма є дійсна."
     },
-    invalidContent: { 
-      en: "Form is not valid.", 
-      cs: "Formulář není validní.", 
-      sk: "Formulár nie je validný.", 
-      uk: "Форма є не дійсна." 
+    invalidContent: {
+      en: "Form is not valid.",
+      cs: "Formulář není validní.",
+      sk: "Formulár nie je validný.",
+      uk: "Форма є не дійсна."
     }
   },
   controls: {
-    ok: { 
-      en: "OK", 
-      cs: "OK", 
-      sk: "OK", 
-      uk: "OK" 
+    ok: {
+      en: "OK",
+      cs: "OK",
+      sk: "OK",
+      uk: "OK"
     },
-    validate: { 
-      en: "Validate", 
-      cs: "Zvalidovat", 
-      sk: "Validovať", 
-      uk: "Валідувати" 
+    validate: {
+      en: "Validate",
+      cs: "Zvalidovat",
+      sk: "Validovať",
+      uk: "Валідувати"
     },
-    reset: { 
-      en: "Reset", 
-      cs: "Reset", 
-      sk: "Reset", 
-      uk: "Скинути" 
+    reset: {
+      en: "Reset",
+      cs: "Reset",
+      sk: "Reset",
+      uk: "Скинути"
     },
-    cancel: { 
-      en: "Cancel", 
-      cs: "Zrušit", 
-      sk: "Zrušit", 
-      uk: "Відмінити" 
+    cancel: {
+      en: "Cancel",
+      cs: "Zrušit",
+      sk: "Zrušit",
+      uk: "Відмінити"
     }
   },
   time: {
-    hours: { 
-      en: "Hours", 
-      cs: "Hodiny", 
-      sk: "Hodiny", 
-      uk: "Години" 
+    hours: {
+      en: "Hours",
+      cs: "Hodiny",
+      sk: "Hodiny",
+      uk: "Години"
     },
-    minutes: { 
-      en: "Minutes", 
-      cs: "Minuty", 
-      sk: "Minúty", 
-      uk: "Хвилини" 
+    minutes: {
+      en: "Minutes",
+      cs: "Minuty",
+      sk: "Minúty",
+      uk: "Хвилини"
     },
-    seconds: { 
-      en: "Seconds", 
-      cs: "Sekundy", 
-      sk: "Sekundy", 
-      uk: "Секунди" 
+    seconds: {
+      en: "Seconds",
+      cs: "Sekundy",
+      sk: "Sekundy",
+      uk: "Секунди"
     }
   },
   select: {
@@ -188,16 +188,16 @@ export const FormsLsi = {
       uk: "Будь ласка вкажіть число."
     },
     lowerMessage: {
-      cs: "Zadejte prosím větší číslo. Minimální povolená hodnota je",
-      en: "Please type in bigger number. Minimum allowed value is",
-      sk: "Zadajte prosím väčšie číslo. Minimálna povolená hodnota je",
-      uk: "Будь ласка вкажіть велике число. Мінімальне значення є"
+      cs: "Zadejte prosím větší číslo. Minimální povolená hodnota je %d.",
+      en: "Please type in bigger number. Minimum allowed value is %d.",
+      sk: "Zadajte prosím väčšie číslo. Minimálna povolená hodnota je %d.",
+      uk: "Будь ласка вкажіть велике число. Мінімальне значення є %d."
     },
     upperMessage: {
-      cs: "Zadejte prosím menší číslo. Maximální povolená hodnota je",
-      en: "Please type in smaller number. Maximum allowed value is",
-      sk: "Zadajte prosím menšie číslo. Maximálna povolená hodnota je",
-      uk: "Будь ласка вкажіть невелике число. Максимальне значення є"
+      cs: "Zadejte prosím menší číslo. Maximální povolená hodnota je %d.",
+      en: "Please type in smaller number. Maximum allowed value is %d.",
+      sk: "Zadajte prosím menšie číslo. Maximálna povolená hodnota je %d.",
+      uk: "Будь ласка вкажіть невелике число. Максимальне значення є %d."
     }
   },
   file: {

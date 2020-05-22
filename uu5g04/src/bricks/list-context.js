@@ -2,6 +2,10 @@ import UU5 from "uu5g04";
 
 export const ListContext = UU5.Common.Context.create();
 
+function getStatics({ classNames, defaults, nestingLevel, lsi, errors, warnings, opt }) {
+  return { classNames, defaults, nestingLevel, lsi, errors, warnings, opt };
+}
+
 export class Context {
   static withListContext(Component) {
     // disable context for jest tests - enzyme doesn't support React 16.3 Context API
@@ -49,6 +53,7 @@ export class Context {
     forwardRef.isUu5PureComponent = true;
     forwardRef.displayName = `forwardRef(${Component.displayName || Component.name || "Component"})`;
     forwardRef.tagName = Component.tagName;
+    forwardRef = { ...forwardRef, ...getStatics(Component) }; // statics have to be added because DccWrapper reads them
 
     return forwardRef;
   }

@@ -30,6 +30,7 @@
 
         "uu5g04": "/uu5g04.js",
         "uu5g04-bricks": "/uu5g04-bricks.js",
+        "uu5g04-forms": "/uu5g04-forms.js",
         "uu5g04-hooks": "/uu5g04-hooks.js"
       }
     });
@@ -43,10 +44,11 @@
 <script type="text/babel">
   import UU5 from "uu5g04";
   import "uu5g04-bricks";
+  import "uu5g04-forms";
 
   //@@viewOn:example
   //@@viewOn:imports
-  import { createVisualComponent, useScreenSize, useEffect } from "uu5g04-hooks";
+  import { createVisualComponent, useScreenSize, ScreenSizeProvider, useState } from "uu5g04-hooks";
   //@@viewOff:imports
 
   const STYLES = {
@@ -76,10 +78,8 @@
     //@@viewOff:defaultProps
 
     render(props) {
-      // do NOT use keywords "this"!!!
-
       //@@viewOn:hooks
-      const { screenSize, setScreenSize } = useScreenSize();
+      const screenSize = useScreenSize();
       //@@viewOff:hooks
 
       //@@viewOn:interface
@@ -95,9 +95,7 @@
       const currentNestingLevel = UU5.Utils.NestingLevel.getNestingLevel(props, STATICS);
 
       return currentNestingLevel ? (
-        <UU5.Bricks.Box {...attrs} colorSchema="info">
-          {screenSize} <UU5.Bricks.Link onClick={() => setScreenSize("m")} content="set 'm'" />
-        </UU5.Bricks.Box>
+        <UU5.Bricks.Box {...attrs} colorSchema="primary">{screenSize}</UU5.Bricks.Box>
       ) : null;
       //@@viewOff:render
     }
@@ -105,61 +103,34 @@
 
   //@@viewOff:example
 
-  //@@viewOn:statics
-  const FIXED_STATICS = {
-    displayName: "UU5.Bricks.FixedScreenSize",
-    nestingLevel: "box"
-  };
-  //@@viewOff:statics
-
-  const FixedScreenSize = createVisualComponent({
-    ...FIXED_STATICS,
-
-    //@@viewOn:propTypes
-    propTypes: {},
-    //@@viewOff:propTypes
-
-    //@@viewOn:defaultProps
-    defaultProps: {},
-    //@@viewOff:defaultProps
-
-    render(props) {
-      // do NOT use keywords "this"!!!
-
-      //@@viewOn:hooks
-      const { screenSize, setScreenSize } = useScreenSize();
-      useEffect(() => setScreenSize("m"), [screenSize]);
-      //@@viewOff:hooks
-
-      //@@viewOn:interface
-      //@@viewOff:interface
-
-      //@@viewOn:private
-      //@@viewOff:private
-
-      //@@viewOn:render
-
-      // { id, className, style, disabled, hidden }
-      const attrs = UU5.Common.VisualComponent.getAttrs(props, UU5.Common.Css.css(STYLES[screenSize]));
-      const currentNestingLevel = UU5.Utils.NestingLevel.getNestingLevel(props, STATICS);
-
-      return currentNestingLevel ? (
-        <UU5.Bricks.Box {...attrs} colorSchema="danger">
-          {screenSize}
-        </UU5.Bricks.Box>
-      ) : null;
-      //@@viewOff:render
-    }
-  });
-
   function Page() {
-    const { screenSize } = useScreenSize();
-
+    let [forcedScreenSize, setForcedScreenSize] = useState("m");
     return (
       <UU5.Bricks.Container>
-        <div>{screenSize}</div>
-        <ScreenSize />
-        <FixedScreenSize />
+        <UU5.Bricks.Section header="Based on screen width" level={2}>
+          <ScreenSize />
+        </UU5.Bricks.Section>
+
+        <UU5.Bricks.Section className={UU5.Common.Css.css`max-width: 900px;`} header="Based on element width" level={2}>
+          <ScreenSizeProvider>
+            <ScreenSize />
+          </ScreenSizeProvider>
+        </UU5.Bricks.Section>
+
+        <UU5.Bricks.Section header={forcedScreenSize ? `Forced to ${forcedScreenSize}` : `Customized - based on screen width`} level={2}>
+          <ScreenSizeProvider screenSize={forcedScreenSize}>
+            <UU5.Forms.Select
+              value={forcedScreenSize || "null"}
+              onChange={opt => setForcedScreenSize(opt.value || null)}
+            >
+              {[null, "xs", "s", "m", "l", "xl"].map(it => (
+                <UU5.Forms.Select.Option key={it+""} value={it || ""} content={it+""} /> /* Cannot click on item with value=null :-/ */
+              ))}
+            </UU5.Forms.Select>
+            <br/>
+            <ScreenSize />
+          </ScreenSizeProvider>
+        </UU5.Bricks.Section>
       </UU5.Bricks.Container>
     )
   }

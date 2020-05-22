@@ -21,8 +21,9 @@ const noDigit = /(\D)/g;
 const DECIMAL_SEPARATOR = ",";
 const THOUSAND_SEPARATOR = "\u00a0";
 
-const getFormatFromNumber = (number, country) => {
-  let localizedSeparators = number.toLocaleString(country);
+const getFormatFromNumber = country => {
+  let testNumber = 1000000.5;
+  let localizedSeparators = testNumber.toLocaleString(country);
 
   let matchNoNumber = localizedSeparators.toString().match(noDigit);
   if (matchNoNumber && matchNoNumber[0] == "-") {
@@ -37,13 +38,8 @@ const getFormatFromNumber = (number, country) => {
       decimalSeparator = matchNoNumber[count - 1];
       thousandSeparator = checkSpace(matchNoNumber[count - 2]);
     } else if (count == 1) {
-      if (number < -999 || number > 999) {
-        thousandSeparator = checkSpace(matchNoNumber[count - 1]);
-        decimalSeparator = null;
-      } else {
-        thousandSeparator = null;
-        decimalSeparator = matchNoNumber[count - 1];
-      }
+      thousandSeparator = null;
+      decimalSeparator = matchNoNumber[count - 1];
     } else {
       thousandSeparator = null;
       decimalSeparator = null;
@@ -67,7 +63,7 @@ const getFormatByCountry = (number, country) => {
     if (UU5.Environment.numberFormat[country]) {
       result = UU5.Environment.numberFormat[country];
     } else {
-      result = getFormatFromNumber(number, country);
+      result = getFormatFromNumber(country);
     }
   } else {
     result = { decimalSeparator: DECIMAL_SEPARATOR, thousandSeparator: THOUSAND_SEPARATOR };
@@ -300,24 +296,6 @@ export const Number = UU5.Common.VisualComponent.create({
 
   _getSeparators() {
     return { decimalSeparator: this.state.decimalSeparator, thousandSeparator: this.state.thousandSeparator };
-  },
-
-  _getFormatByCountry(number, country) {
-    country = country ? country.toLowerCase() : country;
-    let result;
-    if (number) {
-      if (UU5.Environment.numberFormat[country]) {
-        result = UU5.Environment.numberFormat[country];
-      } else {
-        result = this._getFormatFromNumber(number, country);
-      }
-    } else {
-      result = {
-        decimalSeparator: this.getDefault("decimalSeparator"),
-        thousandSeparator: this.getDefault("thousandSeparator")
-      };
-    }
-    return result;
   },
 
   _getFormatFromNumber(number, country) {

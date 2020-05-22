@@ -53,7 +53,7 @@ describe("[uu5g04-hooks] useLsiValues", () => {
 
   it("should return values based on context language", async () => {
     ({ lastResult } = mountHookWithWrapper(
-      props => <LanguageProvider language="cs">{props.children}</LanguageProvider>,
+      props => <LanguageProvider initialLanguage="cs">{props.children}</LanguageProvider>,
       LSI_VALUES1
     ));
     expect(lastResult()).toMatchObject({ key1: LSI_VALUES1.key1.cs, key2: LSI_VALUES1.key2.cs });

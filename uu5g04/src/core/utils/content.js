@@ -24,7 +24,10 @@ export const Content = {
 function getChild(child, childProps, key = "") {
   let result;
   if (Element.isValid(child)) {
-    result = child; // no passing of props
+    if (child.props.nestingLevel) delete childProps.nestingLevel;
+    if (child.props.parent) delete childProps.parent;
+    if (Object.keys(childProps).length > 0) result = Element.clone(child, childProps);
+    else result = child;
   } else {
     // uu5json / uu5data (with continued evaluation after JSON parsing)
     if (typeof child === "string") {

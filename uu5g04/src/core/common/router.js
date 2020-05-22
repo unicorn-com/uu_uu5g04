@@ -843,20 +843,6 @@ export const Router = VisualComponent.create({
       newRouteChild = this._buildComponent(newRoute, params);
     }
 
-    if (
-      newRouteChild &&
-      (!newRouteChild.type ||
-        (!newRouteChild.type["UU5.Common.VucMixin"] &&
-          !newRouteChild.type["UU5.Common.RouteMixin"] &&
-          newRouteChild.type.$$typeof !== REACT_LAZY_TYPEOF))
-    ) {
-      Tools.warning("Route component which should be set is not Visual Use Case.", {
-        routeParam: route,
-        routeChild: newRouteChild,
-        tagName: this.constructor.tagName
-      });
-    }
-
     return {
       route: newRouteChild,
       fragment: usedFragment,
@@ -888,8 +874,10 @@ export const Router = VisualComponent.create({
       children[0] = <React.Suspense fallback={this.props.loading}>{children[0]}</React.Suspense>;
     }
 
-    let PortalModal = Tools.checkTag("UU5.Bricks.PortalModal", true);
-    if (PortalModal) children.push(<PortalModal ref_={modal => (this._pageLeaveModal = modal)} />);
+    let Modal = Tools.checkTag("UU5.Bricks.Modal", true);
+    if (Modal) {
+      children.push(<Modal ref_={modal => (this._pageLeaveModal = modal)} controlled={false} location="portal" />);
+    }
 
     return React.Fragment ? (
       <React.Fragment>{React.Children.toArray(children)}</React.Fragment>

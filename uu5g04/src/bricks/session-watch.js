@@ -16,9 +16,8 @@ import UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./session-watch.less";
+import { getPortalElement } from "./internal/portal.js";
 //@@viewOff:imports
-
-const PORTAL_ID = "uu5-bricks-session-watch-portal";
 
 export const SessionWatch = UU5.Common.VisualComponent.create({
   displayName: "SessionWatch", // for backward compatibility (test snapshots)
@@ -87,22 +86,10 @@ export const SessionWatch = UU5.Common.VisualComponent.create({
     this._modal = ref;
   },
 
-  _getPortalElem(allowCreateElement) {
-    // create portal in DOM
-    let result = document.getElementById(PORTAL_ID);
-    if (!result && allowCreateElement) {
-      result = document.createElement("div");
-      result.setAttribute("id", PORTAL_ID);
-      document.body.appendChild(result);
-    }
-
-    return result;
-  },
-
   _tryToRemovePortal() {
     // try to remove portal from DOM if does not exists
     if (!this.state.isOpened) {
-      const portal = this._getPortalElem();
+      const portal = getPortalElement();
       if (portal && portal.childNodes.length === 0) {
         portal.parentNode.removeChild(portal);
       }
@@ -154,7 +141,7 @@ export const SessionWatch = UU5.Common.VisualComponent.create({
         controlled={false}
         ref_={this._setModalRef}
       />,
-      this._getPortalElem(true)
+      getPortalElement(true)
     );
   }
   //@@viewOff:render

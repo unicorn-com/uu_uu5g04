@@ -17,10 +17,8 @@ import ns from "./bricks-ns.js";
 import Alert from "./alert.js";
 import AlertBusMulti from "./internal/alert-bus-multi.js";
 import "./alert-bus.less";
+import { getPortalElement } from "./internal/portal.js";
 //@@viewOff:imports
-
-//TODO FOR NOW, this component should be from uu5
-const MODALS_ID = "uu5-modals";
 
 const COLOR_SCHEMA_PRIORITY = ["danger", "success", "warning", "info"];
 
@@ -313,22 +311,10 @@ export const AlertBus = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _getPortalElem(allowCreateElement) {
-    // create portal in DOM
-    let result = document.getElementById(MODALS_ID);
-    if (!result && allowCreateElement) {
-      result = document.createElement("div");
-      result.setAttribute("id", MODALS_ID);
-      document.body.appendChild(result);
-    }
-
-    return result;
-  },
-
   _removePortal() {
     // try to remove portal from DOM if does not exists
     if (!this.state.open) {
-      const portal = this._getPortalElem();
+      const portal = getPortalElement(false, "alert-bus");
       if (portal && portal.childNodes.length === 0) {
         portal.parentNode.removeChild(portal);
       }
@@ -470,7 +456,9 @@ export const AlertBus = UU5.Common.VisualComponent.create({
       result = <Alert {...this._getNextAlertProps()} />;
     }
 
-    return this.props.location === "portal" ? UU5.Common.Portal.create(result, this._getPortalElem(true)) : result;
+    return this.props.location === "portal"
+      ? UU5.Common.Portal.create(result, getPortalElement(true, "alert-bus"))
+      : result;
   },
   //@@viewOff:private
 

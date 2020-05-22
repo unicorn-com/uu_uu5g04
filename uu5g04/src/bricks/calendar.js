@@ -750,10 +750,6 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
         ) {
           cellClassName += " " + this.getClassName().active;
 
-          if (this.props.selectionMode === "single") {
-            onClick = null;
-          }
-
           if (isSelectionStart) {
             cellClassName += " " + this.getClassName().activeSelectionStart;
           } else if (isSelectionEnd) {

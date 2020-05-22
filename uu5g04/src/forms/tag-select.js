@@ -47,7 +47,9 @@ export const TagSelect = Context.withContext(
       borderRadius: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
       bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
       elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-      placeholder: UU5.PropTypes.string
+      placeholder: UU5.PropTypes.string,
+      required: UU5.PropTypes.bool,
+      requiredMessage: UU5.PropTypes.any
     },
     //@@viewOff:propTypes
 
@@ -62,7 +64,9 @@ export const TagSelect = Context.withContext(
         borderRadius: undefined,
         bgStyle: undefined,
         elevation: undefined,
-        placeholder: undefined
+        placeholder: undefined,
+        required: false,
+        requiredMessage: undefined
       };
     },
     //@@viewOff:getDefaultProps
@@ -85,11 +89,13 @@ export const TagSelect = Context.withContext(
     },
 
     UNSAFE_componentWillReceiveProps(nextProps) {
-      this._initAvailableTags(nextProps);
-
       if (nextProps.controlled) {
+        if (this.props.availableTags !== nextProps.availableTags) {
+          this._initAvailableTags(nextProps);
+        }
         let value = this._filterValues(
           this._normalizeValue(nextProps.value),
+          false,
           nextProps.availableTags,
           nextProps.ignoreTags
         );
@@ -117,25 +123,56 @@ export const TagSelect = Context.withContext(
           this._availableTags = opt._data.availableTags;
         }
 
-        if (opt._data.state) {
+        if (opt._data.state && this._checkRequired(opt._data.state)) {
           this.setState({ ...opt._data.state }, () => this._onOpen(setStateCallback));
         }
       }
 
       return this;
     },
+
+    isValid() {
+      let feedback = this.getFeedback();
+      let value = this.getValue();
+      let result = true;
+
+      if (this.props.required && !this._hasValue(this.state.value)) {
+        this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessage"));
+        result = false;
+      } else if (feedback === "error") {
+        result = false;
+      }
+
+      if (result && this.props.onValidate) {
+        let validation = this.props.onValidate({ value, component: this });
+        if (validation && typeof validation === "object") {
+          if (validation.feedback === "error") {
+            this.setError(validation.message);
+            result = false;
+          }
+        }
+      }
+
+      return result;
+    },
     //@@viewOff:interface
 
     //@@viewOn:overriding
     getInitialValue_(propValue) {
-      return this._filterValues(this._normalizeValue(propValue));
+      return this._filterValues(this._normalizeValue(propValue), false);
     },
 
     setValue_(value, setStateCallback) {
-      if (typeof this.props.onValidate === "function") {
-        this._validate({ value, event: null, component: this });
-      } else {
-        this.setState({ value, feedback: "initial" }, setStateCallback);
+      value = this._normalizeValue(value);
+      let { state, availableTags } = this._getSetTagValuesResult(value);
+      this._availableTags = availableTags;
+
+      if (this._checkRequired({ value: state.value })) {
+        if (typeof this.props.onValidate === "function") {
+          this._validate({ value: state.value || [], event: null, component: this });
+        } else {
+          this.setState(state, setStateCallback);
+        }
       }
 
       return this;
@@ -143,7 +180,10 @@ export const TagSelect = Context.withContext(
 
     setFeedback_(feedback, message, value, setStateCallback) {
       this._hasTempFeedback = false;
-      this.setFeedbackDefault(feedback, message, value, setStateCallback);
+      value = this._normalizeValue(value);
+      let { state, availableTags } = this._getSetTagValuesResult(value);
+      this._availableTags = availableTags;
+      this.setFeedbackDefault(feedback, message, state.value, setStateCallback);
     },
 
     reset_(setStateCallback) {
@@ -151,7 +191,7 @@ export const TagSelect = Context.withContext(
         {
           message: this.props.message,
           feedback: this.props.feedback,
-          value: this._filterValues(this._normalizeValue(this.props.value)),
+          value: this._filterValues(this._normalizeValue(this.props.value), false),
           readOnly: this.props.readOnly
         },
         setStateCallback
@@ -172,6 +212,20 @@ export const TagSelect = Context.withContext(
       this._itemList = ref;
     },
 
+    _checkRequired(opt, setStateCallback) {
+      let result = true;
+
+      if (this.props.required) {
+        if (!opt || !this._hasValue(opt.value)) {
+          result = false;
+          let value = opt && opt.value ? opt.value : [];
+          this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessage"), value, setStateCallback);
+        }
+      }
+
+      return result;
+    },
+
     _normalizeValue(value) {
       if (value && !Array.isArray(value)) {
         value = [value];
@@ -182,7 +236,12 @@ export const TagSelect = Context.withContext(
       return value;
     },
 
-    _filterValues(value, availableTags = this.props.availableTags, ignoreTags = this.props.ignoreTags) {
+    _filterValues(
+      value,
+      allowCustomTags = this.props.allowCustomTags,
+      availableTags = this.props.availableTags,
+      ignoreTags = this.props.ignoreTags
+    ) {
       if (!availableTags) {
         availableTags = this.props.availableTags || [];
       }
@@ -191,11 +250,19 @@ export const TagSelect = Context.withContext(
         ignoreTags = this.props.ignoreTags || [];
       }
 
-      return value.filter(
-        valueItem =>
-          availableTags.find(availTagItem => availTagItem.value === valueItem) &&
-          !ignoreTags.find(ignoreTag => ignoreTag === valueItem)
-      );
+      let result;
+
+      if (allowCustomTags) {
+        result = value.filter(valueItem => !ignoreTags.find(ignoreTag => ignoreTag === valueItem));
+      } else {
+        result = value.filter(
+          valueItem =>
+            availableTags.find(availTagItem => availTagItem.value === valueItem) &&
+            !ignoreTags.find(ignoreTag => ignoreTag === valueItem)
+        );
+      }
+
+      return result;
     },
 
     _initAvailableTags(props = this.props) {
@@ -203,25 +270,57 @@ export const TagSelect = Context.withContext(
         ? props.availableTags.map(tag => ({
             value: tag.value,
             content: tag.content || tag.value,
-            searchValue: tag.content
-              ? this._getTagContent(tag).toLowerCase()
-              : tag.value
-              ? tag.value.toLowerCase()
-              : tag.value
+            searchValue: this._getTagSearchValue(tag)
           }))
         : [];
     },
 
+    _correctAvailableTags(value) {
+      value.forEach(valueItem => {
+        if (this.props.allowCustomTags && !this._availableTags.find(availTagItem => availTagItem.value === valueItem)) {
+          this._availableTags.push({
+            value: valueItem,
+            content: valueItem,
+            searchValue: this._getTagSearchValue(valueItem)
+          });
+        }
+      });
+    },
+
     _getTagContent(tag) {
-      if (typeof tag.content === "object") {
+      if (typeof tag.content === "object" && !UU5.Common.Element.isValid(tag.content)) {
         return this.getLsiItem(tag.content);
       } else {
         return tag.content;
       }
     },
 
-    _hasValue() {
-      return !!(this.state.value && this.state.value.length);
+    _getTagSearchValue(tag) {
+      let searchValue = "";
+
+      if (typeof tag === "string") {
+        searchValue = tag;
+      } else {
+        if ((UU5.Common.Element.isValid(tag.content) && typeof tag.content !== "string") || !tag.content) {
+          searchValue = tag.value;
+        } else {
+          searchValue = this._getTagContent(tag);
+        }
+      }
+
+      return searchValue.toLowerCase();
+    },
+
+    _getTagTooltip(tag) {
+      if (UU5.Common.Element.isValid(tag.content)) {
+        return tag.value;
+      } else {
+        return this._getTagContent(tag);
+      }
+    },
+
+    _hasValue(value) {
+      return !!(value && value.length);
     },
 
     _validate(opt, checkValue, setStateCallback) {
@@ -304,30 +403,57 @@ export const TagSelect = Context.withContext(
       }, this._onOpen);
     },
 
-    _getAddTagValueResult({ value }) {
-      let newData = { state: {} };
+    _getSetTagValuesResult(values) {
+      let result = { state: { value: [], feedback: "initial", message: null }, availableTags: this._availableTags };
+
+      values.forEach(valueItem => {
+        let itemResult = this._getAddTagValueResult({ value: valueItem }, []);
+        result.availableTags = itemResult.availableTags;
+        if (itemResult && itemResult.state) itemResult = itemResult.state;
+        if (Array.isArray(itemResult.value)) result.state.value = [...itemResult.value, ...result.state.value];
+
+        if (itemResult.feedback === "error") {
+          result.state.feedback = itemResult.feedback;
+          result.state.message = itemResult.message;
+        }
+      });
+
+      return result;
+    },
+
+    _getAddTagValueResult({ value }, currentValue = this.state.value) {
+      let newData = { state: {}, availableTags: this._availableTags };
       let isValid = true;
       value = value.trim();
       if (!value) return null;
       // validate value towards ignored tags
       if (this.props.ignoreTags && this.props.ignoreTags.find(ignoreTag => ignoreTag === value)) {
         this._hasTempFeedback = true;
-        newData.state = { feedback: "error", message: this.getLsiComponent("tagIsNotAllowed", null, value) };
+        newData.state = {
+          feedback: "error",
+          message: this.getLsiComponent("tagIsNotAllowed", null, value),
+          value: this.state.value
+        };
         isValid = false;
-      } else if (this._hasValue() && this.state.value.indexOf(value) !== -1) {
+      } else if (this._hasValue(currentValue) && currentValue.indexOf(value) !== -1) {
         // validate value towards currently set tags
         this._hasTempFeedback = true;
         newData.state = {
           feedback: "warning",
-          message: this.getLsiComponent("tagIsAlreadyAdded", null, value)
+          message: this.getLsiComponent("tagIsAlreadyAdded", null, value),
+          value: this.state.value
         };
         isValid = false;
       } else if (!this.props.allowCustomTags && !this._availableTags.find(tag => tag.value === value)) {
         this._hasTempFeedback = true;
-        newData.state = { feedback: "error", message: this.getLsiComponent("customTagIsNotAllowed") };
+        newData.state = {
+          feedback: "error",
+          message: this.getLsiComponent("customTagIsNotAllowed"),
+          value: this.state.value
+        };
         isValid = false;
       } else {
-        newData.state = { feedback: "initial", searchValue: "", message: null };
+        newData.state = { feedback: "initial", searchValue: "", message: null, value: this.state.value };
 
         if (this.props.allowCustomTags) {
           if (!this._availableTags.find(tag => tag.value === value)) {
@@ -341,8 +467,8 @@ export const TagSelect = Context.withContext(
       if (isValid) {
         value = value === undefined ? this.state.searchValue : value;
 
-        if (this._hasValue() && this.props.multiple) {
-          value = [...this.state.value, value];
+        if (this._hasValue(currentValue) && this.props.multiple) {
+          value = [...currentValue, value];
         } else {
           value = [value];
         }
@@ -600,26 +726,26 @@ export const TagSelect = Context.withContext(
 
     _getTagList() {
       let result;
-      if (this._hasValue()) {
+      if (this._hasValue(this.state.value)) {
         if (this.props.multiple) {
           result = this.state.value.map(value => {
             let tag = this._availableTags.find(availableTag => availableTag.value === value);
-            let content = this._getTagContent(tag);
+
             return (
-            <UU5.Bricks.Label
+              <UU5.Bricks.Label
                 key={value}
-              colorSchema="custom"
-              // Arrow fn because sending tag is necessary
-              // eslint-disable-next-line react/jsx-no-bind
-              iconOnClick={
+                colorSchema="custom"
+                // Arrow fn because sending tag is necessary
+                // eslint-disable-next-line react/jsx-no-bind
+                iconOnClick={
                   this.isReadOnly() || this.isComputedDisabled() ? null : (_, e) => this._removeTagValue(e, value)
-              }
-              icon="mdi-close"
-              className={this.getClassName("tag")}
-                tooltip={content}
-            >
-                <span className={this.getClassName("tagTextWrapper")}>{content}</span>
-            </UU5.Bricks.Label>
+                }
+                icon="mdi-close"
+                className={this.getClassName("tag")}
+                tooltip={this._getTagTooltip(tag)}
+              >
+                <span className={this.getClassName("tagTextWrapper")}>{this._getTagContent(tag)}</span>
+              </UU5.Bricks.Label>
             );
           });
         } else {
@@ -664,7 +790,7 @@ export const TagSelect = Context.withContext(
     },
 
     _getItemListItems() {
-      let foundAutocompleteItems = this._hasValue()
+      let foundAutocompleteItems = this._hasValue(this.state.value)
         ? this._availableTags.filter(({ value }) => this.state.value.indexOf(value) === -1)
         : this._availableTags;
 
@@ -684,15 +810,15 @@ export const TagSelect = Context.withContext(
     },
 
     _getInputContent() {
-      if (this._hasValue()) {
+      if (this._hasValue(this.state.value)) {
         let inputContent = [this._getTextInput()];
 
         if (!this.state.searchValue && !this.state.searchValue.trim()) {
           let tag = this._availableTags.find(availableTag => availableTag.value === this._getTagList());
-          let content = this._getTagContent(tag);
+
           inputContent.push(
-            <div className={this.getClassName("valueWrapper")} title={content} key="value">
-              {content}
+            <div className={this.getClassName("valueWrapper")} title={this._getTagTooltip(tag)} key="value">
+              {this._getTagContent(tag)}
             </div>
           );
         }
@@ -721,7 +847,7 @@ export const TagSelect = Context.withContext(
       return (
         <div className={this.getClassName("inputValueWrapper")}>
           <div className={this.getClassName("inputValue")}>{value}</div>
-          {this._hasValue() && !this.isComputedDisabled() ? (
+          {this._hasValue(this.state.value) && !this.isComputedDisabled() ? (
             <div className={this.getClassName("inputResetIconWrapper")}>
               <UU5.Bricks.Icon
                 icon="mdi-close"

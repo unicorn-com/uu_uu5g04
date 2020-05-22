@@ -117,10 +117,9 @@ describe(`UU5.Bricks.AlertBus`, () => {
   it(`UU5.Bricks.AlertBus stacked with descending`, () => {
     let wrapper = mount(<UU5.Bricks.AlertBus stacked />);
     // alerts sorted by colorSchema
-    wrapper.instance().setAlerts([
-      { content: "alert 1", colorSchema: "success" },
-      { content: "alert 2", colorSchema: "danger" }
-    ]);
+    wrapper
+      .instance()
+      .setAlerts([{ content: "alert 1", colorSchema: "success" }, { content: "alert 2", colorSchema: "danger" }]);
     wrapper.update();
     let alertList = wrapper.find(UU5.Bricks.Alert);
     // sorted by colorSchema
@@ -192,6 +191,9 @@ describe(`UU5.Bricks.AlertBus`, () => {
     );
     alertBus.addAlert({ content: "Alert Content" });
     wrapper.update();
-    expect(UU5.Common.DOM.findNode(alertBus).parentElement.id === "uu5-modals").toBeTruthy();
+    expect(
+      UU5.Common.DOM.findNode(alertBus).parentElement.id === "uu5-common-portal-alert-bus" ||
+        UU5.Common.DOM.findNode(alertBus).parentElement.parentElement.className === "uu5-bricks-page-alert-bus-portal"
+    ).toBeTruthy();
   });
 });

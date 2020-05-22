@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
-  <title>useScreenSize Demo</title>
+  <title>useLsi Demo</title>
 
   <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
   <script>
@@ -49,8 +49,8 @@
 
     render(props) {
       //@@viewOn:hooks
-      const { item } = useLsi({ cs: "Jméno", en: "Name" });
-      const { item: inputLsi } = useLsi({
+      const item = useLsi({ cs: "Jméno", en: "Name" });
+      const inputLsi = useLsi({
         cs: { placeholder: "Jméno Příjmení", message: "Vložte jméno a příjmení." },
         en: { placeholder: "Name Surname", message: "Insert name and surname." }
       });

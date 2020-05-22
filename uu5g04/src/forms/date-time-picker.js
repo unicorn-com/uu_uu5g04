@@ -1194,10 +1194,14 @@ export const DateTimePicker = Context.withContext(
         _data: { type: "calendarPicker", dateString, value, timeZoneAdjusted: true }
       };
 
-      if (typeof this.props.onChange === "function") {
-        this.props.onChange(opt);
+      if (!this._hasValueChanged(this.state.dateString, dateString)) {
+        this.close();
       } else {
-        this.onChangeDefault(opt);
+        if (typeof this.props.onChange === "function") {
+          this.props.onChange(opt);
+        } else {
+          this.onChangeDefault(opt);
+        }
       }
     },
 

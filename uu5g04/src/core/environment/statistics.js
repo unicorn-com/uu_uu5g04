@@ -14,7 +14,7 @@
 const CMD = "product/logLibraries";
 const TIMEOUT = 60 * 1000; // one minute
 const BASE_URI_COOKIE_NAME = "uu.app.cbu";
-const PRODUCT_AWID_REGEXP = /^https?:\/\/[^/]+\/([^/]+)\/([^/]+)/;
+const PRODUCT_AWID_REGEXP = /^https?:\/\/[^/]+\/([^/]+)\/([^/?#;]+)/;
 
 export function Statistics(url, isStatistics) {
   const cmd = url + CMD;
@@ -31,8 +31,13 @@ export function Statistics(url, isStatistics) {
       : null) || location.href;
   if (href === "about:srcdoc") href = parent.location.href;
   let match = href.match(PRODUCT_AWID_REGEXP);
-  const uuProduct = match ? match[1] : null;
-  const uuAwid = match ? match[2].split("-").pop() : null;
+  let uuProduct = match ? match[1] : null;
+  let uuAwid = match ? match[2].split("-").pop() : null;
+  if (uuProduct === "ues" && uuAwid === "sesm") {
+    uuAwid = "00000000000000000000000000000000";
+  } else {
+    if (uuAwid && !uuAwid.match(/^[0-9a-f]{32}$/i)) uuAwid = null;
+  }
   let runtimeLibraryMap = {};
   let librarySet = new Set();
 
@@ -41,15 +46,17 @@ export function Statistics(url, isStatistics) {
       const uuLibraryList = [...librarySet];
       librarySet = new Set();
 
-      let request = new XMLHttpRequest();
-      request.onreadystatechange = () => {
-        if (request.readyState === XMLHttpRequest.DONE && request.status !== 200 && request.status !== 203) {
-          uuLibraryList.forEach(lib => librarySet.add(lib));
-        }
-      };
-      request.open("POST", cmd, true);
-      request.setRequestHeader("Content-Type", "application/json");
-      request.send(JSON.stringify({ product: uuProduct, subAppAwid: uuAwid, libraryList: uuLibraryList }));
+      if (uuProduct && uuAwid) {
+        let request = new XMLHttpRequest();
+        request.onreadystatechange = () => {
+          if (request.readyState === XMLHttpRequest.DONE && request.status !== 200 && request.status !== 203) {
+            uuLibraryList.forEach(lib => librarySet.add(lib));
+          }
+        };
+        request.open("POST", cmd, true);
+        request.setRequestHeader("Content-Type", "application/json");
+        request.send(JSON.stringify({ product: uuProduct, subAppAwid: uuAwid, libraryList: uuLibraryList }));
+      }
     }
   };
 

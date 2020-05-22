@@ -41,7 +41,7 @@ const DEFAULT_PROPS = [
       inputColWidth: "xs8 s5 m3 l3",
       labelColWidth: "xs12 s5",
       icon: "mdi-help-circle-outline",
-      onClick: () => window.open(Tools.iconDocLink, "_blank")
+      onClick: () => UU5.Common.Tools.openWindow(Tools.iconDocLink, "_blank")
     },
     value: null
   },
@@ -53,7 +53,7 @@ const DEFAULT_PROPS = [
       inputColWidth: "xs8 s5 m3 l3",
       labelColWidth: "xs12 s5",
       icon: "mdi-help-circle-outline",
-      onClick: () => window.open(Tools.iconDocLink, "_blank")
+      onClick: () => UU5.Common.Tools.openWindow(Tools.iconDocLink, "_blank")
     },
     value: null
   },

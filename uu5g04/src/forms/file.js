@@ -256,8 +256,9 @@ export const File = Context.withContext(
 
     _getFileValuesOnly(extendedValue) {
       let result = extendedValue;
-      if (Array.isArray(result)) result = result.map(it => it.file || it);
-      else if (result) result = result.file || result;
+      if (Array.isArray(result)) {
+        result = result.map(it => it.file || it);
+      } else if (result) result = result.file || result;
       return result;
     },
 
@@ -434,7 +435,9 @@ export const File = Context.withContext(
       if (hasFiles) {
         let myDropZoneNode = this._getDropZoneNode();
         let node = e.target;
-        while (node && node !== myDropZoneNode) node = node.parentNode;
+        while (node && node !== myDropZoneNode) {
+          node = node.parentNode;
+        }
         let newIndicateDrop = node === myDropZoneNode ? "over" : "near";
         this.setState(state =>
           state.indicateDrop !== newIndicateDrop ? { indicateDrop: newIndicateDrop } : undefined
@@ -568,10 +571,15 @@ export const File = Context.withContext(
 
     _normalizeValueItem(item) {
       let result;
-      if (!item || item.file || item.url) result = item || {};
-      else if (item.toString() === "[object File]") result = { file: item, name: item.name, size: item.size };
-      else if (typeof item === "object") result = item;
-      else result = {};
+      if (!item || item.file || item.url) {
+        result = item || {};
+      } else if (item.toString() === "[object File]") {
+        result = { file: item, name: item.name, size: item.size };
+      } else if (typeof item === "object") {
+        result = item;
+      } else {
+        result = {};
+      }
       return result;
     },
     _getItemDownloadLinkProps(item) {
@@ -673,9 +681,9 @@ export const File = Context.withContext(
         sizes.shift();
       }
       return (
-        <span key="size" className={this.getClassName("itemSize")}>
+        <UU5.Bricks.Text key="size" className={this.getClassName("itemSize")}>
           {" (" + Math.round(size * (size >= 100 ? 1 : 10)) / (size >= 100 ? 1 : 10) + " " + sizes[0] + ")"}
-        </span>
+        </UU5.Bricks.Text>
       );
     },
 
@@ -764,7 +772,7 @@ export const File = Context.withContext(
               iconClassName={
                 this.state.value
                   ? this.getClassName("itemIcon") +
-                    (progress != null && progress < 1 ? +" " + this.getClassName("itemInProgress") : "")
+                  (progress != null && progress < 1 ? +" " + this.getClassName("itemInProgress") : "")
                   : this.getClassName("icon")
               }
               feedback={this.getFeedback()}

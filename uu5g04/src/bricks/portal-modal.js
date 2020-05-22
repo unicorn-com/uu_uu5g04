@@ -16,10 +16,8 @@ import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import Modal from "./modal";
+import { getPortalElement } from "./internal/portal.js";
 //@@viewOff:imports
-
-//TODO FOR NOW, this component should be from uu5
-const MODALS_ID = "uu5-modals";
 
 export const PortalModal = UU5.Common.VisualComponent.create({
   //@@viewOn:mixins
@@ -58,6 +56,12 @@ export const PortalModal = UU5.Common.VisualComponent.create({
       open: this.props.shown
     };
   },
+
+  componentDidMount() {
+    UU5.Common.Tools.warning(
+      `Component ${this.getTagName()} is deprecated! Use UU5.Bricks.Modal with "location" property instead.`
+    );
+  },
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
@@ -90,8 +94,8 @@ export const PortalModal = UU5.Common.VisualComponent.create({
 
   _onClose(opt, props) {
     this._modal.onCloseDefault(opt);
-    setTimeout(
-      () =>
+    setTimeout(() => {
+      if (this.isRendered()) {
         this._close(() => {
           if (!this._preventOnCloseCall) {
             if (typeof props.onClose === "function") {
@@ -101,9 +105,9 @@ export const PortalModal = UU5.Common.VisualComponent.create({
             }
           }
           this._preventOnCloseCall = false;
-        }),
-      500
-    );
+        });
+      }
+    }, 500);
   },
 
   _close(setStateCallback) {
@@ -113,22 +117,10 @@ export const PortalModal = UU5.Common.VisualComponent.create({
     });
   },
 
-  _getPortalElem(allowCreateElement) {
-    // create portal in DOM
-    let result = document.getElementById(MODALS_ID);
-    if (!result && allowCreateElement) {
-      result = document.createElement("div");
-      result.setAttribute("id", MODALS_ID);
-      document.body.appendChild(result);
-    }
-
-    return result;
-  },
-
   _removePortal() {
     // try to remove portal from DOM if does not exists
     if (!this.state.open) {
-      const portal = this._getPortalElem();
+      const portal = getPortalElement();
       if (portal && portal.childNodes.length === 0) {
         portal.parentNode.removeChild(portal);
       }
@@ -146,7 +138,7 @@ export const PortalModal = UU5.Common.VisualComponent.create({
         // arrow fn has to be used because props has to be sent to the _onClose fn
         // eslint-disable-next-line react/jsx-no-bind
         <Modal {...props} ref_={this._registerModal} onClose={opt => this._onClose(opt, props)} forceRender />,
-        this._getPortalElem(true)
+        getPortalElement(true)
       )
     );
   }

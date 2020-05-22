@@ -36,7 +36,7 @@
 
   //@@viewOn:statics
   const STATICS = {
-    displayName: "UU5.Bricks.DemoNestingLevel",
+    displayName: "UU5.Demo.NestingLevel",
     nestingLevel: ["box", "smallBox", "inline"]
   };
   //@@viewOff:statics
@@ -100,7 +100,7 @@
 
     //@@viewOn:statics
     statics: {
-      tagName: "UU5.Bricks.DemoNestingLevelWithMixin",
+      tagName: "UU5.Demo.NestingLevelWithMixin",
       nestingLevelList: ["box", "smallBox", "inline"]
     },
     //@@viewOff:statics
@@ -147,20 +147,28 @@
         <div>
           <UU5.Bricks.Div nestingLevel="bigBox">
             <h2>should be box</h2>
-            <UU5.Demo.NestingLevelWithMixin />
-            <UU5.Demo.NestingLevel />
+            <UU5.Demo.NestingLevel>
+              <UU5.Demo.NestingLevel/>
+              <UU5.Demo.NestingLevelWithMixin/>
+            </UU5.Demo.NestingLevel>
+
+            <UU5.Demo.NestingLevelWithMixin>
+              <UU5.Demo.NestingLevel/>
+              <UU5.Demo.NestingLevelWithMixin/>
+            </UU5.Demo.NestingLevelWithMixin>
           </UU5.Bricks.Div>
 
           <UU5.Bricks.Div nestingLevel="box">
             <h2>should be smallBox</h2>
-            <UU5.Demo.NestingLevelWithMixin />
-            <UU5.Demo.NestingLevel />
-          </UU5.Bricks.Div>
+            <UU5.Demo.NestingLevel>
+              <UU5.Demo.NestingLevel/>
+              <UU5.Demo.NestingLevelWithMixin/>
+            </UU5.Demo.NestingLevel>
 
-          <UU5.Bricks.Div nestingLevel="smallBox">
-            <h2>should be inline</h2>
-            <UU5.Demo.NestingLevelWithMixin />
-            <UU5.Demo.NestingLevel />
+            <UU5.Demo.NestingLevelWithMixin>
+              <UU5.Demo.NestingLevel/>
+              <UU5.Demo.NestingLevelWithMixin/>
+            </UU5.Demo.NestingLevelWithMixin>
           </UU5.Bricks.Div>
 
           <UU5.Bricks.Div>
@@ -179,7 +187,7 @@
           <UU5.Bricks.Div
             nestingLevel="box"
             content={`<uu5string/>
-              <h2>uu5string (inside of nestingLevel="box")</h2>
+              <h2>uu5string (inside of nestingLevel="box") - should be smallBox</h2>
 
               <UU5.Demo.NestingLevel>
                 <UU5.Demo.NestingLevel/>

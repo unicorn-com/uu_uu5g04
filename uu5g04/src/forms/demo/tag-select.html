@@ -52,7 +52,7 @@
       import "uu5g04-forms";
       import "uu5codekitg01";
 
-      const availableTags = [{value:"Prg", content:{cs:"Praha", en:"Prague"}},{value:"Plzeň"}];
+      const availableTags = [{ value: "Prg", content: { cs: "Praha", en: "Prague" } }, { value: "Plzeň" }, { value: "Brno", content: <div>Brno</div> }];
 
       const Page = UU5.Common.VisualComponent.create({
         getInitialState() {
@@ -80,6 +80,7 @@
             allowCustomTags: false,
             availableTags,
             multiple: true,
+            required: false,
 
             onChange: false,
             onValidate: false
@@ -318,6 +319,15 @@
                       type={2}
                     />
                   </UU5.Bricks.Column>
+                  <UU5.Bricks.Column colWidth="xs-6">
+                    <UU5.Forms.Checkbox
+                      label="required"
+                      value={this.state.required}
+                      onChange={({ value }) => this.setState({ required: value })}
+                      labelPosition="right"
+                      type={2}
+                    />
+                  </UU5.Bricks.Column>
                   <UU5.Bricks.Column colWidth="xs-12">
                     <UU5.Bricks.Line />
                   </UU5.Bricks.Column>
@@ -349,7 +359,7 @@
                     <UU5.Bricks.Button onClick={() => console.log(this._ref.getValue())} content="getValue" />
                   </UU5.Bricks.Column>
                   <UU5.Bricks.Column colWidth="xs-6">
-                    <UU5.Bricks.Button onClick={() => this._ref.setValue(["value_1"])} content="setValue" />
+                    <UU5.Bricks.Button onClick={() => this._ref.setValue(["Brno"])} content="setValue" />
                   </UU5.Bricks.Column>
                 </UU5.Bricks.Row>
               </UU5.Forms.Form>
@@ -362,11 +372,12 @@
                   onChange={this.state.onChange ? this._onChange : null}
                   onValidate={this.state.onValidate ? this._onValidate : null}
                   value={["Praha", "Plzeň"]}
+                  required={this.state.required}
                 />
 
                 <UU5.Bricks.CodePreview tagName="UU5.Forms.TagSelect" props={this.state} />
               </UU5.Bricks.Row>
-           </UU5.Bricks.Container>
+            </UU5.Bricks.Container>
           );
         }
       });

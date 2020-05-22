@@ -5,13 +5,13 @@ export const MoveItemFormModal = UU5.Common.Reference.forward((props, ref) => {
   let { onSave, onCancel, maxPosition, currentPosition, ...modalProps } = props;
 
   return (
-    <UU5.Bricks.PortalModal onClose={props.onClose} {...modalProps} ref_={ref}>
+    <UU5.Bricks.Modal onClose={props.onClose} {...modalProps} location="portal" ref_={ref}>
       <UU5.Forms.Form onSave={onSave} onCancel={onCancel}>
         {/* value is +1 because it was received as an index */}
         <UU5.Forms.Number name="position" valueType="number" min={1} max={maxPosition} value={currentPosition + 1} />
         <UU5.Forms.Controls />
       </UU5.Forms.Form>
-    </UU5.Bricks.PortalModal>
+    </UU5.Bricks.Modal>
   );
 });
 

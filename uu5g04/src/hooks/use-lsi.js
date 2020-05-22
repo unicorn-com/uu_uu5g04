@@ -15,9 +15,9 @@ import UU5 from "uu5g04";
 import useLanguage from "./use-language";
 
 function useLsi(lsi) {
-  const { language, setLanguage } = useLanguage();
+  const [language] = useLanguage();
   let value = lsi != null ? UU5.Utils.Lsi.getItem(lsi, language) : lsi;
-  return { value, language, setLanguage, item: value }; // TODO 2.0.0 Remove "item".
+  return value;
 }
 
 export { useLsi };

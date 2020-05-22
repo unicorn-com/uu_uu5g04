@@ -262,42 +262,4 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
     expect(wrapper.instance().getAlerts()).toEqual([]);
     expect(wrapper).toMatchSnapshot();
   });
-
-  it(`UU5.Bricks.AlertBus location="local"`, () => {
-    let alertBus;
-    let page;
-    const wrapper = mount(
-      <UU5.Bricks.Page ref_={ref => (page = ref)} alertBus={<UU5.Bricks.AlertBus />}>
-        <UU5.Bricks.AlertBus ref_={ref => (alertBus = ref)} location="local" />
-      </UU5.Bricks.Page>
-    );
-    alertBus.addAlert({ content: "Alert Content" });
-    wrapper.update();
-    expect(alertBus.getAlerts().length).toBe(1);
-  });
-
-  it(`UU5.Bricks.AlertBus location="page"`, () => {
-    let alertBus;
-    let page;
-    const wrapper = mount(
-      <UU5.Bricks.Page ref_={ref => (page = ref)} alertBus={<UU5.Bricks.AlertBus />}>
-        <UU5.Bricks.AlertBus ref_={ref => (alertBus = ref)} location="page" />
-      </UU5.Bricks.Page>
-    );
-    alertBus.addAlert({ content: "Alert Content" });
-    wrapper.update();
-    expect(page.getAlertBus().getAlerts().length).toBe(1);
-  });
-
-  it(`UU5.Bricks.AlertBus location="portal"`, () => {
-    let alertBus;
-    const wrapper = mount(
-      <UU5.Bricks.Page alertBus={<UU5.Bricks.AlertBus />}>
-        <UU5.Bricks.AlertBus ref_={ref => (alertBus = ref)} location="portal" />
-      </UU5.Bricks.Page>
-    );
-    alertBus.addAlert({ content: "Alert Content" });
-    wrapper.update();
-    expect(UU5.Common.DOM.findNode(alertBus).parentElement.id === "uu5-modals").toBeTruthy();
-  });
 });

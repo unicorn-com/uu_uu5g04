@@ -19,8 +19,10 @@ import Header from "./modal-header.js";
 import Body from "./modal-body.js";
 import Footer from "./modal-footer.js";
 import Css from "./internal/css.js";
+import { enableBodyScrolling, disableBodyScrolling } from "./internal/page-utils.js";
 
 import "./modal.less";
+import { getPortalElement } from "./internal/portal.js";
 //@@viewOff:imports
 
 const MOUNT_CONTENT_VALUES = {
@@ -134,7 +136,8 @@ export const Modal = UU5.Common.VisualComponent.create({
       MOUNT_CONTENT_VALUES.onFirstOpen,
       MOUNT_CONTENT_VALUES.onFirstRender
     ]),
-    offsetTop: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string])
+    offsetTop: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
+    location: UU5.PropTypes.oneOf(["local", "portal"])
   },
   //@@viewOff:propTypes
 
@@ -150,13 +153,16 @@ export const Modal = UU5.Common.VisualComponent.create({
       onClose: null,
       overflow: false,
       mountContent: MOUNT_CONTENT_VALUES.onFirstRender,
-      offsetTop: null
+      offsetTop: null,
+      location: undefined
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
   getInitialState() {
+    this._closeCallbacks = [];
+
     let renderContent = getMountContent(this.props) === MOUNT_CONTENT_VALUES.onFirstRender || this.props.shown;
 
     return {
@@ -184,6 +190,11 @@ export const Modal = UU5.Common.VisualComponent.create({
     if (!this.isSticky()) {
       UU5.Environment.EventListener.addWindowEvent("keydown", this.getId(), this._onCloseESC);
     }
+    this._updateAfterCommit(undefined);
+  },
+
+  componentDidUpdate(prevProps, prevState) {
+    this._updateAfterCommit(prevState.hidden);
   },
 
   UNSAFE_componentWillReceiveProps(nextProps) {
@@ -212,21 +223,14 @@ export const Modal = UU5.Common.VisualComponent.create({
   },
 
   componentWillUnmount() {
-    let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
-
     // close page modal if local modal is unmounting
     if (this._shouldOpenPageModal()) {
+      let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
       let centralModal = page.getModal();
       centralModal.close({ shouldOnClose: false, _referrer: this });
     }
 
-    if (!this.state.hidden && !this.state.scrollableBackground) {
-      document.body.style.overflow = "";
-      document.documentElement.style.overflow = "";
-      document.body.style.paddingRight = "";
-      !document.body.style.length && document.body.removeAttribute("style");
-      document.documentElement.classList.remove("uu5-common-no-scroll");
-    }
+    enableBodyScrolling("modal-" + this.getId(), true);
 
     UU5.Environment.EventListener.removeWindowEvent("keydown", this.getId(), this._onCloseESC);
   },
@@ -241,8 +245,8 @@ export const Modal = UU5.Common.VisualComponent.create({
     openProps = openProps || {};
     let _referrer = openProps._referrer;
     this._openProps = openProps;
-    let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
     if (this._shouldOpenPageModal()) {
+      let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
       let centralModal = page.getModal();
       let newProps = UU5.Common.Tools.merge(this.props, openProps, { _referrer: this });
       centralModal.open(newProps, setStateCallback);
@@ -253,10 +257,21 @@ export const Modal = UU5.Common.VisualComponent.create({
       newState._referrer = _referrer;
       newState.renderContent = true;
 
-      this._disableScroll(newState.scrollableBackground);
       this.setState(newState, setStateCallback);
     }
     return this;
+  },
+
+  isOpen() {
+    let result;
+    if (this._shouldOpenPageModal()) {
+      let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
+      let centralModal = page.getModal();
+      result = centralModal.isOpen();
+    } else {
+      result = !this.isHidden();
+    }
+    return result;
   },
 
   close(shouldOnClose = true, setStateCallback) {
@@ -275,9 +290,8 @@ export const Modal = UU5.Common.VisualComponent.create({
       return this;
     }
 
-    let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
-
     if (this._shouldOpenPageModal()) {
+      let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
       let centralModal = page.getModal();
       centralModal.close({ shouldOnClose, _referrer }, setStateCallback);
     } else if (typeof this.state.onClose === "function" && shouldOnClose !== false) {
@@ -289,8 +303,8 @@ export const Modal = UU5.Common.VisualComponent.create({
   },
 
   toggle(setStateCallback) {
-    let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
     if (this._shouldOpenPageModal()) {
+      let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
       let centralModal = page.getModal();
       if (centralModal.isHidden()) {
         let openProps = this._getOpenProps(this._openProps);
@@ -300,7 +314,6 @@ export const Modal = UU5.Common.VisualComponent.create({
       }
     } else {
       if (this.state.hidden) {
-        this._disableScroll(this.state.scrollableBackground);
         this.setState({ hidden: false }, setStateCallback);
       } else {
         this._close(setStateCallback);
@@ -361,6 +374,44 @@ export const Modal = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
+  _updateAfterCommit(prevHidden) {
+    let { hidden, scrollableBackground } = this.state;
+    if (hidden && !prevHidden) {
+      // became closed
+      let { _closeCallbacks } = this;
+      this._closeCallbacks = [];
+      this._flushCloseCallbacks = () => _closeCallbacks.forEach(fn => (typeof fn === "function" ? fn() : null));
+      this._closeTimeout = setTimeout(() => {
+        delete this._closeTimeout;
+
+        enableBodyScrolling("modal-" + this.getId(), scrollableBackground);
+
+        if (this.isRendered()) {
+          this.setState(
+            {
+              header: this.state.renderContent ? this.state.header || this.getHeader() : null,
+              content: this.state.renderContent ? this.state.content || this.getContent() || this.props.children : null,
+              footer: this.state.renderContent ? this.state.footer || this.getFooter() : null,
+              renderContent: true
+            },
+            this._flushCloseCallbacks
+          );
+        }
+      }, this.getDefault().animationDuration);
+    } else if (!hidden && prevHidden) {
+      // became opened
+
+      // stop closing animation if we were in the process of closing window (but call callbacks if any were registered)
+      if (this._closeTimeout) {
+        clearTimeout(this._closeTimeout);
+        delete this._closeTimeout;
+        this._flushCloseCallbacks();
+      }
+      // hide body scrollbars
+      if (!scrollableBackground) disableBodyScrolling("modal-" + this.getId());
+    }
+  },
+
   _onCloseESC(e) {
     e.which === 27 && !this.isHidden() && !this.isSticky() && this._blur(e);
     return this;
@@ -393,90 +444,21 @@ export const Modal = UU5.Common.VisualComponent.create({
   },
 
   _close(setStateCallback) {
-    this.isRendered() && this.setState(
-      {
-        hidden: true,
-        renderContent: getMountContent(this.props, this.state) !== MOUNT_CONTENT_VALUES.onEachOpen
-      },
-      () => this._enableScroll(this.state.scrollableBackground, setStateCallback)
-    );
-  },
-
-  _getScrollbarWidth() {
-    let width = 0;
-
-    // if scroll bar is visible
-    if (UU5.Common.Tools.getDocumentHeight() > window.innerHeight) {
-      let div = document.createElement("div");
-      div.style.overflow = "scroll";
-      div.style.visibility = "hidden";
-      div.style.position = "absolute";
-      div.style.width = "100px";
-      div.style.height = "100px";
-
-      // temporarily creates a div into DOM
-      document.body.appendChild(div);
-      try {
-        width = div.offsetWidth - div.clientWidth;
-      } finally {
-        document.body.removeChild(div);
-      }
-    }
-
-    return width;
-  },
-
-  _enableScroll(scrollableBackground, setStateCallback) {
-    // TODO: wrong, but not found better solution
-    setTimeout(() => {
-      if (!scrollableBackground) {
-        document.body.style.overflow = "";
-        document.documentElement.style.overflow = "";
-        // TODO: Currently reactivates the scrolling even if other modals are still opened
-
-        if (typeof this._bodyScrollY === "number") {
-          document.documentElement.scrollTop = this._bodyScrollY;
-          document.body.scrollTop = this._bodyScrollY;
-          delete this._bodyScrollY;
+    if (this.isRendered()) {
+      let callCallbackHere; // if we're already hidden then nothing will be done in componentDidUpdate and therefore we'll have to call setStateCallback here right away
+      this.setState(
+        state => {
+          callCallbackHere = state.hidden;
+          if (!callCallbackHere) this._closeCallbacks.push(setStateCallback);
+          return {
+            hidden: true,
+            renderContent: getMountContent(this.props, state) !== MOUNT_CONTENT_VALUES.onEachOpen
+          };
+        },
+        () => {
+          if (callCallbackHere && typeof setStateCallback === "function") setStateCallback();
         }
-      }
-      document.body.style.paddingRight = "";
-      !document.body.style.length && document.body.removeAttribute("style");
-
-      document.documentElement.classList.remove("uu5-common-no-scroll");
-
-      if (this.isRendered()) {
-        this.setState(
-          {
-            header: this.state.renderContent ? this.state.header || this.getHeader() : null,
-            content: this.state.renderContent ? this.state.content || this.getContent() || this.props.children : null,
-            footer: this.state.renderContent ? this.state.footer || this.getFooter() : null,
-            renderContent: true
-          },
-          setStateCallback
-        );
-      }
-    }, this.getDefault().animationDuration);
-  },
-
-  _disableScroll(scrollableBackground) {
-    // TODO: wrong, but not found better solution
-    if (!scrollableBackground) {
-      this._bodyScrollY = window.scrollY || document.body.scrollTop || window.pageYOffset;
-
-      document.body.style.overflow = "hidden";
-
-      // this breaks scroll position on MS Edge
-      if (UU5.Common.Tools.isMobileIOS()) {
-        document.documentElement.style.overflow = "hidden";
-      }
-
-      document.body.scrollTop = this._bodyScrollY;
-
-      let paddingRight = this._getScrollbarWidth();
-      paddingRight && (document.body.style.paddingRight = paddingRight + "px");
-
-      document.documentElement.classList.add("uu5-common-no-scroll");
+      );
     }
   },
 
@@ -610,7 +592,13 @@ export const Modal = UU5.Common.VisualComponent.create({
   },
   _shouldOpenPageModal() {
     let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
-    return !this.props.forceRender && page && page.getModal() && page.getModal().getId() !== this.getId();
+    return (
+      !this.props.location &&
+      !this.props.forceRender &&
+      page &&
+      page.getModal() &&
+      page.getModal().getId() !== this.getId()
+    );
   },
 
   _buildChildren() {
@@ -641,6 +629,17 @@ export const Modal = UU5.Common.VisualComponent.create({
 
     return [headerChild, bodyChild, footerChild];
   },
+
+  _renderModal(content) {
+    let { location } = this.props;
+    let result;
+    if (location === "portal") {
+      result = !this.isHidden() ? UU5.Common.Portal.create(content, getPortalElement(true)) : null;
+    } else {
+      result = content;
+    }
+    return result;
+  },
   //@@viewOff:private
 
   //@@viewOn:render
@@ -664,14 +663,16 @@ export const Modal = UU5.Common.VisualComponent.create({
       return null;
     }
 
-    return this.getNestingLevel() ? (
-      <div {...this._getMainAttrs()}>
-        <div className={this.getClassName("dialog") + " " + this.getClassName("modalSize") + this.state.size}>
-          {this._buildChildren()}
-          {this.getDisabledCover()}
-        </div>
-      </div>
-    ) : null;
+    return this.getNestingLevel()
+      ? this._renderModal(
+          <div {...this._getMainAttrs()}>
+            <div className={this.getClassName("dialog") + " " + this.getClassName("modalSize") + this.state.size}>
+              {this._buildChildren()}
+              {this.getDisabledCover()}
+            </div>
+          </div>
+        )
+      : null;
   }
   //@@viewOff:render
 });

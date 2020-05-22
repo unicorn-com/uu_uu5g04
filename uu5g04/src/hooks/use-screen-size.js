@@ -82,7 +82,7 @@ function useScreenSize() {
     }
   }, [contextValue]);
 
-  return { screenSize: usedScreenSize };
+  return usedScreenSize;
 }
 
 export { useScreenSize, ScreenSizeProvider };

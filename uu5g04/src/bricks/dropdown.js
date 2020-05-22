@@ -19,6 +19,7 @@ const ClassNames = UU5.Common.ClassNames;
 import Button from "./button.js";
 import Icon from "./icon.js";
 import DropdownItem from "./dropdown-item.js";
+import Popover from "./popover.js";
 
 import "./dropdown.less";
 //@@viewOff:imports
@@ -105,7 +106,8 @@ export const Dropdown = UU5.Common.VisualComponent.create({
     buttonProps: UU5.PropTypes.object,
     splitButtonProps: UU5.PropTypes.object,
     baseline: UU5.PropTypes.bool,
-    fitMenuToViewport: UU5.PropTypes.bool
+    fitMenuToViewport: UU5.PropTypes.bool,
+    popoverLocation: UU5.PropTypes.oneOf(["local", "portal"])
   },
   //@@viewOff:propTypes
 
@@ -136,7 +138,8 @@ export const Dropdown = UU5.Common.VisualComponent.create({
       buttonProps: null,
       splitButtonProps: null,
       baseline: false,
-      fitMenuToViewport: false
+      fitMenuToViewport: false,
+      popoverLocation: "local" // "local" <=> backward-compatible behaviour
     };
   },
   //@@viewOff:getDefaultProps
@@ -227,7 +230,7 @@ export const Dropdown = UU5.Common.VisualComponent.create({
     let icon = null;
     if (!this.props.iconHidden) {
       var iconName = this.isOpen() ? this.props.iconOpen : this.props.iconClosed;
-      icon = <Icon icon={iconName} />;
+      icon = <Icon key="ddicon" icon={iconName} />;
     }
     return icon;
   },
@@ -330,33 +333,39 @@ export const Dropdown = UU5.Common.VisualComponent.create({
     return this;
   },
 
+  _getMainAttrsClassName(isOpen) {
+    let className = "";
+    if (isOpen) {
+      className += " " + this.getClassName().open;
+    }
+    if (this.props.baseline) {
+      className += " uu5-bricks-button-baseline";
+    }
+
+    this.props.pullRight && (className += " " + this.getClassName().pullRight);
+
+    if (this.props.split) {
+      className += " " + this.getClassName().split;
+    } else if (this.props.dropup) {
+      className += " " + this.getClassName().dropup;
+    } else {
+      className += " " + this.getClassName().dropdown;
+    }
+
+    if (this.state.dropup) {
+      className += " " + this.getClassName().autoDropup;
+    } else {
+      className += " " + this.getClassName().autoDropdown;
+    }
+    return className.substr(1);
+  },
+
   _getMainAttrs() {
     let mainAttrs = this.getMainAttrs();
 
     mainAttrs.id = this.getId();
 
-    if (this.isOpen()) {
-      mainAttrs.className += " " + this.getClassName().open;
-    }
-    if (this.props.baseline) {
-      mainAttrs.className += " uu5-bricks-button-baseline";
-    }
-
-    this.props.pullRight && (mainAttrs.className += " " + this.getClassName().pullRight);
-
-    if (this.props.split) {
-      mainAttrs.className += " " + this.getClassName().split;
-    } else if (this.props.dropup) {
-      mainAttrs.className += " " + this.getClassName().dropup;
-    } else {
-      mainAttrs.className += " " + this.getClassName().dropdown;
-    }
-
-    if (this.state.dropup) {
-      mainAttrs.className += " " + this.getClassName().autoDropup;
-    } else {
-      mainAttrs.className += " " + this.getClassName().autoDropdown;
-    }
+    mainAttrs.className += " " + this._getMainAttrsClassName(this.isOpen());
 
     mainAttrs.onMouseLeave =
       this.props.closedOnLeave || this.props.openOnHover
@@ -390,21 +399,28 @@ export const Dropdown = UU5.Common.VisualComponent.create({
   },
 
   _open(setStateCallback) {
-    let className = this.getClassName("main");
-
-    if (this.props.menuClassName) {
-      className += " " + this.props.menuClassName;
-    }
-
-    if (this.props.elevation) {
-      className += " " + ClassNames.elevation + this.props.elevation;
-    }
-
-    let bodyClassName = this.getClassName("menuWrapper");
     if (this._popover) {
+      let className = this.getClassName("main");
+
+      if (this.props.menuClassName) {
+        className += " " + this.props.menuClassName;
+      }
+
+      if (this.props.elevation) {
+        className += " " + ClassNames.elevation + this.props.elevation;
+      }
+
+      // if rendering into portal, we have to pass additional classes to the popover (drop-up, etc.) because
+      // the content will be outside of Dropdown DOM and styles must work (backward compatible)
+      if (this.props.popoverLocation === "portal") {
+        className += " " + this._getMainAttrsClassName(true);
+      }
+
+      let bodyClassName = this.getClassName("menuWrapper");
       this._popover.open(
         {
           onClose: this.close,
+          disabled: this.isDisabled(),
           disableBackdrop: this.props.disableBackdrop,
           aroundElement: this._button,
           position: this._getPosition(),
@@ -440,10 +456,9 @@ export const Dropdown = UU5.Common.VisualComponent.create({
         </div>
 
         {this.isOpen() ? (
-          <UU5.Bricks.Popover
-            shown={this.state.open}
-            disabled={this.isDisabled()}
-            forceRender
+          <Popover
+            controlled={false}
+            location={this.props.popoverLocation}
             ref={popover => (this._popover = popover)}
           />
         ) : null}

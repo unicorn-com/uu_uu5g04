@@ -60,7 +60,7 @@
 
       //@@viewOn:hooks
       let [forcedLevel, setForcedLevel] = useState();
-      let { level } = useLevel();
+      let level = useLevel();
       let usedLevel = forcedLevel != null ? forcedLevel : level != null ? level + 1 : 0;
       console.log("Level", usedLevel);
       //@@viewOff:hooks

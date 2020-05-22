@@ -13,13 +13,12 @@
  */
 
 //@@viewOn:imports
+import UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import Popover from "./popover.js";
+import { getPortalElement } from "./internal/portal.js";
 //@@viewOff:imports
-
-//TODO FOR NOW, this component should be from uu5
-const MODALS_ID = "uu5-modals";
 
 export const PortalPopover = UU5.Common.VisualComponent.create({
   //@@viewOn:mixins
@@ -54,6 +53,12 @@ export const PortalPopover = UU5.Common.VisualComponent.create({
     return {
       open: this.props.shown
     };
+  },
+
+  componentDidMount() {
+    UU5.Common.Tools.warning(
+      `Component ${this.getTagName()} is deprecated! Use UU5.Bricks.Popover with "location" property instead.`
+    );
   },
   //@@viewOff:reactLifeCycle
 
@@ -100,22 +105,10 @@ export const PortalPopover = UU5.Common.VisualComponent.create({
     });
   },
 
-  _getPortalElem(allowCreateElement) {
-    // create portal in DOM
-    let result = document.getElementById(MODALS_ID);
-    if (!result && allowCreateElement) {
-      result = document.createElement("div");
-      result.setAttribute("id", MODALS_ID);
-      document.body.appendChild(result);
-    }
-
-    return result;
-  },
-
   _removePortal() {
     // try to remove portal from DOM if does not exists
     if (!this.state.open) {
-      const portal = this._getPortalElem();
+      const portal = getPortalElement(false, "popover");
       if (portal && portal.childNodes.length === 0) {
         portal.parentNode.removeChild(portal);
       }
@@ -129,7 +122,7 @@ export const PortalPopover = UU5.Common.VisualComponent.create({
       this.state.open &&
       UU5.Common.Portal.create(
         <Popover {...this.props} ref_={this._registerPopover} onClose={this._onClose} forceRender />,
-        this._getPortalElem(true)
+        getPortalElement(true, "popover")
       )
     );
   }

@@ -24,6 +24,7 @@ import PageSwiper from "./page-swiper.js";
 import PageTop from "./page-top.js";
 import PageBottom from "./page-bottom.js";
 import ResizeObserver from "./resize-observer.js";
+import Popover from "./popover.js";
 
 import "./page.less";
 //@@viewOff:imports
@@ -43,6 +44,15 @@ const PAGE_CONTENT = UU5.PropTypes.oneOfType([
   UU5.PropTypes.string,
   UU5.PropTypes.number
 ]); //content (bodyItem, node, element, string, number)
+
+function getOrCreateChild(domEl) {
+  let result;
+  if (domEl) {
+    if (!domEl.firstChild) domEl.appendChild(document.createElement("div"));
+    result = domEl.firstChild;
+  }
+  return result;
+}
 
 function checkScreenSizeDependableProp(screenSize, propValue) {
   let result = false;
@@ -93,8 +103,11 @@ export const Page = UU5.Common.VisualComponent.create({
       content: ns.css("page-content"),
       contentBody: ns.css("page-content-body"),
       modal: ns.css("page-modal uu5-elevation-5"),
+      modalPortal: ns.css("page-modal-portal"),
       popover: ns.css("page-popover uu5-elevation-5"),
+      popoverPortal: ns.css("page-popover-portal"),
       alertBus: ns.css("page-alert-bus uu5-elevation-5"),
+      alertBusPortal: ns.css("page-alert-bus-portal"),
       appLayer: ns.css("page-app-layer"),
       systemLayer: ns.css("page-system-layer"),
       columnFloat: ns.css("page-column-float"),
@@ -539,6 +552,16 @@ export const Page = UU5.Common.VisualComponent.create({
       this._setNewWidths(opt.nextWidth, opt.screenSize, true);
     }
   },
+
+  getPortalContainer(layer = "modal") {
+    // layers: https://uuos9.plus4u.net/uu-dockitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=spa_page_01
+    // returning nested child <div/> which is fully unmanaged by React (whereas _modalPortalRef/...Ref is managed by React)
+    let result;
+    if (layer === "modal") result = getOrCreateChild(this._modalPortalRef);
+    else if (layer === "alert-bus") result = getOrCreateChild(this._alertBusPortalRef);
+    else if (layer === "popover") result = getOrCreateChild(this._popoverPortalRef);
+    return result;
+  },
   //@@viewOff:interface
 
   //@@viewOn:overriding
@@ -928,7 +951,7 @@ export const Page = UU5.Common.VisualComponent.create({
   },
 
   _getAlertBus() {
-    let alertBus;
+    let alertBus = null;
     if (this.props.alertBus && typeof this.props.alertBus === "object") {
       let props = UU5.Common.Tools.merge(this.props.alertBus.props, {
         pureRender: true,
@@ -938,7 +961,8 @@ export const Page = UU5.Common.VisualComponent.create({
           (this.props.alertBus.props && this.props.alertBus.props.className
             ? " " + this.props.alertBus.props.className
             : ""),
-        ref_: alertBus => (this._alertBus = alertBus)
+        ref_: alertBus => (this._alertBus = alertBus),
+        key: "alert-bus"
       });
       if (this.props.alertBus.tag) {
         alertBus = UU5.Common.Element.create(UU5.Common.Tools.checkTag(this.props.alertBus.tag), props);
@@ -946,7 +970,11 @@ export const Page = UU5.Common.VisualComponent.create({
         alertBus = UU5.Common.Element.clone(this.props.alertBus, props);
       }
     }
-    return alertBus;
+    let result = [
+      alertBus,
+      <div key="alert-bus-portal" className={this.getClassName("alertBusPortal")} ref={this._setAlertBusPortalRef} />
+    ];
+    return result;
   },
 
   _getPopover() {
@@ -957,10 +985,16 @@ export const Page = UU5.Common.VisualComponent.create({
       id: this._popoverId,
       ref_: this._initPopover,
       controlled: false,
-      className: this.getClassName("popover")
+      className: this.getClassName("popover"),
+      key: "popover"
     };
+    let popover = <Popover {...props} />;
 
-    return <UU5.Bricks.Popover {...props} />;
+    let result = [
+      popover,
+      <div key="popover-portal" className={this.getClassName("popoverPortal")} ref={this._setPopoverPortalRef} />
+    ];
+    return result;
   },
 
   _initPopover(popover) {
@@ -999,7 +1033,7 @@ export const Page = UU5.Common.VisualComponent.create({
   },
 
   _getModal() {
-    let modal;
+    let modal = null;
     if (this._hasModal()) {
       this._modalId = this.props.modal.props.id || this.getId() + "_modal";
       let props = UU5.Common.Tools.merge(this.props.modal.props, {
@@ -1010,6 +1044,7 @@ export const Page = UU5.Common.VisualComponent.create({
           (this.props.modal.props && this.props.modal.props.className ? " " + this.props.modal.props.className : ""),
         ref_: this._initModal,
         id: this._modalId,
+        key: "modal",
         controlled: false
       });
       if (this.props.modal.tag) {
@@ -1018,7 +1053,11 @@ export const Page = UU5.Common.VisualComponent.create({
         modal = UU5.Common.Element.clone(this.props.modal, props);
       }
     }
-    return modal;
+    let result = [
+      modal,
+      <div key="modal-portal" className={this.getClassName("modalPortal")} ref={this._setModalPortalRef} />
+    ];
+    return result;
   },
 
   _hasModal() {
@@ -1058,6 +1097,18 @@ export const Page = UU5.Common.VisualComponent.create({
       };
     }
     return this._mockModal;
+  },
+
+  _setModalPortalRef(ref) {
+    this._modalPortalRef = ref;
+  },
+
+  _setAlertBusPortalRef(ref) {
+    this._alertBusPortalRef = ref;
+  },
+
+  _setPopoverPortalRef(ref) {
+    this._popoverPortalRef = ref;
   },
 
   _setLayerContent(layerContent, layer) {
@@ -2463,11 +2514,7 @@ export const Page = UU5.Common.VisualComponent.create({
     }
 
     if (this.props.useDnD) result = <UU5.Common.DnD.Provider>{result}</UU5.Common.DnD.Provider>;
-    result = (
-      <UU5.Bricks.Popover.Context.Provider value={this.state.popoverProviderValue}>
-        {result}
-      </UU5.Bricks.Popover.Context.Provider>
-    );
+    result = <Popover.Context.Provider value={this.state.popoverProviderValue}>{result}</Popover.Context.Provider>;
     return result;
   },
   //@@viewOff:private

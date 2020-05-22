@@ -7,10 +7,7 @@ const LevelContext = UU5.Common.Level.Context;
 function useLevel() {
   let contextValue = useContext(LevelContext);
   let result = UU5.Common.Level.computeComponentLevel(contextValue, true);
-  return useMemo(() => {
-    let { isDummyLevel, ...restCtxValue } = contextValue;
-    return { ...restCtxValue, level: result };
-  }, [contextValue, result]);
+  return result;
 }
 
 const LevelProvider = createComponent({

@@ -910,55 +910,66 @@ Tools.getMobileOS = function() {
   return os;
 };
 
-(Tools.isMobileIOS = function() {
+Tools.isMobileIOS = function() {
   return this.getMobileOS() === "iOS";
-}),
-  (Tools.isMobileAndroid = function() {
-    return this.getMobileOS() === "android";
-  }),
-  (Tools.isSafari = function() {
-    var userAgent = window.navigator.userAgent;
-    return this.isMobileIOS() && userAgent.indexOf("Safari") > -1 && userAgent.indexOf("CriOS") === -1;
-  }),
-  (Tools.isChrome = function() {
-    var userAgent = window.navigator.userAgent;
-    return REGEXP.chrome.test(userAgent) && userAgent.indexOf("Version") === -1 && !Tools.isEdge();
-  }),
-  (Tools.isEdge = function() {
-    var userAgent = window.navigator.userAgent;
-    return REGEXP.edge.test(userAgent) && userAgent.indexOf("Version") === -1;
-  }),
-  (Tools.isIE = function() {
-    var userAgent = window.navigator.userAgent;
-    return REGEXP.ie.test(userAgent) && userAgent.indexOf("Version") === -1;
-  }),
-  (Tools.isAndroidChrome = function() {
-    return this.isMobileAndroid() && this.isChrome();
-  }),
-  (Tools.isMac = function() {
-    return window.navigator.platform && window.navigator.platform.match(/Mac/) ? true : false;
-  }),
-  (Tools.getBrowserLanguage = function() {
-    return window.navigator.language ? window.navigator.language.toLowerCase() : "en";
-  }),
-  (Tools.getMobileOSVersion = function() {
-    var version = window.navigator.userAgent.match(REGEXP.mobile);
-    return version && version[2] ? +version[2].replace("_", ".") : 0;
-  }),
-  (Tools.isTablet = function() {
-    var userAgent = window.navigator.userAgent;
-    return (
-      (this.isSafari() && userAgent.indexOf("iPad") > -1) ||
-      (this.isAndroidChrome() && userAgent.indexOf("Mobile") === -1)
-    );
-  }),
-  // Cookies
-  (Tools.setCookie = function(cookieName, cookieValue, expireDays) {
-    var d = new Date();
-    d.setTime(d.getTime() + expireDays * 24 * 60 * 60 * 1000);
-    var expires = "expires=" + d.toUTCString();
-    document.cookie = cookieName + "=" + cookieValue + "; " + expires;
-  });
+};
+
+Tools.isMobileAndroid = function() {
+  return this.getMobileOS() === "android";
+};
+
+Tools.isSafari = function() {
+  var userAgent = window.navigator.userAgent;
+  return this.isMobileIOS() && userAgent.indexOf("Safari") > -1 && userAgent.indexOf("CriOS") === -1;
+};
+
+Tools.isChrome = function() {
+  var userAgent = window.navigator.userAgent;
+  return REGEXP.chrome.test(userAgent) && userAgent.indexOf("Version") === -1 && !Tools.isEdge();
+};
+
+Tools.isEdge = function() {
+  var userAgent = window.navigator.userAgent;
+  return REGEXP.edge.test(userAgent) && userAgent.indexOf("Version") === -1;
+};
+
+Tools.isIE = function() {
+  var userAgent = window.navigator.userAgent;
+  return REGEXP.ie.test(userAgent) && userAgent.indexOf("Version") === -1;
+};
+
+Tools.isAndroidChrome = function() {
+  return this.isMobileAndroid() && this.isChrome();
+};
+
+Tools.isMac = function() {
+  return window.navigator.platform && window.navigator.platform.match(/Mac/) ? true : false;
+};
+
+Tools.getBrowserLanguage = function() {
+  return window.navigator.language ? window.navigator.language.toLowerCase() : "en";
+};
+
+Tools.getMobileOSVersion = function() {
+  var version = window.navigator.userAgent.match(REGEXP.mobile);
+  return version && version[2] ? +version[2].replace("_", ".") : 0;
+};
+
+Tools.isTablet = function() {
+  var userAgent = window.navigator.userAgent;
+  return (
+    (this.isSafari() && userAgent.indexOf("iPad") > -1) ||
+    (this.isAndroidChrome() && userAgent.indexOf("Mobile") === -1)
+  );
+};
+
+// Cookies
+Tools.setCookie = function(cookieName, cookieValue, expireDays) {
+  var d = new Date();
+  d.setTime(d.getTime() + expireDays * 24 * 60 * 60 * 1000);
+  var expires = "expires=" + d.toUTCString();
+  document.cookie = cookieName + "=" + cookieValue + "; " + expires;
+};
 
 Tools.getCookie = function(cookieName) {
   var name = cookieName + "=";
@@ -1984,7 +1995,7 @@ Tools.getLsiItemByLanguage = (lsi, params, languages) => {
   let lsiKey = Tools.getLsiKey(lsi, languages);
   let result = lsiKey ? lsi[lsiKey] : null;
 
-  if (typeof result === "string" && params) {
+  if (typeof result === "string" && params != null) {
     result = Tools.formatString(result, params);
   }
 
@@ -3065,6 +3076,15 @@ Tools.groupCall = (uri, dtoIn, doLoadFn) => {
   }
 
   return data.promise;
+};
+
+Tools.openWindow = (url, target) => {
+  let features;
+  // cannot use window.open(url, "_blank", "noopener") in Edge, ... because it will open new window, not new tab
+  if (target === "_blank" && (Tools.isChrome() || navigator.userAgent.match(/\bfirefox\//i))) {
+    features = "noopener";
+  }
+  return window.open(url, target, features);
 };
 
 // userLanguage for IE

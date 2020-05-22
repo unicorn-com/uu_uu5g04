@@ -470,7 +470,15 @@
   }
 }
 
-.@{name}-input-form-item:focus {
+.@{name}-input-form-item,
+.@{name}-items-input {
+  &:focus {
+    border-color: #2196f3;
+    outline: 0;
+  }
+}
+
+.@{name}-items-input.@{name}-items-input-open {
   border-color: #2196f3;
   outline: 0;
 }

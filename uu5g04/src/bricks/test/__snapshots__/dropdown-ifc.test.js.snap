@@ -96,9 +96,8 @@ exports[`UU5.Bricks.Dropdown interface testing close(setStateCallBack) 2`] = `
     />
   </div>
   <forwardRef(Popover)
-    disabled={false}
-    forceRender={true}
-    shown={true}
+    controlled={false}
+    location="local"
   />
 </div>
 `;
@@ -346,9 +345,8 @@ exports[`UU5.Bricks.Dropdown interface testing open(setStateCallBack) 2`] = `
     />
   </div>
   <forwardRef(Popover)
-    disabled={false}
-    forceRender={true}
-    shown={true}
+    controlled={false}
+    location="local"
   />
 </div>
 `;
@@ -449,9 +447,8 @@ exports[`UU5.Bricks.Dropdown interface testing toggle(setStateCallBack) first sh
     />
   </div>
   <forwardRef(Popover)
-    disabled={false}
-    forceRender={true}
-    shown={true}
+    controlled={false}
+    location="local"
   />
 </div>
 `;

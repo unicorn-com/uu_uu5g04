@@ -116,7 +116,7 @@ const MenuItemControls = UU5.Common.VisualComponent.create({
 
   _getControlsDropdown() {
     return (
-      <UU5.Bricks.PortalPopover ref_={this._registerDropdown} controlled={false}>
+      <UU5.Bricks.Popover location="portal" ref_={this._registerDropdown} controlled={false}>
         {this.props.items.map((item, index) => {
           return (
             <UU5.Bricks.Button
@@ -137,7 +137,7 @@ const MenuItemControls = UU5.Common.VisualComponent.create({
             </UU5.Bricks.Button>
           );
         })}
-      </UU5.Bricks.PortalPopover>
+      </UU5.Bricks.Popover>
     );
   },
 

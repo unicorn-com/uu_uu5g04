@@ -141,7 +141,7 @@ export const Link = UU5.Common.VisualComponent.create({
   },
 
   _openRouteNewTab() {
-    window.open(this._getRouteUrl(), "_blank");
+    UU5.Common.Tools.openWindow(this._getRouteUrl(), "_blank");
   },
 
   _onClick(e) {
@@ -268,6 +268,7 @@ export const Link = UU5.Common.VisualComponent.create({
       }
       mainAttrs.target = this.props.target;
       mainAttrs.download = this.props.download;
+      if (mainAttrs.target === "_blank") mainAttrs.rel = "noopener";
     }
 
     let children = this.getChildren();

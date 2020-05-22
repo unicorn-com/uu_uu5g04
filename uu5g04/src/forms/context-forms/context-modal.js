@@ -69,7 +69,7 @@ export const ContextModal = UU5.Common.Reference.forward(({ className, ...props 
 
   return (
     <ContextFormProvider>
-      <UU5.Bricks.PortalModal {...props} ref={ref} className={classNames.join(" ")} />
+      <UU5.Bricks.Modal {...props} location="portal" ref={ref} className={classNames.join(" ")} />
     </ContextFormProvider>
   );
 });

@@ -37,13 +37,22 @@ async function run() {
     let fontStylesFiles = [
       "clear-sans.css",
       "clear-sans.min.css",
-      "ClearSans-Regular.ttf",
-      "ClearSans-Bold.ttf",
-      "ClearSans-Italic.ttf",
-      "ClearSans-BoldItalic.ttf",
-      "ClearSans-Medium.ttf",
-      "ClearSans-MediumItalic.ttf",
-      "ClearSans-Light.ttf"
+      "ClearSans-Regular.woff2",
+      "ClearSans-Regular.woff",
+      "ClearSans-Thin.woff2",
+      "ClearSans-Thin.woff",
+      "ClearSans-Light.woff2",
+      "ClearSans-Light.woff",
+      "ClearSans-Italic.woff2",
+      "ClearSans-Italic.woff",
+      "ClearSans-Medium.woff2",
+      "ClearSans-Medium.woff",
+      "ClearSans-MediumItalic.woff2",
+      "ClearSans-MediumItalic.woff",
+      "ClearSans-Bold.woff2",
+      "ClearSans-Bold.woff",
+      "ClearSans-BoldItalic.woff2",
+      "ClearSans-BoldItalic.woff"
     ];
     let fontStylesInZipPrefix = "assets/clearsans/2.0.0/fonts/";
     workers.push(

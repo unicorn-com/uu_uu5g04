@@ -516,7 +516,7 @@ Environment.iconLibraries = {
   uu5: cdnBaseUri + "uu-uu5g04-icons/1.0.0/uu5g04_icons.min.css",
   plus4u: cdnBaseUri + "plus4u-iconsg01/1.0.0/plus4u_iconsg01.min.css",
   plus4u5: cdnBaseUri + "uu-plus4u5g01-icons/1.0.0/uu_plus4u5g01_icons.min.css",
-  uubml: cdnBaseUri + "uu-uubmldrawg03-icons/1.0.0/uubmldrawg03_icons.min.css",
+  uubml: cdnBaseUri + "uu-uubmldraw-iconsg03/2.0.0/uu_uubmldraw_iconsg03.min.css",
   uubmlicon:
     "https://uuappg01-eu-w-1.plus4u.net/uu-uubmldraw-stencilcatalogueg01/c168bd044ce044d48ba284c89eeb573b/stencil/getCss?code="
 };
@@ -921,27 +921,6 @@ Environment.isPageVisible = () => {
 
 Environment.isPageFocused = () => {
   return document.hasFocus();
-};
-
-Environment.getScrollBarWidth = () => {
-  if (Environment._scrollBarWidth === undefined) {
-    let width = 0;
-    let div = document.createElement("div");
-    div.style.overflow = "scroll";
-    div.style.visibility = "hidden";
-    div.style.position = "absolute";
-    div.style.width = "100px";
-    div.style.height = "100px";
-
-    // temporarily creates a div into DOM
-    document.body.appendChild(div);
-    try {
-      Environment._scrollBarWidth = div.offsetWidth - div.clientWidth;
-    } finally {
-      document.body.removeChild(div);
-    }
-  }
-  return Environment._scrollBarWidth;
 };
 
 Environment.numberOptions = {
