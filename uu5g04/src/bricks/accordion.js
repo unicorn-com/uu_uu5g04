@@ -18,8 +18,15 @@ import ns from "./bricks-ns.js";
 import Panel from "./panel.js";
 
 import "./accordion.less";
+
+const EditationComponent = UU5.Common.Component.lazy(async () => {
+  await SystemJS.import("uu5g04-forms");
+  await SystemJS.import("uu5g04-bricks-editable");
+  return import("./internal/accordion-editable.js");
+});
 //@@viewOff:imports
 
+let editationLazyLoaded = false;
 const MOUNT_CONTENT_VALUES = {
   onFirstRender: "onFirstRender",
   onFirstExpand: "onFirstExpand",
@@ -48,6 +55,8 @@ export const Accordion = UU5.Common.VisualComponent.create({
       main: ns.css("accordion")
     },
     defaults: {
+      // TODO Uncomment - new editation postponed. +remove childTagName
+      // validChildTagName: "UU5.Bricks.Panel" // different key name than usual because of DCC (do not rename!)
       childTagName: "UU5.Bricks.Panel"
     },
     warnings: {
@@ -56,6 +65,13 @@ export const Accordion = UU5.Common.VisualComponent.create({
     opt: {
       nestingLevelWrapper: true
     },
+    // TODO Uncomment - new editation postponed. +remove editableComponent
+    // editMode: {
+    //   name: { en: "Accordion", cs: "Accordion" },
+    //   backgroundColor: "rgba(0,0,0,.2)",
+    //   color: "rgba(0,0,0,.87)",
+    //   highlightColor: "#CCCCCC"
+    // }
     editableComponent: "UU5.BricksEditable.Accordion"
   },
   //@@viewOff:statics
@@ -71,7 +87,6 @@ export const Accordion = UU5.Common.VisualComponent.create({
     size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
     iconAlign: UU5.PropTypes.oneOf(["right", "after", "left"]),
     openClick: UU5.PropTypes.oneOf(["header", "icon", "none"]),
-    preRender: UU5.PropTypes.bool,
     mountPanelContent: UU5.PropTypes.oneOf([
       MOUNT_CONTENT_VALUES.onEachExpand,
       MOUNT_CONTENT_VALUES.onFirstExpand,
@@ -92,7 +107,9 @@ export const Accordion = UU5.Common.VisualComponent.create({
       size: "m",
       iconAlign: null,
       openClick: null,
-      mountPanelContent: undefined
+      mountPanelContent: undefined,
+      // TODO Uncomment - new editation postponed.
+      // contentEditable: true
     };
   },
   //@@viewOff:getDefaultProps
@@ -235,9 +252,15 @@ export const Accordion = UU5.Common.VisualComponent.create({
   //@@viewOn:overriding
   shouldChildRender_: function(child) {
     let childTagName = UU5.Common.Tools.getChildTagName(child);
+    // TODO Uncomment - new editation postponed.
+    // let defaultChildTagName = this.getDefault().validChildTagName;
     let defaultChildTagName = this.getDefault().childTagName;
+
     let childTagNames = this.props.allowTags.concat(defaultChildTagName);
+    // TODO Uncomment - new editation postponed.
+    // let result = childTagNames.indexOf(childTagName) > -1 || childTagName === "UuDcc.Bricks.ComponentWrapper";
     let result = childTagNames.indexOf(childTagName) > -1;
+
     if (!result && (typeof child !== "string" || child.trim())) {
       if (childTagName)
         this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagName], {
@@ -277,9 +300,44 @@ export const Accordion = UU5.Common.VisualComponent.create({
       newChildProps.mountContent !== undefined ? newChildProps.mountContent : this.props.mountPanelContent;
     return newChildProps;
   },
+
+  // TODO Uncomment - new editation postponed.
+  // onBeforeForceEndEditation_() {
+  //   return this._editableComponent ? this._editableComponent.getPropsToSave() : undefined;
+  // },
   //@@viewOff:overriding
 
   //@@viewOn:private
+  _registerNull(inst) {
+    // unmount of component means that suspense is loaded and component should be rendered
+    if (!inst) {
+      this.setState(state => {
+        if (state.editationLazyLoaded) return;
+
+        // Edit component is loaded - need to set to static variable because other Edit component does not render fallback component
+        // editationLazyLoaded is stored in both state and static variable for cases such as when more edit modes are loaded at the same time
+        editationLazyLoaded = true;
+        return { editationLazyLoaded: true };
+      });
+    }
+  },
+
+  _isEditationLazyLoaded() {
+    return editationLazyLoaded;
+  },
+
+  _renderEditationMode() {
+    return (
+      <UU5.Common.Suspense fallback={<span ref={this._registerNull} />}>
+        <EditationComponent component={this} ref_={this._registerEditableComponent} />
+      </UU5.Common.Suspense>
+    );
+  },
+
+  _registerEditableComponent(component) {
+    this._editableComponent = component;
+  },
+
   _getValuesAsArray: function(value, name) {
     var values = [];
 
@@ -329,12 +387,12 @@ export const Accordion = UU5.Common.VisualComponent.create({
 
     return this;
   },
-  //@@viewOff:private
 
-  //Render
   _buildChildren: function() {
     var childrenProps = {};
     if (this.props.panels) {
+      // TODO Uncomment - new editation postponed.
+      // childrenProps.content = { tag: this.getDefault().validChildTagName, propsArray: this.props.panels };
       childrenProps.content = { tag: this.getDefault().childTagName, propsArray: this.props.panels };
     } else if (this.getContent()) {
       childrenProps.content = this.getContent();
@@ -346,13 +404,21 @@ export const Accordion = UU5.Common.VisualComponent.create({
 
     return this.buildChildren(childrenProps);
   },
+  //@@viewOff:private
 
   //@@viewOn:render
   render: function() {
     return this.getNestingLevel() ? (
       <div {...this.getMainAttrs()}>
-        {this._buildChildren()}
-        {this.getDisabledCover()}
+        <>
+          {this.state.editation ? this._renderEditationMode() : null}
+          {!this.state.editation || !this._isEditationLazyLoaded() ? (
+            <>
+              {this._buildChildren()}
+              {this.getDisabledCover()}
+            </>
+          ) : null}
+        </>
       </div>
     ) : null;
   }

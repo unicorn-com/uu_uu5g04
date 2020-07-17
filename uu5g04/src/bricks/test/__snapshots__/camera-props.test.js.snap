@@ -8,8 +8,9 @@ exports[`UU5.Bricks.Camera props testing className="my-classname" 1`] = `
   title={null}
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"
@@ -25,8 +26,9 @@ exports[`UU5.Bricks.Camera props testing controlled=false 1`] = `
   title={null}
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"
@@ -42,8 +44,9 @@ exports[`UU5.Bricks.Camera props testing controlled=true 1`] = `
   title={null}
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"
@@ -59,8 +62,9 @@ exports[`UU5.Bricks.Camera props testing default props 1`] = `
   title={null}
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"
@@ -76,8 +80,9 @@ exports[`UU5.Bricks.Camera props testing disabled=false 1`] = `
   title={null}
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"
@@ -93,8 +98,9 @@ exports[`UU5.Bricks.Camera props testing disabled=true 1`] = `
   title={null}
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"
@@ -114,8 +120,9 @@ exports[`UU5.Bricks.Camera props testing hidden=false 1`] = `
   title={null}
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"
@@ -131,8 +138,9 @@ exports[`UU5.Bricks.Camera props testing hidden=true 1`] = `
   title={null}
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"
@@ -148,8 +156,9 @@ exports[`UU5.Bricks.Camera props testing id="myId" 1`] = `
   title={null}
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"
@@ -165,8 +174,9 @@ exports[`UU5.Bricks.Camera props testing mainAttrs=undefined 1`] = `
   title={null}
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"
@@ -183,8 +193,9 @@ exports[`UU5.Bricks.Camera props testing name="myName" 1`] = `
   title={null}
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"
@@ -200,8 +211,9 @@ exports[`UU5.Bricks.Camera props testing nestingLevel="bigBox" 1`] = `
   title={null}
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"
@@ -217,8 +229,9 @@ exports[`UU5.Bricks.Camera props testing nestingLevel="bigBoxCollection" 1`] = `
   title={null}
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"
@@ -234,8 +247,9 @@ exports[`UU5.Bricks.Camera props testing nestingLevel="box" 1`] = `
   title={null}
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"
@@ -251,8 +265,9 @@ exports[`UU5.Bricks.Camera props testing nestingLevel="boxCollection" 1`] = `
   title={null}
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"
@@ -268,8 +283,9 @@ exports[`UU5.Bricks.Camera props testing nestingLevel="container" 1`] = `
   title={null}
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"
@@ -287,8 +303,9 @@ exports[`UU5.Bricks.Camera props testing nestingLevel="page" 1`] = `
   title={null}
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"
@@ -308,8 +325,9 @@ exports[`UU5.Bricks.Camera props testing nestingLevel="spa" 1`] = `
   title={null}
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"
@@ -325,8 +343,9 @@ exports[`UU5.Bricks.Camera props testing noIndex=false 1`] = `
   title={null}
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"
@@ -342,8 +361,9 @@ exports[`UU5.Bricks.Camera props testing noIndex=true 1`] = `
   title={null}
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"
@@ -359,8 +379,9 @@ exports[`UU5.Bricks.Camera props testing pureRender=false 1`] = `
   title={null}
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"
@@ -376,8 +397,9 @@ exports[`UU5.Bricks.Camera props testing pureRender=true 1`] = `
   title={null}
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"
@@ -393,8 +415,9 @@ exports[`UU5.Bricks.Camera props testing selected=false 1`] = `
   title={null}
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"
@@ -410,8 +433,9 @@ exports[`UU5.Bricks.Camera props testing selected=true 1`] = `
   title={null}
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"
@@ -432,8 +456,9 @@ exports[`UU5.Bricks.Camera props testing style="padding:8px; borderRadius: 2px" 
   title={null}
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"
@@ -454,8 +479,9 @@ exports[`UU5.Bricks.Camera props testing style={"backgroundColor":"red","color":
   title={null}
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"
@@ -471,8 +497,9 @@ exports[`UU5.Bricks.Camera props testing tooltip="My Tooltip" 1`] = `
   title="My Tooltip"
 >
   <video
-    autoPlay="true"
+    autoPlay={true}
     className="uu5-bricks-camera-video"
+    playsInline={true}
   />
   <canvas
     className="uu5-bricks-camera-canvas"

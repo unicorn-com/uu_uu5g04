@@ -12,15 +12,15 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import ns from "./common-ns.js";
 import PropTypes from "prop-types";
+import ns from "./common-ns.js";
 import BaseMixin from "./base-mixin.js";
 import Tools from "./tools.js";
 import Environment from "../environment/environment.js";
 import NotFoundTag from "./not-found-tag.js";
 import Version from "./version.js";
 import VisualComponent from "./visual-component.js";
+import Element from "./element.js";
 //@@viewOff:imports
 
 //import './tag-placeholder.less';
@@ -476,7 +476,7 @@ export const TagPlaceholder = VisualComponent.create({
         Object.keys(dependencies).forEach((key) => {
           let value = dependencies[key];
           if (value && value.startsWith(productUrlBaseNoVersion)) {
-            dependencies[key] = productUrlBaseNoVersion + configuredVersion + value.substr(productUrlBase.length);
+            dependencies[key] = productUrlBaseNoVersion + configuredVersion + "/" + value.substr(productUrlBase.length);
           }
         });
       }
@@ -570,7 +570,7 @@ export const TagPlaceholder = VisualComponent.create({
   render() {
     if (this.state.component) {
       const { _tagName, _props, _content, _error, _fromFindComponent, ...restProps } = this.props;
-      return React.createElement(
+      return Element.create(
         this.state.component,
         _fromFindComponent ? { ...restProps, ...this.state.props } : this.state.props,
         _fromFindComponent ? _content : this.props.content

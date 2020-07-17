@@ -1,789 +1,805 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UU5.Bricks.Carousel interface testing getActiveIndex() 1`] = `
-<div
-  className="color-schema-pink uu5-bricks-carousel"
-  id="uuID01"
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-      "width": 350,
-    }
-  }
-  title={null}
->
-  <carousel-item
-    id="uuID06"
-    key="uuID06"
-    position={0}
+<Fragment>
+  <div
+    className="color-schema-pink uu5-bricks-carousel"
+    id="uuID01"
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
     style={
       Object {
-        "height": null,
-        "transform": "translateX(0%)",
-        "width": "100%",
+        "height": "0px",
+        "width": 350,
       }
     }
+    title={null}
   >
-    <Div
-      id="uuID07"
+    <carousel-item
+      id="uuID06"
+      key="uuID06"
+      position={0}
       style={
         Object {
-          "backgroundImage": "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
-          "height": 270,
-          "transform": "scale(1)",
+          "height": null,
+          "transform": "translateX(0%)",
+          "width": "100%",
         }
       }
-    />
-  </carousel-item>
-  <div
-    className="uu5-bricks-carousel-controls color-schema-pink"
-  >
-    <a
-      className="uu5-bricks-carousel-left"
-      onClick={[Function]}
-      role="button"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <Div
+        id="uuID07"
+        style={
+          Object {
+            "backgroundImage": "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
+            "height": 270,
+            "transform": "scale(1)",
+          }
+        }
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
+    </carousel-item>
+    <div
+      className="uu5-bricks-carousel-controls color-schema-pink"
     >
-      <li
-        className=""
-        key="0"
+      <a
+        className="uu5-bricks-carousel-left"
         onClick={[Function]}
-      />
-      <li
-        className=""
-        key="1"
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
+      >
+        <li
+          className=""
+          key="0"
+          onClick={[Function]}
+        />
+        <li
+          className=""
+          key="1"
+          onClick={[Function]}
+        />
+        <li
+          className="uu5-bricks-carousel-indicators-active"
+          key="2"
+          onClick={[Function]}
+        />
+        <li
+          className=""
+          key="3"
+          onClick={[Function]}
+        />
+      </ol>
+      <a
+        className="uu5-bricks-carousel-right"
         onClick={[Function]}
-      />
-      <li
-        className="uu5-bricks-carousel-indicators-active"
-        key="2"
-        onClick={[Function]}
-      />
-      <li
-        className=""
-        key="3"
-        onClick={[Function]}
-      />
-    </ol>
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel interface testing getActiveIndex() 2`] = `
-<div
-  className="color-schema-pink uu5-bricks-carousel"
-  id="uuID01"
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-      "width": 350,
-    }
-  }
-  title={null}
->
-  <carousel-item
-    id="uuID06"
-    key="uuID06"
-    position={0}
-    style={
-      Object {
-        "height": null,
-        "transform": "translateX(0%)",
-        "width": "100%",
-      }
-    }
-  >
-    <Div
-      id="uuID07"
-      style={
-        Object {
-          "backgroundImage": "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
-          "height": 270,
-          "transform": "scale(1)",
-        }
-      }
-    />
-  </carousel-item>
-  <carousel-item
-    id="uuID08"
-    key="uuID08"
-    position={100}
-    style={
-      Object {
-        "height": null,
-        "transform": "translateX(100%)",
-        "width": "100%",
-      }
-    }
-  >
-    <Div
-      id="uuID09"
-      style={
-        Object {
-          "backgroundImage": "url(https://images.pexels.com/photos/110874/pexels-photo-110874.jpeg?w=400&h=270)",
-          "height": 270,
-          "transform": "scale(1)",
-        }
-      }
-    />
-  </carousel-item>
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-pink"
+    className="color-schema-pink uu5-bricks-carousel"
+    id="uuID01"
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+        "width": 350,
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left"
-      onClick={[Function]}
-      role="button"
+    <carousel-item
+      id="uuID06"
+      key="uuID06"
+      position={0}
+      style={
+        Object {
+          "height": null,
+          "transform": "translateX(0%)",
+          "width": "100%",
+        }
+      }
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <Div
+        id="uuID07"
+        style={
+          Object {
+            "backgroundImage": "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
+            "height": 270,
+            "transform": "scale(1)",
+          }
+        }
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
+    </carousel-item>
+    <carousel-item
+      id="uuID08"
+      key="uuID08"
+      position={100}
+      style={
+        Object {
+          "height": null,
+          "transform": "translateX(100%)",
+          "width": "100%",
+        }
+      }
     >
-      <li
-        className=""
-        key="0"
-        onClick={[Function]}
+      <Div
+        id="uuID09"
+        style={
+          Object {
+            "backgroundImage": "url(https://images.pexels.com/photos/110874/pexels-photo-110874.jpeg?w=400&h=270)",
+            "height": 270,
+            "transform": "scale(1)",
+          }
+        }
       />
-      <li
-        className=""
-        key="1"
-        onClick={[Function]}
-      />
-      <li
-        className=""
-        key="2"
-        onClick={[Function]}
-      />
-      <li
-        className="uu5-bricks-carousel-indicators-active"
-        key="3"
-        onClick={[Function]}
-      />
-    </ol>
-    <a
-      className="uu5-bricks-carousel-right uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    </carousel-item>
+    <div
+      className="uu5-bricks-carousel-controls color-schema-pink"
     >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-left"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
+      >
+        <li
+          className=""
+          key="0"
+          onClick={[Function]}
+        />
+        <li
+          className=""
+          key="1"
+          onClick={[Function]}
+        />
+        <li
+          className=""
+          key="2"
+          onClick={[Function]}
+        />
+        <li
+          className="uu5-bricks-carousel-indicators-active"
+          key="3"
+          onClick={[Function]}
+        />
+      </ol>
+      <a
+        className="uu5-bricks-carousel-right uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel interface testing setActiveIndex(index, setStateCallBack) - set index from 2 to 1 1`] = `
-<div
-  className="color-schema-pink uu5-bricks-carousel"
-  id="uuID01"
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-      "width": 350,
-    }
-  }
-  title={null}
->
-  <carousel-item
-    id="uuID06"
-    key="uuID06"
-    position={0}
+<Fragment>
+  <div
+    className="color-schema-pink uu5-bricks-carousel"
+    id="uuID01"
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
     style={
       Object {
-        "height": null,
-        "transform": "translateX(0%)",
-        "width": "100%",
+        "height": "0px",
+        "width": 350,
       }
     }
+    title={null}
   >
-    <Div
-      id="uuID07"
+    <carousel-item
+      id="uuID06"
+      key="uuID06"
+      position={0}
       style={
         Object {
-          "backgroundImage": "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
-          "height": 270,
-          "transform": "scale(1)",
+          "height": null,
+          "transform": "translateX(0%)",
+          "width": "100%",
         }
       }
-    />
-  </carousel-item>
-  <div
-    className="uu5-bricks-carousel-controls color-schema-pink"
-  >
-    <a
-      className="uu5-bricks-carousel-left"
-      onClick={[Function]}
-      role="button"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <Div
+        id="uuID07"
+        style={
+          Object {
+            "backgroundImage": "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
+            "height": 270,
+            "transform": "scale(1)",
+          }
+        }
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
+    </carousel-item>
+    <div
+      className="uu5-bricks-carousel-controls color-schema-pink"
     >
-      <li
-        className=""
-        key="0"
+      <a
+        className="uu5-bricks-carousel-left"
         onClick={[Function]}
-      />
-      <li
-        className=""
-        key="1"
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
+      >
+        <li
+          className=""
+          key="0"
+          onClick={[Function]}
+        />
+        <li
+          className=""
+          key="1"
+          onClick={[Function]}
+        />
+        <li
+          className="uu5-bricks-carousel-indicators-active"
+          key="2"
+          onClick={[Function]}
+        />
+        <li
+          className=""
+          key="3"
+          onClick={[Function]}
+        />
+      </ol>
+      <a
+        className="uu5-bricks-carousel-right"
         onClick={[Function]}
-      />
-      <li
-        className="uu5-bricks-carousel-indicators-active"
-        key="2"
-        onClick={[Function]}
-      />
-      <li
-        className=""
-        key="3"
-        onClick={[Function]}
-      />
-    </ol>
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel interface testing setActiveIndex(index, setStateCallBack) - set index from 2 to 1 2`] = `
-<div
-  className="color-schema-pink uu5-bricks-carousel"
-  id="uuID01"
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-      "width": 350,
-    }
-  }
-  title={null}
->
-  <carousel-item
-    id="uuID04"
-    key="uuID04"
-    position={-100}
-    style={
-      Object {
-        "height": null,
-        "transform": "translateX(-100%)",
-        "width": "100%",
-      }
-    }
-  >
-    <Div
-      id="uuID05"
-      style={
-        Object {
-          "backgroundImage": "url(https://images.pexels.com/photos/639/clouds-rainy-rain-asia.jpg?w=400&h=270)",
-          "height": 270,
-          "transform": "scale(1)",
-        }
-      }
-    />
-  </carousel-item>
-  <carousel-item
-    id="uuID06"
-    key="uuID06"
-    position={0}
-    style={
-      Object {
-        "height": null,
-        "transform": "translateX(0%)",
-        "width": "100%",
-      }
-    }
-  >
-    <Div
-      id="uuID07"
-      style={
-        Object {
-          "backgroundImage": "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
-          "height": 270,
-          "transform": "scale(1)",
-        }
-      }
-    />
-  </carousel-item>
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-pink"
+    className="color-schema-pink uu5-bricks-carousel"
+    id="uuID01"
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+        "width": 350,
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left"
-      onClick={[Function]}
-      role="button"
+    <carousel-item
+      id="uuID04"
+      key="uuID04"
+      position={-100}
+      style={
+        Object {
+          "height": null,
+          "transform": "translateX(-100%)",
+          "width": "100%",
+        }
+      }
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <Div
+        id="uuID05"
+        style={
+          Object {
+            "backgroundImage": "url(https://images.pexels.com/photos/639/clouds-rainy-rain-asia.jpg?w=400&h=270)",
+            "height": 270,
+            "transform": "scale(1)",
+          }
+        }
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
+    </carousel-item>
+    <carousel-item
+      id="uuID06"
+      key="uuID06"
+      position={0}
+      style={
+        Object {
+          "height": null,
+          "transform": "translateX(0%)",
+          "width": "100%",
+        }
+      }
     >
-      <li
-        className=""
-        key="0"
-        onClick={[Function]}
+      <Div
+        id="uuID07"
+        style={
+          Object {
+            "backgroundImage": "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
+            "height": 270,
+            "transform": "scale(1)",
+          }
+        }
       />
-      <li
-        className="uu5-bricks-carousel-indicators-active"
-        key="1"
-        onClick={[Function]}
-      />
-      <li
-        className=""
-        key="2"
-        onClick={[Function]}
-      />
-      <li
-        className=""
-        key="3"
-        onClick={[Function]}
-      />
-    </ol>
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
+    </carousel-item>
+    <div
+      className="uu5-bricks-carousel-controls color-schema-pink"
     >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-left"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
+      >
+        <li
+          className=""
+          key="0"
+          onClick={[Function]}
+        />
+        <li
+          className="uu5-bricks-carousel-indicators-active"
+          key="1"
+          onClick={[Function]}
+        />
+        <li
+          className=""
+          key="2"
+          onClick={[Function]}
+        />
+        <li
+          className=""
+          key="3"
+          onClick={[Function]}
+        />
+      </ol>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel interface testing setNext(setStateCallBack) 1`] = `
-<div
-  className="color-schema-pink uu5-bricks-carousel"
-  id="uuID01"
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-      "width": 350,
-    }
-  }
-  title={null}
->
-  <carousel-item
-    id="uuID06"
-    key="uuID06"
-    position={0}
+<Fragment>
+  <div
+    className="color-schema-pink uu5-bricks-carousel"
+    id="uuID01"
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
     style={
       Object {
-        "height": null,
-        "transform": "translateX(0%)",
-        "width": "100%",
+        "height": "0px",
+        "width": 350,
       }
     }
+    title={null}
   >
-    <Div
-      id="uuID07"
+    <carousel-item
+      id="uuID06"
+      key="uuID06"
+      position={0}
       style={
         Object {
-          "backgroundImage": "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
-          "height": 270,
-          "transform": "scale(1)",
+          "height": null,
+          "transform": "translateX(0%)",
+          "width": "100%",
         }
       }
-    />
-  </carousel-item>
-  <div
-    className="uu5-bricks-carousel-controls color-schema-pink"
-  >
-    <a
-      className="uu5-bricks-carousel-left"
-      onClick={[Function]}
-      role="button"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <Div
+        id="uuID07"
+        style={
+          Object {
+            "backgroundImage": "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
+            "height": 270,
+            "transform": "scale(1)",
+          }
+        }
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
+    </carousel-item>
+    <div
+      className="uu5-bricks-carousel-controls color-schema-pink"
     >
-      <li
-        className=""
-        key="0"
+      <a
+        className="uu5-bricks-carousel-left"
         onClick={[Function]}
-      />
-      <li
-        className=""
-        key="1"
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
+      >
+        <li
+          className=""
+          key="0"
+          onClick={[Function]}
+        />
+        <li
+          className=""
+          key="1"
+          onClick={[Function]}
+        />
+        <li
+          className="uu5-bricks-carousel-indicators-active"
+          key="2"
+          onClick={[Function]}
+        />
+        <li
+          className=""
+          key="3"
+          onClick={[Function]}
+        />
+      </ol>
+      <a
+        className="uu5-bricks-carousel-right"
         onClick={[Function]}
-      />
-      <li
-        className="uu5-bricks-carousel-indicators-active"
-        key="2"
-        onClick={[Function]}
-      />
-      <li
-        className=""
-        key="3"
-        onClick={[Function]}
-      />
-    </ol>
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel interface testing setNext(setStateCallBack) 2`] = `
-<div
-  className="color-schema-pink uu5-bricks-carousel"
-  id="uuID01"
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-      "width": 350,
-    }
-  }
-  title={null}
->
-  <carousel-item
-    id="uuID06"
-    key="uuID06"
-    position={0}
-    style={
-      Object {
-        "height": null,
-        "transform": "translateX(0%)",
-        "width": "100%",
-      }
-    }
-  >
-    <Div
-      id="uuID07"
-      style={
-        Object {
-          "backgroundImage": "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
-          "height": 270,
-          "transform": "scale(1)",
-        }
-      }
-    />
-  </carousel-item>
-  <carousel-item
-    id="uuID08"
-    key="uuID08"
-    position={100}
-    style={
-      Object {
-        "height": null,
-        "transform": "translateX(100%)",
-        "width": "100%",
-      }
-    }
-  >
-    <Div
-      id="uuID09"
-      style={
-        Object {
-          "backgroundImage": "url(https://images.pexels.com/photos/110874/pexels-photo-110874.jpeg?w=400&h=270)",
-          "height": 270,
-          "transform": "scale(1)",
-        }
-      }
-    />
-  </carousel-item>
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-pink"
+    className="color-schema-pink uu5-bricks-carousel"
+    id="uuID01"
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+        "width": 350,
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left"
-      onClick={[Function]}
-      role="button"
+    <carousel-item
+      id="uuID06"
+      key="uuID06"
+      position={0}
+      style={
+        Object {
+          "height": null,
+          "transform": "translateX(0%)",
+          "width": "100%",
+        }
+      }
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <Div
+        id="uuID07"
+        style={
+          Object {
+            "backgroundImage": "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
+            "height": 270,
+            "transform": "scale(1)",
+          }
+        }
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
+    </carousel-item>
+    <carousel-item
+      id="uuID08"
+      key="uuID08"
+      position={100}
+      style={
+        Object {
+          "height": null,
+          "transform": "translateX(100%)",
+          "width": "100%",
+        }
+      }
     >
-      <li
-        className=""
-        key="0"
-        onClick={[Function]}
+      <Div
+        id="uuID09"
+        style={
+          Object {
+            "backgroundImage": "url(https://images.pexels.com/photos/110874/pexels-photo-110874.jpeg?w=400&h=270)",
+            "height": 270,
+            "transform": "scale(1)",
+          }
+        }
       />
-      <li
-        className=""
-        key="1"
-        onClick={[Function]}
-      />
-      <li
-        className=""
-        key="2"
-        onClick={[Function]}
-      />
-      <li
-        className="uu5-bricks-carousel-indicators-active"
-        key="3"
-        onClick={[Function]}
-      />
-    </ol>
-    <a
-      className="uu5-bricks-carousel-right uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    </carousel-item>
+    <div
+      className="uu5-bricks-carousel-controls color-schema-pink"
     >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-left"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
+      >
+        <li
+          className=""
+          key="0"
+          onClick={[Function]}
+        />
+        <li
+          className=""
+          key="1"
+          onClick={[Function]}
+        />
+        <li
+          className=""
+          key="2"
+          onClick={[Function]}
+        />
+        <li
+          className="uu5-bricks-carousel-indicators-active"
+          key="3"
+          onClick={[Function]}
+        />
+      </ol>
+      <a
+        className="uu5-bricks-carousel-right uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel interface testing setPrevious(setStateCallBack) 1`] = `
-<div
-  className="color-schema-pink uu5-bricks-carousel"
-  id="uuID01"
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-      "width": 350,
-    }
-  }
-  title={null}
->
-  <carousel-item
-    id="uuID06"
-    key="uuID06"
-    position={0}
+<Fragment>
+  <div
+    className="color-schema-pink uu5-bricks-carousel"
+    id="uuID01"
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
     style={
       Object {
-        "height": null,
-        "transform": "translateX(0%)",
-        "width": "100%",
+        "height": "0px",
+        "width": 350,
       }
     }
+    title={null}
   >
-    <Div
-      id="uuID07"
+    <carousel-item
+      id="uuID06"
+      key="uuID06"
+      position={0}
       style={
         Object {
-          "backgroundImage": "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
-          "height": 270,
-          "transform": "scale(1)",
+          "height": null,
+          "transform": "translateX(0%)",
+          "width": "100%",
         }
       }
-    />
-  </carousel-item>
-  <div
-    className="uu5-bricks-carousel-controls color-schema-pink"
-  >
-    <a
-      className="uu5-bricks-carousel-left"
-      onClick={[Function]}
-      role="button"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <Div
+        id="uuID07"
+        style={
+          Object {
+            "backgroundImage": "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
+            "height": 270,
+            "transform": "scale(1)",
+          }
+        }
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
+    </carousel-item>
+    <div
+      className="uu5-bricks-carousel-controls color-schema-pink"
     >
-      <li
-        className=""
-        key="0"
+      <a
+        className="uu5-bricks-carousel-left"
         onClick={[Function]}
-      />
-      <li
-        className=""
-        key="1"
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
+      >
+        <li
+          className=""
+          key="0"
+          onClick={[Function]}
+        />
+        <li
+          className=""
+          key="1"
+          onClick={[Function]}
+        />
+        <li
+          className="uu5-bricks-carousel-indicators-active"
+          key="2"
+          onClick={[Function]}
+        />
+        <li
+          className=""
+          key="3"
+          onClick={[Function]}
+        />
+      </ol>
+      <a
+        className="uu5-bricks-carousel-right"
         onClick={[Function]}
-      />
-      <li
-        className="uu5-bricks-carousel-indicators-active"
-        key="2"
-        onClick={[Function]}
-      />
-      <li
-        className=""
-        key="3"
-        onClick={[Function]}
-      />
-    </ol>
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel interface testing setPrevious(setStateCallBack) 2`] = `
-<div
-  className="color-schema-pink uu5-bricks-carousel"
-  id="uuID01"
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-      "width": 350,
-    }
-  }
-  title={null}
->
-  <carousel-item
-    id="uuID04"
-    key="uuID04"
-    position={-100}
-    style={
-      Object {
-        "height": null,
-        "transform": "translateX(-100%)",
-        "width": "100%",
-      }
-    }
-  >
-    <Div
-      id="uuID05"
-      style={
-        Object {
-          "backgroundImage": "url(https://images.pexels.com/photos/639/clouds-rainy-rain-asia.jpg?w=400&h=270)",
-          "height": 270,
-          "transform": "scale(1)",
-        }
-      }
-    />
-  </carousel-item>
-  <carousel-item
-    id="uuID06"
-    key="uuID06"
-    position={0}
-    style={
-      Object {
-        "height": null,
-        "transform": "translateX(0%)",
-        "width": "100%",
-      }
-    }
-  >
-    <Div
-      id="uuID07"
-      style={
-        Object {
-          "backgroundImage": "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
-          "height": 270,
-          "transform": "scale(1)",
-        }
-      }
-    />
-  </carousel-item>
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-pink"
+    className="color-schema-pink uu5-bricks-carousel"
+    id="uuID01"
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+        "width": 350,
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left"
-      onClick={[Function]}
-      role="button"
+    <carousel-item
+      id="uuID04"
+      key="uuID04"
+      position={-100}
+      style={
+        Object {
+          "height": null,
+          "transform": "translateX(-100%)",
+          "width": "100%",
+        }
+      }
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <Div
+        id="uuID05"
+        style={
+          Object {
+            "backgroundImage": "url(https://images.pexels.com/photos/639/clouds-rainy-rain-asia.jpg?w=400&h=270)",
+            "height": 270,
+            "transform": "scale(1)",
+          }
+        }
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
+    </carousel-item>
+    <carousel-item
+      id="uuID06"
+      key="uuID06"
+      position={0}
+      style={
+        Object {
+          "height": null,
+          "transform": "translateX(0%)",
+          "width": "100%",
+        }
+      }
     >
-      <li
-        className=""
-        key="0"
-        onClick={[Function]}
+      <Div
+        id="uuID07"
+        style={
+          Object {
+            "backgroundImage": "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
+            "height": 270,
+            "transform": "scale(1)",
+          }
+        }
       />
-      <li
-        className="uu5-bricks-carousel-indicators-active"
-        key="1"
-        onClick={[Function]}
-      />
-      <li
-        className=""
-        key="2"
-        onClick={[Function]}
-      />
-      <li
-        className=""
-        key="3"
-        onClick={[Function]}
-      />
-    </ol>
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
+    </carousel-item>
+    <div
+      className="uu5-bricks-carousel-controls color-schema-pink"
     >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-left"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
+      >
+        <li
+          className=""
+          key="0"
+          onClick={[Function]}
+        />
+        <li
+          className="uu5-bricks-carousel-indicators-active"
+          key="1"
+          onClick={[Function]}
+        />
+        <li
+          className=""
+          key="2"
+          onClick={[Function]}
+        />
+        <li
+          className=""
+          key="3"
+          onClick={[Function]}
+        />
+      </ol>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;

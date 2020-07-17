@@ -23,6 +23,13 @@ import PanelStyles from "./internal/panel-styles.js";
 import "./panel.less";
 //@@viewOff:imports
 
+const EditablePanel = UU5.Common.Component.lazy(async () => {
+  await SystemJS.import("uu5g04-forms");
+  await SystemJS.import("uu5g04-bricks-editable");
+  return import("./internal/panel-editable.js");
+});
+
+let editationLazyLoaded = false;
 const MOUNT_CONTENT_VALUES = {
   onFirstRender: "onFirstRender",
   onFirstExpand: "onFirstExpand",
@@ -74,7 +81,9 @@ export const Panel = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.ColorSchemaMixin,
     UU5.Common.SectionMixin,
-    UU5.Common.NestingLevelMixin
+    UU5.Common.NestingLevelMixin,
+    // TODO Uncomment - new editation postponed.
+    // UU5.Common.EditableMixin
   ],
   //@@viewOff:mixins
 
@@ -140,7 +149,9 @@ export const Panel = UU5.Common.VisualComponent.create({
       size: "m",
       iconAlign: null,
       openClick: null,
-      mountContent: undefined
+      mountContent: undefined,
+      // TODO Uncomment - new editation postponed.
+      // contentEditable: true
     };
   },
   //@@viewOff:getDefaultProps
@@ -151,7 +162,8 @@ export const Panel = UU5.Common.VisualComponent.create({
     const expanded = this.props.alwaysExpanded || this.props.expanded;
     return {
       expanded,
-      renderChild: getMountContent(this.props) === MOUNT_CONTENT_VALUES.onFirstRender || expanded
+      renderChild: getMountContent(this.props) === MOUNT_CONTENT_VALUES.onFirstRender || expanded,
+      editationLazyLoaded: false
     };
   },
 
@@ -259,9 +271,44 @@ export const Panel = UU5.Common.VisualComponent.create({
       _colorSchema: this.props.colorSchemaHeader ? this.props.colorSchemaHeader : this.props.colorSchema
     });
   },
+
+  // TODO Uncomment - new editation postponed.
+  // onBeforeForceEndEditation_() {
+  //   return this._editablePanel ? this._editablePanel.getPropsToSave() : undefined;
+  // },
   //@@viewOff:overriding
 
   //@@viewOn:private
+  _registerNull(inst) {
+    // unmount of component means that suspense is loaded and component should be rendered
+    if (!inst) {
+      this.setState(state => {
+        if (state.editationLazyLoaded) return;
+
+        // Edit component is loaded - need to set to static variable because other Edit component does not render fallback component
+        // editationLazyLoaded is stored in both state and static variable for cases such as when more edit modes are loaded at the same time
+        editationLazyLoaded = true;
+        return { editationLazyLoaded: true };
+      });
+    }
+  },
+
+  _isEditationLazyLoaded() {
+    return editationLazyLoaded;
+  },
+
+  _renderEditationMode() {
+    return (
+      <UU5.Common.Suspense fallback={<span ref={this._registerNull} />}>
+        <EditablePanel component={this} ref_={this._registerEditablePanel} />
+      </UU5.Common.Suspense>
+    );
+  },
+
+  _registerEditablePanel(panel) {
+    this._editablePanel = panel;
+  },
+
   _updateExpandedValue(expanded, setStateCallback) {
     this.setState(function(state) {
       expanded = expanded !== undefined ? expanded : !state.expanded;
@@ -364,19 +411,6 @@ export const Panel = UU5.Common.VisualComponent.create({
     return this.getRenderedChildById(this._getBodyId()).getFullHeight();
   },
 
-  _checkParentTag() {
-    let parent = this.getParent();
-
-    if (parent) {
-      while (parent.getOpt("parentWrapper")) {
-        parent = parent.getParent();
-      }
-    }
-    return parent && parent.getTagName() === this.getDefault().parentTagName;
-  },
-  //@@viewOff:private
-
-  // Render
   _buildChildren() {
     var header = this.getHeader() || this.getDefault().header;
     var headerChild = this.buildHeaderChild({ header: header });
@@ -384,6 +418,8 @@ export const Panel = UU5.Common.VisualComponent.create({
 
     return [headerChild, bodyChild];
   },
+
+  //@@viewOff:private
 
   //@@viewOn:render
   render() {
@@ -409,8 +445,10 @@ export const Panel = UU5.Common.VisualComponent.create({
 
     return this.getNestingLevel() ? (
       <div {...mainProps}>
-        {this._buildChildren()}
-        {this.getDisabledCover()}
+        {this.state.editation ? this._renderEditationMode() : null}
+        {!this.state.editation || !this._isEditationLazyLoaded()
+          ? [this._buildChildren(), this.getDisabledCover()]
+          : null}
       </div>
     ) : null;
   }

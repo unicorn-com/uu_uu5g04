@@ -18,7 +18,7 @@ import ns from "./bricks-ns.js";
 const EditableContainer = UU5.Common.Component.lazy(async () => {
   await SystemJS.import("uu5g04-forms");
   await SystemJS.import("uu5g04-bricks-editable");
-  return import("./internal/container.js");
+  return import("./internal/container-editable.js");
 });
 
 let editationLazyLoaded = false;

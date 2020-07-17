@@ -2,37 +2,7 @@ import UU5 from "uu5g04";
 import { useLanguage, LanguageProvider } from "uu5g04-hooks";
 import "uu5g04-bricks"; // for legacy integration test
 
-const { mount, shallow, wait } = UU5.Test.Tools;
-
-// eslint-disable-next-line react/prop-types
-function Component({ children, hookArgs = [] }) {
-  let result = useLanguage(...hookArgs);
-  // NOTE Using Inner to measure render counts of subtrees (hooks are allowed to change their state during render
-  // because it results in re-calling of the Component but not of its subtree - we don't want to measure these
-  // shallow re-renders).
-  return <Inner result={result}>{children}</Inner>;
-}
-function Inner({ children, result }) {
-  return children(result);
-}
-
-function mountHook(...hookArgs) {
-  return mountHookWithWrapper(props => props.children, ...hookArgs);
-}
-
-function mountHookWithWrapper(Wrapper, ...hookArgs) {
-  let renderFn = jest.fn(() => <div />);
-  let wrapper = mount(
-    <Wrapper>
-      <Component hookArgs={hookArgs}>{renderFn}</Component>
-    </Wrapper>
-  );
-  return {
-    lastResult: () => renderFn.mock.calls[renderFn.mock.calls.length - 1][0],
-    renderCount: () => renderFn.mock.calls.length,
-    changeArgs: (...newArgs) => wrapper.setProps({ children: <Component hookArgs={newArgs}>{renderFn}</Component> })
-  };
-}
+const { mount, act, initHookRenderer, renderHook } = UU5.Test.Tools;
 
 let origLanguage;
 beforeEach(() => {
@@ -43,34 +13,38 @@ afterEach(() => {
 });
 
 describe("[uu5g04-hooks] useLanguage", () => {
-  let lastResult;
-
   it("should return expected result API", () => {
-    ({ lastResult } = mountHook());
+    let { lastResult } = renderHook(useLanguage);
     expect(lastResult()).toMatchObject([expect.any(String), expect.any(Function)]);
   });
 
   it("prop language; should return default language", async () => {
-    ({ lastResult } = mountHook());
+    let { lastResult } = renderHook(useLanguage);
     expect(lastResult()).toMatchObject(["en", expect.any(Function)]);
   });
 
   it("prop language; should return context language", async () => {
-    ({ lastResult } = mountHookWithWrapper(props => (
-      <LanguageProvider initialLanguage="es">{props.children}</LanguageProvider>
-    )));
+    let { lastResult, HookComponent } = initHookRenderer(useLanguage);
+    mount(
+      <LanguageProvider initialLanguage="es">
+        <HookComponent />
+      </LanguageProvider>
+    );
     expect(lastResult()).toMatchObject(["es", expect.any(Function)]);
   });
 
   it("setLanguage; should re-render with new language", async () => {
+    let { lastResult, HookComponent } = initHookRenderer(useLanguage);
     let onChangeFn = jest.fn();
-    ({ lastResult } = mountHookWithWrapper(props => (
+    mount(
       <LanguageProvider initialLanguage="es" onChange={onChangeFn}>
-        {props.children}
+        <HookComponent />
       </LanguageProvider>
-    )));
-    lastResult()[1]("ru");
-    await wait(); // so that effects run
+    );
+
+    act(() => {
+      lastResult()[1]("ru");
+    });
     expect(lastResult()).toMatchObject(["ru", expect.any(Function)]);
     expect(onChangeFn).toHaveBeenCalledTimes(1);
     expect(onChangeFn).toHaveBeenCalledWith({ language: "ru" });
@@ -78,8 +52,6 @@ describe("[uu5g04-hooks] useLanguage", () => {
 });
 
 describe("[uu5g04-hooks] useLanguage; legacy integration", () => {
-  let lastResult;
-
   // NOTE Components using LsiMixin not wrapped by LsiMixin.withContext
   // always use global language (not tested here).
 
@@ -99,33 +71,37 @@ describe("[uu5g04-hooks] useLanguage; legacy integration", () => {
   UU5.Environment._allowTestContext = false;
 
   it("should receive changes from legacy (UU5.Bricks.LsiContext)", async () => {
+    let { lastResult, HookComponent } = initHookRenderer(useLanguage);
     let ctx;
     let onChangeLanguageCheck = jest.fn();
-    ({ lastResult } = mountHookWithWrapper(props => (
+    mount(
       <UU5.Bricks.LsiContext>
         <WithLsiContextHoc onChangeLanguageCheck={onChangeLanguageCheck}>
           {value => ((ctx = value), null)}
         </WithLsiContextHoc>
-        {props.children}
+        <HookComponent />
       </UU5.Bricks.LsiContext>
-    )));
+    );
     expect(lastResult()).toMatchObject([ctx.getLanguage(), expect.any(Function)]);
 
-    ctx.setLanguage("ru");
+    act(() => {
+      ctx.setLanguage("ru");
+    });
     expect(lastResult()).toMatchObject(["ru", expect.any(Function)]);
     expect(ctx.getLanguage()).toBe("ru");
     expect(onChangeLanguageCheck).toHaveBeenLastCalledWith("ru"); // onChangeLanguage_ method in component should have been called after changing the language
   });
 
   it("should propagate changes to legacy", async () => {
+    let { lastResult, HookComponent } = initHookRenderer(useLanguage);
     let onReceiveContext = jest.fn(() => null);
     let onChangeLanguageCheck = jest.fn();
-    ({ lastResult } = mountHookWithWrapper(props => (
+    mount(
       <LanguageProvider>
         <WithLsiContextHoc onChangeLanguageCheck={onChangeLanguageCheck}>{onReceiveContext}</WithLsiContextHoc>
-        {props.children}
+        <HookComponent />
       </LanguageProvider>
-    )));
+    );
     expect(onReceiveContext).toHaveBeenCalledWith(
       expect.objectContaining({
         getLanguage: expect.any(Function),
@@ -138,37 +114,46 @@ describe("[uu5g04-hooks] useLanguage; legacy integration", () => {
     expect(mixinComponentProps().getLanguage()).toBe("en");
     expect(lastResult()).toMatchObject(["en", expect.any(Function)]);
 
-    mixinComponentProps().setLanguage("ru");
+    act(() => {
+      mixinComponentProps().setLanguage("ru");
+    });
     expect(mixinComponentProps().getLanguage()).toBe("ru");
     expect(onChangeLanguageCheck).toHaveBeenLastCalledWith("ru"); // onChangeLanguage_ method in component should have been called after changing the language
     expect(lastResult()).toMatchObject(["ru", expect.any(Function)]);
 
-    lastResult()[1]("es");
+    act(() => {
+      lastResult()[1]("es");
+    });
     expect(mixinComponentProps().getLanguage()).toBe("es");
     expect(onChangeLanguageCheck).toHaveBeenLastCalledWith("es"); // onChangeLanguage_ method in component should have been called after changing the language
     expect(lastResult()).toMatchObject(["es", expect.any(Function)]);
   });
 
   it("should propagate global language if no providers are used", async () => {
+    let { lastResult, HookComponent } = initHookRenderer(useLanguage);
     let onChangeLanguageCheck = jest.fn();
     let lsiHocComp;
-    ({ lastResult } = mountHookWithWrapper(props => (
+    mount(
       <div>
         <WithLsiContextHoc ref_={ref => (lsiHocComp = ref)} onChangeLanguageCheck={onChangeLanguageCheck}>
           {v => null}
         </WithLsiContextHoc>
-        {props.children}
+        <HookComponent />
       </div>
-    )));
+    );
     expect(lsiHocComp.getLanguage()).toBe("en");
     expect(lastResult()).toMatchObject(["en", expect.any(Function)]);
 
-    UU5.Common.Tools.setLanguage("ru");
+    act(() => {
+      UU5.Common.Tools.setLanguage("ru");
+    });
     expect(lsiHocComp.getLanguage()).toBe("ru");
     expect(onChangeLanguageCheck).toHaveBeenLastCalledWith("ru"); // onChangeLanguage_ method in component should have been called after changing the language
     expect(lastResult()).toMatchObject(["ru", expect.any(Function)]);
 
-    lastResult()[1]("es");
+    act(() => {
+      lastResult()[1]("es");
+    });
     expect(lsiHocComp.getLanguage()).toBe("es");
     expect(onChangeLanguageCheck).toHaveBeenLastCalledWith("es"); // onChangeLanguage_ method in component should have been called after changing the language
     expect(lastResult()).toMatchObject(["es", expect.any(Function)]);

@@ -14,7 +14,7 @@
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 
-const { mount, shallow } = UU5.Test.Tools;
+const { mount, wait } = UU5.Test.Tools;
 
 let origIsTrustedDomain;
 beforeEach(async () => {
@@ -45,13 +45,14 @@ describe(`UU5.Bricks.SessionWatch basic flow`, () => {
     let wrapper = mount(<UU5.Bricks.SessionWatch />);
     expect(wrapper.find(".uu5-bricks-session-watch.uu5-common-hidden").length).toBe(1);
     await UU5.Test.Session.setExpiring();
-    wrapper.update();
+    await wait(50); // SessionWatch renders Modal with animation which renders 1st time as hidden and after 1 animationFrame it gets visible (due to CSS transitions) - wait for animationFrame
     expect(wrapper.find(".uu5-bricks-session-watch.uu5-common-hidden").length).toBe(0);
   });
 
   it(`session is already expiring during mount`, async () => {
     await UU5.Test.Session.setExpiring();
     let wrapper = mount(<UU5.Bricks.SessionWatch />);
+    await wait(50); // SessionWatch renders Modal with animation which renders 1st time as hidden and after 1 animationFrame it gets visible (due to CSS transitions) - wait for animationFrame
     expect(wrapper.find(".uu5-bricks-session-watch.uu5-common-hidden").length).toBe(0);
   });
 });

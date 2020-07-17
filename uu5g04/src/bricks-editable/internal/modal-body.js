@@ -168,16 +168,21 @@ const ModalBody = UU5.Common.VisualComponent.create({
         display: flex;
         flex-grow: 1;
         justify-content: space-between;
+        max-width: 100%;
       `),
       headerLeftWrapper: props =>
         Css.css(`
         display: flex;
         align-items: center;
+        max-width: 100%;
         ${!isCompactVersion(props.screenSize) || !hasMenu(props) ? "padding-left: 8px;" : ""}
       `),
       headerText: () =>
         Css.css(`
         z-index: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       `),
       cancelButton: () =>
         Css.css(`
@@ -353,7 +358,8 @@ const ModalBody = UU5.Common.VisualComponent.create({
       size: undefined,
       onSaveAndClose: undefined,
       onCancel: undefined,
-      saveButtonProps: undefined
+      saveButtonProps: undefined,
+      menuWidth: 250
     };
   },
   //@@viewOff:getDefaultProps
@@ -597,7 +603,10 @@ const ModalBody = UU5.Common.VisualComponent.create({
       if (isValid) {
         this._closeModal(true);
       } else {
-        this._alertBus.setAlert({ content: "Atleast one of the editation forms is invalid!", colorSchema: "red" });
+        this._alertBus.setAlert({
+          content: this.getLsiComponent("onSaveInvalidForm"),
+          colorSchema: "red"
+        });
       }
     });
   },
@@ -797,7 +806,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
     return result;
   },
 
-  _onChange(propName, value, isRequired) {
+  _onChange(propName, value, isRequired, setStateCallback) {
     if (this.state.activeCategoryIndex === undefined && this.state.activeItemId) {
       this._onChangeItemProps(propName, value, isRequired);
     } else {
@@ -805,7 +814,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
     }
   },
 
-  _onChangeProps(propName, value, isRequired) {
+  _onChangeProps(propName, value, isRequired, setStateCallback) {
     if (this._propsToReturn.indexOf(propName) === -1) {
       this._propsToReturn.push(propName);
     }
@@ -824,10 +833,10 @@ const ModalBody = UU5.Common.VisualComponent.create({
           isRequired
         )
       };
-    });
+    }, setStateCallback);
   },
 
-  _onChangeItemProps(propName, value, isRequired) {
+  _onChangeItemProps(propName, value, isRequired, setStateCallback) {
     this._contentChanged = true;
 
     this.setState(state => {
@@ -852,7 +861,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
           isRequired
         )
       };
-    });
+    }, setStateCallback);
   },
 
   _onCustomChangeProps(componentIndex, newPropValues, errors) {
@@ -889,7 +898,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
         let matchingStateItem = state.items ? state.items[this._getItemIndexById(state.items, item.id)] : null;
 
-        if (this.props.newItem) {
+        if (!matchingStateItem && this.props.newItem) {
           item.props = { ...this.props.newItem.props, ...item.props };
         }
 
@@ -961,11 +970,14 @@ const ModalBody = UU5.Common.VisualComponent.create({
     let newPosition = values.position - 1;
 
     let items = [...this.state.items];
+    let itemsValidation = this.state.itemsValidation ? [...this.state.itemsValidation] : [];
     let movingItem = items.splice(this._movingItemIndex, 1)[0];
+    let movingItemValidation = itemsValidation.splice(this._movingItemIndex, 1)[0];
     items.splice(newPosition, 0, movingItem);
+    itemsValidation.splice(newPosition, 0, movingItemValidation);
 
     this._contentChanged = true;
-    this.setState({ itemMoveModalShown: false, items });
+    this.setState({ itemMoveModalShown: false, items, itemsValidation });
   },
 
   _onCancelItemMove() {
@@ -982,6 +994,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
   },
 
   // Currently not used
+  // TODO: Fix itemsValidation
   _itemMoveUp(index) {
     this._contentChanged = true;
 
@@ -996,6 +1009,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
   },
 
   // Currently not used
+  // TODO: Fix itemsValidation
   _itemMoveDown(index) {
     this._contentChanged = true;
 
@@ -1014,9 +1028,12 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
     this.setState(state => {
       let items = [...state.items];
+      let itemsValidation = state.itemsValidation ? [...state.itemsValidation] : [];
       let newItem = this._getNewItem();
       newItem.props = items[index].props;
-      items.splice(index + 1, 0, newItem);
+      let newItemsIndex = index + 1;
+      items.splice(newItemsIndex, 0, newItem);
+      itemsValidation.splice(newItemsIndex, 0, undefined);
 
       if (newItem.props) {
         this._itemsPropsToReturn[newItem.id] = Object.keys(newItem.props);
@@ -1033,9 +1050,11 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
         this.setState(state => {
           let items = [...state.items];
+          let itemsValidation = state.itemsValidation ? [...state.itemsValidation] : [];
           let removedItemId = items[index].id;
           let activeItemId = state.activeItemId;
           items.splice(index, 1);
+          itemsValidation.splice(index, 1);
 
           if (removedItemId === activeItemId) {
             let newActiveItem = items[items.length - 1];
@@ -1044,7 +1063,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
             }
           }
 
-          let newState = { items, activeItemId, confirmModalProps: undefined };
+          let newState = { items, activeItemId, itemsValidation, confirmModalProps: undefined };
 
           if (!items.length) {
             newState.items = undefined;
@@ -1068,6 +1087,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
     this.setState(state => {
       let items = state.items ? [...state.items] : null;
+      let itemsValidation = state.itemsValidation ? [...state.itemsValidation] : [];
 
       if (!Array.isArray(items)) {
         items = [];
@@ -1080,8 +1100,9 @@ const ModalBody = UU5.Common.VisualComponent.create({
       }
 
       items.push(newItem);
+      itemsValidation.push(undefined);
 
-      return { items };
+      return { items, itemsValidation };
     });
   },
 
@@ -1302,10 +1323,20 @@ const ModalBody = UU5.Common.VisualComponent.create({
           };
           break;
         case "colorSchemaPicker":
-          result.Component = "UU5.Forms.Select";
-          result.children = [...UU5.Environment.colorSchema].map(colorSchema => (
-            <UU5.Forms.Select.Option key={colorSchema} value={colorSchema} content={colorSchema} />
-          ));
+        case "colorSchema":
+          result.Component = ColorSchemaPicker;
+          break;
+        case "elevation":
+          result.Component = ElevationInput;
+          break;
+        case "borderRadius":
+          result.Component = BorderRadiusInput;
+          break;
+        case "bgStyle":
+          result.Component = BgStyleInput;
+          break;
+        case "iconPicker":
+          result.Component = "UU5.Forms.IconPicker";
           break;
         case "editorInput":
           result.Component = "UU5.RichText.EditorInput";
@@ -1318,19 +1349,19 @@ const ModalBody = UU5.Common.VisualComponent.create({
       switch (componentData.name) {
         case "elevation":
           result.Component = ElevationInput;
-          result.props.componentProps = this.state.propValues;
+          result.props.value = valueSource.elevation;
           break;
         case "borderRadius":
           result.Component = BorderRadiusInput;
-          result.props.componentProps = this.state.propValues;
+          result.props.value = valueSource.borderRadius;
           break;
         case "bgStyle":
           result.Component = BgStyleInput;
-          result.props.componentProps = this.state.propValues;
+          result.props.value = valueSource.bgStyle;
           break;
         case "colorSchema":
           result.Component = ColorSchemaPicker;
-          result.props.componentProps = this.state.propValues;
+          result.props.value = valueSource.colorSchema;
           break;
       }
     }
@@ -1340,7 +1371,15 @@ const ModalBody = UU5.Common.VisualComponent.create({
     }
 
     if (componentData.name) {
-      result.props[changeType] = opt => this._onChange(componentData.name, opt.value, !!componentData.required);
+      result.props[changeType] = opt => {
+        let defaultFn = typeof opt === "object" && opt.component && opt.component[`${changeType}Default`];
+        this._onChange(
+          componentData.name,
+          opt.value,
+          !!componentData.required,
+          typeof defaultFn === "function" ? defaultFn(opt) : undefined
+        );
+      };
     }
 
     if (result.Component !== "UU5.Bricks.Line") {
@@ -1358,7 +1397,10 @@ const ModalBody = UU5.Common.VisualComponent.create({
       result.props = { ...result.props, ...validation };
     }
 
-    let customProps = typeof componentData.getProps === "function" ? componentData.getProps(result.props) : null;
+    let customProps =
+      typeof componentData.getProps === "function"
+        ? componentData.getProps(result.props, this.state.propValues, this.state.items)
+        : null;
     if (customProps) {
       result.props = { ...result.props, ...customProps };
     }
@@ -1623,7 +1665,6 @@ const ModalBody = UU5.Common.VisualComponent.create({
   },
 
   _renderStandardLayout() {
-
     return (
       <UU5.Bricks.Row display="flex" className={this.getClassName("standardLayoutWrapper")}>
         {hasMenu(this.props) ? this._renderEditMenu() : null}

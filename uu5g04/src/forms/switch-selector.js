@@ -221,7 +221,7 @@ export const SwitchSelector = UU5.Bricks.Resize.withResize(
       },
 
       _getInitialValue(props = this.props) {
-        return props.value || props.items[0].value;
+        return props.value || (props.items && props.items.length && props.items[0].value) || undefined;
       },
 
       _onChange(opt) {

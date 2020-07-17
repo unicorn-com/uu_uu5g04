@@ -57,8 +57,9 @@ const MenuItemControls = UU5.Common.VisualComponent.create({
         align-items: center;
         display: flex;
         box-sizing: border-box;
-        height: 32px;
-        padding: 6px 16px 7px;
+        height: auto;
+        padding: 5px 16px 6px;
+        text-align: left;
       `),
       itemIconWrapper: () =>
         Css.css(`

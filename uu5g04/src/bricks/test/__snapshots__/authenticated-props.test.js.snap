@@ -1,66 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.Authenticated authenticated=false 1`] = `""`;
+exports[`UU5.Bricks.Authenticated authenticated=false 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated authenticated=true 1`] = `""`;
+exports[`UU5.Bricks.Authenticated authenticated=true 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated checkGrammar=false 1`] = `""`;
+exports[`UU5.Bricks.Authenticated checkGrammar=false 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated checkGrammar=true 1`] = `""`;
+exports[`UU5.Bricks.Authenticated checkGrammar=true 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated checkHighlight=false 1`] = `""`;
+exports[`UU5.Bricks.Authenticated checkHighlight=false 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated checkHighlight=true 1`] = `""`;
+exports[`UU5.Bricks.Authenticated checkHighlight=true 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated checkSpaces=false 1`] = `""`;
+exports[`UU5.Bricks.Authenticated checkSpaces=false 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated checkSpaces=true 1`] = `""`;
+exports[`UU5.Bricks.Authenticated checkSpaces=true 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated className="my-classname" 1`] = `""`;
+exports[`UU5.Bricks.Authenticated className="my-classname" 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated content="This is Content from ContentMixin" 1`] = `""`;
+exports[`UU5.Bricks.Authenticated content="This is Content from ContentMixin" 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated content=12345 1`] = `""`;
+exports[`UU5.Bricks.Authenticated content=12345 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated default props 1`] = `""`;
+exports[`UU5.Bricks.Authenticated default props 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated dynamic=false 1`] = `""`;
+exports[`UU5.Bricks.Authenticated dynamic=false 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated dynamic=true 1`] = `""`;
+exports[`UU5.Bricks.Authenticated dynamic=true 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated id="myId" 1`] = `""`;
+exports[`UU5.Bricks.Authenticated id="myId" 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated ignoreHTML=false 1`] = `""`;
+exports[`UU5.Bricks.Authenticated ignoreHTML=false 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated ignoreHTML=true 1`] = `""`;
+exports[`UU5.Bricks.Authenticated ignoreHTML=true 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated mainAttrs=undefined 1`] = `""`;
+exports[`UU5.Bricks.Authenticated mainAttrs=undefined 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated name="myName" 1`] = `""`;
+exports[`UU5.Bricks.Authenticated name="myName" 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated noIndex=false 1`] = `""`;
+exports[`UU5.Bricks.Authenticated noIndex=false 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated noIndex=true 1`] = `""`;
+exports[`UU5.Bricks.Authenticated noIndex=true 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated notAuthenticated=false 1`] = `""`;
+exports[`UU5.Bricks.Authenticated notAuthenticated=false 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated notAuthenticated=true 1`] = `""`;
+exports[`UU5.Bricks.Authenticated notAuthenticated=true 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated pending=false 1`] = `""`;
+exports[`UU5.Bricks.Authenticated pending=false 1`] = `<Fragment />`;
 
 exports[`UU5.Bricks.Authenticated pending=true 1`] = `
-<UU5.Common.TextCorrectorContextConsumer
-  key="0"
-  text="Content to render"
-/>
+<Fragment>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Content to render"
+  />
+</Fragment>
 `;
 
-exports[`UU5.Bricks.Authenticated style="padding:8px; borderRadius: 2px" 1`] = `""`;
+exports[`UU5.Bricks.Authenticated style="padding:8px; borderRadius: 2px" 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated style={"backgroundColor":"red","color":"blue"} 1`] = `""`;
+exports[`UU5.Bricks.Authenticated style={"backgroundColor":"red","color":"blue"} 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated textCorrector=false 1`] = `""`;
+exports[`UU5.Bricks.Authenticated textCorrector=false 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated textCorrector=true 1`] = `""`;
+exports[`UU5.Bricks.Authenticated textCorrector=true 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Authenticated tooltip="My Tooltip" 1`] = `""`;
+exports[`UU5.Bricks.Authenticated tooltip="My Tooltip" 1`] = `<Fragment />`;

@@ -22,7 +22,8 @@ const ElevationInput = createVisualComponent({
     componentProps: UU5.PropTypes.object,
     onChange: UU5.PropTypes.func,
     label: UU5.PropTypes.object,
-    items: UU5.PropTypes.arrayOf(UU5.PropTypes.object)
+    items: UU5.PropTypes.arrayOf(UU5.PropTypes.object),
+    value: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number])
   },
   //@@viewOff:propTypes
 
@@ -39,11 +40,12 @@ const ElevationInput = createVisualComponent({
       { value: "3" },
       { value: "4" },
       { value: "5" }
-    ]
+    ],
+    value: undefined
   },
   //@@viewOff:defaultProps
 
-  render({ items, label, componentProps, onChange, ...props }) {
+  render({ items, label, onChange, value, ...props }) {
     //@@viewOn:hooks
     //@@viewOff:hooks
 
@@ -58,8 +60,8 @@ const ElevationInput = createVisualComponent({
       <UU5.Forms.SwitchSelector
         {...props}
         label={label}
-        value={componentProps.elevation + ""}
-        onChange={opt => onChange({ value: +opt.value })}
+        value={value + ""}
+        onChange={opt => onChange({ ...opt, value: +opt.value })}
         items={items}
       />
     );

@@ -56,6 +56,7 @@ class Controls extends React.Component {
     let { config = {} } = this.state;
     let libItemAutoVersion = !config.enabled || !(config.items[LIB_NAME] || {}).version;
     let libItem = this._parsePath(paths[LIB_NAME]);
+    let cdnMajor = (libItem.cdnVersion || "").split(".")[0] || "1";
     return (
       <div style={{ position: "fixed", right: "0", top: "0" }}>
         <input type="checkbox" checked={this.state.config.enabled} onChange={this.toggleEnabled} />
@@ -69,7 +70,7 @@ class Controls extends React.Component {
           items={[
             { label: "auto", onClick: this._onItemClick },
             { label: "local", onClick: this._onItemClick },
-            { label: "CDN 1.0.0", onClick: this._onItemClick }
+            { label: "CDN " + cdnMajor + ".0.0", onClick: this._onItemClick }
           ]}
           disabled={!this.state.config.enabled}
         />

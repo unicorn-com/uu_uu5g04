@@ -1,3974 +1,4154 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UU5.Bricks.Carousel Default props + content 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="idRoot"
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
-  <carousel-item
-    id="idItems"
-    key="idItems"
-    position={0}
+<Fragment>
+  <div
+    className="color-schema-default uu5-bricks-carousel"
+    id="idRoot"
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
     style={
       Object {
-        "height": null,
-        "transform": "translateX(0%)",
-        "width": "100%",
+        "height": "0px",
       }
     }
+    title={null}
   >
-    <Div
-      id="idDiv"
+    <carousel-item
+      id="idItems"
+      key="idItems"
+      position={0}
       style={
         Object {
-          "backgroundImage": "url(https://unicorn.com/img/images/news/n2016080801/image-electricity-index.jpg)",
-          "height": 250,
-          "transform": "scale(1.5)",
+          "height": null,
+          "transform": "translateX(0%)",
+          "width": "100%",
         }
       }
-    />
-  </carousel-item>
-  <div
-    className="uu5-bricks-carousel-controls color-schema-default"
-  >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <Div
+        id="idDiv"
+        style={
+          Object {
+            "backgroundImage": "url(https://unicorn.com/img/images/news/n2016080801/image-electricity-index.jpg)",
+            "height": 250,
+            "transform": "scale(1.5)",
+          }
+        }
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
+    </carousel-item>
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <li
-        className="uu5-bricks-carousel-indicators-active"
-        key="0"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
         onClick={[Function]}
-      />
-    </ol>
-    <a
-      className="uu5-bricks-carousel-right uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
+      >
+        <li
+          className="uu5-bricks-carousel-indicators-active"
+          key="0"
+          onClick={[Function]}
+        />
+      </ol>
+      <a
+        className="uu5-bricks-carousel-right uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel activeIndex=0 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel activeIndex=1 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel activeIndex=2 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel activeIndex=3 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel checkGrammar=false 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel checkGrammar=true 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel checkHighlight=false 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel checkHighlight=true 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel checkSpaces=false 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel checkSpaces=true 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel className="my-classname" 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel my-classname"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel my-classname"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel colorSchema="brown" 1`] = `
-<div
-  className="color-schema-brown uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-brown"
+    className="color-schema-brown uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-brown"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel colorSchema="brown-rich" 1`] = `
-<div
-  className="color-schema-brown-rich uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-brown-rich"
+    className="color-schema-brown-rich uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-brown-rich"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel colorSchema="cyan" 1`] = `
-<div
-  className="color-schema-cyan uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-cyan"
+    className="color-schema-cyan uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-cyan"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel colorSchema="cyan-rich" 1`] = `
-<div
-  className="color-schema-cyan-rich uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-cyan-rich"
+    className="color-schema-cyan-rich uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-cyan-rich"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel colorSchema="default" 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel colorSchema="green" 1`] = `
-<div
-  className="color-schema-green uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-green"
+    className="color-schema-green uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-green"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel colorSchema="green-rich" 1`] = `
-<div
-  className="color-schema-green-rich uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-green-rich"
+    className="color-schema-green-rich uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-green-rich"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel colorSchema="grey" 1`] = `
-<div
-  className="color-schema-grey uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-grey"
+    className="color-schema-grey uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-grey"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel colorSchema="grey-rich" 1`] = `
-<div
-  className="color-schema-grey-rich uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-grey-rich"
+    className="color-schema-grey-rich uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-grey-rich"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel colorSchema="orange" 1`] = `
-<div
-  className="color-schema-orange uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-orange"
+    className="color-schema-orange uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-orange"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel colorSchema="orange-rich" 1`] = `
-<div
-  className="color-schema-orange-rich uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-orange-rich"
+    className="color-schema-orange-rich uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-orange-rich"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel colorSchema="pink" 1`] = `
-<div
-  className="color-schema-pink uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-pink"
+    className="color-schema-pink uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-pink"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel colorSchema="pink-rich" 1`] = `
-<div
-  className="color-schema-pink-rich uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-pink-rich"
+    className="color-schema-pink-rich uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-pink-rich"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel colorSchema="purple" 1`] = `
-<div
-  className="color-schema-purple uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-purple"
+    className="color-schema-purple uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-purple"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel colorSchema="purple-rich" 1`] = `
-<div
-  className="color-schema-purple-rich uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-purple-rich"
+    className="color-schema-purple-rich uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-purple-rich"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel colorSchema="red" 1`] = `
-<div
-  className="color-schema-red uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-red"
+    className="color-schema-red uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-red"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel colorSchema="red-rich" 1`] = `
-<div
-  className="color-schema-red-rich uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-red-rich"
+    className="color-schema-red-rich uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-red-rich"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel colorSchema="yellow" 1`] = `
-<div
-  className="color-schema-yellow uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-yellow"
+    className="color-schema-yellow uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-yellow"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel colorSchema="yellow-rich" 1`] = `
-<div
-  className="color-schema-yellow-rich uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-yellow-rich"
+    className="color-schema-yellow-rich uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-yellow-rich"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel content="This is Content from ContentMixin" 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel content=12345 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel controlled=false 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel controlled=true 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel default props 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel disabled=false 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel disabled=true 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel uu5-common-disabled"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel uu5-common-disabled"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
+    <span
+      className="uu5-common-disabled-cover"
+      key="disabledCover"
     />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
   </div>
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel displayedItems=0 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel displayedItems=1 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel displayedItems=2 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel displayedItems=3 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel dynamic=false 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel dynamic=true 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel hidden=false 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel hidden=true 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel uu5-common-hidden"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel uu5-common-hidden"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel hideControls=false 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel hideControls=true 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
+    >
+      <ol
+        className="uu5-bricks-carousel-indicators"
+      />
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel hideIndicators=false 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel hideIndicators=true 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
-      />
-    </a>
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel id="myId" 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="myId"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="myId"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel ignoreHTML=false 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel ignoreHTML=true 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel interval=0 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel interval=1000 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel interval=8000 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel mainAttrs=undefined 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel name="myName" 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  name="myName"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    name="myName"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel nextIcon="mdi-chevron-right" 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel noIndex=false 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel noIndex=true 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel uu5-noindex"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel uu5-noindex"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel prevIcon="mdi-chevron-left" 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel pureRender=false 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel pureRender=true 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel selected=false 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel selected=true 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel uu5-common-selected"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel uu5-common-selected"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel stepByOne=false 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel stepByOne=true 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel style="padding:8px; borderRadius: 2px" 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "borderRadius": "2px",
-      "height": "0px",
-      "padding": "8px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "borderRadius": "2px",
+        "height": "0px",
+        "padding": "8px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel style={"backgroundColor":"red","color":"blue"} 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "backgroundColor": "red",
+        "color": "blue",
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel swiped="down" 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel swiped="downLeft" 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel swiped="downRight" 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel swiped="left" 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel swiped="right" 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel swiped="up" 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel swiped="upLeft" 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel swiped="upRight" 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel swipedFast=false 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel swipedFast=null 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel swipedFast=true 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel swipedLong=false 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel swipedLong=null 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel swipedLong=true 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel textCorrector=false 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel textCorrector=true 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel tooltip="My Tooltip" 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title="My Tooltip"
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title="My Tooltip"
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel type="circular" 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel type="final" 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left uu5-bricks-carousel-last"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Carousel type="rewind" 1`] = `
-<div
-  className="color-schema-default uu5-bricks-carousel"
-  id="uuID"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "height": "0px",
-    }
-  }
-  title={null}
->
+<Fragment>
   <div
-    className="uu5-bricks-carousel-controls color-schema-default"
+    className="color-schema-default uu5-bricks-carousel"
+    id="uuID"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "height": "0px",
+      }
+    }
+    title={null}
   >
-    <a
-      className="uu5-bricks-carousel-left"
-      onClick={[Function]}
-      role="button"
+    <div
+      className="uu5-bricks-carousel-controls color-schema-default"
     >
-      <Icon
-        icon="mdi-chevron-left"
+      <a
+        className="uu5-bricks-carousel-left"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-left"
+        />
+      </a>
+      <ol
+        className="uu5-bricks-carousel-indicators"
       />
-    </a>
-    <ol
-      className="uu5-bricks-carousel-indicators"
-    />
-    <a
-      className="uu5-bricks-carousel-right"
-      onClick={[Function]}
-      role="button"
-    >
-      <Icon
-        icon="mdi-chevron-right"
-      />
-    </a>
+      <a
+        className="uu5-bricks-carousel-right"
+        onClick={[Function]}
+        role="button"
+      >
+        <Icon
+          icon="mdi-chevron-right"
+        />
+      </a>
+    </div>
   </div>
-</div>
+</Fragment>
 `;

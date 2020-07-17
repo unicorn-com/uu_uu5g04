@@ -16,9 +16,9 @@ import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import Modal from "./modal.js";
+import { RenderIntoPortal } from "./internal/portal.js";
 
 import "./confirm-modal.less";
-import { getPortalElement } from "./internal/portal.js";
 //@@viewOff:imports
 
 export const ConfirmModal = UU5.Common.VisualComponent.create({
@@ -114,7 +114,6 @@ export const ConfirmModal = UU5.Common.VisualComponent.create({
   _close(setStateCallback) {
     delete this._refs.modal;
     this.setState({ isOpened: false }, (...params) => {
-      this._tryToRemovePortal();
       setStateCallback && setStateCallback(...params);
     });
   },
@@ -145,16 +144,6 @@ export const ConfirmModal = UU5.Common.VisualComponent.create({
     );
   },
 
-  _tryToRemovePortal() {
-    // try to remove portal from DOM if does not exists
-    if (!this.state.isOpened) {
-      const portal = getPortalElement();
-      if (portal && portal.childNodes.length === 0) {
-        portal.parentNode.removeChild(portal);
-      }
-    }
-  },
-
   _confirm(callback) {
     const onConfirm = this.state.props.onConfirm || this.props.onConfirm;
     this._closeDialog(() => {
@@ -183,24 +172,23 @@ export const ConfirmModal = UU5.Common.VisualComponent.create({
       ...this.state.props
     };
 
-    return this.state.isOpened
-      ? UU5.Common.Portal.create(
-          <Modal
-            {...props}
-            ref_={this._registerModal}
-            onClose={this._refuse}
-            forceRender={true}
-            footer={this._renderFooter({
-              confirmButtonProps,
-              refuseButtonProps,
-              confirmButtonLeft,
-              onRefuse: this._refuse,
-              onConfirm: this._confirm
-            })}
-          />,
-          getPortalElement(true)
-        )
-      : null;
+    return this.state.isOpened ? (
+      <RenderIntoPortal>
+        <Modal
+          {...props}
+          ref_={this._registerModal}
+          onClose={this._refuse}
+          forceRender={true}
+          footer={this._renderFooter({
+            confirmButtonProps,
+            refuseButtonProps,
+            confirmButtonLeft,
+            onRefuse: this._refuse,
+            onConfirm: this._confirm
+          })}
+        />
+      </RenderIntoPortal>
+    ) : null;
   }
   //@@viewOff:render
 });

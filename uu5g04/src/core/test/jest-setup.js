@@ -29,8 +29,9 @@ const UU5 = require("uu5g04");
 // i.e. unmock would be called sooner than the mock was defined.
 const { Tools } = require("uu5g04-test");
 
-// set language to "en"
+// set language to "en", timezone to Europe/Prague (requires NodeJS >= 13.x to have effect)
 UU5.Common.Tools.setLanguage("en");
+if (!process.env.TZ) process.env.TZ = "Europe/Prague";
 
 // override logging (don't log context with React components because the output is too long)
 UU5.Common.Tools.warning = function(msg, context = {}) {

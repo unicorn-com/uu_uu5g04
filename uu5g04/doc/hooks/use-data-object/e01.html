@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 01</title>
+
+  <script>
+    if (!location.href.match(/^(about:|file:)/)) {
+      var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+      var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+      if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+      var appBaseUrlPath = (location.pathname.split(/\//).slice(0, 1 + bplSegmentCount).join("/") + "/").replace(/\/+/g, "/").replace(/"/g, "");
+      var appAssetsRelativeUrlPath = "public/0.0.0/";
+      document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    }
+  </script>
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/4.0.0/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/4.0.0/uu_appg01.min.js",
+        "uu_appg01_oidc": "https://cdn.plus4u.net/uu-appg01-oidc/2.0.0/uu_appg01_oidc.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/beta/uu-uu5g04/1.32.0-hooks.8/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/beta/uu-uu5g04/1.32.0-hooks.8/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/beta/uu-uu5g04/1.32.0-hooks.8/uu5g04-forms.min.js",
+        "uu5g04-block-layout": "https://cdn.plus4u.net/beta/uu-uu5g04/1.32.0-hooks.8/uu5g04-block-layout.min.js",
+        "uu5g04-hooks": "https://cdn.plus4u.net/beta/uu-uu5g04/1.32.0-hooks.8/uu5g04-hooks.min.js",
+      }
+    });
+  </script>
+
+  <style>
+    .margin {
+      margin-top: 16px !important;
+    }
+
+    .uu5-bricks-button + .uu5-bricks-button {
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+  import "uu5g04-block-layout";
+  import { useDataObject, createVisualComponent, useState, useRef, useEffect } from "uu5g04-hooks";
+  import { Session } from "uu_appg01_oidc";
+  import { Client } from "uu_appg01";
+
+  let callDelay = 1500;
+  let error = false;
+
+  const Calls = {
+    // ...
+    load(dtoIn) {
+      let commandUri = Calls.getCommandUri("joke/get");
+      return Calls.call("get", commandUri, dtoIn);
+    },
+
+    update(newData) {
+      let commandUri = Calls.getCommandUri("joke/update");
+      return Calls.call("post", commandUri, newData);
+    },
+
+    create(newData) {
+      let commandUri = Calls.getCommandUri("joke/create");
+      return Calls.call("post", commandUri, newData);
+    },
+
+    delete(dtoIn) {
+      let commandUri = Calls.getCommandUri("joke/delete");
+      return Calls.call("post", commandUri, dtoIn);
+    },
+  };
+
+  Calls.call = async (method, uri, dtoIn) => {
+    let startTime = Date.now();
+    try {
+      //  if we're loading a joke then load joke list and get 1st joke from that
+      if (!dtoIn && uri.endsWith("/get")) {
+        let listResponse = await Client.get(uri.replace(/\/get$/, "/list"), { pageInfo: { pageSize: 1 } });
+        dtoIn = { id: (listResponse.data.itemList[0] || {}).id };
+      }
+
+      let clientOptions = error ? { headers: { authorization: null } } : undefined;
+      let response = await Client[method](uri, dtoIn, clientOptions);
+      return response.data;
+    } finally {
+      await new Promise(resolve => setTimeout(resolve, Math.max(0, callDelay - (Date.now() - startTime))));
+    }
+  };
+  Calls.getCommandUri = useCase => "https://uuappg01-eu-w-1.plus4u.net/uu-jokes-maing01/4ef6a7b01b5942ecbfb925b249af987f/" + useCase;
+
+  function usePreviousValue(curValue, initialValue = undefined) {
+    let curValueRef = useRef(initialValue);
+    useEffect(() => {
+      curValueRef.current = curValue;
+    });
+    return curValueRef.current;
+  }
+
+  /*@@viewOn:example*/
+  const STATICS = {
+    //@@viewOn:statics
+    displayName: "UU5.Demo.ProgressBus"
+    //@@viewOff:statics
+  };
+
+  const ITEM_WARN_START_DELAY = 1000;
+  const ITEM_SUCCESS_TIMEOUT = 5000;
+
+  export const ProgressBus = createVisualComponent({
+    ...STATICS,
+
+    //@@viewOn:propTypes
+    propTypes: {
+      pendingData: UU5.PropTypes.any, // FIXME
+      errorData: UU5.PropTypes.any, // FIXME
+      successMessage: UU5.PropTypes.any // FIXME
+    },
+    //@@viewOff:propTypes
+
+    //@@viewOn:defaultProps
+    defaultProps: {},
+    //@@viewOff:defaultProps
+
+    render(props) {
+      //@@viewOn:private
+      let { pendingData, errorData } = props;
+      let itemIdRef = useRef();
+      let busRef = useRef();
+
+      let prevPendingData = usePreviousValue(pendingData);
+      useEffect(() => {
+        let result;
+        if (!prevPendingData && pendingData) {
+          // new pendingData arrived => show new item in the progress bus
+          if (itemIdRef.current) busRef.current.removeItem(itemIdRef.current);
+          let id = busRef.current.addItem({
+            colorSchema: "primary",
+            pending: true
+          });
+          let timeout = setTimeout(() => {
+            busRef.current.updateItem(id, { colorSchema: "warning" });
+          }, ITEM_WARN_START_DELAY);
+          itemIdRef.current = id;
+          result = () => clearTimeout(timeout);
+        } else if (prevPendingData && !pendingData) {
+          // item stopped being "pending" => show success or error
+          let id = itemIdRef.current;
+          if (errorData) {
+            busRef.current.updateItem(id, {
+              colorSchema: "danger",
+              pending: false,
+              message: errorData.error.message
+            });
+          }
+          else {
+            busRef.current.updateItem(id, {
+              colorSchema: "success",
+              pending: false,
+              timeout: ITEM_SUCCESS_TIMEOUT
+            });
+          }
+        }
+        return result;
+      }, [prevPendingData, pendingData, errorData]);
+      //@@viewOff:private
+
+      //@@viewOn:interface
+      //@@viewOff:interface
+
+      //@@viewOn:render
+      const attrs = UU5.Common.VisualComponent.getAttrs(props);
+      const currentNestingLevel = UU5.Utils.NestingLevel.getNestingLevel(props, STATICS);
+      return (
+        <UU5.Bricks.ProgressBus {...attrs} nestingLevel={currentNestingLevel} ref={busRef} />
+      );
+      //@@viewOff:render
+    }
+  });
+  /*@@viewOff:example*/
+
+  const Example = createVisualComponent({
+    render() {
+      let dataObject = useDataObject({
+        handlerMap: {
+          load: Calls.load,
+          updateName: (...args) => {
+            console.log("update name");
+            return Calls.update(...args)
+          },
+          updateDesc: (...args) => {
+            console.log("update desc");
+            return Calls.update(...args)
+          },
+          create: Calls.create,
+          delete: Calls.delete,
+          // setData: data => data
+        },
+        // initialDtoIn: undefined,
+        // initialData: undefined, // {"name":"A0 Skydiving","text":"Why don't blind people skydive? Because it scares the crap out of their dogs.","averageRating":0,"ratingCount":0,"visibility":false,"uuIdentity":"127-0000-0000-1","uuIdentityName":"Milan Šatka","awid":"4ef6a7b01b5942ecbfb925b249af987f","categoryList":[],"sys":{"cts":"2020-06-09T08:23:30.699Z","mts":"2020-06-09T08:23:30.699Z","rev":0},"id":"5edf47021d5ce800255e7000","uuAppErrorMap":{}}
+      });
+      let { state, data, errorData, pendingData, handlerMap } = dataObject;
+      console.log(dataObject);
+
+      return (
+        <UU5.Bricks.Div>
+          <UU5.Bricks.Button disabled={state === "pending" || state === "pendingNoData"} onClick={() => handlerMap.load()}>
+            Load
+          </UU5.Bricks.Button>
+          <UU5.Bricks.Button disabled={state === "pending" || state === "pendingNoData" || data == null} onClick={() => handlerMap.updateDesc({
+            id: data.id,
+            text: data.text.replace(/ Edited at.*/, "") + " Edited at " + new Date().toISOString().replace(/^.*T|\..*/g,
+              "") + "Z"
+          })}>
+            Update
+          </UU5.Bricks.Button>
+          <UU5.Bricks.Button disabled={state === "pending" || state === "pendingNoData"} onClick={() => handlerMap.create({
+            name: "A0 Skydiving",
+            text: "Why don't blind people skydive? Because it scares the crap out of their dogs."
+          })}>
+            Create
+          </UU5.Bricks.Button>
+          <UU5.Bricks.Button disabled={state === "pending" || state === "pendingNoData" || data == null} onClick={() => handlerMap.delete({ id: data.id })}>
+            Delete
+          </UU5.Bricks.Button>
+
+          {/*@@viewOn:example*/}
+          <ProgressBus pendingData={pendingData} errorData={errorData} />
+          {/*@@viewOff:example*/}
+
+          <UU5.Bricks.Row className="margin">
+            <UU5.Bricks.Column colWidth="s-6 m-4">
+              {data != null ? (
+                <Joke
+                  data={data}
+                  errorData={errorData}
+                  onUpdate={state === "pending" ? null : data => handlerMap.updateName({
+                    id: data.id,
+                    text: data.text.replace(/ Edited at.*/, "") + " Edited at " + new Date().toISOString().replace(
+                      /^.*T|\..*/g, "") + "Z"
+                  })}
+                  onDelete={state === "pending" ? null : data => handlerMap.delete({ id: data.id })}
+                />
+              ) : "\xa0"}
+            </UU5.Bricks.Column>
+            <UU5.Bricks.Column colWidth="s-6 m-8">
+              <UU5.Bricks.Pre className={UU5.Common.Css.css`max-height: 500px; overflow-y: scroll;`}>
+                {JSON.stringify({
+                  state,
+                  data,
+                  pendingData,
+                  errorData,
+                  handlerMap: Object.keys(handlerMap).reduce((r, k) => (r[k] = typeof handlerMap[k] === "function" ? "function(dtoIn)" : handlerMap[k], r), {}),
+                }, null, 2)}
+              </UU5.Bricks.Pre>
+            </UU5.Bricks.Column>
+          </UU5.Bricks.Row>
+        </UU5.Bricks.Div>
+      );
+    }
+  });
+
+  const Joke = createVisualComponent({
+    render(props) {
+      let { errorData, onUpdate, onDelete, data } = props;
+      const attrs = UU5.Common.VisualComponent.getAttrs(props);
+      return (
+        <UU5.BlockLayout.Tile {...attrs} colorSchema={errorData ? "danger" : undefined}>
+          <UU5.BlockLayout.Block
+            actions={[
+              {
+                content: "Update",
+                icon: "mdi-update",
+                active: true,
+                disabled: !onUpdate,
+                colorSchema: "primary",
+                onClick: () => onUpdate(data)
+              },
+              {
+                content: "Delete",
+                icon: "mdi-delete",
+                active: true,
+                disabled: !onDelete,
+                colorSchema: "danger",
+                onClick: () => onDelete(data)
+              }
+            ]}
+          >
+            <UU5.BlockLayout.Row weight="primary" ellipses>
+              {data.name}
+            </UU5.BlockLayout.Row>
+            <UU5.BlockLayout.Row>
+              {data.text}
+            </UU5.BlockLayout.Row>
+          </UU5.BlockLayout.Block>
+        </UU5.BlockLayout.Tile>
+      );
+    }
+  });
+
+  const Page = createVisualComponent({
+    render() {
+      let [errorFlag, setErrorFlag] = useState(false);
+
+      return (
+        <UU5.Bricks.Container>
+          <UU5.Common.Session session={Session.currentSession}>
+            <UU5.Common.Identity>
+              <UU5.Common.Identity.Item notAuthenticated>
+                <UU5.Bricks.Button onClick={() => Session.currentSession.login()}>Login</UU5.Bricks.Button>
+              </UU5.Common.Identity.Item>
+              <UU5.Common.Identity.Item pending></UU5.Common.Identity.Item>
+
+              <UU5.Common.Identity.Item authenticated>
+                <div className={UU5.Common.Css.css`margin-top: 100px;`}>
+                  <UU5.Forms.Checkbox
+                    label="Server Error"
+                    inputWidth="32px"
+                    value={errorFlag}
+                    onChange={({ value }) => {
+                      error = value;
+                      setErrorFlag(value)
+                    }}
+                  />
+                  <UU5.Forms.Slider
+                    label="Server Call Delay [ms]"
+                    labelWidth="auto"
+                    value={callDelay}
+                    controlled={false}
+                    onChange={opt => {
+                      opt.component.onChangeDefault(opt);
+                      callDelay = opt.value;
+                    }}
+                    min={0}
+                    max={5000}
+                    step={500}
+                  />
+                </div>
+
+                <Example />
+              </UU5.Common.Identity.Item>
+            </UU5.Common.Identity>
+          </UU5.Common.Session>
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  UU5.Common.DOM.render(<Page />, document.getElementById("uu5Example"));
+</script>
+</body>
+</html>

@@ -1,5 +1,4 @@
-import UU5 from "uu5g04";
-export const FormsLsi = {
+export const EditableLsi = {
   common: {
     headerPlaceholder: {
       cs: "Hlavička",
@@ -48,6 +47,86 @@ export const FormsLsi = {
     controlsCancelButton: {
       cs: "Zrušit",
       en: "Cancel"
+    },
+    itemInfo: {
+      cs: 'Pro upravení obsahu položky použijte "inline" editaci mimo toto modální okno',
+      en: 'To edit the item\'s content use the "inline" editation outside of the modal window.'
+    },
+    componentPropsLabel: {
+      cs: "Základní vlastnosti",
+      en: "Basic properties",
+      sk: "Základné vlastnosti",
+      uk: "Основні властивості"
+    },
+    advancedPropsLabel: {
+      cs: "Pokročilé",
+      en: "Advanced",
+      sk: "Vedľajšie",
+      uk: "Розширений"
+    },
+    displayPropsLabel: {
+      cs: "Vzhled",
+      en: "Visual",
+      sk: "Vzhľad",
+      uk: "Зовнішній вигляд"
+    },
+    bgStyleValueFilled: {
+      cs: "vyplněný",
+      en: "filled",
+      sk: "vyplnený",
+      uk: "заповнене"
+    },
+    bgStyleValueOutline: {
+      cs: "ohraničený",
+      en: "outline",
+      sk: "ohraničený",
+      uk: "контур"
+    },
+    bgStyleValueTransparent: {
+      cs: "transparentní",
+      en: "transparent",
+      sk: "transparentné",
+      uk: "прозорий"
+    },
+    bgStyleValueUnderline: {
+      cs: "podtržený",
+      en: "underline",
+      sk: "podčiarknutý",
+      uk: "підкреслення"
+    },
+    colorSchema: {
+      cs: "Barva",
+      en: "Color"
+    },
+    sizeLabel: {
+      cs: "Velikost",
+      en: "Size",
+      sk: "Veľkosť",
+      uk: "Розмір"
+    },
+    sizeValueS: {
+      cs: "s",
+      en: "s",
+      sk: "s",
+      uk: "s"
+    },
+    sizeValueM: {
+      cs: "m",
+      en: "m",
+      sk: "m",
+      uk: "m"
+    },
+    sizeValueL: {
+      cs: "l",
+      en: "l",
+      sk: "l",
+      uk: "l"
+    },
+    sizeValueXL: {
+      cs: "xl",
+      en: "xl",
+      sk: "xl",
+      uk: "xl"
     }
   },
   section: {},
@@ -97,24 +176,24 @@ export const FormsLsi = {
       en: "Display"
     },
     displayValueStandard: {
-      cs: "Standardní",
-      en: "Standard"
+      cs: "standardní",
+      en: "standard"
     },
     displayValueFlex: {
-      cs: "Flex",
-      en: "Flex"
+      cs: "flex",
+      en: "flex"
     },
     horizontalPaddingLabel: {
       cs: "Horizontalní padding",
       en: "Horizontal padding"
     },
     horizontalPaddingValueStandard: {
-      cs: "Standard",
-      en: "Standard"
+      cs: "standard",
+      en: "standard"
     },
     horizontalPaddingValueNone: {
-      cs: "Bez paddingu",
-      en: "None"
+      cs: "bez paddingu",
+      en: "none"
     },
     classNameLabel: {
       cs: "CSS třída",
@@ -161,12 +240,12 @@ export const FormsLsi = {
       en: "Horizontal padding"
     },
     horizontalPaddingValueStandard: {
-      cs: "Standard",
-      en: "Standard"
+      cs: "standard",
+      en: "standard"
     },
     horizontalPaddingValueNone: {
-      cs: "Bez paddingu",
-      en: "None"
+      cs: "bez paddingu",
+      en: "none"
     },
     classNameLabel: {
       cs: "CSS třída",
@@ -181,7 +260,7 @@ export const FormsLsi = {
         "Můžete definovat šířku sloupce pomocí standardních CSS jednotek, např. 200px, 10em nebo 33%. Také ale můžete použít jednotky pro responzivní zobrazení, např „xs-6 m-3”.",
       en:
         "You can define column’s width with standard CSS values like 200px, 10em or 33%. You can also use values for responsive grid like „xs-6 m-3”."
-    },
+    }
   },
   block: {
     backgroundCheckboxLabel: {
@@ -221,12 +300,12 @@ export const FormsLsi = {
       en: "Footer alignment"
     },
     footerAlignmentLeft: {
-      cs: "Vlevo",
-      en: "Left"
+      cs: "vlevo",
+      en: "left"
     },
     footerAlignmentRight: {
-      cs: "Vpravo",
-      en: "Right"
+      cs: "vpravo",
+      en: "right"
     },
     noSpacingTooltip: {
       cs: "Nulové odsazení",
@@ -240,9 +319,408 @@ export const FormsLsi = {
     },
     colorSchemaTooltip: {
       cs: "Barevnost",
-      en: "Color Schema"
+      en: "Color"
+    }
+  },
+  authenticated: {
+    authenticated: {
+      en: "Authenticated",
+      cs: "Přihlášený"
+    },
+    notAuthenticated: {
+      en: "Unathenticated",
+      cs: "Nepřihlášený"
+    },
+    pending: {
+      en: "Pending",
+      cs: "Neznámý"
+    }
+  },
+  tabs: {
+    typeLabel: {
+      cs: "Typ zobrazení záložek",
+      en: "Type",
+      sk: "Typ zobrazenia záložiek",
+      uk: "Тип відображення закладок"
+    },
+    typeValueTabs: {
+      cs: "podtržené záložky",
+      en: "tabs",
+      sk: "podčiarknuté záložky",
+      uk: "підкреслені закладки"
+    },
+    typeValuePills: {
+      cs: "vyplněné záložky",
+      en: "pills",
+      sk: "vyplnené záložky",
+      uk: "заповнені закладки"
+    },
+    borderRadiusLabel: {
+      cs: "Zaoblení okrajů",
+      en: "Border Radius",
+      sk: "Zaobalenie okrajov",
+      uk: "Радіус заокруглення"
+    },
+    borderRadiusPlaceholder: {
+      cs: "Např. 16px 16px 0 0",
+      en: "For example 16px 16px 0 0",
+      sk: "Napr. 16px 16px 0 0",
+      uk: "Напр. 16px 16px 0 0"
+    },
+    elevationLabel: {
+      cs: "Úroveň vyvýšení aktivní záložky",
+      en: "Elevation of Active Tab",
+      sk: "Úroveň vyvýšenia aktívnej záložky",
+      uk: "Рівень підйому активної закладки"
+    },
+    elevationHoverLabel: {
+      cs: "Úroveň vyvýšení aktivní záložky při najetí",
+      en: "Elevation Hover of Active tab",
+      sk: "Úroveň vyvýšenia aktívnej záložky pri nabehnutí",
+      uk: "Рівень підйому активної закладки при наведенні"
+    },
+    justifiedLabel: {
+      cs: "Zarovnání záložek",
+      en: "Justified",
+      sk: "Zarovnanie záložiek",
+      uk: "Вирівнювання закладок"
+    },
+    justifiedValueFalse: {
+      cs: "vypnuto",
+      en: "disabled",
+      sk: "vypnuté",
+      uk: "вимкнено"
+    },
+    justifiedValueTrue: {
+      cs: "zapnuto",
+      en: "enabled",
+      sk: "zapnuté",
+      uk: "увімкнено"
+    },
+    fadeLabel: {
+      cs: "Animace při změně aktivního tabu",
+      en: "Active tab change animation",
+      sk: "Animácia pri zmene aktívneho tabu",
+      uk: "Анімація зміни активної закладки"
+    },
+    fadeValueFalse: {
+      cs: "vypnuto",
+      en: "disabled",
+      sk: "vypnuté",
+      uk: "вимкнено"
+    },
+    fadeValueTrue: {
+      cs: "zapnuto",
+      en: "enabled",
+      sk: "zapnuté",
+      uk: "yвімкнено"
+    },
+    underlineLabel: {
+      cs: "Podtržení záhlaví",
+      en: "Underline",
+      sk: "Podčiarknutie záhlavia",
+      uk: "Підкреслити заголовок"
+    },
+    underlineValueFalse: {
+      cs: "vypnuto",
+      en: "disabled",
+      sk: "vypnuté",
+      uk: "вимкнено"
+    },
+    underlineValueTrue: {
+      cs: "zapnuto",
+      en: "enabled",
+      sk: "zapnuté",
+      uk: "yвімкнено"
+    },
+    idLabel: {
+      cs: "Id komponenty",
+      en: "Component's id",
+      sk: "Id komponenty",
+      uk: "Id компоненту"
+    },
+    disabledLabel: {
+      cs: "Stav komponenty",
+      en: "Component's state",
+      sk: "Stav komponenty",
+      uk: "Стани компоненту"
+    },
+    disabledValueFalse: {
+      cs: "aktivní",
+      en: "enabled",
+      sk: "aktívny",
+      uk: "активний"
+    },
+    disabledValueTrue: {
+      cs: "neaktivní",
+      en: "disabled",
+      sk: "neaktívny",
+      uk: "неактивний"
+    },
+    mountTabContentLabel: {
+      en: "Tab content mount method",
+      cs: "Způsob přimountění obsahu záložek"
+    },
+    mountTabContentValueOnActive: {
+      en: "on active",
+      cs: "při zaktivnění"
+    },
+    mountTabContentValueOnFirstActive: {
+      en: "on first active",
+      cs: "při prvním zaktivnění"
+    },
+    mountContentDescription: {
+      en: `Defines when is the content of the tab mounted. Choosing a value like "on active" is recommended for performance optimalization.`,
+      cs: `Udává kdy se namountí obsah jednotlivých záložek. Výběr hodnoty jako je "při zaktivnění" je doporučen pro optimalizaci výkonu.`
+    },
+    tabNameLabel: {
+      cs: "Název záložky",
+      en: "Tab's name",
+      sk: "Názov záložky",
+      uk: "Назва закладки"
+    },
+    tabHeaderLabel: {
+      cs: "Hlavička záložky",
+      en: "Tab's Header",
+      sk: "Hlavička záložky",
+      uk: "Заголовок закладки"
+    },
+    newItemHeader: {
+      cs: "Nová položka",
+      en: "New Item",
+      sk: "Nová položka",
+      uk: "Новий товар"
+    }
+  },
+  box: {
+    infoHeaderLabel: {
+      cs: "Hlavička informačního modálu",
+      en: "Information Modal Header",
+      sk: "Hlavička informačného modalu",
+      uk: "Заголовок інформаційного вікна"
+    },
+    infoContentLabel: {
+      cs: "Obsah informačního modálu",
+      en: "Information Modal Content",
+      sk: "Obsah informačného modalu",
+      uk: "Зміст інформаційного вікна"
+    }
+  },
+  qRCode: {
+    modalHeader: {
+      cs: "Upravit QR kód",
+      en: "Edit QR code"
+    },
+    valueLabel: {
+      en: "Value",
+      cs: "Hodnota"
+    },
+    sizeLabel: {
+      en: "Size",
+      cs: "Velikost"
+    },
+    correctionLabel: {
+      en: "Correction",
+      cs: "Korekce"
+    },
+    correctionMessage: {
+      en: "Defines an error correction capability of the generated QR Code in percentages.",
+      cs: "Definuje schopnost korekce chyb vygenerované QR kódu v procentech."
+    },
+    lowValue: {
+      en: "low (7%)",
+      cs: "nízká (7%)"
+    },
+    mediumValue: {
+      en: "medium (15%)",
+      cs: "střední (15%)"
+    },
+    quartileValue: {
+      en: "quartile (25%)",
+      cs: "čtvrtinová (25%)"
+    },
+    highValue: {
+      en: "high (30%)",
+      cs: "vysoká (30%)"
+    }
+  },
+  carousel: {
+    modalHeader: {
+      cs: "Upravit carousel",
+      en: "Edit carousel"
+    },
+    hideControlsLabel: {
+      cs: "Skrýt ovládací prvky",
+      en: "Hide controls"
+    },
+    hideIndicatorsLabel: {
+      cs: "Skrýt indikátory",
+      en: "Hide indicators"
+    },
+    activeIndexLabel: {
+      cs: "Výchozí aktivní položka",
+      en: "Initial active item"
+    },
+    nextIconLabel: {
+      cs: 'Ikona "Další"',
+      en: '"Next" icon'
+    },
+    prevIconLabel: {
+      cs: 'Ikona "Předchozí"',
+      en: '"Previous" icon'
+    },
+    displayedItemsLabel: {
+      cs: "Počet naráz zobrazených položek",
+      en: "Number of items displayed at once"
+    },
+    typeLabel: {
+      cs: "Typ",
+      en: "Type"
+    },
+    typeValueCircular: {
+      en: "circular",
+      cs: "okružní"
+    },
+    typeValueFinal: {
+      en: "final",
+      cs: "uzavřený"
+    },
+    typeValueRewind: {
+      en: "rewind",
+      cs: "převíjený"
+    },
+    intervalLabel: {
+      cs: "Interval",
+      en: "Interval"
+    },
+    stepByOneLabel: {
+      cs: "Krokování po jedné položce",
+      en: "Step by one item"
+    },
+    itemLabel: {
+      cs: "Položka ${itemNumber}",
+      en: "Item ${itemNumber}"
+    }
+  },
+  panel: {
+    modalHeader: {
+      cs: "Upravit panel",
+      en: "Edit panel"
+    },
+    expandedLabel: {
+      en: "Expanded",
+      cs: "Otevřený panel"
+    },
+    alwaysExpandedLabel: {
+      en: "Always expanded",
+      cs: "Vždy otevřený panel"
+    },
+    iconExpandedLabel: {
+      en: "Icon expanded",
+      cs: "Ikona otevřeného panelu"
+    },
+    iconCollapsedLabel: {
+      en: "Icon collapsed",
+      cs: "Ikona zavřeného panelu"
+    },
+    iconAlignLabel: {
+      en: "Icon align",
+      cs: "Umístění ikony"
+    },
+    iconAlignValueLeft: {
+      en: "left",
+      cs: "vlevo"
+    },
+    iconAlignValueRight: {
+      en: "right",
+      cs: "vpravo"
+    },
+    iconAlignValueAfter: {
+      en: "after",
+      cs: "za textem"
+    },
+    openClickLabel: {
+      en: "Open panel by click on",
+      cs: "Panel se otevře kliknutím na"
+    },
+    openClickValueHeader: {
+      en: "header",
+      cs: "hlavičku"
+    },
+    openClickValueIcon: {
+      en: "icon",
+      cs: "ikonu"
+    },
+    bgStyleHeaderLabel: {
+      en: "Header background style",
+      cs: "Styl pozadí hlavičky"
+    },
+    bgStyleContentLabel: {
+      en: "Content background style",
+      cs: "Styl pozadí obsahu"
+    },
+    colorSchemaHeaderLabel: {
+      en: "Header color schema",
+      cs: "Barevné schéma hlavičky"
+    },
+    colorSchemaContentLabel: {
+      en: "Content color schema",
+      cs: "Barevné schéma hlavičky"
+    },
+    elevationLabel: {
+      en: "Elevation"
+    },
+    mountContentLabel: {
+      en: "Mount content method",
+      cs: "Vykreslení obsahu"
+    },
+    mountContentValueOnEachExpand: {
+      en: "on each expand",
+      cs: "při každém rozbalení"
+    },
+    mountContentValueOnFirstExpand: {
+      en: "on first expand",
+      cs: "při prvním rozbalení"
+    },
+    mountContentValueOnFirstRender: {
+      en: "on first render",
+      cs: "při prvním vykreslení"
+    },
+    mountContentDescription: {
+      en: `Defines when is the content of the panel mounted. Choosing a value like "on each expand" is recommended for performance optimalization.`,
+      cs: `Definuje, kdy je obsah panelu vykreslen. Vybrání hodnoty "při každém rozbalení" je doporučeno z hlediska optimalizace výkonu.`
+    }
+  },
+  accordion: {
+    modalHeader: {
+      cs: "Upravit accordion",
+      en: "Edit accordion"
+    },
+    onClickNotCollapseOthersLabel: {
+      cs: "Povolit více otevřených panelů naráz",
+      en: "Allow multiple expanded panels at once"
+    },
+    mountPanelContentLabel: {
+      en: "Mount panel content method",
+      cs: "Vykreslení obsahu panelů"
+    },
+    mountPanelContentValueOnEachExpand: {
+      en: "on each expand",
+      cs: "při každém rozbalení"
+    },
+    mountPanelContentValueOnFirstExpand: {
+      en: "on first expand",
+      cs: "při prvním rozbalení"
+    },
+    mountPanelContentValueOnFirstRender: {
+      en: "on first render",
+      cs: "při prvním vykreslení"
+    },
+    mountPanelContentDescription: {
+      en: `Defines when is the content of each of the panels mounted. Choosing a value like "on each expand" is recommended for performance optimalization.`,
+      cs: `Definuje, kdy je obsah všech vložených panelů vykreslen. Vybrání hodnoty "při každém rozbalení" je doporučeno z hlediska optimalizace výkonu.`
     }
   }
 };
 
-export default FormsLsi;
+export default EditableLsi;

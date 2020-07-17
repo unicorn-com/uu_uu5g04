@@ -7,8 +7,10 @@ exports[`UU5.Common.Router - Internal Interface test allowPageLeave() 1`] = `
     key=".0"
     params={Object {}}
   />
-  <UU5.Bricks.PortalModal
+  <Modal
+    controlled={false}
     key=".1"
+    location="portal"
     ref_={[Function]}
   />
 </Fragment>
@@ -21,8 +23,10 @@ exports[`UU5.Common.Router - Internal Interface test allowPageLeave() 2`] = `
     key=".0"
     params={Object {}}
   />
-  <UU5.Bricks.PortalModal
+  <Modal
+    controlled={false}
     key=".1"
+    location="portal"
     ref_={[Function]}
   />
 </Fragment>
@@ -35,8 +39,10 @@ exports[`UU5.Common.Router - Internal Interface test preventPageLeave() 1`] = `
     key=".0"
     params={Object {}}
   />
-  <UU5.Bricks.PortalModal
+  <Modal
+    controlled={false}
     key=".1"
+    location="portal"
     ref_={[Function]}
   />
 </Fragment>
@@ -49,8 +55,10 @@ exports[`UU5.Common.Router - Internal Interface test preventPageLeave() 2`] = `
     key=".0"
     params={Object {}}
   />
-  <UU5.Bricks.PortalModal
+  <Modal
+    controlled={false}
     key=".1"
+    location="portal"
     ref_={[Function]}
   />
 </Fragment>
@@ -63,8 +71,10 @@ exports[`UU5.Common.Router - Internal Interface test scrollToFragment() 1`] = `
     key=".0"
     params={Object {}}
   />
-  <UU5.Bricks.PortalModal
+  <Modal
+    controlled={false}
     key=".1"
+    location="portal"
     ref_={[Function]}
   />
 </Fragment>
@@ -77,8 +87,10 @@ exports[`UU5.Common.Router - Internal Interface test scrollToFragment() 2`] = `
     key=".0"
     params={Object {}}
   />
-  <UU5.Bricks.PortalModal
+  <Modal
+    controlled={false}
     key=".1"
+    location="portal"
     ref_={[Function]}
   />
 </Fragment>
@@ -91,8 +103,10 @@ exports[`UU5.Common.Router - Internal Interface test setRoute() 1`] = `
     key=".0"
     params={Object {}}
   />
-  <UU5.Bricks.PortalModal
+  <Modal
+    controlled={false}
     key=".1"
+    location="portal"
     ref_={[Function]}
   />
 </Fragment>
@@ -109,8 +123,10 @@ exports[`UU5.Common.Router - Internal Interface test setRoute() 2`] = `
       }
     }
   />
-  <UU5.Bricks.PortalModal
+  <Modal
+    controlled={false}
     key=".1"
+    location="portal"
     ref_={[Function]}
   />
 </Fragment>

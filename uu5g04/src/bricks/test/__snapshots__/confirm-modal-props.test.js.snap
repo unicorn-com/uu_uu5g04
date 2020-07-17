@@ -1,13 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UU5.Bricks.ConfirmModal props ConfirmModal snapshot 1`] = `
-<Portal
-  containerInfo={
-    <div
-      id="uu5-common-portal-modal"
-    />
-  }
->
+<RenderIntoPortal>
   <Modal
     footer={
       <div
@@ -98,5 +92,5 @@ exports[`UU5.Bricks.ConfirmModal props ConfirmModal snapshot 1`] = `
     sticky={true}
     stickyBackground={true}
   />
-</Portal>
+</RenderIntoPortal>
 `;

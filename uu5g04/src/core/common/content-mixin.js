@@ -17,6 +17,7 @@ import Tools, { REGEXP } from "./tools.js";
 import Environment from "../environment/environment.js";
 import UU5String from "./uu5string/uu5-string.js";
 import { TextCorrectorContextConsumer } from "./text-corrector-context-consumer.js";
+import Element from "./element.js";
 
 const PseudoUU5Component = () => null;
 PseudoUU5Component.isUu5PureComponent = true;
@@ -193,7 +194,7 @@ export const ContentMixin = {
       this.isDynamic() && (newChildProps.id = newChildProps.id || Tools.generateUUID());
 
       if (typeof this.expandChildProps_ === "function") {
-        let tempChild = React.cloneElement(prevChild, newChildProps);
+        let tempChild = Element.clone(prevChild, newChildProps);
         newChildProps = this.expandChildProps_(tempChild, childIndex);
       }
     }
@@ -230,9 +231,9 @@ export const ContentMixin = {
   cloneChild(child, props) {
     let clonedChild;
     if (typeof this.expandChild_ === "function") {
-      clonedChild = this.expandChild_(React.cloneElement(child, props), props.key);
+      clonedChild = this.expandChild_(Element.clone(child, props), props.key);
     } else {
-      clonedChild = this.expandChildDefault(React.cloneElement(child, props), props.key);
+      clonedChild = this.expandChildDefault(Element.clone(child, props), props.key);
     }
 
     return clonedChild;
@@ -338,17 +339,18 @@ export const ContentMixin = {
     }
 
     switch (contentType) {
-      case "bodyItem":
+      case "bodyItem": {
         let bodyItemChild = this.buildChild(contentValue.tag, contentValue.props);
         this.shouldChildRender(bodyItemChild) &&
           (children = [this.cloneChild(bodyItemChild, childPropsExpander(bodyItemChild, childIndex))]);
         break;
+      }
       case "array":
         children = contentValue.map((bodyItem, i) => {
           return this.buildChildren({ content: bodyItem }, childPropsExpander, i);
         });
         break;
-      case "items":
+      case "items": {
         let tag = Tools.checkTag(contentValue.tag, true);
         children = [];
         contentValue.propsArray.forEach((props, i) => {
@@ -357,6 +359,7 @@ export const ContentMixin = {
           this.shouldChildRender(child) && children.push(child);
         });
         break;
+      }
       case "string":
         if (!this.__isTextCorrector(contentValue)) {
           this.shouldChildRender(contentValue) && (children = contentValue);
@@ -1273,7 +1276,7 @@ export const ContentMixin = {
             if (!container.state.filteredProps || newProps) {
               newProps &&
                 Object.keys(newProps).length !== 0 &&
-                (child = React.cloneElement(child, Tools.mergeDeep({}, child.props, newProps)));
+                (child = Element.clone(child, Tools.mergeDeep({}, child.props, newProps)));
 
               if (typeof index === "number") {
                 newChildren[index] = child;

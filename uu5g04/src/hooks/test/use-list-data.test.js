@@ -1,19 +1,7 @@
 import UU5 from "uu5g04";
 import { useListData } from "uu5g04-hooks";
 
-const { mount, shallow, wait } = UU5.Test.Tools;
-
-// eslint-disable-next-line react/prop-types
-function Component({ children, hookArgs }) {
-  let result = useListData(...hookArgs);
-  // NOTE Using Inner to measure render counts of subtrees (hooks are allowed to change their state during render
-  // because it results in re-calling of the Component but not of its subtree - we don't want to measure these
-  // shallow re-renders).
-  return <Inner result={result}>{children}</Inner>;
-}
-function Inner({ children, result }) {
-  return children(result);
-}
+const { renderHook, wait, act } = UU5.Test.Tools;
 
 const INITIAL_DATA1 = [{ id: "id1", value: "x" }];
 const LOAD_DATA1 = [
@@ -24,19 +12,7 @@ const LOAD_DATA1 = [
 ];
 const LOAD_DATA2 = [{ id: "idA", value: "1" }];
 
-function mountHook(...hookArgs) {
-  let renderFn = jest.fn(() => <div />);
-  let wrapper = mount(<Component hookArgs={hookArgs}>{renderFn}</Component>);
-  // expect(renderFn.mock.calls.length).toBe(1);
-  return {
-    lastResult: () => renderFn.mock.calls[renderFn.mock.calls.length - 1][0],
-    renderCount: () => renderFn.mock.calls.length,
-    changeArgs: (...newArgs) => wrapper.setProps({ hookArgs: newArgs }),
-    allResults: () => renderFn.mock.calls.map(cl => cl[0])
-  };
-}
-
-function mountHookParallelOps(initialDataFromOnLoad) {
+function renderHookParallelOps(initialDataFromOnLoad) {
   let waitable = defaultFn => {
     return jest.fn(async (...args) => {
       let lastArg = args.pop();
@@ -50,7 +26,7 @@ function mountHookParallelOps(initialDataFromOnLoad) {
   let onCreate = waitable();
   let onDelete = waitable();
 
-  let result = mountHook({ onLoad, onUpdate, onCreate, onDelete });
+  let result = renderHook(useListData, { onLoad, onUpdate, onCreate, onDelete });
   result.onLoad = onLoad;
   result.onUpdate = onUpdate;
   result.onCreate = onCreate;
@@ -63,7 +39,9 @@ function mountHookParallelOps(initialDataFromOnLoad) {
     let opFinisherFn = typeof args[args.length - 1] === "function" ? args.pop() : null;
     let typeCapitalized = type.replace(/^./, m => m.toUpperCase());
     let hookValue = result.lastResult();
-    hookValue["handle" + typeCapitalized](...args, { promise: pausingPromise, fn: opFinisherFn });
+    act(() => {
+      hookValue["handle" + typeCapitalized](...args, { promise: pausingPromise, fn: opFinisherFn });
+    });
     return {
       async unblock() {
         pausingPromiseResolve();
@@ -75,10 +53,8 @@ function mountHookParallelOps(initialDataFromOnLoad) {
 }
 
 describe("[uu5g04-hooks] useListData behaviour", () => {
-  let lastResult, changeArgs, startOp, renderCount;
-
   it("should return expected result API", () => {
-    ({ lastResult } = mountHook());
+    let { lastResult } = renderHook(useListData);
     expect(lastResult()).toMatchObject({
       syncData: null,
       asyncData: null,
@@ -95,7 +71,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
   });
 
   it("data; should use initial data", () => {
-    ({ lastResult } = mountHook({ data: INITIAL_DATA1 }));
+    let { lastResult } = renderHook(useListData, { data: INITIAL_DATA1 });
     expect(lastResult()).toMatchObject({
       syncData: INITIAL_DATA1,
       asyncData: INITIAL_DATA1,
@@ -108,7 +84,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
 
   it("data; should use initial data without calling onLoad", async () => {
     let onLoad = jest.fn(async () => LOAD_DATA1);
-    ({ lastResult } = mountHook({ onLoad, data: INITIAL_DATA1 }));
+    let { lastResult } = renderHook(useListData, { onLoad, data: INITIAL_DATA1 });
     expect(lastResult()).toMatchObject({
       syncData: INITIAL_DATA1,
       asyncData: INITIAL_DATA1,
@@ -124,7 +100,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
   it("dtoIn; should pass dtoIn to initial load", async () => {
     let dtoIn = { a: "b" };
     let onLoad = jest.fn(async () => LOAD_DATA1);
-    ({ lastResult } = mountHook({ onLoad, dtoIn }));
+    renderHook(useListData, { onLoad, dtoIn });
     await wait();
     expect(onLoad).toHaveBeenCalledTimes(1);
     expect(onLoad).toHaveBeenCalledWith(dtoIn);
@@ -134,9 +110,9 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     let dtoIn = { a: "b" };
     let onLoad1 = jest.fn(async () => LOAD_DATA1);
     let onLoad2 = jest.fn(async () => LOAD_DATA2);
-    ({ lastResult, changeArgs } = mountHook({ onLoad: onLoad1, dtoIn }));
+    let { rerender } = renderHook(useListData, { onLoad: onLoad1, dtoIn });
     await wait();
-    changeArgs({ onLoad: onLoad2, dtoIn });
+    rerender({ onLoad: onLoad2, dtoIn });
     await wait();
     expect(onLoad2).toHaveBeenCalledTimes(1);
     expect(onLoad2).toHaveBeenCalledWith(dtoIn);
@@ -146,9 +122,9 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     let dtoIn1 = { a: "b" };
     let dtoIn2 = { a: "c" };
     let onLoad = jest.fn(async () => LOAD_DATA1);
-    ({ lastResult, changeArgs } = mountHook({ onLoad, dtoIn: dtoIn1 }));
+    let { rerender } = renderHook(useListData, { onLoad, dtoIn: dtoIn1 });
     await wait();
-    changeArgs({ onLoad, dtoIn: dtoIn2 });
+    rerender({ onLoad, dtoIn: dtoIn2 });
     await wait();
     expect(onLoad).toHaveBeenCalledTimes(2);
     expect(onLoad).toHaveBeenLastCalledWith(dtoIn2);
@@ -157,15 +133,18 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
   it("dtoIn; should not pass dtoIn to handleLoad loads", async () => {
     let dtoIn = { a: "b" };
     let onLoad = jest.fn(async () => LOAD_DATA1);
-    ({ lastResult } = mountHook({ onLoad, dtoIn }));
+    let { lastResult } = renderHook(useListData, { onLoad, dtoIn });
     await wait();
-    lastResult().handleLoad();
+    act(() => {
+      lastResult().handleLoad();
+    });
+    await wait();
     expect(onLoad).toHaveBeenCalledTimes(2);
     expect(onLoad).toHaveBeenLastCalledWith();
   });
 
   it("onLoad; should update state after onLoad (success)", async () => {
-    ({ lastResult } = mountHook({ onLoad: jest.fn(async () => LOAD_DATA1) }));
+    let { lastResult } = renderHook(useListData, { onLoad: jest.fn(async () => LOAD_DATA1) });
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: LOAD_DATA1,
@@ -179,11 +158,11 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
 
   it("onLoad; should update state after onLoad (error)", async () => {
     let error = 123;
-    ({ lastResult, changeArgs } = mountHook({
+    let { lastResult } = renderHook(useListData, {
       onLoad: jest.fn(async () => {
         throw (error = new Error("Test error"));
       })
-    }));
+    });
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: null,
@@ -197,15 +176,15 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
 
   it("onLoad; should do reload if onLoad changes & should reset error state", async () => {
     let error = 123;
-    ({ lastResult, changeArgs } = mountHook({
+    let { lastResult, rerender } = renderHook(useListData, {
       onLoad: jest.fn(async () => {
         throw (error = new Error("Test error"));
       })
-    }));
+    });
     await wait();
     expect(lastResult()).toMatchObject({ error });
 
-    changeArgs({ onLoad: jest.fn(async () => LOAD_DATA2) });
+    rerender({ onLoad: jest.fn(async () => LOAD_DATA2) });
     expect(lastResult()).toMatchObject({
       viewState: "load",
       operations: [{ type: "load", state: "pending", result: undefined }]
@@ -226,7 +205,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     let onLoad = jest.fn();
     onLoad.mockImplementationOnce(async () => LOAD_DATA1);
     onLoad.mockImplementationOnce(async () => LOAD_DATA2);
-    ({ lastResult } = mountHook({ onLoad }));
+    let { lastResult } = renderHook(useListData, { onLoad });
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: LOAD_DATA1,
@@ -238,9 +217,11 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     });
 
     let handleLoadResolved;
-    lastResult()
-      .handleLoad(LOAD_PARAMS)
-      .then(() => (handleLoadResolved = true));
+    act(() => {
+      lastResult()
+        .handleLoad(LOAD_PARAMS)
+        .then(() => (handleLoadResolved = true));
+    });
     expect(onLoad).toHaveBeenCalledTimes(2);
     expect(onLoad).lastCalledWith(LOAD_PARAMS);
     expect(lastResult()).toMatchObject({
@@ -271,7 +252,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     onLoad.mockImplementationOnce(async () => {
       throw (error = new Error("Test error"));
     });
-    ({ lastResult } = mountHook({ onLoad }));
+    let { lastResult } = renderHook(useListData, { onLoad });
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: LOAD_DATA1,
@@ -283,10 +264,12 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     });
 
     let handleLoadResolved;
-    lastResult()
-      .handleLoad()
-      .catch(e => null)
-      .then(() => (handleLoadResolved = true));
+    act(() => {
+      lastResult()
+        .handleLoad()
+        .catch(e => null)
+        .then(() => (handleLoadResolved = true));
+    });
     expect(onLoad).toHaveBeenCalledTimes(2);
     expect(onLoad).lastCalledWith();
     expect(lastResult()).toMatchObject({
@@ -311,7 +294,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
   });
 
   it("handleLoad; should do nothing without onLoad", async () => {
-    ({ lastResult, renderCount } = mountHook({ data: INITIAL_DATA1 }));
+    let { lastResult, renderCount } = renderHook(useListData, { data: INITIAL_DATA1 });
     await wait();
     let expectedRenderCount = renderCount();
     lastResult().handleLoad();
@@ -324,13 +307,15 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     const CREATE1_FULL = { a: "b" };
     let data = [{ id: "a" }, { id: "b" }];
     let onCreate = jest.fn(async () => CREATE1_FULL);
-    ({ lastResult, changeArgs } = mountHook({ onCreate, data }));
+    let { lastResult } = renderHook(useListData, { onCreate, data });
     await wait();
 
     let handleCreateResolved;
-    lastResult()
-      .handleCreate(CREATE1)
-      .then(() => (handleCreateResolved = true));
+    act(() => {
+      lastResult()
+        .handleCreate(CREATE1)
+        .then(() => (handleCreateResolved = true));
+    });
     expect(onCreate).toHaveBeenCalledTimes(1);
     expect(onCreate).toHaveBeenCalledWith(CREATE1);
     expect(lastResult()).toMatchObject({
@@ -360,13 +345,15 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     const CREATE1_MERGED = CREATE1_FULL.map((it, i) => ({ ...CREATE1[i], ...it }));
     let data = [{ id: "a" }, { id: "b" }];
     let onCreate = jest.fn(async () => CREATE1_FULL);
-    ({ lastResult, changeArgs } = mountHook({ onCreate, data }));
+    let { lastResult } = renderHook(useListData, { onCreate, data });
     await wait();
 
     let handleCreateResolved;
-    lastResult()
-      .handleCreate(CREATE1)
-      .then(() => (handleCreateResolved = true));
+    act(() => {
+      lastResult()
+        .handleCreate(CREATE1)
+        .then(() => (handleCreateResolved = true));
+    });
     expect(onCreate).toHaveBeenCalledTimes(1);
     expect(onCreate).toHaveBeenCalledWith(CREATE1);
     expect(lastResult()).toMatchObject({
@@ -393,13 +380,15 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
   it("handleCreate; should create data even without onCreate (success, bulk)", async () => {
     const CREATE1 = [{ key: "created1" }, { key: "created2" }];
     let data = [{ id: "a" }, { id: "b" }];
-    ({ lastResult, changeArgs } = mountHook({ data }));
+    let { lastResult } = renderHook(useListData, { data });
     await wait();
 
     let handleCreateResolved;
-    lastResult()
-      .handleCreate(CREATE1)
-      .then(() => (handleCreateResolved = true));
+    act(() => {
+      lastResult()
+        .handleCreate(CREATE1)
+        .then(() => (handleCreateResolved = true));
+    });
     expect(lastResult()).toMatchObject({
       syncData: data.concat(CREATE1),
       asyncData: data.concat(CREATE1),
@@ -415,9 +404,11 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
 
   it("handleCreate; should pass extra call args to onCreate()", async () => {
     let onCreate = jest.fn(async () => null);
-    ({ lastResult, renderCount } = mountHook({ onCreate, data: INITIAL_DATA1 }));
+    let { lastResult } = renderHook(useListData, { onCreate, data: INITIAL_DATA1 });
     await wait();
-    lastResult().handleCreate("a", "b", 123, false);
+    act(() => {
+      lastResult().handleCreate("a", "b", 123, false);
+    });
     await wait();
     expect(onCreate).lastCalledWith("a", "b", 123, false);
   });
@@ -429,12 +420,14 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     let onCreate = jest.fn(async () => {
       throw (error = new Error("Test error"));
     });
-    ({ lastResult, changeArgs } = mountHook({ onCreate, data }));
+    let { lastResult } = renderHook(useListData, { onCreate, data });
     await wait();
 
-    lastResult()
-      .handleCreate(CREATE1)
-      .catch(e => null);
+    act(() => {
+      lastResult()
+        .handleCreate(CREATE1)
+        .catch(e => null);
+    });
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: data,
@@ -453,12 +446,14 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     let onCreate = jest.fn(async () => {
       return Promise.reject((error = { message: "Failed to create." }));
     });
-    ({ lastResult, changeArgs } = mountHook({ onCreate, data }));
+    let { lastResult } = renderHook(useListData, { onCreate, data });
     await wait();
 
-    lastResult()
-      .handleCreate(CREATE1)
-      .catch(e => null);
+    act(() => {
+      lastResult()
+        .handleCreate(CREATE1)
+        .catch(e => null);
+    });
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: data.concat([{ ...CREATE1, ...error }]),
@@ -483,12 +478,14 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     let onCreate = jest.fn(async () => {
       return Promise.reject((error = CREATE1_FAIL));
     });
-    ({ lastResult, changeArgs } = mountHook({ onCreate, data }));
+    let { lastResult } = renderHook(useListData, { onCreate, data });
     await wait();
 
-    lastResult()
-      .handleCreate(CREATE1)
-      .catch(e => null);
+    act(() => {
+      lastResult()
+        .handleCreate(CREATE1)
+        .catch(e => null);
+    });
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: data,
@@ -508,12 +505,14 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     let onCreate = jest.fn(async () => {
       return Promise.reject((error = CREATE1_FAIL));
     });
-    ({ lastResult, changeArgs } = mountHook({ onCreate, data }));
+    let { lastResult } = renderHook(useListData, { onCreate, data });
     await wait();
 
-    lastResult()
-      .handleCreate(CREATE1)
-      .catch(e => null);
+    act(() => {
+      lastResult()
+        .handleCreate(CREATE1)
+        .catch(e => null);
+    });
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: data.concat(CREATE1.map((it, i) => ({ ...it, ...CREATE1_FAIL[i] })).slice(1)),
@@ -537,13 +536,15 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     const UPDATE1_FULL = { a: "b" };
     let data = [{ id: "a", key: "orig-a", a: "orig-a" }, { id: "b", key: "orig-b", a: "orig-b" }];
     let onUpdate = jest.fn(async () => UPDATE1_FULL);
-    ({ lastResult, changeArgs } = mountHook({ onUpdate, data }));
+    let { lastResult } = renderHook(useListData, { onUpdate, data });
     await wait();
 
     let handleUpdateResolved;
-    lastResult()
-      .handleUpdate("a", UPDATE1)
-      .then(() => (handleUpdateResolved = true));
+    act(() => {
+      lastResult()
+        .handleUpdate("a", UPDATE1)
+        .then(() => (handleUpdateResolved = true));
+    });
     expect(onUpdate).toHaveBeenCalledTimes(1);
     expect(onUpdate).toHaveBeenCalledWith("a", UPDATE1);
     expect(lastResult()).toMatchObject({
@@ -574,14 +575,16 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     const UPDATE1_FULL = { a: "b" };
     let data = [{ id: "a", key: "orig-a", a: "orig-a" }, { id: "b", key: "orig-b", a: "orig-b" }];
     let onUpdate = jest.fn(async () => UPDATE1_FULL);
-    ({ lastResult, changeArgs } = mountHook({ onUpdate, data }));
+    let { lastResult } = renderHook(useListData, { onUpdate, data });
     await wait();
 
     let handleUpdateResolved;
     let idFn = it => it.id === "a";
-    lastResult()
-      .handleUpdate(idFn, UPDATE1)
-      .then(() => (handleUpdateResolved = true));
+    act(() => {
+      lastResult()
+        .handleUpdate(idFn, UPDATE1)
+        .then(() => (handleUpdateResolved = true));
+    });
     expect(onUpdate).toHaveBeenCalledTimes(1);
     expect(onUpdate).toHaveBeenCalledWith(idFn, UPDATE1);
     expect(lastResult()).toMatchObject({
@@ -610,14 +613,16 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
   it("handleUpdate; should update item by id-fn even without onUpdate (success)", async () => {
     const UPDATE1 = { key: "updated1" };
     let data = [{ id: "a", key: "orig-a" }, { id: "b", key: "orig-b" }];
-    ({ lastResult, changeArgs } = mountHook({ data }));
+    let { lastResult } = renderHook(useListData, { data });
     await wait();
 
     let handleUpdateResolved;
     let idFn = it => it.id === "a";
-    lastResult()
-      .handleUpdate(idFn, UPDATE1)
-      .then(() => (handleUpdateResolved = true));
+    act(() => {
+      lastResult()
+        .handleUpdate(idFn, UPDATE1)
+        .then(() => (handleUpdateResolved = true));
+    });
     expect(lastResult()).toMatchObject({
       syncData: [{ ...data[0], ...UPDATE1 }].concat(data.slice(1)),
       asyncData: [{ ...data[0], ...UPDATE1 }].concat(data.slice(1)),
@@ -636,13 +641,15 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     const UPDATE1_FULL = [{ a: "b" }, { a: "c" }];
     let data = [{ id: "a", key: "orig-a", a: "orig-a" }, { id: "b", key: "orig-b", a: "orig-b" }];
     let onUpdate = jest.fn(async () => UPDATE1_FULL);
-    ({ lastResult, changeArgs } = mountHook({ onUpdate, data }));
+    let { lastResult } = renderHook(useListData, { onUpdate, data });
     await wait();
 
     let handleUpdateResolved;
-    lastResult()
-      .handleUpdate(["a", "b"], UPDATE1)
-      .then(() => (handleUpdateResolved = true));
+    act(() => {
+      lastResult()
+        .handleUpdate(["a", "b"], UPDATE1)
+        .then(() => (handleUpdateResolved = true));
+    });
     expect(onUpdate).toHaveBeenCalledTimes(1);
     expect(onUpdate).toHaveBeenCalledWith(["a", "b"], UPDATE1);
     expect(lastResult()).toMatchObject({
@@ -684,14 +691,16 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     const UPDATE1_FULL = [{ a: "b" }, { a: "c" }];
     let data = [{ id: "a", key: "orig-a", a: "orig-a" }, { id: "b", key: "orig-b", a: "orig-b" }];
     let onUpdate = jest.fn(async () => UPDATE1_FULL);
-    ({ lastResult, changeArgs } = mountHook({ onUpdate, data }));
+    let { lastResult } = renderHook(useListData, { onUpdate, data });
     await wait();
 
     let handleUpdateResolved;
     let idFns = [it => it.id === "a", it => it.id === "b"];
-    lastResult()
-      .handleUpdate(idFns, UPDATE1)
-      .then(() => (handleUpdateResolved = true));
+    act(() => {
+      lastResult()
+        .handleUpdate(idFns, UPDATE1)
+        .then(() => (handleUpdateResolved = true));
+    });
     expect(onUpdate).toHaveBeenCalledTimes(1);
     expect(onUpdate).toHaveBeenCalledWith(idFns, UPDATE1);
     expect(lastResult()).toMatchObject({
@@ -738,14 +747,16 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
   it("handleUpdate; should update item by id-fn even without onUpdate (success, bulk)", async () => {
     const UPDATE1 = [{ key: "updated1" }, { key: "updated2" }];
     let data = [{ id: "a", key: "orig-a" }, { id: "b", key: "orig-b" }];
-    ({ lastResult, changeArgs } = mountHook({ data }));
+    let { lastResult } = renderHook(useListData, { data });
     await wait();
 
     let handleUpdateResolved;
     let idFns = [it => it.id === "a", it => it.id === "b"];
-    lastResult()
-      .handleUpdate(idFns, UPDATE1)
-      .then(() => (handleUpdateResolved = true));
+    act(() => {
+      lastResult()
+        .handleUpdate(idFns, UPDATE1)
+        .then(() => (handleUpdateResolved = true));
+    });
     expect(lastResult()).toMatchObject({
       syncData: [{ ...data[0], ...UPDATE1[0] }, { ...data[1], ...UPDATE1[1] }].concat(data.slice(2)),
       asyncData: [{ ...data[0], ...UPDATE1[0] }, { ...data[1], ...UPDATE1[1] }].concat(data.slice(2)),
@@ -773,10 +784,12 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     const UPDATE2_FULL = { a: "b2" };
     let data = [{ id: "a", key: "orig-a", a: "orig-a" }, { id: "b", key: "orig-b", a: "orig-b" }];
     let onUpdate = jest.fn(async () => UPDATE1_FULL);
-    ({ lastResult, changeArgs } = mountHook({ onUpdate, data }));
+    let { lastResult } = renderHook(useListData, { onUpdate, data });
     await wait();
 
-    lastResult().handleUpdate(UPDATE1);
+    act(() => {
+      lastResult().handleUpdate(UPDATE1);
+    });
     await wait(); // finish update
     expect(lastResult()).toMatchObject({
       syncData: [{ ...data[0], ...UPDATE1, ...UPDATE1_FULL }].concat(data.slice(1)),
@@ -790,7 +803,9 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     });
 
     onUpdate.mockImplementation(async () => UPDATE2_FULL);
-    lastResult().handleUpdate([UPDATE2]);
+    act(() => {
+      lastResult().handleUpdate([UPDATE2]);
+    });
     await wait(); // finish update
     expect(lastResult()).toMatchObject({
       syncData: [{ ...data[0], ...UPDATE2, ...UPDATE2_FULL }].concat(data.slice(1)),
@@ -806,9 +821,11 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
 
   it("handleUpdate; should pass extra call args to onUpdate()", async () => {
     let onUpdate = jest.fn(async () => null);
-    ({ lastResult, renderCount } = mountHook({ onUpdate, data: INITIAL_DATA1 }));
+    let { lastResult } = renderHook(useListData, { onUpdate, data: INITIAL_DATA1 });
     await wait();
-    lastResult().handleUpdate("a", "b", 123, false);
+    act(() => {
+      lastResult().handleUpdate("a", "b", 123, false);
+    });
     await wait();
     expect(onUpdate).lastCalledWith("a", "b", 123, false);
   });
@@ -820,12 +837,14 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     let onUpdate = jest.fn(async () => {
       throw (error = new Error("Test error"));
     });
-    ({ lastResult, changeArgs } = mountHook({ onUpdate, data }));
+    let { lastResult } = renderHook(useListData, { onUpdate, data });
     await wait();
 
-    lastResult()
-      .handleUpdate("a", UPDATE1)
-      .catch(e => null);
+    act(() => {
+      lastResult()
+        .handleUpdate("a", UPDATE1)
+        .catch(e => null);
+    });
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: data,
@@ -845,12 +864,14 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     let onUpdate = jest.fn(async () => {
       return Promise.reject((error = UPDATE1_FAIL));
     });
-    ({ lastResult, changeArgs } = mountHook({ onUpdate, data }));
+    let { lastResult } = renderHook(useListData, { onUpdate, data });
     await wait();
 
-    lastResult()
-      .handleUpdate("a", UPDATE1)
-      .catch(e => null);
+    act(() => {
+      lastResult()
+        .handleUpdate("a", UPDATE1)
+        .catch(e => null);
+    });
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: [{ ...data[0], ...UPDATE1, ...UPDATE1_FAIL }].concat(data.slice(1)),
@@ -877,12 +898,14 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     let onUpdate = jest.fn(async () => {
       return Promise.reject((error = UPDATE1_FAIL));
     });
-    ({ lastResult, changeArgs } = mountHook({ onUpdate, data }));
+    let { lastResult } = renderHook(useListData, { onUpdate, data });
     await wait();
 
-    lastResult()
-      .handleUpdate("a", UPDATE1)
-      .catch(e => null);
+    act(() => {
+      lastResult()
+        .handleUpdate("a", UPDATE1)
+        .catch(e => null);
+    });
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: data,
@@ -902,13 +925,15 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     let onUpdate = jest.fn(async () => {
       return Promise.reject((error = UPDATE1_FAIL));
     });
-    ({ lastResult, changeArgs } = mountHook({ onUpdate, data }));
+    let { lastResult } = renderHook(useListData, { onUpdate, data });
     await wait();
 
     let ids = ["c", "a", "b"];
-    lastResult()
-      .handleUpdate(ids, UPDATE1)
-      .catch(e => null);
+    act(() => {
+      lastResult()
+        .handleUpdate(ids, UPDATE1)
+        .catch(e => null);
+    });
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: [
@@ -942,13 +967,15 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
   it("handleDelete; should delete item by id (success)", async () => {
     let data = [{ id: "a" }, { id: "b" }, { id: "c" }];
     let onDelete = jest.fn(async () => null);
-    ({ lastResult, changeArgs } = mountHook({ onDelete, data }));
+    let { lastResult } = renderHook(useListData, { onDelete, data });
     await wait();
 
     let handleDeleteResolved;
-    lastResult()
-      .handleDelete("a")
-      .then(() => (handleDeleteResolved = true));
+    act(() => {
+      lastResult()
+        .handleDelete("a")
+        .then(() => (handleDeleteResolved = true));
+    });
     expect(onDelete).toHaveBeenCalledTimes(1);
     expect(onDelete).toHaveBeenCalledWith("a");
     expect(lastResult()).toMatchObject({
@@ -975,14 +1002,16 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
   it("handleDelete; should delete item by id-fn (success)", async () => {
     let data = [{ id: "a" }, { id: "b" }, { id: "c" }];
     let onDelete = jest.fn(async () => null);
-    ({ lastResult, changeArgs } = mountHook({ onDelete, data }));
+    let { lastResult } = renderHook(useListData, { onDelete, data });
     await wait();
 
     let handleDeleteResolved;
     let idFn = it => it.id === "a";
-    lastResult()
-      .handleDelete(idFn)
-      .then(() => (handleDeleteResolved = true));
+    act(() => {
+      lastResult()
+        .handleDelete(idFn)
+        .then(() => (handleDeleteResolved = true));
+    });
     expect(onDelete).toHaveBeenCalledTimes(1);
     expect(onDelete).toHaveBeenCalledWith(idFn);
     expect(lastResult()).toMatchObject({
@@ -1008,14 +1037,16 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
 
   it("handleDelete; should delete item by id-fn even without onDelete (success)", async () => {
     let data = [{ id: "a" }, { id: "b" }, { id: "c" }];
-    ({ lastResult, changeArgs } = mountHook({ data }));
+    let { lastResult } = renderHook(useListData, { data });
     await wait();
 
     let handleDeleteResolved;
     let idFn = it => it.id === "a";
-    lastResult()
-      .handleDelete(idFn)
-      .then(() => (handleDeleteResolved = true));
+    act(() => {
+      lastResult()
+        .handleDelete(idFn)
+        .then(() => (handleDeleteResolved = true));
+    });
     expect(lastResult()).toMatchObject({
       syncData: data.filter(it => it.id !== "a"),
       asyncData: data.filter(it => it.id !== "a"),
@@ -1032,13 +1063,15 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
   it("handleDelete; should delete item by id (success, bulk)", async () => {
     let data = [{ id: "a" }, { id: "b" }, { id: "c" }];
     let onDelete = jest.fn(async () => null);
-    ({ lastResult, changeArgs } = mountHook({ onDelete, data }));
+    let { lastResult } = renderHook(useListData, { onDelete, data });
     await wait();
 
     let handleDeleteResolved;
-    lastResult()
-      .handleDelete(["a", "b"])
-      .then(() => (handleDeleteResolved = true));
+    act(() => {
+      lastResult()
+        .handleDelete(["a", "b"])
+        .then(() => (handleDeleteResolved = true));
+    });
     expect(onDelete).toHaveBeenCalledTimes(1);
     expect(onDelete).toHaveBeenCalledWith(["a", "b"]);
     expect(lastResult()).toMatchObject({
@@ -1074,14 +1107,16 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
   it("handleDelete; should delete item by id-fn (success, bulk)", async () => {
     let data = [{ id: "a" }, { id: "b" }, { id: "c" }];
     let onDelete = jest.fn(async () => null);
-    ({ lastResult, changeArgs } = mountHook({ onDelete, data }));
+    let { lastResult } = renderHook(useListData, { onDelete, data });
     await wait();
 
     let handleDeleteResolved;
     let idFns = [it => it.id === "a", it => it.id === "b"];
-    lastResult()
-      .handleDelete(idFns)
-      .then(() => (handleDeleteResolved = true));
+    act(() => {
+      lastResult()
+        .handleDelete(idFns)
+        .then(() => (handleDeleteResolved = true));
+    });
     expect(onDelete).toHaveBeenCalledTimes(1);
     expect(onDelete).toHaveBeenCalledWith(idFns);
     expect(lastResult()).toMatchObject({
@@ -1116,14 +1151,16 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
 
   it("handleDelete; should delete item by id-fn even without onDelete (success, bulk)", async () => {
     let data = [{ id: "a" }, { id: "b" }, { id: "c" }];
-    ({ lastResult, changeArgs } = mountHook({ data }));
+    let { lastResult } = renderHook(useListData, { data });
     await wait();
 
     let handleDeleteResolved;
     let idFns = [it => it.id === "a", it => it.id === "b"];
-    lastResult()
-      .handleDelete(idFns)
-      .then(() => (handleDeleteResolved = true));
+    act(() => {
+      lastResult()
+        .handleDelete(idFns)
+        .then(() => (handleDeleteResolved = true));
+    });
     expect(lastResult()).toMatchObject({
       syncData: data.filter(it => it.id !== "a" && it.id !== "b"),
       asyncData: data.filter(it => it.id !== "a" && it.id !== "b"),
@@ -1141,9 +1178,11 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
 
   it("handleDelete; should pass extra call args to onDelete()", async () => {
     let onDelete = jest.fn(async () => null);
-    ({ lastResult, renderCount } = mountHook({ onDelete, data: INITIAL_DATA1 }));
+    let { lastResult } = renderHook(useListData, { onDelete, data: INITIAL_DATA1 });
     await wait();
-    lastResult().handleDelete("a", "b", 123, false);
+    act(() => {
+      lastResult().handleDelete("a", "b", 123, false);
+    });
     await wait();
     expect(onDelete).lastCalledWith("a", "b", 123, false);
   });
@@ -1151,9 +1190,11 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
   it("handleDelete; should delete if response has '{ uuAppErrorMap: {} }' (uuAppErrorMp empty or warnings only)", async () => {
     let data = [{ id: "a" }, { id: "b" }, { id: "c" }];
     let onDelete = jest.fn(async () => ({ uuAppErrorMap: {} }));
-    ({ lastResult, renderCount } = mountHook({ onDelete, data }));
+    let { lastResult } = renderHook(useListData, { onDelete, data });
     await wait();
-    lastResult().handleDelete("a");
+    act(() => {
+      lastResult().handleDelete("a");
+    });
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: data.filter(it => it.id !== "a"),
@@ -1161,7 +1202,9 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     });
 
     onDelete.mockImplementation(async () => ({ uuAppErrorMap: { "uu-app-error-xyz": { type: "warning" } } }));
-    lastResult().handleDelete("c");
+    act(() => {
+      lastResult().handleDelete("c");
+    });
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: data.filter(it => it.id !== "a" && it.id !== "c"),
@@ -1170,7 +1213,9 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
 
     // uuAppErrorMap with error should merge it to the item
     onDelete.mockImplementation(async () => ({ uuAppErrorMap: { "uu-app-error-xyz": { type: "error" } } }));
-    lastResult().handleDelete("b");
+    act(() => {
+      lastResult().handleDelete("b");
+    });
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: [{ id: "b", uuAppErrorMap: { "uu-app-error-xyz": { type: "error" } } }],
@@ -1184,12 +1229,14 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     let onDelete = jest.fn(async () => {
       throw (error = new Error("Test error"));
     });
-    ({ lastResult, changeArgs } = mountHook({ onDelete, data }));
+    let { lastResult } = renderHook(useListData, { onDelete, data });
     await wait();
 
-    lastResult()
-      .handleDelete("a")
-      .catch(e => null);
+    act(() => {
+      lastResult()
+        .handleDelete("a")
+        .catch(e => null);
+    });
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: data,
@@ -1208,12 +1255,14 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     let onDelete = jest.fn(async () => {
       return Promise.reject((error = DELETE1_FAIL));
     });
-    ({ lastResult, changeArgs } = mountHook({ onDelete, data }));
+    let { lastResult } = renderHook(useListData, { onDelete, data });
     await wait();
 
-    lastResult()
-      .handleDelete("a")
-      .catch(e => null);
+    act(() => {
+      lastResult()
+        .handleDelete("a")
+        .catch(e => null);
+    });
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: [{ ...data[0], ...DELETE1_FAIL }].concat(data.slice(1)),
@@ -1237,12 +1286,14 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     let onDelete = jest.fn(async () => {
       return Promise.reject((error = DELETE1_FAIL));
     });
-    ({ lastResult, changeArgs } = mountHook({ onDelete, data }));
+    let { lastResult } = renderHook(useListData, { onDelete, data });
     await wait();
 
-    lastResult()
-      .handleDelete("a")
-      .catch(e => null);
+    act(() => {
+      lastResult()
+        .handleDelete("a")
+        .catch(e => null);
+    });
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: data,
@@ -1261,12 +1312,14 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     let onDelete = jest.fn(async () => {
       return Promise.reject((error = DELETE1_FAIL));
     });
-    ({ lastResult, changeArgs } = mountHook({ onDelete, data }));
+    let { lastResult } = renderHook(useListData, { onDelete, data });
     await wait();
 
-    lastResult()
-      .handleDelete(["c", "a", "b"]) // item with id "c" receives null => should be deleted; "a" receives { key: "ok" }; "b" receives { message: "Failed" }
-      .catch(e => null);
+    act(() => {
+      lastResult()
+        .handleDelete(["c", "a", "b"]) // item with id "c" receives null => should be deleted; "a" receives { key: "ok" }; "b" receives { message: "Failed" }
+        .catch(e => null);
+    });
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: [{ ...data[0], ...DELETE1_FAIL[1] }, { ...data[1], ...DELETE1_FAIL[2] }],
@@ -1286,10 +1339,12 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
   });
 
   it("setData; should set new data", async () => {
-    ({ lastResult, renderCount, changeArgs } = mountHook({ data: INITIAL_DATA1 }));
+    let { lastResult } = renderHook(useListData, { data: INITIAL_DATA1 });
     await wait();
 
-    lastResult().setData(LOAD_DATA1);
+    act(() => {
+      lastResult().setData(LOAD_DATA1);
+    });
     expect(lastResult()).toMatchObject({
       syncData: LOAD_DATA1,
       asyncData: LOAD_DATA1,
@@ -1302,7 +1357,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
 
   it("parallel operations; should merge data to proper items even if calls resolve out-of-order", async () => {
     let data = [{ id: "1" }, { id: "2" }, { id: "3" }];
-    ({ lastResult, startOp } = mountHookParallelOps(data));
+    let { lastResult, startOp } = renderHookParallelOps(data);
     await wait();
 
     // start performing "update", "create" and "delete", and let them finish in order: "update", "delete", "create"
@@ -1355,8 +1410,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
   });
 
   it("operations; should update continuously based on handle* calls", async () => {
-    let allResults;
-    ({ lastResult, startOp, allResults } = mountHookParallelOps(LOAD_DATA1));
+    let { startOp, allResults } = renderHookParallelOps(LOAD_DATA1);
     await wait();
 
     const UPDATE1_FULL = { extra: 0 };
@@ -1411,7 +1465,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     let NEW_ITEM1 = { id: "new1" };
     let NEW_ITEM2 = { id: "new2" };
 
-    ({ lastResult, startOp } = mountHookParallelOps(data));
+    let { lastResult, startOp } = renderHookParallelOps(data);
     await wait();
 
     // start performing "create#1", "create#2" and let them finish in order: "create#2", "create#1"

@@ -1,53 +1,11 @@
 import UU5 from "uu5g04";
 import { useDevice, DeviceProvider } from "uu5g04-hooks";
 
-const { mount, shallow, wait } = UU5.Test.Tools;
-
-// eslint-disable-next-line react/prop-types
-function Component({ children, hookArgs }) {
-  let result = useDevice(...hookArgs);
-  // NOTE Using Inner to measure render counts of subtrees (hooks are allowed to change their state during render
-  // because it results in re-calling of the Component but not of its subtree - we don't want to measure these
-  // shallow re-renders).
-  return <Inner result={result}>{children}</Inner>;
-}
-function Inner({ children, result }) {
-  return children(result);
-}
-
-function mountHook(...hookArgs) {
-  let renderFn = jest.fn(() => <div />);
-  let wrapper = mount(<Component hookArgs={hookArgs}>{renderFn}</Component>);
-  return {
-    lastResult: () => renderFn.mock.calls[renderFn.mock.calls.length - 1][0],
-    renderCount: () => renderFn.mock.calls.length,
-    changeArgs: (...newArgs) => wrapper.setProps({ hookArgs: newArgs }),
-    allResults: () => renderFn.mock.calls.map(cl => cl[0])
-  };
-}
-
-function mountHookWithProvider(providerProps, ...hookArgs) {
-  let renderFn = jest.fn(() => <div />);
-  let Comp = props => (
-    <DeviceProvider {...props.providerProps}>
-      <Component hookArgs={props.hookArgs}>{renderFn}</Component>
-    </DeviceProvider>
-  );
-  let wrapper = mount(<Comp providerProps={providerProps} hookArgs={hookArgs} />);
-  return {
-    lastResult: () => renderFn.mock.calls[renderFn.mock.calls.length - 1][0],
-    renderCount: () => renderFn.mock.calls.length,
-    changeArgs: (...newArgs) => wrapper.setProps({ hookArgs: newArgs }),
-    allResults: () => renderFn.mock.calls.map(cl => cl[0]),
-    changeProviderProps: newProps => wrapper.setProps({ providerProps: newProps })
-  };
-}
+const { mount, renderHook, initHookRenderer } = UU5.Test.Tools;
 
 describe("[uu5g04-hooks] useDevice behaviour", () => {
-  let lastResult, changeProviderProps;
-
   it("should return expected result API", () => {
-    ({ lastResult } = mountHook());
+    let { lastResult } = renderHook(useDevice);
     expect(lastResult()).toMatchObject({
       browserName: expect.any(String),
       platform: expect.any(String),
@@ -73,7 +31,7 @@ describe("[uu5g04-hooks] useDevice behaviour", () => {
         },
         configurable: true
       });
-      ({ lastResult } = mountHook());
+      let { lastResult } = renderHook(useDevice);
       expect(lastResult()).toMatchObject(expectedValues);
     };
     checkUserAgent(
@@ -134,10 +92,16 @@ describe("[uu5g04-hooks] useDevice behaviour", () => {
       isWebView: false,
       isHeadless: false
     };
-    ({ lastResult, changeProviderProps } = mountHookWithProvider(PROPS1));
+
+    let { lastResult, HookComponent } = initHookRenderer(useDevice);
+    let wrapper = mount(
+      <DeviceProvider {...PROPS1}>
+        <HookComponent />
+      </DeviceProvider>
+    );
     expect(lastResult()).toMatchObject(PROPS1);
 
-    changeProviderProps(PROPS2);
+    wrapper.setProps(PROPS2);
     expect(lastResult()).toMatchObject(PROPS2);
   });
 });

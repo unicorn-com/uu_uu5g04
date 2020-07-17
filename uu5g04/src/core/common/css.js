@@ -88,7 +88,8 @@ const getCss = (key, owner) => {
   return {
     css: emotion.css,
     injectGlobal: emotion.injectGlobal,
-    keyframes: emotion.keyframes
+    keyframes: emotion.keyframes,
+    join: emotion.cx
   };
 };
 

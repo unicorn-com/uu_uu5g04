@@ -1,4 +1,5 @@
 import { Session as TestSession } from "./session.js";
+import Tools from "./tools";
 
 // TODO Mocking UuApp Session should be somewhere else (uu_appg01-test?).
 try {
@@ -48,7 +49,7 @@ try {
         if (listeners) this._listeners[eventName] = listeners.filter(fn => fn !== listener);
       }
       static async authenticate() {
-        await this.initPromise;
+        await Tools.act(() => this.initPromise);
         this._triggerEvent("sessionChanged", oidcSession);
         return oidcSession;
       }
@@ -65,11 +66,13 @@ try {
       static _triggerEvent(eventName, payload) {
         let listeners = this._listeners[eventName];
         if (listeners) {
-          let event = {
-            type: eventName,
-            data: payload
-          };
-          listeners.forEach(fn => fn(event));
+          Tools.act(() => {
+            let event = {
+              type: eventName,
+              data: payload
+            };
+            listeners.forEach(fn => fn(event));
+          });
         }
       }
     }
@@ -214,6 +217,7 @@ try {
         if (!identity) return identity;
         identity.id = g02Session.getAttribute("sub");
         identity.name = identity.getName();
+        identity.type = identity.getType();
         identity.email = g02Session.getAttribute("email");
         identity.uuIdentity = identity.getUuIdentity();
         identity.levelOfAssurance = identity.getLevelOfAssurance();
@@ -334,7 +338,7 @@ try {
           MockAuthenticationService._initPromiseResolve(this);
           // have to wait for this because IdentityMixin might be waiting for initPromise and we want
           // such listeners to be finished when we return from this fn
-          await MockAuthenticationService.initPromise;
+          await Tools.act(() => MockAuthenticationService.initPromise);
         }
       }
       mockSetExpiring(expiring) {

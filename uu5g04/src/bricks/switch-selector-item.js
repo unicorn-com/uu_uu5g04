@@ -38,8 +38,8 @@ function getBlackColors(active, dark) {
         ? "rgba(255,255,255,.6)"
         : "rgba(0,0,0,.6)"
       : dark
-      ? "rgba(255,255,255,.4)"
-      : "rgba(0,0,0,.2)",
+        ? "rgba(255,255,255,.4)"
+        : "rgba(0,0,0,.2)",
     colorHover: active ? (dark ? "rgba(0,0,0,.87)" : "#fff") : dark ? "#fff" : "rgba(0,0,0,.87)",
     backgroundColorActive: dark ? "rgba(0,0,0,.4)" : "rgba(255,255,255,.6)",
     colorActive: active ? (dark ? "rgba(0,0,0,.87)" : "#fff") : dark ? "#fff" : "rgba(0,0,0,.87)"
@@ -55,8 +55,8 @@ function getWhiteColors(active, dark) {
         ? "rgba(0,0,0,.6)"
         : "rgba(255,255,255,.8)"
       : dark
-      ? "rgba(0,0,0,.2)"
-      : "rgba(255,255,255,.2)",
+        ? "rgba(0,0,0,.2)"
+        : "rgba(255,255,255,.2)",
     colorHover: active ? (dark ? "#fff" : "rgba(0,0,0,.87)") : dark ? "rgba(0,0,0,.87)" : "#fff",
     backgroundColorActive: dark ? "rgba(0,0,0,.4)" : "rgba(255,255,255,.6)",
     colorActive: active ? (dark ? "#fff" : "rgba(0,0,0,.87)") : dark ? "rgba(0,0,0,.87)" : "#fff"
@@ -67,16 +67,16 @@ function getClassName({ active, dark, colorSchema, bgStyle, size, borderRadius, 
   let padding;
   let fontSize;
   if (size === "s") {
-    padding = "1px 4px";
+    padding = "0px 3px";
     fontSize = 12;
   } else if (size === "m") {
-    padding = "4px 8px";
+    padding = "3px 7px";
     fontSize = 14;
   } else if (size === "l") {
-    padding = "7px 8px";
+    padding = "6px 7px";
     fontSize = 16;
   } else if (size === "xl") {
-    padding = "10px 9px";
+    padding = "9px 8px";
     fontSize = 18;
   }
 
@@ -84,7 +84,7 @@ function getClassName({ active, dark, colorSchema, bgStyle, size, borderRadius, 
     UU5.Common.Css.css`
       cursor: pointer;
       outline: none;
-      border: 1px;
+      border: 1px solid transparent;
       /* because of stretch of item in wider parent*/
       flex: auto;
       white-space: nowrap;
@@ -92,10 +92,14 @@ function getClassName({ active, dark, colorSchema, bgStyle, size, borderRadius, 
       & + & {
         margin-left: 4px;
       }
+
+      .uu5-bricks-lsi-item {
+        line-height: inherit;
+      }
     `,
     UU5.Common.Css.css`
       font-size: ${fontSize}px;
-      border-radius: ${UU5.Common.Tools.fillUnit(borderRadius)};
+      border-radius: ${bgStyle === "underline" ? undefined : UU5.Common.Tools.fillUnit(borderRadius)};
       padding: ${padding};
     `
   ];
@@ -117,8 +121,22 @@ function getClassName({ active, dark, colorSchema, bgStyle, size, borderRadius, 
         break;
       default:
         let darkText = UU5.Environment.colors.common.darkText;
+
         switch (bgStyle) {
-          // TODO: outline, underline, transparent?
+          case "underline":
+          case "outline":
+            colors = {
+              backgroundColor: "transparent",
+              color: active ? (isRich ? shades.c900 : dark ? shades.c700 : shades.c500) : undefined,
+              borderColor: active ? (isRich ? shades.c900 : dark ? shades.c700 : shades.c500) : undefined,
+              backgroundColorHover: "transparent",
+              colorHover: active ? (isRich ? shades.c900 : dark ? shades.c700 : shades.c500) : undefined,
+              borderColorHover: isRich ? shades.c900 : dark ? shades.c700 : shades.c500,
+              backgroundColorActive: "transparent",
+              colorActive: shades.c900,
+              borderColorActive: shades.c900
+            };
+            break;
 
           // filled
           default:
@@ -126,14 +144,8 @@ function getClassName({ active, dark, colorSchema, bgStyle, size, borderRadius, 
               backgroundColor: active ? (isRich ? shades.c500 : dark ? shades.c100 : shades.c50) : "transparent",
               color: active ? (isRich ? shades.inverse : shades.c900) : undefined,
               backgroundColorHover: active
-                ? isRich
-                  ? shades.c700
-                  : dark
-                  ? shades.c300
-                  : shades.c100
-                : dark
-                ? shades.c100
-                : shades.c50,
+                ? isRich ? shades.c700 : (dark ? shades.c300 : shades.c100)
+                : dark ? shades.c100 : shades.c50,
               colorHover: active ? (isRich ? shades.inverse : darkText) : undefined,
               backgroundColorActive: isRich ? shades.c900 : shades.c500,
               colorActive: isRich ? shades.inverse : darkText
@@ -144,16 +156,22 @@ function getClassName({ active, dark, colorSchema, bgStyle, size, borderRadius, 
     css.push(UU5.Common.Css.css`
       background-color: ${colors.backgroundColor};
       color: ${colors.color};
-      border-color: transparent;
+      border: 1px solid;
+      border-color: ${(bgStyle === "outline" && colors.borderColor) || "transparent"};
+      border-bottom-color: ${(bgStyle === "underline" && colors.borderColor) || undefined};
 
       &:hover {
         background-color: ${colors.backgroundColorHover};
         color: ${colors.colorHover};
+        border-color: ${(bgStyle === "outline" && colors.borderColorHover) || undefined};
+        border-bottom: ${(bgStyle === "underline" && colors.borderColorHover && `1px solid ${colors.borderColorHover}`) || undefined};
       }
 
       &:active {
         background-color: ${colors.backgroundColorActive};
         color: ${colors.colorActive};
+        border-color: ${(bgStyle === "outline" && colors.borderColorActive) || undefined};
+        border-bottom: ${(bgStyle === "underline" && colors.borderColorActive && `1px solid ${colors.borderColorActive}`) || undefined};
       }
     `);
   }

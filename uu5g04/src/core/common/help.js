@@ -83,7 +83,7 @@ export const Help = VisualComponent.create({
   _loadLibrary(props = this.props) {
     let tagNameArr = props.tagName.split(".");
     let libraryName = tagNameArr[0] + "." + tagNameArr[1];
-    let pageName = "/page?code=" + tagNameArr[0].toLowerCase() + tagNameArr[1] + tagNameArr[2];
+    let pageName = "/page?code=" + tagNameArr.join("");
     Tools.loadLibrary(libraryName, (response, error) => {
       if (!error && response && response.doc) {
         this.setState({ responseLink: response.doc + pageName });

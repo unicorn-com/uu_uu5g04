@@ -417,7 +417,6 @@ export const BricksLsi = {
         "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
       uk:
         "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни."
-
     },
     logInButton: {
       cs: "Přihlásit se",
@@ -480,218 +479,20 @@ export const BricksLsi = {
       uk: "Назад"
     }
   },
-  tabsEditable: {
-    componentPropsLabel: {
-      cs: "Hlavní vlastnosti komponenty",
-      en: "Component Props",
-      sk: "Hlavné vlastnosti komponenty",
-      uk: "Головні властивості компоненту"
+  unauthenticated: {
+    text: {
+      cs: "Pouze přihlášený uživatel může zobrazit tento obsah.",
+      en: "You are not authenticated to view this content."
     },
-    additionalPropsLabel: {
-      cs: "Vedlejší vlastnosti komponenty",
-      en: "Additional Props",
-      sk: "Vedľajšie vlastnosti komponenty",
-      uk: "Додаткові властивості компоненту"
-    },
-    typeLabel: {
-      cs: "Typ zobrazení záložek",
-      en: "Type",
-      sk: "Typ zobrazenia záložiek",
-      uk: "Тип відображення закладок"
-    },
-    typeValueTabs: {
-      cs: "Podtržené záložky",
-      en: "tabs",
-      sk: "Podčiarknuté záložky",
-      uk: "Підкреслені закладки"
-    },
-    typeValuePills: {
-      cs: "Vyplněné záložky",
-      en: "pills",
-      sk: "Vyplnené záložky",
-      uk: "Заповнені закладки"
-    },
-    sizeLabel: {
-      cs: "Velikost",
-      en: "Size",
-      sk: "Veľkosť",
-      uk: "Розмір"
-    },
-    sizeValueS: {
-      cs: "S",
-      en: "S",
-      sk: "S",
-      uk: "S"
-    },
-    sizeValueM: {
-      cs: "M",
-      en: "M",
-      sk: "M",
-      uk: "M"
-    },
-    sizeValueL: {
-      cs: "L",
-      en: "L",
-      sk: "L",
-      uk: "L"
-    },
-    sizeValueXL: {
-      cs: "XL",
-      en: "XL",
-      sk: "XL",
-      uk: "XL"
-    },
-    borderRadiusLabel: {
-      cs: "Zaoblení okrajů",
-      en: "Border Radius",
-      sk: "Zaobalenie okrajov",
-      uk: "Радіус заокруглення"
-    },
-    borderRadiusPlaceholder: {
-      cs: "Např. 16px 16px 0 0",
-      en: "For example 16px 16px 0 0",
-      sk: "Napr. 16px 16px 0 0",
-      uk: "Напр. 16px 16px 0 0"
-    },
-    elevationLabel: {
-      cs: "Úroveň vyvýšení aktivní záložky",
-      en: "Elevation of Active Tab",
-      sk: "Úroveň vyvýšenia aktívnej záložky",
-      uk: "Рівень підйому активної закладки"
-    },
-    elevationHoverLabel: {
-      cs: "Úroveň vyvýšení aktivní záložky při najetí",
-      en: "Elevation Hover of Active tab",
-      sk: "Úroveň vyvýšenia aktívnej záložky pri nabehnutí",
-      uk: "Рівень підйому активної закладки при наведенні"
-    },
-    justifiedLabel: {
-      cs: "Zarovnání záložek",
-      en: "Justified",
-      sk: "Zarovnanie záložiek",
-      uk: "Вирівнювання закладок"
-    },
-    justifiedValueFalse: {
-      cs: "Vypnuto",
-      en: "Disabled",
-      sk: "Vypnuté",
-      uk: "Вимкнено"
-    },
-    justifiedValueFTrue: {
-      cs: "Zapnuto",
-      en: "Enabled",
-      sk: "Zapnuté",
-      uk: "Увімкнено"
-    },
-    fadeLabel: {
-      cs: "Animace při změně aktivního tabu",
-      en: "Active tab change animation",
-      sk: "Animácia pri zmene aktívneho tabu",
-      uk: "Анімація зміни активної закладки"
-    },
-    fadeValueFalse: {
-      cs: "Vypnuto",
-      en: "Disabled",
-      sk: "Vypnuté",
-      uk: "Вимкнено"
-    },
-    fadeValueTrue: {
-      cs: "Zapnuto",
-      en: "Enabled",
-      sk: "Zapnuté",
-      uk: "Увімкнено"
-    },
-    underlineLabel: {
-      cs: "Podtržení záhlaví",
-      en: "Underline",
-      sk: "Podčiarknutie záhlavia",
-      uk: "Підкреслити заголовок"
-    },
-    underlineValueFalse: {
-      cs: "Vypnuto",
-      en: "Disabled",
-      sk: "Vypnuté",
-      uk: "Вимкнено"
-    },
-    underlineValueTrue: {
-      cs: "Zapnuto",
-      en: "Enabled",
-      sk: "Zapnuté",
-      uk: "Увімкнено"
-    },
-    colorSchemaLabel: {
-      cs: "Barevné schéma",
-      en: "Color Schema",
-      sk: "Farebná schéma",
-      uk: "Схема кольорів"
-    },
-    idLabel: {
-      cs: "Id komponenty",
-      en: "Component's id",
-      sk: "Id komponenty",
-      uk: "Id компоненту"
-    },
-    disabledLabel: {
-      cs: "Stav komponenty",
-      en: "Component's state",
-      sk: "Stav komponenty",
-      uk: "Стани компоненту"
-    },
-    disabledValueFalse: {
-      cs: "Aktivní",
-      en: "Enabled",
-      sk: "Aktívny",
-      uk: "Активний"
-    },
-    disabledValueTrue: {
-      cs: "Neaktivní",
-      en: "Disabled",
-      sk: "Neaktívny",
-      uk: "Неактивний"
-    },
-    tabNameLabel: {
-      cs: "Název záložky",
-      en: "Tab's name",
-      sk: "Názov záložky",
-      uk: "Назва закладки"
-    },
-    tabHeaderLabel: {
-      cs: "Hlavička záložky",
-      en: "Tab's Header",
-      sk: "Hlavička záložky",
-      uk: "Заголовок закладки"
-    },
-    newItemHeader: {
-      cs: "Nová položka",
-      en: "New Item",
-      sk: "Nová položka",
-      uk: "Новий товар"
+    login: {
+      cs: "Přihlásit se",
+      en: "Log in"
     }
   },
-  boxEditable: {
-    componentPropsLabel: {
-      cs: "Hlavní vlastnosti komponenty",
-      en: "Component Props",
-      sk: "Hlavné vlastnosti komponenty",
-      uk: "Властивості компонента"
-    },
-    additionalPropsLabel: {
-      cs: "Zobrazit",
-      en: "Display",
-      sk: "Zobraziť",
-      uk: "Показати"
-    },
-    infoHeaderLabel: {
-      cs: "Hlavička informačního modálu",
-      en: "Information Modal Header",
-      sk: "Hlavička informačného modalu",
-      uk: "Заголовок інформаційного вікна"
-    },
-    infoContentLabel: {
-      cs: "Obsah informačního modálu",
-      en: "Information Modal Content",
-      sk: "Obsah informačného modalu",
-      uk: "зміст інформаційного вікна"
+  unauthorized: {
+    text: {
+      cs: "Nemáte potřebná práva k zobrazení tohoto obsahu.",
+      en: "You don't have rights to see this content."
     }
   }
 };

@@ -1,18 +1,18 @@
 //@@viewOn:imports
 import UU5 from "uu5g04";
 
-import ns from "../bricks-ns.js";
-import BricksLsi from "../bricks-lsi.js";
+import ns from "./bricks-editable-ns.js";
+import EditableLsi from "./bricks-editable-lsi.js";
 //@@viewOff:imports
 
-const Lsi = BricksLsi.boxEditable;
+const Lsi = EditableLsi.box;
 
 const editableComponentPropsSetup = [
   { name: "infoHeader", type: "expandableEditorInput", label: Lsi.infoHeaderLabel },
   { name: "infoContent", type: "editorInput", label: Lsi.infoContentLabel }
 ];
 
-const editableAdditionalPropsSetup = [
+const editableDisplayPropsSetup = [
   { name: "colorSchema" },
   { name: "elevation" },
   { name: "borderRadius" },
@@ -21,26 +21,25 @@ const editableAdditionalPropsSetup = [
 
 const editablePropsSetup = [
   {
-    name: <UU5.Bricks.Lsi lsi={Lsi.componentPropsLabel} />,
-    icon: "mdi-settings",
+    name: <UU5.Bricks.Lsi lsi={EditableLsi.common.componentPropsLabel} />,
     setup: editableComponentPropsSetup
   },
   {
-    name: <UU5.Bricks.Lsi lsi={Lsi.additionalPropsLabel} />,
-    setup: editableAdditionalPropsSetup
+    name: <UU5.Bricks.Lsi lsi={EditableLsi.common.displayPropsLabel} />,
+    setup: editableDisplayPropsSetup
   }
 ];
 
-export const TabsEditable = UU5.Common.VisualComponent.create({
+export const BoxEditable = UU5.Common.VisualComponent.create({
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
   statics: {
-    tagName: ns.name("TabsEditable"),
+    tagName: ns.name("BoxEditable"),
     classNames: {
-      main: ns.css("tabs-editable")
+      main: ns.css("box-editable")
     }
   },
   //@@viewOff:statics
@@ -94,4 +93,4 @@ export const TabsEditable = UU5.Common.VisualComponent.create({
   //@@viewOff:render
 });
 
-export default TabsEditable;
+export default BoxEditable;

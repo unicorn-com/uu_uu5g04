@@ -106,10 +106,10 @@ export const FormsLsi = {
       uk: "Відмінити"
     },
     header: {
-      cs: "Editace ${name}",
-      en: "${name} Editation",
-      sk: "Editácia ${name}",
-      uk: "Редагування ${name}"
+      cs: "${name} editace",
+      en: "${name} editation",
+      sk: "${name} editácia",
+      uk: "${name} редагування"
     },
     itemRemoveModalHeader: {
       cs: "Smazání položky",
@@ -128,6 +128,10 @@ export const FormsLsi = {
       en: "Remove",
       sk: "Zmazať",
       uk: "Видалити"
+    },
+    onSaveInvalidForm: {
+      cs: "Přinejmenším jedna honota formuláře není platná!",
+      en: "Atleast one of the editation forms is invalid!"
     }
   },
   menu: {
@@ -139,62 +143,62 @@ export const FormsLsi = {
     }
   },
   bgStyleInput: {
-    label: { 
-      cs: "Styl pozadí", 
+    label: {
+      cs: "Styl pozadí",
       en: "Background style",
       sk: "Štýl pozadia",
       uk: "Фон стиль"
     },
-    filled: { 
-      cs: "vyplněný", 
+    filled: {
+      cs: "vyplněný",
       en: "filled",
       sk: "vyplnený",
       uk: "заповнене"
     },
-    outline: { 
-      cs: "ohraničený", 
+    outline: {
+      cs: "ohraničený",
       en: "outline",
       sk: "ohraničený",
       uk: "контур"
     },
-    transparent: { 
-      cs: "transparentní", 
+    transparent: {
+      cs: "transparentní",
       en: "transparent",
       sk: "transparentné",
       uk: "прозорий"
     },
-    underline: { 
-      cs: "podtržený", 
+    underline: {
+      cs: "podtržený",
       en: "underline",
       sk: "podčiarknutý",
       uk: "підкреслення"
     },
-    rounded: { 
-      cs: "kulaté", 
+    rounded: {
+      cs: "kulaté",
       en: "rounded",
       sk: "guľaté",
       uk: "круглі"
     }
   },
   elevationInput: {
-    label: { 
+    label: {
       en: "Elevation"
     }
   },
   borderRadiusInput: {
-    label: { 
-      cs: "Zaoblení rohů", 
+    label: {
+      cs: "Zaoblení rohů",
       en: "Border radius",
       sk: "Zaoblenie rohov",
       uk: "Закруглення кутів"
     }
   },
   colorSchemaPicker: {
-    label: { 
-      cs: "Barevné schéma", 
-      en: "Color schema",
-      sk: "Farebná schéma",
-      uk: "Колірна гамма"
+    label: {
+      cs: "Barva",
+      en: "Color",
+      sk: "Farba",
+      uk: "Колір"
     }
   },
   confirmModal: {

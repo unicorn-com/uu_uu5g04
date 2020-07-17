@@ -1,3 +1,5 @@
+import Tools from "../common/tools";
+
 export class Style {
   static parse(styleString) {
     let obj = {};
@@ -6,7 +8,7 @@ export class Style {
     properties.forEach(item => {
       let keysAndValues = item.split(":");
       if (keysAndValues.length > 1) {
-        obj[keysAndValues[0].trim()] = keysAndValues[1].trim();
+        obj[Tools.getCamelCase(keysAndValues[0].trim(), true)] = keysAndValues[1].trim();
       }
     });
 

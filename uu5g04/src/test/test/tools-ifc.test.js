@@ -71,6 +71,97 @@ describe("UU5.Test.Tools", () => {
     expect(instance.isUnmounted()).toBe(true);
   });
 
+  it("act", async () => {
+    let HookComponent = React.forwardRef((props, ref) => {
+      let [count, setCount] = React.useState(0);
+      let [fromEffect, setFromEffect] = React.useState(count); // changed in useEffect
+      React.useImperativeHandle(ref, () => ({ setCount }), []);
+      React.useEffect(() => setFromEffect(count), [count]);
+      return <span>{fromEffect}</span>;
+    });
+    let componentRef = React.createRef();
+    let wrapper = mount(<HookComponent ref={componentRef} />); // mount does "act()" automatically
+
+    // without act() the component would render without calling useEffect yet (i.e. we'll see old value)
+    let origConsoleError = console.error;
+    console.error = () => {}; // prevent react warning regarding not using act()
+    try {
+      componentRef.current.setCount(10);
+      wrapper.update();
+      expect(wrapper.text()).toBe("0");
+    } finally {
+      console.error = origConsoleError;
+    }
+
+    // with act() the component would render including useEffect-s
+    UU5.Test.Tools.act(() => {
+      componentRef.current.setCount(30);
+    });
+    wrapper.update();
+    expect(wrapper.text()).toBe("30");
+  });
+
+  it("renderHook", async () => {
+    let useSomething = function(initialValue = 10, changeableValue = 0) {
+      let [initialParam1] = React.useState(initialValue);
+      return [initialParam1, changeableValue];
+    };
+
+    let result;
+    result = UU5.Test.Tools.renderHook(useSomething);
+    expect(result).toMatchObject({
+      lastResult: expect.any(Function),
+      rerender: expect.any(Function),
+      allResults: expect.any(Function),
+      renderCount: expect.any(Function),
+      wrapper: expect.any(Object)
+    });
+    expect(result.lastResult()).toMatchObject([10, 0]); // default values
+    expect(result.allResults()).toMatchObject([[10, 0]]);
+    expect(result.renderCount()).toBe(1);
+
+    result.rerender(20, 7);
+    expect(result.lastResult()).toMatchObject([10, 7]);
+    expect(result.allResults()).toMatchObject([[10, 0], [10, 7]]);
+    expect(result.renderCount()).toBe(2);
+
+    result = UU5.Test.Tools.renderHook(useSomething, 1, 2);
+    expect(result.lastResult()).toMatchObject([1, 2]);
+  });
+
+  it("initHookRenderer", async () => {
+    let useSomething = function(initialValue = 10, changeableValue = 0) {
+      let [initialParam1] = React.useState(initialValue);
+      return [initialParam1, changeableValue];
+    };
+
+    let result;
+    result = UU5.Test.Tools.initHookRenderer(useSomething);
+    expect(result).toMatchObject({
+      lastResult: expect.any(Function),
+      rerender: expect.any(Function),
+      allResults: expect.any(Function),
+      renderCount: expect.any(Function),
+      HookComponent: expect.any(Function)
+    });
+    let childFn = jest.fn(() => null);
+    mount(<result.HookComponent>{childFn}</result.HookComponent>);
+    expect(result.lastResult()).toMatchObject([10, 0]); // default values
+    expect(result.allResults()).toMatchObject([[10, 0]]);
+    expect(result.renderCount()).toBe(1);
+    expect(childFn).toHaveBeenLastCalledWith(result.lastResult());
+
+    result.rerender(20, 7);
+    expect(result.lastResult()).toMatchObject([10, 7]);
+    expect(result.allResults()).toMatchObject([[10, 0], [10, 7]]);
+    expect(result.renderCount()).toBe(2);
+    expect(childFn).toHaveBeenLastCalledWith(result.lastResult());
+
+    result = UU5.Test.Tools.initHookRenderer(useSomething, 1, 2);
+    mount(<result.HookComponent />);
+    expect(result.lastResult()).toMatchObject([1, 2]);
+  });
+
   it("wait", async () => {
     // test basic functionality with Enzyme's mount
     wrapper = mount(<AsyncComponent />);
@@ -88,19 +179,25 @@ describe("UU5.Test.Tools", () => {
     // test options
     wrapper = UU5.Test.Tools.mount(<AsyncComponent timeout={50} />);
     expect(wrapper.text()).toBe("loading");
-    await UU5.Test.Tools.wait(25);
-    expect(wrapper.text()).toBe("loading");
-    await UU5.Test.Tools.wait(50);
-    expect(wrapper.text()).toBe("loaded");
+    let start = Date.now();
+    let isLoaded = false;
+    while (!isLoaded && Date.now() - start < 500) {
+      await UU5.Test.Tools.wait(9);
+      isLoaded = Date.now() - start >= 50;
+      expect(wrapper.text()).toBe(isLoaded ? "loaded" : "loading");
+    }
+    expect(isLoaded).toBe(true);
 
     wrapper = UU5.Test.Tools.mount(<AsyncComponent timeout={50} />);
     expect(wrapper.text()).toBe("loading");
-    await UU5.Test.Tools.wait({ timeout: 25, updateWrapper: false });
-    expect(wrapper.text()).toBe("loading");
-    wrapper.update();
-    expect(wrapper.text()).toBe("loading");
-    await UU5.Test.Tools.wait({ timeout: 50, updateWrapper: false });
-    expect(wrapper.text()).toBe("loading");
+    start = Date.now();
+    isLoaded = false;
+    while (!isLoaded && Date.now() - start < 500) {
+      await UU5.Test.Tools.wait({ timeout: 9, updateWrapper: false });
+      isLoaded = Date.now() - start >= 50;
+      expect(wrapper.text()).toBe("loading"); // will be reported as loading because we didn't update wrapper
+    }
+    expect(isLoaded).toBe(true);
     wrapper.update();
     expect(wrapper.text()).toBe("loaded");
   });
@@ -202,24 +299,37 @@ describe("UU5.Test.Tools", () => {
     mockFn.mockClear();
     wrapper = UU5.Test.Tools.mount(<CallComponent onCall={mockFn} />);
     expect(wrapper.text()).toBe("0");
-    setTimeout(() => wrapper.instance().call(), 10);
-    setTimeout(() => wrapper.instance().call(), 25);
-    setTimeout(() => wrapper.instance().call(), 50);
-    setTimeout(() => wrapper.instance().call(), 15);
+    let lastTimeout;
+    setTimeout(() => {
+      wrapper.instance().call();
+      setTimeout(() => {
+        wrapper.instance().call();
+        setTimeout(() => {
+          wrapper.instance().call();
+          lastTimeout = setTimeout(() => wrapper.instance().call(), 50); // shouldn't get executed
+        }, 10);
+      }, 10);
+    }, 10);
     await UU5.Test.Tools.waitUntilCalledTimes(mockFn, 3);
     expect(wrapper.text()).toBe("3");
+    expect(lastTimeout).toBeDefined();
+    clearTimeout(lastTimeout);
 
     // test with updateWrapper
     mockFn.mockClear();
+    wrapper = UU5.Test.Tools.mount(<CallComponent onCall={mockFn} />);
+    expect(wrapper.text()).toBe("0");
+    setTimeout(() => wrapper.instance().call(), 10);
     await UU5.Test.Tools.waitUntilCalledTimes(mockFn, 1, { updateWrapper: false });
-    expect(wrapper.text()).toBe("3");
+    expect(wrapper.text()).toBe("0");
     wrapper.update();
-    expect(wrapper.text()).toBe("4");
+    expect(wrapper.text()).toBe("1");
 
     // test timing out
+    mockFn.mockClear();
     let ok;
     try {
-      await UU5.Test.Tools.waitUntilCalledTimes(mockFn, 2, { timeout: 10 });
+      await UU5.Test.Tools.waitUntilCalledTimes(mockFn, 1, { timeout: 10 });
     } catch (e) {
       if (e.code !== "CALL_COUNT_TOO_LOW") throw e;
       ok = true;

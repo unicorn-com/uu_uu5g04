@@ -29,11 +29,11 @@
         "uu_appg01": "https://cdn.plus4u.net/uu-appg01/4.0.0/uu_appg01.min.js",
         "uu_appg01_oidc": "https://cdn.plus4u.net/uu-appg01-oidc/2.0.0/uu_appg01_oidc.min.js",
 
-        "uu5g04": "https://cdn.plus4u.net/beta/uu-uu5g04/1.29.0-accept.1/uu5g04.min.js",
-        "uu5g04-bricks": "https://cdn.plus4u.net/beta/uu-uu5g04/1.29.0-accept.1/uu5g04-bricks.min.js",
-        "uu5g04-forms": "https://cdn.plus4u.net/beta/uu-uu5g04/1.29.0-accept.1/uu5g04-forms.min.js",
-        "uu5g04-block-layout": "https://cdn.plus4u.net/beta/uu-uu5g04/1.29.0-accept.1/uu5g04-block-layout.min.js",
-        "uu5g04-hooks": "https://cdn.plus4u.net/beta/uu-uu5g04/1.29.0-accept.1/uu5g04-hooks.min.js",
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js",
+        "uu5g04-block-layout": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-block-layout.min.js",
+        "uu5g04-hooks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-hooks.min.js",
       }
     });
 
@@ -295,36 +295,34 @@
     let modalRef = useRef();
     let totalLoadedCount = data ? data.filter(it => it != null).length : 0;
 
-    function showModal(joke) {
+    function showModal(joke, onSave) {
       let modal = modalRef.current;
-      return new Promise((resolve, reject) => {
-        modal.open({
-          header: joke ? "Edit Joke" : "Create Joke",
-          content: (
-            <UU5.Forms.Form
-              key={UU5.Common.Tools.generateUUID()}
-              onSave={opt => {
-                if (!pessimistic) {
-                  modal.close();
-                }
-                resolve(opt);
-              }}
-              onSaveDone={pessimistic ? opt => {
+      modal.open({
+        header: joke ? "Edit Joke" : "Create Joke",
+        content: (
+          <UU5.Forms.Form
+            key={UU5.Common.Tools.generateUUID()}
+            onSave={opt => {
+              if (!pessimistic) {
                 modal.close();
-              } : undefined}
-              onSaveFail={pessimistic ? opt => {
-                opt.component.getAlertBus().setAlert(
-                  { content: `${joke ? "Updating" : "Creating"} on server was failed.`, colorSchema: "danger" }
-                );
-              } : undefined}
-              onCancel={() => modal.close()}
-            >
-              <UU5.Forms.Text label="Name" name="name" value={joke ? joke.name : undefined} />
-              <UU5.Forms.TextArea label="Text" name="text" value={joke ? joke.text : undefined} />
-              <UU5.Forms.Controls />
-            </UU5.Forms.Form>
-          )
-        })
+              }
+              onSave(opt);
+            }}
+            onSaveDone={pessimistic ? opt => {
+              modal.close();
+            } : undefined}
+            onSaveFail={pessimistic ? opt => {
+              opt.component.getAlertBus().setAlert(
+                { content: `${joke ? "Updating" : "Creating"} on server failed.`, colorSchema: "danger" }
+              );
+            } : undefined}
+            onCancel={() => modal.close()}
+          >
+            <UU5.Forms.Text label="Name" name="name" value={joke ? joke.name : undefined} />
+            <UU5.Forms.TextArea label="Text" name="text" value={joke ? joke.text : undefined} />
+            <UU5.Forms.Controls />
+          </UU5.Forms.Form>
+        )
       });
     }
 
@@ -354,7 +352,7 @@
           disabled={!data}
           colorSchema="success"
           onClick={() => {
-            showModal().then(({ component, values }) => {
+            showModal(null, ({ component, values }) => {
               handleCreate({ id: UU5.Common.Tools.generateUUID(), ...values })
                 .then(data => {
                   component.saveDone(data);
@@ -386,7 +384,7 @@
               <Joke
                 data={item}
                 onUpdate={itemData => {
-                  showModal(itemData).then(({ component, values }) => {
+                  showModal(itemData, ({ component, values }) => {
                     handleUpdate(itemData.id, { ...itemData, error: false, ...values }).then(
                       data => {
                         component.saveDone(data);

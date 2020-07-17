@@ -14,7 +14,7 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
-import { getPortalElement } from "./internal/portal.js";
+import { LAYER, RenderIntoPortal } from "./internal/portal.js";
 import { disableBodyScrolling, enableBodyScrolling } from "./internal/page-utils.js";
 
 import "./popover.less";
@@ -785,9 +785,9 @@ export const Popover = withContext(
         );
         if (location === "portal") {
           result =
-            this.state.display || this.isOpen()
-              ? UU5.Common.Portal.create(result, getPortalElement(true, "popover"))
-              : null;
+            this.state.display || this.isOpen() ? (
+              <RenderIntoPortal layer={LAYER.POPOVER}>{result}</RenderIntoPortal>
+            ) : null;
         }
       } else {
         result = null;

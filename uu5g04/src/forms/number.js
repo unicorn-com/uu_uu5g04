@@ -107,12 +107,12 @@ export const Number = Context.withContext(
 
     //@@viewOn:reactLifeCycle
     UNSAFE_componentWillMount() {
-      this._isNaN = false;
       let value = this.state.value;
+      this._isNaN = isNaN(value);
 
       if (typeof value === "number") {
         // to string
-        value = value + "";
+        value = this._isNaN ? "" : value + "";
         const multiplicator = Math.pow(10, this.props.decimals);
         value =
           this.props.rounded && typeof this.props.decimals === "number"
@@ -220,7 +220,7 @@ export const Number = Context.withContext(
       let blurResult;
 
       // set feedback runs all validations but in exception of onChange validation input isn"t marked as focused
-      this.setFeedback("initial", null, this.state.value, () => {
+      this._setFeedback("initial", null, this.state.value, () => {
         if (this._isNaN && !this.props.onValidate) {
           blurResult = { feedback: "initial", message: null, value: this.state.value };
         } else {
@@ -235,12 +235,12 @@ export const Number = Context.withContext(
         if (hasRequiredValue && !this.props.validateOnChange) {
           setNumberResult.required = this.props.required;
           if (setNumberResult.feedback && setNumberResult.feedback) {
-            this.setFeedback(setNumberResult.feedback, setNumberResult.message, setNumberResult.value);
+            this._setFeedback(setNumberResult.feedback, setNumberResult.message, setNumberResult.value);
           }
         } else if (!this.props.validateOnChange) {
           this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessage"), setNumberResult.value);
         } else {
-          this.setFeedback(setNumberResult.feedback, setNumberResult.message, setNumberResult.value);
+          this._setFeedback(setNumberResult.feedback, setNumberResult.message, setNumberResult.value);
         }
       });
 
@@ -251,9 +251,13 @@ export const Number = Context.withContext(
       let value = this._removePrefixandSuffix(this.state.value);
       let result = this.getFocusFeedback(opt);
       if (result) {
-        this.setFeedback(result.feedback, result.message, result.value);
+        this._setFeedback(result.feedback, result.message, result.value);
       } else {
-        this.setFeedback(this.state.feedback, this.state.message, this.state.value === null ? this.state.value : value);
+        this._setFeedback(
+          this.state.feedback,
+          this.state.message,
+          this.state.value === null ? this.state.value : value
+        );
       }
 
       return this;
@@ -292,11 +296,16 @@ export const Number = Context.withContext(
       return text.replace(/[.?*+^$[\]\\(){}|]/g, "\\$&");
     },
 
-    _doGetCaretPosition() {
+    _doGetCaretPosition(e) {
       // check if input is still focused
       if (!this._isFocused) {
         return;
       }
+      // check selection start
+      if (e && !isNaN(e.target.selectionStart)) {
+        return e.target.selectionStart;
+      }
+
       // Initialize
       var iCaretPos = 0;
       let inputNode = UU5.Common.DOM.findNode(this._textInput);
@@ -338,7 +347,7 @@ export const Number = Context.withContext(
     _onMouseUp(e) {
       if (this.props.prefix || this.props.suffix) {
         e.persist();
-        let cursorPosition = this._doGetCaretPosition();
+        let cursorPosition = this._doGetCaretPosition(e);
         let maxPosition = this.props.suffix ? e.target.value.length - this.props.suffix.length : e.target.value.length;
         let minPosition = this.props.prefix ? this.props.prefix.length : 0;
         if (this._isFocused) {
@@ -369,7 +378,7 @@ export const Number = Context.withContext(
       if (this.props.prefix || this.props.suffix) {
         e.persist();
         if (!e.shiftKey) {
-          let cursorPosition = this._doGetCaretPosition();
+          let cursorPosition = this._doGetCaretPosition(e);
           let maxPosition = this.props.suffix
             ? e.target.value.length - this.props.suffix.length
             : e.target.value.length;
@@ -495,13 +504,22 @@ export const Number = Context.withContext(
       return prefix;
     },
 
+    _hasSuffix(value) {
+      return !!value.endsWith(this.props.suffix);
+    },
+
+    _hasPrefix(value) {
+      let prefixRegExp = new RegExp(`^\\${this.props.suffix}`, "g");
+      return !!value.match(prefixRegExp);
+    },
+
     _correctCursorFireFoxAndIe(e) {
       e.preventDefault();
       //correct position of cursor when focusing input in FireFox and IE
       let isFireFox = window.navigator.userAgent.match("Firefox");
       let isIE = UU5.Common.Tools.isIE();
       if (isFireFox || isIE) {
-        let cursorPosition = this._doGetCaretPosition();
+        let cursorPosition = this._doGetCaretPosition(e);
         if (!this.props.suffix && !this.props.prefix) {
           setTimeout(() => {
             this._setCaretPosition(cursorPosition);
@@ -524,9 +542,8 @@ export const Number = Context.withContext(
       e.preventDefault();
       // correct cursor position onChange when is before prefix or after suffix
       if (this.props.prefix || this.props.suffix) {
-        let cursorPosition = this._doGetCaretPosition();
-        let suffixRegExp = new RegExp("\\" + this.props.suffix, "g");
-        let hasSuffix = !!e.target.value.match(suffixRegExp);
+        let cursorPosition = this._doGetCaretPosition(e);
+        let hasSuffix = this._hasSuffix(e.target.value);
         let minPosition = this.props.prefix ? this.props.prefix.length : 0;
         let maxPosition = this.props.suffix
           ? e.target.value.length - (hasSuffix ? this.props.suffix.length : 0)
@@ -558,11 +575,12 @@ export const Number = Context.withContext(
           if (opt.value !== "-" || ((this.props.min || this.props.min === 0) && this.props.min >= 0)) {
             this._updateRange = this._doGetCaretPosition() - 1;
             opt.feedback = "warning";
-            opt.message = opt.value === "-" && this.props.min >= 0
-              ? this.props.lowerMessage || this.getLsiComponent("lowerMessage", null, this.props.min)
-              : this.props.nanMessage || this.getLsiComponent("nanMessage");
+            opt.message =
+              opt.value === "-" && this.props.min >= 0
+                ? this.props.lowerMessage || this.getLsiComponent("lowerMessage", null, this.props.min)
+                : this.props.nanMessage || this.getLsiComponent("nanMessage");
 
-            opt.value = "" + this.state.value; // update value to string
+            opt.value = isNaN(this.state.value) && this.state.value !== "-" ? "" : "" + this.state.value; // update value to string
           }
           this._isNaN = true;
         } else {
@@ -594,7 +612,7 @@ export const Number = Context.withContext(
           }
 
           isComma && (opt.value = opt.value.replace(".", ","));
-        } else if (opt.value === "-" && this.props.min >= 0) {
+        } else if (opt.value === "-" && (this.props.min > 0 || this.props.min ===0)) { // beware of null
           opt.feedback = "error";
           opt.message = this.props.lowerMessage || this.getLsiComponent("lowerMessage", null, this.props.min);
         }
@@ -650,7 +668,7 @@ export const Number = Context.withContext(
       let checkNumberResult = this._checkNumberResultChange(opt);
 
       if (checkNumberResult.feedback && checkNumberResult.feedback === "warning") {
-        this.setFeedback(checkNumberResult.feedback, checkNumberResult.message, checkNumberResult.value);
+        this._setFeedback(checkNumberResult.feedback, checkNumberResult.message, checkNumberResult.value);
       } else {
         let currentValue = this._getOutputResult({ ...opt, value: this.state.value, _data: { ...opt._data } });
         // prevent changing original value
@@ -700,7 +718,7 @@ export const Number = Context.withContext(
           opt.required = this.props.required;
           let result = this.getChangeFeedback(opt);
           _callCallback = false;
-          this.setFeedback(result.feedback, result.message, result.value, setStateCallback);
+          this._setFeedback(result.feedback, result.message, result.value, setStateCallback);
         }
       }
 
@@ -813,7 +831,7 @@ export const Number = Context.withContext(
 
     _decrease(e) {
       //TODO: optimize
-      let value = this.state.value || this.state.value === 0 ? this.state.value : this.props.min + 1;
+      let value = this.state.value || this.state.value === 0 ? this.state.value : this.props.min + this.props.step;
       let number = this._formatOutput(value).replace(this.props.decimalSeparator, ".");
       let decimal = this._formatOutput(value).split(this.props.decimalSeparator);
       let valueDecimals = decimal[1] ? decimal[1].length : 0;
@@ -844,7 +862,7 @@ export const Number = Context.withContext(
 
     _increase(e) {
       //TODO: optimize
-      let value = this.state.value || this.state.value === 0 ? this.state.value : this.props.min - 1;
+      let value = this.state.value || this.state.value === 0 ? this.state.value : this.props.min - this.props.step;
       let number = this._formatOutput(value).replace(this.props.decimalSeparator, ".");
       let decimal = this._formatOutput(value).split(this.props.decimalSeparator);
       let valueDecimals = decimal[1] ? decimal[1].length : 0;
@@ -930,31 +948,31 @@ export const Number = Context.withContext(
       let buttons =
         !this.isReadOnly() && !this.props.buttonHidden
           ? [
-            {
-              icon: "mdi-minus",
-              disabled: this.isComputedDisabled() || this._isDisabled("min"),
-              onClick: (component, e) => this._decrease(e),
-              size: this.props.size,
-              colorSchema: this.props.colorSchema,
-              mainAttrs: {
-                onMouseDown: this._decreaseStart,
-                onMouseUp: this._decreaseEnd,
-                onMouseOut: this._decreaseEnd
+              {
+                icon: "mdi-minus",
+                disabled: this.isComputedDisabled() || this._isDisabled("min"),
+                onClick: (component, e) => this._decrease(e),
+                size: this.props.size,
+                colorSchema: this.props.colorSchema,
+                mainAttrs: {
+                  onMouseDown: this._decreaseStart,
+                  onMouseUp: this._decreaseEnd,
+                  onMouseOut: this._decreaseEnd
+                }
+              },
+              {
+                icon: "mdi-plus",
+                disabled: this.isComputedDisabled() || this._isDisabled("max"),
+                onClick: (component, e) => this._increase(e),
+                size: this.props.size,
+                colorSchema: this.props.colorSchema,
+                mainAttrs: {
+                  onMouseDown: this._increaseStart,
+                  onMouseUp: this._increaseEnd,
+                  onMouseOut: this._increaseEnd
+                }
               }
-            },
-            {
-              icon: "mdi-plus",
-              disabled: this.isComputedDisabled() || this._isDisabled("max"),
-              onClick: (component, e) => this._increase(e),
-              size: this.props.size,
-              colorSchema: this.props.colorSchema,
-              mainAttrs: {
-                onMouseDown: this._increaseStart,
-                onMouseUp: this._increaseEnd,
-                onMouseOut: this._increaseEnd
-              }
-            }
-          ]
+            ]
           : null;
 
       let inputAttrs = this.props.inputAttrs || {};
@@ -970,7 +988,7 @@ export const Number = Context.withContext(
         } else {
           value += this._formatOutput(this.state.value, this.props.decimalsView, true);
         }
-        value += this._suffix();
+        if (!this._hasSuffix(value)) value += this._suffix();
       } else {
         value = "";
       }

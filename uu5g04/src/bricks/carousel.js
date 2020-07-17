@@ -18,7 +18,15 @@ import ns from "./bricks-ns.js";
 import "./carousel.less";
 import CarouselItem from "./carousel-item.js";
 import Icon from "./icon.js";
+
+const EditationComponent = UU5.Common.Component.lazy(async () => {
+  await SystemJS.import("uu5g04-forms");
+  await SystemJS.import("uu5g04-bricks-editable");
+  return import("./internal/carousel-editable.js");
+});
 //@@viewOff:imports
+
+let editationLazyLoaded = false;
 
 export const Carousel = UU5.Common.VisualComponent.create({
   displayName: "Carousel", // for backward compatibility (test snapshots)
@@ -28,7 +36,9 @@ export const Carousel = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.ContentMixin,
     UU5.Common.ColorSchemaMixin,
-    UU5.Common.SwipeMixin
+    UU5.Common.SwipeMixin,
+    // TODO Uncomment - new editation postponed.
+    // UU5.Common.EditableMixin
   ],
   //@@viewOff:mixins
 
@@ -48,7 +58,14 @@ export const Carousel = UU5.Common.VisualComponent.create({
       minAngle: 22.5,
       childTagName: "UU5.Bricks.Carousel.Item",
       colorSchema: "default"
-    }
+    },
+    // TODO Uncomment - new editation postponed.
+    // editMode: {
+    //   name: { en: "Carousel", cs: "Carousel" },
+    //   backgroundColor: "rgba(0,0,0,.2)",
+    //   color: "rgba(0,0,0,.87)",
+    //   highlightColor: "#CCCCCC"
+    // }
   },
   //@@viewOff:statics
 
@@ -81,7 +98,9 @@ export const Carousel = UU5.Common.VisualComponent.create({
       interval: 5000,
       stepByOne: false,
       allowTags: [],
-      onIndexChange: undefined
+      onIndexChange: undefined,
+      // TODO Uncomment - new editation postponed.
+      // contentEditable: false
     };
   },
   //@@viewOff:getDefaultProps
@@ -236,9 +255,46 @@ export const Carousel = UU5.Common.VisualComponent.create({
 
     return newChildProps;
   },
+
+  // TODO Uncomment - new editation postponed.
+  // onBeforeForceEndEditation_() {
+  //   this._startAutoSlide();
+  //   return this._editableComponent ? this._editableComponent.getPropsToSave() : undefined;
+  // },
   //@@viewOff:overriding
 
   //@@viewOn:private
+  _registerNull(inst) {
+    // unmount of component means that suspense is loaded and component should be rendered
+    if (!inst) {
+      this.setState(state => {
+        if (state.editationLazyLoaded) return;
+
+        // Edit component is loaded - need to set to static variable because other Edit component does not render fallback component
+        // editationLazyLoaded is stored in both state and static variable for cases such as when more edit modes are loaded at the same time
+        editationLazyLoaded = true;
+        return { editationLazyLoaded: true };
+      });
+    }
+  },
+
+  _isEditationLazyLoaded() {
+    return editationLazyLoaded;
+  },
+
+  _renderEditationMode() {
+    this._pauseAutoSlide();
+    return (
+      <UU5.Common.Suspense fallback={<span ref={this._registerNull} />}>
+        <EditationComponent component={this} ref_={this._registerEditableComponent} />
+      </UU5.Common.Suspense>
+    );
+  },
+
+  _registerEditableComponent(ref) {
+    this._editableComponent = ref;
+  },
+
   _getMaxHeight() {
     let maxHeight = 0;
     this.eachRenderedChild(child => {
@@ -269,11 +325,16 @@ export const Carousel = UU5.Common.VisualComponent.create({
   },
 
   _pauseAutoSlide() {
-    UU5.Environment.TimeManager.clearInterval(this._interval);
+    if (this._interval) {
+      UU5.Environment.TimeManager.clearInterval(this._interval);
+      this._interval = undefined;
+    }
   },
 
   _startAutoSlide() {
-    this._interval = UU5.Environment.TimeManager.setInterval(() => this.setNext(), this.props.interval);
+    if (!this._interval && !this.state.editation) {
+      this._interval = UU5.Environment.TimeManager.setInterval(() => this.setNext(), this.props.interval);
+    }
   },
 
   _clickHandler(func) {
@@ -404,6 +465,7 @@ export const Carousel = UU5.Common.VisualComponent.create({
   _getContent(properties) {
     const displayedItems = this.props.displayedItems;
     const children = this.state.children;
+    if (!children) return [];
     let noOfElements = properties.noOfElements;
     let startPosition = properties.position;
     this._shiftCirc = this._shiftCirc || 0;
@@ -524,10 +586,8 @@ export const Carousel = UU5.Common.VisualComponent.create({
     }
     return indicators;
   },
-  //@@viewOff:private
 
-  //@@viewOn:render
-  render() {
+  _renderComponent() {
     const colorSchema = this.getColorSchema();
     const colorSchemaClassName = colorSchema ? " color-schema-" + colorSchema : "";
 
@@ -541,7 +601,7 @@ export const Carousel = UU5.Common.VisualComponent.create({
       classNameRight += " " + this.getClassName().lastArrow;
     }
 
-    return this.props.children ? (
+    return (
       <div {...this._buildMainAttrs()}>
         {this.state.renderedChildren}
         {this.state.tmpChildren}
@@ -560,6 +620,17 @@ export const Carousel = UU5.Common.VisualComponent.create({
         </div>
         {this.getDisabledCover()}
       </div>
+    );
+  },
+  //@@viewOff:private
+
+  //@@viewOn:render
+  render() {
+    return this.state.renderedChildren || this.state.tmpChildren ? (
+      <>
+        {this.state.editation ? this._renderEditationMode() : null}
+        {!this.state.editation || !this._isEditationLazyLoaded() ? this._renderComponent() : null}
+      </>
     ) : null;
   }
   //@@viewOff:render

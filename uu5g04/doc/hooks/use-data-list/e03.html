@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 03 - bulk actions</title>
+
+  <script>
+    if (!location.href.match(/^(about:|file:)/)) {
+      var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+      var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+      if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+      var appBaseUrlPath = (location.pathname.split(/\//).slice(0, 1 + bplSegmentCount).join("/") + "/").replace(/\/+/g, "/").replace(/"/g, "");
+      var appAssetsRelativeUrlPath = "public/0.0.0/";
+      document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    }
+  </script>
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/4.0.0/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/4.0.0/uu_appg01.min.js",
+        "uu_appg01_oidc": "https://cdn.plus4u.net/uu-appg01-oidc/2.0.0/uu_appg01_oidc.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/beta/uu-uu5g04/1.32.0-hooks.8/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/beta/uu-uu5g04/1.32.0-hooks.8/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/beta/uu-uu5g04/1.32.0-hooks.8/uu5g04-forms.min.js",
+        "uu5g04-block-layout": "https://cdn.plus4u.net/beta/uu-uu5g04/1.32.0-hooks.8/uu5g04-block-layout.min.js",
+        "uu5g04-hooks": "https://cdn.plus4u.net/beta/uu-uu5g04/1.32.0-hooks.8/uu5g04-hooks.min.js",
+      }
+    });
+  </script>
+
+  <style>
+    .margin {
+      margin-top: 16px !important;
+    }
+
+    .uu5-bricks-button + .uu5-bricks-button {
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+  import "uu5g04-block-layout";
+  import { useDataList, createVisualComponent, useState, useRef, PagingAutoLoad, useMemo, useCallback, useEffect } from "uu5g04-hooks";
+  import { Session } from "uu_appg01_oidc";
+  import { Client } from "uu_appg01";
+
+  let callDelay = 1500;
+  let error = false;
+
+  /*@@viewOn:example*/
+  const Calls = {
+    // ...
+    load(dtoIn) {
+      let commandUri = Calls.getCommandUri("joke/list");
+      return Calls.call("get", commandUri, dtoIn);
+    },
+
+    loadItem(dtoIn) {
+      let commandUri = Calls.getCommandUri("joke/get");
+      return Calls.call("get", commandUri, dtoIn);
+    },
+
+    updateItem(newData) {
+      let commandUri = Calls.getCommandUri("joke/update");
+      return Calls.call("post", commandUri, newData);
+    },
+
+    createItem(newData) {
+      let commandUri = Calls.getCommandUri("joke/create");
+      return Calls.call("post", commandUri, newData);
+    },
+
+    deleteItem(dtoIn) {
+      let commandUri = Calls.getCommandUri("joke/delete");
+      return Calls.call("post", commandUri, dtoIn);
+    },
+
+    async createMany(dtoIn) {
+      // NOTE This should call a command which accepts multiple items (dtoIn is array) and returns
+      // an array of created items. This demo doesn't have such bulk command so we'll just call
+      // non-bulk command as many times as necessary and collect the results into an array.
+      let isSuccess = true;
+      let promises = dtoIn.map(newData => Calls.createItem(newData).catch(e => {
+        isSuccess = false;
+        return e;
+      }));
+      let resultList = await Promise.all(promises);
+      return isSuccess ? resultList : Promise.reject(resultList);
+    },
+
+    async updateMany(dtoIn) {
+      // NOTE This should call a command which accepts multiple items (dtoIn is array) and returns
+      // an array of updated items. This demo doesn't have such bulk command so we'll just call
+      // non-bulk command as many times as necessary and collect the results into an array.
+      let isSuccess = true;
+      let promises = dtoIn.map(newData => Calls.updateItem(newData).catch(e => {
+        isSuccess = false;
+        return e;
+      }));
+      let resultList = await Promise.all(promises);
+      return isSuccess ? resultList : Promise.reject(resultList);
+    },
+
+    async deleteMany(dtoIn) {
+      // NOTE This should call a command which accepts multiple items (dtoIn is array) and returns
+      // an array of deleted items (nulls or errors). This demo doesn't have such bulk command so we'll just call
+      // non-bulk command as many times as necessary and collect the results into an array.
+      let isSuccess = true;
+      let promises = dtoIn.map(joke => Calls.deleteItem(joke).catch(e => {
+        isSuccess = false;
+        return e;
+      }));
+      let resultList = await Promise.all(promises);
+      return isSuccess ? resultList : Promise.reject(resultList);
+    },
+  };
+  /*@@viewOff:example*/
+
+  Calls.call = async (method, uri, dtoIn) => {
+    let startTime = Date.now();
+    try {
+      let clientOptions = error ? { headers: { authorization: null } } : undefined;
+      let response = await Client[method](uri, dtoIn, clientOptions);
+      return response.data;
+    } finally {
+      await new Promise(resolve => setTimeout(resolve, Math.max(0, callDelay - (Date.now() - startTime))));
+    }
+  };
+  Calls.getCommandUri = useCase => "https://uuappg01-eu-w-1.plus4u.net/uu-jokes-maing01/4ef6a7b01b5942ecbfb925b249af987f/" + useCase;
+
+  function usePreviousValue(curValue, initialValue = undefined) {
+    let curValueRef = useRef(initialValue);
+    useEffect(() => {
+      curValueRef.current = curValue;
+    });
+    return curValueRef.current;
+  }
+
+
+  /*@@viewOn:example*/
+  const Example = createVisualComponent({
+    render() {
+      let pageSize = 100;
+      let dataListResult = useDataList({
+        pageSize,
+        handlerMap: {
+          load: Calls.load,
+          createMany: Calls.createMany,
+          updateMany: Calls.updateMany,
+          deleteMany: Calls.deleteMany,
+        },
+        itemHandlerMap: {
+          update: Calls.updateItem,
+          delete: Calls.deleteItem,
+        }
+        // skipInitialLoad: false,
+        // initialDtoIn: undefined,
+        // initialData: undefined, // [{"name":"A0 Skydiving","text":"Why don't blind people skydive? Because it scares the crap out of their dogs.","averageRating":0,"ratingCount":0,"visibility":false,"uuIdentity":"127-0000-0000-1","uuIdentityName":"Milan Šatka","awid":"4ef6a7b01b5942ecbfb925b249af987f","categoryList":[],"sys":{"cts":"2020-06-09T08:23:30.699Z","mts":"2020-06-09T08:23:30.699Z","rev":0},"id":"5edf47021d5ce800255e7000","uuAppErrorMap":{}}]
+      });
+      let { state, data, errorData, pendingData, handlerMap } = dataListResult;
+      console.log(dataListResult);
+
+      let modalRef = useRef();
+
+      let firstNotYetLoadedIndex = data ? data.findIndex(it => it == null) : 0;
+      let dataToRender = data && firstNotYetLoadedIndex >= 0 ? data.slice(0, firstNotYetLoadedIndex) : data || [];
+
+      let [selectedItemIds, setSelectedItemIds] = useState(() => new Set());
+      if (selectedItemIds.size) {
+        let existingItems = data ? data.filter(it => it && selectedItemIds.has(it.data.id)) : [];
+        if (existingItems.length !== selectedItemIds.size) setSelectedItemIds(new Set(existingItems.map(it => it.data.id)));
+      }
+
+      let showModal = useCallback((joke, onSave) => {
+        let modal = modalRef.current;
+        modal.open({
+          header: joke ? "Edit Joke" : "Create Joke (x3)",
+          content: (
+            <UU5.Forms.Form
+              onSave={onSave}
+              onSaveDone={opt => {
+                modal.close();
+              }}
+              onSaveFail={opt => {
+                opt.component.getAlertBus().setAlert(
+                  { content: `${joke ? "Updating" : "Creating"} on server failed.`, colorSchema: "danger" }
+                );
+              }}
+              onCancel={() => modal.close()}
+              controlled={false}
+            >
+              <UU5.Forms.Text label="Name" name="name" value={joke ? joke.name : undefined} controlled={false} />
+              <UU5.Forms.TextArea label="Text" name="text" value={joke ? joke.text : undefined} controlled={false} />
+              <UU5.Forms.Controls controlled={false} />
+            </UU5.Forms.Form>
+          )
+        });
+      }, []);
+
+      let handleJokeUpdate = useCallback((item) => {
+        showModal(item.data, async ({ component, values }) => {
+          // TODO Check that we're still mounted (also after each await).
+          let data, error;
+          try {
+            data = await item.handlerMap.update(values);
+          } catch (e) {
+            error = e;
+          }
+          if (error) component.saveFail(error);
+          else component.saveDone(data);
+        });
+      }, [showModal]);
+
+      let handleJokeDelete = useCallback((item) => {
+        item.handlerMap.delete();
+      }, []);
+
+      let handleJokeSelectionChange = useCallback(({ selected, item }) => {
+        setSelectedItemIds(items => {
+          let result = new Set(items);
+          if (selected) result.add(item.data.id);
+          else result.delete(item.data.id);
+          return result;
+        });
+      }, []);
+
+      return (
+        <UU5.Bricks.Div>
+          <UU5.Bricks.Button
+            disabled={(state === "pending" || state === "pendingNoData") && pendingData.operation === "load"}
+            colorSchema="success"
+            onClick={() => {
+              showModal(null, async ({ component, values }) => {
+                // TODO Check that we're still mounted (also after each await).
+                let data, error;
+                try {
+                  data = await handlerMap.createMany([values, values, values]);
+                } catch (e) {
+                  error = e;
+                }
+                if (error) component.saveFail(error);
+                else component.saveDone(data);
+              });
+            }}
+          >
+            Create 3 jokes
+          </UU5.Bricks.Button>
+          <UU5.Bricks.Button
+            disabled={(state === "pending" || state === "pendingNoData") && pendingData.operation === "load" || selectedItemIds.size === 0}
+            onClick={() => {
+              let nowIsoString = new Date().toISOString().replace(/^.*T|\..*/g, "") + "Z";
+              let selectedItems = data.filter(it => selectedItemIds.has(it.data.id));
+              let dtoInList = selectedItems.map(it => ({
+                id: it.data.id,
+                text: it.data.text.replace(/ Edited at.*/, "") + " Edited at " + nowIsoString + " (bulk)"
+              }));
+              handlerMap.updateMany(dtoInList);
+            }}
+          >
+            Update {selectedItemIds.size} selected joke(s)
+          </UU5.Bricks.Button>
+          <UU5.Bricks.Button
+            disabled={(state === "pending" || state === "pendingNoData") && pendingData.operation === "load" || selectedItemIds.size === 0}
+            onClick={() => {
+              let nowIsoString = new Date().toISOString().replace(/^.*T|\..*/g, "") + "Z";
+              let selectedItems = data.filter(it => selectedItemIds.has(it.data.id));
+              let dtoInList = selectedItems.map(it => ({ id: it.data.id }));
+              handlerMap.deleteMany(dtoInList);
+            }}
+          >
+            Delete {selectedItemIds.size} selected joke(s)
+          </UU5.Bricks.Button>
+
+          <UU5.Bricks.Pre className={UU5.Common.Css.css`height: 400px; overflow: auto;`}>
+            {JSON.stringify({
+              state,
+              data: data ? JSON.stringify(data).replace(/"/g, "'") : null,
+              pendingData: pendingData ? JSON.stringify(pendingData).replace(/"/g, "'") : null,
+              errorData,
+              handlerMap: Object.keys(handlerMap).reduce((r, k) => (r[k] = handlerMap[k] ? "fn(...)" : null, r), {}),
+              "data[0].handlerMap": data && data[0] ? Object.keys(data[0].handlerMap).reduce((r, k) => (r[k] = data[0].handlerMap[k] ? "fn(...)" : null, r), {}) : null,
+            }, null, 2)}
+          </UU5.Bricks.Pre>
+
+          <UU5.Bricks.Row display="flex">
+            {dataToRender.map(item => (
+              <UU5.Bricks.Column colWidth="m-6 l-4 xl-3" key={item.data.id}>
+                <Joke
+                  data={item.data}
+                  // onUpdate={(state === "pending" || state === "pendingNoData") && pendingData.operation === "load" || item.state === "pending" ? null : handleJokeUpdate}
+                  // onDelete={(state === "pending" || state === "pendingNoData") && pendingData.operation === "load" || item.state === "pending" ? null : handleJokeDelete}
+                  onSelectionChange={(state === "pending" || state === "pendingNoData") && pendingData.operation === "load" || item.state === "pending" ? null : handleJokeSelectionChange}
+                  selected={selectedItemIds.has(item.data.id)}
+                  processingItem={item}
+                />
+              </UU5.Bricks.Column>
+            ))}
+          </UU5.Bricks.Row>
+
+          <PagingAutoLoad
+            data={data}
+            handleLoad={handlerMap.loadNext}
+            distance={window.innerHeight}
+            pageSize={pageSize}
+            error={({error, reload}) => (
+              <UU5.Bricks.Button onClick={() => reload()} content="Load more (auto-load failed)" />
+            )}
+          >
+            <UU5.Bricks.Loading />
+            <UU5.Bricks.Div className="uu5-common-center">(loading {pageSize} more...)</UU5.Bricks.Div>
+          </PagingAutoLoad>
+
+          <UU5.Bricks.Modal controlled={false} ref_={modalRef} mountContent="onEachOpen" />
+        </UU5.Bricks.Div>
+      );
+    }
+  });
+  /*@@viewOff:example*/
+
+  const Joke = UU5.Common.Component.memo(createVisualComponent({
+    render(props) {
+      let { onUpdate, onDelete, onSelectionChange, data, processingItem = {}, selected } = props;
+      const attrs = UU5.Common.VisualComponent.getAttrs(props);
+      return (
+        <UU5.BlockLayout.Tile {...attrs} colorSchema={processingItem.errorData ? "danger" : selected ? "orange" : undefined}>
+          <UU5.BlockLayout.Block
+            actions={[
+              {
+                content: selected ? "Deselect" : "Select",
+                icon: "mdi-check",
+                active: true,
+                disabled: !onSelectionChange,
+                colorSchema: "orange",
+                bgStyle: selected ? "filled" : undefined,
+                onClick: () => onSelectionChange({ item: processingItem, selected: !selected })
+              },
+              // {
+              //   content: "Update",
+              //   icon: "mdi-update",
+              //   active: true,
+              //   disabled: !onUpdate,
+              //   colorSchema: "primary",
+              //   onClick: () => onUpdate(processingItem)
+              // },
+              // {
+              //   content: "Delete",
+              //   icon: "mdi-delete",
+              //   active: true,
+              //   disabled: !onDelete,
+              //   colorSchema: "danger",
+              //   onClick: () => onDelete(processingItem)
+              // },
+            ]}
+          >
+            <UU5.BlockLayout.Row weight="primary" ellipses>
+              {data.name}
+            </UU5.BlockLayout.Row>
+            <UU5.BlockLayout.Row>
+              {data.text}
+            </UU5.BlockLayout.Row>
+          </UU5.BlockLayout.Block>
+        </UU5.BlockLayout.Tile>
+      );
+    }
+  }));
+
+  const Page = createVisualComponent({
+    render() {
+      let [errorFlag, setErrorFlag] = useState(false);
+
+      return (
+        <UU5.Bricks.Container>
+          <UU5.Common.Session session={Session.currentSession}>
+            <UU5.Common.Identity>
+              <UU5.Common.Identity.Item notAuthenticated>
+                <UU5.Bricks.Button onClick={() => Session.currentSession.login()}>Login</UU5.Bricks.Button>
+              </UU5.Common.Identity.Item>
+              <UU5.Common.Identity.Item pending></UU5.Common.Identity.Item>
+
+              <UU5.Common.Identity.Item authenticated>
+                <UU5.Forms.Checkbox
+                  label="Server Error"
+                  inputWidth="32px"
+                  value={errorFlag}
+                  onChange={({ value }) => {
+                    error = value;
+                    setErrorFlag(value)
+                  }}
+                />
+                <UU5.Forms.Slider
+                  label="Server Call Delay [ms]"
+                  labelWidth="auto"
+                  value={callDelay}
+                  controlled={false}
+                  onChange={opt => {
+                    opt.component.onChangeDefault(opt);
+                    callDelay = opt.value;
+                  }}
+                  min={0}
+                  max={5000}
+                  step={500}
+                />
+
+                <Example />
+              </UU5.Common.Identity.Item>
+            </UU5.Common.Identity>
+          </UU5.Common.Session>
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  UU5.Common.DOM.render(<Page />, document.getElementById("uu5Example"));
+</script>
+</body>
+</html>

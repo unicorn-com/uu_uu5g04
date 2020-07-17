@@ -19,21 +19,21 @@ const ColorSchemaPicker = createVisualComponent({
 
   //@@viewOn:propTypes
   propTypes: {
-    componentProps: UU5.PropTypes.object,
     onChange: UU5.PropTypes.func,
-    label: UU5.PropTypes.object
+    label: UU5.PropTypes.object,
+    value: UU5.PropTypes.string
   },
   //@@viewOff:propTypes
 
   //@@viewOn:defaultProps
   defaultProps: {
-    componentProps: undefined,
     onChange: undefined,
-    label: <UU5.Bricks.Lsi lsi={Lsi.colorSchemaPicker.label} />
+    label: <UU5.Bricks.Lsi lsi={Lsi.colorSchemaPicker.label} />,
+    value: undefined
   },
   //@@viewOff:defaultProps
 
-  render({ label, componentProps, onChange, ...props }) {
+  render({ label, onChange, value, ...props }) {
     //@@viewOn:hooks
     //@@viewOff:hooks
 
@@ -45,12 +45,7 @@ const ColorSchemaPicker = createVisualComponent({
 
     //@@viewOn:render
     return (
-      <UU5.Forms.Select
-        {...props}
-        label={label}
-        value={componentProps.colorSchema}
-        onChange={opt => onChange({ value: opt.value })}
-      >
+      <UU5.Forms.Select {...props} label={label} value={value} onChange={onChange}>
         {[...UU5.Environment.colorSchema].map(colorSchema => (
           <UU5.Forms.Select.Option key={colorSchema} value={colorSchema} content={colorSchema} />
         ))}

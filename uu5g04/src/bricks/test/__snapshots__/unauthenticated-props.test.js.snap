@@ -1,0 +1,312 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Bricks.Unauthenticated className="my-classname" 1`] = `
+<div
+  className="uu5-bricks-unauthenticated my-classname uu-bricks-1c1umy"
+  id="uuID"
+>
+  <Icon
+    className="uu-bricks-1d0l47e"
+    icon="mdi-account-key"
+  />
+  <div
+    className="uu-bricks-1nhbw8q"
+  >
+    <Lsi
+      lsi={
+        Object {
+          "cs": "Pouze přihlášený uživatel může zobrazit tento obsah.",
+          "en": "You are not authenticated to view this content.",
+        }
+      }
+    />
+  </div>
+  <Identity>
+    <Component />
+  </Identity>
+</div>
+`;
+
+exports[`UU5.Bricks.Unauthenticated default props 1`] = `
+<div
+  className="uu5-bricks-unauthenticated uu-bricks-1c1umy"
+  id="uuID"
+>
+  <Icon
+    className="uu-bricks-1d0l47e"
+    icon="mdi-account-key"
+  />
+  <div
+    className="uu-bricks-1nhbw8q"
+  >
+    <Lsi
+      lsi={
+        Object {
+          "cs": "Pouze přihlášený uživatel může zobrazit tento obsah.",
+          "en": "You are not authenticated to view this content.",
+        }
+      }
+    />
+  </div>
+  <Identity>
+    <Component />
+  </Identity>
+</div>
+`;
+
+exports[`UU5.Bricks.Unauthenticated id="myId" 1`] = `
+<div
+  className="uu5-bricks-unauthenticated uu-bricks-1c1umy"
+  id="myId"
+>
+  <Icon
+    className="uu-bricks-1d0l47e"
+    icon="mdi-account-key"
+  />
+  <div
+    className="uu-bricks-1nhbw8q"
+  >
+    <Lsi
+      lsi={
+        Object {
+          "cs": "Pouze přihlášený uživatel může zobrazit tento obsah.",
+          "en": "You are not authenticated to view this content.",
+        }
+      }
+    />
+  </div>
+  <Identity>
+    <Component />
+  </Identity>
+</div>
+`;
+
+exports[`UU5.Bricks.Unauthenticated mainAttrs=undefined 1`] = `
+<div
+  className="uu5-bricks-unauthenticated uu-bricks-1c1umy"
+  id="uuID"
+>
+  <Icon
+    className="uu-bricks-1d0l47e"
+    icon="mdi-account-key"
+  />
+  <div
+    className="uu-bricks-1nhbw8q"
+  >
+    <Lsi
+      lsi={
+        Object {
+          "cs": "Pouze přihlášený uživatel může zobrazit tento obsah.",
+          "en": "You are not authenticated to view this content.",
+        }
+      }
+    />
+  </div>
+  <Identity>
+    <Component />
+  </Identity>
+</div>
+`;
+
+exports[`UU5.Bricks.Unauthenticated name="myName" 1`] = `
+<div
+  className="uu5-bricks-unauthenticated uu-bricks-1c1umy"
+  id="uuID"
+  name="myName"
+>
+  <Icon
+    className="uu-bricks-1d0l47e"
+    icon="mdi-account-key"
+  />
+  <div
+    className="uu-bricks-1nhbw8q"
+  >
+    <Lsi
+      lsi={
+        Object {
+          "cs": "Pouze přihlášený uživatel může zobrazit tento obsah.",
+          "en": "You are not authenticated to view this content.",
+        }
+      }
+    />
+  </div>
+  <Identity>
+    <Component />
+  </Identity>
+</div>
+`;
+
+exports[`UU5.Bricks.Unauthenticated noIndex=false 1`] = `
+<div
+  className="uu5-bricks-unauthenticated uu-bricks-1c1umy"
+  id="uuID"
+>
+  <Icon
+    className="uu-bricks-1d0l47e"
+    icon="mdi-account-key"
+  />
+  <div
+    className="uu-bricks-1nhbw8q"
+  >
+    <Lsi
+      lsi={
+        Object {
+          "cs": "Pouze přihlášený uživatel může zobrazit tento obsah.",
+          "en": "You are not authenticated to view this content.",
+        }
+      }
+    />
+  </div>
+  <Identity>
+    <Component />
+  </Identity>
+</div>
+`;
+
+exports[`UU5.Bricks.Unauthenticated noIndex=true 1`] = `
+<div
+  className="uu5-bricks-unauthenticated uu5-noindex uu-bricks-1c1umy"
+  id="uuID"
+>
+  <Icon
+    className="uu-bricks-1d0l47e"
+    icon="mdi-account-key"
+  />
+  <div
+    className="uu-bricks-1nhbw8q"
+  >
+    <Lsi
+      lsi={
+        Object {
+          "cs": "Pouze přihlášený uživatel může zobrazit tento obsah.",
+          "en": "You are not authenticated to view this content.",
+        }
+      }
+    />
+  </div>
+  <Identity>
+    <Component />
+  </Identity>
+</div>
+`;
+
+exports[`UU5.Bricks.Unauthenticated render example UU5.Bricks.Unauthenticated should render without crash 1`] = `
+<div
+  className="uu5-bricks-unauthenticated uu-bricks-1c1umy"
+  id="uuID"
+>
+  <Icon
+    className="uu-bricks-1d0l47e"
+    icon="mdi-account-key"
+  />
+  <div
+    className="uu-bricks-1nhbw8q"
+  >
+    <Lsi
+      lsi={
+        Object {
+          "cs": "Pouze přihlášený uživatel může zobrazit tento obsah.",
+          "en": "You are not authenticated to view this content.",
+        }
+      }
+    />
+  </div>
+  <Identity>
+    <Component />
+  </Identity>
+</div>
+`;
+
+exports[`UU5.Bricks.Unauthenticated style="padding:8px; borderRadius: 2px" 1`] = `
+<div
+  className="uu5-bricks-unauthenticated uu-bricks-1c1umy"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": "2px",
+      "padding": "8px",
+    }
+  }
+>
+  <Icon
+    className="uu-bricks-1d0l47e"
+    icon="mdi-account-key"
+  />
+  <div
+    className="uu-bricks-1nhbw8q"
+  >
+    <Lsi
+      lsi={
+        Object {
+          "cs": "Pouze přihlášený uživatel může zobrazit tento obsah.",
+          "en": "You are not authenticated to view this content.",
+        }
+      }
+    />
+  </div>
+  <Identity>
+    <Component />
+  </Identity>
+</div>
+`;
+
+exports[`UU5.Bricks.Unauthenticated style={"backgroundColor":"red","color":"blue"} 1`] = `
+<div
+  className="uu5-bricks-unauthenticated uu-bricks-1c1umy"
+  id="uuID"
+  style={
+    Object {
+      "backgroundColor": "red",
+      "color": "blue",
+    }
+  }
+>
+  <Icon
+    className="uu-bricks-1d0l47e"
+    icon="mdi-account-key"
+  />
+  <div
+    className="uu-bricks-1nhbw8q"
+  >
+    <Lsi
+      lsi={
+        Object {
+          "cs": "Pouze přihlášený uživatel může zobrazit tento obsah.",
+          "en": "You are not authenticated to view this content.",
+        }
+      }
+    />
+  </div>
+  <Identity>
+    <Component />
+  </Identity>
+</div>
+`;
+
+exports[`UU5.Bricks.Unauthenticated tooltip="My Tooltip" 1`] = `
+<div
+  className="uu5-bricks-unauthenticated uu-bricks-1c1umy"
+  id="uuID"
+  title="My Tooltip"
+>
+  <Icon
+    className="uu-bricks-1d0l47e"
+    icon="mdi-account-key"
+  />
+  <div
+    className="uu-bricks-1nhbw8q"
+  >
+    <Lsi
+      lsi={
+        Object {
+          "cs": "Pouze přihlášený uživatel může zobrazit tento obsah.",
+          "en": "You are not authenticated to view this content.",
+        }
+      }
+    />
+  </div>
+  <Identity>
+    <Component />
+  </Identity>
+</div>
+`;

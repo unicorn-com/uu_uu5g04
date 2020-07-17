@@ -19,16 +19,15 @@ const BorderRadiusInput = createVisualComponent({
 
   //@@viewOn:propTypes
   propTypes: {
-    componentProps: UU5.PropTypes.object,
     onChange: UU5.PropTypes.func,
     label: UU5.PropTypes.object,
-    items: UU5.PropTypes.arrayOf(UU5.PropTypes.object)
+    items: UU5.PropTypes.arrayOf(UU5.PropTypes.object),
+    value: UU5.PropTypes.string
   },
   //@@viewOff:propTypes
 
   //@@viewOn:defaultProps
   defaultProps: {
-    componentProps: undefined,
     onChange: undefined,
     label: <UU5.Bricks.Lsi lsi={Lsi.borderRadiusInput.label} />,
     items: [
@@ -38,11 +37,12 @@ const BorderRadiusInput = createVisualComponent({
       { value: "8px" },
       { value: "16px" },
       { value: "50%", content: Lsi.rounded }
-    ]
+    ],
+    value: undefined
   },
   //@@viewOff:defaultProps
 
-  render({ items, label, componentProps, onChange, ...props }) {
+  render({ items, label, onChange, value, ...props }) {
     //@@viewOn:hooks
     //@@viewOff:hooks
 
@@ -53,15 +53,7 @@ const BorderRadiusInput = createVisualComponent({
     //@@viewOff:private
 
     //@@viewOn:render
-    return (
-      <UU5.Forms.SwitchSelector
-        {...props}
-        label={label}
-        value={componentProps.borderRadius}
-        onChange={opt => onChange({ value: opt.value })}
-        items={items}
-      />
-    );
+    return <UU5.Forms.SwitchSelector {...props} label={label} value={value} onChange={onChange} items={items} />;
     //@@viewOff:render
   }
 });

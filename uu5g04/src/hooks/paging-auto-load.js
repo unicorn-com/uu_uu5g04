@@ -3,7 +3,6 @@ import UU5 from "uu5g04";
 import { useState, useCallback } from "./react-hooks";
 import { createComponent } from "./component";
 import TriggerIfAlmostVisible from "./internal/trigger-if-almost-visible";
-import { array, func } from "prop-types";
 //@@viewOff:imports
 
 const STATICS = {
@@ -49,12 +48,9 @@ export const PagingAutoLoad = createComponent({
     let renderableData = data
       ? data.length === totalLoadedCount
         ? data
-        : data.slice(
-            0,
-            data.findIndex(it => it == null)
-          )
+        : data.slice(0, data.findIndex(it => it == null))
       : [];
-    let pageIndex = renderableData.length / pageSize;
+    let pageIndex = Math.floor(renderableData.length / pageSize);
 
     const loadMore = useCallback(() => {
       return handleLoad({ pageInfo: { pageIndex, pageSize } }, true);

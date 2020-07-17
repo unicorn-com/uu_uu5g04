@@ -15,7 +15,8 @@ export const LinkUve = createHoc({
     uveProps: UU5.PropTypes.shape({
       top: UU5.PropTypes.any, // lsi or string
       languages: UU5.PropTypes.array,
-      title: UU5.PropTypes.any // lsi or string
+      title: UU5.PropTypes.any, // lsi or string
+      publicContent: UU5.PropTypes.bool
     })
   },
 
@@ -44,11 +45,11 @@ export const LinkUve = createHoc({
     }
 
     for (let prop in uveProps) {
-      if (uveProps[prop]) params["_" + prop] = uveProps[prop];
+      if (uveProps[prop] !== undefined) params["_" + prop] = uveProps[prop];
     }
 
     for (let prop in compProps) {
-      if (compProps[prop]) params[prop] = compProps[prop];
+      if (compProps[prop] !== undefined) params[prop] = compProps[prop];
     }
 
     if (Object.keys(params).length) href += UU5.Common.Tools.encodeQuery(params);

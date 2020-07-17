@@ -6,6 +6,7 @@ import ElementaryMixin from "./elementary-mixin";
 import ContentMixin from "./content-mixin";
 import Context from "./context.js";
 import VisualComponent from "./visual-component.js";
+import Element from "./element.js";
 //@@viewOff:imports
 
 const Ctx = Context.create({ level: null });
@@ -55,8 +56,8 @@ export const Level = VisualComponent.create({
       children = this.getChildren().map(child => {
         let newChild = child;
 
-        if (React.isValidElement(child)) {
-          newChild = React.cloneElement(child, ctxValue);
+        if (Element.isValid(child)) {
+          newChild = Element.clone(child, ctxValue);
         }
 
         return newChild;

@@ -28,7 +28,7 @@
           dep.version && dep.version !== "local"
             ? "https://cdn.plus4u.net/" +
               (dep.beta ? "beta/" : "") +
-              (name.substr(0, 2) === "uu" ? "uu-" + name : name.replace(/_/g, "-")) +
+              (name.substr(0, 3) === "uu5" ? "uu-" + name : name.replace(/_/g, "-")) +
               "/" +
               dep.version +
               "/"

@@ -600,7 +600,10 @@ export const DatePicker = Context.withContext(
 
     _onChangePickerDefault(opt, setStateCallback) {
       let value = opt._data ? opt._data.value : opt.value;
-      this.setValue(value, () => this.close(setStateCallback));
+      this.setValue(value, () => {
+        this._onBlur(opt);
+        this.close(setStateCallback);
+      });
 
       return this;
     },

@@ -171,7 +171,7 @@ function getClassName({
     box-shadow: ${UU5.Common.Tools.ELEVATIONS[elevation + ""]};
     background-color: ${styles.backgroundColor};
     border-width: ${styles.borderWidth};
-    border-color: ${styles.borderColor};
+    border-color: ${bgStyle !== "outline" && bgStyle !== "underline" ? "transparent" : styles.borderColor};
     border-radius: ${UU5.Common.Tools.fillUnit(borderRadius)};
 
     ${

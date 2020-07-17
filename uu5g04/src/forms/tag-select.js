@@ -424,7 +424,7 @@ export const TagSelect = Context.withContext(
     _getAddTagValueResult({ value }, currentValue = this.state.value) {
       let newData = { state: {}, availableTags: this._availableTags };
       let isValid = true;
-      value = value.trim();
+      value = typeof value === "string" ? value.trim() : value;
       if (!value) return null;
       // validate value towards ignored tags
       if (this.props.ignoreTags && this.props.ignoreTags.find(ignoreTag => ignoreTag === value)) {

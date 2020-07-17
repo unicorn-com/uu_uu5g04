@@ -18,6 +18,7 @@ import "uu5g04-bricks";
 import Css from "./css.js";
 import ns from "../bricks-editable-ns.js";
 import MenuItemControls from "./menu-item-controls.js";
+import Helpers from "./helpers";
 //@@viewOff:imports
 const ClassNames = UU5.Common.ClassNames;
 
@@ -31,7 +32,7 @@ function getColorSchemaClassName(colorSchema) {
 
 const MenuItem = UU5.Common.VisualComponent.create({
   //@@viewOn:mixins
-  mixins: [UU5.Common.BaseMixin, UU5.Common.ContentMixin],
+  mixins: [UU5.Common.BaseMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -198,7 +199,13 @@ const MenuItem = UU5.Common.VisualComponent.create({
     return (
       <div className={this.getClassName("itemContentWrapper")}>
         {this.props.icon ? <UU5.Bricks.Icon className={this.getClassName("itemIcon")} icon={this.props.icon} /> : null}
-        <span className={this.getClassName("itemButtonText")}>{this.getChildren()}</span>
+        <span className={this.getClassName("itemButtonText")}>
+          {Helpers.isLsiObject(this.props.children) ? (
+            <UU5.Bricks.Lsi lsi={this.props.children} />
+          ) : (
+            this.props.children
+          )}
+        </span>
       </div>
     );
   },

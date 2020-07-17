@@ -1,6 +1,7 @@
 import { mount, shallow } from "enzyme";
 import React from "react";
 import ReactDOM from "react-dom";
+import ReactTestUtils from "react-dom/test-utils";
 
 import MixinProps from "./mixin-props.js";
 
@@ -106,22 +107,36 @@ class SnapshotCommentSerializer {
   }
 }
 
+const HookOuterComponent = React.forwardRef(({ children, initialHookParams, hook }, ref) => {
+  let [hookParams, setHookParams] = React.useState(() => initialHookParams);
+  React.useImperativeHandle(ref, () => ({ setHookParams }), []);
+  let result = hook(...hookParams);
+  // NOTE Using HookInnerComponent to measure render counts of subtrees (hooks are allowed to change their state during render
+  // because it results in re-calling of the Component but not of its subtree - we don't want to measure these
+  // shallow re-renders).
+  // NOTE This also means that we'll collect only "committed" hook results.
+  return <HookInnerComponent result={result}>{children}</HookInnerComponent>;
+});
+const HookInnerComponent = ({ children, result }) => children(result);
+
 // unmount components after each test
 let container;
 let lastWrapper;
-afterEach(() => {
-  if (lastWrapper && lastWrapper.length === 1) lastWrapper.unmount();
-  if (container) ReactDOM.unmountComponentAtNode(container);
-  lastWrapper = null;
-});
-
 let inTest = false;
-beforeEach(() => {
-  inTest = true;
-});
-afterEach(() => {
-  inTest = false;
-});
+export function initTest() {
+  afterEach(() => {
+    if (lastWrapper && lastWrapper.length === 1) lastWrapper.unmount();
+    if (container) ReactDOM.unmountComponentAtNode(container);
+    lastWrapper = null;
+  });
+
+  beforeEach(() => {
+    inTest = true;
+  });
+  afterEach(() => {
+    inTest = false;
+  });
+}
 
 export const Tools = {
   SnapshotCommentSerializer,
@@ -150,6 +165,107 @@ export const Tools = {
     let wrapper = shallow(jsx, options);
     if (inTest) lastWrapper = wrapper;
     return wrapper;
+  },
+
+  act(fn, { updateWrapper = true } = {}) {
+    // call react-dom's act() and update wrapper (if any)
+    let originalSyncStack = new Error().stack;
+    let actResult = ReactTestUtils.act(() => {
+      let fnResult = fn();
+      if (fnResult !== undefined && (!fnResult || typeof fnResult.then !== "function")) {
+        // enforce proper behaviour (React logs just warning)
+        let error = new Error(
+          `The callback passed to act(...) function must return undefined, or a Promise. You returned ${fnResult}`
+        );
+        error.code = "INVALID_ARGUMENTS";
+        error.stack = cleanupErrorStack(error.message, originalSyncStack);
+        throw error;
+      }
+      return fnResult;
+    });
+    if (actResult && typeof actResult.then === "function") {
+      // NOTE We don't want to access actResult.then() right away because react-dom has
+      // overridden this particular "then" to provide warning in case that no-one is doing "await".
+      // (And we don't want to do it via simple Promise.resolve().then(...) because that would enqueue
+      // it for processing in the next tick and call "then" automatically.)
+      let runPromise = () =>
+        new Promise((resolve, reject) => {
+          actResult.then(
+            v => {
+              if (updateWrapper && lastWrapper) lastWrapper.update();
+              resolve(v);
+            },
+            e => {
+              if (updateWrapper && lastWrapper) lastWrapper.update();
+              reject(e);
+            }
+          );
+        });
+      return {
+        then: (onResolve, onReject) => runPromise().then(onResolve, onReject),
+        catch: onReject => runPromise().catch(onReject)
+      };
+    } else {
+      if (updateWrapper && lastWrapper) lastWrapper.update();
+    }
+    return actResult;
+  },
+
+  renderHook(hook, ...initialHookParams) {
+    let { HookComponent, ...result } = Tools.initHookRenderer(hook, ...initialHookParams);
+    let wrapper = Tools.mount(<HookComponent />);
+    return { wrapper, ...result };
+  },
+
+  initHookRenderer(hook, ...initialHookParams) {
+    if (typeof hook !== "function") {
+      let error = new Error(
+        `Invalid value used as a hook: ${hook}. Are you passing hook parameters but forgot to pass the hook?
+Example:
+  const { lastResult } = renderHook(useLsi, { "cs": "Ahoj", "en": "Hello" });
+  const { lastResult } = initHookRenderer(useLsi, { "cs": "Ahoj", "en": "Hello" });`
+      );
+      error.code = "INVALID_ARGUMENTS";
+      error.stack = cleanupErrorStack(error.message, error.stack);
+      throw error;
+    }
+    if (typeof hook.name === "string" && !hook.name.match(/^use[A-Z]/)) {
+      let error = new Error(
+        `Invalid value used as a hook (hook name must start with 'use' followed by uppercase letter): "${hook.name}". Are you passing hook parameters but forgot to pass the hook?
+Example:
+  const { lastResult } = renderHook(useLsi, { "cs": "Ahoj", "en": "Hello" });
+  const { lastResult } = initHookRenderer(useLsi, { "cs": "Ahoj", "en": "Hello" });`
+      );
+      error.code = "INVALID_ARGUMENTS";
+      error.stack = cleanupErrorStack(error.message, error.stack);
+      throw error;
+    }
+    let hookResults = [];
+    let hookOuterComponentRef = React.createRef();
+    let HookComponent = ({ children }) => (
+      <HookOuterComponent ref={hookOuterComponentRef} initialHookParams={initialHookParams} hook={hook}>
+        {lastHookResult => {
+          hookResults.push(lastHookResult);
+          let child;
+          if (typeof children === "function") child = children(lastHookResult);
+          else if (children !== undefined) child = children;
+          else child = <div />;
+          return child;
+        }}
+      </HookOuterComponent>
+    );
+    return {
+      HookComponent,
+      lastResult: () => hookResults[hookResults.length - 1],
+      allResults: () => [...hookResults],
+      renderCount: () => hookResults.length,
+      rerender: (...newHookParams) => {
+        if (!hookOuterComponentRef.current) {
+          throw new Error("Cannot re-render hook component because it wasn't mounted yet (or is already unmounted)!");
+        }
+        Tools.act(() => hookOuterComponentRef.current.setHookParams(newHookParams));
+      }
+    };
   },
 
   async waitUntilCalled(callbackFn, { timeout = DEFAULT_TIMEOUT, updateWrapper = true } = {}) {
@@ -184,15 +300,19 @@ export const Tools = {
     ({ updateWrapper = true } = args[0] || {});
 
     if (timeout >= 0) {
-      await new Promise(resolve => setTimeout(resolve, timeout));
-      if (updateWrapper && lastWrapper) lastWrapper.update();
+      await Tools.act(() => new Promise(resolve => setTimeout(resolve, timeout)), { updateWrapper });
     }
   },
 
   async waitWhile(conditionFn, { timeout = DEFAULT_TIMEOUT, updateWrapper = true } = {}) {
     let originalSyncStack = new Error().stack;
     let now = Date.now();
-    while (Date.now() - now < timeout && (await conditionFn())) await Tools.wait({ timeout: 2, updateWrapper });
+    while (Date.now() - now < timeout) {
+      let lastResult;
+      await Tools.act(async () => (lastResult = conditionFn()), { updateWrapper: false });
+      if (!(await lastResult)) break;
+      await Tools.wait({ timeout: 2, updateWrapper });
+    }
     if (Date.now() - now >= timeout) {
       let error = new Error(`Conditional wait did not finish within specified timeout (${timeout}ms).`);
       error.code = "TIMED_OUT";
@@ -205,14 +325,28 @@ export const Tools = {
   setInputValue(wrapper, value, focusBeforeSetting = true, blurAfterSetting = true) {
     let input = wrapper.type() === "input" ? wrapper : wrapper.find("input").first();
     if (input && input.length === 1) {
-      if (focusBeforeSetting) input.simulate("focus");
+      if (focusBeforeSetting) {
+        Tools.act(() => {
+          input.simulate("focus");
+        });
+      }
       input.getDOMNode().value = value;
-      input.simulate("change");
+      Tools.act(() => {
+        input.simulate("change");
+      });
       if (blurAfterSetting) {
-        document.body.dispatchEvent(new MouseEvent("mousedown"));
-        input.simulate("blur");
-        document.body.dispatchEvent(new MouseEvent("mouseup"));
-        document.body.dispatchEvent(new MouseEvent("click"));
+        Tools.act(() => {
+          document.body.dispatchEvent(new MouseEvent("mousedown"));
+        });
+        Tools.act(() => {
+          input.simulate("blur");
+        });
+        Tools.act(() => {
+          document.body.dispatchEvent(new MouseEvent("mouseup"));
+        });
+        Tools.act(() => {
+          document.body.dispatchEvent(new MouseEvent("click"));
+        });
       }
     } else {
       let error = new Error("Input not found in specified wrapper.");

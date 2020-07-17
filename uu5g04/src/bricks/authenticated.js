@@ -14,12 +14,26 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+
+const EditationComponent = UU5.Common.Component.lazy(async () => {
+  await SystemJS.import("uu5g04-forms");
+  await SystemJS.import("uu5g04-bricks-editable");
+  return import("./internal/authenticated-editable.js");
+});
 //@@viewOff:imports
+
+let editationLazyLoaded = false;
 
 export const Authenticated = UU5.Common.VisualComponent.create({
   displayName: "Authenticated", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
-  mixins: [UU5.Common.BaseMixin, UU5.Common.IdentityMixin, UU5.Common.ContentMixin],
+  mixins: [
+    UU5.Common.BaseMixin,
+    UU5.Common.IdentityMixin,
+    UU5.Common.ContentMixin, 
+    // TODO Uncomment - new editation postponed.
+    // UU5.Common.EditableMixin
+  ],
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -28,7 +42,14 @@ export const Authenticated = UU5.Common.VisualComponent.create({
     warnings: {
       noPropsGiven:
         "The component will never show any content - you should always set at least one of the props 'pending', 'authenticated', 'notAuthenticated'."
-    }
+    },
+    // TODO Uncomment - new editation postponed.
+    // editMode: {
+    //   name: { en: "Authenticated", cs: "Authenticated" },
+    //   backgroundColor: "rgba(0,0,0,.2)",
+    //   color: "rgba(0,0,0,.87)",
+    //   highlightColor: "#CCCCCC"
+    // }
   },
   //@@viewOff:statics
 
@@ -45,7 +66,9 @@ export const Authenticated = UU5.Common.VisualComponent.create({
     return {
       authenticated: null, // using null-s to be able to show development warning if none of these 3 props was given
       notAuthenticated: null,
-      pending: null
+      pending: null,
+      // TODO Uncomment - new editation postponed.
+      // contentEditable: true
     };
   },
   //@@viewOff:getDefaultProps
@@ -53,6 +76,9 @@ export const Authenticated = UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     this._checkProps(this.props);
+    return {
+      editationLazyLoaded: false
+    };
   },
 
   UNSAFE_componentWillReceiveProps(nextProps) {
@@ -64,9 +90,43 @@ export const Authenticated = UU5.Common.VisualComponent.create({
   //@@viewOff:interface
 
   //@@viewOn:overriding
+  // TODO Uncomment - new editation postponed.
+  // onBeforeForceEndEditation_() {
+  //   return this._editableComponent ? this._editableComponent.getPropsToSave() : undefined;
+  // },
   //@@viewOff:overriding
 
   //@@viewOn:private
+  _registerNull(inst) {
+    // unmount of component means that suspense is loaded and component should be rendered
+    if (!inst) {
+      this.setState(state => {
+        if (state.editationLazyLoaded) return;
+
+        // Edit component is loaded - need to set to static variable because other Edit component does not render fallback component
+        // editationLazyLoaded is stored in both state and static variable for cases such as when more edit modes are loaded at the same time
+        editationLazyLoaded = true;
+        return { editationLazyLoaded: true };
+      });
+    }
+  },
+
+  _isEditationLazyLoaded() {
+    return editationLazyLoaded;
+  },
+
+  _renderEditationMode() {
+    return (
+      <UU5.Common.Suspense fallback={<span ref={this._registerNull} />}>
+        <EditationComponent component={this} ref_={this._registerEditableComponent} />
+      </UU5.Common.Suspense>
+    );
+  },
+
+  _registerEditableComponent(component) {
+    this._editableComponent = component;
+  },
+
   _checkProps(props) {
     if (props.pending == null && props.authenticated == null && props.notAuthenticated == null) {
       this.showWarning("noPropsGiven");
@@ -80,7 +140,13 @@ export const Authenticated = UU5.Common.VisualComponent.create({
       (this.props.notAuthenticated && this.isNotAuthenticated()) ||
       (this.props.pending && this.isPending()) ||
       (this.props.authenticated && this.isAuthenticated());
-    return renderContent ? this.getChildren() : null;
+
+    return (
+      <>
+        {this.state.editation ? this._renderEditationMode() : null}
+        {renderContent && (!this.state.editation || !this._isEditationLazyLoaded()) ? this.getChildren() : null}
+      </>
+    );
   }
   //@@viewOff:render
 });

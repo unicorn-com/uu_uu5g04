@@ -121,6 +121,7 @@ export * from "./well.js";
 export * from "./video.js";
 export * from "./youtube-video.js";
 export * from "./audio.js";
+export * from "./audio-button.js";
 
 export * from "./factory.js";
 
@@ -130,6 +131,9 @@ export * from "./switch-selector.js";
 export * from "./code-preview.js";
 
 export * from "./authenticated.js";
+
+export * from "./unauthenticated.js";
+export * from "./unauthorized.js";
 
 export * from "./virtual-list.js";
 export * from "./scroll-area.js";

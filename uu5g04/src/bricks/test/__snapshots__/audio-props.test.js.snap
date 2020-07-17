@@ -5,6 +5,10 @@ exports[`UU5.Bricks.Audio authenticate=false 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="https://plus4u.net/path/trusted.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -19,6 +23,10 @@ exports[`UU5.Bricks.Audio authenticate=null 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="https://plus4u.net/path/trusted.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -33,6 +41,10 @@ exports[`UU5.Bricks.Audio authenticate=true 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="https://plus4u.net/path/trusted.mp3?access_token=token-for-tests"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -47,6 +59,10 @@ exports[`UU5.Bricks.Audio autoPlay=false 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -62,6 +78,10 @@ exports[`UU5.Bricks.Audio autoPlay=true 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -76,6 +96,10 @@ exports[`UU5.Bricks.Audio className="my-classname" 1`] = `
   className="uu5-bricks-audio my-classname uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -90,6 +114,10 @@ exports[`UU5.Bricks.Audio controlled=false 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -104,6 +132,10 @@ exports[`UU5.Bricks.Audio controlled=true 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -118,6 +150,10 @@ exports[`UU5.Bricks.Audio default props 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -132,6 +168,10 @@ exports[`UU5.Bricks.Audio disabled=false 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -156,6 +196,9 @@ exports[`UU5.Bricks.Audio disabled=true 1`] = `
     className="uu5-common-disabled uu5-bricks-audio-player"
     controls={true}
     id="uuID"
+    onEnded={[Function]}
+    onPause={[Function]}
+    onPlay={[Function]}
     style={Object {}}
     title={null}
   >
@@ -229,6 +272,10 @@ exports[`UU5.Bricks.Audio hidden=false 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -243,6 +290,10 @@ exports[`UU5.Bricks.Audio hidden=true 1`] = `
   className="uu5-bricks-audio uu5-common-hidden uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -257,6 +308,10 @@ exports[`UU5.Bricks.Audio id="myId" 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="myId"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -271,6 +326,10 @@ exports[`UU5.Bricks.Audio loop=false 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -285,7 +344,11 @@ exports[`UU5.Bricks.Audio loop=true 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
   loop={true}
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -300,6 +363,10 @@ exports[`UU5.Bricks.Audio mainAttrs=undefined 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -314,6 +381,10 @@ exports[`UU5.Bricks.Audio muted=false 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -328,7 +399,11 @@ exports[`UU5.Bricks.Audio muted=true 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
   muted={true}
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -343,7 +418,11 @@ exports[`UU5.Bricks.Audio name="myName" 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
   name="myName"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -358,6 +437,10 @@ exports[`UU5.Bricks.Audio nestingLevel="bigBox" 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -372,6 +455,10 @@ exports[`UU5.Bricks.Audio nestingLevel="bigBoxCollection" 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -386,6 +473,10 @@ exports[`UU5.Bricks.Audio nestingLevel="box" 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -400,6 +491,10 @@ exports[`UU5.Bricks.Audio nestingLevel="boxCollection" 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -414,6 +509,10 @@ exports[`UU5.Bricks.Audio nestingLevel="container" 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -430,6 +529,10 @@ exports[`UU5.Bricks.Audio nestingLevel="page" 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -448,6 +551,10 @@ exports[`UU5.Bricks.Audio nestingLevel="spa" 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -462,6 +569,10 @@ exports[`UU5.Bricks.Audio noIndex=false 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -476,6 +587,10 @@ exports[`UU5.Bricks.Audio noIndex=true 1`] = `
   className="uu5-bricks-audio uu5-noindex uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -490,6 +605,10 @@ exports[`UU5.Bricks.Audio preload="auto" 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -504,6 +623,10 @@ exports[`UU5.Bricks.Audio preload="metadata" 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   preload="metadata"
   style={Object {}}
   title={null}
@@ -519,6 +642,10 @@ exports[`UU5.Bricks.Audio preload="none" 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   preload="none"
   style={Object {}}
   title={null}
@@ -534,6 +661,10 @@ exports[`UU5.Bricks.Audio pureRender=false 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -548,6 +679,10 @@ exports[`UU5.Bricks.Audio pureRender=true 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -562,6 +697,10 @@ exports[`UU5.Bricks.Audio selected=false 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -576,6 +715,10 @@ exports[`UU5.Bricks.Audio selected=true 1`] = `
   className="uu5-bricks-audio uu5-common-selected uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -590,6 +733,10 @@ exports[`UU5.Bricks.Audio src="http://www.noiseaddicts.com/samples_1w72b820/3724
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -604,6 +751,10 @@ exports[`UU5.Bricks.Audio style="padding:8px; borderRadius: 2px" 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={
     Object {
       "borderRadius": "2px",
@@ -623,6 +774,10 @@ exports[`UU5.Bricks.Audio style={"backgroundColor":"red","color":"blue"} 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={
     Object {
       "backgroundColor": "red",
@@ -642,6 +797,10 @@ exports[`UU5.Bricks.Audio tooltip="My Tooltip" 1`] = `
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title="My Tooltip"
 >

@@ -3,6 +3,7 @@ import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "../../bricks-editable/bricks-editable-ns";
 import Lsi from "./bricks-editable-lsi.js";
+import Css from "./css";
 //@@viewOff:imports
 
 const COLUMN_PRESETS = {
@@ -335,4 +336,38 @@ export const ColWidthEditComponent = UU5.Common.VisualComponent.create({
   //@@viewOff:render
 });
 
-export default { PresetEditComponent, ColWidthEditComponent };
+export const EditItemInfo = () => (
+  <div className={EditItemInfoClassNames.main}>
+    <UU5.Bricks.Icon icon="mdi-information" className={EditItemInfoClassNames.icon} />
+    <UU5.Bricks.Lsi lsi={Lsi.common.itemInfo} />
+  </div>
+);
+const EditItemInfoClassNames = {
+  main: Css.css`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #303030;
+  `,
+  icon: Css.css`
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 56px;
+  `
+};
+
+export const QRCodeSize = ({ componentProps, onChangeProps, errors }) => (
+  <UU5.Forms.Number
+    min={32}
+    step={32}
+    suffix="px"
+    valueType="number"
+    label={<UU5.Bricks.Lsi lsi={Lsi.qRCode.sizeLabel} />}
+    value={componentProps.size}
+    feedback={errors && errors.size ? "error" : undefined}
+    onChange={({ value }) => onChangeProps({ size: value }, { size: value < 32 || isNaN(value) })}
+    onBlur={({ value }) => onChangeProps({ size: value }, { size: value < 32 || isNaN(value) })}
+  />
+);
+
+export default { PresetEditComponent, ColWidthEditComponent, EditItemInfo, QRCodeSize };

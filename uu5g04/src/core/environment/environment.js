@@ -499,7 +499,8 @@ export const Environment = {
   useLibraryRegistry: true,
   basePathAttrName: "data-uu-app-base",
   trustedDomainRegexp: String.raw`^https://([^./]*[.])?plus4u[.]net(?=[:/]|$)`, // it's string so that app can re-configure it via JSON during app deploy
-  allowStatistics: true
+  allowStatistics: true,
+  allowTelemetry: true
 };
 
 // TODO: backward compatibility

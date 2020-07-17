@@ -33,13 +33,14 @@ export const NestingLevel = {
           actualValidNestingLevel = nestingLevelList.find(it => NestingLevel.values.indexOf(it) >= minIndex);
           if (!actualValidNestingLevel) {
             actualValidNestingLevel = null;
-            logNestingLevelError("nestingLevelMismatch", [
-              statics.displayName,
-              JSON.stringify(nestingLevelList),
-              getComponentName(parentNLComponent),
-              parentNestingLevel,
-              JSON.stringify(NestingLevel.values.slice(minIndex))
-            ]);
+            // NOTE Disabled warnings. See nesting-level-mixin.js, checkNestingLevel().
+            // logNestingLevelError("nestingLevelMismatch", [
+            //   statics.displayName,
+            //   JSON.stringify(nestingLevelList),
+            //   getComponentName(parentNLComponent),
+            //   parentNestingLevel,
+            //   JSON.stringify(NestingLevel.values.slice(minIndex))
+            // ]);
           }
         }
       }
@@ -55,11 +56,12 @@ export const NestingLevel = {
         let usableIndices = nestingLevelList.map(it => NestingLevel.values.indexOf(it)).filter(v => v >= index);
         if (usableIndices.length === 0) {
           actualValidNestingLevel = null;
-          logNestingLevelError("incorrectRequestedNestingLevel", [
-            statics.displayName,
-            requestedNestingLevel,
-            JSON.stringify(nestingLevelList)
-          ]);
+          // NOTE Disabled warnings. See nesting-level-mixin.js, checkNestingLevel().
+          // logNestingLevelError("incorrectRequestedNestingLevel", [
+          //   statics.displayName,
+          //   requestedNestingLevel,
+          //   JSON.stringify(nestingLevelList)
+          // ]);
         } else {
           actualValidNestingLevel = NestingLevel.values[Math.min(...usableIndices)];
         }
@@ -91,14 +93,14 @@ function logNestingLevelError(mixinErrorCode, params) {
   Tools.error(formattedMessage);
 }
 
-function getComponentName(component) {
-  return (
-    (component
-      ? typeof component.getTagName === "function"
-        ? component.getTagName()
-        : component.constructor && component.constructor.displayName
-      : "") || ""
-  );
-}
+// function getComponentName(component) {
+//   return (
+//     (component
+//       ? typeof component.getTagName === "function"
+//         ? component.getTagName()
+//         : component.constructor && component.constructor.displayName
+//       : "") || ""
+//   );
+// }
 
 export default NestingLevel;

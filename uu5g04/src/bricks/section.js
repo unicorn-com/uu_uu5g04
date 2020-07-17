@@ -20,7 +20,7 @@ import { Div } from "./factory.js";
 const EditableSection = UU5.Common.Component.lazy(async () => {
   await SystemJS.import("uu5g04-forms");
   await SystemJS.import("uu5g04-bricks-editable");
-  return import("./internal/section.js");
+  return import("./internal/section-editable.js");
 });
 
 let editationLazyLoaded = false;

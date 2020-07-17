@@ -15,6 +15,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import UU5String from "./uu5string/uu5-string.js";
 import ns from "./common-ns.js";
+import Element from "./element.js";
 
 import "./editable-mixin.less";
 
@@ -151,7 +152,7 @@ export const EditableMixin = {
       if (propValue === undefined || propValue === null) {
         let value = this.props[propName];
         // preserve returning react components - like default content, etc.
-        if (React.isValidElement(value)) {
+        if (Element.isValid(value)) {
           value = undefined;
         }
         propValue = value;
@@ -167,10 +168,11 @@ export const EditableMixin = {
 
   @param {func} callback
    */
-  startEditation(endEditationCallback, saveEditationCallback) {
+  startEditation(endEditationCallback, saveEditationCallback, endChildrenEditationFn) {
     this._inEditMode = true;
     this._endEditationCallback = endEditationCallback;
     this._saveEditationCallback = saveEditationCallback;
+    this._endChildrenEditationFn = endChildrenEditationFn;
     let result = null;
     if (this.constructor.editableComponent) {
       let tagNameArr = this.getTagName().split(".");
@@ -220,6 +222,16 @@ export const EditableMixin = {
       this._saveEditationCallback(this, newProps);
     }
   },
+
+  /*
+  Secures the data on the edited component's children.
+  This method is needed when component in it's edit mode uses the data from own content/children. As long as content and children can be edited by DCC and by component's edit mode - it can cause data loss.
+   */
+  endChildrenEditation() {
+    if (typeof this._endChildrenEditationFn === "function") {
+      this._endChildrenEditationFn();
+    }
+  },
   /*
   Ends component editation. Function should be overridden by endDccEditation_ function. If newProps, newContent neither newContraints is not set it only ends editation of component without saving any data.
 
@@ -230,6 +242,8 @@ export const EditableMixin = {
     this._inEditMode = false;
     let endEditationCallback = this._endEditationCallback;
     delete this._endEditationCallback;
+    delete this._saveEditationCallback;
+    delete this._endChildrenEditationFn;
     // change state only if state was change in startDccEditation method - so only if component does not have this.startDccEditation_ method
     if (this.state.editation) this.setState({ editation: false });
     if (typeof endEditationCallback === "function") {

@@ -688,10 +688,10 @@ Tools.getFileName = function(path) {
   return path.replace(REGEXP.slashes, "");
 };
 
-Tools.getCamelCase = function(string) {
-  var camelCase = "";
-  if (string) {
-    camelCase = string.charAt(0).toUpperCase() + string.slice(1);
+Tools.getCamelCase = function(string, firstCharLowerCase = false) {
+  var camelCase = string || "";
+  if (camelCase) {
+    if (!firstCharLowerCase) camelCase = camelCase.charAt(0).toUpperCase() + camelCase.slice(1);
     camelCase = camelCase.replace(REGEXP.char, function($1) {
       return $1.toUpperCase().replace("-", "");
     });
@@ -1137,7 +1137,7 @@ Tools._replaceParamsInString = function(string, stringParams) {
         }
         i++;
       }
-      return val;
+      return val && typeof val.toString === "function" ? val.toString() : val;
     });
   } else if (typeof stringParams === "object") {
     result = string.replace(REGEXP.stringParamsObject, function(match) {
@@ -1626,8 +1626,8 @@ Tools.formatDate = (date, format, timeZone = null) => {
     "M+": date.getMinutes(), //minute
     "S+": date.getSeconds(), //second
     "s+": date.getMilliseconds(), //millisecond
-    t: date.getHours() > 12 || date.getHours() < 1 ? "p.m." : "a.m.",
-    T: date.getHours() > 12 || date.getHours() < 1 ? "PM" : "AM",
+    t: date.getHours() >= 12 ? "p.m." : "a.m.",
+    T: date.getHours() >= 12 ? "PM" : "AM",
     "w+": week,
     q: Math.floor((date.getMonth() + 3) / 3), //quarter
     Z: typeof timeZone === "number" ? timeZone * 60 : -date.getTimezoneOffset()

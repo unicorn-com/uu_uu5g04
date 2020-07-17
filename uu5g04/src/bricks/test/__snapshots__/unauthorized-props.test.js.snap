@@ -1,0 +1,279 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Bricks.Unauthorized className="my-classname" 1`] = `
+<div
+  className="uu5-bricks-unathorized my-classname uu-bricks-1c1umy"
+  id="uuID"
+>
+  <Icon
+    className="uu-bricks-1d0l47e"
+    icon="mdi-cancel"
+  />
+  <div
+    className="uu-bricks-1nhbw8q"
+  >
+    <Lsi
+      lsi={
+        Object {
+          "cs": "Nemáte potřebná práva k zobrazení tohoto obsahu.",
+          "en": "You don't have rights to see this content.",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Unauthorized default props 1`] = `
+<div
+  className="uu5-bricks-unathorized uu-bricks-1c1umy"
+  id="uuID"
+>
+  <Icon
+    className="uu-bricks-1d0l47e"
+    icon="mdi-cancel"
+  />
+  <div
+    className="uu-bricks-1nhbw8q"
+  >
+    <Lsi
+      lsi={
+        Object {
+          "cs": "Nemáte potřebná práva k zobrazení tohoto obsahu.",
+          "en": "You don't have rights to see this content.",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Unauthorized id="myId" 1`] = `
+<div
+  className="uu5-bricks-unathorized uu-bricks-1c1umy"
+  id="myId"
+>
+  <Icon
+    className="uu-bricks-1d0l47e"
+    icon="mdi-cancel"
+  />
+  <div
+    className="uu-bricks-1nhbw8q"
+  >
+    <Lsi
+      lsi={
+        Object {
+          "cs": "Nemáte potřebná práva k zobrazení tohoto obsahu.",
+          "en": "You don't have rights to see this content.",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Unauthorized mainAttrs=undefined 1`] = `
+<div
+  className="uu5-bricks-unathorized uu-bricks-1c1umy"
+  id="uuID"
+>
+  <Icon
+    className="uu-bricks-1d0l47e"
+    icon="mdi-cancel"
+  />
+  <div
+    className="uu-bricks-1nhbw8q"
+  >
+    <Lsi
+      lsi={
+        Object {
+          "cs": "Nemáte potřebná práva k zobrazení tohoto obsahu.",
+          "en": "You don't have rights to see this content.",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Unauthorized name="myName" 1`] = `
+<div
+  className="uu5-bricks-unathorized uu-bricks-1c1umy"
+  id="uuID"
+  name="myName"
+>
+  <Icon
+    className="uu-bricks-1d0l47e"
+    icon="mdi-cancel"
+  />
+  <div
+    className="uu-bricks-1nhbw8q"
+  >
+    <Lsi
+      lsi={
+        Object {
+          "cs": "Nemáte potřebná práva k zobrazení tohoto obsahu.",
+          "en": "You don't have rights to see this content.",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Unauthorized noIndex=false 1`] = `
+<div
+  className="uu5-bricks-unathorized uu-bricks-1c1umy"
+  id="uuID"
+>
+  <Icon
+    className="uu-bricks-1d0l47e"
+    icon="mdi-cancel"
+  />
+  <div
+    className="uu-bricks-1nhbw8q"
+  >
+    <Lsi
+      lsi={
+        Object {
+          "cs": "Nemáte potřebná práva k zobrazení tohoto obsahu.",
+          "en": "You don't have rights to see this content.",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Unauthorized noIndex=true 1`] = `
+<div
+  className="uu5-bricks-unathorized uu5-noindex uu-bricks-1c1umy"
+  id="uuID"
+>
+  <Icon
+    className="uu-bricks-1d0l47e"
+    icon="mdi-cancel"
+  />
+  <div
+    className="uu-bricks-1nhbw8q"
+  >
+    <Lsi
+      lsi={
+        Object {
+          "cs": "Nemáte potřebná práva k zobrazení tohoto obsahu.",
+          "en": "You don't have rights to see this content.",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Unauthorized render example UU5.Bricks.Unauthorized should render without crash 1`] = `
+<div
+  className="uu5-bricks-unathorized uu-bricks-1c1umy"
+  id="uuID"
+>
+  <Icon
+    className="uu-bricks-1d0l47e"
+    icon="mdi-cancel"
+  />
+  <div
+    className="uu-bricks-1nhbw8q"
+  >
+    <Lsi
+      lsi={
+        Object {
+          "cs": "Nemáte potřebná práva k zobrazení tohoto obsahu.",
+          "en": "You don't have rights to see this content.",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Unauthorized style="padding:8px; borderRadius: 2px" 1`] = `
+<div
+  className="uu5-bricks-unathorized uu-bricks-1c1umy"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": "2px",
+      "padding": "8px",
+    }
+  }
+>
+  <Icon
+    className="uu-bricks-1d0l47e"
+    icon="mdi-cancel"
+  />
+  <div
+    className="uu-bricks-1nhbw8q"
+  >
+    <Lsi
+      lsi={
+        Object {
+          "cs": "Nemáte potřebná práva k zobrazení tohoto obsahu.",
+          "en": "You don't have rights to see this content.",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Unauthorized style={"backgroundColor":"red","color":"blue"} 1`] = `
+<div
+  className="uu5-bricks-unathorized uu-bricks-1c1umy"
+  id="uuID"
+  style={
+    Object {
+      "backgroundColor": "red",
+      "color": "blue",
+    }
+  }
+>
+  <Icon
+    className="uu-bricks-1d0l47e"
+    icon="mdi-cancel"
+  />
+  <div
+    className="uu-bricks-1nhbw8q"
+  >
+    <Lsi
+      lsi={
+        Object {
+          "cs": "Nemáte potřebná práva k zobrazení tohoto obsahu.",
+          "en": "You don't have rights to see this content.",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Unauthorized tooltip="My Tooltip" 1`] = `
+<div
+  className="uu5-bricks-unathorized uu-bricks-1c1umy"
+  id="uuID"
+  title="My Tooltip"
+>
+  <Icon
+    className="uu-bricks-1d0l47e"
+    icon="mdi-cancel"
+  />
+  <div
+    className="uu-bricks-1nhbw8q"
+  >
+    <Lsi
+      lsi={
+        Object {
+          "cs": "Nemáte potřebná práva k zobrazení tohoto obsahu.",
+          "en": "You don't have rights to see this content.",
+        }
+      }
+    />
+  </div>
+</div>
+`;

@@ -153,6 +153,23 @@ export class Url {
     return resultUri;
   }
 
+  static join(...parts) {
+    let result = "";
+
+    parts.forEach((part, index) => {
+      if (index === parts.length - 1) {
+        part = part[0] === "/" ? part.substring(1) : part;
+      } else {
+        part = part[part.length - 1] === "/" ? part.substring(0, part.length - 1) : part;
+      }
+
+      if (index === 0) result += part;
+      else result += `/${part}`;
+    });
+
+    return result;
+  }
+
   constructor() {
     this.protocol = null;
     this.hostName = null;

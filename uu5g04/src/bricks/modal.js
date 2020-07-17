@@ -12,7 +12,7 @@
  */
 
 //@@viewOn:imports
-import * as UU5 from "uu5g04";
+import UU5, { createComponent } from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import Header from "./modal-header.js";
@@ -20,9 +20,9 @@ import Body from "./modal-body.js";
 import Footer from "./modal-footer.js";
 import Css from "./internal/css.js";
 import { enableBodyScrolling, disableBodyScrolling } from "./internal/page-utils.js";
+import { RenderIntoPortal } from "./internal/portal.js";
 
 import "./modal.less";
-import { getPortalElement } from "./internal/portal.js";
 //@@viewOff:imports
 
 const MOUNT_CONTENT_VALUES = {
@@ -33,8 +33,51 @@ const MOUNT_CONTENT_VALUES = {
 
 const getMountContent = (props = {}, state = {}) => {
   let mountContent = state.mountContent || props.mountContent;
-  return mountContent === undefined ? MOUNT_CONTENT_VALUES.onFirstRender : mountContent;
+  return mountContent === undefined
+    ? props.location
+      ? MOUNT_CONTENT_VALUES.onEachOpen
+      : MOUNT_CONTENT_VALUES.onFirstRender // backward comaptibility
+    : mountContent;
 };
+
+/**
+ * Helper component for CSS animation - whenever prop "renderKey" changes, children
+ * gets re-rendered twice. First render should typically render full content with visibility: hidden,
+ * 2nd render should make it visible and apply CSS transition.
+ */
+const DoubleRender = createComponent({
+  getInitialState() {
+    let { doubleRenderOnMount, renderKey } = this.props;
+    return { prevRenderKey: doubleRenderOnMount ? renderKey + "x" : renderKey };
+  },
+  componentDidMount() {
+    let { doubleRenderOnMount } = this.props;
+    if (doubleRenderOnMount) this._reRender();
+  },
+  componentDidUpdate(prevProps) {
+    if (prevProps.renderKey !== this.props.renderKey) this._reRender();
+  },
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    if (nextProps.renderKey !== this.props.renderKey) this.setState({ prevRenderKey: nextProps.renderKey + "x" });
+  },
+  _reRender() {
+    if (this._rafId) cancelAnimationFrame(this._rafId);
+    this._rafId = requestAnimationFrame(() => {
+      delete this._rafId;
+      this.setState({ prevRenderKey: this.props.renderKey });
+    });
+  },
+  componentWillUnmount() {
+    if (this._rafId) cancelAnimationFrame(this._rafId);
+  },
+  render() {
+    let { renderKey, children } = this.props;
+    let { prevRenderKey } = this.state;
+    return children(renderKey !== prevRenderKey ? DoubleRender.FIRST_RENDER : DoubleRender.SECOND_RENDER);
+  }
+});
+DoubleRender.FIRST_RENDER = 0;
+DoubleRender.SECOND_RENDER = 1;
 
 export const Modal = UU5.Common.VisualComponent.create({
   displayName: "Modal", // for backward compatibility (test snapshots)
@@ -152,7 +195,7 @@ export const Modal = UU5.Common.VisualComponent.create({
       forceRender: false,
       onClose: null,
       overflow: false,
-      mountContent: MOUNT_CONTENT_VALUES.onFirstRender,
+      mountContent: undefined,
       offsetTop: null,
       location: undefined
     };
@@ -162,6 +205,7 @@ export const Modal = UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     this._closeCallbacks = [];
+    this._openCounter = 0;
 
     let renderContent = getMountContent(this.props) === MOUNT_CONTENT_VALUES.onFirstRender || this.props.shown;
 
@@ -175,7 +219,8 @@ export const Modal = UU5.Common.VisualComponent.create({
       stickyBackground: this.props.stickyBackground,
       scrollableBackground: this.props.scrollableBackground,
       onClose: this.props.onClose,
-      overflow: this.props.overflow
+      overflow: this.props.overflow,
+      openKey: undefined
     };
   },
 
@@ -190,7 +235,7 @@ export const Modal = UU5.Common.VisualComponent.create({
     if (!this.isSticky()) {
       UU5.Environment.EventListener.addWindowEvent("keydown", this.getId(), this._onCloseESC);
     }
-    this._updateAfterCommit(undefined);
+    this._updateAfterCommit(true);
   },
 
   componentDidUpdate(prevProps, prevState) {
@@ -256,6 +301,7 @@ export const Modal = UU5.Common.VisualComponent.create({
       newState.hidden = newState.hidden || false;
       newState._referrer = _referrer;
       newState.renderContent = true;
+      newState.openKey = this._openCounter++;
 
       this.setState(newState, setStateCallback);
     }
@@ -493,7 +539,7 @@ export const Modal = UU5.Common.VisualComponent.create({
     return result;
   },
 
-  _getMainAttrs() {
+  _getMainAttrs(hidden = this.isHidden()) {
     let mainAttrs = this.getMainAttrs();
 
     // id because of checking backdrop on click in _onBlurHandler function
@@ -527,6 +573,9 @@ export const Modal = UU5.Common.VisualComponent.create({
     if (this.state.overflow) {
       mainAttrs.className += " " + this.getClassName("overflow");
     }
+
+    mainAttrs.className = mainAttrs.className.replace(/\s*\buu5-common-hidden\b\s*/, " ").trim();
+    if (hidden) mainAttrs.className += " uu5-common-hidden";
 
     let sec = this.getDefault().animationDuration / 1000 + "s";
     mainAttrs.style = mainAttrs.style || {};
@@ -630,13 +679,23 @@ export const Modal = UU5.Common.VisualComponent.create({
     return [headerChild, bodyChild, footerChild];
   },
 
-  _renderModal(content) {
+  _renderModal(getContentFn) {
     let { location } = this.props;
     let result;
     if (location === "portal") {
-      result = !this.isHidden() ? UU5.Common.Portal.create(content, getPortalElement(true)) : null;
+      let { openKey } = this.state;
+      result = (
+        <RenderIntoPortal>
+          <DoubleRender renderKey={openKey} doubleRenderOnMount={false}>
+            {renderAs => {
+              let hidden = this.isHidden() || (renderAs === DoubleRender.FIRST_RENDER ? true : false);
+              return getContentFn(hidden);
+            }}
+          </DoubleRender>
+        </RenderIntoPortal>
+      );
     } else {
-      result = content;
+      result = getContentFn();
     }
     return result;
   },
@@ -664,14 +723,14 @@ export const Modal = UU5.Common.VisualComponent.create({
     }
 
     return this.getNestingLevel()
-      ? this._renderModal(
-          <div {...this._getMainAttrs()}>
+      ? this._renderModal(hidden => (
+          <div {...this._getMainAttrs(hidden)}>
             <div className={this.getClassName("dialog") + " " + this.getClassName("modalSize") + this.state.size}>
               {this._buildChildren()}
               {this.getDisabledCover()}
             </div>
           </div>
-        )
+        ))
       : null;
   }
   //@@viewOff:render

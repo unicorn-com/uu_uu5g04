@@ -16,7 +16,7 @@ import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import Modal from "./modal";
-import { getPortalElement } from "./internal/portal.js";
+import { RenderIntoPortal } from "./internal/portal.js";
 //@@viewOff:imports
 
 export const PortalModal = UU5.Common.VisualComponent.create({
@@ -112,19 +112,8 @@ export const PortalModal = UU5.Common.VisualComponent.create({
 
   _close(setStateCallback) {
     this.setState({ open: false }, () => {
-      this._removePortal();
       setStateCallback && setStateCallback();
     });
-  },
-
-  _removePortal() {
-    // try to remove portal from DOM if does not exists
-    if (!this.state.open) {
-      const portal = getPortalElement();
-      if (portal && portal.childNodes.length === 0) {
-        portal.parentNode.removeChild(portal);
-      }
-    }
   },
   //@@viewOff:private
 
@@ -133,12 +122,12 @@ export const PortalModal = UU5.Common.VisualComponent.create({
     const props = { ...this.props, ...this.state.props };
 
     return (
-      this.state.open &&
-      UU5.Common.Portal.create(
-        // arrow fn has to be used because props has to be sent to the _onClose fn
-        // eslint-disable-next-line react/jsx-no-bind
-        <Modal {...props} ref_={this._registerModal} onClose={opt => this._onClose(opt, props)} forceRender />,
-        getPortalElement(true)
+      this.state.open && (
+        <RenderIntoPortal>
+          {/* arrow fn has to be used because props has to be sent to the _onClose fn */}
+          {/* eslint-disable-next-line react/jsx-no-bind */}
+          <Modal {...props} ref_={this._registerModal} onClose={opt => this._onClose(opt, props)} forceRender />
+        </RenderIntoPortal>
       )
     );
   }

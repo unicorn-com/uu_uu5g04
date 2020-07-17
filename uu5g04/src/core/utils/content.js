@@ -26,7 +26,7 @@ function getChild(child, childProps, key = "") {
   if (Element.isValid(child)) {
     if (child.props.nestingLevel) delete childProps.nestingLevel;
     if (child.props.parent) delete childProps.parent;
-    if (Object.keys(childProps).length > 0) result = Element.clone(child, childProps);
+    if (typeof child.type !== "string" && Object.keys(childProps).length > 0) result = Element.clone(child, childProps);
     else result = child;
   } else {
     // uu5json / uu5data (with continued evaluation after JSON parsing)

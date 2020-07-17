@@ -17,7 +17,7 @@ import ns from "./bricks-ns.js";
 import Alert from "./alert.js";
 import AlertBusMulti from "./internal/alert-bus-multi.js";
 import "./alert-bus.less";
-import { getPortalElement } from "./internal/portal.js";
+import { LAYER, RenderIntoPortal } from "./internal/portal.js";
 //@@viewOff:imports
 
 const COLOR_SCHEMA_PRIORITY = ["danger", "success", "warning", "info"];
@@ -178,10 +178,6 @@ export const AlertBus = UU5.Common.VisualComponent.create({
       showAll: false
     };
   },
-
-  componentWillUnmount() {
-    this._removePortal();
-  },
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
@@ -311,16 +307,6 @@ export const AlertBus = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _removePortal() {
-    // try to remove portal from DOM if does not exists
-    if (!this.state.open) {
-      const portal = getPortalElement(false, "alert-bus");
-      if (portal && portal.childNodes.length === 0) {
-        portal.parentNode.removeChild(portal);
-      }
-    }
-  },
-
   _isPageAlertBus() {
     let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
     return this.props.location === "page" && page && page.getAlertBus() && page.getAlertBus().getId() === this.getId();
@@ -456,9 +442,11 @@ export const AlertBus = UU5.Common.VisualComponent.create({
       result = <Alert {...this._getNextAlertProps()} />;
     }
 
-    return this.props.location === "portal"
-      ? UU5.Common.Portal.create(result, getPortalElement(true, "alert-bus"))
-      : result;
+    return this.props.location === "portal" ? (
+      <RenderIntoPortal layer={LAYER.ALERT_BUS}>{result}</RenderIntoPortal>
+    ) : (
+      result
+    );
   },
   //@@viewOff:private
 

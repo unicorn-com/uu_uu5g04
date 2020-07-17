@@ -20,7 +20,7 @@ import Footer from "./blockquote-footer.js";
 const EditableBlockquote = UU5.Common.Component.lazy(async () => {
   await SystemJS.import("uu5g04-forms");
   await SystemJS.import("uu5g04-bricks-editable");
-  return import("./internal/blockquote.js");
+  return import("./internal/blockquote-editable.js");
 });
 
 let editationLazyLoaded = false;

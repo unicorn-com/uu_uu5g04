@@ -44,7 +44,10 @@ export const Audio = UU5.Common.VisualComponent.create({
     src: UU5.PropTypes.string.isRequired,
     muted: UU5.PropTypes.bool,
     playbackRate: UU5.PropTypes.number,
-    authenticate: UU5.PropTypes.bool
+    authenticate: UU5.PropTypes.bool,
+    onStart: UU5.PropTypes.func,
+    onPause: UU5.PropTypes.func,
+    onEnded: UU5.PropTypes.func
   },
   //@@viewOff:propTypes
 
@@ -57,7 +60,10 @@ export const Audio = UU5.Common.VisualComponent.create({
       src: undefined,
       muted: false,
       playbackRate: 1.0,
-      authenticate: false
+      authenticate: false,
+      onStart: undefined,
+      onPause: undefined,
+      onEnded: undefined
     };
   },
   //@@viewOff:getDefaultProps
@@ -120,6 +126,24 @@ export const Audio = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
+  _onPlay(e) {
+    if (typeof this.props.onPlay === "function") {
+      this.props.onPlay({ component: this, event: e });
+    }
+  },
+
+  _onPause(e) {
+    if (typeof this.props.onPause === "function") {
+      this.props.onPause({ component: this, event: e });
+    }
+  },
+
+  _onEnded(e) {
+    if (typeof this.props.onEnded === "function") {
+      this.props.onEnded({ component: this, event: e });
+    }
+  },
+
   _reload() {
     this._audio.load();
   },
@@ -155,6 +179,11 @@ export const Audio = UU5.Common.VisualComponent.create({
     attrs.className += " " + this.getClassName("player");
     attrs.ref = ref => (this._audio = ref);
     attrs.controls = true;
+
+    // events
+    attrs.onPlay = this._onPlay;
+    attrs.onPause = this._onPause;
+    attrs.onEnded = this._onEnded;
 
     if (removeMainClass) attrs.className = attrs.className.replace(this.getClassName("main"), "").trim();
     if (this.props.autoPlay && !this.isDisabled()) attrs.autoPlay = true;
@@ -197,7 +226,7 @@ export const Audio = UU5.Common.VisualComponent.create({
         );
       } else {
         result = (
-          <audio {...this._getMainAttrs()}>
+          <audio {...this._getMainAttrs()} key={url}>
             <source src={url} />
           </audio>
         );

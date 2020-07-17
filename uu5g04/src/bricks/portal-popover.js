@@ -17,7 +17,7 @@ import UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import Popover from "./popover.js";
-import { getPortalElement } from "./internal/portal.js";
+import { LAYER, RenderIntoPortal } from "./internal/portal.js";
 //@@viewOff:imports
 
 export const PortalPopover = UU5.Common.VisualComponent.create({
@@ -100,29 +100,18 @@ export const PortalPopover = UU5.Common.VisualComponent.create({
 
   _close(setStateCallback) {
     this.setState({ open: false }, () => {
-      this._removePortal();
       setStateCallback && setStateCallback();
     });
-  },
-
-  _removePortal() {
-    // try to remove portal from DOM if does not exists
-    if (!this.state.open) {
-      const portal = getPortalElement(false, "popover");
-      if (portal && portal.childNodes.length === 0) {
-        portal.parentNode.removeChild(portal);
-      }
-    }
   },
   //@@viewOff:private
 
   //@@viewOn:render
   render() {
     return (
-      this.state.open &&
-      UU5.Common.Portal.create(
-        <Popover {...this.props} ref_={this._registerPopover} onClose={this._onClose} forceRender />,
-        getPortalElement(true, "popover")
+      this.state.open && (
+        <RenderIntoPortal layer={LAYER.POPOVER}>
+          <Popover {...this.props} ref_={this._registerPopover} onClose={this._onClose} forceRender />
+        </RenderIntoPortal>
       )
     );
   }

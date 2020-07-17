@@ -23,6 +23,7 @@ import CcrWriterMixin from "./ccr-writer-mixin.js";
 import Url from "./url.js";
 import Uu5CommonError from "./error.js";
 import VisualComponent from "./visual-component.js";
+import Element from "./element.js";
 
 import "./router.less";
 //@@viewOff:imports
@@ -397,7 +398,7 @@ export const Router = VisualComponent.create({
         }
 
         if (customModalProps !== false) {
-          let modalProps = Object.assign(this._getPageLeaveModalDefaultProps(processResultFn), customModalProps);
+          let modalProps = this._getPageLeaveModalProps(processResultFn, customModalProps);
           modalOpen = true;
           this._pageLeaveModal.open(modalProps);
         }
@@ -410,14 +411,16 @@ export const Router = VisualComponent.create({
     }
   },
 
-  _getPageLeaveModalDefaultProps(callback) {
+  _getPageLeaveModalProps(callback, customProps) {
+    let { onClose, ...usedCustomProps } = customProps || {};
     let UU5 = window.UU5; // assume that other bricks are available too (we already rendered UU5.Bricks.Modal)
     return {
       header: this.getLsiComponent("pageLeaveConfirmationHeader"),
       className: this.getClassName("leaveConfirmationModal"),
-      onClose: opt => {
-        opt.component._close(); // .closeDefault()
-        callback(false);
+      onClose: (...args) => {
+        args[0].component.onCloseDefault(...args);
+        if (typeof onClose === "function") onClose(...args);
+        else callback(false);
       },
       content: [
         <UU5.Bricks.Div
@@ -437,7 +440,8 @@ export const Router = VisualComponent.create({
             content={this.getLsiComponent("pageLeaveDeny")}
           />
         </UU5.Bricks.Div>
-      ]
+      ],
+      ...usedCustomProps
     };
   },
 
@@ -601,9 +605,9 @@ export const Router = VisualComponent.create({
       if (newRoute.tag) {
         let tag = Tools.checkTag(newRoute.tag, true);
         let props = Tools.merge({}, newRoute.props, newProps);
-        newRouteChild = tag ? React.createElement(tag, props) : Tools.findComponent(newRoute.tag, props);
+        newRouteChild = tag ? Element.create(tag, props) : Tools.findComponent(newRoute.tag, props);
       } else {
-        newRouteChild = React.cloneElement(newRoute, newProps);
+        newRouteChild = Element.clone(newRoute, newProps);
       }
     }
 

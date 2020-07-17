@@ -517,7 +517,7 @@ exports[`UU5.Bricks.Modal props disabled=false 1`] = `
 
 exports[`UU5.Bricks.Modal props disabled=true 1`] = `
 <div
-  className="uu5-bricks-modal uu5-common-hidden uu5-common-disabled"
+  className="uu5-bricks-modal uu5-common-disabled uu5-common-hidden"
   id="uuID"
   onClick={[Function]}
   onMouseDown={[Function]}
@@ -629,7 +629,7 @@ exports[`UU5.Bricks.Modal props dynamic=true 1`] = `
 
 exports[`UU5.Bricks.Modal props footer={"type":"div","key":null,"ref":null,"props":{"children":"Footer of section"},"_owner":null,"_store":{}} 1`] = `
 <div
-  className="uu5-bricks-modal uu5-common-hidden uu5-bricks-modal-isfooter"
+  className="uu5-bricks-modal uu5-bricks-modal-isfooter uu5-common-hidden"
   id="uuID"
   onClick={[Function]}
   onMouseDown={[Function]}
@@ -2084,7 +2084,7 @@ exports[`UU5.Bricks.Modal props overflow=false 1`] = `
 
 exports[`UU5.Bricks.Modal props overflow=true 1`] = `
 <div
-  className="uu5-bricks-modal uu5-common-hidden uu5-bricks-modal-overflow"
+  className="uu5-bricks-modal uu5-bricks-modal-overflow uu5-common-hidden"
   id="uuID"
   onClick={[Function]}
   onMouseDown={[Function]}
@@ -2301,7 +2301,7 @@ exports[`UU5.Bricks.Modal props selected=false 1`] = `
 
 exports[`UU5.Bricks.Modal props selected=true 1`] = `
 <div
-  className="uu5-bricks-modal uu5-common-hidden uu5-common-selected"
+  className="uu5-bricks-modal uu5-common-selected uu5-common-hidden"
   id="uuID"
   onClick={[Function]}
   onMouseDown={[Function]}

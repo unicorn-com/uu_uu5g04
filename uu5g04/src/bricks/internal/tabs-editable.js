@@ -4,11 +4,11 @@ import UU5 from "uu5g04";
 //import "uu5g04-bricks-editable";
 
 import TabsItem from "../tabs-item.js";
-import ns from "../bricks-ns.js";
-import BricksLsi from "../bricks-lsi.js";
+import ns from "./bricks-editable-ns.js";
+import EditableLsi from "./bricks-editable-lsi.js";
 //@@viewOff:imports
 
-const Lsi = BricksLsi.tabsEditable;
+const Lsi = EditableLsi;
 
 const getEditableItemLabel = (itemProps, itemIndex) => {
   if (itemProps.header) {
@@ -30,37 +30,37 @@ const editableComponentPropsSetup = [
   {
     name: "type",
     type: "switchSelector",
-    label: Lsi.typeLabel,
+    label: EditableLsi.tabs.typeLabel,
     getProps: props => ({
       items: [
-        { value: "tabs", content: <UU5.Bricks.Lsi lsi={Lsi.typeValueTabs} /> },
-        { value: "pills", content: <UU5.Bricks.Lsi lsi={Lsi.typeValuePills} /> }
+        { value: "tabs", content: <UU5.Bricks.Lsi lsi={EditableLsi.tabs.typeValueTabs} /> },
+        { value: "pills", content: <UU5.Bricks.Lsi lsi={EditableLsi.tabs.typeValuePills} /> }
       ]
     })
   },
   {
     name: "size",
     type: "switchSelector",
-    label: Lsi.sizeLabel,
+    label: EditableLsi.common.sizeLabel,
     getProps: props => ({
       items: [
-        { value: "s", content: <UU5.Bricks.Lsi lsi={Lsi.sizeValueS} /> },
-        { value: "m", content: <UU5.Bricks.Lsi lsi={Lsi.sizeValueM} /> },
-        { value: "l", content: <UU5.Bricks.Lsi lsi={Lsi.sizeValueL} /> },
-        { value: "xl", content: <UU5.Bricks.Lsi lsi={Lsi.sizeValueXL} /> }
+        { value: "s", content: <UU5.Bricks.Lsi lsi={EditableLsi.common.sizeValueS} /> },
+        { value: "m", content: <UU5.Bricks.Lsi lsi={EditableLsi.common.sizeValueM} /> },
+        { value: "l", content: <UU5.Bricks.Lsi lsi={EditableLsi.common.sizeValueL} /> },
+        { value: "xl", content: <UU5.Bricks.Lsi lsi={EditableLsi.common.sizeValueXL} /> }
       ]
     })
   },
   {
     name: "borderRadius",
     type: "text",
-    label: <UU5.Bricks.Lsi lsi={Lsi.borderRadiusLabel} />,
-    getProps: () => ({ placeholder: UU5.Common.BaseMixin.getLsiItem(Lsi.borderRadiusPlaceholder) })
+    label: <UU5.Bricks.Lsi lsi={EditableLsi.tabs.borderRadiusLabel} />,
+    getProps: () => ({ placeholder: UU5.Common.BaseMixin.getLsiItem(EditableLsi.tabs.borderRadiusPlaceholder) })
   },
   {
     name: "elevation",
     type: "switchSelector",
-    label: Lsi.elevationLabel,
+    label: EditableLsi.tabs.elevationLabel,
     getProps: props => ({
       items: [
         { value: "0", content: "0" },
@@ -75,7 +75,7 @@ const editableComponentPropsSetup = [
   {
     name: "elevationHover",
     type: "switchSelector",
-    label: Lsi.elevationHoverLabel,
+    label: EditableLsi.tabs.elevationHoverLabel,
     getProps: props => ({
       items: [
         { value: "0", content: "0" },
@@ -90,69 +90,80 @@ const editableComponentPropsSetup = [
   {
     name: "justified",
     type: "switchSelector",
-    label: Lsi.justifiedLabel,
+    label: EditableLsi.tabs.justifiedLabel,
     getProps: () => ({
       items: [
-        { value: false, content: <UU5.Bricks.Lsi lsi={Lsi.justifiedValueFalse} /> },
-        { value: true, content: <UU5.Bricks.Lsi lsi={Lsi.justifiedValueFTrue} /> }
+        { value: false, content: <UU5.Bricks.Lsi lsi={EditableLsi.tabs.justifiedValueFalse} /> },
+        { value: true, content: <UU5.Bricks.Lsi lsi={EditableLsi.tabs.justifiedValueTrue} /> }
       ]
     })
   },
   {
     name: "fade",
     type: "switchSelector",
-    label: Lsi.fadeLabel,
+    label: EditableLsi.tabs.fadeLabel,
     getProps: () => ({
       items: [
-        { value: false, content: <UU5.Bricks.Lsi lsi={Lsi.fadeValueFalse} /> },
-        { value: true, content: <UU5.Bricks.Lsi lsi={Lsi.fadeValueTrue} /> }
+        { value: false, content: <UU5.Bricks.Lsi lsi={EditableLsi.tabs.fadeValueFalse} /> },
+        { value: true, content: <UU5.Bricks.Lsi lsi={EditableLsi.tabs.fadeValueTrue} /> }
       ]
     })
   },
   {
     name: "underline",
     type: "switchSelector",
-    label: Lsi.underlineLabel,
+    label: EditableLsi.tabs.underlineLabel,
     getProps: () => ({
       items: [
-        { value: false, content: <UU5.Bricks.Lsi lsi={Lsi.underlineValueFalse} /> },
-        { value: true, content: <UU5.Bricks.Lsi lsi={Lsi.underlineValueTrue} /> }
+        { value: false, content: <UU5.Bricks.Lsi lsi={EditableLsi.tabs.underlineValueFalse} /> },
+        { value: true, content: <UU5.Bricks.Lsi lsi={EditableLsi.tabs.underlineValueTrue} /> }
       ]
     })
   }
 ];
 
 const editableAdditionalPropsSetup = [
-  { name: "colorSchema", type: "colorSchemaPicker", label: Lsi.colorSchemaLabel },
+  { name: "colorSchema", type: "colorSchema", label: EditableLsi.common.colorSchemaLabel },
   {
     name: "disabled",
     type: "switchSelector",
-    label: Lsi.disabledLabel,
+    label: EditableLsi.tabs.disabledLabel,
     getProps: () => ({
       items: [
-        { value: false, content: <UU5.Bricks.Lsi lsi={Lsi.disabledValueFalse} /> },
-        { value: true, content: <UU5.Bricks.Lsi lsi={Lsi.disabledValueTrue} /> }
+        { value: false, content: <UU5.Bricks.Lsi lsi={EditableLsi.tabs.disabledValueFalse} /> },
+        { value: true, content: <UU5.Bricks.Lsi lsi={EditableLsi.tabs.disabledValueTrue} /> }
       ]
+    })
+  },
+  {
+    name: "mountTabContent",
+    type: "switchSelector",
+    label: EditableLsi.tabs.mountTabContentLabel,
+    getProps: () => ({
+      items: [
+        { value: "onActive", content: <UU5.Bricks.Lsi lsi={EditableLsi.tabs.mountTabContentValueOnActive} /> },
+        { value: "onFirstActive", content: <UU5.Bricks.Lsi lsi={EditableLsi.tabs.mountTabContentValueOnFirstActive} /> }
+      ],
+      message: <UU5.Bricks.Lsi lsi={EditableLsi.tabs.mountContentDescription} />
     })
   }
 ];
 
 const editablePropsSetup = [
   {
-    name: <UU5.Bricks.Lsi lsi={Lsi.componentPropsLabel} />,
-    icon: "mdi-settings",
+    name: <UU5.Bricks.Lsi lsi={EditableLsi.common.componentPropsLabel} />,
     setup: editableComponentPropsSetup
   },
   {
-    name: <UU5.Bricks.Lsi lsi={Lsi.additionalPropsLabel} />,
+    name: <UU5.Bricks.Lsi lsi={EditableLsi.common.advancedPropsLabel} />,
     setup: editableAdditionalPropsSetup
   }
 ];
 
 const editableItemPropsSetup = {
   setup: [
-    { name: "name", type: "text", label: <UU5.Bricks.Lsi lsi={Lsi.tabNameLabel} />, required: true },
-    { name: "header", type: "text", label: <UU5.Bricks.Lsi lsi={Lsi.tabHeaderLabel} />, required: true }
+    { name: "name", type: "text", label: <UU5.Bricks.Lsi lsi={EditableLsi.tabs.tabNameLabel} />, required: true },
+    { name: "header", type: "text", label: <UU5.Bricks.Lsi lsi={EditableLsi.tabs.tabHeaderLabel} />, required: true }
   ]
 };
 
@@ -200,16 +211,25 @@ export const TabsEditable = UU5.Common.VisualComponent.create({
   _registerEditModal(modal) {
     this._editModal = modal;
   },
+
+  _onCloseEditationModal(newProps) {
+    if (!newProps) newProps = {};
+    this.props.component.endEditation({ ...newProps, mountContent: newProps.mountTabContent || "onActive" });
+  },
   //@@viewOff:private
 
   //@@viewOn:render
   render() {
+    let props = this.props.component.getEditablePropsValues(Object.keys(this.props.component.props));
     return (
       <UU5.BricksEditable.Modal
         shown
         componentName={this.props.component.getTagName()}
-        componentProps={this.props.component.getEditablePropsValues(Object.keys(this.props.component.props))}
-        onClose={this.props.component.endEditation}
+        componentProps={{
+          ...props,
+          mountTabContent: props.mountTabContent || "onActive"
+        }}
+        onClose={this._onCloseEditationModal}
         itemName={TabsItem.tagName}
         itemDefaultProps={TabsItem.defaultProps}
         ref_={this._registerEditModal}

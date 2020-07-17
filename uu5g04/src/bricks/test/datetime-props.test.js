@@ -54,7 +54,7 @@ const CONFIG = {
       values: ["d. m. Y HH:MM:SS Z (w/52) q/4"]
     },
     country: {
-      values: ["en-us"]
+      values: ["cs-cz"] // requires NodeJS >= 13.x
     },
     timeZone: {
       values: [-3.5]
@@ -73,7 +73,8 @@ const CONFIG = {
   requiredProps: {
     //Here we must have the value set in the requiredProps otherwise,
     // a new date would be created in every snapshot, and snapshots would vary.
-    value: "2018-1-25 14:04:19"
+    value: "2018-1-25 14:04:19",
+    country: "en-us"
   },
   opt: {
     shallowOpt: {
@@ -93,7 +94,7 @@ describe(`UU5.Bricks.DateTime`, () => {
 
   //Separately test value.
   it(`UU5.Bricks.DateTime - props value`, () => {
-    const wrapper = shallow(<UU5.Bricks.DateTime id={"uuID"} value={"2018-3-1 21:29:51"} />);
+    const wrapper = shallow(<UU5.Bricks.DateTime id={"uuID"} value={"2018-3-1 21:29:51"} country="en-us" />);
     expect(wrapper.instance().props.value).toMatch(/2018-3-1 21:29:51/);
     expect(wrapper).toMatchSnapshot();
     wrapper.setProps({ value: "2019-3-1 21:29:51" });
@@ -104,12 +105,13 @@ describe(`UU5.Bricks.DateTime`, () => {
 
   it(`UU5.Bricks.DateTime - ISO format value`, () => {
     let defaultCountry = "en-US";
-    ISOFormatTest({ value: "2019-07-20T07:00:00.000Z" }, defaultCountry, "7/20/2019, 9:00:00 AM");
-    ISOFormatTest({ value: "2019-07-20T07:00:00.000+02:00" }, defaultCountry, "7/20/2019, 7:00:00 AM");
-    ISOFormatTest({ value: "2019-07-20T07:00:00.000+02:00" }, "cs-CZ", "2019-7-20 7:00:00 AM"); // this might be wrong
-    ISOFormatTest({ value: "2019-07-20T07:00:00.000+02:00", dateOnly: true }, defaultCountry, "7/20/2019");
-    ISOFormatTest({ value: "2019-07-20T07:00:00.000+02:00", timeOnly: true }, defaultCountry, "7:00:00 AM");
-    ISOFormatTest({ value: "2019-07-20T07:00:00.000+02:00", timeZone: -2 }, defaultCountry, "7/20/2019, 3:00:00 AM");
+    ISOFormatTest({ value: "2019-07-20T18:00:00.000Z" }, undefined, "20. 7. 2019 20:00:00");
+    ISOFormatTest({ value: "2019-07-20T18:00:00.000Z" }, defaultCountry, "7/20/2019, 8:00:00 PM");
+    ISOFormatTest({ value: "2019-07-20T18:00:00.000+02:00" }, defaultCountry, "7/20/2019, 6:00:00 PM");
+    ISOFormatTest({ value: "2019-07-20T18:00:00.000+02:00" }, "cs-CZ", "20. 7. 2019 18:00:00");
+    ISOFormatTest({ value: "2019-07-20T18:00:00.000+02:00", dateOnly: true }, defaultCountry, "7/20/2019");
+    ISOFormatTest({ value: "2019-07-20T18:00:00.000+02:00", timeOnly: true }, defaultCountry, "6:00:00 PM");
+    ISOFormatTest({ value: "2019-07-20T18:00:00.000+02:00", timeZone: -2 }, defaultCountry, "7/20/2019, 2:00:00 PM");
   });
 });
 

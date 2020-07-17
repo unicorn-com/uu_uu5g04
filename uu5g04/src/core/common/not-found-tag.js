@@ -21,6 +21,7 @@ import Error from "./error.js";
 import PureRenderMixin from "./pure-render-mixin";
 import Tools from "./tools.js";
 import VisualComponent from "./visual-component.js";
+import Element from "./element.js";
 
 import "./not-found-tag.less";
 //@@viewOff:imports
@@ -72,8 +73,8 @@ export const NotFoundTag = VisualComponent.create({
 
     if (typeof this.props.error === "string") {
       result = Tools.formatString(this.props.error, { tagName: this.props.tagName });
-    } else if (React.isValidElement(this.props.error)) {
-      result = React.cloneElement(this.props.error, { tagName: this.props.tagName });
+    } else if (Element.isValid(this.props.error)) {
+      result = Element.clone(this.props.error, { tagName: this.props.tagName });
     } else if (typeof this.props.error === "function") {
       result = this.props.error({ tagName: this.props.tagName });
     } else {

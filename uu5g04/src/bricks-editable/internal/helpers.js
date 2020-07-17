@@ -54,6 +54,9 @@ export const Helpers = {
     } else {
       return false;
     }
+  },
+  isLsiObject: object => {
+    return object && typeof object === "object" && !object.type;
   }
 };
 

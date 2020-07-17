@@ -11,79 +11,103 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
-//import "uu5g04-forms";
 //import "uu5g04-bricks-editable";
 
 import ns from "./bricks-editable-ns.js";
 import Lsi from "./bricks-editable-lsi.js";
 import Css from "./css.js";
+import { PresetEditComponent, ColWidthEditComponent } from "./modal-editation-components.js";
+//@@viewOff:imports
 
 const DEFAULT_PROPS_MAP = {
   contentEditable: false,
   noSpacing: false,
-  underline: false,
   level: null,
-  colWidth: "",
-  width: "",
+  underline: false,
+  display: "standard",
   header: "",
   footer: "",
   content: null,
   children: null
 };
 
-const MAIN_CLASS_NAME = ns.css("column");
-const NAME = ns.name("Column");
-
-function getColWidthValue(value) {
-  // normalize value to string
-  if (value && typeof value === "object") {
-    return UU5.Common.Tools.buildColWidthClassName(value)
-      .replace(/uu5-col-/g, "")
-      .replace(/xs|s|m|l|xl/g, match => `${match}-`);
-  } else {
-    return value;
-  }
-}
+const MAIN_CLASS_NAME = ns.css("row");
+const NAME = ns.name("Row");
 
 const propsSetup = [
   {
-    name: "Properties",
+    name: <UU5.Bricks.Lsi lsi={Lsi.row.mainPropertiesLabel} />,
     setup: [
+      PresetEditComponent,
       {
-        name: "colWidth",
-        type: "text",
-        label: Lsi.column.colWidthLabel,
-        getProps: props => ({
-          value: getColWidthValue(props.value),
-          message: <UU5.Bricks.Lsi lsi={Lsi.column.colWidthTooltip} />,
-          onChange: ({ value, component }) => {
-            component.setFeedback("initial", <UU5.Bricks.Lsi lsi={Lsi.column.colWidthTooltip} />, value);
-          }
+        name: "display",
+        type: "switchSelector",
+        label: Lsi.row.displayLabel,
+        getProps: () => ({
+          items: [
+            { value: "standard", content: <UU5.Bricks.Lsi lsi={Lsi.row.displayValueStandard} /> },
+            { value: "flex", content: <UU5.Bricks.Lsi lsi={Lsi.row.displayValueFlex} /> }
+          ]
         })
       },
       {
         name: "noSpacing",
         type: "switchSelector",
-        label: Lsi.column.horizontalPaddingLabel,
+        label: Lsi.row.horizontalPaddingLabel,
         getProps: () => ({
           items: [
-            { value: false, content: <UU5.Bricks.Lsi lsi={Lsi.column.horizontalPaddingValueStandard} /> },
-            { value: true, content: <UU5.Bricks.Lsi lsi={Lsi.column.horizontalPaddingValueNone} /> }
+            { value: false, content: <UU5.Bricks.Lsi lsi={Lsi.row.horizontalPaddingValueStandard} /> },
+            { value: true, content: <UU5.Bricks.Lsi lsi={Lsi.row.horizontalPaddingValueNone} /> }
           ]
         })
       },
       {
         name: "className",
         type: "text",
-        label: <UU5.Bricks.Lsi lsi={Lsi.column.classNameLabel} />
+        label: <UU5.Bricks.Lsi lsi={Lsi.row.classNameLabel} />
       }
     ]
   }
 ];
 
-export const Column = UU5.Common.VisualComponent.create({
+const editableItemPropsSetup = {
+  setup: [
+    ColWidthEditComponent,
+    {
+      name: "noSpacing",
+      type: "switchSelector",
+      label: Lsi.row.horizontalPaddingLabel,
+      getProps: () => ({
+        items: [
+          { value: false, content: <UU5.Bricks.Lsi lsi={Lsi.row.horizontalPaddingValueStandard} /> },
+          { value: true, content: <UU5.Bricks.Lsi lsi={Lsi.row.horizontalPaddingValueNone} /> }
+        ]
+      })
+    },
+    {
+      name: "className",
+      type: "text",
+      label: <UU5.Bricks.Lsi lsi={Lsi.row.classNameLabel} />
+    }
+  ]
+};
+
+const newEditableItem = {
+  tagName: "UU5.Bricks.Column",
+  isElement: true,
+  props: {
+    contentEditable: true
+  }
+};
+
+function getEditableItemLabel(item, itemIndex) {
+  return `Column ${itemIndex + 1}`;
+}
+
+export const Row = UU5.Common.VisualComponent.create({
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin],
   //@@viewOff:mixins
@@ -99,12 +123,20 @@ export const Column = UU5.Common.VisualComponent.create({
           margin-top: 0px;
           width: 100%;
 
+          &.uu5-forms-checkbox {
+            margin-bottom: 0px;
+          }
+
           &:hover {
             background-color: #EEEEEE;
           }
 
           &:first-child {
             margin-top: 4px;
+          }
+
+          &:last-child {
+            margin-bottom: 4px;
           }
 
           .uu5-forms-checkbox-button.uu5-forms-checkbox-button.uu5-forms-checkbox-button {
@@ -124,53 +156,9 @@ export const Column = UU5.Common.VisualComponent.create({
               width: 20%;
             }
           }
-        `),
-      separator: () =>
-        Css.css(`
-          margin: 0;
-          width: 100%;
-        `),
-      settings: () =>
-        Css.css(`
-          &.uu5-bricks-button {
-            background-color: transparent;
-            width: 100%;
-            text-align: left;
-            margin-bottom: 4px;
-
-            &:hover {
-              background-color: #EEEEEE;
-            }
-          }
-        `),
-      settingsModal: () =>
-        Css.css(`
-          .uu5-bricks-modal-header {
-            font-size: 18px;
-            color: #303030;
-            border-bottom: solid 1px #BDBDBD;
-          }
-
-          .uu5-bricks-modal-footer {
-            padding: 0;
-            border-top: solid 1px #BDBDBD;
-          }
-
-          .uu5-bricks-modal-body {
-            padding: 0;
-          }
-        `),
-      settingsForm: () =>
-        Css.css(`
-          &:last-child {
-            margin-bottom: 24px;
-          }
         `)
     },
-    lsi: () => ({ ...Lsi.column, ...Lsi.common }),
-    defaults: {
-      colWidthRegexp: /([a-z])+(?:-)?(\d+)/
-    }
+    lsi: () => ({ ...Lsi.row, ...Lsi.common })
   },
   //@@viewOff:statics
 
@@ -190,14 +178,12 @@ export const Column = UU5.Common.VisualComponent.create({
 
   //@@viewOn:reactLifeCycle
   getInitialState() {
-    let values = this.props.component.getEditablePropsValues(Object.keys(DEFAULT_PROPS_MAP));
+    let editedProps = this.props.component.getEditablePropsValues(Object.keys(DEFAULT_PROPS_MAP));
 
-    values.width = values.width || "";
-    values.colWidth = values.colWidth || "";
     return {
-      ...values,
-      showFooter: !!values.footer,
-      showHeader: !!values.header,
+      ...editedProps,
+      showFooter: !!editedProps.footer,
+      showHeader: !!editedProps.header,
       editModalOpen: false
     };
   },
@@ -213,7 +199,6 @@ export const Column = UU5.Common.VisualComponent.create({
   //@@viewOff:overridingMethods
 
   //@@viewOn:private
-  // props actions
   _onEndEditation() {
     this.props.component.endEditation(this._getPropsToSave());
   },
@@ -221,7 +206,7 @@ export const Column = UU5.Common.VisualComponent.create({
   _getPropsToSave(state = this.state) {
     // unused vars are here just to separate them from the result
     // eslint-disable-next-line no-unused-vars
-    let { showFooter, showHeader, editModalOpen, children, content, ...result } = state;
+    let { children, content, flex, editModalOpen, showHeader, showFooter, ...result } = state;
 
     for (let propName in DEFAULT_PROPS_MAP) {
       if (result[propName] !== undefined && result[propName] === DEFAULT_PROPS_MAP[propName]) {
@@ -233,6 +218,7 @@ export const Column = UU5.Common.VisualComponent.create({
     if (!showHeader) {
       result.header = undefined;
     }
+
     if (!showFooter) {
       result.footer = undefined;
     }
@@ -256,15 +242,6 @@ export const Column = UU5.Common.VisualComponent.create({
     this.setState({ editModalOpen: false });
   },
 
-  _registerSettingsForm(form) {
-    this._settingsForm = form;
-  },
-
-  _registerToolbar(ref) {
-    this._toolbar = ref;
-  },
-
-  // change state handlers
   _toggleHeader() {
     this.setState(state => ({
       showHeader: !state.showHeader
@@ -281,11 +258,11 @@ export const Column = UU5.Common.VisualComponent.create({
     this.setState(state => ({ underline: !state.underline }));
   },
 
-  _toggleNoSpacing() {
+  _toggleDisplay() {
     this.setState(
-      state => ({ noSpacing: !state.noSpacing }),
+      state => ({ display: state.display === "flex" ? "standard" : "flex" }),
       () => {
-        this.props.component.saveEditation({ noSpacing: this.state.noSpacing });
+        this.props.component.saveEditation({ display: this.state.display });
       }
     );
   },
@@ -302,55 +279,25 @@ export const Column = UU5.Common.VisualComponent.create({
     this.setState({ footer: opt.value });
   },
 
-  _saveSettings(opt) {
-    if (opt.values.width.match(this.getDefault("colWidthRegexp"))) {
-      opt.values.colWidth = opt.values.width;
-      opt.values.width = null;
-    } else {
-      opt.values.colWidth = null;
-    }
-
-    this.setState({ ...opt.values }, () => this.props.component.saveEditation({ ...opt.values }));
-  },
-
-  _cancelSettings() {
-    this._toolbar.closeMoreSettings();
-  },
-
-  _getControlsForm() {
-    return this._settingsForm;
-  },
-
-  _getSettingsFormControls() {
-    return (
-      <UU5.Forms.Controls
-        getForm={this._getControlsForm}
-        buttonCancelProps={{
-          content: this.getLsiComponent("controlsCancelButton")
-        }}
-        buttonSubmitProps={{
-          content: this.getLsiComponent("controlsSubmitButton")
-        }}
-      />
-    );
-  },
-
   _getHeaderToolbarItems() {
     let levelItems = [1, 2, 3, 4, 5, 6].map(level => ({
       content: `${this.getLsiValue("level")} ${level}`,
       value: `${level}`
     }));
-    levelItems.unshift({ content: this.getLsiValue("defaultLevel"), value: null });
+    levelItems.unshift({ content: this.getLsiComponent("defaultLevel"), value: null });
 
     return [
+      {
+        type: "separator"
+      },
       {
         type: "button",
         props: () => {
           return {
+            pressed: this.state.underline,
             onClick: this._toggleUnderline,
             tooltip: this.getLsiValue("underlineTooltip"),
-            icon: "mdi-format-underline",
-            pressed: this.state.underline
+            icon: "mdi-format-underline"
           };
         }
       },
@@ -362,11 +309,27 @@ export const Column = UU5.Common.VisualComponent.create({
             : `${this.getLsiValue("defaultLevel")}`;
 
           return {
-            onClick: this._changeLevel,
             value: this.state.level,
             label,
             tooltip: this.getLsiValue("levelTooltip"),
-            items: levelItems
+            items: levelItems,
+            onClick: this._changeLevel
+          };
+        }
+      }
+    ];
+  },
+
+  _getToolbarItems() {
+    return [
+      {
+        type: "button",
+        props: () => {
+          return {
+            pressed: this.state.editModalOpen,
+            icon: "mdi-view-column",
+            onClick: this._openEditModal,
+            tooltip: this.getLsiValue("layoutTooltip")
           };
         }
       }
@@ -386,22 +349,11 @@ export const Column = UU5.Common.VisualComponent.create({
         label: this.getLsiComponent("showFooterCheckboxLabel")
       },
       {
-        value: this.state.noSpacing,
-        onClick: this._toggleNoSpacing,
-        label: this.getLsiComponent("noSpacingTooltip")
+        value: this.state.display === "flex",
+        onClick: this._toggleDisplay,
+        label: this.getLsiComponent("flexCheckboxLabel")
       }
     ];
-  },
-
-  _getToolbarProps() {
-    let props = this.getMainPropsToPass();
-
-    props.onClose = this._onEndEditation;
-    props.onMoreSettingsClick = this._openEditModal;
-    props.settingsItems = this._getToolbarSettings();
-    props.ref_ = this._registerToolbar;
-
-    return props;
   },
 
   _renderEditModal() {
@@ -409,10 +361,15 @@ export const Column = UU5.Common.VisualComponent.create({
       <UU5.Common.Suspense fallback="">
         <UU5.BricksEditable.Modal
           shown
-          componentProps={this.props.component.getEditablePropsValues(Object.keys(this.props.component.props))}
           onClose={this._onCloseEditationModal}
           componentName={this.props.component.getTagName()}
+          componentProps={this.props.component.getEditablePropsValues(Object.keys(this.props.component.props))}
           componentPropsForm={propsSetup}
+          itemName={UU5.Bricks.Column.tagName}
+          itemDefaultProps={UU5.Bricks.Column.defaultProps}
+          itemPropsForm={editableItemPropsSetup}
+          newItem={newEditableItem}
+          getItemLabel={getEditableItemLabel}
         />
       </UU5.Common.Suspense>
     );
@@ -423,7 +380,12 @@ export const Column = UU5.Common.VisualComponent.create({
   render() {
     return (
       <>
-        <UU5.BricksEditable.Toolbar {...this._getToolbarProps()}>
+        <UU5.BricksEditable.Toolbar
+          {...this.getMainPropsToPass()}
+          onClose={this._onEndEditation}
+          items={this._getToolbarItems()}
+          settingsItems={this._getToolbarSettings()}
+        >
           {[
             this.state.showHeader ? (
               <UU5.BricksEditable.Input
@@ -464,4 +426,4 @@ export const Column = UU5.Common.VisualComponent.create({
   //@@viewOff:render
 });
 
-export default Column;
+export default Row;

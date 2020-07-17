@@ -126,7 +126,7 @@ export const Tabs = UU5.Common.VisualComponent.create({
       elevationHover: null,
       underline: true,
       lineProps: null,
-      mountTabContent: MOUNT_TAB_CONTENT_VALUES.onFirstRender
+      mountTabContent: undefined
     };
   },
   //@@viewOff:getDefaultProps

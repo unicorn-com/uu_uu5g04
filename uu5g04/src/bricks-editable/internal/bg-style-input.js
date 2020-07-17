@@ -19,16 +19,15 @@ const BgStyleInput = createVisualComponent({
 
   //@@viewOn:propTypes
   propTypes: {
-    componentProps: UU5.PropTypes.object,
     onChange: UU5.PropTypes.func,
     label: UU5.PropTypes.object,
-    items: UU5.PropTypes.arrayOf(UU5.PropTypes.object)
+    items: UU5.PropTypes.arrayOf(UU5.PropTypes.object),
+    value: UU5.PropTypes.string
   },
   //@@viewOff:propTypes
 
   //@@viewOn:defaultProps
   defaultProps: {
-    componentProps: undefined,
     onChange: undefined,
     label: <UU5.Bricks.Lsi lsi={Lsi.bgStyleInput.label} />,
     items: [
@@ -36,11 +35,12 @@ const BgStyleInput = createVisualComponent({
       { value: "outline", content: <UU5.Bricks.Lsi lsi={Lsi.bgStyleInput.outline} /> },
       { value: "transparent", content: <UU5.Bricks.Lsi lsi={Lsi.bgStyleInput.transparent} /> },
       { value: "underline", content: <UU5.Bricks.Lsi lsi={Lsi.bgStyleInput.underline} /> }
-    ]
+    ],
+    value: UU5.PropTypes.string
   },
   //@@viewOff:defaultProps
 
-  render({ items, label, componentProps, onChange, ...props }) {
+  render({ items, label, onChange, value, ...props }) {
     //@@viewOn:hooks
     //@@viewOff:hooks
 
@@ -51,15 +51,7 @@ const BgStyleInput = createVisualComponent({
     //@@viewOff:private
 
     //@@viewOn:render
-    return (
-      <UU5.Forms.SwitchSelector
-        {...props}
-        label={label}
-        value={componentProps.bgStyle}
-        onChange={opt => onChange({ value: opt.value })}
-        items={items}
-      />
-    );
+    return <UU5.Forms.SwitchSelector {...props} label={label} value={value} onChange={onChange} items={items} />;
     //@@viewOff:render
   }
 });

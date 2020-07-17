@@ -2,26 +2,24 @@
 
 exports[`UU5.Bricks.Box interface testing UU5.Bricks.Box shallow snapshot should render withoutcrash 1`] = `
 <Fragment>
-  <div>
-    <div
-      className="uu5-bricks-box uu5-bricks-text uu5-common-bg-style-filled uu5-bricks-box-click uu5-common-hover uu5-bricks-box-nesting-level-small-box uu5-common-padding-s"
-      id="uuID01"
-      onClick={[Function]}
-      style={Object {}}
-      title={null}
-    >
-      <Span
-        content=" CLICK ME! Box with some icons and text "
-        id="boxContent"
-        key="boxContent"
-      />
-    </div>
-    <Modal
-      className="uu5-bricks-box-modal"
-      content="This is infoContent from the Box"
-      header="This is infoHeader from the Box"
-      ref_={[Function]}
+  <div
+    className="uu5-bricks-box uu5-bricks-text uu5-common-bg-style-filled uu5-bricks-box-click uu5-common-hover uu5-bricks-box-nesting-level-small-box uu5-common-padding-s"
+    id="uuID01"
+    onClick={[Function]}
+    style={Object {}}
+    title={null}
+  >
+    <Span
+      content=" CLICK ME! Box with some icons and text "
+      id="boxContent"
+      key="boxContent"
     />
   </div>
+  <Modal
+    className="uu5-bricks-box-modal"
+    content="This is infoContent from the Box"
+    header="This is infoHeader from the Box"
+    ref_={[Function]}
+  />
 </Fragment>
 `;

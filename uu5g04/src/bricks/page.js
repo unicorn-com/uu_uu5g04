@@ -25,6 +25,7 @@ import PageTop from "./page-top.js";
 import PageBottom from "./page-bottom.js";
 import ResizeObserver from "./resize-observer.js";
 import Popover from "./popover.js";
+import { PortalElementContext, LAYER } from "./internal/portal.js";
 
 import "./page.less";
 //@@viewOff:imports
@@ -44,15 +45,6 @@ const PAGE_CONTENT = UU5.PropTypes.oneOfType([
   UU5.PropTypes.string,
   UU5.PropTypes.number
 ]); //content (bodyItem, node, element, string, number)
-
-function getOrCreateChild(domEl) {
-  let result;
-  if (domEl) {
-    if (!domEl.firstChild) domEl.appendChild(document.createElement("div"));
-    result = domEl.firstChild;
-  }
-  return result;
-}
 
 function checkScreenSizeDependableProp(screenSize, propValue) {
   let result = false;
@@ -319,6 +311,8 @@ export const Page = UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     // initialize
+    this._pendingPortalEls = {}; // created elements (for portals) that were not attached to DOM yet because Page didn't have its own DOM element itself yet
+
     this.props.userLayerContent &&
       UU5.Common.Tools.warning("Property 'userLayerContent' is deprecated! Use 'appLayerContent' instead.");
     this.props.userLayerWrapperProps &&
@@ -331,7 +325,8 @@ export const Page = UU5.Common.VisualComponent.create({
     return {
       widths: this._setWidths(),
       scrolledDown: this.props.topFixed === "always" && window.pageYOffset >= this.props.topFixedScrolledDownOffset,
-      popoverProviderValue: { getPopover: this.getPopover }
+      popoverProviderValue: { getPopover: this.getPopover },
+      portalElementProviderValue: { getPortalElement: this._getPortalElement }
     };
   },
 
@@ -552,22 +547,42 @@ export const Page = UU5.Common.VisualComponent.create({
       this._setNewWidths(opt.nextWidth, opt.screenSize, true);
     }
   },
-
-  getPortalContainer(layer = "modal") {
-    // layers: https://uuos9.plus4u.net/uu-dockitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=spa_page_01
-    // returning nested child <div/> which is fully unmanaged by React (whereas _modalPortalRef/...Ref is managed by React)
-    let result;
-    if (layer === "modal") result = getOrCreateChild(this._modalPortalRef);
-    else if (layer === "alert-bus") result = getOrCreateChild(this._alertBusPortalRef);
-    else if (layer === "popover") result = getOrCreateChild(this._popoverPortalRef);
-    return result;
-  },
   //@@viewOff:interface
 
   //@@viewOn:overriding
   //@@viewOff:overriding
 
   //@@viewOn:private
+  _getPortalElement(layer) {
+    // layers: https://uuos9.plus4u.net/uu-dockitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=spa_page_01
+    // returning nested child <div/> which is fully unmanaged by React (whereas _modalPortalRef/...Ref is managed by React)
+    let result;
+    if (layer === LAYER.MODAL) result = this._getOrCreatePortalEl(this._modalPortalRef, layer);
+    else if (layer === LAYER.ALERT_BUS) result = this._getOrCreatePortalEl(this._alertBusPortalRef, layer);
+    else if (layer === LAYER.POPOVER) result = this._getOrCreatePortalEl(this._popoverPortalRef, layer);
+    return result;
+  },
+  _getOrCreatePortalEl(domEl, layer) {
+    let pendingPortalEls = this._pendingPortalEls;
+    let result;
+    if (domEl) {
+      if (!domEl.firstChild) domEl.appendChild(document.createElement("div"));
+      result = domEl.firstChild;
+    } else {
+      result = pendingPortalEls[layer];
+      if (!result) result = pendingPortalEls[layer] = document.createElement("div");
+    }
+    return result;
+  },
+  _connectPendingPortalElement(layer, connectIntoEl) {
+    let pendingPortalEls = this._pendingPortalEls;
+    let portalEl = pendingPortalEls[layer];
+    if (connectIntoEl && portalEl) {
+      delete pendingPortalEls[layer];
+      connectIntoEl.appendChild(portalEl);
+    }
+  },
+
   _onPageScroll(e) {
     let newScrolledDown =
       this.props.topFixed === "always" && window.pageYOffset >= this.props.topFixedScrolledDownOffset;
@@ -1100,14 +1115,17 @@ export const Page = UU5.Common.VisualComponent.create({
   },
 
   _setModalPortalRef(ref) {
+    this._connectPendingPortalElement(LAYER.MODAL, ref);
     this._modalPortalRef = ref;
   },
 
   _setAlertBusPortalRef(ref) {
+    this._connectPendingPortalElement(LAYER.ALERT_BUS, ref);
     this._alertBusPortalRef = ref;
   },
 
   _setPopoverPortalRef(ref) {
+    this._connectPendingPortalElement(LAYER.POPOVER, ref);
     this._popoverPortalRef = ref;
   },
 
@@ -2515,6 +2533,11 @@ export const Page = UU5.Common.VisualComponent.create({
 
     if (this.props.useDnD) result = <UU5.Common.DnD.Provider>{result}</UU5.Common.DnD.Provider>;
     result = <Popover.Context.Provider value={this.state.popoverProviderValue}>{result}</Popover.Context.Provider>;
+    result = (
+      <PortalElementContext.Provider value={this.state.portalElementProviderValue}>
+        {result}
+      </PortalElementContext.Provider>
+    );
     return result;
   },
   //@@viewOff:private

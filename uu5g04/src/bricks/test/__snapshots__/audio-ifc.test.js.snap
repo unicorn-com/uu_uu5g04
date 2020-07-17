@@ -6,6 +6,10 @@ exports[`UU5.Bricks.Audio interface testing toggleMuted(setStateCallBack) 1`] = 
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID01"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -21,7 +25,11 @@ exports[`UU5.Bricks.Audio interface testing toggleMuted(setStateCallBack) 2`] = 
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID01"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
   muted={true}
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >
@@ -37,6 +45,10 @@ exports[`UU5.Bricks.Audio interface testing toggleMuted(setStateCallBack) 3`] = 
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
   id="uuID01"
+  key="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  onEnded={[Function]}
+  onPause={[Function]}
+  onPlay={[Function]}
   style={Object {}}
   title={null}
 >

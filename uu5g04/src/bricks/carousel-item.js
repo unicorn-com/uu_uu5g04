@@ -36,6 +36,11 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
+  getDefaultProps() {
+    return {
+      contentEditable: true
+    };
+  },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle

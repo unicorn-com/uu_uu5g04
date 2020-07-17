@@ -18,6 +18,7 @@ import IdentityItem from "./identity-item.js";
 import BaseMixin from "./base-mixin.js";
 import ContentMixin from "./content-mixin.js";
 import VisualComponent from "./visual-component.js";
+import Element from "./element.js";
 //@@viewOff:imports
 
 export const Identity = VisualComponent.create({
@@ -65,15 +66,17 @@ export const Identity = VisualComponent.create({
         children = allChildren.map(child => {
           let newChild = child;
 
-          if (React.isValidElement(child)) {
+          if (Element.isValid(child)) {
             if (child.type.tagName === IdentityItem.tagName) {
               if (child.props[authProp]) {
                 // Identity.Item
-                childItem = React.cloneElement(child, opt);
+                childItem = Element.clone(child, opt);
+              } else {
+                newChild = null;
               }
             } else {
               // ...opt as props
-              newChild = React.cloneElement(child, opt);
+              newChild = Element.clone(child, opt);
             }
           }
 

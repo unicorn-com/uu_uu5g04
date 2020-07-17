@@ -164,7 +164,11 @@ export function useDataInternal({ onLoad, onUpdate, dtoIn, data, preserveOperati
   let mountRef = useRef(false);
   useEffect(() => {
     let skip = !mountRef.current && !needsInitialLoad; // skip if mounting and onLoad isn't function (we don't want to reset initialData)
-    if (!skip) handleLoad(dtoIn).catch(e => UU5.Common.Tools.error("Loading data failed:", e));
+    if (!skip) {
+      handleLoad(dtoIn).catch(e => {
+        if (process.env.NODE_ENV !== "test") UU5.Common.Tools.error("Loading data failed:", e);
+      });
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [handleLoad, dtoInHash, onLoad, needsInitialLoad]);
   useEffect(() => {

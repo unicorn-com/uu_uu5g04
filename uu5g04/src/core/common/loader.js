@@ -21,6 +21,7 @@ import Error from "./error.js";
 import Request from "./request.js";
 import Context from "./context.js";
 import Component from "./component.js";
+import Element from "./element.js";
 //@@viewOff:imports
 
 export const Loader = Component.create({
@@ -120,24 +121,35 @@ export const Loader = Component.create({
 
   _load(props = this.props) {
     if (typeof props.onLoad === "function") {
+      let processed = false;
+      let done = (data) => {
+        if (!processed) {
+          processed = true;
+          this._done(data);
+        }
+      };
+      let fail = (e) => {
+        if (!processed) {
+          processed = true;
+          this._fail(e);
+        }
+      };
       let promise = props.onLoad({
         data: props.data,
         // TODO: backward compatibility (remove in the next major version)
-        done: this._done,
-        fail: this._fail
+        done,
+        fail
       });
       // TODO if is for backward compatibility (uncomment to the next major version)
-      if (typeof promise === "object" && typeof promise.then === "function") {
-        promise.then(this._done).catch(this._fail);
+      if (promise && typeof promise.then === "function") {
+        promise.then(done, fail);
       }
       // TODO: backward compatibility (uncomment to the next major version)
       // else {
       //   this.showError("onLoadNoPromise");
       // }
     } else if (props.uri) {
-      this._doLoad(props)
-        .then(this._done)
-        .catch(this._fail);
+      this._doLoad(props).then(this._done, this._fail);
     }
   },
 
@@ -180,8 +192,8 @@ export const Loader = Component.create({
     } else {
       result =
         React.Children.map(children, child => {
-          if (React.isValidElement(child)) {
-            return React.cloneElement(child, { data: this.state.data });
+          if (Element.isValid(child)) {
+            return Element.clone(child, { data: this.state.data });
           } else {
             return child;
           }

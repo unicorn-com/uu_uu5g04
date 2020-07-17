@@ -102,7 +102,7 @@ export const Box = UU5.Common.VisualComponent.create({
 
   //@@viewOn:overriding
   onBeforeForceEndEditation_() {
-    return this._editableTabs ? this._editableTabs.getPropsToSave() : undefined;
+    return this._editableComponent ? this._editableComponent.getPropsToSave() : undefined;
   },
 
   getEditablePropsValues_(propsArray) {
@@ -129,8 +129,8 @@ export const Box = UU5.Common.VisualComponent.create({
     );
   },
 
-  _registerEditableComponent(tabs) {
-    this._editableTabs = tabs;
+  _registerEditableComponent(ref) {
+    this._editableComponent = ref;
   },
 
   _getMainAttrs() {
@@ -192,13 +192,11 @@ export const Box = UU5.Common.VisualComponent.create({
 
         component = (
           <UU5.Common.Fragment>
-            <div>
-              <div {...this._getMainAttrs()}>
-                {this.getChildren()}
-                {this.getDisabledCover()}
-              </div>
-              {modal}
+            <div {...this._getMainAttrs()}>
+              {this.getChildren()}
+              {this.getDisabledCover()}
             </div>
+            {modal}
             {this.state.editation ? this._renderEditationMode() : null}
           </UU5.Common.Fragment>
         );

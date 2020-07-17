@@ -16,7 +16,6 @@ import UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./session-watch.less";
-import { getPortalElement } from "./internal/portal.js";
 //@@viewOff:imports
 
 export const SessionWatch = UU5.Common.VisualComponent.create({
@@ -56,10 +55,6 @@ export const SessionWatch = UU5.Common.VisualComponent.create({
   componentDidMount() {
     if (this.isSessionExpiring()) this._modal.open();
   },
-
-  componentWillUnmount() {
-    this._tryToRemovePortal();
-  },
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
@@ -84,16 +79,6 @@ export const SessionWatch = UU5.Common.VisualComponent.create({
   //@@viewOn:private
   _setModalRef(ref) {
     this._modal = ref;
-  },
-
-  _tryToRemovePortal() {
-    // try to remove portal from DOM if does not exists
-    if (!this.state.isOpened) {
-      const portal = getPortalElement();
-      if (portal && portal.childNodes.length === 0) {
-        portal.parentNode.removeChild(portal);
-      }
-    }
   },
 
   _onLogin() {
@@ -127,21 +112,17 @@ export const SessionWatch = UU5.Common.VisualComponent.create({
   render() {
     let { header, content } = this.props;
     let propsToPass = this.getMainPropsToPass();
-    // NOTE Not using UU5.Bricks.ConfirmModal because we don't want to close the modal
-    // when "Log in" button is clicked and currently there's no way to prevent that.
-    // => create portal just like ConfirmModal does
-    return UU5.Common.Portal.create(
+    return (
       <UU5.Bricks.Modal
         {...propsToPass}
+        location="portal"
         header={header != null ? header : this._renderDefaultHeader()}
         footer={this._renderDefaultFooter()}
         stickyBackground
-        forceRender
         content={content != null ? content : this._renderDefaultContent()}
         controlled={false}
         ref_={this._setModalRef}
-      />,
-      getPortalElement(true)
+      />
     );
   }
   //@@viewOff:render

@@ -798,19 +798,22 @@ describe("UU5.Common.Tools interface", () => {
     expect(result).toBe("Čau");
   });
 
+  const country = "en-us";
   const settings = [
-    { params: [12345.6789, { maxDecimals: 3 }], result: "12,345.679" },
-    { params: [12345.6789, { maxDecimals: 3, roundType: "floor" }], result: "12,345.678" },
-    { params: [12345.6789, { maxDecimals: 6, minDecimals: 5 }], result: "12,345.67890" },
-    { params: [12345.6789, { maxDecimals: 6, minDecimals: 6 }], result: "12,345.678900" },
-    { params: [12345.6789, { thousandSeparator: "\u00a0", decimalSeparator: "," }], result: "12\u00a0345,6789" },
-    { params: [12345.6789, { thousandSeparator: ",", decimalSeparator: "." }], result: "12,345.6789" },
+    { params: [12345.6789, { country, maxDecimals: 3 }], result: "12,345.679" },
+    { params: [12345.6789, { country, maxDecimals: 3, roundType: "floor" }], result: "12,345.678" },
+    { params: [12345.6789, { country, maxDecimals: 6, minDecimals: 5 }], result: "12,345.67890" },
+    { params: [12345.6789, { country, maxDecimals: 6, minDecimals: 6 }], result: "12,345.678900" },
+    {
+      params: [12345.6789, { country, thousandSeparator: "\u00a0", decimalSeparator: "," }],
+      result: "12\u00a0345,6789"
+    },
+    { params: [12345.6789, { country, thousandSeparator: ",", decimalSeparator: "." }], result: "12,345.6789" },
     { params: [12345.6789, { country: "en-us" }], result: "12,345.6789" },
-    // cs-cz does not work in jest test
-    // { params: [12345.6789, { country: "cs-cz" }], result: "12\u00a0345,6789" },
-    { params: [0, { minDecimals: 2 }], result: "0.00" },
-    { params: [-27415.78963, { maxDecimals: 3 }], result: "-27,415.79" },
-    { params: [-27415.78963, { maxDecimals: 3, roundType: "trunc" }], result: "-27,415.789" }
+    { params: [12345.6789, { country: "cs-cz" }], result: "12\u00a0345,6789" }, // requires NodeJS >= 13.x
+    { params: [0, { country, minDecimals: 2 }], result: "0.00" },
+    { params: [-27415.78963, { country, maxDecimals: 3 }], result: "-27,415.79" },
+    { params: [-27415.78963, { country, maxDecimals: 3, roundType: "trunc" }], result: "-27,415.789" }
   ];
 
   settings.forEach(({ result, params }) => {

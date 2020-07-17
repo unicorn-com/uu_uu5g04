@@ -43,21 +43,48 @@ export const Camera = UU5.Common.VisualComponent.create({
   //@@viewOff:statics
 
   //@@viewOn:propTypes
+  propTypes: {
+    mode: UU5.PropTypes.oneOf(["environment", "user", "left", "right"])
+  },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
+  getDefaultProps() {
+    return {
+      mode: undefined
+    };
+  },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
   UNSAFE_componentWillMount: function() {
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-      this._initCamera();
+      this._initCamera(this.props);
 
       if (navigator.permissions) {
         navigator.permissions.query({ name: "camera" }).then(
           permissionStatus => {
             permissionStatus.addEventListener("change", () => {
-              this._initCamera();
+              this._initCamera(this.props);
+            });
+          },
+          e => {
+            this.showWarning("detectionNotSupported", null, { context: { event: e } });
+          }
+        );
+      }
+    }
+  },
+
+  componentWillReceiveProps: function(nextProps) {
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+      this._initCamera(nextProps);
+
+      if (navigator.permissions) {
+        navigator.permissions.query({ name: "camera" }).then(
+          permissionStatus => {
+            permissionStatus.addEventListener("change", () => {
+              this._initCamera(nextProps);
             });
           },
           e => {
@@ -91,9 +118,9 @@ export const Camera = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _initCamera() {
+  _initCamera(props) {
     navigator.mediaDevices
-      .getUserMedia({ video: true })
+      .getUserMedia({ video: props.mode ? { facingMode: props.mode } : true })
       .then(stream => {
         this.video.srcObject = stream;
         this.localMediaStream = stream;
@@ -118,7 +145,7 @@ export const Camera = UU5.Common.VisualComponent.create({
   render: function() {
     return this.getNestingLevel() ? (
       <div {...this.getMainAttrs()}>
-        <video autoPlay="true" ref={this._refVideo} className={this.getClassName().video} />
+        <video autoPlay playsInline ref={this._refVideo} className={this.getClassName().video} />
         <canvas ref={this._refCanvas} className={this.getClassName().canvas} />
         {this.getDisabledCover()}
       </div>

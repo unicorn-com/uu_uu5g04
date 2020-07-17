@@ -11,10 +11,10 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
 import PropTypes from "prop-types";
 import ns from "./common-ns.js";
 import Tools from "./tools.js";
+import Element from "./element.js";
 
 export const ElementaryMixin = {
   //@@viewOn:statics
@@ -320,16 +320,14 @@ export const ElementaryMixin = {
   getDisabledCover() {
     var className =
       this.getClassName("disabledCover") || this.getClassName(null, "UU5.Common.ElementaryMixin").disabledCover;
-    return this.isDisabled() ? React.createElement("span", { className: className, key: "disabledCover" }) : null;
+    return this.isDisabled() ? Element.create("span", { className: className, key: "disabledCover" }) : null;
   },
 
   getDisabledCoverTransparent() {
     var className =
       this.getClassName("disabledCoverTransparent") ||
       this.getClassName(null, "UU5.Common.ElementaryMixin").disabledCoverTransparent;
-    return this.isDisabled()
-      ? React.createElement("span", { className: className, key: "disabledCoverTransparent" })
-      : null;
+    return this.isDisabled() ? Element.create("span", { className: className, key: "disabledCoverTransparent" }) : null;
   }
   //@@viewOff:interface
 
