@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
-  <title>Example 00 - load on scroll</title>
+  <title>Example 06 - create without reload</title>
 
   <script>
     if (!location.href.match(/^(about:|file:)/)) {
@@ -53,7 +53,7 @@
   import { Session } from "uu_appg01_oidc";
   import { Client } from "uu_appg01";
 
-  let callDelay = 0;
+  let callDelay = 1500;
   let error = false;
 
   /*@@viewOn:example*/
@@ -175,7 +175,12 @@
       console.log(dataListResult);
 
       const modalRef = useRef();
+      const alertBusRef = useRef();
+
+      const firstNotYetLoadedIndex = data ? data.findIndex(it => it == null) : 0;
+      const dataToRender = data && firstNotYetLoadedIndex >= 0 ? data.slice(0, firstNotYetLoadedIndex) : data || [];
       const unmountedRef = useUnmountedRef();
+
       const showModal = useCallback((joke, onSave) => {
         const modal = modalRef.current;
         modal.open({
@@ -222,24 +227,72 @@
 
       return (
         <UU5.Bricks.Div>
+          <UU5.Bricks.Button
+            disabled={!handlerMap.createItem}
+            colorSchema="success"
+            onClick={() => {
+              showModal(null, async ({ component, values }) => {
+                let data, error;
+                try {
+                  data = await handlerMap.createItem(values);
+                } catch (e) {
+                  error = e;
+                }
+                if (unmountedRef.current) return;
+                if (error) component.saveFail(error);
+                else component.saveDone(data);
+                alertBusRef.current.setAlert({
+                  content: error ? `Creating joke '${values.name}' failed.` : (
+                    <div>
+                      Joke <UU5.Bricks.Link href={"#" + data.id}>{data.name}</UU5.Bricks.Link> has been created.
+                    </div>
+                  ),
+                  colorSchema: error ? "danger" : undefined
+                });
+              });
+            }}
+          >
+            Create item
+          </UU5.Bricks.Button>{" "}
           <UU5.Bricks.Button disabled={!handlerMap.load} onClick={() => handlerMap.load()}>
-            Reload
+            Load 1st page & reset others
           </UU5.Bricks.Button>{" "}
 
           <ControlPanel dataListResult={dataListResult} />
 
+          <UU5.Bricks.AlertBus ref_={alertBusRef} />
+
+          <UU5.Bricks.Section header="New Data" level={3}>
+            {newData.length === 0 ? "No new data." : (
+              <UU5.Bricks.Row display="flex">
+                {newData.map(item => (
+                  <UU5.Bricks.Column colWidth="m-6 l-4 xl-3" key={item.data.id}>
+                    <Joke
+                      id={item.data.id}
+                      data={item.data}
+                      onUpdate={!item.handlerMap.update ? null : handleJokeUpdate}
+                      onDelete={!item.handlerMap.delete ? null : handleJokeDelete}
+                      processingItem={item}
+                    />
+                  </UU5.Bricks.Column>
+                ))}
+              </UU5.Bricks.Row>
+            )}
+          </UU5.Bricks.Section>
+
           <UU5.Bricks.Section header="Data" level={3}>
             <UU5.Bricks.Row display="flex">
-              {data ? data.filter(item => item != null).map(item => (
+              {dataToRender.map(item => (
                 <UU5.Bricks.Column colWidth="m-6 l-4 xl-3" key={item.data.id}>
                   <Joke
+                    id={item.data.id}
                     data={item.data}
                     onUpdate={!item.handlerMap.update ? null : handleJokeUpdate}
                     onDelete={!item.handlerMap.delete ? null : handleJokeDelete}
                     processingItem={item}
                   />
                 </UU5.Bricks.Column>
-              )) : null}
+              ))}
             </UU5.Bricks.Row>
 
             <PagingAutoLoad

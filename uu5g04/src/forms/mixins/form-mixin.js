@@ -14,8 +14,19 @@
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import { FormContext } from "../form-context.js";
-import "./form-mixin.less";
 import Css from "../internal/css.js";
+import "./form-mixin.less";
+
+function unblockPending(inputs, pendingComponents) {
+  Object.keys(inputs).forEach(key => {
+    let component = inputs[key];
+    if (pendingComponents[component.getId()]) {
+      delete pendingComponents[component.getId()];
+      component.enable();
+    }
+  });
+  for (let k in pendingComponents) delete pendingComponents[k];
+}
 
 export const FormMixin = {
   //@@viewOn:mixins
@@ -113,6 +124,7 @@ export const FormMixin = {
 
   //@@viewOn:reactLifeCycle
   getInitialState() {
+    this.pendingComponents = {};
     return {
       readOnly: this.props.readOnly,
       values: this.props.values,
@@ -129,7 +141,6 @@ export const FormMixin = {
   UNSAFE_componentWillMount() {
     this.formInputs = {};
     this.formControls = {};
-    this.pendingComponents = {};
 
     var parentForm = this.getParentByType("isForm");
     if (parentForm) {
@@ -160,11 +171,9 @@ export const FormMixin = {
     }
 
     this._willReceiveProps = true;
-    this.pendingComponents = {};
   },
 
   componentDidUpdate() {
-    this.pendingComponents = {};
     if (this._willReceiveProps) {
       this._willReceiveProps = false;
       if (this.props.controlled) {
@@ -494,7 +503,7 @@ export const FormMixin = {
 
   setPending(setStateCallback) {
     let inputs = this.getInputs();
-    this.pendingComponents = {};
+    unblockPending(inputs, this.pendingComponents);
     Object.keys(inputs).forEach(key => {
       let component = inputs[key];
       if (!component.isDisabled()) {
@@ -520,14 +529,7 @@ export const FormMixin = {
   },
 
   setReady(setStateCallback) {
-    let inputs = this.getInputs();
-    Object.keys(inputs).forEach(key => {
-      let component = inputs[key];
-      if (this.pendingComponents[component.getId()]) {
-        delete this.pendingComponents[component.getId()];
-        component.enable();
-      }
-    });
+    unblockPending(this.getInputs(), this.pendingComponents);
 
     let alertBus = this.getAlertBus();
     alertBus.removeAlert(this.getId() + "-pending");

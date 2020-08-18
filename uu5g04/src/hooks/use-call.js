@@ -10,7 +10,8 @@
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
-import { useEffect, useReducer, useMemo, useRef } from "./react-hooks";
+import { useReducer, useMemo, useRef } from "./react-hooks";
+import useUnmountedRef from "./use-unmounted-ref";
 
 function callReducer(state, [type, payload]) {
   let result = state;
@@ -36,8 +37,7 @@ const INIT_VALUE = { viewState: "ready", error: undefined, data: undefined };
 export function useCall(callFn) {
   // initialize state with processBus and state reducer(s)
   let [state, dispatchAction] = useReducer(callReducer, INIT_VALUE);
-  let unmountedRef = useRef();
-  useEffect(() => () => (unmountedRef.current = true), []);
+  let unmountedRef = useUnmountedRef();
 
   let currentValuesRef = useRef();
   currentValuesRef.current = { callFn };

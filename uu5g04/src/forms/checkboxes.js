@@ -226,6 +226,7 @@ export const Checkboxes = Context.withContext(
 
           if (result && typeof result === "object" && result.feedback === "error") {
             this.setError(result.message, result.value);
+            result = this.props.onChange(result);
           } else if (typeof this.props.onValidate === "function") {
             result = this.props.onValidate(result);
           } else {

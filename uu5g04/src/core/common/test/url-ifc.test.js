@@ -168,4 +168,23 @@ describe("UU5.Common.Url - test interface of class", () => {
       UU5.Environment.getAppBasePath = origGABP;
     }
   });
+
+  it("test05 - join", () => {
+    const test = {
+      "https://a/b": ["https://a", "b"],
+      "https://a/b2": ["https://a/", "b2"],
+      "https://a/b3": ["https://a/", "/b3"],
+      "https://a/b4": ["https://a/", "b4/"],
+      "https://a/b5": ["https://a/", "/b5/"],
+      "https://a/b6": ["https://a/", "/b6", "/"],
+      "/aa/bb": ["/aa", "bb"],
+      "/b": ["", "b"],
+      "a/b": ["a", "b"],
+      "https://ahoj/cau/aa/bb/cc/dd": ["https://ahoj", "cau", "/aa", "bb/", "/cc/", "/dd"]
+    };
+
+    for (let result in test) {
+      expect(UU5.Common.Url.join(...test[result])).toBe(result);
+    }
+  });
 });

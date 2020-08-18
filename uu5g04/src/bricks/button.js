@@ -390,7 +390,7 @@ export const Button = UU5.Common.VisualComponent.create({
   },
 
   _onClick(e) {
-    if (e.button === 0 && e.ctrlKey && typeof this.props.onCtrlClick === "function") {
+    if (e.button === 0 && (e.ctrlKey || (UU5.Common.Tools.isMac() && e.metaKey)) && typeof this.props.onCtrlClick === "function") {
       this.props.onCtrlClick(this, e);
     } else if (e.button === 1 && typeof this.props.onWheelClick === "function") {
       this.props.onWheelClick(this, e);

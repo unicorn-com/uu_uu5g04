@@ -34,11 +34,15 @@ UU5.Common.Tools.setLanguage("en");
 if (!process.env.TZ) process.env.TZ = "Europe/Prague";
 
 // override logging (don't log context with React components because the output is too long)
-UU5.Common.Tools.warning = function(msg, context = {}) {
-  console.warn(msg);
+UU5.Common.Tools.warning = function(msg, context) {
+  let args = [msg];
+  if (arguments.length > 1 && (typeof context !== "object" || context instanceof Error)) args.push(context);
+  console.warn(...args);
 };
-UU5.Common.Tools.error = function(msg, context = {}) {
-  console.error(msg);
+UU5.Common.Tools.error = function(msg, context) {
+  let args = [msg];
+  if (arguments.length > 1 && (typeof context !== "object" || context instanceof Error)) args.push(context);
+  console.error(...args);
 };
 
 // override BaseMixin's showWarning and showError so that we can ignore

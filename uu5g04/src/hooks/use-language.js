@@ -14,7 +14,7 @@
 import UU5 from "uu5g04";
 import { useState, useEffect, useMemo, useRef, useContext } from "./react-hooks";
 import { createComponent } from "./component";
-import { usePreviousValue } from "./internal/use-previous-value";
+import { usePreviousValue } from "./use-previous-value";
 
 const LanguageContext = UU5.Common.LsiMixin.Context;
 function useLanguageContext() {

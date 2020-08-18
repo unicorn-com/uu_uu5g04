@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "../react-hooks";
+import { useRef, useEffect } from "./react-hooks";
 
 export function usePreviousValue(curValue, initialValue = undefined) {
   let curValueRef = useRef(initialValue);
@@ -7,3 +7,4 @@ export function usePreviousValue(curValue, initialValue = undefined) {
   });
   return curValueRef.current;
 }
+export default usePreviousValue;

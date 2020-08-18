@@ -97,6 +97,12 @@ export const Loader = Component.create({
       this._initLoading(nextProps);
     }
   },
+
+  componentWillUnmount() {
+    if (this._interval) {
+      clearInterval(this._interval);
+    }
+  },
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface

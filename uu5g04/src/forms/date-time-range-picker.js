@@ -172,6 +172,9 @@ export const DateTimeRangePicker = Context.withContext(
 
     //@@viewOn:reactLifeCycle
     getInitialState() {
+      this._parseDate = date => this._dynamicParseDate(date, this.props);
+      this._parseDateDefault = date => this._dynamicParseDateDefault(date, this.props.format, this.props.country);
+
       this._allowTimeZoneAdjustment = true;
       let propValue = Array.isArray(this.props.value) && this.props.value.length > 1 ? this.props.value : null;
       propValue = this._parseDate(propValue);
@@ -179,7 +182,6 @@ export const DateTimeRangePicker = Context.withContext(
       let fromTimeInputValue = null;
       let toDateInputValue = null;
       let toTimeInputValue = null;
-      let fromDisplayDate, toDisplayDate;
       let fromDayPart = TIME_FORMAT_AM;
       let toDayPart = TIME_FORMAT_AM;
 
@@ -202,29 +204,7 @@ export const DateTimeRangePicker = Context.withContext(
         }
       }
 
-      if (fromValue && toValue) {
-        fromDisplayDate = this._getFromValue(propValue);
-      } else if (this.props.dateFrom || this.props.dateTo) {
-        let today = this._getToday();
-        if (
-          this.props.dateFrom &&
-          this._compareDates(today, this.props.dateFrom, "greater") &&
-          this.props.dateTo && this._compareDates(today, this.props.dateTo, "lesser")
-        ) {
-          fromDisplayDate = today;
-        } else {
-          fromDisplayDate = this._getFromValue(this._parseDate(this.props.dateFrom || this.props.dateTo));
-        }
-      } else {
-        let today = this._getToday();
-        fromDisplayDate = today;
-      }
-
-      if (this._isSorXs()) {
-        toDisplayDate = fromDisplayDate;
-      } else {
-        toDisplayDate = new Date(fromDisplayDate.getFullYear(), fromDisplayDate.getMonth() + 1, 1);
-      }
+      let { fromDisplayDate, toDisplayDate } = this._getDisplayDates(propValue, this.props.dateFrom, this.props.dateTo);
 
       return {
         fromDisplayDate,
@@ -295,6 +275,9 @@ export const DateTimeRangePicker = Context.withContext(
 
     UNSAFE_componentWillReceiveProps(nextProps) {
       if (this.props.controlled) {
+        this._parseDate = date => this._dynamicParseDate(date, nextProps);
+        this._parseDateDefault = date => this._dynamicParseDateDefault(date, nextProps.format, nextProps.country);
+
         this._setUpLimits(nextProps);
 
         this._allowTimeZoneAdjustment = true;
@@ -309,15 +292,25 @@ export const DateTimeRangePicker = Context.withContext(
           );
           if (result) {
             if (typeof result === "object") {
+              let displayValue;
               if (result.feedback) {
+                displayValue = result.value;
                 this._privateSetFeedback(
                   result.feedback,
                   result.message,
                   result.feedback === "error" ? null : result.value
                 );
               } else {
-                this._privateSetFeedback(nextProps.feedback, nextProps.message, nextProps.value);
+                displayValue = value;
+                this._privateSetFeedback(nextProps.feedback, nextProps.message, value);
               }
+
+              let { fromDisplayDate, toDisplayDate } = this._getDisplayDates(
+                displayValue,
+                nextProps.dateFrom,
+                nextProps.dateTo
+              );
+              this.setState({ fromDisplayDate, toDisplayDate });
             }
           }
         } else {
@@ -386,11 +379,8 @@ export const DateTimeRangePicker = Context.withContext(
       return result;
     },
 
-    parseDateDefault(stringDate) {
-      return UU5.Common.Tools.parseDate(stringDate, {
-        format: this.state ? this.state.format : this.props.format,
-        country: this.state ? this.state.country : this.props.country
-      });
+    parseDateDefault(date) {
+      return this._parseDateDefault(date);
     },
     //@@viewOff:interface
 
@@ -682,7 +672,7 @@ export const DateTimeRangePicker = Context.withContext(
       }
     },
 
-    _parseDate(stringDate, props = this.props) {
+    _dynamicParseDate(dates, props) {
       let result = null;
 
       let parseSingleDate = date => {
@@ -691,21 +681,21 @@ export const DateTimeRangePicker = Context.withContext(
         if (typeof date !== "string") {
           resultDate = date;
         } else {
-          if (this.props.parseDate && typeof this.props.parseDate === "function") {
+          if (props.parseDate && typeof props.parseDate === "function") {
             let dateStringMatch = resultDate && resultDate.match(/.+ /);
 
             if (dateStringMatch) {
               resultDate = dateStringMatch[0].trim();
             }
 
-            resultDate = this.props.parseDate(date, this);
+            resultDate = props.parseDate(date, this);
           } else {
             resultDate = this.parseDateDefault(date);
           }
 
-          let timeString = this._getTimeString(date);
+          let timeString = this._getTimeString(date, props);
           if (timeString && resultDate instanceof Date) {
-            let timeData = this._parseTime(timeString);
+            let timeData = this._parseTime(timeString, props);
             if (timeData) {
               resultDate.setHours(timeData.hours);
               resultDate.setMinutes(timeData.minutes);
@@ -717,25 +707,40 @@ export const DateTimeRangePicker = Context.withContext(
         return resultDate;
       };
 
-      if (Array.isArray(stringDate)) {
-        result = stringDate.map(date => parseSingleDate(date)).filter(date => !!date);
+      if (Array.isArray(dates)) {
+        result = dates.map(date => parseSingleDate(date)).filter(date => !!date);
         if (result.length === 0) result = null;
         result = this._adjustTimeZone(result, props.timeZone);
       } else {
-        result = parseSingleDate(stringDate);
+        result = parseSingleDate(dates);
       }
 
       return result;
     },
 
-    _parseTime(times) {
+    _dynamicParseDateDefault(date, format, country) {
+      return UU5.Common.Tools.parseDate(date, {
+        format,
+        country
+      });
+    },
+
+    _parseDate(date) {
+      return this._dynamicParseDate(date, this.props);
+    },
+
+    _parseDateDefault(date) {
+      return this._dynamicParseDateDefault(date, this.props.format, this.props.country);
+    },
+
+    _parseTime(times, props = this.props) {
       let result;
 
       if (Array.isArray(times)) {
-        result = times.map(time => UU5.Common.Tools.parseTime(time, this.props.timeFormat)).filter(time => !!time);
+        result = times.map(time => UU5.Common.Tools.parseTime(time, props.timeFormat)).filter(time => !!time);
         if (result.length === 0) result = null;
       } else {
-        result = UU5.Common.Tools.parseTime(times, this.props.timeFormat);
+        result = UU5.Common.Tools.parseTime(times, props.timeFormat);
       }
 
       return result;
@@ -1654,6 +1659,39 @@ export const DateTimeRangePicker = Context.withContext(
       if (typeof callback === "function") {
         callback();
       }
+    },
+
+    _getDisplayDates(value, dateFrom, dateTo) {
+      let fromDisplayDate, toDisplayDate;
+      let valueFrom = this._getFromValue(value);
+      let valueTo = this._getToValue(value);
+
+      if (valueFrom && valueTo) {
+        fromDisplayDate = valueFrom;
+      } else if (dateFrom || dateTo) {
+        let today = this._getToday();
+        if (
+          dateFrom &&
+          this._compareDates(today, dateFrom, "greater") &&
+          dateTo &&
+          this._compareDates(today, dateTo, "lesser")
+        ) {
+          fromDisplayDate = today;
+        } else {
+          fromDisplayDate = this._getFromValue(this._parseDate(dateFrom || dateTo));
+        }
+      } else {
+        let today = this._getToday();
+        fromDisplayDate = today;
+      }
+
+      if (this._isSorXs()) {
+        toDisplayDate = fromDisplayDate;
+      } else {
+        toDisplayDate = new Date(fromDisplayDate.getFullYear(), fromDisplayDate.getMonth() + 1, 1);
+      }
+
+      return { fromDisplayDate, toDisplayDate };
     },
 
     _compareDates(date1, date2, method) {

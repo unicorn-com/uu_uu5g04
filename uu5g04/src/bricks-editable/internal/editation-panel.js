@@ -385,10 +385,8 @@ export const EditationPanel = UU5.Common.VisualComponent.create({
   render() {
     return (
       <div {...this._getMainAttrs()}>
-        <div className={this.getClassName("leftToolbarSide")}>{this.props.children}</div>
-        <div className={this.getClassName("rightToolbarSide")}>
-          {typeof this.props.onEndEditation === "function" && <EndEditation onClick={this.props.onEndEditation} />}
-          {(this.props.settingsItems ||
+        <div className={this.getClassName("leftToolbarSide")}>
+        {(this.props.settingsItems ||
             this.props.moreSettings ||
             typeof this.props.onMoreSettingsClick === "function") && [
             <UU5.Bricks.Button
@@ -409,6 +407,9 @@ export const EditationPanel = UU5.Common.VisualComponent.create({
               </UU5.Bricks.Popover>
             )
           ]}
+          {this.props.children}</div>
+        <div className={this.getClassName("rightToolbarSide")}>
+          {typeof this.props.onEndEditation === "function" && <EndEditation onClick={this.props.onEndEditation} />}
           {this.props.moreSettings && (
             <UU5.Bricks.Modal
               controlled={false}

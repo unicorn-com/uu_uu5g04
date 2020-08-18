@@ -127,6 +127,7 @@ export const CodePreview = UU5.Common.VisualComponent.create({
       if (origValue === undefined) continue;
 
       let value;
+      let addValue = true;
 
       switch (typeof origValue) {
         case "string":
@@ -150,10 +151,15 @@ export const CodePreview = UU5.Common.VisualComponent.create({
             value = isUu5string ? "null" : `{null}`;
           }
           break;
+        case "function":
+          value = "{function(...) {...}}";
+          if (isUu5string) addValue = false;
       }
 
       // undefined because of true value;
-      origValue === true ? props.push(name) : props.push(`${name}=${value}`);
+      if (addValue) {
+        origValue === true ? props.push(name) : props.push(`${name}=${value}`);
+      }
     }
 
     return props;

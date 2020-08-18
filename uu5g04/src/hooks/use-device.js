@@ -15,7 +15,7 @@ import UU5 from "uu5g04";
 import { useState, useLayoutEffect, useRef, useMemo } from "./react-hooks";
 import { createComponent } from "./component";
 import { createContext } from "./context";
-import { usePreviousValue } from "./internal/use-previous-value";
+import { usePreviousValue } from "./use-previous-value";
 
 const [DeviceContext, useDeviceContext] = createContext(null);
 

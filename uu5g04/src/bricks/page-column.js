@@ -26,6 +26,8 @@ import Css from "./internal/css.js";
 import "./page-column.less";
 //@@viewOff:imports
 
+const transitionDuration = 300;
+
 function isResizable(props, state) {
   if (typeof props.resizable === "boolean") {
     return props.resizable;
@@ -234,11 +236,10 @@ export const PageColumn = UU5.Common.VisualComponent.create({
   componentDidUpdate(prevProps, prevState) {
     if (this._hasContent()) {
       this._getPageElements(this.props);
-
       this._adjustFixedPosition();
       if (prevState.open !== this.state.open) {
         // TODO REMOVE
-        let animationLength = 300;
+        let transitionDuration = 1000;
         let start = null;
         let bottomVisibility = this._getBottomVisibility();
         let animationStep = timestamp => {
@@ -255,7 +256,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
             }
           }
           let progress = timestamp - start;
-          if (progress < animationLength) {
+          if (progress < transitionDuration) {
             UU5.Environment.EventListener.triggerEvent("pageColumnChanged");
             this._rafId = window.requestAnimationFrame(animationStep);
           }
@@ -409,7 +410,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
       let transformXFirst = "0vw";
       let transformXSecond = (this.props.right ? `-` : `+`) + (this.isOpen() ? `50%` : `100%`);
 
-      if (!this.isOpen()) {
+      if (!this.isOpen() && this.props.block) {
         let hasClosedWidth = !!(this.props.minWidth && this.props.maxWidth);
         if (!hasClosedWidth) {
           transformXFirst = this.props.right ? this.state.width : `-${this.state.width}`;
@@ -424,7 +425,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
           ${this.props.right ? "left: 0" : "right: 0"};
           transform: translateY(-50%) translateX(${transformXFirst}) translateX(${transformXSecond});
           visibility: ${showOnHover ? "hidden" : "visible"};
-          transition: transform 0.3s linear;
+          transition: transform ${transitionDuration}ms linear;
           width: 24px;
           height: 24px;
           // border: solid 1px rgba(33,33,33,0.12);
@@ -633,8 +634,8 @@ export const PageColumn = UU5.Common.VisualComponent.create({
   },
 
   _getDynamicStyles(isWrapper, isGhost) {
-    let visibilityTransitions = "0.3s linear visibility",
-      transformTransitions = "0.3s linear transform",
+    let visibilityTransitions = `${transitionDuration}ms linear visibility`,
+      transformTransitions = `${transitionDuration}ms linear transform`,
       widthTransitions = "",
       marginTransitions = "",
       heightTransitions = "",
@@ -645,14 +646,15 @@ export const PageColumn = UU5.Common.VisualComponent.create({
       if (this.state.resizing) {
         widthTransitions = "0s linear width, 0s linear max-width";
       } else {
-        widthTransitions = "0.3s linear width, 0.3s linear max-width";
+        widthTransitions = `${transitionDuration}ms linear width, ${transitionDuration}ms linear max-width`;
       }
     } else {
       if (isWrapper) {
         if (this.state.bottomFixed && this.state.animateBottom) {
-          marginTransitions = (marginTransitions ? marginTransitions + ", " : "") + "0.3s ease margin-bottom";
+          marginTransitions =
+            (marginTransitions ? marginTransitions + ", " : "") + `${transitionDuration}ms ease margin-bottom`;
           if (this.props.fixed) {
-            heightTransitions = "0.3s ease height";
+            heightTransitions = `${transitionDuration}ms ease height`;
           }
         }
 
@@ -661,32 +663,33 @@ export const PageColumn = UU5.Common.VisualComponent.create({
         } else {
           visibility = "visible";
         }
-      } else {
+
         if (!this.props.minWidth && !this.state.open) {
           transform = this.props.right ? "translateX(100%)" : "translateX(-100%)";
+          transform += " translate3d(0, 0, 0)";
         } else {
-          transform = "none";
+          transform = "translate3d(0, 0, 0)";
         }
       }
 
       if (isWrapper || this.props.block) {
         if (this.state.topFixed && this.props.fixed && this.state.animateTop) {
-          marginTransitions = "0.3s ease margin-top";
-          heightTransitions = "0.3s ease height";
+          marginTransitions = `${transitionDuration}ms ease margin-top`;
+          heightTransitions = `${transitionDuration}ms ease height`;
         }
 
         if (this.state.bottomFixed && this.props.fixed && this.state.animateBottom) {
           marginTransitions = marginTransitions
-            ? marginTransitions + ", 0.3s ease margin-bottom"
-            : "0.3s ease margin-bottom";
-          heightTransitions = "0.3s ease height";
+            ? marginTransitions + `, ${transitionDuration}ms ease margin-bottom`
+            : `${transitionDuration}ms ease margin-bottom`;
+          heightTransitions = `${transitionDuration}ms ease height`;
         }
       }
 
       if (this.state.resizing) {
         widthTransitions = "0s linear width, 0s linear max-width";
       } else {
-        widthTransitions = "0.3s linear width, 0.3s linear max-width";
+        widthTransitions = `${transitionDuration}ms linear width, ${transitionDuration}ms linear max-width`;
       }
     }
 
@@ -732,11 +735,17 @@ export const PageColumn = UU5.Common.VisualComponent.create({
       if (!props.block && (props.minWidth || props.maxWidth)) {
         // its openable
 
-        if ((typeof open === "boolean" && open) || (typeof open !== "boolean" && this.state && this.state.open)) {
-          // it's opened
+        if (!props.minWidth && props.maxWidth) {
+          // its hidden in it's closed state
+          width = props.maxWidth || "0px";
+        } else if (
+          (typeof open === "boolean" && open) ||
+          (typeof open !== "boolean" && this.state && this.state.open)
+        ) {
+          // its open
           width = props.maxWidth || "0px";
         } else {
-          // it's closed
+          // its closed
           width = props.minWidth || "0px";
         }
       } else {
@@ -866,7 +875,10 @@ export const PageColumn = UU5.Common.VisualComponent.create({
     if (getStyles) {
       props.style = UU5.Common.Tools.merge(props.style || {}, this.state.style, { width: this.state.width });
     } else {
-      props.style && (props.style.marginTop = null);
+      if (props.style) {
+        props.style.marginTop = null;
+      }
+
       if (this.props.fixed) {
         props.style.width = this.state.width;
       }
@@ -994,10 +1006,6 @@ export const PageColumn = UU5.Common.VisualComponent.create({
     let backdropId = this.getId() + "-backdrop";
     let style = { zIndex: this.props.elevation };
 
-    if (this.props.right && this.props.fixed) {
-      style.left = "calc(-100vw + " + this.state.width + ")";
-    }
-
     return {
       className: this.getClassName("backdrop"),
       hidden: !this.isOpen(),
@@ -1059,7 +1067,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
           UU5.Common.Fragment,
           <div {...this._getWrapperProps()} ref={comp => (this._columnRef = comp)}>
             {!this.props.relative ? <Backdrop {...this._getBackdropProps()} /> : null}
-            <Column {...this._getMainProps()}>
+            <Column {...this._getMainProps(false)}>
               {UU5.Common.Tools.wrapIfExists(
                 AreaWrapper,
                 <UpdateWrapper preventRender={this._preventContentRender}>

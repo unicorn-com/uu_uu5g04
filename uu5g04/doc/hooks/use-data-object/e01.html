@@ -25,16 +25,15 @@
         "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
         "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
 
-
         "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/4.0.0/uu_appg01_core.min.js",
         "uu_appg01": "https://cdn.plus4u.net/uu-appg01/4.0.0/uu_appg01.min.js",
         "uu_appg01_oidc": "https://cdn.plus4u.net/uu-appg01-oidc/2.0.0/uu_appg01_oidc.min.js",
 
-        "uu5g04": "https://cdn.plus4u.net/beta/uu-uu5g04/1.32.0-hooks.8/uu5g04.min.js",
-        "uu5g04-bricks": "https://cdn.plus4u.net/beta/uu-uu5g04/1.32.0-hooks.8/uu5g04-bricks.min.js",
-        "uu5g04-forms": "https://cdn.plus4u.net/beta/uu-uu5g04/1.32.0-hooks.8/uu5g04-forms.min.js",
-        "uu5g04-block-layout": "https://cdn.plus4u.net/beta/uu-uu5g04/1.32.0-hooks.8/uu5g04-block-layout.min.js",
-        "uu5g04-hooks": "https://cdn.plus4u.net/beta/uu-uu5g04/1.32.0-hooks.8/uu5g04-hooks.min.js",
+        "uu5g04": "https://cdn.plus4u.net/beta/uu-uu5g04/1.33.0-hooks.2/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/beta/uu-uu5g04/1.33.0-hooks.2/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/beta/uu-uu5g04/1.33.0-hooks.2/uu5g04-forms.min.js",
+        "uu5g04-block-layout": "https://cdn.plus4u.net/beta/uu-uu5g04/1.33.0-hooks.2/uu5g04-block-layout.min.js",
+        "uu5g04-hooks": "https://cdn.plus4u.net/beta/uu-uu5g04/1.33.0-hooks.2/uu5g04-hooks.min.js",
       }
     });
   </script>
@@ -59,7 +58,7 @@
   import "uu5g04-bricks";
   import "uu5g04-forms";
   import "uu5g04-block-layout";
-  import { useDataObject, createVisualComponent, useState, useRef, useEffect } from "uu5g04-hooks";
+  import { useDataObject, createVisualComponent, useState, useRef, useEffect, usePreviousValue } from "uu5g04-hooks";
   import { Session } from "uu_appg01_oidc";
   import { Client } from "uu_appg01";
 
@@ -106,14 +105,6 @@
     }
   };
   Calls.getCommandUri = useCase => "https://uuappg01-eu-w-1.plus4u.net/uu-jokes-maing01/4ef6a7b01b5942ecbfb925b249af987f/" + useCase;
-
-  function usePreviousValue(curValue, initialValue = undefined) {
-    let curValueRef = useRef(initialValue);
-    useEffect(() => {
-      curValueRef.current = curValue;
-    });
-    return curValueRef.current;
-  }
 
   /*@@viewOn:example*/
   const STATICS = {
@@ -222,23 +213,23 @@
 
       return (
         <UU5.Bricks.Div>
-          <UU5.Bricks.Button disabled={state === "pending" || state === "pendingNoData"} onClick={() => handlerMap.load()}>
+          <UU5.Bricks.Button disabled={!handlerMap.load} onClick={() => handlerMap.load()}>
             Load
           </UU5.Bricks.Button>
-          <UU5.Bricks.Button disabled={state === "pending" || state === "pendingNoData" || data == null} onClick={() => handlerMap.updateDesc({
+          <UU5.Bricks.Button disabled={!handlerMap.updateDesc || data == null} onClick={() => handlerMap.updateDesc({
             id: data.id,
             text: data.text.replace(/ Edited at.*/, "") + " Edited at " + new Date().toISOString().replace(/^.*T|\..*/g,
               "") + "Z"
           })}>
             Update
           </UU5.Bricks.Button>
-          <UU5.Bricks.Button disabled={state === "pending" || state === "pendingNoData"} onClick={() => handlerMap.create({
+          <UU5.Bricks.Button disabled={!handlerMap.create} onClick={() => handlerMap.create({
             name: "A0 Skydiving",
             text: "Why don't blind people skydive? Because it scares the crap out of their dogs."
           })}>
             Create
           </UU5.Bricks.Button>
-          <UU5.Bricks.Button disabled={state === "pending" || state === "pendingNoData" || data == null} onClick={() => handlerMap.delete({ id: data.id })}>
+          <UU5.Bricks.Button disabled={!handlerMap.delete || data == null} onClick={() => handlerMap.delete({ id: data.id })}>
             Delete
           </UU5.Bricks.Button>
 
@@ -252,12 +243,12 @@
                 <Joke
                   data={data}
                   errorData={errorData}
-                  onUpdate={state === "pending" ? null : data => handlerMap.updateName({
+                  onUpdate={!handlerMap.updateName ? null : data => handlerMap.updateName({
                     id: data.id,
                     text: data.text.replace(/ Edited at.*/, "") + " Edited at " + new Date().toISOString().replace(
                       /^.*T|\..*/g, "") + "Z"
                   })}
-                  onDelete={state === "pending" ? null : data => handlerMap.delete({ id: data.id })}
+                  onDelete={!handlerMap.delete ? null : data => handlerMap.delete({ id: data.id })}
                 />
               ) : "\xa0"}
             </UU5.Bricks.Column>

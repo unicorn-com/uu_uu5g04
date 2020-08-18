@@ -220,7 +220,7 @@ export const Number = Context.withContext(
       let blurResult;
 
       // set feedback runs all validations but in exception of onChange validation input isn"t marked as focused
-      this._setFeedback("initial", null, this.state.value, () => {
+      this._updateFeedback("initial", null, this.state.value, () => {
         if (this._isNaN && !this.props.onValidate) {
           blurResult = { feedback: "initial", message: null, value: this.state.value };
         } else {
@@ -235,12 +235,12 @@ export const Number = Context.withContext(
         if (hasRequiredValue && !this.props.validateOnChange) {
           setNumberResult.required = this.props.required;
           if (setNumberResult.feedback && setNumberResult.feedback) {
-            this._setFeedback(setNumberResult.feedback, setNumberResult.message, setNumberResult.value);
+            this._updateFeedback(setNumberResult.feedback, setNumberResult.message, setNumberResult.value);
           }
         } else if (!this.props.validateOnChange) {
           this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessage"), setNumberResult.value);
         } else {
-          this._setFeedback(setNumberResult.feedback, setNumberResult.message, setNumberResult.value);
+          this._updateFeedback(setNumberResult.feedback, setNumberResult.message, setNumberResult.value);
         }
       });
 
@@ -251,9 +251,9 @@ export const Number = Context.withContext(
       let value = this._removePrefixandSuffix(this.state.value);
       let result = this.getFocusFeedback(opt);
       if (result) {
-        this._setFeedback(result.feedback, result.message, result.value);
+        this._updateFeedback(result.feedback, result.message, result.value);
       } else {
-        this._setFeedback(
+        this._updateFeedback(
           this.state.feedback,
           this.state.message,
           this.state.value === null ? this.state.value : value
@@ -273,6 +273,16 @@ export const Number = Context.withContext(
     //@@viewOn:private
     _registerInput(input) {
       this._textInput = input;
+    },
+
+    _updateFeedback(feedback, message, value, setStateCallback) {
+      if (this.getFeedback() === feedback) {
+        // update feedback/value but doesn't call props.onChangeFeedback
+        this.setFeedback(feedback, message, value, setStateCallback);
+      } else {
+        // update feedback/value and call props.onChangeFeedback
+        this._setFeedback(feedback, message, value, setStateCallback);
+      }
     },
 
     _getOutputResult(result) {
@@ -580,7 +590,11 @@ export const Number = Context.withContext(
                 ? this.props.lowerMessage || this.getLsiComponent("lowerMessage", null, this.props.min)
                 : this.props.nanMessage || this.getLsiComponent("nanMessage");
 
-            opt.value = isNaN(this.state.value) && this.state.value !== "-" ? "" : "" + this.state.value; // update value to string
+            opt.value =
+              isNaN(typeof this.state.value === "string" ? this.state.value.replace(",", ".") : this.state.value) &&
+              this.state.value !== "-"
+                ? ""
+                : "" + this.state.value; // update value to string
           }
           this._isNaN = true;
         } else {
@@ -612,7 +626,8 @@ export const Number = Context.withContext(
           }
 
           isComma && (opt.value = opt.value.replace(".", ","));
-        } else if (opt.value === "-" && (this.props.min > 0 || this.props.min ===0)) { // beware of null
+        } else if (opt.value === "-" && (this.props.min > 0 || this.props.min === 0)) {
+          // beware of null
           opt.feedback = "error";
           opt.message = this.props.lowerMessage || this.getLsiComponent("lowerMessage", null, this.props.min);
         }
@@ -668,7 +683,7 @@ export const Number = Context.withContext(
       let checkNumberResult = this._checkNumberResultChange(opt);
 
       if (checkNumberResult.feedback && checkNumberResult.feedback === "warning") {
-        this._setFeedback(checkNumberResult.feedback, checkNumberResult.message, checkNumberResult.value);
+        this._updateFeedback(checkNumberResult.feedback, checkNumberResult.message, checkNumberResult.value);
       } else {
         let currentValue = this._getOutputResult({ ...opt, value: this.state.value, _data: { ...opt._data } });
         // prevent changing original value
@@ -718,7 +733,7 @@ export const Number = Context.withContext(
           opt.required = this.props.required;
           let result = this.getChangeFeedback(opt);
           _callCallback = false;
-          this._setFeedback(result.feedback, result.message, result.value, setStateCallback);
+          this._updateFeedback(result.feedback, result.message, result.value, setStateCallback);
         }
       }
 
@@ -933,7 +948,8 @@ export const Number = Context.withContext(
 
     _checkRequiredValue({ value }) {
       // check required value as a string, number 0 is filled value
-      if (this.props.valueType === "number" && isNaN(value) && this.props.required) {
+      let checkValue = this._parseNumberFromString(value);
+      if (this.props.valueType === "number" && (isNaN(checkValue) && value !== "-") && this.props.required) {
         // manual validation ... there is no possible
         this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessage"), value);
         return false;

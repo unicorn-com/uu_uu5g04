@@ -237,6 +237,20 @@ export const File = Context.withContext(
       wrapperProps.ref_ = this._setInputWrapperRef;
       return wrapperProps;
     },
+
+    reset_(setStateCallback) {
+      this._resetInputValue();
+      this.setState(
+        {
+          message: this.props.message,
+          feedback: this.props.feedback,
+          value: this.props.value,
+          readOnly: this.props.readOnly
+        },
+        setStateCallback
+      );
+      return this;
+    },
     //@@viewOff:overriding
 
     //@@viewOn:private
@@ -447,6 +461,7 @@ export const File = Context.withContext(
 
     _handleDragOver(e) {
       e.preventDefault();
+      e.stopPropagation();
       e.dataTransfer.dropEffect = "copy"; // Explicitly show this is a copy.
       clearTimeout(this._dragCancelTimeout);
       let newIndicateDrop = "over";

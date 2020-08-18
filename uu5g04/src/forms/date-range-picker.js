@@ -147,6 +147,9 @@ export const DateRangePicker = Context.withContext(
 
     //@@viewOn:reactLifeCycle
     getInitialState() {
+      this._parseDate = date => this._dynamicParseDate(date, this.props);
+      this._parseDateDefault = date => this._dynamicParseDateDefault(date, this.props.format, this.props.country);
+
       let propValue = Array.isArray(this.props.value) && this.props.value.length > 1 ? this.props.value : null;
       propValue = this.parseDate(propValue);
       let fromInputValue = null;
@@ -169,35 +172,13 @@ export const DateRangePicker = Context.withContext(
           this.showError(devValidation.error);
         }
       }
-      let fromDisplayDate, toDisplayDate;
-      let displayDates = DateTools.getDisplayDates(propValue, calendarView);
-      let today = new Date(Date.now());
 
-      if (propValue) {
-        fromDisplayDate = displayDates.dateFrom;
-        toDisplayDate = displayDates.dateTo;
-      } else if (this.props.dateFrom || this.props.dateTo) {
-        if (
-          (!this.props.dateFrom ||
-            (this.props.dateFrom && this._compareDates(today, this.props.dateFrom, "greater"))) &&
-          (!this.props.dateTo || (this.props.dateTo && this._compareDates(today, this.props.dateTo, "lesser")))
-        ) {
-          displayDates = DateTools.getDisplayDates(today, calendarView);
-          fromDisplayDate = displayDates.dateFrom;
-          toDisplayDate = displayDates.dateTo;
-        } else {
-          displayDates = DateTools.getDisplayDates(
-            this.parseDate(this.props.dateFrom || this.props.dateTo),
-            calendarView
-          );
-          fromDisplayDate = displayDates.dateFrom;
-          toDisplayDate = displayDates.dateTo;
-        }
-      } else {
-        displayDates = DateTools.getDisplayDates(today, calendarView);
-        fromDisplayDate = displayDates.dateFrom;
-        toDisplayDate = displayDates.dateTo;
-      }
+      let { fromDisplayDate, toDisplayDate } = this._getDisplayDates(
+        propValue,
+        calendarView,
+        this.props.dateFrom,
+        this.props.dateTo
+      );
 
       return {
         fromDisplayDate,
@@ -266,22 +247,40 @@ export const DateRangePicker = Context.withContext(
 
     UNSAFE_componentWillReceiveProps(nextProps) {
       if (this.props.controlled) {
-        let devValidation = this._validateDevProps(nextProps.value, nextProps.dateFrom, nextProps.dateTo);
+        this._parseDate = date => this._dynamicParseDate(date, nextProps);
+        this._parseDateDefault = date => this._dynamicParseDateDefault(date, nextProps.format, nextProps.country);
+
+        let propValue = Array.isArray(nextProps.value) && nextProps.value.length > 1 ? nextProps.value : null;
+        propValue = this.parseDate(propValue);
+        let calendarView = DateTools.getCalendarStartView(nextProps);
+
+        let devValidation = this._validateDevProps(propValue, nextProps.dateFrom, nextProps.dateTo);
         if (devValidation.valid) {
           let result = this._validateDateRangeResult(
-            { value: nextProps.value, message: nextProps.message, feedback: nextProps.feedback },
+            { value: propValue, message: nextProps.message, feedback: nextProps.feedback },
             nextProps
           );
           if (result) {
             if (typeof result === "object") {
-              if (this.props.onValidate && typeof this.props.onValidate === "function") {
+              if (nextProps.onValidate && typeof nextProps.onValidate === "function") {
                 this._validateOnChange({ value: result.value, event: null, component: this }, true);
               } else {
+                let displayValue;
                 if (result.feedback) {
+                  displayValue = result.value;
                   this.setFeedback(result.feedback, result.message, result.feedback === "error" ? null : result.value);
                 } else {
-                  this.setFeedback(nextProps.feedback, nextProps.message, nextProps.value);
+                  displayValue = propValue;
+                  this.setFeedback(nextProps.feedback, nextProps.message, propValue);
                 }
+
+                let { fromDisplayDate, toDisplayDate } = this._getDisplayDates(
+                  displayValue,
+                  calendarView,
+                  nextProps.dateFrom,
+                  nextProps.dateTo
+                );
+                this.setState({ fromDisplayDate, toDisplayDate });
               }
             }
           }
@@ -343,11 +342,8 @@ export const DateRangePicker = Context.withContext(
       return result;
     },
 
-    parseDateDefault(stringDate) {
-      return UU5.Common.Tools.parseDate(stringDate, {
-        format: this.state ? this.state.format : this.props.format,
-        country: this.state ? this.state.country : this.props.country
-      });
+    parseDateDefault(date) {
+      return this._parseDateDefault(date);
     },
     //@@viewOff:interface
 
@@ -480,6 +476,35 @@ export const DateRangePicker = Context.withContext(
     //@@viewOff:overriding
 
     //@@viewOn:private
+    _dynamicParseDate(date, props) {
+      if (typeof date !== "string") {
+        // date = date;
+      } else {
+        if (props.parseDate && typeof props.parseDate === "function") {
+          date = props.parseDate(date, this);
+        } else {
+          date = this.parseDateDefault(date);
+        }
+      }
+
+      return date;
+    },
+
+    _dynamicParseDateDefault(date, format, country) {
+      return UU5.Common.Tools.parseDate(date, {
+        format,
+        country
+      });
+    },
+
+    _parseDate(date) {
+      return this._dynamicParseDate(date, this.props);
+    },
+
+    _parseDateDefault(date) {
+      return this._dynamicParseDateDefault(date, this.props.format, this.props.country);
+    },
+
     _getOutputValue(value) {
       if (value) {
         let parsedDate = this._parseDate(value);
@@ -502,22 +527,6 @@ export const DateRangePicker = Context.withContext(
 
     _isSorXs() {
       return this.isS() || this.isXs();
-    },
-
-    _parseDate(stringDate) {
-      let date = null;
-
-      if (typeof stringDate !== "string") {
-        date = stringDate;
-      } else {
-        if (this.props.parseDate && typeof this.props.parseDate === "function") {
-          date = this.props.parseDate(stringDate, this);
-        } else {
-          date = this.parseDateDefault(stringDate);
-        }
-      }
-
-      return date;
     },
 
     _getDateString(date, props = this.props) {
@@ -730,14 +739,11 @@ export const DateRangePicker = Context.withContext(
     },
 
     _onChangeFormat(opt, setStateCallback) {
-      this.setState(
-        {
-          format: opt.format === undefined ? this.state.format : opt.format,
-          country:
-            opt.country === undefined ? this.state.country : opt.country ? opt.country.toLowerCase() : opt.country
-        },
-        setStateCallback
-      );
+      let format = opt.format === undefined ? this.state.format : opt.format;
+      let country =
+        opt.country === undefined ? this.state.country : opt.country ? opt.country.toLowerCase() : opt.country;
+      this._parseDateDefault = date => this._dynamicParseDateDefault(date, format, country);
+      this.setState({ format, country }, setStateCallback);
     },
 
     _getInputValidationResult(fromValue, toValue) {
@@ -1183,6 +1189,26 @@ export const DateRangePicker = Context.withContext(
       if (typeof callback === "function") {
         callback();
       }
+    },
+
+    _getDisplayDates(value, view, dateFrom, dateTo) {
+      let displayDates = DateTools.getDisplayDates(value, view);
+      let today = new Date(Date.now());
+
+      if (!value && (dateFrom || dateTo)) {
+        if (
+          (!dateFrom || (dateFrom && this._compareDates(today, dateFrom, "greater"))) &&
+          (!dateTo || (dateTo && this._compareDates(today, dateTo, "lesser")))
+        ) {
+          displayDates = DateTools.getDisplayDates(today, view);
+        } else {
+          displayDates = DateTools.getDisplayDates(this.parseDate(dateFrom || dateTo), view);
+        }
+      } else if (!value) {
+        displayDates = DateTools.getDisplayDates(today, view);
+      }
+
+      return { fromDisplayDate: displayDates.dateFrom, toDisplayDate: displayDates.dateTo };
     },
 
     _compareDates(date1, date2, method) {

@@ -192,7 +192,10 @@ export const AccordionEditable = UU5.Common.VisualComponent.create({
 
   _onCloseEditationModal(newProps) {
     if (newProps) {
-      this.setState({ ...newProps, editationModalOpen: false }, () => this.props.component.saveEditation(newProps));
+      let newState = { ...newProps };
+      delete newState.children;
+      delete newState.content;
+      this.setState({ ...newState, editationModalOpen: false }, () => this.props.component.saveEditation(newProps));
     } else {
       this.setState({ editationModalOpen: false });
     }

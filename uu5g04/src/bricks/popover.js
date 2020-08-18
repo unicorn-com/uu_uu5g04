@@ -16,6 +16,7 @@ import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import { LAYER, RenderIntoPortal } from "./internal/portal.js";
 import { disableBodyScrolling, enableBodyScrolling } from "./internal/page-utils.js";
+import ResizeObserver from "./resize-observer";
 
 import "./popover.less";
 //@@viewOff:imports
@@ -106,7 +107,8 @@ export const Popover = withContext(
       content: UU5.Common.ContentMixin.propTypes.content,
       footer: UU5.Common.SectionMixin.propTypes.footer,
       className: UU5.Common.BaseMixin.propTypes.className,
-      location: UU5.PropTypes.oneOf(["local", "portal"])
+      location: UU5.PropTypes.oneOf(["local", "portal"]),
+      autoResize: UU5.PropTypes.bool
     },
     //@@viewOff:propTypes
 
@@ -117,7 +119,8 @@ export const Popover = withContext(
         forceRender: false,
         fitHeightToViewport: false,
         getToolbar: undefined,
-        location: undefined
+        location: undefined,
+        autoResize: false
       };
     },
     //@@viewOff:getDefaultProps
@@ -125,6 +128,8 @@ export const Popover = withContext(
     //@@viewOn:reactLifeCycle
     getInitialState() {
       this._canOpenOnMount = true;
+      this._lastOpenOpts;
+      this._onResize = UU5.Common.Tools.debounce(this._onResize, UU5.Environment.resizeInterval, { leading: true });
       return {
         header: null,
         content: null,
@@ -141,7 +146,8 @@ export const Popover = withContext(
           left: false
         },
         removeHeight: this.props.hidden && !this.props.shown,
-        display: false
+        display: false,
+        autoResize: this.props.autoResize
       };
     },
 
@@ -178,7 +184,8 @@ export const Popover = withContext(
           disabled: nextProps.disabled,
           hidden: !nextProps.shown,
           display: nextProps.shown,
-          removeHeight: nextProps.hidden && !nextProps.shown
+          removeHeight: nextProps.hidden && !nextProps.shown,
+          autoResize: nextProps.autoResize
         });
       }
     },
@@ -191,6 +198,7 @@ export const Popover = withContext(
 
     //@@viewOn:interface
     open(opt, setStateCallback) {
+      this._lastOpenOpts = opt;
       return this._open(true, opt, setStateCallback);
     },
 
@@ -246,6 +254,7 @@ export const Popover = withContext(
 
       this._canOpenOnMount = false;
       opt = opt || {};
+      if (opt.event && typeof opt.event.persist === "function") opt.event.persist();
 
       let centralPopover = this._getCentralPopover();
       if (centralPopover) {
@@ -259,10 +268,10 @@ export const Popover = withContext(
         opt.headerClassName = opt.headerClassName || null;
         opt.footerClassName = opt.footerClassName || null;
         opt.fitHeightToViewport = this.props.fitHeightToViewport;
+        opt.autoResize = opt.autoResize != null ? opt.autoResize : this.props.autoResize;
         opt.customPopover = this;
         if (centralPopover.isOpen()) {
           typeof centralPopover.state.onBeforeClose === "function" && centralPopover.state.onBeforeClose();
-          if (opt.event && typeof opt.event.persist === "function") opt.event.persist();
           centralPopover.close(() => {
             typeof centralPopover.state.onClose === "function" && centralPopover.state.onClose();
             centralPopover.open(opt, setStateCallback);
@@ -271,30 +280,12 @@ export const Popover = withContext(
           centralPopover.open(opt, setStateCallback);
         }
       } else {
-        let left = opt.pageX == null ? 0 : opt.pageX - window.pageXOffset;
-        let top = opt.pageY == null ? 0 : opt.pageY - window.pageYOffset;
-
-        if (opt.event) {
-          left = left || opt.event.pageX - window.pageXOffset;
-          top = top || opt.event.pageY - window.pageYOffset;
-        }
-
-        let aroundElement = opt.aroundElement;
-        let requiredPosition = opt.position;
-        let offset = opt.offset || 0;
         let onClose = opt.onClose;
         let onBeforeClose = opt.onBeforeClose;
         let bodyClassName = opt.bodyClassName || null;
         let headerClassName = opt.headerClassName || null;
         let footerClassName = opt.footerClassName || null;
-        let { pageX, pageY, maxHeight, position } = this.state;
-        let fitHeightToViewport = this.props.fitHeightToViewport || opt.fitHeightToViewport;
-        let horizontalOnly = opt.horizontalOnly;
-
-        if (opt.preventPositioning) {
-          pageX = 0;
-          pageY = 0;
-        }
+        let autoResize = opt.autoResize != null ? opt.autoResize : this.props.autoResize;
 
         this.setState(
           {
@@ -315,77 +306,99 @@ export const Popover = withContext(
             removeHeight: false,
             onClose: onClose,
             onBeforeClose: onBeforeClose,
-            isPagePopover: !!opt.customPopover
+            isPagePopover: !!opt.customPopover,
+            autoResize
           },
           () => {
             this._addEvent(onBeforeClose, onClose);
-
-            if (aroundElement) {
-              if (aroundElement.findDOMNode) {
-                aroundElement = aroundElement.findDOMNode();
-              }
-              let aroundElementRect = aroundElement.getBoundingClientRect();
-
-              if (!opt.preventPositioning) {
-                ({ pageX, pageY, maxHeight, position } = this._getPosition(
-                  requiredPosition,
-                  aroundElementRect,
-                  offset,
-                  fitHeightToViewport,
-                  horizontalOnly
-                ));
-              }
-
-              this.setState(
-                {
-                  hidden: false,
-                  display: true,
-                  pageX: pageX,
-                  pageY: pageY,
-                  maxHeight: maxHeight,
-                  position: position
-                },
-                setStateCallback
-              );
-            } else {
-              let aroundElementRect = {
-                left: left,
-                right: left,
-                top: top,
-                bottom: top,
-                width: 0,
-                height: 0
-              };
-
-              if (!opt.preventPositioning) {
-                ({ pageX, pageY, maxHeight, position } = this._getPosition(
-                  requiredPosition,
-                  aroundElementRect,
-                  offset,
-                  fitHeightToViewport,
-                  horizontalOnly
-                ));
-              }
-
-              this.setState(
-                {
-                  hidden: false,
-                  display: true,
-                  pageX: pageX,
-                  pageY: pageY,
-                  maxHeight: maxHeight,
-                  position: position
-                },
-                setStateCallback
-              );
-            }
-
+            this._setPosition(opt, setStateCallback);
             // This is a workaround. Otherwise the first click outside of popover after opening it doesnt close it
             setTimeout(() => (this._stopPropagation = false));
           }
         );
       }
       return this;
+    },
+
+    _setPosition(opt, setStateCallback) {
+      let { pageX, pageY, maxHeight, position } = this.state;
+      let aroundElement = opt.aroundElement;
+      let horizontalOnly = opt.horizontalOnly;
+      let fitHeightToViewport = this.props.fitHeightToViewport || opt.fitHeightToViewport;
+      let requiredPosition = opt.position;
+      let offset = opt.offset || 0;
+      let left = opt.pageX == null ? 0 : opt.pageX - window.pageXOffset;
+      let top = opt.pageY == null ? 0 : opt.pageY - window.pageYOffset;
+
+      if (opt.event) {
+        left = left || opt.event.pageX - window.pageXOffset;
+        top = top || opt.event.pageY - window.pageYOffset;
+      }
+
+      if (opt.preventPositioning) {
+        pageX = 0;
+        pageY = 0;
+      }
+
+      if (aroundElement) {
+        if (aroundElement.findDOMNode) {
+          aroundElement = aroundElement.findDOMNode();
+        }
+        let aroundElementRect = aroundElement.getBoundingClientRect();
+
+        if (!opt.preventPositioning) {
+          ({ pageX, pageY, maxHeight, position } = this._getPosition(
+            requiredPosition,
+            aroundElementRect,
+            offset,
+            fitHeightToViewport,
+            horizontalOnly
+          ));
+        }
+
+        this.setState(
+          {
+            hidden: false,
+            display: true,
+            pageX,
+            pageY,
+            maxHeight,
+            position
+          },
+          setStateCallback
+        );
+      } else {
+        let aroundElementRect = {
+          left,
+          right: left,
+          top,
+          bottom: top,
+          width: 0,
+          height: 0
+        };
+
+        if (!opt.preventPositioning) {
+          ({ pageX, pageY, maxHeight, position } = this._getPosition(
+            requiredPosition,
+            aroundElementRect,
+            offset,
+            fitHeightToViewport,
+            horizontalOnly
+          ));
+        }
+
+        this.setState(
+          {
+            hidden: false,
+            display: true,
+            pageX,
+            pageY,
+            maxHeight,
+            position
+          },
+          setStateCallback
+        );
+      }
     },
 
     _getOffsetParentRect(element, relative) {
@@ -602,6 +615,12 @@ export const Popover = withContext(
       return position;
     },
 
+    _onResize() {
+      if (this.isOpen()) {
+        this._setPosition(this._lastOpenOpts);
+      }
+    },
+
     _getTopPageVisibility() {
       let result = 0;
       let element = document.getElementsByClassName("uu5-bricks-page-top")[0];
@@ -781,6 +800,7 @@ export const Popover = withContext(
             {this._getBody()}
             {this._getFooter()}
             {this.getDisabledCover()}
+            {this.state.autoResize && this.isOpen() ? <ResizeObserver onResize={this._onResize} /> : null}
           </div>
         );
         if (location === "portal") {

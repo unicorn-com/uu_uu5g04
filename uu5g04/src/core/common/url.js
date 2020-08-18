@@ -18,7 +18,8 @@ const regexp = {
   colon: /:$/,
   slash: /^[/]/,
   hash: /^#/,
-  http: /^(\/|[a-z0-9\-+.]+:)/
+  http: /^(\/|[a-z0-9\-+.]+:)/,
+  slashes: /([^:])\/+/g
 };
 
 function isRoute(href) {
@@ -153,21 +154,10 @@ export class Url {
     return resultUri;
   }
 
-  static join(...parts) {
-    let result = "";
-
-    parts.forEach((part, index) => {
-      if (index === parts.length - 1) {
-        part = part[0] === "/" ? part.substring(1) : part;
-      } else {
-        part = part[part.length - 1] === "/" ? part.substring(0, part.length - 1) : part;
-      }
-
-      if (index === 0) result += part;
-      else result += `/${part}`;
-    });
-
-    return result;
+  static join(...args) {
+    let url = args.join("/").replace(regexp.slashes, "$1/");
+    if (url[url.length - 1] === "/") url = url.replace(/\/*$/, "");
+    return url;
   }
 
   constructor() {

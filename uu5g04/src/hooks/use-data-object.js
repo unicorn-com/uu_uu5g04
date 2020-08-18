@@ -1,6 +1,6 @@
 import UU5 from "uu5g04";
 import { useState, useEffect, useRef } from "./react-hooks";
-import { usePreviousValue } from "./internal/use-previous-value";
+import { usePreviousValue } from "./use-previous-value";
 
 const PENDING = "pending",
   READY = "ready",
@@ -9,9 +9,9 @@ const PENDING_NO_DATA = "pendingNoData",
   READY_NO_DATA = "readyNoData",
   ERROR_NO_DATA = "errorNoData";
 const SET_DATA_IDENTITY = data => data;
+const FIRST_LOAD_FLAG = {};
 
 function useEffectOnMount(effectFn) {
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(effectFn, []);
 }
 
@@ -32,7 +32,7 @@ function initHandler(operation, setFullState, currentValuesRef) {
       });
     };
   } else {
-    handlerFn = async (dtoIn, opts, ...restArgs) => {
+    handlerFn = async (...callArgs) => {
       const onCall = currentValuesRef.current.paramHandlerMap[operation];
       let callPreconditionsResolve;
       let callPreconditionsReject;
@@ -41,20 +41,16 @@ function initHandler(operation, setFullState, currentValuesRef) {
         callPreconditionsReject = reject;
       });
 
-      setFullState(fullState => {
-        let result = fullState;
-        let newPartialState = {
-          state: fullState.data != null ? PENDING : PENDING_NO_DATA,
-          pendingData: { operation, dtoIn }
-        };
-        // don't re-render if fullState is already same as target (happens for initial load because the state already is set to "pending" with the same parameters)
-        if (
-          fullState.state !== newPartialState.state ||
-          !fullState.pendingData ||
-          Object.keys(newPartialState.pendingData).some(
-            k => newPartialState.pendingData[k] !== fullState.pendingData[k]
-          )
-        ) {
+      let isFirstLoad = callArgs[0] === FIRST_LOAD_FLAG;
+      if (isFirstLoad) callArgs = callArgs.slice(1);
+
+      if (!isFirstLoad) {
+        setFullState(fullState => {
+          let result = fullState;
+          let newPartialState = {
+            state: fullState.data != null ? PENDING : PENDING_NO_DATA,
+            pendingData: { operation, dtoIn: callArgs[0] }
+          };
           // if re-rendering (is not initial load) then check that the operation is allowed
           if (fullState.state === PENDING || fullState.state === PENDING_NO_DATA) {
             let callPreconditionsError = new Error(
@@ -72,26 +68,24 @@ function initHandler(operation, setFullState, currentValuesRef) {
             callPreconditionsResolve();
             result = { ...fullState, ...newPartialState };
           }
-        } else {
-          callPreconditionsResolve();
-        }
-        return result;
-      });
+          return result;
+        });
 
-      // setFullState() above can be batched by React, i.e. it might not have been performed yet
-      // => wait until it gets processed
-      await callPreconditionsPromise;
+        // setFullState() above can be batched by React, i.e. it might not have been performed yet
+        // => wait until it gets processed
+        await callPreconditionsPromise;
+      }
 
       let data;
       try {
-        data = typeof onCall === "function" ? await onCall(dtoIn, opts, ...restArgs) : null;
+        data = typeof onCall === "function" ? await onCall(...callArgs) : null;
       } catch (error) {
         if (currentValuesRef.current.rendered) {
           setFullState(fullState => ({
             ...fullState,
             state: fullState.data != null ? ERROR : ERROR_NO_DATA,
             pendingData: null,
-            errorData: { operation, dtoIn, error }
+            errorData: { operation, dtoIn: callArgs[0], error }
           }));
         }
         throw error;
@@ -144,18 +138,24 @@ export function useDataObject({ initialData, initialDtoIn, handlerMap: paramHand
   // initHandler(name, ...) is called only if there was no handler in "paramHandlerMap[name]" before
   // and the resulting fn will take paramHandlerMap[name] at the time of its execution, not during initHandler() call.
   // Thanks to that we can reuse the same resulting fn even if paramHandlerMap[name] changes between re-renders.
-  let handlerMap = {};
-  let prevHandlerMap = usePreviousValue(handlerMap, {});
+  let fullHandlerMap = {};
+  let prevHandlerMap = usePreviousValue(fullHandlerMap, {});
   for (let k in paramHandlerMap) {
-    handlerMap[k] = prevHandlerMap[k] || initHandler(k, setFullState, currentValuesRef);
+    fullHandlerMap[k] = prevHandlerMap[k] || initHandler(k, setFullState, currentValuesRef);
   }
-  if (!handlerMap.setData) {
-    handlerMap.setData = prevHandlerMap["setData"] || initHandler("setData", setFullState, currentValuesRef);
+  if (!fullHandlerMap.setData) {
+    fullHandlerMap.setData = prevHandlerMap["setData"] || initHandler("setData", setFullState, currentValuesRef);
+  }
+  let handlerMap;
+  if (fullState.state === PENDING || fullState.state === PENDING_NO_DATA) {
+    handlerMap = {};
+  } else {
+    handlerMap = fullHandlerMap;
   }
 
   useEffectOnMount(() => {
     if (initialData === undefined && typeof paramHandlerMap.load === "function") {
-      handlerMap.load(initialDtoIn).catch(e => UU5.Common.Tools.error("Loading data failed:", e));
+      fullHandlerMap.load(FIRST_LOAD_FLAG, initialDtoIn).catch(e => UU5.Common.Tools.error("Loading data failed:", e));
     }
   });
 

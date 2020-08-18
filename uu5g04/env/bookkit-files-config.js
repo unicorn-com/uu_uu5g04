@@ -227,7 +227,9 @@ module.exports = {
     // "UU5.Hooks.useLsi",
     // "UU5.Hooks.useLsiValues",
     // "UU5.Hooks.usePagingListData",
+    // "UU5.Hooks.usePreviousValue",
     // "UU5.Hooks.useScreenSize",
     // "UU5.Hooks.useSession",
+    // "UU5.Hooks.useUnmountedRef",
   ]
 };

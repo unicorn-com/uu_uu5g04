@@ -134,7 +134,8 @@ export const AudioButton = UU5.Common.VisualComponent.create({
     this.setState({ playing: false });
   },
 
-  _onClick() {
+  _onClick(_, e) {
+    e.stopPropagation();
     if (this.state.playing) {
       this._audioRef.pause();
     } else {

@@ -506,7 +506,11 @@ export const Select = Context.withContext(
               current = current + 1 >= items.length ? items.length - 1 : current + 1;
               items[current].focus();
             } else {
-              this.open(() => items[current].focus());
+              this.open(() => {
+                if (items.length) {
+                  items[current].focus()
+                }
+              });
             }
             break;
           default:

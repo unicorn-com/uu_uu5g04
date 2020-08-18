@@ -61,12 +61,34 @@ class ScreenSize {
     return actualScreenSize;
   }
 
-  static splitColumns(colWidth) {
-    let result = {};
-    colWidth.split(" ").forEach(item => {
-      let splitter = item.split("-");
-      result[splitter[0]] = splitter[1];
-    });
+  static parseValue(value) {
+    let result;
+
+    // parse value
+    if (typeof value === "object") {
+      result = value;
+    } else if (typeof value === "string") {
+      result = {};
+      value.split(" ").forEach(item => {
+        let parts = item.match(/^([^-]+)-(.*)$/);
+        if (parts) {
+          result[parts[1]] = parts[2];
+        }
+      });
+    } else {
+      return { xs: value };
+    }
+
+    // filter all non screen size keys from result
+    let _result = {};
+    result = Object.keys(result).filter(key => this.SIZE_MAP[key]).forEach(key => _result[key] = result[key]);
+    result = _result;
+
+    // check if result contains some key - if not original value was only string with - and it is not screen size value
+    if (!Object.keys(result).length) {
+      result = { xs: value };
+    }
+
     return result;
   }
 
@@ -108,6 +130,9 @@ class ScreenSize {
     let result;
 
     switch (screenSize.toLowerCase()) {
+      case "xs":
+        result = inner;
+        break;
       case "s":
         result = `@media screen and (min-width: ${this.XS + 1}px) {
   ${inner}
@@ -157,11 +182,17 @@ class ScreenSize {
   ${inner}
 }`;
         break;
+      case "xl":
+        result = inner;
+        break;
     }
 
     return result;
   }
 }
+
+// backward compatibility
+ScreenSize.splitColumns = ScreenSize.parseValue;
 
 // slightly "hide" this as we need it only for proper interoperability of ScreenSizeMixin and
 // hooks ScreenSizeProvider

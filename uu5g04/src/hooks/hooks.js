@@ -24,6 +24,8 @@ export * from "./use-device";
 export * from "./use-lsi";
 export * from "./use-lsi-values";
 export * from "./use-element-size";
+export * from "./use-previous-value";
+export * from "./use-unmounted-ref";
 export * from "./with-resize";
 
 // not necessary for now

@@ -14,7 +14,7 @@
 import UU5 from "uu5g04";
 import { useState, useLayoutEffect, useMemo, useContext } from "./react-hooks";
 import { createComponent } from "./component";
-import { usePreviousValue } from "./internal/use-previous-value";
+import { usePreviousValue } from "./use-previous-value";
 
 const SessionContext = UU5.Common.Session.Context;
 

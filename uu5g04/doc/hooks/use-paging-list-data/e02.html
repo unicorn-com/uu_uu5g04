@@ -65,7 +65,7 @@
   import "uu5g04-block-layout";
   import { Session } from "uu_appg01_oidc";
   import { Client as UuAppClient } from "uu_appg01";
-  import { PagingAutoLoad, usePagingListData, useRef, useState, useEffect, useLayoutEffect, useCallback, createComponent, createVisualComponent } from "uu5g04-hooks";
+  import { PagingAutoLoad, usePagingListData, useRef, useState, useEffect, useLayoutEffect, useCallback, createComponent, createVisualComponent, usePreviousValue } from "uu5g04-hooks";
 
   // import { Client } from "uu_appg01";
   // mock Client for example
@@ -280,13 +280,6 @@
     }
   });
 
-  function usePreviousValue(currentValue) {
-    let ref = useRef();
-    let result = ref.current;
-    ref.current = currentValue;
-    return result;
-  }
-
   /*@@viewOn:example*/
   function Example({ pessimistic }) {
     let pageSize = 8;
@@ -311,7 +304,7 @@
     }, []);
 
     let prevShownPageIndex = usePreviousValue(shownPageIndex);
-    useLayoutEffect(() => {
+    useEffect(() => {
       if (notLoadedItemsCount > 0 && (shownPageIndex !== prevShownPageIndex || viewState === "ready" || (viewState === "error" && errorState !== "load"))) {
         handleLoad({ pageInfo: { pageIndex: shownPageIndex } }, true);
       }

@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"
+    />
     <title>DateTimeRangePicker Demo</title>
 
     <script>
@@ -11,24 +15,34 @@
     </script>
 
     <!--<link type="text/css" rel="stylesheet" href="https://cdn.plus4u.net/libs/bootstrap/3.3.7/css/bootstrap.min.css">-->
-  <link type="text/css" rel="stylesheet" href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.css">
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.css"
+    />
     <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
 
     <script>
+      var uu5g04 = "";
+      location.search.replace(/[?&]uu5g04=([^&#]*)/, function(m, g1) {
+        uu5g04 = g1;
+      });
+      var uu5g04Base = uu5g04 === "" ? "/" : "https://cdn.plus4u.net/uu-uu5g04/" + uu5g04 + "/";
+
       SystemJS.config({
-        "paths": {
-          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
-          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        paths: {
+          systemjs: "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          react: "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
           "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
           "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
           "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
-          "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
-          "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
-          "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+          uu_appg01_core: "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+          uu_appg01: "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+          uu_oidcg01: "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
 
-          "uu5g04": "/uu5g04.js",
-          "uu5g04-forms": "/uu5g04-forms.js",
-          "uu5g04-bricks": "/uu5g04-bricks.js"
+          uu5g04: uu5g04Base + "uu5g04.js",
+          "uu5g04-bricks": uu5g04Base + "uu5g04-bricks.js",
+          "uu5g04-forms": uu5g04Base + "uu5g04-forms.js"
         }
       });
 
@@ -36,12 +50,16 @@
       //   "uuoidc.redirectUri":"callbacks/login-callback.html"
       // }}));
     </script>
-
   </head>
   <style>
     .uu5-forms-datetimerangepicker-custom-content {
       display: flex;
       flex-direction: column;
+    }
+
+    .uu5-components-dropdown .uu5-bricks-dropdown-menu-list {
+      max-height: 360px;
+      overflow-y: auto;
     }
   </style>
   <body>
@@ -51,10 +69,11 @@
     <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
     <script type="text/babel">
       import UU5 from "uu5g04";
-      import "uu5g04-forms"; import "uu5g04-bricks";
+      import "uu5g04-forms";
+      import "uu5g04-bricks";
 
       var Page = UU5.Common.VisualComponent.create({
-        render: function () {
+        render: function() {
           let date1 = new Date();
           let date2 = new Date();
           date1.setMonth(1);
@@ -68,33 +87,63 @@
 
           return (
             <UU5.Bricks.Container>
-              <UU5.Forms.DateTimeRangePicker label="ISO string value" value={["2019-07-31T10:00:00.000Z", "2019-08-20T10:00:00.000Z"]} />
-              <UU5.Forms.DateTimeRangePicker label="ISO string value" value={["2019-07-31T10:00:00", "2019-08-20T10:00:00"]} />
+              <div style={{ position: "fixed", right: "0", top: "0", zIndex: "100000" }}>
+                <UU5.Bricks.Dropdown
+                  label={"uu5g04" + (uu5g04 ? " CDN " + uu5g04 : " local") + " (" + UU5.Environment.version + ")"}
+                  items={[
+                    { label: "local", href: "?" },
+                    { label: "CDN 1.0.0", href: "?uu5g04=1.0.0" },
+                    { label: "CDN 1.19.0", href: "?uu5g04=1.19.0" }
+                  ]}
+                />
+              </div>
+              <UU5.Forms.DateTimeRangePicker
+                label="ISO string value"
+                value={["2019-07-31T10:00:00.000Z", "2019-08-20T10:00:00.000Z"]}
+              />
+              <UU5.Forms.DateTimeRangePicker
+                label="ISO string value"
+                value={["2019-07-31T10:00:00", "2019-08-20T10:00:00"]}
+              />
               <UU5.Forms.DateTimeRangePicker label="ISO string value" value={["2019-07-31", "2019-08-20"]} />
               <UU5.Forms.DateTimeRangePicker label="date value" value={[date1, date2]} />
-              <UU5.Forms.DateTimeRangePicker label="onChange" onChange={(opt) => {
-                console.log(opt.value)
-                opt.component.onChangeDefault(opt);
-              }} />
+              <UU5.Forms.DateTimeRangePicker
+                label="onChange"
+                onChange={opt => {
+                  console.log(opt.value);
+                  opt.component.onChangeDefault(opt);
+                }}
+              />
               <UU5.Forms.DateTimeRangePicker label="validateOnChange" validateOnChange />
-              <UU5.Forms.DateTimeRangePicker label="onValidate" onValidate={(opt) => {
-                return { feedback: "initial", message: null, value: opt.value };
-              }} />
-              <UU5.Forms.DateTimeRangePicker label="onValidate + validateOnChange" validateOnChange onValidate={(opt) => {
-                return { feedback: "error", message: null, value: new Date() };
-              }} />
+              <UU5.Forms.DateTimeRangePicker
+                label="onValidate"
+                onValidate={opt => {
+                  return { feedback: "initial", message: null, value: opt.value };
+                }}
+              />
+              <UU5.Forms.DateTimeRangePicker
+                label="onValidate + validateOnChange"
+                validateOnChange
+                onValidate={opt => {
+                  return { feedback: "error", message: null, value: new Date() };
+                }}
+              />
               <UU5.Forms.DateTimeRangePicker label="validateOnChange" validateOnChange />
               <UU5.Forms.DateTimeRangePicker label="format" format="dd/mm/Y" />
-              <UU5.Forms.DateTimeRangePicker label="format + parseDate" format="dd:mm:Y" parseDate={stringDate => {
-                let date = null;
-                stringDate = stringDate && stringDate.replace(/ /g, '');
-                let regExp = new RegExp("^(\\d{1,2})\\:(\\d{1,2})\\:(\\d{4})$");
-                if (regExp.test(stringDate)) {
-                  let replacedDate = stringDate.replace(regExp, '$3-$2-$1');
-                  date = Date.parse(replacedDate) ? new Date(replacedDate) : null;
-                }
-                return date;
-              }} />
+              <UU5.Forms.DateTimeRangePicker
+                label="format + parseDate"
+                format="dd:mm:Y"
+                parseDate={stringDate => {
+                  let date = null;
+                  stringDate = stringDate && stringDate.replace(/ /g, "");
+                  let regExp = new RegExp("^(\\d{1,2})\\:(\\d{1,2})\\:(\\d{4})$");
+                  if (regExp.test(stringDate)) {
+                    let replacedDate = stringDate.replace(regExp, "$3-$2-$1");
+                    date = Date.parse(replacedDate) ? new Date(replacedDate) : null;
+                  }
+                  return date;
+                }}
+              />
               <UU5.Forms.DateTimeRangePicker label="dateFrom, dateTo" dateFrom={date1} dateTo={date2} />
               <UU5.Forms.DateTimeRangePicker label="hideWeekNumber" hideWeekNumber />
               <UU5.Forms.DateTimeRangePicker label="showTodayButton" showTodayButton />
@@ -109,7 +158,7 @@
         }
       });
 
-      UU5.Common.DOM.render(UU5.Common.Element.create(Page, null), document.getElementById('renderHere'));
+      UU5.Common.DOM.render(UU5.Common.Element.create(Page, null), document.getElementById("renderHere"));
     </script>
   </body>
 </html>

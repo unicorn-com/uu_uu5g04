@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
-  <title>Example 00 - load on scroll</title>
+  <title>Example 07 - pagination with create</title>
 
   <script>
     if (!location.href.match(/^(about:|file:)/)) {
@@ -49,11 +49,11 @@
   import "uu5g04-bricks";
   import "uu5g04-forms";
   import "uu5g04-block-layout";
-  import { useDataList, createVisualComponent, useState, useRef, PagingAutoLoad, useMemo, useCallback, useEffect, useUnmountedRef } from "uu5g04-hooks";
+  import { useDataList, createVisualComponent, useState, useRef, PagingAutoLoad, useMemo, useCallback, useEffect, usePreviousValue, useUnmountedRef } from "uu5g04-hooks";
   import { Session } from "uu_appg01_oidc";
   import { Client } from "uu_appg01";
 
-  let callDelay = 0;
+  let callDelay = 1500;
   let error = false;
 
   /*@@viewOn:example*/
@@ -175,7 +175,31 @@
       console.log(dataListResult);
 
       const modalRef = useRef();
+      const alertBusRef = useRef();
+
+      const [shownPageIndex, setShownPageIndex] = useState(0);
+      const dataToRender = data ? data.slice(shownPageIndex * pageSize, shownPageIndex * pageSize + pageSize) : [];
+      const notLoadedItemsCount = !data ? pageSize : dataToRender.filter(it => it == null).length;
+      const total = data ? data.length : 0;
       const unmountedRef = useUnmountedRef();
+      const currentValuesRef = useRef();
+      currentValuesRef.current = { data, shownPageIndex }; // so that async handling after item creation has access to current values
+
+      const onPaginationChange = useCallback((pagination, newIndex) => {
+        setShownPageIndex(cur => newIndex === "next" ? cur + 1 : newIndex === "prev" ? cur - 1 : newIndex);
+      }, []);
+
+      const prevShownPageIndex = usePreviousValue(shownPageIndex, 0);
+      useEffect(() => {
+        const isLoad = (state === "pending" || state === "pendingNoData") && pendingData.operation === "load";
+        const isLoadNextWithCurrentPage = (state === "pending" || state === "pendingNoData") && pendingData.operation === "loadNext" && pendingData.dtoIn.pageInfo.pageIndex === shownPageIndex;
+        const isLoadNextWithCurrentPageError = (state === "error" || state === "errorNoData") && errorData.operation === "loadNext" && errorData.dtoIn.pageInfo.pageIndex === shownPageIndex;
+        const skip = notLoadedItemsCount === 0 || isLoad || isLoadNextWithCurrentPage || isLoadNextWithCurrentPageError;
+        if (!skip) {
+          handlerMap.loadNext({ pageInfo: { pageIndex: shownPageIndex } });
+        }
+      }, [notLoadedItemsCount, shownPageIndex, prevShownPageIndex, handlerMap.loadNext]);
+
       const showModal = useCallback((joke, onSave) => {
         const modal = modalRef.current;
         modal.open({
@@ -222,45 +246,102 @@
 
       return (
         <UU5.Bricks.Div>
-          <UU5.Bricks.Button disabled={!handlerMap.load} onClick={() => handlerMap.load()}>
-            Reload
+          <UU5.Bricks.Button
+            disabled={!handlerMap.createItem}
+            colorSchema="success"
+            onClick={() => {
+              showModal(null, async ({ component, values }) => {
+                let data, error;
+                try {
+                  data = await handlerMap.createItem(values);
+                } catch (e) {
+                  error = e;
+                }
+                if (unmountedRef.current) return;
+                if (error) component.saveFail(error);
+                else component.saveDone(data);
+                alertBusRef.current.setAlert({
+                  content: error ? `Creating joke '${values.name}' failed.` : (
+                    <div>
+                      Joke <UU5.Bricks.Link onClick={() => {
+                        let { data: allData } = currentValuesRef.current;
+                        let index = allData.findIndex(item => item && item.data.id === data.id);
+                        if (index !== -1) setShownPageIndex(Math.floor(index / pageSize));
+                        else UU5.Common.Tools.scrollToTarget(data.id);
+                      }}>{data.name}</UU5.Bricks.Link> has been created.
+                    </div>
+                  ),
+                  colorSchema: error ? "danger" : undefined
+                });
+                // let { shownPageIndex } = currentValuesRef.current;
+                // handlerMap.load({ pageInfo: { pageIndex: shownPageIndex } });
+              });
+            }}
+          >
+            Create item
+          </UU5.Bricks.Button>{" "}
+          <UU5.Bricks.Button disabled={!handlerMap.load} onClick={() => handlerMap.load({ pageInfo: { pageIndex: shownPageIndex } })}>
+            Load current page & reset others
           </UU5.Bricks.Button>{" "}
 
           <ControlPanel dataListResult={dataListResult} />
 
-          <UU5.Bricks.Section header="Data" level={3}>
-            <UU5.Bricks.Row display="flex">
-              {data ? data.filter(item => item != null).map(item => (
-                <UU5.Bricks.Column colWidth="m-6 l-4 xl-3" key={item.data.id}>
-                  <Joke
-                    data={item.data}
-                    onUpdate={!item.handlerMap.update ? null : handleJokeUpdate}
-                    onDelete={!item.handlerMap.delete ? null : handleJokeDelete}
-                    processingItem={item}
-                  />
-                </UU5.Bricks.Column>
-              )) : null}
-            </UU5.Bricks.Row>
+          <UU5.Bricks.AlertBus ref_={alertBusRef} />
 
-            <PagingAutoLoad
-              data={data}
-              handleLoad={handlerMap.loadNext}
-              distance={window.innerHeight}
-              pageSize={pageSize}
-              error={
-                ({error, reload}) => !pendingData || pendingData.operation !== "loadNext" ? (
-                  <UU5.Bricks.Button onClick={() => reload()} content="Load more (auto-load failed)" />
-                ) : (
-                  <UU5.Common.Fragment>
-                    <UU5.Bricks.Loading />
-                    <UU5.Bricks.Div className="uu5-common-center">(loading {pageSize} more...)</UU5.Bricks.Div>
-                  </UU5.Common.Fragment>
-                )
-              }
-            >
-              <UU5.Bricks.Loading />
-              <UU5.Bricks.Div className="uu5-common-center">(loading {pageSize} more...)</UU5.Bricks.Div>
-            </PagingAutoLoad>
+          <UU5.Bricks.Section header="New Data" level={3}>
+            {newData.length === 0 ? "No new data." : (
+              <UU5.Bricks.Row display="flex">
+                {newData.map(item => (
+                  <UU5.Bricks.Column colWidth="m-6 l-4 xl-3" key={item.data.id}>
+                    <Joke
+                      id={item.data.id}
+                      data={item.data}
+                      onUpdate={!item.handlerMap.update ? null : handleJokeUpdate}
+                      onDelete={!item.handlerMap.delete ? null : handleJokeDelete}
+                      processingItem={item}
+                    />
+                  </UU5.Bricks.Column>
+                ))}
+              </UU5.Bricks.Row>
+            )}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="Data" level={3}>
+            <UU5.Bricks.Pagination
+              activeIndex={shownPageIndex}
+              items={new Array(Math.ceil(total / pageSize)).fill(null).map((_, i) => i + 1)}
+              onChange={onPaginationChange}
+              disabled={!data || !handlerMap.loadNext}
+            />
+            <UU5.Bricks.Row display="flex">
+              {notLoadedItemsCount > 0 && (state === "error" || state === "errorNoData") ? (
+                <UU5.Bricks.Button
+                  content="Reload (load failed)"
+                  onClick={() => handlerMap.loadNext({ pageInfo: { pageIndex: shownPageIndex } })}
+                />
+              ) : !data || (notLoadedItemsCount > 0 && notLoadedItemsCount === dataToRender.length) ? (
+                // there's no item loaded in this data page => show 1 loading for whole page
+                // (if there's 1 or more already-loaded items in the current data page then
+                // we'll show 1/more loading indication(s) at the place(s) of not-yet-loaded items)
+                <UU5.Bricks.Loading />
+              ) : (
+                dataToRender.map((item, i) => (
+                  !item
+                    ? <UU5.Bricks.Column colWidth="m-6 l-4 xl-3" key={i}><UU5.Bricks.Loading /></UU5.Bricks.Column>
+                    : (
+                      <UU5.Bricks.Column colWidth="m-6 l-4 xl-3" key={item.data.id}>
+                        <Joke
+                          id={item.data.id}
+                          data={item.data}
+                          onUpdate={!item.handlerMap.update ? null : handleJokeUpdate}
+                          onDelete={!item.handlerMap.delete ? null : handleJokeDelete}
+                          processingItem={item}
+                        />
+                      </UU5.Bricks.Column>
+                      )
+                ))
+              )}
+            </UU5.Bricks.Row>
           </UU5.Bricks.Section>
 
           <UU5.Bricks.Modal controlled={false} ref_={modalRef} mountContent="onEachOpen" />

@@ -192,6 +192,11 @@ export const Slider = UU5.Common.VisualComponent.create({
     return Array.isArray(value) ? value.slice(0, 2) : [value];
   },
 
+  _countDecimals(value) {
+    if (Math.floor(value) !== value) return value.toString().split(".")[1].length || 0;
+    return 0;
+  },
+
   _checkValue(value) {
     if (typeof value == "string" && value !== "" && value !== "-") {
       value = parseFloat(value);
@@ -342,6 +347,17 @@ export const Slider = UU5.Common.VisualComponent.create({
 
     const realValue = absolutePosition / (end / absoluteMax);
     let value = min + Math.round(realValue / step) * step;
+
+    // After adding two decimal numbers, it is possible that the result will be inaccurate.
+    // Fix this inaccurate by by check number of decimal places in both additioned numbers and compare with number of
+    // decimal places in result. If result have more decimal numbers then original numbers, it is needed to round the result.
+    if(value && (value % 1 !== 0)){
+      let numberOfDecimalsValue = this._countDecimals(this.getValue());
+      let numberOfDecimalsStep = this._countDecimals(this.props.step);
+      let numberOfDecimals = numberOfDecimalsValue >= numberOfDecimalsStep ?
+          numberOfDecimalsValue : numberOfDecimalsStep;
+      value = Number(value.toFixed(numberOfDecimals))
+    }
 
     this.props.vertical && (value = this.props.max + this.props.min - value);
     value > this.props.max && (value = this.props.max);

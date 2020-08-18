@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
-  <title>Example 00 - load on scroll</title>
+  <title>Example 04 - bulk actions</title>
 
   <script>
     if (!location.href.match(/^(about:|file:)/)) {
@@ -53,7 +53,7 @@
   import { Session } from "uu_appg01_oidc";
   import { Client } from "uu_appg01";
 
-  let callDelay = 0;
+  let callDelay = 1500;
   let error = false;
 
   /*@@viewOn:example*/
@@ -82,6 +82,45 @@
     deleteItem(dtoIn) {
       const commandUri = Calls.getCommandUri("joke/delete");
       return Calls.call("post", commandUri, dtoIn);
+    },
+
+    async createMany(dtoIn) {
+      // NOTE This should call a command which accepts multiple items (dtoIn is array) and returns
+      // an array of created items. This demo doesn't have such bulk command so we'll just call
+      // non-bulk command as many times as necessary and collect the results into an array.
+      let isSuccess = true;
+      const promises = dtoIn.map(newData => Calls.createItem(newData).catch(e => {
+        isSuccess = false;
+        return e;
+      }));
+      const resultList = await Promise.all(promises);
+      return isSuccess ? resultList : Promise.reject(resultList);
+    },
+
+    async updateMany(dtoIn) {
+      // NOTE This should call a command which accepts multiple items (dtoIn is array) and returns
+      // an array of updated items. This demo doesn't have such bulk command so we'll just call
+      // non-bulk command as many times as necessary and collect the results into an array.
+      let isSuccess = true;
+      const promises = dtoIn.map(newData => Calls.updateItem(newData).catch(e => {
+        isSuccess = false;
+        return e;
+      }));
+      const resultList = await Promise.all(promises);
+      return isSuccess ? resultList : Promise.reject(resultList);
+    },
+
+    async deleteMany(dtoIn) {
+      // NOTE This should call a command which accepts multiple items (dtoIn is array) and returns
+      // an array of deleted items (nulls or errors). This demo doesn't have such bulk command so we'll just call
+      // non-bulk command as many times as necessary and collect the results into an array.
+      let isSuccess = true;
+      const promises = dtoIn.map(joke => Calls.deleteItem(joke).catch(e => {
+        isSuccess = false;
+        return e;
+      }));
+      const resultList = await Promise.all(promises);
+      return isSuccess ? resultList : Promise.reject(resultList);
     },
   };
   /*@@viewOff:example*/
@@ -155,15 +194,16 @@
   /*@@viewOn:example*/
   const Example = createVisualComponent({
     render() {
-      const pageSize = 8;
+      const pageSize = 200;
       const dataListResult = useDataList({
         pageSize,
         handlerMap: {
           load: Calls.load,
-          createItem: Calls.createItem,
+          createMany: Calls.createMany,
+          updateMany: Calls.updateMany,
+          deleteMany: Calls.deleteMany,
         },
         itemHandlerMap: {
-          load: Calls.loadItem,
           update: Calls.updateItem,
           delete: Calls.deleteItem,
         }
@@ -175,11 +215,21 @@
       console.log(dataListResult);
 
       const modalRef = useRef();
+
+      const firstNotYetLoadedIndex = data ? data.findIndex(it => it == null) : 0;
+      const dataToRender = data && firstNotYetLoadedIndex >= 0 ? data.slice(0, firstNotYetLoadedIndex) : data || [];
       const unmountedRef = useUnmountedRef();
+
+      const [selectedItemIds, setSelectedItemIds] = useState(() => new Set());
+      if (selectedItemIds.size) {
+        const existingItems = data ? data.filter(it => it && selectedItemIds.has(it.data.id)) : [];
+        if (existingItems.length !== selectedItemIds.size) setSelectedItemIds(new Set(existingItems.map(it => it.data.id)));
+      }
+
       const showModal = useCallback((joke, onSave) => {
         const modal = modalRef.current;
         modal.open({
-          header: joke ? "Edit Joke" : "Create Joke",
+          header: joke ? "Edit Joke" : "Create Joke (x3)",
           content: (
             <UU5.Forms.Form
               onSave={onSave}
@@ -220,8 +270,61 @@
         item.handlerMap.delete();
       }, []);
 
+      const handleJokeSelectionChange = useCallback(({ selected, item }) => {
+        setSelectedItemIds(items => {
+          const result = new Set(items);
+          if (selected) result.add(item.data.id);
+          else result.delete(item.data.id);
+          return result;
+        });
+      }, []);
+
       return (
         <UU5.Bricks.Div>
+          <UU5.Bricks.Button
+            disabled={!handlerMap.createMany}
+            colorSchema="success"
+            onClick={() => {
+              showModal(null, async ({ component, values }) => {
+                let data, error;
+                try {
+                  data = await handlerMap.createMany([values, values, values]);
+                } catch (e) {
+                  error = e;
+                }
+                if (unmountedRef.current) return;
+                if (error) component.saveFail(error);
+                else component.saveDone(data);
+              });
+            }}
+          >
+            Create 3 jokes
+          </UU5.Bricks.Button>{" "}
+          <UU5.Bricks.Button
+            disabled={!handlerMap.updateMany || selectedItemIds.size === 0}
+            onClick={() => {
+              const nowIsoString = new Date().toISOString().replace(/^.*T|\..*/g, "") + "Z";
+              const selectedItems = data.filter(it => selectedItemIds.has(it.data.id));
+              const dtoInList = selectedItems.map(it => ({
+                id: it.data.id,
+                text: it.data.text.replace(/ Edited at.*/, "") + " Edited at " + nowIsoString + " (bulk)"
+              }));
+              handlerMap.updateMany(dtoInList);
+            }}
+          >
+            Update {selectedItemIds.size} selected joke(s)
+          </UU5.Bricks.Button>{" "}
+          <UU5.Bricks.Button
+            disabled={!handlerMap.deleteMany || selectedItemIds.size === 0}
+            onClick={() => {
+              const nowIsoString = new Date().toISOString().replace(/^.*T|\..*/g, "") + "Z";
+              const selectedItems = data.filter(it => selectedItemIds.has(it.data.id));
+              const dtoInList = selectedItems.map(it => ({ id: it.data.id }));
+              handlerMap.deleteMany(dtoInList);
+            }}
+          >
+            Delete {selectedItemIds.size} selected joke(s)
+          </UU5.Bricks.Button>{" "}
           <UU5.Bricks.Button disabled={!handlerMap.load} onClick={() => handlerMap.load()}>
             Reload
           </UU5.Bricks.Button>{" "}
@@ -230,18 +333,18 @@
 
           <UU5.Bricks.Section header="Data" level={3}>
             <UU5.Bricks.Row display="flex">
-              {data ? data.filter(item => item != null).map(item => (
+              {dataToRender.map(item => (
                 <UU5.Bricks.Column colWidth="m-6 l-4 xl-3" key={item.data.id}>
                   <Joke
                     data={item.data}
-                    onUpdate={!item.handlerMap.update ? null : handleJokeUpdate}
-                    onDelete={!item.handlerMap.delete ? null : handleJokeDelete}
+                    onSelectionChange={item.state === "pending" ? null : handleJokeSelectionChange}
+                    selected={selectedItemIds.has(item.data.id)}
                     processingItem={item}
                   />
                 </UU5.Bricks.Column>
-              )) : null}
+              ))}
             </UU5.Bricks.Row>
-
+  
             <PagingAutoLoad
               data={data}
               handleLoad={handlerMap.loadNext}
@@ -272,28 +375,21 @@
 
   const Joke = UU5.Common.Component.memo(createVisualComponent({
     render(props) {
-      const { onUpdate, onDelete, data, processingItem = {} } = props;
+      const { onUpdate, onDelete, onSelectionChange, data, processingItem = {}, selected } = props;
       const attrs = UU5.Common.VisualComponent.getAttrs(props);
       return (
-        <UU5.BlockLayout.Tile {...attrs} colorSchema={processingItem.errorData ? "danger" : undefined}>
+        <UU5.BlockLayout.Tile {...attrs} colorSchema={processingItem.errorData ? "danger" : selected ? "orange" : undefined}>
           <UU5.BlockLayout.Block
             actions={[
               {
-                content: "Update",
-                icon: "mdi-update",
+                content: selected ? "Deselect" : "Select",
+                icon: "mdi-check",
                 active: true,
-                disabled: !onUpdate,
-                colorSchema: "primary",
-                onClick: () => onUpdate(processingItem)
+                disabled: !onSelectionChange,
+                colorSchema: "orange",
+                bgStyle: selected ? "filled" : undefined,
+                onClick: () => onSelectionChange({ item: processingItem, selected: !selected })
               },
-              {
-                content: "Delete",
-                icon: "mdi-delete",
-                active: true,
-                disabled: !onDelete,
-                colorSchema: "danger",
-                onClick: () => onDelete(processingItem)
-              }
             ]}
           >
             <UU5.BlockLayout.Row weight="primary" ellipses>
