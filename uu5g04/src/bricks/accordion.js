@@ -55,9 +55,7 @@ export const Accordion = UU5.Common.VisualComponent.create({
       main: ns.css("accordion")
     },
     defaults: {
-      // TODO Uncomment - new editation postponed. +remove childTagName
-      // validChildTagName: "UU5.Bricks.Panel" // different key name than usual because of DCC (do not rename!)
-      childTagName: "UU5.Bricks.Panel"
+      validChildTagName: "UU5.Bricks.Panel" // different key name than usual because of DCC (do not rename!)
     },
     warnings: {
       unsupportedType: "Type %s of parameter %s is not supported. Allowed types are: %s."
@@ -65,14 +63,12 @@ export const Accordion = UU5.Common.VisualComponent.create({
     opt: {
       nestingLevelWrapper: true
     },
-    // TODO Uncomment - new editation postponed. +remove editableComponent
-    // editMode: {
-    //   name: { en: "Accordion", cs: "Accordion" },
-    //   backgroundColor: "rgba(0,0,0,.2)",
-    //   color: "rgba(0,0,0,.87)",
-    //   highlightColor: "#CCCCCC"
-    // }
-    editableComponent: "UU5.BricksEditable.Accordion"
+    editMode: {
+      name: { en: "Accordion", cs: "Accordion" },
+      backgroundColor: "rgba(0,0,0,.2)",
+      color: "rgba(0,0,0,.87)",
+      highlightColor: "#CCCCCC"
+    }
   },
   //@@viewOff:statics
 
@@ -108,8 +104,7 @@ export const Accordion = UU5.Common.VisualComponent.create({
       iconAlign: null,
       openClick: null,
       mountPanelContent: undefined,
-      // TODO Uncomment - new editation postponed.
-      // contentEditable: true
+      contentEditable: true
     };
   },
   //@@viewOff:getDefaultProps
@@ -252,14 +247,10 @@ export const Accordion = UU5.Common.VisualComponent.create({
   //@@viewOn:overriding
   shouldChildRender_: function(child) {
     let childTagName = UU5.Common.Tools.getChildTagName(child);
-    // TODO Uncomment - new editation postponed.
-    // let defaultChildTagName = this.getDefault().validChildTagName;
-    let defaultChildTagName = this.getDefault().childTagName;
+    let defaultChildTagName = this.getDefault().validChildTagName;
 
     let childTagNames = this.props.allowTags.concat(defaultChildTagName);
-    // TODO Uncomment - new editation postponed.
-    // let result = childTagNames.indexOf(childTagName) > -1 || childTagName === "UuDcc.Bricks.ComponentWrapper";
-    let result = childTagNames.indexOf(childTagName) > -1;
+    let result = childTagNames.indexOf(childTagName) > -1 || childTagName === "UuDcc.Bricks.ComponentWrapper";
 
     if (!result && (typeof child !== "string" || child.trim())) {
       if (childTagName)
@@ -301,10 +292,9 @@ export const Accordion = UU5.Common.VisualComponent.create({
     return newChildProps;
   },
 
-  // TODO Uncomment - new editation postponed.
-  // onBeforeForceEndEditation_() {
-  //   return this._editableComponent ? this._editableComponent.getPropsToSave() : undefined;
-  // },
+  onBeforeForceEndEditation_() {
+    return this._editableComponent ? this._editableComponent.getPropsToSave() : undefined;
+  },
   //@@viewOff:overriding
 
   //@@viewOn:private
@@ -391,9 +381,7 @@ export const Accordion = UU5.Common.VisualComponent.create({
   _buildChildren: function() {
     var childrenProps = {};
     if (this.props.panels) {
-      // TODO Uncomment - new editation postponed.
-      // childrenProps.content = { tag: this.getDefault().validChildTagName, propsArray: this.props.panels };
-      childrenProps.content = { tag: this.getDefault().childTagName, propsArray: this.props.panels };
+      childrenProps.content = { tag: this.getDefault().validChildTagName, propsArray: this.props.panels };
     } else if (this.getContent()) {
       childrenProps.content = this.getContent();
     } else if (this.props.children) {

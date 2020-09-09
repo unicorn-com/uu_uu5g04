@@ -18,6 +18,11 @@ import ns from "./bricks-ns.js";
 import Icon from "./icon.js";
 
 import "./rating.less";
+const RatingEditable = UU5.Common.Component.lazy(async () => {
+  await SystemJS.import("uu5g04-forms");
+  await SystemJS.import("uu5g04-bricks-editable");
+  return import("./internal/rating-editable.js");
+});
 //@@viewOff:imports
 
 export const Rating = UU5.Common.VisualComponent.create({
@@ -29,7 +34,8 @@ export const Rating = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.ContentMixin,
     UU5.Common.ColorSchemaMixin,
-    UU5.Common.NestingLevelMixin
+    UU5.Common.NestingLevelMixin,
+    UU5.Common.EditableMixin
   ],
   //@@viewOff:mixins
 
@@ -74,9 +80,24 @@ export const Rating = UU5.Common.VisualComponent.create({
   //@@viewOff:interface
 
   //@@viewOn:overriding
+  onBeforeForceEndEditation_() {
+    return this._editableComponent ? this._editableComponent.getPropsToSave() : undefined;
+  },
   //@@viewOff:overriding
 
   //@@viewOn:private
+  _registerEditableComponent(ref) {
+    this._editableComponent = ref;
+  },
+
+  _renderEditationMode() {
+    return (
+      <UU5.Common.Suspense fallback={this.getEditingLoading()}>
+        <RatingEditable component={this} ref_={this._registerEditableComponent} />
+      </UU5.Common.Suspense>
+    );
+  },
+
   _createIconArray() {
     const iconArray = [];
     const value = this.props.value;
@@ -108,10 +129,13 @@ export const Rating = UU5.Common.VisualComponent.create({
     this.props.onClick && (mainAttrs.className = mainAttrs.className + " " + this.getClassName("click"));
 
     return this.getNestingLevel() ? (
-      <div {...mainAttrs}>
-        {this._createIconArray()}
-        {this.getDisabledCoverTransparent()}
-      </div>
+      <>
+        {this.isInlineEdited() && this._renderEditationMode()}
+        <div {...mainAttrs}>
+          {this._createIconArray()}
+          {this.getDisabledCoverTransparent()}
+        </div>
+      </>
     ) : null;
   }
   //@@viewOff:render

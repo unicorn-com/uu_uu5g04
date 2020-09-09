@@ -251,15 +251,12 @@ export const DateTimePicker = Context.withContext(
 
     //@@viewOn:interface
     openCalendar(setStateCallback) {
-      this._addEvent();
-      this.setState({ calendarOpen: true, timeOpen: false }, () => this._openCalendar(setStateCallback));
-
+      this._openCalendar(setStateCallback);
       return this;
     },
 
     openTime(setStateCallback) {
-      this._addEvent();
-      this.setState({ timeOpen: true, calendarOpen: false }, () => this._openTime(setStateCallback));
+      this._openTime(setStateCallback);
       return this;
     },
 
@@ -719,7 +716,7 @@ export const DateTimePicker = Context.withContext(
               this.openTime();
             }
           } else {
-            this.close();
+            this._close(true, this._isCalendarOpen() ? this._focusDateInput : this._focusTimeInput);
           }
         } else if (e.which === 40) {
           // bottom
@@ -735,7 +732,7 @@ export const DateTimePicker = Context.withContext(
           // tab
           if (doBlur) {
             if (this.isOpen()) {
-              this.close(() => this._onBlur(opt));
+              this._close(false, () => this._onBlur(opt));
             } else {
               this._onBlur(opt);
             }
@@ -743,7 +740,7 @@ export const DateTimePicker = Context.withContext(
         } else if (e.which === 27) {
           // esc
           if (this.isOpen()) {
-            this.close();
+            this._close(true, this._isCalendarOpen() ? this._focusDateInput : this._focusTimeInput);
           }
         }
       };
@@ -760,6 +757,8 @@ export const DateTimePicker = Context.withContext(
     _handleClick(e) {
       // This function can be called twice if clicking inside the component but it doesnt do anything in that case
       let clickData = this._findTarget(e);
+      let canClose = !clickData.picker && this.isOpen();
+      let canBlur = !clickData.picker && !clickData.input;
       let opt = {
         value: this._getOutcomingValue(this.state.value),
         event: e,
@@ -767,13 +766,20 @@ export const DateTimePicker = Context.withContext(
         _data: { value: this.state.value, timeZoneAdjusted: true }
       };
 
-      if (!(clickData.input || clickData.picker)) {
-        if (this.isOpen()) {
-          this.close(() => this._onBlur(opt));
-        } else {
+      if (canClose) {
+        if (!this.props.disableBackdrop) {
+          this._close(!canBlur, canBlur ? () => this._onBlur(opt) : undefined);
+        } else if (canBlur) {
           this._onBlur(opt);
         }
+      } else if (canBlur) {
+        this._onBlur(opt);
       }
+    },
+
+    _handleFocus(e) {
+      let opt = { value: this.state.value, event: e, component: this };
+      this._onFocus(opt);
     },
 
     _addEvent() {
@@ -786,11 +792,19 @@ export const DateTimePicker = Context.withContext(
       UU5.Environment.EventListener.removeWindowEvent("resize", this.getId());
     },
 
-    _openCalendar(setStateCallback) {
+    _focusDateInput() {
+      this._calendarTextInput.focus();
+    },
+
+    _focusTimeInput() {
+      this._timeTextInput.focus();
+    },
+
+    _onOpenCalendar(setStateCallback) {
       if (this._calendarPopover) {
         this._calendarPopover.open(
           {
-            onClose: this._closeCalendar,
+            onClose: this._onCloseCalendar,
             aroundElement: UU5.Common.DOM.findNode(this._calendarTextInput),
             position: "bottom",
             offset: this._shouldOpenToContent() ? 0 : 4
@@ -802,11 +816,11 @@ export const DateTimePicker = Context.withContext(
       }
     },
 
-    _openTime(setStateCallback) {
+    _onOpenTime(setStateCallback) {
       if (this._timePopover) {
         this._timePopover.open(
           {
-            onClose: this._closeTime,
+            onClose: this._onCloseTime,
             aroundElement: UU5.Common.DOM.findNode(this._timeTextInput),
             position: "bottom",
             offset: this._shouldOpenToContent() ? 0 : 4,
@@ -819,7 +833,7 @@ export const DateTimePicker = Context.withContext(
       }
     },
 
-    _closeCalendar(setStateCallback) {
+    _onCloseCalendar(setStateCallback) {
       if (this._calendarPopover) {
         this._calendarPopover.close(setStateCallback);
       } else if (typeof setStateCallback === "function") {
@@ -827,12 +841,36 @@ export const DateTimePicker = Context.withContext(
       }
     },
 
-    _closeTime(setStateCallback) {
+    _onCloseTime(setStateCallback) {
       if (this._timePopover) {
         this._timePopover.close(setStateCallback);
       } else if (typeof setStateCallback === "function") {
         setStateCallback();
       }
+    },
+
+    _closeCalendar(setStateCallback) {
+      this.setState({ calendarOpen: false }, () => this._onCloseCalendar(setStateCallback));
+    },
+
+    _closeTime(setStateCallback) {
+      this.setState({ timeOpen: false }, () => this._onCloseTime(setStateCallback));
+    },
+
+    _close(persistListeners, setStateCallback) {
+      if (!persistListeners) this._removeEvent();
+      if (this.state.calendarOpen) this._closeCalendar(setStateCallback);
+      else if (this.state.timeOpen) this._closeTime(setStateCallback);
+    },
+
+    _openCalendar(setStateCallback) {
+      this._addEvent();
+      this.setState({ calendarOpen: true, timeOpen: false }, () => this._onOpenCalendar(setStateCallback));
+    },
+
+    _openTime(setStateCallback) {
+      this._addEvent();
+      this.setState({ calendarOpen: false, timeOpen: true }, () => this._onOpenTime(setStateCallback));
     },
 
     _shouldOpenToContent() {
@@ -1683,7 +1721,7 @@ export const DateTimePicker = Context.withContext(
                 placeholder={this._getPlacehoder()}
                 type="text"
                 onChange={this._onChangeDate}
-                onFocus={!this.isReadOnly() && !this.isComputedDisabled() ? this._onFocus : null}
+                onFocus={!this.isReadOnly() && !this.isComputedDisabled() ? this._handleFocus : null}
                 onKeyDown={this.onKeyDown}
                 mainAttrs={this._getDateInputAttrs()}
                 disabled={this.isComputedDisabled()}
@@ -1711,7 +1749,7 @@ export const DateTimePicker = Context.withContext(
                 placeholder={this.props.placeholderTime}
                 type="text"
                 onChange={this._onChangeTime}
-                onFocus={!this.isReadOnly() && !this.isComputedDisabled() ? this._onFocus : null}
+                onFocus={!this.isReadOnly() && !this.isComputedDisabled() ? this._handleFocus : null}
                 onKeyDown={this.onKeyDown}
                 mainAttrs={this._getTimeInputAttrs()}
                 disabled={this.isComputedDisabled()}

@@ -14,10 +14,14 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
-
 import Section from "./section.js";
-
 import "./newspaper.less";
+
+const EditationComponent = UU5.Common.Component.lazy(async () => {
+  await SystemJS.import("uu5g04-forms");
+  await SystemJS.import("uu5g04-bricks-editable");
+  return import("./internal/newspaper-editable.js");
+});
 //@@viewOff:imports
 
 export const Newspaper = UU5.Common.VisualComponent.create({
@@ -30,7 +34,8 @@ export const Newspaper = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.SectionMixin,
     UU5.Common.ColorSchemaMixin,
-    UU5.Common.NestingLevelMixin
+    UU5.Common.NestingLevelMixin,
+    UU5.Common.EditableMixin
   ],
   //@@viewOff:mixins
 
@@ -42,6 +47,12 @@ export const Newspaper = UU5.Common.VisualComponent.create({
       main: ns.css("newspaper uu5-common-text"),
       //bg: 'uu5-common-bg',
       columns: "uu5-common-newspaper-layout-"
+    },
+    editMode: {
+      name: { en: "Newspaper", cs: "Newspaper" },
+      backgroundColor: "rgba(0,0,0,.2)",
+      color: "rgba(0,0,0,.87)",
+      highlightColor: "#CCCCCC"
     }
   },
   //@@viewOff:statics
@@ -54,7 +65,7 @@ export const Newspaper = UU5.Common.VisualComponent.create({
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps() {
     return {
       columnsCount: 2
       //background: false
@@ -69,21 +80,56 @@ export const Newspaper = UU5.Common.VisualComponent.create({
   //@@viewOff:interface
 
   //@@viewOn:overriding
+  onBeforeForceEndEditation_() {
+    return this._editableComponent ? this._editableComponent.getPropsToSave() : undefined;
+  },
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _getMainProps: function() {
-    var mainProps = this.getMainPropsToPass();
-    mainProps.className += " " + this.getClassName().columns + this.props.columnsCount;
-    //this.props.background && (mainProps.className += ' ' + this.getClassName().bg);
+  _registerEditableComponent(ref) {
+    this._editableComponent = ref;
+  },
+
+  _renderEditationMode() {
+    return (
+      <UU5.Common.Suspense fallback={this.getEditingLoading()}>
+        <EditationComponent component={this} ref_={this._registerEditableComponent} renderView={this._renderView} />
+      </UU5.Common.Suspense>
+    );
+  },
+
+  _renderView(forcedContent) {
+    let props = this._getMainProps(this.isInlineEdited());
+    if (forcedContent) {
+      props.content = forcedContent;
+    }
+
+    return <Section {...props}>{this.props.children && UU5.Common.Children.toArray(this.props.children)}</Section>;
+  },
+
+  _getMainProps(editation) {
+    let mainProps = this.getMainPropsToPass();
+
+    if (editation) {
+      mainProps.header = undefined;
+      mainProps.footer = undefined;
+    } else {
+      // display only single column in editation because if there is a RichText (DccPlaceholder) in the content, it will be weirdly split into columns
+      // and sometimes it freezes the whole page (maybe some infinite loop) after an interaction
+      mainProps.className += " " + this.getClassName().columns + this.props.columnsCount;
+    }
+
     return mainProps;
   },
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render() {
     return this.getNestingLevel() ? (
-      <Section {...this._getMainProps()}>{this.props.children && UU5.Common.Children.toArray(this.props.children)}</Section>
+      <>
+        {this.isInlineEdited() && this._renderEditationMode()}
+        {this.isNotInlineEdited() && this._renderView()}
+      </>
     ) : null;
   }
   //@@viewOff:render

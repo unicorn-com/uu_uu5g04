@@ -18,11 +18,17 @@ import Css from "./internal/css.js";
 import Link from "./link.js";
 import Image from "./image.js";
 import Icon from "./icon.js";
+
+const EditationComponent = UU5.Common.Component.lazy(async () => {
+  await SystemJS.import("uu5g04-forms");
+  await SystemJS.import("uu5g04-bricks-editable");
+  return import("./internal/rich-link-editable.js");
+});
 //@@viewOff:imports
 
 export const RichLink = UU5.Common.VisualComponent.create({
   //@@viewOn:mixins
-  mixins: [UU5.Common.BaseMixin],
+  mixins: [UU5.Common.BaseMixin, UU5.Common.EditableMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -68,9 +74,6 @@ export const RichLink = UU5.Common.VisualComponent.create({
         text-overflow: ellipsis;
         white-space: nowrap;`
     },
-    opt: {
-      hoc: true
-    },
     cache: {}
   },
   //@@viewOff:statics
@@ -104,12 +107,34 @@ export const RichLink = UU5.Common.VisualComponent.create({
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
+  focus() {
+    this._linkRef.focus();
+  },
   //@@viewOff:interface
 
   //@@viewOn:overriding
+  onBeforeForceEndEditation_() {
+    return this._editableComponent ? this._editableComponent.getPropsToSave() : undefined;
+  },
   //@@viewOff:overriding
 
   //@@viewOn:private
+  _renderEditationMode() {
+    return (
+      <UU5.Common.Suspense fallback={this.getEditingLoading()}>
+        <EditationComponent component={this} ref_={this._registerEditableComponent} />
+      </UU5.Common.Suspense>
+    );
+  },
+
+  _registerEditableComponent(ref) {
+    this._editableComponent = ref;
+  },
+
+  _registerLink(ref) {
+    this._linkRef = ref;
+  },
+
   _prepareLinkData(state = this.state, props = this.props) {
     let resultState;
     if (state.linkData === undefined || state.loadedForHref !== props.href) {
@@ -221,47 +246,57 @@ export const RichLink = UU5.Common.VisualComponent.create({
   //@@viewOn:render
   render() {
     let { linkData } = this.state;
-    let { type, href, content, tooltip, ...restProps } = this.props;
+    let { type, href, content, tooltip, ref_, ...restProps } = this.props;
     let { image, title, description, favicon } = linkData || {};
 
     return (
-      <Link {...restProps} {...this.getMainPropsToPass()} href={href} tooltip={tooltip != null ? tooltip : href}>
-        {linkData && type === "full" ? (
-          <span className={this.getClassName("image")}>
-            {image ? (
-              <Image
-                src={image}
-                className={this.getClassName("imageImg")}
-                mainAttrs={{ onError: this._onImageError }}
-                responsive={false}
-              />
-            ) : (
-              <Icon icon="mdi-web" className={this.getClassName("imageIcon")} />
-            )}
+      <UU5.Common.Fragment>
+        <Link
+          {...restProps}
+          {...this.getMainPropsToPass()}
+          id={this.getId()} // needed due to DCC
+          href={href}
+          tooltip={tooltip != null ? tooltip : href}
+          ref_={this._registerLink}
+        >
+          {linkData && type === "full" ? (
+            <span className={this.getClassName("image")}>
+              {image ? (
+                <Image
+                  src={image}
+                  className={this.getClassName("imageImg")}
+                  mainAttrs={{ onError: this._onImageError }}
+                  responsive={false}
+                />
+              ) : (
+                <Icon icon="mdi-web" className={this.getClassName("imageIcon")} />
+              )}
+            </span>
+          ) : null}
+          <span className={this.getClassName("container")}>
+            {title && <span className={this.getClassName("title")}>{title}</span>}
+            {description && <span className={this.getClassName("description")}>{description}</span>}
+            <span className={this.getClassName("href")}>
+              {favicon
+                ? [
+                    <Image
+                      key="favicon"
+                      src={favicon}
+                      className={this.getClassName("favicon")}
+                      height={16}
+                      width={16}
+                      responsive={false}
+                      mainAttrs={{ onError: this._onFaviconError }}
+                    />,
+                    " "
+                  ]
+                : null}
+              {href}
+            </span>
           </span>
-        ) : null}
-        <span className={this.getClassName("container")}>
-          {title && <span className={this.getClassName("title")}>{title}</span>}
-          {description && <span className={this.getClassName("description")}>{description}</span>}
-          <span className={this.getClassName("href")}>
-            {favicon
-              ? [
-                  <Image
-                    key="favicon"
-                    src={favicon}
-                    className={this.getClassName("favicon")}
-                    height={16}
-                    width={16}
-                    responsive={false}
-                    mainAttrs={{ onError: this._onFaviconError }}
-                  />,
-                  " "
-                ]
-              : null}
-            {href}
-          </span>
-        </span>
-      </Link>
+        </Link>
+        {this.isInlineEdited() ? this._renderEditationMode() : null}
+      </UU5.Common.Fragment>
     );
   }
   //@@viewOff:render

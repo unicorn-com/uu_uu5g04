@@ -190,7 +190,7 @@ export const Modal = UU5.Common.VisualComponent.create({
       size: "m",
       shown: false,
       sticky: false,
-      stickyBackground: false,
+      stickyBackground: true,
       scrollableBackground: false,
       forceRender: false,
       onClose: null,

@@ -17,6 +17,11 @@ import ns from "./bricks-ns.js";
 const ClassNames = UU5.Common.ClassNames;
 
 import "./well.less";
+const WellEditable = UU5.Common.Component.lazy(async () => {
+  await SystemJS.import("uu5g04-forms");
+  await SystemJS.import("uu5g04-bricks-editable");
+  return import("./internal/well-editable.js");
+});
 //@@viewOff:imports
 
 export const Well = UU5.Common.VisualComponent.create({
@@ -28,7 +33,8 @@ export const Well = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.ContentMixin,
     UU5.Common.ColorSchemaMixin,
-    UU5.Common.NestingLevelMixin
+    UU5.Common.NestingLevelMixin,
+    UU5.Common.EditableMixin
   ],
   //@@viewOff:mixins
 
@@ -68,9 +74,16 @@ export const Well = UU5.Common.VisualComponent.create({
   //@@viewOff:interface
 
   //@@viewOn:overriding
+  onBeforeForceEndEditation_() {
+    return this._editableComponent ? this._editableComponent.getPropsToSave() : undefined;
+  },
   //@@viewOff:overriding
 
   //@@viewOn:private
+  _registerEditableComponent(ref) {
+    this._editableComponent = ref;
+  },
+
   _getMainAttrs() {
     let mainAttrs = this.getMainAttrs();
 
@@ -92,6 +105,14 @@ export const Well = UU5.Common.VisualComponent.create({
 
     return mainAttrs;
   },
+
+  _renderEditationMode() {
+    return (
+      <UU5.Common.Suspense fallback={this.getEditingLoading()}>
+        <WellEditable component={this} ref_={this._registerEditableComponent} />
+      </UU5.Common.Suspense>
+    );
+  },
   //@@viewOff:private
 
   //@@viewOn:render
@@ -102,6 +123,7 @@ export const Well = UU5.Common.VisualComponent.create({
       <div {...mainAttrs}>
         {this.getChildren()}
         {this.getDisabledCover()}
+        {this.isInlineEdited() && this._renderEditationMode()}
       </div>
     ) : null;
   }

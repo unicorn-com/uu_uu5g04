@@ -14,11 +14,15 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
-
 import Cover from "./progress-bar-cover.js";
 import Item from "./progress-bar-item.js";
-
 import "./progress-bar.less";
+
+const EditationComponent = UU5.Common.Component.lazy(async () => {
+  await SystemJS.import("uu5g04-forms");
+  await SystemJS.import("uu5g04-bricks-editable");
+  return import("./internal/progress-bar-editable.js");
+});
 //@@viewOff:imports
 
 export const ProgressBar = UU5.Common.VisualComponent.create({
@@ -30,7 +34,8 @@ export const ProgressBar = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.ContentMixin,
     UU5.Common.ColorSchemaMixin,
-    UU5.Common.NestingLevelMixin
+    UU5.Common.NestingLevelMixin,
+    UU5.Common.EditableMixin
   ],
   //@@viewOff:mixins
 
@@ -151,9 +156,25 @@ export const ProgressBar = UU5.Common.VisualComponent.create({
     }
     return result;
   },
+
+  onBeforeForceEndEditation_() {
+    return this._editableComponent ? this._editableComponent.getPropsToSave() : undefined;
+  },
   //@@viewOff:overriding
 
   //@@viewOn:private
+  _renderEditationMode() {
+    return (
+      <UU5.Common.Suspense fallback={this.getEditingLoading()}>
+        <EditationComponent component={this} ref_={this._registerEditableComponent} />
+      </UU5.Common.Suspense>
+    );
+  },
+
+  _registerEditableComponent(ref) {
+    this._editableComponent = ref;
+  },
+
   _getProgressBarItem: function(name) {
     return this.getItem(name || this.getDefault().itemName);
   },
@@ -185,7 +206,10 @@ export const ProgressBar = UU5.Common.VisualComponent.create({
   //@@viewOn:render
   render: function() {
     return this.getNestingLevel() ? (
-      <Cover {...this._getMainProps()}>{this.props.children ? this.getChildren() : this._buildChild()}</Cover>
+      <UU5.Common.Fragment>
+        <Cover {...this._getMainProps()}>{this.props.children ? this.getChildren() : this._buildChild()}</Cover>
+        {this.isInlineEdited() && this._renderEditationMode()}
+      </UU5.Common.Fragment>
     ) : null;
   }
   //@@viewOff:render

@@ -14,12 +14,17 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
-const ClassNames = UU5.Common.ClassNames;
-
 import { Div } from "./factory.js";
-
 import "./button-group.less";
+
+const EditationComponent = UU5.Common.Component.lazy(async () => {
+  await SystemJS.import("uu5g04-forms");
+  await SystemJS.import("uu5g04-bricks-editable");
+  return import("./internal/button-group-editable.js");
+});
 //@@viewOff:imports
+
+const ClassNames = UU5.Common.ClassNames;
 
 export const ButtonGroup = UU5.Common.VisualComponent.create({
   displayName: "ButtonGroup", // for backward compatibility (test snapshots)
@@ -30,7 +35,8 @@ export const ButtonGroup = UU5.Common.VisualComponent.create({
     UU5.Common.NestingLevelMixin,
     UU5.Common.ColorSchemaMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.PureRenderMixin
+    UU5.Common.PureRenderMixin,
+    UU5.Common.EditableMixin
   ],
   //@@viewOff:mixins
 
@@ -45,7 +51,7 @@ export const ButtonGroup = UU5.Common.VisualComponent.create({
       bgStyle: ns.css("button-group-bg-")
     },
     defaults: {
-      childTagNames: [
+      validChildTagNames: [
         "UU5.Bricks.Button",
         "UU5.Bricks.Dropdown",
         "UU5.Bricks.ButtonSwitch",
@@ -54,6 +60,12 @@ export const ButtonGroup = UU5.Common.VisualComponent.create({
     },
     opt: {
       nestingLevelWrapper: true
+    },
+    editMode: {
+      name: { en: "ButtonGroup", cs: "ButtonGroup" },
+      backgroundColor: "rgba(0,0,0,.2)",
+      color: "rgba(0,0,0,.87)",
+      highlightColor: "#CCCCCC"
     }
   },
   //@@viewOff:statics
@@ -81,29 +93,13 @@ export const ButtonGroup = UU5.Common.VisualComponent.create({
       allowTags: [],
       bgStyle: undefined,
       borderRadius: null,
-      elevation: null,
+      elevation: 0,
       baseline: false
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  // UNSAFE_componentWillReceiveProps(nextProps) {
-  //   if (nextProps.controlled) {
-  //     if (nextProps.borderRadius !== this.props.borderRadius) {
-  //       this._removeElevationRadius();
-  //       this._createElevationRadius();
-  //     }
-  //   }
-  // },
-
-  // UNSAFE_componentWillMount() {
-  //   this._createElevationRadius();
-  // },
-
-  // componentWillUnmount() {
-  //   this._removeElevationRadius();
-  // },
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
@@ -112,9 +108,9 @@ export const ButtonGroup = UU5.Common.VisualComponent.create({
   //@@viewOn:overriding
   shouldChildRender_(child) {
     let childTagName = UU5.Common.Tools.getChildTagName(child);
-    let defaultChildTagNames = this.getDefault().childTagNames;
+    let defaultChildTagNames = this.getDefault().validChildTagNames;
     let childTagNames = this.props.allowTags.concat(defaultChildTagNames);
-    let result = childTagNames.indexOf(childTagName) > -1;
+    let result = childTagNames.indexOf(childTagName) > -1 || childTagName === "UuDcc.Bricks.ComponentWrapper";
     if (!result && (typeof child !== "string" || child.trim())) {
       if (childTagName)
         this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagNames[0]], {
@@ -129,7 +125,7 @@ export const ButtonGroup = UU5.Common.VisualComponent.create({
     let newChildProps = { ...child.props };
 
     let childTagName = UU5.Common.Tools.getChildTagName(child);
-    if (childTagName === this.getDefault().childTagNames[1]) {
+    if (childTagName === this.getDefault().validChildTagNames[1]) {
       let className = newChildProps.className ? newChildProps.className + " " : "";
       newChildProps.className = className;
     }
@@ -146,23 +142,16 @@ export const ButtonGroup = UU5.Common.VisualComponent.create({
 
     return newChildProps;
   },
+
+  onBeforeForceEndEditation_() {
+    return this._editableComponent ? this._editableComponent.getPropsToSave() : undefined;
+  },
   //@@viewOff:overriding
 
   //@@viewOn:private
-  // _createElevationRadius() {
-  //   if (this.props.elevation === "-1" || this.props.elevation === -1) {
-  //     UU5.Common.Tools.createStyleTag(
-  //       "." + this.getClassName("main") + "#" + this.getId() + "::before { border-radius:" + this.props.borderRadius + " }",
-  //       this.getId()
-  //     );
-  //   }
-  // },
-
-  // _removeElevationRadius() {
-  //   if (this.props.elevation === "-1" || this.props.elevation === -1) {
-  //     UU5.Common.Tools.removeStyleTag(this.getId());
-  //   }
-  // },
+  _registerEditableComponent(component) {
+    this._editableComponent = component;
+  },
 
   _getPropsToPass() {
     let newProps = this.getMainPropsToPass();
@@ -190,7 +179,16 @@ export const ButtonGroup = UU5.Common.VisualComponent.create({
 
   //@@viewOn:render
   render() {
-    return this.getNestingLevel() ? <Div {...this._getPropsToPass()}>{this.getChildren()}</Div> : null;
+    return this.getNestingLevel() ? (
+      <>
+        {<Div {...this._getPropsToPass()}>{this.getChildren()}</Div>}
+        {this.isInlineEdited() && (
+          <UU5.Common.Suspense fallback={this.getEditingLoading()}>
+            <EditationComponent component={this} ref_={this._registerEditableComponent} />
+          </UU5.Common.Suspense>
+        )}
+      </>
+    ) : null;
   }
   //@@viewOff:render
 });

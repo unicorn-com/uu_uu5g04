@@ -370,4 +370,100 @@ export const QRCodeSize = ({ componentProps, onChangeProps, errors }) => (
   />
 );
 
-export default { PresetEditComponent, ColWidthEditComponent, EditItemInfo, QRCodeSize };
+export const CardInline = ({ componentProps, onChangeProps }) => (
+  <UU5.Forms.SwitchSelector
+    items={[
+      { content: <UU5.Bricks.Lsi lsi={Lsi.common.valueFalse} />, value: false },
+      { content: <UU5.Bricks.Lsi lsi={Lsi.common.valueTrue} />, value: true }
+    ]}
+    value={componentProps.inline}
+    label={<UU5.Bricks.Lsi lsi={Lsi.card.inlineLabel} />}
+    onChange={({ value }) => {
+      onChangeProps({
+        inline: value,
+        width: value ? componentProps.width : null,
+        minWidth: value ? componentProps.minWidth : null
+      });
+    }}
+  />
+);
+
+export const ProgressBarStriped = ({ componentProps, onChangeProps }) => (
+  <UU5.Forms.SwitchSelector
+    items={[
+      { content: <UU5.Bricks.Lsi lsi={Lsi.progressBar.stripedValueFalse} />, value: false },
+      { content: <UU5.Bricks.Lsi lsi={Lsi.progressBar.stripedValueTrue} />, value: true }
+    ]}
+    value={componentProps.striped}
+    label={<UU5.Bricks.Lsi lsi={Lsi.progressBar.stripedLabel} />}
+    onChange={({ value }) => {
+      onChangeProps({
+        striped: value,
+        animated: value ? componentProps.animated : false
+      });
+    }}
+  />
+);
+
+export const ProgressBarItemStriped = ({ onChangeItems, items, editedItemId }) => {
+  let editedItemIndex = items.findIndex(item => item.id === editedItemId);
+  let editedItem = items[editedItemIndex];
+
+  return (
+    <UU5.Forms.SwitchSelector
+      items={[
+        { content: <UU5.Bricks.Lsi lsi={Lsi.progressBar.stripedValueFalse} />, value: false },
+        { content: <UU5.Bricks.Lsi lsi={Lsi.progressBar.stripedValueTrue} />, value: true }
+      ]}
+      value={editedItem.props.striped}
+      label={<UU5.Bricks.Lsi lsi={Lsi.progressBar.stripedLabel} />}
+      onChange={({ value }) => {
+        let newItems = items.map(item => ({ id: item.id }));
+        if (!newItems[editedItemIndex].props) {
+          newItems[editedItemIndex].props = {};
+        }
+        newItems[editedItemIndex].props.striped = value;
+        newItems[editedItemIndex].props.animated = value ? newItems[editedItemIndex].animated : false;
+        onChangeItems(newItems);
+      }}
+    />
+  );
+};
+
+export const LineVertical = ({ componentProps, onChangeProps }) => (
+  <UU5.Common.Fragment>
+    <UU5.Forms.SwitchSelector
+      items={[
+        { content: <UU5.Bricks.Lsi lsi={Lsi.line.verticalValueFalse} />, value: false },
+        { content: <UU5.Bricks.Lsi lsi={Lsi.line.verticalValueTrue} />, value: true }
+      ]}
+      value={!!componentProps.vertical || typeof componentProps.vertical === "number"}
+      label={<UU5.Bricks.Lsi lsi={Lsi.line.verticalLabel} />}
+      onChange={({ value }) => {
+        onChangeProps({ vertical: value });
+      }}
+    />
+    <UU5.Forms.Number
+      value={typeof componentProps.vertical === "number" ? componentProps.vertical : undefined}
+      label={<UU5.Bricks.Lsi lsi={Lsi.line.verticalHeightLabel} />}
+      disabled={!componentProps.vertical && typeof componentProps.vertical !== "number"}
+      valueType="number"
+      min={1}
+      suffix="px"
+      onChange={({ value }) => {
+        onChangeProps({ vertical: value });
+      }}
+    />
+  </UU5.Common.Fragment>
+);
+
+export default {
+  PresetEditComponent,
+  ColWidthEditComponent,
+  EditItemInfo,
+  QRCodeSize,
+  CardInline,
+  ProgressBarStriped,
+  ProgressBarItemStriped,
+  LineVertical
+};

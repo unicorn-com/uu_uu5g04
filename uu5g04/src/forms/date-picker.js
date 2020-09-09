@@ -392,7 +392,7 @@ export const DatePicker = Context.withContext(
           if (!this.isOpen()) {
             this.open();
           } else {
-            this.close();
+            this._close(true, () => this.focus());
           }
         } else if (e.which === 40) {
           // bottom
@@ -404,7 +404,7 @@ export const DatePicker = Context.withContext(
           // tab
           if (doBlur) {
             if (this.isOpen()) {
-              this.close(() => this._onBlur(opt));
+              this._close(false, () => this._onBlur(opt));
             } else {
               this._onBlur(opt);
             }
@@ -412,7 +412,7 @@ export const DatePicker = Context.withContext(
         } else if (e.which === 27) {
           // esc
           if (this.isOpen()) {
-            this.close();
+            this._close(true, () => this.focus());
           }
         }
       };
@@ -429,15 +429,24 @@ export const DatePicker = Context.withContext(
     _handleClick(e) {
       // This function can be called twice if clicking inside the component but it doesnt do anything in that case
       let clickData = this._findTarget(e);
+      let canClose = !clickData.picker && this.isOpen();
+      let canBlur = !clickData.picker && !clickData.input;
       let opt = { value: this.state.value, event: e, component: this };
 
-      if (!(clickData.input || clickData.picker) && !this.props.disableBackdrop) {
-        if (this.isOpen()) {
-          this.close(() => this._onBlur(opt));
+      if (canClose) {
+        if (!this.props.disableBackdrop) {
+          this._close(!canBlur, canBlur ? () => this._onBlur(opt) : undefined);
+        } else if (canBlur) {
+          this._onBlur(opt);
         }
-      } else if (!(clickData.input || clickData.picker) && this.props.disableBackdrop) {
+      } else if (canBlur) {
         this._onBlur(opt);
       }
+    },
+
+    _handleFocus(e) {
+      let opt = { value: this.state.value, event: e, component: this };
+      this._onFocus(opt);
     },
 
     _addEvent() {
@@ -467,11 +476,11 @@ export const DatePicker = Context.withContext(
       );
     },
 
-    _open(setStateCallback) {
+    _onOpen(setStateCallback) {
       if (this._popover) {
         this._popover.open(
           {
-            onClose: this._close,
+            onClose: this._onClose,
             aroundElement: this._textInput.findDOMNode(),
             position: "bottom",
             offset: this._shouldOpenToContent() ? 0 : 4,
@@ -484,12 +493,22 @@ export const DatePicker = Context.withContext(
       }
     },
 
-    _close(setStateCallback) {
+    _onClose(setStateCallback) {
       if (this._popover) {
         this._popover.close(setStateCallback);
       } else if (typeof setStateCallback === "function") {
         setStateCallback();
       }
+    },
+
+    _close(persistListeners, setStateCallback) {
+      if (!persistListeners) this._removeEvent();
+      this.closeDefault(() => this._onClose(setStateCallback));
+    },
+
+    _open(setStateCallback) {
+      this._addEvent();
+      this.openDefault(() => this._onOpen(setStateCallback));
     },
 
     _shouldOpenToContent() {
@@ -938,7 +957,7 @@ export const DatePicker = Context.withContext(
               placeholder={this._getPlaceholder()}
               type="text"
               onChange={this._onChange}
-              onFocus={!this.isReadOnly() && !this.isComputedDisabled() ? this._onFocus : null}
+              onFocus={!this.isReadOnly() && !this.isComputedDisabled() ? this._handleFocus : null}
               onKeyDown={this.onKeyDown}
               mainAttrs={inputAttrs}
               disabled={this.isComputedDisabled()}

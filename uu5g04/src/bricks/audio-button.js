@@ -47,6 +47,7 @@ export const AudioButton = UU5.Common.VisualComponent.create({
     elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
     elevationHover: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
     baseline: UU5.PropTypes.bool,
+    colorSchema: UU5.PropTypes.string,
     // audio props
     src: UU5.PropTypes.string.isRequired,
     autoPlay: UU5.PropTypes.bool,
@@ -72,6 +73,7 @@ export const AudioButton = UU5.Common.VisualComponent.create({
       elevation: null,
       elevationHover: null,
       baseline: false,
+      colorSchema: undefined,
       // audio props
       autoPlay: false,
       loop: false,
@@ -164,6 +166,7 @@ export const AudioButton = UU5.Common.VisualComponent.create({
           elevation={this.props.elevation}
           elevationHover={this.props.elevationHover}
           baseline={this.props.baseline}
+          colorSchema={this.props.colorSchema}
           onClick={this._onClick}
         >
           <UU5.Bricks.Icon icon={this._getIcon()} />

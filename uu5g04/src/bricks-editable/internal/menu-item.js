@@ -199,13 +199,7 @@ const MenuItem = UU5.Common.VisualComponent.create({
     return (
       <div className={this.getClassName("itemContentWrapper")}>
         {this.props.icon ? <UU5.Bricks.Icon className={this.getClassName("itemIcon")} icon={this.props.icon} /> : null}
-        <span className={this.getClassName("itemButtonText")}>
-          {Helpers.isLsiObject(this.props.children) ? (
-            <UU5.Bricks.Lsi lsi={this.props.children} />
-          ) : (
-            this.props.children
-          )}
-        </span>
+        <span className={this.getClassName("itemButtonText")}>{Helpers.getLabel(this.props.children)}</span>
       </div>
     );
   },

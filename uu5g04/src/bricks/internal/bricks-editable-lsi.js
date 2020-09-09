@@ -1,5 +1,17 @@
 export const EditableLsi = {
   common: {
+    valueTrue: {
+      cs: "zapnuto",
+      en: "enabled",
+      sk: "zapnuté",
+      uk: "увімкнено"
+    },
+    valueFalse: {
+      cs: "vypnuto",
+      en: "disabled",
+      sk: "vypnuté",
+      uk: "вимкнено"
+    },
     headerPlaceholder: {
       cs: "Hlavička",
       en: "Header"
@@ -719,6 +731,229 @@ export const EditableLsi = {
     mountPanelContentDescription: {
       en: `Defines when is the content of each of the panels mounted. Choosing a value like "on each expand" is recommended for performance optimalization.`,
       cs: `Definuje, kdy je obsah všech vložených panelů vykreslen. Vybrání hodnoty "při každém rozbalení" je doporučeno z hlediska optimalizace výkonu.`
+    }
+  },
+  buttonGroup: {
+    verticalLabel: {
+      en: "Orientation",
+      cs: "Orientace"
+    },
+    verticalValueFalse: {
+      en: "Horizontal",
+      cs: "Horizontální"
+    },
+    verticalLabelTrue: {
+      en: "Vertical",
+      cs: "Vertikální"
+    },
+    baselineLabel: {
+      en: "Align to baseline",
+      cs: "Zarovnat na baseline"
+    },
+    itemLabelButton: {
+      en: "Button",
+      cs: "Tlačítko"
+    },
+    itemLabelDropdown: {
+      en: "Dropdown",
+      cs: "Rozbalovací menu"
+    },
+    itemLabelButtonSwitch: {
+      en: "Button switch",
+      cs: "Zamačkávací tlačítko"
+    },
+    itemLabelLanguageSelector: {
+      en: "Language selector",
+      cs: "Výběr jazyka"
+    }
+  },
+  newspaper: {
+    columnsCountValue1: {
+      en: "Column",
+      cs: "Sloupec"
+    },
+    columnsCountValue2: {
+      en: "Columns",
+      cs: "Sloupce"
+    },
+    columnsCountValue3: {
+      en: "Columns",
+      cs: "Sloupců"
+    },
+    columnsCountTooltip: {
+      en: "Number of columns",
+      cs: "Počet sloupců"
+    }
+  },
+  rating: {
+    modalHeader: {
+      cs: "Upravit hodnocení",
+      en: "Edit Rating"
+    },
+    countLabel: {
+      en: "Number of icons",
+      cs: "Počet ikon"
+    },
+    valueLabel: {
+      en: "Value",
+      cs: "Hodnota"
+    },
+    iconLabel: {
+      en: "Icon",
+      cs: "Ikona"
+    }
+  },
+  line: {
+    modalHeader: {
+      cs: "Upravit Line",
+      en: "Edit Line"
+    },
+    sizeLabel: {
+      cs: "Velikost",
+      en: "Size"
+    },
+    verticalLabel: {
+      cs: "Typ zobrazení",
+      en: "Display type"
+    },
+    verticalValueTrue: {
+      cs: "vertikální",
+      en: "vertical"
+    },
+    verticalValueFalse: {
+      cs: "horizontální",
+      en: "horizontal"
+    },
+    verticalHeightLabel: {
+      cs: "Výška",
+      en: "Height"
+    }
+  },
+  progressBar: {
+    progressLabel: {
+      en: "Progress",
+      cs: "Pokrok"
+    },
+    stripedLabel: {
+      en: "Visual type",
+      cs: "Typ vzhledu"
+    },
+    stripedValueFalse: {
+      en: "plain",
+      cs: "plochý"
+    },
+    stripedValueTrue: {
+      en: "striped",
+      cs: "pruhovaný"
+    },
+    animatedLabel: {
+      en: "Animated stripes",
+      cs: "Animované pruhy"
+    }
+  },
+  loading: {
+    modalHeader: {
+      en: "Edit Loading",
+      cs: "Editovat Loading"
+    },
+    inlineLabel: {
+      en: "Display type",
+      cs: "Typ zobrazení"
+    },
+    inlineValueFalse: {
+      en: "standard",
+      cs: "standardní"
+    },
+    inlineValueTrue: {
+      en: "inline",
+      cs: "inline"
+    }
+  },
+  card: {
+    modalHeader: {
+      cs: "Upravit kartu",
+      en: "Edit card"
+    },
+    elevationPropsLabel: {
+      cs: "Vyvýšení a mezery",
+      en: "Elevation and spaces"
+    },
+    inlinePropsLabel: {
+      cs: "Inline zobrazení",
+      en: "Inline display"
+    },
+    widthLabel: {
+      en: "Width",
+      cs: "Šířka"
+    },
+    elevationHoverLabel: {
+      en: "Elevation on hover",
+      cs: "Úroveň vyvýšení při najetí"
+    },
+    minWidthLabel: {
+      en: "Minimal width",
+      cs: "Minimální šířka"
+    },
+    inlineLabel: {
+      en: "Inline display",
+      cs: "Inline zobrazení"
+    },
+    noSpacesLabel: {
+      en: "No spaces",
+      cs: "Žádné mezery"
+    },
+    noSpacesMessage: {
+      en: "When enabled, the component has no margin.",
+      cs: "Pokud je zapnuto, komponenta nemá margin."
+    }
+  },
+  richLink: {
+    hrefLabel: {
+      en: "URL address",
+      cs: "URL adresa"
+    },
+    typeLabel: {
+      en: "Display type",
+      cs: "Typ zobrazení"
+    },
+    typeValueSimple: {
+      en: "simple",
+      cs: "jednoduchý"
+    },
+    typeValueFull: {
+      en: "full",
+      cs: "plný"
+    },
+    smoothScrollLabel: {
+      en: "Scroll duration to the fragment",
+      cs: "Doba scrollování k fragmentu"
+    },
+    smoothScrollMessage: {
+      en:
+        "The time it takes to scroll to the location that is defined by the URL adress. The location is defined by an element's id. E.g. https://unicorn.com#contacts",
+      cs:
+        "Doba scrollování k lokaci definované v URL adrese. Lokace je definována atributem id elementu. Např. https://unicorn.com#contacts"
+    },
+    offsetLabel: {
+      en: "Distrance from the target location",
+      cs: "Odstup od cílové lokace"
+    },
+    offsetMessage: {
+      en:
+        "The number of pixels that will end up being between the target location defined in URL address and the top viewport border",
+      cs: "Vzdálenost jaká zůstane mezi lokací definovanou v URL adrese a mezi horní hranou viewportu"
+    },
+    targetLabel: {
+      en: "Link opening method",
+      cs: "Způsob otevření odkazu"
+    },
+    downloadLabel: {
+      en: "Download linked file",
+      cs: "Stáhnout odkazovaný soubor"
+    },
+    authenticateLabel: {
+      en: "Add authentication token to URL",
+      cs: "Přidat autentizační token to URL"
     }
   }
 };

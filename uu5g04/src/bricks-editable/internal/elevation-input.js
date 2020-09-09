@@ -6,7 +6,7 @@ import ns from "../bricks-editable-ns.js";
 import Lsi from "../bricks-editable-lsi.js";
 //@@viewOff:imports
 
-const { createVisualComponent } = LazyLoadedLibraries["uu5g04-hooks"];
+const { createVisualComponent, useMemo } = LazyLoadedLibraries["uu5g04-hooks"];
 
 //@@viewOn:statics
 const STATICS = {
@@ -47,6 +47,13 @@ const ElevationInput = createVisualComponent({
 
   render({ items, label, onChange, value, ...props }) {
     //@@viewOn:hooks
+    const usedValue = useMemo(() => {
+      if (value != null) {
+        return value + ""; // number to string
+      } else {
+        return "0";
+      }
+    }, [value]);
     //@@viewOff:hooks
 
     //@@viewOn:interface
@@ -60,7 +67,7 @@ const ElevationInput = createVisualComponent({
       <UU5.Forms.SwitchSelector
         {...props}
         label={label}
-        value={value + ""}
+        value={usedValue}
         onChange={opt => onChange({ ...opt, value: +opt.value })}
         items={items}
       />

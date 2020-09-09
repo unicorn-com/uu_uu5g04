@@ -94,10 +94,13 @@ Tools.getPage = () => {
   return Environment.page;
 };
 
+const REACT_LAZY_TYPEOF = React.lazy && React.lazy(() => ({ default: () => null })).$$typeof;
+const REACT_MEMO_TYPEOF = React.memo && React.memo(() => null).$$typeof;
+
 Tools.checkTag = function(tag, hideError) {
   let result = null;
   switch (typeof tag) {
-    case "string":
+    case "string": {
       result = tag;
 
       let tagArray = tag.split(".");
@@ -122,19 +125,26 @@ Tools.checkTag = function(tag, hideError) {
       }
 
       break;
+    }
     case "function":
       result = tag;
       break;
     case "object":
-      if (tag && tag.isUu5PureComponent) {
+      if (tag && (tag.isUu5PureComponent || tag.$$typeof === REACT_MEMO_TYPEOF || tag.$$typeof === REACT_LAZY_TYPEOF)) {
         result = tag;
       }
+      break;
+    case "symbol":
+      if (tag === React.Fragment) {
+        result = tag;
+      }
+      break;
   }
 
   return result;
 };
 
-Tools.findComponent = (tag, props, content, error) => {
+Tools.findComponent = (tag, props, content, error, onLoad) => {
   let newTag = tag;
   if (typeof tag === "object" && tag.tag) {
     newTag = tag.tag;
@@ -142,6 +152,7 @@ Tools.findComponent = (tag, props, content, error) => {
   }
   props = props || {};
 
+  let callOnLoad = typeof onLoad === "function";
   let result;
   let UU5 = window.UU5;
   // TODO: backward compatibility
@@ -149,6 +160,7 @@ Tools.findComponent = (tag, props, content, error) => {
     let fTag = Tools.checkTag(newTag, true);
     if (fTag) {
       result = Element.create(fTag, props, content);
+      if (callOnLoad) onLoad(fTag);
     } else {
       let module = newTag.split(".");
       module.splice(-1, 1);
@@ -162,9 +174,18 @@ Tools.findComponent = (tag, props, content, error) => {
         result = (
           <UU5.Common.NotFoundTag key={props.key} tagName={newTag} id={props.id} ref_={props.ref_} error={error} />
         );
+        if (callOnLoad) onLoad(null, new Error(`Component ${newTag} has not been found.`));
       } else {
         result = (
-          <UU5.Common.TagPlaceholder key={props.key} _tagName={newTag} _props={props} _content={content} _error={error} _fromFindComponent />
+          <UU5.Common.TagPlaceholder
+            key={props.key}
+            _tagName={newTag}
+            _props={props}
+            _content={content}
+            _error={error}
+            _fromFindComponent
+            _onLoad={onLoad}
+          />
         );
       }
 
@@ -179,6 +200,10 @@ Tools.findComponent = (tag, props, content, error) => {
     ) : (
       <UU5.Common.NotFoundTag key={props.key} tagName={newTag} id={props.id} ref_={props.ref_} error={error} />
     );
+    if (callOnLoad) {
+      if (component) onLoad(component);
+      else onLoad(null, new Error(`Component ${newTag} has not been found.`));
+    }
   }
 
   return result;

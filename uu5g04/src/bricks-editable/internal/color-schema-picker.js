@@ -45,9 +45,18 @@ const ColorSchemaPicker = createVisualComponent({
 
     //@@viewOn:render
     return (
-      <UU5.Forms.Select {...props} label={label} value={value} onChange={onChange}>
-        {[...UU5.Environment.colorSchema].map(colorSchema => (
-          <UU5.Forms.Select.Option key={colorSchema} value={colorSchema} content={colorSchema} />
+      <UU5.Forms.Select
+        {...props}
+        label={label}
+        value={value || "none"}
+        onChange={opt => onChange({ ...opt, value: opt.value === "none" ? null : opt.value })}
+      >
+        {["none", ...UU5.Environment.colorSchema].map(colorSchema => (
+          <UU5.Forms.Select.Option
+            key={colorSchema}
+            value={colorSchema}
+            content={colorSchema === "none" ? <UU5.Bricks.Lsi lsi={Lsi.colorSchemaPicker.valueInherit} /> : colorSchema}
+          />
         ))}
       </UU5.Forms.Select>
     );

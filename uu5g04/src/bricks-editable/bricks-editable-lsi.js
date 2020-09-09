@@ -12,6 +12,20 @@
  */
 
 export const FormsLsi = {
+  common: {
+    valueTrue: {
+      cs: "zapnuto",
+      en: "enabled",
+      sk: "zapnuté",
+      uk: "увімкнено"
+    },
+    valueFalse: {
+      cs: "vypnuto",
+      en: "disabled",
+      sk: "vypnuté",
+      uk: "вимкнено"
+    }
+  },
   editablePanel: {
     moreSettingsTooltip: {
       cs: "Další nastavení",
@@ -132,6 +146,10 @@ export const FormsLsi = {
     onSaveInvalidForm: {
       cs: "Přinejmenším jedna honota formuláře není platná!",
       en: "Atleast one of the editation forms is invalid!"
+    },
+    itemTypeSwitch: {
+      cs: "Typ položky",
+      en: "Item type"
     }
   },
   menu: {
@@ -182,7 +200,8 @@ export const FormsLsi = {
   },
   elevationInput: {
     label: {
-      en: "Elevation"
+      en: "Elevation",
+      cs: "Úroveň vyvýšení"
     }
   },
   borderRadiusInput: {
@@ -193,12 +212,54 @@ export const FormsLsi = {
       uk: "Закруглення кутів"
     }
   },
+  sizeInput: {
+    label: {
+      cs: "Velikost",
+      en: "Size",
+      sk: "Veľkosť",
+      uk: "Розмір"
+    },
+    valueXS: {
+      cs: "xs",
+      en: "xs",
+      sk: "xs",
+      uk: "xs"
+    },
+    valueS: {
+      cs: "s",
+      en: "s",
+      sk: "s",
+      uk: "s"
+    },
+    valueM: {
+      cs: "m",
+      en: "m",
+      sk: "m",
+      uk: "m"
+    },
+    valueL: {
+      cs: "l",
+      en: "l",
+      sk: "l",
+      uk: "l"
+    },
+    valueXL: {
+      cs: "xl",
+      en: "xl",
+      sk: "xl",
+      uk: "xl"
+    }
+  },
   colorSchemaPicker: {
     label: {
       cs: "Barva",
       en: "Color",
       sk: "Farba",
       uk: "Колір"
+    },
+    valueInherit: {
+      cs: "zdědit",
+      en: "inherit"
     }
   },
   confirmModal: {
@@ -225,6 +286,12 @@ export const FormsLsi = {
       en: "Cancel",
       sk: "Zrušiť",
       uk: "Відмінити"
+    }
+  },
+  well: {
+    modalHeader: {
+      cs: "Upravit Well",
+      en: "Edit Well"
     }
   }
 };

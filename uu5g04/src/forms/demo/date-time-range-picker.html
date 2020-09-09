@@ -108,6 +108,17 @@
               <UU5.Forms.DateTimeRangePicker label="ISO string value" value={["2019-07-31", "2019-08-20"]} />
               <UU5.Forms.DateTimeRangePicker label="date value" value={[date1, date2]} />
               <UU5.Forms.DateTimeRangePicker
+                label="onFocus & onBlur"
+                onBlur={opt => {
+                  console.log(opt.value);
+                  opt.component.onBlurDefault(opt);
+                }}
+                onFocus={opt => {
+                  console.log(opt.value);
+                  opt.component.onFocusDefault(opt);
+                }}
+              />
+              <UU5.Forms.DateTimeRangePicker
                 label="onChange"
                 onChange={opt => {
                   console.log(opt.value);
@@ -153,6 +164,7 @@
               <UU5.Forms.DateTimeRangePicker label="seconds" seconds />
               <UU5.Forms.DateTimeRangePicker label="timeFormat" timeFormat="12" />
               <UU5.Forms.DateTimeRangePicker label="timeStep" timeStep={30} />
+              <UU5.Forms.DateTimeRangePicker label="disableBackdrop" disableBackdrop />
             </UU5.Bricks.Container>
           );
         }

@@ -16,6 +16,13 @@ import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import "./line.less";
+import Css from "./internal/css";
+
+const LineEditable = UU5.Common.Component.lazy(async () => {
+  await SystemJS.import("uu5g04-forms");
+  await SystemJS.import("uu5g04-bricks-editable");
+  return import("./internal/line-editable.js");
+});
 //@@viewOff:imports
 
 export const Line = UU5.Common.VisualComponent.create({
@@ -26,7 +33,8 @@ export const Line = UU5.Common.VisualComponent.create({
     UU5.Common.PureRenderMixin,
     UU5.Common.ElementaryMixin,
     UU5.Common.ColorSchemaMixin,
-    UU5.Common.NestingLevelMixin
+    UU5.Common.NestingLevelMixin,
+    UU5.Common.EditableMixin
   ],
   //@@viewOff:mixins
 
@@ -37,7 +45,15 @@ export const Line = UU5.Common.VisualComponent.create({
     classNames: {
       main: ns.css("line uu5-common-bg"),
       size: ns.css("line-size-"),
-      vertical: ns.css("line-vertical")
+      vertical: props => {
+        let className = ns.css("line-vertical");
+
+        if (typeof props.vertical === "number" || typeof props.vertical === "string") {
+          className += " " + Css.css`height: ${UU5.Common.Tools.fillUnit(props.vertical)};`;
+        }
+
+        return className;
+      }
     },
     defaults: {
       sizes: ["s", "m", "l", "xl"]
@@ -49,7 +65,7 @@ export const Line = UU5.Common.VisualComponent.create({
   propTypes: {
     size: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
     borderRadius: UU5.PropTypes.string,
-    vertical: UU5.PropTypes.bool
+    vertical: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.number, UU5.PropTypes.string])
   },
   //@@viewOff:propTypes
 
@@ -70,9 +86,24 @@ export const Line = UU5.Common.VisualComponent.create({
   //@@viewOff:interface
 
   //@@viewOn:overriding
+  onBeforeForceEndEditation_() {
+    return this._editableComponent ? this._editableComponent.getPropsToSave() : undefined;
+  },
   //@@viewOff:overriding
 
   //@@viewOn:private
+  _registerEditableComponent(ref) {
+    this._editableComponent = ref;
+  },
+
+  _renderEditationMode() {
+    return (
+      <UU5.Common.Suspense fallback={this.getEditingLoading()}>
+        <LineEditable component={this} ref_={this._registerEditableComponent} />
+      </UU5.Common.Suspense>
+    );
+  },
+
   _buildMainAttrs() {
     let mainAttrs = this.getMainAttrs();
     let size = this.props.size;
@@ -98,7 +129,12 @@ export const Line = UU5.Common.VisualComponent.create({
 
   //@@viewOn:render
   render() {
-    return this.getNestingLevel() ? <div {...this._buildMainAttrs()}>{this.getDisabledCover()}</div> : null;
+    return (
+      <>
+        {this.isInlineEdited() && this._renderEditationMode()}
+        {this.getNestingLevel() ? <div {...this._buildMainAttrs()}>{this.getDisabledCover()}</div> : null}
+      </>
+    );
   }
   //@@viewOff:render
 });

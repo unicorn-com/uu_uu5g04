@@ -19,6 +19,11 @@ import Css from "./internal/css.js";
 const ClassNames = UU5.Common.ClassNames;
 
 import "./card.less";
+const CardEditable = UU5.Common.Component.lazy(async () => {
+  await SystemJS.import("uu5g04-forms");
+  await SystemJS.import("uu5g04-bricks-editable");
+  return import("./internal/card-editable.js");
+});
 //@@viewOff:imports
 
 export const Card = UU5.Common.VisualComponent.create({
@@ -31,7 +36,8 @@ export const Card = UU5.Common.VisualComponent.create({
     UU5.Common.NestingLevelMixin,
     UU5.Common.SectionMixin,
     UU5.Common.PureRenderMixin,
-    UU5.Common.ColorSchemaMixin
+    UU5.Common.ColorSchemaMixin,
+    UU5.Common.EditableMixin
   ],
   //@@viewOff:mixins
 
@@ -86,14 +92,26 @@ export const Card = UU5.Common.VisualComponent.create({
   //@@viewOff:interface
 
   //@@viewOn:overriding
+  onBeforeForceEndEditation_() {
+    return this._editableComponent ? this._editableComponent.getPropsToSave() : undefined;
+  },
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _getMainProps() {
+  _registerEditableComponent(ref) {
+    this._editableComponent = ref;
+  },
+
+  _getMainProps(editation) {
     const mainProps = this.getMainPropsToPass();
     mainProps.className += " uu5-elevation-" + this.props.elevation;
     mainProps.className += " uu5-elevation-hover-" + this.props.elevationHover;
     mainProps.underline = this.props.underline;
+
+    if (editation) {
+      mainProps.header = undefined;
+      mainProps.footer = undefined;
+    }
 
     !this.props.noSpaces && (mainProps.className += " " + this.getClassName("spaces"));
 
@@ -132,13 +150,37 @@ export const Card = UU5.Common.VisualComponent.create({
 
     return mainProps;
   },
+
+  _renderEditationMode() {
+    return (
+      <UU5.Common.Suspense fallback={this.getEditingLoading()}>
+        <CardEditable component={this} ref_={this._registerEditableComponent} renderView={this._renderView} />
+      </UU5.Common.Suspense>
+    );
+  },
+
+  _renderView(forcedContent) {
+    let props = this._getMainProps(this.isInlineEdited());
+    if (forcedContent) {
+      props.content = forcedContent;
+    }
+
+    return <Section {...props}>{this.props.children && UU5.Common.Children.toArray(this.props.children)}</Section>;
+  },
   //@@viewOff:private
 
   //@@viewOn:render
   render() {
-    return this.getNestingLevel() ? (
-      <Section {...this._getMainProps()}>{UU5.Common.Children.toArray(this.props.children)}</Section>
-    ) : null;
+    return (
+      <>
+        {this.getNestingLevel() ? (
+          <>
+            {this.isInlineEdited() && this._renderEditationMode()}
+            {this.isNotInlineEdited() && this._renderView()}
+          </>
+        ) : null}
+      </>
+    )
   }
   //@@viewOff:render
 });

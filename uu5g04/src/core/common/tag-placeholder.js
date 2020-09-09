@@ -64,6 +64,7 @@ export const TagPlaceholder = VisualComponent.create({
     _content: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
     _error: PropTypes.oneOfType([PropTypes.func, PropTypes.string, PropTypes.element]),
     _fromFindComponent: PropTypes.bool,
+    _onLoad: PropTypes.func,
   },
   //@@viewOff:propTypes
   //@@viewOn:getDefaultProps
@@ -78,6 +79,7 @@ export const TagPlaceholder = VisualComponent.create({
       _content: null,
       _error: null,
       _fromFindComponent: false,
+      _onLoad: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -186,14 +188,23 @@ export const TagPlaceholder = VisualComponent.create({
       // props = props || this.props.props;
 
       let component = tagName && Tools.checkTag(tagName);
-      if (!component) {
+      let isError = !component;
+      if (isError) {
         component = NotFoundTag;
         props = Tools.merge({}, props);
         props.tagName = this._get("tagName", props) || tagName;
         props.error = this._get("error", this.props);
       }
+      if (typeof this.props._onLoad === "function") {
+        this.props._onLoad(
+          isError ? null : component,
+          isError ? props.error || new Error(`Component ${tagName} has not been found.`) : null
+        );
+      }
 
-      component && this.setState({ component, props });
+      if (!this._unmounted) {
+        component && this.setState({ component, props });
+      }
     }
     return this;
   },

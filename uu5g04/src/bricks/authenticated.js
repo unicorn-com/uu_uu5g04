@@ -27,13 +27,7 @@ let editationLazyLoaded = false;
 export const Authenticated = UU5.Common.VisualComponent.create({
   displayName: "Authenticated", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
-  mixins: [
-    UU5.Common.BaseMixin,
-    UU5.Common.IdentityMixin,
-    UU5.Common.ContentMixin, 
-    // TODO Uncomment - new editation postponed.
-    // UU5.Common.EditableMixin
-  ],
+  mixins: [UU5.Common.BaseMixin, UU5.Common.IdentityMixin, UU5.Common.ContentMixin, UU5.Common.EditableMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -43,13 +37,12 @@ export const Authenticated = UU5.Common.VisualComponent.create({
       noPropsGiven:
         "The component will never show any content - you should always set at least one of the props 'pending', 'authenticated', 'notAuthenticated'."
     },
-    // TODO Uncomment - new editation postponed.
-    // editMode: {
-    //   name: { en: "Authenticated", cs: "Authenticated" },
-    //   backgroundColor: "rgba(0,0,0,.2)",
-    //   color: "rgba(0,0,0,.87)",
-    //   highlightColor: "#CCCCCC"
-    // }
+    editMode: {
+      name: { en: "Authenticated", cs: "Authenticated" },
+      backgroundColor: "rgba(0,0,0,.2)",
+      color: "rgba(0,0,0,.87)",
+      highlightColor: "#CCCCCC"
+    }
   },
   //@@viewOff:statics
 
@@ -67,8 +60,7 @@ export const Authenticated = UU5.Common.VisualComponent.create({
       authenticated: null, // using null-s to be able to show development warning if none of these 3 props was given
       notAuthenticated: null,
       pending: null,
-      // TODO Uncomment - new editation postponed.
-      // contentEditable: true
+      contentEditable: true
     };
   },
   //@@viewOff:getDefaultProps
@@ -90,10 +82,9 @@ export const Authenticated = UU5.Common.VisualComponent.create({
   //@@viewOff:interface
 
   //@@viewOn:overriding
-  // TODO Uncomment - new editation postponed.
-  // onBeforeForceEndEditation_() {
-  //   return this._editableComponent ? this._editableComponent.getPropsToSave() : undefined;
-  // },
+  onBeforeForceEndEditation_() {
+    return this._editableComponent ? this._editableComponent.getPropsToSave() : undefined;
+  },
   //@@viewOff:overriding
 
   //@@viewOn:private

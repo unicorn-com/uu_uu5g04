@@ -6,6 +6,12 @@
     background-color: @bg;
   }
 
+  .color-schema-@{color-schema} .@{bricks-name}-progress-bar-item:not([class*="color-schema-"]),
+  .color-schema-@{color-schema}.@{bricks-name}-progress-bar-item {
+    background-color: @bg-progress;
+    color: @color;
+  }
+
   .color-schema-@{color-schema} .@{bricks-name}-progress-bar-item-striped:not([class*="color-schema-"]),
   .color-schema-@{color-schema}.@{bricks-name}-progress-bar-item-striped {
     background-color: @bg-progress;

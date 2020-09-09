@@ -177,6 +177,17 @@
               <UU5.Forms.DatePicker label="ISO string value" value="2019-07-31T10:00:00" />
               <UU5.Forms.DatePicker label="ISO string value" value="2019-07-31" />
               <UU5.Forms.DatePicker label="invalid value" value="Invalid value" />
+              <UU5.Forms.DatePicker
+                label="onFocus & onBlur"
+                onBlur={opt => {
+                  console.log(opt.value);
+                  opt.component.onBlurDefault(opt);
+                }}
+                onFocus={opt => {
+                  console.log(opt.value);
+                  opt.component.onFocusDefault(opt);
+                }}
+              />
               <UU5.Forms.DatePicker label="onChange" controlled={false} value={onChangeInitialValue} onChange={(opt) => {
                 console.log("onChange value: " + opt.value);
                 opt.component.onChangeDefault(opt);
@@ -232,6 +243,7 @@
               <UU5.Forms.DatePicker label="disableBackdrop" disableBackdrop />
               <UU5.Forms.DatePicker label="valueType='string'" valueType="string" />
               <UU5.Forms.DatePicker label="valueType='date'" valueType="date" />
+              <UU5.Forms.DatePicker label="disableBackdrop" disableBackdrop />
             </UU5.Bricks.Container>
           );
         }

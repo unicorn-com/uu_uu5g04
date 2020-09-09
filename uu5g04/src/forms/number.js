@@ -220,7 +220,7 @@ export const Number = Context.withContext(
       let blurResult;
 
       // set feedback runs all validations but in exception of onChange validation input isn"t marked as focused
-      this._updateFeedback("initial", null, this.state.value, () => {
+      this._updateFeedback(this.state.feedback, null, this.state.value, () => {
         if (this._isNaN && !this.props.onValidate) {
           blurResult = { feedback: "initial", message: null, value: this.state.value };
         } else {

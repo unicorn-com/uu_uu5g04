@@ -1629,13 +1629,13 @@ export const DateTimeRangePicker = Context.withContext(
       let opt = { value: this.state.value, event: e, component: this };
 
       if (canClose) {
-        if ((this.props.disableBackdrop && clickData.input) || !this.props.disableBackdrop) {
+        if ((this.props.disableBackdrop && clickData.input) || (!this.props.disableBackdrop && !clickData.input)) {
           if (clickData.input) {
             // prevent an immediate re-openning
             e.stopPropagation();
             e.preventDefault();
           }
-          this._close(false, () => this._onBlur(opt));
+          this._close(!canBlur, canBlur ? () => this._onBlur(opt) : undefined);
         } else if (canBlur) {
           this._onBlur(opt, true);
         }
@@ -1830,14 +1830,10 @@ export const DateTimeRangePicker = Context.withContext(
           opt.value = this._getOutputValue(opt.value);
         }
 
-        if (typeof this.props.onBlur === "function") {
-          callback = opt => this.props.onBlur(opt);
-        } else {
-          callback = opt => {
-            this._removeKeyEvents();
-            this.onBlurDefault(opt);
-          };
-        }
+        callback = opt => {
+          this._removeKeyEvents();
+          typeof this.props.onBlur === "function" ? this.props.onBlur(opt) : this.onBlurDefault(opt);
+        };
 
         let value = null;
         if (this.state.tempValue && !this._getToValue()) {
@@ -2070,7 +2066,7 @@ export const DateTimeRangePicker = Context.withContext(
           if (!this.isOpen()) {
             this.open();
           } else {
-            this.close();
+            this._close(true, () => this.focus());
           }
         } else if (e.which === 40) {
           // bottom
@@ -2081,7 +2077,7 @@ export const DateTimeRangePicker = Context.withContext(
         } else if (e.which === 27) {
           // esc
           if (this.isOpen()) {
-            this._close();
+            this._close(true, () => this.focus());
           }
         } else if (e.which === 9) {
           // tab

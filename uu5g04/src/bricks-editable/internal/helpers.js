@@ -1,10 +1,16 @@
+import * as UU5 from "uu5g04";
+import "uu5g04-bricks";
+
 export const Helpers = {
   getComponentValidationResult: (value, isRequired) => {
     let isValid = isRequired ? Helpers.checkRequiredValue(value) : true;
 
     if (!isValid) {
       return {
-        feedback: "error"
+        feedback: {
+          feedback: "error",
+          message: undefined
+        }
       };
     } else {
       return undefined;
@@ -55,8 +61,12 @@ export const Helpers = {
       return false;
     }
   },
-  isLsiObject: object => {
-    return object && typeof object === "object" && !object.type;
+  getLabel: label => {
+    if (label && typeof label === "object" && !label.type) {
+      return <UU5.Bricks.Lsi lsi={label} />;
+    } else {
+      return label;
+    }
   }
 };
 

@@ -69,7 +69,7 @@ module.exports = class Middleware {
           );
         });
         // insert extra JS which reconfigures SystemJS and renders Controls
-        modHtml = modHtml.replace(/<script.*?in-browser-transpilation.*<\/script>/g, m => {
+        modHtml = modHtml.replace(/<\/body>/g, m => {
           return [
             '<script src="doc-middleware-browser-config.js"></script>', // reconfigure via ES5
             '<script type="text/babel" src="doc-middleware-browser-controls.js"></script>', // Controls can use ES6+

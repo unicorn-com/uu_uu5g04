@@ -101,6 +101,17 @@
               />
               <UU5.Forms.DateRangePicker label="ISO string value" value={["2019-07-31", "2019-08-20"]} />
               <UU5.Forms.DateRangePicker
+                label="onFocus & onBlur"
+                onBlur={opt => {
+                  console.log(opt.value);
+                  opt.component.onBlurDefault(opt);
+                }}
+                onFocus={opt => {
+                  console.log(opt.value);
+                  opt.component.onFocusDefault(opt);
+                }}
+              />
+              <UU5.Forms.DateRangePicker
                 label="onChange"
                 onChange={opt => {
                   console.log(opt.value);
@@ -142,6 +153,7 @@
               <UU5.Forms.DateRangePicker label="showTodayButton" showTodayButton />
               <UU5.Forms.DateRangePicker label="disabled" disabled />
               <UU5.Forms.DateRangePicker label="readOnly" readOnly />
+              <UU5.Forms.DateRangePicker label="disableBackdrop" disableBackdrop />
             </UU5.Bricks.Container>
           );
         }

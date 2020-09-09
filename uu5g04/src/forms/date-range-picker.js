@@ -1166,13 +1166,18 @@ export const DateRangePicker = Context.withContext(
 
       if (canClose) {
         if (!this.props.disableBackdrop) {
-          this._close(false, () => this._onBlur(opt));
+          this._close(!canBlur, canBlur ? () => this._onBlur(opt) : undefined);
         } else if (canBlur) {
           this._onBlur(opt);
         }
       } else if (canBlur) {
         this._onBlur(opt);
       }
+    },
+
+    _handleFocus(e) {
+      let opt = { value: this.state.value, event: e, component: this };
+      this._onFocus(opt);
     },
 
     _addEvent(callback) {
@@ -1324,14 +1329,10 @@ export const DateRangePicker = Context.withContext(
           opt.value = this._getOutputValue(opt.value);
         }
 
-        if (typeof this.props.onBlur === "function") {
-          callback = opt => this.props.onBlur(opt);
-        } else {
-          callback = opt => {
-            this._removeKeyEvents();
-            this.onBlurDefault(opt);
-          };
-        }
+        callback = opt => {
+          this._removeKeyEvents();
+          typeof this.props.onBlur === "function" ? this.props.onBlur(opt) : this.onBlurDefault(opt);
+        };
 
         let value = null;
         if (this.state.tempValue && !this._getToValue()) {
@@ -1462,7 +1463,7 @@ export const DateRangePicker = Context.withContext(
           if (!this.isOpen()) {
             this.open();
           } else {
-            this.close();
+            this._close(true, () => this.focus());
           }
         } else if (e.which === 40) {
           // bottom
@@ -1488,7 +1489,7 @@ export const DateRangePicker = Context.withContext(
         } else if (e.which === 27) {
           // esc
           if (this.isOpen()) {
-            this._close();
+            this._close(true, () => this.focus());
           }
         }
       };
@@ -1647,7 +1648,7 @@ export const DateRangePicker = Context.withContext(
         props.mainAttrs = UU5.Common.Tools.merge({ autoComplete: "off" }, props.mainAttrs);
         props.mainAttrs.className === "" ? delete props.mainAttrs.className : null;
         props.mainAttrs.tabIndex = !this.isReadOnly() && !this.isComputedDisabled() ? "0" : undefined;
-        props.mainAttrs.onFocus = !this.isReadOnly() && !this.isComputedDisabled() ? this._onFocus : null;
+        props.mainAttrs.onFocus = !this.isReadOnly() && !this.isComputedDisabled() ? this._handleFocus : null;
 
         let useSeparatedFeedback =
           this.state.fromFeedback.feedback === "error" || this.state.toFeedback.feedback === "error";
@@ -1826,7 +1827,7 @@ export const DateRangePicker = Context.withContext(
             }
 
             if (shouldClose) {
-              this.close(() => this._onFocus(opt));
+              this._close(true, () => this._onFocus(opt));
             } else if (shouldOpen) {
               this._open(clickData.toInput, () => this._onFocus(opt));
             } else {
@@ -1971,7 +1972,7 @@ export const DateRangePicker = Context.withContext(
       inputAttrs = UU5.Common.Tools.merge({ autoComplete: "off" }, inputAttrs);
       inputAttrs.className === "" ? delete inputAttrs.className : null;
       inputAttrs.tabIndex = !this.isReadOnly() && !this.isComputedDisabled() ? "0" : undefined;
-      inputAttrs.onFocus = !this.isReadOnly() && !this.isComputedDisabled() ? this._onFocus : null;
+      inputAttrs.onFocus = !this.isReadOnly() && !this.isComputedDisabled() ? this._handleFocus : null;
 
       return (
         <div {...this._getMainAttrs()}>

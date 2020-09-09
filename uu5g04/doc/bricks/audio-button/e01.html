@@ -75,7 +75,6 @@
             <UU5.Bricks.Container>
               {UU5.Environment.colorSchema.map(colorSchema => (
                 <UU5.Bricks.Section
-                  colorSchema={colorSchema}
                   key={colorSchema}
                   header={colorSchema}
                   level={4}
@@ -89,6 +88,7 @@
                       {["outline", "underline", "filled", "transparent"].map(bgStyle => (
                         <UU5.Bricks.AudioButton
                           {...props}
+                          colorSchema={colorSchema}
                           className="example-audio-button"
                           key={bgStyle}
                           colorSchema={colorSchema}

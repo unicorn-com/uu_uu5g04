@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"
+    />
+    <title>RichLink Editation Demo</title>
+
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+    <script>
+      SystemJS.config({
+        paths: {
+          systemjs: "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          react: "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+          uu_dynamiccomponentcontentg02:
+            "https://cdn.plus4u.net/uu-dynamiccomponentcontentg02/3.0.0/uu_dynamiccomponentcontentg02.min.js",
+          uu5codekitg01: "https://cdn.plus4u.net/uu-uu5codekitg01/1.0.0/uu5codekitg01.min.js",
+          "uu5codekitg01-markdown": "https://cdn.plus4u.net/uu-uu5codekitg01/1.0.0/uu5codekitg01-markdown.min.js",
+          uu5richtextg01: "https://cdn.plus4u.net/uu-uu5richtextg01/1.0.0/uu5richtextg01.min.js",
+          immutable: "https://cdn.plus4u.net/libs/immutable/3.8.2/immutable.min.js",
+          uu_appg01_core: "https://cdn.plus4u.net/uu-appg01-core/4.0.0/uu_appg01_core.min.js",
+          uu_appg01: "https://cdn.plus4u.net/uu-appg01/4.0.0/uu_appg01.min.js",
+          uu_appg01_oidc: "https://cdn.plus4u.net/uu-appg01-oidc/2.0.0/uu_appg01_oidc.min.js",
+
+          uu5g04: "https://cdn.plus4u.net/beta/uu-uu5g04/1.34.0-beta.2/uu5g04.js",
+          "uu5g04-bricks": "https://cdn.plus4u.net/beta/uu-uu5g04/1.34.0-beta.2/uu5g04-bricks.min.js",
+          "uu5g04-forms": "https://cdn.plus4u.net/beta/uu-uu5g04/1.34.0-beta.2/uu5g04-forms.min.js",
+          "uu5g04-bricks-editable": "https://cdn.plus4u.net/beta/uu-uu5g04/1.34.0-beta.2/uu5g04-bricks-editable.js"
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+      import "uu5g04-bricks-editable";
+      import * as UuDcc from "uu_dynamiccomponentcontentg02";
+      import "uu_appg01_oidc";
+
+      UU5.Common.Tools.setLanguage("en");
+
+      const dccData = `
+        <uu5string/>
+        <UU5.Bricks.RichLink href="https://www.unicorn.com/" />
+      `.replace(/\s*\n\s*/g, "");
+
+      function Page() {
+        return (
+          <UU5.Bricks.Page>
+            <UU5.Bricks.Container>
+              <UuDcc.Bricks.SectionInput value={dccData} />
+            </UU5.Bricks.Container>
+          </UU5.Bricks.Page>
+        );
+      }
+
+      UU5.Common.DOM.render(<Page />, document.getElementById("renderHere"));
+    </script>
+  </body>
+</html>

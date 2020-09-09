@@ -163,6 +163,17 @@
               <UU5.Forms.DateTimePicker label="date value" value={dateValue} />
               <UU5.Forms.DateTimePicker label="invalid value" value="Invalid value" />
               <UU5.Forms.DateTimePicker
+                label="onFocus & onBlur"
+                onBlur={opt => {
+                  console.log(opt.value);
+                  opt.component.onBlurDefault(opt);
+                }}
+                onFocus={opt => {
+                  console.log(opt.value);
+                  opt.component.onFocusDefault(opt);
+                }}
+              />
+              <UU5.Forms.DateTimePicker
                 label="onChange"
                 onChange={opt => {
                   console.log("onChange value: " + opt.value);
@@ -247,6 +258,7 @@
               <UU5.Forms.DateTimePicker label="showTodayButton" showTodayButton />
               <UU5.Forms.DateTimePicker label="disabled" disabled />
               <UU5.Forms.DateTimePicker label="readOnly" readOnly />
+              <UU5.Forms.DateTimePicker label="disableBackdrop" disableBackdrop />
               <UU5.Forms.DateTimePicker label="seconds" seconds />
               <UU5.Forms.DateTimePicker label="timeFormat" timeFormat="12" />
               <UU5.Forms.DateTimePicker label="timeStep" timeStep={30} />

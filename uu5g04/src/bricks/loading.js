@@ -19,6 +19,11 @@ import Span from "./span.js";
 import { Div } from "./factory.js";
 
 import "./loading.less";
+const LoadingEditable = UU5.Common.Component.lazy(async () => {
+  await SystemJS.import("uu5g04-forms");
+  await SystemJS.import("uu5g04-bricks-editable");
+  return import("./internal/loading-editable.js");
+});
 //@@viewOff:imports
 
 export const Loading = UU5.Common.VisualComponent.create({
@@ -30,7 +35,8 @@ export const Loading = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.ContentMixin,
     UU5.Common.ColorSchemaMixin,
-    UU5.Common.NestingLevelMixin
+    UU5.Common.NestingLevelMixin,
+    UU5.Common.EditableMixin
   ],
   //@@viewOff:mixins
 
@@ -71,9 +77,24 @@ export const Loading = UU5.Common.VisualComponent.create({
   //@@viewOff:interface
 
   //@@viewOn:overriding
+  onBeforeForceEndEditation_() {
+    return this._editableComponent ? this._editableComponent.getPropsToSave() : undefined;
+  },
   //@@viewOff:overriding
 
   //@@viewOn:private
+  _registerEditableComponent(ref) {
+    this._editableComponent = ref;
+  },
+
+  _renderEditationMode() {
+    return (
+      <UU5.Common.Suspense fallback={this.getEditingLoading()}>
+        <LoadingEditable component={this} ref_={this._registerEditableComponent} />
+      </UU5.Common.Suspense>
+    );
+  },
+
   _getMainProps: function() {
     let attrs = this.getMainAttrs();
     !this.getChildren() && !this.props.text && (attrs.className += " " + this.getClassName().animated);
@@ -100,6 +121,7 @@ export const Loading = UU5.Common.VisualComponent.create({
     let Comp = isInline ? Span : Div;
     return (
       <Comp {...this._getMainProps()}>
+        {this.isInlineEdited() && this._renderEditationMode()}
         {this.getChildren() || (isInline ? this._getInlineContent() : this._getDefaultContent())}
       </Comp>
     );

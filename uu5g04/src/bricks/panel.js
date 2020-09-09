@@ -82,8 +82,7 @@ export const Panel = UU5.Common.VisualComponent.create({
     UU5.Common.ColorSchemaMixin,
     UU5.Common.SectionMixin,
     UU5.Common.NestingLevelMixin,
-    // TODO Uncomment - new editation postponed.
-    // UU5.Common.EditableMixin
+    UU5.Common.EditableMixin
   ],
   //@@viewOff:mixins
 
@@ -150,8 +149,7 @@ export const Panel = UU5.Common.VisualComponent.create({
       iconAlign: null,
       openClick: null,
       mountContent: undefined,
-      // TODO Uncomment - new editation postponed.
-      // contentEditable: true
+      contentEditable: true
     };
   },
   //@@viewOff:getDefaultProps
@@ -272,10 +270,9 @@ export const Panel = UU5.Common.VisualComponent.create({
     });
   },
 
-  // TODO Uncomment - new editation postponed.
-  // onBeforeForceEndEditation_() {
-  //   return this._editablePanel ? this._editablePanel.getPropsToSave() : undefined;
-  // },
+  onBeforeForceEndEditation_() {
+    return this._editablePanel ? this._editablePanel.getPropsToSave() : undefined;
+  },
   //@@viewOff:overriding
 
   //@@viewOn:private

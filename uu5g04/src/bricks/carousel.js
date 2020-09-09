@@ -37,8 +37,7 @@ export const Carousel = UU5.Common.VisualComponent.create({
     UU5.Common.ContentMixin,
     UU5.Common.ColorSchemaMixin,
     UU5.Common.SwipeMixin,
-    // TODO Uncomment - new editation postponed.
-    // UU5.Common.EditableMixin
+    UU5.Common.EditableMixin
   ],
   //@@viewOff:mixins
 
@@ -59,13 +58,12 @@ export const Carousel = UU5.Common.VisualComponent.create({
       childTagName: "UU5.Bricks.Carousel.Item",
       colorSchema: "default"
     },
-    // TODO Uncomment - new editation postponed.
-    // editMode: {
-    //   name: { en: "Carousel", cs: "Carousel" },
-    //   backgroundColor: "rgba(0,0,0,.2)",
-    //   color: "rgba(0,0,0,.87)",
-    //   highlightColor: "#CCCCCC"
-    // }
+    editMode: {
+      name: { en: "Carousel", cs: "Carousel" },
+      backgroundColor: "rgba(0,0,0,.2)",
+      color: "rgba(0,0,0,.87)",
+      highlightColor: "#CCCCCC"
+    }
   },
   //@@viewOff:statics
 
@@ -99,8 +97,7 @@ export const Carousel = UU5.Common.VisualComponent.create({
       stepByOne: false,
       allowTags: [],
       onIndexChange: undefined,
-      // TODO Uncomment - new editation postponed.
-      // contentEditable: false
+      contentEditable: false
     };
   },
   //@@viewOff:getDefaultProps
@@ -256,11 +253,10 @@ export const Carousel = UU5.Common.VisualComponent.create({
     return newChildProps;
   },
 
-  // TODO Uncomment - new editation postponed.
-  // onBeforeForceEndEditation_() {
-  //   this._startAutoSlide();
-  //   return this._editableComponent ? this._editableComponent.getPropsToSave() : undefined;
-  // },
+  onBeforeForceEndEditation_() {
+    this._startAutoSlide();
+    return this._editableComponent ? this._editableComponent.getPropsToSave() : undefined;
+  },
   //@@viewOff:overriding
 
   //@@viewOn:private

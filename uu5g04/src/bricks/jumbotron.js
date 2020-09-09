@@ -14,10 +14,16 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
-const ClassNames = UU5.Common.ClassNames;
-
 import "./jumbotron.less";
+
+const EditationComponent = UU5.Common.Component.lazy(async () => {
+  await SystemJS.import("uu5g04-forms");
+  await SystemJS.import("uu5g04-bricks-editable");
+  return import("./internal/jumbotron-editable.js");
+});
 //@@viewOff:imports
+
+const ClassNames = UU5.Common.ClassNames;
 
 export const Jumbotron = UU5.Common.VisualComponent.create({
   displayName: "Jumbotron", // for backward compatibility (test snapshots)
@@ -28,7 +34,8 @@ export const Jumbotron = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.ColorSchemaMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.NestingLevelMixin
+    UU5.Common.NestingLevelMixin,
+    UU5.Common.EditableMixin
   ],
   //@@viewOff:mixins
 
@@ -68,9 +75,24 @@ export const Jumbotron = UU5.Common.VisualComponent.create({
   //@@viewOff:interface
 
   //@@viewOn:overriding
+  onBeforeForceEndEditation_() {
+    return this._editableComponent ? this._editableComponent.getPropsToSave() : undefined;
+  },
   //@@viewOff:overriding
 
   //@@viewOn:private
+  _renderEditationMode() {
+    return (
+      <UU5.Common.Suspense fallback={this.getEditingLoading()}>
+        <EditationComponent component={this} ref_={this._registerEditableComponent} />
+      </UU5.Common.Suspense>
+    );
+  },
+
+  _registerEditableComponent(ref) {
+    this._editableComponent = ref;
+  },
+
   _getMainAttrs() {
     let mainAttrs = this.getMainAttrs();
 
@@ -97,10 +119,13 @@ export const Jumbotron = UU5.Common.VisualComponent.create({
   //@@viewOn:render
   render() {
     return this.getNestingLevel() ? (
-      <div {...this._getMainAttrs()}>
-        {this.getChildren()}
-        {this.getDisabledCover()}
-      </div>
+      <UU5.Common.Fragment>
+        <div {...this._getMainAttrs()}>
+          {this.getChildren()}
+          {this.getDisabledCover()}
+        </div>
+        {this.isInlineEdited() && this._renderEditationMode()}
+      </UU5.Common.Fragment>
     ) : null;
   }
   //@@viewOff:render

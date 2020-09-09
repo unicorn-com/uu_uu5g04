@@ -200,8 +200,8 @@ export const Number = UU5.Common.VisualComponent.create({
 
   setOptions(opt, setStateCallback) {
     let country = opt.country !== undefined ? opt.country : this.state.country;
-    let thousandSeparator = opt.thousandSeparator !== undefined ? opt.thousandSeparator : this.state.thousandSeparator;
-    let decimalSeparator = opt.decimalSeparator !== undefined ? opt.decimalSeparator : this.state.decimalSeparator;
+    let thousandSeparator = opt.thousandSeparator;
+    let decimalSeparator = opt.decimalSeparator;
 
     if (country) {
       let separators = getFormatByCountry(this.props.value, country);
@@ -212,6 +212,9 @@ export const Number = UU5.Common.VisualComponent.create({
         decimalSeparator = separators.decimalSeparator;
       }
     }
+
+    thousandSeparator = thousandSeparator || this.state.thousandSeparator;
+    decimalSeparator = decimalSeparator || this.state.decimalSeparator;
 
     this.setState({ country, thousandSeparator, decimalSeparator }, setStateCallback);
 
