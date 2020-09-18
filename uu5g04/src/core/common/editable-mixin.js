@@ -61,6 +61,13 @@ export const EditableMixin = {
       classNames: {
         docLink: ns.css("editable-doc-link")
       }
+    },
+    //editMode used by Section,Row,Column, etc.
+    editMode_: {
+      // lazy: true/false,
+      customEdit: true, // editovatelná komponenta musí mít true, jinak se zobrazí editace jako uu5string
+      // displayType: inline/block
+      // startMode: "content"
     }
   },
   //@@viewOff:statics
@@ -84,7 +91,7 @@ export const EditableMixin = {
     this.registerMixin(EDITABLE_MIXIN_NAME);
     this._resizeCallbacks = {};
     return {
-      editation: false,
+      editation: this.props.editMode ? this.props.editMode.edit : false,
       editableComponentLazyLoaded: false
     };
   },
@@ -98,9 +105,20 @@ export const EditableMixin = {
     this._endResizeCheck();
   },
 
+  UNSAFE_componentWillReceiveProps(nextProps){
+    if (nextProps.editMode && nextProps.editMode.edit !== this.state.editation) {
+      nextProps.editMode.edit ? this.startEditation(this._eccEditEnd) : this.forceEndEditation()
+    }
+  },
+
   componentDidUpdate() {
     // find possible new dom node
     this._domNode = this.findDOMNode();
+  },
+
+  _eccEditEnd(component, newProps) {
+    // await this.props.editMode.onChange({ props: newProps })
+    this.props.editMode.onEditEnd({props: newProps});
   },
   //@@viewOff:reactLifeCycle
 

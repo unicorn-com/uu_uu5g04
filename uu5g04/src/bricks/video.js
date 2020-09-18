@@ -11,7 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:revision
+// coded: Martin Mach, 07.09.2020
+// reviewed: Petr Bišof, 14.09.2020
+//@@viewOff:revision
 //@@viewOn:imports
+
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
@@ -75,7 +80,8 @@ export const Video = UU5.Common.VisualComponent.create({
   getInitialState: function() {
     return {
       muted: this.props.muted,
-      authenticatedUrl: undefined
+      authenticatedVideoUrl: undefined,
+      authenticatedPosterUrl: undefined
     };
   },
 
@@ -123,17 +129,36 @@ export const Video = UU5.Common.VisualComponent.create({
 
   _getAuthenticatedUrl(url, session) {
     let result = "";
-    if (this._authenticatedUrl === url) result = this.state.authenticatedUrl;
-    else if (this._authenticatingUrl !== url) {
-      this._authenticatingUrl = url;
-      let promise = (this._urlPromise = this._computeAuthenticatedUrl(url, session).then(
-        authenticatedUrl => {
-          delete this._authenticatingUrl;
-          this._authenticatedUrl = url;
-          if (this.isRendered() && promise === this._urlPromise) this.setState({ authenticatedUrl });
+    if (this._authenticatedVideoUrl === url) result = this.state.authenticatedVideoUrl;
+    else if (this._authenticatingVideoUrl !== url) {
+      this._authenticatingVideoUrl = url;
+      let promise = (this._videoUrlPromise = this._computeAuthenticatedUrl(url, session).then(
+        authenticatedVideoUrl => {
+          delete this._authenticatingVideoUrl;
+          this._authenticatedVideoUrl = url;
+          if (this.isRendered() && promise === this._videoUrlPromise) this.setState({ authenticatedVideoUrl });
         },
         () => {
-          delete this._authenticatingUrl;
+          delete this._authenticatingVideoUrl;
+        }
+      ));
+    }
+    return result;
+  },
+
+  _getAuthenticatedPosterUrl(url, session) {
+    let result = "";
+    if (this._authenticatedPosterUrl === url) result = this.state.authenticatedPosterUrl;
+    else if (this._authenticatingPosterUrl !== url) {
+      this._authenticatingPosterUrl = url;
+      let promise = (this._posterUrlPromise = this._computeAuthenticatedUrl(url, session).then(
+        authenticatedPosterUrl => {
+          delete this._authenticatingPosterUrl;
+          this._authenticatedPosterUrl = url;
+          if (this.isRendered() && promise === this._posterUrlPromise) this.setState({ authenticatedPosterUrl });
+        },
+        () => {
+          delete this._authenticatingPosterUrl;
         }
       ));
     }
@@ -146,17 +171,15 @@ export const Video = UU5.Common.VisualComponent.create({
     let result = parsedUrl.set({ parameters: { ...parsedUrl.parameters, access_token: token } }).toString();
     return result;
   },
-  //@@viewOff:private
 
-  // Render
-  _buildMainAttrs: function() {
+  _buildMainAttrs(posterUrl) {
     let mainProps = this.getMainAttrs();
 
     if (this.props.autoPlay) mainProps.autoPlay = true;
     if (this.state.muted) mainProps.muted = true;
     this.props.disableControls ? (mainProps.controls = false) : (mainProps.controls = true);
     if (this.props.loop) mainProps.loop = true;
-    if (this.props.poster !== "") mainProps.poster = this.props.poster;
+    if (posterUrl !== "") mainProps.poster = posterUrl;
     if (this.props.preload !== "auto") mainProps.preload = this.props.preload;
     if (this.isDisabled()) {
       mainProps.autoPlay = false;
@@ -164,29 +187,40 @@ export const Video = UU5.Common.VisualComponent.create({
     mainProps.type = this._getType();
     return mainProps;
   },
+  //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
-    let { src, authenticate } = this.props;
-    let url = src;
+  render() {
+    let { src, poster, authenticate } = this.props;
+    let videoUrl = src;
+    let posterUrl = poster;
     let useHlsComponent = this._isHls() && UU5.Common.Suspense;
     if (authenticate && !useHlsComponent) {
       let session = UU5.Environment.getSession();
-      if (session && session.isAuthenticated() && UU5.Environment.isTrustedDomain(url)) {
-        url = this._getAuthenticatedUrl(url, session);
+      if (session && session.isAuthenticated()) {
+        if (UU5.Environment.isTrustedDomain(videoUrl) && !useHlsComponent) {
+          videoUrl = this._getAuthenticatedUrl(videoUrl, session);
+        }
+
+        if (UU5.Environment.isTrustedDomain(posterUrl)) {
+          posterUrl = this._getAuthenticatedPosterUrl(posterUrl, session);
+        }
       }
     }
 
     return this.getNestingLevel() ? (
       <UU5.Bricks.Span {...this.getMainPropsToPass()}>
-        {url ? (
+        {videoUrl ? (
           useHlsComponent ? (
             <UU5.Common.Suspense fallback="">
-              <VideoHls mainAttrs={{ ...this._buildMainAttrs(), src: url }} authenticate={this.props.authenticate} />
+              <VideoHls
+                mainAttrs={{ ...this._buildMainAttrs(posterUrl), src: videoUrl }}
+                authenticate={this.props.authenticate}
+              />
             </UU5.Common.Suspense>
           ) : (
-            <video {...this._buildMainAttrs()}>
-              <source src={url} />
+            <video {...this._buildMainAttrs(posterUrl)}>
+              <source src={videoUrl} />
             </video>
           )
         ) : null}

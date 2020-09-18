@@ -11,12 +11,16 @@
  * at the email: info@unicorn.com.
  */
 
+const REGEXP = /^((?:https?:)?\/\/)?((?:(?:www|m)\.)?(?:(?:youtube\.com|youtu.be)))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(?:[?&](.*))?$/;
+
+function getUrlParts(url) {
+  return url.match(REGEXP);
+}
+
 class YoutubeUrlBuilder {
   constructor(urlString) {
     this._urlString = urlString;
-    let outPut = urlString.match(
-      /^((?:https?:)?\/\/)?((?:(?:www|m)\.)?(?:(?:youtube\.com|youtu.be)))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(?:[?&](.*))?$/
-    );
+    let outPut = getUrlParts(urlString);
     if (outPut === null) {
       throw new Error("Invalid youtube url: " + urlString);
     }
@@ -43,6 +47,8 @@ class YoutubeUrlBuilder {
       }
     }
   }
+
+  static getUrlParts = getUrlParts;
 
   getVideoId = () => {
     return this._videoId;

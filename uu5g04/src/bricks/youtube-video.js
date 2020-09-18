@@ -134,4 +134,6 @@ export const YoutubeVideo = UU5.Common.VisualComponent.create({
   //@@viewOff:render
 });
 
+YoutubeVideo.validateUrl = url => (typeof url === "string" ? YoutubeUrlBuilder.getUrlParts(url) !== null : false);
+
 export default YoutubeVideo;

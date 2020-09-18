@@ -11,6 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:revision
+// coded: Martin Mach, 09.09.2020
+// reviewed: Filip Janovský, 14.09.2020 - approved
+//@@viewOff:revision
+
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
@@ -20,8 +25,10 @@ import Button from "./button.js";
 import Icon from "./icon.js";
 import DropdownItem from "./dropdown-item.js";
 import Popover from "./popover.js";
+import CompactMenu from "./internal/compact-menu";
 
 import "./dropdown.less";
+import Css from "./internal/css.js";
 //@@viewOff:imports
 
 export const Dropdown = UU5.Common.VisualComponent.create({
@@ -60,7 +67,16 @@ export const Dropdown = UU5.Common.VisualComponent.create({
       autoDropdown: ns.css("dropdown-dropdown"),
       block: ns.css("dropdown-block"),
       linkSplit: ns.css("dropdown-link-split"),
-      size: ns.css("dropdown-size-")
+      size: ns.css("dropdown-size-"),
+      compactMenu: () => Css.css`
+        min-width: 160px;
+        background: #FFFFFF;
+        padding: 2px 0;
+        border: 1px solid #BDBDBD;
+        border-radius: 2px;
+        box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.34);
+        background-clip: padding-box;
+      `
     },
     defaults: {
       childTagName: DropdownItem.tagName,
@@ -107,7 +123,8 @@ export const Dropdown = UU5.Common.VisualComponent.create({
     splitButtonProps: UU5.PropTypes.object,
     baseline: UU5.PropTypes.bool,
     fitMenuToViewport: UU5.PropTypes.bool,
-    popoverLocation: UU5.PropTypes.oneOf(["local", "portal"])
+    popoverLocation: UU5.PropTypes.oneOf(["local", "portal"]),
+    compactSubmenu: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string])
   },
   //@@viewOff:propTypes
 
@@ -139,7 +156,8 @@ export const Dropdown = UU5.Common.VisualComponent.create({
       splitButtonProps: null,
       baseline: false,
       fitMenuToViewport: false,
-      popoverLocation: "local" // "local" <=> backward-compatible behaviour
+      popoverLocation: "local", // "local" <=> backward-compatible behaviour
+      compactSubmenu: "xs"
     };
   },
   //@@viewOff:getDefaultProps
@@ -235,31 +253,76 @@ export const Dropdown = UU5.Common.VisualComponent.create({
     return icon;
   },
 
-  _getChildren() {
-    let contentProps = {};
+  _getCompactMenuItems(content) {
+    return UU5.Common.Children.toArray(content).map(child => {
+      let props = child.props;
+      if (props.divider) {
+        return "separator";
+      } else {
+        let itemContent = props.content || props.children;
+        let items = itemContent && props.label ? this._getCompactMenuItems(itemContent) : undefined;
+        return {
+          ...props,
+          content: null,
+          children: null,
+          label: props.label || itemContent,
+          items,
+          onClick: (...args) => {
+            if (typeof props.onClick === "function") props.onClick(...args);
+            if (!items) this.close();
+          }
+        };
+      }
+    });
+  },
 
-    if (this.props.items && this.props.items.length > 0) {
-      contentProps = {
-        content: {
+  _getChildren({ screenSize }) {
+    let screenSizeRegExp = new RegExp(`\\b${screenSize}\\b`);
+    if (this.props.compactSubmenu === true || this.props.compactSubmenu.match(screenSizeRegExp)) {
+      let content;
+
+      if (this.props.items && this.props.items.length > 0) {
+        content = {
           tag: this.getDefault().childTagName,
           propsArray: this.props.items
-        }
-      };
-    } else if (this.props.children) {
-      contentProps = { children: this.props.children };
-    } else if (this.props.content) {
-      contentProps = { content: this.props.content };
-    }
-    let menuClassName = this.getClassName("menu");
-    if (this.state.block) {
-      menuClassName += " " + this.getClassName("block");
-    }
+        };
+      } else if (this.props.children) {
+        content = this.props.children;
+      } else if (this.props.content) {
+        content = this.props.content;
+      }
+      return (
+        <CompactMenu
+          items={this._getCompactMenuItems(UU5.Utils.Content.getChildren(content, this.props, this.constructor))}
+          className={this.getClassName("compactMenu")}
+        />
+      );
+    } else {
+      let contentProps = {};
 
-    return (
-      <div className={menuClassName}>
-        <ul className={this.getClassName("menuList")}>{this.buildChildren(contentProps)}</ul>
-      </div>
-    );
+      if (this.props.items && this.props.items.length > 0) {
+        contentProps = {
+          content: {
+            tag: this.getDefault().childTagName,
+            propsArray: this.props.items
+          }
+        };
+      } else if (this.props.children) {
+        contentProps = { children: this.props.children };
+      } else if (this.props.content) {
+        contentProps = { content: this.props.content };
+      }
+      let menuClassName = this.getClassName("menu");
+      if (this.state.block) {
+        menuClassName += " " + this.getClassName("block");
+      }
+
+      return (
+        <div className={menuClassName}>
+          <ul className={this.getClassName("menuList")}>{this.buildChildren(contentProps)}</ul>
+        </div>
+      );
+    }
   },
 
   _getButton() {
@@ -425,7 +488,7 @@ export const Dropdown = UU5.Common.VisualComponent.create({
           aroundElement: this._button,
           position: this._getPosition(),
           offset: this.getDefault().offset,
-          content: this._getChildren(),
+          content: <UU5.Bricks.ScreenSize>{this._getChildren}</UU5.Bricks.ScreenSize>,
           className: className,
           bodyClassName: bodyClassName,
           fitHeightToViewport: this.props.fitMenuToViewport

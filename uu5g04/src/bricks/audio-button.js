@@ -26,10 +26,12 @@ export const AudioButton = UU5.Common.VisualComponent.create({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("AudioButton"),
-    nestingLevelList: UU5.Environment.getNestingLevelList("smallBoxCollection"),
     classNames: {
       main: ns.css("audio-button"),
-      audio: Css.css`display: none;`
+      audio: () => Css.css`display: none;`
+    },
+    opt: {
+      nestingLevelWrapper: true
     }
   },
   //@@viewOff:statics

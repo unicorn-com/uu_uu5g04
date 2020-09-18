@@ -283,8 +283,8 @@ export const DatePicker = Context.withContext(
     },
 
     close_(setStateCallback) {
-      this._removeEvent();
-      this.closeDefault(() => this._close(setStateCallback));
+      // remove event listeners in _close function
+      this.closeDefault(() => this._close(false, setStateCallback));
     },
     //@@viewOff:overriding
 
