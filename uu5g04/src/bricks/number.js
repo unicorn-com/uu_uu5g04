@@ -21,7 +21,7 @@ const noDigit = /(\D)/g;
 const DECIMAL_SEPARATOR = ",";
 const THOUSAND_SEPARATOR = "\u00a0";
 
-const getFormatFromNumber = country => {
+const getFormatFromNumber = (country) => {
   let testNumber = 1000000.5;
   let localizedSeparators = testNumber.toLocaleString(country);
 
@@ -49,7 +49,7 @@ const getFormatFromNumber = country => {
   return { decimalSeparator, thousandSeparator };
 };
 
-const checkSpace = separator => {
+const checkSpace = (separator) => {
   if (separator == " ") {
     separator = "&nbsp;";
   }
@@ -85,15 +85,15 @@ export const Number = UU5.Common.VisualComponent.create({
       main: ns.css("number"),
       negative: ns.css("number-negative"),
       positive: ns.css("number-positive"),
-      zero: ns.css("number-zero")
+      zero: ns.css("number-zero"),
     },
     defaults: {
       event: UU5.Common.Tools.events.number,
       thousandSeparator: "&nbsp;",
       decimalSeparator: ",",
       regexpNumberParts: /\B(?=(\d{3})+(?!\d))/g,
-      regexpNotDigit: /(\D)/g
-    }
+      regexpNotDigit: /(\D)/g,
+    },
   },
   //@@viewOff:statics
 
@@ -106,12 +106,12 @@ export const Number = UU5.Common.VisualComponent.create({
     decimalSeparator: UU5.PropTypes.string,
     minDecimalLength: UU5.PropTypes.number,
     maxDecimalLength: UU5.PropTypes.number,
-    rounded: UU5.PropTypes.number
+    rounded: UU5.PropTypes.number,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       country: undefined,
       value: null,
@@ -120,13 +120,13 @@ export const Number = UU5.Common.VisualComponent.create({
       decimalSeparator: null,
       minDecimalLength: null,
       maxDecimalLength: null,
-      rounded: null
+      rounded: null,
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  getInitialState: function() {
+  getInitialState: function () {
     this._specifiedThouSep = !!this.props.thousandSeparator;
     this._specifiedDecSep = !!this.props.decimalSeparator;
     let opts = this._initOptions(this.props);
@@ -134,11 +134,11 @@ export const Number = UU5.Common.VisualComponent.create({
     return {
       country: opts.country,
       thousandSeparator: opts.thousandSeparator,
-      decimalSeparator: opts.decimalSeparator
+      decimalSeparator: opts.decimalSeparator,
     };
   },
 
-  UNSAFE_componentWillMount: function() {
+  UNSAFE_componentWillMount: function () {
     UU5.Environment.EventListener.registerNumber(this.getId(), this._onChange);
   },
 
@@ -151,12 +151,12 @@ export const Number = UU5.Common.VisualComponent.create({
       this.setState({
         thousandSeparator: opts.thousandSeparator,
         decimalSeparator: opts.decimalSeparator,
-        country: opts.country
+        country: opts.country,
       });
     }
   },
 
-  componentWillUnmount: function() {
+  componentWillUnmount: function () {
     UU5.Environment.EventListener.unregisterNumber(this.getId(), this._onChange);
   },
 
@@ -245,7 +245,7 @@ export const Number = UU5.Common.VisualComponent.create({
         ? getFormatByCountry(props.value, country)
         : {
             thousandSeparator: globalOptions.thousandSeparator || this.getDefault("thousandSeparator"),
-            decimalSeparator: globalOptions.decimalSeparator || this.getDefault("decimalSeparator")
+            decimalSeparator: globalOptions.decimalSeparator || this.getDefault("decimalSeparator"),
           };
       thousandSeparator = thousandSeparator || separators.thousandSeparator;
       decimalSeparator = decimalSeparator || separators.decimalSeparator;
@@ -357,7 +357,7 @@ export const Number = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     let mainAttrs = this._getMainAttrs();
     let numAttrs = {
       dangerouslySetInnerHTML: {
@@ -365,9 +365,9 @@ export const Number = UU5.Common.VisualComponent.create({
           maxDecimals: this.props.rounded == null ? this.props.maxDecimalLength : -1 * this.props.rounded,
           minDecimals: this.props.minDecimalLength,
           thousandSeparator: this.state.thousandSeparator,
-          decimalSeparator: this.state.decimalSeparator
-        })
-      }
+          decimalSeparator: this.state.decimalSeparator,
+        }),
+      },
     };
     let result = <span {...mainAttrs} {...numAttrs} />;
 
@@ -383,7 +383,7 @@ export const Number = UU5.Common.VisualComponent.create({
     }
 
     return this.getNestingLevel() ? result : null;
-  }
+  },
   //@@viewOff:render
 });
 

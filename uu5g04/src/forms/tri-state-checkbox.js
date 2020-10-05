@@ -34,7 +34,7 @@ export const TriStateCheckbox = Context.withContext(
       UU5.Common.PureRenderMixin,
       UU5.Common.ElementaryMixin,
       UU5.Common.ColorSchemaMixin,
-      InputMixin
+      InputMixin,
     ],
     //@@viewOff:mixins
 
@@ -49,14 +49,14 @@ export const TriStateCheckbox = Context.withContext(
         checked: ns.css("tri-state-checkbox-checked"),
         unChecked: ns.css("tri-state-checkbox-unchecked"),
         indeterminate: ns.css("tri-state-checkbox-indeterminate"),
-        loading: ns.css("input-loading-icon")
+        loading: ns.css("input-loading-icon"),
       },
       defaults: {
         onIcon: "mdi-check",
         indeterminateIcon: "mdi-stop",
-        offIcon: ""
+        offIcon: "",
       },
-      lsi: () => UU5.Environment.Lsi.Forms.message
+      lsi: () => UU5.Environment.Lsi.Forms.message,
     },
     //@@viewOff:statics
 
@@ -68,7 +68,7 @@ export const TriStateCheckbox = Context.withContext(
       indeterminateIcon: UU5.PropTypes.string,
       labelPosition: UU5.PropTypes.oneOf(["left", "right"]),
       bgStyleChecked: UU5.PropTypes.oneOf(["filled", "outline"]),
-      bgStyleIndeterminate: UU5.PropTypes.oneOf(["filled", "outline"])
+      bgStyleIndeterminate: UU5.PropTypes.oneOf(["filled", "outline"]),
     },
     //@@viewOff:propTypes
 
@@ -81,7 +81,7 @@ export const TriStateCheckbox = Context.withContext(
         indeterminateIcon: "",
         labelPosition: "left",
         bgStyleChecked: "outline",
-        bgStyleIndeterminate: "outline"
+        bgStyleIndeterminate: "outline",
       };
     },
     //@@viewOff:getDefaultProps
@@ -114,7 +114,7 @@ export const TriStateCheckbox = Context.withContext(
           {
             feedback: result.feedback,
             message: result.message,
-            value: result.value
+            value: result.value,
           },
           setStateCallback
         );
@@ -176,7 +176,7 @@ export const TriStateCheckbox = Context.withContext(
             }
           } else {
             this.showError("validateError", null, {
-              context: { event: opt.event, func: this.props.onValidate, result: result }
+              context: { event: opt.event, func: this.props.onValidate, result: result },
             });
           }
         }
@@ -251,8 +251,8 @@ export const TriStateCheckbox = Context.withContext(
         mainAttrs.className += " " + this.getClassName().right;
       }
 
-      let handleClick = e => {
-        let matches = this._getEventPath(e).some(item => {
+      let handleClick = (e) => {
+        let matches = this._getEventPath(e).some((item) => {
           let functionType = item.matches ? "matches" : "msMatchesSelector";
           if (item[functionType]) {
             return item[functionType]("button.uu5-forms-tri-state-checkbox-button, .uu5-forms-label");
@@ -265,7 +265,7 @@ export const TriStateCheckbox = Context.withContext(
         }
       };
 
-      mainAttrs.onClick = e => {
+      mainAttrs.onClick = (e) => {
         handleClick(e);
       };
 
@@ -318,7 +318,7 @@ export const TriStateCheckbox = Context.withContext(
               this.props.inputAttrs
             )}
             content={this._getIcon()}
-            ref_={button => (this._focusElement = button)}
+            ref_={(button) => (this._focusElement = button)}
           />
         );
       }
@@ -334,7 +334,7 @@ export const TriStateCheckbox = Context.withContext(
           )}
         </div>
       );
-    }
+    },
     //@@viewOff:render
   })
 );

@@ -17,283 +17,283 @@ export const FormsLsi = {
       cs: "zapnuto",
       en: "enabled",
       sk: "zapnuté",
-      uk: "увімкнено"
+      uk: "увімкнено",
     },
     valueFalse: {
       cs: "vypnuto",
       en: "disabled",
       sk: "vypnuté",
-      uk: "вимкнено"
-    }
+      uk: "вимкнено",
+    },
   },
   editablePanel: {
     moreSettingsTooltip: {
       cs: "Další nastavení",
       en: "More Settings",
       sk: "Ďalšie nastavenia",
-      uk: "Додаткові налаштування"
+      uk: "Додаткові налаштування",
     },
     settingsButton: {
       cs: "Nastavení",
       en: "Settings",
       sk: "Nastavenia",
-      uk: "Налаштування"
-    }
+      uk: "Налаштування",
+    },
   },
   editableHeader: {
     placeholder: {
       cs: "Hlavička",
       en: "Header",
       sk: "Hlavička",
-      uk: "Заголовок"
-    }
+      uk: "Заголовок",
+    },
   },
   editableFooter: {
     placeholder: {
       cs: "Patička",
       en: "Footer",
       sk: "Pätička",
-      uk: "Футер"
-    }
+      uk: "Футер",
+    },
   },
   endEditation: {
     label: {
       cs: "Ukončit úpravy",
       en: "Stop editing",
       sk: "Ukončiť úpravy",
-      uk: "Закінчити редагування"
-    }
+      uk: "Закінчити редагування",
+    },
   },
   modal: {
     componentInfo: {
       cs: "Náhlédni do dokumentace",
       en: "Consult documentation of",
       sk: "Nahliadni do dokumentácie",
-      uk: "Перевірте документацію"
+      uk: "Перевірте документацію",
     },
     menuItemInsertBefore: {
       cs: "Vložit před",
       en: "Insert Before",
       sk: "Vložiť pred",
-      uk: "Вставити перед"
+      uk: "Вставити перед",
     },
     menuItemInsertAfter: {
       cs: "Vložit za",
       en: "Insert After",
       sk: "Vložiť za",
-      uk: "Вставити після"
+      uk: "Вставити після",
     },
     menuItemMoveToPosition: {
       cs: "Posunout na pozici",
       en: "Move to Position",
       sk: "Posunúť na pozíciu",
-      uk: "Перенести на позицію"
+      uk: "Перенести на позицію",
     },
     menuItemDuplicate: {
       cs: "Duplikovat komponentu",
       en: "Duplicate Component",
       sk: "Duplikovať komponentu",
-      uk: "Дублікувати компонент"
+      uk: "Дублікувати компонент",
     },
     menuItemDelete: {
       cs: "Smazat",
       en: "Delete",
       sk: "Zmazať",
-      uk: "Видалити"
+      uk: "Видалити",
     },
     itemMoveModalHeader: {
       cs: "Posun položky na pozici",
       en: "Move Item to Position",
       sk: "Posuň položky na pozíciu",
-      uk: "Перенести товар на позицію"
+      uk: "Перенести товар на позицію",
     },
     saveButton: {
       cs: "Uložit",
       en: "Save",
       sk: "Uložiť",
-      uk: "Зберегти"
+      uk: "Зберегти",
     },
     cancelButton: {
       cs: "Zrušit",
       en: "Cancel",
       sk: "Zrušiť",
-      uk: "Відмінити"
+      uk: "Відмінити",
     },
     header: {
       cs: "${name} editace",
       en: "${name} editation",
       sk: "${name} editácia",
-      uk: "${name} редагування"
+      uk: "${name} редагування",
     },
     itemRemoveModalHeader: {
       cs: "Smazání položky",
       en: "Item Removal",
       sk: "Zmazanie položky",
-      uk: "Видаліть елемент"
+      uk: "Видаліть елемент",
     },
     itemRemoveModalBody: {
       cs: "Opravdu chcete smazat tuto položku?",
       en: "Are you sure you want to remove the this item?",
       sk: "Naozaj chcete odstrániť túto položku?",
-      uk: "Ви впевнені, що хочете видалити цей елемент?"
+      uk: "Ви впевнені, що хочете видалити цей елемент?",
     },
     itemRemoveModalConfirmButton: {
       cs: "Smazat",
       en: "Remove",
       sk: "Zmazať",
-      uk: "Видалити"
+      uk: "Видалити",
     },
     onSaveInvalidForm: {
       cs: "Přinejmenším jedna honota formuláře není platná!",
-      en: "Atleast one of the editation forms is invalid!"
+      en: "Atleast one of the editation forms is invalid!",
     },
     itemTypeSwitch: {
       cs: "Typ položky",
-      en: "Item type"
-    }
+      en: "Item type",
+    },
   },
   menu: {
     addItemButton: {
       cs: "Přidat položku",
       en: "Add Item",
       sk: "Pridať položku",
-      uk: "Додати товар"
-    }
+      uk: "Додати товар",
+    },
   },
   bgStyleInput: {
     label: {
       cs: "Styl pozadí",
       en: "Background style",
       sk: "Štýl pozadia",
-      uk: "Фон стиль"
+      uk: "Фон стиль",
     },
     filled: {
       cs: "vyplněný",
       en: "filled",
       sk: "vyplnený",
-      uk: "заповнене"
+      uk: "заповнене",
     },
     outline: {
       cs: "ohraničený",
       en: "outline",
       sk: "ohraničený",
-      uk: "контур"
+      uk: "контур",
     },
     transparent: {
       cs: "transparentní",
       en: "transparent",
       sk: "transparentné",
-      uk: "прозорий"
+      uk: "прозорий",
     },
     underline: {
       cs: "podtržený",
       en: "underline",
       sk: "podčiarknutý",
-      uk: "підкреслення"
+      uk: "підкреслення",
     },
     rounded: {
       cs: "kulaté",
       en: "rounded",
       sk: "guľaté",
-      uk: "круглі"
-    }
+      uk: "круглі",
+    },
   },
   elevationInput: {
     label: {
       en: "Elevation",
-      cs: "Úroveň vyvýšení"
-    }
+      cs: "Úroveň vyvýšení",
+    },
   },
   borderRadiusInput: {
     label: {
       cs: "Zaoblení rohů",
       en: "Border radius",
       sk: "Zaoblenie rohov",
-      uk: "Закруглення кутів"
-    }
+      uk: "Закруглення кутів",
+    },
   },
   sizeInput: {
     label: {
       cs: "Velikost",
       en: "Size",
       sk: "Veľkosť",
-      uk: "Розмір"
+      uk: "Розмір",
     },
     valueXS: {
       cs: "xs",
       en: "xs",
       sk: "xs",
-      uk: "xs"
+      uk: "xs",
     },
     valueS: {
       cs: "s",
       en: "s",
       sk: "s",
-      uk: "s"
+      uk: "s",
     },
     valueM: {
       cs: "m",
       en: "m",
       sk: "m",
-      uk: "m"
+      uk: "m",
     },
     valueL: {
       cs: "l",
       en: "l",
       sk: "l",
-      uk: "l"
+      uk: "l",
     },
     valueXL: {
       cs: "xl",
       en: "xl",
       sk: "xl",
-      uk: "xl"
-    }
+      uk: "xl",
+    },
   },
   colorSchemaPicker: {
     label: {
       cs: "Barva",
       en: "Color",
       sk: "Farba",
-      uk: "Колір"
+      uk: "Колір",
     },
     valueInherit: {
       cs: "zdědit",
-      en: "inherit"
-    }
+      en: "inherit",
+    },
   },
   confirmModal: {
     content: {
       cs: "Chystáte se provést potenciálně destruktivní změny. Opravdu si přejete tuto změnu povést?",
       en: "You are about to do a potentially destructive action. Are you sure you want to proceed?",
       sk: "Chystáte sa vykonať potenciálne deštruktívne zmeny. Naozaj chcete túto zmenu podariť?",
-      uk: "Ви збираєтесь внести потенційно руйнівні зміни. Ви впевнені, що хочете внести цю зміну?"
+      uk: "Ви збираєтесь внести потенційно руйнівні зміни. Ви впевнені, що хочете внести цю зміну?",
     },
     header: {
       cs: "Provést změny?",
       en: "Execute changes?",
       sk: "Vykonať zmeny?",
-      uk: "Внести зміни?"
+      uk: "Внести зміни?",
     },
     confirm: {
       cs: "Změnit",
       en: "Change",
       sk: "Zmeniť",
-      uk: "Зміна"
+      uk: "Зміна",
     },
     cancel: {
       cs: "Zrušit",
       en: "Cancel",
       sk: "Zrušiť",
-      uk: "Відмінити"
-    }
+      uk: "Відмінити",
+    },
   },
   well: {
     modalHeader: {
       cs: "Upravit Well",
-      en: "Edit Well"
-    }
-  }
+      en: "Edit Well",
+    },
+  },
 };
 
 export default FormsLsi;

@@ -27,13 +27,13 @@ const newdata = { invalidToken: { id: "456", data: "some new set props data..." 
 Object.defineProperty(navigator, "hardwareConcurrency", {
   get() {
     return 8;
-  }
+  },
 });
 // force userAgent string so that it doesn't change between versions of jsdom
 Object.defineProperty(navigator, "userAgent", {
   get() {
     return "Mozilla/5.0 (win32) AppleWebKit/537.36 (KHTML, like Gecko) jsdom";
-  }
+  },
 });
 
 const CONFIG = {
@@ -43,42 +43,42 @@ const CONFIG = {
     "UU5.Common.ContentMixin",
     "UU5.Common.NestingLevelMixin",
     "UU5.Common.PureRenderMixin",
-    "UU5.Common.ColorSchemaMixin"
+    "UU5.Common.ColorSchemaMixin",
   ],
   props: {
     errorInfo: {
-      values: ["Kontaktujte prosím +4U Helpdesk"]
+      values: ["Kontaktujte prosím +4U Helpdesk"],
     },
     moreInfo: {
-      values: [true, false]
+      values: [true, false],
     },
     inline: {
-      values: [true, false]
+      values: [true, false],
     },
     silent: {
-      values: [true, false]
+      values: [true, false],
     },
     errorData: {
-      data
+      data,
     },
     bgStyle: {
-      values: ["filled", "outline", "transparent"]
+      values: ["filled", "outline", "transparent"],
     },
     elevation: {
-      values: ["-1", "5"]
+      values: ["-1", "5"],
     },
     borderRadius: {
-      values: ["8px", 16]
+      values: ["8px", 16],
     },
     //Error props is tested separatelly.
-    error: {}
+    error: {},
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Common.Error props`, () => {

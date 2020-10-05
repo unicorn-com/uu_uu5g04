@@ -23,7 +23,7 @@ const MyAllowTagsLsi = UU5.Common.VisualComponent.create({
   statics: { tagName: "UU5.Example.MyCompButton", classNames: { main: "mytr" } },
   render() {
     return <UU5.Example.MyCompButton {...this.getMainPropsToPass()} />;
-  }
+  },
 });
 
 const CONFIG = {
@@ -33,27 +33,27 @@ const CONFIG = {
     "UU5.Common.LsiMixin",
     "UU5.Common.ContentMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     lsi: {
-      values: [{ "en-gb": "value", sk: "hodnota", cs: "hodnota" }]
+      values: [{ "en-gb": "value", sk: "hodnota", cs: "hodnota" }],
     },
     allowTags: {
-      allowTagsArray: ["UU5.Example.MyCompButton"]
+      allowTagsArray: ["UU5.Example.MyCompButton"],
     },
     params: {
-      values: [["Ahoj", "123"]]
-    }
+      values: [["Ahoj", "123"]],
+    },
   },
   requiredProps: {
-    children: <UU5.Bricks.Lsi.Item id={"childID"} language="cs" content="Text in Children" />
+    children: <UU5.Bricks.Lsi.Item id={"childID"} language="cs" content="Text in Children" />,
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Lsi props`, () => {
@@ -85,7 +85,7 @@ describe(`UU5.Bricks.Lsi children as fn`, () => {
 
     const wrapper = mount(
       <UU5.Bricks.Lsi id={"uuID"}>
-        {opt => {
+        {(opt) => {
           mockFn(opt);
           return opt.language;
         }}

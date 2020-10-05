@@ -23,14 +23,14 @@ MoveItemFormModal.propTypes = {
   onSave: UU5.PropTypes.func,
   onCancel: UU5.PropTypes.func,
   currentPosition: UU5.PropTypes.number,
-  maxPosition: UU5.PropTypes.number
+  maxPosition: UU5.PropTypes.number,
 };
 MoveItemFormModal.defaultProps = {
   onClose: undefined,
   onSave: undefined,
   onCancel: undefined,
   currentPosition: 0,
-  maxPosition: 0
+  maxPosition: 0,
 };
 
 export default MoveItemFormModal;

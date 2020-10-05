@@ -21,7 +21,7 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 const MyNumberHandler = UU5.Common.VisualComponent.create({
   getInitialState: () => {
     return {
-      isCalled: false
+      isCalled: false,
     };
   },
 
@@ -31,7 +31,7 @@ const MyNumberHandler = UU5.Common.VisualComponent.create({
   },
   render() {
     return <UU5.Bricks.Number id={"uuID"} value={5223.65663} onChange={this.onChangeHandler} />;
-  }
+  },
 });
 
 const CONFIG = {
@@ -39,37 +39,37 @@ const CONFIG = {
     "UU5.Common.BaseMixin",
     "UU5.Common.ElementaryMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     value: {
-      values: [225658.14522]
+      values: [225658.14522],
     },
     //onChange:
     thousandSeparator: {
-      values: [",", ".", " "]
+      values: [",", ".", " "],
     },
     decimalSeparator: {
-      values: [",", ".", " "]
+      values: [",", ".", " "],
     },
     maxDecimalLength: {
-      values: [5]
+      values: [5],
     },
     minDecimalLength: {
-      values: [10]
+      values: [10],
     },
     rounded: {
-      values: [-5, -2, 0]
-    }
+      values: [-5, -2, 0],
+    },
   },
   requiredProps: {
-    value: 225658.14522
+    value: 225658.14522,
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Number`, () => {

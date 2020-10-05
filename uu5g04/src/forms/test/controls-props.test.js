@@ -22,24 +22,24 @@ const CONFIG = {
     "UU5.Forms.ControlsMixin",
     "UU5.Common.BaseMixin",
     "UU5.Common.PureRenderMixin",
-    "UU5.Common.ElementaryMixin"
+    "UU5.Common.ElementaryMixin",
   ],
   props: {
     buttonReset: {
-      values: [true, false]
+      values: [true, false],
     },
     buttonValidate: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
   },
   requiredProps: {
     //The component does not have any required props
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Forms.Controls props`, () => {

@@ -56,7 +56,7 @@ UU5.Home = createReactClass({
         {renderButtons()}
       </UU5.Bricks.Container>
     );
-  }
+  },
 });
 
 UU5.About = createReactClass({
@@ -65,7 +65,7 @@ UU5.About = createReactClass({
 
   render() {
     return <UU5.Bricks.Container header="About">{renderButtons()}</UU5.Bricks.Container>;
-  }
+  },
 });
 
 UU5.Default = createReactClass({
@@ -89,7 +89,7 @@ UU5.Default = createReactClass({
         />
       </UU5.Bricks.Container>
     );
-  }
+  },
 });
 
 UU5.Custom = createReactClass({
@@ -97,7 +97,7 @@ UU5.Custom = createReactClass({
   mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.RouteMixin],
 
   componentDidMount() {
-    UU5.Environment.getRouter().preventPageLeave(callback => {
+    UU5.Environment.getRouter().preventPageLeave((callback) => {
       return {
         header: "Test",
         content: (
@@ -106,7 +106,7 @@ UU5.Custom = createReactClass({
             <UU5.Bricks.Button onClick={() => callback(true)}>Yes</UU5.Bricks.Button>
             <UU5.Bricks.Button onClick={() => callback(false)}>No</UU5.Bricks.Button>
           </UU5.Bricks.Div>
-        )
+        ),
       };
     });
   },
@@ -124,7 +124,7 @@ UU5.Custom = createReactClass({
         />
       </UU5.Bricks.Container>
     );
-  }
+  },
 });
 
 let RouteComponent = createReactClass({
@@ -140,7 +140,7 @@ let RouteComponent = createReactClass({
         )}
       </UU5.Bricks.Div>
     );
-  }
+  },
 });
 
 let NotFoundRoute = createReactClass({
@@ -149,11 +149,11 @@ let NotFoundRoute = createReactClass({
     let { requestedRoute } = this.props.params || {};
     let useCase = (requestedRoute && requestedRoute.useCase) || requestedRoute;
     return <UU5.Common.Error content={`Route "${useCase}" not found.`} />;
-  }
+  },
 });
 
 let routes = {
-  home: { component: <RouteComponent content="home" /> }
+  home: { component: <RouteComponent content="home" /> },
 };
 
 const CONFIG = {
@@ -162,39 +162,39 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Common.CcrWriterMixin",
     "UU5.Common.PureRenderMixin",
-    "UU5.Common.RouterMixin"
+    "UU5.Common.RouterMixin",
   ],
   props: {
     basePath: {
-      values: ["/uu-dockitg01-main/12345-890890908"]
+      values: ["/uu-dockitg01-main/12345-890890908"],
     },
     route: {
-      values: [<RouteComponent content="initial route" />]
+      values: [<RouteComponent content="initial route" />],
     },
     notFoundRoute: {
-      values: [<NotFoundRoute />]
+      values: [<NotFoundRoute />],
     },
     showNotFoundRouteInUrl: {
-      values: [false, true, null]
+      values: [false, true, null],
     },
     //routes props is tested separatelly
     //routes: {},
     urlBuilder: {
-      values: [UU5.Common.Url]
+      values: [UU5.Common.Url],
     },
     strictProps: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
   },
   requiredProps: {
     route: "welcome",
-    notFoundRoute: "Error"
+    notFoundRoute: "Error",
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Common.Router Test Tool API test`, () => {
@@ -607,11 +607,11 @@ describe(`UU5.Common.Router props extended test`, () => {
 
   let routes = {
     welcome: { component: <RouteComponent content="@welcome@" /> },
-    notFoundRoute: { component: <RouteComponent content="@notFoundRoute@" /> }
+    notFoundRoute: { component: <RouteComponent content="@notFoundRoute@" /> },
   };
   let routesDashed = {
     "welcome/": { component: <RouteComponent content="@welcome/@" /> },
-    "notFoundRoute/": { component: <RouteComponent content="@notFoundRoute/@" /> }
+    "notFoundRoute/": { component: <RouteComponent content="@notFoundRoute/@" /> },
   };
 
   it("strictRoutes", () => {

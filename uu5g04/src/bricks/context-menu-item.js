@@ -39,8 +39,8 @@ export const ContextMenuItem = UU5.Common.VisualComponent.create({
       nestedItem: ns.css("context-menu-item-nested-item"),
       space: ns.css("context-menu-item-space"),
       divider: ns.css("context-menu-item-divider"),
-      header: ns.css("context-menu-item-header")
-    }
+      header: ns.css("context-menu-item-header"),
+    },
   },
   //@@viewOff:statics
 
@@ -56,7 +56,7 @@ export const ContextMenuItem = UU5.Common.VisualComponent.create({
     space: UU5.PropTypes.bool,
     header: UU5.PropTypes.bool,
     divider: UU5.PropTypes.bool,
-    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string)
+    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
   },
   //@@viewOff:propTypes
 
@@ -73,7 +73,7 @@ export const ContextMenuItem = UU5.Common.VisualComponent.create({
       space: false,
       divider: false,
       header: false,
-      allowTags: []
+      allowTags: [],
     };
   },
   //@@viewOff:getDefaultProps
@@ -102,7 +102,7 @@ export const ContextMenuItem = UU5.Common.VisualComponent.create({
       className: this.getClassName().link,
       parent: this,
       disabled: this.isDisabled(),
-      colorSchema: "custom"
+      colorSchema: "custom",
     };
 
     if (!this.isDisabled()) {
@@ -145,15 +145,15 @@ export const ContextMenuItem = UU5.Common.VisualComponent.create({
         {...props}
         onMouseEnter={
           !this.isDisabled() &&
-          (e => {
+          ((e) => {
             this._nestedMenu.open({
               aroundElement: this._nestingItem,
-              position: "right-bottom"
+              position: "right-bottom",
             });
           })
         }
         onMouseLeave={!this.isDisabled() && (() => this._nestedMenu.close())}
-        ref={item => (this._nestingItem = item)}
+        ref={(item) => (this._nestingItem = item)}
       >
         {content}
         {this._getNestedContextMenu()}
@@ -199,7 +199,7 @@ export const ContextMenuItem = UU5.Common.VisualComponent.create({
     let ContextMenu = UU5.Common.Tools.checkTag("UU5.Bricks.ContextMenu", false);
     return (
       <ContextMenu
-        ref_={cm => (this._nestedMenu = cm)}
+        ref_={(cm) => (this._nestedMenu = cm)}
         parent={this}
         content={this.props.content}
         forceRender
@@ -236,7 +236,7 @@ export const ContextMenuItem = UU5.Common.VisualComponent.create({
     }
 
     return result;
-  }
+  },
   //@@viewOff:render
 });
 

@@ -24,7 +24,7 @@ const SelectOptionFunctionProps = UU5.Common.VisualComponent.create({
 
   getInitialState: () => {
     return {
-      isCalled: false
+      isCalled: false,
     };
   },
 
@@ -37,13 +37,13 @@ const SelectOptionFunctionProps = UU5.Common.VisualComponent.create({
     return (
       <UU5.Bricks.Container id={"uuID01"}>
         {/*@@viewOn:0*/}
-        <UU5.Forms.Select id={"uuID02"} label="Issue category" ref_={item => (this.select = item)}>
+        <UU5.Forms.Select id={"uuID02"} label="Issue category" ref_={(item) => (this.select = item)}>
           <UU5.Forms.Select.Option id={"uuID03"} onClick={this.onClickItemHandler} value="Info" />
         </UU5.Forms.Select>
         {/*@@viewOff:0*/}
       </UU5.Bricks.Container>
     );
-  }
+  },
 });
 
 const CONFIG = {
@@ -51,26 +51,26 @@ const CONFIG = {
     "UU5.Common.BaseMixin",
     "UU5.Common.ElementaryMixin",
     "UU5.Common.ContentMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     value: {
-      values: ["Možnost číslo 1"]
+      values: ["Možnost číslo 1"],
     },
     //onClick: {},
     selectedContent: {
-      values: ["Nějaký text"]
-    }
+      values: ["Nějaký text"],
+    },
   },
   requiredProps: {
     parent: shallow(<UU5.Forms.Select id="parentId" />).instance(),
-    value: "option value"
+    value: "option value",
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Forms.Select.Option props`, () => {

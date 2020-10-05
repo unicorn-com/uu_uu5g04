@@ -21,7 +21,7 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 const MyHeadingHandler = UU5.Common.VisualComponent.create({
   getInitialState: () => {
     return {
-      isCalled: false
+      isCalled: false,
     };
   },
 
@@ -41,14 +41,14 @@ const MyHeadingHandler = UU5.Common.VisualComponent.create({
         content="Bricks.Heading"
         style={{
           padding: "10px",
-          backgroundColor: "cornflowerblue"
+          backgroundColor: "cornflowerblue",
         }}
         fixedOnScroll={true}
         onScrollToFixed={this.onScrollToFixedHandler}
         onScrollToBlocked={this.onScrollToBlockedHandler}
       />
     );
-  }
+  },
 });
 
 const CONFIG = {
@@ -57,30 +57,30 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Common.ContentMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     fixed: {
-      values: [true, false]
+      values: [true, false],
     },
     fixedOnScroll: {
-      values: [true, false]
+      values: [true, false],
     },
     hideOnScroll: {
-      values: [true, false]
+      values: [true, false],
     },
     spaceHolder: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
     //onScrollToFixed:{},
     //onScrollToBlocked:{},
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Heading`, () => {
@@ -125,7 +125,7 @@ describe(`UU5.Bricks.Heading docKit examples`, () => {
           fixed
           style={{
             padding: "10px",
-            backgroundColor: "cornflowerblue"
+            backgroundColor: "cornflowerblue",
           }}
         />
 

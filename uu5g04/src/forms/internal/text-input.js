@@ -30,34 +30,34 @@ const INPUT_TYPE_TEXTAREA = "textarea";
 const PADDINGS = {
   s: {
     top: 3,
-    bottom: 5
+    bottom: 5,
   },
   m: {
     top: 6,
-    bottom: 6
+    bottom: 6,
   },
   l: {
     top: 9,
-    bottom: 10
+    bottom: 10,
   },
   xl: {
     top: 11,
-    bottom: 13
-  }
+    bottom: 13,
+  },
 };
 
 const FONT_SIZES = {
   s: 12,
   m: 14,
   l: 16,
-  xl: 18
+  xl: 18,
 };
 
 const ICON_WIDTHS = {
   s: 24,
   m: 32,
   l: 40,
-  xl: 48
+  xl: 48,
 };
 
 export default UU5.Common.LsiMixin.withContext(
@@ -103,7 +103,7 @@ export default UU5.Common.LsiMixin.withContext(
             }
           `);
         },
-        prefix: props => {
+        prefix: (props) => {
           let left = 0;
           let sidePaddings = 8;
 
@@ -143,7 +143,7 @@ export default UU5.Common.LsiMixin.withContext(
               && {
                 text-align: left;
               }
-            `
+            `,
           ];
 
           let left = state.assumedValueWidth + state.prefixWidth;
@@ -164,8 +164,8 @@ export default UU5.Common.LsiMixin.withContext(
           `);
 
           return Css.css(styles.join(" "));
-        }
-      }
+        },
+      },
     },
     //@@viewOff:statics
 
@@ -193,7 +193,7 @@ export default UU5.Common.LsiMixin.withContext(
       size: UU5.PropTypes.string,
       prefix: UU5.PropTypes.any,
       suffix: UU5.PropTypes.any,
-      wrapperAttrs: UU5.PropTypes.object
+      wrapperAttrs: UU5.PropTypes.object,
     },
     //@@viewOff:propTypes
 
@@ -222,7 +222,7 @@ export default UU5.Common.LsiMixin.withContext(
         size: "m",
         prefix: undefined,
         suffix: undefined,
-        wrapperAttrs: undefined
+        wrapperAttrs: undefined,
       };
     },
     //@@viewOff:getDefaultProps
@@ -233,7 +233,7 @@ export default UU5.Common.LsiMixin.withContext(
         height: undefined,
         autoResizeOverflow: undefined,
         prefixWidth: 0,
-        assumedValueWidth: 0
+        assumedValueWidth: 0,
       };
     },
 
@@ -301,7 +301,7 @@ export default UU5.Common.LsiMixin.withContext(
     _calculateWidths() {
       let result = {
         prefixWidth: this.state.prefixWidth,
-        assumedValueWidth: this.state.assumedValueWidth
+        assumedValueWidth: this.state.assumedValueWidth,
       };
 
       if (this._prefix) {
@@ -311,7 +311,7 @@ export default UU5.Common.LsiMixin.withContext(
       if (this._suffix && this._textInput) {
         result.assumedValueWidth = UU5.Common.Tools.calculateTextWidth(this._textInput.value, {
           fontSize: `${FONT_SIZES[this.props.size]}px`,
-          whiteSpace: "pre"
+          whiteSpace: "pre",
         });
       }
 
@@ -386,7 +386,7 @@ export default UU5.Common.LsiMixin.withContext(
 
       if (mainAttrs && typeof mainAttrs.onKeyDown === "function") {
         let mainAttrsKeyDown = mainAttrs.onKeyDown;
-        onKeyDown = e => {
+        onKeyDown = (e) => {
           if (typeof this.props.onKeyDown === "function") {
             this.props.onKeyDown(e);
           }
@@ -433,8 +433,8 @@ export default UU5.Common.LsiMixin.withContext(
         className,
         onKeyDown,
         tabIndex: this.props.readonly ? "-1" : undefined,
-        ref: item => (this._textInput = item),
-        style: { ...(mainAttrs || {}).style, ...{ borderRadius: this.props.borderRadius } }
+        ref: (item) => (this._textInput = item),
+        style: { ...(mainAttrs || {}).style, ...{ borderRadius: this.props.borderRadius } },
       };
 
       mainAttrs && (inputProps = UU5.Common.Tools.merge(inputProps, mainAttrs));
@@ -450,13 +450,13 @@ export default UU5.Common.LsiMixin.withContext(
             ...{
               maxHeight: this._getMaxHeight(),
               height: this.state.height,
-              overflow: this.state.autoResizeOverflow ? this.state.autoResizeOverflow : "hidden"
-            }
+              overflow: this.state.autoResizeOverflow ? this.state.autoResizeOverflow : "hidden",
+            },
           };
 
           input = [
             <textarea key="textarea" {...inputProps} rows={this.props.rows} style={style} />,
-            this._createHiddenTextarea(inputProps.className, this.props.value)
+            this._createHiddenTextarea(inputProps.className, this.props.value),
           ];
         } else {
           input = <textarea {...inputProps} rows={this.props.rows} />;
@@ -481,12 +481,12 @@ export default UU5.Common.LsiMixin.withContext(
             }}
             mainAttrs={{
               tabIndex: this.props.clickable ? 0 : null,
-              onKeyDown: e => {
+              onKeyDown: (e) => {
                 if ((e.keyCode || e.which) === 13) {
                   e.stopPropagation();
                   this.props.iconOnClick();
                 }
-              }
+              },
             }}
             disabled={this.props.disabled || this.props.readonly}
           >
@@ -519,7 +519,7 @@ export default UU5.Common.LsiMixin.withContext(
             className={this.getClassName().hiddenTextarea + " " + style}
             value={value}
             readOnly
-            ref={item => (this._hiddenTextarea = item)}
+            ref={(item) => (this._hiddenTextarea = item)}
             rows={this.props.rows}
           />
         </div>
@@ -620,7 +620,7 @@ export default UU5.Common.LsiMixin.withContext(
           {this._getFeedbackIcon()}
         </div>
       );
-    }
+    },
     //@@viewOff:render
   })
 );

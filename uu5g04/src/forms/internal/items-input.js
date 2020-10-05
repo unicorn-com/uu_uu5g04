@@ -41,8 +41,8 @@ export default UU5.Common.LsiMixin.withContext(
         link: ns.css("items-input-item-link"),
         icon: ns.css("items-input-item-icon"),
         placeholder: ns.css("input-placeholder"),
-        inputError: ns.css("input-error")
-      }
+        inputError: ns.css("input-error"),
+      },
     },
     //@@viewOff:statics
 
@@ -52,7 +52,7 @@ export default UU5.Common.LsiMixin.withContext(
         UU5.PropTypes.string,
         UU5.PropTypes.object,
         UU5.PropTypes.arrayOf(UU5.PropTypes.string),
-        UU5.PropTypes.arrayOf(UU5.PropTypes.object)
+        UU5.PropTypes.arrayOf(UU5.PropTypes.object),
       ]),
       multiple: UU5.PropTypes.bool,
       placeholder: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string]),
@@ -62,12 +62,12 @@ export default UU5.Common.LsiMixin.withContext(
       borderRadius: UU5.PropTypes.string,
       bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
       elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-      colorSchema: UU5.PropTypes.string
+      colorSchema: UU5.PropTypes.string,
     },
     //@@viewOff:propTypes
 
     //@@viewOn:getDefaultProps
-    getDefaultProps: function() {
+    getDefaultProps: function () {
       return {
         value: "",
         multiple: false,
@@ -78,7 +78,7 @@ export default UU5.Common.LsiMixin.withContext(
         borderRadius: null,
         bgStyle: null,
         elevation: null,
-        colorSchema: null
+        colorSchema: null,
       };
     },
     //@@viewOff:getDefaultProps
@@ -231,7 +231,7 @@ export default UU5.Common.LsiMixin.withContext(
     //@@viewOff:private
 
     //@@viewOn:render
-    render: function() {
+    render: function () {
       let valueClass = this.getClassName().value;
       if (this.props.value.length < 1) {
         valueClass += " " + this.getClassName().placeholder;
@@ -243,7 +243,7 @@ export default UU5.Common.LsiMixin.withContext(
           {this._getFeedbackIcon()}
         </div>
       );
-    }
+    },
     //@@viewOn:render
   })
 );

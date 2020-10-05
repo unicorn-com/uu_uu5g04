@@ -29,7 +29,7 @@ export const Stepper = UU5.Common.VisualComponent.create({
     UU5.Common.ColorSchemaMixin,
     UU5.Common.ElementaryMixin,
     UU5.Common.NestingLevelMixin,
-    UU5.Common.ResizeMixin
+    UU5.Common.ResizeMixin,
   ],
   //@@viewOff:mixins
 
@@ -48,11 +48,11 @@ export const Stepper = UU5.Common.VisualComponent.create({
       leftAlignment: ns.css("stepper-left-alignment"),
       rightAlignment: ns.css("stepper-right-alignment"),
       centerAlignment: ns.css("stepper-center-alignment"),
-      inner: ns.css("stepper-inner")
+      inner: ns.css("stepper-inner"),
     },
     defaults: {
-      childTagName: "UU5.Bricks.Stepper.Item"
-    }
+      childTagName: "UU5.Bricks.Stepper.Item",
+    },
   },
   //@@viewOff:statics
 
@@ -69,8 +69,8 @@ export const Stepper = UU5.Common.VisualComponent.create({
     itemProps: UU5.PropTypes.shape({
       bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
       borderRadius: UU5.PropTypes.string,
-      elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
-    })
+      elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+    }),
   },
   //@@viewOff:propTypes
 
@@ -85,7 +85,7 @@ export const Stepper = UU5.Common.VisualComponent.create({
       currentStep: 0,
       hideText: undefined,
       alignment: "left",
-      itemProps: { bgStyle: "transparent", borderRadius: null, elevation: null }
+      itemProps: { bgStyle: "transparent", borderRadius: null, elevation: null },
     };
   },
   //@@viewOff:getDefaultProps
@@ -93,7 +93,7 @@ export const Stepper = UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
-      firstRender: true
+      firstRender: true,
     };
   },
   componentDidUpdate(prevProps, prevState) {
@@ -113,7 +113,7 @@ export const Stepper = UU5.Common.VisualComponent.create({
 
   //@@viewOn:overriding
   onResize_(oldWidth, newWidth) {
-    this.setState(nextState => {
+    this.setState((nextState) => {
       let hideText;
       if (this.props.orientation === "horizontal") {
         hideText = this._getComponentWidth() > newWidth;
@@ -125,11 +125,11 @@ export const Stepper = UU5.Common.VisualComponent.create({
       if (nextState.hideText !== hideText) {
         return {
           hideText,
-          firstRender: false
+          firstRender: false,
         };
       } else if (nextState.firstRender === this.state.firstRender) {
         return {
-          firstRender: false
+          firstRender: false,
         };
       } else {
         return null;
@@ -187,7 +187,7 @@ export const Stepper = UU5.Common.VisualComponent.create({
   _hasItemsWithLabel() {
     let children = this.props.children;
     if (!Array.isArray(children)) children = [children];
-    return children.every(child => {
+    return children.every((child) => {
       return !child || typeof child === "string" || child.props.children == null;
     });
   },
@@ -196,7 +196,7 @@ export const Stepper = UU5.Common.VisualComponent.create({
     let itemProps = {
       bgStyle: this.props.bgStyle,
       borderRadius: this.props.borderRadius,
-      ...this.props.itemProps
+      ...this.props.itemProps,
     };
 
     let children = this.props.children;
@@ -213,7 +213,7 @@ export const Stepper = UU5.Common.VisualComponent.create({
               onClick: this.props.onClick,
               size: this.props.size,
               disabled: index > this.props.topVisitedStep ? true : false,
-              itemProps: itemProps
+              itemProps: itemProps,
             }}
             key={index}
           >
@@ -244,7 +244,7 @@ export const Stepper = UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </div>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

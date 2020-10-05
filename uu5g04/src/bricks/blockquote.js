@@ -38,7 +38,7 @@ export const Blockquote = UU5.Common.VisualComponent.create({
     UU5.Common.ColorSchemaMixin,
     UU5.Common.ContentMixin,
     UU5.Common.PureRenderMixin,
-    UU5.Common.EditableMixin
+    UU5.Common.EditableMixin,
   ],
   //@@viewOff:mixins
 
@@ -51,11 +51,11 @@ export const Blockquote = UU5.Common.VisualComponent.create({
       bg: ns.css("blockquote-bg"),
       right: "blockquote-reverse",
       noSpacing: ns.css("blockquote-nospacing"),
-      editation: ns.css("blockquote-editation")
+      editation: ns.css("blockquote-editation"),
     },
     opt: {
-      nestingLevelWrapper: true
-    }
+      nestingLevelWrapper: true,
+    },
   },
   //@@viewOff:statics
 
@@ -65,18 +65,18 @@ export const Blockquote = UU5.Common.VisualComponent.create({
     alignment: UU5.PropTypes.oneOf(["left", "right"]),
     footer: UU5.PropTypes.any,
     footerAlignment: UU5.PropTypes.oneOf(["left", "right"]),
-    noSpacing: UU5.PropTypes.bool
+    noSpacing: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       background: false,
       alignment: "left",
       footer: null,
       footerAlignment: null,
-      noSpacing: false
+      noSpacing: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -84,7 +84,7 @@ export const Blockquote = UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
-      editationLazyLoaded: false
+      editationLazyLoaded: false,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -99,7 +99,7 @@ export const Blockquote = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _buildMainAttrs: function() {
+  _buildMainAttrs: function () {
     var mainAttrs = this.getMainAttrs();
     this.props.background && (mainAttrs.className += " " + this.getClassName().bg);
     this.props.alignment === "right" && (mainAttrs.className += " " + this.getClassName().right);
@@ -107,14 +107,14 @@ export const Blockquote = UU5.Common.VisualComponent.create({
     return mainAttrs;
   },
 
-  _getFooterAlignment: function() {
+  _getFooterAlignment: function () {
     return this.props.footerAlignment || this.props.alignment;
   },
 
   _registerNull(inst) {
     // unmount of component means that suspense is loaded and component should be rendered
     if (!inst) {
-      this.setState(state => {
+      this.setState((state) => {
         if (state.editationLazyLoaded) return;
 
         // Edit component is loaded - need to set to static variable because other Edit component does not render fallback component
@@ -143,7 +143,7 @@ export const Blockquote = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return this.getNestingLevel() ? (
       <blockquote {...this._buildMainAttrs()}>
         {this.state.editation ? this._renderEditationMode() : null}
@@ -153,12 +153,12 @@ export const Blockquote = UU5.Common.VisualComponent.create({
               this.props.footer && (
                 <Footer content={this.props.footer} alignment={this._getFooterAlignment()} key="footer" />
               ),
-              this.getDisabledCover()
+              this.getDisabledCover(),
             ]
           : null}
       </blockquote>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

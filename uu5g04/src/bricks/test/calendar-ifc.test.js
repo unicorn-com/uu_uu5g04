@@ -30,12 +30,7 @@ let lastDate = new Date(2019, 0, 31).getTime();
 describe(`UU5.Bricks.Calendar interface function`, () => {
   it(`UU5.Bricks.Calendar getValue`, () => {
     const wrapper = mount(<UU5.Bricks.Calendar value={new Date(firstDate)} />);
-    expect(
-      wrapper
-        .instance()
-        .getValue()
-        .getTime()
-    ).toEqual(firstDate);
+    expect(wrapper.instance().getValue().getTime()).toEqual(firstDate);
     wrapper.unmount();
   });
 
@@ -49,32 +44,20 @@ describe(`UU5.Bricks.Calendar interface function`, () => {
 
   it(`UU5.Bricks.Calendar setNext`, () => {
     const wrapper = mount(<UU5.Bricks.Calendar />);
-    let oldMonth = wrapper
-      .find(".uu5-bricks-calendar-head-cell-header")
-      .instance()
-      .innerHTML.match(/\w+/)[0];
+    let oldMonth = wrapper.find(".uu5-bricks-calendar-head-cell-header").instance().innerHTML.match(/\w+/)[0];
     wrapper.instance().setNext();
     wrapper.update();
-    let newMonth = wrapper
-      .find(".uu5-bricks-calendar-head-cell-header")
-      .instance()
-      .innerHTML.match(/\w+/)[0];
+    let newMonth = wrapper.find(".uu5-bricks-calendar-head-cell-header").instance().innerHTML.match(/\w+/)[0];
     expect(oldMonth).not.toMatch(newMonth);
     wrapper.unmount();
   });
 
   it(`UU5.Bricks.Calendar setPrevious`, () => {
     const wrapper = mount(<UU5.Bricks.Calendar />);
-    let oldMonth = wrapper
-      .find(".uu5-bricks-calendar-head-cell-header")
-      .instance()
-      .innerHTML.match(/\w+/)[0];
+    let oldMonth = wrapper.find(".uu5-bricks-calendar-head-cell-header").instance().innerHTML.match(/\w+/)[0];
     wrapper.instance().setPrevious();
     wrapper.update();
-    let newMonth = wrapper
-      .find(".uu5-bricks-calendar-head-cell-header")
-      .instance()
-      .innerHTML.match(/\w+/)[0];
+    let newMonth = wrapper.find(".uu5-bricks-calendar-head-cell-header").instance().innerHTML.match(/\w+/)[0];
     expect(oldMonth).not.toMatch(newMonth);
     wrapper.unmount();
   });

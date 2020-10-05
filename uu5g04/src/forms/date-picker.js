@@ -32,7 +32,7 @@ export const DatePicker = Context.withContext(
       UU5.Common.PureRenderMixin,
       UU5.Common.ElementaryMixin,
       UU5.Common.ScreenSizeMixin,
-      TextInputMixin
+      TextInputMixin,
     ],
     //@@viewOff:mixins
 
@@ -43,12 +43,12 @@ export const DatePicker = Context.withContext(
         main: ns.css("datepicker"),
         open: ns.css("datepicker-open"),
         menu: ns.css("input-menu"),
-        screenSizeBehaviour: ns.css("screen-size-behaviour")
+        screenSizeBehaviour: ns.css("screen-size-behaviour"),
       },
       defaults: {
-        inputColWidth: "xs12 s4 m4 l3 xl3"
+        inputColWidth: "xs12 s4 m4 l3 xl3",
       },
-      lsi: () => UU5.Environment.Lsi.Forms.message
+      lsi: () => UU5.Environment.Lsi.Forms.message,
     },
     //@@viewOff:statics
 
@@ -71,7 +71,7 @@ export const DatePicker = Context.withContext(
       hideFormatPlaceholder: UU5.PropTypes.bool,
       showTodayButton: UU5.PropTypes.bool,
       step: UU5.PropTypes.oneOf(["days", "months", "years"]),
-      monthNameFormat: UU5.PropTypes.oneOf(["abbr", "roman"])
+      monthNameFormat: UU5.PropTypes.oneOf(["abbr", "roman"]),
     },
     //@@viewOff:propTypes
 
@@ -96,7 +96,7 @@ export const DatePicker = Context.withContext(
         hideFormatPlaceholder: false,
         showTodayButton: false,
         step: "days",
-        monthNameFormat: "roman"
+        monthNameFormat: "roman",
       };
     },
     //@@viewOff:getDefaultProps
@@ -105,7 +105,7 @@ export const DatePicker = Context.withContext(
     getInitialState() {
       return {
         format: this.props.format,
-        country: this.props.country || UU5.Common.Tools.getLanguage()
+        country: this.props.country || UU5.Common.Tools.getLanguage(),
       };
     },
 
@@ -177,7 +177,7 @@ export const DatePicker = Context.withContext(
 
     //@@viewOn:interface
     toggle(setStateCallback) {
-      this.setState(state => {
+      this.setState((state) => {
         if (state.open) {
           this._removeEvent();
         } else {
@@ -341,10 +341,10 @@ export const DatePicker = Context.withContext(
         component: false,
         input: false,
         label: false,
-        picker: false
+        picker: false,
       };
       let eventPath = this._getEventPath(e);
-      eventPath.every(item => {
+      eventPath.every((item) => {
         let functionType = item.matches ? "matches" : "msMatchesSelector";
         if (item[functionType]) {
           if (item[functionType](labelMatch)) {
@@ -370,7 +370,7 @@ export const DatePicker = Context.withContext(
     },
 
     _addKeyEvents() {
-      let handleKeyDown = e => {
+      let handleKeyDown = (e) => {
         if (e.which === 13) {
           // enter
           e.preventDefault();
@@ -383,7 +383,7 @@ export const DatePicker = Context.withContext(
         }
       };
 
-      let handleKeyUp = e => {
+      let handleKeyUp = (e) => {
         let focusResult = this._findTarget(e);
         let doBlur = !focusResult.component;
         let opt = { value: this.state.value, event: e, component: this };
@@ -417,8 +417,8 @@ export const DatePicker = Context.withContext(
         }
       };
 
-      UU5.Environment.EventListener.addWindowEvent("keydown", this.getId(), e => handleKeyDown(e));
-      UU5.Environment.EventListener.addWindowEvent("keyup", this.getId(), e => handleKeyUp(e));
+      UU5.Environment.EventListener.addWindowEvent("keydown", this.getId(), (e) => handleKeyDown(e));
+      UU5.Environment.EventListener.addWindowEvent("keyup", this.getId(), (e) => handleKeyUp(e));
     },
 
     _removeKeyEvents() {
@@ -470,7 +470,7 @@ export const DatePicker = Context.withContext(
         {
           value,
           format,
-          country
+          country,
         },
         setStateCallback
       );
@@ -484,7 +484,7 @@ export const DatePicker = Context.withContext(
             aroundElement: this._textInput.findDOMNode(),
             position: "bottom",
             offset: this._shouldOpenToContent() ? 0 : 4,
-            preventPositioning: this._shouldOpenToContent()
+            preventPositioning: this._shouldOpenToContent(),
           },
           setStateCallback
         );
@@ -519,7 +519,7 @@ export const DatePicker = Context.withContext(
         this.props.openToContent
           .trim()
           .split(" ")
-          .some(size => {
+          .some((size) => {
             if (screenSize == size) {
               result = true;
               return true;
@@ -558,7 +558,7 @@ export const DatePicker = Context.withContext(
         event: e,
         component: this,
         required: this.props.required,
-        _data: { type: "input", required: this.props.required, value: e.target.value }
+        _data: { type: "input", required: this.props.required, value: e.target.value },
       };
       let date = this._parseDate(opt.value);
       let formatedDate = date ? this._getDateString(date) : null;
@@ -804,7 +804,7 @@ export const DatePicker = Context.withContext(
         colorSchema: this.getColorSchema(),
         showTodayButton: this.props.showTodayButton,
         step: this.props.step,
-        monthNameFormat: this.props.monthNameFormat
+        monthNameFormat: this.props.monthNameFormat,
       };
     },
 
@@ -853,7 +853,7 @@ export const DatePicker = Context.withContext(
 
       if (!this.isReadOnly() && !this.isComputedDisabled()) {
         let allowOpening = true;
-        let handleMobileClick = e => {
+        let handleMobileClick = (e) => {
           if (this.isOpen()) {
             e.target.focus();
             this.close();
@@ -870,7 +870,7 @@ export const DatePicker = Context.withContext(
           );
         };
 
-        let handleClick = e => {
+        let handleClick = (e) => {
           let clickData = this._findTarget(e.nativeEvent);
 
           if (this._shouldOpenToContent() && clickData.input) {
@@ -892,7 +892,7 @@ export const DatePicker = Context.withContext(
           }
         };
 
-        attrs.onClick = e => {
+        attrs.onClick = (e) => {
           handleClick(e);
         };
       }
@@ -917,7 +917,7 @@ export const DatePicker = Context.withContext(
     _getPopoverProps() {
       let props = {};
 
-      props.ref_ = ref => (this._popover = ref);
+      props.ref_ = (ref) => (this._popover = ref);
       props.forceRender = true;
       props.disableBackdrop = true;
       props.shown = this.isOpen();
@@ -947,7 +947,7 @@ export const DatePicker = Context.withContext(
       inputAttrs.className === "" ? delete inputAttrs.className : null;
 
       return (
-        <div {...this._getMainAttrs()} ref={comp => (this._root = comp)}>
+        <div {...this._getMainAttrs()} ref={(comp) => (this._root = comp)}>
           {this.getLabel(inputId)}
           {this.getInputWrapper([
             <TextInput
@@ -965,7 +965,7 @@ export const DatePicker = Context.withContext(
               icon={this._getFeedbackIcon()}
               iconClickable={false}
               loading={this.isLoading()}
-              ref_={item => (this._textInput = item)}
+              ref_={(item) => (this._textInput = item)}
               feedback={this.getFeedback()}
               borderRadius={this.props.borderRadius}
               elevation={this.props.elevation}
@@ -976,11 +976,11 @@ export const DatePicker = Context.withContext(
             />,
             <UU5.Bricks.Popover {...this._getPopoverProps()}>
               {this.isOpen() ? <UU5.Bricks.Calendar {...this._getCalendarProps()} /> : null}
-            </UU5.Bricks.Popover>
+            </UU5.Bricks.Popover>,
           ])}
         </div>
       );
-    }
+    },
     //@@viewOn:render
   })
 );

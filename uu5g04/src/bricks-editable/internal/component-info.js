@@ -14,17 +14,17 @@ const classNames = {
     color: #303030;
     padding: 16px;
   `),
-  icon: props =>
+  icon: (props) =>
     Css.css(`
     color: rgba(0, 0, 0, 0.54);
     font-size: ${props.iconFontSize};
     align-items: center;
     margin-right: 16px;
     align-self: start;
-  `)
+  `),
 };
 
-export const ComponentInfo = props => {
+export const ComponentInfo = (props) => {
   return (
     <div className={classNames.main()}>
       {props.icon ? <UU5.Bricks.Icon className={classNames.icon(props)} icon={props.icon} /> : null}
@@ -37,11 +37,11 @@ ComponentInfo.displayName = ns.name("ComponentInfo");
 ComponentInfo.tagName = ns.name("ComponentInfo");
 ComponentInfo.propTypes = {
   icon: UU5.PropTypes.string,
-  iconFontSize: UU5.PropTypes.string
+  iconFontSize: UU5.PropTypes.string,
 };
 ComponentInfo.defaultProps = {
   icon: "mdi-help-circle",
-  iconFontSize: "26px"
+  iconFontSize: "26px",
 };
 ComponentInfo.isStateless = true;
 

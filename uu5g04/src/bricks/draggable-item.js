@@ -28,7 +28,7 @@ export const DraggableItem = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.ContentMixin,
     UU5.Common.NestingLevelMixin,
-    UU5.Common.PureRenderMixin
+    UU5.Common.PureRenderMixin,
   ],
   //@@viewOff:mixins
 
@@ -37,11 +37,11 @@ export const DraggableItem = UU5.Common.VisualComponent.create({
     tagName: ns.name("DraggableItem"),
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
-      main: ns.css("draggable-item")
+      main: ns.css("draggable-item"),
     },
     errors: {
-      invalidParentType: "Parrent of the component does not have DraggableMixin."
-    }
+      invalidParentType: "Parrent of the component does not have DraggableMixin.",
+    },
   },
   //@@viewOff:statics
 
@@ -51,7 +51,7 @@ export const DraggableItem = UU5.Common.VisualComponent.create({
     y: UU5.PropTypes.number,
     onMoveStart: UU5.PropTypes.func,
     onMove: UU5.PropTypes.func,
-    onMoveEnd: UU5.PropTypes.func
+    onMoveEnd: UU5.PropTypes.func,
   },
   //@@viewOff:propTypes
 
@@ -62,7 +62,7 @@ export const DraggableItem = UU5.Common.VisualComponent.create({
       y: 0,
       onMoveStart: null,
       onMove: null,
-      onMoveEnd: null
+      onMoveEnd: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -71,7 +71,7 @@ export const DraggableItem = UU5.Common.VisualComponent.create({
   getInitialState() {
     return {
       x: this.props.x,
-      y: this.props.y
+      y: this.props.y,
     };
   },
 
@@ -82,7 +82,7 @@ export const DraggableItem = UU5.Common.VisualComponent.create({
 
   componentDidMount() {
     if (this.draggableParent) {
-      this.setState(state => {
+      this.setState((state) => {
         return {
           x:
             state.x +
@@ -93,7 +93,7 @@ export const DraggableItem = UU5.Common.VisualComponent.create({
             state.y +
             this.draggableParent.getYOffset() +
             this.draggableParent.getClientTop() +
-            this.draggableParent.getPaddingTop()
+            this.draggableParent.getPaddingTop(),
         };
       });
     } else {
@@ -106,7 +106,7 @@ export const DraggableItem = UU5.Common.VisualComponent.create({
     if (nextProps.controlled) {
       this.setState({
         x: nextProps.x,
-        y: nextProps.y
+        y: nextProps.y,
       });
     }
     return this;
@@ -130,10 +130,10 @@ export const DraggableItem = UU5.Common.VisualComponent.create({
   setPosition(x, y, setStateCallback) {
     x = isNaN(x) ? 0 : x;
     y = isNaN(y) ? 0 : y;
-    this.setState(state => {
+    this.setState((state) => {
       return {
         x: x + state.x,
-        y: y + state.y
+        y: y + state.y,
       };
     }, setStateCallback);
     return this;
@@ -187,7 +187,7 @@ export const DraggableItem = UU5.Common.VisualComponent.create({
         onTouchStart={this._onMouseDown}
         style={{
           left: this.state.x,
-          top: this.state.y
+          top: this.state.y,
         }}
       >
         <UU5.Bricks.Div parent={this} content={this.props.content} pureRender>
@@ -196,7 +196,7 @@ export const DraggableItem = UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </div>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

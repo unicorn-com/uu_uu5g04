@@ -21,7 +21,7 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 const MyPanelHandler = UU5.Common.VisualComponent.create({
   getInitialState: () => {
     return {
-      isCalled: false
+      isCalled: false,
     };
   },
 
@@ -36,13 +36,13 @@ const MyPanelHandler = UU5.Common.VisualComponent.create({
         onClick
       </UU5.Bricks.Panel>
     );
-  }
+  },
 });
 
 const MOUNT_CONTENT_VALUES = {
   onFirstRender: "onFirstRender",
   onFirstExpand: "onFirstExpand",
-  onEachExpand: "onEachExpand"
+  onEachExpand: "onEachExpand",
 };
 
 const CONFIG = {
@@ -54,47 +54,47 @@ const CONFIG = {
     "UU5.Common.LevelMixin",
     "UU5.Common.ContentMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     expanded: {
-      values: [true, false]
+      values: [true, false],
     },
     // NOTE :-( Skipping because controlled/alwaysExpanded doesn't work properly with each other and there's
     // hard to estimate how to change it without breaking compatibility.
     alwaysExpanded: {
       values: [true, false],
       opt: {
-        skip: true
-      }
+        skip: true,
+      },
     },
     iconExpanded: {
-      values: ["uu5-plus"]
+      values: ["uu5-plus"],
     },
     iconCollapsed: {
-      values: ["uu5-minus"]
+      values: ["uu5-minus"],
     },
     //onClick
     disableHeaderClick: {
-      values: [true, false]
+      values: [true, false],
     },
     size: {
-      values: ["s", "m", "l", "xl"]
+      values: ["s", "m", "l", "xl"],
     },
     mountContent: {
       values: [
         MOUNT_CONTENT_VALUES.onEachExpand,
         MOUNT_CONTENT_VALUES.onFirstExpand,
-        MOUNT_CONTENT_VALUES.onFirstRender
-      ]
-    }
+        MOUNT_CONTENT_VALUES.onFirstRender,
+      ],
+    },
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Panel`, () => {
@@ -127,10 +127,10 @@ describe(`UU5.Bricks.Panel props.Function`, () => {
       componentWillUnmount() {
         unmountLog();
       },
-      render: function() {
+      render: function () {
         log();
         return "Logged";
-      }
+      },
     });
     const wrapper = mount(
       <UU5.Bricks.Panel>
@@ -188,10 +188,10 @@ describe(`UU5.Bricks.Panel props.Function`, () => {
       componentWillUnmount() {
         unmountLog();
       },
-      render: function() {
+      render: function () {
         log();
         return "Logged";
-      }
+      },
     });
     const wrapper = mount(
       <UU5.Bricks.Panel mountContent={MOUNT_CONTENT_VALUES.onFirstRender}>
@@ -249,10 +249,10 @@ describe(`UU5.Bricks.Panel props.Function`, () => {
       componentWillUnmount() {
         unmountLog();
       },
-      render: function() {
+      render: function () {
         log();
         return "Logged";
-      }
+      },
     });
     const wrapper = mount(
       <UU5.Bricks.Panel mountContent={MOUNT_CONTENT_VALUES.onFirstExpand}>
@@ -310,10 +310,10 @@ describe(`UU5.Bricks.Panel props.Function`, () => {
       componentWillUnmount() {
         unmountLog();
       },
-      render: function() {
+      render: function () {
         log();
         return "Logged";
-      }
+      },
     });
     const wrapper = mount(
       <UU5.Bricks.Panel mountContent={MOUNT_CONTENT_VALUES.onEachExpand}>

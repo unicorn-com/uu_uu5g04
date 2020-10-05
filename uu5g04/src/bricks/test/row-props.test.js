@@ -24,27 +24,27 @@ const CONFIG = {
     "UU5.Common.SectionMixin",
     "UU5.Common.LevelMixin",
     "UU5.Common.ContentMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     display: {
-      values: ["standard", "flex"]
+      values: ["standard", "flex"],
     },
     noSpacing: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
   },
   requiredProps: {
     parent: shallow(<UU5.Bricks.Container id="parentId" />).instance(),
     children: [
-      <UU5.Bricks.Column id={"childID"} colWidth="xs12 s3" style="backgroundColor: yellow" content={"child column"} />
-    ]
+      <UU5.Bricks.Column id={"childID"} colWidth="xs12 s3" style="backgroundColor: yellow" content={"child column"} />,
+    ],
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Row`, () => {

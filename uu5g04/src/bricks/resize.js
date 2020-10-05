@@ -31,16 +31,16 @@ export const Resize = UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("Resize"),
     classNames: {
-      main: ns.css("resize")
+      main: ns.css("resize"),
     },
     defaults: {
       childTagName: "UU5.Bricks.Resize.Item",
       childWidth: 0,
-      childHeight: 0
+      childHeight: 0,
     },
     opt: {
-      nestingLevelWrapper: true
-    }
+      nestingLevelWrapper: true,
+    },
   },
   //@@viewOff:statics
 
@@ -48,7 +48,7 @@ export const Resize = UU5.Common.VisualComponent.create({
   propTypes: {
     height: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
     width: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
-    onResize: UU5.PropTypes.func
+    onResize: UU5.PropTypes.func,
   },
   //@@viewOff:propTypes
 
@@ -57,7 +57,7 @@ export const Resize = UU5.Common.VisualComponent.create({
     return {
       height: null,
       width: null,
-      onResize: undefined
+      onResize: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -66,7 +66,7 @@ export const Resize = UU5.Common.VisualComponent.create({
   getInitialState() {
     return {
       width: 0,
-      height: 0
+      height: 0,
     };
   },
 
@@ -133,7 +133,7 @@ export const Resize = UU5.Common.VisualComponent.create({
 
   _getChildren() {
     let children = this.getChildren();
-    children = Array.isArray(children) ? children.filter(item => typeof item === "object") : children;
+    children = Array.isArray(children) ? children.filter((item) => typeof item === "object") : children;
     if (children[0] && children[0].type && children[0].type.tagName === ResizeItem.tagName) {
       let child = this._getItemToRenderData(this.state.width, children);
       children = child && child.item;
@@ -178,7 +178,7 @@ export const Resize = UU5.Common.VisualComponent.create({
         <ResizeObserver key="ro" onInitialSize={this._onResize} onResize={this._onResize} />
       </UU5.Bricks.Div>
     );
-  }
+  },
   //@@viewOff:render
 });
 

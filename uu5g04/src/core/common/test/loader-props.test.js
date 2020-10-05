@@ -17,8 +17,8 @@ import "uu5g04-bricks"; // UU5.Common.Loader will try to show UU5.Bricks.Loading
 
 const { mount, wait } = UU5.Test.Tools;
 
-const TestReady = props => <pre>Ready: {JSON.stringify(props.data, null, 2) + ""}</pre>;
-const TestError = props => <pre>Error: {JSON.stringify(props.data, null, 2) + ""}</pre>;
+const TestReady = (props) => <pre>Ready: {JSON.stringify(props.data, null, 2) + ""}</pre>;
+const TestError = (props) => <pre>Error: {JSON.stringify(props.data, null, 2) + ""}</pre>;
 
 let origRequestCall;
 beforeEach(() => {
@@ -38,8 +38,8 @@ const CONFIG = {
     // }
     loading: {
       values: [undefined, "Loading..."],
-      opt: { wait: false }
-    }
+      opt: { wait: false },
+    },
     // TODO This prop must be checked by custom test only...
     // reloadInterval: {
     //   values: [10000, 11000]
@@ -51,8 +51,8 @@ const CONFIG = {
     //   "https://uuos9.plus4u.net/uu-uu5libraryregistryg01-main/85849867896916817-fe96c133c895434bbd4d5b24831483f3/getLibrary",
     // data: { code: "UU5.Bricks" },
     onLoad: async () => "data",
-    children: <TestReady />
-  }
+    children: <TestReady />,
+  },
 };
 
 describe("UU5.Common.Loader props testing", () => {
@@ -66,7 +66,7 @@ describe("UU5.Common.Loader props testing", () => {
     await wait();
     expect(UU5.Common.Request.call).toHaveBeenCalledTimes(1);
     expect(UU5.Common.Request.call).toHaveBeenCalledWith("GET", "https://plus4u.net/test", data, {
-      headers: { Authorization: expect.stringMatching(/^Bearer .+$/) }
+      headers: { Authorization: expect.stringMatching(/^Bearer .+$/) },
     });
   });
 
@@ -104,7 +104,7 @@ describe("UU5.Common.Loader behaviour", () => {
     wrapper.setProps({
       onLoad: async () => {
         throw new Error("TestError");
-      }
+      },
     });
     await wait();
     expect(wrapper.find(UU5.Bricks.Loading).length).toBe(0);

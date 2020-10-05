@@ -36,7 +36,7 @@ export const ButtonGroup = UU5.Common.VisualComponent.create({
     UU5.Common.ColorSchemaMixin,
     UU5.Common.ContentMixin,
     UU5.Common.PureRenderMixin,
-    UU5.Common.EditableMixin
+    UU5.Common.EditableMixin,
   ],
   //@@viewOff:mixins
 
@@ -48,25 +48,25 @@ export const ButtonGroup = UU5.Common.VisualComponent.create({
       main: ns.css("button-group"),
       horizontal: ns.css("button-group-horizontal"),
       vertical: ns.css("button-group-vertical"),
-      bgStyle: ns.css("button-group-bg-")
+      bgStyle: ns.css("button-group-bg-"),
     },
     defaults: {
       validChildTagNames: [
         "UU5.Bricks.Button",
         "UU5.Bricks.Dropdown",
         "UU5.Bricks.ButtonSwitch",
-        "UU5.Bricks.LanguageSelector"
-      ]
+        "UU5.Bricks.LanguageSelector",
+      ],
     },
     opt: {
-      nestingLevelWrapper: true
+      nestingLevelWrapper: true,
     },
     editMode: {
       name: { en: "ButtonGroup", cs: "ButtonGroup" },
       backgroundColor: "rgba(0,0,0,.2)",
       color: "rgba(0,0,0,.87)",
-      highlightColor: "#CCCCCC"
-    }
+      highlightColor: "#CCCCCC",
+    },
   },
   //@@viewOff:statics
 
@@ -78,7 +78,7 @@ export const ButtonGroup = UU5.Common.VisualComponent.create({
     bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline", "link"]),
     borderRadius: UU5.PropTypes.string,
     elevation: UU5.PropTypes.oneOf(["0", "1", "2", "3", "4", "5", 0, 1, 2, 3, 4, 5]),
-    baseline: UU5.PropTypes.bool
+    baseline: UU5.PropTypes.bool,
 
     // TODO: not possible for button, but for <a> element
     //displayBlock: UU5.PropTypes.bool
@@ -94,7 +94,7 @@ export const ButtonGroup = UU5.Common.VisualComponent.create({
       bgStyle: undefined,
       borderRadius: null,
       elevation: 0,
-      baseline: false
+      baseline: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -114,7 +114,7 @@ export const ButtonGroup = UU5.Common.VisualComponent.create({
     if (!result && (typeof child !== "string" || child.trim())) {
       if (childTagName)
         this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagNames[0]], {
-          mixinName: "UU5.Common.BaseMixin"
+          mixinName: "UU5.Common.BaseMixin",
         });
       else this.showError("childNotAllowed", [child, defaultChildTagNames[0]], { mixinName: "UU5.Common.BaseMixin" });
     }
@@ -189,7 +189,7 @@ export const ButtonGroup = UU5.Common.VisualComponent.create({
         )}
       </>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

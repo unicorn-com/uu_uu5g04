@@ -31,8 +31,8 @@ const StepperItemBase = UU5.Common.VisualComponent.create({
     classNames: {
       main: ns.css("stepper-item"),
       stepperItemButton: ns.css("stepper-item-button"),
-      buttonText: ns.css("stepper-item-button-text")
-    }
+      buttonText: ns.css("stepper-item-button-text"),
+    },
   },
   //@@viewOff:statics
 
@@ -45,7 +45,7 @@ const StepperItemBase = UU5.Common.VisualComponent.create({
     elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
     topVisitedStep: UU5.PropTypes.number,
     currentStep: UU5.PropTypes.number,
-    index: UU5.PropTypes.number
+    index: UU5.PropTypes.number,
   },
   //@@viewOff:propTypes
 
@@ -59,7 +59,7 @@ const StepperItemBase = UU5.Common.VisualComponent.create({
       elevation: null,
       topVisitedStep: 0,
       currentStep: 0,
-      index: 0
+      index: 0,
     };
   },
   //@@viewOff:getDefaultProps
@@ -195,7 +195,7 @@ const StepperItemBase = UU5.Common.VisualComponent.create({
         {this.props.children ? <span className={this.getClassName().buttonText}>{this.props.children}</span> : null}
       </UU5.Bricks.Button>
     );
-  }
+  },
   //@@viewOff:render
 });
 

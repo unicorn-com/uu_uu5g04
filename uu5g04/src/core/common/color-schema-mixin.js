@@ -43,19 +43,19 @@ export const ColorSchemaMixin = {
   statics: {
     "UU5.Common.ColorSchemaMixin": {
       classNames: {
-        main: "getMainClassUU5CommonColorSchemaMixin"
+        main: "getMainClassUU5CommonColorSchemaMixin",
       },
       defaults: {
-        mainClassPrefix: "color-schema-"
-      }
-    }
+        mainClassPrefix: "color-schema-",
+      },
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
     // must be function because of dynamic adding color into colorSchema
-    colorSchema: function(props, propName, componentName) {
+    colorSchema: function (props, propName, componentName) {
       if (props[propName] && !Environment.colorSchemaMap[props[propName]]) {
         return new Error(
           "Invalid prop `" +
@@ -68,20 +68,20 @@ export const ColorSchemaMixin = {
             "`. Validation failed."
         );
       }
-    }
+    },
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
-      colorSchema: null
+      colorSchema: null,
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  getInitialState: function() {
+  getInitialState: function () {
     this.registerMixin("UU5.Common.ColorSchemaMixin");
 
     // in state, so every component can change color dynamically
@@ -90,7 +90,7 @@ export const ColorSchemaMixin = {
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
-  hasUU5CommonColorSchemaMixin: function() {
+  hasUU5CommonColorSchemaMixin: function () {
     return this.hasMixin("UU5.Common.ColorSchemaMixin");
   },
 
@@ -99,17 +99,17 @@ export const ColorSchemaMixin = {
     return Environment.getColorSchema(colorSchema);
   },
 
-  getUU5CommonColorSchemaMixinProps: function() {
+  getUU5CommonColorSchemaMixinProps: function () {
     return {
-      colorSchema: this.props.colorSchema
+      colorSchema: this.props.colorSchema,
     };
   },
 
-  getUU5CommonColorSchemaMixinPropsToPass: function() {
+  getUU5CommonColorSchemaMixinPropsToPass: function () {
     return {};
   },
 
-  getMainClassUU5CommonColorSchemaMixin: function() {
+  getMainClassUU5CommonColorSchemaMixin: function () {
     let colorSchema = this.getColorSchema();
     let result = "";
     if (colorSchema) {
@@ -136,7 +136,7 @@ export const ColorSchemaMixin = {
       color = colorSchemaObj.originalColor || colorSchemaObj.color || null;
     }
     return color;
-  }
+  },
   //@@viewOff:private
 };
 

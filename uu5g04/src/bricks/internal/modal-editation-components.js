@@ -11,7 +11,7 @@ const COLUMN_PRESETS = {
   "1:2": ["m-8", "m-4"],
   "2:1": ["m-4", "m-8"],
   "1:1:1": ["s-6 m-4", "s-6 m-4", "m-4"],
-  "1:1:1:1": ["s-6 m-3", "s-6 m-3", "s-6 m-3", "s-6 m-3"]
+  "1:1:1:1": ["s-6 m-3", "s-6 m-3", "s-6 m-3", "s-6 m-3"],
 };
 
 export const PresetEditComponent = UU5.Common.VisualComponent.create({
@@ -23,9 +23,9 @@ export const PresetEditComponent = UU5.Common.VisualComponent.create({
   statics: {
     tagName: "PresetEditComponent",
     classNames: {
-      main: ns.css("row-properties-category")
+      main: ns.css("row-properties-category"),
     },
-    lsi: () => Lsi.row
+    lsi: () => Lsi.row,
   },
   //@@viewOff:statics
 
@@ -34,7 +34,7 @@ export const PresetEditComponent = UU5.Common.VisualComponent.create({
     componentProps: UU5.PropTypes.object,
     items: UU5.PropTypes.arrayOf(UU5.PropTypes.object),
     onChangeProps: UU5.PropTypes.func,
-    onChangeItems: UU5.PropTypes.func
+    onChangeItems: UU5.PropTypes.func,
   },
   //@@viewOff:propTypes
 
@@ -44,7 +44,7 @@ export const PresetEditComponent = UU5.Common.VisualComponent.create({
       componentProps: undefined,
       items: undefined,
       onChangeProps: undefined,
-      onChangeItems: undefined
+      onChangeItems: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -54,7 +54,7 @@ export const PresetEditComponent = UU5.Common.VisualComponent.create({
     this._pendingOnChange;
 
     return {
-      confirmModalOpen: false
+      confirmModalOpen: false,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -87,8 +87,8 @@ export const PresetEditComponent = UU5.Common.VisualComponent.create({
           ...item,
           props: {
             ...item.props,
-            colWidth: preset[index]
-          }
+            colWidth: preset[index],
+          },
         };
       });
     } else {
@@ -138,10 +138,10 @@ export const PresetEditComponent = UU5.Common.VisualComponent.create({
         size="m"
         header={this.getLsiComponent("layoutConfirmModalHeader")}
         confirmButtonProps={{
-          content: this.getLsiComponent("layoutConfirmModalConfirm")
+          content: this.getLsiComponent("layoutConfirmModalConfirm"),
         }}
         refuseButtonProps={{
-          content: this.getLsiComponent("layoutConfirmModalCancel")
+          content: this.getLsiComponent("layoutConfirmModalCancel"),
         }}
       />
     );
@@ -159,9 +159,9 @@ export const PresetEditComponent = UU5.Common.VisualComponent.create({
     if (
       Array.isArray(this.props.items) &&
       this.props.items.length &&
-      !this.props.items.find(item => item.tagName !== "UU5.Bricks.Column")
+      !this.props.items.find((item) => item.tagName !== "UU5.Bricks.Column")
     ) {
-      presetValue = Object.keys(COLUMN_PRESETS).find(colRation => {
+      presetValue = Object.keys(COLUMN_PRESETS).find((colRation) => {
         let preset = COLUMN_PRESETS[colRation];
         let colNum = preset.length;
 
@@ -214,7 +214,7 @@ export const PresetEditComponent = UU5.Common.VisualComponent.create({
         {this.state.confirmModalOpen ? this._getConfirmModal() : null}
       </>
     );
-  }
+  },
   //@@viewOff:render
 });
 
@@ -227,9 +227,9 @@ export const ColWidthEditComponent = UU5.Common.VisualComponent.create({
   statics: {
     tagName: "ColWidthEditComponent",
     classNames: {
-      main: ns.css("colwidth-edit-component")
+      main: ns.css("colwidth-edit-component"),
     },
-    lsi: () => Lsi.row
+    lsi: () => Lsi.row,
   },
   //@@viewOff:statics
 
@@ -239,7 +239,7 @@ export const ColWidthEditComponent = UU5.Common.VisualComponent.create({
     items: UU5.PropTypes.arrayOf(UU5.PropTypes.object),
     onChangeProps: UU5.PropTypes.func,
     onChangeItems: UU5.PropTypes.func,
-    editedItemId: UU5.PropTypes.string
+    editedItemId: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
@@ -250,7 +250,7 @@ export const ColWidthEditComponent = UU5.Common.VisualComponent.create({
       items: undefined,
       onChangeProps: undefined,
       onChangeItems: undefined,
-      editedItemId: undefined
+      editedItemId: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -270,7 +270,7 @@ export const ColWidthEditComponent = UU5.Common.VisualComponent.create({
 
     if (typeof value === "string") {
       let colWidthArray = value.trim().split(UU5.Common.REGEXP.splitByWhiteSpace);
-      result = !colWidthArray.find(colWidthPart => !colWidthPart.match(UU5.Common.REGEXP.columnRegexp));
+      result = !colWidthArray.find((colWidthPart) => !colWidthPart.match(UU5.Common.REGEXP.columnRegexp));
     } else {
       result = false;
     }
@@ -280,8 +280,8 @@ export const ColWidthEditComponent = UU5.Common.VisualComponent.create({
 
   _onChange({ value }) {
     let items = [...this.props.items];
-    let editedItemIndex = items.findIndex(item => item.id === this.props.editedItemId);
-    items = items.map(item => ({ id: item.id }));
+    let editedItemIndex = items.findIndex((item) => item.id === this.props.editedItemId);
+    items = items.map((item) => ({ id: item.id }));
     if (this._isColWidth(value)) {
       items[editedItemIndex].props = { colWidth: value, width: null };
     } else {
@@ -298,7 +298,7 @@ export const ColWidthEditComponent = UU5.Common.VisualComponent.create({
 
     if (Array.isArray(this.props.items)) {
       if (this.props.items.length) {
-        let editedItemIndex = this.props.items.findIndex(item => item.id === this.props.editedItemId);
+        let editedItemIndex = this.props.items.findIndex((item) => item.id === this.props.editedItemId);
         value = this.props.items[editedItemIndex].props.width;
 
         if (!value) {
@@ -321,7 +321,7 @@ export const ColWidthEditComponent = UU5.Common.VisualComponent.create({
       // normalize value
       value = UU5.Common.Tools.buildColWidthClassName(value)
         .replace(/uu5-col-/g, "")
-        .replace(/xs|s|m|l|xl/g, match => `${match}-`);
+        .replace(/xs|s|m|l|xl/g, (match) => `${match}-`);
     }
 
     return (
@@ -332,7 +332,7 @@ export const ColWidthEditComponent = UU5.Common.VisualComponent.create({
         onBlur={this._onChange}
       />
     );
-  }
+  },
   //@@viewOff:render
 });
 
@@ -353,7 +353,7 @@ const EditItemInfoClassNames = {
   icon: Css.css`
     color: rgba(0, 0, 0, 0.54);
     font-size: 56px;
-  `
+  `,
 };
 
 export const QRCodeSize = ({ componentProps, onChangeProps, errors }) => (
@@ -374,7 +374,7 @@ export const CardInline = ({ componentProps, onChangeProps }) => (
   <UU5.Forms.SwitchSelector
     items={[
       { content: <UU5.Bricks.Lsi lsi={Lsi.common.valueFalse} />, value: false },
-      { content: <UU5.Bricks.Lsi lsi={Lsi.common.valueTrue} />, value: true }
+      { content: <UU5.Bricks.Lsi lsi={Lsi.common.valueTrue} />, value: true },
     ]}
     value={componentProps.inline}
     label={<UU5.Bricks.Lsi lsi={Lsi.card.inlineLabel} />}
@@ -382,7 +382,7 @@ export const CardInline = ({ componentProps, onChangeProps }) => (
       onChangeProps({
         inline: value,
         width: value ? componentProps.width : null,
-        minWidth: value ? componentProps.minWidth : null
+        minWidth: value ? componentProps.minWidth : null,
       });
     }}
   />
@@ -392,33 +392,33 @@ export const ProgressBarStriped = ({ componentProps, onChangeProps }) => (
   <UU5.Forms.SwitchSelector
     items={[
       { content: <UU5.Bricks.Lsi lsi={Lsi.progressBar.stripedValueFalse} />, value: false },
-      { content: <UU5.Bricks.Lsi lsi={Lsi.progressBar.stripedValueTrue} />, value: true }
+      { content: <UU5.Bricks.Lsi lsi={Lsi.progressBar.stripedValueTrue} />, value: true },
     ]}
     value={componentProps.striped}
     label={<UU5.Bricks.Lsi lsi={Lsi.progressBar.stripedLabel} />}
     onChange={({ value }) => {
       onChangeProps({
         striped: value,
-        animated: value ? componentProps.animated : false
+        animated: value ? componentProps.animated : false,
       });
     }}
   />
 );
 
 export const ProgressBarItemStriped = ({ onChangeItems, items, editedItemId }) => {
-  let editedItemIndex = items.findIndex(item => item.id === editedItemId);
+  let editedItemIndex = items.findIndex((item) => item.id === editedItemId);
   let editedItem = items[editedItemIndex];
 
   return (
     <UU5.Forms.SwitchSelector
       items={[
         { content: <UU5.Bricks.Lsi lsi={Lsi.progressBar.stripedValueFalse} />, value: false },
-        { content: <UU5.Bricks.Lsi lsi={Lsi.progressBar.stripedValueTrue} />, value: true }
+        { content: <UU5.Bricks.Lsi lsi={Lsi.progressBar.stripedValueTrue} />, value: true },
       ]}
       value={editedItem.props.striped}
       label={<UU5.Bricks.Lsi lsi={Lsi.progressBar.stripedLabel} />}
       onChange={({ value }) => {
-        let newItems = items.map(item => ({ id: item.id }));
+        let newItems = items.map((item) => ({ id: item.id }));
         if (!newItems[editedItemIndex].props) {
           newItems[editedItemIndex].props = {};
         }
@@ -435,7 +435,7 @@ export const LineVertical = ({ componentProps, onChangeProps }) => (
     <UU5.Forms.SwitchSelector
       items={[
         { content: <UU5.Bricks.Lsi lsi={Lsi.line.verticalValueFalse} />, value: false },
-        { content: <UU5.Bricks.Lsi lsi={Lsi.line.verticalValueTrue} />, value: true }
+        { content: <UU5.Bricks.Lsi lsi={Lsi.line.verticalValueTrue} />, value: true },
       ]}
       value={!!componentProps.vertical || typeof componentProps.vertical === "number"}
       label={<UU5.Bricks.Lsi lsi={Lsi.line.verticalLabel} />}
@@ -465,5 +465,5 @@ export default {
   CardInline,
   ProgressBarStriped,
   ProgressBarItemStriped,
-  LineVertical
+  LineVertical,
 };

@@ -21,7 +21,7 @@ const CONFIG = {
     "UU5.Common.BaseMixin",
     "UU5.Common.ElementaryMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     icon: {
@@ -45,12 +45,12 @@ const CONFIG = {
         "uu5-picture",
         "uu5-plus",
         "uu5-point",
-        "uu5-thumb"
-      ]
+        "uu5-thumb",
+      ],
     },
     clickable: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
     // // TODO Make SVG loading in UU5.Bricks.Icon mockable.
     // authenticate: {
     //   values: [true, false],
@@ -63,9 +63,9 @@ const CONFIG = {
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Icon`, () => {

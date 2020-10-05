@@ -379,7 +379,7 @@ describe("UU5.Forms.ColorPicker interface", () => {
       expect.objectContaining({
         feedback: "initial",
         message: null,
-        value: ""
+        value: "",
       })
     );
     expect(wrapper).toMatchSnapshot();
@@ -395,7 +395,7 @@ describe("UU5.Forms.ColorPicker interface", () => {
       {
         feedback: "error",
         message: "Error message from setChangeFeedback",
-        value: "wrong value"
+        value: "wrong value",
       },
       mockFunc
     );
@@ -588,7 +588,7 @@ describe("UU5.Forms.ColorPicker interface", () => {
       // invalid rgb - number larger then 255
       "rgb(256, 100, 100)",
       // invalid rgba - too large opacity
-      "rgba(100, 100, 100, 2)"
+      "rgba(100, 100, 100, 2)",
     ];
 
     for (let i = 0; i < invalidColors.length; i++) {
@@ -611,7 +611,7 @@ describe("UU5.Forms.ColorPicker interface", () => {
   });
 
   it("UU5.Forms.ColorPicker - test custom validation", () => {
-    const validFn = jest.fn(opt => {
+    const validFn = jest.fn((opt) => {
       return { feedback: "initial", value: opt.value, message: "OK" };
     });
     const wrapper = shallow(<UU5.Forms.ColorPicker value="#FFFFFF" onValidate={validFn} />);
@@ -641,10 +641,7 @@ describe("UU5.Forms.ColorPicker interface", () => {
 
     expect(wrapper.instance().isOpen()).toBeFalsy();
     // open dialog by click on the button
-    wrapper
-      .find(UU5.Bricks.Button)
-      .first()
-      .simulate("click");
+    wrapper.find(UU5.Bricks.Button).first().simulate("click");
 
     expect(wrapper.instance().isOpen()).toBeTruthy();
 

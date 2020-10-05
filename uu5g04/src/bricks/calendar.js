@@ -30,7 +30,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
       UU5.Common.ElementaryMixin,
       UU5.Common.SwipeMixin,
       UU5.Common.LsiMixin,
-      UU5.Common.ColorSchemaMixin
+      UU5.Common.ColorSchemaMixin,
     ],
     //@@viewOff:mixins
 
@@ -97,12 +97,12 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
         range: ns.css("calendar-range uu5-forms-calendar-range"),
         weekColumnHighlight: ns.css("calendar-week-highlight uu5-forms-calendar-week-highlight"),
         todayButton: ns.css("calendar-today-button uu5-forms-calendar-today-button"),
-        otherSectionsHidden: ns.css("calendar-hide-other-sections")
+        otherSectionsHidden: ns.css("calendar-hide-other-sections"),
       },
       defaults: {
         prevIcon: "mdi-chevron-left",
         nextIcon: "mdi-chevron-right",
-        format: "dd.mm.Y"
+        format: "dd.mm.Y",
       },
       errors: {
         rangeNotSupported: "This calendar doesn's support date range selection",
@@ -110,9 +110,9 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
         dateFromGreaterThanDateTo: "The property dateFrom is greater than the property dateTo.",
         firstGreaterThanSecond: "The first date of range is greater than the second date of range.",
         beforeRangeMessage: "The begining value of the date range (%s) is out of allowed range.",
-        afterRangeMessage: "The ending value of the date range (%s) is out of allowed range."
+        afterRangeMessage: "The ending value of the date range (%s) is out of allowed range.",
       },
-      lsi: () => UU5.Environment.Lsi.Bricks.calendar
+      lsi: () => UU5.Environment.Lsi.Bricks.calendar,
     },
     //@@viewOff:statics
 
@@ -121,7 +121,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
       value: UU5.PropTypes.oneOfType([
         UU5.PropTypes.object,
         UU5.PropTypes.string,
-        UU5.PropTypes.arrayOf(UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string]))
+        UU5.PropTypes.arrayOf(UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string])),
       ]),
       dateFrom: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string]),
       dateTo: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string]),
@@ -138,7 +138,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
       onViewChange: UU5.PropTypes.func,
       onNextSelection: UU5.PropTypes.func,
       onPrevSelection: UU5.PropTypes.func,
-      monthNameFormat: UU5.PropTypes.oneOf(["abbr", "roman"])
+      monthNameFormat: UU5.PropTypes.oneOf(["abbr", "roman"]),
     },
     //@@viewOff:propTypes
 
@@ -161,7 +161,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
         hidePrevSelection: false,
         hideNextSelection: false,
         hideOtherSections: false,
-        monthNameFormat: "roman"
+        monthNameFormat: "roman",
       };
     },
     //@@viewOff:getDefaultProps
@@ -318,7 +318,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
       let result;
 
       if (Array.isArray(dates)) {
-        result = dates.map(date => UU5.Common.Tools.parseDate(date));
+        result = dates.map((date) => UU5.Common.Tools.parseDate(date));
       } else {
         result = UU5.Common.Tools.parseDate(dates);
       }
@@ -375,7 +375,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
       let step = props.minSelection && props.minSelection !== "days" ? props.minSelection : props.step;
       let displayData = {
         allowDisplayMonths: !step || step != "years",
-        allowDisplayDays: !step || (step != "months" && step != "years")
+        allowDisplayDays: !step || (step != "months" && step != "years"),
       };
 
       let view = props.view;
@@ -615,7 +615,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
     },
 
     _getWeeks() {
-      let ths = this.getLsiValue("dayNames").map(dayName => {
+      let ths = this.getLsiValue("dayNames").map((dayName) => {
         return (
           <th className={this.getClassName().dayName} title={dayName} key={dayName}>
             <div className={this.getClassName("dayCell")}>{dayName.substr(0, 2)}</div>
@@ -661,7 +661,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
         let opt = {
           year,
           view: "months",
-          _data: { day: this.state.day, month: this.state.month, year, view: "months" }
+          _data: { day: this.state.day, month: this.state.month, year, view: "months" },
         };
         this._onViewChange(opt);
       } else {
@@ -1201,7 +1201,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
         onTouchStart: this.swipeOnTouchStart,
         onTouchMove: this.swipeOnTouchMove,
         onTouchEnd: this.swipeOnTouchEnd.bind(this, this._onSwipeEnd),
-        cellPadding: 0
+        cellPadding: 0,
       };
     },
 
@@ -1236,7 +1236,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
           {this._getSecondaryWrapper()}
         </div>
       );
-    }
+    },
     //@@viewOff:render
   })
 );

@@ -16,15 +16,15 @@ const editableComponentPropsSetup = [
     name: "animated",
     type: "switchSelectorBool",
     label: EditableLsi.progressBar.animatedLabel,
-    getProps: (props, componentProps) => ({ disabled: !componentProps.striped })
-  }
+    getProps: (props, componentProps) => ({ disabled: !componentProps.striped }),
+  },
 ];
 
 const editablePropsSetup = [
   {
     name: <UU5.Bricks.Lsi lsi={EditableLsi.common.componentPropsLabel} />,
-    setup: editableComponentPropsSetup
-  }
+    setup: editableComponentPropsSetup,
+  },
 ];
 
 const getEditableItemLabel = (itemProps, itemIndex) => {
@@ -36,7 +36,7 @@ const getEditableItemLabel = (itemProps, itemIndex) => {
 };
 
 const newEditableItem = {
-  tagName: "UU5.Bricks.ProgressBar.Item"
+  tagName: "UU5.Bricks.ProgressBar.Item",
 };
 
 const editableItemPropsSetup = {
@@ -49,11 +49,11 @@ const editableItemPropsSetup = {
       type: "switchSelectorBool",
       label: EditableLsi.progressBar.animatedLabel,
       getProps: (props, componentProps, items, activeItemId) => {
-        let activeItem = items.find(item => item.id === activeItemId);
+        let activeItem = items.find((item) => item.id === activeItemId);
         return { disabled: !activeItem.props.striped };
-      }
-    }
-  ]
+      },
+    },
+  ],
 };
 
 export const ProgressBarEditable = UU5.Common.VisualComponent.create({
@@ -65,21 +65,21 @@ export const ProgressBarEditable = UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("ProgressBarEditable"),
     classNames: {
-      main: ns.css("progress-bar-editable")
-    }
+      main: ns.css("progress-bar-editable"),
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    component: UU5.PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      component: undefined
+      component: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -128,7 +128,7 @@ export const ProgressBarEditable = UU5.Common.VisualComponent.create({
         getItemLabel={getEditableItemLabel}
       />
     );
-  }
+  },
   //@@viewOff:render
 });
 

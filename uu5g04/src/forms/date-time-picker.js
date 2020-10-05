@@ -55,16 +55,16 @@ export const DateTimePicker = Context.withContext(
         withSeconds: ns.css("datetimepicker-seconds"),
         withEnglishFormat: ns.css("datetimepicker-english-format"),
         dateWrapper: ns.css("datetimepicker-date-wrapper"),
-        timeWrapper: ns.css("datetimepicker-time-wrapper")
+        timeWrapper: ns.css("datetimepicker-time-wrapper"),
       },
       defaults: {
         regexpFormat1: /^\d{1,2}:?\d{0,2} ?[PpAa]?\.?[Mm]?\.?$/,
         regexpFormat2: /^\d{1,2}:?\d{0,2}$/,
         regexpTime: /[Pp]\.?([Mm]\.?)?/,
         regexpSpace: / /g,
-        inputColWidth: "xs12 s4 m4 l3 xl3"
+        inputColWidth: "xs12 s4 m4 l3 xl3",
       },
-      lsi: () => UU5.Environment.Lsi.Forms.message
+      lsi: () => UU5.Environment.Lsi.Forms.message,
     },
     //@@viewOff:statics
 
@@ -94,7 +94,7 @@ export const DateTimePicker = Context.withContext(
       dateInputAttrs: UU5.PropTypes.object,
       timeInputAttrs: UU5.PropTypes.object,
       timeZone: UU5.PropTypes.number,
-      monthNameFormat: UU5.PropTypes.oneOf(["abbr", "roman"])
+      monthNameFormat: UU5.PropTypes.oneOf(["abbr", "roman"]),
     },
     //@@viewOff:propTypes
 
@@ -123,7 +123,7 @@ export const DateTimePicker = Context.withContext(
         hideFormatPlaceholder: false,
         showTodayButton: false,
         timeZone: undefined,
-        monthNameFormat: "roman"
+        monthNameFormat: "roman",
       };
     },
     //@@viewOff:getDefaultProps
@@ -138,7 +138,7 @@ export const DateTimePicker = Context.withContext(
         format: this.props.format,
         country: this.props.country || UU5.Common.Tools.getLanguage(),
         dateString: initialData.dateString,
-        timeString: initialData.timeString
+        timeString: initialData.timeString,
       };
     },
 
@@ -154,7 +154,7 @@ export const DateTimePicker = Context.withContext(
         value: this._getOutcomingValue(value),
         event: null,
         component: this,
-        _data: { value, timeZoneAdjusted: true }
+        _data: { value, timeZoneAdjusted: true },
       });
 
       if (validationResult) {
@@ -198,7 +198,7 @@ export const DateTimePicker = Context.withContext(
             value: this._getOutcomingValue(value, nextProps),
             event: null,
             component: this,
-            _data: { value, timeZoneAdjusted: true }
+            _data: { value, timeZoneAdjusted: true },
           },
           true
         );
@@ -333,7 +333,7 @@ export const DateTimePicker = Context.withContext(
             dateString,
             timeString,
             feedback,
-            message
+            message,
           },
           this._hasInputFocus(),
           setStateCallback
@@ -342,7 +342,7 @@ export const DateTimePicker = Context.withContext(
         this._updateState(
           {
             feedback,
-            message
+            message,
           },
           this._hasInputFocus(),
           setStateCallback
@@ -450,7 +450,7 @@ export const DateTimePicker = Context.withContext(
         value: this.props.value,
         message: this.props.message,
         feedback: this.props.feedback,
-        readOnly: this.props.readOnly
+        readOnly: this.props.readOnly,
       };
       this._updateState(newState, false, setStateCallback);
     },
@@ -546,7 +546,7 @@ export const DateTimePicker = Context.withContext(
       format = format || this.state ? this.state.format : this.props.format;
       country = country || this.state ? this.state.country : this.props.country;
 
-      let parseString = dateObject => {
+      let parseString = (dateObject) => {
         let timeString = this._getTimeString(dateObject, props, props.timeFormat == TIME_FORMAT_12);
         let dateString = this._getDateString(dateObject, format, country);
 
@@ -646,7 +646,7 @@ export const DateTimePicker = Context.withContext(
         component: false,
         input: false,
         label: false,
-        picker: false
+        picker: false,
       };
 
       let eventPath = this._getEventPath(e);
@@ -654,7 +654,7 @@ export const DateTimePicker = Context.withContext(
       // in a way, that mouseDown is in input and mouseUp is outside -> triggers blur (which it shouldnt)
       if (document.activeElement) eventPath.unshift(document.activeElement);
 
-      eventPath.every(item => {
+      eventPath.every((item) => {
         let functionType = item.matches ? "matches" : "msMatchesSelector";
         if (item[functionType]) {
           if (item[functionType](labelMatch)) {
@@ -685,7 +685,7 @@ export const DateTimePicker = Context.withContext(
     },
 
     _addKeyEvents() {
-      let handleKeyDown = e => {
+      let handleKeyDown = (e) => {
         if (e.which === 13) {
           // enter
           e.preventDefault();
@@ -698,14 +698,14 @@ export const DateTimePicker = Context.withContext(
         }
       };
 
-      let handleKeyUp = e => {
+      let handleKeyUp = (e) => {
         let focusResult = this._findTarget(e);
         let doBlur = !focusResult.component;
         let opt = {
           value: this._getOutcomingValue(this.state.value),
           event: e,
           component: this,
-          _data: { value: this.state.value, timeZoneAdjusted: true }
+          _data: { value: this.state.value, timeZoneAdjusted: true },
         };
         if (e.which === 13) {
           // enter
@@ -745,8 +745,8 @@ export const DateTimePicker = Context.withContext(
         }
       };
 
-      UU5.Environment.EventListener.addWindowEvent("keydown", this.getId(), e => handleKeyDown(e));
-      UU5.Environment.EventListener.addWindowEvent("keyup", this.getId(), e => handleKeyUp(e));
+      UU5.Environment.EventListener.addWindowEvent("keydown", this.getId(), (e) => handleKeyDown(e));
+      UU5.Environment.EventListener.addWindowEvent("keyup", this.getId(), (e) => handleKeyUp(e));
     },
 
     _removeKeyEvents() {
@@ -763,7 +763,7 @@ export const DateTimePicker = Context.withContext(
         value: this._getOutcomingValue(this.state.value),
         event: e,
         component: this,
-        _data: { value: this.state.value, timeZoneAdjusted: true }
+        _data: { value: this.state.value, timeZoneAdjusted: true },
       };
 
       if (canClose) {
@@ -807,7 +807,7 @@ export const DateTimePicker = Context.withContext(
             onClose: this._onCloseCalendar,
             aroundElement: UU5.Common.DOM.findNode(this._calendarTextInput),
             position: "bottom",
-            offset: this._shouldOpenToContent() ? 0 : 4
+            offset: this._shouldOpenToContent() ? 0 : 4,
           },
           () => this._closeTime(setStateCallback)
         );
@@ -824,7 +824,7 @@ export const DateTimePicker = Context.withContext(
             aroundElement: UU5.Common.DOM.findNode(this._timeTextInput),
             position: "bottom",
             offset: this._shouldOpenToContent() ? 0 : 4,
-            horizontalOnly: this._shouldOpenToContent()
+            horizontalOnly: this._shouldOpenToContent(),
           },
           () => this._closeCalendar(setStateCallback)
         );
@@ -881,7 +881,7 @@ export const DateTimePicker = Context.withContext(
         this.props.openToContent
           .trim()
           .split(" ")
-          .some(size => {
+          .some((size) => {
             if (screenSize == size) {
               result = true;
               return true;
@@ -909,7 +909,7 @@ export const DateTimePicker = Context.withContext(
         {
           dateString,
           format,
-          country
+          country,
         },
         undefined,
         setStateCallback
@@ -977,7 +977,7 @@ export const DateTimePicker = Context.withContext(
         this._updateState({
           value: null,
           feedback: "error",
-          message: this.props.requiredMessage || this.getLsiComponent("requiredMessage")
+          message: this.props.requiredMessage || this.getLsiComponent("requiredMessage"),
         });
       }
 
@@ -1139,7 +1139,7 @@ export const DateTimePicker = Context.withContext(
             value: this._getOutcomingValue(value),
             event: e,
             component: this,
-            _data: { type: "calendarInput", dateString, value, timeZoneAdjusted: true }
+            _data: { type: "calendarInput", dateString, value, timeZoneAdjusted: true },
           };
 
           if (typeof this.props.onChange === "function") {
@@ -1204,7 +1204,7 @@ export const DateTimePicker = Context.withContext(
             value: this._getOutcomingValue(value),
             event: e,
             component: this,
-            _data: { type: "timeInput", timeString, value, timeZoneAdjusted: true }
+            _data: { type: "timeInput", timeString, value, timeZoneAdjusted: true },
           };
 
           if (typeof this.props.onChange === "function" && isValidValue) {
@@ -1229,7 +1229,7 @@ export const DateTimePicker = Context.withContext(
       opt = {
         component: this,
         value: this._getOutcomingValue(value),
-        _data: { type: "calendarPicker", dateString, value, timeZoneAdjusted: true }
+        _data: { type: "calendarPicker", dateString, value, timeZoneAdjusted: true },
       };
 
       if (!this._hasValueChanged(this.state.dateString, dateString)) {
@@ -1253,7 +1253,7 @@ export const DateTimePicker = Context.withContext(
       opt = {
         component: this,
         value: this._getOutcomingValue(value),
-        _data: { type: "timePicker", timeString, value, timeZoneAdjusted: true }
+        _data: { type: "timePicker", timeString, value, timeZoneAdjusted: true },
       };
 
       if (typeof this.props.onChange === "function") {
@@ -1360,7 +1360,7 @@ export const DateTimePicker = Context.withContext(
         onChange: this._onDatePickerChange,
         colorSchema: this.getColorSchema(),
         showTodayButton: this.props.showTodayButton,
-        monthNameFormat: this.props.monthNameFormat
+        monthNameFormat: this.props.monthNameFormat,
       };
     },
 
@@ -1389,7 +1389,7 @@ export const DateTimePicker = Context.withContext(
         mobileDisplay: this.isXs(),
         horizontalOnly: this._shouldOpenToContent(),
         timeFrom: this._timeFrom,
-        timeTo: this._timeTo
+        timeTo: this._timeTo,
       };
     },
 
@@ -1525,7 +1525,7 @@ export const DateTimePicker = Context.withContext(
       props.className === "" ? delete props.className : null;
 
       if (!this.isReadOnly() && !this.isComputedDisabled()) {
-        let handleMobileClick = e => {
+        let handleMobileClick = (e) => {
           if (this._isCalendarOpen()) {
             e.target.focus();
             this.close();
@@ -1542,7 +1542,7 @@ export const DateTimePicker = Context.withContext(
           );
         };
 
-        let handleClick = e => {
+        let handleClick = (e) => {
           e.preventDefault();
           if (this._shouldOpenToContent()) {
             handleMobileClick(e);
@@ -1552,7 +1552,7 @@ export const DateTimePicker = Context.withContext(
             value: this._getOutcomingValue(this.state.value),
             event: e,
             component: this,
-            _data: { type: "date", value: this.state.value, timeZoneAdjusted: true }
+            _data: { type: "date", value: this.state.value, timeZoneAdjusted: true },
           };
           if (this._allowOpening && !this._isCalendarOpen()) {
             this.openCalendar(() => this._onFocus(opt));
@@ -1563,7 +1563,7 @@ export const DateTimePicker = Context.withContext(
           this._allowOpening = true;
         };
 
-        props.onClick = e => {
+        props.onClick = (e) => {
           handleClick(e);
         };
       }
@@ -1581,7 +1581,7 @@ export const DateTimePicker = Context.withContext(
       props.className === "" ? delete props.className : null;
 
       if (!this.isReadOnly() && !this.isComputedDisabled()) {
-        let handleMobileClick = e => {
+        let handleMobileClick = (e) => {
           document.activeElement.blur();
           if (this._isTimeOpen()) {
             e.target.focus();
@@ -1599,7 +1599,7 @@ export const DateTimePicker = Context.withContext(
           );
         };
 
-        let handleClick = e => {
+        let handleClick = (e) => {
           e.preventDefault();
           if (this._shouldOpenToContent()) {
             handleMobileClick(e);
@@ -1609,7 +1609,7 @@ export const DateTimePicker = Context.withContext(
             value: this._getOutcomingValue(this.state.value),
             event: e,
             component: this,
-            _data: { type: "time", value: this.state.value, timeZoneAdjusted: true }
+            _data: { type: "time", value: this.state.value, timeZoneAdjusted: true },
           };
           if (!this._isTimeOpen()) {
             this.openTime(() => this._onFocus(opt));
@@ -1618,7 +1618,7 @@ export const DateTimePicker = Context.withContext(
           this._allowOpening = true;
         };
 
-        props.onClick = e => {
+        props.onClick = (e) => {
           handleClick(e);
         };
       }
@@ -1641,7 +1641,7 @@ export const DateTimePicker = Context.withContext(
       }
 
       if (!this.isReadOnly() && !this.isComputedDisabled()) {
-        attrs.onClick = e => {
+        attrs.onClick = (e) => {
           let clickData = this._findTarget(e.nativeEvent);
           if (clickData.label) {
             this._allowOpening = false;
@@ -1677,7 +1677,7 @@ export const DateTimePicker = Context.withContext(
     _getDatePopoverProps() {
       let props = {};
 
-      props.ref_ = ref => (this._calendarPopover = ref);
+      props.ref_ = (ref) => (this._calendarPopover = ref);
       props.forceRender = true;
       props.disableBackdrop = true;
       props.shown = this._isCalendarOpen();
@@ -1688,7 +1688,7 @@ export const DateTimePicker = Context.withContext(
     _getTimePopoverProps() {
       let props = {};
 
-      props.ref_ = ref => (this._timePopover = ref);
+      props.ref_ = (ref) => (this._timePopover = ref);
       props.forceRender = true;
       props.disableBackdrop = true;
       props.shown = this._isTimeOpen();
@@ -1710,7 +1710,7 @@ export const DateTimePicker = Context.withContext(
       }
 
       return (
-        <div {...this._getMainAttrs()} ref={comp => (this._root = comp)}>
+        <div {...this._getMainAttrs()} ref={(comp) => (this._root = comp)}>
           {this.getLabel(this.getId() + "-date-input")}
           {this.getInputWrapper([
             <div className={this.getClassName("dateWrapper")} key="1">
@@ -1778,11 +1778,11 @@ export const DateTimePicker = Context.withContext(
               <UU5.Bricks.Popover {...this._getTimePopoverProps()}>
                 {this._isTimeOpen() ? <Time {...this._getTimePickerProps(this._parseTime(time))} /> : null}
               </UU5.Bricks.Popover>
-            </div>
+            </div>,
           ])}
         </div>
       );
-    }
+    },
     //@@viewOff:render
   })
 );

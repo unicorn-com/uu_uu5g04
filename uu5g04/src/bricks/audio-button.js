@@ -28,11 +28,11 @@ export const AudioButton = UU5.Common.VisualComponent.create({
     tagName: ns.name("AudioButton"),
     classNames: {
       main: ns.css("audio-button"),
-      audio: () => Css.css`display: none;`
+      audio: () => Css.css`display: none;`,
     },
     opt: {
-      nestingLevelWrapper: true
-    }
+      nestingLevelWrapper: true,
+    },
   },
   //@@viewOff:statics
 
@@ -57,7 +57,7 @@ export const AudioButton = UU5.Common.VisualComponent.create({
     preload: UU5.PropTypes.oneOf(["auto", "metadata", "none"]),
     muted: UU5.PropTypes.bool,
     playbackRate: UU5.PropTypes.number,
-    authenticate: UU5.PropTypes.bool
+    authenticate: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -83,7 +83,7 @@ export const AudioButton = UU5.Common.VisualComponent.create({
       src: undefined,
       muted: false,
       playbackRate: 1.0,
-      authenticate: false
+      authenticate: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -91,7 +91,7 @@ export const AudioButton = UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
-      playing: false
+      playing: false,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -189,7 +189,7 @@ export const AudioButton = UU5.Common.VisualComponent.create({
         />
       </>
     );
-  }
+  },
   //@@viewOff:render
 });
 

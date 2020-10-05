@@ -34,12 +34,12 @@ export const Text = Context.withContext(
     statics: {
       tagName: ns.name("Text"),
       classNames: {
-        main: ns.css("text")
+        main: ns.css("text"),
       },
       errors: {
-        validateError: "Validated result is not object."
+        validateError: "Validated result is not object.",
       },
-      lsi: () => UU5.Environment.Lsi.Forms.message
+      lsi: () => UU5.Environment.Lsi.Forms.message,
     },
     //@@viewOff:statics
 
@@ -47,7 +47,7 @@ export const Text = Context.withContext(
     propTypes: {
       value: UU5.PropTypes.string,
       password: UU5.PropTypes.bool,
-      pattern: UU5.PropTypes.string
+      pattern: UU5.PropTypes.string,
     },
     //@@viewOff:propTypes
 
@@ -56,7 +56,7 @@ export const Text = Context.withContext(
       return {
         value: "",
         password: false,
-        pattern: null
+        pattern: null,
       };
     },
     //@@viewOff:getDefaultProps
@@ -133,7 +133,7 @@ export const Text = Context.withContext(
             message: result.message,
             value: result.value,
             foundAutocompleteItems: result.foundAutocompleteItems,
-            selectedIndex: result.selectedIndex
+            selectedIndex: result.selectedIndex,
           },
           callback
         );
@@ -172,8 +172,8 @@ export const Text = Context.withContext(
               context: {
                 event: e,
                 func: this.props.onValidate,
-                result: result
-              }
+                result: result,
+              },
             });
           }
         }
@@ -236,13 +236,13 @@ export const Text = Context.withContext(
         readonly: this.isReadOnly(),
         loading: this.isLoading(),
         feedback: this.getFeedback(),
-        ref_: item => (this._textInput = item),
+        ref_: (item) => (this._textInput = item),
         borderRadius: this.props.borderRadius,
         elevation: this.props.elevation,
         bgStyle: this.props.bgStyle,
         inputWidth: this._getInputWidth(),
         colorSchema: this.props.colorSchema,
-        size: this.props.size
+        size: this.props.size,
       };
 
       if (this.state.autocompleteItems) {
@@ -254,8 +254,8 @@ export const Text = Context.withContext(
             itemListProps: this.state.autocompleteItems ? this._getItemListProps() : undefined,
             open: this.isOpen(),
             onClose: this.close,
-            onOpen: this.open
-          }
+            onOpen: this.open,
+          },
         };
       }
 
@@ -277,7 +277,7 @@ export const Text = Context.withContext(
           {this.getInputWrapper(this._getInput(inputId))}
         </div>
       );
-    }
+    },
     //@@viewOn:render
   })
 );

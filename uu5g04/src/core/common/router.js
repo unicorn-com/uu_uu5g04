@@ -28,11 +28,11 @@ import Element from "./element.js";
 import "./router.less";
 //@@viewOff:imports
 
-const REACT_LAZY_TYPEOF = React.lazy && React.lazy(() => ({ default: props => "" })).$$typeof;
+const REACT_LAZY_TYPEOF = React.lazy && React.lazy(() => ({ default: (props) => "" })).$$typeof;
 
 function getParamsFromQuery(query) {
   let result = {};
-  query.split(/&/).forEach(it => {
+  query.split(/&/).forEach((it) => {
     let eqlIdx = it.indexOf("=");
     let key = decodeURIComponent((eqlIdx == -1 ? it.substr(0) : it.substr(0, eqlIdx)).replace(/\+/g, " "));
     if (key) {
@@ -53,19 +53,19 @@ export const Router = VisualComponent.create({
   statics: {
     tagName: ns.name("Router"),
     opt: {
-      ccrKey: Environment.CCRKEY_ROUTER
+      ccrKey: Environment.CCRKEY_ROUTER,
     },
     classNames: {
       leaveConfirmationModal: ns.css("router-leave-confirmation-modal"),
       leaveConfirmationBody: ns.css("router-leave-confirmation-body"),
       leaveConfirmationFooter: ns.css("router-leave-confirmation-footer"),
       leaveConfirmationButtonConfirm: ns.css("router-leave-confirmation-button-confirm"),
-      leaveConfirmationButtonDeny: ns.css("router-leave-confirmation-button-deny")
+      leaveConfirmationButtonDeny: ns.css("router-leave-confirmation-button-deny"),
     },
     lsi: () => Environment.Lsi.Common.router,
     getDerivedStateFromError(error) {
       return { routeError: error };
-    }
+    },
   },
   //@@viewOff:statics
 
@@ -78,23 +78,23 @@ export const Router = VisualComponent.create({
       PropTypes.shape({
         tag: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
         props: PropTypes.object,
-        source: PropTypes.string
-      })
+        source: PropTypes.string,
+      }),
     ]),
     notFoundRoute: PropTypes.oneOfType([
       PropTypes.string, // path
       PropTypes.element,
       PropTypes.shape({
         tag: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-        props: PropTypes.object
-      })
+        props: PropTypes.object,
+      }),
     ]),
     showNotFoundRouteInUrl: PropTypes.bool,
     routes: PropTypes.object,
     urlBuilder: PropTypes.func,
     strictRoutes: PropTypes.bool,
     loading: PropTypes.node,
-    onRouteChanged: PropTypes.func
+    onRouteChanged: PropTypes.func,
   },
   //@@viewOff:propTypes
 
@@ -108,7 +108,7 @@ export const Router = VisualComponent.create({
       showNotFoundRouteInUrl: false,
       strictRoutes: false,
       loading: "",
-      onRouteChanged: null
+      onRouteChanged: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -124,7 +124,7 @@ export const Router = VisualComponent.create({
     return {
       route: null,
       routeError: null,
-      requestedRoute: null // info about requested route for cases when it's invalid (wrong component tag / ...)
+      requestedRoute: null, // info about requested route for cases when it's invalid (wrong component tag / ...)
     };
   },
 
@@ -279,7 +279,7 @@ export const Router = VisualComponent.create({
       if (typeof key === "string" && key.startsWith("_default_")) {
         let curMaxValue = Object.keys(this._preventLeave)
           .reverse()
-          .find(it => it.startsWith("_default_"));
+          .find((it) => it.startsWith("_default_"));
         this._preventLeaveUnkeyed = curMaxValue ? Number(curMaxValue.replace("_default_", "")) + 1 : 0;
       }
     }
@@ -310,7 +310,7 @@ export const Router = VisualComponent.create({
     if (window.SystemJS && window.SystemJS.import) {
       if (route.source) {
         SystemJS.import(route.source).then(
-          exports => {
+          (exports) => {
             let tagArray = route.tag.split(".");
             let calculatedTag = window;
             while (calculatedTag && tagArray.length > 1) {
@@ -324,24 +324,24 @@ export const Router = VisualComponent.create({
             calculatedTag[tagName] = tagExport;
             this._setRoute(route, params, null, null, setStateCallback);
           },
-          error => {
+          (error) => {
             Tools.error('Loading package "' + route.source + '" failed with error:', {
               error: error,
-              tagName: this.constructor.tagName
+              tagName: this.constructor.tagName,
             });
           }
         );
       } else {
         Tools.error("Route was not found and has not set any source to import.", {
           route: route,
-          tagName: this.constructor.tagName
+          tagName: this.constructor.tagName,
         });
         this._setRoute(route.notFoundRoute, { requestedRoute: route });
       }
     } else {
       Tools.error("SystemJS is not defined in window! Cannot import source:", {
         source: route.source,
-        tagName: this.constructor.tagName
+        tagName: this.constructor.tagName,
       });
     }
     return this;
@@ -378,7 +378,7 @@ export const Router = VisualComponent.create({
 
       const preventKey = Object.keys(this._preventLeave).reverse()[0];
 
-      let processResultFn = confirmed => {
+      let processResultFn = (confirmed) => {
         if (!processed) {
           // process only first call of this method
           processed = true;
@@ -439,21 +439,21 @@ export const Router = VisualComponent.create({
             onClick={() => callback(false)}
             content={this.getLsiComponent("pageLeaveDeny")}
           />
-        </UU5.Bricks.Div>
+        </UU5.Bricks.Div>,
       ],
-      ...usedCustomProps
+      ...usedCustomProps,
     };
   },
 
   _getRouteByPath(searchedPath, props) {
     let route = props.routes[searchedPath];
     if (route === undefined) {
-      if (!props.strictRoutes) route = props.routes[searchedPath.replace(/\/?$/, m => (m ? "" : "/"))];
+      if (!props.strictRoutes) route = props.routes[searchedPath.replace(/\/?$/, (m) => (m ? "" : "/"))];
       if (route === undefined) {
         // prepend with "/" for backward compatibility
         route = props.routes["/" + searchedPath];
         if (route === undefined) {
-          if (!props.strictRoutes) route = props.routes[searchedPath.replace(/\/?$/, m => (m ? "" : "/"))];
+          if (!props.strictRoutes) route = props.routes[searchedPath.replace(/\/?$/, (m) => (m ? "" : "/"))];
         }
       }
     }
@@ -597,7 +597,7 @@ export const Router = VisualComponent.create({
 
     if (newRoute && typeof newRoute === "object") {
       let newProps = {
-        parent: this.getParent()
+        parent: this.getParent(),
       };
 
       params && (newProps.params = params);
@@ -691,7 +691,7 @@ export const Router = VisualComponent.create({
                 params: params,
                 config: Tools.mergeDeep({}, config),
                 fragment: usedFragment,
-                isFromHistory: isFromHistory
+                isFromHistory: isFromHistory,
               };
 
               // 1st part of config.goTo issue - some apps don't simply call router.setRoute(newRoute) so we don't get
@@ -734,7 +734,7 @@ export const Router = VisualComponent.create({
                 history[method](
                   {
                     path: route,
-                    index: this._routeIndex
+                    index: this._routeIndex,
                   },
                   document.title,
                   this._getUrl(useCase, params, props, usedFragment)
@@ -761,10 +761,7 @@ export const Router = VisualComponent.create({
         if (params.url && typeof params.url === "object") {
           let urlBuilder = this.props.urlBuilder;
           if (urlBuilder) {
-            path = urlBuilder
-              .parse(window.location.href.replace(/#.*/, ""))
-              .set(params.url)
-              .toString();
+            path = urlBuilder.parse(window.location.href.replace(/#.*/, "")).set(params.url).toString();
           } else {
             let basePath = this._getBasePath(null, props);
             if (typeof basePath === "string") {
@@ -807,7 +804,7 @@ export const Router = VisualComponent.create({
                     path: path,
                     component: foundRoute,
                     fragment: usedFragment,
-                    config
+                    config,
                   };
                 } else {
                   this._routeIndex = 0;
@@ -828,7 +825,7 @@ export const Router = VisualComponent.create({
                 history[method](
                   {
                     path: path,
-                    index: this._routeIndex
+                    index: this._routeIndex,
                   },
                   params.title || document.title,
                   path + (usedFragment ? "#" + usedFragment : "")
@@ -850,7 +847,7 @@ export const Router = VisualComponent.create({
     return {
       route: newRouteChild,
       fragment: usedFragment,
-      applyRouteFn
+      applyRouteFn,
     };
   },
 
@@ -880,7 +877,7 @@ export const Router = VisualComponent.create({
 
     let Modal = Tools.checkTag("UU5.Bricks.Modal", true);
     if (Modal) {
-      children.push(<Modal ref_={modal => (this._pageLeaveModal = modal)} controlled={false} location="portal" />);
+      children.push(<Modal ref_={(modal) => (this._pageLeaveModal = modal)} controlled={false} location="portal" />);
     }
 
     return React.Fragment ? (
@@ -900,7 +897,7 @@ export const Router = VisualComponent.create({
   //@@viewOn:render
   render() {
     return this._buildChild();
-  }
+  },
   //@@viewOff:render
 });
 

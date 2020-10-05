@@ -34,7 +34,7 @@ export const ClassNames = {
     & > .uu5-bricks-context-menu-item-link {
       min-height: 40px;
     }
-  `
+  `,
 };
 
 export const Helpers = {
@@ -48,21 +48,21 @@ export const Helpers = {
     return result;
   },
 
-  getBackItemContent: label => {
+  getBackItemContent: (label) => {
     let result = [
-      <Icon key="icon" icon="mdi-menu-left" className={`${ClassNames.icon()} ${ClassNames.nestedIcon()}`} />
+      <Icon key="icon" icon="mdi-menu-left" className={`${ClassNames.icon()} ${ClassNames.nestedIcon()}`} />,
     ];
     result.push(<span key="label">{label}</span>);
     return result;
   },
 
-  wrapSubmenu: content => {
+  wrapSubmenu: (content) => {
     let result = content;
     if (content && content.length) {
       result = <ul className={ClassNames.submenu()}>{content}</ul>;
     }
     return result;
-  }
+  },
 };
 
 export default { ClassNames, Helpers };

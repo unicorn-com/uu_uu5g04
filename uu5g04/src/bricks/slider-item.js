@@ -28,8 +28,8 @@ export default UU5.Common.VisualComponent.create({
     classNames: {
       main: ns.css("slider-selection"),
       pointer: ns.css("slider-pointer"),
-      input: ns.css("slider-input")
-    }
+      input: ns.css("slider-input"),
+    },
   },
   //@@viewOff:statics
 
@@ -40,14 +40,14 @@ export default UU5.Common.VisualComponent.create({
     _max: UU5.PropTypes.number,
     _step: UU5.PropTypes.number,
     _getStyle: UU5.PropTypes.func,
-    _checkValue: UU5.PropTypes.func
+    _checkValue: UU5.PropTypes.func,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      value: null
+      value: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -55,7 +55,7 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
-      value: this.props._checkValue(this.props.value)
+      value: this.props._checkValue(this.props.value),
     };
   },
 
@@ -76,14 +76,14 @@ export default UU5.Common.VisualComponent.create({
   },
 
   increase(value, setStateCallback) {
-    this.setState(prevState => {
+    this.setState((prevState) => {
       return { value: this.props._checkValue(prevState.value + (value || this.props._step)) };
     }, setStateCallback);
     return this;
   },
 
   decrease(value, setStateCallback) {
-    this.setState(prevState => {
+    this.setState((prevState) => {
       return { value: this.props._checkValue(prevState.value - (value || this.props._step)) };
     }, setStateCallback);
     return this;
@@ -110,11 +110,11 @@ export default UU5.Common.VisualComponent.create({
       max: this.props._max,
       step: this.props._step,
       value: this.getValue(),
-      disabled: this.isDisabled()
+      disabled: this.isDisabled(),
     };
 
     if (!this.isDisabled()) {
-      attrs.onChange = e => this._changeValue(e.target.value, e);
+      attrs.onChange = (e) => this._changeValue(e.target.value, e);
     }
 
     return attrs;
@@ -132,6 +132,6 @@ export default UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </div>
     );
-  }
+  },
   //@@viewOff:render
 });

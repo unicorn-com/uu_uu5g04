@@ -34,7 +34,7 @@ export const LanguageSelector = UU5.Common.LsiMixin.withContext(
       UU5.Common.ScreenSizeMixin,
       UU5.Common.LsiMixin,
       UU5.Common.NestingLevelMixin,
-      UU5.Common.ColorSchemaMixin
+      UU5.Common.ColorSchemaMixin,
     ],
     //@@viewOff:mixins
 
@@ -54,11 +54,11 @@ export const LanguageSelector = UU5.Common.LsiMixin.withContext(
         selected: ns.css("language-selector-selected"),
         modalButton: ns.css("language-selector-modal-button"),
         button: ns.css("language-selector-button"),
-        spaceBetween: ns.css("language-selector-space-between")
+        spaceBetween: ns.css("language-selector-space-between"),
       },
       defaults: {
-        regexpSpace: / /g
-      }
+        regexpSpace: / /g,
+      },
     },
     //@@viewOff:statics
 
@@ -70,8 +70,8 @@ export const LanguageSelector = UU5.Common.LsiMixin.withContext(
       languages: UU5.PropTypes.shape({
         languageCode: UU5.PropTypes.shape({
           flag: UU5.PropTypes.string,
-          language: UU5.PropTypes.string
-        })
+          language: UU5.PropTypes.string,
+        }),
       }),
       defaultLanguage: UU5.PropTypes.string,
       size: UU5.PropTypes.string,
@@ -81,7 +81,7 @@ export const LanguageSelector = UU5.Common.LsiMixin.withContext(
       borderRadius: UU5.PropTypes.string,
       elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
       elevationHover: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-      baseline: UU5.PropTypes.bool
+      baseline: UU5.PropTypes.bool,
     },
     //@@viewOff:propTypes
 
@@ -100,7 +100,7 @@ export const LanguageSelector = UU5.Common.LsiMixin.withContext(
         borderRadius: null,
         elevation: null,
         elevationHover: null,
-        baseline: false
+        baseline: false,
       };
     },
     //@@viewOff:getDefaultProps
@@ -108,7 +108,7 @@ export const LanguageSelector = UU5.Common.LsiMixin.withContext(
     //@@viewOn:reactLifeCycle
     getInitialState() {
       return {
-        languages: this._getFilteredLanguages(this.props)
+        languages: this._getFilteredLanguages(this.props),
       };
     },
 
@@ -126,7 +126,7 @@ export const LanguageSelector = UU5.Common.LsiMixin.withContext(
 
     UNSAFE_componentWillReceiveProps(nextProps) {
       if (nextProps.controlled) {
-        this.setState(state => {
+        this.setState((state) => {
           let newLanguage = state.language;
           let languages =
             typeof nextProps.displayedLanguages === "string"
@@ -137,7 +137,7 @@ export const LanguageSelector = UU5.Common.LsiMixin.withContext(
           }
           return {
             language: newLanguage,
-            languages: this._getFilteredLanguages(nextProps)
+            languages: this._getFilteredLanguages(nextProps),
           };
         });
       }
@@ -168,7 +168,7 @@ export const LanguageSelector = UU5.Common.LsiMixin.withContext(
 
         result = result || {};
         let languagesCodes = Object.keys(languages);
-        displayedLanguages.forEach(key => {
+        displayedLanguages.forEach((key) => {
           if (languagesCodes.indexOf(key) > -1) {
             result[key] = languages[key];
           }
@@ -353,7 +353,7 @@ export const LanguageSelector = UU5.Common.LsiMixin.withContext(
       );
       // }
       return this.getNestingLevel() ? result : null;
-    }
+    },
     //@@viewOff:render
   })
 );

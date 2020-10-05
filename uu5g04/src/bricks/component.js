@@ -14,20 +14,20 @@ export const Component = UU5.Common.VisualComponent.create({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("Component"),
-    nestingLevelList: UU5.Environment.getNestingLevelList("box")
+    nestingLevelList: UU5.Environment.getNestingLevelList("box"),
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    text: UU5.PropTypes.string
+    text: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      text: undefined
+      text: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -44,17 +44,13 @@ export const Component = UU5.Common.VisualComponent.create({
       <UU5.Common.Fragment>
         {this.isInlineEdited() && (
           <UU5.Common.Suspense fallback={this.getEditingLoading()}>
-            <ComponentEditable
-              props={this.props}
-              onClose={this.endEditation}
-              ref={ref => (this._editRef = ref)}
-            />
+            <ComponentEditable props={this.props} onClose={this.endEditation} ref={(ref) => (this._editRef = ref)} />
           </UU5.Common.Suspense>
         )}
         {this.isNotInlineEdited() && <UU5.Common.Div content={this.props.text} />}
       </UU5.Common.Fragment>
     );
-  }
+  },
   //@@viewOff:render
 });
 

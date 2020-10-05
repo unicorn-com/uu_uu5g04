@@ -24,7 +24,7 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 const MyLink = UU5.Common.VisualComponent.create({
   getInitialState: () => {
     return {
-      isCalled: false
+      isCalled: false,
     };
   },
 
@@ -51,7 +51,7 @@ const MyLink = UU5.Common.VisualComponent.create({
         onWheelClick={this.onWheelClickAlert}
       />
     );
-  }
+  },
 });
 
 const CONFIG = {
@@ -61,40 +61,46 @@ const CONFIG = {
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.ContentMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     href: {
-      values: ["https://unicorn.com/", "www.unicorn.com", "#about", "mailto:me@example.com", "ftp://example.com/folder"]
+      values: [
+        "https://unicorn.com/",
+        "www.unicorn.com",
+        "#about",
+        "mailto:me@example.com",
+        "ftp://example.com/folder",
+      ],
     },
     //onClick:
     //onCtrlClick
     //onWheelClick
     smoothScroll: {
-      values: [0, 3000]
+      values: [0, 3000],
     },
     offset: {
-      values: [0, 70]
+      values: [0, 70],
     },
     target: {
-      values: ["_blank", "_parent", "_top", "_self"]
+      values: ["_blank", "_parent", "_top", "_self"],
     },
     download: {
-      values: [true, false]
+      values: [true, false],
     },
     authenticate: {
       values: [true, false],
       requiredProps: {
-        href: "https://plus4u.net/uve"
-      }
-    }
+        href: "https://plus4u.net/uve",
+      },
+    },
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Link`, () => {

@@ -28,7 +28,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
       isCalled: false,
       value: "",
       message: "",
-      feedback: "initial"
+      feedback: "initial",
     };
   },
 
@@ -103,7 +103,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
         onClick={this.onClickHandler}
       />
     );
-  }
+  },
 });
 
 const CONFIG = {
@@ -112,39 +112,39 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Forms.TextInputMixin",
     "UU5.Common.ColorSchemaMixin",
-    "UU5.Forms.InputMixin"
+    "UU5.Forms.InputMixin",
   ],
   props: {
     value: {
-      values: ["10:30", "10:30 PM"]
+      values: ["10:30", "10:30 PM"],
     },
     iconOpen: {
-      values: ["mdi-calendar"]
+      values: ["mdi-calendar"],
     },
     iconClosed: {
-      values: ["uu5-minus"]
+      values: ["uu5-minus"],
     },
     format: {
-      values: ["12", "24"]
+      values: ["12", "24"],
     },
     seconds: {
-      values: [true, false]
+      values: [true, false],
     },
     nanMessage: {
-      values: ["Prosím zadejte validní čas."]
+      values: ["Prosím zadejte validní čas."],
     },
     valueType: {
-      values: ["string", "date", null]
-    }
+      values: ["string", "date", null],
+    },
   },
   requiredProps: {
     //The component does not have any required props
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Forms.TimePicker props`, () => {
@@ -171,8 +171,8 @@ describe(`UU5.Forms.TimePicker props`, () => {
     const wrapper = mount(<UU5.Forms.TimePicker id="uuID" timeFrom="06:00:00" timeTo="06:00:00" seconds show24 />);
     wrapper.instance().open();
     wrapper.update();
-    const hoursWrapper = wrapper.findWhere(node => node.hasClass("uu5-forms-time-hours"));
-    const button = hoursWrapper.findWhere(node => node.type() === "button" && node.text() === "00");
+    const hoursWrapper = wrapper.findWhere((node) => node.hasClass("uu5-forms-time-hours"));
+    const button = hoursWrapper.findWhere((node) => node.type() === "button" && node.text() === "00");
     button.simulate("click");
     wrapper.update();
     expect(wrapper.instance().getValue()).toBe("24:00:00");
@@ -182,15 +182,15 @@ describe(`UU5.Forms.TimePicker props`, () => {
     const wrapper = mount(<UU5.Forms.TimePicker id="uuID" seconds show24 />);
     wrapper.instance().open();
     wrapper.update();
-    const hoursWrapper = wrapper.findWhere(node => node.hasClass("uu5-forms-time-hours"));
-    const button00 = hoursWrapper.findWhere(node => node.type() === "button" && node.text() === "00");
-    const button24 = hoursWrapper.findWhere(node => node.type() === "button" && node.text() === "24");
+    const hoursWrapper = wrapper.findWhere((node) => node.hasClass("uu5-forms-time-hours"));
+    const button00 = hoursWrapper.findWhere((node) => node.type() === "button" && node.text() === "00");
+    const button24 = hoursWrapper.findWhere((node) => node.type() === "button" && node.text() === "24");
     expect(button00.length).toBe(1);
     expect(button24.length).toBe(1);
     button24.simulate("click");
     wrapper.update();
-    const minutesWrapper = wrapper.findWhere(node => node.hasClass("uu5-forms-time-minutes"));
-    const secondsWrapper = wrapper.findWhere(node => node.hasClass("uu5-forms-time-seconds"));
+    const minutesWrapper = wrapper.findWhere((node) => node.hasClass("uu5-forms-time-minutes"));
+    const secondsWrapper = wrapper.findWhere((node) => node.hasClass("uu5-forms-time-seconds"));
     expect(minutesWrapper.find("button").length).toBe(1);
     expect(secondsWrapper.find("button").length).toBe(1);
   });
@@ -198,7 +198,7 @@ describe(`UU5.Forms.TimePicker props`, () => {
   it("suffix", () => {
     const wrapper = mount(<UU5.Forms.TimePicker suffix="suffix" />);
     wrapper.instance().open();
-    expect(wrapper.findWhere(node => node.text() === "suffix")).not.toBe(0);
+    expect(wrapper.findWhere((node) => node.text() === "suffix")).not.toBe(0);
   });
 });
 
@@ -338,20 +338,20 @@ describe(`UU5.Forms.TimePicker props function -> Text.InputMixin`, () => {
         label="Start of event"
         validateOnChange
         id={"uuID01"}
-        onValidate={opt => {
+        onValidate={(opt) => {
           let feedback;
           const pattern = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/;
           if (pattern.test(opt.value)) {
             feedback = {
               feedback: "success",
               message: "Is valid.",
-              value: opt.value
+              value: opt.value,
             };
           } else {
             feedback = {
               feedback: "error",
               message: "Not valid.",
-              value: opt.value
+              value: opt.value,
             };
           }
 
@@ -372,20 +372,20 @@ describe(`UU5.Forms.TimePicker props function -> Text.InputMixin`, () => {
         id={"uuID02"}
         value={"12:00"}
         validateOnChange
-        onValidate={opt => {
+        onValidate={(opt) => {
           let feedback;
           const pattern = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/;
           if (pattern.test(opt.value)) {
             feedback = {
               feedback: "success",
               message: "Is valid.",
-              value: opt.value
+              value: opt.value,
             };
           } else {
             feedback = {
               feedback: "error",
               message: "Not valid.",
-              value: opt.value
+              value: opt.value,
             };
           }
 

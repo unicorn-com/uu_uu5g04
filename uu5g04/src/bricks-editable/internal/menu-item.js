@@ -108,7 +108,7 @@ const MenuItem = UU5.Common.VisualComponent.create({
           margin-left: 4px;
         }
       `),
-      separator: props =>
+      separator: (props) =>
         ns.css("menu-item-separator") +
         " " +
         Css.css(`
@@ -129,8 +129,8 @@ const MenuItem = UU5.Common.VisualComponent.create({
         top: 0;
         bottom: 0;
         width: 32px;
-      `)
-    }
+      `),
+    },
   },
   //@@viewOff:statics
 
@@ -144,7 +144,7 @@ const MenuItem = UU5.Common.VisualComponent.create({
     colorSchema: UU5.PropTypes.string,
     colorSchemaActive: UU5.PropTypes.string,
     controlsColorSchema: UU5.PropTypes.string,
-    controlsColorSchemaActive: UU5.PropTypes.string
+    controlsColorSchemaActive: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
@@ -159,7 +159,7 @@ const MenuItem = UU5.Common.VisualComponent.create({
       colorSchema: undefined,
       colorSchemaActive: undefined,
       controlsColorSchema: undefined,
-      controlsColorSchemaActive: undefined
+      controlsColorSchemaActive: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -207,7 +207,7 @@ const MenuItem = UU5.Common.VisualComponent.create({
   _getStyleWrapperAttrs() {
     let props = {
       tabIndex: "0",
-      className: `${this.getClassName("styleWrapper")} ${UU5.Common.ClassNames.hover} ${UU5.Common.ClassNames.focus}`
+      className: `${this.getClassName("styleWrapper")} ${UU5.Common.ClassNames.hover} ${UU5.Common.ClassNames.focus}`,
     };
 
     if (this.props.isActive) {
@@ -246,7 +246,7 @@ const MenuItem = UU5.Common.VisualComponent.create({
         ) : null}
       </li>
     );
-  }
+  },
   //@@viewOff:render
 });
 

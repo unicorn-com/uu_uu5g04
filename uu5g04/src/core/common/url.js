@@ -19,7 +19,7 @@ const regexp = {
   slash: /^[/]/,
   hash: /^#/,
   http: /^(\/|[a-z0-9\-+.]+:)/,
-  slashes: /([^:])\/+/g
+  slashes: /([^:])\/+/g,
 };
 
 function isRoute(href) {
@@ -51,7 +51,7 @@ export class Url {
           port: matcher[4],
           pathname: matcher[5],
           search: matcher[6],
-          hash: matcher[7]
+          hash: matcher[7],
         };
       }
       parser.protocol && (result.protocol = parser.protocol.replace(regexp.colon, ""));
@@ -117,7 +117,7 @@ export class Url {
     let params = {};
 
     query = query.replace(/^\?/, "");
-    query.split("&").forEach(value => {
+    query.split("&").forEach((value) => {
       let valueSplitter = value.split("=");
       params[valueSplitter[0]] = Url.decodeValue(valueSplitter[1]);
     });

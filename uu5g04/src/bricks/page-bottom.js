@@ -35,11 +35,11 @@ export const PageBottom = UU5.Common.VisualComponent.create({
       onScrollShown: ns.css("page-bottom-shown"),
       onScrollHidden: ns.css("page-bottom-hidden"),
       animate: ns.css("page-bottom-animate"),
-      noShadow: ns.css("page-bottom-no-shadow")
+      noShadow: ns.css("page-bottom-no-shadow"),
     },
     defaults: {
-      hideOnScrollOffset: 64
-    }
+      hideOnScrollOffset: 64,
+    },
   },
   //@@viewOff:statics
 
@@ -48,7 +48,7 @@ export const PageBottom = UU5.Common.VisualComponent.create({
     fixed: UU5.PropTypes.bool,
     fixedHeight: UU5.PropTypes.number,
     topId: UU5.PropTypes.string,
-    alwaysFixed: UU5.PropTypes.bool
+    alwaysFixed: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -58,7 +58,7 @@ export const PageBottom = UU5.Common.VisualComponent.create({
       fixed: false,
       fixedHeight: 0,
       topId: null,
-      alwaysFixed: false
+      alwaysFixed: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -68,7 +68,7 @@ export const PageBottom = UU5.Common.VisualComponent.create({
     return {
       initialPosition: !this.props.alwaysFixed,
       onScrollHidden: false,
-      transform: 0
+      transform: 0,
     };
   },
 
@@ -97,17 +97,19 @@ export const PageBottom = UU5.Common.VisualComponent.create({
     this._height = this._root ? this._root.getBoundingClientRect().height : 0;
 
     if (this.props.fixed) {
-      UU5.Environment.EventListener.addWindowEvent("scroll", this.getId(), e => this._onScroll(this.props, e));
-      UU5.Environment.EventListener.addWindowEvent("wheel", this.getId(), e => this._onScroll(this.props, e));
-      UU5.Environment.EventListener.addWindowEvent("DOMMouseScroll", this.getId(), e => this._onScroll(this.props, e));
-      UU5.Environment.EventListener.addWindowEvent("mousewheel", this.getId(), e => this._onScroll(this.props, e));
+      UU5.Environment.EventListener.addWindowEvent("scroll", this.getId(), (e) => this._onScroll(this.props, e));
+      UU5.Environment.EventListener.addWindowEvent("wheel", this.getId(), (e) => this._onScroll(this.props, e));
+      UU5.Environment.EventListener.addWindowEvent("DOMMouseScroll", this.getId(), (e) =>
+        this._onScroll(this.props, e)
+      );
+      UU5.Environment.EventListener.addWindowEvent("mousewheel", this.getId(), (e) => this._onScroll(this.props, e));
       // This is necessary because the width has to be changed
       UU5.Environment.EventListener.addWindowEvent("resize", this.getId(), () => this.forceUpdate());
 
       UU5.Environment.EventListener.registerEvent(
         "preventScrollTrigger",
         this.getId(),
-        prevent => (this._scrollPrevented = prevent)
+        (prevent) => (this._scrollPrevented = prevent)
       );
       UU5.Environment.EventListener.registerEvent("pageContentResize", this.getId(), () => this.forceUpdate());
       UU5.Environment.EventListener.registerEvent("pageColumnChanged", this.getId(), () => this.forceUpdate());
@@ -230,14 +232,14 @@ export const PageBottom = UU5.Common.VisualComponent.create({
           onScrollHidden: false,
           animate: false,
           transform: this._height + (ghostRect.top - document.documentElement.clientHeight),
-          initialPosition: true
+          initialPosition: true,
         });
       } else if (scrollDirection === "up" && this.state.onScrollHidden && this._lastScrollPositionDown) {
         if (this._lastScrollPositionDown - scrollPosition >= this.getDefault().hideOnScrollOffset) {
           this.setState({
             onScrollHidden: false,
             animate: true,
-            transform: this.props.fixedHeight ? this._height - this.props.fixedHeight : null
+            transform: this.props.fixedHeight ? this._height - this.props.fixedHeight : null,
           });
         }
       }
@@ -251,7 +253,7 @@ export const PageBottom = UU5.Common.VisualComponent.create({
         if (scrollDirection === "down" && ghostRect.top > 0) {
           this.setState({
             transform: this._height + (ghostRect.top - document.documentElement.clientHeight),
-            animate: false
+            animate: false,
           });
         } else if (
           scrollDirection === "up" &&
@@ -259,7 +261,7 @@ export const PageBottom = UU5.Common.VisualComponent.create({
         ) {
           this.setState({
             transform: this._height + (ghostRect.top - document.documentElement.clientHeight),
-            animate: false
+            animate: false,
           });
         } else if (
           scrollDirection === "up" &&
@@ -272,17 +274,17 @@ export const PageBottom = UU5.Common.VisualComponent.create({
           this.setState({
             transform: this._height + (ghostRect.top - document.documentElement.clientHeight),
             animate: false,
-            initialPosition: true
+            initialPosition: true,
           });
         } else if (scrollDirection === "down" && ghostRect.top > 0) {
           this.setState({
             transform: this._height + (ghostRect.top - document.documentElement.clientHeight),
-            animate: false
+            animate: false,
           });
         } else if (scrollDirection === "up" && rootRect.top >= document.documentElement.clientHeight) {
           this.setState({
             transform: ghostRect.bottom - document.documentElement.clientHeight,
-            initialPosition: false
+            initialPosition: false,
           });
         } else if (scrollDirection === "up" && ghostRect.bottom >= document.documentElement.clientHeight) {
           this.setState({ transform: ghostRect.bottom - document.documentElement.clientHeight });
@@ -297,7 +299,7 @@ export const PageBottom = UU5.Common.VisualComponent.create({
     ghostAttrs.className = this.getClassName("ghost");
     ghostAttrs.style = {};
     ghostAttrs.style.height = this._root ? this._root.getBoundingClientRect().height : null;
-    ghostAttrs.ref = ghost => (this._ghost = ghost);
+    ghostAttrs.ref = (ghost) => (this._ghost = ghost);
 
     return ghostAttrs;
   },
@@ -321,7 +323,7 @@ export const PageBottom = UU5.Common.VisualComponent.create({
     if (this._ghost) {
       mainAttrs.style = UU5.Common.Tools.merge(mainAttrs.style, {
         width: this._ghost.getBoundingClientRect().width + "px",
-        left: this._getOffsetLeft() + "px"
+        left: this._getOffsetLeft() + "px",
       });
     }
 
@@ -334,7 +336,7 @@ export const PageBottom = UU5.Common.VisualComponent.create({
       mainAttrs.style.WebkitTransform = "translateY(" + this.state.transform + "px)";
     }
 
-    mainAttrs.ref = root => (this._root = root);
+    mainAttrs.ref = (root) => (this._root = root);
 
     return mainAttrs;
   },
@@ -357,7 +359,7 @@ export const PageBottom = UU5.Common.VisualComponent.create({
     }
 
     return result;
-  }
+  },
   //@@viewOff:render
 });
 

@@ -35,7 +35,7 @@ export const Newspaper = UU5.Common.VisualComponent.create({
     UU5.Common.SectionMixin,
     UU5.Common.ColorSchemaMixin,
     UU5.Common.NestingLevelMixin,
-    UU5.Common.EditableMixin
+    UU5.Common.EditableMixin,
   ],
   //@@viewOff:mixins
 
@@ -46,20 +46,20 @@ export const Newspaper = UU5.Common.VisualComponent.create({
     classNames: {
       main: ns.css("newspaper uu5-common-text"),
       //bg: 'uu5-common-bg',
-      columns: "uu5-common-newspaper-layout-"
+      columns: "uu5-common-newspaper-layout-",
     },
     editMode: {
       name: { en: "Newspaper", cs: "Newspaper" },
       backgroundColor: "rgba(0,0,0,.2)",
       color: "rgba(0,0,0,.87)",
-      highlightColor: "#CCCCCC"
-    }
+      highlightColor: "#CCCCCC",
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    columnsCount: UU5.PropTypes.oneOf([1, 2, 3, 4, 5, 6])
+    columnsCount: UU5.PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
     //background: UU5.PropTypes.bool
   },
   //@@viewOff:propTypes
@@ -67,7 +67,7 @@ export const Newspaper = UU5.Common.VisualComponent.create({
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      columnsCount: 2
+      columnsCount: 2,
       //background: false
     };
   },
@@ -131,7 +131,7 @@ export const Newspaper = UU5.Common.VisualComponent.create({
         {this.isNotInlineEdited() && this._renderView()}
       </>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

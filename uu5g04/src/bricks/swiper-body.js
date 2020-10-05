@@ -26,7 +26,7 @@ export default UU5.Common.VisualComponent.create({
     UU5.Common.PureRenderMixin,
     UU5.Common.ElementaryMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.NestingLevelMixin
+    UU5.Common.NestingLevelMixin,
   ],
   //@@viewOff:mixins
 
@@ -35,14 +35,14 @@ export default UU5.Common.VisualComponent.create({
     tagName: ns.name("Swiper.Body"),
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
-      main: ns.css("swiper-body")
+      main: ns.css("swiper-body"),
     },
     defaults: {
-      parentTagName: "UU5.Bricks.Swiper"
+      parentTagName: "UU5.Bricks.Swiper",
     },
     errors: {
-      invalidParent: "Parent of this component is not Swiper."
-    }
+      invalidParent: "Parent of this component is not Swiper.",
+    },
   },
   //@@viewOff:statics
 
@@ -53,7 +53,7 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  UNSAFE_componentWillMount: function() {
+  UNSAFE_componentWillMount: function () {
     let parent = this.getParent();
 
     if (parent) {
@@ -79,13 +79,13 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return this.getNestingLevel() ? (
       <div {...this.getMainAttrs()}>
         {this.getChildren()}
         {this.getDisabledCover()}
       </div>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });

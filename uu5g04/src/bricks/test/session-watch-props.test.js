@@ -29,11 +29,11 @@ const CONFIG = {
   mixins: ["UU5.Common.BaseMixin", "UU5.Common.ElementaryMixin", "UU5.Common.ContentMixin", "UU5.Common.IdentityMixin"],
   props: {
     header: {
-      values: ["Custom header", undefined]
-    }
+      values: ["Custom header", undefined],
+    },
   },
   requiredProps: {},
-  opt: {}
+  opt: {},
 };
 
 describe(`UU5.Bricks.SessionWatch props testing`, () => {

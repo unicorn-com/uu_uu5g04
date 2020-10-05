@@ -23,7 +23,7 @@ import "./button.less";
 
 const ClassNames = UU5.Common.ClassNames;
 const Styles = {
-  errorStyles: props => {
+  errorStyles: (props) => {
     let colorSchema = UU5.Environment.colorSchemaMap.danger.color;
     let colors = ButtonStyles.getColors(colorSchema, props.bgStyle);
 
@@ -120,10 +120,10 @@ const Styles = {
       }
     `);
   },
-  bgStyles: props => {
+  bgStyles: (props) => {
     // Only default colorSchema is here right now. Others are in .less files
     // let styles = Object.keys(UU5.Environment.colorSchemaMap).map(colorSchema => {
-    let styles = ["default"].map(colorSchema => {
+    let styles = ["default"].map((colorSchema) => {
       let colors = ButtonStyles.getColors(colorSchema, props.bgStyle);
 
       if (!colors) {
@@ -194,7 +194,7 @@ const Styles = {
     });
 
     return Css.css(styles.join(" "));
-  }
+  },
 };
 
 export const Button = UU5.Common.VisualComponent.create({
@@ -207,7 +207,7 @@ export const Button = UU5.Common.VisualComponent.create({
     UU5.Common.ColorSchemaMixin,
     UU5.Common.ContentMixin,
     UU5.Common.PureRenderMixin,
-    UU5.Common.EditableMixin
+    UU5.Common.EditableMixin,
   ],
   //@@viewOff:mixins
 
@@ -243,14 +243,14 @@ export const Button = UU5.Common.VisualComponent.create({
       size: ns.css("button-"),
       baseline: ns.css("button-baseline"),
       errorStyles: Styles.errorStyles,
-      bgStyles: Styles.bgStyles
+      bgStyles: Styles.bgStyles,
     },
     defaults: {
       content: "Button",
       regexpHash: /^#/,
-      httpRegexp: /^(\/|[a-z0-9\-+.]+:)/
+      httpRegexp: /^(\/|[a-z0-9\-+.]+:)/,
     },
-    editableComponent: "UU5.BricksEditable.Button"
+    editableComponent: "UU5.BricksEditable.Button",
   },
   //@@viewOff:statics
 
@@ -270,7 +270,7 @@ export const Button = UU5.Common.VisualComponent.create({
     borderRadius: UU5.PropTypes.string,
     elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
     elevationHover: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-    baseline: UU5.PropTypes.bool
+    baseline: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -291,7 +291,7 @@ export const Button = UU5.Common.VisualComponent.create({
       borderRadius: null,
       elevation: null,
       elevationHover: null,
-      baseline: false
+      baseline: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -299,7 +299,7 @@ export const Button = UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
-      pressed: this.props.pressed
+      pressed: this.props.pressed,
     };
   },
 
@@ -331,7 +331,7 @@ export const Button = UU5.Common.VisualComponent.create({
   },
 
   togglePressed(setStateCallback) {
-    this.setState(state => ({ pressed: !state.pressed }), setStateCallback);
+    this.setState((state) => ({ pressed: !state.pressed }), setStateCallback);
     return this;
   },
 
@@ -390,7 +390,11 @@ export const Button = UU5.Common.VisualComponent.create({
   },
 
   _onClick(e) {
-    if (e.button === 0 && (e.ctrlKey || (UU5.Common.Tools.isMac() && e.metaKey)) && typeof this.props.onCtrlClick === "function") {
+    if (
+      e.button === 0 &&
+      (e.ctrlKey || (UU5.Common.Tools.isMac() && e.metaKey)) &&
+      typeof this.props.onCtrlClick === "function"
+    ) {
       this.props.onCtrlClick(this, e);
     } else if (e.button === 1 && typeof this.props.onWheelClick === "function") {
       this.props.onWheelClick(this, e);
@@ -559,13 +563,13 @@ export const Button = UU5.Common.VisualComponent.create({
   //@@viewOn:render
   render() {
     let component = (
-      <button {...this._buildMainAttrs()} ref={button => (this._button = button)}>
+      <button {...this._buildMainAttrs()} ref={(button) => (this._button = button)}>
         {this._getChildren()}
       </button>
     );
 
     return this.getNestingLevel() ? component : null;
-  }
+  },
   //@@viewOff:render
 });
 

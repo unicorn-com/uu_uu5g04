@@ -12,7 +12,7 @@ const sizes = ["xs", "s", "m", "l", "xl"];
 
 //@@viewOn:statics
 const STATICS = {
-  displayName: ns.name("SizeInput")
+  displayName: ns.name("SizeInput"),
 };
 //@@viewOff:statics
 
@@ -26,7 +26,7 @@ const SizeInput = createVisualComponent({
     items: UU5.PropTypes.arrayOf(UU5.PropTypes.object),
     value: UU5.PropTypes.string,
     minSize: UU5.PropTypes.oneOf(sizes),
-    maxSize: UU5.PropTypes.oneOf(sizes)
+    maxSize: UU5.PropTypes.oneOf(sizes),
   },
   //@@viewOff:propTypes
 
@@ -37,7 +37,7 @@ const SizeInput = createVisualComponent({
     items: undefined,
     value: UU5.PropTypes.string,
     minSize: "xs",
-    maxSize: "xl"
+    maxSize: "xl",
   },
   //@@viewOff:defaultProps
 
@@ -47,9 +47,9 @@ const SizeInput = createVisualComponent({
       if (items) {
         return items;
       } else {
-        return sizes.slice(sizes.indexOf(minSize), sizes.indexOf(maxSize) + 1).map(size => ({
+        return sizes.slice(sizes.indexOf(minSize), sizes.indexOf(maxSize) + 1).map((size) => ({
           value: size,
-          content: <UU5.Bricks.Lsi lsi={Lsi.sizeInput[`value${size.toUpperCase()}`]} />
+          content: <UU5.Bricks.Lsi lsi={Lsi.sizeInput[`value${size.toUpperCase()}`]} />,
         }));
       }
     }, [items, minSize, maxSize]);
@@ -64,7 +64,7 @@ const SizeInput = createVisualComponent({
     //@@viewOn:render
     return <UU5.Forms.SwitchSelector {...props} label={label} value={value} onChange={onChange} items={usedItems} />;
     //@@viewOff:render
-  }
+  },
 });
 
 export default SizeInput;

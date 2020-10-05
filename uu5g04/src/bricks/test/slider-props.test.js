@@ -21,7 +21,7 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 const MySliderHandler = UU5.Common.VisualComponent.create({
   getInitialState: () => {
     return {
-      isCalled: false
+      isCalled: false,
     };
   },
 
@@ -37,7 +37,7 @@ const MySliderHandler = UU5.Common.VisualComponent.create({
 
   render() {
     return <UU5.Bricks.Slider value={4} id={"uuID"} onChange={this.onChangeAlert} onChanged={this.onChangedAlert} />;
-  }
+  },
 });
 
 const CONFIG = {
@@ -47,38 +47,38 @@ const CONFIG = {
     "UU5.Common.ContentMixin",
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     min: {
-      values: [10]
+      values: [10],
     },
     max: {
-      values: [50]
+      values: [50],
     },
     step: {
-      values: [5]
+      values: [5],
     },
     value: {
-      values: [30, [33, 77]]
+      values: [30, [33, 77]],
     },
     //onChange
     //onChanged
     size: {
-      values: ["s", "m", "l", "xl"]
+      values: ["s", "m", "l", "xl"],
     },
     vertical: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
   },
   requiredProps: {
     //children: [<UU5.Bricks.Slider.Item id={"childID"} dynamic={false} disabled={true} label="Profile"/>]
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: true
-    }
-  }
+      disableLifecycleMethods: true,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Slider`, () => {
@@ -115,7 +115,7 @@ describe(`UU5.Bricks.Slider docKit examples`, () => {
   it(`UU5.Bricks.Slider example01`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Container id={"uuID"}>
-        <UU5.Bricks.Slider id={"defaultProps"} ref_={slider1 => (this.slider1 = slider1)} />
+        <UU5.Bricks.Slider id={"defaultProps"} ref_={(slider1) => (this.slider1 = slider1)} />
         <UU5.Bricks.Slider id={"propsSetting"} value={4} min={2} max={10} step={3} size={"xl"} />
       </UU5.Bricks.Container>
     );

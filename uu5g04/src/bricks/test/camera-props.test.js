@@ -19,11 +19,11 @@ const CONFIG = {
     "UU5.Common.BaseMixin",
     "UU5.Common.ElementaryMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {},
   requiredProps: {},
-  opt: {}
+  opt: {},
 };
 
 describe(`UU5.Bricks.Camera props testing`, () => {

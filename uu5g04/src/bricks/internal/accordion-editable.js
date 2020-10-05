@@ -25,7 +25,7 @@ const DEFAULT_PROPS_MAP = {
   iconCollapsed: null,
   size: "m",
   iconAlign: null,
-  openClick: null
+  openClick: null,
 };
 
 const MAIN_CLASS_NAME = ns.css("accordion-editable");
@@ -41,13 +41,13 @@ const editablePropsComponentSetup = [
         { value: "s", content: <UU5.Bricks.Lsi lsi={EditableLsi.common.sizeValueS} /> },
         { value: "m", content: <UU5.Bricks.Lsi lsi={EditableLsi.common.sizeValueM} /> },
         { value: "l", content: <UU5.Bricks.Lsi lsi={EditableLsi.common.sizeValueL} /> },
-        { value: "xl", content: <UU5.Bricks.Lsi lsi={EditableLsi.common.sizeValueXL} /> }
-      ]
-    })
+        { value: "xl", content: <UU5.Bricks.Lsi lsi={EditableLsi.common.sizeValueXL} /> },
+      ],
+    }),
   },
   [
     { name: "iconExpanded", type: "iconPicker", label: EditableLsi.panel.iconExpandedLabel },
-    { name: "iconCollapsed", type: "iconPicker", label: EditableLsi.panel.iconCollapsedLabel }
+    { name: "iconCollapsed", type: "iconPicker", label: EditableLsi.panel.iconCollapsedLabel },
   ],
   {
     name: "iconAlign",
@@ -57,11 +57,11 @@ const editablePropsComponentSetup = [
       items: [
         { value: "left", content: <UU5.Bricks.Lsi lsi={EditableLsi.panel.iconAlignValueLeft} /> },
         { value: "right", content: <UU5.Bricks.Lsi lsi={EditableLsi.panel.iconAlignValueRight} /> },
-        { value: "after", content: <UU5.Bricks.Lsi lsi={EditableLsi.panel.iconAlignValueAfter} /> }
-      ]
-    })
+        { value: "after", content: <UU5.Bricks.Lsi lsi={EditableLsi.panel.iconAlignValueAfter} /> },
+      ],
+    }),
   },
-  { name: "onClickNotCollapseOthers", type: "bool", label: EditableLsi.accordion.onClickNotCollapseOthersLabel }
+  { name: "onClickNotCollapseOthers", type: "bool", label: EditableLsi.accordion.onClickNotCollapseOthersLabel },
 ];
 
 const editableAdditionalPropsSetup = [
@@ -73,9 +73,9 @@ const editableAdditionalPropsSetup = [
       value: value || "header",
       items: [
         { value: "header", content: <UU5.Bricks.Lsi lsi={EditableLsi.panel.openClickValueHeader} /> },
-        { value: "icon", content: <UU5.Bricks.Lsi lsi={EditableLsi.panel.openClickValueIcon} /> }
-      ]
-    })
+        { value: "icon", content: <UU5.Bricks.Lsi lsi={EditableLsi.panel.openClickValueIcon} /> },
+      ],
+    }),
   },
   {
     name: "mountPanelContent",
@@ -85,27 +85,27 @@ const editableAdditionalPropsSetup = [
       items: [
         {
           value: "onEachExpand",
-          content: <UU5.Bricks.Lsi lsi={EditableLsi.accordion.mountPanelContentValueOnEachExpand} />
+          content: <UU5.Bricks.Lsi lsi={EditableLsi.accordion.mountPanelContentValueOnEachExpand} />,
         },
         {
           value: "onFirstExpand",
-          content: <UU5.Bricks.Lsi lsi={EditableLsi.accordion.mountPanelContentValueOnFirstExpand} />
-        }
+          content: <UU5.Bricks.Lsi lsi={EditableLsi.accordion.mountPanelContentValueOnFirstExpand} />,
+        },
       ],
-      message: <UU5.Bricks.Lsi lsi={EditableLsi.accordion.mountPanelContentDescription} />
-    })
-  }
+      message: <UU5.Bricks.Lsi lsi={EditableLsi.accordion.mountPanelContentDescription} />,
+    }),
+  },
 ];
 
 const editablePropsSetup = [
   {
     name: <UU5.Bricks.Lsi lsi={EditableLsi.common.componentPropsLabel} />,
-    setup: editablePropsComponentSetup
+    setup: editablePropsComponentSetup,
   },
   {
     name: <UU5.Bricks.Lsi lsi={EditableLsi.common.advancedPropsLabel} />,
-    setup: editableAdditionalPropsSetup
-  }
+    setup: editableAdditionalPropsSetup,
+  },
 ];
 
 const editableItemPropsSetup = { setup: EditItemInfo };
@@ -113,8 +113,8 @@ const newEditableItem = {
   tagName: "UU5.Bricks.Panel",
   isElement: true,
   props: {
-    contentEditable: true
-  }
+    contentEditable: true,
+  },
 };
 function getEditableItemLabel(itemProps, itemIndex) {
   return `Panel ${itemIndex + 1}`;
@@ -129,22 +129,22 @@ export const AccordionEditable = UU5.Common.VisualComponent.create({
   statics: {
     tagName: NAME,
     classNames: {
-      main: MAIN_CLASS_NAME
+      main: MAIN_CLASS_NAME,
     },
-    lsi: () => ({ ...EditableLsi.common, ...EditableLsi.panel, ...EditableLsi.accordion })
+    lsi: () => ({ ...EditableLsi.common, ...EditableLsi.panel, ...EditableLsi.accordion }),
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    component: UU5.PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      component: null
+      component: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -155,7 +155,7 @@ export const AccordionEditable = UU5.Common.VisualComponent.create({
     return {
       ...props,
       mountPanelContent: props.mountPanelContent || "onEachExpand",
-      editationModalOpen: false
+      editationModalOpen: false,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -204,7 +204,7 @@ export const AccordionEditable = UU5.Common.VisualComponent.create({
   _onSettingsClick() {
     //EditationModal will use the content/children value of the component, but it's children can be already in edit mode, so their actual values can be lost, so endChildrenEditation and make sure that data are correct.
     this.props.component.endChildrenEditation();
-    this.setState(state => ({ editationModalOpen: !state.editationModalOpen }));
+    this.setState((state) => ({ editationModalOpen: !state.editationModalOpen }));
   },
 
   _renderEditModal() {
@@ -226,7 +226,7 @@ export const AccordionEditable = UU5.Common.VisualComponent.create({
           componentName={this.props.component.getTagName()}
           componentProps={{
             ...this.props.component.getEditablePropsValues(Object.keys(this.props.component.props)),
-            mountPanelContent: this.state.mountPanelContent
+            mountPanelContent: this.state.mountPanelContent,
           }}
           componentPropsForm={editablePropsSetup}
           itemsSource={itemsSource}
@@ -273,7 +273,7 @@ export const AccordionEditable = UU5.Common.VisualComponent.create({
         {this.state.editationModalOpen ? this._renderEditModal() : null}
       </>
     );
-  }
+  },
   //@@viewOff:render
 });
 

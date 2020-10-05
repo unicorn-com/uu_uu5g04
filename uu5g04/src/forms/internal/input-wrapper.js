@@ -39,8 +39,8 @@ export const InputWrapper = UU5.Common.VisualComponent.create({
       feedbackInitial: ns.css("input-wrapper-initial"),
       paddingRight: ns.css("input-button-wrapper-padding-right"),
       inputButton: ns.css("input-button"),
-      inputButtonIcon: ns.css("input-button-icon")
-    }
+      inputButtonIcon: ns.css("input-button-icon"),
+    },
   },
   //@@viewOff:statics
 
@@ -55,17 +55,17 @@ export const InputWrapper = UU5.Common.VisualComponent.create({
         disabled: UU5.PropTypes.bool,
         onClick: UU5.PropTypes.func,
         pressed: UU5.PropTypes.bool,
-        size: UU5.PropTypes.string
+        size: UU5.PropTypes.string,
       })
     ),
     slider: UU5.PropTypes.bool,
     datetimepicker: UU5.PropTypes.bool,
-    daterangepicker: UU5.PropTypes.bool
+    daterangepicker: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       required: false,
       feedback: "initial",
@@ -73,7 +73,7 @@ export const InputWrapper = UU5.Common.VisualComponent.create({
       buttons: null,
       slider: false,
       datetimepicker: false,
-      daterangepicker: false
+      daterangepicker: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -200,9 +200,9 @@ export const InputWrapper = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return this._getRenderResult();
-  }
+  },
   //@@viewOn:render
 });
 

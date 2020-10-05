@@ -27,7 +27,7 @@ const IdentityItem = VisualComponent.create({
 
   //@@viewOn:statics
   statics: {
-    tagName: "UU5.Common.Identity.Item"
+    tagName: "UU5.Common.Identity.Item",
   },
   //@@viewOff:statics
 
@@ -35,7 +35,7 @@ const IdentityItem = VisualComponent.create({
   propTypes: {
     pending: PropTypes.bool,
     authenticated: PropTypes.bool,
-    notAuthenticated: PropTypes.bool
+    notAuthenticated: PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -44,7 +44,7 @@ const IdentityItem = VisualComponent.create({
     return {
       pending: false,
       authenticated: false,
-      notAuthenticated: false
+      notAuthenticated: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -64,7 +64,7 @@ const IdentityItem = VisualComponent.create({
   //@@viewOn:render
   render() {
     return this.getChildren();
-  }
+  },
   //@@viewOff:render
 });
 

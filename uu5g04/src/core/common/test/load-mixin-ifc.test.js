@@ -46,7 +46,7 @@ const Calls = {
     setTimeout(() => {
       dtoIn.done({ data: {} });
     }, RELOAD_DURATION);
-  }
+  },
 };
 
 const Component = createReactClass({
@@ -55,15 +55,15 @@ const Component = createReactClass({
     tagName: "Component",
     calls: {
       onLoad: "load",
-      onReload: "reload"
-    }
+      onReload: "reload",
+    },
   },
   componentDidMount() {
     this.setCalls(Calls);
   },
   render() {
     return <div {...this.getMainAttrs()}>{this.props.children}</div>;
-  }
+  },
 });
 
 // make minReloadInterval smaller than 10s
@@ -104,7 +104,7 @@ Object.defineProperty(document, "hidden", {
   },
   set(v) {
     documentHidden = v;
-  }
+  },
 });
 beforeEach(() => {
   documentHidden = false;

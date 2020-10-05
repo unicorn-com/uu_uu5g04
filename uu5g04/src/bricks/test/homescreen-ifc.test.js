@@ -28,7 +28,7 @@ if (
     },
     set(value) {
       userAgent = value;
-    }
+    },
   });
 }
 

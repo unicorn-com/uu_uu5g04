@@ -21,7 +21,7 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 const MyAlertComponent = UU5.Common.VisualComponent.create({
   getInitialState: () => {
     return {
-      isCalled: false
+      isCalled: false,
     };
   },
 
@@ -51,7 +51,7 @@ const MyAlertComponent = UU5.Common.VisualComponent.create({
         onCloseBefore={this.onCloseBerforeAlert}
       />
     );
-  }
+  },
 });
 
 const CONFIG = {
@@ -61,30 +61,30 @@ const CONFIG = {
     "UU5.Common.NestingLevelMixin",
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.ContentMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     position: {
-      values: ["left", "center", "right"]
+      values: ["left", "center", "right"],
     },
     closeTimer: {
-      values: [3000, 1500]
+      values: [3000, 1500],
     },
     closeDisabled: {
-      values: [true, false]
+      values: [true, false],
     },
     // onClose: {},
     // onCloseAfter: {},
     // onCloseBefore: {},
     block: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
   },
   requiredProps: {
     children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique.",
-    header: "Header content"
+    header: "Header content",
   },
-  opt: {}
+  opt: {},
 };
 
 describe(`UU5.Bricks.Alert props`, () => {

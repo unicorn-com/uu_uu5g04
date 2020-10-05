@@ -25,7 +25,7 @@ export const Text = UU5.Common.VisualComponent.create({
     UU5.Common.NestingLevelMixin,
     UU5.Common.ColorSchemaMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.PureRenderMixin
+    UU5.Common.PureRenderMixin,
   ],
   //@@viewOff:mixins
 
@@ -46,11 +46,11 @@ export const Text = UU5.Common.VisualComponent.create({
         .${Font.sizeS()} & {
           margin-right: 4px;
         }
-      `
+      `,
     },
     opt: {
-      pureRender: true
-    }
+      pureRender: true,
+    },
   },
   //@@viewOff:statics
 
@@ -58,7 +58,7 @@ export const Text = UU5.Common.VisualComponent.create({
   propTypes: {
     size: UU5.PropTypes.oneOf(["s", "m"]),
     weight: UU5.PropTypes.oneOf(["primary", "normal", "secondary"]),
-    icon: UU5.PropTypes.string
+    icon: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
@@ -67,7 +67,7 @@ export const Text = UU5.Common.VisualComponent.create({
     return {
       size: "m",
       weight: "normal",
-      icon: undefined
+      icon: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -88,7 +88,7 @@ export const Text = UU5.Common.VisualComponent.create({
     let classNames = ["uu5-common-text", Font[this.props.weight]()];
     if (this.props.size === "s") classNames.push(Font.sizeS());
 
-    classNames.forEach(className => {
+    classNames.forEach((className) => {
       attrs.className += " " + className;
     });
 
@@ -105,7 +105,7 @@ export const Text = UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </span>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

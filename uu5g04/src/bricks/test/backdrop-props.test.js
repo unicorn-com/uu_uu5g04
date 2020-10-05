@@ -21,7 +21,7 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 const MyBackDropComponent = UU5.Common.VisualComponent.create({
   getInitialState: () => {
     return {
-      isCalled: false
+      isCalled: false,
     };
   },
 
@@ -37,7 +37,7 @@ const MyBackDropComponent = UU5.Common.VisualComponent.create({
 
   render() {
     return <UU5.Bricks.Backdrop id={"idBackDrop"} onClick={this.onClickAlert} onMouseOver={this.onMouseOverAlert} />;
-  }
+  },
 });
 
 const CONFIG = {
@@ -45,19 +45,19 @@ const CONFIG = {
     "UU5.Common.BaseMixin",
     "UU5.Common.ElementaryMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     background: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
     //onClick:{}
     //onMouseOver:{}
   },
   requiredProps: {
-    children: [<UU5.Bricks.Jumbotron content={"JumboTron Content"} className="center" id={"jumboID"} />]
+    children: [<UU5.Bricks.Jumbotron content={"JumboTron Content"} className="center" id={"jumboID"} />],
   },
-  opt: {}
+  opt: {},
 };
 
 describe(`UU5.Bricks.Backdrop`, () => {

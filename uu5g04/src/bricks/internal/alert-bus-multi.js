@@ -21,7 +21,7 @@ import { Div } from "../factory.js";
 import Css from "./css.js";
 import Lsi from "../bricks-lsi.js";
 
-export const AlertBusMulti = props => {
+export const AlertBusMulti = (props) => {
   const getControlPanel = () => {
     return (
       <Div className={AlertBusMulti.classNames.controlPanel(props)}>
@@ -77,7 +77,7 @@ AlertBusMulti.propTypes = {
   block: PropTypes.bool,
   onShowAll: PropTypes.func,
   onClearAll: PropTypes.func,
-  location: PropTypes.oneOf(["local", "page"])
+  location: PropTypes.oneOf(["local", "page"]),
 };
 
 AlertBusMulti.defaultProps = {
@@ -87,11 +87,11 @@ AlertBusMulti.defaultProps = {
   block: false,
   onShowAll: undefined,
   onClearAll: undefined,
-  location: "local"
+  location: "local",
 };
 
 AlertBusMulti.classNames = {
-  main: props => {
+  main: (props) => {
     let className = `
       position: ${props.location === "page" ? "fixed" : "absolute"};
       top: 0;
@@ -167,7 +167,7 @@ AlertBusMulti.classNames = {
       transform: none;
     }
   `,
-  controlPanel: props =>
+  controlPanel: (props) =>
     Css.css`
     display: flex;
     justify-content: ${props.showAll ? "flex-end" : "space-between"};
@@ -187,7 +187,7 @@ AlertBusMulti.classNames = {
     min-height: 26px;
     color: #FF5722;
     text-align: center;
-  `
+  `,
 };
 
 export default AlertBusMulti;

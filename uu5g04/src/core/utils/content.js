@@ -8,7 +8,7 @@ export const Content = {
     let nl = NestingLevel.getChildNestingLevel(props, statics);
     let childProps = {
       parent: props.parent,
-      nestingLevel: nl
+      nestingLevel: nl,
     };
 
     let result;
@@ -18,7 +18,7 @@ export const Content = {
       result = getChild(children, childProps);
     }
     return result;
-  }
+  },
 };
 
 function getChild(child, childProps, key = "") {

@@ -28,7 +28,7 @@ import Context from "./form-context.js";
 import "./file.less";
 //@@viewOff:imports
 
-const Fragment = UU5.Common.Fragment || (props => props.children);
+const Fragment = UU5.Common.Fragment || ((props) => props.children);
 
 export const File = Context.withContext(
   UU5.Common.VisualComponent.create({
@@ -41,7 +41,7 @@ export const File = Context.withContext(
       UU5.Common.ContentMixin,
       UU5.Common.ColorSchemaMixin,
       InputMixin,
-      ChoiceMixin
+      ChoiceMixin,
     ],
     //@@viewOff:mixins
 
@@ -74,9 +74,9 @@ export const File = Context.withContext(
         selected: ns.css("file-selected"), // selected single
         list: ns.css("file-list"),
         noValue: ns.css("file-no-value"),
-        indicateDrop: ns.css("file-indicate-drop")
+        indicateDrop: ns.css("file-indicate-drop"),
       },
-      lsi: () => UU5.Common.Tools.merge({}, UU5.Environment.Lsi.Forms.file, UU5.Environment.Lsi.Forms.message)
+      lsi: () => UU5.Common.Tools.merge({}, UU5.Environment.Lsi.Forms.file, UU5.Environment.Lsi.Forms.message),
     },
     //@@viewOff:statics
 
@@ -91,7 +91,7 @@ export const File = Context.withContext(
       bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
       elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
       authenticate: UU5.PropTypes.bool,
-      dndAreaPlaceholder: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string])
+      dndAreaPlaceholder: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string]),
     },
     //@@viewOff:propTypes
 
@@ -108,7 +108,7 @@ export const File = Context.withContext(
         bgStyle: null,
         elevation: null,
         authenticate: false,
-        dndAreaPlaceholder: undefined
+        dndAreaPlaceholder: undefined,
       };
     },
     //@@viewOff:getDefaultProps
@@ -117,7 +117,7 @@ export const File = Context.withContext(
     getInitialState() {
       return {
         indicateDrop: null,
-        tokens: {}
+        tokens: {},
       };
     },
 
@@ -149,7 +149,7 @@ export const File = Context.withContext(
       document.documentElement.removeEventListener("dragleave", this._handleBodyDragLeave, true);
       document.documentElement.removeEventListener("dragover", this._handleBodyDragOver, true);
       document.documentElement.removeEventListener("drop", this._handleBodyDrop, true);
-      if (this._urls) [...this._urls.values()].forEach(url => URL.revokeObjectURL(url));
+      if (this._urls) [...this._urls.values()].forEach((url) => URL.revokeObjectURL(url));
       clearTimeout(this._dragCancelTimeout);
       return this;
     },
@@ -178,7 +178,7 @@ export const File = Context.withContext(
           {
             feedback: result.feedback,
             message: result.message,
-            value: result.value
+            value: result.value,
           },
           setStateCallback
         );
@@ -194,7 +194,7 @@ export const File = Context.withContext(
       let valid = true;
       if (value) {
         let list = Array.isArray(value) ? value : [value];
-        valid = !list.some(item => !!item.message);
+        valid = !list.some((item) => !!item.message);
       }
       return valid;
     },
@@ -220,7 +220,7 @@ export const File = Context.withContext(
         {
           feedback: feedback,
           message: message,
-          value: value
+          value: value,
         },
         setStateCallback
       );
@@ -245,7 +245,7 @@ export const File = Context.withContext(
           message: this.props.message,
           feedback: this.props.feedback,
           value: this.props.value,
-          readOnly: this.props.readOnly
+          readOnly: this.props.readOnly,
         },
         setStateCallback
       );
@@ -271,7 +271,7 @@ export const File = Context.withContext(
     _getFileValuesOnly(extendedValue) {
       let result = extendedValue;
       if (Array.isArray(result)) {
-        result = result.map(it => it.file || it);
+        result = result.map((it) => it.file || it);
       } else if (result) result = result.file || result;
       return result;
     },
@@ -309,7 +309,7 @@ export const File = Context.withContext(
 
           for (let i = 0; i < file.length; i++) {
             if (
-              !prevValue.some(item => {
+              !prevValue.some((item) => {
                 return (
                   file[i].name === item.name && file[i].size === item.size && file[i].lastModified === item.lastModified
                 );
@@ -373,8 +373,8 @@ export const File = Context.withContext(
               context: {
                 event: e,
                 func: this.props.onValidate,
-                result: result
-              }
+                result: result,
+              },
             });
           }
         }
@@ -420,7 +420,7 @@ export const File = Context.withContext(
       Promise.resolve().then(() => {
         this._dragCancelTimeout = setTimeout(() => {
           if (this._unmounted) return;
-          this.setState(state => (state.indicateDrop ? { indicateDrop: null } : undefined));
+          this.setState((state) => (state.indicateDrop ? { indicateDrop: null } : undefined));
         }, 1000); // bigger timeout
       });
     },
@@ -434,14 +434,14 @@ export const File = Context.withContext(
       Promise.resolve().then(() => {
         this._dragCancelTimeout = setTimeout(() => {
           if (this._unmounted) return;
-          this.setState(state => (state.indicateDrop ? { indicateDrop: null } : undefined));
+          this.setState((state) => (state.indicateDrop ? { indicateDrop: null } : undefined));
         }, 200); // smaller timeout
       });
     },
     _handleBodyDrop(e) {
       delete this._lastDragOverTarget;
       clearTimeout(this._dragCancelTimeout);
-      this.setState(state => (state.indicateDrop ? { indicateDrop: null } : undefined));
+      this.setState((state) => (state.indicateDrop ? { indicateDrop: null } : undefined));
     },
     _updateIndicateDrop(e) {
       let types = (e.dataTransfer && e.dataTransfer.types) || ["Files"];
@@ -453,7 +453,7 @@ export const File = Context.withContext(
           node = node.parentNode;
         }
         let newIndicateDrop = node === myDropZoneNode ? "over" : "near";
-        this.setState(state =>
+        this.setState((state) =>
           state.indicateDrop !== newIndicateDrop ? { indicateDrop: newIndicateDrop } : undefined
         );
       }
@@ -465,7 +465,9 @@ export const File = Context.withContext(
       e.dataTransfer.dropEffect = "copy"; // Explicitly show this is a copy.
       clearTimeout(this._dragCancelTimeout);
       let newIndicateDrop = "over";
-      this.setState(state => (state.indicateDrop !== newIndicateDrop ? { indicateDrop: newIndicateDrop } : undefined));
+      this.setState((state) =>
+        state.indicateDrop !== newIndicateDrop ? { indicateDrop: newIndicateDrop } : undefined
+      );
 
       return this;
     },
@@ -543,7 +545,7 @@ export const File = Context.withContext(
                     onClick={(component, e) => {
                       if (!this.isDisabled() && !this.isReadOnly()) {
                         this._resetInputValue();
-                        this._changeValue(this._getFileValuesOnly(this.state.value.filter(it => it !== item)), e);
+                        this._changeValue(this._getFileValuesOnly(this.state.value.filter((it) => it !== item)), e);
                       }
                     }}
                     onFocus={!this.isReadOnly() && !this.isDisabled() ? () => this._onFocusExit(i) : null}
@@ -601,13 +603,13 @@ export const File = Context.withContext(
       let result;
       if (item.file && navigator.msSaveBlob) {
         result = {
-          onClick: () => navigator.msSaveBlob(item.file, item.name)
+          onClick: () => navigator.msSaveBlob(item.file, item.name),
         };
       } else {
         result = {
           target: "_blank", // if server returns "Content-Disposition: inline" then the browser might choose to display the content instead of downloading it => open in new tab so that user doesn't lose form
           download: item.name,
-          href: (item.file && this._getCachedFileUrl(item.file)) || this._getUrl(item.url, "attachment") // prefer downloading via local File instance (faster)
+          href: (item.file && this._getCachedFileUrl(item.file)) || this._getUrl(item.url, "attachment"), // prefer downloading via local File instance (faster)
         };
       }
       return result;
@@ -616,12 +618,12 @@ export const File = Context.withContext(
       let result;
       if (!item.url && item.file && navigator.msSaveOrOpenBlob) {
         result = {
-          onClick: () => navigator.msSaveOrOpenBlob(item.file, item.name)
+          onClick: () => navigator.msSaveOrOpenBlob(item.file, item.name),
         };
       } else {
         result = {
           target: "_blank",
-          href: this._getUrl(item.url, "inline") || (item.file && this._getCachedFileUrl(item.file)) // prefer opening via remote (to have nice URL in address bar)
+          href: this._getUrl(item.url, "inline") || (item.file && this._getCachedFileUrl(item.file)), // prefer opening via remote (to have nice URL in address bar)
         };
       }
       return result;
@@ -657,8 +659,8 @@ export const File = Context.withContext(
     _getCallToken(url, session) {
       let result = this.state.tokens[url];
       if (!result) {
-        UU5.Common.Tools.getCallToken(url, session).then(token => {
-          if (this.isRendered()) this.setState(state => ({ tokens: { ...state.tokens, [url]: token } }));
+        UU5.Common.Tools.getCallToken(url, session).then((token) => {
+          if (this.isRendered()) this.setState((state) => ({ tokens: { ...state.tokens, [url]: token } }));
           // TODO Clean unused tokens from state.
         });
       }
@@ -720,7 +722,7 @@ export const File = Context.withContext(
           multiple={this.props.multiple}
           onChange={this._onChange}
           className={this.getClassName().input}
-          ref={item => (this._inputVal = item)}
+          ref={(item) => (this._inputVal = item)}
         />
       );
     },
@@ -780,14 +782,14 @@ export const File = Context.withContext(
               disabled={this.isComputedDisabled()}
               readonly={this.isReadOnly()}
               loading={this.isLoading()}
-              onItemClick={opt => {
+              onItemClick={(opt) => {
                 this.removeItem(opt);
               }}
               icon={this._getIcon()}
               iconClassName={
                 this.state.value
                   ? this.getClassName("itemIcon") +
-                  (progress != null && progress < 1 ? +" " + this.getClassName("itemInProgress") : "")
+                    (progress != null && progress < 1 ? +" " + this.getClassName("itemInProgress") : "")
                   : this.getClassName("icon")
               }
               feedback={this.getFeedback()}
@@ -887,7 +889,7 @@ export const File = Context.withContext(
             disabled={this.isComputedDisabled()}
             readonly={this.isReadOnly()}
             loading={this.isLoading()}
-            onItemClick={opt => {
+            onItemClick={(opt) => {
               this.removeItem(opt);
             }}
             icon={this._getIcon()}
@@ -910,19 +912,19 @@ export const File = Context.withContext(
     },
 
     _onFocus() {
-      UU5.Environment.EventListener.addWindowEvent("keyup", this.getId(), e => {
+      UU5.Environment.EventListener.addWindowEvent("keyup", this.getId(), (e) => {
         const isEnter = e.which === 13;
         isEnter && !this.isDisabled() && this._inputVal.click();
       });
     },
 
     _onFocusExit(position) {
-      UU5.Environment.EventListener.addWindowEvent("keyup", this.getId(), e => {
+      UU5.Environment.EventListener.addWindowEvent("keyup", this.getId(), (e) => {
         const isEnter = e.which === 13;
 
         if (isEnter && !this.isDisabled()) {
           if (this.props.multiple) {
-            this.setValue(this.state.value.filter(item => item !== this.state.value[position]));
+            this.setValue(this.state.value.filter((item) => item !== this.state.value[position]));
           } else {
             this.setValue(null);
           }
@@ -944,7 +946,7 @@ export const File = Context.withContext(
           {this.getInputWrapper(this.props.multiple ? this._getMultipleInput(inputId) : this._getSingleInput(inputId))}
         </div>
       );
-    }
+    },
     //@@viewOff:render
   })
 );

@@ -27,7 +27,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
       isCalled: false,
       value: "",
       message: "",
-      feedback: "initial"
+      feedback: "initial",
     };
   },
 
@@ -101,7 +101,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
         onChangeFeedback={this.onChangeFeedbackHandler}
       />
     );
-  }
+  },
 });
 
 const CONFIG = {
@@ -111,65 +111,65 @@ const CONFIG = {
     "UU5.Common.PureRenderMixin",
     "UU5.Common.TextInputMixin",
     "UU5.Forms.InputMixin",
-    "UU5.Common.ColorSchemaMixin"
+    "UU5.Common.ColorSchemaMixin",
   ],
   props: {
     value: {
-      values: [10, "10"]
+      values: [10, "10"],
     },
     step: {
-      values: [2]
+      values: [2],
     },
     min: {
-      values: [42]
+      values: [42],
     },
     max: {
-      values: [665]
+      values: [665],
     },
     decimals: {
-      values: [5]
+      values: [5],
     },
     decimalSeparator: {
-      values: ["."]
+      values: ["."],
     },
     thousandSeparator: {
-      values: [","]
+      values: [","],
     },
     rounded: {
-      values: [true, false]
+      values: [true, false],
     },
     nanMessage: {
-      values: [null]
+      values: [null],
     },
     lowerMessage: {
-      values: [null]
+      values: [null],
     },
     upperMessage: {
-      values: [null]
+      values: [null],
     },
     buttonHidden: {
-      values: [true, false]
+      values: [true, false],
     },
     decimalsView: {
-      values: [2, 5]
+      values: [2, 5],
     },
     decimalsViewRounded: {
-      values: ["floor", "round", "ceil"]
+      values: ["floor", "round", "ceil"],
     },
     prefix: {
-      values: ["$", "hodnota"]
+      values: ["$", "hodnota"],
     },
     suffix: {
-      values: ["kč", "cm"]
+      values: ["kč", "cm"],
     },
     hideSuffixOnFocus: {
-      values: [true, false]
+      values: [true, false],
     },
     hidePrefixOnFocus: {
-      values: [true, false]
+      values: [true, false],
     },
     valueType: {
-      values: ["string", "number"]
+      values: ["string", "number"],
     },
     // NOTE Skipping because controlled/value doesn't work properly with each other and there's
     // hard to estimate how to change it without breaking compatibility (<ItemList gets as a value
@@ -177,25 +177,25 @@ const CONFIG = {
     controlled: {
       values: [true, false],
       opt: {
-        skip: true
-      }
-    }
+        skip: true,
+      },
+    },
   },
   requiredProps: {
-    controlled: false
+    controlled: false,
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
-const valueTypeFn = props => {
-  let onChangeFn = jest.fn(opt => opt.component.onChangeDefault(opt));
-  let onFocusFn = jest.fn(opt => opt.component.onFocusDefault(opt));
-  let onBlurFn = jest.fn(opt => opt.component.onBlurDefault(opt));
-  let onValidateFn = jest.fn(opt => ({ value: opt.value }));
+const valueTypeFn = (props) => {
+  let onChangeFn = jest.fn((opt) => opt.component.onChangeDefault(opt));
+  let onFocusFn = jest.fn((opt) => opt.component.onFocusDefault(opt));
+  let onBlurFn = jest.fn((opt) => opt.component.onBlurDefault(opt));
+  let onValidateFn = jest.fn((opt) => ({ value: opt.value }));
   const wrapper = mount(
     <UU5.Forms.Number
       valueType="number"
@@ -233,7 +233,7 @@ describe(`UU5.Forms.Number props`, () => {
       decimalSeparator: ",",
       decimals: 6,
       decimalsView: 4,
-      decimalsViewRounded: "round"
+      decimalsViewRounded: "round",
     });
   });
 });
@@ -374,19 +374,19 @@ describe(`UU5.Forms.Number props function -> Text.InputMixin`, () => {
         id={"uuID"}
         label="Full name"
         validateOnChange={true}
-        onValidate={opt => {
+        onValidate={(opt) => {
           let feedback;
           if (opt.value !== null) {
             feedback = {
               feedback: "success",
               message: "Is valid.",
-              value: opt.value
+              value: opt.value,
             };
           } else {
             feedback = {
               feedback: "error",
               message: "Not valid.",
-              value: opt.value
+              value: opt.value,
             };
           }
 
@@ -407,19 +407,19 @@ describe(`UU5.Forms.Number props function -> Text.InputMixin`, () => {
         value={10}
         label="Full name"
         validateOnChange={true}
-        onValidate={opt => {
+        onValidate={(opt) => {
           let feedback;
           if (opt.value !== null) {
             feedback = {
               feedback: "success",
               message: "Is valid.",
-              value: opt.value
+              value: opt.value,
             };
           } else {
             feedback = {
               feedback: "error",
               message: "Not valid.",
-              value: opt.value
+              value: opt.value,
             };
           }
 

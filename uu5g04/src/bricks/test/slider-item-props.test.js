@@ -21,19 +21,19 @@ const CONFIG = {
   mixins: ["UU5.Common.BaseMixin", "UU5.Common.ElementaryMixin", "UU5.Common.ContentMixin"],
   props: {
     value: {
-      values: [10, 100]
-    }
+      values: [10, 100],
+    },
   },
   requiredProps: {
     parent: SLIDER,
     _checkValue: SLIDER._checkValue,
-    _getStyle: SLIDER._getStyle
+    _getStyle: SLIDER._getStyle,
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Slider.Item`, () => {

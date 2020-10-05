@@ -33,7 +33,7 @@ describe(`UU5.Bricks.Carousel interface testing`, () => {
             style={{
               backgroundImage: "url(https://images.pexels.com/photos/243971/pexels-photo-243971.jpeg?w=350&h=270)",
               height: 270,
-              transform: "scale(1)"
+              transform: "scale(1)",
             }}
           />
         </UU5.Bricks.Carousel.Item>
@@ -43,7 +43,7 @@ describe(`UU5.Bricks.Carousel interface testing`, () => {
             style={{
               backgroundImage: "url(https://images.pexels.com/photos/639/clouds-rainy-rain-asia.jpg?w=400&h=270)",
               height: 270,
-              transform: "scale(1)"
+              transform: "scale(1)",
             }}
           />
         </UU5.Bricks.Carousel.Item>
@@ -53,7 +53,7 @@ describe(`UU5.Bricks.Carousel interface testing`, () => {
             style={{
               backgroundImage: "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
               height: 270,
-              transform: "scale(1)"
+              transform: "scale(1)",
             }}
           />
         </UU5.Bricks.Carousel.Item>
@@ -63,7 +63,7 @@ describe(`UU5.Bricks.Carousel interface testing`, () => {
             style={{
               backgroundImage: "url(https://images.pexels.com/photos/110874/pexels-photo-110874.jpeg?w=400&h=270)",
               height: 270,
-              transform: "scale(1)"
+              transform: "scale(1)",
             }}
           />
         </UU5.Bricks.Carousel.Item>
@@ -97,7 +97,7 @@ describe(`UU5.Bricks.Carousel interface testing`, () => {
             style={{
               backgroundImage: "url(https://images.pexels.com/photos/243971/pexels-photo-243971.jpeg?w=350&h=270)",
               height: 270,
-              transform: "scale(1)"
+              transform: "scale(1)",
             }}
           />
         </UU5.Bricks.Carousel.Item>
@@ -107,7 +107,7 @@ describe(`UU5.Bricks.Carousel interface testing`, () => {
             style={{
               backgroundImage: "url(https://images.pexels.com/photos/639/clouds-rainy-rain-asia.jpg?w=400&h=270)",
               height: 270,
-              transform: "scale(1)"
+              transform: "scale(1)",
             }}
           />
         </UU5.Bricks.Carousel.Item>
@@ -117,7 +117,7 @@ describe(`UU5.Bricks.Carousel interface testing`, () => {
             style={{
               backgroundImage: "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
               height: 270,
-              transform: "scale(1)"
+              transform: "scale(1)",
             }}
           />
         </UU5.Bricks.Carousel.Item>
@@ -127,7 +127,7 @@ describe(`UU5.Bricks.Carousel interface testing`, () => {
             style={{
               backgroundImage: "url(https://images.pexels.com/photos/110874/pexels-photo-110874.jpeg?w=400&h=270)",
               height: 270,
-              transform: "scale(1)"
+              transform: "scale(1)",
             }}
           />
         </UU5.Bricks.Carousel.Item>
@@ -161,7 +161,7 @@ describe(`UU5.Bricks.Carousel interface testing`, () => {
             style={{
               backgroundImage: "url(https://images.pexels.com/photos/243971/pexels-photo-243971.jpeg?w=350&h=270)",
               height: 270,
-              transform: "scale(1)"
+              transform: "scale(1)",
             }}
           />
         </UU5.Bricks.Carousel.Item>
@@ -171,7 +171,7 @@ describe(`UU5.Bricks.Carousel interface testing`, () => {
             style={{
               backgroundImage: "url(https://images.pexels.com/photos/639/clouds-rainy-rain-asia.jpg?w=400&h=270)",
               height: 270,
-              transform: "scale(1)"
+              transform: "scale(1)",
             }}
           />
         </UU5.Bricks.Carousel.Item>
@@ -181,7 +181,7 @@ describe(`UU5.Bricks.Carousel interface testing`, () => {
             style={{
               backgroundImage: "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
               height: 270,
-              transform: "scale(1)"
+              transform: "scale(1)",
             }}
           />
         </UU5.Bricks.Carousel.Item>
@@ -191,7 +191,7 @@ describe(`UU5.Bricks.Carousel interface testing`, () => {
             style={{
               backgroundImage: "url(https://images.pexels.com/photos/110874/pexels-photo-110874.jpeg?w=400&h=270)",
               height: 270,
-              transform: "scale(1)"
+              transform: "scale(1)",
             }}
           />
         </UU5.Bricks.Carousel.Item>
@@ -227,7 +227,7 @@ describe(`UU5.Bricks.Carousel interface testing`, () => {
             style={{
               backgroundImage: "url(https://images.pexels.com/photos/243971/pexels-photo-243971.jpeg?w=350&h=270)",
               height: 270,
-              transform: "scale(1)"
+              transform: "scale(1)",
             }}
           />
         </UU5.Bricks.Carousel.Item>
@@ -237,7 +237,7 @@ describe(`UU5.Bricks.Carousel interface testing`, () => {
             style={{
               backgroundImage: "url(https://images.pexels.com/photos/639/clouds-rainy-rain-asia.jpg?w=400&h=270)",
               height: 270,
-              transform: "scale(1)"
+              transform: "scale(1)",
             }}
           />
         </UU5.Bricks.Carousel.Item>
@@ -247,7 +247,7 @@ describe(`UU5.Bricks.Carousel interface testing`, () => {
             style={{
               backgroundImage: "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
               height: 270,
-              transform: "scale(1)"
+              transform: "scale(1)",
             }}
           />
         </UU5.Bricks.Carousel.Item>
@@ -257,7 +257,7 @@ describe(`UU5.Bricks.Carousel interface testing`, () => {
             style={{
               backgroundImage: "url(https://images.pexels.com/photos/110874/pexels-photo-110874.jpeg?w=400&h=270)",
               height: 270,
-              transform: "scale(1)"
+              transform: "scale(1)",
             }}
           />
         </UU5.Bricks.Carousel.Item>

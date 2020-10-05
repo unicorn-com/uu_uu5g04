@@ -24,7 +24,7 @@ const CONFIG = {
     //The component does not have any props
   },
   requiredProps: {},
-  opt: {}
+  opt: {},
 };
 
 describe(`UU5.Bricks.Address`, () => {

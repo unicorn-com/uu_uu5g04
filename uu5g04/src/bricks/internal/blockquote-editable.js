@@ -31,7 +31,7 @@ const DEFAULT_PROPS_MAP = {
   footer: "",
   content: null,
   children: null,
-  background: false
+  background: false,
 };
 
 const MAIN_CLASS_NAME = ns.css("blockquote");
@@ -108,22 +108,22 @@ export const Blockquote = UU5.Common.VisualComponent.create({
               }
             }
           }
-        `)
+        `),
     },
-    lsi: () => ({ ...Lsi.blockquote, ...Lsi.common })
+    lsi: () => ({ ...Lsi.blockquote, ...Lsi.common }),
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    component: UU5.PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      component: null
+      component: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -137,7 +137,7 @@ export const Blockquote = UU5.Common.VisualComponent.create({
       ...values,
       footerAlignment: values.footerAlignment || this._defaultProps.footerAlignment,
       background: values.background,
-      showFooter: !!values.footer
+      showFooter: !!values.footer,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -185,7 +185,7 @@ export const Blockquote = UU5.Common.VisualComponent.create({
   _changeColorSchema(opt) {
     this.setState({ colorSchema: opt.value }, () => {
       this.props.component.saveEditation({
-        colorSchema: !opt.value || opt.value === "default" ? undefined : opt.value
+        colorSchema: !opt.value || opt.value === "default" ? undefined : opt.value,
       });
     });
   },
@@ -198,7 +198,7 @@ export const Blockquote = UU5.Common.VisualComponent.create({
 
   _toggleBackground() {
     this.setState(
-      state => ({ background: !state.background }),
+      (state) => ({ background: !state.background }),
       () => {
         this.props.component.saveEditation({ background: this.state.background });
       }
@@ -206,14 +206,14 @@ export const Blockquote = UU5.Common.VisualComponent.create({
   },
 
   _toggleFooter() {
-    this.setState(state => ({
-      showFooter: !state.showFooter
+    this.setState((state) => ({
+      showFooter: !state.showFooter,
     }));
   },
 
   _toggleNoSpacing() {
     this.setState(
-      state => ({ noSpacing: !state.noSpacing }),
+      (state) => ({ noSpacing: !state.noSpacing }),
       () => {
         this.props.component.saveEditation({ noSpacing: this.state.noSpacing });
       }
@@ -232,10 +232,10 @@ export const Blockquote = UU5.Common.VisualComponent.create({
           return {
             value: this.state.colorSchema,
             onClick: this._changeColorSchema,
-            tooltip: this.getLsiValue("colorSchemaTooltip")
+            tooltip: this.getLsiValue("colorSchemaTooltip"),
           };
-        }
-      }
+        },
+      },
     ];
   },
 
@@ -253,13 +253,13 @@ export const Blockquote = UU5.Common.VisualComponent.create({
             value: this.state.footerAlignment,
             items: [
               { content: this.getLsiValue("footerAlignmentLeft"), value: "left" },
-              { content: this.getLsiValue("footerAlignmentRight"), value: "right" }
+              { content: this.getLsiValue("footerAlignmentRight"), value: "right" },
             ],
             onClick: this._changeFooterAlignment,
-            className: this.getClassName("footerAlignmentDropdown")
+            className: this.getClassName("footerAlignmentDropdown"),
           };
-        }
-      }
+        },
+      },
     ];
   },
 
@@ -268,18 +268,18 @@ export const Blockquote = UU5.Common.VisualComponent.create({
       {
         value: this.state.background,
         onClick: this._toggleBackground,
-        label: this.getLsiComponent("backgroundCheckboxLabel")
+        label: this.getLsiComponent("backgroundCheckboxLabel"),
       },
       {
         value: this.state.showFooter,
         onClick: this._toggleFooter,
-        label: this.getLsiComponent("showFooterCheckboxLabel")
+        label: this.getLsiComponent("showFooterCheckboxLabel"),
       },
       {
         value: this.state.noSpacing,
         onClick: this._toggleNoSpacing,
-        label: this.getLsiComponent("noSpacingTooltip")
-      }
+        label: this.getLsiComponent("noSpacingTooltip"),
+      },
     ];
   },
 
@@ -314,11 +314,11 @@ export const Blockquote = UU5.Common.VisualComponent.create({
                 </BlockquoteFooter>
               )}
             </UU5.BricksEditable.Input>
-          ) : null
+          ) : null,
         ]}
       </UU5.BricksEditable.Toolbar>
     );
-  }
+  },
   //@@viewOff:render
 });
 

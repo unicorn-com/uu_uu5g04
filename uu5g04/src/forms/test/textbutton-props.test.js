@@ -27,7 +27,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
       isCalled: false,
       value: "",
       message: "",
-      feedback: "initial"
+      feedback: "initial",
     };
   },
 
@@ -101,7 +101,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
         onChangeFeedback={this.onChangeFeedbackHandler}
       />
     );
-  }
+  },
 });
 
 const CONFIG = {
@@ -111,41 +111,41 @@ const CONFIG = {
     "UU5.Common.PureRenderMixin",
     "UU5.Forms.InputMixin",
     "UU5.Common.ColorSchemaMixin",
-    "UU5.Forms.TextInputMixin"
+    "UU5.Forms.TextInputMixin",
   ],
   props: {
     value: {
-      values: ["Search"]
+      values: ["Search"],
     },
     buttons: {
       values: [
         [
           {
             glyphicon: "uu-glyphicon-ok",
-            onClick: opt => alert("button1", opt),
-            colorSchema: "success"
+            onClick: (opt) => alert("button1", opt),
+            colorSchema: "success",
           },
           {
             glyphicon: "uu-glyphicon-cross",
-            onClick: opt => alert("button2", opt),
-            colorSchema: "danger"
-          }
-        ]
-      ]
+            onClick: (opt) => alert("button2", opt),
+            colorSchema: "danger",
+          },
+        ],
+      ],
     },
     pattern: {
-      values: ["[A-Za-z]{3}"]
+      values: ["[A-Za-z]{3}"],
     },
     patterMessage: {
-      values: ["Toto není co jsem čekal."]
-    }
+      values: ["Toto není co jsem čekal."],
+    },
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Forms.TextButton props`, () => {
@@ -288,19 +288,19 @@ describe(`UU5.Forms.TextButton props function -> Text.InputMixin`, () => {
         id={"uuID"}
         label="Search"
         validateOnChange
-        onValidate={opt => {
+        onValidate={(opt) => {
           let feedback;
           if (opt.value !== "") {
             feedback = {
               feedback: "success",
               message: "Is valid.",
-              value: opt.value
+              value: opt.value,
             };
           } else {
             feedback = {
               feedback: "error",
               message: "Not valid.",
-              value: opt.value
+              value: opt.value,
             };
           }
           return feedback;
@@ -309,9 +309,9 @@ describe(`UU5.Forms.TextButton props function -> Text.InputMixin`, () => {
           {
             icon: "mdi-magnify",
             id: "uuID02",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -328,19 +328,19 @@ describe(`UU5.Forms.TextButton props function -> Text.InputMixin`, () => {
         label="Search"
         value={"John Doe"}
         validateOnChange
-        onValidate={opt => {
+        onValidate={(opt) => {
           let feedback;
           if (opt.value !== "") {
             feedback = {
               feedback: "success",
               message: "Is valid.",
-              value: opt.value
+              value: opt.value,
             };
           } else {
             feedback = {
               feedback: "error",
               message: "Not valid.",
-              value: opt.value
+              value: opt.value,
             };
           }
           return feedback;
@@ -349,9 +349,9 @@ describe(`UU5.Forms.TextButton props function -> Text.InputMixin`, () => {
           {
             icon: "mdi-magnify",
             id: "uuID02",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );

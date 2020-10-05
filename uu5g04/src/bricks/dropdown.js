@@ -41,7 +41,7 @@ export const Dropdown = UU5.Common.VisualComponent.create({
     UU5.Common.ContentMixin,
     UU5.Common.NestingLevelMixin,
     UU5.Common.PureRenderMixin,
-    UU5.Common.EditableMixin
+    UU5.Common.EditableMixin,
   ],
   //@@viewOff:mixins
 
@@ -76,16 +76,16 @@ export const Dropdown = UU5.Common.VisualComponent.create({
         border-radius: 2px;
         box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.34);
         background-clip: padding-box;
-      `
+      `,
     },
     defaults: {
       childTagName: DropdownItem.tagName,
-      offset: 4
+      offset: 4,
     },
     opt: {
-      nestingLevelRoot: true
+      nestingLevelRoot: true,
     },
-    editableComponent: "UU5.BricksEditable.Dropdown"
+    editableComponent: "UU5.BricksEditable.Dropdown",
   },
   //@@viewOff:statics
 
@@ -124,7 +124,7 @@ export const Dropdown = UU5.Common.VisualComponent.create({
     baseline: UU5.PropTypes.bool,
     fitMenuToViewport: UU5.PropTypes.bool,
     popoverLocation: UU5.PropTypes.oneOf(["local", "portal"]),
-    compactSubmenu: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string])
+    compactSubmenu: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string]),
   },
   //@@viewOff:propTypes
 
@@ -157,7 +157,7 @@ export const Dropdown = UU5.Common.VisualComponent.create({
       baseline: false,
       fitMenuToViewport: false,
       popoverLocation: "local", // "local" <=> backward-compatible behaviour
-      compactSubmenu: "xs"
+      compactSubmenu: "xs",
     };
   },
   //@@viewOff:getDefaultProps
@@ -167,7 +167,7 @@ export const Dropdown = UU5.Common.VisualComponent.create({
     return {
       open: false,
       pullRight: false,
-      block: false
+      block: false,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -190,7 +190,7 @@ export const Dropdown = UU5.Common.VisualComponent.create({
 
   toggle(setStateCallback) {
     this.setState(
-      state => {
+      (state) => {
         return { open: !state.open };
       },
       () => this.isOpen() && this._open(setStateCallback)
@@ -212,7 +212,7 @@ export const Dropdown = UU5.Common.VisualComponent.create({
     if (!result && (typeof child !== "string" || child.trim())) {
       if (childTagName)
         this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagName], {
-          mixinName: "UU5.Common.BaseMixin"
+          mixinName: "UU5.Common.BaseMixin",
         });
       else this.showError("childNotAllowed", [child, defaultChildTagName], { mixinName: "UU5.Common.BaseMixin" });
     }
@@ -254,7 +254,7 @@ export const Dropdown = UU5.Common.VisualComponent.create({
   },
 
   _getCompactMenuItems(content) {
-    return UU5.Common.Children.toArray(content).map(child => {
+    return UU5.Common.Children.toArray(content).map((child) => {
       let props = child.props;
       if (props.divider) {
         return "separator";
@@ -270,7 +270,7 @@ export const Dropdown = UU5.Common.VisualComponent.create({
           onClick: (...args) => {
             if (typeof props.onClick === "function") props.onClick(...args);
             if (!items) this.close();
-          }
+          },
         };
       }
     });
@@ -284,7 +284,7 @@ export const Dropdown = UU5.Common.VisualComponent.create({
       if (this.props.items && this.props.items.length > 0) {
         content = {
           tag: this.getDefault().childTagName,
-          propsArray: this.props.items
+          propsArray: this.props.items,
         };
       } else if (this.props.children) {
         content = this.props.children;
@@ -304,8 +304,8 @@ export const Dropdown = UU5.Common.VisualComponent.create({
         contentProps = {
           content: {
             tag: this.getDefault().childTagName,
-            propsArray: this.props.items
-          }
+            propsArray: this.props.items,
+          },
         };
       } else if (this.props.children) {
         contentProps = { children: this.props.children };
@@ -330,7 +330,7 @@ export const Dropdown = UU5.Common.VisualComponent.create({
     let onClick = null;
     if (this.props.split) {
       if (typeof this.props.onClick === "function") {
-        onClick = function(button, event) {
+        onClick = function (button, event) {
           dropdown.props.onClick(dropdown, event);
         };
       }
@@ -346,7 +346,7 @@ export const Dropdown = UU5.Common.VisualComponent.create({
       borderRadius: this.props.borderRadius,
       bgStyle: this.props.bgStyle,
       elevation: this.props.elevation,
-      elevationHover: this.props.elevationHover
+      elevationHover: this.props.elevationHover,
     };
 
     if (this.props.buttonProps) {
@@ -491,7 +491,7 @@ export const Dropdown = UU5.Common.VisualComponent.create({
           content: <UU5.Bricks.ScreenSize>{this._getChildren}</UU5.Bricks.ScreenSize>,
           className: className,
           bodyClassName: bodyClassName,
-          fitHeightToViewport: this.props.fitMenuToViewport
+          fitHeightToViewport: this.props.fitMenuToViewport,
         },
         setStateCallback
       );
@@ -508,7 +508,7 @@ export const Dropdown = UU5.Common.VisualComponent.create({
         <div
           className={this.getClassName().buttonCover}
           id={this.getId() + "-cover"}
-          ref={button => (this._button = button)}
+          ref={(button) => (this._button = button)}
         >
           {this._getButton()}
           {this.props.bgStyle === "link" ? (
@@ -522,12 +522,12 @@ export const Dropdown = UU5.Common.VisualComponent.create({
           <Popover
             controlled={false}
             location={this.props.popoverLocation}
-            ref={popover => (this._popover = popover)}
+            ref={(popover) => (this._popover = popover)}
           />
         ) : null}
       </div>
     );
-  }
+  },
   //@@viewOff:render
 });
 

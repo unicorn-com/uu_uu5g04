@@ -10,7 +10,7 @@ const { createVisualComponent } = LazyLoadedLibraries["uu5g04-hooks"];
 
 //@@viewOn:statics
 const STATICS = {
-  displayName: ns.name("ColorSchemaPicker")
+  displayName: ns.name("ColorSchemaPicker"),
 };
 //@@viewOff:statics
 
@@ -21,7 +21,7 @@ const ColorSchemaPicker = createVisualComponent({
   propTypes: {
     onChange: UU5.PropTypes.func,
     label: UU5.PropTypes.object,
-    value: UU5.PropTypes.string
+    value: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
@@ -29,7 +29,7 @@ const ColorSchemaPicker = createVisualComponent({
   defaultProps: {
     onChange: undefined,
     label: <UU5.Bricks.Lsi lsi={Lsi.colorSchemaPicker.label} />,
-    value: undefined
+    value: undefined,
   },
   //@@viewOff:defaultProps
 
@@ -49,9 +49,9 @@ const ColorSchemaPicker = createVisualComponent({
         {...props}
         label={label}
         value={value || "none"}
-        onChange={opt => onChange({ ...opt, value: opt.value === "none" ? null : opt.value })}
+        onChange={(opt) => onChange({ ...opt, value: opt.value === "none" ? null : opt.value })}
       >
-        {["none", ...UU5.Environment.colorSchema].map(colorSchema => (
+        {["none", ...UU5.Environment.colorSchema].map((colorSchema) => (
           <UU5.Forms.Select.Option
             key={colorSchema}
             value={colorSchema}
@@ -61,7 +61,7 @@ const ColorSchemaPicker = createVisualComponent({
       </UU5.Forms.Select>
     );
     //@@viewOff:render
-  }
+  },
 });
 
 export default ColorSchemaPicker;

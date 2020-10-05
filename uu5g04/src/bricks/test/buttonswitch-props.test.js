@@ -22,30 +22,30 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Common.NestingLevelMixin",
     "UU5.Common.ContentMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     size: {
-      values: ["s", "m", "l", "xl"]
+      values: ["s", "m", "l", "xl"],
     },
     switchedOn: {
-      values: [true, false]
+      values: [true, false],
     },
     bgStyle: {
-      values: ["filled", "outline", "transparent"]
+      values: ["filled", "outline", "transparent"],
     },
     props: {
-      values: [{ size: "s" }]
+      values: [{ size: "s" }],
     },
     onProps: {
-      values: [{ colorSchema: "success", pressed: true }]
+      values: [{ colorSchema: "success", pressed: true }],
     },
     offProps: {
-      values: [{ colorSchema: "danger", pressed: false }]
-    }
+      values: [{ colorSchema: "danger", pressed: false }],
+    },
   },
   requiredProps: {},
-  opt: {}
+  opt: {},
 };
 
 describe(`UU5.Bricks.ButtonSwitch props testing`, () => {
@@ -57,16 +57,16 @@ describe(`UU5.Bricks.ButtonSwitch props testing`, () => {
     const wrapper = shallow(
       <UU5.Bricks.ButtonSwitch
         id={"switchID"}
-        ref_={item => (This._buttonSwitch = item)}
+        ref_={(item) => (This._buttonSwitch = item)}
         props={{
           onClick: () => This._buttonSwitch.toggle(),
-          content: "props content"
+          content: "props content",
         }}
         onProps={{
-          content: "onProps content"
+          content: "onProps content",
         }}
         offProps={{
-          content: "offProps content"
+          content: "offProps content",
         }}
       />
     );
@@ -80,16 +80,16 @@ describe(`UU5.Bricks.ButtonSwitch props testing`, () => {
     const wrapper = shallow(
       <UU5.Bricks.ButtonSwitch
         id={"switchID"}
-        ref_={item => (This._buttonSwitch = item)}
+        ref_={(item) => (This._buttonSwitch = item)}
         props={{
-          onClick: () => This._buttonSwitch.toggle()
+          onClick: () => This._buttonSwitch.toggle(),
         }}
         onProps={{
           colorSchema: "default",
-          content: "turned on"
+          content: "turned on",
         }}
         offProps={{
-          content: "turned off"
+          content: "turned off",
         }}
       />
     );

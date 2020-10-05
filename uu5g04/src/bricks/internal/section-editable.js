@@ -30,7 +30,7 @@ const DEFAULT_PROPS_MAP = {
   footer: "",
   colorSchema: "default",
   content: null,
-  children: null
+  children: null,
 };
 
 const MAIN_CLASS_NAME = ns.css("section");
@@ -51,22 +51,22 @@ export const Section = UU5.Common.VisualComponent.create({
           &.uu5-bricks-editable-toolbar-dropdown {
             width: 148px;
           }
-        `)
+        `),
     },
-    lsi: () => ({ ...Lsi.section, ...Lsi.common })
+    lsi: () => ({ ...Lsi.section, ...Lsi.common }),
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    component: UU5.PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      component: null
+      component: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -78,7 +78,7 @@ export const Section = UU5.Common.VisualComponent.create({
     return {
       ...values,
       showFooter: !!values.footer,
-      showHeader: true
+      showHeader: true,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -123,15 +123,15 @@ export const Section = UU5.Common.VisualComponent.create({
   _changeColorSchema(opt) {
     this.setState({ colorSchema: opt.value }, () => {
       this.props.component.saveEditation({
-        colorSchema: !opt.value || opt.value === "default" ? undefined : opt.value
+        colorSchema: !opt.value || opt.value === "default" ? undefined : opt.value,
       });
     });
   },
 
   _toggleHeader(value, setStateCallback) {
     this.setState(
-      state => ({
-        showHeader: !state.showHeader
+      (state) => ({
+        showHeader: !state.showHeader,
       }),
       setStateCallback
     );
@@ -139,15 +139,15 @@ export const Section = UU5.Common.VisualComponent.create({
 
   _toggleFooter(value, setStateCallback) {
     this.setState(
-      state => ({
-        showFooter: !state.showFooter
+      (state) => ({
+        showFooter: !state.showFooter,
       }),
       setStateCallback
     );
   },
 
   _toggleUnderline() {
-    this.setState(state => ({ underline: !state.underline }));
+    this.setState((state) => ({ underline: !state.underline }));
   },
 
   _changeLevel(value, setStateCallback) {
@@ -163,9 +163,9 @@ export const Section = UU5.Common.VisualComponent.create({
   },
 
   _getHeaderToolbarItems() {
-    let levelItems = [1, 2, 3, 4, 5, 6].map(level => ({
+    let levelItems = [1, 2, 3, 4, 5, 6].map((level) => ({
       content: `${this.getLsiValue("level")} ${level}`,
-      value: `${level}`
+      value: `${level}`,
     }));
     levelItems.unshift({ content: this.getLsiValue("defaultLevel"), value: null });
 
@@ -176,9 +176,9 @@ export const Section = UU5.Common.VisualComponent.create({
           return {
             value: this.state.colorSchema,
             onClick: this._changeColorSchema,
-            tooltip: this.getLsiValue("colorSchemaTooltip")
+            tooltip: this.getLsiValue("colorSchemaTooltip"),
           };
-        }
+        },
       },
       {
         type: "button",
@@ -187,9 +187,9 @@ export const Section = UU5.Common.VisualComponent.create({
             pressed: this.state.underline,
             onClick: this._toggleUnderline,
             tooltip: this.getLsiValue("underlineTooltip"),
-            icon: "mdi-format-underline"
+            icon: "mdi-format-underline",
           };
-        }
+        },
       },
       {
         type: "dropdown",
@@ -204,10 +204,10 @@ export const Section = UU5.Common.VisualComponent.create({
             onClick: this._changeLevel,
             tooltip: this.getLsiValue("levelTooltip"),
             items: levelItems,
-            className: this.getClassName("levelDropdown")
+            className: this.getClassName("levelDropdown"),
           };
-        }
-      }
+        },
+      },
     ];
   },
 
@@ -216,13 +216,13 @@ export const Section = UU5.Common.VisualComponent.create({
       {
         value: this.state.showHeader,
         onClick: this._toggleHeader,
-        label: this.getLsiComponent("showHeaderCheckboxLabel")
+        label: this.getLsiComponent("showHeaderCheckboxLabel"),
       },
       {
         value: this.state.showFooter,
         onClick: this._toggleFooter,
-        label: this.getLsiComponent("showFooterCheckboxLabel")
-      }
+        label: this.getLsiComponent("showFooterCheckboxLabel"),
+      },
     ];
   },
   //@@viewOff:private
@@ -266,11 +266,11 @@ export const Section = UU5.Common.VisualComponent.create({
             >
               {({ children }) => <UU5.Bricks.Footer parent={this.props.component}>{children}</UU5.Bricks.Footer>}
             </UU5.BricksEditable.Input>
-          ) : null
+          ) : null,
         ]}
       </UU5.BricksEditable.Toolbar>
     );
-  }
+  },
   //@@viewOff:render
 });
 

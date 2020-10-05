@@ -33,10 +33,10 @@ export const IdentityMixin = {
       lsi: {
         login: {
           cs: "Uživatel je odhlášen...",
-          en: "User is logged out..."
-        }
-      }
-    }
+          en: "User is logged out...",
+        },
+      },
+    },
   },
   //@@viewOff:statics
 
@@ -52,7 +52,7 @@ export const IdentityMixin = {
 
     let identityState = {
       identity: undefined,
-      identityFeedback: PENDING
+      identityFeedback: PENDING,
     };
 
     let session = this.props.session || Environment.getSession();
@@ -132,7 +132,7 @@ export const IdentityMixin = {
   changeIdentity(setStateCallback) {
     let session = this.getSession();
     session &&
-      this.setState(state => {
+      this.setState((state) => {
         let result;
         let identity = session.getIdentity();
         let identityFeedback = this._getIdentityFeedback(session);
@@ -195,7 +195,7 @@ export const IdentityMixin = {
       }
     }
     return this;
-  }
+  },
   //@@viewOff:private
 };
 

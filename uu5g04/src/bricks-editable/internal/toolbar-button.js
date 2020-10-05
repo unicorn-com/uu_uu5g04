@@ -29,7 +29,7 @@ const classNames = {
       background: transparent;
       border-color: #BDBDBD;
     }
-  `)
+  `),
 };
 
 function getProps(props, language) {
@@ -53,15 +53,11 @@ export const ToolbarButton = UU5.Common.Reference.forward((props, ref) => {
   if (props.tooltip && typeof props.tooltip === "object") {
     return (
       <UU5.Bricks.Lsi>
-        {({ language }) => (
-          <UU5.Bricks.Button {...getProps(props, language)} ref={ref} />
-        )}
+        {({ language }) => <UU5.Bricks.Button {...getProps(props, language)} ref={ref} />}
       </UU5.Bricks.Lsi>
     );
   } else {
-    return (
-      <UU5.Bricks.Button {...getProps(props)} ref={ref} />
-    );
+    return <UU5.Bricks.Button {...getProps(props)} ref={ref} />;
   }
 });
 
@@ -75,7 +71,7 @@ ToolbarButton.propTypes = {
   baseline: UU5.PropTypes.bool,
   onClick: UU5.PropTypes.func,
   pressed: UU5.PropTypes.bool,
-  tooltip: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string])
+  tooltip: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string]),
 };
 ToolbarButton.defaultProps = {
   icon: undefined,
@@ -85,7 +81,7 @@ ToolbarButton.defaultProps = {
   baseline: true,
   onClick: undefined,
   pressed: false,
-  tooltip: undefined
+  tooltip: undefined,
 };
 ToolbarButton.isStateless = true;
 

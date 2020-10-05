@@ -11,6 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:revision
+// coded: Martin Mach, 16.09.2020
+// reviewed: Filip Janovský, 16.09.2020 - approved
+//@@viewOff:revision
+
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
@@ -36,8 +41,8 @@ async function importHooks() {
     SystemJS.config({
       paths: {
         "uu5g04-hooks":
-          UU5.Environment.basePath + "uu5g04-hooks" + (process.env.NODE_ENV === "production" ? ".min" : "") + ".js"
-      }
+          UU5.Environment.basePath + "uu5g04-hooks" + (process.env.NODE_ENV === "production" ? ".min" : "") + ".js",
+      },
     });
   }
   LazyLoadedLibraries["uu5g04-hooks"] = await SystemJS.import("uu5g04-hooks");
@@ -72,7 +77,7 @@ const FORM_PROPS = {
   spacing: 16,
   inputColWidth: "xs-12",
   labelColWidth: "xs-12",
-  labelAlignment: "left"
+  labelAlignment: "left",
 };
 const EDITATION_COMPONENT_PROPS = UU5.PropTypes.oneOfType([
   UU5.PropTypes.func,
@@ -91,21 +96,21 @@ const EDITATION_COMPONENT_PROPS = UU5.PropTypes.oneOfType([
         "bool",
         "separator",
         "richText",
-        "richTextExpandable"
+        "richTextExpandable",
       ]),
-      UU5.PropTypes.node
+      UU5.PropTypes.node,
     ]),
     required: UU5.PropTypes.bool,
     label: UU5.PropTypes.oneOfType([UU5.PropTypes.node, UU5.PropTypes.object]),
-    getProps: UU5.PropTypes.func
-  })
+    getProps: UU5.PropTypes.func,
+  }),
 ]);
 
 const EDITATION_SETUP_PROPS = UU5.PropTypes.oneOfType([
   UU5.PropTypes.arrayOf(
     UU5.PropTypes.oneOfType([UU5.PropTypes.arrayOf(EDITATION_COMPONENT_PROPS), EDITATION_COMPONENT_PROPS])
   ),
-  UU5.PropTypes.elementType
+  UU5.PropTypes.elementType,
 ]);
 
 function isCompactVersion(screenSize) {
@@ -175,7 +180,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
         justify-content: space-between;
         max-width: 100%;
       `),
-      headerLeftWrapper: props =>
+      headerLeftWrapper: (props) =>
         Css.css(`
         display: flex;
         align-items: center;
@@ -193,7 +198,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
         Css.css(`
         margin-right: 8px;
       `),
-      standardEditMenu: props =>
+      standardEditMenu: (props) =>
         Css.css(`
         font-size: 15px;
         height: 100%;
@@ -291,13 +296,13 @@ const ModalBody = UU5.Common.VisualComponent.create({
         & > .uu5-bricks-icon {
           font-size: 16px;
         }
-      `)
+      `),
     },
     lsi: Lsi.modal,
     errors: {
       childIsString:
-        "The only child of the edited component is type string which is not supported. It must be a component."
-    }
+        "The only child of the edited component is type string which is not supported. It must be a component.",
+    },
   },
   //@@viewOff:statics
 
@@ -312,7 +317,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
         icon: UU5.PropTypes.string,
         info: UU5.PropTypes.node,
         formProps: UU5.PropTypes.object,
-        setup: EDITATION_SETUP_PROPS
+        setup: EDITATION_SETUP_PROPS,
       })
     ).isRequired,
     itemName: UU5.PropTypes.string,
@@ -320,12 +325,12 @@ const ModalBody = UU5.Common.VisualComponent.create({
     itemPropsForm: UU5.PropTypes.shape({
       info: UU5.PropTypes.node,
       formProps: UU5.PropTypes.object,
-      setup: EDITATION_SETUP_PROPS
+      setup: EDITATION_SETUP_PROPS,
     }),
     newItem: UU5.PropTypes.shape({
       formProps: UU5.PropTypes.object,
       tagName: UU5.PropTypes.string,
-      props: UU5.PropTypes.object
+      props: UU5.PropTypes.object,
     }),
     menuWidth: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
     itemsSource: UU5.PropTypes.string,
@@ -334,7 +339,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
     screenSize: UU5.PropTypes.oneOf(["xs", "s", "m", "l", "xl"]),
     shown: UU5.PropTypes.bool,
     size: UU5.PropTypes.oneOf(["s", "m", "l", "auto", "max"]),
-    saveButtonProps: UU5.PropTypes.shape(UU5.Bricks.Button.propTypes || {})
+    saveButtonProps: UU5.PropTypes.shape(UU5.Bricks.Button.propTypes || {}),
   },
   //@@viewOff:propTypes
 
@@ -355,7 +360,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
       onSaveAndClose: undefined,
       onCancel: undefined,
       saveButtonProps: undefined,
-      menuWidth: 250
+      menuWidth: 250,
     };
   },
   //@@viewOff:getDefaultProps
@@ -392,12 +397,12 @@ const ModalBody = UU5.Common.VisualComponent.create({
       } else {
         if (Array.isArray(items)) {
           this._itemsInUU5String = false;
-          items = items.map(item => {
+          items = items.map((item) => {
             const isElement = UU5.Common.Element.isValid(item);
             return {
               tagName: isElement ? item.type.tagName : this.props.itemName,
               props: isElement ? UU5.Common.Tools.mergeDeep({}, item.props) : item,
-              isElement
+              isElement,
             };
           });
         } else if (items && typeof items === "object" && items.type) {
@@ -406,19 +411,19 @@ const ModalBody = UU5.Common.VisualComponent.create({
             {
               tagName: isElement ? items.type.tagName : this.props.itemName,
               props: isElement ? UU5.Common.Tools.mergeDeep({}, items.props) : items,
-              isElement
-            }
+              isElement,
+            },
           ];
         }
       }
 
       if (Array.isArray(items)) {
-        items = items.filter(item => item.tagName === this.props.itemName);
-        items.forEach(item => (item.id = UU5.Common.Tools.generateUUID()));
+        items = items.filter((item) => item.tagName === this.props.itemName);
+        items.forEach((item) => (item.id = UU5.Common.Tools.generateUUID()));
       }
 
       if (items) {
-        items.forEach(item => {
+        items.forEach((item) => {
           if (item.props) {
             this._itemsPropsToReturn[item.id] = Object.keys(item.props);
           }
@@ -426,7 +431,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
         if (this._itemsInUU5String) {
           let itemComponentProps = UU5.Common.Tools.findComponent(this.props.itemName).props;
-          items = items.map(item => ({ ...item, props: { ...itemComponentProps, ...item.props } }));
+          items = items.map((item) => ({ ...item, props: { ...itemComponentProps, ...item.props } }));
         }
       }
     }
@@ -442,7 +447,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
       validation: this.props.componentPropsForm.map(() => undefined),
       itemsValidation: items ? items.map(() => undefined) : undefined,
       itemMoveModalShown: false,
-      confirmModalProps: undefined
+      confirmModalProps: undefined,
     };
   },
 
@@ -474,7 +479,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
     if (this._propsToReturn.length) {
       props = {};
-      this._propsToReturn.forEach(changedPropName => {
+      this._propsToReturn.forEach((changedPropName) => {
         props[changedPropName] = this.state.propValues[changedPropName];
       });
     }
@@ -487,7 +492,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
           items = this._filterOutUnchangedItemProps(this.state.items);
           items = this._itemsToUu5String(items);
         } else {
-          items = this.state.items.map(item => {
+          items = this.state.items.map((item) => {
             return item.isElement ? UU5.Common.Tools.findComponent(item.tagName, item.props) : item.props;
           });
         }
@@ -536,16 +541,16 @@ const ModalBody = UU5.Common.VisualComponent.create({
     if (this._rollMenu && this._isCompactVersion()) {
       let menuHeight = this._rollMenu.measureHeight();
       menuHeight = Math.min(menuHeight, window.innerHeight - 32);
-      this.setState(state => (Math.abs(menuHeight - state.menuHeight) < 0.2 ? undefined : { menuHeight }));
+      this.setState((state) => (Math.abs(menuHeight - state.menuHeight) < 0.2 ? undefined : { menuHeight }));
     }
   },
 
   _getItemIndexById(items = this.state.items, id = this.state.activeItemId) {
-    return items ? items.findIndex(item => item.id === id) : undefined;
+    return items ? items.findIndex((item) => item.id === id) : undefined;
   },
 
   _toggleEditMenu() {
-    this.setState(state => ({ editMenuOpen: !state.editMenuOpen }));
+    this.setState((state) => ({ editMenuOpen: !state.editMenuOpen }));
   },
 
   _onSave() {
@@ -573,7 +578,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
       } else {
         this._alertBus.setAlert({
           content: this.getLsiComponent("onSaveInvalidForm"),
-          colorSchema: "red"
+          colorSchema: "red",
         });
       }
     });
@@ -638,15 +643,15 @@ const ModalBody = UU5.Common.VisualComponent.create({
         if (typeof validatedItem.setup.isValid === "function") {
           validation[validatedItemIndex] = validatedItem.setup.isValid({
             componentProps: this.state.propValues,
-            items: this.state.items
+            items: this.state.items,
           });
         } else {
           validation[validatedItemIndex] = this.state.validation[validatedItemIndex];
         }
       } else {
-        validatedItem.setup.forEach(setup => {
+        validatedItem.setup.forEach((setup) => {
           if (Array.isArray(setup)) {
-            setup.forEach(setupItem => {
+            setup.forEach((setupItem) => {
               this._validateOneCategory(setupItem, validation, validatedItemIndex);
             });
           } else {
@@ -671,9 +676,9 @@ const ModalBody = UU5.Common.VisualComponent.create({
             itemsValidation[validatedItemIndex] = this.state.itemsValidation[validatedItemIndex];
           }
         } else {
-          this.props.itemPropsForm.setup.forEach(setup => {
+          this.props.itemPropsForm.setup.forEach((setup) => {
             if (Array.isArray(setup)) {
-              setup.forEach(setupItem => {
+              setup.forEach((setupItem) => {
                 this._validateOneItem(setupItem, itemsValidation, validatedItemIndex);
               });
             } else {
@@ -725,7 +730,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
       }
     } else {
       validationResult = [...state.itemsValidation];
-      let activeItemIndex = state.items.findIndex(item => item.id === state.activeItemId);
+      let activeItemIndex = state.items.findIndex((item) => item.id === state.activeItemId);
       if (componentIndex === undefined) {
         // a whole custom category
         validationResult[activeItemIndex] = errors;
@@ -756,7 +761,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
         }
       }
     } else {
-      let itemIndex = this.state.items.findIndex(item => item.id === this.state.activeItemId);
+      let itemIndex = this.state.items.findIndex((item) => item.id === this.state.activeItemId);
       let validatedItem = this.state.itemsValidation[itemIndex];
 
       if (validatedItem) {
@@ -784,7 +789,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
       this._propsToReturn.push(propName);
     }
 
-    this.setState(state => {
+    this.setState((state) => {
       let propValues = { ...state.propValues };
       propValues[propName] = value;
       return { propValues };
@@ -794,9 +799,9 @@ const ModalBody = UU5.Common.VisualComponent.create({
   _onChangeItemProps(propName, value, setStateCallback) {
     this._contentChanged = true;
 
-    this.setState(state => {
+    this.setState((state) => {
       let items = [...state.items];
-      let activeIndex = items.findIndex(item => item.id === state.activeItemId);
+      let activeIndex = items.findIndex((item) => item.id === state.activeItemId);
       items[activeIndex].props = { ...items[activeIndex].props };
       items[activeIndex].props[propName] = value;
 
@@ -814,13 +819,13 @@ const ModalBody = UU5.Common.VisualComponent.create({
     if (Object.keys(newPropValues).indexOf(this._itemsSource) !== -1) {
       this._contentChanged = true;
     }
-    Object.keys(newPropValues).forEach(changedPropName => {
+    Object.keys(newPropValues).forEach((changedPropName) => {
       if (this._propsToReturn.indexOf(changedPropName) === -1) {
         this._propsToReturn.push(changedPropName);
       }
     });
 
-    this.setState(state => {
+    this.setState((state) => {
       let newState = { ...state, propValues: { ...state.propValues, ...newPropValues } };
       let validationResult = this._getCustomComponentValidationResult(state, errors, componentIndex);
       if (typeof this.state.activeCategoryIndex === "number") {
@@ -836,9 +841,9 @@ const ModalBody = UU5.Common.VisualComponent.create({
   _onCustomChangeItems(componentIndex, editedItems, errors) {
     this._contentChanged = true;
 
-    this.setState(state => {
+    this.setState((state) => {
       // get edited items' props and merge with state.items' props
-      let newItems = editedItems.map(item => {
+      let newItems = editedItems.map((item) => {
         if (!item.id) {
           item.id = UU5.Common.Tools.generateUUID();
         }
@@ -854,12 +859,12 @@ const ModalBody = UU5.Common.VisualComponent.create({
             this._itemsPropsToReturn[item.id] = [];
           }
 
-          Object.keys(item.props).forEach(propName => this._itemsPropsToReturn[item.id].push(propName));
+          Object.keys(item.props).forEach((propName) => this._itemsPropsToReturn[item.id].push(propName));
         }
 
         return {
           ...(matchingStateItem || { tagName: this.props.newItem.tagName, id: item.id }),
-          props: { ...(matchingStateItem ? matchingStateItem.props : {}), ...item.props }
+          props: { ...(matchingStateItem ? matchingStateItem.props : {}), ...item.props },
         };
       });
       let newState = { items: newItems };
@@ -884,12 +889,12 @@ const ModalBody = UU5.Common.VisualComponent.create({
   _onInputChangeFeedback(propName, opt) {
     opt.component.onChangeFeedbackDefault(opt);
 
-    this.setState(state => {
+    this.setState((state) => {
       let itemIndex;
       let validation;
       let feedback = {
         feedback: opt.feedback,
-        message: opt.message
+        message: opt.message,
       };
 
       if (state.activeCategoryIndex === undefined) {
@@ -907,7 +912,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
   _itemInsertBefore(index) {
     this._contentChanged = true;
 
-    this.setState(state => {
+    this.setState((state) => {
       let items = [...state.items];
       let newItem = this._getNewItem();
       items.splice(index, 0, newItem);
@@ -923,7 +928,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
   _itemInsertAfter(index) {
     this._contentChanged = true;
 
-    this.setState(state => {
+    this.setState((state) => {
       let items = [...state.items];
       let newItem = this._getNewItem();
       items.splice(index + 1, 0, newItem);
@@ -969,7 +974,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
     this._contentChanged = true;
 
     if (this._canMoveItemUp(index)) {
-      this.setState(state => {
+      this.setState((state) => {
         let items = [...state.items];
         let removedElement = items.splice(index, 1)[0];
         items.splice(index - 1, 0, removedElement);
@@ -984,7 +989,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
     this._contentChanged = true;
 
     if (this._canMoveItemDown()) {
-      this.setState(state => {
+      this.setState((state) => {
         let items = [...state.items];
         let removedElement = items.splice(index, 1)[0];
         items.splice(index + 1, 0, removedElement);
@@ -996,7 +1001,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
   _itemDuplicate(index) {
     this._contentChanged = true;
 
-    this.setState(state => {
+    this.setState((state) => {
       let items = [...state.items];
       let itemsValidation = state.itemsValidation ? [...state.itemsValidation] : [];
       let newItem = this._getNewItem();
@@ -1018,7 +1023,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
       onConfirm: () => {
         this._contentChanged = true;
 
-        this.setState(state => {
+        this.setState((state) => {
           let items = [...state.items];
           let itemsValidation = state.itemsValidation ? [...state.itemsValidation] : [];
           let removedItemId = items[index].id;
@@ -1046,7 +1051,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
       },
       onRefuse: () => this.setState({ confirmModalProps: undefined }),
       headerContent: this.getLsiComponent("itemRemoveModalHeader"),
-      confirmButtonContent: this.getLsiComponent("itemRemoveModalConfirmButton")
+      confirmButtonContent: this.getLsiComponent("itemRemoveModalConfirmButton"),
     };
 
     this.setState({ confirmModalProps });
@@ -1055,7 +1060,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
   _addItem() {
     this._contentChanged = true;
 
-    this.setState(state => {
+    this.setState((state) => {
       let items = state.items ? [...state.items] : null;
       let itemsValidation = state.itemsValidation ? [...state.itemsValidation] : [];
 
@@ -1140,8 +1145,8 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
     if (typeof uu5string === "string") {
       items = UU5.Common.UU5String.parse(uu5string);
-      items = items.filter(item => typeof item !== "string" || item.trim() !== ""); // filter out white spaces
-      items = items.map(item => {
+      items = items.filter((item) => typeof item !== "string" || item.trim() !== ""); // filter out white spaces
+      items = items.map((item) => {
         let props = { ...item.props.toObject() };
         if (item.children.length) {
           props.children = item.children;
@@ -1149,7 +1154,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
         return {
           props,
-          tagName: item.tag
+          tagName: item.tag,
         };
       });
     }
@@ -1159,11 +1164,11 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
   _filterOutUnchangedItemProps(items) {
     if (Object.keys(this._itemsPropsToReturn).length) {
-      return items.map(item => {
+      return items.map((item) => {
         let changedProps = this._itemsPropsToReturn[item.id];
         if (changedProps) {
           let itemProps = {};
-          changedProps.forEach(changedProp => {
+          changedProps.forEach((changedProp) => {
             let newPropValue = item.props[changedProp];
             itemProps[changedProp] = newPropValue;
           });
@@ -1180,23 +1185,23 @@ const ModalBody = UU5.Common.VisualComponent.create({
   _getMenuItemIcons(validation) {
     let availableIconTypes = [
       { feedback: "error", icon: "mdi-alert", colorSchema: "red" },
-      { feedback: "warning", icon: "mdi-alert", colorSchema: "orange" }
+      { feedback: "warning", icon: "mdi-alert", colorSchema: "orange" },
     ];
     let infoIcons = [];
 
     if (validation) {
-      Object.keys(validation).forEach(validationItem => {
+      Object.keys(validation).forEach((validationItem) => {
         let feedback;
         if (validation[validationItem] && typeof validation[validationItem] === "object" && !isNaN(validationItem)) {
           feedback =
-            Object.keys(validation[validationItem]).find(key => {
+            Object.keys(validation[validationItem]).find((key) => {
               let feedbackItem = validation[validationItem][key];
               return Helpers.getFeedback(feedbackItem) === "error";
             }) && "error";
         } else {
           feedback = Helpers.getFeedback(validation[validationItem]);
         }
-        const iconTypeIndex = availableIconTypes.findIndex(item => item.feedback === feedback);
+        const iconTypeIndex = availableIconTypes.findIndex((item) => item.feedback === feedback);
         const iconData = availableIconTypes[iconTypeIndex];
 
         if (iconTypeIndex > -1) {
@@ -1217,7 +1222,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
       { label: this.getLsiComponent("menuItemInsertAfter"), onClick: this._itemInsertAfter },
       { label: this.getLsiComponent("menuItemMoveToPosition"), onClick: this._openItemMoveModal },
       { label: this.getLsiComponent("menuItemDuplicate"), onClick: this._itemDuplicate },
-      { label: this.getLsiComponent("menuItemDelete"), onClick: this._itemRemove }
+      { label: this.getLsiComponent("menuItemDelete"), onClick: this._itemRemove },
     ];
     let items = [];
 
@@ -1232,7 +1237,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
         return {
           content: <span>{itemLabel}</span>,
-          infoIcons: this._getMenuItemIcons(this.state.itemsValidation ? this.state.itemsValidation[index] : null)
+          infoIcons: this._getMenuItemIcons(this.state.itemsValidation ? this.state.itemsValidation[index] : null),
         };
       });
     }
@@ -1288,17 +1293,17 @@ const ModalBody = UU5.Common.VisualComponent.create({
         case "switchSelectorBool":
           result.Component = "UU5.Forms.SwitchSelector";
           result.props.inputAttrs = {
-            ...result.props.inputAttrs
+            ...result.props.inputAttrs,
           };
           result.props.items = [
             { value: false, content: <UU5.Bricks.Lsi lsi={Lsi.common.valueFalse} /> },
-            { value: true, content: <UU5.Bricks.Lsi lsi={Lsi.common.valueTrue} /> }
+            { value: true, content: <UU5.Bricks.Lsi lsi={Lsi.common.valueTrue} /> },
           ];
           break;
         case "switchSelector":
           result.Component = "UU5.Forms.SwitchSelector";
           result.props.inputAttrs = {
-            ...result.props.inputAttrs
+            ...result.props.inputAttrs,
           };
           break;
         case "color":
@@ -1363,7 +1368,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
     }
 
     if (componentData.name) {
-      result.props[changeType] = opt => {
+      result.props[changeType] = (opt) => {
         let defaultFn = typeof opt === "object" && opt.component && opt.component[`${changeType}Default`];
         this._onChange(
           componentData.name,
@@ -1379,7 +1384,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
       result.props.value = value;
       result.props.required = componentData.required;
       result.props.className = this.getClassName("editationInput");
-      result.props.onChangeFeedback = opt => this._onInputChangeFeedback(componentData.name, opt);
+      result.props.onChangeFeedback = (opt) => this._onInputChangeFeedback(componentData.name, opt);
     }
 
     if (validation) {
@@ -1443,9 +1448,11 @@ const ModalBody = UU5.Common.VisualComponent.create({
     let info;
     let activeIdentifier;
     let tagName;
+    let contentKey;
 
     if (Array.isArray(this.props.componentPropsForm) && typeof this.state.activeCategoryIndex === "number") {
       activeIdentifier = this.state.activeCategoryIndex;
+      contentKey = "category-" + activeIdentifier;
       setupSource = this.props.componentPropsForm[activeIdentifier].setup;
       info = this.props.componentPropsForm[activeIdentifier].info;
       formProps = { ...formProps, ...this.props.componentPropsForm[activeIdentifier].formProps };
@@ -1454,6 +1461,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
       validationSource = this.state.validation[this.state.activeCategoryIndex];
     } else if (this.state.activeItemId) {
       activeIdentifier = this.state.activeItemId;
+      contentKey = "item-" + activeIdentifier;
       setupSource = this.props.itemPropsForm.setup;
       info = this.props.itemPropsForm.info;
       formProps = { ...formProps, ...this.props.itemPropsForm.formProps };
@@ -1512,7 +1520,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
         <UU5.Bricks.Row>
           <ComponentInfo iconFontSize="26px">{info}</ComponentInfo>
         </UU5.Bricks.Row>
-        <UU5.Bricks.Row className={this.getClassName("editationContent")}>
+        <UU5.Bricks.Row className={this.getClassName("editationContent")} key={contentKey}>
           <UU5.Forms.Form {...formProps} className={this.getClassName("editForm")}>
             <UU5.Common.Suspense>{editationContent}</UU5.Common.Suspense>
           </UU5.Forms.Form>
@@ -1551,7 +1559,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
         return {
           content: category.name,
           icon: category.icon,
-          infoIcons: this._getMenuItemIcons(this.state.validation[index])
+          infoIcons: this._getMenuItemIcons(this.state.validation[index]),
         };
       });
 
@@ -1722,7 +1730,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
         {this.state.confirmModalProps ? <ConfirmModal {...this.state.confirmModalProps} /> : null}
       </UU5.Bricks.Modal>
     );
-  }
+  },
   //@@viewOff:render
 });
 

@@ -28,7 +28,7 @@ const COLOR_SCHEMAS = [
   "grey",
   "blue-grey",
   "black",
-  "white"
+  "white",
 ];
 
 export const ColorPicker = UU5.Common.VisualComponent.create({
@@ -69,9 +69,9 @@ export const ColorPicker = UU5.Common.VisualComponent.create({
             max-width: 100%;
           }
         }
-      `)
+      `),
     },
-    lsi: Lsi.colorPicker
+    lsi: Lsi.colorPicker,
   },
   //@@viewOff:statics
 
@@ -80,7 +80,7 @@ export const ColorPicker = UU5.Common.VisualComponent.create({
     value: UU5.PropTypes.string,
     onClick: UU5.PropTypes.func,
     colorSchema: UU5.PropTypes.string,
-    bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline", "link"])
+    bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline", "link"]),
   },
   //@@viewOff:propTypes
 
@@ -90,7 +90,7 @@ export const ColorPicker = UU5.Common.VisualComponent.create({
       value: undefined,
       onClick: undefined,
       colorSchema: undefined,
-      bgStyle: undefined
+      bgStyle: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -98,7 +98,7 @@ export const ColorPicker = UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
-      open: false
+      open: false,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -124,14 +124,14 @@ export const ColorPicker = UU5.Common.VisualComponent.create({
 
   _togglePicker(component, setSateCallback) {
     this.setState(
-      state => ({ open: !state.open }),
+      (state) => ({ open: !state.open }),
       () => {
         if (this.state.open) {
           this._popover.open({
             // eslint-disable-next-line react/no-find-dom-node
             aroundElement: component.findDOMNode(),
             position: "bottom",
-            onClose: () => this.setState({ open: false })
+            onClose: () => this.setState({ open: false }),
           });
         } else {
           this._popover.close();
@@ -181,13 +181,13 @@ export const ColorPicker = UU5.Common.VisualComponent.create({
           <ColorSquare colorSchema="default" onClick={this._onChange} label={this.getLsiValue("defaultColorSchema")} />
         </UU5.Bricks.Div>
         <UU5.Bricks.Div style={{ display: "flex", flexWrap: "wrap" }}>
-          {COLOR_SCHEMAS.map(colorSchema => {
+          {COLOR_SCHEMAS.map((colorSchema) => {
             return <ColorSquare key={colorSchema} colorSchema={colorSchema} onClick={this._onChange} />;
           })}
         </UU5.Bricks.Div>
-      </UU5.Bricks.Popover>
+      </UU5.Bricks.Popover>,
     ];
-  }
+  },
   //@@viewOff:render
 });
 

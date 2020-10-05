@@ -28,13 +28,13 @@ const ScreenSizeProvider = createComponent({
 
   //@@viewOn:propTypes
   propTypes: {
-    screenSize: UU5.PropTypes.oneOf(Object.keys(UU5.Utils.ScreenSize.SIZE_MAP))
+    screenSize: UU5.PropTypes.oneOf(Object.keys(UU5.Utils.ScreenSize.SIZE_MAP)),
   },
   //@@viewOff:propTypes
 
   //@@viewOn:defaultProps
   defaultProps: {
-    screenSize: undefined
+    screenSize: undefined,
   },
   //@@viewOff:defaultProps
 
@@ -66,7 +66,7 @@ const ScreenSizeProvider = createComponent({
       </>
     );
     //@@viewOff:render
-  }
+  },
 });
 
 function useScreenSize() {

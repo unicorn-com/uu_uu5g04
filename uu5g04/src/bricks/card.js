@@ -37,7 +37,7 @@ export const Card = UU5.Common.VisualComponent.create({
     UU5.Common.SectionMixin,
     UU5.Common.PureRenderMixin,
     UU5.Common.ColorSchemaMixin,
-    UU5.Common.EditableMixin
+    UU5.Common.EditableMixin,
   ],
   //@@viewOff:mixins
 
@@ -49,11 +49,11 @@ export const Card = UU5.Common.VisualComponent.create({
       main: ns.css("card"),
       inline: ns.css("card-inline"),
       spaces: ns.css("card-spaces"),
-      defaultColor: ns.css("card-default")
+      defaultColor: ns.css("card-default"),
     },
     opt: {
-      dummyLevel: true
-    }
+      dummyLevel: true,
+    },
   },
   //@@viewOff:statics
 
@@ -66,7 +66,7 @@ export const Card = UU5.Common.VisualComponent.create({
     minWidth: UU5.PropTypes.number,
     noSpaces: UU5.PropTypes.bool,
     bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-    borderRadius: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number])
+    borderRadius: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
   },
   //@@viewOff:propTypes
 
@@ -80,7 +80,7 @@ export const Card = UU5.Common.VisualComponent.create({
       minWidth: null,
       noSpaces: false,
       bgStyle: "filled",
-      borderRadius: null
+      borderRadius: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -180,8 +180,8 @@ export const Card = UU5.Common.VisualComponent.create({
           </>
         ) : null}
       </>
-    )
-  }
+    );
+  },
   //@@viewOff:render
 });
 

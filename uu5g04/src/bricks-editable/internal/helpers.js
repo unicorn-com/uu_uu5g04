@@ -9,17 +9,17 @@ export const Helpers = {
       return {
         feedback: {
           feedback: "error",
-          message: undefined
-        }
+          message: undefined,
+        },
       };
     } else {
       return undefined;
     }
   },
-  checkRequiredValue: value => {
+  checkRequiredValue: (value) => {
     return value !== null && value !== undefined && value !== "";
   },
-  getFeedback: validation => {
+  getFeedback: (validation) => {
     if (validation) {
       if (typeof validation === "boolean") {
         return validation ? "error" : undefined;
@@ -30,16 +30,16 @@ export const Helpers = {
 
     return undefined;
   },
-  isValid: validationItems => {
-    return !validationItems.find(validationItem => {
+  isValid: (validationItems) => {
+    return !validationItems.find((validationItem) => {
       if (validationItem) {
-        return Object.keys(validationItem).find(validationItemKey => {
+        return Object.keys(validationItem).find((validationItemKey) => {
           if (
             validationItem[validationItemKey] &&
             typeof validationItem[validationItemKey] === "object" &&
             !isNaN(validationItemKey)
           ) {
-            return Object.keys(validationItem[validationItemKey]).find(key => {
+            return Object.keys(validationItem[validationItemKey]).find((key) => {
               let feedbackItem = validationItem[validationItemKey][key];
               return Helpers.getFeedback(feedbackItem) === "error";
             });
@@ -52,7 +52,7 @@ export const Helpers = {
       }
     });
   },
-  isComponent: component => {
+  isComponent: (component) => {
     if (typeof component === "function") {
       return true;
     } else if (typeof component === "object" && component.type) {
@@ -61,13 +61,13 @@ export const Helpers = {
       return false;
     }
   },
-  getLabel: label => {
+  getLabel: (label) => {
     if (label && typeof label === "object" && !label.type) {
       return <UU5.Bricks.Lsi lsi={label} />;
     } else {
       return label;
     }
-  }
+  },
 };
 
 export default Helpers;

@@ -43,14 +43,14 @@ export const InputMixin = {
         inline: ns.css("input-inline"),
         labelWidth: ns.css("input-label-width"),
         withAutoWidth: ns.css("input-auto-width"),
-        preventWrap: ns.css("input-prevent-wrap")
+        preventWrap: ns.css("input-prevent-wrap"),
       },
       defaults: {
         columnRegexp: /^([a-z]+)(?:-)?(\d+)$/,
         labelColWidth: { xs: 12, s: 5 },
-        inputColWidth: { xs: 12, s: 7 }
-      }
-    }
+        inputColWidth: { xs: 12, s: 7 },
+      },
+    },
   },
   //@@viewOff:statics
 
@@ -59,7 +59,13 @@ export const InputMixin = {
     label: UU5.PropTypes.any,
     message: UU5.PropTypes.any,
 
-    feedback: UU5.PropTypes.oneOf([INITIAL_FEEDBACK, SUCCESS_FEEDBACK, WARNING_FEEDBACK, ERROR_FEEDBACK, LOADING_FEEDBACK]),
+    feedback: UU5.PropTypes.oneOf([
+      INITIAL_FEEDBACK,
+      SUCCESS_FEEDBACK,
+      WARNING_FEEDBACK,
+      ERROR_FEEDBACK,
+      LOADING_FEEDBACK,
+    ]),
 
     readOnly: UU5.PropTypes.bool,
 
@@ -75,9 +81,9 @@ export const InputMixin = {
         s: UU5.PropTypes.number,
         m: UU5.PropTypes.number,
         l: UU5.PropTypes.number,
-        xl: UU5.PropTypes.number
+        xl: UU5.PropTypes.number,
       }),
-      UU5.PropTypes.string
+      UU5.PropTypes.string,
     ]),
     inputColWidth: UU5.PropTypes.oneOfType([
       UU5.PropTypes.shape({
@@ -85,9 +91,9 @@ export const InputMixin = {
         s: UU5.PropTypes.number,
         m: UU5.PropTypes.number,
         l: UU5.PropTypes.number,
-        xl: UU5.PropTypes.number
+        xl: UU5.PropTypes.number,
       }),
-      UU5.PropTypes.string
+      UU5.PropTypes.string,
     ]),
     inputWidth: UU5.PropTypes.string,
     labelWidth: UU5.PropTypes.string,
@@ -97,12 +103,12 @@ export const InputMixin = {
     spacing: UU5.PropTypes.number,
 
     tooltipIcon: UU5.PropTypes.string,
-    labelAlignment: UU5.PropTypes.string
+    labelAlignment: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       label: null,
       message: null,
@@ -118,27 +124,27 @@ export const InputMixin = {
       inputAttrs: null,
       spacing: null,
       tooltipIcon: "mdi-information-outline",
-      labelAlignment: undefined
+      labelAlignment: undefined,
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  getInitialState: function() {
+  getInitialState: function () {
     return {
       message: this.props.message,
       feedback: this.props.feedback,
       value: typeof this.getInitialValue_ === "function" ? this.getInitialValue_(this.props.value) : this.props.value,
-      readOnly: this.props.readOnly
+      readOnly: this.props.readOnly,
     };
   },
 
-  componentDidMount: function() {
+  componentDidMount: function () {
     var parentForm = this._getForm();
     parentForm && parentForm.registerFormInput(this.getId(), this);
   },
 
-  UNSAFE_componentWillReceiveProps: function(nextProps) {
+  UNSAFE_componentWillReceiveProps: function (nextProps) {
     if (nextProps.id && nextProps.id !== this.props.id) {
       var parentForm = this._getForm();
       if (parentForm) {
@@ -154,7 +160,7 @@ export const InputMixin = {
     }
   },
 
-  componentWillUnmount: function() {
+  componentWillUnmount: function () {
     var parentForm = this._getForm();
     parentForm && parentForm.unregisterFormInput(this.getId());
   },
@@ -273,7 +279,7 @@ export const InputMixin = {
       {
         feedback: feedback,
         message: message,
-        value: value
+        value: value,
       },
       setStateCallback
     );
@@ -394,7 +400,7 @@ export const InputMixin = {
         message: this.props.message,
         feedback: this.props.feedback,
         value: this.props.value,
-        readOnly: this.props.readOnly
+        readOnly: this.props.readOnly,
       },
       setStateCallback
     );
@@ -419,7 +425,7 @@ export const InputMixin = {
     return {
       feedback: opt.feedback || INITIAL_FEEDBACK,
       message: opt.message || null,
-      value: opt.value === undefined ? this.state.value : opt.value
+      value: opt.value === undefined ? this.state.value : opt.value,
     };
   },
 
@@ -440,7 +446,7 @@ export const InputMixin = {
       {
         feedback: result.feedback,
         message: result.message,
-        value: result.value
+        value: result.value,
       },
       setStateCallback
     );
@@ -527,7 +533,7 @@ export const InputMixin = {
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _getForm: function() {
+  _getForm: function () {
     var form = null;
     var parent = this.getParent && this.getParent();
     while (parent) {
@@ -543,13 +549,13 @@ export const InputMixin = {
     return form;
   },
 
-  _setFeedback: function(feedback, message, value, setStateCallback) {
+  _setFeedback: function (feedback, message, value, setStateCallback) {
     let opt = {
       feedback: feedback,
       message: message,
       value: value,
       callback: setStateCallback,
-      component: this
+      component: this,
     };
     if (typeof this.props.onChangeFeedback === "function") {
       this.props.onChangeFeedback(opt);
@@ -720,7 +726,7 @@ export const InputMixin = {
       tooltip: this.props.tooltip,
       tooltipIcon: this.props.tooltipIcon,
       colorSchema: this.props.colorSchema,
-      width: this.props.labelWidth
+      width: this.props.labelWidth,
     };
   },
 
@@ -768,7 +774,7 @@ export const InputMixin = {
     ["xs", "s", "m", "l", "xl"].forEach((screenSize, index, list) => {
       let colRegExp = new RegExp(`\\b${screenSize}-?\\d{1,2}`);
 
-      ["label", "input"].forEach(type => {
+      ["label", "input"].forEach((type) => {
         let colWidth;
         if (typeof colWidths[type] === "object") {
           colWidth = colWidths[type];
@@ -828,7 +834,7 @@ export const InputMixin = {
     let message = this.getMessage();
 
     if (Array.isArray(buttons)) {
-      buttons.forEach(button => {
+      buttons.forEach((button) => {
         if (!button.bgStyle) {
           button.bgStyle = this.props.bgStyle;
         }
@@ -854,7 +860,7 @@ export const InputMixin = {
       datetimepicker: this.getTagName() === "UU5.Forms.DateTimePicker",
       daterangepicker: this.getTagName() === "UU5.Forms.DateRangePicker",
       readonly: this.state.readOnly,
-      disabled: this.isDisabled()
+      disabled: this.isDisabled(),
     };
   },
 
@@ -894,7 +900,7 @@ export const InputMixin = {
     }
 
     return result;
-  }
+  },
   //@@viewOff:private
 
   //@@viewOn:render

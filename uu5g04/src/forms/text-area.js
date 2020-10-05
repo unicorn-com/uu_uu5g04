@@ -38,12 +38,12 @@ export const TextArea = Context.withContext(
     statics: {
       tagName: ns.name("TextArea"),
       classNames: {
-        main: ns.css("text-area")
+        main: ns.css("text-area"),
       },
       errors: {
-        validateError: "Validated result is not object."
+        validateError: "Validated result is not object.",
       },
-      lsi: () => UU5.Environment.Lsi.Forms.message
+      lsi: () => UU5.Environment.Lsi.Forms.message,
     },
     //@@viewOff:statics
 
@@ -52,17 +52,17 @@ export const TextArea = Context.withContext(
       value: UU5.PropTypes.string,
       rows: UU5.PropTypes.number,
       autoResize: UU5.PropTypes.bool,
-      maxRows: UU5.PropTypes.number
+      maxRows: UU5.PropTypes.number,
     },
     //@@viewOff:propTypes
 
     //@@viewOn:getDefaultProps
-    getDefaultProps: function() {
+    getDefaultProps: function () {
       return {
         value: "",
         rows: 3,
         autoResize: false,
-        maxRows: null
+        maxRows: null,
       };
     },
     //@@viewOff:getDefaultProps
@@ -134,7 +134,7 @@ export const TextArea = Context.withContext(
             }
           } else {
             this.showError("validateError", null, {
-              context: { event: e, func: this.props.onValidate, result: result }
+              context: { event: e, func: this.props.onValidate, result: result },
             });
           }
         }
@@ -165,7 +165,7 @@ export const TextArea = Context.withContext(
     //@@viewOff:private
 
     //@@viewOn:render
-    render: function() {
+    render: function () {
       let inputId = this.getId() + "-input";
       let inputAttrs = this.props.inputAttrs || {};
 
@@ -191,7 +191,7 @@ export const TextArea = Context.withContext(
               rows={this.props.rows}
               autoResize={this.props.autoResize}
               maxRows={this.props.maxRows}
-              ref_={item => (this._textInput = item)}
+              ref_={(item) => (this._textInput = item)}
               feedback={this.getFeedback()}
               borderRadius={this.props.borderRadius}
               elevation={this.props.elevation}
@@ -199,11 +199,11 @@ export const TextArea = Context.withContext(
               inputWidth={this._getInputWidth()}
               colorSchema={this.props.colorSchema}
               size={this.props.size}
-            />
+            />,
           ])}
         </div>
       );
-    }
+    },
     //@@viewOff:render
   })
 );

@@ -16,7 +16,7 @@ import "uu5g04-bricks";
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
-describe("UU5.Bricks.ProgressBar.Item interface testing", function() {
+describe("UU5.Bricks.ProgressBar.Item interface testing", function () {
   it("Should render with shallow and make a snapshot", () => {
     const wrapper = shallow(
       <UU5.Bricks.ProgressBar id={"uuID01"}>
@@ -36,14 +36,14 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function() {
           colorSchema="blue"
           animated
           striped
-          ref_={progress2 => (this.progress2 = progress2)}
+          ref_={(progress2) => (this.progress2 = progress2)}
           content="number"
         />
         <UU5.Bricks.ProgressBar.Item
           id={"uuID03"}
           progress={35}
           colorSchema="purple"
-          ref_={progress1 => (this.progress1 = progress1)}
+          ref_={(progress1) => (this.progress1 = progress1)}
         />
       </UU5.Bricks.ProgressBar>
     );
@@ -60,7 +60,7 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function() {
           colorSchema="blue"
           animated
           striped
-          ref_={progress2 => (this.progress2 = progress2)}
+          ref_={(progress2) => (this.progress2 = progress2)}
           content="number"
         />
         <UU5.Bricks.ProgressBar.Item
@@ -68,7 +68,7 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function() {
           progress={35}
           content={"Progress1"}
           colorSchema="purple"
-          ref_={progress1 => (this.progress1 = progress1)}
+          ref_={(progress1) => (this.progress1 = progress1)}
         />
       </UU5.Bricks.ProgressBar>
     );
@@ -85,7 +85,7 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function() {
           colorSchema="blue"
           animated
           striped
-          ref_={progress2 => (this.progress2 = progress2)}
+          ref_={(progress2) => (this.progress2 = progress2)}
           content="number"
         />
         <UU5.Bricks.ProgressBar.Item
@@ -93,7 +93,7 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function() {
           progress={35}
           content={"Progress1"}
           colorSchema="purple"
-          ref_={progress1 => (this.progress1 = progress1)}
+          ref_={(progress1) => (this.progress1 = progress1)}
         />
       </UU5.Bricks.ProgressBar>
     );
@@ -110,7 +110,7 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function() {
           colorSchema="blue"
           animated
           striped
-          ref_={progress2 => (this.progress2 = progress2)}
+          ref_={(progress2) => (this.progress2 = progress2)}
           content="number"
         />
         <UU5.Bricks.ProgressBar.Item
@@ -118,7 +118,7 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function() {
           progress={35}
           content={"Progress1"}
           colorSchema="purple"
-          ref_={progress1 => (this.progress1 = progress1)}
+          ref_={(progress1) => (this.progress1 = progress1)}
         />
       </UU5.Bricks.ProgressBar>
     );
@@ -134,7 +134,7 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function() {
           progress={35}
           content={"Progress1"}
           colorSchema="purple"
-          ref_={progress1 => (this.progress1 = progress1)}
+          ref_={(progress1) => (this.progress1 = progress1)}
         />
       </UU5.Bricks.ProgressBar>
     );
@@ -165,7 +165,7 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function() {
           progress={2}
           content={"Progress1"}
           colorSchema="purple"
-          ref_={progress1 => (this.progress1 = progress1)}
+          ref_={(progress1) => (this.progress1 = progress1)}
         />
       </UU5.Bricks.ProgressBar>
     );
@@ -197,7 +197,7 @@ describe("UU5.Bricks.ProgressBar.Item interface testing", function() {
           progress={20}
           content={"Progress1"}
           colorSchema="purple"
-          ref_={progress1 => (this.progress1 = progress1)}
+          ref_={(progress1) => (this.progress1 = progress1)}
         />
       </UU5.Bricks.ProgressBar>
     );

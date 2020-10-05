@@ -31,7 +31,7 @@ const DEFAULT_PROPS_MAP = {
   header: "",
   footer: "",
   content: null,
-  children: null
+  children: null,
 };
 
 const MAIN_CLASS_NAME = ns.css("row");
@@ -49,9 +49,9 @@ const propsSetup = [
         getProps: () => ({
           items: [
             { value: "standard", content: <UU5.Bricks.Lsi lsi={Lsi.row.displayValueStandard} /> },
-            { value: "flex", content: <UU5.Bricks.Lsi lsi={Lsi.row.displayValueFlex} /> }
-          ]
-        })
+            { value: "flex", content: <UU5.Bricks.Lsi lsi={Lsi.row.displayValueFlex} /> },
+          ],
+        }),
       },
       {
         name: "noSpacing",
@@ -60,17 +60,17 @@ const propsSetup = [
         getProps: () => ({
           items: [
             { value: false, content: <UU5.Bricks.Lsi lsi={Lsi.row.horizontalPaddingValueStandard} /> },
-            { value: true, content: <UU5.Bricks.Lsi lsi={Lsi.row.horizontalPaddingValueNone} /> }
-          ]
-        })
+            { value: true, content: <UU5.Bricks.Lsi lsi={Lsi.row.horizontalPaddingValueNone} /> },
+          ],
+        }),
       },
       {
         name: "className",
         type: "text",
-        label: <UU5.Bricks.Lsi lsi={Lsi.row.classNameLabel} />
-      }
-    ]
-  }
+        label: <UU5.Bricks.Lsi lsi={Lsi.row.classNameLabel} />,
+      },
+    ],
+  },
 ];
 
 const editableItemPropsSetup = {
@@ -83,24 +83,24 @@ const editableItemPropsSetup = {
       getProps: () => ({
         items: [
           { value: false, content: <UU5.Bricks.Lsi lsi={Lsi.row.horizontalPaddingValueStandard} /> },
-          { value: true, content: <UU5.Bricks.Lsi lsi={Lsi.row.horizontalPaddingValueNone} /> }
-        ]
-      })
+          { value: true, content: <UU5.Bricks.Lsi lsi={Lsi.row.horizontalPaddingValueNone} /> },
+        ],
+      }),
     },
     {
       name: "className",
       type: "text",
-      label: <UU5.Bricks.Lsi lsi={Lsi.row.classNameLabel} />
-    }
-  ]
+      label: <UU5.Bricks.Lsi lsi={Lsi.row.classNameLabel} />,
+    },
+  ],
 };
 
 const newEditableItem = {
   tagName: "UU5.Bricks.Column",
   isElement: true,
   props: {
-    contentEditable: true
-  }
+    contentEditable: true,
+  },
 };
 
 function getEditableItemLabel(item, itemIndex) {
@@ -156,22 +156,22 @@ export const Row = UU5.Common.VisualComponent.create({
               width: 20%;
             }
           }
-        `)
+        `),
     },
-    lsi: () => ({ ...Lsi.row, ...Lsi.common })
+    lsi: () => ({ ...Lsi.row, ...Lsi.common }),
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    component: UU5.PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      component: null
+      component: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -184,7 +184,7 @@ export const Row = UU5.Common.VisualComponent.create({
       ...editedProps,
       showFooter: !!editedProps.footer,
       showHeader: !!editedProps.header,
-      editModalOpen: false
+      editModalOpen: false,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -246,24 +246,24 @@ export const Row = UU5.Common.VisualComponent.create({
   },
 
   _toggleHeader() {
-    this.setState(state => ({
-      showHeader: !state.showHeader
+    this.setState((state) => ({
+      showHeader: !state.showHeader,
     }));
   },
 
   _toggleFooter() {
-    this.setState(state => ({
-      showFooter: !state.showFooter
+    this.setState((state) => ({
+      showFooter: !state.showFooter,
     }));
   },
 
   _toggleUnderline() {
-    this.setState(state => ({ underline: !state.underline }));
+    this.setState((state) => ({ underline: !state.underline }));
   },
 
   _toggleDisplay() {
     this.setState(
-      state => ({ display: state.display === "flex" ? "standard" : "flex" }),
+      (state) => ({ display: state.display === "flex" ? "standard" : "flex" }),
       () => {
         this.props.component.saveEditation({ display: this.state.display });
       }
@@ -283,15 +283,15 @@ export const Row = UU5.Common.VisualComponent.create({
   },
 
   _getHeaderToolbarItems() {
-    let levelItems = [1, 2, 3, 4, 5, 6].map(level => ({
+    let levelItems = [1, 2, 3, 4, 5, 6].map((level) => ({
       content: `${this.getLsiValue("level")} ${level}`,
-      value: `${level}`
+      value: `${level}`,
     }));
     levelItems.unshift({ content: this.getLsiComponent("defaultLevel"), value: null });
 
     return [
       {
-        type: "separator"
+        type: "separator",
       },
       {
         type: "button",
@@ -300,9 +300,9 @@ export const Row = UU5.Common.VisualComponent.create({
             pressed: this.state.underline,
             onClick: this._toggleUnderline,
             tooltip: this.getLsiValue("underlineTooltip"),
-            icon: "mdi-format-underline"
+            icon: "mdi-format-underline",
           };
-        }
+        },
       },
       {
         type: "dropdown",
@@ -316,10 +316,10 @@ export const Row = UU5.Common.VisualComponent.create({
             label,
             tooltip: this.getLsiValue("levelTooltip"),
             items: levelItems,
-            onClick: this._changeLevel
+            onClick: this._changeLevel,
           };
-        }
-      }
+        },
+      },
     ];
   },
 
@@ -332,10 +332,10 @@ export const Row = UU5.Common.VisualComponent.create({
             pressed: this.state.editModalOpen,
             icon: "mdi-view-column",
             onClick: this._openEditModal,
-            tooltip: this.getLsiValue("layoutTooltip")
+            tooltip: this.getLsiValue("layoutTooltip"),
           };
-        }
-      }
+        },
+      },
     ];
   },
 
@@ -344,18 +344,18 @@ export const Row = UU5.Common.VisualComponent.create({
       {
         value: this.state.showHeader,
         onClick: this._toggleHeader,
-        label: this.getLsiComponent("showHeaderCheckboxLabel")
+        label: this.getLsiComponent("showHeaderCheckboxLabel"),
       },
       {
         value: this.state.showFooter,
         onClick: this._toggleFooter,
-        label: this.getLsiComponent("showFooterCheckboxLabel")
+        label: this.getLsiComponent("showFooterCheckboxLabel"),
       },
       {
         value: this.state.display === "flex",
         onClick: this._toggleDisplay,
-        label: this.getLsiComponent("flexCheckboxLabel")
-      }
+        label: this.getLsiComponent("flexCheckboxLabel"),
+      },
     ];
   },
 
@@ -419,13 +419,13 @@ export const Row = UU5.Common.VisualComponent.create({
               >
                 {({ children }) => <UU5.Bricks.Footer parent={this.props.component}>{children}</UU5.Bricks.Footer>}
               </UU5.BricksEditable.Input>
-            ) : null
+            ) : null,
           ]}
         </UU5.BricksEditable.Toolbar>
         {this.state.editModalOpen ? this._renderEditModal() : null}
       </>
     );
-  }
+  },
   //@@viewOff:render
 });
 

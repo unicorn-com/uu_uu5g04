@@ -24,30 +24,30 @@ const CONFIG = {
     "UU5.Common.PureRenderMixin",
     "UU5.Common.SectionMixin",
     "UU5.Common.ContentMixin",
-    "UU5.Common.LevelMixin"
+    "UU5.Common.LevelMixin",
   ],
   props: {
     elevation: {
-      values: ["0", "1", "2", "3", "4", "5", 0, 1, 2, 3, 4, 5]
+      values: ["0", "1", "2", "3", "4", "5", 0, 1, 2, 3, 4, 5],
     },
     elevationHover: {
-      values: ["0", "1", "2", "3", "4", "5", 0, 1, 2, 3, 4, 5]
+      values: ["0", "1", "2", "3", "4", "5", 0, 1, 2, 3, 4, 5],
     },
     inline: {
-      values: [true, false]
+      values: [true, false],
     },
     width: {
-      values: [500, 800]
+      values: [500, 800],
     },
     minWidth: {
-      values: [300, 450]
+      values: [300, 450],
     },
     noSpaces: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
   },
   requiredProps: {},
-  opt: {}
+  opt: {},
 };
 
 describe(`UU5.Bricks.Card props testing`, () => {

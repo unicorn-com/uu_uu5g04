@@ -24,23 +24,23 @@ const CONFIG = {
     "UU5.Common.NestingLevelMixin",
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.ContentMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     size: {
-      values: ["m", "s"]
+      values: ["m", "s"],
     },
     weight: {
-      values: ["normal", "primary", "secondary"]
+      values: ["normal", "primary", "secondary"],
     },
     icon: {
-      values: [undefined, "mdi-phone", "mdi-email"]
-    }
+      values: [undefined, "mdi-phone", "mdi-email"],
+    },
   },
   requiredProps: {
-    children: "Test"
+    children: "Test",
   },
-  opt: {}
+  opt: {},
 };
 
 describe(`UU5.BlockLayout.Text props testing`, () => {

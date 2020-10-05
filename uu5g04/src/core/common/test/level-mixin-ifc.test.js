@@ -22,23 +22,23 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 const Component = createReactClass({
   mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.LevelMixin, UU5.Common.ContentMixin],
   statics: {
-    tagName: "Component"
+    tagName: "Component",
   },
   render() {
     return <div {...this.getMainAttrs()}>{this.getChildren()}</div>;
-  }
+  },
 });
 const IncreaseLevel = createReactClass({
   mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.LevelMixin, UU5.Common.ContentMixin],
   statics: {
     tagName: "IncreaseLevel",
     opt: {
-      increaseLevel: true
-    }
+      increaseLevel: true,
+    },
   },
   render() {
     return <div {...this.getMainAttrs()}>{this.getChildren()}</div>;
-  }
+  },
 });
 
 describe(`UU5.Common.LevelMixin - interface`, () => {

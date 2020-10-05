@@ -32,7 +32,7 @@ const shouldOpenToContent = (openToContent, screenSize) => {
     openToContent
       .trim()
       .split(" ")
-      .some(size => {
+      .some((size) => {
         if (screenSize == size) {
           result = true;
           return true;
@@ -47,7 +47,7 @@ const shouldOpenToContent = (openToContent, screenSize) => {
   return result;
 };
 
-const findScrollElement = element => {
+const findScrollElement = (element) => {
   let result = null;
 
   while (element && element.tagName) {
@@ -66,7 +66,7 @@ const FONT_SIZE = {
   s: "12px",
   m: "14px",
   l: "16px",
-  xl: "18px"
+  xl: "18px",
 };
 
 const classes = {
@@ -106,7 +106,7 @@ const classes = {
     }
 
     return styles ? Css.css(styles) : "";
-  }
+  },
 };
 
 export const SelectBody = createReactClass({
@@ -117,7 +117,7 @@ export const SelectBody = createReactClass({
     UU5.Common.ElementaryMixin,
     UU5.Common.ContentMixin,
     UU5.Common.ScreenSizeMixin,
-    UU5.Common.ColorSchemaMixin
+    UU5.Common.ColorSchemaMixin,
   ],
   //@@viewOff:mixins
 
@@ -132,12 +132,12 @@ export const SelectBody = createReactClass({
       multiple: ns.css("select-multiple"),
       selectAllEnabled: ns.css("select-all"),
       hasValue: ns.css("select-has-value"),
-      screenSizeBehaviour: ns.css("screen-size-behaviour")
+      screenSizeBehaviour: ns.css("screen-size-behaviour"),
     },
     defaults: {
-      childTagName: "UU5.Forms.Select.Option"
+      childTagName: "UU5.Forms.Select.Option",
     },
-    lsi: () => UU5.Common.Tools.merge({}, UU5.Environment.Lsi.Forms.select, UU5.Environment.Lsi.Forms.message)
+    lsi: () => UU5.Common.Tools.merge({}, UU5.Environment.Lsi.Forms.select, UU5.Environment.Lsi.Forms.message),
   },
   //@@viewOff:statics
 
@@ -167,7 +167,7 @@ export const SelectBody = createReactClass({
     inputWidth: PropTypes.string,
     mainAttrs: UU5.Common.BaseMixin.propTypes.mainAttrs,
     name: UU5.Common.BaseMixin.propTypes.name,
-    id: UU5.Common.BaseMixin.propTypes.id
+    id: UU5.Common.BaseMixin.propTypes.id,
   },
   //@@viewOff:propTypes
 
@@ -194,7 +194,7 @@ export const SelectBody = createReactClass({
       readOnly: false,
       loading: false,
       feedback: "initial",
-      inputWidth: undefined
+      inputWidth: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -228,7 +228,7 @@ export const SelectBody = createReactClass({
   open(setStateCallback) {
     let callback;
     this.setState(
-      state => {
+      (state) => {
         let result = !state.open ? { open: true } : undefined;
         if (result) {
           this._addEvent();
@@ -246,7 +246,7 @@ export const SelectBody = createReactClass({
   close(setStateCallback) {
     let callback;
     this.setState(
-      state => {
+      (state) => {
         let result = state.open ? { open: false } : undefined;
         if (result) callback = () => this._onClose(setStateCallback);
         else callback = setStateCallback;
@@ -259,7 +259,7 @@ export const SelectBody = createReactClass({
 
   toggle(setStateCallback) {
     this.setState(
-      state => {
+      (state) => {
         if (!state.open) {
           this._addEvent();
         }
@@ -281,7 +281,7 @@ export const SelectBody = createReactClass({
     if (!result && (typeof child !== "string" || child.trim())) {
       if (childTagName)
         this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagName], {
-          mixinName: "UU5.Common.BaseMixin"
+          mixinName: "UU5.Common.BaseMixin",
         });
       else this.showError("childNotAllowed", [child, defaultChildTagName], { mixinName: "UU5.Common.BaseMixin" });
     }
@@ -314,10 +314,10 @@ export const SelectBody = createReactClass({
       input: false,
       item: false,
       label: false,
-      picker: false
+      picker: false,
     };
     let eventPath = this._getEventPath(e);
-    eventPath.every(item => {
+    eventPath.every((item) => {
       let functionType = item.matches ? "matches" : "msMatchesSelector";
       if (item[functionType]) {
         if (item[functionType](labelMatch)) {
@@ -375,7 +375,7 @@ export const SelectBody = createReactClass({
     let itemList = this._itemList;
     let items = itemList.getRenderedChildren();
 
-    let handleKeyDown = e => {
+    let handleKeyDown = (e) => {
       if (e.which === 13) {
         e.preventDefault();
       } else if (e.which === 38 || e.which === 40) {
@@ -389,7 +389,7 @@ export const SelectBody = createReactClass({
       }
     };
 
-    let handleKeyUp = e => {
+    let handleKeyUp = (e) => {
       switch (e.which) {
         case 13: // enter
           if (!this.isOpen()) {
@@ -419,8 +419,8 @@ export const SelectBody = createReactClass({
       }
     };
 
-    UU5.Environment.EventListener.addWindowEvent("keydown", this.getId(), e => handleKeyDown(e));
-    UU5.Environment.EventListener.addWindowEvent("keyup", this.getId(), e => handleKeyUp(e));
+    UU5.Environment.EventListener.addWindowEvent("keydown", this.getId(), (e) => handleKeyDown(e));
+    UU5.Environment.EventListener.addWindowEvent("keyup", this.getId(), (e) => handleKeyUp(e));
   },
 
   _valuesToValuesArray(newValue, newChildren) {
@@ -497,7 +497,7 @@ export const SelectBody = createReactClass({
     if (children && this.props.value) {
       if (Array.isArray(this.props.value)) {
         for (let i = 0; i < this.props.value.length; i++) {
-          let child = children.find(child => child.props.value === this.props.value[i]);
+          let child = children.find((child) => child.props.value === this.props.value[i]);
           let childContent = child
             ? child.props.selectedContent || child.props.content || child.props.children || child.props.value
             : null;
@@ -534,7 +534,7 @@ export const SelectBody = createReactClass({
 
     if (this.props.children) {
       let childTagNames = this.props.allowTags.concat(this.getDefault().childTagName);
-      React.Children.toArray(this.props.children).forEach(child => {
+      React.Children.toArray(this.props.children).forEach((child) => {
         let childTagName = UU5.Common.Tools.getChildTagName(child);
         const newProps = UU5.Common.Tools.merge({}, child.props);
         newProps.mainAttrs = newProps.mainAttrs || {};
@@ -586,7 +586,7 @@ export const SelectBody = createReactClass({
           aroundElement: UU5.Common.DOM.findNode(this._textInput),
           position: "bottom",
           offset: shouldOpenToContent(this.props.openToContent, this.state.screenSize) ? 0 : 4,
-          preventPositioning: shouldOpenToContent(this.props.openToContent, this.state.screenSize)
+          preventPositioning: shouldOpenToContent(this.props.openToContent, this.state.screenSize),
         },
         callback
       );
@@ -613,7 +613,7 @@ export const SelectBody = createReactClass({
         aroundElement: UU5.Common.DOM.findNode(this._textInput),
         position: "bottom",
         offset: shouldOpenToContent(this.props.openToContent, this.state.screenSize) ? 0 : 4,
-        preventPositioning: shouldOpenToContent(this.props.openToContent, this.state.screenSize)
+        preventPositioning: shouldOpenToContent(this.props.openToContent, this.state.screenSize),
       });
     }
   },
@@ -642,8 +642,8 @@ export const SelectBody = createReactClass({
     props.id = `${this.getId()}-item-list`;
     props.className = this.getClassName("itemList");
     props.hidden = !this.isOpen();
-    props.ref_ = itemList => (this._itemList = itemList);
-    props.onChange = opt => this._onItem(opt);
+    props.ref_ = (itemList) => (this._itemList = itemList);
+    props.onChange = (opt) => this._onItem(opt);
     props.value = this.props.value;
     props.multiple = this.props.multiple;
     props.allowTags = this.props.allowTags;
@@ -687,13 +687,13 @@ export const SelectBody = createReactClass({
       attrs = UU5.Common.Tools.merge(
         {
           tabIndex: !this.props.readOnly && !this.props.disabled ? "0" : undefined,
-          onFocus: !this.props.readOnly && !this.props.disabled ? () => this._onFocus() : null
+          onFocus: !this.props.readOnly && !this.props.disabled ? () => this._onFocus() : null,
         },
         attrs
       );
     }
 
-    let handleClick = e => {
+    let handleClick = (e) => {
       let clickData = this._findTarget(e.nativeEvent);
       if (clickData.input && ((this.isOpen() && !clickData.item) || !this.isOpen())) {
         document.activeElement.blur();
@@ -713,7 +713,7 @@ export const SelectBody = createReactClass({
 
     if (!this.props.readOnly && !this.props.disabled) {
       let originalOnClick = attrs.onClick;
-      attrs.onClick = e => {
+      attrs.onClick = (e) => {
         if (typeof originalOnClick === "function") {
           originalOnClick(e);
         }
@@ -758,7 +758,7 @@ export const SelectBody = createReactClass({
         </ItemList>
       </>
     );
-  }
+  },
   //@@viewOff:render
 });
 

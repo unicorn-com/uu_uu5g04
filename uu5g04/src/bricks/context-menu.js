@@ -33,7 +33,7 @@ export const ContextMenu = UU5.Common.VisualComponent.create({
     UU5.Common.SectionMixin,
     UU5.Common.CcrWriterMixin,
     UU5.Common.NestingLevelMixin,
-    UU5.Common.PureRenderMixin
+    UU5.Common.PureRenderMixin,
   ],
   //@@viewOff:mixins
 
@@ -42,14 +42,14 @@ export const ContextMenu = UU5.Common.VisualComponent.create({
     tagName: ns.name("ContextMenu"),
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
-      main: ns.css("context-menu")
+      main: ns.css("context-menu"),
     },
     defaults: {
-      childTagName: "UU5.Bricks.ContextMenu.Item"
+      childTagName: "UU5.Bricks.ContextMenu.Item",
     },
     opt: {
-      nestingLevelRoot: true
-    }
+      nestingLevelRoot: true,
+    },
   },
   //@@viewOff:statics
 
@@ -59,7 +59,7 @@ export const ContextMenu = UU5.Common.VisualComponent.create({
     forceRender: UU5.PropTypes.bool,
     parentElement: UU5.PropTypes.object,
     allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
-    compactSubmenu: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string])
+    compactSubmenu: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string]),
   },
   //@@viewOff:propTypes
 
@@ -70,7 +70,7 @@ export const ContextMenu = UU5.Common.VisualComponent.create({
       forceRender: false,
       parentElement: null,
       allowTags: [],
-      compactSubmenu: "xs"
+      compactSubmenu: "xs",
     };
   },
   //@@viewOff:getDefaultProps
@@ -110,7 +110,7 @@ export const ContextMenu = UU5.Common.VisualComponent.create({
     if (!result && (typeof child !== "string" || child.trim())) {
       if (childTagName)
         this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagName], {
-          mixinName: "UU5.Common.BaseMixin"
+          mixinName: "UU5.Common.BaseMixin",
         });
       else this.showError("childNotAllowed", [child, defaultChildTagName], { mixinName: "UU5.Common.BaseMixin" });
     }
@@ -120,7 +120,7 @@ export const ContextMenu = UU5.Common.VisualComponent.create({
 
   //@@viewOn:private
   _getPopoverContent(content) {
-    return <ScreenSize>{opt => this._renderMenuType(opt, content)}</ScreenSize>;
+    return <ScreenSize>{(opt) => this._renderMenuType(opt, content)}</ScreenSize>;
   },
 
   _getChildren(content) {
@@ -136,7 +136,7 @@ export const ContextMenu = UU5.Common.VisualComponent.create({
     props.header = this.getHeader();
     props.footer = this.getFooter();
     props.nestingLevel = this.getNestingLevel();
-    props.ref_ = ref => (this._popover = ref);
+    props.ref_ = (ref) => (this._popover = ref);
 
     return props;
   },
@@ -168,7 +168,7 @@ export const ContextMenu = UU5.Common.VisualComponent.create({
         <ScreenSize>{this._renderMenuType}</ScreenSize>
       </Popover>
     );
-  }
+  },
   //@@viewOff:render
 });
 

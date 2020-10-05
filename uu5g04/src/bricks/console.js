@@ -33,8 +33,8 @@ export const Console = UU5.Common.VisualComponent.create({
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "smallBox"),
     classNames: {
       main: ns.css("console"),
-      arrow: ns.css("console-with-arrow")
-    }
+      arrow: ns.css("console-with-arrow"),
+    },
   },
   //@@viewOff:statics
 
@@ -47,7 +47,7 @@ export const Console = UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
-      content: []
+      content: [],
     };
   },
   //@@viewOff:reactLifeCycle
@@ -72,11 +72,11 @@ export const Console = UU5.Common.VisualComponent.create({
 
   //@@viewOn:private
   _log(input, color, setStateCallback) {
-    this.setState(state => {
+    this.setState((state) => {
       const content = state.content.slice();
       content.push({
         content: this._prepareInput(input),
-        color: color
+        color: color,
       });
       return { content };
     }, setStateCallback);
@@ -105,7 +105,7 @@ export const Console = UU5.Common.VisualComponent.create({
       );
     }
     return <Pre {...this.getMainPropsToPass()}>{divs}</Pre>;
-  }
+  },
   //@@viewOff:render
 });
 

@@ -46,7 +46,7 @@ function getConstantValues() {
       hasTouch: maxTouchPoints > 0 || "ontouchstart" in window,
       hasPointer: typeof matchMedia !== "undefined" ? matchMedia("(pointer: fine)").matches : true, // touch is considered "(pointer: coarse)"
       // isWebView: false, // TODO Add when uuMobile apps start giving us the info.
-      isHeadless: !!webdriver
+      isHeadless: !!webdriver,
     };
     if (process.env.NODE_ENV === "test") return result; // don't store locally
     constantValues = result;
@@ -69,10 +69,10 @@ const DeviceProvider = createComponent({
       "portrait-primary",
       "portrait-secondary",
       "landscape-primary",
-      "landscape-secondary"
+      "landscape-secondary",
     ]),
     isWebView: UU5.PropTypes.bool,
-    isHeadless: UU5.PropTypes.bool
+    isHeadless: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -84,7 +84,7 @@ const DeviceProvider = createComponent({
     hasPointer: undefined,
     orientation: undefined,
     isWebView: undefined,
-    isHeadless: undefined
+    isHeadless: undefined,
   },
   //@@viewOff:defaultProps
 
@@ -109,7 +109,7 @@ const DeviceProvider = createComponent({
     //@@viewOn:render
     return <DeviceContext.Provider value={value}>{children}</DeviceContext.Provider>;
     //@@viewOff:render
-  }
+  },
 });
 
 const INITIAL = {};
@@ -136,7 +136,7 @@ function useLazyProperty(obj, propName, accessor) {
   }
   useLayoutEffect(() => {
     if (accessedRef.current) {
-      let stopTrackingFn = accessor.startTracking(newValue => setStoredValue(newValue));
+      let stopTrackingFn = accessor.startTracking((newValue) => setStoredValue(newValue));
       if (!stopTrackingFn) {
         throw new Error("Invalid usage of useLazyProperty hook. 'startTracking' function must return stopTracking fn.");
       }
@@ -166,7 +166,7 @@ function useLazyProperty(obj, propName, accessor) {
           }
           accessedRef.current = true;
           return immediateValueRef.current;
-        }
+        },
       });
     }
     return result;
@@ -187,19 +187,19 @@ const orientationAccessor = {
     return type;
   },
   startTracking(onChange) {
-    let listenerFn = value => onChange(value || orientationAccessor.getImmediateValue());
+    let listenerFn = (value) => onChange(value || orientationAccessor.getImmediateValue());
     orientationListeners.register(listenerFn);
     return () => orientationListeners.unregister(listenerFn);
-  }
+  },
 };
 if ("onorientationchange" in window) {
   window.addEventListener("orientationchange", () => orientationListeners.run());
 } else if (window.matchMedia) {
-  matchMedia("(orientation: portrait)").addListener(e =>
+  matchMedia("(orientation: portrait)").addListener((e) =>
     orientationListeners.run(e && e.matches ? "portrait-primary" : "landscape-primary")
   );
 } else {
-  window.addEventListener("resize", e => orientationListeners.run());
+  window.addEventListener("resize", (e) => orientationListeners.run());
 }
 
 function useDevice() {

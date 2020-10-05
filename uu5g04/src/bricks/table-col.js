@@ -26,7 +26,7 @@ const TableCol = UU5.Common.VisualComponent.create({
     UU5.Common.PureRenderMixin,
     UU5.Common.ElementaryMixin,
     UU5.Common.NestingLevelMixin,
-    UU5.Common.ColorSchemaMixin
+    UU5.Common.ColorSchemaMixin,
   ],
   //@@viewOff:mixins
 
@@ -36,36 +36,36 @@ const TableCol = UU5.Common.VisualComponent.create({
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "smallBox"),
     classNames: {
       main: ns.css("table-col"),
-      bg: "uu5-common-bg"
+      bg: "uu5-common-bg",
     },
     defaults: {
-      parentTagName: "UU5.Bricks.Table.ColGroup"
+      parentTagName: "UU5.Bricks.Table.ColGroup",
     },
     opt: {
-      nestingLevelWrapper: true
+      nestingLevelWrapper: true,
     },
     errors: {
-      invalidParent: "Parent of this component is not Table.ColGroup."
-    }
+      invalidParent: "Parent of this component is not Table.ColGroup.",
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    span: UU5.PropTypes.number
+    span: UU5.PropTypes.number,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
-      span: null
+      span: null,
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  UNSAFE_componentWillMount: function() {
+  UNSAFE_componentWillMount: function () {
     let parent = this.getParent();
 
     if (parent) {
@@ -88,7 +88,7 @@ const TableCol = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _getMainProps: function() {
+  _getMainProps: function () {
     var props = this.getMainAttrs();
     this.getColorSchema() && (props.className += " " + this.getClassName().bg);
     this.props.span && (props.span = this.props.span);
@@ -97,9 +97,9 @@ const TableCol = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return this.getNestingLevel() ? <col {...this._getMainProps()} /> : null;
-  }
+  },
   //@@viewOff:render
 });
 

@@ -23,7 +23,7 @@ import "./popover.less";
 
 const PopoverContext = UU5.Common.Context.create({});
 
-const withContext = Component => {
+const withContext = (Component) => {
   if (!UU5.Common.Context.isSupported()) return Component;
   let forwardRef = UU5.Common.Reference.forward((props, ref) => {
     return (
@@ -64,7 +64,7 @@ export const Popover = withContext(
       UU5.Common.ElementaryMixin,
       UU5.Common.SectionMixin,
       UU5.Common.NestingLevelMixin,
-      UU5.Common.CcrWriterMixin
+      UU5.Common.CcrWriterMixin,
     ],
     //@@viewOff:mixins
 
@@ -83,14 +83,14 @@ export const Popover = withContext(
         left: ns.css("popover-menu-left"),
         right: ns.css("popover-menu-right"),
         removeHeight: ns.css("popover-remove-height"),
-        displayed: ns.css("popover-displayed")
+        displayed: ns.css("popover-displayed"),
       },
       defaults: {
-        transitionDuration: 100
+        transitionDuration: 100,
       },
       opt: {
-        nestingLevelRoot: true
-      }
+        nestingLevelRoot: true,
+      },
     },
     //@@viewOff:statics
 
@@ -108,7 +108,7 @@ export const Popover = withContext(
       footer: UU5.Common.SectionMixin.propTypes.footer,
       className: UU5.Common.BaseMixin.propTypes.className,
       location: UU5.PropTypes.oneOf(["local", "portal"]),
-      autoResize: UU5.PropTypes.bool
+      autoResize: UU5.PropTypes.bool,
     },
     //@@viewOff:propTypes
 
@@ -120,7 +120,7 @@ export const Popover = withContext(
         fitHeightToViewport: false,
         getToolbar: undefined,
         location: undefined,
-        autoResize: false
+        autoResize: false,
       };
     },
     //@@viewOff:getDefaultProps
@@ -143,11 +143,11 @@ export const Popover = withContext(
         disableBackdrop: false,
         position: {
           top: false,
-          left: false
+          left: false,
         },
         removeHeight: this.props.hidden && !this.props.shown,
         display: false,
-        autoResize: this.props.autoResize
+        autoResize: this.props.autoResize,
       };
     },
 
@@ -185,7 +185,7 @@ export const Popover = withContext(
           hidden: !nextProps.shown,
           display: nextProps.shown,
           removeHeight: nextProps.hidden && !nextProps.shown,
-          autoResize: nextProps.autoResize
+          autoResize: nextProps.autoResize,
         });
       }
     },
@@ -307,7 +307,7 @@ export const Popover = withContext(
             onClose: onClose,
             onBeforeClose: onBeforeClose,
             isPagePopover: !!opt.customPopover,
-            autoResize
+            autoResize,
           },
           () => {
             this._addEvent(onBeforeClose, onClose);
@@ -363,7 +363,7 @@ export const Popover = withContext(
             pageX,
             pageY,
             maxHeight,
-            position
+            position,
           },
           setStateCallback
         );
@@ -374,7 +374,7 @@ export const Popover = withContext(
           top,
           bottom: top,
           width: 0,
-          height: 0
+          height: 0,
         };
 
         if (!opt.preventPositioning) {
@@ -394,7 +394,7 @@ export const Popover = withContext(
             pageX,
             pageY,
             maxHeight,
-            position
+            position,
           },
           setStateCallback
         );
@@ -430,7 +430,7 @@ export const Popover = withContext(
       if (isRelative) {
         availableAreaRect = {
           top: document.body.getBoundingClientRect().top,
-          height: (document.scrollingElement || document.body).scrollHeight
+          height: (document.scrollingElement || document.body).scrollHeight,
         };
         availableAreaRect.bottom = availableAreaRect.top + availableAreaRect.height;
       }
@@ -606,7 +606,7 @@ export const Popover = withContext(
         top: positionArr.indexOf("top") > -1,
         bottom: positionArr.indexOf("bottom") > -1,
         left: positionArr.indexOf("left") > -1,
-        right: positionArr.indexOf("right") > -1
+        right: positionArr.indexOf("right") > -1,
       };
 
       !position.top && !position.bottom && (position.bottom = true);
@@ -685,7 +685,7 @@ export const Popover = withContext(
 
       if (this._closeListener) this._removeEvent();
       if (!this.state.disableBackdrop && !this.props.disableBackdrop) {
-        this._closeListener = e => {
+        this._closeListener = (e) => {
           let isPopover = this._findTarget(e.target);
 
           if (!this._stopPropagation && !isPopover && !this.isHidden()) {
@@ -769,7 +769,7 @@ export const Popover = withContext(
     _getBody() {
       let children = this.buildChildren({
         content: this.state.content || this.props.content,
-        children: this.props.children
+        children: this.props.children,
       });
       if (children) {
         let props = {};
@@ -813,7 +813,7 @@ export const Popover = withContext(
         result = null;
       }
       return result;
-    }
+    },
     //@@viewOff:render
   })
 );

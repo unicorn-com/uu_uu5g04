@@ -23,19 +23,19 @@ const CONFIG = {
     "UU5.Common.SectionMixin",
     "UU5.Common.ContentMixin",
     "UU5.Common.LevelMixin",
-    "UU5.Common.NestingLevelMixin"
+    "UU5.Common.NestingLevelMixin",
   ],
   props: {
     props: {
-      values: [{ key: "value", num: 3, bool: true }]
-    }
+      values: [{ key: "value", num: 3, bool: true }],
+    },
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Todo`, () => {

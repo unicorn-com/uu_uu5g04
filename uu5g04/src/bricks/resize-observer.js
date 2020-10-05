@@ -24,11 +24,11 @@ if (window.ResizeObserver) {
   ResizeObserver = class extends React.Component {
     static propTypes = {
       onResize: UU5.PropTypes.func.isRequired,
-      onInitialSize: UU5.PropTypes.func
+      onInitialSize: UU5.PropTypes.func,
     };
     static defaultProps = {
       onResize: undefined,
-      onInitialSize: undefined
+      onInitialSize: undefined,
     };
     constructor(props) {
       super(props);
@@ -36,7 +36,7 @@ if (window.ResizeObserver) {
     }
     componentDidMount() {
       if (this._parentNode) {
-        this._observer = new window.ResizeObserver(entries => {
+        this._observer = new window.ResizeObserver((entries) => {
           let rect = entries[entries.length - 1].contentRect;
           if (rect) this.props.onResize({ width: rect.width, height: rect.height });
         });
@@ -76,18 +76,18 @@ if (window.ResizeObserver) {
         expand: ns.css("resize-observer-expand"),
         expandInner: ns.css("resize-observer-expand-inner"),
         shrink: ns.css("resize-observer-shrink"),
-        shrinkInner: ns.css("resize-observer-shrink-inner")
+        shrinkInner: ns.css("resize-observer-shrink-inner"),
       },
       warnings: {
-        parentNotRelative: 'Parent element of a ResizeObserver component is missing position="relative" style.'
-      }
+        parentNotRelative: 'Parent element of a ResizeObserver component is missing position="relative" style.',
+      },
     },
     //@@viewOff:statics
 
     //@@viewOn:propTypes
     propTypes: {
       onResize: UU5.PropTypes.func.isRequired,
-      onInitialSize: UU5.PropTypes.func
+      onInitialSize: UU5.PropTypes.func,
     },
     //@@viewOff:propTypes
 
@@ -95,7 +95,7 @@ if (window.ResizeObserver) {
     getDefaultProps() {
       return {
         onResize: undefined,
-        onInitialSize: undefined
+        onInitialSize: undefined,
       };
     },
     //@@viewOff:getDefaultProps
@@ -193,7 +193,7 @@ if (window.ResizeObserver) {
       if (!element.getBoundingClientRect) {
         return {
           width: element.offsetWidth,
-          height: element.offsetHeight
+          height: element.offsetHeight,
         };
       }
 
@@ -201,7 +201,7 @@ if (window.ResizeObserver) {
 
       return {
         width: Math.round(rect.width),
-        height: Math.round(rect.height)
+        height: Math.round(rect.height),
       };
     },
     //@@viewOff:private
@@ -209,16 +209,16 @@ if (window.ResizeObserver) {
     //@@viewOn:render
     render() {
       return (
-        <div {...this.getMainAttrs()} ref={element => (this._rootElement = element)}>
-          <div ref={element => (this._expandElement = element)} className={this.getClassName("expand")}>
+        <div {...this.getMainAttrs()} ref={(element) => (this._rootElement = element)}>
+          <div ref={(element) => (this._expandElement = element)} className={this.getClassName("expand")}>
             <div className={this.getClassName("expandInner")} />
           </div>
-          <div ref={element => (this._shrinkElement = element)} className={this.getClassName("shrink")}>
+          <div ref={(element) => (this._shrinkElement = element)} className={this.getClassName("shrink")}>
             <div className={this.getClassName("shrinkInner")} />
           </div>
         </div>
       );
-    }
+    },
     //@@viewOff:render
   });
 }

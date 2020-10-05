@@ -29,11 +29,11 @@ export const CodePreview = UU5.Common.VisualComponent.create({
     tagName: ns.name("CodePreview"),
     classNames: {
       main: ns.css("code-preview"),
-      toolbar: ns.css("code-preview-toolbar")
+      toolbar: ns.css("code-preview-toolbar"),
     },
     opt: {
-      pureRender: true
-    }
+      pureRender: true,
+    },
   },
   //@@viewOff:statics
 
@@ -41,7 +41,7 @@ export const CodePreview = UU5.Common.VisualComponent.create({
   propTypes: {
     tagName: UU5.PropTypes.string,
     props: UU5.PropTypes.object,
-    uu5string: UU5.PropTypes.bool
+    uu5string: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -50,7 +50,7 @@ export const CodePreview = UU5.Common.VisualComponent.create({
     return {
       tagName: "",
       props: {},
-      uu5string: false
+      uu5string: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -59,7 +59,7 @@ export const CodePreview = UU5.Common.VisualComponent.create({
   getInitialState() {
     return {
       props: this.props.props,
-      uu5string: this.props.uu5string
+      uu5string: this.props.uu5string,
     };
   },
 
@@ -67,7 +67,7 @@ export const CodePreview = UU5.Common.VisualComponent.create({
     if (nextProps.controlled) {
       this.setState({
         props: nextProps.props,
-        uu5string: nextProps.uu5string
+        uu5string: nextProps.uu5string,
       });
     }
   },
@@ -75,7 +75,7 @@ export const CodePreview = UU5.Common.VisualComponent.create({
 
   //@@viewOn:interface
   setProp(name, value) {
-    this.setState(state => {
+    this.setState((state) => {
       let newProps = UU5.Common.Tools.merge({}, state.props);
       newProps[name] = value;
       return { props: newProps };
@@ -166,7 +166,7 @@ export const CodePreview = UU5.Common.VisualComponent.create({
   },
 
   _toggleUu5String() {
-    this.setState(state => ({ uu5string: !state.uu5string }));
+    this.setState((state) => ({ uu5string: !state.uu5string }));
   },
 
   _copy() {
@@ -228,14 +228,14 @@ export const CodePreview = UU5.Common.VisualComponent.create({
           {UU5.Common.Tools.findComponent("UU5.CodeKit.CodeViewer", {
             codeStyle: "js",
             showGutter: false,
-            value: this._getValue()
+            value: this._getValue(),
           })}
         </UU5.Bricks.Div>
       );
     }
 
     return result;
-  }
+  },
   //@@viewOff:render
 });
 

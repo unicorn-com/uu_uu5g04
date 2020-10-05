@@ -29,7 +29,7 @@ export const ButtonToTop = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.ColorSchemaMixin,
     UU5.Common.NestingLevelMixin,
-    UU5.Common.PureRenderMixin
+    UU5.Common.PureRenderMixin,
   ],
   //@@viewOff:mixins
 
@@ -39,11 +39,11 @@ export const ButtonToTop = UU5.Common.VisualComponent.create({
     nestingLevel: "smallBox",
     classNames: {
       main: ns.css("button-to-top"),
-      stickyButton: ns.css("button-to-top-sticky")
+      stickyButton: ns.css("button-to-top-sticky"),
     },
     opt: {
-      nestingLevelWrapper: true
-    }
+      nestingLevelWrapper: true,
+    },
   },
   //@@viewOff:statics
 
@@ -56,7 +56,7 @@ export const ButtonToTop = UU5.Common.VisualComponent.create({
     bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent"]),
     borderRadius: UU5.PropTypes.string,
     elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-    elevationHover: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
+    elevationHover: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
   },
   //@@viewOff:propTypes
 
@@ -70,7 +70,7 @@ export const ButtonToTop = UU5.Common.VisualComponent.create({
       bgStyle: "outline",
       borderRadius: null,
       elevation: null,
-      elevationHover: null
+      elevationHover: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -78,7 +78,7 @@ export const ButtonToTop = UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
-      visible: false
+      visible: false,
     };
   },
 
@@ -102,7 +102,7 @@ export const ButtonToTop = UU5.Common.VisualComponent.create({
     }
 
     this.setState({
-      isInside: this._scrollElement ? this._scrollElement.contains(this.findDOMNode()) : false
+      isInside: this._scrollElement ? this._scrollElement.contains(this.findDOMNode()) : false,
     });
   },
 
@@ -141,7 +141,7 @@ export const ButtonToTop = UU5.Common.VisualComponent.create({
           this._scrollElement.getBoundingClientRect().height -
           (this.props.size === "s" ? 32 : this.props.size === "m" ? 40 : this.props.size === "l" ? 48 : 56);
         this.setState({
-          offsetY: offsetY
+          offsetY: offsetY,
         });
       }
     }
@@ -202,7 +202,7 @@ export const ButtonToTop = UU5.Common.VisualComponent.create({
         <Icon icon={this.props.icon} />
       </Button>
     );
-  }
+  },
   //@@viewOff:render
 });
 

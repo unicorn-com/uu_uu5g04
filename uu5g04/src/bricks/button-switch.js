@@ -28,7 +28,7 @@ export const ButtonSwitch = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.NestingLevelMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.PureRenderMixin
+    UU5.Common.PureRenderMixin,
   ],
   //@@viewOff:mixins
 
@@ -37,11 +37,11 @@ export const ButtonSwitch = UU5.Common.VisualComponent.create({
     tagName: ns.name("ButtonSwitch"),
     nestingLevel: "smallBox",
     classNames: {
-      main: ns.css("button-switch")
+      main: ns.css("button-switch"),
     },
     opt: {
-      nestingLevelWrapper: true
-    }
+      nestingLevelWrapper: true,
+    },
   },
   //@@viewOff:statics
 
@@ -50,25 +50,25 @@ export const ButtonSwitch = UU5.Common.VisualComponent.create({
     onProps: UU5.PropTypes.object,
     offProps: UU5.PropTypes.object,
     switchedOn: UU5.PropTypes.bool,
-    props: UU5.PropTypes.object
+    props: UU5.PropTypes.object,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       onProps: null,
       offProps: null,
       switchedOn: false,
-      props: null
+      props: null,
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  getInitialState: function() {
+  getInitialState: function () {
     return {
-      switchedOn: this.props.switchedOn
+      switchedOn: this.props.switchedOn,
     };
   },
 
@@ -82,7 +82,7 @@ export const ButtonSwitch = UU5.Common.VisualComponent.create({
     }
   },
 
-  UNSAFE_componentWillReceiveProps: function(nextProps) {
+  UNSAFE_componentWillReceiveProps: function (nextProps) {
     if (nextProps.controlled) {
       this.setState({ switchedOn: nextProps.switchedOn });
     }
@@ -90,28 +90,28 @@ export const ButtonSwitch = UU5.Common.VisualComponent.create({
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
-  switchOn: function(setStateCallback) {
+  switchOn: function (setStateCallback) {
     this.setState({ switchedOn: true }, setStateCallback);
     return this;
   },
 
-  switchOff: function(setStateCallback) {
+  switchOff: function (setStateCallback) {
     this.setState({ switchedOn: false }, setStateCallback);
     return this;
   },
 
-  toggle: function(setStateCallback) {
-    this.setState(function(state) {
+  toggle: function (setStateCallback) {
+    this.setState(function (state) {
       return { switchedOn: !state.switchedOn };
     }, setStateCallback);
     return this;
   },
 
-  isSwitchOn: function() {
+  isSwitchOn: function () {
     return this.state.switchedOn;
   },
 
-  isSwitchOff: function() {
+  isSwitchOff: function () {
     return !this.isSwitchOn();
   },
   //@@viewOff:interface
@@ -123,7 +123,7 @@ export const ButtonSwitch = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return (
       <Button
         {...this.getMainPropsToPass()}
@@ -135,7 +135,7 @@ export const ButtonSwitch = UU5.Common.VisualComponent.create({
         {this.getChildren()}
       </Button>
     );
-  }
+  },
   //@@viewOff:render
 });
 

@@ -27,7 +27,7 @@ export default UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.NestingLevelMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.ColorSchemaMixin
+    UU5.Common.ColorSchemaMixin,
   ],
   //@@viewOff:mixins
 
@@ -36,32 +36,32 @@ export default UU5.Common.VisualComponent.create({
     tagName: ns.name("Table.Td"),
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "inline"),
     classNames: {
-      main: ns.css("table-td uu5-common-text")
+      main: ns.css("table-td uu5-common-text"),
       //bg: 'uu5-common-bg'
     },
     defaults: {
-      parentTagName: "UU5.Bricks.Table.Tr"
+      parentTagName: "UU5.Bricks.Table.Tr",
     },
     opt: {
-      nestingLevelWrapper: true
+      nestingLevelWrapper: true,
     },
     errors: {
-      invalidParent: "Parent of this component is not Table."
-    }
+      invalidParent: "Parent of this component is not Table.",
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
     colSpan: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
-    rowSpan: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string])
+    rowSpan: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
     //background: UU5.PropTypes.bool
   },
 
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       colSpan: null,
-      rowSpan: null
+      rowSpan: null,
       //background: false
     };
   },
@@ -71,7 +71,7 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  UNSAFE_componentWillMount: function() {
+  UNSAFE_componentWillMount: function () {
     let parent = this.getParent();
 
     if (parent) {
@@ -94,7 +94,7 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _getMainProps: function() {
+  _getMainProps: function () {
     const props = this.getMainAttrs();
     //this.props.background && (props.className += ' ' + this.getClassName().bg);
     this.props.colSpan && (props.colSpan = this.props.colSpan);
@@ -104,13 +104,13 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return this.getNestingLevel() ? (
       <td {...this._getMainProps()}>
         {this.getChildren()}
         {this.getDisabledCover()}
       </td>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });

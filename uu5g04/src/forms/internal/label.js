@@ -26,7 +26,7 @@ export default UU5.Common.VisualComponent.create({
     UU5.Common.PureRenderMixin,
     UU5.Common.ContentMixin,
     UU5.Common.LsiMixin,
-    UU5.Common.ColorSchemaMixin
+    UU5.Common.ColorSchemaMixin,
   ],
   //@@viewOff:mixins
 
@@ -39,8 +39,8 @@ export default UU5.Common.VisualComponent.create({
       required: ns.css("label-required"),
       tooltip: ns.css("label-tooltip"),
       tooltipWrapper: ns.css("label-tooltip-wrapper"),
-      withWidth: ns.css("with-label-width")
-    }
+      withWidth: ns.css("with-label-width"),
+    },
   },
   //@@viewOff:statics
 
@@ -49,7 +49,7 @@ export default UU5.Common.VisualComponent.create({
     for: UU5.PropTypes.string,
     required: UU5.PropTypes.bool,
     width: UU5.PropTypes.string,
-    tooltipIcon: UU5.PropTypes.string
+    tooltipIcon: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
@@ -59,7 +59,7 @@ export default UU5.Common.VisualComponent.create({
       for: null,
       required: false,
       width: null,
-      tooltipIcon: "mdi-information-outline"
+      tooltipIcon: "mdi-information-outline",
     };
   },
   //@@viewOff:getDefaultProps
@@ -146,6 +146,6 @@ export default UU5.Common.VisualComponent.create({
         </label>
       </UU5.Bricks.Div>
     );
-  }
+  },
   //@@viewOn:render
 });

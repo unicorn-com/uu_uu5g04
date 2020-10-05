@@ -25,7 +25,7 @@ export const Tile = UU5.Common.VisualComponent.create({
     UU5.Common.NestingLevelMixin,
     UU5.Common.ColorSchemaMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.PureRenderMixin
+    UU5.Common.PureRenderMixin,
   ],
   //@@viewOff:mixins
 
@@ -44,11 +44,11 @@ export const Tile = UU5.Common.VisualComponent.create({
         }
       `,
       bgStyle: "uu5-common-bg-style-",
-      elevation: "uu5-common-elevation-"
+      elevation: "uu5-common-elevation-",
     },
     opt: {
-      pureRender: true
-    }
+      pureRender: true,
+    },
   },
   //@@viewOff:statics
 
@@ -59,7 +59,7 @@ export const Tile = UU5.Common.VisualComponent.create({
     borderRadius: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
     width: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
     padding: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
-    margin: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string])
+    margin: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
   },
   //@@viewOff:propTypes
 
@@ -71,7 +71,7 @@ export const Tile = UU5.Common.VisualComponent.create({
       borderRadius: undefined,
       width: undefined,
       padding: undefined,
-      margin: undefined
+      margin: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -95,7 +95,7 @@ export const Tile = UU5.Common.VisualComponent.create({
     if (classNames.length) attrs.className = classNames.join(" ");
 
     let style = {};
-    ["borderRadius", "width", "padding", "margin"].forEach(name => {
+    ["borderRadius", "width", "padding", "margin"].forEach((name) => {
       if (this.props[name] != undefined) style[name] = this.props[name];
     });
     if (Object.keys.length) attrs.style = { ...style, ...attrs.style };
@@ -112,7 +112,7 @@ export const Tile = UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </div>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

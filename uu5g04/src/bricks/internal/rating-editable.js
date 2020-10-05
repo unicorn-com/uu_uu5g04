@@ -10,7 +10,7 @@ const editableComponentPropsSetup = [
     name: "count",
     type: "number",
     label: Lsi.rating.countLabel,
-    getProps: () => ({ min: 0, valueType: "number" })
+    getProps: () => ({ min: 0, valueType: "number" }),
   },
   {
     name: "value",
@@ -23,28 +23,28 @@ const editableComponentPropsSetup = [
       min: 0,
       max: componentProps.count,
       decimalSeparator: ".",
-      valueType: "number"
-    })
+      valueType: "number",
+    }),
   },
   {
     name: "icon",
     type: "iconPicker",
     label: Lsi.rating.iconLabel,
-    getProps: props => ({
-      onChange: opt => props.onChange({ ...opt, value: opt.value || "mdi-star" })
-    })
+    getProps: (props) => ({
+      onChange: (opt) => props.onChange({ ...opt, value: opt.value || "mdi-star" }),
+    }),
   },
   {
     name: "size",
-    getProps: () => ({ minSize: "s" })
-  }
+    getProps: () => ({ minSize: "s" }),
+  },
 ];
 
 const editablePropsSetup = [
   {
     name: <UU5.Bricks.Lsi lsi={Lsi.common.componentPropsLabel} />,
-    setup: editableComponentPropsSetup
-  }
+    setup: editableComponentPropsSetup,
+  },
 ];
 
 export const RatingEditable = UU5.Common.VisualComponent.create({
@@ -56,21 +56,21 @@ export const RatingEditable = UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("RatingEditable"),
     classNames: {
-      main: ns.css("rating-editable")
-    }
+      main: ns.css("rating-editable"),
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    component: UU5.PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      component: undefined
+      component: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -107,7 +107,7 @@ export const RatingEditable = UU5.Common.VisualComponent.create({
         header={<UU5.Bricks.Lsi lsi={Lsi.rating.modalHeader} />}
       />
     );
-  }
+  },
   //@@viewOff:render
 });
 

@@ -22,22 +22,22 @@ const CONFIG = {
     "UU5.Common.BaseMixin",
     "UU5.Common.ElementaryMixin",
     "UU5.Common.ContentMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     tagName: {
-      values: ["UU5.Bricks.Button", "UU5.Forms.TextArea", "Plus4U5.Link", "UU5.Bricks.Image"]
+      values: ["UU5.Bricks.Button", "UU5.Forms.TextArea", "Plus4U5.Link", "UU5.Bricks.Image"],
     },
     target: {
-      values: ["_blank", "_parent", "_top", "_self"]
-    }
+      values: ["_blank", "_parent", "_top", "_self"],
+    },
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 /**
@@ -66,10 +66,10 @@ beforeEach(() => {
     doc: "https://uuos9.plus4u.net/uu-dockitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book",
     awid: "fe96c133c895434bbd4d5b24831483f3",
     sys: { cts: "2018-04-19T16:38:28.917Z", mts: "2018-04-19T16:38:28.917Z", rev: 0 },
-    uuAppErrorMap: {}
+    uuAppErrorMap: {},
   };
 
-  UU5.Common.Tools.loadLibrary = function(libName, callback) {
+  UU5.Common.Tools.loadLibrary = function (libName, callback) {
     setTimeout(() => callback(response), 10);
   };
 });
@@ -100,10 +100,10 @@ describe(`UU5.Common.Help component props testing`, () => {
       doc: "https://uuos9.plus4u.net/uu-dockitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book",
       awid: "fe96c133c895434bbd4d5b24831483f3",
       sys: { cts: "2018-04-19T16:38:38.136Z", mts: "2018-04-19T16:38:38.136Z", rev: 0 },
-      uuAppErrorMap: {}
+      uuAppErrorMap: {},
     };
     //mock of loadLibrary
-    UU5.Common.Tools.loadLibrary = function(libName, callback) {
+    UU5.Common.Tools.loadLibrary = function (libName, callback) {
       setTimeout(() => callback(responseBrickButton), 10);
     };
     jest.useFakeTimers();

@@ -30,7 +30,7 @@ export const Code = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.ContentMixin,
     UU5.Common.NestingLevelMixin,
-    UU5.Common.PureRenderMixin
+    UU5.Common.PureRenderMixin,
   ],
   //@@viewOff:mixins
 
@@ -39,8 +39,8 @@ export const Code = UU5.Common.VisualComponent.create({
     tagName: ns.name("Code"),
     nestingLevel: "inline",
     classNames: {
-      main: ns.css("code")
-    }
+      main: ns.css("code"),
+    },
   },
   //@@viewOff:statics
 
@@ -60,7 +60,7 @@ export const Code = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _getMainProps: function() {
+  _getMainProps: function () {
     var mainProps = this.getMainPropsToPass();
 
     mainProps.id = this.getId() + "-code";
@@ -72,11 +72,11 @@ export const Code = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return this.getNestingLevel() ? (
       <Code_ {...this._getMainProps()}>{this.props.children && UU5.Common.Children.toArray(this.props.children)}</Code_>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

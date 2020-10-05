@@ -26,7 +26,7 @@ export default UU5.Common.VisualComponent.create({
     UU5.Common.PureRenderMixin,
     UU5.Common.ElementaryMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.NestingLevelMixin
+    UU5.Common.NestingLevelMixin,
   ],
   //@@viewOff:mixins
 
@@ -38,35 +38,35 @@ export default UU5.Common.VisualComponent.create({
       main: ns.css("swiper-menu"),
       left: ns.css("swiper-menu-left"),
       right: ns.css("swiper-menu-right"),
-      open: ns.css("swiper-menu-open")
+      open: ns.css("swiper-menu-open"),
     },
     defaults: {
-      parentTagName: "UU5.Bricks.Swiper"
+      parentTagName: "UU5.Bricks.Swiper",
     },
     errors: {
-      invalidParent: "Parent of this component is not Swiper."
-    }
+      invalidParent: "Parent of this component is not Swiper.",
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
     pullRight: UU5.PropTypes.bool,
-    _open: UU5.PropTypes.bool
+    _open: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       pullRight: false,
-      _open: false
+      _open: false,
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  UNSAFE_componentWillMount: function() {
+  UNSAFE_componentWillMount: function () {
     let parent = this.getParent();
 
     if (parent) {
@@ -92,7 +92,7 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     var mainAttrs = this.getMainAttrs();
 
     mainAttrs.className += " " + (this.props.pullRight ? this.getClassName().right : this.getClassName().left);
@@ -104,6 +104,6 @@ export default UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </div>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });

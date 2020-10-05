@@ -24,7 +24,7 @@ const MyAllowTagsComponents = UU5.Common.VisualComponent.create({
   statics: { tagName: "UU5.Example.MyCompButton", classNames: { main: "mytr" } },
   render() {
     return <UU5.Example.MyCompButton {...this.getMainPropsToPass()} />;
-  }
+  },
 });
 
 const MixinPropsFunction = UU5.Common.VisualComponent.create({
@@ -35,7 +35,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
       isCalled: false,
       value: "",
       message: "",
-      feedback: "initial"
+      feedback: "initial",
     };
   },
   onChangeHandler(event) {
@@ -74,7 +74,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
         onChangeFeedback={this.onChangeFeedbackHandler}
       />
     );
-  }
+  },
 });
 
 //`UU5.Forms.Select`
@@ -87,36 +87,36 @@ const CONFIG = {
     "UU5.Common.PureRenderMixin",
     "UU5.Forms.InputMixin",
     "UU5.Forms.ChoiceMixin",
-    "UU5.Common.ColorSchemaMixin"
+    "UU5.Common.ColorSchemaMixin",
   ],
   props: {
     value: {
-      values: ["item_1", "item_2", "item_3"]
+      values: ["item_1", "item_2", "item_3"],
     },
     multiple: {
-      values: [true, false]
+      values: [true, false],
     },
     selectAllEnabled: {
-      values: [true, false]
+      values: [true, false],
     },
     allowTags: {
-      values: [["UU5.Example.MyCompButton"]]
+      values: [["UU5.Example.MyCompButton"]],
     },
     disableBackdrop: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
   },
   requiredProps: {
     children: [
       <UU5.Forms.Select.Option key="item_1" value="item_1" id="idChild_1" />,
-      <UU5.Forms.Select.Option key="item_2" value="item_2" id="idChild_2" />
-    ]
+      <UU5.Forms.Select.Option key="item_2" value="item_2" id="idChild_2" />,
+    ],
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Forms.Select props`, () => {

@@ -28,7 +28,7 @@ export const Footer = UU5.Common.VisualComponent.create({
     UU5.Common.ContentMixin,
     UU5.Common.LevelMixin,
     UU5.Common.NestingLevelMixin,
-    UU5.Common.PureRenderMixin
+    UU5.Common.PureRenderMixin,
   ],
   //@@viewOff:mixins
 
@@ -37,11 +37,11 @@ export const Footer = UU5.Common.VisualComponent.create({
     tagName: ns.name("Footer"),
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBox", "inline"),
     classNames: {
-      main: ns.css("footer")
+      main: ns.css("footer"),
     },
     opt: {
-      nestingLevelWrapper: true
-    }
+      nestingLevelWrapper: true,
+    },
   },
   //@@viewOff:statics
 
@@ -66,7 +66,7 @@ export const Footer = UU5.Common.VisualComponent.create({
   //@@viewOn:render
   render() {
     return <footer {...this.getMainAttrs()}>{this.getChildren()}</footer>;
-  }
+  },
   //@@viewOff:render
 });
 

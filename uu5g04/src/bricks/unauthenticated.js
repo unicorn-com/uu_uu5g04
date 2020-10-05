@@ -61,9 +61,9 @@ export const Unauthenticated = UU5.Common.VisualComponent.create({
         ${nestingLevel ? "margin-top: 16px;" : "margin-left: 4px;"}
         color: inherit;
         text-decoration: underline;
-      `
+      `,
     },
-    lsi: () => Lsi.unauthenticated
+    lsi: () => Lsi.unauthenticated,
   },
   //@@viewOff:statics
 
@@ -71,7 +71,7 @@ export const Unauthenticated = UU5.Common.VisualComponent.create({
   propTypes: {
     width: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
     height: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
-    content: UU5.PropTypes.any
+    content: UU5.PropTypes.any,
   },
   //@@viewOff:propTypes
 
@@ -80,7 +80,7 @@ export const Unauthenticated = UU5.Common.VisualComponent.create({
     return {
       width: undefined,
       height: undefined,
-      content: undefined
+      content: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -147,9 +147,9 @@ export const Unauthenticated = UU5.Common.VisualComponent.create({
           <div className={this.getClassName("textWrapper")}>{this._getContent()}</div>
           {this._getLoginLink()}
         </span>
-      )
+      );
     }
-  }
+  },
   //@@viewOff:render
 });
 

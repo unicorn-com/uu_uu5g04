@@ -21,7 +21,7 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 const MyPaganitionHandler = UU5.Common.VisualComponent.create({
   getInitialState: () => {
     return {
-      isCalled: false
+      isCalled: false,
     };
   },
 
@@ -48,7 +48,7 @@ const MyPaganitionHandler = UU5.Common.VisualComponent.create({
         background
       />
     );
-  }
+  },
 });
 
 const CONFIG = {
@@ -57,57 +57,57 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     items: {
-      values: [[1, 2, 3, 4, 5, 6, 7, 8], null, []]
+      values: [[1, 2, 3, 4, 5, 6, 7, 8], null, []],
     },
     activeIndex: {
-      values: [0, 3, 6]
+      values: [0, 3, 6],
     },
     range: {
-      values: [1, 2, 3, 4]
+      values: [1, 2, 3, 4],
     },
     prevIcon: {
-      values: ["uu5-plus"]
+      values: ["uu5-plus"],
     },
     prevLabel: {
-      values: ["Předchozí"]
+      values: ["Předchozí"],
     },
     nextIcon: {
-      values: ["uu5-minus"]
+      values: ["uu5-minus"],
     },
     nextLabel: {
-      values: ["Následující"]
+      values: ["Následující"],
     },
     firstIcon: {
-      values: ["uu5-plus"]
+      values: ["uu5-plus"],
     },
     firstLabel: {
-      values: ["První"]
+      values: ["První"],
     },
     lastIcon: {
-      values: ["uu5-plus"]
+      values: ["uu5-plus"],
     },
     lastLabel: {
-      values: ["Poslední"]
+      values: ["Poslední"],
     },
     size: {
-      values: ["s", "m", "l", "xl"]
+      values: ["s", "m", "l", "xl"],
     },
     //onChange
     //onChanged
     background: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Pagination`, () => {

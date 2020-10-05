@@ -23,7 +23,7 @@ describe(`UU5.Bricks.ConfirmModal interface testing`, () => {
     expect(wrapper.instance().isOpened()).toBeFalsy();
     wrapper.instance().open(
       {
-        content: <UU5.Bricks.Div id={"uuID-div"}>Some content</UU5.Bricks.Div>
+        content: <UU5.Bricks.Div id={"uuID-div"}>Some content</UU5.Bricks.Div>,
       },
       onOpen
     );

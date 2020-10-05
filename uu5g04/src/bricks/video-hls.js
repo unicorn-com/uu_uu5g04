@@ -29,8 +29,8 @@ export const VideoHls = UU5.Common.VisualComponent.create({
   statics: {
     tagName: "UU5.Bricks.Video.Hls",
     errors: {
-      hlsVideoNotSupported: "This browser does not support playing of HLS (HTTP Live Streaming) videos."
-    }
+      hlsVideoNotSupported: "This browser does not support playing of HLS (HTTP Live Streaming) videos.",
+    },
   },
   //@@viewOff:statics
 
@@ -56,7 +56,7 @@ export const VideoHls = UU5.Common.VisualComponent.create({
 
         let hlsConfig = {
           autoStartLoad: mainAttrs.autoPlay || mainAttrs.preload !== "none",
-          xhrSetup: this._hlsXhrSetup
+          xhrSetup: this._hlsXhrSetup,
         };
         let hls = (this._hls = new Hls(hlsConfig));
         if (mainAttrs.src && (mainAttrs.autoPlay || mainAttrs.preload !== "none")) {
@@ -212,7 +212,7 @@ export const VideoHls = UU5.Common.VisualComponent.create({
       mainAttrs.src = authnUrl;
     }
     return <video {...mainAttrs} ref={this._setVideoRef} />;
-  }
+  },
   //@@viewOff:render
 });
 

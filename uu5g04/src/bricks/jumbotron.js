@@ -35,7 +35,7 @@ export const Jumbotron = UU5.Common.VisualComponent.create({
     UU5.Common.ColorSchemaMixin,
     UU5.Common.ContentMixin,
     UU5.Common.NestingLevelMixin,
-    UU5.Common.EditableMixin
+    UU5.Common.EditableMixin,
   ],
   //@@viewOff:mixins
 
@@ -45,8 +45,8 @@ export const Jumbotron = UU5.Common.VisualComponent.create({
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
       main: ns.css("jumbotron"),
-      defaultColor: ns.css("jumbotron-default")
-    }
+      defaultColor: ns.css("jumbotron-default"),
+    },
   },
   //@@viewOff:statics
 
@@ -54,7 +54,7 @@ export const Jumbotron = UU5.Common.VisualComponent.create({
   propTypes: {
     bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
     borderRadius: UU5.PropTypes.string,
-    elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
+    elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
   },
   //@@viewOff:propTypes
 
@@ -63,7 +63,7 @@ export const Jumbotron = UU5.Common.VisualComponent.create({
     return {
       bgStyle: "filled",
       borderRadius: null,
-      elevation: null
+      elevation: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -127,7 +127,7 @@ export const Jumbotron = UU5.Common.VisualComponent.create({
         {this.isInlineEdited() && this._renderEditationMode()}
       </UU5.Common.Fragment>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

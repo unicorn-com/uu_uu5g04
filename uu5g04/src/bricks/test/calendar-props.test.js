@@ -34,38 +34,38 @@ const CONFIG = {
   mixins: ["UU5.Common.BaseMixin", "UU5.Common.ElementaryMixin", "UU5.Common.SwipeMixin", "UU5.Common.LsiMixin"],
   props: {
     value: {
-      values: ["12.12.2019", new Date(1548411167098)]
+      values: ["12.12.2019", new Date(1548411167098)],
     },
     dateFrom: {
-      values: ["15.1.2019", new Date(new Date(1548411167098).setMonth(-1))]
+      values: ["15.1.2019", new Date(new Date(1548411167098).setMonth(-1))],
     },
     dateTo: {
-      values: ["30.1.2019", new Date(new Date(1548411167098).setMonth(1))]
+      values: ["30.1.2019", new Date(new Date(1548411167098).setMonth(1))],
     },
     displayDate: {
-      values: ["1.1.2020", new Date(new Date(1548411167098).setYear(2021))]
+      values: ["1.1.2020", new Date(new Date(1548411167098).setYear(2021))],
     },
     minSelection: {
-      values: ["days", "months", "years"]
+      values: ["days", "months", "years"],
     },
     step: {
-      values: ["days", "months", "years"]
+      values: ["days", "months", "years"],
     },
     showTodayButton: {
-      values: [true, false]
+      values: [true, false],
     },
     hideWeekNumber: {
-      values: [true, false]
+      values: [true, false],
     },
     hidePrevSelection: {
-      values: [true, false]
+      values: [true, false],
     },
     hideNextSelection: {
-      values: [true, false]
+      values: [true, false],
     },
     hideOtherSections: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
     // onChange
     // onNextSelection
     // onPrevSelection
@@ -73,9 +73,9 @@ const CONFIG = {
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Calendar`, () => {
@@ -85,13 +85,10 @@ describe(`UU5.Bricks.Calendar`, () => {
 describe(`UU5.Bricks.Calendar props function`, () => {
   it(`UU5.Bricks.Calendar selectionMode single`, () => {
     const wrapper = mount(<UU5.Bricks.Calendar selectionMode="single" />, {
-      attachTo: mockElement
+      attachTo: mockElement,
     });
     expect(wrapper.instance().state.value).toBe(null);
-    wrapper
-      .find(".uu5-bricks-calendar-active-section .uu5-bricks-calendar-day-cell")
-      .first()
-      .simulate("click");
+    wrapper.find(".uu5-bricks-calendar-active-section .uu5-bricks-calendar-day-cell").first().simulate("click");
     expect(wrapper.instance().state.value).toBeInstanceOf(Date);
     expect(wrapper.instance().state.value.getTime()).toBe(firstDate);
     wrapper.unmount();
@@ -99,17 +96,11 @@ describe(`UU5.Bricks.Calendar props function`, () => {
 
   it(`UU5.Bricks.Calendar selectionMode range`, () => {
     const wrapper = mount(<UU5.Bricks.Calendar selectionMode="range" />, {
-      attachTo: mockElement
+      attachTo: mockElement,
     });
     expect(wrapper.instance().state.value).toBe(null);
-    wrapper
-      .find(".uu5-bricks-calendar-active-section .uu5-bricks-calendar-day-cell")
-      .first()
-      .simulate("click");
-    wrapper
-      .find(".uu5-bricks-calendar-active-section .uu5-bricks-calendar-day-cell")
-      .last()
-      .simulate("click");
+    wrapper.find(".uu5-bricks-calendar-active-section .uu5-bricks-calendar-day-cell").first().simulate("click");
+    wrapper.find(".uu5-bricks-calendar-active-section .uu5-bricks-calendar-day-cell").last().simulate("click");
     expect(Array.isArray(wrapper.instance().state.value)).toBeTruthy();
     expect(wrapper.instance().state.value.length).toBe(2);
     expect(wrapper.instance().state.value[0].getTime()).toBe(firstDate);
@@ -118,16 +109,13 @@ describe(`UU5.Bricks.Calendar props function`, () => {
   });
 
   it(`UU5.Bricks.Calendar onChange`, () => {
-    let onChangeFn = jest.fn(opt => opt.component.onChangeDefault(opt));
+    let onChangeFn = jest.fn((opt) => opt.component.onChangeDefault(opt));
     const wrapper = mount(<UU5.Bricks.Calendar onChange={onChangeFn} />, {
-      attachTo: mockElement
+      attachTo: mockElement,
     });
     expect(wrapper.instance().state.value).toBe(null);
     expect(onChangeFn).not.toHaveBeenCalled();
-    wrapper
-      .find(".uu5-bricks-calendar-active-section .uu5-bricks-calendar-day-cell")
-      .first()
-      .simulate("click");
+    wrapper.find(".uu5-bricks-calendar-active-section .uu5-bricks-calendar-day-cell").first().simulate("click");
     expect(onChangeFn).toBeCalled();
     let lastCall = onChangeFn.mock.calls[onChangeFn.mock.calls.length - 1];
     expect(lastCall[0]).toBeTruthy();
@@ -137,29 +125,23 @@ describe(`UU5.Bricks.Calendar props function`, () => {
   });
 
   it(`UU5.Bricks.Calendar onNextSelection`, () => {
-    let onNextSelectionFn = jest.fn(opt => opt.component.onNextSelectionDefault());
+    let onNextSelectionFn = jest.fn((opt) => opt.component.onNextSelectionDefault());
     const wrapper = mount(<UU5.Bricks.Calendar onNextSelection={onNextSelectionFn} />, {
-      attachTo: mockElement
+      attachTo: mockElement,
     });
     expect(onNextSelectionFn).not.toHaveBeenCalled();
-    wrapper
-      .find(".uu5-bricks-calendar-head-cell-next")
-      .first()
-      .simulate("click");
+    wrapper.find(".uu5-bricks-calendar-head-cell-next").first().simulate("click");
     expect(onNextSelectionFn).toBeCalled();
     wrapper.unmount();
   });
 
   it(`UU5.Bricks.Calendar onPrevSelection`, () => {
-    let onPrevSelectionFn = jest.fn(opt => opt.component.onPrevSelectionDefault());
+    let onPrevSelectionFn = jest.fn((opt) => opt.component.onPrevSelectionDefault());
     const wrapper = mount(<UU5.Bricks.Calendar onPrevSelection={onPrevSelectionFn} />, {
-      attachTo: mockElement
+      attachTo: mockElement,
     });
     expect(onPrevSelectionFn).not.toHaveBeenCalled();
-    wrapper
-      .find(".uu5-bricks-calendar-head-cell-prev")
-      .first()
-      .simulate("click");
+    wrapper.find(".uu5-bricks-calendar-head-cell-prev").first().simulate("click");
     expect(onPrevSelectionFn).toBeCalled();
     wrapper.unmount();
   });

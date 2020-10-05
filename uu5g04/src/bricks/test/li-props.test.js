@@ -22,17 +22,17 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Common.NestingLevelMixin",
     "UU5.Common.ContentMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {},
   requiredProps: {
-    parent: shallow(<UU5.Bricks.Ul id="parentId" />).instance()
+    parent: shallow(<UU5.Bricks.Ul id="parentId" />).instance(),
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Li`, () => {

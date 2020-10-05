@@ -372,7 +372,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
         message: null,
         value: null,
         foundAutocompleteItems: null,
-        selectedIndex: null
+        selectedIndex: null,
       })
     );
     expect(wrapper).toMatchSnapshot();
@@ -389,14 +389,14 @@ describe("UU5.Forms.InputMixin interface testing", () => {
         message: null,
         value: null,
         foundAutocompleteItems: null,
-        selectedIndex: null
+        selectedIndex: null,
       })
     );
     const returnValue = wrapper.instance().setChangeFeedback(
       {
         feedback: "error",
         message: "Error message from setChangeFeedback",
-        value: "NaN"
+        value: "NaN",
       },
       mockFunc
     );
@@ -666,7 +666,7 @@ describe("UU5.Forms.TextInputMixin interface testing", () => {
       expect.objectContaining({
         feedback: "initial",
         message: null,
-        value: undefined
+        value: undefined,
       })
     );
     expect(wrapper).toMatchSnapshot();
@@ -691,17 +691,17 @@ describe("UU5.Forms.TextInputMixin interface testing", () => {
     const returnValue = wrapper.instance().setAutoCompleteItems(
       [
         {
-          value: 10
+          value: 10,
         },
         {
-          value: 20
+          value: 20,
         },
         {
-          value: 30
+          value: 30,
         },
         {
-          value: 40
-        }
+          value: 40,
+        },
       ],
       null,
       mockFunc

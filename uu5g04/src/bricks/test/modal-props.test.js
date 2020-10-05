@@ -21,7 +21,7 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 const MyModalComponent = UU5.Common.VisualComponent.create({
   getInitialState: () => {
     return {
-      isCalled: false
+      isCalled: false,
     };
   },
 
@@ -36,13 +36,13 @@ const MyModalComponent = UU5.Common.VisualComponent.create({
         This modal has props shown = true and onClose eventn handlers.
       </UU5.Bricks.Modal>
     );
-  }
+  },
 });
 
 const MOUNT_CONTENT_VALUES = {
   onFirstRender: "onFirstRender",
   onFirstOpen: "onFirstOpen",
-  onEachOpen: "onEachOpen"
+  onEachOpen: "onEachOpen",
 };
 
 const CONFIG = {
@@ -54,39 +54,39 @@ const CONFIG = {
     "UU5.Common.ContentMixin",
     "UU5.Common.LevelMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     size: {
-      values: ["s", "m", "l", "auto", "max"]
+      values: ["s", "m", "l", "auto", "max"],
     },
     shown: {
-      values: [true, false]
+      values: [true, false],
     },
     sticky: {
-      values: [true, false]
+      values: [true, false],
     },
     stickyBackground: {
-      values: [true, false]
+      values: [true, false],
     },
     scrollableBackground: {
-      values: [true, false]
+      values: [true, false],
     },
     forceRender: {
-      values: [true, false]
+      values: [true, false],
     },
     overflow: {
-      values: [true, false]
+      values: [true, false],
     },
     mountContent: {
       values: [
         MOUNT_CONTENT_VALUES.onEachExpand,
         MOUNT_CONTENT_VALUES.onFirstExpand,
-        MOUNT_CONTENT_VALUES.onFirstRender
-      ]
+        MOUNT_CONTENT_VALUES.onFirstRender,
+      ],
     },
     offsetTop: {
-      values: ["auto", 200]
+      values: ["auto", 200],
     },
     //onClose
 
@@ -95,22 +95,22 @@ const CONFIG = {
     hidden: {
       values: [true, false],
       opt: {
-        skip: true
-      }
+        skip: true,
+      },
     },
     controlled: {
       values: [true, false],
       opt: {
-        skip: true
-      }
-    }
+        skip: true,
+      },
+    },
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 const This = {};
@@ -146,10 +146,10 @@ describe(`UU5.Bricks.Modal props.Function`, () => {
       componentWillUnmount() {
         unmountLog();
       },
-      render: function() {
+      render: function () {
         log();
         return "Logged";
-      }
+      },
     });
     const wrapper = mount(
       <UU5.Bricks.Modal>
@@ -206,10 +206,10 @@ describe(`UU5.Bricks.Modal props.Function`, () => {
       componentWillUnmount() {
         unmountLog();
       },
-      render: function() {
+      render: function () {
         log();
         return "Logged";
-      }
+      },
     });
     const wrapper = mount(
       <UU5.Bricks.Modal mountContent={MOUNT_CONTENT_VALUES.onFirstOpen}>
@@ -267,10 +267,10 @@ describe(`UU5.Bricks.Modal props.Function`, () => {
       componentWillUnmount() {
         unmountLog();
       },
-      render: function() {
+      render: function () {
         log();
         return "Logged";
-      }
+      },
     });
     const wrapper = mount(
       <UU5.Bricks.Modal mountContent={MOUNT_CONTENT_VALUES.onEachOpen}>

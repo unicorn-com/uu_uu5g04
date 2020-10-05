@@ -39,13 +39,15 @@ export const UU5StringProps = class UU5StringProps {
     */
     this.toObject = () => {
       let result = {};
-      this.props.forEach(item => (result[item.name] = item.value));
+      this.props.forEach((item) => (result[item.name] = item.value));
       return result;
     };
 
     this.toChildren = (data, filterFn) => {
       let result = {};
-      this.props.forEach(item => (result[item.name] = UU5StringProps._renderItemValueToChildren(item, data, filterFn)));
+      this.props.forEach(
+        (item) => (result[item.name] = UU5StringProps._renderItemValueToChildren(item, data, filterFn))
+      );
       return result;
     };
 
@@ -56,7 +58,7 @@ export const UU5StringProps = class UU5StringProps {
     */
     this.toString = (data, filterFn) => {
       let result = "";
-      this.props.forEach(item => {
+      this.props.forEach((item) => {
         result += `${item.separator || DEFAULT_SEPARATOR}${item.name}${UU5StringProps._renderItemValueToString(
           item,
           data,
@@ -74,18 +76,18 @@ export const UU5StringProps = class UU5StringProps {
     */
     this.toPlainText = (data, filterFn) => {
       let result = [];
-      this.props.forEach(item => {
+      this.props.forEach((item) => {
         result.push(UU5StringProps._renderItemValueToPlainText(item, data, filterFn));
       });
       return result.join(" ");
     };
 
-    this.clone = initFn => {
+    this.clone = (initFn) => {
       let newPropsObject = new UU5StringProps();
       // set last separator
       newPropsObject.lastSeparator = this.lastSeparator;
       // set all props as a new array
-      newPropsObject.props = this.props.map(item => {
+      newPropsObject.props = this.props.map((item) => {
         let newItem = {};
         // clone all attributes
         for (let attr in item) {
@@ -94,7 +96,7 @@ export const UU5StringProps = class UU5StringProps {
         // clone object in value attribute - other attributes has only string values
         if (newItem.value) {
           let isArray = Array.isArray(newItem.value);
-          let value = (isArray ? newItem.value : [newItem.value]).map(valueItem => {
+          let value = (isArray ? newItem.value : [newItem.value]).map((valueItem) => {
             if (typeof valueItem === "object") {
               // instead of: valueItem instanceof UU5StringObject
               if (typeof valueItem.clone === "function") {

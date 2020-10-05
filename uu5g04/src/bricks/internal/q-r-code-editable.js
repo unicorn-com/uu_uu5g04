@@ -13,7 +13,7 @@ const editableComponentPropsSetup = [
     name: "value",
     type: "text",
     label: Lsi.valueLabel,
-    required: true
+    required: true,
   },
   QRCodeSize,
   {
@@ -25,18 +25,18 @@ const editableComponentPropsSetup = [
         { value: "low", content: <UU5.Bricks.Lsi lsi={Lsi.lowValue} /> },
         { value: "medium", content: <UU5.Bricks.Lsi lsi={Lsi.mediumValue} /> },
         { value: "quartile", content: <UU5.Bricks.Lsi lsi={Lsi.quartileValue} /> },
-        { value: "high", content: <UU5.Bricks.Lsi lsi={Lsi.highValue} /> }
+        { value: "high", content: <UU5.Bricks.Lsi lsi={Lsi.highValue} /> },
       ],
-      message: <UU5.Bricks.Lsi lsi={Lsi.correctionMessage} />
-    })
-  }
+      message: <UU5.Bricks.Lsi lsi={Lsi.correctionMessage} />,
+    }),
+  },
 ];
 
 const editablePropsSetup = [
   {
     name: <UU5.Bricks.Lsi lsi={"Lsi.componentPropsLabel"} />,
-    setup: editableComponentPropsSetup
-  }
+    setup: editableComponentPropsSetup,
+  },
 ];
 
 export const QRCodeEditable = UU5.Common.VisualComponent.create({
@@ -48,21 +48,21 @@ export const QRCodeEditable = UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("QRCodeEditable"),
     classNames: {
-      main: ns.css("q-r-code-editable")
-    }
+      main: ns.css("q-r-code-editable"),
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    component: UU5.PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      component: undefined
+      component: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -99,7 +99,7 @@ export const QRCodeEditable = UU5.Common.VisualComponent.create({
         header={<UU5.Bricks.Lsi lsi={EditableLsi.qRCode.modalHeader} />}
       />
     );
-  }
+  },
   //@@viewOff:render
 });
 

@@ -21,7 +21,7 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 const MyDateTimeComponent = UU5.Common.VisualComponent.create({
   getInitialState: () => {
     return {
-      isCalled: false
+      isCalled: false,
     };
   },
 
@@ -32,7 +32,7 @@ const MyDateTimeComponent = UU5.Common.VisualComponent.create({
 
   render() {
     return <UU5.Bricks.DateTime id={"uuID"} onChange={this.onChangeAlert} />;
-  }
+  },
 });
 
 const CONFIG = {
@@ -40,7 +40,7 @@ const CONFIG = {
     "UU5.Common.BaseMixin",
     "UU5.Common.ElementaryMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
 
   /**
@@ -51,36 +51,36 @@ const CONFIG = {
   props: {
     //value -  props value is tested separed
     format: {
-      values: ["d. m. Y HH:MM:SS Z (w/52) q/4"]
+      values: ["d. m. Y HH:MM:SS Z (w/52) q/4"],
     },
     country: {
-      values: ["cs-cz"] // requires NodeJS >= 13.x
+      values: ["cs-cz"], // requires NodeJS >= 13.x
     },
     timeZone: {
-      values: [-3.5]
+      values: [-3.5],
     },
     //onChange{},
     dateOnly: {
-      values: [true, false]
+      values: [true, false],
     },
     timeOnly: {
-      values: [true, false]
+      values: [true, false],
     },
     secondsDisabled: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
   },
   requiredProps: {
     //Here we must have the value set in the requiredProps otherwise,
     // a new date would be created in every snapshot, and snapshots would vary.
     value: "2018-1-25 14:04:19",
-    country: "en-us"
+    country: "en-us",
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 const ISOFormatTest = (props, country, expectedValue) => {
@@ -105,7 +105,7 @@ describe(`UU5.Bricks.DateTime`, () => {
 
   it(`UU5.Bricks.DateTime - ISO format value`, () => {
     let defaultCountry = "en-US";
-    ISOFormatTest({ value: "2019-07-20T18:00:00.000Z" }, undefined, "20. 7. 2019 20:00:00");
+    ISOFormatTest({ value: "2019-07-20T18:00:00.000Z" }, undefined, "7/20/2019, 8:00:00 PM");
     ISOFormatTest({ value: "2019-07-20T18:00:00.000Z" }, defaultCountry, "7/20/2019, 8:00:00 PM");
     ISOFormatTest({ value: "2019-07-20T18:00:00.000+02:00" }, defaultCountry, "7/20/2019, 6:00:00 PM");
     ISOFormatTest({ value: "2019-07-20T18:00:00.000+02:00" }, "cs-CZ", "20. 7. 2019 18:00:00");

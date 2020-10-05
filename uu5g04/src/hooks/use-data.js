@@ -51,7 +51,7 @@ function useOperationsCleanup(dispatchAction, processBus, preserveOperations) {
   if (prevProcessBusRef.current && (!preserveOperations || explicitPendingCleanupRef.current.length > 0)) {
     let prevProcessBus = prevProcessBusRef.current;
     prevProcessBusRef.current = undefined;
-    let finishedOpIds = prevProcessBus.filter(op => op.asyncData !== undefined).map(op => op.id);
+    let finishedOpIds = prevProcessBus.filter((op) => op.asyncData !== undefined).map((op) => op.id);
     let cleanupIds;
     if (preserveOperations) {
       cleanupIds = new Set();
@@ -84,7 +84,7 @@ function useOperationsCleanup(dispatchAction, processBus, preserveOperations) {
 export function useDataInternal({ onLoad, onUpdate, dtoIn, data, preserveOperations }, customReducer) {
   // initialize state with processBus and state reducer(s)
   let reducer = useMemo(() => combineReducers(customReducer, dataHookReducer, initReducer, processBusReducer), [
-    customReducer
+    customReducer,
   ]);
   let needsInitialLoad = data === undefined && typeof onLoad === "function";
   let [state, dispatch] = useReducer(reducer, undefined, () =>
@@ -95,14 +95,14 @@ export function useDataInternal({ onLoad, onUpdate, dtoIn, data, preserveOperati
         viewState: needsInitialLoad ? "load" : "ready",
         errorState: null,
         error: null,
-        processBus: []
-      }
+        processBus: [],
+      },
     })
   );
   let dispatchAction = useCallback((type, payload) => dispatch({ type, payload }), [dispatch]);
   useLayoutEffect(() => {
     // run enqueued operations
-    state.processBus.forEach(it => {
+    state.processBus.forEach((it) => {
       let { execFn } = it;
       if (execFn) {
         delete it.execFn;
@@ -124,13 +124,13 @@ export function useDataInternal({ onLoad, onUpdate, dtoIn, data, preserveOperati
   );
   let operations = useMemo(
     () =>
-      state.processBus.map(it => ({
+      state.processBus.map((it) => ({
         ...it.extraInfo,
         id: it.id,
         type: it.type,
         args: it.callArgs,
         state: it.error !== undefined ? "error" : it.result !== undefined ? "success" : "pending",
-        result: it.error !== undefined ? it.error : it.result !== undefined ? it.result : undefined
+        result: it.error !== undefined ? it.error : it.result !== undefined ? it.result : undefined,
       })),
     [state.processBus]
   );
@@ -148,7 +148,7 @@ export function useDataInternal({ onLoad, onUpdate, dtoIn, data, preserveOperati
     [onUpdate, dispatchAction]
   );
   let setData = useCallback((...callArgs) => performOperation(null, callArgs, applySetData, "set", dispatchAction), [
-    dispatchAction
+    dispatchAction,
   ]);
 
   // didMount, didUpdate, willUnmount
@@ -165,7 +165,7 @@ export function useDataInternal({ onLoad, onUpdate, dtoIn, data, preserveOperati
   useEffect(() => {
     let skip = !mountRef.current && !needsInitialLoad; // skip if mounting and onLoad isn't function (we don't want to reset initialData)
     if (!skip) {
-      handleLoad(dtoIn).catch(e => {
+      handleLoad(dtoIn).catch((e) => {
         if (process.env.NODE_ENV !== "test") UU5.Common.Tools.error("Loading data failed:", e);
       });
     }

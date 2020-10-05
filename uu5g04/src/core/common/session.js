@@ -32,7 +32,7 @@ export const Session = Component.create({
 
   //@@viewOn:statics
   statics: {
-    tagName: "UU5.Common.Session"
+    tagName: "UU5.Common.Session",
   },
   //@@viewOff:statics
 
@@ -48,7 +48,7 @@ export const Session = Component.create({
     return {
       // NOTE SessionMixin keeps expiring flag outside of state - we have to use overriden methods
       // and put it to our state to cause re-render.
-      expiring: this.isSessionExpiring()
+      expiring: this.isSessionExpiring(),
     };
   },
   //@@viewOff:reactLifeCycle
@@ -59,11 +59,11 @@ export const Session = Component.create({
   //@@viewOn:overriding
   onSessionExpiring_(e) {
     this.onSessionExpiringDefault(e);
-    this.setState(state => (state.expiring !== true ? true : undefined));
+    this.setState((state) => (state.expiring !== true ? true : undefined));
   },
   onSessionExtended_(e) {
     this.onSessionExtendedDefault(e);
-    this.setState(state => (state.expiring !== false ? false : undefined));
+    this.setState((state) => (state.expiring !== false ? false : undefined));
   },
   //@@viewOff:overriding
 
@@ -87,7 +87,7 @@ export const Session = Component.create({
   //@@viewOn:render
   render() {
     return <SessionContext.Provider value={this._getValues()}>{this.props.children}</SessionContext.Provider>;
-  }
+  },
   //@@viewOff:render
 });
 Session.Context = SessionContext;

@@ -27,7 +27,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
       isCalled: false,
       value: "",
       message: "",
-      feedback: "initial"
+      feedback: "initial",
     };
   },
 
@@ -101,7 +101,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
         onChangeFeedback={this.onChangeFeedbackHandler}
       />
     );
-  }
+  },
 });
 
 const CONFIG = {
@@ -111,28 +111,28 @@ const CONFIG = {
     "UU5.Common.PureRenderMixin",
     "UU5.Forms.InputMixin",
     "UU5.Common.ColorSchemaMixin",
-    "UU5.Forms.TextInputMixin"
+    "UU5.Forms.TextInputMixin",
   ],
   props: {
     value: {
-      values: ["Hodnota"]
+      values: ["Hodnota"],
     },
     rows: {
-      values: [10]
+      values: [10],
     },
     autoResize: {
-      values: [true, false]
+      values: [true, false],
     },
     maxRows: {
-      values: [3]
-    }
+      values: [3],
+    },
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Forms.TextArea props`, () => {
@@ -275,19 +275,19 @@ describe(`UU5.Forms.TextArea props function -> Text.InputMixin`, () => {
         label="Description"
         id={"uuID"}
         validateOnChange
-        onValidate={opt => {
+        onValidate={(opt) => {
           let feedback;
           if (opt.value !== "") {
             feedback = {
               feedback: "success",
               message: "Is valid.",
-              value: opt.value
+              value: opt.value,
             };
           } else {
             feedback = {
               feedback: "error",
               message: "Not valid.",
-              value: opt.value
+              value: opt.value,
             };
           }
 
@@ -308,19 +308,19 @@ describe(`UU5.Forms.TextArea props function -> Text.InputMixin`, () => {
         id={"uuID"}
         value={"Text in the textArea."}
         validateOnChange
-        onValidate={opt => {
+        onValidate={(opt) => {
           let feedback;
           if (opt.value !== "") {
             feedback = {
               feedback: "success",
               message: "Is valid.",
-              value: opt.value
+              value: opt.value,
             };
           } else {
             feedback = {
               feedback: "error",
               message: "Not valid.",
-              value: opt.value
+              value: opt.value,
             };
           }
 

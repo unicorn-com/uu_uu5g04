@@ -7,9 +7,9 @@ const ns = {
   css() {
     return Array.prototype.slice
       .call(arguments)
-      .map(name => ns.CSS + "-" + name)
+      .map((name) => ns.CSS + "-" + name)
       .join(" ");
-  }
+  },
 };
 
 export default ns;

@@ -39,7 +39,7 @@ export const TimePicker = Context.withContext(
       UU5.Common.PureRenderMixin,
       UU5.Common.ElementaryMixin,
       UU5.Common.ScreenSizeMixin,
-      TextInputMixin
+      TextInputMixin,
     ],
     //@@viewOff:mixins
 
@@ -51,16 +51,16 @@ export const TimePicker = Context.withContext(
         open: ns.css("timepicker-open"),
         menu: ns.css("input-menu"),
         seconds: ns.css("timepicker-seconds"),
-        screenSizeBehaviour: ns.css("screen-size-behaviour")
+        screenSizeBehaviour: ns.css("screen-size-behaviour"),
       },
       defaults: {
         regexpFormat1: /^\d{1,2}:?\d{0,2} ?[PpAa]?\.?[Mm]?\.?$/,
         regexpFormat2: /^\d{1,2}:?\d{0,2}$/,
         regexpPm: /(PM|pm|Pm)/,
         regexpAm: /(AM|am|Am)/,
-        inputColWidth: "xs12 s4 m4 l3 xl3"
+        inputColWidth: "xs12 s4 m4 l3 xl3",
       },
-      lsi: () => UU5.Environment.Lsi.Forms.message
+      lsi: () => UU5.Environment.Lsi.Forms.message,
     },
     //@@viewOff:statics
 
@@ -80,7 +80,7 @@ export const TimePicker = Context.withContext(
       suffix: UU5.PropTypes.string,
       timeFrom: UU5.PropTypes.string,
       timeTo: UU5.PropTypes.string,
-      show24: UU5.PropTypes.bool
+      show24: UU5.PropTypes.bool,
     },
     //@@viewOff:propTypes
 
@@ -101,7 +101,7 @@ export const TimePicker = Context.withContext(
         suffix: undefined,
         timeFrom: undefined,
         timeTo: undefined,
-        show24: false
+        show24: false,
       };
     },
     //@@viewOff:getDefaultProps
@@ -176,7 +176,7 @@ export const TimePicker = Context.withContext(
 
     //@@viewOn:interface
     toggle(setStateCallback) {
-      this.setState(state => {
+      this.setState((state) => {
         if (state.open) {
           this._removeEvent();
         } else {
@@ -326,10 +326,10 @@ export const TimePicker = Context.withContext(
         component: false,
         input: false,
         label: false,
-        picker: false
+        picker: false,
       };
       let eventPath = this._getEventPath(e);
-      eventPath.every(item => {
+      eventPath.every((item) => {
         let functionType = item.matches ? "matches" : "msMatchesSelector";
         if (item[functionType]) {
           if (item[functionType](labelMatch)) {
@@ -355,7 +355,7 @@ export const TimePicker = Context.withContext(
     },
 
     _addKeyEvents() {
-      let handleKeyDown = e => {
+      let handleKeyDown = (e) => {
         if (e.which === 13) {
           // enter
           e.preventDefault();
@@ -368,7 +368,7 @@ export const TimePicker = Context.withContext(
         }
       };
 
-      let handleKeyUp = e => {
+      let handleKeyUp = (e) => {
         let focusResult = this._findTarget(e);
         let doBlur = !focusResult.component;
         let opt = { value: this.state.value, event: e, component: this };
@@ -403,8 +403,8 @@ export const TimePicker = Context.withContext(
         }
       };
 
-      UU5.Environment.EventListener.addWindowEvent("keydown", this.getId(), e => handleKeyDown(e));
-      UU5.Environment.EventListener.addWindowEvent("keyup", this.getId(), e => handleKeyUp(e));
+      UU5.Environment.EventListener.addWindowEvent("keydown", this.getId(), (e) => handleKeyDown(e));
+      UU5.Environment.EventListener.addWindowEvent("keyup", this.getId(), (e) => handleKeyUp(e));
     },
 
     _removeKeyEvents() {
@@ -441,7 +441,7 @@ export const TimePicker = Context.withContext(
             aroundElement: UU5.Common.DOM.findNode(this._textInput),
             position: "bottom",
             offset: this._shouldOpenToContent() ? 0 : 4,
-            preventPositioning: this._shouldOpenToContent()
+            preventPositioning: this._shouldOpenToContent(),
           },
           setStateCallback
         );
@@ -466,7 +466,7 @@ export const TimePicker = Context.withContext(
         this.props.openToContent
           .trim()
           .split(" ")
-          .some(size => {
+          .some((size) => {
             if (screenSize == size) {
               result = true;
               return true;
@@ -709,7 +709,7 @@ export const TimePicker = Context.withContext(
         mobileDisplay: this.isXs(),
         timeFrom: this._timeFrom,
         timeTo: this._timeTo,
-        show24: this.props.show24
+        show24: this.props.show24,
       };
     },
 
@@ -760,7 +760,7 @@ export const TimePicker = Context.withContext(
       }
 
       if (!this.isReadOnly() && !this.isComputedDisabled()) {
-        let handleMobileClick = e => {
+        let handleMobileClick = (e) => {
           if (this.isOpen()) {
             e.target.focus();
             this.close();
@@ -777,7 +777,7 @@ export const TimePicker = Context.withContext(
           );
         };
 
-        let handleClick = e => {
+        let handleClick = (e) => {
           let clickData = this._findTarget(e.nativeEvent);
           let opt = { value: this.state.value, event: e, component: this };
 
@@ -796,7 +796,7 @@ export const TimePicker = Context.withContext(
           }
         };
 
-        attrs.onClick = e => {
+        attrs.onClick = (e) => {
           handleClick(e);
         };
 
@@ -811,7 +811,7 @@ export const TimePicker = Context.withContext(
     _getPopoverProps() {
       let props = {};
 
-      props.ref_ = ref => (this._popover = ref);
+      props.ref_ = (ref) => (this._popover = ref);
       props.forceRender = true;
       props.disableBackdrop = true;
       props.shown = this.isOpen();
@@ -830,7 +830,7 @@ export const TimePicker = Context.withContext(
 
       inputAttrs.className === "" ? delete inputAttrs.className : null;
       return (
-        <div {...this._getMainAttrs()} ref={comp => (this._root = comp)}>
+        <div {...this._getMainAttrs()} ref={(comp) => (this._root = comp)}>
           {this.getLabel(inputId)}
           {this.getInputWrapper([
             <TextInput
@@ -862,11 +862,11 @@ export const TimePicker = Context.withContext(
             />,
             <UU5.Bricks.Popover {...this._getPopoverProps()} key="popover">
               {this.isOpen() ? <Time {...this._getTimeProps(this._parseTime(this.state.value))} /> : null}
-            </UU5.Bricks.Popover>
+            </UU5.Bricks.Popover>,
           ])}
         </div>
       );
-    }
+    },
     //@@viewOff:render
   })
 );

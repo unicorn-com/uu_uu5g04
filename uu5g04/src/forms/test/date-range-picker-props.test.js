@@ -43,45 +43,45 @@ const CONFIG = {
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.ContentMixin",
     "UU5.Forms.InputMixin",
-    "UU5.Forms.TextInputMixin"
+    "UU5.Forms.TextInputMixin",
   ],
   props: {
     value: {
-      values: [["1.1.2019", "5.5.2020"]]
+      values: [["1.1.2019", "5.5.2020"]],
     },
     dateFrom: {
-      values: ["10.25.2018"]
+      values: ["10.25.2018"],
     },
     dateTo: {
-      values: ["10.5.2020"]
+      values: ["10.5.2020"],
     },
     buttonHidden: {
-      values: [true, false]
+      values: [true, false],
     },
     iconOpen: {
-      values: ["mdi-clock-outline"]
+      values: ["mdi-clock-outline"],
     },
     iconClosed: {
-      values: ["mdi-calendar"]
+      values: ["mdi-calendar"],
     },
     format: {
-      values: ["dd.mm.Y", "dd/mm/Y", "dd-mm-Y", "dd:mm:Y - q"]
+      values: ["dd.mm.Y", "dd/mm/Y", "dd-mm-Y", "dd:mm:Y - q"],
     },
     hideFormatPlaceholder: {
-      values: [true, false]
+      values: [true, false],
     },
     country: {
-      values: ["en-us"]
+      values: ["en-us"],
     },
     beforeRangeMessage: {
-      values: ["Zkus zadat pozdější datum."]
+      values: ["Zkus zadat pozdější datum."],
     },
     afterRangeMessage: {
-      values: ["Přestřelil jsi, zkus trochu ubrat."]
+      values: ["Přestřelil jsi, zkus trochu ubrat."],
     },
     disableBackdrop: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
     // parseDate - In agreement with developers, this props need not be tested.
   },
   requiredProps: {
@@ -89,9 +89,9 @@ const CONFIG = {
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 const ISOFormatTest = (props, country, expectedValue) => {
@@ -127,8 +127,8 @@ describe(`UU5.Forms.DateRangePicker props`, () => {
   it(`pickerLabelFrom, pickerLabelTo`, () => {
     const wrapper = mount(<UU5.Forms.DateRangePicker pickerLabelFrom="From" pickerLabelTo="To" />);
     wrapper.instance().open();
-    expect(wrapper.findWhere(node => node.text() === "From")).not.toBe(0);
-    expect(wrapper.findWhere(node => node.text() === "To")).not.toBe(0);
+    expect(wrapper.findWhere((node) => node.text() === "From")).not.toBe(0);
+    expect(wrapper.findWhere((node) => node.text() === "To")).not.toBe(0);
   });
 
   it(`step`, () => {
@@ -162,14 +162,14 @@ describe(`UU5.Forms.DateRangePicker props function -> Text.InputMixin`, () => {
   it("onFocus()", () => {
     let onFocusFn = jest.fn();
     const wrapper = mount(<UU5.Forms.DateRangePicker onFocus={onFocusFn} />, {
-      attachTo: mockElement
+      attachTo: mockElement,
     });
     expect(onFocusFn).not.toHaveBeenCalled();
     document.getElementsByClassName("uu5-forms-items-input")[0].dispatchEvent(
       new MouseEvent("click", {
         bubbles: true,
         cancelable: true,
-        view: window
+        view: window,
       })
     );
     wrapper.update();
@@ -180,14 +180,14 @@ describe(`UU5.Forms.DateRangePicker props function -> Text.InputMixin`, () => {
   it("onBlur()", () => {
     let onBlurFn = jest.fn();
     const wrapper = mount(<UU5.Forms.DateRangePicker onBlur={onBlurFn} />, {
-      attachTo: mockElement
+      attachTo: mockElement,
     });
     expect(onBlurFn).not.toHaveBeenCalled();
     document.getElementsByClassName("uu5-forms-items-input")[0].dispatchEvent(
       new MouseEvent("click", {
         bubbles: true,
         cancelable: true,
-        view: window
+        view: window,
       })
     );
     wrapper.update();
@@ -195,7 +195,7 @@ describe(`UU5.Forms.DateRangePicker props function -> Text.InputMixin`, () => {
       new MouseEvent("click", {
         bubbles: true,
         cancelable: true,
-        view: window
+        view: window,
       })
     );
     wrapper.update();
@@ -206,14 +206,14 @@ describe(`UU5.Forms.DateRangePicker props function -> Text.InputMixin`, () => {
   it("onEnter()", () => {
     let onEnterFn = jest.fn();
     const wrapper = mount(<UU5.Forms.DateRangePicker onEnter={onEnterFn} />, {
-      attachTo: mockElement
+      attachTo: mockElement,
     });
     expect(onEnterFn).not.toHaveBeenCalled();
     document.getElementsByClassName("uu5-forms-items-input")[0].dispatchEvent(
       new MouseEvent("click", {
         bubbles: true,
         cancelable: true,
-        view: window
+        view: window,
       })
     );
     wrapper.update();
@@ -221,7 +221,7 @@ describe(`UU5.Forms.DateRangePicker props function -> Text.InputMixin`, () => {
       new MouseEvent("click", {
         bubbles: true,
         cancelable: true,
-        view: window
+        view: window,
       })
     );
     wrapper.update();
@@ -231,7 +231,7 @@ describe(`UU5.Forms.DateRangePicker props function -> Text.InputMixin`, () => {
         cancelable: true,
         view: window,
         keyCode: 13,
-        key: "Enter"
+        key: "Enter",
       })
     );
     wrapper.update();
@@ -251,19 +251,19 @@ describe(`UU5.Forms.DateRangePicker props function -> Text.InputMixin`, () => {
         id={"uuID"}
         label="Date of birth"
         validateOnChange={true}
-        onValidate={opt => {
+        onValidate={(opt) => {
           let feedback;
           if (opt.value) {
             feedback = {
               feedback: "success",
               message: "Is valid.",
-              value: opt.value
+              value: opt.value,
             };
           } else {
             feedback = {
               feedback: "error",
               message: "Not valid.",
-              value: opt.value
+              value: opt.value,
             };
           }
           return feedback;
@@ -283,19 +283,19 @@ describe(`UU5.Forms.DateRangePicker props function -> Text.InputMixin`, () => {
         value={[new Date(firstDate), new Date(lastDate)]}
         label="Date of birth"
         validateOnChange={true}
-        onValidate={opt => {
+        onValidate={(opt) => {
           let feedback;
           if (opt.value) {
             feedback = {
               feedback: "success",
               message: "Is valid.",
-              value: opt.value
+              value: opt.value,
             };
           } else {
             feedback = {
               feedback: "error",
               message: "Not valid.",
-              value: opt.value
+              value: opt.value,
             };
           }
           return feedback;
@@ -314,21 +314,15 @@ describe(`UU5.Forms.DateRangePicker props function -> Text.InputMixin`, () => {
 
 describe(`UU5.Forms.DateRangePicker props function -> Forms.InputMixin`, () => {
   it("onChange()", () => {
-    let onChangeFn = jest.fn(opt => opt.component.onChangeDefault(opt));
+    let onChangeFn = jest.fn((opt) => opt.component.onChangeDefault(opt));
     const wrapper = mount(<UU5.Forms.DateRangePicker onChange={onChangeFn} />, {
-      attachTo: mockElement
+      attachTo: mockElement,
     });
     expect(onChangeFn).not.toHaveBeenCalled();
     wrapper.instance().open();
     wrapper.update();
-    wrapper
-      .find(".uu5-forms-calendar-active-section")
-      .first()
-      .simulate("click");
-    wrapper
-      .find(".uu5-forms-calendar-active-section")
-      .last()
-      .simulate("click");
+    wrapper.find(".uu5-forms-calendar-active-section").first().simulate("click");
+    wrapper.find(".uu5-forms-calendar-active-section").last().simulate("click");
     expect(onChangeFn).toBeCalled();
     let lastCall = onChangeFn.mock.calls[onChangeFn.mock.calls.length - 1];
     expect(lastCall[0]).toBeTruthy();
@@ -350,23 +344,17 @@ describe(`UU5.Forms.DateRangePicker props function -> Forms.InputMixin`, () => {
   });
 
   it("onValidate() + validateOnChange", () => {
-    let onValidateFn = jest.fn(opt => {
+    let onValidateFn = jest.fn((opt) => {
       return { feedback: "warning", message: "Message", value: opt.value };
     });
     const wrapper = mount(<UU5.Forms.DateRangePicker onValidate={onValidateFn} validateOnChange />, {
-      attachTo: mockElement
+      attachTo: mockElement,
     });
     expect(onValidateFn).toBeCalled();
     wrapper.instance().open();
     wrapper.update();
-    wrapper
-      .find(".uu5-forms-calendar-active-section")
-      .first()
-      .simulate("click");
-    wrapper
-      .find(".uu5-forms-calendar-active-section")
-      .last()
-      .simulate("click");
+    wrapper.find(".uu5-forms-calendar-active-section").first().simulate("click");
+    wrapper.find(".uu5-forms-calendar-active-section").last().simulate("click");
     expect(onValidateFn).toBeCalled();
     let lastCall = onValidateFn.mock.calls[onValidateFn.mock.calls.length - 1];
     expect(lastCall[0]).toBeTruthy();
@@ -381,16 +369,16 @@ describe(`UU5.Forms.DateRangePicker props function -> Forms.InputMixin`, () => {
   });
 
   it("onChangeFeedback()", () => {
-    let onChangeFeedbackFn = jest.fn(opt => opt.component.onChangeFeedbackDefault(opt));
+    let onChangeFeedbackFn = jest.fn((opt) => opt.component.onChangeFeedbackDefault(opt));
     const wrapper = mount(<UU5.Forms.DateRangePicker required onChangeFeedback={onChangeFeedbackFn} />, {
-      attachTo: mockElement
+      attachTo: mockElement,
     });
     expect(onChangeFeedbackFn).not.toHaveBeenCalled();
     document.getElementsByClassName("uu5-forms-items-input")[0].dispatchEvent(
       new MouseEvent("click", {
         bubbles: true,
         cancelable: true,
-        view: window
+        view: window,
       })
     );
     wrapper.update();
@@ -398,7 +386,7 @@ describe(`UU5.Forms.DateRangePicker props function -> Forms.InputMixin`, () => {
       new MouseEvent("click", {
         bubbles: true,
         cancelable: true,
-        view: window
+        view: window,
       })
     );
     wrapper.update();
@@ -413,9 +401,9 @@ describe(`UU5.Forms.DateRangePicker props function -> Forms.InputMixin`, () => {
 });
 
 describe(`UU5.Forms.DateRangePicker props function`, () => {
-  it("parseDate()", function() {
+  it("parseDate()", function () {
     const dateValue = ["01:01:2019", "05:05:2020"];
-    const parseDateFn = jest.fn(stringDate => {
+    const parseDateFn = jest.fn((stringDate) => {
       let date = null;
       stringDate = stringDate && stringDate.replace(/ /g, "");
       let regExp = new RegExp("^(\\d{1,2})\\:(\\d{1,2})\\:(\\d{4})$");
@@ -429,10 +417,7 @@ describe(`UU5.Forms.DateRangePicker props function`, () => {
     parseDateFn.mockClear();
     // according to docs, parseDate is for parsing passed value, i.e. calling getValue()
     // should trigger it (though maybe multiple times so we'll check only last invocation)
-    wrapper
-      .setProps({ value: dateValue })
-      .instance()
-      .getValue();
+    wrapper.setProps({ value: dateValue }).instance().getValue();
     expect(parseDateFn).toBeCalled();
     expect(wrapper.instance().state.value[0].getFullYear()).toEqual(new Date("1.1.2019").getFullYear());
     expect(wrapper.instance().state.value[0].getMonth()).toEqual(new Date("1.1.2019").getMonth());

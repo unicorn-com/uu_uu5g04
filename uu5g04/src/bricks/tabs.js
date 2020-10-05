@@ -31,10 +31,10 @@ import "./tabs.less";
 const MOUNT_TAB_CONTENT_VALUES = {
   onFirstRender: "onFirstRender",
   onFirstActive: "onFirstActive",
-  onActive: "onActive"
+  onActive: "onActive",
 };
 
-const getMountTabContent = props => {
+const getMountTabContent = (props) => {
   return props.mountTabContent === undefined ? MOUNT_TAB_CONTENT_VALUES.onFirstRender : props.mountTabContent;
 };
 
@@ -49,7 +49,7 @@ export const Tabs = UU5.Common.VisualComponent.create({
     UU5.Common.ColorSchemaMixin,
     UU5.Common.ContentMixin,
     UU5.Common.ScreenSizeMixin,
-    UU5.Common.EditableMixin
+    UU5.Common.EditableMixin,
   ],
   //@@viewOff:mixins
 
@@ -65,14 +65,14 @@ export const Tabs = UU5.Common.VisualComponent.create({
       stacked: ns.css("tabs-list-stacked"),
       content: ns.css("tabs-list-content"),
       size: ns.css("tabs-list-size-"),
-      active: ns.css("tabs-list-active")
+      active: ns.css("tabs-list-active"),
     },
     defaults: {
-      childTagName: "UU5.Bricks.Tabs.Item"
+      childTagName: "UU5.Bricks.Tabs.Item",
     },
     opt: {
-      nestingLevelWrapper: true
-    }
+      nestingLevelWrapper: true,
+    },
   },
   //@@viewOff:statics
 
@@ -86,9 +86,9 @@ export const Tabs = UU5.Common.VisualComponent.create({
         s: UU5.PropTypes.number,
         m: UU5.PropTypes.number,
         l: UU5.PropTypes.number,
-        xl: UU5.PropTypes.number
+        xl: UU5.PropTypes.number,
       }),
-      UU5.PropTypes.string
+      UU5.PropTypes.string,
     ]),
     justified: UU5.PropTypes.bool,
     fade: UU5.PropTypes.bool,
@@ -105,8 +105,8 @@ export const Tabs = UU5.Common.VisualComponent.create({
     mountTabContent: UU5.PropTypes.oneOf([
       MOUNT_TAB_CONTENT_VALUES.onFirstRender,
       MOUNT_TAB_CONTENT_VALUES.onFirstActive,
-      MOUNT_TAB_CONTENT_VALUES.onActive
-    ])
+      MOUNT_TAB_CONTENT_VALUES.onActive,
+    ]),
   },
   //@@viewOff:propTypes
 
@@ -126,7 +126,7 @@ export const Tabs = UU5.Common.VisualComponent.create({
       elevationHover: null,
       underline: true,
       lineProps: null,
-      mountTabContent: undefined
+      mountTabContent: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -139,7 +139,7 @@ export const Tabs = UU5.Common.VisualComponent.create({
   },
 
   UNSAFE_componentWillReceiveProps(nextProps) {
-    this.setState(state => this._getState(nextProps, state));
+    this.setState((state) => this._getState(nextProps, state));
   },
 
   //@@viewOff:reactLifeCycle
@@ -150,10 +150,10 @@ export const Tabs = UU5.Common.VisualComponent.create({
   },
 
   setActive(name) {
-    this.setState(state => {
+    this.setState((state) => {
       return {
         activeName: name,
-        renderedTabs: this._addRenderedTab(state, name)
+        renderedTabs: this._addRenderedTab(state, name),
       };
     });
     return this;
@@ -169,10 +169,10 @@ export const Tabs = UU5.Common.VisualComponent.create({
   },
 
   onChangeDefault(tab) {
-    this.setState(state => {
+    this.setState((state) => {
       return {
         activeName: tab.props.name || tab.props.id,
-        renderedTabs: this._addRenderedTab(state, tab)
+        renderedTabs: this._addRenderedTab(state, tab),
       };
     });
 
@@ -189,7 +189,7 @@ export const Tabs = UU5.Common.VisualComponent.create({
     if (!result && (typeof child !== "string" || child.trim())) {
       if (childTagName)
         this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagName], {
-          mixinName: "UU5.Common.BaseMixin"
+          mixinName: "UU5.Common.BaseMixin",
         });
       else this.showError("childNotAllowed", [child, defaultChildTagName], { mixinName: "UU5.Common.BaseMixin" });
     }
@@ -219,11 +219,11 @@ export const Tabs = UU5.Common.VisualComponent.create({
   },
 
   onChangeScreenSize_(actualScreenSize, e) {
-    this.setState(state =>
+    this.setState((state) =>
       state.screenSize !== actualScreenSize
         ? {
             screenSize: actualScreenSize,
-            stacked: this._isStacked(actualScreenSize)
+            stacked: this._isStacked(actualScreenSize),
           }
         : undefined
     );
@@ -254,7 +254,7 @@ export const Tabs = UU5.Common.VisualComponent.create({
       renderedTabs: [],
       ...state,
       activeName: props.controlled || !state ? props.activeName : state.activeName,
-      stacked: props.controlled || !state ? this._isStacked(this.getScreenSize(), props) : state.stacked
+      stacked: props.controlled || !state ? this._isStacked(this.getScreenSize(), props) : state.stacked,
     };
 
     let builtChildren = this.buildChildren(props);
@@ -265,25 +265,25 @@ export const Tabs = UU5.Common.VisualComponent.create({
 
       if (builtChildren.length) {
         if (getMountTabContent(props) === MOUNT_TAB_CONTENT_VALUES.onFirstRender) {
-          result.renderedTabs = builtChildren.map(tab => ({ id: tab.props.id, name: tab.props.name }));
+          result.renderedTabs = builtChildren.map((tab) => ({ id: tab.props.id, name: tab.props.name }));
         } else if (getMountTabContent(props) === MOUNT_TAB_CONTENT_VALUES.onFirstActive) {
-          result.renderedTabs = result.renderedTabs.filter(tab =>
-            builtChildren.some(builtChild => builtChild.props.name === tab.name || builtChild.props.id === tab.id)
+          result.renderedTabs = result.renderedTabs.filter((tab) =>
+            builtChildren.some((builtChild) => builtChild.props.name === tab.name || builtChild.props.id === tab.id)
           );
 
           // check if active item is in result.renderedTabs and add it if needed
           if (result.activeName) {
             let activeItem = builtChildren
-              .map(tab => ({ id: tab.props.id, name: tab.props.name }))
-              .find(tab => tab.name === result.activeName || tab.id === result.activeName);
+              .map((tab) => ({ id: tab.props.id, name: tab.props.name }))
+              .find((tab) => tab.name === result.activeName || tab.id === result.activeName);
 
-            if (!result.renderedTabs.some(tab => tab.name === activeItem.name || tab.id === activeItem.id)) {
+            if (!result.renderedTabs.some((tab) => tab.name === activeItem.name || tab.id === activeItem.id)) {
               result.renderedTabs.push(activeItem);
             }
           }
         } else if (getMountTabContent(props) === MOUNT_TAB_CONTENT_VALUES.onActive) {
           let activeItem = builtChildren.find(
-            tab => tab.props.name === result.activeName || tab.props.id === result.activeName
+            (tab) => tab.props.name === result.activeName || tab.props.id === result.activeName
           );
           result.renderedTabs = activeItem ? [{ id: activeItem.props.id, name: activeItem.props.name }] : [];
         }
@@ -292,7 +292,7 @@ export const Tabs = UU5.Common.VisualComponent.create({
           let activeIndex = 0;
           if (result.activeName) {
             activeIndex = builtChildren.findIndex(
-              tab => tab.props.name === result.activeName || tab.props.id === result.activeName
+              (tab) => tab.props.name === result.activeName || tab.props.id === result.activeName
             );
           }
 
@@ -317,7 +317,7 @@ export const Tabs = UU5.Common.VisualComponent.create({
     }
 
     let matchingTab = renderedTabs.find(
-      renderedTab => (renderedTab.name && renderedTab.name === newTab.name) || renderedTab.id === newTab.id
+      (renderedTab) => (renderedTab.name && renderedTab.name === newTab.name) || renderedTab.id === newTab.id
     );
 
     if (!matchingTab) {
@@ -366,15 +366,15 @@ export const Tabs = UU5.Common.VisualComponent.create({
   _filterChildren(children) {
     if (getMountTabContent(this.props) === MOUNT_TAB_CONTENT_VALUES.onFirstActive) {
       children = children.filter(
-        child =>
+        (child) =>
           !!this.state.renderedTabs.find(
-            tabName => (tabName.name && tabName.name === child.props.name) || tabName.id === child.props.id
+            (tabName) => (tabName.name && tabName.name === child.props.name) || tabName.id === child.props.id
           )
       );
     } else if (getMountTabContent(this.props) === MOUNT_TAB_CONTENT_VALUES.onActive) {
       if (this.state.activeName) {
         children = children.find(
-          child => child.props.name === this.state.activeName || child.props.id === this.state.activeName
+          (child) => child.props.name === this.state.activeName || child.props.id === this.state.activeName
         );
       } else {
         children = children[0];
@@ -409,7 +409,7 @@ export const Tabs = UU5.Common.VisualComponent.create({
       const activeItem = (
         <li key={i} className={this.getClassName("active")}>
           <Button
-            ref_={btn => (this._btn[i] = btn)}
+            ref_={(btn) => (this._btn[i] = btn)}
             bgStyle={bgStyle}
             size={this.props.size}
             disabled={tab.props.disabled}
@@ -434,7 +434,7 @@ export const Tabs = UU5.Common.VisualComponent.create({
       return (
         <li key={i}>
           <Button
-            ref_={btn => (this._btn[i] = btn)}
+            ref_={(btn) => (this._btn[i] = btn)}
             bgStyle={bgStyle}
             size={this.props.size}
             onClick={() => this._onChange(tab)}
@@ -470,7 +470,7 @@ export const Tabs = UU5.Common.VisualComponent.create({
     return {
       ...(!this.props.stacked ? { size: "1px" } : { vertical: true, size: "s" }),
       colorSchema: "custom",
-      ...this.props.lineProps
+      ...this.props.lineProps,
     };
   },
 
@@ -507,7 +507,7 @@ export const Tabs = UU5.Common.VisualComponent.create({
         {this.state.editation ? this._renderEditationMode() : null}
       </UU5.Common.Fragment>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

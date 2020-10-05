@@ -22,16 +22,16 @@ const CONFIG = {
   mixins: ["UU5.Common.BaseMixin", "UU5.Common.ElementaryMixin"],
   props: {
     href: {
-      values: ["https://unicorn.com/"]
+      values: ["https://unicorn.com/"],
     },
     type: {
-      values: ["full", "simple"]
-    }
+      values: ["full", "simple"],
+    },
   },
   requiredProps: {
-    href: "https://unicorn.com/"
+    href: "https://unicorn.com/",
   },
-  opt: {}
+  opt: {},
 };
 
 const MIXED_DATA = `<html><head>

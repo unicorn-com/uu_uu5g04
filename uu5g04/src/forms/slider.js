@@ -34,7 +34,7 @@ export const Slider = Context.withContext(
       UU5.Common.ElementaryMixin,
       UU5.Common.ContentMixin,
       UU5.Common.ColorSchemaMixin,
-      InputMixin
+      InputMixin,
     ],
     //@@viewOff:mixins
 
@@ -46,11 +46,11 @@ export const Slider = Context.withContext(
         inputGroup: ns.css("slider-input-group"),
         slider: ns.css("slider-slider"),
         number: ns.css("slider-number"),
-        sliderReadOnly: ns.css("slider-slider-read-only")
+        sliderReadOnly: ns.css("slider-slider-read-only"),
       },
       defaults: {
-        nanMessage: "Please insert a number"
-      }
+        nanMessage: "Please insert a number",
+      },
     },
     //@@viewOff:statics
 
@@ -63,7 +63,7 @@ export const Slider = Context.withContext(
       step: UU5.PropTypes.number,
       value: UU5.PropTypes.number,
       onChange: UU5.PropTypes.func,
-      onChanged: UU5.PropTypes.func
+      onChanged: UU5.PropTypes.func,
     },
     //@@viewOff:propTypes
 
@@ -74,7 +74,7 @@ export const Slider = Context.withContext(
         max: 10,
         step: 1,
         value: 0,
-        onChanged: null
+        onChanged: null,
       };
     },
     //@@viewOff:getDefaultProps
@@ -83,7 +83,7 @@ export const Slider = Context.withContext(
     getInitialState() {
       let step = this._getUsedStep(this.props.step);
       return {
-        step
+        step,
       };
     },
     UNSAFE_componentWillMount() {
@@ -194,7 +194,7 @@ export const Slider = Context.withContext(
     _onFocus() {
       this.setState({ inputFocused: true });
 
-      UU5.Environment.EventListener.addWindowEvent("keydown", this.getId(), e => {
+      UU5.Environment.EventListener.addWindowEvent("keydown", this.getId(), (e) => {
         let current = this.getValue();
         if (typeof current === "number") {
           let newValue;
@@ -270,7 +270,7 @@ export const Slider = Context.withContext(
             }
           } else {
             this.showError("validateError", null, {
-              context: { event: e, func: this.props.onValidate, result: result }
+              context: { event: e, func: this.props.onValidate, result: result },
             });
           }
         }
@@ -289,7 +289,7 @@ export const Slider = Context.withContext(
 
     _getInputGroupAttrs() {
       return {
-        className: this.getClassName().inputGroup
+        className: this.getClassName().inputGroup,
       };
     },
 
@@ -349,7 +349,7 @@ export const Slider = Context.withContext(
         onChanged: this.props.onChanged,
         disabled: this.isComputedDisabled() || this.isReadOnly(),
         size: this.props.size,
-        style: { width: this._getInputWidth() }
+        style: { width: this._getInputWidth() },
       };
     },
 
@@ -364,10 +364,10 @@ export const Slider = Context.withContext(
         min: this.props.min,
         max: this.props.max,
         value: value.toString(),
-        onChange: event => {
+        onChange: (event) => {
           this._onChange({ component: this, value: event.target.value, event: event });
         },
-        onBlur: opt => {
+        onBlur: (opt) => {
           if (this.state.value < this.props.min) {
             opt.component.setValue(this.props.min);
           } else if (this.state.value > this.props.max) {
@@ -375,7 +375,7 @@ export const Slider = Context.withContext(
           }
         },
         disabled: this.isComputedDisabled(),
-        onChangeFeedback: this._onChangeNumberFeedback
+        onChangeFeedback: this._onChangeNumberFeedback,
       };
     },
 
@@ -475,11 +475,11 @@ export const Slider = Context.withContext(
               onBlur={() => this._onBlur()}
               colorSchema={this.props.colorSchema}
               size={this.props.size}
-            />
+            />,
           ])}
         </div>
       );
-    }
+    },
     //@@viewOff:render
   })
 );

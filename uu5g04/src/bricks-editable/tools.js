@@ -23,7 +23,7 @@ export const Tools = {
     let inputObject = {};
     let content, contentEditable;
 
-    props.forEach(item => {
+    props.forEach((item) => {
       let name = item.name;
       let currentValue = editablePropsValues[name];
 
@@ -35,11 +35,11 @@ export const Tools = {
         item.label = "Content";
         item.value = hasContent ? editablePropsValues.content : editablePropsValues.children;
         item.props = item.props || {};
-        item.props.ref_ = input => (inputObject.input = input);
+        item.props.ref_ = (input) => (inputObject.input = input);
       } else if (name === "contentEditable") {
         contentEditable = item;
         item.props = item.props ? item.props : {};
-        item.props.onChange = opt => {
+        item.props.onChange = (opt) => {
           opt.component.setValue(opt.value);
           if (inputObject.input) {
             opt.value ? inputObject.input.disable() : inputObject.input.enable();
@@ -67,13 +67,13 @@ export const Tools = {
   },
 
   _getEditablePropsValues(defaultProps, props) {
-    let editableProps = defaultProps.map(item => item.name);
+    let editableProps = defaultProps.map((item) => item.name);
 
     if (editableProps.indexOf("content") > -1) {
       editableProps = editableProps.concat(["children"]);
     }
     return props.component.getEditablePropsValues(editableProps);
-  }
+  },
 };
 
 export default Tools;

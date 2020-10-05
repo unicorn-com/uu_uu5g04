@@ -34,12 +34,12 @@ UU5.Common.Tools.setLanguage("en");
 if (!process.env.TZ) process.env.TZ = "Europe/Prague";
 
 // override logging (don't log context with React components because the output is too long)
-UU5.Common.Tools.warning = function(msg, context) {
+UU5.Common.Tools.warning = function (msg, context) {
   let args = [msg];
   if (arguments.length > 1 && (typeof context !== "object" || context instanceof Error)) args.push(context);
   console.warn(...args);
 };
-UU5.Common.Tools.error = function(msg, context) {
+UU5.Common.Tools.error = function (msg, context) {
   let args = [msg];
   if (arguments.length > 1 && (typeof context !== "object" || context instanceof Error)) args.push(context);
   console.error(...args);
@@ -53,17 +53,17 @@ let ignoredMessageKeys = {
   nestingLevelMismatchExplicitProp: true,
   childTagNotAllowed: true,
   childNotAllowed: true,
-  noPropsGiven: true
+  noPropsGiven: true,
 };
 
 let origShowWarning = UU5.Common.BaseMixin.showWarning;
-UU5.Common.BaseMixin.showWarning = function(msgKey /* ... */) {
+UU5.Common.BaseMixin.showWarning = function (msgKey /* ... */) {
   if (ignoredMessageKeys[msgKey]) return;
   return origShowWarning.apply(this, arguments);
 };
 
 let origShowError = UU5.Common.BaseMixin.showError;
-UU5.Common.BaseMixin.showError = function(msgKey /* ... */) {
+UU5.Common.BaseMixin.showError = function (msgKey /* ... */) {
   if (ignoredMessageKeys[msgKey]) return;
   return origShowError.apply(this, arguments);
 };
@@ -114,12 +114,12 @@ expect.addSnapshotSerializer({
     // transform instances of UU5 components into JSON without functions and add tagName
     if (val.getUU5CommonBaseMixinProps) {
       let newVal = {
-        tagName: (val.constructor || {}).tagName
+        tagName: (val.constructor || {}).tagName,
       };
       Object.keys(val)
-        .filter(k => typeof val[k] !== "function")
-        .filter(k => k !== "updater") // React/enzyme field
-        .forEach(k => (newVal[k] = val[k]));
+        .filter((k) => typeof val[k] !== "function")
+        .filter((k) => k !== "updater") // React/enzyme field
+        .forEach((k) => (newVal[k] = val[k]));
       val = newVal;
     }
 
@@ -127,12 +127,12 @@ expect.addSnapshotSerializer({
     return serialize(val, ...rest);
   },
 
-  test: val => {
+  test: (val) => {
     return (
       val &&
       typeof val === "object" &&
       (("$$typeof" in val && val.props) || val.getUU5CommonBaseMixinProps) && // React element or instance of UU5 component
       !processedSet.has(val)
     );
-  }
+  },
 });

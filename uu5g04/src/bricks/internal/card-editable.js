@@ -18,18 +18,18 @@ const DEFAULT_PROPS_MAP = {
   borderRadius: null,
   header: "",
   footer: "",
-  level: null
+  level: null,
 };
 
 const editableComponentPropsSetup = [
   {
-    name: "bgStyle"
+    name: "bgStyle",
   },
   {
-    name: "colorSchema"
+    name: "colorSchema",
   },
   {
-    name: "borderRadius"
+    name: "borderRadius",
   },
 ];
 
@@ -44,8 +44,8 @@ const editableInlinePropsSetup = [
       min: 0,
       suffix: "px",
       valueType: "number",
-      disabled: !componentProps.inline
-    })
+      disabled: !componentProps.inline,
+    }),
   },
   {
     name: "minWidth",
@@ -56,9 +56,9 @@ const editableInlinePropsSetup = [
       min: 0,
       suffix: "px",
       valueType: "number",
-      disabled: !componentProps.inline
-    })
-  }
+      disabled: !componentProps.inline,
+    }),
+  },
 ];
 
 const editableElevationPropsSetup = [
@@ -69,34 +69,34 @@ const editableElevationPropsSetup = [
     getProps: () => ({
       items: [
         { content: <UU5.Bricks.Lsi lsi={EditableLsi.common.valueFalse} />, value: false },
-        { content: <UU5.Bricks.Lsi lsi={EditableLsi.common.valueTrue} />, value: true }
+        { content: <UU5.Bricks.Lsi lsi={EditableLsi.common.valueTrue} />, value: true },
       ],
-      message: <UU5.Bricks.Lsi lsi={EditableLsi.card.noSpacesMessage} />
-    })
+      message: <UU5.Bricks.Lsi lsi={EditableLsi.card.noSpacesMessage} />,
+    }),
   },
   {
-    name: "elevation"
+    name: "elevation",
   },
   {
     name: "elevationHover",
     type: "elevation",
-    label: EditableLsi.card.elevationHoverLabel
-  }
+    label: EditableLsi.card.elevationHoverLabel,
+  },
 ];
 
 const editablePropsSetup = [
   {
     name: EditableLsi.common.componentPropsLabel,
-    setup: editableComponentPropsSetup
+    setup: editableComponentPropsSetup,
   },
   {
     name: EditableLsi.card.inlinePropsLabel,
-    setup: editableInlinePropsSetup
+    setup: editableInlinePropsSetup,
   },
   {
     name: EditableLsi.card.elevationPropsLabel,
-    setup: editableElevationPropsSetup
-  }
+    setup: editableElevationPropsSetup,
+  },
 ];
 
 export const CardEditable = UU5.Common.VisualComponent.create({
@@ -108,16 +108,16 @@ export const CardEditable = UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("CardEditable"),
     classNames: {
-      main: ns.css("card-editable")
+      main: ns.css("card-editable"),
     },
-    lsi: () => ({ ...EditableLsi.card, ...EditableLsi.common })
+    lsi: () => ({ ...EditableLsi.card, ...EditableLsi.common }),
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
     component: UU5.PropTypes.object.isRequired,
-    renderView: UU5.PropTypes.func
+    renderView: UU5.PropTypes.func,
   },
   //@@viewOff:propTypes
 
@@ -125,7 +125,7 @@ export const CardEditable = UU5.Common.VisualComponent.create({
   getDefaultProps() {
     return {
       component: null,
-      renderView: undefined
+      renderView: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -137,7 +137,7 @@ export const CardEditable = UU5.Common.VisualComponent.create({
     return {
       ...values,
       showFooter: !!values.footer,
-      showHeader: !!values.header
+      showHeader: !!values.header,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -185,15 +185,15 @@ export const CardEditable = UU5.Common.VisualComponent.create({
   _changeColorSchema(opt) {
     this.setState({ colorSchema: opt.value }, () => {
       this.props.component.saveEditation({
-        colorSchema: !opt.value || opt.value === "default" ? undefined : opt.value
+        colorSchema: !opt.value || opt.value === "default" ? undefined : opt.value,
       });
     });
   },
 
   _toggleHeader(value, setStateCallback) {
     this.setState(
-      state => ({
-        showHeader: !state.showHeader
+      (state) => ({
+        showHeader: !state.showHeader,
       }),
       setStateCallback
     );
@@ -201,15 +201,15 @@ export const CardEditable = UU5.Common.VisualComponent.create({
 
   _toggleFooter(value, setStateCallback) {
     this.setState(
-      state => ({
-        showFooter: !state.showFooter
+      (state) => ({
+        showFooter: !state.showFooter,
       }),
       setStateCallback
     );
   },
 
   _toggleUnderline() {
-    this.setState(state => ({ underline: !state.underline }));
+    this.setState((state) => ({ underline: !state.underline }));
   },
 
   _changeLevel(value, setStateCallback) {
@@ -225,9 +225,9 @@ export const CardEditable = UU5.Common.VisualComponent.create({
   },
 
   _getHeaderToolbarItems() {
-    let levelItems = [1, 2, 3, 4, 5, 6].map(level => ({
+    let levelItems = [1, 2, 3, 4, 5, 6].map((level) => ({
       content: `${this.getLsiValue("level")} ${level}`,
-      value: `${level}`
+      value: `${level}`,
     }));
     levelItems.unshift({ content: this.getLsiValue("defaultLevel"), value: null });
 
@@ -238,9 +238,9 @@ export const CardEditable = UU5.Common.VisualComponent.create({
           return {
             value: this.state.colorSchema,
             onClick: this._changeColorSchema,
-            tooltip: this.getLsiValue("colorSchemaTooltip")
+            tooltip: this.getLsiValue("colorSchemaTooltip"),
           };
-        }
+        },
       },
       {
         type: "button",
@@ -249,9 +249,9 @@ export const CardEditable = UU5.Common.VisualComponent.create({
             pressed: this.state.underline,
             onClick: this._toggleUnderline,
             tooltip: this.getLsiValue("underlineTooltip"),
-            icon: "mdi-format-underline"
+            icon: "mdi-format-underline",
           };
-        }
+        },
       },
       {
         type: "dropdown",
@@ -266,10 +266,10 @@ export const CardEditable = UU5.Common.VisualComponent.create({
             onClick: this._changeLevel,
             tooltip: this.getLsiValue("levelTooltip"),
             items: levelItems,
-            className: this.getClassName("levelDropdown")
+            className: this.getClassName("levelDropdown"),
           };
-        }
-      }
+        },
+      },
     ];
   },
 
@@ -278,13 +278,13 @@ export const CardEditable = UU5.Common.VisualComponent.create({
       {
         value: this.state.showHeader,
         onClick: this._toggleHeader,
-        label: this.getLsiValue("showHeaderCheckboxLabel")
+        label: this.getLsiValue("showHeaderCheckboxLabel"),
       },
       {
         value: this.state.showFooter,
         onClick: this._toggleFooter,
-        label: this.getLsiValue("showFooterCheckboxLabel")
-      }
+        label: this.getLsiValue("showFooterCheckboxLabel"),
+      },
     ];
   },
 
@@ -374,13 +374,13 @@ export const CardEditable = UU5.Common.VisualComponent.create({
               >
                 {({ children }) => <UU5.Bricks.Footer parent={this.props.component}>{children}</UU5.Bricks.Footer>}
               </UU5.BricksEditable.Input>
-            ) : null
+            ) : null,
           ])}
         </UU5.BricksEditable.Toolbar>
         {this.state.editModalOpen ? this._renderEditModal() : null}
       </>
     );
-  }
+  },
   //@@viewOff:render
 });
 

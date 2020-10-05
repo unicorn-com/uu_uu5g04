@@ -23,21 +23,21 @@ const CONFIG = {
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.ContentMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     infoHeader: {
-      values: ["Text in header in Box"]
+      values: ["Text in header in Box"],
     },
     infoContent: {
-      values: ["Text in opened modal window"]
+      values: ["Text in opened modal window"],
     },
     disableClick: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
   },
   requiredProps: {},
-  opt: {}
+  opt: {},
 };
 
 describe(`UU5.Bricks.Box`, () => {

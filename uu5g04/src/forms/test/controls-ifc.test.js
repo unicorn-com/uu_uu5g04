@@ -17,7 +17,7 @@ import "uu5g04-forms";
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
-describe("UU5.Forms.ControlsMixin intreface testing", function() {
+describe("UU5.Forms.ControlsMixin intreface testing", function () {
   it("getForm() should return instance of forms", () => {
     const wrapper = mount(
       <UU5.Forms.Form
@@ -37,9 +37,9 @@ describe("UU5.Forms.ControlsMixin intreface testing", function() {
           name="subname"
           placeholder="Smith"
           required
-          ref_={text => (this.text = text)}
+          ref_={(text) => (this.text = text)}
         />
-        <UU5.Forms.Controls id={"controlsID"} ref_={controls => (this.controls = controls)} />
+        <UU5.Forms.Controls id={"controlsID"} ref_={(controls) => (this.controls = controls)} />
       </UU5.Forms.Form>
     );
     expect(this.controls.getForm()).not.toBe(undefined);

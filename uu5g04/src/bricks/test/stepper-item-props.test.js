@@ -21,30 +21,30 @@ const CONFIG = {
 
   props: {
     size: {
-      values: ["s", "m", "l", "xl"]
+      values: ["s", "m", "l", "xl"],
     },
     borderRadius: {
-      values: ["8", "15"]
+      values: ["8", "15"],
     },
     bgStyle: {
-      values: ["filled", "outline", "transparent", "underline"]
+      values: ["filled", "outline", "transparent", "underline"],
     },
     topVisitedStep: {
-      values: [0, 5]
+      values: [0, 5],
     },
     currentStep: {
-      values: [0, 4]
+      values: [0, 4],
     },
     elevation: {
-      values: ["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]
+      values: ["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5],
     },
     index: {
-      values: [0, 3]
-    }
+      values: [0, 3],
+    },
   },
   requiredProps: {
-    parent: shallow(<UU5.Bricks.Stepper id={"idParent"} />).instance()
-  }
+    parent: shallow(<UU5.Bricks.Stepper id={"idParent"} />).instance(),
+  },
 };
 
 describe(`UU5.Bricks.Stepper.Item props`, () => {
@@ -59,26 +59,20 @@ describe(`UU5.Bricks.Stepper.Item  props.function `, () => {
     const wrapper = mount(
       <UU5.Bricks.Stepper id={"uuID"} onClick={mockFn} currentStep={2} topVisitedStep={3}>
         <UU5.Bricks.Stepper.Item>Dokoncený krok</UU5.Bricks.Stepper.Item>
-        <UU5.Bricks.Stepper.Item ref_={comp => (secondItem = comp)}>Dokoncený krok</UU5.Bricks.Stepper.Item>
+        <UU5.Bricks.Stepper.Item ref_={(comp) => (secondItem = comp)}>Dokoncený krok</UU5.Bricks.Stepper.Item>
         <UU5.Bricks.Stepper.Item>Aktivní krok</UU5.Bricks.Stepper.Item>
-        <UU5.Bricks.Stepper.Item ref_={comp2 => (fourItem = comp2)}>Následujicí krok</UU5.Bricks.Stepper.Item>
+        <UU5.Bricks.Stepper.Item ref_={(comp2) => (fourItem = comp2)}>Následujicí krok</UU5.Bricks.Stepper.Item>
         <UU5.Bricks.Stepper.Item>Následujicí krok</UU5.Bricks.Stepper.Item>
       </UU5.Bricks.Stepper>
     );
 
-    wrapper
-      .find(UU5.Bricks.Button)
-      .at(1)
-      .simulate("click");
-    wrapper
-      .find(UU5.Bricks.Button)
-      .at(4)
-      .simulate("click");
+    wrapper.find(UU5.Bricks.Button).at(1).simulate("click");
+    wrapper.find(UU5.Bricks.Button).at(4).simulate("click");
 
     expect(mockFn).toHaveBeenCalledTimes(1);
     let opt = mockFn.mock.calls[0][0];
     expect(opt).toMatchObject({
-      value: 1
+      value: 1,
     });
     expect(opt.component === secondItem).toBeTruthy();
     expect(opt.event).toBeTruthy();

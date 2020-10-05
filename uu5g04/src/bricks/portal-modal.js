@@ -28,21 +28,21 @@ export const PortalModal = UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("PortalModal"),
     classNames: {
-      main: ns.css("portal-modal")
-    }
+      main: ns.css("portal-modal"),
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    ...Modal.propTypes
+    ...Modal.propTypes,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      shown: false
+      shown: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -53,7 +53,7 @@ export const PortalModal = UU5.Common.VisualComponent.create({
 
     return {
       props: undefined,
-      open: this.props.shown
+      open: this.props.shown,
     };
   },
 
@@ -126,11 +126,11 @@ export const PortalModal = UU5.Common.VisualComponent.create({
         <RenderIntoPortal>
           {/* arrow fn has to be used because props has to be sent to the _onClose fn */}
           {/* eslint-disable-next-line react/jsx-no-bind */}
-          <Modal {...props} ref_={this._registerModal} onClose={opt => this._onClose(opt, props)} forceRender />
+          <Modal {...props} ref_={this._registerModal} onClose={(opt) => this._onClose(opt, props)} forceRender />
         </RenderIntoPortal>
       )
     );
-  }
+  },
   //@@viewOff:render
 });
 

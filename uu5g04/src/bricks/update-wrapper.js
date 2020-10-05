@@ -26,21 +26,21 @@ export const UpdateWrapper = UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("UpdateWrapper"),
     opt: {
-      pureRender: true
-    }
+      pureRender: true,
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    preventRender: UU5.PropTypes.bool
+    preventRender: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      preventRender: false
+      preventRender: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -70,7 +70,7 @@ export const UpdateWrapper = UU5.Common.VisualComponent.create({
   //@@viewOn:render
   render() {
     return this.getChildren();
-  }
+  },
   //@@viewOff:render
 });
 

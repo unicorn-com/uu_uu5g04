@@ -42,14 +42,14 @@ beforeEach(() => {
     doc: "https://uuos9.plus4u.net/uu-dockitg01-main/78462435-e3f5c648e85f4319bd8fc25ea5be6c2c/book",
     dependencyMap: {
       uu5g04: "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
-      "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js"
+      "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
     },
     awid: "fe96c133c895434bbd4d5b24831483f3",
     sys: { cts: "2018-03-07T20:39:58.133Z", mts: "2018-03-07T20:39:58.133Z", rev: 0 },
-    uuAppErrorMap: {}
+    uuAppErrorMap: {},
   };
 
-  UU5.Common.Tools.loadLibrary = function(libName, callback) {
+  UU5.Common.Tools.loadLibrary = function (libName, callback) {
     setTimeout(() => callback(block_danger_response), 0);
   };
 });
@@ -100,7 +100,7 @@ describe("UU5.Common.Tools interface", () => {
     jest.useFakeTimers();
     let calls = UU5.Common.Tools.findComponent("UuDocKit.Bricks.BlockDanger", {
       content: "Je lepší bejt chytrej nežli hloupej.",
-      id: "componentRegistryId"
+      id: "componentRegistryId",
     });
     jest.runAllTimers();
     expect(calls).toMatchSnapshot();
@@ -110,19 +110,19 @@ describe("UU5.Common.Tools interface", () => {
     //NOTE:  UU5.Forms is already loaded (because of 1st test), i.e. this won't use TagPlaceholder.
     jest.useFakeTimers();
 
-    const ErrorComponent = props => {
+    const ErrorComponent = (props) => {
       return "component " + props.tagName + " couldn't be rendered!";
     };
 
-    let customError1 = UU5.Common.Tools.findComponent("A.B.C", null, null, <ErrorComponent />);
+    let customError1 = UU5.Common.Tools.findComponent("UU5.Forms.C", null, null, <ErrorComponent />);
     let customError2 = UU5.Common.Tools.findComponent(
-      "A.B.C",
+      "UU5.Forms.C",
       null,
       null,
       ({ tagName }) => "component " + tagName + " couldn't be rendered!"
     );
     let customError3 = UU5.Common.Tools.findComponent(
-      "A.B.C",
+      "UU5.Forms.C",
       null,
       null,
       "component ${tagName} couldn't be rendered!"
@@ -138,7 +138,7 @@ describe("UU5.Common.Tools interface", () => {
 
     jest.runAllTimers();
     wrapper.update();
-    expect(wrapper.text()).toContain("component A.B.C couldn't be rendered!");
+    expect(wrapper.text()).toContain("component UU5.Forms.C couldn't be rendered!");
   });
 
   it('pad(number, lenght, char="0") ', () => {
@@ -256,14 +256,14 @@ describe("UU5.Common.Tools interface", () => {
     expect(returnValue).toEqual(expect.any(String));
   });
 
-  it("buildCounterCallbacks() should be called only once after three buttons will be disabled", function() {
+  it("buildCounterCallbacks() should be called only once after three buttons will be disabled", function () {
     let mockFunc = jest.fn();
     let but, but1, but2;
     let wrapper = mount(
       <UU5.Bricks.Container>
-        <UU5.Bricks.Button ref_={ref => (but = ref)} />
-        <UU5.Bricks.Button ref_={ref => (but1 = ref)} />
-        <UU5.Bricks.Button ref_={ref => (but2 = ref)} />
+        <UU5.Bricks.Button ref_={(ref) => (but = ref)} />
+        <UU5.Bricks.Button ref_={(ref) => (but1 = ref)} />
+        <UU5.Bricks.Button ref_={(ref) => (but2 = ref)} />
         <br />
       </UU5.Bricks.Container>
     );
@@ -297,7 +297,7 @@ describe("UU5.Common.Tools interface", () => {
 
     returnValue = UU5.Common.Tools.formatString("Uživateli ${user} je ${age} let.", {
       user: "Unicorn Univers",
-      age: "25"
+      age: "25",
     });
     expect(() => {
       returnValue;
@@ -314,7 +314,7 @@ describe("UU5.Common.Tools interface", () => {
   it("formatString(string, ())", () => {
     const returnValue = UU5.Common.Tools.formatString("Uživateli {0} je {1} roky, prože se narodil před {1} roky.", [
       "Unicorn Univers",
-      "25"
+      "25",
     ]);
     expect(() => {
       returnValue;
@@ -325,7 +325,7 @@ describe("UU5.Common.Tools interface", () => {
   it("formatString() with object", () => {
     const returnValue = UU5.Common.Tools.formatString("Uživateli ${user} je ${age} let.", {
       user: "Unicorn Univers",
-      age: "25"
+      age: "25",
     });
     expect(() => {
       returnValue;
@@ -336,7 +336,7 @@ describe("UU5.Common.Tools interface", () => {
   it("formatString() combined", () => {
     const returnValue = UU5.Common.Tools.formatString("Uživateli ${user} %s je ${age} let.", {
       user: "Unicorn Univers",
-      age: "25"
+      age: "25",
     });
     expect(() => {
       returnValue;
@@ -480,7 +480,7 @@ describe("UU5.Common.Tools interface", () => {
     let result;
     expect(() => {
       result = UU5.Common.Tools.warning("This warning is expected to be shown in console.", {
-        warningData: "Session will be deleted."
+        warningData: "Session will be deleted.",
       });
     }).not.toThrow();
     expect(result).not.toBeNull();
@@ -557,7 +557,7 @@ describe("UU5.Common.Tools interface", () => {
     expect(fcDebounce.mock.calls[0][0]).toEqual(expect.any(Number)); // param should be time
   });
 
-  it("[function] Tools.throttle(func, wait) mock should be called five times", function() {
+  it("[function] Tools.throttle(func, wait) mock should be called five times", function () {
     jest.useFakeTimers();
     let fcThrottle = jest.fn(); //mock function of throttle ifc
     let funcThrottle = UU5.Common.Tools.throttle(fcThrottle, 1000);
@@ -580,23 +580,23 @@ describe("UU5.Common.Tools interface", () => {
   it("getDocumentHeight() should return max of result", () => {
     Object.defineProperty(document.body, "scrollHeight", {
       writable: true,
-      value: 800
+      value: 800,
     });
     Object.defineProperty(document.body, "offsetHeight", {
       writable: true,
-      value: 900
+      value: 900,
     });
     Object.defineProperty(document.documentElement, "scrollHeight", {
       writable: true,
-      value: 600
+      value: 600,
     });
     Object.defineProperty(document.documentElement, "clientHeight", {
       writable: true,
-      value: 500
+      value: 500,
     });
     Object.defineProperty(document.documentElement, "offsetHeight", {
       writable: true,
-      value: 50
+      value: 50,
     });
     let ifc = UU5.Common.Tools.getDocumentHeight();
     expect(() => {
@@ -610,23 +610,23 @@ describe("UU5.Common.Tools interface", () => {
   it("getDocumentWidth() should return max note", () => {
     Object.defineProperty(document.body, "scrollWidth", {
       writable: true,
-      value: 800
+      value: 800,
     });
     Object.defineProperty(document.body, "offsetWidth", {
       writable: true,
-      value: 900
+      value: 900,
     });
     Object.defineProperty(document.documentElement, "scrollWidth", {
       writable: true,
-      value: 600
+      value: 600,
     });
     Object.defineProperty(document.documentElement, "clientWidth", {
       writable: true,
-      value: 500
+      value: 500,
     });
     Object.defineProperty(document.documentElement, "offsetWidth", {
       writable: true,
-      value: 50
+      value: 50,
     });
     let ifc = UU5.Common.Tools.getDocumentWidth();
     expect(() => {
@@ -643,7 +643,7 @@ describe("UU5.Common.Tools interface", () => {
     //now we must set clientWidth becasue default value is 0.
     Object.defineProperty(element, "clientWidth", {
       writable: true,
-      value: 500
+      value: 500,
     });
     //result should be 500 - 200 - 100 = 200
     let ifc = UU5.Common.Tools.getWidth(element);
@@ -659,7 +659,7 @@ describe("UU5.Common.Tools interface", () => {
     element.setAttribute("style", "padding-top:200px; padding-bottom:200px");
     Object.defineProperty(element, "clientHeight", {
       writable: true,
-      value: 500
+      value: 500,
     });
     //result should be 500 - 200 - 200 = 100
     let ifc = UU5.Common.Tools.getHeight(element);
@@ -674,7 +674,7 @@ describe("UU5.Common.Tools interface", () => {
     let element = document.createElement("Button");
     Object.defineProperty(element, "clientWidth", {
       writable: true,
-      value: 500
+      value: 500,
     });
     let ifc = UU5.Common.Tools.getInnerWidth(element);
     expect(() => {
@@ -690,7 +690,7 @@ describe("UU5.Common.Tools interface", () => {
     element.setAttribute("style", "margin-left:200px; margin-right:200px");
     Object.defineProperty(element, "offsetWidth", {
       writable: true,
-      value: 300
+      value: 300,
     });
     //margin is ignored with false
     let ifc = UU5.Common.Tools.getOuterWidth(element, false);
@@ -706,7 +706,7 @@ describe("UU5.Common.Tools interface", () => {
     element.setAttribute("style", "margin-left:200px; margin-right:200px");
     Object.defineProperty(element, "offsetWidth", {
       writable: true,
-      value: 300
+      value: 300,
     });
     let ifc = UU5.Common.Tools.getOuterWidth(element, true);
     expect(() => {
@@ -720,7 +720,7 @@ describe("UU5.Common.Tools interface", () => {
     let element = document.createElement("Button");
     Object.defineProperty(element, "clientHeight", {
       writable: true,
-      value: 500
+      value: 500,
     });
     let ifc = UU5.Common.Tools.getInnerHeight(element);
     expect(() => {
@@ -736,7 +736,7 @@ describe("UU5.Common.Tools interface", () => {
     element.setAttribute("style", "margin-top:200px; margin-bottom:200px");
     Object.defineProperty(element, "offsetHeight", {
       writable: true,
-      value: 300
+      value: 300,
     });
     //margin is ignored with false
     let ifc = UU5.Common.Tools.getOuterHeight(element, false);
@@ -752,7 +752,7 @@ describe("UU5.Common.Tools interface", () => {
     element.setAttribute("style", "margin-top:200px; margin-bottom:200px");
     Object.defineProperty(element, "offsetHeight", {
       writable: true,
-      value: 300
+      value: 300,
     });
     let ifc = UU5.Common.Tools.getOuterHeight(element, true);
     expect(() => {
@@ -767,7 +767,7 @@ describe("UU5.Common.Tools interface", () => {
     element.setAttribute("style", "margin: 10px  10px 10px 10px; padding: 5px 5px 5px 5px");
     Object.defineProperty(element, "offsetTop", {
       writable: true,
-      value: 300
+      value: 300,
     });
     let ifc = UU5.Common.Tools.getOffsetTop(element);
     expect(() => {
@@ -782,7 +782,7 @@ describe("UU5.Common.Tools interface", () => {
     element.setAttribute("style", "margin: 10px  10px 10px 10px; padding: 5px 5px 5px 5px");
     Object.defineProperty(element, "offsetLeft", {
       writable: true,
-      value: 200
+      value: 200,
     });
     let ifc = UU5.Common.Tools.getOffsetLeft(element);
     expect(() => {
@@ -806,14 +806,14 @@ describe("UU5.Common.Tools interface", () => {
     { params: [12345.6789, { country, maxDecimals: 6, minDecimals: 6 }], result: "12,345.678900" },
     {
       params: [12345.6789, { country, thousandSeparator: "\u00a0", decimalSeparator: "," }],
-      result: "12\u00a0345,6789"
+      result: "12\u00a0345,6789",
     },
     { params: [12345.6789, { country, thousandSeparator: ",", decimalSeparator: "." }], result: "12,345.6789" },
     { params: [12345.6789, { country: "en-us" }], result: "12,345.6789" },
     { params: [12345.6789, { country: "cs-cz" }], result: "12\u00a0345,6789" }, // requires NodeJS >= 13.x
     { params: [0, { country, minDecimals: 2 }], result: "0.00" },
     { params: [-27415.78963, { country, maxDecimals: 3 }], result: "-27,415.79" },
-    { params: [-27415.78963, { country, maxDecimals: 3, roundType: "trunc" }], result: "-27,415.789" }
+    { params: [-27415.78963, { country, maxDecimals: 3, roundType: "trunc" }], result: "-27,415.789" },
   ];
 
   settings.forEach(({ result, params }) => {

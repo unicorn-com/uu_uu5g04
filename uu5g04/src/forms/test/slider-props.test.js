@@ -27,7 +27,7 @@ const SliderFunctionProps = UU5.Common.VisualComponent.create({
       isCalled: false,
       value: 0,
       message: "",
-      feedback: "initial"
+      feedback: "initial",
     };
   },
 
@@ -77,7 +77,7 @@ const SliderFunctionProps = UU5.Common.VisualComponent.create({
         onChangeFeedback={this.onChangeFeedbackHandler}
       />
     );
-  }
+  },
 });
 
 const CONFIG = {
@@ -87,30 +87,30 @@ const CONFIG = {
     "UU5.Common.ContentMixin",
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.PureRenderMixin",
-    "UU5.Forms.InputMixin"
+    "UU5.Forms.InputMixin",
   ],
   props: {
     value: {
-      values: [666]
+      values: [666],
     },
     step: {
-      values: [5]
+      values: [5],
     },
     min: {
-      values: [1]
+      values: [1],
     },
     max: {
-      values: [700]
-    }
+      values: [700],
+    },
     //onChange
     //onChanged
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Forms.Slider props`, () => {

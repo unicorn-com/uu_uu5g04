@@ -43,7 +43,7 @@ describe("UU5.Common.Url - test interface of instance", () => {
   it("test03 - encodeValue(Object)", () => {
     const mockObject = {
       name: "john",
-      surname: "smith"
+      surname: "smith",
     };
     let myUrl = UU5.Common.Url.encodeValue(mockObject);
     expect(myUrl).toMatch(/%7B%22name%22%3A%22john%22%2C%22surname%22%3A%22smith%22%7D/);
@@ -68,7 +68,7 @@ describe("UU5.Common.Url - test interface of instance", () => {
     expect(UU5.Common.Url.decodeValue(mockObject)).toEqual(
       expect.objectContaining({
         name: "john",
-        surname: "smith"
+        surname: "smith",
       })
     );
     expect(UU5.Common.Url.decodeValue(mockArray)).toEqual(expect.arrayContaining(["John", "Smith"]));
@@ -79,7 +79,7 @@ describe("UU5.Common.Url - test interface of instance", () => {
     expect(myUrl).toEqual(
       expect.objectContaining({
         name: "John",
-        surname: "Smith"
+        surname: "Smith",
       })
     );
   });
@@ -91,7 +91,7 @@ let setObject = {
   port: "1234",
   pathName: "/uu5/doc/e00.html",
   parameters: { name: "John", age: 18 },
-  hash: "anchor"
+  hash: "anchor",
 };
 
 describe("UU5.Common.Url - test interface of class", () => {
@@ -135,7 +135,7 @@ describe("UU5.Common.Url - test interface of class", () => {
     expect(url1.parameters).toEqual(
       expect.objectContaining({
         name: "John",
-        age: 18
+        age: 18,
       })
     );
     expect(url1.hash).toMatch(/anchor/);
@@ -180,7 +180,7 @@ describe("UU5.Common.Url - test interface of class", () => {
       "/aa/bb": ["/aa", "bb"],
       "/b": ["", "b"],
       "a/b": ["a", "b"],
-      "https://ahoj/cau/aa/bb/cc/dd": ["https://ahoj", "cau", "/aa", "bb/", "/cc/", "/dd"]
+      "https://ahoj/cau/aa/bb/cc/dd": ["https://ahoj", "cau", "/aa", "bb/", "/cc/", "/dd"],
     };
 
     for (let result in test) {

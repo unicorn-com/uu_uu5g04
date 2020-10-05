@@ -36,7 +36,7 @@ export const Box = UU5.Common.VisualComponent.create({
     UU5.Common.ContentMixin,
     UU5.Common.ColorSchemaMixin,
     UU5.Common.PureRenderMixin,
-    UU5.Common.EditableMixin
+    UU5.Common.EditableMixin,
   ],
   //@@viewOff:mixins
 
@@ -49,11 +49,11 @@ export const Box = UU5.Common.VisualComponent.create({
       nestingLevelSmallBox: ns.css("box-nesting-level-small-box uu5-common-padding-s"),
       nestingLevelInline: ns.css("box-nesting-level-inline"),
       modal: ns.css("box-modal"),
-      click: ns.css("box-click")
+      click: ns.css("box-click"),
     },
     opt: {
-      nestingLevelWrapper: true
-    }
+      nestingLevelWrapper: true,
+    },
   },
   //@@viewOff:statics
 
@@ -65,7 +65,7 @@ export const Box = UU5.Common.VisualComponent.create({
     bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
     borderRadius: UU5.PropTypes.string,
     elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-    elevationHover: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
+    elevationHover: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
   },
   //@@viewOff:propTypes
 
@@ -78,7 +78,7 @@ export const Box = UU5.Common.VisualComponent.create({
       bgStyle: "filled",
       borderRadius: null,
       elevation: null,
-      elevationHover: null
+      elevationHover: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -182,7 +182,7 @@ export const Box = UU5.Common.VisualComponent.create({
           modal = (
             <Modal
               className={this.getClassName().modal}
-              ref_={modal => (this.modal = modal)}
+              ref_={(modal) => (this.modal = modal)}
               content={this.props.infoContent}
               header={this.props.infoHeader}
               parent={this}
@@ -204,7 +204,7 @@ export const Box = UU5.Common.VisualComponent.create({
     }
 
     return component;
-  }
+  },
   //@@viewOff:render
 });
 

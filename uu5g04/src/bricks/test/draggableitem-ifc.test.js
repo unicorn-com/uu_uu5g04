@@ -21,23 +21,23 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 const Draggable = UU5.Common.VisualComponent.create({
   mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.ContentMixin, UU5.Bricks.DraggableMixin],
 
-  render: function() {
+  render: function () {
     return (
       <div {...this.getMainAttrs()}>
         {this.getChildren()}
         {this.getDisabledCover()}
       </div>
     );
-  }
+  },
 });
 
 describe("UU5.Bricks.DraggableItem interface testing", () => {
   let container;
-  beforeEach(function() {
+  beforeEach(function () {
     container = document.createElement("div");
     document.body.appendChild(container);
   });
-  afterEach(function() {
+  afterEach(function () {
     container.remove();
   });
 
@@ -48,10 +48,7 @@ describe("UU5.Bricks.DraggableItem interface testing", () => {
       </Draggable>,
       { attachTo: container }
     );
-    let component = wrapper
-      .find("#idItem")
-      .first()
-      .instance();
+    let component = wrapper.find("#idItem").first().instance();
     expect(component.state.x).toBe(350);
     expect(component.state.y).toBe(15);
     const returnValue = component.moveToPosition(40, 20);
@@ -68,10 +65,7 @@ describe("UU5.Bricks.DraggableItem interface testing", () => {
       </Draggable>,
       { attachTo: container }
     );
-    let component = wrapper
-      .find("#idItem")
-      .first()
-      .instance();
+    let component = wrapper.find("#idItem").first().instance();
     const mockFunc = jest.fn();
     expect(component.state.x).toBe(350);
     expect(component.state.y).toBe(15);
@@ -91,10 +85,7 @@ describe("UU5.Bricks.DraggableItem interface testing", () => {
       </Draggable>,
       { attachTo: container }
     );
-    let component = wrapper
-      .find("#idItem")
-      .first()
-      .instance();
+    let component = wrapper.find("#idItem").first().instance();
     const returnValue = component.stopDragging();
     wrapper.update();
     expect(returnValue).toBe(component);

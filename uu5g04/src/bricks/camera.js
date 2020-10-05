@@ -33,42 +33,42 @@ export const Camera = UU5.Common.VisualComponent.create({
     classNames: {
       main: ns.css("camera"),
       video: ns.css("camera-video"),
-      canvas: ns.css("camera-canvas")
+      canvas: ns.css("camera-canvas"),
     },
     errors: {
       videoError: "Video can not be loaded.",
-      detectionNotSupported: "Permission change listening for camera access isn't supported in this browser"
-    }
+      detectionNotSupported: "Permission change listening for camera access isn't supported in this browser",
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    mode: UU5.PropTypes.oneOf(["environment", "user", "left", "right"])
+    mode: UU5.PropTypes.oneOf(["environment", "user", "left", "right"]),
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      mode: undefined
+      mode: undefined,
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  UNSAFE_componentWillMount: function() {
+  UNSAFE_componentWillMount: function () {
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
       this._initCamera(this.props);
 
       if (navigator.permissions) {
         navigator.permissions.query({ name: "camera" }).then(
-          permissionStatus => {
+          (permissionStatus) => {
             permissionStatus.addEventListener("change", () => {
               this._initCamera(this.props);
             });
           },
-          e => {
+          (e) => {
             this.showWarning("detectionNotSupported", null, { context: { event: e } });
           }
         );
@@ -76,18 +76,18 @@ export const Camera = UU5.Common.VisualComponent.create({
     }
   },
 
-  componentWillReceiveProps: function(nextProps) {
+  componentWillReceiveProps: function (nextProps) {
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
       this._initCamera(nextProps);
 
       if (navigator.permissions) {
         navigator.permissions.query({ name: "camera" }).then(
-          permissionStatus => {
+          (permissionStatus) => {
             permissionStatus.addEventListener("change", () => {
               this._initCamera(nextProps);
             });
           },
-          e => {
+          (e) => {
             this.showWarning("detectionNotSupported", null, { context: { event: e } });
           }
         );
@@ -97,7 +97,7 @@ export const Camera = UU5.Common.VisualComponent.create({
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
-  getScreenShot: function() {
+  getScreenShot: function () {
     var img = null;
 
     if (this.localMediaStream) {
@@ -121,28 +121,28 @@ export const Camera = UU5.Common.VisualComponent.create({
   _initCamera(props) {
     navigator.mediaDevices
       .getUserMedia({ video: props.mode ? { facingMode: props.mode } : true })
-      .then(stream => {
+      .then((stream) => {
         this.video.srcObject = stream;
         this.localMediaStream = stream;
       })
-      .catch(e => {
+      .catch((e) => {
         this.localMediaStream = null;
         this.video.srcObject = null;
         this.showError("videoError", null, { context: { event: e } });
       });
   },
 
-  _refVideo: function(video) {
+  _refVideo: function (video) {
     this.video = video;
   },
 
-  _refCanvas: function(canvas) {
+  _refCanvas: function (canvas) {
     this.canvas = canvas;
   },
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return this.getNestingLevel() ? (
       <div {...this.getMainAttrs()}>
         <video autoPlay playsInline ref={this._refVideo} className={this.getClassName().video} />
@@ -150,7 +150,7 @@ export const Camera = UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </div>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

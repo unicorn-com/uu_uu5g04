@@ -45,7 +45,7 @@ const selectedColorButton = () =>
 // const SHADES = [50, 100, 500, 600, 700, 800, 900];
 const SHADES = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
 
-const ADVANCED_SHADES = [500, ...SHADES.filter(item => item !== 500)];
+const ADVANCED_SHADES = [500, ...SHADES.filter((item) => item !== 500)];
 
 const COLORS = [
   "indigo",
@@ -66,7 +66,7 @@ const COLORS = [
   "deep-purple",
   "brown",
   "grey",
-  "blue-grey"
+  "blue-grey",
 ];
 
 const SIMPLE_COLORS = [...COLORS, "black", "white"];
@@ -82,7 +82,7 @@ const ADVANCED_WHITE = {
   c600: "#757575", // grey, c600
   c700: "#616161", // grey, c700
   c800: "#424242", // grey, c800
-  c900: "#000000" // black
+  c900: "#000000", // black
 };
 
 export const ColorPalette = UU5.Common.VisualComponent.create({
@@ -145,9 +145,9 @@ export const ColorPalette = UU5.Common.VisualComponent.create({
           }
         `),
       colorButton: colorButton,
-      selectedColorButton: selectedColorButton
+      selectedColorButton: selectedColorButton,
     },
-    lsi: () => UU5.Environment.Lsi.Bricks.colorPalette
+    lsi: () => UU5.Environment.Lsi.Bricks.colorPalette,
   },
   //@@viewOff:statics
 
@@ -156,7 +156,7 @@ export const ColorPalette = UU5.Common.VisualComponent.create({
     simplePalette: UU5.PropTypes.bool,
     onChange: UU5.PropTypes.func,
     onColorSchemaChange: UU5.PropTypes.func,
-    color: UU5.PropTypes.string
+    color: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
@@ -275,7 +275,7 @@ export const ColorPalette = UU5.Common.VisualComponent.create({
     return (
       <UU5.Bricks.Div className={this.getClassName("simpleColorMain")} key="simple-color-palette">
         <UU5.Bricks.Section header={this.getLsiComponent("baseColor")} level={4}>
-          {colors.map(colorSchema => {
+          {colors.map((colorSchema) => {
             const colorCode = this._getColorCode(colorSchema, 500);
             return (
               <div
@@ -294,19 +294,19 @@ export const ColorPalette = UU5.Common.VisualComponent.create({
         <UU5.Bricks.Section header={this.getLsiComponent("shade")} level={4}>
           {this.state.colorSchema
             ? this._hasColorShades(this.state.colorSchema)
-              ? shades.map(shade => {
-                let colorCode = this._getColorCode(this.state.colorSchema, shade);
-                return (
-                  <div
-                    // eslint-disable-next-line react/jsx-no-bind
-                    onClick={() => this._onColorClick(colorCode)}
-                    key={`color_${shade}`}
-                    className={`${this.getClassName("colorButton")} ${this._styleColorButton(
-                      colorCode.toUpperCase()
-                    )}`}
-                  />
-                );
-              })
+              ? shades.map((shade) => {
+                  let colorCode = this._getColorCode(this.state.colorSchema, shade);
+                  return (
+                    <div
+                      // eslint-disable-next-line react/jsx-no-bind
+                      onClick={() => this._onColorClick(colorCode)}
+                      key={`color_${shade}`}
+                      className={`${this.getClassName("colorButton")} ${this._styleColorButton(
+                        colorCode.toUpperCase()
+                      )}`}
+                    />
+                  );
+                })
               : this.getLsiComponent("noShades")
             : this.getLsiComponent("selectSchema")}
         </UU5.Bricks.Section>
@@ -317,10 +317,10 @@ export const ColorPalette = UU5.Common.VisualComponent.create({
   _renderAdvancedPalette(colors = ADVANCED_COLORS, shades = ADVANCED_SHADES) {
     return (
       <div className={this.getClassName("advancedColorMain")} key="advanced-color-palette">
-        {shades.map(shade => {
+        {shades.map((shade) => {
           return colors
-            .filter(colorSchema => colorSchema !== "grey")
-            .map(colorSchema => {
+            .filter((colorSchema) => colorSchema !== "grey")
+            .map((colorSchema) => {
               const colorCode = this._getColorCode(colorSchema, shade);
               return (
                 <div
@@ -339,13 +339,13 @@ export const ColorPalette = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return (
       <UU5.Bricks.Div {...this.getMainPropsToPass()}>
         {this.props.simplePalette ? this._renderSimplePalette() : this._renderAdvancedPalette()}
       </UU5.Bricks.Div>
     );
-  }
+  },
   //@@viewOff:render
 });
 

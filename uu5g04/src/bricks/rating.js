@@ -35,7 +35,7 @@ export const Rating = UU5.Common.VisualComponent.create({
     UU5.Common.ContentMixin,
     UU5.Common.ColorSchemaMixin,
     UU5.Common.NestingLevelMixin,
-    UU5.Common.EditableMixin
+    UU5.Common.EditableMixin,
   ],
   //@@viewOff:mixins
 
@@ -46,8 +46,8 @@ export const Rating = UU5.Common.VisualComponent.create({
     classNames: {
       main: ns.css("rating"),
       click: ns.css("rating-clickable"),
-      size: ns.css("rating-size-")
-    }
+      size: ns.css("rating-size-"),
+    },
   },
   //@@viewOff:statics
 
@@ -57,7 +57,7 @@ export const Rating = UU5.Common.VisualComponent.create({
     value: UU5.PropTypes.number,
     onClick: UU5.PropTypes.func,
     icon: UU5.PropTypes.string,
-    size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"])
+    size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
   },
   //@@viewOff:propTypes
 
@@ -68,7 +68,7 @@ export const Rating = UU5.Common.VisualComponent.create({
       value: 0,
       onClick: null,
       icon: "mdi-star",
-      size: "m"
+      size: "m",
     };
   },
   //@@viewOff:getDefaultProps
@@ -114,7 +114,7 @@ export const Rating = UU5.Common.VisualComponent.create({
           value={iconValue}
           key={i}
           icon={this.props.icon}
-          onClick={this.props.onClick ? e => this.props.onClick(i, e, this) : null}
+          onClick={this.props.onClick ? (e) => this.props.onClick(i, e, this) : null}
         />
       );
     }
@@ -137,7 +137,7 @@ export const Rating = UU5.Common.VisualComponent.create({
         </div>
       </>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 
@@ -164,8 +164,8 @@ const RatingIcon = UU5.Common.VisualComponent.create({
       icon70: ns.css("rating-icon-part-70"),
       icon80: ns.css("rating-icon-part-80"),
       icon90: ns.css("rating-icon-part-90"),
-      full: ns.css("rating-icon-full")
-    }
+      full: ns.css("rating-icon-full"),
+    },
   },
   //@@viewOff:statics
 
@@ -173,7 +173,7 @@ const RatingIcon = UU5.Common.VisualComponent.create({
   propTypes: {
     onClick: UU5.PropTypes.func,
     icon: UU5.PropTypes.string,
-    value: UU5.PropTypes.number
+    value: UU5.PropTypes.number,
   },
   //@@viewOff:propTypes
 
@@ -182,7 +182,7 @@ const RatingIcon = UU5.Common.VisualComponent.create({
     return {
       onClick: null,
       icon: "mdi-star",
-      value: 0
+      value: 0,
     };
   },
   //@@viewOff:getDefaultProps
@@ -223,6 +223,6 @@ const RatingIcon = UU5.Common.VisualComponent.create({
         <Icon icon={this.props.icon} mainAttrs={this._getCorrectClass()} className={this.getClassName().icon} />
       </span>
     );
-  }
+  },
   //@@viewOff:render
 });

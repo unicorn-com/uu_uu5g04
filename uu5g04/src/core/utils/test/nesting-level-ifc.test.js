@@ -6,7 +6,7 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 let origToolsError;
 beforeEach(() => {
   origToolsError = UU5.Common.Tools.error;
-  UU5.Common.Tools.error = jest.fn(function(msg) {
+  UU5.Common.Tools.error = jest.fn(function (msg) {
     if (typeof msg === "string" && msg.match(/nesting/i)) return;
     return origToolsError.apply(this, arguments);
   });
@@ -20,7 +20,7 @@ const NLMComponent = UU5.Common.VisualComponent.create({
   render() {
     let { children } = this.props;
     return <div>{React.isValidElement(children) ? React.cloneElement(children, { parent: this }) : null}</div>;
-  }
+  },
 });
 
 describe("UU5.Utils.NestingLevel", () => {
@@ -77,7 +77,7 @@ describe("UU5.Utils.NestingLevel", () => {
     let child;
     let wrapper = mount(
       <NLMComponent nestingLevel="bigBox">
-        <NLMComponent ref={ref => (child = ref)} />
+        <NLMComponent ref={(ref) => (child = ref)} />
       </NLMComponent>
     );
     expect(child && child.props && child.props.parent).toBeTruthy();
@@ -93,13 +93,13 @@ describe("UU5.Utils.NestingLevel", () => {
 
     wrapper.setProps({ nestingLevel: "box" });
     level = UU5.Utils.NestingLevel.getNestingLevel(child.props, {
-      nestingLevel: ["boxCollection", "box", "smallBoxCollection"]
+      nestingLevel: ["boxCollection", "box", "smallBoxCollection"],
     });
     expect(level).toBe("smallBoxCollection");
 
     wrapper.setProps({ nestingLevel: "boxCollection" });
     level = UU5.Utils.NestingLevel.getNestingLevel(child.props, {
-      nestingLevel: ["boxCollection", "box", "smallBoxCollection"]
+      nestingLevel: ["boxCollection", "box", "smallBoxCollection"],
     });
     expect(level).toBe("boxCollection");
   });
@@ -160,7 +160,7 @@ describe("UU5.Utils.NestingLevel", () => {
     let child;
     let wrapper = mount(
       <NLMComponent nestingLevel="bigBox">
-        <NLMComponent ref={ref => (child = ref)} />
+        <NLMComponent ref={(ref) => (child = ref)} />
       </NLMComponent>
     );
     expect(child && child.props && child.props.parent).toBeTruthy();
@@ -176,13 +176,13 @@ describe("UU5.Utils.NestingLevel", () => {
 
     wrapper.setProps({ nestingLevel: "box" });
     level = UU5.Utils.NestingLevel.getChildNestingLevel(child.props, {
-      nestingLevel: ["boxCollection", "box", "smallBoxCollection"]
+      nestingLevel: ["boxCollection", "box", "smallBoxCollection"],
     });
     expect(level).toBe("smallBoxCollection");
 
     wrapper.setProps({ nestingLevel: "boxCollection" });
     level = UU5.Utils.NestingLevel.getChildNestingLevel(child.props, {
-      nestingLevel: ["boxCollection", "box", "smallBoxCollection"]
+      nestingLevel: ["boxCollection", "box", "smallBoxCollection"],
     });
     expect(level).toBe("boxCollection");
   });

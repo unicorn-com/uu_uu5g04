@@ -28,7 +28,7 @@ class Context {
       process.env.NODE_ENV === "development" && console.error("For Context implementation use React 16.4+");
       context = {
         Consumer: ({ children }) => children(),
-        Provider: ({ children }) => children
+        Provider: ({ children }) => children,
       };
     }
 
@@ -42,7 +42,7 @@ class Context {
 
 export const LsiContext = Context.create();
 
-export const withLsiContext = Component => {
+export const withLsiContext = (Component) => {
   // disable context for jest tests - enzyme doesn't support React 16.3 Context API
   if (!Context.isSupported() || (process.env.NODE_ENV === "test" && !Environment._allowTestContext)) return Component;
 
@@ -146,7 +146,7 @@ const _getContextValue = (propValue, textCorrectorPropValue, contextValue, envir
   return undefined;
 };
 
-export const withTextCorrectorContext = Component => {
+export const withTextCorrectorContext = (Component) => {
   // disable context for jest tests - enzyme doesn't support React 16.3 Context API
   if (!Context.isSupported() || (process.env.NODE_ENV === "test" && !Environment._allowTestContext)) return Component;
   let forwardRef = React.forwardRef((props, ref) => {

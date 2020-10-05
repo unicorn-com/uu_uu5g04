@@ -27,7 +27,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
       isCalled: false,
       value: "",
       message: "",
-      feedback: "initial"
+      feedback: "initial",
     };
   },
   onChangeHandler(event) {
@@ -66,7 +66,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
         onChangeFeedback={this.onChangeFeedbackHandler}
       />
     );
-  }
+  },
 });
 
 //`UU5.Forms.ColorPicker`
@@ -151,7 +151,7 @@ describe(`UU5.Forms.ColorPicker functionality`, () => {
     const wrapper = mount(<UU5.Forms.ColorPicker id={"uuID"} />);
     wrapper.instance().open();
     wrapper.update();
-    const clearButton = wrapper.findWhere(node => node.type() === UU5.Bricks.Button && node.text() === "Clear");
+    const clearButton = wrapper.findWhere((node) => node.type() === UU5.Bricks.Button && node.text() === "Clear");
     clearButton.simulate("click");
     wrapper.update();
     expect(wrapper.instance().getValue()).toBe("");

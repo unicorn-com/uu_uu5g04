@@ -33,17 +33,17 @@ export const Iframe = UU5.Common.VisualComponent.create({
     classNames: {
       main: ns.css("iframe"),
       inline: ns.css("iframe-inline"),
-      disabledWrapper: ns.css("iframe-disabled-wrapper uu5-common-disabled-cover-wrapper")
+      disabledWrapper: ns.css("iframe-disabled-wrapper uu5-common-disabled-cover-wrapper"),
     },
     defaults: {
       regexpIsUrl: /^(file|ftp|http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&\/=]*)/g,
       regexpBearer: /Bearer[^&]+/,
       regexpUnits: /(\d+)([a-zA-Z%]*)$/,
-      loadingTimeout: [3000, 3000, 4000, 8000]
+      loadingTimeout: [3000, 3000, 4000, 8000],
     },
     warnings: {
-      cors: "Url %s cannot be automatically resized because of another origin."
-    }
+      cors: "Url %s cannot be automatically resized because of another origin.",
+    },
   },
   //@@viewOff:statics
 
@@ -54,7 +54,7 @@ export const Iframe = UU5.Common.VisualComponent.create({
     height: UU5.PropTypes.string,
     syncTimeout: UU5.PropTypes.number,
     inline: UU5.PropTypes.bool,
-    iframeAttrs: UU5.PropTypes.object
+    iframeAttrs: UU5.PropTypes.object,
   },
   //@@viewOff:propTypes
 
@@ -66,7 +66,7 @@ export const Iframe = UU5.Common.VisualComponent.create({
       height: "250",
       syncTimeout: 1,
       inline: false,
-      iframeAttrs: {}
+      iframeAttrs: {},
     };
   },
   //@@viewOff:getDefaultProps
@@ -77,7 +77,7 @@ export const Iframe = UU5.Common.VisualComponent.create({
       loading: this.props.resize,
       height: 0,
       width: 0,
-      visible: !this.props.syncTimeout
+      visible: !this.props.syncTimeout,
     };
   },
 
@@ -132,7 +132,7 @@ export const Iframe = UU5.Common.VisualComponent.create({
         this._resizeTimeout && clearTimeout(this._resizeTimeout);
       } catch (ex) {
         this.showWarning("cors", this.props.src.replace(this.getDefault().regexpBearer, "Bearer..."), {
-          context: { error: ex }
+          context: { error: ex },
         });
         this.setAsyncState({ loading: false, height: this.props.height }, setStateCallback);
       }
@@ -143,7 +143,7 @@ export const Iframe = UU5.Common.VisualComponent.create({
         {
           loading: false,
           height: height,
-          width: null
+          width: null,
         },
         () => {
           let body = this._iframe.contentWindow.document.body;
@@ -212,7 +212,7 @@ export const Iframe = UU5.Common.VisualComponent.create({
     }
 
     let origRef = attrs.ref;
-    attrs.ref = comp => {
+    attrs.ref = (comp) => {
       this._iframe = comp;
       if (typeof origRef === "function") return origRef(comp);
     };
@@ -240,7 +240,7 @@ export const Iframe = UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </div>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

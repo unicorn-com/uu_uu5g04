@@ -23,7 +23,7 @@ const MyAllowTagsComponents = UU5.Common.VisualComponent.create({
   statics: { tagName: "UU5.Example.MyCompButton", classNames: { main: "mytr" } },
   render() {
     return <UU5.Example.MyCompButton {...this.getMainPropsToPass()} />;
-  }
+  },
 });
 
 const CONFIG = {
@@ -31,31 +31,31 @@ const CONFIG = {
     "UU5.Common.BaseMixin",
     "UU5.Common.ElementaryMixin",
     "UU5.Common.ContentMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     aligned: {
-      values: ["left", "right"]
+      values: ["left", "right"],
     },
     smoothScroll: {
-      values: [3000]
+      values: [3000],
     },
     offset: {
-      values: [70]
+      values: [70],
     },
     allowTags: {
-      allowTagsArray: ["UU5.Example.MyCompButton"]
-    }
+      allowTagsArray: ["UU5.Example.MyCompButton"],
+    },
   },
   requiredProps: {
     parent: shallow(<UU5.Bricks.NavBar id="parentId" />).instance(),
-    children: [<UU5.Bricks.NavBar.Nav.Item id={"child02"}>News</UU5.Bricks.NavBar.Nav.Item>]
+    children: [<UU5.Bricks.NavBar.Nav.Item id={"child02"}>News</UU5.Bricks.NavBar.Nav.Item>],
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 const This = {};

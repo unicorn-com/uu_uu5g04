@@ -22,7 +22,7 @@ const MyAlertBus = UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState: () => {
     return {
-      isCalled: false
+      isCalled: false,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -44,7 +44,7 @@ const MyAlertBus = UU5.Common.VisualComponent.create({
         onClose={this.onCloseAlert}
       />
     );
-  }
+  },
   //@@viewOff:render
 });
 
@@ -54,7 +54,7 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Common.NestingLevelMixin",
     "UU5.Common.PureRenderMixin",
-    "UU5.Common.CcrWriterMixin"
+    "UU5.Common.CcrWriterMixin",
   ],
   props: {
     colorSchema: {
@@ -77,30 +77,30 @@ const CONFIG = {
         "grey",
         "grey-rich",
         "pink",
-        "pink-rich"
-      ]
+        "pink-rich",
+      ],
     },
     position: {
-      values: ["left", "center", "right"]
+      values: ["left", "center", "right"],
     },
     closeTimer: {
-      values: [3000, 1500]
+      values: [3000, 1500],
     },
     closeDisabled: {
-      values: [true, false]
+      values: [true, false],
     },
     block: {
-      values: [true, false]
+      values: [true, false],
     },
     forceRender: {
-      values: [true, false]
+      values: [true, false],
     },
     descending: {
-      values: [undefined, true, false]
-    }
+      values: [undefined, true, false],
+    },
   },
   requiredProps: {},
-  opt: {}
+  opt: {},
 };
 
 describe(`UU5.Bricks.AlertBus`, () => {
@@ -117,9 +117,10 @@ describe(`UU5.Bricks.AlertBus`, () => {
   it(`UU5.Bricks.AlertBus stacked with descending`, () => {
     let wrapper = mount(<UU5.Bricks.AlertBus stacked />);
     // alerts sorted by colorSchema
-    wrapper
-      .instance()
-      .setAlerts([{ content: "alert 1", colorSchema: "success" }, { content: "alert 2", colorSchema: "danger" }]);
+    wrapper.instance().setAlerts([
+      { content: "alert 1", colorSchema: "success" },
+      { content: "alert 2", colorSchema: "danger" },
+    ]);
     wrapper.update();
     let alertList = wrapper.find(UU5.Bricks.Alert);
     // sorted by colorSchema
@@ -161,7 +162,7 @@ describe(`UU5.Bricks.AlertBus`, () => {
     let alertBus;
     const wrapper = mount(
       <UU5.Bricks.Page alertBus={<UU5.Bricks.AlertBus />}>
-        <UU5.Bricks.AlertBus ref_={ref => (alertBus = ref)} location="local" />
+        <UU5.Bricks.AlertBus ref_={(ref) => (alertBus = ref)} location="local" />
       </UU5.Bricks.Page>
     );
     alertBus.addAlert({ content: "Alert Content" });
@@ -173,8 +174,8 @@ describe(`UU5.Bricks.AlertBus`, () => {
     let alertBus;
     let page;
     const wrapper = mount(
-      <UU5.Bricks.Page ref_={ref => (page = ref)} alertBus={<UU5.Bricks.AlertBus />}>
-        <UU5.Bricks.AlertBus ref_={ref => (alertBus = ref)} location="page" />
+      <UU5.Bricks.Page ref_={(ref) => (page = ref)} alertBus={<UU5.Bricks.AlertBus />}>
+        <UU5.Bricks.AlertBus ref_={(ref) => (alertBus = ref)} location="page" />
       </UU5.Bricks.Page>
     );
     alertBus.addAlert({ content: "Alert Content" });
@@ -186,7 +187,7 @@ describe(`UU5.Bricks.AlertBus`, () => {
     let alertBus;
     const wrapper = mount(
       <UU5.Bricks.Page alertBus={<UU5.Bricks.AlertBus />}>
-        <UU5.Bricks.AlertBus ref_={ref => (alertBus = ref)} location="portal" />
+        <UU5.Bricks.AlertBus ref_={(ref) => (alertBus = ref)} location="portal" />
       </UU5.Bricks.Page>
     );
     alertBus.addAlert({ content: "Alert Content" });

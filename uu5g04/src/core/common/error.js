@@ -55,15 +55,15 @@ export const Error = VisualComponent.create({
       errorDetailsBody: ns.css("error-details-body"),
       errorDetailsOpen: ns.css("error-details-open"),
       errorInfo: ns.css("error-info"),
-      copyButton: ns.css("error-copy-info-button")
+      copyButton: ns.css("error-copy-info-button"),
     },
     defaults: {
-      content: "Error"
+      content: "Error",
     },
     opt: {
-      nestingLevelWrapper: true
+      nestingLevelWrapper: true,
     },
-    lsi: () => Environment.Lsi.Common.error
+    lsi: () => Environment.Lsi.Common.error,
   },
   //@@viewOff:statics
 
@@ -74,7 +74,7 @@ export const Error = VisualComponent.create({
     error: PropTypes.shape({
       stack: PropTypes.string,
       name: PropTypes.string,
-      message: PropTypes.string
+      message: PropTypes.string,
     }),
     silent: PropTypes.bool,
     inline: PropTypes.bool,
@@ -82,7 +82,7 @@ export const Error = VisualComponent.create({
     errorInfo: PropTypes.any, // any - contact info link (ex. link to helpdesk)
     bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
     borderRadius: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
+    elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
   },
   //@@viewOff:propTypes
 
@@ -98,7 +98,7 @@ export const Error = VisualComponent.create({
       errorInfo: null,
       bgStyle: "filled",
       borderRadius: undefined,
-      elevation: undefined
+      elevation: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -106,7 +106,7 @@ export const Error = VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
-      errorDetails: false
+      errorDetails: false,
     };
   },
 
@@ -187,7 +187,7 @@ export const Error = VisualComponent.create({
   _getMessageString(message) {
     if (message.props && message.props.lsi) {
       if (typeof message.props.lsi === "object") {
-        let language = Object.keys(message.props.lsi).find(language => language.match(/^en/));
+        let language = Object.keys(message.props.lsi).find((language) => language.match(/^en/));
         if (!language) {
           language = Object.keys(message.props.lsi)[0];
         }
@@ -288,9 +288,9 @@ export const Error = VisualComponent.create({
         productSub: navigator.productSub,
         userAgent: navigator.userAgent,
         vendor: navigator.vendor,
-        vendorSub: navigator.vendorSub
+        vendorSub: navigator.vendorSub,
       },
-      libs: this._getRuntimeLibraries()
+      libs: this._getRuntimeLibraries(),
     };
   },
 
@@ -299,7 +299,7 @@ export const Error = VisualComponent.create({
     libraries[Environment.name] = Environment.version;
 
     let runtimeLibraries = Environment.getRuntimeLibraries();
-    Object.keys(runtimeLibraries).forEach(key => {
+    Object.keys(runtimeLibraries).forEach((key) => {
       libraries[key] = runtimeLibraries[key].version;
     });
 
@@ -307,7 +307,7 @@ export const Error = VisualComponent.create({
   },
 
   _errorDetailsToggle() {
-    this.setState(state => {
+    this.setState((state) => {
       return { errorDetails: !state.errorDetails };
     });
     return this;
@@ -315,7 +315,7 @@ export const Error = VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     let component;
     switch (this.props.inline ? "inline" : this.getNestingLevel()) {
       case "smallBox":
@@ -346,7 +346,7 @@ export const Error = VisualComponent.create({
         component = null;
     }
     return component;
-  }
+  },
   //@@viewOff:render
 });
 

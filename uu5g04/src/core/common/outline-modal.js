@@ -31,11 +31,11 @@ export const OutlineModal = VisualComponent.create({
   statics: {
     tagName: ns.name("Outline.Modal"),
     classNames: {
-      main: ns.css("outline-modal")
+      main: ns.css("outline-modal"),
     },
     errors: {
-      invalidParent: "Parent of this component is not Outline."
-    }
+      invalidParent: "Parent of this component is not Outline.",
+    },
   },
   //@@viewOff:statics
 
@@ -46,10 +46,10 @@ export const OutlineModal = VisualComponent.create({
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  getInitialState: function() {
+  getInitialState: function () {
     return {
       tag: null,
-      props: null
+      props: null,
     };
   },
 
@@ -61,12 +61,12 @@ export const OutlineModal = VisualComponent.create({
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
-  open: function(tag, props, setStateCallback) {
+  open: function (tag, props, setStateCallback) {
     this.setState({ shown: true, tag: tag, props: props }, setStateCallback);
     return this;
   },
 
-  close: function(setStateCallback) {
+  close: function (setStateCallback) {
     this.setState({ shown: false, tag: null, props: null }, setStateCallback);
     return this;
   },
@@ -79,14 +79,14 @@ export const OutlineModal = VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     let props = Tools.mergeDeep({}, this.getMainPropsToPass(), {
       shown: this.state.shown,
       header: this.state.tag,
-      content: <pre>{this.state.props}</pre>
+      content: <pre>{this.state.props}</pre>,
     });
     return Tools.findComponent("UU5.Bricks.Modal", props);
-  }
+  },
   //@@viewOff:render
 });
 

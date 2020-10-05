@@ -27,13 +27,13 @@ const MyAllowTagsDropDown = UU5.Common.VisualComponent.create({
   statics: { tagName: "UU5.Example.MyCompButton", classNames: { main: "mytr" } },
   render() {
     return <UU5.Example.MyCompButton {...this.getMainPropsToPass()} />;
-  }
+  },
 });
 
 const MyDropDownHandlers = UU5.Common.VisualComponent.create({
   getInitialState: () => {
     return {
-      isCalled: false
+      isCalled: false,
     };
   },
 
@@ -48,7 +48,7 @@ const MyDropDownHandlers = UU5.Common.VisualComponent.create({
         <UU5.Bricks.Dropdown.Item id={"itemID"} label="{user name}" header />
       </UU5.Bricks.Dropdown>
     );
-  }
+  },
 });
 
 const CONFIG = {
@@ -58,64 +58,70 @@ const CONFIG = {
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.ContentMixin",
     "UU5.Common.PureRenderMixin",
-    "UU5.Common.NestingLevelMixin"
+    "UU5.Common.NestingLevelMixin",
   ],
   props: {
     label: {
-      values: ["Rozbal mě"]
+      values: ["Rozbal mě"],
     },
     size: {
-      values: ["s", "m", "l", "xl"]
+      values: ["s", "m", "l", "xl"],
     },
     //onClick
     iconOpen: {
-      values: ["uu5-plus"]
+      values: ["uu5-plus"],
     },
     iconClosed: {
-      values: ["uu5-minus"]
+      values: ["uu5-minus"],
     },
     iconHidden: {
-      values: [true, false]
+      values: [true, false],
     },
     items: {
-      values: [[{ label: "Rock", href: "#Rock" }, { label: "Metal", href: "#Metal" }, { label: "Jazz", href: "#Jazz" }]]
+      values: [
+        [
+          { label: "Rock", href: "#Rock" },
+          { label: "Metal", href: "#Metal" },
+          { label: "Jazz", href: "#Jazz" },
+        ],
+      ],
     },
     pullRight: {
-      values: [true, false]
+      values: [true, false],
     },
     dropup: {
-      values: [true, false]
+      values: [true, false],
     },
     split: {
-      values: [true, false]
+      values: [true, false],
     },
     smoothScroll: {
-      values: [3000]
+      values: [3000],
     },
     offset: {
-      values: [70]
+      values: [70],
     },
     closedOnLeave: {
-      values: [true, false]
+      values: [true, false],
     },
     openOnHover: {
-      values: [true, false]
+      values: [true, false],
     },
     allowTags: {
-      allowTagsArray: ["UU5.Example.MyCompButton"]
+      allowTagsArray: ["UU5.Example.MyCompButton"],
     },
     disableBackdrop: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
   },
   requiredProps: {
-    children: [<UU5.Bricks.Dropdown.Item id={"childID"} label="Profile" />]
+    children: [<UU5.Bricks.Dropdown.Item id={"childID"} label="Profile" />],
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: true
-    }
-  }
+      disableLifecycleMethods: true,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Dropdown`, () => {

@@ -29,7 +29,7 @@ export const Tree = UU5.Common.VisualComponent.create({
     UU5.Common.PureRenderMixin,
     UU5.Common.ElementaryMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.NestingLevelMixin
+    UU5.Common.NestingLevelMixin,
   ],
   //@@viewOff:mixins
 
@@ -39,11 +39,11 @@ export const Tree = UU5.Common.VisualComponent.create({
     nestingLevelList: UU5.Environment.getNestingLevelList("box", "smallBox"),
     classNames: {
       main: ns.css("tree"),
-      size: ns.css("tree-")
+      size: ns.css("tree-"),
     },
     defaults: {
-      childTagName: "UU5.Bricks.Tree.Item"
-    }
+      childTagName: "UU5.Bricks.Tree.Item",
+    },
   },
   //@@viewOff:statics
 
@@ -53,18 +53,18 @@ export const Tree = UU5.Common.VisualComponent.create({
     iconExpanded: UU5.PropTypes.string,
     iconCollapsed: UU5.PropTypes.string,
     size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
-    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string)
+    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       items: null,
       iconExpanded: null,
       iconCollapsed: null,
       size: "m",
-      allowTags: []
+      allowTags: [],
     };
   },
   //@@viewOff:getDefaultProps
@@ -104,7 +104,7 @@ export const Tree = UU5.Common.VisualComponent.create({
         {this.props.children && UU5.Common.Children.toArray(this.props.children)}
       </List>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

@@ -27,7 +27,7 @@ export const Link = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.NestingLevelMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.ColorSchemaMixin
+    UU5.Common.ColorSchemaMixin,
   ],
   //@@viewOff:mixins
 
@@ -36,13 +36,13 @@ export const Link = UU5.Common.VisualComponent.create({
     tagName: ns.name("Link"),
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "inline"),
     classNames: {
-      main: ns.css("link")
+      main: ns.css("link"),
     },
     defaults: {
       content: "noText",
       regexpHash: /^#/,
-      httpRegexp: /^(\/|[a-z0-9\-+.]+:)/
-    }
+      httpRegexp: /^(\/|[a-z0-9\-+.]+:)/,
+    },
   },
   //@@viewOff:statics
 
@@ -56,7 +56,7 @@ export const Link = UU5.Common.VisualComponent.create({
     offset: UU5.PropTypes.number,
     target: UU5.PropTypes.oneOf(["_blank", "_parent", "_top", "_self"]),
     download: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string]),
-    authenticate: UU5.PropTypes.bool
+    authenticate: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -71,7 +71,7 @@ export const Link = UU5.Common.VisualComponent.create({
       offset: 0,
       target: "_self",
       download: false,
-      authenticate: undefined
+      authenticate: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -79,7 +79,7 @@ export const Link = UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
-      authenticatedUrl: undefined
+      authenticatedUrl: undefined,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -200,7 +200,7 @@ export const Link = UU5.Common.VisualComponent.create({
     else if (this._authenticatingUrl !== url) {
       this._authenticatingUrl = url;
       let promise = (this._urlPromise = this._computeAuthenticatedUrl(url, session).then(
-        authenticatedUrl => {
+        (authenticatedUrl) => {
           delete this._authenticatingUrl;
           this._authenticatedUrl = url;
           if (this.isRendered() && promise === this._urlPromise) this.setState({ authenticatedUrl });
@@ -229,7 +229,7 @@ export const Link = UU5.Common.VisualComponent.create({
       mainAttrs.href = this._getHref();
 
       if (this._shouldOnClick() || this._shouldOnWheelClick()) {
-        mainAttrs.onClick = e => {
+        mainAttrs.onClick = (e) => {
           if (e.ctrlKey || (UU5.Common.Tools.isMac() && e.metaKey)) {
             this._onCtrlClick(e);
           } else {
@@ -243,19 +243,19 @@ export const Link = UU5.Common.VisualComponent.create({
 
         if (this._shouldOnWheelClick()) {
           let onMouseDown = mainAttrs.onMouseDown;
-          mainAttrs.onMouseDown = e => {
+          mainAttrs.onMouseDown = (e) => {
             e.button === 1 && e.preventDefault();
             typeof onMouseDown === "function" && onMouseDown(e, this);
           };
 
           let onMouseUp = mainAttrs.onMouseUp;
-          mainAttrs.onMouseUp = e => {
+          mainAttrs.onMouseUp = (e) => {
             if (e.button === 1) {
               e.preventDefault();
               this._onWheelClick(e);
 
               // stop pending "click" event because e.preventDefault() doesn't stop it in FF
-              let clickHandler = e => {
+              let clickHandler = (e) => {
                 e.stopPropagation();
                 document.removeEventListener("click", clickHandler, true);
               };
@@ -275,11 +275,11 @@ export const Link = UU5.Common.VisualComponent.create({
     children = children == null ? this.props.href || this.getDefault().content : children;
 
     return this.getNestingLevel() ? (
-      <a {...mainAttrs} ref={link => (this._link = link)}>
+      <a {...mainAttrs} ref={(link) => (this._link = link)}>
         {children}
       </a>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

@@ -31,7 +31,7 @@ export const ContextSection = UU5.Common.Reference.forward(({ className, ...prop
       & .uu5-forms-controls {
         padding: 32px 0 20px;
       }
-    `
+    `,
   ];
   if (className) classNames.push(className);
 
@@ -44,6 +44,6 @@ export const ContextSection = UU5.Common.Reference.forward(({ className, ...prop
 
 ContextSection.displayName = ContextSection.tagName = ns.name("ContextSection");
 ContextSection.propTypes = {
-  ...UU5.Bricks.Section.propTypes
+  ...UU5.Bricks.Section.propTypes,
 };
 ContextSection.defaultProps = {};

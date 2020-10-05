@@ -21,60 +21,60 @@ const TAG_SPACING = {
   s: "3px 2px",
   m: "3px 2px",
   l: "4px 3px",
-  xl: "5px 4px"
+  xl: "5px 4px",
 };
 
 const TAG_PADDING = {
   s: "1px 3px 3px 5px",
   m: "2px 4px 3px 7px",
   l: "3px 4px 4px 8px",
-  xl: "3px 6px 5px 9px"
+  xl: "3px 6px 5px 9px",
 };
 
 const TAG_HEIGHT = {
   s: "20px",
   m: "24px",
   l: "28px",
-  xl: "32px"
+  xl: "32px",
 };
 
 const INPUT_PADDING = {
   s: "3px",
   m: "4px",
   l: "6px",
-  xl: "8px"
+  xl: "8px",
 };
 
 const INPUT_FONT_SIZE = {
   s: "12px",
   m: "14px",
   l: "16px",
-  xl: "18px"
+  xl: "18px",
 };
 
 const INPUT_MIN_HEIGHT = {
   s: "22px",
   m: "30px",
   l: "38px",
-  xl: "46px"
+  xl: "46px",
 };
 
 const ICON_MARGIN_TOP = {
   s: "4px",
   m: "5px",
   l: "6px",
-  xl: "6px"
+  xl: "6px",
 };
 
 const INPUT_MIN_WIDTHS = {
   s: "136px",
   m: "160px",
   l: "180px",
-  xl: "200px"
+  xl: "200px",
 };
 
 const CommonClassNames = {
-  main: props => {
+  main: (props) => {
     let styles = `
       .uu5-bricks-button.uu5-forms-input-button {
         width: auto; padding: 0 16px;
@@ -105,7 +105,7 @@ const CommonClassNames = {
 
     return ns.css("tag-select") + " " + Css.css(styles);
   },
-  tag: props => {
+  tag: (props) => {
     return Css.css`
       && {
         display: inline-flex;
@@ -140,7 +140,7 @@ const CommonClassNames = {
       }
     `;
   },
-  inputValueWrapper: props => {
+  inputValueWrapper: (props) => {
     let paddingLeft,
       paddingRight = parseInt(INPUT_PADDING[props.size]) + parseInt(TAG_PADDING[props.size].split(" ")[3]) + "px";
 
@@ -164,7 +164,7 @@ const CommonClassNames = {
     overflow: hidden;
     text-overflow: ellipsis;
   `,
-  inputValue: props => {
+  inputValue: (props) => {
     return Css.css`
       display: flex;
       flex: 1 1 auto;
@@ -210,7 +210,7 @@ const CommonClassNames = {
     let placeholderWidth = showPlaceholder
       ? UU5.Common.Tools.calculateTextWidth(placeholder, {
           fontSize: `${INPUT_FONT_SIZE[props.size]}`,
-          whiteSpace: "pre"
+          whiteSpace: "pre",
         })
       : undefined;
 
@@ -253,7 +253,7 @@ const CommonClassNames = {
       }
     `;
   },
-  itemList: props => {
+  itemList: (props) => {
     const colors = getColors(props.colorSchema);
 
     return Css.css`
@@ -280,7 +280,7 @@ const CommonClassNames = {
       }
 
     `;
-  }
+  },
 };
 
 function getStandardColors(colorShades) {
@@ -288,7 +288,7 @@ function getStandardColors(colorShades) {
     itemBgColorHover: COLORS.grey.c300,
     selectedItemBgColor: colorShades.c50,
     selectedItemBgColorHover: colorShades.c500,
-    selectedItemTextColorHover: colorShades.inverse
+    selectedItemTextColorHover: colorShades.inverse,
   };
 }
 
@@ -301,7 +301,7 @@ function getWhiteColors(colorShades) {
     itemBgColorHover: COLORS.grey.c300,
     selectedItemBgColor: colorShades.c50,
     selectedItemBgColorHover: colorShades.c500,
-    selectedItemTextColorHover: colorShades.inverse
+    selectedItemTextColorHover: colorShades.inverse,
   };
 }
 
@@ -311,7 +311,7 @@ function getBlackColors(colorShades) {
     itemBgColorHover: COLORS.grey.c300,
     selectedItemBgColor: colorShades.c50,
     selectedItemBgColorHover: colorShades.c500,
-    selectedItemTextColorHover: colorShades.inverse
+    selectedItemTextColorHover: colorShades.inverse,
   };
 }
 
@@ -321,7 +321,7 @@ function getGreyColors(colorShades) {
     itemBgColorHover: COLORS.grey.c300,
     selectedItemBgColor: colorShades.c50,
     selectedItemBgColorHover: colorShades.c500,
-    selectedItemTextColorHover: colorShades.inverse
+    selectedItemTextColorHover: colorShades.inverse,
   };
 }
 

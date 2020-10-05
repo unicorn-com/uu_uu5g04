@@ -22,7 +22,7 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Common.ContentMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {},
   requiredProps: {
@@ -30,14 +30,14 @@ const CONFIG = {
     children: [
       <UU5.Bricks.NavBar.Nav id={"child01"}>
         <UU5.Bricks.NavBar.Nav.Item d={"child02"}>News</UU5.Bricks.NavBar.Nav.Item>
-      </UU5.Bricks.NavBar.Nav>
-    ]
+      </UU5.Bricks.NavBar.Nav>,
+    ],
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.NavBar.Header props`, () => {

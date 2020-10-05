@@ -72,16 +72,16 @@ export const RichLink = UU5.Common.VisualComponent.create({
         margin-top: 8px;
         overflow: hidden;
         text-overflow: ellipsis;
-        white-space: nowrap;`
+        white-space: nowrap;`,
     },
-    cache: {}
+    cache: {},
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
     ...Link.propTypes,
-    type: UU5.PropTypes.oneOf(["simple", "full"])
+    type: UU5.PropTypes.oneOf(["simple", "full"]),
   },
   //@@viewOff:propTypes
 
@@ -89,7 +89,7 @@ export const RichLink = UU5.Common.VisualComponent.create({
   getDefaultProps() {
     return {
       type: "full",
-      target: "_blank"
+      target: "_blank",
     };
   },
   //@@viewOff:getDefaultProps
@@ -101,7 +101,7 @@ export const RichLink = UU5.Common.VisualComponent.create({
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.href !== this.props.href) {
-      this.setState(state => this._prepareLinkData(state, nextProps));
+      this.setState((state) => this._prepareLinkData(state, nextProps));
     }
   },
   //@@viewOff:reactLifeCycle
@@ -150,14 +150,14 @@ export const RichLink = UU5.Common.VisualComponent.create({
         this._fetchPromise = promise;
         if (linkData === undefined) {
           promise.then(
-            response => {
+            (response) => {
               let linkData = (cache[cacheKey].linkData =
                 this._extractLinkData(response && response.data, props.href) || null);
               if (promise === this._fetchPromise) {
                 this.setAsyncState({ linkData, loading: false });
               }
             },
-            error => promise === this._fetchPromise && this.setAsyncState({ linkData: null, loading: false })
+            (error) => promise === this._fetchPromise && this.setAsyncState({ linkData: null, loading: false })
           );
           resultState = { loading: true, loadedForHref: props.href, linkData: null };
         } else {
@@ -172,7 +172,10 @@ export const RichLink = UU5.Common.VisualComponent.create({
 
   _fetchHtml(url) {
     return UU5.Common.Request.get(url, null, {
-      headers: { Accept: "text/html;q=0.9,text/*;q=0.8,*/*;q=0.5", "Content-Type": "application/x-www-form-urlencoded" }
+      headers: {
+        Accept: "text/html;q=0.9,text/*;q=0.8,*/*;q=0.5",
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
     });
   },
 
@@ -180,7 +183,7 @@ export const RichLink = UU5.Common.VisualComponent.create({
     let result = null;
     if (html && typeof html === "string") {
       let metasAndLinks = [];
-      html.replace(/<(?:meta|link)\s+[^>]*>/g, m => {
+      html.replace(/<(?:meta|link)\s+[^>]*>/g, (m) => {
         if (m.indexOf('\\"') !== -1) {
           // due to UVEs being mostly static files with client-side routing, favicons are actually computed
           // and then written into DOM => try to parse it from the usual way of how it is written
@@ -223,7 +226,7 @@ export const RichLink = UU5.Common.VisualComponent.create({
   },
 
   _onImageError(e) {
-    this.setState(state => {
+    this.setState((state) => {
       let result;
       if (state.loadedForHref === this.props.href) {
         result = { linkData: { ...state.linkData, image: null } };
@@ -233,7 +236,7 @@ export const RichLink = UU5.Common.VisualComponent.create({
   },
 
   _onFaviconError(e) {
-    this.setState(state => {
+    this.setState((state) => {
       let result;
       if (state.loadedForHref === this.props.href) {
         result = { linkData: { ...state.linkData, favicon: null } };
@@ -288,7 +291,7 @@ export const RichLink = UU5.Common.VisualComponent.create({
                       responsive={false}
                       mainAttrs={{ onError: this._onFaviconError }}
                     />,
-                    " "
+                    " ",
                   ]
                 : null}
               {href}
@@ -298,7 +301,7 @@ export const RichLink = UU5.Common.VisualComponent.create({
         {this.isInlineEdited() ? this._renderEditationMode() : null}
       </UU5.Common.Fragment>
     );
-  }
+  },
   //@@viewOff:render
 });
 

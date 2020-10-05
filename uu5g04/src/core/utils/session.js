@@ -31,8 +31,8 @@ const Session = {
         session.removeListener("sessionExpiring", expireSession);
         session.removeListener("sessionExtended", extendSession);
       }
-    }
-  }
+    };
+  },
 };
 
 export { Session };

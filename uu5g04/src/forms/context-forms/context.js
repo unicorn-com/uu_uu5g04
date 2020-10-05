@@ -57,7 +57,7 @@ export const ContextFormProvider = UU5.Common.VisualComponent.create({
   //@@viewOn:render
   render() {
     return <FormContext.Provider value={this.state}>{this.props.children}</FormContext.Provider>;
-  }
+  },
   //@@viewOff:render
 });
 

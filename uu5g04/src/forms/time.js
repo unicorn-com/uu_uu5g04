@@ -31,7 +31,7 @@ export const Time = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.ScreenSizeMixin,
     UU5.Common.ColorSchemaMixin,
-    UU5.Common.LsiMixin
+    UU5.Common.LsiMixin,
   ],
 
   statics: {
@@ -64,13 +64,13 @@ export const Time = UU5.Common.VisualComponent.create({
       navMax: ns.css("time-nav-max"),
       singleColumnView: ns.css("time-single-column-view"),
       singleColumnViewButton: ns.css("time-single-column-view-button"),
-      screenSizeBehaviour: ns.css("screen-size-behaviour")
+      screenSizeBehaviour: ns.css("screen-size-behaviour"),
     },
     defaults: {
       upIcon: "mdi-menu-up",
-      downIcon: "mdi-menu-down"
+      downIcon: "mdi-menu-down",
     },
-    lsi: () => UU5.Environment.Lsi.Forms.time
+    lsi: () => UU5.Environment.Lsi.Forms.time,
   },
 
   propTypes: {
@@ -78,7 +78,7 @@ export const Time = UU5.Common.VisualComponent.create({
       hours: UU5.PropTypes.number,
       minutes: UU5.PropTypes.number,
       seconds: UU5.PropTypes.number,
-      dayPart: UU5.PropTypes.oneOf([FORMAT_AM, FORMAT_PM])
+      dayPart: UU5.PropTypes.oneOf([FORMAT_AM, FORMAT_PM]),
     }),
     format: UU5.PropTypes.oneOf([FORMAT_12, FORMAT_24, 12, 24]),
     onChange: UU5.PropTypes.func,
@@ -88,7 +88,7 @@ export const Time = UU5.Common.VisualComponent.create({
     mobileDisplay: UU5.PropTypes.bool,
     timeFrom: UU5.PropTypes.object,
     timeTo: UU5.PropTypes.object,
-    show24: UU5.PropTypes.bool
+    show24: UU5.PropTypes.bool,
   },
 
   //@@viewOn:getDefaultProps
@@ -103,7 +103,7 @@ export const Time = UU5.Common.VisualComponent.create({
       mobileDisplay: false,
       timeFrom: undefined,
       timeTo: undefined,
-      show24: false
+      show24: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -120,7 +120,7 @@ export const Time = UU5.Common.VisualComponent.create({
 
     return {
       ...this._parseTime(value),
-      valid: this._validateTime(value)
+      valid: this._validateTime(value),
     };
   },
 
@@ -174,7 +174,7 @@ export const Time = UU5.Common.VisualComponent.create({
       is12 && (value.pm = pm);
       this.setState(value, setStateCallback);
     } else if (type == "switchDayPart") {
-      this.setState(state => ({ pm: !state.pm }), setStateCallback);
+      this.setState((state) => ({ pm: !state.pm }), setStateCallback);
     } else if (type == "setTime") {
       this.setState(value, setStateCallback);
     }
@@ -345,7 +345,7 @@ export const Time = UU5.Common.VisualComponent.create({
       result = {
         hours: null,
         minutes: null,
-        seconds: null
+        seconds: null,
       };
     }
 
@@ -372,13 +372,13 @@ export const Time = UU5.Common.VisualComponent.create({
       value = {
         hours: parseInt(time.split(":")[0]),
         minutes: parseInt(time.split(":")[1]),
-        seconds: 0
+        seconds: 0,
       };
     } else {
       value = {
         hours: type == "hours" ? time : this.state.hours || 0,
         minutes: type == "minutes" ? time : this.state.minutes || 0,
-        seconds: type == "seconds" ? time : this.state.seconds || 0
+        seconds: type == "seconds" ? time : this.state.seconds || 0,
       };
     }
 
@@ -419,8 +419,8 @@ export const Time = UU5.Common.VisualComponent.create({
         overMidnight: value.hours > 24,
         type: "picker",
         changeType: type,
-        value: UU5.Common.Tools.merge({ pm: this.state.pm }, value)
-      }
+        value: UU5.Common.Tools.merge({ pm: this.state.pm }, value),
+      },
     };
 
     if (is12) this._addDayPart(value, this.state.pm);
@@ -664,19 +664,19 @@ export const Time = UU5.Common.VisualComponent.create({
 
   _switchDayPart(e) {
     this._buttonSwitch.toggle(() => {
-      this.setState(state => {
+      this.setState((state) => {
         let pm = !state.pm;
         let value = {
           hours: state.hours,
           minutes: state.minutes,
-          seconds: state.seconds
+          seconds: state.seconds,
         };
 
         let opt = {
           value,
           event: e,
           component: this,
-          _data: { type: "switchDayPart", value: UU5.Common.Tools.merge({ pm }, value) }
+          _data: { type: "switchDayPart", value: UU5.Common.Tools.merge({ pm }, value) },
         };
 
         this._addDayPart(value, pm);
@@ -731,7 +731,7 @@ export const Time = UU5.Common.VisualComponent.create({
           mainAttrs={{
             onMouseDown: () => this._increaseStart(wrapperId),
             onMouseUp: () => this._increaseEnd(wrapperId),
-            onMouseOut: () => this._increaseEnd(wrapperId)
+            onMouseOut: () => this._increaseEnd(wrapperId),
           }}
         >
           <UU5.Bricks.Icon icon={this.getDefault("upIcon")} />
@@ -739,7 +739,7 @@ export const Time = UU5.Common.VisualComponent.create({
         <div
           className={this.getClassName("hoursPickerWrapper")}
           id={wrapperId}
-          ref={picker => {
+          ref={(picker) => {
             if (unit === "hours") {
               this._hoursPickerWrapper = picker;
             } else if (unit === "minutes") {
@@ -748,7 +748,7 @@ export const Time = UU5.Common.VisualComponent.create({
               this._secondsPickerWrapper = picker;
             }
           }}
-          onScroll={e => {
+          onScroll={(e) => {
             this._updateArrowButton(e.nativeEvent.target, unit);
           }}
         >
@@ -761,7 +761,7 @@ export const Time = UU5.Common.VisualComponent.create({
           mainAttrs={{
             onMouseDown: () => this._decreaseStart(wrapperId),
             onMouseUp: () => this._decreaseEnd(wrapperId),
-            onMouseOut: () => this._decreaseEnd(wrapperId)
+            onMouseOut: () => this._decreaseEnd(wrapperId),
           }}
         >
           <UU5.Bricks.Icon icon={this.getDefault("downIcon")} />
@@ -793,7 +793,7 @@ export const Time = UU5.Common.VisualComponent.create({
                   <div className={this.getClassName("secondsWrapper")} key={"wrapper"}>
                     {this._getHeader("seconds")}
                     {this._getBody("seconds")}
-                  </div>
+                  </div>,
                 ]
               : null}
           </div>
@@ -807,7 +807,7 @@ export const Time = UU5.Common.VisualComponent.create({
                 onIcon="mdi-chevron-right"
                 offIcon="mdi-chevron-left"
                 className={this.getClassName("timePartSwitch")}
-                ref_={buttonSwitch => (this._buttonSwitch = buttonSwitch)}
+                ref_={(buttonSwitch) => (this._buttonSwitch = buttonSwitch)}
                 onChange={() => this._switchDayPart()}
                 switchedOn={!!this.state.pm}
               />
@@ -844,7 +844,7 @@ export const Time = UU5.Common.VisualComponent.create({
   //@@viewOn:render
   render() {
     return this._getType();
-  }
+  },
   //@@viewOff:render
 });
 

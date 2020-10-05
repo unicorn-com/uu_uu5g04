@@ -29,7 +29,7 @@ export const ClickConfirm = UU5.Common.VisualComponent.create({
     UU5.Common.ColorSchemaMixin,
     UU5.Common.CcrWriterMixin,
     UU5.Common.NestingLevelMixin,
-    UU5.Common.PureRenderMixin
+    UU5.Common.PureRenderMixin,
   ],
   //@@viewOff:mixins
 
@@ -39,15 +39,15 @@ export const ClickConfirm = UU5.Common.VisualComponent.create({
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "inline"),
     classNames: {
       main: ns.css("click-confirm"),
-      open: ns.css("click-confirm-shown")
+      open: ns.css("click-confirm-shown"),
     },
     defaults: {
       showTimeout: 500,
-      closeTimeout: 4000
+      closeTimeout: 4000,
     },
     opt: {
-      nestingLevelRoot: true
-    }
+      nestingLevelRoot: true,
+    },
   },
   //@@viewOff:statics
 
@@ -56,32 +56,32 @@ export const ClickConfirm = UU5.Common.VisualComponent.create({
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {};
   },
 
-  getInitialState: function() {
+  getInitialState: function () {
     return {
       content: null,
       pageX: null,
-      pageY: null
+      pageY: null,
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  UNSAFE_componentWillMount: function() {
+  UNSAFE_componentWillMount: function () {
     this.setState({ hidden: true });
   },
 
-  componentWillUnmount: function() {
+  componentWillUnmount: function () {
     this.showTimeout && clearTimeout(this.showTimeout);
     this.closeTimeout && clearTimeout(this.closeTimeout);
   },
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
-  open: function(openAttrs) {
+  open: function (openAttrs) {
     var pageX = openAttrs.pageX;
     var pageY = openAttrs.pageY;
 
@@ -94,11 +94,11 @@ export const ClickConfirm = UU5.Common.VisualComponent.create({
     this.closeTimeout && clearTimeout(this.closeTimeout);
 
     var _this = this;
-    this.showTimeout = setTimeout(function() {
-      _this.setAsyncState({ content: openAttrs.content, hidden: false, pageX: pageX, pageY: pageY }, function() {
+    this.showTimeout = setTimeout(function () {
+      _this.setAsyncState({ content: openAttrs.content, hidden: false, pageX: pageX, pageY: pageY }, function () {
         typeof openAttrs.onOpenCallback === "function" && openAttrs.onOpenCallback();
 
-        _this.closeTimeout = setTimeout(function() {
+        _this.closeTimeout = setTimeout(function () {
           _this.close(openAttrs.onClosedCallback);
         }, _this.getDefault().closeTimeout);
       });
@@ -107,7 +107,7 @@ export const ClickConfirm = UU5.Common.VisualComponent.create({
     return this;
   },
 
-  close: function(setStateCallback) {
+  close: function (setStateCallback) {
     this.showTimeout && clearTimeout(this.showTimeout);
     this.closeTimeout && clearTimeout(this.closeTimeout);
     this.setState({ content: null, hidden: true, pageX: null, pageY: null }, setStateCallback);
@@ -119,7 +119,7 @@ export const ClickConfirm = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _getMainAttrs: function() {
+  _getMainAttrs: function () {
     var props = this.getMainAttrs();
 
     !this.isHidden() && (props.className += " " + this.getClassName().open);
@@ -127,7 +127,7 @@ export const ClickConfirm = UU5.Common.VisualComponent.create({
     if (this.state.pageX !== null) {
       props.style = {
         left: this.state.pageX,
-        top: this.state.pageY
+        top: this.state.pageY,
       };
     }
     props.nestingLevel = this.getNestingLevel();
@@ -137,13 +137,13 @@ export const ClickConfirm = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return (
       <Div {...this._getMainAttrs()} disabled={this.isDisabled()}>
         {this.state.content}
       </Div>
     );
-  }
+  },
   //@@viewOff:render
 });
 

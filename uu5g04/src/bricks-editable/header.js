@@ -29,9 +29,9 @@ const DEFAULT_PROPS = [
       showGutter: false,
       wrapEnabled: true,
       inputColWidth: "xl12",
-      labelColWidth: "xl12"
+      labelColWidth: "xl12",
     },
-    value: ""
+    value: "",
   },
   {
     name: "level",
@@ -41,22 +41,22 @@ const DEFAULT_PROPS = [
       inputColWidth: "xs6 s4 m2",
       labelColWidth: "xs12 s5",
       min: 0,
-      max: 6
+      max: 6,
     },
-    value: null
+    value: null,
   },
   {
     name: "underline",
     type: "bool",
     label: "Underline",
-    value: false
+    value: false,
   },
   {
     name: "contentEditable",
     type: "bool",
     label: "Content Editable",
-    value: false
-  }
+    value: false,
+  },
 ];
 
 export const Header = UU5.Common.VisualComponent.create({
@@ -70,21 +70,21 @@ export const Header = UU5.Common.VisualComponent.create({
     tagName: "UU5.BricksEditable.Header",
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
-      main: "editable-header"
-    }
+      main: "editable-header",
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    component: UU5.PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      component: null
+      component: null,
     };
   },
   getInitialState() {
@@ -128,7 +128,7 @@ export const Header = UU5.Common.VisualComponent.create({
         <UU5.Forms.PropsForm props={this.state.props} onCancel={this._cancel} onSave={this._save} uu5string={true} />
       </UU5.Bricks.Div>
     );
-  }
+  },
   //@@viewOff:render
 });
 

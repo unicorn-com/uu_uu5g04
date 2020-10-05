@@ -25,7 +25,7 @@ export const RollMenu = UU5.Common.VisualComponent.create({
           right: 0;
           bottom: 0;
           overflow: hidden;
-          `
+          `,
         ];
 
         if (typeof props.zIndex === "number") {
@@ -57,8 +57,8 @@ export const RollMenu = UU5.Common.VisualComponent.create({
           height: auto;
           bottom: auto;
         }
-      `)
-    }
+      `),
+    },
   },
   //@@viewOff:statics
 
@@ -69,7 +69,7 @@ export const RollMenu = UU5.Common.VisualComponent.create({
     zIndex: UU5.PropTypes.number,
     direction: UU5.PropTypes.oneOf(["horizontal", "vertical"]),
     backgroundLayerClassName: UU5.PropTypes.string,
-    header: UU5.PropTypes.node
+    header: UU5.PropTypes.node,
   },
   //@@viewOff:propTypes
 
@@ -81,7 +81,7 @@ export const RollMenu = UU5.Common.VisualComponent.create({
       zIndex: undefined,
       direction: "horizontal",
       backgroundLayerClassName: undefined,
-      header: undefined
+      header: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -89,7 +89,7 @@ export const RollMenu = UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
-      open: this.props.open
+      open: this.props.open,
     };
   },
 
@@ -104,7 +104,7 @@ export const RollMenu = UU5.Common.VisualComponent.create({
 
   //@@viewOn:interface
   toggle(setStateCallback) {
-    this.setState(state => ({ open: !state.open }), setStateCallback);
+    this.setState((state) => ({ open: !state.open }), setStateCallback);
   },
 
   open(setStateCallback) {
@@ -154,7 +154,7 @@ export const RollMenu = UU5.Common.VisualComponent.create({
         </div>
       </div>
     );
-  }
+  },
   //@@viewOff:render
 });
 

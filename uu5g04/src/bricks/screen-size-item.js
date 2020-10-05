@@ -34,33 +34,36 @@ export default UU5.Common.VisualComponent.create({
     tagName: ns.name("ScreenSize.Item"),
     nestingLevelList: UU5.Environment.getNestingLevelList("spa"),
     classNames: {
-      main: ns.css("screen-size-item")
+      main: ns.css("screen-size-item"),
     },
     opt: {
-      nestingLevelWrapper: true
+      nestingLevelWrapper: true,
     },
     errors: {
-      invalidParent: "Parent of this component is not ScreenSize."
-    }
+      invalidParent: "Parent of this component is not ScreenSize.",
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    screenSize: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.arrayOf(UU5.PropTypes.oneOf(SCREEN_SIZES))]).isRequired
+    screenSize: UU5.PropTypes.oneOfType([
+      UU5.PropTypes.string,
+      UU5.PropTypes.arrayOf(UU5.PropTypes.oneOf(SCREEN_SIZES)),
+    ]).isRequired,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
-      screenSize: null
+      screenSize: null,
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  UNSAFE_componentWillMount: function() {
+  UNSAFE_componentWillMount: function () {
     let parent = this.getParent();
 
     if (parent) {
@@ -85,7 +88,7 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     let children =
       this.getNestingLevel() === "inline" ? (
         <Span {...this.getMainPropsToPass()} content={this.props.content}>
@@ -97,6 +100,6 @@ export default UU5.Common.VisualComponent.create({
         </Div>
       );
     return children;
-  }
+  },
   //@@viewOff:render
 });

@@ -18,7 +18,7 @@ import Css from "../internal/css.js";
 import "./form-mixin.less";
 
 function unblockPending(inputs, pendingComponents) {
-  Object.keys(inputs).forEach(key => {
+  Object.keys(inputs).forEach((key) => {
     let component = inputs[key];
     if (pendingComponents[component.getId()]) {
       delete pendingComponents[component.getId()];
@@ -36,23 +36,23 @@ export const FormMixin = {
   statics: {
     "UU5.Forms.FormMixin": {
       classNames: {
-        form: props =>
+        form: (props) =>
           "uu5-common-form" +
           " " +
           Css.css(`
           padding: ${UU5.Common.Tools.fillUnit(props.padding)};
-        `)
+        `),
       },
       warnings: {
         formInForm: "Form control %s should not be placed in other form control %s.",
         nonRegistered: "Form control with ID %s cannot be unregistered. Component with the ID is not registered.",
-        noName: "Form control has not any name. It will be used its ID %s."
+        noName: "Form control has not any name. It will be used its ID %s.",
       },
       errors: {
-        duplicateId: "Duplicate id '%s' of a form control."
+        duplicateId: "Duplicate id '%s' of a form control.",
       },
-      lsi: () => UU5.Environment.Lsi.Forms.formMixin
-    }
+      lsi: () => UU5.Environment.Lsi.Forms.formMixin,
+    },
   },
   //@@viewOff:statics
 
@@ -78,9 +78,9 @@ export const FormMixin = {
         s: UU5.PropTypes.number,
         m: UU5.PropTypes.number,
         l: UU5.PropTypes.number,
-        xl: UU5.PropTypes.number
+        xl: UU5.PropTypes.number,
       }),
-      UU5.PropTypes.string
+      UU5.PropTypes.string,
     ]),
     inputColWidth: UU5.PropTypes.oneOfType([
       UU5.PropTypes.shape({
@@ -88,17 +88,17 @@ export const FormMixin = {
         s: UU5.PropTypes.number,
         m: UU5.PropTypes.number,
         l: UU5.PropTypes.number,
-        xl: UU5.PropTypes.number
+        xl: UU5.PropTypes.number,
       }),
-      UU5.PropTypes.string
+      UU5.PropTypes.string,
     ]),
     labelAlignment: UU5.PropTypes.string,
-    padding: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number])
+    padding: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       values: null,
       progressIndicator: null,
@@ -117,7 +117,7 @@ export const FormMixin = {
       labelColWidth: undefined,
       inputColWidth: undefined,
       labelAlignment: undefined,
-      padding: "0 16px"
+      padding: "0 16px",
     };
   },
   //@@viewOff:getDefaultProps
@@ -133,8 +133,8 @@ export const FormMixin = {
         values: this.props.values,
         labelColWidth: this.props.labelColWidth,
         inputColWidth: this.props.inputColWidth,
-        labelAlignment: this.props.labelAlignment
-      }
+        labelAlignment: this.props.labelAlignment,
+      },
     };
   },
 
@@ -145,7 +145,7 @@ export const FormMixin = {
     var parentForm = this.getParentByType("isForm");
     if (parentForm) {
       this.showWarning("formInForm", [this.getTagName(), parentForm.getTagName()], {
-        mixinName: "UU5.Forms.FormMixin"
+        mixinName: "UU5.Forms.FormMixin",
       });
     }
   },
@@ -165,8 +165,8 @@ export const FormMixin = {
           values: nextProps.values,
           labelColWidth: nextProps.labelColWidth,
           inputColWidth: nextProps.inputColWidth,
-          labelAlignment: nextProps.labelAlignment
-        }
+          labelAlignment: nextProps.labelAlignment,
+        },
       });
     }
 
@@ -186,10 +186,10 @@ export const FormMixin = {
 
   //@@viewOn:interface
   setValues(values) {
-    Object.keys(values).forEach(key => (values[key] === undefined ? delete values[key] : ""));
+    Object.keys(values).forEach((key) => (values[key] === undefined ? delete values[key] : ""));
     let formContextValue = { ...this.state.formContextValue, ...{ values } };
     this.setState({ values, formContextValue }, () => {
-      this.eachFormInput(input => {
+      this.eachFormInput((input) => {
         if (!input.props._hasFormContext || !this._hasFormContext) {
           let value = values[input.getName() || input.getId()];
           value !== undefined && input.setValue(value, { shouldValidateRequired: false });
@@ -240,7 +240,7 @@ export const FormMixin = {
   isValidDefault() {
     let result = true;
 
-    this.eachFormInput(formInput => {
+    this.eachFormInput((formInput) => {
       let newResult = typeof formInput.isValid !== "function" || formInput.isValid();
 
       if (result) {
@@ -265,14 +265,14 @@ export const FormMixin = {
           registeredFormInput: {
             tagName: registeredControl.getTagName(),
             props: registeredControl.props,
-            component: registeredControl
+            component: registeredControl,
           },
           newFormInput: {
             tagName: formInput.getTagName(),
             props: formInput.props,
-            component: formInput
-          }
-        }
+            component: formInput,
+          },
+        },
       });
     } else {
       this.formInputs[id] = formInput;
@@ -282,7 +282,7 @@ export const FormMixin = {
   unregisterFormInput(id) {
     if (!this.formInputs[id]) {
       this.showWarning("nonRegistered", id, {
-        mixinName: "UU5.Forms.FormMixin"
+        mixinName: "UU5.Forms.FormMixin",
       });
     } else {
       delete this.formInputs[id];
@@ -298,14 +298,14 @@ export const FormMixin = {
           registeredFormControl: {
             tagName: registeredControl.getTagName(),
             props: registeredControl.props,
-            component: registeredControl
+            component: registeredControl,
           },
           newFormControl: {
             tagName: formControl.getTagName(),
             props: formControl.props,
-            component: formControl
-          }
-        }
+            component: formControl,
+          },
+        },
       });
     } else {
       this.formControls[id] = formControl;
@@ -315,7 +315,7 @@ export const FormMixin = {
   unregisterFormControls(id) {
     if (!this.formControls[id]) {
       this.showWarning("nonRegistered", id, {
-        mixinName: "UU5.Forms.FormMixin"
+        mixinName: "UU5.Forms.FormMixin",
       });
     } else {
       delete this.formControls[id];
@@ -324,7 +324,7 @@ export const FormMixin = {
 
   getValues() {
     var values = {};
-    this._eachFormInputWithName(function(name, input) {
+    this._eachFormInputWithName(function (name, input) {
       values[name] = input.getValue();
     });
     return values;
@@ -332,7 +332,7 @@ export const FormMixin = {
 
   getInputs() {
     var inputs = {};
-    this._eachFormInputWithName(function(name, input) {
+    this._eachFormInputWithName(function (name, input) {
       inputs[name] = input;
     });
     return inputs;
@@ -394,7 +394,7 @@ export const FormMixin = {
     return (
       <form {...attrs}>
         <UU5.Bricks.AlertBus
-          ref_={alertBus => (this._alertBus = alertBus)}
+          ref_={(alertBus) => (this._alertBus = alertBus)}
           closeTimer={null}
           location={this.props.usePageAlertBus ? "page" : "local"}
         />
@@ -452,7 +452,7 @@ export const FormMixin = {
       this.setReady(() =>
         this.props.onSaveDone({
           component: this,
-          dtoOut: dtoOut
+          dtoOut: dtoOut,
         })
       );
     }
@@ -473,7 +473,7 @@ export const FormMixin = {
       this.setReady(() =>
         this.props.onSaveFail({
           component: this,
-          dtoOut: dtoOut
+          dtoOut: dtoOut,
         })
       );
     }
@@ -490,12 +490,12 @@ export const FormMixin = {
           ? {
               colorSchema: "success",
               closeTimer: 1000,
-              content: this.getLsiComponent("validContent", "UU5.Forms.FormMixin")
+              content: this.getLsiComponent("validContent", "UU5.Forms.FormMixin"),
             }
           : {
               colorSchema: "danger",
               closeTimer: 5000,
-              content: this.getLsiComponent("invalidContent", "UU5.Forms.FormMixin")
+              content: this.getLsiComponent("invalidContent", "UU5.Forms.FormMixin"),
             }
       );
     return this;
@@ -504,7 +504,7 @@ export const FormMixin = {
   setPending(setStateCallback) {
     let inputs = this.getInputs();
     unblockPending(inputs, this.pendingComponents);
-    Object.keys(inputs).forEach(key => {
+    Object.keys(inputs).forEach((key) => {
       let component = inputs[key];
       if (!component.isDisabled()) {
         this.pendingComponents[component.getId()] = component;
@@ -517,10 +517,10 @@ export const FormMixin = {
       id: this.getId() + "-pending",
       closeTimer: null,
       closeDisabled: true,
-      content: this.props.progressIndicator || <UU5.Bricks.Loading />
+      content: this.props.progressIndicator || <UU5.Bricks.Loading />,
     });
     if (this.hasFormControls()) {
-      this.eachFormControls(formControls => formControls.disable(setStateCallback));
+      this.eachFormControls((formControls) => formControls.disable(setStateCallback));
     } else {
       setStateCallback();
     }
@@ -534,7 +534,7 @@ export const FormMixin = {
     let alertBus = this.getAlertBus();
     alertBus.removeAlert(this.getId() + "-pending");
     if (this.hasFormControls()) {
-      this.eachFormControls(formControls => formControls.enable(setStateCallback));
+      this.eachFormControls((formControls) => formControls.enable(setStateCallback));
     } else {
       setStateCallback();
     }
@@ -583,7 +583,7 @@ export const FormMixin = {
     let down = false;
 
     return {
-      onKeyDown: e => {
+      onKeyDown: (e) => {
         let key = e.which || e.keyCode;
         let isMetaKey = UU5.Common.Tools.isMac() ? e.metaKey : null;
         let isCtrlPressed = e.ctrlKey || isMetaKey ? true : key === CTRL_KEY;
@@ -604,7 +604,7 @@ export const FormMixin = {
           }
         }
       },
-      onKeyUp: e => {
+      onKeyUp: (e) => {
         let key = e.which || e.keyCode;
         let isMetaKey = UU5.Common.Tools.isMac() ? e.metaKey : null;
         let isCtrlPressed = e.ctrlKey || isMetaKey ? true : key === CTRL_KEY;
@@ -612,7 +612,7 @@ export const FormMixin = {
         if (isCtrlPressed && key === S_KEY) {
           down = false;
         }
-      }
+      },
     };
   },
 
@@ -641,7 +641,7 @@ export const FormMixin = {
   //@@viewOn:private
   _eachFormInputWithName(func) {
     var form = this;
-    this.eachFormInput(input => {
+    this.eachFormInput((input) => {
       var name = input.getName();
       if (!name) {
         form.showWarning("noName", input.getId(), {
@@ -650,9 +650,9 @@ export const FormMixin = {
             input: {
               tagName: input.getTagName(),
               props: input.props,
-              component: input
-            }
-          }
+              component: input,
+            },
+          },
         });
         name = input.getId();
       }
@@ -664,7 +664,7 @@ export const FormMixin = {
   _getMainAttrs() {
     let mainAttrs = this.getMainAttrs();
 
-    mainAttrs.onSubmit = e => {
+    mainAttrs.onSubmit = (e) => {
       e.preventDefault();
 
       if (this.props.saveOnEnter) {
@@ -678,9 +678,9 @@ export const FormMixin = {
 
     if (typeof this.props.onSaveByKey === "function") {
       let saveEvents = this.getSaveFormEvents(this.props.onSaveByKey);
-      Object.keys(saveEvents).forEach(key => {
+      Object.keys(saveEvents).forEach((key) => {
         let fce = mainAttrs[key];
-        mainAttrs[key] = e => {
+        mainAttrs[key] = (e) => {
           typeof fce === "function" && fce(e);
           saveEvents[key](e);
         };
@@ -715,7 +715,7 @@ export const FormMixin = {
     }
 
     return mainAttrs;
-  }
+  },
   //@@viewOff:private
 
   //@@viewOn:render

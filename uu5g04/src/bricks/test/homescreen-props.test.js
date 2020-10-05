@@ -20,40 +20,40 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Common.LsiMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     appID: {
-      values: ["plus4u.parrot-v01"]
+      values: ["plus4u.parrot-v01"],
     },
     skipFirstVisit: {
-      values: [true, false]
+      values: [true, false],
     },
     startDelay: {
-      values: [15000]
+      values: [15000],
     },
     lifespan: {
-      values: [30000]
+      values: [30000],
     },
     displayPace: {
-      values: [2880]
+      values: [2880],
     },
     maxDisplayCount: {
-      values: [100]
+      values: [100],
     },
     message: {
-      values: ["My custom mobile device messages."]
+      values: ["My custom mobile device messages."],
     },
     detectHomescreen: {
-      values: ["hash", "query", "smart", false]
-    }
+      values: ["hash", "query", "smart", false],
+    },
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.HomeScreen`, () => {

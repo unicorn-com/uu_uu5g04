@@ -16,9 +16,9 @@ import "uu5g04-bricks";
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
-describe(`UU5.Bricks.Console interface testing`, function() {
+describe(`UU5.Bricks.Console interface testing`, function () {
   it("info(input)", () => {
-    const wrapper = shallow(<UU5.Bricks.Console id={"uuID-console"} ref_={console => (this.console = console)} />);
+    const wrapper = shallow(<UU5.Bricks.Console id={"uuID-console"} ref_={(console) => (this.console = console)} />);
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.content).toEqual([]);
@@ -33,7 +33,7 @@ describe(`UU5.Bricks.Console interface testing`, function() {
   });
 
   it("warning(input)", () => {
-    const wrapper = shallow(<UU5.Bricks.Console id={"uuID-console"} ref_={console => (this.console = console)} />);
+    const wrapper = shallow(<UU5.Bricks.Console id={"uuID-console"} ref_={(console) => (this.console = console)} />);
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.content).toEqual([]);
@@ -48,7 +48,7 @@ describe(`UU5.Bricks.Console interface testing`, function() {
   });
 
   it("error(input)", () => {
-    const wrapper = shallow(<UU5.Bricks.Console id={"uuID-console"} ref_={console => (this.console = console)} />);
+    const wrapper = shallow(<UU5.Bricks.Console id={"uuID-console"} ref_={(console) => (this.console = console)} />);
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.content).toEqual([]);

@@ -36,12 +36,12 @@ export const TextIcon = Context.withContext(
       classNames: {
         main: ns.css("text-icon"),
         left: ns.css("text-icon-left"),
-        right: ns.css("text-icon-right")
+        right: ns.css("text-icon-right"),
       },
       errors: {
-        validateError: "Validated result is not object."
+        validateError: "Validated result is not object.",
       },
-      lsi: () => UU5.Environment.Lsi.Forms.message
+      lsi: () => UU5.Environment.Lsi.Forms.message,
     },
     //@@viewOff:statics
 
@@ -53,12 +53,12 @@ export const TextIcon = Context.withContext(
       iconPosition: UU5.PropTypes.oneOf(["left", "right"]),
       onClick: UU5.PropTypes.func,
       pattern: UU5.PropTypes.string,
-      actionOnEnter: UU5.PropTypes.bool
+      actionOnEnter: UU5.PropTypes.bool,
     },
     //@@viewOff:propTypes
 
     //@@viewOn:getDefaultProps
-    getDefaultProps: function() {
+    getDefaultProps: function () {
       return {
         value: "",
         password: false,
@@ -66,7 +66,7 @@ export const TextIcon = Context.withContext(
         iconPosition: "right",
         onClick: null,
         pattern: null,
-        actionOnEnter: false
+        actionOnEnter: false,
       };
     },
     //@@viewOff:getDefaultProps
@@ -141,7 +141,7 @@ export const TextIcon = Context.withContext(
             message: result.message,
             value: result.value,
             foundAutocompleteItems: result.foundAutocompleteItems,
-            selectedIndex: result.selectedIndex
+            selectedIndex: result.selectedIndex,
           },
           callback
         );
@@ -177,7 +177,7 @@ export const TextIcon = Context.withContext(
             }
           } else {
             this.showError("validateError", null, {
-              context: { event: e, func: this.props.onValidate, result: result }
+              context: { event: e, func: this.props.onValidate, result: result },
             });
           }
         }
@@ -257,7 +257,7 @@ export const TextIcon = Context.withContext(
         readonly: this.isReadOnly(),
         loading: this.isLoading(),
         feedback: this.getFeedback(),
-        ref_: item => (this._textInput = item),
+        ref_: (item) => (this._textInput = item),
         borderRadius: this.props.borderRadius,
         elevation: this.props.elevation,
         bgStyle: this.props.bgStyle,
@@ -266,7 +266,7 @@ export const TextIcon = Context.withContext(
         icon: this.props.icon,
         iconOnClick: this._onIconClick,
         clickable: typeof this.props.onClick === "function",
-        size: this.props.size
+        size: this.props.size,
       };
 
       if (this.state.autocompleteItems) {
@@ -278,8 +278,8 @@ export const TextIcon = Context.withContext(
             itemListProps: this.state.autocompleteItems ? this._getItemListProps() : undefined,
             open: this.isOpen(),
             onClose: this.close,
-            onOpen: this.open
-          }
+            onOpen: this.open,
+          },
         };
       }
 
@@ -301,7 +301,7 @@ export const TextIcon = Context.withContext(
           {this.getInputWrapper(this._getInput(inputId))}
         </div>
       );
-    }
+    },
     //@@viewOn:render
   })
 );

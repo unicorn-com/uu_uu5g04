@@ -30,9 +30,9 @@ export const CompactContextMenu = UU5.Common.VisualComponent.create({
     classNames: {
       main: ns.css("compact-context-menu"),
       ul: ns.css("context-menu-ul"),
-      ...ClassNames
+      ...ClassNames,
     },
-    lsi: () => UU5.Environment.Lsi.Bricks.contextMenu
+    lsi: () => UU5.Environment.Lsi.Bricks.contextMenu,
   },
   //@@viewOff:statics
 
@@ -47,7 +47,7 @@ export const CompactContextMenu = UU5.Common.VisualComponent.create({
     let levels = this._getLevels(this.props.content || this.props.children);
     return {
       levels,
-      currentLevel: this.getId()
+      currentLevel: this.getId(),
     };
   },
 
@@ -84,15 +84,15 @@ export const CompactContextMenu = UU5.Common.VisualComponent.create({
             key="backButton"
             // arrows fn necessary to pass parent key
             // eslint-disable-next-line react/jsx-no-bind
-            onClick={opt => this._changeLevel(parentKey, opt.event)}
+            onClick={(opt) => this._changeLevel(parentKey, opt.event)}
             label={Helpers.getBackItemContent(this.getLsiComponent("backButton"))}
             className={this.getClassName("backButton")}
           />,
-          <UU5.Bricks.ContextMenu.Item key="divider" divider />
+          <UU5.Bricks.ContextMenu.Item key="divider" divider />,
         ];
       }
 
-      UU5.Common.Children.toArray(children).forEach(child => {
+      UU5.Common.Children.toArray(children).forEach((child) => {
         if (UU5.Common.Element.isValid(child)) {
           let id = child.props.id || UU5.Common.Tools.generateUUID();
           let childProps = { ...child.props, content: null, children: null, parent: this.props.parent };
@@ -108,7 +108,7 @@ export const CompactContextMenu = UU5.Common.VisualComponent.create({
             childProps.label = Helpers.getNestingItemLabel(child.props.label, child.props.icon);
             childProps.className += ` ${this.getClassName("compactSubmenuItem")}`;
             childProps.icon = undefined;
-            childProps.onClick = opt => this._changeLevel(id, opt.event);
+            childProps.onClick = (opt) => this._changeLevel(id, opt.event);
           }
 
           levels[key] = levelContent;
@@ -150,7 +150,7 @@ export const CompactContextMenu = UU5.Common.VisualComponent.create({
   //@@viewOn:render
   render() {
     return this._renderChildren();
-  }
+  },
   //@@viewOff:render
 });
 

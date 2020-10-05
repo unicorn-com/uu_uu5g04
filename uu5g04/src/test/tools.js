@@ -191,11 +191,11 @@ export const Tools = {
       let runPromise = () =>
         new Promise((resolve, reject) => {
           actResult.then(
-            v => {
+            (v) => {
               if (updateWrapper && lastWrapper) lastWrapper.update();
               resolve(v);
             },
-            e => {
+            (e) => {
               if (updateWrapper && lastWrapper) lastWrapper.update();
               reject(e);
             }
@@ -203,7 +203,7 @@ export const Tools = {
         });
       return {
         then: (onResolve, onReject) => runPromise().then(onResolve, onReject),
-        catch: onReject => runPromise().catch(onReject)
+        catch: (onReject) => runPromise().catch(onReject),
       };
     } else {
       if (updateWrapper && lastWrapper) lastWrapper.update();
@@ -244,7 +244,7 @@ Example:
     let hookOuterComponentRef = React.createRef();
     let HookComponent = ({ children }) => (
       <HookOuterComponent ref={hookOuterComponentRef} initialHookParams={initialHookParams} hook={hook}>
-        {lastHookResult => {
+        {(lastHookResult) => {
           hookResults.push(lastHookResult);
           let child;
           if (typeof children === "function") child = children(lastHookResult);
@@ -264,7 +264,7 @@ Example:
           throw new Error("Cannot re-render hook component because it wasn't mounted yet (or is already unmounted)!");
         }
         Tools.act(() => hookOuterComponentRef.current.setHookParams(newHookParams));
-      }
+      },
     };
   },
 
@@ -300,7 +300,7 @@ Example:
     ({ updateWrapper = true } = args[0] || {});
 
     if (timeout >= 0) {
-      await Tools.act(() => new Promise(resolve => setTimeout(resolve, timeout)), { updateWrapper });
+      await Tools.act(() => new Promise((resolve) => setTimeout(resolve, timeout)), { updateWrapper });
     }
   },
 
@@ -425,7 +425,7 @@ ${snapshotString}`
     });
 
     if (config.mixins) {
-      config.mixins.forEach(mixinName => {
+      config.mixins.forEach((mixinName) => {
         let mixinProps = MixinProps[mixinName];
         if (mixinProps) {
           for (let propName in mixinProps) {
@@ -433,7 +433,7 @@ ${snapshotString}`
             let requiredProps = { ...config.requiredProps, ...mixinProps[propName].requiredProps };
             Tools.testProperty(Component, propName, mixinProps[propName].values, requiredProps, {
               ...config.opt,
-              ...mixinProps[propName].opt
+              ...mixinProps[propName].opt,
             });
           }
         }
@@ -444,10 +444,10 @@ ${snapshotString}`
       let requiredProps = { ...config.requiredProps, ...config.props[propName].requiredProps };
       Tools.testProperty(Component, propName, config.props[propName].values, requiredProps, {
         ...config.opt,
-        ...config.props[propName].opt
+        ...config.props[propName].opt,
       });
     }
-  }
+  },
 };
 
 export default Tools;

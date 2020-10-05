@@ -29,7 +29,7 @@ export const Countdown = createReactClass({
   statics: {
     tagName: ns.name("Countdown"),
     classNames: {
-      main: props =>
+      main: (props) =>
         ns.css("countdown") +
         " " +
         Css.css(`
@@ -41,7 +41,7 @@ export const Countdown = createReactClass({
         justify-content: center;
         align-items: center;
       `),
-      timer: props =>
+      timer: (props) =>
         Css.css(`
         color: rgba(0, 0, 0, 0.54);
         display: inline-block;
@@ -49,7 +49,7 @@ export const Countdown = createReactClass({
         line-height: ${props.size / 2}px;
         font-size: ${props.size / 2}px;
       `),
-      svg: props =>
+      svg: (props) =>
         Css.css(`
         position: relative;
         margin: auto;
@@ -57,7 +57,7 @@ export const Countdown = createReactClass({
         height: ${props.size}px;
         transform: rotateY(-180deg) rotateZ(-90deg);
       `),
-      circle: props =>
+      circle: (props) =>
         Css.css(`
         stroke-dasharray: 113px;
         stroke-dashoffset: 0px;
@@ -75,15 +75,15 @@ export const Countdown = createReactClass({
             stroke-dashoffset: 113px;
           }
         }
-      `)
+      `),
     },
     defaults: {
       transitionDuration: 150,
-      closeIcon: "mdi-close"
+      closeIcon: "mdi-close",
     },
     opt: {
-      nestingLevelWrapper: true
-    }
+      nestingLevelWrapper: true,
+    },
   },
   //@@viewOff:statics
 
@@ -92,7 +92,7 @@ export const Countdown = createReactClass({
     reverse: PropTypes.bool,
     timer: PropTypes.bool,
     duration: PropTypes.number,
-    size: PropTypes.number
+    size: PropTypes.number,
   },
   //@@viewOff:propTypes
 
@@ -102,7 +102,7 @@ export const Countdown = createReactClass({
       reverse: false,
       timer: false,
       duration: 10,
-      size: 32
+      size: 32,
     };
   },
   //@@viewOff:getDefaultProps
@@ -129,7 +129,7 @@ export const Countdown = createReactClass({
         </svg>
       </div>
     );
-  }
+  },
   //@@viewOff:render
 });
 

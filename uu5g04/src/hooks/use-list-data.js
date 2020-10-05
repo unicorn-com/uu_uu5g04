@@ -53,7 +53,7 @@ function applyUpdate(data, callArgs, callResult, callError, opExtraInfo) {
       : true;
   let updatedItems = hasIdMatchers ? callArgs[1] : callArgs[0];
   if (!Array.isArray(updatedItems)) updatedItems = updatedItems ? [updatedItems] : [];
-  let idMatchers = hasIdMatchers ? callArgs[0] : updatedItems.map(it => it && it.id);
+  let idMatchers = hasIdMatchers ? callArgs[0] : updatedItems.map((it) => it && it.id);
 
   let result;
   if (callError !== undefined && _isRollbackError(callError)) {
@@ -87,7 +87,7 @@ function applyDelete(data, callArgs, callResult, callError, opExtraInfo) {
   let result;
   if (callError !== undefined && _isRollbackError(callError)) {
     result = data;
-    touchedItems = deleteItems.map(it => {
+    touchedItems = deleteItems.map((it) => {
       let index = _findItemIndex(it, result);
       return index !== -1 ? result[index] : null;
     });
@@ -98,7 +98,7 @@ function applyDelete(data, callArgs, callResult, callError, opExtraInfo) {
       if (
         uuAppErrorMap &&
         typeof uuAppErrorMap === "object" &&
-        Object.keys(uuAppErrorMap).every(k => (uuAppErrorMap[k] || {}).type !== "error")
+        Object.keys(uuAppErrorMap).every((k) => (uuAppErrorMap[k] || {}).type !== "error")
       ) {
         callResult = null;
       }
@@ -147,8 +147,8 @@ function _findItemIndex(item, data) {
     typeof item === "function"
       ? item
       : typeof item === "object"
-      ? it => it && it.id != null && it.id === item.id
-      : it => it && it.id != null && it.id === item;
+      ? (it) => it && it.id != null && it.id === item.id
+      : (it) => it && it.id != null && it.id === item;
   return item != null ? data.findIndex(findItem) : -1;
 }
 
@@ -216,7 +216,7 @@ export function useListDataInternal({ onLoad, onCreate, onUpdate, onDelete, dtoI
     return {
       ...dataHookApi,
       handleCreate: (...callArgs) => performOperation(onCreate, callArgs, applyCreate, "create", dispatchAction),
-      handleDelete: (...callArgs) => performOperation(onDelete, callArgs, applyDelete, "delete", dispatchAction)
+      handleDelete: (...callArgs) => performOperation(onDelete, callArgs, applyDelete, "delete", dispatchAction),
     };
   }, [dataHookApi, dispatchAction]);
 

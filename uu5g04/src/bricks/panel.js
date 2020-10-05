@@ -33,19 +33,19 @@ let editationLazyLoaded = false;
 const MOUNT_CONTENT_VALUES = {
   onFirstRender: "onFirstRender",
   onFirstExpand: "onFirstExpand",
-  onEachExpand: "onEachExpand"
+  onEachExpand: "onEachExpand",
 };
 
-const getMountContent = props => {
+const getMountContent = (props) => {
   return props.mountContent === undefined ? MOUNT_CONTENT_VALUES.onFirstRender : props.mountContent;
 };
 
 const ClassNames = UU5.Common.ClassNames;
 const Styles = {
-  bgStyles: props => {
+  bgStyles: (props) => {
     // Only default colorSchema is here right now. Others are in .less files
     // let styles = Object.keys(UU5.Environment.colorSchemaMap).map(colorSchema => {
-    let styles = ["default"].map(colorSchema => {
+    let styles = ["default"].map((colorSchema) => {
       let colors = PanelStyles.getColors(colorSchema, props.bgStyle);
 
       if (!colors) {
@@ -69,7 +69,7 @@ const Styles = {
     });
 
     return Css.css(styles.join(" "));
-  }
+  },
 };
 
 export const Panel = UU5.Common.VisualComponent.create({
@@ -82,7 +82,7 @@ export const Panel = UU5.Common.VisualComponent.create({
     UU5.Common.ColorSchemaMixin,
     UU5.Common.SectionMixin,
     UU5.Common.NestingLevelMixin,
-    UU5.Common.EditableMixin
+    UU5.Common.EditableMixin,
   ],
   //@@viewOff:mixins
 
@@ -95,13 +95,13 @@ export const Panel = UU5.Common.VisualComponent.create({
       expanded: ns.css("panel-expanded"),
       size: ns.css("panel-size-"),
       default: ns.css("panel-default"),
-      bgStyles: Styles.bgStyles
+      bgStyles: Styles.bgStyles,
     },
     defaults: {
       parentTagName: "UU5.Bricks.Accordion",
       header: "noHeader",
-      body: "noBody"
-    }
+      body: "noBody",
+    },
   },
   //@@viewOff:statics
 
@@ -126,8 +126,8 @@ export const Panel = UU5.Common.VisualComponent.create({
     mountContent: UU5.PropTypes.oneOf([
       MOUNT_CONTENT_VALUES.onEachExpand,
       MOUNT_CONTENT_VALUES.onFirstExpand,
-      MOUNT_CONTENT_VALUES.onFirstRender
-    ])
+      MOUNT_CONTENT_VALUES.onFirstRender,
+    ]),
   },
   //@@viewOff:propTypes
 
@@ -149,7 +149,7 @@ export const Panel = UU5.Common.VisualComponent.create({
       iconAlign: null,
       openClick: null,
       mountContent: undefined,
-      contentEditable: true
+      contentEditable: true,
     };
   },
   //@@viewOff:getDefaultProps
@@ -161,7 +161,7 @@ export const Panel = UU5.Common.VisualComponent.create({
     return {
       expanded,
       renderChild: getMountContent(this.props) === MOUNT_CONTENT_VALUES.onFirstRender || expanded,
-      editationLazyLoaded: false
+      editationLazyLoaded: false,
     };
   },
 
@@ -266,7 +266,7 @@ export const Panel = UU5.Common.VisualComponent.create({
         ? this.props.colorSchema
         : null,
       _bgStyle,
-      _colorSchema: this.props.colorSchemaHeader ? this.props.colorSchemaHeader : this.props.colorSchema
+      _colorSchema: this.props.colorSchemaHeader ? this.props.colorSchemaHeader : this.props.colorSchema,
     });
   },
 
@@ -279,7 +279,7 @@ export const Panel = UU5.Common.VisualComponent.create({
   _registerNull(inst) {
     // unmount of component means that suspense is loaded and component should be rendered
     if (!inst) {
-      this.setState(state => {
+      this.setState((state) => {
         if (state.editationLazyLoaded) return;
 
         // Edit component is loaded - need to set to static variable because other Edit component does not render fallback component
@@ -307,7 +307,7 @@ export const Panel = UU5.Common.VisualComponent.create({
   },
 
   _updateExpandedValue(expanded, setStateCallback) {
-    this.setState(function(state) {
+    this.setState(function (state) {
       expanded = expanded !== undefined ? expanded : !state.expanded;
       // do not update state to same value
       if (expanded === state.expanded) return null;
@@ -330,7 +330,7 @@ export const Panel = UU5.Common.VisualComponent.create({
       if (!this.state.renderChild) {
         let blockUpdate = false;
         this.setState(
-          state => {
+          (state) => {
             // block update expanded to already set value
             if (expanded !== undefined && expanded === state.expanded) {
               typeof setStateCallback === "function" && setStateCallback();
@@ -338,7 +338,7 @@ export const Panel = UU5.Common.VisualComponent.create({
               return null;
             }
             return {
-              renderChild: getMountContent(this.props) === MOUNT_CONTENT_VALUES.onEachExpand ? !state.expanded : true
+              renderChild: getMountContent(this.props) === MOUNT_CONTENT_VALUES.onEachExpand ? !state.expanded : true,
             };
           },
           () => {
@@ -358,7 +358,7 @@ export const Panel = UU5.Common.VisualComponent.create({
   _findChildByTagName(tagName) {
     var children = Array.isArray(this.props.children) ? this.props.children : [this.props.children];
 
-    var result = children.filter(function(child) {
+    var result = children.filter(function (child) {
       return child.type && child.type.tagName === tagName;
     });
 
@@ -392,7 +392,7 @@ export const Panel = UU5.Common.VisualComponent.create({
       _preventUpdateChild: this._blockNextChildUpdate,
       borderRadius: this.props.borderRadius,
       bgStyle: this.props.bgStyleContent ? this.props.bgStyleContent : null,
-      colorSchema: this.props.colorSchemaContent ? this.props.colorSchemaContent : null
+      colorSchema: this.props.colorSchemaContent ? this.props.colorSchemaContent : null,
     };
 
     return this.buildChildren({
@@ -400,7 +400,7 @@ export const Panel = UU5.Common.VisualComponent.create({
         Body,
         bodyProps,
         this.state.renderChild ? UU5.Common.Children.toArray(this.props.children) : undefined
-      )
+      ),
     });
   },
 
@@ -448,7 +448,7 @@ export const Panel = UU5.Common.VisualComponent.create({
           : null}
       </div>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

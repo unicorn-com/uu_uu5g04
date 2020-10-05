@@ -25,21 +25,21 @@ const CONFIG = {
     "UU5.Common.LevelMixin",
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     name: {
-      values: ["Summer"]
-    }
+      values: ["Summer"],
+    },
   },
   requiredProps: {
-    parent: shallow(<UU5.Bricks.Tabs id={"idParent"} value={"Tabs values"} stacked={true} />).instance()
+    parent: shallow(<UU5.Bricks.Tabs id={"idParent"} value={"Tabs values"} stacked={true} />).instance(),
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: true
-    }
-  }
+      disableLifecycleMethods: true,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Tabs.Item`, () => {

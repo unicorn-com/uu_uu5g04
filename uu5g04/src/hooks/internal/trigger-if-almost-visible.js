@@ -11,7 +11,7 @@ const useWindowRect = () => {
   let [rect, setRect] = useState(getWindowRect);
 
   useLayoutEffect(() => {
-    let onResize = e => setRect(getWindowRect());
+    let onResize = (e) => setRect(getWindowRect());
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, []);
@@ -21,7 +21,7 @@ const useWindowRect = () => {
 
 const STATICS = {
   //@@viewOn:statics
-  displayName: "UU5.Hooks.TriggerIfAlmostVisible"
+  displayName: "UU5.Hooks.TriggerIfAlmostVisible",
   //@@viewOff:statics
 };
 
@@ -48,7 +48,7 @@ export const TriggerIfAlmostVisible = createComponent({
       if (!triggerred) {
         setElementRect(elementRef.current.getBoundingClientRect());
 
-        let onScroll = e => setElementRect(elementRef.current.getBoundingClientRect());
+        let onScroll = (e) => setElementRect(elementRef.current.getBoundingClientRect());
         window.addEventListener("scroll", onScroll);
         return () => window.removeEventListener("scroll", onScroll);
       }
@@ -73,6 +73,6 @@ export const TriggerIfAlmostVisible = createComponent({
     //@@viewOn:render
     return <div ref={elementRef}>{triggerred ? children : null}</div>;
     //@@viewOff:render
-  }
+  },
 });
 export default TriggerIfAlmostVisible;

@@ -30,7 +30,7 @@ export const Li = Context.withListItemContext(
       UU5.Common.PureRenderMixin,
       UU5.Common.ElementaryMixin,
       UU5.Common.ContentMixin,
-      UU5.Common.NestingLevelMixin
+      UU5.Common.NestingLevelMixin,
     ],
     //@@viewOff:mixins
 
@@ -39,7 +39,7 @@ export const Li = Context.withListItemContext(
       tagName: ns.name("Li"),
       nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "inline"),
       classNames: {
-        main: props => {
+        main: (props) => {
           let classNames = [ns.css("li")];
 
           if (!props.ordered || (props.ordered && props.type === "1.1")) {
@@ -72,12 +72,12 @@ export const Li = Context.withListItemContext(
           }
 
           return classNames.join(" ");
-        }
+        },
       },
       defaults: {
         parentTagNames: ["UU5.Bricks.Ul", "UU5.Bricks.Ol"],
-        markerIcon: "mdi-default"
-      }
+        markerIcon: "mdi-default",
+      },
     },
     //@@viewOff:statics
 
@@ -88,7 +88,7 @@ export const Li = Context.withListItemContext(
       ordered: UU5.PropTypes.bool, // received from context
       type: UU5.PropTypes.string, // received from context
       counterId: UU5.PropTypes.string, // received from context
-      listLevel: UU5.PropTypes.number // received from context
+      listLevel: UU5.PropTypes.number, // received from context
     },
     //@@viewOff:propTypes
 
@@ -100,7 +100,7 @@ export const Li = Context.withListItemContext(
         ordered: false,
         type: undefined,
         counterId: undefined,
-        listLevel: 1
+        listLevel: 1,
       };
     },
     //@@viewOff:getDefaultProps
@@ -110,7 +110,7 @@ export const Li = Context.withListItemContext(
       UU5.Environment.getColorSchema(this.props.iconColorSchema);
     },
 
-    UNSAFE_componentWillMount: function() {
+    UNSAFE_componentWillMount: function () {
       this.checkParentTagName(this.getDefault().parentTagNames);
     },
 
@@ -147,13 +147,13 @@ export const Li = Context.withListItemContext(
         type: this.props.type,
         iconColorSchema: this.props.iconColorSchema,
         counterId: this.props.counterId,
-        listLevel: this.props.listLevel
+        listLevel: this.props.listLevel,
       };
     },
     //@@viewOff:private
 
     //@@viewOn:render
-    render: function() {
+    render: function () {
       return this.getNestingLevel() ? (
         <ListContext.Provider value={this._getContextValues()}>
           <li {...getMainAttrs(this.props, this.getMainAttrs())}>
@@ -162,18 +162,19 @@ export const Li = Context.withListItemContext(
           </li>
         </ListContext.Provider>
       ) : null;
-    }
+    },
     //@@viewOff:render
   })
 );
 
-const getIconColor = colorSchema => {
+const getIconColor = (colorSchema) => {
   colorSchema = colorSchema === "default" || !colorSchema ? "black" : colorSchema;
   colorSchema = UU5.Environment.colorSchemaMap[colorSchema].color;
   let colorShades = UU5.Environment.colors[colorSchema.split("-rich")[0]];
 
   return colorShades
-    ? " " + UU5.Common.Css.css(`
+    ? " " +
+        UU5.Common.Css.css(`
       ::before {
         color: ${colorShades[colorSchema === "black" || colorSchema === "white" ? "c900" : "c500"]}
       }
@@ -181,7 +182,7 @@ const getIconColor = colorSchema => {
     : "";
 };
 
-const getMainAttrs = function(props, attrs) {
+const getMainAttrs = function (props, attrs) {
   if (!props.ordered && props.markerIcon) {
     let splitter = props.markerIcon.split("-");
     if (splitter) {

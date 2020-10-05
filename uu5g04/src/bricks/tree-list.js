@@ -28,14 +28,14 @@ export default UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("Tree.List"),
     classNames: {
-      main: ns.css("tree-list")
+      main: ns.css("tree-list"),
     },
     defaults: {
-      childTagName: "UU5.Bricks.Tree.Item"
+      childTagName: "UU5.Bricks.Tree.Item",
     },
     errors: {
-      invalidParent: "Parent of this component is not Tree, Tree.Item or Tree.List."
-    }
+      invalidParent: "Parent of this component is not Tree, Tree.Item or Tree.List.",
+    },
   },
   //@@viewOff:statics
 
@@ -43,22 +43,22 @@ export default UU5.Common.VisualComponent.create({
   propTypes: {
     items: UU5.PropTypes.array,
     iconExpanded: UU5.PropTypes.string,
-    iconCollapsed: UU5.PropTypes.string
+    iconCollapsed: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       items: null,
       iconExpanded: null,
-      iconCollapsed: null
+      iconCollapsed: null,
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  UNSAFE_componentWillMount: function() {
+  UNSAFE_componentWillMount: function () {
     let parent = this.getParent();
 
     if (parent) {
@@ -81,14 +81,14 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:interface
 
   //@@viewOn:overriding
-  expandChildProps_: function(child) {
+  expandChildProps_: function (child) {
     let newChildProps = { ...child.props };
     newChildProps.iconExpanded = newChildProps.iconExpanded || this.props.iconExpanded;
     newChildProps.iconCollapsed = newChildProps.iconCollapsed || this.props.iconCollapsed;
     return newChildProps;
   },
 
-  shouldChildRender_: function(child) {
+  shouldChildRender_: function (child) {
     let childTagName = UU5.Common.Tools.getChildTagName(child);
     let childTagNames = this._getAllowTags();
     let result = childTagNames.indexOf(childTagName) > -1;
@@ -96,7 +96,7 @@ export default UU5.Common.VisualComponent.create({
       let defaultChildTagName = this.getDefault().childTagName;
       if (childTagName)
         this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagName], {
-          mixinName: "UU5.Common.BaseMixin"
+          mixinName: "UU5.Common.BaseMixin",
         });
       else this.showError("childNotAllowed", [child, defaultChildTagName], { mixinName: "UU5.Common.BaseMixin" });
     }
@@ -110,12 +110,12 @@ export default UU5.Common.VisualComponent.create({
     return [this.getDefault().childTagName].concat(treeParent ? treeParent.props.allowTags : []);
   },
 
-  _getItems: function() {
+  _getItems: function () {
     let list = this;
     let content = this.getContent();
 
     if (this.props.items) {
-      content = this.props.items.map(function(itemProps) {
+      content = this.props.items.map(function (itemProps) {
         let result;
         if (UU5.Common.Element.isValid(itemProps)) {
           result = itemProps;
@@ -130,13 +130,13 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return (
       <ul {...this.getMainAttrs()}>
         {this._getItems()}
         {this.getDisabledCover()}
       </ul>
     );
-  }
+  },
   //@@viewOff:render
 });

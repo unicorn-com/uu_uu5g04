@@ -27,7 +27,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
       isCalled: false,
       value: "",
       message: "",
-      feedback: "initial"
+      feedback: "initial",
     };
   },
 
@@ -110,7 +110,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
         onClick={this.onClickHandler}
       />
     );
-  }
+  },
 });
 
 const CONFIG = {
@@ -120,35 +120,35 @@ const CONFIG = {
     "UU5.Common.PureRenderMixin",
     "UU5.Forms.InputMixin",
     "UU5.Common.ColorSchemaMixin",
-    "UU5.Forms.TextInputMixin"
+    "UU5.Forms.TextInputMixin",
   ],
   props: {
     value: {
-      values: ["Zadejte heslo."]
+      values: ["Zadejte heslo."],
     },
     icon: {
-      values: ["uu-icon-ok"]
+      values: ["uu-icon-ok"],
     },
     iconPosition: {
-      values: ["left", "right"]
+      values: ["left", "right"],
     },
     password: {
-      values: [true, false]
+      values: [true, false],
     },
     //onClick
     patter: {
-      values: ["[A-Za-z]{3}"]
+      values: ["[A-Za-z]{3}"],
     },
     patterMessage: {
-      values: ["Toto není to, co jsem čekal."]
-    }
+      values: ["Toto není to, co jsem čekal."],
+    },
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Forms.TextIcon props`, () => {
@@ -310,19 +310,19 @@ describe(`UU5.Forms.TextIcon props function -> Text.InputMixin`, () => {
         id={"uuID"}
         label="Search"
         validateOnChange
-        onValidate={opt => {
+        onValidate={(opt) => {
           let feedback;
           if (opt.value !== "") {
             feedback = {
               feedback: "success",
               message: "Is valid.",
-              value: opt.value
+              value: opt.value,
             };
           } else {
             feedback = {
               feedback: "error",
               message: "Not valid.",
-              value: opt.value
+              value: opt.value,
             };
           }
 
@@ -343,19 +343,19 @@ describe(`UU5.Forms.TextIcon props function -> Text.InputMixin`, () => {
         label="Search"
         value={"John Doe"}
         validateOnChange
-        onValidate={opt => {
+        onValidate={(opt) => {
           let feedback;
           if (opt.value !== "") {
             feedback = {
               feedback: "success",
               message: "Is valid.",
-              value: opt.value
+              value: opt.value,
             };
           } else {
             feedback = {
               feedback: "error",
               message: "Not valid.",
-              value: opt.value
+              value: opt.value,
             };
           }
 

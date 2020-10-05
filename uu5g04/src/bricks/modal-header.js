@@ -34,32 +34,32 @@ export default UU5.Common.VisualComponent.create({
     classNames: {
       main: ns.css("modal-header"),
       close: ns.css("modal-header-close"),
-      title: ns.css("modal-header-title")
+      title: ns.css("modal-header-title"),
     },
     defaults: {
       parentTagName: "UU5.Bricks.Modal",
-      closeIcon: "mdi-close"
-    }
+      closeIcon: "mdi-close",
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
     _sticky: UU5.PropTypes.bool,
-    _onClose: UU5.PropTypes.func
+    _onClose: UU5.PropTypes.func,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
-      _sticky: false
+      _sticky: false,
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  UNSAFE_componentWillMount: function() {
+  UNSAFE_componentWillMount: function () {
     this.checkParentTagName(this.getDefault().parentTagName);
   },
 
@@ -72,11 +72,11 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _onCloseHandler: function(e) {
+  _onCloseHandler: function (e) {
     typeof this.props._onClose === "function" && this.props._onClose(e);
   },
 
-  _getCloseButton: function() {
+  _getCloseButton: function () {
     var button;
     if (!this.props._sticky) {
       button = (
@@ -88,7 +88,7 @@ export default UU5.Common.VisualComponent.create({
     return button;
   },
 
-  _buildChildren: function() {
+  _buildChildren: function () {
     let content = this.getContent();
     if (typeof content === "string") {
       return <Header level={4} content={content} />;
@@ -99,7 +99,7 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     var mainAttrs = this.getMainAttrs();
 
     return (
@@ -109,6 +109,6 @@ export default UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </div>
     );
-  }
+  },
   //@@viewOff:render
 });

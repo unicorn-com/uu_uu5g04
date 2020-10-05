@@ -22,26 +22,26 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Common.NestingLevelMixin",
     "UU5.Common.ScreenSizeMixin",
-    "UU5.Common.ContentMixin"
+    "UU5.Common.ContentMixin",
   ],
   props: {
     screenSize: {
-      values: ["xs", "s", "m", "l", "xl"]
-    }
+      values: ["xs", "s", "m", "l", "xl"],
+    },
   },
   requiredProps: {
     //This corrected the error that the component did not test using the API.
     children: [
       <UU5.Bricks.ScreenSize.Item id={"childID"} screenSize={["m", "l", "xl"]}>
         <UU5.Bricks.Span id={"childID02"} content="Content for M-XL" />
-      </UU5.Bricks.ScreenSize.Item>
-    ]
+      </UU5.Bricks.ScreenSize.Item>,
+    ],
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.ScreenSize`, () => {
@@ -78,18 +78,18 @@ let baseMixinprops = {
   className: "my-classname",
   style: "padding:8px; borderRadius: 2px",
   mainAttrs: {
-    style: [{ backgroundColor: "red", color: "blue" }]
+    style: [{ backgroundColor: "red", color: "blue" }],
   },
   // parent: {},
   // ref_: {},
-  noIndex: true
+  noIndex: true,
 };
 
 let elementaryMixinprops = {
   hidden: true,
   disabled: true,
   selected: true,
-  controlled: false
+  controlled: false,
 };
 
 let contentMixinprops = {
@@ -100,11 +100,11 @@ let contentMixinprops = {
   checkHighlight: true,
   textCorrector: true,
   dynamic: true,
-  mode: "outline"
+  mode: "outline",
 };
 
 let nestingLevelMixinprops = {
-  nestingLevel: "boxCollection"
+  nestingLevel: "boxCollection",
 };
 
 let screenSizeMixinprops = {};
@@ -209,7 +209,7 @@ describe(`UU5.Bricks.ScreenSize children as fn`, () => {
 
     const wrapper = mount(
       <UU5.Bricks.ScreenSize id={"uuID"}>
-        {opt => {
+        {(opt) => {
           mockFn(opt);
           return opt.screenSize;
         }}

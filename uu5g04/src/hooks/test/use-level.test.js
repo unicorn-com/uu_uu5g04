@@ -37,7 +37,7 @@ describe("[uu5g04-hooks] useLevel; legacy integration", () => {
     mixins: [UU5.Common.BaseMixin, UU5.Common.LevelMixin],
     render() {
       return this.props.children(this.getLevel());
-    }
+    },
   });
   UU5.Environment._allowTestContext = false;
 
@@ -47,7 +47,7 @@ describe("[uu5g04-hooks] useLevel; legacy integration", () => {
     mount(
       <LevelProvider level={2}>
         <LevelMixinComponent increaseLevel>
-          {mixinLevel => (mixinResult(mixinLevel), <HookComponent />)}
+          {(mixinLevel) => (mixinResult(mixinLevel), (<HookComponent />))}
         </LevelMixinComponent>
       </LevelProvider>
     );
@@ -61,7 +61,7 @@ describe("[uu5g04-hooks] useLevel; legacy integration", () => {
     mount(
       <LevelProvider level={2}>
         <LevelMixinComponent level={4}>
-          {mixinLevel => (mixinResult(mixinLevel), <HookComponent />)}
+          {(mixinLevel) => (mixinResult(mixinLevel), (<HookComponent />))}
         </LevelMixinComponent>
       </LevelProvider>
     );

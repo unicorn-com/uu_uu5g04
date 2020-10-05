@@ -23,36 +23,36 @@ const CONFIG = {
     "UU5.Common.LsiMixin",
     "UU5.Common.SectionMixin",
     "UU5.Common.ContentMixin",
-    "UU5.Common.LevelMixin"
+    "UU5.Common.LevelMixin",
   ],
   props: {
     striped: {
-      values: [true, false]
+      values: [true, false],
     },
     bordered: {
-      values: [true, false]
+      values: [true, false],
     },
     hover: {
-      values: [true, false]
+      values: [true, false],
     },
     condensed: {
-      values: [true, false]
+      values: [true, false],
     },
     headerRow: {
-      values: [["Uchazeč(ka)", "Nasazení", "Přínos"]]
+      values: [["Uchazeč(ka)", "Nasazení", "Přínos"]],
     },
     footerRow: {
-      values: [["Monika", "Katka", "Karel"]]
-    }
+      values: [["Monika", "Katka", "Karel"]],
+    },
   },
   requiredProps: {
-    rows: [["Eliška", "Vysoké", "Dostačující"]]
+    rows: [["Eliška", "Vysoké", "Dostačující"]],
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: true
-    }
-  }
+      disableLifecycleMethods: true,
+    },
+  },
 };
 
 describe(`UU5.Bricks.DataTable`, () => {

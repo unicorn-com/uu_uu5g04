@@ -25,7 +25,7 @@ import "./video.less";
 
 const VideoHls = UU5.Common.Component.lazy
   ? UU5.Common.Component.lazy(() => import("./video-hls.js"))
-  : props => <video {...props.mainAttrs} />;
+  : (props) => <video {...props.mainAttrs} />;
 
 export const Video = UU5.Common.VisualComponent.create({
   displayName: "Video", // for backward compatibility (test snapshots)
@@ -38,11 +38,11 @@ export const Video = UU5.Common.VisualComponent.create({
     tagName: ns.name("Video"),
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBox", "box"),
     classNames: {
-      main: ns.css("video")
+      main: ns.css("video"),
     },
     errors: {
-      typeNotFound: "You have to set the type of the video or src has to contain the file extension."
-    }
+      typeNotFound: "You have to set the type of the video or src has to contain the file extension.",
+    },
   },
   //@@viewOff:statics
 
@@ -56,12 +56,12 @@ export const Video = UU5.Common.VisualComponent.create({
     src: UU5.PropTypes.string.isRequired,
     muted: UU5.PropTypes.bool,
     type: UU5.PropTypes.oneOf(["mp4", "webm", "ogg", "m3u8"]),
-    authenticate: UU5.PropTypes.bool
+    authenticate: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       autoPlay: false,
       disableControls: false,
@@ -71,21 +71,21 @@ export const Video = UU5.Common.VisualComponent.create({
       src: "",
       muted: false,
       type: null,
-      authenticate: false
+      authenticate: false,
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  getInitialState: function() {
+  getInitialState: function () {
     return {
       muted: this.props.muted,
       authenticatedVideoUrl: undefined,
-      authenticatedPosterUrl: undefined
+      authenticatedPosterUrl: undefined,
     };
   },
 
-  UNSAFE_componentWillReceiveProps: function(nextProps) {
+  UNSAFE_componentWillReceiveProps: function (nextProps) {
     if (nextProps.controlled) {
       this.setState({ muted: nextProps.muted });
     }
@@ -93,8 +93,8 @@ export const Video = UU5.Common.VisualComponent.create({
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
-  toggleMuted: function() {
-    this.setState(state => ({ muted: !state.muted }));
+  toggleMuted: function () {
+    this.setState((state) => ({ muted: !state.muted }));
     return this;
   },
   //@@viewOff:interface
@@ -103,7 +103,7 @@ export const Video = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _getType: function(props = this.props) {
+  _getType: function (props = this.props) {
     let type;
     if (props.type) {
       type = props.type;
@@ -133,7 +133,7 @@ export const Video = UU5.Common.VisualComponent.create({
     else if (this._authenticatingVideoUrl !== url) {
       this._authenticatingVideoUrl = url;
       let promise = (this._videoUrlPromise = this._computeAuthenticatedUrl(url, session).then(
-        authenticatedVideoUrl => {
+        (authenticatedVideoUrl) => {
           delete this._authenticatingVideoUrl;
           this._authenticatedVideoUrl = url;
           if (this.isRendered() && promise === this._videoUrlPromise) this.setState({ authenticatedVideoUrl });
@@ -152,7 +152,7 @@ export const Video = UU5.Common.VisualComponent.create({
     else if (this._authenticatingPosterUrl !== url) {
       this._authenticatingPosterUrl = url;
       let promise = (this._posterUrlPromise = this._computeAuthenticatedUrl(url, session).then(
-        authenticatedPosterUrl => {
+        (authenticatedPosterUrl) => {
           delete this._authenticatingPosterUrl;
           this._authenticatedPosterUrl = url;
           if (this.isRendered() && promise === this._posterUrlPromise) this.setState({ authenticatedPosterUrl });
@@ -226,7 +226,7 @@ export const Video = UU5.Common.VisualComponent.create({
         ) : null}
       </UU5.Bricks.Span>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

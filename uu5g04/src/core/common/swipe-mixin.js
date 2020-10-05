@@ -24,9 +24,9 @@ export const SwipeMixin = {
         maxLengthOnShortSwipe: 70,
         minLengthOnSwipe: 10,
         maxSpeedOnSlowSwipe: 0.3,
-        maxAngleDivergence: 10
-      }
-    }
+        maxAngleDivergence: 10,
+      },
+    },
   },
   //@@viewOff:statics
 
@@ -36,22 +36,22 @@ export const SwipeMixin = {
     swiped: PropTypes.oneOf(["up", "right", "down", "left", "upRight", "downRight", "upLeft", "downLeft"]),
     // null is not false - null is not swiped
     swipedLong: PropTypes.bool,
-    swipedFast: PropTypes.bool
+    swipedFast: PropTypes.bool,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       swiped: null, // up|right|down|left|upRight|downRight|upLeft|downLeft
       swipedLong: null, // true|false
-      swipedFast: null // true|false
+      swipedFast: null, // true|false
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  getInitialState: function() {
+  getInitialState: function () {
     // initialize
     this.registerMixin("UU5.Common.SwipeMixin");
     this.lastSwipe = {
@@ -71,182 +71,182 @@ export const SwipeMixin = {
       speed: 0,
       startTime: null,
       endTime: null,
-      angle: 0
+      angle: 0,
     };
     // state
     return null;
   },
 
-  UNSAFE_componentWillMount: function() {
+  UNSAFE_componentWillMount: function () {
     this.props.swiped && (this.lastSwipe = this._getUpdatedSwipe(this.props));
   },
 
-  UNSAFE_componentWillReceiveProps: function(nextProps) {
+  UNSAFE_componentWillReceiveProps: function (nextProps) {
     nextProps.swiped && (this.lastSwipe = this._getUpdatedSwipe(nextProps));
   },
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
-  hasUU5CommonSwipeMixin: function() {
+  hasUU5CommonSwipeMixin: function () {
     return this.hasMixin("UU5.Common.SwipeMixin");
   },
 
-  getUU5CommonSwipeMixinProps: function() {
+  getUU5CommonSwipeMixinProps: function () {
     return {
       swiped: this.props.swiped,
       swipedLong: this.props.swipedLong,
-      swipedFast: this.props.swipedFast
+      swipedFast: this.props.swipedFast,
     };
   },
 
-  getUU5CommonSwipeMixinPropsToPass: function() {
+  getUU5CommonSwipeMixinPropsToPass: function () {
     return this.getUU5CommonSwipeMixinProps();
   },
 
-  getSwipeLength: function() {
+  getSwipeLength: function () {
     var dx = this.lastSwipe.dx;
     var dy = this.lastSwipe.dy;
     return Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
   },
 
-  getAngle: function() {
+  getAngle: function () {
     return this.lastSwipe.angle;
   },
 
-  isSwipedHorizontal: function() {
+  isSwipedHorizontal: function () {
     return (
       Math.abs(this.getAngle()) <= this.getDefault("maxAngleDivergence", "UU5.Common.SwipeMixin") ||
       Math.abs(this.getAngle()) >= 180 - this.getDefault("maxLengthOnShortSwipe", "UU5.Common.SwipeMixin")
     );
   },
 
-  isSwipedVertical: function() {
+  isSwipedVertical: function () {
     return (
       Math.abs(this.getAngle()) <= 90 + this.getDefault("maxLengthOnShortSwipe", "UU5.Common.SwipeMixin") &&
       Math.abs(this.getAngle()) >= 90 - this.getDefault("maxLengthOnShortSwipe", "UU5.Common.SwipeMixin")
     );
   },
 
-  isSwiped: function() {
+  isSwiped: function () {
     return this.isSwipedUp() || this.isSwipedRight() || this.isSwipedDown() || this.isSwipedLeft();
   },
 
-  isSwipedShort: function() {
+  isSwipedShort: function () {
     return this.lastSwipe.long !== null && !this.lastSwipe.long;
   },
 
-  isSwipedLong: function() {
+  isSwipedLong: function () {
     return this.lastSwipe.long !== null && this.lastSwipe.long;
   },
 
-  isSwipedSlow: function() {
+  isSwipedSlow: function () {
     return this.lastSwipe.fast !== null && !this.lastSwipe.fast;
   },
 
-  isSwipedFast: function() {
+  isSwipedFast: function () {
     return this.lastSwipe.fast !== null && this.lastSwipe.fast;
   },
 
-  isSwipedUp: function() {
+  isSwipedUp: function () {
     return this.lastSwipe.up && this.isSwipedVertical();
   },
 
-  isSwipedRight: function() {
+  isSwipedRight: function () {
     return this.lastSwipe.right && this.isSwipedHorizontal();
   },
 
-  isSwipedDown: function() {
+  isSwipedDown: function () {
     return this.lastSwipe.down && this.isSwipedVertical();
   },
 
-  isSwipedLeft: function() {
+  isSwipedLeft: function () {
     return this.lastSwipe.left && this.isSwipedHorizontal();
   },
 
   // Two directions
-  isSwipedUpRight: function() {
+  isSwipedUpRight: function () {
     return this.lastSwipe.up && this.lastSwipe.right;
   },
 
-  isSwipedDownRight: function() {
+  isSwipedDownRight: function () {
     return this.lastSwipe.down && this.lastSwipe.right;
   },
 
-  isSwipedUpLeft: function() {
+  isSwipedUpLeft: function () {
     return this.lastSwipe.up && this.lastSwipe.left;
   },
 
-  isSwipedDownLeft: function() {
+  isSwipedDownLeft: function () {
     return this.lastSwipe.down && this.lastSwipe.left;
   },
 
   // Short
-  isSwipedUpShort: function() {
+  isSwipedUpShort: function () {
     return this.isSwipedUp() && this.isSwipedShort();
   },
 
-  isSwipedRightShort: function() {
+  isSwipedRightShort: function () {
     return this.isSwipedRight() && this.isSwipedShort();
   },
 
-  isSwipedDownShort: function() {
+  isSwipedDownShort: function () {
     return this.isSwipedDown() && this.isSwipedShort();
   },
 
-  isSwipedLeftShort: function() {
+  isSwipedLeftShort: function () {
     return this.isSwipedLeft() && this.isSwipedShort();
   },
 
-  isSwipedUpRightShort: function() {
+  isSwipedUpRightShort: function () {
     return this.isSwipedUpRight() && this.isSwipedShort();
   },
 
-  isSwipedDownRightShort: function() {
+  isSwipedDownRightShort: function () {
     return this.isSwipedDownRight() && this.isSwipedShort();
   },
 
-  isSwipedUpLeftShort: function() {
+  isSwipedUpLeftShort: function () {
     return this.isSwipedUpLeft() && this.isSwipedShort();
   },
 
-  isSwipedDownLeftShort: function() {
+  isSwipedDownLeftShort: function () {
     return this.isSwipedDownLeft() && this.isSwipedShort();
   },
 
   // Long
-  isSwipedUpLong: function() {
+  isSwipedUpLong: function () {
     return this.isSwipedUp() && this.isSwipedLong();
   },
 
-  isSwipedRightLong: function() {
+  isSwipedRightLong: function () {
     return this.isSwipedRight() && this.isSwipedLong();
   },
 
-  isSwipedDownLong: function() {
+  isSwipedDownLong: function () {
     return this.isSwipedDown() && this.isSwipedLong();
   },
 
-  isSwipedLeftLong: function() {
+  isSwipedLeftLong: function () {
     return this.isSwipedLeft() && this.isSwipedLong();
   },
 
-  isSwipedUpRightLong: function() {
+  isSwipedUpRightLong: function () {
     return this.isSwipedUpRight() && this.isSwipedLong();
   },
 
-  isSwipedDownRightLong: function() {
+  isSwipedDownRightLong: function () {
     return this.isSwipedDownRight() && this.isSwipedLong();
   },
 
-  isSwipedUpLeftLong: function() {
+  isSwipedUpLeftLong: function () {
     return this.isSwipedUpLeft() && this.isSwipedLong();
   },
 
-  isSwipedDownLeftLong: function() {
+  isSwipedDownLeftLong: function () {
     return this.isSwipedDownLeft() && this.isSwipedLong();
   },
 
-  swipeOnTouchStart: function(handler, e) {
+  swipeOnTouchStart: function (handler, e) {
     if (typeof handler === "object") {
       e = handler;
       handler = null;
@@ -259,13 +259,13 @@ export const SwipeMixin = {
       dy: 0,
       length: 0,
       speed: null,
-      startTime: new Date().getTime()
+      startTime: new Date().getTime(),
     });
     typeof handler === "function" && handler(arguments);
     return this;
   },
 
-  swipeOnTouchMove: function(handler, e) {
+  swipeOnTouchMove: function (handler, e) {
     if (typeof handler === "object") {
       e = handler;
       handler = null;
@@ -277,7 +277,7 @@ export const SwipeMixin = {
       dy: e.touches[0].clientY - this.lastSwipe.y,
       ex: e.touches[0].clientX,
       ey: e.touches[0].clientY,
-      endTime: new Date().getTime()
+      endTime: new Date().getTime(),
     });
 
     (this.isSwipedLeft() || this.isSwipedRight()) && e.preventDefault();
@@ -286,7 +286,7 @@ export const SwipeMixin = {
     return this;
   },
 
-  swipeOnTouchEnd: function(handler, e) {
+  swipeOnTouchEnd: function (handler, e) {
     if (typeof handler === "object") {
       e = handler;
       handler = null;
@@ -308,7 +308,7 @@ export const SwipeMixin = {
         fast: speed > this.getDefault("maxLengthOnShortSwipe", "UU5.Common.SwipeMixin"),
         length: length,
         speed: length / duration,
-        angle: this.angle(this.lastSwipe.x, this.lastSwipe.y, this.lastSwipe.ex, this.lastSwipe.ey)
+        angle: this.angle(this.lastSwipe.x, this.lastSwipe.y, this.lastSwipe.ex, this.lastSwipe.ey),
       });
 
       typeof handler === "function" && handler(arguments);
@@ -316,7 +316,7 @@ export const SwipeMixin = {
     return this;
   },
 
-  angle: function(x, y, ex, ey) {
+  angle: function (x, y, ex, ey) {
     var dy = y - ey;
     var dx = ex - x;
     var theta = Math.atan2(dy, dx);
@@ -330,16 +330,16 @@ export const SwipeMixin = {
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _getUpdatedSwipe: function(props) {
+  _getUpdatedSwipe: function (props) {
     return {
       up: props.swiped === "up" || props.swiped === "upRight" || props.swiped === "upLeft",
       right: props.swiped === "right" || props.swiped === "upRight" || props.swiped === "downRight",
       down: props.swiped === "down" || props.swiped === "downRight" || props.swiped === "downLeft",
       left: props.swiped === "left" || props.swiped === "upLeft" || props.swiped === "downLeft",
       long: props.swipedLong,
-      fast: props.swipedFast
+      fast: props.swipedFast,
     };
-  }
+  },
   //@@viewOff:private
 };
 

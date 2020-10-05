@@ -24,7 +24,7 @@ export const Row = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.NestingLevelMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.PureRenderMixin
+    UU5.Common.PureRenderMixin,
   ],
   //@@viewOff:mixins
 
@@ -45,11 +45,11 @@ export const Row = UU5.Common.VisualComponent.create({
       `,
       flex: () => css`
         display: flex;
-      `
+      `,
     },
     opt: {
-      pureRender: true
-    }
+      pureRender: true,
+    },
   },
   //@@viewOff:statics
 
@@ -57,7 +57,7 @@ export const Row = UU5.Common.VisualComponent.create({
   propTypes: {
     size: UU5.PropTypes.oneOf(["s", "m"]),
     weight: UU5.PropTypes.oneOf(["primary", "normal", "secondary"]),
-    ellipsis: UU5.PropTypes.bool
+    ellipsis: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -66,7 +66,7 @@ export const Row = UU5.Common.VisualComponent.create({
     return {
       size: "m",
       weight: "normal",
-      ellipsis: false
+      ellipsis: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -85,7 +85,7 @@ export const Row = UU5.Common.VisualComponent.create({
     return (
       !!children &&
       typeof children.find === "function" &&
-      children.find(child => child.type && child.type.tagName === "UU5.BlockLayout.Column")
+      children.find((child) => child.type && child.type.tagName === "UU5.BlockLayout.Column")
     );
   },
 
@@ -97,7 +97,7 @@ export const Row = UU5.Common.VisualComponent.create({
     if (this.props.ellipsis) classNames.push(this.getClassName("ellipsis"));
     if (flex) classNames.push(this.getClassName("flex"));
 
-    classNames.forEach(className => {
+    classNames.forEach((className) => {
       attrs.className += " " + className;
     });
 
@@ -120,7 +120,7 @@ export const Row = UU5.Common.VisualComponent.create({
   //@@viewOn:render
   render() {
     return this.getNestingLevel() ? this._getChild() : null;
-  }
+  },
   //@@viewOff:render
 });
 

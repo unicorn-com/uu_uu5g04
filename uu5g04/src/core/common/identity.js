@@ -29,7 +29,7 @@ export const Identity = VisualComponent.create({
 
   //@@viewOn:statics
   statics: {
-    tagName: "UU5.Common.Identity"
+    tagName: "UU5.Common.Identity",
   },
   //@@viewOff:statics
 
@@ -63,7 +63,7 @@ export const Identity = VisualComponent.create({
       if (allChildren) {
         if (!Array.isArray(allChildren)) allChildren = [allChildren];
 
-        children = allChildren.map(child => {
+        children = allChildren.map((child) => {
           let newChild = child;
 
           if (Element.isValid(child)) {
@@ -92,7 +92,7 @@ export const Identity = VisualComponent.create({
   //@@viewOn:render
   render() {
     return <Session.Context.Consumer>{this._getChildren}</Session.Context.Consumer>;
-  }
+  },
   //@@viewOff:render
 });
 

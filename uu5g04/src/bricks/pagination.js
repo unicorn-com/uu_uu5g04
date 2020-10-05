@@ -31,7 +31,7 @@ export const Pagination = UU5.Common.VisualComponent.create({
     UU5.Common.PureRenderMixin,
     UU5.Common.ElementaryMixin,
     UU5.Common.ColorSchemaMixin,
-    UU5.Common.NestingLevelMixin
+    UU5.Common.NestingLevelMixin,
   ],
   //@@viewOff:mixins
 
@@ -53,11 +53,11 @@ export const Pagination = UU5.Common.VisualComponent.create({
       background: ns.css("pagination-background"),
       label: ns.css("pagination-label"),
       dots: ns.css("pagination-dots"),
-      customDots: ns.css("pagination-custom-dots")
+      customDots: ns.css("pagination-custom-dots"),
     },
     opt: {
-      nestingLevelWrapper: true
-    }
+      nestingLevelWrapper: true,
+    },
   },
   //@@viewOff:statics
 
@@ -80,7 +80,7 @@ export const Pagination = UU5.Common.VisualComponent.create({
     bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
     colorSchemaInactive: UU5.PropTypes.string,
     borderRadius: UU5.PropTypes.string,
-    ellipsisIcon: UU5.PropTypes.string
+    ellipsisIcon: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
@@ -104,7 +104,7 @@ export const Pagination = UU5.Common.VisualComponent.create({
       bgStyle: null,
       colorSchemaInactive: "default",
       borderRadius: null,
-      ellipsisIcon: "mdi-dots-horizontal"
+      ellipsisIcon: "mdi-dots-horizontal",
     };
   },
   //@@viewOff:getDefaultProps
@@ -112,7 +112,7 @@ export const Pagination = UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
-      activeIndex: parseInt(this.props.activeIndex)
+      activeIndex: parseInt(this.props.activeIndex),
     };
   },
 
@@ -142,7 +142,7 @@ export const Pagination = UU5.Common.VisualComponent.create({
 
   increaseActiveIndex(setStateCallback) {
     var pagination = this;
-    this.setState(function(state) {
+    this.setState(function (state) {
       var newState = null;
       if (pagination.getItemsLength() - 1 > state.activeIndex) {
         newState = { activeIndex: state.activeIndex + 1 };
@@ -153,7 +153,7 @@ export const Pagination = UU5.Common.VisualComponent.create({
   },
 
   decreaseActiveIndex(setStateCallback) {
-    this.setState(function(state) {
+    this.setState(function (state) {
       var newState = null;
       if (0 < state.activeIndex) {
         newState = { activeIndex: state.activeIndex - 1 };
@@ -168,7 +168,7 @@ export const Pagination = UU5.Common.VisualComponent.create({
     var onChanged;
     if (typeof this.props.onChanged === "function") {
       var pagination = this;
-      onChanged = function() {
+      onChanged = function () {
         pagination.props.onChanged(this, this.getActiveIndex(), newActive, event);
       };
     }
@@ -271,7 +271,7 @@ export const Pagination = UU5.Common.VisualComponent.create({
       className: this.getClassName().link,
       parent: this,
       style: { borderRadius: this.props.borderRadius },
-      nestingLevel: this.getNestingLevel()
+      nestingLevel: this.getNestingLevel(),
     };
 
     if (this.props.bgStyle) {
@@ -302,7 +302,7 @@ export const Pagination = UU5.Common.VisualComponent.create({
   _createNavItem(key, disabled, index) {
     let liAttrs = {
       key: key,
-      className: this.getClassName().item + " " + this.getClassName().nav + " " + this.getClassName().nav + "-" + key
+      className: this.getClassName().item + " " + this.getClassName().nav + " " + this.getClassName().nav + "-" + key,
     };
 
     let linkAttrs = {
@@ -311,7 +311,7 @@ export const Pagination = UU5.Common.VisualComponent.create({
       style: { borderRadius: this.props.borderRadius },
       disabled: disabled,
       colorSchema: "default",
-      nestingLevel: this.getNestingLevel()
+      nestingLevel: this.getNestingLevel(),
     };
 
     if (disabled) {
@@ -342,7 +342,7 @@ export const Pagination = UU5.Common.VisualComponent.create({
 
     let items =
       this.getItemsLength() > 0
-        ? range.map(function(i) {
+        ? range.map(function (i) {
             return pagination._createItem(i, pagination.props.items[i]);
           })
         : null;
@@ -407,7 +407,7 @@ export const Pagination = UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </ul>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

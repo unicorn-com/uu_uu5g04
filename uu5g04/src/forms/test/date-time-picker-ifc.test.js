@@ -637,7 +637,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
         message: null,
         value: null,
         foundAutocompleteItems: null,
-        selectedIndex: null
+        selectedIndex: null,
       })
     );
     expect(wrapper).toMatchSnapshot();
@@ -660,14 +660,14 @@ describe("UU5.Forms.InputMixin interface testing", () => {
         message: null,
         value: null,
         foundAutocompleteItems: null,
-        selectedIndex: null
+        selectedIndex: null,
       })
     );
     const returnValue = wrapper.instance().setChangeFeedback(
       {
         feedback: "success",
         message: "Success message from setChangeFeedback",
-        value: "9.11.2013 12:00"
+        value: "9.11.2013 12:00",
       },
       mockFunc
     );
@@ -920,17 +920,17 @@ describe("UU5.Forms.TextInputMixin interface testing", () => {
         value="9.11.2013"
         autocompleteItems={[
           {
-            value: "9.11.2013 12:00"
+            value: "9.11.2013 12:00",
           },
           {
-            value: "9.11.2013 13:00"
+            value: "9.11.2013 13:00",
           },
           {
-            value: "9.11.2013 14:00"
+            value: "9.11.2013 14:00",
           },
           {
-            value: "9.11.2013 15:00"
-          }
+            value: "9.11.2013 15:00",
+          },
         ]}
         required={true}
         size="s"
@@ -954,17 +954,17 @@ describe("UU5.Forms.TextInputMixin interface testing", () => {
         placeholder="Valid time"
         autocompleteItems={[
           {
-            value: "9.11.2013 12:00"
+            value: "9.11.2013 12:00",
           },
           {
-            value: "9.11.2013 13:00"
+            value: "9.11.2013 13:00",
           },
           {
-            value: "9.11.2013 14:00"
+            value: "9.11.2013 14:00",
           },
           {
-            value: "9.11.2013 15:00"
-          }
+            value: "9.11.2013 15:00",
+          },
         ]}
         required={true}
         size="s"
@@ -991,7 +991,7 @@ describe("UU5.Forms.TextInputMixin interface testing", () => {
     expect(wrapper.instance().getFocusFeedback({})).toEqual({
       feedback: "initial",
       value: null,
-      message: focusMessage
+      message: focusMessage,
     });
   });
 
@@ -1009,7 +1009,7 @@ describe("UU5.Forms.TextInputMixin interface testing", () => {
       expect.objectContaining({
         feedback: "initial",
         message: null,
-        value: undefined
+        value: undefined,
       })
     );
     expect(wrapper).toMatchSnapshot();
@@ -1032,17 +1032,17 @@ describe("UU5.Forms.TextInputMixin interface testing", () => {
     const returnValue = wrapper.instance().setAutoCompleteItems(
       [
         {
-          value: "9.11.2013 12:00"
+          value: "9.11.2013 12:00",
         },
         {
-          value: "9.11.2013 13:00"
+          value: "9.11.2013 13:00",
         },
         {
-          value: "9.11.2013 14:00"
+          value: "9.11.2013 14:00",
         },
         {
-          value: "9.11.2013 15:00"
-        }
+          value: "9.11.2013 15:00",
+        },
       ],
       null,
       mockFunc
@@ -1054,7 +1054,7 @@ describe("UU5.Forms.TextInputMixin interface testing", () => {
         { value: "9.11.2013 12:00" },
         { value: "9.11.2013 13:00" },
         { value: "9.11.2013 14:00" },
-        { value: "9.11.2013 15:00" }
+        { value: "9.11.2013 15:00" },
       ])
     );
     expect(mockFunc).toBeCalled();

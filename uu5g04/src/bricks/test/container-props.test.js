@@ -24,19 +24,19 @@ const CONFIG = {
     "UU5.Common.SectionMixin",
     "UU5.Common.ContentMixin",
     "UU5.Common.LevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     noSpacing: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Container`, () => {

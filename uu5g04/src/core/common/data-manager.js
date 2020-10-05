@@ -30,8 +30,8 @@ export const DataManager = Component.create({
     tagName: "UU5.Common.DataManager",
     errors: {
       serverLoad: "Error during %s data from server.",
-      serverUpdate: "Error during %s data on server."
-    }
+      serverUpdate: "Error during %s data on server.",
+    },
   },
   //@@viewOff:statics
 
@@ -42,7 +42,7 @@ export const DataManager = Component.create({
     onReload: PropTypes.func,
     onUpdate: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
     // reloadInterval: PropTypes.number,
-    pessimistic: PropTypes.bool
+    pessimistic: PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -54,7 +54,7 @@ export const DataManager = Component.create({
       onReload: undefined,
       onUpdate: undefined,
       // reloadInterval: undefined,
-      pessimistic: false
+      pessimistic: false,
     };
   },
   //@@viewOff:defaultProps
@@ -65,7 +65,7 @@ export const DataManager = Component.create({
       data: null,
       viewState: "load",
       errorState: null,
-      errorData: null
+      errorData: null,
     };
 
     if (typeof this.props.onLoad !== "function") {
@@ -78,9 +78,8 @@ export const DataManager = Component.create({
 
   componentDidMount() {
     this.load(this.props.data, false)
-    // promise must have catch, in other way there is written error to console
-      .catch(() => {
-      });
+      // promise must have catch, in other way there is written error to console
+      .catch(() => {});
     // this._startReload();
   },
 
@@ -97,16 +96,16 @@ export const DataManager = Component.create({
       if (pessimistic) {
         this.setState({ viewState: "load", errorState: null, errorData: null }, () => {
           this._load(this.props.onLoad, data)
-            .then(dtoOut => this._getPromiseCallback(resolve, dtoOut)())
-            .catch(dtoOut => {
+            .then((dtoOut) => this._getPromiseCallback(resolve, dtoOut)())
+            .catch((dtoOut) => {
               this.showError("serverLoad", "loading", { context: { dtoOut } });
               this._getPromiseCallback(reject, dtoOut)();
             });
         });
       } else {
         this._load(this.props.onLoad, data)
-          .then(dtoOut => this._getPromiseCallback(resolve, dtoOut)())
-          .catch(dtoOut => {
+          .then((dtoOut) => this._getPromiseCallback(resolve, dtoOut)())
+          .catch((dtoOut) => {
             this.showError("serverLoad", "loading", { context: { dtoOut } });
             typeof reject === "function" && reject(dtoOut);
             // this._getPromiseCallback(reject, dtoOut)()
@@ -120,16 +119,16 @@ export const DataManager = Component.create({
       if (pessimistic) {
         this.setState({ viewState: "reload", errorState: null, errorData: null }, () => {
           this._load(this._getReloadCall(), data, "reload")
-            .then(dtoOut => this._getPromiseCallback(resolve, dtoOut)())
-            .catch(dtoOut => {
+            .then((dtoOut) => this._getPromiseCallback(resolve, dtoOut)())
+            .catch((dtoOut) => {
               this.showError("serverLoad", "reloading", { context: { dtoOut } });
               this._getPromiseCallback(reject, dtoOut)();
             });
         });
       } else {
         this._load(this._getReloadCall(), data, "reload")
-          .then(dtoOut => this._getPromiseCallback(resolve, dtoOut)())
-          .catch(dtoOut => {
+          .then((dtoOut) => this._getPromiseCallback(resolve, dtoOut)())
+          .catch((dtoOut) => {
             this.showError("serverLoad", "reloading", { context: { dtoOut } });
             this._getPromiseCallback(reject, dtoOut)();
           });
@@ -155,7 +154,7 @@ export const DataManager = Component.create({
   },
 
   updateData(newData) {
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       this.setState(({ data }) => ({ data: { ...data, ...newData } }), resolve);
     });
   },
@@ -170,19 +169,19 @@ export const DataManager = Component.create({
     return new Promise((resolve, reject) => {
       if (typeof call === "function") {
         call(data || null)
-          .then(data => {
+          .then((data) => {
             this.isRendered() &&
-            this.setState(
-              { viewState: "ready", errorState: null, errorData: null, data },
-              typeof resolve === "function" ? () => resolve(data) : undefined
-            );
+              this.setState(
+                { viewState: "ready", errorState: null, errorData: null, data },
+                typeof resolve === "function" ? () => resolve(data) : undefined
+              );
           })
-          .catch(errorData => {
+          .catch((errorData) => {
             this.isRendered() &&
-            this.setState(
-              { errorData, viewState: "error", errorState },
-              typeof reject === "function" ? () => reject(errorData) : undefined
-            );
+              this.setState(
+                { errorData, viewState: "error", errorState },
+                typeof reject === "function" ? () => reject(errorData) : undefined
+              );
           });
       }
     });
@@ -205,27 +204,27 @@ export const DataManager = Component.create({
 
     if (pessimistic) {
       promise
-        .then(dtoOut => {
+        .then((dtoOut) => {
           // update just client data - data returns from server was not displayed
           this.isRendered() &&
-          this.setState(
-            { viewState: "ready", errorState: null, errorData: null, data: dtoOut },
-            this._getPromiseCallback(resolve, dtoOut)
-          );
+            this.setState(
+              { viewState: "ready", errorState: null, errorData: null, data: dtoOut },
+              this._getPromiseCallback(resolve, dtoOut)
+            );
         })
-        .catch(errorData => {
+        .catch((errorData) => {
           this.showError("serverLoad", "updating", { context: { dtoOut: errorData } });
           let newState = { viewState: "error", errorState: "update", errorData };
           this.isRendered() && this.setState(newState, this._getPromiseCallback(reject, errorData));
         });
     } else {
       promise
-        .then(dtoOut => this._getPromiseCallback(resolve, dtoOut)())
-        .catch(errorData => {
+        .then((dtoOut) => this._getPromiseCallback(resolve, dtoOut)())
+        .catch((errorData) => {
           this.showError("serverLoad", "updating", { context: { dtoOut: errorData } });
           let newState = { viewState: "error", errorState: "update", errorData };
           this.isRendered() &&
-          this.setState({ ...newState, errorData, data: oldData }, this._getPromiseCallback(reject, errorData));
+            this.setState({ ...newState, errorData, data: oldData }, this._getPromiseCallback(reject, errorData));
         });
     }
   },
@@ -268,7 +267,7 @@ export const DataManager = Component.create({
       data: this.getData(),
       handleLoad: this.load,
       handleReload: this.reload,
-      handleUpdate: this.update
+      handleUpdate: this.update,
     };
   },
   //@@viewOff:private
@@ -276,7 +275,7 @@ export const DataManager = Component.create({
   //@@viewOn:render
   render() {
     return this.props.children(this._getValues());
-  }
+  },
   //@@viewOff:render
 });
 
@@ -285,7 +284,7 @@ DataManager.createContext = () => {
 
   const createProvider = ({ children, ...props }, ref) => (
     <DataManager {...props} ref_={ref}>
-      {values => <DataManagerContext.Provider value={values}>{children}</DataManagerContext.Provider>}
+      {(values) => <DataManagerContext.Provider value={values}>{children}</DataManagerContext.Provider>}
     </DataManager>
   );
 

@@ -20,4 +20,8 @@ export * from "./column.js";
 export * from "./text.js";
 export * from "./line.js";
 
-UU5.Environment.addRuntimeLibrary({ name: `${UU5.Environment.name}-blocklayout`, version: UU5.Environment.version });
+UU5.Environment.addRuntimeLibrary({
+  name: `${UU5.Environment.name}-blocklayout`,
+  version: process.env.VERSION,
+  namespace: "UU5.BlockLayout", // TODO Use process.env.NAMESPACE after upgrading to devkit 3.x.
+});

@@ -40,7 +40,7 @@ export const ContentMixin = {
       defaults: {
         standardMode: "standard",
         outlineMode: "outline",
-        regexpUu5: /^\s*<(uu5json|uu5string|uu5data)\s*\/>/
+        regexpUu5: /^\s*<(uu5json|uu5string|uu5data)\s*\/>/,
       },
       errors: {
         unexpectedContentType: 'Type "%s" of content property is unexpected.',
@@ -51,9 +51,9 @@ export const ContentMixin = {
         addRenderedChildToIdList_IdDuplicity:
           "There is duplicity ID %s in adding rendered child to the list of children by ID.",
         addRenderedChildToNameList_IdDuplicity:
-          "There is Name duplicity in adding rendered child to the list children by Name."
-      }
-    }
+          "There is Name duplicity in adding rendered child to the list children by Name.",
+      },
+    },
   },
   //@@viewOff:statics
 
@@ -65,26 +65,26 @@ export const ContentMixin = {
       // content bodyItem:{tag:'',props{}}
       PropTypes.shape({
         tag: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-        props: PropTypes.arrayOf(PropTypes.object)
+        props: PropTypes.arrayOf(PropTypes.object),
       }),
       // content items:{tag:'',propsArray:[{},{},{},...]}
       PropTypes.shape({
         tag: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-        propsArray: PropTypes.arrayOf(PropTypes.object)
+        propsArray: PropTypes.arrayOf(PropTypes.object),
       }),
       // content node
       PropTypes.node,
       // number
       PropTypes.number,
       // bool
-      PropTypes.bool
+      PropTypes.bool,
     ]),
     ignoreInnerHTML: PropTypes.bool,
     checkSpaces: PropTypes.bool,
     checkGrammar: PropTypes.bool,
     checkHighlight: PropTypes.bool,
     textCorrector: PropTypes.bool,
-    dynamic: PropTypes.bool
+    dynamic: PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -97,7 +97,7 @@ export const ContentMixin = {
       checkGrammar: undefined,
       checkHighlight: undefined,
       textCorrector: undefined,
-      dynamic: false
+      dynamic: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -113,7 +113,7 @@ export const ContentMixin = {
 
     // state
     var state = {
-      mode: this.props.mode || this.getDefault("standardMode")
+      mode: this.props.mode || this.getDefault("standardMode"),
     };
 
     if (this.isDynamic()) {
@@ -166,7 +166,7 @@ export const ContentMixin = {
       checkSpaces: this.props.checkSpaces,
       checkGrammar: this.props.checkGrammar,
       checkHighlight: this.props.checkHighlight,
-      mode: this.props.mode
+      mode: this.props.mode,
     };
   },
 
@@ -202,12 +202,12 @@ export const ContentMixin = {
     if (!prevChild.key) newChildProps.key = newChildProps.key || key;
 
     if (isUU5Child && !isStateless) {
-      newChildProps.ref = function(renderedChild) {
+      newChildProps.ref = function (renderedChild) {
         if (renderedChild) {
           let index = childIndex; // childIndex might be "old" if component is dynamic and multiple new children were added via API
           if (newChildProps.id && this.isDynamic() && this.state.children) {
             if (Array.isArray(this.state.children)) {
-              index = this.state.children.map(child => child.props.id).indexOf(newChildProps.id);
+              index = this.state.children.map((child) => child.props.id).indexOf(newChildProps.id);
             } else {
               index = 0;
             }
@@ -282,7 +282,7 @@ export const ContentMixin = {
               let props = {
                 text: child,
                 ...this.__getTextCorrectorProps(),
-                key: i
+                key: i,
               };
               newChild = this.cloneChild(<TextCorrectorContextConsumer {...props} />, props);
 
@@ -299,7 +299,7 @@ export const ContentMixin = {
     return newChildren;
   },
 
-  shouldChildRender: function(child) {
+  shouldChildRender: function (child) {
     let childTag = Tools.getChildTag(child);
     let result = Environment.nestingLevelStrict ? childTag && !!childTag["UU5.Common.NestingLevelMixin"] : true;
 
@@ -467,9 +467,9 @@ export const ContentMixin = {
           renderedChild: {
             tagName: renderedChild.getTagName(),
             id: renderedChild.getId(),
-            component: renderedChild
-          }
-        }
+            component: renderedChild,
+          },
+        },
       });
     } else {
       this.getRenderedChildren().splice(index, 0, renderedChild);
@@ -513,9 +513,9 @@ export const ContentMixin = {
           renderedChild: {
             tagName: renderedChild.getTagName(),
             id: renderedChild.getId(),
-            component: renderedChild
-          }
-        }
+            component: renderedChild,
+          },
+        },
       });
     }
     return this;
@@ -552,7 +552,7 @@ export const ContentMixin = {
       if (
         !nameList[name] ||
         nameList[name]
-          .map(function(rChild) {
+          .map(function (rChild) {
             return rChild.getId();
           })
           .indexOf(renderedChild.getId()) === -1
@@ -568,7 +568,7 @@ export const ContentMixin = {
     var nameChildren = this.getRenderedChildrenByName(renderedChild.getName());
     if (nameChildren) {
       var childIndex = nameChildren
-        .map(function(rChild) {
+        .map(function (rChild) {
           return rChild.getId();
         })
         .indexOf(renderedChild.getId());
@@ -597,7 +597,7 @@ export const ContentMixin = {
     var index =
       childId &&
       children
-        .map(child => {
+        .map((child) => {
           return child.getId() === childId;
         })
         .indexOf(true);
@@ -677,7 +677,7 @@ export const ContentMixin = {
   getRenderedChildByTagNameDefault(tagName) {
     var foundChild;
 
-    this.eachRenderedChild(renderedChild => {
+    this.eachRenderedChild((renderedChild) => {
       var condition = renderedChild.getTagName() === tagName;
       condition && (foundChild = renderedChild);
       return !condition; // false <=> end of cycle
@@ -773,7 +773,7 @@ export const ContentMixin = {
       }
     } else {
       this.showError("dynamicOnly", "setChildren", {
-        mixinName: "UU5.Common.ContentMixin"
+        mixinName: "UU5.Common.ContentMixin",
       });
     }
     return this;
@@ -814,7 +814,7 @@ export const ContentMixin = {
       }
     } else {
       this.showError("dynamicOnly", "insertChild", {
-        mixinName: "UU5.Common.ContentMixin"
+        mixinName: "UU5.Common.ContentMixin",
       });
     }
 
@@ -828,7 +828,7 @@ export const ContentMixin = {
       let newChild = child.tag ? this.buildChild(child.tag, child.props) : child;
       if (this.shouldChildRender(newChild)) {
         this._setChildrenInTransaction(
-          state => {
+          (state) => {
             // NOTE This is called during this.setState(thisFn), i.e. the "state" argument contains
             // actual children. This solves issue with multiple successive calls to insertChild which
             // was previously operating on stale "state" and therefore ending up with adding only 1 child.
@@ -848,11 +848,11 @@ export const ContentMixin = {
               // (e.g. if user called insertChild successively multiple times without re-rendering
               // in-between).
               let relativeChildIndex = children
-                .map(child => child && child.props && child.props.id)
+                .map((child) => child && child.props && child.props.id)
                 .indexOf(relativeChildId);
               if (relativeChildIndex === -1) {
                 this.showError("insertedchildIdNotExists", relativeChildId, {
-                  mixinName: "UU5.Common.ContentMixin"
+                  mixinName: "UU5.Common.ContentMixin",
                 });
                 doNothing = true;
               } else {
@@ -906,7 +906,7 @@ export const ContentMixin = {
       }
     } else {
       this.showError("dynamicOnly", "insertChildBefore", {
-        mixinName: "UU5.Common.ContentMixin"
+        mixinName: "UU5.Common.ContentMixin",
       });
     }
 
@@ -930,7 +930,7 @@ export const ContentMixin = {
 
       if (childIndex === null) {
         this.showError("insertedchildIdNotExists", opt.childAfterId, {
-          mixinName: "UU5.Common.ContentMixin"
+          mixinName: "UU5.Common.ContentMixin",
         });
       } else {
         this.insertChild(child, Tools.merge({}, opt, { position: childIndex }));
@@ -968,7 +968,7 @@ export const ContentMixin = {
       }
     } else {
       this.showError("dynamicOnly", "insertChildAfter", {
-        mixinName: "UU5.Common.ContentMixin"
+        mixinName: "UU5.Common.ContentMixin",
       });
     }
 
@@ -992,7 +992,7 @@ export const ContentMixin = {
 
       if (opt.childBeforeId && opt.position === undefined) {
         this.showError("insertedchildIdNotExists", opt.childBeforeId, {
-          mixinName: "UU5.Common.ContentMixin"
+          mixinName: "UU5.Common.ContentMixin",
         });
       } else {
         this.insertChild(child, opt);
@@ -1032,7 +1032,7 @@ export const ContentMixin = {
       }
     } else {
       this.showError("dynamicOnly", "updateChild", {
-        mixinName: "UU5.Common.ContentMixin"
+        mixinName: "UU5.Common.ContentMixin",
       });
     }
 
@@ -1043,14 +1043,14 @@ export const ContentMixin = {
     opt = opt || {};
 
     if (opt.shouldUpdate === undefined || opt.shouldUpdate) {
-      this._setChildrenInTransaction(state => {
+      this._setChildrenInTransaction((state) => {
         let children = this._getUU5CommonContentMixinChildren(state) || [];
-        let childIndex = children.map(child => child && child.props && child.props.id).indexOf(childId);
+        let childIndex = children.map((child) => child && child.props && child.props.id).indexOf(childId);
 
         let result = null;
         if (childIndex === -1) {
           this.showError("childIdNotExists", "updateChild", {
-            mixinName: "UU5.Common.ContentMixin"
+            mixinName: "UU5.Common.ContentMixin",
           });
         } else {
           children = children.slice();
@@ -1088,7 +1088,7 @@ export const ContentMixin = {
       }
     } else {
       this.showError("dynamicOnly", "replaceChild", {
-        mixinName: "UU5.Common.ContentMixin"
+        mixinName: "UU5.Common.ContentMixin",
       });
     }
 
@@ -1101,14 +1101,14 @@ export const ContentMixin = {
     if (opt.shouldUpdate === undefined || opt.shouldUpdate) {
       let newChild = child.tag ? this.buildChild(child.tag, child.props) : child;
       if (this.shouldChildRender(newChild)) {
-        this._setChildrenInTransaction(state => {
+        this._setChildrenInTransaction((state) => {
           let children = this._getUU5CommonContentMixinChildren(state) || [];
-          let childIndex = children.map(child => child && child.props && child.props.id).indexOf(childId);
+          let childIndex = children.map((child) => child && child.props && child.props.id).indexOf(childId);
 
           let result = null;
           if (childIndex === -1) {
             this.showError("childIdNotExists", "replaceChild", {
-              mixinName: "UU5.Common.ContentMixin"
+              mixinName: "UU5.Common.ContentMixin",
             });
           } else {
             children = children.slice();
@@ -1145,7 +1145,7 @@ export const ContentMixin = {
       }
     } else {
       this.showError("dynamicOnly", "deleteChild", {
-        mixinName: "UU5.Common.ContentMixin"
+        mixinName: "UU5.Common.ContentMixin",
       });
     }
 
@@ -1156,14 +1156,14 @@ export const ContentMixin = {
     opt = opt || {};
 
     if (opt.shouldUpdate === undefined || opt.shouldUpdate) {
-      this._setChildrenInTransaction(state => {
+      this._setChildrenInTransaction((state) => {
         let children = this._getUU5CommonContentMixinChildren(state) || [];
-        let childIndex = children.map(child => child && child.props && child.props.id).indexOf(childId);
+        let childIndex = children.map((child) => child && child.props && child.props.id).indexOf(childId);
 
         let result = null;
         if (childIndex === -1) {
           this.showError("childIdNotExists", "deleteChild", {
-            mixinName: "UU5.Common.ContentMixin"
+            mixinName: "UU5.Common.ContentMixin",
           });
         } else {
           children = children.slice();
@@ -1196,7 +1196,7 @@ export const ContentMixin = {
       }
     } else {
       this.showError("dynamicOnly", "clearChildren", {
-        mixinName: "UU5.Common.ContentMixin"
+        mixinName: "UU5.Common.ContentMixin",
       });
     }
 
@@ -1235,7 +1235,7 @@ export const ContentMixin = {
         filter: filter,
         filteredProps: this._getFilteredChildrenProps(filter),
         sorter: sorter,
-        sortedIds: this._getSortedChildIds(sorter)
+        sortedIds: this._getSortedChildIds(sorter),
       },
       setStateCallback
     );
@@ -1249,7 +1249,7 @@ export const ContentMixin = {
         filter: null,
         filteredProps: null,
         sorter: null,
-        sortedIds: null
+        sortedIds: null,
       },
       setStateCallback
     );
@@ -1265,7 +1265,7 @@ export const ContentMixin = {
 
     if (children) {
       children = Array.isArray(children) ? children : [children];
-      children.forEach(child => {
+      children.forEach((child) => {
         if (child) {
           var childId = child.props && child.props.id;
           var index = container.state.sortedIds && container.state.sortedIds.indexOf(childId);
@@ -1349,8 +1349,8 @@ export const ContentMixin = {
       this.showError("unexpectedContentType", typeof content, {
         mixinName: "UU5.Common.ContentMixin",
         context: {
-          content: content
-        }
+          content: content,
+        },
       });
     }
 
@@ -1375,7 +1375,7 @@ export const ContentMixin = {
 
   _getSortedChildIds(sorter) {
     let sortedChildren = this.getRenderedChildren().sort(sorter);
-    return sortedChildren.map(renderedChild => {
+    return sortedChildren.map((renderedChild) => {
       return renderedChild.getId();
     });
   },
@@ -1431,9 +1431,9 @@ export const ContentMixin = {
       checkSpaces: this.__getTextCorrectorPropValue("checkSpaces"),
       checkGrammar: this.__getTextCorrectorPropValue("checkGrammar"),
       checkHighlight: this.__getTextCorrectorPropValue("checkHighlight"),
-      language: this.props.language
+      language: this.props.language,
     };
-  }
+  },
   //@@viewOff:private
 };
 

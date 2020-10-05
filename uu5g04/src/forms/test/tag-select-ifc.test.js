@@ -19,7 +19,7 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 const availableTags = [
   { value: "Prg", content: { cs: "Praha", en: "Prague" } },
   { value: "Plzeň" },
-  { value: "Brno", content: <div>Brno</div> }
+  { value: "Brno", content: <div>Brno</div> },
 ];
 
 describe("UU5.Forms.InputMixin interface test", () => {

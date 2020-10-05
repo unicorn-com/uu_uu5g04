@@ -28,7 +28,7 @@ import "./modal.less";
 const MOUNT_CONTENT_VALUES = {
   onFirstRender: "onFirstRender",
   onFirstOpen: "onFirstOpen",
-  onEachOpen: "onEachOpen"
+  onEachOpen: "onEachOpen",
 };
 
 const getMountContent = (props = {}, state = {}) => {
@@ -74,7 +74,7 @@ const DoubleRender = createComponent({
     let { renderKey, children } = this.props;
     let { prevRenderKey } = this.state;
     return children(renderKey !== prevRenderKey ? DoubleRender.FIRST_RENDER : DoubleRender.SECOND_RENDER);
-  }
+  },
 });
 DoubleRender.FIRST_RENDER = 0;
 DoubleRender.SECOND_RENDER = 1;
@@ -89,7 +89,7 @@ export const Modal = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.SectionMixin,
     UU5.Common.NestingLevelMixin,
-    UU5.Common.CcrReaderMixin
+    UU5.Common.CcrReaderMixin,
   ],
   //@@viewOff:mixins
 
@@ -98,7 +98,7 @@ export const Modal = UU5.Common.VisualComponent.create({
     tagName: ns.name("Modal"),
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
-      main: props => {
+      main: (props) => {
         let className = ns.css("modal");
         if (props.offsetTop === "auto") {
           className +=
@@ -113,7 +113,7 @@ export const Modal = UU5.Common.VisualComponent.create({
         }
         return className;
       },
-      dialog: props => {
+      dialog: (props) => {
         let className = ns.css("modal-dialog");
         if (typeof props.offsetTop === "number") {
           className +=
@@ -146,7 +146,7 @@ export const Modal = UU5.Common.VisualComponent.create({
       modalSize: ns.css("modal-"),
       isFooter: ns.css("modal-isfooter"),
       overflow: ns.css("modal-overflow"),
-      bodyOverflow: ns.css("modal-body-overflow")
+      bodyOverflow: ns.css("modal-body-overflow"),
     },
     defaults: {
       header: "noHeader",
@@ -155,12 +155,12 @@ export const Modal = UU5.Common.VisualComponent.create({
       closeTypes: {
         closedButton: "closedButton",
         blur: "blur",
-        ifc: "interface"
-      }
+        ifc: "interface",
+      },
     },
     opt: {
-      nestingLevelRoot: true
-    }
+      nestingLevelRoot: true,
+    },
   },
   //@@viewOff:statics
 
@@ -177,10 +177,10 @@ export const Modal = UU5.Common.VisualComponent.create({
     mountContent: UU5.PropTypes.oneOf([
       MOUNT_CONTENT_VALUES.onEachOpen,
       MOUNT_CONTENT_VALUES.onFirstOpen,
-      MOUNT_CONTENT_VALUES.onFirstRender
+      MOUNT_CONTENT_VALUES.onFirstRender,
     ]),
     offsetTop: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
-    location: UU5.PropTypes.oneOf(["local", "portal"])
+    location: UU5.PropTypes.oneOf(["local", "portal"]),
   },
   //@@viewOff:propTypes
 
@@ -197,7 +197,7 @@ export const Modal = UU5.Common.VisualComponent.create({
       overflow: false,
       mountContent: undefined,
       offsetTop: null,
-      location: undefined
+      location: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -220,7 +220,7 @@ export const Modal = UU5.Common.VisualComponent.create({
       scrollableBackground: this.props.scrollableBackground,
       onClose: this.props.onClose,
       overflow: this.props.overflow,
-      openKey: undefined
+      openKey: undefined,
     };
   },
 
@@ -244,7 +244,7 @@ export const Modal = UU5.Common.VisualComponent.create({
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
-      this.setState(function(state) {
+      this.setState(function (state) {
         let newState = {};
 
         if (nextProps.shown && state.hidden) {
@@ -426,7 +426,7 @@ export const Modal = UU5.Common.VisualComponent.create({
       // became closed
       let { _closeCallbacks } = this;
       this._closeCallbacks = [];
-      this._flushCloseCallbacks = () => _closeCallbacks.forEach(fn => (typeof fn === "function" ? fn() : null));
+      this._flushCloseCallbacks = () => _closeCallbacks.forEach((fn) => (typeof fn === "function" ? fn() : null));
       this._closeTimeout = setTimeout(() => {
         delete this._closeTimeout;
 
@@ -438,7 +438,7 @@ export const Modal = UU5.Common.VisualComponent.create({
               header: this.state.renderContent ? this.state.header || this.getHeader() : null,
               content: this.state.renderContent ? this.state.content || this.getContent() || this.props.children : null,
               footer: this.state.renderContent ? this.state.footer || this.getFooter() : null,
-              renderContent: true
+              renderContent: true,
             },
             this._flushCloseCallbacks
           );
@@ -493,12 +493,12 @@ export const Modal = UU5.Common.VisualComponent.create({
     if (this.isRendered()) {
       let callCallbackHere; // if we're already hidden then nothing will be done in componentDidUpdate and therefore we'll have to call setStateCallback here right away
       this.setState(
-        state => {
+        (state) => {
           callCallbackHere = state.hidden;
           if (!callCallbackHere) this._closeCallbacks.push(setStateCallback);
           return {
             hidden: true,
-            renderContent: getMountContent(this.props, state) !== MOUNT_CONTENT_VALUES.onEachOpen
+            renderContent: getMountContent(this.props, state) !== MOUNT_CONTENT_VALUES.onEachOpen,
           };
         },
         () => {
@@ -521,10 +521,10 @@ export const Modal = UU5.Common.VisualComponent.create({
   _findTarget(e) {
     let modalMatch = "[id='" + this.getId() + "'] .uu5-bricks-modal-dialog";
     let result = {
-      dialog: false
+      dialog: false,
     };
     let eventPath = this._getEventPath(e);
-    eventPath.every(item => {
+    eventPath.every((item) => {
       let functionType = item.matches ? "matches" : "msMatchesSelector";
       if (item[functionType]) {
         if (item[functionType](modalMatch)) {
@@ -548,13 +548,13 @@ export const Modal = UU5.Common.VisualComponent.create({
     this.state.className && (mainAttrs.className += " " + this.state.className);
     if (!this.state.sticky && !this.state.stickyBackground) {
       let allowBlur = true;
-      mainAttrs.onMouseDown = e => {
+      mainAttrs.onMouseDown = (e) => {
         let clickData = this._findTarget(e.nativeEvent);
         if (clickData.dialog) {
           allowBlur = false;
         }
       };
-      mainAttrs.onMouseUp = e => {
+      mainAttrs.onMouseUp = (e) => {
         if (allowBlur) {
           let clickData = this._findTarget(e.nativeEvent);
           if (clickData.dialog) {
@@ -562,7 +562,7 @@ export const Modal = UU5.Common.VisualComponent.create({
           }
         }
       };
-      mainAttrs.onClick = e => {
+      mainAttrs.onClick = (e) => {
         if (allowBlur) {
           this._onBlurHandler(e);
         }
@@ -629,7 +629,7 @@ export const Modal = UU5.Common.VisualComponent.create({
 
     let newProps = {
       id: id,
-      className: className
+      className: className,
     };
 
     // default values is used if child is set as react element so null or undefined will not set!!!
@@ -672,7 +672,7 @@ export const Modal = UU5.Common.VisualComponent.create({
 
     if (bodyProps.content) {
       bodyChild = this.buildChildren({
-        children: UU5.Common.Element.create(Body, bodyProps)
+        children: UU5.Common.Element.create(Body, bodyProps),
       });
     }
 
@@ -687,7 +687,7 @@ export const Modal = UU5.Common.VisualComponent.create({
       result = (
         <RenderIntoPortal>
           <DoubleRender renderKey={openKey} doubleRenderOnMount={false}>
-            {renderAs => {
+            {(renderAs) => {
               let hidden = this.isHidden() || (renderAs === DoubleRender.FIRST_RENDER ? true : false);
               return getContentFn(hidden);
             }}
@@ -723,7 +723,7 @@ export const Modal = UU5.Common.VisualComponent.create({
     }
 
     return this.getNestingLevel()
-      ? this._renderModal(hidden => (
+      ? this._renderModal((hidden) => (
           <div {...this._getMainAttrs(hidden)}>
             <div className={this.getClassName("dialog") + " " + this.getClassName("modalSize") + this.state.size}>
               {this._buildChildren()}
@@ -732,7 +732,7 @@ export const Modal = UU5.Common.VisualComponent.create({
           </div>
         ))
       : null;
-  }
+  },
   //@@viewOff:render
 });
 

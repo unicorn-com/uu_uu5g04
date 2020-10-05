@@ -9,10 +9,10 @@ const OP_TYPE_ITEM = "ITEM";
 const OP_TYPE_PREFIX = { [OP_TYPE_LIST]: "list.", [OP_TYPE_ITEM]: "item." };
 const TRANSFORM_MAP = {
   "list.load": transformListLoad,
-  "list.loadNext": transformListLoadNext
+  "list.loadNext": transformListLoadNext,
 };
 const FIRST_LOAD_FLAG = {};
-const SET_DATA_IDENTITY = data => data;
+const SET_DATA_IDENTITY = (data) => data;
 
 function useEffectOnMount(effectFn) {
   // eslint-disable-next-line uu5/hooks-exhaustive-deps
@@ -67,7 +67,7 @@ function initHandler(operation, operationType, dispatchAction, currentValuesRef,
               }
               dispatchAction([
                 actionPrefix + "End",
-                { operation, callArgs, data, error, transformDataFn, itemKey, context }
+                { operation, callArgs, data, error, transformDataFn, itemKey, context },
               ]);
             }
             if (error) throw error;
@@ -90,7 +90,7 @@ function initHandler(operation, operationType, dispatchAction, currentValuesRef,
           //    to the state.runnableList (in *Start actions) and then running it in useDataList effect hook.
           dispatchAction([
             actionPrefix + "Start",
-            { operation, callArgs, itemKey, context, execFn: isFirstLoad ? null : execFn }
+            { operation, callArgs, itemKey, context, execFn: isFirstLoad ? null : execFn },
           ]);
         }
       });
@@ -112,7 +112,7 @@ function transformListLoadNext(curDataList, callResult, callArgs) {
 function transformListCustomOp(curDataList, callResult, callArgs, itemKey, relatedItemId) {
   // depending on callResult create/update/delete the item
   let result;
-  let index = curDataList.findIndex(it => it && itemKey(it.data) === relatedItemId);
+  let index = curDataList.findIndex((it) => it && itemKey(it.data) === relatedItemId);
   if (callResult == null) {
     if (index > -1) {
       result = curDataList.slice(0, index);
@@ -163,7 +163,7 @@ function stateReducer(state, [action, payload]) {
             ? []
             : typeof paramHandlerMap.load === "function"
             ? [{ operation: "load", callArgs: [initialDtoIn], initialLoad: true }]
-            : []
+            : [],
       };
       break;
     }
@@ -173,7 +173,7 @@ function stateReducer(state, [action, payload]) {
       let normData = _normalizeDataToList(data, false, true);
       newState = {
         ...state,
-        data: normData
+        data: normData,
       };
       break;
     }
@@ -181,14 +181,14 @@ function stateReducer(state, [action, payload]) {
     case "item.setData": {
       let { data, itemKey, callArgs } = payload;
       let itemId = itemKey(callArgs[0]);
-      let index = state.data?.findIndex?.(it => it && itemKey(it.data) === itemId);
+      let index = state.data?.findIndex?.((it) => it && itemKey(it.data) === itemId);
       if (index >= 0) {
         let newData = [...state.data];
         if (data == null) newData.splice(index, 1);
         else newData[index] = _normalizeItem({ ...newData[index], ...data }, true);
         newState = {
           ...state,
-          data: newData
+          data: newData,
         };
       }
       break;
@@ -209,7 +209,7 @@ function stateReducer(state, [action, payload]) {
         newState = {
           ...state,
           pendingData: { ...state.pendingData, error },
-          runnableList: state.runnableList.concat([{ execFn: () => execFn.reject(error) }])
+          runnableList: state.runnableList.concat([{ execFn: () => execFn.reject(error) }]),
         };
       } else {
         // NOTE "state" and "pendingData" fields are computed at the end of the reducer from other fields
@@ -218,7 +218,7 @@ function stateReducer(state, [action, payload]) {
         newState = {
           ...state,
           runnableList: state.runnableList.concat([{ execFn }]),
-          runningOperations: [...state.runningOperations, { id: context.operationId, operation, callArgs }]
+          runningOperations: [...state.runningOperations, { id: context.operationId, operation, callArgs }],
         };
       }
       break;
@@ -234,7 +234,7 @@ function stateReducer(state, [action, payload]) {
         ...state,
         errorData: error !== undefined ? { ...state.pendingData, error } : null,
         data: error !== undefined ? state.data : transformDataFn(state.data, data, callArgs),
-        runningOperations: state.runningOperations.filter(op => op.id !== operationId && !op.initialLoad) // 1st load doesn't have matching callArgs
+        runningOperations: state.runningOperations.filter((op) => op.id !== operationId && !op.initialLoad), // 1st load doesn't have matching callArgs
       };
       break;
     }
@@ -243,9 +243,9 @@ function stateReducer(state, [action, payload]) {
     case "list.<custom>Start": {
       let { operation, callArgs, itemKey, context, execFn } = payload;
       let dtoInItems = Array.isArray(callArgs[0]) ? callArgs[0] : callArgs[0] != null ? [callArgs[0]] : [];
-      let itemsWithId = dtoInItems.map(data => ({
+      let itemsWithId = dtoInItems.map((data) => ({
         id: itemKey(data) ?? UU5.Common.Tools.generateUUID(),
-        item: data
+        item: data,
       }));
       context.itemsWithId = itemsWithId;
       let updatedData = state.data;
@@ -256,8 +256,8 @@ function stateReducer(state, [action, payload]) {
       for (let { id, item } of itemsWithId) {
         if (!item) continue;
         let itemId = id;
-        let dataItemIndex = updatedData ? updatedData.findIndex(it => it && itemKey(it.data) === itemId) : -1;
-        let altDataItemIndex = dataItemIndex === -1 ? newData.findIndex(it => it && itemKey(it.data) === itemId) : -1;
+        let dataItemIndex = updatedData ? updatedData.findIndex((it) => it && itemKey(it.data) === itemId) : -1;
+        let altDataItemIndex = dataItemIndex === -1 ? newData.findIndex((it) => it && itemKey(it.data) === itemId) : -1;
         let r = { updatedData, newData };
         let usedList = altDataItemIndex !== -1 ? "newData" : "updatedData";
         let usedDataItemIndex = altDataItemIndex !== -1 ? altDataItemIndex : dataItemIndex;
@@ -278,7 +278,7 @@ function stateReducer(state, [action, payload]) {
           else if (usedList === "newData" && r[usedList] === state.newData) r[usedList] = [...state.newData];
           r[usedList][usedDataItemIndex] = {
             ...dataItem,
-            pendingData: { ...dataItem.pendingData, error }
+            pendingData: { ...dataItem.pendingData, error },
           };
           operationAllowed = false;
           operationAllowedCheckError = error;
@@ -290,7 +290,7 @@ function stateReducer(state, [action, payload]) {
             r[usedList][usedDataItemIndex] = {
               ...r[usedList][usedDataItemIndex],
               state: "pending",
-              pendingData: { operation: itemOperation, dtoIn: item }
+              pendingData: { operation: itemOperation, dtoIn: item },
             };
           } // else item doesn't exist in the data list => don't update any state (even if it is "create" operation)
         }
@@ -301,12 +301,12 @@ function stateReducer(state, [action, payload]) {
         ...state,
         data: updatedData,
         runnableList: state.runnableList.concat([
-          { execFn: operationAllowed ? execFn : () => execFn.reject(operationAllowedCheckError) }
+          { execFn: operationAllowed ? execFn : () => execFn.reject(operationAllowedCheckError) },
         ]),
         runningOperations: operationAllowed
           ? [...state.runningOperations, { id: context.operationId, operation, callArgs }]
           : state.runningOperations,
-        newData: newData
+        newData: newData,
       };
       break;
     }
@@ -330,7 +330,7 @@ function stateReducer(state, [action, payload]) {
       if (process.env.NODE_ENV === "development" && callResultItems && callResultItems.length !== itemsWithId.length) {
         UU5.Common.Tools.warning(
           `Item operation '${operation}' ended with different item count (${callResultItems.length}) than it was called with (${itemsWithId.length}).`,
-          { callResultItems, callItems: itemsWithId.map(it => it.item) }
+          { callResultItems, callItems: itemsWithId.map((it) => it.item) }
         );
       }
       let newData = state.newData;
@@ -358,17 +358,17 @@ function stateReducer(state, [action, payload]) {
             !(callResultItem instanceof Error) &&
             Object.keys(callResultItem?.uuAppErrorMap || {}).length === 0);
         // the item might be either in "data" list or "newData" list => transform the right one
-        let isInData = updatedData.some(it => it && itemKey(it.data) === itemId);
-        let isInNewData = newData.some(it => it && itemKey(it.data) === itemId);
+        let isInData = updatedData.some((it) => it && itemKey(it.data) === itemId);
+        let isInNewData = newData.some((it) => it && itemKey(it.data) === itemId);
         let r = { updatedData, newData };
         let usedList =
-          isInData || (isItemSuccess && !isInNewData && (!state.data || state.data.every(it => it != null))) // if "data" list is fully loaded, successful "create" should be performed on it
+          isInData || (isItemSuccess && !isInNewData && (!state.data || state.data.every((it) => it != null))) // if "data" list is fully loaded, successful "create" should be performed on it
             ? "updatedData"
             : "newData";
         if (isItemSuccess) {
           r[usedList] = transformDataFn(r[usedList], callResultItem, [item].concat(callArgs.slice(1)), itemKey, itemId);
         }
-        let existingItemIndex = r[usedList].findIndex(it => it && itemKey(it.data) === itemId);
+        let existingItemIndex = r[usedList].findIndex((it) => it && itemKey(it.data) === itemId);
         if (existingItemIndex !== -1) {
           let existingItem = r[usedList][existingItemIndex];
           if (usedList === "updatedData" && r[usedList] === state.data) r[usedList] = [...state.data];
@@ -377,7 +377,7 @@ function stateReducer(state, [action, payload]) {
             data: existingItem.data,
             state: isItemSuccess ? "ready" : "error",
             pendingData: null,
-            errorData: isItemSuccess ? null : { ...existingItem.pendingData, error: callResultItem ?? error }
+            errorData: isItemSuccess ? null : { ...existingItem.pendingData, error: callResultItem ?? error },
           };
         }
         ({ updatedData, newData } = r);
@@ -386,8 +386,8 @@ function stateReducer(state, [action, payload]) {
       newState = {
         ...state,
         data: updatedData,
-        runningOperations: state.runningOperations.filter(op => op.id !== operationId),
-        newData: newData
+        runningOperations: state.runningOperations.filter((op) => op.id !== operationId),
+        newData: newData,
       };
       break;
     }
@@ -399,12 +399,12 @@ function stateReducer(state, [action, payload]) {
 
   // compute fields "state", "pendingData", ... based on others
   if (newState && newState !== state) {
-    let isLoadOperation = it => it.operation === "load" || it.operation === "loadNext" || it.operation === "setData";
+    let isLoadOperation = (it) => it.operation === "load" || it.operation === "loadNext" || it.operation === "setData";
     let loadOperations = newState.runningOperations.filter(isLoadOperation);
     newState.state =
       loadOperations.length > 0
         ? "pending"
-        : newState.data?.some?.(it => it?.state === "pending") ||
+        : newState.data?.some?.((it) => it?.state === "pending") ||
           loadOperations.length < newState.runningOperations.length
         ? "itemPending"
         : newState.errorData
@@ -418,14 +418,14 @@ function stateReducer(state, [action, payload]) {
           : { operation: lastLoadOperation.operation, dtoIn: lastLoadOperation.callArgs[0] }
         : null;
     if (!newState.data) newState.state += "NoData";
-    newState.runnableList = newState.runnableList.filter(it => it.execFn);
+    newState.runnableList = newState.runnableList.filter((it) => it.execFn);
 
     // filter newData field if such items are already present in data
     let { itemKey } = payload;
     if (newState.newData?.length > 0 && itemKey) {
-      let filtered = newState.newData.filter(it => {
+      let filtered = newState.newData.filter((it) => {
         let itemId = itemKey(it.data);
-        return !newState.data || !newState.data.some(it => it && itemKey(it.data) === itemId);
+        return !newState.data || !newState.data.some((it) => it && itemKey(it.data) === itemId);
       });
       if (filtered.length !== newState.newData.length) newState.newData = filtered;
     }
@@ -444,10 +444,10 @@ function _normalizeDataToList(data, partialOnly = false, itemsAlreadyWrapped = f
   let result;
   if (data != null) {
     if (Array.isArray(data)) {
-      let wrappedItemList = data.map(item => _normalizeItem(item, itemsAlreadyWrapped));
+      let wrappedItemList = data.map((item) => _normalizeItem(item, itemsAlreadyWrapped));
       result = wrappedItemList;
     } else if (Array.isArray(data.itemList)) {
-      let wrappedItemList = data.itemList.map(item => _normalizeItem(item, itemsAlreadyWrapped));
+      let wrappedItemList = data.itemList.map((item) => _normalizeItem(item, itemsAlreadyWrapped));
       if (!partialOnly) result = _mergeData(null, wrappedItemList, data.pageInfo);
       else result = wrappedItemList;
     } else {
@@ -500,7 +500,7 @@ function _normalizeItem(data, dataAlreadyWrapped = false) {
   if (data != null) {
     let newItem = { data, state: "ready", errorData: null, pendingData: null };
     if (dataAlreadyWrapped) {
-      if (data && Object.keys(newItem).every(k => k in data)) result = data;
+      if (data && Object.keys(newItem).every((k) => k in data)) result = data;
       else result = Object.assign(newItem, data);
     } else {
       result = newItem;
@@ -517,7 +517,7 @@ function _normalizeItem(data, dataAlreadyWrapped = false) {
 function _getIdInObject(itemData, itemIdentifier) {
   let result = {};
   if (Array.isArray(itemIdentifier)) {
-    itemIdentifier.forEach(idKey => (result[idKey] = itemData?.[idKey]));
+    itemIdentifier.forEach((idKey) => (result[idKey] = itemData?.[idKey]));
   } else {
     result[itemIdentifier] = itemData?.[itemIdentifier];
   }
@@ -553,7 +553,7 @@ export function useDataList({
   itemIdentifier = "id",
   handlerMap: paramHandlerMap = {},
   itemHandlerMap: paramItemHandlerMap = {},
-  skipInitialLoad
+  skipInitialLoad,
 } = {}) {
   let currentValuesRef = useRef({ rendered: true });
   currentValuesRef.current = {
@@ -563,11 +563,11 @@ export function useDataList({
     paramItemHandlerMap,
     itemIdentifier,
     itemKey: Array.isArray(itemIdentifier)
-      ? item =>
-          itemIdentifier.some(idKey => item?.[idKey] == null)
+      ? (item) =>
+          itemIdentifier.some((idKey) => item?.[idKey] == null)
             ? null
-            : JSON.stringify(itemIdentifier.map(idKey => item[idKey]))
-      : item => item?.[itemIdentifier]
+            : JSON.stringify(itemIdentifier.map((idKey) => item[idKey]))
+      : (item) => item?.[itemIdentifier],
   };
   useEffect(() => () => (currentValuesRef.current.rendered = false), []);
 
@@ -577,7 +577,7 @@ export function useDataList({
   );
   useLayoutEffect(() => {
     // run enqueued operations
-    fullState.runnableList.forEach(it => {
+    fullState.runnableList.forEach((it) => {
       let { execFn } = it;
       if (execFn) {
         delete it.execFn;
@@ -623,7 +623,7 @@ export function useDataList({
         dtoIn = _addPageSize(dtoIn, pageSize);
         // add pageIndex based on 1st not-yet-loaded item
         if (typeof dtoIn.pageInfo.pageIndex !== "number") {
-          let notYetLoadedItemIndex = data ? data.find(it => it == null) : -1;
+          let notYetLoadedItemIndex = data ? data.find((it) => it == null) : -1;
           if (notYetLoadedItemIndex !== -1) {
             dtoIn.pageInfo.pageIndex = Math.floor(notYetLoadedItemIndex / pageSize);
           }
@@ -667,7 +667,9 @@ export function useDataList({
 
   useEffectOnMount(() => {
     if (fullState.state === "pending" || fullState.state === "pendingNoData") {
-      fullHandlerMap.load(FIRST_LOAD_FLAG, initialDtoIn).catch(e => UU5.Common.Tools.error("Loading data failed:", e));
+      fullHandlerMap
+        .load(FIRST_LOAD_FLAG, initialDtoIn)
+        .catch((e) => UU5.Common.Tools.error("Loading data failed:", e));
     }
   });
 
@@ -681,11 +683,11 @@ export function useDataList({
     (fullState.state === "pending" || fullState.state === "pendingNoData") &&
     fullState.pendingData.operation === "load";
   let addItemHandlerMap = useCallback(
-    list => {
+    (list) => {
       let result;
       if (Array.isArray(list)) {
         let cache = itemHandlerMapCacheRef.current;
-        result = list.map(item => {
+        result = list.map((item) => {
           if (!item) return item;
           let fn = cache.get(item);
           if (!fn) cache.set(item, (fn = memoizeOne(_computeItemWithHandlerMap)));
@@ -701,7 +703,7 @@ export function useDataList({
   let dataWithItemHandlerMap = useMemo(() => addItemHandlerMap(fullState.data), [addItemHandlerMap, fullState.data]);
   let newDataWithItemHandlerMap = useMemo(() => addItemHandlerMap(fullState.newData), [
     addItemHandlerMap,
-    fullState.newData
+    fullState.newData,
   ]);
 
   let result = { ...fullState, data: dataWithItemHandlerMap, newData: newDataWithItemHandlerMap, handlerMap };

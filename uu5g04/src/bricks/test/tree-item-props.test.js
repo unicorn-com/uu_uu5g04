@@ -22,26 +22,29 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Common.ContentMixin",
     "UU5.Common.PureRenderMixin",
-    "UU5.Common.NestingLevelMixin"
+    "UU5.Common.NestingLevelMixin",
   ],
   props: {
     label: {
-      values: ["Tree items label"]
+      values: ["Tree items label"],
     },
     iconCollapsed: {
-      values: ["uu5-plus"]
+      values: ["uu5-plus"],
     },
     iconExpanded: {
-      values: ["uu5-calendar"]
+      values: ["uu5-calendar"],
     },
     expanded: {
-      values: [true, false]
+      values: [true, false],
     },
     items: {
       values: [
-        [{ label: "Item 1", items: [{ label: "Item 1.1" }] }, { label: "Item 2", items: [{ label: "Item 2.1" }] }]
-      ]
-    }
+        [
+          { label: "Item 1", items: [{ label: "Item 1.1" }] },
+          { label: "Item 2", items: [{ label: "Item 2.1" }] },
+        ],
+      ],
+    },
   },
   requiredProps: {
     parent: shallow(
@@ -51,13 +54,13 @@ const CONFIG = {
         iconExpanded="mdi-menu-down"
         iconCollapsed="mdi-menu-right"
       />
-    ).instance()
+    ).instance(),
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Tree.Item`, () => {

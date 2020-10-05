@@ -26,16 +26,16 @@ export class Speech {
     if (opt.voice) {
       result = opt.voice;
     } else {
-      result = this._voices.find(voice => voice.lang === opt.lang || voice.lang.startsWith(`${opt.lang}-`));
+      result = this._voices.find((voice) => voice.lang === opt.lang || voice.lang.startsWith(`${opt.lang}-`));
 
       if (!result) {
         let language = Tools.getLanguage();
-        result = this._voices.find(voice => voice.lang === language || voice.lang.startsWith(`${language}-`));
+        result = this._voices.find((voice) => voice.lang === language || voice.lang.startsWith(`${language}-`));
       }
 
       if (!result) {
         let language = "en";
-        result = this._voices.find(voice => voice.lang === language || voice.lang.startsWith(`${language}-`));
+        result = this._voices.find((voice) => voice.lang === language || voice.lang.startsWith(`${language}-`));
       }
     }
 
@@ -47,7 +47,7 @@ export class Speech {
       return [];
     }
 
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       this._voices = this._synth.getVoices();
 
       if (this._voices.length) {
@@ -79,7 +79,7 @@ export class Speech {
       const output = text.replace(/(…|[._]{2,})/, "");
       const utterance = new SpeechSynthesisUtterance(output);
 
-      utterance.addEventListener("error", error => console.error(error));
+      utterance.addEventListener("error", (error) => console.error(error));
       utterance.pitch = opt.pitch || 1;
       utterance.rate = opt.rate || 1;
       utterance.volume = opt.volume || 1;

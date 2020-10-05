@@ -38,7 +38,7 @@ export const Radios = Context.withContext(
       UU5.Common.ColorSchemaMixin,
       UU5.Common.ScreenSizeMixin,
       InputMixin,
-      GroupMixin
+      GroupMixin,
     ],
     //@@viewOff:mixins
 
@@ -49,19 +49,19 @@ export const Radios = Context.withContext(
         main: ns.css("radios"),
         inline: ns.css("inputs-inline"),
         loading: ns.css("input-loading-icon"),
-        inner: props =>
+        inner: (props) =>
           ns.css("input-inner") +
           " " +
           Css.css(`
           border-radius: ${UU5.Common.Tools.fillUnit(props.selectionBorderRadius)};
         `),
         selectionBackground: ns.css("radios-selection-background"),
-        column: ns.css("radios-column")
+        column: ns.css("radios-column"),
       },
       defaults: {
-        columnRegexp: /^((?:offset-)?[a-z]+)(?:-)?(\d+)$/
+        columnRegexp: /^((?:offset-)?[a-z]+)(?:-)?(\d+)$/,
       },
-      lsi: () => UU5.Environment.Lsi.Forms.message
+      lsi: () => UU5.Environment.Lsi.Forms.message,
     },
     //@@viewOff:statics
 
@@ -69,7 +69,7 @@ export const Radios = Context.withContext(
     propTypes: {
       bgStyleChecked: UU5.PropTypes.oneOf(["filled", "outline"]),
       selectionBackground: UU5.PropTypes.bool,
-      selectionBorderRadius: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number])
+      selectionBorderRadius: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
     },
     //@@viewOff:propTypes
 
@@ -78,7 +78,7 @@ export const Radios = Context.withContext(
       return {
         bgStyleChecked: "outline",
         selectionBackground: true,
-        selectionBorderRadius: "2px"
+        selectionBorderRadius: "2px",
       };
     },
     //@@viewOff:getDefaultProps
@@ -127,7 +127,7 @@ export const Radios = Context.withContext(
           message: this.props.message,
           feedback: this.props.feedback,
           value: this._getInitialValue(),
-          readOnly: this.props.readOnly
+          readOnly: this.props.readOnly,
         },
         setStateCallback
       );
@@ -156,7 +156,7 @@ export const Radios = Context.withContext(
     //@@viewOff:overriding
 
     //@@viewOn:private
-    _getInitialValue: function(props) {
+    _getInitialValue: function (props) {
       props = props || this.props;
       var value = null;
 
@@ -178,7 +178,7 @@ export const Radios = Context.withContext(
           if (typeof result === "object") {
             let selectedIndex =
               result.value &&
-              result.value.findIndex(item => {
+              result.value.findIndex((item) => {
                 return item.value === true;
               });
             if (result.feedback) {
@@ -195,7 +195,7 @@ export const Radios = Context.withContext(
             }
           } else {
             this.showError("validateError", null, {
-              context: { event: opt.event, func: this.props.onValidate, result: result }
+              context: { event: opt.event, func: this.props.onValidate, result: result },
             });
           }
         }
@@ -264,14 +264,14 @@ export const Radios = Context.withContext(
     },
 
     _getIndexByName(name) {
-      let index = this._itemsRefs.findIndex(item => {
+      let index = this._itemsRefs.findIndex((item) => {
         return item.getName() === name;
       });
       return index;
     },
 
     _getSelectedIndex() {
-      let index = this._itemsRefs.findIndex(item => {
+      let index = this._itemsRefs.findIndex((item) => {
         return !!item.getValue();
       });
       return index;
@@ -288,7 +288,7 @@ export const Radios = Context.withContext(
           result = {
             feedback: "error",
             message: this.props.requiredMessage || this.getLsiComponent("requiredMessageChoice"),
-            value: value
+            value: value,
           };
         }
       }
@@ -299,15 +299,15 @@ export const Radios = Context.withContext(
       let items = this._itemsRefs;
       this._currentFocus = this._getSelectedIndex();
 
-      let handleKeyDown = e => {
+      let handleKeyDown = (e) => {
         if (e.which === 38 || e.which === 40) {
           e.preventDefault();
         }
       };
 
-      let handleKeyUp = e => {
+      let handleKeyUp = (e) => {
         if (e.which === 38 || e.which === 40) {
-          let move = e => {
+          let move = (e) => {
             if (e.which === 38) {
               this._currentFocus = this._currentFocus - 1 < 0 ? items.length - 1 : this._currentFocus - 1;
             } else {
@@ -358,7 +358,7 @@ export const Radios = Context.withContext(
       if (typeof newBsColWidth === "string") {
         let colWidthArray = newBsColWidth.split(" ");
         newBsColWidth = {};
-        colWidthArray.forEach(colWidth => {
+        colWidthArray.forEach((colWidth) => {
           let match = colWidth.match(this.getDefault().columnRegexp);
           newBsColWidth[match[1]] = parseInt(match[2]);
         });
@@ -396,9 +396,9 @@ export const Radios = Context.withContext(
           inputAttrs={{
             onFocus: this._onFocus,
             onBlur: this._onBlur,
-            tabIndex: tabIndex
+            tabIndex: tabIndex,
           }}
-          ref_={checkbox => {
+          ref_={(checkbox) => {
             this._itemsRefs.push(checkbox);
           }}
           inputWidth={this._getInputWidth()}
@@ -423,12 +423,12 @@ export const Radios = Context.withContext(
     },
 
     _getCheckboxes() {
-      let selectedIndex = this.props.value.findIndex(item => {
+      let selectedIndex = this.props.value.findIndex((item) => {
         return item.name === this.getValue() && !item.disabled;
       });
 
       if (selectedIndex === -1) {
-        selectedIndex = this.props.value.findIndex(item => {
+        selectedIndex = this.props.value.findIndex((item) => {
           return !item.disabled;
         });
       }
@@ -438,7 +438,7 @@ export const Radios = Context.withContext(
         let columns;
         let numberOfColumns = this._getNumberOfColumns();
         columns = this._getColumns(numberOfColumns, selectedIndex);
-        columns.forEach(column => {
+        columns.forEach((column) => {
           result.push(
             <UU5.Bricks.Column colWidth={this.props.colWidth} className={this.getClassName("column")}>
               {column}
@@ -483,7 +483,7 @@ export const Radios = Context.withContext(
           {this.getInputWrapper(this.props.value ? this._getCheckboxes() : null)}
         </div>
       );
-    }
+    },
     //@@viewOn:render
   })
 );

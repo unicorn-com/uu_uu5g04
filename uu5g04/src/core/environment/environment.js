@@ -57,198 +57,201 @@ export const Environment = {
     "box",
     "smallBoxCollection",
     "smallBox",
-    "inline"
+    "inline",
   ],
   nestingLevelStrict: false,
   showProductionWarning: false,
   colorSchemaMap: {
     default: {
-      color: "default"
+      color: "default",
     },
     primary: {
       color: "blue-rich",
-      src: uu5BaseUrl + `assets/color-schema/blue-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/blue-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     success: {
       color: "green",
-      src: uu5BaseUrl + `assets/color-schema/green${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/green${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     info: {
       color: "blue",
-      src: uu5BaseUrl + `assets/color-schema/blue${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/blue${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     warning: {
       color: "orange",
-      src: uu5BaseUrl + `assets/color-schema/orange${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/orange${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     danger: {
       color: "red",
-      src: uu5BaseUrl + `assets/color-schema/red${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/red${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
 
     yellow: {
       color: "yellow",
-      src: uu5BaseUrl + `assets/color-schema/yellow${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/yellow${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     "yellow-rich": {
       color: "yellow-rich",
-      src: uu5BaseUrl + `assets/color-schema/yellow-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/yellow-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     orange: {
       color: "orange",
-      src: uu5BaseUrl + `assets/color-schema/orange${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/orange${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     "orange-rich": {
       color: "orange-rich",
-      src: uu5BaseUrl + `assets/color-schema/orange-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/orange-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     pink: {
       color: "pink",
-      src: uu5BaseUrl + `assets/color-schema/pink${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/pink${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     "pink-rich": {
       color: "pink-rich",
-      src: uu5BaseUrl + `assets/color-schema/pink-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/pink-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     red: {
       color: "red",
-      src: uu5BaseUrl + `assets/color-schema/red${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/red${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     "red-rich": {
       color: "red-rich",
-      src: uu5BaseUrl + `assets/color-schema/red-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/red-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     purple: {
       color: "purple",
-      src: uu5BaseUrl + `assets/color-schema/purple${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/purple${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     "purple-rich": {
       color: "purple-rich",
-      src: uu5BaseUrl + `assets/color-schema/purple-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/purple-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     cyan: {
       color: "cyan",
-      src: uu5BaseUrl + `assets/color-schema/cyan${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/cyan${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     "cyan-rich": {
       color: "cyan-rich",
-      src: uu5BaseUrl + `assets/color-schema/cyan-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/cyan-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     blue: {
       color: "blue",
-      src: uu5BaseUrl + `assets/color-schema/blue${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/blue${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     "blue-rich": {
       color: "blue-rich",
-      src: uu5BaseUrl + `assets/color-schema/blue-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/blue-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     green: {
       color: "green",
-      src: uu5BaseUrl + `assets/color-schema/green${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/green${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     "green-rich": {
       color: "green-rich",
-      src: uu5BaseUrl + `assets/color-schema/green-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/green-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     brown: {
       color: "brown",
-      src: uu5BaseUrl + `assets/color-schema/brown${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/brown${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     "brown-rich": {
       color: "brown-rich",
-      src: uu5BaseUrl + `assets/color-schema/brown-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/brown-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     amber: {
       color: "amber",
-      src: uu5BaseUrl + `assets/color-schema/amber${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/amber${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     "amber-rich": {
       color: "amber-rich",
-      src: uu5BaseUrl + `assets/color-schema/amber-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/amber-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     "deep-orange": {
       color: "deep-orange",
-      src: uu5BaseUrl + `assets/color-schema/deep-orange${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/deep-orange${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     "deep-orange-rich": {
       color: "deep-orange-rich",
-      src: uu5BaseUrl + `assets/color-schema/deep-orange-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src:
+        uu5BaseUrl + `assets/color-schema/deep-orange-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     "deep-purple": {
       color: "deep-purple",
-      src: uu5BaseUrl + `assets/color-schema/deep-purple${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/deep-purple${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     "deep-purple-rich": {
       color: "deep-purple-rich",
-      src: uu5BaseUrl + `assets/color-schema/deep-purple-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src:
+        uu5BaseUrl + `assets/color-schema/deep-purple-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     indigo: {
       color: "indigo",
-      src: uu5BaseUrl + `assets/color-schema/indigo${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/indigo${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     "indigo-rich": {
       color: "indigo-rich",
-      src: uu5BaseUrl + `assets/color-schema/indigo-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/indigo-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     teal: {
       color: "teal",
-      src: uu5BaseUrl + `assets/color-schema/teal${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/teal${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     "teal-rich": {
       color: "teal-rich",
-      src: uu5BaseUrl + `assets/color-schema/teal-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/teal-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     "light-green": {
       color: "light-green",
-      src: uu5BaseUrl + `assets/color-schema/light-green${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/light-green${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     "light-green-rich": {
       color: "light-green-rich",
-      src: uu5BaseUrl + `assets/color-schema/light-green-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src:
+        uu5BaseUrl + `assets/color-schema/light-green-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     "light-blue": {
       color: "light-blue",
-      src: uu5BaseUrl + `assets/color-schema/light-blue${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/light-blue${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     "light-blue-rich": {
       color: "light-blue-rich",
-      src: uu5BaseUrl + `assets/color-schema/light-blue-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/light-blue-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     lime: {
       color: "lime",
-      src: uu5BaseUrl + `assets/color-schema/lime${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/lime${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     "lime-rich": {
       color: "lime-rich",
-      src: uu5BaseUrl + `assets/color-schema/lime-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/lime-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     "blue-grey": {
       color: "blue-grey",
-      src: uu5BaseUrl + `assets/color-schema/blue-grey${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/blue-grey${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     "blue-grey-rich": {
       color: "blue-grey-rich",
-      src: uu5BaseUrl + `assets/color-schema/blue-grey-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/blue-grey-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     grey: {
       color: "grey",
-      src: uu5BaseUrl + `assets/color-schema/grey${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/grey${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     "grey-rich": {
       color: "grey-rich",
-      src: uu5BaseUrl + `assets/color-schema/grey-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/grey-rich${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     black: {
       color: "black",
-      src: uu5BaseUrl + `assets/color-schema/black${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/black${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     white: {
       color: "white",
-      src: uu5BaseUrl + `assets/color-schema/white${process.env.NODE_ENV === "production" ? ".min" : ""}.css`
+      src: uu5BaseUrl + `assets/color-schema/white${process.env.NODE_ENV === "production" ? ".min" : ""}.css`,
     },
     custom: {
-      color: "custom"
-    }
+      color: "custom",
+    },
   },
   colors: Colors,
   // External component calls
@@ -257,7 +260,7 @@ export const Environment = {
   limits: {},
   // Central component register (ccr)
   ccr: {
-    byKey: {}
+    byKey: {},
   },
   ccrStrict: false,
   CCRKEY_PAGE: "UU5.Bricks.Page",
@@ -274,62 +277,66 @@ export const Environment = {
   holdTimeout: 500,
   holdDiff: 20,
   uu5DataMap: {},
-  languages: [{ language: "cs", q: 1.0 }, { language: "sk", q: 0.7 }, { language: "en", q: 0.4 }],
+  languages: [
+    { language: "cs", q: 1.0 },
+    { language: "sk", q: 0.7 },
+    { language: "en", q: 0.4 },
+  ],
   languageList: {
     cs: {
       flag: uu5BaseUrl + "assets/flags/cz.png",
-      language: "Česky"
+      language: "Česky",
     },
     nl: {
       flag: uu5BaseUrl + "assets/flags/nl.png",
-      language: "Nederlands"
+      language: "Nederlands",
     },
     en: {
       flag: uu5BaseUrl + "assets/flags/gb.png",
-      language: "English"
+      language: "English",
     },
     "en-gb": {
       flag: uu5BaseUrl + "assets/flags/gb.png",
-      language: "English GB"
+      language: "English GB",
     },
     "en-us": {
       flag: uu5BaseUrl + "assets/flags/us.png",
-      language: "English US"
+      language: "English US",
     },
     fr: {
       flag: uu5BaseUrl + "assets/flags/fr.png",
-      language: "Français"
+      language: "Français",
     },
     de: {
       flag: uu5BaseUrl + "assets/flags/de.png",
-      language: "Deutsch"
+      language: "Deutsch",
     },
     pl: {
       flag: uu5BaseUrl + "assets/flags/pl.png",
-      language: "Polski"
+      language: "Polski",
     },
     ru: {
       flag: uu5BaseUrl + "assets/flags/ru.png",
-      language: "Pусский"
+      language: "Pусский",
     },
     sk: {
       flag: uu5BaseUrl + "assets/flags/sk.png",
-      language: "Slovensky"
+      language: "Slovensky",
     },
     es: {
       flag: uu5BaseUrl + "assets/flags/es.png",
-      language: "Español"
+      language: "Español",
     },
     uk: {
       // Ukraine
       flag: uu5BaseUrl + "assets/flags/ua.png",
-      language: "Українська"
+      language: "Українська",
     },
     it: {
       // Italian
       flag: uu5BaseUrl + "assets/flags/it.png",
-      language: "Italiano"
-    }
+      language: "Italiano",
+    },
     // "de-be": {
     //   // Belgie
     //   flag: uu5BaseUrl + 'assets/flags/be.png',
@@ -475,7 +482,7 @@ export const Environment = {
     regExp: "&nbsp;",
     nbSpace: "\u00a0",
     nbHyphen: "\u2011",
-    lsiReplacer: {}
+    lsiReplacer: {},
   },
 
   textCorrector: false,
@@ -488,7 +495,7 @@ export const Environment = {
 
   // {'cs-CZ': 'dd.MM.yyyy HH:mm:ss.SSS'}
   dateTimeFormat: {},
-  dateTimeZone: -new Date().getTimezoneOffset() / 60,
+  dateTimeZone: undefined,
   //uu5String tags regExp
   uu5StringTagsRegExp: null,
 
@@ -500,7 +507,7 @@ export const Environment = {
   basePathAttrName: "data-uu-app-base",
   trustedDomainRegexp: String.raw`^https://([^./]*[.])?plus4u[.]net(?=[:/]|$)`, // it's string so that app can re-configure it via JSON during app deploy
   allowStatistics: true,
-  allowTelemetry: true
+  allowTelemetry: true,
 };
 
 // TODO: backward compatibility
@@ -519,7 +526,7 @@ Environment.iconLibraries = {
   plus4u5: cdnBaseUri + "uu-plus4u5g01-icons/1.0.0/uu_plus4u5g01_icons.min.css",
   uubml: cdnBaseUri + "uu-uubmldraw-iconsg03/2.0.0/uu_uubmldraw_iconsg03.min.css",
   uubmlicon:
-    "https://uuappg01-eu-w-1.plus4u.net/uu-uubmldraw-stencilcatalogueg01/c168bd044ce044d48ba284c89eeb573b/stencil/getCss?code="
+    "https://uuappg01-eu-w-1.plus4u.net/uu-uubmldraw-stencilcatalogueg01/c168bd044ce044d48ba284c89eeb573b/stencil/getCss?code=",
 };
 
 Environment.IconManager = new IconManager(Environment.iconLibraries);
@@ -528,7 +535,7 @@ Environment.addIconLibrary = (iconsKey, src) => {
   Environment.iconLibraries[iconsKey] = src;
 };
 
-Environment.removeIconLibrary = iconsKey => {
+Environment.removeIconLibrary = (iconsKey) => {
   delete Environment.iconLibraries[iconsKey];
 };
 
@@ -543,7 +550,7 @@ Environment.addLibrary = (libraryName, params) => {
   return this;
 };
 
-Environment.getLibrary = libraryName => {
+Environment.getLibrary = (libraryName) => {
   let library = Environment.library;
   if (libraryName) {
     library = library[libraryName];
@@ -555,14 +562,21 @@ Environment.disableStatistics = () => (Environment.allowStatistics = false);
 Environment.enableStatistics = () => (Environment.allowStatistics = true);
 Environment.isStatistics = () => Environment.allowStatistics;
 
-const statistics = Statistics(Environment.STATISTICS_BASE_PATH, Environment.isStatistics);
+export const statistics = Statistics(Environment.STATISTICS_BASE_PATH, Environment.isStatistics);
 
-// library = {name, version}
-Environment.addRuntimeLibrary = library => {
-  statistics.addLibrary(library);
-  return this;
-};
-Environment.addRuntimeLibrary({ name: Environment.name, version: Environment.version });
+// TODO Uncomment when uu5g05 gets integrated here. Currently this was moved to library-registry.js
+// to prevent circular dependency.
+// library = {name, version} or {name, version, namespace}
+// Environment.addRuntimeLibrary = library => {
+//   Utils.LibraryRegistry.registerLibrary(library);
+//   return this;
+// };
+// const origG05RegisterLibrary = Utils.LibraryRegistry.registerLibrary;
+// Utils.LibraryRegistry.registerLibrary = function(...args) {
+//   origG05RegisterLibrary.apply(this, args);
+//   statistics.addLibrary(args[0]);
+// };
+// for (let item of Utils.LibraryRegistry.listLibraries()) statistics.addLibrary(item);
 
 Environment.getRuntimeLibraries = () => {
   return statistics.getLibraries();
@@ -570,18 +584,18 @@ Environment.getRuntimeLibraries = () => {
 
 Environment.colorSchema = Object.keys(Environment.colorSchemaMap);
 
-Environment.isDevelopment = function() {
+Environment.isDevelopment = function () {
   return Environment.mode === "development";
 };
 
-Environment.isProduction = function() {
+Environment.isProduction = function () {
   return Environment.mode === "production";
 };
 
 // Version
 process.env.NODE_ENV !== "test" && console.log(Environment.licence);
 
-Environment.changeColorSchema = function(key, colorSchema, src) {
+Environment.changeColorSchema = function (key, colorSchema, src) {
   Environment.colorSchemaMap[key] = Environment.colorSchemaMap[key] || {};
   // save original color - only first time to prevent rewrite original value
   if (Environment.colorSchemaMap[key].originalColor === undefined) {
@@ -596,7 +610,7 @@ Environment.changeColorSchema = function(key, colorSchema, src) {
   return this;
 };
 
-Environment.getColorSchema = function(key) {
+Environment.getColorSchema = function (key) {
   let colorSchema = Environment.colorSchemaMap[key];
   let color = null;
 
@@ -613,44 +627,44 @@ Environment.getColorSchema = function(key) {
   return color;
 };
 
-Environment.search = searchedTexts => {
+Environment.search = (searchedTexts) => {
   let el = Environment.EventListener || window.UU5.Environment.EventListener;
   el.triggerHighlight(searchedTexts);
   return this;
 };
 
-Environment.setDateTimeFormat = format => {
+Environment.setDateTimeFormat = (format) => {
   let el = Environment.EventListener || window.UU5.Environment.EventListener;
   el.triggerDateTime({ format: format });
   return this;
 };
 
-Environment.setDateTimeCountry = country => {
+Environment.setDateTimeCountry = (country) => {
   let el = Environment.EventListener || window.UU5.Environment.EventListener;
   el.triggerDateTime({ country: country });
   return this;
 };
 
-Environment.setDateTimeZone = timeZone => {
+Environment.setDateTimeZone = (timeZone) => {
   let el = Environment.EventListener || window.UU5.Environment.EventListener;
   el.triggerDateTime({ timeZone: timeZone });
   return this;
 };
 
-Environment.setDateTimeOptions = opt => {
+Environment.setDateTimeOptions = (opt) => {
   let el = Environment.EventListener || window.UU5.Environment.EventListener;
   el.triggerDateTime(opt);
   return this;
 };
 
-Environment.setNumberCountry = country => {
+Environment.setNumberCountry = (country) => {
   Environment.numberOptions.country = country;
   let el = Environment.EventListener || window.UU5.Environment.EventListener;
   el.triggerNumber({ country: country });
   return this;
 };
 
-Environment.setNumberOptions = opt => {
+Environment.setNumberOptions = (opt) => {
   Environment.numberOptions = opt;
   let el = Environment.EventListener || window.UU5.Environment.EventListener;
   el.triggerNumber(opt);
@@ -664,7 +678,7 @@ Environment.setRoute = (/*route, params, fragment, ..., setStateCallback*/ ...ar
   return Environment.getRouter().setRoute(...args);
 };
 
-Environment.hardSpace.lsiReplacer["cs-cz"] = function(text) {
+Environment.hardSpace.lsiReplacer["cs-cz"] = function (text) {
   var newText = text.replace(new RegExp(Environment.hardSpace.regExp, "g"), Environment.hardSpace.nbSpace);
 
   var nbSpace = Environment.hardSpace.nbSpace;
@@ -690,7 +704,7 @@ Environment.hardSpace.lsiReplacer["cs-cz"] = function(text) {
       "doc.",
       "paeddr.",
       "dr.",
-      "phmr."
+      "phmr.",
     ],
     degreesAfter: ["ph.d.", "th.d.", "csc.", "drsc.", "dis."],
     units: [
@@ -750,8 +764,8 @@ Environment.hardSpace.lsiReplacer["cs-cz"] = function(text) {
       "MB",
       "GB",
       "kHz",
-      "MHz"
-    ]
+      "MHz",
+    ],
   };
 
   var spaceSplitter = newText.split(" ");
@@ -807,7 +821,7 @@ Environment.hardSpace.lsiReplacer["cs-cz"] = function(text) {
   return resultText;
 };
 
-Environment.hardSpace.lsiReplacer["code"] = function(text) {
+Environment.hardSpace.lsiReplacer["code"] = function (text) {
   var resultText = text;
 
   resultText = resultText.replace(/ /g, Environment.hardSpace.nbSpace);
@@ -816,7 +830,7 @@ Environment.hardSpace.lsiReplacer["code"] = function(text) {
   return resultText;
 };
 
-Environment.setSession = session => {
+Environment.setSession = (session) => {
   Environment.session = session.currentSession || session;
 };
 
@@ -845,13 +859,13 @@ Environment.getSession = () => {
 
 Environment.App = {
   vucConfig: {
-    errorRoute: null
+    errorRoute: null,
   },
   callConfig: {
     authorizeVuc: () => {
       console.error(`Please add to UU5.Environment.App.callConfig.authorizeVuc your own function.`);
-    }
-  }
+    },
+  },
 };
 
 Environment.Lsi = {};
@@ -870,7 +884,7 @@ Environment.getUrlBuilder = () => {
   return Environment.urlBuilder;
 };
 
-Environment.setUrlBuilder = urlBuilder => {
+Environment.setUrlBuilder = (urlBuilder) => {
   Environment.urlBuilder = urlBuilder;
 };
 
@@ -902,7 +916,7 @@ Environment.getScrollBarWidth = () => {
 };
 
 let trustedDomainRegexp;
-Environment.isTrustedDomain = url => {
+Environment.isTrustedDomain = (url) => {
   if (!trustedDomainRegexp) trustedDomainRegexp = new RegExp(Environment.trustedDomainRegexp, "i");
   let absUrl;
   if (url) {
@@ -927,7 +941,7 @@ Environment.isPageFocused = () => {
 Environment.numberOptions = {
   country: undefined,
   thousandSeparator: undefined,
-  decimalSeparator: undefined
+  decimalSeparator: undefined,
 };
 
 Environment._fixedOffset = 0; // Height of the biggest permanently fixed element (usually Heading)

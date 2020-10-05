@@ -35,9 +35,9 @@ export const Div = VisualComponent.create({
   statics: {
     tagName: ns.name("Div"),
     classNames: {
-      main: ns.css("div")
+      main: ns.css("div"),
     },
-    nestingLevelList: Environment.getNestingLevelList("bigBoxCollection", "smallBox")
+    nestingLevelList: Environment.getNestingLevelList("bigBoxCollection", "smallBox"),
   },
   //@@viewOff:statics
 
@@ -60,11 +60,11 @@ export const Div = VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return this.getNestingLevel()
       ? Element.create("div", this.getMainAttrs(), this.getChildren(), this.getDisabledCover())
       : null;
-  }
+  },
   //@@viewOff:render
 });
 

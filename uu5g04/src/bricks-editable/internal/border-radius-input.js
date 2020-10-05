@@ -10,7 +10,7 @@ const { createVisualComponent } = LazyLoadedLibraries["uu5g04-hooks"];
 
 //@@viewOn:statics
 const STATICS = {
-  displayName: ns.name("BorderRadiusInput")
+  displayName: ns.name("BorderRadiusInput"),
 };
 //@@viewOff:statics
 
@@ -22,7 +22,7 @@ const BorderRadiusInput = createVisualComponent({
     onChange: UU5.PropTypes.func,
     label: UU5.PropTypes.object,
     items: UU5.PropTypes.arrayOf(UU5.PropTypes.object),
-    value: UU5.PropTypes.string
+    value: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
@@ -36,9 +36,9 @@ const BorderRadiusInput = createVisualComponent({
       { value: "4px" },
       { value: "8px" },
       { value: "16px" },
-      { value: "50%", content: Lsi.rounded }
+      { value: "50%", content: Lsi.rounded },
     ],
-    value: undefined
+    value: undefined,
   },
   //@@viewOff:defaultProps
 
@@ -55,7 +55,7 @@ const BorderRadiusInput = createVisualComponent({
     //@@viewOn:render
     return <UU5.Forms.SwitchSelector {...props} label={label} value={value} onChange={onChange} items={items} />;
     //@@viewOff:render
-  }
+  },
 });
 
 export default BorderRadiusInput;

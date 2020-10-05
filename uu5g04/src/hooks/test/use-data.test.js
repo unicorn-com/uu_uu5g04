@@ -4,7 +4,7 @@ import { useData } from "uu5g04-hooks";
 const { wait, renderHook, act } = UU5.Test.Tools;
 
 function renderHookParallelOps(initialDataFromOnLoad, ...hookArgs) {
-  let waitable = defaultFn => {
+  let waitable = (defaultFn) => {
     return jest.fn(async (...args) => {
       let lastArg = args.pop();
       if (!lastArg || !lastArg.fn) return defaultFn(...args, lastArg); // this happens for onLoad which is called automatically (without our "startOp().unblock()" stuff)
@@ -24,7 +24,7 @@ function renderHookParallelOps(initialDataFromOnLoad, ...hookArgs) {
       pausingPromiseResolve = resolve;
     });
     let opFinisherFn = typeof args[args.length - 1] === "function" ? args.pop() : null;
-    let typeCapitalized = type.replace(/^./, m => m.toUpperCase());
+    let typeCapitalized = type.replace(/^./, (m) => m.toUpperCase());
     let hookValue = result.lastResult();
     act(() => {
       hookValue["handle" + typeCapitalized](...args, { promise: pausingPromise, fn: opFinisherFn });
@@ -33,7 +33,7 @@ function renderHookParallelOps(initialDataFromOnLoad, ...hookArgs) {
       async unblock() {
         pausingPromiseResolve();
         await wait();
-      }
+      },
     };
   };
   result.forceRender = () => result.wrapper.setProps({ foo: Math.random() });
@@ -41,13 +41,13 @@ function renderHookParallelOps(initialDataFromOnLoad, ...hookArgs) {
 }
 
 const INITIAL_DATA1 = {
-  key: "initial1"
+  key: "initial1",
 };
 const LOAD_DATA1 = {
-  key: "load1"
+  key: "load1",
 };
 const LOAD_DATA2 = {
-  key: "load2"
+  key: "load2",
 };
 
 describe("[uu5g04-hooks] useData behaviour", () => {
@@ -63,7 +63,7 @@ describe("[uu5g04-hooks] useData behaviour", () => {
       handleLoad: expect.any(Function),
       handleUpdate: expect.any(Function),
       setData: expect.any(Function),
-      clearOperations: expect.any(Function)
+      clearOperations: expect.any(Function),
     });
   });
 
@@ -75,7 +75,7 @@ describe("[uu5g04-hooks] useData behaviour", () => {
       viewState: "ready",
       errorState: null,
       error: null,
-      operations: []
+      operations: [],
     });
   });
 
@@ -88,7 +88,7 @@ describe("[uu5g04-hooks] useData behaviour", () => {
       viewState: "ready",
       errorState: null,
       error: null,
-      operations: []
+      operations: [],
     });
     await wait();
     expect(onLoad).toHaveBeenCalledTimes(0);
@@ -153,7 +153,7 @@ describe("[uu5g04-hooks] useData behaviour", () => {
     let { lastResult } = renderHook(useData, { onLoad: jest.fn(async () => LOAD_DATA1) });
     expect(lastResult()).toMatchObject({
       viewState: "load",
-      operations: [{ type: "load", state: "pending", result: undefined }]
+      operations: [{ type: "load", state: "pending", result: undefined }],
     });
     await wait();
     expect(lastResult()).toMatchObject({
@@ -162,7 +162,7 @@ describe("[uu5g04-hooks] useData behaviour", () => {
       viewState: "ready",
       errorState: null,
       error: null,
-      operations: [{ type: "load", state: "success", result: LOAD_DATA1 }]
+      operations: [{ type: "load", state: "success", result: LOAD_DATA1 }],
     });
   });
 
@@ -171,7 +171,7 @@ describe("[uu5g04-hooks] useData behaviour", () => {
     let { lastResult } = renderHook(useData, {
       onLoad: jest.fn(async () => {
         throw (error = new Error("Test error"));
-      })
+      }),
     });
     await wait();
     expect(lastResult()).toMatchObject({
@@ -180,7 +180,7 @@ describe("[uu5g04-hooks] useData behaviour", () => {
       viewState: "error",
       errorState: "load",
       error: error,
-      operations: [{ type: "load", state: "error", result: error }]
+      operations: [{ type: "load", state: "error", result: error }],
     });
   });
 
@@ -189,7 +189,7 @@ describe("[uu5g04-hooks] useData behaviour", () => {
     let { lastResult, rerender } = renderHook(useData, {
       onLoad: jest.fn(async () => {
         throw (error = new Error("Test error"));
-      })
+      }),
     });
     await wait();
     expect(lastResult()).toMatchObject({ error });
@@ -197,7 +197,7 @@ describe("[uu5g04-hooks] useData behaviour", () => {
     rerender({ onLoad: jest.fn(async () => LOAD_DATA2) });
     expect(lastResult()).toMatchObject({
       viewState: "load",
-      operations: [{ type: "load", state: "pending", result: undefined }]
+      operations: [{ type: "load", state: "pending", result: undefined }],
     });
     await wait();
     expect(lastResult()).toMatchObject({
@@ -206,7 +206,7 @@ describe("[uu5g04-hooks] useData behaviour", () => {
       viewState: "ready",
       errorState: null,
       error: null,
-      operations: [{ type: "load", state: "success", result: LOAD_DATA2 }]
+      operations: [{ type: "load", state: "success", result: LOAD_DATA2 }],
     });
   });
 
@@ -223,7 +223,7 @@ describe("[uu5g04-hooks] useData behaviour", () => {
       viewState: "ready",
       errorState: null,
       error: null,
-      operations: [{ type: "load", state: "success", result: LOAD_DATA1 }]
+      operations: [{ type: "load", state: "success", result: LOAD_DATA1 }],
     });
 
     let handleLoadResolved;
@@ -240,7 +240,7 @@ describe("[uu5g04-hooks] useData behaviour", () => {
       viewState: "load",
       errorState: null,
       error: null,
-      operations: [{ type: "load", state: "pending", result: undefined }]
+      operations: [{ type: "load", state: "pending", result: undefined }],
     });
 
     await wait(); // finish update
@@ -250,7 +250,7 @@ describe("[uu5g04-hooks] useData behaviour", () => {
       viewState: "ready",
       errorState: null,
       error: null,
-      operations: [{ type: "load", state: "success", result: LOAD_DATA2 }]
+      operations: [{ type: "load", state: "success", result: LOAD_DATA2 }],
     });
     expect(handleLoadResolved).toBe(true);
   });
@@ -287,7 +287,7 @@ describe("[uu5g04-hooks] useData behaviour", () => {
       viewState: "update",
       errorState: null,
       error: null,
-      operations: [{ type: "update", state: "pending", result: undefined }]
+      operations: [{ type: "update", state: "pending", result: undefined }],
     });
 
     await wait(); // finish update
@@ -297,7 +297,7 @@ describe("[uu5g04-hooks] useData behaviour", () => {
       viewState: "ready",
       errorState: null,
       error: null,
-      operations: [{ type: "update", state: "success", result: UPDATE1_FULL }]
+      operations: [{ type: "update", state: "success", result: UPDATE1_FULL }],
     });
     expect(handleUpdateResolved).toBe(true);
   });
@@ -314,14 +314,14 @@ describe("[uu5g04-hooks] useData behaviour", () => {
     act(() => {
       lastResult()
         .handleUpdate(UPDATE1)
-        .catch(e => null);
+        .catch((e) => null);
     });
     expect(onUpdate).toHaveBeenCalledTimes(1);
     expect(onUpdate).toHaveBeenCalledWith(UPDATE1);
     expect(lastResult()).toMatchObject({
       syncData: UPDATE1,
       asyncData: INITIAL_DATA1,
-      operations: [{ type: "update", state: "pending", result: undefined }]
+      operations: [{ type: "update", state: "pending", result: undefined }],
     });
 
     await wait(); // finish update
@@ -331,7 +331,7 @@ describe("[uu5g04-hooks] useData behaviour", () => {
       viewState: "error",
       errorState: "update",
       error,
-      operations: [{ type: "update", state: "error", result: error }]
+      operations: [{ type: "update", state: "error", result: error }],
     });
   });
 
@@ -341,7 +341,7 @@ describe("[uu5g04-hooks] useData behaviour", () => {
       onLoad: jest.fn(async () => {
         throw (error = new Error("Test error"));
       }),
-      onUpdate: jest.fn(async value => value)
+      onUpdate: jest.fn(async (value) => value),
     });
     await wait();
     expect(lastResult()).toMatchObject({ viewState: "error", errorState: "load", error });
@@ -349,7 +349,7 @@ describe("[uu5g04-hooks] useData behaviour", () => {
     act(() => {
       lastResult()
         .handleUpdate(123)
-        .catch(e => null);
+        .catch((e) => null);
     });
     expect(lastResult()).toMatchObject({ viewState: "update" });
     await wait();
@@ -359,7 +359,7 @@ describe("[uu5g04-hooks] useData behaviour", () => {
       viewState: "ready",
       errorState: null,
       error: null,
-      operations: [{ type: "update", state: "success", result: 123 }]
+      operations: [{ type: "update", state: "success", result: 123 }],
     });
   });
 
@@ -387,7 +387,7 @@ describe("[uu5g04-hooks] useData behaviour", () => {
       viewState: "ready",
       errorState: null,
       error: null,
-      operations: [{ type: "set", state: "success", result: null }] // "set" operation does no call so its result is always null
+      operations: [{ type: "set", state: "success", result: null }], // "set" operation does no call so its result is always null
     });
   });
 
@@ -406,36 +406,48 @@ describe("[uu5g04-hooks] useData behaviour", () => {
       { viewState: "load", operations: [] },
       {
         viewState: "load",
-        operations: [{ type: "load", state: "pending" }]
+        operations: [{ type: "load", state: "pending" }],
       },
       {
         viewState: "ready",
-        operations: [{ type: "load", state: "success", result: INITIAL_DATA1 }]
+        operations: [{ type: "load", state: "success", result: INITIAL_DATA1 }],
       },
       {
         viewState: "update",
-        operations: [{ type: "update", state: "pending" }]
+        operations: [{ type: "update", state: "pending" }],
       },
       {
         viewState: "update",
-        operations: [{ type: "update", state: "pending" }, { type: "update", state: "pending" }]
+        operations: [
+          { type: "update", state: "pending" },
+          { type: "update", state: "pending" },
+        ],
       },
       {
         viewState: "update",
-        operations: [{ type: "update", state: "success", result: 123 }, { type: "update", state: "pending" }]
+        operations: [
+          { type: "update", state: "success", result: 123 },
+          { type: "update", state: "pending" },
+        ],
       },
       {
         viewState: "update",
-        operations: [{ type: "update", state: "pending" }, { type: "update", state: "pending" }]
+        operations: [
+          { type: "update", state: "pending" },
+          { type: "update", state: "pending" },
+        ],
       },
       {
         viewState: "update",
-        operations: [{ type: "update", state: "success", result: 234 }, { type: "update", state: "pending" }]
+        operations: [
+          { type: "update", state: "success", result: 234 },
+          { type: "update", state: "pending" },
+        ],
       },
       {
         viewState: "ready",
-        operations: [{ type: "update", state: "success", result: 345 }]
-      }
+        operations: [{ type: "update", state: "success", result: 345 }],
+      },
     ]);
   });
 
@@ -454,31 +466,26 @@ describe("[uu5g04-hooks] useData behaviour", () => {
       { viewState: "load", operations: [] },
       {
         viewState: "load",
-        operations: [{ type: "load", state: "pending" }]
+        operations: [{ type: "load", state: "pending" }],
       },
       {
         viewState: "ready",
-        operations: [{ type: "load", state: "success", result: INITIAL_DATA1 }]
-      },
-      {
-        viewState: "update",
-        operations: [{ type: "load", state: "success", result: INITIAL_DATA1 }, { type: "update", state: "pending" }]
+        operations: [{ type: "load", state: "success", result: INITIAL_DATA1 }],
       },
       {
         viewState: "update",
         operations: [
           { type: "load", state: "success", result: INITIAL_DATA1 },
           { type: "update", state: "pending" },
-          { type: "update", state: "pending" }
-        ]
+        ],
       },
       {
         viewState: "update",
         operations: [
           { type: "load", state: "success", result: INITIAL_DATA1 },
-          { type: "update", state: "success", result: 123 },
-          { type: "update", state: "pending" }
-        ]
+          { type: "update", state: "pending" },
+          { type: "update", state: "pending" },
+        ],
       },
       {
         viewState: "update",
@@ -486,8 +493,16 @@ describe("[uu5g04-hooks] useData behaviour", () => {
           { type: "load", state: "success", result: INITIAL_DATA1 },
           { type: "update", state: "success", result: 123 },
           { type: "update", state: "pending" },
-          { type: "update", state: "pending" }
-        ]
+        ],
+      },
+      {
+        viewState: "update",
+        operations: [
+          { type: "load", state: "success", result: INITIAL_DATA1 },
+          { type: "update", state: "success", result: 123 },
+          { type: "update", state: "pending" },
+          { type: "update", state: "pending" },
+        ],
       },
       {
         viewState: "update",
@@ -495,8 +510,8 @@ describe("[uu5g04-hooks] useData behaviour", () => {
           { type: "load", state: "success", result: INITIAL_DATA1 },
           { type: "update", state: "success", result: 123 },
           { type: "update", state: "success", result: 234 },
-          { type: "update", state: "pending" }
-        ]
+          { type: "update", state: "pending" },
+        ],
       },
       {
         viewState: "ready",
@@ -504,22 +519,22 @@ describe("[uu5g04-hooks] useData behaviour", () => {
           { type: "load", state: "success", result: INITIAL_DATA1 },
           { type: "update", state: "success", result: 123 },
           { type: "update", state: "success", result: 234 },
-          { type: "update", state: "success", result: 345 }
-        ]
-      }
+          { type: "update", state: "success", result: 345 },
+        ],
+      },
     ]);
   });
 
   it("clearOperations; should clean all finished operations", async () => {
     let { lastResult, startOp, forceRender } = renderHookParallelOps(INITIAL_DATA1, {
-      preserveOperations: true
+      preserveOperations: true,
     });
     await wait();
     await startOp("update", 123, async () => 123).unblock();
     await startOp("update", 234, async () => 234).unblock();
     startOp("update", 345, async () => 345);
     expect(lastResult().operations.length).toBe(4); // finished "load" + 2 finished updates + 1 unfinished update
-    let opIds = lastResult().operations.map(op => op.id);
+    let opIds = lastResult().operations.map((op) => op.id);
 
     lastResult().clearOperations();
     forceRender();
@@ -529,70 +544,70 @@ describe("[uu5g04-hooks] useData behaviour", () => {
 
   it("clearOperations; should clean by id", async () => {
     let { lastResult, startOp, forceRender } = renderHookParallelOps(INITIAL_DATA1, {
-      preserveOperations: true
+      preserveOperations: true,
     });
     await wait();
     await startOp("update", 123, async () => 123).unblock();
     await startOp("update", 234, async () => 234).unblock();
     startOp("update", 345, async () => 345);
     expect(lastResult().operations.length).toBe(4); // finished "load" + 2 finished updates + 1 unfinished update
-    let opIds = lastResult().operations.map(op => op.id);
+    let opIds = lastResult().operations.map((op) => op.id);
 
     lastResult().clearOperations(opIds[1]);
     forceRender();
     expect(lastResult().operations.length).toBe(3);
-    expect(lastResult().operations).toMatchObject(opIds.filter((id, i) => i !== 1).map(id => ({ id })));
+    expect(lastResult().operations).toMatchObject(opIds.filter((id, i) => i !== 1).map((id) => ({ id })));
   });
 
   it("clearOperations; should clean by item", async () => {
     let { lastResult, startOp, forceRender } = renderHookParallelOps(INITIAL_DATA1, {
-      preserveOperations: true
+      preserveOperations: true,
     });
     await wait();
     await startOp("update", 123, async () => 123).unblock();
     await startOp("update", 234, async () => 234).unblock();
     startOp("update", 345, async () => 345);
     expect(lastResult().operations.length).toBe(4); // finished "load" + 2 finished updates + 1 unfinished update
-    let opIds = lastResult().operations.map(op => op.id);
+    let opIds = lastResult().operations.map((op) => op.id);
 
     lastResult().clearOperations(lastResult().operations[1]);
     forceRender();
     expect(lastResult().operations.length).toBe(3);
-    expect(lastResult().operations).toMatchObject(opIds.filter((id, i) => i !== 1).map(id => ({ id })));
+    expect(lastResult().operations).toMatchObject(opIds.filter((id, i) => i !== 1).map((id) => ({ id })));
   });
 
   it("clearOperations; should clean by item (array)", async () => {
     let { lastResult, startOp, forceRender } = renderHookParallelOps(INITIAL_DATA1, {
-      preserveOperations: true
+      preserveOperations: true,
     });
     await wait();
     await startOp("update", 123, async () => 123).unblock();
     await startOp("update", 234, async () => 234).unblock();
     startOp("update", 345, async () => 345);
     expect(lastResult().operations.length).toBe(4); // finished "load" + 2 finished updates + 1 unfinished update
-    let opIds = lastResult().operations.map(op => op.id);
+    let opIds = lastResult().operations.map((op) => op.id);
 
     lastResult().clearOperations(lastResult().operations.slice(0, 2));
     forceRender();
     expect(lastResult().operations.length).toBe(2);
-    expect(lastResult().operations).toMatchObject(opIds.filter((id, i) => i >= 2).map(id => ({ id })));
+    expect(lastResult().operations).toMatchObject(opIds.filter((id, i) => i >= 2).map((id) => ({ id })));
   });
 
   it("clearOperations; should clean by ids but only finished ops", async () => {
     let { lastResult, startOp, forceRender } = renderHookParallelOps(INITIAL_DATA1, {
-      preserveOperations: true
+      preserveOperations: true,
     });
     await wait();
     await startOp("update", 123, async () => 123).unblock();
     await startOp("update", 234, async () => 234).unblock();
     startOp("update", 345, async () => 345);
     expect(lastResult().operations.length).toBe(4); // finished "load" + 2 finished updates + 1 unfinished update
-    let opIds = lastResult().operations.map(op => op.id);
+    let opIds = lastResult().operations.map((op) => op.id);
 
     lastResult().clearOperations([opIds[2], opIds[3]]);
     forceRender();
     expect(lastResult().operations.length).toBe(3);
-    expect(lastResult().operations).toMatchObject(opIds.filter((id, i) => i !== 2).map(id => ({ id }))); // last op is still running => should be present
+    expect(lastResult().operations).toMatchObject(opIds.filter((id, i) => i !== 2).map((id) => ({ id }))); // last op is still running => should be present
   });
 
   it.skip("parallel operations; should replace data in proper order even if calls resolve out-of-order", async () => {
@@ -605,7 +620,7 @@ describe("[uu5g04-hooks] useData behaviour", () => {
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: 123,
-      asyncData: INITIAL_DATA1
+      asyncData: INITIAL_DATA1,
     });
 
     // FIXME It is better to
@@ -623,14 +638,14 @@ describe("[uu5g04-hooks] useData behaviour", () => {
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: 234,
-      asyncData: INITIAL_DATA1
+      asyncData: INITIAL_DATA1,
     });
 
     await updateOp2.unblock();
     await updateOp1.unblock();
     expect(lastResult()).toMatchObject({
       syncData: 234,
-      asyncData: 234
+      asyncData: 234,
     });
   });
 
@@ -644,7 +659,7 @@ describe("[uu5g04-hooks] useData behaviour", () => {
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: 123,
-      asyncData: INITIAL_DATA1
+      asyncData: INITIAL_DATA1,
     });
 
     let updateOp2 = startOp("update", 234, async () => 234);
@@ -652,7 +667,7 @@ describe("[uu5g04-hooks] useData behaviour", () => {
     expect(onUpdate).toHaveBeenCalledTimes(1); // update#2 should not have started executing yet
     expect(lastResult()).toMatchObject({
       syncData: 234,
-      asyncData: INITIAL_DATA1
+      asyncData: INITIAL_DATA1,
     });
 
     let updateOp3 = startOp("update", 345, async () => 345);
@@ -660,20 +675,20 @@ describe("[uu5g04-hooks] useData behaviour", () => {
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: 345,
-      asyncData: INITIAL_DATA1
+      asyncData: INITIAL_DATA1,
     });
 
     await updateOp1.unblock();
     expect(lastResult()).toMatchObject({
       syncData: 345,
-      asyncData: 123
+      asyncData: 123,
     });
     await updateOp2.unblock();
     await updateOp3.unblock();
     expect(onUpdate).toHaveBeenCalledTimes(3); // TODO If we allow skipping of updates (update#2 could have been skipped altogether), this can be 2.
     expect(lastResult()).toMatchObject({
       syncData: 345,
-      asyncData: 345
+      asyncData: 345,
     });
   });
 });

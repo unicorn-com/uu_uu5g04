@@ -34,12 +34,12 @@ export const Switch = UU5.Common.VisualComponent.create({
       icon: ns.css("switch-icon"),
       loading: ns.css("switch-loading"),
       loadingIcon: "uu5-forms-input-loading-icon",
-      originalColorSchema: "original-color-schema-"
+      originalColorSchema: "original-color-schema-",
     },
     defaults: {
       offIcon: "mdi-close",
-      onIcon: "mdi-check"
-    }
+      onIcon: "mdi-check",
+    },
   },
   //@@viewOff:statics
 
@@ -51,7 +51,7 @@ export const Switch = UU5.Common.VisualComponent.create({
     onIcon: UU5.PropTypes.string,
     onChange: UU5.PropTypes.func,
     loading: UU5.PropTypes.bool,
-    colorSchemaOff: UU5.PropTypes.string
+    colorSchemaOff: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
@@ -64,7 +64,7 @@ export const Switch = UU5.Common.VisualComponent.create({
       onIcon: this.defaults.onIcon,
       onChange: null,
       loading: false,
-      colorSchemaOff: "grey"
+      colorSchemaOff: "grey",
     };
   },
   //@@viewOff:getDefaultProps
@@ -72,7 +72,7 @@ export const Switch = UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
-      switchedOn: this.props.switchedOn
+      switchedOn: this.props.switchedOn,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -96,7 +96,7 @@ export const Switch = UU5.Common.VisualComponent.create({
   },
 
   toggle(setStateCallback) {
-    this.setState(state => ({ switchedOn: !state.switchedOn }), setStateCallback);
+    this.setState((state) => ({ switchedOn: !state.switchedOn }), setStateCallback);
     return this;
   },
 
@@ -120,7 +120,7 @@ export const Switch = UU5.Common.VisualComponent.create({
   //@@viewOn:private
   _getMainPropsToPass() {
     let props = this.getMainPropsToPass();
-    props.onClick = e => {
+    props.onClick = (e) => {
       this._onChange(e);
     };
     props.className += " " + (this.state.switchedOn ? this.getClassName("on") : this.getClassName("off"));
@@ -267,14 +267,14 @@ export const Switch = UU5.Common.VisualComponent.create({
     return (
       <UU5.Bricks.Button
         {...this._getMainPropsToPass()}
-        ref_={buttonSwitch => (this._buttonSwitch = buttonSwitch)}
+        ref_={(buttonSwitch) => (this._buttonSwitch = buttonSwitch)}
         size={this.props.size}
         onClick={this._onChange}
         colorSchema={this.isSwitchedOn() ? this.props.colorSchema : this.props.colorSchemaOff}
         content={this._getButtonContent()}
       />
     );
-  }
+  },
   //@@viewOn:render
 });
 

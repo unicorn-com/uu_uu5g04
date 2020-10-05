@@ -26,7 +26,7 @@ import VisualComponent from "./visual-component.js";
 import "./text-corrector.less";
 //@@viewOff:imports
 
-export const TextCorrectorContextConsumer = withTextCorrectorContext(props => {
+export const TextCorrectorContextConsumer = withTextCorrectorContext((props) => {
   if (props.checkGrammar || props.checkHighlight || props.checkSpaces || Environment.textCorrector) {
     let extendedProps = Tools.merge(props);
     if (Environment.textCorrector) {
@@ -56,11 +56,11 @@ export const TextCorrectorComponent = VisualComponent.create({
     classNames: {
       main: ns.css("text-corrector"),
       error: ns.css("text-corrector-error"),
-      highlight: ns.css("text-corrector-highlight")
+      highlight: ns.css("text-corrector-highlight"),
     },
     defaults: {
-      highlightEvent: Tools.events.highlight
-    }
+      highlightEvent: Tools.events.highlight,
+    },
   },
   //@@viewOff:statics
 
@@ -70,7 +70,7 @@ export const TextCorrectorComponent = VisualComponent.create({
     language: PropTypes.string,
     checkSpaces: PropTypes.bool,
     checkGrammar: PropTypes.bool,
-    checkHighlight: PropTypes.bool
+    checkHighlight: PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -81,7 +81,7 @@ export const TextCorrectorComponent = VisualComponent.create({
       language: null,
       checkSpaces: false,
       checkGrammar: false,
-      checkHighlight: false
+      checkHighlight: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -89,7 +89,7 @@ export const TextCorrectorComponent = VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
-      text: this._correctSpaces(this.props, this.props.text)
+      text: this._correctSpaces(this.props, this.props.text),
     };
   },
 
@@ -142,12 +142,12 @@ export const TextCorrectorComponent = VisualComponent.create({
     let spaceTmp = [];
 
     let spaceSplitter = text.split(" ");
-    spaceSplitter.forEach(word => {
+    spaceSplitter.forEach((word) => {
       if (word.indexOf(Environment.hardSpace.nbSpace) > -1) {
         let nbspSplitter = word.split(Environment.hardSpace.nbSpace);
         let nbspTmp = [];
 
-        nbspSplitter.forEach(word => {
+        nbspSplitter.forEach((word) => {
           let newWord = this._checkWord(props, word, searchedTexts);
           if (typeof newWord === "string") {
             nbspTmp.push(newWord);
@@ -295,7 +295,7 @@ export const TextCorrectorComponent = VisualComponent.create({
   //@@viewOn:render
   render() {
     return this.state.text;
-  }
+  },
   //@@viewOff:render
 });
 

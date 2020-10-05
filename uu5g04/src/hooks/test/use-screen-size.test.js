@@ -10,15 +10,15 @@ function renderHookWithProvider(width) {
     clientWidth: { get: () => width, configurable: true },
     getBoundingClientRect: {
       get: () => () => ({ width, height: 1, left: 0, top: 0, right: width, bottom: 1 }),
-      configurable: true
-    }
+      configurable: true,
+    },
   });
   wrapper.setProps({
     children: (
       <ScreenSizeProvider>
         <HookComponent />
       </ScreenSizeProvider>
-    )
+    ),
   });
   return result;
 }

@@ -25,7 +25,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
   getInitialState: () => {
     return {
       isCalled: false,
-      isChecked: false
+      isChecked: false,
     };
   },
 
@@ -62,7 +62,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
         onChangeFeedback={this.onChangeFeedbackHandler}
       />
     );
-  }
+  },
 });
 
 const CONFIG = {
@@ -71,36 +71,36 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.PureRenderMixin",
-    "UU5.Forms.InputMixin"
+    "UU5.Forms.InputMixin",
   ],
   props: {
     value: {
-      values: [true, false]
+      values: [true, false],
     },
     type: {
-      values: [1, 2]
+      values: [1, 2],
     },
     offIcon: {
-      values: ["mdi-check"]
+      values: ["mdi-check"],
     },
     onIcon: {
-      values: ["mdi-close"]
+      values: ["mdi-close"],
     },
     labelPosition: {
-      values: ["left", "right"]
+      values: ["left", "right"],
     },
     bgStyleChecked: {
-      values: ["outline", "filled"]
-    }
+      values: ["outline", "filled"],
+    },
   },
   requiredProps: {
     //The component does not have any required props
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Forms.Checkbox props`, () => {

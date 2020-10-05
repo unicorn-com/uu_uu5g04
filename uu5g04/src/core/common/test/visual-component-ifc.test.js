@@ -9,7 +9,7 @@ describe("UU5.Common.VisualComponent", () => {
 
   it("create()", async () => {
     Component = UU5.Common.VisualComponent.create({
-      render: () => "abc"
+      render: () => "abc",
     });
     expect(Component).toBeTruthy();
     wrapper = mount(<Component />);
@@ -17,7 +17,7 @@ describe("UU5.Common.VisualComponent", () => {
 
     Component = UU5.Common.VisualComponent.create({
       mixins: [UU5.Common.BaseMixin],
-      render: () => "abc"
+      render: () => "abc",
     });
     expect(Component).toBeTruthy();
     wrapper = mount(<Component />);
@@ -27,7 +27,7 @@ describe("UU5.Common.VisualComponent", () => {
 
   it("create() should merge propTypes", async () => {
     Component = UU5.Common.VisualComponent.create({
-      render: () => null
+      render: () => null,
     });
     expect(Component).toBeTruthy();
     expect(Component.propTypes).toMatchObject({
@@ -37,7 +37,7 @@ describe("UU5.Common.VisualComponent", () => {
       disabled: expect.anything(),
       hidden: expect.anything(),
       mainAttrs: expect.anything(),
-      noIndex: expect.anything()
+      noIndex: expect.anything(),
     });
 
     // check custom propTypes having bigger priority than default ones
@@ -46,9 +46,9 @@ describe("UU5.Common.VisualComponent", () => {
       propTypes: {
         id: PropTypes.number,
         className: PropTypes.number,
-        style: PropTypes.number
+        style: PropTypes.number,
       },
-      render: () => null
+      render: () => null,
     });
     expect(Component).toBeTruthy();
     expect(Component.propTypes).toMatchObject({
@@ -58,14 +58,14 @@ describe("UU5.Common.VisualComponent", () => {
       disabled: propTypes1.disabled,
       hidden: propTypes1.hidden,
       mainAttrs: propTypes1.mainAttrs,
-      noIndex: propTypes1.noIndex
+      noIndex: propTypes1.noIndex,
     });
   });
 
   it("create() should merge getDefaultProps()", async () => {
     let defaultProps1;
     Component = UU5.Common.VisualComponent.create({
-      render: () => null
+      render: () => null,
     });
     expect(Component).toBeTruthy();
     expect(typeof Component.getDefaultProps).toBe("function");
@@ -76,7 +76,7 @@ describe("UU5.Common.VisualComponent", () => {
       disabled: undefined,
       hidden: undefined,
       mainAttrs: undefined,
-      noIndex: undefined
+      noIndex: undefined,
     });
 
     Component = UU5.Common.VisualComponent.create({
@@ -84,10 +84,10 @@ describe("UU5.Common.VisualComponent", () => {
         return {
           id: "1",
           className: "a b",
-          style: "c"
+          style: "c",
         };
       },
-      render: () => null
+      render: () => null,
     });
     expect(typeof Component.getDefaultProps).toBe("function");
     expect(Component.getDefaultProps()).toMatchObject({
@@ -97,7 +97,7 @@ describe("UU5.Common.VisualComponent", () => {
       disabled: defaultProps1.disabled,
       hidden: defaultProps1.hidden,
       mainAttrs: defaultProps1.mainAttrs,
-      noIndex: defaultProps1.noIndex
+      noIndex: defaultProps1.noIndex,
     });
   });
 
@@ -110,7 +110,7 @@ describe("UU5.Common.VisualComponent", () => {
         disabled: true,
         hidden: false,
         noIndex: true,
-        mainAttrs: { foo: "bar", className: "c", style: { foo: "bar" } }
+        mainAttrs: { foo: "bar", className: "c", style: { foo: "bar" } },
       },
       "d"
     );
@@ -119,7 +119,7 @@ describe("UU5.Common.VisualComponent", () => {
       className: "d a b uu5-noindex",
       style: { color: "red" },
       disabled: true,
-      hidden: false
+      hidden: false,
     });
   });
 });

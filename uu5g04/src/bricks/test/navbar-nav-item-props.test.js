@@ -21,7 +21,7 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 const MyNavBarNavItemHandler = UU5.Common.VisualComponent.create({
   getInitialState: () => {
     return {
-      isCalled: false
+      isCalled: false,
     };
   },
 
@@ -38,7 +38,7 @@ const MyNavBarNavItemHandler = UU5.Common.VisualComponent.create({
         </UU5.Bricks.NavBar.Nav>
       </UU5.Bricks.NavBar>
     );
-  }
+  },
 });
 
 const CONFIG = {
@@ -46,26 +46,32 @@ const CONFIG = {
     "UU5.Common.BaseMixin",
     "UU5.Common.ElementaryMixin",
     "UU5.Common.ContentMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     target: {
-      values: ["_blank", "_parent", "_top", "_self"]
+      values: ["_blank", "_parent", "_top", "_self"],
     },
     href: {
-      values: ["https://unicorn.com/", "www.unicorn.com", "#about", "mailto:me@example.com", "ftp://example.com/folder"]
-    }
+      values: [
+        "https://unicorn.com/",
+        "www.unicorn.com",
+        "#about",
+        "mailto:me@example.com",
+        "ftp://example.com/folder",
+      ],
+    },
   },
   requiredProps: {
     parent: shallow(
       <UU5.Bricks.NavBar.Nav id="parentId" parent={shallow(<UU5.Bricks.NavBar id="parentId2" />).instance()} />
-    ).instance()
+    ).instance(),
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: true
-    }
-  }
+      disableLifecycleMethods: true,
+    },
+  },
 };
 
 describe(`UU5.Bricks.NavBar.Nav.Item props`, () => {
@@ -135,7 +141,7 @@ describe(`UU5.Bricks.NavBar.Nav.Item Mixin Props control values of props`, () =>
     expect(wrapper.find("nav-bar-nav-item").instance().props.style).toEqual(
       expect.objectContaining({
         fontSize: "20px",
-        color: "red"
+        color: "red",
       })
     );
     expect(wrapper.find("nav-bar-nav-item").instance().props.mainAttrs).toEqual(

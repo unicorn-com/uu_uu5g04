@@ -35,22 +35,22 @@ export const EndEditation = UU5.Common.LsiMixin.withContext(
             color: #FFFFFF;
             background-color: #388E3C;
           }
-        `)
+        `),
       },
-      lsi: Lsi.endEditation
+      lsi: Lsi.endEditation,
     },
     //@@viewOff:statics
 
     //@@viewOn:propTypes
     propTypes: {
-      onClick: UU5.PropTypes.func
+      onClick: UU5.PropTypes.func,
     },
     //@@viewOff:propTypes
 
     //@@viewOn:getDefaultProps
     getDefaultProps() {
       return {
-        onClick: undefined
+        onClick: undefined,
       };
     },
     //@@viewOff:getDefaultProps
@@ -80,7 +80,7 @@ export const EndEditation = UU5.Common.LsiMixin.withContext(
           {this.getLsiComponent("label")}
         </UU5.Bricks.Button>
       );
-    }
+    },
     //@@viewOff:render
   })
 );

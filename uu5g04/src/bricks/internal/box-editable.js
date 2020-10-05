@@ -9,25 +9,25 @@ const Lsi = EditableLsi.box;
 
 const editableComponentPropsSetup = [
   { name: "infoHeader", type: "expandableEditorInput", label: Lsi.infoHeaderLabel },
-  { name: "infoContent", type: "editorInput", label: Lsi.infoContentLabel }
+  { name: "infoContent", type: "editorInput", label: Lsi.infoContentLabel },
 ];
 
 const editableDisplayPropsSetup = [
   { name: "colorSchema" },
   { name: "elevation" },
   { name: "borderRadius" },
-  { name: "bgStyle" }
+  { name: "bgStyle" },
 ];
 
 const editablePropsSetup = [
   {
     name: <UU5.Bricks.Lsi lsi={EditableLsi.common.componentPropsLabel} />,
-    setup: editableComponentPropsSetup
+    setup: editableComponentPropsSetup,
   },
   {
     name: <UU5.Bricks.Lsi lsi={EditableLsi.common.displayPropsLabel} />,
-    setup: editableDisplayPropsSetup
-  }
+    setup: editableDisplayPropsSetup,
+  },
 ];
 
 export const BoxEditable = UU5.Common.VisualComponent.create({
@@ -39,21 +39,21 @@ export const BoxEditable = UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("BoxEditable"),
     classNames: {
-      main: ns.css("box-editable")
-    }
+      main: ns.css("box-editable"),
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    component: UU5.PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      component: undefined
+      component: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -89,7 +89,7 @@ export const BoxEditable = UU5.Common.VisualComponent.create({
         componentPropsForm={editablePropsSetup}
       />
     );
-  }
+  },
   //@@viewOff:render
 });
 

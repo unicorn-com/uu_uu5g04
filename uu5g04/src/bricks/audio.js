@@ -31,8 +31,8 @@ export const Audio = UU5.Common.VisualComponent.create({
     classNames: {
       main: ns.css("audio"),
       player: ns.css("audio-player"),
-      wrapper: ns.css("audio-wrapper")
-    }
+      wrapper: ns.css("audio-wrapper"),
+    },
   },
   //@@viewOff:statics
 
@@ -47,7 +47,7 @@ export const Audio = UU5.Common.VisualComponent.create({
     authenticate: UU5.PropTypes.bool,
     onStart: UU5.PropTypes.func,
     onPause: UU5.PropTypes.func,
-    onEnded: UU5.PropTypes.func
+    onEnded: UU5.PropTypes.func,
   },
   //@@viewOff:propTypes
 
@@ -63,7 +63,7 @@ export const Audio = UU5.Common.VisualComponent.create({
       authenticate: false,
       onStart: undefined,
       onPause: undefined,
-      onEnded: undefined
+      onEnded: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -73,7 +73,7 @@ export const Audio = UU5.Common.VisualComponent.create({
     return {
       muted: this.props.muted,
       playbackRate: this.props.playbackRate,
-      authenticatedUrl: undefined
+      authenticatedUrl: undefined,
     };
   },
 
@@ -102,7 +102,7 @@ export const Audio = UU5.Common.VisualComponent.create({
 
   //@@viewOn:interface
   toggleMuted() {
-    this.setState(state => ({ muted: !state.muted }));
+    this.setState((state) => ({ muted: !state.muted }));
     return this;
   },
 
@@ -154,7 +154,7 @@ export const Audio = UU5.Common.VisualComponent.create({
     else if (this._authenticatingUrl !== url) {
       this._authenticatingUrl = url;
       let promise = (this._urlPromise = this._computeAuthenticatedUrl(url, session).then(
-        authenticatedUrl => {
+        (authenticatedUrl) => {
           delete this._authenticatingUrl;
           this._authenticatedUrl = url;
           if (this.isRendered() && promise === this._urlPromise) this.setState({ authenticatedUrl });
@@ -177,7 +177,7 @@ export const Audio = UU5.Common.VisualComponent.create({
   _getMainAttrs(removeMainClass) {
     let attrs = this.getMainAttrs();
     attrs.className += " " + this.getClassName("player");
-    attrs.ref = ref => (this._audio = ref);
+    attrs.ref = (ref) => (this._audio = ref);
     attrs.controls = true;
 
     // events
@@ -234,7 +234,7 @@ export const Audio = UU5.Common.VisualComponent.create({
     }
 
     return result;
-  }
+  },
   //@@viewOff:render
 });
 

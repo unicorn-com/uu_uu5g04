@@ -39,7 +39,7 @@ function createVisualComponent(component, isRef = false) {
   const componentCfg = {
     ...component,
     propTypes: { ...VISUAL_PROP_TYPES, ...component.propTypes },
-    defaultProps: { ...VISUAL_DEFAULT_PROPS, ...component.defaultProps }
+    defaultProps: { ...VISUAL_DEFAULT_PROPS, ...component.defaultProps },
   };
 
   const Comp = isRef ? createComponentWithRef(componentCfg) : createComponent(componentCfg);
@@ -79,7 +79,7 @@ function createHoc(args) {
     ...comp,
     render(props, ref) {
       return <Component ref={ref} {...getProps(props)} />;
-    }
+    },
   };
 
   return createComponentWithRef(comp);

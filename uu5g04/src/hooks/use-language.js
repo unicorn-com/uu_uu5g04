@@ -53,7 +53,7 @@ function useHandleLegacyValues(contextValue) {
   let unregisterLsi = useInitial(() => {
     if (isLegacy) {
       let { registerLsi, unregisterLsi } = contextValue;
-      typeof registerLsi === "function" && registerLsi(id, lang => setNotifiedValue(lang));
+      typeof registerLsi === "function" && registerLsi(id, (lang) => setNotifiedValue(lang));
       return unregisterLsi;
     }
   });
@@ -67,12 +67,12 @@ const LanguageProvider = createComponent({
 
   propTypes: {
     initialLanguage: UU5.PropTypes.string,
-    onChange: UU5.PropTypes.func
+    onChange: UU5.PropTypes.func,
   },
 
   defaultProps: {
     initialLanguage: undefined,
-    onChange: undefined
+    onChange: undefined,
   },
 
   render({ onChange, initialLanguage, children }) {
@@ -96,7 +96,7 @@ const LanguageProvider = createComponent({
     const value = useMemo(() => ({ language: lang, setLanguage: setLang }), [lang]);
 
     return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
-  }
+  },
 });
 
 function useLanguage() {

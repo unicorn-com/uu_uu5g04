@@ -21,12 +21,12 @@ const CONFIG = {
     "UU5.Common.BaseMixin",
     "UU5.Common.ElementaryMixin",
     "UU5.Common.ContentMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     language: {
-      values: ["en", "cs"]
-    }
+      values: ["en", "cs"],
+    },
   },
   requiredProps: {
     language: "en-us",
@@ -35,16 +35,16 @@ const CONFIG = {
         id="parentId"
         lsi={{
           cs: "cs, sk -> (cs) Při neznámém jazyku se zobrazí první v lsi",
-          sk: "cs, sk -> (sk) Pri neznámom jazyku sa zobrazí prvý v lsi"
+          sk: "cs, sk -> (sk) Pri neznámom jazyku sa zobrazí prvý v lsi",
         }}
       />
-    ).instance()
+    ).instance(),
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Lsi.Item props`, () => {

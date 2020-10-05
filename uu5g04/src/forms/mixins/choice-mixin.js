@@ -26,19 +26,19 @@ export const ChoiceMixin = {
     requiredMessage: UU5.PropTypes.any,
     buttonHidden: UU5.PropTypes.bool,
     iconOpen: UU5.PropTypes.string,
-    iconClosed: UU5.PropTypes.string
+    iconClosed: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       placeholder: null,
       required: false,
       requiredMessage: null,
       buttonHidden: false,
       iconOpen: "mdi-menu-up",
-      iconClosed: "mdi-menu-down"
+      iconClosed: "mdi-menu-down",
     };
   },
   //@@viewOff:getDefaultProps
@@ -71,7 +71,7 @@ export const ChoiceMixin = {
     }
 
     return result;
-  }
+  },
   //@@viewOff:interface
 
   //@@viewOn:overriding

@@ -35,7 +35,7 @@ export const Column = UU5.Common.VisualComponent.create({
     UU5.Common.NestingLevelMixin,
     UU5.Common.SectionMixin,
     UU5.Common.PureRenderMixin,
-    UU5.Common.EditableMixin
+    UU5.Common.EditableMixin,
   ],
   //@@viewOff:mixins
 
@@ -47,21 +47,21 @@ export const Column = UU5.Common.VisualComponent.create({
       main: ns.css("column"),
       spacing: ns.css("column-spacing"),
       noSpacing: ns.css("column-nospacing"),
-      editation: ns.css("column-editation")
+      editation: ns.css("column-editation"),
     },
     defaults: {
       colWidth: { xs: 12, s: 12, m: 12, l: 12, xl: 12 },
-      columnRegexp: /^((?:offset-)?[a-z]+)(?:-)?(\d+)$/
+      columnRegexp: /^((?:offset-)?[a-z]+)(?:-)?(\d+)$/,
     },
     opt: {
-      nestingLevelWrapper: true
+      nestingLevelWrapper: true,
     },
     editMode: {
       name: { en: "Column", cs: "Sloupec" },
       backgroundColor: "rgba(186,104,200,.4)",
       color: "#4A148C",
-      highlightColor: "rgba(227,195,233,.45)"
-    }
+      highlightColor: "rgba(227,195,233,.45)",
+    },
   },
   //@@viewOff:statics
 
@@ -76,10 +76,10 @@ export const Column = UU5.Common.VisualComponent.create({
         s: UU5.PropTypes.number,
         m: UU5.PropTypes.number,
         l: UU5.PropTypes.number,
-        xl: UU5.PropTypes.number
+        xl: UU5.PropTypes.number,
       }),
-      UU5.PropTypes.string
-    ])
+      UU5.PropTypes.string,
+    ]),
   },
   //@@viewOff:propTypes
 
@@ -88,7 +88,7 @@ export const Column = UU5.Common.VisualComponent.create({
     return {
       noSpacing: false,
       width: null,
-      colWidth: null
+      colWidth: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -96,7 +96,7 @@ export const Column = UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
-      editationLazyLoaded: false
+      editationLazyLoaded: false,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -132,7 +132,7 @@ export const Column = UU5.Common.VisualComponent.create({
   _registerNull(inst) {
     // unmount of component means that suspense is loaded and component should be rendered
     if (!inst) {
-      this.setState(state => {
+      this.setState((state) => {
         if (state.editationLazyLoaded) return;
 
         // Edit component is loaded - need to set to static variable because other Edit component does not render fallback component
@@ -170,7 +170,7 @@ export const Column = UU5.Common.VisualComponent.create({
           : null}
       </div>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

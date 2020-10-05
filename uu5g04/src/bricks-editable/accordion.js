@@ -29,9 +29,9 @@ const DEFAULT_PROPS = [
       showGutter: false,
       wrapEnabled: true,
       inputColWidth: "xl12",
-      labelColWidth: "xl12"
+      labelColWidth: "xl12",
     },
-    value: ""
+    value: "",
   },
   {
     name: "iconExpanded",
@@ -41,9 +41,9 @@ const DEFAULT_PROPS = [
       inputColWidth: "xs8 s5 m3 l3",
       labelColWidth: "xs12 s5",
       icon: "mdi-help-circle-outline",
-      onClick: () => UU5.Common.Tools.openWindow(Tools.iconDocLink, "_blank")
+      onClick: () => UU5.Common.Tools.openWindow(Tools.iconDocLink, "_blank"),
     },
-    value: null
+    value: null,
   },
   {
     name: "iconCollapsed",
@@ -53,24 +53,24 @@ const DEFAULT_PROPS = [
       inputColWidth: "xs8 s5 m3 l3",
       labelColWidth: "xs12 s5",
       icon: "mdi-help-circle-outline",
-      onClick: () => UU5.Common.Tools.openWindow(Tools.iconDocLink, "_blank")
+      onClick: () => UU5.Common.Tools.openWindow(Tools.iconDocLink, "_blank"),
     },
-    value: null
+    value: null,
   },
   {
     name: "size",
     type: ["s", "m", "l", "xl"],
     label: "Size",
     props: {
-      colWidth: "xs12 s6 m3 l3 xl3"
+      colWidth: "xs12 s6 m3 l3 xl3",
     },
-    value: "m"
+    value: "m",
   },
   {
     name: "contentEditable",
     type: "bool",
     label: "Content Editable",
-    value: false
+    value: false,
   },
   {
     name: "panels",
@@ -82,10 +82,10 @@ const DEFAULT_PROPS = [
       showGutter: false,
       wrapEnabled: true,
       inputColWidth: "xl12",
-      labelColWidth: "xl12"
+      labelColWidth: "xl12",
     },
     value: "",
-    visible: false
+    visible: false,
   },
   {
     name: "allowTags",
@@ -98,17 +98,17 @@ const DEFAULT_PROPS = [
       showGutter: false,
       wrapEnabled: true,
       inputColWidth: "xl12",
-      labelColWidth: "xl12"
+      labelColWidth: "xl12",
     },
-    visible: false
+    visible: false,
   },
   {
     name: "onClickNotCollapseOthers",
     type: "bool",
     label: "onClick Not Collapse Others",
     value: false,
-    visible: false
-  }
+    visible: false,
+  },
 ];
 
 export const Accordion = UU5.Common.VisualComponent.create({
@@ -122,21 +122,21 @@ export const Accordion = UU5.Common.VisualComponent.create({
     tagName: "UU5.BricksEditable.Accordion",
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
-      main: "editable-accordion"
-    }
+      main: "editable-accordion",
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    component: UU5.PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      component: null
+      component: null,
     };
   },
   getInitialState() {
@@ -185,7 +185,7 @@ export const Accordion = UU5.Common.VisualComponent.create({
         <UU5.Forms.PropsForm props={this.state.props} onCancel={this._cancel} onSave={this._save} uu5string={true} />
       </UU5.Bricks.Div>
     );
-  }
+  },
   //@@viewOff:render
 });
 

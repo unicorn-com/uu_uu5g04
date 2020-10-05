@@ -29,7 +29,7 @@ import "uu5g04-bricks";
 const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MAX_TIMEOUT = 5000;
-describe(`UU5.Bricks.GoogleMap interface testing`, function() {
+describe(`UU5.Bricks.GoogleMap interface testing`, function () {
   it(
     "getMap()",
     () => {

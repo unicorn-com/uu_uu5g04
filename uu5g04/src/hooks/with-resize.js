@@ -9,7 +9,7 @@ export const withResize = (Component, reserveSpace) =>
       displayName: "withResize(" + Component.displayName + ")",
       propTypes: {
         width: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.oneOf(["auto"])]),
-        height: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.oneOf(["auto"])])
+        height: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.oneOf(["auto"])]),
       },
 
       render(props, ref) {
@@ -32,7 +32,7 @@ export const withResize = (Component, reserveSpace) =>
             ) : null}
           </UU5.Common.Fragment>
         );
-      }
+      },
     },
     !Component.isStateless
   );

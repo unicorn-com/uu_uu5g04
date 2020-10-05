@@ -33,15 +33,15 @@ export const Help = VisualComponent.create({
   statics: {
     tagName: ns.name("Help"),
     classNames: {
-      main: ns.css("help")
-    }
+      main: ns.css("help"),
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
     tagName: PropTypes.string,
-    target: PropTypes.oneOf(["_blank", "_parent", "_top", "_self"])
+    target: PropTypes.oneOf(["_blank", "_parent", "_top", "_self"]),
   },
   //@@viewOff:propTypes
 
@@ -49,7 +49,7 @@ export const Help = VisualComponent.create({
   getDefaultProps() {
     return {
       tagName: "UU5.Common.Help",
-      target: "_blank"
+      target: "_blank",
     };
   },
   //@@viewOff:getDefaultProps
@@ -58,7 +58,7 @@ export const Help = VisualComponent.create({
   getInitialState() {
     return {
       errorDetails: false,
-      responseLink: null
+      responseLink: null,
     };
   },
 
@@ -98,7 +98,7 @@ export const Help = VisualComponent.create({
         UU5.Common.Tools.merge(this.getMainPropsToPass(), {
           href: this.state.responseLink,
           content: this.props.content || this.props.children || this.props.tagName,
-          target: this.props.target
+          target: this.props.target,
         })
       );
     } else {
@@ -108,9 +108,9 @@ export const Help = VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return this._getLink();
-  }
+  },
   //@@viewOff:render
 });
 

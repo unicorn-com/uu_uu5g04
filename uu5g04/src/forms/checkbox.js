@@ -34,7 +34,7 @@ export const Checkbox = Context.withContext(
       UU5.Common.PureRenderMixin,
       UU5.Common.ElementaryMixin,
       UU5.Common.ColorSchemaMixin,
-      InputMixin
+      InputMixin,
     ],
     //@@viewOff:mixins
 
@@ -50,11 +50,11 @@ export const Checkbox = Context.withContext(
         checked: ns.css("checkbox-checked"),
         dot: ns.css("checkbox-dot"),
         loading: ns.css("input-loading-icon"),
-        typeSwitch: ns.css("checkbox-type-switch")
+        typeSwitch: ns.css("checkbox-type-switch"),
       },
       defaults: {
-        onIcon: "mdi-check"
-      }
+        onIcon: "mdi-check",
+      },
     },
     //@@viewOff:statics
 
@@ -66,7 +66,7 @@ export const Checkbox = Context.withContext(
       labelPosition: UU5.PropTypes.oneOf(["left", "right"]),
       _radio: UU5.PropTypes.bool,
       type: UU5.PropTypes.number,
-      bgStyleChecked: UU5.PropTypes.oneOf(["filled", "outline"])
+      bgStyleChecked: UU5.PropTypes.oneOf(["filled", "outline"]),
     },
     //@@viewOff:propTypes
 
@@ -79,7 +79,7 @@ export const Checkbox = Context.withContext(
         labelPosition: "left",
         _radio: false,
         type: 1,
-        bgStyleChecked: "outline"
+        bgStyleChecked: "outline",
       };
     },
     //@@viewOff:getDefaultProps
@@ -113,7 +113,7 @@ export const Checkbox = Context.withContext(
           {
             feedback: result.feedback,
             message: result.message,
-            value: result.value
+            value: result.value,
           },
           setStateCallback
         );
@@ -151,7 +151,7 @@ export const Checkbox = Context.withContext(
             }
           } else {
             this.showError("validateError", null, {
-              context: { event: opt.event, func: this.props.onValidate, result: result }
+              context: { event: opt.event, func: this.props.onValidate, result: result },
             });
           }
         }
@@ -223,8 +223,8 @@ export const Checkbox = Context.withContext(
         mainAttrs.className += " " + ClassNames[this.props.bgStyleChecked];
       }
 
-      let handleClick = e => {
-        let matches = this._getEventPath(e).some(item => {
+      let handleClick = (e) => {
+        let matches = this._getEventPath(e).some((item) => {
           let functionType = item.matches ? "matches" : "msMatchesSelector";
           if (item[functionType]) {
             return item[functionType]("button.uu5-forms-checkbox-button, .uu5-forms-label");
@@ -238,7 +238,7 @@ export const Checkbox = Context.withContext(
       };
 
       if (!mainAttrs.onClick) {
-        mainAttrs.onClick = e => {
+        mainAttrs.onClick = (e) => {
           handleClick(e);
         };
       }
@@ -293,10 +293,10 @@ export const Checkbox = Context.withContext(
             onIcon={this.props.onIcon}
             offIcon={this.props.offIcon}
             loading={this.isLoading()}
-            ref_={switchComponent => (this._focusElement = switchComponent)}
+            ref_={(switchComponent) => (this._focusElement = switchComponent)}
             mainAttrs={UU5.Common.Tools.merge(
               {
-                disabled: this.isReadOnly() || this.isComputedDisabled()
+                disabled: this.isReadOnly() || this.isComputedDisabled(),
               },
               this.props.inputAttrs
             )}
@@ -312,12 +312,12 @@ export const Checkbox = Context.withContext(
             disabled={this.isComputedDisabled()}
             mainAttrs={UU5.Common.Tools.merge(
               {
-                disabled: this.isReadOnly() || this.isComputedDisabled()
+                disabled: this.isReadOnly() || this.isComputedDisabled(),
               },
               this.props.inputAttrs
             )}
             content={this._getIcon()}
-            ref_={button => (this._focusElement = button)}
+            ref_={(button) => (this._focusElement = button)}
             bgStyle={this.props.bgStyleChecked}
           />
         );
@@ -334,7 +334,7 @@ export const Checkbox = Context.withContext(
           )}
         </div>
       );
-    }
+    },
     //@@viewOff:render
   })
 );

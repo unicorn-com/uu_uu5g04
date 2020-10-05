@@ -22,22 +22,22 @@ export const ResizeMixin = {
     "UU5.Common.ResizeMixin": {
       requiredMixins: ["UU5.Common.BaseMixin"],
       defaults: {
-        minResizeInterval: 100
-      }
-    }
+        minResizeInterval: 100,
+      },
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    resizeInterval: PropTypes.number
+    resizeInterval: PropTypes.number,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      resizeInterval: undefined
+      resizeInterval: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -73,7 +73,7 @@ export const ResizeMixin = {
 
   getUU5CommonResizeMixinProps() {
     return {
-      resizeInterval: this.props.resizeInterval
+      resizeInterval: this.props.resizeInterval,
     };
   },
 
@@ -135,7 +135,7 @@ export const ResizeMixin = {
     }
 
     return Math.max(interval, this.getDefault("minResizeInterval", "UU5.Common.ResizeMixin"));
-  }
+  },
   //@@viewOff:private
 };
 

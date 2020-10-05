@@ -35,15 +35,15 @@ export const ContextInfo = UU5.Common.VisualComponent.create({
         @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
           flex: 1;
         }
-      `
-    }
+      `,
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
     content: UU5.PropTypes.any,
-    icon: UU5.PropTypes.string
+    icon: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
@@ -51,7 +51,7 @@ export const ContextInfo = UU5.Common.VisualComponent.create({
   getDefaultProps() {
     return {
       content: undefined,
-      icon: "mdi-help-circle"
+      icon: "mdi-help-circle",
     };
   },
   //@@viewOff:getDefaultProps
@@ -76,7 +76,7 @@ export const ContextInfo = UU5.Common.VisualComponent.create({
         <UU5.Bricks.Div content={this.props.content} className={this.constructor.classNames.content()} />
       </UU5.Common.Fragment>
     );
-  }
+  },
   //@@viewOff:render
 });
 

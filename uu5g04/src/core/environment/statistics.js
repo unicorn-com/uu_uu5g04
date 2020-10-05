@@ -20,8 +20,8 @@ export function Statistics(url, isStatistics) {
   const cmd = url + CMD;
   let baseUriCookie = document.cookie
     .split(";")
-    .map(it => it.trim())
-    .find(v => v.startsWith(BASE_URI_COOKIE_NAME + "="));
+    .map((it) => it.trim())
+    .find((v) => v.startsWith(BASE_URI_COOKIE_NAME + "="));
   let href =
     (baseUriCookie
       ? baseUriCookie
@@ -50,7 +50,7 @@ export function Statistics(url, isStatistics) {
         let request = new XMLHttpRequest();
         request.onreadystatechange = () => {
           if (request.readyState === XMLHttpRequest.DONE && request.status !== 200 && request.status !== 203) {
-            uuLibraryList.forEach(lib => librarySet.add(lib));
+            uuLibraryList.forEach((lib) => librarySet.add(lib));
           }
         };
         request.open("POST", cmd, true);
@@ -80,14 +80,14 @@ export function Statistics(url, isStatistics) {
   if (process.env.NODE_ENV === "production" && location.hostname !== "localhost") {
     setInterval(logLibraries, TIMEOUT);
 
-    window.addEventListener("beforeunload", function() {
+    window.addEventListener("beforeunload", function () {
       logLibraries();
     });
   }
 
   return {
     addLibrary,
-    getLibraries
+    getLibraries,
   };
 }
 

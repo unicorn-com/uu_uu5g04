@@ -34,7 +34,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
   getInitialState() {
     return {
       isCalled: false,
-      defaultValue: null
+      defaultValue: null,
     };
   },
 
@@ -67,7 +67,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
         onChangeFeedback={this.onChangeFeedbackHandler}
       />
     );
-  }
+  },
 });
 
 const CONFIG = {
@@ -78,33 +78,33 @@ const CONFIG = {
     "UU5.Common.PureRenderMixin",
     "UU5.Forms.InputMixin",
     "UU5.Common.ColorSchemaMixin",
-    "UU5.Common.ChoiceMixin"
+    "UU5.Common.ChoiceMixin",
   ],
   props: {
     value: {
-      values: [{ name: "ucetniuzaverka.doc" }, [{ name: "ucetniuzaverka1.doc" }, { name: "index.html" }]]
+      values: [{ name: "ucetniuzaverka.doc" }, [{ name: "ucetniuzaverka1.doc" }, { name: "index.html" }]],
     },
     multiple: {
-      values: [true, false]
+      values: [true, false],
     },
     icon: {
-      values: ["mdi-clock-outline"]
+      values: ["mdi-clock-outline"],
     },
     selectedIcon: {
-      values: ["mdi-clock-outline"]
+      values: ["mdi-clock-outline"],
     },
     closeIcon: {
-      values: ["uu5-minus"]
-    }
+      values: ["uu5-minus"],
+    },
   },
   requiredProps: {
     //The component does not have any required props
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: true
-    }
-  }
+      disableLifecycleMethods: true,
+    },
+  },
 };
 
 describe(`UU5.Forms.File props`, () => {

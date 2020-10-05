@@ -44,7 +44,7 @@ export const Alert = UU5.Common.VisualComponent.create({
     UU5.Common.NestingLevelMixin,
     UU5.Common.ColorSchemaMixin,
     UU5.Common.SectionMixin,
-    UU5.Common.PureRenderMixin
+    UU5.Common.PureRenderMixin,
   ],
   //@@viewOff:mixins
 
@@ -53,7 +53,7 @@ export const Alert = UU5.Common.VisualComponent.create({
     tagName: ns.name("Alert"),
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
-      main: props => {
+      main: (props) => {
         let translateX;
         let translateY;
         let className = "";
@@ -88,22 +88,22 @@ export const Alert = UU5.Common.VisualComponent.create({
       position: ns.css("alert-"),
       block: ns.css("alert-block"),
       close: ns.css("alert-close"),
-      countdown: props =>
+      countdown: (props) =>
         Css.css(`
         margin: ${props.closeDisabled ? "8px 8px 8px 8px" : "8px 0px 8px 8px"};
       `),
       controls: () =>
         Css.css(`
         display: inline-flex;
-      `)
+      `),
     },
     defaults: {
       transitionDuration: 150,
-      closeIcon: "mdi-close"
+      closeIcon: "mdi-close",
     },
     opt: {
-      nestingLevelWrapper: true
-    }
+      nestingLevelWrapper: true,
+    },
   },
   //@@viewOff:statics
 
@@ -118,12 +118,12 @@ export const Alert = UU5.Common.VisualComponent.create({
     onCloseBefore: UU5.PropTypes.func,
     countdown: UU5.PropTypes.bool,
     offsetTop: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string, UU5.PropTypes.oneOf(["auto"])]),
-    content: UU5.PropTypes.any
+    content: UU5.PropTypes.any,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       position: "center",
       closeTimer: null,
@@ -133,18 +133,18 @@ export const Alert = UU5.Common.VisualComponent.create({
       onCloseAfter: null,
       onCloseBefore: null,
       countdown: false,
-      offsetTop: 0
+      offsetTop: 0,
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  UNSAFE_componentWillReceiveProps: function(nextProps) {
+  UNSAFE_componentWillReceiveProps: function (nextProps) {
     // it is needed to compare by deepEqual function because pureRenderMixin uses this function in shouldCOmponentRender to compare equality of props.
     !UU5.Common.Tools.deepEqual(nextProps.content, this.props.content) && this._clearTimeout();
   },
 
-  componentWillUnmount: function() {
+  componentWillUnmount: function () {
     this._clearTimeout();
   },
   //@@viewOff:reactLifeCycle
@@ -156,7 +156,7 @@ export const Alert = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _clearTimeout: function() {
+  _clearTimeout: function () {
     if (this.timeout) {
       clearTimeout(this.timeout);
       this.timeout = null;
@@ -164,7 +164,7 @@ export const Alert = UU5.Common.VisualComponent.create({
     return this;
   },
 
-  _hide: function() {
+  _hide: function () {
     var alert = this;
     this._clearTimeout();
 
@@ -177,12 +177,12 @@ export const Alert = UU5.Common.VisualComponent.create({
     return this;
   },
 
-  _hideFunc: function() {
+  _hideFunc: function () {
     var alert = this;
     this.hide(
       typeof this.props.onClose === "function" || typeof this.props.onCloseAfter === "function"
-        ? function() {
-            setTimeout(function() {
+        ? function () {
+            setTimeout(function () {
               typeof alert.props.onCloseAfter === "function"
                 ? alert.props.onCloseAfter(alert)
                 : alert.props.onClose(alert);
@@ -192,7 +192,7 @@ export const Alert = UU5.Common.VisualComponent.create({
     );
   },
 
-  _getMainAttrs: function() {
+  _getMainAttrs: function () {
     var mainAttrs = this.getMainAttrs();
     mainAttrs.className += " " + this.getClassName().position + this.props.position;
     this.props.block && (mainAttrs.className += " " + this.getClassName().block);
@@ -205,15 +205,15 @@ export const Alert = UU5.Common.VisualComponent.create({
       "MozTransitionDuration",
       "MsTransitionDuration",
       "OTransitionDuration",
-      "transitionDuration"
-    ].forEach(function(style) {
+      "transitionDuration",
+    ].forEach(function (style) {
       mainAttrs.style[style] = time + "s";
     });
 
     return mainAttrs;
   },
 
-  _manageTimeout: function() {
+  _manageTimeout: function () {
     if (this.props.closeTimer) {
       if (this.isHidden()) {
         this._clearTimeout();
@@ -291,7 +291,7 @@ export const Alert = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     let mainAttrs = this._getMainAttrs();
     let header = this.getHeader();
     let content = this.getChildren();
@@ -308,7 +308,7 @@ export const Alert = UU5.Common.VisualComponent.create({
     this._manageTimeout();
 
     return this.getNestingLevel() ? <div {...mainAttrs}>{this._getChildren(header, content)}</div> : null;
-  }
+  },
   //@@viewOff:render
 });
 

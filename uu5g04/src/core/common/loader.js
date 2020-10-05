@@ -34,12 +34,12 @@ export const Loader = Component.create({
   statics: {
     tagName: "UU5.Common.Loader",
     defaults: {
-      reloadInterval: 10 * 1000 // 10s
+      reloadInterval: 10 * 1000, // 10s
     },
     errors: {
       loaderError: "Loader error:",
-      onLoadNoPromise: "No promise returns from onLoad."
-    }
+      onLoadNoPromise: "No promise returns from onLoad.",
+    },
   },
   //@@viewOff:statics
 
@@ -53,7 +53,7 @@ export const Loader = Component.create({
     onLoad: PropTypes.func,
     loading: PropTypes.node,
     error: PropTypes.oneOfType([PropTypes.func, PropTypes.node]),
-    reloadInterval: PropTypes.number
+    reloadInterval: PropTypes.number,
   },
   //@@viewOn:propTypes
 
@@ -67,14 +67,14 @@ export const Loader = Component.create({
       authenticate: false,
       onLoad: undefined,
       loading: undefined,
-      error: dtoOut => (
+      error: (dtoOut) => (
         <Error
           errorData={dtoOut}
           moreInfo
           content={dtoOut.data && dtoOut.data.error ? dtoOut.data.error : dtoOut.error}
         />
       ),
-      reloadInterval: undefined
+      reloadInterval: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -144,7 +144,7 @@ export const Loader = Component.create({
         data: props.data,
         // TODO: backward compatibility (remove in the next major version)
         done,
-        fail
+        fail,
       });
       // TODO if is for backward compatibility (uncomment to the next major version)
       if (promise && typeof promise.then === "function") {
@@ -168,7 +168,7 @@ export const Loader = Component.create({
       if (token) {
         headers = {
           ...headers,
-          Authorization: "Bearer " + token
+          Authorization: "Bearer " + token,
         };
       }
     }
@@ -197,7 +197,7 @@ export const Loader = Component.create({
       result = children({ data: this.state.data });
     } else {
       result =
-        React.Children.map(children, child => {
+        React.Children.map(children, (child) => {
           if (Element.isValid(child)) {
             return Element.clone(child, { data: this.state.data });
           } else {
@@ -228,7 +228,7 @@ export const Loader = Component.create({
     }
 
     return result;
-  }
+  },
   //@@viewOff:render
 });
 
@@ -237,7 +237,7 @@ Loader.createContext = () => {
 
   const createProvider = ({ children, ...props }, ref) => (
     <Loader {...props} ref_={ref}>
-      {values => <LoaderContext.Provider value={values}>{children}</LoaderContext.Provider>}
+      {(values) => <LoaderContext.Provider value={values}>{children}</LoaderContext.Provider>}
     </Loader>
   );
 

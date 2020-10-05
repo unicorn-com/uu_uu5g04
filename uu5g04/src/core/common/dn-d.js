@@ -25,7 +25,7 @@ const PassThrough = Component.create({
   displayName: "PassThrough", // for backward compatibility (test snapshots)
   render() {
     return this.props.children || null;
-  }
+  },
 });
 
 /** Initializes react-dnd's DragDropContext and provides it to drag&drop context. */
@@ -61,7 +61,7 @@ const Provider = Component.create({
         }
       }
       return partialDragDropContext;
-    }
+    },
   },
   //@@viewOff:statics
 
@@ -77,11 +77,11 @@ const Provider = Component.create({
     return {
       value: {
         componentWithContext: null,
-        checkDnDAvailability: this.checkDnDAvailability
+        checkDnDAvailability: this.checkDnDAvailability,
       },
       partialDragDropContext,
       componentClass: partialDragDropContext ? partialDragDropContext(PassThrough) : null,
-      needsExtraCheck: !partialDragDropContext
+      needsExtraCheck: !partialDragDropContext,
     };
   },
 
@@ -102,7 +102,7 @@ const Provider = Component.create({
           this.setState({
             partialDragDropContext,
             componentClass: partialDragDropContext ? partialDragDropContext(PassThrough) : null,
-            needsExtraCheck: false
+            needsExtraCheck: false,
           });
         }
       });
@@ -122,7 +122,7 @@ const Provider = Component.create({
       if (partialDragDropContext) {
         this.setState({
           partialDragDropContext,
-          componentClass: partialDragDropContext ? partialDragDropContext(PassThrough) : null
+          componentClass: partialDragDropContext ? partialDragDropContext(PassThrough) : null,
         });
       }
     }
@@ -135,12 +135,12 @@ const Provider = Component.create({
 
   //@@viewOn:private
   _setComponentWithContextRef(componentWithContext) {
-    this.setState(state => {
+    this.setState((state) => {
       let result;
       if (state.partialDragDropContext && state.value.componentWithContext !== componentWithContext) {
         result = {
           value: { ...state.value, componentWithContext },
-          needsExtraCheck: !state.partialDragDropContext
+          needsExtraCheck: !state.partialDragDropContext,
         };
       }
       return result;
@@ -159,7 +159,7 @@ const Provider = Component.create({
         </ComponentWithContext>
       </DnDContext.Provider>
     );
-  }
+  },
   //@@viewOff:render
 });
 
@@ -251,11 +251,11 @@ const DnDConsumerWrapper = Component.create({
   //@@viewOn:render
   render() {
     return <DnDContext.Consumer>{this._renderConsumerOuterChild}</DnDContext.Consumer>;
-  }
+  },
   //@@viewOff:render
 });
 
-const withContext = function(Component) {
+const withContext = function (Component) {
   let result = React.forwardRef((props, ref) => {
     return <DnDConsumerWrapper component={Component} componentProps={props} componentRef={ref} />;
   });
@@ -270,5 +270,5 @@ const withContext = function(Component) {
 
 export const DnD = {
   Provider,
-  withContext
+  withContext,
 };

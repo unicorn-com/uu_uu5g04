@@ -54,7 +54,7 @@ class YoutubeUrlBuilder {
     return this._videoId;
   };
 
-  setPlayList = playlist => {
+  setPlayList = (playlist) => {
     this._params.playlist = playlist;
   };
 
@@ -62,7 +62,7 @@ class YoutubeUrlBuilder {
     return this._params.playlist;
   };
 
-  setAutoplay = autoplay => {
+  setAutoplay = (autoplay) => {
     this._params.autoplay = autoplay;
   };
 
@@ -70,7 +70,7 @@ class YoutubeUrlBuilder {
     return this._params.autoplay;
   };
 
-  setControls = disableControls => {
+  setControls = (disableControls) => {
     this._params.controls = disableControls;
   };
 
@@ -78,7 +78,7 @@ class YoutubeUrlBuilder {
     return this._params.controls;
   };
 
-  setLoop = loop => {
+  setLoop = (loop) => {
     this._params.loop = loop;
   };
 
@@ -86,7 +86,7 @@ class YoutubeUrlBuilder {
     return this._params.loop;
   };
 
-  setShowInfo = disableInfo => {
+  setShowInfo = (disableInfo) => {
     this._params.showinfo = disableInfo;
   };
 
@@ -94,7 +94,7 @@ class YoutubeUrlBuilder {
     return this._params.showinfo;
   };
   //related videos
-  setRel = disableRelatedVideos => {
+  setRel = (disableRelatedVideos) => {
     this._params.rel = disableRelatedVideos;
   };
 
@@ -103,7 +103,7 @@ class YoutubeUrlBuilder {
   };
 
   //fullscreen
-  setFs = disableFullscreen => {
+  setFs = (disableFullscreen) => {
     this._params.fs = disableFullscreen;
   };
 
@@ -111,7 +111,7 @@ class YoutubeUrlBuilder {
     return this._params.fs;
   };
 
-  setMuted = muted => {
+  setMuted = (muted) => {
     this._params.mute = muted;
   };
 

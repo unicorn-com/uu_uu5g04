@@ -64,8 +64,8 @@ function getStateReducer(pageSize) {
             ...dtoInData,
             pageInfo: {
               ...(dtoInData || {}).pageInfo,
-              pageSize
-            }
+              pageSize,
+            },
           };
         }
 

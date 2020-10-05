@@ -4,7 +4,6 @@ import Link from "./link";
 import Modal from "./modal";
 
 export const LinkModal = createVisualComponent({
-
   displayName: "UU5.Bricks.LinkModal",
   nestingLevel: "inline",
 
@@ -12,7 +11,7 @@ export const LinkModal = createVisualComponent({
     // ...Link.propTypes,
 
     component: UU5.PropTypes.any.isRequired, // content
-    modalProps: UU5.PropTypes.object
+    modalProps: UU5.PropTypes.object,
   },
 
   defaultProps: {
@@ -20,7 +19,7 @@ export const LinkModal = createVisualComponent({
     target: "_blank",
 
     component: undefined,
-    modalProps: undefined
+    modalProps: undefined,
   },
 
   getInitialState() {
@@ -36,13 +35,15 @@ export const LinkModal = createVisualComponent({
   render() {
     const { hidden, children, modalProps, component, ...linkProps } = this.props;
 
-    return !hidden && (
-      <UU5.Common.Fragment>
-        <Link {...linkProps} content={children} onClick={this._open} />
-        <Modal {...modalProps} shown={false} ref_={this._modalRef} />
-      </UU5.Common.Fragment>
-    )
-  }
+    return (
+      !hidden && (
+        <UU5.Common.Fragment>
+          <Link {...linkProps} content={children} onClick={this._open} />
+          <Modal {...modalProps} shown={false} ref_={this._modalRef} />
+        </UU5.Common.Fragment>
+      )
+    );
+  },
 });
 
 export default LinkModal;

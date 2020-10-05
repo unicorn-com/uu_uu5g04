@@ -23,7 +23,7 @@ const MyAllowTagsComponents = UU5.Common.VisualComponent.create({
   statics: { tagName: "UU5.Example.MyCompButton", classNames: { main: "mytr" } },
   render() {
     return <UU5.Example.MyCompButton {...this.getMainPropsToPass()} />;
-  }
+  },
 });
 
 const CONFIG = {
@@ -33,33 +33,33 @@ const CONFIG = {
     "UU5.Common.ContentMixin",
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     progress: {
-      values: [0, 50, 100]
+      values: [0, 50, 100],
     },
     striped: {
-      values: [true, false]
+      values: [true, false],
     },
     animated: {
-      values: [true, false]
+      values: [true, false],
     },
     allowTags: {
-      allowTagsArray: ["UU5.Example.MyCompButton"]
+      allowTagsArray: ["UU5.Example.MyCompButton"],
     },
     size: {
-      values: ["s", "m", "l", "xl"]
-    }
+      values: ["s", "m", "l", "xl"],
+    },
   },
   requiredProps: {
-    children: [<UU5.Bricks.ProgressBar.Item id={"childID"} progress={25} striped colorSchema="blue" />]
+    children: [<UU5.Bricks.ProgressBar.Item id={"childID"} progress={25} striped colorSchema="blue" />],
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: true
-    }
-  }
+      disableLifecycleMethods: true,
+    },
+  },
 };
 
 describe(`UU5.Bricks.ProgressBar`, () => {

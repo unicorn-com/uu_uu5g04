@@ -30,7 +30,7 @@ export const Swiper = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.ContentMixin,
     UU5.Common.SwipeMixin,
-    UU5.Common.NestingLevelMixin
+    UU5.Common.NestingLevelMixin,
   ],
   //@@viewOff:mixins
 
@@ -39,17 +39,17 @@ export const Swiper = UU5.Common.VisualComponent.create({
     tagName: ns.name("Swiper"),
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
-      main: ns.css("swiper")
+      main: ns.css("swiper"),
     },
     errors: {
       childTagNotAllowed:
         'Child tag %s is by default not allowed here. Use <%s allowBodyTags={["%s"]} ...> or allowMenuTags={["%s"]} if you really want to allow it, or wrap it into %s or %s.',
-      childNotAllowed: 'Child "%s" is by default not allowed here. Wrap it into %s or %s.'
+      childNotAllowed: 'Child "%s" is by default not allowed here. Wrap it into %s or %s.',
     },
     defaults: {
       bodyTagName: "UU5.Bricks.Swiper.Body",
-      menuTagName: "UU5.Bricks.Swiper.Menu"
-    }
+      menuTagName: "UU5.Bricks.Swiper.Menu",
+    },
   },
   //@@viewOff:statics
 
@@ -62,12 +62,12 @@ export const Swiper = UU5.Common.VisualComponent.create({
     onSwipeOpenRightMenu: UU5.PropTypes.func,
     onSwipeCloseRightMenu: UU5.PropTypes.func,
     allowBodyTags: UU5.PropTypes.array,
-    allowMenuTags: UU5.PropTypes.array
+    allowMenuTags: UU5.PropTypes.array,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       leftMenuOpen: false,
       rightMenuOpen: false,
@@ -76,16 +76,16 @@ export const Swiper = UU5.Common.VisualComponent.create({
       onSwipeOpenRightMenu: null,
       onSwipeCloseRightMenu: null,
       allowBodyTags: [],
-      allowMenuTags: []
+      allowMenuTags: [],
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  getInitialState: function() {
+  getInitialState: function () {
     return {
       leftMenuOpen: this.props.leftMenuOpen,
-      rightMenuOpen: this.props.rightMenuOpen
+      rightMenuOpen: this.props.rightMenuOpen,
     };
   },
 
@@ -93,7 +93,7 @@ export const Swiper = UU5.Common.VisualComponent.create({
     if (nextProps.controlled) {
       this.setState({
         leftMenuOpen: nextProps.leftMenuOpen,
-        rightMenuOpen: nextProps.rightMenuOpen
+        rightMenuOpen: nextProps.rightMenuOpen,
       });
     }
     return this;
@@ -105,29 +105,29 @@ export const Swiper = UU5.Common.VisualComponent.create({
     return true;
   },
 
-  openLeftMenu: function(setStateCallback) {
+  openLeftMenu: function (setStateCallback) {
     this.setState(
       {
         leftMenuOpen: true,
-        rightMenuOpen: false
+        rightMenuOpen: false,
       },
       setStateCallback
     );
     return this;
   },
 
-  closeLeftMenu: function(setStateCallback) {
+  closeLeftMenu: function (setStateCallback) {
     this.setState(
       {
-        leftMenuOpen: false
+        leftMenuOpen: false,
       },
       setStateCallback
     );
     return this;
   },
 
-  toggleLeftMenu: function(setStateCallback) {
-    this.setState(function(state) {
+  toggleLeftMenu: function (setStateCallback) {
+    this.setState(function (state) {
       var newState = { leftMenuOpen: !state.leftMenuOpen };
       !state.leftMenuOpen && (newState.rightMenuOpen = false);
       return newState;
@@ -135,29 +135,29 @@ export const Swiper = UU5.Common.VisualComponent.create({
     return this;
   },
 
-  openRightMenu: function(setStateCallback) {
+  openRightMenu: function (setStateCallback) {
     this.setState(
       {
         leftMenuOpen: false,
-        rightMenuOpen: true
+        rightMenuOpen: true,
       },
       setStateCallback
     );
     return this;
   },
 
-  closeRightMenu: function(setStateCallback) {
+  closeRightMenu: function (setStateCallback) {
     this.setState(
       {
-        rightMenuOpen: false
+        rightMenuOpen: false,
       },
       setStateCallback
     );
     return this;
   },
 
-  toggleRightMenu: function(setStateCallback) {
-    this.setState(function(state) {
+  toggleRightMenu: function (setStateCallback) {
+    this.setState(function (state) {
       var newState = { rightMenuOpen: !state.rightMenuOpen };
       !state.rightMenuOpen && (newState.leftMenuOpen = false);
       return newState;
@@ -165,11 +165,11 @@ export const Swiper = UU5.Common.VisualComponent.create({
     return this;
   },
 
-  isLeftMenuOpen: function() {
+  isLeftMenuOpen: function () {
     return this.state.leftMenuOpen;
   },
 
-  isRightMenuOpen: function() {
+  isRightMenuOpen: function () {
     return this.state.rightMenuOpen;
   },
 
@@ -199,7 +199,7 @@ export const Swiper = UU5.Common.VisualComponent.create({
   //@@viewOff:interface
 
   //@@viewOn:overriding
-  shouldChildRender_: function(child) {
+  shouldChildRender_: function (child) {
     let childTagName = UU5.Common.Tools.getChildTagName(child);
     let result =
       this._getAllowMenuTags().indexOf(childTagName) > -1 || this._getAllowBodyTags().indexOf(childTagName) > -1;
@@ -211,14 +211,14 @@ export const Swiper = UU5.Common.VisualComponent.create({
           childTagName,
           childTagName,
           this.getDefault().bodyTagName,
-          this.getDefault().menuTagName
+          this.getDefault().menuTagName,
         ]);
       else this.showError("childNotAllowed", [child, this.getDefault().bodyTagName, this.getDefault().menuTagName]);
     }
     return result;
   },
 
-  expandChildProps_: function(child) {
+  expandChildProps_: function (child) {
     var newChildProps = { ...child.props };
     if (this._getAllowMenuTags().indexOf(UU5.Common.Tools.getChildTagName(child)) > -1) {
       if (child.props.pullRight) {
@@ -240,7 +240,7 @@ export const Swiper = UU5.Common.VisualComponent.create({
     return this.props.allowMenuTags.concat(this.getDefault().menuTagName);
   },
 
-  _onSwipeEnd: function() {
+  _onSwipeEnd: function () {
     if (this.isSwipedRight()) {
       if (this.isRightMenuOpen()) {
         if (typeof this.props.onSwipeCloseRightMenu === "function") {
@@ -275,7 +275,7 @@ export const Swiper = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   // Render
-  _buildChildren: function() {
+  _buildChildren: function () {
     var menuLeft;
     var menuRight;
     var body;
@@ -284,7 +284,7 @@ export const Swiper = UU5.Common.VisualComponent.create({
     if (children) {
       if (!Array.isArray(children)) children = [children];
       children.forEach(
-        function(child) {
+        function (child) {
           if (this._getAllowBodyTags().indexOf(UU5.Common.Tools.getChildTagName(child)) > -1) {
             body = child;
           } else if (this._getAllowMenuTags().indexOf(UU5.Common.Tools.getChildTagName(child)) > -1) {
@@ -306,7 +306,7 @@ export const Swiper = UU5.Common.VisualComponent.create({
   },
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return this.getNestingLevel() ? (
       <div
         {...this.getMainAttrs()}
@@ -318,7 +318,7 @@ export const Swiper = UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </div>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

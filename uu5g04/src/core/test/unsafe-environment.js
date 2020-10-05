@@ -32,7 +32,7 @@ module.exports = class UnsafeEnvironment extends JsdomEnvironment {
     if (!cfg.testEnvironmentOptions) cfg.testEnvironmentOptions = {};
     Object.assign(cfg.testEnvironmentOptions, {
       resources: "usable",
-      runScripts: "dangerously"
+      runScripts: "dangerously",
     });
     super(cfg);
   }

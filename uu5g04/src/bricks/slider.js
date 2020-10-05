@@ -29,7 +29,7 @@ export const Slider = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.ContentMixin,
     UU5.Common.ColorSchemaMixin,
-    UU5.Common.NestingLevelMixin
+    UU5.Common.NestingLevelMixin,
   ],
   //@@viewOff:mixins
 
@@ -44,11 +44,11 @@ export const Slider = UU5.Common.VisualComponent.create({
       selection: ns.css("slider-selection"),
       pointer: ns.css("slider-pointer"),
       active: ns.css("slider-active"),
-      size: ns.css("slider-size-")
+      size: ns.css("slider-size-"),
     },
     defaults: {
-      childTagName: "UU5.Bricks.Slider.Item"
-    }
+      childTagName: "UU5.Bricks.Slider.Item",
+    },
   },
   //@@viewOff:statics
 
@@ -62,7 +62,7 @@ export const Slider = UU5.Common.VisualComponent.create({
     onChange: UU5.PropTypes.func,
     onChanged: UU5.PropTypes.func,
     size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
-    allowTags: UU5.PropTypes.array
+    allowTags: UU5.PropTypes.array,
   },
   //@@viewOff:propTypes
 
@@ -77,7 +77,7 @@ export const Slider = UU5.Common.VisualComponent.create({
       onChanged: null,
       size: "m",
       allowTags: [],
-      value: null // default: min
+      value: null, // default: min
     };
   },
   //@@viewOff:getDefaultProps
@@ -88,7 +88,7 @@ export const Slider = UU5.Common.VisualComponent.create({
 
     return {
       active: false,
-      activePointer: null
+      activePointer: null,
     };
   },
 
@@ -106,7 +106,7 @@ export const Slider = UU5.Common.VisualComponent.create({
   },
 
   getValue() {
-    let values = this._pointers.map(item => item.getValue());
+    let values = this._pointers.map((item) => item.getValue());
     if (values.length === 0) values = this.props.min;
     else if (values.length === 1) values = values[0];
 
@@ -162,7 +162,7 @@ export const Slider = UU5.Common.VisualComponent.create({
     }
 
     let ref = newChildProps.ref_;
-    newChildProps.ref_ = item => {
+    newChildProps.ref_ = (item) => {
       this._pointers.push(item);
       typeof ref === "function" && ref(item);
     };
@@ -178,7 +178,7 @@ export const Slider = UU5.Common.VisualComponent.create({
     if (!result && (typeof child !== "string" || child.trim())) {
       if (childTagName)
         this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagName], {
-          mixinName: "UU5.Common.BaseMixin"
+          mixinName: "UU5.Common.BaseMixin",
         });
       else this.showError("childNotAllowed", [child, defaultChildTagName], { mixinName: "UU5.Common.BaseMixin" });
     }
@@ -218,7 +218,7 @@ export const Slider = UU5.Common.VisualComponent.create({
   },
 
   _prepareIfcValue(value, nearestPointer) {
-    const values = this._pointers.map(item => (item === nearestPointer ? value : item.getValue()));
+    const values = this._pointers.map((item) => (item === nearestPointer ? value : item.getValue()));
 
     return values.length === 1 ? values[0] : values;
   },
@@ -241,7 +241,7 @@ export const Slider = UU5.Common.VisualComponent.create({
       let onChangeOpt = { value: value, component: this, event: e };
       onChangeOpt._data = {
         type: "change",
-        onChanged: typeof this.props.onChanged === "function" ? () => this.props.onChanged(onChangedOpt) : null
+        onChanged: typeof this.props.onChanged === "function" ? () => this.props.onChanged(onChangedOpt) : null,
       };
 
       if (typeof this.props.onChange === "function") {
@@ -272,7 +272,7 @@ export const Slider = UU5.Common.VisualComponent.create({
     this.setState(
       {
         active: true,
-        nearestPointer: nearestPointer
+        nearestPointer: nearestPointer,
       },
       onChange || onChanged ? () => (onChange ? onChange() : onChanged()) : null
     );
@@ -351,12 +351,12 @@ export const Slider = UU5.Common.VisualComponent.create({
     // After adding two decimal numbers, it is possible that the result will be inaccurate.
     // Fix this inaccurate by by check number of decimal places in both additioned numbers and compare with number of
     // decimal places in result. If result have more decimal numbers then original numbers, it is needed to round the result.
-    if(value && (value % 1 !== 0)){
+    if (value && value % 1 !== 0) {
       let numberOfDecimalsValue = this._countDecimals(this.getValue());
       let numberOfDecimalsStep = this._countDecimals(this.props.step);
-      let numberOfDecimals = numberOfDecimalsValue >= numberOfDecimalsStep ?
-          numberOfDecimalsValue : numberOfDecimalsStep;
-      value = Number(value.toFixed(numberOfDecimals))
+      let numberOfDecimals =
+        numberOfDecimalsValue >= numberOfDecimalsStep ? numberOfDecimalsValue : numberOfDecimalsStep;
+      value = Number(value.toFixed(numberOfDecimals));
     }
 
     this.props.vertical && (value = this.props.max + this.props.min - value);
@@ -379,7 +379,7 @@ export const Slider = UU5.Common.VisualComponent.create({
       attrs.onMouseMove = this._move;
       attrs.onMouseUp = this._deactivate;
       attrs.onTouchStart = this._activate;
-      attrs.onTouchMove = e => {
+      attrs.onTouchMove = (e) => {
         e.preventDefault();
         this._move(e);
       };
@@ -399,8 +399,8 @@ export const Slider = UU5.Common.VisualComponent.create({
       onClick: (backdrop, event) => event.target.id === backdropId && this._deactivate(),
       mainAttrs: {
         onMouseUp: this._deactivate,
-        onTouchEnd: this._deactivate
-      }
+        onTouchEnd: this._deactivate,
+      },
     };
   },
 
@@ -412,7 +412,7 @@ export const Slider = UU5.Common.VisualComponent.create({
   _getNearestPointer(newValue) {
     let min = Infinity,
       nearestPointer;
-    this._pointers.forEach(item => {
+    this._pointers.forEach((item) => {
       const value = Math.abs(newValue - item.getValue());
 
       if (min > value) {
@@ -432,7 +432,7 @@ export const Slider = UU5.Common.VisualComponent.create({
     if (!pointers || pointers.length === 0) {
       const values = this._getValueArray();
       pointers = this.buildChildren({
-        children: values.map((value, i) => <SliderItem id={this.getId() + "-" + i} value={value} />)
+        children: values.map((value, i) => <SliderItem id={this.getId() + "-" + i} value={value} />),
       });
     } else if (pointers && pointers.length > 2) {
       pointers = pointers.slice(0, 2);
@@ -441,12 +441,12 @@ export const Slider = UU5.Common.VisualComponent.create({
     return this.getNestingLevel() ? (
       <div {...this._getMainAttrs()}>
         <Backdrop {...this._getBackdropProps()} />
-        <div className={this.getClassName("track")} ref={item => (this._track = item)}>
+        <div className={this.getClassName("track")} ref={(item) => (this._track = item)}>
           {pointers}
         </div>
       </div>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

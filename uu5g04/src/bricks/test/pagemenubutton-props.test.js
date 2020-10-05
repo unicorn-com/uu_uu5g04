@@ -21,7 +21,7 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 const MyPageMenuButtonHandler = UU5.Common.VisualComponent.create({
   getInitialState: () => {
     return {
-      isCalled: false
+      isCalled: false,
     };
   },
 
@@ -31,7 +31,7 @@ const MyPageMenuButtonHandler = UU5.Common.VisualComponent.create({
   },
   render() {
     return <UU5.Bricks.Page.MenuButton id={"uuID03"} screenSize={"xs"} menu="left" onClick={this.onClickHandler} />;
-  }
+  },
 });
 
 const CONFIG = {
@@ -41,28 +41,28 @@ const CONFIG = {
     "UU5.Common.ContentMixin",
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.CcrWriterMixin"
+    "UU5.Common.CcrWriterMixin",
   ],
   props: {
     menu: {
-      values: ["left", "right"]
+      values: ["left", "right"],
     },
     //onClick
     pageKey: {
-      values: [null]
+      values: [null],
     },
     size: {
-      values: ["xl", "l", "m", "s"]
+      values: ["xl", "l", "m", "s"],
     },
     displayBlock: {
-      values: [true, false]
+      values: [true, false],
     },
     pressed: {
-      values: [true, false]
+      values: [true, false],
     },
     bgStyle: {
-      values: ["filled", "outline", "transparent"]
-    }
+      values: ["filled", "outline", "transparent"],
+    },
   },
   requiredProps: {
     // NOTE PageMenuButton will render itself (snapshot) only if it has menu="left" (or menu="right")
@@ -77,13 +77,13 @@ const CONFIG = {
         rightWidth="!xs-20 !s-20 !m-25 !l-25"
       />
     ).instance(),
-    screenSize: "xs"
+    screenSize: "xs",
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: true
-    }
-  }
+      disableLifecycleMethods: true,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Page.MenuButton`, () => {

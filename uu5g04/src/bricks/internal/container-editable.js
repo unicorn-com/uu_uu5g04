@@ -28,7 +28,7 @@ const DEFAULT_PROPS_MAP = {
   footer: "",
   content: null,
   children: null,
-  noSpacing: false
+  noSpacing: false,
 };
 
 const MAIN_CLASS_NAME = ns.css("container");
@@ -85,22 +85,22 @@ export const Container = UU5.Common.VisualComponent.create({
           &.uu5-bricks-editable-toolbar-dropdown {
             width: 148px;
           }
-        `)
+        `),
     },
-    lsi: () => ({ ...Lsi.container, ...Lsi.common })
+    lsi: () => ({ ...Lsi.container, ...Lsi.common }),
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    component: UU5.PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      component: null
+      component: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -112,7 +112,7 @@ export const Container = UU5.Common.VisualComponent.create({
     return {
       ...values,
       showFooter: !!values.footer,
-      showHeader: true
+      showHeader: true,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -156,14 +156,14 @@ export const Container = UU5.Common.VisualComponent.create({
 
   // change state handlers
   _toggleHeader() {
-    this.setState(state => ({
-      showHeader: !state.showHeader
+    this.setState((state) => ({
+      showHeader: !state.showHeader,
     }));
   },
 
   _toggleFooter() {
-    this.setState(state => ({
-      showFooter: !state.showFooter
+    this.setState((state) => ({
+      showFooter: !state.showFooter,
     }));
   },
 
@@ -172,12 +172,12 @@ export const Container = UU5.Common.VisualComponent.create({
   },
 
   _toggleUnderline() {
-    this.setState(state => ({ underline: !state.underline }));
+    this.setState((state) => ({ underline: !state.underline }));
   },
 
   _toggleNoSpacing() {
     this.setState(
-      state => ({ noSpacing: !state.noSpacing }),
+      (state) => ({ noSpacing: !state.noSpacing }),
       () => {
         this.props.component.saveEditation({ noSpacing: this.state.noSpacing });
       }
@@ -193,9 +193,9 @@ export const Container = UU5.Common.VisualComponent.create({
   },
 
   _getHeaderToolbarItems() {
-    let levelItems = [1, 2, 3, 4, 5, 6].map(level => ({
+    let levelItems = [1, 2, 3, 4, 5, 6].map((level) => ({
       content: `${this.getLsiValue("level")} ${level}`,
-      value: `${level}`
+      value: `${level}`,
     }));
     levelItems.unshift({ content: this.getLsiValue("defaultLevel"), value: null });
 
@@ -207,9 +207,9 @@ export const Container = UU5.Common.VisualComponent.create({
             pressed: this.state.underline,
             onClick: this._toggleUnderline,
             tooltip: this.getLsiValue("underlineTooltip"),
-            icon: "mdi-format-underline"
+            icon: "mdi-format-underline",
           };
-        }
+        },
       },
       {
         type: "dropdown",
@@ -223,10 +223,10 @@ export const Container = UU5.Common.VisualComponent.create({
             label,
             tooltip: this.getLsiValue("levelTooltip"),
             items: levelItems,
-            onClick: this._changeLevel
+            onClick: this._changeLevel,
           };
-        }
-      }
+        },
+      },
     ];
   },
 
@@ -235,18 +235,18 @@ export const Container = UU5.Common.VisualComponent.create({
       {
         value: this.state.showHeader,
         onClick: this._toggleHeader,
-        label: this.getLsiComponent("showHeaderCheckboxLabel")
+        label: this.getLsiComponent("showHeaderCheckboxLabel"),
       },
       {
         value: this.state.showFooter,
         onClick: this._toggleFooter,
-        label: this.getLsiComponent("showFooterCheckboxLabel")
+        label: this.getLsiComponent("showFooterCheckboxLabel"),
       },
       {
         value: this.state.noSpacing,
         onClick: this._toggleNoSpacing,
-        label: this.getLsiComponent("noSpacingTooltip")
-      }
+        label: this.getLsiComponent("noSpacingTooltip"),
+      },
     ];
   },
   //@@viewOff:private
@@ -290,11 +290,11 @@ export const Container = UU5.Common.VisualComponent.create({
             >
               {({ children }) => <UU5.Bricks.Footer parent={this.props.component}>{children}</UU5.Bricks.Footer>}
             </UU5.BricksEditable.Input>
-          ) : null
+          ) : null,
         ]}
       </UU5.BricksEditable.Toolbar>
     );
-  }
+  },
   //@@viewOff:render
 });
 

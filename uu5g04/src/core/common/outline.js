@@ -34,24 +34,24 @@ export const Outline = VisualComponent.create({
   statics: {
     tagName: ns.name("Outline"),
     classNames: {
-      main: ns.css("outline")
+      main: ns.css("outline"),
     },
     defaults: {
-      propsIcon: "mdi-information-outline"
-    }
+      propsIcon: "mdi-information-outline",
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    element: PropTypes.object
+    element: PropTypes.object,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
-      element: null
+      element: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -69,13 +69,13 @@ export const Outline = VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _openModal: function(tag, props) {
+  _openModal: function (tag, props) {
     var propsString = JSON.stringify(props, null, 2);
     this.modal.open({ header: tag, content: <pre>{propsString}</pre> });
     return this;
   },
 
-  _buildOutlineItem: function(tag, props, isContent) {
+  _buildOutlineItem: function (tag, props, isContent) {
     var newProps = {};
     var items = null;
 
@@ -100,15 +100,15 @@ export const Outline = VisualComponent.create({
     if (Object.keys(newProps).length) {
       link = Tools.findComponent("UU5.Bricks.Link", {
         onClick: this._openModal.bind(this, tag, newProps),
-        content: Tools.findComponent("UU5.Bricks.Icon", { icon: this.getDefault().propsIcon })
+        content: Tools.findComponent("UU5.Bricks.Icon", { icon: this.getDefault().propsIcon }),
       });
     }
 
     var newItemProps = {
       label: Tools.findComponent("UU5.Bricks.Span", {
         parent: this,
-        content: [tag, link]
-      })
+        content: [tag, link],
+      }),
     };
 
     items && (newItemProps.items = items);
@@ -116,14 +116,14 @@ export const Outline = VisualComponent.create({
     return newItemProps;
   },
 
-  _buildOutlineItems: function(children) {
+  _buildOutlineItems: function (children) {
     var content = this;
     var items = null;
 
     if (children) {
       !Array.isArray(children) && (children = [children]);
 
-      children.forEach(function(child) {
+      children.forEach(function (child) {
         items = items || [];
         items.push(
           content._buildOutlineItem(
@@ -138,14 +138,14 @@ export const Outline = VisualComponent.create({
     return items;
   },
 
-  _refModal: function(modal) {
+  _refModal: function (modal) {
     this.modal = modal;
     return this;
   },
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     var children = this.props.element.getStandardChildren();
     var item = this._buildOutlineItem(
       this.props.element.getTagName(),
@@ -160,7 +160,7 @@ export const Outline = VisualComponent.create({
         {this.getDisabledCover()}
       </div>
     );
-  }
+  },
   //@@viewOff:render
 });
 

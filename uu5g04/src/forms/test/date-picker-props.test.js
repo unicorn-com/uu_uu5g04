@@ -36,7 +36,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
   getInitialState() {
     return {
       isCalled: false,
-      defaultValue: "09.02.2018"
+      defaultValue: "09.02.2018",
     };
   },
 
@@ -91,7 +91,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
     return (
       <UU5.Forms.DatePicker
         id={"checkID"}
-        ref_={comp => (this._component = comp)}
+        ref_={(comp) => (this._component = comp)}
         label="Date of birth"
         value={this.state.defaultValue}
         onFocus={this.onFocusHandler}
@@ -104,7 +104,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
         parseDate={this.parseDateHandler}
       />
     );
-  }
+  },
 });
 
 //`${TAG_NAME}`
@@ -115,54 +115,54 @@ const CONFIG = {
     "UU5.Common.PureRenderMixin",
     "UU5.Forms.TextInputMixin",
     "UU5.Common.ColorSchemaMixin",
-    "UU5.Forms.InputMixin"
+    "UU5.Forms.InputMixin",
   ],
   props: {
     value: {
-      values: ["1.1.2017"]
+      values: ["1.1.2017"],
     },
     dateFrom: {
-      values: ["1.1.1990"]
+      values: ["1.1.1990"],
     },
     dateTo: {
-      values: ["1.1.2020"]
+      values: ["1.1.2020"],
     },
     buttonHidden: {
-      values: [true, false]
+      values: [true, false],
     },
     iconOpen: {
-      values: ["mdi-clock-outline"]
+      values: ["mdi-clock-outline"],
     },
     iconClosed: {
-      values: ["mdi-calendar"]
+      values: ["mdi-calendar"],
     },
     format: {
-      values: ["dd.mm.Y", "dd/mm/Y", "dd-mm-Y", "dd:mm:Y - q"]
+      values: ["dd.mm.Y", "dd/mm/Y", "dd-mm-Y", "dd:mm:Y - q"],
     },
     hideFormatPlaceholder: {
-      values: [true, false]
+      values: [true, false],
     },
     country: {
-      values: ["en-us"]
+      values: ["en-us"],
     },
     nanMessage: {
-      values: ["Prosím zadejte validní datum."]
+      values: ["Prosím zadejte validní datum."],
     },
     beforeRangeMessage: {
-      values: ["Zkus zadat pozdější datum."]
+      values: ["Zkus zadat pozdější datum."],
     },
     afterRangeMessage: {
-      values: ["Přestřelil jsi, zkus trochu ubrat."]
+      values: ["Přestřelil jsi, zkus trochu ubrat."],
     },
     disableBackdrop: {
-      values: [true, false]
+      values: [true, false],
     },
     showTodayButton: {
-      values: [true, false]
+      values: [true, false],
     },
     calendarStartView: {
-      values: ["days", "months", "years"]
-    }
+      values: ["days", "months", "years"],
+    },
     // parseDate - In agreement with developers, this props need not be tested.
   },
   requiredProps: {
@@ -170,9 +170,9 @@ const CONFIG = {
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 const ISOFormatTest = (props, country, expectedValue) => {
@@ -271,19 +271,19 @@ describe(`UU5.Forms.DatePicker props function -> Text.InputMixin`, () => {
         id={"uuID"}
         label="Date of birth"
         validateOnChange={true}
-        onValidate={opt => {
+        onValidate={(opt) => {
           let feedback;
           if (opt.value) {
             feedback = {
               feedback: "success",
               message: "Is valid.",
-              value: opt.value
+              value: opt.value,
             };
           } else {
             feedback = {
               feedback: "error",
               message: "Not valid.",
-              value: opt.value
+              value: opt.value,
             };
           }
           return feedback;
@@ -303,19 +303,19 @@ describe(`UU5.Forms.DatePicker props function -> Text.InputMixin`, () => {
         value={"12.12.2018"}
         label="Date of birth"
         validateOnChange={true}
-        onValidate={opt => {
+        onValidate={(opt) => {
           let feedback;
           if (opt.value) {
             feedback = {
               feedback: "success",
               message: "Is valid.",
-              value: opt.value
+              value: opt.value,
             };
           } else {
             feedback = {
               feedback: "error",
               message: "Not valid.",
-              value: opt.value
+              value: opt.value,
             };
           }
           return feedback;
@@ -383,9 +383,9 @@ describe(`UU5.Forms.DatePicker props function -> Forms.InputMixin`, () => {
 });
 
 describe(`UU5.Forms.DatePicker props function`, () => {
-  it("parseDate()", function() {
+  it("parseDate()", function () {
     const dateValue = "1:1:2020";
-    const parseDateMethod = jest.fn(stringDate => {
+    const parseDateMethod = jest.fn((stringDate) => {
       let date = null;
       stringDate = stringDate && stringDate.replace(/ /g, "");
       let regExp = new RegExp("^(\\d{1,2})\\:(\\d{1,2})\\:(\\d{4})$");
@@ -399,10 +399,7 @@ describe(`UU5.Forms.DatePicker props function`, () => {
     parseDateMethod.mockClear();
     // according to docs, parseDate is for parsing passed value, i.e. calling getValue()
     // should trigger it (though maybe multiple times so we'll check only last invocation)
-    wrapper
-      .setProps({ value: dateValue })
-      .instance()
-      .getValue();
+    wrapper.setProps({ value: dateValue }).instance().getValue();
     expect(parseDateMethod).toBeCalled();
     expect(parseDateMethod.mock.calls[parseDateMethod.mock.calls.length - 1][0]).toEqual("01:01:2020");
     expect(wrapper).toMatchSnapshot();
@@ -487,19 +484,13 @@ describe(`UU5.Forms.DatePicker props extra`, () => {
       <UU5.Forms.DatePicker id={"uuID"} value={new Date(2019, 7, 2, 0, 0, 0, 0)} format="dd:mm:Y - q" />
     );
 
-    let input = wrapper
-      .find("input")
-      .first()
-      .instance();
+    let input = wrapper.find("input").first().instance();
     expect(input).toBeTruthy();
     expect(input.value).toBe("02:08:2019 - 3");
     expect(+wrapper.instance().getValue()).toBe(+new Date(2019, 7, 2, 0, 0, 0, 0));
 
     wrapper.instance().setValue("08:02:2019 - 1");
-    input = wrapper
-      .find("input")
-      .first()
-      .instance();
+    input = wrapper.find("input").first().instance();
     expect(input).toBeTruthy();
     expect(input.value).toBe("08:02:2019 - 1");
     expect(+wrapper.instance().getValue()).toBe(+new Date(2019, 1, 8, 0, 0, 0, 0));

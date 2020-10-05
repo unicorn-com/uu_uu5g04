@@ -32,7 +32,7 @@ const DEFAULT_VALUES = {
   datetime: "",
   uu5string: "",
   uu5json: null,
-  select: null
+  select: null,
 };
 const DEFAULT_TYPE = "text";
 
@@ -48,17 +48,17 @@ export const PropsForm = UU5.Common.VisualComponent.create({
     tagName: ns.name("PropsForm"),
     classNames: {
       main: ns.css("propsform"),
-      additionalPropsPanel: ns.css("additional-props-panel")
+      additionalPropsPanel: ns.css("additional-props-panel"),
     },
     limits: {
-      radiosMax: 5
+      radiosMax: 5,
     },
     lsi: {
       panelHeader: {
         cs: "Doplňující vlastnosti",
-        en: "Additional properties"
-      }
-    }
+        en: "Additional properties",
+      },
+    },
   },
   //@@viewOff:statics
 
@@ -80,14 +80,14 @@ export const PropsForm = UU5.Common.VisualComponent.create({
             "datetime",
             "uu5string",
             "uu5json",
-            "texticon"
+            "texticon",
           ]),
-          UU5.PropTypes.node
+          UU5.PropTypes.node,
         ]),
         value: UU5.PropTypes.any,
         defaultValue: UU5.PropTypes.any,
         props: UU5.PropTypes.object,
-        required: UU5.PropTypes.bool
+        required: UU5.PropTypes.bool,
       })
     ).isRequired,
     onSave: UU5.PropTypes.func.isRequired,
@@ -95,7 +95,7 @@ export const PropsForm = UU5.Common.VisualComponent.create({
     labelColWidth: UU5.PropTypes.string,
     inputColWidth: UU5.PropTypes.string,
     tagName: UU5.PropTypes.string,
-    uu5string: UU5.PropTypes.bool
+    uu5string: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -108,7 +108,7 @@ export const PropsForm = UU5.Common.VisualComponent.create({
       labelColWidth: undefined,
       inputColWidth: undefined,
       tagName: null,
-      uu5string: false
+      uu5string: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -151,7 +151,7 @@ export const PropsForm = UU5.Common.VisualComponent.create({
       delete prop.props.onChange;
     }
 
-    return opt => {
+    return (opt) => {
       let onChangeCallback;
       typeof onChange === "function" && (onChangeCallback = () => onChange(opt));
 
@@ -218,7 +218,7 @@ export const PropsForm = UU5.Common.VisualComponent.create({
       case "select":
         result.Component = "UU5.Forms.Select";
         result.props.onChange = this._onChangeHandler(prop);
-        result.children = prop.type.map(typeValue => {
+        result.children = prop.type.map((typeValue) => {
           return <Select.Option value={typeValue} key={typeValue} />;
         });
 
@@ -226,11 +226,11 @@ export const PropsForm = UU5.Common.VisualComponent.create({
       case "radios":
         result.Component = "UU5.Forms.Radios";
         result.props.onChange = this._onChangeHandler(prop);
-        result.props.value = prop.type.map(typeValue => {
+        result.props.value = prop.type.map((typeValue) => {
           return {
             label: typeValue,
             name: typeValue,
-            value: typeValue === prop.value
+            value: typeValue === prop.value,
           };
         });
         break;
@@ -248,7 +248,7 @@ export const PropsForm = UU5.Common.VisualComponent.create({
         delete prop.props.onBlur;
       }
 
-      result.props.onBlur = opt => {
+      result.props.onBlur = (opt) => {
         if (typeof onBlur === "function") onBlur(opt);
         else if (opt && opt.component && typeof opt.component.onBlurDefault === "function")
           opt.component.onBlurDefault(opt);
@@ -322,7 +322,7 @@ export const PropsForm = UU5.Common.VisualComponent.create({
     let displayedChildren = [];
     let collapsedChildren = [];
 
-    this.props.props.forEach(prop => {
+    this.props.props.forEach((prop) => {
       let { Component, children, props = {} } = this._getComponent(prop);
 
       let value = prop.value;
@@ -351,7 +351,7 @@ export const PropsForm = UU5.Common.VisualComponent.create({
             key: prop.name,
             labelColWidth: this.props.labelColWidth,
             inputColWidth: this.props.inputColWidth,
-            controlled: false
+            controlled: false,
           },
           props,
           prop.props
@@ -386,13 +386,13 @@ export const PropsForm = UU5.Common.VisualComponent.create({
             tagName={this.props.tagName}
             props={tagProps}
             uu5string={this.props.uu5string}
-            ref_={ref => (this._result = ref)}
+            ref_={(ref) => (this._result = ref)}
           />
         )}
         <Controls />
       </Form>
     );
-  }
+  },
   //@@viewOff:render
 });
 

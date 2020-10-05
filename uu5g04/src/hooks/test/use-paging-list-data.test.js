@@ -4,7 +4,7 @@ import { usePagingListData } from "uu5g04-hooks";
 const { renderHook, wait, act } = UU5.Test.Tools;
 
 async function renderHookAndLoad2Pages(...initialHookParams) {
-  let onLoad = jest.fn(async params => {
+  let onLoad = jest.fn(async (params) => {
     let { pageIndex } = (params && params.pageInfo) || {};
     if (pageIndex === 2) return LOAD_DATA2;
     return LOAD_DATA1;
@@ -28,24 +28,31 @@ const INITIAL_DATA1 = {
   pageInfo: {
     pageIndex: 0,
     pageSize: 1,
-    total: 3
-  }
+    total: 3,
+  },
 };
 const LOAD_DATA1 = {
-  itemList: [{ id: "id1", value: "a" }, { id: "id2", value: "b" }, { id: "id3", value: "c" }],
+  itemList: [
+    { id: "id1", value: "a" },
+    { id: "id2", value: "b" },
+    { id: "id3", value: "c" },
+  ],
   pageInfo: {
     pageIndex: 0,
     pageSize: 3,
-    total: 7
-  }
+    total: 7,
+  },
 };
 const LOAD_DATA2 = {
-  itemList: [{ id: "idA", value: "1" }, { id: "idB", value: "2" }],
+  itemList: [
+    { id: "idA", value: "1" },
+    { id: "idB", value: "2" },
+  ],
   pageInfo: {
     pageIndex: 2,
     pageSize: 3,
-    total: 8
-  }
+    total: 8,
+  },
 };
 const PAGE_SIZE1 = 7;
 
@@ -62,7 +69,7 @@ describe("[uu5g04-hooks] usePagingListDataManager behaviour", () => {
       handleLoad: expect.any(Function),
       handleCreate: expect.any(Function),
       handleUpdate: expect.any(Function),
-      handleDelete: expect.any(Function)
+      handleDelete: expect.any(Function),
     });
   });
 
@@ -74,7 +81,7 @@ describe("[uu5g04-hooks] usePagingListDataManager behaviour", () => {
       pageInfo: INITIAL_DATA1.pageInfo,
       viewState: "ready",
       errorState: null,
-      error: null
+      error: null,
     });
   });
 
@@ -87,7 +94,7 @@ describe("[uu5g04-hooks] usePagingListDataManager behaviour", () => {
       pageInfo: null,
       viewState: "ready",
       errorState: null,
-      error: null
+      error: null,
     });
   });
 
@@ -100,7 +107,7 @@ describe("[uu5g04-hooks] usePagingListDataManager behaviour", () => {
       pageInfo: INITIAL_DATA1.pageInfo,
       viewState: "ready",
       errorState: null,
-      error: null
+      error: null,
     });
     await wait();
     expect(onLoad).toHaveBeenCalledTimes(0);
@@ -116,17 +123,17 @@ describe("[uu5g04-hooks] usePagingListDataManager behaviour", () => {
   it("handleLoad; should provide data having 'total' length with some items being 'undefined'", async () => {
     let { lastResult } = renderHook(usePagingListData, {
       onLoad: async () => LOAD_DATA1,
-      pageSize: LOAD_DATA1.pageInfo.pageSize
+      pageSize: LOAD_DATA1.pageInfo.pageSize,
     });
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: LOAD_DATA1.itemList.concat([undefined, undefined, undefined, undefined]),
-      asyncData: LOAD_DATA1.itemList.concat([undefined, undefined, undefined, undefined])
+      asyncData: LOAD_DATA1.itemList.concat([undefined, undefined, undefined, undefined]),
     });
   });
 
   it("handleLoad(params, true); should merge new pages into existing data & should update total length", async () => {
-    let onLoad = jest.fn(async params => {
+    let onLoad = jest.fn(async (params) => {
       let { pageIndex } = (params && params.pageInfo) || {};
       if (pageIndex === 2) return LOAD_DATA2;
       return LOAD_DATA1;
@@ -140,12 +147,12 @@ describe("[uu5g04-hooks] usePagingListDataManager behaviour", () => {
     expect(onLoad).toHaveBeenCalledTimes(2);
     expect(lastResult()).toMatchObject({
       syncData: LOAD_DATA1.itemList.concat([undefined, undefined, undefined], LOAD_DATA2.itemList),
-      asyncData: LOAD_DATA1.itemList.concat([undefined, undefined, undefined], LOAD_DATA2.itemList)
+      asyncData: LOAD_DATA1.itemList.concat([undefined, undefined, undefined], LOAD_DATA2.itemList),
     });
   });
 
   it("handleLoad(params, false); should overwrite existing data & should update total length", async () => {
-    let onLoad = jest.fn(async params => {
+    let onLoad = jest.fn(async (params) => {
       let { pageIndex } = (params && params.pageInfo) || {};
       if (pageIndex === 2) return LOAD_DATA2;
       return LOAD_DATA1;
@@ -159,7 +166,7 @@ describe("[uu5g04-hooks] usePagingListDataManager behaviour", () => {
     expect(onLoad).toHaveBeenCalledTimes(2);
     expect(lastResult()).toMatchObject({
       syncData: new Array(LOAD_DATA1.pageInfo.pageSize * 2).fill(undefined).concat(LOAD_DATA2.itemList),
-      asyncData: new Array(LOAD_DATA1.pageInfo.pageSize * 2).fill(undefined).concat(LOAD_DATA2.itemList)
+      asyncData: new Array(LOAD_DATA1.pageInfo.pageSize * 2).fill(undefined).concat(LOAD_DATA2.itemList),
     });
   });
 
@@ -186,7 +193,7 @@ describe("[uu5g04-hooks] usePagingListDataManager behaviour", () => {
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: expectedData.concat([CREATE1]),
-      asyncData: expectedData.concat([CREATE1])
+      asyncData: expectedData.concat([CREATE1]),
     });
   });
 
@@ -200,8 +207,8 @@ describe("[uu5g04-hooks] usePagingListDataManager behaviour", () => {
     });
     await wait();
     expect(lastResult()).toMatchObject({
-      syncData: expectedData.map(it => (it && it.id === "idA" ? { ...it, ...UPDATE1 } : it)),
-      asyncData: expectedData.map(it => (it && it.id === "idA" ? { ...it, ...UPDATE1 } : it))
+      syncData: expectedData.map((it) => (it && it.id === "idA" ? { ...it, ...UPDATE1 } : it)),
+      asyncData: expectedData.map((it) => (it && it.id === "idA" ? { ...it, ...UPDATE1 } : it)),
     });
   });
 
@@ -214,8 +221,8 @@ describe("[uu5g04-hooks] usePagingListDataManager behaviour", () => {
     });
     await wait();
     expect(lastResult()).toMatchObject({
-      syncData: expectedData.filter(it => !it || it.id !== "idA"),
-      asyncData: expectedData.filter(it => !it || it.id !== "idA")
+      syncData: expectedData.filter((it) => !it || it.id !== "idA"),
+      asyncData: expectedData.filter((it) => !it || it.id !== "idA"),
     });
   });
 
@@ -231,7 +238,7 @@ describe("[uu5g04-hooks] usePagingListDataManager behaviour", () => {
       asyncData: LOAD_DATA1.itemList,
       viewState: "ready",
       errorState: null,
-      error: null
+      error: null,
     });
   });
 });

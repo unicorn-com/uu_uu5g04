@@ -1,10 +1,10 @@
 {
   "name": "uu5g04",
-  "version": "1.35.0",
+  "version": "1.36.0",
   "description": "",
   "license": "UAF",
   "namespace": "UU5",
-  "spec": "uu5-lib; uu_appg01@1.3.0",
+  "spec": "uu5-lib; uu_appg01@3.1.0",
   "dependencies": {
     "browser-update": "3.1.13",
     "core-js": "^3.0.0",
@@ -401,11 +401,11 @@
     "react-dnd-html5-backend": "7.0.2",
     "systemjs": "0.19.47",
     "uu_appg01": "^4.4.0",
-    "uu_appg01_devkit": "^2.0.0",
+    "uu_appg01_devkit": "^3.0.0",
     "write-file-atomic": "2.3.0"
   },
   "engines": {
-    "node": ">=10.16.0"
+    "node": ">=12.0.0"
   },
   "scripts": {
     "clean": "uu_appg01_devkit clean",
@@ -416,6 +416,7 @@
     "dist": "npm run package --",
     "start": "uu_appg01_devkit start",
     "prettify": "uu_appg01_devkit prettify",
+    "vulnerabilityScan": "uu_appg01_devkit vulnerabilityScan",
     "deploy": "uu_appg01_devkit deploy",
     "uuAppBox": "uu_appg01_devkit uuAppBox",
     "uuCloudDeploy": "uu_appg01_devkit uuCloudDeploy",
@@ -428,9 +429,7 @@
     "buildOffline": "node tools/build-offline.js",
     "deployOffline": "node tools/deploy-offline.js"
   },
-  "main": "dist-node/index.js",
-  "jsnext:main": "dist-esm/index.js",
-  "module": "dist-esm/index.js",
+  "main": "src/core/core.js",
   "files": [
     "dist*",
     "tools/dev-server/*",

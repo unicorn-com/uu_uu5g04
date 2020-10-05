@@ -23,25 +23,25 @@ const CONFIG = {
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.ContentMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     background: {
-      values: [true, false]
+      values: [true, false],
     },
     alignment: {
-      values: ["left", "right"]
+      values: ["left", "right"],
     },
     footer: "My Footer Content",
     footerAlignment: {
-      values: ["left", "right"]
+      values: ["left", "right"],
     },
     noSpacing: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
   },
   requiredProps: {},
-  opt: {}
+  opt: {},
 };
 
 describe(`UU5.Bricks.Blockquote`, () => {

@@ -29,7 +29,7 @@ export const Label = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.ColorSchemaMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.NestingLevelMixin
+    UU5.Common.NestingLevelMixin,
   ],
   //@@viewOff:mixins
 
@@ -43,8 +43,8 @@ export const Label = UU5.Common.VisualComponent.create({
       left: ns.css("label-icon-left"),
       right: ns.css("label-icon-right"),
       labelClick: ns.css("label-click"),
-      iconClick: ns.css("label-icon-click")
-    }
+      iconClick: ns.css("label-icon-click"),
+    },
   },
   //@@viewOff:statics
 
@@ -57,7 +57,7 @@ export const Label = UU5.Common.VisualComponent.create({
     icon: UU5.PropTypes.string,
     iconAlign: UU5.PropTypes.oneOf(["right", "left"]),
     iconOnClick: UU5.PropTypes.func,
-    onClick: UU5.PropTypes.func
+    onClick: UU5.PropTypes.func,
   },
   //@@viewOff:propTypes
 
@@ -71,7 +71,7 @@ export const Label = UU5.Common.VisualComponent.create({
       icon: null,
       iconAlign: "right",
       iconOnClick: null,
-      onClick: null
+      onClick: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -92,7 +92,7 @@ export const Label = UU5.Common.VisualComponent.create({
       " " + (this.props.iconAlign === "left" ? this.getClassName().left : this.getClassName().right);
 
     if (typeof this.props.onClick === "function") {
-      mainAttrs.onClick = e => this.props.onClick(this, e);
+      mainAttrs.onClick = (e) => this.props.onClick(this, e);
     }
 
     if (this.props.onClick) {
@@ -149,7 +149,7 @@ export const Label = UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </span>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

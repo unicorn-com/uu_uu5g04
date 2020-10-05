@@ -25,7 +25,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
   getInitialState: () => {
     return {
       isCalled: false,
-      defaultValue: false
+      defaultValue: false,
     };
   },
 
@@ -57,7 +57,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
         onChangeFeedback={this.onChangeFeedbackHandler}
       />
     );
-  }
+  },
 });
 
 const CONFIG = {
@@ -67,27 +67,27 @@ const CONFIG = {
     "UU5.Common.PureRenderMixin",
     "UU5.Common.ColorSchemaMixin",
     "UU5.Forms.InputMixin",
-    "UU5.Forms.GroupMixin"
+    "UU5.Forms.GroupMixin",
   ],
   props: {
     bgStyleChecked: {
-      values: ["outline", "filled"]
+      values: ["outline", "filled"],
     },
     selectionBackground: {
-      values: [true, false]
+      values: [true, false],
     },
     selectionBorderRadius: {
-      values: ["8px 16px", 8]
-    }
+      values: ["8px 16px", 8],
+    },
   },
   requiredProps: {
     //The component does not have any required props
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: true
-    }
-  }
+      disableLifecycleMethods: true,
+    },
+  },
 };
 
 describe(`UU5.Forms.Radios props`, () => {
@@ -113,7 +113,7 @@ describe(`UU5.Forms.Radios props function -> Forms.InputMixin`, () => {
     let mockItem = {
       getName: () => {
         return "box1";
-      }
+      },
     };
     let callback = jest.fn();
     let wrapper = shallow(<UU5.Forms.Radios value={[{ label: "Radio 1", name: "box1", value: false }]} />);

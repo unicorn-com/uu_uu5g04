@@ -68,7 +68,7 @@ function getStylePseudoContainer(key, owner) {
   return {
     appendChild: insertStyleElement,
     insertBefore: insertStyleElement,
-    insertAfter: insertStyleElement
+    insertAfter: insertStyleElement,
   };
 }
 
@@ -89,7 +89,7 @@ const getCss = (key, owner) => {
     css: emotion.css,
     injectGlobal: emotion.injectGlobal,
     keyframes: emotion.keyframes,
-    join: emotion.cx
+    join: emotion.cx,
   };
 };
 
@@ -99,7 +99,7 @@ export const Css = {
   createCssModule(key, owner = null) {
     this[key] = getCss(key, owner);
     return this[key];
-  }
+  },
 };
 
 export default Css;

@@ -27,8 +27,8 @@ const DEFAULT_PROPS = [
     props: {
       inputColWidth: "xs12 s7 m4",
       icon: "mdi-help-circle-outline",
-      onClick: () => UU5.Common.Tools.openWindow(Tools.iconDocLink, "_blank")
-    }
+      onClick: () => UU5.Common.Tools.openWindow(Tools.iconDocLink, "_blank"),
+    },
   },
   {
     name: "content",
@@ -40,9 +40,9 @@ const DEFAULT_PROPS = [
       showGutter: false,
       wrapEnabled: true,
       inputColWidth: "xl12",
-      labelColWidth: "xl12"
+      labelColWidth: "xl12",
     },
-    value: ""
+    value: "",
   },
   {
     name: "href",
@@ -50,9 +50,9 @@ const DEFAULT_PROPS = [
     label: "Href",
     props: {
       inputColWidth: "xl12",
-      labelColWidth: "xl12"
+      labelColWidth: "xl12",
     },
-    value: "#"
+    value: "#",
   },
   {
     name: "target",
@@ -61,9 +61,9 @@ const DEFAULT_PROPS = [
     props: {
       colWidth: "xs12 s6 m6 l6 xl6",
       inputColWidth: "s12 m7",
-      labelColWidth: "s12 m5"
+      labelColWidth: "s12 m5",
     },
-    value: "_self"
+    value: "_self",
   },
   {
     name: "colorSchema",
@@ -71,9 +71,9 @@ const DEFAULT_PROPS = [
     label: "Color Schema",
     props: {
       inputColWidth: "xs8 s4",
-      labelColWidth: "xs12 s5"
+      labelColWidth: "xs12 s5",
     },
-    value: null
+    value: null,
   },
   {
     name: "bgStyle",
@@ -82,9 +82,9 @@ const DEFAULT_PROPS = [
     props: {
       colWidth: "xl6 l6 m6 s12 xs12",
       inputColWidth: "s12 m7",
-      labelColWidth: "s12 m5"
+      labelColWidth: "s12 m5",
     },
-    value: "filled"
+    value: "filled",
   },
   {
     name: "contentEditable",
@@ -92,10 +92,10 @@ const DEFAULT_PROPS = [
     label: "Content Editable",
     props: {
       inputColWidth: "s8 m7",
-      labelColWidth: "s4 m5"
+      labelColWidth: "s4 m5",
     },
-    value: false
-  }
+    value: false,
+  },
 ];
 
 export const TouchIcon = UU5.Common.VisualComponent.create({
@@ -109,21 +109,21 @@ export const TouchIcon = UU5.Common.VisualComponent.create({
     tagName: "UU5.BricksEditable.TouchIcon",
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
-      main: "editable-touch-icon"
-    }
+      main: "editable-touch-icon",
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    component: UU5.PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      component: null
+      component: null,
     };
   },
   getInitialState() {
@@ -172,7 +172,7 @@ export const TouchIcon = UU5.Common.VisualComponent.create({
         <UU5.Forms.PropsForm props={this.state.props} onCancel={this._cancel} onSave={this._save} uu5string={true} />
       </UU5.Bricks.Div>
     );
-  }
+  },
   //@@viewOff:render
 });
 

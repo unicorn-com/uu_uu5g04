@@ -21,36 +21,36 @@ const CONFIG = {
     "UU5.Common.BaseMixin",
     "UU5.Common.ElementaryMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     src: {
-      values: ["https://plus4u.net/"]
+      values: ["https://plus4u.net/"],
     },
     resize: {
-      values: [true, false]
+      values: [true, false],
     },
     height: {
-      values: ["400", "40em"]
+      values: ["400", "40em"],
     },
     syncTimeout: {
       values: [3],
       // make snapshots without waiting for timeout (to see that iframe is not present initially)
-      opt: { wait: false }
+      opt: { wait: false },
     },
     inline: {
-      values: [true, false]
+      values: [true, false],
     },
     iframeAttrs: {
-      values: [{ name: "reactName" }]
-    }
+      values: [{ name: "reactName" }],
+    },
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Iframe`, () => {

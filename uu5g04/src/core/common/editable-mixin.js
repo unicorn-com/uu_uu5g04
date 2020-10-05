@@ -21,25 +21,25 @@ import "./editable-mixin.less";
 
 const EDITABLE_MIXIN_NAME = "UU5.Common.EditableMixin";
 
-const requestFrame = (function() {
+const requestFrame = (function () {
   var raf =
     window.requestAnimationFrame ||
     window.mozRequestAnimationFrame ||
     window.webkitRequestAnimationFrame ||
-    function(fn) {
+    function (fn) {
       return window.setTimeout(fn, 20);
     };
-  return function(fn) {
+  return function (fn) {
     return raf(fn);
   };
 })();
-const cancelFrame = (function() {
+const cancelFrame = (function () {
   var cancel =
     window.cancelAnimationFrame ||
     window.mozCancelAnimationFrame ||
     window.webkitCancelAnimationFrame ||
     window.clearTimeout;
-  return function(id) {
+  return function (id) {
     return cancel(id);
   };
 })();
@@ -55,12 +55,12 @@ export const EditableMixin = {
       lsi: {
         header: {
           cs: "Editace komponenty %s",
-          en: "%s editation"
-        }
+          en: "%s editation",
+        },
       },
       classNames: {
-        docLink: ns.css("editable-doc-link")
-      }
+        docLink: ns.css("editable-doc-link"),
+      },
     },
     //editMode used by Section,Row,Column, etc.
     editMode_: {
@@ -68,31 +68,31 @@ export const EditableMixin = {
       customEdit: true, // editovatelná komponenta musí mít true, jinak se zobrazí editace jako uu5string
       // displayType: inline/block
       // startMode: "content"
-    }
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    getEditablePropValue: PropTypes.func
+    getEditablePropValue: PropTypes.func,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      getEditablePropValue: undefined
+      getEditablePropValue: undefined,
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  getInitialState: function() {
+  getInitialState: function () {
     this.registerMixin(EDITABLE_MIXIN_NAME);
     this._resizeCallbacks = {};
     return {
       editation: this.props.editMode ? this.props.editMode.edit : false,
-      editableComponentLazyLoaded: false
+      editableComponentLazyLoaded: false,
     };
   },
 
@@ -105,9 +105,9 @@ export const EditableMixin = {
     this._endResizeCheck();
   },
 
-  UNSAFE_componentWillReceiveProps(nextProps){
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.editMode && nextProps.editMode.edit !== this.state.editation) {
-      nextProps.editMode.edit ? this.startEditation(this._eccEditEnd) : this.forceEndEditation()
+      nextProps.editMode.edit ? this.startEditation(this._eccEditEnd) : this.forceEndEditation();
     }
   },
 
@@ -118,7 +118,7 @@ export const EditableMixin = {
 
   _eccEditEnd(component, newProps) {
     // await this.props.editMode.onChange({ props: newProps })
-    this.props.editMode.onEditEnd({props: newProps});
+    this.props.editMode.onEditEnd({ props: newProps });
   },
   //@@viewOff:reactLifeCycle
 
@@ -160,7 +160,7 @@ export const EditableMixin = {
   },
   getEditablePropsValuesDefault(propsArray) {
     let result = {};
-    propsArray.forEach(propName => {
+    propsArray.forEach((propName) => {
       let propValue; // = this.props.dccEditor.getComponentPropByName(this.getId(), propName);
       // read prop value from data model - on component props should have modified values (dcc itself adds some props like id)
       if (typeof this.props.getEditablePropValue === "function") {
@@ -221,7 +221,7 @@ export const EditableMixin = {
               </UU5.Bricks.Link>
             ) : null}
           </UU5.Bricks.Div>
-        )
+        ),
       };
     }
     if (!result) {
@@ -301,7 +301,7 @@ export const EditableMixin = {
   _registerLazyLoading(inst) {
     // unmount of component means that suspense is loaded and component should be rendered
     if (!inst) {
-      this.setState(state => {
+      this.setState((state) => {
         if (state.editableComponentLazyLoaded) return;
 
         // Edit component is loaded - need to set to static variable because other Edit component does not render fallback component
@@ -355,7 +355,7 @@ export const EditableMixin = {
 
   _endResizeCheck() {
     cancelFrame(this._resizeListener);
-  }
+  },
   //@@viewOff:private
 };
 

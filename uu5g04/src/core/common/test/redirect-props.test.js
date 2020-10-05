@@ -22,7 +22,7 @@ describe(`UU5.Common.Redirect custom props testing`, () => {
     window.open = mockFunc;
 
     shallow(<UU5.Common.Redirect uri="https://www.unicorn.com" />, {
-      disableLifecycleMethods: false
+      disableLifecycleMethods: false,
     });
 
     expect(mockFunc).toBeCalled();
@@ -37,7 +37,7 @@ describe(`UU5.Common.Redirect custom props testing`, () => {
 
     UU5.Environment.getAppBasePath = () => "/a-b/c-d/";
     shallow(<UU5.Common.Redirect uri="aboutBook" />, {
-      disableLifecycleMethods: false
+      disableLifecycleMethods: false,
     });
 
     expect(mockFunc).toBeCalled();

@@ -18,21 +18,21 @@ export const PureRenderMixin = {
   //@@viewOn:statics
   statics: {
     "UU5.Common.PureRenderMixin": {
-      requiredMixins: ["UU5.Common.BaseMixin"]
-    }
+      requiredMixins: ["UU5.Common.BaseMixin"],
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    pureRender: PropTypes.bool
+    pureRender: PropTypes.bool,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      pureRender: false
+      pureRender: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -69,13 +69,13 @@ export const PureRenderMixin = {
 
   getUU5CommonPureRenderMixinProps() {
     return {
-      pureRender: this.props.pureRender
+      pureRender: this.props.pureRender,
     };
   },
 
   getUU5CommonPureRenderMixinPropsToPass() {
     return this.getUU5CommonPureRenderMixinProps();
-  }
+  },
   //@@viewOff:interface
 
   //@@viewOn:overriding

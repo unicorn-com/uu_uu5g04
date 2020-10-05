@@ -28,14 +28,14 @@ export default UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("Modal.Body"),
     classNames: {
-      main: ns.css("modal-body")
+      main: ns.css("modal-body"),
     },
     defaults: {
-      parentTagName: "UU5.Bricks.Modal"
+      parentTagName: "UU5.Bricks.Modal",
     },
     errors: {
-      invalidParent: "Parent of this component is not Modal."
-    }
+      invalidParent: "Parent of this component is not Modal.",
+    },
   },
   //@@viewOff:statics
 
@@ -46,7 +46,7 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  UNSAFE_componentWillMount: function() {
+  UNSAFE_componentWillMount: function () {
     //this.checkParentTagName(this.getDefault().parentTagName);
 
     let parent = this.getParentByType("isModal");
@@ -67,13 +67,13 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return (
       <div {...this.getMainAttrs()}>
         {this.getChildren()}
         {this.getDisabledCover()}
       </div>
     );
-  }
+  },
   //@@viewOff:render
 });

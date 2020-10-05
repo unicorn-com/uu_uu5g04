@@ -8,12 +8,12 @@ const LOAD_DATA1 = [
   { id: "id1", value: "a" },
   { id: "id2", value: "b" },
   { id: "id3", value: "c" },
-  { id: "id4", value: "d" }
+  { id: "id4", value: "d" },
 ];
 const LOAD_DATA2 = [{ id: "idA", value: "1" }];
 
 function renderHookParallelOps(initialDataFromOnLoad) {
-  let waitable = defaultFn => {
+  let waitable = (defaultFn) => {
     return jest.fn(async (...args) => {
       let lastArg = args.pop();
       if (!lastArg || !lastArg.fn) return defaultFn(...args, lastArg); // this happens for onLoad which is called automatically (without our "startOp().unblock()" stuff)
@@ -37,7 +37,7 @@ function renderHookParallelOps(initialDataFromOnLoad) {
       pausingPromiseResolve = resolve;
     });
     let opFinisherFn = typeof args[args.length - 1] === "function" ? args.pop() : null;
-    let typeCapitalized = type.replace(/^./, m => m.toUpperCase());
+    let typeCapitalized = type.replace(/^./, (m) => m.toUpperCase());
     let hookValue = result.lastResult();
     act(() => {
       hookValue["handle" + typeCapitalized](...args, { promise: pausingPromise, fn: opFinisherFn });
@@ -46,7 +46,7 @@ function renderHookParallelOps(initialDataFromOnLoad) {
       async unblock() {
         pausingPromiseResolve();
         await wait();
-      }
+      },
     };
   };
   return result;
@@ -66,7 +66,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       handleCreate: expect.any(Function),
       handleUpdate: expect.any(Function),
       handleDelete: expect.any(Function),
-      setData: expect.any(Function)
+      setData: expect.any(Function),
     });
   });
 
@@ -78,7 +78,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "ready",
       errorState: null,
       error: null,
-      operations: []
+      operations: [],
     });
   });
 
@@ -91,7 +91,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "ready",
       errorState: null,
       error: null,
-      operations: []
+      operations: [],
     });
     await wait();
     expect(onLoad).toHaveBeenCalledTimes(0);
@@ -152,7 +152,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "ready",
       errorState: null,
       error: null,
-      operations: [{ type: "load", state: "success", result: LOAD_DATA1 }]
+      operations: [{ type: "load", state: "success", result: LOAD_DATA1 }],
     });
   });
 
@@ -161,7 +161,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     let { lastResult } = renderHook(useListData, {
       onLoad: jest.fn(async () => {
         throw (error = new Error("Test error"));
-      })
+      }),
     });
     await wait();
     expect(lastResult()).toMatchObject({
@@ -170,7 +170,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "error",
       errorState: "load",
       error: error,
-      operations: [{ type: "load", state: "error", result: error }]
+      operations: [{ type: "load", state: "error", result: error }],
     });
   });
 
@@ -179,7 +179,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     let { lastResult, rerender } = renderHook(useListData, {
       onLoad: jest.fn(async () => {
         throw (error = new Error("Test error"));
-      })
+      }),
     });
     await wait();
     expect(lastResult()).toMatchObject({ error });
@@ -187,7 +187,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     rerender({ onLoad: jest.fn(async () => LOAD_DATA2) });
     expect(lastResult()).toMatchObject({
       viewState: "load",
-      operations: [{ type: "load", state: "pending", result: undefined }]
+      operations: [{ type: "load", state: "pending", result: undefined }],
     });
     await wait();
     expect(lastResult()).toMatchObject({
@@ -196,7 +196,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "ready",
       errorState: null,
       error: null,
-      operations: [{ type: "load", state: "success", result: LOAD_DATA2 }]
+      operations: [{ type: "load", state: "success", result: LOAD_DATA2 }],
     });
   });
 
@@ -213,7 +213,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "ready",
       errorState: null,
       error: null,
-      operations: [{ type: "load", state: "success", result: LOAD_DATA1 }]
+      operations: [{ type: "load", state: "success", result: LOAD_DATA1 }],
     });
 
     let handleLoadResolved;
@@ -230,7 +230,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "load",
       errorState: null,
       error: null,
-      operations: [{ type: "load", state: "pending", result: undefined }]
+      operations: [{ type: "load", state: "pending", result: undefined }],
     });
 
     await wait(); // finish update
@@ -240,7 +240,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "ready",
       errorState: null,
       error: null,
-      operations: [{ type: "load", state: "success", result: LOAD_DATA2 }]
+      operations: [{ type: "load", state: "success", result: LOAD_DATA2 }],
     });
     expect(handleLoadResolved).toBe(true);
   });
@@ -260,14 +260,14 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "ready",
       errorState: null,
       error: null,
-      operations: [{ type: "load", state: "success", result: LOAD_DATA1 }]
+      operations: [{ type: "load", state: "success", result: LOAD_DATA1 }],
     });
 
     let handleLoadResolved;
     act(() => {
       lastResult()
         .handleLoad()
-        .catch(e => null)
+        .catch((e) => null)
         .then(() => (handleLoadResolved = true));
     });
     expect(onLoad).toHaveBeenCalledTimes(2);
@@ -278,7 +278,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "load",
       errorState: null,
       error: null,
-      operations: [{ type: "load", state: "pending", result: undefined }]
+      operations: [{ type: "load", state: "pending", result: undefined }],
     });
 
     await wait(); // finish update
@@ -288,7 +288,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "error",
       errorState: "load",
       error,
-      operations: [{ type: "load", state: "error", result: error }]
+      operations: [{ type: "load", state: "error", result: error }],
     });
     expect(handleLoadResolved).toBe(true);
   });
@@ -324,7 +324,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "create",
       errorState: null,
       error: null,
-      operations: [{ type: "create", state: "pending", result: undefined, items: [CREATE1] }]
+      operations: [{ type: "create", state: "pending", result: undefined, items: [CREATE1] }],
     });
 
     await wait(); // finish create
@@ -334,7 +334,9 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "ready",
       errorState: null,
       error: null,
-      operations: [{ type: "create", state: "success", result: CREATE1_FULL, items: [{ ...CREATE1, ...CREATE1_FULL }] }]
+      operations: [
+        { type: "create", state: "success", result: CREATE1_FULL, items: [{ ...CREATE1, ...CREATE1_FULL }] },
+      ],
     });
     expect(handleCreateResolved).toBe(true);
   });
@@ -362,7 +364,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "create",
       errorState: null,
       error: null,
-      operations: [{ type: "create", state: "pending", result: undefined, items: CREATE1 }]
+      operations: [{ type: "create", state: "pending", result: undefined, items: CREATE1 }],
     });
 
     await wait(); // finish create
@@ -372,7 +374,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "ready",
       errorState: null,
       error: null,
-      operations: [{ type: "create", state: "success", result: CREATE1_FULL, items: CREATE1_MERGED }]
+      operations: [{ type: "create", state: "success", result: CREATE1_FULL, items: CREATE1_MERGED }],
     });
     expect(handleCreateResolved).toBe(true);
   });
@@ -395,7 +397,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "ready",
       errorState: null,
       error: null,
-      operations: [{ type: "create", state: "success", result: null, items: CREATE1 }]
+      operations: [{ type: "create", state: "success", result: null, items: CREATE1 }],
     });
 
     await wait();
@@ -426,7 +428,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     act(() => {
       lastResult()
         .handleCreate(CREATE1)
-        .catch(e => null);
+        .catch((e) => null);
     });
     await wait();
     expect(lastResult()).toMatchObject({
@@ -435,7 +437,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "error",
       errorState: "create",
       error,
-      operations: [{ type: "create", state: "error", result: error, items: [CREATE1] }]
+      operations: [{ type: "create", state: "error", result: error, items: [CREATE1] }],
     });
   });
 
@@ -452,7 +454,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     act(() => {
       lastResult()
         .handleCreate(CREATE1)
-        .catch(e => null);
+        .catch((e) => null);
     });
     await wait();
     expect(lastResult()).toMatchObject({
@@ -461,7 +463,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "error",
       errorState: "create",
       error,
-      operations: [{ type: "create", state: "error", result: error, items: [CREATE1] }]
+      operations: [{ type: "create", state: "error", result: error, items: [CREATE1] }],
     });
   });
 
@@ -471,7 +473,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       status: 0,
       headers() {},
       data: { message: "Failed." },
-      error: new Error("Test error.")
+      error: new Error("Test error."),
     };
     let data = [{ id: "a" }, { id: "b" }];
     let error = 123;
@@ -484,7 +486,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     act(() => {
       lastResult()
         .handleCreate(CREATE1)
-        .catch(e => null);
+        .catch((e) => null);
     });
     await wait();
     expect(lastResult()).toMatchObject({
@@ -493,7 +495,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "error",
       errorState: "create",
       error,
-      operations: [{ type: "create", state: "error", result: error, items: [CREATE1] }]
+      operations: [{ type: "create", state: "error", result: error, items: [CREATE1] }],
     });
   });
 
@@ -511,7 +513,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     act(() => {
       lastResult()
         .handleCreate(CREATE1)
-        .catch(e => null);
+        .catch((e) => null);
     });
     await wait();
     expect(lastResult()).toMatchObject({
@@ -525,16 +527,19 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
           type: "create",
           state: "error",
           result: error,
-          items: CREATE1.map((it, i) => ({ ...it, ...CREATE1_FAIL[i] }))
-        }
-      ]
+          items: CREATE1.map((it, i) => ({ ...it, ...CREATE1_FAIL[i] })),
+        },
+      ],
     });
   });
 
   it("handleUpdate; should update item by id (success)", async () => {
     const UPDATE1 = { key: "updated1" };
     const UPDATE1_FULL = { a: "b" };
-    let data = [{ id: "a", key: "orig-a", a: "orig-a" }, { id: "b", key: "orig-b", a: "orig-b" }];
+    let data = [
+      { id: "a", key: "orig-a", a: "orig-a" },
+      { id: "b", key: "orig-b", a: "orig-b" },
+    ];
     let onUpdate = jest.fn(async () => UPDATE1_FULL);
     let { lastResult } = renderHook(useListData, { onUpdate, data });
     await wait();
@@ -553,7 +558,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "update",
       errorState: null,
       error: null,
-      operations: [{ type: "update", state: "pending", result: undefined, items: [UPDATE1] }]
+      operations: [{ type: "update", state: "pending", result: undefined, items: [UPDATE1] }],
     });
 
     await wait(); // finish update
@@ -564,8 +569,13 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       errorState: null,
       error: null,
       operations: [
-        { type: "update", state: "success", result: UPDATE1_FULL, items: [{ ...data[0], ...UPDATE1, ...UPDATE1_FULL }] }
-      ]
+        {
+          type: "update",
+          state: "success",
+          result: UPDATE1_FULL,
+          items: [{ ...data[0], ...UPDATE1, ...UPDATE1_FULL }],
+        },
+      ],
     });
     expect(handleUpdateResolved).toBe(true);
   });
@@ -573,13 +583,16 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
   it("handleUpdate; should update item by id-fn (success)", async () => {
     const UPDATE1 = { key: "updated1" };
     const UPDATE1_FULL = { a: "b" };
-    let data = [{ id: "a", key: "orig-a", a: "orig-a" }, { id: "b", key: "orig-b", a: "orig-b" }];
+    let data = [
+      { id: "a", key: "orig-a", a: "orig-a" },
+      { id: "b", key: "orig-b", a: "orig-b" },
+    ];
     let onUpdate = jest.fn(async () => UPDATE1_FULL);
     let { lastResult } = renderHook(useListData, { onUpdate, data });
     await wait();
 
     let handleUpdateResolved;
-    let idFn = it => it.id === "a";
+    let idFn = (it) => it.id === "a";
     act(() => {
       lastResult()
         .handleUpdate(idFn, UPDATE1)
@@ -593,7 +606,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "update",
       errorState: null,
       error: null,
-      operations: [{ type: "update", state: "pending", result: undefined, items: [UPDATE1] }]
+      operations: [{ type: "update", state: "pending", result: undefined, items: [UPDATE1] }],
     });
 
     await wait(); // finish update
@@ -604,20 +617,28 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       errorState: null,
       error: null,
       operations: [
-        { type: "update", state: "success", result: UPDATE1_FULL, items: [{ ...data[0], ...UPDATE1, ...UPDATE1_FULL }] }
-      ]
+        {
+          type: "update",
+          state: "success",
+          result: UPDATE1_FULL,
+          items: [{ ...data[0], ...UPDATE1, ...UPDATE1_FULL }],
+        },
+      ],
     });
     expect(handleUpdateResolved).toBe(true);
   });
 
   it("handleUpdate; should update item by id-fn even without onUpdate (success)", async () => {
     const UPDATE1 = { key: "updated1" };
-    let data = [{ id: "a", key: "orig-a" }, { id: "b", key: "orig-b" }];
+    let data = [
+      { id: "a", key: "orig-a" },
+      { id: "b", key: "orig-b" },
+    ];
     let { lastResult } = renderHook(useListData, { data });
     await wait();
 
     let handleUpdateResolved;
-    let idFn = it => it.id === "a";
+    let idFn = (it) => it.id === "a";
     act(() => {
       lastResult()
         .handleUpdate(idFn, UPDATE1)
@@ -629,7 +650,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "ready",
       errorState: null,
       error: null,
-      operations: [{ type: "update", state: "success", result: null, items: [{ ...data[0], ...UPDATE1 }] }]
+      operations: [{ type: "update", state: "success", result: null, items: [{ ...data[0], ...UPDATE1 }] }],
     });
 
     await wait();
@@ -639,7 +660,10 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
   it("handleUpdate; should update item by id (success, bulk)", async () => {
     const UPDATE1 = [{ key: "updated1" }, { key: "updated2" }];
     const UPDATE1_FULL = [{ a: "b" }, { a: "c" }];
-    let data = [{ id: "a", key: "orig-a", a: "orig-a" }, { id: "b", key: "orig-b", a: "orig-b" }];
+    let data = [
+      { id: "a", key: "orig-a", a: "orig-a" },
+      { id: "b", key: "orig-b", a: "orig-b" },
+    ];
     let onUpdate = jest.fn(async () => UPDATE1_FULL);
     let { lastResult } = renderHook(useListData, { onUpdate, data });
     await wait();
@@ -653,23 +677,26 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     expect(onUpdate).toHaveBeenCalledTimes(1);
     expect(onUpdate).toHaveBeenCalledWith(["a", "b"], UPDATE1);
     expect(lastResult()).toMatchObject({
-      syncData: [{ ...data[0], ...UPDATE1[0] }, { ...data[1], ...UPDATE1[1] }].concat(data.slice(2)),
+      syncData: [
+        { ...data[0], ...UPDATE1[0] },
+        { ...data[1], ...UPDATE1[1] },
+      ].concat(data.slice(2)),
       asyncData: data,
       viewState: "update",
       errorState: null,
       error: null,
-      operations: [{ type: "update", state: "pending", result: undefined, items: UPDATE1 }]
+      operations: [{ type: "update", state: "pending", result: undefined, items: UPDATE1 }],
     });
 
     await wait(); // finish update
     expect(lastResult()).toMatchObject({
       syncData: [
         { ...data[0], ...UPDATE1[0], ...UPDATE1_FULL[0] },
-        { ...data[1], ...UPDATE1[1], ...UPDATE1_FULL[1] }
+        { ...data[1], ...UPDATE1[1], ...UPDATE1_FULL[1] },
       ].concat(data.slice(2)),
       asyncData: [
         { ...data[0], ...UPDATE1[0], ...UPDATE1_FULL[0] },
-        { ...data[1], ...UPDATE1[1], ...UPDATE1_FULL[1] }
+        { ...data[1], ...UPDATE1[1], ...UPDATE1_FULL[1] },
       ].concat(data.slice(2)),
       viewState: "ready",
       errorState: null,
@@ -679,9 +706,12 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
           type: "update",
           state: "success",
           result: UPDATE1_FULL,
-          items: [{ ...data[0], ...UPDATE1[0], ...UPDATE1_FULL[0] }, { ...data[1], ...UPDATE1[1], ...UPDATE1_FULL[1] }]
-        }
-      ]
+          items: [
+            { ...data[0], ...UPDATE1[0], ...UPDATE1_FULL[0] },
+            { ...data[1], ...UPDATE1[1], ...UPDATE1_FULL[1] },
+          ],
+        },
+      ],
     });
     expect(handleUpdateResolved).toBe(true);
   });
@@ -689,13 +719,16 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
   it("handleUpdate; should update item by id-fn (success, bulk)", async () => {
     const UPDATE1 = [{ key: "updated1" }, { key: "updated2" }];
     const UPDATE1_FULL = [{ a: "b" }, { a: "c" }];
-    let data = [{ id: "a", key: "orig-a", a: "orig-a" }, { id: "b", key: "orig-b", a: "orig-b" }];
+    let data = [
+      { id: "a", key: "orig-a", a: "orig-a" },
+      { id: "b", key: "orig-b", a: "orig-b" },
+    ];
     let onUpdate = jest.fn(async () => UPDATE1_FULL);
     let { lastResult } = renderHook(useListData, { onUpdate, data });
     await wait();
 
     let handleUpdateResolved;
-    let idFns = [it => it.id === "a", it => it.id === "b"];
+    let idFns = [(it) => it.id === "a", (it) => it.id === "b"];
     act(() => {
       lastResult()
         .handleUpdate(idFns, UPDATE1)
@@ -704,7 +737,10 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     expect(onUpdate).toHaveBeenCalledTimes(1);
     expect(onUpdate).toHaveBeenCalledWith(idFns, UPDATE1);
     expect(lastResult()).toMatchObject({
-      syncData: [{ ...data[0], ...UPDATE1[0] }, { ...data[1], ...UPDATE1[1] }].concat(data.slice(2)),
+      syncData: [
+        { ...data[0], ...UPDATE1[0] },
+        { ...data[1], ...UPDATE1[1] },
+      ].concat(data.slice(2)),
       asyncData: data,
       viewState: "update",
       errorState: null,
@@ -714,20 +750,23 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
           type: "update",
           state: "pending",
           result: undefined,
-          items: [{ ...data[0], ...UPDATE1[0] }, { ...data[1], ...UPDATE1[1] }]
-        }
-      ]
+          items: [
+            { ...data[0], ...UPDATE1[0] },
+            { ...data[1], ...UPDATE1[1] },
+          ],
+        },
+      ],
     });
 
     await wait(); // finish update
     expect(lastResult()).toMatchObject({
       syncData: [
         { ...data[0], ...UPDATE1[0], ...UPDATE1_FULL[0] },
-        { ...data[1], ...UPDATE1[1], ...UPDATE1_FULL[1] }
+        { ...data[1], ...UPDATE1[1], ...UPDATE1_FULL[1] },
       ].concat(data.slice(2)),
       asyncData: [
         { ...data[0], ...UPDATE1[0], ...UPDATE1_FULL[0] },
-        { ...data[1], ...UPDATE1[1], ...UPDATE1_FULL[1] }
+        { ...data[1], ...UPDATE1[1], ...UPDATE1_FULL[1] },
       ].concat(data.slice(2)),
       viewState: "ready",
       errorState: null,
@@ -737,29 +776,41 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
           type: "update",
           state: "success",
           result: UPDATE1_FULL,
-          items: [{ ...data[0], ...UPDATE1[0], ...UPDATE1_FULL[0] }, { ...data[1], ...UPDATE1[1], ...UPDATE1_FULL[1] }]
-        }
-      ]
+          items: [
+            { ...data[0], ...UPDATE1[0], ...UPDATE1_FULL[0] },
+            { ...data[1], ...UPDATE1[1], ...UPDATE1_FULL[1] },
+          ],
+        },
+      ],
     });
     expect(handleUpdateResolved).toBe(true);
   });
 
   it("handleUpdate; should update item by id-fn even without onUpdate (success, bulk)", async () => {
     const UPDATE1 = [{ key: "updated1" }, { key: "updated2" }];
-    let data = [{ id: "a", key: "orig-a" }, { id: "b", key: "orig-b" }];
+    let data = [
+      { id: "a", key: "orig-a" },
+      { id: "b", key: "orig-b" },
+    ];
     let { lastResult } = renderHook(useListData, { data });
     await wait();
 
     let handleUpdateResolved;
-    let idFns = [it => it.id === "a", it => it.id === "b"];
+    let idFns = [(it) => it.id === "a", (it) => it.id === "b"];
     act(() => {
       lastResult()
         .handleUpdate(idFns, UPDATE1)
         .then(() => (handleUpdateResolved = true));
     });
     expect(lastResult()).toMatchObject({
-      syncData: [{ ...data[0], ...UPDATE1[0] }, { ...data[1], ...UPDATE1[1] }].concat(data.slice(2)),
-      asyncData: [{ ...data[0], ...UPDATE1[0] }, { ...data[1], ...UPDATE1[1] }].concat(data.slice(2)),
+      syncData: [
+        { ...data[0], ...UPDATE1[0] },
+        { ...data[1], ...UPDATE1[1] },
+      ].concat(data.slice(2)),
+      asyncData: [
+        { ...data[0], ...UPDATE1[0] },
+        { ...data[1], ...UPDATE1[1] },
+      ].concat(data.slice(2)),
       viewState: "ready",
       errorState: null,
       error: null,
@@ -768,9 +819,12 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
           type: "update",
           state: "success",
           result: null,
-          items: [{ ...data[0], ...UPDATE1[0] }, { ...data[1], ...UPDATE1[1] }]
-        }
-      ]
+          items: [
+            { ...data[0], ...UPDATE1[0] },
+            { ...data[1], ...UPDATE1[1] },
+          ],
+        },
+      ],
     });
 
     await wait();
@@ -782,7 +836,10 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     const UPDATE1_FULL = { a: "b" };
     const UPDATE2 = { id: "a", key: "updated2" };
     const UPDATE2_FULL = { a: "b2" };
-    let data = [{ id: "a", key: "orig-a", a: "orig-a" }, { id: "b", key: "orig-b", a: "orig-b" }];
+    let data = [
+      { id: "a", key: "orig-a", a: "orig-a" },
+      { id: "b", key: "orig-b", a: "orig-b" },
+    ];
     let onUpdate = jest.fn(async () => UPDATE1_FULL);
     let { lastResult } = renderHook(useListData, { onUpdate, data });
     await wait();
@@ -798,8 +855,13 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       errorState: null,
       error: null,
       operations: [
-        { type: "update", state: "success", result: UPDATE1_FULL, items: [{ ...data[0], ...UPDATE1, ...UPDATE1_FULL }] }
-      ]
+        {
+          type: "update",
+          state: "success",
+          result: UPDATE1_FULL,
+          items: [{ ...data[0], ...UPDATE1, ...UPDATE1_FULL }],
+        },
+      ],
     });
 
     onUpdate.mockImplementation(async () => UPDATE2_FULL);
@@ -814,8 +876,13 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       errorState: null,
       error: null,
       operations: [
-        { type: "update", state: "success", result: UPDATE2_FULL, items: [{ ...data[0], ...UPDATE2, ...UPDATE2_FULL }] }
-      ]
+        {
+          type: "update",
+          state: "success",
+          result: UPDATE2_FULL,
+          items: [{ ...data[0], ...UPDATE2, ...UPDATE2_FULL }],
+        },
+      ],
     });
   });
 
@@ -832,7 +899,10 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
 
   it("handleUpdate; failure with Error instance - should not update data & should set error state", async () => {
     const UPDATE1 = { key: "updated1" };
-    let data = [{ id: "a", key: "orig-a" }, { id: "b", key: "orig-b" }];
+    let data = [
+      { id: "a", key: "orig-a" },
+      { id: "b", key: "orig-b" },
+    ];
     let error = 123;
     let onUpdate = jest.fn(async () => {
       throw (error = new Error("Test error"));
@@ -843,7 +913,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     act(() => {
       lastResult()
         .handleUpdate("a", UPDATE1)
-        .catch(e => null);
+        .catch((e) => null);
     });
     await wait();
     expect(lastResult()).toMatchObject({
@@ -852,14 +922,17 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "error",
       errorState: "update",
       error,
-      operations: [{ type: "update", state: "error", result: error, items: [{ ...data[0], ...UPDATE1 }] }]
+      operations: [{ type: "update", state: "error", result: error, items: [{ ...data[0], ...UPDATE1 }] }],
     });
   });
 
   it("handleUpdate; failure with an object instance - should update data & should set error state", async () => {
     const UPDATE1 = { key: "updated1" };
     const UPDATE1_FAIL = { message: "Failed to update." };
-    let data = [{ id: "a", key: "orig-a", message: "orig-a" }, { id: "b", key: "orig-b", message: "orig-b" }];
+    let data = [
+      { id: "a", key: "orig-a", message: "orig-a" },
+      { id: "b", key: "orig-b", message: "orig-b" },
+    ];
     let error = 123;
     let onUpdate = jest.fn(async () => {
       return Promise.reject((error = UPDATE1_FAIL));
@@ -870,7 +943,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     act(() => {
       lastResult()
         .handleUpdate("a", UPDATE1)
-        .catch(e => null);
+        .catch((e) => null);
     });
     await wait();
     expect(lastResult()).toMatchObject({
@@ -880,8 +953,8 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       errorState: "update",
       error,
       operations: [
-        { type: "update", state: "error", result: error, items: [{ ...data[0], ...UPDATE1, ...UPDATE1_FAIL }] }
-      ]
+        { type: "update", state: "error", result: error, items: [{ ...data[0], ...UPDATE1, ...UPDATE1_FAIL }] },
+      ],
     });
   });
 
@@ -891,9 +964,12 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       status: 0,
       headers() {},
       data: { message: "Failed." },
-      error: new Error("Test error.")
+      error: new Error("Test error."),
     };
-    let data = [{ id: "a", key: "orig-a", message: "orig-a" }, { id: "b", key: "orig-b", message: "orig-b" }];
+    let data = [
+      { id: "a", key: "orig-a", message: "orig-a" },
+      { id: "b", key: "orig-b", message: "orig-b" },
+    ];
     let error = 123;
     let onUpdate = jest.fn(async () => {
       return Promise.reject((error = UPDATE1_FAIL));
@@ -904,7 +980,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     act(() => {
       lastResult()
         .handleUpdate("a", UPDATE1)
-        .catch(e => null);
+        .catch((e) => null);
     });
     await wait();
     expect(lastResult()).toMatchObject({
@@ -913,14 +989,18 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "error",
       errorState: "update",
       error,
-      operations: [{ type: "update", state: "error", result: error, items: [{ ...data[0], ...UPDATE1 }] }]
+      operations: [{ type: "update", state: "error", result: error, items: [{ ...data[0], ...UPDATE1 }] }],
     });
   });
 
   it("handleUpdate; failure with an array - should update some data & should set error state", async () => {
     const UPDATE1 = [{ key: "updated1" }, { key: "updated2" }, { key: "updated3" }];
     const UPDATE1_FAIL = [null, { key: "ok1" }, { message: "Failed" }]; // 1st item (null) should be rollbacked, others should stay and get updated
-    let data = [{ id: "a", key: "1" }, { id: "b", key: "2" }, { id: "c", key: "3" }];
+    let data = [
+      { id: "a", key: "1" },
+      { id: "b", key: "2" },
+      { id: "c", key: "3" },
+    ];
     let error = 123;
     let onUpdate = jest.fn(async () => {
       return Promise.reject((error = UPDATE1_FAIL));
@@ -932,19 +1012,19 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     act(() => {
       lastResult()
         .handleUpdate(ids, UPDATE1)
-        .catch(e => null);
+        .catch((e) => null);
     });
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: [
         { ...data[0], ...UPDATE1[1], ...UPDATE1_FAIL[1] },
         { ...data[1], ...UPDATE1[2], ...UPDATE1_FAIL[2] },
-        data[2]
+        data[2],
       ],
       asyncData: [
         { ...data[0], ...UPDATE1[1], ...UPDATE1_FAIL[1] },
         { ...data[1], ...UPDATE1[2], ...UPDATE1_FAIL[2] },
-        data[2]
+        data[2],
       ],
       viewState: "error",
       errorState: "update",
@@ -957,10 +1037,10 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
           items: [
             { ...data[2], ...UPDATE1[0], ...UPDATE1_FAIL[0] },
             { ...data[0], ...UPDATE1[1], ...UPDATE1_FAIL[1] },
-            { ...data[1], ...UPDATE1[2], ...UPDATE1_FAIL[2] }
-          ]
-        }
-      ]
+            { ...data[1], ...UPDATE1[2], ...UPDATE1_FAIL[2] },
+          ],
+        },
+      ],
     });
   });
 
@@ -979,22 +1059,22 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     expect(onDelete).toHaveBeenCalledTimes(1);
     expect(onDelete).toHaveBeenCalledWith("a");
     expect(lastResult()).toMatchObject({
-      syncData: data.filter(it => it.id !== "a"),
+      syncData: data.filter((it) => it.id !== "a"),
       asyncData: data,
       viewState: "delete",
       errorState: null,
       error: null,
-      operations: [{ type: "delete", state: "pending", result: undefined, items: data.filter(it => it.id === "a") }]
+      operations: [{ type: "delete", state: "pending", result: undefined, items: data.filter((it) => it.id === "a") }],
     });
 
     await wait(); // finish delete
     expect(lastResult()).toMatchObject({
-      syncData: data.filter(it => it.id !== "a"),
-      asyncData: data.filter(it => it.id !== "a"),
+      syncData: data.filter((it) => it.id !== "a"),
+      asyncData: data.filter((it) => it.id !== "a"),
       viewState: "ready",
       errorState: null,
       error: null,
-      operations: [{ type: "delete", state: "success", result: null, items: data.filter(it => it.id === "a") }]
+      operations: [{ type: "delete", state: "success", result: null, items: data.filter((it) => it.id === "a") }],
     });
     expect(handleDeleteResolved).toBe(true);
   });
@@ -1006,7 +1086,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     await wait();
 
     let handleDeleteResolved;
-    let idFn = it => it.id === "a";
+    let idFn = (it) => it.id === "a";
     act(() => {
       lastResult()
         .handleDelete(idFn)
@@ -1015,22 +1095,22 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     expect(onDelete).toHaveBeenCalledTimes(1);
     expect(onDelete).toHaveBeenCalledWith(idFn);
     expect(lastResult()).toMatchObject({
-      syncData: data.filter(it => it.id !== "a"),
+      syncData: data.filter((it) => it.id !== "a"),
       asyncData: data,
       viewState: "delete",
       errorState: null,
       error: null,
-      operations: [{ type: "delete", state: "pending", result: undefined, items: data.filter(it => it.id === "a") }]
+      operations: [{ type: "delete", state: "pending", result: undefined, items: data.filter((it) => it.id === "a") }],
     });
 
     await wait(); // finish delete
     expect(lastResult()).toMatchObject({
-      syncData: data.filter(it => it.id !== "a"),
-      asyncData: data.filter(it => it.id !== "a"),
+      syncData: data.filter((it) => it.id !== "a"),
+      asyncData: data.filter((it) => it.id !== "a"),
       viewState: "ready",
       errorState: null,
       error: null,
-      operations: [{ type: "delete", state: "success", result: null, items: data.filter(it => it.id === "a") }]
+      operations: [{ type: "delete", state: "success", result: null, items: data.filter((it) => it.id === "a") }],
     });
     expect(handleDeleteResolved).toBe(true);
   });
@@ -1041,19 +1121,19 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     await wait();
 
     let handleDeleteResolved;
-    let idFn = it => it.id === "a";
+    let idFn = (it) => it.id === "a";
     act(() => {
       lastResult()
         .handleDelete(idFn)
         .then(() => (handleDeleteResolved = true));
     });
     expect(lastResult()).toMatchObject({
-      syncData: data.filter(it => it.id !== "a"),
-      asyncData: data.filter(it => it.id !== "a"),
+      syncData: data.filter((it) => it.id !== "a"),
+      asyncData: data.filter((it) => it.id !== "a"),
       viewState: "ready",
       errorState: null,
       error: null,
-      operations: [{ type: "delete", state: "success", result: null, items: data.filter(it => it.id === "a") }]
+      operations: [{ type: "delete", state: "success", result: null, items: data.filter((it) => it.id === "a") }],
     });
 
     await wait();
@@ -1075,7 +1155,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     expect(onDelete).toHaveBeenCalledTimes(1);
     expect(onDelete).toHaveBeenCalledWith(["a", "b"]);
     expect(lastResult()).toMatchObject({
-      syncData: data.filter(it => it.id !== "a" && it.id !== "b"),
+      syncData: data.filter((it) => it.id !== "a" && it.id !== "b"),
       asyncData: data,
       viewState: "delete",
       errorState: null,
@@ -1085,21 +1165,21 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
           type: "delete",
           state: "pending",
           result: undefined,
-          items: data.filter(it => it.id === "a" || it.id === "b")
-        }
-      ]
+          items: data.filter((it) => it.id === "a" || it.id === "b"),
+        },
+      ],
     });
 
     await wait(); // finish delete
     expect(lastResult()).toMatchObject({
-      syncData: data.filter(it => it.id !== "a" && it.id !== "b"),
-      asyncData: data.filter(it => it.id !== "a" && it.id !== "b"),
+      syncData: data.filter((it) => it.id !== "a" && it.id !== "b"),
+      asyncData: data.filter((it) => it.id !== "a" && it.id !== "b"),
       viewState: "ready",
       errorState: null,
       error: null,
       operations: [
-        { type: "delete", state: "success", result: null, items: data.filter(it => it.id === "a" || it.id === "b") }
-      ]
+        { type: "delete", state: "success", result: null, items: data.filter((it) => it.id === "a" || it.id === "b") },
+      ],
     });
     expect(handleDeleteResolved).toBe(true);
   });
@@ -1111,7 +1191,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     await wait();
 
     let handleDeleteResolved;
-    let idFns = [it => it.id === "a", it => it.id === "b"];
+    let idFns = [(it) => it.id === "a", (it) => it.id === "b"];
     act(() => {
       lastResult()
         .handleDelete(idFns)
@@ -1120,7 +1200,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     expect(onDelete).toHaveBeenCalledTimes(1);
     expect(onDelete).toHaveBeenCalledWith(idFns);
     expect(lastResult()).toMatchObject({
-      syncData: data.filter(it => it.id !== "a" && it.id !== "b"),
+      syncData: data.filter((it) => it.id !== "a" && it.id !== "b"),
       asyncData: data,
       viewState: "delete",
       errorState: null,
@@ -1130,21 +1210,21 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
           type: "delete",
           state: "pending",
           result: undefined,
-          items: data.filter(it => it.id === "a" || it.id === "b")
-        }
-      ]
+          items: data.filter((it) => it.id === "a" || it.id === "b"),
+        },
+      ],
     });
 
     await wait(); // finish delete
     expect(lastResult()).toMatchObject({
-      syncData: data.filter(it => it.id !== "a" && it.id !== "b"),
-      asyncData: data.filter(it => it.id !== "a" && it.id !== "b"),
+      syncData: data.filter((it) => it.id !== "a" && it.id !== "b"),
+      asyncData: data.filter((it) => it.id !== "a" && it.id !== "b"),
       viewState: "ready",
       errorState: null,
       error: null,
       operations: [
-        { type: "delete", state: "success", result: null, items: data.filter(it => it.id === "a" || it.id === "b") }
-      ]
+        { type: "delete", state: "success", result: null, items: data.filter((it) => it.id === "a" || it.id === "b") },
+      ],
     });
     expect(handleDeleteResolved).toBe(true);
   });
@@ -1155,21 +1235,21 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     await wait();
 
     let handleDeleteResolved;
-    let idFns = [it => it.id === "a", it => it.id === "b"];
+    let idFns = [(it) => it.id === "a", (it) => it.id === "b"];
     act(() => {
       lastResult()
         .handleDelete(idFns)
         .then(() => (handleDeleteResolved = true));
     });
     expect(lastResult()).toMatchObject({
-      syncData: data.filter(it => it.id !== "a" && it.id !== "b"),
-      asyncData: data.filter(it => it.id !== "a" && it.id !== "b"),
+      syncData: data.filter((it) => it.id !== "a" && it.id !== "b"),
+      asyncData: data.filter((it) => it.id !== "a" && it.id !== "b"),
       viewState: "ready",
       errorState: null,
       error: null,
       operations: [
-        { type: "delete", state: "success", result: null, items: data.filter(it => it.id === "a" || it.id === "b") }
-      ]
+        { type: "delete", state: "success", result: null, items: data.filter((it) => it.id === "a" || it.id === "b") },
+      ],
     });
 
     await wait();
@@ -1197,8 +1277,8 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     });
     await wait();
     expect(lastResult()).toMatchObject({
-      syncData: data.filter(it => it.id !== "a"),
-      asyncData: data.filter(it => it.id !== "a")
+      syncData: data.filter((it) => it.id !== "a"),
+      asyncData: data.filter((it) => it.id !== "a"),
     });
 
     onDelete.mockImplementation(async () => ({ uuAppErrorMap: { "uu-app-error-xyz": { type: "warning" } } }));
@@ -1207,8 +1287,8 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     });
     await wait();
     expect(lastResult()).toMatchObject({
-      syncData: data.filter(it => it.id !== "a" && it.id !== "c"),
-      asyncData: data.filter(it => it.id !== "a" && it.id !== "c")
+      syncData: data.filter((it) => it.id !== "a" && it.id !== "c"),
+      asyncData: data.filter((it) => it.id !== "a" && it.id !== "c"),
     });
 
     // uuAppErrorMap with error should merge it to the item
@@ -1219,7 +1299,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: [{ id: "b", uuAppErrorMap: { "uu-app-error-xyz": { type: "error" } } }],
-      asyncData: [{ id: "b", uuAppErrorMap: { "uu-app-error-xyz": { type: "error" } } }]
+      asyncData: [{ id: "b", uuAppErrorMap: { "uu-app-error-xyz": { type: "error" } } }],
     });
   });
 
@@ -1235,7 +1315,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     act(() => {
       lastResult()
         .handleDelete("a")
-        .catch(e => null);
+        .catch((e) => null);
     });
     await wait();
     expect(lastResult()).toMatchObject({
@@ -1244,7 +1324,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "error",
       errorState: "delete",
       error,
-      operations: [{ type: "delete", state: "error", result: error, items: data.filter(it => it.id === "a") }]
+      operations: [{ type: "delete", state: "error", result: error, items: data.filter((it) => it.id === "a") }],
     });
   });
 
@@ -1261,7 +1341,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     act(() => {
       lastResult()
         .handleDelete("a")
-        .catch(e => null);
+        .catch((e) => null);
     });
     await wait();
     expect(lastResult()).toMatchObject({
@@ -1270,7 +1350,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "error",
       errorState: "delete",
       error,
-      operations: [{ type: "delete", state: "error", result: error, items: [{ ...data[0], ...DELETE1_FAIL }] }]
+      operations: [{ type: "delete", state: "error", result: error, items: [{ ...data[0], ...DELETE1_FAIL }] }],
     });
   });
 
@@ -1279,7 +1359,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       status: 0,
       headers() {},
       data: { message: "Failed." },
-      error: new Error("Test error.")
+      error: new Error("Test error."),
     };
     let data = [{ id: "a" }, { id: "b" }, { id: "c" }];
     let error = 123;
@@ -1292,7 +1372,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     act(() => {
       lastResult()
         .handleDelete("a")
-        .catch(e => null);
+        .catch((e) => null);
     });
     await wait();
     expect(lastResult()).toMatchObject({
@@ -1301,7 +1381,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "error",
       errorState: "delete",
       error,
-      operations: [{ type: "delete", state: "error", result: error, items: [data[0]] }]
+      operations: [{ type: "delete", state: "error", result: error, items: [data[0]] }],
     });
   });
 
@@ -1318,12 +1398,18 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     act(() => {
       lastResult()
         .handleDelete(["c", "a", "b"]) // item with id "c" receives null => should be deleted; "a" receives { key: "ok" }; "b" receives { message: "Failed" }
-        .catch(e => null);
+        .catch((e) => null);
     });
     await wait();
     expect(lastResult()).toMatchObject({
-      syncData: [{ ...data[0], ...DELETE1_FAIL[1] }, { ...data[1], ...DELETE1_FAIL[2] }],
-      asyncData: [{ ...data[0], ...DELETE1_FAIL[1] }, { ...data[1], ...DELETE1_FAIL[2] }],
+      syncData: [
+        { ...data[0], ...DELETE1_FAIL[1] },
+        { ...data[1], ...DELETE1_FAIL[2] },
+      ],
+      asyncData: [
+        { ...data[0], ...DELETE1_FAIL[1] },
+        { ...data[1], ...DELETE1_FAIL[2] },
+      ],
       viewState: "error",
       errorState: "delete",
       error,
@@ -1332,9 +1418,9 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
           type: "delete",
           state: "error",
           result: error,
-          items: [data[2], { ...data[0], ...DELETE1_FAIL[1] }, { ...data[1], ...DELETE1_FAIL[2] }]
-        }
-      ]
+          items: [data[2], { ...data[0], ...DELETE1_FAIL[1] }, { ...data[1], ...DELETE1_FAIL[2] }],
+        },
+      ],
     });
   });
 
@@ -1351,7 +1437,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       viewState: "ready",
       errorState: null,
       error: null,
-      operations: [{ type: "set", state: "success", result: null }] // "set" operation does no call so its result is always null
+      operations: [{ type: "set", state: "success", result: null }], // "set" operation does no call so its result is always null
     });
   });
 
@@ -1369,7 +1455,7 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     dataAfterUpdate.splice(1, 1, { ...data[1], ...UPDATED_ITEM_LOCAL });
     expect(lastResult()).toMatchObject({
       syncData: dataAfterUpdate,
-      asyncData: data
+      asyncData: data,
     });
 
     let NEW_ITEM_LOCAL = { id: "new1" };
@@ -1378,14 +1464,14 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: dataAfterUpdate.concat([NEW_ITEM_LOCAL]),
-      asyncData: data
+      asyncData: data,
     });
 
     let deleteOp = startOp("delete", data[0], async () => null);
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: dataAfterUpdate.slice(1).concat([NEW_ITEM_LOCAL]),
-      asyncData: data
+      asyncData: data,
     });
 
     await updateOp.unblock(); // let the update finish
@@ -1393,19 +1479,19 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     dataAfterUpdateFinished.splice(1, 1, { ...dataAfterUpdate[1], ...UPDATED_ITEM_EXTRA });
     expect(lastResult()).toMatchObject({
       syncData: dataAfterUpdateFinished.slice(1).concat([NEW_ITEM_LOCAL]),
-      asyncData: dataAfterUpdateFinished
+      asyncData: dataAfterUpdateFinished,
     });
 
     await deleteOp.unblock(); // let the delete finish
     expect(lastResult()).toMatchObject({
-      syncData: dataAfterUpdateFinished.slice(1).concat([NEW_ITEM_LOCAL])
+      syncData: dataAfterUpdateFinished.slice(1).concat([NEW_ITEM_LOCAL]),
       // asyncData: dataAfterUpdateFinished // TODO OK? asyncData won't be updated yet because they're waiting for the first-launched op
     });
 
     await createOp.unblock(); // let the create finish
     expect(lastResult()).toMatchObject({
       syncData: dataAfterUpdateFinished.slice(1).concat([{ ...NEW_ITEM_LOCAL, ...NEW_ITEM_EXTRA }]),
-      asyncData: dataAfterUpdateFinished.slice(1).concat([{ ...NEW_ITEM_LOCAL, ...NEW_ITEM_EXTRA }])
+      asyncData: dataAfterUpdateFinished.slice(1).concat([{ ...NEW_ITEM_LOCAL, ...NEW_ITEM_EXTRA }]),
     });
   });
 
@@ -1427,36 +1513,48 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
       { viewState: "load", operations: [] },
       {
         viewState: "load",
-        operations: [{ type: "load", state: "pending" }]
+        operations: [{ type: "load", state: "pending" }],
       },
       {
         viewState: "ready",
-        operations: [{ type: "load", state: "success", result: LOAD_DATA1 }]
+        operations: [{ type: "load", state: "success", result: LOAD_DATA1 }],
       },
       {
         viewState: "update",
-        operations: [{ type: "update", state: "pending" }]
+        operations: [{ type: "update", state: "pending" }],
       },
       {
         viewState: "update",
-        operations: [{ type: "update", state: "pending" }, { type: "create", state: "pending" }]
+        operations: [
+          { type: "update", state: "pending" },
+          { type: "create", state: "pending" },
+        ],
       },
       {
         viewState: "create",
-        operations: [{ type: "update", state: "success", result: UPDATE1_FULL }, { type: "create", state: "pending" }]
+        operations: [
+          { type: "update", state: "success", result: UPDATE1_FULL },
+          { type: "create", state: "pending" },
+        ],
       },
       {
         viewState: "create",
-        operations: [{ type: "create", state: "pending" }, { type: "delete", state: "pending" }]
+        operations: [
+          { type: "create", state: "pending" },
+          { type: "delete", state: "pending" },
+        ],
       },
       {
         viewState: "delete",
-        operations: [{ type: "create", state: "success", result: CREATE1_FULL }, { type: "delete", state: "pending" }]
+        operations: [
+          { type: "create", state: "success", result: CREATE1_FULL },
+          { type: "delete", state: "pending" },
+        ],
       },
       {
         viewState: "ready",
-        operations: [{ type: "delete", state: "success", result: DELETE1_FULL }]
-      }
+        operations: [{ type: "delete", state: "success", result: DELETE1_FULL }],
+      },
     ]);
   });
 
@@ -1473,26 +1571,26 @@ describe("[uu5g04-hooks] useListData behaviour", () => {
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: data.concat([NEW_ITEM1]),
-      asyncData: data
+      asyncData: data,
     });
 
     let createOp2 = startOp("create", NEW_ITEM2, async () => null);
     await wait();
     expect(lastResult()).toMatchObject({
       syncData: data.concat([NEW_ITEM1, NEW_ITEM2]),
-      asyncData: data
+      asyncData: data,
     });
 
     await createOp2.unblock(); // let the create#2 finish
     expect(lastResult()).toMatchObject({
       syncData: data.concat([NEW_ITEM1, NEW_ITEM2]),
-      asyncData: data
+      asyncData: data,
     });
 
     await createOp1.unblock(); // let the create#1 finish
     expect(lastResult()).toMatchObject({
       syncData: data.concat([NEW_ITEM1, NEW_ITEM2]),
-      asyncData: data.concat([NEW_ITEM1, NEW_ITEM2])
+      asyncData: data.concat([NEW_ITEM1, NEW_ITEM2]),
     });
   });
 });

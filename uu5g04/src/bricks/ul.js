@@ -22,7 +22,7 @@ import "./ul.less";
 export const typeIconMap = {
   disc: "mdi-circle",
   circle: "mdi-circle-outline",
-  square: "mdi-square"
+  square: "mdi-square",
 };
 
 export const Ul = Context.withListContext(
@@ -40,11 +40,11 @@ export const Ul = Context.withListContext(
       classNames: {
         main: ns.css("ul"),
         type: ns.css("ul-type-"),
-        customMarker: ns.css("ul-custom-marker")
+        customMarker: ns.css("ul-custom-marker"),
       },
       defaults: {
-        childTagName: "UU5.Bricks.Li"
-      }
+        childTagName: "UU5.Bricks.Li",
+      },
     },
     //@@viewOff:statics
 
@@ -54,7 +54,7 @@ export const Ul = Context.withListContext(
       type: UU5.PropTypes.oneOf(["disc", "circle", "square", "none"]),
       markerIcon: UU5.PropTypes.string,
       iconColorSchema: UU5.PropTypes.string,
-      listLevel: UU5.PropTypes.number // received from context
+      listLevel: UU5.PropTypes.number, // received from context
     },
     //@@viewOff:propTypes
 
@@ -65,7 +65,7 @@ export const Ul = Context.withListContext(
         type: null,
         markerIcon: null,
         iconColorSchema: null,
-        listLevel: 1
+        listLevel: 1,
       };
     },
     //@@viewOff:getDefaultProps
@@ -88,7 +88,7 @@ export const Ul = Context.withListContext(
       if (!result && (typeof child !== "string" || child.trim())) {
         if (childTagName)
           this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagName], {
-            mixinName: "UU5.Common.BaseMixin"
+            mixinName: "UU5.Common.BaseMixin",
           });
         else this.showError("childNotAllowed", [child, defaultChildTagName], { mixinName: "UU5.Common.BaseMixin" });
       }
@@ -113,7 +113,7 @@ export const Ul = Context.withListContext(
         markerIcon: this._getMarkerIcon(),
         type: this.props.type,
         iconColorSchema: this.props.iconColorSchema,
-        listLevel: this.props.listLevel
+        listLevel: this.props.listLevel,
       };
     },
 
@@ -138,7 +138,7 @@ export const Ul = Context.withListContext(
           </ul>
         </ListContext.Provider>
       ) : null;
-    }
+    },
     //@@viewOff:render
   })
 );

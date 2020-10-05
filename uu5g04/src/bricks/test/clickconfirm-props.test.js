@@ -23,7 +23,7 @@ const CONFIG = {
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.PureRenderMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.CcrWriterMixin"
+    "UU5.Common.CcrWriterMixin",
   ],
   props: {
     // NOTE Skipping because the controlled doesn't work properly with hidden and there's
@@ -31,18 +31,18 @@ const CONFIG = {
     controlled: {
       values: [true, false],
       opt: {
-        skip: true
-      }
-    }
+        skip: true,
+      },
+    },
   },
   requiredProps: {
-    controlled: false
+    controlled: false,
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 const This = {};
@@ -55,7 +55,7 @@ describe("UU5.Bricks.ClickConfirm - example in dockit", () => {
   it("example in dockit", () => {
     const wrapper = shallow(
       <UU5.Bricks.Container id={"containerID"}>
-        <UU5.Bricks.ClickConfirm id={"uuOID"} ref_={click => (this._click = click)} />
+        <UU5.Bricks.ClickConfirm id={"uuOID"} ref_={(click) => (this._click = click)} />
         <UU5.Bricks.TouchIcon
           id={"uuID"}
           content="open"
@@ -64,7 +64,7 @@ describe("UU5.Bricks.ClickConfirm - example in dockit", () => {
           onClick={(button, event) => {
             this._click.open({
               content: <UU5.Bricks.Badge id={"idBadge"} content="Verified" />,
-              event: event
+              event: event,
             });
           }}
         />

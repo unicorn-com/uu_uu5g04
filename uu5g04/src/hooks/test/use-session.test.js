@@ -22,7 +22,7 @@ describe("[uu5g04-hooks] useSession behaviour", () => {
       isExpiring: expect.any(Boolean),
       session: expect.any(Object),
       login: expect.any(Function),
-      logout: expect.any(Function)
+      logout: expect.any(Function),
     });
   });
 
@@ -35,35 +35,35 @@ describe("[uu5g04-hooks] useSession behaviour", () => {
       identity: undefined,
       isExpiring: false,
       login: expect.any(Function),
-      session: UU5.Test.Session.instance
+      session: UU5.Test.Session.instance,
     });
 
     await UU5.Test.Session.setIdentity(UU5.Test.Session.TEST_IDENTITY); // NOTE This also marks session initialization as finished.
     expect(lastResult()).toMatchObject({
       sessionState: "authenticated",
       identity: UU5.Test.Session.TEST_IDENTITY,
-      isExpiring: false
+      isExpiring: false,
     });
 
     await UU5.Test.Session.setExpiring(true);
     expect(lastResult()).toMatchObject({
       sessionState: "authenticated",
       identity: UU5.Test.Session.TEST_IDENTITY,
-      isExpiring: true
+      isExpiring: true,
     });
 
     await UU5.Test.Session.setExpiring(false);
     expect(lastResult()).toMatchObject({
       sessionState: "authenticated",
       identity: UU5.Test.Session.TEST_IDENTITY,
-      isExpiring: false
+      isExpiring: false,
     });
 
     await UU5.Test.Session.setIdentity(null);
     expect(lastResult()).toMatchObject({
       sessionState: "notAuthenticated",
       identity: null,
-      isExpiring: false
+      isExpiring: false,
     });
   });
 });

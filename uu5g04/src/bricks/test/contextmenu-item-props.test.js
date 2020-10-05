@@ -21,7 +21,7 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 const MyContextmenuItem = UU5.Common.VisualComponent.create({
   getInitialState: () => {
     return {
-      isCalled: false
+      isCalled: false,
     };
   },
 
@@ -36,7 +36,7 @@ const MyContextmenuItem = UU5.Common.VisualComponent.create({
         <UU5.Bricks.ContextMenu.Item id={"items"} label="Dopoledne" onClick={this.onClickAlert} />
       </UU5.Bricks.ContextMenu>
     );
-  }
+  },
 });
 
 const CONFIG = {
@@ -44,43 +44,43 @@ const CONFIG = {
     "UU5.Common.BaseMixin",
     "UU5.Common.ElementaryMixin",
     "UU5.Common.ContentMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     label: {
-      values: ["myLabel"]
+      values: ["myLabel"],
     },
     href: {
-      values: ["https://www.plus4u.net/", "#idELEMENT"]
+      values: ["https://www.plus4u.net/", "#idELEMENT"],
     },
     //onClick
     smoothScroll: {
-      values: [3000]
+      values: [3000],
     },
     offset: {
-      values: [70]
+      values: [70],
     },
     target: {
-      values: ["_blank", "_parent", "_top", "_self"]
+      values: ["_blank", "_parent", "_top", "_self"],
     },
     icon: {
-      values: ["mdi-menu"]
+      values: ["mdi-menu"],
     },
     space: {
-      values: [true, false]
+      values: [true, false],
     },
     diviner: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
   },
   requiredProps: {
-    parent: shallow(<UU5.Bricks.ContextMenu id="parentId" />).instance()
+    parent: shallow(<UU5.Bricks.ContextMenu id="parentId" />).instance(),
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.ContextMenu.Item`, () => {

@@ -37,7 +37,7 @@ export const Ol = Context.withListContext(
       tagName: ns.name("Ol"),
       nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
       classNames: {
-        main: props => {
+        main: (props) => {
           let classNames = [ns.css("ol")];
 
           if (props.type === "1.1" && props.listLevel > 1) {
@@ -50,11 +50,11 @@ export const Ol = Context.withListContext(
 
           return classNames.join(" ");
         },
-        type: ns.css("ol-type-")
+        type: ns.css("ol-type-"),
       },
       defaults: {
-        childTagName: "UU5.Bricks.Li"
-      }
+        childTagName: "UU5.Bricks.Li",
+      },
     },
     //@@viewOff:statics
 
@@ -63,7 +63,7 @@ export const Ol = Context.withListContext(
       allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
       type: UU5.PropTypes.oneOf(["1", "a", "A", "i", "I", "1.1"]),
       counterId: UU5.PropTypes.string, // received from context
-      listLevel: UU5.PropTypes.number // received from context
+      listLevel: UU5.PropTypes.number, // received from context
     },
     //@@viewOff:propTypes
 
@@ -73,7 +73,7 @@ export const Ol = Context.withListContext(
         allowTags: [],
         type: null,
         counterId: undefined,
-        listLevel: 1
+        listLevel: 1,
       };
     },
     //@@viewOff:getDefaultProps
@@ -110,7 +110,7 @@ export const Ol = Context.withListContext(
       if (!result && (typeof child !== "string" || child.trim())) {
         if (childTagName)
           this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagName], {
-            mixinName: "UU5.Common.BaseMixin"
+            mixinName: "UU5.Common.BaseMixin",
           });
         else this.showError("childNotAllowed", [child, defaultChildTagName], { mixinName: "UU5.Common.BaseMixin" });
       }
@@ -124,7 +124,7 @@ export const Ol = Context.withListContext(
         ordered: true,
         type: this.props.type,
         counterId: this._counterId,
-        listLevel: this.props.listLevel
+        listLevel: this.props.listLevel,
       };
     },
 
@@ -161,7 +161,7 @@ export const Ol = Context.withListContext(
           </ol>
         </ListContext.Provider>
       ) : null;
-    }
+    },
     //@@viewOff:render
   })
 );

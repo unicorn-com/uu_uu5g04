@@ -34,9 +34,9 @@ let Image = UU5.Common.VisualComponent.create({
       type: ns.css("image-"),
       disabledWrapper: "uu5-common-disabled-cover-wrapper",
       elevationWrapper: ns.css("image-elevation-wrapper"),
-      elevationHolder: ns.css("image-elevation-holder")
+      elevationHolder: ns.css("image-elevation-holder"),
     },
-    imageCache: {}
+    imageCache: {},
   },
   //@@viewOff:statics
 
@@ -51,7 +51,7 @@ let Image = UU5.Common.VisualComponent.create({
     borderRadius: UU5.PropTypes.string,
     elevation: UU5.PropTypes.oneOf(["0", "1", "2", "3", "4", "5", 0, 1, 2, 3, 4, 5]),
     width: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
-    height: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string])
+    height: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
   },
   //@@viewOff:propTypes
 
@@ -66,7 +66,7 @@ let Image = UU5.Common.VisualComponent.create({
       borderRadius: null,
       elevation: null,
       width: undefined,
-      height: undefined
+      height: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -76,7 +76,7 @@ let Image = UU5.Common.VisualComponent.create({
     let { preloading, preloadedUri } = this._preloadImage(this.props);
     return {
       preloading,
-      preloadedUri
+      preloadedUri,
     };
   },
 
@@ -91,7 +91,7 @@ let Image = UU5.Common.VisualComponent.create({
     let { preloading, preloadedUri } = this._preloadImage(nextProps);
     this.setState({
       preloading,
-      preloadedUri
+      preloadedUri,
     });
   },
 
@@ -151,14 +151,14 @@ let Image = UU5.Common.VisualComponent.create({
         result = this.constructor.imageCache[cacheKey] = {
           preloading: true,
           preloadedUri: "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", // transparent 1x1 image
-          promise: null
+          promise: null,
         };
         result.promise = this._fetchImage(url, session).then(
-          blob => {
+          (blob) => {
             result.preloading = false;
             result.preloadedUri = URL.createObjectURL(blob);
           },
-          err => {
+          (err) => {
             result.preloading = false;
             result.preloadedUri = "data:image/gif;base64,ZZZZZZZZ"; // invalid image
           }
@@ -174,7 +174,7 @@ let Image = UU5.Common.VisualComponent.create({
     } else {
       result = {
         preloading: false,
-        preloadedUri: null
+        preloadedUri: null,
       };
       delete this._preloadImageLastRunId;
     }
@@ -185,7 +185,7 @@ let Image = UU5.Common.VisualComponent.create({
     let token = await UU5.Common.Tools.getCallToken(url, session);
     let headers = token
       ? {
-          Authorization: "Bearer " + token
+          Authorization: "Bearer " + token,
         }
       : {};
     return new Promise((resolve, reject) => {
@@ -194,7 +194,7 @@ let Image = UU5.Common.VisualComponent.create({
       xhr.responseType = "blob";
       xhr.setRequestHeader("Accept", "image/*,*/*;q=0.8");
       for (var k in headers) if (headers[k] != null) xhr.setRequestHeader(k, headers[k]);
-      xhr.onreadystatechange = function(/*e*/) {
+      xhr.onreadystatechange = function (/*e*/) {
         if (xhr.readyState == 4) {
           if (xhr.status >= 200 && xhr.status < 300) {
             resolve(xhr.response);
@@ -266,7 +266,7 @@ let Image = UU5.Common.VisualComponent.create({
     }
 
     return this.getNestingLevel() ? image : null;
-  }
+  },
   //@@viewOff:render
 });
 Image = UU5.Common.withVisibilityCheck(Image);

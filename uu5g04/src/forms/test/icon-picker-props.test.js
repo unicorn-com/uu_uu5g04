@@ -27,7 +27,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
       isCalled: false,
       value: "",
       message: "",
-      feedback: "initial"
+      feedback: "initial",
     };
   },
   onChangeHandler(event) {
@@ -66,7 +66,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
         onChangeFeedback={this.onChangeFeedbackHandler}
       />
     );
-  }
+  },
 });
 
 //`UU5.Forms.IconPicker`
@@ -76,27 +76,27 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Common.PureRenderMixin",
     "UU5.Forms.InputMixin",
-    "UU5.Common.ColorSchemaMixin"
+    "UU5.Common.ColorSchemaMixin",
   ],
   props: {
     categories: {
-      values: ["mdi", "fa", "glyphicon", "uu5", "plus4u", "plus4u5"]
+      values: ["mdi", "fa", "glyphicon", "uu5", "plus4u", "plus4u5"],
     },
     selectedCategory: {
-      values: ["mdi", "fa", "glyphicon", "uu5", "plus4u", "plus4u5"]
+      values: ["mdi", "fa", "glyphicon", "uu5", "plus4u", "plus4u5"],
     },
     placeholder: {
-      value: ["placeholder"]
+      value: ["placeholder"],
     },
     disableBackdrop: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Forms.IconPicker props function -> InputMixin`, () => {

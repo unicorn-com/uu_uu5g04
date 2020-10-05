@@ -22,32 +22,35 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Common.ContentMixin",
     "UU5.Common.PureRenderMixin",
-    "UU5.Common.NestingLevelMixin"
+    "UU5.Common.NestingLevelMixin",
   ],
   props: {
     size: {
-      values: ["s", "m", "l", "xl"]
+      values: ["s", "m", "l", "xl"],
     },
     iconCollapsed: {
-      values: ["uu5-plus"]
+      values: ["uu5-plus"],
     },
     iconExpanded: {
-      values: ["uu5-calendar"]
+      values: ["uu5-calendar"],
     },
     items: {
       values: [
-        [{ label: "Item 1", items: [{ label: "Item 1.1" }] }, { label: "Item 2", items: [{ label: "Item 2.1" }] }]
-      ]
-    }
+        [
+          { label: "Item 1", items: [{ label: "Item 1.1" }] },
+          { label: "Item 2", items: [{ label: "Item 2.1" }] },
+        ],
+      ],
+    },
   },
   requiredProps: {
-    children: [<UU5.Bricks.Tree.Item id={"idChild"} key="0" expanded={true} label="Anchorman" />]
+    children: [<UU5.Bricks.Tree.Item id={"idChild"} key="0" expanded={true} label="Anchorman" />],
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Tree`, () => {

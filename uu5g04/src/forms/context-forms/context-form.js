@@ -63,7 +63,7 @@ export const ContextForm = UU5.Common.Reference.forward(({ className, ...props }
       .uu5-forms-iconpicker .uu5-forms-iconpicker-header .uu5-forms-iconpicker-search-input {
         margin: 0;
       }
-    `
+    `,
   ];
   if (className) classNames.push(className);
 
@@ -73,7 +73,7 @@ export const ContextForm = UU5.Common.Reference.forward(({ className, ...props }
         <Form
           {...props}
           ref={ref}
-          ref_={form => {
+          ref_={(form) => {
             setForm(form);
             typeof props.ref_ === "function" && props.ref_(form);
           }}
@@ -87,11 +87,11 @@ export const ContextForm = UU5.Common.Reference.forward(({ className, ...props }
 
 ContextForm.displayName = ContextForm.tagName = ns.name("ContextForm");
 ContextForm.propTypes = {
-  ...Form.propTypes
+  ...Form.propTypes,
 };
 ContextForm.defaultProps = {
   ...Form.getDefaultProps(),
   labelColWidth: "xs-12",
   inputColWidth: "xs-12",
-  spacing: 16
+  spacing: 16,
 };

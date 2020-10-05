@@ -28,11 +28,11 @@ export default UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("Modal.Footer"),
     classNames: {
-      main: ns.css("modal-footer")
+      main: ns.css("modal-footer"),
     },
     defaults: {
-      parentTagName: "UU5.Bricks.Modal"
-    }
+      parentTagName: "UU5.Bricks.Modal",
+    },
   },
   //@@viewOff:statics
 
@@ -43,7 +43,7 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  UNSAFE_componentWillMount: function() {
+  UNSAFE_componentWillMount: function () {
     this.checkParentTagName(this.getDefault().parentTagName);
   },
 
@@ -59,13 +59,13 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return (
       <div {...this.getMainAttrs()}>
         {this.getChildren()}
         {this.getDisabledCover()}
       </div>
     );
-  }
+  },
   //@@viewOff:render
 });

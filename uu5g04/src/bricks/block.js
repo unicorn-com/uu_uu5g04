@@ -36,7 +36,7 @@ export const Block = UU5.Common.VisualComponent.create({
     UU5.Common.ColorSchemaMixin,
     UU5.Common.ContentMixin,
     UU5.Common.PureRenderMixin,
-    UU5.Common.EditableMixin
+    UU5.Common.EditableMixin,
   ],
   //@@viewOff:mixins
 
@@ -47,24 +47,24 @@ export const Block = UU5.Common.VisualComponent.create({
     classNames: {
       main: ns.css("block"),
       bg: ns.css("block-bg"),
-      editation: ns.css("block-editation")
+      editation: ns.css("block-editation"),
     },
     opt: {
-      nestingLevelWrapper: true
-    }
+      nestingLevelWrapper: true,
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    background: UU5.PropTypes.bool
+    background: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
-      background: false
+      background: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -72,7 +72,7 @@ export const Block = UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
-      editationLazyLoaded: false
+      editationLazyLoaded: false,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -87,7 +87,7 @@ export const Block = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _buildMainAttrs: function() {
+  _buildMainAttrs: function () {
     var mainAttrs = this.getMainAttrs();
     this.props.background && (mainAttrs.className += " " + this.getClassName().bg);
     return mainAttrs;
@@ -96,7 +96,7 @@ export const Block = UU5.Common.VisualComponent.create({
   _registerNull(inst) {
     // unmount of component means that suspense is loaded and component should be rendered
     if (!inst) {
-      this.setState(state => {
+      this.setState((state) => {
         if (state.editationLazyLoaded) return;
 
         // Edit component is loaded - need to set to static variable because other Edit component does not render fallback component
@@ -125,14 +125,14 @@ export const Block = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return this.getNestingLevel() ? (
       <div {...this._buildMainAttrs()}>
         {this.state.editation ? this._renderEditationMode() : null}
         {!this.state.editation || !this._isEditationLazyLoaded() ? [this.getChildren(), this.getDisabledCover()] : null}
       </div>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

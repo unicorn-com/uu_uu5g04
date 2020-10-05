@@ -16,50 +16,54 @@ import "uu5g04-bricks";
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
-const items = [{ label: "Low", value: "low" }, { label: "Normal", value: "normal" }, { label: "High", value: "high" }];
+const items = [
+  { label: "Low", value: "low" },
+  { label: "Normal", value: "normal" },
+  { label: "High", value: "high" },
+];
 
 const CONFIG = {
   mixins: ["UU5.Common.BaseMixin", "UU5.Common.ElementaryMixin"],
   props: {
     value: {
-      values: [undefined, "low", "normal", "high"]
+      values: [undefined, "low", "normal", "high"],
     },
     size: {
-      values: ["s", "m", "l", "xl"]
+      values: ["s", "m", "l", "xl"],
     },
     width: {
-      values: [undefined, 400, "5em"]
+      values: [undefined, 400, "5em"],
     },
     readOnly: {
-      values: [false, true]
+      values: [false, true],
     },
     colorSchema: {
-      values: [undefined, "red", "red-rich", "grey", "grey-rich", "white", "black"]
+      values: [undefined, "red", "red-rich", "grey", "grey-rich", "white", "black"],
     },
     bgStyle: {
-      values: [undefined, "outline", "underline", "filled", "transparent"]
+      values: [undefined, "outline", "underline", "filled", "transparent"],
     },
     elevation: {
-      values: [undefined, 1, 5, -1]
+      values: [undefined, 1, 5, -1],
     },
     borderRadius: {
-      values: [undefined, 8, "50%"]
+      values: [undefined, 8, "50%"],
     },
     borderWidth: {
-      values: [undefined, 2, 3]
+      values: [undefined, 2, 3],
     },
     borderWidthFocus: {
-      values: [undefined, 2, 3]
-    }
+      values: [undefined, 2, 3],
+    },
   },
   requiredProps: {
-    items: items
+    items: items,
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.SwitchSelector props testing`, () => {

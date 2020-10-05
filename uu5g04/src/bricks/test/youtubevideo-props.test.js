@@ -21,40 +21,40 @@ const CONFIG = {
     "UU5.Common.BaseMixin",
     "UU5.Common.ElementaryMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     src: {
-      values: ["https://www.youtube.com/watch?v=xfG15i_uQvc"]
+      values: ["https://www.youtube.com/watch?v=xfG15i_uQvc"],
     },
     autoPlay: {
-      values: [true, false]
+      values: [true, false],
     },
     disableControls: {
-      values: [true, false]
+      values: [true, false],
     },
     loop: {
-      values: [true, false]
+      values: [true, false],
     },
     disableInfo: {
-      values: [true, false]
+      values: [true, false],
     },
     disableRelatedVideos: {
-      values: [true, false]
+      values: [true, false],
     },
     disableFullscreen: {
-      values: [true, false]
+      values: [true, false],
     },
     size: {
-      values: ["s", "m", "l", "xl"]
-    }
+      values: ["s", "m", "l", "xl"],
+    },
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.YoutubeVideo`, () => {

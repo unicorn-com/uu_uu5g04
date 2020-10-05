@@ -83,8 +83,8 @@ describe(`UU5.Common.ContentMixin dynamic - interface`, () => {
     let comp1, comp2;
     executeAsSingleRender(wrapper, () => {
       // test without using IDs
-      instance.insertChildBefore(<UU5.Bricks.Div ref_={comp => (comp1 = comp)} />, { childAfterId: "id2" });
-      instance.insertChildBefore(<UU5.Bricks.Div ref_={comp => (comp2 = comp)} />);
+      instance.insertChildBefore(<UU5.Bricks.Div ref_={(comp) => (comp1 = comp)} />, { childAfterId: "id2" });
+      instance.insertChildBefore(<UU5.Bricks.Div ref_={(comp) => (comp2 = comp)} />);
     });
     expectChildren(wrapper, comp2.getId(), "id5", comp1.getId(), "id2", "id8", "id7", "id4", "id3", "id6", "id1");
   });
@@ -121,8 +121,8 @@ describe(`UU5.Common.ContentMixin dynamic - interface`, () => {
     let comp1, comp2;
     executeAsSingleRender(wrapper, () => {
       // test without using IDs
-      instance.insertChildAfter(<UU5.Bricks.Div ref_={comp => (comp1 = comp)} />, { childBeforeId: "id5" });
-      instance.insertChildAfter(<UU5.Bricks.Div ref_={comp => (comp2 = comp)} />);
+      instance.insertChildAfter(<UU5.Bricks.Div ref_={(comp) => (comp1 = comp)} />, { childBeforeId: "id5" });
+      instance.insertChildAfter(<UU5.Bricks.Div ref_={(comp) => (comp2 = comp)} />);
     });
     expectChildren(wrapper, "id1", "id5", comp1.getId(), "id7", "id8", "id3", "id4", "id2", "id6", comp2.getId());
   });
@@ -137,43 +137,23 @@ describe(`UU5.Common.ContentMixin dynamic - interface`, () => {
     );
     let instance = wrapper.instance();
     expectChildren(wrapper, "id1", "id2", "id3");
-    expect(
-      wrapper
-        .find("#id2")
-        .first()
-        .instance().props.tooltip
-    ).toBeFalsy();
+    expect(wrapper.find("#id2").first().instance().props.tooltip).toBeFalsy();
 
     instance.updateChild("id2", { tooltip: "new" });
-    expect(
-      wrapper
-        .find("#id2")
-        .first()
-        .instance().props.tooltip
-    ).toBe("new");
+    expect(wrapper.find("#id2").first().instance().props.tooltip).toBe("new");
 
     executeAsSingleRender(wrapper, () => {
       instance.insertChild(<UU5.Bricks.Div id="id4" />, { position: 0 });
       instance.updateChild("id2", { tooltip: "new2" });
     });
-    expect(
-      wrapper
-        .find("#id2")
-        .first()
-        .instance().props.tooltip
-    ).toBe("new2");
+    expect(wrapper.find("#id2").first().instance().props.tooltip).toBe("new2");
     expectChildren(wrapper, "id4", "id1", "id2", "id3");
 
     executeAsSingleRender(wrapper, () => {
       instance.insertChild(<UU5.Bricks.Div id="id5" />, { position: 0 });
       instance.updateChild("id5", { tooltip: "new" });
     });
-    expect(
-      wrapper
-        .find("#id5")
-        .first()
-        .instance().props.tooltip
-    ).toBe("new");
+    expect(wrapper.find("#id5").first().instance().props.tooltip).toBe("new");
     expectChildren(wrapper, "id5", "id4", "id1", "id2", "id3");
   });
 
@@ -269,10 +249,10 @@ function expectChildren(wrapper, ...ids) {
   let children = instance.getChildren();
   expect(children).toBeTruthy();
   expect(children.length).toBe(ids.length);
-  expect(children.map(child => child.props.id || "")).toEqual(ids);
+  expect(children.map((child) => child.props.id || "")).toEqual(ids);
 
   // assert that children don't have same keys
-  let usedKeys = children.map(child => child.props.key).filter(Boolean);
+  let usedKeys = children.map((child) => child.props.key).filter(Boolean);
   let usedUniqueKeys = [...new Set(usedKeys)];
   expect(usedKeys).toEqual(usedUniqueKeys);
 
@@ -280,7 +260,7 @@ function expectChildren(wrapper, ...ids) {
   let renderedChildren = instance.getRenderedChildren();
   expect(renderedChildren).toBeTruthy();
   expect(renderedChildren.length).toBe(children.length);
-  expect(renderedChildren.map(child => child.props.id || "")).toEqual(children.map(child => child.props.id || ""));
+  expect(renderedChildren.map((child) => child.props.id || "")).toEqual(children.map((child) => child.props.id || ""));
 }
 
 function executeAsSingleRender(wrapper, testFn) {

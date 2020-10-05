@@ -33,8 +33,8 @@ export const Modal = UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("Modal"),
     classNames: {
-      main: ns.css("items-component")
-    }
+      main: ns.css("items-component"),
+    },
   },
   //@@viewOff:statics
 
@@ -73,7 +73,7 @@ export const Modal = UU5.Common.VisualComponent.create({
   //@@viewOn:render
   render() {
     return <UU5.Bricks.ScreenSize>{this._renderBody}</UU5.Bricks.ScreenSize>;
-  }
+  },
   //@@viewOff:render
 });
 

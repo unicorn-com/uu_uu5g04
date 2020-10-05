@@ -21,7 +21,7 @@ describe("UU5.Bricks.Popover ifc testing", () => {
   it("open()", () => {
     let popover;
     const wrapper = mount(
-      <UU5.Bricks.Popover id={"uuID"} shown={false} header="Header" footer="Footer" ref_={ref => (popover = ref)}>
+      <UU5.Bricks.Popover id={"uuID"} shown={false} header="Header" footer="Footer" ref_={(ref) => (popover = ref)}>
         <UU5.Bricks.Div id={"uuID2"} style={{ textAlign: "center", width: "100%" }}>
           <UU5.Bricks.Button id={"uuID3"} bgStyle="transparent" content="OK" />
           <br />
@@ -39,7 +39,7 @@ describe("UU5.Bricks.Popover ifc testing", () => {
   it("close()", () => {
     let popover;
     const wrapper = mount(
-      <UU5.Bricks.Popover id={"uuID"} shown header="Header" footer="Footer" ref_={ref => (popover = ref)}>
+      <UU5.Bricks.Popover id={"uuID"} shown header="Header" footer="Footer" ref_={(ref) => (popover = ref)}>
         <UU5.Bricks.Div id={"uuID2"} style={{ textAlign: "center", width: "100%" }}>
           <UU5.Bricks.Button id={"uuID3"} bgStyle="transparent" content="OK" />
           <br />
@@ -60,7 +60,7 @@ describe("UU5.Bricks.Popover ifc testing", () => {
   it("isOpen() should return true", () => {
     let popover;
     mount(
-      <UU5.Bricks.Popover id={"uuID"} shown header="Header" footer="Footer" ref_={ref => (popover = ref)}>
+      <UU5.Bricks.Popover id={"uuID"} shown header="Header" footer="Footer" ref_={(ref) => (popover = ref)}>
         <UU5.Bricks.Div id={"uuID2"} style={{ textAlign: "center", width: "100%" }}>
           <UU5.Bricks.Button id={"uuID3"} bgStyle="transparent" content="OK" />
           <br />
@@ -74,7 +74,7 @@ describe("UU5.Bricks.Popover ifc testing", () => {
   it("isOpen() should return false", () => {
     let popover;
     mount(
-      <UU5.Bricks.Popover id={"uuID"} shown={false} header="Header" footer="Footer" ref_={ref => (popover = ref)}>
+      <UU5.Bricks.Popover id={"uuID"} shown={false} header="Header" footer="Footer" ref_={(ref) => (popover = ref)}>
         <UU5.Bricks.Div id={"uuID2"} style={{ textAlign: "center", width: "100%" }}>
           <UU5.Bricks.Button id={"uuID3"} bgStyle="transparent" content="OK" />
           <br />

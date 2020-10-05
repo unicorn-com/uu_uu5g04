@@ -34,7 +34,7 @@ export const Line = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.ColorSchemaMixin,
     UU5.Common.NestingLevelMixin,
-    UU5.Common.EditableMixin
+    UU5.Common.EditableMixin,
   ],
   //@@viewOff:mixins
 
@@ -45,7 +45,7 @@ export const Line = UU5.Common.VisualComponent.create({
     classNames: {
       main: ns.css("line uu5-common-bg"),
       size: ns.css("line-size-"),
-      vertical: props => {
+      vertical: (props) => {
         let className = ns.css("line-vertical");
 
         if (typeof props.vertical === "number" || typeof props.vertical === "string") {
@@ -53,11 +53,11 @@ export const Line = UU5.Common.VisualComponent.create({
         }
 
         return className;
-      }
+      },
     },
     defaults: {
-      sizes: ["s", "m", "l", "xl"]
-    }
+      sizes: ["s", "m", "l", "xl"],
+    },
   },
   //@@viewOff:statics
 
@@ -65,7 +65,7 @@ export const Line = UU5.Common.VisualComponent.create({
   propTypes: {
     size: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
     borderRadius: UU5.PropTypes.string,
-    vertical: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.number, UU5.PropTypes.string])
+    vertical: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.number, UU5.PropTypes.string]),
   },
   //@@viewOff:propTypes
 
@@ -74,7 +74,7 @@ export const Line = UU5.Common.VisualComponent.create({
     return {
       size: "m",
       borderRadius: null,
-      vertical: false
+      vertical: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -135,7 +135,7 @@ export const Line = UU5.Common.VisualComponent.create({
         {this.getNestingLevel() ? <div {...this._buildMainAttrs()}>{this.getDisabledCover()}</div> : null}
       </>
     );
-  }
+  },
   //@@viewOff:render
 });
 

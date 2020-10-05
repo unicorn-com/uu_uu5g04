@@ -24,15 +24,15 @@ export const ScreenSizeMixin = {
     "UU5.Common.ScreenSizeMixin": {
       requiredMixins: ["UU5.Common.BaseMixin"],
       defaults: {
-        screenSizeEvent: "UU5_Common_screenSize"
-      }
-    }
+        screenSizeEvent: "UU5_Common_screenSize",
+      },
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    _contextScreenSize: PropTypes.oneOf(Object.keys(ScreenSize.SIZE_MAP)) // internally provided by postprocessor (interoperability with ScreenSizeProvider in uu5g04-hooks)
+    _contextScreenSize: PropTypes.oneOf(Object.keys(ScreenSize.SIZE_MAP)), // internally provided by postprocessor (interoperability with ScreenSizeProvider in uu5g04-hooks)
   },
   //@@viewOff:propTypes
 
@@ -48,7 +48,7 @@ export const ScreenSizeMixin = {
     this.registerMixin("UU5.Common.ScreenSizeMixin");
     // state
     return {
-      screenSize: this.getScreenSize()
+      screenSize: this.getScreenSize(),
     };
   },
 
@@ -66,7 +66,7 @@ export const ScreenSizeMixin = {
       let runOnChange = false;
       let newScreenSize = nextProps._contextScreenSize;
       this.setState(
-        state => {
+        (state) => {
           let isSame = state.screenSize === newScreenSize;
           runOnChange = !isSame;
           return isSame ? undefined : { screenSize: newScreenSize };
@@ -90,7 +90,7 @@ export const ScreenSizeMixin = {
 
   getUU5CommonScreenSizeMixinProps() {
     return {
-      screenSize: this.getScreenSize()
+      screenSize: this.getScreenSize(),
     };
   },
 
@@ -127,7 +127,7 @@ export const ScreenSizeMixin = {
   },
 
   onChangeScreenSizeDefault(e, actualScreenSize) {
-    this.setState(state => (state.screenSize !== actualScreenSize ? { screenSize: actualScreenSize } : undefined));
+    this.setState((state) => (state.screenSize !== actualScreenSize ? { screenSize: actualScreenSize } : undefined));
     return this;
   },
   //@@viewOff:interface
@@ -143,7 +143,7 @@ export const ScreenSizeMixin = {
       this.onChangeScreenSizeDefault(e, actualScreenSize);
     }
     return this;
-  }
+  },
   //@@viewOff:private
 };
 
@@ -155,10 +155,10 @@ if (
     let mixins = componentDescriptor && Array.isArray(componentDescriptor.mixins) ? componentDescriptor.mixins : null;
     if (mixins && mixins.includes(ScreenSizeMixin)) {
       // wrap with screen size consumer
-      let ResultComponent = React.forwardRef(function(props, ref) {
+      let ResultComponent = React.forwardRef(function (props, ref) {
         return (
           <ScreenSize.Context.Consumer>
-            {value => {
+            {(value) => {
               let screenSize = value ? value.screenSize || null : undefined;
               return <Component {...props} ref={ref} _contextScreenSize={screenSize} />;
             }}

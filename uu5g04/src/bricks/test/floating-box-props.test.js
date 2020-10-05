@@ -21,37 +21,37 @@ const CONFIG = {
     "UU5.Common.BaseMixin",
     "UU5.Common.ElementaryMixin",
     "UU5.Common.ContentMixin",
-    "UU5.Common.ColorSchemaMixin"
+    "UU5.Common.ColorSchemaMixin",
   ],
   props: {
     position: {
-      values: ["10px -50px", "6em 30%"]
+      values: ["10px -50px", "6em 30%"],
     },
     draggable: {
-      values: [true, false]
+      values: [true, false],
     },
     borderRadius: {
-      values: ["4px", "8px"]
+      values: ["4px", "8px"],
     },
     elevation: {
-      values: ["0", "1", "2", "3", "4", "5", 0, 1, 2, 3, 4, 5]
+      values: ["0", "1", "2", "3", "4", "5", 0, 1, 2, 3, 4, 5],
     },
     bgStyle: {
-      values: ["filled", "outline", "transparent", "underline"]
+      values: ["filled", "outline", "transparent", "underline"],
     },
     width: {
-      values: [200, "500px"]
+      values: [200, "500px"],
     },
     header: {
-      values: ["floating-box", "some-text"]
-    }
+      values: ["floating-box", "some-text"],
+    },
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: true
-    }
-  }
+      disableLifecycleMethods: true,
+    },
+  },
 };
 
 describe(`UU5.Bricks.FloatingBox props`, () => {

@@ -21,7 +21,7 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 const MyNavBarHandler = UU5.Common.VisualComponent.create({
   getInitialState: () => {
     return {
-      isCalled: false
+      isCalled: false,
     };
   },
 
@@ -42,7 +42,7 @@ const MyNavBarHandler = UU5.Common.VisualComponent.create({
         </UU5.Bricks.NavBar.Nav>
       </UU5.Bricks.NavBar>
     );
-  }
+  },
 });
 
 const CONFIG = {
@@ -52,17 +52,17 @@ const CONFIG = {
     "UU5.Common.ContentMixin",
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     fixed: {
-      values: ["top", "bottom"]
+      values: ["top", "bottom"],
     },
     smoothScroll: {
-      values: [3000]
+      values: [3000],
     },
     offset: {
-      values: [70]
+      values: [70],
     },
 
     // NOTE :-( Skipping because controlled/open/alwaysOpen doesn't work properly with each other and there's
@@ -70,40 +70,40 @@ const CONFIG = {
     open: {
       values: [true, false],
       opt: {
-        skip: true
-      }
+        skip: true,
+      },
     },
     alwaysOpen: {
       values: [true, false],
       opt: {
-        skip: true
-      }
+        skip: true,
+      },
     },
 
     iconOpen: {
-      values: ["uu5-plus"]
+      values: ["uu5-plus"],
     },
     iconClosed: {
-      values: ["uu5-minus"]
+      values: ["uu5-minus"],
     },
     //onOpen:
     //onClose
     size: {
-      values: ["s", "m", "l", "xl"]
-    }
+      values: ["s", "m", "l", "xl"],
+    },
   },
   requiredProps: {
     children: [
       <UU5.Bricks.NavBar.Nav id={"child01"}>
         <UU5.Bricks.NavBar.Nav.Item d={"child02"}>News</UU5.Bricks.NavBar.Nav.Item>
-      </UU5.Bricks.NavBar.Nav>
-    ]
+      </UU5.Bricks.NavBar.Nav>,
+    ],
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: true
-    }
-  }
+      disableLifecycleMethods: true,
+    },
+  },
 };
 
 describe(`UU5.Bricks.NavBar props`, () => {

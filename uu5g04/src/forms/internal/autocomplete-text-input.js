@@ -32,7 +32,7 @@ export const AutocompleteTextInput = UU5.Common.VisualComponent.create({
 
   //@@viewOn:statics
   statics: {
-    tagName: ns.name("AutocompleteTextInput")
+    tagName: ns.name("AutocompleteTextInput"),
   },
   //@@viewOff:statics
 
@@ -63,19 +63,19 @@ export const AutocompleteTextInput = UU5.Common.VisualComponent.create({
       UU5.PropTypes.shape({
         value: UU5.PropTypes.string,
         params: UU5.PropTypes.object,
-        content: UU5.PropTypes.any
+        content: UU5.PropTypes.any,
       })
     ),
     foundItemListItems: UU5.PropTypes.arrayOf(
       UU5.PropTypes.shape({
         value: UU5.PropTypes.string,
         params: UU5.PropTypes.object,
-        content: UU5.PropTypes.any
+        content: UU5.PropTypes.any,
       })
     ),
     itemListProps: UU5.PropTypes.object,
     onClose: UU5.PropTypes.func,
-    onOpen: UU5.PropTypes.func
+    onOpen: UU5.PropTypes.func,
   },
   //@@viewOff:propTypes
 
@@ -107,7 +107,7 @@ export const AutocompleteTextInput = UU5.Common.VisualComponent.create({
       foundItemListItems: undefined,
       itemListProps: undefined,
       onClose: undefined,
-      onOpen: undefined
+      onOpen: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -168,10 +168,10 @@ export const AutocompleteTextInput = UU5.Common.VisualComponent.create({
       component: false,
       input: false,
       label: false,
-      picker: false
+      picker: false,
     };
     let eventPath = this._getEventPath(e);
-    eventPath.every(item => {
+    eventPath.every((item) => {
       let functionType = item.matches ? "matches" : "msMatchesSelector";
       if (item[functionType]) {
         if (item[functionType](labelMatch)) {
@@ -201,7 +201,7 @@ export const AutocompleteTextInput = UU5.Common.VisualComponent.create({
     let itemList;
     let items;
 
-    UU5.Environment.EventListener.addWindowEvent("keydown", this.getId(), e => {
+    UU5.Environment.EventListener.addWindowEvent("keydown", this.getId(), (e) => {
       itemList = this._itemList;
       items = itemList && itemList.getRenderedChildren();
 
@@ -233,7 +233,7 @@ export const AutocompleteTextInput = UU5.Common.VisualComponent.create({
       }
     });
 
-    UU5.Environment.EventListener.addWindowEvent("keypress", this.getId(), e => {
+    UU5.Environment.EventListener.addWindowEvent("keypress", this.getId(), (e) => {
       if (items) {
         if (this.props.open) {
           this.focus();
@@ -242,7 +242,7 @@ export const AutocompleteTextInput = UU5.Common.VisualComponent.create({
       }
     });
 
-    UU5.Environment.EventListener.addWindowEvent("keyup", this.getId(), e => {
+    UU5.Environment.EventListener.addWindowEvent("keyup", this.getId(), (e) => {
       switch (e.which) {
         case 13: // enter
           if (items) {
@@ -317,7 +317,7 @@ export const AutocompleteTextInput = UU5.Common.VisualComponent.create({
           onClose: this._close,
           aroundElement: this._textInput.findDOMNode(),
           position: "bottom",
-          offset: 4
+          offset: 4,
         },
         setStateCallback
       );
@@ -391,7 +391,7 @@ export const AutocompleteTextInput = UU5.Common.VisualComponent.create({
       colorSchema: this.props.colorSchema,
       icon: this.props.icon,
       iconOnClick: this.props.iconOnClick,
-      clickable: this.props.clickable
+      clickable: this.props.clickable,
     };
   },
   //@@viewOff:private
@@ -408,7 +408,7 @@ export const AutocompleteTextInput = UU5.Common.VisualComponent.create({
         )}
       </UU5.Common.Fragment>
     );
-  }
+  },
   //@@viewOn:render
 });
 

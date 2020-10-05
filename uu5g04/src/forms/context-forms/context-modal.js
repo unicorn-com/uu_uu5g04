@@ -63,7 +63,7 @@ export const ContextModal = UU5.Common.Reference.forward(({ className, ...props 
           padding: 0;
         }
       }
-    `
+    `,
   ];
   if (className) classNames.push(className);
 
@@ -76,7 +76,7 @@ export const ContextModal = UU5.Common.Reference.forward(({ className, ...props 
 
 ContextModal.displayName = ContextModal.tagName = ns.name("ContextModal");
 ContextModal.propTypes = {
-  ...UU5.Bricks.Modal.propTypes
+  ...UU5.Bricks.Modal.propTypes,
 };
 ContextModal.defaultProps = {};
 

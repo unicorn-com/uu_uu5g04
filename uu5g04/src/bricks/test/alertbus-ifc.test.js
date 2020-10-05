@@ -19,7 +19,7 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 var props = {
   colorSchema: "yellow",
   id: "ID_OF_ALERT",
-  content: <UU5.Bricks.Strong>This is content in Bricks.Alert</UU5.Bricks.Strong>
+  content: <UU5.Bricks.Strong>This is content in Bricks.Alert</UU5.Bricks.Strong>,
 };
 
 describe(`UU5.Bricks.AlertBus interface testing`, () => {
@@ -68,7 +68,7 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
       1,
       {
         id: "id_alert_in_busFIRST",
-        content: "Obsah alertu na první pozici"
+        content: "Obsah alertu na první pozici",
       },
       mockFunc
     );
@@ -76,7 +76,7 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
       2,
       {
         id: "id_alert_in_busSECOND",
-        content: "Obsah alertu na druhé pozici"
+        content: "Obsah alertu na druhé pozici",
       },
       mockFunc
     );
@@ -100,7 +100,7 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
     const wrapper = shallow(<UU5.Bricks.AlertBus id={"uuID01"} closeTimer={3000} />);
     const withHeaderProps = UU5.Common.Tools.merge(
       {
-        header: <UU5.Bricks.Strong>Alert header</UU5.Bricks.Strong>
+        header: <UU5.Bricks.Strong>Alert header</UU5.Bricks.Strong>,
       },
       props
     );
@@ -162,7 +162,7 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
     const mockFunc = jest.fn();
 
     var alertStack = wrapper.instance().getAlerts();
-    alertStack.map(alert => {
+    alertStack.map((alert) => {
       alert.colorSchema = "blue";
     });
 
@@ -173,7 +173,7 @@ describe(`UU5.Bricks.AlertBus interface testing`, () => {
       1,
       {
         id: "id_alert_in_busSECOND",
-        content: "Obsah alertu na druhé pozici"
+        content: "Obsah alertu na druhé pozici",
       },
       mockFunc
     );

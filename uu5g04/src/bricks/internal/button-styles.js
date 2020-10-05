@@ -13,13 +13,13 @@ const getStandardColors = (colorShades, bgStyle) => {
     definitions = {
       borderColor: colorShades.c700,
       borderColorHover: colorShades.c900,
-      borderColorActive: colorShades.c900
+      borderColorActive: colorShades.c900,
     };
   } else {
     definitions = {
       borderColor: colorShades.c500,
       borderColorHover: colorShades.c500,
-      borderColorActive: colorShades.c900
+      borderColorActive: colorShades.c900,
     };
   }
 
@@ -41,7 +41,7 @@ const getDefaultColors = (colorShades, bgStyle) => {
       textColorActive: COLORS.common.darkText,
       borderColor: colorShades.c400,
       borderColorHover: colorShades.c500,
-      borderColorActive: colorShades.c500
+      borderColorActive: colorShades.c500,
     };
   } else if (bgStyle === "link") {
     definitions = {
@@ -53,7 +53,7 @@ const getDefaultColors = (colorShades, bgStyle) => {
       textColorActive: COLORS.common.black,
       borderColor: colorShades.c400,
       borderColorHover: colorShades.darkText,
-      borderColorActive: colorShades.c500
+      borderColorActive: colorShades.c500,
     };
   } else {
     definitions = {
@@ -65,7 +65,7 @@ const getDefaultColors = (colorShades, bgStyle) => {
       textColorActive: COLORS.common.darkText,
       borderColor: colorShades.c400,
       borderColorHover: colorShades.c500,
-      borderColorActive: colorShades.c500
+      borderColorActive: colorShades.c500,
     };
   }
 
@@ -83,13 +83,13 @@ const getWhiteColors = (colorShades, bgStyle) => {
     definitions = {
       borderColor: colorShades.c900,
       borderColorHover: colorShades.c800,
-      borderColorActive: colorShades.c700
+      borderColorActive: colorShades.c700,
     };
   } else {
     definitions = {
       borderColor: colorShades.c900,
       borderColorHover: colorShades.c900,
-      borderColorActive: colorShades.c700
+      borderColorActive: colorShades.c700,
     };
   }
 
@@ -103,13 +103,13 @@ const getBlackColors = (colorShades, bgStyle) => {
     definitions = {
       borderColor: colorShades.c900,
       borderColorHover: colorShades.c800,
-      borderColorActive: colorShades.c700
+      borderColorActive: colorShades.c700,
     };
   } else {
     definitions = {
       borderColor: colorShades.c900,
       borderColorHover: colorShades.c900,
-      borderColorActive: colorShades.c900
+      borderColorActive: colorShades.c900,
     };
   }
 
@@ -123,13 +123,13 @@ const getGreyColors = (colorShades, bgStyle) => {
     definitions = {
       borderColor: colorShades.c800,
       borderColorHover: colorShades.c900,
-      borderColorActive: colorShades.c900
+      borderColorActive: colorShades.c900,
     };
   } else {
     definitions = {
       borderColor: colorShades.c600,
       borderColorHover: colorShades.c600,
-      borderColorActive: colorShades.c900
+      borderColorActive: colorShades.c900,
     };
   }
 
@@ -158,7 +158,7 @@ const getColors = (colorSchema, bgStyle) => {
   }
 };
 
-const getBgStyle = bgStyle => {
+const getBgStyle = (bgStyle) => {
   if (["filled", "outline", "transparent", "underline", "link"].indexOf(bgStyle)) {
     return bgStyle;
   } else if (bgStyle === "inverted") {
@@ -168,7 +168,7 @@ const getBgStyle = bgStyle => {
   }
 };
 
-const getShades = colorSchema => {
+const getShades = (colorSchema) => {
   // get the most commonly used shades of the given colorSchema
   if (colorSchema === "default" || colorSchema === "grey" || !colorSchema) {
     return UU5.Environment.colors["grey"];

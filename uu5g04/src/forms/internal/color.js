@@ -13,7 +13,7 @@
 
 const Color = {};
 
-export const parseColorFromString = stringValue => {
+export const parseColorFromString = (stringValue) => {
   let result = { opacity: 100, r: 0, g: 0, b: 0 };
   if (stringValue[0] === "#") {
     // parse value from #123 or #112233
@@ -112,7 +112,7 @@ export const colorObjectToString = (valueObj, opts = { shorten: true, upperCase:
   return result;
 };
 
-const validateColorString = stringValue => {
+const validateColorString = (stringValue) => {
   if (!stringValue) return false;
   let result;
   try {
@@ -124,7 +124,7 @@ const validateColorString = stringValue => {
   return result;
 };
 
-const validateColorObject = valueObj => {
+const validateColorObject = (valueObj) => {
   if (!valueObj) return false;
   let result = valueObj;
   if (valueObj.opacity > 100 || valueObj.opacity < 0) {
@@ -140,7 +140,7 @@ const validateColorObject = valueObj => {
 };
 
 // returns false if value is not a valid color otherwise returns valid value
-const getValidColor = value => {
+const getValidColor = (value) => {
   return typeof value === "string" ? validateColorString(value) : validateColorObject(value);
 };
 
@@ -156,7 +156,7 @@ const getValidColorString = (value, opts) => {
   }
 };
 
-const getValidColorObject = value => {
+const getValidColorObject = (value) => {
   if (typeof value === "string") {
     try {
       return Color.parse(value);

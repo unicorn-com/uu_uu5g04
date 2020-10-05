@@ -23,7 +23,7 @@ const MyAllowTagsComponents = UU5.Common.VisualComponent.create({
   statics: { tagName: "UU5.Example.MyCompLi", classNames: { main: "mytr" } },
   render() {
     return <UU5.Example.MyCompLi {...this.getMainPropsToPass()} />;
-  }
+  },
 });
 
 const CONFIG = {
@@ -33,22 +33,22 @@ const CONFIG = {
     "UU5.Common.SectionMixin",
     "UU5.Common.NestingLevelMixin",
     "UU5.Common.ContentMixin",
-    "UU5.Common.LevelMixin"
+    "UU5.Common.LevelMixin",
   ],
   props: {
     allowTags: {
-      allowTagsArray: ["UU5.Example.MyCompLi"]
+      allowTagsArray: ["UU5.Example.MyCompLi"],
     },
     type: {
-      values: ["disc", "square", "circle"]
-    }
+      values: ["disc", "square", "circle"],
+    },
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Ul`, () => {

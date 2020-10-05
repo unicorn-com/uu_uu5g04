@@ -21,9 +21,9 @@ export const SessionMixin = {
     "UU5.Common.SessionMixin": {
       requiredMixins: ["UU5.Common.BaseMixin"],
       errors: {
-        sessionNotFound: "Session has to be set."
-      }
-    }
+        sessionNotFound: "Session has to be set.",
+      },
+    },
   },
   //@@viewOff:statics
 
@@ -35,15 +35,15 @@ export const SessionMixin = {
       addListener: PropTypes.func,
       removeListener: PropTypes.func,
       getIdentity: PropTypes.func,
-      isAuthenticated: PropTypes.func
-    })
+      isAuthenticated: PropTypes.func,
+    }),
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      session: null
+      session: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -96,7 +96,7 @@ export const SessionMixin = {
 
   getUU5CommonSessionMixinProps() {
     return {
-      session: this.props.session
+      session: this.props.session,
     };
   },
 
@@ -119,7 +119,7 @@ export const SessionMixin = {
   logout() {
     let session = this.getSession();
     session &&
-      session.logout().catch(e => {
+      session.logout().catch((e) => {
         // TODO
       });
     return this;
@@ -177,7 +177,7 @@ export const SessionMixin = {
   onSessionExtendedDefault(event) {
     this._sessionExpiring = false;
     return this;
-  }
+  },
   //@@viewOff:private
 };
 

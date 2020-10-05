@@ -15,10 +15,10 @@ export const PortalElementContext = UU5.Common.Context.create({
       document.body.appendChild(result);
     }
     return result;
-  }
+  },
 });
 
-export const RenderIntoPortal = function({ layer = LAYER.MODAL, children }) {
+export const RenderIntoPortal = function ({ layer = LAYER.MODAL, children }) {
   return (
     <PortalElementContext.Consumer>
       {({ getPortalElement }) => UU5.Common.Portal.create(children, getPortalElement(layer))}

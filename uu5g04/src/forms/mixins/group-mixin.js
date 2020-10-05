@@ -29,7 +29,7 @@ export const GroupMixin = {
         name: UU5.PropTypes.string,
         value: UU5.PropTypes.bool,
         disabled: UU5.PropTypes.bool,
-        hidden: UU5.PropTypes.bool
+        hidden: UU5.PropTypes.bool,
       })
     ),
     required: UU5.PropTypes.bool,
@@ -44,15 +44,15 @@ export const GroupMixin = {
         s: UU5.PropTypes.number,
         m: UU5.PropTypes.number,
         l: UU5.PropTypes.number,
-        xl: UU5.PropTypes.number
+        xl: UU5.PropTypes.number,
       }),
-      UU5.PropTypes.string
-    ])
+      UU5.PropTypes.string,
+    ]),
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       value: [],
       required: false,
@@ -61,7 +61,7 @@ export const GroupMixin = {
       offIcon: "",
       inline: false,
       labelPosition: "right",
-      colWidth: null
+      colWidth: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -70,7 +70,7 @@ export const GroupMixin = {
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
-  isValid: function() {
+  isValid: function () {
     let feedback = this.getFeedback();
     let value = this.getValue();
     let result = true;
@@ -98,7 +98,7 @@ export const GroupMixin = {
     }
 
     return result;
-  }
+  },
   //@@viewOff:interface
 
   //@@viewOn:overriding

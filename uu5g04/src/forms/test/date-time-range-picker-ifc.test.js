@@ -450,7 +450,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
         message: null,
         value: null,
         foundAutocompleteItems: null,
-        selectedIndex: null
+        selectedIndex: null,
       })
     );
     expect(wrapper).toMatchSnapshot();
@@ -467,14 +467,14 @@ describe("UU5.Forms.InputMixin interface testing", () => {
         message: null,
         value: null,
         foundAutocompleteItems: null,
-        selectedIndex: null
+        selectedIndex: null,
       })
     );
     const returnValue = wrapper.instance().setChangeFeedback(
       {
         feedback: "success",
         message: "Success message from setChangeFeedback",
-        value: ["1.1.2019 12:00", "5.5.2020 13:00"]
+        value: ["1.1.2019 12:00", "5.5.2020 13:00"],
       },
       mockFunc
     );
@@ -672,11 +672,7 @@ describe("UU5.Forms.TextInputMixin interface testing", () => {
     );
     expect(
       wrapper.instance().getInput() ===
-        wrapper
-          .find(".uu5-forms-datetimerangepicker-main-input")
-          .first()
-          .instance()
-          .findDOMNode()
+        wrapper.find(".uu5-forms-datetimerangepicker-main-input").first().instance().findDOMNode()
     ).toBeTruthy();
   });
 
@@ -767,7 +763,7 @@ describe("UU5.Forms.TextInputMixin interface testing", () => {
     expect(wrapper.instance().getFocusFeedback({})).toEqual({
       feedback: "initial",
       value: null,
-      message: focusMessage
+      message: focusMessage,
     });
   });
 
@@ -779,7 +775,7 @@ describe("UU5.Forms.TextInputMixin interface testing", () => {
       expect.objectContaining({
         feedback: "initial",
         message: null,
-        value: undefined
+        value: undefined,
       })
     );
     expect(wrapper).toMatchSnapshot();

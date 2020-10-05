@@ -23,23 +23,23 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Common.NestingLevelMixin",
     "UU5.Common.ContentMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     size: {
-      values: ["m", "s"]
+      values: ["m", "s"],
     },
     weight: {
-      values: ["normal", "primary", "secondary"]
+      values: ["normal", "primary", "secondary"],
     },
     ellipsis: {
-      values: [false, true]
-    }
+      values: [false, true],
+    },
   },
   requiredProps: {
-    children: "Test"
+    children: "Test",
   },
-  opt: {}
+  opt: {},
 };
 
 describe(`UU5.BlockLayout.Row props testing`, () => {

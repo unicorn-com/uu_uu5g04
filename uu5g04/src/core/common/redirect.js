@@ -30,22 +30,22 @@ export const Redirect = VisualComponent.create({
   statics: {
     tagName: ns.name("Redirect"),
     classNames: {
-      main: ns.css("redirect")
-    }
+      main: ns.css("redirect"),
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
     uri: PropTypes.string,
-    target: PropTypes.oneOf(["_blank", "_parent", "_top", "_self"])
+    target: PropTypes.oneOf(["_blank", "_parent", "_top", "_self"]),
   },
   //@@viewOff:propTypes
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
       uri: undefined,
-      target: "_self"
+      target: "_self",
     };
   },
   //@@viewOff:getDefaultProps
@@ -70,7 +70,7 @@ export const Redirect = VisualComponent.create({
   //@@viewOn:render
   render() {
     return null;
-  }
+  },
   //@@viewOff:render
 });
 

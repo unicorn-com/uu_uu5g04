@@ -25,7 +25,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
   getInitialState() {
     return {
       isCalled: false,
-      isChecked: false
+      isChecked: false,
     };
   },
 
@@ -57,7 +57,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
         onChangeFeedback={this.onChangeFeedbackHandler}
       />
     );
-  }
+  },
 });
 
 const CONFIG = {
@@ -66,36 +66,36 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Common.PureRenderMixin",
     "UU5.Forms.InputMixin",
-    "UU5.Forms.GroupMixin"
+    "UU5.Forms.GroupMixin",
   ],
   props: {
     offIcon: {
-      values: ["mdi-close"]
+      values: ["mdi-close"],
     },
     onIcon: {
-      values: ["", "mdi-paw"]
+      values: ["", "mdi-paw"],
     },
     type: {
-      values: [1, 2]
+      values: [1, 2],
     },
     bgStyleChecked: {
-      values: ["outline", "filled"]
+      values: ["outline", "filled"],
     },
     selectionBackground: {
-      values: [true, false]
+      values: [true, false],
     },
     selectionBorderRadius: {
-      values: ["8px 16px", 8]
-    }
+      values: ["8px 16px", 8],
+    },
   },
   requiredProps: {
     //The component does not have any required props
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Forms.Checkboxes props`, () => {
@@ -214,7 +214,7 @@ describe(`UU5.Forms.Checkboxes docKit example`, () => {
         value={[
           { label: "Dogs", name: "dogs", value: true },
           { label: "Cats", name: "cats" },
-          { label: "Yaks", name: "yaks" }
+          { label: "Yaks", name: "yaks" },
         ]}
       />
     );
@@ -231,7 +231,7 @@ describe(`UU5.Forms.Checkboxes docKit example`, () => {
         value={[
           { label: "Dogs", name: "dogs", value: true },
           { label: "Cats", name: "cats" },
-          { label: "Yaks", name: "yaks" }
+          { label: "Yaks", name: "yaks" },
         ]}
       />
     );

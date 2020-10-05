@@ -36,7 +36,7 @@ export const Loading = UU5.Common.VisualComponent.create({
     UU5.Common.ContentMixin,
     UU5.Common.ColorSchemaMixin,
     UU5.Common.NestingLevelMixin,
-    UU5.Common.EditableMixin
+    UU5.Common.EditableMixin,
   ],
   //@@viewOff:mixins
 
@@ -48,24 +48,24 @@ export const Loading = UU5.Common.VisualComponent.create({
       main: ns.css("loading uu5-common-padding-xs"),
       animated: ns.css("loading-animated"),
       inline: "uu5-common-inline",
-      dot: ns.css("loading-dot")
+      dot: ns.css("loading-dot"),
     },
     opt: {
-      nestingLevelWrapper: true
-    }
+      nestingLevelWrapper: true,
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    inline: UU5.PropTypes.bool
+    inline: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      inline: false
+      inline: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -95,7 +95,7 @@ export const Loading = UU5.Common.VisualComponent.create({
     );
   },
 
-  _getMainProps: function() {
+  _getMainProps: function () {
     let attrs = this.getMainAttrs();
     !this.getChildren() && !this.props.text && (attrs.className += " " + this.getClassName().animated);
     (this.props.inline || this.getNestingLevel() == "inline") && (attrs.className += " " + this.getClassName().inline);
@@ -106,7 +106,7 @@ export const Loading = UU5.Common.VisualComponent.create({
     return attrs;
   },
 
-  _getDefaultContent: function() {
+  _getDefaultContent: function () {
     return UU5.Common.Children.toArray([1, 2, 3].map(() => <span className={this.getClassName().dot} />));
   },
 
@@ -116,7 +116,7 @@ export const Loading = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     let isInline = this.props.inline || this.getNestingLevel() == "inline";
     let Comp = isInline ? Span : Div;
     return (
@@ -125,7 +125,7 @@ export const Loading = UU5.Common.VisualComponent.create({
         {this.getChildren() || (isInline ? this._getInlineContent() : this._getDefaultContent())}
       </Comp>
     );
-  }
+  },
   //@@viewOff:render
 });
 

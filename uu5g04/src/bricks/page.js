@@ -38,12 +38,12 @@ const CONTENT = "content";
 const PAGE_CONTENT = UU5.PropTypes.oneOfType([
   UU5.PropTypes.shape({
     tag: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.element]),
-    props: UU5.PropTypes.arrayOf(UU5.PropTypes.object)
+    props: UU5.PropTypes.arrayOf(UU5.PropTypes.object),
   }),
   UU5.PropTypes.node,
   UU5.PropTypes.element,
   UU5.PropTypes.string,
-  UU5.PropTypes.number
+  UU5.PropTypes.number,
 ]); //content (bodyItem, node, element, string, number)
 
 function checkScreenSizeDependableProp(screenSize, propValue) {
@@ -53,7 +53,7 @@ function checkScreenSizeDependableProp(screenSize, propValue) {
     propValue
       .trim()
       .split(" ")
-      .some(size => {
+      .some((size) => {
         if (screenSize == size) {
           result = true;
           return true;
@@ -78,7 +78,7 @@ export const Page = UU5.Common.VisualComponent.create({
     UU5.Common.NestingLevelMixin,
     UU5.Common.ContentMixin,
     UU5.Common.ScreenSizeMixin,
-    UU5.Common.CcrWriterMixin
+    UU5.Common.CcrWriterMixin,
   ],
   //@@viewOff:mixins
 
@@ -122,18 +122,18 @@ export const Page = UU5.Common.VisualComponent.create({
       swiper: ns.css("page-swiper"),
       swiperBody: ns.css("page-swiper-body"),
       IEBottomFix: ns.css("page-bottom-ie-fix"),
-      scrolledDown: ns.css("page-scrolled-down")
+      scrolledDown: ns.css("page-scrolled-down"),
     },
     opt: {
-      ccrKey: UU5.Environment.CCRKEY_PAGE
+      ccrKey: UU5.Environment.CCRKEY_PAGE,
     },
     errors: {
-      pageAlreadyRegistered: "Page is already registered."
+      pageAlreadyRegistered: "Page is already registered.",
     },
     defaults: {
       regexpEclMark: /!/g,
-      regexpNumbers: /[0-9]/g
-    }
+      regexpNumbers: /[0-9]/g,
+    },
   },
   //@@viewOff:statics
 
@@ -169,7 +169,7 @@ export const Page = UU5.Common.VisualComponent.create({
       11,
       12,
       13,
-      14
+      14,
     ]),
     fullPage: UU5.PropTypes.bool,
 
@@ -197,18 +197,18 @@ export const Page = UU5.Common.VisualComponent.create({
     alertBus: UU5.PropTypes.oneOfType([
       UU5.PropTypes.shape({
         tag: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.element]),
-        props: UU5.PropTypes.arrayOf(UU5.PropTypes.object)
+        props: UU5.PropTypes.arrayOf(UU5.PropTypes.object),
       }),
       UU5.PropTypes.node,
-      UU5.PropTypes.element
+      UU5.PropTypes.element,
     ]), //content (bodyItem, node, element)
     modal: UU5.PropTypes.oneOfType([
       UU5.PropTypes.shape({
         tag: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.element]),
-        props: UU5.PropTypes.arrayOf(UU5.PropTypes.object)
+        props: UU5.PropTypes.arrayOf(UU5.PropTypes.object),
       }),
       UU5.PropTypes.node,
-      UU5.PropTypes.element
+      UU5.PropTypes.element,
     ]), //content (bodyItem, node, element)
     appLayerContent: UU5.PropTypes.any, //content
     systemLayerContent: UU5.PropTypes.any, //content
@@ -228,12 +228,12 @@ export const Page = UU5.Common.VisualComponent.create({
     leftResizable: UU5.PropTypes.oneOfType([
       UU5.PropTypes.bool,
       UU5.PropTypes.string,
-      UU5.PropTypes.oneOf(["open", "closed"])
+      UU5.PropTypes.oneOf(["open", "closed"]),
     ]),
     rightResizable: UU5.PropTypes.oneOfType([
       UU5.PropTypes.bool,
       UU5.PropTypes.string,
-      UU5.PropTypes.oneOf(["open", "closed"])
+      UU5.PropTypes.oneOf(["open", "closed"]),
     ]),
     leftResizableMinWidth: UU5.PropTypes.number,
     leftResizableMaxWidth: UU5.PropTypes.number,
@@ -245,7 +245,7 @@ export const Page = UU5.Common.VisualComponent.create({
     overlayTop: UU5.PropTypes.bool,
     content: UU5.PropTypes.any, // property from content mixin
     showLeftToggleButton: UU5.PropTypes.bool,
-    showRightToggleButton: UU5.PropTypes.bool
+    showRightToggleButton: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -303,7 +303,7 @@ export const Page = UU5.Common.VisualComponent.create({
       useDnD: false,
       overlayTop: false,
       showLeftToggleButton: false,
-      showRightToggleButton: false
+      showRightToggleButton: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -326,7 +326,7 @@ export const Page = UU5.Common.VisualComponent.create({
       widths: this._setWidths(),
       scrolledDown: this.props.topFixed === "always" && window.pageYOffset >= this.props.topFixedScrolledDownOffset,
       popoverProviderValue: { getPopover: this.getPopover },
-      portalElementProviderValue: { getPortalElement: this._getPortalElement }
+      portalElementProviderValue: { getPortalElement: this._getPortalElement },
     };
   },
 
@@ -612,11 +612,11 @@ export const Page = UU5.Common.VisualComponent.create({
       s: { minWidth: 0, minUnit: "%" },
       m: { minWidth: 0, minUnit: "%" },
       l: { minWidth: 0, minUnit: "%" },
-      xl: { minWidth: 0, minUnit: "%" }
+      xl: { minWidth: 0, minUnit: "%" },
     };
 
     let splitter = width.split(" ");
-    splitter.forEach(split => {
+    splitter.forEach((split) => {
       let [key, minWidth, maxWidth] = split.split("-");
       let match = key.match(this.getDefault().regexpEclMark);
       let float = match && match.length > 0;
@@ -630,7 +630,7 @@ export const Page = UU5.Common.VisualComponent.create({
         maxWidth: maxWidth ? parseInt(maxWidth) : null,
         float: float,
         minUnit: (minWidth && minWidth.replace(this.getDefault().regexpNumbers, "")) || "%",
-        maxUnit: (maxWidth && maxWidth.replace(this.getDefault().regexpNumbers, "")) || "%"
+        maxUnit: (maxWidth && maxWidth.replace(this.getDefault().regexpNumbers, "")) || "%",
       };
     });
 
@@ -650,7 +650,7 @@ export const Page = UU5.Common.VisualComponent.create({
       s: { minWidth: 0, minUnit: "%" },
       m: { minWidth: 0, minUnit: "%" },
       l: { minWidth: 0, minUnit: "%" },
-      xl: { minWidth: 0, minUnit: "%" }
+      xl: { minWidth: 0, minUnit: "%" },
     };
     props = props || this.props;
 
@@ -660,7 +660,7 @@ export const Page = UU5.Common.VisualComponent.create({
 
     widths = {
       left: leftWidths,
-      right: rightWidths
+      right: rightWidths,
     };
 
     return widths;
@@ -694,7 +694,7 @@ export const Page = UU5.Common.VisualComponent.create({
       widthContent: "100%",
       widthTop: "100%",
       floatLeft: this.state.widths.left[screenSize].float,
-      floatRight: this.state.widths.right[screenSize].float
+      floatRight: this.state.widths.right[screenSize].float,
     };
 
     let elevation = this._getElevation(this.props.type);
@@ -799,13 +799,13 @@ export const Page = UU5.Common.VisualComponent.create({
     let result;
     if (component) {
       if (typeof component === "object") {
-        let newProps = { parent: this, ref_: ref => (this[name] = ref) };
+        let newProps = { parent: this, ref_: (ref) => (this[name] = ref) };
         if (!component.props.id) {
           newProps.id = this.getId() + name;
         }
 
         if (component.props && typeof component.props.ref_ === "function") {
-          newProps.ref_ = ref => {
+          newProps.ref_ = (ref) => {
             component.props.ref_(ref);
             this[name] = ref;
           };
@@ -833,7 +833,7 @@ export const Page = UU5.Common.VisualComponent.create({
       bottomId: this.getId() + "-bottom",
       leftFixed: this.props.leftFixed,
       rightFixed: this.props.rightFixed,
-      overlayContent: this.props.overlayTop
+      overlayContent: this.props.overlayTop,
     };
 
     if (this._isTopFixed()) {
@@ -851,7 +851,7 @@ export const Page = UU5.Common.VisualComponent.create({
       className:
         this.getClassName("elevation" + elevation["bottom"]) + " " + this.getClassName("zIndex" + elevation["bottom"]),
       id: this.getId() + "-bottom",
-      topId: this.getId() + "-top"
+      topId: this.getId() + "-top",
     };
 
     if (this._isBottomFixed()) {
@@ -875,7 +875,7 @@ export const Page = UU5.Common.VisualComponent.create({
       newProps.className += " " + classNames;
     } else if (Array.isArray(classNames) && classNames.length > 0) {
       newProps.className = newProps.className || "";
-      classNames.forEach(className => {
+      classNames.forEach((className) => {
         className && (newProps.className += " " + className);
       });
     }
@@ -909,7 +909,7 @@ export const Page = UU5.Common.VisualComponent.create({
         newProps.minResizableWidth = this.props.leftResizableMinWidth;
         newProps.maxResizableWidth = this.props.leftResizableMaxWidth;
         newProps.showToggleButton = this.props.showLeftToggleButton;
-        newProps.ref_ = left => (this._pageLeft = left);
+        newProps.ref_ = (left) => (this._pageLeft = left);
         break;
       case RIGHT:
         if (this._getWidth(screenSize).floatRight) {
@@ -937,7 +937,7 @@ export const Page = UU5.Common.VisualComponent.create({
         newProps.minResizableWidth = this.props.rightResizableMinWidth;
         newProps.maxResizableWidth = this.props.rightResizableMaxWidth;
         newProps.showToggleButton = this.props.showRightToggleButton;
-        newProps.ref_ = right => (this._pageRight = right);
+        newProps.ref_ = (right) => (this._pageRight = right);
         break;
       case TOP:
         if (!this._isTopFixed() && !this.props.leftFixed && !this.props.rightFixed) {
@@ -976,8 +976,8 @@ export const Page = UU5.Common.VisualComponent.create({
           (this.props.alertBus.props && this.props.alertBus.props.className
             ? " " + this.props.alertBus.props.className
             : ""),
-        ref_: alertBus => (this._alertBus = alertBus),
-        key: "alert-bus"
+        ref_: (alertBus) => (this._alertBus = alertBus),
+        key: "alert-bus",
       });
       if (this.props.alertBus.tag) {
         alertBus = UU5.Common.Element.create(UU5.Common.Tools.checkTag(this.props.alertBus.tag), props);
@@ -987,7 +987,7 @@ export const Page = UU5.Common.VisualComponent.create({
     }
     let result = [
       alertBus,
-      <div key="alert-bus-portal" className={this.getClassName("alertBusPortal")} ref={this._setAlertBusPortalRef} />
+      <div key="alert-bus-portal" className={this.getClassName("alertBusPortal")} ref={this._setAlertBusPortalRef} />,
     ];
     return result;
   },
@@ -1001,13 +1001,13 @@ export const Page = UU5.Common.VisualComponent.create({
       ref_: this._initPopover,
       controlled: false,
       className: this.getClassName("popover"),
-      key: "popover"
+      key: "popover",
     };
     let popover = <Popover {...props} />;
 
     let result = [
       popover,
-      <div key="popover-portal" className={this.getClassName("popoverPortal")} ref={this._setPopoverPortalRef} />
+      <div key="popover-portal" className={this.getClassName("popoverPortal")} ref={this._setPopoverPortalRef} />,
     ];
     return result;
   },
@@ -1030,10 +1030,10 @@ export const Page = UU5.Common.VisualComponent.create({
           this._popoverOpenParams = { props, setStateCallback };
           this._openMockPopover = true;
         },
-        close: setStateCallback => {
+        close: (setStateCallback) => {
           this._openMockPopover = false;
         },
-        toggle: setStateCallback => {
+        toggle: (setStateCallback) => {
           this._openMockPopover = !this._openMockPopover;
         },
         getId: () => {
@@ -1041,7 +1041,7 @@ export const Page = UU5.Common.VisualComponent.create({
         },
         isOpen: () => {
           return false;
-        }
+        },
       };
     }
     return this._mockPopover;
@@ -1060,7 +1060,7 @@ export const Page = UU5.Common.VisualComponent.create({
         ref_: this._initModal,
         id: this._modalId,
         key: "modal",
-        controlled: false
+        controlled: false,
       });
       if (this.props.modal.tag) {
         modal = UU5.Common.Element.create(UU5.Common.Tools.checkTag(this.props.modal.tag), props);
@@ -1070,7 +1070,7 @@ export const Page = UU5.Common.VisualComponent.create({
     }
     let result = [
       modal,
-      <div key="modal-portal" className={this.getClassName("modalPortal")} ref={this._setModalPortalRef} />
+      <div key="modal-portal" className={this.getClassName("modalPortal")} ref={this._setModalPortalRef} />,
     ];
     return result;
   },
@@ -1097,10 +1097,10 @@ export const Page = UU5.Common.VisualComponent.create({
           this._modalOpenParams = { props, setStateCallback };
           this._openMockModal = true;
         },
-        close: setStateCallback => {
+        close: (setStateCallback) => {
           this._openMockModal = false;
         },
-        toggle: setStateCallback => {
+        toggle: (setStateCallback) => {
           this._openMockModal = !this._openMockModal;
         },
         getId: () => {
@@ -1108,7 +1108,7 @@ export const Page = UU5.Common.VisualComponent.create({
         },
         isOpen: () => {
           return false;
-        }
+        },
       };
     }
     return this._mockModal;
@@ -1146,11 +1146,11 @@ export const Page = UU5.Common.VisualComponent.create({
       controlled: false,
       parent: this,
       className: UU5.Common.Tools.joinClassNames(this.getClassName("appLayer"), props.className),
-      ref_: appLayer => {
+      ref_: (appLayer) => {
         this._appLayer = appLayer;
         typeof ref === "function" && ref(appLayer);
       },
-      pureRender: true
+      pureRender: true,
     });
     return <Div {...props} />;
   },
@@ -1163,11 +1163,11 @@ export const Page = UU5.Common.VisualComponent.create({
       controlled: false,
       parent: this,
       className: UU5.Common.Tools.joinClassNames(this.getClassName("systemLayer"), props.className),
-      ref_: systemLayer => {
+      ref_: (systemLayer) => {
         this._systemLayer = systemLayer;
         typeof ref === "function" && ref(systemLayer);
       },
-      pureRender: true
+      pureRender: true,
     });
     return <Div {...props} />;
   },
@@ -1177,7 +1177,7 @@ export const Page = UU5.Common.VisualComponent.create({
     if (this.props.top && typeof this.props.top === "object") {
       let props = UU5.Common.Tools.merge(this.props.top.props, {
         parent: this,
-        ref_: top => (this._top = top)
+        ref_: (top) => (this._top = top),
       });
       if (this.props.top.tag) {
         wrapperContent = UU5.Common.Element.create(UU5.Common.Tools.checkTag(this.props.top.tag), props);
@@ -1213,7 +1213,7 @@ export const Page = UU5.Common.VisualComponent.create({
     if (this.props.bottom && typeof this.props.bottom === "object") {
       let props = UU5.Common.Tools.merge(this.props.bottom.props, {
         parent: this,
-        ref_: bottom => (this._bottom = bottom)
+        ref_: (bottom) => (this._bottom = bottom),
       });
       if (this.props.bottom.tag) {
         wrapperContent = UU5.Common.Element.create(UU5.Common.Tools.checkTag(this.props.bottom.tag), props);
@@ -1253,7 +1253,7 @@ export const Page = UU5.Common.VisualComponent.create({
 
     return {
       open: leftOpenContent,
-      closed: leftClosedContent
+      closed: leftClosedContent,
     };
   },
 
@@ -1266,7 +1266,7 @@ export const Page = UU5.Common.VisualComponent.create({
 
     return {
       open: rightOpenContent,
-      closed: rightClosedContent
+      closed: rightClosedContent,
     };
   },
 
@@ -1296,7 +1296,7 @@ export const Page = UU5.Common.VisualComponent.create({
           left: this.props.switchElevationLeftRight ? 1 : 2,
           right: this.props.switchElevationLeftRight ? 2 : 1,
           top: this.props.switchElevationTopBottom ? 3 : 4,
-          bottom: this.props.switchElevationTopBottom ? 4 : 3
+          bottom: this.props.switchElevationTopBottom ? 4 : 3,
         };
         break;
       case "2":
@@ -1305,7 +1305,7 @@ export const Page = UU5.Common.VisualComponent.create({
           left: this.props.switchElevationLeftRight ? 2 : 3,
           right: this.props.switchElevationLeftRight ? 3 : 2,
           top: 4,
-          bottom: 1
+          bottom: 1,
         };
         break;
       case "3":
@@ -1314,7 +1314,7 @@ export const Page = UU5.Common.VisualComponent.create({
           left: this.props.switchElevationLeftRight ? 3 : 4,
           right: this.props.switchElevationLeftRight ? 4 : 3,
           top: this.props.switchElevationTopBottom ? 1 : 2,
-          bottom: this.props.switchElevationTopBottom ? 2 : 1
+          bottom: this.props.switchElevationTopBottom ? 2 : 1,
         };
         break;
       case "4":
@@ -1323,7 +1323,7 @@ export const Page = UU5.Common.VisualComponent.create({
           left: this.props.switchElevationLeftRight ? 2 : 3,
           right: this.props.switchElevationLeftRight ? 3 : 2,
           top: 1,
-          bottom: 4
+          bottom: 4,
         };
         break;
       case "5":
@@ -1332,7 +1332,7 @@ export const Page = UU5.Common.VisualComponent.create({
           left: 3,
           right: 1,
           top: 4,
-          bottom: 2
+          bottom: 2,
         };
         break;
       case "6":
@@ -1341,7 +1341,7 @@ export const Page = UU5.Common.VisualComponent.create({
           left: 1,
           right: 3,
           top: 4,
-          bottom: 2
+          bottom: 2,
         };
         break;
       case "7":
@@ -1350,7 +1350,7 @@ export const Page = UU5.Common.VisualComponent.create({
           left: 3,
           right: 1,
           top: 2,
-          bottom: 4
+          bottom: 4,
         };
         break;
       case "8":
@@ -1359,7 +1359,7 @@ export const Page = UU5.Common.VisualComponent.create({
           left: 1,
           right: 3,
           top: 2,
-          bottom: 4
+          bottom: 4,
         };
         break;
       case "9":
@@ -1368,7 +1368,7 @@ export const Page = UU5.Common.VisualComponent.create({
           left: 4,
           right: 1,
           top: this.props.switchElevationTopBottom ? 2 : 3,
-          bottom: this.props.switchElevationTopBottom ? 3 : 2
+          bottom: this.props.switchElevationTopBottom ? 3 : 2,
         };
         break;
       case "10":
@@ -1377,7 +1377,7 @@ export const Page = UU5.Common.VisualComponent.create({
           left: 4,
           right: 2,
           top: 3,
-          bottom: 1
+          bottom: 1,
         };
         break;
       case "11":
@@ -1386,7 +1386,7 @@ export const Page = UU5.Common.VisualComponent.create({
           left: 4,
           right: 2,
           top: 1,
-          bottom: 3
+          bottom: 3,
         };
         break;
       case "12":
@@ -1395,7 +1395,7 @@ export const Page = UU5.Common.VisualComponent.create({
           left: 1,
           right: 4,
           top: this.props.switchElevationTopBottom ? 2 : 3,
-          bottom: this.props.switchElevationTopBottom ? 3 : 2
+          bottom: this.props.switchElevationTopBottom ? 3 : 2,
         };
         break;
       case "13":
@@ -1404,7 +1404,7 @@ export const Page = UU5.Common.VisualComponent.create({
           left: 2,
           right: 4,
           top: 3,
-          bottom: 1
+          bottom: 1,
         };
         break;
       case "14":
@@ -1413,13 +1413,13 @@ export const Page = UU5.Common.VisualComponent.create({
           left: 2,
           right: 4,
           top: 1,
-          bottom: 3
+          bottom: 3,
         };
         break;
 
       default:
         elevation = {
-          content: 0
+          content: 0,
         };
         break;
     }
@@ -1457,7 +1457,7 @@ export const Page = UU5.Common.VisualComponent.create({
 
         <Div
           {...this._getColumnProps(this.props.contentWrapperProps, this.getClassName("content"), CONTENT)}
-          ref_={content => (this._pageContent = content)}
+          ref_={(content) => (this._pageContent = content)}
         >
           {this._getContentDiv()}
         </Div>
@@ -1503,7 +1503,7 @@ export const Page = UU5.Common.VisualComponent.create({
               [this.getClassName("content"), this.getClassName("flexBasis"), this.getClassName("flexGrow")],
               CONTENT
             )}
-            ref_={content => (this._pageContent = content)}
+            ref_={(content) => (this._pageContent = content)}
           >
             {this._getContentDiv()}
           </Div>
@@ -1565,7 +1565,7 @@ export const Page = UU5.Common.VisualComponent.create({
           />
           <Div
             className={this.getClassName("flex") + " " + this.getClassName("flexBasis")}
-            ref_={content => (this._pageContent = content)}
+            ref_={(content) => (this._pageContent = content)}
           >
             <Row
               {...this._getColumnProps(
@@ -1635,7 +1635,7 @@ export const Page = UU5.Common.VisualComponent.create({
           />
           <Div
             className={this.getClassName("flex") + " " + this.getClassName("flexBasis")}
-            ref_={content => (this._pageContent = content)}
+            ref_={(content) => (this._pageContent = content)}
           >
             {this._getTop()}
             <Row
@@ -1706,7 +1706,7 @@ export const Page = UU5.Common.VisualComponent.create({
             open={this._isLeftOpen()}
           />
           <Div
-            ref_={content => (this._pageContent = content)}
+            ref_={(content) => (this._pageContent = content)}
             className={this.getClassName("flexBasis") + " " + this.getClassName("flexGrow")}
           >
             {this._getTop()}
@@ -1780,7 +1780,7 @@ export const Page = UU5.Common.VisualComponent.create({
           />
           <Div
             className={this.getClassName("flex") + " " + this.getClassName("flexBasis")}
-            ref_={content => (this._pageContent = content)}
+            ref_={(content) => (this._pageContent = content)}
           >
             <Row display={"flex"} className={this._getFullPageClass() + " " + this.getClassName("IEBottomFix")}>
               <Div
@@ -1859,7 +1859,7 @@ export const Page = UU5.Common.VisualComponent.create({
                   [this.getClassName("content"), this.getClassName("flexBasis"), this.getClassName("flexGrow")],
                   CONTENT
                 )}
-                ref_={content => (this._pageContent = content)}
+                ref_={(content) => (this._pageContent = content)}
               >
                 {this._getContentDiv()}
               </Div>
@@ -1926,7 +1926,7 @@ export const Page = UU5.Common.VisualComponent.create({
           />
           <Div
             className={this.getClassName("flex") + " " + this.getClassName("flexBasis")}
-            ref_={content => (this._pageContent = content)}
+            ref_={(content) => (this._pageContent = content)}
           >
             {this._getTop()}
             <Row display="flex" className={this._getFullPageClass()}>
@@ -2005,7 +2005,7 @@ export const Page = UU5.Common.VisualComponent.create({
                   [this.getClassName("content"), this.getClassName("flexBasis"), this.getClassName("flexGrow")],
                   CONTENT
                 )}
-                ref_={content => (this._pageContent = content)}
+                ref_={(content) => (this._pageContent = content)}
               >
                 {this._getContentDiv()}
               </Div>
@@ -2068,7 +2068,7 @@ export const Page = UU5.Common.VisualComponent.create({
           />
           <Div
             className={this.getClassName("flex") + " " + this.getClassName("flexBasis")}
-            ref_={content => (this._pageContent = content)}
+            ref_={(content) => (this._pageContent = content)}
           >
             {this._getTop()}
             <Row display={"flex"} className={this._getFullPageClass() + " " + this.getClassName("IEBottomFix")}>
@@ -2140,7 +2140,7 @@ export const Page = UU5.Common.VisualComponent.create({
           />
           <Div
             className={this.getClassName("flex") + " " + this.getClassName("flexBasis")}
-            ref_={content => (this._pageContent = content)}
+            ref_={(content) => (this._pageContent = content)}
           >
             {this._getTop()}
             <Row display={"flex"} className={this._getFullPageClass()}>
@@ -2214,7 +2214,7 @@ export const Page = UU5.Common.VisualComponent.create({
           />
           <Div
             className={this.getClassName("flex") + " " + this.getClassName("flexBasis")}
-            ref_={content => (this._pageContent = content)}
+            ref_={(content) => (this._pageContent = content)}
           >
             <Row display={"flex"} className={this._getFullPageClass() + " " + this.getClassName("IEBottomFix")}>
               <Div className={this.getClassName("flex") + " " + this.getClassName("flexBasis")}>
@@ -2299,7 +2299,7 @@ export const Page = UU5.Common.VisualComponent.create({
                   [this.getClassName("content"), this._getFullPageClass(), this.getClassName("flexBasis")],
                   CONTENT
                 )}
-                ref_={content => (this._pageContent = content)}
+                ref_={(content) => (this._pageContent = content)}
               >
                 {this._getContentDiv()}
               </Div>
@@ -2365,7 +2365,7 @@ export const Page = UU5.Common.VisualComponent.create({
               />
               <Div
                 className={this.getClassName("flex") + " " + this.getClassName("flexBasis")}
-                ref_={content => (this._pageContent = content)}
+                ref_={(content) => (this._pageContent = content)}
               >
                 <Row
                   {...this._getColumnProps(
@@ -2442,7 +2442,7 @@ export const Page = UU5.Common.VisualComponent.create({
               />
               <Div
                 className={this.getClassName("flex") + " " + this.getClassName("flexBasis")}
-                ref_={content => (this._pageContent = content)}
+                ref_={(content) => (this._pageContent = content)}
               >
                 {this._getTop()}
                 <Row
@@ -2547,7 +2547,7 @@ export const Page = UU5.Common.VisualComponent.create({
     let result = this.getNestingLevel() ? this._getPageByType() : null;
     this._preventContentRender = false;
     return result;
-  }
+  },
   //@@viewOff:render
 });
 

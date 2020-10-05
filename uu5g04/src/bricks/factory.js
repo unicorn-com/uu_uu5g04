@@ -20,12 +20,12 @@ import "./factory.less";
 //@@viewOff:imports
 
 export const Factory = {
-  createTag: function(tag, uu5Name, className, defaultContent, levelFrom, levelTo) {
+  createTag: function (tag, uu5Name, className, defaultContent, levelFrom, levelTo) {
     let nestingLevelList = UU5.Environment.getNestingLevelList(levelFrom, levelTo);
     let mainClassName = ns.css((uu5Name || tag).toLowerCase()) + (className ? " " + className : "");
     let statics = {
       displayName: uu5Name || tag,
-      nestingLevel: nestingLevelList
+      nestingLevel: nestingLevelList,
     };
 
     return UU5.Common.VisualComponent.create({
@@ -35,20 +35,20 @@ export const Factory = {
 
       //@@viewOn:statics
       statics: {
-        tagName: ns.name(uu5Name || tag)
+        tagName: ns.name(uu5Name || tag),
       },
       //@@viewOff:statics
 
       //@@viewOn:propTypes
       propTypes: {
-        ref_: UU5.PropTypes.oneOfType([UU5.PropTypes.func, UU5.PropTypes.shape({ current: UU5.PropTypes.any })])
+        ref_: UU5.PropTypes.oneOfType([UU5.PropTypes.func, UU5.PropTypes.shape({ current: UU5.PropTypes.any })]),
       },
       //@@viewOff:propTypes
 
       //@@viewOn:getDefaultProps
-      getDefaultProps: function() {
+      getDefaultProps: function () {
         return {
-          ref_: null
+          ref_: null,
         };
       },
       //@@viewOff:getDefaultProps
@@ -79,7 +79,7 @@ export const Factory = {
       //@@viewOff:private
 
       //@@viewOn:render
-      render: function() {
+      render: function () {
         let nestingLevel = UU5.Utils.NestingLevel.getNestingLevel(this.props, statics);
         return nestingLevel
           ? UU5.Common.Element.create(
@@ -90,17 +90,17 @@ export const Factory = {
                 null
             )
           : null;
-      }
+      },
       //@@viewOff:render
     });
   },
-  createLink: function(uu5Name, href, defaultContent, target) {
+  createLink: function (uu5Name, href, defaultContent, target) {
     let nestingLevelList = ["inline"];
     let mainClassName = ns.css("link") + uu5Name.toLowerCase();
     let tagName = "UU5.Bricks.Link" + uu5Name;
     let statics = {
       displayName: tagName,
-      nestingLevel: nestingLevelList
+      nestingLevel: nestingLevelList,
     };
     if (!defaultContent) defaultContent = uu5Name;
 
@@ -110,7 +110,7 @@ export const Factory = {
 
       //@@viewOn:statics
       statics: {
-        tagName
+        tagName,
       },
       //@@viewOn:propTypes
       //@@viewOff:propTypes
@@ -131,7 +131,7 @@ export const Factory = {
       //@@viewOff:private
 
       //@@viewOn:render
-      render: function() {
+      render: function () {
         let nestingLevel = UU5.Utils.NestingLevel.getNestingLevel(this.props, statics);
 
         return nestingLevel ? (
@@ -145,10 +145,10 @@ export const Factory = {
             {this.props.children || defaultContent}
           </Link>
         ) : null;
-      }
+      },
       //@@viewOn:render
     });
-  }
+  },
 };
 
 export const Div = UU5.Common.Div;
@@ -183,91 +183,93 @@ export const Kbd = Factory.createTag("Kbd", null, null, null, "inline"); //inlin
 export const Pre = Factory.createTag("Pre", null, ns.css("pre"), null, "boxCollection", "inline"); //boxCollection,inline
 export const Samp = Factory.createTag("Samp", null, null, null, "inline"); //inline
 
-export const LinkUnicorn = Factory.createLink("Unicorn", "http://unicorn.eu/", "Unicorn");
+export const LinkUnicorn = Factory.createLink("Unicorn", "http://unicorn.com", "Unicorn");
 export const LinkUnicornSystems = Factory.createLink(
   "UnicornSystems",
-  "http://unicornsystems.eu/",
+  "http://unicornsystems.eu",
   "Unicorn\u00a0Systems"
 );
 export const LinkUnicornUniverse = Factory.createLink(
   "UnicornUniverse",
-  "https://unicornuniverse.eu/",
+  "https://unicornuniverse.eu",
   "Unicorn\u00a0Universe"
 );
-export const LinkUnicornCollege = Factory.createLink(
-  "UnicornCollege",
-  "https://unicorncollege.cz/",
-  "Unicorn\u00a0College"
+export const LinkUnicornUniversity = Factory.createLink(
+  "UnicornUniversity",
+  "https://unicornuniversity.net",
+  "Unicorn\u00a0University"
 );
+export const LinkUnicornCollege = LinkUnicornUniversity;
 
-let docKitUrl = "https://uuos9.plus4u.net/uu-bookkitg01-main/";
-export const LinkUAF = Factory.createLink("UAF", docKitUrl + "78462435-86b4d5a4a030400784764ebdb972bbda/book", "UAF");
+let docKitUrl = "https://docs.plus4u.net/";
+let bookKitUrl = "https://uuapp.plus4u.net/uu-bookkit-maing01/";
+export const LinkUAF = Factory.createLink("UAF", docKitUrl + "uaf", "UAF");
 export const LinkUuApp = Factory.createLink(
   "UuApp",
-  docKitUrl + "78462435-25d3b166760a44b7be70e5c2eb2abaaa/book",
+  docKitUrl + "uaf/uuapp",
   "uuApp"
 );
-export const LinkUU5 = Factory.createLink("UU5", docKitUrl + "78462435-ed11ec379073476db0aa295ad6c00178/book", "uu5");
+export const LinkUU5 = Factory.createLink("UU5", docKitUrl + "uaf/uuapp/uu5", "uu5");
 export const LinkUuPlus4U5 = Factory.createLink(
   "UuPlus4U5",
-  docKitUrl + "78462435-b858ae7d7f8041249f4830277b674990/book",
+  docKitUrl + "uaf/uuapp/plus4u5",
   "uuPlus4U5"
 );
 export const LinkUuAppLibraryRegistry = Factory.createLink(
   "LinkUuAppLibraryRegistry",
-  docKitUrl + "d7a56a17285748f7a5a743898958af23/book",
+  bookKitUrl + "d7a56a17285748f7a5a743898958af23",
   "uuAppLibraryRegistry"
 );
 export const LinkUu5LibraryRegistry = LinkUuAppLibraryRegistry;
 export const LinkUu5ComponentRegistry = LinkUu5LibraryRegistry;
 export const LinkUu5CodeKit = Factory.createLink(
   "Uu5CodeKit",
-  docKitUrl + "78462435-f2142743693e4b22b1753c9fb761e945/book",
+  bookKitUrl + "f2142743693e4b22b1753c9fb761e945",
   "uu5CodeKit"
 );
 export const LinkUuAppServer = Factory.createLink(
   "UuAppServer",
-  docKitUrl + "78462435-34df77ebe0a04adda6dcd62d32c4f513/book",
+  docKitUrl + "uaf/uuapp/uuappserver",
   "uuAppServer"
 );
 export const LinkUuAppServerJava = Factory.createLink(
   "UuAppServerJava",
-  docKitUrl + "78462435-99c939a08e0849c68df5ee339c94054b/book",
+  bookKitUrl + "99c939a08e0849c68df5ee339c94054b",
   "uuAppServer-Java"
 );
 export const LinkUuOIDC = Factory.createLink(
   "UuOIDC",
-  docKitUrl + "78462435-d684156f06004f2781c88777e74834ef/book",
+  bookKitUrl + "d684156f06004f2781c88777e74834ef",
   "uuOIDC"
 );
 export const LinkUuCloud = Factory.createLink(
   "UuCloud",
-  docKitUrl + "78462435-289fcd2e11d34f3e9b2184bedb236ded/book",
+  docKitUrl + "uaf/uuapp/uucloud",
   "uuCloud"
 );
 export const LinkUuBookKit = Factory.createLink(
   "UuBookKit",
-  docKitUrl + "78462435-e3f5c648e85f4319bd8fc25ea5be6c2c/book",
+  bookKitUrl + "e3f5c648e85f4319bd8fc25ea5be6c2c",
   "uuBookKit"
 );
 export const LinkUuDocKit = Factory.createLink(
   "UuDocKit",
-  docKitUrl + "78462435-e3f5c648e85f4319bd8fc25ea5be6c2c/book",
+  bookKitUrl + "e3f5c648e85f4319bd8fc25ea5be6c2c",
   "uuDocKit"
 );
 export const LinkUuBmlDraw = Factory.createLink(
   "UuBmlDraw",
-  docKitUrl + "78462435-6f64aebc07184e9088d6e0542a8f9682/book",
+  bookKitUrl + "6f64aebc07184e9088d6e0542a8f9682",
   "uuBmlDraw"
 );
 export const LinkUuKnowledgeBase = Factory.createLink(
   "UuKnowledgeBase",
-  docKitUrl + "78462435-58d23c00b3b64ea99b2f7df3274e08ff/book",
+  docKitUrl,
   "uuKnowledgeBase "
 );
 export const LinkUuP = Factory.createLink(
   "LinkUuP",
-  docKitUrl + "78462435-c86acb9189cb421892546005a1099ea7/book",
+  bookKitUrl + "c86acb9189cb421892546005a1099ea7",
   "uuP"
 );
 export const LinkUUP = LinkUuP;
@@ -281,27 +283,29 @@ export const LinkBusinessTerritory = Factory.createLink(
 export const LinkUuBT = Factory.createLink("LinkUuBT", "https://unicorn.com", "uuBT");
 export const LinkUnicornApproach = Factory.createLink(
   "LinkUnicornApproach",
-  docKitUrl + "78462435-c86acb9189cb421892546005a1099ea7/book/page?code=unicornApproach",
-  "Unicorn Approach"
+  bookKitUrl + "c86acb9189cb421892546005a1099ea7/book/page?code=22504990",
+  "Unicorn\u00a0Approach"
 );
 
 // export const LinkUUIoT = Factory.createLink("UUIoT", docKitUrl + "84723967990075193-18171658587168657/book", "uuIoT");
 // export const LinkUUBT = Factory.createLink("UUBT", docKitUrl + "84723967990075193-38780273195993502/book", "uuBT");
 // export const LinkUUMT = Factory.createLink("UUMT", docKitUrl + "84723967990075193-12401017776126880/book", "uuMT");
 
-export const LinkPlus4U = Factory.createLink("Plus4U", "https://plus4u.net/", "Plus4U");
-export const LinkBootstrap = Factory.createLink("Bootstrap", "http://getbootstrap.com/", "Bootstrap");
-export const LinkW3Schools = Factory.createLink("w3schools", "http://www.w3schools.com/", "w3schools");
+export const LinkPlus4U = Factory.createLink("Plus4U", "https://plus4u.net", "Plus4U");
+export const LinkBootstrap = Factory.createLink("Bootstrap", "http://getbootstrap.com", "Bootstrap");
+export const LinkW3Schools = Factory.createLink("w3schools", "http://www.w3schools.com", "w3schools");
 export const LinkHTML5 = Factory.createLink("HTML5", "http://www.w3schools.com/html/default.asp", "Html5");
+export const LinkHTML = LinkHTML5;
 export const LinkCSS = Factory.createLink("CSS", "http://www.w3schools.com/css/default.asp", "CSS");
 export const LinkJavaScript = Factory.createLink("JavaScript", "http://www.w3schools.com/js/default.asp", "JavaScript");
-export const LinkJQuery = Factory.createLink("JQuery", "https://jquery.com/", "JQuery");
-export const LinkReact = Factory.createLink("React", "https://facebook.github.io/react/", "React");
-export const LinkRuby = Factory.createLink("Ruby", "https://www.ruby-lang.org/", "Ruby");
-export const LinkPuma = Factory.createLink("Puma", "http://puma.io/", "Puma");
-export const LinkDocker = Factory.createLink("Docker", "https://www.docker.com/", "Docker");
+export const LinkJQuery = Factory.createLink("JQuery", "https://jquery.com", "JQuery");
+export const LinkReact = Factory.createLink("React", "https://reactjs.org", "React");
+export const LinkRuby = Factory.createLink("Ruby", "https://www.ruby-lang.org", "Ruby");
+export const LinkPuma = Factory.createLink("Puma", "http://puma.io", "Puma");
+export const LinkDocker = Factory.createLink("Docker", "https://www.docker.com", "Docker");
 export const LinkMSAzure = Factory.createLink("MSAzure", "https://azure.microsoft.com", "Microsoft\u00a0Azure");
-export const LinkMongoDB = Factory.createLink("MongoDB", "https://www.mongodb.com/", "MongoDB");
+export const LinkMongoDB = Factory.createLink("MongoDB", "https://www.mongodb.com", "MongoDB");
 export const LinkMaterialDesign = Factory.createLink("MaterialDesign", "https://material.io", "Material\u00a0Design");
+export const LinkNodeJs = Factory.createLink("NodeJs", "https://nodejs.org", "NodeJs");
 
 export default Factory;

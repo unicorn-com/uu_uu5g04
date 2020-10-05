@@ -10,7 +10,7 @@ const { createVisualComponent } = LazyLoadedLibraries["uu5g04-hooks"];
 
 //@@viewOn:statics
 const STATICS = {
-  displayName: ns.name("BgStyleInput")
+  displayName: ns.name("BgStyleInput"),
 };
 //@@viewOff:statics
 
@@ -22,7 +22,7 @@ const BgStyleInput = createVisualComponent({
     onChange: UU5.PropTypes.func,
     label: UU5.PropTypes.object,
     items: UU5.PropTypes.arrayOf(UU5.PropTypes.object),
-    value: UU5.PropTypes.string
+    value: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
@@ -34,9 +34,9 @@ const BgStyleInput = createVisualComponent({
       { value: "filled", content: <UU5.Bricks.Lsi lsi={Lsi.bgStyleInput.filled} /> },
       { value: "outline", content: <UU5.Bricks.Lsi lsi={Lsi.bgStyleInput.outline} /> },
       { value: "transparent", content: <UU5.Bricks.Lsi lsi={Lsi.bgStyleInput.transparent} /> },
-      { value: "underline", content: <UU5.Bricks.Lsi lsi={Lsi.bgStyleInput.underline} /> }
+      { value: "underline", content: <UU5.Bricks.Lsi lsi={Lsi.bgStyleInput.underline} /> },
     ],
-    value: UU5.PropTypes.string
+    value: UU5.PropTypes.string,
   },
   //@@viewOff:defaultProps
 
@@ -53,7 +53,7 @@ const BgStyleInput = createVisualComponent({
     //@@viewOn:render
     return <UU5.Forms.SwitchSelector {...props} label={label} value={value} onChange={onChange} items={items} />;
     //@@viewOff:render
-  }
+  },
 });
 
 export default BgStyleInput;

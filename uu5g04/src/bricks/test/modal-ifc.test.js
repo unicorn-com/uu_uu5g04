@@ -25,7 +25,7 @@ describe(`UU5.Bricks.Modal interface testing`, () => {
     expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().open(
       {
-        content: <UU5.Bricks.Div id={"uuID-div"}>Some content</UU5.Bricks.Div>
+        content: <UU5.Bricks.Div id={"uuID-div"}>Some content</UU5.Bricks.Div>,
       },
       mockFunc
     );

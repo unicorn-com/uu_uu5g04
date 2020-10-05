@@ -24,7 +24,7 @@ export const Column = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.NestingLevelMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.PureRenderMixin
+    UU5.Common.PureRenderMixin,
   ],
   //@@viewOff:mixins
 
@@ -32,7 +32,7 @@ export const Column = UU5.Common.VisualComponent.create({
   statics: {
     tagName: TAG + "Column",
     classNames: {
-      main: props => {
+      main: (props) => {
         let styles;
 
         if (props.width) {
@@ -44,15 +44,15 @@ export const Column = UU5.Common.VisualComponent.create({
         if (props.textAlign) styles += `text-align: ${props.textAlign};`;
 
         return css(styles);
-      }
-    }
+      },
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
     textAlign: UU5.PropTypes.oneOf(["left", "center", "right"]),
-    width: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string])
+    width: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
   },
   //@@viewOff:propTypes
 
@@ -60,7 +60,7 @@ export const Column = UU5.Common.VisualComponent.create({
   getDefaultProps() {
     return {
       textAlign: "left",
-      width: undefined
+      width: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -90,7 +90,7 @@ export const Column = UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </div>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

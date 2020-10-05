@@ -29,9 +29,9 @@ const DEFAULT_PROPS = [
       showGutter: false,
       wrapEnabled: true,
       inputColWidth: "xl12",
-      labelColWidth: "xl12"
+      labelColWidth: "xl12",
     },
-    value: ""
+    value: "",
   },
   {
     name: "href",
@@ -39,18 +39,18 @@ const DEFAULT_PROPS = [
     label: "Href",
     props: {
       inputColWidth: "xl12",
-      labelColWidth: "xl12"
+      labelColWidth: "xl12",
     },
-    value: null
+    value: null,
   },
   {
     name: "target",
     type: ["_blank", "_parent", "_top", "_self"],
     label: "Target",
     props: {
-      colWidth: "xs12 s6 m6 l6 xl6"
+      colWidth: "xs12 s6 m6 l6 xl6",
     },
-    value: "_self"
+    value: "_self",
   },
   {
     name: "colorSchema",
@@ -58,47 +58,47 @@ const DEFAULT_PROPS = [
     label: "Color Schema",
     props: {
       inputColWidth: "xs8 s4",
-      labelColWidth: "xs12 s5"
+      labelColWidth: "xs12 s5",
     },
-    value: null
+    value: null,
   },
   {
     name: "bgStyle",
     type: ["filled", "underline", "outline", "transparent", "link"],
     label: "Background Style",
     props: {
-      colWidth: "m6 l6 xl6"
+      colWidth: "m6 l6 xl6",
     },
-    value: "filled"
+    value: "filled",
   },
   {
     name: "size",
     type: ["s", "m", "l", "xl"],
     label: "Size",
     props: {
-      colWidth: "xs12 s6 m3 l3 xl3"
+      colWidth: "xs12 s6 m3 l3 xl3",
     },
-    value: "m"
+    value: "m",
   },
   {
     name: "contentEditable",
     type: "bool",
     label: "Content Editable",
-    value: false
+    value: false,
   },
   {
     name: "displayBlock",
     type: "bool",
     label: "Display Block",
     value: false,
-    visible: false
+    visible: false,
   },
   {
     name: "pressed",
     type: "bool",
     label: "Pressed",
     value: false,
-    visible: false
+    visible: false,
   },
   {
     name: "smoothScroll",
@@ -109,9 +109,9 @@ const DEFAULT_PROPS = [
       inputColWidth: "xs8 s5 m3",
       labelColWidth: "xs12 s5",
       min: 0,
-      step: 100
+      step: 100,
     },
-    visible: false
+    visible: false,
   },
   {
     name: "offset",
@@ -120,10 +120,10 @@ const DEFAULT_PROPS = [
     value: 0,
     props: {
       inputColWidth: "xs8 s5 m3",
-      labelColWidth: "xs12 s5"
+      labelColWidth: "xs12 s5",
     },
-    visible: false
-  }
+    visible: false,
+  },
 ];
 
 export const Button = UU5.Common.VisualComponent.create({
@@ -137,21 +137,21 @@ export const Button = UU5.Common.VisualComponent.create({
     tagName: "UU5.BricksEditable.Button",
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
-      main: "editable-button"
-    }
+      main: "editable-button",
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    component: UU5.PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      component: null
+      component: null,
     };
   },
   getInitialState() {
@@ -200,7 +200,7 @@ export const Button = UU5.Common.VisualComponent.create({
         <UU5.Forms.PropsForm props={this.state.props} onCancel={this._cancel} onSave={this._save} uu5string={true} />
       </UU5.Bricks.Div>
     );
-  }
+  },
   //@@viewOff:render
 });
 

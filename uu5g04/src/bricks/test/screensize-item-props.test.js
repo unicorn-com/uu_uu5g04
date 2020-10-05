@@ -21,22 +21,22 @@ const CONFIG = {
     "UU5.Common.BaseMixin",
     "UU5.Common.ElementaryMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.ContentMixin"
+    "UU5.Common.ContentMixin",
   ],
   props: {
     screenSize: {
-      values: ["xs", "s", "m", "l", "xl"]
-    }
+      values: ["xs", "s", "m", "l", "xl"],
+    },
   },
   requiredProps: {
     parent: shallow(<UU5.Bricks.ScreenSize id={"parent"} />).instance(),
-    screenSize: "xs"
+    screenSize: "xs",
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: true
-    }
-  }
+      disableLifecycleMethods: true,
+    },
+  },
 };
 
 describe(`UU5.Bricks.ScreenSize.Item`, () => {
@@ -72,18 +72,18 @@ let baseMixinprops = {
   className: "my-classname",
   style: "padding:8px; borderRadius: 2px",
   mainAttrs: {
-    style: [{ backgroundColor: "red", color: "blue" }]
+    style: [{ backgroundColor: "red", color: "blue" }],
   },
   // parent: {},
   // ref_: {},
-  noIndex: true
+  noIndex: true,
 };
 
 let elementaryMixinprops = {
   hidden: true,
   disabled: true,
   selected: true,
-  controlled: false
+  controlled: false,
 };
 
 let contentMixinprops = {
@@ -94,11 +94,11 @@ let contentMixinprops = {
   checkHighlight: true,
   textCorrector: true,
   dynamic: true,
-  mode: "standart"
+  mode: "standart",
 };
 
 let nestingLevelMixinprops = {
-  nestingLevel: "boxCollection"
+  nestingLevel: "boxCollection",
 };
 
 describe("Mixin Props testing", () => {

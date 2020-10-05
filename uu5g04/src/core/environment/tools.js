@@ -29,7 +29,7 @@ export const Tools = {
     if (window.performance && typeof window.performance.now === "function") {
       timeNum += performance.now(); //use high-precision timer if available
     }
-    return uuidCore.replace(REGEXP_XY, char => {
+    return uuidCore.replace(REGEXP_XY, (char) => {
       let r = (timeNum + Math.random() * 16) % 16 | 0;
       timeNum = Math.floor(timeNum / 16);
       return (char === "x" ? r : (r & 0x3) | 0x8).toString(16);
@@ -40,7 +40,7 @@ export const Tools = {
     return Environment.languages[0]
       ? Environment.languages[0].location || Environment.languages[0].language
       : navigator.language;
-  }
+  },
 };
 
 export default Tools;

@@ -27,7 +27,7 @@ export const Text = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.NestingLevelMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.ColorSchemaMixin
+    UU5.Common.ColorSchemaMixin,
   ],
   //@@viewOff:mixins
 
@@ -38,8 +38,8 @@ export const Text = UU5.Common.VisualComponent.create({
     classNames: {
       main: ns.css("text uu5-common-text"),
       nestingLevelSmallBox: ns.css("text-nesting-level-small-box"),
-      nestingLevelInline: ns.css("text-nesting-level-inline")
-    }
+      nestingLevelInline: ns.css("text-nesting-level-inline"),
+    },
   },
   //@@viewOff:statics
 
@@ -59,7 +59,7 @@ export const Text = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _getMainAttrs: function() {
+  _getMainAttrs: function () {
     let attrs = this.getMainAttrs();
 
     switch (this.getNestingLevel()) {
@@ -75,7 +75,7 @@ export const Text = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     let component;
     switch (this.getNestingLevel()) {
       case "smallBox":
@@ -99,7 +99,7 @@ export const Text = UU5.Common.VisualComponent.create({
     }
 
     return component;
-  }
+  },
   //@@viewOff:render
 });
 

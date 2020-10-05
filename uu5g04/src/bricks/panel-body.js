@@ -24,10 +24,10 @@ import "./panel-body.less";
 
 const ClassNames = UU5.Common.ClassNames;
 const Styles = {
-  bgStyles: props => {
+  bgStyles: (props) => {
     // Only default colorSchema is here right now. Others are in .less files
     // let styles = Object.keys(UU5.Environment.colorSchemaMap).map(colorSchema => {
-    let styles = ["default"].map(colorSchema => {
+    let styles = ["default"].map((colorSchema) => {
       let colors = PanelStyles.getColors(colorSchema, props.bgStyle);
 
       if (!colors) {
@@ -53,7 +53,7 @@ const Styles = {
     });
 
     return Css.css(styles.join(" "));
-  }
+  },
 };
 
 export default UU5.Common.VisualComponent.create({
@@ -64,7 +64,7 @@ export default UU5.Common.VisualComponent.create({
     UU5.Common.PureRenderMixin,
     UU5.Common.ElementaryMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.ColorSchemaMixin
+    UU5.Common.ColorSchemaMixin,
   ],
   //@@viewOff:mixins
 
@@ -79,15 +79,15 @@ export default UU5.Common.VisualComponent.create({
       bgStyles: Styles.bgStyles,
       preventOverflow: Css.css(`
         overflow: hidden;
-      `)
+      `),
     },
     defaults: {
       parentTagName: "UU5.Bricks.Panel",
-      duration: 250
+      duration: 250,
     },
     errors: {
-      invalidParent: "Parent of this component is not Panel."
-    }
+      invalidParent: "Parent of this component is not Panel.",
+    },
   },
   //@@viewOff:statics
 
@@ -95,30 +95,30 @@ export default UU5.Common.VisualComponent.create({
   propTypes: {
     _expanded: UU5.PropTypes.bool,
     _preventUpdateChild: UU5.PropTypes.bool,
-    bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"])
+    bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       _expanded: false,
       _preventUpdateChild: false,
-      bgStyle: null
+      bgStyle: null,
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  getInitialState: function() {
+  getInitialState: function () {
     this._preventUpdateChild = false;
     return {
       height: this.props._expanded ? null : this._getHeight(this.props),
-      isAnimating: this.props._expanded
+      isAnimating: this.props._expanded,
     };
   },
 
-  UNSAFE_componentWillMount: function() {
+  UNSAFE_componentWillMount: function () {
     let parent = this.getParent();
 
     if (parent) {
@@ -132,7 +132,7 @@ export default UU5.Common.VisualComponent.create({
     }
   },
 
-  UNSAFE_componentWillReceiveProps: function(nextProps) {
+  UNSAFE_componentWillReceiveProps: function (nextProps) {
     let body = this;
     let height = this._getHeight(nextProps);
     let isAnimating = this.props._expanded !== nextProps._expanded;
@@ -141,7 +141,7 @@ export default UU5.Common.VisualComponent.create({
       if (height) {
         // open panel body
         this._preventUpdateChild = false;
-        this.setState({ height, isAnimating }, function() {
+        this.setState({ height, isAnimating }, function () {
           body.timer && clearTimeout(body.timer);
           body.timer = setTimeout(() => {
             // block rerender of childs - only change styles of current component
@@ -180,7 +180,7 @@ export default UU5.Common.VisualComponent.create({
     }
   },
 
-  componentWillUnmount: function() {
+  componentWillUnmount: function () {
     this.timer && clearTimeout(this.timer);
   },
   //@@viewOff:reactLifeCycle
@@ -192,11 +192,11 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _getPanelBodyId: function() {
+  _getPanelBodyId: function () {
     return this.getId() + "-content";
   },
 
-  _getHeight: function(props) {
+  _getHeight: function (props) {
     let result;
     if (props._expanded) {
       let element = this._panelBody;
@@ -209,7 +209,7 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   // Render
-  _getMainAttrs: function() {
+  _getMainAttrs: function () {
     var mainAttrs = this.getMainAttrs();
 
     mainAttrs.className += " " + this.getClassName("bgStyles");
@@ -233,8 +233,8 @@ export default UU5.Common.VisualComponent.create({
           "MozTransitionDuration",
           "MsTransitionDuration",
           "OTransitionDuration",
-          "transitionDuration"
-        ].forEach(function(style) {
+          "transitionDuration",
+        ].forEach(function (style) {
           mainAttrs.style[style] = time + "s";
         });
       }
@@ -255,20 +255,20 @@ export default UU5.Common.VisualComponent.create({
     return mainAttrs;
   },
 
-  _buildChildren: function() {
+  _buildChildren: function () {
     return this.buildChildren();
   },
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return (
       <div {...this._getMainAttrs()}>
         <UpdateWrapper preventRender={this._preventUpdateChild || this.props._preventUpdateChild}>
           <div
             className={this.getClassName().body}
             id={this._getPanelBodyId()}
-            ref={panelBody => (this._panelBody = panelBody)}
+            ref={(panelBody) => (this._panelBody = panelBody)}
           >
             {this._buildChildren()}
           </div>
@@ -276,6 +276,6 @@ export default UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </div>
     );
-  }
+  },
   //@@viewOff:render
 });

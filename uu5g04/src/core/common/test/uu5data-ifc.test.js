@@ -25,7 +25,7 @@ describe("UU5.Common.UUData interface test", () => {
       jestenvironmentjsdomglobal: "^1.0.3",
       jesthtmlreporter: "^0.6.0",
       jestlocalstoragemock: "2.2.0",
-      jestresolve: "22.4.2"
+      jestresolve: "22.4.2",
     };
     let ifc = UU5.Common.UU5Data.parse("someKey");
     expect(() => {
@@ -38,7 +38,7 @@ describe("UU5.Common.UUData interface test", () => {
         jestenvironmentjsdomglobal: "^1.0.3",
         jesthtmlreporter: "^0.6.0",
         jestlocalstoragemock: "2.2.0",
-        jestresolve: "22.4.2"
+        jestresolve: "22.4.2",
       })
     );
   });
@@ -50,7 +50,7 @@ describe("UU5.Common.UUData interface test", () => {
       jestenvironmentjsdomglobal: "^1.0.3",
       jesthtmlreporter: "^0.6.0",
       jestlocalstoragemock: "2.2.0",
-      jestresolve: "22.4.2"
+      jestresolve: "22.4.2",
     };
     let ifc = UU5.Common.UU5Data.parse("<uu5data/>someKey");
     expect(() => {
@@ -63,7 +63,7 @@ describe("UU5.Common.UUData interface test", () => {
         jestenvironmentjsdomglobal: "^1.0.3",
         jesthtmlreporter: "^0.6.0",
         jestlocalstoragemock: "2.2.0",
-        jestresolve: "22.4.2"
+        jestresolve: "22.4.2",
       })
     );
   });
@@ -72,9 +72,9 @@ describe("UU5.Common.UUData interface test", () => {
     UU5.Environment.uu5DataMap = {
       deeper: {
         nested: {
-          key: "value"
-        }
-      }
+          key: "value",
+        },
+      },
     };
     let parsed;
     expect(() => (parsed = UU5.Common.UU5Data.parse("<uu5data/>deeper.nested.key"))).not.toThrow();

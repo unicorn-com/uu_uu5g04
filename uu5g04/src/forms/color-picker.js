@@ -35,7 +35,7 @@ export const ColorPicker = Context.withContext(
       UU5.Common.ScreenSizeMixin,
       UU5.Common.ElementaryMixin,
       UU5.Common.ColorSchemaMixin,
-      InputMixin
+      InputMixin,
     ],
     //@@viewOff:mixins
 
@@ -75,9 +75,9 @@ export const ColorPicker = Context.withContext(
             width: 64px;
           }
         `),
-        buttonError: ns.css("button-error")
+        buttonError: ns.css("button-error"),
       },
-      lsi: () => ({ ...UU5.Environment.Lsi.Forms.colorPicker, ...UU5.Environment.Lsi.Forms.message })
+      lsi: () => ({ ...UU5.Environment.Lsi.Forms.colorPicker, ...UU5.Environment.Lsi.Forms.message }),
     },
     //@@viewOff:statics
 
@@ -91,7 +91,7 @@ export const ColorPicker = Context.withContext(
       borderRadius: UU5.PropTypes.string,
       bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
       elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-      openToContent: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string])
+      openToContent: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string]),
     },
     //@@viewOff:propTypes
 
@@ -106,7 +106,7 @@ export const ColorPicker = Context.withContext(
         elevation: null,
         openToContent: "xs",
         required: false,
-        requiredMessage: undefined
+        requiredMessage: undefined,
       };
     },
     //@@viewOff:getDefaultProps
@@ -114,7 +114,7 @@ export const ColorPicker = Context.withContext(
     //@@viewOn:reactLifeCycle
     getInitialState() {
       return {
-        open: false
+        open: false,
       };
     },
 
@@ -136,7 +136,7 @@ export const ColorPicker = Context.withContext(
       // stop openeing disabled component
       if (this.isComputedDisabled() || this.isReadOnly()) return;
 
-      this.setState(state => (state.open ? null : { open: true }), setStateCallback);
+      this.setState((state) => (state.open ? null : { open: true }), setStateCallback);
 
       if (this._shouldOpenToContent()) {
         UU5.Common.Tools.scrollToTarget(
@@ -151,7 +151,7 @@ export const ColorPicker = Context.withContext(
     },
 
     close(setStateCallback) {
-      this.setState(state => (state.open ? { open: false } : null), setStateCallback);
+      this.setState((state) => (state.open ? { open: false } : null), setStateCallback);
       return this;
     },
 
@@ -160,7 +160,7 @@ export const ColorPicker = Context.withContext(
       if (this.isComputedDisabled() || this.isReadOnly()) return;
 
       // togle open state
-      this.setState(state => {
+      this.setState((state) => {
         // state open will be changed in future but now is false
         if (!state.open && this._shouldOpenToContent()) {
           UU5.Common.Tools.scrollToTarget(
@@ -245,7 +245,7 @@ export const ColorPicker = Context.withContext(
         this.props.openToContent
           .trim()
           .split(" ")
-          .some(size => {
+          .some((size) => {
             if (screenSize == size) {
               result = true;
               return true;
@@ -268,7 +268,7 @@ export const ColorPicker = Context.withContext(
         UU5.Common.Tools.error(`ColorPicker gets invalid value ${value}`, {
           function: method,
           component: "UU5.Forms.ColorPicker",
-          id: this.getId()
+          id: this.getId(),
         });
         newValue = "";
       }
@@ -332,7 +332,7 @@ export const ColorPicker = Context.withContext(
         bgStyle: this.props.bgStyle || "filled",
         borderRadius: this.props.borderRadius,
         elevation: this.props.elevation,
-        mainAttrs: this.props.inputAttrs
+        mainAttrs: this.props.inputAttrs,
       };
 
       return (
@@ -378,7 +378,7 @@ export const ColorPicker = Context.withContext(
         aroundElement: this._button,
         onBeforeClose: () => this._changeColor({ value: this._colorForm.getColor() }, false),
         onClose: this._close,
-        preventPositioning: this._shouldOpenToContent()
+        preventPositioning: this._shouldOpenToContent(),
       });
     },
 
@@ -420,11 +420,11 @@ export const ColorPicker = Context.withContext(
                   onChange={this._changeColor}
                 />
               </UU5.Bricks.Popover>
-            )
+            ),
           ])}
         </div>
       );
-    }
+    },
     //@@viewOff:render
   })
 );

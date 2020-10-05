@@ -21,7 +21,7 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 const MyTouchIcon = UU5.Common.VisualComponent.create({
   getInitialState: () => {
     return {
-      isCalled: false
+      isCalled: false,
     };
   },
 
@@ -32,7 +32,7 @@ const MyTouchIcon = UU5.Common.VisualComponent.create({
 
   render() {
     return <UU5.Bricks.TouchIcon icon="mdi-evernote" content="Výchozí touch ikona" onClick={this.onClickAlert} />;
-  }
+  },
 });
 
 const CONFIG = {
@@ -42,7 +42,7 @@ const CONFIG = {
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.ContentMixin",
     "UU5.Common.LevelMixin",
-    "UU5.Common.NestingLevelMixin"
+    "UU5.Common.NestingLevelMixin",
   ],
   props: {
     icon: {
@@ -66,21 +66,21 @@ const CONFIG = {
         "uu5-picture",
         "uu5-plus",
         "uu5-point",
-        "uu5-thumb"
-      ]
+        "uu5-thumb",
+      ],
     },
     href: {
-      values: ["#elementID", "https://www.plus4u.net/"]
+      values: ["#elementID", "https://www.plus4u.net/"],
     },
     target: {
-      values: ["_blank", "_parent", "_top", "_self"]
+      values: ["_blank", "_parent", "_top", "_self"],
     },
     bgStyle: {
-      values: ["filled", "transparent"]
+      values: ["filled", "transparent"],
     },
     borderRadius: {
-      values: ["2px 3px 4px 5px"]
-    }
+      values: ["2px 3px 4px 5px"],
+    },
     //onClick: {},
     //onCtrlClick: {},
     //onWheelClick: {}
@@ -88,9 +88,9 @@ const CONFIG = {
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.TouchIcon`, () => {

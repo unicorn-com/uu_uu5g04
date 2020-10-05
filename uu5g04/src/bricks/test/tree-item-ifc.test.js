@@ -20,7 +20,7 @@ const { mount, shallow, wait } = UU5.Test.Tools;
  * The test requires mount () for proper functionality. Do not use snapshots due to lack of memory.
  */
 
-describe("UU5.Bricks.Tree.Item interface testing", function() {
+describe("UU5.Bricks.Tree.Item interface testing", function () {
   it("Shallow rendering: Take snapshot without crash", () => {
     const wrapper = shallow(
       <UU5.Bricks.Tree id={"uuID01"}>
@@ -29,7 +29,7 @@ describe("UU5.Bricks.Tree.Item interface testing", function() {
           label="Movies"
           className="MyClass"
           name={"locatorName"}
-          ref_={treeItem => (this.treeItem = treeItem)}
+          ref_={(treeItem) => (this.treeItem = treeItem)}
         >
           <UU5.Bricks.Tree.Item id={"uuID03"} label="Comedies">
             <UU5.Bricks.Tree.Item id={"uuID04"} label="Anchorman" />
@@ -49,7 +49,7 @@ describe("UU5.Bricks.Tree.Item interface testing", function() {
           label="Movies"
           className="MyClass"
           name={"locatorName"}
-          ref_={treeItem => (this.treeItem = treeItem)}
+          ref_={(treeItem) => (this.treeItem = treeItem)}
         >
           <UU5.Bricks.Tree.Item id={"uuID03"} label="Comedies">
             <UU5.Bricks.Tree.Item id={"uuID04"} label="Anchorman" />
@@ -77,7 +77,7 @@ describe("UU5.Bricks.Tree.Item interface testing", function() {
           className="MyClass"
           expanded={true}
           name={"locatorName"}
-          ref_={treeItem => (this.treeItem = treeItem)}
+          ref_={(treeItem) => (this.treeItem = treeItem)}
         >
           <UU5.Bricks.Tree.Item id={"uuID03"} label="Comedies">
             <UU5.Bricks.Tree.Item id={"uuID04"} label="Anchorman" />
@@ -105,7 +105,7 @@ describe("UU5.Bricks.Tree.Item interface testing", function() {
           className="MyClass"
           expanded={false}
           name={"locatorName"}
-          ref_={treeItem => (this.treeItem = treeItem)}
+          ref_={(treeItem) => (this.treeItem = treeItem)}
         >
           <UU5.Bricks.Tree.Item id={"uuID03"} label="Comedies">
             <UU5.Bricks.Tree.Item id={"uuID04"} label="Anchorman" />
@@ -139,7 +139,7 @@ describe("UU5.Bricks.Tree.Item interface testing", function() {
           className="MyClass"
           expanded={true}
           name={"locatorName"}
-          ref_={treeItem => (this.treeItem = treeItem)}
+          ref_={(treeItem) => (this.treeItem = treeItem)}
         >
           <UU5.Bricks.Tree.Item id={"uuID03"} label="Comedies">
             <UU5.Bricks.Tree.Item id={"uuID04"} label="Anchorman" />
@@ -161,7 +161,7 @@ describe("UU5.Bricks.Tree.Item interface testing", function() {
           className="MyClass"
           expanded={false}
           name={"locatorName"}
-          ref_={treeItem => (this.treeItem = treeItem)}
+          ref_={(treeItem) => (this.treeItem = treeItem)}
         >
           <UU5.Bricks.Tree.Item id={"uuID03"} label="Comedies">
             <UU5.Bricks.Tree.Item id={"uuID04"} label="Anchorman" />

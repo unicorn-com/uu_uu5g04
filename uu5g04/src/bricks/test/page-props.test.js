@@ -45,12 +45,12 @@ class Component extends React.Component {
 const dragSpec = {
   beginDrag(props, monitor, component) {
     return { id: props.id };
-  }
+  },
 };
-const dragCollect = function(connect, monitor) {
+const dragCollect = function (connect, monitor) {
   return {
     connectDragSource: connect.dragSource(),
-    isDragging: !!monitor.isDragging()
+    isDragging: !!monitor.isDragging(),
   };
 };
 const DnDComponent = ReactDnD.DragSource("item", dragSpec, dragCollect)(Component);
@@ -90,50 +90,50 @@ const CONFIG = {
     "UU5.Common.ContentMixin",
     "UU5.Common.ScreenSizeMixin",
     "UU5.Common.CcrWriterMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     type: {
-      values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+      values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
     },
     fullPage: {
-      values: [true, false]
+      values: [true, false],
     },
     topWrapperProps: {
-      values: [{ style: { backgroundColor: "#2196F3" } }]
+      values: [{ style: { backgroundColor: "#2196F3" } }],
     },
     bottomWrapperProps: {
-      values: [{ style: { backgroundColor: "#2196F3" } }]
+      values: [{ style: { backgroundColor: "#2196F3" } }],
     },
     leftWrapperProps: {
-      values: [{ style: { backgroundColor: "#2196F3" } }]
+      values: [{ style: { backgroundColor: "#2196F3" } }],
     },
     rightWrapperProps: {
-      values: [{ style: { backgroundColor: "#2111EE" } }]
+      values: [{ style: { backgroundColor: "#2111EE" } }],
     },
     contentWrapperProps: {
-      values: [{ style: { backgroundColor: "#2111EE" } }]
+      values: [{ style: { backgroundColor: "#2111EE" } }],
     },
     appLayerWrapperProps: {
-      values: [{ style: { backgroundColor: "#2111EE" } }]
+      values: [{ style: { backgroundColor: "#2111EE" } }],
     },
     systemLayerWrapperProps: {
-      values: [{ style: { backgroundColor: "#2111EE" } }]
+      values: [{ style: { backgroundColor: "#2111EE" } }],
     },
     switchElevationTopBottom: {
-      values: [true, false]
+      values: [true, false],
     },
     switchElevationLeftRight: {
-      values: [true, false]
+      values: [true, false],
     },
     top: {
-      values: [top]
+      values: [top],
     },
     bottom: {
-      values: [bottom]
+      values: [bottom],
     },
     left: {
-      values: [left]
+      values: [left],
     },
     leftOpen: {
       values: [
@@ -146,8 +146,8 @@ const CONFIG = {
               </UU5.Bricks.Button>
             </UU5.Bricks.ButtonGroup>
           </UU5.Bricks.Column>
-        </UU5.Bricks.Section>
-      ]
+        </UU5.Bricks.Section>,
+      ],
     },
     leftClosed: {
       values: [
@@ -160,11 +160,11 @@ const CONFIG = {
               </UU5.Bricks.Button>
             </UU5.Bricks.ButtonGroup>
           </UU5.Bricks.Column>
-        </UU5.Bricks.Section>
-      ]
+        </UU5.Bricks.Section>,
+      ],
     },
     right: {
-      values: [right]
+      values: [right],
     },
     rightOpen: {
       values: [
@@ -177,8 +177,8 @@ const CONFIG = {
               </UU5.Bricks.Button>
             </UU5.Bricks.ButtonGroup>
           </UU5.Bricks.Column>
-        </UU5.Bricks.Section>
-      ]
+        </UU5.Bricks.Section>,
+      ],
     },
     rightClosed: {
       values: [
@@ -191,78 +191,78 @@ const CONFIG = {
               </UU5.Bricks.Button>
             </UU5.Bricks.ButtonGroup>
           </UU5.Bricks.Column>
-        </UU5.Bricks.Section>
-      ]
+        </UU5.Bricks.Section>,
+      ],
     },
     isLeftOpen: {
-      values: [true, false]
+      values: [true, false],
     },
     isRightOpen: {
-      values: [true, false]
+      values: [true, false],
     },
     alertBus: {
-      values: [<UU5.Bricks.AlertBus id={"uuBUS"} key="0" content="ContentAlertBus" />]
+      values: [<UU5.Bricks.AlertBus id={"uuBUS"} key="0" content="ContentAlertBus" />],
     },
     modal: {
-      values: [<UU5.Bricks.Modal id={"uuMODAL"} key="0" content="Content" />]
+      values: [<UU5.Bricks.Modal id={"uuMODAL"} key="0" content="Content" />],
     },
     appLayerContent: {
       values: [
         <UU5.Bricks.Alert id={"uuAlertID"} key="0" colorSchema="red-rich">
           appLayerContent
-        </UU5.Bricks.Alert>
-      ]
+        </UU5.Bricks.Alert>,
+      ],
     },
     systemLayerContent: {
-      values: ["Obsah který se zobrazí před page a appLayer"]
+      values: ["Obsah který se zobrazí před page a appLayer"],
     },
     leftWidth: {
-      values: ["xs-10em-50px s-20 m-15px-60 l-15-60rem xl-15-60rem", "!xs-10-30 s-10em !m-10-20 l-15 xl-15"]
+      values: ["xs-10em-50px s-20 m-15px-60 l-15-60rem xl-15-60rem", "!xs-10-30 s-10em !m-10-20 l-15 xl-15"],
     },
     rightWidth: {
-      values: ["!xs-10-30 s-10em !m-10-20 l-15 xl-15", "!xs-10-30 s-10em !m-10-20 l-15 xl-15"]
+      values: ["!xs-10-30 s-10em !m-10-20 l-15 xl-15", "!xs-10-30 s-10em !m-10-20 l-15 xl-15"],
     },
     topFixed: {
-      values: [true, false, "always", "smart"]
+      values: [true, false, "always", "smart"],
     },
     bottomFixed: {
-      values: [true, false, "always", "smart"]
+      values: [true, false, "always", "smart"],
     },
     leftSwipe: {
-      values: [true, false]
+      values: [true, false],
     },
     rightSwipe: {
-      values: [true, false]
+      values: [true, false],
     },
     leftFixed: {
-      values: [true, false]
+      values: [true, false],
     },
     rightFixed: {
-      values: [true, false]
+      values: [true, false],
     },
     leftRelative: {
-      values: [null, "xs", "xs s", "xs s m", "xs s m l", "xs s m l xl"]
+      values: [null, "xs", "xs s", "xs s m", "xs s m l", "xs s m l xl"],
     },
     rightRelative: {
-      values: [null, "xs", "xs s", "xs s m", "xs s m l", "xs s m l xl"]
+      values: [null, "xs", "xs s", "xs s m", "xs s m l", "xs s m l xl"],
     },
     leftResizable: {
-      values: [true, false]
+      values: [true, false],
     },
     rightResizable: {
-      values: [true, false]
+      values: [true, false],
     },
     leftResizableMinWidth: [undefined, 100],
     leftResizableMaxWidth: [undefined, 100],
     rightResizableMinWidth: [undefined, 100],
-    rightResizableMaxWidth: [undefined, 100]
+    rightResizableMaxWidth: [undefined, 100],
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: true
-    }
-  }
+      disableLifecycleMethods: true,
+    },
+  },
 };
 
 afterEach(() => {
@@ -272,7 +272,7 @@ afterEach(() => {
 describe(`UU5.Bricks.Page`, () => {
   UU5.Test.Tools.testProperties(UU5.Bricks.Page, CONFIG);
 
-  it("check default values of boolean props", function() {
+  it("check default values of boolean props", function () {
     const wrapper = mount(
       <UU5.Bricks.Page
         type="1"
@@ -298,7 +298,7 @@ describe(`UU5.Bricks.Page`, () => {
             <br />
             <UU5.Bricks.Column id={"r_open03"}>
               <UU5.Bricks.ButtonGroup id={"r_open04"} vertical>
-                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={button => (this.MenuButton = button)}>
+                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={(button) => (this.MenuButton = button)}>
                   Home
                   <UU5.Bricks.Icon id={"r_open06"} icon="mdi-home" />
                 </UU5.Bricks.Button>
@@ -341,19 +341,14 @@ describe(`UU5.Bricks.Page`, () => {
     expect(wrapper.instance().props.switchElevationLeftRight).toBeFalsy();
   });
 
-  it("prop useDnD", function() {
+  it("prop useDnD", function () {
     let content = "Content of DnD Component";
     let wrapper = mount(
       <UU5.Bricks.Page useDnD>
         <DnDComponent id="dnd">{content}</DnDComponent>
       </UU5.Bricks.Page>
     );
-    expect(
-      wrapper
-        .find("#dnd")
-        .first()
-        .html() || ""
-    ).toContain(content);
+    expect(wrapper.find("#dnd").first().html() || "").toContain(content);
     wrapper.unmount();
 
     wrapper = mount(
@@ -361,16 +356,11 @@ describe(`UU5.Bricks.Page`, () => {
         <DnDComponent id="dnd">{content}</DnDComponent>
       </UU5.Bricks.Page>
     );
-    expect(
-      wrapper
-        .find("#dnd")
-        .first()
-        .html() || ""
-    ).not.toContain(content);
+    expect(wrapper.find("#dnd").first().html() || "").not.toContain(content);
     wrapper.unmount();
   });
 
-  it("prop overlayTop", function() {
+  it("prop overlayTop", function () {
     let wrapper = shallow(
       <UU5.Bricks.Page id="pageId" top={top} left={left} right={right} overlayTop>
         <UU5.Bricks.Paragraph />

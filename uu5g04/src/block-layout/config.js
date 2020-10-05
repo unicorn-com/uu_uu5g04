@@ -34,11 +34,11 @@ export const Font = {
   `,
   sizeS: () => css`
     font-size: 0.8em;
-  `
+  `,
 };
 
 export default {
   TAG,
   css,
-  Font
+  Font,
 };

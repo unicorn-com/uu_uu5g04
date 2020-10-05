@@ -260,7 +260,7 @@ describe("UU5.Forms.Form interface testing", () => {
       expect.objectContaining({
         type: "form",
         key: null,
-        ref: null
+        ref: null,
       })
     );
   });
@@ -478,7 +478,7 @@ describe("UU5.Forms.Form interface testing", () => {
     expect(wrapper.instance().getValues()).toEqual(
       expect.objectContaining({
         name: "John",
-        description: "This is my text."
+        description: "This is my text.",
       })
     );
     const returnValue = wrapper.instance().reset(mockFunc);

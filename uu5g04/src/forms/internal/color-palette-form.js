@@ -201,16 +201,16 @@ export const ColorPaletteForm = UU5.Common.VisualComponent.create({
             height: 24px;
           }
         }
-      `)
+      `),
     },
-    lsi: () => ({ ...UU5.Environment.Lsi.Forms.colorPicker, ...UU5.Environment.Lsi.Forms.message })
+    lsi: () => ({ ...UU5.Environment.Lsi.Forms.colorPicker, ...UU5.Environment.Lsi.Forms.message }),
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
     enableCustomColor: UU5.PropTypes.bool,
-    value: UU5.PropTypes.string
+    value: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
@@ -262,7 +262,7 @@ export const ColorPaletteForm = UU5.Common.VisualComponent.create({
             r: objectColor.r,
             g: objectColor.g,
             b: objectColor.b,
-            opacity: 100
+            opacity: 100,
           },
           { upperCase: true, shorten: false }
         ).replace("#", "");
@@ -329,7 +329,7 @@ export const ColorPaletteForm = UU5.Common.VisualComponent.create({
       simplePalette: this.props.simplePalette,
       onChange: this._colorPaletteChange,
       color: Color.getValidString(this.state.value),
-      onColorSchemaChange: this._colorSchemaPaletteChange
+      onColorSchemaChange: this._colorSchemaPaletteChange,
     };
   },
 
@@ -357,8 +357,8 @@ export const ColorPaletteForm = UU5.Common.VisualComponent.create({
       opt.component.onChangeDefault(opt);
       if (value.length === 7) {
         let color = Color.getValidObject(value);
-        this.setState(state => ({
-          value: { ...color, opacity: state.value && !isNaN(state.value.opacity) ? state.value.opacity : 100 }
+        this.setState((state) => ({
+          value: { ...color, opacity: state.value && !isNaN(state.value.opacity) ? state.value.opacity : 100 },
         }));
       }
     }
@@ -376,8 +376,8 @@ export const ColorPaletteForm = UU5.Common.VisualComponent.create({
     } else if (opt.value.length === 4) {
       // this valid value is not save in state => update state
       let color = Color.getValidObject(opt.value);
-      this.setState(state => ({
-        value: { ...color, opacity: state.value && !isNaN(state.value.opacity) ? state.value.opacity : 100 }
+      this.setState((state) => ({
+        value: { ...color, opacity: state.value && !isNaN(state.value.opacity) ? state.value.opacity : 100 },
       }));
     }
   },
@@ -394,7 +394,7 @@ export const ColorPaletteForm = UU5.Common.VisualComponent.create({
     }
     // validate opacity to be between 0 and 100
     opacity = Math.min(100, Math.max(opacity, 0));
-    this.setState(state => {
+    this.setState((state) => {
       let value = typeof state.value === "object" ? state.value : Color.getValidObject(state.value);
       return { value: { ...value, opacity } };
     });
@@ -416,7 +416,7 @@ export const ColorPaletteForm = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     const paletteProps = this._getPaletteProps();
     return (
       <UU5.Bricks.Div {...this.getMainPropsToPass()}>
@@ -434,7 +434,7 @@ export const ColorPaletteForm = UU5.Common.VisualComponent.create({
         </UU5.Bricks.ScreenSize>
       </UU5.Bricks.Div>
     );
-  }
+  },
   //@@viewOff:render
 });
 

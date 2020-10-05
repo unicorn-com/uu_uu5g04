@@ -28,7 +28,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: true },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
       />
     );
@@ -46,7 +46,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: true },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
       />
     );
@@ -56,7 +56,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
         dogs: false,
         hamsters: false,
         rabbits: true,
-        yaks: false
+        yaks: false,
       })
     );
     expect(wrapper).toMatchSnapshot();
@@ -72,7 +72,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: true },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
       />
     );
@@ -82,7 +82,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
         dogs: false,
         hamsters: false,
         rabbits: true,
-        yaks: false
+        yaks: false,
       })
     );
     const mockFunc = jest.fn();
@@ -106,7 +106,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: true },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
       />
     );
@@ -126,7 +126,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: true },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
       />
     );
@@ -152,7 +152,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: true },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
       />
     );
@@ -174,7 +174,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: true },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
       />
     );
@@ -186,7 +186,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
         dogs: false,
         hamsters: false,
         rabbits: true,
-        yaks: false
+        yaks: false,
       })
     );
     const mockFunc = jest.fn();
@@ -212,7 +212,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: false },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
         message={"This input is required"}
         feedback={"error"}
@@ -228,7 +228,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
         dogs: false,
         hamsters: false,
         rabbits: false,
-        yaks: false
+        yaks: false,
       })
     );
     expect(wrapper.instance().getMessage()).toEqual("This input is required");
@@ -255,7 +255,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: false },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
       />
     );
@@ -278,7 +278,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: true },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
       />
     );
@@ -290,7 +290,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
         dogs: false,
         hamsters: false,
         rabbits: true,
-        yaks: false
+        yaks: false,
       })
     );
     expect(wrapper.instance().getMessage()).toBeNull();
@@ -316,7 +316,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: true },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
       />
     );
@@ -334,7 +334,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: false },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
       />
     );
@@ -347,7 +347,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
         dogs: false,
         hamsters: false,
         rabbits: false,
-        yaks: false
+        yaks: false,
       })
     );
     expect(wrapper).toMatchSnapshot();
@@ -374,7 +374,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: false },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
       />
     );
@@ -403,7 +403,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: false },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
       />
     );
@@ -416,7 +416,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
         dogs: false,
         hamsters: false,
         rabbits: false,
-        yaks: false
+        yaks: false,
       })
     );
     expect(wrapper).toMatchSnapshot();
@@ -448,7 +448,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: false },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
       />
     );
@@ -476,7 +476,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: false },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
       />
     );
@@ -491,7 +491,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
         dogs: false,
         hamsters: false,
         rabbits: false,
-        yaks: false
+        yaks: false,
       })
     );
     expect(wrapper.instance().getFeedback()).toEqual("initial");
@@ -525,7 +525,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: false },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
       />
     );
@@ -553,7 +553,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: false },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
       />
     );
@@ -580,7 +580,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
         dogs: false,
         hamsters: false,
         rabbits: false,
-        yaks: false
+        yaks: false,
       })
     );
     expect(wrapper.instance().getFeedback()).toEqual("initial");
@@ -600,7 +600,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: true },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
       />
     );
@@ -609,7 +609,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
       expect.objectContaining({
         feedback: "initial",
         message: null,
-        value: expectedValue
+        value: expectedValue,
       })
     );
     expect(wrapper).toMatchSnapshot();
@@ -626,7 +626,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: true },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
       />
     );
@@ -636,14 +636,14 @@ describe("UU5.Forms.InputMixin interface testing", () => {
       expect.objectContaining({
         feedback: "initial",
         message: null,
-        value: expectedValue
+        value: expectedValue,
       })
     );
     const returnValue = wrapper.instance().setChangeFeedback(
       {
         feedback: "success",
         message: "Success message from setChangeFeedback",
-        value: "cats"
+        value: "cats",
       },
       mockFunc
     );
@@ -667,7 +667,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: true },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
       />
     );
@@ -693,7 +693,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: true },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
       />
     );
@@ -725,7 +725,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: true },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
       />
     );
@@ -756,7 +756,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: true },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
       />
     );
@@ -783,7 +783,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: true },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
       />
     );
@@ -816,7 +816,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: true },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
       />
     );
@@ -839,7 +839,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
           { label: "Cats", name: "cats" },
           { label: "Yaks", name: "yaks" },
           { label: "Rabbits", name: "rabbits", value: true },
-          { label: "Hamsters", name: "hamsters" }
+          { label: "Hamsters", name: "hamsters" },
         ]}
       />
     );

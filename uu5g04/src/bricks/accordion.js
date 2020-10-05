@@ -30,7 +30,7 @@ let editationLazyLoaded = false;
 const MOUNT_CONTENT_VALUES = {
   onFirstRender: "onFirstRender",
   onFirstExpand: "onFirstExpand",
-  onEachExpand: "onEachExpand"
+  onEachExpand: "onEachExpand",
 };
 
 export const Accordion = UU5.Common.VisualComponent.create({
@@ -43,7 +43,7 @@ export const Accordion = UU5.Common.VisualComponent.create({
     UU5.Common.ColorSchemaMixin,
     UU5.Common.ContentMixin,
     UU5.Common.PureRenderMixin,
-    UU5.Common.EditableMixin
+    UU5.Common.EditableMixin,
   ],
   //@@viewOff:mixins
 
@@ -52,23 +52,23 @@ export const Accordion = UU5.Common.VisualComponent.create({
     tagName: ns.name("Accordion"),
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
-      main: ns.css("accordion")
+      main: ns.css("accordion"),
     },
     defaults: {
-      validChildTagName: "UU5.Bricks.Panel" // different key name than usual because of DCC (do not rename!)
+      validChildTagName: "UU5.Bricks.Panel", // different key name than usual because of DCC (do not rename!)
     },
     warnings: {
-      unsupportedType: "Type %s of parameter %s is not supported. Allowed types are: %s."
+      unsupportedType: "Type %s of parameter %s is not supported. Allowed types are: %s.",
     },
     opt: {
-      nestingLevelWrapper: true
+      nestingLevelWrapper: true,
     },
     editMode: {
       name: { en: "Accordion", cs: "Accordion" },
       backgroundColor: "rgba(0,0,0,.2)",
       color: "rgba(0,0,0,.87)",
-      highlightColor: "#CCCCCC"
-    }
+      highlightColor: "#CCCCCC",
+    },
   },
   //@@viewOff:statics
 
@@ -86,13 +86,13 @@ export const Accordion = UU5.Common.VisualComponent.create({
     mountPanelContent: UU5.PropTypes.oneOf([
       MOUNT_CONTENT_VALUES.onEachExpand,
       MOUNT_CONTENT_VALUES.onFirstExpand,
-      MOUNT_CONTENT_VALUES.onFirstRender
-    ])
+      MOUNT_CONTENT_VALUES.onFirstRender,
+    ]),
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       panels: null,
       iconExpanded: null,
@@ -104,7 +104,7 @@ export const Accordion = UU5.Common.VisualComponent.create({
       iconAlign: null,
       openClick: null,
       mountPanelContent: undefined,
-      contentEditable: true
+      contentEditable: true,
     };
   },
   //@@viewOff:getDefaultProps
@@ -113,19 +113,19 @@ export const Accordion = UU5.Common.VisualComponent.create({
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
-  getPanelById: function(panelId) {
+  getPanelById: function (panelId) {
     return this.getRenderedChildById(panelId);
   },
 
-  getPanelByName: function(panelName) {
+  getPanelByName: function (panelName) {
     return this.getRenderedChildByName(panelName);
   },
 
-  getPanels: function() {
+  getPanels: function () {
     return this.getRenderedChildren();
   },
 
-  eachPanel: function(callback) {
+  eachPanel: function (callback) {
     var panels = this.getPanels();
     for (var i = 0; i < panels.length; i++) {
       var result = callback(panels[i], i);
@@ -136,7 +136,7 @@ export const Accordion = UU5.Common.VisualComponent.create({
     return this;
   },
 
-  eachPanelByIds: function(ids, callback) {
+  eachPanelByIds: function (ids, callback) {
     for (var i = 0; i < ids.length; i++) {
       var result = callback(this.getPanelById(ids[i]), i);
       if (result === false) {
@@ -146,7 +146,7 @@ export const Accordion = UU5.Common.VisualComponent.create({
     return this;
   },
 
-  eachPanelByNames: function(names, callback) {
+  eachPanelByNames: function (names, callback) {
     for (var i = 0; i < names.length; i++) {
       var result = callback(this.getPanelByName(names[i]), i);
       if (result === false) {
@@ -156,84 +156,84 @@ export const Accordion = UU5.Common.VisualComponent.create({
     return this;
   },
 
-  expandPanelById: function(panelId, setStateCallback) {
-    this._eachPanelByIdWithCallback(panelId, setStateCallback, function(panel, i, newSetStateCallback) {
+  expandPanelById: function (panelId, setStateCallback) {
+    this._eachPanelByIdWithCallback(panelId, setStateCallback, function (panel, i, newSetStateCallback) {
       panel.expand(newSetStateCallback);
     });
     return this;
   },
 
-  expandPanelByName: function(panelName, setStateCallback) {
-    this._eachPanelByNameWithCallback(panelName, setStateCallback, function(panel, i, newSetStateCallback) {
+  expandPanelByName: function (panelName, setStateCallback) {
+    this._eachPanelByNameWithCallback(panelName, setStateCallback, function (panel, i, newSetStateCallback) {
       panel.expand(newSetStateCallback);
     });
     return this;
   },
 
-  collapsePanelById: function(panelId, setStateCallback) {
-    this._eachPanelByIdWithCallback(panelId, setStateCallback, function(panel, i, newSetStateCallback) {
+  collapsePanelById: function (panelId, setStateCallback) {
+    this._eachPanelByIdWithCallback(panelId, setStateCallback, function (panel, i, newSetStateCallback) {
       panel.collapse(newSetStateCallback);
     });
     return this;
   },
 
-  collapsePanelByName: function(panelName, setStateCallback) {
-    this._eachPanelByNameWithCallback(panelName, setStateCallback, function(panel, i, newSetStateCallback) {
+  collapsePanelByName: function (panelName, setStateCallback) {
+    this._eachPanelByNameWithCallback(panelName, setStateCallback, function (panel, i, newSetStateCallback) {
       panel.collapse(newSetStateCallback);
     });
     return this;
   },
 
-  togglePanelById: function(panelId, setStateCallback) {
-    this._eachPanelByIdWithCallback(panelId, setStateCallback, function(panel, i, newSetStateCallback) {
+  togglePanelById: function (panelId, setStateCallback) {
+    this._eachPanelByIdWithCallback(panelId, setStateCallback, function (panel, i, newSetStateCallback) {
       panel.toggle(newSetStateCallback);
     });
     return this;
   },
 
-  togglePanelByName: function(panelName, setStateCallback) {
-    this._eachPanelByNameWithCallback(panelName, setStateCallback, function(panel, i, newSetStateCallback) {
+  togglePanelByName: function (panelName, setStateCallback) {
+    this._eachPanelByNameWithCallback(panelName, setStateCallback, function (panel, i, newSetStateCallback) {
       panel.toggle(newSetStateCallback);
     });
     return this;
   },
 
-  expandAll: function(setStateCallback) {
-    this._eachPanelWithCallback(setStateCallback, function(panel, i, newSetStateCallback) {
+  expandAll: function (setStateCallback) {
+    this._eachPanelWithCallback(setStateCallback, function (panel, i, newSetStateCallback) {
       panel.expand(newSetStateCallback);
     });
     return this;
   },
 
-  collapseAll: function(setStateCallback) {
-    this._eachPanelWithCallback(setStateCallback, function(panel, i, newSetStateCallback) {
+  collapseAll: function (setStateCallback) {
+    this._eachPanelWithCallback(setStateCallback, function (panel, i, newSetStateCallback) {
       panel.collapse(newSetStateCallback);
     });
     return this;
   },
 
-  toggleAll: function(setStateCallback) {
-    this._eachPanelWithCallback(setStateCallback, function(panel, i, newSetStateCallback) {
+  toggleAll: function (setStateCallback) {
+    this._eachPanelWithCallback(setStateCallback, function (panel, i, newSetStateCallback) {
       panel.toggle(newSetStateCallback);
     });
     return this;
   },
 
-  shouldCollapseOthers: function() {
+  shouldCollapseOthers: function () {
     return !this.props.onClickNotCollapseOthers;
   },
 
-  collapseOthers: function(panelId, setStateCallback) {
+  collapseOthers: function (panelId, setStateCallback) {
     var panels = this.getPanels();
 
     var counter = 0;
-    panels.forEach(function(panel) {
+    panels.forEach(function (panel) {
       panel.getId() !== panelId && panel.isExpandable() && counter++;
     });
 
     if (counter > 0) {
       var newSetStateCallback = UU5.Common.Tools.buildCounterCallback(setStateCallback, counter);
-      panels.forEach(function(panel) {
+      panels.forEach(function (panel) {
         panel.getId() !== panelId && panel.isExpandable() && panel.collapse(newSetStateCallback);
       });
     } else if (typeof setStateCallback === "function") {
@@ -245,7 +245,7 @@ export const Accordion = UU5.Common.VisualComponent.create({
   //@@viewOff:interface
 
   //@@viewOn:overriding
-  shouldChildRender_: function(child) {
+  shouldChildRender_: function (child) {
     let childTagName = UU5.Common.Tools.getChildTagName(child);
     let defaultChildTagName = this.getDefault().validChildTagName;
 
@@ -255,19 +255,19 @@ export const Accordion = UU5.Common.VisualComponent.create({
     if (!result && (typeof child !== "string" || child.trim())) {
       if (childTagName)
         this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagName], {
-          mixinName: "UU5.Common.BaseMixin"
+          mixinName: "UU5.Common.BaseMixin",
         });
       else this.showError("childNotAllowed", [child, defaultChildTagName], { mixinName: "UU5.Common.BaseMixin" });
     }
     return result;
   },
 
-  expandChildProps_: function(child, i) {
+  expandChildProps_: function (child, i) {
     var newChildProps = { ...child.props };
     var onClick = newChildProps.onClick || this.props.onClick;
 
     newChildProps.onClick = this.shouldCollapseOthers()
-      ? panel => {
+      ? (panel) => {
           panel && panel.isExpanded()
             ? this.collapseOthers(panel.getId(), () => onClick && onClick(panel))
             : child.props.onClick
@@ -301,7 +301,7 @@ export const Accordion = UU5.Common.VisualComponent.create({
   _registerNull(inst) {
     // unmount of component means that suspense is loaded and component should be rendered
     if (!inst) {
-      this.setState(state => {
+      this.setState((state) => {
         if (state.editationLazyLoaded) return;
 
         // Edit component is loaded - need to set to static variable because other Edit component does not render fallback component
@@ -328,7 +328,7 @@ export const Accordion = UU5.Common.VisualComponent.create({
     this._editableComponent = component;
   },
 
-  _getValuesAsArray: function(value, name) {
+  _getValuesAsArray: function (value, name) {
     var values = [];
 
     if (typeof value === "string") {
@@ -342,7 +342,7 @@ export const Accordion = UU5.Common.VisualComponent.create({
     return values;
   },
 
-  _eachPanelWithCallback: function(setStateCallback, callback) {
+  _eachPanelWithCallback: function (setStateCallback, callback) {
     var panels = this.getPanels();
     var newSetStateCallback = UU5.Common.Tools.buildCounterCallback(setStateCallback, panels.length);
 
@@ -356,29 +356,29 @@ export const Accordion = UU5.Common.VisualComponent.create({
     return this;
   },
 
-  _eachPanelByIdWithCallback: function(panelId, setStateCallback, callback) {
+  _eachPanelByIdWithCallback: function (panelId, setStateCallback, callback) {
     var ids = this._getValuesAsArray(panelId, "panelId");
     var newSetStateCallback = UU5.Common.Tools.buildCounterCallback(setStateCallback, ids.length);
 
-    this.eachPanelByIds(ids, function(panel, i) {
+    this.eachPanelByIds(ids, function (panel, i) {
       return callback(panel, i, newSetStateCallback);
     });
 
     return this;
   },
 
-  _eachPanelByNameWithCallback: function(panelName, setStateCallback, callback) {
+  _eachPanelByNameWithCallback: function (panelName, setStateCallback, callback) {
     var names = this._getValuesAsArray(panelName, "panelName");
     var newSetStateCallback = UU5.Common.Tools.buildCounterCallback(setStateCallback, names.length);
 
-    this.eachPanelByNames(names, function(panel, i) {
+    this.eachPanelByNames(names, function (panel, i) {
       return callback(panel, i, newSetStateCallback);
     });
 
     return this;
   },
 
-  _buildChildren: function() {
+  _buildChildren: function () {
     var childrenProps = {};
     if (this.props.panels) {
       childrenProps.content = { tag: this.getDefault().validChildTagName, propsArray: this.props.panels };
@@ -395,7 +395,7 @@ export const Accordion = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return this.getNestingLevel() ? (
       <div {...this.getMainAttrs()}>
         <>
@@ -409,7 +409,7 @@ export const Accordion = UU5.Common.VisualComponent.create({
         </>
       </div>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

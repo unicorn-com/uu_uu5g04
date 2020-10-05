@@ -27,8 +27,8 @@ export default UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("Carousel.Item"),
     classNames: {
-      main: ns.css("carousel-item")
-    }
+      main: ns.css("carousel-item"),
+    },
   },
   //@@viewOff:statics
 
@@ -38,7 +38,7 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      contentEditable: true
+      contentEditable: true,
     };
   },
   //@@viewOff:getDefaultProps
@@ -58,6 +58,6 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOn:render
   render() {
     return <Div {...this.getMainPropsToPass()}>{UU5.Common.Children.toArray(this.props.children)}</Div>;
-  }
+  },
   //@@viewOff:render
 });

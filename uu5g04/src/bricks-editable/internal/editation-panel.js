@@ -25,7 +25,7 @@ import EndEditation from "../end-editation.js";
 const MAIN_CLASS_NAME = ns.css("editation-panel");
 
 const DEFAULT_ITEM_PROPS = {
-  colorSchema: "default"
+  colorSchema: "default",
 };
 
 export const EditationPanel = UU5.Common.VisualComponent.create({
@@ -96,9 +96,9 @@ export const EditationPanel = UU5.Common.VisualComponent.create({
           .uu5-bricks-modal-body {
             padding: 0;
           }
-        `)
+        `),
     },
-    lsi: Lsi.editablePanel
+    lsi: Lsi.editablePanel,
   },
   //@@viewOff:statics
 
@@ -109,7 +109,7 @@ export const EditationPanel = UU5.Common.VisualComponent.create({
     moreSettings: UU5.PropTypes.func,
     onSettingsClick: UU5.PropTypes.func,
     onMoreSettingsClick: UU5.PropTypes.func,
-    activeInput: UU5.PropTypes.object
+    activeInput: UU5.PropTypes.object,
   },
   //@@viewOff:propTypes
 
@@ -121,7 +121,7 @@ export const EditationPanel = UU5.Common.VisualComponent.create({
       moreSettings: null,
       onSettingsClick: null,
       onMoreSettingsClick: null,
-      activeInput: null
+      activeInput: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -136,7 +136,7 @@ export const EditationPanel = UU5.Common.VisualComponent.create({
 
     return {
       settingsOpen: false,
-      moreSettingsOpen: false
+      moreSettingsOpen: false,
     };
   },
 
@@ -195,7 +195,7 @@ export const EditationPanel = UU5.Common.VisualComponent.create({
     let result = true;
     let eventPath = this._getEventPath(e);
 
-    eventPath.every(item => {
+    eventPath.every((item) => {
       if (item.id === this.getId()) {
         result = false;
         return false;
@@ -272,7 +272,7 @@ export const EditationPanel = UU5.Common.VisualComponent.create({
       const opts = {
         aroundElement: UU5.Common.DOM.findNode(component),
         position: "bottom-right",
-        onClose: this._onClose
+        onClose: this._onClose,
       };
 
       this.setState({ settingsOpen: true }, () => this._popover.open(opts, setStateCallback));
@@ -386,7 +386,7 @@ export const EditationPanel = UU5.Common.VisualComponent.create({
     return (
       <div {...this._getMainAttrs()}>
         <div className={this.getClassName("leftToolbarSide")}>
-        {(this.props.settingsItems ||
+          {(this.props.settingsItems ||
             this.props.moreSettings ||
             typeof this.props.onMoreSettingsClick === "function") && [
             <UU5.Bricks.Button
@@ -405,9 +405,10 @@ export const EditationPanel = UU5.Common.VisualComponent.create({
               <UU5.Bricks.Popover key="edit-popover" ref_={this._registerPopover} forceRender controlled={false}>
                 {this._getSettingsComponents(this.props.settingsItems)}
               </UU5.Bricks.Popover>
-            )
+            ),
           ]}
-          {this.props.children}</div>
+          {this.props.children}
+        </div>
         <div className={this.getClassName("rightToolbarSide")}>
           {typeof this.props.onEndEditation === "function" && <EndEditation onClick={this.props.onEndEditation} />}
           {this.props.moreSettings && (
@@ -422,7 +423,7 @@ export const EditationPanel = UU5.Common.VisualComponent.create({
         </div>
       </div>
     );
-  }
+  },
   //@@viewOff:render
 });
 

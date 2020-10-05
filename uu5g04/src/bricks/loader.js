@@ -20,13 +20,13 @@ export const Loader = UU5.Common.Loader;
 Loader.createContext = () => {
   let LoaderContext = UU5.Common.Context.create();
 
-  const Provider = props => (
+  const Provider = (props) => (
     <Loader {...props}>
-      {values => <LoaderContext.Provider value={values}>{props.children}</LoaderContext.Provider>}
+      {(values) => <LoaderContext.Provider value={values}>{props.children}</LoaderContext.Provider>}
     </Loader>
   );
 
-  const Consumer = props => <LoaderContext.Consumer>{props.children}</LoaderContext.Consumer>;
+  const Consumer = (props) => <LoaderContext.Consumer>{props.children}</LoaderContext.Consumer>;
 
   return { Provider, Consumer };
 };

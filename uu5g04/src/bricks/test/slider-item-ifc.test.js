@@ -16,13 +16,13 @@ import "uu5g04-bricks";
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
-describe("UU5.Bricks.Slider.Item interface testing", function() {
+describe("UU5.Bricks.Slider.Item interface testing", function () {
   it("getValue() should return value of props value.", () => {
     const wrapper = mount(
-      <UU5.Bricks.Slider id={"uuID01"} ref_={slider => (this.slider = slider)}>
-        <UU5.Bricks.Slider.Item ref_={sliderItem1 => (this.sliderItem1 = sliderItem1)} id={"uuID02"} content="1" />
+      <UU5.Bricks.Slider id={"uuID01"} ref_={(slider) => (this.slider = slider)}>
+        <UU5.Bricks.Slider.Item ref_={(sliderItem1) => (this.sliderItem1 = sliderItem1)} id={"uuID02"} content="1" />
         <UU5.Bricks.Slider.Item
-          ref_={sliderItem2 => (this.sliderItem2 = sliderItem2)}
+          ref_={(sliderItem2) => (this.sliderItem2 = sliderItem2)}
           id={"uuID03"}
           content="2"
           value={3}
@@ -35,15 +35,15 @@ describe("UU5.Bricks.Slider.Item interface testing", function() {
 
   it("setValue(value, setStateCallBack)", () => {
     const wrapper = mount(
-      <UU5.Bricks.Slider id={"uuID01"} ref_={slider => (this.slider = slider)}>
+      <UU5.Bricks.Slider id={"uuID01"} ref_={(slider) => (this.slider = slider)}>
         <UU5.Bricks.Slider.Item
-          ref_={sliderItem1 => (this.sliderItem1 = sliderItem1)}
+          ref_={(sliderItem1) => (this.sliderItem1 = sliderItem1)}
           id={"uuID02"}
           content="1"
           value={0}
         />
         <UU5.Bricks.Slider.Item
-          ref_={sliderItem2 => (this.sliderItem2 = sliderItem2)}
+          ref_={(sliderItem2) => (this.sliderItem2 = sliderItem2)}
           id={"uuID03"}
           content="2"
           value={3}
@@ -60,15 +60,15 @@ describe("UU5.Bricks.Slider.Item interface testing", function() {
 
   it("increase(value, setStateCallBack)", () => {
     const wrapper = mount(
-      <UU5.Bricks.Slider id={"uuID01"} ref_={slider => (this.slider = slider)} max={5}>
+      <UU5.Bricks.Slider id={"uuID01"} ref_={(slider) => (this.slider = slider)} max={5}>
         <UU5.Bricks.Slider.Item
-          ref_={sliderItem1 => (this.sliderItem1 = sliderItem1)}
+          ref_={(sliderItem1) => (this.sliderItem1 = sliderItem1)}
           id={"uuID02"}
           content="1"
           value={0}
         />
         <UU5.Bricks.Slider.Item
-          ref_={sliderItem2 => (this.sliderItem2 = sliderItem2)}
+          ref_={(sliderItem2) => (this.sliderItem2 = sliderItem2)}
           id={"uuID03"}
           content="2"
           value={3}
@@ -89,15 +89,15 @@ describe("UU5.Bricks.Slider.Item interface testing", function() {
 
   it("decrease(value, setStateCallBack)", () => {
     const wrapper = mount(
-      <UU5.Bricks.Slider id={"uuID01"} ref_={slider => (this.slider = slider)}>
+      <UU5.Bricks.Slider id={"uuID01"} ref_={(slider) => (this.slider = slider)}>
         <UU5.Bricks.Slider.Item
-          ref_={sliderItem1 => (this.sliderItem1 = sliderItem1)}
+          ref_={(sliderItem1) => (this.sliderItem1 = sliderItem1)}
           id={"uuID02"}
           content="1"
           value={0}
         />
         <UU5.Bricks.Slider.Item
-          ref_={sliderItem2 => (this.sliderItem2 = sliderItem2)}
+          ref_={(sliderItem2) => (this.sliderItem2 = sliderItem2)}
           id={"uuID03"}
           content="2"
           value={3}

@@ -28,33 +28,33 @@ export const ResizeItem = UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("ResizeItem"),
     classNames: {
-      main: ns.css("resize-item")
+      main: ns.css("resize-item"),
     },
     opt: {
-      nestingLevelWrapper: true
+      nestingLevelWrapper: true,
     },
     errors: {
-      invalidParent: "Parent of this component is not ScreenSize."
-    }
+      invalidParent: "Parent of this component is not ScreenSize.",
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    max: UU5.PropTypes.number
+    max: UU5.PropTypes.number,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
-      max: null
+      max: null,
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  UNSAFE_componentWillMount: function() {
+  UNSAFE_componentWillMount: function () {
     let parent = this.getParent();
 
     if (parent) {
@@ -79,9 +79,9 @@ export const ResizeItem = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return this.props.content || (this.props.children && UU5.Common.Children.toArray(this.props.children));
-  }
+  },
   //@@viewOff:render
 });
 

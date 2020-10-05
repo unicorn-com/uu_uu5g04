@@ -29,7 +29,7 @@ describe(`UU5.Bricks.Heading interface testing`, () => {
         fixed={false}
         style={{
           padding: "10px",
-          backgroundColor: "cornflowerblue"
+          backgroundColor: "cornflowerblue",
         }}
       />
     );
@@ -46,7 +46,7 @@ describe(`UU5.Bricks.Heading interface testing`, () => {
         fixed={true}
         style={{
           padding: "10px",
-          backgroundColor: "cornflowerblue"
+          backgroundColor: "cornflowerblue",
         }}
       />
     );
@@ -63,7 +63,7 @@ describe(`UU5.Bricks.Heading interface testing`, () => {
         fixed={false}
         style={{
           padding: "10px",
-          backgroundColor: "cornflowerblue"
+          backgroundColor: "cornflowerblue",
         }}
       />
     );
@@ -79,7 +79,7 @@ describe(`UU5.Bricks.Heading interface testing`, () => {
         fixed={false}
         style={{
           padding: "10px",
-          backgroundColor: "cornflowerblue"
+          backgroundColor: "cornflowerblue",
         }}
       />
     );
@@ -103,7 +103,7 @@ describe(`UU5.Bricks.Heading interface testing`, () => {
         fixed={true}
         style={{
           padding: "10px",
-          backgroundColor: "cornflowerblue"
+          backgroundColor: "cornflowerblue",
         }}
       />
     );
@@ -127,7 +127,7 @@ describe(`UU5.Bricks.Heading interface testing`, () => {
         id={"uuID01"}
         style={{
           padding: "10px",
-          backgroundColor: "cornflowerblue"
+          backgroundColor: "cornflowerblue",
         }}
       />
     );
@@ -153,7 +153,7 @@ describe(`UU5.Bricks.Heading interface testing`, () => {
         fixed={true}
         style={{
           padding: "10px",
-          backgroundColor: "cornflowerblue"
+          backgroundColor: "cornflowerblue",
         }}
       />
     );

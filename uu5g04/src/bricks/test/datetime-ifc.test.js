@@ -71,7 +71,7 @@ describe(`UU5.Bricks.DateTime interface testing`, () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(wrapper.instance().getCountry()).toBeNull();
+    expect(wrapper.instance().getCountry()).toBe(UU5.Common.Tools.getLanguage());
     expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().setCountry("en-us", mockFunc);
     wrapper.update();
@@ -83,7 +83,7 @@ describe(`UU5.Bricks.DateTime interface testing`, () => {
     expect(wrapper.instance().getCountry()).toMatch(/en-us/);
   });
 
-  it("getTimeZone() default values is 1", () => {
+  it("getTimeZone() default value is undefined", () => {
     const wrapper = shallow(
       <UU5.Bricks.DateTime
         id={"uuID01"}
@@ -92,7 +92,7 @@ describe(`UU5.Bricks.DateTime interface testing`, () => {
         language={"en-us"}
       />
     );
-    expect(wrapper.instance().getTimeZone()).toBe(-new Date().getTimezoneOffset() / 60);
+    expect(wrapper.instance().getTimeZone()).toBe(undefined);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -120,8 +120,6 @@ describe(`UU5.Bricks.DateTime interface testing`, () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(wrapper.instance().getTimeZone()).toBe(-new Date().getTimezoneOffset() / 60);
-    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().setTimeZone(12.0, mockFunc);
     wrapper.update();
     expect(wrapper).toMatchSnapshot();
@@ -139,12 +137,11 @@ describe(`UU5.Bricks.DateTime interface testing`, () => {
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getFormat()).toBeNull();
     expect(wrapper.instance().getCountry()).toBe("cs-cz");
-    expect(wrapper.instance().getTimeZone()).toBe(-new Date().getTimezoneOffset() / 60);
     const returnValue = wrapper.instance().setOptions(
       {
         format: "mm.dd.y HH:MM:SS",
         country: "en-us",
-        timeZone: 5.0
+        timeZone: 5.0,
       },
       mockFunc
     );

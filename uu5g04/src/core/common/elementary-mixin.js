@@ -26,9 +26,9 @@ export const ElementaryMixin = {
         selected: ns.css("selected"),
         disabled: ns.css("disabled"),
         disabledCover: ns.css("disabled-cover"),
-        disabledCoverTransparent: ns.css("disabled-cover-transparent")
-      }
-    }
+        disabledCoverTransparent: ns.css("disabled-cover-transparent"),
+      },
+    },
   },
   //@@viewOff:statics
 
@@ -37,7 +37,7 @@ export const ElementaryMixin = {
     hidden: PropTypes.bool,
     disabled: PropTypes.bool,
     selected: PropTypes.bool,
-    controlled: PropTypes.bool
+    controlled: PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -47,7 +47,7 @@ export const ElementaryMixin = {
       hidden: false,
       disabled: false,
       selected: false,
-      controlled: true
+      controlled: true,
     };
   },
   //@@viewOff:getDefaultProps
@@ -60,7 +60,7 @@ export const ElementaryMixin = {
     return {
       hidden: this.props.hidden,
       disabled: this.props.disabled,
-      selected: this.props.selected
+      selected: this.props.selected,
     };
   },
 
@@ -69,7 +69,7 @@ export const ElementaryMixin = {
       this.setState({
         hidden: nextProps.hidden,
         disabled: nextProps.disabled,
-        selected: nextProps.selected
+        selected: nextProps.selected,
       });
     }
   },
@@ -84,7 +84,7 @@ export const ElementaryMixin = {
     return {
       hidden: this.isHidden(),
       disabled: this.isDisabled(),
-      selected: this.isSelected()
+      selected: this.isSelected(),
     };
   },
 
@@ -93,7 +93,7 @@ export const ElementaryMixin = {
       hidden: this.isHidden(),
       disabled: this.isDisabled(),
       selected: this.isSelected(),
-      controlled: true
+      controlled: true,
     };
   },
 
@@ -152,7 +152,7 @@ export const ElementaryMixin = {
   },
 
   toggleHiddenDefault(setStateCallback) {
-    this.setState(state => {
+    this.setState((state) => {
       return { hidden: !state.hidden };
     }, setStateCallback);
   },
@@ -213,7 +213,7 @@ export const ElementaryMixin = {
   },
 
   toggleDisabledDefault(setStateCallback) {
-    this.setState(state => {
+    this.setState((state) => {
       return { disabled: !state.disabled };
     }, setStateCallback);
     return this;
@@ -266,7 +266,7 @@ export const ElementaryMixin = {
   },
 
   toggleSelectedDefault(setStateCallback) {
-    this.setState(state => {
+    this.setState((state) => {
       return { selected: !state.selected };
     }, setStateCallback);
     return this;
@@ -278,7 +278,7 @@ export const ElementaryMixin = {
       mainAttrs || (this.getUU5CommonBaseMixinProps && this.getUU5CommonBaseMixinProps().mainAttrs),
       {
         title: this.getTooltip(),
-        className: this.getFullClassName()
+        className: this.getFullClassName(),
       }
     );
     newMainAttrs.className = this.getHiddenClassName(newMainAttrs.className);
@@ -328,7 +328,7 @@ export const ElementaryMixin = {
       this.getClassName("disabledCoverTransparent") ||
       this.getClassName(null, "UU5.Common.ElementaryMixin").disabledCoverTransparent;
     return this.isDisabled() ? Element.create("span", { className: className, key: "disabledCoverTransparent" }) : null;
-  }
+  },
   //@@viewOff:interface
 
   //@@viewOn:overriding

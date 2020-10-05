@@ -40,8 +40,8 @@ export const Input = withContext(
             &::placeholder {
               color: rgba(0,0,0,0.24);
             }
-          `)
-        }
+          `),
+        },
       },
       //@@viewOff:statics
 
@@ -51,10 +51,13 @@ export const Input = withContext(
         toolbarItems: UU5.PropTypes.arrayOf(
           UU5.PropTypes.oneOfType([
             UU5.PropTypes.shape({
-              type: UU5.PropTypes.oneOfType([UU5.PropTypes.oneOf(["button", "dropdown", "separator"]), UU5.PropTypes.func]),
-              props: UU5.PropTypes.oneOfType([UU5.PropTypes.func, UU5.PropTypes.object])
+              type: UU5.PropTypes.oneOfType([
+                UU5.PropTypes.oneOf(["button", "dropdown", "separator"]),
+                UU5.PropTypes.func,
+              ]),
+              props: UU5.PropTypes.oneOfType([UU5.PropTypes.func, UU5.PropTypes.object]),
             }),
-            UU5.PropTypes.element
+            UU5.PropTypes.element,
           ])
         ),
         placeholder: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.object]),
@@ -62,7 +65,7 @@ export const Input = withContext(
         open: UU5.PropTypes.func,
         close: UU5.PropTypes.func,
         onBlur: UU5.PropTypes.func,
-        onChange: UU5.PropTypes.func
+        onChange: UU5.PropTypes.func,
       },
       //@@viewOff:propTypes
 
@@ -76,7 +79,7 @@ export const Input = withContext(
           open: undefined,
           close: undefined,
           onBlur: undefined,
-          onChange: undefined
+          onChange: undefined,
         };
       },
       //@@viewOff:getDefaultProps
@@ -86,7 +89,7 @@ export const Input = withContext(
         return {
           value: this.props.value,
           readOnly: this.props.readOnly,
-          active: false
+          active: false,
         };
       },
 
@@ -165,7 +168,7 @@ export const Input = withContext(
         props.onFocus = this._onFocus;
         props.onBlur = this._onBlur;
         props.value = this.state.value;
-        props.ref = input => (this._input = input);
+        props.ref = (input) => (this._input = input);
         props.readOnly = this.state.readOnly;
 
         if (!this.state.value) {
@@ -187,12 +190,12 @@ export const Input = withContext(
                     {...this._getProps()}
                     placeholder={UU5.Common.Tools.getLsiItemByLanguage(this.props.placeholder)}
                   />
-                )
+                ),
               });
             }}
           </UU5.Bricks.Lsi>
         );
-      }
+      },
       //@@viewOn:render
     })
   )

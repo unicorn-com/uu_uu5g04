@@ -33,11 +33,11 @@ export const CookiesInfo = UU5.Common.VisualComponent.create({
     tagName: ns.name("CookiesInfo"),
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "smallBox"),
     classNames: {
-      main: ns.css("cookies-info")
+      main: ns.css("cookies-info"),
     },
     opt: {
-      nestingLevelRoot: true
-    }
+      nestingLevelRoot: true,
+    },
   },
   //@@viewOff:statics
 
@@ -49,21 +49,21 @@ export const CookiesInfo = UU5.Common.VisualComponent.create({
         UU5.PropTypes.shape({
           header: UU5.PropTypes.any,
           // array of contents
-          rows: UU5.PropTypes.arrayOf(UU5.PropTypes.any)
+          rows: UU5.PropTypes.arrayOf(UU5.PropTypes.any),
         })
-      )
+      ),
     }),
     headerLevel: UU5.PropTypes.oneOf(["0", "1", "2", "3", "4", "5", "6", 0, 1, 2, 3, 4, 5, 6]),
-    chapterLevel: UU5.PropTypes.oneOf(["0", "1", "2", "3", "4", "5", "6", 0, 1, 2, 3, 4, 5, 6])
+    chapterLevel: UU5.PropTypes.oneOf(["0", "1", "2", "3", "4", "5", "6", 0, 1, 2, 3, 4, 5, 6]),
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       data: {},
       headerLevel: 1,
-      chapterLevel: 2
+      chapterLevel: 2,
     };
   },
   //@@viewOff:getDefaultProps
@@ -78,12 +78,12 @@ export const CookiesInfo = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _getChapters: function(chaptersData) {
+  _getChapters: function (chaptersData) {
     var collection = this;
     return (
       chaptersData &&
-      chaptersData.map(function(chapter, i) {
-        var paragraphs = chapter.rows.map(function(content, j) {
+      chaptersData.map(function (chapter, i) {
+        var paragraphs = chapter.rows.map(function (content, j) {
           return <P content={content} key={j} />;
         });
 
@@ -98,7 +98,7 @@ export const CookiesInfo = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     var data = this.props.data;
     var chapters = this._getChapters(data.chapters);
 
@@ -112,7 +112,7 @@ export const CookiesInfo = UU5.Common.VisualComponent.create({
         {chapters}
       </Section>
     );
-  }
+  },
   //@@viewOff:render
 });
 

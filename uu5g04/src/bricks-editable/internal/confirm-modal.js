@@ -24,9 +24,9 @@ export const ConfirmModal = UU5.Common.VisualComponent.create({
   statics: {
     tagName: "ConfirmModal",
     classNames: {
-      main: ns.css("confirm-modal")
+      main: ns.css("confirm-modal"),
     },
-    lsi: () => Lsi.confirmModal
+    lsi: () => Lsi.confirmModal,
   },
   //@@viewOff:statics
 
@@ -35,7 +35,7 @@ export const ConfirmModal = UU5.Common.VisualComponent.create({
     bodyContent: UU5.PropTypes.any,
     headerContent: UU5.PropTypes.any,
     confirmContent: UU5.PropTypes.any,
-    cancelContent: UU5.PropTypes.any
+    cancelContent: UU5.PropTypes.any,
   },
   //@@viewOff:propTypes
 
@@ -45,7 +45,7 @@ export const ConfirmModal = UU5.Common.VisualComponent.create({
       bodyContent: <UU5.Bricks.Lsi lsi={Lsi.confirmModal.content} />,
       headerContent: <UU5.Bricks.Lsi lsi={Lsi.confirmModal.header} />,
       confirmButtonContent: <UU5.Bricks.Lsi lsi={Lsi.confirmModal.confirm} />,
-      refuseButtonContent: <UU5.Bricks.Lsi lsi={Lsi.confirmModal.cancel} />
+      refuseButtonContent: <UU5.Bricks.Lsi lsi={Lsi.confirmModal.cancel} />,
     };
   },
   //@@viewOff:getDefaultProps
@@ -81,14 +81,14 @@ export const ConfirmModal = UU5.Common.VisualComponent.create({
         size="m"
         header={this.props.headerContent}
         confirmButtonProps={{
-          content: this.props.confirmButtonContent
+          content: this.props.confirmButtonContent,
         }}
         refuseButtonProps={{
-          content: this.props.refuseButtonContent
+          content: this.props.refuseButtonContent,
         }}
       />
     );
-  }
+  },
   //@@viewOff:render
 });
 

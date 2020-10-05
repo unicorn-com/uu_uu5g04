@@ -35,14 +35,14 @@ export const Authenticated = UU5.Common.VisualComponent.create({
     tagName: ns.name("Authenticated"),
     warnings: {
       noPropsGiven:
-        "The component will never show any content - you should always set at least one of the props 'pending', 'authenticated', 'notAuthenticated'."
+        "The component will never show any content - you should always set at least one of the props 'pending', 'authenticated', 'notAuthenticated'.",
     },
     editMode: {
       name: { en: "Authenticated", cs: "Authenticated" },
       backgroundColor: "rgba(0,0,0,.2)",
       color: "rgba(0,0,0,.87)",
-      highlightColor: "#CCCCCC"
-    }
+      highlightColor: "#CCCCCC",
+    },
   },
   //@@viewOff:statics
 
@@ -50,7 +50,7 @@ export const Authenticated = UU5.Common.VisualComponent.create({
   propTypes: {
     authenticated: UU5.PropTypes.bool,
     notAuthenticated: UU5.PropTypes.bool,
-    pending: UU5.PropTypes.bool
+    pending: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -60,7 +60,7 @@ export const Authenticated = UU5.Common.VisualComponent.create({
       authenticated: null, // using null-s to be able to show development warning if none of these 3 props was given
       notAuthenticated: null,
       pending: null,
-      contentEditable: true
+      contentEditable: true,
     };
   },
   //@@viewOff:getDefaultProps
@@ -69,7 +69,7 @@ export const Authenticated = UU5.Common.VisualComponent.create({
   getInitialState() {
     this._checkProps(this.props);
     return {
-      editationLazyLoaded: false
+      editationLazyLoaded: false,
     };
   },
 
@@ -91,7 +91,7 @@ export const Authenticated = UU5.Common.VisualComponent.create({
   _registerNull(inst) {
     // unmount of component means that suspense is loaded and component should be rendered
     if (!inst) {
-      this.setState(state => {
+      this.setState((state) => {
         if (state.editationLazyLoaded) return;
 
         // Edit component is loaded - need to set to static variable because other Edit component does not render fallback component
@@ -138,7 +138,7 @@ export const Authenticated = UU5.Common.VisualComponent.create({
         {renderContent && (!this.state.editation || !this._isEditationLazyLoaded()) ? this.getChildren() : null}
       </>
     );
-  }
+  },
   //@@viewOff:render
 });
 

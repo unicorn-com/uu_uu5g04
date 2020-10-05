@@ -48,7 +48,7 @@ export class TimeManager {
   }
 
   _eachInterval(ms) {
-    this._intervals[ms].fces.forEach(fce => fce());
+    this._intervals[ms].fces.forEach((fce) => fce());
   }
 }
 

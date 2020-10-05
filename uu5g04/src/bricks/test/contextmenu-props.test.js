@@ -27,7 +27,7 @@ const MyAllowTagsComponents = UU5.Common.VisualComponent.create({
   statics: { tagName: "UU5.Example.MyCompButton", classNames: { main: "mytr" } },
   render() {
     return <UU5.Example.MyCompButton {...this.getMainPropsToPass()} />;
-  }
+  },
 });
 
 const CONFIG = {
@@ -39,28 +39,28 @@ const CONFIG = {
     "UU5.Common.ContentMixin",
     "UU5.Common.CcrWriterMixin",
     "UU5.Common.PureRenderMixin",
-    "UU5.Common.NestingLevelMixin"
+    "UU5.Common.NestingLevelMixin",
   ],
   props: {
     shown: {
-      values: [true, false]
+      values: [true, false],
     },
     // parentElement: {}, - Expression from DEV - Do not test this props.
     allowTags: {
-      allowTagsArray: ["UU5.Example.MyCompButton"]
+      allowTagsArray: ["UU5.Example.MyCompButton"],
     },
     compactSubmenu: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
   },
   requiredProps: {
-    children: [<UU5.Bricks.ContextMenu.Item id={"uuID2"} label="Ráno" icon="mdi-weather-sunset-up" />]
+    children: [<UU5.Bricks.ContextMenu.Item id={"uuID2"} label="Ráno" icon="mdi-weather-sunset-up" />],
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.ContextMenu`, () => {
@@ -100,7 +100,7 @@ describe(`UU5.Bricks.ContextMenu docKit examples`, () => {
   });
 });
 
-const getContextMenu = props => (
+const getContextMenu = (props) => (
   <UU5.Bricks.ContextMenu {...props}>
     <UU5.Bricks.ContextMenu.Item label="Level 0" space>
       <UU5.Bricks.ContextMenu.Item label="Level 1" space>
@@ -119,7 +119,7 @@ describe(`UU5.Bricks.ContextMenu functionality`, () => {
     let wrapper = mount(getContextMenu({ compactSubmenu: "xs s" }));
     expect(
       wrapper.findWhere(
-        node =>
+        (node) =>
           node.instance() &&
           node.instance().getTagName &&
           node.instance().getTagName() === "UU5.Bricks.CompactContextMenu"
@@ -130,7 +130,7 @@ describe(`UU5.Bricks.ContextMenu functionality`, () => {
     wrapper = mount(getContextMenu({ compactSubmenu: "xs s" }));
     expect(
       wrapper.findWhere(
-        node =>
+        (node) =>
           node.instance() &&
           node.instance().getTagName &&
           node.instance().getTagName() === "UU5.Bricks.CompactContextMenu"
@@ -139,21 +139,21 @@ describe(`UU5.Bricks.ContextMenu functionality`, () => {
 
     wrapper.instance().open();
     wrapper.update();
-    let item = wrapper.findWhere(node => node.hasClass("uu5-bricks-link") && node.text() === "Level 0");
+    let item = wrapper.findWhere((node) => node.hasClass("uu5-bricks-link") && node.text() === "Level 0");
     item.simulate("click");
     wrapper.update();
 
-    expect(wrapper.findWhere(node => node.hasClass("uu5-bricks-link") && node.text() === "Back").length).toBe(1);
-    item = wrapper.findWhere(node => node.hasClass("uu5-bricks-link") && node.text() === "Level 1");
+    expect(wrapper.findWhere((node) => node.hasClass("uu5-bricks-link") && node.text() === "Back").length).toBe(1);
+    item = wrapper.findWhere((node) => node.hasClass("uu5-bricks-link") && node.text() === "Level 1");
     item.simulate("click");
     wrapper.update();
 
-    let backButton = wrapper.findWhere(node => node.hasClass("uu5-bricks-link") && node.text() === "Back");
-    expect(wrapper.findWhere(node => node.hasClass("uu5-bricks-link") && node.text() === "Level 2").length).toBe(1);
+    let backButton = wrapper.findWhere((node) => node.hasClass("uu5-bricks-link") && node.text() === "Back");
+    expect(wrapper.findWhere((node) => node.hasClass("uu5-bricks-link") && node.text() === "Level 2").length).toBe(1);
     backButton.simulate("click");
     wrapper.update();
 
-    item = wrapper.findWhere(node => node.hasClass("uu5-bricks-link") && node.text() === "Level 1 Standard Item");
+    item = wrapper.findWhere((node) => node.hasClass("uu5-bricks-link") && node.text() === "Level 1 Standard Item");
     item.simulate("click");
     wrapper.update();
     expect(wrapper.instance().isOpen()).toBeFalsy();

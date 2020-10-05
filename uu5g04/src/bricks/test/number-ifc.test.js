@@ -78,7 +78,7 @@ describe(`UU5.Bricks.Number interface testing`, () => {
       {
         country: "sk-SK",
         thousandSeparator: ";",
-        decimalSeparator: "_"
+        decimalSeparator: "_",
       },
       mockFunc
     );

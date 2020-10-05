@@ -23,7 +23,7 @@ const mockData = {
   age: 25,
   country: "USA",
   state: "California",
-  city: "Los Angeles"
+  city: "Los Angeles",
 };
 
 const CONFIG = {
@@ -32,19 +32,19 @@ const CONFIG = {
     mapping: {
       values: [
         { surname: "header", name: "content", state: "footer" },
-        { city: "header", state: "content", country: "footer" }
-      ]
-    }
+        { city: "header", state: "content", country: "footer" },
+      ],
+    },
   },
   requiredProps: {
     data: mockData,
-    children: <UU5.Bricks.Container />
+    children: <UU5.Bricks.Container />,
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Common.PropMapper props testing`, () => {
@@ -53,7 +53,7 @@ describe(`UU5.Common.PropMapper props testing`, () => {
 
 describe(`UU5.Common.PropMapper custom props testing`, () => {
   test("with loader", () => {
-    const onLoadFn = dtoIn => {
+    const onLoadFn = (dtoIn) => {
       dtoIn.done(mockData);
     };
 

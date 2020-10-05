@@ -21,17 +21,17 @@ const CONFIG = {
     "UU5.Common.SectionMixin",
     "UU5.Common.NestingLevelMixin",
     "UU5.Common.ContentMixin",
-    "UU5.Common.LevelMixin"
+    "UU5.Common.LevelMixin",
   ],
   props: {},
   requiredProps: {
-    children: [<UU5.Bricks.Li id={"childID"} content={"Li text"} />]
+    children: [<UU5.Bricks.Li id={"childID"} content={"Li text"} />],
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Ol`, () => {

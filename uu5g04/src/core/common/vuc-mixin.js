@@ -27,15 +27,15 @@ export const VucMixin = {
     "UU5.Common.VucMixin": {
       requiredMixins: ["UU5.Common.BaseMixin"],
       calls: {
-        authorizeVuc: "authorizeVuc"
+        authorizeVuc: "authorizeVuc",
       },
       errors: {
         sysAuthorizeVuc: "Error of VUC %s during connection to server.",
         notErrorRoute: "Error route was not set either in props or in Environment.",
-        notCall: "Call %s was not found either in props or in Environment."
+        notCall: "Call %s was not found either in props or in Environment.",
       },
-      lsi: () => Environment.Lsi.Common.vucMixin
-    }
+      lsi: () => Environment.Lsi.Common.vucMixin,
+    },
   },
   //@@viewOff:statics
 
@@ -48,10 +48,10 @@ export const VucMixin = {
       PropTypes.element,
       PropTypes.shape({
         tag: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-        props: PropTypes.object
-      })
+        props: PropTypes.object,
+      }),
     ]),
-    params: PropTypes.object
+    params: PropTypes.object,
   },
   //@@viewOff:propTypes
 
@@ -61,7 +61,7 @@ export const VucMixin = {
       authorized: true,
       calls: null,
       errorRoute: null,
-      params: null
+      params: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -74,7 +74,7 @@ export const VucMixin = {
 
     return {
       authorizedFeedback: this.props.authorized ? "loading" : "ready",
-      profiles: null
+      profiles: null,
     };
   },
 
@@ -83,24 +83,24 @@ export const VucMixin = {
     this.props.authorized && this._checkAuthorizing();
   },
 
-  componentWillUnmount: function() {
+  componentWillUnmount: function () {
     this._unmounted = true;
     this.constructor.vucTitle && window.UU5.Environment.EventListener.unregisterLsi(this.getId());
   },
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
-  hasUU5CommonVucMixin: function() {
+  hasUU5CommonVucMixin: function () {
     return this.hasMixin("UU5.Common.VucMixin");
   },
 
-  getUU5CommonVucMixinProps: function() {
+  getUU5CommonVucMixinProps: function () {
     return {
       // profiles: this.props.profiles
     };
   },
 
-  getUU5CommonVucMixinPropsToPass: function() {
+  getUU5CommonVucMixinPropsToPass: function () {
     return this.getUU5CommonVucMixinProps();
   },
 
@@ -184,7 +184,7 @@ export const VucMixin = {
       call({
         data: data,
         // dtoOut = {profiles: ['..', '..', ...], status: 'ok | error'}
-        done: dtoOut => {
+        done: (dtoOut) => {
           if (!this._unmounted) {
             if (dtoOut.data.status === "error") {
               let errorRoute = this.props.errorRoute;
@@ -194,7 +194,7 @@ export const VucMixin = {
                 } else {
                   this.showError("notErrorRoute", null, {
                     mixinName: "UU5.Common.VucMixin",
-                    context: { environment: Environment }
+                    context: { environment: Environment },
                   });
                 }
               }
@@ -203,7 +203,7 @@ export const VucMixin = {
               } else {
                 this.setState({
                   authorizedFeedback: "error",
-                  message: this.getLsi("notAuthorized", "UU5.Common.VucMixin")
+                  message: this.getLsi("notAuthorized", "UU5.Common.VucMixin"),
                 });
               }
             } else {
@@ -211,27 +211,27 @@ export const VucMixin = {
             }
           }
         },
-        fail: dtoOut => {
+        fail: (dtoOut) => {
           if (!this._unmounted) {
             this.showError("sysAuthorizeVuc", this.constructor.vucName || window.location.pathname, {
               mixinName: "UU5.Common.VucMixin",
-              context: { dtoOut: dtoOut }
+              context: { dtoOut: dtoOut },
             });
             this.setState({
               authorizedFeedback: "error",
               profiles: (dtoOut.data && dtoOut.data.profiles) || null,
-              message: this.getLsi("serverConnection", "UU5.Common.VucMixin")
+              message: this.getLsi("serverConnection", "UU5.Common.VucMixin"),
             });
           }
-        }
+        },
       });
     } else {
       this.showError("notCall", this.getCall().authorizeVuc, {
         mixinName: "UU5.Common.VucMixin",
-        context: { environment: Environment }
+        context: { environment: Environment },
       });
     }
-  }
+  },
   //@@viewOff:private
 
   //@@viewOn:render

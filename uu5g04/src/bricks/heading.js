@@ -26,7 +26,7 @@ export const Heading = UU5.Common.VisualComponent.create({
     UU5.Common.PureRenderMixin,
     UU5.Common.ElementaryMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.NestingLevelMixin
+    UU5.Common.NestingLevelMixin,
   ],
   //@@viewOff:mixins
 
@@ -39,8 +39,8 @@ export const Heading = UU5.Common.VisualComponent.create({
       fixed: ns.css("heading-fixed"),
       ghost: ns.css("heading-ghost"),
       hideOnScrollShown: ns.css("heading-auto-hide-shown"),
-      hideOnScrollHidden: ns.css("heading-auto-hide-hidden")
-    }
+      hideOnScrollHidden: ns.css("heading-auto-hide-hidden"),
+    },
   },
   //@@viewOff:statics
 
@@ -52,7 +52,7 @@ export const Heading = UU5.Common.VisualComponent.create({
     hideOnScrollOffset: UU5.PropTypes.number,
     onScrollToFixed: UU5.PropTypes.func, // not called in interface, just on scroll
     onScrollToBlocked: UU5.PropTypes.func, // not called in interface, just on scroll
-    spaceHolder: UU5.PropTypes.bool
+    spaceHolder: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -65,7 +65,7 @@ export const Heading = UU5.Common.VisualComponent.create({
       hideOnScrollOffset: 64,
       onScrollToFixed: null,
       onScrollToBlocked: null,
-      spaceHolder: false
+      spaceHolder: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -74,7 +74,7 @@ export const Heading = UU5.Common.VisualComponent.create({
   getInitialState() {
     return {
       fixed: this.props.fixed,
-      hideOnScrollHidden: false
+      hideOnScrollHidden: false,
     };
   },
 
@@ -105,10 +105,12 @@ export const Heading = UU5.Common.VisualComponent.create({
       this.props.onScrollToBlocked ||
       this.props.hideOnScroll
     ) {
-      UU5.Environment.EventListener.addWindowEvent("scroll", this.getId(), e => this._onScroll(this.props, e));
-      UU5.Environment.EventListener.addWindowEvent("wheel", this.getId(), e => this._onScroll(this.props, e));
-      UU5.Environment.EventListener.addWindowEvent("DOMMouseScroll", this.getId(), e => this._onScroll(this.props, e));
-      UU5.Environment.EventListener.addWindowEvent("mousewheel", this.getId(), e => this._onScroll(this.props, e));
+      UU5.Environment.EventListener.addWindowEvent("scroll", this.getId(), (e) => this._onScroll(this.props, e));
+      UU5.Environment.EventListener.addWindowEvent("wheel", this.getId(), (e) => this._onScroll(this.props, e));
+      UU5.Environment.EventListener.addWindowEvent("DOMMouseScroll", this.getId(), (e) =>
+        this._onScroll(this.props, e)
+      );
+      UU5.Environment.EventListener.addWindowEvent("mousewheel", this.getId(), (e) => this._onScroll(this.props, e));
     }
 
     this._height = this._root ? this._root.getBoundingClientRect().height : 0;
@@ -186,7 +188,7 @@ export const Heading = UU5.Common.VisualComponent.create({
     let prop = {
       onScrollToFixed: props.onScrollToFixed || this.props.onScrollToFixed,
       onScrollToBlocked: props.onScrollToBlocked || this.props.onScrollToBlocked,
-      fixedOnScroll: props.fixedOnScroll || this.props.fixedOnScroll
+      fixedOnScroll: props.fixedOnScroll || this.props.fixedOnScroll,
     };
     let scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
     let scrollStart = this.getOffsetTop();
@@ -271,7 +273,7 @@ export const Heading = UU5.Common.VisualComponent.create({
     attrs.className = this.getClassName("ghost");
     attrs.style = {};
     attrs.style.height = this._root && this.props.spaceHolder ? this._root.getBoundingClientRect().height : null;
-    attrs.ref = ghost => (this._ghost = ghost);
+    attrs.ref = (ghost) => (this._ghost = ghost);
 
     return attrs;
   },
@@ -290,7 +292,7 @@ export const Heading = UU5.Common.VisualComponent.create({
       }
     }
 
-    mainAttrs.ref = root => {
+    mainAttrs.ref = (root) => {
       this._root = root;
     };
 
@@ -310,7 +312,7 @@ export const Heading = UU5.Common.VisualComponent.create({
           this.isFixed() ? <div {...this._getGhostAttrs()} key="ghost" /> : null
         )
       : null;
-  }
+  },
   //@@viewOff:render
 });
 

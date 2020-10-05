@@ -31,7 +31,7 @@ export const NavBar = UU5.Common.VisualComponent.create({
     UU5.Common.ContentMixin,
     UU5.Common.ColorSchemaMixin,
     UU5.Common.NestingLevelMixin,
-    UU5.Common.PureRenderMixin
+    UU5.Common.PureRenderMixin,
   ],
   //@@viewOff:mixins
 
@@ -46,23 +46,23 @@ export const NavBar = UU5.Common.VisualComponent.create({
       navContainer: ns.css("nav-bar-container"),
       open: ns.css("nav-bar-open"),
       fixed: ns.css("nav-bar-fixed-"),
-      size: ns.css("nav-bar-size-")
+      size: ns.css("nav-bar-size-"),
     },
     defaults: {
       tagNames: {
         header: "UU5.Bricks.NavBar.Header",
-        nav: "UU5.Bricks.NavBar.Nav"
+        nav: "UU5.Bricks.NavBar.Nav",
       },
-      duration: 250
+      duration: 250,
     },
     warnings: {
       cannotOpenIfAlwaysOpen: "Cannot open navBar if alwaysOpen is set to true.",
       cannotCloseIfAlwaysOpen: "Cannot close navBar if alwaysOpen is set to true.",
-      cannotToggleIfAlwaysOpen: "Cannot toggle navBar if alwaysOpen is set to true."
+      cannotToggleIfAlwaysOpen: "Cannot toggle navBar if alwaysOpen is set to true.",
     },
     opt: {
-      nestingLevelWrapper: true
-    }
+      nestingLevelWrapper: true,
+    },
   },
   //@@viewOff:statics
 
@@ -78,7 +78,7 @@ export const NavBar = UU5.Common.VisualComponent.create({
     onOpen: UU5.PropTypes.func,
     onClose: UU5.PropTypes.func,
     size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
-    elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
+    elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
   },
   //@@viewOff:propTypes
 
@@ -95,7 +95,7 @@ export const NavBar = UU5.Common.VisualComponent.create({
       onOpen: null,
       onClose: null,
       size: "m",
-      elevation: null
+      elevation: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -105,7 +105,7 @@ export const NavBar = UU5.Common.VisualComponent.create({
     return {
       height: this._getHeight(this.props.open),
       offset: this.props.offset,
-      expanded: this.props.open
+      expanded: this.props.open,
     };
   },
 
@@ -224,8 +224,8 @@ export const NavBar = UU5.Common.VisualComponent.create({
       "MozTransitionDuration",
       "MsTransitionDuration",
       "OTransitionDuration",
-      "transitionDuration"
-    ].forEach(function(style) {
+      "transitionDuration",
+    ].forEach(function (style) {
       mainAttrs.style[style] = time + "s";
     });
 
@@ -235,7 +235,7 @@ export const NavBar = UU5.Common.VisualComponent.create({
   _prepareHeader(headerProps) {
     const headerPropsToPass = {
       id: this.getId() + "-header",
-      parent: this
+      parent: this,
     };
 
     var newHeaderProps = headerProps ? UU5.Common.Tools.mergeDeep(headerPropsToPass, headerProps) : headerPropsToPass;
@@ -249,7 +249,7 @@ export const NavBar = UU5.Common.VisualComponent.create({
   },
 
   _prepareNavs(navsProps) {
-    return navsProps.map(function(props, i) {
+    return navsProps.map(function (props, i) {
       props.key = props.key || "nav-" + i;
       return <Nav {...props} />;
     });
@@ -264,7 +264,7 @@ export const NavBar = UU5.Common.VisualComponent.create({
 
     if (children) {
       if (!Array.isArray(children)) children = [children];
-      children.map(child => {
+      children.map((child) => {
         switch (UU5.Common.Tools.getChildTagName(child)) {
           case this.getDefault().tagNames.header:
             headerProps = child.props;
@@ -286,7 +286,7 @@ export const NavBar = UU5.Common.VisualComponent.create({
 
     return {
       header: this._prepareHeader(headerProps),
-      navs: this._prepareNavs(navsProps)
+      navs: this._prepareNavs(navsProps),
     };
   },
 
@@ -311,21 +311,21 @@ export const NavBar = UU5.Common.VisualComponent.create({
       className: this.getClassName().navCover,
       id: this._getNavCoverId(),
       style: {
-        height: this._getNavHeight()
-      }
+        height: this._getNavHeight(),
+      },
     };
   },
 
   _getNavContainerProps() {
     return {
       id: this._getNavContainerId(),
-      className: this.getClassName().navContainer
+      className: this.getClassName().navContainer,
     };
   },
 
   _getNavBodyProps() {
     return {
-      className: this.getClassName().body
+      className: this.getClassName().body,
     };
   },
   //@@viewOff:private
@@ -339,7 +339,7 @@ export const NavBar = UU5.Common.VisualComponent.create({
         <div {...this._getNavBodyProps()}>
           {childrenObject.header}
           <div {...this._getNavCoverProps()}>
-            <div {...this._getNavContainerProps()} ref={navContainer => (this._container = navContainer)}>
+            <div {...this._getNavContainerProps()} ref={(navContainer) => (this._container = navContainer)}>
               {childrenObject.navs}
             </div>
           </div>
@@ -347,7 +347,7 @@ export const NavBar = UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </nav>
     );
-  }
+  },
   //@@viewOff:render
 });
 

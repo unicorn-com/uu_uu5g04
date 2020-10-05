@@ -34,8 +34,8 @@ export const VirtualList = UU5.Common.VisualComponent.create({
       content: ns.css("virtuallist-content"),
       scrollBox: ns.css("virtuallist-scrollbox"),
       renderBox: ns.css("virtuallist-renderbox"),
-      item: ns.css("virtuallist-item")
-    }
+      item: ns.css("virtuallist-item"),
+    },
   },
   //@@viewOff:statics
 
@@ -48,13 +48,13 @@ export const VirtualList = UU5.Common.VisualComponent.create({
       left: UU5.PropTypes.number,
       right: UU5.PropTypes.number,
       top: UU5.PropTypes.number,
-      bottom: UU5.PropTypes.number
+      bottom: UU5.PropTypes.number,
     }),
     item: UU5.PropTypes.oneOfType([UU5.PropTypes.func, UU5.PropTypes.element]),
     itemHeight: UU5.PropTypes.number.isRequired,
     itemWidth: UU5.PropTypes.number,
     overscanRowCount: UU5.PropTypes.number,
-    initialScrollTop: UU5.PropTypes.number
+    initialScrollTop: UU5.PropTypes.number,
   },
   //@@viewOff:propTypes
 
@@ -68,13 +68,13 @@ export const VirtualList = UU5.Common.VisualComponent.create({
         left: 0,
         right: 0,
         top: 0,
-        bottom: 0
+        bottom: 0,
       },
-      item: data => data + "",
+      item: (data) => data + "",
       itemHeight: 32,
       itemWidth: null,
       overscanRowCount: 3,
-      initialScrollTop: null
+      initialScrollTop: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -85,7 +85,7 @@ export const VirtualList = UU5.Common.VisualComponent.create({
       offset: 0,
       width: this.props.width,
       height: this.props.height,
-      loading: false
+      loading: false,
     };
   },
 
@@ -215,7 +215,7 @@ export const VirtualList = UU5.Common.VisualComponent.create({
           key={i}
           style={{
             width: this.props.itemWidth ? this.props.itemWidth : undefined,
-            height: this.props.itemHeight
+            height: this.props.itemHeight,
           }}
         >
           {item}
@@ -231,7 +231,7 @@ export const VirtualList = UU5.Common.VisualComponent.create({
           paddingLeft: this.props.boxPadding.left,
           paddingRight: scrollbar ? 0 : this.props.boxPadding.right,
           paddingTop: this.props.boxPadding.top,
-          paddingBottom: this.props.boxPadding.bottom
+          paddingBottom: this.props.boxPadding.bottom,
         }}
         key="renderBox"
       >
@@ -245,7 +245,7 @@ export const VirtualList = UU5.Common.VisualComponent.create({
 
     let props = {
       ...this.getMainPropsToPass(),
-      ref_: this._registerElement
+      ref_: this._registerElement,
     };
 
     let scrollAreaProps = {
@@ -253,7 +253,7 @@ export const VirtualList = UU5.Common.VisualComponent.create({
       hideOnBlur: false,
       customScrollbar: true,
       initialScrollTop: this.props.initialScrollTop,
-      ref_: comp => (this._scrollArea = comp)
+      ref_: (comp) => (this._scrollArea = comp),
     };
 
     if (this.state.width) {
@@ -262,11 +262,11 @@ export const VirtualList = UU5.Common.VisualComponent.create({
       props.mainAttrs.style = {
         ...props.mainAttrs.style,
         height: this.state.height,
-        width: this.state.width
+        width: this.state.width,
       };
 
       scrollAreaProps.mainAttrs = {
-        onScroll: this._handleScroll
+        onScroll: this._handleScroll,
       };
 
       let tableData = this._getTableData();
@@ -275,7 +275,7 @@ export const VirtualList = UU5.Common.VisualComponent.create({
         <div
           className={this.getClassName("scrollBox")}
           style={{
-            height: tableData.rows * this.props.itemHeight
+            height: tableData.rows * this.props.itemHeight,
           }}
           key="scrollBox"
         />
@@ -292,7 +292,7 @@ export const VirtualList = UU5.Common.VisualComponent.create({
         </ScrollArea>
       </UU5.Bricks.Div>
     );
-  }
+  },
   //@@viewOff:render
 });
 

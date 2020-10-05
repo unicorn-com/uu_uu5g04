@@ -7,23 +7,23 @@ import EditableLsi from "./bricks-editable-lsi.js";
 
 const editableComponentPropsSetup = [
   {
-    name: "bgStyle"
+    name: "bgStyle",
   },
   {
-    name: "colorSchema"
+    name: "colorSchema",
   },
   {
-    name: "borderRadius"
+    name: "borderRadius",
   },
   {
-    name: "elevation"
-  }
+    name: "elevation",
+  },
 ];
 
 const editablePropsSetup = [
   {
-    setup: editableComponentPropsSetup
-  }
+    setup: editableComponentPropsSetup,
+  },
 ];
 
 export const WellEditable = UU5.Common.VisualComponent.create({
@@ -35,22 +35,22 @@ export const WellEditable = UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("WellEditable"),
     classNames: {
-      main: ns.css("well-editable")
+      main: ns.css("well-editable"),
     },
-    lsi: () => ({ ...EditableLsi.well, ...EditableLsi.common })
+    lsi: () => ({ ...EditableLsi.well, ...EditableLsi.common }),
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    component: UU5.PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      component: undefined
+      component: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -87,7 +87,7 @@ export const WellEditable = UU5.Common.VisualComponent.create({
         header={this.getLsiValue("modalHeader")}
       />
     );
-  }
+  },
   //@@viewOff:render
 });
 

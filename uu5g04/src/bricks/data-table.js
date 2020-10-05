@@ -37,7 +37,7 @@ export const DataTable = UU5.Common.LsiMixin.withContext(
       UU5.Common.LsiMixin,
       UU5.Common.SectionMixin,
       UU5.Common.NestingLevelMixin,
-      UU5.Common.PureRenderMixin
+      UU5.Common.PureRenderMixin,
     ],
     //@@viewOff:mixins
 
@@ -46,17 +46,17 @@ export const DataTable = UU5.Common.LsiMixin.withContext(
       tagName: ns.name("DataTable"),
       nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
       classNames: {
-        main: ns.css("data-table")
+        main: ns.css("data-table"),
       },
       lsi: () => UU5.Environment.Lsi.Bricks.dataTable,
       errors: {
         invalidDataHeader: "Header row items count (%d) are not equal to data row (0) items length (%d).",
         invalidDataBody: "Data row (%d) items count (%d) are not equal to data row (%d) items length (%d).",
-        invalidDataFooter: "Footer row items count (%d) are not equal to data row (%d) items length (%d)."
+        invalidDataFooter: "Footer row items count (%d) are not equal to data row (%d) items length (%d).",
       },
       opt: {
-        nestingLevelWrapper: true
-      }
+        nestingLevelWrapper: true,
+      },
     },
     //@@viewOff:statics
 
@@ -76,12 +76,12 @@ export const DataTable = UU5.Common.LsiMixin.withContext(
         UU5.PropTypes.arrayOf(
           UU5.PropTypes.any //content props
         )
-      )
+      ),
     },
     //@@viewOff:propTypes
 
     //@@viewOn:getDefaultProps
-    getDefaultProps: function() {
+    getDefaultProps: function () {
       return {
         striped: false,
         bordered: false,
@@ -89,19 +89,19 @@ export const DataTable = UU5.Common.LsiMixin.withContext(
         condensed: false,
         headerRow: null,
         footerRow: null,
-        rows: null
+        rows: null,
       };
     },
 
-    getInitialState: function() {
+    getInitialState: function () {
       return {
-        valid: this._validateData(this.props)
+        valid: this._validateData(this.props),
       };
     },
     //@@viewOff:getDefaultProps
 
     //@@viewOn:reactLifeCycle
-    UNSAFE_componentWillReceiveProps: function(nextProps) {
+    UNSAFE_componentWillReceiveProps: function (nextProps) {
       if (
         this.props.headerRow !== nextProps.headerRow ||
         this.props.rows !== nextProps.rows ||
@@ -119,7 +119,7 @@ export const DataTable = UU5.Common.LsiMixin.withContext(
     //@@viewOff:overriding
 
     //@@viewOn:private
-    _validateData: function(props) {
+    _validateData: function (props) {
       var dataTable = this;
       var valid = true;
       var referenceRow = props.headerRow;
@@ -149,7 +149,7 @@ export const DataTable = UU5.Common.LsiMixin.withContext(
           dataTable.showError("invalidDataFooter", [
             props.footerRow.length,
             referenceRow.length - 1,
-            referenceRow.length
+            referenceRow.length,
           ]);
         }
       }
@@ -157,7 +157,7 @@ export const DataTable = UU5.Common.LsiMixin.withContext(
       return valid;
     },
 
-    _getHeaderRow: function() {
+    _getHeaderRow: function () {
       return (
         <THead>
           <Tr content={this.props.headerRow && this._getRowCells(this.props.headerRow, true)} />
@@ -165,7 +165,7 @@ export const DataTable = UU5.Common.LsiMixin.withContext(
       );
     },
 
-    _getFooterRow: function() {
+    _getFooterRow: function () {
       return (
         <TFoot>
           <Tr content={this.props.footerRow && this._getRowCells(this.props.footerRow)} />
@@ -173,19 +173,19 @@ export const DataTable = UU5.Common.LsiMixin.withContext(
       );
     },
 
-    _getBodyRows: function() {
+    _getBodyRows: function () {
       var dataTable = this;
-      var rows = this.props.rows.map(function(row, i) {
+      var rows = this.props.rows.map(function (row, i) {
         return <Tr key={i}>{dataTable._getRowCells(row)}</Tr>;
       });
 
       return <TBody>{rows}</TBody>;
     },
 
-    _getRowCells: function(row, isHeader) {
+    _getRowCells: function (row, isHeader) {
       var brick = isHeader ? Th : Td;
       var dataTable = this;
-      return row.map(function(cell, i) {
+      return row.map(function (cell, i) {
         var props;
         if (dataTable._isProps(cell)) {
           props = UU5.Common.Tools.merge({}, cell, { key: i });
@@ -196,7 +196,7 @@ export const DataTable = UU5.Common.LsiMixin.withContext(
       });
     },
 
-    _isProps: function(cell) {
+    _isProps: function (cell) {
       return !(
         typeof cell === "string" ||
         typeof cell === "number" || // number or string
@@ -205,15 +205,15 @@ export const DataTable = UU5.Common.LsiMixin.withContext(
       ); // react.element
     },
 
-    _checkLsiContent: function(content) {
+    _checkLsiContent: function (content) {
       return content.lsi ? this.getLsiItem(content.lsi) : content;
     },
 
-    _getMainProps: function() {
+    _getMainProps: function () {
       var mainProps = this.getMainPropsToPass([
         "UU5.Common.BaseMixin",
         "UU5.Common.ElementaryMixin",
-        "UU5.Common.SectionMixin"
+        "UU5.Common.SectionMixin",
       ]);
       mainProps.striped = this.props.striped;
       mainProps.bordered = this.props.bordered;
@@ -225,7 +225,7 @@ export const DataTable = UU5.Common.LsiMixin.withContext(
     //@@viewOff:private
 
     //@@viewOn:render
-    render: function() {
+    render: function () {
       var result;
 
       if (this.state.valid) {
@@ -246,7 +246,7 @@ export const DataTable = UU5.Common.LsiMixin.withContext(
       }
 
       return result;
-    }
+    },
     //@@viewOff:render
   })
 );

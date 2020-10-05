@@ -37,7 +37,7 @@ export const Carousel = UU5.Common.VisualComponent.create({
     UU5.Common.ContentMixin,
     UU5.Common.ColorSchemaMixin,
     UU5.Common.SwipeMixin,
-    UU5.Common.EditableMixin
+    UU5.Common.EditableMixin,
   ],
   //@@viewOff:mixins
 
@@ -51,19 +51,19 @@ export const Carousel = UU5.Common.VisualComponent.create({
       active: ns.css("carousel-indicators-active"),
       leftArrow: ns.css("carousel-left"),
       rightArrow: ns.css("carousel-right"),
-      lastArrow: ns.css("carousel-last")
+      lastArrow: ns.css("carousel-last"),
     },
     defaults: {
       minAngle: 22.5,
       childTagName: "UU5.Bricks.Carousel.Item",
-      colorSchema: "default"
+      colorSchema: "default",
     },
     editMode: {
       name: { en: "Carousel", cs: "Carousel" },
       backgroundColor: "rgba(0,0,0,.2)",
       color: "rgba(0,0,0,.87)",
-      highlightColor: "#CCCCCC"
-    }
+      highlightColor: "#CCCCCC",
+    },
   },
   //@@viewOff:statics
 
@@ -79,7 +79,7 @@ export const Carousel = UU5.Common.VisualComponent.create({
     interval: UU5.PropTypes.number,
     stepByOne: UU5.PropTypes.bool,
     allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
-    onIndexChange: UU5.PropTypes.func
+    onIndexChange: UU5.PropTypes.func,
   },
   //@@viewOff:propTypes
 
@@ -97,7 +97,7 @@ export const Carousel = UU5.Common.VisualComponent.create({
       stepByOne: false,
       allowTags: [],
       onIndexChange: undefined,
-      contentEditable: false
+      contentEditable: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -107,7 +107,7 @@ export const Carousel = UU5.Common.VisualComponent.create({
     return {
       activeIndex: this.props.activeIndex,
       rowHeight: 0,
-      renderedChildren: []
+      renderedChildren: [],
     };
   },
 
@@ -115,7 +115,7 @@ export const Carousel = UU5.Common.VisualComponent.create({
     const children = this.getChildren();
     this.setState({
       children: children,
-      tmpChildren: children
+      tmpChildren: children,
     });
   },
 
@@ -159,7 +159,7 @@ export const Carousel = UU5.Common.VisualComponent.create({
             activeIndex: this.props.activeIndex,
             children: children,
             tmpChildren: children,
-            renderedChildren: []
+            renderedChildren: [],
           },
           () => this._prepareChildren()
         );
@@ -182,11 +182,11 @@ export const Carousel = UU5.Common.VisualComponent.create({
     if (this._delayedNext.length) {
       let list = this._delayedNext;
       this._delayedNext = [];
-      list.forEach(setStateCallback => this.setNext(setStateCallback));
+      list.forEach((setStateCallback) => this.setNext(setStateCallback));
     } else if (this._delayedPrev.length) {
       let list = this._delayedPrev;
       this._delayedPrev = [];
-      list.forEach(setStateCallback => this.setPrevious(setStateCallback));
+      list.forEach((setStateCallback) => this.setPrevious(setStateCallback));
     }
   },
   //@@viewOff:reactLifeCycle
@@ -237,7 +237,7 @@ export const Carousel = UU5.Common.VisualComponent.create({
     if (!result && (typeof child !== "string" || child.trim())) {
       if (childTagName)
         this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagName], {
-          mixinName: "UU5.Common.BaseMixin"
+          mixinName: "UU5.Common.BaseMixin",
         });
       else this.showError("childNotAllowed", [child, defaultChildTagName], { mixinName: "UU5.Common.BaseMixin" });
     }
@@ -263,7 +263,7 @@ export const Carousel = UU5.Common.VisualComponent.create({
   _registerNull(inst) {
     // unmount of component means that suspense is loaded and component should be rendered
     if (!inst) {
-      this.setState(state => {
+      this.setState((state) => {
         if (state.editationLazyLoaded) return;
 
         // Edit component is loaded - need to set to static variable because other Edit component does not render fallback component
@@ -293,7 +293,7 @@ export const Carousel = UU5.Common.VisualComponent.create({
 
   _getMaxHeight() {
     let maxHeight = 0;
-    this.eachRenderedChild(child => {
+    this.eachRenderedChild((child) => {
       if (child) {
         let height = UU5.Common.Tools.getOuterHeight(child, true);
         maxHeight = height > maxHeight ? height : maxHeight;
@@ -309,14 +309,14 @@ export const Carousel = UU5.Common.VisualComponent.create({
       index: activeIndex * steps,
       position: 0,
       height: this._getMaxHeight(),
-      noOfElements: this.props.displayedItems
+      noOfElements: this.props.displayedItems,
     };
 
     this.setAsyncState({
       activeIndex,
       tmpChildren: [],
       renderedChildren: this._getContent(properties),
-      rowHeight: properties.height
+      rowHeight: properties.height,
     });
   },
 
@@ -355,7 +355,7 @@ export const Carousel = UU5.Common.VisualComponent.create({
           index: this.props.stepByOne ? this.props.displayedItems - 1 : 0,
           position: this.props.displayedItems,
           noOfElements: steps,
-          newShift: 1
+          newShift: 1,
         })
       );
 
@@ -366,7 +366,7 @@ export const Carousel = UU5.Common.VisualComponent.create({
           index: nextIndex * steps,
           position: -1 * steps,
           noOfElements: steps,
-          newShift: -1
+          newShift: -1,
         })
       );
 
@@ -377,7 +377,7 @@ export const Carousel = UU5.Common.VisualComponent.create({
           ...this._getContent({
             index: (prevIndex + 1) * steps + (this.props.displayedItems - steps),
             position: this.props.displayedItems,
-            noOfElements: no
+            noOfElements: no,
           })
         );
       } else {
@@ -385,7 +385,7 @@ export const Carousel = UU5.Common.VisualComponent.create({
           ...this._getContent({
             index: nextIndex * steps,
             position: -1 * no,
-            noOfElements: no
+            noOfElements: no,
           })
         );
       }
@@ -400,7 +400,7 @@ export const Carousel = UU5.Common.VisualComponent.create({
         activeIndex: nextIndex,
         renderedChildren: newRenderedChildren,
         isDirectionRight: isDirectionRight,
-        hadSwiped: false
+        hadSwiped: false,
       },
       setStateCallback
     );
@@ -415,27 +415,27 @@ export const Carousel = UU5.Common.VisualComponent.create({
         const newPosition = this.state.isDirectionRight ? (i - (size - this.props.displayedItems)) * 100 : i * 100;
         const newProps = {
           style: UU5.Common.Tools.mergeDeep({}, item.props.style, this._getChildrenStyle(newPosition)),
-          position: newPosition
+          position: newPosition,
         };
         return UU5.Common.Element.clone(item, newProps);
       });
 
       this.setAsyncState({
         renderedChildren: newRenderedChildren,
-        hadSwiped: true
+        hadSwiped: true,
       });
     }, 50);
   },
 
   _removeRenderedChild() {
     setTimeout(() => {
-      let newRenderedChildren = this.state.renderedChildren.filter(item => {
+      let newRenderedChildren = this.state.renderedChildren.filter((item) => {
         return item.props.position >= 0 && item.props.position < 100 * this.props.displayedItems;
       });
       this.setAsyncState(
         {
           renderedChildren: newRenderedChildren,
-          hadSwiped: false
+          hadSwiped: false,
         },
         this._setDelayed
       );
@@ -516,7 +516,7 @@ export const Carousel = UU5.Common.VisualComponent.create({
 
   _getKey(key) {
     this.state.renderedChildren &&
-      this.state.renderedChildren.forEach(item => {
+      this.state.renderedChildren.forEach((item) => {
         if (key === item.key) {
           key += "-copy";
         }
@@ -531,7 +531,7 @@ export const Carousel = UU5.Common.VisualComponent.create({
     return {
       width: 100 / displayedItems + "%",
       transform: `translateX(${position}%)`,
-      height: height > 0 ? height + "px" : null
+      height: height > 0 ? height + "px" : null,
     };
   },
 
@@ -628,7 +628,7 @@ export const Carousel = UU5.Common.VisualComponent.create({
         {!this.state.editation || !this._isEditationLazyLoaded() ? this._renderComponent() : null}
       </>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

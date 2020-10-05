@@ -27,7 +27,7 @@ export const Mark = UU5.Common.VisualComponent.create({
     UU5.Common.ContentMixin,
     UU5.Common.NestingLevelMixin,
     UU5.Common.PureRenderMixin,
-    UU5.Common.ColorSchemaMixin
+    UU5.Common.ColorSchemaMixin,
   ],
   //@@viewOff:mixins
 
@@ -36,8 +36,8 @@ export const Mark = UU5.Common.VisualComponent.create({
     tagName: ns.name("Mark"),
     nestingLevel: "inline",
     classNames: {
-      main: ns.css("mark")
-    }
+      main: ns.css("mark"),
+    },
   },
   //@@viewOff:statics
 
@@ -66,7 +66,7 @@ export const Mark = UU5.Common.VisualComponent.create({
         {[this.getChildren(), this.getDisabledCover()]}
       </mark>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

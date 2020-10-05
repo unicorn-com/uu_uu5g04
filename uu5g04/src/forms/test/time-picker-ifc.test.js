@@ -580,7 +580,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
         message: null,
         value: "",
         foundAutocompleteItems: null,
-        selectedIndex: null
+        selectedIndex: null,
       })
     );
     expect(wrapper).toMatchSnapshot();
@@ -604,14 +604,14 @@ describe("UU5.Forms.InputMixin interface testing", () => {
         message: null,
         value: "",
         foundAutocompleteItems: null,
-        selectedIndex: null
+        selectedIndex: null,
       })
     );
     const returnValue = wrapper.instance().setChangeFeedback(
       {
         feedback: "error",
         message: "Error message from setChangeFeedback",
-        value: "NaN"
+        value: "NaN",
       },
       mockFunc
     );
@@ -868,17 +868,17 @@ describe("UU5.Forms.TextInputMixin interface testing", () => {
         value="12:"
         autocompleteItems={[
           {
-            value: "12:30"
+            value: "12:30",
           },
           {
-            value: "12:45"
+            value: "12:45",
           },
           {
-            value: "12:50"
+            value: "12:50",
           },
           {
-            value: "12:59"
-          }
+            value: "12:59",
+          },
         ]}
         required={true}
         size="s"
@@ -903,17 +903,17 @@ describe("UU5.Forms.TextInputMixin interface testing", () => {
         value=""
         autocompleteItems={[
           {
-            value: "12:30"
+            value: "12:30",
           },
           {
-            value: "12:45"
+            value: "12:45",
           },
           {
-            value: "12:50"
+            value: "12:50",
           },
           {
-            value: "12:59"
-          }
+            value: "12:59",
+          },
         ]}
         required={true}
         size="s"
@@ -957,7 +957,7 @@ describe("UU5.Forms.TextInputMixin interface testing", () => {
       expect.objectContaining({
         feedback: "initial",
         message: null,
-        value: undefined
+        value: undefined,
       })
     );
     expect(wrapper).toMatchSnapshot();
@@ -980,17 +980,17 @@ describe("UU5.Forms.TextInputMixin interface testing", () => {
     const returnValue = wrapper.instance().setAutoCompleteItems(
       [
         {
-          value: "12:30"
+          value: "12:30",
         },
         {
-          value: "12:35"
+          value: "12:35",
         },
         {
-          value: "12:40"
+          value: "12:40",
         },
         {
-          value: "12:45"
-        }
+          value: "12:45",
+        },
       ],
       null,
       mockFunc

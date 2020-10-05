@@ -41,7 +41,7 @@ export const RefUsageTelemetry = {
               telemetryInstance = new window.Plus4U5.Telemetry({
                 uri: APP_LIBRARY_REGISTRY_TELEMETRY_URI,
                 includeLibraries: false,
-                forceEnableTelemetry: true
+                forceEnableTelemetry: true,
               });
             }
             telemetryInstance.info("uu5g04RefUsage", { tagNames });
@@ -49,6 +49,6 @@ export const RefUsageTelemetry = {
         }
       });
     }
-  }
+  },
 };
 export default RefUsageTelemetry;

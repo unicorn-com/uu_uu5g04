@@ -30,10 +30,10 @@ const editableComponentPropsSetup = [
     getProps: () => ({
       items: [
         { content: <UU5.Bricks.Lsi lsi={EditableLsi.buttonGroup.verticalValueFalse} />, value: false },
-        { content: <UU5.Bricks.Lsi lsi={EditableLsi.buttonGroup.verticalLabelTrue} />, value: true }
-      ]
-    })
-  }
+        { content: <UU5.Bricks.Lsi lsi={EditableLsi.buttonGroup.verticalLabelTrue} />, value: true },
+      ],
+    }),
+  },
 ];
 
 const editableDisplayPropsSetup = [
@@ -44,19 +44,19 @@ const editableDisplayPropsSetup = [
   {
     name: "baseline",
     type: "switchSelectorBool",
-    label: EditableLsi.buttonGroup.baselineLabel
-  }
+    label: EditableLsi.buttonGroup.baselineLabel,
+  },
 ];
 
 const editablePropsSetup = [
   {
     name: <UU5.Bricks.Lsi lsi={EditableLsi.common.componentPropsLabel} />,
-    setup: editableComponentPropsSetup
+    setup: editableComponentPropsSetup,
   },
   {
     name: <UU5.Bricks.Lsi lsi={EditableLsi.common.displayPropsLabel} />,
-    setup: editableDisplayPropsSetup
-  }
+    setup: editableDisplayPropsSetup,
+  },
 ];
 
 export const ButtonGroupEditable = UU5.Common.VisualComponent.create({
@@ -68,21 +68,21 @@ export const ButtonGroupEditable = UU5.Common.VisualComponent.create({
   statics: {
     tagName: NAME,
     classNames: {
-      main: MAIN_CLASS_NAME
-    }
+      main: MAIN_CLASS_NAME,
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    component: UU5.PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      component: null
+      component: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -118,7 +118,7 @@ export const ButtonGroupEditable = UU5.Common.VisualComponent.create({
         componentPropsForm={editablePropsSetup}
       />
     );
-  }
+  },
   //@@viewOff:render
 });
 

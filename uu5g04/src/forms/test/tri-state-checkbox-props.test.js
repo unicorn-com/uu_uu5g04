@@ -25,7 +25,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
   getInitialState: () => {
     return {
       isCalled: false,
-      isChecked: false
+      isChecked: false,
     };
   },
 
@@ -62,7 +62,7 @@ const MixinPropsFunction = UU5.Common.VisualComponent.create({
         onChangeFeedback={this.onChangeFeedbackHandler}
       />
     );
-  }
+  },
 });
 
 const CONFIG = {
@@ -71,45 +71,45 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.PureRenderMixin",
-    "UU5.Forms.InputMixin"
+    "UU5.Forms.InputMixin",
   ],
   props: {
     value: {
-      values: [true, false, null]
+      values: [true, false, null],
     },
     offIcon: {
-      values: ["mdi-check", "mdi-battery"]
+      values: ["mdi-check", "mdi-battery"],
     },
     onIcon: {
-      values: ["mdi-close", "mdi-email"]
+      values: ["mdi-close", "mdi-email"],
     },
     indeterminateIcon: {
-      values: ["mdi-stop", "mdi-book"]
+      values: ["mdi-stop", "mdi-book"],
     },
     labelPosition: {
-      values: ["left", "right"]
+      values: ["left", "right"],
     },
     required: {
-      values: [true, false]
+      values: [true, false],
     },
     requiredMessage: {
-      values: ["Wrong value", "Succes"]
+      values: ["Wrong value", "Succes"],
     },
     bgStyleChecked: {
-      values: ["outline", "filled"]
+      values: ["outline", "filled"],
     },
     bgStyleIndeterminate: {
-      values: ["outline", "filled"]
-    }
+      values: ["outline", "filled"],
+    },
   },
   requiredProps: {
     //The component does not have any required props
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Forms.TriStateCheckbox props`, () => {

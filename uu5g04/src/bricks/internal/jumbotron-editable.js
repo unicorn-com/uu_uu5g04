@@ -8,7 +8,7 @@ const editableComponentPropsSetup = [
   { name: "colorSchema" },
   { name: "bgStyle" },
   { name: "borderRadius" },
-  { name: "elevation" }
+  { name: "elevation" },
 ];
 
 const editablePropsSetup = [{ setup: editableComponentPropsSetup }];
@@ -22,21 +22,21 @@ export const JumbotronEditable = UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("JumbotronEditable"),
     classNames: {
-      main: ns.css("jumbotron-editable")
-    }
+      main: ns.css("jumbotron-editable"),
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    component: UU5.PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      component: undefined
+      component: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -72,7 +72,7 @@ export const JumbotronEditable = UU5.Common.VisualComponent.create({
         componentPropsForm={editablePropsSetup}
       />
     );
-  }
+  },
   //@@viewOff:render
 });
 

@@ -6,7 +6,7 @@ function useParentSize(params) {
 
   const componentRef = useRef();
   if (componentRef.current == null) {
-    const spanRefFn = spanRef => ref(spanRef ? spanRef.parentNode : spanRef);
+    const spanRefFn = (spanRef) => ref(spanRef ? spanRef.parentNode : spanRef);
     componentRef.current = function Observer(props) {
       return <span ref={spanRefFn} hidden />;
     };

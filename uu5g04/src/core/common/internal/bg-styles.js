@@ -15,7 +15,7 @@ const getDefaultColors = (colorShades, bgStyle) => {
       textColorActive: Environment.colors.common.darkText,
       borderColor: "transparent",
       borderColorHover: colorShades.c200,
-      borderColorActive: colorShades.c300
+      borderColorActive: colorShades.c300,
     };
   } else {
     definitions = {
@@ -27,7 +27,7 @@ const getDefaultColors = (colorShades, bgStyle) => {
       textColorActive: Environment.colors.common.darkText,
       borderColor: colorShades.c400,
       borderColorHover: colorShades.c400,
-      borderColorActive: colorShades.c400
+      borderColorActive: colorShades.c400,
     };
   }
 
@@ -47,7 +47,7 @@ const getColors = (colorSchema, bgStyle) => {
   }
 };
 
-const getShades = colorSchema => {
+const getShades = (colorSchema) => {
   // get the most commonly used shades of the given colorSchema
   if (colorSchema === "default" || colorSchema === "grey" || !colorSchema) {
     return Environment.colors["grey"];
@@ -56,8 +56,8 @@ const getShades = colorSchema => {
   }
 };
 
-const getBgStyles = bgStyle => {
-  let styles = ["default"].map(colorSchema => {
+const getBgStyles = (bgStyle) => {
+  let styles = ["default"].map((colorSchema) => {
     let colors = getColors(colorSchema, bgStyle);
 
     if (!colors) {
@@ -166,6 +166,6 @@ const getBgStyles = bgStyle => {
   return styles.join(" ");
 };
 
-["filled", "outline", "transparent", "underline"].forEach(bgStyle => {
+["filled", "outline", "transparent", "underline"].forEach((bgStyle) => {
   return Css.injectGlobal`${getBgStyles(bgStyle)}`;
 });

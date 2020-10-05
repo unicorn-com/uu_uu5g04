@@ -4,22 +4,22 @@ import { useElementSize } from "uu5g04-hooks";
 const { mount, initHookRenderer } = UU5.Test.Tools;
 
 function renderHookInElement(width = 100, height = 200, ...initialHookParams) {
-  let defineSizes = el => {
+  let defineSizes = (el) => {
     if (el) {
       Object.defineProperties(el, {
         clientWidth: { get: () => width, configurable: true },
         clientHeight: { get: () => height, configurable: true },
         getBoundingClientRect: {
           get: () => () => ({ width, height, left: 0, top: 0, right: width, bottom: height }),
-          configurable: true
-        }
+          configurable: true,
+        },
       });
     }
   };
   let { HookComponent, ...result } = initHookRenderer(useElementSize, ...initialHookParams);
   mount(
     <HookComponent>
-      {hookResult => <div ref={ref => (defineSizes(ref), hookResult ? hookResult.ref(ref) : undefined)} />}
+      {(hookResult) => <div ref={(ref) => (defineSizes(ref), hookResult ? hookResult.ref(ref) : undefined)} />}
     </HookComponent>
   );
   return result;
@@ -31,7 +31,7 @@ describe("[uu5g04-hooks] useElementSize", () => {
     expect(lastResult()).toMatchObject({
       ref: expect.any(Function),
       width: expect.any(Number),
-      height: expect.any(Number)
+      height: expect.any(Number),
     });
   });
 

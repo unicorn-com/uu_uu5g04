@@ -7,7 +7,7 @@ import Lsi from "./bricks-editable-lsi.js";
 
 const editableComponentPropsSetup = [
   {
-    name: "colorSchema"
+    name: "colorSchema",
   },
   {
     name: "inline",
@@ -16,17 +16,17 @@ const editableComponentPropsSetup = [
     getProps: () => ({
       items: [
         { content: <UU5.Bricks.Lsi lsi={Lsi.loading.inlineValueFalse} />, value: false },
-        { content: <UU5.Bricks.Lsi lsi={Lsi.loading.inlineValueTrue} />, value: true }
-      ]
-    })
-  }
+        { content: <UU5.Bricks.Lsi lsi={Lsi.loading.inlineValueTrue} />, value: true },
+      ],
+    }),
+  },
 ];
 
 const editablePropsSetup = [
   {
     name: <UU5.Bricks.Lsi lsi={Lsi.common.componentPropsLabel} />,
-    setup: editableComponentPropsSetup
-  }
+    setup: editableComponentPropsSetup,
+  },
 ];
 
 export const LoadingEditable = UU5.Common.VisualComponent.create({
@@ -38,21 +38,21 @@ export const LoadingEditable = UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("LoadingEditable"),
     classNames: {
-      main: ns.css("loading-editable")
-    }
+      main: ns.css("loading-editable"),
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    component: UU5.PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      component: undefined
+      component: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -94,7 +94,7 @@ export const LoadingEditable = UU5.Common.VisualComponent.create({
         header={<UU5.Bricks.Lsi lsi={Lsi.loading.modalHeader} />}
       />
     );
-  }
+  },
   //@@viewOff:render
 });
 

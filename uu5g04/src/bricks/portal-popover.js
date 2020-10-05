@@ -29,21 +29,21 @@ export const PortalPopover = UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("PortalPopover"),
     classNames: {
-      main: ns.css("portal-popover")
-    }
+      main: ns.css("portal-popover"),
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    ...Popover.propTypes
+    ...Popover.propTypes,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      shown: false
+      shown: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -51,7 +51,7 @@ export const PortalPopover = UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
-      open: this.props.shown
+      open: this.props.shown,
     };
   },
 
@@ -114,7 +114,7 @@ export const PortalPopover = UU5.Common.VisualComponent.create({
         </RenderIntoPortal>
       )
     );
-  }
+  },
   //@@viewOff:render
 });
 

@@ -37,7 +37,7 @@ export const Table = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.SectionMixin,
     UU5.Common.ColorSchemaMixin,
-    UU5.Common.NestingLevelMixin
+    UU5.Common.NestingLevelMixin,
   ],
   //@@viewOff:mixins
 
@@ -52,7 +52,7 @@ export const Table = UU5.Common.VisualComponent.create({
       bordered: ns.css("table-bordered"),
       hover: ns.css("table-hover"),
       condensed: ns.css("table-condensed"),
-      responsive: ns.css("table-responsive")
+      responsive: ns.css("table-responsive"),
     },
     defaults: {
       childTagNames: [
@@ -60,12 +60,12 @@ export const Table = UU5.Common.VisualComponent.create({
         "UU5.Bricks.Table.THead",
         "UU5.Bricks.Table.TBody",
         "UU5.Bricks.Table.TFoot",
-        "UU5.Bricks.Table.ColGroup"
-      ]
+        "UU5.Bricks.Table.ColGroup",
+      ],
     },
     opt: {
-      nestingLevelWrapper: true
-    }
+      nestingLevelWrapper: true,
+    },
   },
   //@@viewOff:statics
 
@@ -76,19 +76,19 @@ export const Table = UU5.Common.VisualComponent.create({
     hover: UU5.PropTypes.bool,
     condensed: UU5.PropTypes.bool,
     responsive: UU5.PropTypes.bool,
-    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string)
+    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       striped: false,
       bordered: false,
       hover: false,
       condensed: false,
       responsive: false,
-      allowTags: []
+      allowTags: [],
     };
   },
   //@@viewOff:getDefaultProps
@@ -104,7 +104,7 @@ export const Table = UU5.Common.VisualComponent.create({
   //@@viewOff:interface
 
   //@@viewOn:overriding
-  shouldChildRender_: function(child) {
+  shouldChildRender_: function (child) {
     let childTagName = UU5.Common.Tools.getChildTagName(child);
     let defaultChildTagNames = this.getDefault().childTagNames;
     let childTagNames = this.props.allowTags.concat(defaultChildTagNames);
@@ -112,7 +112,7 @@ export const Table = UU5.Common.VisualComponent.create({
     if (!result && (typeof child !== "string" || child.trim())) {
       if (childTagName)
         this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagNames[0]], {
-          mixinName: "UU5.Common.BaseMixin"
+          mixinName: "UU5.Common.BaseMixin",
         });
       else this.showError("childNotAllowed", [child, defaultChildTagNames[0]], { mixinName: "UU5.Common.BaseMixin" });
     }
@@ -121,13 +121,13 @@ export const Table = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _getMainProps: function() {
+  _getMainProps: function () {
     var props = this.getMainAttrs();
     this.props.responsive && (props.className += " " + this.getClassName().responsive);
     return props;
   },
 
-  _buildTableAttrs: function() {
+  _buildTableAttrs: function () {
     var tableAttrs = { className: this.getClassName().table };
     this.props.striped && (tableAttrs.className += " " + this.getClassName().striped);
     this.props.bordered && (tableAttrs.className += " " + this.getClassName().bordered);
@@ -138,7 +138,7 @@ export const Table = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return this.getNestingLevel() ? (
       <div {...this._getMainProps()}>
         {this.getHeaderChild()}
@@ -147,7 +147,7 @@ export const Table = UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </div>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 02</title>
+
+  <script>
+    if (!location.href.match(/^(about:|file:)/)) {
+      var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+      var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+      if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+      var appBaseUrlPath = (location.pathname.split(/\//).slice(0, 1 + bplSegmentCount).join("/") + "/").replace(/\/+/g, "/").replace(/"/g, "");
+      var appAssetsRelativeUrlPath = "public/0.0.0/";
+      document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    }
+  </script>
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/4.0.0/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/4.0.0/uu_appg01.min.js",
+        "uu_appg01_oidc": "https://cdn.plus4u.net/uu-appg01-oidc/2.0.0/uu_appg01_oidc.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js",
+        "uu5g04-block-layout": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-block-layout.min.js",
+        "uu5g04-hooks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-hooks.min.js",
+      }
+    });
+  </script>
+
+  <style>
+    .margin {
+      margin-top: 16px !important;
+    }
+
+    .uu5-bricks-button + .uu5-bricks-button {
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+  import "uu5g04-block-layout";
+  import { useDataObject, createVisualComponent, useState, useRef, useEffect, usePreviousValue } from "uu5g04-hooks";
+  import { Session } from "uu_appg01_oidc";
+  import { Client } from "uu_appg01";
+
+  //@@viewOn:example
+  const Calls = {
+    // ...
+
+    update(newData) {
+      let commandUri = Calls.getCommandUri("entity/update");
+      return Calls.call("post", commandUri, newData);
+    },
+    
+    updateTime(newData) {
+      let commandUri = Calls.getCommandUri("entity/updateTime");
+      return Calls.call("post", commandUri, newData);
+    },
+  };
+  //@@viewOff:example
+
+  Calls.call = async (method, uri, dtoIn) => {
+    console.log("call", uri, "dtoIn:", dtoIn);
+    return dtoIn;
+  };
+  Calls.getCommandUri = v => v;
+
+  // prettier-ignore
+  const NAMES = ["Anabel", "Evangeline", "Dannielle", "Domenic", "Armida", "Myrl", "Emmett", "Tracey", "Valeri", "Abel"];;
+  const INITIAL_DATA = {
+    name: NAMES[Math.floor(NAMES.length * Math.random())],
+    time: Date.now(),
+  }
+
+  //@@viewOn:example
+  const Example = createVisualComponent({
+    render() {
+      let dataObject = useDataObject({
+        initialData: INITIAL_DATA,
+        handlerMap: {
+          update: Calls.update,
+          updateTime: async ({ time, ...rest }) => {
+            let result = await Calls.updateTime(time)
+            return { ...rest, time: result };
+          },
+        },
+      });
+      let { state, data, errorData, pendingData, handlerMap } = dataObject;
+
+      return (
+        <UU5.Bricks.Div>
+          <UU5.Bricks.Header level={3}>Update part of an object using different call</UU5.Bricks.Header>
+
+          <UU5.Bricks.Button disabled={!handlerMap.update} onClick={() => handlerMap.update({
+            name: NAMES[Math.floor(NAMES.length * Math.random())],
+            time: Date.now(),
+          })}>
+            Update
+          </UU5.Bricks.Button>
+          <UU5.Bricks.Button disabled={!handlerMap.updateTime} onClick={() => handlerMap.updateTime({
+            ...data,
+            time: Date.now(),
+          })}>
+            Update (time only)
+          </UU5.Bricks.Button>
+
+          <div>
+            <div><b>Name:</b> {data.name}</div>
+            <div><b>Time:</b> {new Intl.DateTimeFormat(undefined, { hour: "2-digit", minute: "2-digit", second: "2-digit" }).format(data.time)}</div>
+          </div>
+        </UU5.Bricks.Div>
+      );
+    }
+  });
+  //@@viewOff:example
+
+  const Page = createVisualComponent({
+    render() {
+      return (
+        <UU5.Bricks.Container>
+          <Example />
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  UU5.Common.DOM.render(<Page />, document.getElementById("uu5Example"));
+</script>
+</body>
+</html>

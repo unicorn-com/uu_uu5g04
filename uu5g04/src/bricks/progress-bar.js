@@ -35,7 +35,7 @@ export const ProgressBar = UU5.Common.VisualComponent.create({
     UU5.Common.ContentMixin,
     UU5.Common.ColorSchemaMixin,
     UU5.Common.NestingLevelMixin,
-    UU5.Common.EditableMixin
+    UU5.Common.EditableMixin,
   ],
   //@@viewOff:mixins
 
@@ -45,16 +45,16 @@ export const ProgressBar = UU5.Common.VisualComponent.create({
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
       main: ns.css("progress-bar"),
-      size: ns.css("progress-bar-size-")
+      size: ns.css("progress-bar-size-"),
     },
     defaults: {
       childTagName: "UU5.Bricks.ProgressBar.Item",
-      itemName: "progressBarItem"
+      itemName: "progressBarItem",
     },
     warnings: {
       increaseImpossible: "Progress Bar is full. Cannot increase above %d.",
-      decreaseImpossible: "Progress Bar is empty. Cannot decrease below %d."
-    }
+      decreaseImpossible: "Progress Bar is empty. Cannot decrease below %d.",
+    },
   },
   //@@viewOff:statics
 
@@ -64,18 +64,18 @@ export const ProgressBar = UU5.Common.VisualComponent.create({
     striped: UU5.PropTypes.bool,
     animated: UU5.PropTypes.bool,
     allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
-    size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"])
+    size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       progress: 0,
       striped: false,
       animated: false,
       allowTags: [],
-      size: "m"
+      size: "m",
     };
   },
   //@@viewOff:getDefaultProps
@@ -88,33 +88,33 @@ export const ProgressBar = UU5.Common.VisualComponent.create({
     return true;
   },
 
-  isPossibleChangeProgress: function(progress) {
+  isPossibleChangeProgress: function (progress) {
     var count = 0;
-    this.eachRenderedChild(function(progressBar) {
+    this.eachRenderedChild(function (progressBar) {
       count += progressBar.getProgress();
     });
     return count + progress >= 0 && count + progress <= 100;
   },
 
-  isPossibleIncrease: function(increasedValue) {
+  isPossibleIncrease: function (increasedValue) {
     return this.isPossibleChangeProgress(increasedValue);
   },
 
-  isPossibleDecrease: function(decreasedValue) {
+  isPossibleDecrease: function (decreasedValue) {
     return this.isPossibleChangeProgress(-decreasedValue);
   },
 
-  getProgress: function(name) {
+  getProgress: function (name) {
     return this._getProgressBarItem(name).getProgress();
   },
 
-  setProgress: function(params, setStateCallback) {
+  setProgress: function (params, setStateCallback) {
     typeof params === "number" && (params = { value: params });
     return this._getProgressBarItem(params.name).setProgress(params, setStateCallback);
   },
 
   // value number or object {value, name,  content, striped, animated}
-  increase: function(params, setStateCallback) {
+  increase: function (params, setStateCallback) {
     typeof params === "number" && (params = { value: params });
 
     if (this.isPossibleIncrease(params.value)) {
@@ -125,7 +125,7 @@ export const ProgressBar = UU5.Common.VisualComponent.create({
     return this;
   },
 
-  decrease: function(params, setStateCallback) {
+  decrease: function (params, setStateCallback) {
     typeof params === "number" && (params = { value: params });
 
     if (this.isPossibleDecrease(params.value)) {
@@ -136,13 +136,13 @@ export const ProgressBar = UU5.Common.VisualComponent.create({
     return this;
   },
 
-  getItem: function(name) {
+  getItem: function (name) {
     return this.getRenderedChildByName(name);
   },
   //@@viewOff:interface
 
   //@@viewOn:overriding
-  shouldChildRender_: function(child) {
+  shouldChildRender_: function (child) {
     let childTagName = UU5.Common.Tools.getChildTagName(child);
     let defaultChildTagName = this.getDefault().childTagName;
     let childTagNames = this.props.allowTags.concat(defaultChildTagName);
@@ -150,7 +150,7 @@ export const ProgressBar = UU5.Common.VisualComponent.create({
     if (!result && (typeof child !== "string" || child.trim())) {
       if (childTagName)
         this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagName], {
-          mixinName: "UU5.Common.BaseMixin"
+          mixinName: "UU5.Common.BaseMixin",
         });
       else this.showError("childNotAllowed", [child, defaultChildTagName], { mixinName: "UU5.Common.BaseMixin" });
     }
@@ -175,11 +175,11 @@ export const ProgressBar = UU5.Common.VisualComponent.create({
     this._editableComponent = ref;
   },
 
-  _getProgressBarItem: function(name) {
+  _getProgressBarItem: function (name) {
     return this.getItem(name || this.getDefault().itemName);
   },
 
-  _getMainProps: function() {
+  _getMainProps: function () {
     let props = this.getMainPropsToPass();
 
     props.className += " " + this.getClassName("size") + this.props.size;
@@ -187,31 +187,31 @@ export const ProgressBar = UU5.Common.VisualComponent.create({
     return props;
   },
 
-  _getChildProps: function() {
+  _getChildProps: function () {
     return {
       name: this.getDefault().itemName,
       progress: this.props.progress,
       content: this.getContent(),
       striped: this.props.striped,
-      animated: this.props.animated
+      animated: this.props.animated,
     };
   },
 
-  _buildChild: function() {
+  _buildChild: function () {
     var child = <Item {...this._getChildProps()} />;
     return this.cloneChild(child, this.expandChildProps(child, 0));
   },
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return this.getNestingLevel() ? (
       <UU5.Common.Fragment>
         <Cover {...this._getMainProps()}>{this.props.children ? this.getChildren() : this._buildChild()}</Cover>
         {this.isInlineEdited() && this._renderEditationMode()}
       </UU5.Common.Fragment>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

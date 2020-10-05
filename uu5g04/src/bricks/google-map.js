@@ -32,12 +32,12 @@ export const GoogleMap = UU5.Common.VisualComponent.create({
     tagName: ns.name("GoogleMap"),
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "inline"),
     classNames: {
-      main: ns.css("google-map")
+      main: ns.css("google-map"),
     },
     defaults: {
       loadLibsEvent: ns.css("google-map-load-libs"),
-      apiKeyUrl: "https://maps.googleapis.com/maps/api/js"
-    }
+      apiKeyUrl: "https://maps.googleapis.com/maps/api/js",
+    },
   },
   //@@viewOff:statics
 
@@ -52,7 +52,7 @@ export const GoogleMap = UU5.Common.VisualComponent.create({
         latitude: UU5.PropTypes.number,
         longitude: UU5.PropTypes.number,
         title: UU5.PropTypes.string,
-        label: UU5.PropTypes.string
+        label: UU5.PropTypes.string,
       })
     ),
     zoom: UU5.PropTypes.number,
@@ -64,7 +64,7 @@ export const GoogleMap = UU5.Common.VisualComponent.create({
     width: UU5.PropTypes.string,
 
     // https://developers.google.com/maps/documentation/javascript/styling
-    mapStyle: UU5.PropTypes.arrayOf(UU5.PropTypes.object)
+    mapStyle: UU5.PropTypes.arrayOf(UU5.PropTypes.object),
   },
   //@@viewOff:propTypes
 
@@ -82,7 +82,7 @@ export const GoogleMap = UU5.Common.VisualComponent.create({
       googleApiKey: null,
       height: "400px",
       width: "100%",
-      mapStyle: null
+      mapStyle: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -107,7 +107,7 @@ export const GoogleMap = UU5.Common.VisualComponent.create({
     }
   },
 
-  componentWillUnmount: function() {
+  componentWillUnmount: function () {
     UU5.Environment.EventListener.unregisterLoadLibs(this.getId(), this._initMap);
   },
   //@@viewOff:reactLifeCycle
@@ -156,7 +156,7 @@ export const GoogleMap = UU5.Common.VisualComponent.create({
     let script = document.createElement("script");
     document.head.appendChild(script);
 
-    script.onload = function() {
+    script.onload = function () {
       window.googleMapApiLoaded = true;
       UU5.Environment.EventListener.triggerLoadLibs(markers);
       typeof callback === "function" && callback();
@@ -177,7 +177,7 @@ export const GoogleMap = UU5.Common.VisualComponent.create({
       disableDoubleClickZoom: this.props.disableZoom,
       draggable: this.props.draggable,
       disableDefaultUI: this.props.disableDefaultUI,
-      mapTypeId: google.maps.MapTypeId[this.props.mapType.toUpperCase()]
+      mapTypeId: google.maps.MapTypeId[this.props.mapType.toUpperCase()],
     };
     Object.assign(mapProps, this._pendingMapOptions);
     delete this._pendingMapOptions;
@@ -188,7 +188,7 @@ export const GoogleMap = UU5.Common.VisualComponent.create({
       newMapCreated = true;
     }
     if (this._markers && this._markers.length > 0) {
-      this._markers.forEach(marker => {
+      this._markers.forEach((marker) => {
         marker.setMap(null); //clear old markers
       });
     }
@@ -203,13 +203,13 @@ export const GoogleMap = UU5.Common.VisualComponent.create({
       this._markers = [];
       if (!markers.length) {
         let marker = new google.maps.Marker({
-          position: myCenter
+          position: myCenter,
         });
 
         this._markers.push(marker);
         marker.setMap(this._googleMap);
       } else {
-        markers.forEach(markerProps => {
+        markers.forEach((markerProps) => {
           let position = new google.maps.LatLng(markerProps.latitude, markerProps.longitude);
           let animation = markerProps.animation ? google.maps.Animation[markerProps.animation.toUpperCase()] : null;
           let newMarker = new google.maps.Marker({
@@ -218,10 +218,10 @@ export const GoogleMap = UU5.Common.VisualComponent.create({
             title: markerProps.title,
             label: markerProps.label,
             icon: markerProps.icon,
-            animation: animation
+            animation: animation,
           });
           if (typeof markerProps.onClick === "function") {
-            newMarker.addListener("click", e => markerProps.onClick(this, newMarker, e));
+            newMarker.addListener("click", (e) => markerProps.onClick(this, newMarker, e));
           }
 
           this._markers.push(newMarker);
@@ -241,8 +241,8 @@ export const GoogleMap = UU5.Common.VisualComponent.create({
     let mainAttrs = this.getMainAttrs();
 
     let mapAttrs = {
-      ref: ref => (this._map = ref),
-      style: { height: this.props.height, width: this.props.width }
+      ref: (ref) => (this._map = ref),
+      style: { height: this.props.height, width: this.props.width },
     };
 
     let component;
@@ -261,7 +261,7 @@ export const GoogleMap = UU5.Common.VisualComponent.create({
       case "inline":
         component = (
           <span>
-            <Modal disabled={this.isDisabled()} ref_={modal => (this._modal = modal)}>
+            <Modal disabled={this.isDisabled()} ref_={(modal) => (this._modal = modal)}>
               <div {...mainAttrs}>
                 <div {...mapAttrs} />
                 {/* {this.getDisabledCover()} */}
@@ -276,7 +276,7 @@ export const GoogleMap = UU5.Common.VisualComponent.create({
     }
 
     return component;
-  }
+  },
   //@@viewOff:render
 });
 

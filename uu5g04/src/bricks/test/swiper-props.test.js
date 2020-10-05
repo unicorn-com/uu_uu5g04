@@ -23,13 +23,13 @@ const MyAllowTagsComponents = UU5.Common.VisualComponent.create({
   statics: { tagName: "UU5.Example.MyCompButton", classNames: { main: "mytr" } },
   render() {
     return <UU5.Example.MyCompButton {...this.getMainPropsToPass()} />;
-  }
+  },
 });
 
 const MySwipperHandler = UU5.Common.VisualComponent.create({
   getInitialState: () => {
     return {
-      isCalled: false
+      isCalled: false,
     };
   },
 
@@ -65,11 +65,11 @@ const MySwipperHandler = UU5.Common.VisualComponent.create({
         style={{
           backgroundColor: "lightblue",
           minHeight: "200px",
-          width: "100%"
+          width: "100%",
         }}
       />
     );
-  }
+  },
 });
 
 //`UU5.Bricks.Swiper`
@@ -81,25 +81,25 @@ const CONFIG = {
     "UU5.Common.ContentMixin",
     "UU5.Common.SwipeMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     leftMenuOpen: {
-      values: [true, false]
+      values: [true, false],
     },
     rightMenuOpen: {
-      values: [true, false]
+      values: [true, false],
     },
     //onSwipeOpenLeftMenu
     //onSwipeCloseLeftMenu
     //onSwipeOpenRightMenu
     //onSwipeCloseRightMenu
     allowBodyTags: {
-      allowTagsArray: ["UU5.Example.MyCompButton"]
+      allowTagsArray: ["UU5.Example.MyCompButton"],
     },
     allowMenuTags: {
-      allowTagsArray: ["UU5.Example.MyCompButton"]
-    }
+      allowTagsArray: ["UU5.Example.MyCompButton"],
+    },
   },
   requiredProps: {
     children: [
@@ -109,14 +109,14 @@ const CONFIG = {
           - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing
           ctrl+shift+M.
         </UU5.Bricks.P>
-      </UU5.Bricks.Swiper.Body>
-    ]
+      </UU5.Bricks.Swiper.Body>,
+    ],
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: true
-    }
-  }
+      disableLifecycleMethods: true,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Swiper`, () => {
@@ -200,7 +200,7 @@ describe(`UU5.Bricks.Swiper docKit examples`, () => {
         style={{
           backgroundColor: "lightblue",
           minHeight: "200px",
-          width: "100%"
+          width: "100%",
         }}
       >
         <UU5.Bricks.Swiper.Menu id={"uuID2"} style={{ backgroundColor: "lightgrey" }}>

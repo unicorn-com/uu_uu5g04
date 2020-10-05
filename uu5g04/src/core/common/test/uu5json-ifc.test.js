@@ -65,7 +65,7 @@ describe("UU5.Common.UU5Json interface test", () => {
     expect(ifc).toEqual(
       expect.objectContaining({
         _uu5json: '<uu5json/>{"style": {"fontSize": "20px","color": "red"}}',
-        _object: { style: { fontSize: "20px", color: "red" } }
+        _object: { style: { fontSize: "20px", color: "red" } },
       })
     );
   });

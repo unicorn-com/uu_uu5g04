@@ -32,7 +32,7 @@ export class VisualComponent {
     hidden: PropTypes.bool,
     mainAttrs: PropTypes.object,
     noIndex: PropTypes.bool,
-    nestingLevel: PropTypes.oneOf(Environment.nestingLevelList)
+    nestingLevel: PropTypes.oneOf(Environment.nestingLevelList),
   });
 
   static defaultProps = Object.freeze({
@@ -43,7 +43,7 @@ export class VisualComponent {
     hidden: undefined,
     mainAttrs: undefined,
     noIndex: undefined,
-    nestingLevel: undefined
+    nestingLevel: undefined,
   });
 
   static create(componentDescriptor) {
@@ -145,21 +145,21 @@ function addBasicVisualPropsPreprocessor(componentDescriptor) {
     if (typeof propTypes !== "function") {
       componentDescriptor.propTypes = {
         ...VisualComponent.propTypes,
-        ...propTypes
+        ...propTypes,
       };
 
       if (componentDescriptor.defaultProps) {
         componentDescriptor.defaultProps = {
           ...VisualComponent.defaultProps,
-          ...componentDescriptor.defaultProps
+          ...componentDescriptor.defaultProps,
         };
       } else if (typeof componentDescriptor.getDefaultProps === "function") {
         let origGDP = componentDescriptor.getDefaultProps;
-        componentDescriptor.getDefaultProps = function() {
+        componentDescriptor.getDefaultProps = function () {
           let result = origGDP.apply(this);
           return {
             ...VisualComponent.defaultProps,
-            ...result
+            ...result,
           };
         };
       } else {

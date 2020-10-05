@@ -31,11 +31,11 @@ export const Icon = UU5.Common.VisualComponent.create({
     classNames: {
       main: ns.css("icon"),
       notClickable: ns.css("icon-notclickable"),
-      svg: ns.css("icon-svg")
+      svg: ns.css("icon-svg"),
     },
     imageCache: {},
     loadingSvg: '<svg width="1px" height="1px" viewBox="0 0 10 10" />', // transparent 1x1 image
-    errorSvg: '<svg width="1px" height="1px" viewBox="0 0 10 10" />' // transparent 1x1 image
+    errorSvg: '<svg width="1px" height="1px" viewBox="0 0 10 10" />', // transparent 1x1 image
   },
   //@@viewOff:statics
 
@@ -44,17 +44,17 @@ export const Icon = UU5.Common.VisualComponent.create({
     icon: UU5.PropTypes.string,
     clickable: UU5.PropTypes.bool,
     src: UU5.PropTypes.string,
-    authenticate: UU5.PropTypes.bool
+    authenticate: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       icon: "mdi-check",
       clickable: true, //TODO check if it is still needed
       src: "",
-      authenticate: false
+      authenticate: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -64,7 +64,7 @@ export const Icon = UU5.Common.VisualComponent.create({
     let { preloading, response } = this._preloadImage(this.props);
     return {
       preloading,
-      response
+      response,
     };
   },
 
@@ -72,7 +72,7 @@ export const Icon = UU5.Common.VisualComponent.create({
     let { preloading, response } = this._preloadImage(nextProps);
     this.setState({
       preloading,
-      response
+      response,
     });
   },
   //@@viewOff:reactLifeCycle
@@ -121,7 +121,7 @@ export const Icon = UU5.Common.VisualComponent.create({
     } else {
       result = {
         preloading: false,
-        response: null
+        response: null,
       };
       delete this._preloadImageLastRunId;
     }
@@ -141,15 +141,15 @@ export const Icon = UU5.Common.VisualComponent.create({
         preloading: true,
         promise: null,
         response: null,
-        error: null
+        error: null,
       };
       let session = UU5.Environment.getSession();
       result.promise = this._fetchImage(url, { responseType, withCredentials }, session).then(
-        response => {
+        (response) => {
           result.preloading = false;
           result.response = response;
         },
-        error => {
+        (error) => {
           result.preloading = false;
           result.error = error;
         }
@@ -170,7 +170,7 @@ export const Icon = UU5.Common.VisualComponent.create({
       xhr.responseType = responseType;
       xhr.setRequestHeader("Accept", "image/*,*/*;q=0.8");
       for (var k in headers) if (headers[k] != null) xhr.setRequestHeader(k, headers[k]);
-      xhr.onreadystatechange = function(/*e*/) {
+      xhr.onreadystatechange = function (/*e*/) {
         if (xhr.readyState == 4) {
           if (xhr.status >= 200 && xhr.status < 300) {
             resolve(xhr.response);
@@ -190,7 +190,7 @@ export const Icon = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     let mainProps = this.getMainAttrs();
     if (this.props.src) {
       mainProps.className += " " + this.getClassName("svg");
@@ -217,7 +217,7 @@ export const Icon = UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </span>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

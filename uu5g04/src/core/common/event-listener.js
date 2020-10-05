@@ -26,7 +26,7 @@ const visibility = (() => {
       hidden: "visibilitychange",
       webkitHidden: "webkitvisibilitychange",
       mozHidden: "mozvisibilitychange",
-      msHidden: "msvisibilitychange"
+      msHidden: "msvisibilitychange",
     };
 
   for (stateKey in keys) {
@@ -36,7 +36,7 @@ const visibility = (() => {
     }
   }
 
-  return c => {
+  return (c) => {
     if (c) document.addEventListener(eventKey, c);
     return !document[stateKey];
   };
@@ -52,25 +52,25 @@ export class EventListener {
       highlight: {},
       dateTime: {},
       number: {},
-      loadLibs: {}
+      loadLibs: {},
     };
 
     visibility(() =>
       this.triggerEvent("pageVisibility", {
         visible: visibility(),
-        focus: Environment.isPageFocused()
+        focus: Environment.isPageFocused(),
       })
     );
     this.addWindowEvent("focus", "windowFocus", () =>
       this.triggerEvent("pageVisibility", {
         visible: Environment.isPageVisible(),
-        focus: true
+        focus: true,
       })
     );
     this.addWindowEvent("blur", "windowBlur", () =>
       this.triggerEvent("pageVisibility", {
         visible: Environment.isPageVisible(),
-        focus: false
+        focus: false,
       })
     );
   }
@@ -80,7 +80,7 @@ export class EventListener {
       let usedFce = fce;
       if (key === "lsi") {
         // TODO because of backward compatibility
-        usedFce = function(lang) {
+        usedFce = function (lang) {
           return fce(lang && typeof lang === "object" ? lang.language : lang); // new API (UU5.Utils.Lsi.setLanguage) sends object { language: "..." }, EventListener's listeners expect string
         };
         if (this._listeners[key] && this._listeners[key][id]) Lsi.unregister(this._listeners[key][id]);
@@ -127,7 +127,7 @@ export class EventListener {
 
       if (!targetMap[key]) {
         targetMap[key] = targetMap[key] || {};
-        object.addEventListener(key, e => {
+        object.addEventListener(key, (e) => {
           for (let id in targetMap[key]) {
             targetMap[key][id](e);
           }
@@ -307,7 +307,7 @@ export class EventListener {
 
       if (!targetMap[key]) {
         targetMap[key] = targetMap[key] || {};
-        session.addListener(key, e => {
+        session.addListener(key, (e) => {
           for (let id in targetMap[key]) {
             targetMap[key][id](e);
           }
@@ -333,7 +333,7 @@ export class EventListener {
       component: "EventListener",
       id: id,
       function: fce,
-      key: key
+      key: key,
     });
   }
 }

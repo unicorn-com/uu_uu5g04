@@ -25,57 +25,32 @@ describe("UU5.Bricks.Slider interface testing", () => {
   it("getValue()", () => {
     const wrapper = mount(<UU5.Bricks.Slider id={"uuID01"} value={80} max={100} colorSchema="red" />);
     expect(wrapper.instance().getValue()).toBe(80);
-    expect(
-      wrapper
-        .find("slider-item")
-        .instance()
-        .getValue()
-    ).toBe(80);
+    expect(wrapper.find("slider-item").instance().getValue()).toBe(80);
   });
 
   it("setValue(value, setStateCallBack)", () => {
     const wrapper = mount(<UU5.Bricks.Slider id={"uuID01"} value={80} max={100} colorSchema="red" />);
     const mockFunc = jest.fn();
     expect(wrapper.instance().getValue()).toBe(80);
-    expect(
-      wrapper
-        .find("slider-item")
-        .instance()
-        .getValue()
-    ).toBe(80);
+    expect(wrapper.find("slider-item").instance().getValue()).toBe(80);
     const returnValue = wrapper.instance().setValue(20, mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue === wrapper.instance()).toBe(true);
     expect(wrapper.instance().getValue()).toBe(20);
-    expect(
-      wrapper
-        .find("slider-item")
-        .instance()
-        .getValue()
-    ).toBe(20);
+    expect(wrapper.find("slider-item").instance().getValue()).toBe(20);
   });
 
   it("increase(value, setStateCallBack)", () => {
     const wrapper = mount(<UU5.Bricks.Slider id={"uuID01"} value={80} max={100} colorSchema="red" />);
     const mockFunc = jest.fn();
     expect(wrapper.instance().getValue()).toBe(80);
-    expect(
-      wrapper
-        .find("slider-item")
-        .instance()
-        .getValue()
-    ).toBe(80);
+    expect(wrapper.find("slider-item").instance().getValue()).toBe(80);
     const returnValue = wrapper.instance().increase(20, mockFunc);
     wrapper.update();
     expect(wrapper.instance().getValue()).toBe(100);
-    expect(
-      wrapper
-        .find("slider-item")
-        .instance()
-        .getValue()
-    ).toBe(100);
+    expect(wrapper.find("slider-item").instance().getValue()).toBe(100);
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue === wrapper.instance()).toBe(true);
@@ -83,12 +58,7 @@ describe("UU5.Bricks.Slider interface testing", () => {
     wrapper.instance().increase(10, mockFunc);
     wrapper.update();
     expect(wrapper.instance().getValue()).toBe(100);
-    expect(
-      wrapper
-        .find("slider-item")
-        .instance()
-        .getValue()
-    ).toBe(100);
+    expect(wrapper.find("slider-item").instance().getValue()).toBe(100);
     expect(mockFunc).toHaveBeenCalledTimes(2);
   });
 
@@ -99,12 +69,7 @@ describe("UU5.Bricks.Slider interface testing", () => {
     const returnValue = wrapper.instance().decrease(20, mockFunc);
     wrapper.update();
     expect(wrapper.instance().getValue()).toBe(0);
-    expect(
-      wrapper
-        .find("slider-item")
-        .instance()
-        .getValue()
-    ).toBe(0);
+    expect(wrapper.find("slider-item").instance().getValue()).toBe(0);
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue === wrapper.instance()).toBe(true);
@@ -112,12 +77,7 @@ describe("UU5.Bricks.Slider interface testing", () => {
     wrapper.instance().decrease(10, mockFunc);
     wrapper.update();
     expect(wrapper.instance().getValue()).toBe(0);
-    expect(
-      wrapper
-        .find("slider-item")
-        .instance()
-        .getValue()
-    ).toBe(0);
+    expect(wrapper.find("slider-item").instance().getValue()).toBe(0);
     expect(mockFunc).toHaveBeenCalledTimes(2);
   });
 

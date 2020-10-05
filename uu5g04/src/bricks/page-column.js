@@ -74,11 +74,11 @@ export const PageColumn = UU5.Common.VisualComponent.create({
             box-shadow: none;
             border-${props.right ? "left" : "right"}: 1px solid rgba(33, 33, 33, 0.12)
           }`;
-      }
+      },
     },
     errors: {
-      invalidParent: "Parent of this component is not Page."
-    }
+      invalidParent: "Parent of this component is not Page.",
+    },
   },
   //@@viewOff:statics
 
@@ -106,7 +106,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
     maxResizableWidth: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
     onUpdate: UU5.PropTypes.func,
     onResize: UU5.PropTypes.func,
-    showToggleButton: UU5.PropTypes.bool
+    showToggleButton: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -140,7 +140,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
       onUpdate: null,
       onResize: null,
       topOverlaysContent: false,
-      showToggleButton: false
+      showToggleButton: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -164,7 +164,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
       animateBottom: false,
       width,
       ghostWidth,
-      resizing: false
+      resizing: false,
     };
   },
 
@@ -242,7 +242,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
         let transitionDuration = 1000;
         let start = null;
         let bottomVisibility = this._getBottomVisibility();
-        let animationStep = timestamp => {
+        let animationStep = (timestamp) => {
           if (!start) {
             start = timestamp;
             UU5.Environment.EventListener.triggerEvent("preventScrollTrigger", true);
@@ -282,7 +282,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
         {
           open: true,
           width: this._getWidth(this.props, null, true),
-          ghostWidth: this._getGhostWidth(this.props, true)
+          ghostWidth: this._getGhostWidth(this.props, true),
         },
         setStateCallback
       );
@@ -302,7 +302,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
         {
           open: false,
           width: this._getWidth(this.props, null, false),
-          ghostWidth: this._getGhostWidth(this.props, false)
+          ghostWidth: this._getGhostWidth(this.props, false),
         },
         setStateCallback
       );
@@ -371,7 +371,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
   },
 
   _onFixPageTop(fixed, height) {
-    this.setState(state => {
+    this.setState((state) => {
       return { topFixed: fixed, topHeight: height, animateTop: state.animate && fixed ? true : false };
     });
   },
@@ -385,7 +385,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
   },
 
   _onFixPageBottom(fixed, height) {
-    this.setState(state => {
+    this.setState((state) => {
       return { bottomFixed: fixed, bottomHeight: height, animateBottom: state.animate && fixed ? true : false };
     });
   },
@@ -431,13 +431,15 @@ export const PageColumn = UU5.Common.VisualComponent.create({
           // border: solid 1px rgba(33,33,33,0.12);
           border-radius: 4px;
         }
-        ${showOnHover &&
+        ${
+          showOnHover &&
           `
           .uu5-bricks-page-column-wrapper:hover &,
           &:hover {
             visibility: visible;
           }
-        `}
+        `
+        }
       `;
 
       buttonStyle += " " + this.getClassName("zIndex") + this.props.elevation;
@@ -498,7 +500,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
     let oldState = { ...this.state };
 
     this.setState(
-      state => {
+      (state) => {
         if (UU5.Common.Tools.deepEqual(newState.style, state.style)) {
           this._preventContentRender = false;
           return undefined;
@@ -697,7 +699,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
       let resultRule = "";
 
       let separate = false;
-      args.forEach(rule => {
+      args.forEach((rule) => {
         if (rule) {
           resultRule += (separate ? ", " : "") + rule;
           separate = true;
@@ -907,7 +909,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
       onTransitionEnd: () => {
         UU5.Environment.EventListener.triggerEvent("preventScrollTrigger", false);
         UU5.Environment.EventListener.triggerEvent("pageColumnChanged");
-      }
+      },
     };
 
     if (this.props.block && this.props.fixed) {
@@ -956,7 +958,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
 
     return {
       className,
-      style: { width: this.state.ghostWidth, maxWidth, right: this.props.right ? 0 : "auto" }
+      style: { width: this.state.ghostWidth, maxWidth, right: this.props.right ? 0 : "auto" },
     };
   },
 
@@ -967,7 +969,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
     let style = getStyles
       ? UU5.Common.Tools.merge(props.style || {}, this.state.style, {
           width: this.state.width,
-          maxWidth
+          maxWidth,
         })
       : {};
 
@@ -1013,7 +1015,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
       style: style,
       onClick: (backdrop, event) => {
         event.target.id === backdropId && this.close();
-      }
+      },
     };
   },
 
@@ -1065,7 +1067,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
       if (!this.props.block) {
         result = UU5.Common.Tools.wrapIfExists(
           UU5.Common.Fragment,
-          <div {...this._getWrapperProps()} ref={comp => (this._columnRef = comp)}>
+          <div {...this._getWrapperProps()} ref={(comp) => (this._columnRef = comp)}>
             {!this.props.relative ? <Backdrop {...this._getBackdropProps()} /> : null}
             <Column {...this._getMainProps(false)}>
               {UU5.Common.Tools.wrapIfExists(
@@ -1081,14 +1083,14 @@ export const PageColumn = UU5.Common.VisualComponent.create({
             </Column>
             {this._getToggleButton()}
           </div>,
-          <div {...this._getWrapperGhostProps()} ref={element => (this._ghost = element)}>
+          <div {...this._getWrapperGhostProps()} ref={(element) => (this._ghost = element)}>
             <Column {...this._getMainGhostProps()} />
           </div>
         );
       } else {
         result = UU5.Common.Tools.wrapIfExists(
           UU5.Common.Fragment,
-          <Column {...this._getMainProps(true)} ref={comp => (this._columnRef = comp)}>
+          <Column {...this._getMainProps(true)} ref={(comp) => (this._columnRef = comp)}>
             {UU5.Common.Tools.wrapIfExists(
               AreaWrapper,
               <UpdateWrapper preventRender={this._preventContentRender}>
@@ -1100,7 +1102,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
             )}
             {this._getDragElement()}
           </Column>,
-          this.props.fixed ? <Column {...this._getMainGhostProps(true)} ref_={comp => (this._ghost = comp)} /> : null
+          this.props.fixed ? <Column {...this._getMainGhostProps(true)} ref_={(comp) => (this._ghost = comp)} /> : null
         );
       }
     } else {
@@ -1110,7 +1112,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
     this._preventContentRender = false;
 
     return result;
-  }
+  },
   //@@viewOff:render
 });
 

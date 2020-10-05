@@ -24,46 +24,46 @@ const CONFIG = {
     "UU5.Common.LsiMixin",
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     headerMode: {
-      values: ["all", "flag", "label", "code"]
+      values: ["all", "flag", "label", "code"],
     },
     bodyMode: {
-      values: ["all", "flag", "label", "label-code"]
+      values: ["all", "flag", "label", "label-code"],
     },
     displayedLanguages: {
-      values: ["cs", "sk", "en"]
+      values: ["cs", "sk", "en"],
     },
     languages: {
       values: [
         {
           en: { flag: "https://image.flaticon.com/icons/svg/197/197484.svg", language: "English" },
-          de: { flag: "https://image.flaticon.com/icons/svg/s197/197571.svg", language: "Deutsch" }
-        }
-      ]
+          de: { flag: "https://image.flaticon.com/icons/svg/s197/197571.svg", language: "Deutsch" },
+        },
+      ],
     },
     defaultLanguage: "en",
     size: {
-      values: ["s", "m", "l", "xl"]
+      values: ["s", "m", "l", "xl"],
     },
     bgStyle: {
-      values: ["filled", "outline", "transparent"]
+      values: ["filled", "outline", "transparent"],
     },
     pullRight: {
-      values: [true, false]
+      values: [true, false],
     },
     dropup: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.LanguageSelector`, () => {
@@ -90,12 +90,12 @@ describe(`UU5.Bricks.LanguageSelector docKit examples`, () => {
           languages={{
             en: {
               flag: "https://image.flaticon.com/icons/svg/197/197484.svg",
-              language: "English"
+              language: "English",
             },
             de: {
               flag: "httpss://image.flaticon.com/icons/svg/197/197571.svg",
-              language: "Deutsch"
-            }
+              language: "Deutsch",
+            },
           }}
         />
         <UU5.Bricks.LanguageSelector id={"uuID12"} bodyMode="all" size="s" />

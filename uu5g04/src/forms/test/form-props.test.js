@@ -25,14 +25,14 @@ const MyCustomForms = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.PureRenderMixin,
     UU5.Common.SectionMixin,
-    UU5.Forms.FormMixin
+    UU5.Forms.FormMixin,
   ],
 
   getInitialState: () => {
     return {
       isCalled: false,
       message: "",
-      feedback: "initial"
+      feedback: "initial",
     };
   },
 
@@ -118,7 +118,7 @@ const MyCustomForms = UU5.Common.VisualComponent.create({
         {/*@@viewOff:0*/}
       </UU5.Bricks.Container>
     );
-  }
+  },
 });
 
 const CONFIG = {
@@ -127,19 +127,19 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Common.PureRenderMixin",
     "UU5.Common.SectionMixin",
-    "UU5.Forms.FormMixin"
+    "UU5.Forms.FormMixin",
   ],
   props: {
     //The component does not have any own props
   },
   requiredProps: {
-    children: [<UU5.Forms.Text name="name" label="Name" id={"uuID-child"} placeholder="John" required />]
+    children: [<UU5.Forms.Text name="name" label="Name" id={"uuID-child"} placeholder="John" required />],
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Forms.Form props`, () => {

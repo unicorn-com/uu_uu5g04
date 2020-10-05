@@ -34,9 +34,9 @@ export const TextButton = Context.withContext(
     statics: {
       tagName: ns.name("TextButton"),
       classNames: {
-        main: ns.css("text-button")
+        main: ns.css("text-button"),
       },
-      lsi: () => UU5.Environment.Lsi.Forms.message
+      lsi: () => UU5.Environment.Lsi.Forms.message,
     },
     //@@viewOff:statics
 
@@ -50,11 +50,11 @@ export const TextButton = Context.withContext(
           colorSchema: UU5.PropTypes.string,
           bgStyle: UU5.PropTypes.string,
           borderRadius: UU5.PropTypes.string,
-          elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
+          elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
         })
       ),
       pattern: UU5.PropTypes.string,
-      actionOnEnter: UU5.PropTypes.bool
+      actionOnEnter: UU5.PropTypes.bool,
     },
     //@@viewOff:propTypes
 
@@ -64,7 +64,7 @@ export const TextButton = Context.withContext(
         value: "",
         buttons: null,
         pattern: null,
-        actionOnEnter: false
+        actionOnEnter: false,
       };
     },
     //@@viewOff:getDefaultProps
@@ -139,7 +139,7 @@ export const TextButton = Context.withContext(
             message: result.message,
             value: result.value,
             foundAutocompleteItems: result.foundAutocompleteItems,
-            selectedIndex: result.selectedIndex
+            selectedIndex: result.selectedIndex,
           },
           callback
         );
@@ -166,7 +166,7 @@ export const TextButton = Context.withContext(
             }
           } else {
             this.showError("validateError", null, {
-              context: { event: e, func: this.props.onValidate, result: result }
+              context: { event: e, func: this.props.onValidate, result: result },
             });
           }
         }
@@ -219,7 +219,7 @@ export const TextButton = Context.withContext(
             let newButton = UU5.Common.Tools.merge(
               {
                 size: this.props.size,
-                colorSchema: this.props.colorSchema
+                colorSchema: this.props.colorSchema,
               },
               button
             );
@@ -263,13 +263,13 @@ export const TextButton = Context.withContext(
         readonly: this.isReadOnly(),
         loading: this.isLoading(),
         feedback: this.getFeedback(),
-        ref_: item => (this._textInput = item),
+        ref_: (item) => (this._textInput = item),
         borderRadius: this.props.borderRadius,
         elevation: this.props.elevation,
         bgStyle: this.props.bgStyle,
         inputWidth: this._getInputWidth(),
         colorSchema: this.props.colorSchema,
-        size: this.props.size
+        size: this.props.size,
       };
 
       if (this.state.autocompleteItems) {
@@ -281,8 +281,8 @@ export const TextButton = Context.withContext(
             itemListProps: this.state.autocompleteItems ? this._getItemListProps() : undefined,
             open: this.isOpen(),
             onClose: this.close,
-            onOpen: this.open
-          }
+            onOpen: this.open,
+          },
         };
       }
 
@@ -304,7 +304,7 @@ export const TextButton = Context.withContext(
           {this.getInputWrapper(this._getInput(inputId), this._getButtons())}
         </div>
       );
-    }
+    },
     //@@viewOn:render
   })
 );

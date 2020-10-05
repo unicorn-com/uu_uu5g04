@@ -33,24 +33,24 @@ export default UU5.Common.VisualComponent.create({
       header: ns.css("item-list-header"),
       body: ns.css("item-list-body"),
       footer: ns.css("item-list-footer"),
-      selectedItem: ns.css("item-list-selected uu5-common-bg")
+      selectedItem: ns.css("item-list-selected uu5-common-bg"),
     },
     defaults: {
-      childTagName: "UU5.Forms.Select.Option"
-    }
+      childTagName: "UU5.Forms.Select.Option",
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string)
+    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
-      allowTags: []
+      allowTags: [],
     };
   },
   //@@viewOff:getDefaultProps
@@ -100,7 +100,7 @@ export default UU5.Common.VisualComponent.create({
     if (!result && (typeof child !== "string" || child.trim())) {
       if (childTagName)
         this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagName], {
-          mixinName: "UU5.Common.BaseMixin"
+          mixinName: "UU5.Common.BaseMixin",
         });
       else this.showError("childNotAllowed", [child, defaultChildTagName], { mixinName: "UU5.Common.BaseMixin" });
     }
@@ -110,7 +110,7 @@ export default UU5.Common.VisualComponent.create({
   expandChildProps_(child, i) {
     var props = { ...child.props };
 
-    if (this.props.value && this.props.value.find(value => value === child.props.value)) {
+    if (this.props.value && this.props.value.find((value) => value === child.props.value)) {
       props.selected = true;
       props.className = props.className
         ? props.className + " " + this.getClassName().selectedItem
@@ -122,7 +122,7 @@ export default UU5.Common.VisualComponent.create({
     props.mainAttrs.id = this.getId() + "-item-" + i;
 
     var childOnClick = props.onClick;
-    props.onClick = opt => {
+    props.onClick = (opt) => {
       this.changeValue(opt.value, opt.event, childOnClick);
     };
 
@@ -162,7 +162,7 @@ export default UU5.Common.VisualComponent.create({
   _getMainProps() {
     let props = this.getMainPropsToPass();
 
-    props.ref_ = ref => (this._popover = ref);
+    props.ref_ = (ref) => (this._popover = ref);
     props.disableBackdrop = true;
     props.shown = !this.isHidden();
     props.fitHeightToViewport = true;
@@ -175,8 +175,8 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return <UU5.Bricks.Popover {...this._getMainProps()}>{this.getChildren()}</UU5.Bricks.Popover>;
-  }
+  },
   //@@viewOn:render
 });

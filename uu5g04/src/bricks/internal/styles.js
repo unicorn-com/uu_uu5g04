@@ -1,6 +1,6 @@
 import * as UU5 from "uu5g04";
 
-export const elevationMixin = extraShadow => `
+export const elevationMixin = (extraShadow) => `
   &.uu5-elevation--1,
   &.uu5-elevation-hover--1:hover,
   &.uu5-common-elevation--1,

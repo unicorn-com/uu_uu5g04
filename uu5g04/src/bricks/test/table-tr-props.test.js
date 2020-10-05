@@ -23,7 +23,7 @@ const MyAllowTagsComponents = UU5.Common.VisualComponent.create({
   statics: { tagName: "UU5.Example.MyCompButton", classNames: { main: "mytr" } },
   render() {
     return <UU5.Example.MyCompButton {...this.getMainPropsToPass()} />;
-  }
+  },
 });
 
 //`UU5.Bricks.Table.Tr`
@@ -35,21 +35,21 @@ const CONFIG = {
     "UU5.Common.ContentMixin",
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     allowTags: {
-      values: [["UU5.Example.MyCompButton"]]
-    }
+      values: [["UU5.Example.MyCompButton"]],
+    },
   },
   requiredProps: {
-    parent: shallow(<UU5.Bricks.Table id="parentId" />).instance()
+    parent: shallow(<UU5.Bricks.Table id="parentId" />).instance(),
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Table.Tr`, () => {

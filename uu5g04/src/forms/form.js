@@ -29,7 +29,7 @@ export const Form = UU5.Common.VisualComponent.create({
     UU5.Common.PureRenderMixin,
     UU5.Common.ElementaryMixin,
     UU5.Common.SectionMixin,
-    FormMixin
+    FormMixin,
   ],
   //@@viewOff:mixins
 
@@ -37,8 +37,8 @@ export const Form = UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("Form"),
     classNames: {
-      main: ns.css("form")
-    }
+      main: ns.css("form"),
+    },
   },
   //@@viewOff:statics
 
@@ -66,19 +66,19 @@ export const Form = UU5.Common.VisualComponent.create({
   //@@viewOn:overriding
   disable_(setStateCallback) {
     let inputs = this.getInputs();
-    Object.keys(inputs).forEach(key => {
+    Object.keys(inputs).forEach((key) => {
       inputs[key].disable();
     });
-    this.eachFormControls(formControls => formControls.disable(setStateCallback));
+    this.eachFormControls((formControls) => formControls.disable(setStateCallback));
     return this;
   },
 
   enable_(setStateCallback) {
     let inputs = this.getInputs();
-    Object.keys(inputs).forEach(key => {
+    Object.keys(inputs).forEach((key) => {
       inputs[key].enable();
     });
-    this.eachFormControls(formControls => formControls.enable(setStateCallback));
+    this.eachFormControls((formControls) => formControls.enable(setStateCallback));
     return this;
   },
   //@@viewOff:overriding
@@ -91,7 +91,7 @@ export const Form = UU5.Common.VisualComponent.create({
     return this.getFormChildren(() => {
       return [this.getHeaderChild(), this.getChildren(), this.getFooterChild()];
     });
-  }
+  },
   //@@viewOff:render
 });
 

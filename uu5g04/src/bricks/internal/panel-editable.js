@@ -19,7 +19,7 @@ import EditableLsi from "./bricks-editable-lsi.js";
 
 const DEFAULT_PROPS_MAP = {
   header: null,
-  mountContent: undefined
+  mountContent: undefined,
 };
 
 const editablePropsComponentSetup = [
@@ -32,13 +32,13 @@ const editablePropsComponentSetup = [
         { value: "s", content: <UU5.Bricks.Lsi lsi={EditableLsi.common.sizeValueS} /> },
         { value: "m", content: <UU5.Bricks.Lsi lsi={EditableLsi.common.sizeValueM} /> },
         { value: "l", content: <UU5.Bricks.Lsi lsi={EditableLsi.common.sizeValueL} /> },
-        { value: "xl", content: <UU5.Bricks.Lsi lsi={EditableLsi.common.sizeValueXL} /> }
-      ]
-    })
+        { value: "xl", content: <UU5.Bricks.Lsi lsi={EditableLsi.common.sizeValueXL} /> },
+      ],
+    }),
   },
   [
     { name: "iconExpanded", type: "iconPicker", label: EditableLsi.panel.iconExpandedLabel },
-    { name: "iconCollapsed", type: "iconPicker", label: EditableLsi.panel.iconCollapsedLabel }
+    { name: "iconCollapsed", type: "iconPicker", label: EditableLsi.panel.iconCollapsedLabel },
   ],
   {
     name: "iconAlign",
@@ -49,45 +49,45 @@ const editablePropsComponentSetup = [
       items: [
         { value: "left", content: <UU5.Bricks.Lsi lsi={EditableLsi.panel.iconAlignValueLeft} /> },
         { value: "right", content: <UU5.Bricks.Lsi lsi={EditableLsi.panel.iconAlignValueRight} /> },
-        { value: "after", content: <UU5.Bricks.Lsi lsi={EditableLsi.panel.iconAlignValueAfter} /> }
-      ]
-    })
+        { value: "after", content: <UU5.Bricks.Lsi lsi={EditableLsi.panel.iconAlignValueAfter} /> },
+      ],
+    }),
   },
   [
     { name: "expanded", type: "bool", label: EditableLsi.panel.expandedLabel },
-    { name: "alwaysExpanded", type: "bool", label: EditableLsi.panel.alwaysExpandedLabel }
-  ]
+    { name: "alwaysExpanded", type: "bool", label: EditableLsi.panel.alwaysExpandedLabel },
+  ],
 ];
 
 const editableDisplayPropsSetup = [
   {
     name: "colorSchemaHeader",
     type: "colorSchema",
-    label: EditableLsi.panel.colorSchemaHeaderLabel
+    label: EditableLsi.panel.colorSchemaHeaderLabel,
   },
   {
     name: "colorSchemaContent",
     type: "colorSchema",
-    label: EditableLsi.panel.colorSchemaContentLabel
+    label: EditableLsi.panel.colorSchemaContentLabel,
   },
   {
     name: "elevation",
     type: "switchSelector",
     label: EditableLsi.panel.elevationLabel,
     getProps: () => ({
-      items: [{ value: 0 }, { value: 1 }, { value: 2 }, { value: 3 }, { value: 4 }, { value: 5 }]
-    })
+      items: [{ value: 0 }, { value: 1 }, { value: 2 }, { value: 3 }, { value: 4 }, { value: 5 }],
+    }),
   },
   { name: "borderRadius" },
   {
     name: "bgStyleHeader",
     type: "bgStyle",
-    label: EditableLsi.panel.bgStyleHeaderLabel
+    label: EditableLsi.panel.bgStyleHeaderLabel,
   },
   {
     name: "bgStyleContent",
     type: "bgStyle",
-    label: EditableLsi.panel.bgStyleContentLabel
+    label: EditableLsi.panel.bgStyleContentLabel,
   },
   {
     name: "openClick",
@@ -97,9 +97,9 @@ const editableDisplayPropsSetup = [
       value: value || "header",
       items: [
         { value: "header", content: <UU5.Bricks.Lsi lsi={EditableLsi.panel.openClickValueHeader} /> },
-        { value: "icon", content: <UU5.Bricks.Lsi lsi={EditableLsi.panel.openClickValueIcon} /> }
-      ]
-    })
+        { value: "icon", content: <UU5.Bricks.Lsi lsi={EditableLsi.panel.openClickValueIcon} /> },
+      ],
+    }),
   },
   {
     name: "mountContent",
@@ -108,22 +108,22 @@ const editableDisplayPropsSetup = [
     getProps: () => ({
       items: [
         { value: "onEachExpand", content: <UU5.Bricks.Lsi lsi={EditableLsi.panel.mountContentValueOnEachExpand} /> },
-        { value: "onFirstExpand", content: <UU5.Bricks.Lsi lsi={EditableLsi.panel.mountContentValueOnFirstExpand} /> }
+        { value: "onFirstExpand", content: <UU5.Bricks.Lsi lsi={EditableLsi.panel.mountContentValueOnFirstExpand} /> },
       ],
-      message: <UU5.Bricks.Lsi lsi={EditableLsi.panel.mountContentDescription} />
-    })
-  }
+      message: <UU5.Bricks.Lsi lsi={EditableLsi.panel.mountContentDescription} />,
+    }),
+  },
 ];
 
 const editablePropsSetup = [
   {
     name: <UU5.Bricks.Lsi lsi={EditableLsi.common.componentPropsLabel} />,
-    setup: editablePropsComponentSetup
+    setup: editablePropsComponentSetup,
   },
   {
     name: <UU5.Bricks.Lsi lsi={EditableLsi.common.displayPropsLabel} />,
-    setup: editableDisplayPropsSetup
-  }
+    setup: editableDisplayPropsSetup,
+  },
 ];
 
 export const PanelEditable = UU5.Common.VisualComponent.create({
@@ -143,22 +143,22 @@ export const PanelEditable = UU5.Common.VisualComponent.create({
         .uu5-bricks-panel-header-content {
           width: 100%;
         }
-      `
+      `,
     },
-    lsi: () => ({ ...EditableLsi.panel, ...EditableLsi.common })
+    lsi: () => ({ ...EditableLsi.panel, ...EditableLsi.common }),
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    component: UU5.PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      component: null
+      component: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -169,7 +169,7 @@ export const PanelEditable = UU5.Common.VisualComponent.create({
     return {
       ...props,
       mountContent: props.mountContent || "onEachExpand",
-      editationModalOpen: false
+      editationModalOpen: false,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -218,7 +218,7 @@ export const PanelEditable = UU5.Common.VisualComponent.create({
   _onSettingsClick() {
     //EditationModal will use the content/children value of the component, but it's children can be already in edit mode, so their actual values can be lost, so endChildrenEditation and make sure that data are correct.
     this.props.component.endChildrenEditation();
-    this.setState(state => ({ editationModalOpen: !state.editationModalOpen }));
+    this.setState((state) => ({ editationModalOpen: !state.editationModalOpen }));
   },
 
   _renderMoreSettingsModal() {
@@ -227,7 +227,7 @@ export const PanelEditable = UU5.Common.VisualComponent.create({
         componentName={this.props.component.getTagName()}
         componentProps={{
           ...this.props.component.getEditablePropsValues(Object.keys(this.props.component.props)),
-          mountContent: this.state.mountContent
+          mountContent: this.state.mountContent,
         }}
         componentPropsForm={editablePropsSetup}
         shown={this.state.editationModalOpen}
@@ -267,20 +267,20 @@ export const PanelEditable = UU5.Common.VisualComponent.create({
                   placeholder={this.getLsi("headerPlaceholder")}
                   onChange={this._changeHeaderContent}
                   key="headerInput"
-                  mainAttrs={{ onClick: e => e.stopPropagation() }}
+                  mainAttrs={{ onClick: (e) => e.stopPropagation() }}
                 >
                   {({ children }) => children}
                 </UU5.BricksEditable.Input>
               }
             >
               {this.props.component.getChildren()}
-            </UU5.Bricks.Panel>
+            </UU5.Bricks.Panel>,
           ]}
         </UU5.BricksEditable.Toolbar>
         {this.state.editationModalOpen ? this._renderMoreSettingsModal() : null}
       </>
     );
-  }
+  },
   //@@viewOff:render
 });
 

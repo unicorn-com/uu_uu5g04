@@ -13,8 +13,11 @@
 
 import Environment from "./environment/environment.js";
 import Tools from "./common/tools.js";
+import "./common/internal/library-registry.js"; // modifies addRuntimeLibrary
 
 // merge environment settings from global variable into our defaults
 if (window.UU5 && window.UU5.Environment) {
   Tools.extend(Environment, window.UU5.Environment);
 }
+
+Environment.addRuntimeLibrary({ name: Environment.name, version: Environment.version });

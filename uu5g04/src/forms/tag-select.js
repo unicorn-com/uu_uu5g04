@@ -25,9 +25,9 @@ export const TagSelect = Context.withContext(
       classNames: {
         ...TagSelectStyles.CommonClassNames,
         item: ns.css("auto-complete-item", "group-item"),
-        inputOpen: ns.css("items-input-open")
+        inputOpen: ns.css("items-input-open"),
       },
-      lsi: () => UU5.Common.Tools.merge({}, UU5.Environment.Lsi.Forms.tagSelect, UU5.Environment.Lsi.Forms.message)
+      lsi: () => UU5.Common.Tools.merge({}, UU5.Environment.Lsi.Forms.tagSelect, UU5.Environment.Lsi.Forms.message),
     },
     //@@viewOff:statics
 
@@ -37,7 +37,7 @@ export const TagSelect = Context.withContext(
       availableTags: UU5.PropTypes.arrayOf(
         UU5.PropTypes.shape({
           value: UU5.PropTypes.string,
-          content: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.object])
+          content: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.object]),
         })
       ),
       ignoreTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
@@ -49,7 +49,7 @@ export const TagSelect = Context.withContext(
       elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
       placeholder: UU5.PropTypes.string,
       required: UU5.PropTypes.bool,
-      requiredMessage: UU5.PropTypes.any
+      requiredMessage: UU5.PropTypes.any,
     },
     //@@viewOff:propTypes
 
@@ -66,7 +66,7 @@ export const TagSelect = Context.withContext(
         elevation: undefined,
         placeholder: undefined,
         required: false,
-        requiredMessage: undefined
+        requiredMessage: undefined,
       };
     },
     //@@viewOff:getDefaultProps
@@ -78,7 +78,7 @@ export const TagSelect = Context.withContext(
       this._initAvailableTags();
 
       return {
-        searchValue: ""
+        searchValue: "",
       };
     },
 
@@ -192,7 +192,7 @@ export const TagSelect = Context.withContext(
           message: this.props.message,
           feedback: this.props.feedback,
           value: this._filterValues(this._normalizeValue(this.props.value), false),
-          readOnly: this.props.readOnly
+          readOnly: this.props.readOnly,
         },
         setStateCallback
       );
@@ -253,12 +253,12 @@ export const TagSelect = Context.withContext(
       let result;
 
       if (allowCustomTags) {
-        result = value.filter(valueItem => !ignoreTags.find(ignoreTag => ignoreTag === valueItem));
+        result = value.filter((valueItem) => !ignoreTags.find((ignoreTag) => ignoreTag === valueItem));
       } else {
         result = value.filter(
-          valueItem =>
-            availableTags.find(availTagItem => availTagItem.value === valueItem) &&
-            !ignoreTags.find(ignoreTag => ignoreTag === valueItem)
+          (valueItem) =>
+            availableTags.find((availTagItem) => availTagItem.value === valueItem) &&
+            !ignoreTags.find((ignoreTag) => ignoreTag === valueItem)
         );
       }
 
@@ -267,21 +267,24 @@ export const TagSelect = Context.withContext(
 
     _initAvailableTags(props = this.props) {
       this._availableTags = props.availableTags
-        ? props.availableTags.map(tag => ({
+        ? props.availableTags.map((tag) => ({
             value: tag.value,
             content: tag.content || tag.value,
-            searchValue: this._getTagSearchValue(tag)
+            searchValue: this._getTagSearchValue(tag),
           }))
         : [];
     },
 
     _correctAvailableTags(value) {
-      value.forEach(valueItem => {
-        if (this.props.allowCustomTags && !this._availableTags.find(availTagItem => availTagItem.value === valueItem)) {
+      value.forEach((valueItem) => {
+        if (
+          this.props.allowCustomTags &&
+          !this._availableTags.find((availTagItem) => availTagItem.value === valueItem)
+        ) {
           this._availableTags.push({
             value: valueItem,
             content: valueItem,
-            searchValue: this._getTagSearchValue(valueItem)
+            searchValue: this._getTagSearchValue(valueItem),
           });
         }
       });
@@ -342,8 +345,8 @@ export const TagSelect = Context.withContext(
               context: {
                 event: opt.event,
                 func: this.props.onValidate,
-                result: result
-              }
+                result: result,
+              },
             });
           }
         }
@@ -383,7 +386,7 @@ export const TagSelect = Context.withContext(
       e.preventDefault();
       e.stopPropagation();
 
-      let newValue = this.state.value.filter(item => item !== tag);
+      let newValue = this.state.value.filter((item) => item !== tag);
       let opt = { component: this, event: e, value: newValue, _data: { state: { value: newValue } } };
       if (newValue.length !== this.state.value.length) {
         if (typeof this.props.onChange === "function") {
@@ -396,7 +399,7 @@ export const TagSelect = Context.withContext(
 
     _onSearchValueChange(e) {
       let searchValue = e.target.value;
-      this.setState(state => {
+      this.setState((state) => {
         let newState = { searchValue };
         if (!state.open) newState.open = true;
         return newState;
@@ -406,7 +409,7 @@ export const TagSelect = Context.withContext(
     _getSetTagValuesResult(values) {
       let result = { state: { value: [], feedback: "initial", message: null }, availableTags: this._availableTags };
 
-      values.forEach(valueItem => {
+      values.forEach((valueItem) => {
         let itemResult = this._getAddTagValueResult({ value: valueItem }, []);
         result.availableTags = itemResult.availableTags;
         if (itemResult && itemResult.state) itemResult = itemResult.state;
@@ -427,12 +430,12 @@ export const TagSelect = Context.withContext(
       value = typeof value === "string" ? value.trim() : value;
       if (!value) return null;
       // validate value towards ignored tags
-      if (this.props.ignoreTags && this.props.ignoreTags.find(ignoreTag => ignoreTag === value)) {
+      if (this.props.ignoreTags && this.props.ignoreTags.find((ignoreTag) => ignoreTag === value)) {
         this._hasTempFeedback = true;
         newData.state = {
           feedback: "error",
           message: this.getLsiComponent("tagIsNotAllowed", null, value),
-          value: this.state.value
+          value: this.state.value,
         };
         isValid = false;
       } else if (this._hasValue(currentValue) && currentValue.indexOf(value) !== -1) {
@@ -441,22 +444,22 @@ export const TagSelect = Context.withContext(
         newData.state = {
           feedback: "warning",
           message: this.getLsiComponent("tagIsAlreadyAdded", null, value),
-          value: this.state.value
+          value: this.state.value,
         };
         isValid = false;
-      } else if (!this.props.allowCustomTags && !this._availableTags.find(tag => tag.value === value)) {
+      } else if (!this.props.allowCustomTags && !this._availableTags.find((tag) => tag.value === value)) {
         this._hasTempFeedback = true;
         newData.state = {
           feedback: "error",
           message: this.getLsiComponent("customTagIsNotAllowed"),
-          value: this.state.value
+          value: this.state.value,
         };
         isValid = false;
       } else {
         newData.state = { feedback: "initial", searchValue: "", message: null, value: this.state.value };
 
         if (this.props.allowCustomTags) {
-          if (!this._availableTags.find(tag => tag.value === value)) {
+          if (!this._availableTags.find((tag) => tag.value === value)) {
             let availableTags = [...this._availableTags];
             availableTags.push({ value, content: value, searchValue: value.toLowerCase ? value.toLowerCase() : value });
             newData.availableTags = availableTags;
@@ -510,7 +513,7 @@ export const TagSelect = Context.withContext(
       let itemList;
       let items;
 
-      UU5.Environment.EventListener.addWindowEvent("keydown", this.getId(), e => {
+      UU5.Environment.EventListener.addWindowEvent("keydown", this.getId(), (e) => {
         itemList = this._itemList;
         items = itemList && itemList.getRenderedChildren();
 
@@ -540,7 +543,7 @@ export const TagSelect = Context.withContext(
         }
       });
 
-      UU5.Environment.EventListener.addWindowEvent("keyup", this.getId(), e => {
+      UU5.Environment.EventListener.addWindowEvent("keyup", this.getId(), (e) => {
         switch (e.which) {
           case 13: // enter
             if (items) {
@@ -619,10 +622,10 @@ export const TagSelect = Context.withContext(
         input: false,
         label: false,
         tag: false,
-        picker: false
+        picker: false,
       };
       let eventPath = this._getEventPath(e);
-      eventPath.every(item => {
+      eventPath.every((item) => {
         let functionType = item.matches ? "matches" : "msMatchesSelector";
         if (item[functionType]) {
           if (item[functionType](labelMatch)) {
@@ -656,7 +659,7 @@ export const TagSelect = Context.withContext(
           {
             aroundElement: UU5.Common.DOM.findNode(this._itemsInput),
             position: "bottom",
-            offset: 4
+            offset: 4,
           },
           setStateCallback
         );
@@ -696,7 +699,7 @@ export const TagSelect = Context.withContext(
 
         this._hasFocus = false;
         this._removeEvent();
-        this.setState(state => (state.open ? { open: false, searchValue: "" } : undefined), callback);
+        this.setState((state) => (state.open ? { open: false, searchValue: "" } : undefined), callback);
       }
     },
 
@@ -717,7 +720,10 @@ export const TagSelect = Context.withContext(
     },
 
     _onInputClick() {
-      this.setState(state => (!state.open ? { open: true } : undefined), () => this._onOpen(this._focusInput));
+      this.setState(
+        (state) => (!state.open ? { open: true } : undefined),
+        () => this._onOpen(this._focusInput)
+      );
     },
 
     _onMainInputFocus() {
@@ -728,8 +734,8 @@ export const TagSelect = Context.withContext(
       let result;
       if (this._hasValue(this.state.value)) {
         if (this.props.multiple) {
-          result = this.state.value.map(value => {
-            let tag = this._availableTags.find(availableTag => availableTag.value === value);
+          result = this.state.value.map((value) => {
+            let tag = this._availableTags.find((availableTag) => availableTag.value === value);
 
             return (
               <UU5.Bricks.Label
@@ -774,7 +780,7 @@ export const TagSelect = Context.withContext(
           key="text-input"
           value={this.state.searchValue}
           wrapperAttrs={{
-            onClick: !this.isReadOnly() && !this.isComputedDisabled() ? this._onInputClick : undefined
+            onClick: !this.isReadOnly() && !this.isComputedDisabled() ? this._onInputClick : undefined,
           }}
           placeholder={this.props.placeholder || this.getLsiValue("placeholder")}
           ref_={this._registerTextInput}
@@ -814,7 +820,7 @@ export const TagSelect = Context.withContext(
         let inputContent = [this._getTextInput()];
 
         if (!this.state.searchValue && !this.state.searchValue.trim()) {
-          let tag = this._availableTags.find(availableTag => availableTag.value === this._getTagList());
+          let tag = this._availableTags.find((availableTag) => availableTag.value === this._getTagList());
 
           inputContent.push(
             <div className={this.getClassName("valueWrapper")} title={this._getTagTooltip(tag)} key="value">
@@ -906,9 +912,9 @@ export const TagSelect = Context.withContext(
           ...{
             tabIndex: !this.isReadOnly() && !this.isComputedDisabled() ? "0" : undefined,
             onFocus: !this.isReadOnly() && !this.isComputedDisabled() ? () => this._onMainInputFocus() : null,
-            onClick: !this.isReadOnly() && !this.isComputedDisabled() ? () => this._onInputClick() : null
+            onClick: !this.isReadOnly() && !this.isComputedDisabled() ? () => this._onInputClick() : null,
           },
-          ...attrs
+          ...attrs,
         };
       }
 
@@ -956,7 +962,7 @@ export const TagSelect = Context.withContext(
           )}
         </UU5.Bricks.Div>
       );
-    }
+    },
     //@@viewOff:render
   })
 );

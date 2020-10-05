@@ -39,7 +39,7 @@ export const Section = UU5.Common.VisualComponent.create({
     UU5.Common.NestingLevelMixin,
     UU5.Common.SectionMixin,
     UU5.Common.ColorSchemaMixin,
-    UU5.Common.EditableMixin
+    UU5.Common.EditableMixin,
   ],
   //@@viewOff:mixins
 
@@ -48,17 +48,17 @@ export const Section = UU5.Common.VisualComponent.create({
     tagName: ns.name("Section"),
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
-      main: ns.css("section")
+      main: ns.css("section"),
     },
     opt: {
-      nestingLevelWrapper: true
+      nestingLevelWrapper: true,
     },
     editMode: {
       name: { en: "Section", cs: "Sekce" },
       backgroundColor: "rgba(0,0,0,.2)",
       color: "rgba(0,0,0,.87)",
-      highlightColor: "#CCCCCC"
-    }
+      highlightColor: "#CCCCCC",
+    },
   },
   //@@viewOff:statics
 
@@ -71,7 +71,7 @@ export const Section = UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
-      editationLazyLoaded: false
+      editationLazyLoaded: false,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -100,14 +100,14 @@ export const Section = UU5.Common.VisualComponent.create({
       content: null,
       header: null,
       footer: null,
-      id: this.getId()
+      id: this.getId(),
     });
   },
 
   _registerNull(inst) {
     // unmount of component means that suspense is loaded and component should be rendered
     if (!inst) {
-      this.setState(state => {
+      this.setState((state) => {
         if (state.editationLazyLoaded) return;
 
         // Edit component is loaded - need to set to static variable because other Edit component does not render fallback component
@@ -136,7 +136,7 @@ export const Section = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return this.getNestingLevel() ? (
       <Div {...this._getPropsToPass()}>
         {this.state.editation ? this._renderEditationMode() : null}
@@ -145,7 +145,7 @@ export const Section = UU5.Common.VisualComponent.create({
           : null}
       </Div>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

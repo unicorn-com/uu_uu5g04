@@ -2,7 +2,6 @@ import UU5, { createHoc } from "uu5g04";
 import Link from "./link";
 
 export const LinkUve = createHoc({
-
   displayName: "UU5.Bricks.LinkUve",
 
   propTypes: {
@@ -16,8 +15,8 @@ export const LinkUve = createHoc({
       top: UU5.PropTypes.any, // lsi or string
       languages: UU5.PropTypes.array,
       title: UU5.PropTypes.any, // lsi or string
-      publicContent: UU5.PropTypes.bool
-    })
+      publicContent: UU5.PropTypes.bool,
+    }),
   },
 
   defaultProps: {
@@ -26,7 +25,7 @@ export const LinkUve = createHoc({
 
     // ...Link.defaultProps,
     target: "_blank",
-    uveProps: {}
+    uveProps: {},
   },
 
   component: Link,
@@ -56,9 +55,9 @@ export const LinkUve = createHoc({
 
     return {
       ...linkProps,
-      href
+      href,
     };
-  }
+  },
 });
 
 export default LinkUve;

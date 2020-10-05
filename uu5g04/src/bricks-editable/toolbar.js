@@ -14,7 +14,7 @@ const NAME = ns.name("Toolbar");
 
 const DEFAULT_ITEM_PROPS = {
   bgStyle: "transparent",
-  colorSchema: "default"
+  colorSchema: "default",
 };
 
 export const Toolbar = UU5.Common.VisualComponent.create({
@@ -35,8 +35,8 @@ export const Toolbar = UU5.Common.VisualComponent.create({
         .uu5-bricks-row-flex > & {
           flex: 0 0 100%;
         }
-      `)
-    }
+      `),
+    },
   },
   //@@viewOff:statics
 
@@ -46,15 +46,15 @@ export const Toolbar = UU5.Common.VisualComponent.create({
       UU5.PropTypes.oneOfType([
         UU5.PropTypes.shape({
           type: UU5.PropTypes.oneOfType([UU5.PropTypes.oneOf(["button", "dropdown"]), UU5.PropTypes.func]),
-          props: UU5.PropTypes.oneOfType([UU5.PropTypes.func, UU5.PropTypes.object])
+          props: UU5.PropTypes.oneOfType([UU5.PropTypes.func, UU5.PropTypes.object]),
         }),
-        UU5.PropTypes.element
+        UU5.PropTypes.element,
       ])
     ),
     settingsItems: UU5.PropTypes.arrayOf(UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.element])),
     moreSettings: UU5.PropTypes.func,
     onMoreSettingsClick: UU5.PropTypes.func,
-    onClose: UU5.PropTypes.func
+    onClose: UU5.PropTypes.func,
   },
   //@@viewOff:propTypes
 
@@ -65,7 +65,7 @@ export const Toolbar = UU5.Common.VisualComponent.create({
       settingsItems: undefined,
       moreSettings: undefined,
       onMoreSettingsClick: undefined,
-      onClose: undefined
+      onClose: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -206,7 +206,7 @@ export const Toolbar = UU5.Common.VisualComponent.create({
         {this.props.children}
       </ToolbarContext.Provider>
     );
-  }
+  },
   //@@viewOff:render
 });
 

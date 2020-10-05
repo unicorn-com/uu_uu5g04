@@ -26,7 +26,7 @@ const Lsi = {
     const languagesSplitter = languagesString.toLowerCase().split(",");
 
     let languages = {};
-    languagesSplitter.forEach(lang => {
+    languagesSplitter.forEach((lang) => {
       lang = lang.trim();
 
       const [langStr, qStr] = lang.split(";");
@@ -81,7 +81,7 @@ const Lsi = {
         resLang = lang.language;
         break;
       } else {
-        let lsiKeys = keys.filter(key => new RegExp("^" + lang.language).test(key));
+        let lsiKeys = keys.filter((key) => new RegExp("^" + lang.language).test(key));
 
         if (lsiKeys.length) {
           resLang = lsiKeys[0];
@@ -104,7 +104,7 @@ const Lsi = {
     let lsiKey = lsi[resLang] ? resLang : lsi[keys[0]] ? keys[0] : null;
 
     return lsi[lsiKey];
-  }
+  },
 };
 
 let globalLanguage = window.navigator.language.toLowerCase();

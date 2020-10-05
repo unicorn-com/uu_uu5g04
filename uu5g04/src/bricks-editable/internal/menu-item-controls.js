@@ -68,8 +68,8 @@ const MenuItemControls = UU5.Common.VisualComponent.create({
       itemLabelWrapper: () =>
         Css.css(`
 
-      `)
-    }
+      `),
+    },
   },
   //@@viewOff:statics
 
@@ -77,7 +77,7 @@ const MenuItemControls = UU5.Common.VisualComponent.create({
   propTypes: {
     items: UU5.PropTypes.array,
     screenSize: UU5.PropTypes.oneOf(["xs", "s", "m", "l", "xl"]),
-    isActive: UU5.PropTypes.bool
+    isActive: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -86,7 +86,7 @@ const MenuItemControls = UU5.Common.VisualComponent.create({
     return {
       items: undefined,
       screenSize: undefined,
-      isActive: false
+      isActive: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -95,7 +95,7 @@ const MenuItemControls = UU5.Common.VisualComponent.create({
   getInitialState() {
     return {
       open: false,
-      hover: false
+      hover: false,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -148,7 +148,7 @@ const MenuItemControls = UU5.Common.VisualComponent.create({
         aroundElement: UU5.Common.DOM.findNode(this._button),
         position: "bottom",
         onClose: this._onDropdownClose,
-        bodyClassName: this.getClassName("dropdownBody")
+        bodyClassName: this.getClassName("dropdownBody"),
       });
     }
   },
@@ -172,7 +172,7 @@ const MenuItemControls = UU5.Common.VisualComponent.create({
 
   _onButtonClick(component, e) {
     e.stopPropagation();
-    this.setState(state => ({ open: !state.open }), this._openDropdown);
+    this.setState((state) => ({ open: !state.open }), this._openDropdown);
   },
 
   _getButtonBgStyle() {
@@ -194,7 +194,7 @@ const MenuItemControls = UU5.Common.VisualComponent.create({
           onClick={this._onButtonClick}
           mainAttrs={{
             onMouseEnter: this._onMouseOver,
-            onMouseLeave: this._onMouseOut
+            onMouseLeave: this._onMouseOut,
           }}
           content={<UU5.Bricks.Icon icon="mdi-dots-vertical" />}
           bgStyle={this._getButtonBgStyle()}
@@ -203,7 +203,7 @@ const MenuItemControls = UU5.Common.VisualComponent.create({
         {this.state.open ? this._getControlsDropdown() : null}
       </>
     );
-  }
+  },
   //@@viewOff:render
 });
 

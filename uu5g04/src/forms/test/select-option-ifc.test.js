@@ -17,15 +17,15 @@ import "uu5g04-forms";
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
-describe("UU5.Forms.Select.Option", function() {
+describe("UU5.Forms.Select.Option", function () {
   it("getValue()", () => {
     let select;
     let selectOption;
     const wrapper = mount(
-      <UU5.Forms.Select label="Issue category" disableBackdrop ref_={item => (select = item)}>
+      <UU5.Forms.Select label="Issue category" disableBackdrop ref_={(item) => (select = item)}>
         <UU5.Forms.Select.Option
           value="Info"
-          ref_={item => {
+          ref_={(item) => {
             selectOption = item;
           }}
         />
@@ -38,7 +38,7 @@ describe("UU5.Forms.Select.Option", function() {
       expect.objectContaining({
         hidden: false,
         disabled: false,
-        selected: false
+        selected: false,
       })
     );
   });

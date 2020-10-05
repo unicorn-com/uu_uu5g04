@@ -5,7 +5,7 @@ import { cleanupErrorStack } from "./tools.js";
 let mockClient;
 
 function mockThrowErrorFn(method) {
-  return uri => {
+  return (uri) => {
     let error = new Error(
       `Unmocked call detected - Client.${method}(${JSON.stringify(
         uri
@@ -30,11 +30,11 @@ try {
     mockClient = {
       ...real.Client,
       get: jest.fn(mockThrowErrorFn("get")),
-      post: jest.fn(mockThrowErrorFn("post"))
+      post: jest.fn(mockThrowErrorFn("post")),
     };
     return {
       ...real,
-      Client: mockClient
+      Client: mockClient,
     };
   });
 } catch (e) {

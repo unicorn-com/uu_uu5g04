@@ -11,14 +11,19 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:revision
+//  coded: Martin Mach, 18.09.2020
+//  reviewed: -
+//@@viewOff:revision
+
 //@@viewOn:imports
 import UU5 from "uu5g04";
-import { useState, useEffect, useMemo, useRef } from "./react-hooks";
+import { useState, useEffect, useMemo, useRef, useContext } from "./react-hooks";
 import { createComponent } from "./component";
-import { createContext } from "./context";
 //@@viewOff:imports
 
-const [TimeZoneContext, useTimeZoneContext] = createContext(null);
+const TimeZoneContext = UU5.Common.TimeZoneContext;
+const useTimeZoneContext = () => useContext(TimeZoneContext);
 
 const TimeZoneProvider = createComponent({
   //@@viewOn:statics

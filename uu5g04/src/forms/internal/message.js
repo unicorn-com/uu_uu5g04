@@ -29,8 +29,8 @@ export default UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("Message"),
     classNames: {
-      main: ns.css("message")
-    }
+      main: ns.css("message"),
+    },
   },
   //@@viewOff:statics
 
@@ -66,9 +66,9 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     let Component = this.props.inline ? UU5.Bricks.Span : UU5.Bricks.Div;
     return <Component {...this._getMainPropsToPass()} />;
-  }
+  },
   //@@viewOn:render
 });

@@ -29,11 +29,11 @@ export default UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("Select.Option"),
     classNames: {
-      main: ns.css("select-option", "group-item")
+      main: ns.css("select-option", "group-item"),
     },
     errors: {
-      invalidParent: "Parent of this component is not Select."
-    }
+      invalidParent: "Parent of this component is not Select.",
+    },
   },
   //@@viewOff:statics
 
@@ -41,7 +41,7 @@ export default UU5.Common.VisualComponent.create({
   propTypes: {
     value: UU5.PropTypes.string.isRequired,
     selectedContent: UU5.PropTypes.any,
-    onClick: UU5.PropTypes.func
+    onClick: UU5.PropTypes.func,
   },
   //@@viewOff:propTypes
 
@@ -50,7 +50,7 @@ export default UU5.Common.VisualComponent.create({
     return {
       value: null,
       selectedContent: null,
-      onClick: null
+      onClick: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -103,7 +103,7 @@ export default UU5.Common.VisualComponent.create({
 
   //@@viewOn:render
   render() {
-    return <UU5.Bricks.Link {...this._getMainProps()} ref_={item => (this._item = item)} />;
-  }
+    return <UU5.Bricks.Link {...this._getMainProps()} ref_={(item) => (this._item = item)} />;
+  },
   //@@viewOff:render
 });

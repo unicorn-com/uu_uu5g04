@@ -6,11 +6,11 @@ export const REGEXP = {
   timeFormat12: /^\d{1,2}:?\d{0,2} ?[PpAa]?\.?[Mm]?\.?$/,
   timeFormat12seconds: /^\d{1,2}:?\d{0,2}:?\d{0,2} ?[PpAa]?\.?[Mm]?\.?$/,
   timeFormat24: /^\d{1,2}:?\d{0,2}$/,
-  timeFormat24seconds: /^\d{1,2}:?\d{0,2}:?\d{0,2}$/
+  timeFormat24seconds: /^\d{1,2}:?\d{0,2}:?\d{0,2}$/,
 };
 
 export const DateTools = {
-  setupLimits: props => {
+  setupLimits: (props) => {
     let timeFrom = undefined;
     let timeTo = undefined;
     let show24 = false;
@@ -47,7 +47,7 @@ export const DateTools = {
     return {
       timeFrom,
       timeTo,
-      show24
+      show24,
     };
   },
   isDefaultLimit: (timeFrom, timeTo) => {
@@ -206,7 +206,7 @@ export const DateTools = {
 
     return {
       dateFrom,
-      dateTo
+      dateTo,
     };
   },
   getISO(dateValue, ignoreTime) {
@@ -243,7 +243,7 @@ export const DateTools = {
           "0"
         )}-${UU5.Common.Tools.rjust(inexactDateInstance.getDate(), 2, "0")}`
       : null;
-  }
+  },
 };
 
 export default DateTools;

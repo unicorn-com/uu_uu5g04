@@ -41,10 +41,10 @@ const classNames = {
         width: 20%;
       }
     }
-  `)
+  `),
 };
 
-const getProps = props => {
+const getProps = (props) => {
   let propsToPass = { ...props };
 
   propsToPass.className += (propsToPass.className ? " " : "") + classNames.main();
@@ -53,14 +53,14 @@ const getProps = props => {
   if (propsToPass.onClick) {
     delete propsToPass.onClick;
     propsToPass.mainAttrs = {
-      onClick: () => props.onClick(!props.value)
+      onClick: () => props.onClick(!props.value),
     };
   }
 
   return propsToPass;
 };
 
-export const SettingsCheckbox = props => {
+export const SettingsCheckbox = (props) => {
   return <UU5.Forms.Checkbox {...getProps(props)} />;
 };
 
@@ -71,14 +71,14 @@ SettingsCheckbox.propTypes = {
   label: UU5.PropTypes.any,
   colorSchema: UU5.PropTypes.string,
   bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline", "link"]),
-  onClick: UU5.PropTypes.func
+  onClick: UU5.PropTypes.func,
 };
 SettingsCheckbox.defaultProps = {
   value: false,
   label: undefined,
   colorSchema: undefined,
   bgStyle: undefined,
-  onClick: undefined
+  onClick: undefined,
 };
 SettingsCheckbox.isStateless = true;
 

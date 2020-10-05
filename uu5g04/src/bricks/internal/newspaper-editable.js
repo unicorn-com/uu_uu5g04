@@ -26,7 +26,7 @@ const DEFAULT_PROPS_MAP = {
   footer: "",
   colorSchema: null,
   content: null,
-  children: null
+  children: null,
 };
 
 const MAIN_CLASS_NAME = ns.css("newspaper-editable");
@@ -57,16 +57,16 @@ export const NewspaperEditable = UU5.Common.VisualComponent.create({
           &.uu5-bricks-editable-toolbar-dropdown {
             width: 148px;
           }
-        `)
+        `),
     },
-    lsi: () => ({ ...Lsi.newspaper, ...Lsi.common })
+    lsi: () => ({ ...Lsi.newspaper, ...Lsi.common }),
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
     component: UU5.PropTypes.object.isRequired,
-    renderView: UU5.PropTypes.func
+    renderView: UU5.PropTypes.func,
   },
   //@@viewOff:propTypes
 
@@ -74,7 +74,7 @@ export const NewspaperEditable = UU5.Common.VisualComponent.create({
   getDefaultProps() {
     return {
       component: null,
-      renderView: undefined
+      renderView: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -86,7 +86,7 @@ export const NewspaperEditable = UU5.Common.VisualComponent.create({
     return {
       ...values,
       showFooter: !!values.footer,
-      showHeader: !!values.header
+      showHeader: !!values.header,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -131,15 +131,15 @@ export const NewspaperEditable = UU5.Common.VisualComponent.create({
   _changeColorSchema(opt) {
     this.setState({ colorSchema: opt.value }, () => {
       this.props.component.saveEditation({
-        colorSchema: !opt.value || opt.value === "default" ? undefined : opt.value
+        colorSchema: !opt.value || opt.value === "default" ? undefined : opt.value,
       });
     });
   },
 
   _toggleHeader(value, setStateCallback) {
     this.setState(
-      state => ({
-        showHeader: !state.showHeader
+      (state) => ({
+        showHeader: !state.showHeader,
       }),
       setStateCallback
     );
@@ -147,15 +147,15 @@ export const NewspaperEditable = UU5.Common.VisualComponent.create({
 
   _toggleFooter(value, setStateCallback) {
     this.setState(
-      state => ({
-        showFooter: !state.showFooter
+      (state) => ({
+        showFooter: !state.showFooter,
       }),
       setStateCallback
     );
   },
 
   _toggleUnderline() {
-    this.setState(state => ({ underline: !state.underline }));
+    this.setState((state) => ({ underline: !state.underline }));
   },
 
   _changeLevel(value, setStateCallback) {
@@ -175,9 +175,9 @@ export const NewspaperEditable = UU5.Common.VisualComponent.create({
   },
 
   _getHeaderToolbarItems() {
-    let levelItems = [1, 2, 3, 4, 5, 6].map(level => ({
+    let levelItems = [1, 2, 3, 4, 5, 6].map((level) => ({
       content: `${this.getLsiValue("level")} ${level}`,
-      value: level
+      value: level,
     }));
     levelItems.unshift({ content: this.getLsiValue("defaultLevel"), value: null });
 
@@ -189,9 +189,9 @@ export const NewspaperEditable = UU5.Common.VisualComponent.create({
             pressed: this.state.underline,
             onClick: this._toggleUnderline,
             tooltip: this.getLsiValue("underlineTooltip"),
-            icon: "mdi-format-underline"
+            icon: "mdi-format-underline",
           };
-        }
+        },
       },
       {
         type: "dropdown",
@@ -206,17 +206,17 @@ export const NewspaperEditable = UU5.Common.VisualComponent.create({
             onClick: this._changeLevel,
             tooltip: this.getLsiValue("levelTooltip"),
             items: levelItems,
-            className: this.getClassName("levelDropdown")
+            className: this.getClassName("levelDropdown"),
           };
-        }
-      }
+        },
+      },
     ];
   },
 
   _getToolbarItems() {
-    let columnsCountItems = [1, 2, 3, 4, 5, 6].map(columnsCount => ({
+    let columnsCountItems = [1, 2, 3, 4, 5, 6].map((columnsCount) => ({
       content: `${columnsCount} ${this.getLsiValue(getColumnsCountLsi(columnsCount))}`,
-      value: columnsCount
+      value: columnsCount,
     }));
 
     return [
@@ -226,9 +226,9 @@ export const NewspaperEditable = UU5.Common.VisualComponent.create({
           return {
             value: this.state.colorSchema,
             onClick: this._changeColorSchema,
-            tooltip: this.getLsiValue("colorSchemaTooltip")
+            tooltip: this.getLsiValue("colorSchemaTooltip"),
           };
-        }
+        },
       },
       {
         type: "dropdown",
@@ -241,10 +241,10 @@ export const NewspaperEditable = UU5.Common.VisualComponent.create({
             onClick: this._changeColumnsCount,
             tooltip: this.getLsiValue("columnsCountTooltip"),
             items: columnsCountItems,
-            className: this.getClassName("columnsCountDropdown")
+            className: this.getClassName("columnsCountDropdown"),
           };
-        }
-      }
+        },
+      },
     ];
   },
 
@@ -253,13 +253,13 @@ export const NewspaperEditable = UU5.Common.VisualComponent.create({
       {
         value: this.state.showHeader,
         onClick: this._toggleHeader,
-        label: this.getLsiComponent("showHeaderCheckboxLabel")
+        label: this.getLsiComponent("showHeaderCheckboxLabel"),
       },
       {
         value: this.state.showFooter,
         onClick: this._toggleFooter,
-        label: this.getLsiComponent("showFooterCheckboxLabel")
-      }
+        label: this.getLsiComponent("showFooterCheckboxLabel"),
+      },
     ];
   },
   //@@viewOff:private
@@ -304,11 +304,11 @@ export const NewspaperEditable = UU5.Common.VisualComponent.create({
             >
               {({ children }) => <UU5.Bricks.Footer parent={this.props.component}>{children}</UU5.Bricks.Footer>}
             </UU5.BricksEditable.Input>
-          ) : null
+          ) : null,
         ])}
       </UU5.BricksEditable.Toolbar>
     );
-  }
+  },
   //@@viewOff:render
 });
 

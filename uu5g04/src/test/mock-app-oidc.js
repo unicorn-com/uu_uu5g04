@@ -46,7 +46,7 @@ try {
       }
       static removeListener(eventName, listener) {
         let listeners = this._listeners[eventName];
-        if (listeners) this._listeners[eventName] = listeners.filter(fn => fn !== listener);
+        if (listeners) this._listeners[eventName] = listeners.filter((fn) => fn !== listener);
       }
       static async authenticate() {
         await Tools.act(() => this.initPromise);
@@ -69,9 +69,9 @@ try {
           Tools.act(() => {
             let event = {
               type: eventName,
-              data: payload
+              data: payload,
             };
-            listeners.forEach(fn => fn(event));
+            listeners.forEach((fn) => fn(event));
           });
         }
       }
@@ -124,7 +124,7 @@ try {
         let map = {
           email: this._identity.email,
           sub: this._identity.id,
-          loa: this._identity.levelOfAssurance
+          loa: this._identity.levelOfAssurance,
           // loginLevelOfAssurance: supportedAcrValues.indexOf(this._identity.levelOfAssurance),
         };
         return map[name];
@@ -177,29 +177,29 @@ try {
     Object.defineProperty(Session, "currentSession", {
       get() {
         return mockSession;
-      }
+      },
     });
     Object.defineProperty(Session, "initComplete", {
       get() {
         return !MockAuthenticationService.isRestoringSession();
-      }
+      },
     });
     Object.defineProperty(Session, "initPromise", {
       get() {
         return MockAuthenticationService.restoreSession().then(() => mockSession);
-      }
+      },
     });
 
     function addLegacyApi(session, AuthenticationService) {
       Object.defineProperty(session, "initComplete", {
         get() {
           return !AuthenticationService.isRestoringSession();
-        }
+        },
       });
       Object.defineProperty(session, "initPromise", {
         get() {
           return AuthenticationService.restoreSession().then(() => session);
-        }
+        },
       });
 
       // NOTE In optimal case this wrapper would always use AuthenticationService.getCurrentSession().
@@ -211,7 +211,7 @@ try {
       let runningG02Session = null;
       const getG02Session = () => runningG02Session || AuthenticationService.getCurrentSession();
 
-      session.getIdentity = function() {
+      session.getIdentity = function () {
         let g02Session = getG02Session();
         let identity = g02Session.getIdentity();
         if (!identity) return identity;
@@ -225,11 +225,11 @@ try {
         return identity;
       };
 
-      session.getClaims = function() {
+      session.getClaims = function () {
         return getG02Session()._attributes;
       };
 
-      session.getCallToken = function(scope = null, opts = {}) {
+      session.getCallToken = function (scope = null, opts = {}) {
         if (typeof scope === "string" || Array.isArray(scope)) {
           return getG02Session().getCallToken(scope, opts);
         } else {
@@ -237,20 +237,20 @@ try {
           let session = getG02Session();
           return {
             token: session._idToken,
-            tokenType: session._idToken ? "Bearer" : null
+            tokenType: session._idToken ? "Bearer" : null,
           };
         }
       };
 
-      session.isExpiring = function() {
+      session.isExpiring = function () {
         return AuthenticationService.isSessionExpiring();
       };
 
-      session.isAuthenticated = function() {
+      session.isAuthenticated = function () {
         return getG02Session().isAuthenticated();
       };
 
-      session.login = function(options) {
+      session.login = function (options) {
         let opts = { ...options };
         let authnSvcOpts = {};
         if (opts.access_token && opts.token_type_hint === "urn:ietf:params:oauth:token-type:jwt-uuos8") {
@@ -262,12 +262,12 @@ try {
         return AuthenticationService.authenticate(authnSvcOpts).then(() => session);
       };
 
-      session.logout = function() {
+      session.logout = function () {
         return getG02Session().close();
       };
 
       let _legacyListeners = {};
-      session.addListener = function(eventType, listenerFn) {
+      session.addListener = function (eventType, listenerFn) {
         if (eventType === "identityChange") eventType = "sessionChanged";
         let unregFn = AuthenticationService.addListener(eventType, ({ type, data }) => {
           let origRunningG02Session = runningG02Session;
@@ -291,7 +291,7 @@ try {
         return unregFn;
       };
 
-      session.removeListener = function(eventType, listenerFn) {
+      session.removeListener = function (eventType, listenerFn) {
         if (eventType === "identityChange") eventType = "sessionChanged";
         let map = _legacyListeners[eventType];
         let unregFn = map ? map.get(listenerFn) : null;
@@ -301,19 +301,19 @@ try {
       };
 
       let _legacyIdentityChangeListeners = new Map();
-      session.addIdentityChangeListener = function(listenerFn) {
-        let unregFn = session.addListener("identityChange", e => listenerFn(e.data));
+      session.addIdentityChangeListener = function (listenerFn) {
+        let unregFn = session.addListener("identityChange", (e) => listenerFn(e.data));
         _legacyIdentityChangeListeners.set(listenerFn, unregFn);
         return unregFn;
       };
-      session.removeIdentityChangeListener = function(listenerFn) {
+      session.removeIdentityChangeListener = function (listenerFn) {
         let unregFn = _legacyIdentityChangeListeners.get(listenerFn);
         if (!unregFn) return false;
         _legacyIdentityChangeListeners.delete(listenerFn);
         return unregFn();
       };
 
-      session.getAuthenticationContext = function() {
+      session.getAuthenticationContext = function () {
         return getG02Session().getAuthenticationContext();
       };
     }
@@ -350,11 +350,11 @@ try {
         MockAuthenticationService._expiresAt = expiring ? Date.now() + 5 * 60 * 1000 : Date.now() + 12 * 60 * 60 * 1000;
         if (expiring) {
           MockAuthenticationService._triggerEvent("sessionExpiring", {
-            expiresAt: MockAuthenticationService._expiresAt
+            expiresAt: MockAuthenticationService._expiresAt,
           });
         } else if (oidcSession._identity) {
           MockAuthenticationService._triggerEvent("sessionExtended", {
-            expiresAt: MockAuthenticationService._expiresAt
+            expiresAt: MockAuthenticationService._expiresAt,
           });
         }
       }
@@ -381,7 +381,7 @@ try {
     return {
       ...Oidc,
       AuthenticationService: MockAuthenticationService,
-      Session: Session
+      Session: Session,
     };
   });
 } catch (e) {

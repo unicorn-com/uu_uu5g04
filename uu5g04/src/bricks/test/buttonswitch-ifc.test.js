@@ -24,14 +24,14 @@ describe(`UU5.Bricks.ButtonSwitch interface testing`, () => {
         size="xl"
         props={{
           size: "s",
-          bgStyle: "outline"
+          bgStyle: "outline",
         }}
         onProps={{
           colorSchema: "success",
-          content: "turned on"
+          content: "turned on",
         }}
         offProps={{
-          content: "turned off"
+          content: "turned off",
         }}
       />
     );
@@ -60,14 +60,14 @@ describe(`UU5.Bricks.ButtonSwitch interface testing`, () => {
         switchedOn={true}
         props={{
           size: "s",
-          bgStyle: "outline"
+          bgStyle: "outline",
         }}
         onProps={{
           colorSchema: "success",
-          content: "turned on"
+          content: "turned on",
         }}
         offProps={{
-          content: "turned off"
+          content: "turned off",
         }}
       />
     );
@@ -95,14 +95,14 @@ describe(`UU5.Bricks.ButtonSwitch interface testing`, () => {
         switchedOn={false}
         props={{
           size: "s",
-          bgStyle: "outline"
+          bgStyle: "outline",
         }}
         onProps={{
           colorSchema: "success",
-          content: "turned on"
+          content: "turned on",
         }}
         offProps={{
-          content: "turned off"
+          content: "turned off",
         }}
       />
     );
@@ -130,14 +130,14 @@ describe(`UU5.Bricks.ButtonSwitch interface testing`, () => {
         switchedOn={true}
         props={{
           size: "s",
-          bgStyle: "outline"
+          bgStyle: "outline",
         }}
         onProps={{
           colorSchema: "success",
-          content: "turned on"
+          content: "turned on",
         }}
         offProps={{
-          content: "turned off"
+          content: "turned off",
         }}
       />
     );
@@ -165,14 +165,14 @@ describe(`UU5.Bricks.ButtonSwitch interface testing`, () => {
         switchedOn={true}
         props={{
           size: "s",
-          bgStyle: "outline"
+          bgStyle: "outline",
         }}
         onProps={{
           colorSchema: "success",
-          content: "turned on"
+          content: "turned on",
         }}
         offProps={{
-          content: "turned off"
+          content: "turned off",
         }}
       />
     );
@@ -189,14 +189,14 @@ describe(`UU5.Bricks.ButtonSwitch interface testing`, () => {
         switchedOn={false}
         props={{
           size: "s",
-          bgStyle: "outline"
+          bgStyle: "outline",
         }}
         onProps={{
           colorSchema: "success",
-          content: "turned on"
+          content: "turned on",
         }}
         offProps={{
-          content: "turned off"
+          content: "turned off",
         }}
       />
     );

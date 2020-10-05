@@ -26,7 +26,7 @@ export default UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.NestingLevelMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.PureRenderMixin
+    UU5.Common.PureRenderMixin,
   ],
   //@@viewOff:mixins
 
@@ -37,24 +37,24 @@ export default UU5.Common.VisualComponent.create({
     classNames: {
       main: ns.css("blockquote-footer"),
       right: ns.css("blockquote-footer-right"),
-      left: ns.css("blockquote-footer-left")
+      left: ns.css("blockquote-footer-left"),
     },
     opt: {
-      nestingLevelWrapper: true
-    }
+      nestingLevelWrapper: true,
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    alignment: UU5.PropTypes.oneOf(["left", "right"])
+    alignment: UU5.PropTypes.oneOf(["left", "right"]),
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
-      alignment: "left"
+      alignment: "left",
     };
   },
   //@@viewOff:getDefaultProps
@@ -69,7 +69,7 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _buildMainAttrs: function() {
+  _buildMainAttrs: function () {
     var mainAttrs = this.getMainAttrs();
     this.props.alignment === "right" && (mainAttrs.className += " " + this.getClassName().right);
     this.props.alignment === "left" && (mainAttrs.className += " " + this.getClassName().left);
@@ -78,8 +78,8 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return this.getNestingLevel() ? <footer {...this._buildMainAttrs()}>{this.getChildren()}</footer> : null;
-  }
+  },
   //@@viewOff:render
 });

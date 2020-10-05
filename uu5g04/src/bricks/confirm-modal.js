@@ -33,9 +33,9 @@ export const ConfirmModal = UU5.Common.VisualComponent.create({
     tagName: ns.name("ConfirmModal"),
     classNames: {
       main: ns.css("confirm-modal"),
-      confirmFooter: ns.css("confirm-modal-footer")
+      confirmFooter: ns.css("confirm-modal-footer"),
     },
-    lsi: () => UU5.Environment.Lsi.Bricks.confirmModal
+    lsi: () => UU5.Environment.Lsi.Bricks.confirmModal,
   },
   //@@viewOff:statics
 
@@ -48,7 +48,7 @@ export const ConfirmModal = UU5.Common.VisualComponent.create({
     refuseButtonProps: UU5.PropTypes.object,
     confirmButtonLeft: UU5.PropTypes.bool,
     sticky: UU5.PropTypes.bool,
-    stickyBackground: UU5.PropTypes.bool
+    stickyBackground: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -62,7 +62,7 @@ export const ConfirmModal = UU5.Common.VisualComponent.create({
       refuseButtonProps: undefined,
       confirmButtonLeft: undefined,
       sticky: true,
-      stickyBackground: true
+      stickyBackground: true,
     };
   },
 
@@ -72,7 +72,7 @@ export const ConfirmModal = UU5.Common.VisualComponent.create({
 
     return {
       props: {},
-      isOpened: false
+      isOpened: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -169,7 +169,7 @@ export const ConfirmModal = UU5.Common.VisualComponent.create({
     // eslint-disable-next-line no-unused-vars
     let { confirmButtonProps, refuseButtonProps, confirmButtonLeft, onRefuse, onConfirm, ...props } = {
       ...this.props,
-      ...this.state.props
+      ...this.state.props,
     };
 
     return this.state.isOpened ? (
@@ -184,12 +184,12 @@ export const ConfirmModal = UU5.Common.VisualComponent.create({
             refuseButtonProps,
             confirmButtonLeft,
             onRefuse: this._refuse,
-            onConfirm: this._confirm
+            onConfirm: this._confirm,
           })}
         />
       </RenderIntoPortal>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

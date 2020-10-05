@@ -29,7 +29,7 @@ export const MenuButton = UU5.Common.VisualComponent.create({
     UU5.Common.ContentMixin,
     UU5.Common.ColorSchemaMixin,
     UU5.Common.NestingLevelMixin,
-    UU5.Common.CcrReaderMixin
+    UU5.Common.CcrReaderMixin,
   ],
   //@@viewOff:mixins
 
@@ -40,11 +40,11 @@ export const MenuButton = UU5.Common.VisualComponent.create({
     classNames: {
       main: ns.css("page-menu-button"),
       left: ns.css("page-menu-button-left"),
-      right: ns.css("page-menu-button-right")
+      right: ns.css("page-menu-button-right"),
     },
     opt: {
-      nestingLevelWrapper: true
-    }
+      nestingLevelWrapper: true,
+    },
   },
   //@@viewOff:statics
 
@@ -59,7 +59,7 @@ export const MenuButton = UU5.Common.VisualComponent.create({
     bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline", "link"]),
     borderRadius: UU5.PropTypes.string,
     elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-    elevationHover: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
+    elevationHover: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
   },
   //@@viewOff:propTypes
 
@@ -75,7 +75,7 @@ export const MenuButton = UU5.Common.VisualComponent.create({
       bgStyle: "filled",
       borderRadius: null,
       elevation: null,
-      elevationHover: null
+      elevationHover: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -171,7 +171,7 @@ export const MenuButton = UU5.Common.VisualComponent.create({
   //@@viewOn:render
   render() {
     return this.getNestingLevel() ? this._getChild() : null;
-  }
+  },
   //@@viewOff:render
 });
 

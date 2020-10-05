@@ -36,7 +36,7 @@ export const Container = UU5.Common.VisualComponent.create({
     UU5.Common.NestingLevelMixin,
     UU5.Common.SectionMixin,
     UU5.Common.PureRenderMixin,
-    UU5.Common.EditableMixin
+    UU5.Common.EditableMixin,
   ],
   //@@viewOff:mixins
 
@@ -48,21 +48,21 @@ export const Container = UU5.Common.VisualComponent.create({
       main: ns.css("container"),
       spacing: ns.css("container-spacing"),
       noSpacing: ns.css("container-nospacing"),
-      editation: ns.css("container-editation")
-    }
+      editation: ns.css("container-editation"),
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    noSpacing: UU5.PropTypes.bool
+    noSpacing: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      noSpacing: false
+      noSpacing: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -70,7 +70,7 @@ export const Container = UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
-      editationLazyLoaded: false
+      editationLazyLoaded: false,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -97,7 +97,7 @@ export const Container = UU5.Common.VisualComponent.create({
   _registerNull(inst) {
     // unmount of component means that suspense is loaded and component should be rendered
     if (!inst) {
-      this.setState(state => {
+      this.setState((state) => {
         if (state.editationLazyLoaded) return;
 
         // Edit component is loaded - need to set to static variable because other Edit component does not render fallback component
@@ -135,7 +135,7 @@ export const Container = UU5.Common.VisualComponent.create({
           : null}
       </div>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

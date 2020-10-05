@@ -30,24 +30,24 @@ export default UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("Lsi.Item"),
     classNames: {
-      main: ns.css("lsi-item")
+      main: ns.css("lsi-item"),
     },
     errors: {
-      invalidParent: "Parent of this component is not Lsi."
-    }
+      invalidParent: "Parent of this component is not Lsi.",
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    language: UU5.PropTypes.string.isRequired
+    language: UU5.PropTypes.string.isRequired,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
-      language: null
+      language: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -79,12 +79,12 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return (
       <Span {...this.getMainPropsToPass()} content={this.props.content}>
         {this.props.children && UU5.Common.Children.toArray(this.props.children)}
       </Span>
     );
-  }
+  },
   //@@viewOff:render
 });

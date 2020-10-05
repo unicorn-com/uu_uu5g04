@@ -11,7 +11,7 @@
  * at the email: info@unicorn.com.
  */
 
-const Loading = props => {
+const Loading = (props) => {
   return (
     <span className={props.className}>
       <svg width="24" height="24" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">

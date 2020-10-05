@@ -28,7 +28,7 @@ const getSetAlertState = (newAlertProps, state, order) => {
   let newState = getClearAlertState(state);
 
   if (Array.isArray(newAlertProps)) {
-    newAlertProps.forEach(singleAlertProps => {
+    newAlertProps.forEach((singleAlertProps) => {
       newState = getAddedAlertState(singleAlertProps, newState, order);
     });
   } else {
@@ -46,7 +46,7 @@ const getAddedAlertState = (newAlertProps, state, order) => {
   } else {
     let foundPriority =
       order && newAlertProps.colorSchema
-        ? COLOR_SCHEMA_PRIORITY.find(priorityColorSchema => priorityColorSchema === newAlertProps.colorSchema)
+        ? COLOR_SCHEMA_PRIORITY.find((priorityColorSchema) => priorityColorSchema === newAlertProps.colorSchema)
         : "other";
 
     if (foundPriority) {
@@ -62,7 +62,7 @@ const getAddedAlertState = (newAlertProps, state, order) => {
 const getRemovedAlertState = (removedAlertId, state) => {
   let newState = { ...state };
 
-  ALERT_TYPES.find(alertType => {
+  ALERT_TYPES.find((alertType) => {
     return !!state[`${alertType}Stack`].find((stateObject, index) => {
       if (stateObject.id === removedAlertId) {
         newState[`${alertType}Stack`] = [...newState[`${alertType}Stack`]];
@@ -73,21 +73,21 @@ const getRemovedAlertState = (removedAlertId, state) => {
   });
 
   if (newState.outOfOrderStack.length) {
-    newState.outOfOrderStack.forEach(outOfOrderAlert => outOfOrderAlert.positionInStack--);
+    newState.outOfOrderStack.forEach((outOfOrderAlert) => outOfOrderAlert.positionInStack--);
   }
 
   let fullStackLength = 0;
-  ALERT_TYPES.forEach(alertType => (fullStackLength += newState[`${alertType}Stack`].length));
+  ALERT_TYPES.forEach((alertType) => (fullStackLength += newState[`${alertType}Stack`].length));
   newState.showAll = newState.showAll && fullStackLength > 4;
 
   return newState;
 };
 
-const getClearAlertState = state => {
+const getClearAlertState = (state) => {
   let newState = { ...state };
 
   // empty the existing stacks
-  ALERT_TYPES.forEach(alertType => {
+  ALERT_TYPES.forEach((alertType) => {
     newState[`${alertType}Stack`] = [];
   });
 
@@ -104,7 +104,7 @@ export const AlertBus = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.NestingLevelMixin,
     UU5.Common.CcrWriterMixin,
-    UU5.Common.PureRenderMixin
+    UU5.Common.PureRenderMixin,
   ],
   //@@viewOff:mixins
 
@@ -113,15 +113,15 @@ export const AlertBus = UU5.Common.VisualComponent.create({
     tagName: ns.name("AlertBus"),
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
-      main: () => ns.css("alert-bus")
+      main: () => ns.css("alert-bus"),
     },
     warnings: {
-      noMessage: 'Alert "%s" is not set.'
+      noMessage: 'Alert "%s" is not set.',
     },
     opt: {
-      nestingLevelWrapper: true
+      nestingLevelWrapper: true,
     },
-    lsi: () => UU5.Environment.Lsi.Bricks.alertBus
+    lsi: () => UU5.Environment.Lsi.Bricks.alertBus,
   },
   //@@viewOff:statics
 
@@ -138,7 +138,7 @@ export const AlertBus = UU5.Common.VisualComponent.create({
     descending: UU5.PropTypes.bool,
     stacked: UU5.PropTypes.bool,
     offsetTop: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string, UU5.PropTypes.oneOf(["auto"])]),
-    location: UU5.PropTypes.oneOf(["portal", "local", "page"])
+    location: UU5.PropTypes.oneOf(["portal", "local", "page"]),
   },
   //@@viewOff:propTypes
 
@@ -154,7 +154,7 @@ export const AlertBus = UU5.Common.VisualComponent.create({
       descending: undefined,
       stacked: false,
       offsetTop: 0,
-      location: "page"
+      location: "page",
     };
   },
   //@@viewOff:getDefaultProps
@@ -175,7 +175,7 @@ export const AlertBus = UU5.Common.VisualComponent.create({
       infoStack: [],
       otherStack: [],
       outOfOrderStack: [],
-      showAll: false
+      showAll: false,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -189,7 +189,7 @@ export const AlertBus = UU5.Common.VisualComponent.create({
         page.getAlertBus().addAlert(alertProps, setStateCallback);
       } else {
         this.setState(
-          state => getAddedAlertState(alertProps, state, this.props.descending === undefined),
+          (state) => getAddedAlertState(alertProps, state, this.props.descending === undefined),
           setStateCallback
         );
       }
@@ -207,7 +207,7 @@ export const AlertBus = UU5.Common.VisualComponent.create({
       if (this.props.location === "page" && page && page.getAlertBus() && page.getAlertBus().getId() !== this.getId()) {
         page.getAlertBus().addAlertToPosition(alertIndex, alertProps, setStateCallback);
       } else {
-        this.setState(state => {
+        this.setState((state) => {
           let outOfOrderStack = [...state.outOfOrderStack, alertProps];
           return { outOfOrderStack };
         }, setStateCallback);
@@ -227,7 +227,7 @@ export const AlertBus = UU5.Common.VisualComponent.create({
         page.getAlertBus().setAlert(alertProps, setStateCallback);
       } else {
         this.setState(
-          state => getSetAlertState(alertProps, state, this.props.descending === undefined),
+          (state) => getSetAlertState(alertProps, state, this.props.descending === undefined),
           setStateCallback
         );
       }
@@ -243,9 +243,9 @@ export const AlertBus = UU5.Common.VisualComponent.create({
     if (this.props.location === "page" && page && page.getAlertBus() && page.getAlertBus().getId() !== this.getId()) {
       page.getAlertBus().setAlerts(stateAlertStack, setStateCallback);
     } else {
-      stateAlertStack = stateAlertStack.map(singleAlertProps => this._getNewAlertProps(singleAlertProps));
+      stateAlertStack = stateAlertStack.map((singleAlertProps) => this._getNewAlertProps(singleAlertProps));
       this.setState(
-        state => getSetAlertState(stateAlertStack, state, this.props.descending === undefined),
+        (state) => getSetAlertState(stateAlertStack, state, this.props.descending === undefined),
         setStateCallback
       );
     }
@@ -257,7 +257,7 @@ export const AlertBus = UU5.Common.VisualComponent.create({
     if (this.props.location === "page" && page && page.getAlertBus() && page.getAlertBus().getId() !== this.getId()) {
       page.getAlertBus().removeAlert(alertId, setStateCallback);
     } else {
-      this.setState(state => {
+      this.setState((state) => {
         return { ...getRemovedAlertState(alertId, state) };
       }, setStateCallback);
     }
@@ -275,10 +275,10 @@ export const AlertBus = UU5.Common.VisualComponent.create({
         props.hidden = true;
 
         this.setState(
-          state => ({ ...getClearAlertState(state), ...{ priorityStack: [props] } }),
+          (state) => ({ ...getClearAlertState(state), ...{ priorityStack: [props] } }),
           () => {
             setTimeout(() => {
-              this.setAsyncState(state => getClearAlertState(state), setStateCallback);
+              this.setAsyncState((state) => getClearAlertState(state), setStateCallback);
             }, Alert.defaults.transitionDuration);
           }
         );
@@ -296,7 +296,7 @@ export const AlertBus = UU5.Common.VisualComponent.create({
     if (this.props.location === "page" && page && page.getAlertBus() && page.getAlertBus().getId() !== this.getId()) {
       result = page.getAlertBus().getAlerts();
     } else {
-      ALERT_TYPES.forEach(alertType => (result = [...result, ...this.state[`${alertType}Stack`]]));
+      ALERT_TYPES.forEach((alertType) => (result = [...result, ...this.state[`${alertType}Stack`]]));
     }
 
     return result;
@@ -326,7 +326,7 @@ export const AlertBus = UU5.Common.VisualComponent.create({
       closeTimer: typeof alertProps.closeTimer === "number" ? alertProps.closeTimer : this.props.closeTimer,
       closeDisabled: alertProps.closeDisabled === undefined ? this.props.closeDisabled : alertProps.closeDisabled,
       key: messageId,
-      onClose: alert => {
+      onClose: (alert) => {
         let onClose;
 
         if (typeof alertProps.onClose === "function") {
@@ -340,7 +340,7 @@ export const AlertBus = UU5.Common.VisualComponent.create({
         }
 
         this.removeAlert(messageId, onClose);
-      }
+      },
     };
   },
 
@@ -358,7 +358,7 @@ export const AlertBus = UU5.Common.VisualComponent.create({
     if (this.props.descending === true) {
       stack = [...this.state.priorityStack, ...[...this.state.otherStack].reverse()];
     } else {
-      ALERT_TYPES.forEach(alertType => {
+      ALERT_TYPES.forEach((alertType) => {
         if (alertType !== "outOfOrder") {
           // outOfOrderStack is done separately at the end of this fn
           let stateKey = this.state[`${alertType}Stack`];
@@ -370,7 +370,7 @@ export const AlertBus = UU5.Common.VisualComponent.create({
     }
 
     if (this.state.outOfOrderStack.length) {
-      this.state.outOfOrderStack.forEach(outOfOrderAlert =>
+      this.state.outOfOrderStack.forEach((outOfOrderAlert) =>
         stack.splice(outOfOrderAlert.positionInStack, 0, outOfOrderAlert)
       );
     }
@@ -382,7 +382,7 @@ export const AlertBus = UU5.Common.VisualComponent.create({
     let alertProps;
 
     if (this.state.outOfOrderStack.length) {
-      this.state.outOfOrderStack.find(outOfOrderAlert => {
+      this.state.outOfOrderStack.find((outOfOrderAlert) => {
         if (outOfOrderAlert.positionInStack === 0) {
           alertProps = outOfOrderAlert;
           return true;
@@ -393,7 +393,7 @@ export const AlertBus = UU5.Common.VisualComponent.create({
     }
 
     if (!alertProps) {
-      ALERT_TYPES.find(alertType => {
+      ALERT_TYPES.find((alertType) => {
         if (alertType !== "outOfOrder") {
           // outOfOrderStack is done separately above
           let stateKey = this.state[`${alertType}Stack`];
@@ -457,7 +457,7 @@ export const AlertBus = UU5.Common.VisualComponent.create({
     } else {
       return this._getAlert();
     }
-  }
+  },
   //@@viewOff:render
 });
 

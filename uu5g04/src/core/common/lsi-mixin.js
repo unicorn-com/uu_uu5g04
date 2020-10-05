@@ -23,8 +23,8 @@ export const LsiMixin = {
   statics: {
     "UU5.Common.LsiMixin": {
       requiredMixins: ["UU5.Common.BaseMixin"],
-      lsiEvent: Tools.events.lsi
-    }
+      lsiEvent: Tools.events.lsi,
+    },
   },
   //@@viewOff:statics
 
@@ -34,14 +34,14 @@ export const LsiMixin = {
     registerLsi: PropTypes.func,
     unregisterLsi: PropTypes.func,
     setLanguage: PropTypes.func,
-    getLanguage: PropTypes.func
+    getLanguage: PropTypes.func,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      language: null
+      language: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -59,7 +59,7 @@ export const LsiMixin = {
         this.props.language ||
         (typeof this.props.getLanguage === "function" && this.props.getLanguage()) ||
         Tools.getLanguages()[0].location ||
-        Tools.getLanguages()[0].language
+        Tools.getLanguages()[0].language,
     };
   },
 
@@ -85,7 +85,7 @@ export const LsiMixin = {
 
   getUU5CommonLsiMixinProps() {
     return {
-      language: this.props.language
+      language: this.props.language,
     };
   },
 
@@ -134,7 +134,7 @@ export const LsiMixin = {
   onChangeLanguageDefault(language) {
     this._setLanguage(language);
     return this;
-  }
+  },
   //@@viewOff:private
 };
 

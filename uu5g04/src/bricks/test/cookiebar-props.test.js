@@ -23,41 +23,41 @@ const CONFIG = {
     "UU5.Common.ContentMixin",
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     agreedText: {
-      values: ["I agree"]
+      values: ["I agree"],
     },
     infoText: {
-      values: ["More information"]
+      values: ["More information"],
     },
     infoHref: {
-      values: ["https://unicorn.com/cz/cookies"]
+      values: ["https://unicorn.com/cz/cookies"],
     },
     infoTarget: {
-      values: ["_blank", "_parent", "_top", "_self"]
+      values: ["_blank", "_parent", "_top", "_self"],
     },
     fixed: {
-      values: ["top", "bottom"]
+      values: ["top", "bottom"],
     },
     //onAgree
     expireDays: {
-      values: [365]
+      values: [365],
     },
     cookieKey: {
-      values: ["UCL.Parrot.Home_123v12"]
+      values: ["UCL.Parrot.Home_123v12"],
     },
     cookieValue: {
-      values: ["yes", "no"]
-    }
+      values: ["yes", "no"],
+    },
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 const This = {};

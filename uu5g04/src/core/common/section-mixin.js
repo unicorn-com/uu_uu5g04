@@ -29,9 +29,9 @@ export const SectionMixin = {
       defaults: {
         headerTag: "UU5.Bricks.Header",
         footerTag: "UU5.Bricks.Footer",
-        regexpUu5Json: /(^<uu5json\/>)/
-      }
-    }
+        regexpUu5Json: /(^<uu5json\/>)/,
+      },
+    },
   },
   //@@viewOff:statics
 
@@ -42,18 +42,18 @@ export const SectionMixin = {
       PropTypes.arrayOf(
         PropTypes.shape({
           tag: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-          props: PropTypes.object
+          props: PropTypes.object,
         })
       ),
       // content bodyItem:{tag:'',props{}}
       PropTypes.shape({
         tag: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-        props: PropTypes.arrayOf(PropTypes.object)
+        props: PropTypes.arrayOf(PropTypes.object),
       }),
       // content items:{tag:'',propsArray:[{},{},{},...]}
       PropTypes.shape({
         tag: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-        propsArray: PropTypes.arrayOf(PropTypes.object)
+        propsArray: PropTypes.arrayOf(PropTypes.object),
       }),
       // content node
       PropTypes.node,
@@ -63,28 +63,28 @@ export const SectionMixin = {
           PropTypes.element,
           PropTypes.shape({
             tag: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-            props: PropTypes.object
-          })
-        ])
-      })
+            props: PropTypes.object,
+          }),
+        ]),
+      }),
     ]),
     footer: PropTypes.oneOfType([
       // content body:[{tag:'',props:{}},{tag:'',props:{}},...]
       PropTypes.arrayOf(
         PropTypes.shape({
           tag: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-          props: PropTypes.object
+          props: PropTypes.object,
         })
       ),
       // content bodyItem:{tag:'',props{}}
       PropTypes.shape({
         tag: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-        props: PropTypes.arrayOf(PropTypes.object)
+        props: PropTypes.arrayOf(PropTypes.object),
       }),
       // content items:{tag:'',propsArray:[{},{},{},...]}
       PropTypes.shape({
         tag: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-        propsArray: PropTypes.arrayOf(PropTypes.object)
+        propsArray: PropTypes.arrayOf(PropTypes.object),
       }),
       // content node
       PropTypes.node,
@@ -94,12 +94,12 @@ export const SectionMixin = {
           PropTypes.element,
           PropTypes.shape({
             tag: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-            props: PropTypes.object
-          })
-        ])
-      })
+            props: PropTypes.object,
+          }),
+        ]),
+      }),
     ]),
-    underline: PropTypes.bool
+    underline: PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -108,7 +108,7 @@ export const SectionMixin = {
     return {
       header: null,
       footer: null,
-      underline: false
+      underline: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -178,7 +178,7 @@ export const SectionMixin = {
   getUU5CommonSectionMixinProps() {
     return {
       header: this.getHeader(),
-      footer: this.getFooter()
+      footer: this.getFooter(),
     };
   },
 
@@ -220,7 +220,7 @@ export const SectionMixin = {
 
     newHeaderChildProps.key = newHeaderChildProps.id;
 
-    newHeaderChildProps.ref = function(renderedChild) {
+    newHeaderChildProps.ref = function (renderedChild) {
       renderedChild && this.registerRenderedHeaderChild(renderedChild);
     }.bind(this);
 
@@ -241,7 +241,7 @@ export const SectionMixin = {
 
     newFooterChildProps.key = newFooterChildProps.id;
 
-    newFooterChildProps.ref = function(renderedChild) {
+    newFooterChildProps.ref = function (renderedChild) {
       renderedChild && this.registerRenderedFooterChild(renderedChild);
     }.bind(this);
 
@@ -283,7 +283,7 @@ export const SectionMixin = {
         break;
       case "contentOfStandardHeader":
         headerChild = this.buildChild(this.getDefault("headerTag", "UU5.Common.SectionMixin"), {
-          content: headerValue
+          content: headerValue,
         });
         headerChild = this.cloneChild(headerChild, this.expandHeaderProps(headerChild, level));
         break;
@@ -329,7 +329,7 @@ export const SectionMixin = {
         break;
       case "contentOfStandardFooter":
         footerChild = this.buildChild(this.getDefault("footerTag", "UU5.Common.SectionMixin"), {
-          content: footerValue
+          content: footerValue,
         });
         footerChild = this.cloneChild(footerChild, this.expandFooterProps(footerChild, level));
         break;
@@ -354,7 +354,7 @@ export const SectionMixin = {
 
   getRenderedFooterChild() {
     return this.renderedFooterChild;
-  }
+  },
   //@@viewOff:interface
 
   //@@viewOn:overriding

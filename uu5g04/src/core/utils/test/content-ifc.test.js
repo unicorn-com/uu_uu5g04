@@ -16,12 +16,12 @@ const Component = UU5.Common.VisualComponent.create({
   displayName: "Component",
   mixins: [UU5.Common.BaseMixin, UU5.Common.NestingLevelMixin],
   statics: {
-    nestingLevelList: ["boxCollection", "box"]
+    nestingLevelList: ["boxCollection", "box"],
   },
   render() {
     let { children } = this.props;
     return <div>{React.isValidElement(children) ? React.cloneElement(children, { parent: this }) : null}</div>;
-  }
+  },
 });
 window.UU5.D = { Component };
 
@@ -30,8 +30,8 @@ describe("UU5.Utils.Content", () => {
     let props, child, parent, children, nestingLevelList, statics;
 
     mount(
-      <Component ref={ref => (parent = ref)}>
-        <Component ref={ref => (child = ref)} {...props} />
+      <Component ref={(ref) => (parent = ref)}>
+        <Component ref={(ref) => (child = ref)} {...props} />
       </Component>
     );
     props = { nestingLevel: "boxCollection", parent };
@@ -78,7 +78,7 @@ describe("UU5.Utils.Content", () => {
     children = UU5.Utils.Content.getChildren(<Component a="b" />, props, statics);
     expect(children).toMatchObject({ props: { a: "b" } });
 
-    children = UU5.Utils.Content.getChildren(props => <Component a="b" {...props} />, props, statics);
+    children = UU5.Utils.Content.getChildren((props) => <Component a="b" {...props} />, props, statics);
     expect(children).toMatchObject({ props: { a: "b", nestingLevel: "boxCollection" } });
     // NOTE Returned "children" have prop "parent" set to the value in "props", not to the component instance
     // from where getChildren() was called. The reason is that current uu5g04 components (and other libraries)
@@ -93,7 +93,7 @@ describe("UU5.Utils.Content", () => {
     expect(children[1]).toBe("text"); // text-corrector is not used
 
     children = UU5.Utils.Content.getChildren(
-      props => [<Component a="b" key="abc" {...props} />, "text"],
+      (props) => [<Component a="b" key="abc" {...props} />, "text"],
       props,
       statics
     );

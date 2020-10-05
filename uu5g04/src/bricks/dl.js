@@ -27,7 +27,7 @@ export const Dl = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.SectionMixin,
     UU5.Common.NestingLevelMixin,
-    UU5.Common.PureRenderMixin
+    UU5.Common.PureRenderMixin,
   ],
   //@@viewOff:mixins
 
@@ -36,24 +36,24 @@ export const Dl = UU5.Common.VisualComponent.create({
     tagName: ns.name("Dl"),
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "smallBox"),
     classNames: {
-      main: ns.css("dl")
+      main: ns.css("dl"),
     },
     defaults: {
-      childTagNames: ["UU5.Bricks.Dd", "UU5.Bricks.Dt"]
-    }
+      childTagNames: ["UU5.Bricks.Dd", "UU5.Bricks.Dt"],
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string)
+    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
-      allowTags: []
+      allowTags: [],
     };
   },
   //@@viewOff:getDefaultProps
@@ -65,7 +65,7 @@ export const Dl = UU5.Common.VisualComponent.create({
   //@@viewOff:interface
 
   //@@viewOn:overriding
-  shouldChildRender_: function(child) {
+  shouldChildRender_: function (child) {
     let childTagName = UU5.Common.Tools.getChildTagName(child);
     let defaultChildTagNames = this.getDefault().childTagNames;
     let childTagNames = this.props.allowTags.concat(defaultChildTagNames);
@@ -73,7 +73,7 @@ export const Dl = UU5.Common.VisualComponent.create({
     if (!result && (typeof child !== "string" || child.trim())) {
       if (childTagName)
         this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagNames[0]], {
-          mixinName: "UU5.Common.BaseMixin"
+          mixinName: "UU5.Common.BaseMixin",
         });
       else this.showError("childNotAllowed", [child, defaultChildTagNames[0]], { mixinName: "UU5.Common.BaseMixin" });
     }
@@ -85,7 +85,7 @@ export const Dl = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return this.getNestingLevel() ? (
       <dl {...this.getMainAttrs()}>
         {this.getHeaderChild()}
@@ -94,7 +94,7 @@ export const Dl = UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </dl>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

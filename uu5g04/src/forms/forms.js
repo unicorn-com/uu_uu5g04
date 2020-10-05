@@ -67,7 +67,11 @@ const FormControls = () => {
 };
 export { FormControls };
 
-UU5.Environment.addRuntimeLibrary({ name: `${UU5.Environment.name}-forms`, version: UU5.Environment.version });
+UU5.Environment.addRuntimeLibrary({
+  name: `${UU5.Environment.name}-forms`,
+  version: process.env.VERSION,
+  namespace: "UU5.Forms", // TODO Use process.env.NAMESPACE after upgrading to devkit 3.x.
+});
 export const bookKitUrl =
   "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page";
 

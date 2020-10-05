@@ -20,25 +20,25 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Common.ContentMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     position: {
-      values: ["left", "center", "right"]
+      values: ["left", "center", "right"],
     },
     verticalPosition: {
-      values: ["top", "bottom"]
+      values: ["top", "bottom"],
     },
     alertPosition: {
-      values: ["top", "bottom"]
-    }
+      values: ["top", "bottom"],
+    },
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.ProgressBus`, () => {

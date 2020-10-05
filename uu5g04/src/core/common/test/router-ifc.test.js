@@ -36,7 +36,7 @@ let RouteComponent = createReactClass({
         )}
       </UU5.Bricks.Div>
     );
-  }
+  },
 });
 
 let NotFoundRoute = createReactClass({
@@ -45,12 +45,12 @@ let NotFoundRoute = createReactClass({
     let { requestedRoute } = this.props.params || {};
     let useCase = (requestedRoute && requestedRoute.useCase) || requestedRoute;
     return <UU5.Common.Error content={`Route "${useCase}" not found.`} />;
-  }
+  },
 });
 
 let routes = {
   home: { component: <RouteComponent content="home" /> },
-  about: { component: <RouteComponent content="about" /> }
+  about: { component: <RouteComponent content="about" /> },
 };
 
 describe("UU5.Common.Router - Internal Interface test", () => {
@@ -69,7 +69,7 @@ describe("UU5.Common.Router - Internal Interface test", () => {
     const returnValue = UU5.Environment.setRoute(
       {
         component: <RouteComponent content="component, UC direct, no history" />,
-        noHistory: true
+        noHistory: true,
       },
       null,
       setStateCallBack
@@ -148,7 +148,7 @@ describe("UU5.Common.Router - Internal Interface test", () => {
     );
     expect(wrapper).toMatchSnapshot();
     expect(() => {
-      UU5.Environment.getRouter().preventPageLeave(callback => {
+      UU5.Environment.getRouter().preventPageLeave((callback) => {
         return {
           header: "Test",
           content: (
@@ -157,7 +157,7 @@ describe("UU5.Common.Router - Internal Interface test", () => {
               <UU5.Bricks.Button onClick={() => callback(true)}>Yes</UU5.Bricks.Button>
               <UU5.Bricks.Button onClick={() => callback(false)}>No</UU5.Bricks.Button>
             </UU5.Bricks.Div>
-          )
+          ),
         };
       });
     }).not.toThrow();

@@ -36,7 +36,7 @@ export const Number = Context.withContext(
       UU5.Common.PureRenderMixin,
       UU5.Common.ElementaryMixin,
       UU5.Common.ScreenSizeMixin,
-      TextInputMixin
+      TextInputMixin,
     ],
     //@@viewOff:mixins
 
@@ -45,13 +45,13 @@ export const Number = Context.withContext(
       tagName: ns.name("Number"),
       classNames: {
         main: ns.css("number"),
-        hiddenButtons: ns.css("number-hidden-buttons")
+        hiddenButtons: ns.css("number-hidden-buttons"),
       },
       defaults: {
         regexpNumberParts: /\B(?=(\d{3})+(?!\d))/g,
-        inputColWidth: "xs12 s4 m4 l3 xl3"
+        inputColWidth: "xs12 s4 m4 l3 xl3",
       },
-      lsi: () => UU5.Common.Tools.merge({}, UU5.Environment.Lsi.Forms.number, UU5.Environment.Lsi.Forms.message)
+      lsi: () => UU5.Common.Tools.merge({}, UU5.Environment.Lsi.Forms.number, UU5.Environment.Lsi.Forms.message),
     },
     //@@viewOff:statics
 
@@ -75,7 +75,7 @@ export const Number = Context.withContext(
       hidePrefixOnFocus: UU5.PropTypes.bool,
       decimalsView: UU5.PropTypes.number,
       decimalsViewRounded: UU5.PropTypes.oneOf(["round", "floor", "ceil"]),
-      valueType: UU5.PropTypes.oneOf(["number", "string"])
+      valueType: UU5.PropTypes.oneOf(["number", "string"]),
     },
     //@@viewOff:propTypes
 
@@ -100,7 +100,7 @@ export const Number = Context.withContext(
         prefix: undefined,
         hideSuffixOnFocus: false,
         hidePrefixOnFocus: false,
-        valueType: "string"
+        valueType: "string",
       };
     },
     //@@viewOff:getDefaultProps
@@ -477,7 +477,7 @@ export const Number = Context.withContext(
         maxDecimals,
         roundType: this.props.decimalsViewRounded,
         thousandSeparator: showThousandSeparator ? this.props.thousandSeparator : "",
-        decimalSeparator: this.props.decimalSeparator
+        decimalSeparator: this.props.decimalSeparator,
       });
     },
 
@@ -830,8 +830,8 @@ export const Number = Context.withContext(
             this.showError("validateError", null, {
               context: {
                 func: this.props.onValidate,
-                result: result
-              }
+                result: result,
+              },
             });
           }
         }
@@ -863,7 +863,7 @@ export const Number = Context.withContext(
         value: result.value,
         event: e,
         component: this,
-        _data: { type: "decrease", feedback: result.feedback }
+        _data: { type: "decrease", feedback: result.feedback },
       };
       opt = this._getOutputResult(opt);
 
@@ -893,7 +893,7 @@ export const Number = Context.withContext(
         value: result.value,
         event: e,
         component: this,
-        _data: { type: "increase", feedback: result.feedback }
+        _data: { type: "increase", feedback: result.feedback },
       };
       opt = this._getOutputResult(opt);
 
@@ -949,7 +949,7 @@ export const Number = Context.withContext(
     _checkRequiredValue({ value }) {
       // check required value as a string, number 0 is filled value
       let checkValue = this._parseNumberFromString(value);
-      if (this.props.valueType === "number" && (isNaN(checkValue) && value !== "-") && this.props.required) {
+      if (this.props.valueType === "number" && isNaN(checkValue) && value !== "-" && this.props.required) {
         // manual validation ... there is no possible
         this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessage"), value);
         return false;
@@ -973,8 +973,8 @@ export const Number = Context.withContext(
                 mainAttrs: {
                   onMouseDown: this._decreaseStart,
                   onMouseUp: this._decreaseEnd,
-                  onMouseOut: this._decreaseEnd
-                }
+                  onMouseOut: this._decreaseEnd,
+                },
               },
               {
                 icon: "mdi-plus",
@@ -985,9 +985,9 @@ export const Number = Context.withContext(
                 mainAttrs: {
                   onMouseDown: this._increaseStart,
                   onMouseUp: this._increaseEnd,
-                  onMouseOut: this._increaseEnd
-                }
-              }
+                  onMouseOut: this._increaseEnd,
+                },
+              },
             ]
           : null;
 
@@ -1047,13 +1047,13 @@ export const Number = Context.withContext(
               <ItemList key="item-list" {...this._getItemListProps()}>
                 {this._getChildren()}
               </ItemList>,
-              <UU5.Bricks.Backdrop key="backdrop" {...this._getBackdropProps()} />
+              <UU5.Bricks.Backdrop key="backdrop" {...this._getBackdropProps()} />,
             ],
             buttons
           )}
         </div>
       );
-    }
+    },
     //@@viewOff:render
   })
 );

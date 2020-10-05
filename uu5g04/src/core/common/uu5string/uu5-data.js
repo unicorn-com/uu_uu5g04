@@ -22,7 +22,7 @@ export class UU5Data {
     while (data != null && parts.length > 0) data = data[parts.shift()];
     if (typeof data === undefined) {
       console.warn(`There is no component data in Environment.uu5DataMap for uu5Data: ${uu5Data} !`, {
-        uu5Data: uu5Data
+        uu5Data: uu5Data,
       });
     }
     return data;

@@ -30,8 +30,8 @@ export const ListDataManager = Component.create({
     tagName: "UU5.Common.ListDataManager",
     errors: {
       serverLoad: "Error during %s items from server.",
-      serverUpdate: "Error during %s item on server."
-    }
+      serverUpdate: "Error during %s item on server.",
+    },
   },
   //@@viewOff:statics
 
@@ -47,7 +47,7 @@ export const ListDataManager = Component.create({
     onBulkUpdate: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
     onBulkDelete: PropTypes.func,
     // reloadInterval: PropTypes.number,
-    pessimistic: PropTypes.bool
+    pessimistic: PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -64,7 +64,7 @@ export const ListDataManager = Component.create({
       onBulkUpdate: undefined,
       onBulkDelete: undefined,
       // reloadInterval: undefined,
-      pessimistic: false
+      pessimistic: false,
     };
   },
   //@@viewOff:defaultProps
@@ -76,7 +76,7 @@ export const ListDataManager = Component.create({
       pageInfo: null,
       viewState: "load",
       errorState: null,
-      errorData: null
+      errorData: null,
     };
 
     if (typeof this.props.onLoad !== "function") {
@@ -89,9 +89,8 @@ export const ListDataManager = Component.create({
 
   componentDidMount() {
     this._load(this.props.onLoad, this.props.data)
-    // promise must have catch, in other way there is written error to console
-      .catch(() => {
-      });
+      // promise must have catch, in other way there is written error to console
+      .catch(() => {});
     // this._startReload();
   },
 
@@ -108,16 +107,16 @@ export const ListDataManager = Component.create({
       if (pessimistic) {
         this.setState({ viewState: "load", errorState: null, errorData: null }, () => {
           this._load(this.props.onLoad, data)
-            .then(promise => this._getPromiseCallback(resolve, promise)())
-            .catch(promise => {
+            .then((promise) => this._getPromiseCallback(resolve, promise)())
+            .catch((promise) => {
               this.showError("serverLoad", "loading", { context: { promise } });
               this._getPromiseCallback(reject, promise)();
             });
         });
       } else {
         this._load(this.props.onLoad, data)
-          .then(promise => this._getPromiseCallback(resolve, promise)())
-          .catch(promise => {
+          .then((promise) => this._getPromiseCallback(resolve, promise)())
+          .catch((promise) => {
             this.showError("serverLoad", "loading", { context: { promise } });
             this._getPromiseCallback(reject, promise)();
           });
@@ -132,16 +131,16 @@ export const ListDataManager = Component.create({
       if (pessimistic) {
         this.setState({ viewState: "reload", errorState: null, errorData: null }, () => {
           this._load(this.props.onReload || this.props.onLoad, data, "reload")
-            .then(dtoOut => this._getPromiseCallback(resolve, dtoOut)())
-            .catch(dtoOut => {
+            .then((dtoOut) => this._getPromiseCallback(resolve, dtoOut)())
+            .catch((dtoOut) => {
               this.showError("serverLoad", "reloading", { context: { dtoOut } });
               this._getPromiseCallback(reject, dtoOut)();
             });
         });
       } else {
         this._load(this.props.onReload || this.props.onLoad, data, "reload")
-          .then(dtoOut => this._getPromiseCallback(resolve, dtoOut)())
-          .catch(dtoOut => {
+          .then((dtoOut) => this._getPromiseCallback(resolve, dtoOut)())
+          .catch((dtoOut) => {
             this.showError("serverLoad", "reloading", { context: { dtoOut } });
             this._getPromiseCallback(reject, dtoOut)();
           });
@@ -215,7 +214,7 @@ export const ListDataManager = Component.create({
     return new Promise((resolve, reject) => {
       if (typeof call === "function") {
         call(data)
-          .then(response => {
+          .then((response) => {
             let pageInfo = null;
             let data = response;
             if (typeof response === "object" && response !== null && !Array.isArray(response)) {
@@ -224,17 +223,17 @@ export const ListDataManager = Component.create({
             }
 
             this.isRendered() &&
-            this.setState(
-              { viewState: "ready", errorState: null, errorData: null, data, pageInfo, response },
-              typeof resolve === "function" ? () => resolve(data) : undefined
-            );
+              this.setState(
+                { viewState: "ready", errorState: null, errorData: null, data, pageInfo, response },
+                typeof resolve === "function" ? () => resolve(data) : undefined
+              );
           })
-          .catch(response => {
+          .catch((response) => {
             this.isRendered() &&
-            this.setState(
-              { errorData: response, viewState: "error", errorState, response },
-              typeof reject === "function" ? () => reject(response) : undefined
-            );
+              this.setState(
+                { errorData: response, viewState: "error", errorState, response },
+                typeof reject === "function" ? () => reject(response) : undefined
+              );
           });
       }
     });
@@ -267,7 +266,7 @@ export const ListDataManager = Component.create({
     if (pessimistic) {
       state = { viewState: bulk ? "bulkCreate" : "create", errorState: null, errorData: null };
     } else {
-      state = state => {
+      state = (state) => {
         let pageInfo = state.pageInfo ? { ...state.pageInfo } : null;
         if (pageInfo && typeof pageInfo.total === "number") {
           pageInfo.total += items.length;
@@ -282,18 +281,18 @@ export const ListDataManager = Component.create({
   _getUpdatedViewData(identifier, item, pessimistic, bulk = false) {
     let identifiers = bulk ? identifier : [identifier];
     let items = bulk ? item : [item];
-    let oldItems = identifiers.map(identifier => {
-      return this.state.data.find(typeof identifier === "function" ? identifier : item => item.id === identifier);
+    let oldItems = identifiers.map((identifier) => {
+      return this.state.data.find(typeof identifier === "function" ? identifier : (item) => item.id === identifier);
     });
     let state;
 
     if (pessimistic) {
       state = { viewState: bulk ? "bulkUpdate" : "update", errorState: null, errorData: null };
     } else {
-      state = state => {
+      state = (state) => {
         let data = [...state.data];
-        let oldItems = identifiers.map(identifier => {
-          return state.data.find(typeof identifier === "function" ? identifier : item => item.id === identifier);
+        let oldItems = identifiers.map((identifier) => {
+          return state.data.find(typeof identifier === "function" ? identifier : (item) => item.id === identifier);
         });
         let changed = false;
         oldItems.forEach((oldItem, i) => {
@@ -313,20 +312,20 @@ export const ListDataManager = Component.create({
 
   _getDeletedViewData(identifier, pessimistic, bulk = false) {
     let identifiers = bulk ? identifier : [identifier];
-    let oldItems = identifiers.map(identifier => {
-      return this.state.data.find(typeof identifier === "function" ? identifier : item => item.id === identifier);
+    let oldItems = identifiers.map((identifier) => {
+      return this.state.data.find(typeof identifier === "function" ? identifier : (item) => item.id === identifier);
     });
-    let indices = oldItems.map(oldItem => this.state.data.indexOf(oldItem));
+    let indices = oldItems.map((oldItem) => this.state.data.indexOf(oldItem));
     let state;
 
     if (pessimistic) {
       state = { viewState: bulk ? "bulkDelete" : "delete", errorState: null, errorData: null };
     } else {
-      state = state => {
+      state = (state) => {
         let data = [...state.data];
         let deleteCount = 0;
-        identifiers.forEach(identifier => {
-          let index = data.findIndex(typeof identifier === "function" ? identifier : item => item.id === identifier);
+        identifiers.forEach((identifier) => {
+          let index = data.findIndex(typeof identifier === "function" ? identifier : (item) => item.id === identifier);
           if (index > -1) {
             data.splice(index, 1);
             deleteCount++;
@@ -354,7 +353,7 @@ export const ListDataManager = Component.create({
     let items = bulk ? item : [item];
 
     promise.then(
-      response => {
+      (response) => {
         // array or object for backward compatibility
         const dtoOut = Array.isArray(response)
           ? response
@@ -363,7 +362,7 @@ export const ListDataManager = Component.create({
           this.setState(
             // NOTE We're updating data even when optimistic because server can send us updated
             // information and especially server-generated "id" for the created item.
-            state => {
+            (state) => {
               let pageInfo = state.pageInfo;
               let dtoOutItems = bulk ? dtoOut : [dtoOut];
 
@@ -390,15 +389,15 @@ export const ListDataManager = Component.create({
           resolve(response);
         }
       },
-      response => {
+      (response) => {
         this.showError("serverUpdate", "creating", { context: { response } });
         if (this.isRendered()) {
-          this.setState(state => {
+          this.setState((state) => {
             let newState = { viewState: "error", errorState: "create", errorData: response, response };
             if (!pessimistic) {
               // rollback optimistic changes
               let data = [...state.data];
-              items.forEach(item => {
+              items.forEach((item) => {
                 let index = data.indexOf(item);
                 data.splice(index, 1);
               });
@@ -431,7 +430,7 @@ export const ListDataManager = Component.create({
     let oldItems = bulk ? oldItem : [oldItem];
 
     promise.then(
-      response => {
+      (response) => {
         // array for backward compatibility
         const dtoOut = Array.isArray(response)
           ? response
@@ -439,10 +438,10 @@ export const ListDataManager = Component.create({
         // NOTE We're updating data even when optimistic because server can send us updated
         // information.
         if (this.isRendered()) {
-          this.setState(state => {
+          this.setState((state) => {
             let data = [...state.data];
-            let oldModItems = identifiers.map(identifier => {
-              return state.data.find(typeof identifier === "function" ? identifier : item => item.id === identifier);
+            let oldModItems = identifiers.map((identifier) => {
+              return state.data.find(typeof identifier === "function" ? identifier : (item) => item.id === identifier);
             });
             let dtoOutItems = bulk ? dtoOut : [dtoOut];
             oldModItems.forEach((oldModItem, i) => {
@@ -455,16 +454,18 @@ export const ListDataManager = Component.create({
           resolve(dtoOut);
         }
       },
-      response => {
+      (response) => {
         this.showError("serverUpdate", "updating", { context: { response } });
         if (this.isRendered()) {
-          this.setState(state => {
+          this.setState((state) => {
             let newState = { viewState: "error", errorState: "update", errorData: response, response };
             if (!pessimistic) {
               // rollback optimistic changes
               let data = [...state.data];
-              let oldModItems = identifiers.map(identifier => {
-                return state.data.find(typeof identifier === "function" ? identifier : item => item.id === identifier);
+              let oldModItems = identifiers.map((identifier) => {
+                return state.data.find(
+                  typeof identifier === "function" ? identifier : (item) => item.id === identifier
+                );
               });
               oldModItems.forEach((oldModItem, i) => {
                 let index = data.indexOf(oldModItem);
@@ -489,86 +490,86 @@ export const ListDataManager = Component.create({
 
     if (pessimistic) {
       promise
-        .then(response => {
+        .then((response) => {
           const dtoOut = response && typeof response === "object" ? response.data : undefined;
           this.isRendered() &&
-          this.setState(state => {
-            let data = [...state.data];
-            let deleteCount = 0;
-            let dtoOutItems = bulk ? dtoOut || [] : [dtoOut];
-            identifiers.forEach((identifier, i) => {
-              let index = data.findIndex(
-                typeof identifier === "function" ? identifier : item => item.id === identifier
-              );
-              if (index > -1) {
-                if (dtoOutItems[i] == null) {
-                  data.splice(index, 1);
-                  deleteCount++;
-                } else {
-                  data.splice(index, 1, { ...data[index], ...dtoOutItems[i] });
+            this.setState((state) => {
+              let data = [...state.data];
+              let deleteCount = 0;
+              let dtoOutItems = bulk ? dtoOut || [] : [dtoOut];
+              identifiers.forEach((identifier, i) => {
+                let index = data.findIndex(
+                  typeof identifier === "function" ? identifier : (item) => item.id === identifier
+                );
+                if (index > -1) {
+                  if (dtoOutItems[i] == null) {
+                    data.splice(index, 1);
+                    deleteCount++;
+                  } else {
+                    data.splice(index, 1, { ...data[index], ...dtoOutItems[i] });
+                  }
                 }
+              });
+
+              let pageInfo = state.pageInfo ? { ...state.pageInfo } : null;
+              if (pageInfo && typeof pageInfo.total === "number") {
+                pageInfo.total -= deleteCount;
               }
-            });
 
-            let pageInfo = state.pageInfo ? { ...state.pageInfo } : null;
-            if (pageInfo && typeof pageInfo.total === "number") {
-              pageInfo.total -= deleteCount;
-            }
-
-            return { viewState: "ready", errorState: null, errorData: null, data, pageInfo, response };
-          }, this._getPromiseCallback(resolve, response));
+              return { viewState: "ready", errorState: null, errorData: null, data, pageInfo, response };
+            }, this._getPromiseCallback(resolve, response));
         })
-        .catch(response => {
+        .catch((response) => {
           this.showError("serverUpdate", "deleting", { context: { response } });
           let newState = { viewState: "error", errorState: "delete", errorData: response, response };
           this.isRendered() && this.setState(newState, this._getPromiseCallback(reject, response));
         });
     } else {
       promise
-        .then(response => {
+        .then((response) => {
           const dtoOut = response && typeof response === "object" ? response.data : undefined;
           let dtoOutItems = bulk ? dtoOut || [] : [dtoOut];
           this.isRendered() &&
-          this.setState(state => {
-            let data = [...state.data];
-            let restoredCount = 0;
-            let mergedOldSorted = oldItems.map((oldItem, i) => ({ oldItem, i, index: indices[i] }));
-            mergedOldSorted.sort((a, b) => a.index - b.index);
-            mergedOldSorted.forEach(({ oldItem, index, i }) => {
-              // backward compatibility if dtoOut is undefined
-              if (index > -1 && dtoOutItems[i] != null) {
-                data.splice(index, 0, { ...oldItem, ...dtoOutItems[i] });
-                restoredCount++;
+            this.setState((state) => {
+              let data = [...state.data];
+              let restoredCount = 0;
+              let mergedOldSorted = oldItems.map((oldItem, i) => ({ oldItem, i, index: indices[i] }));
+              mergedOldSorted.sort((a, b) => a.index - b.index);
+              mergedOldSorted.forEach(({ oldItem, index, i }) => {
+                // backward compatibility if dtoOut is undefined
+                if (index > -1 && dtoOutItems[i] != null) {
+                  data.splice(index, 0, { ...oldItem, ...dtoOutItems[i] });
+                  restoredCount++;
+                }
+              });
+              let pageInfo = state.pageInfo ? { ...state.pageInfo } : null;
+              if (pageInfo && typeof pageInfo.total === "number") {
+                pageInfo.total += restoredCount;
               }
-            });
-            let pageInfo = state.pageInfo ? { ...state.pageInfo } : null;
-            if (pageInfo && typeof pageInfo.total === "number") {
-              pageInfo.total += restoredCount;
-            }
-            return { data, pageInfo, response };
-          }, this._getPromiseCallback(resolve, response));
+              return { data, pageInfo, response };
+            }, this._getPromiseCallback(resolve, response));
         })
-        .catch(response => {
+        .catch((response) => {
           this.showError("serverUpdate", "deleting", { context: { response } });
           let newState = { viewState: "error", errorState: "update", errorData: response, response };
           this.isRendered() &&
-          this.setState(state => {
-            let data = [...state.data];
-            let restoredCount = 0;
-            let mergedOldSorted = oldItems.map((oldItem, i) => ({ oldItem, index: indices[i] }));
-            mergedOldSorted.sort((a, b) => a.index - b.index);
-            mergedOldSorted.forEach(({ oldItem, index }) => {
-              if (index > -1) {
-                data.splice(index, 0, oldItem);
-                restoredCount++;
+            this.setState((state) => {
+              let data = [...state.data];
+              let restoredCount = 0;
+              let mergedOldSorted = oldItems.map((oldItem, i) => ({ oldItem, index: indices[i] }));
+              mergedOldSorted.sort((a, b) => a.index - b.index);
+              mergedOldSorted.forEach(({ oldItem, index }) => {
+                if (index > -1) {
+                  data.splice(index, 0, oldItem);
+                  restoredCount++;
+                }
+              });
+              let pageInfo = state.pageInfo ? { ...state.pageInfo } : null;
+              if (pageInfo && typeof pageInfo.total === "number") {
+                pageInfo.total += restoredCount;
               }
-            });
-            let pageInfo = state.pageInfo ? { ...state.pageInfo } : null;
-            if (pageInfo && typeof pageInfo.total === "number") {
-              pageInfo.total += restoredCount;
-            }
-            return { ...newState, data, pageInfo };
-          }, this._getPromiseCallback(reject, response));
+              return { ...newState, data, pageInfo };
+            }, this._getPromiseCallback(reject, response));
         });
     }
   },
@@ -586,7 +587,7 @@ export const ListDataManager = Component.create({
       handleDelete: this.delete,
       handleBulkCreate: this.bulkCreate,
       handleBulkUpdate: this.bulkUpdate,
-      handleBulkDelete: this.bulkDelete
+      handleBulkDelete: this.bulkDelete,
     };
   },
   //@@viewOff:private
@@ -594,7 +595,7 @@ export const ListDataManager = Component.create({
   //@@viewOn:render
   render() {
     return this.props.children(this._getValues());
-  }
+  },
   //@@viewOff:render
 });
 
@@ -603,7 +604,7 @@ ListDataManager.createContext = () => {
 
   const Provider = ({ children, ...props }) => (
     <ListDataManager {...props}>
-      {values => <ListDataManagerContext.Provider value={values}>{children}</ListDataManagerContext.Provider>}
+      {(values) => <ListDataManagerContext.Provider value={values}>{children}</ListDataManagerContext.Provider>}
     </ListDataManager>
   );
 

@@ -21,30 +21,30 @@ const CONFIG = {
     "UU5.Common.BaseMixin",
     "UU5.Common.ElementaryMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     alt: "Popisek, který se zobrazí pokud je cesta ze src špatná..",
     type: {
-      values: ["rounded", "circle", "thumbnail"]
+      values: ["rounded", "circle", "thumbnail"],
     },
     src: "https://unicorn.com/img/index-career.jpg",
     responsive: {
-      values: [true, false]
+      values: [true, false],
     },
     width: {
-      values: [40, "50px", null]
+      values: [40, "50px", null],
     },
     height: {
-      values: [40, "50px", null]
-    }
+      values: [40, "50px", null],
+    },
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Image`, () => {

@@ -32,7 +32,7 @@ const TreeItem = UU5.Common.VisualComponent.create({
     UU5.Common.PureRenderMixin,
     UU5.Common.ElementaryMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.NestingLevelMixin
+    UU5.Common.NestingLevelMixin,
   ],
   //@@viewOff:mixins
 
@@ -45,15 +45,15 @@ const TreeItem = UU5.Common.VisualComponent.create({
       link: ns.css("tree-item-link"),
       icon: ns.css("tree-item-icon"),
       iconHidden: ns.css("tree-item-icon-hidden"),
-      nav: ns.css("tree-item-nav")
+      nav: ns.css("tree-item-nav"),
     },
     defaults: {
       iconExpanded: "mdi-menu-down",
-      iconCollapsed: "mdi-menu-right"
+      iconCollapsed: "mdi-menu-right",
     },
     errors: {
-      invalidParent: "Parent of this component is not Tree, Tree.Item or Tree.List."
-    }
+      invalidParent: "Parent of this component is not Tree, Tree.Item or Tree.List.",
+    },
   },
   //@@viewOff:statics
 
@@ -63,36 +63,36 @@ const TreeItem = UU5.Common.VisualComponent.create({
     items: UU5.PropTypes.array,
     iconExpanded: UU5.PropTypes.string,
     iconCollapsed: UU5.PropTypes.string,
-    expanded: UU5.PropTypes.bool
+    expanded: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       label: null,
       items: null,
       iconExpanded: null,
       iconCollapsed: null,
-      expanded: false
+      expanded: false,
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  getInitialState: function() {
+  getInitialState: function () {
     return {
-      expanded: this.props.expanded
+      expanded: this.props.expanded,
     };
   },
 
-  UNSAFE_componentWillMount: function() {
+  UNSAFE_componentWillMount: function () {
     if (!this.getParentByType("isTreeList")) {
       this.showError("invalidParent");
     }
   },
 
-  UNSAFE_componentWillReceiveProps: function(nextProps) {
+  UNSAFE_componentWillReceiveProps: function (nextProps) {
     if (
       nextProps.controlled &&
       nextProps.expanded !== this.props.expanded &&
@@ -109,21 +109,21 @@ const TreeItem = UU5.Common.VisualComponent.create({
     return true;
   },
 
-  expand: function(setStateCallback) {
+  expand: function (setStateCallback) {
     this.setState({ expanded: true }, setStateCallback);
   },
 
-  collapse: function(setStateCallback) {
+  collapse: function (setStateCallback) {
     this.setState({ expanded: false }, setStateCallback);
   },
 
-  toggleExpanded: function(setStateCallback) {
-    this.setState(function(state) {
+  toggleExpanded: function (setStateCallback) {
+    this.setState(function (state) {
       return { expanded: !state.expanded };
     }, setStateCallback);
   },
 
-  isExpanded: function() {
+  isExpanded: function () {
     return this.state.expanded;
   },
   //@@viewOff:interface
@@ -132,7 +132,7 @@ const TreeItem = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _getItems: function() {
+  _getItems: function () {
     let result = null;
 
     if (this.props.items || this.props.content || this.props.children) {
@@ -158,12 +158,12 @@ const TreeItem = UU5.Common.VisualComponent.create({
     return result;
   },
 
-  _onToggle: function() {
+  _onToggle: function () {
     this.toggleExpanded();
     return this;
   },
 
-  _getIcon: function() {
+  _getIcon: function () {
     let icon;
 
     if (
@@ -194,7 +194,7 @@ const TreeItem = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return this.getNestingLevel() ? (
       <li {...this.getMainAttrs()}>
         <Div className={this.getClassName("nav")}>
@@ -204,7 +204,7 @@ const TreeItem = UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </li>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

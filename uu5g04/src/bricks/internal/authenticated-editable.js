@@ -24,7 +24,7 @@ const Lsi = EditableLsi.authenticated;
 const DEFAULT_PROPS_MAP = {
   authenticated: null,
   notAuthenticated: null,
-  pending: null
+  pending: null,
 };
 
 const MAIN_CLASS_NAME = ns.css("authenticated-editable");
@@ -43,22 +43,22 @@ export const AuthorizedEditable = UU5.Common.VisualComponent.create({
       main: MAIN_CLASS_NAME,
       switchSelector: Css.css`
         margin: -4px 0;
-      `
+      `,
     },
-    lsi: () => Lsi
+    lsi: () => Lsi,
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    component: UU5.PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      component: null
+      component: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -111,7 +111,7 @@ export const AuthorizedEditable = UU5.Common.VisualComponent.create({
   },
 
   _getToolbarItems() {
-    return authenticatedStates.map(value => {
+    return authenticatedStates.map((value) => {
       let isSelected = this.state[value] === true;
       return (
         <UU5.Bricks.Button
@@ -141,7 +141,7 @@ export const AuthorizedEditable = UU5.Common.VisualComponent.create({
         {this.props.component.getChildren()}
       </UU5.BricksEditable.Toolbar>
     );
-  }
+  },
   //@@viewOff:render
 });
 

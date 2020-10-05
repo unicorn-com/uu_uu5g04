@@ -9,7 +9,7 @@ const getDefaultColors = (colorShades, bgStyle) => {
     buttonBgColorHover: colorShades.c400,
     buttonTextColorHover: COLORS.common.darkText,
     buttonBgColorActive: colorShades.c500,
-    buttonTextColorActive: COLORS.common.darkText
+    buttonTextColorActive: COLORS.common.darkText,
   };
 
   if (bgStyle === "filled") {
@@ -23,7 +23,7 @@ const getDefaultColors = (colorShades, bgStyle) => {
       textColorActive: COLORS.common.darkText,
       borderColor: colorShades.c300,
       borderColorHover: colorShades.c400,
-      borderColorActive: colorShades.c500
+      borderColorActive: colorShades.c500,
     };
   } else {
     definitions = {
@@ -36,7 +36,7 @@ const getDefaultColors = (colorShades, bgStyle) => {
       textColorActive: COLORS.common.darkText,
       borderColor: colorShades.c400,
       borderColorHover: colorShades.c400,
-      borderColorActive: colorShades.c400
+      borderColorActive: colorShades.c400,
     };
   }
 
@@ -99,7 +99,7 @@ const getHoverStyles = (
   `;
 };
 
-const getShades = colorSchema => {
+const getShades = (colorSchema) => {
   // get the most commonly used shades of the given colorSchema
   if (colorSchema === "default" || colorSchema === "grey" || !colorSchema) {
     return UU5.Environment.colors["grey"];

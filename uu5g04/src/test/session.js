@@ -8,7 +8,7 @@ const TEST_IDENTITY = {
   uuIdentity: "1-9999",
   email: "test.user@example.org", // JWT claim "email"
   levelOfAssurance: 0, // JWT claim "loa"
-  loginLevelOfAssurance: 1 // index of "loa" in supported acr values
+  loginLevelOfAssurance: 1, // index of "loa" in supported acr values
 };
 
 // minimal Session class (copying API of OIDC Session)
@@ -44,7 +44,7 @@ class MockSession {
   }
   removeListener(eventName, listener) {
     let listeners = this._listeners[eventName];
-    if (listeners) this._listeners[eventName] = listeners.filter(fn => fn !== listener);
+    if (listeners) this._listeners[eventName] = listeners.filter((fn) => fn !== listener);
   }
   _triggerEvent(eventName, payload) {
     let listeners = this._listeners[eventName];
@@ -52,9 +52,9 @@ class MockSession {
       Tools.act(() => {
         let event = {
           type: eventName,
-          data: payload
+          data: payload,
         };
-        listeners.forEach(fn => fn(event));
+        listeners.forEach((fn) => fn(event));
       });
     }
   }
@@ -123,7 +123,7 @@ export const Session = {
   },
   reset() {
     return Session.instance.mockReset();
-  }
+  },
 };
 
 beforeEach(async () => {

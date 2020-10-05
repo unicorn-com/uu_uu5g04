@@ -24,7 +24,7 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 const items = [
   { label: "Low", value: "low" },
   { label: "Normal", value: "normal" },
-  { label: "High", value: "high" }
+  { label: "High", value: "high" },
 ];
 
 //`UU5.Forms.Select`
@@ -32,29 +32,29 @@ const CONFIG = {
   mixins: ["UU5.Common.BaseMixin", "UU5.Common.ElementaryMixin", "UU5.Forms.InputMixin"],
   props: {
     value: {
-      values: [undefined, "low", "normal", "high"]
+      values: [undefined, "low", "normal", "high"],
     },
     size: {
-      values: ["s", "m", "l", "xl"]
+      values: ["s", "m", "l", "xl"],
     },
     bgStyle: {
-      values: [undefined, "outline", "underline", "filled", "transparent"]
+      values: [undefined, "outline", "underline", "filled", "transparent"],
     },
     elevation: {
-      values: [undefined, 1, 5, -1]
+      values: [undefined, 1, 5, -1],
     },
     borderRadius: {
-      values: [undefined, 8, "50%"]
-    }
+      values: [undefined, 8, "50%"],
+    },
   },
   requiredProps: {
-    items
+    items,
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 let MOCK_BOUNDING_CLIENT_RECT_SWITCH = { left: 0, top: 0, width: 400, height: 0, right: 0, bottom: 0 };
@@ -62,7 +62,7 @@ let MOCK_BOUNDING_CLIENT_RECT_WRAPPER = { left: 0, top: 0, width: 500, height: 0
 let MOCK_BOUNDING_CLIENT_RECT_RESIZE = { left: 0, top: 0, width: 600, height: 200, right: 0, bottom: 0 };
 let origImpl = HTMLElement.prototype.getBoundingClientRect;
 beforeEach(() => {
-  HTMLElement.prototype.getBoundingClientRect = jest.fn(function() {
+  HTMLElement.prototype.getBoundingClientRect = jest.fn(function () {
     let result;
 
     if (this.matches(".uu5-bricks-resize-observer")) {

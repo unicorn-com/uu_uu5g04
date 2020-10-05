@@ -5,11 +5,11 @@ const { mount, renderHook, initHookRenderer } = UU5.Test.Tools;
 
 const LSI_VALUES1 = {
   key1: { en: "key1-en", cs: "key1-cs" },
-  key2: { en: "key2-en", cs: "key2-en" }
+  key2: { en: "key2-en", cs: "key2-en" },
 };
 const LSI_VALUES2 = {
   key1: { en: "v2-key1-en", cs: "v2-key1-cs" },
-  key2: { en: "v2-key2-en", cs: "v2-key2-en" }
+  key2: { en: "v2-key2-en", cs: "v2-key2-en" },
 };
 
 describe("[uu5g04-hooks] useLsiValues", () => {

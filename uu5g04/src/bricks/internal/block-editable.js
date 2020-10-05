@@ -26,7 +26,7 @@ const DEFAULT_PROPS_MAP = {
   colorSchema: "default",
   content: null,
   children: null,
-  background: false
+  background: false,
 };
 
 const MAIN_CLASS_NAME = ns.css("block");
@@ -78,22 +78,22 @@ export const Block = UU5.Common.VisualComponent.create({
               width: 20%;
             }
           }
-        `)
+        `),
     },
-    lsi: () => ({ ...Lsi.block, ...Lsi.common })
+    lsi: () => ({ ...Lsi.block, ...Lsi.common }),
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    component: UU5.PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      component: null
+      component: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -105,7 +105,7 @@ export const Block = UU5.Common.VisualComponent.create({
 
     return {
       ...values,
-      background: values.background
+      background: values.background,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -143,14 +143,14 @@ export const Block = UU5.Common.VisualComponent.create({
   _changeColorSchema(opt) {
     this.setState({ colorSchema: opt.value }, () => {
       this.props.component.saveEditation({
-        colorSchema: !opt.value || opt.value === "default" ? undefined : opt.value
+        colorSchema: !opt.value || opt.value === "default" ? undefined : opt.value,
       });
     });
   },
 
   _toggleBackground() {
     this.setState(
-      state => ({ background: !state.background }),
+      (state) => ({ background: !state.background }),
       () => {
         this.props.component.saveEditation({ background: this.state.background });
       }
@@ -165,10 +165,10 @@ export const Block = UU5.Common.VisualComponent.create({
           return {
             value: this.state.colorSchema,
             onClick: this._changeColorSchema,
-            tooltip: this.getLsiValue("colorSchemaTooltip")
+            tooltip: this.getLsiValue("colorSchemaTooltip"),
           };
-        }
-      }
+        },
+      },
     ];
   },
 
@@ -177,8 +177,8 @@ export const Block = UU5.Common.VisualComponent.create({
       {
         value: this.state.background,
         onClick: this._toggleBackground,
-        label: this.getLsiComponent("backgroundCheckboxLabel")
-      }
+        label: this.getLsiComponent("backgroundCheckboxLabel"),
+      },
     ];
   },
   //@@viewOff:private
@@ -195,7 +195,7 @@ export const Block = UU5.Common.VisualComponent.create({
         {this.props.component.getChildren()}
       </UU5.BricksEditable.Toolbar>
     );
-  }
+  },
   //@@viewOff:render
 });
 

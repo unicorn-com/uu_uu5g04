@@ -7,7 +7,7 @@ import TriggerIfAlmostVisible from "./internal/trigger-if-almost-visible";
 
 const STATICS = {
   //@@viewOn:statics
-  displayName: "UU5.Hooks.PagingAutoLoad"
+  displayName: "UU5.Hooks.PagingAutoLoad",
   //@@viewOff:statics
 };
 
@@ -21,7 +21,7 @@ export const PagingAutoLoad = createComponent({
     pageSize: UU5.PropTypes.number.isRequired,
     handleLoad: UU5.PropTypes.func,
     error: UU5.PropTypes.oneOfType([UU5.PropTypes.func, UU5.PropTypes.element, UU5.PropTypes.array]),
-    children: UU5.PropTypes.oneOfType([UU5.PropTypes.func, UU5.PropTypes.element, UU5.PropTypes.array])
+    children: UU5.PropTypes.oneOfType([UU5.PropTypes.func, UU5.PropTypes.element, UU5.PropTypes.array]),
   },
   //@@viewOff:propTypes
 
@@ -31,7 +31,7 @@ export const PagingAutoLoad = createComponent({
     data: undefined,
     pageSize: undefined,
     handleLoad: undefined,
-    error: undefined
+    error: undefined,
   },
   //@@viewOff:defaultProps
 
@@ -44,11 +44,14 @@ export const PagingAutoLoad = createComponent({
     //@@viewOff:interface
 
     //@@viewOn:private
-    let totalLoadedCount = data ? data.filter(it => it != null).length : 0;
+    let totalLoadedCount = data ? data.filter((it) => it != null).length : 0;
     let renderableData = data
       ? data.length === totalLoadedCount
         ? data
-        : data.slice(0, data.findIndex(it => it == null))
+        : data.slice(
+            0,
+            data.findIndex((it) => it == null)
+          )
       : [];
     let pageIndex = Math.floor(renderableData.length / pageSize);
 
@@ -96,5 +99,5 @@ export const PagingAutoLoad = createComponent({
       </TriggerIfAlmostVisible>
     ) : null;
     //@@viewOff:render
-  }
+  },
 });

@@ -21,35 +21,35 @@ const CONFIG = {
     "UU5.Common.BaseMixin",
     "UU5.Common.ElementaryMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     src: "https://cdn.plus4u.net/libs/clearsans/1.0.0/fonts/clear-sans.css",
     parameters: {
-      values: [{ example: "some" }]
+      values: [{ example: "some" }],
     },
     numbered: {
-      values: [true, false]
+      values: [true, false],
     },
     trimmed: {
-      values: [true, false]
+      values: [true, false],
     },
     blockKey: {
-      values: ["Key"]
+      values: ["Key"],
     },
     blockStart: {
-      values: ["@@myBlockOn:"]
+      values: ["@@myBlockOn:"],
     },
     blockEnd: {
-      values: ["@@myBlockOff:"]
-    }
+      values: ["@@myBlockOff:"],
+    },
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.FileViewer`, () => {

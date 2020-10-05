@@ -20,9 +20,9 @@ export const DraggableMixin = {
     UU5_Bricks_DraggableMixin: {
       requiredMixins: ["UU5.Common.BaseMixin"],
       classNames: {
-        main: ns.css("draggable")
-      }
-    }
+        main: ns.css("draggable"),
+      },
+    },
   },
   //@@viewOff:statics
 
@@ -33,13 +33,13 @@ export const DraggableMixin = {
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  getInitialState: function() {
+  getInitialState: function () {
     // initialize
     this.registerMixin("UU5_Bricks_DraggableMixin");
     return {};
   },
 
-  componentWillUnmount: function() {
+  componentWillUnmount: function () {
     UU5.Environment.EventListener.removeWindowEvent("mousemove", this.getId());
     UU5.Environment.EventListener.removeWindowEvent("touchmove", this.getId());
     UU5.Environment.EventListener.removeWindowEvent("mouseup", this.getId());
@@ -48,7 +48,7 @@ export const DraggableMixin = {
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
-  hasUU5_Bricks_DraggableMixin: function() {
+  hasUU5_Bricks_DraggableMixin: function () {
     return this.hasMixin("UU5_Bricks_DraggableMixin");
   },
 
@@ -72,7 +72,7 @@ export const DraggableMixin = {
     return this;
   },
 
-  dragStart: function(draggedItem, x, y) {
+  dragStart: function (draggedItem, x, y) {
     // TODO: deprecated
     return this.startDragging(draggedItem, x, y);
   },
@@ -90,31 +90,31 @@ export const DraggableMixin = {
     return this;
   },
 
-  getXOffset: function() {
+  getXOffset: function () {
     return this.findDOMNode().offsetLeft;
   },
 
-  getYOffset: function() {
+  getYOffset: function () {
     return this.findDOMNode().offsetTop;
   },
 
-  getClientLeft: function() {
+  getClientLeft: function () {
     return this.findDOMNode().clientLeft;
   },
 
-  getClientTop: function() {
+  getClientTop: function () {
     return this.findDOMNode().clientTop;
   },
 
-  getStylePropertyValue: function(object, property) {
+  getStylePropertyValue: function (object, property) {
     return this._getNumber(window.getComputedStyle(object.findDOMNode(), null).getPropertyValue(property));
   },
 
-  getPaddingLeft: function() {
+  getPaddingLeft: function () {
     return this.getStylePropertyValue(this, "padding-left");
   },
 
-  getPaddingTop: function() {
+  getPaddingTop: function () {
     return this.getStylePropertyValue(this, "padding-top");
   },
   //@@viewOff:interface
@@ -123,12 +123,12 @@ export const DraggableMixin = {
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _getNumber: function(value) {
+  _getNumber: function (value) {
     let match = value.match(/\d+/);
     return match ? Number(match[0]) : 0;
   },
 
-  _onMouseMove: function(e) {
+  _onMouseMove: function (e) {
     e.preventDefault();
     if (this.draggedItem) {
       var posX = e.pageX || (e.touches && e.touches[0].pageX);
@@ -172,7 +172,7 @@ export const DraggableMixin = {
     }
 
     return this;
-  }
+  },
   //@@viewOff:private
 };
 

@@ -16,14 +16,14 @@ import UU5 from "uu5g04";
 // where calling nextReducer(state, action) will call the next reducer based on the order
 // how the reducers were combined
 export function combineReducers(...reducers) {
-  let allReducersNonFlat = reducers.filter(Boolean).map(it => it.reducers || [it]);
+  let allReducersNonFlat = reducers.filter(Boolean).map((it) => it.reducers || [it]);
   let allReducersFlat = [].concat(...allReducersNonFlat);
   let result = allReducersFlat.reduceRight(
     (next, reducer) =>
-      function(state, action) {
+      function (state, action) {
         return reducer(state, action, next);
       },
-    v => v
+    (v) => v
   );
   result.reducers = allReducersFlat;
   return result;
@@ -39,15 +39,15 @@ export function performOperation(call, callArgs, applyOpToDataFn, type, dispatch
         applyOpToDataFn,
         execFn: () =>
           call(...callArgs).then(
-            data => {
+            (data) => {
               dispatchAction(type + "Done", { data, id });
               resolve(data);
             },
-            error => {
+            (error) => {
               dispatchAction(type + "Fail", { error, id });
               reject(error);
             }
-          )
+          ),
       });
     } else {
       // perform the operation locally
@@ -71,11 +71,11 @@ export function processBusReducer(state, action, nextReducer) {
     let updatedState;
     let { ids } = payload || {};
     let cleanupIdsSet = new Set(ids);
-    let newProcessBus = state.processBus.filter(op => !cleanupIdsSet.has(op.id));
+    let newProcessBus = state.processBus.filter((op) => !cleanupIdsSet.has(op.id));
     if (newProcessBus.length !== state.processBus.length) {
       updatedState = {
         ...state,
-        processBus: newProcessBus
+        processBus: newProcessBus,
       };
     }
     result = nextReducer(updatedState || state, action);
@@ -94,17 +94,17 @@ export function processBusReducer(state, action, nextReducer) {
         callArgs,
         result: undefined,
         error: undefined,
-        extraInfo: {}
+        extraInfo: {},
       };
       result = {
         ...state,
-        processBus: [...state.processBus, newOpItem]
+        processBus: [...state.processBus, newOpItem],
       };
     } else {
       // type ends with "Done" or "Fail" - finishing an operation updates its result/error
       // in the process bus, but it still remains there
       let { id, data, error } = payload;
-      let opIndex = state.processBus.findIndex(it => it.id === id);
+      let opIndex = state.processBus.findIndex((it) => it.id === id);
       if (opIndex === -1) {
         throw new Error(
           `Unexpected '${type}' operation in useData hook - such operation was not started, or it has been already processed.`
@@ -114,11 +114,11 @@ export function processBusReducer(state, action, nextReducer) {
       processBus[opIndex] = {
         ...processBus[opIndex],
         result: type.endsWith("Done") ? (data === undefined ? null : data) : undefined, // undefined <=> not applicable
-        error: type.endsWith("Fail") ? (error === undefined ? null : error) : undefined // undefined <=> not applicable
+        error: type.endsWith("Fail") ? (error === undefined ? null : error) : undefined, // undefined <=> not applicable
       };
       result = {
         ...state,
-        processBus
+        processBus,
       };
     }
 
@@ -146,7 +146,7 @@ export function processBusReducer(state, action, nextReducer) {
       Object.assign(result, {
         viewState: pendingOp ? pendingOp.type : lastFinishedOp.error === undefined ? "ready" : "error",
         error: pendingOp ? null : lastFinishedOp.error === undefined ? null : lastFinishedOp.error,
-        errorState: pendingOp ? null : lastFinishedOp.error === undefined ? null : lastFinishedOp.type
+        errorState: pendingOp ? null : lastFinishedOp.error === undefined ? null : lastFinishedOp.type,
       });
     }
   }

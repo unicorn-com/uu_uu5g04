@@ -24,11 +24,11 @@ const CONFIG = {
     "UU5.Common.NestingLevelMixin",
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.ContentMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {},
   requiredProps: {},
-  opt: {}
+  opt: {},
 };
 
 describe(`UU5.BlockLayout.Line props testing`, () => {

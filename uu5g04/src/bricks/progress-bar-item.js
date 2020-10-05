@@ -27,7 +27,7 @@ const ProgressBarItem = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.ContentMixin,
     UU5.Common.ColorSchemaMixin,
-    UU5.Common.NestingLevelMixin
+    UU5.Common.NestingLevelMixin,
   ],
   //@@viewOff:mixins
 
@@ -38,11 +38,11 @@ const ProgressBarItem = UU5.Common.VisualComponent.create({
     classNames: {
       main: ns.css("progress-bar-item"),
       striped: ns.css("progress-bar-item-striped"),
-      active: ns.css("progress-bar-item-active")
+      active: ns.css("progress-bar-item-active"),
     },
     errors: {
-      invalidParent: "Parent of this component is not ProgressBar."
-    }
+      invalidParent: "Parent of this component is not ProgressBar.",
+    },
   },
   //@@viewOff:statics
 
@@ -50,31 +50,31 @@ const ProgressBarItem = UU5.Common.VisualComponent.create({
   propTypes: {
     progress: UU5.PropTypes.number,
     striped: UU5.PropTypes.bool,
-    animated: UU5.PropTypes.bool
+    animated: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       progress: 0,
       striped: false,
-      animated: false
+      animated: false,
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  getInitialState: function() {
+  getInitialState: function () {
     return {
       progress: this.props.progress,
       content: this.getContent(),
       striped: this.props.striped,
-      animated: this.props.animated
+      animated: this.props.animated,
     };
   },
 
-  UNSAFE_componentWillMount: function() {
+  UNSAFE_componentWillMount: function () {
     let parent = this.getParent();
 
     if (parent) {
@@ -94,7 +94,7 @@ const ProgressBarItem = UU5.Common.VisualComponent.create({
         progress: nextProps.progress,
         content: nextProps.content,
         striped: nextProps.striped,
-        animated: nextProps.animated
+        animated: nextProps.animated,
       });
     }
     return this;
@@ -102,27 +102,27 @@ const ProgressBarItem = UU5.Common.VisualComponent.create({
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
-  getProgress: function() {
+  getProgress: function () {
     return this.state.progress;
   },
 
-  getProgressContent: function() {
+  getProgressContent: function () {
     return this.state.content;
   },
 
-  isStriped: function() {
+  isStriped: function () {
     return this.state.striped;
   },
 
-  isAnimated: function() {
+  isAnimated: function () {
     return this.state.animated;
   },
 
-  setProgress: function(params, setStateCallback) {
+  setProgress: function (params, setStateCallback) {
     var newProgress = this._checkProgress(params.value);
 
     var newState = {
-      progress: newProgress
+      progress: newProgress,
     };
 
     params.content !== undefined && (newState.content = params.content);
@@ -134,14 +134,14 @@ const ProgressBarItem = UU5.Common.VisualComponent.create({
     return this;
   },
 
-  increase: function(params, setStateCallback) {
+  increase: function (params, setStateCallback) {
     if (typeof params === "number") params = { value: params };
     var progressItem = this;
-    this.setState(function(state) {
+    this.setState(function (state) {
       var newProgress = progressItem._checkProgress(state.progress + params.value);
 
       var newState = {
-        progress: newProgress
+        progress: newProgress,
       };
 
       params.content !== undefined && (newState.content = params.content);
@@ -154,7 +154,7 @@ const ProgressBarItem = UU5.Common.VisualComponent.create({
     return this;
   },
 
-  decrease: function(params, setStateCallback) {
+  decrease: function (params, setStateCallback) {
     if (typeof params === "number") {
       params = -params;
     } else {
@@ -170,7 +170,7 @@ const ProgressBarItem = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _checkProgress: function(newProgress) {
+  _checkProgress: function (newProgress) {
     var result = newProgress;
     if (newProgress > 100) {
       result = 100;
@@ -180,7 +180,7 @@ const ProgressBarItem = UU5.Common.VisualComponent.create({
     return result;
   },
 
-  _getMainAttrs: function() {
+  _getMainAttrs: function () {
     var mainAttrs = this.getMainAttrs();
 
     if (this.isAnimated()) {
@@ -194,7 +194,7 @@ const ProgressBarItem = UU5.Common.VisualComponent.create({
     return mainAttrs;
   },
 
-  _getChildren: function() {
+  _getChildren: function () {
     var children;
 
     if (this.getProgress() > 0 && this.getProgressContent() !== "") {
@@ -206,9 +206,9 @@ const ProgressBarItem = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return this.getNestingLevel() ? <div {...this._getMainAttrs()}>{this._getChildren()}</div> : null;
-  }
+  },
   //@@viewOff:render
 });
 

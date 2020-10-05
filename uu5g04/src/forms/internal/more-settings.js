@@ -25,15 +25,15 @@ const MoreSettings = UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("MoreSettings"),
     classNames: {
-      main: () => ns.css("more-settings") + " " + Css.css(`.uu5-bricks-icon { position: static; }`)
-    }
+      main: () => ns.css("more-settings") + " " + Css.css(`.uu5-bricks-icon { position: static; }`),
+    },
   },
   getInitialState() {
     return { opened: false };
   },
 
   toggle() {
-    this.setState(state => ({ opened: !state.opened }));
+    this.setState((state) => ({ opened: !state.opened }));
   },
 
   render() {
@@ -46,7 +46,7 @@ const MoreSettings = UU5.Common.VisualComponent.create({
         <AnimatedContainer opened={this.state.opened}>{this.props.children}</AnimatedContainer>
       </div>
     );
-  }
+  },
 });
 
 export default MoreSettings;

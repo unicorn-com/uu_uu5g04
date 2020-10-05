@@ -36,7 +36,7 @@ export const Row = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.NestingLevelMixin,
     UU5.Common.SectionMixin,
-    UU5.Common.EditableMixin
+    UU5.Common.EditableMixin,
   ],
   //@@viewOff:mixins
 
@@ -50,7 +50,7 @@ export const Row = UU5.Common.VisualComponent.create({
       "bigBoxCollection",
       "boxCollection",
       "box",
-      "smallBoxCollection"
+      "smallBoxCollection",
     ],
     classNames: {
       main: ns.css("row"),
@@ -58,24 +58,24 @@ export const Row = UU5.Common.VisualComponent.create({
       noSpacing: ns.css("row-nospacing"),
       standard: ns.css("row-standard"),
       flex: ns.css("row-flex"),
-      editation: ns.css("row-editation")
+      editation: ns.css("row-editation"),
     },
     opt: {
-      nestingLevelWrapper: true
+      nestingLevelWrapper: true,
     },
     editMode: {
       name: { en: "Row", cs: "Řádek" },
       backgroundColor: "rgba(209,196,233,.8)",
       color: "#311B92",
-      highlightColor: "rgba(218,208,237,.45)"
-    }
+      highlightColor: "rgba(218,208,237,.45)",
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
     noSpacing: UU5.PropTypes.bool,
-    display: UU5.PropTypes.oneOf(["standard", "flex"])
+    display: UU5.PropTypes.oneOf(["standard", "flex"]),
   },
   //@@viewOff:propTypes
 
@@ -83,7 +83,7 @@ export const Row = UU5.Common.VisualComponent.create({
   getDefaultProps() {
     return {
       noSpacing: false,
-      display: "standard"
+      display: "standard",
     };
   },
   //@@viewOff:getDefaultProps
@@ -91,7 +91,7 @@ export const Row = UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
-      editationLazyLoaded: false
+      editationLazyLoaded: false,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -119,7 +119,7 @@ export const Row = UU5.Common.VisualComponent.create({
   _registerNull(inst) {
     // unmount of component means that suspense is loaded and component should be rendered
     if (!inst) {
-      this.setState(state => {
+      this.setState((state) => {
         if (state.editationLazyLoaded) return;
 
         // Edit component is loaded - need to set to static variable because other Edit component does not render fallback component
@@ -157,7 +157,7 @@ export const Row = UU5.Common.VisualComponent.create({
           : null}
       </div>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

@@ -27,7 +27,7 @@ export default UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.ContentMixin,
     UU5.Common.ColorSchemaMixin,
-    UU5.Common.NestingLevelMixin
+    UU5.Common.NestingLevelMixin,
   ],
   //@@viewOff:mixins
 
@@ -36,37 +36,37 @@ export default UU5.Common.VisualComponent.create({
     tagName: ns.name("Table.TBody"),
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "smallBox"),
     classNames: {
-      main: ns.css("table-tbody")
+      main: ns.css("table-tbody"),
     },
     defaults: {
       childTagName: "UU5.Bricks.Table.Tr",
-      parentTagName: "UU5.Bricks.Table"
+      parentTagName: "UU5.Bricks.Table",
     },
     opt: {
-      nestingLevelWrapper: true
+      nestingLevelWrapper: true,
     },
     errors: {
-      invalidParent: "Parent of this component is not Table."
-    }
+      invalidParent: "Parent of this component is not Table.",
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string)
+    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
-      allowTags: []
+      allowTags: [],
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  UNSAFE_componentWillMount: function() {
+  UNSAFE_componentWillMount: function () {
     let parent = this.getParent();
 
     if (parent) {
@@ -89,7 +89,7 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:interface
 
   //@@viewOn:overriding
-  shouldChildRender_: function(child) {
+  shouldChildRender_: function (child) {
     let childTagName = UU5.Common.Tools.getChildTagName(child);
     let defaultChildTagName = this.getDefault().childTagName;
     let childTagNames = this.props.allowTags.concat(defaultChildTagName);
@@ -97,7 +97,7 @@ export default UU5.Common.VisualComponent.create({
     if (!result && (typeof child !== "string" || child.trim())) {
       if (childTagName)
         this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagName], {
-          mixinName: "UU5.Common.BaseMixin"
+          mixinName: "UU5.Common.BaseMixin",
         });
       else this.showError("childNotAllowed", [child, defaultChildTagName], { mixinName: "UU5.Common.BaseMixin" });
     }
@@ -109,13 +109,13 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return this.getNestingLevel() ? (
       <tbody {...this.getMainAttrs()}>
         {this.getFilteredSorterChildren()}
         {this.getDisabledCover()}
       </tbody>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });

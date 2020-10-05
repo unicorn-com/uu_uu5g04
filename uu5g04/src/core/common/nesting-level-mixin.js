@@ -21,7 +21,7 @@ export const NestingLevelMixin = {
     "UU5.Common.NestingLevelMixin": {
       requiredMixins: ["UU5.Common.BaseMixin"],
       defaults: {
-        nestingLevel: "boxCollection"
+        nestingLevel: "boxCollection",
       },
       errors: {
         // incorrectRequestedNestingLevel:
@@ -30,67 +30,67 @@ export const NestingLevelMixin = {
         //   'Component %s with supported nesting levels %s cannot be nested into parent component %s which uses nesting level "%s". Component would have to support one of: %s.',
         // nestingLevelMismatchExplicitProp:
         //   'Component %s has prop nestingLevel="%s" and as such it cannot be nested into parent component %s which uses nesting level "%s". Component needs to use one of: %s.',
-        unsupportedNestingLevel: 'Nesting level "%s" is not a supported value. Use one of: %s.'
-      }
-    }
+        unsupportedNestingLevel: 'Nesting level "%s" is not a supported value. Use one of: %s.',
+      },
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    nestingLevel: PropTypes.oneOf(Environment.nestingLevelList)
+    nestingLevel: PropTypes.oneOf(Environment.nestingLevelList),
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
-      nestingLevel: null
+      nestingLevel: null,
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  getInitialState: function() {
+  getInitialState: function () {
     // initialize
     this.registerMixin("UU5.Common.NestingLevelMixin");
     // state
     return {
-      nestingLevel: this.checkNestingLevel()
+      nestingLevel: this.checkNestingLevel(),
     };
   },
 
-  UNSAFE_componentWillReceiveProps: function(nextProps) {
+  UNSAFE_componentWillReceiveProps: function (nextProps) {
     this.getNestingLevel() !== nextProps.nestingLevel &&
       this.setState({ nestingLevel: this.checkNestingLevel(nextProps) });
   },
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
-  hasUU5CommonNestingLevelMixin: function() {
+  hasUU5CommonNestingLevelMixin: function () {
     return this.hasMixin("UU5.Common.NestingLevelMixin");
   },
 
-  getNestingLevel: function() {
+  getNestingLevel: function () {
     return this.state.nestingLevel;
   },
 
-  getUU5CommonNestingLevelMixinProps: function() {
+  getUU5CommonNestingLevelMixinProps: function () {
     return {
-      nestingLevel: this.props.nestingLevel
+      nestingLevel: this.props.nestingLevel,
     };
   },
 
-  getUU5CommonNestingLevelMixinPropsToPass: function() {
+  getUU5CommonNestingLevelMixinPropsToPass: function () {
     return this.getUU5CommonNestingLevelMixinProps();
   },
 
-  getParentNestingLevel: function(parentNestingLevelComponent) {
+  getParentNestingLevel: function (parentNestingLevelComponent) {
     let component = parentNestingLevelComponent || this.getParentByType("hasUU5CommonNestingLevelMixin");
     return component ? component.getNestingLevel() : Environment.nestingLevelList[0];
   },
 
-  getNestingLevelList: function() {
+  getNestingLevelList: function () {
     return (
       (this.constructor.nestingLevel && [this.constructor.nestingLevel]) ||
       this.constructor.nestingLevelList ||
@@ -98,7 +98,7 @@ export const NestingLevelMixin = {
     );
   },
 
-  checkNestingLevel: function(props = this.props) {
+  checkNestingLevel: function (props = this.props) {
     // NOTE Current rule: all components with nesting level must support "inline" nesting level.
     // 1. However, the components are implemented in such way that they list only e.g. "box" as their
     //    supported NL and if getNestingLevel() returns null, they render as "inline" :-/.
@@ -117,7 +117,7 @@ export const NestingLevelMixin = {
 
     if (props.nestingLevel && nestingLevelEnvIndex === -1) {
       this.showError("unsupportedNestingLevel", [props.nestingLevel, JSON.stringify(nestingLevelList)], {
-        mixinName: "UU5.Common.NestingLevelMixin"
+        mixinName: "UU5.Common.NestingLevelMixin",
       });
     }
 
@@ -125,7 +125,7 @@ export const NestingLevelMixin = {
     if (nestingLevel) {
       nestingLevelEnvIndex = Environment.nestingLevelList.indexOf(nestingLevel);
 
-      let nestingLevelLoc = nestingLevelList.find(nestingLevel => {
+      let nestingLevelLoc = nestingLevelList.find((nestingLevel) => {
         return Environment.nestingLevelList.indexOf(nestingLevel) >= nestingLevelEnvIndex;
       });
       let nestingLevelLocIndex = nestingLevelList.indexOf(nestingLevelLoc);
@@ -185,7 +185,7 @@ export const NestingLevelMixin = {
 
     //step 5 - find the lowest requested nestingLevel as possible if is not requested or is not requested correctly
     if (!nestingLevel) {
-      nestingLevel = nestingLevelList.find(nestingLevel => {
+      nestingLevel = nestingLevelList.find((nestingLevel) => {
         return Environment.nestingLevelList.indexOf(nestingLevel) >= calculatedNestingLevelIndex;
       });
 
@@ -239,14 +239,14 @@ export const NestingLevelMixin = {
     // }
 
     //step 6 - find the lowest nestingLevel as possible for render into parent
-    nestingLevel = nestingLevelList.find(nestingLevel => {
+    nestingLevel = nestingLevelList.find((nestingLevel) => {
       return calculatedNestingLevelList.indexOf(nestingLevel) > -1;
     });
 
     //console.log("step 6",this.getTagName(),nestingLevel || null);
 
     return nestingLevel || null;
-  }
+  },
   //@@viewOff:interface
 
   //@@viewOn:overriding

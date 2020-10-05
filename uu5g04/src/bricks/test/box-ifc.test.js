@@ -59,7 +59,7 @@ describe(`UU5.Bricks.Box interface testing`, () => {
         size: "xl",
         sticky: true,
         stickyBackground: true,
-        scrollableBackground: true
+        scrollableBackground: true,
       },
       mockFunc
     );

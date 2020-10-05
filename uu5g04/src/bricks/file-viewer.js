@@ -38,17 +38,17 @@ export const FileViewer = UU5.Common.VisualComponent.create({
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBox", "inline"),
     defaults: {
       displayErrMsg: "Error during loading file ",
-      regexpWhiteSpace: /^\s+/
+      regexpWhiteSpace: /^\s+/,
     },
     classNames: {
       main: ns.css("file-viewer"),
       blockOfLines: ns.css("file-viewer-block-of-lines"),
-      blockOfLineNumbers: ns.css("file-viewer-block-of-line-numbers uu5-common-right")
+      blockOfLineNumbers: ns.css("file-viewer-block-of-line-numbers uu5-common-right"),
     },
     errors: {
       unknownCallFeedback: "Call feedback %s is not one of %s",
-      loadError: "File %s cannot be found."
-    }
+      loadError: "File %s cannot be found.",
+    },
   },
   //@@viewOff:statics
 
@@ -60,12 +60,12 @@ export const FileViewer = UU5.Common.VisualComponent.create({
     trimmed: UU5.PropTypes.bool,
     blockKey: UU5.PropTypes.string,
     blockStart: UU5.PropTypes.string,
-    blockEnd: UU5.PropTypes.string
+    blockEnd: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       src: null,
       parameters: null,
@@ -73,35 +73,35 @@ export const FileViewer = UU5.Common.VisualComponent.create({
       trimmed: true,
       blockKey: null,
       blockStart: "@@viewOn:",
-      blockEnd: "@@viewOff:"
+      blockEnd: "@@viewOff:",
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  getInitialState: function() {
+  getInitialState: function () {
     return {
       data: null,
       blockOfLines: null,
       blockOfLineNumbers: null,
       blockOfLineNumbersWidth: null,
       callFeedback: "loading",
-      message: null
+      message: null,
     };
   },
 
-  UNSAFE_componentWillMount: function() {
+  UNSAFE_componentWillMount: function () {
     !this.props.src && this.setState({ callFeedback: "ready" });
   },
 
-  componentDidMount: function() {
+  componentDidMount: function () {
     if (this.props.src) {
       this._loading = true;
       this._getData(this.props);
     }
   },
 
-  UNSAFE_componentWillReceiveProps: function(nextProps) {
+  UNSAFE_componentWillReceiveProps: function (nextProps) {
     if (nextProps.src && (nextProps.src !== this.props.src || nextProps.parameters !== this.props.parameters)) {
       this.setState(
         {
@@ -110,9 +110,9 @@ export const FileViewer = UU5.Common.VisualComponent.create({
           blockOfLineNumbers: null,
           blockOfLineNumbersWidth: null,
           callFeedback: "loading",
-          message: null
+          message: null,
         },
-        function() {
+        function () {
           this._getData(nextProps);
         }.bind(this)
       );
@@ -129,7 +129,7 @@ export const FileViewer = UU5.Common.VisualComponent.create({
     }
   },
 
-  componentWillUnmount: function() {
+  componentWillUnmount: function () {
     this._serverRequest && this._serverRequest.abort();
     this._loading = false;
   },
@@ -142,30 +142,30 @@ export const FileViewer = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _getData: function(props) {
+  _getData: function (props) {
     this._serverRequest && this._serverRequest.abort();
     this._serverRequest = UU5.Common.Tools.getServerRequest(
       props.src,
       props.parameters,
       "text",
-      data => {
+      (data) => {
         if (this._loading) {
           this.setState({ data: data, callFeedback: "ready" }, () => this._buildData(props));
         }
       },
-      e => {
+      (e) => {
         if (this._loading) {
           this.showError("loadError", props.src, { context: { error: e } });
           this.setState({
             callFeedback: "error",
-            message: this.getDefault().displayErrMsg + props.src + " (" + props.parameters + ")"
+            message: this.getDefault().displayErrMsg + props.src + " (" + props.parameters + ")",
           });
         }
       }
     );
   },
 
-  _buildData: function(props) {
+  _buildData: function (props) {
     var fileViewer = this;
     var blockOfLines = "";
     var blockOfLineNumbers = "";
@@ -192,7 +192,7 @@ export const FileViewer = UU5.Common.VisualComponent.create({
         });
       }
 
-      lines.forEach(function(v, i) {
+      lines.forEach(function (v, i) {
         if (v.match(blockStart)) {
           write = true;
         } else if (v.match(blockEnd)) {
@@ -212,11 +212,11 @@ export const FileViewer = UU5.Common.VisualComponent.create({
     }
     fileViewer.setState({
       blockOfLines: blockOfLines,
-      blockOfLineNumbers: blockOfLineNumbers
+      blockOfLineNumbers: blockOfLineNumbers,
     });
   },
 
-  _getMainChild: function() {
+  _getMainChild: function () {
     var mainChild;
     var mainProps = this.getMainPropsToPass();
 
@@ -259,7 +259,7 @@ export const FileViewer = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     let component;
     switch (this.getNestingLevel()) {
       case "bigBox":
@@ -271,7 +271,7 @@ export const FileViewer = UU5.Common.VisualComponent.create({
         component =
           this.state.callFeedback === "ready" ? (
             <span>
-              <Modal ref_={modal => (this._modal = modal)}>{this._getMainChild()}</Modal>
+              <Modal ref_={(modal) => (this._modal = modal)}>{this._getMainChild()}</Modal>
               <Link onClick={() => this._modal.open()} content={this.props.src} />
             </span>
           ) : null;
@@ -281,7 +281,7 @@ export const FileViewer = UU5.Common.VisualComponent.create({
     }
 
     return component;
-  }
+  },
   //@@viewOff:render
 });
 

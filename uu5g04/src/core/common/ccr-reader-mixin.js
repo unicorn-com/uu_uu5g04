@@ -19,14 +19,14 @@ export const CcrReaderMixin = {
     "UU5.Common.CcrReaderMixin": {
       requiredMixins: ["UU5.Common.BaseMixin"],
       errors: {
-        keyNotRegistered: "Component with key %s is not registered."
-      }
-    }
+        keyNotRegistered: "Component with key %s is not registered.",
+      },
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:reactLifeCycle
-  getInitialState: function() {
+  getInitialState: function () {
     // initialize
     this.registerMixin("UU5.Common.CcrReaderMixin");
     // state
@@ -35,29 +35,29 @@ export const CcrReaderMixin = {
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
-  hasUU5CommonCcrReaderMixin: function() {
+  hasUU5CommonCcrReaderMixin: function () {
     return this.hasMixin("UU5.Common.CcrReaderMixin");
   },
 
-  getUU5CommonCcrReaderMixinProps: function() {
+  getUU5CommonCcrReaderMixinProps: function () {
     return {};
   },
 
-  getUU5CommonCcrReaderMixinPropsToPass: function() {
+  getUU5CommonCcrReaderMixinPropsToPass: function () {
     return this.getUU5CommonCcrReaderMixinProps();
   },
 
-  getCcrComponentByKey: function(key) {
+  getCcrComponentByKey: function (key) {
     return this.getCcrByKeyRegister()[key] || null;
   },
 
-  isCcrRegisteredByKey: function(key) {
+  isCcrRegisteredByKey: function (key) {
     return !!this.getCcrByKeyRegister()[key];
   },
 
-  getCcrByKeyRegister: function() {
+  getCcrByKeyRegister: function () {
     return Environment.ccr.byKey;
-  }
+  },
   //@@viewOff:interface
 
   //@@viewOn:overriding

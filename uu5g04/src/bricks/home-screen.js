@@ -30,7 +30,7 @@ export const HomeScreen = UU5.Common.LsiMixin.withContext(
       UU5.Common.PureRenderMixin,
       UU5.Common.ElementaryMixin,
       UU5.Common.LsiMixin,
-      UU5.Common.NestingLevelMixin
+      UU5.Common.NestingLevelMixin,
     ],
     //@@viewOff:mixins
 
@@ -39,7 +39,7 @@ export const HomeScreen = UU5.Common.LsiMixin.withContext(
       tagName: ns.name("HomeScreen"),
       nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
       classNames: {
-        main: ns.css("home-screen")
+        main: ns.css("home-screen"),
       },
       defaults: {
         reSmartURL: /\/ath(\/)?$/,
@@ -50,14 +50,14 @@ export const HomeScreen = UU5.Common.LsiMixin.withContext(
           returningVisitor: false, // is this the first time you visit
           displayCount: 0, // number of times the message has been shown
           //optedout: false, // has the user opted out
-          added: false // has been actually added to the homescreen
+          added: false, // has been actually added to the homescreen
         },
         regexpIcon: /%icon(?:\[([^\]]+)\])?/gi,
-        regexpSlash: /(\/)?$/
+        regexpSlash: /(\/)?$/,
       },
       opt: {
-        nestingLevelRoot: true
-      }
+        nestingLevelRoot: true,
+      },
     },
     //@@viewOff:statics
 
@@ -70,12 +70,12 @@ export const HomeScreen = UU5.Common.LsiMixin.withContext(
       displayPace: UU5.PropTypes.number, // minutes before the message is shown again (0: display every time, default 24 hours)
       maxDisplayCount: UU5.PropTypes.number, // absolute maximum number of times the message will be shown to the user (0: no limit)
       message: UU5.PropTypes.any, // the message can be customized
-      detectHomescreen: UU5.PropTypes.oneOf(["hash", "query", "smart", false]) // try to detect if the site has been added to the homescreen (false | true | 'hash' | 'queryString' | 'smartURL')
+      detectHomescreen: UU5.PropTypes.oneOf(["hash", "query", "smart", false]), // try to detect if the site has been added to the homescreen (false | true | 'hash' | 'queryString' | 'smartURL')
     },
     //@@viewOff:propTypes
 
     //@@viewOn:getDefaultProps
-    getDefaultProps: function() {
+    getDefaultProps: function () {
       return {
         appID: "uu5.homescreen",
         skipFirstVisit: false,
@@ -84,7 +84,7 @@ export const HomeScreen = UU5.Common.LsiMixin.withContext(
         displayPace: 1440,
         maxDisplayCount: 0,
         message: "",
-        detectHomescreen: "hash"
+        detectHomescreen: "hash",
         // autostart: true,			// show the message automatically
         // debug: false,				// override browser checks
         // logging: false,				// log reasons for showing or not showing to js console; defaults to true when debug is true
@@ -103,21 +103,21 @@ export const HomeScreen = UU5.Common.LsiMixin.withContext(
     //@@viewOff:getDefaultProps
 
     //@@viewOn:reactLifeCycle
-    getInitialState: function() {
+    getInitialState: function () {
       return {
-        receiveProps: false
+        receiveProps: false,
       };
     },
 
-    UNSAFE_componentWillMount: function() {
+    UNSAFE_componentWillMount: function () {
       this.hide();
     },
 
-    componentDidMount: function() {
+    componentDidMount: function () {
       var homeScreen = this;
       if (!this.props.hidden) {
         setTimeout(
-          function() {
+          function () {
             homeScreen.activate();
           },
           this.props.startDelay < 0 ? 1 : this.props.startDelay
@@ -125,27 +125,27 @@ export const HomeScreen = UU5.Common.LsiMixin.withContext(
       }
     },
 
-    UNSAFE_componentWillReceiveProps: function(nextProps) {
+    UNSAFE_componentWillReceiveProps: function (nextProps) {
       // cannot set visibility by receive props
       this.setState({ hidden: this.isHidden() });
     },
 
-    componentWillUnmount: function() {
+    componentWillUnmount: function () {
       this.hiddenTimeout && clearTimeout(this.hiddenTimeout);
     },
 
     //@@viewOff:reactLifeCycle
 
     //@@viewOn:interface
-    activate: function(setStateCallback) {
+    activate: function (setStateCallback) {
       var shouldRender = this._shouldRender();
       // console.error("activate", shouldRender);
       if (shouldRender) {
         var homeScreen = this;
 
-        this.setHiddenValue(false, function() {
+        this.setHiddenValue(false, function () {
           homeScreen.hiddenTimeout && clearTimeout(homeScreen.hiddenTimeout);
-          homeScreen.hiddenTimeout = setTimeout(function() {
+          homeScreen.hiddenTimeout = setTimeout(function () {
             homeScreen.hide(setStateCallback);
           }, homeScreen.props.lifespan);
         });
@@ -158,7 +158,7 @@ export const HomeScreen = UU5.Common.LsiMixin.withContext(
     //@@viewOff:overriding
 
     //@@viewOn:private
-    _hasToken: function() {
+    _hasToken: function () {
       // console.error("_hasToken", document.location.hash === '#ath', this.getDefault().reSmartURL.test(document.location.href), this.getDefault().reQueryString.test(document.location.search))
       return (
         document.location.hash === "#ath" ||
@@ -167,22 +167,22 @@ export const HomeScreen = UU5.Common.LsiMixin.withContext(
       );
     },
 
-    _isCompatibleEnvironment: function() {
+    _isCompatibleEnvironment: function () {
       return (
         (UU5.Common.Tools.isSafari() && UU5.Common.Tools.getMobileOSVersion() >= 6) ||
         UU5.Common.Tools.isAndroidChrome()
       );
     },
 
-    _isStandAloneMode: function() {
+    _isStandAloneMode: function () {
       return !!window.navigator.standalone;
     },
 
-    _getBrowserLanguage: function() {
+    _getBrowserLanguage: function () {
       return window.navigator.language ? window.navigator.language.toLowerCase() : "en";
     },
 
-    _shouldRender: function() {
+    _shouldRender: function () {
       var shouldRender = false;
 
       // load session
@@ -208,7 +208,7 @@ export const HomeScreen = UU5.Common.LsiMixin.withContext(
       return shouldRender;
     },
 
-    _checkSession: function(session) {
+    _checkSession: function (session) {
       // if is added at homescreen
       if (session.added) {
         return false;
@@ -251,7 +251,7 @@ export const HomeScreen = UU5.Common.LsiMixin.withContext(
       return true;
     },
 
-    _getSession: function(item) {
+    _getSession: function (item) {
       var session;
       if (localStorage) {
         session = localStorage.getItem(item);
@@ -260,21 +260,21 @@ export const HomeScreen = UU5.Common.LsiMixin.withContext(
       return session || null;
     },
 
-    _setSession: function(item, session) {
+    _setSession: function (item, session) {
       localStorage && localStorage.setItem(item, JSON.stringify(session));
       return this;
     },
 
-    _getAppSession: function() {
+    _getAppSession: function () {
       return this._getSession(this.props.appID);
     },
 
-    _setAppSession: function(session) {
+    _setAppSession: function (session) {
       this._setSession(this.props.appID, session);
       return this;
     },
 
-    _addToken: function() {
+    _addToken: function () {
       // console.error("add token", this.props.detectHomescreen == 'hash');
       if (this.props.detectHomescreen == "hash") {
         document.location.hash !== "#ath" &&
@@ -295,7 +295,7 @@ export const HomeScreen = UU5.Common.LsiMixin.withContext(
       return this;
     },
 
-    _removeToken: function() {
+    _removeToken: function () {
       if (document.location.hash == "#ath") {
         history.replaceState("", window.document.title, document.location.href.split("#")[0]);
       }
@@ -319,7 +319,7 @@ export const HomeScreen = UU5.Common.LsiMixin.withContext(
       return this;
     },
 
-    _checkShowing: function(session, date) {
+    _checkShowing: function (session, date) {
       var lastDisplayTime = session.lastDisplayTime;
 
       // we obey the display pace (prevent the message to popup too often)
@@ -331,7 +331,7 @@ export const HomeScreen = UU5.Common.LsiMixin.withContext(
       return showing;
     },
 
-    _incrementDisplayCount: function(session, date) {
+    _incrementDisplayCount: function (session, date) {
       // increment the display count
       session.lastDisplayTime = date;
       session.displayCount++;
@@ -339,7 +339,7 @@ export const HomeScreen = UU5.Common.LsiMixin.withContext(
       return this;
     },
 
-    _getMessage: function() {
+    _getMessage: function () {
       // var languages = UU5.Common.Tools.sortLanguages(this._getBrowserLanguage());
       var message;
       var messages;
@@ -362,7 +362,7 @@ export const HomeScreen = UU5.Common.LsiMixin.withContext(
 
       message =
         message &&
-        message.replace(this.getDefault().regexpIcon, function(matches, group1) {
+        message.replace(this.getDefault().regexpIcon, function (matches, group1) {
           return '<span className="ath-action-icon">' + (!!group1 ? group1 : "icon") + "</span>";
         });
 
@@ -371,7 +371,7 @@ export const HomeScreen = UU5.Common.LsiMixin.withContext(
     //@@viewOff:private
 
     //@@viewOn:render
-    render: function() {
+    render: function () {
       let message = this._getMessage();
 
       let visibility = this.isHidden() ? " uu5-bricks-home-screen-hidden" : " uu5-bricks-home-screen-shown";
@@ -386,7 +386,7 @@ export const HomeScreen = UU5.Common.LsiMixin.withContext(
           (parseInt(UU5.Common.Tools.getMobileOSVersion()) || "") +
           " ath-" +
           (UU5.Common.Tools.isTablet() ? "tablet" : "phone") +
-          visibility
+          visibility,
       };
 
       return (
@@ -399,7 +399,7 @@ export const HomeScreen = UU5.Common.LsiMixin.withContext(
           </div>
         </Div>
       );
-    }
+    },
     //@@viewOff:render
   })
 );

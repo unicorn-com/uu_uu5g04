@@ -65,7 +65,7 @@ describe("[uu5g04-hooks] useLanguage; legacy integration", () => {
       },
       render() {
         return this.props.children(this.props);
-      }
+      },
     })
   );
   UU5.Environment._allowTestContext = false;
@@ -77,7 +77,7 @@ describe("[uu5g04-hooks] useLanguage; legacy integration", () => {
     mount(
       <UU5.Bricks.LsiContext>
         <WithLsiContextHoc onChangeLanguageCheck={onChangeLanguageCheck}>
-          {value => ((ctx = value), null)}
+          {(value) => ((ctx = value), null)}
         </WithLsiContextHoc>
         <HookComponent />
       </UU5.Bricks.LsiContext>
@@ -107,7 +107,7 @@ describe("[uu5g04-hooks] useLanguage; legacy integration", () => {
         getLanguage: expect.any(Function),
         setLanguage: expect.any(Function),
         registerLsi: expect.any(Function),
-        unregisterLsi: expect.any(Function)
+        unregisterLsi: expect.any(Function),
       })
     );
     let mixinComponentProps = () => onReceiveContext.mock.calls.slice(-1)[0][0];
@@ -135,8 +135,8 @@ describe("[uu5g04-hooks] useLanguage; legacy integration", () => {
     let lsiHocComp;
     mount(
       <div>
-        <WithLsiContextHoc ref_={ref => (lsiHocComp = ref)} onChangeLanguageCheck={onChangeLanguageCheck}>
-          {v => null}
+        <WithLsiContextHoc ref_={(ref) => (lsiHocComp = ref)} onChangeLanguageCheck={onChangeLanguageCheck}>
+          {(v) => null}
         </WithLsiContextHoc>
         <HookComponent />
       </div>

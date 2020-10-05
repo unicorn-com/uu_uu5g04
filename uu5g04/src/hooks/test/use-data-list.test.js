@@ -8,7 +8,7 @@ const LOAD_DATA1 = [
   { id: "id1", value: "a" },
   { id: "id2", value: "b" },
   { id: "id3", value: "c" },
-  { id: "id4", value: "d" }
+  { id: "id4", value: "d" },
 ];
 const LOAD_DATA2 = [{ id: "idA", value: "1" }];
 const SERVER_DATA = [...LOAD_DATA1];
@@ -20,7 +20,7 @@ async function renderWithServerData(serverData0, extraHandlers) {
       let { pageIndex = 0 } = pageInfo;
       return { itemList: [serverData[pageIndex]], pageInfo: { pageIndex, pageSize: 1, total: serverData.length } };
     }),
-    ...extraHandlers
+    ...extraHandlers,
   };
   let result = renderHook(useDataList, { handlerMap, pageSize: 1 });
   await wait();
@@ -34,7 +34,7 @@ function expectedItem({ data, state = "ready", errorData = null, pendingData = n
         state,
         errorData,
         pendingData,
-        handlerMap: expectedHandlerMap(handlerMap ?? { setData: true })
+        handlerMap: expectedHandlerMap(handlerMap ?? { setData: true }),
       }
     : data;
 }
@@ -49,17 +49,17 @@ function expectedResult({
   state = expect.any(String),
   pendingData = expect.any(Object),
   errorData = expect.any(Object),
-  handlerMap = expect.any(Object)
+  handlerMap = expect.any(Object),
 } = {}) {
   return { data, newData, state, pendingData, errorData, handlerMap };
 }
 const LIST_HANDLER_MAP = {
-  setData: true
+  setData: true,
 };
 
 async function filterConsoleError(filterFn, execFn) {
   let orig = console.error;
-  console.error = function(...args) {
+  console.error = function (...args) {
     if (filterFn(...args)) return orig.apply(this, arguments);
   };
   try {
@@ -73,39 +73,39 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
   it("should return expected result API", () => {
     let { lastResult } = renderHook(useDataList, { initialData: INITIAL_DATA1 });
     expect(lastResult()).toEqual({
-      data: INITIAL_DATA1.map(data => expectedItem({ data })),
+      data: INITIAL_DATA1.map((data) => expectedItem({ data })),
       newData: [],
       state: "ready",
       errorData: null,
       pendingData: null,
-      handlerMap: expectedHandlerMap()
+      handlerMap: expectedHandlerMap(),
     });
   });
 
   it("prop initialData; should use initial data", () => {
     let { lastResult } = renderHook(useDataList, { initialData: INITIAL_DATA1 });
     expect(lastResult()).toEqual({
-      data: INITIAL_DATA1.map(data => expectedItem({ data })),
+      data: INITIAL_DATA1.map((data) => expectedItem({ data })),
       newData: [],
       state: "ready",
       errorData: null,
       pendingData: null,
-      handlerMap: expectedHandlerMap()
+      handlerMap: expectedHandlerMap(),
     });
   });
 
   it("prop initialData; should use initial data without calling handlerMap.load", async () => {
     let handlerMap = {
-      load: jest.fn(async () => LOAD_DATA1)
+      load: jest.fn(async () => LOAD_DATA1),
     };
     let { lastResult } = renderHook(useDataList, { initialData: INITIAL_DATA1, handlerMap });
     expect(lastResult()).toEqual({
-      data: INITIAL_DATA1.map(data => expectedItem({ data })),
+      data: INITIAL_DATA1.map((data) => expectedItem({ data })),
       newData: [],
       state: "ready",
       errorData: null,
       pendingData: null,
-      handlerMap: expectedHandlerMap({ load: true, loadNext: true, setData: true })
+      handlerMap: expectedHandlerMap({ load: true, loadNext: true, setData: true }),
     });
     await wait();
     expect(handlerMap.load).toHaveBeenCalledTimes(0);
@@ -113,7 +113,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
 
   it("prop skipInitialLoad; should skip initial load (no data)", async () => {
     let handlerMap = {
-      load: jest.fn(async () => LOAD_DATA1)
+      load: jest.fn(async () => LOAD_DATA1),
     };
     let { lastResult } = renderHook(useDataList, { skipInitialLoad: true, handlerMap });
     expect(lastResult()).toEqual({
@@ -122,7 +122,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
       state: "readyNoData",
       errorData: null,
       pendingData: null,
-      handlerMap: expectedHandlerMap({ load: true, setData: true })
+      handlerMap: expectedHandlerMap({ load: true, setData: true }),
     });
     await wait();
     expect(handlerMap.load).toHaveBeenCalledTimes(0);
@@ -130,16 +130,16 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
 
   it("prop skipInitialLoad; should skip initial load (with data)", async () => {
     let handlerMap = {
-      load: jest.fn(async () => LOAD_DATA1)
+      load: jest.fn(async () => LOAD_DATA1),
     };
     let { lastResult } = renderHook(useDataList, { skipInitialLoad: true, initialData: INITIAL_DATA1, handlerMap });
     expect(lastResult()).toEqual({
-      data: INITIAL_DATA1.map(data => expectedItem({ data })),
+      data: INITIAL_DATA1.map((data) => expectedItem({ data })),
       newData: [],
       state: "ready",
       errorData: null,
       pendingData: null,
-      handlerMap: expectedHandlerMap({ setData: true, load: true, loadNext: true })
+      handlerMap: expectedHandlerMap({ setData: true, load: true, loadNext: true }),
     });
     await wait();
     expect(handlerMap.load).toHaveBeenCalledTimes(0);
@@ -148,7 +148,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
   it("prop initialDtoIn; should pass initialDtoIn to initial load", async () => {
     let initialDtoIn = { a: "b" };
     let handlerMap = {
-      load: jest.fn(async () => LOAD_DATA1)
+      load: jest.fn(async () => LOAD_DATA1),
     };
     renderHook(useDataList, { handlerMap, initialDtoIn });
     await wait();
@@ -160,7 +160,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     let initialDtoIn = { a: "b" };
     let pageSize = 8;
     let handlerMap = {
-      load: jest.fn(async () => LOAD_DATA1)
+      load: jest.fn(async () => LOAD_DATA1),
     };
     renderHook(useDataList, { handlerMap, initialDtoIn, pageSize });
     await wait();
@@ -173,13 +173,13 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     let pageSize = 8;
     let handlerMap = {
       load: jest.fn(async () => LOAD_DATA1),
-      loadNext: jest.fn(async () => LOAD_DATA1)
+      loadNext: jest.fn(async () => LOAD_DATA1),
     };
     // initial load
     let { lastResult } = renderHook(useDataList, { handlerMap, initialDtoIn, pageSize });
     expect(lastResult()).toEqual(
       expectedResult({
-        pendingData: { operation: "load", dtoIn: { ...initialDtoIn, pageInfo: { pageSize } } }
+        pendingData: { operation: "load", dtoIn: { ...initialDtoIn, pageInfo: { pageSize } } },
       })
     );
     await wait();
@@ -193,7 +193,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     });
     expect(lastResult()).toEqual(
       expectedResult({
-        pendingData: { operation: "load", dtoIn: { pageInfo: { pageSize } } }
+        pendingData: { operation: "load", dtoIn: { pageInfo: { pageSize } } },
       })
     );
     await wait();
@@ -206,7 +206,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     });
     expect(lastResult()).toEqual(
       expectedResult({
-        pendingData: { operation: "loadNext", dtoIn: { pageInfo: { pageIndex: 1, pageSize } } }
+        pendingData: { operation: "loadNext", dtoIn: { pageInfo: { pageIndex: 1, pageSize } } },
       })
     );
     await wait();
@@ -220,12 +220,12 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
       undefined,
       { id: "id2", code: "code2", combo1: "a", combo2: "B", value: 0 },
       { id: "id3", code: "code3", combo1: "b", combo2: "A", value: 0 },
-      { id: "id4", code: "code4", combo1: "b", combo2: "B", value: 0 }
+      { id: "id4", code: "code4", combo1: "b", combo2: "B", value: 0 },
     ];
     let handlerMap = {
-      update: jest.fn(async (newData, extraInfo) => ({ ...data[extraInfo], ...newData }))
+      update: jest.fn(async (newData, extraInfo) => ({ ...data[extraInfo], ...newData })),
     };
-    let testWith = async function(itemIdentifier, updateOpts, expectedChangedItemIndex) {
+    let testWith = async function (itemIdentifier, updateOpts, expectedChangedItemIndex) {
       let { lastResult } = renderHook(useDataList, { initialData: data, handlerMap, itemIdentifier });
       await wait();
       act(() => {
@@ -233,7 +233,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
       });
       await wait();
       let expectedData = data.map((it, i) => (expectedChangedItemIndex === i ? { ...it, value: 10 } : it));
-      expect(lastResult()).toEqual(expectedResult({ data: expectedData.map(data => expectedItem({ data })) }));
+      expect(lastResult()).toEqual(expectedResult({ data: expectedData.map((data) => expectedItem({ data })) }));
     };
 
     await testWith(undefined, { id: "id2" }, 2);
@@ -244,7 +244,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
   it("prop handlerMap.load; should apply result of initial onLoad (success)", async () => {
     let pageSize = 10;
     let handlerMap = {
-      load: jest.fn(async () => LOAD_DATA1)
+      load: jest.fn(async () => LOAD_DATA1),
     };
     let { lastResult } = renderHook(useDataList, { handlerMap, pageSize });
     expect(lastResult()).toEqual(
@@ -252,16 +252,16 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
         data: null,
         state: "pendingNoData",
         errorData: null,
-        pendingData: { operation: "load", dtoIn: { pageInfo: { pageSize: 10 } } }
+        pendingData: { operation: "load", dtoIn: { pageInfo: { pageSize: 10 } } },
       })
     );
     await wait();
     expect(lastResult()).toEqual(
       expectedResult({
-        data: LOAD_DATA1.map(data => expectedItem({ data })),
+        data: LOAD_DATA1.map((data) => expectedItem({ data })),
         state: "ready",
         errorData: null,
-        pendingData: null
+        pendingData: null,
       })
     );
     expect(handlerMap.load).toHaveBeenCalledTimes(1);
@@ -273,11 +273,11 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     let handlerMap = {
       load: jest.fn(async () => {
         throw (error = new Error("Test error"));
-      })
+      }),
     };
     await filterConsoleError(
       (...args) => {
-        return args.every(arg => (arg + "").indexOf("Test error") === -1);
+        return args.every((arg) => (arg + "").indexOf("Test error") === -1);
       },
       async () => {
         let { lastResult } = renderHook(useDataList, { handlerMap, pageSize });
@@ -287,7 +287,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
             data: null,
             state: "errorNoData",
             pendingData: null,
-            errorData: { operation: "load", dtoIn: { pageInfo: { pageSize } }, error }
+            errorData: { operation: "load", dtoIn: { pageInfo: { pageSize } }, error },
           })
         );
         expect(handlerMap.load).toHaveBeenCalledTimes(1);
@@ -299,7 +299,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     let pageSize = 10;
     let handlerMap = {
       load: jest.fn(async () => LOAD_DATA1),
-      custom: jest.fn(async () => null)
+      custom: jest.fn(async () => null),
     };
     // initial with no data
     let { lastResult } = renderHook(useDataList, { handlerMap, pageSize, skipInitialLoad: true });
@@ -346,7 +346,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
       load: jest
         .fn()
         .mockImplementationOnce(async () => LOAD_DATA1)
-        .mockImplementationOnce(async () => LOAD_DATA2)
+        .mockImplementationOnce(async () => LOAD_DATA2),
     };
     const LOAD_PARAMS = { p: "v" };
     let { lastResult } = renderHook(useDataList, { handlerMap, pageSize });
@@ -354,10 +354,10 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
 
     expect(lastResult()).toEqual(
       expectedResult({
-        data: LOAD_DATA1.map(data => expectedItem({ data })),
+        data: LOAD_DATA1.map((data) => expectedItem({ data })),
         state: "ready",
         pendingData: null,
-        errorData: null
+        errorData: null,
       })
     );
 
@@ -371,20 +371,20 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     expect(handlerMap.load).lastCalledWith(LOAD_PARAMS);
     expect(lastResult()).toEqual(
       expectedResult({
-        data: LOAD_DATA1.map(data => expectedItem({ data, handlerMap: {} })),
+        data: LOAD_DATA1.map((data) => expectedItem({ data, handlerMap: {} })),
         state: "pending",
         pendingData: { operation: "load", dtoIn: { ...LOAD_PARAMS, pageInfo: { pageSize: 10 } } },
-        errorData: null
+        errorData: null,
       })
     );
 
     await wait();
     expect(lastResult()).toEqual(
       expectedResult({
-        data: LOAD_DATA2.map(data => expectedItem({ data })),
+        data: LOAD_DATA2.map((data) => expectedItem({ data })),
         state: "ready",
         pendingData: null,
-        errorData: null
+        errorData: null,
       })
     );
     expect(handleLoadResolved).toBe(true);
@@ -399,7 +399,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
         .mockImplementationOnce(async () => LOAD_DATA1)
         .mockImplementationOnce(async () => {
           throw (error = new Error("Test error"));
-        })
+        }),
     };
     let { lastResult } = renderHook(useDataList, { handlerMap, pageSize });
     await wait();
@@ -408,25 +408,25 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     act(() => {
       lastResult()
         .handlerMap.load()
-        .catch(e => null)
+        .catch((e) => null)
         .then(() => (handleLoadResolved = true));
     });
     expect(lastResult()).toEqual(
       expectedResult({
-        data: LOAD_DATA1.map(data => expectedItem({ data, handlerMap: {} })),
+        data: LOAD_DATA1.map((data) => expectedItem({ data, handlerMap: {} })),
         state: "pending",
         pendingData: { operation: "load", dtoIn: { pageInfo: { pageSize: 10 } } },
-        errorData: null
+        errorData: null,
       })
     );
 
     await wait();
     expect(lastResult()).toEqual(
       expectedResult({
-        data: LOAD_DATA1.map(data => expectedItem({ data })),
+        data: LOAD_DATA1.map((data) => expectedItem({ data })),
         state: "error",
         pendingData: null,
-        errorData: { operation: "load", dtoIn: { pageInfo: { pageSize: 10 } }, error }
+        errorData: { operation: "load", dtoIn: { pageInfo: { pageSize: 10 } }, error },
       })
     );
     expect(handleLoadResolved).toBe(true);
@@ -446,23 +446,23 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     expect(handlerMap.load).lastCalledWith(PARAMS_PAGE_1);
     expect(lastResult()).toEqual(
       expectedResult({
-        data: serverData.map((data, i) => (i > 0 ? undefined : data)).map(data => expectedItem({ data })),
+        data: serverData.map((data, i) => (i > 0 ? undefined : data)).map((data) => expectedItem({ data })),
         state: "pending",
         pendingData: {
           operation: "loadNext",
-          dtoIn: { ...PARAMS_PAGE_1, pageInfo: { ...PARAMS_PAGE_1.pageInfo, pageSize: 1 } }
+          dtoIn: { ...PARAMS_PAGE_1, pageInfo: { ...PARAMS_PAGE_1.pageInfo, pageSize: 1 } },
         },
-        errorData: null
+        errorData: null,
       })
     );
 
     await wait();
     expect(lastResult()).toEqual(
       expectedResult({
-        data: serverData.map((data, i) => (i > 1 ? undefined : data)).map(data => expectedItem({ data })),
+        data: serverData.map((data, i) => (i > 1 ? undefined : data)).map((data) => expectedItem({ data })),
         state: "ready",
         pendingData: null,
-        errorData: null
+        errorData: null,
       })
     );
     expect(handleLoadNextResolved).toBe(true);
@@ -480,20 +480,20 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     act(() => {
       lastResult()
         .handlerMap.loadNext(PARAMS_PAGE_1)
-        .catch(e => null)
+        .catch((e) => null)
         .then(() => (handleLoadNextResolved = true));
     });
     await wait();
     expect(lastResult()).toEqual(
       expectedResult({
-        data: serverData.map((data, i) => (i > 0 ? undefined : data)).map(data => expectedItem({ data })),
+        data: serverData.map((data, i) => (i > 0 ? undefined : data)).map((data) => expectedItem({ data })),
         state: "error",
         pendingData: null,
         errorData: {
           operation: "loadNext",
           dtoIn: { ...PARAMS_PAGE_1, pageInfo: { ...PARAMS_PAGE_1.pageInfo, pageSize: 1 } },
-          error
-        }
+          error,
+        },
       })
     );
     expect(handleLoadNextResolved).toBe(true);
@@ -502,14 +502,14 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
   it("handlerMap.setData; should set data", async () => {
     let { lastResult } = renderHook(useDataList, { initialData: INITIAL_DATA1 });
     act(() => {
-      lastResult().handlerMap.setData(LOAD_DATA1.map(data => ({ data })));
+      lastResult().handlerMap.setData(LOAD_DATA1.map((data) => ({ data })));
     });
     expect(lastResult()).toEqual(
       expectedResult({
-        data: LOAD_DATA1.map(data => expectedItem({ data })),
+        data: LOAD_DATA1.map((data) => expectedItem({ data })),
         state: "ready",
         pendingData: null,
-        errorData: null
+        errorData: null,
       })
     );
   });
@@ -518,7 +518,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     const CALL_PARAM = { value: "v" };
     const CALL_RESPONSE = { id: "create1", ...CALL_PARAM };
     let handlerMap = {
-      customCall: jest.fn(async () => CALL_RESPONSE)
+      customCall: jest.fn(async () => CALL_RESPONSE),
     };
     let { lastResult } = renderHook(useDataList, { initialData: INITIAL_DATA1, handlerMap });
     await wait();
@@ -533,22 +533,22 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     expect(handlerMap.customCall).toHaveBeenCalledWith(CALL_PARAM);
     expect(lastResult()).toEqual(
       expectedResult({
-        data: INITIAL_DATA1.map(data => expectedItem({ data })),
+        data: INITIAL_DATA1.map((data) => expectedItem({ data })),
         newData: [],
         state: "itemPending",
         pendingData: null,
-        errorData: null
+        errorData: null,
       })
     );
 
     await wait();
     expect(lastResult()).toEqual(
       expectedResult({
-        data: INITIAL_DATA1.concat([CALL_RESPONSE]).map(data => expectedItem({ data })),
+        data: INITIAL_DATA1.concat([CALL_RESPONSE]).map((data) => expectedItem({ data })),
         newData: [],
         state: "ready",
         pendingData: null,
-        errorData: null
+        errorData: null,
       })
     );
     expect(customCallResolved).toBe(true);
@@ -558,7 +558,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     const CALL_PARAM = { value: "v" };
     const CALL_RESPONSE = { id: "create1", ...CALL_PARAM };
     let handlerMap = {
-      customCall: jest.fn(async () => CALL_RESPONSE)
+      customCall: jest.fn(async () => CALL_RESPONSE),
     };
     let { lastResult } = renderHook(useDataList, { initialData: INITIAL_DATA1.concat([undefined]), handlerMap });
     await wait();
@@ -569,8 +569,8 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     await wait();
     expect(lastResult()).toEqual(
       expectedResult({
-        data: INITIAL_DATA1.map(data => expectedItem({ data })).concat([undefined]),
-        newData: [CALL_RESPONSE].map(data => expectedItem({ data }))
+        data: INITIAL_DATA1.map((data) => expectedItem({ data })).concat([undefined]),
+        newData: [CALL_RESPONSE].map((data) => expectedItem({ data })),
       })
     );
   });
@@ -581,7 +581,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     let handlerMap = {
       customCall: jest.fn(async () => {
         throw (error = new Error("Test error."));
-      })
+      }),
     };
     let { lastResult } = renderHook(useDataList, { initialData: INITIAL_DATA1, handlerMap });
     await wait();
@@ -590,16 +590,16 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     act(() => {
       lastResult()
         .handlerMap.customCall(CALL_PARAM)
-        .catch(e => (rejected = e))
+        .catch((e) => (rejected = e))
         .then(() => (customCallResolved = true));
     });
     await wait();
     expect(lastResult()).toEqual(
       expectedResult({
-        data: INITIAL_DATA1.map(data => expectedItem({ data })),
+        data: INITIAL_DATA1.map((data) => expectedItem({ data })),
         state: "ready",
         pendingData: null,
-        errorData: null
+        errorData: null,
       })
     );
     expect(rejected).toBe(error);
@@ -610,7 +610,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     const CALL_PARAM = { id: INITIAL_DATA1[0].id, value: "v" };
     const CALL_RESPONSE = { ...INITIAL_DATA1[0], ...CALL_PARAM };
     let handlerMap = {
-      customCall: jest.fn(async () => CALL_RESPONSE)
+      customCall: jest.fn(async () => CALL_RESPONSE),
     };
     let { lastResult } = renderHook(useDataList, { initialData: INITIAL_DATA1, handlerMap });
     await wait();
@@ -631,24 +631,24 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
             state: "pending",
             pendingData: { operation: "customCall", dtoIn: CALL_PARAM },
             errorData: null,
-            handlerMap: expectedHandlerMap({})
-          })
-        ].concat(INITIAL_DATA1.slice(1).map(data => expectedItem({ data }))),
+            handlerMap: expectedHandlerMap({}),
+          }),
+        ].concat(INITIAL_DATA1.slice(1).map((data) => expectedItem({ data }))),
         newData: [],
         state: "itemPending",
         pendingData: null,
-        errorData: null
+        errorData: null,
       })
     );
 
     await wait();
     expect(lastResult()).toEqual(
       expectedResult({
-        data: [CALL_RESPONSE].concat(INITIAL_DATA1.slice(1)).map(data => expectedItem({ data })),
+        data: [CALL_RESPONSE].concat(INITIAL_DATA1.slice(1)).map((data) => expectedItem({ data })),
         newData: [],
         state: "ready",
         pendingData: null,
-        errorData: null
+        errorData: null,
       })
     );
     expect(customCallResolved).toBe(true);
@@ -658,7 +658,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     const CALL_PARAM = { id: INITIAL_DATA1[0].id, value: "v" };
     const CALL_RESPONSE = null;
     let handlerMap = {
-      customCall: jest.fn(async () => CALL_RESPONSE)
+      customCall: jest.fn(async () => CALL_RESPONSE),
     };
     let { lastResult } = renderHook(useDataList, { initialData: INITIAL_DATA1, handlerMap });
     await wait();
@@ -679,24 +679,24 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
             state: "pending",
             pendingData: { operation: "customCall", dtoIn: CALL_PARAM },
             errorData: null,
-            handlerMap: expectedHandlerMap({})
-          })
-        ].concat(INITIAL_DATA1.slice(1).map(data => expectedItem({ data }))),
+            handlerMap: expectedHandlerMap({}),
+          }),
+        ].concat(INITIAL_DATA1.slice(1).map((data) => expectedItem({ data }))),
         newData: [],
         state: "itemPending",
         pendingData: null,
-        errorData: null
+        errorData: null,
       })
     );
 
     await wait();
     expect(lastResult()).toEqual(
       expectedResult({
-        data: INITIAL_DATA1.slice(1).map(data => expectedItem({ data })),
+        data: INITIAL_DATA1.slice(1).map((data) => expectedItem({ data })),
         newData: [],
         state: "ready",
         pendingData: null,
-        errorData: null
+        errorData: null,
       })
     );
     expect(customCallResolved).toBe(true);
@@ -708,7 +708,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     let handlerMap = {
       customCall: jest.fn(async () => {
         throw (error = new Error("Test error."));
-      })
+      }),
     };
     let { lastResult } = renderHook(useDataList, { initialData: INITIAL_DATA1, handlerMap });
     await wait();
@@ -717,7 +717,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     act(() => {
       lastResult()
         .handlerMap.customCall(CALL_PARAM)
-        .catch(e => (rejected = e))
+        .catch((e) => (rejected = e))
         .then(() => (customCallResolved = true));
     });
     await wait();
@@ -729,12 +729,12 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
             state: "error",
             pendingData: null,
             errorData: { operation: "customCall", dtoIn: CALL_PARAM, error },
-            handlerMap: expectedHandlerMap({ setData: true })
-          })
-        ].concat(INITIAL_DATA1.slice(1).map(data => expectedItem({ data }))),
+            handlerMap: expectedHandlerMap({ setData: true }),
+          }),
+        ].concat(INITIAL_DATA1.slice(1).map((data) => expectedItem({ data }))),
         state: "ready",
         pendingData: null,
-        errorData: null
+        errorData: null,
       })
     );
     expect(rejected).toBe(error);
@@ -751,7 +751,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
       { id: "id1", value: "u1" },
       { id: "id2", value: "u2" },
       { id: "id3", value: "u3" },
-      { id: "id4", value: "u4" }
+      { id: "id4", value: "u4" },
     ];
     const UPDATE1_OK = { ...UPDATE[0] };
     const UPDATE4_OK = { ...UPDATE[3] };
@@ -767,7 +767,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
       { id: "id2", value: "b" },
       { id: "id3", value: "c" },
       { id: "id4", value: "d" },
-      { id: "id5", value: "e" }
+      { id: "id5", value: "e" },
     ];
     let handlerMap = {
       create: jest.fn(async () =>
@@ -775,7 +775,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
           CREATE1_OK,
           (create2Error = new Error("BE")),
           (create3Error = { uuAppErrorMap: { code: {} } }),
-          { uuAppErrorMap: {}, ...CREATE4_OK }
+          { uuAppErrorMap: {}, ...CREATE4_OK },
         ])
       ),
       update: jest.fn(async () =>
@@ -783,7 +783,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
           UPDATE1_OK,
           (update2Error = new Error("BE")),
           (update3Error = { uuAppErrorMap: { code: {} } }),
-          { uuAppErrorMap: {}, ...UPDATE4_OK }
+          { uuAppErrorMap: {}, ...UPDATE4_OK },
         ])
       ),
       delete: jest.fn(async () =>
@@ -791,9 +791,9 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
           DELETE1_OK,
           (delete2Error = new Error("BE")),
           (delete3Error = { uuAppErrorMap: { code: {} } }),
-          { uuAppErrorMap: {}, ...DELETE4_OK }
+          { uuAppErrorMap: {}, ...DELETE4_OK },
         ])
-      )
+      ),
     };
     let { lastResult } = renderHook(useDataList, { handlerMap, initialData: data, pageSize: 100 });
     await wait();
@@ -804,15 +804,18 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     act(() => {
       lastResult()
         .handlerMap.create(CREATE)
-        .then(v => (resolved = v), e => (rejected = e));
+        .then(
+          (v) => (resolved = v),
+          (e) => (rejected = e)
+        );
     });
     await wait();
     expect(lastResult()).toEqual(
       expectedResult({
-        data: [...data, CREATE1_OK, CREATE4_OK].map(data => expectedItem({ data })),
+        data: [...data, CREATE1_OK, CREATE4_OK].map((data) => expectedItem({ data })),
         state: "ready",
         errorData: null,
-        pendingData: null
+        pendingData: null,
       })
     );
     expect(rejected).toBeTruthy();
@@ -823,7 +826,10 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
       lastResult().handlerMap.setData(afterInitData);
       lastResult()
         .handlerMap.update(UPDATE)
-        .then(v => (resolved = v), e => (rejected = e));
+        .then(
+          (v) => (resolved = v),
+          (e) => (rejected = e)
+        );
     });
     expect(lastResult()).toEqual(
       expectedResult({
@@ -833,12 +839,12 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
             state: "pending",
             pendingData: { operation: "update", dtoIn: UPDATE[i] },
             errorData: null,
-            handlerMap: expectedHandlerMap({})
+            handlerMap: expectedHandlerMap({}),
           })
-        ).concat(data.slice(4).map(data => expectedItem({ data }))),
+        ).concat(data.slice(4).map((data) => expectedItem({ data }))),
         state: "itemPending",
         pendingData: null,
-        errorData: null
+        errorData: null,
       })
     );
     await wait();
@@ -849,19 +855,19 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
           expectedItem({
             data: data[1],
             state: "error",
-            errorData: { operation: "update", dtoIn: UPDATE[1], error: update2Error }
+            errorData: { operation: "update", dtoIn: UPDATE[1], error: update2Error },
           }),
           expectedItem({
             data: data[2],
             state: "error",
-            errorData: { operation: "update", dtoIn: UPDATE[2], error: update3Error }
+            errorData: { operation: "update", dtoIn: UPDATE[2], error: update3Error },
           }),
           expectedItem({ data: UPDATE4_OK }),
-          ...data.slice(4).map(data => expectedItem({ data }))
+          ...data.slice(4).map((data) => expectedItem({ data })),
         ],
         state: "ready",
         errorData: null,
-        pendingData: null
+        pendingData: null,
       })
     );
     expect(rejected).toBeTruthy();
@@ -872,7 +878,10 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
       lastResult().handlerMap.setData(afterInitData);
       lastResult()
         .handlerMap.delete(DELETE)
-        .then(v => (resolved = v), e => (rejected = e));
+        .then(
+          (v) => (resolved = v),
+          (e) => (rejected = e)
+        );
     });
     expect(lastResult()).toEqual(
       expectedResult({
@@ -882,12 +891,12 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
             state: "pending",
             pendingData: { operation: "delete", dtoIn: DELETE[i] },
             errorData: null,
-            handlerMap: expectedHandlerMap({})
+            handlerMap: expectedHandlerMap({}),
           })
-        ).concat(data.slice(4).map(data => expectedItem({ data }))),
+        ).concat(data.slice(4).map((data) => expectedItem({ data }))),
         state: "itemPending",
         pendingData: null,
-        errorData: null
+        errorData: null,
       })
     );
     await wait();
@@ -897,18 +906,18 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
           expectedItem({
             data: data[1],
             state: "error",
-            errorData: { operation: "delete", dtoIn: DELETE[1], error: delete2Error }
+            errorData: { operation: "delete", dtoIn: DELETE[1], error: delete2Error },
           }),
           expectedItem({
             data: data[2],
             state: "error",
-            errorData: { operation: "delete", dtoIn: DELETE[2], error: delete3Error }
+            errorData: { operation: "delete", dtoIn: DELETE[2], error: delete3Error },
           }),
-          ...data.slice(4).map(data => expectedItem({ data }))
+          ...data.slice(4).map((data) => expectedItem({ data })),
         ],
         state: "ready",
         errorData: null,
-        pendingData: null
+        pendingData: null,
       })
     );
     expect(rejected).toBeTruthy();
@@ -918,7 +927,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     let data = [INITIAL_DATA1[0]];
     let handlerMap = { load: jest.fn(async () => data) };
     let itemHandlerMap = { custom: jest.fn(async () => data[0]) };
-    let expectedHMR = map =>
+    let expectedHMR = (map) =>
       expectedResult({
         data: [
           expectedItem({
@@ -926,9 +935,9 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
             handlerMap: expectedHandlerMap(map),
             errorData: expect.any(Object),
             pendingData: expect.any(Object),
-            state: expect.any(String)
-          })
-        ]
+            state: expect.any(String),
+          }),
+        ],
       });
 
     // initial
@@ -961,7 +970,11 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
   });
 
   it("data[].handlerMap.setData; should set item data", async () => {
-    let data = [{ id: "id1", value: "a" }, { id: "id2", value: "b" }, { id: "id3", value: "c" }];
+    let data = [
+      { id: "id1", value: "a" },
+      { id: "id2", value: "b" },
+      { id: "id3", value: "c" },
+    ];
     let itemHandlerMap = { custom: jest.fn(async () => null) };
     let { lastResult } = renderHook(useDataList, { initialData: data, itemHandlerMap });
     act(() => {
@@ -976,12 +989,12 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
           expectedItem({
             data: LOAD_DATA1[1],
             state: "custom",
-            handlerMap: expectedHandlerMap({ setData: true, custom: true }) // should auto-add handlerMap
-          })
+            handlerMap: expectedHandlerMap({ setData: true, custom: true }), // should auto-add handlerMap
+          }),
         ],
         state: "ready",
         pendingData: null,
-        errorData: null
+        errorData: null,
       })
     );
   });
@@ -1010,16 +1023,16 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
             state: "pending",
             pendingData: { operation: "customCall", dtoIn: { id: LOAD_DATA1[1].id, ...CALL_PARAM } },
             errorData: null,
-            handlerMap: expectedHandlerMap({})
+            handlerMap: expectedHandlerMap({}),
           }),
-          ...LOAD_DATA1.slice(2).map(data =>
+          ...LOAD_DATA1.slice(2).map((data) =>
             expectedItem({ data, handlerMap: expectedHandlerMap({ setData: true, customCall: true }) })
-          )
+          ),
         ],
         newData: [],
         state: "itemPending",
         pendingData: null,
-        errorData: null
+        errorData: null,
       })
     );
 
@@ -1028,11 +1041,11 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
       expectedResult({
         data: [LOAD_DATA1[0], CALL_RESPONSE]
           .concat(LOAD_DATA1.slice(2))
-          .map(data => expectedItem({ data, handlerMap: expectedHandlerMap({ setData: true, customCall: true }) })),
+          .map((data) => expectedItem({ data, handlerMap: expectedHandlerMap({ setData: true, customCall: true }) })),
         newData: [],
         state: "ready",
         pendingData: null,
-        errorData: null
+        errorData: null,
       })
     );
     expect(customCallResolved).toBe(true);
@@ -1062,29 +1075,29 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
             state: "pending",
             pendingData: { operation: "customCall", dtoIn: { id: LOAD_DATA1[1].id, ...CALL_PARAM } },
             errorData: null,
-            handlerMap: expectedHandlerMap({})
+            handlerMap: expectedHandlerMap({}),
           }),
-          ...LOAD_DATA1.slice(2).map(data =>
+          ...LOAD_DATA1.slice(2).map((data) =>
             expectedItem({ data, handlerMap: expectedHandlerMap({ setData: true, customCall: true }) })
-          )
+          ),
         ],
         newData: [],
         state: "itemPending",
         pendingData: null,
-        errorData: null
+        errorData: null,
       })
     );
 
     await wait();
     expect(lastResult()).toEqual(
       expectedResult({
-        data: [LOAD_DATA1[0], ...LOAD_DATA1.slice(2)].map(data =>
+        data: [LOAD_DATA1[0], ...LOAD_DATA1.slice(2)].map((data) =>
           expectedItem({ data, handlerMap: expectedHandlerMap({ setData: true, customCall: true }) })
         ),
         newData: [],
         state: "ready",
         pendingData: null,
-        errorData: null
+        errorData: null,
       })
     );
     expect(customCallResolved).toBe(true);
@@ -1096,7 +1109,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     let itemHandlerMap = {
       customCall: jest.fn(async () => {
         throw (error = new Error("Test error."));
-      })
+      }),
     };
     let { lastResult } = renderHook(useDataList, { initialData: LOAD_DATA1, itemHandlerMap });
     await wait();
@@ -1105,7 +1118,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     act(() => {
       lastResult()
         .data[1].handlerMap.customCall(CALL_PARAM)
-        .catch(e => (rejected = e))
+        .catch((e) => (rejected = e))
         .then(() => (customCallResolved = true));
     });
     await wait();
@@ -1118,15 +1131,15 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
             state: "error",
             pendingData: null,
             errorData: { operation: "customCall", dtoIn: { id: LOAD_DATA1[1].id, ...CALL_PARAM }, error },
-            handlerMap: expectedHandlerMap({ setData: true, customCall: true })
+            handlerMap: expectedHandlerMap({ setData: true, customCall: true }),
           }),
-          ...LOAD_DATA1.slice(2).map(data =>
+          ...LOAD_DATA1.slice(2).map((data) =>
             expectedItem({ data, handlerMap: expectedHandlerMap({ setData: true, customCall: true }) })
-          )
+          ),
         ],
         state: "ready",
         pendingData: null,
-        errorData: null
+        errorData: null,
       })
     );
     expect(rejected).toBe(error);
@@ -1136,7 +1149,10 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
   it("newData; should remove items from 'newData' if they get loaded into 'data'", async () => {
     const CREATE1 = { value: "v" };
     const CREATE1_FULL = { id: "create1", ...CREATE1 };
-    let serverData = [{ id: "id1", value: 1 }, { id: "id2", value: 2 }];
+    let serverData = [
+      { id: "id1", value: 1 },
+      { id: "id2", value: 2 },
+    ];
     let handlerMap = {
       load: jest.fn(async ({ pageInfo }) => {
         let { pageIndex = 0 } = pageInfo;
@@ -1145,7 +1161,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
       createItem: jest.fn(async () => {
         serverData.splice(1, 0, CREATE1_FULL); // add in-between
         return CREATE1_FULL;
-      })
+      }),
     };
     let { lastResult } = renderHook(useDataList, { handlerMap, pageSize: 1 });
     await wait();
@@ -1155,8 +1171,8 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     await wait();
     expect(lastResult()).toEqual(
       expectedResult({
-        data: [serverData[0], undefined].map(data => expectedItem({ data })),
-        newData: [CREATE1_FULL].map(data => expectedItem({ data }))
+        data: [serverData[0], undefined].map((data) => expectedItem({ data })),
+        newData: [CREATE1_FULL].map((data) => expectedItem({ data })),
       })
     );
     act(() => {
@@ -1165,8 +1181,8 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     await wait();
     expect(lastResult()).toEqual(
       expectedResult({
-        data: [serverData[0], CREATE1_FULL, undefined].map(data => expectedItem({ data })),
-        newData: []
+        data: [serverData[0], CREATE1_FULL, undefined].map((data) => expectedItem({ data })),
+        newData: [],
       })
     );
   });
@@ -1177,20 +1193,20 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     const CREATE_FULL = CREATE.map((it, i) => ({ id: "c" + (i + 1), ...it }));
     let handlerMap = {
       createMulti: jest.fn(async () => CREATE_FULL),
-      update1: jest.fn(async v => v),
-      delete1: jest.fn(async v => null)
+      update1: jest.fn(async (v) => v),
+      delete1: jest.fn(async (v) => null),
     };
     let itemHandlerMap = {
-      itemUpdate: jest.fn(async v => v),
-      itemDelete: jest.fn(async v => null)
+      itemUpdate: jest.fn(async (v) => v),
+      itemDelete: jest.fn(async (v) => null),
     };
-    let expectedReadyItem = itemData =>
+    let expectedReadyItem = (itemData) =>
       expectedItem({
         data: itemData,
         state: "ready",
         errorData: null,
         pendingData: null,
-        handlerMap: expectedHandlerMap({ setData: true, itemUpdate: true, itemDelete: true })
+        handlerMap: expectedHandlerMap({ setData: true, itemUpdate: true, itemDelete: true }),
       });
     let { lastResult } = renderHook(useDataList, { initialData: data, handlerMap, itemHandlerMap, pageSize: 2 });
     await wait();
@@ -1205,24 +1221,24 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     });
     expect(lastResult()).toEqual(
       expectedResult({
-        data: data.map(data => expectedReadyItem(data)),
+        data: data.map((data) => expectedReadyItem(data)),
         newData: [
           expectedItem({
             data: CREATE_FULL[0],
             state: "pending",
             pendingData: { operation: "update1", dtoIn: { id: "c1", value: "up1" } },
             errorData: null,
-            handlerMap: expectedHandlerMap({})
+            handlerMap: expectedHandlerMap({}),
           }),
-          expectedReadyItem(CREATE_FULL[1])
-        ]
+          expectedReadyItem(CREATE_FULL[1]),
+        ],
       })
     );
     await wait();
     expect(lastResult()).toEqual(
       expectedResult({
-        data: data.map(data => expectedReadyItem(data)),
-        newData: [expectedReadyItem({ ...CREATE_FULL[0], value: "up1" }), expectedReadyItem(CREATE_FULL[1])]
+        data: data.map((data) => expectedReadyItem(data)),
+        newData: [expectedReadyItem({ ...CREATE_FULL[0], value: "up1" }), expectedReadyItem(CREATE_FULL[1])],
       })
     );
 
@@ -1232,7 +1248,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     });
     expect(lastResult()).toEqual(
       expectedResult({
-        data: data.map(data => expectedReadyItem(data)),
+        data: data.map((data) => expectedReadyItem(data)),
         newData: [
           expectedReadyItem({ ...CREATE_FULL[0], value: "up1" }),
           expectedItem({
@@ -1240,19 +1256,19 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
             state: "pending",
             pendingData: { operation: "itemUpdate", dtoIn: { id: "c2", value: "up2" } },
             errorData: null,
-            handlerMap: expectedHandlerMap({})
-          })
-        ]
+            handlerMap: expectedHandlerMap({}),
+          }),
+        ],
       })
     );
     await wait();
     expect(lastResult()).toEqual(
       expectedResult({
-        data: data.map(data => expectedReadyItem(data)),
+        data: data.map((data) => expectedReadyItem(data)),
         newData: [
           expectedReadyItem({ ...CREATE_FULL[0], value: "up1" }),
-          expectedReadyItem({ ...CREATE_FULL[1], value: "up2" })
-        ]
+          expectedReadyItem({ ...CREATE_FULL[1], value: "up2" }),
+        ],
       })
     );
 
@@ -1263,8 +1279,8 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     await wait();
     expect(lastResult()).toEqual(
       expectedResult({
-        data: data.map(data => expectedReadyItem(data)),
-        newData: [expectedReadyItem({ ...CREATE_FULL[1], value: "up2" })]
+        data: data.map((data) => expectedReadyItem(data)),
+        newData: [expectedReadyItem({ ...CREATE_FULL[1], value: "up2" })],
       })
     );
 
@@ -1275,8 +1291,8 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
     await wait();
     expect(lastResult()).toEqual(
       expectedResult({
-        data: data.map(data => expectedReadyItem(data)),
-        newData: []
+        data: data.map((data) => expectedReadyItem(data)),
+        newData: [],
       })
     );
   });

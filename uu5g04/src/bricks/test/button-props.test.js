@@ -23,30 +23,36 @@ const CONFIG = {
     "UU5.Common.NestingLevelMixin",
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.ContentMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     size: {
-      values: ["s", "m", "l", "xl"]
+      values: ["s", "m", "l", "xl"],
     },
     displayBlock: {
-      values: [true, false]
+      values: [true, false],
     },
     pressed: {
-      values: [true, false]
+      values: [true, false],
     },
     bgStyle: {
-      values: ["filled", "outline", "transparent"]
+      values: ["filled", "outline", "transparent"],
     },
     target: {
-      values: ["_blank", "_parent", "_top", "_self"]
+      values: ["_blank", "_parent", "_top", "_self"],
     },
     href: {
-      values: ["https://unicorn.com/", "www.unicorn.com", "#about", "mailto:me@example.com", "ftp://example.com/folder"]
-    }
+      values: [
+        "https://unicorn.com/",
+        "www.unicorn.com",
+        "#about",
+        "mailto:me@example.com",
+        "ftp://example.com/folder",
+      ],
+    },
   },
   requiredProps: {},
-  opt: {}
+  opt: {},
 };
 
 describe(`UU5.Bricks.Button props testing`, () => {
@@ -57,7 +63,7 @@ describe(`UU5.Bricks.Button props testing`, () => {
     const event = { target: { value: "On click function" } };
     const mockFunc = jest.fn();
 
-    const wrapper = shallow(<UU5.Bricks.Button ref_={button => (This._button = button)} onClick={mockFunc} />);
+    const wrapper = shallow(<UU5.Bricks.Button ref_={(button) => (This._button = button)} onClick={mockFunc} />);
 
     // event simulate event object of button element
     // call click event

@@ -5,7 +5,7 @@ export class Style {
     let obj = {};
     let properties = styleString.split(";");
 
-    properties.forEach(item => {
+    properties.forEach((item) => {
       let keysAndValues = item.split(":");
       if (keysAndValues.length > 1) {
         obj[Tools.getCamelCase(keysAndValues[0].trim(), true)] = keysAndValues[1].trim();
@@ -16,7 +16,7 @@ export class Style {
   }
 
   static joinClassName(...classNames) {
-    return classNames.filter(v => v).join(" ");
+    return classNames.filter((v) => v).join(" ");
   }
 }
 

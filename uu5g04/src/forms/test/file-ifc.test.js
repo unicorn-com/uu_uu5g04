@@ -104,7 +104,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
 
   it("setFeedBack(feedback, message, value, setStateCallBack)", () => {
     const wrapper = shallow(<UU5.Forms.File label="Upload file" id={"uuID"} required={true} />, {
-      disableLifecycleMethods: true
+      disableLifecycleMethods: true,
     });
     expect(wrapper.instance().getFeedback()).toEqual("initial");
     expect(wrapper.instance().getMessage()).toBe(null);
@@ -217,7 +217,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
 
   it("isSuccess() fisr return false, second return true", () => {
     const wrapper = shallow(<UU5.Forms.File id={"id1"} label="File label" required={true} />, {
-      disableLifecycleMethods: true
+      disableLifecycleMethods: true,
     });
     const mockFunc = jest.fn();
     expect(wrapper.instance().isSuccess()).toBeFalsy();
@@ -331,7 +331,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
 
   it("reset(setStateCallBack)", () => {
     const wrapper = shallow(<UU5.Forms.File id={"id1"} label="File name" required={true} />, {
-      disableLifecycleMethods: true
+      disableLifecycleMethods: true,
     });
     const mockFunc = jest.fn();
     wrapper.instance().setFeedback("success", "New Message", [{ name: "/etc/networks/interfaces" }], mockFunc);
@@ -359,13 +359,13 @@ describe("UU5.Forms.InputMixin interface testing", () => {
 
   it("getChangeFeedback()", () => {
     const wrapper = shallow(<UU5.Forms.File id={"id1"} label="File name" required={true} />, {
-      disableLifecycleMethods: true
+      disableLifecycleMethods: true,
     });
     expect(wrapper.instance().getChangeFeedback({})).toEqual(
       expect.objectContaining({
         feedback: "initial",
         message: null,
-        value: null
+        value: null,
       })
     );
     expect(wrapper).toMatchSnapshot();
@@ -373,21 +373,21 @@ describe("UU5.Forms.InputMixin interface testing", () => {
 
   it("setChangeFeedback()", () => {
     const wrapper = shallow(<UU5.Forms.File id={"id1"} label="File name" required={true} />, {
-      disableLifecycleMethods: true
+      disableLifecycleMethods: true,
     });
     const mockFunc = jest.fn();
     expect(wrapper.instance().getChangeFeedback({})).toEqual(
       expect.objectContaining({
         feedback: "initial",
         message: null,
-        value: null
+        value: null,
       })
     );
     const returnValue = wrapper.instance().setChangeFeedback(
       {
         feedback: "error",
         message: "Error message from setChangeFeedback",
-        value: [{ name: "/etc/networks/interfaces" }]
+        value: [{ name: "/etc/networks/interfaces" }],
       },
       mockFunc
     );
@@ -402,7 +402,7 @@ describe("UU5.Forms.InputMixin interface testing", () => {
 
   it("isReadOnly()", () => {
     const wrapper = shallow(<UU5.Forms.File id={"id1"} label="File name" required={true} />, {
-      disableLifecycleMethods: true
+      disableLifecycleMethods: true,
     });
     const mockFunc = jest.fn();
     expect(wrapper.instance().isReadOnly()).toBeFalsy();

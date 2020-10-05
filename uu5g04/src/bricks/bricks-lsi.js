@@ -17,35 +17,35 @@ export const BricksLsi = {
       en: "Invalid data",
       cs: "Chybná data",
       sk: "Chybné dáta",
-      uk: "Некоректні дані"
-    }
+      uk: "Некоректні дані",
+    },
   },
   homeScreen: {
     "cs-cs": {
       iOS:
         "<uu5string/>Pro vytvoření zástupce této webové aplikace otevřte menu sdílení a vyberte <strong>Přidat na Plochu</strong>.",
       android:
-        "<uu5string/>Pro vytvoření zástupce této webové aplikace otevřte menu prohlížeče a vyberte <strong>Přidat na plochu</strong>."
+        "<uu5string/>Pro vytvoření zástupce této webové aplikace otevřte menu prohlížeče a vyberte <strong>Přidat na plochu</strong>.",
     },
 
     en: {
       iOS:
         "<uu5string/>To create a shortcut of this web app open the share menu and tap on <strong>Add to homescreen</strong>.",
       android:
-        "<uu5string/>To create a shortcut of this web app open the browser option menu and tap on <strong>Add to homescreen</strong>."
+        "<uu5string/>To create a shortcut of this web app open the browser option menu and tap on <strong>Add to homescreen</strong>.",
     },
     sk: {
       iOS:
         "<uu5string/>Pre vytvorenie zástupcu tejto webovej aplikácie otvorte menu zdieľania a vyberte <strong>Pridať na plochu</strong>.",
       android:
-        "<uu5string/>Pre vytvorenie zástupcu tejto webovej aplikácie otvorte menu prehliadača a vyberte <strong>Pridať na plochu</strong>."
+        "<uu5string/>Pre vytvorenie zástupcu tejto webovej aplikácie otvorte menu prehliadača a vyberte <strong>Pridať na plochu</strong>.",
     },
     uk: {
       iOS:
         "<uu5string/>Щоб створити посилання до цього веб-додатку, відкрийте меню Поділитись і натисніть <strong>Додати на домашній екран</strong>.",
       android:
-        "<uu5string/>Щоб створити посилання до цього веб-додатку, відкрийте меню налаштувань браузера і натисніть <strong>Додати на домашній екран</strong>."
-    }
+        "<uu5string/>Щоб створити посилання до цього веб-додатку, відкрийте меню налаштувань браузера і натисніть <strong>Додати на домашній екран</strong>.",
+    },
 
     /*'cs-cs': {
       iOS: '<uu5string/>Pro přidáni této webové aplikace na úvodní obrazovku: stlačte %icon a pak <strong>Přidat na úvodní obrazovku</strong>.',
@@ -180,8 +180,8 @@ export const BricksLsi = {
       ru: "Неверные данные",
       sk: "Neplatné údaje",
       es: "Datos inválidos",
-      uk: "Невірні дані"
-    }
+      uk: "Невірні дані",
+    },
   },
   calendar: {
     dayNames: {
@@ -196,7 +196,7 @@ export const BricksLsi = {
       ru: ["Понедельник", "Вторник", "Cреда", "Четверг", "Пятница", "Cуббота", "Воскресенье"],
       sk: ["Pondelok", "Utorok", "Streda", "Štvrtok", "Piatok", "Sobota", "Nedeľa"],
       es: ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"],
-      uk: ["Понеділок", "Вівторок", "Cереда", "Четвер", "П'ятниця", "Cубота", "Неділя"]
+      uk: ["Понеділок", "Вівторок", "Cереда", "Четвер", "П'ятниця", "Cубота", "Неділя"],
     },
     monthNames: {
       cs: [
@@ -211,7 +211,7 @@ export const BricksLsi = {
         "září",
         "říjen",
         "listopad",
-        "prosinec"
+        "prosinec",
       ],
       nl: [
         "Januari",
@@ -225,7 +225,7 @@ export const BricksLsi = {
         "September",
         "Oktober",
         "November",
-        "December"
+        "December",
       ],
       en: [
         "January",
@@ -239,7 +239,7 @@ export const BricksLsi = {
         "September",
         "October",
         "November",
-        "December"
+        "December",
       ],
       "en-gb": [
         "January",
@@ -253,7 +253,7 @@ export const BricksLsi = {
         "September",
         "October",
         "November",
-        "December"
+        "December",
       ],
       "en-us": [
         "January",
@@ -267,7 +267,7 @@ export const BricksLsi = {
         "September",
         "October",
         "November",
-        "December"
+        "December",
       ],
       fr: [
         "Janvier",
@@ -281,7 +281,7 @@ export const BricksLsi = {
         "Septembre",
         "Octobre",
         "Novembre",
-        "Décembre"
+        "Décembre",
       ],
       de: [
         "Januar",
@@ -295,7 +295,7 @@ export const BricksLsi = {
         "September",
         "Oktober",
         "November",
-        "Dezember"
+        "Dezember",
       ],
       pl: [
         "Styczeń",
@@ -309,7 +309,7 @@ export const BricksLsi = {
         "Wrzesień",
         "Październik",
         "Listopad",
-        "Grudzień"
+        "Grudzień",
       ],
       ru: [
         "Январь",
@@ -323,7 +323,7 @@ export const BricksLsi = {
         "Сентябрь",
         "Октябрь",
         "Ноябрь",
-        "Декабрь"
+        "Декабрь",
       ],
       sk: [
         "Január",
@@ -337,7 +337,7 @@ export const BricksLsi = {
         "September",
         "Október",
         "November",
-        "December"
+        "December",
       ],
       es: [
         "Enero",
@@ -351,7 +351,7 @@ export const BricksLsi = {
         "Septiembre",
         "Octubre",
         "Noviembre",
-        "Diciembre"
+        "Diciembre",
       ],
       uk: [
         "Січень",
@@ -365,48 +365,48 @@ export const BricksLsi = {
         "Вересень",
         "Жовтень",
         "Листопад",
-        "Грудень"
-      ]
+        "Грудень",
+      ],
     },
     monthNamesShort: {
       en: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
       cs: ["led", "úno", "bře", "dub", "kvě", "čvn", "čvc", "srp", "zář", "říj", "lis", "pro"],
       sk: ["Jan", "Feb", "Mar", "Apr", "Máj", "Jún", "Júl", "Aug", "Sep", "Okt", "Nov", "Dec"],
-      uk: ["Січ", "Лют", "Бер", "Кві", "Тра", "Чер", "Лип", "Сер", "Вер", "Жов", "Лис", "Гру"]
+      uk: ["Січ", "Лют", "Бер", "Кві", "Тра", "Чер", "Лип", "Сер", "Вер", "Жов", "Лис", "Гру"],
     },
     today: {
       cs: "Dnes",
       en: "Today",
       sk: "Dnes",
-      uk: "Сьогодні"
+      uk: "Сьогодні",
     },
     dateInPast: {
       cs: "Vybrané datum nemůže být v minulosti.",
       en: "Selected date cannot be in the past.",
       sk: "Vybraný dátum nemôže byť v minulosti",
-      uk: "Обрана дата не може бути в минулому."
-    }
+      uk: "Обрана дата не може бути в минулому.",
+    },
   },
   confirmModal: {
     confirmButtonText: {
       cs: "Souhlasím",
       en: "Confirm",
       sk: "Súhlasím",
-      uk: "Підтвердити"
+      uk: "Підтвердити",
     },
     refuseButtonText: {
       cs: "Nesouhlasím",
       en: "Refuse",
       sk: "Nesúhlasím",
-      uk: "Відхилити"
-    }
+      uk: "Відхилити",
+    },
   },
   sessionWatch: {
     header: {
       cs: "Relace brzy vyprší",
       en: "Session Expiring",
       sk: "Relácia čoskoro vyprší",
-      uk: "Сесія скоро закінчиться"
+      uk: "Сесія скоро закінчиться",
     },
     content: {
       cs:
@@ -416,85 +416,85 @@ export const BricksLsi = {
       sk:
         "Po vypršaní budete z bezpečnostných dôvodov automaticky odhlásený. Prihláste sa, aby sa relácia predĺžila, alebo si uložte rozpracované dáta.",
       uk:
-        "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни."
+        "Коли сесія закінчиться вас буде автоматично розлогінено з міркувань безпеки. Будь ласка, увійдіть знову щоб продовжити сесію або зберегти внесені зміни.",
     },
     logInButton: {
       cs: "Přihlásit se",
       en: "Log in",
       sk: "Prihlásiť sa",
-      uk: "Увійти"
+      uk: "Увійти",
     },
     cancelButton: {
       cs: "Zrušit",
       en: "Cancel",
       sk: "Zrušiť",
-      uk: "Відмінити"
-    }
+      uk: "Відмінити",
+    },
   },
   colorPalette: {
     baseColor: {
       cs: "Základní barva",
       en: "Base color",
       sk: "Základná farba",
-      uk: "Базовий колір"
+      uk: "Базовий колір",
     },
     shade: {
       cs: "Odstín",
       en: "Shade",
       sk: "Odtieň",
-      uk: "Відтінок"
+      uk: "Відтінок",
     },
     selectSchema: {
       cs: "Odstíny se zobrazí po vybrání barvy.",
       en: "Choose color to view shades.",
       sk: "Odtiene sa zobrazia po vybraní farby.",
-      uk: "Щоб переглянути відтінки оберіть колір."
+      uk: "Щоб переглянути відтінки оберіть колір.",
     },
     noShades: {
       cs: "Tato barva nemá žádné odstíny.",
       en: "Shades not available for this color.",
       sk: "Táto farba nemá žiadne odtiene.",
-      uk: "Для цього кольору немає доступних відтінків."
-    }
+      uk: "Для цього кольору немає доступних відтінків.",
+    },
   },
   alertBus: {
     showAll: {
       cs: "Zobrazit všechny upozornění",
       en: "Show all alerts",
       sk: "Zobraziť všetky upozornenia",
-      uk: "Показати всі сповіщення"
+      uk: "Показати всі сповіщення",
     },
     clearAll: {
       cs: "Vymazat vše",
       en: "Clear all",
       sk: "Vymazať všetko",
-      uk: "Очистити все"
-    }
+      uk: "Очистити все",
+    },
   },
   contextMenu: {
     backButton: {
       cs: "Zpět",
       en: "Back",
       sk: "Späť",
-      uk: "Назад"
-    }
+      uk: "Назад",
+    },
   },
   unauthenticated: {
     text: {
       cs: "Pouze přihlášený uživatel může zobrazit tento obsah.",
-      en: "You are not authenticated to view this content."
+      en: "You are not authenticated to view this content.",
     },
     login: {
       cs: "Přihlásit se",
-      en: "Log in"
-    }
+      en: "Log in",
+    },
   },
   unauthorized: {
     text: {
       cs: "Nemáte potřebná práva k zobrazení tohoto obsahu.",
-      en: "You don't have rights to see this content."
-    }
-  }
+      en: "You don't have rights to see this content.",
+    },
+  },
 };
 
 export default BricksLsi;

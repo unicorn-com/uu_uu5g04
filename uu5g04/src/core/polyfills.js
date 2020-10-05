@@ -29,7 +29,7 @@ if (navigator.userAgent.match(/trident/i)) {
   let uu5BaseUrl = uri ? uri.replace(/^(.*\/).*/, "$1") : "./";
   let url = uu5BaseUrl + (process.env.NODE_ENV === "production" ? "uu5g04-polyfills.min.js" : "uu5g04-polyfills.js");
   let xhr = new XMLHttpRequest();
-  xhr.onload = function() {
+  xhr.onload = function () {
     // eval in global scope
     if (this.status === 200) (0, eval)(this.responseText);
     else console.error("Polyfills failed to load from " + url);

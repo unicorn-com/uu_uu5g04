@@ -36,8 +36,8 @@ export const FloatingBox = UU5.Common.VisualComponent.create({
       header: ns.css("floating-box-header"),
       notDraggable: ns.css("floating-box-not-draggable"),
       headerText: ns.css("floating-box-header-only-text"),
-      isDragged: () => Css.css("opacity: 0.8; > * {pointer-events: none;}")
-    }
+      isDragged: () => Css.css("opacity: 0.8; > * {pointer-events: none;}"),
+    },
   },
   //@@viewOff:statics
 
@@ -53,7 +53,7 @@ export const FloatingBox = UU5.Common.VisualComponent.create({
     onDragStart: UU5.PropTypes.func,
     onDragMove: UU5.PropTypes.func,
     onDragEnd: UU5.PropTypes.func,
-    minDragArea: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number])
+    minDragArea: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
   },
   //@@viewOff:propTypes
   //@@viewOn:getDefaultProps
@@ -69,7 +69,7 @@ export const FloatingBox = UU5.Common.VisualComponent.create({
       onDragStart: null,
       onDragMove: null,
       onDragEnd: null,
-      minDragArea: "auto"
+      minDragArea: "auto",
     };
   },
   //@@viewOff:getDefaultProps
@@ -86,7 +86,7 @@ export const FloatingBox = UU5.Common.VisualComponent.create({
       renderTop: undefined,
       renderBottom: undefined,
       renderRight: undefined,
-      isDragged: false
+      isDragged: false,
     };
   },
 
@@ -137,8 +137,8 @@ export const FloatingBox = UU5.Common.VisualComponent.create({
     newState.renderTop = preferTopAlign ? newTop : null;
     newState.renderBottom = preferTopAlign ? null : innerHeight - height - newTop;
 
-    return this.setState(state =>
-      Object.keys(newState).some(key => newState[key] !== state[key]) ? newState : undefined
+    return this.setState((state) =>
+      Object.keys(newState).some((key) => newState[key] !== state[key]) ? newState : undefined
     );
   },
 
@@ -298,8 +298,8 @@ export const FloatingBox = UU5.Common.VisualComponent.create({
         top: this.state.renderTop !== undefined ? this.state.renderTop : this.state.top,
         left: this.state.renderLeft !== undefined ? this.state.renderLeft : this.state.left,
         bottom: this.state.renderBottom !== undefined ? this.state.renderBottom : this.state.bottom,
-        right: this.state.renderRight !== undefined ? this.state.renderRight : this.state.right
-      }
+        right: this.state.renderRight !== undefined ? this.state.renderRight : this.state.right,
+      },
     };
 
     return attrs;
@@ -332,7 +332,7 @@ export const FloatingBox = UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </div>
     );
-  }
+  },
   //@@viewOff:render
 });
 

@@ -31,22 +31,22 @@ export const SessionWatch = UU5.Common.VisualComponent.create({
       main: ns.css("session-watch"),
       header: ns.css("session-watch-header"),
       content: ns.css("session-watch-content"),
-      footer: ns.css("session-watch-footer")
+      footer: ns.css("session-watch-footer"),
     },
-    lsi: () => UU5.Environment.Lsi.Bricks.sessionWatch
+    lsi: () => UU5.Environment.Lsi.Bricks.sessionWatch,
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    header: UU5.PropTypes.node
+    header: UU5.PropTypes.node,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      header: null
+      header: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -124,7 +124,7 @@ export const SessionWatch = UU5.Common.VisualComponent.create({
         ref_={this._setModalRef}
       />
     );
-  }
+  },
   //@@viewOff:render
 });
 

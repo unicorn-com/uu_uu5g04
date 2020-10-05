@@ -28,11 +28,11 @@ export default UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("ProgressBar.Cover"),
     classNames: {
-      main: ns.css("progress-bar-cover")
+      main: ns.css("progress-bar-cover"),
     },
     errors: {
-      invalidParent: "Parent of this component is not ProgressBar."
-    }
+      invalidParent: "Parent of this component is not ProgressBar.",
+    },
   },
   //@@viewOff:statics
 
@@ -43,7 +43,7 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  UNSAFE_componentWillMount: function() {
+  UNSAFE_componentWillMount: function () {
     let parent = this.getParent();
 
     if (parent) {
@@ -69,13 +69,13 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return (
       <div {...this.getMainAttrs()}>
         {this.props.children && UU5.Common.Children.toArray(this.props.children)}
         {this.getDisabledCover()}
       </div>
     );
-  }
+  },
   //@@viewOff:render
 });

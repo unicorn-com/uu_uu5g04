@@ -24,7 +24,7 @@ const buttonPropTypes = UU5.PropTypes.shape({
   size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
   content: UU5.PropTypes.any,
   colorSchema: UU5.PropTypes.oneOf(UU5.Environment.colorSchema),
-  bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"])
+  bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
 });
 
 export const Controls = UU5.Common.VisualComponent.create({
@@ -37,15 +37,15 @@ export const Controls = UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("Controls"),
     classNames: {
-      main: ns.css("controls")
+      main: ns.css("controls"),
     },
     lsi: () => UU5.Environment.Lsi.Forms.controls,
     defaults: {
       reset: { bgStyle: "transparent" },
       validate: { bgStyle: "transparent" },
       submit: { colorSchema: "primary" },
-      cancel: {}
-    }
+      cancel: {},
+    },
   },
   //@@viewOff:statics
 
@@ -56,7 +56,7 @@ export const Controls = UU5.Common.VisualComponent.create({
     buttonResetProps: buttonPropTypes,
     buttonValidateProps: buttonPropTypes,
     buttonReset: UU5.PropTypes.bool,
-    buttonValidate: UU5.PropTypes.bool
+    buttonValidate: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -68,7 +68,7 @@ export const Controls = UU5.Common.VisualComponent.create({
       buttonSubmitProps: null,
       buttonCancelProps: null,
       buttonValidateProps: null,
-      buttonResetProps: null
+      buttonResetProps: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -125,13 +125,13 @@ export const Controls = UU5.Common.VisualComponent.create({
     let buttonState = this.state[this._getButtonKeyName(buttonName)];
     return {
       ...buttonState,
-      disabled: typeof buttonState.disabled === "boolean" ? buttonState.disabled : this.isDisabled()
+      disabled: typeof buttonState.disabled === "boolean" ? buttonState.disabled : this.isDisabled(),
     };
   },
 
   _mergeButtonsState(props = this.props) {
     let newState = {};
-    ["reset", "validate", "submit", "cancel"].forEach(buttonName => {
+    ["reset", "validate", "submit", "cancel"].forEach((buttonName) => {
       let buttonState = this._constructButtonState(buttonName, props);
       newState[this._getButtonKeyName(buttonName)] = buttonState;
     });
@@ -155,7 +155,7 @@ export const Controls = UU5.Common.VisualComponent.create({
         <UU5.Bricks.Button {...this._getButtonState("submit")} onClick={this._save} />
       </UU5.Common.Div>
     );
-  }
+  },
   //@@viewOff:render
 });
 

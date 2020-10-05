@@ -20,27 +20,27 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Common.NestingLevelMixin",
     "UU5.Common.ColorSchema",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     icon: {
-      values: ["mdi-menu", "mdi-chevron-up"]
+      values: ["mdi-menu", "mdi-chevron-up"],
     },
     offset: {
-      values: [150, 3000]
+      values: [150, 3000],
     },
     scrollDuration: {
-      values: [800, 3000]
+      values: [800, 3000],
     },
     size: {
-      values: ["s", "m", "l", "xl"]
+      values: ["s", "m", "l", "xl"],
     },
     bgStyle: {
-      values: ["filled", "outline", "transparent"]
-    }
+      values: ["filled", "outline", "transparent"],
+    },
   },
   requiredProps: {},
-  opt: {}
+  opt: {},
 };
 
 describe(`UU5.Bricks.ButtonToTop props testing`, () => {

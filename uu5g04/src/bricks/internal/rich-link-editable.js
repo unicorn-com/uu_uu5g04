@@ -16,19 +16,19 @@ const editableComponentPropsSetup = [
   {
     name: "href",
     type: "text",
-    label: EditableLsi.richLink.hrefLabel
+    label: EditableLsi.richLink.hrefLabel,
   },
   {
     name: "type",
     type: "switchSelector",
     label: EditableLsi.richLink.typeLabel,
     getProps: () => ({
-      items: typeList.map(item => ({
+      items: typeList.map((item) => ({
         content: <UU5.Bricks.Lsi lsi={EditableLsi.richLink[`typeValue${capitalizeStringFirstLetter(item)}`]} />,
-        value: item
-      }))
-    })
-  }
+        value: item,
+      })),
+    }),
+  },
 ];
 
 const editableAdditionalPropsSetup = [
@@ -36,21 +36,21 @@ const editableAdditionalPropsSetup = [
     name: "target",
     type: "switchSelector",
     label: EditableLsi.richLink.targetLabel,
-    getProps: () => ({ items: targetList.map(item => ({ content: item, value: item })) })
+    getProps: () => ({ items: targetList.map((item) => ({ content: item, value: item })) }),
   },
   {
     name: "smoothScroll",
     type: "number",
     label: EditableLsi.richLink.smoothScrollLabel,
-    getProps: props => ({
+    getProps: (props) => ({
       min: 0,
       step: 0.5,
       suffix: "s",
       valueType: "number",
       value: props.value / 1000, // from ms to s
-      onChange: opt => props.onChange({ ...opt, value: opt.value * 1000 }), // to ms
-      message: <UU5.Bricks.Lsi lsi={EditableLsi.richLink.smoothScrollMessage} />
-    })
+      onChange: (opt) => props.onChange({ ...opt, value: opt.value * 1000 }), // to ms
+      message: <UU5.Bricks.Lsi lsi={EditableLsi.richLink.smoothScrollMessage} />,
+    }),
   },
   {
     name: "offset",
@@ -61,30 +61,30 @@ const editableAdditionalPropsSetup = [
       step: 5,
       suffix: "px",
       valueType: "number",
-      message: <UU5.Bricks.Lsi lsi={EditableLsi.richLink.offsetMessage} />
-    })
+      message: <UU5.Bricks.Lsi lsi={EditableLsi.richLink.offsetMessage} />,
+    }),
   },
   {
     name: "download",
     type: "switchSelectorBool",
-    label: EditableLsi.richLink.downloadLabel
+    label: EditableLsi.richLink.downloadLabel,
   },
   {
     name: "authenticate",
     type: "switchSelectorBool",
-    label: EditableLsi.richLink.authenticateLabel
-  }
+    label: EditableLsi.richLink.authenticateLabel,
+  },
 ];
 
 const editablePropsSetup = [
   {
     name: <UU5.Bricks.Lsi lsi={EditableLsi.common.componentPropsLabel} />,
-    setup: editableComponentPropsSetup
+    setup: editableComponentPropsSetup,
   },
   {
     name: <UU5.Bricks.Lsi lsi={EditableLsi.common.advancedPropsLabel} />,
-    setup: editableAdditionalPropsSetup
-  }
+    setup: editableAdditionalPropsSetup,
+  },
 ];
 
 export const RichLinkEditable = UU5.Common.VisualComponent.create({
@@ -96,21 +96,21 @@ export const RichLinkEditable = UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("RichLinkEditable"),
     classNames: {
-      main: ns.css("rich-link-editable")
-    }
+      main: ns.css("rich-link-editable"),
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    component: UU5.PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      component: undefined
+      component: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -146,7 +146,7 @@ export const RichLinkEditable = UU5.Common.VisualComponent.create({
         componentPropsForm={editablePropsSetup}
       />
     );
-  }
+  },
   //@@viewOff:render
 });
 

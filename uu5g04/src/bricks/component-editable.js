@@ -15,7 +15,7 @@ function getPropsToSave(props, defaultProps) {
 export default UU5.Common.VisualComponent.create({
   getInitialState() {
     return {
-      text: this.props.props.text
+      text: this.props.props.text,
     };
   },
 
@@ -36,10 +36,10 @@ export default UU5.Common.VisualComponent.create({
         buttons={[
           {
             icon: "mdi-check",
-            onClick: () => this.props.onClose(this.getPropsToSave())
-          }
+            onClick: () => this.props.onClose(this.getPropsToSave()),
+          },
         ]}
       />
     );
-  }
+  },
 });

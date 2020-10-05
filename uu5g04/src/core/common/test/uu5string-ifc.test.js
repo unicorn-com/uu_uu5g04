@@ -67,7 +67,7 @@ const mockData = {
   now: "21.05.2018",
   userName: "Jest",
   userEmail: "jest@facebook.com",
-  idHex32: "32-moje-id"
+  idHex32: "32-moje-id",
 };
 
 describe("UU5.Common.Uu5String - test of interface instance", () => {
@@ -155,7 +155,7 @@ describe("UU5.Common.Uu5String - test of interface instance", () => {
     expect(cloneIfc).toEqual(
       expect.objectContaining({
         data:
-          '<uu5string /><UU5.Bricks.Slider id="root2" key="parKey2"><UU5.Bricks.Slider.Item value=10 min="0" max="10" step="5" id="child" key="childrenID"/></UU5.Bricks.Slider>'
+          '<uu5string /><UU5.Bricks.Slider id="root2" key="parKey2"><UU5.Bricks.Slider.Item value=10 min="0" max="10" step="5" id="child" key="childrenID"/></UU5.Bricks.Slider>',
       })
     );
     expect(cloneIfc).toMatchSnapshot();
@@ -272,7 +272,7 @@ describe("UU5.Common.Uu5.String. - test of interface of class", () => {
     expect(UU5.Common.UU5String.contentToChildren([sliderUu5String])).toMatchSnapshot();
     expect(UU5.Common.UU5String.contentToChildren([sliderUu5String])).toEqual(
       expect.arrayContaining([
-        '<uu5string /><UU5.Bricks.Slider id="root" key="parKey"><UU5.Bricks.Slider.Item value=5 id="child" key="childrenID"/></UU5.Bricks.Slider>'
+        '<uu5string /><UU5.Bricks.Slider id="root" key="parKey"><UU5.Bricks.Slider.Item value=5 id="child" key="childrenID"/></UU5.Bricks.Slider>',
       ])
     );
   });
@@ -296,7 +296,7 @@ describe("UU5.Common.Uu5.String. - test of interface of class", () => {
     expect(UU5.Common.UU5String.contentToChildren([formsTextUu5String])).toMatchSnapshot();
     expect(UU5.Common.UU5String.contentToChildren([formsTextUu5String])).toEqual(
       expect.arrayContaining([
-        '<uu5string /><UU5.Forms.Text id="myId" key="parKer" value="John Doe" password="false" patterMessage="Toto není co jsem čekal." pattern="[A-Za-z]{3}"/>'
+        '<uu5string /><UU5.Forms.Text id="myId" key="parKer" value="John Doe" password="false" patterMessage="Toto není co jsem čekal." pattern="[A-Za-z]{3}"/>',
       ])
     );
   });
@@ -336,7 +336,7 @@ describe("UU5.Common.Uu5.String. - test of interface of class", () => {
     // without filter function
     expect(uu5string.toChildren().length).toBe(3);
     // filter empty paragraph - in result array is null instead of filtered component => it is needed to filter result array of children
-    expect(uu5string.toChildren(null, filterFn).filter(item => item !== null).length).toBe(2);
+    expect(uu5string.toChildren(null, filterFn).filter((item) => item !== null).length).toBe(2);
   });
 
   it("differentDataTypesInProps", () => {
@@ -468,41 +468,11 @@ describe("UU5.Common.Uu5.String. - test of interface of class", () => {
       wrapper = mount(<UU5.Common.Div>{uu5string.toChildren()}</UU5.Common.Div>);
     }).not.toThrow();
     // NOTE Result of ...render() is HTML in CheerioWrapper (much like jQuery) - https://cheerio.js.org/
-    expect(
-      wrapper
-        .find("#d1")
-        .first()
-        .render()
-        .text()
-    ).toBe("<<");
-    expect(
-      wrapper
-        .find("#d2")
-        .first()
-        .render()
-        .css("content")
-    ).toBe("a\\b");
-    expect(
-      wrapper
-        .find("#d2")
-        .first()
-        .render()
-        .text()
-    ).toBe('"Value<<😃');
-    expect(
-      wrapper
-        .find("#d3-1")
-        .first()
-        .render()
-        .text()
-    ).toBe('nested div "&quot;< single backslash: \\');
-    expect(
-      wrapper
-        .find("#d3-2")
-        .first()
-        .render()
-        .text()
-    ).toBe("😃 > \\ < text");
+    expect(wrapper.find("#d1").first().render().text()).toBe("<<");
+    expect(wrapper.find("#d2").first().render().css("content")).toBe("a\\b");
+    expect(wrapper.find("#d2").first().render().text()).toBe('"Value<<😃');
+    expect(wrapper.find("#d3-1").first().render().text()).toBe('nested div "&quot;< single backslash: \\');
+    expect(wrapper.find("#d3-2").first().render().text()).toBe("😃 > \\ < text");
 
     text = String.raw`<b>bold</b> <script>script</script> <scRipt>alert</scRipt> <b>bold</b>`;
     uu5string = new UU5.Common.UU5String("<uu5string/>" + text);
@@ -585,11 +555,11 @@ describe("UU5.Common.Uu5.String. - test of interface of class", () => {
     let tests = [
       {
         uu5string: '<uu5string /><div><span className="hello">Hello</span> <span className="world">World</span></div>',
-        plainText: "Hello World"
+        plainText: "Hello World",
       },
       {
         uu5string: '<uu5string /><div><span content="Hello" /> <span content="World" /></div>',
-        plainText: "Hello World"
+        plainText: "Hello World",
       },
       {
         uu5string: `<uu5string />
@@ -599,8 +569,8 @@ describe("UU5.Common.Uu5.String. - test of interface of class", () => {
             content="<uu5string /><UU5.Bricks.P>content</UU5.Bricks.P>">
               children
             </UU5.Bricks.Section>`,
-        plainText: "header content footer"
-      }
+        plainText: "header content footer",
+      },
     ];
 
     tests.forEach(({ uu5string, plainText }) => expect(UU5.Common.UU5String.toPlainText(uu5string)).toBe(plainText));

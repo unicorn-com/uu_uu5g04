@@ -21,7 +21,7 @@ class ScreenSize {
     s: S,
     m: M,
     l: L,
-    xl: XL
+    xl: XL,
   };
 
   static countSize(width = window.innerWidth) {
@@ -69,7 +69,7 @@ class ScreenSize {
       result = value;
     } else if (typeof value === "string") {
       result = {};
-      value.split(" ").forEach(item => {
+      value.split(" ").forEach((item) => {
         let parts = item.match(/^([^-]+)-(.*)$/);
         if (parts) {
           result[parts[1]] = parts[2];
@@ -81,7 +81,9 @@ class ScreenSize {
 
     // filter all non screen size keys from result
     let _result = {};
-    result = Object.keys(result).filter(key => this.SIZE_MAP[key]).forEach(key => _result[key] = result[key]);
+    result = Object.keys(result)
+      .filter((key) => this.SIZE_MAP[key])
+      .forEach((key) => (_result[key] = result[key]));
     result = _result;
 
     // check if result contains some key - if not original value was only string with - and it is not screen size value
@@ -199,11 +201,11 @@ ScreenSize.splitColumns = ScreenSize.parseValue;
 const ScreenSizeContext = Context.create(null);
 Object.defineProperty(ScreenSize, "Context", {
   value: ScreenSizeContext,
-  enumerable: false
+  enumerable: false,
 });
 
 let actualScreenSize = ScreenSize.countSize();
-const resizeFn = e => ScreenSize.setSize(e, ScreenSize.countSize());
+const resizeFn = (e) => ScreenSize.setSize(e, ScreenSize.countSize());
 
 window.addEventListener("resize", resizeFn);
 window.addEventListener("orientationchange", resizeFn);

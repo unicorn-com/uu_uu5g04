@@ -22,7 +22,7 @@ const SIZES = {
   s: { width: 72, height: 24, squareSize: 8 },
   m: { width: 72, height: 24, squareSize: 8 },
   l: { width: 96, height: 40, squareSize: 14 },
-  xl: { width: 96, height: 40, squareSize: 14 }
+  xl: { width: 96, height: 40, squareSize: 14 },
 };
 
 const ColorPreview = UU5.Common.VisualComponent.create({
@@ -36,7 +36,7 @@ const ColorPreview = UU5.Common.VisualComponent.create({
     tagName: ns.name("ColorPreview"),
     classNames: {
       main: ns.css("color-preview"),
-      chessboard: props => {
+      chessboard: (props) => {
         const width = props.width || SIZES[props.size].width;
         const height = props.height || SIZES[props.size].height;
         const squareSize = props.squareSize || SIZES[props.size].squareSize;
@@ -132,8 +132,8 @@ const ColorPreview = UU5.Common.VisualComponent.create({
         }
 
         return classes.join(" ");
-      }
-    }
+      },
+    },
   },
   //@@viewOff:statics
 
@@ -144,7 +144,7 @@ const ColorPreview = UU5.Common.VisualComponent.create({
     width: UU5.PropTypes.number,
     height: UU5.PropTypes.number,
     squareSize: UU5.PropTypes.number,
-    borderRadius: UU5.PropTypes.string
+    borderRadius: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
@@ -176,7 +176,7 @@ const ColorPreview = UU5.Common.VisualComponent.create({
         </div>
       </div>
     );
-  }
+  },
   //@@viewOff:render
 });
 

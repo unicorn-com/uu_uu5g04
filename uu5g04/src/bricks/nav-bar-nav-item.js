@@ -28,7 +28,7 @@ export default UU5.Common.VisualComponent.create({
     UU5.Common.PureRenderMixin,
     UU5.Common.ElementaryMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.ColorSchemaMixin
+    UU5.Common.ColorSchemaMixin,
   ],
   //@@viewOff:mixins
 
@@ -36,14 +36,14 @@ export default UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("NavBar.Nav.Item"),
     classNames: {
-      main: ns.css("nav-bar-nav-item")
+      main: ns.css("nav-bar-nav-item"),
     },
     defaults: {
-      parentTagName: "UU5.Bricks.NavBar.Nav"
+      parentTagName: "UU5.Bricks.NavBar.Nav",
     },
     errors: {
-      invalidParent: "Parent of this component is not NavBar.Nav."
-    }
+      invalidParent: "Parent of this component is not NavBar.Nav.",
+    },
   },
   //@@viewOff:statics
 
@@ -52,23 +52,23 @@ export default UU5.Common.VisualComponent.create({
     onClick: UU5.PropTypes.func,
     href: UU5.PropTypes.string,
     target: UU5.PropTypes.oneOf(["_blank", "_parent", "_top", "_self"]),
-    _size: UU5.PropTypes.string
+    _size: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       onClick: null,
       href: undefined,
       target: "_self",
-      _size: "m"
+      _size: "m",
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  UNSAFE_componentWillMount: function() {
+  UNSAFE_componentWillMount: function () {
     this.checkParentTagName(this.getDefault().parentTagName);
 
     let parent = this.getParent();
@@ -99,7 +99,7 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _onClickHandler: function() {
+  _onClickHandler: function () {
     if (this.isDisabled()) {
       return;
     }
@@ -117,7 +117,7 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     var mainAttrs = this.getMainAttrs();
     mainAttrs.onClick = this._onClickHandler;
 
@@ -152,6 +152,6 @@ export default UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </li>
     );
-  }
+  },
   //@@viewOff:render
 });

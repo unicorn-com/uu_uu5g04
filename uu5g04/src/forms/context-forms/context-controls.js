@@ -32,7 +32,7 @@ export const ContextControls = UU5.Common.Reference.forward(({ align, className,
           margin-left: 8px;
         }
       }
-    `
+    `,
   ];
   if (className) classNames.push(className);
 
@@ -46,10 +46,10 @@ export const ContextControls = UU5.Common.Reference.forward(({ align, className,
 ContextControls.displayName = ContextControls.tagName = ns.name("ContextControls");
 ContextControls.propTypes = {
   ...Controls.propTypes,
-  align: UU5.PropTypes.oneOf(["left", "center", "right"])
+  align: UU5.PropTypes.oneOf(["left", "center", "right"]),
 };
 ContextControls.defaultProps = {
-  align: "right"
+  align: "right",
 };
 
 export default ContextControls;

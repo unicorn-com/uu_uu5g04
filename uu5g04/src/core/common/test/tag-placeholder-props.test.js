@@ -81,14 +81,14 @@ beforeEach(() => {
     doc: "https://uuos9.plus4u.net/uu-dockitg01-main/78462435-e3f5c648e85f4319bd8fc25ea5be6c2c/book",
     dependencyMap: {
       uu5g04: "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
-      "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js"
+      "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
     },
     awid: "fe96c133c895434bbd4d5b24831483f3",
     sys: { cts: "2018-03-07T20:39:58.133Z", mts: "2018-03-07T20:39:58.133Z", rev: 0 },
-    uuAppErrorMap: {}
+    uuAppErrorMap: {},
   };
 
-  UU5.Common.Tools.loadLibrary = function(libName, callback) {
+  UU5.Common.Tools.loadLibrary = function (libName, callback) {
     setTimeout(() => callback(block_danger_response), 0);
   };
 });
@@ -107,15 +107,15 @@ describe(`UU5.Common.TagPlaceholder`, () => {
       const wrapperShallow = shallow(<UU5.Bricks.Div id={"divID1"} content={uu5string_controls} />);
 
       let tagPlaceholder = wrapper.findWhere(
-        node =>
+        (node) =>
           node.instance() && node.instance().getTagName && node.instance().getTagName() === "UU5.Common.TagPlaceholder"
       );
       expect(tagPlaceholder.exists()).toBe(true);
       expect(tagPlaceholder.props()).toMatchObject({
         tagName: "UU5.Forms.Controls",
         props: {
-          buttonReset: true
-        }
+          buttonReset: true,
+        },
       });
       expect(wrapperShallow).toMatchSnapshot();
       // wait for TagPlaceholder to load the target file and prepare the component
@@ -129,7 +129,7 @@ describe(`UU5.Common.TagPlaceholder`, () => {
       wrapper.update();
       wrapperShallow.update();
       let formControls = wrapper.findWhere(
-        node => node.instance() && node.instance().getTagName && node.instance().getTagName() === "UU5.Forms.Controls"
+        (node) => node.instance() && node.instance().getTagName && node.instance().getTagName() === "UU5.Forms.Controls"
       );
       expect(formControls.length).toBe(1);
       expect(formControls.props()).toMatchObject({ buttonReset: true });
@@ -144,7 +144,7 @@ describe(`UU5.Common.TagPlaceholder`, () => {
     jest.useFakeTimers();
     let calls = UU5.Common.Tools.findComponent("UuDocKit.Bricks.BlockDanger", {
       content: "Je lepší bejt chytrej nežli hloupej.",
-      id: "componentRegistryId"
+      id: "componentRegistryId",
     });
     jest.runOnlyPendingTimers();
     expect(calls).toMatchSnapshot();

@@ -30,7 +30,7 @@ export default UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.ContentMixin,
     UU5.Common.NestingLevelMixin,
-    UU5.Common.PureRenderMixin
+    UU5.Common.PureRenderMixin,
   ],
   //@@viewOff:mixins
 
@@ -46,15 +46,15 @@ export default UU5.Common.VisualComponent.create({
       subMenu: ns.css("dropdown-submenu", "dropdown-menu"),
       subMenuItem: ns.css("dropdown-item-submenu"),
       dropup: ns.css("dropdown-item-submenu-dropup"),
-      disabledItem: "disabled"
+      disabledItem: "disabled",
     },
     defaults: {
-      childTagName: "UU5.Bricks.Dropdown.Item"
+      childTagName: "UU5.Bricks.Dropdown.Item",
     },
     errors: {
       maxLevel: "Max submenu level is 3!",
-      invalidParent: "Parent of this component is not Dropdown."
-    }
+      invalidParent: "Parent of this component is not Dropdown.",
+    },
   },
   //@@viewOff:statics
 
@@ -71,7 +71,7 @@ export default UU5.Common.VisualComponent.create({
     offset: UU5.PropTypes.number,
     target: UU5.PropTypes.string,
     dropup: UU5.PropTypes.bool,
-    linkProps: UU5.PropTypes.object
+    linkProps: UU5.PropTypes.object,
   },
   //@@viewOff:propTypes
 
@@ -89,7 +89,7 @@ export default UU5.Common.VisualComponent.create({
       offset: null,
       target: "_self",
       dropup: false,
-      linkProps: null
+      linkProps: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -128,7 +128,7 @@ export default UU5.Common.VisualComponent.create({
       content: this.props.label,
       parent: this,
       disabled: this.isDisabled(),
-      colorSchema: "custom"
+      colorSchema: "custom",
     };
 
     if (!this.isDisabled()) {
@@ -185,7 +185,7 @@ export default UU5.Common.VisualComponent.create({
       content: content,
       parent: this,
       disabled: this.isDisabled(),
-      colorSchema: "custom"
+      colorSchema: "custom",
     };
 
     if (!this.isDisabled()) {
@@ -214,16 +214,9 @@ export default UU5.Common.VisualComponent.create({
     if (
       this.getParent() !== null &&
       this.getParent().getParent() !== null &&
-      this.getParent()
-        .getParent()
-        .getParent() !== null
+      this.getParent().getParent().getParent() !== null
     ) {
-      if (
-        this.getParent()
-          .getParent()
-          .getParent()
-          .getTagName() === "UU5.Bricks.Dropdown"
-      ) {
+      if (this.getParent().getParent().getParent().getTagName() === "UU5.Bricks.Dropdown") {
         this.showError("maxLevel");
         return (
           <li {...props}>
@@ -251,8 +244,8 @@ export default UU5.Common.VisualComponent.create({
       contentProps = {
         content: {
           tag: this.getDefault().childTagName,
-          propsArray: this.props.items
-        }
+          propsArray: this.props.items,
+        },
       };
     } else if (this.props.children) {
       if (this.isDynamic()) {
@@ -292,6 +285,6 @@ export default UU5.Common.VisualComponent.create({
     }
 
     return result;
-  }
+  },
   //@@viewOff:render
 });

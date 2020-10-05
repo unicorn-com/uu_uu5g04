@@ -16,12 +16,12 @@ import "uu5g04-bricks";
 
 import Css from "./css.js";
 
-const getColor = function(colorSchema = "grey", depth = colorSchema === "black" ? 900 : 500) {
+const getColor = function (colorSchema = "grey", depth = colorSchema === "black" ? 900 : 500) {
   let color = UU5.Environment.colors[colorSchema] || UU5.Environment.colors.grey;
   return color["c" + depth] || color.c500;
 };
 
-const ColorSquare = props => {
+const ColorSquare = (props) => {
   return (
     <div
       title={props.title || props.colorSchema}
@@ -73,12 +73,12 @@ ColorSquare.propTypes = {
   title: UU5.PropTypes.string,
   colorSchema: UU5.PropTypes.string,
   height: UU5.PropTypes.string,
-  width: UU5.PropTypes.string
+  width: UU5.PropTypes.string,
 };
 
 ColorSquare.defaultProps = {
   width: "32px",
-  height: "32px"
+  height: "32px",
 };
 
 export default ColorSquare;

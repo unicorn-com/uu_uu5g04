@@ -24,7 +24,7 @@ const itemProps = {
   closeDisabled: true,
   timeout: 10000,
   onClick: null,
-  onClose: null
+  onClose: null,
 };
 
 const itemSecondProps = {
@@ -35,7 +35,7 @@ const itemSecondProps = {
   closeDisabled: false,
   timeout: 20000,
   onClick: null,
-  onClose: null
+  onClose: null,
 };
 
 describe(`UU5.Bricks.ProgressBus interface testing`, () => {
@@ -50,10 +50,7 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toEqual(expect.any(String));
-    const lastItem = wrapper
-      .instance()
-      .getItemList()
-      .pop();
+    const lastItem = wrapper.instance().getItemList().pop();
     const returnValueOfGetItem = wrapper.instance().getItem(lastItem.id);
     expect(returnValueOfGetItem).toEqual(
       expect.objectContaining({
@@ -64,7 +61,7 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
         closeDisabled: true,
         timeout: 10000,
         onClick: null,
-        onClose: null
+        onClose: null,
       })
     );
   });
@@ -84,10 +81,7 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toEqual(expect.any(String));
-    const lastItem = wrapper
-      .instance()
-      .getItemList()
-      .pop();
+    const lastItem = wrapper.instance().getItemList().pop();
     const returnValueOfGetItem = wrapper.instance().getItem(lastItem.id);
     expect(returnValueOfGetItem).toEqual(
       expect.objectContaining({
@@ -98,13 +92,10 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
         closeDisabled: true,
         timeout: 10000,
         onClick: null,
-        onClose: null
+        onClose: null,
       })
     );
-    const lastItemRemove = wrapper
-      .instance()
-      .getItemList()
-      .pop();
+    const lastItemRemove = wrapper.instance().getItemList().pop();
     const removeItemReturnValue = wrapper.instance().removeItem(lastItemRemove.id, mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
@@ -123,10 +114,7 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    const lastItem = wrapper
-      .instance()
-      .getItemList()
-      .pop();
+    const lastItem = wrapper.instance().getItemList().pop();
     const returnValueOfGetItem = wrapper.instance().getItem(lastItem.id);
     expect(returnValueOfGetItem).toEqual(
       expect.objectContaining({
@@ -137,7 +125,7 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
         closeDisabled: true,
         timeout: 10000,
         onClick: null,
-        onClose: null
+        onClose: null,
       })
     );
   });
@@ -163,7 +151,7 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
         closeDisabled: true,
         timeout: 10000,
         onClick: null,
-        onClose: null
+        onClose: null,
       })
     );
   });
@@ -198,10 +186,7 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toEqual(expect.any(String));
 
-    const lastItem = wrapper
-      .instance()
-      .getItemList()
-      .pop();
+    const lastItem = wrapper.instance().getItemList().pop();
     const returnValueOfGetItem = wrapper.instance().getItem(lastItem.id);
     expect(returnValueOfGetItem).toEqual(
       expect.objectContaining({
@@ -212,7 +197,7 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
         closeDisabled: true,
         timeout: 10000,
         onClick: null,
-        onClose: null
+        onClose: null,
       })
     );
     const returnSetItem = wrapper.instance().setItem(lastItem.id, itemSecondProps, mockFunc);
@@ -230,7 +215,7 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
         closeDisabled: false,
         timeout: 20000,
         onClick: null,
-        onClose: null
+        onClose: null,
       })
     );
   });
@@ -245,10 +230,7 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toEqual(expect.any(String));
-    const lastItem = wrapper
-      .instance()
-      .getItemList()
-      .pop();
+    const lastItem = wrapper.instance().getItemList().pop();
     const returnValueOfGetItem = wrapper.instance().getItem(lastItem.id);
     expect(returnValueOfGetItem).toEqual(
       expect.objectContaining({
@@ -259,7 +241,7 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
         closeDisabled: true,
         timeout: 10000,
         onClick: null,
-        onClose: null
+        onClose: null,
       })
     );
     const returnupdateItem = wrapper.instance().updateItem(lastItem.id, itemSecondProps, mockFunc);
@@ -277,7 +259,7 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
         closeDisabled: false,
         timeout: 20000,
         onClick: null,
-        onClose: null
+        onClose: null,
       })
     );
   });
@@ -311,7 +293,7 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
           timeout: 10000,
           onClick: null,
           onClose: null,
-          id: expect.any(String)
+          id: expect.any(String),
         },
         {
           code: "SK002",
@@ -322,8 +304,8 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
           timeout: 20000,
           onClick: null,
           onClose: null,
-          id: expect.any(String)
-        }
+          id: expect.any(String),
+        },
       ])
     );
   });
@@ -339,10 +321,7 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toEqual(expect.any(String));
-    const lastItem = wrapper
-      .instance()
-      .getItemList()
-      .pop();
+    const lastItem = wrapper.instance().getItemList().pop();
     const returnValueOfGetItem = wrapper.instance().getItem(lastItem.id);
     expect(returnValueOfGetItem).toEqual(
       expect.objectContaining({
@@ -353,7 +332,7 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
         closeDisabled: true,
         timeout: 10000,
         onClick: null,
-        onClose: null
+        onClose: null,
       })
     );
     const returnOfShowAlert = wrapper.instance().showAlert(lastItem.id, mockFunc);
@@ -376,10 +355,7 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toEqual(expect.any(String));
-    const lastItem = wrapper
-      .instance()
-      .getItemList()
-      .pop();
+    const lastItem = wrapper.instance().getItemList().pop();
     const returnValueOfGetItem = wrapper.instance().getItem(lastItem.id);
     expect(returnValueOfGetItem).toEqual(
       expect.objectContaining({
@@ -390,7 +366,7 @@ describe(`UU5.Bricks.ProgressBus interface testing`, () => {
         closeDisabled: true,
         timeout: 10000,
         onClick: null,
-        onClose: null
+        onClose: null,
       })
     );
     const returnOfShowAlert = wrapper.instance().showAlert(lastItem.id, mockFunc);

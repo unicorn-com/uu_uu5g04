@@ -27,21 +27,21 @@ export const LsiContext = UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("LsiContext"),
     classNames: {
-      main: ns.css("lsi-context")
-    }
+      main: ns.css("lsi-context"),
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    localLsi: UU5.PropTypes.bool
+    localLsi: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      localLsi: false
+      localLsi: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -56,12 +56,12 @@ export const LsiContext = UU5.Common.VisualComponent.create({
         setLanguage: this._setContextLanguage,
         getLanguage: this.getLanguage,
         registerLsi: this._registerLsi,
-        unregisterLsi: this._unregisterLsi
-      }
+        unregisterLsi: this._unregisterLsi,
+      },
     };
   },
 
-  componentDidMount: function() {
+  componentDidMount: function () {
     window.UU5.Environment.EventListener.registerLsi(this.getId(), this._onChangeLanguage);
   },
 
@@ -92,7 +92,7 @@ export const LsiContext = UU5.Common.VisualComponent.create({
       UU5.Common.Tools.error("Listener in registerLsi parameter is not a function.", {
         component: "UU5.Bricks.LsiContext",
         id: this.getId(),
-        function: "registerLsi"
+        function: "registerLsi",
       });
     }
   },
@@ -165,7 +165,7 @@ export const LsiContext = UU5.Common.VisualComponent.create({
         {this.getChildren()}
       </UU5.Common.LsiMixin.Context.Provider>
     );
-  }
+  },
   //@@viewOff:render
 });
 

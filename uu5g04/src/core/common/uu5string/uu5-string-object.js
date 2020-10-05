@@ -94,7 +94,7 @@ export const UU5StringObject = class UU5StringObject {
         let { resultTag, resultProps } = _result;
         tag = resultTag;
         // remove children from props
-        resultProps = resultProps.filter(item => {
+        resultProps = resultProps.filter((item) => {
           if (item.name === "children") {
             children = item.value;
             return false;
@@ -146,7 +146,7 @@ export const UU5StringObject = class UU5StringObject {
         propsArray.push({
           name: "children",
           value: children.slice(),
-          valueType: "uu5string"
+          valueType: "uu5string",
         });
       }
       let result;
@@ -186,7 +186,7 @@ export const UU5StringObject = class UU5StringObject {
     */
     this.toChildren = (data, filterFn, preferChildrenAsFunction) => {
       if (this.tag === "uu5string.pre") {
-        return this.children.map(it => {
+        return this.children.map((it) => {
           if (typeof it === "string") return Environment.textEntityMap.replaceHtmlEntity(it);
           return it;
         });
@@ -205,7 +205,7 @@ export const UU5StringObject = class UU5StringObject {
         }
         let { resultTag, resultProps } = _result;
         // remove children from props
-        resultProps = resultProps.filter(item => {
+        resultProps = resultProps.filter((item) => {
           if (item.name === "children") {
             children = item.value;
             return false;
@@ -225,7 +225,7 @@ export const UU5StringObject = class UU5StringObject {
       let returnValue;
       let usedChildren = UU5StringTools.contentToChildren(children, data, filterFn, preferChildrenAsFunction);
       if (preferChildrenAsFunction) {
-        returnValue = extraProps =>
+        returnValue = (extraProps) =>
           Tools.findComponent(result.tag, extraProps ? { ...extraProps, ...result.props } : result.props, usedChildren);
       } else {
         returnValue = Tools.findComponent(result.tag, result.props, usedChildren);
@@ -242,7 +242,7 @@ export const UU5StringObject = class UU5StringObject {
       // filter props by filter function
       let result = { tag: this.tag, props: this.props.clone(initFn) };
       // clone children at first
-      result.children = this.children.map(item => (typeof item === "string" ? item : item.clone(initFn)));
+      result.children = this.children.map((item) => (typeof item === "string" ? item : item.clone(initFn)));
       // create new object - props are already cloned so do not send them into constructor
       let newUu5stringObject = new UU5StringObject(result.tag, null, result.children, this._isPairTag(), initFn);
       newUu5stringObject.props = result.props;
@@ -262,14 +262,14 @@ export const UU5StringObject = class UU5StringObject {
     this._initContent = () => {
       // set parent to children
       if (this.children && Array.isArray(this.children)) {
-        this.children.forEach(item => {
+        this.children.forEach((item) => {
           if (item && typeof item === "object") item.parent = this;
         });
       }
       if (this.props && this.props.props) {
-        let content = this.props.props.find(item => item.name === "content");
+        let content = this.props.props.find((item) => item.name === "content");
         if (content && Array.isArray(content.value)) {
-          content.value.forEach(item => {
+          content.value.forEach((item) => {
             if (item && typeof item === "object") item.parent = this;
           });
         }
@@ -289,14 +289,14 @@ export const UU5StringObject = class UU5StringObject {
         filteredProps[propName] = counter++;
       }
       // filter result by obj
-      let propsArray = this.props.props.filter(prop => filteredProps[prop.name]);
+      let propsArray = this.props.props.filter((prop) => filteredProps[prop.name]);
 
       if (preserveObjectOrder) {
         propsArray.sort((prop1, prop2) => filteredProps[prop1.name] - filteredProps[prop2.name]);
       }
       // update values
       for (let propName in propsObj.props) {
-        let prop = propsArray.find(item => item.name === propName);
+        let prop = propsArray.find((item) => item.name === propName);
         if (prop) {
           // update value
           prop.value = propsObj.props[propName];
@@ -304,7 +304,7 @@ export const UU5StringObject = class UU5StringObject {
           // add new props
           propsArray.push({
             name: propName,
-            value: propsObj.props[propName]
+            value: propsObj.props[propName],
           });
         }
       }
@@ -331,7 +331,7 @@ export const UU5StringObject = class UU5StringObject {
       children.forEach((child, index) => {
         if (child.tag === "uu5string" || child.tag === "uu5json") {
           // find property propName
-          let propName = child.props.props.find(prop => prop.name === "propName");
+          let propName = child.props.props.find((prop) => prop.name === "propName");
           if (propName) {
             childProps[propName.value] = { child, index: index };
             if (index > 0 && typeof children[index - 1] === "string" && children[index - 1].match(/^\s+$/)) {
@@ -376,7 +376,7 @@ export const UU5StringObject = class UU5StringObject {
         valueType: childProps[propName].child.tag,
         childrenProperty: true,
         index: childProps[propName].index,
-        spacesBefore: childProps[propName].spacesBefore
+        spacesBefore: childProps[propName].spacesBefore,
       });
     }
 

@@ -23,7 +23,7 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Common.NestingLevelMixin",
     "UU5.Common.ContentMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     actions: {
@@ -32,7 +32,7 @@ const CONFIG = {
           {
             icon: "mdi-phone",
             active: true,
-            content: "Phone"
+            content: "Phone",
           },
           {
             icon: "mdi-phone",
@@ -40,61 +40,64 @@ const CONFIG = {
             active: true,
             bgStyle: "transparent",
             borderRadius: "8px",
-            disabled: true
+            disabled: true,
           },
           {
             icon: "mdi-phone",
             content: {
               cs: "Telefon",
-              en: "Phone"
-            }
-          }
+              en: "Phone",
+            },
+          },
         ],
         [
           {
             icon: "mdi-phone",
-            content: "Phone"
+            content: "Phone",
           },
           {
             icon: "mdi-phone",
             content: {
               cs: "Telefon",
-              en: "Phone"
-            }
-          }
+              en: "Phone",
+            },
+          },
         ],
         [
           {
             activeContent: "Phone",
             content: "Call",
-            icon: "mdi-phone"
-          }
+            icon: "mdi-phone",
+          },
         ],
         [
           {
             activeContent: "Phone",
             content: "Call",
             activeIcon: "mdi-check",
-            icon: "mdi-phone"
-          }
+            icon: "mdi-phone",
+          },
         ],
         [
           {
             icon: "mdi-settings",
             content: "Settings",
             active: true,
-            colorSchema: "primary"
-          }
+            colorSchema: "primary",
+          },
         ],
-        [{ icon: "mdi-email", content: "Send E-mail" }, { icon: "mdi-settings", content: "Settings" }]
-      ]
-    }
+        [
+          { icon: "mdi-email", content: "Send E-mail" },
+          { icon: "mdi-settings", content: "Settings" },
+        ],
+      ],
+    },
   },
   requiredProps: {
     onClick: () => "TODO",
-    children: <UU5.BlockLayout.Row>Test</UU5.BlockLayout.Row>
+    children: <UU5.BlockLayout.Row>Test</UU5.BlockLayout.Row>,
   },
-  opt: {}
+  opt: {},
 };
 
 describe(`UU5.BlockLayout.Block props testing`, () => {
@@ -111,10 +114,10 @@ describe(`UU5.BlockLayout.Block props testing`, () => {
             icon: "mdi-settings",
             content: "Settings",
             active: true,
-            colorSchema: "primary"
+            colorSchema: "primary",
           },
           { icon: "mdi-email", content: "Send E-mail" },
-          { icon: "mdi-settings", content: "Settings" }
+          { icon: "mdi-settings", content: "Settings" },
         ]}
       />
     );

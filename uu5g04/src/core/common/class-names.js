@@ -23,7 +23,7 @@ export const ClassNames = {
   link: "uu5-common-bg-style-link",
   elevation: "uu5-common-elevation-",
   elevationHover: "uu5-common-elevation-hover-",
-  forceRich: "uu5-common-force-rich"
+  forceRich: "uu5-common-force-rich",
 };
 
 export default ClassNames;

@@ -27,7 +27,7 @@ export default UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.NestingLevelMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.ColorSchemaMixin
+    UU5.Common.ColorSchemaMixin,
   ],
   //@@viewOff:mixins
 
@@ -36,40 +36,40 @@ export default UU5.Common.VisualComponent.create({
     tagName: ns.name("Table.ColGroup"),
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "smallBox"),
     classNames: {
-      main: ns.css("table-col-group")
+      main: ns.css("table-col-group"),
       //bg: 'uu5-common-bg'
     },
     defaults: {
       parentTagName: "UU5.Bricks.Table",
-      childTagNames: ["UU5.Bricks.Table.Col"]
+      childTagNames: ["UU5.Bricks.Table.Col"],
     },
     opt: {
-      nestingLevelWrapper: true
+      nestingLevelWrapper: true,
     },
     errors: {
-      invalidParent: "Parent of this component is not Table."
-    }
+      invalidParent: "Parent of this component is not Table.",
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
     //background: UU5.PropTypes.bool,
-    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string)
+    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       //background: false,
-      allowTags: []
+      allowTags: [],
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  UNSAFE_componentWillMount: function() {
+  UNSAFE_componentWillMount: function () {
     let parent = this.getParent();
 
     if (parent) {
@@ -92,7 +92,7 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:interface
 
   //@@viewOn:overriding
-  shouldChildRender_: function(child) {
+  shouldChildRender_: function (child) {
     let childTagName = UU5.Common.Tools.getChildTagName(child);
     let defaultChildTagNames = this.getDefault().childTagNames;
     let childTagNames = this.props.allowTags.concat(defaultChildTagNames);
@@ -100,7 +100,7 @@ export default UU5.Common.VisualComponent.create({
     if (!result && (typeof child !== "string" || child.trim())) {
       if (childTagName)
         this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagNames[0]], {
-          mixinName: "UU5.Common.BaseMixin"
+          mixinName: "UU5.Common.BaseMixin",
         });
       else this.showError("childNotAllowed", [child, defaultChildTagNames[0]], { mixinName: "UU5.Common.BaseMixin" });
     }
@@ -109,7 +109,7 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _getMainProps: function() {
+  _getMainProps: function () {
     var props = this.getMainAttrs();
     //this.props.background && (props.className += ' ' + this.getClassName().bg);
     return props;
@@ -117,8 +117,8 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return this.getNestingLevel() ? <colgroup {...this._getMainProps()}>{this.getChildren()}</colgroup> : null;
-  }
+  },
   //@@viewOff:render
 });

@@ -385,7 +385,7 @@ describe("UU5.Forms.InputMixin interface", () => {
         message: null,
         value: "",
         foundAutocompleteItems: null,
-        selectedIndex: null
+        selectedIndex: null,
       })
     );
     expect(wrapper).toMatchSnapshot();
@@ -402,14 +402,14 @@ describe("UU5.Forms.InputMixin interface", () => {
         message: null,
         value: "",
         foundAutocompleteItems: null,
-        selectedIndex: null
+        selectedIndex: null,
       })
     );
     const returnValue = wrapper.instance().setChangeFeedback(
       {
         feedback: "error",
         message: "Error message from setChangeFeedback",
-        value: "Error text"
+        value: "Error text",
       },
       mockFunc
     );
@@ -644,17 +644,17 @@ describe("UU5.Forms.TextInputMixin interface", () => {
         value=""
         autocompleteItems={[
           {
-            value: "Aneta"
+            value: "Aneta",
           },
           {
-            value: "Albert"
+            value: "Albert",
           },
           {
-            value: "Honza"
+            value: "Honza",
           },
           {
-            value: "Alzbeta"
-          }
+            value: "Alzbeta",
+          },
         ]}
         required={true}
         size="s"
@@ -690,7 +690,7 @@ describe("UU5.Forms.TextInputMixin interface", () => {
       expect.objectContaining({
         feedback: "initial",
         message: null,
-        value: undefined
+        value: undefined,
       })
     );
     expect(wrapper).toMatchSnapshot();
@@ -706,17 +706,17 @@ describe("UU5.Forms.TextInputMixin interface", () => {
     const returnValue = wrapper.instance().setAutoCompleteItems(
       [
         {
-          value: "Kovar"
+          value: "Kovar",
         },
         {
-          value: "Novak"
+          value: "Novak",
         },
         {
-          value: "Novotny"
+          value: "Novotny",
         },
         {
-          value: "Svacina"
-        }
+          value: "Svacina",
+        },
       ],
       null,
       mockFunc

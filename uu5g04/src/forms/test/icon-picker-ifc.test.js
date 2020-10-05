@@ -379,7 +379,7 @@ describe("UU5.Forms.IconPicker interface", () => {
       expect.objectContaining({
         feedback: "initial",
         message: null,
-        value: ""
+        value: "",
       })
     );
     expect(wrapper).toMatchSnapshot();
@@ -392,14 +392,14 @@ describe("UU5.Forms.IconPicker interface", () => {
       expect.objectContaining({
         feedback: "initial",
         message: null,
-        value: ""
+        value: "",
       })
     );
     const returnValue = wrapper.instance().setChangeFeedback(
       {
         feedback: "error",
         message: "Error message from setChangeFeedback",
-        value: "wrong value"
+        value: "wrong value",
       },
       mockFunc
     );

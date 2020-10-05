@@ -56,9 +56,9 @@ export const Unauthorized = UU5.Common.VisualComponent.create({
       `,
       icon: (props, { nestingLevel }) => Css.css`
         ${nestingLevel ? "font-size: 32px" : ""}
-      `
+      `,
     },
-    lsi: () => Lsi.unauthorized
+    lsi: () => Lsi.unauthorized,
   },
   //@@viewOff:statics
 
@@ -66,7 +66,7 @@ export const Unauthorized = UU5.Common.VisualComponent.create({
   propTypes: {
     width: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
     height: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
-    content: UU5.PropTypes.any
+    content: UU5.PropTypes.any,
   },
   //@@viewOff:propTypes
 
@@ -75,7 +75,7 @@ export const Unauthorized = UU5.Common.VisualComponent.create({
     return {
       width: undefined,
       height: undefined,
-      content: undefined
+      content: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -124,9 +124,9 @@ export const Unauthorized = UU5.Common.VisualComponent.create({
           <UU5.Bricks.Icon icon="mdi-cancel" className={this.getClassName("icon")} />
           <div className={this.getClassName("textWrapper")}>{this._getContent()}</div>
         </span>
-      )
+      );
     }
-  }
+  },
   //@@viewOff:render
 });
 

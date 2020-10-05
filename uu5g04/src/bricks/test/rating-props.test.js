@@ -21,7 +21,7 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 const MyRatingHandler = UU5.Common.VisualComponent.create({
   getInitialState: () => {
     return {
-      isCalled: false
+      isCalled: false,
     };
   },
 
@@ -32,7 +32,7 @@ const MyRatingHandler = UU5.Common.VisualComponent.create({
 
   render() {
     return <UU5.Bricks.Rating id={"uuID"} value={2} onClick={this.onClickHandler} />;
-  }
+  },
 });
 
 const CONFIG = {
@@ -41,29 +41,29 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.ContentMixin"
+    "UU5.Common.ContentMixin",
   ],
   props: {
     count: {
-      values: [0, 5]
+      values: [0, 5],
     },
     value: {
-      values: [2, 1.5]
+      values: [2, 1.5],
     },
     //onClick
     icon: {
-      values: ["mdi-pinteres"]
+      values: ["mdi-pinteres"],
     },
     size: {
-      values: ["s", "m", "l", "xl"]
-    }
+      values: ["s", "m", "l", "xl"],
+    },
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 const This = {};

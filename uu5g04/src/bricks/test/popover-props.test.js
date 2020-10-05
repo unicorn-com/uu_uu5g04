@@ -24,7 +24,7 @@ const CONFIG = {
     "UU5.Common.LevelMixin",
     "UU5.Common.ContentMixin",
     "UU5.Common.CcrWriterMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     // NOTE Skipping because controlled/hidden/shown doesn't work properly with each other and there's
@@ -32,21 +32,21 @@ const CONFIG = {
     shown: {
       values: [true, false],
       opt: {
-        skip: true
-      }
+        skip: true,
+      },
     },
     parentElement: {
-      values: [this]
-    }
+      values: [this],
+    },
   },
   requiredProps: {
-    children: [<UU5.Bricks.Button key={"childrenKey"} id={"childID"} content={"I am button in pop over"} />]
+    children: [<UU5.Bricks.Button key={"childrenKey"} id={"childID"} content={"I am button in pop over"} />],
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Popover`, () => {

@@ -25,7 +25,7 @@ const loadTest = async (key, wrapper, childrenFn, onLoadFn, dataProp, dataReturn
     viewState: "load",
     errorState: null,
     errorData: null,
-    data: null
+    data: null,
   });
   expect(typeof childrenParams1.handleLoad).toBe("function");
   expect(typeof childrenParams1.handleReload).toBe("function");
@@ -49,7 +49,7 @@ const loadTest = async (key, wrapper, childrenFn, onLoadFn, dataProp, dataReturn
     viewState: "ready",
     errorState: null,
     errorData: null,
-    data: dataReturn
+    data: dataReturn,
   });
   expect(typeof childrenParams2.handleLoad).toBe("function");
   expect(typeof childrenParams2.handleReload).toBe("function");
@@ -76,7 +76,7 @@ const testHandle = async (key, wrapper, childrenFn, fn, calledTimes, paramsData,
     viewState: resultData2 ? key : "ready",
     errorState: null,
     errorData: null,
-    data: resultData1
+    data: resultData1,
   });
   expect(typeof childrenParams3.handleLoad).toBe("function");
   expect(typeof childrenParams3.handleReload).toBe("function");
@@ -89,7 +89,7 @@ const testHandle = async (key, wrapper, childrenFn, fn, calledTimes, paramsData,
       viewState: "ready",
       errorState: null,
       errorData: null,
-      data: resultData2
+      data: resultData2,
     });
     expect(typeof childrenParams4.handleLoad).toBe("function");
     expect(typeof childrenParams4.handleReload).toBe("function");

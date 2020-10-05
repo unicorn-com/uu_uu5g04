@@ -15,7 +15,7 @@ const ERRORS = {
   "uu5/e001": "No internet connection",
   "uu5/e002": "Unknown Error",
   "uu5/e004": "Client Error",
-  "uu5/e005": "Server Error"
+  "uu5/e005": "Server Error",
 };
 
 class UU5Request {
@@ -28,7 +28,7 @@ class UU5Request {
       headers,
       method,
       // TODO binary, ...
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
     };
 
     if (method === "GET") {
@@ -40,7 +40,7 @@ class UU5Request {
       let request = new Request(url, params);
 
       fetch(request)
-        .then(response => {
+        .then((response) => {
           let contentType = response.headers.get("content-type");
 
           let dataPromise;
@@ -50,7 +50,7 @@ class UU5Request {
             dataPromise = response.json();
 
             // TODO: another blob content types
-          } else if (["image", "audio", "video", "octet-stream", "zip"].find(v => contentType.includes(v))) {
+          } else if (["image", "audio", "video", "octet-stream", "zip"].find((v) => contentType.includes(v))) {
             dataPromise = response.blob();
           } else {
             dataPromise = contentType.startsWith("text/") ? response.text() : response.blob();
@@ -61,7 +61,7 @@ class UU5Request {
         .then(({ response, dataPromise }) => {
           if (response.status === 200) {
             // TODO: do resolve, reject just one param
-            dataPromise.then(data => resolve(UU5Request._getDtoOut(url, data, response), response));
+            dataPromise.then((data) => resolve(UU5Request._getDtoOut(url, data, response), response));
           } else {
             // TODO: error handling with uu dtoOut structure
             let code = "uu5/e002";
@@ -72,13 +72,13 @@ class UU5Request {
             }
 
             if (dataPromise) {
-              dataPromise.then(data => reject(UU5Request._getDtoOut(url, data, response, code), response));
+              dataPromise.then((data) => reject(UU5Request._getDtoOut(url, data, response, code), response));
             } else {
               reject(UU5Request._getDtoOut(url, data, response, code), response);
             }
           }
         })
-        .catch(response => {
+        .catch((response) => {
           if (window.navigator.onLine) {
             reject(UU5Request._getDtoOut(url, data, response, "uu5/e002"), response);
           } else {
@@ -100,7 +100,7 @@ class UU5Request {
     let dtoOut = {
       url,
       status: response.status,
-      data
+      data,
     };
 
     if (code) {
@@ -111,7 +111,7 @@ class UU5Request {
     return dtoOut;
   }
 
-  static _encodeValue = value => {
+  static _encodeValue = (value) => {
     let result = value + "";
 
     if (value && (Array.isArray(value) || typeof value === "object")) {
@@ -121,7 +121,7 @@ class UU5Request {
     return encodeURIComponent(result);
   };
 
-  static _encodeQuery = params => {
+  static _encodeQuery = (params) => {
     let query = "?";
 
     for (let name in params) {

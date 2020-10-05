@@ -29,7 +29,7 @@ export const TextCorrector = withTextCorrectorContext(
 
     //@@viewOn:statics
     statics: {
-      tagName: "UU5.Common.TextCorrector"
+      tagName: "UU5.Common.TextCorrector",
     },
     //@@viewOff:statics
 
@@ -39,7 +39,7 @@ export const TextCorrector = withTextCorrectorContext(
       checkHighlight: PropTypes.bool,
       checkSpaces: PropTypes.bool,
       textCorrector: PropTypes.bool,
-      language: PropTypes.string
+      language: PropTypes.string,
     },
     //@@viewOff:propTypes
 
@@ -50,7 +50,7 @@ export const TextCorrector = withTextCorrectorContext(
         checkHighlight: undefined,
         checkSpaces: undefined,
         textCorrector: undefined,
-        language: null
+        language: null,
       };
     },
     //@@viewOff:getDefaultProps
@@ -76,13 +76,13 @@ export const TextCorrector = withTextCorrectorContext(
             checkHighlight:
               this.props.checkHighlight !== undefined ? this.props.checkHighlight : this.props.textCorrector,
             checkSpaces: this.props.checkSpaces !== undefined ? this.props.checkSpaces : this.props.textCorrector,
-            language: this.props.language
+            language: this.props.language,
           }}
         >
           {this.getChildren()}
         </TextCorrectorContext.Provider>
       );
-    }
+    },
     //@@viewOff:render
   })
 );

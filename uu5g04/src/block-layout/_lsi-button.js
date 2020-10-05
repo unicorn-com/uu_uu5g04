@@ -24,13 +24,13 @@ const LsiButton = UU5.Common.VisualComponent.create({
 
   //@@viewOn:statics
   statics: {
-    tagName: TAG + "LsiButton"
+    tagName: TAG + "LsiButton",
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    tooltip: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.object])
+    tooltip: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.object]),
   },
   //@@viewOff:propTypes
 
@@ -52,7 +52,7 @@ const LsiButton = UU5.Common.VisualComponent.create({
   //@@viewOn:render
   render() {
     return <UU5.Bricks.Button {...this.props} tooltip={this.getLsiItem(this.props.tooltip)} />;
-  }
+  },
   //@@viewOff:render
 });
 

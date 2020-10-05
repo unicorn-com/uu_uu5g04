@@ -23,7 +23,7 @@ const MySwitchComponent = UU5.Common.VisualComponent.create({
     return {
       isCalled: false,
       feedback: "initial",
-      message: ""
+      message: "",
     };
   },
 
@@ -41,11 +41,11 @@ const MySwitchComponent = UU5.Common.VisualComponent.create({
     return (
       <UU5.Bricks.Switch
         id={"uuID"}
-        ref_={sliderButton => (this.sliderButton = sliderButton)}
+        ref_={(sliderButton) => (this.sliderButton = sliderButton)}
         onClick={this.onClickAlert}
       />
     );
-  }
+  },
 });
 
 const CONFIG = {
@@ -53,29 +53,29 @@ const CONFIG = {
     "UU5.Common.BaseMixin",
     "UU5.Common.ElementaryMixin",
     "UU5.Common.PureRenderMixin",
-    "UU5.Common.ColorSchemaMixin"
+    "UU5.Common.ColorSchemaMixin",
   ],
   props: {
     size: {
-      values: ["s", "m", "l", "xl"]
+      values: ["s", "m", "l", "xl"],
     },
     switchedOn: {
-      values: [true, false]
+      values: [true, false],
     },
     offIcon: {
-      values: ["mdi-chevron-left"]
+      values: ["mdi-chevron-left"],
     },
     onIcon: {
-      values: ["mdi-chevron-right"]
-    }
+      values: ["mdi-chevron-right"],
+    },
     //onClick
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Switch props testing`, () => {
@@ -98,11 +98,11 @@ describe(`UU5.Bricks.Switch props testing`, () => {
     expect(window.alert.mock.calls[0][0]).toEqual("onClick was Called");
   });
 
-  it(`UU5.Bricks.Switch onClick() should toggle button`, function() {
+  it(`UU5.Bricks.Switch onClick() should toggle button`, function () {
     const wrapper = mount(
       <UU5.Bricks.Switch
         id={"mySwitch"}
-        ref_={switchButton => (this.switchButton = switchButton)}
+        ref_={(switchButton) => (this.switchButton = switchButton)}
         onClick={() => {
           this.switchButton.toggle();
         }}

@@ -30,7 +30,7 @@ export const Lsi = UU5.Common.LsiMixin.withContext(
       UU5.Common.ElementaryMixin,
       UU5.Common.ContentMixin,
       UU5.Common.LsiMixin,
-      UU5.Common.NestingLevelMixin
+      UU5.Common.NestingLevelMixin,
     ],
     //@@viewOff:mixins
 
@@ -39,14 +39,14 @@ export const Lsi = UU5.Common.LsiMixin.withContext(
       tagName: ns.name("Lsi"),
       nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "inline"),
       classNames: {
-        main: ns.css("lsi")
+        main: ns.css("lsi"),
       },
       defaults: {
-        childTagName: "UU5.Bricks.Lsi.Item"
+        childTagName: "UU5.Bricks.Lsi.Item",
       },
       opt: {
-        nestingLevelWrapper: true
-      }
+        nestingLevelWrapper: true,
+      },
     },
     //@@viewOff:statics
 
@@ -54,16 +54,16 @@ export const Lsi = UU5.Common.LsiMixin.withContext(
     propTypes: {
       lsi: UU5.PropTypes.object,
       allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
-      params: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.array, UU5.PropTypes.object])
+      params: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.array, UU5.PropTypes.object]),
     },
     //@@viewOff:propTypes
 
     //@@viewOn:getDefaultProps
-    getDefaultProps: function() {
+    getDefaultProps: function () {
       return {
         lsi: null,
         allowTags: [],
-        params: null
+        params: null,
       };
     },
     //@@viewOff:getDefaultProps
@@ -81,7 +81,7 @@ export const Lsi = UU5.Common.LsiMixin.withContext(
     //@@viewOff:overriding
 
     //@@viewOn:private
-    _expandChildProps: function(child) {
+    _expandChildProps: function (child) {
       let newChildProps = child ? { ...child.props } : {};
 
       newChildProps.id = newChildProps.id || this.getId() + "-inner";
@@ -105,7 +105,7 @@ export const Lsi = UU5.Common.LsiMixin.withContext(
         if (children) {
           let lsi = {};
           if (!Array.isArray(children)) children = [children];
-          child = children.map(child => {
+          child = children.map((child) => {
             let newChild = child;
 
             if (UU5.Common.Element.isValid(child)) {
@@ -143,9 +143,9 @@ export const Lsi = UU5.Common.LsiMixin.withContext(
     //@@viewOff:private
 
     //@@viewOn:render
-    render: function() {
+    render: function () {
       return this.getNestingLevel() ? this._getChildren() : null;
-    }
+    },
     //@@viewOff:render
   })
 );

@@ -24,10 +24,10 @@ import "./panel-header.less";
 
 const ClassNames = UU5.Common.ClassNames;
 const Styles = {
-  bgStyles: props => {
+  bgStyles: (props) => {
     // Only default colorSchema is here right now. Others are in .less files
     // let styles = Object.keys(UU5.Environment.colorSchemaMap).map(colorSchema => {
-    let styles = ["default"].map(colorSchema => {
+    let styles = ["default"].map((colorSchema) => {
       let colors = PanelStyles.getColors(colorSchema, props._bgStyle);
 
       if (!colors) {
@@ -77,7 +77,7 @@ const Styles = {
     });
 
     return Css.css(styles.join(" "));
-  }
+  },
 };
 
 export default UU5.Common.VisualComponent.create({
@@ -88,7 +88,7 @@ export default UU5.Common.VisualComponent.create({
     UU5.Common.PureRenderMixin,
     UU5.Common.ElementaryMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.ColorSchemaMixin
+    UU5.Common.ColorSchemaMixin,
   ],
   //@@viewOff:mixins
 
@@ -106,14 +106,14 @@ export default UU5.Common.VisualComponent.create({
       openClickHeader: ns.css("panel-header-open-click"),
       iconButton: ns.css("panel-header-button-icon"),
       icon: ns.css("panel-header-icon"),
-      bgStyles: Styles.bgStyles
+      bgStyles: Styles.bgStyles,
     },
     defaults: {
-      parentTagName: "UU5.Bricks.Panel"
+      parentTagName: "UU5.Bricks.Panel",
     },
     errors: {
-      invalidParent: "Parent of this component is not Panel."
-    }
+      invalidParent: "Parent of this component is not Panel.",
+    },
   },
   //@@viewOff:statics
 
@@ -124,7 +124,7 @@ export default UU5.Common.VisualComponent.create({
     _disableHeaderClick: UU5.PropTypes.bool,
     iconAlign: UU5.PropTypes.oneOf(["right", "after", "left"]),
     openClick: UU5.PropTypes.oneOf(["header", "icon", "none"]),
-    bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"])
+    bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
   },
   //@@viewOff:propTypes
 
@@ -136,7 +136,7 @@ export default UU5.Common.VisualComponent.create({
       _disableHeaderClick: undefined,
       iconAlign: "right",
       openClick: "header",
-      bgStyle: null
+      bgStyle: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -277,6 +277,6 @@ export default UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </div>
     );
-  }
+  },
   //@@viewOff:render
 });

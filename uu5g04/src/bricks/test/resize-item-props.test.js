@@ -21,22 +21,22 @@ const CONFIG = {
     "UU5.Common.BaseMixin",
     "UU5.Common.ElementaryMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.ContentMixin"
+    "UU5.Common.ContentMixin",
   ],
   props: {
     max: {
-      values: [200, 500]
-    }
+      values: [200, 500],
+    },
   },
   requiredProps: {
     parent: shallow(<UU5.Bricks.Resize id={"parentID"} />).instance(),
-    children: "Content"
+    children: "Content",
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Resize.Item`, () => {

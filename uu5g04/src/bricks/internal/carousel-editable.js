@@ -8,7 +8,7 @@ import Css from "./css";
 import { EditItemInfo } from "./modal-editation-components";
 //@@viewOff:imports
 
-const isValidItems = items => {
+const isValidItems = (items) => {
   return Array.isArray(items) && items.length;
 };
 
@@ -21,22 +21,22 @@ const editableComponentPropsSetup = [
       items: [
         { value: "circular", content: <UU5.Bricks.Lsi lsi={EditableLsi.carousel.typeValueCircular} /> },
         { value: "final", content: <UU5.Bricks.Lsi lsi={EditableLsi.carousel.typeValueFinal} /> },
-        { value: "rewind", content: <UU5.Bricks.Lsi lsi={EditableLsi.carousel.typeValueRewind} /> }
-      ]
-    })
+        { value: "rewind", content: <UU5.Bricks.Lsi lsi={EditableLsi.carousel.typeValueRewind} /> },
+      ],
+    }),
   },
   {
     name: "interval",
     type: "number",
     label: EditableLsi.carousel.intervalLabel,
-    getProps: props => ({
+    getProps: (props) => ({
       min: 0,
       step: 0.5,
       suffix: "s",
       valueType: "number",
       value: props.value / 1000, // from ms to s
-      onChange: opt => props.onChange({ ...opt, value: opt.value * 1000 }) // to ms
-    })
+      onChange: (opt) => props.onChange({ ...opt, value: opt.value * 1000 }), // to ms
+    }),
   },
   [
     {
@@ -48,10 +48,10 @@ const editableComponentPropsSetup = [
         max: isValidItems(items) ? items.length : 1,
         valueType: "number",
         value: isValidItems(items) ? props.value : undefined,
-        disabled: isValidItems(items) ? !items.length : true
-      })
+        disabled: isValidItems(items) ? !items.length : true,
+      }),
     },
-    { name: "stepByOne", type: "bool", label: EditableLsi.carousel.stepByOneLabel }
+    { name: "stepByOne", type: "bool", label: EditableLsi.carousel.stepByOneLabel },
   ],
   {
     name: "activeIndex",
@@ -62,33 +62,33 @@ const editableComponentPropsSetup = [
       max: isValidItems(items) ? items.length : 1,
       valueType: "number",
       value: isValidItems(items) ? props.value + 1 : undefined,
-      onChange: opt => props.onChange({ ...opt, value: opt.value - 1 }),
-      disabled: isValidItems(items) ? !items.length : true
-    })
-  }
+      onChange: (opt) => props.onChange({ ...opt, value: opt.value - 1 }),
+      disabled: isValidItems(items) ? !items.length : true,
+    }),
+  },
 ];
 
 const editableAdditionalPropsSetup = [
   { name: "colorSchema" },
   [
     { name: "prevIcon", type: "iconPicker", label: EditableLsi.carousel.prevIconLabel },
-    { name: "nextIcon", type: "iconPicker", label: EditableLsi.carousel.nextIconLabel }
+    { name: "nextIcon", type: "iconPicker", label: EditableLsi.carousel.nextIconLabel },
   ],
   [
     { name: "hideControls", type: "bool", label: EditableLsi.carousel.hideControlsLabel },
-    { name: "hideIndicators", type: "bool", label: EditableLsi.carousel.hideIndicatorsLabel }
-  ]
+    { name: "hideIndicators", type: "bool", label: EditableLsi.carousel.hideIndicatorsLabel },
+  ],
 ];
 
 const editablePropsSetup = [
   {
     name: <UU5.Bricks.Lsi lsi={EditableLsi.common.componentPropsLabel} />,
-    setup: editableComponentPropsSetup
+    setup: editableComponentPropsSetup,
   },
   {
     name: <UU5.Bricks.Lsi lsi={EditableLsi.common.advancedPropsLabel} />,
-    setup: editableAdditionalPropsSetup
-  }
+    setup: editableAdditionalPropsSetup,
+  },
 ];
 
 const editableItemPropsSetup = { setup: EditItemInfo };
@@ -97,8 +97,8 @@ const newEditableItem = {
   tagName: "UU5.Bricks.Carousel.Item",
   isElement: true,
   props: {
-    contentEditable: true
-  }
+    contentEditable: true,
+  },
 };
 
 export const CarouselEditable = UU5.Common.VisualComponent.create({
@@ -122,22 +122,22 @@ export const CarouselEditable = UU5.Common.VisualComponent.create({
         .uu5-bricks-switch-selector {
           min-width: auto;
         }
-      `
+      `,
     },
-    lsi: () => EditableLsi.carousel
+    lsi: () => EditableLsi.carousel,
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    component: UU5.PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      component: undefined
+      component: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -146,7 +146,7 @@ export const CarouselEditable = UU5.Common.VisualComponent.create({
   getInitialState() {
     return {
       editationModalOpen: false,
-      activeItemIndex: 0
+      activeItemIndex: 0,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -192,7 +192,7 @@ export const CarouselEditable = UU5.Common.VisualComponent.create({
   _onSettingsClick() {
     //EditationModal will use the content/children value of the component, but it's children can be already in edit mode, so their actual values can be lost, so endChildrenEditation and make sure that data are correct.
     this.props.component.endChildrenEditation();
-    this.setState(state => ({ editationModalOpen: !state.editationModalOpen }));
+    this.setState((state) => ({ editationModalOpen: !state.editationModalOpen }));
   },
 
   _getEditableItemLabel(item, itemIndex) {
@@ -228,7 +228,7 @@ export const CarouselEditable = UU5.Common.VisualComponent.create({
           value: index,
           content: this.getLsiComponent("itemLabel", undefined, { itemNumber: index + 1 }),
           bgStyle: this.state.activeItemIndex === index ? "underline" : undefined,
-          colorSchema: "primary"
+          colorSchema: "primary",
         }))}
         onChange={this._onChangeRenderedItem}
         className={this.getClassName("switchSelector")}
@@ -238,7 +238,7 @@ export const CarouselEditable = UU5.Common.VisualComponent.create({
         colorSchema="custom"
         size="l"
         spacing={0}
-      />
+      />,
     ];
   },
 
@@ -265,7 +265,7 @@ export const CarouselEditable = UU5.Common.VisualComponent.create({
         {this.state.editationModalOpen ? this._renderMoreSettingsModal() : null}
       </UU5.Bricks.Div>
     );
-  }
+  },
   //@@viewOff:render
 });
 

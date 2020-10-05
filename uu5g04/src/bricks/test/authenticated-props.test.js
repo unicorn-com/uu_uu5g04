@@ -24,19 +24,19 @@ const CONFIG = {
   mixins: ["UU5.Common.BaseMixin", "UU5.Common.IdentityMixin", "UU5.Common.ContentMixin"],
   props: {
     authenticated: {
-      values: [true, false]
+      values: [true, false],
     },
     notAuthenticated: {
-      values: [true, false]
+      values: [true, false],
     },
     pending: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
   },
   requiredProps: {
-    content: "Content to render"
+    content: "Content to render",
   },
-  opt: {}
+  opt: {},
 };
 
 describe(`UU5.Bricks.Authenticated`, () => {

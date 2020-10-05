@@ -18,7 +18,7 @@ export class ListenerRegistry {
     const index = this.LISTENER_LIST.indexOf(listener);
     if (index > -1) {
       this.LISTENER_LIST.splice(index, 1);
-      this.RUNNING_LISTENERS.forEach(list => {
+      this.RUNNING_LISTENERS.forEach((list) => {
         let runningIndex = list.indexOf(listener);
         if (runningIndex > -1) {
           list.splice(runningIndex, 1);

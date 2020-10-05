@@ -19,7 +19,7 @@ import InputMixin, {
   // INITIAL_FEEDBACK,
   ERROR_FEEDBACK,
   WARNING_FEEDBACK,
-  SUCCESS_FEEDBACK
+  SUCCESS_FEEDBACK,
   // LOADING_FEEDBACK
 } from "./mixins/input-mixin.js";
 import Context from "./form-context.js";
@@ -63,8 +63,8 @@ export const SwitchSelector = UU5.Bricks.Resize.withResize(
           `,
           buttonWrapper: Css.css`
             min-width: ${UU5.Common.Tools.isIE() ? "calc(100% - 3px)" : "100%"};
-          `
-        }
+          `,
+        },
       },
       //@@viewOff:statics
 
@@ -82,14 +82,14 @@ export const SwitchSelector = UU5.Bricks.Resize.withResize(
         feedback: InputMixin.propTypes.feedback,
         readOnly: InputMixin.propTypes.readOnly,
         inputAttrs: InputMixin.propTypes.inputAttrs,
-        inputWidth: InputMixin.propTypes.inputWidth
+        inputWidth: InputMixin.propTypes.inputWidth,
       },
       //@@viewOff:propTypes
 
       //@@viewOn:getDefaultProps
       getDefaultProps() {
         return {
-          width: undefined
+          width: undefined,
         };
       },
       //@@viewOff:getDefaultProps
@@ -151,7 +151,7 @@ export const SwitchSelector = UU5.Bricks.Resize.withResize(
             message: this.props.message,
             feedback: this.props.feedback,
             value: this._getInitialValue(),
-            readOnly: this.props.readOnly
+            readOnly: this.props.readOnly,
           },
           setStateCallback
         );
@@ -206,8 +206,8 @@ export const SwitchSelector = UU5.Bricks.Resize.withResize(
                 context: {
                   event: null,
                   func: this.props.onValidate,
-                  result: result
-                }
+                  result: result,
+                },
               });
             }
           }
@@ -266,11 +266,11 @@ export const SwitchSelector = UU5.Bricks.Resize.withResize(
           bgStyle: this.props.bgStyle,
           inputWidth: this._getInputWidth(),
           colorSchema: this.props.colorSchema,
-          onRemove: !this.isReadOnly() && !this.isComputedDisabled() ? opt => this.removeValue(opt) : null,
-          onChange: this._onChange
+          onRemove: !this.isReadOnly() && !this.isComputedDisabled() ? (opt) => this.removeValue(opt) : null,
+          onChange: this._onChange,
         };
 
-        selectExcludedProps.forEach(propName => {
+        selectExcludedProps.forEach((propName) => {
           delete props[propName];
         });
 
@@ -293,7 +293,7 @@ export const SwitchSelector = UU5.Bricks.Resize.withResize(
           readOnly: this.isDisabled() || this.isReadOnly(),
           disabled: this.isComputedDisabled(),
           width: this.props.inputWidth,
-          className: this.getClassName("buttonWrapper")
+          className: this.getClassName("buttonWrapper"),
         };
 
         if (this.state.feedback === ERROR_FEEDBACK) {
@@ -349,7 +349,7 @@ export const SwitchSelector = UU5.Bricks.Resize.withResize(
             {this.getInputWrapper(body)}
           </div>
         );
-      }
+      },
       //@@viewOff:render
     })
   ),

@@ -23,8 +23,8 @@ export const FragmentMixin = {
   //@@viewOn:statics
   statics: {
     "UU5.Common.FragmentMixin": {
-      requiredMixins: ["UU5.Common.BaseMixin"]
-    }
+      requiredMixins: ["UU5.Common.BaseMixin"],
+    },
   },
   //@@viewOff:statics
 
@@ -35,7 +35,7 @@ export const FragmentMixin = {
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  getInitialState: function() {
+  getInitialState: function () {
     this.registerMixin(FRAGMENT_MIXIN_NAME);
     return null;
   },
@@ -60,7 +60,7 @@ export const FragmentMixin = {
     } else {
       throw "UU5.Common.FragmentMixin: Component must implement method 'setFragment_'";
     }
-  }
+  },
   //@@viewOff:interface
 
   //@@viewOn:overriding

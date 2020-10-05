@@ -24,27 +24,27 @@ const CONFIG = {
     "UU5.Common.PureRenderMixin",
     "UU5.Common.NestingLevelMixin",
     "UU5.Common.ContentMixin",
-    "UU5.Common.LevelMixin"
+    "UU5.Common.LevelMixin",
   ],
   props: {
     width: {
-      values: ["200px", "30%", "10em", 200]
+      values: ["200px", "30%", "10em", 200],
     },
     colWidth: {
-      values: ["xs6 s6 m4 l3 xl3", "xs-6 s-6 m-4 l-3 xl-3", { xs: 6, s: 6, m: 4, l: 3, xl: 3 }]
+      values: ["xs6 s6 m4 l3 xl3", "xs-6 s-6 m-4 l-3 xl-3", { xs: 6, s: 6, m: 4, l: 3, xl: 3 }],
     },
     noSpacing: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
   },
   requiredProps: {
-    parent: shallow(<UU5.Bricks.Row id={"parentID"}></UU5.Bricks.Row>).instance()
+    parent: shallow(<UU5.Bricks.Row id={"parentID"}></UU5.Bricks.Row>).instance(),
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 const This = {};

@@ -23,45 +23,45 @@ const CONFIG = {
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.ContentMixin",
     "UU5.Common.PureRenderMixin",
-    "UU5.Common.SwipeMixin"
+    "UU5.Common.SwipeMixin",
   ],
   props: {
     hideControls: {
-      values: [true, false]
+      values: [true, false],
     },
     hideIndicators: {
-      values: [true, false]
+      values: [true, false],
     },
     activeIndex: {
-      values: [0, 1, 2, 3]
+      values: [0, 1, 2, 3],
     },
     nextIcon: {
-      values: ["mdi-chevron-right"]
+      values: ["mdi-chevron-right"],
     },
     prevIcon: {
-      values: ["mdi-chevron-left"]
+      values: ["mdi-chevron-left"],
     },
     displayedItems: {
-      values: [0, 1, 2, 3]
+      values: [0, 1, 2, 3],
     },
     type: {
-      values: ["circular", "final", "rewind"]
+      values: ["circular", "final", "rewind"],
     },
     interval: {
-      values: [0, 1000, 8000]
+      values: [0, 1000, 8000],
     },
     stepByOne: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
   },
   requiredProps: {
-    children: ["UU5.Bricks.Carousel.Item"]
+    children: ["UU5.Bricks.Carousel.Item"],
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: true
-    }
-  }
+      disableLifecycleMethods: true,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Carousel`, () => {
@@ -79,7 +79,7 @@ describe("UU5.Bricks.Carousel", () => {
             style={{
               backgroundImage: "url(https://unicorn.com/img/images/news/n2016080801/image-electricity-index.jpg)",
               height: 250,
-              transform: "scale(1.5)"
+              transform: "scale(1.5)",
             }}
           />
         </UU5.Bricks.Carousel.Item>

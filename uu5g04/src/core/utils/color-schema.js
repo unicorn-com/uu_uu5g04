@@ -8,6 +8,6 @@ export const ColorSchema = {
       if (usedColorSchema && usedColorSchema !== colorSchema) result = "color-schema-" + usedColorSchema + " " + result;
     }
     return result;
-  }
+  },
 };
 export default ColorSchema;

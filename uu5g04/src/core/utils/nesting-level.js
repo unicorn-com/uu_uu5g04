@@ -30,7 +30,7 @@ export const NestingLevel = {
             /Collection$/.test(parentNestingLevel) || parentNLComponent.getOpt("nestingLevelWrapper")
               ? index
               : Math.min(index + 1, NestingLevel.values.length - 1);
-          actualValidNestingLevel = nestingLevelList.find(it => NestingLevel.values.indexOf(it) >= minIndex);
+          actualValidNestingLevel = nestingLevelList.find((it) => NestingLevel.values.indexOf(it) >= minIndex);
           if (!actualValidNestingLevel) {
             actualValidNestingLevel = null;
             // NOTE Disabled warnings. See nesting-level-mixin.js, checkNestingLevel().
@@ -53,7 +53,7 @@ export const NestingLevel = {
         if (index === -1) {
           logNestingLevelError("unsupportedNestingLevel", [requestedNestingLevel, JSON.stringify(nestingLevelList)]);
         }
-        let usableIndices = nestingLevelList.map(it => NestingLevel.values.indexOf(it)).filter(v => v >= index);
+        let usableIndices = nestingLevelList.map((it) => NestingLevel.values.indexOf(it)).filter((v) => v >= index);
         if (usableIndices.length === 0) {
           actualValidNestingLevel = null;
           // NOTE Disabled warnings. See nesting-level-mixin.js, checkNestingLevel().
@@ -84,7 +84,7 @@ export const NestingLevel = {
     }
 
     return childNestingLevel;
-  }
+  },
 };
 
 function logNestingLevelError(mixinErrorCode, params) {

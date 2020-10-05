@@ -27,7 +27,7 @@ export const Badge = UU5.Common.VisualComponent.create({
     UU5.Common.NestingLevelMixin,
     UU5.Common.ColorSchemaMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.PureRenderMixin
+    UU5.Common.PureRenderMixin,
   ],
   //@@viewOff:mixins
 
@@ -36,8 +36,8 @@ export const Badge = UU5.Common.VisualComponent.create({
     tagName: ns.name("Badge"),
     nestingLevel: "inline",
     classNames: {
-      main: ns.css("badge")
-    }
+      main: ns.css("badge"),
+    },
   },
   //@@viewOff:statics
 
@@ -60,7 +60,7 @@ export const Badge = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     let children = this.getChildren();
 
     return this.getNestingLevel() && children ? (
@@ -69,7 +69,7 @@ export const Badge = UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </span>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

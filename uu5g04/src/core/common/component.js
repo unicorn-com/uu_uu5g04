@@ -45,7 +45,7 @@ function _doCreate(componentDescriptor) {
       );
     }
     delete componentDescriptor.defaultProps;
-    componentDescriptor.getDefaultProps = function() {
+    componentDescriptor.getDefaultProps = function () {
       return defaultProps;
     };
   }
@@ -105,7 +105,7 @@ export const Component = {
       ...comp,
       render() {
         return <Comp {...getProps(this.props)} />;
-      }
+      },
     };
 
     return Component.create(comp);
@@ -117,7 +117,7 @@ export const Component = {
 
   memo(...args) {
     return React.memo(...args);
-  }
+  },
 };
 
 export default Component;

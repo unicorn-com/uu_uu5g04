@@ -47,7 +47,7 @@ export const ScrollArea = UU5.Common.VisualComponent.create({
           & > .uu5-bricks-scroll-area-content-wrapper {
             width: 100%;
           }
-          `
+          `,
         ];
 
         if (canUseCustomScrollbar()) {
@@ -128,12 +128,12 @@ export const ScrollArea = UU5.Common.VisualComponent.create({
           overflow: visible;
           display: inline-block;
           position: relative;
-          `
+          `,
         ];
 
         return `${ns.css("scroll-area-content-wrapper")} ${Css.css(styles.join(" "))}`;
-      }
-    }
+      },
+    },
   },
   //@@viewOff:statics
 
@@ -144,7 +144,7 @@ export const ScrollArea = UU5.Common.VisualComponent.create({
     hideOnBlur: UU5.PropTypes.bool,
     onDisplayBar: UU5.PropTypes.func,
     onHideBar: UU5.PropTypes.func,
-    initialScrollTop: UU5.PropTypes.number
+    initialScrollTop: UU5.PropTypes.number,
   },
   //@@viewOff:propTypes
 
@@ -156,7 +156,7 @@ export const ScrollArea = UU5.Common.VisualComponent.create({
       hideOnBlur: true,
       onDisplayBar: null,
       onHideBar: null,
-      initialScrollTop: null
+      initialScrollTop: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -166,7 +166,7 @@ export const ScrollArea = UU5.Common.VisualComponent.create({
     this._updateCount = 0;
 
     return {
-      hasScrollbar: false
+      hasScrollbar: false,
     };
   },
 
@@ -287,7 +287,7 @@ export const ScrollArea = UU5.Common.VisualComponent.create({
   //@@viewOn:render
   render() {
     return this._getScrollAreaWrapper();
-  }
+  },
   //@@viewOff:render
 });
 

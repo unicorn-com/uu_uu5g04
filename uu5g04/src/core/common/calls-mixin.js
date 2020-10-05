@@ -24,22 +24,22 @@ export const CallsMixin = {
         callsNotFound: "Property calls was not set.",
         staticsCallsNotFound: "Variable calls was not found in statics.",
         callNameNotFound: "Call key %s was not found in calls.",
-        callNotFound: "Call %s was not found in calls."
-      }
-    }
+        callNotFound: "Call %s was not found in calls.",
+      },
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    calls: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
+    calls: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      calls: null
+      calls: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -50,7 +50,7 @@ export const CallsMixin = {
     this.registerMixin("UU5.Common.CallsMixin");
     // state
     return {
-      calls: null
+      calls: null,
     };
   },
 
@@ -70,7 +70,7 @@ export const CallsMixin = {
 
   getUU5CommonCallsMixinProps() {
     return {
-      calls: this.getCalls()
+      calls: this.getCalls(),
     };
   },
 
@@ -105,15 +105,15 @@ export const CallsMixin = {
       this.showError("staticsCallsNotFound", null, {
         mixinName: "UU5.Common.CallsMixin",
         context: {
-          constructor: this.constructor
-        }
+          constructor: this.constructor,
+        },
       });
     } else if (!callName) {
       this.showError("callNameNotFound", item, {
         mixinName: "UU5.Common.CallsMixin",
         context: {
-          calls: calls
-        }
+          calls: calls,
+        },
       });
     } else {
       call = calls[callName];
@@ -122,8 +122,8 @@ export const CallsMixin = {
         this.showError("callNotFound", callName, {
           mixinName: "UU5.Common.CallsMixin",
           context: {
-            calls: calls
-          }
+            calls: calls,
+          },
         });
       }
     }
@@ -143,7 +143,7 @@ export const CallsMixin = {
       this.setState({ calls: calls });
     }
     return this;
-  }
+  },
   //@@viewOff:private
 };
 

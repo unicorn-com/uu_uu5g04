@@ -8,7 +8,7 @@ describe("UU5.Common.Component", () => {
 
   it("create()", async () => {
     Component = UU5.Common.Component.create({
-      render: () => "abc"
+      render: () => "abc",
     });
     expect(Component).toBeTruthy();
     wrapper = mount(<Component />);
@@ -16,7 +16,7 @@ describe("UU5.Common.Component", () => {
 
     Component = UU5.Common.Component.create({
       mixins: [UU5.Common.BaseMixin],
-      render: () => "abc"
+      render: () => "abc",
     });
     expect(Component).toBeTruthy();
     wrapper = mount(<Component />);
@@ -27,11 +27,11 @@ describe("UU5.Common.Component", () => {
   it("create() should process defaultProps", async () => {
     Component = UU5.Common.Component.create({
       defaultProps: {
-        prop: "abc"
+        prop: "abc",
       },
       render() {
         return this.props.prop;
-      }
+      },
     });
     expect(Component).toBeTruthy();
     wrapper = mount(<Component />);
@@ -43,11 +43,11 @@ describe("UU5.Common.Component", () => {
   it("create() should set displayName from tagName", async () => {
     Component = UU5.Common.Component.create({
       statics: {
-        tagName: "AAA"
+        tagName: "AAA",
       },
       render() {
         return this.props.prop;
-      }
+      },
     });
     expect(Component).toBeTruthy();
     expect(Component.displayName).toBe("AAA");
@@ -55,11 +55,11 @@ describe("UU5.Common.Component", () => {
     Component = UU5.Common.Component.create({
       displayName: "BBB",
       statics: {
-        tagName: "AAA"
+        tagName: "AAA",
       },
       render() {
         return this.props.prop;
-      }
+      },
     });
     expect(Component).toBeTruthy();
     expect(Component.displayName).toBe("BBB");
@@ -70,7 +70,7 @@ describe("UU5.Common.Component", () => {
       displayName: "BBB",
       render() {
         return this.props.prop;
-      }
+      },
     });
     expect(Component).toBeTruthy();
     expect(Component.tagName).toBe("BBB");
@@ -78,11 +78,11 @@ describe("UU5.Common.Component", () => {
     Component = UU5.Common.Component.create({
       displayName: "BBB",
       statics: {
-        tagName: "AAA"
+        tagName: "AAA",
       },
       render() {
         return this.props.prop;
-      }
+      },
     });
     expect(Component).toBeTruthy();
     expect(Component.tagName).toBe("AAA");

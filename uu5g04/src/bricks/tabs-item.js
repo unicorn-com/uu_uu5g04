@@ -27,7 +27,7 @@ export default UU5.Common.VisualComponent.create({
     UU5.Common.PureRenderMixin,
     UU5.Common.ElementaryMixin,
     UU5.Common.NestingLevelMixin,
-    UU5.Common.SectionMixin
+    UU5.Common.SectionMixin,
   ],
   //@@viewOff:mixins
 
@@ -38,14 +38,14 @@ export default UU5.Common.VisualComponent.create({
     classNames: {
       main: ns.css("tabs-item", "tabs-item-pane"),
       visible: ns.css("tabs-item-visible"),
-      fade: ns.css("tabs-item-fade ")
+      fade: ns.css("tabs-item-fade "),
     },
     opt: {
-      nestingLevelWrapper: true
+      nestingLevelWrapper: true,
     },
     errors: {
-      invalidParent: "Parent of this component is not Tabs."
-    }
+      invalidParent: "Parent of this component is not Tabs.",
+    },
   },
   //@@viewOff:statics
 
@@ -53,22 +53,22 @@ export default UU5.Common.VisualComponent.create({
   propTypes: {
     _fade: UU5.PropTypes.bool,
     _active: UU5.PropTypes.bool,
-    _onDisable: UU5.PropTypes.func
+    _onDisable: UU5.PropTypes.func,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       _fade: false,
       _active: false,
-      _onDisable: undefined
+      _onDisable: undefined,
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  UNSAFE_componentWillMount: function() {
+  UNSAFE_componentWillMount: function () {
     let parent = this.getParent();
 
     if (parent) {
@@ -157,7 +157,7 @@ export default UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </div>
     ) : null;
-  }
+  },
 
   //@@viewOff:render
 });

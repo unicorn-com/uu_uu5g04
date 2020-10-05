@@ -33,13 +33,13 @@ const SessionProvider = createComponent({
       removeListener: UU5.PropTypes.func,
       getIdentity: UU5.PropTypes.func,
       isAuthenticated: UU5.PropTypes.func,
-      isExpiring: UU5.PropTypes.func
+      isExpiring: UU5.PropTypes.func,
       // TODO login, logout
-    }).isRequired
+    }).isRequired,
   },
 
   defaultProps: {
-    session: undefined
+    session: undefined,
   },
 
   render({ session, children }) {
@@ -72,16 +72,16 @@ const SessionProvider = createComponent({
         login: (...args) => (typeof session.login === "function" && session.login(...args)) || Promise.resolve(),
         logout: (...args) =>
           (typeof session.logout === "function" &&
-            session.logout(...args).catch(e => {
+            session.logout(...args).catch((e) => {
               // TODO error
               console.error(`User ${identity.uuIdentity} is not logged out.`, e);
             })) ||
-          Promise.resolve()
+          Promise.resolve(),
       };
     }, [identity, isExpiring, session]);
 
     return <SessionContext.Provider value={value}>{children}</SessionContext.Provider>;
-  }
+  },
 });
 
 export { useSession, SessionProvider };

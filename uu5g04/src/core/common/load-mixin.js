@@ -29,14 +29,14 @@ export const LoadMixin = {
       defaults: {
         minReloadInterval: 10 * 1000, // 10s
         onLoadCall: "onLoad",
-        onReloadCall: "onReload"
+        onReloadCall: "onReload",
       },
       errors: {
         onLoad: "Error during loading data from server by call %s.",
-        onReload: "Error during reloading data from server by call %s."
+        onReload: "Error during reloading data from server by call %s.",
       },
-      lsi: () => Environment.Lsi.Common.loadMixin
-    }
+      lsi: () => Environment.Lsi.Common.loadMixin,
+    },
   }, //@@viewOff:statics
 
   //@@viewOn:propTypes
@@ -45,7 +45,7 @@ export const LoadMixin = {
     dtoOut: PropTypes.object,
     reloadInterval: PropTypes.number,
     refireLoad: PropTypes.bool,
-    overrideMinReloadInterval: PropTypes.bool
+    overrideMinReloadInterval: PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -56,7 +56,7 @@ export const LoadMixin = {
       dtoOut: null,
       reloadInterval: 0,
       refireLoad: true,
-      overrideMinReloadInterval: false
+      overrideMinReloadInterval: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -71,7 +71,7 @@ export const LoadMixin = {
     return {
       loadFeedback: "loading",
       dtoOut: null,
-      errorDtoOut: null
+      errorDtoOut: null,
     };
   },
 
@@ -92,7 +92,7 @@ export const LoadMixin = {
         {
           loadFeedback: "loading",
           dtoOut: null,
-          errorDtoOut: null
+          errorDtoOut: null,
         },
         () => this._onLoad(this.props)
       );
@@ -238,7 +238,7 @@ export const LoadMixin = {
       dtoIn.data = this.getOnLoadData_(props);
     }
 
-    dtoIn.done = dtoOut => {
+    dtoIn.done = (dtoOut) => {
       if (typeof this.onLoadSuccess_ === "function") {
         this.onLoadSuccess_(dtoOut);
       } else {
@@ -248,7 +248,7 @@ export const LoadMixin = {
     };
 
     let callKey = this.getDefault("onLoadCall", "UU5.Common.LoadMixin");
-    dtoIn.fail = dtoOut => {
+    dtoIn.fail = (dtoOut) => {
       this.showError("onLoad", this.getCallName(callKey), {
         mixinName: "UU5.Common.LoadMixin",
         context: {
@@ -256,8 +256,8 @@ export const LoadMixin = {
           dtoOut: dtoOut,
           callKey: callKey,
           uri: dtoIn.uri,
-          data: dtoIn.data
-        }
+          data: dtoIn.data,
+        },
       });
       if (typeof this.onLoadError_ === "function") {
         this.onLoadError_(dtoOut);
@@ -292,7 +292,7 @@ export const LoadMixin = {
       dtoIn.data = getData(props);
     }
 
-    dtoIn.done = dtoOut => {
+    dtoIn.done = (dtoOut) => {
       let loadSuccess = this.onReloadSuccess_ || this.onLoadSuccess_;
       if (typeof loadSuccess === "function") {
         loadSuccess(dtoOut);
@@ -306,7 +306,7 @@ export const LoadMixin = {
     let callKey = this.getDefault("onReloadCall", "UU5.Common.LoadMixin");
     calls && !calls[callKey] && (callKey = this.getDefault("onLoadCall", "UU5.Common.LoadMixin"));
 
-    dtoIn.fail = dtoOut => {
+    dtoIn.fail = (dtoOut) => {
       this.showError("onReload", this.getCallName(callKey), {
         mixinName: "UU5.Common.LoadMixin",
         context: {
@@ -314,8 +314,8 @@ export const LoadMixin = {
           dtoOut: dtoOut,
           callKey: callKey,
           uri: dtoIn.uri,
-          data: dtoIn.data
-        }
+          data: dtoIn.data,
+        },
       });
 
       let loadError = this.onReloadError_ || this.onLoadError_;
@@ -397,7 +397,7 @@ export const LoadMixin = {
       let router = Environment.getRouter();
       if (router) router.scrollToFragment();
     });
-  }
+  },
   //@@viewOff:private
 };
 

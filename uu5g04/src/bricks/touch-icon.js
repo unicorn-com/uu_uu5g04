@@ -31,7 +31,7 @@ export const TouchIcon = UU5.Common.VisualComponent.create({
     UU5.Common.NestingLevelMixin,
     UU5.Common.ContentMixin,
     UU5.Common.ColorSchemaMixin,
-    UU5.Common.EditableMixin
+    UU5.Common.EditableMixin,
   ],
   //@@viewOff:mixins
 
@@ -44,9 +44,9 @@ export const TouchIcon = UU5.Common.VisualComponent.create({
       body: ns.css("touch-icon-body"),
       label: ns.css("touch-icon-label"),
       icon: ns.css("touch-icon-icon"),
-      bgStyle: ns.css("touch-icon-")
+      bgStyle: ns.css("touch-icon-"),
     },
-    editableComponent: "UU5.BricksEditable.TouchIcon"
+    editableComponent: "UU5.BricksEditable.TouchIcon",
   },
   //@@viewOff:statics
 
@@ -59,7 +59,7 @@ export const TouchIcon = UU5.Common.VisualComponent.create({
     onCtrlClick: UU5.PropTypes.func,
     onWheelClick: UU5.PropTypes.func,
     borderRadius: UU5.PropTypes.string,
-    bgStyle: UU5.PropTypes.oneOf(["filled", "transparent"])
+    bgStyle: UU5.PropTypes.oneOf(["filled", "transparent"]),
   },
   //@@viewOff:propTypes
 
@@ -73,7 +73,7 @@ export const TouchIcon = UU5.Common.VisualComponent.create({
       onCtrlClick: null,
       onWheelClick: null,
       borderRadius: null,
-      bgStyle: "filled"
+      bgStyle: "filled",
     };
   },
   //@@viewOff:getDefaultProps
@@ -125,7 +125,7 @@ export const TouchIcon = UU5.Common.VisualComponent.create({
         <div className={this.getClassName().label}>{this.getChildren()}</div>
       </Link>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

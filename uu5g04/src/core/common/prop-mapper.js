@@ -30,15 +30,15 @@ export const PropMapper = Component.create({
   statics: {
     tagName: ns.name("PropMapper"),
     classNames: {
-      main: ns.css("prop-mapper")
-    }
+      main: ns.css("prop-mapper"),
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
     data: PropTypes.object,
-    mapping: PropTypes.object
+    mapping: PropTypes.object,
   },
   //@@viewOn:propTypes
 
@@ -46,7 +46,7 @@ export const PropMapper = Component.create({
   getDefaultProps() {
     return {
       data: undefined,
-      mapping: undefined
+      mapping: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -76,7 +76,7 @@ export const PropMapper = Component.create({
         if (calculated !== undefined) {
           let propKey = this.props.mapping[key];
           if (Array.isArray(propKey)) {
-            propKey.forEach(propName => {
+            propKey.forEach((propName) => {
               props[propName] = calculated;
             });
           } else {
@@ -92,7 +92,7 @@ export const PropMapper = Component.create({
   },
 
   _renderChildren() {
-    return React.Children.map(this.props.children, child => {
+    return React.Children.map(this.props.children, (child) => {
       if (Element.isValid(child)) {
         return Element.clone(child, this._getProps());
       } else {
@@ -105,7 +105,7 @@ export const PropMapper = Component.create({
   //@@viewOn:render
   render() {
     return this._renderChildren();
-  }
+  },
   //@@viewOff:render
 });
 

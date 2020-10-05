@@ -31,8 +31,8 @@ export const YoutubeVideo = UU5.Common.VisualComponent.create({
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBox", "box"),
     classNames: {
       main: ns.css("youtube-video"),
-      size: ns.css("youtube-video-")
-    }
+      size: ns.css("youtube-video-"),
+    },
   },
   //@@viewOff:statics
 
@@ -46,12 +46,12 @@ export const YoutubeVideo = UU5.Common.VisualComponent.create({
     disableRelatedVideos: UU5.PropTypes.bool,
     size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
     disableFullscreen: UU5.PropTypes.bool,
-    muted: UU5.PropTypes.bool
+    muted: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       autoplay: undefined,
       disableControls: undefined,
@@ -61,7 +61,7 @@ export const YoutubeVideo = UU5.Common.VisualComponent.create({
       disableRelatedVideos: undefined,
       size: "m",
       disableFullscreen: undefined,
-      muted: undefined
+      muted: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -76,7 +76,7 @@ export const YoutubeVideo = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _buildLink: function() {
+  _buildLink: function () {
     if (!this.props.src) {
       return;
     }
@@ -88,7 +88,7 @@ export const YoutubeVideo = UU5.Common.VisualComponent.create({
       UU5.Common.Tools.error(err.message, {
         component: "UU5.Bricks.YoutubeVideo",
         id: this.getId(),
-        function: "YoutubeUrlBuilder"
+        function: "YoutubeUrlBuilder",
       });
       return undefined;
     }
@@ -108,7 +108,7 @@ export const YoutubeVideo = UU5.Common.VisualComponent.create({
     return builder.toEmbedString();
   },
 
-  _buildMainAttrs: function() {
+  _buildMainAttrs: function () {
     let mainProps = this.getMainAttrs();
 
     mainProps.className += " " + this.getClassName().size + this.props.size;
@@ -123,17 +123,17 @@ export const YoutubeVideo = UU5.Common.VisualComponent.create({
   // Render
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return this.getNestingLevel() ? (
       <UU5.Bricks.Span {...this.getMainPropsToPass()}>
         {this.getDisabledCover()}
         <iframe {...this._buildMainAttrs()} />
       </UU5.Bricks.Span>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 
-YoutubeVideo.validateUrl = url => (typeof url === "string" ? YoutubeUrlBuilder.getUrlParts(url) !== null : false);
+YoutubeVideo.validateUrl = (url) => (typeof url === "string" ? YoutubeUrlBuilder.getUrlParts(url) !== null : false);
 
 export default YoutubeVideo;

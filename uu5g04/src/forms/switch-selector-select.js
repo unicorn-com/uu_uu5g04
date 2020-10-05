@@ -36,7 +36,7 @@ export const Select = Context.withContext(
       UU5.Common.ScreenSizeMixin,
       UU5.Common.ColorSchemaMixin,
       InputMixin,
-      ChoiceMixin
+      ChoiceMixin,
     ],
     //@@viewOff:mixins
 
@@ -52,12 +52,12 @@ export const Select = Context.withContext(
         selectAllEnabled: ns.css("select-all"),
         hasValue: ns.css("select-has-value"),
         screenSizeBehaviour: ns.css("screen-size-behaviour"),
-        inputOpen: ns.css("items-input-open")
+        inputOpen: ns.css("items-input-open"),
       },
       defaults: {
-        childTagName: "UU5.Forms.Select.Option"
+        childTagName: "UU5.Forms.Select.Option",
       },
-      lsi: () => UU5.Common.Tools.merge({}, UU5.Environment.Lsi.Forms.select, UU5.Environment.Lsi.Forms.message)
+      lsi: () => UU5.Common.Tools.merge({}, UU5.Environment.Lsi.Forms.select, UU5.Environment.Lsi.Forms.message),
     },
     //@@viewOff:statics
 
@@ -71,7 +71,7 @@ export const Select = Context.withContext(
       borderRadius: UU5.PropTypes.string,
       bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
       elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-      openToContent: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string])
+      openToContent: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string]),
     },
     //@@viewOff:propTypes
 
@@ -86,7 +86,7 @@ export const Select = Context.withContext(
         borderRadius: null,
         bgStyle: null,
         elevation: null,
-        openToContent: "xs"
+        openToContent: "xs",
       };
     },
     //@@viewOff:getDefaultProps
@@ -94,7 +94,7 @@ export const Select = Context.withContext(
     //@@viewOn:reactLifeCycle
     getInitialState() {
       return {
-        open: false
+        open: false,
       };
     },
 
@@ -125,13 +125,13 @@ export const Select = Context.withContext(
       } else {
         let currentValue = this.getValue();
         if (currentValue) {
-          let itemValues = UU5.Common.Children.map(nextProps.children, child => child.props.value);
+          let itemValues = UU5.Common.Children.map(nextProps.children, (child) => child.props.value);
 
           if (Array.isArray(currentValue)) {
             let newValue = [];
             let valueChanged = false;
-            currentValue.forEach(value => {
-              if (!itemValues.find(itemValue => itemValue === value)) {
+            currentValue.forEach((value) => {
+              if (!itemValues.find((itemValue) => itemValue === value)) {
                 valueChanged = true;
               } else {
                 newValue.push(value);
@@ -142,7 +142,7 @@ export const Select = Context.withContext(
               }
             });
           } else {
-            let selectedItem = itemValues.find(itemValue => itemValue === currentValue);
+            let selectedItem = itemValues.find((itemValue) => itemValue === currentValue);
 
             if (!selectedItem) {
               this.setValue(null);
@@ -199,7 +199,7 @@ export const Select = Context.withContext(
         let currentValue = this.getValue() || [];
 
         if (typeof value === "number") {
-          let values = this.props.children.map(child => child.props.value);
+          let values = this.props.children.map((child) => child.props.value);
           value = values[value];
         }
 
@@ -224,7 +224,7 @@ export const Select = Context.withContext(
       }
       opt.component = this;
       opt._data = { type: "remove", callback: setStateCallback, value: opt.value };
-      this._getChildren().forEach(child => {
+      this._getChildren().forEach((child) => {
         let value = child
           ? child.props.selectedContent || child.props.content || child.props.children || child.props.value
           : null;
@@ -307,7 +307,7 @@ export const Select = Context.withContext(
       if (!result && (typeof child !== "string" || child.trim())) {
         if (childTagName)
           this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagName], {
-            mixinName: "UU5.Common.BaseMixin"
+            mixinName: "UU5.Common.BaseMixin",
           });
         else this.showError("childNotAllowed", [child, defaultChildTagName], { mixinName: "UU5.Common.BaseMixin" });
       }
@@ -335,7 +335,7 @@ export const Select = Context.withContext(
           message: this.props.message,
           feedback: this.props.feedback,
           value: this._valuesToValuesArray(this.props.value),
-          readOnly: this.props.readOnly
+          readOnly: this.props.readOnly,
         },
         setStateCallback
       );
@@ -355,7 +355,7 @@ export const Select = Context.withContext(
         this.props.openToContent
           .trim()
           .split(" ")
-          .some(size => {
+          .some((size) => {
             if (screenSize == size) {
               result = true;
               return true;
@@ -416,7 +416,7 @@ export const Select = Context.withContext(
           message,
           value: value[0] || null,
           callback: setStateCallback,
-          component: this
+          component: this,
         };
         this.props.onChangeFeedback(opt);
       } else {
@@ -441,7 +441,7 @@ export const Select = Context.withContext(
             }
           } else {
             this.showError("validateError", null, {
-              context: { event: e, func: this.props.onValidate, result: result }
+              context: { event: e, func: this.props.onValidate, result: result },
             });
           }
         } else {
@@ -533,7 +533,7 @@ export const Select = Context.withContext(
             message: result.message,
             value: result.value,
             callback,
-            component: this
+            component: this,
           };
           if (typeof this.props.onChangeFeedback === "function") {
             _callCallback = false;
@@ -590,7 +590,7 @@ export const Select = Context.withContext(
               message: result.message,
               value: result.value,
               callback: setStateCallbackComposed,
-              component: this
+              component: this,
             };
             if (typeof this.props.onChangeFeedback === "function") {
               _callCallback = false;
@@ -657,7 +657,7 @@ export const Select = Context.withContext(
       let children = [];
       if (this.props.children) {
         let childTagNames = this.props.allowTags.concat(this.getDefault().childTagName);
-        UU5.Common.Children.toArray(this.props.children).forEach(child => {
+        UU5.Common.Children.toArray(this.props.children).forEach((child) => {
           let childTagName = UU5.Common.Tools.getChildTagName(child);
           const newProps = UU5.Common.Tools.merge({}, child.props);
           newProps.mainAttrs = newProps.mainAttrs || {};
@@ -698,10 +698,10 @@ export const Select = Context.withContext(
         openToContent: this.props.openToContent,
         selectAllEnabled: this.props.selectAllEnabled,
         allowTags: this.props.allowTags,
-        onRemove: !this.isReadOnly() && !this.isComputedDisabled() ? opt => this.removeValue(opt) : null,
+        onRemove: !this.isReadOnly() && !this.isComputedDisabled() ? (opt) => this.removeValue(opt) : null,
         onChange: this._onChange,
         onClose: this._onClose,
-        onOpen: this._onOpen
+        onOpen: this._onOpen,
       };
     },
 
@@ -738,12 +738,12 @@ export const Select = Context.withContext(
       let inputId = this.getId() + "-input";
 
       return (
-        <div {...this._getMainAttrs()} ref={comp => (this._root = comp)}>
+        <div {...this._getMainAttrs()} ref={(comp) => (this._root = comp)}>
           {this.getLabel(inputId)}
           {this.getInputWrapper(<SelectBody {...this._getBodyProps(inputId)} />)}
         </div>
       );
-    }
+    },
     //@@viewOff:render
   })
 );

@@ -30,24 +30,24 @@ export const Todo = UU5.Common.VisualComponent.create({
     tagName: ns.name("Todo"),
     nestingLevel: "box",
     classNames: {
-      main: ns.css("todo")
+      main: ns.css("todo"),
     },
     opt: {
-      nestingLevelWrapper: true
-    }
+      nestingLevelWrapper: true,
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    props: UU5.PropTypes.oneOfType([UU5.PropTypes.array, UU5.PropTypes.object])
+    props: UU5.PropTypes.oneOfType([UU5.PropTypes.array, UU5.PropTypes.object]),
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      props: null
+      props: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -65,13 +65,13 @@ export const Todo = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return this.getNestingLevel() ? (
       <UU5.Bricks.Section {...this.getMainPropsToPass()} content={null}>
         <UU5.Bricks.Pre>{this.props.props && UU5.Common.Tools.prettyJson(this.props.props)}</UU5.Bricks.Pre>
       </UU5.Bricks.Section>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

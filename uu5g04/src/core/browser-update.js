@@ -27,13 +27,13 @@ function doCheck() {
       f: -1, // Firefox
       o: -1, // Opera
       o_a: -1, // Opera on Android
-      s: -1 // Safari
+      s: -1, // Safari
       // y: 100000, // Yandex Browser
       // v: 100000, // Vivaldi
       // uc: 100000, // UC Browser
       // ios: -1, // iOS Browser; falls back to "s"
       // samsung: 100000 // Samsung Internet (Android)
-    }
+    },
     // style: "top", // "top","bottom","corner"
     // reminder: 24, // reappear after how many hours (applies if the user refreshes page without closing the message)
     // reminderClosed: 24*7, // if the user explicitly closes message it reappears after x hours

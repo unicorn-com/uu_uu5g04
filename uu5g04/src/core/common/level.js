@@ -19,20 +19,20 @@ export const Level = VisualComponent.create({
 
   //@@viewOn:statics
   statics: {
-    tagName: "UU5.Common.Level"
+    tagName: "UU5.Common.Level",
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    level: PropTypes.oneOf(["0", "1", "2", "3", "4", "5", "6", 0, 1, 2, 3, 4, 5, 6])
+    level: PropTypes.oneOf(["0", "1", "2", "3", "4", "5", "6", 0, 1, 2, 3, 4, 5, 6]),
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      level: undefined
+      level: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -53,7 +53,7 @@ export const Level = VisualComponent.create({
     if (typeof this.props.children === "function") {
       children = this.props.children(ctxValue);
     } else {
-      children = this.getChildren().map(child => {
+      children = this.getChildren().map((child) => {
         let newChild = child;
 
         if (Element.isValid(child)) {
@@ -72,7 +72,7 @@ export const Level = VisualComponent.create({
   render() {
     return (
       <Ctx.Consumer>
-        {context => {
+        {(context) => {
           let level = this.props.level != null ? +this.props.level : computeComponentLevel(context);
           const value = { ...context, level };
           delete value.isDummyLevel;
@@ -80,7 +80,7 @@ export const Level = VisualComponent.create({
         }}
       </Ctx.Consumer>
     );
-  }
+  },
   //@@viewOff:render
 });
 

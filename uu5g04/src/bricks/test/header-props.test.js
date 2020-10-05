@@ -24,19 +24,19 @@ const CONFIG = {
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.LevelMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     underline: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 const This = {};

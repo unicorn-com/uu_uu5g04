@@ -25,7 +25,7 @@ const PageSwiper = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.ContentMixin,
     UU5.Common.SwipeMixin,
-    UU5.Common.NestingLevelMixin
+    UU5.Common.NestingLevelMixin,
   ],
   //@@viewOff:mixins
 
@@ -34,18 +34,18 @@ const PageSwiper = UU5.Common.VisualComponent.create({
     tagName: ns.name("PageSwiper"),
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
-      main: ns.css("page-swiper")
+      main: ns.css("page-swiper"),
     },
     defaults: {
-      swipePositionLimit: 8
-    }
+      swipePositionLimit: 8,
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
     leftSwipe: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.number]),
-    rightSwipe: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.number])
+    rightSwipe: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.number]),
   },
   //@@viewOff:propTypes
 
@@ -53,7 +53,7 @@ const PageSwiper = UU5.Common.VisualComponent.create({
   getDefaultProps() {
     return {
       leftSwipe: false,
-      rightSwipe: false
+      rightSwipe: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -103,10 +103,10 @@ const PageSwiper = UU5.Common.VisualComponent.create({
       input: e.target instanceof HTMLInputElement,
       leftColumn: false,
       rightColumn: false,
-      otherSwiper: false
+      otherSwiper: false,
     };
     let eventPath = this._getEventPath(e);
-    eventPath.every(item => {
+    eventPath.every((item) => {
       let functionType = item.matches ? "matches" : "msMatchesSelector";
       if (leftColumnNode && item === leftColumnNode) {
         result.leftColumn = true;
@@ -220,7 +220,7 @@ const PageSwiper = UU5.Common.VisualComponent.create({
     newProps.mainAttrs = {
       onTouchStart: this.swipeOnTouchStart.bind(this, this._onSwipeStart),
       onTouchMove: this.swipeOnTouchMove,
-      onTouchEnd: this.swipeOnTouchEnd.bind(this, this._onSwipeEnd)
+      onTouchEnd: this.swipeOnTouchEnd.bind(this, this._onSwipeEnd),
     };
     return newProps;
   },
@@ -229,7 +229,7 @@ const PageSwiper = UU5.Common.VisualComponent.create({
   //@@viewOn:render
   render() {
     return <UU5.Bricks.Div {...this._getPropsToPass()}>{this.getChildren()}</UU5.Bricks.Div>;
-  }
+  },
   //@@viewOff:render
 });
 

@@ -22,20 +22,20 @@ const Draggable = UU5.Common.VisualComponent.create({
   displayName: "Draggable",
   mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.ContentMixin, UU5.Bricks.DraggableMixin],
 
-  render: function() {
+  render: function () {
     return (
       <div {...this.getMainAttrs()}>
         {this.getChildren()}
         {this.getDisabledCover()}
       </div>
     );
-  }
+  },
 });
 
 const MyDragableItemComponent = UU5.Common.VisualComponent.create({
   getInitialState() {
     return {
-      isCalled: false
+      isCalled: false,
     };
   },
 
@@ -64,7 +64,7 @@ const MyDragableItemComponent = UU5.Common.VisualComponent.create({
         ></UU5.Bricks.DraggableItem>
       </Draggable>
     );
-  }
+  },
 });
 
 const CONFIG = {
@@ -74,27 +74,27 @@ const CONFIG = {
     "UU5.Common.NestingLevelMixin",
     "UU5.Common.PureRenderMixin",
     "UU5.Common.ContentMixin",
-    "UU5.Bricks.DraggableMixin"
+    "UU5.Bricks.DraggableMixin",
   ],
   props: {
     x: {
-      values: [50]
+      values: [50],
     },
     y: {
-      values: [70]
-    }
+      values: [70],
+    },
     //onMoveStart
     //onMove
     //onMoveEnds
   },
   requiredProps: {
-    parent: shallow(<Draggable id="parentId" />).instance()
+    parent: shallow(<Draggable id="parentId" />).instance(),
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: true
-    }
-  }
+      disableLifecycleMethods: true,
+    },
+  },
 };
 
 describe(`UU5.Bricks.DraggableItem`, () => {
@@ -151,12 +151,12 @@ describe(`UU5.Bricks.DraggableItem docKit example`, () => {
           <UU5.Bricks.DraggableItem
             id={"uuID3"}
             className="item"
-            onMove={obj => {
+            onMove={(obj) => {
               console.log(obj.x, obj.y);
               obj.component.setPosition(obj.x, obj.y);
             }}
-            onMoveStart={obj => console.log("move started")}
-            onMoveEnd={obj => console.log("move ended")}
+            onMoveStart={(obj) => console.log("move started")}
+            onMoveEnd={(obj) => console.log("move ended")}
           ></UU5.Bricks.DraggableItem>
         </Draggable>
         {/*@@viewOff:0*/}

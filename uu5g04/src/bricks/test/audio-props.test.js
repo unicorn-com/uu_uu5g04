@@ -21,39 +21,39 @@ const CONFIG = {
     "UU5.Common.BaseMixin",
     "UU5.Common.ElementaryMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     src: {
-      values: ["http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"]
+      values: ["http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"],
     },
     autoPlay: {
-      values: [true, false]
+      values: [true, false],
     },
     loop: {
-      values: [true, false]
+      values: [true, false],
     },
     preload: {
-      values: ["auto", "metadata", "none"]
+      values: ["auto", "metadata", "none"],
     },
     muted: {
-      values: [true, false]
+      values: [true, false],
     },
     authenticate: {
       values: [false, true, null],
       requiredProps: {
-        src: "https://plus4u.net/path/trusted.mp3" // to pass "trusted domain" check and therefore add access_token parameter based on the prop
-      }
-    }
+        src: "https://plus4u.net/path/trusted.mp3", // to pass "trusted domain" check and therefore add access_token parameter based on the prop
+      },
+    },
   },
   requiredProps: {
-    src: "http://www.noiseaddicts.com/samples_1w72b820/3724.mp3" // to prevent warning about not having src
+    src: "http://www.noiseaddicts.com/samples_1w72b820/3724.mp3", // to prevent warning about not having src
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Audio`, () => {

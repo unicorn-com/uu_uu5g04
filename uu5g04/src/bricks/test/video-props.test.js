@@ -21,48 +21,48 @@ const CONFIG = {
     "UU5.Common.BaseMixin",
     "UU5.Common.ElementaryMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     src: {
-      values: ["http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4"]
+      values: ["http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4"],
     },
     autoPlay: {
-      values: [true, false]
+      values: [true, false],
     },
     disableControls: {
-      values: [true, false]
+      values: [true, false],
     },
     loop: {
-      values: [true, false]
+      values: [true, false],
     },
     poster: {
-      values: ["https://images.pexels.com/photos/220067/pexels-photo-220067.jpeg?w=200&h=250"]
+      values: ["https://images.pexels.com/photos/220067/pexels-photo-220067.jpeg?w=200&h=250"],
     },
     preload: {
-      values: ["auto", "metadata", "none"]
+      values: ["auto", "metadata", "none"],
     },
     muted: {
-      values: [true, false]
+      values: [true, false],
     },
     type: {
-      values: ["mp4", "webm", "ogg", "m3u8"]
+      values: ["mp4", "webm", "ogg", "m3u8"],
     },
     authenticate: {
       values: [false, true, null],
       requiredProps: {
-        src: "https://plus4u.net/path/trusted.mp4" // to pass "trusted domain" check and therefore add access_token parameter based on the prop
-      }
-    }
+        src: "https://plus4u.net/path/trusted.mp4", // to pass "trusted domain" check and therefore add access_token parameter based on the prop
+      },
+    },
   },
   requiredProps: {
-    src: "http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4" // to prevent warning about not having either of src/type
+    src: "http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4", // to prevent warning about not having either of src/type
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Video`, () => {

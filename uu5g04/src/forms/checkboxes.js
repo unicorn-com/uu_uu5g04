@@ -37,7 +37,7 @@ export const Checkboxes = Context.withContext(
       UU5.Common.ColorSchemaMixin,
       UU5.Common.ScreenSizeMixin,
       InputMixin,
-      GroupMixin
+      GroupMixin,
     ],
     //@@viewOff:mixins
 
@@ -47,20 +47,20 @@ export const Checkboxes = Context.withContext(
       classNames: {
         main: ns.css("checkboxes"),
         inline: ns.css("inputs-inline"),
-        inner: props =>
+        inner: (props) =>
           ns.css("input-inner") +
           " " +
           Css.css(`
           border-radius: ${UU5.Common.Tools.fillUnit(props.selectionBorderRadius)};
         `),
         selectionBackground: ns.css("checkboxes-selection-background"),
-        column: ns.css("checkboxes-column")
+        column: ns.css("checkboxes-column"),
       },
       defaults: {
         onIcon: "mdi-check",
-        columnRegexp: /^((?:offset-)?[a-z]+)(?:-)?(\d+)$/
+        columnRegexp: /^((?:offset-)?[a-z]+)(?:-)?(\d+)$/,
       },
-      lsi: () => UU5.Environment.Lsi.Forms.message
+      lsi: () => UU5.Environment.Lsi.Forms.message,
     },
     //@@viewOff:statics
 
@@ -69,7 +69,7 @@ export const Checkboxes = Context.withContext(
       type: UU5.PropTypes.number,
       bgStyleChecked: UU5.PropTypes.oneOf(["filled", "outline"]),
       selectionBackground: UU5.PropTypes.bool,
-      selectionBorderRadius: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number])
+      selectionBorderRadius: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
     },
     //@@viewOff:propTypes
 
@@ -79,7 +79,7 @@ export const Checkboxes = Context.withContext(
         type: 1,
         bgStyleChecked: "outline",
         selectionBackground: true,
-        selectionBorderRadius: "2px"
+        selectionBorderRadius: "2px",
       };
     },
     //@@viewOff:getDefaultProps
@@ -101,7 +101,7 @@ export const Checkboxes = Context.withContext(
       if (this.props.controlled) {
         if (nextProps.value !== undefined) {
           let newValue = this.state.value;
-          nextProps.value.forEach(function(value) {
+          nextProps.value.forEach(function (value) {
             newValue[value.name] = value.value;
           });
 
@@ -147,7 +147,7 @@ export const Checkboxes = Context.withContext(
           message: this.props.message,
           feedback: this.props.feedback,
           value: value,
-          readOnly: this.props.readOnly
+          readOnly: this.props.readOnly,
         },
         setStateCallback
       );
@@ -205,7 +205,7 @@ export const Checkboxes = Context.withContext(
       let value = {};
 
       if (props.value) {
-        props.value.forEach(function(checkbox, i) {
+        props.value.forEach(function (checkbox, i) {
           value[checkbox.name || i.toString()] = checkbox.value || false;
         });
       }
@@ -239,7 +239,7 @@ export const Checkboxes = Context.withContext(
               message: result.message,
               value: result.value,
               callback: result.setStateCallback,
-              component: this
+              component: this,
             };
 
             if (typeof this.props.onChangeFeedback === "function") {
@@ -276,7 +276,7 @@ export const Checkboxes = Context.withContext(
             }
           } else {
             this.showError("validateError", null, {
-              context: { event: e, func: this.props.onValidate, result: result }
+              context: { event: e, func: this.props.onValidate, result: result },
             });
           }
         } else {
@@ -297,7 +297,7 @@ export const Checkboxes = Context.withContext(
       if (this.props.value) {
         value = value || this.state.value;
         value &&
-          Object.keys(value).forEach(key => {
+          Object.keys(value).forEach((key) => {
             for (let i = 0; i < this.props.value.length; i++) {
               let item = UU5.Common.Tools.merge({}, this.props.value[i]);
               if (item.name === key) {
@@ -321,7 +321,7 @@ export const Checkboxes = Context.withContext(
           opt = {
             feedback: "error",
             message: this.props.requiredMessage || this.getLsiComponent("requiredMessageGroup"),
-            value: opt.value
+            value: opt.value,
           };
         }
       }
@@ -350,7 +350,7 @@ export const Checkboxes = Context.withContext(
 
       return (
         Object.keys(value)
-          .map(name => {
+          .map((name) => {
             return value[name];
           })
           .indexOf(true) > -1
@@ -363,7 +363,7 @@ export const Checkboxes = Context.withContext(
       if (typeof newBsColWidth === "string") {
         let colWidthArray = newBsColWidth.split(" ");
         newBsColWidth = {};
-        colWidthArray.forEach(colWidth => {
+        colWidthArray.forEach((colWidth) => {
           let match = colWidth.match(this.getDefault().columnRegexp);
           newBsColWidth[match[1]] = parseInt(match[2]);
         });
@@ -414,7 +414,7 @@ export const Checkboxes = Context.withContext(
       if (this.props.colWidth !== null && !this.props.inline && numberOfColumns) {
         let columns;
         columns = this._getColumns(numberOfColumns);
-        columns.forEach(column => {
+        columns.forEach((column) => {
           result.push(
             <UU5.Bricks.Column colWidth={this.props.colWidth} className={this.getClassName("column")}>
               {column}
@@ -481,7 +481,7 @@ export const Checkboxes = Context.withContext(
           {this.getInputWrapper(this.props.value ? [this._getCheckboxes()] : null)}
         </div>
       );
-    }
+    },
     //@@viewOn:render
   })
 );

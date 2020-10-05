@@ -47,7 +47,7 @@ describe(`UU5.Bricks.Page interface testing`, () => {
             <br />
             <UU5.Bricks.Column id={"r_open03"}>
               <UU5.Bricks.ButtonGroup id={"r_open04"} vertical>
-                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={button => (this.MenuButton = button)}>
+                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={(button) => (this.MenuButton = button)}>
                   Home
                   <UU5.Bricks.Icon id={"r_open06"} icon="mdi-home" />
                 </UU5.Bricks.Button>
@@ -115,7 +115,7 @@ describe(`UU5.Bricks.Page interface testing`, () => {
             <br />
             <UU5.Bricks.Column id={"r_open03"}>
               <UU5.Bricks.ButtonGroup id={"r_open04"} vertical>
-                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={button => (this.MenuButton = button)}>
+                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={(button) => (this.MenuButton = button)}>
                   Home
                   <UU5.Bricks.Icon id={"r_open06"} icon="mdi-home" />
                 </UU5.Bricks.Button>
@@ -183,7 +183,7 @@ describe(`UU5.Bricks.Page interface testing`, () => {
             <br />
             <UU5.Bricks.Column id={"r_open03"}>
               <UU5.Bricks.ButtonGroup id={"r_open04"} vertical>
-                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={button => (this.MenuButton = button)}>
+                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={(button) => (this.MenuButton = button)}>
                   Home
                   <UU5.Bricks.Icon id={"r_open06"} icon="mdi-home" />
                 </UU5.Bricks.Button>
@@ -252,7 +252,7 @@ describe(`UU5.Bricks.Page interface testing`, () => {
             <br />
             <UU5.Bricks.Column id={"r_open03"}>
               <UU5.Bricks.ButtonGroup id={"r_open04"} vertical>
-                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={button => (this.MenuButton = button)}>
+                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={(button) => (this.MenuButton = button)}>
                   Home
                   <UU5.Bricks.Icon id={"r_open06"} icon="mdi-home" />
                 </UU5.Bricks.Button>
@@ -329,7 +329,7 @@ describe(`UU5.Bricks.Page interface testing`, () => {
             <br />
             <UU5.Bricks.Column id={"r_open03"}>
               <UU5.Bricks.ButtonGroup id={"r_open04"} vertical>
-                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={button => (this.MenuButton = button)}>
+                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={(button) => (this.MenuButton = button)}>
                   Home
                   <UU5.Bricks.Icon id={"r_open06"} icon="mdi-home" />
                 </UU5.Bricks.Button>
@@ -367,12 +367,7 @@ describe(`UU5.Bricks.Page interface testing`, () => {
     );
     expect(wrapper.instance().getLeftOpen()).toEqual(expect.any(Object));
     expect(wrapper.instance().getLeftOpen()).toBeInstanceOf(Object);
-    expect(wrapper.instance().getLeftOpen()).toBe(
-      wrapper
-        .find({ id: "l_open01" })
-        .first()
-        .instance()
-    );
+    expect(wrapper.instance().getLeftOpen()).toBe(wrapper.find({ id: "l_open01" }).first().instance());
     expect(wrapper.instance().getLeftOpen()).not.toBeNull();
     expect(wrapper.instance().getLeftOpen()).not.toBeUndefined();
     expect(() => wrapper.instance().getLeftOpen()).not.toThrow();
@@ -424,7 +419,7 @@ describe(`UU5.Bricks.Page interface testing`, () => {
             <br />
             <UU5.Bricks.Column id={"r_open03"}>
               <UU5.Bricks.ButtonGroup id={"r_open04"} vertical>
-                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={button => (this.MenuButton = button)}>
+                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={(button) => (this.MenuButton = button)}>
                   Home
                   <UU5.Bricks.Icon id={"r_open06"} icon="mdi-home" />
                 </UU5.Bricks.Button>
@@ -509,7 +504,7 @@ describe(`UU5.Bricks.Page interface testing`, () => {
             <br />
             <UU5.Bricks.Column id={"r_open03"}>
               <UU5.Bricks.ButtonGroup id={"r_open04"} vertical>
-                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={button => (this.MenuButton = button)}>
+                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={(button) => (this.MenuButton = button)}>
                   Home
                   <UU5.Bricks.Icon id={"r_open06"} icon="mdi-home" />
                 </UU5.Bricks.Button>
@@ -547,12 +542,7 @@ describe(`UU5.Bricks.Page interface testing`, () => {
     );
     expect(wrapper.instance().getLeftClosed()).toEqual(expect.any(Object));
     expect(wrapper.instance().getLeftClosed()).toBeInstanceOf(Object);
-    expect(wrapper.instance().getLeftClosed()).toBe(
-      wrapper
-        .find({ id: "left_closed01" })
-        .first()
-        .instance()
-    );
+    expect(wrapper.instance().getLeftClosed()).toBe(wrapper.find({ id: "left_closed01" }).first().instance());
   });
 
   it("getRightClosed() should return instance", () => {
@@ -581,7 +571,7 @@ describe(`UU5.Bricks.Page interface testing`, () => {
             <br />
             <UU5.Bricks.Column id={"r_open03"}>
               <UU5.Bricks.ButtonGroup id={"r_open04"} vertical>
-                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={button => (this.MenuButton = button)}>
+                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={(button) => (this.MenuButton = button)}>
                   Home
                   <UU5.Bricks.Icon id={"r_open06"} icon="mdi-home" />
                 </UU5.Bricks.Button>
@@ -619,12 +609,7 @@ describe(`UU5.Bricks.Page interface testing`, () => {
     );
     expect(wrapper.instance().getRightClosed()).toEqual(expect.any(Object));
     expect(wrapper.instance().getRightClosed()).toBeInstanceOf(Object);
-    expect(wrapper.instance().getRightClosed()).toBe(
-      wrapper
-        .find({ id: "r_closed01" })
-        .first()
-        .instance()
-    );
+    expect(wrapper.instance().getRightClosed()).toBe(wrapper.find({ id: "r_closed01" }).first().instance());
   });
 
   it("getTop()", () => {
@@ -653,7 +638,7 @@ describe(`UU5.Bricks.Page interface testing`, () => {
             <br />
             <UU5.Bricks.Column id={"r_open03"}>
               <UU5.Bricks.ButtonGroup id={"r_open04"} vertical>
-                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={button => (this.MenuButton = button)}>
+                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={(button) => (this.MenuButton = button)}>
                   Home
                   <UU5.Bricks.Icon id={"r_open06"} icon="mdi-home" />
                 </UU5.Bricks.Button>
@@ -720,7 +705,7 @@ describe(`UU5.Bricks.Page interface testing`, () => {
             <br />
             <UU5.Bricks.Column id={"r_open03"}>
               <UU5.Bricks.ButtonGroup id={"r_open04"} vertical>
-                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={button => (this.MenuButton = button)}>
+                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={(button) => (this.MenuButton = button)}>
                   Home
                   <UU5.Bricks.Icon id={"r_open06"} icon="mdi-home" />
                 </UU5.Bricks.Button>
@@ -1098,7 +1083,7 @@ describe(`UU5.Bricks.Page interface testing`, () => {
             <br />
             <UU5.Bricks.Column id={"r_open03"}>
               <UU5.Bricks.ButtonGroup id={"r_open04"} vertical>
-                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={button => (this.MenuButton = button)}>
+                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={(button) => (this.MenuButton = button)}>
                   Home
                   <UU5.Bricks.Icon id={"r_open06"} icon="mdi-home" />
                 </UU5.Bricks.Button>
@@ -1167,7 +1152,7 @@ describe(`UU5.Bricks.Page interface testing`, () => {
             <br />
             <UU5.Bricks.Column id={"r_open03"}>
               <UU5.Bricks.ButtonGroup id={"r_open04"} vertical>
-                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={button => (this.MenuButton = button)}>
+                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={(button) => (this.MenuButton = button)}>
                   Home
                   <UU5.Bricks.Icon id={"r_open06"} icon="mdi-home" />
                 </UU5.Bricks.Button>
@@ -1236,7 +1221,7 @@ describe(`UU5.Bricks.Page interface testing`, () => {
             <br />
             <UU5.Bricks.Column id={"r_open03"}>
               <UU5.Bricks.ButtonGroup id={"r_open04"} vertical>
-                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={button => (this.MenuButton = button)}>
+                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={(button) => (this.MenuButton = button)}>
                   Home
                   <UU5.Bricks.Icon id={"r_open06"} icon="mdi-home" />
                 </UU5.Bricks.Button>
@@ -1304,7 +1289,7 @@ describe(`UU5.Bricks.Page interface testing`, () => {
             <br />
             <UU5.Bricks.Column id={"r_open03"}>
               <UU5.Bricks.ButtonGroup id={"r_open04"} vertical>
-                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={button => (this.MenuButton = button)}>
+                <UU5.Bricks.Button id={"r_open05"} colorSchema="primary" ref_={(button) => (this.MenuButton = button)}>
                   Home
                   <UU5.Bricks.Icon id={"r_open06"} icon="mdi-home" />
                 </UU5.Bricks.Button>

@@ -15,7 +15,7 @@ import UU5 from "uu5g04";
 
 const defaults = {
   labelColWidth: "xs12 s5",
-  inputColWidth: "xs12 s7"
+  inputColWidth: "xs12 s7",
 };
 
 export const FormContext = UU5.Common.Context.create();

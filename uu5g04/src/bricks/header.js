@@ -32,7 +32,7 @@ export const Header = UU5.Common.VisualComponent.create({
     UU5.Common.ColorSchemaMixin,
     UU5.Common.LevelMixin,
     UU5.Common.PureRenderMixin,
-    UU5.Common.EditableMixin
+    UU5.Common.EditableMixin,
   ],
   //@@viewOff:mixins
 
@@ -44,22 +44,22 @@ export const Header = UU5.Common.VisualComponent.create({
       main: ns.css("header"),
       text: "uu5-common-text",
       underline: ns.css("header-underline"),
-      jumbotronContent: ns.css("header-jumbotron-content")
+      jumbotronContent: ns.css("header-jumbotron-content"),
     },
-    editableComponent: "UU5.BricksEditable.Header"
+    editableComponent: "UU5.BricksEditable.Header",
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    underline: UU5.PropTypes.bool
+    underline: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      underline: undefined // default: false
+      underline: undefined, // default: false
     };
   },
   //@@viewOff:getDefaultProps
@@ -106,7 +106,7 @@ export const Header = UU5.Common.VisualComponent.create({
     }
 
     return this.getNestingLevel() ? result : null;
-  }
+  },
   //@@viewOff:render
 });
 

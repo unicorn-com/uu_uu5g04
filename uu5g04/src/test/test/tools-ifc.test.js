@@ -30,7 +30,7 @@ class AsyncComponent extends React.Component {
 
 class CallComponent extends React.Component {
   call() {
-    this.setState(state => ({ counter: state ? state.counter + 1 : 1 }));
+    this.setState((state) => ({ counter: state ? state.counter + 1 : 1 }));
     if (typeof this.props.onCall === "function") this.props.onCall();
   }
   render() {
@@ -102,7 +102,7 @@ describe("UU5.Test.Tools", () => {
   });
 
   it("renderHook", async () => {
-    let useSomething = function(initialValue = 10, changeableValue = 0) {
+    let useSomething = function (initialValue = 10, changeableValue = 0) {
       let [initialParam1] = React.useState(initialValue);
       return [initialParam1, changeableValue];
     };
@@ -114,7 +114,7 @@ describe("UU5.Test.Tools", () => {
       rerender: expect.any(Function),
       allResults: expect.any(Function),
       renderCount: expect.any(Function),
-      wrapper: expect.any(Object)
+      wrapper: expect.any(Object),
     });
     expect(result.lastResult()).toMatchObject([10, 0]); // default values
     expect(result.allResults()).toMatchObject([[10, 0]]);
@@ -122,7 +122,10 @@ describe("UU5.Test.Tools", () => {
 
     result.rerender(20, 7);
     expect(result.lastResult()).toMatchObject([10, 7]);
-    expect(result.allResults()).toMatchObject([[10, 0], [10, 7]]);
+    expect(result.allResults()).toMatchObject([
+      [10, 0],
+      [10, 7],
+    ]);
     expect(result.renderCount()).toBe(2);
 
     result = UU5.Test.Tools.renderHook(useSomething, 1, 2);
@@ -130,7 +133,7 @@ describe("UU5.Test.Tools", () => {
   });
 
   it("initHookRenderer", async () => {
-    let useSomething = function(initialValue = 10, changeableValue = 0) {
+    let useSomething = function (initialValue = 10, changeableValue = 0) {
       let [initialParam1] = React.useState(initialValue);
       return [initialParam1, changeableValue];
     };
@@ -142,7 +145,7 @@ describe("UU5.Test.Tools", () => {
       rerender: expect.any(Function),
       allResults: expect.any(Function),
       renderCount: expect.any(Function),
-      HookComponent: expect.any(Function)
+      HookComponent: expect.any(Function),
     });
     let childFn = jest.fn(() => null);
     mount(<result.HookComponent>{childFn}</result.HookComponent>);
@@ -153,7 +156,10 @@ describe("UU5.Test.Tools", () => {
 
     result.rerender(20, 7);
     expect(result.lastResult()).toMatchObject([10, 7]);
-    expect(result.allResults()).toMatchObject([[10, 0], [10, 7]]);
+    expect(result.allResults()).toMatchObject([
+      [10, 0],
+      [10, 7],
+    ]);
     expect(result.renderCount()).toBe(2);
     expect(childFn).toHaveBeenLastCalledWith(result.lastResult());
 
@@ -347,7 +353,7 @@ describe("UU5.Test.Tools", () => {
     wrapper = mount(
       <div>
         <input
-          ref={ref => (input = ref)}
+          ref={(ref) => (input = ref)}
           defaultValue="abc"
           onFocus={onFocusFn}
           onBlur={onBlurFn}

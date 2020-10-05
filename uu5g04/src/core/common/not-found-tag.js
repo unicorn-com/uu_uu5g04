@@ -36,16 +36,16 @@ export const NotFoundTag = VisualComponent.create({
   statics: {
     tagName: ns.name("NotFoundTag"),
     classNames: {
-      main: ns.css("not-found-tag")
+      main: ns.css("not-found-tag"),
     },
-    lsi: () => UU5.Environment.Lsi.Common.notFoundTag
+    lsi: () => UU5.Environment.Lsi.Common.notFoundTag,
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
     tagName: PropTypes.string,
-    error: PropTypes.oneOfType([PropTypes.func, PropTypes.string, PropTypes.element])
+    error: PropTypes.oneOfType([PropTypes.func, PropTypes.string, PropTypes.element]),
   },
   //@@viewOff:propTypes
 
@@ -53,7 +53,7 @@ export const NotFoundTag = VisualComponent.create({
   getDefaultProps: function () {
     return {
       tagName: null,
-      error: null
+      error: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -95,12 +95,14 @@ export const NotFoundTag = VisualComponent.create({
       this.props.tagName || ""
     );
 
-    return this.props.error ? this._getCustomError() : (
+    return this.props.error ? (
+      this._getCustomError()
+    ) : (
       <Error {...this.getMainPropsToPass()} id={this.props.id}>
         {value}
       </Error>
     );
-  }
+  },
   //@@viewOff:render
 });
 

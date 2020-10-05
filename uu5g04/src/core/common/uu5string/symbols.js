@@ -28,7 +28,7 @@ const SYMBOLS = {
     return session && session.getIdentity() ? session.getIdentity().email : "";
   },
   idHex32: () => Tools.generateUUID(32),
-  idHex64: () => Tools.generateUUID(64)
+  idHex64: () => Tools.generateUUID(64),
 };
 
 export default SYMBOLS;

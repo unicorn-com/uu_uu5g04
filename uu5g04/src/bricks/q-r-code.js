@@ -40,8 +40,8 @@ export const QRCode = UU5.Common.VisualComponent.create({
         " " +
         Css.css(`
         display: inline-block;
-      `)
-    }
+      `),
+    },
   },
   //@@viewOff:statics
 
@@ -49,7 +49,7 @@ export const QRCode = UU5.Common.VisualComponent.create({
   propTypes: {
     value: UU5.PropTypes.string.isRequired,
     size: UU5.PropTypes.number,
-    correction: UU5.PropTypes.oneOf(["low", "medium", "quartile", "high"])
+    correction: UU5.PropTypes.oneOf(["low", "medium", "quartile", "high"]),
   },
   //@@viewOff:propTypes
 
@@ -58,7 +58,7 @@ export const QRCode = UU5.Common.VisualComponent.create({
     return {
       value: undefined,
       size: 128,
-      correction: "low"
+      correction: "low",
     };
   },
   //@@viewOff:getDefaultProps
@@ -125,7 +125,7 @@ export const QRCode = UU5.Common.VisualComponent.create({
         </UU5.Common.Suspense>
       </span>
     );
-  }
+  },
   //@@viewOff:render
 });
 

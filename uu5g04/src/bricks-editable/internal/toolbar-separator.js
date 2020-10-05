@@ -9,10 +9,10 @@ const classNames = {
     Css.css(`
     padding-right: 1px;
     background-color: #BDBDBD;
-  `)
+  `),
 };
 
-const getProps = props => {
+const getProps = (props) => {
   let propsToPass = { ...props };
 
   propsToPass.className += (propsToPass.className ? " " : "") + classNames.main();

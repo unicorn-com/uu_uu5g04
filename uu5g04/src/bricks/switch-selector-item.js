@@ -26,7 +26,7 @@ const greyShades = {
   c500: grey.c600,
   c700: grey.c800,
   c900: grey.c900,
-  inverse: grey.inverse
+  inverse: grey.inverse,
 };
 
 function getBlackColors(active, dark) {
@@ -38,11 +38,11 @@ function getBlackColors(active, dark) {
         ? "rgba(255,255,255,.6)"
         : "rgba(0,0,0,.6)"
       : dark
-        ? "rgba(255,255,255,.4)"
-        : "rgba(0,0,0,.2)",
+      ? "rgba(255,255,255,.4)"
+      : "rgba(0,0,0,.2)",
     colorHover: active ? (dark ? "rgba(0,0,0,.87)" : "#fff") : dark ? "#fff" : "rgba(0,0,0,.87)",
     backgroundColorActive: dark ? "rgba(0,0,0,.4)" : "rgba(255,255,255,.6)",
-    colorActive: active ? (dark ? "rgba(0,0,0,.87)" : "#fff") : dark ? "#fff" : "rgba(0,0,0,.87)"
+    colorActive: active ? (dark ? "rgba(0,0,0,.87)" : "#fff") : dark ? "#fff" : "rgba(0,0,0,.87)",
   };
 }
 
@@ -55,11 +55,11 @@ function getWhiteColors(active, dark) {
         ? "rgba(0,0,0,.6)"
         : "rgba(255,255,255,.8)"
       : dark
-        ? "rgba(0,0,0,.2)"
-        : "rgba(255,255,255,.2)",
+      ? "rgba(0,0,0,.2)"
+      : "rgba(255,255,255,.2)",
     colorHover: active ? (dark ? "#fff" : "rgba(0,0,0,.87)") : dark ? "rgba(0,0,0,.87)" : "#fff",
     backgroundColorActive: dark ? "rgba(0,0,0,.4)" : "rgba(255,255,255,.6)",
-    colorActive: active ? (dark ? "#fff" : "rgba(0,0,0,.87)") : dark ? "rgba(0,0,0,.87)" : "#fff"
+    colorActive: active ? (dark ? "#fff" : "rgba(0,0,0,.87)") : dark ? "rgba(0,0,0,.87)" : "#fff",
   };
 }
 
@@ -101,7 +101,7 @@ function getClassName({ active, dark, colorSchema, bgStyle, size, borderRadius, 
       font-size: ${fontSize}px;
       border-radius: ${bgStyle === "underline" ? undefined : UU5.Common.Tools.fillUnit(borderRadius)};
       padding: ${padding};
-    `
+    `,
   ];
 
   if (colorSchema !== "custom") {
@@ -134,7 +134,7 @@ function getClassName({ active, dark, colorSchema, bgStyle, size, borderRadius, 
               borderColorHover: isRich ? shades.c900 : dark ? shades.c700 : shades.c500,
               backgroundColorActive: "transparent",
               colorActive: shades.c900,
-              borderColorActive: shades.c900
+              borderColorActive: shades.c900,
             };
             break;
 
@@ -144,11 +144,17 @@ function getClassName({ active, dark, colorSchema, bgStyle, size, borderRadius, 
               backgroundColor: active ? (isRich ? shades.c500 : dark ? shades.c100 : shades.c50) : "transparent",
               color: active ? (isRich ? shades.inverse : shades.c900) : undefined,
               backgroundColorHover: active
-                ? isRich ? shades.c700 : (dark ? shades.c300 : shades.c100)
-                : dark ? shades.c100 : shades.c50,
+                ? isRich
+                  ? shades.c700
+                  : dark
+                  ? shades.c300
+                  : shades.c100
+                : dark
+                ? shades.c100
+                : shades.c50,
               colorHover: active ? (isRich ? shades.inverse : darkText) : undefined,
               backgroundColorActive: isRich ? shades.c900 : shades.c500,
-              colorActive: isRich ? shades.inverse : darkText
+              colorActive: isRich ? shades.inverse : darkText,
             };
         }
     }
@@ -164,14 +170,18 @@ function getClassName({ active, dark, colorSchema, bgStyle, size, borderRadius, 
         background-color: ${colors.backgroundColorHover};
         color: ${colors.colorHover};
         border-color: ${(bgStyle === "outline" && colors.borderColorHover) || undefined};
-        border-bottom: ${(bgStyle === "underline" && colors.borderColorHover && `1px solid ${colors.borderColorHover}`) || undefined};
+        border-bottom: ${
+          (bgStyle === "underline" && colors.borderColorHover && `1px solid ${colors.borderColorHover}`) || undefined
+        };
       }
 
       &:active {
         background-color: ${colors.backgroundColorActive};
         color: ${colors.colorActive};
         border-color: ${(bgStyle === "outline" && colors.borderColorActive) || undefined};
-        border-bottom: ${(bgStyle === "underline" && colors.borderColorActive && `1px solid ${colors.borderColorActive}`) || undefined};
+        border-bottom: ${
+          (bgStyle === "underline" && colors.borderColorActive && `1px solid ${colors.borderColorActive}`) || undefined
+        };
       }
     `);
   }
@@ -189,7 +199,7 @@ const SwitchSelectorItem = UU5.Common.VisualComponent.create({
 
   //@@viewOn:statics
   statics: {
-    tagName: ns.name("MultiSwitch.Item")
+    tagName: ns.name("MultiSwitch.Item"),
   },
   //@@viewOff:statics
 
@@ -203,7 +213,7 @@ const SwitchSelectorItem = UU5.Common.VisualComponent.create({
     bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
     size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
     borderRadius: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
-    tabIndex: UU5.PropTypes.number
+    tabIndex: UU5.PropTypes.number,
   },
   //@@viewOff:propTypes
 
@@ -218,7 +228,7 @@ const SwitchSelectorItem = UU5.Common.VisualComponent.create({
       bgStyle: "filled",
       size: "m",
       borderRadius: 1,
-      tabIndex: -1
+      tabIndex: -1,
     };
   },
   //@@viewOff:getDefaultProps
@@ -249,7 +259,7 @@ const SwitchSelectorItem = UU5.Common.VisualComponent.create({
         {this.getChildren()}
       </button>
     );
-  }
+  },
   //@@viewOn:render
 });
 export default SwitchSelectorItem;

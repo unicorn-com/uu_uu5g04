@@ -30,11 +30,11 @@ export const Backdrop = UU5.Common.VisualComponent.create({
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "smallBox"),
     classNames: {
       main: ns.css("backdrop"),
-      background: ns.css("backdrop-background")
+      background: ns.css("backdrop-background"),
     },
     opt: {
-      nestingLevelWrapper: true
-    }
+      nestingLevelWrapper: true,
+    },
   },
   //@@viewOff:statics
 
@@ -42,16 +42,16 @@ export const Backdrop = UU5.Common.VisualComponent.create({
   propTypes: {
     onClick: UU5.PropTypes.func,
     onMouseOver: UU5.PropTypes.func,
-    background: UU5.PropTypes.bool
+    background: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       onClick: null,
       onMouseOver: null,
-      background: false
+      background: false,
     };
   },
   //@@viewOff:getDefaultProps
@@ -69,21 +69,21 @@ export const Backdrop = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     var mainAttrs = this.getMainAttrs();
     mainAttrs.id = this.getId();
     if (typeof this.props.onClick === "function") {
-      mainAttrs.onClick = e => this.props.onClick(this, e);
+      mainAttrs.onClick = (e) => this.props.onClick(this, e);
     }
     if (typeof this.props.onMouseOver === "function") {
-      mainAttrs.onMouseOver = e => this.props.onMouseOver(this, e);
+      mainAttrs.onMouseOver = (e) => this.props.onMouseOver(this, e);
     }
     if (this.props.background) {
       mainAttrs.className += " " + this.getClassName("background");
     }
 
     return this.getNestingLevel() ? <div {...mainAttrs}>{this.getDisabledCover()}</div> : null;
-  }
+  },
   //@@viewOff:render
 });
 

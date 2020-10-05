@@ -22,19 +22,19 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Common.NestingLevelMixin",
     "UU5.Common.ContentMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     width: {
-      values: ["200px", 200]
+      values: ["200px", 200],
     },
     textAlign: {
-      values: ["left", "right", "center"]
-    }
+      values: ["left", "right", "center"],
+    },
   },
   requiredProps: {
-    children: "Test"
-  }
+    children: "Test",
+  },
 };
 
 describe(`UU5.BlockLayout.Column props testing`, () => {

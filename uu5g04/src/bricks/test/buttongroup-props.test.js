@@ -27,7 +27,7 @@ const MyAllowTagsComponents = UU5.Common.VisualComponent.create({
   statics: { tagName: "UU5.Example.MyCompButton", classNames: { main: "mytr" } },
   render() {
     return <UU5.Example.MyCompButton {...this.getMainPropsToPass()} />;
-  }
+  },
 });
 
 const CONFIG = {
@@ -37,24 +37,24 @@ const CONFIG = {
     "UU5.Common.NestingLevelMixin",
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.ContentMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     size: {
-      values: ["s", "m", "l", "xl"]
+      values: ["s", "m", "l", "xl"],
     },
     allowTags: {
-      allowTagsArray: ["UU5.Example.MyCompButton"]
+      allowTagsArray: ["UU5.Example.MyCompButton"],
     },
     vertical: {
-      values: [true, false]
+      values: [true, false],
     },
     bgStyle: {
-      values: ["filled", "outline", "transparent"]
-    }
+      values: ["filled", "outline", "transparent"],
+    },
   },
   requiredProps: {},
-  opt: {}
+  opt: {},
 };
 
 describe(`UU5.Bricks.ButtonGroup props testing`, () => {

@@ -40,7 +40,7 @@ export const Select = Context.withContext(
       UU5.Common.ScreenSizeMixin,
       UU5.Common.ColorSchemaMixin,
       InputMixin,
-      ChoiceMixin
+      ChoiceMixin,
     ],
     //@@viewOff:mixins
 
@@ -56,12 +56,12 @@ export const Select = Context.withContext(
         selectAllEnabled: ns.css("select-all"),
         hasValue: ns.css("select-has-value"),
         screenSizeBehaviour: ns.css("screen-size-behaviour"),
-        inputOpen: ns.css("items-input-open")
+        inputOpen: ns.css("items-input-open"),
       },
       defaults: {
-        childTagName: "UU5.Forms.Select.Option"
+        childTagName: "UU5.Forms.Select.Option",
       },
-      lsi: () => UU5.Common.Tools.merge({}, UU5.Environment.Lsi.Forms.select, UU5.Environment.Lsi.Forms.message)
+      lsi: () => UU5.Common.Tools.merge({}, UU5.Environment.Lsi.Forms.select, UU5.Environment.Lsi.Forms.message),
     },
     //@@viewOff:statics
 
@@ -75,7 +75,7 @@ export const Select = Context.withContext(
       borderRadius: UU5.PropTypes.string,
       bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
       elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-      openToContent: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string])
+      openToContent: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string]),
     },
     //@@viewOff:propTypes
 
@@ -90,7 +90,7 @@ export const Select = Context.withContext(
         borderRadius: null,
         bgStyle: null,
         elevation: null,
-        openToContent: "xs"
+        openToContent: "xs",
       };
     },
     //@@viewOff:getDefaultProps
@@ -98,7 +98,7 @@ export const Select = Context.withContext(
     //@@viewOn:reactLifeCycle
     getInitialState() {
       return {
-        open: false
+        open: false,
       };
     },
 
@@ -129,13 +129,13 @@ export const Select = Context.withContext(
       } else {
         let currentValue = this.getValue();
         if (currentValue) {
-          let itemValues = UU5.Common.Children.map(nextProps.children, child => child.props.value);
+          let itemValues = UU5.Common.Children.map(nextProps.children, (child) => child.props.value);
 
           if (Array.isArray(currentValue)) {
             let newValue = [];
             let valueChanged = false;
-            currentValue.forEach(value => {
-              if (!itemValues.find(itemValue => itemValue === value)) {
+            currentValue.forEach((value) => {
+              if (!itemValues.find((itemValue) => itemValue === value)) {
                 valueChanged = true;
               } else {
                 newValue.push(value);
@@ -146,7 +146,7 @@ export const Select = Context.withContext(
               }
             });
           } else {
-            let selectedItem = itemValues.find(itemValue => itemValue === currentValue);
+            let selectedItem = itemValues.find((itemValue) => itemValue === currentValue);
 
             if (!selectedItem) {
               this.setValue(null);
@@ -196,7 +196,7 @@ export const Select = Context.withContext(
 
     toggle(setStateCallback) {
       this.setState(
-        state => {
+        (state) => {
           if (!state.open) {
             this._addEvent();
           }
@@ -215,7 +215,7 @@ export const Select = Context.withContext(
         let currentValue = this.getValue() || [];
 
         if (typeof value === "number") {
-          let values = this.props.children.map(child => child.props.value);
+          let values = this.props.children.map((child) => child.props.value);
           value = values[value];
         }
 
@@ -240,7 +240,7 @@ export const Select = Context.withContext(
       }
       opt.component = this;
       opt._data = { type: "remove", callback: setStateCallback, value: opt.value };
-      this._getChildren().forEach(child => {
+      this._getChildren().forEach((child) => {
         let value = child
           ? child.props.selectedContent || child.props.content || child.props.children || child.props.value
           : null;
@@ -323,7 +323,7 @@ export const Select = Context.withContext(
       if (!result && (typeof child !== "string" || child.trim())) {
         if (childTagName)
           this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagName], {
-            mixinName: "UU5.Common.BaseMixin"
+            mixinName: "UU5.Common.BaseMixin",
           });
         else this.showError("childNotAllowed", [child, defaultChildTagName], { mixinName: "UU5.Common.BaseMixin" });
       }
@@ -348,7 +348,7 @@ export const Select = Context.withContext(
           message: this.props.message,
           feedback: this.props.feedback,
           value: this._valuesToValuesArray(this.props.value),
-          readOnly: this.props.readOnly
+          readOnly: this.props.readOnly,
         },
         setStateCallback
       );
@@ -402,10 +402,10 @@ export const Select = Context.withContext(
         input: false,
         item: false,
         label: false,
-        picker: false
+        picker: false,
       };
       let eventPath = this._getEventPath(e);
-      eventPath.every(item => {
+      eventPath.every((item) => {
         let functionType = item.matches ? "matches" : "msMatchesSelector";
         if (item[functionType]) {
           if (item[functionType](labelMatch)) {
@@ -470,7 +470,7 @@ export const Select = Context.withContext(
       let itemList = this._itemList;
       let items = itemList.getRenderedChildren();
 
-      let handleKeyDown = e => {
+      let handleKeyDown = (e) => {
         if (e.which === 13) {
           e.preventDefault();
         } else if (e.which === 38 || e.which === 40) {
@@ -484,7 +484,7 @@ export const Select = Context.withContext(
         }
       };
 
-      let handleKeyUp = e => {
+      let handleKeyUp = (e) => {
         switch (e.which) {
           case 13: // enter
             if (!this.isOpen()) {
@@ -508,7 +508,7 @@ export const Select = Context.withContext(
             } else {
               this.open(() => {
                 if (items.length) {
-                  items[current].focus()
+                  items[current].focus();
                 }
               });
             }
@@ -518,8 +518,8 @@ export const Select = Context.withContext(
         }
       };
 
-      UU5.Environment.EventListener.addWindowEvent("keydown", this.getId(), e => handleKeyDown(e));
-      UU5.Environment.EventListener.addWindowEvent("keyup", this.getId(), e => handleKeyUp(e));
+      UU5.Environment.EventListener.addWindowEvent("keydown", this.getId(), (e) => handleKeyDown(e));
+      UU5.Environment.EventListener.addWindowEvent("keyup", this.getId(), (e) => handleKeyUp(e));
     },
 
     _onChangeFeedback(feedback, message, value, setStateCallback) {
@@ -542,7 +542,7 @@ export const Select = Context.withContext(
           message,
           value: value[0] || null,
           callback: setStateCallback,
-          component: this
+          component: this,
         };
         this.props.onChangeFeedback(opt);
       } else {
@@ -567,7 +567,7 @@ export const Select = Context.withContext(
             }
           } else {
             this.showError("validateError", null, {
-              context: { event: e, func: this.props.onValidate, result: result }
+              context: { event: e, func: this.props.onValidate, result: result },
             });
           }
         } else {
@@ -599,8 +599,8 @@ export const Select = Context.withContext(
       let props = {};
 
       props.hidden = !this.isOpen();
-      props.ref_ = itemList => (this._itemList = itemList);
-      props.onChange = opt => this._onItem(opt);
+      props.ref_ = (itemList) => (this._itemList = itemList);
+      props.onChange = (opt) => this._onItem(opt);
       props.value = this.state.value;
       props.multiple = this.props.multiple;
       props.allowTags = this.props.allowTags;
@@ -619,7 +619,7 @@ export const Select = Context.withContext(
         this.props.openToContent
           .trim()
           .split(" ")
-          .some(size => {
+          .some((size) => {
             if (screenSize == size) {
               result = true;
               return true;
@@ -755,7 +755,7 @@ export const Select = Context.withContext(
             message: result.message,
             value: result.value,
             callback,
-            component: this
+            component: this,
           };
           if (typeof this.props.onChangeFeedback === "function") {
             _callCallback = false;
@@ -812,7 +812,7 @@ export const Select = Context.withContext(
               message: result.message,
               value: result.value,
               callback: setStateCallbackComposed,
-              component: this
+              component: this,
             };
             if (typeof this.props.onChangeFeedback === "function") {
               _callCallback = false;
@@ -911,7 +911,7 @@ export const Select = Context.withContext(
         attrs.className += " " + this.getClassName().screenSizeBehaviour;
       }
 
-      let handleClick = e => {
+      let handleClick = (e) => {
         let clickData = this._findTarget(e.nativeEvent);
         if (clickData.input && ((this.isOpen() && !clickData.item) || !this.isOpen())) {
           document.activeElement.blur();
@@ -923,7 +923,7 @@ export const Select = Context.withContext(
 
       if (!this.isReadOnly() && !this.isComputedDisabled()) {
         let originalOnClick = attrs.onClick;
-        attrs.onClick = e => {
+        attrs.onClick = (e) => {
           if (typeof originalOnClick === "function") {
             originalOnClick(e);
           }
@@ -947,7 +947,7 @@ export const Select = Context.withContext(
         attrs = UU5.Common.Tools.merge(
           {
             tabIndex: !this.isReadOnly() && !this.isComputedDisabled() ? "0" : undefined,
-            onFocus: !this.isReadOnly() && !this.isComputedDisabled() ? () => this._onFocus() : null
+            onFocus: !this.isReadOnly() && !this.isComputedDisabled() ? () => this._onFocus() : null,
           },
           attrs
         );
@@ -963,7 +963,7 @@ export const Select = Context.withContext(
       if (children && this.state.value) {
         if (Array.isArray(this.state.value)) {
           for (let i = 0; i < this.state.value.length; i++) {
-            let child = children.find(child => child.props.value === this.state.value[i]);
+            let child = children.find((child) => child.props.value === this.state.value[i]);
             let childContent = child
               ? child.props.selectedContent || child.props.content || child.props.children || child.props.value
               : null;
@@ -1029,7 +1029,7 @@ export const Select = Context.withContext(
             aroundElement: this._textInput.findDOMNode(),
             position: "bottom",
             offset: this._shouldOpenToContent() ? 0 : 4,
-            preventPositioning: this._shouldOpenToContent()
+            preventPositioning: this._shouldOpenToContent(),
           },
           setStateCallback
         );
@@ -1058,7 +1058,7 @@ export const Select = Context.withContext(
       let children = [];
       if (this.props.children) {
         let childTagNames = this.props.allowTags.concat(this.getDefault().childTagName);
-        UU5.Common.Children.toArray(this.props.children).forEach(child => {
+        UU5.Common.Children.toArray(this.props.children).forEach((child) => {
           let childTagName = UU5.Common.Tools.getChildTagName(child);
           const newProps = UU5.Common.Tools.merge({}, child.props);
           newProps.mainAttrs = newProps.mainAttrs || {};
@@ -1079,7 +1079,7 @@ export const Select = Context.withContext(
       let children = this._getChildren();
 
       return (
-        <div {...this._getMainAttrs()} ref={comp => (this._root = comp)}>
+        <div {...this._getMainAttrs()} ref={(comp) => (this._root = comp)}>
           {this.getLabel(inputId)}
           {this.getInputWrapper([
             <ItemsInput
@@ -1092,7 +1092,7 @@ export const Select = Context.withContext(
               disabled={this.isDisabled() || this.isLoading()}
               readonly={this.isReadOnly()}
               loading={this.isLoading()}
-              onItemClick={!this.isReadOnly() && !this.isComputedDisabled() ? opt => this.removeValue(opt) : null}
+              onItemClick={!this.isReadOnly() && !this.isComputedDisabled() ? (opt) => this.removeValue(opt) : null}
               icon={
                 (!this.props.multiple || !this.state.value || !this.state.value.length) &&
                 !this.isComputedDisabled() &&
@@ -1101,18 +1101,18 @@ export const Select = Context.withContext(
                   : null
               }
               feedback={this.getFeedback()}
-              ref_={item => (this._textInput = item)}
+              ref_={(item) => (this._textInput = item)}
               borderRadius={this.props.borderRadius}
               elevation={this.props.elevation}
               bgStyle={this.props.bgStyle}
               inputWidth={this._getInputWidth()}
               colorSchema={this.props.colorSchema}
             />,
-            <ItemList {...this._getItemListProps()}>{this.isOpen() && children}</ItemList>
+            <ItemList {...this._getItemListProps()}>{this.isOpen() && children}</ItemList>,
           ])}
         </div>
       );
-    }
+    },
     //@@viewOn:render
   })
 );

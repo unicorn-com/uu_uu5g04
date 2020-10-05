@@ -5,22 +5,22 @@ import useParentSize from "../use-parent-size";
 const { mount, initHookRenderer } = UU5.Test.Tools;
 
 function renderHookInElement(width = 100, height = 200, ...initialHookParams) {
-  let defineSizes = el => {
+  let defineSizes = (el) => {
     if (el) {
       Object.defineProperties(el, {
         clientWidth: { get: () => width, configurable: true },
         clientHeight: { get: () => height, configurable: true },
         getBoundingClientRect: {
           get: () => () => ({ width, height, left: 0, top: 0, right: width, bottom: height }),
-          configurable: true
-        }
+          configurable: true,
+        },
       });
     }
   };
   let { HookComponent, ...result } = initHookRenderer(useParentSize, ...initialHookParams);
   let wrapper = mount(<div />);
   defineSizes(wrapper.getDOMNode());
-  wrapper.setProps({ children: <HookComponent>{hookResult => <hookResult.Resizer />}</HookComponent> });
+  wrapper.setProps({ children: <HookComponent>{(hookResult) => <hookResult.Resizer />}</HookComponent> });
   return result;
 }
 
@@ -30,7 +30,7 @@ describe("[uu5g04-hooks] useParentSize", () => {
     expect(lastResult()).toMatchObject({
       Resizer: expect.any(Function),
       width: expect.any(Number),
-      height: expect.any(Number)
+      height: expect.any(Number),
     });
   });
 

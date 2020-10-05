@@ -38,8 +38,8 @@ const AnimatedContainer = UU5.Common.VisualComponent.create({
           style += `overflow: hidden; height: ${state.height || 0}px;`;
         }
         return Css.css(style);
-      }
-    }
+      },
+    },
   },
   //@@viewOff:statics
 
@@ -47,7 +47,7 @@ const AnimatedContainer = UU5.Common.VisualComponent.create({
   propTypes: {
     opened: UU5.PropTypes.bool,
     unmount: UU5.PropTypes.bool,
-    animationTime: UU5.PropTypes.number
+    animationTime: UU5.PropTypes.number,
   },
   //@@viewOff:propTypes
 
@@ -56,7 +56,7 @@ const AnimatedContainer = UU5.Common.VisualComponent.create({
     return {
       opened: false,
       unmount: false,
-      animationTime: 500
+      animationTime: 500,
     };
   },
   //@@viewOff:getDefaultProps
@@ -83,7 +83,7 @@ const AnimatedContainer = UU5.Common.VisualComponent.create({
       if (this.state.hidden) {
         this.setState({
           hidden: false,
-          height: this._childContainerRef.current.scrollHeight
+          height: this._childContainerRef.current.scrollHeight,
         });
         this._timeout = setTimeout(() => this.setState({ height: "auto" }), this.props.animationTime);
       } else {
@@ -98,7 +98,7 @@ const AnimatedContainer = UU5.Common.VisualComponent.create({
   //@@viewOn:interface
   toggle() {
     this._handleUpdate = true;
-    this.setState(state => {
+    this.setState((state) => {
       let result = {};
 
       // component is not opened yet
@@ -133,7 +133,7 @@ const AnimatedContainer = UU5.Common.VisualComponent.create({
         {this.props.children}
       </div>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

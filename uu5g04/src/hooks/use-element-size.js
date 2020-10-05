@@ -13,7 +13,7 @@ function useElementSize({ width, height, interval = UU5.Environment.resizeInterv
   let observerRef = useRef();
   if (observerRef.current == null) {
     const callback = UU5.Common.Tools.debounce(
-      entries => {
+      (entries) => {
         let { contentRect } = entries[entries.length - 1] || {};
         if (contentRect && (contentRect.width !== rect.width || contentRect.height !== rect.height)) {
           setRect(contentRect);
@@ -28,11 +28,11 @@ function useElementSize({ width, height, interval = UU5.Environment.resizeInterv
 
   const refRef = useRef();
   if (refRef.current == null) {
-    refRef.current = function(ref) {
+    refRef.current = function (ref) {
       if (ref) {
         let rect = typeof ref.getBoundingClientRect === "function" ? ref.getBoundingClientRect() : null;
         if (rect) {
-          setRect(wh =>
+          setRect((wh) =>
             wh.width !== rect.width || wh.height !== rect.height ? { width: rect.width, height: rect.height } : wh
           );
         }

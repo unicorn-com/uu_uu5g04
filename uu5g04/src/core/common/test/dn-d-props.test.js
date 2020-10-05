@@ -45,18 +45,18 @@ class Component extends React.Component {
 const dragSpec = {
   beginDrag(props, monitor, component) {
     return { id: props.id };
-  }
+  },
 };
-const dragCollect = function(connect, monitor) {
+const dragCollect = function (connect, monitor) {
   return {
     connectDragSource: connect.dragSource(),
-    isDragging: !!monitor.isDragging()
+    isDragging: !!monitor.isDragging(),
   };
 };
 const DnDComponent = ReactDnD.DragSource("item", dragSpec, dragCollect)(Component);
 
 describe(`UU5.Common.DnD`, () => {
-  it("Provider - basic usage", function() {
+  it("Provider - basic usage", function () {
     let content = "Content of DnD Component";
 
     // DnD.Provider with native DnDComponent - should work
@@ -65,26 +65,16 @@ describe(`UU5.Common.DnD`, () => {
         <DnDComponent id="dnd">{content}</DnDComponent>
       </UU5.Common.DnD.Provider>
     );
-    expect(
-      wrapper
-        .find("#dnd")
-        .first()
-        .html() || ""
-    ).toContain(content);
+    expect(wrapper.find("#dnd").first().html() || "").toContain(content);
     wrapper.unmount();
 
     // standalone native DnDComponent - won't work (missing DragDropContext)
     wrapper = mount(<DnDComponent id="dnd">{content}</DnDComponent>);
-    expect(
-      wrapper
-        .find("#dnd")
-        .first()
-        .html() || ""
-    ).not.toContain(content);
+    expect(wrapper.find("#dnd").first().html() || "").not.toContain(content);
     wrapper.unmount();
   });
 
-  it("withContext - basic usage", function() {
+  it("withContext - basic usage", function () {
     const DnDComponentWithContext = UU5.Common.DnD.withContext(DnDComponent);
     let content = "Content of DnD Component";
 
@@ -94,22 +84,12 @@ describe(`UU5.Common.DnD`, () => {
         <DnDComponentWithContext id="dnd">{content}</DnDComponentWithContext>
       </UU5.Common.DnD.Provider>
     );
-    expect(
-      wrapper
-        .find("#dnd")
-        .first()
-        .html() || ""
-    ).toContain(content);
+    expect(wrapper.find("#dnd").first().html() || "").toContain(content);
     wrapper.unmount();
 
     // standalone UU5-wrapped DnDComponent - should work
     wrapper = mount(<DnDComponentWithContext id="dnd">{content}</DnDComponentWithContext>);
-    expect(
-      wrapper
-        .find("#dnd")
-        .first()
-        .html() || ""
-    ).toContain(content);
+    expect(wrapper.find("#dnd").first().html() || "").toContain(content);
     wrapper.unmount();
 
     // DnD.Provider with multiple components - should work
@@ -120,24 +100,9 @@ describe(`UU5.Common.DnD`, () => {
         <DnDComponent id="dnd3">{content}</DnDComponent>
       </UU5.Common.DnD.Provider>
     );
-    expect(
-      wrapper
-        .find("#dnd1")
-        .first()
-        .html() || ""
-    ).toContain(content);
-    expect(
-      wrapper
-        .find("#dnd2")
-        .first()
-        .html() || ""
-    ).toContain(content);
-    expect(
-      wrapper
-        .find("#dnd3")
-        .first()
-        .html() || ""
-    ).toContain(content);
+    expect(wrapper.find("#dnd1").first().html() || "").toContain(content);
+    expect(wrapper.find("#dnd2").first().html() || "").toContain(content);
+    expect(wrapper.find("#dnd3").first().html() || "").toContain(content);
     wrapper.unmount();
 
     // multiple standalone components - only UU5-wrapped should work
@@ -148,30 +113,15 @@ describe(`UU5.Common.DnD`, () => {
         <DnDComponent id="dnd3">{content}</DnDComponent>
       </div>
     );
-    expect(
-      wrapper
-        .find("#dnd1")
-        .first()
-        .html() || ""
-    ).toContain(content);
-    expect(
-      wrapper
-        .find("#dnd2")
-        .first()
-        .html() || ""
-    ).toContain(content);
-    expect(
-      wrapper
-        .find("#dnd3")
-        .first()
-        .html() || ""
-    ).not.toContain(content);
+    expect(wrapper.find("#dnd1").first().html() || "").toContain(content);
+    expect(wrapper.find("#dnd2").first().html() || "").toContain(content);
+    expect(wrapper.find("#dnd3").first().html() || "").not.toContain(content);
     wrapper.unmount();
   });
 
-  it("withContext - custom DragDropContext", async function() {
+  it("withContext - custom DragDropContext", async function () {
     const DnDComponentWithContext = UU5.Common.DnD.withContext(DnDComponent);
-    const App = props => props.children;
+    const App = (props) => props.children;
     const CustomDnDContext = ReactDnD.DragDropContext(ReactDnDHtml5Backend.default)(App);
     let content = "Content of DnD Component";
 
@@ -181,12 +131,7 @@ describe(`UU5.Common.DnD`, () => {
         <DnDComponent id="dnd">{content}</DnDComponent>
       </CustomDnDContext>
     );
-    expect(
-      wrapper
-        .find("#dnd")
-        .first()
-        .html() || ""
-    ).toContain(content);
+    expect(wrapper.find("#dnd").first().html() || "").toContain(content);
     wrapper.unmount();
 
     // UU5-wrapped DnDComponent - should work with omitDragDropContext only ("cannot have 2 backends at the same time")
@@ -207,18 +152,8 @@ describe(`UU5.Common.DnD`, () => {
         <DnDComponent id="dnd2">{content}</DnDComponent>
       </CustomDnDContext>
     );
-    expect(
-      wrapper
-        .find("#dnd1")
-        .first()
-        .html() || ""
-    ).toContain(content);
-    expect(
-      wrapper
-        .find("#dnd2")
-        .first()
-        .html() || ""
-    ).toContain(content);
+    expect(wrapper.find("#dnd1").first().html() || "").toContain(content);
+    expect(wrapper.find("#dnd2").first().html() || "").toContain(content);
     wrapper.unmount();
   });
 });

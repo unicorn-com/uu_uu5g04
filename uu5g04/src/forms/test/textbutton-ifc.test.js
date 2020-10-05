@@ -27,9 +27,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -46,9 +46,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -65,9 +65,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -84,9 +84,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -111,9 +111,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -132,9 +132,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -159,9 +159,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -182,9 +182,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
         required={false}
       />
@@ -220,9 +220,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -255,9 +255,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -281,9 +281,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -314,9 +314,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -335,9 +335,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -369,9 +369,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -426,9 +426,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -455,9 +455,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -498,9 +498,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -528,9 +528,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -569,9 +569,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -581,7 +581,7 @@ describe("UU5.Forms.InputMixin interface", () => {
         message: null,
         value: "",
         foundAutocompleteItems: null,
-        selectedIndex: null
+        selectedIndex: null,
       })
     );
     expect(wrapper).toMatchSnapshot();
@@ -598,9 +598,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -611,14 +611,14 @@ describe("UU5.Forms.InputMixin interface", () => {
         message: null,
         value: "",
         foundAutocompleteItems: null,
-        selectedIndex: null
+        selectedIndex: null,
       })
     );
     const returnValue = wrapper.instance().setChangeFeedback(
       {
         feedback: "error",
         message: "Error message from setChangeFeedback",
-        value: "Error value"
+        value: "Error value",
       },
       mockFunc
     );
@@ -642,9 +642,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -670,9 +670,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -704,9 +704,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -737,9 +737,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -766,9 +766,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -801,9 +801,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -826,9 +826,9 @@ describe("UU5.Forms.InputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -852,9 +852,9 @@ describe("UU5.Forms.TextInputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -872,9 +872,9 @@ describe("UU5.Forms.TextInputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -894,9 +894,9 @@ describe("UU5.Forms.TextInputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -917,9 +917,9 @@ describe("UU5.Forms.TextInputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -938,9 +938,9 @@ describe("UU5.Forms.TextInputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -957,25 +957,25 @@ describe("UU5.Forms.TextInputMixin interface", () => {
         value=""
         autocompleteItems={[
           {
-            value: "Aneta"
+            value: "Aneta",
           },
           {
-            value: "Albert"
+            value: "Albert",
           },
           {
-            value: "Honza"
+            value: "Honza",
           },
           {
-            value: "Alzbeta"
-          }
+            value: "Alzbeta",
+          },
         ]}
         required={true}
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -996,9 +996,9 @@ describe("UU5.Forms.TextInputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -1018,9 +1018,9 @@ describe("UU5.Forms.TextInputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -1028,7 +1028,7 @@ describe("UU5.Forms.TextInputMixin interface", () => {
       expect.objectContaining({
         feedback: "initial",
         message: null,
-        value: undefined
+        value: undefined,
       })
     );
     expect(wrapper).toMatchSnapshot();
@@ -1045,9 +1045,9 @@ describe("UU5.Forms.TextInputMixin interface", () => {
         buttons={[
           {
             icon: "mdi-magnify",
-            onClick: opt => alert("User " + opt.value + " is not in database"),
-            colorSchema: "info"
-          }
+            onClick: (opt) => alert("User " + opt.value + " is not in database"),
+            colorSchema: "info",
+          },
         ]}
       />
     );
@@ -1057,17 +1057,17 @@ describe("UU5.Forms.TextInputMixin interface", () => {
     const returnValue = wrapper.instance().setAutoCompleteItems(
       [
         {
-          value: "Kovar"
+          value: "Kovar",
         },
         {
-          value: "Novak"
+          value: "Novak",
         },
         {
-          value: "Novotny"
+          value: "Novotny",
         },
         {
-          value: "Svacina"
-        }
+          value: "Svacina",
+        },
       ],
       null,
       mockFunc

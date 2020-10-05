@@ -22,21 +22,21 @@ export const RouteMixin = {
   //@@viewOn:statics
   statics: {
     "UU5.Common.RouteMixin": {
-      requiredMixins: ["UU5.Common.BaseMixin"]
-    }
+      requiredMixins: ["UU5.Common.BaseMixin"],
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    params: PropTypes.object
+    params: PropTypes.object,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      params: null
+      params: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -63,17 +63,17 @@ export const RouteMixin = {
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
-  hasUU5CommonRouteMixin: function() {
+  hasUU5CommonRouteMixin: function () {
     return this.hasMixin("UU5.Common.RouteMixin");
   },
 
-  getUU5CommonRouteMixinProps: function() {
+  getUU5CommonRouteMixinProps: function () {
     return {};
   },
 
-  getUU5CommonRouteMixinPropsToPass: function() {
+  getUU5CommonRouteMixinPropsToPass: function () {
     return this.getUU5CommonRouteMixinProps();
-  }
+  },
   //@@viewOff:interface
 };
 

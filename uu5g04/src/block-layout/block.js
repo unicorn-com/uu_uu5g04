@@ -26,7 +26,7 @@ export const Block = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.NestingLevelMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.PureRenderMixin
+    UU5.Common.PureRenderMixin,
   ],
   //@@viewOff:mixins
 
@@ -52,11 +52,11 @@ export const Block = UU5.Common.VisualComponent.create({
       `,
       button: () => css`
         margin-left: 8px;
-      `
+      `,
     },
     opt: {
-      pureRender: true
-    }
+      pureRender: true,
+    },
   },
   //@@viewOff:statics
 
@@ -73,12 +73,12 @@ export const Block = UU5.Common.VisualComponent.create({
         bgStyle: UU5.PropTypes.string,
         borderRadius: UU5.PropTypes.string,
         disabled: UU5.PropTypes.bool,
-        colorSchema: UU5.PropTypes.string
+        colorSchema: UU5.PropTypes.string,
       })
     ),
     menuColorSchema: UU5.PropTypes.string,
     menuBgStyle: UU5.PropTypes.string,
-    menuBorderRadius: UU5.PropTypes.string
+    menuBorderRadius: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
@@ -88,7 +88,7 @@ export const Block = UU5.Common.VisualComponent.create({
       actions: [],
       menuColorSchema: "default",
       menuBgStyle: "outline",
-      menuBorderRadius: undefined
+      menuBorderRadius: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -142,7 +142,7 @@ export const Block = UU5.Common.VisualComponent.create({
         dropdownItems.push({
           label: typeof item.content === "string" ? item.content : <UU5.Bricks.Lsi lsi={item.content} />,
           onClick: item.onClick,
-          disabled: item.disabled
+          disabled: item.disabled,
         });
       }
     });
@@ -212,7 +212,7 @@ export const Block = UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </div>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

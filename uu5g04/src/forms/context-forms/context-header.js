@@ -33,7 +33,7 @@ function buildChildren(children) {
         break;
       case "object":
         if (Array.isArray(children)) {
-          result = children.map(child => buildChildren(child));
+          result = children.map((child) => buildChildren(child));
         } else {
           result =
             (children.tag && children.props) || children.propsArray ? <UU5.Bricks.Span content={children} /> : children;
@@ -60,8 +60,8 @@ export const ContextHeader = UU5.Common.VisualComponent.create({
         font-size: 20px;
         cursor: pointer;
         color: rgba(0,0,0,0.54)
-      `
-    }
+      `,
+    },
   },
   //@@viewOff:statics
 
@@ -69,7 +69,7 @@ export const ContextHeader = UU5.Common.VisualComponent.create({
   propTypes: {
     content: UU5.PropTypes.any,
     info: UU5.PropTypes.any,
-    icon: UU5.PropTypes.string
+    icon: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
@@ -78,7 +78,7 @@ export const ContextHeader = UU5.Common.VisualComponent.create({
     return {
       content: undefined,
       info: undefined,
-      icon: "mdi-help-circle"
+      icon: "mdi-help-circle",
     };
   },
   //@@viewOff:getDefaultProps
@@ -95,14 +95,14 @@ export const ContextHeader = UU5.Common.VisualComponent.create({
   //@@viewOn:private
   _getOnClickFunction(getForm) {
     const alertBus = getForm().getAlertBus();
-    const alert = alertBus.getAlerts().find(a => a.id === ALERT_ID);
+    const alert = alertBus.getAlerts().find((a) => a.id === ALERT_ID);
     if (alert) {
       alertBus.removeAlert(alert.id);
     } else {
       alertBus.setAlert({
         id: ALERT_ID,
         content: <ContextInfo content={this.props.info} icon={this.props.icon} />,
-        closeDisabled: true
+        closeDisabled: true,
       });
     }
   },
@@ -126,7 +126,7 @@ export const ContextHeader = UU5.Common.VisualComponent.create({
         )}
       </ContextFormConsumer>
     );
-  }
+  },
   //@@viewOff:render
 });
 

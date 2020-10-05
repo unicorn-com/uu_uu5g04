@@ -27,7 +27,7 @@ export const ScreenSize = UU5.Common.VisualComponent.create({
     UU5.Common.ElementaryMixin,
     UU5.Common.ContentMixin,
     UU5.Common.ScreenSizeMixin,
-    UU5.Common.NestingLevelMixin
+    UU5.Common.NestingLevelMixin,
   ],
   //@@viewOff:mixins
 
@@ -36,27 +36,27 @@ export const ScreenSize = UU5.Common.VisualComponent.create({
     tagName: ns.name("ScreenSize"),
     nestingLevelList: UU5.Environment.getNestingLevelList("spa"),
     classNames: {
-      main: ns.css("screen-size")
+      main: ns.css("screen-size"),
     },
     defaults: {
-      childTagName: "UU5.Bricks.ScreenSize.Item"
+      childTagName: "UU5.Bricks.ScreenSize.Item",
     },
     opt: {
-      nestingLevelWrapper: true
-    }
+      nestingLevelWrapper: true,
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    screenSize: UU5.PropTypes.string
+    screenSize: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
-      screenSize: null
+      screenSize: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -74,7 +74,7 @@ export const ScreenSize = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _expandChildProps: function(child) {
+  _expandChildProps: function (child) {
     let newChildProps = { ...child.props };
 
     newChildProps.id = newChildProps.id || this.getId() + "-inner";
@@ -114,7 +114,7 @@ export const ScreenSize = UU5.Common.VisualComponent.create({
                 childScreenSizes = child.props.screenSize.split(" ");
               }
 
-              childScreenSizes.forEach(childScreenSize => (screenSizes[childScreenSize] = { child, index }));
+              childScreenSizes.forEach((childScreenSize) => (screenSizes[childScreenSize] = { child, index }));
               newChild = null;
             } else {
               // language as prop
@@ -137,9 +137,9 @@ export const ScreenSize = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return this.getNestingLevel() ? this._getChildren() : null;
-  }
+  },
   //@@viewOff:render
 });
 

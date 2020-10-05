@@ -29,7 +29,7 @@ export default UU5.Common.VisualComponent.create({
     UU5.Common.PureRenderMixin,
     UU5.Common.ElementaryMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.NestingLevelMixin
+    UU5.Common.NestingLevelMixin,
   ],
   //@@viewOff:mixins
 
@@ -39,14 +39,14 @@ export default UU5.Common.VisualComponent.create({
     classNames: {
       main: ns.css("nav-bar-header navbar-header"),
       hamburger: ns.css("nav-bar-header-hamburger"),
-      brand: ns.css("nav-bar-header-brand")
+      brand: ns.css("nav-bar-header-brand"),
     },
     defaults: {
-      parentTagName: "UU5.Bricks.NavBar"
+      parentTagName: "UU5.Bricks.NavBar",
     },
     errors: {
-      invalidParent: "Parent of this component is not NavBar."
-    }
+      invalidParent: "Parent of this component is not NavBar.",
+    },
   },
   //@@viewOff:statics
 
@@ -56,7 +56,7 @@ export default UU5.Common.VisualComponent.create({
     _size: UU5.PropTypes.string,
     _hamburger: UU5.PropTypes.bool,
     _onOpen: UU5.PropTypes.func,
-    _onClose: UU5.PropTypes.func
+    _onClose: UU5.PropTypes.func,
   },
   //@@viewOff:propTypes
 
@@ -67,7 +67,7 @@ export default UU5.Common.VisualComponent.create({
       _size: "m",
       _hamburger: true,
       _onOpen: null,
-      _onClose: null
+      _onClose: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -146,6 +146,6 @@ export default UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </div>
     ) : null;
-  }
+  },
   //@@viewOff:render
 });

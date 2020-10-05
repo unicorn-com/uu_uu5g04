@@ -35,7 +35,7 @@ export const DateRangePicker = Context.withContext(
       UU5.Common.ElementaryMixin,
       UU5.Common.ScreenSizeMixin,
       UU5.Common.ContentMixin,
-      TextInputMixin
+      TextInputMixin,
     ],
     //@@viewOff:mixins
 
@@ -72,18 +72,18 @@ export const DateRangePicker = Context.withContext(
         mainPlaceholder: ns.css("daterangepicker-main-placeholder"),
         popoverWrapper: ns.css("daterangepicker-popover-wrapper"),
         inputPlaceholder: ns.css("input-placeholder"),
-        labelBogus: ns.css("datetimerangepicker-label-bogus")
+        labelBogus: ns.css("datetimerangepicker-label-bogus"),
       },
       defaults: {
         format: "dd.mm.Y",
         columnRegexp: /^((?:offset-)?[a-z]+)(?:-)?(\d+)$/,
-        inputColWidth: "xs12 s4 m4 l3 xl3"
+        inputColWidth: "xs12 s4 m4 l3 xl3",
       },
       errors: {
         dateFromGreaterThanDateTo: "The property dateFrom is greater than the property dateTo.",
-        firstGreaterThanSecond: "The first date of range is greater than the second date of range."
+        firstGreaterThanSecond: "The first date of range is greater than the second date of range.",
       },
-      lsi: () => UU5.Common.Tools.merge({}, UU5.Environment.Lsi.Bricks.calendar, UU5.Environment.Lsi.Forms.message)
+      lsi: () => UU5.Common.Tools.merge({}, UU5.Environment.Lsi.Bricks.calendar, UU5.Environment.Lsi.Forms.message),
     },
     //@@viewOff:statics
 
@@ -111,7 +111,7 @@ export const DateRangePicker = Context.withContext(
       pickerLabelTo: UU5.PropTypes.any,
       innerLabel: UU5.PropTypes.bool,
       step: UU5.PropTypes.oneOf(["days", "months", "years"]),
-      monthNameFormat: UU5.PropTypes.oneOf(["abbr", "roman"])
+      monthNameFormat: UU5.PropTypes.oneOf(["abbr", "roman"]),
     },
     //@@viewOff:propTypes
 
@@ -140,15 +140,15 @@ export const DateRangePicker = Context.withContext(
         pickerLabelTo: undefined,
         innerLabel: false,
         step: "days",
-        monthNameFormat: "roman"
+        monthNameFormat: "roman",
       };
     },
     //@@viewOff:getDefaultProps
 
     //@@viewOn:reactLifeCycle
     getInitialState() {
-      this._parseDate = date => this._dynamicParseDate(date, this.props);
-      this._parseDateDefault = date => this._dynamicParseDateDefault(date, this.props.format, this.props.country);
+      this._parseDate = (date) => this._dynamicParseDate(date, this.props);
+      this._parseDateDefault = (date) => this._dynamicParseDateDefault(date, this.props.format, this.props.country);
 
       let propValue = Array.isArray(this.props.value) && this.props.value.length > 1 ? this.props.value : null;
       propValue = this.parseDate(propValue);
@@ -191,7 +191,7 @@ export const DateRangePicker = Context.withContext(
         format: this.props.format,
         toInputActive: false,
         tempValue: null,
-        calendarView
+        calendarView,
       };
     },
 
@@ -247,8 +247,8 @@ export const DateRangePicker = Context.withContext(
 
     UNSAFE_componentWillReceiveProps(nextProps) {
       if (this.props.controlled) {
-        this._parseDate = date => this._dynamicParseDate(date, nextProps);
-        this._parseDateDefault = date => this._dynamicParseDateDefault(date, nextProps.format, nextProps.country);
+        this._parseDate = (date) => this._dynamicParseDate(date, nextProps);
+        this._parseDateDefault = (date) => this._dynamicParseDateDefault(date, nextProps.format, nextProps.country);
 
         let propValue = Array.isArray(nextProps.value) && nextProps.value.length > 1 ? nextProps.value : null;
         propValue = this.parseDate(propValue);
@@ -333,7 +333,7 @@ export const DateRangePicker = Context.withContext(
       let result;
 
       if (Array.isArray(dates)) {
-        result = dates.map(date => this._parseDate(date)).filter(date => !!date);
+        result = dates.map((date) => this._parseDate(date)).filter((date) => !!date);
         if (result.length === 0) result = null;
       } else {
         result = this._parseDate(dates);
@@ -493,7 +493,7 @@ export const DateRangePicker = Context.withContext(
     _dynamicParseDateDefault(date, format, country) {
       return UU5.Common.Tools.parseDate(date, {
         format,
-        country
+        country,
       });
     },
 
@@ -511,7 +511,7 @@ export const DateRangePicker = Context.withContext(
 
         if (this.props.step === "years" || this.props.step === "months") {
           if (Array.isArray(parsedDate)) {
-            value = parsedDate.map(singleValue =>
+            value = parsedDate.map((singleValue) =>
               DateTools.getShortenedValueDateString(singleValue, "-", this.props.step === "years")
             );
           } else {
@@ -597,7 +597,7 @@ export const DateRangePicker = Context.withContext(
             }
           } else {
             this.showError("validateError", null, {
-              context: { event: null, func: this.props.onValidate, result: result }
+              context: { event: null, func: this.props.onValidate, result: result },
             });
           }
         } else if (opt._data.state) {
@@ -700,7 +700,7 @@ export const DateRangePicker = Context.withContext(
             aroundElement: aroundElement,
             position: "bottom",
             offset: this._shouldOpenToContent() ? 0 : 4,
-            horizontalOnly: this._shouldOpenToContent()
+            horizontalOnly: this._shouldOpenToContent(),
           },
           setStateCallback
         );
@@ -714,7 +714,7 @@ export const DateRangePicker = Context.withContext(
       this.setState({
         calendarView: DateTools.getCalendarStartView(this.props),
         fromDisplayDate: displayDates.dateFrom,
-        toDisplayDate: displayDates.dateTo
+        toDisplayDate: displayDates.dateTo,
       });
 
       if (this._popover) {
@@ -742,7 +742,7 @@ export const DateRangePicker = Context.withContext(
       let format = opt.format === undefined ? this.state.format : opt.format;
       let country =
         opt.country === undefined ? this.state.country : opt.country ? opt.country.toLowerCase() : opt.country;
-      this._parseDateDefault = date => this._dynamicParseDateDefault(date, format, country);
+      this._parseDateDefault = (date) => this._dynamicParseDateDefault(date, format, country);
       this.setState({ format, country }, setStateCallback);
     },
 
@@ -752,7 +752,7 @@ export const DateRangePicker = Context.withContext(
 
       let result = {
         fromFeedback: this._validateDateResult({ value: fromValue }),
-        toFeedback: this._validateDateResult({ value: toValue })
+        toFeedback: this._validateDateResult({ value: toValue }),
       };
 
       delete result.fromFeedback.value;
@@ -841,7 +841,7 @@ export const DateRangePicker = Context.withContext(
       let formatedDate = newValue ? this._getDateString(newValue) : null;
       let state = {
         fromFeedback: this.state.fromFeedback,
-        toFeedback: this.state.toFeedback
+        toFeedback: this.state.toFeedback,
       };
       let executeOnChange = false;
 
@@ -985,7 +985,7 @@ export const DateRangePicker = Context.withContext(
       if (!innerState.value && this.props.required && this.state.value) {
         feedback = {
           feedback: "error",
-          message: this.props.requiredMessage || this.getLsiComponent("requiredMessage")
+          message: this.props.requiredMessage || this.getLsiComponent("requiredMessage"),
         };
       } else if (innerState.value || (!innerState.value && this.state.value)) {
         feedback = { feedback: "initial", message: null };
@@ -1329,7 +1329,7 @@ export const DateRangePicker = Context.withContext(
           opt.value = this._getOutputValue(opt.value);
         }
 
-        callback = opt => {
+        callback = (opt) => {
           this._removeKeyEvents();
           typeof this.props.onBlur === "function" ? this.props.onBlur(opt) : this.onBlurDefault(opt);
         };
@@ -1341,7 +1341,7 @@ export const DateRangePicker = Context.withContext(
           opt._data.value = value;
           state = { ...state, value, ...this._getInnerState(value) };
           let origCallback = callback;
-          callback = opt => {
+          callback = (opt) => {
             if (typeof this.props.onChange === "function") {
               this.props.onChange(opt);
             }
@@ -1355,7 +1355,7 @@ export const DateRangePicker = Context.withContext(
           opt._data.value = value;
           state = { ...state, value, ...this._getInnerState(value) };
           let origCallback = callback;
-          callback = opt => {
+          callback = (opt) => {
             if (typeof this.props.onChange === "function") {
               this.props.onChange(opt);
             }
@@ -1395,11 +1395,11 @@ export const DateRangePicker = Context.withContext(
         fromInput: false,
         toInput: false,
         popover: false,
-        customContent: false
+        customContent: false,
       };
       let eventPath = this._getEventPath(e);
 
-      eventPath.every(item => {
+      eventPath.every((item) => {
         let functionType = item.matches ? "matches" : "msMatchesSelector";
         if (item[functionType]) {
           if (item[functionType](labelMatch)) {
@@ -1437,7 +1437,7 @@ export const DateRangePicker = Context.withContext(
     },
 
     _addKeyEvents() {
-      let handleKeyDown = e => {
+      let handleKeyDown = (e) => {
         if (e.which === 13) {
           // enter
           e.preventDefault();
@@ -1450,7 +1450,7 @@ export const DateRangePicker = Context.withContext(
         }
       };
 
-      let handleKeyUp = e => {
+      let handleKeyUp = (e) => {
         let focusResult = this._findTarget(e);
         let isRightInput = focusResult.toInput;
         let isLeftInput = focusResult.fromInput;
@@ -1494,8 +1494,8 @@ export const DateRangePicker = Context.withContext(
         }
       };
 
-      UU5.Environment.EventListener.addWindowEvent("keydown", this.getId(), e => handleKeyDown(e));
-      UU5.Environment.EventListener.addWindowEvent("keyup", this.getId(), e => handleKeyUp(e));
+      UU5.Environment.EventListener.addWindowEvent("keydown", this.getId(), (e) => handleKeyDown(e));
+      UU5.Environment.EventListener.addWindowEvent("keyup", this.getId(), (e) => handleKeyUp(e));
     },
 
     _removeKeyEvents() {
@@ -1511,7 +1511,7 @@ export const DateRangePicker = Context.withContext(
         this.props.openToContent
           .trim()
           .split(" ")
-          .some(size => {
+          .some((size) => {
             if (screenSize == size) {
               result = true;
               return true;
@@ -1565,7 +1565,7 @@ export const DateRangePicker = Context.withContext(
     _getPopoverProps() {
       let props = {};
 
-      props.ref_ = ref => (this._popover = ref);
+      props.ref_ = (ref) => (this._popover = ref);
       props.forceRender = true;
       props.disableBackdrop = true;
       props.shown = this.isOpen();
@@ -1598,7 +1598,7 @@ export const DateRangePicker = Context.withContext(
         dateTo: this.props.dateTo,
         hidden: !this.isOpen(),
         selectionMode: "range",
-        onChange: opt =>
+        onChange: (opt) =>
           this._onChange({ ...opt, ...{ _data: { right: this.state.toInputActive || right, type: "calendar" } } }),
         onViewChange: this._onCalendarViewChange,
         view: this.state.calendarView,
@@ -1606,7 +1606,7 @@ export const DateRangePicker = Context.withContext(
         hideOtherSections: true,
         colorSchema: this.getColorSchema(),
         step: this.props.step,
-        monthNameFormat: this.props.monthNameFormat
+        monthNameFormat: this.props.monthNameFormat,
       };
 
       if (mobile) {
@@ -1634,13 +1634,13 @@ export const DateRangePicker = Context.withContext(
       let props = {
         className: this.getClassName("calendarInput"),
         size: this.props.size,
-        onChange: e =>
+        onChange: (e) =>
           this._onChange({ event: e, component: this, value: e.target.value, _data: { right: right, type: "input" } }),
         onKeyDown: this.onKeyDown,
         value: right ? this.state.toInputValue || "" : this.state.fromInputValue || "",
         placeholder: right ? this._getToInputPlaceholder() : this._getFromInputPlaceholder(),
         mainAttrs: {},
-        colorSchema: this.props.colorSchema
+        colorSchema: this.props.colorSchema,
       };
 
       if (isSorXs) {
@@ -1669,7 +1669,7 @@ export const DateRangePicker = Context.withContext(
           }
 
           props.className += " " + this.getClassName("inputTo");
-          props.ref_ = item => (this._rightTextInput = item);
+          props.ref_ = (item) => (this._rightTextInput = item);
 
           if (this.isOpen() && this.state.toInputActive) {
             props.mainAttrs.className = this.getClassName("inputActive");
@@ -1683,7 +1683,7 @@ export const DateRangePicker = Context.withContext(
           }
 
           props.className += " " + this.getClassName("inputFrom");
-          props.ref_ = item => {
+          props.ref_ = (item) => {
             this._textInput = item;
             this._leftTextInput = item;
           };
@@ -1699,12 +1699,12 @@ export const DateRangePicker = Context.withContext(
           props.mainAttrs.title = this.state.toFeedback.message;
           props.feedback = this.state.toFeedback.feedback;
           props.prefix = this.props.pickerLabelTo;
-          props.ref_ = item => (this._rightTextInput = item);
+          props.ref_ = (item) => (this._rightTextInput = item);
         } else {
           props.mainAttrs.title = this.state.fromFeedback.message;
           props.feedback = this.state.fromFeedback.feedback;
           props.prefix = this.props.pickerLabelFrom;
-          props.ref_ = item => (this._leftTextInput = item);
+          props.ref_ = (item) => (this._leftTextInput = item);
         }
       }
 
@@ -1714,7 +1714,7 @@ export const DateRangePicker = Context.withContext(
     _getMainAttrs() {
       let attrs = this.getMainAttrs();
       attrs.id = this.getId();
-      attrs.ref = comp => (this._root = comp);
+      attrs.ref = (comp) => (this._root = comp);
 
       let mainClassRegExp = new RegExp(this.getClassName("main", "UU5.Forms.InputMixin"), "g");
       attrs.className = attrs.className.replace(mainClassRegExp, "").replace(/\s\s/, " ");
@@ -1747,7 +1747,7 @@ export const DateRangePicker = Context.withContext(
 
       if (!ommitMainAttrs) {
         attrs.id = this.getId();
-        attrs.ref = comp => (this._root = comp);
+        attrs.ref = (comp) => (this._root = comp);
       }
 
       if (this.isS() || this.isXs() || this._shouldOpenToContent()) {
@@ -1795,7 +1795,7 @@ export const DateRangePicker = Context.withContext(
           return result;
         };
 
-        let handleClick = e => {
+        let handleClick = (e) => {
           let clickData = this._findTarget(e.nativeEvent);
           let shouldOpen = true;
           let shouldClose = false;
@@ -1808,7 +1808,7 @@ export const DateRangePicker = Context.withContext(
             value: this.state.value,
             event: e,
             component: this,
-            _data: {}
+            _data: {},
           };
 
           if (clickData.input) {
@@ -1836,7 +1836,7 @@ export const DateRangePicker = Context.withContext(
           }
         };
 
-        attrs.onClick = e => {
+        attrs.onClick = (e) => {
           handleClick(e);
         };
       }
@@ -1988,7 +1988,7 @@ export const DateRangePicker = Context.withContext(
                 disabled={this.isComputedDisabled()}
                 readonly={this.isReadOnly()}
                 loading={this.isLoading()}
-                ref_={item => (this._textInput = item && item.findDOMNode())}
+                ref_={(item) => (this._textInput = item && item.findDOMNode())}
                 feedback={this.getFeedback()}
                 borderRadius={this.props.borderRadius}
                 elevation={this.props.elevation}
@@ -1999,7 +1999,7 @@ export const DateRangePicker = Context.withContext(
                 className={mainClassName}
                 onKeyDown={this.onKeyDown}
                 colorSchema={this.props.colorSchema}
-              />
+              />,
             ])}
           </div>
           <div className={this.getClassName("popoverWrapper")}>
@@ -2057,7 +2057,7 @@ export const DateRangePicker = Context.withContext(
                   </div>
                 ) : null}
               </div>
-            </UU5.Bricks.Popover>
+            </UU5.Bricks.Popover>,
           ])}
         </div>
       );
@@ -2090,7 +2090,7 @@ export const DateRangePicker = Context.withContext(
       }
 
       return result;
-    }
+    },
     //@@viewOn:render
   })
 );

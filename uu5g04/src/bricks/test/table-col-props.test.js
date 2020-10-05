@@ -22,12 +22,12 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     span: {
-      values: [1, 2]
-    }
+      values: [1, 2],
+    },
   },
   requiredProps: {
     parent: shallow(
@@ -35,13 +35,13 @@ const CONFIG = {
         id="parentIdColGroup"
         parent={shallow(<UU5.Bricks.Table id="parentId" />).instance()}
       />
-    ).instance()
+    ).instance(),
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Table.Col`, () => {

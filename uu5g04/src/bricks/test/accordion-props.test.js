@@ -29,7 +29,7 @@ const MyAllowTagsComponents = UU5.Common.VisualComponent.create({
   statics: { tagName: "UU5.Example.MyCompButton", classNames: { main: "mytr" } },
   render() {
     return <UU5.Example.MyCompButton {...this.getMainPropsToPass()} />;
-  }
+  },
 });
 
 /**
@@ -38,7 +38,7 @@ const MyAllowTagsComponents = UU5.Common.VisualComponent.create({
 const MyAccordion = UU5.Common.VisualComponent.create({
   getInitialState: () => {
     return {
-      isCalled: false
+      isCalled: false,
     };
   },
 
@@ -59,7 +59,7 @@ const MyAccordion = UU5.Common.VisualComponent.create({
         />
       </UU5.Bricks.Accordion>
     );
-  }
+  },
 });
 
 const CONFIG = {
@@ -69,33 +69,33 @@ const CONFIG = {
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.ContentMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     panels: {
-      values: [[{ header: "panel1", content: "panel1" }]]
+      values: [[{ header: "panel1", content: "panel1" }]],
     },
     onClickNotCollapseOthers: {
-      values: [true, false]
+      values: [true, false],
     },
     iconExpanded: {
-      values: ["uu5-minus"]
+      values: ["uu5-minus"],
     },
     iconCollapsed: {
-      values: ["uu5-plus"]
+      values: ["uu5-plus"],
     },
     //onClick: {},
     allowTags: {
-      allowTagsArray: ["UU5.Example.MyCompButton"]
+      allowTagsArray: ["UU5.Example.MyCompButton"],
     },
     size: {
-      values: ["s", "m", "l", "xl"]
-    }
+      values: ["s", "m", "l", "xl"],
+    },
   },
   requiredProps: {
-    children: [<UU5.Bricks.Panel id={"childrenID"} content="Text in Panel" />]
+    children: [<UU5.Bricks.Panel id={"childrenID"} content="Text in Panel" />],
   },
-  opt: {}
+  opt: {},
 };
 
 describe(`UU5.Bricks.Accordion props`, () => {

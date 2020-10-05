@@ -23,27 +23,27 @@ const CONFIG = {
     "UU5.Common.ContentMixin",
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     progress: {
-      values: [0, 50, 100]
+      values: [0, 50, 100],
     },
     striped: {
-      values: [true, false]
+      values: [true, false],
     },
     animated: {
-      values: [true, false]
-    }
+      values: [true, false],
+    },
   },
   requiredProps: {
-    parent: shallow(<UU5.Bricks.ProgressBar id="parentId" />).instance()
+    parent: shallow(<UU5.Bricks.ProgressBar id="parentId" />).instance(),
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.ProgressBar.Item`, () => {

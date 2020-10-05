@@ -20,7 +20,7 @@ const LazyContext = Context.create({ loading: "" });
 
 export const Suspense =
   React.Suspense ||
-  (props => {
+  ((props) => {
     return (
       // eslint-disable-next-line react/prop-types
       <LazyContext.Provider value={{ loading: props.fallback }}>{props.children}</LazyContext.Provider>
@@ -34,21 +34,21 @@ const LazyComponent = createReactClass({
       return { error };
     },
     opt: {
-      hoc: true
-    }
+      hoc: true,
+    },
   },
   propTypes: {
     importFn: PropTypes.func.isRequired,
     loading: PropTypes.node,
     fallback: PropTypes.node,
-    props: PropTypes.object
+    props: PropTypes.object,
   },
   getDefaultProps() {
     return {
       importFn: null,
       loading: null,
       fallback: null,
-      props: null
+      props: null,
     };
   },
   getInitialState() {
@@ -68,19 +68,19 @@ const LazyComponent = createReactClass({
     ) : (
       this.props.loading || this.props.fallback
     );
-  }
+  },
 });
 
 export const lazy =
   React.lazy ||
-  (importFn => {
+  ((importFn) => {
     let importFnPromise;
     let usedImportFn = () => {
       // call importFn at most once
       if (!importFnPromise) {
         importFnPromise = importFn().then(
-          result => ({ result, error: null }),
-          error => {
+          (result) => ({ result, error: null }),
+          (error) => {
             console.error(error);
             return { result: null, error };
           }
@@ -88,7 +88,7 @@ export const lazy =
       }
       return importFnPromise;
     };
-    return props => {
+    return (props) => {
       return (
         <LazyContext.Consumer>
           {({ loading }) => <LazyComponent loading={loading} importFn={usedImportFn} props={props} />}

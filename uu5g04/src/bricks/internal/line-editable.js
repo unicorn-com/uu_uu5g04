@@ -8,22 +8,22 @@ import { LineVertical } from "./modal-editation-components";
 
 const editableComponentPropsSetup = [
   {
-    name: "size"
+    name: "size",
   },
   {
-    name: "colorSchema"
+    name: "colorSchema",
   },
   {
-    name: "borderRadius"
+    name: "borderRadius",
   },
-  LineVertical
+  LineVertical,
 ];
 
 const editablePropsSetup = [
   {
     name: <UU5.Bricks.Lsi lsi={Lsi.common.componentPropsLabel} />,
-    setup: editableComponentPropsSetup
-  }
+    setup: editableComponentPropsSetup,
+  },
 ];
 
 export const LineEditable = UU5.Common.VisualComponent.create({
@@ -35,21 +35,21 @@ export const LineEditable = UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("LineEditable"),
     classNames: {
-      main: ns.css("line-editable")
-    }
+      main: ns.css("line-editable"),
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    component: UU5.PropTypes.object.isRequired
+    component: UU5.PropTypes.object.isRequired,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      component: undefined
+      component: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -86,7 +86,7 @@ export const LineEditable = UU5.Common.VisualComponent.create({
         header={<UU5.Bricks.Lsi lsi={Lsi.line.modalHeader} />}
       />
     );
-  }
+  },
   //@@viewOff:render
 });
 

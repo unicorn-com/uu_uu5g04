@@ -80,7 +80,7 @@ const classNames = {
     height: 1px;
     background: #BDBDBD;
     margin: 2px 0;
-  `
+  `,
 };
 
 export const propTypes = {
@@ -97,12 +97,12 @@ export const propTypes = {
   disabled: UU5.PropTypes.bool,
   hidden: UU5.PropTypes.bool,
   icon: UU5.PropTypes.string,
-  items: UU5.PropTypes.arrayOf(UU5.PropTypes.object)
+  items: UU5.PropTypes.arrayOf(UU5.PropTypes.object),
 };
 
 //@@viewOn:statics
 const STATICS = {
-  tagName: ns.name("CompactMenu")
+  tagName: ns.name("CompactMenu"),
 };
 //@@viewOff:statics
 
@@ -132,7 +132,7 @@ export const CompactMenu = UU5.Common.VisualComponent.create({
       disabled: false,
       hidden: false,
       icon: undefined,
-      items: undefined
+      items: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -174,7 +174,7 @@ export const CompactMenu = UU5.Common.VisualComponent.create({
         className: UU5.Common.Tools.joinClassNames(
           this.props.className,
           classNames.item(this._isClickable(), this._hasItems())
-        )
+        ),
       };
       return (
         <UU5.Bricks.Link {...propsToPass} colorSchema="custom">
@@ -186,7 +186,7 @@ export const CompactMenu = UU5.Common.VisualComponent.create({
         </UU5.Bricks.Link>
       );
     }
-  }
+  },
   //@@viewOff:render
 });
 

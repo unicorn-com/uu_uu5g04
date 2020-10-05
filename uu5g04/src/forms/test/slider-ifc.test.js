@@ -350,7 +350,7 @@ describe("UU5.Forms.InputTextMixin interface test", () => {
       expect.objectContaining({
         feedback: "initial",
         message: null,
-        value: 0
+        value: 0,
       })
     );
     expect(wrapper).toMatchSnapshot();
@@ -363,14 +363,14 @@ describe("UU5.Forms.InputTextMixin interface test", () => {
       expect.objectContaining({
         feedback: "initial",
         message: null,
-        value: 0
+        value: 0,
       })
     );
     const returnValue = wrapper.instance().setChangeFeedback(
       {
         feedback: "error",
         message: "Error message from setChangeFeedback",
-        value: 50
+        value: 50,
       },
       mockFunc
     );

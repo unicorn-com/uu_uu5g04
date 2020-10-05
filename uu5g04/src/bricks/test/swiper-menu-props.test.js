@@ -22,21 +22,21 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Common.ContentMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     pullRight: {
-      value: [true, false]
-    }
+      value: [true, false],
+    },
   },
   requiredProps: {
-    parent: shallow(<UU5.Bricks.Swiper id="parentId" />).instance()
+    parent: shallow(<UU5.Bricks.Swiper id="parentId" />).instance(),
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Swiper.Menu`, () => {
@@ -51,7 +51,7 @@ describe(`UU5.Bricks.Swiper.Menu docKit examples`, () => {
         style={{
           backgroundColor: "lightblue",
           minHeight: "200px",
-          width: "100%"
+          width: "100%",
         }}
       >
         {/*@@viewOn:0*/}

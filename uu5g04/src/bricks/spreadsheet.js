@@ -31,23 +31,23 @@ export const Spreadsheet = UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("Spreadsheet"),
     classNames: {
-      main: ns.css("spreadsheet")
+      main: ns.css("spreadsheet"),
     },
     lsi: () => UU5.Environment.Lsi.Bricks.spreadsheet,
     errors: {
       invalidDataType:
-        "Data type of cell '%s' is not of type of '%s' of is not one of ('string', 'number' or 'date'). Cell value: '%s'"
+        "Data type of cell '%s' is not of type of '%s' of is not one of ('string', 'number' or 'date'). Cell value: '%s'",
     },
     defaults: {
       regExpNumbers: /[0-9]/g,
       regExpChars: /\D/g,
       regExpCellKey: /([A-Z]*)(\d)/g,
       regExpIsoDate: /^(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\d|2[0-3]):[0-5]\d:[0-5]\d(?:Z|[+-][01]\d:[0-5]\d)$/g,
-      regExpY: /(y+)/
+      regExpY: /(y+)/,
     },
     opt: {
-      dummyLevel: true
-    }
+      dummyLevel: true,
+    },
   },
   //@@viewOff:statics
 
@@ -59,12 +59,12 @@ export const Spreadsheet = UU5.Common.VisualComponent.create({
     condensed: UU5.PropTypes.bool,
     cols: UU5.PropTypes.object, //col props - 'A':{}
     rows: UU5.PropTypes.object, //row props - '1':{} - rowType (header|body|footer)
-    cells: UU5.PropTypes.object //'A1':{'value':'','type':'','formula':'','format':'','colorSchema':'','className':''}
+    cells: UU5.PropTypes.object, //'A1':{'value':'','type':'','formula':'','format':'','colorSchema':'','className':''}
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       striped: false,
       bordered: false,
@@ -72,17 +72,17 @@ export const Spreadsheet = UU5.Common.VisualComponent.create({
       condensed: false,
       cols: null,
       rows: null,
-      cells: null
+      cells: null,
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  getInitialState: function() {
+  getInitialState: function () {
     return {
       sortedCells: this._getSortedCells(),
       headerRowIndex: this._getHeaderRowIndex(),
-      footerRowIndex: this._getFooterRowIndex()
+      footerRowIndex: this._getFooterRowIndex(),
     };
   },
 
@@ -91,7 +91,7 @@ export const Spreadsheet = UU5.Common.VisualComponent.create({
       this.setState({
         sortedCells: this._getSortedCells(nextProps),
         headerRowIndex: this._getHeaderRowIndex(nextProps),
-        footerRowIndex: this._getFooterRowIndex(nextProps)
+        footerRowIndex: this._getFooterRowIndex(nextProps),
       });
     }
     return this;
@@ -106,7 +106,7 @@ export const Spreadsheet = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _checkCellProp: function(prop, cell, coll, row) {
+  _checkCellProp: function (prop, cell, coll, row) {
     var result = undefined;
     if (cell[prop] !== undefined) {
       result = cell[prop];
@@ -124,7 +124,7 @@ export const Spreadsheet = UU5.Common.VisualComponent.create({
     let hasValidData = true;
     let cellsArray = [];
 
-    Object.keys(props.cells).forEach(key => {
+    Object.keys(props.cells).forEach((key) => {
       let rowIndex = this._getRowNumber(key) - 1;
       let rowArray = cellsArray[rowIndex] || [];
 
@@ -143,7 +143,7 @@ export const Spreadsheet = UU5.Common.VisualComponent.create({
           ? props.cells[key].className
           : "" +
             (coll && coll.className ? " " + coll.className : "") +
-            (row && row.className ? " " + row.className : "")
+            (row && row.className ? " " + row.className : ""),
       };
 
       let isValid = true;
@@ -158,15 +158,15 @@ export const Spreadsheet = UU5.Common.VisualComponent.create({
     return hasValidData ? cellsArray : null;
   },
 
-  _getColumnCharacter: function(cellKey) {
+  _getColumnCharacter: function (cellKey) {
     return cellKey.replace(this.getDefault().regExpNumbers, "");
   },
 
-  _getRowNumber: function(cellKey) {
+  _getRowNumber: function (cellKey) {
     return cellKey.replace(this.getDefault().regExpChars, "");
   },
 
-  _isValidCellValueType: function(value, type) {
+  _isValidCellValueType: function (value, type) {
     var result = false;
     switch (type) {
       case "string":
@@ -215,7 +215,7 @@ export const Spreadsheet = UU5.Common.VisualComponent.create({
     return index;
   },
 
-  _getBodyRows: function() {
+  _getBodyRows: function () {
     var sortedCells = this.state.sortedCells;
     var headerRowIndex = this.state.headerRowIndex;
     var footerRowIndex = this.state.footerRowIndex;
@@ -224,9 +224,9 @@ export const Spreadsheet = UU5.Common.VisualComponent.create({
     var rows = [];
     var row = [];
 
-    sortedCells.forEach(function(cellsRow, i) {
+    sortedCells.forEach(function (cellsRow, i) {
       if (i + 1 != headerRowIndex && i + 1 != footerRowIndex) {
-        cellsRow.forEach(function(cell, i) {
+        cellsRow.forEach(function (cell, i) {
           row.push(spreadSheet._getCell(cell));
         });
         rows.push(row);
@@ -237,33 +237,33 @@ export const Spreadsheet = UU5.Common.VisualComponent.create({
     return rows;
   },
 
-  _getHeaderRow: function() {
+  _getHeaderRow: function () {
     var sortedCells = this.state.sortedCells;
     var headerRowIndex = this.state.headerRowIndex;
     var spreadSheet = this;
 
     var row = [];
-    sortedCells[headerRowIndex - 1].forEach(function(cell) {
+    sortedCells[headerRowIndex - 1].forEach(function (cell) {
       row.push(spreadSheet._getCell(cell));
     });
 
     return row.length > 0 ? row : null;
   },
 
-  _getFooterRow: function() {
+  _getFooterRow: function () {
     var sortedCells = this.state.sortedCells;
     var footerRowIndex = this.state.footerRowIndex;
     var spreadSheet = this;
 
     var row = [];
-    sortedCells[footerRowIndex - 1].forEach(function(cell) {
+    sortedCells[footerRowIndex - 1].forEach(function (cell) {
       row.push(spreadSheet._getCell(cell));
     });
 
     return row.length > 0 ? row : null;
   },
 
-  _getCell: function(cell) {
+  _getCell: function (cell) {
     var formattedValue = cell.formula ? this._getFormulaResult(cell.formula) : cell.value;
 
     if (cell.format && cell.type === "date") {
@@ -273,12 +273,12 @@ export const Spreadsheet = UU5.Common.VisualComponent.create({
     return {
       className: cell.className,
       content: formattedValue,
-      colorSchema: cell.colorSchema
+      colorSchema: cell.colorSchema,
       //background: cell.background
     };
   },
 
-  _getFormulaResult: function(formula) {
+  _getFormulaResult: function (formula) {
     var spreadSheet = this;
     var cellsKeys = formula.match(this.getDefault().regExpCellKey);
     var formulaResultType = spreadSheet._getFormulaResultType(cellsKeys);
@@ -286,12 +286,12 @@ export const Spreadsheet = UU5.Common.VisualComponent.create({
     var result;
 
     if (formulaResultType === "string") {
-      cellsKeys.forEach(function(key) {
+      cellsKeys.forEach(function (key) {
         formula = formula.replace(key, spreadSheet.props.cells[key].value.toString());
       });
       result = formula;
     } else if (formulaResultType === "date") {
-      cellsKeys.forEach(function(key) {
+      cellsKeys.forEach(function (key) {
         formula = formula.replace(key, new Date(spreadSheet.props.cells[key].value).getTime());
       });
       try {
@@ -299,7 +299,7 @@ export const Spreadsheet = UU5.Common.VisualComponent.create({
       } finally {
       }
     } else if (formulaResultType === "number") {
-      cellsKeys.forEach(function(key) {
+      cellsKeys.forEach(function (key) {
         formula = formula.replace(key, spreadSheet.props.cells[key].value);
       });
       try {
@@ -315,12 +315,12 @@ export const Spreadsheet = UU5.Common.VisualComponent.create({
   // if any is string -> returns string
   // if members are date or numbers -> returns date
   // if all members are number -> returns number
-  _getFormulaResultType: function(cellsKeys) {
+  _getFormulaResultType: function (cellsKeys) {
     var formulaResultType;
     var spreadSheet = this;
 
     // check all formula keys value
-    cellsKeys.forEach(function(key) {
+    cellsKeys.forEach(function (key) {
       var cellValue = spreadSheet.props.cells[key].value;
       var cellType;
 
@@ -360,7 +360,7 @@ export const Spreadsheet = UU5.Common.VisualComponent.create({
     return formulaResultType;
   },
 
-  _formatDate: function(date, format) {
+  _formatDate: function (date, format) {
     var config = {
       "M+": date.getMonth() + 1, //month
       "d+": date.getDate(), //day
@@ -368,7 +368,7 @@ export const Spreadsheet = UU5.Common.VisualComponent.create({
       "m+": date.getMinutes(), //minute
       "s+": date.getSeconds(), //second
       "q+": Math.floor((date.getMonth() + 3) / 3), //quarter
-      S: date.getMilliseconds() //millisecond
+      S: date.getMilliseconds(), //millisecond
     };
 
     if (this.getDefault().regExpY.test(format)) {
@@ -385,11 +385,11 @@ export const Spreadsheet = UU5.Common.VisualComponent.create({
     return format;
   },
 
-  _getMainProps: function() {
+  _getMainProps: function () {
     var mainProps = this.getMainPropsToPass([
       "UU5.Common.BaseMixin",
       "UU5.Common.ElementaryMixin",
-      "UU5.Common.SectionMixin"
+      "UU5.Common.SectionMixin",
     ]);
 
     mainProps.striped = this.props.striped;
@@ -409,7 +409,7 @@ export const Spreadsheet = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     var result;
 
     if (this.state.sortedCells && this.props.cells) {
@@ -419,7 +419,7 @@ export const Spreadsheet = UU5.Common.VisualComponent.create({
     }
 
     return result;
-  }
+  },
   //@@viewOff:render
 });
 

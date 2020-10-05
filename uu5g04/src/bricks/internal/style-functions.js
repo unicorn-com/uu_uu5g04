@@ -25,7 +25,7 @@ export const StyleFunctions = {
         display: block;
       }
     `;
-  }
+  },
 };
 
 export default StyleFunctions;

@@ -23,25 +23,25 @@ export const ControlsMixin = {
 
   //@@viewOn:propTypes
   propTypes: {
-    getForm: UU5.PropTypes.oneOfType([UU5.PropTypes.func, UU5.PropTypes.object])
+    getForm: UU5.PropTypes.oneOfType([UU5.PropTypes.func, UU5.PropTypes.object]),
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      getForm: undefined
+      getForm: undefined,
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  componentDidMount: function() {
+  componentDidMount: function () {
     let parentForm = this.getForm();
     parentForm && parentForm.registerFormControls(this.getId(), this);
   },
 
-  UNSAFE_componentWillReceiveProps: function(nextProps) {
+  UNSAFE_componentWillReceiveProps: function (nextProps) {
     if (nextProps.id && nextProps.id !== this.props.id) {
       let parentForm = this.getForm();
       if (parentForm) {
@@ -51,7 +51,7 @@ export const ControlsMixin = {
     }
   },
 
-  componentWillUnmount: function() {
+  componentWillUnmount: function () {
     let parentForm = this.getForm();
     parentForm && parentForm.unregisterFormControls(this.getId());
   },
@@ -63,7 +63,7 @@ export const ControlsMixin = {
       (typeof this.props.getForm === "function" ? this.props.getForm(this) : this.props.getForm) ||
       this.getParentByType("isForm")
     );
-  }
+  },
   //@@viewOff:interface
 
   //@@viewOn:overriding

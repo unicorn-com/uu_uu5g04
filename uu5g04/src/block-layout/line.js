@@ -25,7 +25,7 @@ export const Line = UU5.Common.VisualComponent.create({
     UU5.Common.NestingLevelMixin,
     UU5.Common.ColorSchemaMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.PureRenderMixin
+    UU5.Common.PureRenderMixin,
   ],
   //@@viewOff:mixins
 
@@ -36,11 +36,11 @@ export const Line = UU5.Common.VisualComponent.create({
     classNames: {
       main: () => css`
         margin: 0 8px;
-      `
+      `,
     },
     opt: {
-      pureRender: true
-    }
+      pureRender: true,
+    },
   },
   //@@viewOff:statics
 
@@ -67,7 +67,7 @@ export const Line = UU5.Common.VisualComponent.create({
     return this.getNestingLevel() ? (
       <UU5.Bricks.Line {...this.props} {...this.getMainPropsToPass()} size={this.props.size || "s"} />
     ) : null;
-  }
+  },
   //@@viewOff:render
 });
 

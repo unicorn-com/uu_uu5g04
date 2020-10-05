@@ -28,8 +28,8 @@ export const Span = UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("Span"),
     classNames: {
-      main: ns.css("span")
-    }
+      main: ns.css("span"),
+    },
   },
   //@@viewOff:statics
 
@@ -52,14 +52,14 @@ export const Span = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     return (
       <span {...this.getMainAttrs()}>
         {this.getChildren()}
         {this.getDisabledCover()}
       </span>
     );
-  }
+  },
   //@@viewOff:render
 });
 

@@ -29,7 +29,7 @@ export const ProgressBus = UU5.Common.VisualComponent.create({
     UU5.Common.PureRenderMixin,
     UU5.Common.ElementaryMixin,
     UU5.Common.ContentMixin,
-    UU5.Common.NestingLevelMixin
+    UU5.Common.NestingLevelMixin,
   ],
   //@@viewOff:mixins
 
@@ -47,14 +47,14 @@ export const ProgressBus = UU5.Common.VisualComponent.create({
       buttons: ns.css("progress-bus-buttons"),
       pending: ns.css("progress-bus-pending"),
       position: ns.css("progress-bus-"),
-      alertPosition: ns.css("progress-bus-alert-")
+      alertPosition: ns.css("progress-bus-alert-"),
     },
     warnings: {
-      itemMissing: "Item id %s was not in item list."
+      itemMissing: "Item id %s was not in item list.",
     },
     errors: {
-      itemMissing: "Item id %s was not in item list."
-    }
+      itemMissing: "Item id %s was not in item list.",
+    },
   },
   //@@viewOff:statics
 
@@ -62,25 +62,25 @@ export const ProgressBus = UU5.Common.VisualComponent.create({
   propTypes: {
     position: UU5.PropTypes.oneOf(["left", "center", "right"]),
     verticalPosition: UU5.PropTypes.oneOf(["top", "bottom"]),
-    alertPosition: UU5.PropTypes.oneOf(["top", "bottom"])
+    alertPosition: UU5.PropTypes.oneOf(["top", "bottom"]),
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       position: "center",
       verticalPosition: "top",
-      alertPosition: "top"
+      alertPosition: "top",
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  getInitialState: function() {
+  getInitialState: function () {
     return {
       openId: null,
-      itemList: {}
+      itemList: {},
     };
   },
 
@@ -97,7 +97,7 @@ export const ProgressBus = UU5.Common.VisualComponent.create({
   //@@viewOn:interface
   addItem(itemProps, setStateCallback) {
     let id = UU5.Common.Tools.generateUUID();
-    this.setState(state => {
+    this.setState((state) => {
       let itemList = UU5.Common.Tools.mergeDeep({}, state.itemList);
       itemList[id] = {
         code: itemProps.code || id,
@@ -107,7 +107,7 @@ export const ProgressBus = UU5.Common.VisualComponent.create({
         closeDisabled: itemProps.closeDisabled || false,
         timeout: itemProps.timeout,
         onClick: itemProps.onClick,
-        onClose: itemProps.onClose
+        onClose: itemProps.onClose,
       };
 
       return { itemList: itemList };
@@ -116,7 +116,7 @@ export const ProgressBus = UU5.Common.VisualComponent.create({
   },
 
   removeItem(itemId, setStateCallback) {
-    this.setState(state => {
+    this.setState((state) => {
       let itemList = UU5.Common.Tools.mergeDeep({}, state.itemList);
       let result;
       if (itemList[itemId]) {
@@ -151,7 +151,7 @@ export const ProgressBus = UU5.Common.VisualComponent.create({
 
   getItemsByCode(code) {
     let itemList = [];
-    Object.keys(this.state.itemList).forEach(id => {
+    Object.keys(this.state.itemList).forEach((id) => {
       let item = this.state.itemList[id];
       if (item.code === code) {
         itemList.push(UU5.Common.Tools.merge({}, item, { id: id }));
@@ -161,7 +161,7 @@ export const ProgressBus = UU5.Common.VisualComponent.create({
   },
 
   setItem(itemId, itemProps, setStateCallback) {
-    this.setState(state => {
+    this.setState((state) => {
       let result;
       state.itemList = UU5.Common.Tools.mergeDeep({}, state.itemList);
       if (state.itemList[itemId]) {
@@ -178,7 +178,7 @@ export const ProgressBus = UU5.Common.VisualComponent.create({
   },
 
   updateItem(itemId, itemProps, setStateCallback) {
-    this.setState(state => {
+    this.setState((state) => {
       let result;
       state.itemList = UU5.Common.Tools.mergeDeep({}, state.itemList);
       if (state.itemList[itemId]) {
@@ -196,7 +196,7 @@ export const ProgressBus = UU5.Common.VisualComponent.create({
 
   getItemList() {
     let itemList = [];
-    Object.keys(this.state.itemList).forEach(id => {
+    Object.keys(this.state.itemList).forEach((id) => {
       let item = this.state.itemList[id];
       itemList.push(UU5.Common.Tools.merge(item, { id: id }));
     });
@@ -251,7 +251,7 @@ export const ProgressBus = UU5.Common.VisualComponent.create({
 
   _getItems() {
     this._timeouts = this._timeouts || {};
-    return Object.keys(this.state.itemList).map(key => {
+    return Object.keys(this.state.itemList).map((key) => {
       let itemProps = this.state.itemList[key];
       let onClick = itemProps.message ? itemProps.onClick || (() => this.showAlert(key)) : null;
 
@@ -280,7 +280,7 @@ export const ProgressBus = UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   // Render
-  _getMainAttrs: function() {
+  _getMainAttrs: function () {
     let mainAttrs = this.getMainAttrs();
     mainAttrs.className += " " + this.getClassName().position + this.props.position;
     mainAttrs.className += " " + this.getClassName().position + this.props.verticalPosition;
@@ -289,7 +289,7 @@ export const ProgressBus = UU5.Common.VisualComponent.create({
   },
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     let mainAttrs = this._getMainAttrs();
 
     let result = <div {...mainAttrs} />;
@@ -311,7 +311,7 @@ export const ProgressBus = UU5.Common.VisualComponent.create({
     }
 
     return this.getNestingLevel() ? result : null;
-  }
+  },
   //@@viewOff:render
 });
 

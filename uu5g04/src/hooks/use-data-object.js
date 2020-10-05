@@ -8,7 +8,7 @@ const PENDING = "pending",
 const PENDING_NO_DATA = "pendingNoData",
   READY_NO_DATA = "readyNoData",
   ERROR_NO_DATA = "errorNoData";
-const SET_DATA_IDENTITY = data => data;
+const SET_DATA_IDENTITY = (data) => data;
 const FIRST_LOAD_FLAG = {};
 
 function useEffectOnMount(effectFn) {
@@ -20,7 +20,7 @@ function initHandler(operation, setFullState, currentValuesRef) {
   // will have stale values. Read anything in handlerFn.
   let handlerFn;
   if (operation === "setData") {
-    handlerFn = newData => {
+    handlerFn = (newData) => {
       let onCall = currentValuesRef.current.paramHandlerMap[operation];
       if (typeof onCall !== "function") onCall = SET_DATA_IDENTITY;
       let newTransformedData = onCall(newData);
@@ -28,7 +28,7 @@ function initHandler(operation, setFullState, currentValuesRef) {
         state: newTransformedData != null ? READY : READY_NO_DATA,
         data: newTransformedData,
         errorData: null,
-        pendingData: null
+        pendingData: null,
       });
     };
   } else {
@@ -45,11 +45,11 @@ function initHandler(operation, setFullState, currentValuesRef) {
       if (isFirstLoad) callArgs = callArgs.slice(1);
 
       if (!isFirstLoad) {
-        setFullState(fullState => {
+        setFullState((fullState) => {
           let result = fullState;
           let newPartialState = {
             state: fullState.data != null ? PENDING : PENDING_NO_DATA,
-            pendingData: { operation, dtoIn: callArgs[0] }
+            pendingData: { operation, dtoIn: callArgs[0] },
           };
           // if re-rendering (is not initial load) then check that the operation is allowed
           if (fullState.state === PENDING || fullState.state === PENDING_NO_DATA) {
@@ -61,8 +61,8 @@ function initHandler(operation, setFullState, currentValuesRef) {
               ...fullState,
               pendingData: {
                 ...fullState.pendingData,
-                error: callPreconditionsError
-              }
+                error: callPreconditionsError,
+              },
             };
           } else {
             callPreconditionsResolve();
@@ -81,11 +81,11 @@ function initHandler(operation, setFullState, currentValuesRef) {
         data = typeof onCall === "function" ? await onCall(...callArgs) : null;
       } catch (error) {
         if (currentValuesRef.current.rendered) {
-          setFullState(fullState => ({
+          setFullState((fullState) => ({
             ...fullState,
             state: fullState.data != null ? ERROR : ERROR_NO_DATA,
             pendingData: null,
-            errorData: { operation, dtoIn: callArgs[0], error }
+            errorData: { operation, dtoIn: callArgs[0], error },
           }));
         }
         throw error;
@@ -97,7 +97,7 @@ function initHandler(operation, setFullState, currentValuesRef) {
           if (
             uuAppErrorMap &&
             typeof uuAppErrorMap === "object" &&
-            Object.keys(uuAppErrorMap).every(k => (uuAppErrorMap[k] || {}).type !== "error")
+            Object.keys(uuAppErrorMap).every((k) => (uuAppErrorMap[k] || {}).type !== "error")
           ) {
             data = null;
           }
@@ -127,7 +127,7 @@ export function useDataObject({ initialData, initialDtoIn, handlerMap: paramHand
         ? null
         : typeof paramHandlerMap.load === "function"
         ? { operation: "load", dtoIn: initialDtoIn }
-        : null
+        : null,
   }));
 
   let currentValuesRef = useRef({ rendered: true });
@@ -155,13 +155,15 @@ export function useDataObject({ initialData, initialDtoIn, handlerMap: paramHand
 
   useEffectOnMount(() => {
     if (initialData === undefined && typeof paramHandlerMap.load === "function") {
-      fullHandlerMap.load(FIRST_LOAD_FLAG, initialDtoIn).catch(e => UU5.Common.Tools.error("Loading data failed:", e));
+      fullHandlerMap
+        .load(FIRST_LOAD_FLAG, initialDtoIn)
+        .catch((e) => UU5.Common.Tools.error("Loading data failed:", e));
     }
   });
 
   const result = {
     ...fullState,
-    handlerMap
+    handlerMap,
   };
   return result;
 }

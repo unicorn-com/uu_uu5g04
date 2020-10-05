@@ -13,7 +13,7 @@ describe("[uu5g04-hooks] useDevice behaviour", () => {
       hasPointer: expect.any(Boolean),
       orientation: expect.any(String),
       // isWebView: expect.any(Boolean), // TODO Uncomment
-      isHeadless: expect.any(Boolean)
+      isHeadless: expect.any(Boolean),
     });
   });
 
@@ -23,13 +23,13 @@ describe("[uu5g04-hooks] useDevice behaviour", () => {
         get() {
           return userAgent;
         },
-        configurable: true
+        configurable: true,
       });
       Object.defineProperty(navigator, "platform", {
         get() {
           return userAgent.split(/[()]/)[1];
         },
-        configurable: true
+        configurable: true,
       });
       let { lastResult } = renderHook(useDevice);
       expect(lastResult()).toMatchObject(expectedValues);
@@ -57,7 +57,7 @@ describe("[uu5g04-hooks] useDevice behaviour", () => {
 
     checkUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:75.0) Gecko/20100101 Firefox/75.0", {
       browserName: "firefox",
-      platform: "windows"
+      platform: "windows",
     });
     checkUserAgent(
       "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/601.3.9 (KHTML, like Gecko) Version/9.0.2 Safari/601.3.9",
@@ -65,7 +65,7 @@ describe("[uu5g04-hooks] useDevice behaviour", () => {
     );
     checkUserAgent("Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko", {
       browserName: "ie",
-      platform: "windows"
+      platform: "windows",
     });
     checkUserAgent(
       "Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10136",
@@ -81,7 +81,7 @@ describe("[uu5g04-hooks] useDevice behaviour", () => {
       hasPointer: true,
       orientation: "landscape-secondary",
       isWebView: true,
-      isHeadless: true
+      isHeadless: true,
     };
     const PROPS2 = {
       browserName: "aa",
@@ -90,7 +90,7 @@ describe("[uu5g04-hooks] useDevice behaviour", () => {
       hasPointer: false,
       orientation: "portrait-primary",
       isWebView: false,
-      isHeadless: false
+      isHeadless: false,
     };
 
     let { lastResult, HookComponent } = initHookRenderer(useDevice);

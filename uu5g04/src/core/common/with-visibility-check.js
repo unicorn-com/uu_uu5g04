@@ -9,7 +9,7 @@ import Uu5Component from "./component";
 
 const VISIBILITY_CHECK_ALLOWED = !navigator.webdriver; // don't check visibility if running in headless browser (e.g. when generating PDFs on server)
 
-export const withVisibilityCheck = function(Component, reserve = 500) {
+export const withVisibilityCheck = function (Component, reserve = 500) {
   if (typeof IntersectionObserver === "undefined" || !VISIBILITY_CHECK_ALLOWED) return Component;
 
   const VisibilityCheck = Uu5Component.create({
@@ -24,17 +24,17 @@ export const withVisibilityCheck = function(Component, reserve = 500) {
           display: inline-block;
           height: 1px;
           width: 1px;
-        `
+        `,
       },
       opt: {
-        hoc: true
-      }
+        hoc: true,
+      },
     },
     //@@viewOff:statics
     //@@viewOn:propTypes
     propTypes: {
       width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-      height: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+      height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     },
     //@@viewOff:propTypes
 
@@ -42,7 +42,7 @@ export const withVisibilityCheck = function(Component, reserve = 500) {
     getDefaultProps() {
       return {
         width: undefined,
-        height: undefined
+        height: undefined,
       };
     },
     //@@viewOff:getDefaultProps
@@ -93,7 +93,7 @@ export const withVisibilityCheck = function(Component, reserve = 500) {
       ) : (
         <span ref={this._setRef} className={this.getClassName("placeholder")} style={style} />
       );
-    }
+    },
     //@@viewOff:render
   });
 

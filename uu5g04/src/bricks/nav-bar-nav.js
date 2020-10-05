@@ -29,15 +29,15 @@ export default UU5.Common.VisualComponent.create({
     tagName: ns.name("NavBar.Nav"),
     classNames: {
       main: ns.css("nav-bar-nav nav navbar-nav"),
-      align: ns.css("nav-bar-nav-")
+      align: ns.css("nav-bar-nav-"),
     },
     defaults: {
       childTagName: "UU5.Bricks.NavBar.Nav.Item",
-      parentTagName: "UU5.Bricks.NavBar"
+      parentTagName: "UU5.Bricks.NavBar",
     },
     errors: {
-      invalidParent: "Parent of this component is not NavBar."
-    }
+      invalidParent: "Parent of this component is not NavBar.",
+    },
   },
   //@@viewOff:statics
 
@@ -47,24 +47,24 @@ export default UU5.Common.VisualComponent.create({
     smoothScroll: UU5.PropTypes.number,
     offset: UU5.PropTypes.number,
     allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
-    _size: UU5.PropTypes.string
+    _size: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       aligned: "left",
       smoothScroll: 1000,
       offset: null,
       allowTags: [],
-      _size: "m"
+      _size: "m",
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  UNSAFE_componentWillMount: function() {
+  UNSAFE_componentWillMount: function () {
     let parent = this.getParent();
 
     if (parent) {
@@ -81,13 +81,13 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
-  isNav: function() {
+  isNav: function () {
     return true;
   },
   //@@viewOff:interface
 
   //@@viewOn:overriding
-  shouldChildRender_: function(child) {
+  shouldChildRender_: function (child) {
     let childTagName = UU5.Common.Tools.getChildTagName(child);
     let defaultChildTagName = this.getDefault().childTagName;
     let childTagNames = this.props.allowTags.concat(defaultChildTagName);
@@ -95,14 +95,14 @@ export default UU5.Common.VisualComponent.create({
     if (!result && (typeof child !== "string" || child.trim())) {
       if (childTagName)
         this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagName], {
-          mixinName: "UU5.Common.BaseMixin"
+          mixinName: "UU5.Common.BaseMixin",
         });
       else this.showError("childNotAllowed", [child, defaultChildTagName], { mixinName: "UU5.Common.BaseMixin" });
     }
     return result;
   },
 
-  expandChildProps_: function(child, i) {
+  expandChildProps_: function (child, i) {
     var newChildProps = { ...child.props };
 
     newChildProps._size = this.props._size;
@@ -121,7 +121,7 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:private
 
   //@@viewOn:render
-  render: function() {
+  render: function () {
     var mainAttrs = this.getMainAttrs();
     mainAttrs.className += " " + this.getClassName().align + this.props.aligned;
 
@@ -131,6 +131,6 @@ export default UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
       </ul>
     );
-  }
+  },
   //@@viewOff:render
 });

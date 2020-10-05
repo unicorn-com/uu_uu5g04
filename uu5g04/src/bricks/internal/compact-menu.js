@@ -24,7 +24,7 @@ import Item, { propTypes as itemPropTypes } from "./compact-menu-item";
 
 //@@viewOn:statics
 const STATICS = {
-  tagName: ns.name("CompactMenu")
+  tagName: ns.name("CompactMenu"),
 };
 //@@viewOff:statics
 
@@ -36,14 +36,14 @@ export const CompactMenu = UU5.Common.VisualComponent.create({
 
   //@@viewOn:propTypes
   propTypes: {
-    items: UU5.PropTypes.arrayOf(UU5.PropTypes.shape(itemPropTypes))
+    items: UU5.PropTypes.arrayOf(UU5.PropTypes.shape(itemPropTypes)),
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      items: undefined
+      items: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -51,7 +51,7 @@ export const CompactMenu = UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     return {
-      history: []
+      history: [],
     };
   },
   //@@viewOff:reactLifeCycle
@@ -79,17 +79,17 @@ export const CompactMenu = UU5.Common.VisualComponent.create({
           {
             onClick: ({ component, event }) => {
               event.stopPropagation();
-              this.setState(state => {
+              this.setState((state) => {
                 let newHistory = [...state.history];
                 newHistory.pop();
                 return { history: newHistory };
               });
             },
             label: prevItem.label,
-            icon: "mdi-menu-left"
+            icon: "mdi-menu-left",
           },
           "separator",
-          ...currentItems
+          ...currentItems,
         ];
       }
 
@@ -105,7 +105,7 @@ export const CompactMenu = UU5.Common.VisualComponent.create({
           itemProps.onClick = (component, event) => {
             if (item.items) {
               event.stopPropagation();
-              this.setState(state => ({ history: [...state.history, index] }));
+              this.setState((state) => ({ history: [...state.history, index] }));
             }
 
             if (typeof item.onClick === "function") {
@@ -127,7 +127,7 @@ export const CompactMenu = UU5.Common.VisualComponent.create({
   //@@viewOn:render
   render() {
     return <div {...this.getMainAttrs()}>{this._renderCurrentLevel()}</div>;
-  }
+  },
   //@@viewOff:render
 });
 

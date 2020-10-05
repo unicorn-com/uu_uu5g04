@@ -22,34 +22,34 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     leftLink: {
-      values: [{ href: "#leftlink", text: "Předchozí článek", icon: "uu5-plus" }]
+      values: [{ href: "#leftlink", text: "Předchozí článek", icon: "uu5-plus" }],
     },
     rightLink: {
-      values: [{ href: "#rightlink", text: "Další článek", icon: "uu5-plus" }]
+      values: [{ href: "#rightlink", text: "Další článek", icon: "uu5-plus" }],
     },
     upLink: {
-      values: [{ href: "#uplink", text: "Nahoru", icon: "uu5-plus" }]
+      values: [{ href: "#uplink", text: "Nahoru", icon: "uu5-plus" }],
     },
     downLink: {
-      values: [{ href: "#downlink", text: "Dolů", icon: "uu5-plus" }]
+      values: [{ href: "#downlink", text: "Dolů", icon: "uu5-plus" }],
     },
     background: {
-      values: [true, false]
+      values: [true, false],
     },
     size: {
-      values: ["s", "m", "l", "xl"]
-    }
+      values: ["s", "m", "l", "xl"],
+    },
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: false
-    }
-  }
+      disableLifecycleMethods: false,
+    },
+  },
 };
 
 describe(`UU5.Bricks.Pager`, () => {

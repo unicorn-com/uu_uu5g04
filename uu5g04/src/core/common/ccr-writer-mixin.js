@@ -26,70 +26,70 @@ export const CcrWriterMixin = {
     "UU5.Common.CcrWriterMixin": {
       requiredMixins: ["UU5.Common.CcrReaderMixin"],
       warnings: {
-        keyNotRegistered: "Component with key %s was not registered."
+        keyNotRegistered: "Component with key %s was not registered.",
       },
       errors: {
         alreadyRegistered: "Component with ccr key %s is already registered.",
-        unregisterNotThis: "Component with ccr key %s is not this component, cannot be unregistered."
-      }
-    }
+        unregisterNotThis: "Component with ccr key %s is not this component, cannot be unregistered.",
+      },
+    },
   },
   //@@viewOff:statics
 
   //@@viewOn:propTypes
   propTypes: {
-    ccrKey: PropTypes.string
+    ccrKey: PropTypes.string,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
-      ccrKey: null
+      ccrKey: null,
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  getInitialState: function() {
+  getInitialState: function () {
     // initialize
     this.registerMixin("UU5.Common.CcrWriterMixin");
     // state
     return null;
   },
 
-  UNSAFE_componentWillMount: function() {
+  UNSAFE_componentWillMount: function () {
     this.getCcrKey() && this._registerToCcrByKey(this.getCcrKey());
   },
 
-  UNSAFE_componentWillReceiveProps: function(nextProps) {
+  UNSAFE_componentWillReceiveProps: function (nextProps) {
     if (this.getCcrKey(nextProps) && this.getCcrKey(nextProps) !== this.getCcrKey()) {
       this.getCcrKey() && this.isCcrRegisteredByKey(this.getCcrKey()) && this._unregisterFromCcrByKey(this.getCcrKey());
       this._registerToCcrByKey(this.getCcrKey(nextProps));
     }
   },
 
-  componentWillUnmount: function() {
+  componentWillUnmount: function () {
     this.getCcrKey() && this.isCcrRegisteredByKey(this.getCcrKey()) && this._unregisterFromCcrByKey(this.getCcrKey());
   },
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
-  hasUU5CommonCcrWriterMixin: function() {
+  hasUU5CommonCcrWriterMixin: function () {
     return this.hasMixin("UU5.Common.CcrWriterMixin");
   },
 
-  getUU5CommonCcrWriterMixinProps: function() {
+  getUU5CommonCcrWriterMixinProps: function () {
     return {
-      ccrKey: this.getCcrKey()
+      ccrKey: this.getCcrKey(),
     };
   },
 
-  getUU5CommonCcrWriterMixinPropsToPass: function() {
+  getUU5CommonCcrWriterMixinPropsToPass: function () {
     return {};
   },
 
-  getCcrKey: function(props) {
+  getCcrKey: function (props) {
     props = props || this.props;
     return props.ccrKey || this.getOpt("ccrKey") || null;
   },
@@ -99,7 +99,7 @@ export const CcrWriterMixin = {
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _registerToCcrByKey: function(key) {
+  _registerToCcrByKey: function (key) {
     var component = this.getCcrByKeyRegister()[key];
     if (Environment.ccrStrict && component && component !== this) {
       this.showError("alreadyRegistered", key, {
@@ -108,20 +108,20 @@ export const CcrWriterMixin = {
           registeredComponent: {
             tagName: component.getTagName(),
             id: component.getId(),
-            component: component
-          }
-        }
+            component: component,
+          },
+        },
       });
     }
     this.getCcrByKeyRegister()[key] = this;
     return this;
   },
 
-  _unregisterFromCcrByKey: function(key) {
+  _unregisterFromCcrByKey: function (key) {
     var component = this.getCcrByKeyRegister()[key];
     if (!component) {
       this.showWarning("keyNotRegistered", key, {
-        mixinName: "UU5.Common.CcrWriterMixin"
+        mixinName: "UU5.Common.CcrWriterMixin",
       });
     } else if (component !== this) {
       Environment.ccrStrict &&
@@ -131,15 +131,15 @@ export const CcrWriterMixin = {
             registeredComponent: {
               tagName: component.getTagName(),
               id: component.getId(),
-              component: component
-            }
-          }
+              component: component,
+            },
+          },
         });
     } else {
       delete this.getCcrByKeyRegister()[key];
     }
     return this;
-  }
+  },
   //@@viewOff:private
 };
 

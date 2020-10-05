@@ -63,9 +63,9 @@ const Menu = UU5.Common.VisualComponent.create({
         & > div {
           justify-content: center;
         }
-      `)
+      `),
     },
-    lsi: Lsi.menu
+    lsi: Lsi.menu,
   },
   //@@viewOff:statics
 
@@ -76,7 +76,7 @@ const Menu = UU5.Common.VisualComponent.create({
     controls: UU5.PropTypes.array,
     withDnD: UU5.PropTypes.bool,
     onItemClick: UU5.PropTypes.func,
-    onAddItem: UU5.PropTypes.func
+    onAddItem: UU5.PropTypes.func,
   },
   //@@viewOff:propTypes
 
@@ -88,7 +88,7 @@ const Menu = UU5.Common.VisualComponent.create({
       controls: undefined,
       withDnD: false,
       onItemClick: undefined,
-      onAddItem: undefined
+      onAddItem: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -99,7 +99,7 @@ const Menu = UU5.Common.VisualComponent.create({
     UU5.Environment.getColorSchema(ITEM_COLOR_SCHEMA_ACTIVE);
 
     return {
-      hasScrollbar: false
+      hasScrollbar: false,
     };
   },
 
@@ -155,7 +155,7 @@ const Menu = UU5.Common.VisualComponent.create({
     if (this.props.items) {
       items = this.props.items.map((item, index) => {
         let controls = this.props.controls
-          ? this.props.controls.map(controlsItem => {
+          ? this.props.controls.map((controlsItem) => {
               if (typeof controlsItem === "function") {
                 return controlsItem(index);
               } else {
@@ -163,7 +163,7 @@ const Menu = UU5.Common.VisualComponent.create({
                   ...controlsItem,
                   onClick: () => {
                     controlsItem.onClick(index);
-                  }
+                  },
                 };
               }
             })
@@ -205,7 +205,7 @@ const Menu = UU5.Common.VisualComponent.create({
         {typeof this.props.onAddItem === "function" ? this._getAddItemButton() : null}
       </UU5.Bricks.Resize>
     );
-  }
+  },
   //@@viewOff:render
 });
 

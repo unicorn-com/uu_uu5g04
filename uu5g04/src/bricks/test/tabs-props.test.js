@@ -19,7 +19,7 @@ const { mount, shallow, wait } = UU5.Test.Tools;
 const MOUNT_TAB_CONTENT_VALUES = {
   onFirstRender: "onFirstRender",
   onFirstActive: "onFirstActive",
-  onActive: "onActive"
+  onActive: "onActive",
 };
 
 const CONFIG = {
@@ -29,44 +29,44 @@ const CONFIG = {
     "UU5.Common.ContentMixin",
     "UU5.Common.ColorSchemaMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
   ],
   props: {
     type: {
-      values: ["tabs", "pills"]
+      values: ["tabs", "pills"],
     },
     stacked: {
-      values: [true, false]
+      values: [true, false],
     },
     justified: {
-      values: [true, false]
+      values: [true, false],
     },
     fade: {
-      values: [true, false]
+      values: [true, false],
     },
     activeName: {
-      values: ["active"]
+      values: ["active"],
     },
     mountTabContent: {
       values: [
         MOUNT_TAB_CONTENT_VALUES.onActive,
         MOUNT_TAB_CONTENT_VALUES.onFirstActive,
-        MOUNT_TAB_CONTENT_VALUES.onFirstRender
-      ]
-    }
+        MOUNT_TAB_CONTENT_VALUES.onFirstRender,
+      ],
+    },
   },
   requiredProps: {
     children: [
       <UU5.Bricks.Tabs.Item header="Tab 1" name={"active"} id={"childID"}>
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-      </UU5.Bricks.Tabs.Item>
-    ]
+      </UU5.Bricks.Tabs.Item>,
+    ],
   },
   opt: {
     shallowOpt: {
-      disableLifecycleMethods: true
-    }
-  }
+      disableLifecycleMethods: true,
+    },
+  },
 };
 
 const getTabItems = (items, testFn) => {

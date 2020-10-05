@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>useLsi Demo</title>
+
+  <!-- FIXME Remove. -->
+  <link type="text/css" rel="stylesheet" href="https://cdn.plus4u.net/libs/materialdesignicons/3.5.95/css/materialdesignicons.css">
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+  <script>
+    SystemJS.config({
+      "paths": {
+        "react": "https://cdn.plus4u.net/libs/react/16.13.1/react.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.13.1/react-dom.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+        "uu5mathg01": "https://cdn.plus4u.net/uu-uu5mathg01/1.0.0/uu5mathg01.js",
+
+        "uu5g04": "/uu5g04.js",
+        "uu5g04-bricks": "/uu5g04-bricks.js",
+        "uu5g04-hooks": "/uu5g04-hooks.js",
+      }
+    });
+  </script>
+
+</head>
+<body>
+<div id="renderHere"></div>
+
+<script src="https://cdn.plus4u.net/uu-app-templateg01/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import { createComponent, createVisualComponent, useState, useEffect } from "uu5g04-hooks";
+  import "uu5mathg01";
+
+  UU5.Common.Tools.setLanguage("en-us");
+  function useIsOnline() {
+    let [online, setOnline] = useState(() => navigator.onLine);
+    useEffect(() => {
+      setOnline(navigator.onLine);
+      let fn1 = () => setOnline(true);
+      let fn2 = () => setOnline(false);
+      window.addEventListener("online", fn1);
+      window.addEventListener("offline", fn2);
+      return () => {
+        window.removeEventListener("online", fn1);
+        window.removeEventListener("offline", fn2);
+      };
+    }, []);
+    return online;
+  }
+
+  const Config = {
+    TAG: "Uu5Demo.",
+    Css: UU5.Common.Css.createCssModule("uu-demo"),
+  };
+
+  const STATICS = {
+    displayName: Config.TAG + "TestComponent",
+    nestingLevel: UU5.Environment.getNestingLevelList("box", "inline")
+  };
+  const TestComponent = createVisualComponent({
+    render(props) {
+      const attrs = UU5.Common.VisualComponent.getAttrs(props, Config.Css.css`padding: 8px;`);
+      const currentNestingLevel = UU5.Utils.NestingLevel.getNestingLevel(props, STATICS);
+      return currentNestingLevel ? (
+        <div {...attrs}>
+          {STATICS.displayName} with props: <br/>
+          <pre>{JSON.stringify(props, null, 2)}</pre>
+        </div>
+      ) : null;
+    }
+  });
+
+  TestComponent.Item = createVisualComponent({
+    render(props) {
+      const attrs = UU5.Common.VisualComponent.getAttrs(props, Config.Css.css`padding: 8px;`);
+      return <div {...attrs}>TestComponent.Item</div>
+    }
+  });
+
+  // mock library registry for Uu5Demo namespace and make the library available to SystemJS loader
+  let uu5g05DemoExports = { TestComponent };
+  let origLoadLibrary = UU5.Common.Tools.loadLibrary;
+  UU5.Common.Tools.loadLibrary = async (code, callback) => {
+    if (code !== "Uu5Demo") return origLoadLibrary(code, callback);
+    callback({
+      name: "uu5g05-demo",
+      code: "Uu5Demo",
+      source: "http://example.com/uu5g05-demo.js",
+      dependencyMap: {},
+    });
+  };
+  SystemJS.config({
+    paths: {
+      "uu5g05-demo": "http://example.com/uu5g05-demo.js",
+    }
+  });
+  SystemJS.set(
+    SystemJS.normalizeSync("uu5g05-demo"),
+    SystemJS.newModule({ default: uu5g05DemoExports, ...uu5g05DemoExports, __useDefault: true })
+  );
+
+  const Check = createComponent({
+    render({ name, props, children }) {
+      return (
+        <div className={UU5.Common.Css.css`margin: 0 8px 8px; border: 1px solid grey; padding: 8px;`}>
+          {UU5.Common.Tools.findComponent(name, props, children)}
+          <br/>
+          <UU5.Common.TagPlaceholder _fromFindComponent={true} _tagName={name} _props={props} _content={children} />
+        </div>
+      )
+    }
+  });
+
+  const Example = createVisualComponent({
+    render(props) {
+      let [showOfflineComponent, setShowOfflineComponent] = useState(false);
+      let isOnline = useIsOnline();
+
+      return (
+        <div>
+          {/*@@viewOn:example*/}
+          Uu5Demo.TestComponent #1:
+          {UU5.Common.Tools.findComponent(
+            "Uu5Demo.TestComponent",
+            { id: "testComponent1", className: Config.Css.css`background-color: #BDBDBD;`, foo: "bar" }
+          )}
+          <br/>
+          Uu5Demo.TestComponent #2:
+          {UU5.Common.Tools.findComponent(
+            "Uu5Demo.TestComponent",
+            { id: "testComponent2", className: Config.Css.css`background-color: #66BB6A;`, foo: "bar", tagName: "Value in prop 'tagName'" }
+          )}
+          <br/>
+          Uu5Demo.TestComponent.Item:
+          {UU5.Common.Tools.findComponent(
+            "Uu5Demo.TestComponent.Item",
+            { id: "testComponent3", className: Config.Css.css`background-color: #BDBDBD;`, foo: "bar" }
+          )}
+          <br/>
+
+          NOTE uu5g04 passes all props (className, ...) onto NotFoundTag - preserved for backward compatibility:
+          {UU5.Common.Tools.findComponent(
+            "Uu5Demo.MissingComponent",
+            // props are not passed if component is missing (with the exception of nesting level)
+            { className: Config.Css.css`background-color: blue !important;`, foo: "bar" }
+          )}
+          <br/>
+          NOTE NestingLevel="inline" not supported on UU5.Common.NotFoundTag so this will be block:
+          {UU5.Common.Tools.findComponent(
+            "Uu5Demo.MissingComponentInline",
+            // props are not passed if component is missing (with the exception of nesting level)
+            { nestingLevel: "inline", className: Config.Css.css`background-color: blue;`, foo: "bar" }
+          )}
+          {/*@@viewOff:example*/}
+
+          <br/>
+          NOTE Switching between offline/online causes re-render and NotFoundTag shows error based on navigator.onLine,
+          not based on the actual error.
+          <br/>
+          Set browser to offline mode and click:
+          <button disabled={isOnline} onClick={() => setShowOfflineComponent(Math.random())}>
+            Render NonExisting.Component
+          </button>
+          <br/>
+          {showOfflineComponent ? (
+            UU5.Common.Tools.findComponent("NonExisting.Component")
+          ) : null}
+          <br/>
+          <br/>
+          
+          UU5.Bricks.Button - not yet loaded (URL for uu5g04-bricks preconfigured for SystemJS) =&gt; should load via library registry but use preconfigured URL: 
+          <Check name="UU5.Bricks.Button" props={{ id: "testComponent2", onClick: () => alert("onClick") }}>
+            UU5.Bricks.Button
+          </Check>
+          
+          UU5.Forms.Text - not yet loaded =&gt; should load via library registry:
+          <Check name="UU5.Forms.Text" props={{ value: "text input value" }} />
+          
+          UU5.Math.Expression - already loaded but it doesn't provide namespace =&gt; should use components from global <b>(there shouldn't be /get?code=UU5.Math in Network)</b>:<br/>
+          <Check name="UU5.Math.Expression" props={{ expression: "1 + 1 = 2"}} />
+        </div>
+      );
+    }
+  });
+  
+  const Page = createComponent({
+    render() {
+      return (
+        <Example />
+      );
+    }
+  });
+
+  UU5.Common.DOM.render(<Page />, document.getElementById("renderHere"));
+</script>
+</body>
+</html>

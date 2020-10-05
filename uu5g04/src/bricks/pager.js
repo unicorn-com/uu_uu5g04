@@ -30,7 +30,7 @@ export const Pager = UU5.Common.VisualComponent.create({
     UU5.Common.PureRenderMixin,
     UU5.Common.ElementaryMixin,
     UU5.Common.ColorSchemaMixin,
-    UU5.Common.NestingLevelMixin
+    UU5.Common.NestingLevelMixin,
   ],
   //@@viewOff:mixins
 
@@ -44,17 +44,17 @@ export const Pager = UU5.Common.VisualComponent.create({
       text: ns.css("pager-text"),
       icon: ns.css("pager-icon"),
       bg: "uu5-common-bg",
-      size: ns.css("pager-size-")
+      size: ns.css("pager-size-"),
     },
     defaults: {
       leftLink: "mdi-chevron-left",
       rightLink: "mdi-chevron-right",
       upLink: "mdi-chevron-up",
-      downLink: "mdi-chevron-down"
+      downLink: "mdi-chevron-down",
     },
     opt: {
-      nestingLevelWrapper: true
-    }
+      nestingLevelWrapper: true,
+    },
   },
   //@@viewOff:statics
 
@@ -64,34 +64,34 @@ export const Pager = UU5.Common.VisualComponent.create({
       text: UU5.PropTypes.any,
       href: UU5.PropTypes.string,
       icon: UU5.PropTypes.string,
-      onClick: UU5.PropTypes.function
+      onClick: UU5.PropTypes.function,
     }),
     rightLink: UU5.PropTypes.shape({
       text: UU5.PropTypes.any,
       href: UU5.PropTypes.string,
       icon: UU5.PropTypes.string,
-      onClick: UU5.PropTypes.function
+      onClick: UU5.PropTypes.function,
     }),
     upLink: UU5.PropTypes.shape({
       text: UU5.PropTypes.any,
       href: UU5.PropTypes.string,
       icon: UU5.PropTypes.string,
-      onClick: UU5.PropTypes.function
+      onClick: UU5.PropTypes.function,
     }),
     downLink: UU5.PropTypes.shape({
       text: UU5.PropTypes.any,
       href: UU5.PropTypes.string,
       icon: UU5.PropTypes.string,
-      onClick: UU5.PropTypes.function
+      onClick: UU5.PropTypes.function,
     }),
     size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
     bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-    borderRadius: UU5.PropTypes.string
+    borderRadius: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       leftLink: null,
       rightLink: null,
@@ -100,7 +100,7 @@ export const Pager = UU5.Common.VisualComponent.create({
       size: "m",
       background: false,
       bgStyle: null,
-      borderRadius: null
+      borderRadius: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -156,7 +156,7 @@ export const Pager = UU5.Common.VisualComponent.create({
 
       const content = [
         <Icon icon={buttonProps.icon || this.getDefault(key)} className={this.getClassName("icon")} />,
-        buttonProps.text ? <Span className={this.getClassName("text")} content={buttonProps.text} /> : null
+        buttonProps.text ? <Span className={this.getClassName("text")} content={buttonProps.text} /> : null,
       ];
 
       if (key === "rightLink" || key === "downLink") {
@@ -182,7 +182,7 @@ export const Pager = UU5.Common.VisualComponent.create({
         {this._getColumn("rightLink")}
       </Row>
     );
-  }
+  },
   //@@viewOff:render
 });
 

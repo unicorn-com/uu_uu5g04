@@ -26,21 +26,21 @@ const classNames = {
         padding: 5px 32px 6px 8px;
       }
     }
-  `)
+  `),
 };
 
-const getItems = props => {
+const getItems = (props) => {
   return Array.isArray(props.items)
     ? props.items.map((item, index) => {
-      return (
-        <UU5.Bricks.Dropdown.Item
-          // eslint-disable-next-line react/jsx-no-bind
-          onClick={() => props.onClick(item.value)}
-          label={item.content || item.value}
-          key={index}
-        />
-      );
-    })
+        return (
+          <UU5.Bricks.Dropdown.Item
+            // eslint-disable-next-line react/jsx-no-bind
+            onClick={() => props.onClick(item.value)}
+            label={item.content || item.value}
+            key={index}
+          />
+        );
+      })
     : null;
 };
 
@@ -86,21 +86,21 @@ ToolbarDropdown.propTypes = {
     UU5.PropTypes.oneOfType([
       UU5.PropTypes.shape({
         type: UU5.PropTypes.oneOfType([UU5.PropTypes.oneOf(["button", "dropdown"]), UU5.PropTypes.func]),
-        props: UU5.PropTypes.object
+        props: UU5.PropTypes.object,
       }),
-      UU5.PropTypes.element
+      UU5.PropTypes.element,
     ])
   ),
   colorSchema: UU5.PropTypes.string,
   bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
   onClick: UU5.PropTypes.func,
-  tooltip: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string])
+  tooltip: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string]),
 };
 ToolbarDropdown.defaultProps = {
   items: undefined,
   colorSchema: undefined,
   bgStyle: undefined,
-  onClick: undefined
+  onClick: undefined,
 };
 ToolbarDropdown.isStateless = true;
 

@@ -56,8 +56,8 @@ const HtmlEntityMap = {
     "&ge;": "≥",
     "&#92;": "\\",
     "&sup2;": "²",
-    "&sup3;": "³"
-  }
+    "&sup3;": "³",
+  },
 };
 
 const AsciiEmojiMap = {
@@ -100,8 +100,8 @@ const AsciiEmojiMap = {
     "X-)": "😆",
     "x-)": "😆",
     "</3": "💔",
-    "<3": "💗"
-  }
+    "<3": "💗",
+  },
 };
 
 const ExtendedEmojiMap = {
@@ -206,8 +206,8 @@ const ExtendedEmojiMap = {
     "skin-medium-light": "🏼",
     "skin-medium": "🏽",
     "skin-medium-dark": "🏾",
-    "skin-dark": "🏿"
-  }
+    "skin-dark": "🏿",
+  },
 };
 
 export const TextEntityMap = {
@@ -278,10 +278,10 @@ export const TextEntityMap = {
   },
 
   addExtendedTextEntityMap(map) {
-    if (!this._extendedTextEntityMapList.some(item => item === map)) this._extendedTextEntityMapList.push(map);
+    if (!this._extendedTextEntityMapList.some((item) => item === map)) this._extendedTextEntityMapList.push(map);
   },
   removeExtendedTextEntityMap(map) {
-    this._extendedTextEntityMapList = this._extendedTextEntityMapList.filter(item => item !== map);
+    this._extendedTextEntityMapList = this._extendedTextEntityMapList.filter((item) => item !== map);
   },
 
   get extendedTextEntityMapList() {
@@ -304,7 +304,7 @@ export const TextEntityMap = {
         i++;
       }
       if (this.extendedTextEntity) {
-        this._extendedTextEntityMapList.forEach(item => {
+        this._extendedTextEntityMapList.forEach((item) => {
           reA.push(item.re.source);
           this._textEntityRegexGroups[i] = item;
           i++;
@@ -313,7 +313,7 @@ export const TextEntityMap = {
       this._reGroupsCount = i;
       this._re = new RegExp(`(\\\\)?(?:${reA.join("|")})`, "g");
     } else this._re = null;
-  }
+  },
 };
 
 //precompile regex

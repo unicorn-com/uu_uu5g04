@@ -24,7 +24,7 @@ const grey = UU5.Environment.colors.grey;
 const greyShades = {
   c50: grey.c300,
   c100: grey.c400,
-  c500: grey.c400
+  c500: grey.c400,
 };
 
 function getWhiteColors(bgStyle) {
@@ -68,7 +68,7 @@ function getBlackColors(bgStyle) {
 
 function getColors(colorSchema, bgStyle = "outline") {
   let styles = {
-    borderColor: UU5.Environment.colors.grey.c400
+    borderColor: UU5.Environment.colors.grey.c400,
   };
   const colorSchemaMap =
     UU5.Environment.colorSchemaMap[colorSchema === "default" ? DEFAULT_COLOR : colorSchema || DEFAULT_COLOR];
@@ -113,7 +113,7 @@ function getClassName({
   className,
   disabled,
   readOnly,
-  elevation
+  elevation,
 }) {
   const classNames = [
     UU5.Common.Css.css`
@@ -121,7 +121,7 @@ function getClassName({
     outline: none;
     border-style: solid;
   `,
-    ns.css("switch-selector")
+    ns.css("switch-selector"),
   ];
 
   (disabled || readOnly) &&
@@ -201,7 +201,7 @@ export const SwitchSelector = UU5.Common.VisualComponent.create({
 
   //@@viewOn:statics
   statics: {
-    tagName: ns.name("SwitchSelector")
+    tagName: ns.name("SwitchSelector"),
   },
   //@@viewOff:statics
 
@@ -213,7 +213,7 @@ export const SwitchSelector = UU5.Common.VisualComponent.create({
         content: UU5.PropTypes.any,
         colorSchema: UU5.PropTypes.string,
         bgStyle: UU5.PropTypes.string,
-        borderRadius: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string])
+        borderRadius: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
       })
     ).isRequired,
     value: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number, UU5.PropTypes.bool]),
@@ -227,7 +227,7 @@ export const SwitchSelector = UU5.Common.VisualComponent.create({
     elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
     borderRadius: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
     borderWidth: UU5.PropTypes.number,
-    borderWidthFocus: UU5.PropTypes.number
+    borderWidthFocus: UU5.PropTypes.number,
   },
   //@@viewOff:propTypes
 
@@ -246,7 +246,7 @@ export const SwitchSelector = UU5.Common.VisualComponent.create({
       elevation: undefined,
       borderRadius: 2,
       borderWidth: 1,
-      borderWidthFocus: undefined
+      borderWidthFocus: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -284,7 +284,7 @@ export const SwitchSelector = UU5.Common.VisualComponent.create({
 
   _onKeyDown(e) {
     const value = this._getValue();
-    const currentIndex = this.props.items.findIndex(item => item.value === value);
+    const currentIndex = this.props.items.findIndex((item) => item.value === value);
     let newIndex;
 
     if (e.which === 39) {
@@ -314,7 +314,7 @@ export const SwitchSelector = UU5.Common.VisualComponent.create({
   _getButtons() {
     const value = this._getValue();
 
-    return this.props.items.map(item => {
+    return this.props.items.map((item) => {
       const colorSchema = item.colorSchema || this.props.colorSchema;
       return (
         <SwitchSelectorItem
@@ -343,7 +343,7 @@ export const SwitchSelector = UU5.Common.VisualComponent.create({
     this.props.readOnly && (attrs.readOnly = true);
     attrs.onFocus = this._onFocusWrapper;
     attrs.onBlur = this._onBlurWrapper;
-    attrs.ref = root => (this._root = root);
+    attrs.ref = (root) => (this._root = root);
 
     return attrs;
   },
@@ -352,7 +352,7 @@ export const SwitchSelector = UU5.Common.VisualComponent.create({
   //@@viewOn:render
   render() {
     return <div {...this._getMainAttrs()}>{this._getButtons()}</div>;
-  }
+  },
   //@@viewOff:render
 });
 export default SwitchSelector;

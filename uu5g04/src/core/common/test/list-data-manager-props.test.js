@@ -25,7 +25,7 @@ const loadTest = async (key, wrapper, childrenFn, onLoadFn, dataProp, dataReturn
     viewState: "load",
     errorState: null,
     errorData: null,
-    data: null
+    data: null,
   });
   expect(typeof childrenParams1.handleLoad).toBe("function");
   expect(typeof childrenParams1.handleReload).toBe("function");
@@ -54,7 +54,7 @@ const loadTest = async (key, wrapper, childrenFn, onLoadFn, dataProp, dataReturn
     viewState: "ready",
     errorState: null,
     errorData: null,
-    data: dataReturn
+    data: dataReturn,
   });
   expect(typeof childrenParams2.handleLoad).toBe("function");
   expect(typeof childrenParams2.handleReload).toBe("function");
@@ -96,7 +96,7 @@ const testHandle = async (
   } else if (key === "bulkCreate") {
     expect(fnParams1).toMatchObject(paramsData);
   } else if (key === "bulkUpdate") {
-    expect(fnParams1).toMatchObject(paramsData.map(it => it.id));
+    expect(fnParams1).toMatchObject(paramsData.map((it) => it.id));
     expect(fnParams2).toMatchObject(paramsData);
   } else if (key === "bulkDelete") {
     expect(fnParams1).toMatchObject(paramsData);
@@ -115,7 +115,7 @@ const testHandle = async (
     viewState: wrapper.props().pessimistic ? key : "ready",
     errorState: null,
     errorData: null,
-    data: resultData1
+    data: resultData1,
   });
   expect(typeof childrenParams3.handleLoad).toBe("function");
   expect(typeof childrenParams3.handleReload).toBe("function");
@@ -133,7 +133,7 @@ const testHandle = async (
       viewState: "ready",
       errorState: null,
       errorData: null,
-      data: resultData2
+      data: resultData2,
     });
     expect(typeof childrenParams4.handleLoad).toBe("function");
     expect(typeof childrenParams4.handleReload).toBe("function");
@@ -149,7 +149,11 @@ const testHandle = async (
   fn.mockClear();
 };
 
-const data = [{ id: "1", name: "A" }, { id: "2", name: "B" }, { id: "3", name: "C" }];
+const data = [
+  { id: "1", name: "A" },
+  { id: "2", name: "B" },
+  { id: "3", name: "C" },
+];
 const dataProp = { dtoIn: "data" };
 
 const loadFn = () => new Promise((resolve, reject) => resolve(data));
@@ -265,8 +269,8 @@ describe(`UU5.Common.ListDataManager onUpdate`, () => {
     childrenParams.handleUpdate(dataUpdate.id, dataUpdate);
 
     // onUpdate
-    let expectedData = data.map(it => (it.id === dataUpdate.id ? dataUpdate : it));
-    let expectedFinalData = data.map(it => (it.id === dataUpdateFromServer.id ? dataUpdateFromServer : it));
+    let expectedData = data.map((it) => (it.id === dataUpdate.id ? dataUpdate : it));
+    let expectedFinalData = data.map((it) => (it.id === dataUpdateFromServer.id ? dataUpdateFromServer : it));
     await testHandle("update", wrapper, childrenFn, onUpdateFn, 2, dataUpdate, expectedData, expectedFinalData);
   });
 
@@ -287,7 +291,7 @@ describe(`UU5.Common.ListDataManager onUpdate`, () => {
     childrenParams.handleUpdate(dataUpdate.id, dataUpdate);
 
     // onUpdate
-    let expectedFinalData = data.map(it => (it.id === dataUpdateFromServer.id ? dataUpdateFromServer : it));
+    let expectedFinalData = data.map((it) => (it.id === dataUpdateFromServer.id ? dataUpdateFromServer : it));
     await testHandle("update", wrapper, childrenFn, onUpdateFn, 2, dataUpdate, data, expectedFinalData);
   });
 });
@@ -362,7 +366,7 @@ describe(`UU5.Common.ListDataManager onDelete`, () => {
     childrenParams.handleDelete(dataDelete.id);
 
     // onDelete
-    let expectedData = data.filter(it => it.id !== dataDelete.id);
+    let expectedData = data.filter((it) => it.id !== dataDelete.id);
     await testHandle("delete", wrapper, childrenFn, onDeleteFn, 2, dataDelete.id, expectedData);
   });
 
@@ -383,14 +387,17 @@ describe(`UU5.Common.ListDataManager onDelete`, () => {
     childrenParams.handleDelete(dataDelete.id);
 
     // onDelete
-    let expectedData = data.filter(it => it.id !== dataDelete.id);
+    let expectedData = data.filter((it) => it.id !== dataDelete.id);
     await testHandle("delete", wrapper, childrenFn, onDeleteFn, 2, dataDelete.id, data, expectedData);
   });
 });
 
 describe(`UU5.Common.ListDataManager onBulkUpdate`, () => {
-  const dataUpdate = [{ id: "3", name: "A" }, { id: "1", name: "C" }];
-  const dataUpdateFromServer = dataUpdate.map(it => ({ ...it, name: it.name + "X" }));
+  const dataUpdate = [
+    { id: "3", name: "A" },
+    { id: "1", name: "C" },
+  ];
+  const dataUpdateFromServer = dataUpdate.map((it) => ({ ...it, name: it.name + "X" }));
   const updateFn = () => new Promise((resolve, reject) => resolve(dataUpdateFromServer));
 
   it("optimistic", async () => {
@@ -407,11 +414,14 @@ describe(`UU5.Common.ListDataManager onBulkUpdate`, () => {
     let childrenParams = await loadTest("onLoad", wrapper, childrenFn, onLoadFn, null, data);
 
     // bulkUpdate
-    childrenParams.handleBulkUpdate(dataUpdate.map(it => it.id), dataUpdate);
+    childrenParams.handleBulkUpdate(
+      dataUpdate.map((it) => it.id),
+      dataUpdate
+    );
 
     // onBulkUpdate
-    let expectedData = data.map(it => dataUpdate.find(upIt => upIt.id === it.id) || it);
-    let expectedFinalData = data.map(it => dataUpdateFromServer.find(upIt => upIt.id === it.id) || it);
+    let expectedData = data.map((it) => dataUpdate.find((upIt) => upIt.id === it.id) || it);
+    let expectedFinalData = data.map((it) => dataUpdateFromServer.find((upIt) => upIt.id === it.id) || it);
     await testHandle("bulkUpdate", wrapper, childrenFn, onBulkUpdateFn, 2, dataUpdate, expectedData, expectedFinalData);
   });
 
@@ -429,17 +439,23 @@ describe(`UU5.Common.ListDataManager onBulkUpdate`, () => {
     let childrenParams = await loadTest("onLoad", wrapper, childrenFn, onLoadFn, null, data);
 
     // bulkUpdate
-    childrenParams.handleBulkUpdate(dataUpdate.map(it => it.id), dataUpdate);
+    childrenParams.handleBulkUpdate(
+      dataUpdate.map((it) => it.id),
+      dataUpdate
+    );
 
     // onBulkUpdate
-    let expectedFinalData = data.map(it => dataUpdateFromServer.find(upIt => upIt.id === it.id) || it);
+    let expectedFinalData = data.map((it) => dataUpdateFromServer.find((upIt) => upIt.id === it.id) || it);
     await testHandle("bulkUpdate", wrapper, childrenFn, onBulkUpdateFn, 2, dataUpdate, data, expectedFinalData);
   });
 });
 
 describe(`UU5.Common.ListDataManager onBulkCreate`, () => {
-  const dataCreate = [{ id: "4", name: "D" }, { id: "5", name: "E" }];
-  const dataCreateFromServer = dataCreate.map(it => ({ ...it, name: it.name + "X" }));
+  const dataCreate = [
+    { id: "4", name: "D" },
+    { id: "5", name: "E" },
+  ];
+  const dataCreateFromServer = dataCreate.map((it) => ({ ...it, name: it.name + "X" }));
   const createFn = () => new Promise((resolve, reject) => resolve(dataCreateFromServer));
 
   it("optimistic", async () => {
@@ -487,7 +503,10 @@ describe(`UU5.Common.ListDataManager onBulkCreate`, () => {
 });
 
 describe(`UU5.Common.ListDataManager onBulkDelete`, () => {
-  const dataDelete = [{ id: "3", name: "C" }, { id: "1", name: "A" }];
+  const dataDelete = [
+    { id: "3", name: "C" },
+    { id: "1", name: "A" },
+  ];
   const deleteFn = () => new Promise((resolve, reject) => resolve(dataDelete));
 
   it("optimistic", async () => {
@@ -504,11 +523,11 @@ describe(`UU5.Common.ListDataManager onBulkDelete`, () => {
     let childrenParams = await loadTest("onLoad", wrapper, childrenFn, onLoadFn, null, data);
 
     // bulkDelete
-    let ids = dataDelete.map(it => it.id);
+    let ids = dataDelete.map((it) => it.id);
     childrenParams.handleBulkDelete(ids);
 
     // onBulkDelete
-    let expectedData = data.filter(it => !dataDelete.some(upIt => upIt.id === it.id));
+    let expectedData = data.filter((it) => !dataDelete.some((upIt) => upIt.id === it.id));
     await testHandle("bulkDelete", wrapper, childrenFn, onBulkDeleteFn, 2, ids, expectedData);
   });
 
@@ -526,11 +545,11 @@ describe(`UU5.Common.ListDataManager onBulkDelete`, () => {
     let childrenParams = await loadTest("onLoad", wrapper, childrenFn, onLoadFn, null, data);
 
     // bulkDelete
-    let ids = dataDelete.map(it => it.id);
+    let ids = dataDelete.map((it) => it.id);
     childrenParams.handleBulkDelete(ids);
 
     // onBulkDelete
-    let expectedData = data.filter(it => !dataDelete.some(upIt => upIt.id === it.id));
+    let expectedData = data.filter((it) => !dataDelete.some((upIt) => upIt.id === it.id));
     await testHandle("bulkDelete", wrapper, childrenFn, onBulkDeleteFn, 2, ids, data, expectedData);
   });
 });

@@ -25,7 +25,7 @@ export class UU5Json {
     } catch (err) {
       Tools.error("Error uu5JSON parse.", {
         uu5Json: uu5Json,
-        cause: err
+        cause: err,
       });
 
       err.code = "uu5JsonInvalid";

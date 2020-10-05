@@ -19,7 +19,7 @@ import {
   ATTR_REGEXP,
   ATTR_VALUE_TYPE_REGEXP,
   UU5DATA_REGEXP,
-  JSCODE_REGEXP
+  JSCODE_REGEXP,
 } from "./constants";
 import Environment from "../../environment/environment";
 import _Tools from "../tools.js";
@@ -99,7 +99,7 @@ const Tools = {
     }
     let result = "";
     content.forEach(
-      item =>
+      (item) =>
         (result += typeof item === "string" ? Tools.printTemplateToString(item, data) : item.toString(data, filterFn))
     );
     return result;
@@ -120,7 +120,7 @@ const Tools = {
       return Tools.printTemplateToString(content, data);
     }
     let result = "";
-    content.forEach(item => {
+    content.forEach((item) => {
       result +=
         (result ? " " : "") +
         (typeof item === "string" ? Tools.printTemplateToString(item, data) : item.toPlainText(data, filterFn));
@@ -141,7 +141,7 @@ const Tools = {
       return string;
     }
     let isChildren;
-    let result = Tools._printTemplate(string, data, matchValue => {
+    let result = Tools._printTemplate(string, data, (matchValue) => {
       if (typeof matchValue === "string" && matchValue.match(UU5STRING_REGEXP) && Tools.isValidUU5String(matchValue)) {
         isChildren = true;
         // create component by _Tools.findComponent
@@ -160,7 +160,7 @@ const Tools = {
     if (!tag) return children;
     let propsArray = propsString ? Tools.parseUU5StringProps(propsString, Tools._buildReactComponent) : [];
     let props = {};
-    propsArray.forEach(item => (props[item.name] = item.value));
+    propsArray.forEach((item) => (props[item.name] = item.value));
     return _Tools.findComponent(tag, props, children);
   },
 
@@ -204,7 +204,7 @@ const Tools = {
       if (useMatchHandler) {
         let matchResult = matchHandler(value);
         if (Array.isArray(matchResult)) {
-          matchResult.forEach(item => result.push(item));
+          matchResult.forEach((item) => result.push(item));
         } else {
           result.push(matchResult);
         }
@@ -246,8 +246,8 @@ const Tools = {
       {
         tag: "_root",
         children: [],
-        index: 0
-      }
+        index: 0,
+      },
     ];
 
     let pointer = childStack[0];
@@ -332,7 +332,7 @@ const Tools = {
                 //meta-tag uu5string.*
                 let s = Tools.execMetaTag(childTag, tagObj.attrs);
                 if (s)
-                  s.forEach(item =>
+                  s.forEach((item) =>
                     pointer.children.push(typeof buildItem === "function" ? buildItem(null, null, item) : item)
                   );
               } else {
@@ -480,11 +480,8 @@ const Tools = {
     // TODO Maybe unescape emojis too.
     // NOTE Environment.textEntityMap doesn't have unescaping mechanism and it contains
     // multiple mappings to the same character, e.g. &lt; and &#060; are both mapped to ">".
-    return text
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;");
-  }
+    return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  },
 };
 
 export default Tools;

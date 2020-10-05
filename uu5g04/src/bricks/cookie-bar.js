@@ -33,7 +33,7 @@ export const CookieBar = UU5.Common.VisualComponent.create({
     UU5.Common.ContentMixin,
     UU5.Common.ColorSchemaMixin,
     UU5.Common.NestingLevelMixin,
-    UU5.Common.PureRenderMixin
+    UU5.Common.PureRenderMixin,
   ],
   //@@viewOff:mixins
 
@@ -46,16 +46,16 @@ export const CookieBar = UU5.Common.VisualComponent.create({
       top: ns.css("cookie-bar-top"),
       bottom: ns.css("cookie-bar-bottom"),
       button: ns.css("cookie-bar-button"),
-      link: ns.css("cookie-bar-link")
+      link: ns.css("cookie-bar-link"),
     },
     defaults: {
       content:
         "Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use.",
-      expireDays: 10 * 365.25
+      expireDays: 10 * 365.25,
     },
     opt: {
-      nestingLevelRoot: true
-    }
+      nestingLevelRoot: true,
+    },
   },
   //@@viewOff:statics
 
@@ -68,7 +68,7 @@ export const CookieBar = UU5.Common.VisualComponent.create({
     onClose: UU5.PropTypes.func,
     expireDays: UU5.PropTypes.number,
     cookieKey: UU5.PropTypes.string,
-    cookieValue: UU5.PropTypes.string
+    cookieValue: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
@@ -82,7 +82,7 @@ export const CookieBar = UU5.Common.VisualComponent.create({
       onClose: null,
       expireDays: null,
       cookieKey: "uu5-cookies",
-      cookieValue: "yes"
+      cookieValue: "yes",
     };
   },
   //@@viewOff:getDefaultProps
@@ -199,7 +199,7 @@ export const CookieBar = UU5.Common.VisualComponent.create({
         {this._getButton()}
       </Div>
     );
-  }
+  },
   //@@viewOff:render
 });
 
