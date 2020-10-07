@@ -127,10 +127,10 @@ function getComponentByName(componentName) {
           error
         ));
       }
-      result = error != null || Component != null ? { error, Component } : {};
+      result = error != null || Component != null ? { error, Component } : null;
     }
   }
-  return result;
+  return result || {};
 }
 
 // function findComponent(componentName, props, children) {
@@ -162,9 +162,28 @@ function _getNamespaceMapItem(componentName, create = false) {
   let item = foundItemParts.length > 0 ? namespaceMap[foundItemParts.join(".")] : null;
   // normalize item if library was registered via LibraryRegistry.registerLibrary() (i.e. load exports from SystemJS,
   // set it as ready, etc.).
-  if (item && !item.ready && !item.promise && item.exports === undefined && item.name) {
-    item.ready = true;
-    item.exports = typeof SystemJS !== "undefined" ? SystemJS.get(SystemJS.normalizeSync(item.name)) : undefined;
+  if (
+    item &&
+    !item.ready &&
+    !item.promise &&
+    item.exports === undefined &&
+    item.name &&
+    typeof SystemJS !== "undefined"
+  ) {
+    item.exports = SystemJS.get(SystemJS.normalizeSync(item.name));
+    if (item.exports === undefined) {
+      // this can happen if we're running within SystemJS.import, because SystemJS.get(...) works only after SystemJS.import() fully finishes
+      // (this happens typically only in HTML demo pages as they call ReactDOM.render immediately; apps are not affected
+      // as they use pattern SystemJS.import("./index.js").then(Index => Index.render("targetElement"))) => wait for SystemJS
+      item.ready = false;
+      item.callbacks = [];
+      item.promise = Promise.resolve().then(() => {
+        item.exports = SystemJS.get(SystemJS.normalizeSync(item.name));
+        _processItemReady(item, componentName);
+      });
+    } else {
+      item.ready = true;
+    }
   }
   if (!item && create) {
     let estimatedLibNamespace = nameParts.slice(0, Math.min(2, nameParts.length - 1)).join(".");
@@ -198,9 +217,23 @@ function _loadComponentByName(componentName, onReady) {
       try {
         libraryJson = await LibraryRegistry.getLibrary(item.namespace);
       } catch (e) {
-        e.message = `Failed to load library registry JSON for library with namespace ${item.namespace}: ${e.message}`;
-        e.code = ERROR_LIBRARY_JSON_LOAD_FAILURE;
-        throw e;
+        // try namespace with both parts (e.g. was trying to load component "Plus4U5.UuConsole", i.e. item.namespace
+        // was "Plus4U5" and there's no such library in registry => fall back to full "Plus4U5.UuConsole")
+        if (e.code === "uu-applibraryregistry-main/library/get/libraryNotFound" && item.namespace.indexOf(".") === -1) {
+          let updatedNamespace = componentName.split(".", 2).join(".");
+          try {
+            libraryJson = await LibraryRegistry.getLibrary(updatedNamespace);
+            item.namespace = updatedNamespace;
+          } catch (e) {
+            e.message = `Failed to load library registry JSON for library with namespace ${updatedNamespace}: ${e.message}`;
+            e.code = ERROR_LIBRARY_JSON_LOAD_FAILURE;
+            throw e;
+          }
+        } else {
+          e.message = `Failed to load library registry JSON for library with namespace ${item.namespace}: ${e.message}`;
+          e.code = ERROR_LIBRARY_JSON_LOAD_FAILURE;
+          throw e;
+        }
       }
       if (!item.name) item.name = libraryJson?.name;
       if (!item.version) item.version = libraryJson?.version;
@@ -229,24 +262,26 @@ function _loadComponentByName(componentName, onReady) {
         error.wasOffline = navigator.onLine === false;
         item.error = error;
       })
-      .finally(() => {
-        item.ready = true;
-        let { problems, callbacks } = item;
-        if (problems) {
-          problems.forEach(({ message, ...context }) => {
-            console.error(`Problem with loading ${componentName}: ${message}`, context); // not using Tools due to cyclic dependencies
-          });
-          delete item.problems;
-        }
-        ReactDOM.unstable_batchedUpdates(() => {
-          callbacks.forEach((fn) => fn(item));
-        });
-        delete item.callbacks;
-      });
+      .finally(() => _processItemReady(item, componentName));
   } else {
     item.callbacks.push(onReady);
   }
   return item.promise;
+}
+
+function _processItemReady(item, componentName) {
+  item.ready = true;
+  let { problems, callbacks } = item;
+  if (problems) {
+    problems.forEach(({ message, ...context }) => {
+      console.error(`Problem with loading ${componentName}: ${message}`, context); // not using Tools due to cyclic dependencies
+    });
+    delete item.problems;
+  }
+  ReactDOM.unstable_batchedUpdates(() => {
+    callbacks.forEach((fn) => fn(item));
+  });
+  delete item.callbacks;
 }
 //@@viewOff:helpers
 

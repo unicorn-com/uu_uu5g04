@@ -66,16 +66,28 @@ export class LibraryRegistry {
       let request = new XMLHttpRequest();
       request.onreadystatechange = () => {
         if (request.readyState === XMLHttpRequest.DONE) {
-          let result, error;
+          let result, error, body;
           // TODO: componentRegistry must return error, not 200
-          if (request.status === 200) {
-            try {
-              result = JSON.parse(request.response);
-            } catch (e) {
-              error = e;
-            }
+          try {
+            body = JSON.parse(request.response);
+          } catch (e) {
+            error = e;
+          }
+          if (request.status === 200 && error === undefined) {
+            result = body;
           } else {
+            let cause = error;
             error = new Error("Loading library ended with status " + request.status + " on url:" + url);
+            error.dtoOut = body;
+            if (typeof body?.uuAppErrorMap === "object" && body.uuAppErrorMap) {
+              for (let k in body.uuAppErrorMap) {
+                if (body.uuAppErrorMap[k]?.type === "error") {
+                  error.code = k;
+                  break;
+                }
+              }
+            }
+            if (cause) error.cause = cause;
           }
           cache[query].result = result;
           cache[query].error = error;

@@ -11,6 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:revision
+// coded: Petr Bišof, 05.10.2020
+// reviewed: Filip Janovský, 05.10.2020 - approved
+//@@viewOff:revision
+
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
@@ -111,7 +116,10 @@ export const Lsi = UU5.Common.LsiMixin.withContext(
             if (UU5.Common.Element.isValid(child)) {
               if (child.type.tagName === this.getDefault("childTagName")) {
                 // Lsi.Item
-                lsi[child.props.language] = child;
+                let childContent = child.props?.content || child.props?.children;
+                if (childContent && (typeof childContent !== "string" || !childContent.match(/^\s*$/))) {
+                  lsi[child.props.language] = child;
+                }
               } else {
                 // language as prop
                 newChild = UU5.Common.Element.clone(child, { language: this.getLanguage() });

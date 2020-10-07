@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"
+    />
+    <title>useDataController Demo</title>
+    <script>
+      if (!location.href.match(/^(about:|file:)/)) {
+        var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+        var bplSegmentCount = bplCookie ? Number(bplCookie[2]) : null;
+        if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+        var appBaseUrlPath = (
+          location.pathname
+            .split(/\//)
+            .slice(0, 1 + bplSegmentCount)
+            .join("/") + "/"
+        )
+          .replace(/\/+/g, "/")
+          .replace(/"/g, "");
+        var appAssetsRelativeUrlPath = "public/0.0.0/";
+        document.write(
+          '<base href="' +
+            appBaseUrlPath +
+            appAssetsRelativeUrlPath +
+            '" data-uu-app-base="' +
+            appBaseUrlPath +
+            '" data-uu-app-assets-base="' +
+            appAssetsRelativeUrlPath +
+            '">'
+        );
+      }
+    </script>
+
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+    <script>
+      var updatedUrl = location.href.replace(/([?&])access_token=[^&#]*(&)?/, (m, g1, g2) => (g2 ? g1 : ""));
+      if (updatedUrl !== location.href) {
+        history.replaceState(history.state, "", updatedUrl);
+      }
+      SystemJS.config({
+        paths: {
+          systemjs: "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          react: "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+          "react-dnd": "https://cdn.plus4u.net/libs/react-dnd/7.0.2/ReactDnD.js",
+          "react-dnd-html5-backend":
+            "https://cdn.plus4u.net/libs/react-dnd-html5-backend/7.0.2/ReactDnDHTML5Backend.js",
+          "react-dnd-touch-backend": "https://cdn.plus4u.net/libs/react-dnd-touch-backend/0.7.1/Touch.browserified.js",
+
+          uu5g04: "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+          "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+          "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js",
+          "uu5g04-hooks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-hooks.min.js",
+          "uu5g04-block-layout": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-block-layout.min.js",
+
+          uu_appg01_core: "https://cdn.plus4u.net/uu-appg01-core/4.0.0/uu_appg01_core.min.js",
+          uu_appg01: "https://cdn.plus4u.net/uu-appg01/4.0.0/uu_appg01.min.js",
+          uu_appg01_oidc: "https://cdn.plus4u.net/uu-appg01-oidc/2.0.0/uu_appg01_oidc.min.js",
+        },
+      });
+    </script>
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+      import "uu5g04-block-layout";
+      import { Session } from "uu_appg01_oidc";
+      import { Client } from "uu_appg01";
+      import {
+        createVisualComponent,
+        useMemo,
+        DataControllerProvider,
+        useDataController,
+        useDataObject,
+        useDataFilter,
+        useDataSorter,
+        useDataSelection,
+        useCallback
+      } from "uu5g04-hooks";
+
+      UU5.Common.Tools.setLanguage("en");
+      const Config = {
+        Css: UU5.Common.Css.createCssModule("uudemo")
+      };
+
+      const selectButtonClassName = Config.Css.css`
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: none;
+      `;
+
+      const tileClassName = ({ selected }) => Config.Css.css`
+        height: 196px;
+        border: 1px solid rgb(189, 189, 189);
+        overflow: hidden;
+        border-radius: 4px;
+        position: relative;
+        display: inline-block;
+        width: 300px;
+        ${selected
+          ? `&>.${selectButtonClassName} { display: block; }`
+          : `&:hover>.${selectButtonClassName} { display: block; }`
+        }
+      `;
+
+      const headerClassName = Config.Css.css`
+        font-size: 16px;
+        color: #005da7;
+        display: flex;
+        align-items: center;
+        padding: 0 16px;
+        height: 48px;
+        line-height: 25px;
+      `;
+
+      const contentClassName = Config.Css.css`
+        height: 100px !important;
+        width: 100%;
+        color: rgba(0,0,0,.87);
+        padding: 0 16px;
+      `;
+
+      const ratingClassName = Config.Css.css`
+        display: flex;
+        align-items: center;
+        border-top: 1px solid rgba(0,93,167,.12);
+        padding: 0 8px;
+        margin: 0 8px;
+        height: 48px;
+        justify-content: space-between;
+      `;
+
+      //@@viewOn:example
+      const CustomTile = UU5.Common.Component.memo(
+        createVisualComponent({
+          render(props) {
+            // ...
+            //@@viewOff:example
+            const { data, onToggleSelected } = props;
+            const contentImage = useMemo(() => {
+              if (data.image) {
+                let imageUrl =
+                  "https://uuappg01-eu-w-1.plus4u.net/uu-jokes-maing01/4ef6a7b01b5942ecbfb925b249af987f/uu-app-binarystore/getBinaryData?code=" +
+                  data.image;
+                return <UU5.Bricks.Image src={imageUrl} authenticate />;
+              } else return null;
+            }, [data.image]);
+
+            return (
+              <div className={tileClassName(props)}>
+                <div className={headerClassName}>{data.name}</div>
+                <UU5.Bricks.ScrollArea className={contentClassName}>
+                  {data.text}
+                  {contentImage}
+                </UU5.Bricks.ScrollArea>
+                <div className={ratingClassName}>
+                  <UU5.Bricks.Rating value={data.averageRating} />
+                </div>
+                <UU5.Bricks.Button
+                  className={selectButtonClassName}
+                  colorSchema="orange"
+                  onClick={() => onToggleSelected(data)}
+                >
+                  <UU5.Bricks.Icon icon="mdi-check" />
+                </UU5.Bricks.Button>
+              </div>
+            );
+            //@@viewOn:example
+          },
+        })
+      );
+      //@@viewOff:example
+
+      const Calls = {
+        async load(dtoIn) {
+          let commandUri =
+            "https://uuappg01-eu-w-1.plus4u.net/uu-jokes-maing01/4ef6a7b01b5942ecbfb925b249af987f/joke/list";
+          let response = await Client.get(commandUri, { pageInfo: { pageSize: 100 }, ...dtoIn });
+          return response.data;
+        },
+      };
+
+      const FILTER_DEFINITION_LIST = [
+        { key: "text", filter: (item, filterValue) => item.text && item.text.toLowerCase().indexOf(filterValue.toLowerCase()) !== -1 },
+        { key: "uuIdentity", filter: (item, filterValue) => item.uuIdentity === filterValue },
+        { key: "averageRating", filter: (item, filterValue) => item.averageRating >= filterValue },
+      ];
+
+      const SORTER_DEFINITION_LIST = [
+        { key: "name", sort: (a, b) => a.name.localeCompare(b.name) },
+        { key: "averageRating", sort: (a, b) => a.averageRating - b.averageRating }
+      ];
+
+      const FilterBar = createVisualComponent({
+        render(props) {
+          let { uuIdentity } = props;
+          let { filterList, addFilter, removeFilter } = useDataFilter();
+          let isAverageRatingOn = filterList.some(it => it.key === "averageRating");
+          let isUuIdentityOn = filterList.some(it => it.key === "uuIdentity");
+          let isTextOn = filterList.some(it => it.key === "text");
+          return (
+            <div>
+              <UU5.Bricks.ButtonSwitch
+                children="averageRating >= 3"
+                switchedOn={isAverageRatingOn}
+                onProps={{ colorSchema: "success" }}
+                props={{
+                  onClick: () => isAverageRatingOn ? removeFilter("averageRating") : addFilter({ key: "averageRating", value: 3 })
+                }}
+              />
+              <UU5.Bricks.ButtonSwitch
+                children="my jokes"
+                switchedOn={isUuIdentityOn}
+                onProps={{ colorSchema: "success" }}
+                props={{
+                  onClick: () => isUuIdentityOn ? removeFilter("uuIdentity") : addFilter({ key: "uuIdentity", value: uuIdentity })
+                }}
+              />
+              <UU5.Bricks.ButtonSwitch
+                children="'text' contains 'the'"
+                switchedOn={isTextOn}
+                onProps={{ colorSchema: "success" }}
+                props={{
+                  onClick: () => isTextOn ? removeFilter("text") : addFilter({ key: "text", value: "the" })
+                }}
+              />
+            </div>
+          )
+        }
+      });
+
+      const SorterBar = createVisualComponent({
+        render(props) {
+          let { sorterList, sorterDefinitionList, setSorterList, clearSorterList } = useDataSorter();
+          let buttonItems = [];
+          buttonItems.push({ content: "no sort", value: "" });
+          for (let definition of sorterDefinitionList) {
+            buttonItems.push({ value: JSON.stringify({ key: definition.key, ascending: true }), content: definition.key + " (asc)"});
+            buttonItems.push({ value: JSON.stringify({ key: definition.key, ascending: false }), content: definition.key + " (desc)" });
+          }
+
+          return (
+            <div>
+              <UU5.Bricks.SwitchSelector
+                items={buttonItems}
+                value={sorterList[0] ? JSON.stringify(sorterList[0]) : ""}
+                onChange={(opt) => {
+                  if (opt.value) setSorterList([JSON.parse(opt.value)]);
+                  else clearSorterList();
+                }}
+              />
+            </div>
+          );
+        }
+      });
+
+      const InfoBar = createVisualComponent({
+        render(props) {
+          let { displayedData, data } = useDataController();
+          let { selectedData, isDisplayedSelected, toggleIsDisplayedSelected } = useDataSelection();
+
+          return (
+            <div>
+              <UU5.Bricks.ButtonSwitch
+                children={`Show ${selectedData.length} selected`}
+                switchedOn={isDisplayedSelected}
+                onProps={{ colorSchema: "orange" }}
+                props={{
+                  onClick: () => toggleIsDisplayedSelected()
+                }}
+              />
+              {isDisplayedSelected
+                ? ` Displaying ${displayedData.length} selected item(s).`
+                : ` Displaying ${displayedData.length} item(s) out of ${data.length} total.`
+              }
+            </div>
+          );
+        }
+      });
+
+      const DemoList = createVisualComponent({
+        render(props) {
+          let { displayedData } = useDataController();
+          let { isSelected, addSelected, removeSelected } = useDataSelection();
+          let toggleSelected = useCallback((itemData) => {
+            if (isSelected(itemData)) removeSelected(itemData);
+            else addSelected(itemData);
+          }, [isSelected, addSelected, removeSelected]);
+
+          return (
+            <div>
+              {displayedData
+                ? displayedData.map((it) => (it
+                    ? <CustomTile data={it} key={it.id} selected={isSelected(it)} onToggleSelected={toggleSelected} />
+                    : null
+                  ))
+                : null}
+            </div>
+          );
+        },
+      });
+
+      const DemoWrapper = createVisualComponent({
+        render(props) {
+          let { uuIdentity } = props;
+          let { data } = useDataObject({
+            handlerMap: {
+              load: Calls.load,
+            }
+          });
+          let { itemList } = data || {};
+
+          return (
+            <UU5.Bricks.Container level={1} header="DataControllerProvider Demo">
+              {
+                /*@@viewOn:example*/
+                <DataControllerProvider
+                  data={itemList || []}
+                  selectable
+                  filterDefinitionList={FILTER_DEFINITION_LIST}
+                  sorterDefinitionList={SORTER_DEFINITION_LIST}
+                >
+                  <FilterBar uuIdentity={uuIdentity} />
+                  <SorterBar />
+                  <InfoBar />
+                  <DemoList />
+                </DataControllerProvider>
+                /*@@viewOff:example*/
+              }
+            </UU5.Bricks.Container>
+          );
+        },
+      });
+
+      const Page = UU5.Common.VisualComponent.create({
+        render() {
+          return (
+            <UU5.Common.Session session={Session.currentSession}>
+              <UU5.Common.Identity>
+                {({ identity, login, logout, ...opt }) => {
+                  return identity ? (
+                    <DemoWrapper uuIdentity={identity.uuIdentity} />
+                  ) : identity === null ? (
+                    <UU5.Bricks.Button onClick={() => login()} content="Log in" />
+                  ) : null;
+                }}
+              </UU5.Common.Identity>
+            </UU5.Common.Session>
+          );
+        },
+      });
+
+      UU5.Common.DOM.render(<Page />, document.getElementById("renderHere"));
+    </script>
+  </body>
+</html>

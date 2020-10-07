@@ -50,8 +50,9 @@ function expectedResult({
   pendingData = expect.any(Object),
   errorData = expect.any(Object),
   handlerMap = expect.any(Object),
+  pageSize = expect.any(Number),
 } = {}) {
-  return { data, newData, state, pendingData, errorData, handlerMap };
+  return { data, newData, state, pendingData, errorData, handlerMap, pageSize };
 }
 const LIST_HANDLER_MAP = {
   setData: true,
@@ -79,6 +80,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
       errorData: null,
       pendingData: null,
       handlerMap: expectedHandlerMap(),
+      pageSize: 50,
     });
   });
 
@@ -91,6 +93,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
       errorData: null,
       pendingData: null,
       handlerMap: expectedHandlerMap(),
+      pageSize: 50,
     });
   });
 
@@ -106,6 +109,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
       errorData: null,
       pendingData: null,
       handlerMap: expectedHandlerMap({ load: true, loadNext: true, setData: true }),
+      pageSize: 50,
     });
     await wait();
     expect(handlerMap.load).toHaveBeenCalledTimes(0);
@@ -123,6 +127,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
       errorData: null,
       pendingData: null,
       handlerMap: expectedHandlerMap({ load: true, setData: true }),
+      pageSize: 50,
     });
     await wait();
     expect(handlerMap.load).toHaveBeenCalledTimes(0);
@@ -140,6 +145,7 @@ describe("[uu5g04-hooks] useDataList behaviour", () => {
       errorData: null,
       pendingData: null,
       handlerMap: expectedHandlerMap({ setData: true, load: true, loadNext: true }),
+      pageSize: 50,
     });
     await wait();
     expect(handlerMap.load).toHaveBeenCalledTimes(0);

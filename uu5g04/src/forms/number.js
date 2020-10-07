@@ -11,6 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:revision
+// coded:
+//   Petr Bišof, 05.10.2020
+//   Filip Janovský, 05.10.2020
+// reviewed: Filip Janovský, 05.10.2020 - approved
+//@@viewOff:revision
+
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
@@ -18,7 +25,6 @@ import ns from "./forms-ns.js";
 import TextInput from "./internal/text-input.js";
 
 import TextInputMixin from "./mixins/text-input-mixin.js";
-import InputMixin from "./mixins/input-mixin.js";
 
 import ItemList from "./internal/item-list.js";
 
@@ -267,6 +273,13 @@ export const Number = Context.withContext(
       let value = this._getOutputResult({ value: this.state.value }).value;
 
       return value;
+    },
+
+    isValid_() {
+      let value = this.getValue();
+      let result = this._checkRequiredValue({ value });
+
+      return result;
     },
     //@@viewOff:overriding
 
@@ -748,7 +761,7 @@ export const Number = Context.withContext(
       opt.value = opt._data.value;
 
       if (feedback === "error") {
-        this.setValue_(opt.value, () => {
+        this.setError(opt.message || opt._data.message, opt.value, () => {
           this._decreaseEnd();
           if (typeof setStateCallback === "function") {
             setStateCallback();
@@ -767,7 +780,7 @@ export const Number = Context.withContext(
       opt.value = opt._data.value;
 
       if (feedback === "error") {
-        this.setValue_(opt.value, () => {
+        this.setError(opt.message || opt._data.message, opt.value, () => {
           this._increaseEnd();
           if (typeof setStateCallback === "function") {
             setStateCallback();
@@ -863,7 +876,7 @@ export const Number = Context.withContext(
         value: result.value,
         event: e,
         component: this,
-        _data: { type: "decrease", feedback: result.feedback },
+        _data: { type: "decrease", feedback: result.feedback, message: result.message }
       };
       opt = this._getOutputResult(opt);
 
@@ -893,7 +906,7 @@ export const Number = Context.withContext(
         value: result.value,
         event: e,
         component: this,
-        _data: { type: "increase", feedback: result.feedback },
+        _data: { type: "increase", feedback: result.feedback, message: result.message }
       };
       opt = this._getOutputResult(opt);
 

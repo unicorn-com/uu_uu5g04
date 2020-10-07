@@ -11,6 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:revision
+// coded: Martin Mach, 02.10.2020
+// reviewed: -
+//@@viewOff:revision
+
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
@@ -419,13 +424,23 @@ export const Popover = withContext(
       return rect;
     },
 
+    _findScrollableElement(offsetParent) {
+      let node = offsetParent;
+      while (node != document.body && node != document.documentElement && node) {
+        let { overflowY } = getComputedStyle(node);
+        if (overflowY === "auto" || overflowY === "scroll") {
+          return node;
+        }
+        node = node.parentNode;
+      }
+    },
+
     _getPosition(requiredPosition, aroundElementRect, offset = 0, fitHeightToViewport, horizontalOnly) {
       let element = UU5.Common.DOM.findNode(this);
       let isRelative = getComputedStyle(element).position === "relative";
       let elementRect = UU5.Common.Tools.merge(element.getBoundingClientRect(), {});
       aroundElementRect = UU5.Common.Tools.merge(aroundElementRect, {});
-
-      let availableAreaRect = { top: 0, bottom: window.innerHeight, height: window.innerHeight };
+      let availableAreaRect;
 
       if (isRelative) {
         availableAreaRect = {
@@ -433,13 +448,19 @@ export const Popover = withContext(
           height: (document.scrollingElement || document.body).scrollHeight,
         };
         availableAreaRect.bottom = availableAreaRect.top + availableAreaRect.height;
-      }
-
-      // Limit available space between Page's Top and Bottom elements
-      if (!this._isCentralPopover() && !isRelative) {
-        availableAreaRect.top += this._getTopPageVisibility();
-        availableAreaRect.bottom -= this._getBottomPageVisibility();
-        availableAreaRect.height -= this._getTopPageVisibility() + this._getBottomPageVisibility();
+      } else {
+        let scrollableElement = this._findScrollableElement(element.offsetParent);
+        if (scrollableElement) {
+          availableAreaRect = scrollableElement.getBoundingClientRect();
+        } else {
+          availableAreaRect = { top: 0, bottom: window.innerHeight, height: window.innerHeight };
+          // Limit available space between Page's Top and Bottom elements
+          if (!this._isCentralPopover()) {
+            availableAreaRect.top += this._getTopPageVisibility();
+            availableAreaRect.bottom -= this._getBottomPageVisibility();
+            availableAreaRect.height -= this._getTopPageVisibility() + this._getBottomPageVisibility();
+          }
+        }
       }
 
       let parentOffset = {};
@@ -463,7 +484,6 @@ export const Popover = withContext(
         availableLeft = aroundElementRect.left;
         availableRight = parentWidth - aroundElementRect.left - aroundElementRect.width;
 
-        // 1
         if (availableTop >= elementRect.height) {
           pageY = aroundElementRect.top + aroundElementRect.height - elementRect.height;
           result.top = pageY;
@@ -484,7 +504,6 @@ export const Popover = withContext(
           result.right = pageX;
         }
 
-        // 2
         if (result.top === undefined && result.bottom === undefined) {
           if (availableAreaRect.height >= elementRect.height) {
             result.bottom = availableAreaRect.bottom - elementRect.height;
@@ -492,7 +511,6 @@ export const Popover = withContext(
           }
         }
 
-        // 3
         if (result.left === undefined && result.right === undefined) {
           if (result.top) {
             result.top -= aroundElementRect.height + offset;
@@ -507,11 +525,12 @@ export const Popover = withContext(
         availableBottom = availableAreaRect.bottom - aroundElementRect.bottom;
         availableLeft = parentWidth - aroundElementRect.left;
         availableRight = aroundElementRect.left + aroundElementRect.width;
-        // 1
+
         if (availableTop >= elementRect.height + offset) {
           pageY = aroundElementRect.top - (elementRect.height + offset);
           result.top = pageY;
         }
+
         if (availableBottom >= elementRect.height + offset) {
           pageY = aroundElementRect.top + aroundElementRect.height + offset;
           result.bottom = pageY;
@@ -529,9 +548,9 @@ export const Popover = withContext(
 
         if (result.top === undefined && result.bottom === undefined && fitHeightToViewport) {
           if (availableTop > availableBottom) {
-            maxHeight = availableTop - offset;
+            maxHeight = availableTop - offset - 8;
             pageY = aroundElementRect.top - (elementRect.height + offset) + (elementRect.height - maxHeight) + 8;
-            result.top = pageY;
+            result.top = pageY - 8;
           } else {
             maxHeight = availableBottom - offset - 8;
             pageY = aroundElementRect.top + aroundElementRect.height + offset;
@@ -540,9 +559,16 @@ export const Popover = withContext(
         }
       }
 
+      // adjust X position if no ideal position was found
       if (result.left === undefined && result.right === undefined) {
         result.right = parentWidth - elementRect.width - 8;
         result.left = parentWidth - elementRect.width - 8;
+      }
+
+      // adjust Y position if no ideal position was found
+      if (result.top === undefined && result.bottom === undefined) {
+        result.top = 8;
+        result.bottom = availableAreaRect.bottom - elementRect.height - 8;
       }
 
       pageX -= parentOffset.left;

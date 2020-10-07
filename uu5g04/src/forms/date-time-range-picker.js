@@ -11,6 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:revision
+// coded: Martin Mach, 04.10.2020
+// reviewed: -
+//@@viewOff:revision
+
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
@@ -1881,6 +1886,20 @@ export const DateTimeRangePicker = Context.withContext(
       }
     },
 
+    _onKeyDown(e, customOnKeyDown) {
+      let opt = { value: this.state.value, event: e, component: this };
+
+      // customOnKeyDown is user function passed to inputAttrs.onKeyDown
+      if (typeof customOnKeyDown === "function") {
+        customOnKeyDown(e, opt);
+      }
+
+      if (typeof this.props.onEnter === "function" && (e.keyCode || e.which) === 13 && !e.shiftKey && !e.ctrlKey) {
+        this.props.onEnter(opt);
+        this._close(true, () => this.focus());
+      }
+    },
+
     _onClickInnerInput(e) {
       let handleMobileClick = (e, activeInput) => {
         let result = false;
@@ -2042,10 +2061,7 @@ export const DateTimeRangePicker = Context.withContext(
     },
 
     _addKeyEvents() {
-      let focusResult;
       let handleKeyDown = (e) => {
-        focusResult = this._findTarget(e);
-
         if (e.which === 13) {
           // enter
           e.preventDefault();
@@ -2059,13 +2075,15 @@ export const DateTimeRangePicker = Context.withContext(
       };
 
       let handleKeyUp = (e) => {
-        focusResult = this._findTarget(e);
+        let focusResult = this._findTarget(e);
+        let opt = { value: this.state.value, event: e, component: this };
 
         if (e.which === 13) {
           // enter
           if (!this.isOpen()) {
             this.open();
           } else {
+            this._onEnter(opt);
             this._close(true, () => this.focus());
           }
         } else if (e.which === 40) {
@@ -2081,7 +2099,6 @@ export const DateTimeRangePicker = Context.withContext(
           }
         } else if (e.which === 9) {
           // tab
-          let opt = { value: this.state.value, event: e, component: this };
           if (focusResult.fromDateInput) {
             this.setState({ activeInput: "fromDate" });
           } else if (focusResult.fromTimeInput) {
@@ -2103,6 +2120,12 @@ export const DateTimeRangePicker = Context.withContext(
     _removeKeyEvents() {
       UU5.Environment.EventListener.removeWindowEvent("keydown", this.getId());
       UU5.Environment.EventListener.removeWindowEvent("keyup", this.getId());
+    },
+
+    _onEnter(opt) {
+      if (typeof this.props.onEnter === "function") {
+        this.props.onEnter(opt);
+      }
     },
 
     _shouldOpenToContent() {
@@ -2372,7 +2395,7 @@ export const DateTimeRangePicker = Context.withContext(
 
       let props = {
         onFocus: !this.isReadOnly() && !this.isComputedDisabled() ? this._onFocus : null,
-        onKeyDown: this.onKeyDown,
+        onKeyDown: this._onKeyDown,
         placeholder,
         mainAttrs: {},
         colorSchema: this.props.colorSchema,
@@ -2706,7 +2729,7 @@ export const DateTimeRangePicker = Context.withContext(
                 key="input"
                 size={this.props.size}
                 className={mainClassName}
-                onKeyDown={this.onKeyDown}
+                onKeyDown={this._onKeyDown}
                 colorSchema={this.props.colorSchema}
               />,
             ])}

@@ -1,6 +1,6 @@
 {
   "name": "uu5g04",
-  "version": "1.36.0",
+  "version": "1.37.2",
   "description": "",
   "license": "UAF",
   "namespace": "UU5",
@@ -429,7 +429,7 @@
     "buildOffline": "node tools/build-offline.js",
     "deployOffline": "node tools/deploy-offline.js"
   },
-  "main": "src/core/core.js",
+  "main": "dist-node/index.js",
   "files": [
     "dist*",
     "tools/dev-server/*",

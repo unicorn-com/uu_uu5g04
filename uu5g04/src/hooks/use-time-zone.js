@@ -13,7 +13,7 @@
 
 //@@viewOn:revision
 //  coded: Martin Mach, 18.09.2020
-//  reviewed: -
+//  reviewed: Filip Janovský, 07.10.2020 - approved
 //@@viewOff:revision
 
 //@@viewOn:imports
@@ -76,20 +76,9 @@ const TimeZoneProvider = createComponent({
   },
 });
 
-//@@viewOn:helpers
-function _warnNoOp() {
-  if (process.env.NODE_ENV === "development") {
-    UU5.Common.Tools.warn(
-      "Changing timeZone via useTimeZone hook return value is supported only with TimeZoneProvider being in the hierarchy of parent components."
-    );
-  }
-}
-//@@viewOff:helpers
-
 function useTimeZone() {
   const ctxValue = useTimeZoneContext();
-  const usedValue = ctxValue ?? { timeZone: UU5.Environment.timeZone, setTimeZone: _warnNoOp };
-  return [usedValue.timeZone, usedValue.setTimeZone];
+  return [ctxValue?.timeZone, ctxValue?.setTimeZone];
 }
 
 export { useTimeZone, TimeZoneProvider };

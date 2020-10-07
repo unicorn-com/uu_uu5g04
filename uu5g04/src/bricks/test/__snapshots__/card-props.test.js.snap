@@ -1,851 +1,1035 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UU5.Bricks.Card docKit example should render UU5.Bricks.Card contains touchIcons 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu-bricks-1io58h7"
-  header="Card"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  style={
-    Object {
-      "backgroundColor": "#FF5A51",
-      "paddingLeft": "6px",
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu-bricks-1io58h7"
+    header="Card"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    style={
+      Object {
+        "backgroundColor": "#FF5A51",
+        "paddingLeft": "6px",
+      }
     }
-  }
->
-  <TouchIcon
-    content="Click"
-    id="uuID2"
-    key=".0"
-  />
-  <TouchIcon
-    content="Click"
-    id="uuID3"
-    key=".1"
-  />
-  <TouchIcon
-    content="Click"
-    id="uuID4"
-    key=".2"
-  />
-</Section>
+  >
+    <TouchIcon
+      content="Click"
+      id="uuID2"
+      key=".0"
+    />
+    <TouchIcon
+      content="Click"
+      id="uuID3"
+      key=".1"
+    />
+    <TouchIcon
+      content="Click"
+      id="uuID4"
+      key=".2"
+    />
+  </Section>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing checkGrammar=false 1`] = `
-<Section
-  checkGrammar={false}
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    checkGrammar={false}
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing checkGrammar=true 1`] = `
-<Section
-  checkGrammar={true}
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    checkGrammar={true}
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing checkHighlight=false 1`] = `
-<Section
-  checkHighlight={false}
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    checkHighlight={false}
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing checkHighlight=true 1`] = `
-<Section
-  checkHighlight={true}
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    checkHighlight={true}
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing checkSpaces=false 1`] = `
-<Section
-  checkSpaces={false}
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    checkSpaces={false}
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing checkSpaces=true 1`] = `
-<Section
-  checkSpaces={true}
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    checkSpaces={true}
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing className="my-classname" 1`] = `
-<Section
-  className="uu5-bricks-card my-classname uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card my-classname uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing content="This is Content from ContentMixin" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  content="This is Content from ContentMixin"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    content="This is Content from ContentMixin"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing content=12345 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  content={12345}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    content={12345}
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing controlled=false 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing controlled=true 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing default props 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing disabled=false 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing disabled=true 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  disabled={true}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    disabled={true}
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing dynamic=false 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing dynamic=true 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  dynamic={true}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    dynamic={true}
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing elevation="0" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-0 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-0 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-0 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-0 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing elevation="1" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing elevation="2" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-2 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-2 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-2 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-2 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing elevation="3" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-3 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-3 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-3 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-3 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing elevation="4" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-4 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-4 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-4 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-4 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing elevation="5" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-5 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-5 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-5 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-5 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing elevation=0 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-0 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-0 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing elevation=1 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing elevation=2 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-2 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-2 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-2 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-2 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing elevation=3 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-3 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-3 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-3 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-3 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing elevation=4 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-4 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-4 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-4 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-4 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing elevation=5 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-5 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-5 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-5 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-5 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing elevationHover="0" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-0 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-0"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-0 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-0"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing elevationHover="1" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing elevationHover="2" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-2 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-2 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing elevationHover="3" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-3 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-3"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-3 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-3"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing elevationHover="4" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-4 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-4"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-4 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-4"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing elevationHover="5" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-5 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-5"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-5 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-5"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing elevationHover=0 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-0 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-0"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-0 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-0"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing elevationHover=1 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing elevationHover=2 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-2 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-2 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing elevationHover=3 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-3 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-3"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-3 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-3"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing elevationHover=4 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-4 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-4"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-4 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-4"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing elevationHover=5 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-5 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-5"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-5 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-5"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing footer={"type":"div","key":null,"ref":null,"props":{"children":"Footer of section"},"_owner":null,"_store":{}} 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  footer={
-    <div>
-      Footer of section
-    </div>
-  }
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    footer={
+      <div>
+        Footer of section
+      </div>
+    }
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu-bricks-1io58h7"
-  header={
-    <div>
-      Header of section
-    </div>
-  }
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu-bricks-1io58h7"
+    header={
+      <div>
+        Header of section
+      </div>
+    }
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing hidden=false 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing hidden=true 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  hidden={true}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    hidden={true}
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing id="myId" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="myId-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="myId-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing ignoreHTML=false 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing ignoreHTML=true 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing inline=false 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing inline=true 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing level="0" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  level="0"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    level="0"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing level="1" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  level="1"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    level="1"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing level="2" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  level="2"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    level="2"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing level="3" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  level="3"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    level="3"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing level="4" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  level="4"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    level="4"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing level="5" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  level="5"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    level="5"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing level="6" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  level="6"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    level="6"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing level=0 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  level={0}
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    level={0}
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing level=1 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  level={1}
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    level={1}
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing level=2 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  level={2}
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    level={2}
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing level=3 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  level={3}
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    level={3}
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing level=4 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  level={4}
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    level={4}
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing level=5 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  level={5}
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    level={5}
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing level=6 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  level={6}
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    level={6}
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing mainAttrs=undefined 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing minWidth=300 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  style={
-    Object {
-      "minWidth": 300,
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    style={
+      Object {
+        "minWidth": 300,
+      }
     }
-  }
-/>
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing minWidth=450 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  style={
-    Object {
-      "minWidth": 450,
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    style={
+      Object {
+        "minWidth": 450,
+      }
     }
-  }
-/>
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing name="myName" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name="myName-inner"
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    name="myName-inner"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing nestingLevel="bigBox" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="bigBox"
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="bigBox"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing nestingLevel="bigBoxCollection" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="bigBoxCollection"
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="bigBoxCollection"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing nestingLevel="box" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="box"
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="box"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing nestingLevel="boxCollection" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="boxCollection"
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="boxCollection"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing nestingLevel="container" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="container"
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="container"
+  />
+</Fragment>
 `;
 
-exports[`UU5.Bricks.Card props testing nestingLevel="inline" 1`] = `""`;
+exports[`UU5.Bricks.Card props testing nestingLevel="inline" 1`] = `<Fragment />`;
 
 exports[`UU5.Bricks.Card props testing nestingLevel="page" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="page"
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="page"
+  />
+</Fragment>
 `;
 
-exports[`UU5.Bricks.Card props testing nestingLevel="smallBox" 1`] = `""`;
+exports[`UU5.Bricks.Card props testing nestingLevel="smallBox" 1`] = `<Fragment />`;
 
-exports[`UU5.Bricks.Card props testing nestingLevel="smallBoxCollection" 1`] = `""`;
+exports[`UU5.Bricks.Card props testing nestingLevel="smallBoxCollection" 1`] = `<Fragment />`;
 
 exports[`UU5.Bricks.Card props testing nestingLevel="spa" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="spa"
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="spa"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing noIndex=false 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing noIndex=true 1`] = `
-<Section
-  className="uu5-bricks-card uu5-noindex uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-noindex uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing noSpaces=false 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing noSpaces=true 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing pureRender=false 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing pureRender=true 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  pureRender={true}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    pureRender={true}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing selected=false 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing selected=true 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  selected={true}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    selected={true}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing style="padding:8px; borderRadius: 2px" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    style={
+      Object {
+        "borderRadius": "2px",
+        "padding": "8px",
+      }
     }
-  }
-/>
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing style={"backgroundColor":"red","color":"blue"} 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    style={
+      Object {
+        "backgroundColor": "red",
+        "color": "blue",
+      }
     }
-  }
-/>
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing textCorrector=false 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  textCorrector={false}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    textCorrector={false}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing textCorrector=true 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  textCorrector={true}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    textCorrector={true}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing tooltip="My Tooltip" 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={
-    Object {
-      "title": "My Tooltip",
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={
+      Object {
+        "title": "My Tooltip",
+      }
     }
-  }
-  tooltip="My Tooltip"
-/>
+    tooltip="My Tooltip"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing underline=false 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing underline=true 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  underline={true}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    underline={true}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing width=500 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  style={
-    Object {
-      "width": 500,
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    style={
+      Object {
+        "width": 500,
+      }
     }
-  }
-/>
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Card props testing width=800 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  style={
-    Object {
-      "width": 800,
+<Fragment>
+  <Section
+    className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    style={
+      Object {
+        "width": 800,
+      }
     }
-  }
-/>
+  />
+</Fragment>
 `;

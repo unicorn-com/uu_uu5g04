@@ -13,11 +13,21 @@
 
 //@@viewOn:revision
 //  coded: Martin Mach, 18.09.2020
-//  reviewed: -
+//  reviewed: Filip Janovský, 07.10.2020 - approved
 //@@viewOff:revision
 
+import Environment from "../environment/environment.js";
+import Tools from "./tools.js";
 import Context from "./context";
 
-export const TimeZoneContext = Context.create();
+function _warnNoOp() {
+  if (process.env.NODE_ENV === "development") {
+    Tools.warn(
+      "Changing timeZone via useTimeZone hook return value is supported only with TimeZoneProvider being in the hierarchy of parent components."
+    );
+  }
+}
+
+export const TimeZoneContext = Context.create({ timeZone: Environment.timeZone, setTimeZone: _warnNoOp });
 
 export default Context;

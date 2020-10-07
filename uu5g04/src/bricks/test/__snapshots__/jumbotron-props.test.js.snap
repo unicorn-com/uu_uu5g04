@@ -1,465 +1,563 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UU5.Bricks.Jumbotron checkGrammar=false 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron checkGrammar=true 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron checkHighlight=false 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron checkHighlight=true 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron checkSpaces=false 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron checkSpaces=true 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron className="my-classname" 1`] = `
-<div
-  className="uu5-bricks-jumbotron my-classname uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron my-classname uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron colorSchema="brown" 1`] = `
-<div
-  className="color-schema-brown uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="color-schema-brown uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron colorSchema="brown-rich" 1`] = `
-<div
-  className="color-schema-brown-rich uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="color-schema-brown-rich uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron colorSchema="cyan" 1`] = `
-<div
-  className="color-schema-cyan uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="color-schema-cyan uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron colorSchema="cyan-rich" 1`] = `
-<div
-  className="color-schema-cyan-rich uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="color-schema-cyan-rich uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron colorSchema="default" 1`] = `
-<div
-  className="color-schema-default uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="color-schema-default uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron colorSchema="green" 1`] = `
-<div
-  className="color-schema-green uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="color-schema-green uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron colorSchema="green-rich" 1`] = `
-<div
-  className="color-schema-green-rich uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="color-schema-green-rich uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron colorSchema="grey" 1`] = `
-<div
-  className="color-schema-grey uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="color-schema-grey uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron colorSchema="grey-rich" 1`] = `
-<div
-  className="color-schema-grey-rich uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="color-schema-grey-rich uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron colorSchema="orange" 1`] = `
-<div
-  className="color-schema-orange uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="color-schema-orange uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron colorSchema="orange-rich" 1`] = `
-<div
-  className="color-schema-orange-rich uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="color-schema-orange-rich uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron colorSchema="pink" 1`] = `
-<div
-  className="color-schema-pink uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="color-schema-pink uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron colorSchema="pink-rich" 1`] = `
-<div
-  className="color-schema-pink-rich uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="color-schema-pink-rich uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron colorSchema="purple" 1`] = `
-<div
-  className="color-schema-purple uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="color-schema-purple uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron colorSchema="purple-rich" 1`] = `
-<div
-  className="color-schema-purple-rich uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="color-schema-purple-rich uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron colorSchema="red" 1`] = `
-<div
-  className="color-schema-red uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="color-schema-red uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron colorSchema="red-rich" 1`] = `
-<div
-  className="color-schema-red-rich uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="color-schema-red-rich uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron colorSchema="yellow" 1`] = `
-<div
-  className="color-schema-yellow uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="color-schema-yellow uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron colorSchema="yellow-rich" 1`] = `
-<div
-  className="color-schema-yellow-rich uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="color-schema-yellow-rich uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron content="This is Content from ContentMixin" 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
-</div>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <UU5.Common.TextCorrectorContextConsumer
+      key="0"
+      text="This is Content from ContentMixin"
+    />
+  </div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron content=12345 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  12345
-</div>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    12345
+  </div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron controlled=false 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron controlled=true 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron default props 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron disabled=false 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron disabled=true 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-disabled uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</div>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-disabled uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <span
+      className="uu5-common-disabled-cover"
+      key="disabledCover"
+    />
+  </div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron docKit examples UU5.Bricks.Jumbotron example01 1`] = `
-<div
-  className="color-schema-cyan uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="idJUMBO"
-  style={Object {}}
-  title={null}
->
-  <Header
-    content="Header"
-    id="idHEADER"
-    key="idHEADER"
-  />
-</div>
+<Fragment>
+  <div
+    className="color-schema-cyan uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="idJUMBO"
+    style={Object {}}
+    title={null}
+  >
+    <Header
+      content="Header"
+      id="idHEADER"
+      key="idHEADER"
+    />
+  </div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron dynamic=false 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron dynamic=true 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron hidden=false 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron hidden=true 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-hidden uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-hidden uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron id="myId" 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="myId"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="myId"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron ignoreHTML=false 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron ignoreHTML=true 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron mainAttrs=undefined 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron name="myName" 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  name="myName"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    name="myName"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron nestingLevel="bigBox" 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron nestingLevel="bigBoxCollection" 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron nestingLevel="box" 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron nestingLevel="boxCollection" 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron nestingLevel="container" 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.Jumbotron nestingLevel="page" 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron nestingLevel="smallBox" 1`] = `""`;
@@ -467,119 +565,143 @@ exports[`UU5.Bricks.Jumbotron nestingLevel="smallBox" 1`] = `""`;
 exports[`UU5.Bricks.Jumbotron nestingLevel="smallBoxCollection" 1`] = `""`;
 
 exports[`UU5.Bricks.Jumbotron nestingLevel="spa" 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron noIndex=false 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron noIndex=true 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-noindex uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-noindex uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron pureRender=false 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron pureRender=true 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron selected=false 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron selected=true 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-selected uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-selected uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron style="padding:8px; borderRadius: 2px" 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={
+      Object {
+        "borderRadius": "2px",
+        "padding": "8px",
+      }
     }
-  }
-  title={null}
-/>
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron style={"backgroundColor":"red","color":"blue"} 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={
+      Object {
+        "backgroundColor": "red",
+        "color": "blue",
+      }
     }
-  }
-  title={null}
-/>
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron textCorrector=false 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron textCorrector=true 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Jumbotron tooltip="My Tooltip" 1`] = `
-<div
-  className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
-  id="uuID"
-  style={Object {}}
-  title="My Tooltip"
-/>
+<Fragment>
+  <div
+    className="uu5-bricks-jumbotron uu5-common-bg-style-filled uu5-bricks-jumbotron-default"
+    id="uuID"
+    style={Object {}}
+    title="My Tooltip"
+  />
+</Fragment>
 `;

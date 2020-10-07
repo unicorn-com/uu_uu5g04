@@ -1,1248 +1,1311 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UU5.Bricks.RichLink className="my-classname" 1`] = `
-<Link
-  className="uu5-bricks-richlink uu-bricks-1ah52px my-classname"
-  href="https://unicorn.com/"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  target="_blank"
-  tooltip="https://unicorn.com/"
->
-  <span
-    className="uu-bricks-ngmb4p"
-  >
-    <Image
-      className="uu-bricks-brwx6p"
-      mainAttrs={
-        Object {
-          "onError": [Function],
-        }
-      }
-      responsive={false}
-      src="http://example.com/og-image"
-    />
-  </span>
-  <span
-    className="uu-bricks-1pqzjl"
+<Fragment>
+  <Link
+    className="uu5-bricks-richlink uu-bricks-1ah52px my-classname"
+    href="https://unicorn.com/"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    ref_={[Function]}
+    target="_blank"
+    tooltip="https://unicorn.com/"
   >
     <span
-      className="uu-bricks-14ch3ly"
-    >
-      og-title
-    </span>
-    <span
-      className="uu-bricks-8blp0o"
-    >
-      og-description
-    </span>
-    <span
-      className="uu-bricks-bpsaip"
+      className="uu-bricks-ngmb4p"
     >
       <Image
-        className="uu-bricks-1r97mlz"
-        height={16}
-        key="favicon"
+        className="uu-bricks-brwx6p"
         mainAttrs={
           Object {
             "onError": [Function],
           }
         }
         responsive={false}
-        src="http://example.com/favicon.ico"
-        width={16}
+        src="http://example.com/og-image"
       />
-       
-      https://unicorn.com/
     </span>
-  </span>
-</Link>
+    <span
+      className="uu-bricks-1pqzjl"
+    >
+      <span
+        className="uu-bricks-14ch3ly"
+      >
+        og-title
+      </span>
+      <span
+        className="uu-bricks-8blp0o"
+      >
+        og-description
+      </span>
+      <span
+        className="uu-bricks-bpsaip"
+      >
+        <Image
+          className="uu-bricks-1r97mlz"
+          height={16}
+          key="favicon"
+          mainAttrs={
+            Object {
+              "onError": [Function],
+            }
+          }
+          responsive={false}
+          src="http://example.com/favicon.ico"
+          width={16}
+        />
+         
+        https://unicorn.com/
+      </span>
+    </span>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.RichLink controlled=false 1`] = `
-<Link
-  className="uu5-bricks-richlink uu-bricks-1ah52px"
-  controlled={false}
-  href="https://unicorn.com/"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  target="_blank"
-  tooltip="https://unicorn.com/"
->
-  <span
-    className="uu-bricks-ngmb4p"
-  >
-    <Image
-      className="uu-bricks-brwx6p"
-      mainAttrs={
-        Object {
-          "onError": [Function],
-        }
-      }
-      responsive={false}
-      src="http://example.com/og-image"
-    />
-  </span>
-  <span
-    className="uu-bricks-1pqzjl"
+<Fragment>
+  <Link
+    className="uu5-bricks-richlink uu-bricks-1ah52px"
+    controlled={false}
+    href="https://unicorn.com/"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    ref_={[Function]}
+    target="_blank"
+    tooltip="https://unicorn.com/"
   >
     <span
-      className="uu-bricks-14ch3ly"
-    >
-      og-title
-    </span>
-    <span
-      className="uu-bricks-8blp0o"
-    >
-      og-description
-    </span>
-    <span
-      className="uu-bricks-bpsaip"
+      className="uu-bricks-ngmb4p"
     >
       <Image
-        className="uu-bricks-1r97mlz"
-        height={16}
-        key="favicon"
+        className="uu-bricks-brwx6p"
         mainAttrs={
           Object {
             "onError": [Function],
           }
         }
         responsive={false}
-        src="http://example.com/favicon.ico"
-        width={16}
+        src="http://example.com/og-image"
       />
-       
-      https://unicorn.com/
     </span>
-  </span>
-</Link>
+    <span
+      className="uu-bricks-1pqzjl"
+    >
+      <span
+        className="uu-bricks-14ch3ly"
+      >
+        og-title
+      </span>
+      <span
+        className="uu-bricks-8blp0o"
+      >
+        og-description
+      </span>
+      <span
+        className="uu-bricks-bpsaip"
+      >
+        <Image
+          className="uu-bricks-1r97mlz"
+          height={16}
+          key="favicon"
+          mainAttrs={
+            Object {
+              "onError": [Function],
+            }
+          }
+          responsive={false}
+          src="http://example.com/favicon.ico"
+          width={16}
+        />
+         
+        https://unicorn.com/
+      </span>
+    </span>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.RichLink controlled=true 1`] = `
-<Link
-  className="uu5-bricks-richlink uu-bricks-1ah52px"
-  href="https://unicorn.com/"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  target="_blank"
-  tooltip="https://unicorn.com/"
->
-  <span
-    className="uu-bricks-ngmb4p"
-  >
-    <Image
-      className="uu-bricks-brwx6p"
-      mainAttrs={
-        Object {
-          "onError": [Function],
-        }
-      }
-      responsive={false}
-      src="http://example.com/og-image"
-    />
-  </span>
-  <span
-    className="uu-bricks-1pqzjl"
+<Fragment>
+  <Link
+    className="uu5-bricks-richlink uu-bricks-1ah52px"
+    href="https://unicorn.com/"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    ref_={[Function]}
+    target="_blank"
+    tooltip="https://unicorn.com/"
   >
     <span
-      className="uu-bricks-14ch3ly"
-    >
-      og-title
-    </span>
-    <span
-      className="uu-bricks-8blp0o"
-    >
-      og-description
-    </span>
-    <span
-      className="uu-bricks-bpsaip"
+      className="uu-bricks-ngmb4p"
     >
       <Image
-        className="uu-bricks-1r97mlz"
-        height={16}
-        key="favicon"
+        className="uu-bricks-brwx6p"
         mainAttrs={
           Object {
             "onError": [Function],
           }
         }
         responsive={false}
-        src="http://example.com/favicon.ico"
-        width={16}
+        src="http://example.com/og-image"
       />
-       
-      https://unicorn.com/
     </span>
-  </span>
-</Link>
+    <span
+      className="uu-bricks-1pqzjl"
+    >
+      <span
+        className="uu-bricks-14ch3ly"
+      >
+        og-title
+      </span>
+      <span
+        className="uu-bricks-8blp0o"
+      >
+        og-description
+      </span>
+      <span
+        className="uu-bricks-bpsaip"
+      >
+        <Image
+          className="uu-bricks-1r97mlz"
+          height={16}
+          key="favicon"
+          mainAttrs={
+            Object {
+              "onError": [Function],
+            }
+          }
+          responsive={false}
+          src="http://example.com/favicon.ico"
+          width={16}
+        />
+         
+        https://unicorn.com/
+      </span>
+    </span>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.RichLink default props 1`] = `
-<Link
-  className="uu5-bricks-richlink uu-bricks-1ah52px"
-  href="https://unicorn.com/"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  target="_blank"
-  tooltip="https://unicorn.com/"
->
-  <span
-    className="uu-bricks-ngmb4p"
-  >
-    <Image
-      className="uu-bricks-brwx6p"
-      mainAttrs={
-        Object {
-          "onError": [Function],
-        }
-      }
-      responsive={false}
-      src="http://example.com/og-image"
-    />
-  </span>
-  <span
-    className="uu-bricks-1pqzjl"
+<Fragment>
+  <Link
+    className="uu5-bricks-richlink uu-bricks-1ah52px"
+    href="https://unicorn.com/"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    ref_={[Function]}
+    target="_blank"
+    tooltip="https://unicorn.com/"
   >
     <span
-      className="uu-bricks-14ch3ly"
-    >
-      og-title
-    </span>
-    <span
-      className="uu-bricks-8blp0o"
-    >
-      og-description
-    </span>
-    <span
-      className="uu-bricks-bpsaip"
+      className="uu-bricks-ngmb4p"
     >
       <Image
-        className="uu-bricks-1r97mlz"
-        height={16}
-        key="favicon"
+        className="uu-bricks-brwx6p"
         mainAttrs={
           Object {
             "onError": [Function],
           }
         }
         responsive={false}
-        src="http://example.com/favicon.ico"
-        width={16}
+        src="http://example.com/og-image"
       />
-       
-      https://unicorn.com/
     </span>
-  </span>
-</Link>
+    <span
+      className="uu-bricks-1pqzjl"
+    >
+      <span
+        className="uu-bricks-14ch3ly"
+      >
+        og-title
+      </span>
+      <span
+        className="uu-bricks-8blp0o"
+      >
+        og-description
+      </span>
+      <span
+        className="uu-bricks-bpsaip"
+      >
+        <Image
+          className="uu-bricks-1r97mlz"
+          height={16}
+          key="favicon"
+          mainAttrs={
+            Object {
+              "onError": [Function],
+            }
+          }
+          responsive={false}
+          src="http://example.com/favicon.ico"
+          width={16}
+        />
+         
+        https://unicorn.com/
+      </span>
+    </span>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.RichLink disabled=false 1`] = `
-<Link
-  className="uu5-bricks-richlink uu-bricks-1ah52px"
-  href="https://unicorn.com/"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  target="_blank"
-  tooltip="https://unicorn.com/"
->
-  <span
-    className="uu-bricks-ngmb4p"
-  >
-    <Image
-      className="uu-bricks-brwx6p"
-      mainAttrs={
-        Object {
-          "onError": [Function],
-        }
-      }
-      responsive={false}
-      src="http://example.com/og-image"
-    />
-  </span>
-  <span
-    className="uu-bricks-1pqzjl"
+<Fragment>
+  <Link
+    className="uu5-bricks-richlink uu-bricks-1ah52px"
+    href="https://unicorn.com/"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    ref_={[Function]}
+    target="_blank"
+    tooltip="https://unicorn.com/"
   >
     <span
-      className="uu-bricks-14ch3ly"
-    >
-      og-title
-    </span>
-    <span
-      className="uu-bricks-8blp0o"
-    >
-      og-description
-    </span>
-    <span
-      className="uu-bricks-bpsaip"
+      className="uu-bricks-ngmb4p"
     >
       <Image
-        className="uu-bricks-1r97mlz"
-        height={16}
-        key="favicon"
+        className="uu-bricks-brwx6p"
         mainAttrs={
           Object {
             "onError": [Function],
           }
         }
         responsive={false}
-        src="http://example.com/favicon.ico"
-        width={16}
+        src="http://example.com/og-image"
       />
-       
-      https://unicorn.com/
     </span>
-  </span>
-</Link>
+    <span
+      className="uu-bricks-1pqzjl"
+    >
+      <span
+        className="uu-bricks-14ch3ly"
+      >
+        og-title
+      </span>
+      <span
+        className="uu-bricks-8blp0o"
+      >
+        og-description
+      </span>
+      <span
+        className="uu-bricks-bpsaip"
+      >
+        <Image
+          className="uu-bricks-1r97mlz"
+          height={16}
+          key="favicon"
+          mainAttrs={
+            Object {
+              "onError": [Function],
+            }
+          }
+          responsive={false}
+          src="http://example.com/favicon.ico"
+          width={16}
+        />
+         
+        https://unicorn.com/
+      </span>
+    </span>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.RichLink disabled=true 1`] = `
-<Link
-  className="uu5-bricks-richlink uu-bricks-1ah52px"
-  disabled={true}
-  href="https://unicorn.com/"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  target="_blank"
-  tooltip="https://unicorn.com/"
->
-  <span
-    className="uu-bricks-ngmb4p"
-  >
-    <Image
-      className="uu-bricks-brwx6p"
-      mainAttrs={
-        Object {
-          "onError": [Function],
-        }
-      }
-      responsive={false}
-      src="http://example.com/og-image"
-    />
-  </span>
-  <span
-    className="uu-bricks-1pqzjl"
+<Fragment>
+  <Link
+    className="uu5-bricks-richlink uu-bricks-1ah52px"
+    disabled={true}
+    href="https://unicorn.com/"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    ref_={[Function]}
+    target="_blank"
+    tooltip="https://unicorn.com/"
   >
     <span
-      className="uu-bricks-14ch3ly"
-    >
-      og-title
-    </span>
-    <span
-      className="uu-bricks-8blp0o"
-    >
-      og-description
-    </span>
-    <span
-      className="uu-bricks-bpsaip"
+      className="uu-bricks-ngmb4p"
     >
       <Image
-        className="uu-bricks-1r97mlz"
-        height={16}
-        key="favicon"
+        className="uu-bricks-brwx6p"
         mainAttrs={
           Object {
             "onError": [Function],
           }
         }
         responsive={false}
-        src="http://example.com/favicon.ico"
-        width={16}
+        src="http://example.com/og-image"
       />
-       
-      https://unicorn.com/
     </span>
-  </span>
-</Link>
+    <span
+      className="uu-bricks-1pqzjl"
+    >
+      <span
+        className="uu-bricks-14ch3ly"
+      >
+        og-title
+      </span>
+      <span
+        className="uu-bricks-8blp0o"
+      >
+        og-description
+      </span>
+      <span
+        className="uu-bricks-bpsaip"
+      >
+        <Image
+          className="uu-bricks-1r97mlz"
+          height={16}
+          key="favicon"
+          mainAttrs={
+            Object {
+              "onError": [Function],
+            }
+          }
+          responsive={false}
+          src="http://example.com/favicon.ico"
+          width={16}
+        />
+         
+        https://unicorn.com/
+      </span>
+    </span>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.RichLink hidden=false 1`] = `
-<Link
-  className="uu5-bricks-richlink uu-bricks-1ah52px"
-  href="https://unicorn.com/"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  target="_blank"
-  tooltip="https://unicorn.com/"
->
-  <span
-    className="uu-bricks-ngmb4p"
-  >
-    <Image
-      className="uu-bricks-brwx6p"
-      mainAttrs={
-        Object {
-          "onError": [Function],
-        }
-      }
-      responsive={false}
-      src="http://example.com/og-image"
-    />
-  </span>
-  <span
-    className="uu-bricks-1pqzjl"
+<Fragment>
+  <Link
+    className="uu5-bricks-richlink uu-bricks-1ah52px"
+    href="https://unicorn.com/"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    ref_={[Function]}
+    target="_blank"
+    tooltip="https://unicorn.com/"
   >
     <span
-      className="uu-bricks-14ch3ly"
-    >
-      og-title
-    </span>
-    <span
-      className="uu-bricks-8blp0o"
-    >
-      og-description
-    </span>
-    <span
-      className="uu-bricks-bpsaip"
+      className="uu-bricks-ngmb4p"
     >
       <Image
-        className="uu-bricks-1r97mlz"
-        height={16}
-        key="favicon"
+        className="uu-bricks-brwx6p"
         mainAttrs={
           Object {
             "onError": [Function],
           }
         }
         responsive={false}
-        src="http://example.com/favicon.ico"
-        width={16}
+        src="http://example.com/og-image"
       />
-       
-      https://unicorn.com/
     </span>
-  </span>
-</Link>
+    <span
+      className="uu-bricks-1pqzjl"
+    >
+      <span
+        className="uu-bricks-14ch3ly"
+      >
+        og-title
+      </span>
+      <span
+        className="uu-bricks-8blp0o"
+      >
+        og-description
+      </span>
+      <span
+        className="uu-bricks-bpsaip"
+      >
+        <Image
+          className="uu-bricks-1r97mlz"
+          height={16}
+          key="favicon"
+          mainAttrs={
+            Object {
+              "onError": [Function],
+            }
+          }
+          responsive={false}
+          src="http://example.com/favicon.ico"
+          width={16}
+        />
+         
+        https://unicorn.com/
+      </span>
+    </span>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.RichLink hidden=true 1`] = `
-<Link
-  className="uu5-bricks-richlink uu-bricks-1ah52px"
-  hidden={true}
-  href="https://unicorn.com/"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  target="_blank"
-  tooltip="https://unicorn.com/"
->
-  <span
-    className="uu-bricks-ngmb4p"
-  >
-    <Image
-      className="uu-bricks-brwx6p"
-      mainAttrs={
-        Object {
-          "onError": [Function],
-        }
-      }
-      responsive={false}
-      src="http://example.com/og-image"
-    />
-  </span>
-  <span
-    className="uu-bricks-1pqzjl"
+<Fragment>
+  <Link
+    className="uu5-bricks-richlink uu-bricks-1ah52px"
+    hidden={true}
+    href="https://unicorn.com/"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    ref_={[Function]}
+    target="_blank"
+    tooltip="https://unicorn.com/"
   >
     <span
-      className="uu-bricks-14ch3ly"
-    >
-      og-title
-    </span>
-    <span
-      className="uu-bricks-8blp0o"
-    >
-      og-description
-    </span>
-    <span
-      className="uu-bricks-bpsaip"
+      className="uu-bricks-ngmb4p"
     >
       <Image
-        className="uu-bricks-1r97mlz"
-        height={16}
-        key="favicon"
+        className="uu-bricks-brwx6p"
         mainAttrs={
           Object {
             "onError": [Function],
           }
         }
         responsive={false}
-        src="http://example.com/favicon.ico"
-        width={16}
+        src="http://example.com/og-image"
       />
-       
-      https://unicorn.com/
     </span>
-  </span>
-</Link>
+    <span
+      className="uu-bricks-1pqzjl"
+    >
+      <span
+        className="uu-bricks-14ch3ly"
+      >
+        og-title
+      </span>
+      <span
+        className="uu-bricks-8blp0o"
+      >
+        og-description
+      </span>
+      <span
+        className="uu-bricks-bpsaip"
+      >
+        <Image
+          className="uu-bricks-1r97mlz"
+          height={16}
+          key="favicon"
+          mainAttrs={
+            Object {
+              "onError": [Function],
+            }
+          }
+          responsive={false}
+          src="http://example.com/favicon.ico"
+          width={16}
+        />
+         
+        https://unicorn.com/
+      </span>
+    </span>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.RichLink href="https://unicorn.com/" 1`] = `
-<Link
-  className="uu5-bricks-richlink uu-bricks-1ah52px"
-  href="https://unicorn.com/"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  target="_blank"
-  tooltip="https://unicorn.com/"
->
-  <span
-    className="uu-bricks-ngmb4p"
-  >
-    <Image
-      className="uu-bricks-brwx6p"
-      mainAttrs={
-        Object {
-          "onError": [Function],
-        }
-      }
-      responsive={false}
-      src="http://example.com/og-image"
-    />
-  </span>
-  <span
-    className="uu-bricks-1pqzjl"
+<Fragment>
+  <Link
+    className="uu5-bricks-richlink uu-bricks-1ah52px"
+    href="https://unicorn.com/"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    ref_={[Function]}
+    target="_blank"
+    tooltip="https://unicorn.com/"
   >
     <span
-      className="uu-bricks-14ch3ly"
-    >
-      og-title
-    </span>
-    <span
-      className="uu-bricks-8blp0o"
-    >
-      og-description
-    </span>
-    <span
-      className="uu-bricks-bpsaip"
+      className="uu-bricks-ngmb4p"
     >
       <Image
-        className="uu-bricks-1r97mlz"
-        height={16}
-        key="favicon"
+        className="uu-bricks-brwx6p"
         mainAttrs={
           Object {
             "onError": [Function],
           }
         }
         responsive={false}
-        src="http://example.com/favicon.ico"
-        width={16}
+        src="http://example.com/og-image"
       />
-       
-      https://unicorn.com/
     </span>
-  </span>
-</Link>
+    <span
+      className="uu-bricks-1pqzjl"
+    >
+      <span
+        className="uu-bricks-14ch3ly"
+      >
+        og-title
+      </span>
+      <span
+        className="uu-bricks-8blp0o"
+      >
+        og-description
+      </span>
+      <span
+        className="uu-bricks-bpsaip"
+      >
+        <Image
+          className="uu-bricks-1r97mlz"
+          height={16}
+          key="favicon"
+          mainAttrs={
+            Object {
+              "onError": [Function],
+            }
+          }
+          responsive={false}
+          src="http://example.com/favicon.ico"
+          width={16}
+        />
+         
+        https://unicorn.com/
+      </span>
+    </span>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.RichLink id="myId" 1`] = `
-<Link
-  className="uu5-bricks-richlink uu-bricks-1ah52px"
-  href="https://unicorn.com/"
-  id="myId-inner"
-  mainAttrs={Object {}}
-  target="_blank"
-  tooltip="https://unicorn.com/"
->
-  <span
-    className="uu-bricks-ngmb4p"
-  >
-    <Image
-      className="uu-bricks-brwx6p"
-      mainAttrs={
-        Object {
-          "onError": [Function],
-        }
-      }
-      responsive={false}
-      src="http://example.com/og-image"
-    />
-  </span>
-  <span
-    className="uu-bricks-1pqzjl"
+<Fragment>
+  <Link
+    className="uu5-bricks-richlink uu-bricks-1ah52px"
+    href="https://unicorn.com/"
+    id="myId-inner"
+    mainAttrs={Object {}}
+    ref_={[Function]}
+    target="_blank"
+    tooltip="https://unicorn.com/"
   >
     <span
-      className="uu-bricks-14ch3ly"
-    >
-      og-title
-    </span>
-    <span
-      className="uu-bricks-8blp0o"
-    >
-      og-description
-    </span>
-    <span
-      className="uu-bricks-bpsaip"
+      className="uu-bricks-ngmb4p"
     >
       <Image
-        className="uu-bricks-1r97mlz"
-        height={16}
-        key="favicon"
+        className="uu-bricks-brwx6p"
         mainAttrs={
           Object {
             "onError": [Function],
           }
         }
         responsive={false}
-        src="http://example.com/favicon.ico"
-        width={16}
+        src="http://example.com/og-image"
       />
-       
-      https://unicorn.com/
     </span>
-  </span>
-</Link>
+    <span
+      className="uu-bricks-1pqzjl"
+    >
+      <span
+        className="uu-bricks-14ch3ly"
+      >
+        og-title
+      </span>
+      <span
+        className="uu-bricks-8blp0o"
+      >
+        og-description
+      </span>
+      <span
+        className="uu-bricks-bpsaip"
+      >
+        <Image
+          className="uu-bricks-1r97mlz"
+          height={16}
+          key="favicon"
+          mainAttrs={
+            Object {
+              "onError": [Function],
+            }
+          }
+          responsive={false}
+          src="http://example.com/favicon.ico"
+          width={16}
+        />
+         
+        https://unicorn.com/
+      </span>
+    </span>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.RichLink mainAttrs=undefined 1`] = `
-<Link
-  className="uu5-bricks-richlink uu-bricks-1ah52px"
-  href="https://unicorn.com/"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  target="_blank"
-  tooltip="https://unicorn.com/"
->
-  <span
-    className="uu-bricks-ngmb4p"
-  >
-    <Image
-      className="uu-bricks-brwx6p"
-      mainAttrs={
-        Object {
-          "onError": [Function],
-        }
-      }
-      responsive={false}
-      src="http://example.com/og-image"
-    />
-  </span>
-  <span
-    className="uu-bricks-1pqzjl"
+<Fragment>
+  <Link
+    className="uu5-bricks-richlink uu-bricks-1ah52px"
+    href="https://unicorn.com/"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    ref_={[Function]}
+    target="_blank"
+    tooltip="https://unicorn.com/"
   >
     <span
-      className="uu-bricks-14ch3ly"
-    >
-      og-title
-    </span>
-    <span
-      className="uu-bricks-8blp0o"
-    >
-      og-description
-    </span>
-    <span
-      className="uu-bricks-bpsaip"
+      className="uu-bricks-ngmb4p"
     >
       <Image
-        className="uu-bricks-1r97mlz"
-        height={16}
-        key="favicon"
+        className="uu-bricks-brwx6p"
         mainAttrs={
           Object {
             "onError": [Function],
           }
         }
         responsive={false}
-        src="http://example.com/favicon.ico"
-        width={16}
+        src="http://example.com/og-image"
       />
-       
-      https://unicorn.com/
     </span>
-  </span>
-</Link>
+    <span
+      className="uu-bricks-1pqzjl"
+    >
+      <span
+        className="uu-bricks-14ch3ly"
+      >
+        og-title
+      </span>
+      <span
+        className="uu-bricks-8blp0o"
+      >
+        og-description
+      </span>
+      <span
+        className="uu-bricks-bpsaip"
+      >
+        <Image
+          className="uu-bricks-1r97mlz"
+          height={16}
+          key="favicon"
+          mainAttrs={
+            Object {
+              "onError": [Function],
+            }
+          }
+          responsive={false}
+          src="http://example.com/favicon.ico"
+          width={16}
+        />
+         
+        https://unicorn.com/
+      </span>
+    </span>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.RichLink name="myName" 1`] = `
-<Link
-  className="uu5-bricks-richlink uu-bricks-1ah52px"
-  href="https://unicorn.com/"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name="myName-inner"
-  target="_blank"
-  tooltip="https://unicorn.com/"
->
-  <span
-    className="uu-bricks-ngmb4p"
-  >
-    <Image
-      className="uu-bricks-brwx6p"
-      mainAttrs={
-        Object {
-          "onError": [Function],
-        }
-      }
-      responsive={false}
-      src="http://example.com/og-image"
-    />
-  </span>
-  <span
-    className="uu-bricks-1pqzjl"
+<Fragment>
+  <Link
+    className="uu5-bricks-richlink uu-bricks-1ah52px"
+    href="https://unicorn.com/"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    name="myName-inner"
+    ref_={[Function]}
+    target="_blank"
+    tooltip="https://unicorn.com/"
   >
     <span
-      className="uu-bricks-14ch3ly"
-    >
-      og-title
-    </span>
-    <span
-      className="uu-bricks-8blp0o"
-    >
-      og-description
-    </span>
-    <span
-      className="uu-bricks-bpsaip"
+      className="uu-bricks-ngmb4p"
     >
       <Image
-        className="uu-bricks-1r97mlz"
-        height={16}
-        key="favicon"
+        className="uu-bricks-brwx6p"
         mainAttrs={
           Object {
             "onError": [Function],
           }
         }
         responsive={false}
-        src="http://example.com/favicon.ico"
-        width={16}
+        src="http://example.com/og-image"
       />
-       
-      https://unicorn.com/
     </span>
-  </span>
-</Link>
+    <span
+      className="uu-bricks-1pqzjl"
+    >
+      <span
+        className="uu-bricks-14ch3ly"
+      >
+        og-title
+      </span>
+      <span
+        className="uu-bricks-8blp0o"
+      >
+        og-description
+      </span>
+      <span
+        className="uu-bricks-bpsaip"
+      >
+        <Image
+          className="uu-bricks-1r97mlz"
+          height={16}
+          key="favicon"
+          mainAttrs={
+            Object {
+              "onError": [Function],
+            }
+          }
+          responsive={false}
+          src="http://example.com/favicon.ico"
+          width={16}
+        />
+         
+        https://unicorn.com/
+      </span>
+    </span>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.RichLink noIndex=false 1`] = `
-<Link
-  className="uu5-bricks-richlink uu-bricks-1ah52px"
-  href="https://unicorn.com/"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  target="_blank"
-  tooltip="https://unicorn.com/"
->
-  <span
-    className="uu-bricks-ngmb4p"
-  >
-    <Image
-      className="uu-bricks-brwx6p"
-      mainAttrs={
-        Object {
-          "onError": [Function],
-        }
-      }
-      responsive={false}
-      src="http://example.com/og-image"
-    />
-  </span>
-  <span
-    className="uu-bricks-1pqzjl"
+<Fragment>
+  <Link
+    className="uu5-bricks-richlink uu-bricks-1ah52px"
+    href="https://unicorn.com/"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    ref_={[Function]}
+    target="_blank"
+    tooltip="https://unicorn.com/"
   >
     <span
-      className="uu-bricks-14ch3ly"
-    >
-      og-title
-    </span>
-    <span
-      className="uu-bricks-8blp0o"
-    >
-      og-description
-    </span>
-    <span
-      className="uu-bricks-bpsaip"
+      className="uu-bricks-ngmb4p"
     >
       <Image
-        className="uu-bricks-1r97mlz"
-        height={16}
-        key="favicon"
+        className="uu-bricks-brwx6p"
         mainAttrs={
           Object {
             "onError": [Function],
           }
         }
         responsive={false}
-        src="http://example.com/favicon.ico"
-        width={16}
+        src="http://example.com/og-image"
       />
-       
-      https://unicorn.com/
     </span>
-  </span>
-</Link>
+    <span
+      className="uu-bricks-1pqzjl"
+    >
+      <span
+        className="uu-bricks-14ch3ly"
+      >
+        og-title
+      </span>
+      <span
+        className="uu-bricks-8blp0o"
+      >
+        og-description
+      </span>
+      <span
+        className="uu-bricks-bpsaip"
+      >
+        <Image
+          className="uu-bricks-1r97mlz"
+          height={16}
+          key="favicon"
+          mainAttrs={
+            Object {
+              "onError": [Function],
+            }
+          }
+          responsive={false}
+          src="http://example.com/favicon.ico"
+          width={16}
+        />
+         
+        https://unicorn.com/
+      </span>
+    </span>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.RichLink noIndex=true 1`] = `
-<Link
-  className="uu5-bricks-richlink uu-bricks-1ah52px"
-  href="https://unicorn.com/"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  noIndex={true}
-  target="_blank"
-  tooltip="https://unicorn.com/"
->
-  <span
-    className="uu-bricks-ngmb4p"
-  >
-    <Image
-      className="uu-bricks-brwx6p"
-      mainAttrs={
-        Object {
-          "onError": [Function],
-        }
-      }
-      responsive={false}
-      src="http://example.com/og-image"
-    />
-  </span>
-  <span
-    className="uu-bricks-1pqzjl"
+<Fragment>
+  <Link
+    className="uu5-bricks-richlink uu-bricks-1ah52px uu5-noindex"
+    href="https://unicorn.com/"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    noIndex={true}
+    ref_={[Function]}
+    target="_blank"
+    tooltip="https://unicorn.com/"
   >
     <span
-      className="uu-bricks-14ch3ly"
-    >
-      og-title
-    </span>
-    <span
-      className="uu-bricks-8blp0o"
-    >
-      og-description
-    </span>
-    <span
-      className="uu-bricks-bpsaip"
+      className="uu-bricks-ngmb4p"
     >
       <Image
-        className="uu-bricks-1r97mlz"
-        height={16}
-        key="favicon"
+        className="uu-bricks-brwx6p"
         mainAttrs={
           Object {
             "onError": [Function],
           }
         }
         responsive={false}
-        src="http://example.com/favicon.ico"
-        width={16}
+        src="http://example.com/og-image"
       />
-       
-      https://unicorn.com/
     </span>
-  </span>
-</Link>
+    <span
+      className="uu-bricks-1pqzjl"
+    >
+      <span
+        className="uu-bricks-14ch3ly"
+      >
+        og-title
+      </span>
+      <span
+        className="uu-bricks-8blp0o"
+      >
+        og-description
+      </span>
+      <span
+        className="uu-bricks-bpsaip"
+      >
+        <Image
+          className="uu-bricks-1r97mlz"
+          height={16}
+          key="favicon"
+          mainAttrs={
+            Object {
+              "onError": [Function],
+            }
+          }
+          responsive={false}
+          src="http://example.com/favicon.ico"
+          width={16}
+        />
+         
+        https://unicorn.com/
+      </span>
+    </span>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.RichLink selected=false 1`] = `
-<Link
-  className="uu5-bricks-richlink uu-bricks-1ah52px"
-  href="https://unicorn.com/"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  target="_blank"
-  tooltip="https://unicorn.com/"
->
-  <span
-    className="uu-bricks-ngmb4p"
-  >
-    <Image
-      className="uu-bricks-brwx6p"
-      mainAttrs={
-        Object {
-          "onError": [Function],
-        }
-      }
-      responsive={false}
-      src="http://example.com/og-image"
-    />
-  </span>
-  <span
-    className="uu-bricks-1pqzjl"
+<Fragment>
+  <Link
+    className="uu5-bricks-richlink uu-bricks-1ah52px"
+    href="https://unicorn.com/"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    ref_={[Function]}
+    target="_blank"
+    tooltip="https://unicorn.com/"
   >
     <span
-      className="uu-bricks-14ch3ly"
-    >
-      og-title
-    </span>
-    <span
-      className="uu-bricks-8blp0o"
-    >
-      og-description
-    </span>
-    <span
-      className="uu-bricks-bpsaip"
+      className="uu-bricks-ngmb4p"
     >
       <Image
-        className="uu-bricks-1r97mlz"
-        height={16}
-        key="favicon"
+        className="uu-bricks-brwx6p"
         mainAttrs={
           Object {
             "onError": [Function],
           }
         }
         responsive={false}
-        src="http://example.com/favicon.ico"
-        width={16}
+        src="http://example.com/og-image"
       />
-       
-      https://unicorn.com/
     </span>
-  </span>
-</Link>
+    <span
+      className="uu-bricks-1pqzjl"
+    >
+      <span
+        className="uu-bricks-14ch3ly"
+      >
+        og-title
+      </span>
+      <span
+        className="uu-bricks-8blp0o"
+      >
+        og-description
+      </span>
+      <span
+        className="uu-bricks-bpsaip"
+      >
+        <Image
+          className="uu-bricks-1r97mlz"
+          height={16}
+          key="favicon"
+          mainAttrs={
+            Object {
+              "onError": [Function],
+            }
+          }
+          responsive={false}
+          src="http://example.com/favicon.ico"
+          width={16}
+        />
+         
+        https://unicorn.com/
+      </span>
+    </span>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.RichLink selected=true 1`] = `
-<Link
-  className="uu5-bricks-richlink uu-bricks-1ah52px"
-  href="https://unicorn.com/"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  selected={true}
-  target="_blank"
-  tooltip="https://unicorn.com/"
->
-  <span
-    className="uu-bricks-ngmb4p"
-  >
-    <Image
-      className="uu-bricks-brwx6p"
-      mainAttrs={
-        Object {
-          "onError": [Function],
-        }
-      }
-      responsive={false}
-      src="http://example.com/og-image"
-    />
-  </span>
-  <span
-    className="uu-bricks-1pqzjl"
+<Fragment>
+  <Link
+    className="uu5-bricks-richlink uu-bricks-1ah52px"
+    href="https://unicorn.com/"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    ref_={[Function]}
+    selected={true}
+    target="_blank"
+    tooltip="https://unicorn.com/"
   >
     <span
-      className="uu-bricks-14ch3ly"
-    >
-      og-title
-    </span>
-    <span
-      className="uu-bricks-8blp0o"
-    >
-      og-description
-    </span>
-    <span
-      className="uu-bricks-bpsaip"
+      className="uu-bricks-ngmb4p"
     >
       <Image
-        className="uu-bricks-1r97mlz"
-        height={16}
-        key="favicon"
+        className="uu-bricks-brwx6p"
         mainAttrs={
           Object {
             "onError": [Function],
           }
         }
         responsive={false}
-        src="http://example.com/favicon.ico"
-        width={16}
+        src="http://example.com/og-image"
       />
-       
-      https://unicorn.com/
     </span>
-  </span>
-</Link>
+    <span
+      className="uu-bricks-1pqzjl"
+    >
+      <span
+        className="uu-bricks-14ch3ly"
+      >
+        og-title
+      </span>
+      <span
+        className="uu-bricks-8blp0o"
+      >
+        og-description
+      </span>
+      <span
+        className="uu-bricks-bpsaip"
+      >
+        <Image
+          className="uu-bricks-1r97mlz"
+          height={16}
+          key="favicon"
+          mainAttrs={
+            Object {
+              "onError": [Function],
+            }
+          }
+          responsive={false}
+          src="http://example.com/favicon.ico"
+          width={16}
+        />
+         
+        https://unicorn.com/
+      </span>
+    </span>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.RichLink style="padding:8px; borderRadius: 2px" 1`] = `
-<Link
-  className="uu5-bricks-richlink uu-bricks-1ah52px"
-  href="https://unicorn.com/"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  target="_blank"
-  tooltip="https://unicorn.com/"
->
-  <span
-    className="uu-bricks-ngmb4p"
-  >
-    <Image
-      className="uu-bricks-brwx6p"
-      mainAttrs={
-        Object {
-          "onError": [Function],
-        }
+<Fragment>
+  <Link
+    className="uu5-bricks-richlink uu-bricks-1ah52px"
+    href="https://unicorn.com/"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    ref_={[Function]}
+    style={
+      Object {
+        "borderRadius": "2px",
+        "padding": "8px",
       }
-      responsive={false}
-      src="http://example.com/og-image"
-    />
-  </span>
-  <span
-    className="uu-bricks-1pqzjl"
+    }
+    target="_blank"
+    tooltip="https://unicorn.com/"
   >
     <span
-      className="uu-bricks-14ch3ly"
-    >
-      og-title
-    </span>
-    <span
-      className="uu-bricks-8blp0o"
-    >
-      og-description
-    </span>
-    <span
-      className="uu-bricks-bpsaip"
+      className="uu-bricks-ngmb4p"
     >
       <Image
-        className="uu-bricks-1r97mlz"
-        height={16}
-        key="favicon"
+        className="uu-bricks-brwx6p"
         mainAttrs={
           Object {
             "onError": [Function],
           }
         }
         responsive={false}
-        src="http://example.com/favicon.ico"
-        width={16}
+        src="http://example.com/og-image"
       />
-       
-      https://unicorn.com/
     </span>
-  </span>
-</Link>
+    <span
+      className="uu-bricks-1pqzjl"
+    >
+      <span
+        className="uu-bricks-14ch3ly"
+      >
+        og-title
+      </span>
+      <span
+        className="uu-bricks-8blp0o"
+      >
+        og-description
+      </span>
+      <span
+        className="uu-bricks-bpsaip"
+      >
+        <Image
+          className="uu-bricks-1r97mlz"
+          height={16}
+          key="favicon"
+          mainAttrs={
+            Object {
+              "onError": [Function],
+            }
+          }
+          responsive={false}
+          src="http://example.com/favicon.ico"
+          width={16}
+        />
+         
+        https://unicorn.com/
+      </span>
+    </span>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.RichLink style={"backgroundColor":"red","color":"blue"} 1`] = `
-<Link
-  className="uu5-bricks-richlink uu-bricks-1ah52px"
-  href="https://unicorn.com/"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  target="_blank"
-  tooltip="https://unicorn.com/"
->
-  <span
-    className="uu-bricks-ngmb4p"
-  >
-    <Image
-      className="uu-bricks-brwx6p"
-      mainAttrs={
-        Object {
-          "onError": [Function],
-        }
+<Fragment>
+  <Link
+    className="uu5-bricks-richlink uu-bricks-1ah52px"
+    href="https://unicorn.com/"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    ref_={[Function]}
+    style={
+      Object {
+        "backgroundColor": "red",
+        "color": "blue",
       }
-      responsive={false}
-      src="http://example.com/og-image"
-    />
-  </span>
-  <span
-    className="uu-bricks-1pqzjl"
+    }
+    target="_blank"
+    tooltip="https://unicorn.com/"
   >
     <span
-      className="uu-bricks-14ch3ly"
-    >
-      og-title
-    </span>
-    <span
-      className="uu-bricks-8blp0o"
-    >
-      og-description
-    </span>
-    <span
-      className="uu-bricks-bpsaip"
+      className="uu-bricks-ngmb4p"
     >
       <Image
-        className="uu-bricks-1r97mlz"
-        height={16}
-        key="favicon"
+        className="uu-bricks-brwx6p"
         mainAttrs={
           Object {
             "onError": [Function],
           }
         }
         responsive={false}
-        src="http://example.com/favicon.ico"
-        width={16}
+        src="http://example.com/og-image"
       />
-       
-      https://unicorn.com/
     </span>
-  </span>
-</Link>
+    <span
+      className="uu-bricks-1pqzjl"
+    >
+      <span
+        className="uu-bricks-14ch3ly"
+      >
+        og-title
+      </span>
+      <span
+        className="uu-bricks-8blp0o"
+      >
+        og-description
+      </span>
+      <span
+        className="uu-bricks-bpsaip"
+      >
+        <Image
+          className="uu-bricks-1r97mlz"
+          height={16}
+          key="favicon"
+          mainAttrs={
+            Object {
+              "onError": [Function],
+            }
+          }
+          responsive={false}
+          src="http://example.com/favicon.ico"
+          width={16}
+        />
+         
+        https://unicorn.com/
+      </span>
+    </span>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.RichLink tooltip="My Tooltip" 1`] = `
-<Link
-  className="uu5-bricks-richlink uu-bricks-1ah52px"
-  href="https://unicorn.com/"
-  id="uuID-inner"
-  mainAttrs={
-    Object {
-      "title": "My Tooltip",
-    }
-  }
-  target="_blank"
-  tooltip="My Tooltip"
->
-  <span
-    className="uu-bricks-ngmb4p"
-  >
-    <Image
-      className="uu-bricks-brwx6p"
-      mainAttrs={
-        Object {
-          "onError": [Function],
-        }
+<Fragment>
+  <Link
+    className="uu5-bricks-richlink uu-bricks-1ah52px"
+    href="https://unicorn.com/"
+    id="uuID-inner"
+    mainAttrs={
+      Object {
+        "title": "My Tooltip",
       }
-      responsive={false}
-      src="http://example.com/og-image"
-    />
-  </span>
-  <span
-    className="uu-bricks-1pqzjl"
+    }
+    ref_={[Function]}
+    target="_blank"
+    tooltip="My Tooltip"
   >
     <span
-      className="uu-bricks-14ch3ly"
-    >
-      og-title
-    </span>
-    <span
-      className="uu-bricks-8blp0o"
-    >
-      og-description
-    </span>
-    <span
-      className="uu-bricks-bpsaip"
+      className="uu-bricks-ngmb4p"
     >
       <Image
-        className="uu-bricks-1r97mlz"
-        height={16}
-        key="favicon"
+        className="uu-bricks-brwx6p"
         mainAttrs={
           Object {
             "onError": [Function],
           }
         }
         responsive={false}
-        src="http://example.com/favicon.ico"
-        width={16}
+        src="http://example.com/og-image"
       />
-       
-      https://unicorn.com/
     </span>
-  </span>
-</Link>
+    <span
+      className="uu-bricks-1pqzjl"
+    >
+      <span
+        className="uu-bricks-14ch3ly"
+      >
+        og-title
+      </span>
+      <span
+        className="uu-bricks-8blp0o"
+      >
+        og-description
+      </span>
+      <span
+        className="uu-bricks-bpsaip"
+      >
+        <Image
+          className="uu-bricks-1r97mlz"
+          height={16}
+          key="favicon"
+          mainAttrs={
+            Object {
+              "onError": [Function],
+            }
+          }
+          responsive={false}
+          src="http://example.com/favicon.ico"
+          width={16}
+        />
+         
+        https://unicorn.com/
+      </span>
+    </span>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.RichLink type="full" 1`] = `
-<Link
-  className="uu5-bricks-richlink uu-bricks-1ah52px"
-  href="https://unicorn.com/"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  target="_blank"
-  tooltip="https://unicorn.com/"
->
-  <span
-    className="uu-bricks-ngmb4p"
-  >
-    <Image
-      className="uu-bricks-brwx6p"
-      mainAttrs={
-        Object {
-          "onError": [Function],
-        }
-      }
-      responsive={false}
-      src="http://example.com/og-image"
-    />
-  </span>
-  <span
-    className="uu-bricks-1pqzjl"
+<Fragment>
+  <Link
+    className="uu5-bricks-richlink uu-bricks-1ah52px"
+    href="https://unicorn.com/"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    ref_={[Function]}
+    target="_blank"
+    tooltip="https://unicorn.com/"
   >
     <span
-      className="uu-bricks-14ch3ly"
-    >
-      og-title
-    </span>
-    <span
-      className="uu-bricks-8blp0o"
-    >
-      og-description
-    </span>
-    <span
-      className="uu-bricks-bpsaip"
+      className="uu-bricks-ngmb4p"
     >
       <Image
-        className="uu-bricks-1r97mlz"
-        height={16}
-        key="favicon"
+        className="uu-bricks-brwx6p"
         mainAttrs={
           Object {
             "onError": [Function],
           }
         }
         responsive={false}
-        src="http://example.com/favicon.ico"
-        width={16}
+        src="http://example.com/og-image"
       />
-       
-      https://unicorn.com/
     </span>
-  </span>
-</Link>
+    <span
+      className="uu-bricks-1pqzjl"
+    >
+      <span
+        className="uu-bricks-14ch3ly"
+      >
+        og-title
+      </span>
+      <span
+        className="uu-bricks-8blp0o"
+      >
+        og-description
+      </span>
+      <span
+        className="uu-bricks-bpsaip"
+      >
+        <Image
+          className="uu-bricks-1r97mlz"
+          height={16}
+          key="favicon"
+          mainAttrs={
+            Object {
+              "onError": [Function],
+            }
+          }
+          responsive={false}
+          src="http://example.com/favicon.ico"
+          width={16}
+        />
+         
+        https://unicorn.com/
+      </span>
+    </span>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.RichLink type="simple" 1`] = `
-<Link
-  className="uu5-bricks-richlink uu-bricks-1ah52px"
-  href="https://unicorn.com/"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  target="_blank"
-  tooltip="https://unicorn.com/"
->
-  <span
-    className="uu-bricks-1pqzjl"
+<Fragment>
+  <Link
+    className="uu5-bricks-richlink uu-bricks-1ah52px"
+    href="https://unicorn.com/"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    ref_={[Function]}
+    target="_blank"
+    tooltip="https://unicorn.com/"
   >
     <span
-      className="uu-bricks-14ch3ly"
+      className="uu-bricks-1pqzjl"
     >
-      og-title
-    </span>
-    <span
-      className="uu-bricks-8blp0o"
-    >
-      og-description
-    </span>
-    <span
-      className="uu-bricks-bpsaip"
-    >
-      <Image
-        className="uu-bricks-1r97mlz"
-        height={16}
-        key="favicon"
-        mainAttrs={
-          Object {
-            "onError": [Function],
+      <span
+        className="uu-bricks-14ch3ly"
+      >
+        og-title
+      </span>
+      <span
+        className="uu-bricks-8blp0o"
+      >
+        og-description
+      </span>
+      <span
+        className="uu-bricks-bpsaip"
+      >
+        <Image
+          className="uu-bricks-1r97mlz"
+          height={16}
+          key="favicon"
+          mainAttrs={
+            Object {
+              "onError": [Function],
+            }
           }
-        }
-        responsive={false}
-        src="http://example.com/favicon.ico"
-        width={16}
-      />
-       
-      https://unicorn.com/
+          responsive={false}
+          src="http://example.com/favicon.ico"
+          width={16}
+        />
+         
+        https://unicorn.com/
+      </span>
     </span>
-  </span>
-</Link>
+  </Link>
+</Fragment>
 `;

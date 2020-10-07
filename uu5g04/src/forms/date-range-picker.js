@@ -11,6 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:revision
+// coded: Martin Mach, 04.10.2020
+// reviewed: -
+//@@viewOff:revision
+
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
@@ -721,6 +726,20 @@ export const DateRangePicker = Context.withContext(
         this._popover.close(setStateCallback);
       } else if (typeof setStateCallback === "function") {
         setStateCallback();
+      }
+    },
+
+    _onKeyDown(e, customOnKeyDown) {
+      let opt = { value: this.state.value, event: e, component: this };
+
+      // customOnKeyDown is user function passed to inputAttrs.onKeyDown
+      if (typeof customOnKeyDown === "function") {
+        customOnKeyDown(e, opt);
+      }
+
+      if (typeof this.props.onEnter === "function" && (e.keyCode || e.which) === 13 && !e.shiftKey && !e.ctrlKey) {
+        this.props.onEnter(opt);
+        this._close(true, () => this.focus());
       }
     },
 
@@ -1463,6 +1482,7 @@ export const DateRangePicker = Context.withContext(
           if (!this.isOpen()) {
             this.open();
           } else {
+            this._onEnter(opt);
             this._close(true, () => this.focus());
           }
         } else if (e.which === 40) {
@@ -1501,6 +1521,12 @@ export const DateRangePicker = Context.withContext(
     _removeKeyEvents() {
       UU5.Environment.EventListener.removeWindowEvent("keydown", this.getId());
       UU5.Environment.EventListener.removeWindowEvent("keyup", this.getId());
+    },
+
+    _onEnter(opt) {
+      if (typeof this.props.onEnter === "function") {
+        this.props.onEnter(opt);
+      }
     },
 
     _shouldOpenToContent() {
@@ -1636,7 +1662,7 @@ export const DateRangePicker = Context.withContext(
         size: this.props.size,
         onChange: (e) =>
           this._onChange({ event: e, component: this, value: e.target.value, _data: { right: right, type: "input" } }),
-        onKeyDown: this.onKeyDown,
+        onKeyDown: this._onKeyDown,
         value: right ? this.state.toInputValue || "" : this.state.fromInputValue || "",
         placeholder: right ? this._getToInputPlaceholder() : this._getFromInputPlaceholder(),
         mainAttrs: {},
@@ -1997,7 +2023,7 @@ export const DateRangePicker = Context.withContext(
                 key="input"
                 size={this.props.size}
                 className={mainClassName}
-                onKeyDown={this.onKeyDown}
+                onKeyDown={this._onKeyDown}
                 colorSchema={this.props.colorSchema}
               />,
             ])}

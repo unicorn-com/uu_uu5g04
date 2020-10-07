@@ -456,36 +456,38 @@ exports[`UU5.Bricks.ProgressBar.Item disabled=true 1`] = `
 `;
 
 exports[`UU5.Bricks.ProgressBar.Item docKit examples UU5.Bricks.ProgressBar.Item should render without crash 1`] = `
-<progress-bar-cover
-  className="uu5-bricks-progress-bar uu5-bricks-progress-bar-size-m"
-  content={null}
-  dynamic={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  nestingLevel={null}
->
-  <ProgressBarItem
-    colorSchema="blue"
-    id="uuID2"
-    key="uuID2"
-    progress={20}
-    striped={true}
-  />
-  <ProgressBarItem
-    colorSchema="purple"
-    id="uuID3"
-    key="uuID3"
-    progress={30}
-  />
-  <ProgressBarItem
-    animated={true}
-    colorSchema="red"
-    id="uuID4"
-    key="uuID4"
-    progress={45}
-  />
-</progress-bar-cover>
+<Fragment>
+  <progress-bar-cover
+    className="uu5-bricks-progress-bar uu5-bricks-progress-bar-size-m"
+    content={null}
+    dynamic={false}
+    id="uuID-inner"
+    ignoreInnerHTML={false}
+    mainAttrs={Object {}}
+    nestingLevel={null}
+  >
+    <ProgressBarItem
+      colorSchema="blue"
+      id="uuID2"
+      key="uuID2"
+      progress={20}
+      striped={true}
+    />
+    <ProgressBarItem
+      colorSchema="purple"
+      id="uuID3"
+      key="uuID3"
+      progress={30}
+    />
+    <ProgressBarItem
+      animated={true}
+      colorSchema="red"
+      id="uuID4"
+      key="uuID4"
+      progress={45}
+    />
+  </progress-bar-cover>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ProgressBar.Item dynamic=false 1`] = `

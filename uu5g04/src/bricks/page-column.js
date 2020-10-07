@@ -11,6 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:revision
+// coded: Martin Mach, 01.10.2020
+// reviewed: Filip Janovský, 01.10.2020 - approved
+//@@viewOff:revision
+
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
@@ -148,7 +153,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     let width = this._getWidth(this.props, undefined, this.props.open);
-    let ghostWidth = this._getGhostWidth(this.props, this.props.open, width);
+    let ghostWidth = this._getGhostWidth(this.props, width, this.props.open);
     this._prevWidth = width;
 
     return {
@@ -169,12 +174,12 @@ export const PageColumn = UU5.Common.VisualComponent.create({
   },
 
   UNSAFE_componentWillReceiveProps(nextProps) {
-    let isOpen = nextProps.open !== this.props.open ? nextProps.open : this.isOpen();
-    let width = this._getWidth(nextProps);
-    let ghostWidth = this._getGhostWidth(nextProps, isOpen, width);
+    // nextProps.open isn't used because we have agreed that it will be used only as an initial value (initial state)
+    let width = this._getWidth(nextProps, undefined);
+    let ghostWidth = this._getGhostWidth(nextProps, width);
     if (nextProps.controlled) {
       this._prevWidth = width;
-      this.setState({ open: nextProps.block || nextProps.open, width, ghostWidth });
+      this.setState({ width, ghostWidth });
     } else if (
       nextProps.minWidth !== this.props.minWidth ||
       nextProps.maxWidth !== this.props.maxWidth ||
@@ -282,7 +287,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
         {
           open: true,
           width: this._getWidth(this.props, null, true),
-          ghostWidth: this._getGhostWidth(this.props, true),
+          ghostWidth: this._getGhostWidth(this.props, undefined, true),
         },
         setStateCallback
       );
@@ -302,7 +307,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
         {
           open: false,
           width: this._getWidth(this.props, null, false),
-          ghostWidth: this._getGhostWidth(this.props, false),
+          ghostWidth: this._getGhostWidth(this.props, undefined, false),
         },
         setStateCallback
       );
@@ -625,7 +630,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
       (!this.props.maxResizableWidth || newWidth <= parseFloat(this.props.maxResizableWidth)) &&
       (!this.props.minResizableWidth || newWidth >= parseFloat(this.props.minResizableWidth))
     ) {
-      let ghostWidth = this._getGhostWidth(this.props, this.isOpen(), newWidth);
+      let ghostWidth = this._getGhostWidth(this.props, newWidth, this.isOpen());
 
       this._resized = true;
       this._preventContentRender = true;
@@ -729,21 +734,22 @@ export const PageColumn = UU5.Common.VisualComponent.create({
     return Css.css`${styles}`;
   },
 
-  _getWidth(props = this.props, width, open) {
+  _getWidth(props = this.props, width, isOpen) {
     // If column width is set to percentage value, it is not possible to set the same width on the ghost element
     // because the column (since its fixed) always has its width calculated towards the width of the whole document.
     // Therefore we change % to vw
+
     if (!width) {
+      isOpen =
+        (typeof isOpen === "boolean" && isOpen) || (typeof isOpen !== "boolean" && this.state && this.state.open);
+
       if (!props.block && (props.minWidth || props.maxWidth)) {
         // its openable
 
         if (!props.minWidth && props.maxWidth) {
           // its hidden in it's closed state
           width = props.maxWidth || "0px";
-        } else if (
-          (typeof open === "boolean" && open) ||
-          (typeof open !== "boolean" && this.state && this.state.open)
-        ) {
+        } else if (isOpen) {
           // its open
           width = props.maxWidth || "0px";
         } else {
@@ -770,12 +776,8 @@ export const PageColumn = UU5.Common.VisualComponent.create({
     return width;
   },
 
-  _getGhostWidth(props = this.props, isOpen, newWidth) {
-    if (typeof isOpen === "boolean") {
-      // isOpen = isOpen;
-    } else {
-      isOpen = props.open;
-    }
+  _getGhostWidth(props = this.props, newWidth, isOpen) {
+    isOpen = (typeof isOpen === "boolean" && isOpen) || (typeof isOpen !== "boolean" && this.state && this.state.open);
 
     let width;
 
@@ -813,7 +815,7 @@ export const PageColumn = UU5.Common.VisualComponent.create({
       }
     }
 
-    return this._getWidth(this.props, width);
+    return this._getWidth(this.props, width, isOpen);
   },
 
   _getWrapperProps() {

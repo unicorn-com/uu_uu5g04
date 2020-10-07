@@ -11,12 +11,16 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:revision
+// coded: Martin Mach, 04.10.2020
+// reviewed: -
+//@@viewOff:revision
+
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
 import TextInput from "./internal/text-input.js";
 import Time from "./time.js";
-import InputMixin from "./mixins/input-mixin.js";
 import TextInputMixin from "./mixins/text-input-mixin.js";
 
 import Context from "./form-context.js";
@@ -716,6 +720,7 @@ export const DateTimePicker = Context.withContext(
               this.openTime();
             }
           } else {
+            this._onEnter(opt);
             this._close(true, this._isCalendarOpen() ? this._focusDateInput : this._focusTimeInput);
           }
         } else if (e.which === 40) {
@@ -754,6 +759,12 @@ export const DateTimePicker = Context.withContext(
       UU5.Environment.EventListener.removeWindowEvent("keyup", this.getId());
     },
 
+    _onEnter(opt) {
+      if (typeof this.props.onEnter === "function") {
+        this.props.onEnter(opt);
+      }
+    },
+
     _handleClick(e) {
       // This function can be called twice if clicking inside the component but it doesnt do anything in that case
       let clickData = this._findTarget(e);
@@ -767,7 +778,14 @@ export const DateTimePicker = Context.withContext(
       };
 
       if (canClose) {
-        if (!this.props.disableBackdrop) {
+        //Checked if clicked into components input
+        if (
+          (this._isCalendarOpen() && UU5.Common.DOM.findNode(this._calendarTextInput).contains(e.target)) ||
+          (this._isTimeOpen() && UU5.Common.DOM.findNode(this._timeTextInput).contains(e.target))
+        ) {
+          //Prevent double handle of click by handleClick method otherwise this click closes and reopens popover
+          e.stopPropagation();
+        } else if (!this.props.disableBackdrop) {
           this._close(!canBlur, canBlur ? () => this._onBlur(opt) : undefined);
         } else if (canBlur) {
           this._onBlur(opt);
@@ -846,6 +864,20 @@ export const DateTimePicker = Context.withContext(
         this._timePopover.close(setStateCallback);
       } else if (typeof setStateCallback === "function") {
         setStateCallback();
+      }
+    },
+
+    _onKeyDown(e, customOnKeyDown) {
+      let opt = { value: this.state.value, event: e, component: this };
+
+      // customOnKeyDown is user function passed to inputAttrs.onKeyDown
+      if (typeof customOnKeyDown === "function") {
+        customOnKeyDown(e, opt);
+      }
+
+      if (typeof this.props.onEnter === "function" && (e.keyCode || e.which) === 13 && !e.shiftKey && !e.ctrlKey) {
+        this.props.onEnter(opt);
+        this._close(true, this._isCalendarOpen() ? this._focusDateInput : this._focusTimeInput);
       }
     },
 
@@ -1722,7 +1754,7 @@ export const DateTimePicker = Context.withContext(
                 type="text"
                 onChange={this._onChangeDate}
                 onFocus={!this.isReadOnly() && !this.isComputedDisabled() ? this._handleFocus : null}
-                onKeyDown={this.onKeyDown}
+                onKeyDown={this._onKeyDown}
                 mainAttrs={this._getDateInputAttrs()}
                 disabled={this.isComputedDisabled()}
                 readonly={this.isReadOnly()}
@@ -1750,7 +1782,7 @@ export const DateTimePicker = Context.withContext(
                 type="text"
                 onChange={this._onChangeTime}
                 onFocus={!this.isReadOnly() && !this.isComputedDisabled() ? this._handleFocus : null}
-                onKeyDown={this.onKeyDown}
+                onKeyDown={this._onKeyDown}
                 mainAttrs={this._getTimeInputAttrs()}
                 disabled={this.isComputedDisabled()}
                 readonly={this.isReadOnly()}

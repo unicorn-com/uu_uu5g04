@@ -4771,6 +4771,263 @@ exports[`UU5.Bricks.Page left={"key":"0","ref":null,"props":{"id":"uuIDdiv","chi
 </ContextProvider>
 `;
 
+exports[`UU5.Bricks.Page leftClosed={"key":"0","ref":null,"props":{"id":"S01","children":[{"type":"br","key":null,"ref":null,"props":{},"_owner":null,"_store":{}},{"key":null,"ref":null,"props":{"id":"C01","children":{"key":null,"ref":null,"props":{"id":"BTN01","vertical":true,"children":{"key":null,"ref":null,"props":{"colorSchema":"primary","id":"toggleRight","children":{"key":null,"ref":null,"props":{"id":"uuIcon","icon":"mdi-arrow-left-bold-circle-outline","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"clickable":true,"src":"","authenticate":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","displayBlock":false,"pressed":false,"bgStyle":"filled","onClick":null,"onWheelClick":null,"onCtrlClick":null,"href":null,"target":"_self","smoothScroll":1000,"offset":0,"borderRadius":null,"elevation":null,"elevationHover":null,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"colorSchema":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","allowTags":[],"borderRadius":null,"elevation":0,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"increaseLevel":false,"header":null,"footer":null,"underline":false,"pureRender":false,"noSpacing":false,"width":null,"colWidth":null},"_owner":null,"_store":{}}],"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"increaseLevel":false,"header":null,"footer":null,"underline":false,"colorSchema":null},"_owner":null,"_store":{}} 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "getPortalElement": [Function],
+    }
+  }
+>
+  <ContextProvider
+    value={
+      Object {
+        "getPopover": [Function],
+      }
+    }
+  >
+    <Div
+      className="uu5-bricks-page uu5-bricks-page-type-1 uu5-bricks-page-full"
+      id="uuID-inner"
+      leftSwipe={false}
+      mainAttrs={Object {}}
+      rightSwipe={false}
+      screenSize="l"
+    >
+      <Div
+        className="uu5-bricks-page-app-layer"
+        controlled={false}
+        dynamic={true}
+        pureRender={true}
+        ref_={[Function]}
+      />
+      <Div
+        className="uu5-bricks-page-system-layer"
+        controlled={false}
+        dynamic={true}
+        pureRender={true}
+        ref_={[Function]}
+      />
+      <div
+        className="uu5-bricks-page-alert-bus-portal"
+        key="alert-bus-portal"
+      />
+      <div
+        className="uu5-bricks-page-modal-portal"
+        key="modal-portal"
+      />
+      <forwardRef(Popover)
+        className="uu5-bricks-page-popover uu5-elevation-5"
+        controlled={false}
+        id="uuID_popover"
+        key="popover"
+        pureRender={true}
+        ref_={[Function]}
+      />
+      <div
+        className="uu5-bricks-page-popover-portal"
+        key="popover-portal"
+      />
+      <Row
+        className="uu5-bricks-page-flex-grow uu5-bricks-page-overflow uu5-bricks-page-bottom-ie-fix"
+        display="flex"
+      >
+        <PageColumn
+          block={true}
+          bottomId="uuID-bottom"
+          className=" uu5-bricks-page-left"
+          closedContent={
+            <Section
+              className={null}
+              colorSchema={null}
+              content={null}
+              controlled={true}
+              disabled={false}
+              dynamic={false}
+              footer={null}
+              header={null}
+              hidden={false}
+              id="S01"
+              ignoreInnerHTML={false}
+              increaseLevel={false}
+              level={null}
+              mainAttrs={null}
+              name={null}
+              nestingLevel={null}
+              noIndex={false}
+              parent={null}
+              pureRender={false}
+              ref_={[Function]}
+              selected={false}
+              style={null}
+              tooltip={null}
+              underline={false}
+            >
+              <br />
+              <Column
+                className={null}
+                colWidth={null}
+                content={null}
+                controlled={true}
+                disabled={false}
+                dynamic={false}
+                footer={null}
+                header={null}
+                hidden={false}
+                id="C01"
+                ignoreInnerHTML={false}
+                increaseLevel={false}
+                level={null}
+                mainAttrs={null}
+                name={null}
+                nestingLevel={null}
+                noIndex={false}
+                noSpacing={false}
+                parent={null}
+                pureRender={false}
+                ref_={null}
+                selected={false}
+                style={null}
+                tooltip={null}
+                underline={false}
+                width={null}
+              >
+                <ButtonGroup
+                  allowTags={Array []}
+                  baseline={false}
+                  borderRadius={null}
+                  className={null}
+                  colorSchema={null}
+                  content={null}
+                  controlled={true}
+                  disabled={false}
+                  dynamic={false}
+                  elevation={0}
+                  hidden={false}
+                  id="BTN01"
+                  ignoreInnerHTML={false}
+                  mainAttrs={null}
+                  name={null}
+                  nestingLevel={null}
+                  noIndex={false}
+                  parent={null}
+                  pureRender={false}
+                  ref_={null}
+                  selected={false}
+                  size="m"
+                  style={null}
+                  tooltip={null}
+                  vertical={true}
+                >
+                  <Button
+                    baseline={false}
+                    bgStyle="filled"
+                    borderRadius={null}
+                    className={null}
+                    colorSchema="primary"
+                    content={null}
+                    controlled={true}
+                    disabled={false}
+                    displayBlock={false}
+                    dynamic={false}
+                    elevation={null}
+                    elevationHover={null}
+                    hidden={false}
+                    href={null}
+                    id="toggleRight"
+                    ignoreInnerHTML={false}
+                    mainAttrs={null}
+                    name={null}
+                    nestingLevel={null}
+                    noIndex={false}
+                    offset={0}
+                    onClick={null}
+                    onCtrlClick={null}
+                    onWheelClick={null}
+                    parent={null}
+                    pressed={false}
+                    pureRender={false}
+                    ref_={null}
+                    selected={false}
+                    size="m"
+                    smoothScroll={1000}
+                    style={null}
+                    target="_self"
+                    tooltip={null}
+                  >
+                    <Icon
+                      authenticate={false}
+                      className={null}
+                      clickable={true}
+                      controlled={true}
+                      disabled={false}
+                      hidden={false}
+                      icon="mdi-arrow-left-bold-circle-outline"
+                      id="uuIcon"
+                      mainAttrs={null}
+                      name={null}
+                      nestingLevel={null}
+                      noIndex={false}
+                      parent={null}
+                      pureRender={false}
+                      ref_={null}
+                      selected={false}
+                      src=""
+                      style={null}
+                      tooltip={null}
+                    />
+                  </Button>
+                </ButtonGroup>
+              </Column>
+            </Section>
+          }
+          contentId="uuID-content"
+          controlled={false}
+          onResize={[Function]}
+          overlayBottom={true}
+          overlayTop={true}
+          pureRender={true}
+          ref_={[Function]}
+          topId="uuID-top"
+          width="0%"
+        />
+        <Div
+          className=" uu5-bricks-page-content uu5-bricks-page-flex-basis uu5-bricks-page-flex-grow"
+          id="uuID-content"
+          pureRender={true}
+          ref_={[Function]}
+        >
+          <Div
+            className="uu5-bricks-page-content-body"
+            pureRender={true}
+          >
+            <UpdateWrapper />
+          </Div>
+        </Div>
+        <PageColumn
+          block={true}
+          bottomId="uuID-bottom"
+          className=" uu5-bricks-page-right"
+          contentId="uuID-content"
+          controlled={false}
+          onResize={[Function]}
+          overlayBottom={true}
+          overlayTop={true}
+          pureRender={true}
+          ref_={[Function]}
+          right={true}
+          topId="uuID-top"
+          width="0%"
+        />
+        <ResizeObserver
+          onResize={[Function]}
+        />
+      </Row>
+    </Div>
+  </ContextProvider>
+</ContextProvider>
+`;
+
 exports[`UU5.Bricks.Page leftClosed={"key":"0","ref":null,"props":{"id":"S01","children":[{"type":"br","key":null,"ref":null,"props":{},"_owner":null,"_store":{}},{"key":null,"ref":null,"props":{"id":"C01","children":{"key":null,"ref":null,"props":{"id":"BTN01","vertical":true,"children":{"key":null,"ref":null,"props":{"colorSchema":"primary","id":"toggleRight","children":{"key":null,"ref":null,"props":{"id":"uuIcon","icon":"mdi-arrow-left-bold-circle-outline","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"clickable":true,"src":"","authenticate":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","displayBlock":false,"pressed":false,"bgStyle":"filled","onClick":null,"onWheelClick":null,"onCtrlClick":null,"href":null,"target":"_self","smoothScroll":1000,"offset":0,"borderRadius":null,"elevation":null,"elevationHover":null,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"colorSchema":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","allowTags":[],"borderRadius":null,"elevation":null,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"increaseLevel":false,"header":null,"footer":null,"underline":false,"pureRender":false,"noSpacing":false,"width":null,"colWidth":null},"_owner":null,"_store":{}}],"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"increaseLevel":false,"header":null,"footer":null,"underline":false,"colorSchema":null},"_owner":null,"_store":{}} 1`] = `
 <ContextProvider
   value={
@@ -5209,6 +5466,243 @@ exports[`UU5.Bricks.Page leftFixed=true 1`] = `
           controlled={false}
           fixed={true}
           onResize={[Function]}
+          overlayBottom={true}
+          overlayTop={true}
+          pureRender={true}
+          ref_={[Function]}
+          topId="uuID-top"
+          width="0%"
+        />
+        <Div
+          className=" uu5-bricks-page-content uu5-bricks-page-flex-basis uu5-bricks-page-flex-grow"
+          id="uuID-content"
+          pureRender={true}
+          ref_={[Function]}
+        >
+          <Div
+            className="uu5-bricks-page-content-body"
+            pureRender={true}
+          >
+            <UpdateWrapper />
+          </Div>
+        </Div>
+        <PageColumn
+          block={true}
+          bottomId="uuID-bottom"
+          className=" uu5-bricks-page-right"
+          contentId="uuID-content"
+          controlled={false}
+          onResize={[Function]}
+          overlayBottom={true}
+          overlayTop={true}
+          pureRender={true}
+          ref_={[Function]}
+          right={true}
+          topId="uuID-top"
+          width="0%"
+        />
+        <ResizeObserver
+          onResize={[Function]}
+        />
+      </Row>
+    </Div>
+  </ContextProvider>
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Page leftOpen={"key":"0","ref":null,"props":{"id":"idSection1","children":[{"type":"br","key":null,"ref":null,"props":{},"_owner":null,"_store":{}},{"key":null,"ref":null,"props":{"id":"uuIDColumn1","children":{"key":null,"ref":null,"props":{"id":"butGRPPID","vertical":true,"children":{"key":null,"ref":null,"props":{"id":"idBTN","colorSchema":"primary","children":"Home","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","displayBlock":false,"pressed":false,"bgStyle":"filled","onClick":null,"onWheelClick":null,"onCtrlClick":null,"href":null,"target":"_self","smoothScroll":1000,"offset":0,"borderRadius":null,"elevation":null,"elevationHover":null,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"colorSchema":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","allowTags":[],"borderRadius":null,"elevation":0,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"increaseLevel":false,"header":null,"footer":null,"underline":false,"pureRender":false,"noSpacing":false,"width":null,"colWidth":null},"_owner":null,"_store":{}}],"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"increaseLevel":false,"header":null,"footer":null,"underline":false,"colorSchema":null},"_owner":null,"_store":{}} 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "getPortalElement": [Function],
+    }
+  }
+>
+  <ContextProvider
+    value={
+      Object {
+        "getPopover": [Function],
+      }
+    }
+  >
+    <Div
+      className="uu5-bricks-page uu5-bricks-page-type-1 uu5-bricks-page-full"
+      id="uuID-inner"
+      leftSwipe={false}
+      mainAttrs={Object {}}
+      rightSwipe={false}
+      screenSize="l"
+    >
+      <Div
+        className="uu5-bricks-page-app-layer"
+        controlled={false}
+        dynamic={true}
+        pureRender={true}
+        ref_={[Function]}
+      />
+      <Div
+        className="uu5-bricks-page-system-layer"
+        controlled={false}
+        dynamic={true}
+        pureRender={true}
+        ref_={[Function]}
+      />
+      <div
+        className="uu5-bricks-page-alert-bus-portal"
+        key="alert-bus-portal"
+      />
+      <div
+        className="uu5-bricks-page-modal-portal"
+        key="modal-portal"
+      />
+      <forwardRef(Popover)
+        className="uu5-bricks-page-popover uu5-elevation-5"
+        controlled={false}
+        id="uuID_popover"
+        key="popover"
+        pureRender={true}
+        ref_={[Function]}
+      />
+      <div
+        className="uu5-bricks-page-popover-portal"
+        key="popover-portal"
+      />
+      <Row
+        className="uu5-bricks-page-flex-grow uu5-bricks-page-overflow uu5-bricks-page-bottom-ie-fix"
+        display="flex"
+      >
+        <PageColumn
+          block={true}
+          bottomId="uuID-bottom"
+          className=" uu5-bricks-page-left"
+          contentId="uuID-content"
+          controlled={false}
+          onResize={[Function]}
+          openContent={
+            <Section
+              className={null}
+              colorSchema={null}
+              content={null}
+              controlled={true}
+              disabled={false}
+              dynamic={false}
+              footer={null}
+              header={null}
+              hidden={false}
+              id="idSection1"
+              ignoreInnerHTML={false}
+              increaseLevel={false}
+              level={null}
+              mainAttrs={null}
+              name={null}
+              nestingLevel={null}
+              noIndex={false}
+              parent={null}
+              pureRender={false}
+              ref_={[Function]}
+              selected={false}
+              style={null}
+              tooltip={null}
+              underline={false}
+            >
+              <br />
+              <Column
+                className={null}
+                colWidth={null}
+                content={null}
+                controlled={true}
+                disabled={false}
+                dynamic={false}
+                footer={null}
+                header={null}
+                hidden={false}
+                id="uuIDColumn1"
+                ignoreInnerHTML={false}
+                increaseLevel={false}
+                level={null}
+                mainAttrs={null}
+                name={null}
+                nestingLevel={null}
+                noIndex={false}
+                noSpacing={false}
+                parent={null}
+                pureRender={false}
+                ref_={null}
+                selected={false}
+                style={null}
+                tooltip={null}
+                underline={false}
+                width={null}
+              >
+                <ButtonGroup
+                  allowTags={Array []}
+                  baseline={false}
+                  borderRadius={null}
+                  className={null}
+                  colorSchema={null}
+                  content={null}
+                  controlled={true}
+                  disabled={false}
+                  dynamic={false}
+                  elevation={0}
+                  hidden={false}
+                  id="butGRPPID"
+                  ignoreInnerHTML={false}
+                  mainAttrs={null}
+                  name={null}
+                  nestingLevel={null}
+                  noIndex={false}
+                  parent={null}
+                  pureRender={false}
+                  ref_={null}
+                  selected={false}
+                  size="m"
+                  style={null}
+                  tooltip={null}
+                  vertical={true}
+                >
+                  <Button
+                    baseline={false}
+                    bgStyle="filled"
+                    borderRadius={null}
+                    className={null}
+                    colorSchema="primary"
+                    content={null}
+                    controlled={true}
+                    disabled={false}
+                    displayBlock={false}
+                    dynamic={false}
+                    elevation={null}
+                    elevationHover={null}
+                    hidden={false}
+                    href={null}
+                    id="idBTN"
+                    ignoreInnerHTML={false}
+                    mainAttrs={null}
+                    name={null}
+                    nestingLevel={null}
+                    noIndex={false}
+                    offset={0}
+                    onClick={null}
+                    onCtrlClick={null}
+                    onWheelClick={null}
+                    parent={null}
+                    pressed={false}
+                    pureRender={false}
+                    ref_={null}
+                    selected={false}
+                    size="m"
+                    smoothScroll={1000}
+                    style={null}
+                    target="_self"
+                    tooltip={null}
+                  >
+                    Home
+                  </Button>
+                </ButtonGroup>
+              </Column>
+            </Section>
+          }
           overlayBottom={true}
           overlayTop={true}
           pureRender={true}
@@ -7412,6 +7906,127 @@ exports[`UU5.Bricks.Page modal={"key":"0","ref":null,"props":{"id":"uuMODAL","co
 </ContextProvider>
 `;
 
+exports[`UU5.Bricks.Page modal={"key":"0","ref":null,"props":{"id":"uuMODAL","content":"Content","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"ignoreInnerHTML":false,"dynamic":false,"level":null,"increaseLevel":false,"header":null,"footer":null,"underline":false,"nestingLevel":null,"size":"m","shown":false,"sticky":false,"stickyBackground":true,"scrollableBackground":false,"forceRender":false,"onClose":null,"overflow":false,"offsetTop":null},"_owner":null,"_store":{}} 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "getPortalElement": [Function],
+    }
+  }
+>
+  <ContextProvider
+    value={
+      Object {
+        "getPopover": [Function],
+      }
+    }
+  >
+    <Div
+      className="uu5-bricks-page uu5-bricks-page-type-1 uu5-bricks-page-full"
+      id="uuID-inner"
+      leftSwipe={false}
+      mainAttrs={Object {}}
+      rightSwipe={false}
+      screenSize="l"
+    >
+      <Div
+        className="uu5-bricks-page-app-layer"
+        controlled={false}
+        dynamic={true}
+        pureRender={true}
+        ref_={[Function]}
+      />
+      <Div
+        className="uu5-bricks-page-system-layer"
+        controlled={false}
+        dynamic={true}
+        pureRender={true}
+        ref_={[Function]}
+      />
+      <div
+        className="uu5-bricks-page-alert-bus-portal"
+        key="alert-bus-portal"
+      />
+      <Modal
+        className="uu5-bricks-page-modal uu5-elevation-5"
+        content="Content"
+        controlled={false}
+        id="uuMODAL"
+        key="modal"
+        pureRender={true}
+        ref_={[Function]}
+      />
+      <div
+        className="uu5-bricks-page-modal-portal"
+        key="modal-portal"
+      />
+      <forwardRef(Popover)
+        className="uu5-bricks-page-popover uu5-elevation-5"
+        controlled={false}
+        id="uuID_popover"
+        key="popover"
+        pureRender={true}
+        ref_={[Function]}
+      />
+      <div
+        className="uu5-bricks-page-popover-portal"
+        key="popover-portal"
+      />
+      <Row
+        className="uu5-bricks-page-flex-grow uu5-bricks-page-overflow uu5-bricks-page-bottom-ie-fix"
+        display="flex"
+      >
+        <PageColumn
+          block={true}
+          bottomId="uuID-bottom"
+          className=" uu5-bricks-page-left"
+          contentId="uuID-content"
+          controlled={false}
+          onResize={[Function]}
+          overlayBottom={true}
+          overlayTop={true}
+          pureRender={true}
+          ref_={[Function]}
+          topId="uuID-top"
+          width="0%"
+        />
+        <Div
+          className=" uu5-bricks-page-content uu5-bricks-page-flex-basis uu5-bricks-page-flex-grow"
+          id="uuID-content"
+          pureRender={true}
+          ref_={[Function]}
+        >
+          <Div
+            className="uu5-bricks-page-content-body"
+            pureRender={true}
+          >
+            <UpdateWrapper />
+          </Div>
+        </Div>
+        <PageColumn
+          block={true}
+          bottomId="uuID-bottom"
+          className=" uu5-bricks-page-right"
+          contentId="uuID-content"
+          controlled={false}
+          onResize={[Function]}
+          overlayBottom={true}
+          overlayTop={true}
+          pureRender={true}
+          ref_={[Function]}
+          right={true}
+          topId="uuID-top"
+          width="0%"
+        />
+        <ResizeObserver
+          onResize={[Function]}
+        />
+      </Row>
+    </Div>
+  </ContextProvider>
+</ContextProvider>
+`;
+
 exports[`UU5.Bricks.Page name="myName" 1`] = `
 <ContextProvider
   value={
@@ -9447,6 +10062,263 @@ exports[`UU5.Bricks.Page right={"key":"0","ref":null,"props":{"id":"uuIDdiv_R_R_
 </ContextProvider>
 `;
 
+exports[`UU5.Bricks.Page rightClosed={"key":"0","ref":null,"props":{"id":"S01_R","children":[{"type":"br","key":null,"ref":null,"props":{},"_owner":null,"_store":{}},{"key":null,"ref":null,"props":{"id":"C01_R","children":{"key":null,"ref":null,"props":{"id":"BTN01_R","vertical":true,"children":{"key":null,"ref":null,"props":{"colorSchema":"primary","id":"toggleRight_R","children":{"key":null,"ref":null,"props":{"id":"uuIcon_R","icon":"mdi-arrow-left-bold-circle-outline","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"clickable":true,"src":"","authenticate":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","displayBlock":false,"pressed":false,"bgStyle":"filled","onClick":null,"onWheelClick":null,"onCtrlClick":null,"href":null,"target":"_self","smoothScroll":1000,"offset":0,"borderRadius":null,"elevation":null,"elevationHover":null,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"colorSchema":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","allowTags":[],"borderRadius":null,"elevation":0,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"increaseLevel":false,"header":null,"footer":null,"underline":false,"pureRender":false,"noSpacing":false,"width":null,"colWidth":null},"_owner":null,"_store":{}}],"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"increaseLevel":false,"header":null,"footer":null,"underline":false,"colorSchema":null},"_owner":null,"_store":{}} 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "getPortalElement": [Function],
+    }
+  }
+>
+  <ContextProvider
+    value={
+      Object {
+        "getPopover": [Function],
+      }
+    }
+  >
+    <Div
+      className="uu5-bricks-page uu5-bricks-page-type-1 uu5-bricks-page-full"
+      id="uuID-inner"
+      leftSwipe={false}
+      mainAttrs={Object {}}
+      rightSwipe={false}
+      screenSize="l"
+    >
+      <Div
+        className="uu5-bricks-page-app-layer"
+        controlled={false}
+        dynamic={true}
+        pureRender={true}
+        ref_={[Function]}
+      />
+      <Div
+        className="uu5-bricks-page-system-layer"
+        controlled={false}
+        dynamic={true}
+        pureRender={true}
+        ref_={[Function]}
+      />
+      <div
+        className="uu5-bricks-page-alert-bus-portal"
+        key="alert-bus-portal"
+      />
+      <div
+        className="uu5-bricks-page-modal-portal"
+        key="modal-portal"
+      />
+      <forwardRef(Popover)
+        className="uu5-bricks-page-popover uu5-elevation-5"
+        controlled={false}
+        id="uuID_popover"
+        key="popover"
+        pureRender={true}
+        ref_={[Function]}
+      />
+      <div
+        className="uu5-bricks-page-popover-portal"
+        key="popover-portal"
+      />
+      <Row
+        className="uu5-bricks-page-flex-grow uu5-bricks-page-overflow uu5-bricks-page-bottom-ie-fix"
+        display="flex"
+      >
+        <PageColumn
+          block={true}
+          bottomId="uuID-bottom"
+          className=" uu5-bricks-page-left"
+          contentId="uuID-content"
+          controlled={false}
+          onResize={[Function]}
+          overlayBottom={true}
+          overlayTop={true}
+          pureRender={true}
+          ref_={[Function]}
+          topId="uuID-top"
+          width="0%"
+        />
+        <Div
+          className=" uu5-bricks-page-content uu5-bricks-page-flex-basis uu5-bricks-page-flex-grow"
+          id="uuID-content"
+          pureRender={true}
+          ref_={[Function]}
+        >
+          <Div
+            className="uu5-bricks-page-content-body"
+            pureRender={true}
+          >
+            <UpdateWrapper />
+          </Div>
+        </Div>
+        <PageColumn
+          block={true}
+          bottomId="uuID-bottom"
+          className=" uu5-bricks-page-right"
+          closedContent={
+            <Section
+              className={null}
+              colorSchema={null}
+              content={null}
+              controlled={true}
+              disabled={false}
+              dynamic={false}
+              footer={null}
+              header={null}
+              hidden={false}
+              id="S01_R"
+              ignoreInnerHTML={false}
+              increaseLevel={false}
+              level={null}
+              mainAttrs={null}
+              name={null}
+              nestingLevel={null}
+              noIndex={false}
+              parent={null}
+              pureRender={false}
+              ref_={[Function]}
+              selected={false}
+              style={null}
+              tooltip={null}
+              underline={false}
+            >
+              <br />
+              <Column
+                className={null}
+                colWidth={null}
+                content={null}
+                controlled={true}
+                disabled={false}
+                dynamic={false}
+                footer={null}
+                header={null}
+                hidden={false}
+                id="C01_R"
+                ignoreInnerHTML={false}
+                increaseLevel={false}
+                level={null}
+                mainAttrs={null}
+                name={null}
+                nestingLevel={null}
+                noIndex={false}
+                noSpacing={false}
+                parent={null}
+                pureRender={false}
+                ref_={null}
+                selected={false}
+                style={null}
+                tooltip={null}
+                underline={false}
+                width={null}
+              >
+                <ButtonGroup
+                  allowTags={Array []}
+                  baseline={false}
+                  borderRadius={null}
+                  className={null}
+                  colorSchema={null}
+                  content={null}
+                  controlled={true}
+                  disabled={false}
+                  dynamic={false}
+                  elevation={0}
+                  hidden={false}
+                  id="BTN01_R"
+                  ignoreInnerHTML={false}
+                  mainAttrs={null}
+                  name={null}
+                  nestingLevel={null}
+                  noIndex={false}
+                  parent={null}
+                  pureRender={false}
+                  ref_={null}
+                  selected={false}
+                  size="m"
+                  style={null}
+                  tooltip={null}
+                  vertical={true}
+                >
+                  <Button
+                    baseline={false}
+                    bgStyle="filled"
+                    borderRadius={null}
+                    className={null}
+                    colorSchema="primary"
+                    content={null}
+                    controlled={true}
+                    disabled={false}
+                    displayBlock={false}
+                    dynamic={false}
+                    elevation={null}
+                    elevationHover={null}
+                    hidden={false}
+                    href={null}
+                    id="toggleRight_R"
+                    ignoreInnerHTML={false}
+                    mainAttrs={null}
+                    name={null}
+                    nestingLevel={null}
+                    noIndex={false}
+                    offset={0}
+                    onClick={null}
+                    onCtrlClick={null}
+                    onWheelClick={null}
+                    parent={null}
+                    pressed={false}
+                    pureRender={false}
+                    ref_={null}
+                    selected={false}
+                    size="m"
+                    smoothScroll={1000}
+                    style={null}
+                    target="_self"
+                    tooltip={null}
+                  >
+                    <Icon
+                      authenticate={false}
+                      className={null}
+                      clickable={true}
+                      controlled={true}
+                      disabled={false}
+                      hidden={false}
+                      icon="mdi-arrow-left-bold-circle-outline"
+                      id="uuIcon_R"
+                      mainAttrs={null}
+                      name={null}
+                      nestingLevel={null}
+                      noIndex={false}
+                      parent={null}
+                      pureRender={false}
+                      ref_={null}
+                      selected={false}
+                      src=""
+                      style={null}
+                      tooltip={null}
+                    />
+                  </Button>
+                </ButtonGroup>
+              </Column>
+            </Section>
+          }
+          contentId="uuID-content"
+          controlled={false}
+          onResize={[Function]}
+          overlayBottom={true}
+          overlayTop={true}
+          pureRender={true}
+          ref_={[Function]}
+          right={true}
+          topId="uuID-top"
+          width="0%"
+        />
+        <ResizeObserver
+          onResize={[Function]}
+        />
+      </Row>
+    </Div>
+  </ContextProvider>
+</ContextProvider>
+`;
+
 exports[`UU5.Bricks.Page rightClosed={"key":"0","ref":null,"props":{"id":"S01_R","children":[{"type":"br","key":null,"ref":null,"props":{},"_owner":null,"_store":{}},{"key":null,"ref":null,"props":{"id":"C01_R","children":{"key":null,"ref":null,"props":{"id":"BTN01_R","vertical":true,"children":{"key":null,"ref":null,"props":{"colorSchema":"primary","id":"toggleRight_R","children":{"key":null,"ref":null,"props":{"id":"uuIcon_R","icon":"mdi-arrow-left-bold-circle-outline","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"clickable":true,"src":"","authenticate":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","displayBlock":false,"pressed":false,"bgStyle":"filled","onClick":null,"onWheelClick":null,"onCtrlClick":null,"href":null,"target":"_self","smoothScroll":1000,"offset":0,"borderRadius":null,"elevation":null,"elevationHover":null,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"colorSchema":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","allowTags":[],"borderRadius":null,"elevation":null,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"increaseLevel":false,"header":null,"footer":null,"underline":false,"pureRender":false,"noSpacing":false,"width":null,"colWidth":null},"_owner":null,"_store":{}}],"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"increaseLevel":false,"header":null,"footer":null,"underline":false,"colorSchema":null},"_owner":null,"_store":{}} 1`] = `
 <ContextProvider
   value={
@@ -9912,6 +10784,243 @@ exports[`UU5.Bricks.Page rightFixed=true 1`] = `
           controlled={false}
           fixed={true}
           onResize={[Function]}
+          overlayBottom={true}
+          overlayTop={true}
+          pureRender={true}
+          ref_={[Function]}
+          right={true}
+          topId="uuID-top"
+          width="0%"
+        />
+        <ResizeObserver
+          onResize={[Function]}
+        />
+      </Row>
+    </Div>
+  </ContextProvider>
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Page rightOpen={"key":"0","ref":null,"props":{"id":"idSection1_R_R","children":[{"type":"br","key":null,"ref":null,"props":{},"_owner":null,"_store":{}},{"key":null,"ref":null,"props":{"id":"uuIDColumn1_R_R","children":{"key":null,"ref":null,"props":{"id":"butGRPPID_R_R","vertical":true,"children":{"key":null,"ref":null,"props":{"id":"idBTN_R_R","colorSchema":"primary","children":"Home","name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","displayBlock":false,"pressed":false,"bgStyle":"filled","onClick":null,"onWheelClick":null,"onCtrlClick":null,"href":null,"target":"_self","smoothScroll":1000,"offset":0,"borderRadius":null,"elevation":null,"elevationHover":null,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"colorSchema":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"pureRender":false,"size":"m","allowTags":[],"borderRadius":null,"elevation":0,"baseline":false},"_owner":null,"_store":{}},"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"increaseLevel":false,"header":null,"footer":null,"underline":false,"pureRender":false,"noSpacing":false,"width":null,"colWidth":null},"_owner":null,"_store":{}}],"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"pureRender":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"nestingLevel":null,"content":null,"ignoreInnerHTML":false,"dynamic":false,"level":null,"increaseLevel":false,"header":null,"footer":null,"underline":false,"colorSchema":null},"_owner":null,"_store":{}} 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "getPortalElement": [Function],
+    }
+  }
+>
+  <ContextProvider
+    value={
+      Object {
+        "getPopover": [Function],
+      }
+    }
+  >
+    <Div
+      className="uu5-bricks-page uu5-bricks-page-type-1 uu5-bricks-page-full"
+      id="uuID-inner"
+      leftSwipe={false}
+      mainAttrs={Object {}}
+      rightSwipe={false}
+      screenSize="l"
+    >
+      <Div
+        className="uu5-bricks-page-app-layer"
+        controlled={false}
+        dynamic={true}
+        pureRender={true}
+        ref_={[Function]}
+      />
+      <Div
+        className="uu5-bricks-page-system-layer"
+        controlled={false}
+        dynamic={true}
+        pureRender={true}
+        ref_={[Function]}
+      />
+      <div
+        className="uu5-bricks-page-alert-bus-portal"
+        key="alert-bus-portal"
+      />
+      <div
+        className="uu5-bricks-page-modal-portal"
+        key="modal-portal"
+      />
+      <forwardRef(Popover)
+        className="uu5-bricks-page-popover uu5-elevation-5"
+        controlled={false}
+        id="uuID_popover"
+        key="popover"
+        pureRender={true}
+        ref_={[Function]}
+      />
+      <div
+        className="uu5-bricks-page-popover-portal"
+        key="popover-portal"
+      />
+      <Row
+        className="uu5-bricks-page-flex-grow uu5-bricks-page-overflow uu5-bricks-page-bottom-ie-fix"
+        display="flex"
+      >
+        <PageColumn
+          block={true}
+          bottomId="uuID-bottom"
+          className=" uu5-bricks-page-left"
+          contentId="uuID-content"
+          controlled={false}
+          onResize={[Function]}
+          overlayBottom={true}
+          overlayTop={true}
+          pureRender={true}
+          ref_={[Function]}
+          topId="uuID-top"
+          width="0%"
+        />
+        <Div
+          className=" uu5-bricks-page-content uu5-bricks-page-flex-basis uu5-bricks-page-flex-grow"
+          id="uuID-content"
+          pureRender={true}
+          ref_={[Function]}
+        >
+          <Div
+            className="uu5-bricks-page-content-body"
+            pureRender={true}
+          >
+            <UpdateWrapper />
+          </Div>
+        </Div>
+        <PageColumn
+          block={true}
+          bottomId="uuID-bottom"
+          className=" uu5-bricks-page-right"
+          contentId="uuID-content"
+          controlled={false}
+          onResize={[Function]}
+          openContent={
+            <Section
+              className={null}
+              colorSchema={null}
+              content={null}
+              controlled={true}
+              disabled={false}
+              dynamic={false}
+              footer={null}
+              header={null}
+              hidden={false}
+              id="idSection1_R_R"
+              ignoreInnerHTML={false}
+              increaseLevel={false}
+              level={null}
+              mainAttrs={null}
+              name={null}
+              nestingLevel={null}
+              noIndex={false}
+              parent={null}
+              pureRender={false}
+              ref_={[Function]}
+              selected={false}
+              style={null}
+              tooltip={null}
+              underline={false}
+            >
+              <br />
+              <Column
+                className={null}
+                colWidth={null}
+                content={null}
+                controlled={true}
+                disabled={false}
+                dynamic={false}
+                footer={null}
+                header={null}
+                hidden={false}
+                id="uuIDColumn1_R_R"
+                ignoreInnerHTML={false}
+                increaseLevel={false}
+                level={null}
+                mainAttrs={null}
+                name={null}
+                nestingLevel={null}
+                noIndex={false}
+                noSpacing={false}
+                parent={null}
+                pureRender={false}
+                ref_={null}
+                selected={false}
+                style={null}
+                tooltip={null}
+                underline={false}
+                width={null}
+              >
+                <ButtonGroup
+                  allowTags={Array []}
+                  baseline={false}
+                  borderRadius={null}
+                  className={null}
+                  colorSchema={null}
+                  content={null}
+                  controlled={true}
+                  disabled={false}
+                  dynamic={false}
+                  elevation={0}
+                  hidden={false}
+                  id="butGRPPID_R_R"
+                  ignoreInnerHTML={false}
+                  mainAttrs={null}
+                  name={null}
+                  nestingLevel={null}
+                  noIndex={false}
+                  parent={null}
+                  pureRender={false}
+                  ref_={null}
+                  selected={false}
+                  size="m"
+                  style={null}
+                  tooltip={null}
+                  vertical={true}
+                >
+                  <Button
+                    baseline={false}
+                    bgStyle="filled"
+                    borderRadius={null}
+                    className={null}
+                    colorSchema="primary"
+                    content={null}
+                    controlled={true}
+                    disabled={false}
+                    displayBlock={false}
+                    dynamic={false}
+                    elevation={null}
+                    elevationHover={null}
+                    hidden={false}
+                    href={null}
+                    id="idBTN_R_R"
+                    ignoreInnerHTML={false}
+                    mainAttrs={null}
+                    name={null}
+                    nestingLevel={null}
+                    noIndex={false}
+                    offset={0}
+                    onClick={null}
+                    onCtrlClick={null}
+                    onWheelClick={null}
+                    parent={null}
+                    pressed={false}
+                    pureRender={false}
+                    ref_={null}
+                    selected={false}
+                    size="m"
+                    smoothScroll={1000}
+                    style={null}
+                    target="_self"
+                    tooltip={null}
+                  >
+                    Home
+                  </Button>
+                </ButtonGroup>
+              </Column>
+            </Section>
+          }
           overlayBottom={true}
           overlayTop={true}
           pureRender={true}

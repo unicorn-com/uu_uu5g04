@@ -13,7 +13,7 @@
 
 //@@viewOn:revision
 //  coded: Martin Mach, 18.09.2020
-//  reviewed: -
+//  reviewed: Filip Janovský, 07.10.2020 - approved
 //@@viewOff:revision
 
 //@@viewOn:imports
@@ -29,7 +29,9 @@ function withTimeZoneContext(Component) {
   let forwardRef = UU5.Common.Reference.forward((props, ref) => {
     return (
       <UU5.Common.TimeZoneContext.Consumer>
-        {({ timeZone }) => <Component {...props} _contextTimeZone={timeZone} ref={ref} />}
+        {({ timeZone }) => {
+          return <Component {...props} _contextTimeZone={timeZone} ref={ref} />;
+        }}
       </UU5.Common.TimeZoneContext.Consumer>
     );
   });

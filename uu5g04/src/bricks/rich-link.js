@@ -257,7 +257,6 @@ export const RichLink = UU5.Common.VisualComponent.create({
         <Link
           {...restProps}
           {...this.getMainPropsToPass()}
-          id={this.getId()} // needed due to DCC
           href={href}
           tooltip={tooltip != null ? tooltip : href}
           ref_={this._registerLink}

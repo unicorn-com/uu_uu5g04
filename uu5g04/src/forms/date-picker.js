@@ -11,6 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:revision
+// coded: Petr Bišof, 30.09.2020
+// reviewed: Filip Janovský, 30.09.2020 - approved
+//@@viewOff:revision
+
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
@@ -434,7 +439,12 @@ export const DatePicker = Context.withContext(
       let opt = { value: this.state.value, event: e, component: this };
 
       if (canClose) {
-        if (!this.props.disableBackdrop) {
+        // checked if clicked into component's input
+        if (UU5.Common.DOM.findNode(this.getInput()).contains(e.target)) {
+          // if is clicked into input we dont want to close popover
+          //Prevent double handle of click by handleClick method otherwise this click closes and reopens popover
+          e.stopPropagation();
+        } else if (!this.props.disableBackdrop) {
           this._close(!canBlur, canBlur ? () => this._onBlur(opt) : undefined);
         } else if (canBlur) {
           this._onBlur(opt);
@@ -872,7 +882,6 @@ export const DatePicker = Context.withContext(
 
         let handleClick = (e) => {
           let clickData = this._findTarget(e.nativeEvent);
-
           if (this._shouldOpenToContent() && clickData.input) {
             handleMobileClick(e);
           }

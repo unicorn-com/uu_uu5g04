@@ -1,29 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UU5.Bricks.ProgressBar.Item interface testing Should render with shallow and make a snapshot 1`] = `
-<progress-bar-cover
-  className="uu5-bricks-progress-bar uu5-bricks-progress-bar-size-m"
-  content={null}
-  dynamic={false}
-  id="uuID01-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  nestingLevel={null}
->
-  <ProgressBarItem
-    animated={true}
-    colorSchema="blue"
-    content="number"
-    id="uuID02"
-    key="uuID02"
-    progress={40}
-    striped={true}
-  />
-  <ProgressBarItem
-    colorSchema="purple"
-    id="uuID03"
-    key="uuID03"
-    progress={35}
-  />
-</progress-bar-cover>
+<Fragment>
+  <progress-bar-cover
+    className="uu5-bricks-progress-bar uu5-bricks-progress-bar-size-m"
+    content={null}
+    dynamic={false}
+    id="uuID01-inner"
+    ignoreInnerHTML={false}
+    mainAttrs={Object {}}
+    nestingLevel={null}
+  >
+    <ProgressBarItem
+      animated={true}
+      colorSchema="blue"
+      content="number"
+      id="uuID02"
+      key="uuID02"
+      progress={40}
+      striped={true}
+    />
+    <ProgressBarItem
+      colorSchema="purple"
+      id="uuID03"
+      key="uuID03"
+      progress={35}
+    />
+  </progress-bar-cover>
+</Fragment>
 `;

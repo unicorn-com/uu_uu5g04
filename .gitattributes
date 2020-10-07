@@ -1,4 +1,27 @@
+# let Git recognize text files automagically, unless overridden by other rules, using LF for end of line
+# (this also effectively marks user's global core.autocrlf and core.eol as ignored for this repository)
+* text=auto eol=lf
+
+# force files with certain extensions to be text (force EOL conversion)
 *.html text eol=lf
 *.js text eol=lf
+*.json text eol=lf
 *.less text eol=lf
 *.css text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+
+# force files with certain extensions to not be text (never run EOL conversion)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+*.eot binary
+*.zip binary
+*.jar binary
+*.war binary
+*.gem binary

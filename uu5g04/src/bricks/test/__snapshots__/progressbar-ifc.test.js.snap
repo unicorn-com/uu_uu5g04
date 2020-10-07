@@ -1,20 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UU5.Bricks.ProgressBar interface testing Should render with shallow 1`] = `
-<progress-bar-cover
-  className="uu5-bricks-progress-bar uu5-bricks-progress-bar-size-m"
-  content={null}
-  dynamic={false}
-  id="uuID01-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name="progressName-inner"
-  nestingLevel={null}
->
-  <ProgressBarItem
-    key="uu5-content-0"
-    name="progressBarItem"
-    progress={40}
-  />
-</progress-bar-cover>
+<Fragment>
+  <progress-bar-cover
+    className="uu5-bricks-progress-bar uu5-bricks-progress-bar-size-m"
+    content={null}
+    dynamic={false}
+    id="uuID01-inner"
+    ignoreInnerHTML={false}
+    mainAttrs={Object {}}
+    name="progressName-inner"
+    nestingLevel={null}
+  >
+    <ProgressBarItem
+      key="uu5-content-0"
+      name="progressBarItem"
+      progress={40}
+    />
+  </progress-bar-cover>
+</Fragment>
 `;

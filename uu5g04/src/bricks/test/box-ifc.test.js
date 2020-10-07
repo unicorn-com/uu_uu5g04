@@ -49,7 +49,7 @@ describe(`UU5.Bricks.Box interface testing`, () => {
     expect(wrapper.find("Modal").instance().state.className).toBeNull();
     expect(wrapper.find("Modal").instance().state.size).toEqual("m");
     expect(wrapper.find("Modal").instance().state.sticky).toBeFalsy();
-    expect(wrapper.find("Modal").instance().state.stickyBackground).toBeFalsy();
+    expect(wrapper.find("Modal").instance().state.stickyBackground).toBeTruthy();
     expect(wrapper.find("Modal").instance().state.scrollableBackground).toBeFalsy();
     const returnValue = wrapper.instance().openInfo(
       {

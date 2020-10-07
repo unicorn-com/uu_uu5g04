@@ -1,324 +1,402 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UU5.Bricks.Newspaper checkGrammar=false 1`] = `
-<Section
-  checkGrammar={false}
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    checkGrammar={false}
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper checkGrammar=true 1`] = `
-<Section
-  checkGrammar={true}
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    checkGrammar={true}
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper checkHighlight=false 1`] = `
-<Section
-  checkHighlight={false}
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    checkHighlight={false}
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper checkHighlight=true 1`] = `
-<Section
-  checkHighlight={true}
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    checkHighlight={true}
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper checkSpaces=false 1`] = `
-<Section
-  checkSpaces={false}
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    checkSpaces={false}
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper checkSpaces=true 1`] = `
-<Section
-  checkSpaces={true}
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    checkSpaces={true}
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper className="my-classname" 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text my-classname uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text my-classname uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper colorSchema="brown" 1`] = `
-<Section
-  className="color-schema-brown uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="color-schema-brown uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper colorSchema="brown-rich" 1`] = `
-<Section
-  className="color-schema-brown-rich uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="color-schema-brown-rich uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper colorSchema="cyan" 1`] = `
-<Section
-  className="color-schema-cyan uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="color-schema-cyan uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper colorSchema="cyan-rich" 1`] = `
-<Section
-  className="color-schema-cyan-rich uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="color-schema-cyan-rich uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper colorSchema="default" 1`] = `
-<Section
-  className="color-schema-default uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="color-schema-default uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper colorSchema="green" 1`] = `
-<Section
-  className="color-schema-green uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="color-schema-green uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper colorSchema="green-rich" 1`] = `
-<Section
-  className="color-schema-green-rich uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="color-schema-green-rich uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper colorSchema="grey" 1`] = `
-<Section
-  className="color-schema-grey uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="color-schema-grey uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper colorSchema="grey-rich" 1`] = `
-<Section
-  className="color-schema-grey-rich uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="color-schema-grey-rich uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper colorSchema="orange" 1`] = `
-<Section
-  className="color-schema-orange uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="color-schema-orange uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper colorSchema="orange-rich" 1`] = `
-<Section
-  className="color-schema-orange-rich uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="color-schema-orange-rich uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper colorSchema="pink" 1`] = `
-<Section
-  className="color-schema-pink uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="color-schema-pink uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper colorSchema="pink-rich" 1`] = `
-<Section
-  className="color-schema-pink-rich uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="color-schema-pink-rich uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper colorSchema="purple" 1`] = `
-<Section
-  className="color-schema-purple uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="color-schema-purple uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper colorSchema="purple-rich" 1`] = `
-<Section
-  className="color-schema-purple-rich uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="color-schema-purple-rich uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper colorSchema="red" 1`] = `
-<Section
-  className="color-schema-red uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="color-schema-red uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper colorSchema="red-rich" 1`] = `
-<Section
-  className="color-schema-red-rich uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="color-schema-red-rich uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper colorSchema="yellow" 1`] = `
-<Section
-  className="color-schema-yellow uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="color-schema-yellow uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper colorSchema="yellow-rich" 1`] = `
-<Section
-  className="color-schema-yellow-rich uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="color-schema-yellow-rich uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper columnsCount=1 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-1"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-1"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper columnsCount=2 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper columnsCount=3 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-3"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-3"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper columnsCount=4 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-4"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-4"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper columnsCount=5 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-5"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-5"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper columnsCount=6 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-6"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-6"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper content="This is Content from ContentMixin" 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  content="This is Content from ContentMixin"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    content="This is Content from ContentMixin"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper content=12345 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  content={12345}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    content={12345}
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper controlled=false 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper controlled=true 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper default props 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper disabled=false 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper disabled=true 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  disabled={true}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    disabled={true}
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper docKit examples UU5.Bricks.Newspaper should render without crash 1`] = `
@@ -339,286 +417,348 @@ exports[`UU5.Bricks.Newspaper docKit examples UU5.Bricks.Newspaper should render
 `;
 
 exports[`UU5.Bricks.Newspaper dynamic=false 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper dynamic=true 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  dynamic={true}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    dynamic={true}
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper footer={"type":"div","key":null,"ref":null,"props":{"children":"Footer of section"},"_owner":null,"_store":{}} 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  footer={
-    <div>
-      Footer of section
-    </div>
-  }
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    footer={
+      <div>
+        Footer of section
+      </div>
+    }
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  header={
-    <div>
-      Header of section
-    </div>
-  }
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    header={
+      <div>
+        Header of section
+      </div>
+    }
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper hidden=false 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper hidden=true 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  hidden={true}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    hidden={true}
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper id="myId" 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="myId-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="myId-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper ignoreHTML=false 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper ignoreHTML=true 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper level="0" 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  level="0"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    level="0"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper level="1" 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  level="1"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    level="1"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper level="2" 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  level="2"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    level="2"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper level="3" 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  level="3"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    level="3"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper level="4" 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  level="4"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    level="4"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper level="5" 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  level="5"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    level="5"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper level="6" 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  level="6"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    level="6"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper level=0 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  level={0}
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    level={0}
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper level=1 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  level={1}
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    level={1}
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper level=2 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  level={2}
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    level={2}
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper level=3 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  level={3}
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    level={3}
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper level=4 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  level={4}
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    level={4}
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper level=5 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  level={5}
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    level={5}
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper level=6 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  level={6}
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    level={6}
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper mainAttrs=undefined 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper name="myName" 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name="myName-inner"
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    name="myName-inner"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper nestingLevel="bigBox" 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="bigBox"
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="bigBox"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper nestingLevel="bigBoxCollection" 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="bigBoxCollection"
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="bigBoxCollection"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper nestingLevel="box" 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="box"
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="box"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper nestingLevel="boxCollection" 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="boxCollection"
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="boxCollection"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper nestingLevel="container" 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="container"
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="container"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.Newspaper nestingLevel="page" 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="page"
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="page"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper nestingLevel="smallBox" 1`] = `""`;
@@ -626,135 +766,163 @@ exports[`UU5.Bricks.Newspaper nestingLevel="smallBox" 1`] = `""`;
 exports[`UU5.Bricks.Newspaper nestingLevel="smallBoxCollection" 1`] = `""`;
 
 exports[`UU5.Bricks.Newspaper nestingLevel="spa" 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="spa"
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="spa"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper noIndex=false 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper noIndex=true 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-noindex uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-noindex uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper pureRender=false 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper pureRender=true 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  pureRender={true}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    pureRender={true}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper selected=false 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper selected=true 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  selected={true}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    selected={true}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper style="padding:8px; borderRadius: 2px" 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    style={
+      Object {
+        "borderRadius": "2px",
+        "padding": "8px",
+      }
     }
-  }
-/>
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper style={"backgroundColor":"red","color":"blue"} 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    style={
+      Object {
+        "backgroundColor": "red",
+        "color": "blue",
+      }
     }
-  }
-/>
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper textCorrector=false 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  textCorrector={false}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    textCorrector={false}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper textCorrector=true 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  textCorrector={true}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    textCorrector={true}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper tooltip="My Tooltip" 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={
-    Object {
-      "title": "My Tooltip",
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={
+      Object {
+        "title": "My Tooltip",
+      }
     }
-  }
-  tooltip="My Tooltip"
-/>
+    tooltip="My Tooltip"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper underline=false 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Newspaper underline=true 1`] = `
-<Section
-  className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Section
+    className="uu5-bricks-newspaper uu5-common-text uu5-common-newspaper-layout-2"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;

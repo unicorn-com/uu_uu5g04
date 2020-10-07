@@ -2,6 +2,7 @@ import memoizeOne from "memoize-one";
 import UU5 from "uu5g04";
 import { useState, useMemo, useReducer, useEffect, useLayoutEffect, useRef, useCallback } from "./react-hooks";
 import { usePreviousValue } from "./use-previous-value";
+import { constructItemKey } from "./internal/list-helpers";
 
 // handlerMap key => data transformation function
 const OP_TYPE_LIST = "LIST";
@@ -469,7 +470,9 @@ function _mergeData(curDataList, newPartialList, pageInfo) {
     let from = pageInfo.pageIndex * pageInfo.pageSize || 0;
     let to = from + (newPartialList ? newPartialList.length : 0);
     result = new Array(
-      typeof pageInfo.total === "number" && pageInfo.total >= 0 ? pageInfo.total : Math.max(to, curDataList.length)
+      typeof pageInfo.total === "number" && pageInfo.total >= 0
+        ? pageInfo.total
+        : Math.max(to, curDataList?.length || 0)
     ).fill(undefined);
     if (curDataList && curDataList.length > 0) for (let i = 0; i < from; i++) result[i] = curDataList[i];
     if (newPartialList) for (let i = 0, len = newPartialList.length; i < len; i++) result[from + i] = newPartialList[i];
@@ -562,12 +565,7 @@ export function useDataList({
     paramHandlerMap,
     paramItemHandlerMap,
     itemIdentifier,
-    itemKey: Array.isArray(itemIdentifier)
-      ? (item) =>
-          itemIdentifier.some((idKey) => item?.[idKey] == null)
-            ? null
-            : JSON.stringify(itemIdentifier.map((idKey) => item[idKey]))
-      : (item) => item?.[itemIdentifier],
+    itemKey: constructItemKey(itemIdentifier),
   };
   useEffect(() => () => (currentValuesRef.current.rendered = false), []);
 
@@ -706,9 +704,10 @@ export function useDataList({
     fullState.newData,
   ]);
 
-  let result = { ...fullState, data: dataWithItemHandlerMap, newData: newDataWithItemHandlerMap, handlerMap };
+  let result = { ...fullState, data: dataWithItemHandlerMap, newData: newDataWithItemHandlerMap, handlerMap, pageSize };
   delete result.runnableList;
   delete result.runningOperations;
   return result;
 }
+
 export default useDataList;

@@ -1,671 +1,819 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UU5.Bricks.ButtonGroup docKit example - contain another components UU5.Bricks.ButtonGroup Component from allow tags is used in example 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <UU5.Example.MyCompButton
-    id="myAllowTagsID"
-    key="myAllowTagsID"
-    size="s"
-    tooltip="This is my allowTags Component"
-  />
-  <Button
-    content="Home"
-    id="uuID2"
-    key="uuID2"
-    size="s"
-  />
-  <Dropdown
-    className=""
-    content="Dropdown"
-    id="uuID3"
-    key="uuID3"
-    size="s"
-  />
-</Div>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  >
+    <UU5.Example.MyCompButton
+      id="myAllowTagsID"
+      key="myAllowTagsID"
+      size="s"
+      tooltip="This is my allowTags Component"
+    />
+    <Button
+      content="Home"
+      id="uuID2"
+      key="uuID2"
+      size="s"
+    />
+    <Dropdown
+      className=""
+      content="Dropdown"
+      id="uuID3"
+      key="uuID3"
+      size="s"
+    />
+  </Div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup docKit example - contain another components UU5.Bricks.ButtonGroup packaging another component 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Button
-    content="Home"
-    id="uuID2"
-    key="uuID2"
-    size="s"
-  />
-  <Dropdown
-    className=""
-    content="Dropdown"
-    id="uuID3"
-    key="uuID3"
-    size="s"
-  />
-</Div>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  >
+    <Button
+      content="Home"
+      id="uuID2"
+      key="uuID2"
+      size="s"
+    />
+    <Dropdown
+      className=""
+      content="Dropdown"
+      id="uuID3"
+      key="uuID3"
+      size="s"
+    />
+  </Div>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing allowTags=undefined 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing bgStyle="filled" 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal uu5-bricks-button-group-bg-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal uu5-bricks-button-group-bg-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing bgStyle="outline" 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal uu5-bricks-button-group-bg-outline"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal uu5-bricks-button-group-bg-outline"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing bgStyle="transparent" 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal uu5-bricks-button-group-bg-transparent"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal uu5-bricks-button-group-bg-transparent"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing checkGrammar=false 1`] = `
-<Div
-  checkGrammar={false}
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    checkGrammar={false}
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing checkGrammar=true 1`] = `
-<Div
-  checkGrammar={true}
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    checkGrammar={true}
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing checkHighlight=false 1`] = `
-<Div
-  checkHighlight={false}
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    checkHighlight={false}
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing checkHighlight=true 1`] = `
-<Div
-  checkHighlight={true}
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    checkHighlight={true}
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing checkSpaces=false 1`] = `
-<Div
-  checkSpaces={false}
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    checkSpaces={false}
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing checkSpaces=true 1`] = `
-<Div
-  checkSpaces={true}
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    checkSpaces={true}
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing className="my-classname" 1`] = `
-<Div
-  className="uu5-bricks-button-group my-classname uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group my-classname uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing colorSchema="brown" 1`] = `
-<Div
-  className="color-schema-brown uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="color-schema-brown uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing colorSchema="brown-rich" 1`] = `
-<Div
-  className="color-schema-brown-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="color-schema-brown-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing colorSchema="cyan" 1`] = `
-<Div
-  className="color-schema-cyan uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="color-schema-cyan uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing colorSchema="cyan-rich" 1`] = `
-<Div
-  className="color-schema-cyan-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="color-schema-cyan-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing colorSchema="default" 1`] = `
-<Div
-  className="color-schema-default uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="color-schema-default uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing colorSchema="green" 1`] = `
-<Div
-  className="color-schema-green uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="color-schema-green uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing colorSchema="green-rich" 1`] = `
-<Div
-  className="color-schema-green-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="color-schema-green-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing colorSchema="grey" 1`] = `
-<Div
-  className="color-schema-grey uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="color-schema-grey uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing colorSchema="grey-rich" 1`] = `
-<Div
-  className="color-schema-grey-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="color-schema-grey-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing colorSchema="orange" 1`] = `
-<Div
-  className="color-schema-orange uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="color-schema-orange uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing colorSchema="orange-rich" 1`] = `
-<Div
-  className="color-schema-orange-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="color-schema-orange-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing colorSchema="pink" 1`] = `
-<Div
-  className="color-schema-pink uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="color-schema-pink uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing colorSchema="pink-rich" 1`] = `
-<Div
-  className="color-schema-pink-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="color-schema-pink-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing colorSchema="purple" 1`] = `
-<Div
-  className="color-schema-purple uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="color-schema-purple uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing colorSchema="purple-rich" 1`] = `
-<Div
-  className="color-schema-purple-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="color-schema-purple-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing colorSchema="red" 1`] = `
-<Div
-  className="color-schema-red uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="color-schema-red uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing colorSchema="red-rich" 1`] = `
-<Div
-  className="color-schema-red-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="color-schema-red-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing colorSchema="yellow" 1`] = `
-<Div
-  className="color-schema-yellow uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="color-schema-yellow uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing colorSchema="yellow-rich" 1`] = `
-<Div
-  className="color-schema-yellow-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="color-schema-yellow-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing content="This is Content from ContentMixin" 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content="This is Content from ContentMixin"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    content="This is Content from ContentMixin"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing content=12345 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={12345}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    content={12345}
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing controlled=false 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing controlled=true 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing default props 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing disabled=false 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing disabled=true 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  disabled={true}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    disabled={true}
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing dynamic=false 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing dynamic=true 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  dynamic={true}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    dynamic={true}
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing hidden=false 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing hidden=true 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  hidden={true}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    hidden={true}
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing id="myId" 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="myId-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="myId-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing ignoreHTML=false 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing ignoreHTML=true 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing mainAttrs=undefined 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing name="myName" 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name="myName-inner"
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    name="myName-inner"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing nestingLevel="bigBox" 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="bigBox"
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="bigBox"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing nestingLevel="bigBoxCollection" 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="bigBoxCollection"
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="bigBoxCollection"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing nestingLevel="box" 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="box"
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="box"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing nestingLevel="boxCollection" 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="boxCollection"
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="boxCollection"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing nestingLevel="container" 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="container"
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="container"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.ButtonGroup props testing nestingLevel="page" 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="page"
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="page"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing nestingLevel="smallBox" 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="smallBox"
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="smallBox"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing nestingLevel="smallBoxCollection" 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="smallBoxCollection"
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="smallBoxCollection"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing nestingLevel="spa" 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="spa"
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="spa"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing noIndex=false 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing noIndex=true 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-noindex uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-noindex uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing pureRender=false 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing pureRender=true 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  pureRender={true}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    pureRender={true}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing selected=false 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing selected=true 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  selected={true}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    selected={true}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing size="l" 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing size="m" 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing size="s" 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing size="xl" 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing style="padding:8px; borderRadius: 2px" 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    style={
+      Object {
+        "borderRadius": "2px",
+        "padding": "8px",
+      }
     }
-  }
-/>
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing style={"backgroundColor":"red","color":"blue"} 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    style={
+      Object {
+        "backgroundColor": "red",
+        "color": "blue",
+      }
     }
-  }
-/>
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing textCorrector=false 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  textCorrector={false}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    textCorrector={false}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing textCorrector=true 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  textCorrector={true}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    textCorrector={true}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing tooltip="My Tooltip" 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={
-    Object {
-      "title": "My Tooltip",
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={
+      Object {
+        "title": "My Tooltip",
+      }
     }
-  }
-  tooltip="My Tooltip"
-/>
+    tooltip="My Tooltip"
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing vertical=false 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing vertical=true 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-vertical"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-/>
+<Fragment>
+  <Div
+    className="uu5-bricks-button-group uu5-bricks-button-group-vertical"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+  />
+</Fragment>
 `;
