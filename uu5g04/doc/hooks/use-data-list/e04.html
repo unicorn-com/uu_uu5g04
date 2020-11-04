@@ -344,7 +344,7 @@
                 </UU5.Bricks.Column>
               ))}
             </UU5.Bricks.Row>
-  
+
             <PagingAutoLoad
               data={data}
               handleLoad={handlerMap.loadNext}
@@ -397,6 +397,9 @@
             </UU5.BlockLayout.Row>
             <UU5.BlockLayout.Row>
               {data.text}
+            </UU5.BlockLayout.Row>
+            <UU5.BlockLayout.Row className="right">
+              {data.uuIdentityName}
             </UU5.BlockLayout.Row>
           </UU5.BlockLayout.Block>
         </UU5.BlockLayout.Tile>

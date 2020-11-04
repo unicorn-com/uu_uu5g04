@@ -1,4 +1,4 @@
-import ListenerRegistry from "./internal/listener-registry";
+import EventManager from "./event-manager";
 import Context from "../common/context";
 
 const XS = 480;
@@ -6,8 +6,6 @@ const S = 768;
 const M = 992;
 const L = 1360;
 const XL = Infinity;
-
-const LISTENER_REGISTRY = new ListenerRegistry();
 
 class ScreenSize {
   static XS = XS;
@@ -43,17 +41,17 @@ class ScreenSize {
   }
 
   static register(listener) {
-    return LISTENER_REGISTRY.register(listener);
+    return EventManager.register("screenSize", listener);
   }
 
   static unregister(listener) {
-    return LISTENER_REGISTRY.unregister(listener);
+    return EventManager.unregister("screenSize", listener);
   }
 
   static setSize(event, screenSize) {
     if (actualScreenSize !== screenSize) {
       actualScreenSize = screenSize;
-      LISTENER_REGISTRY.run(event, screenSize);
+      EventManager.trigger("screenSize", event, screenSize);
     }
   }
 

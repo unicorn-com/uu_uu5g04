@@ -34,6 +34,8 @@ export * from "./use-time-zone";
 export * from "./use-unmounted-ref";
 export * from "./with-resize";
 
+export * from "./use-event";
+
 // not necessary for now
 // export * from "./use-parent-size";
 

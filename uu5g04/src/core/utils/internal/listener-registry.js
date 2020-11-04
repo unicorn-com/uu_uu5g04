@@ -43,5 +43,9 @@ export class ListenerRegistry {
       this.RUNNING_LISTENERS.pop();
     });
   }
+
+  size() {
+    return this.LISTENER_LIST.length;
+  }
 }
 export default ListenerRegistry;

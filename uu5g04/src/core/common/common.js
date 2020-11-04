@@ -83,6 +83,8 @@ export * from "./portal.js";
 export * from "./reference.js";
 export { VisualComponent } from "./visual-component.js";
 
+export * from "./modal-bus-context";
+
 export * from "./with-visibility-check.js";
 
 export { Children, Fragment } from "react";

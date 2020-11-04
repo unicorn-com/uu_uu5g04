@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2,minimum-scale=0.5">
+  <title>useEvent Demo</title>
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+
+        "uu5g04": "/uu5g04.js",
+        "uu5g04-bricks": "/uu5g04-bricks.js",
+        "uu5g04-hooks": "/uu5g04-hooks.js"
+      }
+    });
+  </script>
+</head>
+<body>
+<div id="uu5">Loading...</div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import { useState, useEffect, createCustomEvent, useEvent } from "uu5g04-hooks";
+
+  function WindowEvent() {
+    const [scrollTop, setScrollTop] = useState(0);
+
+    useEvent("scroll", UU5.Common.Tools.debounce(e => {
+      setScrollTop(window.pageYOffset);
+    }, 100), window);
+
+    return (
+      <div className={UU5.Common.Css.css`position: fixed; z-index: 1; width: 100%; background-color: lightgreen;`}>
+        <h1>Window scroll: {scrollTop}</h1>
+      </div>
+    )
+  }
+
+  function WindowEvent2() {
+    const [screenSize, setScreenSize] = useState(window.innerWidth);
+
+    useEvent("resize", e => {
+      setScreenSize(window.innerWidth);
+    }, window);
+
+    return (
+      <div className={UU5.Common.Css.css`position: fixed; z-index: 1; width: 100%; background-color: lightblue;`}>
+        <h1>Window resize: {screenSize}</h1>
+      </div>
+    )
+  }
+
+  function ElementEvent() {
+    const [scrollTopInner, setScrollTopInner] = useState(0);
+    const testScrollRef = useRef();
+
+    useEvent("scroll", UU5.Common.Tools.debounce(e => {
+      setScrollTopInner(e.target.scrollTop);
+    }, 100), testScrollRef);
+
+    return (
+      <div>
+        <h1>Element Event: {scrollTopInner}</h1>
+        <div ref={testScrollRef} className={UU5.Common.Css.css`overflow: auto; height: 100px;`}>
+          <UU5.Bricks.Paragraph />
+          <UU5.Bricks.Paragraph />
+          <UU5.Bricks.Paragraph />
+          <UU5.Bricks.Paragraph />
+          <UU5.Bricks.Paragraph />
+          <UU5.Bricks.Paragraph />
+          <UU5.Bricks.Paragraph />
+          <UU5.Bricks.Paragraph />
+          <UU5.Bricks.Paragraph />
+        </div>
+      </div>
+    )
+  }
+
+  const NumEvent = createCustomEvent(0, "number");
+
+  function AppEvent() {
+    const num = NumEvent.useData();
+
+    return (
+      <div>
+        {num}
+      </div>
+    )
+  }
+
+  const DataEvent = createCustomEvent(null, "uu-applibraryregistry-maing01/library/get?code=UU5.Bricks");
+
+  function getServerRequest(src, parameters, contentType) {
+    return new Promise((resolve, reject) => {
+      const uri = UU5.Common.Url.parse(src);
+      uri.parameters = parameters;
+
+      const request = new XMLHttpRequest();
+      request.open("GET", uri.toString(), true);
+
+      contentType && request.setRequestHeader("Content-type", contentType);
+
+      request.onload = () => {
+        if (request.status >= 200 && request.status < 300) {
+          resolve(request.response);
+        } else {
+          reject(request);
+        }
+      };
+
+      request.onerror = () => reject(request);
+
+      request.send();
+    });
+  }
+
+  function AppComponent() {
+    const data = DataEvent.useData();
+
+    useEffect(() => {
+      const uri = "https://uuapp.plus4u.net/uu-applibraryregistry-maing01/fe96c133c895434bbd4d5b24831483f3/library/get";
+      const params = { code: "UU5.Bricks" };
+
+      async function loadData() {
+        const dtoOut = await UU5.Common.Tools.groupCall(uri, params, () => getServerRequest(uri, params));
+        DataEvent.setData(JSON.parse(dtoOut));
+      }
+
+      loadData();
+    }, []);
+
+    return (
+      <UU5.Bricks.Todo props={data} />
+    )
+  }
+
+  function Remove({ children: Component }) {
+    const [display, setDisplay] = useState(true);
+
+    return (
+      <div>
+        {display && <Component />}
+        <UU5.Bricks.Button
+          onClick={() => setDisplay(!display)}
+          content={display ? "Hide" : "Show"}
+        />
+      </div>
+    )
+  }
+
+  function Demo() {
+
+    useEffect(() => NumEvent.setData(parseInt(Math.random() * 10)), []);
+
+    return (
+      <div>
+        <UU5.Bricks.Paragraph />
+        <WindowEvent />
+
+        <UU5.Bricks.Paragraph />
+        <WindowEvent2 />
+
+        <ElementEvent />
+
+        <h1>Custom App Event</h1>
+        <AppEvent />
+        <AppEvent />
+        <AppEvent />
+        <UU5.Bricks.Button onClick={() => NumEvent.setData(parseInt(Math.random() * 1000))}>
+          Change
+        </UU5.Bricks.Button>
+
+        <h1>One load for n-components</h1>
+        <AppComponent />
+        <AppComponent />
+        <AppComponent />
+
+        <UU5.Bricks.Paragraph />
+        <UU5.Bricks.Paragraph />
+        <UU5.Bricks.Paragraph />
+        <UU5.Bricks.Paragraph />
+        <UU5.Bricks.Paragraph />
+        <UU5.Bricks.Paragraph />
+        <UU5.Bricks.Paragraph />
+        <UU5.Bricks.Paragraph />
+        <UU5.Bricks.Paragraph />
+        <UU5.Bricks.Paragraph />
+      </div>
+    )
+  }
+
+  UU5.Common.DOM.render(<Demo />, document.getElementById('uu5'));
+</script>
+</body>
+</html>

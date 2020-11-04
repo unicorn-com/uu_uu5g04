@@ -79,7 +79,9 @@ const DoubleRender = createComponent({
 DoubleRender.FIRST_RENDER = 0;
 DoubleRender.SECOND_RENDER = 1;
 
-export const Modal = UU5.Common.VisualComponent.create({
+let openedModalStack = [];
+
+const _Modal = UU5.Common.VisualComponent.create({
   displayName: "Modal", // for backward compatibility (test snapshots)
 
   //@@viewOn:mixins
@@ -181,6 +183,9 @@ export const Modal = UU5.Common.VisualComponent.create({
     ]),
     offsetTop: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
     location: UU5.PropTypes.oneOf(["local", "portal"]),
+
+    _render: UU5.PropTypes.func,
+    _allowClose: UU5.PropTypes.func,
   },
   //@@viewOff:propTypes
 
@@ -198,6 +203,8 @@ export const Modal = UU5.Common.VisualComponent.create({
       mountContent: undefined,
       offsetTop: null,
       location: undefined,
+      _render: undefined,
+      _allowClose: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -232,9 +239,7 @@ export const Modal = UU5.Common.VisualComponent.create({
     if (this._shouldOpenPageModal() && this.props.shown) {
       this.open();
     }
-    if (!this.isSticky()) {
-      UU5.Environment.EventListener.addWindowEvent("keydown", this.getId(), this._onCloseESC);
-    }
+    UU5.Environment.EventListener.addWindowEvent("keydown", "uu5-bricks-modal-stack", _Modal._onCloseESC);
     this._updateAfterCommit(true);
   },
 
@@ -277,7 +282,7 @@ export const Modal = UU5.Common.VisualComponent.create({
 
     enableBodyScrolling("modal-" + this.getId(), true);
 
-    UU5.Environment.EventListener.removeWindowEvent("keydown", this.getId(), this._onCloseESC);
+    openedModalStack = openedModalStack.filter((it) => it !== this);
   },
   //@@viewOff:reactLifeCycle
 
@@ -424,6 +429,7 @@ export const Modal = UU5.Common.VisualComponent.create({
     let { hidden, scrollableBackground } = this.state;
     if (hidden && !prevHidden) {
       // became closed
+      openedModalStack = openedModalStack.filter((it) => it !== this);
       let { _closeCallbacks } = this;
       this._closeCallbacks = [];
       this._flushCloseCallbacks = () => _closeCallbacks.forEach((fn) => (typeof fn === "function" ? fn() : null));
@@ -446,6 +452,7 @@ export const Modal = UU5.Common.VisualComponent.create({
       }, this.getDefault().animationDuration);
     } else if (!hidden && prevHidden) {
       // became opened
+      openedModalStack = [...openedModalStack, this];
 
       // stop closing animation if we were in the process of closing window (but call callbacks if any were registered)
       if (this._closeTimeout) {
@@ -458,13 +465,18 @@ export const Modal = UU5.Common.VisualComponent.create({
     }
   },
 
-  _onCloseESC(e) {
-    e.which === 27 && !this.isHidden() && !this.isSticky() && this._blur(e);
-    return this;
+  _closeByEsc(e) {
+    if (typeof this.props._allowClose !== "function" || this.props._allowClose("id-" + this.getId())) {
+      this._blur(e);
+    }
   },
 
   _onBlurHandler(event) {
-    event.target.id === this.getId() && this._blur(event);
+    if (event.target.id === this.getId()) {
+      if (typeof this.props._allowClose !== "function" || this.props._allowClose("id-" + this.getId())) {
+        this._blur(event);
+      }
+    }
     return this;
   },
 
@@ -723,17 +735,40 @@ export const Modal = UU5.Common.VisualComponent.create({
     }
 
     return this.getNestingLevel()
-      ? this._renderModal((hidden) => (
-          <div {...this._getMainAttrs(hidden)}>
-            <div className={this.getClassName("dialog") + " " + this.getClassName("modalSize") + this.state.size}>
-              {this._buildChildren()}
-              {this.getDisabledCover()}
+      ? this.props._render && !this.state.hidden
+        ? this.props._render(
+            <div className={this.getClassName("modalSize") + this.state.size}>{this._buildChildren()}</div>,
+            "id-" + this.getId()
+          )
+        : this._renderModal((hidden) => (
+            <div {...this._getMainAttrs(hidden)}>
+              <div className={this.getClassName("dialog") + " " + this.getClassName("modalSize") + this.state.size}>
+                {this._buildChildren()}
+                {this.getDisabledCover()}
+              </div>
             </div>
-          </div>
-        ))
+          ))
       : null;
   },
   //@@viewOff:render
 });
+_Modal._onCloseESC = function (e) {
+  if (e.which === 27) {
+    let lastModal = openedModalStack[openedModalStack.length - 1];
+    if (lastModal && !lastModal.isSticky()) {
+      lastModal._closeByEsc(e);
+    }
+  }
+};
+
+function withModalBus(Component) {
+  return UU5.Common.Reference.forward((props, ref) => (
+    <UU5.Common.ModalBusContext.Consumer>
+      {({ render, allowClose }) => <Component {...props} ref={ref} _render={render} _allowClose={allowClose} />}
+    </UU5.Common.ModalBusContext.Consumer>
+  ));
+}
+
+export const Modal = withModalBus(_Modal);
 
 export default Modal;

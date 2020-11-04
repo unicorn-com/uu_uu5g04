@@ -8,11 +8,11 @@ export function useSelectionSupport(
   displayedData,
   itemIdentifier,
   selectable = false,
-  initialDisplaySelected = false,
+  initialIsDisplayedSelected = false,
   initialSelectedData = EMPTY_ARRAY
 ) {
   let itemKey = useMemo(() => constructItemKey(itemIdentifier), [itemIdentifier]);
-  let [isDisplayedSelected, setIsDisplayedSelected] = useState(initialDisplaySelected);
+  let [isDisplayedSelected, setIsDisplayedSelected] = useState(initialIsDisplayedSelected);
 
   let [storedSelectedData, setStoredSelectedData] = useState(initialSelectedData);
   if (!selectable && storedSelectedData.length > 0) {

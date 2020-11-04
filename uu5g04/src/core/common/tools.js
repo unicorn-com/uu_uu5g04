@@ -2280,19 +2280,20 @@ Tools.parseDate = (anyDate, opt = {}) => {
     result = new Date(anyDate);
   } else if (typeof anyDate === "string") {
     let stringDate = anyDate;
-    let format = opt.format;
-    let country = opt.country;
+    let { format, country } = opt;
 
-    // attempt to match a shortened date formats
-    if (stringDate.match(/^\d{4}-\d{2}$/)) {
-      // matches YYYY-MM
-      return Tools.parseMonth(stringDate);
-    } else if (stringDate.match(/^\d{2}\/\d{4}$/)) {
-      // matches MM/YYYY
-      return Tools.parseMonth(stringDate);
-    } else if (stringDate.match(/^\d{4}$/)) {
-      // matches YYYY
-      return Tools.parseYear(stringDate);
+    // attempt to match a shortened date formats unless format or country are specifically defined
+    if (!opt.format && !country) {
+      if (stringDate.match(/^\d{4}-\d{2}$/)) {
+        // matches YYYY-MM
+        return Tools.parseMonth(stringDate);
+      } else if (stringDate.match(/^\d{2}\/\d{4}$/)) {
+        // matches MM/YYYY
+        return Tools.parseMonth(stringDate);
+      } else if (stringDate.match(/^\d{4}$/)) {
+        // matches YYYY
+        return Tools.parseYear(stringDate);
+      }
     }
 
     // parse the date according to the format string (fallback to country then to default format by locale)
@@ -2319,7 +2320,7 @@ Tools.parseDate = (anyDate, opt = {}) => {
     let date = new Date(Date.now());
     date.setHours(0, 0, 0, 0);
     // let val = { y: date.getFullYear(), M: date.getMonth() + 1, d: date.getDate(), q: Math.floor(date.getMonth() / 3) };
-    let val = { y: 0, M: 0, d: 0, q: 0 };
+    let val = { y: 0, M: undefined, d: undefined, q: 0 };
     let formatIdx = 0;
     for (let i = 0, len = stringDate.length; i < len && formatIdx < format.length; ) {
       // skip whitespaces and get format portion (e.g. "MMM")
@@ -2372,7 +2373,7 @@ Tools.parseDate = (anyDate, opt = {}) => {
 
     // check values
     if (val.y < 1000 || val.y > 9999) return null;
-    if (!val.M || val.M > 12) return null; // invalid month
+    if (val.M === 0 || val.M > 12) return null; // invalid month - undefined is allowed for shortened dates
     let y = val.y;
     let monthDays = [
       31,
@@ -2388,8 +2389,8 @@ Tools.parseDate = (anyDate, opt = {}) => {
       30,
       31,
     ];
-    if (!val.d || val.d > monthDays[val.M - 1]) return null; // invalid day
-    result = new Date(val.y, val.M - 1, val.d, 0, 0, 0, 0);
+    if (val.d === 0 || val.d > monthDays[val.M - 1]) return null; // invalid day - undefined is allowed for shortened dates
+    result = new Date(val.y, val.M - 1 || 0, val.d || 1, 0, 0, 0, 0);
   } else {
     result = null;
   }

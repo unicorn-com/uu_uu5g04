@@ -403,7 +403,6 @@ export const DateRangePicker = Context.withContext(
       } else {
         date = this.state.value;
       }
-
       date = this.parseDate(date);
       return this._getOutputValue(date);
     },
@@ -514,7 +513,11 @@ export const DateRangePicker = Context.withContext(
       if (value) {
         let parsedDate = this._parseDate(value);
 
-        if (this.props.step === "years" || this.props.step === "months") {
+        if (
+          (this.props.step === "years" || this.props.step === "months") &&
+          !this.props.format &&
+          !this.props.country
+        ) {
           if (Array.isArray(parsedDate)) {
             value = parsedDate.map((singleValue) =>
               DateTools.getShortenedValueDateString(singleValue, "-", this.props.step === "years")
@@ -535,9 +538,9 @@ export const DateRangePicker = Context.withContext(
     },
 
     _getDateString(date, props = this.props) {
-      if (props.step === "years") {
+      if (props.step === "years" && !props.format && !props.country) {
         return DateTools.getShortenedInputDateString(date, "/", true);
-      } else if (props.step === "months") {
+      } else if (props.step === "months" && !props.format && !props.country) {
         return DateTools.getShortenedInputDateString(date, "/");
       } else {
         let format = this.state ? this.state.format : props.format;

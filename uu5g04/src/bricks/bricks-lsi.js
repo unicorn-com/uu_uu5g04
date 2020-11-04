@@ -493,7 +493,17 @@ export const BricksLsi = {
     text: {
       cs: "Nemáte potřebná práva k zobrazení tohoto obsahu.",
       en: "You don't have rights to see this content.",
+    }
+  },
+  modalBus: {
+    collapse: {
+      cs: "Sbalit",
+      en: "Collapse",
     },
+    expand: {
+      cs: "Rozbalit",
+      en: "Expand",
+    }
   },
 };
 

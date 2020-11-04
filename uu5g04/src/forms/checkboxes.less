@@ -49,6 +49,13 @@
   width: 100%;
 }
 
+.@{name}-radios.@{name}-input-prevent-wrap .@{name}-checkbox,
+.@{name}-checkboxes.@{name}-input-prevent-wrap .@{name}-checkbox {
+  .@{name}-label {
+    flex-shrink: 1;
+  }
+}
+
 .@{name}-radios .@{name}-checkbox:not(.@{name}-input-label-right),
 .@{name}-checkboxes .@{name}-checkbox:not(.@{name}-input-label-right) {
   .@{name}-label, .@{name}-input-wrapper {
@@ -95,6 +102,7 @@
   .@{name}-radios.@{name}-inputs-inline .@{name}-input-wrapper > div {
     display: flex;
     align-items: center;
+    width: auto
   }
 
   .@{name}-inputs-inline .@{name}-input-wrapper .@{name}-input.@{name}-input-size-sm .@{name}-input-label {

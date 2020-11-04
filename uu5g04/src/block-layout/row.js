@@ -31,7 +31,7 @@ export const Row = UU5.Common.VisualComponent.create({
   //@@viewOn:statics
   statics: {
     tagName: TAG + "Row",
-    nestingLevelList: UU5.Environment.getNestingLevelList("box"),
+    nestingLevelList: UU5.Environment.getNestingLevelList("bigBox"),
     classNames: {
       main: () => css`
         margin: 4px 0;

@@ -24,7 +24,7 @@
 
     <script>
       var uu5g04 = "";
-      location.search.replace(/[?&]uu5g04=([^&#]*)/, function(m, g1) {
+      location.search.replace(/[?&]uu5g04=([^&#]*)/, function (m, g1) {
         uu5g04 = g1;
       });
       var uu5g04Base = uu5g04 === "" ? "/" : "https://cdn.plus4u.net/uu-uu5g04/" + uu5g04 + "/";
@@ -42,8 +42,8 @@
 
           uu5g04: uu5g04Base + "uu5g04.js",
           "uu5g04-bricks": uu5g04Base + "uu5g04-bricks.js",
-          "uu5g04-forms": uu5g04Base + "uu5g04-forms.js"
-        }
+          "uu5g04-forms": uu5g04Base + "uu5g04-forms.js",
+        },
       });
 
       // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
@@ -73,7 +73,8 @@
       import "uu5g04-bricks";
 
       var Page = UU5.Common.VisualComponent.create({
-        render: function() {
+        render: function () {
+          let isoValue = ["2018-07-31T10:00:00.000Z", "2019-08-20T10:00:00.000Z"];
           let date1 = new Date();
           let date2 = new Date();
           date1.setMonth(1);
@@ -87,14 +88,11 @@
                   items={[
                     { label: "local", href: "?" },
                     { label: "CDN 1.0.0", href: "?uu5g04=1.0.0" },
-                    { label: "CDN 1.19.0", href: "?uu5g04=1.19.0" }
+                    { label: "CDN 1.19.0", href: "?uu5g04=1.19.0" },
                   ]}
                 />
               </div>
-              <UU5.Forms.DateRangePicker
-                label="ISO string value"
-                value={["2019-07-31T10:00:00.000Z", "2019-08-20T10:00:00.000Z"]}
-              />
+              <UU5.Forms.DateRangePicker label="ISO string value" value={isoValue} />
               <UU5.Forms.DateRangePicker
                 label="ISO string value"
                 value={["2019-07-31T10:00:00", "2019-08-20T10:00:00"]}
@@ -102,18 +100,18 @@
               <UU5.Forms.DateRangePicker label="ISO string value" value={["2019-07-31", "2019-08-20"]} />
               <UU5.Forms.DateRangePicker
                 label="onFocus & onBlur"
-                onBlur={opt => {
+                onBlur={(opt) => {
                   console.log(opt.value);
                   opt.component.onBlurDefault(opt);
                 }}
-                onFocus={opt => {
+                onFocus={(opt) => {
                   console.log(opt.value);
                   opt.component.onFocusDefault(opt);
                 }}
               />
               <UU5.Forms.DateRangePicker
                 label="onChange"
-                onChange={opt => {
+                onChange={(opt) => {
                   console.log(opt.value);
                   opt.component.onChangeDefault(opt);
                 }}
@@ -121,14 +119,14 @@
               <UU5.Forms.DateRangePicker label="validateOnChange" validateOnChange />
               <UU5.Forms.DateRangePicker
                 label="onValidate"
-                onValidate={opt => {
+                onValidate={(opt) => {
                   return { feedback: "initial", message: null, value: opt.value };
                 }}
               />
               <UU5.Forms.DateRangePicker
                 label="onValidate + validateOnChange"
                 validateOnChange
-                onValidate={opt => {
+                onValidate={(opt) => {
                   return { feedback: "error", message: null, value: new Date() };
                 }}
               />
@@ -137,7 +135,7 @@
               <UU5.Forms.DateRangePicker
                 label="format + parseDate"
                 format="dd:mm:Y"
-                parseDate={stringDate => {
+                parseDate={(stringDate) => {
                   let date = null;
                   stringDate = stringDate && stringDate.replace(/ /g, "");
                   let regExp = new RegExp("^(\\d{1,2})\\:(\\d{1,2})\\:(\\d{4})$");
@@ -154,9 +152,11 @@
               <UU5.Forms.DateRangePicker label="disabled" disabled />
               <UU5.Forms.DateRangePicker label="readOnly" readOnly />
               <UU5.Forms.DateRangePicker label="disableBackdrop" disableBackdrop />
+              <UU5.Forms.DateRangePicker label="step='months' + format='y/m/d'" value={isoValue} step="months" format="y/m/d" />
+              <UU5.Forms.DateRangePicker label="step='years' + format='y'" value={["2010", "2020"]} step="years" format="y" />
             </UU5.Bricks.Container>
           );
-        }
+        },
       });
 
       UU5.Common.DOM.render(UU5.Common.Element.create(Page, null), document.getElementById("renderHere"));

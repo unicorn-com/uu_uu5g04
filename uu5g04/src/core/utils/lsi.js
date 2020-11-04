@@ -1,20 +1,18 @@
 import Environment from "../environment/environment";
-import ListenerRegistry from "./internal/listener-registry";
-
-const LISTENER_REGISTRY = new ListenerRegistry();
+import EventManager from "./event-manager";
 
 const Lsi = {
   register(listener) {
-    return LISTENER_REGISTRY.register(listener);
+    return EventManager.register("language", listener);
   },
 
   unregister(listener) {
-    return LISTENER_REGISTRY.unregister(listener);
+    return EventManager.unregister("language", listener);
   },
 
   setLanguage(language) {
     globalLanguage = language;
-    LISTENER_REGISTRY.run({ language });
+    EventManager.trigger("language", { language });
   },
 
   getLanguage() {

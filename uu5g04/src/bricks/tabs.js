@@ -11,6 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:revision
+// coded: Petr Bišof, 8.10.2020
+// reviewed: Filip Janovský, 12.10.2020
+//@@viewOff:revision
+
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
@@ -139,7 +144,7 @@ export const Tabs = UU5.Common.VisualComponent.create({
   },
 
   UNSAFE_componentWillReceiveProps(nextProps) {
-    this.setState((state) => this._getState(nextProps, state));
+    this.setState((state) => this._getState(nextProps, state, this.state));
   },
 
   //@@viewOff:reactLifeCycle
@@ -249,11 +254,19 @@ export const Tabs = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _getState(props = this.props, state = this.state) {
+  _getState(props = this.props, state = this.state, currentState) {
+    // in editaiton mode we neet to keep opened same tab to prevent lost of edited content (keep activeName from state)
+    // this method could be called as an setStateCallback - to check if it is after end of editation mode we need to check
+    //   valid state before set editation to false (currentState)
     let result = {
       renderedTabs: [],
       ...state,
-      activeName: props.controlled || !state ? props.activeName : state.activeName,
+      activeName:
+        state?.editation || currentState?.editation
+          ? state.activeName
+          : props.controlled || !state
+          ? props.activeName
+          : state.activeName,
       stacked: props.controlled || !state ? this._isStacked(this.getScreenSize(), props) : state.stacked,
     };
 

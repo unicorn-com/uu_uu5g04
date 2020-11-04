@@ -44,7 +44,7 @@ const DataControllerProvider = createComponent({
     onSorterChange: UU5.PropTypes.func,
 
     selectable: UU5.PropTypes.bool,
-    initialDisplaySelected: UU5.PropTypes.bool,
+    initialIsDisplayedSelected: UU5.PropTypes.bool,
     initialSelectedData: UU5.PropTypes.array,
   },
   defaultProps: {
@@ -55,21 +55,22 @@ const DataControllerProvider = createComponent({
     sorterDefinitionList: EMPTY_ARRAY,
     onSorterChange: undefined,
     selectable: false,
-    initialDisplaySelected: false,
+    initialIsDisplayedSelected: false,
     initialSelectedData: EMPTY_ARRAY,
   },
-  render({
-    children,
-    itemIdentifier,
-    data,
-    filterDefinitionList,
-    onFilterChange,
-    sorterDefinitionList,
-    onSorterChange,
-    selectable,
-    initialDisplaySelected,
-    initialSelectedData,
-  }) {
+  render(props) {
+    let {
+      children,
+      itemIdentifier,
+      data,
+      filterDefinitionList,
+      onFilterChange,
+      sorterDefinitionList,
+      onSorterChange,
+      selectable,
+      initialIsDisplayedSelected,
+      initialSelectedData,
+    } = props;
     let [filterList, filterApi] = useFilterList(filterDefinitionList);
     let [sorterList, sorterApi] = useSorterList(sorterDefinitionList);
 
@@ -91,7 +92,7 @@ const DataControllerProvider = createComponent({
       displayedData,
       itemIdentifier,
       selectable,
-      initialDisplaySelected,
+      initialIsDisplayedSelected ?? props.initialDisplaySelected, // initialDisplaySelected for backward compatibility
       initialSelectedData
     );
     let dataApi = useMemo(() => ({ itemIdentifier, data, displayedData }), [data, itemIdentifier, displayedData]);

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>ModalBus Demo</title>
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+        "uu5g04": "/uu5g04.js",
+        "uu5g04-bricks": "/uu5g04-bricks.js",
+        "uu5g04-forms": "/uu5g04-forms.js",
+        "uu5g04-hooks": "/uu5g04-hooks.js",
+      }
+    });
+  </script>
+</head>
+<body>
+<div id="renderHere"></div>
+
+<script src="https://cdn.plus4u.net/uu-app-templateg01/1.0.0/in-browser-transpilation.js"></script>
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+  import {
+    useState,
+    useMemo,
+    useRef,
+    useContext,
+    useEffect,
+    createComponentWithRef,
+    useImperativeHandle,
+    createVisualComponent
+  } from "uu5g04-hooks";
+
+  // function usePosition(ref) {
+  //   const [position, setPosition] = useState({});
+
+  //   const offsetRef = useRef([0, 0]);
+  //   const isDownRef = useRef(false);
+
+  //   function mouseMoveHandler(e) {
+  //     e.preventDefault();
+  //     if (isDownRef.current) {
+  //       const top = e.clientY + offsetRef.current[1];
+  //       const left = e.clientX + offsetRef.current[0];
+
+  //       setPosition({
+  //         top,
+  //         left,
+  //         width: ref.current.clientWidth,
+  //       });
+  //     }
+  //   }
+
+  //   function mouseUpHandler() {
+  //     isDownRef.current = false;
+  //     document.removeEventListener("mousemove", mouseMoveHandler);
+  //     document.removeEventListener("mouseup", mouseUpHandler);
+  //   }
+
+  //   function onMouseDown(e) {
+  //     isDownRef.current = true;
+  //     offsetRef.current = [
+  //       ref.current.offsetLeft - e.clientX,
+  //       ref.current.offsetTop - e.clientY
+  //     ];
+
+  //     document.addEventListener("mousemove", mouseMoveHandler);
+  //     document.addEventListener("mouseup", mouseUpHandler);
+  //   }
+
+  //   return [position, onMouseDown];
+  // }
+
+  const ModalContext = UU5.Common.ModalBusContext;
+  const useModalBus = () => {
+    const [id] = useState(() => "id-" + UU5.Common.Tools.generateUUID());
+    const { render, close } = useContext(ModalContext);
+
+    const ifcRef = render ? useRef({
+      render: (children) => render(children, id),
+      close: () => close(id)
+    }) : { current: {} };
+
+    return ifcRef.current;
+  };
+
+  // const Toolbar = createVisualComponent({
+
+  //   render({ itemList, activeItem, onChange, collapse, toggleCollapse, ...props }) {
+
+  //     const attrs = UU5.Common.VisualComponent.getAttrs(props);
+
+  //     return (
+  //       <div {...attrs} data-name="Toolbar">
+  //         {itemList.map(item => (
+  //           <UU5.Bricks.Button
+  //             key={item}
+  //             bgStyle="transparent"
+  //             colorSchema={activeItem === item ? "primary" : undefined}
+  //             onClick={() => onChange(item)}
+  //           >
+  //             <UU5.Bricks.Icon icon={activeItem === item ? "mdi-circle-slice-8" : "mdi-checkbox-blank-circle-outline"} />
+  //           </UU5.Bricks.Button>
+  //         ))}
+  //         <UU5.Bricks.Button
+  //           bgStyle="transparent"
+  //           content={collapse ? "Expand" : "Collapse"}
+  //           onClick={() => toggleCollapse()}
+  //         />
+  //       </div>
+  //     )
+  //   }
+  // });
+
+  // function ModalBusView({ itemList, activeItem, onChange }) {
+  //   // TODO collapse
+  //   const [collapse, setCollapse] = useState(false);
+
+  //   // TODO usePosition - disable backdrop when moving
+  //   const contentRef = useRef();
+  //   const [position, onMouseDown] = usePosition(contentRef);
+
+  //   const style = { ...position };
+  //   if (collapse) delete style.width;
+
+  //   // TODO portal
+  //   return (
+  //     <div data-name="ModalBusViewMask" className={itemList.length ? UU5.Common.Css.css`
+  //       position: fixed;
+  //       top: 0;
+  //       bottom: 0;
+  //       left: 0;
+  //       right: 0;
+  //       background-color: rgba(0, 0, 0, 0.4);
+  //     ` : undefined}>
+  //       <div
+  //         data-name="ModalBusViewContent"
+  //         ref={contentRef}
+  //         className={itemList.length ? UU5.Common.Css.css`
+  //           position: absolute;
+  //           z-index: 1;
+  //           margin: 16px auto;
+  //           background-color: #fff;
+  //         ` : undefined}
+  //         style={style}
+  //       >
+  //         {itemList.length > 1 && (
+  //           <div data-name="ModalBusViewToolbar" onMouseDown={onMouseDown}>
+  //             <Toolbar
+  //               className={UU5.Common.Css.css`cursor: move;`}
+  //               itemList={itemList}
+  //               activeItem={activeItem}
+  //               onChange={onChange}
+  //               collapse={collapse}
+  //               toggleCollapse={() => setCollapse(coll => !coll)}
+  //             />
+  //           </div>
+  //         )}
+  //         <div
+  //           data-name="ModalBusViewPortal"
+  //           id="modal-bus"
+  //           className={UU5.Common.Css.css`
+  //             display: ${collapse ? "none" : "block"};
+
+  //             ${activeItem ? `& > :nth-child(${itemList.indexOf(activeItem) + 1}) {
+  //               display: block;
+  //             }` : ""}
+
+  //             ${itemList.length ? `& > :nth-child(${itemList.length}) {
+  //               pointer-events: inherit;
+  //             }` : ""}
+  //           `}
+  //         />
+  //       </div>
+  //     </div>
+  //   )
+  // }
+
+  // function ModalBus(props) {
+  //   const { children } = props;
+
+  //   const [itemList, setItemList] = useState([]);
+  //   const [activeItem, setActiveItem] = useState(null);
+
+  //   const value = useMemo(() => {
+  //     function addItem(id) {
+  //       setActiveItem(id);
+  //       setItemList(list => [...list, id]);
+  //     }
+
+  //     function removeItem(id) {
+  //       setActiveItem(null);
+  //       setItemList(list => {
+  //         const i = list.indexOf(id);
+
+  //         let newList = list;
+  //         if (i === list.length - 1) {
+  //           newList = list.slice(0, list.length - 1);
+  //         }
+
+  //         return newList;
+  //       });
+  //     }
+
+  //     return {
+  //       render(children, id) {
+  //         return UU5.Common.Portal.create(
+  //           <ModalCoverView id={id} onMount={addItem} onUnmount={removeItem}>
+  //             {children}
+  //           </ModalCoverView>,
+  //           document.getElementById("modal-bus")
+  //         );
+  //       }
+  //     }
+  //   }, []);
+
+  //   return (
+  //     <ModalContext.Provider value={value}>
+  //       {children}
+
+  //       <ModalBusView
+  //         itemList={itemList}
+  //         activeItem={activeItem || itemList[itemList.length - 1] || null}
+  //         onChange={setActiveItem}
+  //       />
+  //     </ModalContext.Provider>
+  //   );
+  // }
+
+  // function ModalCoverView({ id, onMount, onUnmount, children }) {
+  //   useEffect(() => {
+  //     onMount(id);
+  //     return () => onUnmount(id);
+  //   }, []);
+
+  //   return (
+  //     <div data-name="ModalCoverView" className={UU5.Common.Css.css`
+  //       display: none;
+  //       pointer-events: none;
+  //     `}>
+  //       {children}
+  //     </div>
+  //   )
+  // }
+
+  // TODO Uu5Elements.Modal
+  function Uu5g05Modal({ isOpen, header, children, footer, onClose }) {
+    let { render } = useModalBus();
+    render = render || (children => children);
+
+    return isOpen ? render(
+      <div data-name="Modal">
+        <div data-name="ModalHeader">
+          {header}
+          <UU5.Bricks.Button bgStyle="transparent" onClick={() => onClose()}>
+            <UU5.Bricks.Icon icon="mdi-close" />
+          </UU5.Bricks.Button>
+        </div>
+        <div data-name="ModalBody">
+          {children}
+        </div>
+        {footer && (
+          <div data-name="ModalFooter">
+            {footer}
+          </div>
+        )}
+      </div>
+    ) : null;
+  }
+
+  const Uu5g05ModalIfc = createComponentWithRef({
+    render(props, ref) {
+      const [isOpen, setIsOpen] = useState(false);
+
+      useImperativeHandle(ref, () => ({
+        open() {
+          setIsOpen(true);
+        },
+        close() {
+          setIsOpen(false);
+        }
+      }));
+
+      return (
+        <Uu5g05Modal
+          {...props}
+          onClose={() => setIsOpen(false)}
+          isOpen={isOpen}
+        />
+      )
+    }
+  });
+
+  function DemoModal(props) {
+    const modalRef = useRef();
+
+    return (
+      <UU5.Common.Fragment>
+        <UU5.Bricks.Button
+          onClick={() => modalRef.current.open(props.modalProps)}
+          content={props.children}
+        />
+
+        <Uu5g05ModalIfc ref={modalRef} {...props.modalProps} />
+      </UU5.Common.Fragment>
+    )
+  }
+
+  function DemoModalLegacy(props) {
+    const modalRef = useRef();
+
+    return (
+      <UU5.Common.Fragment>
+        <UU5.Bricks.Button
+          onClick={() => modalRef.current.open(props.modalProps)}
+          content={props.children}
+        />
+
+        <UU5.Bricks.Modal location="portal" ref_={modalRef} {...props.modalProps} />
+      </UU5.Common.Fragment>
+    )
+  }
+
+  function Page() {
+    return (
+      <UU5.Bricks.ModalBus>
+        <DemoModal modalProps={{
+          header: "Modal 1",
+          size: "s",
+          children: (
+            <UU5.Common.Fragment>
+              <UU5.Bricks.Paragraph />
+              <DemoModal modalProps={{
+                header: "Modal 2",
+                children: (
+                  <UU5.Common.Fragment>
+                    <UU5.Bricks.Paragraph />
+                    <DemoModal modalProps={{
+                      header: "Modal 3",
+                      children: (
+                        <UU5.Common.Fragment>
+                          <UU5.Bricks.Paragraph />
+                        </UU5.Common.Fragment>
+                      )
+                    }}>
+                      Open Modal 3
+                    </DemoModal>
+                  </UU5.Common.Fragment>
+                )
+              }}>
+                Open Modal 2
+              </DemoModal>
+            </UU5.Common.Fragment>
+          )
+        }}>
+          Open Modal 1
+        </DemoModal>
+
+        <DemoModalLegacy modalProps={{
+          header: "Legacy Modal 1",
+          size: "s",
+          children: (
+            <UU5.Common.Fragment>
+              <UU5.Bricks.Paragraph />
+              <DemoModalLegacy modalProps={{
+                size: "m",
+                header: "Legacy Modal 2",
+                children: (
+                  <UU5.Common.Fragment>
+                    <UU5.Bricks.Paragraph />
+                    <DemoModalLegacy modalProps={{
+                      header: "Legacy Modal 3",
+                      size: "l",
+                      children: (
+                        <UU5.Common.Fragment>
+                          <UU5.Bricks.Paragraph />
+                        </UU5.Common.Fragment>
+                      )
+                    }}>
+                      Open Legacy Modal 3
+                    </DemoModalLegacy>
+                  </UU5.Common.Fragment>
+                )
+              }}>
+                Open Legacy Modal 2
+              </DemoModalLegacy>
+            </UU5.Common.Fragment>
+          )
+        }}>
+          Open Legacy Modal 1
+        </DemoModalLegacy>
+
+        <UU5.Bricks.Paragraph />
+        <UU5.Bricks.Paragraph />
+        <UU5.Bricks.Paragraph />
+        <UU5.Bricks.Paragraph />
+        <UU5.Bricks.Paragraph />
+        <UU5.Bricks.Paragraph />
+        <UU5.Bricks.Paragraph />
+        <UU5.Bricks.Paragraph />
+        <UU5.Bricks.Paragraph />
+      </UU5.Bricks.ModalBus>
+    )
+  }
+
+  UU5.Common.DOM.render(<Page />, document.getElementById('renderHere'));
+</script>
+</body>
+</html>

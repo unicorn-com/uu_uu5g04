@@ -11,6 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:revision
+// coded: Petr Bišof, 13.10.2020
+// reviewed: Martin Mach, 21.10.2020
+//@@viewOff:revision
+
 import * as UU5 from "uu5g04";
 import ns from "../forms-ns.js";
 
@@ -219,7 +224,7 @@ export const TextInputMixin = {
 
   onValidate(opt) {
     let result;
-    if (this.props.pattern) {
+    if (this.props.pattern && opt.value) {
       let r = new RegExp(this.props.pattern);
       if (!r.test(opt.value)) {
         result = {

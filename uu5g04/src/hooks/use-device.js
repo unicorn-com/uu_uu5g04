@@ -174,7 +174,6 @@ function useLazyProperty(obj, propName, accessor) {
   return result;
 }
 
-const orientationListeners = new UU5.Utils._ListenerRegistry();
 const orientationAccessor = {
   getImmediateValue() {
     let type = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
@@ -188,18 +187,18 @@ const orientationAccessor = {
   },
   startTracking(onChange) {
     let listenerFn = (value) => onChange(value || orientationAccessor.getImmediateValue());
-    orientationListeners.register(listenerFn);
-    return () => orientationListeners.unregister(listenerFn);
+    UU5.Utils.EventManager.register("orientation", listenerFn);
+    return () => UU5.Utils.EventManager.unregister("orientation", listenerFn);
   },
 };
 if ("onorientationchange" in window) {
-  window.addEventListener("orientationchange", () => orientationListeners.run());
+  window.addEventListener("orientationchange", () => UU5.Utils.EventManager.trigger("orientation"));
 } else if (window.matchMedia) {
   matchMedia("(orientation: portrait)").addListener((e) =>
-    orientationListeners.run(e && e.matches ? "portrait-primary" : "landscape-primary")
+    UU5.Utils.EventManager.trigger("orientation", e && e.matches ? "portrait-primary" : "landscape-primary")
   );
 } else {
-  window.addEventListener("resize", (e) => orientationListeners.run());
+  window.addEventListener("resize", (e) => UU5.Utils.EventManager.trigger("orientation"));
 }
 
 function useDevice() {

@@ -16,6 +16,7 @@ import Tools from "./tools.js";
 import Lsi from "../utils/lsi.js";
 import ScreenSize from "../utils/screen-size.js";
 import { Environment } from "../environment/environment.js";
+import EventManager from "../utils/event-manager.js";
 
 // main visibility API function
 // use visibility API to check if current tab is active or not
@@ -48,7 +49,7 @@ export class EventListener {
 
     this._listeners = {
       screenSize: {},
-      lsi: {},
+      language: {},
       highlight: {},
       dateTime: {},
       number: {},
@@ -77,14 +78,19 @@ export class EventListener {
 
   registerEvent(key, id, fce) {
     if (typeof fce === "function") {
+      if (key === "lsi") key = "language";
       let usedFce = fce;
-      if (key === "lsi") {
+      let prevFce = this._listeners[key]?.[id];
+      if (key === "language") {
         // TODO because of backward compatibility
         usedFce = function (lang) {
           return fce(lang && typeof lang === "object" ? lang.language : lang); // new API (UU5.Utils.Lsi.setLanguage) sends object { language: "..." }, EventListener's listeners expect string
         };
-        if (this._listeners[key] && this._listeners[key][id]) Lsi.unregister(this._listeners[key][id]);
+        if (prevFce) Lsi.unregister(prevFce);
         Lsi.register(usedFce);
+      } else {
+        if (prevFce) EventManager.unregister(key, prevFce);
+        EventManager.register(key, usedFce);
       }
       this._listeners[key] = this._listeners[key] || {};
       this._listeners[key][id] = usedFce;
@@ -98,21 +104,23 @@ export class EventListener {
     ReactDOM.unstable_batchedUpdates(() => {
       // i.e. arguments = ['lsi', 'cs-cz']
       let [key, ...params] = arguments;
+      if (key === "lsi") key = "language";
       if (key === "screenSize") ScreenSize.setSize(...params);
-      else {
-        for (let id in this._listeners[key]) {
-          this._listeners[key][id].apply(null, params);
-        }
-      }
+      else EventManager.trigger(key, ...params);
     });
     return this;
   }
 
   unregisterEvent(key, id) {
+    if (key === "lsi") key = "language";
     if (this._listeners[key]) {
-      // TODO because of backward compatibility
-      if (key === "lsi") Lsi.unregister(this._listeners[key][id]);
-      delete this._listeners[key][id];
+      let fn = this._listeners[key][id];
+      if (fn) {
+        // TODO because of backward compatibility
+        if (key === "lsi") Lsi.unregister(fn);
+        if (fn) EventManager.unregister(key, fn);
+        delete this._listeners[key][id];
+      }
     }
     return this;
   }
@@ -120,20 +128,11 @@ export class EventListener {
   addEvent(object, key, id, fce) {
     if (typeof fce === "function") {
       let targetMap = this._events.get(object);
-      if (!targetMap) {
-        this._events.set(object, {});
-        targetMap = this._events.get(object);
-      }
+      if (!targetMap) this._events.set(object, (targetMap = {}));
+      if (!targetMap[key]) targetMap[key] = {};
 
-      if (!targetMap[key]) {
-        targetMap[key] = targetMap[key] || {};
-        object.addEventListener(key, (e) => {
-          for (let id in targetMap[key]) {
-            targetMap[key][id](e);
-          }
-        });
-      }
-
+      if (targetMap[key][id]) EventManager.unregister(key, targetMap[key][id], object);
+      EventManager.register(key, fce, object);
       targetMap[key][id] = fce;
     } else {
       this._writeError(key, id, fce);
@@ -143,22 +142,23 @@ export class EventListener {
 
   removeEvent(object, key, id) {
     let targetMap = this._events.get(object);
-    if (targetMap && targetMap[key] && targetMap[key][id]) {
-      object.removeEventListener(key, targetMap[key][id]);
+    if (targetMap?.[key]) {
+      let prevFce = targetMap[key][id];
+      if (prevFce) EventManager.unregister(key, prevFce, object);
       delete targetMap[key][id];
     }
     return this;
   }
 
   createEvent(object, key, id, fce) {
-    UU5.Common.Tools.warning(
+    Tools.warning(
       "UU5.Environment.EventListener.createEvent is deprecated! Use UU5.Environment.EventListener.addEvent instead."
     );
     this.addEvent(object, key, id, fce);
   }
 
   deleteEvent(object, key, id) {
-    UU5.Common.Tools.warning(
+    Tools.warning(
       "UU5.Environment.EventListener.deleteEvent is deprecated! Use UU5.Environment.EventListener.removeEvent instead."
     );
     this.removeEvent(object, key, id);
@@ -223,21 +223,19 @@ export class EventListener {
   }
 
   registerLsi(id, fce) {
-    this.registerEvent("lsi", id, fce);
+    this.registerEvent("language", id, fce);
   }
 
   triggerLsi(lang) {
-    this.triggerEvent("lsi", lang);
+    this.triggerEvent("language", lang);
   }
 
   unregisterLsi(id) {
-    this.unregisterEvent("lsi", id);
+    this.unregisterEvent("language", id);
   }
 
   registerScreenSize(id, fce) {
-    if ((this._listeners["screenSize"] || {})[id]) ScreenSize.unregister(this._listeners["screenSize"][id]);
     this.registerEvent("screenSize", id, fce);
-    ScreenSize.register(fce);
   }
 
   triggerScreenSize(e, screenSize) {
@@ -245,7 +243,6 @@ export class EventListener {
   }
 
   unregisterScreenSize(id) {
-    if ((this._listeners["screenSize"] || {})[id]) ScreenSize.unregister(this._listeners["screenSize"][id]);
     this.unregisterEvent("screenSize", id);
   }
 
