@@ -12,13 +12,11 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import PropTypes from "prop-types";
+import { Utils, PropTypes } from "uu5g05";
 import Environment from "../environment/environment.js";
 import { createComponent } from "./component.js";
 import { preprocessors } from "./component-processors.js";
-import Style from "../utils/style.js";
-import { SYMBOL_COMPONENT, SYMBOL_INIT, SYMBOL_GUARD } from "./component-symbols";
+// import { SYMBOL_COMPONENT, SYMBOL_INIT, SYMBOL_GUARD } from "./component-symbols";
 //@@viewOff:imports
 
 preprocessors.push(addBasicVisualPropsPreprocessor);
@@ -109,31 +107,7 @@ export class VisualComponent {
   }
 
   static getAttrs(props, nextClassName) {
-    let attrs = {};
-    let { style, mainAttrs, className, id, disabled, hidden, noIndex } = props;
-
-    // className building
-    let mainClassName = typeof className === "string" ? className : undefined;
-    let newClassName = Style.joinClassName(nextClassName, mainClassName, noIndex ? "uu5-noindex" : undefined);
-    if (newClassName) attrs.className = newClassName;
-
-    if (id != null) attrs.id = id + "";
-
-    let reactStyle = style && typeof style === "string" ? Style.parse(style) : style;
-    if (reactStyle) attrs.style = reactStyle;
-
-    if (typeof disabled === "boolean") attrs.disabled = disabled;
-    if (typeof hidden === "boolean") attrs.hidden = hidden;
-
-    let newMainAttrs;
-    if (mainAttrs) {
-      newMainAttrs = { ...mainAttrs };
-      delete newMainAttrs.className;
-      delete newMainAttrs.style;
-      attrs = { ...newMainAttrs, ...attrs };
-    }
-
-    return attrs;
+    return Utils.VisualComponent.getAttrs(props, nextClassName);
   }
 }
 

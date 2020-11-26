@@ -11,14 +11,10 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
+import { Utils } from "uu5g05";
 
 export class Reference {
-  static create(...args) {
-    return React.createRef(...args);
-  }
-  static forward(...args) {
-    return React.forwardRef(...args);
-  }
+  static create = Utils.Component.createRef;
+  static forward = Utils.Component.forwardRef;
 }
 export default Reference;

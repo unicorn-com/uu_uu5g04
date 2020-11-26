@@ -69,27 +69,18 @@ function advanceTime(time) {
 describe("UU5.Common.Tools interface", () => {
   it("checkTag() should return null", () => {
     const returnValue = UU5.Common.Tools.checkTag("UU5.CodeKit.CodeEditor", { hideError: true });
-    expect(() => {
-      returnValue;
-    }).not.toThrow();
     expect(returnValue).toBeNull();
     expect(returnValue).toMatchSnapshot();
   });
 
   it("checkTag() should not return null and return [Function]", () => {
     const returnValue = UU5.Common.Tools.checkTag("UU5.Bricks.Button");
-    expect(() => {
-      returnValue;
-    }).not.toThrow();
     expect(returnValue).not.toBeNull();
     expect(returnValue).toMatchSnapshot();
   });
 
   it("findComponent(tag, props, content) should return instance of button", () => {
     const returnValue = UU5.Common.Tools.findComponent("UU5.Bricks.Button", { pressed: false });
-    expect(() => {
-      returnValue;
-    }).not.toThrow();
     expect(() => {
       returnValue;
     }).not.toBeNull();
@@ -143,27 +134,18 @@ describe("UU5.Common.Tools interface", () => {
 
   it('pad(number, lenght, char="0") ', () => {
     const returnValue = UU5.Common.Tools.pad(9, 3, "0");
-    expect(() => {
-      returnValue;
-    }).not.toThrow();
     expect(returnValue).toMatch(/009/);
     expect(returnValue).toMatchSnapshot();
   });
 
   it("merge(obj1, obj2) should merge two object to one.", () => {
     const returnValue = UU5.Common.Tools.merge({ a: "a" }, { b: "b" });
-    expect(() => {
-      returnValue;
-    }).not.toThrow();
     expect(returnValue).toEqual(expect.objectContaining({ a: "a", b: "b" }));
     expect(returnValue).toMatchSnapshot();
   });
 
   it("mergedeep(obj1, obj2) should merge two object to one.", () => {
     const returnValue = UU5.Common.Tools.mergeDeep({ a: "a" }, { b: "b" });
-    expect(() => {
-      returnValue;
-    }).not.toThrow();
     expect(returnValue).toEqual(expect.objectContaining({ a: "a", b: "b" }));
     expect(returnValue).toMatchSnapshot();
   });
@@ -250,9 +232,6 @@ describe("UU5.Common.Tools interface", () => {
 
   it("generateUUID(32)", () => {
     const returnValue = UU5.Common.Tools.generateUUID(32);
-    expect(() => {
-      returnValue;
-    }).not.toThrow();
     expect(returnValue).toEqual(expect.any(String));
   });
 
@@ -290,24 +269,15 @@ describe("UU5.Common.Tools interface", () => {
 
   it("formatString(string, %s)", () => {
     let returnValue = UU5.Common.Tools.formatString("Uživateli %s je %d let.", ["Unicorn Univers", "25"]);
-    expect(() => {
-      returnValue;
-    }).not.toThrow();
     expect(returnValue).toMatch(/Uživateli Unicorn Univers je 25 let./);
 
     returnValue = UU5.Common.Tools.formatString("Uživateli ${user} je ${age} let.", {
       user: "Unicorn Univers",
       age: "25",
     });
-    expect(() => {
-      returnValue;
-    }).not.toThrow();
     expect(returnValue).toMatch(/Uživateli Unicorn Univers je 25 let./);
 
     returnValue = UU5.Common.Tools.formatString("Uživateli je %s let.", "");
-    expect(() => {
-      returnValue;
-    }).not.toThrow();
     expect(returnValue).toMatch(/Uživateli je  let./);
   });
 
@@ -316,9 +286,6 @@ describe("UU5.Common.Tools interface", () => {
       "Unicorn Univers",
       "25",
     ]);
-    expect(() => {
-      returnValue;
-    }).not.toThrow();
     expect(returnValue).toMatch(/Uživateli Unicorn Univers je 25 roky, prože se narodil před 25 roky./);
   });
 
@@ -327,100 +294,50 @@ describe("UU5.Common.Tools interface", () => {
       user: "Unicorn Univers",
       age: "25",
     });
-    expect(() => {
-      returnValue;
-    }).not.toThrow();
     expect(returnValue).toMatch(/Uživateli Unicorn Univers je 25 let./);
-  });
-
-  it("formatString() combined", () => {
-    const returnValue = UU5.Common.Tools.formatString("Uživateli ${user} %s je ${age} let.", {
-      user: "Unicorn Univers",
-      age: "25",
-    });
-    expect(() => {
-      returnValue;
-    }).not.toThrow();
-    expect(returnValue).toMatch(/Uživateli Unicorn Univers %s je 25 let./);
   });
 
   it("formatDate(date, format, timezone) dd,mm,Y", () => {
     let date = new Date(2018, 1, 1);
     const returnValue01 = UU5.Common.Tools.formatDate(date, "dd.mm.Y", null);
-    expect(() => {
-      returnValue01;
-    }).not.toThrow();
     expect(returnValue01).toMatchSnapshot();
     const returnValue02 = UU5.Common.Tools.formatDate(date, "dd-mm-Y", null);
-    expect(() => {
-      returnValue02;
-    }).not.toThrow();
     expect(returnValue02).toMatchSnapshot();
     const returnValue03 = UU5.Common.Tools.formatDate(date, "dd/mm/Y", null);
-    expect(() => {
-      returnValue03;
-    }).not.toThrow();
     expect(returnValue03).toMatchSnapshot();
   });
 
   it("formatDate(date, format, timezone) d,m,y", () => {
     let date = new Date(2018, 1, 1);
     const returnValue01 = UU5.Common.Tools.formatDate(date, "d.m.y", null);
-    expect(() => {
-      returnValue01;
-    }).not.toThrow();
     expect(returnValue01).toMatchSnapshot();
     const returnValue02 = UU5.Common.Tools.formatDate(date, "d-m-y", null);
-    expect(() => {
-      returnValue02;
-    }).not.toThrow();
     expect(returnValue02).toMatchSnapshot();
     const returnValue03 = UU5.Common.Tools.formatDate(date, "d/m/y", null);
-    expect(() => {
-      returnValue03;
-    }).not.toThrow();
     expect(returnValue03).toMatchSnapshot();
   });
 
   it("formatDate(date, format, timezone) hours,minutes,secons,miliseconds", () => {
     let date = new Date(2018, 1, 1, 1, 5, 8, 120);
     const returnValue01 = UU5.Common.Tools.formatDate(date, "dd.mm.Y HH:MM:SS:ss", null);
-    expect(() => {
-      returnValue01;
-    }).not.toThrow();
     expect(returnValue01).toMatchSnapshot();
     const returnValue02 = UU5.Common.Tools.formatDate(date, "dd.mm.Y H:M:S:s", null);
-    expect(() => {
-      returnValue02;
-    }).not.toThrow();
     expect(returnValue01).toMatchSnapshot();
   });
 
   it("formatDate(date, format, timezone) hours,minutes,secons,miliseconds p.m & a.m / PM & AM", () => {
     let date = new Date(2018, 1, 1, 1, 5, 8, 120);
     const returnValue01 = UU5.Common.Tools.formatDate(date, "dd.mm.Y HH:MM:SS:ss t", null);
-    expect(() => {
-      returnValue01;
-    }).not.toThrow();
     expect(returnValue01).toMatchSnapshot();
     const returnValue02 = UU5.Common.Tools.formatDate(date, "dd.mm.Y HH:MM:SS:ss T", null);
-    expect(() => {
-      returnValue02;
-    }).not.toThrow();
     expect(returnValue02).toMatchSnapshot();
   });
 
   it("formatDate(date, format, timezone) hours,minutes,secons,miliseconds w vs. ww", () => {
     let date = new Date(2018, 1, 1, 1, 5, 8, 120);
     const returnValue03 = UU5.Common.Tools.formatDate(date, "dd.mm.Y HH:MM:SS:ss w", null);
-    expect(() => {
-      returnValue03;
-    }).not.toThrow();
     expect(returnValue03).toMatchSnapshot();
     const returnValue04 = UU5.Common.Tools.formatDate(date, "dd.mm.Y HH:MM:SS:ss ww", null);
-    expect(() => {
-      returnValue04;
-    }).not.toThrow();
     expect(returnValue04).toMatchSnapshot();
 
     expect(UU5.Common.Tools.formatDate(new Date("2018-12-31"), "w/Y")).toBe("1/2019");
@@ -430,14 +347,8 @@ describe("UU5.Common.Tools interface", () => {
   it("formatDate(date, format, timezone) hours,minutes,secons,miliseconds q vs. Z", () => {
     let date = new Date(2018, 1, 1, 1, 5, 8, 120);
     const returnValue03 = UU5.Common.Tools.formatDate(date, "dd.mm.Y HH:MM:SS:ss q", null);
-    expect(() => {
-      returnValue03;
-    }).not.toThrow();
     expect(returnValue03).toMatchSnapshot();
     const returnValue04 = UU5.Common.Tools.formatDate(date, "dd.mm.Y HH:MM:SS:ss Z", null);
-    expect(() => {
-      returnValue04;
-    }).not.toThrow();
     expect(returnValue04).toEqual("01.02.2018 01:05:08:120 +01:00");
     expect(returnValue04).toMatchSnapshot();
   });
@@ -449,7 +360,7 @@ describe("UU5.Common.Tools interface", () => {
     expect(resultDate).toMatchSnapshot();
     resultDate = UU5.Common.Tools.parseDate("12/31/2018", { country: "en" });
     expect(resultDate).toMatchSnapshot();
-    resultDate = UU5.Common.Tools.parseDate("12/31/2018");
+    resultDate = UU5.Common.Tools.parseDate("31/12/2018"); // en-gb (UU5.Environment.defaultLanguage)
     expect(resultDate).toMatchSnapshot();
   });
 
@@ -489,18 +400,12 @@ describe("UU5.Common.Tools interface", () => {
 
   it("[string] Tools.getScreenSize()", () => {
     const retV = UU5.Common.Tools.getScreenSize();
-    expect(() => {
-      retV;
-    }).not.toThrow();
     expect(retV).not.toBeNull();
     expect(retV).toMatch(/l/);
   });
 
   it("[string] Tools.getLanguage()", () => {
     const retV = UU5.Common.Tools.getLanguage();
-    expect(() => {
-      retV;
-    }).not.toThrow();
     expect(retV).not.toBeNull();
     expect(retV).toMatchSnapshot();
   });
@@ -509,22 +414,13 @@ describe("UU5.Common.Tools interface", () => {
   // https://uuos9.plus4u.net/uu-dockitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=environmentAndUu5Configuration
   it("Tools.setLanguage(language); VPH-BT:44754540766279800", () => {
     const newLanguage = UU5.Common.Tools.setLanguage([{ language: "cs", location: "cs-cz", q: 0.8 }]);
-    expect(() => {
-      newLanguage;
-    }).not.toThrow();
     expect(UU5.Common.Tools.getLanguage()).toMatchSnapshot();
   });
 
   it("Tools.setLanguage(language)", () => {
     const newLanguage1 = UU5.Common.Tools.setLanguage("cs-CZ, cs;q=0.9, en;q=0.8");
-    expect(() => {
-      newLanguage1;
-    }).not.toThrow();
     expect(UU5.Common.Tools.getLanguage()).toMatchSnapshot();
     const newLanguage2 = UU5.Common.Tools.setLanguage("cs-CZ");
-    expect(() => {
-      newLanguage2;
-    }).not.toThrow();
     expect(UU5.Common.Tools.getLanguage()).toMatchSnapshot();
   });
 
@@ -599,9 +495,6 @@ describe("UU5.Common.Tools interface", () => {
       value: 50,
     });
     let ifc = UU5.Common.Tools.getDocumentHeight();
-    expect(() => {
-      ifc;
-    }).not.toThrow();
     expect(ifc).not.toBeNull();
     expect(ifc).toBe(900);
   });
@@ -629,9 +522,6 @@ describe("UU5.Common.Tools interface", () => {
       value: 50,
     });
     let ifc = UU5.Common.Tools.getDocumentWidth();
-    expect(() => {
-      ifc;
-    }).not.toThrow();
     expect(ifc).not.toBeNull();
     expect(ifc).toBe(900);
   });
@@ -647,9 +537,6 @@ describe("UU5.Common.Tools interface", () => {
     });
     //result should be 500 - 200 - 100 = 200
     let ifc = UU5.Common.Tools.getWidth(element);
-    expect(() => {
-      ifc;
-    }).not.toThrow();
     expect(ifc).not.toBeNull();
     expect(ifc).toBe(200);
   });
@@ -663,9 +550,6 @@ describe("UU5.Common.Tools interface", () => {
     });
     //result should be 500 - 200 - 200 = 100
     let ifc = UU5.Common.Tools.getHeight(element);
-    expect(() => {
-      ifc;
-    }).not.toThrow();
     expect(ifc).not.toBeNull();
     expect(ifc).toBe(100);
   });
@@ -677,9 +561,6 @@ describe("UU5.Common.Tools interface", () => {
       value: 500,
     });
     let ifc = UU5.Common.Tools.getInnerWidth(element);
-    expect(() => {
-      ifc;
-    }).not.toThrow();
     expect(ifc).not.toBeNull();
     expect(ifc).toBe(500);
   });
@@ -694,9 +575,6 @@ describe("UU5.Common.Tools interface", () => {
     });
     //margin is ignored with false
     let ifc = UU5.Common.Tools.getOuterWidth(element, false);
-    expect(() => {
-      ifc;
-    }).not.toThrow();
     expect(ifc).not.toBeNull();
     expect(ifc).toBe(300);
   });
@@ -709,9 +587,6 @@ describe("UU5.Common.Tools interface", () => {
       value: 300,
     });
     let ifc = UU5.Common.Tools.getOuterWidth(element, true);
-    expect(() => {
-      ifc;
-    }).not.toThrow();
     expect(ifc).not.toBeNull();
     expect(ifc).toBe(700);
   });
@@ -723,9 +598,6 @@ describe("UU5.Common.Tools interface", () => {
       value: 500,
     });
     let ifc = UU5.Common.Tools.getInnerHeight(element);
-    expect(() => {
-      ifc;
-    }).not.toThrow();
     expect(ifc).not.toBeNull();
     expect(ifc).toBe(500);
   });
@@ -740,9 +612,6 @@ describe("UU5.Common.Tools interface", () => {
     });
     //margin is ignored with false
     let ifc = UU5.Common.Tools.getOuterHeight(element, false);
-    expect(() => {
-      ifc;
-    }).not.toThrow();
     expect(ifc).not.toBeNull();
     expect(ifc).toBe(300);
   });
@@ -755,9 +624,6 @@ describe("UU5.Common.Tools interface", () => {
       value: 300,
     });
     let ifc = UU5.Common.Tools.getOuterHeight(element, true);
-    expect(() => {
-      ifc;
-    }).not.toThrow();
     expect(ifc).not.toBeNull();
     expect(ifc).toBe(700);
   });
@@ -770,9 +636,6 @@ describe("UU5.Common.Tools interface", () => {
       value: 300,
     });
     let ifc = UU5.Common.Tools.getOffsetTop(element);
-    expect(() => {
-      ifc;
-    }).not.toThrow();
     expect(ifc).not.toBeNull();
     // expect(ifc).toBe(300); // commented out as jsdom environment doesn't support getting measures (our implementation uses getBoundingClientRect)
   });
@@ -785,11 +648,35 @@ describe("UU5.Common.Tools interface", () => {
       value: 200,
     });
     let ifc = UU5.Common.Tools.getOffsetLeft(element);
-    expect(() => {
-      ifc;
-    }).not.toThrow();
     expect(ifc).not.toBeNull();
     // expect(ifc).toBe(200); // commented out as jsdom environment doesn't support getting measures (our implementation uses getBoundingClientRect)
+  });
+
+  it("getWeekNumber(date, startOfTheWeek)", () => {
+    const resultMatrix = [
+      [52, 52, 52, 1, 1, 1, 1, 1, 1, 1],
+      [52, 52, 52, 52, 1, 1, 1, 1, 1, 1],
+      [52, 52, 52, 52, 52, 1, 1, 1, 1, 1],
+      [52, 52, 52, 52, 52, 52, 1, 1, 1, 1],
+      [52, 52, 52, 52, 52, 52, 52, 1, 1, 1],
+      [52, 53, 53, 53, 53, 53, 53, 53, 1, 1],
+      [52, 52, 1, 1, 1, 1, 1, 1, 1, 2],
+    ];
+
+    // backward compatibility - ensure correct work of default value
+    for (let dateOffset = 0; dateOffset < 10; dateOffset++) {
+      let date = new Date("12/27/2019");
+      date.setDate(date.getDate() + dateOffset);
+      expect(UU5.Common.Tools.getWeekNumber(date)).toBe(resultMatrix[0][dateOffset]);
+    }
+
+    for (let dayStart = 1; dayStart <= 7; dayStart++) {
+      for (let dateOffset = 0; dateOffset < 10; dateOffset++) {
+        let date = new Date("12/27/2019");
+        date.setDate(date.getDate() + dateOffset);
+        expect(UU5.Common.Tools.getWeekNumber(date, dayStart)).toBe(resultMatrix[dayStart - 1][dateOffset]);
+      }
+    }
   });
 
   it("streamToString()", () => {

@@ -137,6 +137,7 @@ export const DateTimeRangePicker = Context.withContext(
       timeStep: UU5.PropTypes.number,
       timePickerType: UU5.PropTypes.oneOf(["single-column", "multi-column"]),
       timeZone: UU5.PropTypes.number,
+      weekStartDay: UU5.PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7]),
     },
     //@@viewOff:propTypes
 
@@ -171,6 +172,7 @@ export const DateTimeRangePicker = Context.withContext(
         timeStep: 1,
         timePickerType: "multi-column",
         timeZone: undefined,
+        weekStartDay: 1,
       };
     },
     //@@viewOff:getDefaultProps
@@ -1748,7 +1750,7 @@ export const DateTimeRangePicker = Context.withContext(
       if (!this._isSorXs()) {
         toDate = DateTools.increaseDate(toDate, undefined, 1);
       }
-
+      this._onChange({ value: this._getToday(), _data: { type: "calendar" } });
       this.setState({ fromDisplayDate: fromDate, toDisplayDate: toDate });
     },
 
@@ -2320,6 +2322,7 @@ export const DateTimeRangePicker = Context.withContext(
         hideWeekNumber: this.props.hideWeekNumber,
         hideOtherSections: true,
         colorSchema: this.getColorSchema(),
+        weekStartDay: this.props.weekStartDay,
       };
 
       if (isSorXs) {

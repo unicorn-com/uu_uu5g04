@@ -13,8 +13,8 @@
 
 //@@viewOn:imports
 import React from "react";
+import { PropTypes, Utils } from "uu5g05";
 import ns from "./common-ns.js";
-import PropTypes from "prop-types";
 import BaseMixin from "./base-mixin.js";
 import ElementaryMixin from "./elementary-mixin.js";
 import Tools from "./tools.js";
@@ -195,7 +195,7 @@ export const TextCorrectorComponent = VisualComponent.create({
       spaceTmp = [];
     }
 
-    return React.Children.toArray(newTextChildren);
+    return Utils.Content.toArray(newTextChildren);
   },
 
   _checkWord(props, word, searchedTexts) {
@@ -229,7 +229,7 @@ export const TextCorrectorComponent = VisualComponent.create({
     if (props.checkGrammar && !this._isValidWord(word)) {
       result = (
         <span className={this.getClassName().error}>
-          {Array.isArray(result) ? React.Children.toArray(result) : result}
+          {Array.isArray(result) ? Utils.Content.toArray(result) : result}
         </span>
       );
     }

@@ -762,11 +762,13 @@ _Modal._onCloseESC = function (e) {
 };
 
 function withModalBus(Component) {
-  return UU5.Common.Reference.forward((props, ref) => (
+  let result = UU5.Common.Reference.forward((props, ref) => (
     <UU5.Common.ModalBusContext.Consumer>
       {({ render, allowClose }) => <Component {...props} ref={ref} _render={render} _allowClose={allowClose} />}
     </UU5.Common.ModalBusContext.Consumer>
   ));
+  if (process.env.NODE_ENV === "test") result._originalComponent = Component;
+  return result;
 }
 
 export const Modal = withModalBus(_Modal);

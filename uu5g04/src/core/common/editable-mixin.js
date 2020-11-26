@@ -12,8 +12,8 @@
  */
 
 import React from "react";
-import PropTypes from "prop-types";
-import UU5String from "./uu5string/uu5-string.js";
+import { PropTypes } from "uu5g05";
+import UU5String from "./uu5string.js";
 import ns from "./common-ns.js";
 import Element from "./element.js";
 

@@ -1,7 +1,6 @@
 //@@viewOn:imports
 import UU5 from "uu5g04";
-import { useState, useCallback } from "./react-hooks";
-import { createComponent } from "./component";
+import { useState, useCallback, createComponent } from "uu5g05";
 import TriggerIfAlmostVisible from "./internal/trigger-if-almost-visible";
 //@@viewOff:imports
 

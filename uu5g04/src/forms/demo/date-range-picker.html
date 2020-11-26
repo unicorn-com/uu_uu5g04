@@ -72,6 +72,11 @@
       import "uu5g04-forms";
       import "uu5g04-bricks";
 
+      function onChange(opt) {
+        console.log(opt.value);
+        opt.component.onChangeDefault(opt);
+      }
+
       var Page = UU5.Common.VisualComponent.create({
         render: function () {
           let isoValue = ["2018-07-31T10:00:00.000Z", "2019-08-20T10:00:00.000Z"];
@@ -98,6 +103,19 @@
                 value={["2019-07-31T10:00:00", "2019-08-20T10:00:00"]}
               />
               <UU5.Forms.DateRangePicker label="ISO string value" value={["2019-07-31", "2019-08-20"]} />
+              <UU5.Forms.DateRangePicker label="strictSelection='week'" onChange={onChange} strictSelection="week" />
+              <UU5.Forms.DateRangePicker
+                label="strictSelection='week' & weekStartDay={3}"
+                onChange={onChange}
+                strictSelection="week"
+                weekStartDay={3}
+              />
+              <UU5.Forms.DateRangePicker label="strictSelection='1-5'" onChange={onChange} strictSelection="1-5" />
+              <UU5.Forms.DateRangePicker label="strictSelection='5-6'" onChange={onChange} strictSelection="5-6" />
+              <UU5.Forms.DateRangePicker label="strictSelection='6-3'" onChange={onChange} strictSelection="6-3" />
+              <UU5.Forms.DateRangePicker label="strictSelection={5}" onChange={onChange} strictSelection={5} />
+              <UU5.Forms.DateRangePicker label="weekStartDay={1}" weekStartDay={1} />
+              <UU5.Forms.DateRangePicker label="weekStartDay={7}" weekStartDay={7} />
               <UU5.Forms.DateRangePicker
                 label="onFocus & onBlur"
                 onBlur={(opt) => {
@@ -109,13 +127,7 @@
                   opt.component.onFocusDefault(opt);
                 }}
               />
-              <UU5.Forms.DateRangePicker
-                label="onChange"
-                onChange={(opt) => {
-                  console.log(opt.value);
-                  opt.component.onChangeDefault(opt);
-                }}
-              />
+              <UU5.Forms.DateRangePicker label="onChange" onChange={onChange} />
               <UU5.Forms.DateRangePicker label="validateOnChange" validateOnChange />
               <UU5.Forms.DateRangePicker
                 label="onValidate"

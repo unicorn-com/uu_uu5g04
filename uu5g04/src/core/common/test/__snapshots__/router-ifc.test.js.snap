@@ -7,7 +7,7 @@ exports[`UU5.Common.Router - Internal Interface test allowPageLeave() 1`] = `
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -23,7 +23,7 @@ exports[`UU5.Common.Router - Internal Interface test allowPageLeave() 2`] = `
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -39,7 +39,7 @@ exports[`UU5.Common.Router - Internal Interface test preventPageLeave() 1`] = `
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -55,7 +55,7 @@ exports[`UU5.Common.Router - Internal Interface test preventPageLeave() 2`] = `
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -71,7 +71,7 @@ exports[`UU5.Common.Router - Internal Interface test scrollToFragment() 1`] = `
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -87,7 +87,7 @@ exports[`UU5.Common.Router - Internal Interface test scrollToFragment() 2`] = `
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -103,7 +103,7 @@ exports[`UU5.Common.Router - Internal Interface test setRoute() 1`] = `
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -123,7 +123,7 @@ exports[`UU5.Common.Router - Internal Interface test setRoute() 2`] = `
       }
     }
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"

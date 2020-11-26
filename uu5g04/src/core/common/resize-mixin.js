@@ -11,7 +11,7 @@
  * at the email: info@unicorn.com.
  */
 
-import PropTypes from "prop-types";
+import { PropTypes } from "uu5g05";
 
 import Environment from "../environment/environment.js";
 import Tools from "./tools.js";

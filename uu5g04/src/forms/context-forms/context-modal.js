@@ -37,15 +37,18 @@ export const ContextModal = UU5.Common.Reference.forward(({ className, ...props 
         background: none;
         padding: ${topOffset}px ${sideOffsetMobile}px ${bottomOffset}px;
         ${UU5.Utils.ScreenSize.getMinMediaQueries("m", `padding: ${topOffset}px ${sideOffset}px ${bottomOffset}px;`)}
-        
+
         .uu5-forms-form > .uu5-bricks-alert-bus {
-          margin: -${topOffset}px -${sideOffsetMobile}px 24px;
-          ${UU5.Utils.ScreenSize.getMinMediaQueries("m", `margin: -${topOffset}px -${sideOffset}px 24px;`)}
-          
+          margin: -${topOffset}px 0px 24px -${sideOffsetMobile}px;
+          ${UU5.Utils.ScreenSize.getMinMediaQueries("m", `margin: -${topOffset}px 0px 24px -${sideOffset}px;`)}
+          width: 0;
+          min-width: calc(100% + ${2 * sideOffsetMobile}px);
+          ${UU5.Utils.ScreenSize.getMinMediaQueries("m", `min-width: calc(100% + ${2 * sideOffset}px);`)}
+
           &.uu5-bricks-alert-without-header .uu5-bricks-alert-content {
             padding: 16px;
             ${UU5.Utils.ScreenSize.getMinMediaQueries("m", `padding: 16px ${sideOffset}px;`)}
-    
+
             /** just for IE **/
             @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
               width: 100%;

@@ -2,7 +2,12 @@
 
 exports[`UU5.Bricks.ConfirmModal props ConfirmModal snapshot 1`] = `
 <RenderIntoPortal>
-  <Modal
+  <ForwardRef
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
     footer={
       <div
         className="uu5-bricks-confirm-modal-footer"
@@ -86,10 +91,25 @@ exports[`UU5.Bricks.ConfirmModal props ConfirmModal snapshot 1`] = `
       </div>
     }
     forceRender={true}
+    header={null}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    increaseLevel={false}
+    level={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
     onClose={[Function]}
+    pureRender={false}
     ref_={[Function]}
+    selected={false}
     size="s"
     sticky={true}
+    stickyBackground={true}
+    style={null}
+    tooltip={null}
+    underline={false}
   />
 </RenderIntoPortal>
 `;

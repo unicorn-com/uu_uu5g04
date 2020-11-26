@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Common.Tools interface [string] Tools.getLanguage() 1`] = `"en"`;
+exports[`UU5.Common.Tools interface [string] Tools.getLanguage() 1`] = `"en-gb"`;
 
 exports[`UU5.Common.Tools interface Tools.error(msg, context) 1`] = `undefined`;
 
@@ -124,7 +124,7 @@ exports[`UU5.Common.Tools interface getDateString(date, opt) 3`] = `"31.12.18"`;
 
 exports[`UU5.Common.Tools interface getDateString(date, opt) 4`] = `"12/31/2018"`;
 
-exports[`UU5.Common.Tools interface getDateString(date, opt) 5`] = `"12/31/2018"`;
+exports[`UU5.Common.Tools interface getDateString(date, opt) 5`] = `"31/12/2018"`;
 
 exports[`UU5.Common.Tools interface merge(obj1, obj2) should merge two object to one. 1`] = `
 Object {

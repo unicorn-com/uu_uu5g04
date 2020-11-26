@@ -34,14 +34,14 @@ async function run() {
     let processEnv = {
       NAME: pkg.name,
       VERSION: pkg.version,
-      TARGET_ENVIRONMENT: "browser"
+      TARGET_ENVIRONMENT: "browser",
     };
     let babelConfig = require("uu_appg01_devkit/src/config/.babelrc.js")("development", processEnv);
     let exportsReader = new Es6ExportsReader(babelConfig);
     let testExports = exportsReader.getExportsFromFile("src/test/test-build.js");
     let typingsTest = new ExportsToTypings().serialize(testExports, "UU5.Test", "");
     let typings = fs.readFileSync("target/dist-root/index.d.ts", "utf-8");
-    let modTypings = typings.replace(/namespace Test\s+\{\s*\}/, m => {
+    let modTypings = typings.replace(/namespace Test\s+\{\s*\}/, (m) => {
       let from = typingsTest.indexOf("namespace Test");
       let fromNewLine = typingsTest.lastIndexOf("\n", from);
       let whitespaces = typingsTest.substr(fromNewLine + 1, from - fromNewLine).match(/^\s*/)[0];
@@ -67,12 +67,19 @@ async function run() {
     );
   }
 
-  console.log("Copying files for color-schema.less");
+  console.log("Copying files for color-schema.less.");
   await processColorSchemaFile("src", "target/dist", "src/color-schema.less");
 
-  console.log("Copying jest-setup.js");
+  console.log("Copying jest-setup.js.");
   fs.copyFileSync("src/core/test/jest-setup.js", "target/dist-node/jest-setup.js");
   fs.copyFileSync("src/core/test/jest-setup.js", "target/dist/jest-setup.js"); // for backward compatibility
+
+  // remove uu5g05 from externals
+  // FIXME Do somehow differently / via devkit settings / ???
+  console.log("Fixing externals for 'package' step (do not commit to Git).");
+  let pkgJson = JSON.parse(fs.readFileSync("package.json", "utf-8"));
+  delete pkgJson.uuBuildSettings.externals.uu5g05;
+  fs.writeFileSync("package.json", JSON.stringify(pkgJson, null, 2) + "\n", "utf-8");
 }
 
 let processed = new Set();
@@ -95,14 +102,24 @@ async function processColorSchemaFile(srcDir, destDir, fileRelative, fromFile = 
 
   // copy & process any other @import-ed files
   let lessOpts = {
-    filename: file
+    filename: file,
   };
   let parseResult = await less.parse(fs.readFileSync(lessOpts.filename, "utf-8"), lessOpts);
-  let importRules = parseResult.rules.filter(rule => rule.importedFilename);
-  let promises = importRules.map(rule =>
+  let importRules = parseResult.rules.filter((rule) => rule.importedFilename);
+  let promises = importRules.map((rule) =>
     processColorSchemaFile(srcDir, destDir, rule.importedFilename, lessOpts.filename)
   );
   await Promise.all(promises);
 }
 
+function copyUu5g05() {
+  fs.copySync("node_modules/uu5g05/dist/", "target/dist/uu5g05/", { overwrite: true, recursive: true });
+
+  let bcFile1 = require.resolve("uu5g05-browser-compatibility/dist/uu5g05-browser-compatibility.min.js");
+  fs.copyFileSync(bcFile1, "target/dist/uu5g04-browser-update.min.js");
+  let bcFile2 = require.resolve("uu5g05-browser-compatibility/dist/uu5g05-browser-compatibility.js");
+  fs.copyFileSync(bcFile2, "target/dist/uu5g04-browser-update.js");
+}
+
+copyUu5g05();
 if (!process.env.WATCH) run();

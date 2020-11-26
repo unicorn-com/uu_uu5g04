@@ -1,11 +1,12 @@
-import EventManager from "./event-manager";
-import Context from "../common/context";
+import { Utils } from "uu5g05";
 
-const XS = 480;
-const S = 768;
-const M = 992;
-const L = 1360;
-const XL = Infinity;
+const g05ScreenSize = Utils.ScreenSize;
+
+const XS = g05ScreenSize.XS;
+const S = g05ScreenSize.S;
+const M = g05ScreenSize.M;
+const L = g05ScreenSize.L;
+const XL = g05ScreenSize.XL;
 
 class ScreenSize {
   static XS = XS;
@@ -14,82 +15,30 @@ class ScreenSize {
   static L = L;
   static XL = XL;
 
-  static SIZE_MAP = {
-    xs: XS,
-    s: S,
-    m: M,
-    l: L,
-    xl: XL,
-  };
+  static SIZE_MAP = g05ScreenSize._SIZE_MAP;
 
   static countSize(width = window.innerWidth) {
-    let result;
-
-    if (width <= this.XS) {
-      result = "xs";
-    } else if (width <= this.S) {
-      result = "s";
-    } else if (width <= this.M) {
-      result = "m";
-    } else if (width <= this.L) {
-      result = "l";
-    } else {
-      result = "xl";
-    }
-
-    return result;
+    return g05ScreenSize.countSize(width);
   }
 
   static register(listener) {
-    return EventManager.register("screenSize", listener);
+    return g05ScreenSize._register(listener);
   }
 
   static unregister(listener) {
-    return EventManager.unregister("screenSize", listener);
+    return g05ScreenSize._unregister(listener);
   }
 
   static setSize(event, screenSize) {
-    if (actualScreenSize !== screenSize) {
-      actualScreenSize = screenSize;
-      EventManager.trigger("screenSize", event, screenSize);
-    }
+    return g05ScreenSize._setSize(event, screenSize);
   }
 
   static getSize() {
-    return actualScreenSize;
+    return g05ScreenSize.getSize();
   }
 
-  static parseValue(value) {
-    let result;
-
-    // parse value
-    if (typeof value === "object") {
-      result = value;
-    } else if (typeof value === "string") {
-      result = {};
-      value.split(" ").forEach((item) => {
-        let parts = item.match(/^([^-]+)-(.*)$/);
-        if (parts) {
-          result[parts[1]] = parts[2];
-        }
-      });
-    } else {
-      return { xs: value };
-    }
-
-    // filter all non screen size keys from result
-    let _result = {};
-    result = Object.keys(result)
-      .filter((key) => this.SIZE_MAP[key])
-      .forEach((key) => (_result[key] = result[key]));
-    result = _result;
-
-    // check if result contains some key - if not original value was only string with - and it is not screen size value
-    if (!Object.keys(result).length) {
-      result = { xs: value };
-    }
-
-    return result;
+  static splitColumns(colWidth) {
+    return g05ScreenSize.parseValue(colWidth);
   }
 
   static getMediaQueries(screenSize, inner) {
@@ -193,20 +142,6 @@ class ScreenSize {
 
 // backward compatibility
 ScreenSize.splitColumns = ScreenSize.parseValue;
-
-// slightly "hide" this as we need it only for proper interoperability of ScreenSizeMixin and
-// hooks ScreenSizeProvider
-const ScreenSizeContext = Context.create(null);
-Object.defineProperty(ScreenSize, "Context", {
-  value: ScreenSizeContext,
-  enumerable: false,
-});
-
-let actualScreenSize = ScreenSize.countSize();
-const resizeFn = (e) => ScreenSize.setSize(e, ScreenSize.countSize());
-
-window.addEventListener("resize", resizeFn);
-window.addEventListener("orientationchange", resizeFn);
 
 export { ScreenSize };
 export default ScreenSize;

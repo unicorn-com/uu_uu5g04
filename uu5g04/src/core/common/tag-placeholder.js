@@ -12,30 +12,14 @@
  */
 
 //@@viewOn:imports
-import PropTypes from "prop-types";
+import { PropTypes } from "uu5g05";
 import ns from "./common-ns.js";
 import BaseMixin from "./base-mixin.js";
 import Tools from "./tools.js";
 import NotFoundTag from "./not-found-tag.js";
 import VisualComponent from "./visual-component.js";
-import {
-  getComponentByName,
-  _loadComponentByName,
-  useDynamicLibraryComponent,
-} from "./internal/use-dynamic-library-component.js";
+import { getComponentByName, loadComponentByName } from "../uu5g05-integration/use-dynamic-library-component";
 //@@viewOff:imports
-
-useDynamicLibraryComponent._backCompatGetComponent = (componentName, item, Component, error) => {
-  if (Component != null) return { Component, error };
-
-  let tagArray = componentName.split(".");
-  let calculatedTag = window;
-  while (calculatedTag && ["object", "function"].indexOf(typeof calculatedTag) > -1 && tagArray.length > 0) {
-    calculatedTag = calculatedTag[tagArray.shift()];
-  }
-  let result = calculatedTag || null;
-  return { Component: result, error: result != null ? undefined : error };
-};
 
 export const TagPlaceholder = VisualComponent.create({
   displayName: "TagPlaceholder", // for backward compatibility (test snapshots)
@@ -111,7 +95,7 @@ export const TagPlaceholder = VisualComponent.create({
     let [componentName, Component, error] = this._current;
     if (Component !== prevComponent || componentName !== prevComponentName || error !== prevError) {
       if (Component == null && error == null) {
-        _loadComponentByName(componentName, () => {
+        loadComponentByName(componentName, () => {
           if (!this.isRendered()) return;
           if (this.props._fromFindComponent && typeof this.props._onLoad === "function") {
             let { Component, error } = getComponentByName(componentName);
@@ -145,11 +129,9 @@ export const TagPlaceholder = VisualComponent.create({
     let mergedProps = { ...restProps, ...this._get("props") };
     let componentName = this._get("tagName");
 
-    // TODO Replace with:
+    // NOTE This is equivalent of:
     //   let { Component, /* errorData,*/ state } = useDynamicLibraryComponent(componentName);
-    // when uu5g05 gets integrated with g04. Note that calling of this.props._onLoad might need tweaking
-    // (optimally it should be called before rendering of the loaded component, i.e. before render phase).
-    // Also remove _runEffects & related fns after the integration.
+    // We cannot use the hook directly as this is mixin component.
     let { Component, state } = (() => {
       let { Component, error } = getComponentByName(componentName);
       this._prevCurrent = this._current;

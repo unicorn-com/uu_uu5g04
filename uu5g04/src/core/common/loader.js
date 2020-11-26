@@ -12,8 +12,7 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import PropTypes from "prop-types";
+import { PropTypes, Utils } from "uu5g05";
 import Environment from "../environment/environment.js";
 import BaseMixin from "./base-mixin.js";
 import Tools from "./tools.js";
@@ -197,7 +196,7 @@ export const Loader = Component.create({
       result = children({ data: this.state.data });
     } else {
       result =
-        React.Children.map(children, (child) => {
+        Utils.Content.map(children, (child) => {
           if (Element.isValid(child)) {
             return Element.clone(child, { data: this.state.data });
           } else {

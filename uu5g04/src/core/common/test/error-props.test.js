@@ -14,9 +14,8 @@
 import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import createReactClass from "create-react-class";
 
-const { mount, shallow, wait } = UU5.Test.Tools;
+const { mount, shallow } = UU5.Test.Tools;
 
 //`UU5.Common.Error`
 
@@ -80,6 +79,19 @@ const CONFIG = {
     },
   },
 };
+
+let origGetRuntimeLibraries;
+beforeEach(() => {
+  origGetRuntimeLibraries = UU5.Environment.getRuntimeLibraries;
+  UU5.Environment.getRuntimeLibraries = () => {
+    let result = { ...origGetRuntimeLibraries() };
+    for (let k in result) if (result[k]?.version) result[k].version = "0.0.0";
+    return result;
+  };
+});
+afterEach(() => {
+  UU5.Environment.getRuntimeLibraries = origGetRuntimeLibraries;
+});
 
 describe(`UU5.Common.Error props`, () => {
   UU5.Test.Tools.testProperties(UU5.Common.Error, CONFIG);

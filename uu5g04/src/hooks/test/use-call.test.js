@@ -1,9 +1,7 @@
-import UU5 from "uu5g04";
 import { useCall } from "uu5g04-hooks";
+import { renderHook, act } from "uu5g05-test";
 
-const { renderHook, act } = UU5.Test.Tools;
-
-describe("[uu5g04-hooks] useCall behaviour", () => {
+describe("[uu5g04-hooks] useCall", () => {
   it("should return expected result API", () => {
     let { lastResult } = renderHook(useCall);
     expect(lastResult()).toMatchObject({

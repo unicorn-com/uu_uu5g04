@@ -10,6 +10,7 @@
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
+import { Utils } from "uu5g05";
 
 export class DocumentManager {
   static addCss(cssUrl) {
@@ -30,13 +31,7 @@ export class DocumentManager {
     return false;
   }
 
-  static addUniqueCss(cssUrl) {
-    if (!this.isCssAdded(cssUrl)) {
-      this.addCss(cssUrl);
-      return true;
-    }
-    return false;
-  }
+  static addUniqueCss = Utils.DOM.addCss;
 }
 
 export default DocumentManager;

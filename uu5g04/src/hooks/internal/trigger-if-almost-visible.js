@@ -1,7 +1,6 @@
 //@@viewOn:imports
 import UU5 from "uu5g04";
-import { useRef, useState, useLayoutEffect } from "../react-hooks";
-import { createComponent } from "../component";
+import { createComponent, useRef, useState, useLayoutEffect } from "uu5g05";
 //@@viewOff:imports
 
 const useWindowRect = () => {

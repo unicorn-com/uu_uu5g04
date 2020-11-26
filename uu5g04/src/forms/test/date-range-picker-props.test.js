@@ -156,6 +156,55 @@ describe(`UU5.Forms.DateRangePicker props`, () => {
     expect(value[0]).toBe("2015");
     expect(value[1]).toBe("2022");
   });
+
+  it(`strictSelection`, () => {
+    let wrapper = mount(
+      <UU5.Forms.DateRangePicker strictSelection="week" value={[new Date(firstDate), new Date(lastDate)]} />
+    );
+    wrapper.instance().open();
+    wrapper.update();
+    wrapper.find(".uu5-forms-calendar-active").first().simulate("click");
+    let value = wrapper.instance().getValue();
+    expect(value[0].getTime()).toBe(new Date("2018-12-31T00:00:00").getTime());
+    expect(value[1].getTime()).toBe(new Date("2019-01-06T23:59:59.999").getTime());
+
+    wrapper = mount(
+      <UU5.Forms.DateRangePicker strictSelection={5} value={[new Date(firstDate), new Date(lastDate)]} />
+    );
+    wrapper.instance().open();
+    wrapper.update();
+    wrapper.find(".uu5-forms-calendar-active").first().simulate("click");
+    value = wrapper.instance().getValue();
+    expect(value[0].getTime()).toBe(new Date("2019-01-01T00:00:00").getTime());
+    expect(value[1].getTime()).toBe(new Date("2019-01-05T23:59:59.999").getTime());
+
+    wrapper = mount(
+      <UU5.Forms.DateRangePicker strictSelection="1-5" value={[new Date(firstDate), new Date(lastDate)]} />
+    );
+    wrapper.instance().open();
+    wrapper.update();
+    wrapper.find(".uu5-forms-calendar-active").first().simulate("click");
+    value = wrapper.instance().getValue();
+    expect(value[0].getTime()).toBe(new Date("2018-12-31T00:00:00").getTime());
+    expect(value[1].getTime()).toBe(new Date("2019-01-04T23:59:59.999").getTime());
+
+    wrapper = mount(
+      <UU5.Forms.DateRangePicker strictSelection="5-1" value={[new Date(firstDate), new Date(lastDate)]} />
+    );
+    wrapper.instance().open();
+    wrapper.update();
+    wrapper.find(".uu5-forms-calendar-active").first().simulate("click");
+    value = wrapper.instance().getValue();
+    expect(value[0].getTime()).toBe(new Date("2019-01-04T00:00:00").getTime());
+    expect(value[1].getTime()).toBe(new Date("2019-01-07T23:59:59.999").getTime());
+  });
+
+  it(`strictSelection`, () => {
+    let wrapper = mount(<UU5.Forms.DateRangePicker weekStartDay={7} />);
+    wrapper.instance().open();
+    wrapper.update();
+    expect(wrapper.find(UU5.Bricks.Calendar).first().instance().props.weekStartDay).toBe(7);
+  });
 });
 
 describe(`UU5.Forms.DateRangePicker props function -> Text.InputMixin`, () => {

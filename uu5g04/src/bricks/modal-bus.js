@@ -6,7 +6,7 @@
 //@@viewOn:revision
 
 //@@viewOn:imports
-import memoizeOne from "memoize-one";
+import { memoizeOne } from "uu5g05";
 import UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import ModalBusView from "./internal/modal-bus-view";

@@ -163,6 +163,9 @@ const CONFIG = {
     calendarStartView: {
       values: ["days", "months", "years"],
     },
+    hideWeekNumber: {
+      values: [true, false]
+    }
     // parseDate - In agreement with developers, this props need not be tested.
   },
   requiredProps: {
@@ -419,6 +422,7 @@ describe(`UU5.Forms.DatePicker check default values`, () => {
     expect(wrapper.instance().props.iconClosed).toMatch(/mdi-calendar/);
     expect(wrapper.instance().props.format).toBe(null);
     expect(wrapper.instance().props.hideFormatPlaceholder).toBe(false);
+    expect(wrapper.instance().props.hideWeekNumber).toBe(false);
     expect(wrapper.instance().props.country).toBe(null);
     expect(wrapper.instance().props.nanMessage).toMatch(/Please insert a valid date./);
     expect(wrapper.instance().props.beforeRangeMessage).toMatch(/Date is out of range./);

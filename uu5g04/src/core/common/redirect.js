@@ -13,7 +13,7 @@
 
 //@@viewOn:imports
 import ns from "./common-ns.js";
-import PropTypes from "prop-types";
+import { PropTypes } from "uu5g05";
 import BaseMixin from "./base-mixin.js";
 import VisualComponent from "./visual-component.js";
 import Url from "./url.js";

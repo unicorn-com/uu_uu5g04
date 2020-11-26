@@ -1,7 +1,5 @@
-import UU5 from "uu5g04";
 import { useData } from "uu5g04-hooks";
-
-const { wait, renderHook, act } = UU5.Test.Tools;
+import { wait, renderHook, act } from "uu5g05-test";
 
 function renderHookParallelOps(initialDataFromOnLoad, ...hookArgs) {
   let waitable = (defaultFn) => {
@@ -50,7 +48,7 @@ const LOAD_DATA2 = {
   key: "load2",
 };
 
-describe("[uu5g04-hooks] useData behaviour", () => {
+describe("[uu5g04-hooks] useData", () => {
   it("should return expected result API", () => {
     let { lastResult } = renderHook(useData);
     expect(lastResult()).toMatchObject({

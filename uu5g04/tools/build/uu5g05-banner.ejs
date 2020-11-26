@@ -1,0 +1,57 @@
+if (typeof SystemJS !== "undefined" && SystemJS && typeof SystemJS.normalizeSync === "function") {
+  (function() {
+    // try to auto-configure SystemJS loader regarding "uu5g05" in case that application
+    // was deployed with older version of uu5g04 (which didn't depend on uu5g05 yet)
+    var normalizedName = SystemJS.normalizeSync("uu5g05");
+    var isConfigured = !normalizedName.match(/uu5g05$/);
+    var isIE = navigator.userAgent.match(/trident/i);
+    if (!isConfigured || isIE) {
+      var myUri;
+      var loads = (SystemJS._loader || {}).loads || [];
+      for (var i = 0; i < loads.length; i++) {
+        var load = loads[i] || {};
+        if (
+          load.status === "loading" &&
+          typeof load.name === "string" &&
+          load.name.match(/\/<%=NAME_REGEXP%>([?#]|$)/)
+        ) {
+          myUri = load.name;
+          break;
+        }
+      }
+      if (myUri) {
+        var minSuffix = myUri.match(/\.min\.js(\?|$)/) ? ".min" : "";
+        var baseUri = myUri.replace(/\/[^/?]*(\?.*)?$/, "/");
+        var floatingVersion = "/<%=MAJOR_VERSION%>.0.0/";
+        if (baseUri.substr(-floatingVersion.length) === floatingVersion) {
+          baseUri = baseUri.substr(0, baseUri.length - floatingVersion.length) + "/<%=VERSION%>/";
+        }
+        if (!isConfigured) {
+          SystemJS.config({
+            paths: {
+              "uu5g05": baseUri + "uu5g05/uu5g05" + minSuffix + ".js"
+            }
+          });
+        }
+        if (isIE && !Array.prototype.find) {
+          // load polyfills for IE
+          var origDefine = typeof define !== "undefined" ? define : undefined;
+          var origRequire = typeof require !== "undefined" ? require : undefined;
+          window.define = undefined;
+          window.require = undefined;
+          var url = baseUri + "uu5g04-polyfills" + minSuffix + ".js";
+          var xhr = new XMLHttpRequest();
+          xhr.onload = function () {
+            // eval in global scope
+            if (this.status === 200) (0, eval)(this.responseText);
+            else console.error("Polyfills failed to load from " + url);
+          };
+          xhr.open("GET", url, false);
+          xhr.send();
+          window.define = origDefine;
+          window.require = origRequire;
+        }
+      }
+    }
+  })();
+}

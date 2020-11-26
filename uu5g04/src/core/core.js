@@ -11,7 +11,6 @@
  * at the email: info@unicorn.com.
  */
 
-import "./polyfills.js";
 import React from "react";
 
 // startup environment (merge)
@@ -54,7 +53,7 @@ import * as Icons from "./environment/icons.js";
 export { Icons };
 UU5.Icons = Icons;
 
-import * as PropTypes from "./prop-types/prop-types.js";
+import { PropTypes } from "uu5g05";
 export { PropTypes };
 UU5.PropTypes = PropTypes;
 

@@ -12,7 +12,7 @@
  */
 
 import React from "react";
-import PropTypes from "prop-types";
+import { PropTypes } from "uu5g05";
 import ContentMixin from "./content-mixin.js";
 import { LevelMixin, MIXINS_WITH_LEVEL_MIXIN } from "./level-mixin.js";
 import Tools from "./tools.js";

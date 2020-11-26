@@ -18,6 +18,10 @@ import "uu5g04-bricks";
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
+// NOTE For this test only we'll overwrite UU5.Bricks.Modal with non-HOC variant (without modal bus HOC).
+const NonHocModal = UU5.Bricks.Modal._originalComponent;
+UU5.Bricks.Modal = NonHocModal;
+
 const MyModalComponent = UU5.Common.VisualComponent.create({
   getInitialState: () => {
     return {

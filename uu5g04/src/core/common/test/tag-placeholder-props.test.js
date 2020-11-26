@@ -28,7 +28,7 @@ import UU5 from "uu5g04";
 import UU5Bricks from "uu5g04-bricks";
 import ReactDOM from "react-dom";
 import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
+import { PropTypes } from "uu5g05";
 import regeneratorRuntime from "regenerator-runtime";
 
 const { mount, shallow, wait } = UU5.Test.Tools;

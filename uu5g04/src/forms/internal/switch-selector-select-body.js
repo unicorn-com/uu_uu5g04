@@ -14,8 +14,7 @@
 //@@viewOn:imports
 import React from "react";
 import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
-import * as UU5 from "uu5g04";
+import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "../forms-ns.js";
 import Css from "./css.js";
@@ -143,28 +142,28 @@ export const SelectBody = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    value: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
-    multiple: PropTypes.bool,
-    selectAllEnabled: PropTypes.bool,
-    allowTags: PropTypes.array,
-    disableBackdrop: PropTypes.bool,
-    borderRadius: PropTypes.string,
-    bgStyle: PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
-    elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-    openToContent: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-    onOpen: PropTypes.func,
-    onClose: PropTypes.func,
-    onChange: PropTypes.func,
-    onRemove: PropTypes.func,
-    placeholder: PropTypes.string,
-    iconOpen: PropTypes.string,
-    iconClosed: PropTypes.string,
-    forceRender: PropTypes.bool,
-    readOnly: PropTypes.bool,
-    disabled: PropTypes.bool,
-    loading: PropTypes.bool,
-    feedback: PropTypes.string,
-    inputWidth: PropTypes.string,
+    value: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.arrayOf(UU5.PropTypes.string)]),
+    multiple: UU5.PropTypes.bool,
+    selectAllEnabled: UU5.PropTypes.bool,
+    allowTags: UU5.PropTypes.array,
+    disableBackdrop: UU5.PropTypes.bool,
+    borderRadius: UU5.PropTypes.string,
+    bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
+    elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
+    openToContent: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string]),
+    onOpen: UU5.PropTypes.func,
+    onClose: UU5.PropTypes.func,
+    onChange: UU5.PropTypes.func,
+    onRemove: UU5.PropTypes.func,
+    placeholder: UU5.PropTypes.string,
+    iconOpen: UU5.PropTypes.string,
+    iconClosed: UU5.PropTypes.string,
+    forceRender: UU5.PropTypes.bool,
+    readOnly: UU5.PropTypes.bool,
+    disabled: UU5.PropTypes.bool,
+    loading: UU5.PropTypes.bool,
+    feedback: UU5.PropTypes.string,
+    inputWidth: UU5.PropTypes.string,
     mainAttrs: UU5.Common.BaseMixin.propTypes.mainAttrs,
     name: UU5.Common.BaseMixin.propTypes.name,
     id: UU5.Common.BaseMixin.propTypes.id,
@@ -534,7 +533,7 @@ export const SelectBody = createReactClass({
 
     if (this.props.children) {
       let childTagNames = this.props.allowTags.concat(this.getDefault().childTagName);
-      React.Children.toArray(this.props.children).forEach((child) => {
+      UU5.Common.Children.toArray(this.props.children).forEach((child) => {
         let childTagName = UU5.Common.Tools.getChildTagName(child);
         const newProps = UU5.Common.Tools.merge({}, child.props);
         newProps.mainAttrs = newProps.mainAttrs || {};

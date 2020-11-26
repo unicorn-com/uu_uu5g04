@@ -104,14 +104,13 @@ describe(`UU5.Bricks.DateTime`, () => {
   });
 
   it(`UU5.Bricks.DateTime - ISO format value`, () => {
-    let defaultCountry = "en-US";
-    ISOFormatTest({ value: "2019-07-20T18:00:00.000Z" }, undefined, "7/20/2019, 8:00:00 PM");
-    ISOFormatTest({ value: "2019-07-20T18:00:00.000Z" }, defaultCountry, "7/20/2019, 8:00:00 PM");
-    ISOFormatTest({ value: "2019-07-20T18:00:00.000+02:00" }, defaultCountry, "7/20/2019, 6:00:00 PM");
+    ISOFormatTest({ value: "2019-07-20T18:00:00.000Z" }, undefined, "20/07/2019, 20:00:00"); // en-gb (UU5.Environment.defaultLanguage)
+    ISOFormatTest({ value: "2019-07-20T18:00:00.000Z" }, "en-US", "7/20/2019, 8:00:00 PM");
+    ISOFormatTest({ value: "2019-07-20T18:00:00.000+02:00" }, "en-US", "7/20/2019, 6:00:00 PM");
     ISOFormatTest({ value: "2019-07-20T18:00:00.000+02:00" }, "cs-CZ", "20. 7. 2019 18:00:00");
-    ISOFormatTest({ value: "2019-07-20T18:00:00.000+02:00", dateOnly: true }, defaultCountry, "7/20/2019");
-    ISOFormatTest({ value: "2019-07-20T18:00:00.000+02:00", timeOnly: true }, defaultCountry, "6:00:00 PM");
-    ISOFormatTest({ value: "2019-07-20T18:00:00.000+02:00", timeZone: -2 }, defaultCountry, "7/20/2019, 2:00:00 PM");
+    ISOFormatTest({ value: "2019-07-20T18:00:00.000+02:00", dateOnly: true }, "en-US", "7/20/2019");
+    ISOFormatTest({ value: "2019-07-20T18:00:00.000+02:00", timeOnly: true }, "en-US", "6:00:00 PM");
+    ISOFormatTest({ value: "2019-07-20T18:00:00.000+02:00", timeZone: -2 }, "en-US", "7/20/2019, 2:00:00 PM");
   });
 });
 

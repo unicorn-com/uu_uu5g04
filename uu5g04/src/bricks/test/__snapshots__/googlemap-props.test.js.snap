@@ -873,7 +873,8 @@ exports[`UU5.Bricks.GoogleMap nestingLevel="container" 1`] = `
 
 exports[`UU5.Bricks.GoogleMap nestingLevel="inline" 1`] = `
 <span>
-  <Modal
+  <ForwardRef
+    disabled={false}
     ref_={[Function]}
   >
     <div
@@ -891,7 +892,7 @@ exports[`UU5.Bricks.GoogleMap nestingLevel="inline" 1`] = `
         }
       />
     </div>
-  </Modal>
+  </ForwardRef>
   <Link
     onClick={[Function]}
   />

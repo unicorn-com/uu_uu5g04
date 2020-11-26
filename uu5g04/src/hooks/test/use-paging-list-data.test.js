@@ -1,7 +1,5 @@
-import UU5 from "uu5g04";
 import { usePagingListData } from "uu5g04-hooks";
-
-const { renderHook, wait, act } = UU5.Test.Tools;
+import { renderHook, wait, act } from "uu5g05-test";
 
 async function renderHookAndLoad2Pages(...initialHookParams) {
   let onLoad = jest.fn(async (params) => {
@@ -56,7 +54,7 @@ const LOAD_DATA2 = {
 };
 const PAGE_SIZE1 = 7;
 
-describe("[uu5g04-hooks] usePagingListDataManager behaviour", () => {
+describe("[uu5g04-hooks] usePagingListDataManager", () => {
   it("should return expected result API", () => {
     let { lastResult } = renderHook(usePagingListData);
     expect(lastResult()).toMatchObject({

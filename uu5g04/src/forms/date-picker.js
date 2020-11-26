@@ -74,9 +74,11 @@ export const DatePicker = Context.withContext(
       valueType: UU5.PropTypes.oneOf(["string", "date", "iso"]),
       openToContent: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string]),
       hideFormatPlaceholder: UU5.PropTypes.bool,
+      hideWeekNumber: UU5.PropTypes.bool,
       showTodayButton: UU5.PropTypes.bool,
       step: UU5.PropTypes.oneOf(["days", "months", "years"]),
       monthNameFormat: UU5.PropTypes.oneOf(["abbr", "roman"]),
+      weekStartDay: UU5.PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7]),
     },
     //@@viewOff:propTypes
 
@@ -99,9 +101,11 @@ export const DatePicker = Context.withContext(
         valueType: null,
         openToContent: "xs",
         hideFormatPlaceholder: false,
+        hideWeekNumber: false,
         showTodayButton: false,
         step: "days",
         monthNameFormat: "roman",
+        weekStartDay: 1,
       };
     },
     //@@viewOff:getDefaultProps
@@ -631,7 +635,9 @@ export const DatePicker = Context.withContext(
       let value = opt._data ? opt._data.value : opt.value;
       this.setValue(value, () => {
         this._onBlur(opt);
-        this.close(setStateCallback);
+        if (opt._data.setToday !== true) {
+          this.close(setStateCallback);
+        }
       });
 
       return this;
@@ -759,7 +765,14 @@ export const DatePicker = Context.withContext(
 
     _onCalendarChange(opt) {
       let date = this._getDateString(opt.value);
-      opt = { value: opt.value, event: opt.event, component: this, _data: { type: "picker", value: date } };
+      let setToday = opt._data.setToday ? { setToday: true } : null;
+      opt = {
+        value: opt.value,
+        event: opt.event,
+        component: this,
+        _data: { type: "picker", value: date, ...setToday }
+      };
+
       if (this.props.valueType === null || this.props.valueType == "string") {
         opt.value = date;
       }
@@ -810,11 +823,13 @@ export const DatePicker = Context.withContext(
         dateFrom: this._getDateFrom(),
         dateTo: this._getDateTo(),
         hidden: !this.isOpen(),
+        hideWeekNumber: this.props.hideWeekNumber,
         onChange: this._onCalendarChange,
         colorSchema: this.getColorSchema(),
         showTodayButton: this.props.showTodayButton,
         step: this.props.step,
         monthNameFormat: this.props.monthNameFormat,
+        weekStartDay: this.props.weekStartDay,
       };
     },
 

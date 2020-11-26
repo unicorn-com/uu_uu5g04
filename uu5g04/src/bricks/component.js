@@ -1,5 +1,4 @@
 //@@viewOn:imports
-import React from "react";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 

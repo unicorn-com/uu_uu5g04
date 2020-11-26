@@ -1,7 +1,5 @@
-import UU5 from "uu5g04";
 import { useListData } from "uu5g04-hooks";
-
-const { renderHook, wait, act } = UU5.Test.Tools;
+import { renderHook, wait, act } from "uu5g05-test";
 
 const INITIAL_DATA1 = [{ id: "id1", value: "x" }];
 const LOAD_DATA1 = [
@@ -52,7 +50,7 @@ function renderHookParallelOps(initialDataFromOnLoad) {
   return result;
 }
 
-describe("[uu5g04-hooks] useListData behaviour", () => {
+describe("[uu5g04-hooks] useListData", () => {
   it("should return expected result API", () => {
     let { lastResult } = renderHook(useListData);
     expect(lastResult()).toMatchObject({

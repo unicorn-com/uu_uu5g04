@@ -244,6 +244,79 @@ export const DateTools = {
         )}-${UU5.Common.Tools.rjust(inexactDateInstance.getDate(), 2, "0")}`
       : null;
   },
+  getWeekDay(date, weekDay) {
+    date = new Date(date);
+    let day = date.getDay() || 7;
+    let dayDiff = weekDay > day ? weekDay - day : weekDay - day;
+    if (dayDiff) {
+      date = DateTools.increaseDate(date, dayDiff);
+    }
+    return date;
+  },
+  getWeekDayRange(date, startDay, endDay) {
+    let resultRange;
+    if (startDay && endDay) {
+      startDay = DateTools.getWeekDay(date, startDay);
+      endDay = DateTools.getWeekDay(date, endDay);
+
+      if (endDay < startDay) {
+        endDay = DateTools.increaseDate(endDay, 7);
+      }
+
+      resultRange = [startDay, endDay];
+    }
+    return resultRange;
+  },
+  getWeek(date, weekStartDay = 1) {
+    date = new Date(date);
+    let currDay = date.getDay();
+    let currDate = date.getDate();
+    let currWeekStartDate = currDate - currDay + weekStartDay;
+    if (currWeekStartDate > currDate) {
+      currWeekStartDate -= 7;
+    }
+    let start = new Date(DateTools.setDate(date, currWeekStartDate));
+    let end = DateTools.increaseDate(start, 6);
+    return [start, end];
+  },
+  getAutoRange(initialValue, selectionType = "week", weekStartDay = 1) {
+    let startValue;
+
+    if (Array.isArray(initialValue)) {
+      startValue = initialValue[0];
+    } else {
+      startValue = initialValue;
+    }
+
+    if (!startValue) return undefined;
+
+    let resultRange = [startValue];
+
+    if (selectionType === "week") {
+      resultRange = DateTools.getWeek(startValue, weekStartDay);
+    } else if (typeof selectionType === "number") {
+      resultRange.push(DateTools.increaseDate(startValue, selectionType - 1));
+    } else if (typeof selectionType === "string" && /^\d-\d$/.test(selectionType)) {
+      let [start, end] = selectionType.split("-");
+      resultRange = DateTools.getWeekDayRange(startValue, parseInt(start), parseInt(end));
+    }
+
+    return DateTools.correctDateRange(resultRange);
+  },
+  correctDateRange(dateRange) {
+    if (Array.isArray(dateRange)) {
+      dateRange[0].setHours(0);
+      dateRange[0].setMinutes(0);
+      dateRange[0].setSeconds(0);
+      dateRange[0].setMilliseconds(0);
+      dateRange[1].setHours(23);
+      dateRange[1].setMinutes(59);
+      dateRange[1].setSeconds(59);
+      dateRange[1].setMilliseconds(999);
+    }
+
+    return dateRange;
+  },
 };
 
 export default DateTools;

@@ -1,9 +1,7 @@
-import UU5 from "uu5g04";
 import { useDevice, DeviceProvider } from "uu5g04-hooks";
+import { mount, renderHook, initHookRenderer } from "uu5g05-test";
 
-const { mount, renderHook, initHookRenderer } = UU5.Test.Tools;
-
-describe("[uu5g04-hooks] useDevice behaviour", () => {
+describe("[uu5g04-hooks] useDevice", () => {
   it("should return expected result API", () => {
     let { lastResult } = renderHook(useDevice);
     expect(lastResult()).toMatchObject({

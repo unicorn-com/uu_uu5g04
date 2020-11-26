@@ -1,8 +1,7 @@
 import UU5 from "uu5g04";
 import { useLevel, LevelProvider } from "uu5g04-hooks";
 import "uu5g04-bricks"; // for legacy integration test
-
-const { mount, initHookRenderer, renderHook } = UU5.Test.Tools;
+import { mount, initHookRenderer, renderHook } from "uu5g05-test";
 
 function renderHookInProvider(providerLevel, ...initialHookParams) {
   let { HookComponent, ...result } = initHookRenderer(useLevel, ...initialHookParams);

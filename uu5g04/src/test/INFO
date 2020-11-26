@@ -1,0 +1,8 @@
+- this whole folder is used in projects that depend on uu5g04 and do NOT depend on uu5g05-test
+- such projects are configured by devkit to use uu5g04/dist-node/jest-setup.js (uu5g04/src/core/test/jest-setup.js)
+  as Jest setup and in this file we require("uu5g04-test") which is mapped to src/test/test-build.js in this folder
+- i.e. such projects use (old) UU5.Test.* API in tests (without dependency on uu5g05-test)
+
+- if a project adds uu5g05-test & uu5g05 to its dependencies, it'll be configured by devkit to use
+  uu5g04/test/setup/setup.js Jest setup (which doesn't use anything from this folder; instead
+  it uses uu5g05-test API); legacy UU5.Test.* API will still work, as it is forwarded to uu5g05-test API

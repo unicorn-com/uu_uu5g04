@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UU5.Bricks.SessionWatch props testing checkGrammar=false 1`] = `
-<Modal
+<ForwardRef
   checkGrammar={false}
   className="uu5-bricks-session-watch"
   content={
@@ -42,6 +42,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkGrammar=false 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -221,16 +223,23 @@ exports[`UU5.Bricks.SessionWatch props testing checkGrammar=false 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing checkGrammar=true 1`] = `
-<Modal
+<ForwardRef
   checkGrammar={true}
   className="uu5-bricks-session-watch"
   content={
@@ -271,6 +280,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkGrammar=true 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -450,16 +461,23 @@ exports[`UU5.Bricks.SessionWatch props testing checkGrammar=true 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing checkHighlight=false 1`] = `
-<Modal
+<ForwardRef
   checkHighlight={false}
   className="uu5-bricks-session-watch"
   content={
@@ -500,6 +518,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkHighlight=false 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -679,16 +699,23 @@ exports[`UU5.Bricks.SessionWatch props testing checkHighlight=false 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing checkHighlight=true 1`] = `
-<Modal
+<ForwardRef
   checkHighlight={true}
   className="uu5-bricks-session-watch"
   content={
@@ -729,6 +756,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkHighlight=true 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -908,16 +937,23 @@ exports[`UU5.Bricks.SessionWatch props testing checkHighlight=true 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing checkSpaces=false 1`] = `
-<Modal
+<ForwardRef
   checkSpaces={false}
   className="uu5-bricks-session-watch"
   content={
@@ -958,6 +994,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkSpaces=false 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -1137,16 +1175,23 @@ exports[`UU5.Bricks.SessionWatch props testing checkSpaces=false 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing checkSpaces=true 1`] = `
-<Modal
+<ForwardRef
   checkSpaces={true}
   className="uu5-bricks-session-watch"
   content={
@@ -1187,6 +1232,8 @@ exports[`UU5.Bricks.SessionWatch props testing checkSpaces=true 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -1366,16 +1413,23 @@ exports[`UU5.Bricks.SessionWatch props testing checkSpaces=true 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing className="my-classname" 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch my-classname"
   content={
     <div
@@ -1415,6 +1469,8 @@ exports[`UU5.Bricks.SessionWatch props testing className="my-classname" 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -1594,19 +1650,28 @@ exports[`UU5.Bricks.SessionWatch props testing className="my-classname" 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing content="This is Content from ContentMixin" 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch"
   content="This is Content from ContentMixin"
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -1786,19 +1851,28 @@ exports[`UU5.Bricks.SessionWatch props testing content="This is Content from Con
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing content=12345 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch"
   content={12345}
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -1978,16 +2052,23 @@ exports[`UU5.Bricks.SessionWatch props testing content=12345 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing controlled=false 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch"
   content={
     <div
@@ -2027,6 +2108,8 @@ exports[`UU5.Bricks.SessionWatch props testing controlled=false 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -2206,16 +2289,23 @@ exports[`UU5.Bricks.SessionWatch props testing controlled=false 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing controlled=true 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch"
   content={
     <div
@@ -2255,6 +2345,8 @@ exports[`UU5.Bricks.SessionWatch props testing controlled=true 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -2434,16 +2526,23 @@ exports[`UU5.Bricks.SessionWatch props testing controlled=true 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing default props 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch"
   content={
     <div
@@ -2483,6 +2582,8 @@ exports[`UU5.Bricks.SessionWatch props testing default props 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -2662,16 +2763,23 @@ exports[`UU5.Bricks.SessionWatch props testing default props 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing disabled=false 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch"
   content={
     <div
@@ -2711,6 +2819,8 @@ exports[`UU5.Bricks.SessionWatch props testing disabled=false 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -2890,16 +3000,23 @@ exports[`UU5.Bricks.SessionWatch props testing disabled=false 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing disabled=true 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch"
   content={
     <div
@@ -2940,6 +3057,7 @@ exports[`UU5.Bricks.SessionWatch props testing disabled=true 1`] = `
   }
   controlled={false}
   disabled={true}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -3119,16 +3237,23 @@ exports[`UU5.Bricks.SessionWatch props testing disabled=true 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing dynamic=false 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch"
   content={
     <div
@@ -3168,6 +3293,8 @@ exports[`UU5.Bricks.SessionWatch props testing dynamic=false 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -3347,16 +3474,23 @@ exports[`UU5.Bricks.SessionWatch props testing dynamic=false 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing dynamic=true 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch"
   content={
     <div
@@ -3396,6 +3530,7 @@ exports[`UU5.Bricks.SessionWatch props testing dynamic=true 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
   dynamic={true}
   footer={
     <div
@@ -3576,16 +3711,23 @@ exports[`UU5.Bricks.SessionWatch props testing dynamic=true 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing header="Custom header" 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch"
   content={
     <div
@@ -3625,6 +3767,8 @@ exports[`UU5.Bricks.SessionWatch props testing header="Custom header" 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -3768,16 +3912,23 @@ exports[`UU5.Bricks.SessionWatch props testing header="Custom header" 1`] = `
     </div>
   }
   header="Custom header"
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing header=undefined 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch"
   content={
     <div
@@ -3817,6 +3968,8 @@ exports[`UU5.Bricks.SessionWatch props testing header=undefined 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -3996,16 +4149,23 @@ exports[`UU5.Bricks.SessionWatch props testing header=undefined 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing hidden=false 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch"
   content={
     <div
@@ -4045,6 +4205,8 @@ exports[`UU5.Bricks.SessionWatch props testing hidden=false 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -4224,16 +4386,23 @@ exports[`UU5.Bricks.SessionWatch props testing hidden=false 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing hidden=true 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch"
   content={
     <div
@@ -4273,6 +4442,8 @@ exports[`UU5.Bricks.SessionWatch props testing hidden=true 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -4454,15 +4625,21 @@ exports[`UU5.Bricks.SessionWatch props testing hidden=true 1`] = `
   }
   hidden={true}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing id="myId" 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch"
   content={
     <div
@@ -4502,6 +4679,8 @@ exports[`UU5.Bricks.SessionWatch props testing id="myId" 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -4681,16 +4860,23 @@ exports[`UU5.Bricks.SessionWatch props testing id="myId" 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="myId-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing ignoreHTML=false 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch"
   content={
     <div
@@ -4730,6 +4916,8 @@ exports[`UU5.Bricks.SessionWatch props testing ignoreHTML=false 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -4909,16 +5097,23 @@ exports[`UU5.Bricks.SessionWatch props testing ignoreHTML=false 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing ignoreHTML=true 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch"
   content={
     <div
@@ -4958,6 +5153,8 @@ exports[`UU5.Bricks.SessionWatch props testing ignoreHTML=true 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -5137,16 +5334,23 @@ exports[`UU5.Bricks.SessionWatch props testing ignoreHTML=true 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing mainAttrs=undefined 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch"
   content={
     <div
@@ -5186,6 +5390,8 @@ exports[`UU5.Bricks.SessionWatch props testing mainAttrs=undefined 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -5365,16 +5571,23 @@ exports[`UU5.Bricks.SessionWatch props testing mainAttrs=undefined 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing name="myName" 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch"
   content={
     <div
@@ -5414,6 +5627,8 @@ exports[`UU5.Bricks.SessionWatch props testing name="myName" 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -5593,17 +5808,23 @@ exports[`UU5.Bricks.SessionWatch props testing name="myName" 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
   name="myName-inner"
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing noIndex=false 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch"
   content={
     <div
@@ -5643,6 +5864,8 @@ exports[`UU5.Bricks.SessionWatch props testing noIndex=false 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -5822,16 +6045,23 @@ exports[`UU5.Bricks.SessionWatch props testing noIndex=false 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing noIndex=true 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch uu5-noindex"
   content={
     <div
@@ -5871,6 +6101,8 @@ exports[`UU5.Bricks.SessionWatch props testing noIndex=true 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -6050,16 +6282,23 @@ exports[`UU5.Bricks.SessionWatch props testing noIndex=true 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing selected=false 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch"
   content={
     <div
@@ -6099,6 +6338,8 @@ exports[`UU5.Bricks.SessionWatch props testing selected=false 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -6278,16 +6519,23 @@ exports[`UU5.Bricks.SessionWatch props testing selected=false 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing selected=true 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch"
   content={
     <div
@@ -6327,6 +6575,8 @@ exports[`UU5.Bricks.SessionWatch props testing selected=true 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -6506,17 +6756,23 @@ exports[`UU5.Bricks.SessionWatch props testing selected=true 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
   selected={true}
   session={null}
+  stickyBackground={true}
+  style={null}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing style="padding:8px; borderRadius: 2px" 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch"
   content={
     <div
@@ -6556,6 +6812,8 @@ exports[`UU5.Bricks.SessionWatch props testing style="padding:8px; borderRadius:
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -6735,22 +6993,28 @@ exports[`UU5.Bricks.SessionWatch props testing style="padding:8px; borderRadius:
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
   style={
     Object {
       "borderRadius": "2px",
       "padding": "8px",
     }
   }
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing style={"backgroundColor":"red","color":"blue"} 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch"
   content={
     <div
@@ -6790,6 +7054,8 @@ exports[`UU5.Bricks.SessionWatch props testing style={"backgroundColor":"red","c
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -6969,22 +7235,28 @@ exports[`UU5.Bricks.SessionWatch props testing style={"backgroundColor":"red","c
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
   style={
     Object {
       "backgroundColor": "red",
       "color": "blue",
     }
   }
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing textCorrector=false 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch"
   content={
     <div
@@ -7024,6 +7296,8 @@ exports[`UU5.Bricks.SessionWatch props testing textCorrector=false 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -7203,17 +7477,24 @@ exports[`UU5.Bricks.SessionWatch props testing textCorrector=false 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
   textCorrector={false}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing textCorrector=true 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch"
   content={
     <div
@@ -7253,6 +7534,8 @@ exports[`UU5.Bricks.SessionWatch props testing textCorrector=true 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -7432,17 +7715,24 @@ exports[`UU5.Bricks.SessionWatch props testing textCorrector=true 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={Object {}}
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
   textCorrector={true}
+  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.SessionWatch props testing tooltip="My Tooltip" 1`] = `
-<Modal
+<ForwardRef
   className="uu5-bricks-session-watch"
   content={
     <div
@@ -7482,6 +7772,8 @@ exports[`UU5.Bricks.SessionWatch props testing tooltip="My Tooltip" 1`] = `
     </div>
   }
   controlled={false}
+  disabled={false}
+  dynamic={false}
   footer={
     <div
       className="uu5-bricks-session-watch-footer"
@@ -7661,15 +7953,21 @@ exports[`UU5.Bricks.SessionWatch props testing tooltip="My Tooltip" 1`] = `
       />
     </div>
   }
+  hidden={false}
   id="uuID-inner"
+  ignoreInnerHTML={false}
   location="portal"
   mainAttrs={
     Object {
       "title": "My Tooltip",
     }
   }
+  name={null}
   ref_={[Function]}
+  selected={false}
   session={null}
+  stickyBackground={true}
+  style={null}
   tooltip="My Tooltip"
 />
 `;

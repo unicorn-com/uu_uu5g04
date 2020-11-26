@@ -14,7 +14,7 @@
 //@@viewOn:imports
 import React from "react";
 import ns from "./common-ns.js";
-import PropTypes from "prop-types";
+import { PropTypes } from "uu5g05";
 import BaseMixin from "./base-mixin.js";
 import ElementaryMixin from "./elementary-mixin.js";
 import Error from "./error.js";

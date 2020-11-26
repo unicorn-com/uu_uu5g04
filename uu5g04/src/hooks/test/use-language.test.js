@@ -1,8 +1,7 @@
 import UU5 from "uu5g04";
 import { useLanguage, LanguageProvider } from "uu5g04-hooks";
 import "uu5g04-bricks"; // for legacy integration test
-
-const { mount, act, initHookRenderer, renderHook } = UU5.Test.Tools;
+import { mount, act, initHookRenderer, renderHook } from "uu5g05-test";
 
 let origLanguage;
 beforeEach(() => {
@@ -20,7 +19,7 @@ describe("[uu5g04-hooks] useLanguage", () => {
 
   it("prop language; should return default language", async () => {
     let { lastResult } = renderHook(useLanguage);
-    expect(lastResult()).toMatchObject(["en", expect.any(Function)]);
+    expect(lastResult()).toMatchObject(["en-gb", expect.any(Function)]);
   });
 
   it("prop language; should return context language", async () => {
@@ -111,8 +110,8 @@ describe("[uu5g04-hooks] useLanguage; legacy integration", () => {
       })
     );
     let mixinComponentProps = () => onReceiveContext.mock.calls.slice(-1)[0][0];
-    expect(mixinComponentProps().getLanguage()).toBe("en");
-    expect(lastResult()).toMatchObject(["en", expect.any(Function)]);
+    expect(mixinComponentProps().getLanguage()).toBe("en-gb");
+    expect(lastResult()).toMatchObject(["en-gb", expect.any(Function)]);
 
     act(() => {
       mixinComponentProps().setLanguage("ru");
@@ -141,8 +140,8 @@ describe("[uu5g04-hooks] useLanguage; legacy integration", () => {
         <HookComponent />
       </div>
     );
-    expect(lsiHocComp.getLanguage()).toBe("en");
-    expect(lastResult()).toMatchObject(["en", expect.any(Function)]);
+    expect(lsiHocComp.getLanguage()).toBe("en-gb");
+    expect(lastResult()).toMatchObject(["en-gb", expect.any(Function)]);
 
     act(() => {
       UU5.Common.Tools.setLanguage("ru");

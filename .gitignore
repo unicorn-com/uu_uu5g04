@@ -19,7 +19,8 @@ node_modules/
 public/
 target/
 out/
-build/
+build/*
+!tools/build/*
 npm-debug.log
 pnpm-debug.log
 Gemfile.lock

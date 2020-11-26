@@ -12,7 +12,7 @@
  */
 
 import UU5 from "uu5g04";
-import { useMemo, useRef } from "./react-hooks";
+import { useMemo, useRef } from "uu5g05";
 import { useDataInternal } from "./use-data";
 import { combineReducers, performOperation } from "./internal/data-hooks-helper";
 

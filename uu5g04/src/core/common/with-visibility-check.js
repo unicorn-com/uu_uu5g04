@@ -1,6 +1,6 @@
 //@@viewOn:imports
 import React from "react";
-import PropTypes from "prop-types";
+import { PropTypes } from "uu5g05";
 import ns from "./common-ns.js";
 import BaseMixin from "./base-mixin.js";
 import Css from "./css";

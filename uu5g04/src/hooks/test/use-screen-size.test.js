@@ -1,7 +1,6 @@
 import UU5 from "uu5g04";
 import { useScreenSize, ScreenSizeProvider } from "uu5g04-hooks";
-
-const { mount, renderHook, initHookRenderer, act } = UU5.Test.Tools;
+import { mount, renderHook, initHookRenderer, act } from "uu5g05-test";
 
 function renderHookWithProvider(width) {
   let { HookComponent, ...result } = initHookRenderer(useScreenSize);

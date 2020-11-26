@@ -12,6 +12,5 @@
  */
 
 import * as UU5 from "uu5g04";
-UU5.Common.Css.createCssModule("uu-bricks-editable");
 
-export default UU5.Common.Css["uu-bricks-editable"];
+export default UU5.Common.Css.createCssModule("uu-bricks-editable");

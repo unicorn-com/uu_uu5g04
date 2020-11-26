@@ -1,22 +1,16 @@
 {
   "name": "uu5g04",
-  "version": "1.38.2",
+  "version": "1.39.3",
   "description": "",
   "license": "UAF",
   "namespace": "UU5",
   "spec": "uu5-lib; uu_appg01@3.1.0",
   "dependencies": {
-    "browser-update": "3.1.13",
     "core-js": "^3.0.0",
-    "create-emotion": "^9.2.8",
     "create-react-class": "15.6.3",
     "hls.js": "0.12.4",
-    "memoize-one": "^5.0.5",
-    "prop-types": "15.7.2",
     "qrcode.react": "^0.9.3",
     "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "regenerator-runtime": "0.13.1",
     "resize-observer-polyfill": "1.5.1",
     "whatwg-fetch": "3.0.0"
   },
@@ -27,7 +21,8 @@
           "core/core.js"
         ],
         "libraryGlobalVariable": "UU5",
-        "outputFile": "uu5g04.js"
+        "outputFile": "uu5g04.js",
+        "banner": "./tools/build-add-uu5g05-banner.js"
       },
       {
         "entryPoints": [
@@ -38,45 +33,43 @@
       },
       {
         "entryPoints": [
-          "core/browser-update.js"
-        ],
-        "libraryGlobalVariable": "BrowserUpdate",
-        "outputFile": "uu5g04-browser-update.js"
-      },
-      {
-        "entryPoints": [
           "bricks/bricks-build.js"
         ],
         "libraryGlobalVariable": "UU5.Bricks",
-        "outputFile": "uu5g04-bricks.js"
+        "outputFile": "uu5g04-bricks.js",
+        "banner": "./tools/build-add-uu5g05-banner.js"
       },
       {
         "entryPoints": [
           "forms/forms-build.js"
         ],
         "libraryGlobalVariable": "UU5.Forms",
-        "outputFile": "uu5g04-forms.js"
+        "outputFile": "uu5g04-forms.js",
+        "banner": "./tools/build-add-uu5g05-banner.js"
       },
       {
         "entryPoints": [
           "bricks-editable/bricks-editable-build.js"
         ],
         "libraryGlobalVariable": "UU5.BricksEditable",
-        "outputFile": "uu5g04-bricks-editable.js"
+        "outputFile": "uu5g04-bricks-editable.js",
+        "banner": "./tools/build-add-uu5g05-banner.js"
       },
       {
         "entryPoints": [
           "block-layout/block-layout-build.js"
         ],
         "libraryGlobalVariable": "UU5.BlockLayout",
-        "outputFile": "uu5g04-block-layout.js"
+        "outputFile": "uu5g04-block-layout.js",
+        "banner": "./tools/build-add-uu5g05-banner.js"
       },
       {
         "entryPoints": [
           "hooks/hooks-build.js"
         ],
         "libraryGlobalVariable": "UU5.Hooks",
-        "outputFile": "uu5g04-hooks.js"
+        "outputFile": "uu5g04-hooks.js",
+        "banner": "./tools/build-add-uu5g05-banner.js"
       },
       {
         "entryPoints": [
@@ -367,6 +360,7 @@
       "react-dom": "ReactDOM",
       "create-react-class": "createReactClass",
       "prop-types": "PropTypes",
+      "uu5g05": "Uu5g05",
       "uu5g04": {
         "globalVariable": "UU5",
         "uri": ""
@@ -402,6 +396,9 @@
     "systemjs": "0.19.47",
     "uu_appg01": "^4.4.0",
     "uu_appg01_devkit": "^3.0.0",
+    "uu5g05": "^0.4.0",
+    "uu5g05-browser-compatibility": "^0.4.0",
+    "uu5g05-test": "^0.4.0",
     "write-file-atomic": "2.3.0"
   },
   "engines": {
@@ -432,6 +429,7 @@
   "main": "dist-node/index.js",
   "files": [
     "dist*",
+    "test/setup",
     "tools/dev-server/*",
     "tools/doc-cmd/*"
   ],
@@ -440,9 +438,6 @@
   },
   "author": "Unicorn a.s.",
   "jest": {
-    "setupFilesAfterEnv": [
-      "<rootDir>/src/core/test/jest-setup.js"
-    ],
     "moduleNameMapper": {
       "^uu5g04$": "<rootDir>/src/core/core.js",
       "^uu5g04[-/]([^/?!]+)": "<rootDir>/src/$1/$1-build.js"

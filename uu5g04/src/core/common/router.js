@@ -13,8 +13,8 @@
 
 //@@viewOn:imports
 import React from "react";
+import { Fragment, PropTypes, Utils } from "uu5g05";
 import ns from "./common-ns.js";
-import PropTypes from "prop-types";
 import Tools from "./tools.js";
 import Environment from "../environment/environment.js";
 import BaseMixin from "./base-mixin.js";
@@ -880,11 +880,7 @@ export const Router = VisualComponent.create({
       children.push(<Modal ref_={(modal) => (this._pageLeaveModal = modal)} controlled={false} location="portal" />);
     }
 
-    return React.Fragment ? (
-      <React.Fragment>{React.Children.toArray(children)}</React.Fragment>
-    ) : (
-      React.Children.toArray(children)
-    );
+    return Fragment ? <Fragment>{Utils.Content.toArray(children)}</Fragment> : Utils.Content.toArray(children);
   },
 
   _onWindowScroll(e) {

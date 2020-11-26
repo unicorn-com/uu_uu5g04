@@ -12,10 +12,10 @@
  */
 
 import React from "react";
-import PropTypes from "prop-types";
+import { PropTypes } from "uu5g05";
 import Tools, { REGEXP } from "./tools.js";
 import Environment from "../environment/environment.js";
-import UU5String from "./uu5string/uu5-string.js";
+import UU5String from "./uu5string.js";
 import { TextCorrectorContextConsumer } from "./text-corrector-context-consumer.js";
 import Element from "./element.js";
 

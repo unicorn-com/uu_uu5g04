@@ -353,7 +353,7 @@ exports[`UU5.Bricks.FileViewer nestingLevel="container" 1`] = `
 
 exports[`UU5.Bricks.FileViewer nestingLevel="inline" 1`] = `
 <span>
-  <Modal
+  <ForwardRef
     ref_={[Function]}
   >
     <Table
@@ -371,7 +371,7 @@ exports[`UU5.Bricks.FileViewer nestingLevel="inline" 1`] = `
         </table-tr>
       </table-tbody>
     </Table>
-  </Modal>
+  </ForwardRef>
   <Link
     onClick={[Function]}
   />

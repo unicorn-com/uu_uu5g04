@@ -127,7 +127,7 @@ export const YoutubeVideo = UU5.Common.VisualComponent.create({
     return this.getNestingLevel() ? (
       <UU5.Bricks.Span {...this.getMainPropsToPass()}>
         {this.getDisabledCover()}
-        <iframe {...this._buildMainAttrs()} />
+        <iframe {...this._buildMainAttrs()} allowFullScreen />
       </UU5.Bricks.Span>
     ) : null;
   },

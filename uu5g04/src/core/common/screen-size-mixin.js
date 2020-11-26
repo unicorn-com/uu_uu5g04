@@ -12,11 +12,12 @@
  */
 
 import React from "react";
-import PropTypes from "prop-types";
+import { PropTypes } from "uu5g05";
 import Tools from "./tools.js";
 import ScreenSize from "../utils/screen-size";
 import Environment from "../environment/environment";
 import { postprocessors } from "./component-processors.js";
+import { ScreenSizeContext } from "../uu5g05-integration/use-screen-size";
 
 export const ScreenSizeMixin = {
   //@@viewOn:statics
@@ -157,12 +158,12 @@ if (
       // wrap with screen size consumer
       let ResultComponent = React.forwardRef(function (props, ref) {
         return (
-          <ScreenSize.Context.Consumer>
+          <ScreenSizeContext.Consumer>
             {(value) => {
               let screenSize = value ? value.screenSize || null : undefined;
               return <Component {...props} ref={ref} _contextScreenSize={screenSize} />;
             }}
-          </ScreenSize.Context.Consumer>
+          </ScreenSizeContext.Consumer>
         );
       });
       for (let k of Object.getOwnPropertyNames(Component)) {

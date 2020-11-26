@@ -17,6 +17,7 @@ import ns from "./bricks-ns.js";
 
 import Link from "./link.js";
 import Icon from "./icon.js";
+import Css from "./internal/css.js";
 
 import "./touch-icon.less";
 //@@viewOff:imports
@@ -42,7 +43,14 @@ export const TouchIcon = UU5.Common.VisualComponent.create({
     classNames: {
       main: ns.css("touch-icon"),
       body: ns.css("touch-icon-body"),
-      label: ns.css("touch-icon-label"),
+      label: (props, state) =>
+        ns.css("touch-icon-label") +
+        " " +
+        Css.css`
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: ${props.lines};
+        `,
       icon: ns.css("touch-icon-icon"),
       bgStyle: ns.css("touch-icon-"),
     },
@@ -60,6 +68,7 @@ export const TouchIcon = UU5.Common.VisualComponent.create({
     onWheelClick: UU5.PropTypes.func,
     borderRadius: UU5.PropTypes.string,
     bgStyle: UU5.PropTypes.oneOf(["filled", "transparent"]),
+    lines: UU5.PropTypes.oneOf([2, 3]),
   },
   //@@viewOff:propTypes
 
@@ -74,6 +83,7 @@ export const TouchIcon = UU5.Common.VisualComponent.create({
       onWheelClick: null,
       borderRadius: null,
       bgStyle: "filled",
+      lines: 2,
     };
   },
   //@@viewOff:getDefaultProps
@@ -122,7 +132,7 @@ export const TouchIcon = UU5.Common.VisualComponent.create({
         <div {...this._getBodyAttrs()}>
           <Icon icon={this.props.icon} className={this.getClassName().icon} />
         </div>
-        <div className={this.getClassName().label}>{this.getChildren()}</div>
+        <div className={this.getClassName("label")}>{this.getChildren()}</div>
       </Link>
     ) : null;
   },

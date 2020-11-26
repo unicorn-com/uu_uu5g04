@@ -13,21 +13,19 @@
 
 //@@viewOn:imports
 import React from "react";
-import Context from "./context.js";
+import { SessionContext, SessionProvider } from "../uu5g05-integration/use-session.js";
 import BaseMixin from "./base-mixin.js";
 import IdentityMixin from "./identity-mixin.js";
 import Component from "./component.js";
-import memoizeOne from "memoize-one";
 //@@viewOff:imports
 
-// TODO 2.0.0 Don't export. It's not documented and it's not consistent with other exported contexts
-// (LsiMixin.Context, Level.Context, ScreenSize.Context, ...).
-export const SessionContext = Context.create();
+// TODO 2.0.0 Don't export.
+export { SessionContext };
 
 export const Session = Component.create({
   displayName: "Session", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
-  mixins: [BaseMixin, IdentityMixin],
+  mixins: [BaseMixin, IdentityMixin], // for backward compatibility only
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -43,50 +41,21 @@ export const Session = Component.create({
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
-  getInitialState() {
-    this._computeMemoizedValue = memoizeOne(this._computeMemoizedValue);
-    return {
-      // NOTE SessionMixin keeps expiring flag outside of state - we have to use overriden methods
-      // and put it to our state to cause re-render.
-      expiring: this.isSessionExpiring(),
-    };
-  },
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
   //@@viewOff:interface
 
   //@@viewOn:overriding
-  onSessionExpiring_(e) {
-    this.onSessionExpiringDefault(e);
-    this.setState((state) => (state.expiring !== true ? true : undefined));
-  },
-  onSessionExtended_(e) {
-    this.onSessionExtendedDefault(e);
-    this.setState((state) => (state.expiring !== false ? false : undefined));
-  },
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _getValues() {
-    // NOTE Keep value in sync with hooks/use-session.js.
-    return this._computeMemoizedValue(
-      this.getIdentityFeedback(),
-      this.getIdentity(),
-      this.state.expiring,
-      this.getSession(),
-      this.login,
-      this.logout
-    );
-  },
-  _computeMemoizedValue(sessionState, identity, isExpiring, session, login, logout) {
-    return { sessionState, identity, isExpiring, session, login, logout };
-  },
   //@@viewOff:private
 
   //@@viewOn:render
   render() {
-    return <SessionContext.Provider value={this._getValues()}>{this.props.children}</SessionContext.Provider>;
+    let { children } = this.props;
+    return <SessionProvider session={this.getSession()}>{children}</SessionProvider>;
   },
   //@@viewOff:render
 });

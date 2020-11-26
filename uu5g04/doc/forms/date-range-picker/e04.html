@@ -211,6 +211,29 @@
             />
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="strictSelection">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateRangePicker
+              label="week"
+              strictSelection="week"
+            />
+            <UU5.Forms.DateRangePicker
+              label="1-5"
+              strictSelection="1-5"
+            />
+            <UU5.Forms.DateRangePicker
+              label="5"
+              strictSelection={5}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="weekStartDay">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateRangePicker weekStartDay={7} label="7" />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
         </UU5.Bricks.Container>
       );
     }

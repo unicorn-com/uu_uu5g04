@@ -335,7 +335,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
     menuWidth: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
     itemsSource: UU5.PropTypes.string,
     getItemLabel: UU5.PropTypes.func,
-    header: UU5.PropTypes.node,
+    header: UU5.PropTypes.oneOfType([UU5.PropTypes.node, UU5.PropTypes.object]),
     screenSize: UU5.PropTypes.oneOf(["xs", "s", "m", "l", "xl"]),
     shown: UU5.PropTypes.bool,
     size: UU5.PropTypes.oneOf(["s", "m", "l", "auto", "max"]),

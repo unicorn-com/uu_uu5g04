@@ -12,7 +12,7 @@ exports[`UU5.Bricks.LanguageSelector bgStyle="filled" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -101,7 +101,7 @@ exports[`UU5.Bricks.LanguageSelector bgStyle="filled" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -133,7 +133,7 @@ exports[`UU5.Bricks.LanguageSelector bgStyle="filled" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -468,7 +468,7 @@ exports[`UU5.Bricks.LanguageSelector bgStyle="outline" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -557,7 +557,7 @@ exports[`UU5.Bricks.LanguageSelector bgStyle="outline" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -589,7 +589,7 @@ exports[`UU5.Bricks.LanguageSelector bgStyle="outline" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -924,7 +924,7 @@ exports[`UU5.Bricks.LanguageSelector bgStyle="transparent" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -1013,7 +1013,7 @@ exports[`UU5.Bricks.LanguageSelector bgStyle="transparent" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -1045,7 +1045,7 @@ exports[`UU5.Bricks.LanguageSelector bgStyle="transparent" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -1380,7 +1380,7 @@ exports[`UU5.Bricks.LanguageSelector bodyMode="all" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -1469,7 +1469,7 @@ exports[`UU5.Bricks.LanguageSelector bodyMode="all" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -1501,7 +1501,7 @@ exports[`UU5.Bricks.LanguageSelector bodyMode="all" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -1836,7 +1836,7 @@ exports[`UU5.Bricks.LanguageSelector bodyMode="flag" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -1881,7 +1881,6 @@ exports[`UU5.Bricks.LanguageSelector bodyMode="flag" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-selected"
     key="2"
     label={
       <img
@@ -1892,6 +1891,7 @@ exports[`UU5.Bricks.LanguageSelector bodyMode="flag" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
+    className="uu5-bricks-language-selector-selected"
     key="3"
     label={
       <img
@@ -2007,7 +2007,7 @@ exports[`UU5.Bricks.LanguageSelector bodyMode="label" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -2082,7 +2082,6 @@ exports[`UU5.Bricks.LanguageSelector bodyMode="label" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-selected"
     key="2"
     label={
       <Span
@@ -2108,6 +2107,7 @@ exports[`UU5.Bricks.LanguageSelector bodyMode="label" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
+    className="uu5-bricks-language-selector-selected"
     key="3"
     label={
       <Span
@@ -2373,7 +2373,7 @@ exports[`UU5.Bricks.LanguageSelector bodyMode="label-code" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -2528,7 +2528,7 @@ exports[`UU5.Bricks.LanguageSelector bodyMode="label-code" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-code uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-code"
     key="2"
     label={
       <Span
@@ -2593,7 +2593,7 @@ exports[`UU5.Bricks.LanguageSelector bodyMode="label-code" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-code"
+    className="uu5-bricks-language-selector-code uu5-bricks-language-selector-selected"
     key="3"
     label={
       <Span
@@ -3258,7 +3258,7 @@ exports[`UU5.Bricks.LanguageSelector className="my-classname" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -3347,7 +3347,7 @@ exports[`UU5.Bricks.LanguageSelector className="my-classname" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -3379,7 +3379,7 @@ exports[`UU5.Bricks.LanguageSelector className="my-classname" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -3714,7 +3714,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="brown" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -3803,7 +3803,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="brown" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -3835,7 +3835,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="brown" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -4170,7 +4170,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="brown-rich" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -4259,7 +4259,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="brown-rich" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -4291,7 +4291,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="brown-rich" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -4626,7 +4626,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="cyan" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -4715,7 +4715,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="cyan" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -4747,7 +4747,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="cyan" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -5082,7 +5082,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="cyan-rich" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -5171,7 +5171,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="cyan-rich" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -5203,7 +5203,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="cyan-rich" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -5538,7 +5538,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="default" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -5627,7 +5627,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="default" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -5659,7 +5659,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="default" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -5994,7 +5994,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="green" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -6083,7 +6083,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="green" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -6115,7 +6115,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="green" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -6450,7 +6450,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="green-rich" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -6539,7 +6539,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="green-rich" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -6571,7 +6571,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="green-rich" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -6906,7 +6906,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="grey" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -6995,7 +6995,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="grey" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -7027,7 +7027,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="grey" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -7362,7 +7362,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="grey-rich" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -7451,7 +7451,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="grey-rich" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -7483,7 +7483,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="grey-rich" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -7818,7 +7818,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="orange" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -7907,7 +7907,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="orange" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -7939,7 +7939,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="orange" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -8274,7 +8274,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="orange-rich" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -8363,7 +8363,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="orange-rich" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -8395,7 +8395,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="orange-rich" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -8730,7 +8730,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="pink" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -8819,7 +8819,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="pink" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -8851,7 +8851,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="pink" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -9186,7 +9186,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="pink-rich" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -9275,7 +9275,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="pink-rich" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -9307,7 +9307,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="pink-rich" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -9642,7 +9642,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="purple" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -9731,7 +9731,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="purple" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -9763,7 +9763,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="purple" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -10098,7 +10098,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="purple-rich" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -10187,7 +10187,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="purple-rich" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -10219,7 +10219,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="purple-rich" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -10554,7 +10554,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="red" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -10643,7 +10643,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="red" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -10675,7 +10675,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="red" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -11010,7 +11010,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="red-rich" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -11099,7 +11099,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="red-rich" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -11131,7 +11131,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="red-rich" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -11466,7 +11466,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="yellow" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -11555,7 +11555,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="yellow" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -11587,7 +11587,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="yellow" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -11922,7 +11922,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="yellow-rich" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -12011,7 +12011,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="yellow-rich" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -12043,7 +12043,7 @@ exports[`UU5.Bricks.LanguageSelector colorSchema="yellow-rich" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -12378,7 +12378,7 @@ exports[`UU5.Bricks.LanguageSelector controlled=false 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -12467,7 +12467,7 @@ exports[`UU5.Bricks.LanguageSelector controlled=false 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -12499,7 +12499,7 @@ exports[`UU5.Bricks.LanguageSelector controlled=false 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -12834,7 +12834,7 @@ exports[`UU5.Bricks.LanguageSelector controlled=true 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -12923,7 +12923,7 @@ exports[`UU5.Bricks.LanguageSelector controlled=true 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -12955,7 +12955,7 @@ exports[`UU5.Bricks.LanguageSelector controlled=true 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -13290,7 +13290,7 @@ exports[`UU5.Bricks.LanguageSelector default props 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -13379,7 +13379,7 @@ exports[`UU5.Bricks.LanguageSelector default props 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -13411,7 +13411,7 @@ exports[`UU5.Bricks.LanguageSelector default props 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -13746,7 +13746,7 @@ exports[`UU5.Bricks.LanguageSelector defaultLanguage=undefined 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -13835,7 +13835,7 @@ exports[`UU5.Bricks.LanguageSelector defaultLanguage=undefined 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -13867,7 +13867,7 @@ exports[`UU5.Bricks.LanguageSelector defaultLanguage=undefined 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -14202,7 +14202,7 @@ exports[`UU5.Bricks.LanguageSelector disabled=false 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -14291,7 +14291,7 @@ exports[`UU5.Bricks.LanguageSelector disabled=false 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -14323,7 +14323,7 @@ exports[`UU5.Bricks.LanguageSelector disabled=false 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -14659,7 +14659,7 @@ exports[`UU5.Bricks.LanguageSelector disabled=true 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -14748,7 +14748,7 @@ exports[`UU5.Bricks.LanguageSelector disabled=true 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -14780,7 +14780,7 @@ exports[`UU5.Bricks.LanguageSelector disabled=true 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -15450,7 +15450,7 @@ exports[`UU5.Bricks.LanguageSelector dropup=false 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -15539,7 +15539,7 @@ exports[`UU5.Bricks.LanguageSelector dropup=false 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -15571,7 +15571,7 @@ exports[`UU5.Bricks.LanguageSelector dropup=false 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -15907,7 +15907,7 @@ exports[`UU5.Bricks.LanguageSelector dropup=true 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -15996,7 +15996,7 @@ exports[`UU5.Bricks.LanguageSelector dropup=true 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -16028,7 +16028,7 @@ exports[`UU5.Bricks.LanguageSelector dropup=true 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -16363,7 +16363,7 @@ exports[`UU5.Bricks.LanguageSelector headerMode="all" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -16452,7 +16452,7 @@ exports[`UU5.Bricks.LanguageSelector headerMode="all" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -16484,7 +16484,7 @@ exports[`UU5.Bricks.LanguageSelector headerMode="all" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -16814,7 +16814,7 @@ exports[`UU5.Bricks.LanguageSelector headerMode="code" 1`] = `
   label={
     <Span
       className="uu5-bricks-language-selector-code-text"
-      content="en"
+      content="en-gb"
       controlled={true}
       disabled={false}
       dynamic={false}
@@ -16902,7 +16902,7 @@ exports[`UU5.Bricks.LanguageSelector headerMode="code" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -16934,7 +16934,7 @@ exports[`UU5.Bricks.LanguageSelector headerMode="code" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -17337,7 +17337,7 @@ exports[`UU5.Bricks.LanguageSelector headerMode="flag" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -17369,7 +17369,7 @@ exports[`UU5.Bricks.LanguageSelector headerMode="flag" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -17699,7 +17699,7 @@ exports[`UU5.Bricks.LanguageSelector headerMode="label" 1`] = `
   label={
     <Span
       className="uu5-bricks-language-selector-label"
-      content="English"
+      content="English GB"
       controlled={true}
       disabled={false}
       dynamic={false}
@@ -17787,7 +17787,7 @@ exports[`UU5.Bricks.LanguageSelector headerMode="label" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -17819,7 +17819,7 @@ exports[`UU5.Bricks.LanguageSelector headerMode="label" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -18154,7 +18154,7 @@ exports[`UU5.Bricks.LanguageSelector hidden=false 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -18243,7 +18243,7 @@ exports[`UU5.Bricks.LanguageSelector hidden=false 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -18275,7 +18275,7 @@ exports[`UU5.Bricks.LanguageSelector hidden=false 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -18611,7 +18611,7 @@ exports[`UU5.Bricks.LanguageSelector hidden=true 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -18700,7 +18700,7 @@ exports[`UU5.Bricks.LanguageSelector hidden=true 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -18732,7 +18732,7 @@ exports[`UU5.Bricks.LanguageSelector hidden=true 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -19067,7 +19067,7 @@ exports[`UU5.Bricks.LanguageSelector id="myId" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -19156,7 +19156,7 @@ exports[`UU5.Bricks.LanguageSelector id="myId" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -19188,7 +19188,7 @@ exports[`UU5.Bricks.LanguageSelector id="myId" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -24187,7 +24187,7 @@ exports[`UU5.Bricks.LanguageSelector mainAttrs=undefined 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -24276,7 +24276,7 @@ exports[`UU5.Bricks.LanguageSelector mainAttrs=undefined 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -24308,7 +24308,7 @@ exports[`UU5.Bricks.LanguageSelector mainAttrs=undefined 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -24643,7 +24643,7 @@ exports[`UU5.Bricks.LanguageSelector name="myName" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -24733,7 +24733,7 @@ exports[`UU5.Bricks.LanguageSelector name="myName" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -24765,7 +24765,7 @@ exports[`UU5.Bricks.LanguageSelector name="myName" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -25100,7 +25100,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="bigBox" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -25190,7 +25190,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="bigBox" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -25222,7 +25222,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="bigBox" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -25557,7 +25557,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="bigBoxCollection" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -25647,7 +25647,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="bigBoxCollection" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -25679,7 +25679,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="bigBoxCollection" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -26014,7 +26014,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="box" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -26104,7 +26104,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="box" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -26136,7 +26136,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="box" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -26471,7 +26471,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="boxCollection" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -26561,7 +26561,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="boxCollection" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -26593,7 +26593,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="boxCollection" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -26928,7 +26928,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="container" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -27018,7 +27018,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="container" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -27050,7 +27050,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="container" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -27385,7 +27385,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="inline" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -27475,7 +27475,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="inline" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -27507,7 +27507,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="inline" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -27842,7 +27842,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="page" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -27932,7 +27932,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="page" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -27964,7 +27964,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="page" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -28299,7 +28299,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="smallBox" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -28389,7 +28389,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="smallBox" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -28421,7 +28421,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="smallBox" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -28756,7 +28756,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="smallBoxCollection" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -28846,7 +28846,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="smallBoxCollection" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -28878,7 +28878,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="smallBoxCollection" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -29213,7 +29213,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="spa" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -29303,7 +29303,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="spa" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -29335,7 +29335,7 @@ exports[`UU5.Bricks.LanguageSelector nestingLevel="spa" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -29670,7 +29670,7 @@ exports[`UU5.Bricks.LanguageSelector noIndex=false 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -29759,7 +29759,7 @@ exports[`UU5.Bricks.LanguageSelector noIndex=false 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -29791,7 +29791,7 @@ exports[`UU5.Bricks.LanguageSelector noIndex=false 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -30126,7 +30126,7 @@ exports[`UU5.Bricks.LanguageSelector noIndex=true 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -30215,7 +30215,7 @@ exports[`UU5.Bricks.LanguageSelector noIndex=true 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -30247,7 +30247,7 @@ exports[`UU5.Bricks.LanguageSelector noIndex=true 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -30582,7 +30582,7 @@ exports[`UU5.Bricks.LanguageSelector pullRight=false 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -30671,7 +30671,7 @@ exports[`UU5.Bricks.LanguageSelector pullRight=false 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -30703,7 +30703,7 @@ exports[`UU5.Bricks.LanguageSelector pullRight=false 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -31038,7 +31038,7 @@ exports[`UU5.Bricks.LanguageSelector pullRight=true 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -31128,7 +31128,7 @@ exports[`UU5.Bricks.LanguageSelector pullRight=true 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -31160,7 +31160,7 @@ exports[`UU5.Bricks.LanguageSelector pullRight=true 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -31495,7 +31495,7 @@ exports[`UU5.Bricks.LanguageSelector pureRender=false 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -31584,7 +31584,7 @@ exports[`UU5.Bricks.LanguageSelector pureRender=false 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -31616,7 +31616,7 @@ exports[`UU5.Bricks.LanguageSelector pureRender=false 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -31951,7 +31951,7 @@ exports[`UU5.Bricks.LanguageSelector pureRender=true 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -32041,7 +32041,7 @@ exports[`UU5.Bricks.LanguageSelector pureRender=true 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -32073,7 +32073,7 @@ exports[`UU5.Bricks.LanguageSelector pureRender=true 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -32408,7 +32408,7 @@ exports[`UU5.Bricks.LanguageSelector selected=false 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -32497,7 +32497,7 @@ exports[`UU5.Bricks.LanguageSelector selected=false 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -32529,7 +32529,7 @@ exports[`UU5.Bricks.LanguageSelector selected=false 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -32864,7 +32864,7 @@ exports[`UU5.Bricks.LanguageSelector selected=true 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -32954,7 +32954,7 @@ exports[`UU5.Bricks.LanguageSelector selected=true 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -32986,7 +32986,7 @@ exports[`UU5.Bricks.LanguageSelector selected=true 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -33321,7 +33321,7 @@ exports[`UU5.Bricks.LanguageSelector size="l" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -33411,7 +33411,7 @@ exports[`UU5.Bricks.LanguageSelector size="l" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -33443,7 +33443,7 @@ exports[`UU5.Bricks.LanguageSelector size="l" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -33778,7 +33778,7 @@ exports[`UU5.Bricks.LanguageSelector size="m" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -33867,7 +33867,7 @@ exports[`UU5.Bricks.LanguageSelector size="m" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -33899,7 +33899,7 @@ exports[`UU5.Bricks.LanguageSelector size="m" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -34234,7 +34234,7 @@ exports[`UU5.Bricks.LanguageSelector size="s" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -34324,7 +34324,7 @@ exports[`UU5.Bricks.LanguageSelector size="s" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -34356,7 +34356,7 @@ exports[`UU5.Bricks.LanguageSelector size="s" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -34691,7 +34691,7 @@ exports[`UU5.Bricks.LanguageSelector size="xl" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -34781,7 +34781,7 @@ exports[`UU5.Bricks.LanguageSelector size="xl" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -34813,7 +34813,7 @@ exports[`UU5.Bricks.LanguageSelector size="xl" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -35148,7 +35148,7 @@ exports[`UU5.Bricks.LanguageSelector style="padding:8px; borderRadius: 2px" 1`] 
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -35243,7 +35243,7 @@ exports[`UU5.Bricks.LanguageSelector style="padding:8px; borderRadius: 2px" 1`] 
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -35275,7 +35275,7 @@ exports[`UU5.Bricks.LanguageSelector style="padding:8px; borderRadius: 2px" 1`] 
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -35610,7 +35610,7 @@ exports[`UU5.Bricks.LanguageSelector style={"backgroundColor":"red","color":"blu
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -35705,7 +35705,7 @@ exports[`UU5.Bricks.LanguageSelector style={"backgroundColor":"red","color":"blu
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -35737,7 +35737,7 @@ exports[`UU5.Bricks.LanguageSelector style={"backgroundColor":"red","color":"blu
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [
@@ -36072,7 +36072,7 @@ exports[`UU5.Bricks.LanguageSelector tooltip="My Tooltip" 1`] = `
       />,
       <Span
         className="uu5-bricks-language-selector-text"
-        content="English"
+        content="English GB"
         controlled={true}
         disabled={false}
         dynamic={false}
@@ -36166,7 +36166,7 @@ exports[`UU5.Bricks.LanguageSelector tooltip="My Tooltip" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
+    className="uu5-bricks-language-selector-left"
     key="2"
     label={
       Array [
@@ -36198,7 +36198,7 @@ exports[`UU5.Bricks.LanguageSelector tooltip="My Tooltip" 1`] = `
     onClick={[Function]}
   />
   <dropdown-item
-    className="uu5-bricks-language-selector-left"
+    className="uu5-bricks-language-selector-left uu5-bricks-language-selector-selected"
     key="3"
     label={
       Array [

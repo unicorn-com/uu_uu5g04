@@ -117,6 +117,8 @@ export const DateRangePicker = Context.withContext(
       innerLabel: UU5.PropTypes.bool,
       step: UU5.PropTypes.oneOf(["days", "months", "years"]),
       monthNameFormat: UU5.PropTypes.oneOf(["abbr", "roman"]),
+      strictSelection: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
+      weekStartDay: UU5.PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7]),
     },
     //@@viewOff:propTypes
 
@@ -146,6 +148,8 @@ export const DateRangePicker = Context.withContext(
         innerLabel: false,
         step: "days",
         monthNameFormat: "roman",
+        strictSelection: undefined,
+        weekStartDay: 1,
       };
     },
     //@@viewOff:getDefaultProps
@@ -371,7 +375,7 @@ export const DateRangePicker = Context.withContext(
           value = null;
         }
 
-        if (this._checkRequired({ value: value })) {
+        if (this._checkRequired({ value })) {
           let initialFeedback = { feedback: "initial", message: null };
           let state = { ...initialFeedback, ...this._getInnerState(value, true) };
 
@@ -841,6 +845,9 @@ export const DateRangePicker = Context.withContext(
         } else {
           value = [value];
         }
+      } else if (this.props.strictSelection) {
+        value = DateTools.getAutoRange(value, this.props.strictSelection, this.props.weekStartDay);
+        executeOnChange = true;
       } else {
         value = [value];
       }
@@ -866,6 +873,7 @@ export const DateRangePicker = Context.withContext(
         toFeedback: this.state.toFeedback,
       };
       let executeOnChange = false;
+      let tempFromValue = this.state.tempValue;
 
       if (opt._data.right) {
         state.toInputValue = opt.value || formatedDate;
@@ -876,10 +884,27 @@ export const DateRangePicker = Context.withContext(
       if (newValue) {
         let fromInputValue, toInputValue, validateResult;
 
+        if (this.props.strictSelection) {
+          const [fromRange, toRange] = DateTools.getAutoRange(
+            newValue,
+            this.props.strictSelection,
+            this.props.weekStartDay
+          );
+          if (opt._data.right) {
+            newValue = toRange;
+            fromInputValue = this._getDateString(fromRange);
+            state.fromInputValue = fromInputValue;
+          } else {
+            newValue = fromRange;
+            toInputValue = this._getDateString(toRange);
+            state.toInputValue = toInputValue;
+          }
+        }
+
         if (opt._data.right) {
           let isSameMonth = this._isSameMonth(newValue, this.state.fromDisplayDate);
-          fromInputValue = this.parseDate(this.state.fromInputValue);
-          toInputValue = this.parseDate(newValue);
+          fromInputValue = fromInputValue || this.parseDate(this.state.fromInputValue);
+          toInputValue = toInputValue || this.parseDate(newValue);
           validateResult = this._getInputValidationResult(fromInputValue, newValue);
 
           if (!isSameMonth && validateResult.toFeedback.feedback !== "error") {
@@ -903,8 +928,7 @@ export const DateRangePicker = Context.withContext(
             state.toDisplayDate = displayData.dateTo;
           }
         } else {
-          fromInputValue = this.parseDate(newValue);
-          toInputValue = this.parseDate(this.state.toInputValue);
+          fromInputValue = fromInputValue || this.parseDate(newValue);
           validateResult = this._getInputValidationResult(newValue, toInputValue);
 
           if (validateResult.fromFeedback.feedback !== "error") {
@@ -927,17 +951,17 @@ export const DateRangePicker = Context.withContext(
             state.tempValue = newValue;
           }
           if ((opt._data.right && toValueValid) || (!opt._data.right && fromValueValid)) {
-            if (this.state.tempValue) {
+            if (tempFromValue) {
               if (opt._data.right) {
                 if (toValueValid) {
-                  state.value = [this.state.tempValue, newValue];
+                  state.value = [tempFromValue, newValue];
                   state.tempValue = null;
                 } else {
                   state.value = null;
                 }
               } else {
                 if (toValueValid && toInputValue) {
-                  state.value = [newValue, toInputValue];
+                  state.value = [newValue, this.parseDate(toInputValue)];
                   state.tempValue = null;
                 } else {
                   state.value = [newValue, newValue];
@@ -947,14 +971,14 @@ export const DateRangePicker = Context.withContext(
             } else if (toInputValue) {
               if (opt._data.right) {
                 if (toValueValid) {
-                  state.value = [fromInputValue, newValue];
+                  state.value = [this.parseDate(fromInputValue), newValue];
                 } else {
                   state.value = null;
-                  state.tempValue = fromInputValue;
+                  state.tempValue = this.parseDate(fromInputValue);
                 }
               } else {
                 if (toValueValid) {
-                  state.value = [newValue, toInputValue];
+                  state.value = [newValue, this.parseDate(toInputValue)];
                 } else {
                   state.value = [newValue, newValue];
                 }
@@ -1272,6 +1296,7 @@ export const DateRangePicker = Context.withContext(
 
     _goToToday() {
       let displayDates = DateTools.getDisplayDates(new Date(), this.state.calendarView);
+      this._onChange({ value: new Date(), _data: { type: "calendar" } });
       this.setState({ fromDisplayDate: displayDates.dateFrom, toDisplayDate: displayDates.dateTo });
     },
 
@@ -1636,6 +1661,7 @@ export const DateRangePicker = Context.withContext(
         colorSchema: this.getColorSchema(),
         step: this.props.step,
         monthNameFormat: this.props.monthNameFormat,
+        weekStartDay: this.props.weekStartDay || 1,
       };
 
       if (mobile) {
@@ -2120,7 +2146,7 @@ export const DateRangePicker = Context.withContext(
 
       return result;
     },
-    //@@viewOn:render
+    //@@viewOff:render
   })
 );
 

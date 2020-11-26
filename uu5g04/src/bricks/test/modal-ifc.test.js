@@ -16,6 +16,10 @@ import "uu5g04-bricks";
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
+// NOTE For this test only we'll overwrite UU5.Bricks.Modal with non-HOC variant (without modal bus HOC).
+const NonHocModal = UU5.Bricks.Modal._originalComponent;
+UU5.Bricks.Modal = NonHocModal;
+
 describe(`UU5.Bricks.Modal interface testing`, () => {
   it("open(content-props, callback)", () => {
     const wrapper = shallow(<UU5.Bricks.Modal id={"uuID-modal"} header="Jest modal"></UU5.Bricks.Modal>);

@@ -12,7 +12,7 @@
  */
 
 import UU5 from "uu5g04";
-import { useMemo } from "./react-hooks";
+import { useMemo } from "uu5g05";
 import { useListDataInternal } from "./use-list-data";
 
 function applyLoad(data, callArgs, callResult, callError) {

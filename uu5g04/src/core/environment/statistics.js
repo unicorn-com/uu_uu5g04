@@ -11,13 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-const CMD = "product/logLibraries";
 const TIMEOUT = 60 * 1000; // one minute
 const BASE_URI_COOKIE_NAME = "uu.app.cbu";
 const PRODUCT_AWID_REGEXP = /^https?:\/\/[^/]+\/([^/]+)\/([^/?#;]+)/;
 
-export function Statistics(url, isStatistics) {
-  const cmd = url + CMD;
+export function Statistics(cmd, isStatistics) {
   let baseUriCookie = document.cookie
     .split(";")
     .map((it) => it.trim())

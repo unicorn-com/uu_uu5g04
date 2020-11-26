@@ -14,8 +14,7 @@ import UU5 from "uu5g04";
 
 export const TAG = "UU5.BlockLayout.";
 
-UU5.Common.Css.createCssModule("uublocklayout");
-export const css = UU5.Common.Css.uublocklayout.css;
+export const css = UU5.Common.Css.createCssModule("uublocklayout").css;
 
 const normalFont = () => css`
   color: rgba(0, 0, 0, 0.87);

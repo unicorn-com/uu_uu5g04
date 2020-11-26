@@ -10,14 +10,14 @@
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
-
-import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import "uu5g04-bricks";
 import "uu5g04-forms";
+import { mount, shallow } from "uu5g05-test";
 
-const { mount, shallow, wait } = UU5.Test.Tools;
+// NOTE These are original "legacy" tests. They were passing before and ensure that UU5.Common.UU5String API remained
+// fully working even though we switched the underlying implementation to uu5stringg01 library (which uses slightly
+// different API).
 
 let codePreviewOutput = `<uu5string/>
 <UU5.Bricks.Button
@@ -50,18 +50,6 @@ let newsliderUu5String =
   '<uu5string /><UU5.Bricks.Slider id="root2" key="parKey2"><UU5.Bricks.Slider.Item value=10 min="0" max="10" step="5" id="child" key="childrenID"/></UU5.Bricks.Slider>';
 let filterContent =
   '<uu5string /><UU5.Bricks.Paragraph content="Lorem ipsum ..." /><UU5.Bricks.Paragraph /><UU5.Bricks.Paragraph>Lorem ipsum ...</UU5.Bricks.Paragraph>';
-
-function filterEmptyParagraphs(template) {
-  // filter empty paragraphs ( without content and children )
-  let filterFn = ({ tag, props }) => {
-    return !props.content && props.children.length === 0 ? false : { tag, props };
-  };
-  return UU5.Common.UU5String.toChildren(template, null, filterFn);
-}
-
-function builItem() {
-  console.log("buildItems was called");
-}
 
 const mockData = {
   now: "21.05.2018",
@@ -114,6 +102,23 @@ describe("UU5.Common.Uu5String - test of interface instance", () => {
     expect(newInstance.toChildren()).toMatchSnapshot();
   });
 
+  it("instance.toChildren(data = null, filter = null, buildChildFn)", () => {
+    let newInstance = new UU5.Common.UU5String('<uu5string/><div a="b">A<br/></div><span/>text');
+    let builtChildren = newInstance.toChildren(undefined, undefined, (tag, props, children) => {
+      return { T: tag, P: props, C: children };
+    });
+    expect(builtChildren).toMatchObject({
+      length: 3,
+      0: {
+        T: "div",
+        P: { a: "b" },
+        C: ["A", { T: "br", P: {}, C: null }],
+      },
+      1: { T: "span", P: {}, C: null },
+      2: "text",
+    });
+  });
+
   it("instance.toString(data = this.data, filter = null)", () => {
     let newInstance = new UU5.Common.UU5String(sliderUu5String);
     expect(() => {
@@ -144,7 +149,7 @@ describe("UU5.Common.Uu5String - test of interface instance", () => {
 
   it("instance.clone(data = this.data, init = this.init)", () => {
     let newInstance = new UU5.Common.UU5String(sliderUu5String);
-    let cloneIfc = newInstance.clone(newsliderUu5String);
+    let cloneIfc = newInstance.clone({ text: newsliderUu5String });
     expect(() => {
       newInstance;
     }).not.toThrow();
@@ -154,8 +159,7 @@ describe("UU5.Common.Uu5String - test of interface instance", () => {
     expect(cloneIfc).not.toBeNull();
     expect(cloneIfc).toEqual(
       expect.objectContaining({
-        data:
-          '<uu5string /><UU5.Bricks.Slider id="root2" key="parKey2"><UU5.Bricks.Slider.Item value=10 min="0" max="10" step="5" id="child" key="childrenID"/></UU5.Bricks.Slider>',
+        data: expect.objectContaining({ text: newsliderUu5String }),
       })
     );
     expect(cloneIfc).toMatchSnapshot();
@@ -164,7 +168,7 @@ describe("UU5.Common.Uu5String - test of interface instance", () => {
   it("instance.clone(data=this.data, init=this.init)", () => {
     const mockFunc = jest.fn();
     let newInstance = new UU5.Common.UU5String(filterContent, mockData, mockFunc);
-    let clone_calls = newInstance.clone(newsliderUu5String, mockFunc);
+    let clone_calls = newInstance.clone({ text: newsliderUu5String }, mockFunc);
     expect(mockFunc).toBeCalled();
     //3X calls mock func clone 3x calls mock in new
     expect(mockFunc).toHaveBeenCalledTimes(6);
@@ -239,6 +243,27 @@ describe("UU5.Common.Uu5.String. - test of interface of class", () => {
     );
   });
 
+  it("toChildren(uu5string,data,children,buildChildFn)", () => {
+    let builtChildren = UU5.Common.UU5String.toChildren(
+      '<uu5string/><div a="b">A<br/></div><span/>text',
+      undefined,
+      undefined,
+      (tag, props, children) => {
+        return { T: tag, P: props, C: children };
+      }
+    );
+    expect(builtChildren).toMatchObject({
+      length: 3,
+      0: {
+        T: "div",
+        P: { a: "b" },
+        C: ["A", { T: "br", P: {}, C: null }],
+      },
+      1: { T: "span", P: {}, C: null },
+      2: "text",
+    });
+  });
+
   it("toString(uu5string)", () => {
     expect(() => {
       UU5.Common.UU5String.toString(codePreviewOutput);
@@ -286,6 +311,27 @@ describe("UU5.Common.Uu5.String. - test of interface of class", () => {
     expect(mockFilter).toBeCalled();
     expect(mockFilter).toHaveBeenCalledTimes(3);
     expect(ifc).toMatchSnapshot();
+  });
+
+  it("contentToChildren(uu5string, { buildChildFn })", () => {
+    let builtChildren = UU5.Common.UU5String.contentToChildren(
+      new UU5.Common.UU5String('<uu5string/><div a="b">A<br/></div><span/>text').content,
+      undefined,
+      undefined,
+      (tag, props, children) => {
+        return { T: tag, P: props, C: children };
+      }
+    );
+    expect(builtChildren).toMatchObject({
+      length: 3,
+      0: {
+        T: "div",
+        P: { a: "b" },
+        C: ["A", { T: "br", P: {}, C: null }],
+      },
+      1: { T: "span", P: {}, C: null },
+      2: "text",
+    });
   });
 
   it("contentToChildren(uu5stringObjects, data = null, filter = null) should not throw error II", () => {

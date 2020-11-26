@@ -1,5 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
+/* eslint-disable uu5/base-mixin */
+/* eslint-disable uu5/tag-name */
+/* eslint-disable uu5/component-comments */
+import { PropTypes } from "uu5g05";
 import UU5 from "uu5g04";
 
 const { mount, shallow, wait } = UU5.Test.Tools;
@@ -116,7 +118,7 @@ describe("UU5.Common.VisualComponent", () => {
     );
     expect(result).toMatchObject({
       id: "1",
-      className: "d a b uu5-noindex",
+      className: "d uu5-noindex a b",
       style: { color: "red" },
       disabled: true,
       hidden: false,

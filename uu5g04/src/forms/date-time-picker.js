@@ -94,11 +94,13 @@ export const DateTimePicker = Context.withContext(
       timeStep: UU5.PropTypes.number,
       strictTimeStep: UU5.PropTypes.bool,
       hideFormatPlaceholder: UU5.PropTypes.bool,
+      hideWeekNumber: UU5.PropTypes.bool,
       showTodayButton: UU5.PropTypes.bool,
       dateInputAttrs: UU5.PropTypes.object,
       timeInputAttrs: UU5.PropTypes.object,
       timeZone: UU5.PropTypes.number,
       monthNameFormat: UU5.PropTypes.oneOf(["abbr", "roman"]),
+      weekStartDay: UU5.PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7]),
     },
     //@@viewOff:propTypes
 
@@ -125,9 +127,11 @@ export const DateTimePicker = Context.withContext(
         timeStep: 1,
         strictTimeStep: false,
         hideFormatPlaceholder: false,
+        hideWeekNumber: false,
         showTodayButton: false,
         timeZone: undefined,
         monthNameFormat: "roman",
+        weekStartDay: 1,
       };
     },
     //@@viewOff:getDefaultProps
@@ -1253,6 +1257,7 @@ export const DateTimePicker = Context.withContext(
     _onDatePickerChange(opt) {
       let timeValue;
       let dateString = this._getDateString(opt.value);
+      let setToday = opt._data.setToday ? { setToday: true } : null;
 
       if (this.state.timeString) timeValue = this.state.timeString;
       else timeValue = this._getAutofilledTime();
@@ -1261,7 +1266,7 @@ export const DateTimePicker = Context.withContext(
       opt = {
         component: this,
         value: this._getOutcomingValue(value),
-        _data: { type: "calendarPicker", dateString, value, timeZoneAdjusted: true },
+        _data: { type: "calendarPicker", dateString, value, timeZoneAdjusted: true, ...setToday },
       };
 
       if (!this._hasValueChanged(this.state.dateString, dateString)) {
@@ -1319,7 +1324,8 @@ export const DateTimePicker = Context.withContext(
     },
 
     _onChangeDatePickerDefault(opt, setStateCallback) {
-      this._updateState({ calendarOpen: false, dateString: opt._data.dateString }, undefined, () => {
+      let calendarOpen = opt._data.setToday === true ? { calendarOpen: true } : { calendarOpen: false };
+      this._updateState({ ...calendarOpen, dateString: opt._data.dateString }, undefined, () => {
         this._onBlur(opt);
         if (typeof setStateCallback === "function") {
           setStateCallback();
@@ -1389,10 +1395,12 @@ export const DateTimePicker = Context.withContext(
         dateFrom: this.props.dateFrom ? this._getDateFrom() : null,
         dateTo: this.props.dateTo ? this._getDateTo() : null,
         hidden: !this._isCalendarOpen(),
+        hideWeekNumber: this.props.hideWeekNumber,
         onChange: this._onDatePickerChange,
         colorSchema: this.getColorSchema(),
         showTodayButton: this.props.showTodayButton,
         monthNameFormat: this.props.monthNameFormat,
+        weekStartDay: this.props.weekStartDay,
       };
     },
 

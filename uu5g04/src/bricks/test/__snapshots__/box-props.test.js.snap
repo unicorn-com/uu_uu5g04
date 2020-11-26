@@ -438,7 +438,7 @@ exports[`UU5.Bricks.Box example from docKit UU5.Bricks.Box in The box are Icon a
       key="uuID3"
     />
   </div>
-  <Modal
+  <ForwardRef
     className="uu5-bricks-box-modal"
     content="This is infoContent from the box"
     header="This is infoHeader from the Box"
@@ -511,7 +511,7 @@ exports[`UU5.Bricks.Box infoContent="Text in opened modal window" 1`] = `
     style={Object {}}
     title={null}
   />
-  <Modal
+  <ForwardRef
     className="uu5-bricks-box-modal"
     content="Text in opened modal window"
     header="Info"

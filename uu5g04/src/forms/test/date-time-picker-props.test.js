@@ -175,6 +175,9 @@ const CONFIG = {
     timeInputAttrs: {
       values: [null, { style: "background-color: red" }],
     },
+    hideWeekNumber: {
+      values: [true, false]
+    }
   },
   requiredProps: {
     //The component does not have any required props
@@ -282,7 +285,7 @@ describe("TextInputMixin props.function", () => {
     expect(wrapper.instance().state.feedback).toEqual("success");
     expect(wrapper.instance().state.message).toEqual("Is valid.");
     expect(wrapper.instance().getValue()).toMatch(/9.11.2013 12:00/);
-    expect(wrapper.instance().state.dateString).toBe("9/11/2013");
+    expect(wrapper.instance().state.dateString).toBe("09/11/2013");
     expect(wrapper.instance().state.timeString).toBe("12:00");
   });
 
@@ -333,7 +336,7 @@ describe("TextInputMixin props.function", () => {
     let wrapper, value, displayedTimeValue;
 
     wrapper = mount(<UU5.Forms.DateTimePicker timeZone={3} value={"2019-11-01T10:00:00Z"} />);
-    expect(wrapper.instance().getValue()).toBe("11/1/2019 11:00");
+    expect(wrapper.instance().getValue()).toBe("01/11/2019 11:00");
 
     // "iso"; displayed value should be adjusted by timeZone prop; getValue() should remain initial (but affected by valueType)
     wrapper = mount(<UU5.Forms.DateTimePicker timeZone={5} value={"2019-11-01T10:00:00Z"} valueType="iso" />);
@@ -359,11 +362,11 @@ describe("TextInputMixin props.function", () => {
     wrapper = mount(<UU5.Forms.DateTimePicker timeZone={5} value={"2019-11-01T10:00:00Z"} valueType="string" />);
     ({ value, displayedTimeValue } = accessCurrentValues(wrapper));
     expect(displayedTimeValue()).toBe("15:00");
-    expect(value()).toBe("11/1/2019 11:00"); // local OS time zone (cs-CZ) for that date is GMT+1
+    expect(value()).toBe("01/11/2019 11:00"); // local OS time zone (cs-CZ) for that date is GMT+1
     // changing time should parse the new time as if it was in timeZone
     setInputValue(wrapper.find("input").at(1), "18:00"); // +3 from currently displayed
     expect(displayedTimeValue()).toBe("18:00");
-    expect(value()).toBe("11/1/2019 14:00"); // +3 from initial
+    expect(value()).toBe("01/11/2019 14:00"); // +3 from initial
 
     // "date"; displayed value should be adjusted by timeZone prop; getValue() should stay the same as initial (but affected by valueType)
     wrapper = mount(<UU5.Forms.DateTimePicker timeZone={5} value={"2019-11-01T10:00:00Z"} valueType="date" />);
@@ -393,7 +396,7 @@ describe(`UU5.Forms.DateTimePicker props function`, () => {
       .instance()
       .getValue();
     expect(method).toBeCalled();
-    expect(value + "").toBe("3/14/2019 01:20");
+    expect(value + "").toBe("14/03/2019 01:20");
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -410,7 +413,7 @@ describe(`UU5.Forms.DateTimePicker props function`, () => {
       .instance()
       .getValue();
     expect(method).toBeCalled();
-    expect(value + "").toBe("3/14/2019 01:20");
+    expect(value + "").toBe("14/03/2019 01:20");
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -506,5 +509,6 @@ describe(`UU5.Forms.DateTimePicker check default default props from Mixins`, () 
     expect(wrapper.instance().props.parent).toBe(null);
     expect(wrapper.instance().props.ref_).toBe(null);
     expect(wrapper.instance().props.noIndex).toBeFalsy();
+    expect(wrapper.instance().props.hideWeekNumber).toBe(false);
   });
 });

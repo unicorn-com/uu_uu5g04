@@ -2298,8 +2298,8 @@ exports[`UU5.Bricks.Calendar dateFrom="15.1.2019" 1`] = `
           className="uu5-bricks-calendar-head-row uu5-forms-calendar-head-row"
         >
           <th
-            className="uu5-bricks-calendar-head-cell-prev uu5-forms-calendar-head-cell-prev"
-            onClick={[Function]}
+            className="uu5-bricks-calendar-head-cell-prev uu5-forms-calendar-head-cell-prev uu5-common-disabled"
+            onClick={null}
           >
             <Icon
               className="uu5-bricks-calendar-icon uu5-forms-calendar-icon"
@@ -2429,9 +2429,9 @@ exports[`UU5.Bricks.Calendar dateFrom="15.1.2019" 1`] = `
             </div>
           </th>
           <td
-            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-another-section uu5-forms-calendar-another-section"
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-common-disabled uu5-bricks-calendar-another-section uu5-forms-calendar-another-section uu5-bricks-calendar-another-section uu5-forms-calendar-another-section"
             key="day-2018-12-30T23:00:00.000Z"
-            onClick={[Function]}
+            onClick={null}
           >
             <div
               className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
@@ -2444,9 +2444,9 @@ exports[`UU5.Bricks.Calendar dateFrom="15.1.2019" 1`] = `
             </div>
           </td>
           <td
-            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-common-disabled uu5-bricks-calendar-another-section uu5-forms-calendar-another-section uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
             key="day-2018-12-31T23:00:00.000Z"
-            onClick={[Function]}
+            onClick={null}
           >
             <div
               className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
@@ -2459,9 +2459,9 @@ exports[`UU5.Bricks.Calendar dateFrom="15.1.2019" 1`] = `
             </div>
           </td>
           <td
-            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-common-disabled uu5-bricks-calendar-another-section uu5-forms-calendar-another-section uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
             key="day-2019-01-01T23:00:00.000Z"
-            onClick={[Function]}
+            onClick={null}
           >
             <div
               className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
@@ -2474,9 +2474,9 @@ exports[`UU5.Bricks.Calendar dateFrom="15.1.2019" 1`] = `
             </div>
           </td>
           <td
-            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-common-disabled uu5-bricks-calendar-another-section uu5-forms-calendar-another-section uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
             key="day-2019-01-02T23:00:00.000Z"
-            onClick={[Function]}
+            onClick={null}
           >
             <div
               className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
@@ -2489,9 +2489,9 @@ exports[`UU5.Bricks.Calendar dateFrom="15.1.2019" 1`] = `
             </div>
           </td>
           <td
-            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-common-disabled uu5-bricks-calendar-another-section uu5-forms-calendar-another-section uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
             key="day-2019-01-03T23:00:00.000Z"
-            onClick={[Function]}
+            onClick={null}
           >
             <div
               className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
@@ -2504,9 +2504,9 @@ exports[`UU5.Bricks.Calendar dateFrom="15.1.2019" 1`] = `
             </div>
           </td>
           <td
-            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-common-disabled uu5-bricks-calendar-another-section uu5-forms-calendar-another-section uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
             key="day-2019-01-04T23:00:00.000Z"
-            onClick={[Function]}
+            onClick={null}
           >
             <div
               className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
@@ -2519,9 +2519,9 @@ exports[`UU5.Bricks.Calendar dateFrom="15.1.2019" 1`] = `
             </div>
           </td>
           <td
-            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-common-disabled uu5-bricks-calendar-another-section uu5-forms-calendar-another-section uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
             key="day-2019-01-05T23:00:00.000Z"
-            onClick={[Function]}
+            onClick={null}
           >
             <div
               className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
@@ -2549,9 +2549,9 @@ exports[`UU5.Bricks.Calendar dateFrom="15.1.2019" 1`] = `
             </div>
           </th>
           <td
-            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-common-disabled uu5-bricks-calendar-another-section uu5-forms-calendar-another-section uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
             key="day-2019-01-06T23:00:00.000Z"
-            onClick={[Function]}
+            onClick={null}
           >
             <div
               className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
@@ -2564,9 +2564,9 @@ exports[`UU5.Bricks.Calendar dateFrom="15.1.2019" 1`] = `
             </div>
           </td>
           <td
-            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-common-disabled uu5-bricks-calendar-another-section uu5-forms-calendar-another-section uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
             key="day-2019-01-07T23:00:00.000Z"
-            onClick={[Function]}
+            onClick={null}
           >
             <div
               className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
@@ -2579,9 +2579,9 @@ exports[`UU5.Bricks.Calendar dateFrom="15.1.2019" 1`] = `
             </div>
           </td>
           <td
-            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-common-disabled uu5-bricks-calendar-another-section uu5-forms-calendar-another-section uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
             key="day-2019-01-08T23:00:00.000Z"
-            onClick={[Function]}
+            onClick={null}
           >
             <div
               className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
@@ -2594,9 +2594,9 @@ exports[`UU5.Bricks.Calendar dateFrom="15.1.2019" 1`] = `
             </div>
           </td>
           <td
-            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-common-disabled uu5-bricks-calendar-another-section uu5-forms-calendar-another-section uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
             key="day-2019-01-09T23:00:00.000Z"
-            onClick={[Function]}
+            onClick={null}
           >
             <div
               className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
@@ -2609,9 +2609,9 @@ exports[`UU5.Bricks.Calendar dateFrom="15.1.2019" 1`] = `
             </div>
           </td>
           <td
-            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-common-disabled uu5-bricks-calendar-another-section uu5-forms-calendar-another-section uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
             key="day-2019-01-10T23:00:00.000Z"
-            onClick={[Function]}
+            onClick={null}
           >
             <div
               className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
@@ -2624,9 +2624,9 @@ exports[`UU5.Bricks.Calendar dateFrom="15.1.2019" 1`] = `
             </div>
           </td>
           <td
-            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-common-disabled uu5-bricks-calendar-another-section uu5-forms-calendar-another-section uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
             key="day-2019-01-11T23:00:00.000Z"
-            onClick={[Function]}
+            onClick={null}
           >
             <div
               className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
@@ -2639,9 +2639,9 @@ exports[`UU5.Bricks.Calendar dateFrom="15.1.2019" 1`] = `
             </div>
           </td>
           <td
-            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-common-disabled uu5-bricks-calendar-another-section uu5-forms-calendar-another-section uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
             key="day-2019-01-12T23:00:00.000Z"
-            onClick={[Function]}
+            onClick={null}
           >
             <div
               className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
@@ -2669,9 +2669,9 @@ exports[`UU5.Bricks.Calendar dateFrom="15.1.2019" 1`] = `
             </div>
           </th>
           <td
-            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-common-disabled uu5-bricks-calendar-another-section uu5-forms-calendar-another-section uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
             key="day-2019-01-13T23:00:00.000Z"
-            onClick={[Function]}
+            onClick={null}
           >
             <div
               className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
@@ -3828,8 +3828,8 @@ exports[`UU5.Bricks.Calendar dateTo="30.1.2019" 1`] = `
             January 2019
           </th>
           <th
-            className="uu5-bricks-calendar-head-cell-next uu5-forms-calendar-head-cell-next"
-            onClick={[Function]}
+            className="uu5-bricks-calendar-head-cell-next uu5-forms-calendar-head-cell-next uu5-common-disabled"
+            onClick={null}
           >
             <Icon
               className="uu5-bricks-calendar-icon uu5-forms-calendar-icon"
@@ -4472,9 +4472,9 @@ exports[`UU5.Bricks.Calendar dateTo="30.1.2019" 1`] = `
             </div>
           </td>
           <td
-            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-common-disabled uu5-bricks-calendar-another-section uu5-forms-calendar-another-section uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
             key="day-2019-01-30T23:00:00.000Z"
-            onClick={[Function]}
+            onClick={null}
           >
             <div
               className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
@@ -4487,9 +4487,9 @@ exports[`UU5.Bricks.Calendar dateTo="30.1.2019" 1`] = `
             </div>
           </td>
           <td
-            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-another-section uu5-forms-calendar-another-section"
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-common-disabled uu5-bricks-calendar-another-section uu5-forms-calendar-another-section uu5-bricks-calendar-another-section uu5-forms-calendar-another-section"
             key="day-2019-01-31T23:00:00.000Z"
-            onClick={[Function]}
+            onClick={null}
           >
             <div
               className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
@@ -4502,9 +4502,9 @@ exports[`UU5.Bricks.Calendar dateTo="30.1.2019" 1`] = `
             </div>
           </td>
           <td
-            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-another-section uu5-forms-calendar-another-section"
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-common-disabled uu5-bricks-calendar-another-section uu5-forms-calendar-another-section uu5-bricks-calendar-another-section uu5-forms-calendar-another-section"
             key="day-2019-02-01T23:00:00.000Z"
-            onClick={[Function]}
+            onClick={null}
           >
             <div
               className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
@@ -4517,9 +4517,9 @@ exports[`UU5.Bricks.Calendar dateTo="30.1.2019" 1`] = `
             </div>
           </td>
           <td
-            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-another-section uu5-forms-calendar-another-section"
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-common-disabled uu5-bricks-calendar-another-section uu5-forms-calendar-another-section uu5-bricks-calendar-another-section uu5-forms-calendar-another-section"
             key="day-2019-02-02T23:00:00.000Z"
-            onClick={[Function]}
+            onClick={null}
           >
             <div
               className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"

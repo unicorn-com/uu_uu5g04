@@ -13,7 +13,7 @@
 
 import React from "react";
 import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
+import { PropTypes } from "uu5g05";
 import Context from "./context.js";
 
 const LazyContext = Context.create({ loading: "" });

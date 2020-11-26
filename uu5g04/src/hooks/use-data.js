@@ -11,7 +11,7 @@
  * at the email: info@unicorn.com.
  */
 import UU5 from "uu5g04";
-import { useEffect, useReducer, useMemo, useRef, useCallback, useLayoutEffect } from "./react-hooks";
+import { useEffect, useReducer, useMemo, useRef, useCallback, useLayoutEffect } from "uu5g05";
 import { initReducer, processBusReducer, combineReducers, performOperation } from "./internal/data-hooks-helper";
 
 function applyLoad(data, callArgs, callResult, callError) {

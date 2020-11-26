@@ -11,7 +11,7 @@
  * at the email: info@unicorn.com.
  */
 
-import PropTypes from "prop-types";
+import { PropTypes } from "uu5g05";
 import ns from "./common-ns.js";
 import Tools from "./tools.js";
 import Element from "./element.js";

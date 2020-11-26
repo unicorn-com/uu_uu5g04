@@ -12,11 +12,9 @@
  */
 
 import React from "react";
-import PropTypes from "prop-types";
-import createReactClass from "create-react-class";
+import { PropTypes } from "uu5g05";
 import Tools from "./tools.js";
-import Environment from "../environment/environment.js";
-import { LsiContext, withLsiContext } from "./context.js";
+import { LsiContext, withLsiContext } from "./internal/lsi-context.js";
 
 export const LsiMixin = {
   //@@viewOn:statics

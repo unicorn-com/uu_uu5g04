@@ -11,16 +11,14 @@
  * at the email: info@unicorn.com.
  */
 
-//@@viewOn:revision
-//  coded: Martin Mach, 18.09.2020
-//  reviewed: -
-//@@viewOff:revision
+import { Utils, Fragment, Suspense } from "uu5g05";
 
-import "./internal/font-css-url.js";
 import "./normalize.less";
 import "./common.less";
 import "./font-size.less";
 import "./internal/bg-styles.js";
+
+const Children = Utils.Content;
 
 export * from "./css.js";
 export * from "./tools.js";
@@ -50,9 +48,7 @@ export * from "./pure-render-mixin.js";
 export * from "./resize-mixin.js";
 export * from "./route-mixin.js";
 export * from "./router.js";
-export * from "./uu5string/uu5-string.js";
-export * from "./uu5string/uu5-json.js";
-export * from "./uu5string/uu5-data.js";
+export * from "./uu5string.js";
 export * from "./url.js";
 export * from "./event-listener.js";
 export * from "./tag-placeholder.js";
@@ -73,7 +69,7 @@ export * from "./redirect.js";
 import Context from "./context.js";
 export { Context };
 
-export * from "./time-zone-context.js";
+export { TimeZoneContext } from "../uu5g05-integration/use-time-zone";
 
 export { Component } from "./component.js";
 export * from "./dn-d.js";
@@ -87,9 +83,8 @@ export * from "./modal-bus-context";
 
 export * from "./with-visibility-check.js";
 
-export { Children, Fragment } from "react";
+export { Children, Fragment };
 
-import React, { Suspense } from "react";
 const UU5Suspense = ({ loading, ...props }) => <Suspense {...props} fallback={props.fallback || props.loading || ""} />;
 UU5Suspense.displayName = "Suspense";
 export { UU5Suspense as Suspense };

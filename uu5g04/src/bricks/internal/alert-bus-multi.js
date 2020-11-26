@@ -12,8 +12,7 @@
  */
 
 import React from "react";
-import PropTypes from "prop-types";
-import * as UU5 from "uu5g04";
+import UU5 from "uu5g04";
 import Alert from "../alert.js";
 import Button from "../button.js";
 import Icon from "../icon.js";
@@ -71,13 +70,13 @@ export const AlertBusMulti = (props) => {
 };
 
 AlertBusMulti.propTypes = {
-  id: PropTypes.string,
-  stack: PropTypes.array,
-  showAll: PropTypes.bool,
-  block: PropTypes.bool,
-  onShowAll: PropTypes.func,
-  onClearAll: PropTypes.func,
-  location: PropTypes.oneOf(["local", "page"]),
+  id: UU5.PropTypes.string,
+  stack: UU5.PropTypes.array,
+  showAll: UU5.PropTypes.bool,
+  block: UU5.PropTypes.bool,
+  onShowAll: UU5.PropTypes.func,
+  onClearAll: UU5.PropTypes.func,
+  location: UU5.PropTypes.oneOf(["local", "page"]),
 };
 
 AlertBusMulti.defaultProps = {

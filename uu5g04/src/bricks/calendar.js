@@ -21,6 +21,27 @@ import "./calendar.less";
 
 const romanNumbers = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"];
 
+let getWeek = (date, weekStartDay) => {
+  date = new Date(date);
+  let currDay = date.getDay();
+  let currDate = date.getDate();
+  let currWeekStartDate = currDate - currDay + weekStartDay;
+  if (currWeekStartDate > currDate) {
+    currWeekStartDate -= 7;
+  }
+  let start = new Date(date.setDate(currWeekStartDate));
+  let end = new Date(new Date(start).setDate(start.getDate() + 6));
+  start.setHours(0);
+  start.setMinutes(0);
+  start.setSeconds(0);
+  start.setMilliseconds(0);
+  end.setHours(23);
+  end.setMinutes(59);
+  end.setSeconds(59);
+  end.setMilliseconds(999);
+  return [start, end];
+};
+
 export const Calendar = UU5.Common.LsiMixin.withContext(
   UU5.Common.VisualComponent.create({
     displayName: "Calendar", // for backward compatibility (test snapshots)
@@ -139,6 +160,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
       onNextSelection: UU5.PropTypes.func,
       onPrevSelection: UU5.PropTypes.func,
       monthNameFormat: UU5.PropTypes.oneOf(["abbr", "roman"]),
+      weekStartDay: UU5.PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7]),
     },
     //@@viewOff:propTypes
 
@@ -162,6 +184,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
         hideNextSelection: false,
         hideOtherSections: false,
         monthNameFormat: "roman",
+        weekStartDay: 1,
       };
     },
     //@@viewOff:getDefaultProps
@@ -327,7 +350,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
     },
 
     _getWeek(date) {
-      return UU5.Common.Tools.getWeekNumber(date);
+      return UU5.Common.Tools.getWeekNumber(date, this.props.weekStartDay);
     },
 
     _getMainAttrs() {
@@ -615,7 +638,16 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
     },
 
     _getWeeks() {
-      let ths = this.getLsiValue("dayNames").map((dayName) => {
+      let dayNames = [...this.getLsiValue("dayNames")];
+      if (this.props.weekStartDay) {
+        let weekStartDayIndex = this.props.weekStartDay - 1;
+        let firstDayNamesArray = dayNames.slice(weekStartDayIndex);
+        dayNames.splice(weekStartDayIndex, 7 - weekStartDayIndex);
+        dayNames = [...firstDayNamesArray, ...dayNames];
+      } else {
+        dayNames = this.getLsiValue("dayNames");
+      }
+      let ths = dayNames.map((dayName) => {
         return (
           <th className={this.getClassName().dayName} title={dayName} key={dayName}>
             <div className={this.getClassName("dayCell")}>{dayName.substr(0, 2)}</div>
@@ -636,6 +668,11 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
 
     _setSelectedDate(date, e) {
       let opt = { value: date, event: e, component: this, _data: { type: "click" } };
+      this._onChange(opt);
+    },
+
+    _setToday(date) {
+      let opt = { value: date, component: this, _data: { setToday: true } };
       this._onChange(opt);
     },
 
@@ -694,15 +731,17 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
       const today = new Date(Date.now());
       const activeMonthIndex = this.state.month - 1;
       const firstDate = new Date(this.state.year, activeMonthIndex);
-      const firstMondayDate = new Date(this.state.year, activeMonthIndex, 2 - (firstDate.getDay() || 7));
       const lastDate = new Date(this.state.year, activeMonthIndex + 1, 0);
-      const lastSundayDate = new Date(this.state.year, this.state.month, 7 - (lastDate.getDay() || 7));
+      let [firstWeekDate] = getWeek(firstDate, this.props.weekStartDay);
+      let [_, lastWeekDate] = getWeek(lastDate, this.props.weekStartDay);
+      let lastWeekDay = lastWeekDate.getDay();
+      let firstWeekDay = firstWeekDate.getDay();
 
-      let activeDate = firstMondayDate;
+      let activeDate = firstWeekDate;
       let trs = [];
       let tds = [];
 
-      while (activeDate <= lastSundayDate) {
+      while (activeDate <= lastWeekDate) {
         let cellClassName = this.getClassName().cell + " " + this.getClassName().day;
         let contentWrapperClassName = this.getClassName("dayCell");
         let innerWrapperClassName = this.getClassName("selection");
@@ -796,7 +835,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
             </div>
           </td>
         );
-        if (activeDate.getDay() === 1 && !this.props.hideWeekNumber) {
+        if (activeDate.getDay() === firstWeekDay && !this.props.hideWeekNumber) {
           let weekNum = this._getWeek(activeDate);
           tds.unshift(
             <th key={"week-" + weekNum} className={this.getClassName("weekNumber")}>
@@ -804,7 +843,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
             </th>
           );
         }
-        if (activeDate.getDay() === 0) {
+        if (activeDate.getDay() === lastWeekDay) {
           trs.push(
             <tr key={"row-" + activeDate.toISOString()} className={this.getClassName().week}>
               {tds}
@@ -1083,6 +1122,7 @@ export const Calendar = UU5.Common.LsiMixin.withContext(
           onClick={() => {
             if (!this.isDisabled()) {
               let dateInfo = this._getDisplayedDate(new Date(Date.now()));
+              this._setToday(new Date(Date.now()));
               this.setState({ ...dateInfo });
             }
           }}

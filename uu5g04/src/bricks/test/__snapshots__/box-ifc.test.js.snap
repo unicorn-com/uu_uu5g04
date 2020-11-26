@@ -15,7 +15,7 @@ exports[`UU5.Bricks.Box interface testing UU5.Bricks.Box shallow snapshot should
       key="boxContent"
     />
   </div>
-  <Modal
+  <ForwardRef
     className="uu5-bricks-box-modal"
     content="This is infoContent from the Box"
     header="This is infoHeader from the Box"

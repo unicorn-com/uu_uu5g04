@@ -1,7 +1,5 @@
-import UU5 from "uu5g04";
 import { useLsiValues, LanguageProvider } from "uu5g04-hooks";
-
-const { mount, renderHook, initHookRenderer } = UU5.Test.Tools;
+import { mount, renderHook, initHookRenderer } from "uu5g05-test";
 
 const LSI_VALUES1 = {
   key1: { en: "key1-en", cs: "key1-cs" },

@@ -7,7 +7,7 @@ exports[`UU5.Common.Router Common.BaseMixin props test 01 - id props 1`] = `
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -23,7 +23,7 @@ exports[`UU5.Common.Router Common.BaseMixin props test 01 - id props 2`] = `
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -39,7 +39,7 @@ exports[`UU5.Common.Router Common.BaseMixin props test 02 - name props 1`] = `
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -55,7 +55,7 @@ exports[`UU5.Common.Router Common.BaseMixin props test 02 - name props 2`] = `
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -71,7 +71,7 @@ exports[`UU5.Common.Router Common.BaseMixin props test 03 - tooltip props 1`] = 
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -87,7 +87,7 @@ exports[`UU5.Common.Router Common.BaseMixin props test 03 - tooltip props 2`] = 
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -102,7 +102,7 @@ exports[`UU5.Common.Router Common.BaseMixin props test 04 - className props 1`] 
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -117,7 +117,7 @@ exports[`UU5.Common.Router Common.BaseMixin props test 04 - className props 2`] 
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -132,7 +132,7 @@ exports[`UU5.Common.Router Common.BaseMixin props test 05 - style props 1`] = `
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -147,7 +147,7 @@ exports[`UU5.Common.Router Common.BaseMixin props test 05 - style props 2`] = `
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -162,7 +162,7 @@ exports[`UU5.Common.Router Common.BaseMixin props test 06 - mainAttrs props 1`] 
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -177,7 +177,7 @@ exports[`UU5.Common.Router Common.BaseMixin props test 06 - mainAttrs props 2`] 
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -192,7 +192,7 @@ exports[`UU5.Common.Router Common.BaseMixin props test 07 - noIndex props 1`] = 
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -207,7 +207,7 @@ exports[`UU5.Common.Router Common.BaseMixin props test 07 - noIndex props 2`] = 
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -222,7 +222,7 @@ exports[`UU5.Common.Router Common.CcrWriterMixin props test01 - ccrKey props 1`]
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -237,7 +237,7 @@ exports[`UU5.Common.Router Common.CcrWriterMixin props test01 - ccrKey props 2`]
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -253,7 +253,7 @@ exports[`UU5.Common.Router Common.ElementaryMixin props test 01 - hidden props 1
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -269,7 +269,7 @@ exports[`UU5.Common.Router Common.ElementaryMixin props test 01 - hidden props 2
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -285,7 +285,7 @@ exports[`UU5.Common.Router Common.ElementaryMixin props test 02 - disabled props
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -301,7 +301,7 @@ exports[`UU5.Common.Router Common.ElementaryMixin props test 02 - disabled props
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -317,7 +317,7 @@ exports[`UU5.Common.Router Common.ElementaryMixin props test 03 - selected props
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -333,7 +333,7 @@ exports[`UU5.Common.Router Common.ElementaryMixin props test 03 - selected props
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -348,7 +348,7 @@ exports[`UU5.Common.Router Common.ElementaryMixin props test 04 - controlled pro
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -363,7 +363,7 @@ exports[`UU5.Common.Router Common.ElementaryMixin props test 04 - controlled pro
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -378,7 +378,7 @@ exports[`UU5.Common.Router Common.PureRenderMixin props test 01 - pureRender pro
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -393,7 +393,7 @@ exports[`UU5.Common.Router Common.PureRenderMixin props test 01 - pureRender pro
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -404,7 +404,7 @@ exports[`UU5.Common.Router Common.PureRenderMixin props test 01 - pureRender pro
 
 exports[`UU5.Common.Router Test Tool API test basePath="/uu-dockitg01-main/12345-890890908" 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -415,7 +415,7 @@ exports[`UU5.Common.Router Test Tool API test basePath="/uu-dockitg01-main/12345
 
 exports[`UU5.Common.Router Test Tool API test ccrKey="<UU5.Parrot.Page ccrKey='UU5.Parrot.Page' />" 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -426,7 +426,7 @@ exports[`UU5.Common.Router Test Tool API test ccrKey="<UU5.Parrot.Page ccrKey='U
 
 exports[`UU5.Common.Router Test Tool API test className="my-classname" 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -437,7 +437,7 @@ exports[`UU5.Common.Router Test Tool API test className="my-classname" 1`] = `
 
 exports[`UU5.Common.Router Test Tool API test controlled=false 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -448,7 +448,7 @@ exports[`UU5.Common.Router Test Tool API test controlled=false 1`] = `
 
 exports[`UU5.Common.Router Test Tool API test controlled=true 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -459,7 +459,7 @@ exports[`UU5.Common.Router Test Tool API test controlled=true 1`] = `
 
 exports[`UU5.Common.Router Test Tool API test default props 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -470,7 +470,7 @@ exports[`UU5.Common.Router Test Tool API test default props 1`] = `
 
 exports[`UU5.Common.Router Test Tool API test disabled=false 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -481,7 +481,7 @@ exports[`UU5.Common.Router Test Tool API test disabled=false 1`] = `
 
 exports[`UU5.Common.Router Test Tool API test disabled=true 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -492,7 +492,7 @@ exports[`UU5.Common.Router Test Tool API test disabled=true 1`] = `
 
 exports[`UU5.Common.Router Test Tool API test hidden=false 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -503,7 +503,7 @@ exports[`UU5.Common.Router Test Tool API test hidden=false 1`] = `
 
 exports[`UU5.Common.Router Test Tool API test hidden=true 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -514,7 +514,7 @@ exports[`UU5.Common.Router Test Tool API test hidden=true 1`] = `
 
 exports[`UU5.Common.Router Test Tool API test id="myId" 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -525,7 +525,7 @@ exports[`UU5.Common.Router Test Tool API test id="myId" 1`] = `
 
 exports[`UU5.Common.Router Test Tool API test mainAttrs=undefined 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -536,7 +536,7 @@ exports[`UU5.Common.Router Test Tool API test mainAttrs=undefined 1`] = `
 
 exports[`UU5.Common.Router Test Tool API test name="myName" 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -547,7 +547,7 @@ exports[`UU5.Common.Router Test Tool API test name="myName" 1`] = `
 
 exports[`UU5.Common.Router Test Tool API test noIndex=false 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -558,7 +558,7 @@ exports[`UU5.Common.Router Test Tool API test noIndex=false 1`] = `
 
 exports[`UU5.Common.Router Test Tool API test noIndex=true 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -577,7 +577,7 @@ exports[`UU5.Common.Router Test Tool API test notFoundRoute={"key":null,"ref":nu
       }
     }
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -588,7 +588,7 @@ exports[`UU5.Common.Router Test Tool API test notFoundRoute={"key":null,"ref":nu
 
 exports[`UU5.Common.Router Test Tool API test pureRender=false 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -599,7 +599,7 @@ exports[`UU5.Common.Router Test Tool API test pureRender=false 1`] = `
 
 exports[`UU5.Common.Router Test Tool API test pureRender=true 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -615,7 +615,7 @@ exports[`UU5.Common.Router Test Tool API test route={"key":null,"ref":null,"prop
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -626,7 +626,7 @@ exports[`UU5.Common.Router Test Tool API test route={"key":null,"ref":null,"prop
 
 exports[`UU5.Common.Router Test Tool API test selected=false 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -637,7 +637,7 @@ exports[`UU5.Common.Router Test Tool API test selected=false 1`] = `
 
 exports[`UU5.Common.Router Test Tool API test selected=true 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -648,7 +648,7 @@ exports[`UU5.Common.Router Test Tool API test selected=true 1`] = `
 
 exports[`UU5.Common.Router Test Tool API test showNotFoundRouteInUrl=false 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -659,7 +659,7 @@ exports[`UU5.Common.Router Test Tool API test showNotFoundRouteInUrl=false 1`] =
 
 exports[`UU5.Common.Router Test Tool API test showNotFoundRouteInUrl=null 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -670,7 +670,7 @@ exports[`UU5.Common.Router Test Tool API test showNotFoundRouteInUrl=null 1`] = 
 
 exports[`UU5.Common.Router Test Tool API test showNotFoundRouteInUrl=true 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -681,7 +681,7 @@ exports[`UU5.Common.Router Test Tool API test showNotFoundRouteInUrl=true 1`] = 
 
 exports[`UU5.Common.Router Test Tool API test strictProps=false 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -692,7 +692,7 @@ exports[`UU5.Common.Router Test Tool API test strictProps=false 1`] = `
 
 exports[`UU5.Common.Router Test Tool API test strictProps=true 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -703,7 +703,7 @@ exports[`UU5.Common.Router Test Tool API test strictProps=true 1`] = `
 
 exports[`UU5.Common.Router Test Tool API test style="padding:8px; borderRadius: 2px" 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -714,7 +714,7 @@ exports[`UU5.Common.Router Test Tool API test style="padding:8px; borderRadius: 
 
 exports[`UU5.Common.Router Test Tool API test style={"backgroundColor":"red","color":"blue"} 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -730,7 +730,7 @@ exports[`UU5.Common.Router Test Tool API test test 01 - routes props 1`] = `
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -746,7 +746,7 @@ exports[`UU5.Common.Router Test Tool API test test 01 - routes props 2`] = `
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -757,7 +757,7 @@ exports[`UU5.Common.Router Test Tool API test test 01 - routes props 2`] = `
 
 exports[`UU5.Common.Router Test Tool API test tooltip="My Tooltip" 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -768,7 +768,7 @@ exports[`UU5.Common.Router Test Tool API test tooltip="My Tooltip" 1`] = `
 
 exports[`UU5.Common.Router Test Tool API test urlBuilder=[Function] 1`] = `
 <Fragment>
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -784,7 +784,7 @@ exports[`UU5.Common.Router props test 01 - default props 1`] = `
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -800,7 +800,7 @@ exports[`UU5.Common.Router props test 02 - basePath props 1`] = `
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -816,7 +816,7 @@ exports[`UU5.Common.Router props test 02 - basePath props 2`] = `
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -832,7 +832,7 @@ exports[`UU5.Common.Router props test 03 - notFoundRoute props 1`] = `
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -847,7 +847,7 @@ exports[`UU5.Common.Router props test 04 - route props 1`] = `
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -862,7 +862,7 @@ exports[`UU5.Common.Router props test 05 - routes props 1`] = `
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -877,7 +877,7 @@ exports[`UU5.Common.Router props test 05 - routes props 2`] = `
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -892,7 +892,7 @@ exports[`UU5.Common.Router props test 06 - urlBuilder props 1`] = `
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"
@@ -907,7 +907,7 @@ exports[`UU5.Common.Router props test 06 - urlBuilder props 2`] = `
     key=".0"
     params={Object {}}
   />
-  <Modal
+  <ForwardRef
     controlled={false}
     key=".1"
     location="portal"

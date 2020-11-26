@@ -12,7 +12,7 @@
  */
 
 import React from "react";
-import PropTypes from "prop-types";
+import { PropTypes } from "uu5g05";
 import Environment from "../environment/environment.js";
 import CcrReaderMixin from "./ccr-reader-mixin.js";
 

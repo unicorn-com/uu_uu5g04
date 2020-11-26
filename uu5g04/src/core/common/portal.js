@@ -11,11 +11,9 @@
  * at the email: info@unicorn.com.
  */
 
-import ReactDOM from "react-dom";
+import { Utils } from "uu5g05";
 
 export class Portal {
-  static create(...args) {
-    return ReactDOM.createPortal(...args);
-  }
+  static create = Utils.DOM.createPortal;
 }
 export default Portal;

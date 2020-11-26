@@ -12,12 +12,16 @@
  */
 
 import Environment from "./environment/environment.js";
+import initialEnvironment from "./uu5g05-integration/environment.js";
 import Tools from "./common/tools.js";
-import "./common/internal/library-registry.js"; // modifies addRuntimeLibrary
 
 // merge environment settings from global variable into our defaults
-if (window.UU5 && window.UU5.Environment) {
-  Tools.extend(Environment, window.UU5.Environment);
-}
+if (initialEnvironment) {
+  Tools.extend(Environment, initialEnvironment);
 
-Environment.addRuntimeLibrary({ name: Environment.name, version: Environment.version });
+  // copy property descriptors (which ensure that changing g04 Environment gets propagated to g05 and vice versa)
+  for (let k of Object.getOwnPropertyNames(initialEnvironment)) {
+    let desc = Object.getOwnPropertyDescriptor(initialEnvironment, k);
+    Object.defineProperty(Environment, k, desc);
+  }
+}

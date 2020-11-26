@@ -11,20 +11,22 @@
  * at the email: info@unicorn.com.
  */
 
-import ReactDOM from "react-dom";
+import { Utils } from "uu5g05";
+
+const g05DOM = Utils.DOM;
 
 export class DOM {
   static render(...args) {
-    return ReactDOM.render(...args); // eslint-disable-line react/no-render-return-value
+    return g05DOM.render(...args); // eslint-disable-line react/no-render-return-value
   }
   static findNode(...args) {
-    return ReactDOM.findDOMNode(...args); // eslint-disable-line react/no-find-dom-node
+    return g05DOM.findNode(...args); // eslint-disable-line react/no-find-dom-node
   }
   static hydrate(...args) {
-    return ReactDOM.hydrate(...args);
+    return g05DOM.hydrate(...args);
   }
   static unmount(...args) {
-    return ReactDOM.unmountComponentAtNode(...args);
+    return g05DOM.unmount(...args);
   }
 }
 export default DOM;

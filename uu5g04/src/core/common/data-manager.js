@@ -13,7 +13,7 @@
 
 //@@viewOn:imports
 import React from "react";
-import PropTypes from "prop-types";
+import { PropTypes } from "uu5g05";
 import Context from "./context.js";
 import BaseMixin from "./base-mixin.js";
 import Component from "./component.js";

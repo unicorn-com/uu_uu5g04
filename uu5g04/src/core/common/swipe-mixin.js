@@ -12,7 +12,7 @@
  */
 
 import React from "react";
-import PropTypes from "prop-types";
+import { PropTypes } from "uu5g05";
 import Tools from "./tools.js";
 
 export const SwipeMixin = {

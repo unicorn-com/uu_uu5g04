@@ -12,15 +12,15 @@
  */
 
 import React from "react";
-import ReactDOM from "react-dom";
+import { Utils } from "uu5g05";
 import Environment from "../environment/environment.js";
 import EnvTools from "../environment/tools.js";
 import Context from "./context.js";
 import Element from "./element.js";
 import ScreenSize from "../utils/screen-size.js";
 import Lsi from "../utils/lsi.js";
-import LibraryRegistry from "./internal/library-registry.js";
-import { getComponentByName } from "./internal/use-dynamic-library-component";
+import DOM from "./dom.js";
+import { checkTag } from "../uu5g05-integration/use-dynamic-library-component.js";
 
 export const REGEXP = {
   /** @deprecated Remove in 2.0.0. */
@@ -96,52 +96,7 @@ Tools.getPage = () => {
   return Environment.page;
 };
 
-const REACT_LAZY_TYPEOF = React.lazy && React.lazy(() => ({ default: () => null })).$$typeof;
-const REACT_MEMO_TYPEOF = React.memo && React.memo(() => null).$$typeof;
-
-Tools.checkTag = function (tag, hideError) {
-  let result = null;
-  switch (typeof tag) {
-    case "string": {
-      result = tag;
-
-      let tagArray = tag.split(".");
-      let isSimpleString = tagArray.length === 1;
-
-      if (!isSimpleString) {
-        let { Component, error } = getComponentByName(tag);
-        if (!error) result = Component || null;
-
-        if (typeof result !== "function" && result && !result.isUu5PureComponent && !result["$$typeof"]) {
-          if (!hideError) {
-            Tools.error("Unknown tag " + tag + " - element was not found.", {
-              notFoundObject: result,
-              notFoundObjectType: typeof result,
-            });
-          }
-          result = null;
-        }
-      }
-
-      break;
-    }
-    case "function":
-      result = tag;
-      break;
-    case "object":
-      if (tag && (tag.isUu5PureComponent || tag.$$typeof === REACT_MEMO_TYPEOF || tag.$$typeof === REACT_LAZY_TYPEOF)) {
-        result = tag;
-      }
-      break;
-    case "symbol":
-      if (tag === React.Fragment) {
-        result = tag;
-      }
-      break;
-  }
-
-  return result;
-};
+Tools.checkTag = checkTag;
 
 Tools.findComponent = (tag, props, content, error, onLoad) => {
   let newTag = tag;
@@ -212,14 +167,14 @@ Tools.findComponent = (tag, props, content, error, onLoad) => {
 // to be able to supply custom data for library registry.
 let getLibrary;
 let loadLibrary = (libraryName, callback) => {
-  return (getLibrary || LibraryRegistry.getLibrary)(libraryName).then(callback, (e) => callback(undefined, e));
+  return (getLibrary || Utils.LibraryRegistry.getLibrary)(libraryName).then(callback, (e) => callback(undefined, e));
 };
 Object.defineProperty(Tools, "loadLibrary", {
   get: () => loadLibrary,
   set: (fn) => {
     loadLibrary = fn;
-    getLibrary = LibraryRegistry.getLibrary;
-    LibraryRegistry.getLibrary = async (namespace) => {
+    getLibrary = Utils.LibraryRegistry.getLibrary;
+    Utils.LibraryRegistry.getLibrary = async (namespace) => {
       return new Promise((resolve, reject) => {
         fn(namespace, (result, error) => (error != null ? reject(error) : resolve(result)));
       });
@@ -395,7 +350,7 @@ Tools.getChildrenFromUu5String = function (uu5String, opt) {
                   tag: tagObj.tag,
                   props: props,
                 }
-              : this.findComponent(tagObj.tag, tagObj.attrs, React.Children.toArray(tagObj.content));
+              : this.findComponent(tagObj.tag, tagObj.attrs, Utils.Content.toArray(tagObj.content));
           }
         } else {
           pre = childTag === "uu5string.pre";
@@ -481,7 +436,7 @@ Tools.getChildrenFromUu5String = function (uu5String, opt) {
     pointer.content.push(uu5String);
   }
 
-  return body ? pointer.content : React.Children.toArray(pointer.content);
+  return body ? pointer.content : Utils.Content.toArray(pointer.content);
 };
 
 Tools.execMetaTag = (tag, args) => {
@@ -537,7 +492,7 @@ Tools.parseFromUu5Data = function (uu5data) {
 };
 
 Tools.replaceTextEntity = (text) => {
-  return Environment.textEntityReplace ? Environment.textEntityMap.replace(text) : text; // eslint-disable-line no-undef
+  return Utils.Uu5String._textEntityMap.replace(text);
 };
 
 Tools.pad = function (n, width, z) {
@@ -733,30 +688,26 @@ Tools.getDocumentWidth = () => {
 
 Tools.getWidth = function (element) {
   let paddingLeft = parseInt(
-    window.getComputedStyle(ReactDOM.findDOMNode(element), null).getPropertyValue("padding-left").replace("px", "") ||
-      "0"
+    window.getComputedStyle(DOM.findNode(element), null).getPropertyValue("padding-left").replace("px", "") || "0"
   );
   let paddingRight = parseInt(
-    window.getComputedStyle(ReactDOM.findDOMNode(element), null).getPropertyValue("padding-right").replace("px", "") ||
-      "0"
+    window.getComputedStyle(DOM.findNode(element), null).getPropertyValue("padding-right").replace("px", "") || "0"
   );
-  return ReactDOM.findDOMNode(element).clientWidth - paddingLeft - paddingRight;
+  return DOM.findNode(element).clientWidth - paddingLeft - paddingRight;
 };
 
 Tools.getInnerWidth = function (element) {
-  return ReactDOM.findDOMNode(element).clientWidth;
+  return DOM.findNode(element).clientWidth;
 };
 
 Tools.getOuterWidth = function (element, withMargin) {
-  let result = ReactDOM.findDOMNode(element).offsetWidth;
+  let result = DOM.findNode(element).offsetWidth;
   if (withMargin) {
     let marginLeft = parseInt(
-      window.getComputedStyle(ReactDOM.findDOMNode(element), null).getPropertyValue("margin-left").replace("px", "") ||
-        "0"
+      window.getComputedStyle(DOM.findNode(element), null).getPropertyValue("margin-left").replace("px", "") || "0"
     );
     let marginRight = parseInt(
-      window.getComputedStyle(ReactDOM.findDOMNode(element), null).getPropertyValue("margin-right").replace("px", "") ||
-        "0"
+      window.getComputedStyle(DOM.findNode(element), null).getPropertyValue("margin-right").replace("px", "") || "0"
     );
     result += marginLeft + marginRight;
   }
@@ -765,32 +716,26 @@ Tools.getOuterWidth = function (element, withMargin) {
 
 Tools.getHeight = function (element) {
   let paddingTop = parseInt(
-    window.getComputedStyle(ReactDOM.findDOMNode(element), null).getPropertyValue("padding-top").replace("px", "") ||
-      "0"
+    window.getComputedStyle(DOM.findNode(element), null).getPropertyValue("padding-top").replace("px", "") || "0"
   );
   let paddingBottom = parseInt(
-    window.getComputedStyle(ReactDOM.findDOMNode(element), null).getPropertyValue("padding-bottom").replace("px", "") ||
-      "0"
+    window.getComputedStyle(DOM.findNode(element), null).getPropertyValue("padding-bottom").replace("px", "") || "0"
   );
-  return ReactDOM.findDOMNode(element).clientHeight - paddingTop - paddingBottom;
+  return DOM.findNode(element).clientHeight - paddingTop - paddingBottom;
 };
 
 Tools.getInnerHeight = function (element) {
-  return ReactDOM.findDOMNode(element).clientHeight;
+  return DOM.findNode(element).clientHeight;
 };
 
 Tools.getOuterHeight = function (element, withMargin) {
-  let result = ReactDOM.findDOMNode(element).offsetHeight;
+  let result = DOM.findNode(element).offsetHeight;
   if (withMargin) {
     let marginTop = parseInt(
-      window.getComputedStyle(ReactDOM.findDOMNode(element), null).getPropertyValue("margin-top").replace("px", "") ||
-        "0"
+      window.getComputedStyle(DOM.findNode(element), null).getPropertyValue("margin-top").replace("px", "") || "0"
     );
     let marginBottom = parseInt(
-      window
-        .getComputedStyle(ReactDOM.findDOMNode(element), null)
-        .getPropertyValue("margin-bottom")
-        .replace("px", "") || "0"
+      window.getComputedStyle(DOM.findNode(element), null).getPropertyValue("margin-bottom").replace("px", "") || "0"
     );
     result += marginTop + marginBottom;
   }
@@ -1089,75 +1034,9 @@ Tools.buildCounterCallback = function (callback, count) {
   return newCallback;
 };
 
-Tools._replaceParamsInString = function (string, stringParams) {
-  var i = 0;
-  let result;
-
-  if (Array.isArray(stringParams)) {
-    result = string.replace(REGEXP.stringParamsArray, function (match, group1, group2) {
-      // match is the matched format, e.g. %s, %d
-      var val = null;
-      if (group2) {
-        val = "%";
-      } else {
-        val = stringParams[i];
-        // A switch statement so that the formatter can be extended. Default is %s
-        switch (match) {
-          case "%d":
-            var parsedVal = parseFloat(val);
-            if (isNaN(parsedVal)) {
-              // cannot use showWarning because of this method is used in showWarning !!!
-              Tools.warning("Value " + val + " is not number!", {
-                string: string,
-                stringParams: stringParams,
-              });
-              val = "%d";
-            }
-            break;
-        }
-        i++;
-      }
-      return val && typeof val.toString === "function" ? val.toString() : val;
-    });
-  } else if (typeof stringParams === "object") {
-    result = string.replace(REGEXP.stringParamsObject, function (match) {
-      // match is the matched format, e.g. ${name}
-      var val = null;
-      if (match) {
-        let keyName = match.match(/[^${}]+/)[0];
-        if (keyName) {
-          val = stringParams[keyName];
-        }
-      } else {
-        val = match;
-      }
-      return val;
-    });
-  }
-
-  return result;
-};
-
-Tools._setParamsToString = function (string, stringParams) {
-  return string.replace(REGEXP.digitInBracket, function (match, number) {
-    return stringParams && typeof stringParams[number] != "undefined" ? stringParams[number] : match;
-  });
-};
-
 Tools.formatString = function (string, stringParams) {
-  let result;
-
-  if (string.indexOf("%s") > -1 || string.indexOf("%d") > -1 || string.match(/\$\{\w+\}/)) {
-    if (stringParams != null && typeof stringParams !== "object") {
-      // it is not array or object but next method accepts only array or object -> wrap single string into array
-      stringParams = [stringParams];
-    }
-    result = Tools._replaceParamsInString(string, stringParams);
-  } else {
-    stringParams = stringParams && !Array.isArray(stringParams) ? [stringParams] : stringParams;
-    result = Tools._setParamsToString(string, stringParams);
-  }
-  return result;
+  let paramList = Array.isArray(stringParams) ? stringParams : arguments.length >= 2 ? [stringParams] : [];
+  return Utils.String.format(string, ...paramList);
 };
 
 let postponedScrollToTarget;
@@ -1574,10 +1453,12 @@ Tools.copyToClipboard = (content) => {
   document.body.scrollTop = actualScroll;
 };
 
-Tools.getWeekNumber = (date) => {
+Tools.getWeekNumber = (date, startOfWeek = 1) => {
   let d = new Date(+date);
   d.setHours(0, 0, 0);
-  d.setDate(d.getDate() + 4 - (d.getDay() || 7));
+  let dayOffset = (d.getDay() || 7) - (startOfWeek - 1);
+  if (dayOffset <= 0) dayOffset += 7;
+  d.setDate(d.getDate() + 4 - dayOffset);
   return Math.ceil(((d - new Date(d.getFullYear(), 0, 1)) / 8.64e7 + 1) / 7);
 };
 
@@ -2282,19 +2163,19 @@ Tools.parseDate = (anyDate, opt = {}) => {
     let stringDate = anyDate;
     let { format, country } = opt;
 
-    // attempt to match a shortened date formats unless format or country are specifically defined
-    if (!opt.format && !country) {
-      if (stringDate.match(/^\d{4}-\d{2}$/)) {
-        // matches YYYY-MM
-        return Tools.parseMonth(stringDate);
-      } else if (stringDate.match(/^\d{2}\/\d{4}$/)) {
-        // matches MM/YYYY
-        return Tools.parseMonth(stringDate);
-      } else if (stringDate.match(/^\d{4}$/)) {
-        // matches YYYY
-        return Tools.parseYear(stringDate);
-      }
+    // attempt to match a shortened date formats
+    let potentiallyParsedDate;
+    if (stringDate.match(/^\d{4}-\d{2}$/)) {
+      // matches YYYY-MM
+      potentiallyParsedDate = Tools.parseMonth(stringDate);
+    } else if (stringDate.match(/^\d{2}\/\d{4}$/)) {
+      // matches MM/YYYY
+      potentiallyParsedDate = Tools.parseMonth(stringDate);
+    } else if (stringDate.match(/^\d{4}$/)) {
+      // matches YYYY
+      potentiallyParsedDate = Tools.parseYear(stringDate);
     }
+    if (potentiallyParsedDate) return potentiallyParsedDate;
 
     // parse the date according to the format string (fallback to country then to default format by locale)
     format = format || Environment.dateTimeFormat[country] || Tools.getLocaleFormat(country || Tools.getLanguage());
@@ -3067,7 +2948,7 @@ Tools.openWindow = (url, target) => {
 
 // userLanguage for IE
 const lang = window.navigator.userLanguage || window.navigator.language;
-lang && Tools.setLanguages(lang);
+lang && Tools.setLanguage(lang);
 
 // CSS class names - device / UA
 let device = "uu5-device-desktop";

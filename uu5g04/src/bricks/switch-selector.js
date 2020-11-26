@@ -94,7 +94,6 @@ function getColors(colorSchema, bgStyle = "outline") {
           styles.backgroundColorFocus = shades.c100;
           break;
         default:
-          colorSchema && colorSchema !== "default" && (styles.borderColor = shades.c500);
           styles.borderColorFocus = shades.c500;
           break;
       }
@@ -146,7 +145,7 @@ function getClassName({
   `);
 
   const padding = DEFAULT_PADDING - borderWidth;
-  borderWidthFocus = borderWidthFocus == null ? borderWidth + 1 : borderWidthFocus;
+  borderWidthFocus = borderWidthFocus == null && colorSchema ? borderWidth + 1 : borderWidthFocus;
   const paddingFocus = DEFAULT_PADDING - borderWidthFocus;
 
   let styles = { padding };

@@ -14,8 +14,7 @@
 //@@viewOn:imports
 import React from "react";
 import createReactClass from "create-react-class";
-import PropTypes from "prop-types";
-import * as UU5 from "uu5g04";
+import UU5 from "uu5g04";
 import ns from "../bricks-ns.js";
 import Css from "./css.js";
 //@@viewOff:imports
@@ -89,10 +88,10 @@ export const Countdown = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    reverse: PropTypes.bool,
-    timer: PropTypes.bool,
-    duration: PropTypes.number,
-    size: PropTypes.number,
+    reverse: UU5.PropTypes.bool,
+    timer: UU5.PropTypes.bool,
+    duration: UU5.PropTypes.number,
+    size: UU5.PropTypes.number,
   },
   //@@viewOff:propTypes
 

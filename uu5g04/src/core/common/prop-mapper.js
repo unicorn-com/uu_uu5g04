@@ -12,8 +12,7 @@
  */
 
 //@@viewOn:imports
-import React from "react";
-import PropTypes from "prop-types";
+import { PropTypes, Utils } from "uu5g05";
 import BaseMixin from "./base-mixin.js";
 import ns from "./common-ns.js";
 import Component from "./component.js";
@@ -92,7 +91,7 @@ export const PropMapper = Component.create({
   },
 
   _renderChildren() {
-    return React.Children.map(this.props.children, (child) => {
+    return Utils.Content.map(this.props.children, (child) => {
       if (Element.isValid(child)) {
         return Element.clone(child, this._getProps());
       } else {

@@ -11,12 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import ReactDOM from "react-dom";
+import { Utils } from "uu5g05";
 import Tools from "./tools.js";
 import Lsi from "../utils/lsi.js";
 import ScreenSize from "../utils/screen-size.js";
 import { Environment } from "../environment/environment.js";
-import EventManager from "../utils/event-manager.js";
 
 // main visibility API function
 // use visibility API to check if current tab is active or not
@@ -89,8 +88,8 @@ export class EventListener {
         if (prevFce) Lsi.unregister(prevFce);
         Lsi.register(usedFce);
       } else {
-        if (prevFce) EventManager.unregister(key, prevFce);
-        EventManager.register(key, usedFce);
+        if (prevFce) Utils.EventManager.unregister(key, prevFce);
+        Utils.EventManager.register(key, usedFce);
       }
       this._listeners[key] = this._listeners[key] || {};
       this._listeners[key][id] = usedFce;
@@ -101,12 +100,12 @@ export class EventListener {
   }
 
   triggerEvent() {
-    ReactDOM.unstable_batchedUpdates(() => {
+    Utils.DOM._batchedUpdates(() => {
       // i.e. arguments = ['lsi', 'cs-cz']
       let [key, ...params] = arguments;
       if (key === "lsi") key = "language";
       if (key === "screenSize") ScreenSize.setSize(...params);
-      else EventManager.trigger(key, ...params);
+      else Utils.EventManager.trigger(key, ...params);
     });
     return this;
   }
@@ -118,7 +117,7 @@ export class EventListener {
       if (fn) {
         // TODO because of backward compatibility
         if (key === "lsi") Lsi.unregister(fn);
-        if (fn) EventManager.unregister(key, fn);
+        if (fn) Utils.EventManager.unregister(key, fn);
         delete this._listeners[key][id];
       }
     }
@@ -131,8 +130,8 @@ export class EventListener {
       if (!targetMap) this._events.set(object, (targetMap = {}));
       if (!targetMap[key]) targetMap[key] = {};
 
-      if (targetMap[key][id]) EventManager.unregister(key, targetMap[key][id], object);
-      EventManager.register(key, fce, object);
+      if (targetMap[key][id]) Utils.EventManager.unregister(key, targetMap[key][id], object);
+      Utils.EventManager.register(key, fce, object);
       targetMap[key][id] = fce;
     } else {
       this._writeError(key, id, fce);
@@ -144,7 +143,7 @@ export class EventListener {
     let targetMap = this._events.get(object);
     if (targetMap?.[key]) {
       let prevFce = targetMap[key][id];
-      if (prevFce) EventManager.unregister(key, prevFce, object);
+      if (prevFce) Utils.EventManager.unregister(key, prevFce, object);
       delete targetMap[key][id];
     }
     return this;

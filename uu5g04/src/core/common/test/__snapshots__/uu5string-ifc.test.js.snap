@@ -97,6 +97,11 @@ Array [
 exports[`UU5.Common.Uu5.String. - test of interface of class parse(uu5string, buildItem = null) should return UU5StringObject 1`] = `
 Array [
   UU5StringObject {
+    "_factory": Object {
+      "createObject": [Function],
+      "createProps": [Function],
+      "createString": [Function],
+    },
     "_filterProps": [Function],
     "_initContent": [Function],
     "_isPairTag": [Function],
@@ -107,6 +112,11 @@ Array [
     "initFn": null,
     "parent": null,
     "props": UU5StringProps {
+      "_factory": Object {
+        "createObject": [Function],
+        "createProps": [Function],
+        "createString": [Function],
+      },
       "clone": [Function],
       "lastSeparator": "",
       "props": Array [],
@@ -129,6 +139,11 @@ Array [
   "
 ",
   UU5StringObject {
+    "_factory": Object {
+      "createObject": [Function],
+      "createProps": [Function],
+      "createString": [Function],
+    },
     "_filterProps": [Function],
     "_initContent": [Function],
     "_isPairTag": [Function],
@@ -139,6 +154,11 @@ Array [
     "initFn": null,
     "parent": null,
     "props": UU5StringProps {
+      "_factory": Object {
+        "createObject": [Function],
+        "createProps": [Function],
+        "createString": [Function],
+      },
       "clone": [Function],
       "lastSeparator": "",
       "props": Array [
@@ -419,15 +439,30 @@ exports[`UU5.Common.Uu5.String. - test of interface of class uu5string template 
 
 exports[`UU5.Common.Uu5String - test of interface instance instance.clone(data = this.data, init = this.init) 1`] = `
 UU5String {
+  "_factory": Object {
+    "createObject": [Function],
+    "createProps": [Function],
+    "createString": [Function],
+  },
   "clone": [Function],
   "content": Array [
     UU5StringObject {
+      "_factory": Object {
+        "createObject": [Function],
+        "createProps": [Function],
+        "createString": [Function],
+      },
       "_filterProps": [Function],
       "_initContent": [Function],
       "_isPairTag": [Function],
       "_pairTag": true,
       "children": Array [
         UU5StringObject {
+          "_factory": Object {
+            "createObject": [Function],
+            "createProps": [Function],
+            "createString": [Function],
+          },
           "_filterProps": [Function],
           "_initContent": [Function],
           "_isPairTag": [Function],
@@ -438,6 +473,11 @@ UU5String {
           "initFn": null,
           "parent": [Circular],
           "props": UU5StringProps {
+            "_factory": Object {
+              "createObject": [Function],
+              "createProps": [Function],
+              "createString": [Function],
+            },
             "clone": [Function],
             "lastSeparator": "",
             "props": Array [
@@ -486,6 +526,11 @@ UU5String {
       "initFn": null,
       "parent": null,
       "props": UU5StringProps {
+        "_factory": Object {
+          "createObject": [Function],
+          "createProps": [Function],
+          "createString": [Function],
+        },
         "clone": [Function],
         "lastSeparator": "",
         "props": Array [
@@ -520,8 +565,19 @@ UU5String {
       "toString": [Function],
     },
   ],
-  "data": "<uu5string /><UU5.Bricks.Slider id=\\"root2\\" key=\\"parKey2\\"><UU5.Bricks.Slider.Item value=10 min=\\"0\\" max=\\"10\\" step=\\"5\\" id=\\"child\\" key=\\"childrenID\\"/></UU5.Bricks.Slider>",
+  "data": Object {
+    "now": [Function],
+    "text": "<uu5string /><UU5.Bricks.Slider id=\\"root2\\" key=\\"parKey2\\"><UU5.Bricks.Slider.Item value=10 min=\\"0\\" max=\\"10\\" step=\\"5\\" id=\\"child\\" key=\\"childrenID\\"/></UU5.Bricks.Slider>",
+    "userEmail": [Function],
+    "userName": [Function],
+  },
   "initFn": null,
+  "templateDataMap": Object {
+    "now": [Function],
+    "text": "<uu5string /><UU5.Bricks.Slider id=\\"root2\\" key=\\"parKey2\\"><UU5.Bricks.Slider.Item value=10 min=\\"0\\" max=\\"10\\" step=\\"5\\" id=\\"child\\" key=\\"childrenID\\"/></UU5.Bricks.Slider>",
+    "userEmail": [Function],
+    "userName": [Function],
+  },
   "toChildren": [Function],
   "toPlainText": [Function],
   "toString": [Function],
@@ -530,9 +586,19 @@ UU5String {
 
 exports[`UU5.Common.Uu5String - test of interface instance instance.clone(data=this.data, init=this.init) 1`] = `
 UU5String {
+  "_factory": Object {
+    "createObject": [Function],
+    "createProps": [Function],
+    "createString": [Function],
+  },
   "clone": [Function],
   "content": Array [
     UU5StringObject {
+      "_factory": Object {
+        "createObject": [Function],
+        "createProps": [Function],
+        "createString": [Function],
+      },
       "_filterProps": [Function],
       "_initContent": [Function],
       "_isPairTag": [Function],
@@ -544,6 +610,11 @@ UU5String {
         "calls": Array [
           Array [
             UU5StringObject {
+              "_factory": Object {
+                "createObject": [Function],
+                "createProps": [Function],
+                "createString": [Function],
+              },
               "_filterProps": [Function],
               "_initContent": [Function],
               "_isPairTag": [Function],
@@ -582,6 +653,11 @@ UU5String {
               },
               "parent": null,
               "props": UU5StringProps {
+                "_factory": Object {
+                  "createObject": [Function],
+                  "createProps": [Function],
+                  "createString": [Function],
+                },
                 "clone": [Function],
                 "lastSeparator": "",
                 "props": Array [
@@ -609,6 +685,11 @@ UU5String {
           ],
           Array [
             UU5StringObject {
+              "_factory": Object {
+                "createObject": [Function],
+                "createProps": [Function],
+                "createString": [Function],
+              },
               "_filterProps": [Function],
               "_initContent": [Function],
               "_isPairTag": [Function],
@@ -647,6 +728,11 @@ UU5String {
               },
               "parent": null,
               "props": UU5StringProps {
+                "_factory": Object {
+                  "createObject": [Function],
+                  "createProps": [Function],
+                  "createString": [Function],
+                },
                 "clone": [Function],
                 "lastSeparator": "",
                 "props": Array [],
@@ -664,6 +750,11 @@ UU5String {
           ],
           Array [
             UU5StringObject {
+              "_factory": Object {
+                "createObject": [Function],
+                "createProps": [Function],
+                "createString": [Function],
+              },
               "_filterProps": [Function],
               "_initContent": [Function],
               "_isPairTag": [Function],
@@ -704,6 +795,11 @@ UU5String {
               },
               "parent": null,
               "props": UU5StringProps {
+                "_factory": Object {
+                  "createObject": [Function],
+                  "createProps": [Function],
+                  "createString": [Function],
+                },
                 "clone": [Function],
                 "lastSeparator": "",
                 "props": Array [],
@@ -724,6 +820,11 @@ UU5String {
           ],
           Array [
             UU5StringObject {
+              "_factory": Object {
+                "createObject": [Function],
+                "createProps": [Function],
+                "createString": [Function],
+              },
               "_filterProps": [Function],
               "_initContent": [Function],
               "_isPairTag": [Function],
@@ -762,6 +863,11 @@ UU5String {
               },
               "parent": null,
               "props": UU5StringProps {
+                "_factory": Object {
+                  "createObject": [Function],
+                  "createProps": [Function],
+                  "createString": [Function],
+                },
                 "clone": [Function],
                 "lastSeparator": "",
                 "props": Array [],
@@ -779,6 +885,11 @@ UU5String {
           ],
           Array [
             UU5StringObject {
+              "_factory": Object {
+                "createObject": [Function],
+                "createProps": [Function],
+                "createString": [Function],
+              },
               "_filterProps": [Function],
               "_initContent": [Function],
               "_isPairTag": [Function],
@@ -819,6 +930,11 @@ UU5String {
               },
               "parent": null,
               "props": UU5StringProps {
+                "_factory": Object {
+                  "createObject": [Function],
+                  "createProps": [Function],
+                  "createString": [Function],
+                },
                 "clone": [Function],
                 "lastSeparator": "",
                 "props": Array [],
@@ -864,6 +980,11 @@ UU5String {
       },
       "parent": null,
       "props": UU5StringProps {
+        "_factory": Object {
+          "createObject": [Function],
+          "createProps": [Function],
+          "createString": [Function],
+        },
         "clone": [Function],
         "lastSeparator": "",
         "props": Array [
@@ -889,6 +1010,11 @@ UU5String {
       "toString": [Function],
     },
     UU5StringObject {
+      "_factory": Object {
+        "createObject": [Function],
+        "createProps": [Function],
+        "createString": [Function],
+      },
       "_filterProps": [Function],
       "_initContent": [Function],
       "_isPairTag": [Function],
@@ -900,6 +1026,11 @@ UU5String {
         "calls": Array [
           Array [
             UU5StringObject {
+              "_factory": Object {
+                "createObject": [Function],
+                "createProps": [Function],
+                "createString": [Function],
+              },
               "_filterProps": [Function],
               "_initContent": [Function],
               "_isPairTag": [Function],
@@ -938,6 +1069,11 @@ UU5String {
               },
               "parent": null,
               "props": UU5StringProps {
+                "_factory": Object {
+                  "createObject": [Function],
+                  "createProps": [Function],
+                  "createString": [Function],
+                },
                 "clone": [Function],
                 "lastSeparator": "",
                 "props": Array [
@@ -965,6 +1101,11 @@ UU5String {
           ],
           Array [
             UU5StringObject {
+              "_factory": Object {
+                "createObject": [Function],
+                "createProps": [Function],
+                "createString": [Function],
+              },
               "_filterProps": [Function],
               "_initContent": [Function],
               "_isPairTag": [Function],
@@ -1003,6 +1144,11 @@ UU5String {
               },
               "parent": null,
               "props": UU5StringProps {
+                "_factory": Object {
+                  "createObject": [Function],
+                  "createProps": [Function],
+                  "createString": [Function],
+                },
                 "clone": [Function],
                 "lastSeparator": "",
                 "props": Array [],
@@ -1020,6 +1166,11 @@ UU5String {
           ],
           Array [
             UU5StringObject {
+              "_factory": Object {
+                "createObject": [Function],
+                "createProps": [Function],
+                "createString": [Function],
+              },
               "_filterProps": [Function],
               "_initContent": [Function],
               "_isPairTag": [Function],
@@ -1060,6 +1211,11 @@ UU5String {
               },
               "parent": null,
               "props": UU5StringProps {
+                "_factory": Object {
+                  "createObject": [Function],
+                  "createProps": [Function],
+                  "createString": [Function],
+                },
                 "clone": [Function],
                 "lastSeparator": "",
                 "props": Array [],
@@ -1077,6 +1233,11 @@ UU5String {
           ],
           Array [
             UU5StringObject {
+              "_factory": Object {
+                "createObject": [Function],
+                "createProps": [Function],
+                "createString": [Function],
+              },
               "_filterProps": [Function],
               "_initContent": [Function],
               "_isPairTag": [Function],
@@ -1115,6 +1276,11 @@ UU5String {
               },
               "parent": null,
               "props": UU5StringProps {
+                "_factory": Object {
+                  "createObject": [Function],
+                  "createProps": [Function],
+                  "createString": [Function],
+                },
                 "clone": [Function],
                 "lastSeparator": "",
                 "props": Array [
@@ -1145,6 +1311,11 @@ UU5String {
           ],
           Array [
             UU5StringObject {
+              "_factory": Object {
+                "createObject": [Function],
+                "createProps": [Function],
+                "createString": [Function],
+              },
               "_filterProps": [Function],
               "_initContent": [Function],
               "_isPairTag": [Function],
@@ -1185,6 +1356,11 @@ UU5String {
               },
               "parent": null,
               "props": UU5StringProps {
+                "_factory": Object {
+                  "createObject": [Function],
+                  "createProps": [Function],
+                  "createString": [Function],
+                },
                 "clone": [Function],
                 "lastSeparator": "",
                 "props": Array [],
@@ -1230,6 +1406,11 @@ UU5String {
       },
       "parent": null,
       "props": UU5StringProps {
+        "_factory": Object {
+          "createObject": [Function],
+          "createProps": [Function],
+          "createString": [Function],
+        },
         "clone": [Function],
         "lastSeparator": "",
         "props": Array [],
@@ -1245,6 +1426,11 @@ UU5String {
       "toString": [Function],
     },
     UU5StringObject {
+      "_factory": Object {
+        "createObject": [Function],
+        "createProps": [Function],
+        "createString": [Function],
+      },
       "_filterProps": [Function],
       "_initContent": [Function],
       "_isPairTag": [Function],
@@ -1258,6 +1444,11 @@ UU5String {
         "calls": Array [
           Array [
             UU5StringObject {
+              "_factory": Object {
+                "createObject": [Function],
+                "createProps": [Function],
+                "createString": [Function],
+              },
               "_filterProps": [Function],
               "_initContent": [Function],
               "_isPairTag": [Function],
@@ -1296,6 +1487,11 @@ UU5String {
               },
               "parent": null,
               "props": UU5StringProps {
+                "_factory": Object {
+                  "createObject": [Function],
+                  "createProps": [Function],
+                  "createString": [Function],
+                },
                 "clone": [Function],
                 "lastSeparator": "",
                 "props": Array [
@@ -1323,6 +1519,11 @@ UU5String {
           ],
           Array [
             UU5StringObject {
+              "_factory": Object {
+                "createObject": [Function],
+                "createProps": [Function],
+                "createString": [Function],
+              },
               "_filterProps": [Function],
               "_initContent": [Function],
               "_isPairTag": [Function],
@@ -1361,6 +1562,11 @@ UU5String {
               },
               "parent": null,
               "props": UU5StringProps {
+                "_factory": Object {
+                  "createObject": [Function],
+                  "createProps": [Function],
+                  "createString": [Function],
+                },
                 "clone": [Function],
                 "lastSeparator": "",
                 "props": Array [],
@@ -1378,6 +1584,11 @@ UU5String {
           ],
           Array [
             UU5StringObject {
+              "_factory": Object {
+                "createObject": [Function],
+                "createProps": [Function],
+                "createString": [Function],
+              },
               "_filterProps": [Function],
               "_initContent": [Function],
               "_isPairTag": [Function],
@@ -1418,6 +1629,11 @@ UU5String {
               },
               "parent": null,
               "props": UU5StringProps {
+                "_factory": Object {
+                  "createObject": [Function],
+                  "createProps": [Function],
+                  "createString": [Function],
+                },
                 "clone": [Function],
                 "lastSeparator": "",
                 "props": Array [],
@@ -1435,6 +1651,11 @@ UU5String {
           ],
           Array [
             UU5StringObject {
+              "_factory": Object {
+                "createObject": [Function],
+                "createProps": [Function],
+                "createString": [Function],
+              },
               "_filterProps": [Function],
               "_initContent": [Function],
               "_isPairTag": [Function],
@@ -1473,6 +1694,11 @@ UU5String {
               },
               "parent": null,
               "props": UU5StringProps {
+                "_factory": Object {
+                  "createObject": [Function],
+                  "createProps": [Function],
+                  "createString": [Function],
+                },
                 "clone": [Function],
                 "lastSeparator": "",
                 "props": Array [
@@ -1500,6 +1726,11 @@ UU5String {
           ],
           Array [
             UU5StringObject {
+              "_factory": Object {
+                "createObject": [Function],
+                "createProps": [Function],
+                "createString": [Function],
+              },
               "_filterProps": [Function],
               "_initContent": [Function],
               "_isPairTag": [Function],
@@ -1538,6 +1769,11 @@ UU5String {
               },
               "parent": null,
               "props": UU5StringProps {
+                "_factory": Object {
+                  "createObject": [Function],
+                  "createProps": [Function],
+                  "createString": [Function],
+                },
                 "clone": [Function],
                 "lastSeparator": "",
                 "props": Array [],
@@ -1586,6 +1822,11 @@ UU5String {
       },
       "parent": null,
       "props": UU5StringProps {
+        "_factory": Object {
+          "createObject": [Function],
+          "createProps": [Function],
+          "createString": [Function],
+        },
         "clone": [Function],
         "lastSeparator": "",
         "props": Array [],
@@ -1601,8 +1842,19 @@ UU5String {
       "toString": [Function],
     },
   ],
-  "data": "<uu5string /><UU5.Bricks.Slider id=\\"root2\\" key=\\"parKey2\\"><UU5.Bricks.Slider.Item value=10 min=\\"0\\" max=\\"10\\" step=\\"5\\" id=\\"child\\" key=\\"childrenID\\"/></UU5.Bricks.Slider>",
+  "data": Object {
+    "now": [Function],
+    "text": "<uu5string /><UU5.Bricks.Slider id=\\"root2\\" key=\\"parKey2\\"><UU5.Bricks.Slider.Item value=10 min=\\"0\\" max=\\"10\\" step=\\"5\\" id=\\"child\\" key=\\"childrenID\\"/></UU5.Bricks.Slider>",
+    "userEmail": [Function],
+    "userName": [Function],
+  },
   "initFn": null,
+  "templateDataMap": Object {
+    "now": [Function],
+    "text": "<uu5string /><UU5.Bricks.Slider id=\\"root2\\" key=\\"parKey2\\"><UU5.Bricks.Slider.Item value=10 min=\\"0\\" max=\\"10\\" step=\\"5\\" id=\\"child\\" key=\\"childrenID\\"/></UU5.Bricks.Slider>",
+    "userEmail": [Function],
+    "userName": [Function],
+  },
   "toChildren": [Function],
   "toPlainText": [Function],
   "toString": [Function],
@@ -1687,9 +1939,19 @@ exports[`UU5.Common.Uu5String - test of interface instance instance.toString(dat
 
 exports[`UU5.Common.Uu5String - test of interface instance new UU5String(uu5string, data = null, init = null) 1`] = `
 UU5String {
+  "_factory": Object {
+    "createObject": [Function],
+    "createProps": [Function],
+    "createString": [Function],
+  },
   "clone": [Function],
   "content": Array [
     UU5StringObject {
+      "_factory": Object {
+        "createObject": [Function],
+        "createProps": [Function],
+        "createString": [Function],
+      },
       "_filterProps": [Function],
       "_initContent": [Function],
       "_isPairTag": [Function],
@@ -1702,6 +1964,11 @@ UU5String {
       "initFn": null,
       "parent": null,
       "props": UU5StringProps {
+        "_factory": Object {
+          "createObject": [Function],
+          "createProps": [Function],
+          "createString": [Function],
+        },
         "clone": [Function],
         "lastSeparator": "",
         "props": Array [
@@ -1727,8 +1994,17 @@ UU5String {
       "toString": [Function],
     },
   ],
-  "data": Object {},
+  "data": Object {
+    "now": [Function],
+    "userEmail": [Function],
+    "userName": [Function],
+  },
   "initFn": null,
+  "templateDataMap": Object {
+    "now": [Function],
+    "userEmail": [Function],
+    "userName": [Function],
+  },
   "toChildren": [Function],
   "toPlainText": [Function],
   "toString": [Function],
@@ -1737,9 +2013,19 @@ UU5String {
 
 exports[`UU5.Common.Uu5String - test of interface instance new(uu5string, mockData, filterfnc) 1`] = `
 UU5String {
+  "_factory": Object {
+    "createObject": [Function],
+    "createProps": [Function],
+    "createString": [Function],
+  },
   "clone": [Function],
   "content": Array [
     UU5StringObject {
+      "_factory": Object {
+        "createObject": [Function],
+        "createProps": [Function],
+        "createString": [Function],
+      },
       "_filterProps": [Function],
       "_initContent": [Function],
       "_isPairTag": [Function],
@@ -1754,6 +2040,11 @@ UU5String {
           ],
           Array [
             UU5StringObject {
+              "_factory": Object {
+                "createObject": [Function],
+                "createProps": [Function],
+                "createString": [Function],
+              },
               "_filterProps": [Function],
               "_initContent": [Function],
               "_isPairTag": [Function],
@@ -1780,6 +2071,11 @@ UU5String {
               },
               "parent": null,
               "props": UU5StringProps {
+                "_factory": Object {
+                  "createObject": [Function],
+                  "createProps": [Function],
+                  "createString": [Function],
+                },
                 "clone": [Function],
                 "lastSeparator": "",
                 "props": Array [],
@@ -1797,6 +2093,11 @@ UU5String {
           ],
           Array [
             UU5StringObject {
+              "_factory": Object {
+                "createObject": [Function],
+                "createProps": [Function],
+                "createString": [Function],
+              },
               "_filterProps": [Function],
               "_initContent": [Function],
               "_isPairTag": [Function],
@@ -1825,6 +2126,11 @@ UU5String {
               },
               "parent": null,
               "props": UU5StringProps {
+                "_factory": Object {
+                  "createObject": [Function],
+                  "createProps": [Function],
+                  "createString": [Function],
+                },
                 "clone": [Function],
                 "lastSeparator": "",
                 "props": Array [],
@@ -1858,6 +2164,11 @@ UU5String {
       },
       "parent": null,
       "props": UU5StringProps {
+        "_factory": Object {
+          "createObject": [Function],
+          "createProps": [Function],
+          "createString": [Function],
+        },
         "clone": [Function],
         "lastSeparator": "",
         "props": Array [
@@ -1883,6 +2194,11 @@ UU5String {
       "toString": [Function],
     },
     UU5StringObject {
+      "_factory": Object {
+        "createObject": [Function],
+        "createProps": [Function],
+        "createString": [Function],
+      },
       "_filterProps": [Function],
       "_initContent": [Function],
       "_isPairTag": [Function],
@@ -1894,6 +2210,11 @@ UU5String {
         "calls": Array [
           Array [
             UU5StringObject {
+              "_factory": Object {
+                "createObject": [Function],
+                "createProps": [Function],
+                "createString": [Function],
+              },
               "_filterProps": [Function],
               "_initContent": [Function],
               "_isPairTag": [Function],
@@ -1920,6 +2241,11 @@ UU5String {
               },
               "parent": null,
               "props": UU5StringProps {
+                "_factory": Object {
+                  "createObject": [Function],
+                  "createProps": [Function],
+                  "createString": [Function],
+                },
                 "clone": [Function],
                 "lastSeparator": "",
                 "props": Array [
@@ -1950,6 +2276,11 @@ UU5String {
           ],
           Array [
             UU5StringObject {
+              "_factory": Object {
+                "createObject": [Function],
+                "createProps": [Function],
+                "createString": [Function],
+              },
               "_filterProps": [Function],
               "_initContent": [Function],
               "_isPairTag": [Function],
@@ -1978,6 +2309,11 @@ UU5String {
               },
               "parent": null,
               "props": UU5StringProps {
+                "_factory": Object {
+                  "createObject": [Function],
+                  "createProps": [Function],
+                  "createString": [Function],
+                },
                 "clone": [Function],
                 "lastSeparator": "",
                 "props": Array [],
@@ -2011,6 +2347,11 @@ UU5String {
       },
       "parent": null,
       "props": UU5StringProps {
+        "_factory": Object {
+          "createObject": [Function],
+          "createProps": [Function],
+          "createString": [Function],
+        },
         "clone": [Function],
         "lastSeparator": "",
         "props": Array [],
@@ -2026,6 +2367,11 @@ UU5String {
       "toString": [Function],
     },
     UU5StringObject {
+      "_factory": Object {
+        "createObject": [Function],
+        "createProps": [Function],
+        "createString": [Function],
+      },
       "_filterProps": [Function],
       "_initContent": [Function],
       "_isPairTag": [Function],
@@ -2039,6 +2385,11 @@ UU5String {
         "calls": Array [
           Array [
             UU5StringObject {
+              "_factory": Object {
+                "createObject": [Function],
+                "createProps": [Function],
+                "createString": [Function],
+              },
               "_filterProps": [Function],
               "_initContent": [Function],
               "_isPairTag": [Function],
@@ -2065,6 +2416,11 @@ UU5String {
               },
               "parent": null,
               "props": UU5StringProps {
+                "_factory": Object {
+                  "createObject": [Function],
+                  "createProps": [Function],
+                  "createString": [Function],
+                },
                 "clone": [Function],
                 "lastSeparator": "",
                 "props": Array [
@@ -2092,6 +2448,11 @@ UU5String {
           ],
           Array [
             UU5StringObject {
+              "_factory": Object {
+                "createObject": [Function],
+                "createProps": [Function],
+                "createString": [Function],
+              },
               "_filterProps": [Function],
               "_initContent": [Function],
               "_isPairTag": [Function],
@@ -2118,6 +2479,11 @@ UU5String {
               },
               "parent": null,
               "props": UU5StringProps {
+                "_factory": Object {
+                  "createObject": [Function],
+                  "createProps": [Function],
+                  "createString": [Function],
+                },
                 "clone": [Function],
                 "lastSeparator": "",
                 "props": Array [],
@@ -2154,6 +2520,11 @@ UU5String {
       },
       "parent": null,
       "props": UU5StringProps {
+        "_factory": Object {
+          "createObject": [Function],
+          "createProps": [Function],
+          "createString": [Function],
+        },
         "clone": [Function],
         "lastSeparator": "",
         "props": Array [],
@@ -2179,6 +2550,11 @@ UU5String {
     "calls": Array [
       Array [
         UU5StringObject {
+          "_factory": Object {
+            "createObject": [Function],
+            "createProps": [Function],
+            "createString": [Function],
+          },
           "_filterProps": [Function],
           "_initContent": [Function],
           "_isPairTag": [Function],
@@ -2205,6 +2581,11 @@ UU5String {
           },
           "parent": null,
           "props": UU5StringProps {
+            "_factory": Object {
+              "createObject": [Function],
+              "createProps": [Function],
+              "createString": [Function],
+            },
             "clone": [Function],
             "lastSeparator": "",
             "props": Array [
@@ -2232,6 +2613,11 @@ UU5String {
       ],
       Array [
         UU5StringObject {
+          "_factory": Object {
+            "createObject": [Function],
+            "createProps": [Function],
+            "createString": [Function],
+          },
           "_filterProps": [Function],
           "_initContent": [Function],
           "_isPairTag": [Function],
@@ -2258,6 +2644,11 @@ UU5String {
           },
           "parent": null,
           "props": UU5StringProps {
+            "_factory": Object {
+              "createObject": [Function],
+              "createProps": [Function],
+              "createString": [Function],
+            },
             "clone": [Function],
             "lastSeparator": "",
             "props": Array [],
@@ -2275,6 +2666,11 @@ UU5String {
       ],
       Array [
         UU5StringObject {
+          "_factory": Object {
+            "createObject": [Function],
+            "createProps": [Function],
+            "createString": [Function],
+          },
           "_filterProps": [Function],
           "_initContent": [Function],
           "_isPairTag": [Function],
@@ -2303,6 +2699,11 @@ UU5String {
           },
           "parent": null,
           "props": UU5StringProps {
+            "_factory": Object {
+              "createObject": [Function],
+              "createProps": [Function],
+              "createString": [Function],
+            },
             "clone": [Function],
             "lastSeparator": "",
             "props": Array [],
@@ -2333,6 +2734,12 @@ UU5String {
         "value": undefined,
       },
     ],
+  },
+  "templateDataMap": Object {
+    "idHex32": "32-moje-id",
+    "now": "21.05.2018",
+    "userEmail": "jest@facebook.com",
+    "userName": "Jest",
   },
   "toChildren": [Function],
   "toPlainText": [Function],

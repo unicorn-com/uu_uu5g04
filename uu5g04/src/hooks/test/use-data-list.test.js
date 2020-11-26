@@ -1,7 +1,5 @@
-import UU5 from "uu5g04";
 import { useDataList } from "uu5g04-hooks";
-
-const { renderHook, wait, act } = UU5.Test.Tools;
+import { renderHook, wait, act } from "uu5g05-test";
 
 const INITIAL_DATA1 = [{ id: "id1", value: "x" }];
 const LOAD_DATA1 = [
@@ -70,7 +68,7 @@ async function filterConsoleError(filterFn, execFn) {
   }
 }
 
-describe("[uu5g04-hooks] useDataList behaviour", () => {
+describe("[uu5g04-hooks] useDataList", () => {
   it("should return expected result API", () => {
     let { lastResult } = renderHook(useDataList, { initialData: INITIAL_DATA1 });
     expect(lastResult()).toEqual({

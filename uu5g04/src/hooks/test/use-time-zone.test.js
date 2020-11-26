@@ -1,7 +1,5 @@
-import UU5 from "uu5g04";
 import { useTimeZone, TimeZoneProvider } from "uu5g04-hooks";
-
-const { mount, act, initHookRenderer, renderHook } = UU5.Test.Tools;
+import { mount, act, initHookRenderer, renderHook } from "uu5g05-test";
 
 describe("[uu5g04-hooks] useTimeZone", () => {
   it("result, timeZone; should return default timeZone", async () => {

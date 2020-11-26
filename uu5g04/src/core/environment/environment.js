@@ -12,16 +12,17 @@
  */
 
 import mod from "module";
-import { TextEntityMap } from "./text-entity-map.js";
+import { Utils } from "uu5g05";
 import IconManager from "./icon-manager.js";
 import DocumentManager from "./document-manager.js";
 import TimeManager from "./time-manager.js";
 import Colors from "./colors.js";
 import Statistics from "./statistics.js";
+import initialEnvironment from "../uu5g05-integration/environment.js";
 
 let uu5BaseUrl;
-if (window.UU5 && window.UU5.Environment && typeof window.UU5.Environment.basePath === "string") {
-  let basePath = window.UU5.Environment.basePath;
+if (initialEnvironment?.basePath === "string") {
+  let basePath = initialEnvironment.basePath;
   uu5BaseUrl = basePath ? basePath.replace(/\/*$/, "/") : "./";
 } else {
   var uri = (
@@ -34,9 +35,9 @@ if (window.UU5 && window.UU5.Environment && typeof window.UU5.Environment.basePa
 }
 
 let cdnBaseUri;
-if (window.UU5 && window.UU5.Environment && typeof window.UU5.Environment.cdnBaseUri === "string") {
-  cdnBaseUri = window.UU5.Environment.cdnBaseUri;
-  delete window.UU5.Environment.cdnBaseUri; // remove as we'll possibly update the value a bit and startup-environment.js then merges the environment from global (original) to our; // TODO Do full merging in this file.
+if (initialEnvironment?.cdnBaseUri === "string") {
+  cdnBaseUri = initialEnvironment.cdnBaseUri;
+  delete initialEnvironment.cdnBaseUri; // remove as we'll possibly update the value a bit and startup-environment.js then merges the environment from global (original) to our; // TODO Do full merging in this file.
 }
 if (!cdnBaseUri) cdnBaseUri = "https://cdn.plus4u.net/";
 else if (cdnBaseUri.charAt(cdnBaseUri.length - 1) !== "/") cdnBaseUri += "/";
@@ -487,7 +488,7 @@ export const Environment = {
 
   textCorrector: false,
 
-  textEntityMap: TextEntityMap,
+  textEntityMap: Utils.Uu5String._textEntityMap,
   textEntityReplace: true,
 
   // {'cs-CZ': {decimalSeparator: ',', thousandSeparator: '.'}}
@@ -562,21 +563,23 @@ Environment.disableStatistics = () => (Environment.allowStatistics = false);
 Environment.enableStatistics = () => (Environment.allowStatistics = true);
 Environment.isStatistics = () => Environment.allowStatistics;
 
-export const statistics = Statistics(Environment.STATISTICS_BASE_PATH, Environment.isStatistics);
+const statistics = Statistics(
+  initialEnvironment.statisticsLogLibrariesUri || Environment.STATISTICS_BASE_PATH + "product/logLibraries",
+  Environment.isStatistics
+);
 
-// TODO Uncomment when uu5g05 gets integrated here. Currently this was moved to library-registry.js
-// to prevent circular dependency.
 // library = {name, version} or {name, version, namespace}
-// Environment.addRuntimeLibrary = library => {
-//   Utils.LibraryRegistry.registerLibrary(library);
-//   return this;
-// };
-// const origG05RegisterLibrary = Utils.LibraryRegistry.registerLibrary;
-// Utils.LibraryRegistry.registerLibrary = function(...args) {
-//   origG05RegisterLibrary.apply(this, args);
-//   statistics.addLibrary(args[0]);
-// };
-// for (let item of Utils.LibraryRegistry.listLibraries()) statistics.addLibrary(item);
+Environment.addRuntimeLibrary = (library) => {
+  Utils.LibraryRegistry.registerLibrary(library);
+  return this;
+};
+const origG05RegisterLibrary = Utils.LibraryRegistry.registerLibrary;
+Utils.LibraryRegistry.registerLibrary = function (...args) {
+  origG05RegisterLibrary.apply(this, args);
+  statistics.addLibrary(args[0]);
+};
+for (let item of Utils.LibraryRegistry.listLibraries()) statistics.addLibrary(item);
+Environment.addRuntimeLibrary({ name: Environment.name, version: Environment.version });
 
 Environment.getRuntimeLibraries = () => {
   return statistics.getLibraries();
@@ -628,46 +631,46 @@ Environment.getColorSchema = function (key) {
 };
 
 Environment.search = (searchedTexts) => {
-  let el = Environment.EventListener || window.UU5.Environment.EventListener;
-  el.triggerHighlight(searchedTexts);
+  let el = Environment.EventListener;
+  if (el) el.triggerHighlight(searchedTexts);
   return this;
 };
 
 Environment.setDateTimeFormat = (format) => {
-  let el = Environment.EventListener || window.UU5.Environment.EventListener;
-  el.triggerDateTime({ format: format });
+  let el = Environment.EventListener;
+  if (el) el.triggerDateTime({ format: format });
   return this;
 };
 
 Environment.setDateTimeCountry = (country) => {
-  let el = Environment.EventListener || window.UU5.Environment.EventListener;
-  el.triggerDateTime({ country: country });
+  let el = Environment.EventListener;
+  if (el) el.triggerDateTime({ country: country });
   return this;
 };
 
 Environment.setDateTimeZone = (timeZone) => {
-  let el = Environment.EventListener || window.UU5.Environment.EventListener;
-  el.triggerDateTime({ timeZone: timeZone });
+  let el = Environment.EventListener;
+  if (el) el.triggerDateTime({ timeZone: timeZone });
   return this;
 };
 
 Environment.setDateTimeOptions = (opt) => {
-  let el = Environment.EventListener || window.UU5.Environment.EventListener;
-  el.triggerDateTime(opt);
+  let el = Environment.EventListener;
+  if (el) el.triggerDateTime(opt);
   return this;
 };
 
 Environment.setNumberCountry = (country) => {
   Environment.numberOptions.country = country;
-  let el = Environment.EventListener || window.UU5.Environment.EventListener;
-  el.triggerNumber({ country: country });
+  let el = Environment.EventListener;
+  if (el) el.triggerNumber({ country: country });
   return this;
 };
 
 Environment.setNumberOptions = (opt) => {
   Environment.numberOptions = opt;
-  let el = Environment.EventListener || window.UU5.Environment.EventListener;
-  el.triggerNumber(opt);
+  let el = Environment.EventListener;
+  if (el) el.triggerNumber(opt);
   return this;
 };
 

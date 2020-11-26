@@ -1,7 +1,5 @@
-import UU5 from "uu5g04";
 import { useElementSize } from "uu5g04-hooks";
-
-const { mount, initHookRenderer } = UU5.Test.Tools;
+import { mount, initHookRenderer } from "uu5g05-test";
 
 function renderHookInElement(width = 100, height = 200, ...initialHookParams) {
   let defineSizes = (el) => {

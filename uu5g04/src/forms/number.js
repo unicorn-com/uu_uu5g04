@@ -12,10 +12,8 @@
  */
 
 //@@viewOn:revision
-// coded:
-//   Petr Bišof, 05.10.2020
-//   Filip Janovský, 05.10.2020
-// reviewed: Filip Janovský, 05.10.2020 - approved
+// coded: Martin Mach, 30.10.2020
+// reviewed: -
 //@@viewOff:revision
 
 //@@viewOn:imports
@@ -140,7 +138,7 @@ export const Number = Context.withContext(
           }
         }
       } else {
-        this.setState({ value });
+        this.setState({ value: result.value });
       }
       return this;
     },
@@ -255,14 +253,15 @@ export const Number = Context.withContext(
 
     onFocusDefault_(opt) {
       let value = this._removePrefixandSuffix(this.state.value);
-      let result = this.getFocusFeedback(opt);
+      let numericString = this._parseNumberFromString(value);
+      let result = this.getFocusFeedback({ opt, value: numericString });
       if (result) {
         this._updateFeedback(result.feedback, result.message, result.value);
       } else {
         this._updateFeedback(
           this.state.feedback,
           this.state.message,
-          this.state.value === null ? this.state.value : value
+          this.state.value === null ? this.state.value : numericString
         );
       }
 
@@ -300,14 +299,16 @@ export const Number = Context.withContext(
 
     _getOutputResult(result) {
       if (result.value !== undefined) {
+        let numericStringValue = this._parseNumberFromString(result.value);
+
         if (typeof result._data === "object") {
-          result._data.value = result.value;
+          result._data.value = numericStringValue;
         } else {
-          result._data = { value: result.value };
+          result._data = { value: numericStringValue };
         }
 
         if (this.props.valueType === "number") {
-          let resultValue = parseFloat(this._parseNumberFromString(result.value));
+          let resultValue = parseFloat(numericStringValue) || null;
           result.value = resultValue || typeof resultValue === "number" ? resultValue : null;
         }
       }

@@ -11,12 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
-import PropTypes from "prop-types";
-import ReactDOM from "react-dom";
+import { PropTypes, Utils } from "uu5g05";
 import Tools from "./tools.js";
 import Environment from "../environment/environment.js";
 import Style from "../utils/style.js";
+import DOM from "./dom";
 import RefUsageTelemetry from "./internal/ref-usage-telemetry.js";
 
 export const BaseMixin = {
@@ -503,7 +502,7 @@ export const BaseMixin = {
     var newProps = Tools.mergeDeep({}, props || this.props);
     var children = newProps.children;
     newProps.children = null;
-    newProps.body = React.Children.map(children, Tools.childToBodyItem());
+    newProps.body = Utils.Content.map(children, Tools.childToBodyItem());
     return newProps;
   },
 
@@ -511,13 +510,13 @@ export const BaseMixin = {
     process.env.NODE_ENV === "test"
       ? function () {
           try {
-            return ReactDOM.findDOMNode(this);
+            return DOM.findNode(this);
           } catch (error) {
             return null;
           }
         }
       : function () {
-          return ReactDOM.findDOMNode(this);
+          return DOM.findNode(this);
         },
 
   exportToObject: function () {

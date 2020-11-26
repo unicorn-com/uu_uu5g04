@@ -30,6 +30,9 @@ document.body.appendChild(mockElement);
 let firstDate = new Date(2019, 0, 1).getTime();
 let lastDate = new Date(2019, 0, 31).getTime();
 
+const DAY_NAMES1 = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"];
+const DAY_NAMES2 = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
+
 const CONFIG = {
   mixins: ["UU5.Common.BaseMixin", "UU5.Common.ElementaryMixin", "UU5.Common.SwipeMixin", "UU5.Common.LsiMixin"],
   props: {
@@ -106,6 +109,22 @@ describe(`UU5.Bricks.Calendar props function`, () => {
     expect(wrapper.instance().state.value[0].getTime()).toBe(firstDate);
     expect(wrapper.instance().state.value[1].getTime()).toBe(lastDate);
     wrapper.unmount();
+  });
+
+  it(`UU5.Bricks.Calendar weekStartDay`, () => {
+    let wrapper = mount(<UU5.Bricks.Calendar />, {
+      attachTo: mockElement,
+    });
+    let dayCells = wrapper.find(".uu5-bricks-calendar-day-name .uu5-bricks-calendar-day-cell");
+    let expectedDayNames = DAY_NAMES1;
+    dayCells.forEach((dayCell, i) => expect(dayCell.instance().textContent).toBe(expectedDayNames[i - 1] || "")); // first cell is empty
+    wrapper.unmount();
+    wrapper = mount(<UU5.Bricks.Calendar weekStartDay={7} />, {
+      attachTo: mockElement,
+    });
+    dayCells = wrapper.find(".uu5-bricks-calendar-day-name .uu5-bricks-calendar-day-cell");
+    expectedDayNames = DAY_NAMES2;
+    dayCells.forEach((dayCell, i) => expect(dayCell.instance().textContent).toBe(expectedDayNames[i - 1] || "")); // first cell is empty
   });
 
   it(`UU5.Bricks.Calendar onChange`, () => {
