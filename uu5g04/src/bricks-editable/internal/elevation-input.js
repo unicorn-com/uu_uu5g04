@@ -19,7 +19,6 @@ const ElevationInput = createVisualComponent({
 
   //@@viewOn:propTypes
   propTypes: {
-    componentProps: UU5.PropTypes.object,
     onChange: UU5.PropTypes.func,
     label: UU5.PropTypes.object,
     items: UU5.PropTypes.arrayOf(UU5.PropTypes.object),
@@ -29,7 +28,6 @@ const ElevationInput = createVisualComponent({
 
   //@@viewOn:defaultProps
   defaultProps: {
-    componentProps: undefined,
     onChange: undefined,
     label: <UU5.Bricks.Lsi lsi={Lsi.elevationInput.label} />,
     items: [

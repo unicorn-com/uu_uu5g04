@@ -11,6 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:revision
+//  coded: Petr Bišof 21.12.2020
+//  reviewed: Martin Mach 22.12.2020
+//@@viewOff:revision
+
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "../forms-ns.js";
@@ -24,28 +29,33 @@ export const ContextForm = UU5.Common.Reference.forward(({ className, ...props }
   const classNames = [
     Css.css`
       padding: 0 !important;
-      
+
       & > .uu5-bricks-alert-bus {
         position: relative;
         background-color: ${UU5.Environment.colors.grey.c100};
         box-shadow: none;
         transform: none;
         left: initial;
-        
+
         &.uu5-common-hidden {
           margin: 0;
           padding: 0;
         }
-        
+
         &.uu5-bricks-alert-without-header .uu5-bricks-alert-content {
           padding: 16px;
-          
-          /* just for IE */
-          @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-            width: 100%;
+
+          // 48px is width of the close button
+          max-width: calc(100% - 48px);
+
+          > * {
+            max-width: calc(100% - 48px);
           }
+
         }
       }
+
+
 
       & > .uu5-bricks-row {
         margin-left: -8px;
@@ -56,7 +66,7 @@ export const ContextForm = UU5.Common.Reference.forward(({ className, ...props }
           text-align:left;
         }
       }
-      
+
       /* FIXME bug in UU5.RichText */
       .uu5-richtext-toolbar-button > .uu5-forms-iconpicker.uu5-richtext-toolbar-iconpicker,
       .uu5-richtext-toolbar-dropdown-button > .uu5-forms-iconpicker.uu5-richtext-toolbar-iconpicker,

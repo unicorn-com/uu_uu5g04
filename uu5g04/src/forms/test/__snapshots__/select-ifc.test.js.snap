@@ -23,6 +23,7 @@ exports[`UU5.Forms.InputMixin interface test editable(setStatecallback) 1`] = `
       icon={null}
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={Object {}}
       name="idSelect-input"
       readonly={true}
@@ -35,7 +36,10 @@ exports[`UU5.Forms.InputMixin interface test editable(setStatecallback) 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -73,6 +77,7 @@ exports[`UU5.Forms.InputMixin interface test editable(setStatecallback) 2`] = `
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -91,7 +96,10 @@ exports[`UU5.Forms.InputMixin interface test editable(setStatecallback) 2`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -129,6 +137,7 @@ exports[`UU5.Forms.InputMixin interface test getChangeFeedback() 1`] = `
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -143,7 +152,10 @@ exports[`UU5.Forms.InputMixin interface test getChangeFeedback() 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -175,6 +187,7 @@ exports[`UU5.Forms.InputMixin interface test getFeedBack() 1`] = `
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -189,7 +202,10 @@ exports[`UU5.Forms.InputMixin interface test getFeedBack() 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -222,6 +238,7 @@ exports[`UU5.Forms.InputMixin interface test getFeedBack() 2`] = `
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -236,7 +253,10 @@ exports[`UU5.Forms.InputMixin interface test getFeedBack() 2`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -270,6 +290,7 @@ exports[`UU5.Forms.InputMixin interface test getInputWrapper(inpuid) 1`] = `
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -288,7 +309,10 @@ exports[`UU5.Forms.InputMixin interface test getInputWrapper(inpuid) 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -326,6 +350,7 @@ exports[`UU5.Forms.InputMixin interface test getLabel(idinput) 1`] = `
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -344,7 +369,10 @@ exports[`UU5.Forms.InputMixin interface test getLabel(idinput) 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -380,6 +408,7 @@ exports[`UU5.Forms.InputMixin interface test getMessage() should return null, se
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -394,7 +423,10 @@ exports[`UU5.Forms.InputMixin interface test getMessage() should return null, se
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -426,6 +458,7 @@ exports[`UU5.Forms.InputMixin interface test getValue() value is empty. Should r
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -440,7 +473,10 @@ exports[`UU5.Forms.InputMixin interface test getValue() value is empty. Should r
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -476,6 +512,7 @@ exports[`UU5.Forms.InputMixin interface test isError() 1`] = `
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -490,7 +527,10 @@ exports[`UU5.Forms.InputMixin interface test isError() 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -526,6 +566,7 @@ exports[`UU5.Forms.InputMixin interface test isError() 2`] = `
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -544,7 +585,10 @@ exports[`UU5.Forms.InputMixin interface test isError() 2`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -580,6 +624,7 @@ exports[`UU5.Forms.InputMixin interface test isInitial() 1`] = `
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -594,7 +639,10 @@ exports[`UU5.Forms.InputMixin interface test isInitial() 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -628,6 +676,7 @@ exports[`UU5.Forms.InputMixin interface test isInitial() 2`] = `
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -646,7 +695,10 @@ exports[`UU5.Forms.InputMixin interface test isInitial() 2`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -682,6 +734,7 @@ exports[`UU5.Forms.InputMixin interface test isInput() 1`] = `
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -697,7 +750,10 @@ exports[`UU5.Forms.InputMixin interface test isInput() 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover uu5-forms-select-multiple"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={true}
       onChange={[Function]}
       ref_={[Function]}
@@ -729,6 +785,7 @@ exports[`UU5.Forms.InputMixin interface test isLoading() 1`] = `
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -743,7 +800,10 @@ exports[`UU5.Forms.InputMixin interface test isLoading() 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -777,6 +837,7 @@ exports[`UU5.Forms.InputMixin interface test isReadOnly() 1`] = `
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -791,7 +852,10 @@ exports[`UU5.Forms.InputMixin interface test isReadOnly() 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -824,6 +888,7 @@ exports[`UU5.Forms.InputMixin interface test isReadOnly() 2`] = `
       icon={null}
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={Object {}}
       name="idSelect-input"
       readonly={true}
@@ -832,7 +897,10 @@ exports[`UU5.Forms.InputMixin interface test isReadOnly() 2`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -866,6 +934,7 @@ exports[`UU5.Forms.InputMixin interface test isSuccess() fisr return false, seco
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -880,7 +949,10 @@ exports[`UU5.Forms.InputMixin interface test isSuccess() fisr return false, seco
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -916,6 +988,7 @@ exports[`UU5.Forms.InputMixin interface test isSuccess() fisr return false, seco
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -934,7 +1007,10 @@ exports[`UU5.Forms.InputMixin interface test isSuccess() fisr return false, seco
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -974,6 +1050,7 @@ exports[`UU5.Forms.InputMixin interface test isWarning() 1`] = `
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -988,7 +1065,10 @@ exports[`UU5.Forms.InputMixin interface test isWarning() 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1024,6 +1104,7 @@ exports[`UU5.Forms.InputMixin interface test isWarning() 2`] = `
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1042,7 +1123,10 @@ exports[`UU5.Forms.InputMixin interface test isWarning() 2`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1080,6 +1164,7 @@ exports[`UU5.Forms.InputMixin interface test readOnly(setStatecallback) 1`] = `
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1098,7 +1183,10 @@ exports[`UU5.Forms.InputMixin interface test readOnly(setStatecallback) 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1135,6 +1223,7 @@ exports[`UU5.Forms.InputMixin interface test readOnly(setStatecallback) 2`] = `
       icon={null}
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={Object {}}
       name="idSelect-input"
       readonly={true}
@@ -1147,7 +1236,10 @@ exports[`UU5.Forms.InputMixin interface test readOnly(setStatecallback) 2`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1186,6 +1278,7 @@ exports[`UU5.Forms.InputMixin interface test reset(setStateCallBack) 1`] = `
       icon={null}
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={Object {}}
       name="idSelect-input"
       readonly={true}
@@ -1198,7 +1291,10 @@ exports[`UU5.Forms.InputMixin interface test reset(setStateCallBack) 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1236,6 +1332,7 @@ exports[`UU5.Forms.InputMixin interface test reset(setStateCallBack) 2`] = `
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1250,7 +1347,10 @@ exports[`UU5.Forms.InputMixin interface test reset(setStateCallBack) 2`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1286,6 +1386,7 @@ exports[`UU5.Forms.InputMixin interface test setChangeFeedback() 1`] = `
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1304,7 +1405,10 @@ exports[`UU5.Forms.InputMixin interface test setChangeFeedback() 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1338,6 +1442,7 @@ exports[`UU5.Forms.InputMixin interface test setEditableValue(false, setStateCal
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1356,7 +1461,10 @@ exports[`UU5.Forms.InputMixin interface test setEditableValue(false, setStateCal
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1393,6 +1501,7 @@ exports[`UU5.Forms.InputMixin interface test setEditableValue(false, setStateCal
       icon={null}
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={Object {}}
       name="idSelect-input"
       readonly={true}
@@ -1405,7 +1514,10 @@ exports[`UU5.Forms.InputMixin interface test setEditableValue(false, setStateCal
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1443,6 +1555,7 @@ exports[`UU5.Forms.InputMixin interface test setEditableValue(true, setStateCall
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1461,7 +1574,10 @@ exports[`UU5.Forms.InputMixin interface test setEditableValue(true, setStateCall
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1499,6 +1615,7 @@ exports[`UU5.Forms.InputMixin interface test setEditableValue(true, setStateCall
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1517,7 +1634,10 @@ exports[`UU5.Forms.InputMixin interface test setEditableValue(true, setStateCall
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1555,6 +1675,7 @@ exports[`UU5.Forms.InputMixin interface test setError(message, value, setStateCa
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1569,7 +1690,10 @@ exports[`UU5.Forms.InputMixin interface test setError(message, value, setStateCa
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1605,6 +1729,7 @@ exports[`UU5.Forms.InputMixin interface test setError(message, value, setStateCa
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1623,7 +1748,10 @@ exports[`UU5.Forms.InputMixin interface test setError(message, value, setStateCa
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1659,6 +1787,7 @@ exports[`UU5.Forms.InputMixin interface test setFeedBack(feedback, message, valu
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1673,7 +1802,10 @@ exports[`UU5.Forms.InputMixin interface test setFeedBack(feedback, message, valu
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1707,6 +1839,7 @@ exports[`UU5.Forms.InputMixin interface test setFeedBack(feedback, message, valu
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1725,7 +1858,10 @@ exports[`UU5.Forms.InputMixin interface test setFeedBack(feedback, message, valu
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1765,6 +1901,7 @@ exports[`UU5.Forms.InputMixin interface test setInitial(msg, value, setStateCall
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1779,7 +1916,10 @@ exports[`UU5.Forms.InputMixin interface test setInitial(msg, value, setStateCall
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1814,6 +1954,7 @@ exports[`UU5.Forms.InputMixin interface test setInitial(msg, value, setStateCall
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1832,7 +1973,10 @@ exports[`UU5.Forms.InputMixin interface test setInitial(msg, value, setStateCall
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1868,6 +2012,7 @@ exports[`UU5.Forms.InputMixin interface test setLoading(message, value, setState
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1882,7 +2027,10 @@ exports[`UU5.Forms.InputMixin interface test setLoading(message, value, setState
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1916,6 +2064,7 @@ exports[`UU5.Forms.InputMixin interface test setLoading(message, value, setState
       icon={null}
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       loading={true}
       mainAttrs={Object {}}
       name="idSelect-input"
@@ -1929,7 +2078,10 @@ exports[`UU5.Forms.InputMixin interface test setLoading(message, value, setState
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1965,6 +2117,7 @@ exports[`UU5.Forms.InputMixin interface test setMessage(msg, setStateCallBack) 1
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1979,7 +2132,10 @@ exports[`UU5.Forms.InputMixin interface test setMessage(msg, setStateCallBack) 1
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2012,6 +2168,7 @@ exports[`UU5.Forms.InputMixin interface test setMessage(msg, setStateCallBack) 2
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2026,7 +2183,10 @@ exports[`UU5.Forms.InputMixin interface test setMessage(msg, setStateCallBack) 2
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2058,6 +2218,7 @@ exports[`UU5.Forms.InputMixin interface test setSuccess(message, value, setState
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2072,7 +2233,10 @@ exports[`UU5.Forms.InputMixin interface test setSuccess(message, value, setState
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2106,6 +2270,7 @@ exports[`UU5.Forms.InputMixin interface test setSuccess(message, value, setState
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2124,7 +2289,10 @@ exports[`UU5.Forms.InputMixin interface test setSuccess(message, value, setState
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2162,6 +2330,7 @@ exports[`UU5.Forms.InputMixin interface test setWarning(message, value, setState
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2176,7 +2345,10 @@ exports[`UU5.Forms.InputMixin interface test setWarning(message, value, setState
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2212,6 +2384,7 @@ exports[`UU5.Forms.InputMixin interface test setWarning(message, value, setState
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2230,7 +2403,10 @@ exports[`UU5.Forms.InputMixin interface test setWarning(message, value, setState
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2266,6 +2442,7 @@ exports[`UU5.Forms.Select interface test addValue(value, setStateCallBack) 1`] =
       icon="mdi-menu-down"
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2281,7 +2458,10 @@ exports[`UU5.Forms.Select interface test addValue(value, setStateCallBack) 1`] =
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover uu5-forms-select-multiple"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={true}
       onChange={[Function]}
       ref_={[Function]}
@@ -2313,6 +2493,7 @@ exports[`UU5.Forms.Select interface test addValue(value, setStateCallBack) 2`] =
       icon={null}
       id="idSelect-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2332,7 +2513,10 @@ exports[`UU5.Forms.Select interface test addValue(value, setStateCallBack) 2`] =
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover uu5-forms-select-multiple"
       hidden={true}
+      id="idSelect-popover"
+      key="itemList"
       multiple={true}
       onChange={[Function]}
       ref_={[Function]}

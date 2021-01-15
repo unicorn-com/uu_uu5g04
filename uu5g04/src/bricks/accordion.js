@@ -11,6 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:revision
+//  coded: Petr Bišof 18.12.2020
+//  reviewed: Martin Mach 22.12.2020
+//@@viewOff:revision
+
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
@@ -228,13 +233,17 @@ export const Accordion = UU5.Common.VisualComponent.create({
 
     var counter = 0;
     panels.forEach(function (panel) {
-      panel.getId() !== panelId && panel.isExpandable() && counter++;
+      if (typeof panel.isExpandable === "function") {
+        panel.getId() !== panelId && panel.isExpandable() && counter++;
+      }
     });
 
     if (counter > 0) {
       var newSetStateCallback = UU5.Common.Tools.buildCounterCallback(setStateCallback, counter);
       panels.forEach(function (panel) {
-        panel.getId() !== panelId && panel.isExpandable() && panel.collapse(newSetStateCallback);
+        if (typeof panel.isExpandable === "function") {
+          panel.getId() !== panelId && panel.isExpandable() && panel.collapse(newSetStateCallback);
+        }
       });
     } else if (typeof setStateCallback === "function") {
       setStateCallback();

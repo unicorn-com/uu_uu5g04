@@ -57,6 +57,7 @@ export const Video = UU5.Common.VisualComponent.create({
     muted: UU5.PropTypes.bool,
     type: UU5.PropTypes.oneOf(["mp4", "webm", "ogg", "m3u8"]),
     authenticate: UU5.PropTypes.bool,
+    onBeforeChunkLoad: UU5.PropTypes.func,
   },
   //@@viewOff:propTypes
 
@@ -72,6 +73,7 @@ export const Video = UU5.Common.VisualComponent.create({
       muted: false,
       type: null,
       authenticate: false,
+      onBeforeChunkLoad: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -214,8 +216,9 @@ export const Video = UU5.Common.VisualComponent.create({
           useHlsComponent ? (
             <UU5.Common.Suspense fallback="">
               <VideoHls
-                mainAttrs={{ ...this._buildMainAttrs(posterUrl), src: videoUrl }}
+                videoAttrs={{ ...this._buildMainAttrs(posterUrl), src: videoUrl }}
                 authenticate={this.props.authenticate}
+                onBeforeChunkLoad={this.props.onBeforeChunkLoad}
               />
             </UU5.Common.Suspense>
           ) : (

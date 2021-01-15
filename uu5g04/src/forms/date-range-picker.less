@@ -10,39 +10,6 @@
     cursor: pointer;
   }
 
-  .@{name}-daterangepicker-popover-first-row, .@{name}-daterangepicker-popover-second-row {
-    display: flex;
-    flex-direction: row
-  }
-
-  .@{name}-daterangepicker-popover-second-row {
-    border-top: solid 1px fade(#BDBDBD, 50%);
-  }
-
-  .@{name}-daterangepicker-popover-right-column, .@{name}-daterangepicker-popover-left-column {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .@{name}-daterangepicker-popover-left-column {
-    .@{name}-daterangepicker-calendar-input {
-      left: -1px;
-      top: -1px;
-    }
-  }
-
-  .@{name}-daterangepicker-popover-right-column {
-    .@{name}-daterangepicker-calendar-input {
-      left: -1px;
-      top: -1px;
-    }
-  }
-
-  .@{name}-daterangepicker-calendar-separator {
-    width: 1px;
-    background-color: fade(#BDBDBD, 50%);
-  }
-
   .@{name}-input-wrapper .@{name}-text-input .uu5-bricks-icon {
     align-items: center;
   }
@@ -171,51 +138,6 @@
     }
   }
 
-  .uu5-bricks-popover-body {
-    align-items: stretch;
-    flex-direction: row;
-  }
-
-  .uu5-bricks-calendar {
-    position: relative;
-    box-shadow: none;
-    margin-top: 0;
-    border: none;
-    flex-grow: 1;
-    display: flex;
-
-    .uu5-bricks-calendar-cell {
-      padding: 0;
-
-      .uu5-bricks-calendar-day-cell.uu5-common-bg {
-        background-color: transparent;
-      }
-    }
-  }
-
-  .@{name}-daterangepicker-calendars {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .@{name}-daterangepicker-custom-content {
-    border-left: solid 1px fade(#BDBDBD, 50%);
-  }
-
-  .@{name}-daterangepicker-today-button {
-    width: auto;
-    height: auto;
-    border-radius: 2px;
-    font-family: ClearSans-Medium;
-    color: #2196F3;
-    background-color: transparent;
-
-    &:hover, &:active, &:focus, &:active:focus, &:active:hover {
-      color: #0D47A1;
-      background-color: #E3F2FD;
-    }
-  }
-
   &.@{name}-input-auto-width {
     display: inline-flex;
     flex-wrap: nowrap;
@@ -254,36 +176,6 @@
     }
   }
 
-
-  @media @isM, @isL, @isXl {
-    .@{name}-daterangepicker-calendar-input {
-      width: calc(100% + 1px);
-
-      > .@{name}-input-form-item.@{name}-input-form-item-text {
-        color: rgba(0, 0, 0, 0.87);
-        &:not(:focus), :not(:active) {
-          border-right: none;
-        }
-      }
-
-      &.@{name}-text-input:not([class*="color-schema-"]) {
-        > .@{name}-input-form-item.@{name}-input-form-item-text {
-          &, &:focus, &:active {
-            color: rgba(0, 0, 0, 0.87);
-          }
-        }
-      }
-    }
-
-    .@{name}-daterangepicker-popover-right-column .@{name}-calendar-head-cell-prev {
-      cursor: default;
-    }
-
-    .@{name}-daterangepicker-popover-left-column .@{name}-calendar-head-cell-next {
-      cursor: default;
-    }
-  }
-
   .@{name}-datetimerangepicker-label-bogus {
     padding: 0;
     width: 50%;
@@ -292,7 +184,6 @@
   .@{name}-daterangepicker-popover-wrapper {
     position: relative;
   }
-
 
   &:not(.@{name}-input-inline) {
     &.@{name}-input-s, .@{name}-input-s {
@@ -461,6 +352,115 @@
       &.uu5-common-bg-style-filled .uu5-bricks-icon {
         color: rgba(0, 0, 0, 0.87);
       }
+    }
+  }
+}
+
+.@{name}-daterangepicker-popover {
+  .@{name}-daterangepicker-popover-first-row, .@{name}-daterangepicker-popover-second-row {
+    display: flex;
+    flex-direction: row
+  }
+
+  .@{name}-daterangepicker-popover-second-row {
+    border-top: solid 1px fade(#BDBDBD, 50%);
+  }
+
+  .@{name}-daterangepicker-popover-right-column, .@{name}-daterangepicker-popover-left-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .@{name}-daterangepicker-popover-left-column {
+    .@{name}-daterangepicker-calendar-input {
+      left: -1px;
+      top: -1px;
+    }
+  }
+
+  .@{name}-daterangepicker-popover-right-column {
+    .@{name}-daterangepicker-calendar-input {
+      left: -1px;
+      top: -1px;
+    }
+  }
+
+  .@{name}-daterangepicker-calendar-separator {
+    width: 1px;
+    background-color: fade(#BDBDBD, 50%);
+  }
+
+  .uu5-bricks-popover-body {
+    align-items: stretch;
+    flex-direction: row;
+  }
+
+  .uu5-bricks-calendar {
+    position: relative;
+    box-shadow: none;
+    margin-top: 0;
+    border: none;
+    flex-grow: 1;
+    display: flex;
+
+    .uu5-bricks-calendar-cell {
+      padding: 0;
+
+      .uu5-bricks-calendar-day-cell.uu5-common-bg {
+        background-color: transparent;
+      }
+    }
+  }
+
+  .@{name}-daterangepicker-calendars {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .@{name}-daterangepicker-custom-content {
+    border-left: solid 1px fade(#BDBDBD, 50%);
+  }
+
+  .@{name}-daterangepicker-today-button {
+    width: auto;
+    height: auto;
+    border-radius: 2px;
+    font-family: ClearSans-Medium;
+    color: #2196F3;
+    background-color: transparent;
+
+    &:hover, &:active, &:focus, &:active:focus, &:active:hover {
+      color: #0D47A1;
+      background-color: #E3F2FD;
+    }
+  }
+
+  @media @isM, @isL, @isXl {
+    .@{name}-daterangepicker-calendar-input {
+      width: calc(100% + 1px);
+
+      > .@{name}-input-form-item.@{name}-input-form-item-text {
+        color: rgba(0, 0, 0, 0.87);
+        &:not(:focus), :not(:active) {
+          border-right: none;
+        }
+      }
+
+      &.@{name}-text-input:not([class*="color-schema-"]) {
+        > .@{name}-input-form-item.@{name}-input-form-item-text {
+          &, &:focus, &:active {
+            color: rgba(0, 0, 0, 0.87);
+          }
+        }
+      }
+    }
+
+    .@{name}-daterangepicker-popover-right-column .@{name}-calendar-head-cell-prev {
+      cursor: default;
+    }
+
+    .@{name}-daterangepicker-popover-left-column .@{name}-calendar-head-cell-next {
+      cursor: default;
     }
   }
 }

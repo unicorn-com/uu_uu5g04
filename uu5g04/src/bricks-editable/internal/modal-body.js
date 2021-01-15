@@ -367,7 +367,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
   //@@viewOn:reactLifeCycle
   getInitialState() {
-    this._itemsSource = "children"; // save the name of a prop from which we have taken the items
+    this._itemsSource = undefined; // save the name of a prop from which we have taken the items
     this._itemsInUU5String = true; // remember whether the component's items were in uu5string
     this._contentChanged = false; // remember whether the content was changed and should be saved
     this._propsToReturn = []; // remember props that were edited so that we can only return those
@@ -378,6 +378,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
     let propValues = { ...this.props.componentProps };
 
     if (this.props.itemName) {
+      this._itemsSource = "children";
       if (this.props.itemsSource) {
         items = propValues[this.props.itemsSource];
         this._itemsSource = this.props.itemsSource;
@@ -434,6 +435,8 @@ const ModalBody = UU5.Common.VisualComponent.create({
           items = items.map((item) => ({ ...item, props: { ...itemComponentProps, ...item.props } }));
         }
       }
+    } else if (this.props.itemsSource) {
+      this._itemsSource = this.props.itemsSource;
     }
 
     return {
@@ -1267,6 +1270,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
           break;
         case "text":
           result.Component = "UU5.Forms.Text";
+          result.props.popoverLocation = "portal";
           result.value = value || "";
           changeType = "onBlur";
           break;
@@ -1292,6 +1296,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
           break;
         case "switchSelectorBool":
           result.Component = "UU5.Forms.SwitchSelector";
+          result.props.popoverLocation = "portal";
           result.props.inputAttrs = {
             ...result.props.inputAttrs,
           };
@@ -1302,34 +1307,43 @@ const ModalBody = UU5.Common.VisualComponent.create({
           break;
         case "switchSelector":
           result.Component = "UU5.Forms.SwitchSelector";
+          result.props.popoverLocation = "portal";
           result.props.inputAttrs = {
             ...result.props.inputAttrs,
           };
           break;
         case "color":
           result.Component = "UU5.Forms.ColorPicker";
+          result.props.popoverLocation = "portal";
           break;
         case "colorSchemaPicker":
         case "colorSchema":
           result.Component = ColorSchemaPicker;
+          result.props.popoverLocation = "portal";
           break;
         case "elevation":
           result.Component = ElevationInput;
+          result.props.popoverLocation = "portal";
           break;
         case "borderRadius":
           result.Component = BorderRadiusInput;
+          result.props.popoverLocation = "portal";
           break;
         case "bgStyle":
           result.Component = BgStyleInput;
+          result.props.popoverLocation = "portal";
           break;
         case "size":
           result.Component = SizeInput;
+          result.props.popoverLocation = "portal";
           break;
         case "iconPicker":
           result.Component = "UU5.Forms.IconPicker";
+          result.props.popoverLocation = "portal";
           break;
         case "tagSelect":
           result.Component = "UU5.Forms.TagSelect";
+          result.props.popoverLocation = "portal";
           break;
         case "editorInput":
           result.Component = "UU5.RichText.EditorInput";
@@ -1343,22 +1357,27 @@ const ModalBody = UU5.Common.VisualComponent.create({
         case "elevation":
           result.Component = ElevationInput;
           result.props.value = valueSource.elevation;
+          result.props.popoverLocation = "portal";
           break;
         case "borderRadius":
           result.Component = BorderRadiusInput;
           result.props.value = valueSource.borderRadius;
+          result.props.popoverLocation = "portal";
           break;
         case "bgStyle":
           result.Component = BgStyleInput;
           result.props.value = valueSource.bgStyle;
+          result.props.popoverLocation = "portal";
           break;
         case "size":
           result.Component = SizeInput;
           result.props.value = valueSource.size;
+          result.props.popoverLocation = "portal";
           break;
         case "colorSchema":
           result.Component = ColorSchemaPicker;
           result.props.value = valueSource.colorSchema;
+          result.props.popoverLocation = "portal";
           break;
       }
     }

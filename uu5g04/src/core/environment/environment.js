@@ -13,7 +13,6 @@
 
 import mod from "module";
 import { Utils } from "uu5g05";
-import IconManager from "./icon-manager.js";
 import DocumentManager from "./document-manager.js";
 import TimeManager from "./time-manager.js";
 import Colors from "./colors.js";
@@ -286,7 +285,7 @@ export const Environment = {
   languageList: {
     cs: {
       flag: uu5BaseUrl + "assets/flags/cz.png",
-      language: "Česky",
+      language: "Čeština",
     },
     nl: {
       flag: uu5BaseUrl + "assets/flags/nl.png",
@@ -322,7 +321,7 @@ export const Environment = {
     },
     sk: {
       flag: uu5BaseUrl + "assets/flags/sk.png",
-      language: "Slovensky",
+      language: "Slovenčina",
     },
     es: {
       flag: uu5BaseUrl + "assets/flags/es.png",
@@ -529,8 +528,6 @@ Environment.iconLibraries = {
   uubmlicon:
     "https://uuappg01-eu-w-1.plus4u.net/uu-uubmldraw-stencilcatalogueg01/c168bd044ce044d48ba284c89eeb573b/stencil/getCss?code=",
 };
-
-Environment.IconManager = new IconManager(Environment.iconLibraries);
 
 Environment.addIconLibrary = (iconsKey, src) => {
   Environment.iconLibraries[iconsKey] = src;

@@ -1089,7 +1089,8 @@ exports[`UU5.Bricks.Video type="m3u8" 1`] = `
   >
     <lazy
       authenticate={false}
-      mainAttrs={
+      onBeforeChunkLoad={null}
+      videoAttrs={
         Object {
           "className": "uu5-bricks-video",
           "controls": true,

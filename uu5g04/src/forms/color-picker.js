@@ -75,7 +75,7 @@ export const ColorPicker = Context.withContext(
             width: 64px;
           }
         `),
-        buttonError: ns.css("button-error"),
+        buttonError: ns.css("button-error")
       },
       lsi: () => ({ ...UU5.Environment.Lsi.Forms.colorPicker, ...UU5.Environment.Lsi.Forms.message }),
     },
@@ -92,6 +92,7 @@ export const ColorPicker = Context.withContext(
       bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
       elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
       openToContent: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string]),
+      popoverLocation: UU5.PropTypes.oneOf(["local", "portal"]),
     },
     //@@viewOff:propTypes
 
@@ -107,6 +108,7 @@ export const ColorPicker = Context.withContext(
         openToContent: "xs",
         required: false,
         requiredMessage: undefined,
+        popoverLocation: "local", // "local" <=> backward-compatible behaviour
       };
     },
     //@@viewOff:getDefaultProps
@@ -368,6 +370,29 @@ export const ColorPicker = Context.withContext(
       return mainAttrs;
     },
 
+    _getPopoverProps() {
+      let className;
+      if (this.props.popoverLocation === "portal") {
+        this.getClassName("input", "UU5.Forms.InputMixin") + this.props.size;
+      }
+
+      if (this._shouldOpenToContent()) {
+        className +=
+          " " +
+          Css.css(`
+          position: relative;
+          width: 362px;
+      `);
+      }
+
+      return {
+        shown: true,
+        forceRender: true,
+        className,
+        location: !this._shouldOpenToContent() ? this.props.popoverLocation : "local",
+      };
+    },
+
     _registerButton(button) {
       this._button = button;
     },
@@ -397,21 +422,13 @@ export const ColorPicker = Context.withContext(
 
     //@@viewOn:render
     render() {
-      let popoverClassName;
-      if (this._shouldOpenToContent()) {
-        popoverClassName = Css.css(`
-          position: relative;
-          width: 362px;
-      `);
-      }
-
       return (
         <div {...this._getMainAttrs()}>
           {this.getLabel(this.getId() + "-label")}
           {this.getInputWrapper([
             this._getButton(),
             this.state.open && (
-              <UU5.Bricks.Popover ref_={this._registerPopover} shown forceRender className={popoverClassName}>
+              <UU5.Bricks.Popover {...this._getPopoverProps()} ref_={this._registerPopover}>
                 <ColorPaletteForm
                   ref_={this._registerColorForm}
                   enableCustomColor={this.props.enableCustomColor}

@@ -33,6 +33,7 @@ const CONFIG = {
             icon: "mdi-phone",
             active: true,
             content: "Phone",
+            onClick: () => null,
           },
           {
             icon: "mdi-phone",
@@ -41,6 +42,7 @@ const CONFIG = {
             bgStyle: "transparent",
             borderRadius: "8px",
             disabled: true,
+            onClick: () => null,
           },
           {
             icon: "mdi-phone",
@@ -48,12 +50,14 @@ const CONFIG = {
               cs: "Telefon",
               en: "Phone",
             },
+            onClick: () => null,
           },
         ],
         [
           {
             icon: "mdi-phone",
             content: "Phone",
+            onClick: () => null,
           },
           {
             icon: "mdi-phone",
@@ -61,6 +65,7 @@ const CONFIG = {
               cs: "Telefon",
               en: "Phone",
             },
+            onClick: () => null,
           },
         ],
         [
@@ -68,6 +73,7 @@ const CONFIG = {
             activeContent: "Phone",
             content: "Call",
             icon: "mdi-phone",
+            onClick: () => null,
           },
         ],
         [
@@ -76,6 +82,7 @@ const CONFIG = {
             content: "Call",
             activeIcon: "mdi-check",
             icon: "mdi-phone",
+            onClick: () => null,
           },
         ],
         [
@@ -84,17 +91,17 @@ const CONFIG = {
             content: "Settings",
             active: true,
             colorSchema: "primary",
+            onClick: () => null,
           },
         ],
         [
-          { icon: "mdi-email", content: "Send E-mail" },
-          { icon: "mdi-settings", content: "Settings" },
+          { icon: "mdi-email", content: "Send E-mail", onClick: () => null },
+          { icon: "mdi-settings", content: "Settings", onClick: () => null },
         ],
       ],
     },
   },
   requiredProps: {
-    onClick: () => "TODO",
     children: <UU5.BlockLayout.Row>Test</UU5.BlockLayout.Row>,
   },
   opt: {},
@@ -115,9 +122,10 @@ describe(`UU5.BlockLayout.Block props testing`, () => {
             content: "Settings",
             active: true,
             colorSchema: "primary",
+            onClick: () => null,
           },
-          { icon: "mdi-email", content: "Send E-mail" },
-          { icon: "mdi-settings", content: "Settings" },
+          { icon: "mdi-email", content: "Send E-mail", onClick: () => null },
+          { icon: "mdi-settings", content: "Settings", onClick: () => null },
         ]}
       />
     );

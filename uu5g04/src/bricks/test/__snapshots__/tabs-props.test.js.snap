@@ -198,7 +198,7 @@ exports[`UU5.Bricks.Tabs UU5.Bricks.Tabs stacked=true 1`] = `
 </Fragment>
 `;
 
-exports[`UU5.Bricks.Tabs activeName="active" 1`] = `
+exports[`UU5.Bricks.Tabs activeName="tab2" 1`] = `
 <Fragment>
   <div
     className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
@@ -210,12 +210,32 @@ exports[`UU5.Bricks.Tabs activeName="active" 1`] = `
       className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
     >
       <li
-        className="uu5-bricks-tabs-list-active"
         key="0"
       >
         <Button
           bgStyle="transparent"
           content="Tab 1"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
           ref_={[Function]}
         />
       </li>
@@ -228,12 +248,30 @@ exports[`UU5.Bricks.Tabs activeName="active" 1`] = `
       className="uu5-bricks-tabs-list-content"
     >
       <tabs-item
-        _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -263,6 +301,26 @@ exports[`UU5.Bricks.Tabs checkGrammar=false 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -275,9 +333,27 @@ exports[`UU5.Bricks.Tabs checkGrammar=false 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -307,6 +383,26 @@ exports[`UU5.Bricks.Tabs checkGrammar=true 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -319,9 +415,27 @@ exports[`UU5.Bricks.Tabs checkGrammar=true 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -351,6 +465,26 @@ exports[`UU5.Bricks.Tabs checkHighlight=false 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -363,9 +497,27 @@ exports[`UU5.Bricks.Tabs checkHighlight=false 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -395,6 +547,26 @@ exports[`UU5.Bricks.Tabs checkHighlight=true 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -407,9 +579,27 @@ exports[`UU5.Bricks.Tabs checkHighlight=true 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -439,6 +629,26 @@ exports[`UU5.Bricks.Tabs checkSpaces=false 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -451,9 +661,27 @@ exports[`UU5.Bricks.Tabs checkSpaces=false 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -483,6 +711,26 @@ exports[`UU5.Bricks.Tabs checkSpaces=true 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -495,9 +743,27 @@ exports[`UU5.Bricks.Tabs checkSpaces=true 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -527,6 +793,26 @@ exports[`UU5.Bricks.Tabs className="my-classname" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -539,9 +825,27 @@ exports[`UU5.Bricks.Tabs className="my-classname" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -571,6 +875,26 @@ exports[`UU5.Bricks.Tabs colorSchema="brown" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -583,9 +907,27 @@ exports[`UU5.Bricks.Tabs colorSchema="brown" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -615,6 +957,26 @@ exports[`UU5.Bricks.Tabs colorSchema="brown-rich" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -627,9 +989,27 @@ exports[`UU5.Bricks.Tabs colorSchema="brown-rich" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -659,6 +1039,26 @@ exports[`UU5.Bricks.Tabs colorSchema="cyan" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -671,9 +1071,27 @@ exports[`UU5.Bricks.Tabs colorSchema="cyan" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -703,6 +1121,26 @@ exports[`UU5.Bricks.Tabs colorSchema="cyan-rich" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -715,9 +1153,27 @@ exports[`UU5.Bricks.Tabs colorSchema="cyan-rich" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -747,6 +1203,26 @@ exports[`UU5.Bricks.Tabs colorSchema="default" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -759,9 +1235,27 @@ exports[`UU5.Bricks.Tabs colorSchema="default" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -791,6 +1285,26 @@ exports[`UU5.Bricks.Tabs colorSchema="green" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -803,9 +1317,27 @@ exports[`UU5.Bricks.Tabs colorSchema="green" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -835,6 +1367,26 @@ exports[`UU5.Bricks.Tabs colorSchema="green-rich" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -847,9 +1399,27 @@ exports[`UU5.Bricks.Tabs colorSchema="green-rich" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -879,6 +1449,26 @@ exports[`UU5.Bricks.Tabs colorSchema="grey" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -891,9 +1481,27 @@ exports[`UU5.Bricks.Tabs colorSchema="grey" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -923,6 +1531,26 @@ exports[`UU5.Bricks.Tabs colorSchema="grey-rich" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -935,9 +1563,27 @@ exports[`UU5.Bricks.Tabs colorSchema="grey-rich" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -967,6 +1613,26 @@ exports[`UU5.Bricks.Tabs colorSchema="orange" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -979,9 +1645,27 @@ exports[`UU5.Bricks.Tabs colorSchema="orange" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -1011,6 +1695,26 @@ exports[`UU5.Bricks.Tabs colorSchema="orange-rich" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -1023,9 +1727,27 @@ exports[`UU5.Bricks.Tabs colorSchema="orange-rich" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -1055,6 +1777,26 @@ exports[`UU5.Bricks.Tabs colorSchema="pink" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -1067,9 +1809,27 @@ exports[`UU5.Bricks.Tabs colorSchema="pink" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -1099,6 +1859,26 @@ exports[`UU5.Bricks.Tabs colorSchema="pink-rich" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -1111,9 +1891,27 @@ exports[`UU5.Bricks.Tabs colorSchema="pink-rich" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -1143,6 +1941,26 @@ exports[`UU5.Bricks.Tabs colorSchema="purple" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -1155,9 +1973,27 @@ exports[`UU5.Bricks.Tabs colorSchema="purple" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -1187,6 +2023,26 @@ exports[`UU5.Bricks.Tabs colorSchema="purple-rich" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -1199,9 +2055,27 @@ exports[`UU5.Bricks.Tabs colorSchema="purple-rich" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -1231,6 +2105,26 @@ exports[`UU5.Bricks.Tabs colorSchema="red" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -1243,9 +2137,27 @@ exports[`UU5.Bricks.Tabs colorSchema="red" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -1275,6 +2187,26 @@ exports[`UU5.Bricks.Tabs colorSchema="red-rich" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -1287,9 +2219,27 @@ exports[`UU5.Bricks.Tabs colorSchema="red-rich" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -1319,6 +2269,26 @@ exports[`UU5.Bricks.Tabs colorSchema="yellow" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -1331,9 +2301,27 @@ exports[`UU5.Bricks.Tabs colorSchema="yellow" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -1363,6 +2351,26 @@ exports[`UU5.Bricks.Tabs colorSchema="yellow-rich" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -1375,9 +2383,27 @@ exports[`UU5.Bricks.Tabs colorSchema="yellow-rich" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -1453,6 +2479,26 @@ exports[`UU5.Bricks.Tabs controlled=false 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -1465,9 +2511,27 @@ exports[`UU5.Bricks.Tabs controlled=false 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -1497,6 +2561,26 @@ exports[`UU5.Bricks.Tabs controlled=true 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -1509,9 +2593,27 @@ exports[`UU5.Bricks.Tabs controlled=true 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -1541,6 +2643,26 @@ exports[`UU5.Bricks.Tabs default props 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -1553,9 +2675,27 @@ exports[`UU5.Bricks.Tabs default props 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -1585,6 +2725,26 @@ exports[`UU5.Bricks.Tabs disabled=false 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -1597,9 +2757,27 @@ exports[`UU5.Bricks.Tabs disabled=false 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -1629,6 +2807,26 @@ exports[`UU5.Bricks.Tabs disabled=true 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -1641,9 +2839,27 @@ exports[`UU5.Bricks.Tabs disabled=true 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -1759,6 +2975,26 @@ exports[`UU5.Bricks.Tabs dynamic=false 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -1771,9 +3007,27 @@ exports[`UU5.Bricks.Tabs dynamic=false 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -1803,6 +3057,26 @@ exports[`UU5.Bricks.Tabs dynamic=true 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -1815,9 +3089,27 @@ exports[`UU5.Bricks.Tabs dynamic=true 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -1847,6 +3139,26 @@ exports[`UU5.Bricks.Tabs fade=false 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -1859,9 +3171,27 @@ exports[`UU5.Bricks.Tabs fade=false 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -1891,6 +3221,26 @@ exports[`UU5.Bricks.Tabs fade=true 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -1904,9 +3254,29 @@ exports[`UU5.Bricks.Tabs fade=true 1`] = `
         _fade={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        _fade={true}
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        _fade={true}
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -1936,6 +3306,26 @@ exports[`UU5.Bricks.Tabs hidden=false 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -1948,9 +3338,27 @@ exports[`UU5.Bricks.Tabs hidden=false 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -1980,6 +3388,26 @@ exports[`UU5.Bricks.Tabs hidden=true 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -1992,9 +3420,27 @@ exports[`UU5.Bricks.Tabs hidden=true 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -2024,6 +3470,26 @@ exports[`UU5.Bricks.Tabs id="myId" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -2036,9 +3502,27 @@ exports[`UU5.Bricks.Tabs id="myId" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -2068,6 +3552,26 @@ exports[`UU5.Bricks.Tabs ignoreHTML=false 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -2080,9 +3584,27 @@ exports[`UU5.Bricks.Tabs ignoreHTML=false 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -2112,6 +3634,26 @@ exports[`UU5.Bricks.Tabs ignoreHTML=true 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -2124,9 +3666,109 @@ exports[`UU5.Bricks.Tabs ignoreHTML=true 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Tabs initialActiveName="tab2" 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  >
+    <ul
+      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
+    >
+      <li
+        key="0"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 1"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        className="uu5-bricks-tabs-list-active"
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <Line
+        colorSchema="custom"
+        size="1px"
+      />
+    </ul>
+    <div
+      className="uu5-bricks-tabs-list-content"
+    >
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 1"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        _active={true}
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -2156,6 +3798,26 @@ exports[`UU5.Bricks.Tabs justified=false 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -2168,9 +3830,27 @@ exports[`UU5.Bricks.Tabs justified=false 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -2200,6 +3880,26 @@ exports[`UU5.Bricks.Tabs justified=true 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -2212,9 +3912,27 @@ exports[`UU5.Bricks.Tabs justified=true 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -2244,47 +3962,23 @@ exports[`UU5.Bricks.Tabs mainAttrs=undefined 1`] = `
           ref_={[Function]}
         />
       </li>
-      <Line
-        colorSchema="custom"
-        size="1px"
-      />
-    </ul>
-    <div
-      className="uu5-bricks-tabs-list-content"
-    >
-      <tabs-item
-        _active={true}
-        getButton={[Function]}
-        header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
-      >
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
-      </tabs-item>
-    </div>
-  </div>
-</Fragment>
-`;
-
-exports[`UU5.Bricks.Tabs mountTabContent="onActive" 1`] = `
-<Fragment>
-  <div
-    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  >
-    <ul
-      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-    >
       <li
-        className="uu5-bricks-tabs-list-active"
-        key="0"
+        key="1"
       >
         <Button
           bgStyle="transparent"
-          content="Tab 1"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
           ref_={[Function]}
         />
       </li>
@@ -2300,97 +3994,27 @@ exports[`UU5.Bricks.Tabs mountTabContent="onActive" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
-    </div>
-  </div>
-</Fragment>
-`;
-
-exports[`UU5.Bricks.Tabs mountTabContent="onFirstActive" 1`] = `
-<Fragment>
-  <div
-    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  >
-    <ul
-      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-    >
-      <li
-        className="uu5-bricks-tabs-list-active"
-        key="0"
-      >
-        <Button
-          bgStyle="transparent"
-          content="Tab 1"
-          ref_={[Function]}
-        />
-      </li>
-      <Line
-        colorSchema="custom"
-        size="1px"
-      />
-    </ul>
-    <div
-      className="uu5-bricks-tabs-list-content"
-    >
       <tabs-item
-        _active={true}
         getButton={[Function]}
-        header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
-    </div>
-  </div>
-</Fragment>
-`;
-
-exports[`UU5.Bricks.Tabs mountTabContent="onFirstRender" 1`] = `
-<Fragment>
-  <div
-    className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  >
-    <ul
-      className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
-    >
-      <li
-        className="uu5-bricks-tabs-list-active"
-        key="0"
-      >
-        <Button
-          bgStyle="transparent"
-          content="Tab 1"
-          ref_={[Function]}
-        />
-      </li>
-      <Line
-        colorSchema="custom"
-        size="1px"
-      />
-    </ul>
-    <div
-      className="uu5-bricks-tabs-list-content"
-    >
       <tabs-item
-        _active={true}
         getButton={[Function]}
-        header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -2421,6 +4045,26 @@ exports[`UU5.Bricks.Tabs name="myName" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -2433,9 +4077,27 @@ exports[`UU5.Bricks.Tabs name="myName" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -2465,6 +4127,26 @@ exports[`UU5.Bricks.Tabs nestingLevel="bigBox" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -2477,9 +4159,27 @@ exports[`UU5.Bricks.Tabs nestingLevel="bigBox" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -2509,6 +4209,26 @@ exports[`UU5.Bricks.Tabs nestingLevel="bigBoxCollection" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -2521,9 +4241,27 @@ exports[`UU5.Bricks.Tabs nestingLevel="bigBoxCollection" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -2553,6 +4291,26 @@ exports[`UU5.Bricks.Tabs nestingLevel="box" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -2565,9 +4323,27 @@ exports[`UU5.Bricks.Tabs nestingLevel="box" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -2597,6 +4373,26 @@ exports[`UU5.Bricks.Tabs nestingLevel="boxCollection" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -2609,9 +4405,27 @@ exports[`UU5.Bricks.Tabs nestingLevel="boxCollection" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -2641,6 +4455,26 @@ exports[`UU5.Bricks.Tabs nestingLevel="container" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -2653,9 +4487,27 @@ exports[`UU5.Bricks.Tabs nestingLevel="container" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -2687,6 +4539,26 @@ exports[`UU5.Bricks.Tabs nestingLevel="page" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -2699,9 +4571,27 @@ exports[`UU5.Bricks.Tabs nestingLevel="page" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -2731,6 +4621,26 @@ exports[`UU5.Bricks.Tabs nestingLevel="smallBox" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -2743,9 +4653,27 @@ exports[`UU5.Bricks.Tabs nestingLevel="smallBox" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -2775,6 +4703,26 @@ exports[`UU5.Bricks.Tabs nestingLevel="smallBoxCollection" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -2787,9 +4735,27 @@ exports[`UU5.Bricks.Tabs nestingLevel="smallBoxCollection" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -2819,6 +4785,26 @@ exports[`UU5.Bricks.Tabs nestingLevel="spa" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -2831,9 +4817,27 @@ exports[`UU5.Bricks.Tabs nestingLevel="spa" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -2863,6 +4867,26 @@ exports[`UU5.Bricks.Tabs noIndex=false 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -2875,9 +4899,27 @@ exports[`UU5.Bricks.Tabs noIndex=false 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -2907,6 +4949,26 @@ exports[`UU5.Bricks.Tabs noIndex=true 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -2919,9 +4981,27 @@ exports[`UU5.Bricks.Tabs noIndex=true 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -2951,6 +5031,26 @@ exports[`UU5.Bricks.Tabs pureRender=false 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -2963,9 +5063,27 @@ exports[`UU5.Bricks.Tabs pureRender=false 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -2995,6 +5113,26 @@ exports[`UU5.Bricks.Tabs pureRender=true 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -3007,9 +5145,27 @@ exports[`UU5.Bricks.Tabs pureRender=true 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -3091,6 +5247,26 @@ exports[`UU5.Bricks.Tabs selected=false 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -3103,9 +5279,27 @@ exports[`UU5.Bricks.Tabs selected=false 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -3135,6 +5329,26 @@ exports[`UU5.Bricks.Tabs selected=true 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -3147,9 +5361,27 @@ exports[`UU5.Bricks.Tabs selected=true 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -3179,6 +5411,26 @@ exports[`UU5.Bricks.Tabs stacked=false 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -3191,9 +5443,27 @@ exports[`UU5.Bricks.Tabs stacked=false 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -3223,6 +5493,26 @@ exports[`UU5.Bricks.Tabs stacked=true 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="s"
@@ -3236,9 +5526,27 @@ exports[`UU5.Bricks.Tabs stacked=true 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -3273,6 +5581,26 @@ exports[`UU5.Bricks.Tabs style="padding:8px; borderRadius: 2px" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -3285,9 +5613,27 @@ exports[`UU5.Bricks.Tabs style="padding:8px; borderRadius: 2px" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -3322,6 +5668,26 @@ exports[`UU5.Bricks.Tabs style={"backgroundColor":"red","color":"blue"} 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -3334,9 +5700,27 @@ exports[`UU5.Bricks.Tabs style={"backgroundColor":"red","color":"blue"} 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -3366,6 +5750,26 @@ exports[`UU5.Bricks.Tabs textCorrector=false 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -3378,9 +5782,27 @@ exports[`UU5.Bricks.Tabs textCorrector=false 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -3410,6 +5832,26 @@ exports[`UU5.Bricks.Tabs textCorrector=true 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -3422,9 +5864,27 @@ exports[`UU5.Bricks.Tabs textCorrector=true 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -3454,6 +5914,26 @@ exports[`UU5.Bricks.Tabs tooltip="My Tooltip" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -3466,9 +5946,27 @@ exports[`UU5.Bricks.Tabs tooltip="My Tooltip" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -3497,6 +5995,24 @@ exports[`UU5.Bricks.Tabs type="pills" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -3509,9 +6025,27 @@ exports[`UU5.Bricks.Tabs type="pills" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>
@@ -3541,6 +6075,26 @@ exports[`UU5.Bricks.Tabs type="tabs" 1`] = `
           ref_={[Function]}
         />
       </li>
+      <li
+        key="1"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 2"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Button
+          bgStyle="transparent"
+          content="Tab 3"
+          onClick={[Function]}
+          ref_={[Function]}
+        />
+      </li>
       <Line
         colorSchema="custom"
         size="1px"
@@ -3553,9 +6107,27 @@ exports[`UU5.Bricks.Tabs type="tabs" 1`] = `
         _active={true}
         getButton={[Function]}
         header="Tab 1"
-        id="active"
-        key="childID"
-        name="active"
+        id="tab1"
+        key="tab1"
+        name="tab1"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 2"
+        id="tab2"
+        key="tab2"
+        name="tab2"
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </tabs-item>
+      <tabs-item
+        getButton={[Function]}
+        header="Tab 3"
+        id="tab3"
+        key="tab3"
+        name="tab3"
       >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </tabs-item>

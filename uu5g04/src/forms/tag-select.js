@@ -50,6 +50,7 @@ export const TagSelect = Context.withContext(
       placeholder: UU5.PropTypes.string,
       required: UU5.PropTypes.bool,
       requiredMessage: UU5.PropTypes.any,
+      popoverLocation: UU5.PropTypes.oneOf(["local", "portal"]),
     },
     //@@viewOff:propTypes
 
@@ -67,6 +68,7 @@ export const TagSelect = Context.withContext(
         placeholder: undefined,
         required: false,
         requiredMessage: undefined,
+        popoverLocation: "local", // "local" <=> backward-compatible behaviour
       };
     },
     //@@viewOff:getDefaultProps
@@ -139,7 +141,7 @@ export const TagSelect = Context.withContext(
       if (this.props.required && !this._hasValue(this.state.value)) {
         this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessage"));
         result = false;
-      } else if (feedback === "error") {
+      } else if (feedback === "error" && !this.props.onValidate) {
         result = false;
       }
 
@@ -149,10 +151,11 @@ export const TagSelect = Context.withContext(
           if (validation.feedback === "error") {
             this.setError(validation.message);
             result = false;
+          } else {
+            this.setInitial();
           }
         }
       }
-
       return result;
     },
     //@@viewOff:interface
@@ -404,6 +407,12 @@ export const TagSelect = Context.withContext(
         if (!state.open) newState.open = true;
         return newState;
       }, this._onOpen);
+    },
+
+    _onInputWrapperResize() {
+      if (this.props.popoverLocation === "portal" && this.state.open) {
+        this._onOpen();
+      }
     },
 
     _getSetTagValuesResult(values) {
@@ -660,6 +669,7 @@ export const TagSelect = Context.withContext(
             aroundElement: UU5.Common.DOM.findNode(this._itemsInput),
             position: "bottom",
             offset: 4,
+            fitWidthToAroundElement: this.props.popoverLocation === "portal",
           },
           setStateCallback
         );
@@ -877,6 +887,11 @@ export const TagSelect = Context.withContext(
         let items = this._getItemListItems();
 
         if (items.length) {
+          let className = this.getClassName("itemList");
+          if (this.props.popoverLocation === "portal") {
+            className += " " + this.getClassName("input", "UU5.Forms.InputMixin") + this.props.size;
+          }
+
           result = (
             <ItemList
               onChange={this._addTagValue}
@@ -884,7 +899,8 @@ export const TagSelect = Context.withContext(
               id={`${this.getId()}-item-list`}
               value={this.state.value}
               parent={this}
-              className={this.getClassName("itemList")}
+              className={className}
+              location={this.props.popoverLocation}
             >
               {items}
             </ItemList>
@@ -958,6 +974,9 @@ export const TagSelect = Context.withContext(
                 mainAttrs={this._getInputMainAttrs()}
               />
               {this._getItemList()}
+              {this.props.popoverLocation === "portal" && this.state.open ? (
+                <UU5.Bricks.ResizeObserver onResize={this._onInputWrapperResize} key="resizeObserver" />
+              ) : null}
             </>
           )}
         </UU5.Bricks.Div>

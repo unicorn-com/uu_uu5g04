@@ -54,6 +54,7 @@ export const TextIcon = Context.withContext(
       onClick: UU5.PropTypes.func,
       pattern: UU5.PropTypes.string,
       actionOnEnter: UU5.PropTypes.bool,
+      popoverLocation: UU5.PropTypes.oneOf(["local", "portal"]),
     },
     //@@viewOff:propTypes
 
@@ -67,6 +68,7 @@ export const TextIcon = Context.withContext(
         onClick: null,
         pattern: null,
         actionOnEnter: false,
+        popoverLocation: "local", // "local" <=> backward-compatible behaviour
       };
     },
     //@@viewOff:getDefaultProps
@@ -267,6 +269,7 @@ export const TextIcon = Context.withContext(
         iconOnClick: this._onIconClick,
         clickable: typeof this.props.onClick === "function",
         size: this.props.size,
+        popoverLocation: this.props.popoverLocation,
       };
 
       if (this.state.autocompleteItems) {
@@ -302,7 +305,7 @@ export const TextIcon = Context.withContext(
         </div>
       );
     },
-    //@@viewOn:render
+    //@@viewOff:render
   })
 );
 

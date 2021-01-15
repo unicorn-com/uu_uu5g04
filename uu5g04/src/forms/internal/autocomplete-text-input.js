@@ -76,6 +76,7 @@ export const AutocompleteTextInput = UU5.Common.VisualComponent.create({
     itemListProps: UU5.PropTypes.object,
     onClose: UU5.PropTypes.func,
     onOpen: UU5.PropTypes.func,
+    popoverLocation: UU5.PropTypes.oneOf(["local", "portal"]),
   },
   //@@viewOff:propTypes
 
@@ -108,6 +109,7 @@ export const AutocompleteTextInput = UU5.Common.VisualComponent.create({
       itemListProps: undefined,
       onClose: undefined,
       onOpen: undefined,
+      popoverLocation: "local", // "local" <=> backward-compatible behaviour
     };
   },
   //@@viewOff:getDefaultProps
@@ -270,13 +272,17 @@ export const AutocompleteTextInput = UU5.Common.VisualComponent.create({
             e.preventDefault();
             if (this.props.open) {
               current = current + 1 >= items.length ? items.length - 1 : current + 1;
-              items && items.length && items[current].focus();
+              // timeout to prevent focus before the popover with items has been positioned properly
+              // which causes some browsers to scroll to it's unpositioned position
+              setTimeout(() => items && items.length && items[current].focus());
             } else {
               current = 0;
               this.props.onOpen(() => {
                 itemList = this._itemList;
                 items = itemList.getRenderedChildren();
-                items && items.length && items[current].focus();
+                // timeout to prevent focus before the popover with items has been positioned properly
+                // which causes some browsers to scroll to it's unpositioned position
+                setTimeout(() => items && items.length && items[current].focus());
               });
             }
           }
@@ -294,6 +300,12 @@ export const AutocompleteTextInput = UU5.Common.VisualComponent.create({
     if (!(clickData.input || clickData.picker)) {
       this._close(() => this._onBlur(opt));
       this._removeEvent();
+    }
+  },
+
+  _onInputWrapperResize() {
+    if (this.props.popoverLocation === "portal" && this.state.open) {
+      this._open();
     }
   },
 
@@ -318,6 +330,7 @@ export const AutocompleteTextInput = UU5.Common.VisualComponent.create({
           aroundElement: this._textInput.findDOMNode(),
           position: "bottom",
           offset: 4,
+          fitWidthToAroundElement: this.props.popoverLocation === "portal",
         },
         setStateCallback
       );
@@ -406,10 +419,13 @@ export const AutocompleteTextInput = UU5.Common.VisualComponent.create({
             {this.props.foundItemListItems}
           </ItemList>
         )}
+        {this.props.popoverLocation === "portal" && this.props.open ? (
+          <UU5.Bricks.ResizeObserver onResize={this._onInputWrapperResize} key="resizeObserver" />
+        ) : null}
       </UU5.Common.Fragment>
     );
   },
-  //@@viewOn:render
+  //@@viewOff:render
 });
 
 export default AutocompleteTextInput;

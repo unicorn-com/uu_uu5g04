@@ -8,8 +8,6 @@ import ns from "./bricks-editable-ns.js";
 import EditableLsi from "./bricks-editable-lsi.js";
 //@@viewOff:imports
 
-const Lsi = EditableLsi;
-
 const getEditableItemLabel = (itemProps, itemIndex) => {
   if (itemProps.header) {
     return itemProps.header;
@@ -31,7 +29,7 @@ const editableComponentPropsSetup = [
     name: "type",
     type: "switchSelector",
     label: EditableLsi.tabs.typeLabel,
-    getProps: (props) => ({
+    getProps: () => ({
       items: [
         { value: "tabs", content: <UU5.Bricks.Lsi lsi={EditableLsi.tabs.typeValueTabs} /> },
         { value: "pills", content: <UU5.Bricks.Lsi lsi={EditableLsi.tabs.typeValuePills} /> },
@@ -42,7 +40,7 @@ const editableComponentPropsSetup = [
     name: "size",
     type: "switchSelector",
     label: EditableLsi.common.sizeLabel,
-    getProps: (props) => ({
+    getProps: () => ({
       items: [
         { value: "s", content: <UU5.Bricks.Lsi lsi={EditableLsi.common.sizeValueS} /> },
         { value: "m", content: <UU5.Bricks.Lsi lsi={EditableLsi.common.sizeValueM} /> },
@@ -61,7 +59,7 @@ const editableComponentPropsSetup = [
     name: "elevation",
     type: "switchSelector",
     label: EditableLsi.tabs.elevationLabel,
-    getProps: (props) => ({
+    getProps: () => ({
       items: [
         { value: "0", content: "0" },
         { value: "1", content: "1" },
@@ -76,7 +74,7 @@ const editableComponentPropsSetup = [
     name: "elevationHover",
     type: "switchSelector",
     label: EditableLsi.tabs.elevationHoverLabel,
-    getProps: (props) => ({
+    getProps: () => ({
       items: [
         { value: "0", content: "0" },
         { value: "1", content: "1" },
@@ -124,6 +122,23 @@ const editableComponentPropsSetup = [
 
 const editableAdditionalPropsSetup = [
   { name: "colorSchema", type: "colorSchema", label: EditableLsi.common.colorSchemaLabel },
+  {
+    name: "initialActiveName",
+    type: "switchSelector",
+    label: EditableLsi.tabs.initialActiveNameLabel,
+    getProps: (props, componentProps, items) => {
+      let usedItems = items.map((item) => ({
+        content: item.props.name || item.props.id + "",
+        value: item.props.name || item.props.id + "",
+      }));
+      let hasValue = items.some((item) => item.props.name === props.value || item.props.id === props.value);
+      return {
+        ...props,
+        items: usedItems,
+        value: hasValue ? props.value : usedItems[0]?.value,
+      };
+    },
+  },
   {
     name: "disabled",
     type: "switchSelector",

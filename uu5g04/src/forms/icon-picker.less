@@ -90,6 +90,74 @@
     }
   }
 
+  &:not(.@{name}-input-read-only):not(.uu5-common-disabled) .@{name}-iconpicker-item {
+    border: 1px dashed transparent;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px dashed #696969;
+    }
+  }
+
+  &.@{name}-input-read-only {
+    .@{name}-iconpicker-open-button {
+      cursor: pointer;
+    }
+  }
+
+  .@{name}-iconpicker-error {
+    width: 100%;
+    text-align: center;
+    font-size: 19px;
+    padding: 26px;
+  }
+
+  .uu5-bricks-button-s .uu5-forms-input-loading-icon {
+    left: 11px;
+    top: 3px;
+
+    &, & > svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .uu5-bricks-button-m .uu5-forms-input-loading-icon {
+    left: 17px;
+    top: 7px;
+
+    &, & > svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .uu5-bricks-button-l .uu5-forms-input-loading-icon {
+    left: 22px;
+    top: 8px;
+
+    &, & > svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .uu5-bricks-button-xl .uu5-forms-input-loading-icon {
+    left: 28px;
+    top: 11px;
+
+    &, & > svg {
+      width: 26px;
+      height: 26px;
+    }
+  }
+}
+
+.@{name}-iconpicker.@{name}-screen-size-behaviour .@{name}-iconpicker-picker {
+  position: relative;
+}
+
+.@{name}-iconpicker-picker {
   .@{name}-iconpicker-header {
     background-color: #FFF;
     padding: 4px 4px;
@@ -156,7 +224,7 @@
     }
   }
 
-  .@{name}-iconpicker-picker {
+  && {
     width: 267px;
 
     .@{name}-iconpicker-body {
@@ -200,72 +268,9 @@
     }
   }
 
-  &:not(.@{name}-input-read-only):not(.uu5-common-disabled) .@{name}-iconpicker-item {
-    border: 1px dashed transparent;
-    cursor: pointer;
-
-    &:hover {
-      border: 1px dashed #696969;
-    }
-  }
-
   &.@{name}-input-read-only {
-    .@{name}-iconpicker-open-button {
-      cursor: pointer;
-    }
     .@{name}-iconpicker-item {
       outline: none;
     }
   }
-
-  .@{name}-iconpicker-error {
-    width: 100%;
-    text-align: center;
-    font-size: 19px;
-    padding: 26px;
-  }
-
-  .uu5-bricks-button-s .uu5-forms-input-loading-icon {
-    left: 11px;
-    top: 3px;
-
-    &, & > svg {
-      width: 16px;
-      height: 16px;
-    }
-  }
-
-  .uu5-bricks-button-m .uu5-forms-input-loading-icon {
-    left: 17px;
-    top: 7px;
-
-    &, & > svg {
-      width: 18px;
-      height: 18px;
-    }
-  }
-
-  .uu5-bricks-button-l .uu5-forms-input-loading-icon {
-    left: 22px;
-    top: 8px;
-
-    &, & > svg {
-      width: 24px;
-      height: 24px;
-    }
-  }
-
-  .uu5-bricks-button-xl .uu5-forms-input-loading-icon {
-    left: 28px;
-    top: 11px;
-
-    &, & > svg {
-      width: 26px;
-      height: 26px;
-    }
-  }
-}
-
-.@{name}-iconpicker.@{name}-screen-size-behaviour .@{name}-iconpicker-picker {
-  position: relative;
 }

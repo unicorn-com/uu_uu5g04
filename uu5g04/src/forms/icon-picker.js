@@ -86,6 +86,7 @@ export const IconPicker = Context.withContext(
       elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
       openToContent: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string]),
       onClose: UU5.PropTypes.func,
+      popoverLocation: UU5.PropTypes.oneOf(["local", "portal"]),
     },
     //@@viewOff:propTypes
 
@@ -102,6 +103,7 @@ export const IconPicker = Context.withContext(
         elevation: null,
         openToContent: "xs",
         onClose: null,
+        popoverLocation: "local", // "local" <=> backward-compatible behaviour
       };
     },
     //@@viewOff:getDefaultProps
@@ -451,6 +453,7 @@ export const IconPicker = Context.withContext(
           this._calls.push(library);
           let xhttp = new XMLHttpRequest();
           xhttp.onreadystatechange = () => {
+            if (!this.isRendered()) return;
             if (xhttp.readyState == 4 && xhttp.status == 200) {
               let callIndex;
               this._calls.find((call, index) => {
@@ -710,6 +713,21 @@ export const IconPicker = Context.withContext(
       props.controlled = false;
       props.disableBackdrop = this.props.disableBackdrop;
       props.header = this._getHeader();
+      props.location = !this._shouldOpenToContent() ? this.props.popoverLocation : "local";
+      props.id = this.getId() + "-popover";
+      props.className = "";
+
+      if (this.props.popoverLocation === "portal") {
+        props.className = this.getClassName("input", "UU5.Forms.InputMixin") + this.props.size;
+      }
+
+      if (this.props.categories.length > 1) {
+        props.className += " " + this.getClassName("multicategory");
+      }
+
+      if (this.state.readOnly) {
+        props.className += " " + this.getClassName("readOnly", "UU5.Forms.InputMixin");
+      }
 
       return props;
     },

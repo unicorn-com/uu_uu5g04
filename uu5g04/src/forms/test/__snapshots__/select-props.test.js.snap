@@ -18,6 +18,7 @@ exports[`UU5.Forms.Select default props UU5.Forms.Select check default props 1`]
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -32,7 +33,10 @@ exports[`UU5.Forms.Select default props UU5.Forms.Select check default props 1`]
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -60,6 +64,7 @@ exports[`UU5.Forms.Select props UU5.Forms.Select Component from allow tags is us
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -78,7 +83,10 @@ exports[`UU5.Forms.Select props UU5.Forms.Select Component from allow tags is us
           "UU5.Example.MyCompButton",
         ]
       }
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -106,6 +114,7 @@ exports[`UU5.Forms.Select props allowTags=["UU5.Example.MyCompButton"] 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -124,7 +133,10 @@ exports[`UU5.Forms.Select props allowTags=["UU5.Example.MyCompButton"] 1`] = `
           "UU5.Example.MyCompButton",
         ]
       }
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -152,6 +164,7 @@ exports[`UU5.Forms.Select props buttonHidden=false 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -166,7 +179,10 @@ exports[`UU5.Forms.Select props buttonHidden=false 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -194,6 +210,7 @@ exports[`UU5.Forms.Select props buttonHidden=true 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -208,7 +225,10 @@ exports[`UU5.Forms.Select props buttonHidden=true 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -236,6 +256,7 @@ exports[`UU5.Forms.Select props checkGrammar=false 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -250,7 +271,10 @@ exports[`UU5.Forms.Select props checkGrammar=false 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -278,6 +302,7 @@ exports[`UU5.Forms.Select props checkGrammar=true 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -292,7 +317,10 @@ exports[`UU5.Forms.Select props checkGrammar=true 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -320,6 +348,7 @@ exports[`UU5.Forms.Select props checkHighlight=false 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -334,7 +363,10 @@ exports[`UU5.Forms.Select props checkHighlight=false 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -362,6 +394,7 @@ exports[`UU5.Forms.Select props checkHighlight=true 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -376,7 +409,10 @@ exports[`UU5.Forms.Select props checkHighlight=true 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -404,6 +440,7 @@ exports[`UU5.Forms.Select props checkSpaces=false 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -418,7 +455,10 @@ exports[`UU5.Forms.Select props checkSpaces=false 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -446,6 +486,7 @@ exports[`UU5.Forms.Select props checkSpaces=true 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -460,7 +501,10 @@ exports[`UU5.Forms.Select props checkSpaces=true 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -488,6 +532,7 @@ exports[`UU5.Forms.Select props className="my-classname" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -502,7 +547,10 @@ exports[`UU5.Forms.Select props className="my-classname" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -531,6 +579,7 @@ exports[`UU5.Forms.Select props colorSchema="brown" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -545,7 +594,10 @@ exports[`UU5.Forms.Select props colorSchema="brown" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -574,6 +626,7 @@ exports[`UU5.Forms.Select props colorSchema="brown-rich" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -588,7 +641,10 @@ exports[`UU5.Forms.Select props colorSchema="brown-rich" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -617,6 +673,7 @@ exports[`UU5.Forms.Select props colorSchema="cyan" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -631,7 +688,10 @@ exports[`UU5.Forms.Select props colorSchema="cyan" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -660,6 +720,7 @@ exports[`UU5.Forms.Select props colorSchema="cyan-rich" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -674,7 +735,10 @@ exports[`UU5.Forms.Select props colorSchema="cyan-rich" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -703,6 +767,7 @@ exports[`UU5.Forms.Select props colorSchema="default" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -717,7 +782,10 @@ exports[`UU5.Forms.Select props colorSchema="default" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -746,6 +814,7 @@ exports[`UU5.Forms.Select props colorSchema="green" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -760,7 +829,10 @@ exports[`UU5.Forms.Select props colorSchema="green" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -789,6 +861,7 @@ exports[`UU5.Forms.Select props colorSchema="green-rich" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -803,7 +876,10 @@ exports[`UU5.Forms.Select props colorSchema="green-rich" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -832,6 +908,7 @@ exports[`UU5.Forms.Select props colorSchema="grey" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -846,7 +923,10 @@ exports[`UU5.Forms.Select props colorSchema="grey" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -875,6 +955,7 @@ exports[`UU5.Forms.Select props colorSchema="grey-rich" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -889,7 +970,10 @@ exports[`UU5.Forms.Select props colorSchema="grey-rich" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -918,6 +1002,7 @@ exports[`UU5.Forms.Select props colorSchema="orange" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -932,7 +1017,10 @@ exports[`UU5.Forms.Select props colorSchema="orange" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -961,6 +1049,7 @@ exports[`UU5.Forms.Select props colorSchema="orange-rich" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -975,7 +1064,10 @@ exports[`UU5.Forms.Select props colorSchema="orange-rich" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1004,6 +1096,7 @@ exports[`UU5.Forms.Select props colorSchema="pink" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1018,7 +1111,10 @@ exports[`UU5.Forms.Select props colorSchema="pink" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1047,6 +1143,7 @@ exports[`UU5.Forms.Select props colorSchema="pink-rich" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1061,7 +1158,10 @@ exports[`UU5.Forms.Select props colorSchema="pink-rich" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1090,6 +1190,7 @@ exports[`UU5.Forms.Select props colorSchema="purple" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1104,7 +1205,10 @@ exports[`UU5.Forms.Select props colorSchema="purple" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1133,6 +1237,7 @@ exports[`UU5.Forms.Select props colorSchema="purple-rich" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1147,7 +1252,10 @@ exports[`UU5.Forms.Select props colorSchema="purple-rich" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1176,6 +1284,7 @@ exports[`UU5.Forms.Select props colorSchema="red" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1190,7 +1299,10 @@ exports[`UU5.Forms.Select props colorSchema="red" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1219,6 +1331,7 @@ exports[`UU5.Forms.Select props colorSchema="red-rich" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1233,7 +1346,10 @@ exports[`UU5.Forms.Select props colorSchema="red-rich" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1262,6 +1378,7 @@ exports[`UU5.Forms.Select props colorSchema="yellow" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1276,7 +1393,10 @@ exports[`UU5.Forms.Select props colorSchema="yellow" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1305,6 +1425,7 @@ exports[`UU5.Forms.Select props colorSchema="yellow-rich" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1319,7 +1440,10 @@ exports[`UU5.Forms.Select props colorSchema="yellow-rich" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1347,6 +1471,7 @@ exports[`UU5.Forms.Select props content="This is Content from ContentMixin" 1`] 
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1361,7 +1486,10 @@ exports[`UU5.Forms.Select props content="This is Content from ContentMixin" 1`] 
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1389,6 +1517,7 @@ exports[`UU5.Forms.Select props content=12345 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1403,7 +1532,10 @@ exports[`UU5.Forms.Select props content=12345 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1431,6 +1563,7 @@ exports[`UU5.Forms.Select props controlled=false 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1445,7 +1578,10 @@ exports[`UU5.Forms.Select props controlled=false 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1473,6 +1609,7 @@ exports[`UU5.Forms.Select props controlled=true 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1487,7 +1624,10 @@ exports[`UU5.Forms.Select props controlled=true 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1515,6 +1655,7 @@ exports[`UU5.Forms.Select props default props 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1529,7 +1670,10 @@ exports[`UU5.Forms.Select props default props 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1557,6 +1701,7 @@ exports[`UU5.Forms.Select props disableBackdrop=false 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1571,7 +1716,10 @@ exports[`UU5.Forms.Select props disableBackdrop=false 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1599,6 +1747,7 @@ exports[`UU5.Forms.Select props disableBackdrop=true 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1613,7 +1762,10 @@ exports[`UU5.Forms.Select props disableBackdrop=true 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1641,6 +1793,7 @@ exports[`UU5.Forms.Select props disabled=false 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1655,7 +1808,10 @@ exports[`UU5.Forms.Select props disabled=false 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1683,6 +1839,7 @@ exports[`UU5.Forms.Select props disabled=true 1`] = `
       icon={null}
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       readonly={false}
@@ -1691,7 +1848,11 @@ exports[`UU5.Forms.Select props disabled=true 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
+      disabled={true}
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1719,6 +1880,7 @@ exports[`UU5.Forms.Select props dynamic=false 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1733,7 +1895,10 @@ exports[`UU5.Forms.Select props dynamic=false 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1761,6 +1926,7 @@ exports[`UU5.Forms.Select props dynamic=true 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1775,7 +1941,10 @@ exports[`UU5.Forms.Select props dynamic=true 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1804,6 +1973,7 @@ exports[`UU5.Forms.Select props feedback="error" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1818,7 +1988,10 @@ exports[`UU5.Forms.Select props feedback="error" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1846,6 +2019,7 @@ exports[`UU5.Forms.Select props feedback="initial" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1860,7 +2034,10 @@ exports[`UU5.Forms.Select props feedback="initial" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1889,6 +2066,7 @@ exports[`UU5.Forms.Select props feedback="loading" 1`] = `
       icon={null}
       id="uuID-input"
       inputWidth={null}
+      key="input"
       loading={true}
       mainAttrs={Object {}}
       name="uuID-input"
@@ -1898,7 +2076,10 @@ exports[`UU5.Forms.Select props feedback="loading" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1927,6 +2108,7 @@ exports[`UU5.Forms.Select props feedback="success" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1941,7 +2123,10 @@ exports[`UU5.Forms.Select props feedback="success" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -1970,6 +2155,7 @@ exports[`UU5.Forms.Select props feedback="warning" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -1984,7 +2170,10 @@ exports[`UU5.Forms.Select props feedback="warning" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2081,6 +2270,7 @@ exports[`UU5.Forms.Select props hidden=false 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2095,7 +2285,10 @@ exports[`UU5.Forms.Select props hidden=false 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2123,6 +2316,7 @@ exports[`UU5.Forms.Select props hidden=true 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2137,7 +2331,10 @@ exports[`UU5.Forms.Select props hidden=true 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2165,6 +2362,7 @@ exports[`UU5.Forms.Select props iconClosed="mdi-chevron-down" 1`] = `
       icon="mdi-chevron-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2179,7 +2377,10 @@ exports[`UU5.Forms.Select props iconClosed="mdi-chevron-down" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2207,6 +2408,7 @@ exports[`UU5.Forms.Select props iconOpen="mdi-chevron-up" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2221,7 +2423,10 @@ exports[`UU5.Forms.Select props iconOpen="mdi-chevron-up" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2249,6 +2454,7 @@ exports[`UU5.Forms.Select props id="myId" 1`] = `
       icon="mdi-menu-down"
       id="myId-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2263,7 +2469,10 @@ exports[`UU5.Forms.Select props id="myId" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="myId-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2291,6 +2500,7 @@ exports[`UU5.Forms.Select props ignoreHTML=false 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2305,7 +2515,10 @@ exports[`UU5.Forms.Select props ignoreHTML=false 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2333,6 +2546,7 @@ exports[`UU5.Forms.Select props ignoreHTML=true 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2347,7 +2561,10 @@ exports[`UU5.Forms.Select props ignoreHTML=true 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2375,6 +2592,7 @@ exports[`UU5.Forms.Select props inputAttrs={"type":"email","width":"150px"} 1`] 
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2391,7 +2609,10 @@ exports[`UU5.Forms.Select props inputAttrs={"type":"email","width":"150px"} 1`] 
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2419,6 +2640,7 @@ exports[`UU5.Forms.Select props inputColWidth="xs12 s6 m8 l9" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2433,7 +2655,10 @@ exports[`UU5.Forms.Select props inputColWidth="xs12 s6 m8 l9" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2461,6 +2686,7 @@ exports[`UU5.Forms.Select props inputColWidth="xs12 s9" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2475,7 +2701,10 @@ exports[`UU5.Forms.Select props inputColWidth="xs12 s9" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2507,6 +2736,7 @@ exports[`UU5.Forms.Select props label="Your personal email" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2521,7 +2751,10 @@ exports[`UU5.Forms.Select props label="Your personal email" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2549,6 +2782,7 @@ exports[`UU5.Forms.Select props labelAlignment="xs-left s-right" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2563,7 +2797,10 @@ exports[`UU5.Forms.Select props labelAlignment="xs-left s-right" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2591,6 +2828,7 @@ exports[`UU5.Forms.Select props labelAlignment="xs-right s-left" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2605,7 +2843,10 @@ exports[`UU5.Forms.Select props labelAlignment="xs-right s-left" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2633,6 +2874,7 @@ exports[`UU5.Forms.Select props labelColWidth="xs12 s3" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2647,7 +2889,10 @@ exports[`UU5.Forms.Select props labelColWidth="xs12 s3" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2675,6 +2920,7 @@ exports[`UU5.Forms.Select props labelColWidth="xs12 s6 m4 l3" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2689,7 +2935,10 @@ exports[`UU5.Forms.Select props labelColWidth="xs12 s6 m4 l3" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2717,6 +2966,7 @@ exports[`UU5.Forms.Select props language="cs" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2731,7 +2981,10 @@ exports[`UU5.Forms.Select props language="cs" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2759,6 +3012,7 @@ exports[`UU5.Forms.Select props language="de" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2773,7 +3027,10 @@ exports[`UU5.Forms.Select props language="de" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2801,6 +3058,7 @@ exports[`UU5.Forms.Select props language="en" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2815,7 +3073,10 @@ exports[`UU5.Forms.Select props language="en" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2843,6 +3104,7 @@ exports[`UU5.Forms.Select props language="en-gb" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2857,7 +3119,10 @@ exports[`UU5.Forms.Select props language="en-gb" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2885,6 +3150,7 @@ exports[`UU5.Forms.Select props language="en-us" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2899,7 +3165,10 @@ exports[`UU5.Forms.Select props language="en-us" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2927,6 +3196,7 @@ exports[`UU5.Forms.Select props language="es" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2941,7 +3211,10 @@ exports[`UU5.Forms.Select props language="es" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -2969,6 +3242,7 @@ exports[`UU5.Forms.Select props language="fr" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -2983,7 +3257,10 @@ exports[`UU5.Forms.Select props language="fr" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -3011,6 +3288,7 @@ exports[`UU5.Forms.Select props language="ru" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -3025,7 +3303,10 @@ exports[`UU5.Forms.Select props language="ru" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -3053,6 +3334,7 @@ exports[`UU5.Forms.Select props language="sk" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -3067,7 +3349,10 @@ exports[`UU5.Forms.Select props language="sk" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -3095,6 +3380,7 @@ exports[`UU5.Forms.Select props language="uk" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -3109,7 +3395,10 @@ exports[`UU5.Forms.Select props language="uk" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -3137,6 +3426,7 @@ exports[`UU5.Forms.Select props mainAttrs=undefined 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -3151,7 +3441,10 @@ exports[`UU5.Forms.Select props mainAttrs=undefined 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -3180,6 +3473,7 @@ exports[`UU5.Forms.Select props message="Your password is too short!" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -3194,7 +3488,10 @@ exports[`UU5.Forms.Select props message="Your password is too short!" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -3222,6 +3519,7 @@ exports[`UU5.Forms.Select props multiple=false 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -3236,7 +3534,10 @@ exports[`UU5.Forms.Select props multiple=false 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -3264,6 +3565,7 @@ exports[`UU5.Forms.Select props multiple=true 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -3279,7 +3581,10 @@ exports[`UU5.Forms.Select props multiple=true 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover uu5-forms-select-multiple"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={true}
       onChange={[Function]}
       ref_={[Function]}
@@ -3308,6 +3613,7 @@ exports[`UU5.Forms.Select props name="myName" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -3322,7 +3628,10 @@ exports[`UU5.Forms.Select props name="myName" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -3350,6 +3659,7 @@ exports[`UU5.Forms.Select props noIndex=false 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -3364,7 +3674,10 @@ exports[`UU5.Forms.Select props noIndex=false 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -3392,6 +3705,7 @@ exports[`UU5.Forms.Select props noIndex=true 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -3406,7 +3720,10 @@ exports[`UU5.Forms.Select props noIndex=true 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -3434,6 +3751,7 @@ exports[`UU5.Forms.Select props placeholder="Vyplňte jméno včetně titulů" 1
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -3449,7 +3767,10 @@ exports[`UU5.Forms.Select props placeholder="Vyplňte jméno včetně titulů" 1
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -3477,6 +3798,7 @@ exports[`UU5.Forms.Select props pureRender=false 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -3491,7 +3813,10 @@ exports[`UU5.Forms.Select props pureRender=false 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -3519,6 +3844,7 @@ exports[`UU5.Forms.Select props pureRender=true 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -3533,7 +3859,10 @@ exports[`UU5.Forms.Select props pureRender=true 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -3561,6 +3890,7 @@ exports[`UU5.Forms.Select props readOnly=false 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -3575,7 +3905,10 @@ exports[`UU5.Forms.Select props readOnly=false 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -3602,6 +3935,7 @@ exports[`UU5.Forms.Select props readOnly=true 1`] = `
       icon={null}
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       readonly={true}
@@ -3610,7 +3944,10 @@ exports[`UU5.Forms.Select props readOnly=true 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -3638,6 +3975,7 @@ exports[`UU5.Forms.Select props required=false 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -3652,7 +3990,10 @@ exports[`UU5.Forms.Select props required=false 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -3681,6 +4022,7 @@ exports[`UU5.Forms.Select props required=true 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -3695,7 +4037,10 @@ exports[`UU5.Forms.Select props required=true 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -3723,6 +4068,7 @@ exports[`UU5.Forms.Select props requiredMessage="Vyberte alespoň jednu možnost
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -3737,7 +4083,10 @@ exports[`UU5.Forms.Select props requiredMessage="Vyberte alespoň jednu možnost
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -3765,6 +4114,7 @@ exports[`UU5.Forms.Select props selectAllEnabled=false 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -3779,7 +4129,10 @@ exports[`UU5.Forms.Select props selectAllEnabled=false 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -3807,6 +4160,7 @@ exports[`UU5.Forms.Select props selectAllEnabled=true 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -3821,7 +4175,10 @@ exports[`UU5.Forms.Select props selectAllEnabled=true 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -3849,6 +4206,7 @@ exports[`UU5.Forms.Select props selected=false 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -3863,7 +4221,10 @@ exports[`UU5.Forms.Select props selected=false 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -3891,6 +4252,7 @@ exports[`UU5.Forms.Select props selected=true 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -3905,7 +4267,10 @@ exports[`UU5.Forms.Select props selected=true 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -3933,6 +4298,7 @@ exports[`UU5.Forms.Select props size="l" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -3947,7 +4313,10 @@ exports[`UU5.Forms.Select props size="l" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -3975,6 +4344,7 @@ exports[`UU5.Forms.Select props size="m" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -3989,7 +4359,10 @@ exports[`UU5.Forms.Select props size="m" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -4017,6 +4390,7 @@ exports[`UU5.Forms.Select props size="s" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -4031,7 +4405,10 @@ exports[`UU5.Forms.Select props size="s" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -4064,6 +4441,7 @@ exports[`UU5.Forms.Select props style="padding:8px; borderRadius: 2px" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -4078,7 +4456,10 @@ exports[`UU5.Forms.Select props style="padding:8px; borderRadius: 2px" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -4111,6 +4492,7 @@ exports[`UU5.Forms.Select props style={"backgroundColor":"red","color":"blue"} 1
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -4125,7 +4507,10 @@ exports[`UU5.Forms.Select props style={"backgroundColor":"red","color":"blue"} 1
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -4153,6 +4538,7 @@ exports[`UU5.Forms.Select props textCorrector=false 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -4167,7 +4553,10 @@ exports[`UU5.Forms.Select props textCorrector=false 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -4195,6 +4584,7 @@ exports[`UU5.Forms.Select props textCorrector=true 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -4209,7 +4599,10 @@ exports[`UU5.Forms.Select props textCorrector=true 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -4237,6 +4630,7 @@ exports[`UU5.Forms.Select props tooltip="My Tooltip" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -4251,7 +4645,10 @@ exports[`UU5.Forms.Select props tooltip="My Tooltip" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -4279,6 +4676,7 @@ exports[`UU5.Forms.Select props value="item_1" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -4297,7 +4695,10 @@ exports[`UU5.Forms.Select props value="item_1" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -4329,6 +4730,7 @@ exports[`UU5.Forms.Select props value="item_2" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -4347,7 +4749,10 @@ exports[`UU5.Forms.Select props value="item_2" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}
@@ -4379,6 +4784,7 @@ exports[`UU5.Forms.Select props value="item_3" 1`] = `
       icon="mdi-menu-down"
       id="uuID-input"
       inputWidth={null}
+      key="input"
       mainAttrs={
         Object {
           "onFocus": [Function],
@@ -4393,7 +4799,10 @@ exports[`UU5.Forms.Select props value="item_3" 1`] = `
     />
     <item-list
       allowTags={Array []}
+      className="uu5-forms-select-popover"
       hidden={true}
+      id="uuID-popover"
+      key="itemList"
       multiple={false}
       onChange={[Function]}
       ref_={[Function]}

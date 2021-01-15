@@ -31,8 +31,11 @@ exports[`UU5.Forms.DatePicker check default values UU5.Forms.DatePicker default 
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -71,8 +74,11 @@ exports[`UU5.Forms.DatePicker props afterRangeMessage="Přestřelil jsi, zkus tr
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -111,8 +117,11 @@ exports[`UU5.Forms.DatePicker props autocompleteItems=undefined 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -151,8 +160,11 @@ exports[`UU5.Forms.DatePicker props beforeRangeMessage="Zkus zadat pozdější d
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -191,8 +203,11 @@ exports[`UU5.Forms.DatePicker props buttonHidden=false 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -231,8 +246,11 @@ exports[`UU5.Forms.DatePicker props buttonHidden=true 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -271,8 +289,11 @@ exports[`UU5.Forms.DatePicker props calendarStartView="days" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -311,8 +332,11 @@ exports[`UU5.Forms.DatePicker props calendarStartView="months" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -351,8 +375,11 @@ exports[`UU5.Forms.DatePicker props calendarStartView="years" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -391,8 +418,11 @@ exports[`UU5.Forms.DatePicker props className="my-classname" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -432,8 +462,11 @@ exports[`UU5.Forms.DatePicker props colorSchema="brown" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -473,8 +506,11 @@ exports[`UU5.Forms.DatePicker props colorSchema="brown-rich" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -514,8 +550,11 @@ exports[`UU5.Forms.DatePicker props colorSchema="cyan" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -555,8 +594,11 @@ exports[`UU5.Forms.DatePicker props colorSchema="cyan-rich" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -596,8 +638,11 @@ exports[`UU5.Forms.DatePicker props colorSchema="default" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -637,8 +682,11 @@ exports[`UU5.Forms.DatePicker props colorSchema="green" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -678,8 +726,11 @@ exports[`UU5.Forms.DatePicker props colorSchema="green-rich" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -719,8 +770,11 @@ exports[`UU5.Forms.DatePicker props colorSchema="grey" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -760,8 +814,11 @@ exports[`UU5.Forms.DatePicker props colorSchema="grey-rich" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -801,8 +858,11 @@ exports[`UU5.Forms.DatePicker props colorSchema="orange" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -842,8 +902,11 @@ exports[`UU5.Forms.DatePicker props colorSchema="orange-rich" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -883,8 +946,11 @@ exports[`UU5.Forms.DatePicker props colorSchema="pink" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -924,8 +990,11 @@ exports[`UU5.Forms.DatePicker props colorSchema="pink-rich" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -965,8 +1034,11 @@ exports[`UU5.Forms.DatePicker props colorSchema="purple" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -1006,8 +1078,11 @@ exports[`UU5.Forms.DatePicker props colorSchema="purple-rich" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -1047,8 +1122,11 @@ exports[`UU5.Forms.DatePicker props colorSchema="red" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -1088,8 +1166,11 @@ exports[`UU5.Forms.DatePicker props colorSchema="red-rich" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -1129,8 +1210,11 @@ exports[`UU5.Forms.DatePicker props colorSchema="yellow" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -1170,8 +1254,11 @@ exports[`UU5.Forms.DatePicker props colorSchema="yellow-rich" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -1210,8 +1297,11 @@ exports[`UU5.Forms.DatePicker props controlled=false 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -1250,8 +1340,11 @@ exports[`UU5.Forms.DatePicker props controlled=true 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -1290,8 +1383,11 @@ exports[`UU5.Forms.DatePicker props country="en-us" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -1330,8 +1426,11 @@ exports[`UU5.Forms.DatePicker props dateFrom="1.1.1990" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -1370,8 +1469,11 @@ exports[`UU5.Forms.DatePicker props dateTo="1.1.2020" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -1410,8 +1512,11 @@ exports[`UU5.Forms.DatePicker props default props 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -1450,8 +1555,11 @@ exports[`UU5.Forms.DatePicker props disableBackdrop=false 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -1490,8 +1598,11 @@ exports[`UU5.Forms.DatePicker props disableBackdrop=true 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -1530,8 +1641,11 @@ exports[`UU5.Forms.DatePicker props disabled=false 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -1569,8 +1683,11 @@ exports[`UU5.Forms.DatePicker props disabled=true 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -1610,8 +1727,11 @@ exports[`UU5.Forms.DatePicker props feedback="error" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -1650,8 +1770,11 @@ exports[`UU5.Forms.DatePicker props feedback="initial" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -1691,8 +1814,11 @@ exports[`UU5.Forms.DatePicker props feedback="loading" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -1732,8 +1858,11 @@ exports[`UU5.Forms.DatePicker props feedback="success" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -1773,8 +1902,11 @@ exports[`UU5.Forms.DatePicker props feedback="warning" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -1813,8 +1945,11 @@ exports[`UU5.Forms.DatePicker props focusMessage="Bedlivě hlídám co píšete.
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -1854,8 +1989,11 @@ exports[`UU5.Forms.DatePicker props format="dd.mm.Y" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -1895,8 +2033,11 @@ exports[`UU5.Forms.DatePicker props format="dd/mm/Y" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -1936,8 +2077,11 @@ exports[`UU5.Forms.DatePicker props format="dd:mm:Y - q" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -1977,8 +2121,11 @@ exports[`UU5.Forms.DatePicker props format="dd-mm-Y" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -2159,8 +2306,11 @@ exports[`UU5.Forms.DatePicker props function -> Text.InputMixin validateOnChange
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -2206,8 +2356,11 @@ exports[`UU5.Forms.DatePicker props function -> Text.InputMixin validateOnChange
       value="12/12/2018"
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -2248,8 +2401,11 @@ exports[`UU5.Forms.DatePicker props function parseDate() 1`] = `
       value="01:01:2020"
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="checkID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -2288,8 +2444,11 @@ exports[`UU5.Forms.DatePicker props hidden=false 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -2328,8 +2487,11 @@ exports[`UU5.Forms.DatePicker props hidden=true 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -2368,8 +2530,11 @@ exports[`UU5.Forms.DatePicker props hideFormatPlaceholder=false 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -2408,8 +2573,11 @@ exports[`UU5.Forms.DatePicker props hideFormatPlaceholder=true 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -2448,8 +2616,11 @@ exports[`UU5.Forms.DatePicker props hideWeekNumber=false 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -2488,8 +2659,11 @@ exports[`UU5.Forms.DatePicker props hideWeekNumber=true 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -2528,8 +2702,11 @@ exports[`UU5.Forms.DatePicker props iconClosed="mdi-calendar" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -2568,8 +2745,11 @@ exports[`UU5.Forms.DatePicker props iconOpen="mdi-clock-outline" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -2608,8 +2788,11 @@ exports[`UU5.Forms.DatePicker props id="myId" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="myId-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -2650,8 +2833,11 @@ exports[`UU5.Forms.DatePicker props inputAttrs={"type":"email","width":"150px"} 
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -2690,8 +2876,11 @@ exports[`UU5.Forms.DatePicker props inputColWidth="xs12 s6 m8 l9" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -2730,8 +2919,11 @@ exports[`UU5.Forms.DatePicker props inputColWidth="xs12 s9" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -2774,8 +2966,11 @@ exports[`UU5.Forms.DatePicker props label="Your personal email" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -2814,8 +3009,11 @@ exports[`UU5.Forms.DatePicker props labelAlignment="xs-left s-right" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -2854,8 +3052,11 @@ exports[`UU5.Forms.DatePicker props labelAlignment="xs-right s-left" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -2894,8 +3095,11 @@ exports[`UU5.Forms.DatePicker props labelColWidth="xs12 s3" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -2934,8 +3138,11 @@ exports[`UU5.Forms.DatePicker props labelColWidth="xs12 s6 m4 l3" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -2974,8 +3181,11 @@ exports[`UU5.Forms.DatePicker props mainAttrs=undefined 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -3015,8 +3225,11 @@ exports[`UU5.Forms.DatePicker props message="Your password is too short!" 1`] = 
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -3056,8 +3269,11 @@ exports[`UU5.Forms.DatePicker props name="myName" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -3096,8 +3312,11 @@ exports[`UU5.Forms.DatePicker props nanMessage="Prosím zadejte validní datum."
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -3136,8 +3355,11 @@ exports[`UU5.Forms.DatePicker props noIndex=false 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -3176,8 +3398,11 @@ exports[`UU5.Forms.DatePicker props noIndex=true 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -3216,8 +3441,11 @@ exports[`UU5.Forms.DatePicker props patternMessage="Hodnota inputu není validn�
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -3257,8 +3485,11 @@ exports[`UU5.Forms.DatePicker props placeholder="Prosím vyplňte požadované p
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -3298,8 +3529,11 @@ exports[`UU5.Forms.DatePicker props placeholder="např.: +420 000 000 000" 1`] =
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -3338,8 +3572,11 @@ exports[`UU5.Forms.DatePicker props pureRender=false 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -3378,8 +3615,11 @@ exports[`UU5.Forms.DatePicker props pureRender=true 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -3418,8 +3658,11 @@ exports[`UU5.Forms.DatePicker props readOnly=false 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -3456,8 +3699,11 @@ exports[`UU5.Forms.DatePicker props readOnly=true 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -3496,8 +3742,11 @@ exports[`UU5.Forms.DatePicker props required=false 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -3537,8 +3786,11 @@ exports[`UU5.Forms.DatePicker props required=true 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -3577,8 +3829,11 @@ exports[`UU5.Forms.DatePicker props requiredMessage="Bez tohoto pole se nehnete 
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -3617,8 +3872,11 @@ exports[`UU5.Forms.DatePicker props selected=false 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -3657,8 +3915,11 @@ exports[`UU5.Forms.DatePicker props selected=true 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -3697,8 +3958,11 @@ exports[`UU5.Forms.DatePicker props showTodayButton=false 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -3737,8 +4001,11 @@ exports[`UU5.Forms.DatePicker props showTodayButton=true 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -3778,8 +4045,11 @@ exports[`UU5.Forms.DatePicker props size="l" 1`] = `
       size="l"
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -3818,8 +4088,11 @@ exports[`UU5.Forms.DatePicker props size="m" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -3859,8 +4132,11 @@ exports[`UU5.Forms.DatePicker props size="s" 1`] = `
       size="s"
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -3904,8 +4180,11 @@ exports[`UU5.Forms.DatePicker props style="padding:8px; borderRadius: 2px" 1`] =
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -3949,8 +4228,11 @@ exports[`UU5.Forms.DatePicker props style={"backgroundColor":"red","color":"blue
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -3989,8 +4271,11 @@ exports[`UU5.Forms.DatePicker props tooltip="My Tooltip" 1`] = `
       ref_={[Function]}
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />
@@ -4030,8 +4315,11 @@ exports[`UU5.Forms.DatePicker props value="1.1.2017" 1`] = `
       value="1/1/2017"
     />
     <forwardRef(Popover)
+      className="uu5-forms-datepicker-popover"
       disableBackdrop={true}
       forceRender={true}
+      id="uuID-popover"
+      location="local"
       ref_={[Function]}
       shown={false}
     />

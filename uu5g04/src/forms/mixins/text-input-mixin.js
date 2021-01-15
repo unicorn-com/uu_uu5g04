@@ -453,6 +453,8 @@ export const TextInputMixin = {
   _getItemListProps() {
     let props = {
       parent: this,
+      location: this.props.popoverLocation,
+      className: this.getClassName("input", "UU5.Forms.InputMixin") + this.props.size,
     };
 
     props.hidden = !this.state.foundAutocompleteItems;

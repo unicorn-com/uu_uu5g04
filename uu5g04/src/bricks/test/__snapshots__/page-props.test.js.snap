@@ -7291,7 +7291,7 @@ exports[`UU5.Bricks.Page mainAttrs=undefined 1`] = `
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Page modal={"type":{},"key":"0","ref":null,"props":{"id":"uuMODAL","content":"Content"},"_owner":null,"_store":{}} 1`] = `
+exports[`UU5.Bricks.Page modal={"type":{"defaults":{"header":"noHeader","body":"noBody","animationDuration":150,"closeTypes":{"closedButton":"closedButton","blur":"blur","ifc":"interface"}},"opt":{"nestingLevelRoot":true}},"key":"0","ref":null,"props":{"id":"uuMODAL","content":"Content"},"_owner":null,"_store":{}} 1`] = `
 <ContextProvider
   value={
     Object {

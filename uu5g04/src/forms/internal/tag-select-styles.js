@@ -79,16 +79,6 @@ const CommonClassNames = {
       .uu5-bricks-button.uu5-forms-input-button {
         width: auto; padding: 0 16px;
       }
-
-      & .uu5-forms-select-option.uu5-forms-select-option.uu5-forms-select-option {
-        border: none;
-        padding: 9px 16px;
-        color: rgba(0,0,0,0.87) !important;
-
-        &.uu5-common-disabled {
-          color: rgba(0,0,0,0.24);
-        }
-      }
     `;
 
     if (props.inputWidth === "auto" || props.nestingLevel === "inline") {
@@ -279,6 +269,15 @@ const CommonClassNames = {
         }
       }
 
+      .uu5-forms-select-option.uu5-forms-select-option.uu5-forms-select-option {
+        border: none;
+        padding: 9px 16px;
+        color: rgba(0,0,0,0.87) !important;
+
+        &.uu5-common-disabled {
+          color: rgba(0,0,0,0.24);
+        }
+      }
     `;
   },
 };

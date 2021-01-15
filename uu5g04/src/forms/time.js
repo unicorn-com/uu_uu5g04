@@ -25,6 +25,7 @@ const FORMAT_12 = "12";
 const FORMAT_24 = "24";
 export const Time = UU5.Common.VisualComponent.create({
   displayName: "Time", // for backward compatibility (test snapshots)
+  //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,
     UU5.Common.PureRenderMixin,
@@ -33,7 +34,9 @@ export const Time = UU5.Common.VisualComponent.create({
     UU5.Common.ColorSchemaMixin,
     UU5.Common.LsiMixin,
   ],
+  //@@viewOff:mixins
 
+  //@@viewOn:statics
   statics: {
     tagName: ns.name("Time"),
     classNames: {
@@ -72,7 +75,9 @@ export const Time = UU5.Common.VisualComponent.create({
     },
     lsi: () => UU5.Environment.Lsi.Forms.time,
   },
+  //@@viewOff:statics
 
+  //@@viewOn:propTypes
   propTypes: {
     value: UU5.PropTypes.shape({
       hours: UU5.PropTypes.number,
@@ -90,6 +95,7 @@ export const Time = UU5.Common.VisualComponent.create({
     timeTo: UU5.PropTypes.object,
     show24: UU5.PropTypes.bool,
   },
+  //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps() {
@@ -162,7 +168,7 @@ export const Time = UU5.Common.VisualComponent.create({
   },
   //@@viewOff:reactLifeCycle
 
-  // Interface
+  //@@viewOn:interface
   onChangeDefault(opt, setStateCallback) {
     let type = opt._data.type,
       value = opt._data.value;
@@ -181,18 +187,20 @@ export const Time = UU5.Common.VisualComponent.create({
 
     return this;
   },
-
-  // Overriding Functions
+  //@@viewOff:interface
 
   //@@viewOn:private
-  _validateTime(time, props = this.props) {
+  _validateTime(time) {
     let result = true;
 
     if (time) {
       let timeFrom = this._timeFrom;
       let timeTo = this._timeTo;
       time = { ...time };
-      time = (time.hours + (time.dayPart == FORMAT_PM ? 12 : 0)) * 60 * 60 + time.minutes * 60 + time.seconds;
+      time =
+        (time.hours + (time.hours < 12 && time.dayPart == FORMAT_PM ? 12 : 0)) * 60 * 60 +
+        time.minutes * 60 +
+        time.seconds;
 
       if (time < timeFrom || time > timeTo) {
         if (this._overMidnight) {
@@ -781,7 +789,7 @@ export const Time = UU5.Common.VisualComponent.create({
               {this._getHeader("hours")}
               {this._getBody("hours")}
             </div>
-            <div className={this.getClassName("timeSeparator")}></div>
+            {this.isXs() ? <div className={this.getClassName("timeSeparator")} /> : null}
             <div className={this.getClassName("minutesWrapper")}>
               {this._getHeader("minutes")}
               {this._getBody("minutes")}

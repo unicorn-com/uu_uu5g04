@@ -12,7 +12,7 @@
  */
 
 //@@viewOn:revision
-// coded: Martin Mach, 30.10.2020
+// coded: Martin Mach, 30.11.2020
 // reviewed: -
 //@@viewOff:revision
 
@@ -308,8 +308,8 @@ export const Number = Context.withContext(
         }
 
         if (this.props.valueType === "number") {
-          let resultValue = parseFloat(numericStringValue) || null;
-          result.value = resultValue || typeof resultValue === "number" ? resultValue : null;
+          let resultValue = parseFloat(numericStringValue);
+          result.value = resultValue || (typeof resultValue === "number" && !isNaN(resultValue)) ? resultValue : null;
         }
       }
 
@@ -968,7 +968,7 @@ export const Number = Context.withContext(
         this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessage"), value);
         return false;
       }
-      return this._checkRequired({ value: "" + value });
+      return this._checkRequired({ value: value != null ? "" + value : value });
     },
     //@@viewOff:private
 

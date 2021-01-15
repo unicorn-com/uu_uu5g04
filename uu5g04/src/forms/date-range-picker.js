@@ -78,6 +78,7 @@ export const DateRangePicker = Context.withContext(
         popoverWrapper: ns.css("daterangepicker-popover-wrapper"),
         inputPlaceholder: ns.css("input-placeholder"),
         labelBogus: ns.css("datetimerangepicker-label-bogus"),
+        popover: ns.css("daterangepicker-popover"),
       },
       defaults: {
         format: "dd.mm.Y",
@@ -117,6 +118,7 @@ export const DateRangePicker = Context.withContext(
       innerLabel: UU5.PropTypes.bool,
       step: UU5.PropTypes.oneOf(["days", "months", "years"]),
       monthNameFormat: UU5.PropTypes.oneOf(["abbr", "roman"]),
+      popoverLocation: UU5.PropTypes.oneOf(["local", "portal"]),
       strictSelection: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
       weekStartDay: UU5.PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7]),
     },
@@ -148,6 +150,7 @@ export const DateRangePicker = Context.withContext(
         innerLabel: false,
         step: "days",
         monthNameFormat: "roman",
+        popoverLocation: "local", // "local" <=> backward-compatible behaviour
         strictSelection: undefined,
         weekStartDay: 1,
       };
@@ -1428,13 +1431,13 @@ export const DateRangePicker = Context.withContext(
     },
 
     _findTarget(e) {
-      let labelMatch = "[id='" + this.getId() + "'] label";
-      let inputMatch1 = "[id='" + this.getId() + "'] .uu5-forms-items-input";
-      let inputMatch2 = "[id='" + this.getId() + "'] .uu5-forms-text-input";
-      let fromInputMatch = "[id='" + this.getId() + "'] .uu5-forms-daterangepicker-from-input";
-      let toInputMatch = "[id='" + this.getId() + "'] .uu5-forms-daterangepicker-to-input";
-      let popoverMatch = "[id='" + this.getId() + "'] .uu5-bricks-popover";
-      let customContentMatch = "[id='" + this.getId() + "'] .uu5-forms-daterangepicker-custom-content";
+      let labelMatch = `[id="${this.getId()}"] label`;
+      let inputMatch1 = `[id="${this.getId()}"] .uu5-forms-items-input`;
+      let inputMatch2 = `[id="${this.getId()}"] .uu5-forms-text-input, [id="${this.getId()}-popover"] .uu5-forms-text-input`;
+      let fromInputMatch = `[id="${this.getId()}"] .uu5-forms-daterangepicker-from-input, [id="${this.getId()}-popover"] .uu5-forms-daterangepicker-from-input`;
+      let toInputMatch = `[id="${this.getId()}"] .uu5-forms-daterangepicker-to-input, [id="${this.getId()}-popover"] .uu5-forms-daterangepicker-to-input`;
+      let popoverMatch = `[id="${this.getId()}-popover"]`;
+      let customContentMatch = `[id="${this.getId()}-popover"] .uu5-forms-daterangepicker-custom-content`;
       let result = {
         component: false,
         input: false,
@@ -1623,11 +1626,14 @@ export const DateRangePicker = Context.withContext(
       props.forceRender = true;
       props.disableBackdrop = true;
       props.shown = this.isOpen();
+      props.location = !this._shouldOpenToContent() ? this.props.popoverLocation : "local";
+      props.className = this.getClassName("popover");
+      props.id = this.getId() + "-popover";
 
       return props;
     },
 
-    _getCalendarValue(right) {
+    _getCalendarValue() {
       let value = this.getValue();
       let firstDate, secondDate;
 

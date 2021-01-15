@@ -2338,7 +2338,9 @@ exports[`UU5.Forms.TextInputMixin interface isOpen() should return false 1`] = `
       id="id1-input"
       itemListProps={
         Object {
+          "className": "uu5-forms-input-m",
           "hidden": true,
+          "location": "local",
           "onChange": [Function],
           "parent": Object {
             "__isMounted": true,
@@ -2417,6 +2419,7 @@ exports[`UU5.Forms.TextInputMixin interface isOpen() should return false 1`] = `
               "pattern": null,
               "patternMessage": null,
               "placeholder": "John Smith",
+              "popoverLocation": "local",
               "pureRender": false,
               "readOnly": false,
               "ref_": null,
@@ -2760,7 +2763,9 @@ exports[`UU5.Forms.TextInputMixin interface setAutocompleteItems(items,opt,setSt
       id="id1-input"
       itemListProps={
         Object {
+          "className": "uu5-forms-input-m",
           "hidden": true,
+          "location": "local",
           "onChange": [Function],
           "parent": Object {
             "__isMounted": true,
@@ -2826,6 +2831,7 @@ exports[`UU5.Forms.TextInputMixin interface setAutocompleteItems(items,opt,setSt
               "pattern": null,
               "patternMessage": null,
               "placeholder": "John Smith",
+              "popoverLocation": "local",
               "pureRender": false,
               "readOnly": false,
               "ref_": null,

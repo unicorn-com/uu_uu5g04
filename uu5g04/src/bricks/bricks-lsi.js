@@ -11,7 +11,9 @@
  * at the email: info@unicorn.com.
  */
 
-export const BricksLsi = {
+import UU5 from "uu5g04";
+
+const BricksLsi = {
   dataTable: {
     invalidDataLabel: {
       en: "Invalid data",
@@ -198,6 +200,7 @@ export const BricksLsi = {
       es: ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"],
       uk: ["Понеділок", "Вівторок", "Cереда", "Четвер", "П'ятниця", "Cубота", "Неділя"],
     },
+    dayNamesShort: {}, // filled in automatically below
     monthNames: {
       cs: [
         "leden",
@@ -488,6 +491,10 @@ export const BricksLsi = {
       cs: "Přihlásit se",
       en: "Log in",
     },
+    inlineLogin: {
+      cs: "Pro zobrazení obsahu se přihlašte",
+      en: "Log in to show content",
+    }
   },
   unauthorized: {
     text: {
@@ -507,4 +514,16 @@ export const BricksLsi = {
   },
 };
 
+function getWeekDayNamesShort(lang) {
+  let formatter = new Intl.DateTimeFormat(lang, { timeZone: "UTC", weekday: "short" });
+  let names = [2, 3, 4, 5, 6, 7, 8].map((it) => formatter.format(Date.UTC(2020, 10, it)));
+  let capitalizedNames = names.map((it) => it.charAt(0).toUpperCase() + it.substring(1, 2));
+  return capitalizedNames;
+}
+
+for (let lang in UU5.Environment.languageList) {
+  BricksLsi.calendar.dayNamesShort[lang] = getWeekDayNamesShort(lang);
+}
+
+export { BricksLsi };
 export default BricksLsi;

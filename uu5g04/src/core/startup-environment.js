@@ -14,9 +14,11 @@
 import Environment from "./environment/environment.js";
 import initialEnvironment from "./uu5g05-integration/environment.js";
 import Tools from "./common/tools.js";
+import IconManager from "./environment/icon-manager.js";
 
 // merge environment settings from global variable into our defaults
 if (initialEnvironment) {
+  let { iconLibraries } = Environment;
   Tools.extend(Environment, initialEnvironment);
 
   // copy property descriptors (which ensure that changing g04 Environment gets propagated to g05 and vice versa)
@@ -24,4 +26,13 @@ if (initialEnvironment) {
     let desc = Object.getOwnPropertyDescriptor(initialEnvironment, k);
     Object.defineProperty(Environment, k, desc);
   }
+
+  // some settings are to be taken from g04 instead of g05 - propagate them to g05 (property descriptor setters will do that)
+  Environment.iconLibraries = {
+    ...Environment.iconLibraries,
+    ...iconLibraries,
+    ...window.UU5?.Environment?.iconLibraries,
+  };
 }
+
+Environment.IconManager = new IconManager(Environment.iconLibraries);

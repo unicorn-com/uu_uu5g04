@@ -14,6 +14,7 @@
 //@@viewOn:imports
 import Hls from "hls.js";
 import UU5 from "uu5g04";
+import VideoSettings from "./video-settings";
 //@@viewOff:imports
 
 const EMPTY_VIDEO_MP4 =
@@ -35,9 +36,21 @@ export const VideoHls = UU5.Common.VisualComponent.create({
   //@@viewOff:statics
 
   //@@viewOn:propTypes
+  propTypes: {
+    videoAttrs: UU5.PropTypes.object,
+    authenticate: UU5.PropTypes.bool,
+    onBeforeChunkLoad: UU5.PropTypes.func,
+  },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
+  getDefaultProps() {
+    return {
+      videoAttrs: {},
+      authenticate: false,
+      onBeforeChunkLoad: null,
+    };
+  },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
@@ -45,27 +58,37 @@ export const VideoHls = UU5.Common.VisualComponent.create({
     this._hls = null;
     this._video = null;
     this._preloaded = false;
-    return {};
+    return { quality: null };
   },
 
   componentDidMount() {
     if (this._usesHlsLib()) {
-      let { mainAttrs } = this.props;
-      this._waitForToken(mainAttrs.src, () => {
+      let { videoAttrs } = this.props;
+      this._waitForToken(videoAttrs.src, () => {
         if (!this.isRendered()) return;
 
         let hlsConfig = {
-          autoStartLoad: mainAttrs.autoPlay || mainAttrs.preload !== "none",
+          // debug: true, // FIXME Comment out.
+          autoStartLoad: videoAttrs.autoPlay || videoAttrs.preload !== "none",
           xhrSetup: this._hlsXhrSetup,
+          // 1. Try to load upto 1MB of the video (maxBufferSize)
+          // 2. If it is less than 30s of video, then continue to load more fragments until 30s is reached (maxBufferLength).
+          // 3. If trying to achieve step 1 and we already loaded >= 60s of video (maxMaxBufferLength) then stop loading fragments.
+          maxBufferSize: 1 << 6,
+          maxBufferLength: 30,
+          maxMaxBufferLength: 60,
         };
         let hls = (this._hls = new Hls(hlsConfig));
-        if (mainAttrs.src && (mainAttrs.autoPlay || mainAttrs.preload !== "none")) {
+        this._hls.on(Hls.Events.LEVEL_SWITCHING, (type, level) => {
+          this.setState({ quality: level?.height ? level.height + "p" : undefined });
+        });
+        if (videoAttrs.src && (videoAttrs.autoPlay || videoAttrs.preload !== "none")) {
           this._doPreload();
         }
-        if (!hlsConfig.autoStartLoad || mainAttrs.preload === "metadata") {
+        if (!hlsConfig.autoStartLoad || videoAttrs.preload === "metadata") {
           UU5.Environment.EventListener.addEvent(this._video, "play", this.getId(), () => {
             let fn = () => hls.startLoad();
-            let usedFn = !this._preloaded && this.props.mainAttrs.src ? () => this._doPreload(true, fn) : fn;
+            let usedFn = !this._preloaded && this.props.videoAttrs.src ? () => this._doPreload(true, fn) : fn;
             usedFn();
           });
         }
@@ -76,10 +99,10 @@ export const VideoHls = UU5.Common.VisualComponent.create({
   },
 
   componentDidUpdate(prevProps, prevState) {
-    if (this.props.mainAttrs.src !== prevProps.mainAttrs.src) {
+    if (this.props.videoAttrs.src !== prevProps.videoAttrs.src) {
       if (this._preloaded) {
-        this._waitForToken(this.props.mainAttrs.src, () => {
-          this._hls.loadSource(this.props.mainAttrs.src);
+        this._waitForToken(this.props.videoAttrs.src, () => {
+          this._hls.loadSource(this.props.videoAttrs.src);
         });
       }
     }
@@ -100,25 +123,33 @@ export const VideoHls = UU5.Common.VisualComponent.create({
 
   //@@viewOn:private
   _doPreload(startPlay = null, callback = null) {
-    let { mainAttrs } = this.props;
+    let { videoAttrs } = this.props;
     if (!this._preloaded) {
       this._preloaded = true;
       this._hls.attachMedia(this._video);
     }
-    this._hls.loadSource(mainAttrs.src);
+    this._hls.loadSource(videoAttrs.src);
     this._hls.once(Hls.Events.MANIFEST_PARSED, () => {
       if (this._unmounted) return;
-      if (typeof startPlay !== "boolean") startPlay = this.props.mainAttrs.autoPlay;
+      if (typeof startPlay !== "boolean") startPlay = this.props.videoAttrs.autoPlay;
       if (startPlay) this._video.play();
-      else if (mainAttrs.preload === "metadata") {
+      else if (videoAttrs.preload === "metadata") {
         // if preloading only metadata, stop downloading after first fragment
         this._hls.once(Hls.Events.FRAG_PARSED, () => this._hls.stopLoad());
       }
+      this.setState({ qualityList: (this._hls.levels || []).map((it) => it.height + "p") });
       if (typeof callback === "function") callback();
     });
   },
 
   _hlsXhrSetup(xhr, url) {
+    if (typeof this.props.onBeforeChunkLoad === "function") {
+      let opts = { url };
+      this.props.onBeforeChunkLoad(opts);
+      if (opts.url !== url) {
+        xhr.open("GET", opts.url, true);
+      }
+    }
     if (this.props.authenticate) {
       let session = UU5.Environment.getSession();
       if (session && session.isAuthenticated() && UU5.Environment.isTrustedDomain(url)) {
@@ -188,30 +219,47 @@ export const VideoHls = UU5.Common.VisualComponent.create({
       callback();
     }
   },
+
+  _onQualityChange({ value }) {
+    let index = this.state.qualityList.indexOf(value);
+    if (index >= 0) {
+      this._hls.currentLevel = index;
+    }
+  },
   //@@viewOff:private
 
   //@@viewOn:render
   render() {
-    let mainAttrs = this.getMainAttrs();
+    let { videoAttrs = {} } = this.props;
+    let { quality, qualityList } = this.state;
 
     let authnUrl;
     if (this.props.authenticate) {
       let session = UU5.Environment.getSession();
-      if (session && session.isAuthenticated() && UU5.Environment.isTrustedDomain(mainAttrs.src)) {
+      if (session && session.isAuthenticated() && UU5.Environment.isTrustedDomain(videoAttrs.src)) {
         // NOTE We're getting authenticated URL even if using Hls (because we'll need token).
-        authnUrl = this._getAuthenticatedUrl(mainAttrs.src, session);
+        authnUrl = this._getAuthenticatedUrl(videoAttrs.src, session);
       }
     }
     if (this._usesHlsLib()) {
       // don't propagate some props when using hls.js library (they're handled in JS instead of via DOM attrs)
-      let { autoPlay, src, ...rest2 } = mainAttrs; // eslint-disable-line no-unused-vars
-      mainAttrs = rest2;
+      let { autoPlay, src, ...rest2 } = videoAttrs; // eslint-disable-line no-unused-vars
+      videoAttrs = rest2;
       // NOTE If using preload="none", <video> must still have "src" otherwise it's not possible to click Play.
-      if (!this._preloaded && mainAttrs.preload === "none") mainAttrs.src = EMPTY_VIDEO_MP4;
+      if (!this._preloaded && videoAttrs.preload === "none") videoAttrs.src = EMPTY_VIDEO_MP4;
     } else if (authnUrl) {
-      mainAttrs.src = authnUrl;
+      videoAttrs.src = authnUrl;
     }
-    return <video {...mainAttrs} ref={this._setVideoRef} />;
+    return (
+      <VideoSettings
+        {...this.getMainPropsToPass()}
+        quality={quality}
+        qualityList={qualityList}
+        onQualityChange={this._onQualityChange}
+      >
+        <video {...videoAttrs} ref={this._setVideoRef} />
+      </VideoSettings>
+    );
   },
   //@@viewOff:render
 });

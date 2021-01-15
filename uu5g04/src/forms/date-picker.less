@@ -8,16 +8,6 @@
     cursor: default !important;
   }
 
-  .uu5-bricks-popover {
-    margin-top: 0px;
-    min-width: 100%;
-    border-radius: 0;
-    border: none;
-    background-color: transparent;
-    box-shadow: none;
-    min-width: auto;
-  }
-
   .uu5-bricks-calendar-today-button.uu5-bricks-button {
     width: auto;
     height: auto;
@@ -61,11 +51,6 @@
     }
   }
 
-  .uu5-bricks-calendar {
-    margin-top: 0px;
-    position: relative;
-  }
-
   .color-schema-black& {
     .@{name}-text-input {
       .uu5-common-bg-style-filled ~ .uu5-bricks-icon {
@@ -107,4 +92,21 @@
 .@{name}-datepicker.@{name}-screen-size-behaviour .uu5-bricks-popover {
   position: relative;
   display: inline-flex;
+}
+
+.@{name}-datepicker-popover {
+  .uu5-bricks-calendar {
+    margin-top: 0px;
+    position: relative;
+  }
+
+  &.uu5-bricks-popover {
+    margin-top: 0px;
+    min-width: 100%;
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    min-width: auto;
+  }
 }

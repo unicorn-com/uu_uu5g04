@@ -30,6 +30,7 @@ exports[`UU5.Forms.IconPicker default props UU5.Forms.IconPicker check default p
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -109,6 +110,7 @@ exports[`UU5.Forms.IconPicker default props UU5.Forms.IconPicker check default p
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -125,7 +127,9 @@ exports[`UU5.Forms.IconPicker default props UU5.Forms.IconPicker check default p
           />
         </Row>
       }
+      id="uuID-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>

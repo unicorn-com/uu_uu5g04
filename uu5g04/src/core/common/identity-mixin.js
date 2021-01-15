@@ -59,6 +59,11 @@ export const IdentityMixin = {
     if (session && session.initComplete) {
       identityState.identity = session.getIdentity();
       identityState.identityFeedback = session.isAuthenticated() ? AUTH : NOT_AUTH;
+    } else if (!session) {
+      identityState = {
+        identity: null,
+        identityFeedback: NOT_AUTH,
+      };
     }
 
     // state

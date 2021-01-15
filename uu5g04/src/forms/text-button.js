@@ -55,6 +55,7 @@ export const TextButton = Context.withContext(
       ),
       pattern: UU5.PropTypes.string,
       actionOnEnter: UU5.PropTypes.bool,
+      popoverLocation: UU5.PropTypes.oneOf(["local", "portal"]),
     },
     //@@viewOff:propTypes
 
@@ -65,6 +66,7 @@ export const TextButton = Context.withContext(
         buttons: null,
         pattern: null,
         actionOnEnter: false,
+        popoverLocation: "local", // "local" <=> backward-compatible behaviour
       };
     },
     //@@viewOff:getDefaultProps
@@ -270,6 +272,7 @@ export const TextButton = Context.withContext(
         inputWidth: this._getInputWidth(),
         colorSchema: this.props.colorSchema,
         size: this.props.size,
+        popoverLocation: this.props.popoverLocation,
       };
 
       if (this.state.autocompleteItems) {
@@ -305,7 +308,7 @@ export const TextButton = Context.withContext(
         </div>
       );
     },
-    //@@viewOn:render
+    //@@viewOff:render
   })
 );
 

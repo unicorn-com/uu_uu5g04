@@ -8,46 +8,6 @@
     cursor: default !important;
   }
 
-  .uu5-bricks-popover {
-    margin-top: 0px;
-    border-radius: 2px;
-    border: none;
-    background-color: #FFFFFF;
-    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.34);
-    min-width: auto;
-
-    &.uu5-common-hidden.uu5-bricks-popover-displayed {
-      display: inline-flex !important;
-    }
-  }
-
-  .@{name}-time {
-    margin-top: 0px;
-    position: relative;
-    display: block;
-    flex-wrap: nowrap;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    border-radius: 0;
-  }
-
-  .@{name}-time {
-    position: relative;
-    margin-top: 0;
-  }
-
-
-  .uu5-bricks-calendar {
-    margin-top: 0px;
-    position: relative;
-  }
-
-  .uu5-bricks-calendar-today-button.uu5-bricks-button {
-    width: auto;
-    height: auto;
-  }
-
   &.@{name}-input-auto-width, &.@{name}-input-label-width {
     .@{name}-text-input.@{name}-date-input {
       .@{name}-input-s& {
@@ -335,6 +295,42 @@
   &-time {
     grid-column: 2;
     min-width: 0;
+  }
+}
+
+.@{name}-datetimepicker-popover {
+  &.uu5-bricks-popover {
+    margin-top: 0px;
+    border-radius: 2px;
+    border: none;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.34);
+    min-width: auto;
+
+    &.uu5-common-hidden.uu5-bricks-popover-displayed {
+      display: inline-flex !important;
+    }
+  }
+
+  .@{name}-time {
+    margin-top: 0px;
+    position: relative;
+    display: block;
+    flex-wrap: nowrap;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .uu5-bricks-calendar {
+    margin-top: 0px;
+    position: relative;
+  }
+
+  .uu5-bricks-calendar-today-button.uu5-bricks-button {
+    width: auto;
+    height: auto;
   }
 }
 

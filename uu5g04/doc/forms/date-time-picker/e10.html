@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta
+    charset="utf-8"
+    name="viewport"
+    content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"
+  />
+  <title>Example 10 - time zone</title>
+
+  <script>
+    if (!location.href.match(/^(about:|file:)/)) {
+      var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+      var bplSegmentCount = bplCookie ? Number(bplCookie[2]) : null;
+      if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+      var appBaseUrlPath = (
+        location.pathname
+          .split(/\//)
+          .slice(0, 1 + bplSegmentCount)
+          .join("/") + "/"
+      )
+        .replace(/\/+/g, "/")
+        .replace(/"/g, "");
+      var appAssetsRelativeUrlPath = "public/0.0.0/";
+      document.write(
+        '<base href="' +
+        appBaseUrlPath +
+        appAssetsRelativeUrlPath +
+        '" data-uu-app-base="' +
+        appBaseUrlPath +
+        '" data-uu-app-assets-base="' +
+        appAssetsRelativeUrlPath +
+        '">'
+      );
+    }
+  </script>
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+  <script>
+    SystemJS.config({
+      paths: {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js",
+        "uu5g04-hooks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-hooks.min.js",
+
+        "uu_i18ng01": "https://cdn.plus4u.net/uu-i18ng01/1.0.0/uu_i18ng01.min.js"
+      }
+    });
+  </script>
+</head>
+<body>
+<div id="uu5Example"></div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+  import { createVisualComponent, useState, useLanguage, useTimeZone, TimeZoneProvider } from "uu5g04-hooks";
+  //@@viewOn:example
+  import { UuDateTime } from "uu_i18ng01";
+
+  /* Wrapper component with time zone support - start */
+  function withTimeZone(Component) {
+    return ({ value, onChange, onFocus, onBlur, ...props }) => {
+      const [timeZone] = useTimeZone();
+
+      let formattedValue;
+      if (value) {
+        if (Array.isArray(value)) {
+          formattedValue = value.map(v => getFormattedValue(v, timeZone));
+        } else {
+          formattedValue = getFormattedValue(value, timeZone);
+        }
+      }
+
+      return (
+        <Component
+          {...props}
+          valueType="iso"
+          value={formattedValue}
+          onChange={onChange ? opt => onChange({ ...opt, value: parseValue(opt.value, timeZone) }) : undefined}
+          onFocus={onFocus ? opt => onFocus({ ...opt, value: parseValue(opt.value, timeZone) }) : undefined}
+          onBlur={onBlur ? opt => onBlur({ ...opt, value: parseValue(opt.value, timeZone) }) : undefined}
+        />
+      );
+    }
+  }
+
+  // static helpers
+  function getFormattedValue(value, timeZone) {
+    // parse iso with time zone
+    const dateTime = new UuDateTime(value, timeZone);
+    // create new date with local time zone, because picker works with local time zone
+    const dateTimeTz = new UuDateTime([
+      dateTime.getYear(), dateTime.getMonth(), dateTime.getDay(),
+      dateTime.getHour(), dateTime.getMinute(), dateTime.getSecond()
+    ]);
+    return dateTimeTz.toIsoString();
+  }
+
+  function parseSingleValue(value, timeZone) {
+    // parse iso to date with local time zone
+    const v = new Date(value);
+    // create new date with right time zone
+    const dateTime = new UuDateTime([
+      v.getFullYear(), v.getMonth() + 1, v.getDate(),
+      v.getHours(), v.getMinutes(), v.getSeconds()
+    ], timeZone);
+    return dateTime.toIsoString();
+  }
+
+  function parseValue(value, timeZone) {
+    let iso = null;
+    if (value) {
+      if (Array.isArray(value)) {
+        iso = value.map(v => parseSingleValue(v, timeZone));
+      } else {
+        iso = parseSingleValue(value, timeZone);
+      }
+    }
+    return iso;
+  }
+
+  /* Wrapper component with time zone support - end */
+
+  const DateTimePicker = withTimeZone(UU5.Forms.DateTimePicker);
+
+  function ExampleOnChange(props) {
+    const [dateTime, setDateTime] = useState();
+
+    return (
+      <DateTimePicker
+        {...props}
+        label="Example with onChange"
+        value={dateTime}
+        onChange={opt => {
+          setDateTime(opt.value);
+          console.log("onChange", opt.value)
+        }}
+      />
+    )
+  }
+
+  function ExampleOnFocusBlur(props) {
+    return (
+      <DateTimePicker
+        {...props}
+        label="Example with onFocus & onBlur"
+        onFocus={opt => console.log("onFocus", opt.value)}
+        onBlur={opt => console.log("onBlur", opt.value)}
+      />
+    )
+  }
+
+  //@@viewOff:example
+
+  function TestDateTime({ Component, onChange, ...props }) {
+    const [value, setValue] = useState(props.value);
+
+    return (
+      <UU5.Bricks.Row display="flex">
+        <UU5.Bricks.Column colWidth="s-8">
+          <Component
+            className={UU5.Common.Css.css`margin: 4px 0!important;`}
+            {...props}
+            value={value}
+            onChange={opt => typeof onChange === "function" ? onChange(opt) : setValue(opt.value)}
+          />
+        </UU5.Bricks.Column>
+        <UU5.Bricks.Column colWidth="s-4" className={UU5.Common.Css.css`display: flex; align-items: center;`}>
+          => {value}
+        </UU5.Bricks.Column>
+      </UU5.Bricks.Row>
+    )
+  }
+
+  const Page = createVisualComponent({
+    render() {
+      const [seconds, setSeconds] = useState(false);
+      const [hour12, setHour12] = useState(false);
+
+      const date = new Date();
+      date.setMilliseconds(0);
+      !seconds && date.setSeconds(0);
+
+      const tzOffset = date.getTimezoneOffset();
+
+      const props = {
+        seconds,
+        timeFormat: hour12 ? "12" : "24"
+      };
+
+      const propsValue = { ...props, value: date.toISOString() };
+
+      return (
+        <UU5.Bricks.Container>
+          <UU5.Bricks.LanguageSelector />
+          <UU5.Forms.Checkbox
+            inputWidth="128px" label="Seconds" type={2} value={seconds} labelPosition="right"
+            onChange={({ value }) => setSeconds(value)}
+          />
+          <UU5.Forms.Checkbox
+            inputWidth="168px" label='timeFormat="12"' type={2} value={hour12} labelPosition="right"
+            onChange={({ value }) => setHour12(value)}
+          />
+
+          <UU5.Bricks.Line colorSchema="primary" />
+
+          <div className="center">
+            <i>Open a console (F12) for results</i>
+          </div>
+          <ExampleOnChange {...props} />
+          <ExampleOnFocusBlur {...props} />
+
+          <UU5.Bricks.Line colorSchema="primary" />
+
+          <TestDateTime
+            Component={DateTimePicker}
+            {...propsValue}
+            label={`Browser (${tzOffset < 0 ? "+" : ""}${-1 * tzOffset}min)`}
+          />
+
+          {["Europe/Prague", "Europe/Bratislava", "Europe/Kiev", "Europe/London", "America/New_York",
+            "Asia/Bangkok"].map(tz => (
+            <TimeZoneProvider key={tz} initialTimeZone={tz}>
+              <TestDateTime Component={DateTimePicker} {...propsValue} label={tz} />
+            </TimeZoneProvider>
+          ))}
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  UU5.Common.DOM.render(<Page />, document.getElementById("uu5Example"));
+</script>
+</body>
+</html>

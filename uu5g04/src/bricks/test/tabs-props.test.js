@@ -44,20 +44,23 @@ const CONFIG = {
     fade: {
       values: [true, false],
     },
+    initialActiveName: {
+      values: ["tab2"],
+    },
     activeName: {
-      values: ["active"],
+      values: ["tab2"],
     },
-    mountTabContent: {
-      values: [
-        MOUNT_TAB_CONTENT_VALUES.onActive,
-        MOUNT_TAB_CONTENT_VALUES.onFirstActive,
-        MOUNT_TAB_CONTENT_VALUES.onFirstRender,
-      ],
-    },
+    // mountTabContent - this prop is tested further below
   },
   requiredProps: {
     children: [
-      <UU5.Bricks.Tabs.Item header="Tab 1" name={"active"} id={"childID"}>
+      <UU5.Bricks.Tabs.Item header="Tab 1" name="tab1" id="tab1" key="tab1">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </UU5.Bricks.Tabs.Item>,
+      <UU5.Bricks.Tabs.Item header="Tab 2" name="tab2" id="tab2" key="tab2">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+      </UU5.Bricks.Tabs.Item>,
+      <UU5.Bricks.Tabs.Item header="Tab 3" name="tab3" id="tab3" key="tab3">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
       </UU5.Bricks.Tabs.Item>,
     ],

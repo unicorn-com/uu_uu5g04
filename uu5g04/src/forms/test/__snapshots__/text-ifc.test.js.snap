@@ -1957,7 +1957,9 @@ exports[`UU5.Forms.Text interface test TextInputMixin  setAutocompleteItems(item
       id="idText-input"
       itemListProps={
         Object {
+          "className": "uu5-forms-input-s",
           "hidden": true,
+          "location": "local",
           "onChange": [Function],
           "parent": Object {
             "__isMounted": true,
@@ -2016,6 +2018,7 @@ exports[`UU5.Forms.Text interface test TextInputMixin  setAutocompleteItems(item
               "pattern": null,
               "patternMessage": null,
               "placeholder": "John Smith",
+              "popoverLocation": "local",
               "pureRender": false,
               "readOnly": false,
               "ref_": null,
@@ -2233,7 +2236,9 @@ exports[`UU5.Forms.Text interface test TextInputMixin  setAutocompleteItems(item
       id="idText-input"
       itemListProps={
         Object {
+          "className": "uu5-forms-input-s",
           "hidden": false,
+          "location": "local",
           "onChange": [Function],
           "parent": Object {
             "__isMounted": true,
@@ -2292,6 +2297,7 @@ exports[`UU5.Forms.Text interface test TextInputMixin  setAutocompleteItems(item
               "pattern": null,
               "patternMessage": null,
               "placeholder": "John Smith",
+              "popoverLocation": "local",
               "pureRender": false,
               "readOnly": false,
               "ref_": null,

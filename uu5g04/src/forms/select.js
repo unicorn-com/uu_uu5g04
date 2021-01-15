@@ -57,6 +57,7 @@ export const Select = Context.withContext(
         hasValue: ns.css("select-has-value"),
         screenSizeBehaviour: ns.css("screen-size-behaviour"),
         inputOpen: ns.css("items-input-open"),
+        popover: ns.css("select-popover"),
       },
       defaults: {
         childTagName: "UU5.Forms.Select.Option",
@@ -76,6 +77,7 @@ export const Select = Context.withContext(
       bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
       elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
       openToContent: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string]),
+      popoverLocation: UU5.PropTypes.oneOf(["local", "portal"]),
     },
     //@@viewOff:propTypes
 
@@ -91,6 +93,7 @@ export const Select = Context.withContext(
         bgStyle: null,
         elevation: null,
         openToContent: "xs",
+        popoverLocation: "local", // "local" <=> backward-compatible behaviour
       };
     },
     //@@viewOff:getDefaultProps
@@ -393,10 +396,10 @@ export const Select = Context.withContext(
     },
 
     _findTarget(e) {
-      let labelMatch = "[id='" + this.getId() + "'] label";
-      let inputMatch = "[id='" + this.getId() + "'] .uu5-forms-items-input";
-      let pickerMatch = "[id='" + this.getId() + "'] .uu5-forms-item-list";
-      let itemMatch = "[id='" + this.getId() + "'] .items-input-item";
+      let labelMatch = `[id="${this.getId()}"] label`;
+      let inputMatch = `[id="${this.getId()}"] .uu5-forms-items-input`;
+      let pickerMatch = `[id="${this.getId()}-popover-inner"]`;
+      let itemMatch = `[id="${this.getId()}-popover-inner"] .items-input-item`;
       let result = {
         component: false,
         input: false,
@@ -591,22 +594,6 @@ export const Select = Context.withContext(
           this.open();
         };
       }
-
-      return props;
-    },
-
-    _getItemListProps() {
-      let props = {};
-
-      props.hidden = !this.isOpen();
-      props.ref_ = (itemList) => (this._itemList = itemList);
-      props.onChange = (opt) => this._onItem(opt);
-      props.value = this.state.value;
-      props.multiple = this.props.multiple;
-      props.allowTags = this.props.allowTags;
-      props.forceRender = this.props.forceRender;
-      props.header = this._getHeader();
-      props.parent = this;
 
       return props;
     },
@@ -866,6 +853,12 @@ export const Select = Context.withContext(
       return this;
     },
 
+    _onInputWrapperResize() {
+      if (this.props.popoverLocation === "portal" && this.isOpen() && !this._shouldOpenToContent()) {
+        this._onOpen();
+      }
+    },
+
     _checkRequired(value) {
       let result = true;
       if (((!value && value !== 0) || value.length < 1) && this.props.required && this.shouldValidateRequired()) {
@@ -932,6 +925,32 @@ export const Select = Context.withContext(
       }
 
       return attrs;
+    },
+
+    _getItemListProps() {
+      let props = {};
+
+      props.hidden = !this.isOpen();
+      props.ref_ = (itemList) => (this._itemList = itemList);
+      props.onChange = (opt) => this._onItem(opt);
+      props.value = this.state.value;
+      props.multiple = this.props.multiple;
+      props.allowTags = this.props.allowTags;
+      props.forceRender = this.props.forceRender;
+      props.header = this._getHeader();
+      props.parent = this;
+      props.location = !this._shouldOpenToContent() ? this.props.popoverLocation : "local";
+      props.id = this.getId() + "-popover";
+      props.disabled = this.state.disabled;
+      props.className = this.getClassName("popover");
+      if (this.props.popoverLocation === "portal") {
+        props.className += " " + this.getClassName("input", "UU5.Forms.InputMixin") + this.props.size;
+      }
+      if (this.props.multiple) {
+        props.className += " " + this.getClassName("multiple");
+      }
+
+      return props;
     },
 
     _getInputMainAttrs() {
@@ -1030,6 +1049,7 @@ export const Select = Context.withContext(
             position: "bottom",
             offset: this._shouldOpenToContent() ? 0 : 4,
             preventPositioning: this._shouldOpenToContent(),
+            fitWidthToAroundElement: this.props.popoverLocation === "portal" && !this._shouldOpenToContent(),
           },
           setStateCallback
         );
@@ -1107,13 +1127,19 @@ export const Select = Context.withContext(
               bgStyle={this.props.bgStyle}
               inputWidth={this._getInputWidth()}
               colorSchema={this.props.colorSchema}
+              key="input"
             />,
-            <ItemList {...this._getItemListProps()}>{this.isOpen() && children}</ItemList>,
+            <ItemList {...this._getItemListProps()} key="itemList">
+              {this.isOpen() && children}
+            </ItemList>,
+            this.props.popoverLocation === "portal" && this.isOpen() && !this._shouldOpenToContent() ? (
+              <UU5.Bricks.ResizeObserver onResize={this._onInputWrapperResize} key="resizeObserver" />
+            ) : null,
           ])}
         </div>
       );
     },
-    //@@viewOn:render
+    //@@viewOff:render
   })
 );
 

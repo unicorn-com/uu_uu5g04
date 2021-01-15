@@ -49,6 +49,7 @@ export const DatePicker = Context.withContext(
         open: ns.css("datepicker-open"),
         menu: ns.css("input-menu"),
         screenSizeBehaviour: ns.css("screen-size-behaviour"),
+        popover: ns.css("datepicker-popover"),
       },
       defaults: {
         inputColWidth: "xs12 s4 m4 l3 xl3",
@@ -78,6 +79,7 @@ export const DatePicker = Context.withContext(
       showTodayButton: UU5.PropTypes.bool,
       step: UU5.PropTypes.oneOf(["days", "months", "years"]),
       monthNameFormat: UU5.PropTypes.oneOf(["abbr", "roman"]),
+      popoverLocation: UU5.PropTypes.oneOf(["local", "portal"]),
       weekStartDay: UU5.PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7]),
     },
     //@@viewOff:propTypes
@@ -105,6 +107,7 @@ export const DatePicker = Context.withContext(
         showTodayButton: false,
         step: "days",
         monthNameFormat: "roman",
+        popoverLocation: "local", // "local" <=> backward-compatible behaviour
         weekStartDay: 1,
       };
     },
@@ -343,9 +346,9 @@ export const DatePicker = Context.withContext(
     },
 
     _findTarget(e) {
-      let labelMatch = "[id='" + this.getId() + "'] label";
-      let inputMatch = "[id='" + this.getId() + "'] input";
-      let pickerMatch = "[id='" + this.getId() + "'] .uu5-forms-input-menu";
+      let labelMatch = `[id="${this.getId()}"] label`;
+      let inputMatch = `[id="${this.getId()}"] input`;
+      let pickerMatch = `[id="${this.getId()}-popover"] .uu5-forms-input-menu`;
       let result = {
         component: false,
         input: false,
@@ -770,7 +773,7 @@ export const DatePicker = Context.withContext(
         value: opt.value,
         event: opt.event,
         component: this,
-        _data: { type: "picker", value: date, ...setToday }
+        _data: { type: "picker", value: date, ...setToday },
       };
 
       if (this.props.valueType === null || this.props.valueType == "string") {
@@ -945,6 +948,12 @@ export const DatePicker = Context.withContext(
       props.forceRender = true;
       props.disableBackdrop = true;
       props.shown = this.isOpen();
+      props.location = !this._shouldOpenToContent() ? this.props.popoverLocation : "local";
+      props.id = this.getId() + "-popover";
+      props.className = this.getClassName("popover");
+      if (this.props.popoverLocation === "portal") {
+        props.className += " " + this.getClassName("input", "UU5.Forms.InputMixin") + this.props.size;
+      }
 
       return props;
     },
@@ -1005,7 +1014,7 @@ export const DatePicker = Context.withContext(
         </div>
       );
     },
-    //@@viewOn:render
+    //@@viewOff:render
   })
 );
 

@@ -291,6 +291,7 @@ export const Popover = withContext(
         let headerClassName = opt.headerClassName || null;
         let footerClassName = opt.footerClassName || null;
         let autoResize = opt.autoResize != null ? opt.autoResize : this.props.autoResize;
+        let fitWidthToAroundElement = opt.fitWidthToAroundElement;
 
         this.setState(
           {
@@ -313,6 +314,7 @@ export const Popover = withContext(
             onBeforeClose: onBeforeClose,
             isPagePopover: !!opt.customPopover,
             autoResize,
+            width: fitWidthToAroundElement && opt.aroundElement ? this._getAroundElementWidth(opt.aroundElement) : null,
           },
           () => {
             this._addEvent(onBeforeClose, onClose);
@@ -404,6 +406,23 @@ export const Popover = withContext(
           setStateCallback
         );
       }
+    },
+
+    _getAroundElementWidth(aroundElement) {
+      let width = null;
+
+      if (aroundElement) {
+        let element = aroundElement;
+        if (UU5.Common.Element.isValid(element)) {
+          element = UU5.Common.DOM.findNode(element);
+        }
+
+        if (typeof element?.nodeType === "number") {
+          width = element.getBoundingClientRect().width;
+        }
+      }
+
+      return width;
     },
 
     _getOffsetParentRect(element, relative) {

@@ -48,6 +48,7 @@ export const Text = Context.withContext(
       value: UU5.PropTypes.string,
       password: UU5.PropTypes.bool,
       pattern: UU5.PropTypes.string,
+      popoverLocation: UU5.PropTypes.oneOf(["local", "portal"]),
     },
     //@@viewOff:propTypes
 
@@ -57,6 +58,7 @@ export const Text = Context.withContext(
         value: "",
         password: false,
         pattern: null,
+        popoverLocation: "local", // "local" <=> backward-compatible behaviour
       };
     },
     //@@viewOff:getDefaultProps
@@ -243,6 +245,7 @@ export const Text = Context.withContext(
         inputWidth: this._getInputWidth(),
         colorSchema: this.props.colorSchema,
         size: this.props.size,
+        popoverLocation: this.props.popoverLocation,
       };
 
       if (this.state.autocompleteItems) {
@@ -278,7 +281,7 @@ export const Text = Context.withContext(
         </div>
       );
     },
-    //@@viewOn:render
+    //@@viewOff:render
   })
 );
 

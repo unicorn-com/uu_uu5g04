@@ -38,6 +38,7 @@ exports[`UU5.Forms.IconPicker interface editable(setStatecallback) 1`] = `
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=" uu5-forms-input-read-only"
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -123,6 +124,7 @@ exports[`UU5.Forms.IconPicker interface editable(setStatecallback) 1`] = `
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={true}
             ref_={null}
@@ -139,7 +141,9 @@ exports[`UU5.Forms.IconPicker interface editable(setStatecallback) 1`] = `
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -183,6 +187,7 @@ exports[`UU5.Forms.IconPicker interface editable(setStatecallback) 2`] = `
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -268,6 +273,7 @@ exports[`UU5.Forms.IconPicker interface editable(setStatecallback) 2`] = `
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -284,7 +290,9 @@ exports[`UU5.Forms.IconPicker interface editable(setStatecallback) 2`] = `
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -326,6 +334,7 @@ exports[`UU5.Forms.IconPicker interface getChangeFeedback() 1`] = `
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -411,6 +420,7 @@ exports[`UU5.Forms.IconPicker interface getChangeFeedback() 1`] = `
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -427,7 +437,9 @@ exports[`UU5.Forms.IconPicker interface getChangeFeedback() 1`] = `
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -469,6 +481,7 @@ exports[`UU5.Forms.IconPicker interface getFeedBack() 1`] = `
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -554,6 +567,7 @@ exports[`UU5.Forms.IconPicker interface getFeedBack() 1`] = `
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -570,7 +584,9 @@ exports[`UU5.Forms.IconPicker interface getFeedBack() 1`] = `
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -613,6 +629,7 @@ exports[`UU5.Forms.IconPicker interface getFeedBack() 2`] = `
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -698,6 +715,7 @@ exports[`UU5.Forms.IconPicker interface getFeedBack() 2`] = `
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -714,7 +732,9 @@ exports[`UU5.Forms.IconPicker interface getFeedBack() 2`] = `
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -758,6 +778,7 @@ exports[`UU5.Forms.IconPicker interface getInputWrapper(inpuid) 1`] = `
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -843,6 +864,7 @@ exports[`UU5.Forms.IconPicker interface getInputWrapper(inpuid) 1`] = `
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -859,7 +881,9 @@ exports[`UU5.Forms.IconPicker interface getInputWrapper(inpuid) 1`] = `
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -903,6 +927,7 @@ exports[`UU5.Forms.IconPicker interface getLabel(idinput) 1`] = `
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -988,6 +1013,7 @@ exports[`UU5.Forms.IconPicker interface getLabel(idinput) 1`] = `
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -1004,7 +1030,9 @@ exports[`UU5.Forms.IconPicker interface getLabel(idinput) 1`] = `
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -1046,6 +1074,7 @@ exports[`UU5.Forms.IconPicker interface getMessage() 1`] = `
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -1131,6 +1160,7 @@ exports[`UU5.Forms.IconPicker interface getMessage() 1`] = `
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -1147,7 +1177,9 @@ exports[`UU5.Forms.IconPicker interface getMessage() 1`] = `
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -1191,6 +1223,7 @@ exports[`UU5.Forms.IconPicker interface getValue() should return value 1`] = `
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -1276,6 +1309,7 @@ exports[`UU5.Forms.IconPicker interface getValue() should return value 1`] = `
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -1292,7 +1326,9 @@ exports[`UU5.Forms.IconPicker interface getValue() should return value 1`] = `
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -1334,6 +1370,7 @@ exports[`UU5.Forms.IconPicker interface getValue() value is empty. Should return
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -1419,6 +1456,7 @@ exports[`UU5.Forms.IconPicker interface getValue() value is empty. Should return
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -1435,7 +1473,9 @@ exports[`UU5.Forms.IconPicker interface getValue() value is empty. Should return
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -1479,6 +1519,7 @@ exports[`UU5.Forms.IconPicker interface isError() 1`] = `
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -1564,6 +1605,7 @@ exports[`UU5.Forms.IconPicker interface isError() 1`] = `
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -1580,7 +1622,9 @@ exports[`UU5.Forms.IconPicker interface isError() 1`] = `
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -1626,6 +1670,7 @@ exports[`UU5.Forms.IconPicker interface isError() 2`] = `
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -1711,6 +1756,7 @@ exports[`UU5.Forms.IconPicker interface isError() 2`] = `
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -1727,7 +1773,9 @@ exports[`UU5.Forms.IconPicker interface isError() 2`] = `
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -1769,6 +1817,7 @@ exports[`UU5.Forms.IconPicker interface isInitial() 1`] = `
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -1854,6 +1903,7 @@ exports[`UU5.Forms.IconPicker interface isInitial() 1`] = `
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -1870,7 +1920,9 @@ exports[`UU5.Forms.IconPicker interface isInitial() 1`] = `
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -1914,6 +1966,7 @@ exports[`UU5.Forms.IconPicker interface isInitial() 2`] = `
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -1999,6 +2052,7 @@ exports[`UU5.Forms.IconPicker interface isInitial() 2`] = `
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -2015,7 +2069,9 @@ exports[`UU5.Forms.IconPicker interface isInitial() 2`] = `
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -2057,6 +2113,7 @@ exports[`UU5.Forms.IconPicker interface isInput() 1`] = `
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -2142,6 +2199,7 @@ exports[`UU5.Forms.IconPicker interface isInput() 1`] = `
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -2158,7 +2216,9 @@ exports[`UU5.Forms.IconPicker interface isInput() 1`] = `
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -2200,6 +2260,7 @@ exports[`UU5.Forms.IconPicker interface isLoading() 1`] = `
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -2285,6 +2346,7 @@ exports[`UU5.Forms.IconPicker interface isLoading() 1`] = `
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -2301,7 +2363,9 @@ exports[`UU5.Forms.IconPicker interface isLoading() 1`] = `
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -2343,6 +2407,7 @@ exports[`UU5.Forms.IconPicker interface isReadOnly() 1`] = `
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -2428,6 +2493,7 @@ exports[`UU5.Forms.IconPicker interface isReadOnly() 1`] = `
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -2444,7 +2510,9 @@ exports[`UU5.Forms.IconPicker interface isReadOnly() 1`] = `
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -2487,6 +2555,7 @@ exports[`UU5.Forms.IconPicker interface isReadOnly() 2`] = `
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=" uu5-forms-input-read-only"
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -2572,6 +2641,7 @@ exports[`UU5.Forms.IconPicker interface isReadOnly() 2`] = `
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={true}
             ref_={null}
@@ -2588,7 +2658,9 @@ exports[`UU5.Forms.IconPicker interface isReadOnly() 2`] = `
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -2634,6 +2706,7 @@ exports[`UU5.Forms.IconPicker interface isSuccess() fisr return false, second re
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -2719,6 +2792,7 @@ exports[`UU5.Forms.IconPicker interface isSuccess() fisr return false, second re
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -2735,7 +2809,9 @@ exports[`UU5.Forms.IconPicker interface isSuccess() fisr return false, second re
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -2779,6 +2855,7 @@ exports[`UU5.Forms.IconPicker interface isWarning() 1`] = `
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -2864,6 +2941,7 @@ exports[`UU5.Forms.IconPicker interface isWarning() 1`] = `
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -2880,7 +2958,9 @@ exports[`UU5.Forms.IconPicker interface isWarning() 1`] = `
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -2926,6 +3006,7 @@ exports[`UU5.Forms.IconPicker interface isWarning() 2`] = `
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -3011,6 +3092,7 @@ exports[`UU5.Forms.IconPicker interface isWarning() 2`] = `
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -3027,7 +3109,9 @@ exports[`UU5.Forms.IconPicker interface isWarning() 2`] = `
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -3071,6 +3155,7 @@ exports[`UU5.Forms.IconPicker interface readOnly(setStatecallback) 1`] = `
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -3156,6 +3241,7 @@ exports[`UU5.Forms.IconPicker interface readOnly(setStatecallback) 1`] = `
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -3172,7 +3258,9 @@ exports[`UU5.Forms.IconPicker interface readOnly(setStatecallback) 1`] = `
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -3217,6 +3305,7 @@ exports[`UU5.Forms.IconPicker interface readOnly(setStatecallback) 2`] = `
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=" uu5-forms-input-read-only"
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -3302,6 +3391,7 @@ exports[`UU5.Forms.IconPicker interface readOnly(setStatecallback) 2`] = `
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={true}
             ref_={null}
@@ -3318,7 +3408,9 @@ exports[`UU5.Forms.IconPicker interface readOnly(setStatecallback) 2`] = `
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -3365,6 +3457,7 @@ exports[`UU5.Forms.IconPicker interface reset(setStateCallBack) 1`] = `
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=" uu5-forms-input-read-only"
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -3450,6 +3543,7 @@ exports[`UU5.Forms.IconPicker interface reset(setStateCallBack) 1`] = `
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={true}
             ref_={null}
@@ -3466,7 +3560,9 @@ exports[`UU5.Forms.IconPicker interface reset(setStateCallBack) 1`] = `
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -3508,6 +3604,7 @@ exports[`UU5.Forms.IconPicker interface reset(setStateCallBack) 2`] = `
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -3593,6 +3690,7 @@ exports[`UU5.Forms.IconPicker interface reset(setStateCallBack) 2`] = `
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -3609,7 +3707,9 @@ exports[`UU5.Forms.IconPicker interface reset(setStateCallBack) 2`] = `
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -3656,6 +3756,7 @@ exports[`UU5.Forms.IconPicker interface setChangeFeedback() 1`] = `
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -3741,6 +3842,7 @@ exports[`UU5.Forms.IconPicker interface setChangeFeedback() 1`] = `
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -3757,7 +3859,9 @@ exports[`UU5.Forms.IconPicker interface setChangeFeedback() 1`] = `
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -3801,6 +3905,7 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(false, setStateCallback
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -3886,6 +3991,7 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(false, setStateCallback
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -3902,7 +4008,9 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(false, setStateCallback
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -3947,6 +4055,7 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(false, setStateCallback
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=" uu5-forms-input-read-only"
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -4032,6 +4141,7 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(false, setStateCallback
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={true}
             ref_={null}
@@ -4048,7 +4158,9 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(false, setStateCallback
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -4092,6 +4204,7 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(true, setStateCallback)
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -4177,6 +4290,7 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(true, setStateCallback)
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -4193,7 +4307,9 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(true, setStateCallback)
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -4237,6 +4353,7 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(true, setStateCallback)
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -4322,6 +4439,7 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(true, setStateCallback)
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -4338,7 +4456,9 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(true, setStateCallback)
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -4380,6 +4500,7 @@ exports[`UU5.Forms.IconPicker interface setError(message, value, setStateCallBac
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -4465,6 +4586,7 @@ exports[`UU5.Forms.IconPicker interface setError(message, value, setStateCallBac
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -4481,7 +4603,9 @@ exports[`UU5.Forms.IconPicker interface setError(message, value, setStateCallBac
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -4527,6 +4651,7 @@ exports[`UU5.Forms.IconPicker interface setError(message, value, setStateCallBac
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -4612,6 +4737,7 @@ exports[`UU5.Forms.IconPicker interface setError(message, value, setStateCallBac
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -4628,7 +4754,9 @@ exports[`UU5.Forms.IconPicker interface setError(message, value, setStateCallBac
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -4670,6 +4798,7 @@ exports[`UU5.Forms.IconPicker interface setFeedBack(feedback, message, value, se
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -4755,6 +4884,7 @@ exports[`UU5.Forms.IconPicker interface setFeedBack(feedback, message, value, se
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -4771,7 +4901,9 @@ exports[`UU5.Forms.IconPicker interface setFeedBack(feedback, message, value, se
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -4817,6 +4949,7 @@ exports[`UU5.Forms.IconPicker interface setFeedBack(feedback, message, value, se
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -4902,6 +5035,7 @@ exports[`UU5.Forms.IconPicker interface setFeedBack(feedback, message, value, se
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -4918,7 +5052,9 @@ exports[`UU5.Forms.IconPicker interface setFeedBack(feedback, message, value, se
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -4962,6 +5098,7 @@ exports[`UU5.Forms.IconPicker interface setInitial(msg, value, setStateCallBack)
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -5047,6 +5184,7 @@ exports[`UU5.Forms.IconPicker interface setInitial(msg, value, setStateCallBack)
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -5063,7 +5201,9 @@ exports[`UU5.Forms.IconPicker interface setInitial(msg, value, setStateCallBack)
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -5106,6 +5246,7 @@ exports[`UU5.Forms.IconPicker interface setInitial(msg, value, setStateCallBack)
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -5191,6 +5332,7 @@ exports[`UU5.Forms.IconPicker interface setInitial(msg, value, setStateCallBack)
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -5207,7 +5349,9 @@ exports[`UU5.Forms.IconPicker interface setInitial(msg, value, setStateCallBack)
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -5249,6 +5393,7 @@ exports[`UU5.Forms.IconPicker interface setLoading(message, value, setStateCallB
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -5334,6 +5479,7 @@ exports[`UU5.Forms.IconPicker interface setLoading(message, value, setStateCallB
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -5350,7 +5496,9 @@ exports[`UU5.Forms.IconPicker interface setLoading(message, value, setStateCallB
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -5394,6 +5542,7 @@ exports[`UU5.Forms.IconPicker interface setLoading(message, value, setStateCallB
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -5479,6 +5628,7 @@ exports[`UU5.Forms.IconPicker interface setLoading(message, value, setStateCallB
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -5495,7 +5645,9 @@ exports[`UU5.Forms.IconPicker interface setLoading(message, value, setStateCallB
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -5537,6 +5689,7 @@ exports[`UU5.Forms.IconPicker interface setMessage(msg, setStateCallBack) 1`] = 
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -5622,6 +5775,7 @@ exports[`UU5.Forms.IconPicker interface setMessage(msg, setStateCallBack) 1`] = 
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -5638,7 +5792,9 @@ exports[`UU5.Forms.IconPicker interface setMessage(msg, setStateCallBack) 1`] = 
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -5681,6 +5837,7 @@ exports[`UU5.Forms.IconPicker interface setMessage(msg, setStateCallBack) 2`] = 
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -5766,6 +5923,7 @@ exports[`UU5.Forms.IconPicker interface setMessage(msg, setStateCallBack) 2`] = 
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -5782,7 +5940,9 @@ exports[`UU5.Forms.IconPicker interface setMessage(msg, setStateCallBack) 2`] = 
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -5824,6 +5984,7 @@ exports[`UU5.Forms.IconPicker interface setSuccess(message, value, setStateCallB
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -5909,6 +6070,7 @@ exports[`UU5.Forms.IconPicker interface setSuccess(message, value, setStateCallB
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -5925,7 +6087,9 @@ exports[`UU5.Forms.IconPicker interface setSuccess(message, value, setStateCallB
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -5971,6 +6135,7 @@ exports[`UU5.Forms.IconPicker interface setSuccess(message, value, setStateCallB
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -6056,6 +6221,7 @@ exports[`UU5.Forms.IconPicker interface setSuccess(message, value, setStateCallB
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -6072,7 +6238,9 @@ exports[`UU5.Forms.IconPicker interface setSuccess(message, value, setStateCallB
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -6114,6 +6282,7 @@ exports[`UU5.Forms.IconPicker interface setValue(value,setStateCallBack) 1`] = `
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -6199,6 +6368,7 @@ exports[`UU5.Forms.IconPicker interface setValue(value,setStateCallBack) 1`] = `
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -6215,7 +6385,9 @@ exports[`UU5.Forms.IconPicker interface setValue(value,setStateCallBack) 1`] = `
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -6259,6 +6431,7 @@ exports[`UU5.Forms.IconPicker interface setValue(value,setStateCallBack) 2`] = `
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -6344,6 +6517,7 @@ exports[`UU5.Forms.IconPicker interface setValue(value,setStateCallBack) 2`] = `
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -6360,7 +6534,9 @@ exports[`UU5.Forms.IconPicker interface setValue(value,setStateCallBack) 2`] = `
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -6402,6 +6578,7 @@ exports[`UU5.Forms.IconPicker interface setWarning(message, value, setStateCallB
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -6487,6 +6664,7 @@ exports[`UU5.Forms.IconPicker interface setWarning(message, value, setStateCallB
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -6503,7 +6681,9 @@ exports[`UU5.Forms.IconPicker interface setWarning(message, value, setStateCallB
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>
@@ -6549,6 +6729,7 @@ exports[`UU5.Forms.IconPicker interface setWarning(message, value, setStateCallB
       </Button>
     </Div>
     <forwardRef(Popover)
+      className=""
       controlled={false}
       disableBackdrop={false}
       fitHeightToViewport={true}
@@ -6634,6 +6815,7 @@ exports[`UU5.Forms.IconPicker interface setWarning(message, value, setStateCallB
             pattern={null}
             patternMessage={null}
             placeholder="Search icon"
+            popoverLocation="local"
             pureRender={false}
             readOnly={false}
             ref_={null}
@@ -6650,7 +6832,9 @@ exports[`UU5.Forms.IconPicker interface setWarning(message, value, setStateCallB
           />
         </Row>
       }
+      id="idIconpicker-popover"
       key="popover"
+      location="local"
       ref_={[Function]}
     />
   </InputWrapper>

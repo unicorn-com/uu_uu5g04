@@ -485,9 +485,13 @@ export const EditableLsi = {
       en: `Defines when is the content of the tab mounted. Choosing a value like "on active" is recommended for performance optimalization.`,
       cs: `Udává kdy se namountí obsah jednotlivých záložek. Výběr hodnoty jako je "při zaktivnění" je doporučen pro optimalizaci výkonu.`,
     },
+    initialActiveNameLabel: {
+      en: "Initial Active Tab",
+      cs: "Výchozí aktivní záložka",
+    },
     tabNameLabel: {
       cs: "Název záložky",
-      en: "Tab's name",
+      en: "Tab's Name",
       sk: "Názov záložky",
       uk: "Назва закладки",
     },
@@ -677,7 +681,7 @@ export const EditableLsi = {
     },
     colorSchemaContentLabel: {
       en: "Content color schema",
-      cs: "Barevné schéma hlavičky",
+      cs: "Barevné schéma obsahu",
     },
     elevationLabel: {
       en: "Elevation",

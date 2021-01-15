@@ -94,6 +94,7 @@ export const DateTimeRangePicker = Context.withContext(
         withSeconds: ns.css("datetimerangepicker-seconds"),
         withEnglishFormat: ns.css("datetimerangepicker-english-format"),
         inputPlaceholder: ns.css("input-placeholder"),
+        popover: ns.css("datetimerangepicker-popover"),
       },
       defaults: {
         format: "dd.mm.Y",
@@ -137,6 +138,7 @@ export const DateTimeRangePicker = Context.withContext(
       timeStep: UU5.PropTypes.number,
       timePickerType: UU5.PropTypes.oneOf(["single-column", "multi-column"]),
       timeZone: UU5.PropTypes.number,
+      popoverLocation: UU5.PropTypes.oneOf(["local", "portal"]),
       weekStartDay: UU5.PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7]),
     },
     //@@viewOff:propTypes
@@ -172,6 +174,7 @@ export const DateTimeRangePicker = Context.withContext(
         timeStep: 1,
         timePickerType: "multi-column",
         timeZone: undefined,
+        popoverLocation: "local", // "local" <=> backward-compatible behaviour
         weekStartDay: 1,
       };
     },
@@ -630,7 +633,7 @@ export const DateTimeRangePicker = Context.withContext(
       if (Array.isArray(value)) {
         let parseString = (string) => {
           let dateObject = this._parseDate(string);
-          let timeString = this._getTimeString(dateObject, props, props.timeFormat == TIME_FORMAT_12);
+          let timeString = this._getTimeString(dateObject, props, true);
           let dateString = this._getDateString(dateObject, format, country);
 
           return this._getFullDate(dateString, timeString);
@@ -700,10 +703,15 @@ export const DateTimeRangePicker = Context.withContext(
             resultDate = this.parseDateDefault(date);
           }
 
-          let timeString = this._getTimeString(date, props);
+          let timeString = this._getTimeString(date, props, true);
           if (timeString && resultDate instanceof Date) {
             let timeData = this._parseTime(timeString, props);
             if (timeData) {
+              if (timeData.dayPart === TIME_FORMAT_AM && timeData.hours === 12) {
+                timeData.hours -= 12;
+              } else if (timeData.dayPart === TIME_FORMAT_PM && timeData.hours < 12) {
+                timeData.hours += 12;
+              }
               resultDate.setHours(timeData.hours);
               resultDate.setMinutes(timeData.minutes);
               resultDate.setSeconds(timeData.seconds);
@@ -769,6 +777,11 @@ export const DateTimeRangePicker = Context.withContext(
 
       if (dateObject) {
         if (timeObject) {
+          if (timeObject.dayPart === TIME_FORMAT_AM && timeObject.hours === 12) {
+            timeObject.hours -= 12;
+          } else if (timeObject.dayPart === TIME_FORMAT_PM && timeObject.hours < 12) {
+            timeObject.hours += 12;
+          }
           dateObject.setHours(timeObject.hours);
           dateObject.setMinutes(timeObject.minutes);
           dateObject.setSeconds(timeObject.seconds);
@@ -1985,27 +1998,15 @@ export const DateTimeRangePicker = Context.withContext(
     },
 
     _findTarget(e) {
-      let labelMatch = "[id='" + this.getId() + "'] label";
-      let inputMatch1 = "[id='" + this.getId() + "'] .uu5-forms-items-input";
-      let inputMatch2 = "[id='" + this.getId() + "'] .uu5-forms-text-input";
-      let fromDateInputMatch =
-        "[id='" +
-        this.getId() +
-        "'] .uu5-forms-datetimerangepicker-from-wrapper .uu5-forms-datetimerangepicker-date-input";
-      let toDateInputMatch =
-        "[id='" +
-        this.getId() +
-        "'] .uu5-forms-datetimerangepicker-to-wrapper .uu5-forms-datetimerangepicker-date-input";
-      let fromTimeInputMatch =
-        "[id='" +
-        this.getId() +
-        "'] .uu5-forms-datetimerangepicker-from-wrapper .uu5-forms-datetimerangepicker-time-input";
-      let toTimeInputMatch =
-        "[id='" +
-        this.getId() +
-        "'] .uu5-forms-datetimerangepicker-to-wrapper .uu5-forms-datetimerangepicker-time-input";
-      let popoverMatch = "[id='" + this.getId() + "'] .uu5-bricks-popover";
-      let customContentMatch = "[id='" + this.getId() + "'] .uu5-forms-datetimerangepicker-custom-content";
+      let labelMatch = `[id="${this.getId()}"] label`;
+      let inputMatch1 = `[id="${this.getId()}"] .uu5-forms-items-input`;
+      let inputMatch2 = `[id="${this.getId()}"] .uu5-forms-text-input, [id="${this.getId()}-popover"] .uu5-forms-text-input`;
+      let fromDateInputMatch = `[id="${this.getId()}"] .uu5-forms-datetimerangepicker-from-wrapper .uu5-forms-datetimerangepicker-date-input, [id="${this.getId()}"] .uu5-forms-datetimerangepicker-from-wrapper .uu5-forms-datetimerangepicker-date-input`;
+      let toDateInputMatch = `[id="${this.getId()}"] .uu5-forms-datetimerangepicker-to-wrapper .uu5-forms-datetimerangepicker-date-input, [id="${this.getId()}-popover"] .uu5-forms-datetimerangepicker-to-wrapper .uu5-forms-datetimerangepicker-date-input`;
+      let fromTimeInputMatch = `[id="${this.getId()}"] .uu5-forms-datetimerangepicker-from-wrapper .uu5-forms-datetimerangepicker-time-input, [id="${this.getId()}-popover"] .uu5-forms-datetimerangepicker-from-wrapper .uu5-forms-datetimerangepicker-time-input`;
+      let toTimeInputMatch = `[id="${this.getId()}"] .uu5-forms-datetimerangepicker-to-wrapper .uu5-forms-datetimerangepicker-time-input,[id="${this.getId()}-popover"] .uu5-forms-datetimerangepicker-to-wrapper .uu5-forms-datetimerangepicker-time-input`;
+      let popoverMatch = `[id="${this.getId()}-popover"]`;
+      let customContentMatch = `[id="${this.getId()}-popover"] .uu5-forms-datetimerangepicker-custom-content`;
       let result = {
         component: false,
         input: false,
@@ -2205,6 +2206,24 @@ export const DateTimeRangePicker = Context.withContext(
       props.forceRender = true;
       props.disableBackdrop = true;
       props.shown = isOpen;
+      props.location = !this._shouldOpenToContent() ? this.props.popoverLocation : "local";
+      props.className = this.getClassName("popover");
+      props.id = this.getId() + "-popover";
+
+      if (
+        (this.props.label && !this.props.labelFrom && !this.props.labelTo) ||
+        !(this.props.labelFrom && this.props.labelTo)
+      ) {
+        props.className += " " + this.getClassName("compactLayout");
+      }
+
+      if (this.props.seconds) {
+        props.className += " " + this.getClassName("withSeconds");
+      }
+
+      if (this.props.timeFormat == TIME_FORMAT_12) {
+        props.className += " " + this.getClassName("withEnglishFormat");
+      }
 
       return props;
     },

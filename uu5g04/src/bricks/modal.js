@@ -81,6 +81,21 @@ DoubleRender.SECOND_RENDER = 1;
 
 let openedModalStack = [];
 
+const STATICS = {
+  defaults: {
+    header: "noHeader",
+    body: "noBody",
+    animationDuration: 150, // ms
+    closeTypes: {
+      closedButton: "closedButton",
+      blur: "blur",
+      ifc: "interface",
+    },
+  },
+  opt: {
+    nestingLevelRoot: true,
+  },
+};
 const _Modal = UU5.Common.VisualComponent.create({
   displayName: "Modal", // for backward compatibility (test snapshots)
 
@@ -150,19 +165,7 @@ const _Modal = UU5.Common.VisualComponent.create({
       overflow: ns.css("modal-overflow"),
       bodyOverflow: ns.css("modal-body-overflow"),
     },
-    defaults: {
-      header: "noHeader",
-      body: "noBody",
-      animationDuration: 150, // ms
-      closeTypes: {
-        closedButton: "closedButton",
-        blur: "blur",
-        ifc: "interface",
-      },
-    },
-    opt: {
-      nestingLevelRoot: true,
-    },
+    ...STATICS,
   },
   //@@viewOff:statics
 
@@ -768,6 +771,7 @@ function withModalBus(Component) {
     </UU5.Common.ModalBusContext.Consumer>
   ));
   if (process.env.NODE_ENV === "test") result._originalComponent = Component;
+  Object.assign(result, STATICS);
   return result;
 }
 

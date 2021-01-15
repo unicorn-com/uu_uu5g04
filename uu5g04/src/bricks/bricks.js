@@ -40,6 +40,7 @@ export * from "./section.js";
 export * from "./header.js";
 export * from "./footer.js";
 export * from "./card.js";
+export * from "./resize-observer.js";
 export * from "./resize.js";
 export * from "./loader.js";
 

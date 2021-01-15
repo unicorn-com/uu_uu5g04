@@ -52,6 +52,7 @@ export const TimePicker = Context.withContext(
         menu: ns.css("input-menu"),
         seconds: ns.css("timepicker-seconds"),
         screenSizeBehaviour: ns.css("screen-size-behaviour"),
+        popover: ns.css("timepicker-popover"),
       },
       defaults: {
         regexpFormat1: /^\d{1,2}:?\d{0,2} ?[PpAa]?\.?[Mm]?\.?$/,
@@ -81,6 +82,7 @@ export const TimePicker = Context.withContext(
       timeFrom: UU5.PropTypes.string,
       timeTo: UU5.PropTypes.string,
       show24: UU5.PropTypes.bool,
+      popoverLocation: UU5.PropTypes.oneOf(["local", "portal"]),
     },
     //@@viewOff:propTypes
 
@@ -102,6 +104,7 @@ export const TimePicker = Context.withContext(
         timeFrom: undefined,
         timeTo: undefined,
         show24: false,
+        popoverLocation: "local", // "local" <=> backward-compatible behaviour
       };
     },
     //@@viewOff:getDefaultProps
@@ -319,9 +322,9 @@ export const TimePicker = Context.withContext(
     },
 
     _findTarget(e) {
-      let labelMatch = "[id='" + this.getId() + "'] label";
-      let inputMatch = "[id='" + this.getId() + "'] input";
-      let pickerMatch = "[id='" + this.getId() + "'] .uu5-forms-input-menu";
+      let labelMatch = `[id="${this.getId()}"] label`;
+      let inputMatch = `[id="${this.getId()}"] input`;
+      let pickerMatch = `[id="${this.getId()}-popover"] .uu5-forms-input-menu`;
       let result = {
         component: false,
         input: false,
@@ -816,6 +819,12 @@ export const TimePicker = Context.withContext(
       props.disableBackdrop = true;
       props.shown = this.isOpen();
       props.fitHeightToViewport = this.props.pickerType === "single-column";
+      props.location = !this._shouldOpenToContent() ? this.props.popoverLocation : "local";
+      props.id = this.getId() + "-popover";
+      props.className = this.getClassName("popover");
+      if (this.props.popoverLocation === "portal") {
+        props.className += " " + this.getClassName("input", "UU5.Forms.InputMixin") + this.props.size;
+      }
 
       return props;
     },

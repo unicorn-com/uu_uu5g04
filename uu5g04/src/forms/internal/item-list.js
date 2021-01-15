@@ -44,6 +44,7 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOn:propTypes
   propTypes: {
     allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
+    location: UU5.PropTypes.oneOf(["local", "portal"]),
   },
   //@@viewOff:propTypes
 
@@ -51,6 +52,7 @@ export default UU5.Common.VisualComponent.create({
   getDefaultProps: function () {
     return {
       allowTags: [],
+      location: "local",
     };
   },
   //@@viewOff:getDefaultProps
@@ -169,6 +171,7 @@ export default UU5.Common.VisualComponent.create({
     props.forceRender = true;
     props.header = this.getHeader();
     props.footer = this._getFooter();
+    props.location = this.props.location;
 
     return props;
   },

@@ -12,8 +12,10 @@
  */
 
 //@@viewOn:revision
-// coded: Martin Mach, 04.10.2020
-// reviewed: -
+// coded:
+//    Petr Bišof, 30.09.2020
+//    Filip Janovský, 30.09.2020
+// reviewed: Filip Janovský, 30.09.2020 - approved
 //@@viewOff:revision
 
 //@@viewOn:imports
@@ -60,6 +62,7 @@ export const DateTimePicker = Context.withContext(
         withEnglishFormat: ns.css("datetimepicker-english-format"),
         dateWrapper: ns.css("datetimepicker-date-wrapper"),
         timeWrapper: ns.css("datetimepicker-time-wrapper"),
+        popover: ns.css("datetimepicker-popover"),
       },
       defaults: {
         regexpFormat1: /^\d{1,2}:?\d{0,2} ?[PpAa]?\.?[Mm]?\.?$/,
@@ -100,6 +103,7 @@ export const DateTimePicker = Context.withContext(
       timeInputAttrs: UU5.PropTypes.object,
       timeZone: UU5.PropTypes.number,
       monthNameFormat: UU5.PropTypes.oneOf(["abbr", "roman"]),
+      popoverLocation: UU5.PropTypes.oneOf(["local", "portal"]),
       weekStartDay: UU5.PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7]),
     },
     //@@viewOff:propTypes
@@ -131,6 +135,7 @@ export const DateTimePicker = Context.withContext(
         showTodayButton: false,
         timeZone: undefined,
         monthNameFormat: "roman",
+        popoverLocation: "local", // "local" <=> backward-compatible behaviour
         weekStartDay: 1,
       };
     },
@@ -303,6 +308,11 @@ export const DateTimePicker = Context.withContext(
         time = this._parseTime(time);
 
         if (date && time) {
+          if (time.dayPart === TIME_FORMAT_AM && time.hours === 12) {
+            time.hours -= 12;
+          } else if (time.dayPart === TIME_FORMAT_PM && time.hours < 12) {
+            time.hours += 12;
+          }
           value = new Date(date.getFullYear(), date.getMonth(), date.getDate(), time.hours, time.minutes, time.seconds);
         } else if (date && !time) {
           value = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 0, 0, 0);
@@ -649,7 +659,8 @@ export const DateTimePicker = Context.withContext(
       let labelMatch = "[id='" + this.getId() + "'] label";
       let dateInputMatch = "input[id='" + this.getId() + "-date-input']";
       let timeInputMatch = "input[id='" + this.getId() + "-time-input']";
-      let pickerMatch = "[id='" + this.getId() + "'] .uu5-forms-input-menu";
+      let datePickerMatch = "[id='" + this.getId() + "-date-popover'] .uu5-forms-input-menu";
+      let timePickerMatch = "[id='" + this.getId() + "-time-popover'] .uu5-forms-input-menu";
       let result = {
         component: false,
         input: false,
@@ -676,7 +687,7 @@ export const DateTimePicker = Context.withContext(
             result.input = true;
             result.timeInput = true;
             result.component = true;
-          } else if (item[functionType](pickerMatch)) {
+          } else if (item[functionType](datePickerMatch) || item[functionType](timePickerMatch)) {
             result.picker = true;
             result.component = true;
           } else if (item === this._root) {
@@ -800,7 +811,7 @@ export const DateTimePicker = Context.withContext(
     },
 
     _handleFocus(e) {
-      let opt = { value: this.state.value, event: e, component: this };
+      let opt = { value: this._getOutcomingValue(this.state.value), event: e, component: this };
       this._onFocus(opt);
     },
 
@@ -824,12 +835,18 @@ export const DateTimePicker = Context.withContext(
 
     _onOpenCalendar(setStateCallback) {
       if (this._calendarPopover) {
+        let aroundElement = this.isXs()
+          ? UU5.Common.DOM.findNode(this)
+          : UU5.Common.DOM.findNode(this._calendarTextInput);
         this._calendarPopover.open(
           {
             onClose: this._onCloseCalendar,
-            aroundElement: UU5.Common.DOM.findNode(this._calendarTextInput),
+            aroundElement,
+            preventPositioning: this._shouldOpenToContent(),
             position: "bottom",
             offset: this._shouldOpenToContent() ? 0 : 4,
+            fitWidthToAroundElement:
+              this.isXs() && this.props.popoverLocation === "portal" && !this._shouldOpenToContent(),
           },
           () => this._closeTime(setStateCallback)
         );
@@ -840,13 +857,17 @@ export const DateTimePicker = Context.withContext(
 
     _onOpenTime(setStateCallback) {
       if (this._timePopover) {
+        let aroundElement = this.isXs() ? UU5.Common.DOM.findNode(this) : UU5.Common.DOM.findNode(this._timeTextInput);
         this._timePopover.open(
           {
             onClose: this._onCloseTime,
-            aroundElement: UU5.Common.DOM.findNode(this._timeTextInput),
+            aroundElement,
+            preventPositioning: this._shouldOpenToContent(),
             position: "bottom",
             offset: this._shouldOpenToContent() ? 0 : 4,
             horizontalOnly: this._shouldOpenToContent(),
+            fitWidthToAroundElement:
+              this.isXs() && this.props.popoverLocation === "portal" && !this._shouldOpenToContent(),
           },
           () => this._closeCalendar(setStateCallback)
         );
@@ -868,6 +889,16 @@ export const DateTimePicker = Context.withContext(
         this._timePopover.close(setStateCallback);
       } else if (typeof setStateCallback === "function") {
         setStateCallback();
+      }
+    },
+
+    _onInputWrapperResize() {
+      if (this.props.popoverLocation === "portal" && !this._shouldOpenToContent()) {
+        if (this._isCalendarOpen()) {
+          this._onOpenCalendar();
+        } else if (this._isTimeOpen()) {
+          this._onOpenTime();
+        }
       }
     },
 
@@ -1141,6 +1172,11 @@ export const DateTimePicker = Context.withContext(
         value = this._parseDate(dateString);
         let timeObject = this._parseTime(timeString);
         if (value) {
+          if (timeObject.dayPart === TIME_FORMAT_AM && timeObject.hours === 12) {
+            timeObject.hours -= 12;
+          } else if (timeObject.dayPart === TIME_FORMAT_PM && timeObject.hours < 12) {
+            timeObject.hours += 12;
+          }
           value.setHours(timeObject.hours);
           value.setMinutes(timeObject.minutes);
           value.setSeconds(timeObject.seconds);
@@ -1404,9 +1440,9 @@ export const DateTimePicker = Context.withContext(
       };
     },
 
-    _getTimePickerProps(value) {
+    _getTimePickerProps(timeObject) {
       if (!this.state.timeString || this.state.timeString.trim() === "") {
-        value = null;
+        timeObject = null;
       }
 
       let className = this.getClassName("menu");
@@ -1417,7 +1453,7 @@ export const DateTimePicker = Context.withContext(
       return {
         id: this.getId() + "-time-picker",
         className,
-        value,
+        value: timeObject,
         hidden: !this._isTimeOpen(),
         onChange: this._onTimePickerChange,
         format: this.props.timeFormat,
@@ -1474,6 +1510,11 @@ export const DateTimePicker = Context.withContext(
         if (typeof dateString === "string" && date instanceof Date && timeString) {
           let timeObject = this._parseTime(timeString);
           if (timeObject) {
+            if (timeObject.dayPart === TIME_FORMAT_AM && timeObject.hours === 12) {
+              timeObject.hours -= 12;
+            } else if (timeObject.dayPart === TIME_FORMAT_PM && timeObject.hours < 12) {
+              timeObject.hours += 12;
+            }
             date.setHours(timeObject.hours);
             date.setMinutes(timeObject.minutes);
             date.setSeconds(timeObject.seconds);
@@ -1721,6 +1762,12 @@ export const DateTimePicker = Context.withContext(
       props.forceRender = true;
       props.disableBackdrop = true;
       props.shown = this._isCalendarOpen();
+      props.location = !this._shouldOpenToContent() ? this.props.popoverLocation : "local";
+      props.id = this.getId() + "-date-popover";
+      props.className = this.getClassName("popover");
+      if (this.props.popoverLocation === "portal") {
+        props.className += " " + this.getClassName("input", "UU5.Forms.InputMixin") + this.props.size;
+      }
 
       return props;
     },
@@ -1733,6 +1780,12 @@ export const DateTimePicker = Context.withContext(
       props.disableBackdrop = true;
       props.shown = this._isTimeOpen();
       props.fitHeightToViewport = this.props.timePickerType === "single-column";
+      props.location = !this._shouldOpenToContent() ? this.props.popoverLocation : "local";
+      props.id = this.getId() + "-time-popover";
+      props.className = this.getClassName("popover");
+      if (this.props.popoverLocation === "portal") {
+        props.className += " " + this.getClassName("input", "UU5.Forms.InputMixin") + this.props.size;
+      }
 
       return props;
     },
@@ -1819,6 +1872,9 @@ export const DateTimePicker = Context.withContext(
                 {this._isTimeOpen() ? <Time {...this._getTimePickerProps(this._parseTime(time))} /> : null}
               </UU5.Bricks.Popover>
             </div>,
+            this.props.popoverLocation === "portal" && this.isOpen() && !this._shouldOpenToContent() ? (
+              <UU5.Bricks.ResizeObserver onResize={this._onInputWrapperResize} key="resizeObserver" />
+            ) : null,
           ])}
         </div>
       );

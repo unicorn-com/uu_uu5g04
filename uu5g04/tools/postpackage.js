@@ -14,9 +14,14 @@
 const fs = require("fs-extra");
 const path = require("path");
 
-let pkg = require("../package.json");
-
 async function run() {
+  // change 'externals' setting for uu5g05 back so that it is present
+  let pkg = JSON.parse(fs.readFileSync("package.json", "utf-8"));
+  if (!pkg.uuBuildSettings.externals.uu5g05) {
+    pkg.uuBuildSettings.externals.uu5g05 = "Uu5g05";
+    fs.writeFileSync("package.json", JSON.stringify(pkg, null, 2) + "\n", "utf-8");
+  }
+
   // add extra items to library descriptor
   console.log("Replacing library descriptor file.");
   let { version } = pkg;

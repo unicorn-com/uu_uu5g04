@@ -97,6 +97,7 @@ export const Tabs = UU5.Common.VisualComponent.create({
     ]),
     justified: UU5.PropTypes.bool,
     fade: UU5.PropTypes.bool,
+    initialActiveName: UU5.PropTypes.string,
     activeName: UU5.PropTypes.string,
     allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
     size: UU5.PropTypes.oneOf(["s", "m", "l", "xl"]),
@@ -122,6 +123,7 @@ export const Tabs = UU5.Common.VisualComponent.create({
       stacked: false,
       justified: false,
       fade: false,
+      initialActiveName: undefined,
       activeName: null,
       allowTags: [],
       size: "m",
@@ -144,7 +146,7 @@ export const Tabs = UU5.Common.VisualComponent.create({
   },
 
   UNSAFE_componentWillReceiveProps(nextProps) {
-    this.setState((state) => this._getState(nextProps, state, this.state));
+    this.setState((state) => this._getState(nextProps, state));
   },
 
   //@@viewOff:reactLifeCycle
@@ -254,19 +256,23 @@ export const Tabs = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _getState(props = this.props, state = this.state, currentState) {
-    // in editaiton mode we neet to keep opened same tab to prevent lost of edited content (keep activeName from state)
-    // this method could be called as an setStateCallback - to check if it is after end of editation mode we need to check
-    //   valid state before set editation to false (currentState)
+  _getState(props = this.props, state = this.state) {
+    // in editation mode we need to keep opened same tab to prevent loss of edited content (keep activeName from state)
+    // this method could be called as setStateCallback - to check if it is after end of editation mode we need to check
+    // valid state before set editation to false (currentState)
+    let activeName;
+    if (!state) {
+      activeName = props.initialActiveName || props.activeName;
+    } else if (props.controlled && props.activeName) {
+      activeName = props.activeName;
+    } else {
+      activeName = state.activeName;
+    }
+
     let result = {
       renderedTabs: [],
       ...state,
-      activeName:
-        state?.editation || currentState?.editation
-          ? state.activeName
-          : props.controlled || !state
-          ? props.activeName
-          : state.activeName,
+      activeName,
       stacked: props.controlled || !state ? this._isStacked(this.getScreenSize(), props) : state.stacked,
     };
 

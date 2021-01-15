@@ -57,23 +57,23 @@
                 <UU5.Bricks.Button content="Log in" onClick={() => UU5.Environment.getSession().login()} />
               )}
 
-              <UU5.Bricks.Div>From CDN:</UU5.Bricks.Div>
+              <UU5.Bricks.Div>From CDN, 480p, 30s:</UU5.Bricks.Div>
               {/*@@viewOn:0*/}
               <UU5.Bricks.Video
-                src="https://video-dev.github.io/streams/x36xhzz/url_4/193039199_mp4_h264_aac_7.m3u8"
-                style={{ width: 512, height: 288 }}
+                src="https://cdn.jsdelivr.net/npm/video-media-samples@1.0.0/big-buck-bunny-480p-30sec.mp4"
+                style={{ height: 480 }}
               />
               {/*@@viewOff:0*/}
 
               <UU5.Bricks.Authenticated authenticated>
                 <UU5.Bricks.Line />
-                <UU5.Bricks.Div>From uuBinaryStore (contains only 60s of video):</UU5.Bricks.Div>
+                <UU5.Bricks.Div>From uuBinaryStore, 360p + 720p, 60s:</UU5.Bricks.Div>
                 {/*@@viewOn:0*/}
                 <UU5.Bricks.Video
                   authenticate
                   type="m3u8"
-                  src="https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/getBinaryData?code=big_buck_bunny_288p_m3u8"
-                  style={{ width: 512, height: 288 }}
+                  src="https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/getBinaryData?code=big_buck_bunny_multi_m3u8"
+                  style={{ height: 720 }}
                 />
                 {/*@@viewOff:0*/}
               </UU5.Bricks.Authenticated>

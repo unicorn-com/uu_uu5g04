@@ -167,6 +167,8 @@ export const SelectBody = createReactClass({
     mainAttrs: UU5.Common.BaseMixin.propTypes.mainAttrs,
     name: UU5.Common.BaseMixin.propTypes.name,
     id: UU5.Common.BaseMixin.propTypes.id,
+    popoverClassName: UU5.PropTypes.string,
+    popoverLocation: UU5.PropTypes.oneOf(["local", "portal"]),
   },
   //@@viewOff:propTypes
 
@@ -194,6 +196,8 @@ export const SelectBody = createReactClass({
       loading: false,
       feedback: "initial",
       inputWidth: undefined,
+      popoverClassName: undefined,
+      popoverLocation: "local", // "local" <=> backward-compatible behaviour
     };
   },
   //@@viewOff:getDefaultProps
@@ -487,6 +491,16 @@ export const SelectBody = createReactClass({
     this._addKeyEvents();
   },
 
+  _onInputWrapperResize() {
+    if (
+      this.props.popoverLocation === "portal" &&
+      this.isOpen() &&
+      !shouldOpenToContent(this.props.openToContent, this.state.screenSize)
+    ) {
+      this._onOpen();
+    }
+  },
+
   _getItemValues(children) {
     let result = [];
     if (this.props.placeholder && children === null) {
@@ -579,13 +593,15 @@ export const SelectBody = createReactClass({
       typeof this.props.onOpen === "function" ? () => this.props.onOpen(setStateCallback) : setStateCallback;
 
     if (this._itemList) {
+      let shouldOpenToContentResult = shouldOpenToContent(this.props.openToContent, this.state.screenSize);
       this._itemList.open(
         {
           onClose: this._onClose,
           aroundElement: UU5.Common.DOM.findNode(this._textInput),
           position: "bottom",
-          offset: shouldOpenToContent(this.props.openToContent, this.state.screenSize) ? 0 : 4,
-          preventPositioning: shouldOpenToContent(this.props.openToContent, this.state.screenSize),
+          offset: shouldOpenToContentResult ? 0 : 4,
+          preventPositioning: shouldOpenToContentResult,
+          fitWidthToAroundElement: this.props.popoverLocation === "portal" && !shouldOpenToContentResult,
         },
         callback
       );
@@ -639,7 +655,6 @@ export const SelectBody = createReactClass({
     let props = {};
 
     props.id = `${this.getId()}-item-list`;
-    props.className = this.getClassName("itemList");
     props.hidden = !this.isOpen();
     props.ref_ = (itemList) => (this._itemList = itemList);
     props.onChange = (opt) => this._onItem(opt);
@@ -649,6 +664,14 @@ export const SelectBody = createReactClass({
     props.forceRender = this.props.forceRender;
     props.header = this._getHeader();
     props.parent = this;
+    props.location = !shouldOpenToContent(this.props.openToContent, this.state.screenSize)
+      ? this.props.popoverLocation
+      : "local";
+    props.disabled = this.state.disabled;
+    props.className = UU5.Common.Tools.joinClassNames(this.props.popoverClassName, this.getClassName("itemList"));
+    if (this.props.multiple && this.props.popoverLocation === "portal") {
+      props.className += " " + this.getClassName("multiple");
+    }
 
     return props;
   },
@@ -755,6 +778,11 @@ export const SelectBody = createReactClass({
         <ItemList key="itemList" {...this._getItemListProps()}>
           {this.isOpen() && children}
         </ItemList>
+        {this.props.popoverLocation === "portal" &&
+        this.isOpen() &&
+        !shouldOpenToContent(this.props.openToContent, this.state.screenSize) ? (
+          <UU5.Bricks.ResizeObserver onResize={this._onInputWrapperResize} key="resizeObserver" />
+        ) : null}
       </>
     );
   },

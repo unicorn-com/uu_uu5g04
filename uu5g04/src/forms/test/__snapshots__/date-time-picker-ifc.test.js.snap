@@ -75,15 +75,21 @@ exports[`UU5.Forms.DateTimePicker interface testing close(setStateCallBack) shou
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="uuID01-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="uuID01-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -167,8 +173,11 @@ exports[`UU5.Forms.DateTimePicker interface testing close(setStateCallBack) shou
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="uuID01-date-popover"
+        location="local"
         ref_={[Function]}
         shown={true}
       >
@@ -180,9 +189,12 @@ exports[`UU5.Forms.DateTimePicker interface testing close(setStateCallBack) shou
         />
       </forwardRef(Popover)>
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="uuID01-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -266,15 +278,21 @@ exports[`UU5.Forms.DateTimePicker interface testing close(setStateCallBack) shou
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="uuID01-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="uuID01-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -358,15 +376,21 @@ exports[`UU5.Forms.DateTimePicker interface testing close(setStateCallBack) shou
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="uuID01-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="uuID01-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -450,15 +474,21 @@ exports[`UU5.Forms.DateTimePicker interface testing close(setStateCallBack) shou
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="uuID01-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="uuID01-time-popover"
+        location="local"
         ref_={[Function]}
         shown={true}
       >
@@ -571,15 +601,21 @@ exports[`UU5.Forms.DateTimePicker interface testing close(setStateCallBack) shou
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="uuID01-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="uuID01-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -663,15 +699,21 @@ exports[`UU5.Forms.DateTimePicker interface testing openCalendar(setStateCallBac
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="uuID01-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="uuID01-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -755,8 +797,11 @@ exports[`UU5.Forms.DateTimePicker interface testing openCalendar(setStateCallBac
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="uuID01-date-popover"
+        location="local"
         ref_={[Function]}
         shown={true}
       >
@@ -768,9 +813,12 @@ exports[`UU5.Forms.DateTimePicker interface testing openCalendar(setStateCallBac
         />
       </forwardRef(Popover)>
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="uuID01-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -854,15 +902,21 @@ exports[`UU5.Forms.DateTimePicker interface testing openTime(setStateCallBack) 1
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="uuID01-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="uuID01-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -946,15 +1000,21 @@ exports[`UU5.Forms.DateTimePicker interface testing openTime(setStateCallBack) 2
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="uuID01-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="uuID01-time-popover"
+        location="local"
         ref_={[Function]}
         shown={true}
       >
@@ -1067,15 +1127,21 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 1`] =
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -1164,15 +1230,21 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 2`] =
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -1259,15 +1331,21 @@ exports[`UU5.Forms.InputMixin interface testing getChangeFeedback() 1`] = `
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -1352,15 +1430,21 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 1`] = `
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -1446,15 +1530,21 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 2`] = `
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -1543,15 +1633,21 @@ exports[`UU5.Forms.InputMixin interface testing getInputWrapper(inpuid) 1`] = `
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -1640,15 +1736,21 @@ exports[`UU5.Forms.InputMixin interface testing getLabel(idinput) 1`] = `
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -1733,15 +1835,21 @@ exports[`UU5.Forms.InputMixin interface testing getMessage() 1`] = `
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -1828,15 +1936,21 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return value 1
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -1923,15 +2037,21 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return value 2
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -2018,15 +2138,21 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return value 3
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -2115,15 +2241,21 @@ exports[`UU5.Forms.InputMixin interface testing isError() 1`] = `
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -2214,15 +2346,21 @@ exports[`UU5.Forms.InputMixin interface testing isError() 2`] = `
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -2307,15 +2445,21 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() shoud return true 1`
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -2402,15 +2546,21 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() should return false 
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -2495,15 +2645,21 @@ exports[`UU5.Forms.InputMixin interface testing isInput() 1`] = `
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -2588,15 +2744,21 @@ exports[`UU5.Forms.InputMixin interface testing isLoading() 1`] = `
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -2685,15 +2847,21 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 1`] = `
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -2777,15 +2945,21 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 2`] = `
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -2876,15 +3050,21 @@ exports[`UU5.Forms.InputMixin interface testing isSuccess() fisr return false, s
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -2973,15 +3153,21 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 1`] = `
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -3072,15 +3258,21 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 2`] = `
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -3169,15 +3361,21 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 1`] =
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -3261,15 +3459,21 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 2`] =
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -3355,15 +3559,21 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 1`] = `
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -3450,15 +3660,21 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 2`] = `
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -3547,15 +3763,21 @@ exports[`UU5.Forms.InputMixin interface testing setChangeFeedback() 1`] = `
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -3644,15 +3866,21 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -3736,15 +3964,21 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -3833,15 +4067,21 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -3930,15 +4170,21 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -4023,15 +4269,21 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -4120,15 +4372,21 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -4213,15 +4471,21 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -4310,15 +4574,21 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -4407,15 +4677,21 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -4503,15 +4779,21 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -4596,15 +4878,21 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -4692,15 +4980,21 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -4785,15 +5079,21 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -4879,15 +5179,21 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -4972,15 +5278,21 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -5069,15 +5381,21 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -5162,15 +5480,21 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -5257,15 +5581,21 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -5350,15 +5680,21 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -5447,15 +5783,21 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -5542,15 +5884,21 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 1`] = `
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -5637,15 +5985,21 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 2`] = `
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -5732,15 +6086,21 @@ exports[`UU5.Forms.TextInputMixin interface testing getBlurFeedback() 1`] = `
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -5827,15 +6187,21 @@ exports[`UU5.Forms.TextInputMixin interface testing isOpen() should return false
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -5922,15 +6288,21 @@ exports[`UU5.Forms.TextInputMixin interface testing isTextInput() should return 
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -6019,15 +6391,21 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() 1`] = `
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -6112,15 +6490,21 @@ exports[`UU5.Forms.TextInputMixin interface testing setAutocompleteItems(items,o
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
@@ -6205,15 +6589,21 @@ exports[`UU5.Forms.TextInputMixin interface testing setAutocompleteItems(items,o
       key="3"
     >
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         forceRender={true}
+        id="idText-date-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />
       <forwardRef(Popover)
+        className="uu5-forms-datetimepicker-popover"
         disableBackdrop={true}
         fitHeightToViewport={false}
         forceRender={true}
+        id="idText-time-popover"
+        location="local"
         ref_={[Function]}
         shown={false}
       />

@@ -11,11 +11,16 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:revision
+// coded: Petr Bišof, 10.12.2020
+// reviewed:
+//@@viewOff:revision
+
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
-import Lsi from "./bricks-lsi";
 import Css from "./internal/css.js";
+import Lsi from "./bricks-lsi";
 //@@viewOff:imports
 
 export const Unauthenticated = UU5.Common.VisualComponent.create({
@@ -51,14 +56,10 @@ export const Unauthenticated = UU5.Common.VisualComponent.create({
         ${width ? `width: ${UU5.Common.Tools.fillUnit(width)};` : ""}
         ${height ? `height: ${UU5.Common.Tools.fillUnit(height)};` : ""}
       `,
-      textWrapper: (props, { nestingLevel }) => Css.css`
-        ${nestingLevel ? "margin-top: 16px;" : "margin-left: 4px;"}
-      `,
-      icon: (props, { nestingLevel }) => Css.css`
-        ${nestingLevel ? "font-size: 32px" : ""}
-      `,
-      loginLink: (props, { nestingLevel }) => Css.css`
-        ${nestingLevel ? "margin-top: 16px;" : "margin-left: 4px;"}
+      textWrapper: () => Css.css`margin-top: 16px`,
+      icon: () => Css.css`font-size: 32px`,
+      loginLink: (isInline) => Css.css`
+        ${isInline ? "margin-left: 4px;" : "margin-top: 16px;"}
         color: inherit;
         text-decoration: underline;
       `,
@@ -101,19 +102,30 @@ export const Unauthenticated = UU5.Common.VisualComponent.create({
       : this.getLsiComponent("text");
   },
 
-  _getLoginLink() {
+  _getLoginLink(login) {
     return (
-      <UU5.Common.Identity>
-        {({ identity, login }) => {
-          return !identity ? (
-            <UU5.Bricks.Link
-              onClick={() => login()}
-              content={this.getLsiComponent("login")}
-              className={this.getClassName("loginLink")}
-            />
-          ) : null;
-        }}
-      </UU5.Common.Identity>
+      <div {...this._getMainAttrs()}>
+        <UU5.Bricks.Icon icon="mdi-account-key" className={this.getClassName("icon")} />
+        <div className={this.getClassName("textWrapper")}>{this._getContent()}</div>
+        <UU5.Bricks.Link
+          onClick={() => login()}
+          content={this.getLsiComponent("login")}
+          className={this.getClassName().loginLink(false)}
+        />
+      </div>
+    );
+  },
+
+  _getInlineLoginLink(login) {
+    return (
+      <span {...this._getMainAttrs()}>
+        <UU5.Bricks.Icon icon="mdi-account-key" />
+        <UU5.Bricks.Link
+          onClick={() => login()}
+          content={this.getLsiComponent("inlineLogin")}
+          className={this.getClassName().loginLink(true)}
+        />
+      </span>
     );
   },
 
@@ -132,23 +144,18 @@ export const Unauthenticated = UU5.Common.VisualComponent.create({
 
   //@@viewOn:render
   render() {
-    if (this.getNestingLevel()) {
-      return (
-        <div {...this._getMainAttrs()}>
-          <UU5.Bricks.Icon icon="mdi-account-key" className={this.getClassName("icon")} />
-          <div className={this.getClassName("textWrapper")}>{this._getContent()}</div>
-          {this._getLoginLink()}
-        </div>
-      );
-    } else {
-      return (
-        <span {...this._getMainAttrs()}>
-          <UU5.Bricks.Icon icon="mdi-account-key" className={this.getClassName("icon")} />
-          <div className={this.getClassName("textWrapper")}>{this._getContent()}</div>
-          {this._getLoginLink()}
-        </span>
-      );
-    }
+    return (
+      <UU5.Common.Identity>
+        {({ identity, login }) => {
+          // check if user is authenticated or pending
+          if (identity !== null) return null;
+
+          // check nesting level
+          const isInline = !this.getNestingLevel();
+          return isInline ? this._getInlineLoginLink(login) : this._getLoginLink(login);
+        }}
+      </UU5.Common.Identity>
+    );
   },
   //@@viewOff:render
 });

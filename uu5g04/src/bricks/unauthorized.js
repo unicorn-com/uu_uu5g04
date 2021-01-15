@@ -11,6 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:revision
+// coded: Petr Bišof, 10.12.2020
+// reviewed:
+//@@viewOff:revision
+
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
@@ -121,8 +126,8 @@ export const Unauthorized = UU5.Common.VisualComponent.create({
     } else {
       return (
         <span {...this._getMainAttrs()}>
-          <UU5.Bricks.Icon icon="mdi-cancel" className={this.getClassName("icon")} />
-          <div className={this.getClassName("textWrapper")}>{this._getContent()}</div>
+          <UU5.Bricks.Icon icon="mdi-cancel" />
+          <span className={this.getClassName("textWrapper")}>{this._getContent()}</span>
         </span>
       );
     }

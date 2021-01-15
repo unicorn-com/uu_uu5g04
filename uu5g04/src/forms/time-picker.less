@@ -8,26 +8,6 @@
     cursor: default !important;
   }
 
-  .uu5-bricks-popover {
-    margin-top: 0px;
-    border-radius: 2px;
-    border: 1px solid #BDBDBD;
-    background-color: #FFFFFF;
-    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.34);
-    min-width: auto;
-  }
-
-  .@{name}-time {
-    margin-top: 0px;
-    position: relative;
-    display: block;
-    flex-wrap: nowrap;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    border-radius: 0;
-  }
-
   &.@{name}-input-inline:not(.@{name}-timepicker-seconds) {
     .@{name}-text-input {
       .@{name}-input-s& {
@@ -191,5 +171,27 @@
 
   .@{name}-time-button.@{name}-time-nav {
     height: 24px;
+  }
+}
+
+.@{name}-timepicker-popover {
+  &.uu5-bricks-popover {
+    margin-top: 0px;
+    border-radius: 2px;
+    border: 1px solid #BDBDBD;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.34);
+    min-width: auto;
+  }
+
+  .@{name}-time {
+    margin-top: 0px;
+    position: relative;
+    display: block;
+    flex-wrap: nowrap;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
   }
 }

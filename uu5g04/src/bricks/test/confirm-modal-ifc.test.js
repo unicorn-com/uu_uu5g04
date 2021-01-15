@@ -75,7 +75,6 @@ describe(`UU5.Bricks.ConfirmModal interface testing`, () => {
 
     // let buttons = wrapper.find(UU5.Bricks.Button);
     let buttons = wrapper.find(".uu5-bricks-button");
-    console.log(buttons);
     expect(buttons).toHaveLength(2);
     let refuseButton = buttons.at(0);
     refuseButton.simulate("click");
