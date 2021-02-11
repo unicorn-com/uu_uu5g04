@@ -238,9 +238,7 @@ export const Number = Context.withContext(
         let hasRequiredValue = this._checkRequiredValue({ value: setNumberResult.value });
         if (hasRequiredValue && !this.props.validateOnChange) {
           setNumberResult.required = this.props.required;
-          if (setNumberResult.feedback && setNumberResult.feedback) {
-            this._updateFeedback(setNumberResult.feedback, setNumberResult.message, setNumberResult.value);
-          }
+          this._updateFeedback(setNumberResult.feedback, setNumberResult.message, setNumberResult.value);
         } else if (!this.props.validateOnChange) {
           this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessage"), setNumberResult.value);
         } else {
@@ -882,6 +880,9 @@ export const Number = Context.withContext(
       opt = this._getOutputResult(opt);
 
       if (typeof this.props.onChange === "function") {
+        if (result.feedback !== this.state.feedback) {
+          this._setFeedback(result.feedback, result.message, result.value);
+        }
         this.props.onChange(opt);
       } else {
         this.onChangeDefault(opt);
@@ -912,6 +913,9 @@ export const Number = Context.withContext(
       opt = this._getOutputResult(opt);
 
       if (typeof this.props.onChange === "function") {
+        if (result.feedback !== this.state.feedback) {
+          this._setFeedback(result.feedback, result.message, result.value);
+        }
         this.props.onChange(opt);
       } else {
         this.onChangeDefault(opt);
@@ -978,31 +982,31 @@ export const Number = Context.withContext(
       let buttons =
         !this.isReadOnly() && !this.props.buttonHidden
           ? [
-              {
-                icon: "mdi-minus",
-                disabled: this.isComputedDisabled() || this._isDisabled("min"),
-                onClick: (component, e) => this._decrease(e),
-                size: this.props.size,
-                colorSchema: this.props.colorSchema,
-                mainAttrs: {
-                  onMouseDown: this._decreaseStart,
-                  onMouseUp: this._decreaseEnd,
-                  onMouseOut: this._decreaseEnd,
-                },
+            {
+              icon: "mdi-minus",
+              disabled: this.isComputedDisabled() || this._isDisabled("min"),
+              onClick: (component, e) => this._decrease(e),
+              size: this.props.size,
+              colorSchema: this.props.colorSchema,
+              mainAttrs: {
+                onMouseDown: this._decreaseStart,
+                onMouseUp: this._decreaseEnd,
+                onMouseOut: this._decreaseEnd,
               },
-              {
-                icon: "mdi-plus",
-                disabled: this.isComputedDisabled() || this._isDisabled("max"),
-                onClick: (component, e) => this._increase(e),
-                size: this.props.size,
-                colorSchema: this.props.colorSchema,
-                mainAttrs: {
-                  onMouseDown: this._increaseStart,
-                  onMouseUp: this._increaseEnd,
-                  onMouseOut: this._increaseEnd,
-                },
+            },
+            {
+              icon: "mdi-plus",
+              disabled: this.isComputedDisabled() || this._isDisabled("max"),
+              onClick: (component, e) => this._increase(e),
+              size: this.props.size,
+              colorSchema: this.props.colorSchema,
+              mainAttrs: {
+                onMouseDown: this._increaseStart,
+                onMouseUp: this._increaseEnd,
+                onMouseOut: this._increaseEnd,
               },
-            ]
+            },
+          ]
           : null;
 
       let inputAttrs = this.props.inputAttrs || {};

@@ -494,13 +494,13 @@ const BricksLsi = {
     inlineLogin: {
       cs: "Pro zobrazení obsahu se přihlašte",
       en: "Log in to show content",
-    }
+    },
   },
   unauthorized: {
     text: {
       cs: "Nemáte potřebná práva k zobrazení tohoto obsahu.",
       en: "You don't have rights to see this content.",
-    }
+    },
   },
   modalBus: {
     collapse: {
@@ -510,7 +510,11 @@ const BricksLsi = {
     expand: {
       cs: "Rozbalit",
       en: "Expand",
-    }
+    },
+    inactiveModal: {
+      cs: "Neaktivní modal",
+      en: "Inactive modal",
+    },
   },
 };
 

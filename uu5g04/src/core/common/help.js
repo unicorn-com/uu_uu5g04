@@ -13,15 +13,20 @@
 
 //@@viewOn:imports
 import React from "react";
-import ns from "./common-ns.js";
 import { PropTypes } from "uu5g05";
+import ns from "./common-ns.js";
 import BaseMixin from "./base-mixin.js";
 import ElementaryMixin from "./elementary-mixin.js";
 import Tools from "./tools.js";
 import PureRenderMixin from "./pure-render-mixin";
 import ContentMixin from "./content-mixin.js";
 import VisualComponent from "./visual-component.js";
+import Environment from "../environment/environment.js";
+import { Request } from "./request.js";
 //@@viewOff:imports
+
+const COMPONENT_GET_ENDPOINT = "component/get";
+const cache = {};
 
 export const Help = VisualComponent.create({
   displayName: "Help", // for backward compatibility (test snapshots)
@@ -80,22 +85,27 @@ export const Help = VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _loadLibrary(props = this.props) {
-    let tagNameArr = props.tagName.split(".");
-    let libraryName = tagNameArr[0] + "." + tagNameArr[1];
-    let pageName = "/page?code=" + tagNameArr.join("");
-    Tools.loadLibrary(libraryName, (response, error) => {
-      if (!error && response && response.doc) {
-        this.setState({ responseLink: response.doc + pageName });
-      }
-    });
+  async _loadLibrary(props = this.props) {
+    let libraryRegistryBaseUri = Environment.COMPONENT_REGISTRY_URL.split(/\//, 5).join("/");
+    let componentGetUri = libraryRegistryBaseUri + "/" + COMPONENT_GET_ENDPOINT;
+    let url = componentGetUri + "?code=" + encodeURIComponent(props.tagName);
+    let cached = cache[url];
+    if (!cached) {
+      cached = cache[url] = {
+        promise: Request.call("get", url).catch((e) => {
+          delete cache[url]; // errored => delete from cache so that we try another call if we get re-mounted
+        }),
+      };
+    }
+    if (!("response" in cached)) cached.response = await cached.promise;
+    this.setAsyncState({ responseLink: cached.response?.data?.docUri });
   },
 
   _getLink() {
     if (this.state.responseLink) {
       return Tools.findComponent(
         "UU5.Bricks.Link",
-        UU5.Common.Tools.merge(this.getMainPropsToPass(), {
+        Tools.merge(this.getMainPropsToPass(), {
           href: this.state.responseLink,
           content: this.props.content || this.props.children || this.props.tagName,
           target: this.props.target,

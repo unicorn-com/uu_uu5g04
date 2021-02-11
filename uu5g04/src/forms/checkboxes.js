@@ -230,6 +230,7 @@ export const Checkboxes = Context.withContext(
           } else if (typeof this.props.onValidate === "function") {
             result = this.props.onValidate(result);
           } else {
+            this.setInitial(null, result.value);
             result = this.props.onChange(result);
           }
 

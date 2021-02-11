@@ -15,11 +15,21 @@ import ModalCoverView from "./internal/modal-bus-cover-view.js";
 
 const ModalContext = UU5.Common.ModalBusContext;
 
-const getProviderValue = memoizeOne((addItem, removeItem, isClosableItem) => {
+const getProviderValue = memoizeOne((addItem, removeItem, updateItem, isClosableItem) => {
   return {
-    render(children, id) {
+    render(children, id, settings, close) {
       return UU5.Common.Portal.create(
-        <ModalCoverView id={id} onMount={addItem} onUnmount={removeItem}>
+        <ModalCoverView
+          onMount={() => {
+            addItem(id, settings, close);
+          }}
+          onUnmount={() => {
+            removeItem(id);
+          }}
+          onUpdate={() => {
+            updateItem(id, settings, close);
+          }}
+        >
           {children}
         </ModalCoverView>,
         document.getElementById("modal-bus")
@@ -50,7 +60,7 @@ export const ModalBus = UU5.Common.VisualComponent.create({
   getInitialState() {
     return {
       itemList: [],
-      activeItem: null,
+      activeItemId: null,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -59,38 +69,51 @@ export const ModalBus = UU5.Common.VisualComponent.create({
   //@@viewOff:interface
 
   //@@viewOn:private
-  _addItem(id) {
+  _addItem(id, settings, close) {
     this.setState((state) => ({
-      activeItem: id,
-      itemList: [...state.itemList, id],
+      activeItemId: id,
+      itemList: [...state.itemList, { id, settings, close }],
     }));
   },
 
   _removeItem(id) {
     this.setState((state) => {
       let itemList = state.itemList;
-      const i = itemList.indexOf(id);
+      const i = itemList.findIndex((item) => item.id === id);
 
       if (i === itemList.length - 1) {
         itemList = itemList.slice(0, itemList.length - 1);
       }
 
       return {
-        activeItem: itemList.length ? itemList[itemList.length - 1] : null,
+        activeItemId: itemList.length ? itemList[itemList.length - 1]?.id : null,
         itemList,
       };
     });
   },
 
-  _setActiveItem(activeItem) {
-    this.setState({ activeItem });
+  _updateItem(id, settings, close) {
+    this.setState((state) => {
+      let itemList = [...state.itemList];
+      const i = itemList.findIndex((item) => item.id === id);
+      itemList[i].settings = settings;
+      itemList[i].close = close;
+
+      return {
+        itemList,
+      };
+    });
+  },
+
+  _setActiveItem(activeItemId) {
+    this.setState({ activeItemId });
   },
 
   _moveActiveItem(offset = 1) {
     this.setState((state) => {
-      let nextIndex = state.itemList.indexOf(state.activeItem) + offset;
+      let nextIndex = state.itemList.findIndex((item) => item.id === state.activeItemId) + offset;
       if (nextIndex < state.itemList.length && nextIndex >= 0) {
-        return { activeItem: state.itemList[nextIndex] };
+        return { activeItemId: state.itemList[nextIndex].id };
       }
     });
   },
@@ -105,24 +128,23 @@ export const ModalBus = UU5.Common.VisualComponent.create({
 
   _isClosableItem(id) {
     // active item is item which is last opened and is currenty set as active
-    return this.state.activeItem === id && this.state.itemList[this.state.itemList.length - 1] === id;
+    return this.state.activeItemId === id && this.state.itemList[this.state.itemList.length - 1]?.id === id;
   },
   //@@viewOff:private
 
   //@@viewOn:render
   render() {
     const { children } = this.props;
-    const { itemList, activeItem } = this.state;
+    const { itemList, activeItemId } = this.state;
 
-    const value = getProviderValue(this._addItem, this._removeItem, this._isClosableItem);
-
+    const value = getProviderValue(this._addItem, this._removeItem, this._updateItem, this._isClosableItem);
     return (
       <ModalContext.Provider value={value}>
         {children}
 
         <ModalBusView
           itemList={itemList}
-          activeItem={activeItem || itemList[itemList.length - 1] || null}
+          activeItemId={activeItemId || itemList[itemList.length - 1]?.id || null}
           onChange={this._setActiveItem}
           setNext={this._setNext}
           setPrevious={this._setPrevious}

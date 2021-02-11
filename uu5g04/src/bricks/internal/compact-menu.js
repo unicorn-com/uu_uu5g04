@@ -109,7 +109,7 @@ export const CompactMenu = UU5.Common.VisualComponent.create({
             }
 
             if (typeof item.onClick === "function") {
-              item.onClick({ component: this, event });
+              item.onClick({ component: this, event, item: component });
             }
           };
         } else if (item === "separator") {

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Custom handlers Demo</title>
+
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+          //"bootstrap": "https://cdn.plus4u.net/libs/bootstrap/3.3.7/js/bootstrap.js",
+
+          "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+          "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+          "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+          "uu5g04": "/uu5g04.js",
+          "uu5g04-forms": "/uu5g04-forms.js",
+          "uu5g04-bricks": "/uu5g04-bricks.js",
+          "uu5g04-hooks": "/uu5g04-hooks.js",
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+
+      import { createVisualComponent, useState } from "uu5g04-hooks";
+
+      const Page = UU5.Common.VisualComponent.create({
+        render() {
+          return (
+            <UU5.Bricks.Container>
+              {[UU5.Forms.Text, UU5.Forms.Number, UU5.Forms.DatePicker, UU5.Forms.DateRangePicker,
+                UU5.Forms.DateTimeRangePicker, UU5.Forms.File, UU5.Forms.IconPicker, UU5.Forms.Slider,
+                UU5.Forms.TagSelect, UU5.Forms.TextIcon, UU5.Forms.TextArea, UU5.Forms.Select,
+                UU5.Forms.SwitchSelector, UU5.Forms.Checkboxes].map((Comp, i) => {
+                const name = Comp.displayName;
+                let children;
+                const props = {};
+                if (Comp === UU5.Forms.Select) {
+                  children = [1, 2, 3].map(n => <UU5.Forms.Select.Option key={n} value={n + ""} />);
+                } else if (Comp === UU5.Forms.TagSelect) {
+                  props.availableTags = [{ value: "Apple" }, { value: "Orange" }];
+                } else if (Comp === UU5.Forms.Checkboxes) {
+                  props.value = [
+                    { label: 'Dogs', name: 'dogs' },
+                    { label: 'Cats', name: 'cats' },
+                    { label: 'Yaks', name: 'yaks' },
+                  ]
+                }
+                return <Component key={i} {...props} Component={Comp} name={name}>{children}</Component>
+              })}
+
+            </UU5.Bricks.Container>
+          );
+        },
+      });
+
+      const Component = createVisualComponent({
+        render({ Component, name, children, ...props }) {
+          const [value, setValue] = useState(props.value);
+          const [message, setMessage] = useState();
+          const [feedback, setFeedback] = useState();
+
+          const _onChangeFeedback = (opt) => {
+            console.log("onChangeFeedback", name, opt);
+            setMessage(opt.message);
+            setFeedback(opt.feedback);
+          };
+
+          const _onChange = (opt) => {
+            console.log("onChange", name, opt);
+            let v = opt.value;
+            if (props.value) {
+              v = value.map(item => {
+                item.value = opt.value[item.name];
+                return item;
+              });
+            }
+            setValue(v);
+          };
+
+          return (
+            <Component
+              {...props}
+              name={name}
+              label="Test input"
+              value={value}
+              onChange={_onChange}
+              onChangeFeedback={_onChangeFeedback}
+              feedback={feedback}
+              message={message}
+              required
+            >
+              {children}
+            </Component>
+          );
+        },
+      });
+
+      UU5.Common.DOM.render(<Page />, document.getElementById('renderHere'));
+    </script>
+  </body>
+</html>

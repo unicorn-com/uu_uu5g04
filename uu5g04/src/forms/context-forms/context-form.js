@@ -45,17 +45,12 @@ export const ContextForm = UU5.Common.Reference.forward(({ className, ...props }
         &.uu5-bricks-alert-without-header .uu5-bricks-alert-content {
           padding: 16px;
 
-          // 48px is width of the close button
-          max-width: calc(100% - 48px);
-
-          > * {
-            max-width: calc(100% - 48px);
+          /* just for IE */
+          @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            width: 100%;
           }
-
         }
       }
-
-
 
       & > .uu5-bricks-row {
         margin-left: -8px;

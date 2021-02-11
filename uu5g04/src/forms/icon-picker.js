@@ -24,6 +24,69 @@ import "./icon-picker.less";
 //@@viewOff:imports
 
 let _icons = {};
+const ICON_LIBRARIES = Object.keys(UU5.Environment.iconLibraries);
+
+const ALL_ICONS_ID = UU5.Common.Tools.generateUUID();
+
+function isStandardObject(label) {
+  return label && typeof label === "object" && !label.type;
+}
+
+function getCategoryByCode(code, categories) {
+  return categories.find((categoryDef) =>
+    typeof categoryDef === "object" ? code === categoryDef.code : categoryDef === code
+  );
+}
+
+function getIconLibrariesFromIconList(iconList) {
+  let libraries = [];
+
+  for (let icon of iconList) {
+    let library = icon.split("-")[0];
+    if (libraries.indexOf(library) === -1) libraries.push(library);
+  }
+
+  return libraries;
+}
+
+function getIconLibrariesFromCategory(category, availableCategories) {
+  if (category === ALL_ICONS_ID) {
+    let result = [];
+
+    for (let i = 0; i < availableCategories.length; i++) {
+      let iItem = availableCategories[i];
+      if (typeof iItem === "object") {
+        let categories = getIconLibrariesFromIconList(iItem.iconList);
+        result = [...result, ...categories];
+      } else {
+        result.push(iItem);
+      }
+    }
+
+    return result;
+  }
+
+  let categoryDefinition = getCategoryByCode(category, availableCategories);
+
+  if (typeof categoryDefinition === "object") {
+    return getIconLibrariesFromIconList(categoryDefinition.iconList);
+  } else {
+    return [categoryDefinition];
+  }
+}
+
+function filterIcons(iconSet, allowedIcons) {
+  let usedIcons = [...allowedIcons];
+  let result = [];
+  for (let i = 0; i < iconSet.length; i++) {
+    for (let j = 0; j < usedIcons.length; j++) {
+      if (iconSet[i] === usedIcons[j]) {
+        result.push(iconSet[i]);
+      }
+    }
+  }
+  return result;
+}
 
 export const IconPicker = Context.withContext(
   UU5.Common.VisualComponent.create({
@@ -75,8 +138,17 @@ export const IconPicker = Context.withContext(
     //@@viewOn:propTypes
     propTypes: {
       disableBackdrop: UU5.PropTypes.bool,
-      categories: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
-      selectedCategory: UU5.PropTypes.oneOf(Object.keys(UU5.Environment.iconLibraries)),
+      categories: UU5.PropTypes.arrayOf(
+        UU5.PropTypes.oneOfType([
+          UU5.PropTypes.string,
+          UU5.PropTypes.shape({
+            code: UU5.PropTypes.string,
+            label: UU5.PropTypes.oneOfType([UU5.PropTypes.node, UU5.PropTypes.object]),
+            iconList: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
+          }),
+        ])
+      ),
+      selectedCategory: UU5.PropTypes.oneOf(ICON_LIBRARIES),
       placeholder: UU5.PropTypes.string,
       required: UU5.PropTypes.bool,
       requiredMessage: UU5.PropTypes.any,
@@ -117,7 +189,7 @@ export const IconPicker = Context.withContext(
         open: false,
         loading: false,
         error: false,
-        selectedCategory: [selectedCategory],
+        selectedCategory,
         icons: [],
         searchString: "",
         scrollPosition: null,
@@ -444,7 +516,7 @@ export const IconPicker = Context.withContext(
       this._calls = []; // reset loading
       let callbackExecuted = false;
 
-      this.state.selectedCategory.forEach((library) => {
+      getIconLibrariesFromCategory(this.state.selectedCategory, this.props.categories).forEach((library) => {
         if (!_icons[library]) {
           callbackExecuted = true;
           if (this._calls.length === 0) {
@@ -514,9 +586,15 @@ export const IconPicker = Context.withContext(
         result = <UU5.Bricks.Loading />;
       } else {
         let icons = ["iconpicker-remove-selection"];
-        this.state.selectedCategory.forEach((category) => {
+        let selectedCategoryDefinition = getCategoryByCode(this.state.selectedCategory, this.props.categories);
+        getIconLibrariesFromCategory(this.state.selectedCategory, this.props.categories).forEach((category) => {
           if (this.state.icons[category]) {
-            icons = icons.concat(this.state.icons[category]);
+            let categoryIcons = this.state.icons[category];
+            categoryIcons =
+              typeof selectedCategoryDefinition === "object" && selectedCategoryDefinition.iconList
+                ? filterIcons(categoryIcons, selectedCategoryDefinition.iconList)
+                : categoryIcons;
+            icons = icons.concat(categoryIcons);
           }
 
           if (category === "plus4u5") {
@@ -649,9 +727,18 @@ export const IconPicker = Context.withContext(
     },
 
     _getHeader() {
-      let categories = this.props.categories.map((category) => ({ content: category, value: category }));
+      let categories = this.props.categories.map((category) => {
+        if (typeof category === "object") {
+          return {
+            content: isStandardObject(category.label) ? <UU5.Bricks.Lsi lsi={category.label} /> : category.label,
+            value: category.code,
+          };
+        } else {
+          return { content: category, value: category };
+        }
+      });
       if (this.props.categories.length > 1) {
-        categories.unshift({ content: this.getLsiComponent("selectAll"), value: "selectAll" });
+        categories.unshift({ content: this.getLsiComponent("selectAll"), value: ALL_ICONS_ID });
       }
 
       return (
@@ -675,15 +762,10 @@ export const IconPicker = Context.withContext(
               onChange={(opt) => {
                 opt.component.onChangeDefault(opt);
                 let value = opt.value;
-                if (opt.value == "selectAll") {
-                  value = [...this.props.categories];
-                } else {
-                  value = [value];
-                }
                 this._changeCategory(value);
               }}
               openToContent={false}
-              value={this.state.selectedCategory.length > 1 ? "selectAll" : this.state.selectedCategory}
+              value={this.state.selectedCategory}
               className={this.getClassName("categoryInput")}
               readOnly={this.isReadOnly()}
               disabled={this.isComputedDisabled()}

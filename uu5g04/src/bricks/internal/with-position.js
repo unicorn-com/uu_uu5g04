@@ -1,6 +1,6 @@
 //@@viewOn:revision
 // coded: Filip Janovský, 20.10.2020
-// reviewed: 
+// reviewed:
 //@@viewOn:revision
 
 //@@viewOn:imports
@@ -22,15 +22,6 @@ const withPosition = (Component) => {
     //@@viewOff:getDefaultProps
 
     //@@viewOn:reactLifeCycle
-    //@@viewOff:reactLifeCycle
-
-    //@@viewOn:interface
-    //@@viewOff:interface
-
-    //@@viewOn:overriding
-    //@@viewOff:overriding
-
-    //@@viewOn:private
     getInitialState() {
       return {
         position: {},
@@ -47,6 +38,20 @@ const withPosition = (Component) => {
       };
     },
 
+    componentWillReceiveProps(nextProps) {
+      if (nextProps.itemList.length === 0) {
+        this.setState({ position: {} });
+      }
+    },
+    //@@viewOff:reactLifeCycle
+
+    //@@viewOn:interface
+    //@@viewOff:interface
+
+    //@@viewOn:overriding
+    //@@viewOff:overriding
+
+    //@@viewOn:private
     _onMouseMove(e) {
       e.preventDefault();
       if (this.state.isDown) {
@@ -55,10 +60,12 @@ const withPosition = (Component) => {
           const left = state.offsetLeft + e.clientX - state.pointerLeft - state.marginLeft;
           const width = state.contentRef.clientWidth;
           const height = state.contentRef.clientHeight;
-          const bottom = window.innerHeight - top - height - state.marginBottom - state.marginTop;
-          const right = window.innerWidth - left - width - state.marginRight - state.marginLeft;
+          const bottom = document.body.clientHeight - top - height - state.marginBottom - state.marginTop;
+          const right = document.body.clientWidth - left - width - state.marginRight - state.marginLeft;
           const componentWidth = width + state.marginLeft + state.marginRight;
           const componentHeight = height + state.marginTop + state.marginBottom;
+          const marginLeft = state.position?.marginLeft || 0;
+          const marginRight = state.position?.marginRight || 0;
 
           return {
             position: {
@@ -70,6 +77,8 @@ const withPosition = (Component) => {
               height,
               componentWidth,
               componentHeight,
+              marginLeft,
+              marginRight,
             },
           };
         });
@@ -122,11 +131,11 @@ const withPosition = (Component) => {
       const componentHeight = height + marginTop + marginBottom;
       let top = offsetTop - marginTop;
       let left = offsetLeft - marginLeft;
-      let bottom = window.innerHeight - top - height - marginBottom - marginTop;
-      let right = window.innerWidth - left - width - marginRight - marginLeft;
+      let bottom = document.body.clientHeight - top - height - marginBottom - marginTop;
+      let right = document.body.clientWidth - left - width - marginRight - marginLeft;
 
       if (mode === "center") {
-        left = (window.innerWidth - componentWidth) / 2;
+        left = (document.body.clientWidth - componentWidth) / 2;
         right = left;
       } else if (mode === "optimize" && this.state.position.width) {
         // optimalization is possible only if width was measure once before
@@ -134,6 +143,10 @@ const withPosition = (Component) => {
         const diff = (currentComponentWidth - componentWidth) / 2;
         left += diff;
         right += diff;
+
+        if ((right > 0 && right + componentWidth > document.body.clientWidth) || right < 0) {
+          right = 0;
+        }
       }
 
       this.setState({
@@ -147,6 +160,8 @@ const withPosition = (Component) => {
           height,
           componentWidth,
           componentHeight,
+          marginLeft,
+          marginRight,
         },
         marginTop,
         marginBottom,

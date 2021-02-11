@@ -73,6 +73,14 @@ async function run() {
   console.log("Copying jest-setup.js.");
   fs.copyFileSync("src/core/test/jest-setup.js", "target/dist-node/jest-setup.js");
   fs.copyFileSync("src/core/test/jest-setup.js", "target/dist/jest-setup.js"); // for backward compatibility
+
+  // remove uu5g05 from externals (it must not be in .tgz's package.json)
+  // NOTE We can't do this in prepackage step because that step gets executed sooner than prebuild step
+  // (and prebuild needs to add uu5g05 to externals).
+  console.log("Fixing externals for 'package' step.");
+  let pkgJson = JSON.parse(fs.readFileSync("package.json", "utf-8"));
+  delete pkgJson.uuBuildSettings.externals.uu5g05;
+  fs.writeFileSync("package.json", JSON.stringify(pkgJson, null, 2) + "\n", "utf-8");
 }
 
 let processed = new Set();

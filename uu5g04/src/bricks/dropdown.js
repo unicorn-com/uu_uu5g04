@@ -267,8 +267,8 @@ export const Dropdown = UU5.Common.VisualComponent.create({
           children: null,
           label: props.label || itemContent,
           items,
-          onClick: (...args) => {
-            if (typeof props.onClick === "function") props.onClick(...args);
+          onClick: (opt) => {
+            if (typeof props.onClick === "function") props.onClick(opt.item, opt.event);
             if (!items) this.close();
           },
         };

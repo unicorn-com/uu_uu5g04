@@ -28,6 +28,7 @@ export const Factory = {
       nestingLevel: nestingLevelList,
     };
 
+    // eslint-disable-next-line uu5/base-mixin
     return UU5.Common.VisualComponent.create({
       displayName: uu5Name || tag,
       //@@viewOn:mixins
@@ -85,7 +86,7 @@ export const Factory = {
           ? UU5.Common.Element.create(
               tag.toLowerCase(),
               UU5.Common.VisualComponent.getAttrs(this.props, mainClassName),
-              UU5.Utils.Content.getChildren(this.props.content || this.props.children, this.props, nestingLevelList) ||
+              UU5.Utils.Content.getChildren(this.props.content || this.props.children, this.props, statics) ||
                 defaultContent ||
                 null
             )
@@ -104,6 +105,7 @@ export const Factory = {
     };
     if (!defaultContent) defaultContent = uu5Name;
 
+    // eslint-disable-next-line uu5/base-mixin
     return UU5.Common.VisualComponent.create({
       //@@viewOn:mixins
       //@@viewOff:mixins
@@ -112,6 +114,8 @@ export const Factory = {
       statics: {
         tagName,
       },
+      //@@viewOff:statics
+
       //@@viewOn:propTypes
       //@@viewOff:propTypes
 
@@ -146,7 +150,7 @@ export const Factory = {
           </Link>
         ) : null;
       },
-      //@@viewOn:render
+      //@@viewOff:render
     });
   },
 };

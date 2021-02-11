@@ -14,6 +14,7 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+import Css from "./internal/css.js";
 
 const EditableRow = UU5.Common.Component.lazy(async () => {
   await SystemJS.import("uu5g04-forms");
@@ -59,6 +60,9 @@ export const Row = UU5.Common.VisualComponent.create({
       standard: ns.css("row-standard"),
       flex: ns.css("row-flex"),
       editation: ns.css("row-editation"),
+      spaceAround: () => Css.css`
+        margin: 0 -8px;
+      `,
     },
     opt: {
       nestingLevelWrapper: true,
@@ -75,6 +79,7 @@ export const Row = UU5.Common.VisualComponent.create({
   //@@viewOn:propTypes
   propTypes: {
     noSpacing: UU5.PropTypes.bool,
+    spaceAround: UU5.PropTypes.bool,
     display: UU5.PropTypes.oneOf(["standard", "flex"]),
   },
   //@@viewOff:propTypes
@@ -83,6 +88,7 @@ export const Row = UU5.Common.VisualComponent.create({
   getDefaultProps() {
     return {
       noSpacing: false,
+      spaceAround: true,
       display: "standard",
     };
   },
@@ -110,8 +116,12 @@ export const Row = UU5.Common.VisualComponent.create({
     let mainAttrs = this.getMainAttrs();
     mainAttrs.className += " " + this.getClassName(this.props.display);
     mainAttrs.className += " " + this.getClassName(this.props.noSpacing ? "noSpacing" : "spacing");
+    mainAttrs.className += " " + this.getClassName(this.props.spaceAround ? "noSpacing" : "spacing");
     if (this.state.editation) {
       mainAttrs.className += ` ${this.getClassName("editation")}`;
+    }
+    if (!this.props.spaceAround){
+      mainAttrs.className += ` ${this.getClassName("spaceAround")}`;
     }
     return mainAttrs;
   },

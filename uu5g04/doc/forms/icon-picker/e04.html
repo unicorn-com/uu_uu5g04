@@ -55,7 +55,12 @@
             {/*@@viewOn:0*/}
             <UU5.Forms.IconPicker
               label="Icon"
-              categories={["uu5", "fa"]}
+              categories={["uu5", "fa", "uubml"]}
+            />
+            {/*@@viewOff:0*/}
+            <UU5.Forms.IconPicker
+              label="Icon"
+              categories={["uu5", "fa", { code: "stateIcons", label: { cs: "stavové ikony", en: "state icons" }, iconList: ["uubml-state-s06", "uubml-state-s04"] }]}
             />
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>

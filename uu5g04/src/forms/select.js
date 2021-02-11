@@ -324,11 +324,13 @@ export const Select = Context.withContext(
       let childTagNames = this.props.allowTags.concat(defaultChildTagName);
       let result = childTagNames.indexOf(childTagName) > -1;
       if (!result && (typeof child !== "string" || child.trim())) {
-        if (childTagName)
+        if (childTagName) {
           this.showError("childTagNotAllowed", [childTagName, this.getTagName(), childTagName, defaultChildTagName], {
             mixinName: "UU5.Common.BaseMixin",
           });
-        else this.showError("childNotAllowed", [child, defaultChildTagName], { mixinName: "UU5.Common.BaseMixin" });
+        } else {
+          this.showError("childNotAllowed", [child, defaultChildTagName], { mixinName: "UU5.Common.BaseMixin" });
+        }
       }
       return result;
     },
@@ -629,11 +631,11 @@ export const Select = Context.withContext(
         this.toggle(() =>
           this.isOpen() && this._shouldOpenToContent()
             ? UU5.Common.Tools.scrollToTarget(
-                this.getId() + "-input",
-                false,
-                UU5.Environment._fixedOffset + 20,
-                scrollElement
-              )
+            this.getId() + "-input",
+            false,
+            UU5.Environment._fixedOffset + 20,
+            scrollElement
+            )
             : null
         );
       } else {
@@ -641,11 +643,11 @@ export const Select = Context.withContext(
           this.toggle(() =>
             this.isOpen() && this._shouldOpenToContent()
               ? UU5.Common.Tools.scrollToTarget(
-                  this.getId() + "-input",
-                  false,
-                  UU5.Environment._fixedOffset + 20,
-                  scrollElement
-                )
+              this.getId() + "-input",
+              false,
+              UU5.Environment._fixedOffset + 20,
+              scrollElement
+              )
               : null
           )
         );
@@ -696,6 +698,9 @@ export const Select = Context.withContext(
         }
 
         if (typeof this.props.onChange === "function") {
+          if (this.state.feedback) {
+            this._setFeedback(undefined, undefined, opt.value);
+          }
           multiple ? this.props.onChange(opt) : this.toggle(() => this.props.onChange(opt));
         } else if (!requiredResult) {
           this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessageChoice"), null);

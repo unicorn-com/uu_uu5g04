@@ -1,19 +1,21 @@
 {
   "product": "uu_uu5g04",
-  "version": "1.40.0",
+  "version": "1.41.0",
   "license": "UAF",
   "description": "",
+  "docUri": "https://uuapp.plus4u.net/uu-bookkit-maing01/ed11ec379073476db0aa295ad6c00178/book/page",
+  "flsUri": "https://uuapp.plus4u.net/uu-flsg01-main/06ea1e6d022244a7a16ab9de54249e9c",
+  "imageUri": "https://uuapp.plus4u.net/uu-bookkit-maing01/ed11ec379073476db0aa295ad6c00178/getProductLogo",
+  "devkit": {
+    "development": {
+      "appBoxLocationUri": "ues:UU-BT:PRD.UU-UU5G04/APPBOX",
+      "appDeploymentUri": "ues:UUUI-BT[98234766879087459]:FAMILY_UUUI_FAT_RESOURCEPOOL_AWE[5e566d7ad24a21848dcc0d9c]:UU.UU5G04[5e725c0e3c0e09b06ab48210]",
+      "resourcePoolUri": "ues:UUUI-BT:FAMILY_UUUI_FAT_RESOURCEPOOL_AWE"
+    }
+  },
   "uu5g04": {
     "namespace": "UU5",
-    "sourceUri": "https://cdn.plus4u.net/uu-uu5g04/%s/uu5g04.min.js",
-    "docUri": "https://uuapp.plus4u.net/uu-bookkit-maing01/ed11ec379073476db0aa295ad6c00178/book",
-    "imageUri": "https://uuapp.plus4u.net/uu-bookkit-maing01/ed11ec379073476db0aa295ad6c00178/getProductLogo",
-    "devkit": {
-      "development": {
-        "appBoxLocationUri": "ues:UU-BT:PRD.UU-UU5G04/APPBOX",
-        "appDeploymentUri": "ues:UUUI-BT[98234766879087459]:FAMILY_UUUI_FAT_RESOURCEPOOL_AWE[5e566d7ad24a21848dcc0d9c]:UU.UU5G04[5e725c0e3c0e09b06ab48210]"
-      }
-    }
+    "sourceUri": "https://cdn.plus4u.net/uu-uu5g04/%s/uu5g04.min.js"
   },
   "uu5g04_icons": {
     "version": "1.0.1",
@@ -25,7 +27,8 @@
     "devkit": {
       "development": {
         "appBoxLocationUri": "ues:UU-BT:PRD.UU-UU5G04-ICONS/APPBOX",
-        "appDeploymentUri": null
+        "appDeploymentUri": null,
+        "resourcePoolUri": "ues:UUUI-BT:FAMILY_UUUI_FAT_RESOURCEPOOL_AWE"
       }
     }
   }

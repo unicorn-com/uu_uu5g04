@@ -25,6 +25,9 @@ import { RenderIntoPortal } from "./internal/portal.js";
 import "./modal.less";
 //@@viewOff:imports
 
+const MARGIN_SMALL = 4;
+const MARGIN_NORMAL = 16;
+
 const MOUNT_CONTENT_VALUES = {
   onFirstRender: "onFirstRender",
   onFirstOpen: "onFirstOpen",
@@ -132,6 +135,7 @@ const _Modal = UU5.Common.VisualComponent.create({
       },
       dialog: (props) => {
         let className = ns.css("modal-dialog");
+
         if (typeof props.offsetTop === "number") {
           className +=
             " " +
@@ -160,10 +164,76 @@ const _Modal = UU5.Common.VisualComponent.create({
         }
         return className;
       },
+      modalBusViewContent: () => {
+        let styles = `
+          margin: ${MARGIN_SMALL}px;
+
+          .uu5-bricks-modal-layout-wrapper {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+          }
+
+          &.uu5-bricks-modal-max {
+            margin-left: 0px;
+            margin-right: 0px;
+            width: 100%;
+          }
+        `;
+
+        styles += UU5.Utils.ScreenSize.getMediaQueries(
+          "xs",
+          `
+            &.uu5-bricks-modal-s, &.uu5-bricks-modal-m, &.uu5-bricks-modal-l {
+              width: calc(100% - ${MARGIN_SMALL * 2}px);
+            }
+          `
+        );
+
+        styles += UU5.Utils.ScreenSize.getMinMediaQueries(
+          "s",
+          `
+            margin: ${MARGIN_NORMAL}px;
+          `
+        );
+
+        styles += UU5.Utils.ScreenSize.getMediaQueries(
+          "s",
+          `
+            &.uu5-bricks-modal-m, &.uu5-bricks-modal-l {
+              width: calc(100% - ${MARGIN_NORMAL * 2}px);
+              margin: ${MARGIN_NORMAL}px;
+
+              .uu5-bricks-modal-layout-wrapper {
+                width: 100%;
+              }
+            }
+          `
+        );
+
+        styles += UU5.Utils.ScreenSize.getMediaQueries(
+          "m",
+          `
+            &.uu5-bricks-modal-l {
+              width: calc(100% - ${MARGIN_NORMAL * 2}px);
+              margin: ${MARGIN_NORMAL}px;
+
+              .uu5-bricks-modal-layout-wrapper {
+                width: 100%;
+              }
+            }
+          `
+        );
+
+        if (styles) {
+          return Css.css`${styles}`;
+        }
+      },
       modalSize: ns.css("modal-"),
       isFooter: ns.css("modal-isfooter"),
       overflow: ns.css("modal-overflow"),
       bodyOverflow: ns.css("modal-body-overflow"),
+      layoutWrapper: ns.css("modal-layout-wrapper"),
     },
     ...STATICS,
   },
@@ -186,6 +256,7 @@ const _Modal = UU5.Common.VisualComponent.create({
     ]),
     offsetTop: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
     location: UU5.PropTypes.oneOf(["local", "portal"]),
+    registerToModalBus: UU5.PropTypes.bool,
 
     _render: UU5.PropTypes.func,
     _allowClose: UU5.PropTypes.func,
@@ -206,6 +277,7 @@ const _Modal = UU5.Common.VisualComponent.create({
       mountContent: undefined,
       offsetTop: null,
       location: undefined,
+      registerToModalBus: true,
       _render: undefined,
       _allowClose: undefined,
     };
@@ -231,6 +303,7 @@ const _Modal = UU5.Common.VisualComponent.create({
       onClose: this.props.onClose,
       overflow: this.props.overflow,
       openKey: undefined,
+      registerToModalBus: this.props.registerToModalBus,
     };
   },
 
@@ -617,6 +690,8 @@ const _Modal = UU5.Common.VisualComponent.create({
     newProps.onClose = props.onClose === undefined ? this.props.onClose : props.onClose;
     newProps.overflow = props.overflow === undefined ? this.props.overflow : props.overflow;
     newProps.mountContent = props.mountContent === undefined ? this.props.mountContent : props.mountContent;
+    newProps.registerToModalBus =
+      props.registerToModalBus === undefined ? this.props.registerToModalBus : props.registerToModalBus;
 
     if ((newProps.content === undefined || newProps.content === null) && (this.props.children || props.children)) {
       newProps.content = props.children === undefined ? this.props.children : props.children;
@@ -714,6 +789,20 @@ const _Modal = UU5.Common.VisualComponent.create({
     }
     return result;
   },
+
+  _getModalBusClassName() {
+    let classNames = [this.getClassName("modalBusViewContent"), this.getClassName("modalSize") + this.state.size];
+
+    if (this.props.className) {
+      classNames.push(this.props.className);
+    }
+
+    if (this.state.className) {
+      classNames.push(this.state.className);
+    }
+
+    return classNames.join(" ").trim();
+  },
   //@@viewOff:private
 
   //@@viewOn:render
@@ -738,14 +827,23 @@ const _Modal = UU5.Common.VisualComponent.create({
     }
 
     return this.getNestingLevel()
-      ? this.props._render && !this.state.hidden
+      ? this.props._render && !this.state.hidden && this.state.registerToModalBus
         ? this.props._render(
-            <div className={this.getClassName("modalSize") + this.state.size}>{this._buildChildren()}</div>,
-            "id-" + this.getId()
+            <div className={`${this.getClassName("layoutWrapper")}`}>{this._buildChildren()}</div>,
+            "id-" + this.getId(),
+            {
+              viewContentClassName: this._getModalBusClassName(),
+              stickyBackground: this.state.stickyBackground,
+            },
+            this.close
           )
         : this._renderModal((hidden) => (
             <div {...this._getMainAttrs(hidden)}>
-              <div className={this.getClassName("dialog") + " " + this.getClassName("modalSize") + this.state.size}>
+              <div
+                className={`${this.getClassName("dialog")} ${this.getClassName("modalSize")}${
+                  this.state.size
+                } ${this.getClassName("layoutWrapper")}`}
+              >
                 {this._buildChildren()}
                 {this.getDisabledCover()}
               </div>

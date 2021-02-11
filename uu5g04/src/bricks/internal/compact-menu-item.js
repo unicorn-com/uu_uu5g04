@@ -94,8 +94,6 @@ export const propTypes = {
   smoothScroll: UU5.PropTypes.number,
   offset: UU5.PropTypes.number,
   target: UU5.PropTypes.string,
-  disabled: UU5.PropTypes.bool,
-  hidden: UU5.PropTypes.bool,
   icon: UU5.PropTypes.string,
   items: UU5.PropTypes.arrayOf(UU5.PropTypes.object),
 };
@@ -109,7 +107,7 @@ const STATICS = {
 export const CompactMenu = UU5.Common.VisualComponent.create({
   ...STATICS,
   //@@viewOn:mixins
-  mixins: [UU5.Common.BaseMixin],
+  mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin],
   //@@viewOff:mixins
 
   //@@viewOn:propTypes
@@ -129,8 +127,6 @@ export const CompactMenu = UU5.Common.VisualComponent.create({
       smoothScroll: 1000,
       offset: null,
       target: "_self",
-      disabled: false,
-      hidden: false,
       icon: undefined,
       items: undefined,
     };
@@ -148,7 +144,7 @@ export const CompactMenu = UU5.Common.VisualComponent.create({
 
   //@@viewOn:private
   _isClickable() {
-    return !this.props.disabled && !this.props.header && !!(this.props.onClick || this.props.href);
+    return !this.isDisabled() && !this.props.header && !!(this.props.onClick || this.props.href);
   },
 
   _hasItems() {
@@ -158,7 +154,7 @@ export const CompactMenu = UU5.Common.VisualComponent.create({
 
   //@@viewOn:render
   render() {
-    if (this.props.hidden) {
+    if (this.isHidden()) {
       return null;
     } else if (this.props.separator) {
       return <UU5.Bricks.Div className={classNames.separator()} />;
@@ -175,6 +171,7 @@ export const CompactMenu = UU5.Common.VisualComponent.create({
           this.props.className,
           classNames.item(this._isClickable(), this._hasItems())
         ),
+        onClick: typeof this.props.onClick === "function" ? (component, event) => this.props.onClick(this, event) : undefined
       };
       return (
         <UU5.Bricks.Link {...propsToPass} colorSchema="custom">

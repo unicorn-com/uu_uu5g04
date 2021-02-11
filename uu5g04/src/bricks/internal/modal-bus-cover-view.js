@@ -12,12 +12,12 @@ import Css from "./css.js";
 const classNames = {
   modalCoverView: () => {
     return Css.css`
-    display: none;
-    pointer-events: none;
+      display: none;
+      pointer-events: none;
 
-    .uu5-bricks-modal-body{
-      background: none;
-    }
+      .uu5-bricks-modal-body {
+        background: none;
+      }
     `;
   },
 };
@@ -34,9 +34,9 @@ export const ModalCoverView = UU5.Common.Component.create({
 
   //@@viewOn:propTypes
   propTypes: {
-    id: UU5.PropTypes.string,
     onMount: UU5.PropTypes.func,
     onUnmount: UU5.PropTypes.func,
+    onUpdate: UU5.PropTypes.func,
   },
   //@@viewOff:propTypes
 
@@ -45,6 +45,7 @@ export const ModalCoverView = UU5.Common.Component.create({
     return {
       onMount: null,
       onUnmount: null,
+      onUpdate: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -52,13 +53,19 @@ export const ModalCoverView = UU5.Common.Component.create({
   //@@viewOn:reactLifeCycle
   componentDidMount() {
     if (typeof this.props.onMount === "function") {
-      this.props.onMount(this.props.id);
+      this.props.onMount();
+    }
+  },
+
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    if (typeof nextProps.onUpdate === "function") {
+      nextProps.onUpdate();
     }
   },
 
   componentWillUnmount() {
     if (typeof this.props.onUnmount === "function") {
-      this.props.onUnmount(this.props.id);
+      this.props.onUnmount();
     }
   },
   //@@viewOff:reactLifeCycle
@@ -71,8 +78,9 @@ export const ModalCoverView = UU5.Common.Component.create({
 
   //@@viewOn:render
   render() {
+    let className = this.props.className || "";
     return (
-      <div data-name="ModalCoverView" className={classNames.modalCoverView()}>
+      <div data-name="ModalCoverView" className={classNames.modalCoverView() + className}>
         {this.props.children}
       </div>
     );

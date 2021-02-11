@@ -7,50 +7,52 @@
 import UU5 from "uu5g04";
 import ns from "../bricks-ns.js";
 import Css from "./css";
-import Icon from "../icon.js";
 import Lsi from "../bricks-lsi.js";
 //@@viewOff:imports
 
 const classNames = {
-  header: (screenSize) => {
-    return Css.css`
-      display: flex;
-      align-items: center;
-      justify-content: ${screenSize === "xs" ? "space-between" : "center"};
-      flex-flow: row nowrap;
-      padding: 8px;
-      background: #F5F5F5;
-      border-radius: 4px;
-    `;
-  },
-  button: () => {
-    return Css.css`
+  header: () => Css.css`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    padding: 8px;
+    background: #F5F5F5;
+    border-radius: 4px 4px 0 0;
+    cursor: move;
+  `,
+  buttonWrapper: () => Css.css`
+    position: relative;
+  `,
+  button: (itemId, activeItemId) => Css.css`
     &.color-schema-blue-rich.uu5-bricks-button-transparent {
       &:focus, &:active, &:hover, &:active:hover {
-      background-color: transparent;
+        background-color: transparent;
+      }
     }
-  },
-  &.uu5-bricks-button-transparent {
-    &:focus, &:active, &:hover, &:active:hover {
-    background-color: transparent;
-  }
-},
-    &.color-schema-default{
+    &.uu5-bricks-button-transparent {
+        &:focus, &:active, &:hover, &:active:hover {
+        background-color: transparent;
+      }
+    }
+    &.color-schema-default {
       &:focus, &:active, &:hover, &:active:hover {
         background-color: transparent;
       }
     }
 
-    `;
-  },
-  collapseButton: (collapse) => {
-    return collapse
-      ? ""
-      : Css.css`
-      position: absolute;
-      right: 8px;
-      `;
-  },
+    && {
+     border-bottom: 4px solid ${itemId === activeItemId ? `#2196F3` : `rgba(0,0,0,0)`};
+    }
+  `,
+  inactiveLabel: () => Css.css`
+    color: ${UU5.Environment.colors.grey.c700};
+    font-style: italic;
+    font-size: 14px;
+  `,
+  icon: (itemId, activeItemId, allowClose) => Css.css`
+    ${itemId !== activeItemId && allowClose ? `background-color: #2196F3; color: white; border-radius: 2px` : ""}
+  `,
 };
 
 export const ModalBusToolbar = UU5.Common.Component.create({
@@ -96,62 +98,50 @@ export const ModalBusToolbar = UU5.Common.Component.create({
 
   //@@viewOn:render
   render() {
-    let { itemList, activeItem, onChange, collapse, toggleCollapse, setNext, setPrevious, ...props } = this.props;
-
+    let { itemList, activeItemId, onChange, collapse, toggleCollapse, setNext, setPrevious, ...props } = this.props;
     const attrs = UU5.Common.VisualComponent.getAttrs(props);
-    let disableNext = activeItem === itemList[itemList.length - 1] ? true : false;
-    let disablePrevious = activeItem === itemList[0] ? true : false;
 
     return (
-      <UU5.Bricks.ScreenSize>
-        {({ screenSize }) => (
-          <div
-            {...attrs}
-            data-name="Toolbar"
-            className={(attrs.className ? attrs.className + " " : "") + classNames.header(screenSize)}
-          >
-            <div className={Css.css`position: relative;`}>
-              <UU5.Bricks.Button
-                bgStyle="transparent"
-                disabled={disablePrevious}
-                onClick={() => setPrevious()}
-                className={classNames.button()}
-              >
-                <Icon icon="mdi-chevron-left" />
-              </UU5.Bricks.Button>
-              {itemList.map((item) => (
-                <UU5.Bricks.Button
-                  key={item}
-                  bgStyle="transparent"
-                  colorSchema={activeItem === item ? "primary" : undefined}
-                  onClick={() => onChange(item)}
-                  className={classNames.button()}
-                >
-                  <UU5.Bricks.Icon
-                    icon={activeItem === item ? "mdi-circle-slice-8" : "mdi-checkbox-blank-circle-outline"}
-                  />
-                </UU5.Bricks.Button>
-              ))}
-              <UU5.Bricks.Button
-                bgStyle="transparent"
-                disabled={disableNext}
-                onClick={() => setNext()}
-                className={classNames.button()}
-              >
-                <Icon icon="mdi-chevron-right" />
-              </UU5.Bricks.Button>
-            </div>
+      <div
+        {...attrs}
+        data-name="Toolbar"
+        className={(attrs.className ? attrs.className + " " : "") + classNames.header()}
+      >
+        <div className={classNames.buttonWrapper()}>
+          {itemList.map((item) => (
             <UU5.Bricks.Button
+              key={item.id}
               bgStyle="transparent"
-              content={
-                collapse ? <UU5.Bricks.Lsi lsi={Lsi.modalBus.expand} /> : <UU5.Bricks.Lsi lsi={Lsi.modalBus.collapse} />
-              }
-              onClick={() => toggleCollapse()}
-              className={classNames.collapseButton(collapse)}
-            />
-          </div>
-        )}
-      </UU5.Bricks.ScreenSize>
+              colorSchema={activeItemId === item.id ? "primary" : undefined}
+              onClick={() => onChange(item.id)}
+              className={classNames.button(
+                item.id,
+                activeItemId,
+                this.props.itemList[this.props.itemList.length - 1]?.id === item.id
+              )}
+            >
+              <UU5.Bricks.Icon
+                icon={"mdi-file-presentation-box"}
+                className={classNames.icon(
+                  item.id,
+                  activeItemId,
+                  this.props.itemList[this.props.itemList.length - 1]?.id === item.id
+                )}
+              />
+            </UU5.Bricks.Button>
+          ))}
+        </div>
+        {this.props.itemList[this.props.itemList.length - 1]?.id !== activeItemId ? (
+          <UU5.Bricks.Lsi lsi={Lsi.modalBus.inactiveModal} className={classNames.inactiveLabel()} />
+        ) : null}
+        <UU5.Bricks.Button
+          bgStyle="transparent"
+          content={
+            collapse ? <UU5.Bricks.Lsi lsi={Lsi.modalBus.expand} /> : <UU5.Bricks.Lsi lsi={Lsi.modalBus.collapse} />
+          }
+          onClick={() => toggleCollapse()}
+        />
+      </div>
     );
   },
   //@@viewOff:render

@@ -214,8 +214,8 @@ export const TextInputMixin = {
       result = validateFeedback;
     } else {
       result = {
-        feedback: this.state.feedback,
-        message: this.state.message,
+        feedback: InputMixin.INITIAL_FEEDBACK,
+        message: null,
         value: opt.value,
       };
     }

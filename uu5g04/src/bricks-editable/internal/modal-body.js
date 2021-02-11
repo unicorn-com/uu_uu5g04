@@ -139,11 +139,11 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
         classNames.push(
           Css.css(`
-            & > .uu5-bricks-modal-dialog {
+            .uu5-bricks-modal-layout-wrapper {
               ${isCompactVersion(props.screenSize) ? `min-height: ${state.menuHeight}px;` : ""}
             }
 
-            & > * > .uu5-bricks-modal-header {
+            .uu5-bricks-modal-header {
               padding: 0;
               border-bottom: solid 1px #E0E0E0;
 
@@ -152,7 +152,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
               }
             }
 
-            & > * > .uu5-bricks-modal-footer {
+            .uu5-bricks-modal-footer {
               border-top: solid 1px #E0E0E0;
               display: flex;
               justify-content: flex-end;
@@ -161,7 +161,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
               ${UU5.Common.Tools.isIE() ? "background-color: #FFFFFF" : ""}
             }
 
-            & > * > .uu5-bricks-modal-body {
+            .uu5-bricks-modal-body {
               padding: 0;
               height: 100%;
               display: flex;

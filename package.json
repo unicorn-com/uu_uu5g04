@@ -1,48 +1,32 @@
 {
-  "name": "uu5g04_icons",
-  "version": "1.0.1",
-  "description": "Icons for UU5",
+  "name": "uu5g04",
+  "version": "1.41.0",
+  "private": true,
+  "workspaces": [
+    "uu5g04"
+  ],
+  "description": "",
   "license": "UAF",
-  "spec": "uu5-lib; uu_appg01_devkit@4.0.0",
+  "spec": "nodejs-multi; uu_appg01_devkit@4.0.0",
   "dependencies": {},
-  "uuBuildSettings": {
-    "packs": [
-      {
-        "entryPoints": [
-          "icons.less"
-        ],
-        "libraryGlobalVariable": "",
-        "outputFile": "uu5g04_icons.css"
-      }
-    ]
-  },
+  "uuBuildSettings": {},
   "devDependencies": {
     "uu_appg01_devkit": "^4.0.0"
-  },
-  "engines": {
-    "node": ">=8.9.0"
   },
   "scripts": {
     "clean": "uu_appg01_devkit clean",
     "test": "uu_appg01_devkit test",
+    "testBrowser": "uu_appg01_devkit testBrowser",
     "build": "uu_appg01_devkit build",
     "package": "uu_appg01_devkit package",
-    "dist": "uu_appg01_devkit package",
     "start": "uu_appg01_devkit start",
     "prettify": "uu_appg01_devkit prettify",
+    "vulnerabilityScan": "uu_appg01_devkit vulnerabilityScan",
     "deploy": "uu_appg01_devkit deploy",
     "uuAppBox": "uu_appg01_devkit uuAppBox",
     "uuCloudDeploy": "uu_appg01_devkit uuCloudDeploy",
     "uuCloudUndeploy": "uu_appg01_devkit uuCloudUndeploy",
     "uuCloudDeployList": "uu_appg01_devkit uuCloudDeployList",
-    "generate": "uu_appg01_devkit generate",
     "uuAppDevKitUpgrade": "uu_appg01_devkit uuAppDevKitUpgrade"
-  },
-  "main": "src/index.js",
-  "files": [
-    "dist*"
-  ],
-  "prettier": {
-    "printWidth": 120
   }
 }

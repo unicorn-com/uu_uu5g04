@@ -22,6 +22,10 @@ import Css from "./internal/css.js";
 import "./touch-icon.less";
 //@@viewOff:imports
 
+const LINE_HEIGHT = 18;
+const MIN_LINES = 2;
+const MAX_LINES = 3;
+
 export const TouchIcon = UU5.Common.VisualComponent.create({
   displayName: "TouchIcon", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
@@ -43,14 +47,20 @@ export const TouchIcon = UU5.Common.VisualComponent.create({
     classNames: {
       main: ns.css("touch-icon"),
       body: ns.css("touch-icon-body"),
-      label: (props, state) =>
-        ns.css("touch-icon-label") +
-        " " +
-        Css.css`
-          display: -webkit-box;
-          -webkit-box-orient: vertical;
-          -webkit-line-clamp: ${props.lines};
-        `,
+      label: ({ lines }) => {
+        lines = Math.max(Math.min(lines, MAX_LINES), MIN_LINES);
+        return (
+          ns.css("touch-icon-label") +
+          " " +
+          Css.css`
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: ${lines};
+
+            .uu5-ua-ie & {max-height: ${LINE_HEIGHT * lines}px}
+          `
+        );
+      },
       icon: ns.css("touch-icon-icon"),
       bgStyle: ns.css("touch-icon-"),
     },
