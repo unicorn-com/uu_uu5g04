@@ -182,12 +182,7 @@ let Image = UU5.Common.VisualComponent.create({
   },
 
   async _fetchImage(url, session) {
-    let token = await UU5.Common.Tools.getCallToken(url, session);
-    let headers = token
-      ? {
-          Authorization: "Bearer " + token,
-        }
-      : {};
+    let headers = (await UU5.Common.Tools.getAuthenticatedHeaders(url, session)) || {};
     return new Promise((resolve, reject) => {
       let xhr = new XMLHttpRequest();
       xhr.open("GET", url, true);

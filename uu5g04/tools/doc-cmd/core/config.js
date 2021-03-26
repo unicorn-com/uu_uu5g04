@@ -23,7 +23,7 @@ if (!config.BOOK_AWID) {
   let bookkitTidAwid;
   let uuappJson = fs.existsSync("../uuapp.json") ? require(path.resolve("../uuapp.json")) : null;
   if (uuappJson) {
-    let docUri = (uuappJson[path.basename(process.cwd())] || {}).docUri;
+    let docUri = (uuappJson[path.basename(process.cwd())] || {}).docUri || uuappJson.docUri;
     if (docUri)
       bookkitTidAwid = docUri
         .replace(/^.*?uu-(bookkit|dockit)g01-main\//, "")

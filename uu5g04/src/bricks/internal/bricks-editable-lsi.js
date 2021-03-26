@@ -1,3 +1,8 @@
+//@@viewOn:revision
+// coded: Petr Bišof, 18.09.2020
+// reviewed: Martin Mach, 20.09.2020
+//@@viewOff:revision
+
 export const EditableLsi = {
   common: {
     valueTrue: {
@@ -82,6 +87,10 @@ export const EditableLsi = {
       sk: "Vzhľad",
       uk: "Зовнішній вигляд",
     },
+    bgStyleLabel: {
+      en: "Background style",
+      cs: "Styl pozadí",
+    },
     bgStyleValueFilled: {
       cs: "vyplněný",
       en: "filled",
@@ -107,8 +116,10 @@ export const EditableLsi = {
       uk: "підкреслення",
     },
     colorSchema: {
-      cs: "Barva",
-      en: "Color",
+      cs: "Barevné schéma",
+      en: "Color Scheme",
+      sk: "Farba", // TODO
+      uk: "Колір", // TODO
     },
     sizeLabel: {
       cs: "Velikost",
@@ -140,15 +151,77 @@ export const EditableLsi = {
       sk: "xl",
       uk: "xl",
     },
+    contentLabel: {
+      cs: "Obsah",
+      en: "Content",
+    },
+    hrefLabel: {
+      en: "URL address",
+      cs: "URL adresa",
+    },
+    targetLabel: {
+      en: "Target",
+      cs: "Target",
+    },
+    targetValueBlank: {
+      en: "blank",
+      cs: "Blank",
+    },
+    targetValueParent: {
+      en: "parent",
+      cs: "parent",
+    },
+    targetValueTop: {
+      en: "top",
+      cs: "top",
+    },
+    targetValueSelf: {
+      en: "self",
+      cs: "self",
+    },
+    smoothScrollLabel: {
+      en: "Scroll duration to the fragment",
+      cs: "Doba scrollování k fragmentu",
+    },
+    smoothScrollMessage: {
+      en:
+        "The time it takes to scroll to the location that is defined by the URL adress. The location is defined by an element's id. E.g. https://unicorn.com#contacts",
+      cs:
+        "Doba scrollování k lokaci definované v URL adrese. Lokace je definována atributem id elementu. Např. https://unicorn.com#contacts",
+    },
+    offsetLabel: {
+      en: "Distance from the target location",
+      cs: "Odstup od cílové lokace",
+    },
+    offsetMessage: {
+      en:
+        "The number of pixels that will end up being between the target location defined in URL address and the top viewport border",
+      cs: "Vzdálenost jaká zůstane mezi lokací definovanou v URL adrese a mezi horní hranou viewportu",
+    },
+    elevationLabel: {
+      cs: "Úroveň vyvýšení",
+      en: "Elevation",
+    },
+    elevationHoverLabel: {
+      cs: "Úroveň vyvýšení při najetí",
+      en: "Elevation Hover",
+    },
   },
-  section: {},
+  section: {
+    name: { en: "Section", cs: "Sekce" },
+  },
   container: {
     noSpacingTooltip: {
       cs: "Nulové odsazení",
       en: "Zero indentation",
     },
+    name: {
+      cs: "Kontejner",
+      en: "Container",
+    },
   },
   row: {
+    name: { en: "Row", cs: "Řádek" },
     flexCheckboxLabel: {
       cs: "Stejná výška sloupců",
       en: "Same column height",
@@ -227,6 +300,7 @@ export const EditableLsi = {
     },
   },
   column: {
+    name: { en: "Column", cs: "Sloupec" },
     componentDescription: {
       cs:
         "<uu5string />Komponenta <UU5.Bricks.Link href='https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksColumn' content='UU5.Bricks.Column' /> je založena na nápadu a implementaci Bootstrap mřížky (viz <UU5.Bricks.Link href='https://www.w3schools.com/bootstrap/bootstrap_grid_basic.asp' target='_blank' content='W3Schools - Bootstrap Grid System'/>) a reprezentuje sloupec. Tato komponenta musí být obalena komponentou UU5.Bricks.Row jinak by mohlo dojít k překrývání obsahu sloupce elementy, které v dokumentu následují. Šířka komponenty může být nastavena pomocí props a může se lišit pro různé velikosti obrazovky.",
@@ -343,12 +417,17 @@ export const EditableLsi = {
       en: "Unathenticated",
       cs: "Nepřihlášený",
     },
+    name: {
+      en: "Authenticated",
+      cs: "Authenticated",
+    },
     pending: {
       en: "Pending",
       cs: "Neznámý",
     },
   },
   tabs: {
+    name: { en: "Tabs", cs: "Taby" },
     typeLabel: {
       cs: "Typ zobrazení záložek",
       en: "Type",
@@ -521,6 +600,10 @@ export const EditableLsi = {
       sk: "Obsah informačného modalu",
       uk: "Зміст інформаційного вікна",
     },
+    name: {
+      cs: "Box",
+      en: "Box",
+    },
   },
   qRCode: {
     modalHeader: {
@@ -617,6 +700,7 @@ export const EditableLsi = {
       cs: "Položka ${itemNumber}",
       en: "Item ${itemNumber}",
     },
+    name: { en: "Carousel", cs: "Carousel" },
   },
   panel: {
     modalHeader: {
@@ -683,9 +767,6 @@ export const EditableLsi = {
       en: "Content color schema",
       cs: "Barevné schéma obsahu",
     },
-    elevationLabel: {
-      en: "Elevation",
-    },
     mountContentLabel: {
       en: "Mount content method",
       cs: "Vykreslení obsahu",
@@ -711,6 +792,10 @@ export const EditableLsi = {
     modalHeader: {
       cs: "Upravit accordion",
       en: "Edit accordion",
+    },
+    name: {
+      cs: "Akordeon",
+      en: "Accordion",
     },
     onClickNotCollapseOthersLabel: {
       cs: "Povolit více otevřených panelů naráz",
@@ -770,6 +855,10 @@ export const EditableLsi = {
       en: "Language selector",
       cs: "Výběr jazyka",
     },
+    name: {
+      en: "ButtonGroup",
+      cs: "ButtonGroup",
+    },
   },
   newspaper: {
     columnsCountValue1: {
@@ -788,6 +877,7 @@ export const EditableLsi = {
       en: "Number of columns",
       cs: "Počet sloupců",
     },
+    name: { en: "Newspaper", cs: "Newspaper" },
   },
   rating: {
     modalHeader: {
@@ -910,12 +1000,12 @@ export const EditableLsi = {
       en: "When enabled, the component has no margin.",
       cs: "Pokud je zapnuto, komponenta nemá margin.",
     },
+    name: {
+      en: "Card",
+      cs: "Karta",
+    },
   },
   richLink: {
-    hrefLabel: {
-      en: "URL address",
-      cs: "URL adresa",
-    },
     typeLabel: {
       en: "Display type",
       cs: "Typ zobrazení",
@@ -928,25 +1018,6 @@ export const EditableLsi = {
       en: "full",
       cs: "plný",
     },
-    smoothScrollLabel: {
-      en: "Scroll duration to the fragment",
-      cs: "Doba scrollování k fragmentu",
-    },
-    smoothScrollMessage: {
-      en:
-        "The time it takes to scroll to the location that is defined by the URL adress. The location is defined by an element's id. E.g. https://unicorn.com#contacts",
-      cs:
-        "Doba scrollování k lokaci definované v URL adrese. Lokace je definována atributem id elementu. Např. https://unicorn.com#contacts",
-    },
-    offsetLabel: {
-      en: "Distrance from the target location",
-      cs: "Odstup od cílové lokace",
-    },
-    offsetMessage: {
-      en:
-        "The number of pixels that will end up being between the target location defined in URL address and the top viewport border",
-      cs: "Vzdálenost jaká zůstane mezi lokací definovanou v URL adrese a mezi horní hranou viewportu",
-    },
     targetLabel: {
       en: "Link opening method",
       cs: "Způsob otevření odkazu",
@@ -958,6 +1029,124 @@ export const EditableLsi = {
     authenticateLabel: {
       en: "Add authentication token to URL",
       cs: "Přidat autentizační token to URL",
+    },
+  },
+  button: {
+    modalHeader: {
+      en: "Edit button",
+      cs: "Upravit tlačítko",
+    },
+    displayBlockLabel: {
+      en: "Display block",
+      cs: "Zobrazit v bloku",
+    },
+    pressedLabel: {
+      en: "Pressed",
+      cs: "Zobrazit button jako zmáčknutý",
+    },
+    baselineLabel: {
+      en: "Align to baseline",
+      cs: "Zarovnat na baseline",
+    },
+    bgStyleValueLink: {
+      en: "link",
+      cs: "odkaz",
+    },
+  },
+  touchIcon: {
+    modalHeader: {
+      en: "Edit touch icon",
+      cs: "Upravit touch icon",
+    },
+    iconLabel: {
+      en: "Icon",
+      cs: "Ikona",
+    },
+    linesLabel: {
+      en: "Number of lines of text",
+      cs: "Počet řádků textu",
+    },
+  },
+  dropdown: {
+    modalHeader: {
+      en: "Edit dropdown",
+      cs: "Upravit dropdown",
+    },
+    labelLabel: {
+      en: "Label",
+      cs: "Popisek",
+    },
+    iconHiddenLabel: {
+      en: "Button Icon",
+      cs: "Ikona tlačítka",
+    },
+    iconHiddenValueTrue: { cs: "skryta", en: "hidden" },
+    iconHiddenValueFalse: { cs: "zobrazena", en: "displayed" },
+    iconOpenLabel: {
+      en: "Button icon in open state",
+      cs: "Ikona tlačítka v otevřeném stavu",
+    },
+    iconClosedLabel: {
+      en: "Button icon in closed state",
+      cs: "Ikona tlačítka v zavřeném stavu",
+    },
+    pullRightLabel: {
+      en: "Expand menu to the right side",
+      cs: "Otevřít menu doprava",
+    },
+    dropupLabel: {
+      en: "Expand menu above the dropdown",
+      cs: "Zobrazit menu nahoru",
+    },
+    splitLabel: {
+      en: "Divide the button into two parts",
+      cs: "Rozdělit tlačítko na dvě části",
+    },
+    closedOnLeaveLabel: {
+      en: "Close the menu after moving the cursor away",
+      cs: "Zavřít menu při opustění kurzorem",
+    },
+    openOnHoverLabel: {
+      en: "Open the menu after hovering over the component",
+      cs: "Otevřít menu při najetí myší na komponetu",
+    },
+    disableBackdropLabel: {
+      en: "Collapse the menu only when the button is clicked again",
+      cs: "Zavřít menu pouze po opětovném kliknutí na tlačítko",
+    },
+    baselineLabel: {
+      en: "Align button to baseline",
+      cs: "Zarovnat tlačítko na baseline",
+    },
+    fitMenuToViewportLabel: {
+      en: "Menu height is limited by the visible part of the window",
+      cs: "Výška menu je omezena výškou okna",
+    },
+    compactSubmenuLabel: {
+      en: "Compact Menu",
+      cs: "Kompaktní Menu",
+    },
+    itemTypeLabel: {
+      en: "Item Type",
+      cs: "Typ položky",
+    },
+    itemTypeValueDivider: {
+      en: "Divider",
+      cs: "Rozdělovač",
+    },
+    itemTypeValueLink: {
+      en: "Link",
+      cs: "Odkaz",
+    },
+    itemTypeValueHeader: {
+      en: "Header",
+      cs: "Hlavička",
+    },
+  },
+  header: {
+    name: {
+      en: "Header",
+      cs: "Hlavička",
     },
   },
 };

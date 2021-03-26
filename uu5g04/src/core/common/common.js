@@ -70,6 +70,7 @@ import Context from "./context.js";
 export { Context };
 
 export { TimeZoneContext } from "../uu5g05-integration/use-time-zone";
+export { UserPreferencesContext, UserPreferencesProvider } from "../uu5g05-integration/use-user-preferences";
 
 export { Component } from "./component.js";
 export * from "./dn-d.js";

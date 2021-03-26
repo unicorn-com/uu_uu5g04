@@ -252,10 +252,10 @@ export const FormsLsi = {
   },
   colorSchemaPicker: {
     label: {
-      cs: "Barva",
-      en: "Color",
-      sk: "Farba",
-      uk: "Колір",
+      cs: "Barevné schéma",
+      en: "Color Scheme",
+      sk: "Farba", // TODO
+      uk: "Колір", // TODO
     },
     valueInherit: {
       cs: "zdědit",

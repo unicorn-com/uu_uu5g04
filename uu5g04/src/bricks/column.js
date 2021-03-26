@@ -15,6 +15,7 @@
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import "./column.less";
+import Lsi from "./internal/bricks-editable-lsi.js";
 
 const EditableColumn = UU5.Common.Component.lazy(async () => {
   await SystemJS.import("uu5g04-forms");
@@ -57,10 +58,11 @@ export const Column = UU5.Common.VisualComponent.create({
       nestingLevelWrapper: true,
     },
     editMode: {
-      name: { en: "Column", cs: "Sloupec" },
+      name: Lsi.column.name,
       backgroundColor: "rgba(186,104,200,.4)",
       color: "#4A148C",
       highlightColor: "rgba(227,195,233,.45)",
+      enablePlaceholder: true,
     },
   },
   //@@viewOff:statics

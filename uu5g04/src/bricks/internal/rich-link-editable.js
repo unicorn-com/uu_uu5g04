@@ -16,7 +16,7 @@ const editableComponentPropsSetup = [
   {
     name: "href",
     type: "text",
-    label: EditableLsi.richLink.hrefLabel,
+    label: EditableLsi.common.hrefLabel,
   },
   {
     name: "type",
@@ -35,13 +35,13 @@ const editableAdditionalPropsSetup = [
   {
     name: "target",
     type: "switchSelector",
-    label: EditableLsi.richLink.targetLabel,
+    label: EditableLsi.common.targetLabel,
     getProps: () => ({ items: targetList.map((item) => ({ content: item, value: item })) }),
   },
   {
     name: "smoothScroll",
     type: "number",
-    label: EditableLsi.richLink.smoothScrollLabel,
+    label: EditableLsi.common.smoothScrollLabel,
     getProps: (props) => ({
       min: 0,
       step: 0.5,
@@ -55,7 +55,7 @@ const editableAdditionalPropsSetup = [
   {
     name: "offset",
     type: "number",
-    label: EditableLsi.richLink.offsetLabel,
+    label: EditableLsi.common.offsetLabel,
     getProps: () => ({
       min: 0,
       step: 5,
@@ -63,6 +63,10 @@ const editableAdditionalPropsSetup = [
       valueType: "number",
       message: <UU5.Bricks.Lsi lsi={EditableLsi.richLink.offsetMessage} />,
     }),
+  },
+  {
+    type: "message",
+    getProps: () => ({ message: EditableLsi.common.offsetMessage }),
   },
   {
     name: "download",

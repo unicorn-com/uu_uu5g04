@@ -6,6 +6,11 @@ import ns from "../bricks-editable-ns.js";
 import Lsi from "../bricks-editable-lsi.js";
 //@@viewOff:imports
 
+//@@viewOn:revision
+// coded: Martin Mach, 20.09.2020
+// reviewed: -
+//@@viewOff:revision
+
 const { createVisualComponent } = LazyLoadedLibraries["uu5g04-hooks"];
 
 //@@viewOn:statics
@@ -53,7 +58,8 @@ const BorderRadiusInput = createVisualComponent({
     //@@viewOff:private
 
     //@@viewOn:render
-    return <UU5.Forms.SwitchSelector {...props} label={label} value={value} onChange={onChange} items={items} />;
+    let usedValue = UU5.Common.Tools.fillUnit(value);
+    return <UU5.Forms.SwitchSelector {...props} label={label} value={usedValue} onChange={onChange} items={items} />;
     //@@viewOff:render
   },
 });

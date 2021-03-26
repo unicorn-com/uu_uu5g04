@@ -97,7 +97,7 @@ const newEditableItem = {
   tagName: "UU5.Bricks.Carousel.Item",
   isElement: true,
   props: {
-    contentEditable: true,
+    contentEditable: false,
   },
 };
 

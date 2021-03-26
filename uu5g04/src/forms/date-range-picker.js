@@ -23,14 +23,14 @@ import TextInputMixin from "./mixins/text-input-mixin.js";
 import ItemsInput from "./internal/items-input.js";
 import TextInput from "./internal/text-input.js";
 import Label from "./internal/label.js";
-
 import Context from "./form-context.js";
+import DateTools from "./internal/date-tools.js";
+import withUserPreferences from "../common/user-preferences";
 
 import "./date-range-picker.less";
-import DateTools from "./internal/date-tools.js";
 //@@viewOff:imports
 
-export const DateRangePicker = Context.withContext(
+let DateRangePicker = Context.withContext(
   UU5.Common.VisualComponent.create({
     displayName: "DateRangePicker", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
@@ -159,9 +159,8 @@ export const DateRangePicker = Context.withContext(
 
     //@@viewOn:reactLifeCycle
     getInitialState() {
-      this._parseDate = (date) => this._dynamicParseDate(date, this.props);
-      this._parseDateDefault = (date) => this._dynamicParseDateDefault(date, this.props.format, this.props.country);
-
+      this._formattingValues = {};
+      this._setFormattingValues(this.props);
       let propValue = Array.isArray(this.props.value) && this.props.value.length > 1 ? this.props.value : null;
       propValue = this.parseDate(propValue);
       let fromInputValue = null;
@@ -199,8 +198,6 @@ export const DateRangePicker = Context.withContext(
         toDisplayDate,
         toInputValue,
         toFeedback: { feedback: "initial", message: null },
-        country: this.props.country,
-        format: this.props.format,
         toInputActive: false,
         tempValue: null,
         calendarView,
@@ -259,8 +256,7 @@ export const DateRangePicker = Context.withContext(
 
     UNSAFE_componentWillReceiveProps(nextProps) {
       if (this.props.controlled) {
-        this._parseDate = (date) => this._dynamicParseDate(date, nextProps);
-        this._parseDateDefault = (date) => this._dynamicParseDateDefault(date, nextProps.format, nextProps.country);
+        this._setFormattingValues(nextProps);
 
         let propValue = Array.isArray(nextProps.value) && nextProps.value.length > 1 ? nextProps.value : null;
         propValue = this.parseDate(propValue);
@@ -411,7 +407,7 @@ export const DateRangePicker = Context.withContext(
         date = this.state.value;
       }
       date = this.parseDate(date);
-      return this._getOutputValue(date);
+      return this._getOutcomingValue(date);
     },
 
     getInputWidth_(opt) {
@@ -469,6 +465,8 @@ export const DateRangePicker = Context.withContext(
     },
 
     getInitialValue_(propValue) {
+      this._formattingValues = this._formattingValues || {};
+      this._setFormattingValues(this.props);
       let stateValue = !Array.isArray(propValue) || propValue.length < 2 ? null : propValue;
 
       if (stateValue) {
@@ -487,12 +485,25 @@ export const DateRangePicker = Context.withContext(
     //@@viewOff:overriding
 
     //@@viewOn:private
-    _dynamicParseDate(date, props) {
+    // Used to hold current values of props/state which is used for formatting.
+    // These values are used on various places and its value has to be always
+    // updated (e.g. in functions called from willReceiveProps)
+    _setFormattingValues(props) {
+      let formattingKeys = ["format", "country", "step", "parseDate"];
+
+      for (let i = 0; i < formattingKeys.length; i++) {
+        let key = formattingKeys[i];
+        let value = props[key];
+        this._formattingValues[key] = value;
+      }
+    },
+
+    _parseDate(date) {
       if (typeof date !== "string") {
         // date = date;
       } else {
-        if (props.parseDate && typeof props.parseDate === "function") {
-          date = props.parseDate(date, this);
+        if (this._formattingValues.parseDate && typeof this._formattingValues.parseDate === "function") {
+          date = this._formattingValues.parseDate(date, this);
         } else {
           date = this.parseDateDefault(date);
         }
@@ -501,36 +512,28 @@ export const DateRangePicker = Context.withContext(
       return date;
     },
 
-    _dynamicParseDateDefault(date, format, country) {
+    _parseDateDefault(date) {
       return UU5.Common.Tools.parseDate(date, {
-        format,
-        country,
+        format: this._formattingValues.format,
+        country: this._formattingValues.country,
       });
     },
 
-    _parseDate(date) {
-      return this._dynamicParseDate(date, this.props);
-    },
-
-    _parseDateDefault(date) {
-      return this._dynamicParseDateDefault(date, this.props.format, this.props.country);
-    },
-
-    _getOutputValue(value) {
+    _getOutcomingValue(value) {
       if (value) {
         let parsedDate = this._parseDate(value);
 
         if (
-          (this.props.step === "years" || this.props.step === "months") &&
-          !this.props.format &&
-          !this.props.country
+          (this._formattingValues.step === "years" || this._formattingValues.step === "months") &&
+          !this._formattingValues.format &&
+          !this._formattingValues.country
         ) {
           if (Array.isArray(parsedDate)) {
             value = parsedDate.map((singleValue) =>
-              DateTools.getShortenedValueDateString(singleValue, "-", this.props.step === "years")
+              DateTools.getShortenedValueDateString(singleValue, "-", this._formattingValues.step === "years")
             );
           } else {
-            value = DateTools.getShortenedValueDateString(parsedDate, "-", this.props.step === "years");
+            value = DateTools.getShortenedValueDateString(parsedDate, "-", this._formattingValues.step === "years");
           }
         } else {
           value = parsedDate;
@@ -544,17 +547,25 @@ export const DateRangePicker = Context.withContext(
       return this.isS() || this.isXs();
     },
 
-    _getDateString(date, props = this.props) {
-      if (props.step === "years" && !props.format && !props.country) {
+    _getDateString(date) {
+      if (
+        this._formattingValues.step === "years" &&
+        !this._formattingValues.format &&
+        !this._formattingValues.country
+      ) {
         return DateTools.getShortenedInputDateString(date, "/", true);
-      } else if (props.step === "months" && !props.format && !props.country) {
+      } else if (
+        this._formattingValues.step === "months" &&
+        !this._formattingValues.format &&
+        !this._formattingValues.country
+      ) {
         return DateTools.getShortenedInputDateString(date, "/");
       } else {
-        let format = this.state ? this.state.format : props.format;
-        let country = this.state ? this.state.country : props.country;
-
         let isoDateOnlyString = date instanceof Date ? DateTools.toISODateOnlyString(date) : date;
-        return UU5.Common.Tools.getDateString(isoDateOnlyString, { format, country });
+        return UU5.Common.Tools.getDateString(isoDateOnlyString, {
+          format: this._formattingValues.format,
+          country: this._formattingValues.country,
+        });
       }
     },
 
@@ -636,7 +647,7 @@ export const DateRangePicker = Context.withContext(
 
       if (opt) {
         let date = this.parseDate(opt.value);
-        date = this._getOutputValue(date);
+        date = this._getOutcomingValue(date);
 
         if (!opt.value || date) {
           if (this._compareDates(date, props.dateFrom, "lesser")) {
@@ -768,10 +779,15 @@ export const DateRangePicker = Context.withContext(
     },
 
     _onChangeFormat(opt, setStateCallback) {
-      let format = opt.format === undefined ? this.state.format : opt.format;
+      let format = opt.format === undefined ? this._formattingValues.format : opt.format;
       let country =
-        opt.country === undefined ? this.state.country : opt.country ? opt.country.toLowerCase() : opt.country;
-      this._parseDateDefault = (date) => this._dynamicParseDateDefault(date, format, country);
+        opt.country === undefined
+          ? this._formattingValues.country
+          : opt.country
+          ? opt.country.toLowerCase()
+          : opt.country;
+      this._formattingValues.format = format;
+      this._formattingValues.country = country;
       this.setState({ format, country }, setStateCallback);
     },
 
@@ -855,7 +871,7 @@ export const DateRangePicker = Context.withContext(
         value = [value];
       }
 
-      opt.value = this._getOutputValue(value);
+      opt.value = this._getOutcomingValue(value);
       opt._data.value = value;
       opt._data.executeOnChange = executeOnChange;
       if (executeOnChange && typeof this.props.onChange === "function") {
@@ -1015,7 +1031,7 @@ export const DateRangePicker = Context.withContext(
       if (!this.isComputedDisabled() && !this.isReadOnly()) {
         opt._data.state = state;
         opt._data.executeOnChange = executeOnChange;
-        opt.value = this._getOutputValue(state.value);
+        opt.value = this._getOutcomingValue(state.value);
         if (executeOnChange && typeof this.props.onChange === "function") {
           this.props.onChange(opt);
         } else {
@@ -1342,10 +1358,10 @@ export const DateRangePicker = Context.withContext(
 
         if (opt._data) {
           opt._data.value = opt.value;
-          opt.value = this._getOutputValue(opt.value);
+          opt.value = this._getOutcomingValue(opt.value);
         } else {
           opt._data = { value: opt.value };
-          opt.value = this._getOutputValue(opt.value);
+          opt.value = this._getOutcomingValue(opt.value);
         }
 
         if (!this.isReadOnly() && !this.isComputedDisabled()) {
@@ -1373,10 +1389,10 @@ export const DateRangePicker = Context.withContext(
 
         if (opt._data) {
           opt._data.value = opt.value;
-          opt.value = this._getOutputValue(opt.value);
+          opt.value = this._getOutcomingValue(opt.value);
         } else {
           opt._data = { value: opt.value };
-          opt.value = this._getOutputValue(opt.value);
+          opt.value = this._getOutcomingValue(opt.value);
         }
 
         callback = (opt) => {
@@ -1584,7 +1600,7 @@ export const DateRangePicker = Context.withContext(
     },
 
     _getFromInputPlaceholder() {
-      let format = this.state.format || UU5.Environment.dateTimeFormat[this.state.country];
+      let format = this._formattingValues.format || UU5.Environment.dateTimeFormat[this._formattingValues.country];
       format && (format = format.replace(/Y+/, "YYYY").replace(/y+/, "yy"));
       let placeholder;
       if (format && !this.props.hideFormatPlaceholder) {
@@ -1595,7 +1611,7 @@ export const DateRangePicker = Context.withContext(
     },
 
     _getToInputPlaceholder() {
-      let format = this.state.format || UU5.Environment.dateTimeFormat[this.state.country];
+      let format = this._formattingValues.format || UU5.Environment.dateTimeFormat[this._formattingValues.country];
       format && (format = format.replace(/Y+/, "YYYY").replace(/y+/, "yy"));
       let placeholder;
       if (format && !this.props.hideFormatPlaceholder) {
@@ -1606,7 +1622,7 @@ export const DateRangePicker = Context.withContext(
     },
 
     _getMainPlaceholder() {
-      let format = this.state.format || UU5.Environment.dateTimeFormat[this.state.country];
+      let format = this._formattingValues.format || UU5.Environment.dateTimeFormat[this._formattingValues.country];
       format && (format = format.replace(/Y+/, "YYYY").replace(/y+/, "yy"));
       let placeholder;
       if (this.props.placeholder && format && !this.props.hideFormatPlaceholder) {
@@ -1696,7 +1712,12 @@ export const DateRangePicker = Context.withContext(
         className: this.getClassName("calendarInput"),
         size: this.props.size,
         onChange: (e) =>
-          this._onChange({ event: e, component: this, value: e.target.value, _data: { right: right, type: "input" } }),
+          this._onChange({
+            event: e,
+            component: this,
+            value: e.target.value,
+            _data: { right: right, type: "input" },
+          }),
         onKeyDown: this._onKeyDown,
         value: right ? this.state.toInputValue || "" : this.state.fromInputValue || "",
         placeholder: right ? this._getToInputPlaceholder() : this._getFromInputPlaceholder(),
@@ -1914,8 +1935,8 @@ export const DateRangePicker = Context.withContext(
         let stringDate1 = this._getDateString(firstDate);
         let stringDate2 = this._getDateString(secondDate);
         let separator =
-          this.state.format && this.props.step === "days"
-            ? this.state.format.match(/[^dmy]/i)[0]
+          this._formattingValues.format && this.props.step === "days"
+            ? this._formattingValues.format.match(/[^dmy]/i)[0]
             : stringDate1
             ? stringDate1.match(/\W/) && stringDate1.match(/\W/)[0]
             : ".";
@@ -2156,4 +2177,7 @@ export const DateRangePicker = Context.withContext(
   })
 );
 
+DateRangePicker = withUserPreferences(DateRangePicker, { weekStartDay: "weekStartDay" });
+
+export { DateRangePicker };
 export default DateRangePicker;

@@ -115,7 +115,7 @@ export const HomeScreen = UU5.Common.LsiMixin.withContext(
 
     componentDidMount: function () {
       var homeScreen = this;
-      if (!this.props.hidden) {
+      if (!this.props.hidden && !window.uuMobileApp) {
         setTimeout(
           function () {
             homeScreen.activate();

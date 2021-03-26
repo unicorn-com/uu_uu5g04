@@ -46,6 +46,10 @@ export const Well = UU5.Common.VisualComponent.create({
       main: ns.css("well"),
       defaultColor: ns.css("well-default"),
     },
+    editMode: {
+      enablePlaceholder: true,
+      startMode: "button",
+    }
   },
   //@@viewOff:statics
 

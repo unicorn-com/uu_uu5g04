@@ -97,6 +97,9 @@ export const Panel = UU5.Common.VisualComponent.create({
       default: ns.css("panel-default"),
       bgStyles: Styles.bgStyles,
     },
+    editMode: {
+      startMode: "button",
+    },
     defaults: {
       parentTagName: "UU5.Bricks.Accordion",
       header: "noHeader",

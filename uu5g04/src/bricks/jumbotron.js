@@ -47,6 +47,9 @@ export const Jumbotron = UU5.Common.VisualComponent.create({
       main: ns.css("jumbotron"),
       defaultColor: ns.css("jumbotron-default"),
     },
+    editMode: {
+      enablePlaceholder: true,
+    },
   },
   //@@viewOff:statics
 

@@ -58,6 +58,7 @@ export const Line = UU5.Common.VisualComponent.create({
     defaults: {
       sizes: ["s", "m", "l", "xl"],
     },
+    editMode: {},
   },
   //@@viewOff:statics
 

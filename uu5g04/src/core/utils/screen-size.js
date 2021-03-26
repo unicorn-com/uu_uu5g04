@@ -141,7 +141,7 @@ class ScreenSize {
 }
 
 // backward compatibility
-ScreenSize.splitColumns = ScreenSize.parseValue;
+ScreenSize.parseValue = ScreenSize.splitColumns;
 
 export { ScreenSize };
 export default ScreenSize;

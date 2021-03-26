@@ -44,6 +44,11 @@ export const ContextForm = UU5.Common.Reference.forward(({ className, ...props }
 
         &.uu5-bricks-alert-without-header .uu5-bricks-alert-content {
           padding: 16px;
+          min-width: 0;
+
+          & > * {
+            min-width: 0;
+          }
 
           /* just for IE */
           @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {

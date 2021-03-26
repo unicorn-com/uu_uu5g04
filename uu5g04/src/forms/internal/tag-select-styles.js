@@ -122,12 +122,14 @@ const CommonClassNames = {
       white-space: nowrap;
     `;
   },
-  itemsInput: () => {
+  itemsInput: (props) => {
     return Css.css`
       & > .uu5-forms-input-form-item-value {
         display: flex;
         flex-grow: 1;
       }
+
+      ${props.disabled ? `&&&:focus { border-color: ${UU5.Environment.colors.grey.c400}; box-shadow: none; }` : ""}
     `;
   },
   inputValueWrapper: (props) => {

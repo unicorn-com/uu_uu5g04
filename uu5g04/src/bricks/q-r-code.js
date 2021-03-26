@@ -42,6 +42,9 @@ export const QRCode = UU5.Common.VisualComponent.create({
         display: inline-block;
       `),
     },
+    editMode: {
+      displayType: "inline",
+    }
   },
   //@@viewOff:statics
 

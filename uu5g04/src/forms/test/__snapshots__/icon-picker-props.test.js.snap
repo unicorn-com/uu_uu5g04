@@ -37,7 +37,7 @@ exports[`UU5.Forms.IconPicker default props UU5.Forms.IconPicker check default p
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -59,6 +59,7 @@ exports[`UU5.Forms.IconPicker default props UU5.Forms.IconPicker check default p
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}

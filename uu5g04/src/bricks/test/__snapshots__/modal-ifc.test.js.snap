@@ -15,7 +15,7 @@ exports[`UU5.Bricks.Modal interface testing close(callback) 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -43,7 +43,7 @@ exports[`UU5.Bricks.Modal interface testing close(callback) 2`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -71,7 +71,7 @@ exports[`UU5.Bricks.Modal interface testing isSticky() - modal is not sticky 1`]
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -99,7 +99,7 @@ exports[`UU5.Bricks.Modal interface testing isSticky() - modal is sticky 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -128,7 +128,7 @@ exports[`UU5.Bricks.Modal interface testing open(content-props, callback) 1`] = 
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -156,7 +156,7 @@ exports[`UU5.Bricks.Modal interface testing open(content-props, callback) 2`] = 
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -212,7 +212,7 @@ exports[`UU5.Bricks.Modal interface testing toggle() - should close window 1`] =
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -240,7 +240,7 @@ exports[`UU5.Bricks.Modal interface testing toggle() - should close window 2`] =
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -268,7 +268,7 @@ exports[`UU5.Bricks.Modal interface testing toggle() - should open window 1`] = 
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -296,7 +296,7 @@ exports[`UU5.Bricks.Modal interface testing toggle() - should open window 2`] = 
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}

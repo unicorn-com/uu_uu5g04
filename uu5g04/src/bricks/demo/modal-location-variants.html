@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"
+    />
+    <title>PortalModal Demo</title>
+
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+    <script>
+      SystemJS.config({
+        paths: {
+          systemjs: "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          react: "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+          uu_appg01_core: "https://cdn.plus4u.net/uu-appg01-core/4.0.0/uu_appg01_core.min.js",
+          uu_appg01: "https://cdn.plus4u.net/uu-appg01/4.0.0/uu_appg01.min.js",
+          uu_appg01_oidc: "https://cdn.plus4u.net/uu-appg01-oidc/2.0.0/uu_appg01_oidc.min.js",
+
+          // "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.js",
+          // "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.js",
+          // "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.js",
+          // "uu5g04-hooks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-hooks.js",
+
+          uu5g04: "/uu5g04.js",
+          "uu5g04-bricks": "/uu5g04-bricks.js",
+          "uu5g04-forms": "/uu5g04-forms.js",
+          "uu5g04-hooks": "/uu5g04-hooks.js",
+        },
+      });
+    </script>
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+      import { useRef } from "uu5g04-hooks";
+      import "uu_appg01_oidc";
+
+      function useRenderCount(initialCount = 0) {
+        let countRef = useRef(initialCount);
+        countRef.current += 1;
+        return countRef.current;
+      }
+
+      const RCSM = function ({ modalProps }) {
+        let renderCount = useRenderCount();
+        let modalRef = useRef();
+        return (
+          <div>
+            Render count since mount: {renderCount} (if mounting, should be initially 2 due to animation)
+            <br />
+            <UU5.Bricks.Button onClick={() => modalRef.current.open()}>
+              Nested modal (same location and mountContent)
+            </UU5.Bricks.Button>
+            <br />
+            {!modalProps.location ? " (won't work if using Page, due to re-using Page's Modal)" : null}
+            <UU5.Bricks.Modal
+              {...modalProps}
+              ref={modalRef}
+              content="nested modal content"
+              header=" "
+              className={`demo-NESTED-${modalProps.mountContent.replace(/[A-Z]/g, (m) => "-" + m).toUpperCase()}`}
+            />
+          </div>
+        );
+      };
+
+      const DemoModal = function (props) {
+        let { location, mountContent } = props;
+        let nestedModalProps = { location, mountContent };
+        return (
+          <UU5.Bricks.Modal
+            {...props}
+            header=" "
+            content={<RCSM modalProps={nestedModalProps} />}
+            className={`demo-${mountContent.replace(/[A-Z]/g, (m) => "-" + m).toUpperCase()}`}
+          />
+        );
+      };
+
+      const Page = UU5.Common.VisualComponent.create({
+        getInitialState() {
+          return { usePage: true, location: "portal", openBy: "api", shownModal: null, shownChangePhase: false };
+        },
+        componentDidUpdate(prevProps, prevState) {
+          if (this.state.shownModal && prevState.shownModal !== this.state.shownModal && this.state.openBy === "api") {
+            this["_modal" + this.state.shownModal].open();
+          }
+          if (this.state.shownModal && prevState.shownModal !== this.state.shownModal && this.state.openBy === "shownChange" && !this.state.shownChangePhase) {
+            this.setState({ shownChangePhase: true });
+          }
+        },
+        _onClose(e) {
+          this.setState({ shownModal: null, shownChangePhase: false });
+        },
+        render() {
+          let Comp = this.state.usePage ? UU5.Bricks.Page : UU5.Bricks.Container;
+          let compProps = this.state.usePage
+            ? {
+                modal: <UU5.Bricks.Modal />,
+                alertBus: <UU5.Bricks.AlertBus />,
+              }
+            : {};
+          let { location, key, openBy, shownModal, shownChangePhase } = this.state;
+          return (
+            <Comp {...compProps}>
+              <br />
+              <br />
+              <div>
+                use:
+                <UU5.Bricks.SwitchSelector
+                  items={[
+                    { value: false, content: "<UU5.Bricks.Container>" },
+                    { value: true, content: "<UU5.Bricks.Page>" },
+                  ]}
+                  value={this.state.usePage}
+                  onChange={(opt) => this.setState((s) => ({ usePage: !!opt.value, key: !s.key }))}
+                />
+              </div>
+              <div>
+                location:
+                <UU5.Bricks.SwitchSelector
+                  items={[
+                    { value: "", content: "undefined (page or local)" },
+                    { value: "portal", content: "portal (page or body)" },
+                    { value: "local" },
+                  ]}
+                  value={this.state.location}
+                  onChange={(opt) => this.setState((s) => ({ location: opt.value || undefined, key: !s.key }))}
+                />
+              </div>
+              <div>
+                open by:
+                <UU5.Bricks.SwitchSelector
+                  items={[
+                    { value: "api", content: "API - modal.open()" },
+                    { value: "shown", content: "prop - shown={true} (mount)" },
+                    { value: "shownChange", content: "prop - shown={true} (prop change)" },
+                  ]}
+                  value={this.state.openBy}
+                  onChange={(opt) => this.setState((s) => ({ openBy: opt.value, key: !s.key }))}
+                />
+              </div>
+              <UU5.Bricks.Button onClick={() => this.setState({ shownModal: "1" })}>
+                Open onFirstRender modal
+              </UU5.Bricks.Button>
+              <UU5.Bricks.Button onClick={() => this.setState({ shownModal: "2" })}>
+                Open onFirstOpen modal
+              </UU5.Bricks.Button>
+              <UU5.Bricks.Button onClick={() => this.setState({ shownModal: "3" })}>
+                Open onEachOpen modal
+              </UU5.Bricks.Button>
+              <div key={key}>
+                {openBy === "api" || shownModal === "1" ? (
+                  <DemoModal
+                    location={location}
+                    mountContent="onFirstRender"
+                    ref_={(ref) => (this._modal1 = ref)}
+                    onClose={this._onClose}
+                    shown={openBy === "api" ? undefined : openBy === "shownChange" ? shownChangePhase : true}
+                  />
+                ) : null}
+                {openBy === "api" || shownModal === "2" ? (
+                  <DemoModal
+                    location={location}
+                    mountContent="onFirstOpen"
+                    ref_={(ref) => (this._modal2 = ref)}
+                    onClose={this._onClose}
+                    shown={openBy === "api" ? undefined : openBy === "shownChange" ? shownChangePhase : true}
+                  />
+                ) : null}
+                {openBy === "api" || shownModal === "3" ? (
+                  <DemoModal
+                    location={location}
+                    mountContent="onEachOpen"
+                    ref_={(ref) => (this._modal3 = ref)}
+                    onClose={this._onClose}
+                    shown={openBy === "api" ? undefined : openBy === "shownChange" ? shownChangePhase : true}
+                  />
+                ) : null}
+              </div>
+              <div style={{ margin: 8 }}>
+                CSS classes to look for in Elements:
+                <div style={{ whiteSpace: "pre-line", fontFamily: "monospace", margin: 8 }}>
+                  u<span></span>u5-bricks-page-modal-portal
+                  <br />d<span></span>emo-ON-FIRST-RENDER
+                  <br />d<span></span>emo-ON-FIRST-OPEN
+                  <br />d<span></span>emo-ON-EACH-OPEN
+                  <br />d<span></span>emo-NESTED-ON-FIRST-RENDER
+                  <br />d<span></span>emo-NESTED-ON-FIRST-OPEN
+                  <br />d<span></span>emo-NESTED-ON-EACH-OPEN
+                  <br />
+                </div>
+              </div>
+              <UU5.Bricks.Section header="Filler" level={3}>
+                <UU5.Bricks.Paragraph /> <UU5.Bricks.Paragraph /> <UU5.Bricks.Paragraph /> <UU5.Bricks.Paragraph />
+                <UU5.Bricks.Paragraph /> <UU5.Bricks.Paragraph /> <UU5.Bricks.Paragraph /> <UU5.Bricks.Paragraph />
+                <UU5.Bricks.Paragraph /> <UU5.Bricks.Paragraph /> <UU5.Bricks.Paragraph /> <UU5.Bricks.Paragraph />
+              </UU5.Bricks.Section>
+            </Comp>
+          );
+        },
+      });
+      const AuthnPage = function () {
+        return (
+          <UU5.Bricks.Authenticated authenticated>
+            <Page />
+          </UU5.Bricks.Authenticated>
+        );
+      };
+
+      UU5.Common.DOM.render(UU5.Common.Element.create(AuthnPage), document.getElementById("renderHere"));
+    </script>
+  </body>
+</html>

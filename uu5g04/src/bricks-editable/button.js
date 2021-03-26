@@ -155,6 +155,7 @@ export const Button = UU5.Common.VisualComponent.create({
     };
   },
   getInitialState() {
+    console.error(`Component ${this.getTagName()} is deprecated since version 1.43.0.`);
     return this._getState();
   },
   UNSAFE_componentWillReceiveProps(nextProps) {

@@ -85,6 +85,7 @@ export const TagSelect = Context.withContext(
     },
 
     UNSAFE_componentWillMount() {
+      this._correctAvailableTags(this._normalizeValue(this.props.value));
       if (this.props.onValidate && typeof this.props.onValidate === "function") {
         this._validate({ value: this.state.value, event: null, component: this });
       }
@@ -97,10 +98,11 @@ export const TagSelect = Context.withContext(
         }
         let value = this._filterValues(
           this._normalizeValue(nextProps.value),
-          false,
+          nextProps.allowCustomTags,
           nextProps.availableTags,
           nextProps.ignoreTags
         );
+        this._correctAvailableTags(value, nextProps);
         if (this.props.onValidate && typeof this.props.onValidate === "function") {
           this._validate({ value, event: null, component: this }, true);
         } else {
@@ -162,7 +164,7 @@ export const TagSelect = Context.withContext(
 
     //@@viewOn:overriding
     getInitialValue_(propValue) {
-      return this._filterValues(this._normalizeValue(propValue), false);
+      return this._filterValues(this._normalizeValue(propValue));
     },
 
     setValue_(value, setStateCallback) {
@@ -190,11 +192,13 @@ export const TagSelect = Context.withContext(
     },
 
     reset_(setStateCallback) {
+      let value = this._filterValues(this._normalizeValue(this.props.value));
+      this._correctAvailableTags(value);
       this.setState(
         {
           message: this.props.message,
           feedback: this.props.feedback,
-          value: this._filterValues(this._normalizeValue(this.props.value), false),
+          value,
           readOnly: this.props.readOnly,
         },
         setStateCallback
@@ -278,26 +282,24 @@ export const TagSelect = Context.withContext(
         : [];
     },
 
-    _correctAvailableTags(value) {
-      value.forEach((valueItem) => {
-        if (
-          this.props.allowCustomTags &&
-          !this._availableTags.find((availTagItem) => availTagItem.value === valueItem)
-        ) {
-          this._availableTags.push({
-            value: valueItem,
-            content: valueItem,
-            searchValue: this._getTagSearchValue(valueItem),
-          });
-        }
-      });
+    _correctAvailableTags(value, props = this.props) {
+      value &&
+        value.forEach((valueItem) => {
+          if (props.allowCustomTags && !this._availableTags.find((availTagItem) => availTagItem.value === valueItem)) {
+            this._availableTags.push({
+              value: valueItem,
+              content: valueItem,
+              searchValue: this._getTagSearchValue(valueItem),
+            });
+          }
+        });
     },
 
     _getTagContent(tag) {
       if (typeof tag.content === "object" && !UU5.Common.Element.isValid(tag.content)) {
         return this.getLsiItem(tag.content);
       } else {
-        return tag.content;
+        return tag ? tag.content : null;
       }
     },
 
@@ -422,7 +424,7 @@ export const TagSelect = Context.withContext(
         let itemResult = this._getAddTagValueResult({ value: valueItem }, []);
         result.availableTags = itemResult.availableTags;
         if (itemResult && itemResult.state) itemResult = itemResult.state;
-        if (Array.isArray(itemResult.value)) result.state.value = [...itemResult.value, ...result.state.value];
+        if (Array.isArray(itemResult.value)) result.state.value = [...result.state.value, ...itemResult.value];
 
         if (itemResult.feedback === "error") {
           result.state.feedback = itemResult.feedback;
@@ -798,6 +800,7 @@ export const TagSelect = Context.withContext(
           bgStyle="transparent"
           onChange={this._onSearchValueChange}
           className={this.getClassName("textInput")}
+          disabled={this.isComputedDisabled()}
           readonly={this.isReadOnly()}
           onKeyDown={!this.isReadOnly() && !this.isComputedDisabled() ? this._onTextInputKeyPress : undefined}
           colorSchema={this.props.colorSchema === "custom" ? this.props.colorSchema : undefined}

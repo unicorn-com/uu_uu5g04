@@ -41,6 +41,9 @@ export const ContextMenuItem = UU5.Common.VisualComponent.create({
       divider: ns.css("context-menu-item-divider"),
       header: ns.css("context-menu-item-header"),
     },
+    editMode: {
+      enableWrapper: false,
+    },
   },
   //@@viewOff:statics
 

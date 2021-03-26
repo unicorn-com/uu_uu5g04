@@ -134,7 +134,7 @@ export const Video = UU5.Common.VisualComponent.create({
     if (this._authenticatedVideoUrl === url) result = this.state.authenticatedVideoUrl;
     else if (this._authenticatingVideoUrl !== url) {
       this._authenticatingVideoUrl = url;
-      let promise = (this._videoUrlPromise = this._computeAuthenticatedUrl(url, session).then(
+      let promise = (this._videoUrlPromise = UU5.Common.Tools.getAuthenticatedUrl(url, session).then(
         (authenticatedVideoUrl) => {
           delete this._authenticatingVideoUrl;
           this._authenticatedVideoUrl = url;
@@ -153,7 +153,7 @@ export const Video = UU5.Common.VisualComponent.create({
     if (this._authenticatedPosterUrl === url) result = this.state.authenticatedPosterUrl;
     else if (this._authenticatingPosterUrl !== url) {
       this._authenticatingPosterUrl = url;
-      let promise = (this._posterUrlPromise = this._computeAuthenticatedUrl(url, session).then(
+      let promise = (this._posterUrlPromise = UU5.Common.Tools.getAuthenticatedUrl(url, session).then(
         (authenticatedPosterUrl) => {
           delete this._authenticatingPosterUrl;
           this._authenticatedPosterUrl = url;
@@ -164,13 +164,6 @@ export const Video = UU5.Common.VisualComponent.create({
         }
       ));
     }
-    return result;
-  },
-
-  async _computeAuthenticatedUrl(url, session) {
-    let token = await UU5.Common.Tools.getCallToken(url, session);
-    let parsedUrl = UU5.Common.Url.parse(url);
-    let result = parsedUrl.set({ parameters: { ...parsedUrl.parameters, access_token: token } }).toString();
     return result;
   },
 

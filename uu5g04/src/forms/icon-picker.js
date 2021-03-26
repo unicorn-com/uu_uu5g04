@@ -19,6 +19,7 @@ import InputMixin from "./mixins/input-mixin.js";
 import Loading from "./internal/loading.js";
 
 import Context from "./form-context.js";
+import { classNames } from "./internal/icon-picker-styles";
 
 import "./icon-picker.less";
 //@@viewOff:imports
@@ -42,6 +43,7 @@ function getIconLibrariesFromIconList(iconList) {
   let libraries = [];
 
   for (let icon of iconList) {
+    icon = typeof icon === "object" ? icon.icon : icon;
     let library = icon.split("-")[0];
     if (libraries.indexOf(library) === -1) libraries.push(library);
   }
@@ -75,17 +77,36 @@ function getIconLibrariesFromCategory(category, availableCategories) {
   }
 }
 
-function filterIcons(iconSet, allowedIcons) {
-  let usedIcons = [...allowedIcons];
-  let result = [];
-  for (let i = 0; i < iconSet.length; i++) {
-    for (let j = 0; j < usedIcons.length; j++) {
-      if (iconSet[i] === usedIcons[j]) {
-        result.push(iconSet[i]);
+function getIconsToRender(icons, category, availableCategories) {
+  let resultIcons = ["iconpicker-remove-selection"];
+  let selectedCategoryDefinition = getCategoryByCode(category, availableCategories);
+
+  if (typeof selectedCategoryDefinition === "object" && selectedCategoryDefinition.iconList) {
+    resultIcons = [...resultIcons, ...selectedCategoryDefinition.iconList];
+  } else if (category === ALL_ICONS_ID) {
+    for (let availableCategory of availableCategories) {
+      let categoryIcons =
+        typeof availableCategory === "object" && availableCategory.iconList
+          ? availableCategory.iconList
+          : icons[availableCategory];
+      if (categoryIcons) {
+        resultIcons = [...resultIcons, ...categoryIcons];
       }
     }
+  } else {
+    let categoryIcons = icons[category];
+    if (categoryIcons) {
+      resultIcons = [...resultIcons, ...categoryIcons];
+    }
   }
-  return result;
+
+  // remove plus4u icon because of its abnormal size
+  let plus4uIconIndex = resultIcons.indexOf("plus4u5-plus4u");
+  if (plus4uIconIndex > -1) {
+    resultIcons.splice(plus4uIconIndex, 1);
+  }
+
+  return resultIcons;
 }
 
 export const IconPicker = Context.withContext(
@@ -105,29 +126,7 @@ export const IconPicker = Context.withContext(
     //@@viewOn:statics
     statics: {
       tagName: ns.name("IconPicker"),
-      classNames: {
-        rightWrapper: ns.css("right-wrapper"),
-        right: ns.css("input-label-right"),
-        main: ns.css("iconpicker"),
-        open: ns.css("iconpicker-open"),
-        openButton: ns.css("iconpicker-open-button"),
-        selectedIcon: ns.css("iconpicker-selected-icon"),
-        arrowIcon: ns.css("iconpicker-arrow-down-icon"),
-        picker: ns.css("iconpicker-picker"),
-        pickerBody: ns.css("iconpicker-body"),
-        pickerHeader: ns.css("iconpicker-header"),
-        pickerFooter: ns.css("iconpicker-footer"),
-        pickerItem: ns.css("iconpicker-item"),
-        pickerItemSelected: ns.css("iconpicker-item-selected"),
-        error: ns.css("iconpicker-error"),
-        multicategory: ns.css("iconpicker-multicategory"),
-        searchInput: ns.css("iconpicker-search-input"),
-        categoryInput: ns.css("iconpicker-category-input"),
-        removeSelection: ns.css("iconpicker-remove-selected-icon"),
-        loading: ns.css("input-loading-icon"),
-        screenSizeBehaviour: ns.css("screen-size-behaviour"),
-        buttonError: ns.css("button-error"),
-      },
+      classNames,
       defaults: {
         arrowIcon: "mdi-menu-down",
       },
@@ -144,7 +143,16 @@ export const IconPicker = Context.withContext(
           UU5.PropTypes.shape({
             code: UU5.PropTypes.string,
             label: UU5.PropTypes.oneOfType([UU5.PropTypes.node, UU5.PropTypes.object]),
-            iconList: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
+            iconList: UU5.PropTypes.arrayOf(
+              UU5.PropTypes.oneOfType([
+                UU5.PropTypes.string,
+                UU5.PropTypes.shape({
+                  icon: UU5.PropTypes.string,
+                  state: UU5.PropTypes.string,
+                  component: UU5.PropTypes.func,
+                }),
+              ])
+            ),
           }),
         ])
       ),
@@ -152,13 +160,20 @@ export const IconPicker = Context.withContext(
       placeholder: UU5.PropTypes.string,
       required: UU5.PropTypes.bool,
       requiredMessage: UU5.PropTypes.any,
-      value: UU5.PropTypes.string,
+      value: UU5.PropTypes.oneOfType([
+        UU5.PropTypes.string,
+        UU5.PropTypes.shape({
+          icon: UU5.PropTypes.string,
+          state: UU5.PropTypes.string,
+        }),
+      ]),
       borderRadius: UU5.PropTypes.string,
       bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
       elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
       openToContent: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string]),
       onClose: UU5.PropTypes.func,
       popoverLocation: UU5.PropTypes.oneOf(["local", "portal"]),
+      hideSearchInput: UU5.PropTypes.bool,
     },
     //@@viewOff:propTypes
 
@@ -176,6 +191,7 @@ export const IconPicker = Context.withContext(
         openToContent: "xs",
         onClose: null,
         popoverLocation: "local", // "local" <=> backward-compatible behaviour
+        hideSearchInput: false,
       };
     },
     //@@viewOff:getDefaultProps
@@ -185,12 +201,15 @@ export const IconPicker = Context.withContext(
       let selectedCategory = this.props.categories.find((item) => item === this.props.selectedCategory)
         ? this.props.selectedCategory
         : this.props.categories[0];
+      if (selectedCategory && typeof selectedCategory === "object") {
+        selectedCategory = selectedCategory.code;
+      }
       return {
         open: false,
         loading: false,
         error: false,
         selectedCategory,
-        icons: [],
+        icons: {},
         searchString: "",
         scrollPosition: null,
       };
@@ -502,7 +521,12 @@ export const IconPicker = Context.withContext(
                   result = match[1];
                 }
               }
-              return result || null;
+
+              if (result && !result.endsWith("-")) {
+                return result;
+              } else {
+                return null;
+              }
             });
             ruleIcons[0] && icons.push(ruleIcons[0]);
           }
@@ -577,6 +601,78 @@ export const IconPicker = Context.withContext(
       }
     },
 
+    _getVirtualListItem(item) {
+      let icon;
+      if (item.data == "iconpicker-remove-selection") {
+        let className = this.getClassName("pickerItem") + " " + this.getClassName("removeSelection");
+        icon = (
+          <span
+            className={className}
+            onClick={(e) => this._onClickIcon(null, e)}
+            title={this.getLsiValue("removeSelection")}
+            tabIndex={0}
+          ></span>
+        );
+      } else {
+        let className = "";
+        if (this.getValue() === item.data) {
+          className += this.getClassName("pickerItemSelected");
+        }
+        if (typeof item.data === "object") {
+          if (item.data.component) {
+            className += " " + this.getClassName("pickerItemCustom");
+            const Component = item.data.component;
+            icon = (
+              <span
+                tooltip={item.data.icon}
+                className={className}
+                tabIndex={0}
+                onClick={
+                  !this.isReadOnly() && !this.isComputedDisabled() ? (e) => this._onClickIcon(item.data, e) : null
+                }
+                onKeyDown={(e) => this._onIconEnter(item.data, e)}
+              >
+                <Component icon={item.data.icon} state={item.data.state} />
+              </span>
+            );
+          } else {
+            className += " " + this.getClassName("pickerItemTag");
+            icon = (
+              <UU5.Bricks.Tag
+                icon={item.data.icon}
+                state={item.data.state}
+                tooltip={item.data.icon}
+                className={className}
+                mainAttrs={{
+                  tabIndex: 0,
+                  onClick:
+                    !this.isReadOnly() && !this.isComputedDisabled() ? (e) => this._onClickIcon(item.data, e) : null,
+                  onKeyDown: (e) => this._onIconEnter(item.data, e),
+                }}
+              />
+            );
+          }
+        } else {
+          className = " " + this.getClassName("pickerItem");
+          icon = (
+            <UU5.Bricks.Icon
+              icon={item.data}
+              tooltip={item.data}
+              className={className}
+              mainAttrs={{
+                tabIndex: 0,
+                onClick:
+                  !this.isReadOnly() && !this.isComputedDisabled() ? (e) => this._onClickIcon(item.data, e) : null,
+                onKeyDown: (e) => this._onIconEnter(item.data, e),
+              }}
+            />
+          );
+        }
+      }
+
+      return icon;
+    },
+
     _getIconButtons() {
       let result;
 
@@ -585,27 +681,12 @@ export const IconPicker = Context.withContext(
       } else if (this.isLoadingData()) {
         result = <UU5.Bricks.Loading />;
       } else {
-        let icons = ["iconpicker-remove-selection"];
-        let selectedCategoryDefinition = getCategoryByCode(this.state.selectedCategory, this.props.categories);
-        getIconLibrariesFromCategory(this.state.selectedCategory, this.props.categories).forEach((category) => {
-          if (this.state.icons[category]) {
-            let categoryIcons = this.state.icons[category];
-            categoryIcons =
-              typeof selectedCategoryDefinition === "object" && selectedCategoryDefinition.iconList
-                ? filterIcons(categoryIcons, selectedCategoryDefinition.iconList)
-                : categoryIcons;
-            icons = icons.concat(categoryIcons);
-          }
-
-          if (category === "plus4u5") {
-            icons.splice(icons.indexOf("plus4u5-plus4u"), 1);
-          }
-        });
+        let icons = getIconsToRender(this.state.icons, this.state.selectedCategory, this.props.categories);
 
         if (this.state.searchString) {
           let regexp = new RegExp(this.state.searchString.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&"), "g");
           icons = icons.filter((icon) => {
-            return icon.match(regexp);
+            return typeof icon === "object" ? icon.icon.match(regexp) : icon.match(regexp);
           });
         }
 
@@ -631,48 +712,37 @@ export const IconPicker = Context.withContext(
               }}
               initialScrollTop={this.state.scrollPosition}
               ref_={(list) => (this._virtualList = list)}
-              item={(item) => {
-                let icon;
-                if (item.data == "iconpicker-remove-selection") {
-                  let className = this.getClassName("pickerItem") + " " + this.getClassName("removeSelection");
-                  icon = (
-                    <span
-                      className={className}
-                      onClick={(e) => this._onClickIcon(null, e)}
-                      title={this.getLsiValue("removeSelection")}
-                      tabIndex={0}
-                    ></span>
-                  );
-                } else {
-                  let className = this.getClassName("pickerItem");
-                  if (this.getValue() === item.data) {
-                    className += " " + this.getClassName("pickerItemSelected");
-                  }
-                  icon = (
-                    <UU5.Bricks.Icon
-                      icon={item.data}
-                      tooltip={item.data}
-                      className={className}
-                      mainAttrs={{
-                        tabIndex: 0,
-                        onClick:
-                          !this.isReadOnly() && !this.isComputedDisabled()
-                            ? (e) => this._onClickIcon(item.data, e)
-                            : null,
-                        onKeyDown: (e) => this._onIconEnter(item.data, e),
-                      }}
-                    />
-                  );
-                }
-
-                return icon;
-              }}
+              item={this._getVirtualListItem}
             />
           );
         }
       }
 
       return result;
+    },
+
+    _getDisplayedValue() {
+      let icon = this.state.value && typeof this.state.value === "object" ? this.state.value.icon : this.state.value;
+      if (icon && !this.isLoading()) {
+        if (typeof this.state.value === "object" && icon) {
+          if (this.state.value.component) {
+            const Component = this.state.value.component;
+            return (
+              <span className={this.getClassName("selectedCustom")}>
+                <Component icon={icon} state={this.state.value.state} />
+              </span>
+            );
+          } else {
+            return (
+              <UU5.Bricks.Tag icon={icon} state={this.state.value.state} className={this.getClassName("selectedTag")} />
+            );
+          }
+        } else {
+          return <UU5.Bricks.Icon icon={icon} className={this.getClassName("selectedIcon")} />;
+        }
+      } else {
+        return " ";
+      }
     },
 
     _getButton() {
@@ -712,11 +782,7 @@ export const IconPicker = Context.withContext(
 
       return (
         <UU5.Bricks.Button {...props}>
-          {this.state.value && !this.isLoading() ? (
-            <UU5.Bricks.Icon icon={this.state.value} className={this.getClassName("selectedIcon")} />
-          ) : (
-            " "
-          )}
+          {this._getDisplayedValue()}
           {this.isLoading() ? (
             <Loading className={this.getClassName("loading")} id={this.getId()} />
           ) : (
@@ -742,21 +808,23 @@ export const IconPicker = Context.withContext(
       }
 
       return (
-        <UU5.Bricks.Row>
-          <UU5.Forms.TextIcon
-            onChange={(opt) => {
-              opt.component.onChangeDefault(opt);
-              this._onChangeSearchString(opt.value);
-            }}
-            icon={this.state.searchString ? "mdi-close" : "mdi-magnify"}
-            onClick={this.state.searchString ? this._resetSearchString : null}
-            placeholder={this.props.placeholder || this.getLsiValue("searchPlaceholder")}
-            className={this.getClassName("searchInput")}
-            value={this.state.searchString}
-            readOnly={this.isReadOnly()}
-            disabled={this.isComputedDisabled()}
-            size="s"
-          />
+        <UU5.Bricks.Row className={this.getClassName("header")}>
+          {!this.props.hideSearchInput ? (
+            <UU5.Forms.TextIcon
+              onChange={(opt) => {
+                opt.component.onChangeDefault(opt);
+                this._onChangeSearchString(opt.value);
+              }}
+              icon={this.state.searchString ? "mdi-close" : "mdi-magnify"}
+              onClick={this.state.searchString ? this._resetSearchString : null}
+              placeholder={this.props.placeholder || this.getLsiValue("searchPlaceholder")}
+              className={this.getClassName("searchInput")}
+              value={this.state.searchString}
+              readOnly={this.isReadOnly()}
+              disabled={this.isComputedDisabled()}
+              size="s"
+            />
+          ) : null}
           {this.props.categories.length > 1 ? (
             <UU5.Forms.Select
               onChange={(opt) => {

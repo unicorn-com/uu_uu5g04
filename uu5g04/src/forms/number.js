@@ -21,17 +21,15 @@ import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "./forms-ns.js";
 import TextInput from "./internal/text-input.js";
-
 import TextInputMixin from "./mixins/text-input-mixin.js";
-
 import ItemList from "./internal/item-list.js";
-
 import Context from "./form-context.js";
+import withUserPreferences from "../common/user-preferences";
 
 import "./number.less";
 //@@viewOff:imports
 
-export const Number = Context.withContext(
+let Number = Context.withContext(
   UU5.Common.VisualComponent.create({
     displayName: "Number", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
@@ -875,7 +873,7 @@ export const Number = Context.withContext(
         value: result.value,
         event: e,
         component: this,
-        _data: { type: "decrease", feedback: result.feedback, message: result.message }
+        _data: { type: "decrease", feedback: result.feedback, message: result.message },
       };
       opt = this._getOutputResult(opt);
 
@@ -908,7 +906,7 @@ export const Number = Context.withContext(
         value: result.value,
         event: e,
         component: this,
-        _data: { type: "increase", feedback: result.feedback, message: result.message }
+        _data: { type: "increase", feedback: result.feedback, message: result.message },
       };
       opt = this._getOutputResult(opt);
 
@@ -982,31 +980,31 @@ export const Number = Context.withContext(
       let buttons =
         !this.isReadOnly() && !this.props.buttonHidden
           ? [
-            {
-              icon: "mdi-minus",
-              disabled: this.isComputedDisabled() || this._isDisabled("min"),
-              onClick: (component, e) => this._decrease(e),
-              size: this.props.size,
-              colorSchema: this.props.colorSchema,
-              mainAttrs: {
-                onMouseDown: this._decreaseStart,
-                onMouseUp: this._decreaseEnd,
-                onMouseOut: this._decreaseEnd,
+              {
+                icon: "mdi-minus",
+                disabled: this.isComputedDisabled() || this._isDisabled("min"),
+                onClick: (component, e) => this._decrease(e),
+                size: this.props.size,
+                colorSchema: this.props.colorSchema,
+                mainAttrs: {
+                  onMouseDown: this._decreaseStart,
+                  onMouseUp: this._decreaseEnd,
+                  onMouseOut: this._decreaseEnd,
+                },
               },
-            },
-            {
-              icon: "mdi-plus",
-              disabled: this.isComputedDisabled() || this._isDisabled("max"),
-              onClick: (component, e) => this._increase(e),
-              size: this.props.size,
-              colorSchema: this.props.colorSchema,
-              mainAttrs: {
-                onMouseDown: this._increaseStart,
-                onMouseUp: this._increaseEnd,
-                onMouseOut: this._increaseEnd,
+              {
+                icon: "mdi-plus",
+                disabled: this.isComputedDisabled() || this._isDisabled("max"),
+                onClick: (component, e) => this._increase(e),
+                size: this.props.size,
+                colorSchema: this.props.colorSchema,
+                mainAttrs: {
+                  onMouseDown: this._increaseStart,
+                  onMouseUp: this._increaseEnd,
+                  onMouseOut: this._increaseEnd,
+                },
               },
-            },
-          ]
+            ]
           : null;
 
       let inputAttrs = this.props.inputAttrs || {};
@@ -1076,4 +1074,10 @@ export const Number = Context.withContext(
   })
 );
 
+Number = withUserPreferences(Number, {
+  thousandSeparator: "numberGroupingSeparator",
+  decimalSeparator: "numberDecimalSeparator",
+});
+
+export { Number };
 export default Number;

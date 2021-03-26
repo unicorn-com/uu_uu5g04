@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"
+    />
+    <title>SwitchSelector Demo</title>
+
+    <script>
+      if (!location.href.match(/^(about:|file:)/)) {
+        var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+        var bplSegmentCount = bplCookie ? Number(bplCookie[2]) : null;
+        if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+        var appBaseUrlPath = (
+          location.pathname
+            .split(/\//)
+            .slice(0, 1 + bplSegmentCount)
+            .join("/") + "/"
+        )
+          .replace(/\/+/g, "/")
+          .replace(/"/g, "");
+        var appAssetsRelativeUrlPath = "public/0.0.0/";
+        document.write(
+          '<base href="' +
+            appBaseUrlPath +
+            appAssetsRelativeUrlPath +
+            '" data-uu-app-base="' +
+            appBaseUrlPath +
+            '" data-uu-app-assets-base="' +
+            appAssetsRelativeUrlPath +
+            '">'
+        );
+      }
+    </script>
+
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+    <script>
+      SystemJS.config({
+        paths: {
+          systemjs: "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          react: "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+          uu5g04: "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+          "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+          "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js",
+          uu5codekitg01: "https://cdn.plus4u.net/uu-uu5codekitg01/1.0.0/uu5codekitg01.min.js",
+        },
+      });
+    </script>
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+      import "uu5codekitg01";
+
+      const iconLibraries = ["mdi", "glyphicon", "fa", "uu5", "plus4u", "plus4u5", "uubml"];
+      const states = [
+        "system",
+        "initial",
+        "active",
+        "final",
+        "alternativeActive",
+        "problemActive",
+        "passive",
+        "alternativeFinal",
+        "cancelled",
+      ];
+      const defaultProps = UU5.Bricks.Tag.getDefaultProps();
+
+      function getProps(allProps, defaultProps) {
+        const props = {};
+        for (let prop in allProps) {
+          if (defaultProps[prop] !== allProps[prop]) props[prop] = allProps[prop];
+        }
+        return props;
+      }
+
+      //@@viewOn:example
+      const Page = UU5.Common.VisualComponent.create({
+        getInitialState() {
+          return {
+            icon: "mdi-check",
+            iconAfter: undefined,
+            size: "m",
+            state: states[0],
+            children: undefined,
+          };
+        },
+
+        _onChange(opt, stateKey) {
+          opt.component.onChangeDefault(opt, () => this.setState({ [stateKey]: opt.value }));
+        },
+        render() {
+          return (
+            <UU5.Bricks.Container className={UU5.Common.Css.css`max-width: 768px; margin: 0 auto;`}>
+              <UU5.Forms.Form padding={0} spacing={8} labelColWidth="xs-12" inputColWidth="xs-12">
+                <UU5.Bricks.Row>
+                  <UU5.Bricks.Column colWidth="xs-6 m-3">
+                    <UU5.Forms.IconPicker
+                      label="icon"
+                      value={this.state.icon}
+                      onChange={(opt) => this._onChange(opt, "icon")}
+                      categories={iconLibraries}
+                    />
+                  </UU5.Bricks.Column>
+                  <UU5.Bricks.Column colWidth="xs-6 m-3">
+                    <UU5.Forms.IconPicker
+                      label="iconAfter"
+                      value={this.state.iconAfter}
+                      onChange={(opt) => this._onChange(opt, "iconAfter")}
+                      categories={iconLibraries}
+                    />
+                  </UU5.Bricks.Column>
+                </UU5.Bricks.Row>
+                <UU5.Bricks.Row>
+                  <UU5.Bricks.Column colWidth="xs-12 m-3">
+                    <UU5.Forms.SwitchSelector
+                      items={["s", "m"].map((value) => ({ value }))}
+                      label="size"
+                      value={this.state.size}
+                      onChange={(opt) => this._onChange(opt, "size")}
+                    />
+                  </UU5.Bricks.Column>
+                  <UU5.Bricks.Column colWidth="xs-12 m-9">
+                    <UU5.Forms.SwitchSelector
+                      items={states.map((value) => ({ value }))}
+                      label="state"
+                      value={this.state.state}
+                      onChange={(opt) => this._onChange(opt, "state")}
+                    />
+                  </UU5.Bricks.Column>
+                </UU5.Bricks.Row>
+                <UU5.Bricks.Row>
+                  <UU5.Bricks.Column>
+                    <UU5.CodeKit.Uu5StringEditor
+                      labelColWidth="xs-12"
+                      inputColWidth="xs-12"
+                      label="children"
+                      showGutter={false}
+                      rows={4}
+                      value={this.state.children}
+                      onBlur={(opt) => this.setState({ children: opt.value })}
+                    />
+                  </UU5.Bricks.Column>
+                </UU5.Bricks.Row>
+              </UU5.Forms.Form>
+
+              <UU5.Bricks.Row className={UU5.Common.Css.css`padding: 16px;`}>
+                <UU5.Bricks.Tag {...this.state} />
+                <UU5.Bricks.CodePreview tagName="UU5.Bricks.Tag" props={getProps(this.state, defaultProps)} />
+              </UU5.Bricks.Row>
+            </UU5.Bricks.Container>
+          );
+        },
+      });
+      //@@viewOff:example
+
+      UU5.Common.DOM.render(<Page />, document.getElementById("renderHere"));
+    </script>
+  </body>
+</html>

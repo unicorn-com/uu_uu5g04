@@ -14,6 +14,7 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+import Lsi from "./internal/bricks-editable-lsi.js";
 
 const EditationComponent = UU5.Common.Component.lazy(async () => {
   await SystemJS.import("uu5g04-forms");
@@ -38,10 +39,12 @@ export const Authenticated = UU5.Common.VisualComponent.create({
         "The component will never show any content - you should always set at least one of the props 'pending', 'authenticated', 'notAuthenticated'.",
     },
     editMode: {
-      name: { en: "Authenticated", cs: "Authenticated" },
+      name: Lsi.authenticated.name,
       backgroundColor: "rgba(0,0,0,.2)",
       color: "rgba(0,0,0,.87)",
       highlightColor: "#CCCCCC",
+      enablePlaceholder: true,
+      startMode: "button",
     },
   },
   //@@viewOff:statics

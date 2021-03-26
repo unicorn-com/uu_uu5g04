@@ -26,6 +26,7 @@ const EditableSection = UU5.Common.Component.lazy(async () => {
 let editationLazyLoaded = false;
 
 import "./section.less";
+import Lsi from "./internal/bricks-editable-lsi.js";
 //@@viewOff:imports
 
 export const Section = UU5.Common.VisualComponent.create({
@@ -54,10 +55,11 @@ export const Section = UU5.Common.VisualComponent.create({
       nestingLevelWrapper: true,
     },
     editMode: {
-      name: { en: "Section", cs: "Sekce" },
+      name: Lsi.section.name,
       backgroundColor: "rgba(0,0,0,.2)",
       color: "rgba(0,0,0,.87)",
       highlightColor: "#CCCCCC",
+      enablePlaceholder: true
     },
   },
   //@@viewOff:statics

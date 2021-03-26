@@ -15,7 +15,7 @@ exports[`UU5.Bricks.Modal docKit example UU5.Bricks.Modal example01 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -73,7 +73,7 @@ exports[`UU5.Bricks.Modal props checkGrammar=false 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -106,7 +106,7 @@ exports[`UU5.Bricks.Modal props checkGrammar=true 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -139,7 +139,7 @@ exports[`UU5.Bricks.Modal props checkHighlight=false 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -172,7 +172,7 @@ exports[`UU5.Bricks.Modal props checkHighlight=true 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -205,7 +205,7 @@ exports[`UU5.Bricks.Modal props checkSpaces=false 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -238,7 +238,7 @@ exports[`UU5.Bricks.Modal props checkSpaces=true 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -271,7 +271,7 @@ exports[`UU5.Bricks.Modal props className="my-classname" 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -304,7 +304,7 @@ exports[`UU5.Bricks.Modal props content="This is Content from ContentMixin" 1`] 
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-body
       content="This is Content from ContentMixin"
@@ -330,7 +330,7 @@ exports[`UU5.Bricks.Modal props content=12345 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-body
       content={12345}
@@ -428,7 +428,7 @@ exports[`UU5.Bricks.Modal props default props 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -461,7 +461,7 @@ exports[`UU5.Bricks.Modal props disabled=false 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -494,7 +494,7 @@ exports[`UU5.Bricks.Modal props disabled=true 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -531,7 +531,7 @@ exports[`UU5.Bricks.Modal props dynamic=false 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -564,7 +564,7 @@ exports[`UU5.Bricks.Modal props dynamic=true 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -597,7 +597,7 @@ exports[`UU5.Bricks.Modal props footer={"type":"div","key":null,"ref":null,"prop
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -639,7 +639,7 @@ exports[`UU5.Bricks.Modal props forceRender=false 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -672,7 +672,7 @@ exports[`UU5.Bricks.Modal props forceRender=true 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -705,7 +705,7 @@ exports[`UU5.Bricks.Modal props header={"type":"div","key":null,"ref":null,"prop
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -809,7 +809,7 @@ exports[`UU5.Bricks.Modal props id="myId" 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -842,7 +842,7 @@ exports[`UU5.Bricks.Modal props ignoreHTML=false 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -875,7 +875,7 @@ exports[`UU5.Bricks.Modal props ignoreHTML=true 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -908,7 +908,7 @@ exports[`UU5.Bricks.Modal props level="0" 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -941,7 +941,7 @@ exports[`UU5.Bricks.Modal props level="1" 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -974,7 +974,7 @@ exports[`UU5.Bricks.Modal props level="2" 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1007,7 +1007,7 @@ exports[`UU5.Bricks.Modal props level="3" 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1040,7 +1040,7 @@ exports[`UU5.Bricks.Modal props level="4" 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1073,7 +1073,7 @@ exports[`UU5.Bricks.Modal props level="5" 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1106,7 +1106,7 @@ exports[`UU5.Bricks.Modal props level="6" 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1139,7 +1139,7 @@ exports[`UU5.Bricks.Modal props level=0 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1172,7 +1172,7 @@ exports[`UU5.Bricks.Modal props level=1 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1205,7 +1205,7 @@ exports[`UU5.Bricks.Modal props level=2 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1238,7 +1238,7 @@ exports[`UU5.Bricks.Modal props level=3 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1271,7 +1271,7 @@ exports[`UU5.Bricks.Modal props level=4 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1304,7 +1304,7 @@ exports[`UU5.Bricks.Modal props level=5 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1337,7 +1337,7 @@ exports[`UU5.Bricks.Modal props level=6 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1370,7 +1370,7 @@ exports[`UU5.Bricks.Modal props mainAttrs=undefined 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1403,7 +1403,7 @@ exports[`UU5.Bricks.Modal props mountContent="onFirstRender" 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1436,7 +1436,7 @@ exports[`UU5.Bricks.Modal props mountContent=undefined 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1469,7 +1469,7 @@ exports[`UU5.Bricks.Modal props mountContent=undefined 2`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1503,7 +1503,7 @@ exports[`UU5.Bricks.Modal props name="myName" 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1536,7 +1536,7 @@ exports[`UU5.Bricks.Modal props nestingLevel="bigBox" 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1569,7 +1569,7 @@ exports[`UU5.Bricks.Modal props nestingLevel="bigBoxCollection" 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1602,7 +1602,7 @@ exports[`UU5.Bricks.Modal props nestingLevel="box" 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1635,7 +1635,7 @@ exports[`UU5.Bricks.Modal props nestingLevel="boxCollection" 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1668,7 +1668,7 @@ exports[`UU5.Bricks.Modal props nestingLevel="container" 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1703,7 +1703,7 @@ exports[`UU5.Bricks.Modal props nestingLevel="page" 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1740,7 +1740,7 @@ exports[`UU5.Bricks.Modal props nestingLevel="spa" 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1773,7 +1773,7 @@ exports[`UU5.Bricks.Modal props noIndex=false 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1806,7 +1806,7 @@ exports[`UU5.Bricks.Modal props noIndex=true 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1839,7 +1839,7 @@ exports[`UU5.Bricks.Modal props offsetTop="auto" 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu-bricks-1vvp1xk uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu-bricks-1vvp1xk uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1872,7 +1872,7 @@ exports[`UU5.Bricks.Modal props offsetTop=200 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu-bricks-w737gy uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu-bricks-w737gy uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1905,7 +1905,7 @@ exports[`UU5.Bricks.Modal props overflow=false 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1938,7 +1938,7 @@ exports[`UU5.Bricks.Modal props overflow=true 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -1972,7 +1972,7 @@ exports[`UU5.Bricks.Modal props pureRender=false 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -2005,7 +2005,7 @@ exports[`UU5.Bricks.Modal props pureRender=true 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -2038,7 +2038,7 @@ exports[`UU5.Bricks.Modal props scrollableBackground=false 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -2071,7 +2071,7 @@ exports[`UU5.Bricks.Modal props scrollableBackground=true 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -2104,7 +2104,7 @@ exports[`UU5.Bricks.Modal props selected=false 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -2137,7 +2137,7 @@ exports[`UU5.Bricks.Modal props selected=true 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -2170,7 +2170,7 @@ exports[`UU5.Bricks.Modal props shown=false 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -2203,7 +2203,7 @@ exports[`UU5.Bricks.Modal props shown=true 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -2236,7 +2236,7 @@ exports[`UU5.Bricks.Modal props size="auto" 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-auto"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-auto uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -2269,7 +2269,7 @@ exports[`UU5.Bricks.Modal props size="l" 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-l"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-l uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -2302,7 +2302,7 @@ exports[`UU5.Bricks.Modal props size="m" 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -2335,7 +2335,7 @@ exports[`UU5.Bricks.Modal props size="max" 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-max"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-max uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -2368,7 +2368,7 @@ exports[`UU5.Bricks.Modal props size="s" 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-s"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-s uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -2401,7 +2401,7 @@ exports[`UU5.Bricks.Modal props sticky=false 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -2434,7 +2434,7 @@ exports[`UU5.Bricks.Modal props sticky=true 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -2471,7 +2471,7 @@ exports[`UU5.Bricks.Modal props stickyBackground=false 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -2504,7 +2504,7 @@ exports[`UU5.Bricks.Modal props stickyBackground=true 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -2539,7 +2539,7 @@ exports[`UU5.Bricks.Modal props style="padding:8px; borderRadius: 2px" 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -2574,7 +2574,7 @@ exports[`UU5.Bricks.Modal props style={"backgroundColor":"red","color":"blue"} 1
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -2607,7 +2607,7 @@ exports[`UU5.Bricks.Modal props textCorrector=false 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -2640,7 +2640,7 @@ exports[`UU5.Bricks.Modal props textCorrector=true 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -2673,7 +2673,7 @@ exports[`UU5.Bricks.Modal props tooltip="My Tooltip" 1`] = `
   title="My Tooltip"
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -2706,7 +2706,7 @@ exports[`UU5.Bricks.Modal props underline=false 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}
@@ -2739,7 +2739,7 @@ exports[`UU5.Bricks.Modal props underline=true 1`] = `
   title={null}
 >
   <div
-    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
   >
     <modal-header
       _onClose={[Function]}

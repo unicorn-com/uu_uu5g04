@@ -75,6 +75,10 @@ export const RichLink = UU5.Common.VisualComponent.create({
         white-space: nowrap;`,
     },
     cache: {},
+    editMode: {
+      displayType: "inline",
+      startMode: "button",
+    }
   },
   //@@viewOff:statics
 

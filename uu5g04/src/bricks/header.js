@@ -18,6 +18,13 @@ import ns from "./bricks-ns.js";
 import Jumbotron from "./jumbotron.js";
 
 import "./header.less";
+import Lsi from "./internal/bricks-editable-lsi.js";
+
+const EditationComponent = UU5.Common.Component.lazy(async () => {
+  await SystemJS.import("uu5g04-forms");
+  await SystemJS.import("uu5g04-bricks-editable");
+  return import("./internal/header-editable.js");
+});
 //@@viewOff:imports
 
 export const Header = UU5.Common.VisualComponent.create({
@@ -46,7 +53,11 @@ export const Header = UU5.Common.VisualComponent.create({
       underline: ns.css("header-underline"),
       jumbotronContent: ns.css("header-jumbotron-content"),
     },
-    editableComponent: "UU5.BricksEditable.Header",
+    editMode: {
+      name: Lsi.header.name,
+      startMode: "content",
+      displayType: "block",
+    },
   },
   //@@viewOff:statics
 
@@ -71,9 +82,23 @@ export const Header = UU5.Common.VisualComponent.create({
   //@@viewOff:interface
 
   //@@viewOn:overriding
+  onBeforeForceEndEditation_() {
+    return this._editRef ? this._editRef.getPropsToSave() : undefined;
+  },
   //@@viewOff:overriding
 
   //@@viewOn:private
+  _registerEditableComponent(ref) {
+    this._editableComponent = ref;
+  },
+
+  _renderEditationMode() {
+    return (
+      <UU5.Common.Suspense fallback={this.getEditingLoading()}>
+        <EditationComponent component={this} ref_={this._registerEditableComponent} />
+      </UU5.Common.Suspense>
+    );
+  },
   //@@viewOff:private
 
   //@@viewOn:render
@@ -105,7 +130,12 @@ export const Header = UU5.Common.VisualComponent.create({
       );
     }
 
-    return this.getNestingLevel() ? result : null;
+    return this.getNestingLevel() ? (
+      <>
+        {this.isInlineEdited() && this._renderEditationMode()}
+        {this.isNotInlineEdited() && result}
+      </>
+    ) : null;
   },
   //@@viewOff:render
 });

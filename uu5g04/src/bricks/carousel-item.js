@@ -29,6 +29,9 @@ export default UU5.Common.VisualComponent.create({
     classNames: {
       main: ns.css("carousel-item"),
     },
+    editMode: {
+      enableWrapper: false,
+    },
   },
   //@@viewOff:statics
 

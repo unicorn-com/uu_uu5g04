@@ -671,6 +671,13 @@ export const Time = UU5.Common.VisualComponent.create({
   },
 
   _switchDayPart(e) {
+    let callback, opt;
+    if (typeof this.props.onChange === "function") {
+      callback = () => this.props.onChange(opt);
+    } else {
+      callback = () => this.onChangeDefault(opt);
+    }
+
     this._buttonSwitch.toggle(() => {
       this.setState((state) => {
         let pm = !state.pm;
@@ -680,7 +687,7 @@ export const Time = UU5.Common.VisualComponent.create({
           seconds: state.seconds,
         };
 
-        let opt = {
+        opt = {
           value,
           event: e,
           component: this,
@@ -688,13 +695,7 @@ export const Time = UU5.Common.VisualComponent.create({
         };
 
         this._addDayPart(value, pm);
-
-        if (typeof this.props.onChange === "function") {
-          this.props.onChange(opt);
-        } else {
-          this.onChangeDefault(opt);
-        }
-      });
+      }, callback);
     });
     return this;
   },

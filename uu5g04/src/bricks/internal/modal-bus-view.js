@@ -25,13 +25,14 @@ const classNames = {
       left: 0;
       right: 0;
       background-color: rgba(0, 0, 0, 0.4);
+      overflow: auto;
     `;
   },
   modalBusViewContent: (minWidth, collapse) => {
     return Css.css`
       display: inline-flex;
       flex-direction: column;
-      position: fixed;
+      position: absolute;
       z-index: 1;
       min-width:  ${collapse ? "auto" : `${minWidth}px`};
       border-radius: 4px;
@@ -41,10 +42,10 @@ const classNames = {
 
   modalBusViewPortal: (activeItemId, itemList, collapse, minWidth, allowClose) => {
     return Css.css`
-    display: ${collapse && itemList.length > 1 ? "none" : "block"};
+    display: ${collapse && itemList.length > 1 ? "none" : "flex"};
     flex: 1 1 auto;
-    overflow: auto;
     position: relative;
+    min-height: 0;
 
     .uu5-bricks-modal-layout-wrapper {
       background-color: #fff;
@@ -57,7 +58,7 @@ const classNames = {
       activeItemId
         ? `& > :nth-child(${itemList.findIndex((item) => item.id === activeItemId) + 2}) {
             // increase index to skip focusCapturer
-            display: block;
+            display: flex;
           }`
         : ""
     }
@@ -146,9 +147,7 @@ export const ModalBusView = withPosition(
     },
 
     componentWillReceiveProps(nextProps) {
-      if (!this.props.activeItemId && nextProps.activeItemId) {
-        this._initPosition = true;
-      } else if (this.props.activeItemId !== nextProps.activeItemId && nextProps.activeItemId) {
+      if (this.props.activeItemId !== nextProps.activeItemId && nextProps.activeItemId) {
         this._updatePosition = true;
       }
       if (nextProps.itemList.length <= 1) this.setState({ collapse: false });
@@ -160,12 +159,11 @@ export const ModalBusView = withPosition(
       }
     },
 
-    componentDidUpdate() {
+    componentDidUpdate(prevProps) {
       if (typeof this.props.updatePosition === "function") {
-        if (this._initPosition) {
-          this._initPosition = false;
+        if (!prevProps.activeItemId && this.props.activeItemId) {
           this.props.updatePosition(this._contentRef.current, "center");
-        } else if (this._updatePosition) {
+        } else if (!this.props.isInitialPosition && this._updatePosition) {
           this._updatePosition = false;
           this.props.updatePosition(this._contentRef.current, "optimize");
         }
@@ -188,7 +186,11 @@ export const ModalBusView = withPosition(
     },
 
     _onResize() {
-      if (typeof this.props.updatePosition === "function" && this.props.itemList.length) {
+      if (
+        typeof this.props.updatePosition === "function" &&
+        this.props.itemList.length &&
+        !this.props.isInitialPosition
+      ) {
         this.props.updatePosition(this._contentRef.current, "optimize");
       }
     },
@@ -201,7 +203,19 @@ export const ModalBusView = withPosition(
 
     _onMouseDown(e) {
       if (typeof this.props.onMouseDown === "function") {
-        this.props.onMouseDown(e, this._contentRef.current);
+        let canStartDrag = true;
+        let node = e.target;
+
+        while (node != document.body && node != document.documentElement && node && canStartDrag) {
+          if (node.getAttribute("data-name") === "Toolbar-Button") {
+            canStartDrag = false;
+          }
+          node = node.parentNode;
+        }
+
+        if (canStartDrag) {
+          this.props.onMouseDown(e, this._contentRef.current);
+        }
       }
     },
 
@@ -229,28 +243,19 @@ export const ModalBusView = withPosition(
 
     //@@viewOn:render
     render() {
-      let { itemList, activeItemId, onChange, setNext, setPrevious } = this.props;
-      let { right, top, left, marginLeft, marginRight } = this.props.position;
+      let { itemList, activeItemId, onChange, setNext, setPrevious, isInitialPosition } = this.props;
+      let { right, top } = this.props.position;
       let componentWidth = this.state.minWidth;
       let activeItem = activeItemId ? itemList.find((item) => item.id === activeItemId) : undefined;
       let settings = activeItem?.settings;
       let isClosable = itemList[itemList.length - 1]?.id === activeItemId;
+      let style = { top, right };
 
-      if (!this._initPosition && document.body.clientWidth < this.state.minWidth) {
-        componentWidth = document.body.clientWidth;
-
-        if (marginLeft) componentWidth -= marginLeft;
-        if (marginRight) componentWidth -= marginRight;
+      if (isInitialPosition) {
+        style.right = "50%";
+        style.transform = "translateX(50%)";
       }
 
-      // center component if it is a near to the center of the screen
-      const horizontalCenterOffset = (document.body.clientWidth - componentWidth) / 2 - MAGNETIC_OFFSET;
-      if (right > horizontalCenterOffset && left > horizontalCenterOffset) {
-        right = (document.body.clientWidth - componentWidth) / 2;
-        if (marginRight) right -= marginRight;
-      }
-
-      const style = { right, top };
       return (
         <div
           data-name="ModalBusViewMask"
@@ -294,7 +299,8 @@ export const ModalBusView = withPosition(
       );
     },
     //@@viewOff:render
-  })
+  }),
+  MAGNETIC_OFFSET
 );
 
 export default ModalBusView;

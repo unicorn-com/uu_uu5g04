@@ -163,13 +163,7 @@ export const Loader = Component.create({
 
     let session = Environment.getSession();
     if (props.authenticate && session && session.isAuthenticated() && Environment.isTrustedDomain(props.uri)) {
-      let token = await Tools.getCallToken(props.uri, session);
-      if (token) {
-        headers = {
-          ...headers,
-          Authorization: "Bearer " + token,
-        };
-      }
+      headers = { ...headers, ...(await Tools.getAuthenticatedHeaders(props.uri, session)) };
     }
 
     return Request.call(props.method.toUpperCase(), props.uri, props.data, { headers });

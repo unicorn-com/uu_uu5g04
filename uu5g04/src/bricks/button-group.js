@@ -16,6 +16,7 @@ import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import { Div } from "./factory.js";
 import "./button-group.less";
+import Lsi from "./internal/bricks-editable-lsi.js";
 
 const EditationComponent = UU5.Common.Component.lazy(async () => {
   await SystemJS.import("uu5g04-forms");
@@ -62,10 +63,12 @@ export const ButtonGroup = UU5.Common.VisualComponent.create({
       nestingLevelWrapper: true,
     },
     editMode: {
-      name: { en: "ButtonGroup", cs: "ButtonGroup" },
+      name: Lsi.buttonGroup.name,
       backgroundColor: "rgba(0,0,0,.2)",
       color: "rgba(0,0,0,.87)",
       highlightColor: "#CCCCCC",
+      displayType: "inline",
+      startMode: "button",
     },
   },
   //@@viewOff:statics

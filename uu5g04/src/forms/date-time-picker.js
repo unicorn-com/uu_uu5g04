@@ -24,9 +24,9 @@ import ns from "./forms-ns.js";
 import TextInput from "./internal/text-input.js";
 import Time from "./time.js";
 import TextInputMixin from "./mixins/text-input-mixin.js";
-
 import Context from "./form-context.js";
 import DateTools from "./internal/date-tools.js";
+import withUserPreferences from "../common/user-preferences";
 
 import "./date-time-picker.less";
 //@@viewOff:imports
@@ -36,7 +36,7 @@ const TIME_FORMAT_PM = "PM";
 const TIME_FORMAT_12 = "12";
 const TIME_FORMAT_24 = "24";
 
-export const DateTimePicker = Context.withContext(
+let DateTimePicker = Context.withContext(
   UU5.Common.VisualComponent.create({
     displayName: "DateTimePicker", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
@@ -81,7 +81,7 @@ export const DateTimePicker = Context.withContext(
       dateFrom: UU5.PropTypes.oneOfType([UU5.PropTypes.instanceOf(Date), UU5.PropTypes.string]),
       dateTo: UU5.PropTypes.oneOfType([UU5.PropTypes.instanceOf(Date), UU5.PropTypes.string]),
       format: UU5.PropTypes.string,
-      timeFormat: UU5.PropTypes.string,
+      timeFormat: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
       country: UU5.PropTypes.string,
       nanMessage: UU5.PropTypes.any,
       beforeRangeMessage: UU5.PropTypes.any,
@@ -143,13 +143,13 @@ export const DateTimePicker = Context.withContext(
 
     //@@viewOn:reactLifeCycle
     getInitialState() {
+      this._formattingValues = {};
+      this._setFormattingValues(this.props);
       let initialData = this._getInitialData(this.props.value);
 
       return {
         calendarOpen: false,
         timeOpen: false,
-        format: this.props.format,
-        country: this.props.country || UU5.Common.Tools.getLanguage(),
         dateString: initialData.dateString,
         timeString: initialData.timeString,
       };
@@ -159,7 +159,6 @@ export const DateTimePicker = Context.withContext(
       this._hasFocus = false;
       this._allowOpening = true;
       this._allowTimeZoneAdjustment = true;
-
       this._setUpLimits(this.props);
 
       let value = this._parseDate(this.props.value);
@@ -202,6 +201,7 @@ export const DateTimePicker = Context.withContext(
 
     UNSAFE_componentWillReceiveProps(nextProps) {
       if (nextProps.controlled) {
+        this._setFormattingValues(nextProps);
         this._setUpLimits(nextProps);
 
         this._allowTimeZoneAdjustment = true;
@@ -293,7 +293,10 @@ export const DateTimePicker = Context.withContext(
     },
 
     parseDateDefault(stringDate) {
-      return UU5.Common.Tools.parseDate(stringDate, { format: this.state.format, country: this.state.country });
+      return UU5.Common.Tools.parseDate(stringDate, {
+        format: this._formattingValues.format,
+        country: this._formattingValues.country,
+      });
     },
     //@@viewOff:interface
 
@@ -475,6 +478,29 @@ export const DateTimePicker = Context.withContext(
     //@@viewOff:overriding
 
     //@@viewOn:private
+    // Used to hold current values of props/state which is used for formatting.
+    // These values are used on various places and its value has to be always
+    // updated (e.g. in functions called from willReceiveProps)
+    _setFormattingValues(props) {
+      let formattingKeys = [
+        "format",
+        "country",
+        "timeStep",
+        "parseDate",
+        "valueType",
+        "timeFormat",
+        "timeZone",
+        "seconds",
+      ];
+
+      for (let i = 0; i < formattingKeys.length; i++) {
+        let key = formattingKeys[i];
+        let value = props[key];
+        if (key === "country" && !value) value = UU5.Common.Tools.getLanguage();
+        this._formattingValues[key] = value;
+      }
+    },
+
     _registerDateInput(ref) {
       this._textInput = ref;
       this._calendarTextInput = ref;
@@ -484,22 +510,22 @@ export const DateTimePicker = Context.withContext(
       this._timeTextInput = ref;
     },
 
-    _getOutcomingValue(value, props = this.props) {
+    _getOutcomingValue(value) {
       if (value) {
         let dateObject;
 
-        if (value instanceof Date && props.valueType === "date") {
+        if (value instanceof Date && this._formattingValues.valueType === "date") {
           dateObject = value;
         } else {
           dateObject = this._parseDate(value);
         }
 
-        if (props.valueType === "string" || !props.valueType) {
-          if (typeof props.timeZone === "number") {
+        if (this._formattingValues.valueType === "string" || !this._formattingValues.valueType) {
+          if (typeof this._formattingValues.timeZone === "number") {
             value = UU5.Common.Tools.adjustForTimezone(
               dateObject,
               -dateObject.getTimezoneOffset() / 60,
-              props.timeZone
+              this._formattingValues.timeZone
             );
           } else {
             value = dateObject;
@@ -507,43 +533,43 @@ export const DateTimePicker = Context.withContext(
           let date = this._getDateString(value);
           let time = this._getTimeString(value);
           value = date + " " + time;
-        } else if (props.valueType === "date") {
-          if (typeof props.timeZone === "number") {
+        } else if (this._formattingValues.valueType === "date") {
+          if (typeof this._formattingValues.timeZone === "number") {
             value = UU5.Common.Tools.adjustForTimezone(
               dateObject,
               -dateObject.getTimezoneOffset() / 60,
-              props.timeZone
+              this._formattingValues.timeZone
             );
           } else {
             value = dateObject;
           }
-        } else if (props.valueType === "iso") {
-          if (typeof props.timeZone === "number") {
+        } else if (this._formattingValues.valueType === "iso") {
+          if (typeof this._formattingValues.timeZone === "number") {
             value = UU5.Common.Tools.adjustForTimezone(
               dateObject,
               -dateObject.getTimezoneOffset() / 60,
-              props.timeZone
+              this._formattingValues.timeZone
             );
           } else {
             value = dateObject;
           }
           value = DateTools.getISO(value);
-        } else if (props.valueType === "isoLocal") {
-          value = DateTools.getISOLocal(dateObject, props.timeZone);
+        } else if (this._formattingValues.valueType === "isoLocal") {
+          value = DateTools.getISOLocal(dateObject, this._formattingValues.timeZone);
         }
       }
 
       return value;
     },
 
-    _getIncomingValue(value, props = this.props) {
+    _getIncomingValue(value) {
       if (value) {
         let dateObject;
 
         if (value instanceof Date) {
           dateObject = value;
         } else {
-          dateObject = this._parseDate(value, props.format, props.country);
+          dateObject = this._parseDate(value);
         }
 
         value = dateObject;
@@ -559,14 +585,10 @@ export const DateTimePicker = Context.withContext(
       this._show24 = show24;
     },
 
-    _getInitialData(value, props, format, country) {
-      props = props || this.props;
-      format = format || this.state ? this.state.format : this.props.format;
-      country = country || this.state ? this.state.country : this.props.country;
-
+    _getInitialData(value) {
       let parseString = (dateObject) => {
-        let timeString = this._getTimeString(dateObject, props, props.timeFormat == TIME_FORMAT_12);
-        let dateString = this._getDateString(dateObject, format, country);
+        let timeString = this._getTimeString(dateObject);
+        let dateString = this._getDateString(dateObject);
 
         return { dateString, timeString };
       };
@@ -601,13 +623,11 @@ export const DateTimePicker = Context.withContext(
 
       if (newState.dateString === undefined) {
         newState.dateString =
-          (newState.value && this._getDateString(newState.value, undefined, undefined, preventFormatting)) ||
-          this.state.dateString;
+          (newState.value && this._getDateString(newState.value, preventFormatting)) || this.state.dateString;
       }
 
       if (newState.timeString === undefined) {
-        newState.timeString =
-          (newState.value && this._getTimeString(newState.value, undefined, undefined)) || this.state.timeString;
+        newState.timeString = (newState.value && this._getTimeString(newState.value)) || this.state.timeString;
 
         if (!preventFormatting && !newState.timeString && (newState.dateString !== null || this.state.dateString)) {
           newState.timeString = this._getAutofilledTime();
@@ -623,14 +643,14 @@ export const DateTimePicker = Context.withContext(
       this.setState(newState, setStateCallback);
     },
 
-    _getAutofilledTime(props = this.props) {
-      let time = props.timeFormat == TIME_FORMAT_12 ? "12:00" : "00:00";
+    _getAutofilledTime() {
+      let time = this._formattingValues.timeFormat == TIME_FORMAT_12 ? "12:00" : "00:00";
 
-      if (this.props.seconds) {
+      if (this._formattingValues.seconds) {
         time += ":00";
       }
 
-      if (props.timeFormat == TIME_FORMAT_12) {
+      if (this._formattingValues.timeFormat == TIME_FORMAT_12) {
         time += " " + TIME_FORMAT_AM;
       }
 
@@ -968,19 +988,17 @@ export const DateTimePicker = Context.withContext(
     },
 
     _onChangeFormat(opt, setStateCallback) {
-      let format = opt.format === undefined ? this.state.format : opt.format;
+      let format = opt.format === undefined ? this._formattingValues.format : opt.format;
       let country =
-        opt.country === undefined ? this.state.country : opt.country ? opt.country.toLowerCase() : opt.country;
-      let dateString = this._getDateString(this.state.value, format, country);
-      this._updateState(
-        {
-          dateString,
-          format,
-          country,
-        },
-        undefined,
-        setStateCallback
-      );
+        opt.country === undefined
+          ? this._formattingValues.country
+          : opt.country
+          ? opt.country.toLowerCase()
+          : opt.country;
+      this._formattingValues.format = format;
+      this._formattingValues.country = country;
+      let dateString = this._getDateString(this.state.value);
+      this._updateState({ dateString }, undefined, setStateCallback);
     },
 
     _onResize() {
@@ -1317,22 +1335,26 @@ export const DateTimePicker = Context.withContext(
     },
 
     _onTimePickerChange(opt) {
-      let timeString = this._getTimeString(opt.value, this.props, true);
-      let value = this._getFullDate(
-        this.state.dateString || this._getDateString(new Date(Date.now())),
-        timeString,
-        this.props.valueType == "date"
-      );
-      opt = {
-        component: this,
-        value: this._getOutcomingValue(value),
-        _data: { type: "timePicker", timeString, value, timeZoneAdjusted: true },
-      };
+      if (opt.value.hours !== null) {
+        let timeString = this._getTimeString(opt.value, true);
+        let value = this._getFullDate(
+          this.state.dateString || this._getDateString(new Date(Date.now())),
+          timeString,
+          this.props.valueType == "date"
+        );
+        opt = {
+          component: this,
+          value: this._getOutcomingValue(value),
+          _data: { type: "timePicker", timeString, value, timeZoneAdjusted: true },
+        };
 
-      if (typeof this.props.onChange === "function") {
-        this.props.onChange(opt);
+        if (typeof this.props.onChange === "function") {
+          this.props.onChange(opt);
+        } else {
+          this.onChangeDefault(opt);
+        }
       } else {
-        this.onChangeDefault(opt);
+        opt.component.onChangeDefault(opt);
       }
     },
 
@@ -1491,7 +1513,7 @@ export const DateTimePicker = Context.withContext(
         date = new Date(dateString);
         date = this._adjustTimeZone(date, timeZone);
       } else if (typeof dateString === "string") {
-        let timeString = this._getTimeString(dateString, this.props, this.props.timeFormat == TIME_FORMAT_12);
+        let timeString = this._getTimeString(dateString);
 
         if (this.props.parseDate && typeof this.props.parseDate === "function") {
           let dateStringMatch = dateString && dateString.match(/.+ /);
@@ -1531,39 +1553,47 @@ export const DateTimePicker = Context.withContext(
       return UU5.Common.Tools.parseTime(timeString, this.props.timeFormat);
     },
 
-    _parseDateDefault(stringDate, format, country, timeZone) {
-      format = format || (this.state ? this.state.format : this.props.format);
-      country = country || (this.state ? this.state.country : this.props.country);
-      return UU5.Common.Tools.parseDate(stringDate, { format, country });
+    _parseDateDefault(stringDate) {
+      return UU5.Common.Tools.parseDate(stringDate, {
+        format: this._formattingValues.format,
+        country: this._formattingValues.country,
+      });
     },
 
-    _getTimeString(value, props, displayDayPart) {
-      props = props || this.props;
-      displayDayPart = typeof displayDayPart === "boolean" ? displayDayPart : this.props.timeFormat == TIME_FORMAT_12;
-      return UU5.Common.Tools.getTimeString(value, props.seconds, props.timeFormat, displayDayPart, props.timeStep);
+    _getTimeString(value, displayDayPart) {
+      displayDayPart =
+        typeof displayDayPart === "boolean" ? displayDayPart : this._formattingValues.timeFormat == TIME_FORMAT_12;
+      return UU5.Common.Tools.getTimeString(
+        value,
+        this._formattingValues.seconds,
+        this._formattingValues.timeFormat,
+        displayDayPart,
+        this._formattingValues.timeStep
+      );
     },
 
-    _getDateString(value, newFormat, newCountry, preventFormatting) {
+    _getDateString(value, preventFormatting) {
       let result = null;
 
       if (!(value instanceof Date) && preventFormatting) {
-        let timeString = this._getTimeString(value, this.props, this.props.timeFormat == TIME_FORMAT_12);
+        let timeString = this._getTimeString(value);
         result =
           typeof value === "string"
             ? value.replace(timeString, "").trim()
-            : UU5.Common.Tools.getDateString(value, { format: newFormat, country: newCountry });
+            : UU5.Common.Tools.getDateString(value, {
+                format: this._formattingValues.format,
+                country: this._formattingValues.country,
+              });
       } else {
-        let oldFormat = this.state ? this.state.format : this.props.format;
-        let oldCountry = this.state ? this.state.country : this.props.country;
-        newFormat = newFormat || oldFormat;
-        newCountry = newCountry || oldCountry;
-
         if (typeof value === "string") {
           // Value has to be parsed to date object so that the getDateString function can return it in a correct format as a string
-          value = this._parseDate(value, oldFormat, oldCountry);
+          value = this._parseDate(value);
         }
 
-        result = UU5.Common.Tools.getDateString(value, { format: newFormat, country: newCountry });
+        result = UU5.Common.Tools.getDateString(value, {
+          format: this._formattingValues.format,
+          country: this._formattingValues.country,
+        });
       }
 
       return result;
@@ -1742,7 +1772,7 @@ export const DateTimePicker = Context.withContext(
     },
 
     _getPlacehoder() {
-      let format = this.state.format || UU5.Environment.dateTimeFormat[this.state.country];
+      let format = this._formattingValues.format || UU5.Environment.dateTimeFormat[this._formattingValues.country];
       format && (format = format.replace(/Y+/, "YYYY").replace(/y+/, "yy"));
       let placeholder;
       if (this.props.placeholder && format && !this.props.hideFormatPlaceholder) {
@@ -1883,6 +1913,8 @@ export const DateTimePicker = Context.withContext(
   })
 );
 
-export const Datetimepicker = DateTimePicker;
+DateTimePicker = withUserPreferences(DateTimePicker, { weekStartDay: "weekStartDay", timeFormat: "hourFormat" });
+const Datetimepicker = DateTimePicker;
 
+export { DateTimePicker, Datetimepicker };
 export default DateTimePicker;

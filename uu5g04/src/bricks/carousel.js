@@ -18,6 +18,7 @@ import ns from "./bricks-ns.js";
 import "./carousel.less";
 import CarouselItem from "./carousel-item.js";
 import Icon from "./icon.js";
+import Lsi from "./internal/bricks-editable-lsi.js";
 
 const EditationComponent = UU5.Common.Component.lazy(async () => {
   await SystemJS.import("uu5g04-forms");
@@ -59,10 +60,11 @@ export const Carousel = UU5.Common.VisualComponent.create({
       colorSchema: "default",
     },
     editMode: {
-      name: { en: "Carousel", cs: "Carousel" },
+      name: Lsi.carousel.name,
       backgroundColor: "rgba(0,0,0,.2)",
       color: "rgba(0,0,0,.87)",
       highlightColor: "#CCCCCC",
+      startMode: "button",
     },
   },
   //@@viewOff:statics

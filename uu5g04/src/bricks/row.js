@@ -15,6 +15,7 @@
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Css from "./internal/css.js";
+import Lsi from "./internal/bricks-editable-lsi.js";
 
 const EditableRow = UU5.Common.Component.lazy(async () => {
   await SystemJS.import("uu5g04-forms");
@@ -68,10 +69,11 @@ export const Row = UU5.Common.VisualComponent.create({
       nestingLevelWrapper: true,
     },
     editMode: {
-      name: { en: "Row", cs: "Řádek" },
+      name: Lsi.row.name,
       backgroundColor: "rgba(209,196,233,.8)",
       color: "#311B92",
       highlightColor: "rgba(218,208,237,.45)",
+      enablePlaceholder: true,
     },
   },
   //@@viewOff:statics

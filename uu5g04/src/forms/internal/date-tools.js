@@ -9,6 +9,25 @@ export const REGEXP = {
   timeFormat24seconds: /^\d{1,2}:?\d{0,2}:?\d{0,2}$/,
 };
 
+const DATE_FORMATTER_OPTS = {
+  year: "numeric",
+  month: "numeric",
+  day: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  hourCycle: "h23",
+};
+
+const DATE_PARTS = ["year", "month", "day", "hour", "minute"];
+
+function createDateFromDateParts(dateParts) {
+  let utcParts = [];
+  for (let i = 0; i < DATE_PARTS.length; i++) {
+    utcParts.push(parseInt(dateParts.find((part) => part.type === DATE_PARTS[i]).value));
+  }
+  return Date.UTC(utcParts[0], utcParts[1] - 1, utcParts[2], utcParts[3], utcParts[4]);
+}
+
 export const DateTools = {
   setupLimits: (props) => {
     let timeFrom = undefined;

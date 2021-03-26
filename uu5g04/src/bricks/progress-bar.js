@@ -55,6 +55,9 @@ export const ProgressBar = UU5.Common.VisualComponent.create({
       increaseImpossible: "Progress Bar is full. Cannot increase above %d.",
       decreaseImpossible: "Progress Bar is empty. Cannot decrease below %d.",
     },
+    editMode: {
+      enablePlaceholder: false,
+    }
   },
   //@@viewOff:statics
 

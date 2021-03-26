@@ -69,7 +69,7 @@ export const ModalBusToolbar = UU5.Common.Component.create({
   propTypes: {
     onChange: UU5.PropTypes.func,
     itemList: UU5.PropTypes.array,
-    activeItem: UU5.PropTypes.string,
+    activeItemId: UU5.PropTypes.string,
     collapse: UU5.PropTypes.bool,
     toggleCollapse: UU5.PropTypes.func,
   },
@@ -80,7 +80,7 @@ export const ModalBusToolbar = UU5.Common.Component.create({
     return {
       onChange: undefined,
       itemList: undefined,
-      activeItem: undefined,
+      activeItemId: undefined,
       collapse: undefined,
       toggleCollapse: undefined,
     };
@@ -107,7 +107,7 @@ export const ModalBusToolbar = UU5.Common.Component.create({
         data-name="Toolbar"
         className={(attrs.className ? attrs.className + " " : "") + classNames.header()}
       >
-        <div className={classNames.buttonWrapper()}>
+        <div className={classNames.buttonWrapper()} data-name="Toolbar-Button">
           {itemList.map((item) => (
             <UU5.Bricks.Button
               key={item.id}
@@ -140,6 +140,9 @@ export const ModalBusToolbar = UU5.Common.Component.create({
             collapse ? <UU5.Bricks.Lsi lsi={Lsi.modalBus.expand} /> : <UU5.Bricks.Lsi lsi={Lsi.modalBus.collapse} />
           }
           onClick={() => toggleCollapse()}
+          mainAttrs={{
+            ["data-name"]: "Toolbar-Button",
+          }}
         />
       </div>
     );

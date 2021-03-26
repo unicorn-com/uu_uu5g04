@@ -117,7 +117,7 @@ export const File = Context.withContext(
     getInitialState() {
       return {
         indicateDrop: null,
-        tokens: {},
+        authenticatedUrls: {},
       };
     },
 
@@ -282,6 +282,10 @@ export const File = Context.withContext(
       // prevent keeping enter listener - single file input renders link instead of input, in this case Chrome fires focus event from input but never fires blur event
       if (!this.props.multiple && !this.state.value && opt.value && !Array.isArray(opt.value)) {
         this._onBlur();
+      }
+
+      if (this._checkRequired({ value })) {
+        this.setInitial(null, value);
       }
 
       if (typeof this.props.onChange === "function") {
@@ -639,14 +643,18 @@ export const File = Context.withContext(
     },
     _getUrl(url, contentDisposition) {
       let result = url;
-      if (url) {
-        let parsedUrl = UU5.Common.Url.parse(url);
-        let parameters = parsedUrl.parameters;
+      if (result) {
         let session = UU5.Environment.getSession();
-        if (this.props.authenticate && session && session.isAuthenticated() && UU5.Environment.isTrustedDomain(url)) {
-          let token = this._getCallToken(url, session);
-          parameters["access_token"] = token;
+        if (
+          this.props.authenticate &&
+          session &&
+          session.isAuthenticated() &&
+          UU5.Environment.isTrustedDomain(result)
+        ) {
+          result = this._getAuthenticatedUrl(result, session);
         }
+        let parsedUrl = UU5.Common.Url.parse(result);
+        let parameters = parsedUrl.parameters;
         if (contentDisposition) {
           parameters["contentDisposition"] = contentDisposition;
         }
@@ -656,11 +664,13 @@ export const File = Context.withContext(
       return result;
     },
 
-    _getCallToken(url, session) {
-      let result = this.state.tokens[url];
+    _getAuthenticatedUrl(url, session) {
+      let result = this.state.authenticatedUrls[url];
       if (!result) {
-        UU5.Common.Tools.getCallToken(url, session).then((token) => {
-          if (this.isRendered()) this.setState((state) => ({ tokens: { ...state.tokens, [url]: token } }));
+        UU5.Common.Tools.getAuthenticatedUrl(url, session).then((authenticatedUrl) => {
+          if (this.isRendered()) {
+            this.setState((state) => ({ authenticatedUrls: { ...state.authenticatedUrls, [url]: authenticatedUrl } }));
+          }
           // TODO Clean unused tokens from state.
         });
       }

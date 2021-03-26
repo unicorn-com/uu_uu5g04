@@ -53,6 +53,9 @@ export const Loading = UU5.Common.VisualComponent.create({
     opt: {
       nestingLevelWrapper: true,
     },
+    editMode: {
+      enablePlaceholder: false,
+    }
   },
   //@@viewOff:statics
 

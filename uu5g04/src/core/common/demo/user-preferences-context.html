@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"
+    />
+    <title>UserPreferencesContext Demo</title>
+
+    <script>
+      // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      // var appAssetsRelativeUrlPath = "public/";
+      // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    </script>
+
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+    <script>
+      SystemJS.config({
+        paths: {
+          systemjs: "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          react: "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+          uu5g04: "/uu5g04.js",
+          "uu5g04-bricks": "/uu5g04-bricks.js",
+          "uu5g04-forms": "/uu5g04-forms.js",
+          // uu5g05: "http://localhost:54321/uu5g05.js",
+        },
+      });
+    </script>
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import ReactDOM from "react-dom";
+      import UU5, { createVisualComponent } from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+
+      const withUserPreferences = (Component) => {
+        if (!UU5.Common.Context.isSupported()) return Component;
+        let forwardRef = UU5.Common.Reference.forward((props, ref) => {
+          return (
+            <UU5.Common.UserPreferencesContext.Consumer>
+              {(context) => <Component {...context} {...props} ref={ref} />}
+            </UU5.Common.UserPreferencesContext.Consumer>
+          );
+        });
+
+        forwardRef.isUu5PureComponent = true;
+        forwardRef.displayName = `forwardRef(${Component.displayName || Component.name || "Component"})`;
+        forwardRef.tagName = Component.tagName;
+
+        return forwardRef;
+      };
+
+      function getValue(value) {
+        if (!value) {
+          return "";
+        } else if (typeof value === "number") {
+          return value + "";
+        } else if (typeof value === "object") {
+          return JSON.stringify(value);
+        } else {
+          return value;
+        }
+      }
+
+      let contextValues = {
+        weekStartDay: 7,
+        mediumDateFormat: "D. Y",
+        timeZone: "Pacific/Honolulu",
+        hourFormat: 12,
+        numberGroupingSeparator: "/",
+        numberDecimalSeparator: "-",
+      };
+
+      let customProps = {
+        calendar: {
+          weekStartDay: 1,
+        },
+        dateTime: {
+          format: "m/d/Y",
+          timeZone: 10, // TODO
+        },
+        dateRangePicker: {
+          format: "m/d/Y",
+          weekStartDay: 1,
+        },
+        datePicker: {
+          format: "m/d/Y",
+          weekStartDay: 1,
+        },
+        dateTimePicker: {
+          format: "m/d/Y",
+          weekStartDay: 1,
+          timeFormat: 24,
+          timeZone: 10, // TODO
+        },
+        dateTimeRangePicker: {
+          format: "m/d/Y",
+          weekStartDay: 1,
+          timeFormat: 24,
+          timeZone: 10, // TODO
+        },
+        bricksNumber: {
+          thousandSeparator: "+",
+          decimalSeparator: "_",
+        },
+        formsNumber: {
+          thousandSeparator: "+",
+          decimalSeparator: "_",
+        },
+        timePicker: {
+          timeFormat: 24,
+        },
+      };
+
+      const CustomComponent = withUserPreferences(
+        createVisualComponent({
+          render() {
+            let keys = [
+              "region",
+              "timeZone",
+              "shortDateFormat",
+              "mediumDateFormat",
+              "longDateFormat",
+              "weekStartDay",
+              "hourFormat",
+              "languages",
+              "numberGroupingSeparator",
+              "numberDecimalSeparator",
+              "currency",
+              "currencyGroupingSeparator",
+              "currencyDecimalSeparator",
+            ];
+            return (
+              <UU5.Bricks.Table className={UU5.Common.Css.css`margin: 16px 0 0;`}>
+                <UU5.Bricks.Table.TBody>
+                  {keys.map((key) => (
+                    <UU5.Bricks.Table.Tr key={key}>
+                      <UU5.Bricks.Table.Td>{key}</UU5.Bricks.Table.Td>
+                      <UU5.Bricks.Table.Td>{getValue(this.props[key])}</UU5.Bricks.Table.Td>
+                    </UU5.Bricks.Table.Tr>
+                  ))}
+                </UU5.Bricks.Table.TBody>
+              </UU5.Bricks.Table>
+            );
+          },
+        })
+      );
+
+      const Page = createVisualComponent({
+        getInitialState() {
+          return {
+            propsSource: "defaultContextValue",
+          };
+        },
+
+        render() {
+          return (
+            <UU5.Bricks.Container header="UserPreferencesContext">
+              <UU5.Common.TimeZoneContext.Provider value={{ timeZone: "Europe/Berlin" }}>
+                <UU5.Common.UserPreferencesProvider {...(this.state.propsSource === "customContextValue" ? contextValues : {})}
+                >
+                  <UU5.Bricks.Row>
+                    <UU5.Bricks.Column colWidth="s-12 m-6">
+                      <UU5.Bricks.Row level="6" header="Calendar">
+                        <UU5.Bricks.Calendar {...(this.state.propsSource === "props" ? customProps.calendar : {})} />
+                      </UU5.Bricks.Row>
+                      <UU5.Bricks.Row level="6" header="DateTime">
+                        <UU5.Bricks.DateTime {...(this.state.propsSource === "props" ? customProps.dateTime : {})} />
+                      </UU5.Bricks.Row>
+                      <UU5.Bricks.Row level="6" header="Number">
+                        <UU5.Bricks.Number
+                          {...(this.state.propsSource === "props" ? customProps.bricksNumber : {})}
+                          value={1000.1}
+                        />
+                      </UU5.Bricks.Row>
+                      <UU5.Bricks.Row level="6" header="DateTimePicker">
+                        <UU5.Forms.DateTimePicker
+                          {...(this.state.propsSource === "props" ? customProps.dateTimePicker : {})}
+                          value={new Date()}
+                        />
+                      </UU5.Bricks.Row>
+                      <UU5.Bricks.Row level="6" header="DateTimeRangePicker">
+                        <UU5.Forms.DateTimeRangePicker
+                          {...(this.state.propsSource === "props" ? customProps.dateTimeRangePicker : {})}
+                          value={[new Date(), new Date()]}
+                        />
+                      </UU5.Bricks.Row>
+                      <UU5.Bricks.Row level="6" header="Number">
+                        <UU5.Forms.Number
+                          {...(this.state.propsSource === "props" ? customProps.formsNumber : {})}
+                          value={1000.1}
+                        />
+                      </UU5.Bricks.Row>
+                      <UU5.Bricks.Row level="6" header="TimePicker">
+                        <UU5.Forms.TimePicker
+                          {...(this.state.propsSource === "props" ? customProps.timePicker : {})}
+                          value="10:00"
+                        />
+                      </UU5.Bricks.Row>
+                    </UU5.Bricks.Column>
+                    <UU5.Bricks.Column colWidth="s-12 m-6">
+                      <UU5.Forms.Form>
+                        <UU5.Forms.SwitchSelector
+                          items={[
+                            { value: "customContextValue", content: "customContextValue" },
+                            { value: "props", content: "props" },
+                            { value: "defaultContextValue", content: "defaultContextValue" },
+                          ]}
+                          value={this.state.propsSource}
+                          label="Props Source"
+                          onChange={({ value }) => this.setState({ propsSource: value })}
+                          labelColWidth="xs-12"
+                          inputColWidth="xs-12"
+                        />
+                      </UU5.Forms.Form>
+                      <CustomComponent />
+                    </UU5.Bricks.Column>
+                  </UU5.Bricks.Row>
+                </UU5.Common.UserPreferencesProvider>
+              </UU5.Common.TimeZoneContext.Provider>
+            </UU5.Bricks.Container>
+          );
+        },
+      });
+
+      ReactDOM.render(<Page />, document.getElementById("renderHere"));
+    </script>
+  </body>
+</html>

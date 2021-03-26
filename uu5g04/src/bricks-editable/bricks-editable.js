@@ -11,11 +11,14 @@
  * at the email: info@unicorn.com.
  */
 
+/* DEPRECATED */
 export * from "./button.js";
 export * from "./dropdown.js";
 export * from "./touchicon.js";
 export * from "./header.js";
 export * from "./accordion.js";
+/* END DEPRECATED */
+
 export * from "./toolbar.js";
 export * from "./end-editation.js";
 export * from "./input.js";

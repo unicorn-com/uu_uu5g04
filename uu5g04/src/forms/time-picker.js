@@ -14,15 +14,12 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
-
 import TextInput from "./internal/text-input.js";
 import Time from "./time.js";
-
-import InputMixin from "./mixins/input-mixin.js";
 import TextInputMixin from "./mixins/text-input-mixin.js";
-
 import Context from "./form-context.js";
 import DateTools, { REGEXP } from "./internal/date-tools.js";
+import withUserPreferences from "../common/user-preferences";
 
 import "./time-picker.less";
 //@@viewOff:imports
@@ -30,7 +27,7 @@ import "./time-picker.less";
 const TIME_FORMAT_12 = "12";
 const TIME_FORMAT_24 = "24";
 
-export const TimePicker = Context.withContext(
+let TimePicker = Context.withContext(
   UU5.Common.VisualComponent.create({
     displayName: "TimePicker", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
@@ -70,7 +67,7 @@ export const TimePicker = Context.withContext(
       value: UU5.PropTypes.string,
       iconOpen: UU5.PropTypes.string,
       iconClosed: UU5.PropTypes.string,
-      format: UU5.PropTypes.oneOf([TIME_FORMAT_24, TIME_FORMAT_12]),
+      format: UU5.PropTypes.oneOf(["12", "24", 12, 24]),
       nanMessage: UU5.PropTypes.any,
       seconds: UU5.PropTypes.bool,
       valueType: UU5.PropTypes.oneOf(["string", "date"]),
@@ -110,11 +107,17 @@ export const TimePicker = Context.withContext(
     //@@viewOff:getDefaultProps
 
     //@@viewOn:reactLifeCycle
+    getInitialState() {
+      this._formattingValues = {};
+      this._setFormattingValues(this.props);
+
+      return {};
+    },
+
     UNSAFE_componentWillMount() {
       this._valueOverMidnight = false;
       this._hasFocus = false;
       this._allowBlur = false;
-
       this._setUpLimits(this.props);
 
       let value = this._formatTime(this.props.value, false) || this.props.value;
@@ -137,6 +140,7 @@ export const TimePicker = Context.withContext(
 
     UNSAFE_componentWillReceiveProps(nextProps) {
       if (nextProps.controlled) {
+        this._setFormattingValues(nextProps);
         this._setUpLimits(nextProps);
 
         let value =
@@ -300,6 +304,18 @@ export const TimePicker = Context.withContext(
     //@@viewOff:overriding
 
     //@@viewOn:private
+    // Used to hold current values of props/state which is used for formatting.
+    // These values are used on various places and its value has to be always
+    // updated (e.g. in functions called from willReceiveProps)
+    _setFormattingValues(props) {
+      let formattingKeys = ["format", "seconds", "step", "show24"];
+
+      for (let i = 0; i < formattingKeys.length; i++) {
+        let key = formattingKeys[i];
+        this._formattingValues[key] = props[key];
+      }
+    },
+
     _registerInput(ref) {
       this._textInput = ref;
     },
@@ -522,15 +538,15 @@ export const TimePicker = Context.withContext(
 
           if (
             !result.value ||
-            (this.props.format === TIME_FORMAT_12 && result.value.match(REGEXP.timeFormat12)) ||
+            (this.props.format == TIME_FORMAT_12 && result.value.match(REGEXP.timeFormat12)) ||
             (this.props.seconds &&
               this.props.step === 1 &&
-              this.props.format === TIME_FORMAT_12 &&
+              this.props.format == TIME_FORMAT_12 &&
               result.value.match(REGEXP.timeFormat12seconds)) ||
-            (this.props.format === TIME_FORMAT_24 && result.value.match(REGEXP.timeFormat24)) ||
+            (this.props.format == TIME_FORMAT_24 && result.value.match(REGEXP.timeFormat24)) ||
             (this.props.seconds &&
               this.props.step === 1 &&
-              this.props.format === TIME_FORMAT_24 &&
+              this.props.format == TIME_FORMAT_24 &&
               result.value.match(REGEXP.timeFormat24seconds))
           ) {
             _callCallback = false;
@@ -735,15 +751,17 @@ export const TimePicker = Context.withContext(
     },
 
     _formatTime(value, autofill) {
+      let { format, seconds, step } = this._formattingValues;
       if (value && !UU5.Common.Tools.isPlainObject(value)) {
         value = this._parseTime(value, autofill);
       }
 
-      return UU5.Common.Tools.formatTime(value, this.props.seconds, this.props.format, true, this.props.step, true);
+      return UU5.Common.Tools.formatTime(value, seconds, format, true, step, true);
     },
 
     _parseTime(timeString, autofill = true) {
-      return UU5.Common.Tools.parseTime(timeString, this.props.format, autofill, this.props.show24);
+      let { format, show24 } = this._formattingValues;
+      return UU5.Common.Tools.parseTime(timeString, format, autofill, show24);
     },
 
     _getMainAttrs() {
@@ -880,6 +898,8 @@ export const TimePicker = Context.withContext(
   })
 );
 
-export const Timepicker = TimePicker;
+TimePicker = withUserPreferences(TimePicker, { format: "hourFormat" });
+const Timepicker = TimePicker;
 
+export { TimePicker, Timepicker };
 export default TimePicker;

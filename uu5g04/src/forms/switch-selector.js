@@ -28,7 +28,7 @@ import SelectBody from "./internal/switch-selector-select-body.js";
 import Css from "./internal/css.js";
 //@@viewOff:imports
 
-const selectExcludedProps = ["items", "children", "content"];
+const selectExcludedProps = ["items", "children", "content", "ref_"];
 
 export const SwitchSelector = Context.withContext(
   UU5.Common.VisualComponent.create({
@@ -231,7 +231,9 @@ export const SwitchSelector = Context.withContext(
     },
 
     _getInitialValue(props = this.props) {
-      return props.value || (props.items && props.items.length && props.items[0].value) || undefined;
+      return props.value || typeof props.value === "number" || typeof props.value === "boolean"
+        ? props.value
+        : (props.items && props.items.length && props.items[0].value) || undefined;
     },
 
     _onChange(opt) {

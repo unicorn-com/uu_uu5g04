@@ -48,6 +48,10 @@ export const Rating = UU5.Common.VisualComponent.create({
       click: ns.css("rating-clickable"),
       size: ns.css("rating-size-"),
     },
+    editMode: {
+      displayType: "inline",
+      startMode: "button",
+    },
   },
   //@@viewOff:statics
 

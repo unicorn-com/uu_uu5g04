@@ -78,6 +78,9 @@ export const Li = Context.withListItemContext(
         parentTagNames: ["UU5.Bricks.Ul", "UU5.Bricks.Ol"],
         markerIcon: "mdi-default",
       },
+      editMode: {
+        enableWrapper: false,
+      },
     },
     //@@viewOff:statics
 

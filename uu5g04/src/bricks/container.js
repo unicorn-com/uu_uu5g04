@@ -24,6 +24,7 @@ const EditableContainer = UU5.Common.Component.lazy(async () => {
 let editationLazyLoaded = false;
 
 import "./container.less";
+import Lsi from "./internal/bricks-editable-lsi.js";
 //@@viewOff:imports
 
 export const Container = UU5.Common.VisualComponent.create({
@@ -49,6 +50,10 @@ export const Container = UU5.Common.VisualComponent.create({
       spacing: ns.css("container-spacing"),
       noSpacing: ns.css("container-nospacing"),
       editation: ns.css("container-editation"),
+    },
+    editMode: {
+      name: Lsi.container.name,
+      enablePlaceholder: true,
     },
   },
   //@@viewOff:statics

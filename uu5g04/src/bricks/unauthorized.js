@@ -32,7 +32,7 @@ export const Unauthorized = UU5.Common.VisualComponent.create({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("Unauthorized"),
-    nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "smallBox"),
+    nestingLevelList: [...UU5.Environment.getNestingLevelList("bigBoxCollection", "smallBox"), "inline"],
     classNames: {
       main: ns.css("unathorized"),
       blockRoot: ({ width, height }) => Css.css`
@@ -56,11 +56,11 @@ export const Unauthorized = UU5.Common.VisualComponent.create({
         ${width ? `width: ${UU5.Common.Tools.fillUnit(width)};` : ""}
         ${height ? `height: ${UU5.Common.Tools.fillUnit(height)};` : ""}
       `,
-      textWrapper: (props, { nestingLevel }) => Css.css`
-        ${nestingLevel ? "margin-top: 16px;" : "margin-left: 4px;"}
+      textWrapper: (nestingLevel) => Css.css`
+        ${nestingLevel !== "inline" ? "margin-top: 16px;" : "margin-left: 4px;"}
       `,
-      icon: (props, { nestingLevel }) => Css.css`
-        ${nestingLevel ? "font-size: 32px" : ""}
+      icon: (nestingLevel) => Css.css`
+        ${nestingLevel !== "inline" ? "font-size: 32px" : ""}
       `,
     },
     lsi: () => Lsi.unauthorized,
@@ -101,10 +101,10 @@ export const Unauthorized = UU5.Common.VisualComponent.create({
       : this.getLsiComponent("text");
   },
 
-  _getMainAttrs() {
+  _getMainAttrs(nestingLevel) {
     let mainAttrs = this.getMainAttrs();
 
-    if (this.getNestingLevel()) {
+    if (nestingLevel !== "inline") {
       mainAttrs.className += " " + this.getClassName("blockRoot");
     } else {
       mainAttrs.className += " " + this.getClassName("inlineRoot");
@@ -116,18 +116,19 @@ export const Unauthorized = UU5.Common.VisualComponent.create({
 
   //@@viewOn:render
   render() {
-    if (this.getNestingLevel()) {
+    let nestingLevel = this.getNestingLevel() || "inline";
+    if (nestingLevel !== "inline") {
       return (
-        <div {...this._getMainAttrs()}>
-          <UU5.Bricks.Icon icon="mdi-cancel" className={this.getClassName("icon")} />
-          <div className={this.getClassName("textWrapper")}>{this._getContent()}</div>
+        <div {...this._getMainAttrs(nestingLevel)}>
+          <UU5.Bricks.Icon icon="mdi-cancel" className={this.getClassName().icon(nestingLevel)} />
+          <div className={this.getClassName().textWrapper(nestingLevel)}>{this._getContent()}</div>
         </div>
       );
     } else {
       return (
-        <span {...this._getMainAttrs()}>
+        <span {...this._getMainAttrs(nestingLevel)}>
           <UU5.Bricks.Icon icon="mdi-cancel" />
-          <span className={this.getClassName("textWrapper")}>{this._getContent()}</span>
+          <span className={this.getClassName().textWrapper(nestingLevel)}>{this._getContent()}</span>
         </span>
       );
     }

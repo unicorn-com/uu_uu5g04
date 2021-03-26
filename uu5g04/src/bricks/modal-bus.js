@@ -6,7 +6,7 @@
 //@@viewOn:revision
 
 //@@viewOn:imports
-import { memoizeOne } from "uu5g05";
+import { Utils } from "uu5g05";
 import UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import ModalBusView from "./internal/modal-bus-view";
@@ -15,7 +15,7 @@ import ModalCoverView from "./internal/modal-bus-cover-view.js";
 
 const ModalContext = UU5.Common.ModalBusContext;
 
-const getProviderValue = memoizeOne((addItem, removeItem, updateItem, isClosableItem) => {
+const getProviderValue = Utils.Function.memo((addItem, removeItem, updateItem, isClosableItem) => {
   return {
     render(children, id, settings, close) {
       return UU5.Common.Portal.create(

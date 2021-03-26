@@ -56,6 +56,10 @@ export const Blockquote = UU5.Common.VisualComponent.create({
     opt: {
       nestingLevelWrapper: true,
     },
+    editMode: {
+      enablePlaceholder: true,
+      startMode: "button",
+    },
   },
   //@@viewOff:statics
 

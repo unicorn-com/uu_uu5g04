@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"
+    />
+    <title>Icon Demo</title>
+
+    <script>
+      // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      // var appAssetsRelativeUrlPath = "public/";
+      // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    </script>
+
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        paths: {
+          systemjs: "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          react: "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+          uu_appg01_core: "https://cdn.plus4u.net/uu-appg01-core/4.0.0/uu_appg01_core.js",
+          uu_appg01: "https://cdn.plus4u.net/uu-appg01/4.0.0/uu_appg01.js",
+          uu_appg01_oidc: "https://cdn.plus4u.net/uu-appg01-oidc/2.0.0/uu_appg01_oidc.js",
+
+          uu5g04: "/uu5g04.js",
+          "uu5g04-bricks": "/uu5g04-bricks.js",
+          "uu5g04-forms": "/uu5g04-forms.js",
+          "uu5g04-block-layout": "/uu5g04-block-layout.js",
+          "uu5g04-hooks": "/uu5g04-hooks.js",
+
+          uu5tilesg02: "https://cdn.plus4u.net/uu-uu5tilesg02/1.0.0/uu5tilesg02.min.js",
+        },
+      });
+
+      var UU5 = {
+        Environment: {
+          "uuoidc.redirectUri": "/core/common/demo/callbacks/oidc-callback.html",
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu_appg01_oidc";
+      import Uu5Tiles from "uu5tilesg02";
+
+      let _icons = {};
+
+      const STATES = [
+        "system",
+        "initial",
+        "active",
+        "final",
+        "alternativeActive",
+        "problemActive",
+        "passive",
+        "alternativeFinal",
+        "cancel",
+      ];
+
+      var Component = (props) => {
+        return STATES.map((state) => <UU5.Bricks.Tag icon={props.data} state={state} key={`${props.icon}-${state}`} />);
+      };
+
+      var Page = UU5.Common.VisualComponent.create({
+        mixins: [UU5.Common.BaseMixin],
+        getInitialState() {
+          this._calls = [];
+          return {
+            category: "mdi",
+            icons: [],
+          };
+        },
+
+        componentDidMount() {
+          this._loadIcons();
+        },
+
+        _parseRules(rules, library) {
+          let icons = [];
+
+          if (rules) {
+            for (let i = 0; i < rules.length; i++) {
+              let rule = rules[i];
+              if (rule.selectorText && rule.style.content) {
+                let selectors = rule.selectorText.split(",");
+                let ruleIcons = selectors.map((selector) => {
+                  let result = false;
+                  if (
+                    selector.startsWith("." + library + "-") &&
+                    (selector.endsWith(":before") || selector.endsWith(":after"))
+                  ) {
+                    result = selector.substr(1).replace(/[^a-zA-Z0-9\-_].*/, "");
+                  } else {
+                    let match = selector.match(/^\[\s*class\s*\*=\s*['"]?([a-zA-Z0-9_\-]*).*:(before|after)$/);
+                    if (match) {
+                      result = match[1];
+                    }
+                  }
+                  if (result && !result.endsWith("-")) {
+                    return result;
+                  } else {
+                    return null;
+                  }
+                });
+                ruleIcons[0] && icons.push(ruleIcons[0]);
+              }
+            }
+          }
+
+          return icons;
+        },
+
+        _loadIcons(setStateCallback) {
+          this._calls = []; // reset loading
+          let callbackExecuted = false;
+          let category = this.state.category;
+
+          if (!_icons[category]) {
+            callbackExecuted = true;
+            if (this._calls.length === 0) {
+              this.setState({ loading: true, error: false });
+            }
+            this._calls.push(category);
+            let xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = () => {
+              if (!this.isRendered()) return;
+              if (xhttp.readyState == 4 && xhttp.status == 200) {
+                let callIndex;
+                this._calls.find((call, index) => {
+                  callIndex = index;
+                  return call == category;
+                });
+                this._calls.splice(callIndex, 1);
+
+                let styleSheet = document.createElement("style");
+                styleSheet.textContent = xhttp.responseText.replace(/@font-face\{[^}]*\}/g, "");
+                document.head.appendChild(styleSheet);
+
+                let rules = (styleSheet.sheet || {}).cssRules;
+                let icons = new Set(this._parseRules(rules, category));
+
+                _icons[category] = [...icons];
+
+                if (this._calls.length === 0) {
+                  this.setState({ loading: false, error: false, icons: _icons });
+                }
+              } else if (xhttp.readyState == 2 && xhttp.status >= 400) {
+                let callIndex;
+                this._calls.find((call, index) => {
+                  callIndex = index;
+                  return call == category;
+                });
+                this._calls.splice(callIndex, 1);
+                if (this.state.selectedCategory.length === 1) {
+                  this.setState({ error: true });
+                } else {
+                  this.setState({ loading: false });
+                }
+              }
+            };
+            xhttp.open("GET", UU5.Environment.iconLibraries[category], true);
+            xhttp.send();
+          } else if (!this.state.icons[category]) {
+            this.setState((state) => {
+              let icons = { ...state.icons, ...{ [category]: _icons[category] } };
+              return { icons: icons, loading: false };
+            });
+          } else {
+            this.setState({ loading: false, error: false });
+          }
+        },
+
+        _onChangeCategory({ value }) {
+          this.setState({ category: value }, this._loadIcons);
+        },
+
+        render() {
+          let icons = this.state.icons[this.state.category];
+          return (
+            <UU5.Bricks.Container>
+              <UU5.Bricks.Row>
+                <UU5.Bricks.SwitchSelector
+                  value={this.state.category}
+                  items={Object.keys(UU5.Environment.iconLibraries).map((lib) => ({ value: lib, content: lib }))}
+                  onChange={this._onChangeCategory}
+                />
+              </UU5.Bricks.Row>
+
+              <Uu5Tiles.Grid
+                data={icons || []}
+                tileMinWidth={100}
+                tileMaxWidth={800}
+                tileSpacing={8}
+                rowSpacing={40}
+              >
+                {Component}
+              </Uu5Tiles.Grid>
+            </UU5.Bricks.Container>
+          );
+        },
+      });
+
+      UU5.Common.DOM.render(UU5.Common.Element.create(Page, null), document.getElementById("renderHere"));
+    </script>
+  </body>
+</html>

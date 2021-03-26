@@ -23,6 +23,7 @@ import ns from "./bricks-ns.js";
 import TabsItem from "./tabs-item.js";
 import Button from "./button.js";
 import Line from "./line.js";
+import Lsi from "./internal/bricks-editable-lsi.js";
 
 const EditationComponent = UU5.Common.Component.lazy(async () => {
   await SystemJS.import("uu5g04-forms");
@@ -78,6 +79,11 @@ export const Tabs = UU5.Common.VisualComponent.create({
     opt: {
       nestingLevelWrapper: true,
     },
+    editMode: {
+      enablePlaceholder: true,
+      name: Lsi.tabs.name,
+      startMode: "button"
+    }
   },
   //@@viewOff:statics
 

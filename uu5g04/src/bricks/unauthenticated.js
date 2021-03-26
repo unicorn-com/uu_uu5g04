@@ -32,7 +32,7 @@ export const Unauthenticated = UU5.Common.VisualComponent.create({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("Unauthenticated"),
-    nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "smallBox"),
+    nestingLevelList: [...UU5.Environment.getNestingLevelList("bigBoxCollection", "smallBox"), "inline"],
     classNames: {
       main: ns.css("unauthenticated"),
       blockRoot: ({ width, height }) => Css.css`
@@ -118,7 +118,7 @@ export const Unauthenticated = UU5.Common.VisualComponent.create({
 
   _getInlineLoginLink(login) {
     return (
-      <span {...this._getMainAttrs()}>
+      <span {...this._getMainAttrs(true)}>
         <UU5.Bricks.Icon icon="mdi-account-key" />
         <UU5.Bricks.Link
           onClick={() => login()}
@@ -129,13 +129,13 @@ export const Unauthenticated = UU5.Common.VisualComponent.create({
     );
   },
 
-  _getMainAttrs() {
+  _getMainAttrs(isInline) {
     let mainAttrs = this.getMainAttrs();
 
-    if (this.getNestingLevel()) {
-      mainAttrs.className += " " + this.getClassName("blockRoot");
-    } else {
+    if (isInline) {
       mainAttrs.className += " " + this.getClassName("inlineRoot");
+    } else {
+      mainAttrs.className += " " + this.getClassName("blockRoot");
     }
 
     return mainAttrs;
@@ -148,11 +148,11 @@ export const Unauthenticated = UU5.Common.VisualComponent.create({
       <UU5.Common.Identity>
         {({ identity, login }) => {
           // check if user is authenticated or pending
-          if (identity !== null) return null;
+          if (identity != null) return null;
 
           // check nesting level
-          const isInline = !this.getNestingLevel();
-          return isInline ? this._getInlineLoginLink(login) : this._getLoginLink(login);
+          let nestingLevel = this.getNestingLevel() || "inline";
+          return nestingLevel !== "inline" ? this._getLoginLink(login) : this._getInlineLoginLink(login);
         }}
       </UU5.Common.Identity>
     );

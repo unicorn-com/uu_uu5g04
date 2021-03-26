@@ -200,6 +200,9 @@ const SwitchSelectorItem = UU5.Common.VisualComponent.create({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("MultiSwitch.Item"),
+    editMode: {
+      enableWrapper: false,
+    },
   },
   //@@viewOff:statics
 

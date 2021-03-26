@@ -414,11 +414,12 @@ export const AutocompleteTextInput = UU5.Common.VisualComponent.create({
     return (
       <UU5.Common.Fragment>
         <TextInput {...this._getInputProps()} />
-        {this.props.itemsListItems && (
+        {this.props.itemsListItems &&
+        (!Array.isArray(this.props.itemsListItems) || this.props.itemsListItems.length) ? (
           <ItemList {...this.props.itemListProps} ref={this._registerItemList} id={`${this.getId()}-item-list`}>
             {this.props.foundItemListItems}
           </ItemList>
-        )}
+        ) : null}
         {this.props.popoverLocation === "portal" && this.props.open ? (
           <UU5.Bricks.ResizeObserver onResize={this._onInputWrapperResize} key="resizeObserver" />
         ) : null}

@@ -28,31 +28,67 @@ const CLASS_NAMES = {
   main: () => Css.css`
     position: relative;
   `,
-  wrapper: () => Css.css`
-    background: linear-gradient(0deg, transparent 0%, rgba(0,0,0,1) 100%);
-    color: white;
-    width: 100%;
-    text-align: right;
-    padding: 8px;
+  wrapper: (isIOS) => {
+    if (isIOS) {
+      return Css.css`
+        color: rgba(255, 255, 255, 0.7);
+        visibility: hidden;
+        pointer-events: none;
+        position: absolute;
+        right: 75px;
+        top: 6px;
+        opacity: 0;
+        transition: opacity 0.2s, visibility 0.2s;
+        z-index: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(135, 135, 135, 0.99);
+        border-radius: 8px;
+        padding: 4px;
 
-    visibility: hidden;
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    opacity: 0;
-    transition: opacity 0.2s, visibility 0.2s;
-    z-index: 1;
+        .${CLASS_NAMES.main()}:hover > & {
+          pointer-events: auto;
+          visibility: visible;
+          opacity: 1;
+        }
+      `;
+    } else {
+      return Css.css`
+        background: linear-gradient(0deg, transparent 0%, rgba(0,0,0,1) 100%);
+        color: white;
+        width: 100%;
+        text-align: right;
+        padding: 8px;
 
-    .${CLASS_NAMES.main()}:hover > & {
-      pointer-events: auto;
-      visibility: visible;
-      opacity: 1;
+        visibility: hidden;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        opacity: 0;
+        transition: opacity 0.2s, visibility 0.2s;
+        z-index: 1;
+
+        .${CLASS_NAMES.main()}:hover > & {
+          pointer-events: auto;
+          visibility: visible;
+          opacity: 1;
+        }
+      `;
     }
-  `,
-  qualityPicker: () => Css.css`
-
-  `,
+  },
+  qualityPicker: (isIOS) => {
+    if (isIOS) {
+      return Css.css`
+        .uu5-bricks-dropdown-button {
+          background-color: transparent !important;
+          color: rgba(255, 255, 255, 0.7) !important;
+          min-height: auto;
+        }
+      `;
+    }
+  },
 };
 
 export const VideoSettings = UU5.Common.VisualComponent.create({
@@ -64,6 +100,7 @@ export const VideoSettings = UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("VideoSettings"),
     classNames: CLASS_NAMES,
+    lsi: () => UU5.Environment.Lsi.Bricks.video,
   },
   //@@viewOff:statics
 
@@ -76,7 +113,7 @@ export const VideoSettings = UU5.Common.VisualComponent.create({
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       quality: null,
       qualityList: [],
@@ -104,13 +141,15 @@ export const VideoSettings = UU5.Common.VisualComponent.create({
   //@@viewOn:render
   render() {
     let { quality, qualityList, children } = this.props;
+    // isMobileIOS doesn't work since some newer version of iOS ...
+    const isIOS = UU5.Common.Tools.isMobileIOS() || UU5.Common.Tools.isMac();
     return (
       <div {...this.getMainAttrs()}>
         {Array.isArray(qualityList) && qualityList.length > 1 ? (
-          <div className={this.getClassName("wrapper")}>
-            Quality: <Dropdown
+          <div className={this.getClassName().wrapper(isIOS)}>
+            <Dropdown
               key="q"
-              className={this.getClassName("qualityPicker")}
+              className={this.getClassName().qualityPicker(isIOS)}
               pullRight
               baseline
               bgStyle="transparent"

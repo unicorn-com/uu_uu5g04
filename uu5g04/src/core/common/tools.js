@@ -20,6 +20,7 @@ import Element from "./element.js";
 import ScreenSize from "../utils/screen-size.js";
 import Lsi from "../utils/lsi.js";
 import DOM from "./dom.js";
+import Url from "./url.js";
 import { checkTag } from "../uu5g05-integration/use-dynamic-library-component.js";
 
 export const REGEXP = {
@@ -65,6 +66,8 @@ const TIME_FORMAT_AM = "AM";
 const TIME_FORMAT_PM = "PM";
 const TIME_FORMAT_12 = "12";
 const TIME_FORMAT_24 = "24";
+
+const COOKIE_CSRF_TOKEN = "uu.app.csrf";
 
 export const Tools = {
   ELEVATIONS: {
@@ -2890,6 +2893,38 @@ Tools.getCallToken = async function (url, session) {
     token = typeof callToken === "string" ? callToken : callToken ? callToken.token : undefined;
   }
   return token;
+};
+
+Tools.getCsrfToken = function () {
+  return Tools.getCookie(COOKIE_CSRF_TOKEN);
+};
+
+Tools.getAuthenticatedUrl = async function (url, session, accessToken = undefined, csrfToken = undefined) {
+  let parameterName;
+  let value = accessToken === undefined ? await Tools.getCallToken(url, session) : accessToken;
+  if (value) {
+    parameterName = "access_token";
+  } else {
+    value = csrfToken === undefined ? Tools.getCsrfToken() : csrfToken;
+    if (value) parameterName = "csrf_token";
+  }
+  let result = url;
+  if (url && parameterName) {
+    let parsedUrl = Url.parse(url);
+    result = parsedUrl.set({ parameters: { ...parsedUrl.parameters, [parameterName]: value } }).toString();
+  }
+  return result;
+};
+
+Tools.getAuthenticatedHeaders = async function (url, session, accessToken = undefined, csrfToken = undefined) {
+  let headers = {};
+  let token1 = accessToken === undefined ? await Tools.getCallToken(url, session) : accessToken;
+  if (token1) headers["Authorization"] = "Bearer " + token1;
+  else {
+    let token2 = csrfToken === undefined ? Tools.getCsrfToken() : csrfToken;
+    if (token2) headers["X-Csrf-Token"] = token2;
+  }
+  return headers;
 };
 
 Tools.deepSortObjectKeys = (object) => {

@@ -123,8 +123,8 @@ export const TextInputMixin = {
       result = this.isValid_();
     }
 
-    if (result && this.props.onValidate) {
-      var validation = this.props.onValidate({ value: value, component: this });
+    if (result) {
+      var validation = this.onValidate({ value, component: this });
       if (validation && typeof validation === "object") {
         if (validation.feedback === "error") {
           this.setError(validation.message);
@@ -424,17 +424,41 @@ export const TextInputMixin = {
 
   _find(items, foundValue) {
     let values = { first: [], last: [] };
+
     if (foundValue) {
       let foundValueLower = foundValue.toLowerCase();
-      items.forEach(function (item) {
-        let itemValueLower = item.value.toLowerCase();
-        if (itemValueLower.substring(0, foundValueLower.length) === foundValueLower) {
+
+      for (let i = 0; i < items.length; i++) {
+        let item = items[i];
+        let searchValue = item.value;
+        let searchValueisValue = false;
+        let isElement = UU5.Common.Element.isValid(item.content);
+        if ((isElement && typeof item.content !== "string") || !item.content) {
+          searchValue = item.value;
+          searchValueisValue = true;
+        } else if (typeof item.content === "object" && !isElement) {
+          searchValue = this.getLsiItem(item.content);
+        } else {
+          searchValue = item.content;
+        }
+        searchValue = searchValue.toLowerCase();
+
+        if (
+          searchValue.substring(0, foundValueLower.length) === foundValueLower ||
+          (!searchValueisValue && item.value.substring(0, foundValueLower.length) === foundValueLower)
+        ) {
           values.first.push(item);
-        } else if (itemValueLower.indexOf(foundValueLower) > -1) {
+        } else if (
+          searchValue.indexOf(foundValueLower) > -1 ||
+          (!searchValueisValue && item.value.indexOf(foundValueLower) > -1)
+        ) {
           values.last.push(item);
         }
-      });
+      }
+    } else {
+      values.first = [...items];
     }
+
     let allValues = values.first.concat(values.last);
 
     return allValues.length ? allValues : null;

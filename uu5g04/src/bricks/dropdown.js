@@ -29,6 +29,13 @@ import CompactMenu from "./internal/compact-menu";
 
 import "./dropdown.less";
 import Css from "./internal/css.js";
+
+const DropdownEditable = UU5.Common.Component.lazy(async () => {
+  await SystemJS.import("uu5g04-bricks");
+  await SystemJS.import("uu5g04-forms");
+  await SystemJS.import("uu5g04-bricks-editable");
+  return import("./internal/dropdown-editable.js");
+});
 //@@viewOff:imports
 
 export const Dropdown = UU5.Common.VisualComponent.create({
@@ -85,7 +92,9 @@ export const Dropdown = UU5.Common.VisualComponent.create({
     opt: {
       nestingLevelRoot: true,
     },
-    editableComponent: "UU5.BricksEditable.Dropdown",
+    editMode: {
+      enableWrapper: false,
+    },
   },
   //@@viewOff:statics
 
@@ -228,6 +237,10 @@ export const Dropdown = UU5.Common.VisualComponent.create({
 
     return newChildProps;
   },
+
+  onBeforeForceEndEditation_() {
+    return this._editRef ? this._editRef.getPropsToSave() : undefined;
+  },
   //@@viewOff:overriding
 
   //@@viewOn:private
@@ -293,7 +306,9 @@ export const Dropdown = UU5.Common.VisualComponent.create({
       }
       return (
         <CompactMenu
-          items={this._getCompactMenuItems(UU5.Utils.Content.getChildren(content, this.props, this.constructor))}
+          items={this._getCompactMenuItems(
+            UU5.Utils.Content.getChildren(content, this.props, { nestingLevel: this.constructor.nestingLevelList })
+          )}
           className={this.getClassName("compactMenu")}
         />
       );
@@ -499,12 +514,21 @@ export const Dropdown = UU5.Common.VisualComponent.create({
       setStateCallback();
     }
   },
+
+  _ref(ref) {
+    this._editRef = ref;
+  },
   //@@viewOff:private
 
   //@@viewOn:render
   render() {
     return (
       <div {...this._getMainAttrs()}>
+        {this.isInlineEdited() && (
+          <UU5.Common.Suspense fallback={this.getEditingLoading()}>
+            <DropdownEditable component={this} ref={this._ref} />
+          </UU5.Common.Suspense>
+        )}
         <div
           className={this.getClassName().buttonCover}
           id={this.getId() + "-cover"}

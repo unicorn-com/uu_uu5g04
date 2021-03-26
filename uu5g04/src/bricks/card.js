@@ -16,6 +16,7 @@ import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Section from "./section.js";
 import Css from "./internal/css.js";
+import Lsi from "./internal/bricks-editable-lsi.js";
 const ClassNames = UU5.Common.ClassNames;
 
 import "./card.less";
@@ -53,6 +54,12 @@ export const Card = UU5.Common.VisualComponent.create({
     },
     opt: {
       dummyLevel: true,
+    },
+    editMode: {
+      enablePlaceholder: true,
+      displayType: "inline",
+      startMode: "button",
+      name: Lsi.card.name,
     },
   },
   //@@viewOff:statics

@@ -20,6 +20,13 @@ import Icon from "./icon.js";
 import Css from "./internal/css.js";
 
 import "./touch-icon.less";
+
+const TouchIconEditable = UU5.Common.Component.lazy(async () => {
+  await SystemJS.import("uu5g04-bricks");
+  await SystemJS.import("uu5g04-forms");
+  await SystemJS.import("uu5g04-bricks-editable");
+  return import("./internal/touch-icon-editable.js");
+});
 //@@viewOff:imports
 
 const LINE_HEIGHT = 18;
@@ -45,7 +52,9 @@ export const TouchIcon = UU5.Common.VisualComponent.create({
     tagName: ns.name("TouchIcon"),
     nestingLevel: "smallBox",
     classNames: {
-      main: ns.css("touch-icon"),
+      // TaouchIcon without lines must be aligned with TouchIcon with lines => margin-top: 0,
+      // margin is used becasuse of non-symetric value and padding enlarge clickable area
+      main: ({ lines }) => ns.css("touch-icon") + " " + Css.css("min-width: 64px;"),
       body: ns.css("touch-icon-body"),
       label: ({ lines }) => {
         lines = Math.max(Math.min(lines, MAX_LINES), MIN_LINES);
@@ -56,6 +65,7 @@ export const TouchIcon = UU5.Common.VisualComponent.create({
             display: -webkit-box;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: ${lines};
+            word-break: break-word;
 
             .uu5-ua-ie & {max-height: ${LINE_HEIGHT * lines}px}
           `
@@ -64,7 +74,7 @@ export const TouchIcon = UU5.Common.VisualComponent.create({
       icon: ns.css("touch-icon-icon"),
       bgStyle: ns.css("touch-icon-"),
     },
-    editableComponent: "UU5.BricksEditable.TouchIcon",
+    editMode: { startMode: "button", displayType: "inline" },
   },
   //@@viewOff:statics
 
@@ -78,7 +88,7 @@ export const TouchIcon = UU5.Common.VisualComponent.create({
     onWheelClick: UU5.PropTypes.func,
     borderRadius: UU5.PropTypes.string,
     bgStyle: UU5.PropTypes.oneOf(["filled", "transparent"]),
-    lines: UU5.PropTypes.oneOf([2, 3]),
+    lines: UU5.PropTypes.oneOf([0, 2, 3]),
   },
   //@@viewOff:propTypes
 
@@ -105,6 +115,9 @@ export const TouchIcon = UU5.Common.VisualComponent.create({
   //@@viewOff:interface
 
   //@@viewOn:overriding
+  onBeforeForceEndEditation_() {
+    return this._editRef ? this._editRef.getPropsToSave() : undefined;
+  },
   //@@viewOff:overriding
 
   //@@viewOn:private
@@ -133,17 +146,28 @@ export const TouchIcon = UU5.Common.VisualComponent.create({
 
     return attrs;
   },
+
+  _ref(ref) {
+    this._editRef = ref;
+  },
   //@@viewOff:private
 
   //@@viewOn:render
   render() {
     return this.getNestingLevel() ? (
-      <Link {...this._getMainAttrs()}>
-        <div {...this._getBodyAttrs()}>
-          <Icon icon={this.props.icon} className={this.getClassName().icon} />
-        </div>
-        <div className={this.getClassName("label")}>{this.getChildren()}</div>
-      </Link>
+      <>
+        {this.isInlineEdited() && (
+          <UU5.Common.Suspense fallback={this.getEditingLoading()}>
+            <TouchIconEditable component={this} ref={this._ref} />
+          </UU5.Common.Suspense>
+        )}
+        <Link {...this._getMainAttrs()}>
+          <div {...this._getBodyAttrs()}>
+            <Icon icon={this.props.icon} className={this.getClassName().icon} />
+          </div>
+          {this.props.lines !== 0 && <div className={this.getClassName("label")}>{this.getChildren()}</div>}
+        </Link>
+      </>
     ) : null;
   },
   //@@viewOff:render

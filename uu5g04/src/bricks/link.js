@@ -199,7 +199,7 @@ export const Link = UU5.Common.VisualComponent.create({
     if (this._authenticatedUrl === url) result = this.state.authenticatedUrl;
     else if (this._authenticatingUrl !== url) {
       this._authenticatingUrl = url;
-      let promise = (this._urlPromise = this._computeAuthenticatedUrl(url, session).then(
+      let promise = (this._urlPromise = UU5.Common.Tools.getAuthenticatedUrl(url, session).then(
         (authenticatedUrl) => {
           delete this._authenticatingUrl;
           this._authenticatedUrl = url;
@@ -210,13 +210,6 @@ export const Link = UU5.Common.VisualComponent.create({
         }
       ));
     }
-    return result;
-  },
-
-  async _computeAuthenticatedUrl(url, session) {
-    let token = await UU5.Common.Tools.getCallToken(url, session);
-    let parsedUrl = UU5.Common.Url.parse(url);
-    let result = parsedUrl.set({ parameters: { ...parsedUrl.parameters, access_token: token } }).toString();
     return result;
   },
   //@@viewOff:private

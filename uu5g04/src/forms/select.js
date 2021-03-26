@@ -631,11 +631,11 @@ export const Select = Context.withContext(
         this.toggle(() =>
           this.isOpen() && this._shouldOpenToContent()
             ? UU5.Common.Tools.scrollToTarget(
-            this.getId() + "-input",
-            false,
-            UU5.Environment._fixedOffset + 20,
-            scrollElement
-            )
+                this.getId() + "-input",
+                false,
+                UU5.Environment._fixedOffset + 20,
+                scrollElement
+              )
             : null
         );
       } else {
@@ -643,11 +643,11 @@ export const Select = Context.withContext(
           this.toggle(() =>
             this.isOpen() && this._shouldOpenToContent()
               ? UU5.Common.Tools.scrollToTarget(
-              this.getId() + "-input",
-              false,
-              UU5.Environment._fixedOffset + 20,
-              scrollElement
-              )
+                  this.getId() + "-input",
+                  false,
+                  UU5.Environment._fixedOffset + 20,
+                  scrollElement
+                )
               : null
           )
         );
@@ -701,7 +701,7 @@ export const Select = Context.withContext(
           if (this.state.feedback) {
             this._setFeedback(undefined, undefined, opt.value);
           }
-          multiple ? this.props.onChange(opt) : this.toggle(() => this.props.onChange(opt));
+          multiple ? this.props.onChange(opt) : this.close(() => this.props.onChange(opt));
         } else if (!requiredResult) {
           this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessageChoice"), null);
         } else {

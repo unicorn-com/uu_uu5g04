@@ -1,624 +1,690 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UU5.Bricks.Header checkGrammar=false 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header checkGrammar=true 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header checkHighlight=false 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header checkHighlight=true 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header checkSpaces=false 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header checkSpaces=true 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header className="my-classname" 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header my-classname uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header my-classname uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header colorSchema="brown" 1`] = `
-<Jumbotron
-  colorSchema="brown"
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "color-schema-brown uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    colorSchema="brown"
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "color-schema-brown uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header colorSchema="brown-rich" 1`] = `
-<Jumbotron
-  colorSchema="brown-rich"
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "color-schema-brown-rich uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    colorSchema="brown-rich"
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "color-schema-brown-rich uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header colorSchema="cyan" 1`] = `
-<Jumbotron
-  colorSchema="cyan"
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "color-schema-cyan uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    colorSchema="cyan"
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "color-schema-cyan uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header colorSchema="cyan-rich" 1`] = `
-<Jumbotron
-  colorSchema="cyan-rich"
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "color-schema-cyan-rich uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    colorSchema="cyan-rich"
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "color-schema-cyan-rich uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header colorSchema="default" 1`] = `
-<Jumbotron
-  colorSchema="default"
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "color-schema-default uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    colorSchema="default"
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "color-schema-default uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header colorSchema="green" 1`] = `
-<Jumbotron
-  colorSchema="green"
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "color-schema-green uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    colorSchema="green"
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "color-schema-green uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header colorSchema="green-rich" 1`] = `
-<Jumbotron
-  colorSchema="green-rich"
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "color-schema-green-rich uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    colorSchema="green-rich"
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "color-schema-green-rich uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header colorSchema="grey" 1`] = `
-<Jumbotron
-  colorSchema="grey"
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "color-schema-grey uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    colorSchema="grey"
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "color-schema-grey uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header colorSchema="grey-rich" 1`] = `
-<Jumbotron
-  colorSchema="grey-rich"
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "color-schema-grey-rich uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    colorSchema="grey-rich"
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "color-schema-grey-rich uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header colorSchema="orange" 1`] = `
-<Jumbotron
-  colorSchema="orange"
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "color-schema-orange uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    colorSchema="orange"
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "color-schema-orange uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header colorSchema="orange-rich" 1`] = `
-<Jumbotron
-  colorSchema="orange-rich"
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "color-schema-orange-rich uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    colorSchema="orange-rich"
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "color-schema-orange-rich uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header colorSchema="pink" 1`] = `
-<Jumbotron
-  colorSchema="pink"
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "color-schema-pink uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    colorSchema="pink"
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "color-schema-pink uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header colorSchema="pink-rich" 1`] = `
-<Jumbotron
-  colorSchema="pink-rich"
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "color-schema-pink-rich uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    colorSchema="pink-rich"
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "color-schema-pink-rich uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header colorSchema="purple" 1`] = `
-<Jumbotron
-  colorSchema="purple"
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "color-schema-purple uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    colorSchema="purple"
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "color-schema-purple uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header colorSchema="purple-rich" 1`] = `
-<Jumbotron
-  colorSchema="purple-rich"
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "color-schema-purple-rich uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    colorSchema="purple-rich"
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "color-schema-purple-rich uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header colorSchema="red" 1`] = `
-<Jumbotron
-  colorSchema="red"
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "color-schema-red uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    colorSchema="red"
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "color-schema-red uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header colorSchema="red-rich" 1`] = `
-<Jumbotron
-  colorSchema="red-rich"
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "color-schema-red-rich uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    colorSchema="red-rich"
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "color-schema-red-rich uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header colorSchema="yellow" 1`] = `
-<Jumbotron
-  colorSchema="yellow"
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "color-schema-yellow uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    colorSchema="yellow"
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "color-schema-yellow uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header colorSchema="yellow-rich" 1`] = `
-<Jumbotron
-  colorSchema="yellow-rich"
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "color-schema-yellow-rich uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    colorSchema="yellow-rich"
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "color-schema-yellow-rich uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header content="This is Content from ContentMixin" 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
   >
-    <UU5.Common.TextCorrectorContextConsumer
-      key="0"
-      text="This is Content from ContentMixin"
-    />
-  </h1>
-</Jumbotron>
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    >
+      <UU5.Common.TextCorrectorContextConsumer
+        key="0"
+        text="This is Content from ContentMixin"
+      />
+    </h1>
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header content=12345 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
   >
-    12345
-  </h1>
-</Jumbotron>
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    >
+      12345
+    </h1>
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header controlled=false 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header controlled=true 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header default props 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header disabled=false 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header disabled=true 1`] = `
-<Jumbotron
-  disabled={true}
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-disabled uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    disabled={true}
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-disabled uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header docKit examples UU5.Bricks.Header should render without crash 1`] = `
@@ -733,421 +799,479 @@ exports[`UU5.Bricks.Header docKit examples UU5.Bricks.Header should render witho
 `;
 
 exports[`UU5.Bricks.Header dynamic=false 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header dynamic=true 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header hidden=false 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header hidden=true 1`] = `
-<Jumbotron
-  hidden={true}
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-hidden uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    hidden={true}
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-hidden uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header id="myId" 1`] = `
-<Jumbotron
-  id="myId"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "myId",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="myId"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "myId",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header ignoreHTML=false 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header ignoreHTML=true 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header level="0" 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header level="1" 1`] = `
-<h1
-  className="uu5-bricks-header uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <h1
+    className="uu5-bricks-header uu5-common-text"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header level="2" 1`] = `
-<h2
-  className="uu5-bricks-header uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <h2
+    className="uu5-bricks-header uu5-common-text"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header level="3" 1`] = `
-<h3
-  className="uu5-bricks-header uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <h3
+    className="uu5-bricks-header uu5-common-text"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header level="4" 1`] = `
-<h4
-  className="uu5-bricks-header uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <h4
+    className="uu5-bricks-header uu5-common-text"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header level="5" 1`] = `
-<h5
-  className="uu5-bricks-header uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <h5
+    className="uu5-bricks-header uu5-common-text"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header level="6" 1`] = `
-<h6
-  className="uu5-bricks-header uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <h6
+    className="uu5-bricks-header uu5-common-text"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header level=0 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header level=1 1`] = `
-<h1
-  className="uu5-bricks-header uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <h1
+    className="uu5-bricks-header uu5-common-text"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header level=2 1`] = `
-<h2
-  className="uu5-bricks-header uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <h2
+    className="uu5-bricks-header uu5-common-text"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header level=3 1`] = `
-<h3
-  className="uu5-bricks-header uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <h3
+    className="uu5-bricks-header uu5-common-text"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header level=4 1`] = `
-<h4
-  className="uu5-bricks-header uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <h4
+    className="uu5-bricks-header uu5-common-text"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header level=5 1`] = `
-<h5
-  className="uu5-bricks-header uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <h5
+    className="uu5-bricks-header uu5-common-text"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header level=6 1`] = `
-<h6
-  className="uu5-bricks-header uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
+<Fragment>
+  <h6
+    className="uu5-bricks-header uu5-common-text"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header mainAttrs=undefined 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header name="myName" 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "name": "myName",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "name": "myName",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header nestingLevel="bigBox" 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header nestingLevel="bigBoxCollection" 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header nestingLevel="box" 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header nestingLevel="boxCollection" 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header nestingLevel="container" 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.Header nestingLevel="page" 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header nestingLevel="smallBox" 1`] = `""`;
@@ -1155,261 +1279,289 @@ exports[`UU5.Bricks.Header nestingLevel="smallBox" 1`] = `""`;
 exports[`UU5.Bricks.Header nestingLevel="smallBoxCollection" 1`] = `""`;
 
 exports[`UU5.Bricks.Header nestingLevel="spa" 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header noIndex=false 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header noIndex=true 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-noindex uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-noindex uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header pureRender=false 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header pureRender=true 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header selected=false 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header selected=true 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-selected uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-selected uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
-  selected={true}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+    selected={true}
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header style="padding:8px; borderRadius: 2px" 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {
-        "borderRadius": "2px",
-        "padding": "8px",
-      },
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {
+          "borderRadius": "2px",
+          "padding": "8px",
+        },
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header style={"backgroundColor":"red","color":"blue"} 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {
-        "backgroundColor": "red",
-        "color": "blue",
-      },
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {
+          "backgroundColor": "red",
+          "color": "blue",
+        },
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header textCorrector=false 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header textCorrector=true 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header tooltip="My Tooltip" 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": "My Tooltip",
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": "My Tooltip",
+      }
     }
-  }
-  tooltip="My Tooltip"
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+    tooltip="My Tooltip"
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header underline=false 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.Header underline=true 1`] = `
-<Jumbotron
-  id="uuID"
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
+<Fragment>
+  <Jumbotron
+    id="uuID"
+    mainAttrs={
+      Object {
+        "className": "uu5-bricks-header uu5-common-text",
+        "id": "uuID",
+        "style": Object {},
+        "title": null,
+      }
     }
-  }
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
+  >
+    <h1
+      className="uu5-bricks-header-jumbotron-content uu5-common-text"
+    />
+  </Jumbotron>
+</Fragment>
 `;

@@ -16,6 +16,7 @@ import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Modal from "./modal.js";
 import "./box.less";
+import Lsi from "./internal/bricks-editable-lsi.js";
 
 const ClassNames = UU5.Common.ClassNames;
 
@@ -53,6 +54,11 @@ export const Box = UU5.Common.VisualComponent.create({
     },
     opt: {
       nestingLevelWrapper: true,
+    },
+    editMode: {
+      name: Lsi.box.name,
+      enablePlaceholder: true,
+      startMode: "button",
     },
   },
   //@@viewOff:statics

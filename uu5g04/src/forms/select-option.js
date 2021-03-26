@@ -34,6 +34,9 @@ export default UU5.Common.VisualComponent.create({
     errors: {
       invalidParent: "Parent of this component is not Select.",
     },
+    editMode: {
+      enableWrapper: false,
+    },
   },
   //@@viewOff:statics
 
@@ -94,8 +97,12 @@ export default UU5.Common.VisualComponent.create({
       props.content = this.props.value;
     }
 
-    props.content =
-      props.content == null ? this.props.children && UU5.Common.Children.toArray(this.props.children) : props.content;
+    if (props.content && typeof props.content === "object" && !UU5.Common.Element.isValid(props.content)) {
+      props.content = this.getLsiItem(props.content);
+    } else {
+      props.content =
+        props.content == null ? this.props.children && UU5.Common.Children.toArray(this.props.children) : props.content;
+    }
 
     return props;
   },

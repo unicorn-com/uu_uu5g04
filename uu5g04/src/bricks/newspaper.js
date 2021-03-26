@@ -16,6 +16,7 @@ import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Section from "./section.js";
 import "./newspaper.less";
+import Lsi from "./internal/bricks-editable-lsi.js";
 
 const EditationComponent = UU5.Common.Component.lazy(async () => {
   await SystemJS.import("uu5g04-forms");
@@ -49,10 +50,12 @@ export const Newspaper = UU5.Common.VisualComponent.create({
       columns: "uu5-common-newspaper-layout-",
     },
     editMode: {
-      name: { en: "Newspaper", cs: "Newspaper" },
+      name: Lsi.newspaper.name,
       backgroundColor: "rgba(0,0,0,.2)",
       color: "rgba(0,0,0,.87)",
       highlightColor: "#CCCCCC",
+      enablePlaceholder: true,
+      startMode: "button",
     },
   },
   //@@viewOff:statics

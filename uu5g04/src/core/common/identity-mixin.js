@@ -57,7 +57,7 @@ export const IdentityMixin = {
 
     let session = this.props.session || Environment.getSession();
     if (session && session.initComplete) {
-      identityState.identity = session.getIdentity();
+      identityState.identity = session.isAuthenticated?.() !== false ? session.getIdentity() : null;
       identityState.identityFeedback = session.isAuthenticated() ? AUTH : NOT_AUTH;
     } else if (!session) {
       identityState = {
@@ -139,7 +139,7 @@ export const IdentityMixin = {
     session &&
       this.setState((state) => {
         let result;
-        let identity = session.getIdentity();
+        let identity = session.isAuthenticated?.() !== false ? session.getIdentity() : null;
         let identityFeedback = this._getIdentityFeedback(session);
         if (
           identityFeedback !== state.identityFeedback ||

@@ -3,7 +3,9 @@ const Session = {
     let rollback;
     const isSession = !!Object.keys(session).length;
 
-    const changeIdentity = () => typeof session.getIdentity === "function" && setIdentity(session.getIdentity());
+    const changeIdentity = () =>
+      typeof session.getIdentity === "function" &&
+      setIdentity(session.isAuthenticated?.() !== false ? session.getIdentity() : null);
     const expireSession = () => setExpiring(true);
     const extendSession = () => setExpiring(false);
 

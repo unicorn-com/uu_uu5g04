@@ -11,6 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:revision
+// coded: Petr Bišof, 18.09.2020
+// reviewed: Martin Mach, 20.09.2020
+//@@viewOff:revision
+
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
@@ -19,6 +24,13 @@ import ButtonStyles from "./internal/button-styles.js";
 import { elevationMixin } from "./internal/styles.js";
 
 import "./button.less";
+
+const ButtonEditable = UU5.Common.Component.lazy(async () => {
+  await SystemJS.import("uu5g04-bricks");
+  await SystemJS.import("uu5g04-forms");
+  await SystemJS.import("uu5g04-bricks-editable");
+  return import("./internal/button-editable.js");
+});
 //@@viewOff:imports
 
 const ClassNames = UU5.Common.ClassNames;
@@ -250,7 +262,7 @@ export const Button = UU5.Common.VisualComponent.create({
       regexpHash: /^#/,
       httpRegexp: /^(\/|[a-z0-9\-+.]+:)/,
     },
-    editableComponent: "UU5.BricksEditable.Button",
+    editMode: { startMode: "button", displayType: "inline", enableWrapper: false },
   },
   //@@viewOff:statics
 
@@ -345,6 +357,9 @@ export const Button = UU5.Common.VisualComponent.create({
   //@@viewOff:interface
 
   //@@viewOn:overriding
+  onBeforeForceEndEditation_() {
+    return this._editRef ? this._editRef.getPropsToSave() : undefined;
+  },
   //@@viewOff:overriding
 
   //@@viewOn:private
@@ -558,14 +573,26 @@ export const Button = UU5.Common.VisualComponent.create({
 
     return newChildren.length > 0 ? newChildren : children;
   },
+
+  _ref(ref) {
+    this._editRef = ref;
+  },
+
   //@@viewOff:private
 
   //@@viewOn:render
   render() {
     let component = (
-      <button {...this._buildMainAttrs()} ref={(button) => (this._button = button)}>
-        {this._getChildren()}
-      </button>
+      <>
+        {this.isInlineEdited() && (
+          <UU5.Common.Suspense fallback={this.getEditingLoading()}>
+            <ButtonEditable component={this} ref={this._ref} />
+          </UU5.Common.Suspense>
+        )}
+        <button {...this._buildMainAttrs()} ref={(button) => (this._button = button)}>
+          {this._getChildren()}
+        </button>
+      </>
     );
 
     return this.getNestingLevel() ? component : null;

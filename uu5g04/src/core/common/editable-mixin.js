@@ -224,6 +224,11 @@ export const EditableMixin = {
         ),
       };
     }
+    // start inline editation
+    if (this.constructor.eccReady && result) {
+      this.setState({ editation: true, editationComponent: <UU5.Bricks.Modal {...result} shown /> });
+      return;
+    }
     if (!result) {
       // start inline editation
       this.setState({ editation: true });
@@ -263,7 +268,7 @@ export const EditableMixin = {
     delete this._saveEditationCallback;
     delete this._endChildrenEditationFn;
     // change state only if state was change in startDccEditation method - so only if component does not have this.startDccEditation_ method
-    if (this.state.editation) this.setState({ editation: false });
+    if (this.state.editation) this.setState({ editation: false, editationComponent: null });
     if (typeof endEditationCallback === "function") {
       endEditationCallback(this, newProps);
     }

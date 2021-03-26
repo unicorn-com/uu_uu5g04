@@ -86,7 +86,9 @@ export const Factory = {
           ? UU5.Common.Element.create(
               tag.toLowerCase(),
               UU5.Common.VisualComponent.getAttrs(this.props, mainClassName),
-              UU5.Utils.Content.getChildren(this.props.content || this.props.children, this.props, statics) ||
+              // TODO 3rd parameter should be "statics" but uuCourseKit has components inside of UU5.Bricks.P which
+              // then won't be shown due to nesting level so we keep it broken for now.
+              UU5.Utils.Content.getChildren(this.props.content || this.props.children, this.props, nestingLevelList) ||
                 defaultContent ||
                 null
             )

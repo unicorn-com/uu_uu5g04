@@ -22,11 +22,11 @@ const EXTRA_TEMPLATE_DATA = {
   },
   userName: () => {
     let session = Environment.getSession();
-    return session && session.getIdentity() ? session.getIdentity().name : "";
+    return (session?.isAuthenticated?.() !== false ? session?.getIdentity()?.name : null) ?? "";
   },
   userEmail: () => {
     let session = Environment.getSession();
-    return session && session.getIdentity() ? session.getIdentity().email : "";
+    return (session?.isAuthenticated?.() !== false ? session?.getIdentity()?.email : null) ?? "";
   },
 };
 

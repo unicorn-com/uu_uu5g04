@@ -117,7 +117,7 @@ export const CookieBar = UU5.Common.VisualComponent.create({
   },
 
   _checkLocalStorageItem() {
-    const item = localStorage.getItem(this.props.cookieKey);
+    const item = localStorage && localStorage.getItem(this.props.cookieKey);
     if (item === this.props.cookieValue) {
       this.setState({ hidden: true }, this.props.onClose);
     }
@@ -125,7 +125,7 @@ export const CookieBar = UU5.Common.VisualComponent.create({
   },
 
   _setLocalStorageItem() {
-    localStorage.setItem(this.props.cookieKey, this.props.cookieValue);
+    localStorage && localStorage.setItem(this.props.cookieKey, this.props.cookieValue);
     this.hide(this.props.onClose);
   },
 

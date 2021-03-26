@@ -29,6 +29,9 @@ export const ContextInfo = UU5.Common.VisualComponent.create({
         margin-right: 16px;
         align-self: start;
         color: rgba(0,0,0,0.54);
+        &&&& {
+          min-width: auto;
+        }
       `,
       content: () => Css.css`
         /** just for IE **/

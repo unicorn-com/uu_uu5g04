@@ -33,6 +33,9 @@ const StepperItemBase = UU5.Common.VisualComponent.create({
       stepperItemButton: ns.css("stepper-item-button"),
       buttonText: ns.css("stepper-item-button-text"),
     },
+    editMode: {
+      enableWrapper: false,
+    },
   },
   //@@viewOff:statics
 

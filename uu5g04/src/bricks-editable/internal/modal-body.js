@@ -12,25 +12,24 @@
  */
 
 //@@viewOn:revision
-// coded: Martin Mach, 16.09.2020
-// reviewed: Filip Janovský, 16.09.2020 - approved
+// coded: Martin Mach, 20.09.2020
+// reviewed: -
 //@@viewOff:revision
 
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-forms";
-
+import LazyLoadedLibraries from "./lazy-loaded-libraries.js";
 import Css from "./css.js";
 import RollMenu from "./roll-menu.js";
 import Menu from "./menu.js";
 import ComponentInfo from "./component-info.js";
+import ConfirmModal from "./confirm-modal.js";
 import MoveItemFormModal from "./move-item-form-modal.js";
 import ns from "../bricks-editable-ns.js";
 import Helpers from "./helpers.js";
 import Lsi from "../bricks-editable-lsi.js";
-import LazyLoadedLibraries from "./lazy-loaded-libraries.js";
-import ConfirmModal from "./confirm-modal.js";
 //@@viewOff:imports
 
 // check if hooks is already loaded
@@ -73,6 +72,11 @@ const ColorSchemaPicker = UU5.Common.Component.lazy(async () => {
   return import("./color-schema-picker.js");
 });
 
+const Message = UU5.Common.Component.lazy(async () => {
+  await importHooks();
+  return import("./message.js");
+});
+
 const FORM_PROPS = {
   spacing: 16,
   inputColWidth: "xs-12",
@@ -82,7 +86,7 @@ const FORM_PROPS = {
 const EDITATION_COMPONENT_PROPS = UU5.PropTypes.oneOfType([
   UU5.PropTypes.func,
   UU5.PropTypes.shape({
-    name: UU5.PropTypes.string.isRequired,
+    name: UU5.PropTypes.string,
     placeholder: UU5.PropTypes.string,
     type: UU5.PropTypes.oneOfType([
       UU5.PropTypes.array,
@@ -273,6 +277,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
       editForm: () =>
         Css.css(`
         padding: 0;
+        z-index: 0;
       `),
       editationContent: () =>
         Css.css(`
@@ -487,7 +492,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
       });
     }
 
-    if (this._itemsSource && this._contentChanged) {
+    if (this.props.itemName && this._itemsSource && this._contentChanged) {
       let items;
 
       if (this.state.items) {
@@ -1351,6 +1356,9 @@ const ModalBody = UU5.Common.VisualComponent.create({
         case "expandableEditorInput":
           result.Component = "UU5.RichText.ExpandableEditorInput";
           break;
+        case "message":
+          result.Component = Message;
+          break;
       }
     } else if (componentData.name) {
       switch (componentData.name) {
@@ -1379,6 +1387,9 @@ const ModalBody = UU5.Common.VisualComponent.create({
           result.props.value = valueSource.colorSchema;
           result.props.popoverLocation = "portal";
           break;
+        case "message":
+          result.Component = Message;
+          break;
       }
     }
 
@@ -1398,7 +1409,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
       };
     }
 
-    if (result.Component !== "UU5.Bricks.Line") {
+    if (result.Component !== "UU5.Bricks.Line" && result.Component !== Message) {
       result.props.label = Helpers.getLabel(componentData.label);
       result.props.value = value;
       result.props.required = componentData.required;
@@ -1526,7 +1537,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
       );
     }
 
-    if (!info) {
+    if (!info && tagName) {
       info = (
         <UU5.Common.Fragment>
           {this.getLsiComponent("componentInfo")} <UU5.Common.Help tagName={tagName} />
@@ -1536,9 +1547,11 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
     return (
       <UU5.Common.Fragment>
-        <UU5.Bricks.Row>
-          <ComponentInfo iconFontSize="26px">{info}</ComponentInfo>
-        </UU5.Bricks.Row>
+        {info ? (
+          <UU5.Bricks.Row>
+            <ComponentInfo iconFontSize="26px">{info}</ComponentInfo>
+          </UU5.Bricks.Row>
+        ) : null}
         <UU5.Bricks.Row className={this.getClassName("editationContent")} key={contentKey}>
           <UU5.Forms.Form {...formProps} className={this.getClassName("editForm")}>
             <UU5.Common.Suspense>{editationContent}</UU5.Common.Suspense>

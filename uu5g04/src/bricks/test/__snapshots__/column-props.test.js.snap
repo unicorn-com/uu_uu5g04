@@ -269,7 +269,7 @@ exports[`UU5.Bricks.Column ignoreHTML=true 1`] = `
 
 exports[`UU5.Bricks.Column is wrapped in UU5.Bricks.Row Bootsrap grid 1`] = `
 <div
-  className="uu5-bricks-row uu5-bricks-row-standard uu5-bricks-row-spacing"
+  className="uu5-bricks-row uu5-bricks-row-standard uu5-bricks-row-spacing uu5-bricks-row-nospacing"
   id="uuID01"
   style={Object {}}
   title={null}
@@ -327,7 +327,7 @@ exports[`UU5.Bricks.Column is wrapped in UU5.Bricks.Row Bootsrap grid 1`] = `
 
 exports[`UU5.Bricks.Column is wrapped in UU5.Bricks.Row column is set with width 1`] = `
 <div
-  className="uu5-bricks-row uu5-bricks-row-standard uu5-bricks-row-spacing"
+  className="uu5-bricks-row uu5-bricks-row-standard uu5-bricks-row-spacing uu5-bricks-row-nospacing"
   id="uuID01"
   style={Object {}}
   title={null}

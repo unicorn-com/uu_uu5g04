@@ -14,6 +14,7 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+import withUserPreferences from "../common/user-preferences";
 import "./number.less";
 //@@viewOff:imports
 
@@ -71,320 +72,328 @@ const getFormatByCountry = (number, country) => {
   return result;
 };
 
-export const Number = UU5.Common.VisualComponent.create({
-  displayName: "Number", // for backward compatibility (test snapshots)
-  //@@viewOn:mixins
-  mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, UU5.Common.NestingLevelMixin],
-  //@@viewOff:mixins
+export const Number = withUserPreferences(
+  UU5.Common.VisualComponent.create({
+    displayName: "Number", // for backward compatibility (test snapshots)
+    //@@viewOn:mixins
+    mixins: [
+      UU5.Common.BaseMixin,
+      UU5.Common.PureRenderMixin,
+      UU5.Common.ElementaryMixin,
+      UU5.Common.NestingLevelMixin,
+    ],
+    //@@viewOff:mixins
 
-  //@@viewOn:statics
-  statics: {
-    tagName: ns.name("Number"),
-    nestingLevel: "inline",
-    classNames: {
-      main: ns.css("number"),
-      negative: ns.css("number-negative"),
-      positive: ns.css("number-positive"),
-      zero: ns.css("number-zero"),
+    //@@viewOn:statics
+    statics: {
+      tagName: ns.name("Number"),
+      nestingLevel: "inline",
+      classNames: {
+        main: ns.css("number"),
+        negative: ns.css("number-negative"),
+        positive: ns.css("number-positive"),
+        zero: ns.css("number-zero"),
+      },
+      defaults: {
+        event: UU5.Common.Tools.events.number,
+        thousandSeparator: "&nbsp;",
+        decimalSeparator: ",",
+        regexpNumberParts: /\B(?=(\d{3})+(?!\d))/g,
+        regexpNotDigit: /(\D)/g,
+      },
     },
-    defaults: {
-      event: UU5.Common.Tools.events.number,
-      thousandSeparator: "&nbsp;",
-      decimalSeparator: ",",
-      regexpNumberParts: /\B(?=(\d{3})+(?!\d))/g,
-      regexpNotDigit: /(\D)/g,
+    //@@viewOff:statics
+
+    //@@viewOn:propTypes
+    propTypes: {
+      country: UU5.PropTypes.string,
+      value: UU5.PropTypes.number,
+      onChange: UU5.PropTypes.func,
+      thousandSeparator: UU5.PropTypes.string,
+      decimalSeparator: UU5.PropTypes.string,
+      minDecimalLength: UU5.PropTypes.number,
+      maxDecimalLength: UU5.PropTypes.number,
+      rounded: UU5.PropTypes.number,
     },
-  },
-  //@@viewOff:statics
+    //@@viewOff:propTypes
 
-  //@@viewOn:propTypes
-  propTypes: {
-    country: UU5.PropTypes.string,
-    value: UU5.PropTypes.number,
-    onChange: UU5.PropTypes.func,
-    thousandSeparator: UU5.PropTypes.string,
-    decimalSeparator: UU5.PropTypes.string,
-    minDecimalLength: UU5.PropTypes.number,
-    maxDecimalLength: UU5.PropTypes.number,
-    rounded: UU5.PropTypes.number,
-  },
-  //@@viewOff:propTypes
+    //@@viewOn:getDefaultProps
+    getDefaultProps: function () {
+      return {
+        country: undefined,
+        value: null,
+        onChange: null,
+        thousandSeparator: null,
+        decimalSeparator: null,
+        minDecimalLength: null,
+        maxDecimalLength: null,
+        rounded: null,
+      };
+    },
+    //@@viewOff:getDefaultProps
 
-  //@@viewOn:getDefaultProps
-  getDefaultProps: function () {
-    return {
-      country: undefined,
-      value: null,
-      onChange: null,
-      thousandSeparator: null,
-      decimalSeparator: null,
-      minDecimalLength: null,
-      maxDecimalLength: null,
-      rounded: null,
-    };
-  },
-  //@@viewOff:getDefaultProps
+    //@@viewOn:reactLifeCycle
+    getInitialState: function () {
+      this._specifiedThouSep = !!this.props.thousandSeparator;
+      this._specifiedDecSep = !!this.props.decimalSeparator;
+      let opts = this._initOptions(this.props);
 
-  //@@viewOn:reactLifeCycle
-  getInitialState: function () {
-    this._specifiedThouSep = !!this.props.thousandSeparator;
-    this._specifiedDecSep = !!this.props.decimalSeparator;
-    let opts = this._initOptions(this.props);
-
-    return {
-      country: opts.country,
-      thousandSeparator: opts.thousandSeparator,
-      decimalSeparator: opts.decimalSeparator,
-    };
-  },
-
-  UNSAFE_componentWillMount: function () {
-    UU5.Environment.EventListener.registerNumber(this.getId(), this._onChange);
-  },
-
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    if (nextProps.controlled) {
-      this._specifiedThouSep = !!nextProps.thousandSeparator;
-      this._specifiedDecSep = !!nextProps.decimalSeparator;
-      let opts = this._initOptions(nextProps);
-
-      this.setState({
+      return {
+        country: opts.country,
         thousandSeparator: opts.thousandSeparator,
         decimalSeparator: opts.decimalSeparator,
-        country: opts.country,
-      });
-    }
-  },
+      };
+    },
 
-  componentWillUnmount: function () {
-    UU5.Environment.EventListener.unregisterNumber(this.getId(), this._onChange);
-  },
+    UNSAFE_componentWillMount: function () {
+      UU5.Environment.EventListener.registerNumber(this.getId(), this._onChange);
+    },
 
-  //@@viewOff:reactLifeCycle
+    UNSAFE_componentWillReceiveProps(nextProps) {
+      if (nextProps.controlled) {
+        this._specifiedThouSep = !!nextProps.thousandSeparator;
+        this._specifiedDecSep = !!nextProps.decimalSeparator;
+        let opts = this._initOptions(nextProps);
 
-  //@@viewOn:interface
-  getCountry() {
-    return this.state.country;
-  },
-
-  setCountry(country, setStateCallback) {
-    this.setOptions({ country }, setStateCallback);
-    return this;
-  },
-
-  getDecimalSeparator() {
-    return this.state.decimalSeparator;
-  },
-
-  setDecimalSeparator(decimalSeparator, setStateCallback) {
-    if (decimalSeparator) this._specifiedDecSep = true;
-    else this._specifiedDecSep = false;
-
-    this.setOptions({ decimalSeparator: decimalSeparator }, setStateCallback);
-
-    return this;
-  },
-
-  getThousandSeparator() {
-    return this.state.thousandSeparator;
-  },
-
-  setThousandSeparator(thousandSeparator, setStateCallback) {
-    if (thousandSeparator) this._specifiedThouSep = true;
-    else this._specifiedThouSep = false;
-
-    this.setOptions({ thousandSeparator: thousandSeparator }, setStateCallback);
-
-    return this;
-  },
-
-  setOptions(opt, setStateCallback) {
-    let country = opt.country !== undefined ? opt.country : this.state.country;
-    let thousandSeparator = opt.thousandSeparator;
-    let decimalSeparator = opt.decimalSeparator;
-
-    if (country) {
-      let separators = getFormatByCountry(this.props.value, country);
-      if (!thousandSeparator && !this._specifiedThouSep) {
-        thousandSeparator = separators.thousandSeparator;
+        this.setState({
+          thousandSeparator: opts.thousandSeparator,
+          decimalSeparator: opts.decimalSeparator,
+          country: opts.country,
+        });
       }
-      if (!decimalSeparator && !this._specifiedDecSep) {
-        decimalSeparator = separators.decimalSeparator;
-      }
-    }
+    },
 
-    thousandSeparator = thousandSeparator || this.state.thousandSeparator;
-    decimalSeparator = decimalSeparator || this.state.decimalSeparator;
+    componentWillUnmount: function () {
+      UU5.Environment.EventListener.unregisterNumber(this.getId(), this._onChange);
+    },
 
-    this.setState({ country, thousandSeparator, decimalSeparator }, setStateCallback);
+    //@@viewOff:reactLifeCycle
 
-    return this;
-  },
+    //@@viewOn:interface
+    getCountry() {
+      return this.state.country;
+    },
 
-  onChangeDefault(opt) {
-    this.setOptions(opt);
+    setCountry(country, setStateCallback) {
+      this.setOptions({ country }, setStateCallback);
+      return this;
+    },
 
-    return this;
-  },
-  //@@viewOff:interface
+    getDecimalSeparator() {
+      return this.state.decimalSeparator;
+    },
 
-  //@@viewOn:overriding
-  //@@viewOff:overriding
+    setDecimalSeparator(decimalSeparator, setStateCallback) {
+      if (decimalSeparator) this._specifiedDecSep = true;
+      else this._specifiedDecSep = false;
 
-  //@@viewOn:private
-  _initOptions(props) {
-    let globalOptions = UU5.Environment.numberOptions;
-    let country = props.country
-      ? props.country
-      : (this.state && this.state.country) || props.country || globalOptions.country;
-    let thousandSeparator = props.thousandSeparator;
-    let decimalSeparator = props.decimalSeparator;
+      this.setOptions({ decimalSeparator: decimalSeparator }, setStateCallback);
 
-    if (!thousandSeparator || !decimalSeparator) {
-      let separators = country
-        ? getFormatByCountry(props.value, country)
-        : {
-            thousandSeparator: globalOptions.thousandSeparator || this.getDefault("thousandSeparator"),
-            decimalSeparator: globalOptions.decimalSeparator || this.getDefault("decimalSeparator"),
-          };
-      thousandSeparator = thousandSeparator || separators.thousandSeparator;
-      decimalSeparator = decimalSeparator || separators.decimalSeparator;
-    }
+      return this;
+    },
 
-    return { country, thousandSeparator, decimalSeparator };
-  },
+    getThousandSeparator() {
+      return this.state.thousandSeparator;
+    },
 
-  _onChange(opt) {
-    if (typeof this.props.onChange === "function") {
-      this.props.onChange(this, opt);
-    } else {
-      this.onChangeDefault(opt);
-    }
-    return this;
-  },
+    setThousandSeparator(thousandSeparator, setStateCallback) {
+      if (thousandSeparator) this._specifiedThouSep = true;
+      else this._specifiedThouSep = false;
 
-  _formatNumber() {
-    let number = this.props.value;
+      this.setOptions({ thousandSeparator: thousandSeparator }, setStateCallback);
 
-    if (number !== null) {
-      let numberParts = number.toString().split(".");
+      return this;
+    },
 
-      if (this.props.rounded !== null && this.props.rounded <= 0) {
-        number = UU5.Common.Tools.round10(parseFloat(number), this.props.rounded);
-      } else if (numberParts.length > 1) {
-        if (this.props.maxDecimalLength && this.props.maxDecimalLength < numberParts[1].length) {
-          numberParts[1] = numberParts[1].slice(0, this.props.maxDecimalLength - numberParts[1].length);
+    setOptions(opt, setStateCallback) {
+      let country = opt.country !== undefined ? opt.country : this.state.country;
+      let thousandSeparator = opt.thousandSeparator;
+      let decimalSeparator = opt.decimalSeparator;
+
+      if (country) {
+        let separators = getFormatByCountry(this.props.value, country);
+        if (!thousandSeparator && !this._specifiedThouSep) {
+          thousandSeparator = separators.thousandSeparator;
         }
-        number = +numberParts.join(".");
+        if (!decimalSeparator && !this._specifiedDecSep) {
+          decimalSeparator = separators.decimalSeparator;
+        }
       }
 
-      let separators = this._getSeparators();
+      thousandSeparator = thousandSeparator || this.state.thousandSeparator;
+      decimalSeparator = decimalSeparator || this.state.decimalSeparator;
 
-      let numberPartsRounded = number.toString().split(".");
-      numberPartsRounded[0] = numberPartsRounded[0].replace(
-        this.getDefault().regexpNumberParts,
-        separators.thousandSeparator
-      );
+      this.setState({ country, thousandSeparator, decimalSeparator }, setStateCallback);
 
-      let result = numberPartsRounded[0];
-      if (numberPartsRounded.length > 1 || this.props.minDecimalLength) {
-        result +=
-          separators.decimalSeparator +
-          UU5.Common.Tools.ljust(numberPartsRounded[1] || 0, this.props.minDecimalLength, "0");
+      return this;
+    },
+
+    onChangeDefault(opt) {
+      this.setOptions(opt);
+
+      return this;
+    },
+    //@@viewOff:interface
+
+    //@@viewOn:overriding
+    //@@viewOff:overriding
+
+    //@@viewOn:private
+    _initOptions(props) {
+      let globalOptions = UU5.Environment.numberOptions;
+      let country = props.country
+        ? props.country
+        : (this.state && this.state.country) || props.country || globalOptions.country;
+      let thousandSeparator = props.thousandSeparator;
+      let decimalSeparator = props.decimalSeparator;
+
+      if (!thousandSeparator || !decimalSeparator) {
+        let separators = country
+          ? getFormatByCountry(props.value, country)
+          : {
+              thousandSeparator: globalOptions.thousandSeparator || this.getDefault("thousandSeparator"),
+              decimalSeparator: globalOptions.decimalSeparator || this.getDefault("decimalSeparator"),
+            };
+        thousandSeparator = thousandSeparator || separators.thousandSeparator;
+        decimalSeparator = decimalSeparator || separators.decimalSeparator;
       }
 
-      return result;
-    }
-  },
+      return { country, thousandSeparator, decimalSeparator };
+    },
 
-  _getSeparators() {
-    return { decimalSeparator: this.state.decimalSeparator, thousandSeparator: this.state.thousandSeparator };
-  },
+    _onChange(opt) {
+      if (typeof this.props.onChange === "function") {
+        this.props.onChange(this, opt);
+      } else {
+        this.onChangeDefault(opt);
+      }
+      return this;
+    },
 
-  _getFormatFromNumber(number, country) {
-    let localizedSeparators = number.toLocaleString(country);
+    _formatNumber() {
+      let number = this.props.value;
 
-    let matchNoNumber = localizedSeparators.toString().match(this.getDefault().regexpNotDigit);
-    if (matchNoNumber && matchNoNumber[0] == "-") {
-      matchNoNumber.shift();
-    }
+      if (number !== null) {
+        let numberParts = number.toString().split(".");
 
-    let deciSeparator = null;
-    let thouSeparator = null;
-    if (matchNoNumber) {
-      let count = matchNoNumber.length;
-      if (count > 1) {
-        deciSeparator = matchNoNumber[count - 1];
-        thouSeparator = this._checkSpace(matchNoNumber[count - 2]);
-      } else if (count == 1) {
-        if (this.props.value < -999 || this.props.value > 999) {
+        if (this.props.rounded !== null && this.props.rounded <= 0) {
+          number = UU5.Common.Tools.round10(parseFloat(number), this.props.rounded);
+        } else if (numberParts.length > 1) {
+          if (this.props.maxDecimalLength && this.props.maxDecimalLength < numberParts[1].length) {
+            numberParts[1] = numberParts[1].slice(0, this.props.maxDecimalLength - numberParts[1].length);
+          }
+          number = +numberParts.join(".");
+        }
+
+        let separators = this._getSeparators();
+
+        let numberPartsRounded = number.toString().split(".");
+        numberPartsRounded[0] = numberPartsRounded[0].replace(
+          this.getDefault().regexpNumberParts,
+          separators.thousandSeparator
+        );
+
+        let result = numberPartsRounded[0];
+        if (numberPartsRounded.length > 1 || this.props.minDecimalLength) {
+          result +=
+            separators.decimalSeparator +
+            UU5.Common.Tools.ljust(numberPartsRounded[1] || 0, this.props.minDecimalLength, "0");
+        }
+
+        return result;
+      }
+    },
+
+    _getSeparators() {
+      return { decimalSeparator: this.state.decimalSeparator, thousandSeparator: this.state.thousandSeparator };
+    },
+
+    _getFormatFromNumber(number, country) {
+      let localizedSeparators = number.toLocaleString(country);
+
+      let matchNoNumber = localizedSeparators.toString().match(this.getDefault().regexpNotDigit);
+      if (matchNoNumber && matchNoNumber[0] == "-") {
+        matchNoNumber.shift();
+      }
+
+      let deciSeparator = null;
+      let thouSeparator = null;
+      if (matchNoNumber) {
+        let count = matchNoNumber.length;
+        if (count > 1) {
+          deciSeparator = matchNoNumber[count - 1];
           thouSeparator = this._checkSpace(matchNoNumber[count - 2]);
-          deciSeparator = null;
+        } else if (count == 1) {
+          if (this.props.value < -999 || this.props.value > 999) {
+            thouSeparator = this._checkSpace(matchNoNumber[count - 2]);
+            deciSeparator = null;
+          } else {
+            thouSeparator = null;
+            deciSeparator = matchNoNumber[count - 1];
+          }
         } else {
           thouSeparator = null;
-          deciSeparator = matchNoNumber[count - 1];
+          deciSeparator = null;
         }
-      } else {
-        thouSeparator = null;
-        deciSeparator = null;
       }
-    }
 
-    return { decimalSeparator: deciSeparator, thousandSeparator: thouSeparator };
-  },
+      return { decimalSeparator: deciSeparator, thousandSeparator: thouSeparator };
+    },
 
-  _checkSpace(separator) {
-    if (separator == " ") {
-      separator = "&nbsp;";
-    }
-    return separator;
-  },
-
-  _getMainAttrs() {
-    var mainAttrs = this.getMainAttrs();
-    let number = this.props.value;
-    if (number !== null) {
-      if (number < 0) {
-        mainAttrs.className += " " + this.getClassName().negative;
-      } else if (number == 0) {
-        mainAttrs.className += " " + this.getClassName().zero;
-      } else {
-        mainAttrs.className += " " + this.getClassName().positive;
+    _checkSpace(separator) {
+      if (separator == " ") {
+        separator = "&nbsp;";
       }
-    }
-    return mainAttrs;
-  },
-  //@@viewOff:private
+      return separator;
+    },
 
-  //@@viewOn:render
-  render: function () {
-    let mainAttrs = this._getMainAttrs();
-    let numAttrs = {
-      dangerouslySetInnerHTML: {
-        __html: UU5.Common.Tools.formatNumber(this.props.value, {
-          maxDecimals: this.props.rounded == null ? this.props.maxDecimalLength : -1 * this.props.rounded,
-          minDecimals: this.props.minDecimalLength,
-          thousandSeparator: this.state.thousandSeparator,
-          decimalSeparator: this.state.decimalSeparator,
-        }),
-      },
-    };
-    let result = <span {...mainAttrs} {...numAttrs} />;
+    _getMainAttrs() {
+      var mainAttrs = this.getMainAttrs();
+      let number = this.props.value;
+      if (number !== null) {
+        if (number < 0) {
+          mainAttrs.className += " " + this.getClassName().negative;
+        } else if (number == 0) {
+          mainAttrs.className += " " + this.getClassName().zero;
+        } else {
+          mainAttrs.className += " " + this.getClassName().positive;
+        }
+      }
+      return mainAttrs;
+    },
+    //@@viewOff:private
 
-    if (this.isDisabled()) {
-      result = (
-        <span {...mainAttrs}>
-          <span {...numAttrs} />
-          {this.getDisabledCover()}
-        </span>
-      );
-    } else {
-      result = <span {...mainAttrs} {...numAttrs} />;
-    }
+    //@@viewOn:render
+    render: function () {
+      let mainAttrs = this._getMainAttrs();
+      let numAttrs = {
+        dangerouslySetInnerHTML: {
+          __html: UU5.Common.Tools.formatNumber(this.props.value, {
+            maxDecimals: this.props.rounded == null ? this.props.maxDecimalLength : -1 * this.props.rounded,
+            minDecimals: this.props.minDecimalLength,
+            thousandSeparator: this.state.thousandSeparator,
+            decimalSeparator: this.state.decimalSeparator,
+          }),
+        },
+      };
+      let result = <span {...mainAttrs} {...numAttrs} />;
 
-    return this.getNestingLevel() ? result : null;
-  },
-  //@@viewOff:render
-});
+      if (this.isDisabled()) {
+        result = (
+          <span {...mainAttrs}>
+            <span {...numAttrs} />
+            {this.getDisabledCover()}
+          </span>
+        );
+      } else {
+        result = <span {...mainAttrs} {...numAttrs} />;
+      }
+
+      return this.getNestingLevel() ? result : null;
+    },
+    //@@viewOff:render
+  }),
+  { thousandSeparator: "numberGroupingSeparator", decimalSeparator: "numberDecimalSeparator" }
+);
 
 export default Number;

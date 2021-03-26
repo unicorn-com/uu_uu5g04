@@ -73,7 +73,7 @@ const editableDisplayPropsSetup = [
   {
     name: "elevation",
     type: "switchSelector",
-    label: EditableLsi.panel.elevationLabel,
+    label: EditableLsi.common.elevationLabel,
     getProps: () => ({
       items: [{ value: 0 }, { value: 1 }, { value: 2 }, { value: 3 }, { value: 4 }, { value: 5 }],
     }),
@@ -258,6 +258,7 @@ export const PanelEditable = UU5.Common.VisualComponent.create({
           {[
             <UU5.Bricks.Panel
               {...panelProps}
+              editMode={false}
               className={panelClassName}
               key="editablePanel"
               expanded

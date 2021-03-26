@@ -6,6 +6,11 @@ import Lsi from "./bricks-editable-lsi.js";
 import Css from "./css";
 //@@viewOff:imports
 
+//@@viewOn:revision
+// coded: Martin Mach, 20.09.2020
+// reviewed: -
+//@@viewOff:revision
+
 const COLUMN_PRESETS = {
   "1:1": ["s-6", "s-6"],
   "1:2": ["m-4", "m-8"],
@@ -457,6 +462,19 @@ export const LineVertical = ({ componentProps, onChangeProps }) => (
   </UU5.Common.Fragment>
 );
 
+export const ContentInput = ({ componentProps, onChangeProps }) => {
+  let usedContentProp = componentProps.content ? "content" : "children";
+  return (
+    <UU5.Forms.Text
+      value={componentProps[usedContentProp]}
+      onBlur={({ value }) => {
+        onChangeProps({ [usedContentProp]: value });
+      }}
+      label={<UU5.Bricks.Lsi lsi={Lsi.common.contentLabel} />}
+    />
+  );
+};
+
 export default {
   PresetEditComponent,
   ColWidthEditComponent,
@@ -466,4 +484,5 @@ export default {
   ProgressBarStriped,
   ProgressBarItemStriped,
   LineVertical,
+  ContentInput,
 };

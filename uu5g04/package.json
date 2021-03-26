@@ -1,18 +1,18 @@
 {
   "name": "uu5g04",
-  "version": "1.41.0",
+  "version": "1.43.0",
   "description": "",
   "license": "UAF",
   "namespace": "UU5",
   "spec": "uu5-lib; uu_appg01_devkit@4.0.0",
   "dependencies": {
-    "core-js": "^3.0.0",
+    "core-js": "3.9.0",
     "create-react-class": "15.6.3",
     "hls.js": "0.14.16",
-    "qrcode.react": "^0.9.3",
+    "prop-types": "15.7.2",
+    "qrcode.react": "0.9.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "prop-types": "15.7.2",
     "resize-observer-polyfill": "1.5.1",
     "whatwg-fetch": "3.0.0"
   },
@@ -391,11 +391,12 @@
     "nodeBuildIncludes": "/test-tmp/**/*.js"
   },
   "devDependencies": {
-    "babel-plugin-emotion": "^9.2.8",
+    "babel-plugin-emotion": "9.2.11",
     "eslint-plugin-react-hooks": "2.3.0",
     "react-dnd": "7.0.2",
     "react-dnd-html5-backend": "7.0.2",
     "systemjs": "0.19.47",
+    "url-polyfill": "1.1.12",
     "uu_appg01": "^4.4.0",
     "uu_appg01_devkit": "^4.0.0",
     "uu5g05": "^0.4.0",

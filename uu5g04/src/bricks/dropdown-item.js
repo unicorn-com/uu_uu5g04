@@ -55,6 +55,9 @@ export default UU5.Common.VisualComponent.create({
       maxLevel: "Max submenu level is 3!",
       invalidParent: "Parent of this component is not Dropdown.",
     },
+    editMode: {
+      enableWrapper: false,
+    },
   },
   //@@viewOff:statics
 

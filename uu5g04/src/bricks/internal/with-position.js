@@ -7,7 +7,24 @@
 import UU5 from "uu5g04";
 //@@viewOff:imports
 
-const withPosition = (Component) => {
+const checkMagneticMiddle = (state, magneticOffset) => {
+  const { position } = state;
+  let newLeft = position.left;
+  let newRight = position.right;
+  let isInitialPosition = state.isInitialPosition;
+
+  // center component if it is near to the center of the screen
+  const horizontalCenterOffset = (document.body.clientWidth - position.componentWidth) / 2 - magneticOffset;
+  if (position.right > horizontalCenterOffset && position.left > horizontalCenterOffset) {
+    newRight = (document.body.clientWidth - position.componentWidth) / 2;
+    newLeft = newRight;
+    isInitialPosition = true;
+  }
+
+  return { ...state, position: { ...position, left: newLeft, right: newRight }, isInitialPosition };
+};
+
+const withPosition = (Component, magneticMiddleOffset) => {
   return UU5.Common.Component.create({
     //@@viewOn:mixins
     //@@viewOff:mixins
@@ -25,6 +42,7 @@ const withPosition = (Component) => {
     getInitialState() {
       return {
         position: {},
+        isInitialPosition: true,
         isDown: false,
         offsetLeft: 0,
         offsetTop: 0,
@@ -66,8 +84,7 @@ const withPosition = (Component) => {
           const componentHeight = height + state.marginTop + state.marginBottom;
           const marginLeft = state.position?.marginLeft || 0;
           const marginRight = state.position?.marginRight || 0;
-
-          return {
+          const newState = {
             position: {
               top,
               bottom,
@@ -80,7 +97,10 @@ const withPosition = (Component) => {
               marginLeft,
               marginRight,
             },
+            isInitialPosition: false,
           };
+
+          return checkMagneticMiddle(newState, magneticMiddleOffset);
         });
       }
     },
@@ -91,12 +111,14 @@ const withPosition = (Component) => {
       this.setState({ isDown: false });
     },
 
-    _onMouseDown(e) {
+    _onMouseDown(e, current) {
       document.addEventListener("mousemove", this._onMouseMove);
       document.addEventListener("mouseup", this._onMouseUp);
 
       // compute margins - together with offset posiiton we can get precise position
-      const style = getComputedStyle(this.state.contentRef);
+      current = current || this.state.contentRef;
+      const bcr = current.getBoundingClientRect();
+      const style = getComputedStyle(current);
       const marginTop = style.marginTop ? parseFloat(style.marginTop) : 0;
       const marginLeft = style.marginLeft ? parseFloat(style.marginLeft) : 0;
       const marginRight = style.marginRight ? parseFloat(style.marginRight) : 0;
@@ -104,69 +126,77 @@ const withPosition = (Component) => {
 
       this.setState({
         isDown: true,
-        offsetLeft: this.state.contentRef.offsetLeft,
-        offsetTop: this.state.contentRef.offsetTop,
+        offsetLeft: bcr.left,
+        offsetTop: bcr.top,
         pointerLeft: e.clientX,
         pointerTop: e.clientY,
         marginTop,
         marginBottom,
         marginLeft,
         marginRight,
+        contentRef: current,
       });
     },
 
     _updatePosition(current, mode) {
-      const style = getComputedStyle(current);
-      const marginTop = style.marginTop ? parseFloat(style.marginTop) : 0;
-      const marginLeft = style.marginLeft ? parseFloat(style.marginLeft) : 0;
-      const marginRight = style.marginRight ? parseFloat(style.marginRight) : 0;
-      const marginBottom = style.marginBottom ? parseFloat(style.marginBottom) : 0;
+      this.setState((state) => {
+        const bcr = current.getBoundingClientRect();
+        const style = getComputedStyle(current);
+        const marginTop = style.marginTop ? parseFloat(style.marginTop) : 0;
+        const marginLeft = style.marginLeft ? parseFloat(style.marginLeft) : 0;
+        const marginRight = style.marginRight ? parseFloat(style.marginRight) : 0;
+        const marginBottom = style.marginBottom ? parseFloat(style.marginBottom) : 0;
 
-      const offsetLeft = current.offsetLeft;
-      const offsetTop = current.offsetTop;
+        const offsetLeft = bcr.left;
+        const offsetTop = bcr.top;
 
-      const width = current.clientWidth;
-      const height = current.clientHeight;
-      const componentWidth = width + marginLeft + marginRight;
-      const componentHeight = height + marginTop + marginBottom;
-      let top = offsetTop - marginTop;
-      let left = offsetLeft - marginLeft;
-      let bottom = document.body.clientHeight - top - height - marginBottom - marginTop;
-      let right = document.body.clientWidth - left - width - marginRight - marginLeft;
+        const width = current.clientWidth;
+        const height = current.clientHeight;
+        const componentWidth = width + marginLeft + marginRight;
+        const componentHeight = height + marginTop + marginBottom;
+        let top = offsetTop - marginTop;
+        let left = offsetLeft - marginLeft;
+        let bottom = document.body.clientHeight - top - height - marginBottom - marginTop;
+        let right = document.body.clientWidth - left - width - marginRight - marginLeft;
+        let isInitialPosition = state.isInitialPosition;
+        if (mode === "center") {
+          left = (document.body.clientWidth - componentWidth) / 2;
+          right = left;
+          isInitialPosition = true;
+        } else if (mode === "optimize" && state.position.width) {
+          // optimalization is possible only if width was measured once before
+          const currentComponentWidth = state.position.width + state.marginLeft + state.marginRight;
+          const diff = (currentComponentWidth - componentWidth) / 2;
+          left += diff;
+          right += diff;
 
-      if (mode === "center") {
-        left = (document.body.clientWidth - componentWidth) / 2;
-        right = left;
-      } else if (mode === "optimize" && this.state.position.width) {
-        // optimalization is possible only if width was measure once before
-        const currentComponentWidth = this.state.position.width + this.state.marginLeft + this.state.marginRight;
-        const diff = (currentComponentWidth - componentWidth) / 2;
-        left += diff;
-        right += diff;
-
-        if ((right > 0 && right + componentWidth > document.body.clientWidth) || right < 0) {
-          right = 0;
+          if ((right > 0 && right + componentWidth > document.body.clientWidth) || right < 0) {
+            right = 0;
+          }
         }
-      }
 
-      this.setState({
-        contentRef: current,
-        position: {
-          top,
-          left,
-          bottom,
-          right,
-          width,
-          height,
-          componentWidth,
-          componentHeight,
+        const newState = {
+          contentRef: current,
+          position: {
+            top,
+            left,
+            bottom,
+            right,
+            width,
+            height,
+            componentWidth,
+            componentHeight,
+            marginLeft,
+            marginRight,
+          },
+          marginTop,
+          marginBottom,
           marginLeft,
           marginRight,
-        },
-        marginTop,
-        marginBottom,
-        marginLeft,
-        marginRight,
+          isInitialPosition,
+        };
+
+        return isInitialPosition ? newState : checkMagneticMiddle(newState, magneticMiddleOffset);
       });
     },
     //@@viewOff:private
@@ -177,6 +207,7 @@ const withPosition = (Component) => {
         <Component
           onMouseDown={this._onMouseDown}
           position={this.state.position}
+          isInitialPosition={this.state.isInitialPosition}
           updatePosition={this._updatePosition}
           {...this.props}
         />

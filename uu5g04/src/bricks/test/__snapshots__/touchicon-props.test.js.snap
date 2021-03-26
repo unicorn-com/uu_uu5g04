@@ -1,742 +1,814 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UU5.Bricks.TouchIcon bgStyle="filled" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon bgStyle="transparent" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-transparent"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-transparent"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon borderRadius="2px 3px 4px 5px" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
-    style={
-      Object {
-        "borderRadius": "2px 3px 4px 5px",
-      }
-    }
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+      style={
+        Object {
+          "borderRadius": "2px 3px 4px 5px",
+        }
+      }
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon checkGrammar=false 1`] = `
-<Link
-  checkGrammar={false}
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    checkGrammar={false}
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon checkGrammar=true 1`] = `
-<Link
-  checkGrammar={true}
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    checkGrammar={true}
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon checkHighlight=false 1`] = `
-<Link
-  checkHighlight={false}
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    checkHighlight={false}
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon checkHighlight=true 1`] = `
-<Link
-  checkHighlight={true}
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    checkHighlight={true}
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon checkSpaces=false 1`] = `
-<Link
-  checkSpaces={false}
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    checkSpaces={false}
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon checkSpaces=true 1`] = `
-<Link
-  checkSpaces={true}
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    checkSpaces={true}
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon className="my-classname" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon my-classname uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l my-classname uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon colorSchema="brown" 1`] = `
-<Link
-  className="color-schema-brown uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="color-schema-brown uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon colorSchema="brown-rich" 1`] = `
-<Link
-  className="color-schema-brown-rich uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="color-schema-brown-rich uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon colorSchema="cyan" 1`] = `
-<Link
-  className="color-schema-cyan uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="color-schema-cyan uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon colorSchema="cyan-rich" 1`] = `
-<Link
-  className="color-schema-cyan-rich uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="color-schema-cyan-rich uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon colorSchema="default" 1`] = `
-<Link
-  className="color-schema-default uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="color-schema-default uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon colorSchema="green" 1`] = `
-<Link
-  className="color-schema-green uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="color-schema-green uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon colorSchema="green-rich" 1`] = `
-<Link
-  className="color-schema-green-rich uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="color-schema-green-rich uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon colorSchema="grey" 1`] = `
-<Link
-  className="color-schema-grey uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="color-schema-grey uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon colorSchema="grey-rich" 1`] = `
-<Link
-  className="color-schema-grey-rich uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="color-schema-grey-rich uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon colorSchema="orange" 1`] = `
-<Link
-  className="color-schema-orange uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="color-schema-orange uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon colorSchema="orange-rich" 1`] = `
-<Link
-  className="color-schema-orange-rich uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="color-schema-orange-rich uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon colorSchema="pink" 1`] = `
-<Link
-  className="color-schema-pink uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="color-schema-pink uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon colorSchema="pink-rich" 1`] = `
-<Link
-  className="color-schema-pink-rich uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="color-schema-pink-rich uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon colorSchema="purple" 1`] = `
-<Link
-  className="color-schema-purple uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="color-schema-purple uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon colorSchema="purple-rich" 1`] = `
-<Link
-  className="color-schema-purple-rich uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="color-schema-purple-rich uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon colorSchema="red" 1`] = `
-<Link
-  className="color-schema-red uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="color-schema-red uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon colorSchema="red-rich" 1`] = `
-<Link
-  className="color-schema-red-rich uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="color-schema-red-rich uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon colorSchema="yellow" 1`] = `
-<Link
-  className="color-schema-yellow uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="color-schema-yellow uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon colorSchema="yellow-rich" 1`] = `
-<Link
-  className="color-schema-yellow-rich uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="color-schema-yellow-rich uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon content="This is Content from ContentMixin" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
-    />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  >
-    <UU5.Common.TextCorrectorContextConsumer
-      key="0"
-      text="This is Content from ContentMixin"
-    />
-  </div>
-</Link>
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
+    >
+      <UU5.Common.TextCorrectorContextConsumer
+        key="0"
+        text="This is Content from ContentMixin"
+      />
+    </div>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon content=12345 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
-    />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  >
-    12345
-  </div>
-</Link>
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
+    >
+      12345
+    </div>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon controlled=false 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon controlled=true 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon default props 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon disabled=false 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon disabled=true 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  disabled={true}
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    disabled={true}
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon docKit examples UU5.Bricks.TouchIcon should render without crash 1`] = `
@@ -792,1139 +864,1251 @@ exports[`UU5.Bricks.TouchIcon docKit examples UU5.Bricks.TouchIcon should render
 `;
 
 exports[`UU5.Bricks.TouchIcon dynamic=false 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon dynamic=true 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  dynamic={true}
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    dynamic={true}
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon hidden=false 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon hidden=true 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  hidden={true}
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    hidden={true}
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon href="#elementID" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  href="#elementID"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    href="#elementID"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon href="https://www.plus4u.net/" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  href="https://www.plus4u.net/"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    href="https://www.plus4u.net/"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon icon="uu5-alert-circle" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="uu5-alert-circle"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="uu5-alert-circle"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon icon="uu5-arrow-down" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="uu5-arrow-down"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="uu5-arrow-down"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon icon="uu5-arrow-left" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="uu5-arrow-left"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="uu5-arrow-left"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon icon="uu5-arrow-right" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="uu5-arrow-right"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="uu5-arrow-right"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon icon="uu5-arrow-up" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="uu5-arrow-up"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="uu5-arrow-up"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon icon="uu5-calendar" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="uu5-calendar"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="uu5-calendar"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon icon="uu5-clock" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="uu5-clock"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="uu5-clock"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon icon="uu5-cross" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="uu5-cross"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="uu5-cross"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon icon="uu5-error-circle" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="uu5-error-circle"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="uu5-error-circle"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon icon="uu5-finder" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="uu5-finder"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="uu5-finder"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon icon="uu5-flag-upload" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="uu5-flag-upload"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="uu5-flag-upload"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon icon="uu5-menu" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="uu5-menu"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="uu5-menu"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon icon="uu5-minus" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="uu5-minus"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="uu5-minus"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon icon="uu5-ok" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="uu5-ok"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="uu5-ok"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon icon="uu5-ok-circle" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="uu5-ok-circle"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="uu5-ok-circle"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon icon="uu5-person" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="uu5-person"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="uu5-person"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon icon="uu5-picture" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="uu5-picture"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="uu5-picture"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon icon="uu5-plus" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="uu5-plus"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="uu5-plus"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon icon="uu5-point" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="uu5-point"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="uu5-point"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon icon="uu5-thumb" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="uu5-thumb"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="uu5-thumb"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon id="myId" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="myId-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="myId-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon ignoreHTML=false 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon ignoreHTML=true 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon level="0" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon level="1" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon level="2" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon level="3" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon level="4" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon level="5" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon level="6" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon level=0 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon level=1 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon level=2 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon level=3 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon level=4 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon level=5 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon level=6 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon mainAttrs=undefined 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon name="myName" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name="myName-inner"
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    name="myName-inner"
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon nestingLevel="bigBox" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="bigBox"
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="bigBox"
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon nestingLevel="bigBoxCollection" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="bigBoxCollection"
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="bigBoxCollection"
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon nestingLevel="box" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="box"
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="box"
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon nestingLevel="boxCollection" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="boxCollection"
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="boxCollection"
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon nestingLevel="container" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="container"
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="container"
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon nestingLevel="inline" 1`] = `""`;
 
 exports[`UU5.Bricks.TouchIcon nestingLevel="page" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="page"
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="page"
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon nestingLevel="smallBox" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="smallBox"
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="smallBox"
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon nestingLevel="smallBoxCollection" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="smallBoxCollection"
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="smallBoxCollection"
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon nestingLevel="spa" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  nestingLevel="spa"
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    nestingLevel="spa"
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon noIndex=false 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon noIndex=true 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-noindex uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-noindex uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon props.Function UU5.Bricks.TouchIcon -  onClick() should be called 1`] = `
@@ -1936,244 +2120,266 @@ exports[`UU5.Bricks.TouchIcon props.Function UU5.Bricks.TouchIcon -  onClick() s
 `;
 
 exports[`UU5.Bricks.TouchIcon selected=false 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon selected=true 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  selected={true}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    selected={true}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon style="padding:8px; borderRadius: 2px" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    style={
+      Object {
+        "borderRadius": "2px",
+        "padding": "8px",
+      }
     }
-  }
->
-  <div
-    className="uu5-bricks-touch-icon-body"
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon style={"backgroundColor":"red","color":"blue"} 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    style={
+      Object {
+        "backgroundColor": "red",
+        "color": "blue",
+      }
     }
-  }
->
-  <div
-    className="uu5-bricks-touch-icon-body"
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon target="_blank" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  target="_blank"
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    target="_blank"
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon target="_parent" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  target="_parent"
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    target="_parent"
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon target="_self" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon target="_top" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  target="_top"
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    target="_top"
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon textCorrector=false 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  textCorrector={false}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    textCorrector={false}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon textCorrector=true 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  textCorrector={true}
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={Object {}}
+    textCorrector={true}
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.TouchIcon tooltip="My Tooltip" 1`] = `
-<Link
-  className="uu5-bricks-touch-icon uu5-bricks-touch-icon-filled"
-  id="uuID-inner"
-  mainAttrs={
-    Object {
-      "title": "My Tooltip",
+<Fragment>
+  <Link
+    className="uu5-bricks-touch-icon uu-bricks-1wopp5l uu5-bricks-touch-icon-filled"
+    id="uuID-inner"
+    mainAttrs={
+      Object {
+        "title": "My Tooltip",
+      }
     }
-  }
-  tooltip="My Tooltip"
->
-  <div
-    className="uu5-bricks-touch-icon-body"
+    tooltip="My Tooltip"
   >
-    <Icon
-      className="uu5-bricks-touch-icon-icon"
-      icon="mdi-file"
+    <div
+      className="uu5-bricks-touch-icon-body"
+    >
+      <Icon
+        className="uu5-bricks-touch-icon-icon"
+        icon="mdi-file"
+      />
+    </div>
+    <div
+      className="uu5-bricks-touch-icon-label uu-bricks-1c9c16z"
     />
-  </div>
-  <div
-    className="uu5-bricks-touch-icon-label uu-bricks-dbis89"
-  />
-</Link>
+  </Link>
+</Fragment>
 `;

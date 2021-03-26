@@ -42,6 +42,9 @@ export const ButtonSwitch = UU5.Common.VisualComponent.create({
     opt: {
       nestingLevelWrapper: true,
     },
+    editMode: {
+      enableWrapper: false,
+    },
   },
   //@@viewOff:statics
 

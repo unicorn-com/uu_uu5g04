@@ -164,9 +164,10 @@ const _Modal = UU5.Common.VisualComponent.create({
         }
         return className;
       },
-      modalBusViewContent: () => {
+      modalBusViewContent: (props) => {
         let styles = `
           margin: ${MARGIN_SMALL}px;
+          max-height: calc(100% - ${MARGIN_SMALL * 2}px);
 
           .uu5-bricks-modal-layout-wrapper {
             margin: 0;
@@ -194,6 +195,7 @@ const _Modal = UU5.Common.VisualComponent.create({
           "s",
           `
             margin: ${MARGIN_NORMAL}px;
+            max-height: calc(100% - ${MARGIN_NORMAL * 2}px);
           `
         );
 
@@ -203,6 +205,7 @@ const _Modal = UU5.Common.VisualComponent.create({
             &.uu5-bricks-modal-m, &.uu5-bricks-modal-l {
               width: calc(100% - ${MARGIN_NORMAL * 2}px);
               margin: ${MARGIN_NORMAL}px;
+              max-height: calc(100% - ${MARGIN_NORMAL * 2}px);
 
               .uu5-bricks-modal-layout-wrapper {
                 width: 100%;
@@ -217,6 +220,7 @@ const _Modal = UU5.Common.VisualComponent.create({
             &.uu5-bricks-modal-l {
               width: calc(100% - ${MARGIN_NORMAL * 2}px);
               margin: ${MARGIN_NORMAL}px;
+              max-height: calc(100% - ${MARGIN_NORMAL * 2}px);
 
               .uu5-bricks-modal-layout-wrapper {
                 width: 100%;
@@ -224,6 +228,14 @@ const _Modal = UU5.Common.VisualComponent.create({
             }
           `
         );
+
+        if (props.overflow) {
+          styles += `
+            && {
+              max-height: none;
+            }
+          `;
+        }
 
         if (styles) {
           return Css.css`${styles}`;
@@ -302,7 +314,7 @@ const _Modal = UU5.Common.VisualComponent.create({
       scrollableBackground: this.props.scrollableBackground,
       onClose: this.props.onClose,
       overflow: this.props.overflow,
-      openKey: undefined,
+      openKey: this.props.shown ? this._openCounter++ : undefined,
       registerToModalBus: this.props.registerToModalBus,
     };
   },
@@ -325,7 +337,7 @@ const _Modal = UU5.Common.VisualComponent.create({
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
-      this.setState(function (state) {
+      this.setState((state) => {
         let newState = {};
 
         if (nextProps.shown && state.hidden) {
@@ -342,6 +354,13 @@ const _Modal = UU5.Common.VisualComponent.create({
         newState.stickyBackground = nextProps.stickyBackground;
         newState.scrollableBackground = nextProps.scrollableBackground;
         newState.onClose = nextProps.onClose;
+
+        // NOTE Condition should be more like "state.hidden && newState.hidden === false" but
+        // it doesn't work because we're "controlled" therefore ElementaryMixin already updated
+        // state.hidden to be nextProps.hidden (and if someone uses "shown" then they don't care
+        // about "hidden", i.e. they keep it default, which is "false" and therefore state.hidden
+        // is "false").
+        if (state.openKey == null && !(newState.hidden ?? state.hidden)) newState.openKey = this._openCounter++;
 
         return newState;
       });
@@ -539,6 +558,7 @@ const _Modal = UU5.Common.VisualComponent.create({
       // hide body scrollbars
       if (!scrollableBackground) disableBodyScrolling("modal-" + this.getId());
     }
+    this._prevHidden = !!hidden;
   },
 
   _closeByEsc(e) {
@@ -774,16 +794,25 @@ const _Modal = UU5.Common.VisualComponent.create({
     let result;
     if (location === "portal") {
       let { openKey } = this.state;
-      result = (
+      let isClosing = this.isHidden() && this._prevHidden === false;
+      let mountContent = getMountContent(this.props, this.state);
+      let needsToBeRendered =
+        isClosing ||
+        mountContent === MOUNT_CONTENT_VALUES.onFirstRender ||
+        (mountContent === MOUNT_CONTENT_VALUES.onFirstOpen && openKey != null) ||
+        (mountContent === MOUNT_CONTENT_VALUES.onEachOpen && !this.isHidden());
+      result = needsToBeRendered ? (
         <RenderIntoPortal>
-          <DoubleRender renderKey={openKey} doubleRenderOnMount={false}>
+          <DoubleRender renderKey={openKey} doubleRenderOnMount={true}>
             {(renderAs) => {
-              let hidden = this.isHidden() || (renderAs === DoubleRender.FIRST_RENDER ? true : false);
-              return getContentFn(hidden);
+              // DoubleRender is for CSS transition - initial render will mount the content as invisible,
+              // next render (run at next animation frame) will re-render the content as visible, triggerring transition
+              let invisible = this.isHidden() || (renderAs === DoubleRender.FIRST_RENDER ? true : false);
+              return getContentFn(invisible);
             }}
           </DoubleRender>
         </RenderIntoPortal>
-      );
+      ) : null;
     } else {
       result = getContentFn();
     }

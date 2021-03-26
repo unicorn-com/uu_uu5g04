@@ -45,7 +45,7 @@ exports[`UU5.Forms.IconPicker interface editable(setStatecallback) 1`] = `
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -67,6 +67,7 @@ exports[`UU5.Forms.IconPicker interface editable(setStatecallback) 1`] = `
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -194,7 +195,7 @@ exports[`UU5.Forms.IconPicker interface editable(setStatecallback) 2`] = `
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -216,6 +217,7 @@ exports[`UU5.Forms.IconPicker interface editable(setStatecallback) 2`] = `
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -341,7 +343,7 @@ exports[`UU5.Forms.IconPicker interface getChangeFeedback() 1`] = `
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -363,6 +365,7 @@ exports[`UU5.Forms.IconPicker interface getChangeFeedback() 1`] = `
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -488,7 +491,7 @@ exports[`UU5.Forms.IconPicker interface getFeedBack() 1`] = `
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -510,6 +513,7 @@ exports[`UU5.Forms.IconPicker interface getFeedBack() 1`] = `
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -636,7 +640,7 @@ exports[`UU5.Forms.IconPicker interface getFeedBack() 2`] = `
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -658,6 +662,7 @@ exports[`UU5.Forms.IconPicker interface getFeedBack() 2`] = `
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -785,7 +790,7 @@ exports[`UU5.Forms.IconPicker interface getInputWrapper(inpuid) 1`] = `
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -807,6 +812,7 @@ exports[`UU5.Forms.IconPicker interface getInputWrapper(inpuid) 1`] = `
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -934,7 +940,7 @@ exports[`UU5.Forms.IconPicker interface getLabel(idinput) 1`] = `
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -956,6 +962,7 @@ exports[`UU5.Forms.IconPicker interface getLabel(idinput) 1`] = `
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -1081,7 +1088,7 @@ exports[`UU5.Forms.IconPicker interface getMessage() 1`] = `
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -1103,6 +1110,7 @@ exports[`UU5.Forms.IconPicker interface getMessage() 1`] = `
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -1230,7 +1238,7 @@ exports[`UU5.Forms.IconPicker interface getValue() should return value 1`] = `
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -1252,6 +1260,7 @@ exports[`UU5.Forms.IconPicker interface getValue() should return value 1`] = `
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -1377,7 +1386,7 @@ exports[`UU5.Forms.IconPicker interface getValue() value is empty. Should return
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -1399,6 +1408,7 @@ exports[`UU5.Forms.IconPicker interface getValue() value is empty. Should return
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -1526,7 +1536,7 @@ exports[`UU5.Forms.IconPicker interface isError() 1`] = `
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -1548,6 +1558,7 @@ exports[`UU5.Forms.IconPicker interface isError() 1`] = `
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -1677,7 +1688,7 @@ exports[`UU5.Forms.IconPicker interface isError() 2`] = `
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -1699,6 +1710,7 @@ exports[`UU5.Forms.IconPicker interface isError() 2`] = `
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -1824,7 +1836,7 @@ exports[`UU5.Forms.IconPicker interface isInitial() 1`] = `
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -1846,6 +1858,7 @@ exports[`UU5.Forms.IconPicker interface isInitial() 1`] = `
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -1973,7 +1986,7 @@ exports[`UU5.Forms.IconPicker interface isInitial() 2`] = `
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -1995,6 +2008,7 @@ exports[`UU5.Forms.IconPicker interface isInitial() 2`] = `
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -2120,7 +2134,7 @@ exports[`UU5.Forms.IconPicker interface isInput() 1`] = `
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -2142,6 +2156,7 @@ exports[`UU5.Forms.IconPicker interface isInput() 1`] = `
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -2267,7 +2282,7 @@ exports[`UU5.Forms.IconPicker interface isLoading() 1`] = `
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -2289,6 +2304,7 @@ exports[`UU5.Forms.IconPicker interface isLoading() 1`] = `
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -2414,7 +2430,7 @@ exports[`UU5.Forms.IconPicker interface isReadOnly() 1`] = `
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -2436,6 +2452,7 @@ exports[`UU5.Forms.IconPicker interface isReadOnly() 1`] = `
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -2562,7 +2579,7 @@ exports[`UU5.Forms.IconPicker interface isReadOnly() 2`] = `
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -2584,6 +2601,7 @@ exports[`UU5.Forms.IconPicker interface isReadOnly() 2`] = `
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -2713,7 +2731,7 @@ exports[`UU5.Forms.IconPicker interface isSuccess() fisr return false, second re
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -2735,6 +2753,7 @@ exports[`UU5.Forms.IconPicker interface isSuccess() fisr return false, second re
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -2862,7 +2881,7 @@ exports[`UU5.Forms.IconPicker interface isWarning() 1`] = `
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -2884,6 +2903,7 @@ exports[`UU5.Forms.IconPicker interface isWarning() 1`] = `
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -3013,7 +3033,7 @@ exports[`UU5.Forms.IconPicker interface isWarning() 2`] = `
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -3035,6 +3055,7 @@ exports[`UU5.Forms.IconPicker interface isWarning() 2`] = `
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -3162,7 +3183,7 @@ exports[`UU5.Forms.IconPicker interface readOnly(setStatecallback) 1`] = `
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -3184,6 +3205,7 @@ exports[`UU5.Forms.IconPicker interface readOnly(setStatecallback) 1`] = `
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -3312,7 +3334,7 @@ exports[`UU5.Forms.IconPicker interface readOnly(setStatecallback) 2`] = `
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -3334,6 +3356,7 @@ exports[`UU5.Forms.IconPicker interface readOnly(setStatecallback) 2`] = `
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -3464,7 +3487,7 @@ exports[`UU5.Forms.IconPicker interface reset(setStateCallBack) 1`] = `
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -3486,6 +3509,7 @@ exports[`UU5.Forms.IconPicker interface reset(setStateCallBack) 1`] = `
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -3611,7 +3635,7 @@ exports[`UU5.Forms.IconPicker interface reset(setStateCallBack) 2`] = `
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -3633,6 +3657,7 @@ exports[`UU5.Forms.IconPicker interface reset(setStateCallBack) 2`] = `
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -3763,7 +3788,7 @@ exports[`UU5.Forms.IconPicker interface setChangeFeedback() 1`] = `
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -3785,6 +3810,7 @@ exports[`UU5.Forms.IconPicker interface setChangeFeedback() 1`] = `
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -3912,7 +3938,7 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(false, setStateCallback
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -3934,6 +3960,7 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(false, setStateCallback
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -4062,7 +4089,7 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(false, setStateCallback
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -4084,6 +4111,7 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(false, setStateCallback
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -4211,7 +4239,7 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(true, setStateCallback)
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -4233,6 +4261,7 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(true, setStateCallback)
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -4360,7 +4389,7 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(true, setStateCallback)
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -4382,6 +4411,7 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(true, setStateCallback)
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -4507,7 +4537,7 @@ exports[`UU5.Forms.IconPicker interface setError(message, value, setStateCallBac
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -4529,6 +4559,7 @@ exports[`UU5.Forms.IconPicker interface setError(message, value, setStateCallBac
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -4658,7 +4689,7 @@ exports[`UU5.Forms.IconPicker interface setError(message, value, setStateCallBac
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -4680,6 +4711,7 @@ exports[`UU5.Forms.IconPicker interface setError(message, value, setStateCallBac
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -4805,7 +4837,7 @@ exports[`UU5.Forms.IconPicker interface setFeedBack(feedback, message, value, se
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -4827,6 +4859,7 @@ exports[`UU5.Forms.IconPicker interface setFeedBack(feedback, message, value, se
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -4956,7 +4989,7 @@ exports[`UU5.Forms.IconPicker interface setFeedBack(feedback, message, value, se
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -4978,6 +5011,7 @@ exports[`UU5.Forms.IconPicker interface setFeedBack(feedback, message, value, se
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -5105,7 +5139,7 @@ exports[`UU5.Forms.IconPicker interface setInitial(msg, value, setStateCallBack)
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -5127,6 +5161,7 @@ exports[`UU5.Forms.IconPicker interface setInitial(msg, value, setStateCallBack)
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -5253,7 +5288,7 @@ exports[`UU5.Forms.IconPicker interface setInitial(msg, value, setStateCallBack)
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -5275,6 +5310,7 @@ exports[`UU5.Forms.IconPicker interface setInitial(msg, value, setStateCallBack)
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -5400,7 +5436,7 @@ exports[`UU5.Forms.IconPicker interface setLoading(message, value, setStateCallB
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -5422,6 +5458,7 @@ exports[`UU5.Forms.IconPicker interface setLoading(message, value, setStateCallB
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -5549,7 +5586,7 @@ exports[`UU5.Forms.IconPicker interface setLoading(message, value, setStateCallB
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -5571,6 +5608,7 @@ exports[`UU5.Forms.IconPicker interface setLoading(message, value, setStateCallB
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -5696,7 +5734,7 @@ exports[`UU5.Forms.IconPicker interface setMessage(msg, setStateCallBack) 1`] = 
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -5718,6 +5756,7 @@ exports[`UU5.Forms.IconPicker interface setMessage(msg, setStateCallBack) 1`] = 
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -5844,7 +5883,7 @@ exports[`UU5.Forms.IconPicker interface setMessage(msg, setStateCallBack) 2`] = 
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -5866,6 +5905,7 @@ exports[`UU5.Forms.IconPicker interface setMessage(msg, setStateCallBack) 2`] = 
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -5991,7 +6031,7 @@ exports[`UU5.Forms.IconPicker interface setSuccess(message, value, setStateCallB
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -6013,6 +6053,7 @@ exports[`UU5.Forms.IconPicker interface setSuccess(message, value, setStateCallB
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -6142,7 +6183,7 @@ exports[`UU5.Forms.IconPicker interface setSuccess(message, value, setStateCallB
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -6164,6 +6205,7 @@ exports[`UU5.Forms.IconPicker interface setSuccess(message, value, setStateCallB
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -6289,7 +6331,7 @@ exports[`UU5.Forms.IconPicker interface setValue(value,setStateCallBack) 1`] = `
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -6311,6 +6353,7 @@ exports[`UU5.Forms.IconPicker interface setValue(value,setStateCallBack) 1`] = `
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -6438,7 +6481,7 @@ exports[`UU5.Forms.IconPicker interface setValue(value,setStateCallBack) 2`] = `
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -6460,6 +6503,7 @@ exports[`UU5.Forms.IconPicker interface setValue(value,setStateCallBack) 2`] = `
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -6585,7 +6629,7 @@ exports[`UU5.Forms.IconPicker interface setWarning(message, value, setStateCallB
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -6607,6 +6651,7 @@ exports[`UU5.Forms.IconPicker interface setWarning(message, value, setStateCallB
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}
@@ -6736,7 +6781,7 @@ exports[`UU5.Forms.IconPicker interface setWarning(message, value, setStateCallB
       forceRender={true}
       header={
         <Row
-          className={null}
+          className="uu-forms-1oiads2"
           content={null}
           controlled={true}
           disabled={false}
@@ -6758,6 +6803,7 @@ exports[`UU5.Forms.IconPicker interface setWarning(message, value, setStateCallB
           pureRender={false}
           ref_={null}
           selected={false}
+          spaceAround={true}
           style={null}
           tooltip={null}
           underline={false}

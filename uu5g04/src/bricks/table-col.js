@@ -47,6 +47,9 @@ const TableCol = UU5.Common.VisualComponent.create({
     errors: {
       invalidParent: "Parent of this component is not Table.ColGroup.",
     },
+    editMode: {
+      enableWrapper: false,
+    },
   },
   //@@viewOff:statics
 

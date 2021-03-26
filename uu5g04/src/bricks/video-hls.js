@@ -153,9 +153,10 @@ export const VideoHls = UU5.Common.VisualComponent.create({
     if (this.props.authenticate) {
       let session = UU5.Environment.getSession();
       if (session && session.isAuthenticated() && UU5.Environment.isTrustedDomain(url)) {
-        let token = this._authenticationToken;
-        if (token) {
-          xhr.setRequestHeader("Authorization", "Bearer " + token);
+        if (this._authenticationHeaders) {
+          for (let k in this._authenticationHeaders) {
+            xhr.setRequestHeader(k, this._authenticationHeaders[k]);
+          }
         }
       }
     }
@@ -181,12 +182,12 @@ export const VideoHls = UU5.Common.VisualComponent.create({
     if (this._authenticatedUrl === url) result = this.state.authenticatedUrl;
     else if (this._authenticatingUrl !== url) {
       this._authenticatingUrl = url;
-      let promise = (this._urlPromise = this._computeAuthenticatedUrl(url, session).then(
-        ({ authenticatedUrl, authenticationToken }) => {
+      let promise = (this._urlPromise = this._computeAuthenticationData(url, session).then(
+        ({ authenticatedUrl, headers }) => {
           if (this.isRendered() && promise === this._urlPromise) {
             delete this._authenticatingUrl;
             this._authenticatedUrl = url;
-            this._authenticationToken = authenticationToken;
+            this._authenticationHeaders = headers;
             this.setState({ authenticatedUrl });
           }
         },
@@ -198,11 +199,12 @@ export const VideoHls = UU5.Common.VisualComponent.create({
     return result;
   },
 
-  async _computeAuthenticatedUrl(url, session) {
-    let token = await UU5.Common.Tools.getCallToken(url, session);
-    let parsedUrl = UU5.Common.Url.parse(url);
-    let authenticatedUrl = parsedUrl.set({ parameters: { ...parsedUrl.parameters, access_token: token } }).toString();
-    return { authenticatedUrl, authenticationToken: token };
+  async _computeAuthenticationData(url, session) {
+    let accessToken = await UU5.Common.Tools.getCallToken(url, session);
+    let csrfToken = UU5.Common.Tools.getCsrfToken();
+    let authenticatedUrl = await UU5.Common.Tools.getAuthenticatedUrl(url, session, accessToken, csrfToken);
+    let headers = await UU5.Common.Tools.getAuthenticatedHeaders(url, session, accessToken, csrfToken);
+    return { authenticatedUrl, headers };
   },
 
   async _waitForToken(url, callback) {

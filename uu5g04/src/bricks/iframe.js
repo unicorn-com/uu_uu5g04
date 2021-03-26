@@ -50,6 +50,7 @@ export const Iframe = UU5.Common.VisualComponent.create({
   //@@viewOn:propTypes
   propTypes: {
     src: UU5.PropTypes.string,
+    srcDoc: UU5.PropTypes.string,
     resize: UU5.PropTypes.bool,
     height: UU5.PropTypes.string,
     syncTimeout: UU5.PropTypes.number,
@@ -62,6 +63,7 @@ export const Iframe = UU5.Common.VisualComponent.create({
   getDefaultProps() {
     return {
       src: "https://unicorn.com",
+      srcDoc: undefined,
       resize: false,
       height: "250",
       syncTimeout: 1,
@@ -194,7 +196,10 @@ export const Iframe = UU5.Common.VisualComponent.create({
   _getIframeAttrs() {
     let attrs = UU5.Common.Tools.merge({}, this.props.iframeAttrs);
     attrs.id = this._getIframeId();
-    if (this._isUrl(this.props.src)) {
+    if (this.props.srcDoc) {
+      attrs.src = this.props.src;
+      attrs.srcDoc = this.props.srcDoc;
+    } else if (this._isUrl(this.props.src)) {
       attrs.src = this.props.src;
     } else {
       attrs.srcDoc = this.props.src;

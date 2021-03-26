@@ -161,8 +161,7 @@ export const Icon = UU5.Common.VisualComponent.create({
 
   async _fetchImage(url, { headers = {}, responseType, withCredentials } = {}, session) {
     if (withCredentials) {
-      let token = await UU5.Common.Tools.getCallToken(url, session);
-      if (token) headers["Authorization"] = "Bearer " + token;
+      headers = { ...headers, ...(await UU5.Common.Tools.getAuthenticatedHeaders(url, session)) };
     }
     return new Promise((resolve, reject) => {
       let xhr = new XMLHttpRequest();

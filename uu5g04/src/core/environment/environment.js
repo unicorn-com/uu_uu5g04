@@ -540,6 +540,42 @@ Environment.removeIconLibrary = (iconsKey) => {
 Environment.clearIconLibraries = () => {
   for (let iconsKey in Environment.iconLibraries) delete Environment.iconLibraries[iconsKey];
 };
+
+Environment.stateIconList = [
+  { icon: "uubml-symbol-state-s00", state: "system" },
+  { icon: "uubml-symbol-state-s26", state: "system" },
+  { icon: "uubml-symbol-state-s27", state: "system" },
+  { icon: "uubml-symbol-state-s25", state: "system" },
+  { icon: "uubml-symbol-state-s34", state: "system" },
+  { icon: "uubml-symbol-state-s97", state: "system" },
+
+  { icon: "uubml-symbol-state-s00", state: "initial" },
+  { icon: "uubml-symbol-state-s02", state: "initial" },
+  { icon: "uubml-symbol-state-s28", state: "initial" },
+
+  { icon: "uubml-symbol-state-s00", state: "active" },
+  { icon: "uubml-symbol-state-s10", state: "active" },
+  { icon: "uubml-symbol-state-s06", state: "active" },
+  { icon: "uubml-symbol-state-s25", state: "active" },
+
+  { icon: "uubml-symbol-state-s25", state: "final" },
+  { icon: "uubml-symbol-state-s34", state: "final" },
+
+  { icon: "uubml-symbol-state-s00", state: "alternativeActive" },
+  { icon: "uubml-symbol-state-s53", state: "alternativeActive" },
+
+  { icon: "uubml-symbol-state-s00", state: "problemActive" },
+  { icon: "uubml-symbol-state-s25", state: "problemActive" },
+
+  { icon: "uubml-symbol-state-s00", state: "passive" },
+  { icon: "uubml-symbol-state-s26", state: "passive" },
+
+  { icon: "uubml-symbol-state-s00", state: "alternativeActive" },
+  { icon: "uubml-symbol-state-s27", state: "alternativeActive" },
+
+  { icon: "uubml-symbol-state-s00", state: "cancelled" },
+  { icon: "uubml-symbol-state-s27", state: "cancelled" },
+];
 /********** ICONS end **********/
 
 Environment.addLibrary = (libraryName, params) => {

@@ -23,6 +23,7 @@ import ns from "./bricks-ns.js";
 import Panel from "./panel.js";
 
 import "./accordion.less";
+import Lsi from "./internal/bricks-editable-lsi.js";
 
 const EditationComponent = UU5.Common.Component.lazy(async () => {
   await SystemJS.import("uu5g04-forms");
@@ -69,10 +70,11 @@ export const Accordion = UU5.Common.VisualComponent.create({
       nestingLevelWrapper: true,
     },
     editMode: {
-      name: { en: "Accordion", cs: "Accordion" },
+      name: Lsi.accordion.name,
       backgroundColor: "rgba(0,0,0,.2)",
       color: "rgba(0,0,0,.87)",
       highlightColor: "#CCCCCC",
+      startMode: "button",
     },
   },
   //@@viewOff:statics

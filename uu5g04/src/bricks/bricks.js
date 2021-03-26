@@ -49,6 +49,7 @@ export * from "./span.js";
 export * from "./mark.js";
 
 export * from "./icon.js";
+export * from "./tag.js";
 export * from "./image.js";
 export * from "./link.js";
 export * from "./loading.js";

@@ -30,6 +30,9 @@ export default UU5.Common.VisualComponent.create({
       pointer: ns.css("slider-pointer"),
       input: ns.css("slider-input"),
     },
+    editMode: {
+      enableWrapper: false,
+    },
   },
   //@@viewOff:statics
 
