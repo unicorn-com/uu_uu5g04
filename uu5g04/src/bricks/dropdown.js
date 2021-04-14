@@ -31,7 +31,6 @@ import "./dropdown.less";
 import Css from "./internal/css.js";
 
 const DropdownEditable = UU5.Common.Component.lazy(async () => {
-  await SystemJS.import("uu5g04-bricks");
   await SystemJS.import("uu5g04-forms");
   await SystemJS.import("uu5g04-bricks-editable");
   return import("./internal/dropdown-editable.js");
@@ -91,9 +90,6 @@ export const Dropdown = UU5.Common.VisualComponent.create({
     },
     opt: {
       nestingLevelRoot: true,
-    },
-    editMode: {
-      enableWrapper: false,
     },
   },
   //@@viewOff:statics

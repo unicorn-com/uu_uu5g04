@@ -22,7 +22,6 @@ import Css from "./internal/css.js";
 import "./touch-icon.less";
 
 const TouchIconEditable = UU5.Common.Component.lazy(async () => {
-  await SystemJS.import("uu5g04-bricks");
   await SystemJS.import("uu5g04-forms");
   await SystemJS.import("uu5g04-bricks-editable");
   return import("./internal/touch-icon-editable.js");

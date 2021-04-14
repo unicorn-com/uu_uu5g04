@@ -42,20 +42,22 @@ const UuBookKit = {
       } catch (e) {
         if (
           e.code === "uu-app-binarystore/uuBinaryCreateBinary/duplicateCode" ||
-          e.code === "uu-app-binarystore/createBinary/duplicateCode"
+          e.code === "uu-app-binarystore/createBinary/duplicateCode" ||
+          e.code === "uu-appbinarystore/duplicateDataKey" ||
+          e.code === "uu-appbinarystore/duplicateCode"
         ) {
           if (!rl && typeof overwrite !== "boolean") {
             rl = readline.createInterface({
               input: process.stdin,
-              output: process.stdout
+              output: process.stdout,
             });
           }
 
           let doOverwrite =
             typeof overwrite === "boolean"
               ? overwrite
-              : await new Promise(resolve => {
-                  rl.question(`Binary ${code} already exists. Update? [Y/n]: `, async function(answer) {
+              : await new Promise((resolve) => {
+                  rl.question(`Binary ${code} already exists. Update? [Y/n]: `, async function (answer) {
                     answer = !!answer.trim().match(/^y?$/i);
                     resolve(answer);
                   });
@@ -75,7 +77,7 @@ const UuBookKit = {
         }
       }
     }
-  }
+  },
 };
 
 module.exports = UuBookKit;

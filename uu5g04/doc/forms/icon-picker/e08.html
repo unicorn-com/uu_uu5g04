@@ -104,16 +104,16 @@
               {/*@@viewOn:0*/}
               <UU5.Forms.IconPicker
                 label="Icon"
-                value={{ icon: "uubml-state-s06", state: "active", component: CustomIconComponent }}
+                value="state-icon-first"
                 categories={[
                   "uu5",
                   "fa",
                   {
-                    code: "stateIcons",
+                    code: "state-icon",
                     label: { cs: "stavové ikony", en: "state icons" },
                     iconList: [
-                      { icon: "uubml-state-s06", state: "active", component: CustomIconComponent },
-                      { icon: "uubml-state-s04", state: "final", component: CustomIconComponent },
+                      { icon: "uubml-state-s06", state: "active", component: CustomIconComponent, code: "first" },
+                      { icon: "uubml-state-s04", state: "final", component: CustomIconComponent, code: "second" },
                     ],
                   },
                 ]}

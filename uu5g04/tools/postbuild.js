@@ -126,7 +126,8 @@ function removeVersionConsoleLog(file) {
   }
 }
 function copyUu5g05() {
-  fs.copySync("node_modules/uu5g05/dist/", "target/dist/uu5g05/", { overwrite: true, recursive: true });
+  let uu5g05Dir = require.resolve("uu5g05/package.json").replace(/[/\\][^/\\]*$/, "");
+  fs.copySync(path.join(uu5g05Dir, "dist") + "/", "target/dist/uu5g05/", { overwrite: true, recursive: true });
 
   removeVersionConsoleLog("target/dist/uu5g05/uu5g05.js");
   removeVersionConsoleLog("target/dist/uu5g05/uu5g05.min.js");
@@ -135,6 +136,20 @@ function copyUu5g05() {
   fs.copyFileSync(bcFile1, "target/dist/uu5g04-browser-update.min.js");
   let bcFile2 = require.resolve("uu5g05-browser-compatibility/dist/uu5g05-browser-compatibility.js");
   fs.copyFileSync(bcFile2, "target/dist/uu5g04-browser-update.js");
+
+  // copy uu5stringg01 too (uu5g05 depends on it)
+  try {
+    let uu5stringg01Dir = require
+      .resolve("uu5stringg01/package.json", { paths: [uu5g05Dir] })
+      .replace(/[/\\][^/\\]*$/, "");
+    fs.copySync(path.join(uu5stringg01Dir, "dist") + "/", "target/dist/uu5stringg01/", {
+      overwrite: true,
+      recursive: true,
+    });
+  } catch (e) {
+    if (e.code !== "MODULE_NOT_FOUND") throw e;
+    // uu5stringg01 might not be present if uu5g05 is in older version (< 0.8.0) and that's ok
+  }
 }
 
 copyUu5g05();

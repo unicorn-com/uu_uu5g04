@@ -77,17 +77,23 @@ function getIconLibrariesFromCategory(category, availableCategories) {
   }
 }
 
-function getIconsToRender(icons, category, availableCategories) {
-  let resultIcons = ["iconpicker-remove-selection"];
+function getIconsToRender(icons, category, availableCategories, hideEmptyIcon) {
+  let resultIcons = [];
+  if (!hideEmptyIcon) resultIcons.push("iconpicker-remove-selection");
   let selectedCategoryDefinition = getCategoryByCode(category, availableCategories);
 
   if (typeof selectedCategoryDefinition === "object" && selectedCategoryDefinition.iconList) {
-    resultIcons = [...resultIcons, ...selectedCategoryDefinition.iconList];
+    resultIcons = [
+      ...resultIcons,
+      ...selectedCategoryDefinition.iconList.map((icon) =>
+        icon && typeof icon === "object" ? { ...icon, category: selectedCategoryDefinition.code } : icon
+      ),
+    ];
   } else if (category === ALL_ICONS_ID) {
     for (let availableCategory of availableCategories) {
       let categoryIcons =
         typeof availableCategory === "object" && availableCategory.iconList
-          ? availableCategory.iconList
+          ? availableCategory.iconList.map((icon) => ({ ...icon, category: availableCategory.code }))
           : icons[availableCategory];
       if (categoryIcons) {
         resultIcons = [...resultIcons, ...categoryIcons];
@@ -107,6 +113,29 @@ function getIconsToRender(icons, category, availableCategories) {
   }
 
   return resultIcons;
+}
+
+function getIconDefinitionByName(iconName, availableCategories) {
+  for (let i = 0; i < availableCategories.length; i++) {
+    let category = availableCategories[i];
+    if (typeof category === "object") {
+      let iconList = category.iconList;
+      for (let j = 0; j < iconList.length; j++) {
+        let icon = iconList[j];
+        let iconCode = icon.code;
+        if (iconCode) {
+          iconCode = category.code + "-" + iconCode;
+          if (iconCode === iconName) {
+            return icon;
+          }
+        }
+      }
+    }
+  }
+}
+
+function getIconFullCode(iconDefinition, category) {
+  return iconDefinition.code ? `${category}-${iconDefinition.code}` : iconDefinition.icon;
 }
 
 export const IconPicker = Context.withContext(
@@ -150,6 +179,7 @@ export const IconPicker = Context.withContext(
                   icon: UU5.PropTypes.string,
                   state: UU5.PropTypes.string,
                   component: UU5.PropTypes.func,
+                  code: UU5.PropTypes.string,
                 }),
               ])
             ),
@@ -174,6 +204,7 @@ export const IconPicker = Context.withContext(
       onClose: UU5.PropTypes.func,
       popoverLocation: UU5.PropTypes.oneOf(["local", "portal"]),
       hideSearchInput: UU5.PropTypes.bool,
+      hideEmptyIcon: UU5.PropTypes.bool,
     },
     //@@viewOff:propTypes
 
@@ -192,6 +223,7 @@ export const IconPicker = Context.withContext(
         onClose: null,
         popoverLocation: "local", // "local" <=> backward-compatible behaviour
         hideSearchInput: false,
+        hideEmptyIcon: false,
       };
     },
     //@@viewOff:getDefaultProps
@@ -611,7 +643,7 @@ export const IconPicker = Context.withContext(
             onClick={(e) => this._onClickIcon(null, e)}
             title={this.getLsiValue("removeSelection")}
             tabIndex={0}
-          ></span>
+          />
         );
       } else {
         let className = "";
@@ -624,7 +656,7 @@ export const IconPicker = Context.withContext(
             const Component = item.data.component;
             icon = (
               <span
-                tooltip={item.data.icon}
+                title={getIconFullCode(item.data, item.data.category)}
                 className={className}
                 tabIndex={0}
                 onClick={
@@ -681,12 +713,19 @@ export const IconPicker = Context.withContext(
       } else if (this.isLoadingData()) {
         result = <UU5.Bricks.Loading />;
       } else {
-        let icons = getIconsToRender(this.state.icons, this.state.selectedCategory, this.props.categories);
+        let icons = getIconsToRender(
+          this.state.icons,
+          this.state.selectedCategory,
+          this.props.categories,
+          this.props.hideEmptyIcon
+        );
 
         if (this.state.searchString) {
           let regexp = new RegExp(this.state.searchString.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&"), "g");
           icons = icons.filter((icon) => {
-            return typeof icon === "object" ? icon.icon.match(regexp) : icon.match(regexp);
+            let iconSearchCode = icon;
+            if (typeof icon === "object") iconSearchCode = icon.code ? `${icon.category}-${icon.code}` : icon.icon;
+            return iconSearchCode.match(regexp);
           });
         }
 
@@ -722,23 +761,30 @@ export const IconPicker = Context.withContext(
     },
 
     _getDisplayedValue() {
-      let icon = this.state.value && typeof this.state.value === "object" ? this.state.value.icon : this.state.value;
-      if (icon && !this.isLoading()) {
-        if (typeof this.state.value === "object" && icon) {
-          if (this.state.value.component) {
-            const Component = this.state.value.component;
+      let iconDefinition =
+        (this.state.value && typeof this.state.value === "object"
+          ? this.state.value
+          : getIconDefinitionByName(this.state.value, this.props.categories)) || this.state.value;
+      if (iconDefinition && !this.isLoading()) {
+        if (typeof iconDefinition === "object") {
+          if (iconDefinition.component) {
+            const Component = iconDefinition.component;
             return (
               <span className={this.getClassName("selectedCustom")}>
-                <Component icon={icon} state={this.state.value.state} />
+                <Component icon={iconDefinition.icon} state={iconDefinition.state} />
               </span>
             );
           } else {
             return (
-              <UU5.Bricks.Tag icon={icon} state={this.state.value.state} className={this.getClassName("selectedTag")} />
+              <UU5.Bricks.Tag
+                icon={iconDefinition.icon}
+                state={iconDefinition.state}
+                className={this.getClassName("selectedTag")}
+              />
             );
           }
         } else {
-          return <UU5.Bricks.Icon icon={icon} className={this.getClassName("selectedIcon")} />;
+          return <UU5.Bricks.Icon icon={iconDefinition} className={this.getClassName("selectedIcon")} />;
         }
       } else {
         return " ";

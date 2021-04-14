@@ -20,7 +20,7 @@ import "./factory.less";
 //@@viewOff:imports
 
 export const Factory = {
-  createTag: function (tag, uu5Name, className, defaultContent, levelFrom, levelTo) {
+  createTag: function (tag, uu5Name, className, defaultContent, levelFrom, levelTo, editMode) {
     let nestingLevelList = UU5.Environment.getNestingLevelList(levelFrom, levelTo);
     let mainClassName = ns.css((uu5Name || tag).toLowerCase()) + (className ? " " + className : "");
     let statics = {
@@ -37,6 +37,7 @@ export const Factory = {
       //@@viewOn:statics
       statics: {
         tagName: ns.name(uu5Name || tag),
+        ...editMode,
       },
       //@@viewOff:statics
 
@@ -180,8 +181,16 @@ export const Strong = Factory.createTag("Strong", null, null, null, "inline"); /
 export const Em = Factory.createTag("Em", null, null, null, "inline"); //inline
 export const Abbr = Factory.createTag("Abbr", null, null, null, "inline"); //inline
 export const Address = Factory.createTag("Address", null, null, null, "inline"); //inline
-export const Dd = Factory.createTag("Dd", null, null, null, "smallBox", "smallBox"); //smallBox,smallBox
-export const Dt = Factory.createTag("Dt", null, null, null, "smallBox", "smallBox"); //smallBox,smallBox
+export const Dd = Factory.createTag("Dd", null, null, null, "smallBox", "smallBox", {
+  editMode: {
+    enableWrapper: false,
+  },
+}); //smallBox,smallBox
+export const Dt = Factory.createTag("Dt", null, null, null, "smallBox", "smallBox", {
+  editMode: {
+    enableWrapper: false,
+  },
+}); //smallBox,smallBox
 
 // code
 export const Var = Factory.createTag("Var", null, null, null, "inline"); //inline

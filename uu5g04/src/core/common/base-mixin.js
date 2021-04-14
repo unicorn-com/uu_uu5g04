@@ -92,7 +92,7 @@ export const BaseMixin = {
       (typeof this.props.ref_ === "function" || (typeof this.props.ref_ === "object" && this.props.ref_ !== null)) &&
       (!this.constructor.opt || !this.constructor.opt.hoc)
     ) {
-      RefUsageTelemetry.process(this.getTagName());
+      // RefUsageTelemetry.process(this.getTagName());
       if ("current" in this.props.ref_) {
         this.props.ref_.current = this;
       } else {

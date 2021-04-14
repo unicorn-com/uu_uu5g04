@@ -10,6 +10,7 @@
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
+import UU5 from "uu5g04";
 
 export {
   useCallback,
@@ -33,7 +34,6 @@ export {
 
 export { useScreenSize, ScreenSizeProvider } from "uu5g05";
 export { useLanguage, LanguageProvider } from "uu5g05";
-export { useSession, SessionProvider } from "uu5g05";
 export { useLevel, LevelProvider } from "uu5g05";
 export { usePrint } from "uu5g05";
 
@@ -59,3 +59,7 @@ export { useListData } from "./use-list-data";
 export { usePagingListData } from "./use-paging-list-data";
 export * from "./paging-auto-load";
 export * from "./with-resize";
+
+const { _Provider: SessionProvider } = UU5.Common.Session;
+export { useSession } from "uu5g05";
+export { SessionProvider };

@@ -234,7 +234,11 @@ export const Calendar = withUserPreferences(
           }
 
           let displayDate = nextProps.displayDate || (Array.isArray(value) ? value[0] : value);
-          let state = this._getDisplayedDate(displayDate, nextProps) || {};
+          let applyDisplayDate =
+            this.props.displayDate !== nextProps.displayDate ||
+            this.props.dateFrom !== nextProps.dateFrom ||
+            this.props.dateTo !== nextProps.dateTo;
+          let state = applyDisplayDate ? this._getDisplayedDate(displayDate, nextProps) || {} : {};
           state = { ...state, ...this._getDisplayOptions(nextProps) };
           state.value = value;
           state.dateFrom = dateFrom;

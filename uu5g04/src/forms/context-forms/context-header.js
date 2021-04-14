@@ -70,6 +70,7 @@ export const ContextHeader = UU5.Common.VisualComponent.create({
     content: UU5.PropTypes.any,
     info: UU5.PropTypes.any,
     icon: UU5.PropTypes.string,
+    initialShowInfo: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -79,11 +80,27 @@ export const ContextHeader = UU5.Common.VisualComponent.create({
       content: undefined,
       info: undefined,
       icon: "mdi-help-circle",
+      initialShowInfo: false,
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
+  componentDidMount() {
+    if (this.props.initialShowInfo) {
+      // NOTE Have to postpone a bit because this._getForm() would return null (the form gets set to context
+      // later during mount of ContextForm which happens after our own mount).
+      Promise.resolve().then(() => {
+        if (this._unmounted || !this._getForm) return;
+        this._doClick(this._getForm);
+      });
+    }
+  },
+
+  componentWillUnmount() {
+    this._unmounted = true;
+    delete this._getForm;
+  },
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
@@ -93,8 +110,10 @@ export const ContextHeader = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _getOnClickFunction(getForm) {
-    const alertBus = getForm().getAlertBus();
+  _doClick(getForm) {
+    const form = getForm();
+    if (!form) return;
+    const alertBus = form.getAlertBus();
     const alert = alertBus.getAlerts().find((a) => a.id === ALERT_ID);
     if (alert) {
       alertBus.removeAlert(alert.id);
@@ -112,18 +131,21 @@ export const ContextHeader = UU5.Common.VisualComponent.create({
   render() {
     return (
       <ContextFormConsumer>
-        {({ getForm }) => (
-          <UU5.Common.Fragment>
-            {buildChildren(this.props.content || this.props.children)}
-            {this.props.info && (
-              <UU5.Bricks.Icon
-                icon={this.props.icon}
-                mainAttrs={{ onClick: () => this._getOnClickFunction(getForm) }}
-                className={this.constructor.classNames.icon()}
-              />
-            )}
-          </UU5.Common.Fragment>
-        )}
+        {({ getForm }) => {
+          this._getForm = getForm;
+          return (
+            <UU5.Common.Fragment>
+              {buildChildren(this.props.content || this.props.children)}
+              {this.props.info && (
+                <UU5.Bricks.Icon
+                  icon={this.props.icon}
+                  mainAttrs={{ onClick: () => this._doClick(getForm) }}
+                  className={this.constructor.classNames.icon()}
+                />
+              )}
+            </UU5.Common.Fragment>
+          );
+        }}
       </ContextFormConsumer>
     );
   },

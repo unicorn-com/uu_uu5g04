@@ -32,8 +32,11 @@
   }
 
   & when (@class-name = uu5-common-bg-style-filled) {
-    *[class^="uu5-common-bg-style-"],
-    *[class*=" uu5-common-bg-style-"],
+    .uu5-common-bg-style-filled,
+    .uu5-common-bg-style-outline,
+    .uu5-common-bg-style-underline,
+    .uu5-common-bg-style-transparent,
+    .uu5-common-bg-style-link,
     .uu5-common-text {
       &:not([class*="color-schema-"]) {
         color: @color;

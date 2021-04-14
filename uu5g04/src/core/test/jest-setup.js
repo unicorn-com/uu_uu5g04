@@ -14,6 +14,7 @@
 // for legacy purposes, if the current project doesn't know about uu5g05 then mock it
 // so that it loads from inside of uu5g04, to be backward compatible
 //    uu5g05        => uu5g04/dist/uu5g05/uu5g05.js
+//    uu5stringg01  => uu5g04/dist/uu5stringg01/uu5stringg01.js
 const path = require("path");
 function makeFallbackToInternal(name, internalBasedIn) {
   let actual;
@@ -39,6 +40,7 @@ function makeFallbackToInternal(name, internalBasedIn) {
   );
 }
 makeFallbackToInternal("uu5g05", "uu5g04");
+makeFallbackToInternal("uu5stringg01", "uu5g04");
 
 const UU5 = require("uu5g04");
 

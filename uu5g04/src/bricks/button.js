@@ -26,7 +26,6 @@ import { elevationMixin } from "./internal/styles.js";
 import "./button.less";
 
 const ButtonEditable = UU5.Common.Component.lazy(async () => {
-  await SystemJS.import("uu5g04-bricks");
   await SystemJS.import("uu5g04-forms");
   await SystemJS.import("uu5g04-bricks-editable");
   return import("./internal/button-editable.js");
@@ -262,7 +261,7 @@ export const Button = UU5.Common.VisualComponent.create({
       regexpHash: /^#/,
       httpRegexp: /^(\/|[a-z0-9\-+.]+:)/,
     },
-    editMode: { startMode: "button", displayType: "inline", enableWrapper: false },
+    editMode: { startMode: "button", displayType: "inline"},
   },
   //@@viewOff:statics
 

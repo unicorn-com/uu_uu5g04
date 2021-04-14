@@ -32,6 +32,15 @@ if (typeof SystemJS !== "undefined" && SystemJS && typeof SystemJS.normalizeSync
               "uu5g05": baseUri + "uu5g05/uu5g05" + minSuffix + ".js"
             }
           });
+          var normalizedNameUu5stringg01 = SystemJS.normalizeSync("uu5stringg01");
+          var isConfiguredUu5stringg01 = !normalizedNameUu5stringg01.match(/uu5stringg01$/);
+          if (!isConfiguredUu5stringg01) {
+            SystemJS.config({
+              paths: {
+                "uu5stringg01": baseUri + "uu5stringg01/uu5stringg01" + minSuffix + ".js"
+              }
+            });
+          }
         }
         if (isIE && !Array.prototype.find) {
           // load polyfills for IE

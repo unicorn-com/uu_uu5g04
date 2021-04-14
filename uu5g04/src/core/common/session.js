@@ -60,5 +60,6 @@ export const Session = Component.create({
   //@@viewOff:render
 });
 Session.Context = SessionContext;
+Session._Provider = SessionProvider; // for uu5g04-hooks only
 
 export default Session;

@@ -232,8 +232,10 @@ export const TextInputMixin = {
           message: this.props.patternMessage || this.getLsiComponent("patternMessage"),
           value: opt.value,
         };
+        return result;
       }
-    } else if (typeof this.props.onValidate === "function") {
+    }
+    if (typeof this.props.onValidate === "function") {
       result = this.props.onValidate(opt);
     }
 

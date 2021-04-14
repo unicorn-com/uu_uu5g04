@@ -194,7 +194,7 @@
   /*@@viewOn:example*/
   const Example = createVisualComponent({
     render() {
-      const pageSize = 200;
+      const pageSize = 1000;
       const dataListResult = useDataList({
         pageSize,
         handlerMap: {
@@ -304,7 +304,7 @@
             disabled={!handlerMap.updateMany || selectedItemIds.size === 0}
             onClick={() => {
               const nowIsoString = new Date().toISOString().replace(/^.*T|\..*/g, "") + "Z";
-              const selectedItems = data.filter(it => selectedItemIds.has(it.data.id));
+              const selectedItems = data.filter(it => it && selectedItemIds.has(it.data.id));
               const dtoInList = selectedItems.map(it => ({
                 id: it.data.id,
                 text: it.data.text.replace(/ Edited at.*/, "") + " Edited at " + nowIsoString + " (bulk)"
@@ -318,7 +318,7 @@
             disabled={!handlerMap.deleteMany || selectedItemIds.size === 0}
             onClick={() => {
               const nowIsoString = new Date().toISOString().replace(/^.*T|\..*/g, "") + "Z";
-              const selectedItems = data.filter(it => selectedItemIds.has(it.data.id));
+              const selectedItems = data.filter(it => it && selectedItemIds.has(it.data.id));
               const dtoInList = selectedItems.map(it => ({ id: it.data.id }));
               handlerMap.deleteMany(dtoInList);
             }}
