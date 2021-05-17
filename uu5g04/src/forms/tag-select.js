@@ -11,6 +11,8 @@ import Context from "./form-context.js";
 import TagSelectStyles from "./internal/tag-select-styles.js";
 import ItemList from "./internal/item-list.js";
 import Option from "./select-option.js";
+
+import "./mixins/group-mixin.less";
 //@@viewOff:imports
 
 export const TagSelect = Context.withContext(

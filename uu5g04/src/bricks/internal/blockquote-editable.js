@@ -11,16 +11,17 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import * as UU5 from "uu5g04";
-import "uu5g04-bricks";
-//import "uu5g04-bricks-editable";
 
 import ns from "./bricks-editable-ns.js";
+import Icon from "../icon.js";
 import Lsi from "./bricks-editable-lsi.js";
 import Css from "./css.js";
 
 import ColorPicker from "./color-picker.js";
 import BlockquoteFooter from "../blockquote-footer.js";
+//@@viewOff:imports
 
 const DEFAULT_PROPS_MAP = {
   contentEditable: false,
@@ -249,7 +250,7 @@ export const Blockquote = UU5.Common.VisualComponent.create({
           else if (this.state.footerAlignment === "right") labelIcon = "mdi-format-align-right";
 
           return {
-            label: <UU5.Bricks.Icon icon={labelIcon} />,
+            label: <Icon icon={labelIcon} />,
             value: this.state.footerAlignment,
             items: [
               { content: this.getLsiValue("footerAlignmentLeft"), value: "left" },

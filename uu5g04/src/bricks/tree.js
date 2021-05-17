@@ -14,6 +14,8 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+import Css from "./internal/css.js";
+import { InlineMode } from "./internal/inline-mode.js";
 
 import List from "./tree-list.js";
 import Item from "./tree-item.js";
@@ -21,7 +23,26 @@ import Item from "./tree-item.js";
 import "./tree.less";
 //@@viewOff:imports
 
-export const Tree = UU5.Common.VisualComponent.create({
+const CLASS_NAMES = {
+  inline: (renderDots) => {
+    let dots = renderDots ? "..." : "";
+    return Css.css(`
+      & > *{
+        pointer-events: none;
+        &::after {
+          content: ", ";
+        }
+        &:last-child{
+          &::after {
+            content: "${dots}";
+          }
+        }
+      }
+    `);
+  },
+};
+
+let Tree = UU5.Common.VisualComponent.create({
   displayName: "Tree", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
@@ -87,13 +108,34 @@ export const Tree = UU5.Common.VisualComponent.create({
     if (items != null && !Array.isArray(items)) items = [items];
     return items;
   },
+
+  _prepareInlineTitle() {
+    let children = undefined;
+    if (this.props.children) {
+      children = UU5.Common.Children.toArray(this.props.children);
+    }
+    children = children.filter((child) => typeof child === "object");
+    let renderDots = children.length > 3 ? true : false;
+
+    if (Array.isArray(children)) {
+      children = children.slice(0, 3);
+
+      return (
+        <span className={CLASS_NAMES.inline(renderDots)}>
+          {children.map((item, index) => (
+            <span key={index}>{item.props.label}</span>
+          ))}
+        </span>
+      );
+    }
+    return undefined;
+  },
   //@@viewOff:private
 
   //@@viewOn:render
   render() {
     const mainPropsToPass = this.getMainPropsToPass();
     mainPropsToPass.className += " " + this.getClassName("size") + this.props.size;
-
     return this.getNestingLevel() ? (
       <List
         {...mainPropsToPass}
@@ -103,12 +145,21 @@ export const Tree = UU5.Common.VisualComponent.create({
       >
         {this.props.children && UU5.Common.Children.toArray(this.props.children)}
       </List>
-    ) : null;
+    ) : (
+      <InlineMode
+        component={this}
+        Component={UU5.Bricks.Tree}
+        linkTitle={this._prepareInlineTitle()}
+        modalHeader={this._prepareInlineTitle()}
+      />
+    );
   },
   //@@viewOff:render
 });
 
 Tree.List = List;
 Tree.Item = Item;
+
+export { Tree };
 
 export default Tree;

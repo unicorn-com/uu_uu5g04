@@ -14,6 +14,7 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+import { InlineMode } from "./internal/inline-mode.js";
 
 import Loading from "./loading.js";
 
@@ -62,7 +63,7 @@ export const Iframe = UU5.Common.VisualComponent.create({
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      src: "https://unicorn.com",
+      src: undefined,
       srcDoc: undefined,
       resize: false,
       height: "250",
@@ -133,7 +134,7 @@ export const Iframe = UU5.Common.VisualComponent.create({
 
         this._resizeTimeout && clearTimeout(this._resizeTimeout);
       } catch (ex) {
-        this.showWarning("cors", this.props.src.replace(this.getDefault().regexpBearer, "Bearer..."), {
+        this.showWarning("cors", (this.props.src ?? "").replace(this.getDefault().regexpBearer, "Bearer..."), {
           context: { error: ex },
         });
         this.setAsyncState({ loading: false, height: this.props.height }, setStateCallback);
@@ -195,6 +196,9 @@ export const Iframe = UU5.Common.VisualComponent.create({
 
   _getIframeAttrs() {
     let attrs = UU5.Common.Tools.merge({}, this.props.iframeAttrs);
+    delete attrs.dangerouslySetInnerHTML;
+    delete attrs.src;
+    delete attrs.srcDoc;
     attrs.id = this._getIframeId();
     if (this.props.srcDoc) {
       attrs.src = this.props.src;
@@ -232,7 +236,7 @@ export const Iframe = UU5.Common.VisualComponent.create({
   },
 
   _isUrl(string) {
-    return !!string.match(this.getDefault().regexpIsUrl);
+    return !!(string ?? "").match(this.getDefault().regexpIsUrl);
   },
   //@@viewOff:private
 
@@ -244,7 +248,9 @@ export const Iframe = UU5.Common.VisualComponent.create({
         {this.state.visible && <iframe {...this._getIframeAttrs()} />}
         {this.getDisabledCover()}
       </div>
-    ) : null;
+    ) : (
+      <UU5.Bricks.Link href={this.props.src} target="_blank" />
+    );
   },
   //@@viewOff:render
 });

@@ -15,29 +15,29 @@
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Link from "./link";
+// import Code from "./code";
 
 import "./factory.less";
 //@@viewOff:imports
 
 export const Factory = {
-  createTag: function (tag, uu5Name, className, defaultContent, levelFrom, levelTo, editMode) {
+  createTag: function (tag, uu5Name, className, defaultContent, levelFrom, levelTo, InlineComponent) {
     let nestingLevelList = UU5.Environment.getNestingLevelList(levelFrom, levelTo);
     let mainClassName = ns.css((uu5Name || tag).toLowerCase()) + (className ? " " + className : "");
     let statics = {
       displayName: uu5Name || tag,
       nestingLevel: nestingLevelList,
     };
-
+    let displayName = uu5Name || tag;
     // eslint-disable-next-line uu5/base-mixin
     return UU5.Common.VisualComponent.create({
-      displayName: uu5Name || tag,
+      displayName,
       //@@viewOn:mixins
       //@@viewOff:mixins
 
       //@@viewOn:statics
       statics: {
         tagName: ns.name(uu5Name || tag),
-        ...editMode,
       },
       //@@viewOff:statics
 
@@ -83,17 +83,24 @@ export const Factory = {
       //@@viewOn:render
       render: function () {
         let nestingLevel = UU5.Utils.NestingLevel.getNestingLevel(this.props, statics);
-        return nestingLevel
-          ? UU5.Common.Element.create(
-              tag.toLowerCase(),
-              UU5.Common.VisualComponent.getAttrs(this.props, mainClassName),
-              // TODO 3rd parameter should be "statics" but uuCourseKit has components inside of UU5.Bricks.P which
-              // then won't be shown due to nesting level so we keep it broken for now.
-              UU5.Utils.Content.getChildren(this.props.content || this.props.children, this.props, nestingLevelList) ||
-                defaultContent ||
-                null
-            )
-          : null;
+        let attrs = UU5.Common.VisualComponent.getAttrs(this.props, mainClassName);
+        // TODO 3rd parameter should be "statics" but uuCourseKit has components inside of UU5.Bricks.P which
+        // then won't be shown due to nesting level so we keep it broken for now.
+        let children =
+          UU5.Utils.Content.getChildren(this.props.content || this.props.children, this.props, nestingLevelList) ||
+          defaultContent ||
+          null;
+        if (nestingLevel) {
+          return UU5.Common.Element.create(tag.toLowerCase(), attrs, children);
+        } else if (InlineComponent) {
+          return (
+            <InlineComponent {...this.props} {...attrs}>
+              {children}
+            </InlineComponent>
+          );
+        } else {
+          return null;
+        }
       },
       //@@viewOff:render
     });
@@ -160,7 +167,8 @@ export const Factory = {
 
 export const Div = UU5.Common.Div;
 
-export const P = Factory.createTag("P", null, null, null, "smallBox", "smallBox"); //smallBox,smallBox
+const InlineParagraph = UU5.Common.Reference.forward((props, ref) => <span ref={ref} {...props} />);
+export const P = Factory.createTag("P", null, null, null, "smallBox", "smallBox", InlineParagraph); //smallBox,smallBox
 
 export const Paragraph = Factory.createTag(
   "p",
@@ -168,35 +176,30 @@ export const Paragraph = Factory.createTag(
   null,
   "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Vestibulum fermentum tortor id mi. Etiam commodo dui eget wisi. Integer malesuada. Fusce consectetuer risus a nunc. Nullam eget nisl. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Aenean placerat. Etiam neque. Fusce suscipit libero eget elit.",
   "smallBox",
-  "smallBox"
+  "smallBox",
+  InlineParagraph
 );
 
-export const Small = Factory.createTag("Small", null, null, null, "inline"); //inline
-export const Lead = Factory.createTag("span", "Lead", "lead", "inline"); //inline
-export const Del = Factory.createTag("Del", null, null, null, "inline"); //inline
-export const S = Factory.createTag("S", null, null, null, "inline"); //inline
-export const Ins = Factory.createTag("Ins", null, null, null, "inline"); //inline
-export const U = Factory.createTag("U", null, null, null, "inline"); //inline
-export const Strong = Factory.createTag("Strong", null, null, null, "inline"); //inline
-export const Em = Factory.createTag("Em", null, null, null, "inline"); //inline
-export const Abbr = Factory.createTag("Abbr", null, null, null, "inline"); //inline
-export const Address = Factory.createTag("Address", null, null, null, "inline"); //inline
-export const Dd = Factory.createTag("Dd", null, null, null, "smallBox", "smallBox", {
-  editMode: {
-    enableWrapper: false,
-  },
-}); //smallBox,smallBox
-export const Dt = Factory.createTag("Dt", null, null, null, "smallBox", "smallBox", {
-  editMode: {
-    enableWrapper: false,
-  },
-}); //smallBox,smallBox
+export const Small = Factory.createTag("Small", null, null, null, "inline", null); //inline
+export const Lead = Factory.createTag("span", "Lead", "lead", "inline", null); //inline
+export const Del = Factory.createTag("Del", null, null, null, "inline", null); //inline
+export const S = Factory.createTag("S", null, null, null, "inline", null); //inline
+export const Ins = Factory.createTag("Ins", null, null, null, "inline", null); //inline
+export const U = Factory.createTag("U", null, null, null, "inline", null); //inline
+export const Strong = Factory.createTag("Strong", null, null, null, "inline", null); //inline
+export const Em = Factory.createTag("Em", null, null, null, "inline", null); //inline
+export const Abbr = Factory.createTag("Abbr", null, null, null, "inline", null); //inline
+export const Address = Factory.createTag("Address", null, null, null, "inline", null); //inline
+export const Dd = Factory.createTag("Dd", null, null, null, "smallBox", "smallBox", null); //smallBox,smallBox
+export const Dt = Factory.createTag("Dt", null, null, null, "smallBox", "smallBox", null); //smallBox,smallBox
 
 // code
-export const Var = Factory.createTag("Var", null, null, null, "inline"); //inline
-export const Kbd = Factory.createTag("Kbd", null, null, null, "inline"); //inline
-export const Pre = Factory.createTag("Pre", null, ns.css("pre"), null, "boxCollection", "inline"); //boxCollection,inline
-export const Samp = Factory.createTag("Samp", null, null, null, "inline"); //inline
+export const Var = Factory.createTag("Var", null, null, null, "inline", null); //inline
+export const Kbd = Factory.createTag("Kbd", null, null, null, "inline", null); //inline
+// const InlinePre = UU5.Common.Reference.forward((props, ref) => <Code ref={ref} {...props} />);
+// export const Pre = Factory.createTag("Pre", null, ns.css("pre"), null, "boxCollection", "inline", InlinePre); //boxCollection,inline
+export const Pre = Factory.createTag("Pre", null, ns.css("pre"), null, "boxCollection", "inline", null); //boxCollection,inline
+export const Samp = Factory.createTag("Samp", null, null, null, "inline", null); //inline
 
 export const LinkUnicorn = Factory.createLink("Unicorn", "http://unicorn.com", "Unicorn");
 export const LinkUnicornSystems = Factory.createLink(
@@ -219,17 +222,9 @@ export const LinkUnicornCollege = LinkUnicornUniversity;
 let docKitUrl = "https://docs.plus4u.net/";
 let bookKitUrl = "https://uuapp.plus4u.net/uu-bookkit-maing01/";
 export const LinkUAF = Factory.createLink("UAF", docKitUrl + "uaf", "UAF");
-export const LinkUuApp = Factory.createLink(
-  "UuApp",
-  docKitUrl + "uaf/uuapp",
-  "uuApp"
-);
+export const LinkUuApp = Factory.createLink("UuApp", docKitUrl + "uaf/uuapp", "uuApp");
 export const LinkUU5 = Factory.createLink("UU5", docKitUrl + "uaf/uuapp/uu5", "uu5");
-export const LinkUuPlus4U5 = Factory.createLink(
-  "UuPlus4U5",
-  docKitUrl + "uaf/uuapp/plus4u5",
-  "uuPlus4U5"
-);
+export const LinkUuPlus4U5 = Factory.createLink("UuPlus4U5", docKitUrl + "uaf/uuapp/plus4u5", "uuPlus4U5");
 export const LinkUuAppLibraryRegistry = Factory.createLink(
   "LinkUuAppLibraryRegistry",
   bookKitUrl + "d7a56a17285748f7a5a743898958af23",
@@ -242,51 +237,27 @@ export const LinkUu5CodeKit = Factory.createLink(
   bookKitUrl + "f2142743693e4b22b1753c9fb761e945",
   "uu5CodeKit"
 );
-export const LinkUuAppServer = Factory.createLink(
-  "UuAppServer",
-  docKitUrl + "uaf/uuapp/uuappserver",
-  "uuAppServer"
-);
+export const LinkUuAppServer = Factory.createLink("UuAppServer", docKitUrl + "uaf/uuapp/uuappserver", "uuAppServer");
 export const LinkUuAppServerJava = Factory.createLink(
   "UuAppServerJava",
   bookKitUrl + "99c939a08e0849c68df5ee339c94054b",
   "uuAppServer-Java"
 );
-export const LinkUuOIDC = Factory.createLink(
-  "UuOIDC",
-  bookKitUrl + "d684156f06004f2781c88777e74834ef",
-  "uuOIDC"
-);
-export const LinkUuCloud = Factory.createLink(
-  "UuCloud",
-  docKitUrl + "uaf/uuapp/uucloud",
-  "uuCloud"
-);
+export const LinkUuOIDC = Factory.createLink("UuOIDC", bookKitUrl + "d684156f06004f2781c88777e74834ef", "uuOIDC");
+export const LinkUuCloud = Factory.createLink("UuCloud", docKitUrl + "uaf/uuapp/uucloud", "uuCloud");
 export const LinkUuBookKit = Factory.createLink(
   "UuBookKit",
   bookKitUrl + "e3f5c648e85f4319bd8fc25ea5be6c2c",
   "uuBookKit"
 );
-export const LinkUuDocKit = Factory.createLink(
-  "UuDocKit",
-  bookKitUrl + "e3f5c648e85f4319bd8fc25ea5be6c2c",
-  "uuDocKit"
-);
+export const LinkUuDocKit = Factory.createLink("UuDocKit", bookKitUrl + "e3f5c648e85f4319bd8fc25ea5be6c2c", "uuDocKit");
 export const LinkUuBmlDraw = Factory.createLink(
   "UuBmlDraw",
   bookKitUrl + "6f64aebc07184e9088d6e0542a8f9682",
   "uuBmlDraw"
 );
-export const LinkUuKnowledgeBase = Factory.createLink(
-  "UuKnowledgeBase",
-  docKitUrl,
-  "uuKnowledgeBase "
-);
-export const LinkUuP = Factory.createLink(
-  "LinkUuP",
-  bookKitUrl + "c86acb9189cb421892546005a1099ea7",
-  "uuP"
-);
+export const LinkUuKnowledgeBase = Factory.createLink("UuKnowledgeBase", docKitUrl, "uuKnowledgeBase ");
+export const LinkUuP = Factory.createLink("LinkUuP", bookKitUrl + "c86acb9189cb421892546005a1099ea7", "uuP");
 export const LinkUUP = LinkUuP;
 export const LinkMyTerritory = Factory.createLink("LinkMyTerritory", "https://unicorn.com", "My Territory");
 export const LinkUuMT = Factory.createLink("LinkUuMT", "https://unicorn.com", "uuMT");

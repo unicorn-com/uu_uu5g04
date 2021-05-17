@@ -1973,7 +1973,18 @@ exports[`UU5.Bricks.TouchIcon nestingLevel="container" 1`] = `
 </Fragment>
 `;
 
-exports[`UU5.Bricks.TouchIcon nestingLevel="inline" 1`] = `""`;
+exports[`UU5.Bricks.TouchIcon nestingLevel="inline" 1`] = `
+<Link
+  className="uu-bricks-4lh3wl"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="inline"
+>
+  <Icon
+    icon="mdi-file"
+  />
+</Link>
+`;
 
 exports[`UU5.Bricks.TouchIcon nestingLevel="page" 1`] = `
 <Fragment>

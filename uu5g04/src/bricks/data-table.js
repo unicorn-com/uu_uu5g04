@@ -14,19 +14,20 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+import Tr from "./table-tr.js";
+import Td from "./table-td.js";
 
 import Table from "./table.js";
 import THead from "./table-thead.js";
 import TFoot from "./table-tfoot.js";
 import TBody from "./table-tbody.js";
 import Th from "./table-th.js";
-import Td from "./table-td.js";
-import Tr from "./table-tr.js";
+import Lsi from "./bricks-lsi.js";
 
 import "./data-table.less";
 //@@viewOff:imports
 
-export const DataTable = UU5.Common.LsiMixin.withContext(
+let DataTable = UU5.Common.LsiMixin.withContext(
   UU5.Common.VisualComponent.create({
     displayName: "DataTable", // for backward compatibility (test snapshots)
 
@@ -226,15 +227,17 @@ export const DataTable = UU5.Common.LsiMixin.withContext(
 
     //@@viewOn:render
     render: function () {
+      let headerToUse = this.getNestingLevel()
+        ? this.props.header
+        : this.props.header || <UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.dataTableName} />;
       var result;
-
       if (this.state.valid) {
         result = (
           <Table
             {...this._getMainProps()}
-            header={this.props.header}
+            header={headerToUse}
             footer={this.props.footer}
-            nestingLevel={this.getNestingLevel()}
+            nestingLevel={this.getNestingLevel() ? this.getNestingLevel() : "inline"}
           >
             {this._getHeaderRow()}
             {this._getBodyRows()}
@@ -251,4 +254,5 @@ export const DataTable = UU5.Common.LsiMixin.withContext(
   })
 );
 
+export { DataTable };
 export default DataTable;

@@ -11,7 +11,8 @@
  * at the email: info@unicorn.com.
  */
 
-import * as UU5 from "uu5g04";
+// devkit-pure-exports
+export * from "./forms-extra-exports.js";
 
 export * from "./mixins/choice-mixin.js";
 export * from "./mixins/form-mixin.js";
@@ -52,27 +53,8 @@ export * from "./context-forms/context-header.js";
 export * from "./context-forms/context-modal.js";
 export * from "./context-forms/context-section.js";
 
-import { ContextFormConsumer } from "./context-forms/context.js";
-export { ContextFormConsumer };
+export { ContextFormConsumer } from "./context-forms/context.js";
 
-import Context from "./form-context.js";
-export { Context };
+export { Context } from "./form-context.js";
 
-import Controls from "./controls.js";
-export { Controls };
-
-const FormControls = () => {
-  UU5.Common.Tools.warning("UU5.Forms.FormControls is deprecated! Use UU5.Forms.Controls instead.");
-  return <Controls {...this.props} />;
-};
-export { FormControls };
-
-UU5.Environment.addRuntimeLibrary({
-  name: `${UU5.Environment.name}-forms`,
-  version: process.env.VERSION,
-  namespace: "UU5.Forms", // TODO Use process.env.NAMESPACE after upgrading to devkit 3.x.
-});
-export const bookKitUrl =
-  "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page";
-
-import "./color-schema/default.less";
+export { Controls } from "./controls.js";

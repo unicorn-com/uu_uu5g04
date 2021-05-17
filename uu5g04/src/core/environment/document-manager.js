@@ -21,17 +21,22 @@ export class DocumentManager {
     document.head.appendChild(link);
   }
 
-  static isCssAdded(path) {
-    let ss = document.styleSheets;
-    for (let i = 0; i < ss.length; i++) {
-      if (ss[i].href === path) {
-        return true;
-      }
+  static isCssAdded(uri) {
+    let absoluteUri = _toAbsoluteUri(uri);
+    let links = document.querySelectorAll("link");
+    for (let i = 0; i < links.length; i++) {
+      if (links[i].href === absoluteUri) return true;
     }
     return false;
   }
 
   static addUniqueCss = Utils.DOM.addCss;
+}
+
+function _toAbsoluteUri(uri) {
+  let a = document.createElement("a");
+  a.href = uri; // browser will do normalization (resolve relative paths, add missing protocol/domain, ...)
+  return a.href;
 }
 
 export default DocumentManager;

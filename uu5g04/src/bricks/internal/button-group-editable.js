@@ -13,8 +13,8 @@
 
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
-import "uu5g04-bricks";
 import ns from "./bricks-editable-ns.js";
+import Lsi from "../lsi.js";
 import EditableLsi from "./bricks-editable-lsi.js";
 //@@viewOff:imports
 
@@ -29,8 +29,8 @@ const editableComponentPropsSetup = [
     label: EditableLsi.buttonGroup.verticalLabel,
     getProps: () => ({
       items: [
-        { content: <UU5.Bricks.Lsi lsi={EditableLsi.buttonGroup.verticalValueFalse} />, value: false },
-        { content: <UU5.Bricks.Lsi lsi={EditableLsi.buttonGroup.verticalLabelTrue} />, value: true },
+        { content: <Lsi lsi={EditableLsi.buttonGroup.verticalValueFalse} />, value: false },
+        { content: <Lsi lsi={EditableLsi.buttonGroup.verticalLabelTrue} />, value: true },
       ],
     }),
   },
@@ -50,11 +50,11 @@ const editableDisplayPropsSetup = [
 
 const editablePropsSetup = [
   {
-    name: <UU5.Bricks.Lsi lsi={EditableLsi.common.componentPropsLabel} />,
+    name: <Lsi lsi={EditableLsi.common.componentPropsLabel} />,
     setup: editableComponentPropsSetup,
   },
   {
-    name: <UU5.Bricks.Lsi lsi={EditableLsi.common.displayPropsLabel} />,
+    name: <Lsi lsi={EditableLsi.common.displayPropsLabel} />,
     setup: editableDisplayPropsSetup,
   },
 ];

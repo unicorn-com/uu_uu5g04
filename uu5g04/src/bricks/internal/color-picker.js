@@ -1,11 +1,12 @@
+//@@viewOn:imports
 import * as UU5 from "uu5g04";
-//import "uu5g04-bricks";
 
 import ns from "./bricks-editable-ns.js";
 import Css from "./css.js";
 import Lsi from "./bricks-editable-lsi.js";
 
 import ColorSquare from "./color-square.js";
+//@@viewOff:imports
 
 const COLOR_SCHEMAS = [
   "indigo",

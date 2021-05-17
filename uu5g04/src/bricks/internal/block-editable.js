@@ -11,15 +11,15 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import * as UU5 from "uu5g04";
-import "uu5g04-bricks";
-//import "uu5g04-bricks-editable";
 
 import ns from "./bricks-editable-ns.js";
 import Lsi from "./bricks-editable-lsi.js";
 import Css from "./css.js";
 
 import ColorPicker from "./color-picker.js";
+//@@viewOff:imports
 
 const DEFAULT_PROPS_MAP = {
   contentEditable: false,

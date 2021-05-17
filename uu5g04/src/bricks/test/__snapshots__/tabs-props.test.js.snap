@@ -4516,7 +4516,271 @@ exports[`UU5.Bricks.Tabs nestingLevel="container" 1`] = `
 </Fragment>
 `;
 
-exports[`UU5.Bricks.Tabs nestingLevel="inline" 1`] = `""`;
+exports[`UU5.Bricks.Tabs nestingLevel="inline" 1`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "_btn": Object {},
+      "_isMounted": true,
+      "_resizeCallbacks": Object {},
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.PureRenderMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.NestingLevelMixin",
+        "UU5.Common.ColorSchemaMixin",
+        "UU5.Common.ContentMixin",
+        "UU5.Common.ScreenSizeMixin",
+        "UU5.Common.EditableMixin",
+      ],
+      "props": Object {
+        "_contextScreenSize": undefined,
+        "activeName": null,
+        "allowTags": Array [],
+        "borderRadius": null,
+        "checkGrammar": undefined,
+        "checkHighlight": undefined,
+        "checkSpaces": undefined,
+        "children": Array [
+          <tabs-item
+            _active={false}
+            _fade={false}
+            className={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            footer={null}
+            header="Tab 1"
+            hidden={false}
+            id="tab1"
+            ignoreInnerHTML={false}
+            increaseLevel={false}
+            level={null}
+            mainAttrs={null}
+            name="tab1"
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+            underline={false}
+          >
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+          </tabs-item>,
+          <tabs-item
+            _active={false}
+            _fade={false}
+            className={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            footer={null}
+            header="Tab 2"
+            hidden={false}
+            id="tab2"
+            ignoreInnerHTML={false}
+            increaseLevel={false}
+            level={null}
+            mainAttrs={null}
+            name="tab2"
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+            underline={false}
+          >
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+          </tabs-item>,
+          <tabs-item
+            _active={false}
+            _fade={false}
+            className={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            footer={null}
+            header="Tab 3"
+            hidden={false}
+            id="tab3"
+            ignoreInnerHTML={false}
+            increaseLevel={false}
+            level={null}
+            mainAttrs={null}
+            name="tab3"
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+            underline={false}
+          >
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
+          </tabs-item>,
+        ],
+        "className": null,
+        "colorSchema": null,
+        "content": null,
+        "controlled": true,
+        "disabled": false,
+        "dynamic": false,
+        "elevation": null,
+        "elevationHover": null,
+        "fade": false,
+        "getEditablePropValue": undefined,
+        "hidden": false,
+        "id": "uuID",
+        "ignoreInnerHTML": false,
+        "initialActiveName": undefined,
+        "justified": false,
+        "lineProps": null,
+        "mainAttrs": null,
+        "mountTabContent": undefined,
+        "name": null,
+        "nestingLevel": "inline",
+        "noIndex": false,
+        "onChange": null,
+        "parent": null,
+        "pureRender": false,
+        "ref_": null,
+        "selected": false,
+        "size": "m",
+        "stacked": false,
+        "style": null,
+        "textCorrector": undefined,
+        "tooltip": null,
+        "type": "tabs",
+        "underline": true,
+      },
+      "refs": Object {},
+      "renderedChildren": Array [],
+      "renderedChildrenIdList": Object {},
+      "renderedChildrenNameList": Object {},
+      "state": Object {
+        "activeName": null,
+        "disabled": false,
+        "editableComponentLazyLoaded": false,
+        "editation": false,
+        "hidden": false,
+        "mode": undefined,
+        "nestingLevel": null,
+        "renderedTabs": Array [
+          Object {
+            "id": "tab1",
+            "name": "tab1",
+          },
+          Object {
+            "id": "tab2",
+            "name": "tab2",
+          },
+          Object {
+            "id": "tab3",
+            "name": "tab3",
+          },
+        ],
+        "screenSize": "l",
+        "selected": false,
+        "stacked": false,
+      },
+      "tagName": "UU5.Bricks.Tabs",
+    }
+  }
+  editModalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Taby",
+          "en": "Tabs",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  getPropsToSave={[Function]}
+  linkTitle={
+    <span
+      className="uu-bricks-1jt2d61"
+    >
+      <span>
+        Tab 1
+      </span>
+      <span>
+        Tab 2
+      </span>
+      <span>
+        Tab 3
+      </span>
+    </span>
+  }
+  modalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Taby",
+          "en": "Tabs",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  renderEditationMode={[Function]}
+/>
+`;
 
 exports[`UU5.Bricks.Tabs nestingLevel="page" 1`] = `
 <Fragment>

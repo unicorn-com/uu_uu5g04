@@ -464,7 +464,175 @@ exports[`UU5.Bricks.Container name="myName" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container nestingLevel="bigBox" 1`] = `""`;
+exports[`UU5.Bricks.Container nestingLevel="bigBox" 1`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "__isMounted": true,
+      "_domNode": null,
+      "_isMounted": true,
+      "_resizeCallbacks": Object {},
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.NestingLevelMixin",
+        "UU5.Common.ContentMixin",
+        "UU5.Common.LevelMixin",
+        "UU5.Common.SectionMixin",
+        "UU5.Common.PureRenderMixin",
+        "UU5.Common.EditableMixin",
+      ],
+      "props": Object {
+        "checkGrammar": undefined,
+        "checkHighlight": undefined,
+        "checkSpaces": undefined,
+        "className": null,
+        "content": null,
+        "controlled": true,
+        "disabled": false,
+        "dynamic": false,
+        "footer": null,
+        "getEditablePropValue": undefined,
+        "header": null,
+        "hidden": false,
+        "id": "uuID",
+        "ignoreInnerHTML": false,
+        "increaseLevel": false,
+        "level": null,
+        "mainAttrs": null,
+        "name": null,
+        "nestingLevel": "bigBox",
+        "noIndex": false,
+        "noSpacing": false,
+        "parent": null,
+        "pureRender": false,
+        "ref_": null,
+        "selected": false,
+        "style": null,
+        "textCorrector": undefined,
+        "tooltip": null,
+        "underline": false,
+      },
+      "refs": Object {},
+      "renderedChildren": Array [],
+      "renderedChildrenIdList": Object {},
+      "renderedChildrenNameList": Object {},
+      "renderedFooterChild": null,
+      "renderedHeaderChild": null,
+      "state": Object {
+        "disabled": false,
+        "editableComponentLazyLoaded": false,
+        "editation": false,
+        "editationLazyLoaded": false,
+        "hidden": false,
+        "level": 0,
+        "mode": undefined,
+        "nestingLevel": null,
+        "selected": false,
+      },
+      "tagName": "UU5.Bricks.Container",
+    }
+  }
+  editModalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Upravit kontejner",
+          "en": "Edit container",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  getPropsToSave={[Function]}
+  linkTitle={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Kontejner",
+          "en": "Container",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  modalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Kontejner",
+          "en": "Container",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  renderEditationMode={[Function]}
+/>
+`;
 
 exports[`UU5.Bricks.Container nestingLevel="bigBoxCollection" 1`] = `
 <div
@@ -475,9 +643,345 @@ exports[`UU5.Bricks.Container nestingLevel="bigBoxCollection" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container nestingLevel="box" 1`] = `""`;
+exports[`UU5.Bricks.Container nestingLevel="box" 1`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "__isMounted": true,
+      "_domNode": null,
+      "_isMounted": true,
+      "_resizeCallbacks": Object {},
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.NestingLevelMixin",
+        "UU5.Common.ContentMixin",
+        "UU5.Common.LevelMixin",
+        "UU5.Common.SectionMixin",
+        "UU5.Common.PureRenderMixin",
+        "UU5.Common.EditableMixin",
+      ],
+      "props": Object {
+        "checkGrammar": undefined,
+        "checkHighlight": undefined,
+        "checkSpaces": undefined,
+        "className": null,
+        "content": null,
+        "controlled": true,
+        "disabled": false,
+        "dynamic": false,
+        "footer": null,
+        "getEditablePropValue": undefined,
+        "header": null,
+        "hidden": false,
+        "id": "uuID",
+        "ignoreInnerHTML": false,
+        "increaseLevel": false,
+        "level": null,
+        "mainAttrs": null,
+        "name": null,
+        "nestingLevel": "box",
+        "noIndex": false,
+        "noSpacing": false,
+        "parent": null,
+        "pureRender": false,
+        "ref_": null,
+        "selected": false,
+        "style": null,
+        "textCorrector": undefined,
+        "tooltip": null,
+        "underline": false,
+      },
+      "refs": Object {},
+      "renderedChildren": Array [],
+      "renderedChildrenIdList": Object {},
+      "renderedChildrenNameList": Object {},
+      "renderedFooterChild": null,
+      "renderedHeaderChild": null,
+      "state": Object {
+        "disabled": false,
+        "editableComponentLazyLoaded": false,
+        "editation": false,
+        "editationLazyLoaded": false,
+        "hidden": false,
+        "level": 0,
+        "mode": undefined,
+        "nestingLevel": null,
+        "selected": false,
+      },
+      "tagName": "UU5.Bricks.Container",
+    }
+  }
+  editModalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Upravit kontejner",
+          "en": "Edit container",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  getPropsToSave={[Function]}
+  linkTitle={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Kontejner",
+          "en": "Container",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  modalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Kontejner",
+          "en": "Container",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  renderEditationMode={[Function]}
+/>
+`;
 
-exports[`UU5.Bricks.Container nestingLevel="boxCollection" 1`] = `""`;
+exports[`UU5.Bricks.Container nestingLevel="boxCollection" 1`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "__isMounted": true,
+      "_domNode": null,
+      "_isMounted": true,
+      "_resizeCallbacks": Object {},
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.NestingLevelMixin",
+        "UU5.Common.ContentMixin",
+        "UU5.Common.LevelMixin",
+        "UU5.Common.SectionMixin",
+        "UU5.Common.PureRenderMixin",
+        "UU5.Common.EditableMixin",
+      ],
+      "props": Object {
+        "checkGrammar": undefined,
+        "checkHighlight": undefined,
+        "checkSpaces": undefined,
+        "className": null,
+        "content": null,
+        "controlled": true,
+        "disabled": false,
+        "dynamic": false,
+        "footer": null,
+        "getEditablePropValue": undefined,
+        "header": null,
+        "hidden": false,
+        "id": "uuID",
+        "ignoreInnerHTML": false,
+        "increaseLevel": false,
+        "level": null,
+        "mainAttrs": null,
+        "name": null,
+        "nestingLevel": "boxCollection",
+        "noIndex": false,
+        "noSpacing": false,
+        "parent": null,
+        "pureRender": false,
+        "ref_": null,
+        "selected": false,
+        "style": null,
+        "textCorrector": undefined,
+        "tooltip": null,
+        "underline": false,
+      },
+      "refs": Object {},
+      "renderedChildren": Array [],
+      "renderedChildrenIdList": Object {},
+      "renderedChildrenNameList": Object {},
+      "renderedFooterChild": null,
+      "renderedHeaderChild": null,
+      "state": Object {
+        "disabled": false,
+        "editableComponentLazyLoaded": false,
+        "editation": false,
+        "editationLazyLoaded": false,
+        "hidden": false,
+        "level": 0,
+        "mode": undefined,
+        "nestingLevel": null,
+        "selected": false,
+      },
+      "tagName": "UU5.Bricks.Container",
+    }
+  }
+  editModalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Upravit kontejner",
+          "en": "Edit container",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  getPropsToSave={[Function]}
+  linkTitle={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Kontejner",
+          "en": "Container",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  modalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Kontejner",
+          "en": "Container",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  renderEditationMode={[Function]}
+/>
+`;
 
 exports[`UU5.Bricks.Container nestingLevel="container" 1`] = `
 <div
@@ -488,7 +992,175 @@ exports[`UU5.Bricks.Container nestingLevel="container" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container nestingLevel="inline" 1`] = `""`;
+exports[`UU5.Bricks.Container nestingLevel="inline" 1`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "__isMounted": true,
+      "_domNode": null,
+      "_isMounted": true,
+      "_resizeCallbacks": Object {},
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.NestingLevelMixin",
+        "UU5.Common.ContentMixin",
+        "UU5.Common.LevelMixin",
+        "UU5.Common.SectionMixin",
+        "UU5.Common.PureRenderMixin",
+        "UU5.Common.EditableMixin",
+      ],
+      "props": Object {
+        "checkGrammar": undefined,
+        "checkHighlight": undefined,
+        "checkSpaces": undefined,
+        "className": null,
+        "content": null,
+        "controlled": true,
+        "disabled": false,
+        "dynamic": false,
+        "footer": null,
+        "getEditablePropValue": undefined,
+        "header": null,
+        "hidden": false,
+        "id": "uuID",
+        "ignoreInnerHTML": false,
+        "increaseLevel": false,
+        "level": null,
+        "mainAttrs": null,
+        "name": null,
+        "nestingLevel": "inline",
+        "noIndex": false,
+        "noSpacing": false,
+        "parent": null,
+        "pureRender": false,
+        "ref_": null,
+        "selected": false,
+        "style": null,
+        "textCorrector": undefined,
+        "tooltip": null,
+        "underline": false,
+      },
+      "refs": Object {},
+      "renderedChildren": Array [],
+      "renderedChildrenIdList": Object {},
+      "renderedChildrenNameList": Object {},
+      "renderedFooterChild": null,
+      "renderedHeaderChild": null,
+      "state": Object {
+        "disabled": false,
+        "editableComponentLazyLoaded": false,
+        "editation": false,
+        "editationLazyLoaded": false,
+        "hidden": false,
+        "level": 0,
+        "mode": undefined,
+        "nestingLevel": null,
+        "selected": false,
+      },
+      "tagName": "UU5.Bricks.Container",
+    }
+  }
+  editModalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Upravit kontejner",
+          "en": "Edit container",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  getPropsToSave={[Function]}
+  linkTitle={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Kontejner",
+          "en": "Container",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  modalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Kontejner",
+          "en": "Container",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  renderEditationMode={[Function]}
+/>
+`;
 
 exports[`UU5.Bricks.Container nestingLevel="page" 1`] = `
 <div
@@ -499,9 +1171,345 @@ exports[`UU5.Bricks.Container nestingLevel="page" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container nestingLevel="smallBox" 1`] = `""`;
+exports[`UU5.Bricks.Container nestingLevel="smallBox" 1`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "__isMounted": true,
+      "_domNode": null,
+      "_isMounted": true,
+      "_resizeCallbacks": Object {},
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.NestingLevelMixin",
+        "UU5.Common.ContentMixin",
+        "UU5.Common.LevelMixin",
+        "UU5.Common.SectionMixin",
+        "UU5.Common.PureRenderMixin",
+        "UU5.Common.EditableMixin",
+      ],
+      "props": Object {
+        "checkGrammar": undefined,
+        "checkHighlight": undefined,
+        "checkSpaces": undefined,
+        "className": null,
+        "content": null,
+        "controlled": true,
+        "disabled": false,
+        "dynamic": false,
+        "footer": null,
+        "getEditablePropValue": undefined,
+        "header": null,
+        "hidden": false,
+        "id": "uuID",
+        "ignoreInnerHTML": false,
+        "increaseLevel": false,
+        "level": null,
+        "mainAttrs": null,
+        "name": null,
+        "nestingLevel": "smallBox",
+        "noIndex": false,
+        "noSpacing": false,
+        "parent": null,
+        "pureRender": false,
+        "ref_": null,
+        "selected": false,
+        "style": null,
+        "textCorrector": undefined,
+        "tooltip": null,
+        "underline": false,
+      },
+      "refs": Object {},
+      "renderedChildren": Array [],
+      "renderedChildrenIdList": Object {},
+      "renderedChildrenNameList": Object {},
+      "renderedFooterChild": null,
+      "renderedHeaderChild": null,
+      "state": Object {
+        "disabled": false,
+        "editableComponentLazyLoaded": false,
+        "editation": false,
+        "editationLazyLoaded": false,
+        "hidden": false,
+        "level": 0,
+        "mode": undefined,
+        "nestingLevel": null,
+        "selected": false,
+      },
+      "tagName": "UU5.Bricks.Container",
+    }
+  }
+  editModalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Upravit kontejner",
+          "en": "Edit container",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  getPropsToSave={[Function]}
+  linkTitle={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Kontejner",
+          "en": "Container",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  modalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Kontejner",
+          "en": "Container",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  renderEditationMode={[Function]}
+/>
+`;
 
-exports[`UU5.Bricks.Container nestingLevel="smallBoxCollection" 1`] = `""`;
+exports[`UU5.Bricks.Container nestingLevel="smallBoxCollection" 1`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "__isMounted": true,
+      "_domNode": null,
+      "_isMounted": true,
+      "_resizeCallbacks": Object {},
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.NestingLevelMixin",
+        "UU5.Common.ContentMixin",
+        "UU5.Common.LevelMixin",
+        "UU5.Common.SectionMixin",
+        "UU5.Common.PureRenderMixin",
+        "UU5.Common.EditableMixin",
+      ],
+      "props": Object {
+        "checkGrammar": undefined,
+        "checkHighlight": undefined,
+        "checkSpaces": undefined,
+        "className": null,
+        "content": null,
+        "controlled": true,
+        "disabled": false,
+        "dynamic": false,
+        "footer": null,
+        "getEditablePropValue": undefined,
+        "header": null,
+        "hidden": false,
+        "id": "uuID",
+        "ignoreInnerHTML": false,
+        "increaseLevel": false,
+        "level": null,
+        "mainAttrs": null,
+        "name": null,
+        "nestingLevel": "smallBoxCollection",
+        "noIndex": false,
+        "noSpacing": false,
+        "parent": null,
+        "pureRender": false,
+        "ref_": null,
+        "selected": false,
+        "style": null,
+        "textCorrector": undefined,
+        "tooltip": null,
+        "underline": false,
+      },
+      "refs": Object {},
+      "renderedChildren": Array [],
+      "renderedChildrenIdList": Object {},
+      "renderedChildrenNameList": Object {},
+      "renderedFooterChild": null,
+      "renderedHeaderChild": null,
+      "state": Object {
+        "disabled": false,
+        "editableComponentLazyLoaded": false,
+        "editation": false,
+        "editationLazyLoaded": false,
+        "hidden": false,
+        "level": 0,
+        "mode": undefined,
+        "nestingLevel": null,
+        "selected": false,
+      },
+      "tagName": "UU5.Bricks.Container",
+    }
+  }
+  editModalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Upravit kontejner",
+          "en": "Edit container",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  getPropsToSave={[Function]}
+  linkTitle={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Kontejner",
+          "en": "Container",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  modalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Kontejner",
+          "en": "Container",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  renderEditationMode={[Function]}
+/>
+`;
 
 exports[`UU5.Bricks.Container nestingLevel="spa" 1`] = `
 <div

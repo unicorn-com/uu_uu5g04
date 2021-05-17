@@ -14,6 +14,8 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+import { InlineMode } from "./internal/inline-mode.js";
+import Lsi from "./bricks-lsi.js";
 const ClassNames = UU5.Common.ClassNames;
 
 import "./image.less";
@@ -260,7 +262,17 @@ let Image = UU5.Common.VisualComponent.create({
       );
     }
 
-    return this.getNestingLevel() ? image : null;
+    return this.getNestingLevel() ? (
+      image
+    ) : (
+      <InlineMode
+        component={this}
+        Component={UU5.Bricks.Image}
+        modalHeader={<UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.imageName} />}
+        linkTitle={this.props.alt || this.props.src || <UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.imageName} />}
+        modalProps={{ size: "auto" }}
+      />
+    );
   },
   //@@viewOff:render
 });

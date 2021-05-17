@@ -516,6 +516,89 @@ const BricksLsi = {
       en: "Inactive modal",
     },
   },
+  inlineComponentHeaders: {
+    accordionEditHeader: {
+      cs: "Upravit accordion",
+      en: "Edit accordion",
+    },
+    accordionName: {
+      cs: "Akordeon",
+      en: "Accordion",
+    },
+    cardEditHeader: {
+      cs: "Upravit kartu",
+      en: "Edit card",
+    },
+    cardName: {
+      en: "Card",
+      cs: "Karta",
+    },
+    containerEditHeader: {
+      cs: "Upravit kontejner",
+      en: "Edit container",
+    },
+    containerName: {
+      cs: "Kontejner",
+      en: "Container",
+    },
+    dataTableName: {
+      cs: "Tabulka s daty",
+      en: "Data table",
+    },
+    googleMapName: {
+      cs: "Mapa",
+      en: "Map",
+    },
+    imageName: {
+      cs: "Obrázek",
+      en: "Image",
+    },
+    newspaperName: {
+      cs: "Zprávy",
+      en: "Newspaper",
+    },
+    newspaperEditHeader: {
+      cs: "Upravit zprávy",
+      en: "Edit newspaper",
+    },
+    qRCodeModalHeader: {
+      cs: "Upravit QR kód",
+      en: "Edit QR code",
+    },
+    qRCodeName: {
+      cs: "QR kód",
+      en: "QR code",
+    },
+    sectionName: {
+      en: "Section",
+      cs: "Sekce",
+    },
+    sectionEditHeader: {
+      cs: "Editace sekce",
+      en: "Section editation",
+    },
+    tableName: {
+      cs: "Tabulka",
+      en: "Table",
+    },
+    tabsName: {
+      en: "Tabs",
+      cs: "Taby",
+    },
+    tabsEditHeader: {
+      cs: "Editace záložek",
+      en: "Tabs editation",
+    },
+    carouselEditHeader: {
+      cs: "Upravit carousel",
+      en: "Edit carousel",
+    },
+    carouselName: { en: "Carousel", cs: "Carousel" },
+    panelEditHeader: {
+      cs: "Upravit panel",
+      en: "Edit panel",
+    },
+  },
 };
 
 function getWeekDayNamesShort(lang) {

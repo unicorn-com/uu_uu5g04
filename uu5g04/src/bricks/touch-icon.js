@@ -70,6 +70,12 @@ export const TouchIcon = UU5.Common.VisualComponent.create({
           `
         );
       },
+      inline: () =>
+        Css.css`
+            .uu5-bricks-icon{
+              padding-right: 8px;
+            }
+          `,
       icon: ns.css("touch-icon-icon"),
       bgStyle: ns.css("touch-icon-"),
     },
@@ -120,10 +126,13 @@ export const TouchIcon = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _getMainAttrs() {
+  _getMainAttrs(inline) {
     let mainAttrs = this.getMainPropsToPass();
 
     mainAttrs.className += " " + this.getClassName().bgStyle + this.props.bgStyle;
+    if (inline) {
+      mainAttrs.className = this.getClassName("inline");
+    }
     mainAttrs.content = null;
     mainAttrs.onClick = this.props.onClick;
     mainAttrs.onCtrlClick = this.props.onCtrlClick;
@@ -167,7 +176,12 @@ export const TouchIcon = UU5.Common.VisualComponent.create({
           {this.props.lines !== 0 && <div className={this.getClassName("label")}>{this.getChildren()}</div>}
         </Link>
       </>
-    ) : null;
+    ) : (
+      <Link colorSchema={this.props.colorSchema} {...this._getMainAttrs(true)}>
+        <Icon icon={this.props.icon} />
+        {this.getChildren()}
+      </Link>
+    );
   },
   //@@viewOff:render
 });

@@ -12,17 +12,15 @@
  */
 
 import UU5 from "uu5g04";
-import * as Bricks from "./bricks.js";
+import "./bricks-startup.js";
 
+import * as Exports from "./bricks.js";
 export * from "./bricks.js";
-export default Bricks;
-
-import BricksLsi from "./bricks-lsi.js";
-UU5.Environment.Lsi.Bricks = BricksLsi;
+export default Exports;
 
 // merge into UU5
 // NOTE "uu5g04" must ensure that the key already exists there, otherwise following usage wouldn't work:
 //   import * as UU5 from "uu5g04";
 //   import "uu5g04-forms";
 //   console.log(UU5.Forms.TextArea);
-for (var k in Bricks) UU5.Bricks[k] = Bricks[k];
+Object.defineProperties(UU5.Bricks, Object.getOwnPropertyDescriptors(Exports));

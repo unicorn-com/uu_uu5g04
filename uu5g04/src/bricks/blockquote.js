@@ -16,6 +16,7 @@ import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import Footer from "./blockquote-footer.js";
+import Css from "./internal/css.js";
 
 const EditableBlockquote = UU5.Common.Component.lazy(async () => {
   await SystemJS.import("uu5g04-forms");
@@ -52,6 +53,9 @@ export const Blockquote = UU5.Common.VisualComponent.create({
       right: "blockquote-reverse",
       noSpacing: ns.css("blockquote-nospacing"),
       editation: ns.css("blockquote-editation"),
+      inline: () => Css.css`
+      padding: 0px 8px;
+    `,
     },
     opt: {
       nestingLevelWrapper: true,
@@ -103,11 +107,12 @@ export const Blockquote = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _buildMainAttrs: function () {
+  _buildMainAttrs: function (isInline) {
     var mainAttrs = this.getMainAttrs();
     this.props.background && (mainAttrs.className += " " + this.getClassName().bg);
     this.props.alignment === "right" && (mainAttrs.className += " " + this.getClassName().right);
     this.props.noSpacing && (mainAttrs.className += " " + this.getClassName().noSpacing);
+    isInline && (mainAttrs.className += " " + this.getClassName("inline"));
     return mainAttrs;
   },
 
@@ -148,9 +153,9 @@ export const Blockquote = UU5.Common.VisualComponent.create({
 
   //@@viewOn:render
   render: function () {
-    return this.getNestingLevel() ? (
-      <blockquote {...this._buildMainAttrs()}>
-        {this.state.editation ? this._renderEditationMode() : null}
+    let nestingLevel = this.getNestingLevel();
+    let content = (
+      <>
         {!this.state.editation || !this._isEditationLazyLoaded()
           ? [
               this.getChildren(),
@@ -160,8 +165,13 @@ export const Blockquote = UU5.Common.VisualComponent.create({
               this.getDisabledCover(),
             ]
           : null}
-      </blockquote>
-    ) : null;
+      </>
+    );
+    return nestingLevel ? (
+      <blockquote {...this._buildMainAttrs()}>{content}</blockquote>
+    ) : (
+      <span {...this._buildMainAttrs(true)}>{content}</span>
+    );
   },
   //@@viewOff:render
 });

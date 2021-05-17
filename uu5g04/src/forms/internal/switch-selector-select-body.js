@@ -108,7 +108,7 @@ const classes = {
   },
 };
 
-export const SelectBody = createReactClass({
+export const SelectBody = UU5.Common.VisualComponent.create({
   //@@viewOn:mixins
   mixins: [
     UU5.Common.BaseMixin,

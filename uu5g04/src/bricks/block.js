@@ -14,6 +14,7 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+import Css from "./internal/css.js";
 
 const EditableBlock = UU5.Common.Component.lazy(async () => {
   await SystemJS.import("uu5g04-forms");
@@ -48,6 +49,9 @@ export const Block = UU5.Common.VisualComponent.create({
       main: ns.css("block"),
       bg: ns.css("block-bg"),
       editation: ns.css("block-editation"),
+      inline: () => Css.css`
+        padding: 0px 8px;
+      `,
     },
     opt: {
       nestingLevelWrapper: true,
@@ -91,9 +95,10 @@ export const Block = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _buildMainAttrs: function () {
+  _buildMainAttrs: function (isInline = false) {
     var mainAttrs = this.getMainAttrs();
     this.props.background && (mainAttrs.className += " " + this.getClassName().bg);
+    isInline && (mainAttrs.className += " " + this.getClassName("inline"));
     return mainAttrs;
   },
 
@@ -130,12 +135,18 @@ export const Block = UU5.Common.VisualComponent.create({
 
   //@@viewOn:render
   render: function () {
-    return this.getNestingLevel() ? (
-      <div {...this._buildMainAttrs()}>
+    let nestingLevel = this.getNestingLevel();
+    let content = (
+      <>
         {this.state.editation ? this._renderEditationMode() : null}
         {!this.state.editation || !this._isEditationLazyLoaded() ? [this.getChildren(), this.getDisabledCover()] : null}
-      </div>
-    ) : null;
+      </>
+    );
+    return nestingLevel ? (
+      <div {...this._buildMainAttrs()}>{content}</div>
+    ) : (
+      <span {...this._buildMainAttrs(true)}>{content}</span>
+    );
   },
   //@@viewOff:render
 });

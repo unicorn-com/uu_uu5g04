@@ -1146,7 +1146,18 @@ exports[`UU5.Bricks.ProgressBar nestingLevel="container" 1`] = `
 </Fragment>
 `;
 
-exports[`UU5.Bricks.ProgressBar nestingLevel="inline" 1`] = `""`;
+exports[`UU5.Bricks.ProgressBar nestingLevel="inline" 1`] = `
+<span>
+  <Text
+    className="uu-bricks-1ox5g05"
+    colorSchema="blue"
+    key="0"
+  >
+    25
+    %
+  </Text>
+</span>
+`;
 
 exports[`UU5.Bricks.ProgressBar nestingLevel="page" 1`] = `
 <Fragment>
@@ -1170,9 +1181,31 @@ exports[`UU5.Bricks.ProgressBar nestingLevel="page" 1`] = `
 </Fragment>
 `;
 
-exports[`UU5.Bricks.ProgressBar nestingLevel="smallBox" 1`] = `""`;
+exports[`UU5.Bricks.ProgressBar nestingLevel="smallBox" 1`] = `
+<span>
+  <Text
+    className="uu-bricks-1ox5g05"
+    colorSchema="blue"
+    key="0"
+  >
+    25
+    %
+  </Text>
+</span>
+`;
 
-exports[`UU5.Bricks.ProgressBar nestingLevel="smallBoxCollection" 1`] = `""`;
+exports[`UU5.Bricks.ProgressBar nestingLevel="smallBoxCollection" 1`] = `
+<span>
+  <Text
+    className="uu-bricks-1ox5g05"
+    colorSchema="blue"
+    key="0"
+  >
+    25
+    %
+  </Text>
+</span>
+`;
 
 exports[`UU5.Bricks.ProgressBar nestingLevel="spa" 1`] = `
 <Fragment>

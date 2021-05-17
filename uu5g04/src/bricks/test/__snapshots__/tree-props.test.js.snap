@@ -560,7 +560,112 @@ exports[`UU5.Bricks.Tree nestingLevel="container" 1`] = `
 </tree-list>
 `;
 
-exports[`UU5.Bricks.Tree nestingLevel="inline" 1`] = `""`;
+exports[`UU5.Bricks.Tree nestingLevel="inline" 1`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "__isMounted": true,
+      "_isMounted": true,
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.PureRenderMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.ContentMixin",
+        "UU5.Common.NestingLevelMixin",
+      ],
+      "props": Object {
+        "allowTags": Array [],
+        "checkGrammar": undefined,
+        "checkHighlight": undefined,
+        "checkSpaces": undefined,
+        "children": Array [
+          <TreeItem
+            className={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            expanded={true}
+            hidden={false}
+            iconCollapsed={null}
+            iconExpanded={null}
+            id="idChild"
+            ignoreInnerHTML={false}
+            items={null}
+            label="Anchorman"
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          />,
+        ],
+        "className": null,
+        "content": null,
+        "controlled": true,
+        "disabled": false,
+        "dynamic": false,
+        "hidden": false,
+        "iconCollapsed": null,
+        "iconExpanded": null,
+        "id": "uuID",
+        "ignoreInnerHTML": false,
+        "items": null,
+        "mainAttrs": null,
+        "name": null,
+        "nestingLevel": "inline",
+        "noIndex": false,
+        "parent": null,
+        "pureRender": false,
+        "ref_": null,
+        "selected": false,
+        "size": "m",
+        "style": null,
+        "textCorrector": undefined,
+        "tooltip": null,
+      },
+      "refs": Object {},
+      "renderedChildren": Array [],
+      "renderedChildrenIdList": Object {},
+      "renderedChildrenNameList": Object {},
+      "state": Object {
+        "disabled": false,
+        "hidden": false,
+        "mode": undefined,
+        "nestingLevel": null,
+        "selected": false,
+      },
+      "tagName": "UU5.Bricks.Tree",
+    }
+  }
+  linkTitle={
+    <span
+      className="uu-bricks-1jt2d61"
+    >
+      <span>
+        Anchorman
+      </span>
+    </span>
+  }
+  modalHeader={
+    <span
+      className="uu-bricks-1jt2d61"
+    >
+      <span>
+        Anchorman
+      </span>
+    </span>
+  }
+/>
+`;
 
 exports[`UU5.Bricks.Tree nestingLevel="page" 1`] = `
 <tree-list

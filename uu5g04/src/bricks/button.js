@@ -208,7 +208,7 @@ const Styles = {
   },
 };
 
-export const Button = UU5.Common.VisualComponent.create({
+let Button = UU5.Common.VisualComponent.create({
   displayName: "Button", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
@@ -581,22 +581,26 @@ export const Button = UU5.Common.VisualComponent.create({
 
   //@@viewOn:render
   render() {
-    let component = (
+    let component = this.getNestingLevel() ? (
+      <button {...this._buildMainAttrs()} ref={(button) => (this._button = button)}>
+        {this._getChildren()}
+      </button>
+    ) : (
+      <UU5.Bricks.Link {...this.props} />
+    );
+    return (
       <>
+        {component}
         {this.isInlineEdited() && (
           <UU5.Common.Suspense fallback={this.getEditingLoading()}>
             <ButtonEditable component={this} ref={this._ref} />
           </UU5.Common.Suspense>
         )}
-        <button {...this._buildMainAttrs()} ref={(button) => (this._button = button)}>
-          {this._getChildren()}
-        </button>
       </>
     );
-
-    return this.getNestingLevel() ? component : null;
   },
   //@@viewOff:render
 });
 
+export { Button };
 export default Button;

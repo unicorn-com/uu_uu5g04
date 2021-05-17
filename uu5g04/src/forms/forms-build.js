@@ -12,17 +12,15 @@
  */
 
 import UU5 from "uu5g04";
-import * as Forms from "./forms.js";
+import "./forms-startup.js";
 
+import * as Exports from "./forms.js";
 export * from "./forms.js";
-export default Forms;
-
-import FormsLsi from "./forms-lsi.js";
-UU5.Environment.Lsi.Forms = FormsLsi;
+export default Exports;
 
 // merge into UU5
 // NOTE "uu5g04" must ensure that the key already exists there, otherwise following usage wouldn't work:
 //   import * as UU5 from "uu5g04";
 //   import "uu5g04-forms";
 //   console.log(UU5.Forms.TextArea);
-for (var k in Forms) UU5.Forms[k] = Forms[k];
+Object.defineProperties(UU5.Forms, Object.getOwnPropertyDescriptors(Exports));

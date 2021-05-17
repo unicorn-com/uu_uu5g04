@@ -393,6 +393,7 @@ export const BaseMixin = {
     if (this.getName()) newMainAttrs.name = this.getName();
 
     if (this.buildMainAttrs) newMainAttrs = this.buildMainAttrs(newMainAttrs);
+    if (newMainAttrs) delete newMainAttrs.dangerouslySetInnerHTML;
     return newMainAttrs;
   },
 

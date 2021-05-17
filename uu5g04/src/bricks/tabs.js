@@ -19,12 +19,13 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+import Css from "./internal/css.js";
 
 import TabsItem from "./tabs-item.js";
 import Button from "./button.js";
 import Line from "./line.js";
-import Lsi from "./internal/bricks-editable-lsi.js";
-
+import { InlineMode } from "./internal/inline-mode.js";
+import Lsi from "./bricks-lsi.js";
 const EditationComponent = UU5.Common.Component.lazy(async () => {
   await SystemJS.import("uu5g04-forms");
   await SystemJS.import("uu5g04-bricks-editable");
@@ -42,6 +43,25 @@ const MOUNT_TAB_CONTENT_VALUES = {
 
 const getMountTabContent = (props) => {
   return props.mountTabContent === undefined ? MOUNT_TAB_CONTENT_VALUES.onFirstRender : props.mountTabContent;
+};
+
+const CLASS_NAMES = {
+  inline: (renderDots) => {
+    let dots = renderDots ? "..." : "";
+    return Css.css(`
+      & > *{
+        pointer-events: none;
+        &::after {
+          content: ", ";
+        }
+        &:last-child{
+          &::after {
+            content: "${dots}";
+          }
+        }
+      }
+    `);
+  },
 };
 
 export const Tabs = UU5.Common.VisualComponent.create({
@@ -72,6 +92,20 @@ export const Tabs = UU5.Common.VisualComponent.create({
       content: ns.css("tabs-list-content"),
       size: ns.css("tabs-list-size-"),
       active: ns.css("tabs-list-active"),
+      inline: Css.css(`
+      & > *{
+        pointer-events: none;
+        &::after {
+          content: ", ";
+        }
+        &:last-child{
+          color: green;
+          &::after {
+            content: " eee";
+          }
+        }
+      }
+    `),
     },
     defaults: {
       childTagName: "UU5.Bricks.Tabs.Item",
@@ -81,9 +115,9 @@ export const Tabs = UU5.Common.VisualComponent.create({
     },
     editMode: {
       enablePlaceholder: true,
-      name: Lsi.tabs.name,
-      startMode: "button"
-    }
+      name: Lsi.inlineComponentHeaders.tabsName,
+      startMode: "button",
+    },
   },
   //@@viewOff:statics
 
@@ -510,6 +544,20 @@ export const Tabs = UU5.Common.VisualComponent.create({
   _registerEditableComponent(tabs) {
     this._editableTabs = tabs;
   },
+
+  _prepareInlineTitle() {
+    let titles = this.getChildren();
+    let renderDots = titles.length > 3 ? true : false;
+    titles = titles.slice(0, 3);
+
+    return (
+      <span className={CLASS_NAMES.inline(renderDots)}>
+        {titles.map((tab, index) => (
+          <span key={index}>{tab.props.header}</span>
+        ))}
+      </span>
+    );
+  },
   //@@viewOff:private
 
   //@@viewOn:render
@@ -531,7 +579,17 @@ export const Tabs = UU5.Common.VisualComponent.create({
         </div>
         {this.state.editation ? this._renderEditationMode() : null}
       </UU5.Common.Fragment>
-    ) : null;
+    ) : (
+      <InlineMode
+        component={this}
+        Component={UU5.Bricks.Tabs}
+        editModalHeader={<UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.tabsName} />}
+        linkTitle={this._prepareInlineTitle() || <UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.tabsName} />}
+        modalHeader={<UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.tabsName} />}
+        getPropsToSave={this.onBeforeForceEndEditation_}
+        renderEditationMode={this._renderEditationMode}
+      />
+    );
   },
   //@@viewOff:render
 });

@@ -14,13 +14,14 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+import withLinkModal from "./internal/with-link-modal";
 import "./camera.less";
 //@@viewOff:imports
 
 // TODO
 // quality of picture -> jpg, png, ...
 // choice of camera devices if pc has more cameras
-export const Camera = UU5.Common.VisualComponent.create({
+let Camera = UU5.Common.VisualComponent.create({
   displayName: "Camera", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.NestingLevelMixin, UU5.Common.PureRenderMixin],
@@ -154,4 +155,7 @@ export const Camera = UU5.Common.VisualComponent.create({
   //@@viewOff:render
 });
 
+Camera = withLinkModal(Camera, Camera.displayName, Camera.nestingLevelList, Camera.displayName);
+
+export { Camera };
 export default Camera;

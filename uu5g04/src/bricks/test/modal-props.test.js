@@ -18,9 +18,8 @@ import "uu5g04-bricks";
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
-// NOTE For this test only we'll overwrite UU5.Bricks.Modal with non-HOC variant (without modal bus HOC).
+// NOTE For this test only we'll use non-HOC variant of UU5.Bricks.Modal (without modal bus HOC).
 const NonHocModal = UU5.Bricks.Modal._originalComponent;
-UU5.Bricks.Modal = NonHocModal;
 
 const MyModalComponent = UU5.Common.VisualComponent.create({
   getInitialState: () => {
@@ -36,9 +35,9 @@ const MyModalComponent = UU5.Common.VisualComponent.create({
 
   render() {
     return (
-      <UU5.Bricks.Modal shown={true} header="sticky" id={"idModal"} onClose={this.onCloseAlert}>
+      <NonHocModal shown={true} header="sticky" id={"idModal"} onClose={this.onCloseAlert}>
         This modal has props shown = true and onClose eventn handlers.
-      </UU5.Bricks.Modal>
+      </NonHocModal>
     );
   },
 });
@@ -120,7 +119,7 @@ const CONFIG = {
 const This = {};
 
 describe(`UU5.Bricks.Modal props`, () => {
-  UU5.Test.Tools.testProperties(UU5.Bricks.Modal, CONFIG);
+  UU5.Test.Tools.testProperties(NonHocModal, CONFIG);
 });
 
 describe(`UU5.Bricks.Modal props.Function`, () => {
@@ -156,9 +155,9 @@ describe(`UU5.Bricks.Modal props.Function`, () => {
       },
     });
     const wrapper = mount(
-      <UU5.Bricks.Modal>
+      <NonHocModal>
         <Log />
-      </UU5.Bricks.Modal>
+      </NonHocModal>
     );
 
     expect(log).toBeCalled();
@@ -216,9 +215,9 @@ describe(`UU5.Bricks.Modal props.Function`, () => {
       },
     });
     const wrapper = mount(
-      <UU5.Bricks.Modal mountContent={MOUNT_CONTENT_VALUES.onFirstOpen}>
+      <NonHocModal mountContent={MOUNT_CONTENT_VALUES.onFirstOpen}>
         <Log />
-      </UU5.Bricks.Modal>
+      </NonHocModal>
     );
 
     // modal is not rendered before first open
@@ -277,9 +276,9 @@ describe(`UU5.Bricks.Modal props.Function`, () => {
       },
     });
     const wrapper = mount(
-      <UU5.Bricks.Modal mountContent={MOUNT_CONTENT_VALUES.onEachOpen}>
+      <NonHocModal mountContent={MOUNT_CONTENT_VALUES.onEachOpen}>
         <Log />
-      </UU5.Bricks.Modal>
+      </NonHocModal>
     );
 
     // modal is not rendered before first open of modal
@@ -330,9 +329,9 @@ describe(`UU5.Bricks.Modal props.Function`, () => {
 describe(`UU5.Bricks.Modal docKit example`, () => {
   it(`UU5.Bricks.Modal example01`, () => {
     const wrapper = shallow(
-      <UU5.Bricks.Modal id={"modalID"} shown={true} header="shown">
+      <NonHocModal id={"modalID"} shown={true} header="shown">
         This modal has props <UU5.Bricks.Code id={"idCODE"} content="shown" /> and therefore is displayed right away.
-      </UU5.Bricks.Modal>
+      </NonHocModal>
     );
     expect(wrapper).toMatchSnapshot();
   });

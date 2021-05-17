@@ -2298,8 +2298,40 @@ exports[`UU5.Bricks.DataTable nestingLevel="container" 1`] = `
 exports[`UU5.Bricks.DataTable nestingLevel="inline" 1`] = `
 <Table
   className="uu5-bricks-data-table"
+  header={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Tabulka s daty",
+          "en": "Data table",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
   id="uuID-inner"
   mainAttrs={Object {}}
+  nestingLevel="inline"
 >
   <table-thead>
     <table-tr />
@@ -2365,8 +2397,40 @@ exports[`UU5.Bricks.DataTable nestingLevel="page" 1`] = `
 exports[`UU5.Bricks.DataTable nestingLevel="smallBox" 1`] = `
 <Table
   className="uu5-bricks-data-table"
+  header={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Tabulka s daty",
+          "en": "Data table",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
   id="uuID-inner"
   mainAttrs={Object {}}
+  nestingLevel="inline"
 >
   <table-thead>
     <table-tr />
@@ -2398,8 +2462,40 @@ exports[`UU5.Bricks.DataTable nestingLevel="smallBox" 1`] = `
 exports[`UU5.Bricks.DataTable nestingLevel="smallBoxCollection" 1`] = `
 <Table
   className="uu5-bricks-data-table"
+  header={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Tabulka s daty",
+          "en": "Data table",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
   id="uuID-inner"
   mainAttrs={Object {}}
+  nestingLevel="inline"
 >
   <table-thead>
     <table-tr />

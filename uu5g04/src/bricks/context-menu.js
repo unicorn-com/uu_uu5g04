@@ -60,6 +60,7 @@ export const ContextMenu = UU5.Common.VisualComponent.create({
     parentElement: UU5.PropTypes.object,
     allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
     compactSubmenu: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.string]),
+    location: UU5.PropTypes.oneOf(["local", "portal"]),
   },
   //@@viewOff:propTypes
 
@@ -71,6 +72,7 @@ export const ContextMenu = UU5.Common.VisualComponent.create({
       parentElement: null,
       allowTags: [],
       compactSubmenu: "xs",
+      location: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -133,6 +135,7 @@ export const ContextMenu = UU5.Common.VisualComponent.create({
     props.shown = this.props.shown;
     props.forceRender = this.props.forceRender;
     props.parentElement = this.props.parentElement;
+    props.location = this.props.location;
     props.header = this.getHeader();
     props.footer = this.getFooter();
     props.nestingLevel = this.getNestingLevel();

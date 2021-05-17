@@ -499,7 +499,14 @@ exports[`UU5.Bricks.Blockquote nestingLevel="container" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote nestingLevel="inline" 1`] = `""`;
+exports[`UU5.Bricks.Blockquote nestingLevel="inline" 1`] = `
+<span
+  className="uu5-bricks-blockquote uu-bricks-c3o8km"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
 
 exports[`UU5.Bricks.Blockquote nestingLevel="page" 1`] = `
 <blockquote
@@ -510,9 +517,23 @@ exports[`UU5.Bricks.Blockquote nestingLevel="page" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote nestingLevel="smallBox" 1`] = `""`;
+exports[`UU5.Bricks.Blockquote nestingLevel="smallBox" 1`] = `
+<span
+  className="uu5-bricks-blockquote uu-bricks-c3o8km"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
 
-exports[`UU5.Bricks.Blockquote nestingLevel="smallBoxCollection" 1`] = `""`;
+exports[`UU5.Bricks.Blockquote nestingLevel="smallBoxCollection" 1`] = `
+<span
+  className="uu5-bricks-blockquote uu-bricks-c3o8km"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
 
 exports[`UU5.Bricks.Blockquote nestingLevel="spa" 1`] = `
 <blockquote

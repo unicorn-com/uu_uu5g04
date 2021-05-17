@@ -16,9 +16,9 @@ import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Link from "./link.js";
 import Icon from "./icon.js";
-import "./alert.less";
 import Countdown from "./internal/countdown.js";
 import Css from "./internal/css.js";
+import "./alert.less";
 //@@viewOff:imports
 
 function joinTranslateStyles(translateX, translateY) {
@@ -88,14 +88,17 @@ export const Alert = UU5.Common.VisualComponent.create({
       position: ns.css("alert-"),
       block: ns.css("alert-block"),
       close: ns.css("alert-close"),
-      countdown: (props) =>
-        Css.css(`
+      countdown: (props) => Css.css`
         margin: ${props.closeDisabled ? "8px 8px 8px 8px" : "8px 0px 8px 8px"};
-      `),
-      controls: () =>
-        Css.css(`
+      `,
+      controls: () => Css.css`
         display: inline-flex;
-      `),
+      `,
+      inline: () => Css.css`
+        display: inline;
+        transform: none;
+        left: auto;
+      `,
     },
     defaults: {
       transitionDuration: 150,
@@ -295,6 +298,7 @@ export const Alert = UU5.Common.VisualComponent.create({
     let mainAttrs = this._getMainAttrs();
     let header = this.getHeader();
     let content = this.getChildren();
+    let nestingLevel = this.getNestingLevel();
     if (header && content) {
       mainAttrs.className += " " + this.getClassName("withHeader");
     } else {
@@ -305,9 +309,17 @@ export const Alert = UU5.Common.VisualComponent.create({
       mainAttrs.className += " " + this.getClassName("withoutClose");
     }
 
+    if (!nestingLevel) {
+      mainAttrs.className += " " + this.getClassName("inline");
+    }
+
     this._manageTimeout();
 
-    return this.getNestingLevel() ? <div {...mainAttrs}>{this._getChildren(header, content)}</div> : null;
+    return nestingLevel ? (
+      <div {...mainAttrs}>{this._getChildren(header, content)}</div>
+    ) : (
+      <span {...mainAttrs}>{content}</span>
+    );
   },
   //@@viewOff:render
 });

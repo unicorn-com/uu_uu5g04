@@ -452,7 +452,14 @@ exports[`UU5.Bricks.Dl nestingLevel="container" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Dl nestingLevel="inline" 1`] = `""`;
+exports[`UU5.Bricks.Dl nestingLevel="inline" 1`] = `
+<dl
+  className="uu5-bricks-dl uu-bricks-g4nixu"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
 
 exports[`UU5.Bricks.Dl nestingLevel="page" 1`] = `
 <dl

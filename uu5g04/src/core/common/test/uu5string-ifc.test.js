@@ -531,38 +531,40 @@ describe("UU5.Common.Uu5.String. - test of interface of class", () => {
   });
 
   it("uu5string template", () => {
-    const template = '<uu5string /><UU5.Bricks.Div propWithDefault="${temp:default}" prop="${temp}" />';
+    const template = '<uu5string /><UU5.Bricks.Div propWithDefault="${temp:default}" prop="${temp}"/>';
     const uu5string = new UU5.Common.UU5String(template);
 
     // undefined data - used empty object as a defaultData
     let props = uu5string.toChildren()[0].props;
     expect(props.propWithDefault).toEqual("default");
     expect(props.prop).toEqual("${temp}");
-    expect(uu5string.toString()).toMatchSnapshot();
+    expect(uu5string.toString()).toEqual('<UU5.Bricks.Div propWithDefault="default" prop="${temp}"/>');
 
     // null data - templates does not been evaluated at all
     props = uu5string.toChildren(null)[0].props;
     expect(props.propWithDefault).toBe("${temp:default}");
     expect(props.prop).toBe("${temp}");
-    expect(uu5string.toString(null)).toMatchSnapshot();
+    expect(uu5string.toString(null)).toEqual('<UU5.Bricks.Div propWithDefault="${temp:default}" prop="${temp}"/>');
 
     // empty object data
     props = uu5string.toChildren({})[0].props;
     expect(props.propWithDefault).toEqual("default");
     expect(props.prop).toEqual("${temp}");
-    expect(uu5string.toString({})).toMatchSnapshot();
+    expect(uu5string.toString({})).toEqual('<UU5.Bricks.Div propWithDefault="default" prop="${temp}"/>');
 
     // data
     props = uu5string.toChildren({ temp: "value" })[0].props;
     expect(props.propWithDefault).toEqual("value");
     expect(props.prop).toEqual("value");
-    expect(uu5string.toString({ temp: "value" })).toMatchSnapshot();
+    expect(uu5string.toString({ temp: "value" })).toEqual('<UU5.Bricks.Div propWithDefault="value" prop="value"/>');
 
     // function in data
     props = uu5string.toChildren({ temp: () => "value" })[0].props;
     expect(props.propWithDefault).toEqual("value");
     expect(props.prop).toEqual("value");
-    expect(uu5string.toString({ temp: () => "value" })).toMatchSnapshot();
+    expect(uu5string.toString({ temp: () => "value" })).toEqual(
+      '<UU5.Bricks.Div propWithDefault="value" prop="value"/>'
+    );
   });
 
   it("uu5string props in children", () => {

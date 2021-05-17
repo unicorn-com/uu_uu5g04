@@ -1050,7 +1050,27 @@ exports[`UU5.Bricks.Ul nestingLevel="container" 1`] = `
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ul nestingLevel="inline" 1`] = `""`;
+exports[`UU5.Bricks.Ul nestingLevel="inline" 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
+    }
+  }
+>
+  <ul
+    className="uu5-bricks-ul uu-bricks-18xdgtf"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  />
+</ContextProvider>
+`;
 
 exports[`UU5.Bricks.Ul nestingLevel="page" 1`] = `
 <ContextProvider
@@ -1074,9 +1094,49 @@ exports[`UU5.Bricks.Ul nestingLevel="page" 1`] = `
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ul nestingLevel="smallBox" 1`] = `""`;
+exports[`UU5.Bricks.Ul nestingLevel="smallBox" 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
+    }
+  }
+>
+  <ul
+    className="uu5-bricks-ul uu-bricks-18xdgtf"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  />
+</ContextProvider>
+`;
 
-exports[`UU5.Bricks.Ul nestingLevel="smallBoxCollection" 1`] = `""`;
+exports[`UU5.Bricks.Ul nestingLevel="smallBoxCollection" 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "iconColorSchema": null,
+      "listLevel": 1,
+      "markerIcon": "mdi-default",
+      "ordered": false,
+      "type": null,
+    }
+  }
+>
+  <ul
+    className="uu5-bricks-ul uu-bricks-18xdgtf"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  />
+</ContextProvider>
+`;
 
 exports[`UU5.Bricks.Ul nestingLevel="spa" 1`] = `
 <ContextProvider

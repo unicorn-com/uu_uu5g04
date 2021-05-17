@@ -804,7 +804,185 @@ exports[`UU5.Bricks.Card props testing nestingLevel="container" 1`] = `
 </Fragment>
 `;
 
-exports[`UU5.Bricks.Card props testing nestingLevel="inline" 1`] = `<Fragment />`;
+exports[`UU5.Bricks.Card props testing nestingLevel="inline" 1`] = `
+<Fragment>
+  <UU5.BricksEditable.InlineMode
+    Component={[Function]}
+    component={
+      Object {
+        "__isMounted": true,
+        "_domNode": null,
+        "_isMounted": true,
+        "_resizeCallbacks": Object {},
+        "context": Object {},
+        "id": "uuID",
+        "mixinRegister": Array [
+          "UU5.Common.BaseMixin",
+          "UU5.Common.ElementaryMixin",
+          "UU5.Common.NestingLevelMixin",
+          "UU5.Common.ContentMixin",
+          "UU5.Common.LevelMixin",
+          "UU5.Common.SectionMixin",
+          "UU5.Common.PureRenderMixin",
+          "UU5.Common.ColorSchemaMixin",
+          "UU5.Common.EditableMixin",
+        ],
+        "props": Object {
+          "bgStyle": "filled",
+          "borderRadius": null,
+          "checkGrammar": undefined,
+          "checkHighlight": undefined,
+          "checkSpaces": undefined,
+          "className": null,
+          "colorSchema": null,
+          "content": null,
+          "controlled": true,
+          "disabled": false,
+          "dynamic": false,
+          "elevation": 1,
+          "elevationHover": 1,
+          "footer": null,
+          "getEditablePropValue": undefined,
+          "header": null,
+          "hidden": false,
+          "id": "uuID",
+          "ignoreInnerHTML": false,
+          "increaseLevel": false,
+          "inline": false,
+          "level": null,
+          "mainAttrs": null,
+          "minWidth": null,
+          "name": null,
+          "nestingLevel": "inline",
+          "noIndex": false,
+          "noSpaces": false,
+          "parent": null,
+          "pureRender": false,
+          "ref_": null,
+          "selected": false,
+          "style": null,
+          "textCorrector": undefined,
+          "tooltip": null,
+          "underline": false,
+          "width": null,
+        },
+        "refs": Object {},
+        "renderedChildren": Array [],
+        "renderedChildrenIdList": Object {},
+        "renderedChildrenNameList": Object {},
+        "renderedFooterChild": null,
+        "renderedHeaderChild": null,
+        "state": Object {
+          "disabled": false,
+          "editableComponentLazyLoaded": false,
+          "editation": false,
+          "hidden": false,
+          "level": 0,
+          "mode": undefined,
+          "nestingLevel": null,
+          "selected": false,
+        },
+        "tagName": "UU5.Bricks.Card",
+      }
+    }
+    editModalHeader={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Upravit kartu",
+            "en": "Edit card",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    getPropsToSave={[Function]}
+    linkTitle={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Karta",
+            "en": "Card",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    modalHeader={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Karta",
+            "en": "Card",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    renderEditationMode={[Function]}
+  />
+</Fragment>
+`;
 
 exports[`UU5.Bricks.Card props testing nestingLevel="page" 1`] = `
 <Fragment>
@@ -817,9 +995,365 @@ exports[`UU5.Bricks.Card props testing nestingLevel="page" 1`] = `
 </Fragment>
 `;
 
-exports[`UU5.Bricks.Card props testing nestingLevel="smallBox" 1`] = `<Fragment />`;
+exports[`UU5.Bricks.Card props testing nestingLevel="smallBox" 1`] = `
+<Fragment>
+  <UU5.BricksEditable.InlineMode
+    Component={[Function]}
+    component={
+      Object {
+        "__isMounted": true,
+        "_domNode": null,
+        "_isMounted": true,
+        "_resizeCallbacks": Object {},
+        "context": Object {},
+        "id": "uuID",
+        "mixinRegister": Array [
+          "UU5.Common.BaseMixin",
+          "UU5.Common.ElementaryMixin",
+          "UU5.Common.NestingLevelMixin",
+          "UU5.Common.ContentMixin",
+          "UU5.Common.LevelMixin",
+          "UU5.Common.SectionMixin",
+          "UU5.Common.PureRenderMixin",
+          "UU5.Common.ColorSchemaMixin",
+          "UU5.Common.EditableMixin",
+        ],
+        "props": Object {
+          "bgStyle": "filled",
+          "borderRadius": null,
+          "checkGrammar": undefined,
+          "checkHighlight": undefined,
+          "checkSpaces": undefined,
+          "className": null,
+          "colorSchema": null,
+          "content": null,
+          "controlled": true,
+          "disabled": false,
+          "dynamic": false,
+          "elevation": 1,
+          "elevationHover": 1,
+          "footer": null,
+          "getEditablePropValue": undefined,
+          "header": null,
+          "hidden": false,
+          "id": "uuID",
+          "ignoreInnerHTML": false,
+          "increaseLevel": false,
+          "inline": false,
+          "level": null,
+          "mainAttrs": null,
+          "minWidth": null,
+          "name": null,
+          "nestingLevel": "smallBox",
+          "noIndex": false,
+          "noSpaces": false,
+          "parent": null,
+          "pureRender": false,
+          "ref_": null,
+          "selected": false,
+          "style": null,
+          "textCorrector": undefined,
+          "tooltip": null,
+          "underline": false,
+          "width": null,
+        },
+        "refs": Object {},
+        "renderedChildren": Array [],
+        "renderedChildrenIdList": Object {},
+        "renderedChildrenNameList": Object {},
+        "renderedFooterChild": null,
+        "renderedHeaderChild": null,
+        "state": Object {
+          "disabled": false,
+          "editableComponentLazyLoaded": false,
+          "editation": false,
+          "hidden": false,
+          "level": 0,
+          "mode": undefined,
+          "nestingLevel": null,
+          "selected": false,
+        },
+        "tagName": "UU5.Bricks.Card",
+      }
+    }
+    editModalHeader={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Upravit kartu",
+            "en": "Edit card",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    getPropsToSave={[Function]}
+    linkTitle={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Karta",
+            "en": "Card",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    modalHeader={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Karta",
+            "en": "Card",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    renderEditationMode={[Function]}
+  />
+</Fragment>
+`;
 
-exports[`UU5.Bricks.Card props testing nestingLevel="smallBoxCollection" 1`] = `<Fragment />`;
+exports[`UU5.Bricks.Card props testing nestingLevel="smallBoxCollection" 1`] = `
+<Fragment>
+  <UU5.BricksEditable.InlineMode
+    Component={[Function]}
+    component={
+      Object {
+        "__isMounted": true,
+        "_domNode": null,
+        "_isMounted": true,
+        "_resizeCallbacks": Object {},
+        "context": Object {},
+        "id": "uuID",
+        "mixinRegister": Array [
+          "UU5.Common.BaseMixin",
+          "UU5.Common.ElementaryMixin",
+          "UU5.Common.NestingLevelMixin",
+          "UU5.Common.ContentMixin",
+          "UU5.Common.LevelMixin",
+          "UU5.Common.SectionMixin",
+          "UU5.Common.PureRenderMixin",
+          "UU5.Common.ColorSchemaMixin",
+          "UU5.Common.EditableMixin",
+        ],
+        "props": Object {
+          "bgStyle": "filled",
+          "borderRadius": null,
+          "checkGrammar": undefined,
+          "checkHighlight": undefined,
+          "checkSpaces": undefined,
+          "className": null,
+          "colorSchema": null,
+          "content": null,
+          "controlled": true,
+          "disabled": false,
+          "dynamic": false,
+          "elevation": 1,
+          "elevationHover": 1,
+          "footer": null,
+          "getEditablePropValue": undefined,
+          "header": null,
+          "hidden": false,
+          "id": "uuID",
+          "ignoreInnerHTML": false,
+          "increaseLevel": false,
+          "inline": false,
+          "level": null,
+          "mainAttrs": null,
+          "minWidth": null,
+          "name": null,
+          "nestingLevel": "smallBoxCollection",
+          "noIndex": false,
+          "noSpaces": false,
+          "parent": null,
+          "pureRender": false,
+          "ref_": null,
+          "selected": false,
+          "style": null,
+          "textCorrector": undefined,
+          "tooltip": null,
+          "underline": false,
+          "width": null,
+        },
+        "refs": Object {},
+        "renderedChildren": Array [],
+        "renderedChildrenIdList": Object {},
+        "renderedChildrenNameList": Object {},
+        "renderedFooterChild": null,
+        "renderedHeaderChild": null,
+        "state": Object {
+          "disabled": false,
+          "editableComponentLazyLoaded": false,
+          "editation": false,
+          "hidden": false,
+          "level": 0,
+          "mode": undefined,
+          "nestingLevel": null,
+          "selected": false,
+        },
+        "tagName": "UU5.Bricks.Card",
+      }
+    }
+    editModalHeader={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Upravit kartu",
+            "en": "Edit card",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    getPropsToSave={[Function]}
+    linkTitle={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Karta",
+            "en": "Card",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    modalHeader={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Karta",
+            "en": "Card",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    renderEditationMode={[Function]}
+  />
+</Fragment>
+`;
 
 exports[`UU5.Bricks.Card props testing nestingLevel="spa" 1`] = `
 <Fragment>

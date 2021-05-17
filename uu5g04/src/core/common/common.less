@@ -106,7 +106,12 @@ body {
 }
 
 @media @isXs {
-  [class^="@{name}-newspaper-layout-"], [class*=" @{name}-newspaper-layout-"] {
+  .@{name}-newspaper-layout-1,
+  .@{name}-newspaper-layout-2,
+  .@{name}-newspaper-layout-3,
+  .@{name}-newspaper-layout-4,
+  .@{name}-newspaper-layout-5,
+  .@{name}-newspaper-layout-6 {
     -webkit-column-count: 1; /* Chrome, Safari, Opera */
     -moz-column-count: 1; /* Firefox */
     column-count: 1;
@@ -185,4 +190,11 @@ body {
 
 .@{name}-underline {
   text-decoration: underline;
+}
+
+.uu5-common-temp-textarea {
+  opacity: 0;
+  position: absolute;
+  left: -1000px;
+  top: -1000px;
 }

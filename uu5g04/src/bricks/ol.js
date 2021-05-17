@@ -51,6 +51,29 @@ export const Ol = Context.withListContext(
           return classNames.join(" ");
         },
         type: ns.css("ol-type-"),
+        inline: Css.css(`
+
+
+        &&& ol{
+          display:inline-flex;
+          width: auto;
+          padding:0;
+          margin:0;
+          padding-left: 0px;
+        };
+
+        && > li{
+          display:inline-flex;
+          list-style:none;
+          text-decoration:none;
+          margin-left:0px;
+          ::before{
+            width:16px;
+            padding:0px 12px;
+            left: 0;
+          }
+      };
+        `),
       },
       defaults: {
         childTagName: "UU5.Bricks.Li",
@@ -128,14 +151,14 @@ export const Ol = Context.withListContext(
       };
     },
 
-    _getMainAttrs() {
+    _getMainAttrs(isInline) {
       const mainAttrs = this.getMainAttrs();
       mainAttrs.type = this.props.type;
 
       if (this.props.type) {
         mainAttrs.className += " " + this.getClassName("type") + this.props.type;
 
-        if (this.props.type === "1.1" && this._counterId) {
+        if ((this.props.type === "1.1" || isInline) && this._counterId) {
           mainAttrs.className +=
             " " +
             Css.css`
@@ -144,6 +167,7 @@ export const Ol = Context.withListContext(
             `;
         }
       }
+      isInline && (mainAttrs.className += " " + this.getClassName("inline"));
 
       return mainAttrs;
     },
@@ -151,16 +175,16 @@ export const Ol = Context.withListContext(
 
     //@@viewOn:render
     render() {
-      return this.getNestingLevel() ? (
+      return (
         <ListContext.Provider value={this._getContextValues()}>
-          <ol {...this._getMainAttrs()}>
+          <ol {...this._getMainAttrs(!this.getNestingLevel())}>
             {this.getHeaderChild()}
             {this.getChildren()}
             {this.getFooterChild()}
             {this.getDisabledCover()}
           </ol>
         </ListContext.Provider>
-      ) : null;
+      );
     },
     //@@viewOff:render
   })

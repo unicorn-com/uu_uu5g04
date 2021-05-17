@@ -2648,7 +2648,27 @@ exports[`UU5.Bricks.Alert props nestingLevel="container" 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Alert props nestingLevel="inline" 1`] = `""`;
+exports[`UU5.Bricks.Alert props nestingLevel="inline" 1`] = `
+<span
+  className="uu-bricks-9me4w6 uu5-bricks-alert uu5-bricks-alert-center uu5-bricks-alert-with-header uu-bricks-1dw0pkm"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "MsTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+  />
+</span>
+`;
 
 exports[`UU5.Bricks.Alert props nestingLevel="page" 1`] = `
 <div
@@ -2700,9 +2720,49 @@ exports[`UU5.Bricks.Alert props nestingLevel="page" 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Alert props nestingLevel="smallBox" 1`] = `""`;
+exports[`UU5.Bricks.Alert props nestingLevel="smallBox" 1`] = `
+<span
+  className="uu-bricks-9me4w6 uu5-bricks-alert uu5-bricks-alert-center uu5-bricks-alert-with-header uu-bricks-1dw0pkm"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "MsTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+  />
+</span>
+`;
 
-exports[`UU5.Bricks.Alert props nestingLevel="smallBoxCollection" 1`] = `""`;
+exports[`UU5.Bricks.Alert props nestingLevel="smallBoxCollection" 1`] = `
+<span
+  className="uu-bricks-9me4w6 uu5-bricks-alert uu5-bricks-alert-center uu5-bricks-alert-with-header uu-bricks-1dw0pkm"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "MsTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+  />
+</span>
+`;
 
 exports[`UU5.Bricks.Alert props nestingLevel="spa" 1`] = `
 <div

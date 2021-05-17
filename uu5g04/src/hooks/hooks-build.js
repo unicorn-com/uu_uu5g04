@@ -11,7 +11,8 @@
  * at the email: info@unicorn.com.
  */
 
-import * as Hooks from "./hooks.js";
+import "./hooks-startup.js";
 
+import * as Exports from "./hooks.js";
 export * from "./hooks.js";
-export default Hooks;
+export default Exports;

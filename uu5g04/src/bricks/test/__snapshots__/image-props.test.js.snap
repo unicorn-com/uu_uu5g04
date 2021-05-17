@@ -381,7 +381,128 @@ exports[`UU5.Bricks.Image nestingLevel="container" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image nestingLevel="inline" 1`] = `""`;
+exports[`UU5.Bricks.Image nestingLevel="inline" 1`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "__isMounted": true,
+      "_isMounted": true,
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.PureRenderMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.NestingLevelMixin",
+      ],
+      "props": Object {
+        "alt": undefined,
+        "authenticate": false,
+        "borderRadius": null,
+        "className": null,
+        "controlled": true,
+        "disabled": false,
+        "elevation": null,
+        "height": undefined,
+        "hidden": false,
+        "id": "uuID",
+        "mainAttrs": null,
+        "name": null,
+        "nestingLevel": "inline",
+        "noIndex": false,
+        "parent": null,
+        "pureRender": false,
+        "ref_": null,
+        "responsive": true,
+        "selected": false,
+        "src": "",
+        "style": null,
+        "tooltip": null,
+        "type": null,
+        "width": undefined,
+      },
+      "refs": Object {},
+      "state": Object {
+        "disabled": false,
+        "hidden": false,
+        "nestingLevel": null,
+        "preloadedUri": null,
+        "preloading": false,
+        "selected": false,
+      },
+      "tagName": "UU5.Bricks.Image",
+    }
+  }
+  linkTitle={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Obrázek",
+          "en": "Image",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  modalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Obrázek",
+          "en": "Image",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  modalProps={
+    Object {
+      "size": "auto",
+    }
+  }
+/>
+`;
 
 exports[`UU5.Bricks.Image nestingLevel="page" 1`] = `
 <img
@@ -394,9 +515,251 @@ exports[`UU5.Bricks.Image nestingLevel="page" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image nestingLevel="smallBox" 1`] = `""`;
+exports[`UU5.Bricks.Image nestingLevel="smallBox" 1`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "__isMounted": true,
+      "_isMounted": true,
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.PureRenderMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.NestingLevelMixin",
+      ],
+      "props": Object {
+        "alt": undefined,
+        "authenticate": false,
+        "borderRadius": null,
+        "className": null,
+        "controlled": true,
+        "disabled": false,
+        "elevation": null,
+        "height": undefined,
+        "hidden": false,
+        "id": "uuID",
+        "mainAttrs": null,
+        "name": null,
+        "nestingLevel": "smallBox",
+        "noIndex": false,
+        "parent": null,
+        "pureRender": false,
+        "ref_": null,
+        "responsive": true,
+        "selected": false,
+        "src": "",
+        "style": null,
+        "tooltip": null,
+        "type": null,
+        "width": undefined,
+      },
+      "refs": Object {},
+      "state": Object {
+        "disabled": false,
+        "hidden": false,
+        "nestingLevel": null,
+        "preloadedUri": null,
+        "preloading": false,
+        "selected": false,
+      },
+      "tagName": "UU5.Bricks.Image",
+    }
+  }
+  linkTitle={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Obrázek",
+          "en": "Image",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  modalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Obrázek",
+          "en": "Image",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  modalProps={
+    Object {
+      "size": "auto",
+    }
+  }
+/>
+`;
 
-exports[`UU5.Bricks.Image nestingLevel="smallBoxCollection" 1`] = `""`;
+exports[`UU5.Bricks.Image nestingLevel="smallBoxCollection" 1`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "__isMounted": true,
+      "_isMounted": true,
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.PureRenderMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.NestingLevelMixin",
+      ],
+      "props": Object {
+        "alt": undefined,
+        "authenticate": false,
+        "borderRadius": null,
+        "className": null,
+        "controlled": true,
+        "disabled": false,
+        "elevation": null,
+        "height": undefined,
+        "hidden": false,
+        "id": "uuID",
+        "mainAttrs": null,
+        "name": null,
+        "nestingLevel": "smallBoxCollection",
+        "noIndex": false,
+        "parent": null,
+        "pureRender": false,
+        "ref_": null,
+        "responsive": true,
+        "selected": false,
+        "src": "",
+        "style": null,
+        "tooltip": null,
+        "type": null,
+        "width": undefined,
+      },
+      "refs": Object {},
+      "state": Object {
+        "disabled": false,
+        "hidden": false,
+        "nestingLevel": null,
+        "preloadedUri": null,
+        "preloading": false,
+        "selected": false,
+      },
+      "tagName": "UU5.Bricks.Image",
+    }
+  }
+  linkTitle={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Obrázek",
+          "en": "Image",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  modalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Obrázek",
+          "en": "Image",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  modalProps={
+    Object {
+      "size": "auto",
+    }
+  }
+/>
+`;
 
 exports[`UU5.Bricks.Image nestingLevel="spa" 1`] = `
 <img

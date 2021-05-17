@@ -12,14 +12,15 @@
  */
 
 import UU5 from "uu5g04";
-import * as BricksEditable from "./bricks-editable.js";
+import "./bricks-editable-startup.js";
 
+import * as Exports from "./bricks-editable.js";
 export * from "./bricks-editable.js";
-export default BricksEditable;
+export default Exports;
 
 // merge into UU5
 // NOTE "uu5g04" must ensure that the key already exists there, otherwise following usage wouldn't work:
 //   import * as UU5 from "uu5g04";
 //   import "uu5g04-bricks-editable";
 //   console.log(UU5.BricksEditable.Section);
-for (var k in BricksEditable) UU5.BricksEditable[k] = BricksEditable[k];
+Object.defineProperties(UU5.BricksEditable, Object.getOwnPropertyDescriptors(Exports));

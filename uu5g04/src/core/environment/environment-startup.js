@@ -11,10 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
-import Environment from "./environment/environment.js";
-import initialEnvironment from "./uu5g05-integration/environment.js";
-import Tools from "./common/tools.js";
-import IconManager from "./environment/icon-manager.js";
+import initialEnvironment from "../uu5g05-integration/environment.js";
+import Environment from "./environment.js";
+import Tools from "../common/tools.js";
+import IconManager from "./icon-manager.js";
+import EventListener from "../common/event-listener.js";
+import Speech from "./speech.js";
+import CommonLsi from "../common/common-lsi.js";
 
 // merge environment settings from global variable into our defaults
 if (initialEnvironment) {
@@ -36,3 +39,6 @@ if (initialEnvironment) {
 }
 
 Environment.IconManager = new IconManager(Environment.iconLibraries);
+Environment.EventListener = new EventListener();
+Environment.Speech = new Speech();
+Environment.Lsi.Common = CommonLsi;

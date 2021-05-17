@@ -181,5 +181,5 @@ export default UU5.Common.VisualComponent.create({
   render: function () {
     return <UU5.Bricks.Popover {...this._getMainProps()}>{this.getChildren()}</UU5.Bricks.Popover>;
   },
-  //@@viewOn:render
+  //@@viewOff:render
 });

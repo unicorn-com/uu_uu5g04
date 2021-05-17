@@ -1200,7 +1200,32 @@ exports[`UU5.Bricks.Ol nestingLevel="container" 1`] = `
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol nestingLevel="inline" 1`] = `""`;
+exports[`UU5.Bricks.Ol nestingLevel="inline" 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_31",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol uu-bricks-6b65vc"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
 
 exports[`UU5.Bricks.Ol nestingLevel="page" 1`] = `
 <ContextProvider
@@ -1229,9 +1254,59 @@ exports[`UU5.Bricks.Ol nestingLevel="page" 1`] = `
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol nestingLevel="smallBox" 1`] = `""`;
+exports[`UU5.Bricks.Ol nestingLevel="smallBox" 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_30",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol uu-bricks-6b65vc"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
 
-exports[`UU5.Bricks.Ol nestingLevel="smallBoxCollection" 1`] = `""`;
+exports[`UU5.Bricks.Ol nestingLevel="smallBoxCollection" 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "counterId": "uu5_bricks_list_counter_29",
+      "listLevel": 1,
+      "ordered": true,
+      "type": null,
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol uu-bricks-6b65vc"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
 
 exports[`UU5.Bricks.Ol nestingLevel="spa" 1`] = `
 <ContextProvider

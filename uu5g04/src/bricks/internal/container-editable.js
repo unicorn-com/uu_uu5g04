@@ -11,14 +11,15 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import * as UU5 from "uu5g04";
-import "uu5g04-bricks";
-//import "uu5g04-forms";
-//import "uu5g04-bricks-editable";
 
 import ns from "./bricks-editable-ns.js";
+import Footer from "../footer.js";
+import Header from "../header.js";
 import Lsi from "./bricks-editable-lsi.js";
 import Css from "./css.js";
+//@@viewOff:imports
 
 const DEFAULT_PROPS_MAP = {
   contentEditable: false,
@@ -270,13 +271,14 @@ export const Container = UU5.Common.VisualComponent.create({
               key="headerInput"
             >
               {({ children }) => (
-                <UU5.Bricks.Header
+                <Header
                   underline={this.state.underline}
-                  level={this.state.level}
-                  parent={this.props.component}
+                  level={this.state.level || this.props.level}
+                  parent={this.props.inline ? undefined : this.props.component}
+                  nestingLevel={undefined}
                 >
                   {children}
-                </UU5.Bricks.Header>
+                </Header>
               )}
             </UU5.BricksEditable.Input>
           ) : null,
@@ -288,7 +290,7 @@ export const Container = UU5.Common.VisualComponent.create({
               onChange={this._changeFooterContent}
               key="footerInput"
             >
-              {({ children }) => <UU5.Bricks.Footer parent={this.props.component}>{children}</UU5.Bricks.Footer>}
+              {({ children }) => <Footer parent={this.props.component}>{children}</Footer>}
             </UU5.BricksEditable.Input>
           ) : null,
         ]}

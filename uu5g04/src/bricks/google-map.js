@@ -15,10 +15,12 @@
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
-import Link from "./link.js";
-import Modal from "./modal.js";
+import { InlineMode } from "./internal/inline-mode.js";
+
+import Lsi from "./bricks-lsi.js";
 
 import "./google-map.less";
+import { ListContext } from "./list-context.js";
 //@@viewOff:imports
 
 export const GoogleMap = UU5.Common.VisualComponent.create({
@@ -260,15 +262,28 @@ export const GoogleMap = UU5.Common.VisualComponent.create({
         break;
       case "inline":
         component = (
-          <span>
-            <Modal disabled={this.isDisabled()} ref_={(modal) => (this._modal = modal)}>
-              <div {...mainAttrs}>
-                <div {...mapAttrs} />
-                {/* {this.getDisabledCover()} */}
-              </div>
-            </Modal>
-            <Link disabled={this.isDisabled()} onClick={() => this._modal.open()} content={this.props.src} />
-          </span>
+          <InlineMode
+            component={this}
+            Component={UU5.Bricks.GoogleMap}
+            modalHeader={
+              this.props.longitude && this.props.latitude ? (
+                <>
+                  <UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.googleMapName} />
+                  {`\u00A0(lo: ${this.props.longitude}, la: 
+                  ${this.props.latitude})`}
+                </>
+              ) : (
+                <UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.googleMapName} />
+              )
+            }
+            linkTitle={
+              this.props.longitude && this.props.latitude ? (
+                `lo: ${this.props.longitude}, la: ${this.props.latitude}`
+              ) : (
+                <UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.googleMapName} />
+              )
+            }
+          />
         );
         break;
       default:

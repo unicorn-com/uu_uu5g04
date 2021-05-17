@@ -1154,7 +1154,22 @@ exports[`UU5.Bricks.Button props testing nestingLevel="container" 1`] = `
 </Fragment>
 `;
 
-exports[`UU5.Bricks.Button props testing nestingLevel="inline" 1`] = `""`;
+exports[`UU5.Bricks.Button props testing nestingLevel="inline" 1`] = `
+<Fragment>
+  <Link
+    baseline={false}
+    bgStyle="filled"
+    borderRadius={null}
+    displayBlock={false}
+    elevation={null}
+    elevationHover={null}
+    id="uuID"
+    nestingLevel="inline"
+    pressed={false}
+    size="m"
+  />
+</Fragment>
+`;
 
 exports[`UU5.Bricks.Button props testing nestingLevel="page" 1`] = `
 <Fragment>

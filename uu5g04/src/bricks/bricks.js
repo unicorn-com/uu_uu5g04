@@ -11,6 +11,8 @@
  * at the email: info@unicorn.com.
  */
 
+// devkit-pure-exports
+
 // Base
 export * from "./alert.js";
 export * from "./alert-bus.js";
@@ -155,27 +157,4 @@ export * from "./link-modal.js";
 export * from "./link-uve.js";
 export * from "./modal-bus.js";
 
-// Aliases
-import * as UU5 from "uu5g04";
-
-let error = UU5.Common.Error;
-export { error as Error };
-
-UU5.Environment.addRuntimeLibrary({
-  name: `${UU5.Environment.name}-bricks`,
-  version: process.env.VERSION,
-  namespace: "UU5.Bricks", // TODO Use process.env.NAMESPACE after upgrading to devkit 3.x.
-});
-export const bookKitUrl =
-  "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page";
-
-import "./color-schema/default.less";
-
-import Css from "./internal/css.js";
-
-
-Css.injectGlobal`
-  #uu5-modals > * {
-    z-index: 1050;
-  }
-`;
+export * from "./bricks-extra-exports.js";

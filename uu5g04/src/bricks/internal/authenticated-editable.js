@@ -13,8 +13,8 @@
 
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
-import "uu5g04-bricks";
 import ns from "./bricks-editable-ns.js";
+import Button from "../button.js";
 import EditableLsi from "./bricks-editable-lsi.js";
 import Css from "./css.js";
 //@@viewOff:imports
@@ -114,7 +114,7 @@ export const AuthorizedEditable = UU5.Common.VisualComponent.create({
     return authenticatedStates.map((value) => {
       let isSelected = this.state[value] === true;
       return (
-        <UU5.Bricks.Button
+        <Button
           key={value}
           bgStyle="transparent"
           colorSchema={isSelected ? "grey" : "default"}
@@ -123,7 +123,7 @@ export const AuthorizedEditable = UU5.Common.VisualComponent.create({
           onClick={() => this._onChangeAuthState(value)}
         >
           {this.getLsiComponent(value)}
-        </UU5.Bricks.Button>
+        </Button>
       );
     });
   },

@@ -243,7 +243,16 @@ export const CarouselEditable = UU5.Common.VisualComponent.create({
   },
 
   _renderItem(allChildren) {
-    return (allChildren || [])[this.state.activeItemIndex];
+    let childrenToPass;
+    if (this.props.inline) {
+      childrenToPass = UU5.Common.Children.map(allChildren, (child) =>
+        UU5.Common.Element.clone(child, { nestingLevel: "bigBox", parent: null })
+      );
+    } else {
+      childrenToPass = allChildren;
+    }
+
+    return (childrenToPass || [])[this.state.activeItemIndex];
   },
   //@@viewOff:private
 

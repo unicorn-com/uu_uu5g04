@@ -429,16 +429,6 @@ exports[`UU5.Common.Uu5.String. - test of interface of class toString(uu5string)
 
 exports[`UU5.Common.Uu5.String. - test of interface of class toString(uu5string,data,filter) 1`] = `"<UU5.Bricks.Section/>"`;
 
-exports[`UU5.Common.Uu5.String. - test of interface of class uu5string template 1`] = `"<UU5.Bricks.Div propWithDefault=\\"default\\" prop=\\"\${temp}\\"/>"`;
-
-exports[`UU5.Common.Uu5.String. - test of interface of class uu5string template 2`] = `"<UU5.Bricks.Div propWithDefault=\\"\${temp:default}\\" prop=\\"\${temp}\\"/>"`;
-
-exports[`UU5.Common.Uu5.String. - test of interface of class uu5string template 3`] = `"<UU5.Bricks.Div propWithDefault=\\"default\\" prop=\\"\${temp}\\"/>"`;
-
-exports[`UU5.Common.Uu5.String. - test of interface of class uu5string template 4`] = `"<UU5.Bricks.Div propWithDefault=\\"value\\" prop=\\"value\\"/>"`;
-
-exports[`UU5.Common.Uu5.String. - test of interface of class uu5string template 5`] = `"<UU5.Bricks.Div propWithDefault=\\"value\\" prop=\\"value\\"/>"`;
-
 exports[`UU5.Common.Uu5String - test of interface instance instance.clone(data = this.data, init = this.init) 1`] = `
 UU5String {
   "_factory": Object {

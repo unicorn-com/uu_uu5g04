@@ -17,11 +17,12 @@ import ns from "./bricks-ns.js";
 
 import { Div, Pre } from "./factory";
 import Text from "./text";
+import withLinkModal from "./internal/with-link-modal";
 
 import "./console.less";
 //@@viewOff:imports
 
-export const Console = UU5.Common.VisualComponent.create({
+let Console = UU5.Common.VisualComponent.create({
   displayName: "Console", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.NestingLevelMixin, UU5.Common.PureRenderMixin],
@@ -109,4 +110,7 @@ export const Console = UU5.Common.VisualComponent.create({
   //@@viewOff:render
 });
 
+Console = withLinkModal(Console, Console.displayName, Console.nestingLevelList, Console.displayName);
+
+export { Console };
 export default Console;

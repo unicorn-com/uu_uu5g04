@@ -454,7 +454,14 @@ exports[`UU5.Bricks.Block nestingLevel="container" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Block nestingLevel="inline" 1`] = `""`;
+exports[`UU5.Bricks.Block nestingLevel="inline" 1`] = `
+<span
+  className="uu5-bricks-block uu-bricks-zfudut"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
 
 exports[`UU5.Bricks.Block nestingLevel="page" 1`] = `
 <div
@@ -465,9 +472,23 @@ exports[`UU5.Bricks.Block nestingLevel="page" 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Block nestingLevel="smallBox" 1`] = `""`;
+exports[`UU5.Bricks.Block nestingLevel="smallBox" 1`] = `
+<span
+  className="uu5-bricks-block uu-bricks-zfudut"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
 
-exports[`UU5.Bricks.Block nestingLevel="smallBoxCollection" 1`] = `""`;
+exports[`UU5.Bricks.Block nestingLevel="smallBoxCollection" 1`] = `
+<span
+  className="uu5-bricks-block uu-bricks-zfudut"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
 
 exports[`UU5.Bricks.Block nestingLevel="spa" 1`] = `
 <div

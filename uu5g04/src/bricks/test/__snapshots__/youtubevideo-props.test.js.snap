@@ -502,7 +502,61 @@ exports[`UU5.Bricks.YoutubeVideo nestingLevel="container" 1`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo nestingLevel="inline" 1`] = `""`;
+exports[`UU5.Bricks.YoutubeVideo nestingLevel="inline" 1`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "__isMounted": true,
+      "_isMounted": true,
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.PureRenderMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.NestingLevelMixin",
+      ],
+      "props": Object {
+        "autoplay": undefined,
+        "className": null,
+        "controlled": true,
+        "disableControls": undefined,
+        "disableFullscreen": undefined,
+        "disableInfo": undefined,
+        "disableRelatedVideos": undefined,
+        "disabled": false,
+        "hidden": false,
+        "id": "uuID",
+        "loop": undefined,
+        "mainAttrs": null,
+        "muted": undefined,
+        "name": null,
+        "nestingLevel": "inline",
+        "noIndex": false,
+        "parent": null,
+        "pureRender": false,
+        "ref_": null,
+        "selected": false,
+        "size": "m",
+        "src": "",
+        "style": null,
+        "tooltip": null,
+      },
+      "refs": Object {},
+      "state": Object {
+        "disabled": false,
+        "hidden": false,
+        "nestingLevel": null,
+        "selected": false,
+      },
+      "tagName": "UU5.Bricks.YoutubeVideo",
+    }
+  }
+  linkTitle=""
+  modalHeader="YoutubeVideo"
+/>
+`;
 
 exports[`UU5.Bricks.YoutubeVideo nestingLevel="page" 1`] = `
 <Span
@@ -521,9 +575,117 @@ exports[`UU5.Bricks.YoutubeVideo nestingLevel="page" 1`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo nestingLevel="smallBox" 1`] = `""`;
+exports[`UU5.Bricks.YoutubeVideo nestingLevel="smallBox" 1`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "__isMounted": true,
+      "_isMounted": true,
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.PureRenderMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.NestingLevelMixin",
+      ],
+      "props": Object {
+        "autoplay": undefined,
+        "className": null,
+        "controlled": true,
+        "disableControls": undefined,
+        "disableFullscreen": undefined,
+        "disableInfo": undefined,
+        "disableRelatedVideos": undefined,
+        "disabled": false,
+        "hidden": false,
+        "id": "uuID",
+        "loop": undefined,
+        "mainAttrs": null,
+        "muted": undefined,
+        "name": null,
+        "nestingLevel": "smallBox",
+        "noIndex": false,
+        "parent": null,
+        "pureRender": false,
+        "ref_": null,
+        "selected": false,
+        "size": "m",
+        "src": "",
+        "style": null,
+        "tooltip": null,
+      },
+      "refs": Object {},
+      "state": Object {
+        "disabled": false,
+        "hidden": false,
+        "nestingLevel": null,
+        "selected": false,
+      },
+      "tagName": "UU5.Bricks.YoutubeVideo",
+    }
+  }
+  linkTitle=""
+  modalHeader="YoutubeVideo"
+/>
+`;
 
-exports[`UU5.Bricks.YoutubeVideo nestingLevel="smallBoxCollection" 1`] = `""`;
+exports[`UU5.Bricks.YoutubeVideo nestingLevel="smallBoxCollection" 1`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "__isMounted": true,
+      "_isMounted": true,
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.PureRenderMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.NestingLevelMixin",
+      ],
+      "props": Object {
+        "autoplay": undefined,
+        "className": null,
+        "controlled": true,
+        "disableControls": undefined,
+        "disableFullscreen": undefined,
+        "disableInfo": undefined,
+        "disableRelatedVideos": undefined,
+        "disabled": false,
+        "hidden": false,
+        "id": "uuID",
+        "loop": undefined,
+        "mainAttrs": null,
+        "muted": undefined,
+        "name": null,
+        "nestingLevel": "smallBoxCollection",
+        "noIndex": false,
+        "parent": null,
+        "pureRender": false,
+        "ref_": null,
+        "selected": false,
+        "size": "m",
+        "src": "",
+        "style": null,
+        "tooltip": null,
+      },
+      "refs": Object {},
+      "state": Object {
+        "disabled": false,
+        "hidden": false,
+        "nestingLevel": null,
+        "selected": false,
+      },
+      "tagName": "UU5.Bricks.YoutubeVideo",
+    }
+  }
+  linkTitle=""
+  modalHeader="YoutubeVideo"
+/>
+`;
 
 exports[`UU5.Bricks.YoutubeVideo nestingLevel="spa" 1`] = `
 <Span

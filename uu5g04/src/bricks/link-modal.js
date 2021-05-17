@@ -39,7 +39,7 @@ export const LinkModal = createVisualComponent({
       !hidden && (
         <UU5.Common.Fragment>
           <Link {...linkProps} content={children} onClick={this._open} />
-          <Modal {...modalProps} shown={false} ref_={this._modalRef} />
+          <Modal location="portal" {...modalProps} shown={false} ref_={this._modalRef} />
         </UU5.Common.Fragment>
       )
     );

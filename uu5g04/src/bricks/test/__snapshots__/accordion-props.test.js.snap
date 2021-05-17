@@ -872,7 +872,232 @@ exports[`UU5.Bricks.Accordion props nestingLevel="container" 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props nestingLevel="inline" 1`] = `""`;
+exports[`UU5.Bricks.Accordion props nestingLevel="inline" 1`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "__isMounted": true,
+      "_domNode": null,
+      "_isMounted": true,
+      "_resizeCallbacks": Object {},
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.NestingLevelMixin",
+        "UU5.Common.ColorSchemaMixin",
+        "UU5.Common.ContentMixin",
+        "UU5.Common.PureRenderMixin",
+        "UU5.Common.EditableMixin",
+      ],
+      "props": Object {
+        "allowTags": Array [],
+        "checkGrammar": undefined,
+        "checkHighlight": undefined,
+        "checkSpaces": undefined,
+        "children": Array [
+          <Panel
+            alwaysExpanded={false}
+            bgStyle={null}
+            bgStyleContent={null}
+            bgStyleHeader={null}
+            borderRadius={null}
+            className={null}
+            colorSchema={null}
+            content="Text in Panel"
+            contentEditable={true}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            elevation={null}
+            expanded={false}
+            footer={null}
+            header={null}
+            hidden={false}
+            iconAlign={null}
+            iconCollapsed={null}
+            iconExpanded={null}
+            id="childrenID"
+            ignoreInnerHTML={false}
+            increaseLevel={false}
+            level={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            onClick={null}
+            openClick={null}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            size="m"
+            style={null}
+            tooltip={null}
+            underline={false}
+          />,
+        ],
+        "className": null,
+        "colorSchema": null,
+        "content": null,
+        "contentEditable": true,
+        "controlled": true,
+        "disabled": false,
+        "dynamic": false,
+        "getEditablePropValue": undefined,
+        "hidden": false,
+        "iconAlign": null,
+        "iconCollapsed": null,
+        "iconExpanded": null,
+        "id": "uuID",
+        "ignoreInnerHTML": false,
+        "mainAttrs": null,
+        "mountPanelContent": undefined,
+        "name": null,
+        "nestingLevel": "inline",
+        "noIndex": false,
+        "onClick": null,
+        "onClickNotCollapseOthers": false,
+        "openClick": null,
+        "panels": null,
+        "parent": null,
+        "pureRender": false,
+        "ref_": null,
+        "selected": false,
+        "size": "m",
+        "style": null,
+        "textCorrector": undefined,
+        "tooltip": null,
+      },
+      "refs": Object {},
+      "renderedChildren": Array [],
+      "renderedChildrenIdList": Object {},
+      "renderedChildrenNameList": Object {},
+      "state": Object {
+        "disabled": false,
+        "editableComponentLazyLoaded": false,
+        "editation": false,
+        "hidden": false,
+        "mode": undefined,
+        "nestingLevel": null,
+        "selected": false,
+      },
+      "tagName": "UU5.Bricks.Accordion",
+    }
+  }
+  editModalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Upravit accordion",
+          "en": "Edit accordion",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  linkTitle={
+    <span
+      className="uu-bricks-1jt2d61"
+    >
+      <Panel
+        alwaysExpanded={false}
+        bgStyle={null}
+        bgStyleContent={null}
+        bgStyleHeader={null}
+        borderRadius={null}
+        className={null}
+        colorSchema={null}
+        content="Text in Panel"
+        contentEditable={true}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        expanded={false}
+        footer={null}
+        header={null}
+        hidden={false}
+        iconAlign={null}
+        iconCollapsed={null}
+        iconExpanded={null}
+        id="childrenID"
+        ignoreInnerHTML={false}
+        increaseLevel={false}
+        level={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        onClick={[Function]}
+        openClick={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        size="m"
+        style={null}
+        tooltip={null}
+        underline={false}
+      />
+    </span>
+  }
+  modalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Akordeon",
+          "en": "Accordion",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  renderEditationMode={[Function]}
+/>
+`;
 
 exports[`UU5.Bricks.Accordion props nestingLevel="page" 1`] = `
 <div
@@ -890,9 +1115,459 @@ exports[`UU5.Bricks.Accordion props nestingLevel="page" 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props nestingLevel="smallBox" 1`] = `""`;
+exports[`UU5.Bricks.Accordion props nestingLevel="smallBox" 1`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "__isMounted": true,
+      "_domNode": null,
+      "_isMounted": true,
+      "_resizeCallbacks": Object {},
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.NestingLevelMixin",
+        "UU5.Common.ColorSchemaMixin",
+        "UU5.Common.ContentMixin",
+        "UU5.Common.PureRenderMixin",
+        "UU5.Common.EditableMixin",
+      ],
+      "props": Object {
+        "allowTags": Array [],
+        "checkGrammar": undefined,
+        "checkHighlight": undefined,
+        "checkSpaces": undefined,
+        "children": Array [
+          <Panel
+            alwaysExpanded={false}
+            bgStyle={null}
+            bgStyleContent={null}
+            bgStyleHeader={null}
+            borderRadius={null}
+            className={null}
+            colorSchema={null}
+            content="Text in Panel"
+            contentEditable={true}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            elevation={null}
+            expanded={false}
+            footer={null}
+            header={null}
+            hidden={false}
+            iconAlign={null}
+            iconCollapsed={null}
+            iconExpanded={null}
+            id="childrenID"
+            ignoreInnerHTML={false}
+            increaseLevel={false}
+            level={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            onClick={null}
+            openClick={null}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            size="m"
+            style={null}
+            tooltip={null}
+            underline={false}
+          />,
+        ],
+        "className": null,
+        "colorSchema": null,
+        "content": null,
+        "contentEditable": true,
+        "controlled": true,
+        "disabled": false,
+        "dynamic": false,
+        "getEditablePropValue": undefined,
+        "hidden": false,
+        "iconAlign": null,
+        "iconCollapsed": null,
+        "iconExpanded": null,
+        "id": "uuID",
+        "ignoreInnerHTML": false,
+        "mainAttrs": null,
+        "mountPanelContent": undefined,
+        "name": null,
+        "nestingLevel": "smallBox",
+        "noIndex": false,
+        "onClick": null,
+        "onClickNotCollapseOthers": false,
+        "openClick": null,
+        "panels": null,
+        "parent": null,
+        "pureRender": false,
+        "ref_": null,
+        "selected": false,
+        "size": "m",
+        "style": null,
+        "textCorrector": undefined,
+        "tooltip": null,
+      },
+      "refs": Object {},
+      "renderedChildren": Array [],
+      "renderedChildrenIdList": Object {},
+      "renderedChildrenNameList": Object {},
+      "state": Object {
+        "disabled": false,
+        "editableComponentLazyLoaded": false,
+        "editation": false,
+        "hidden": false,
+        "mode": undefined,
+        "nestingLevel": null,
+        "selected": false,
+      },
+      "tagName": "UU5.Bricks.Accordion",
+    }
+  }
+  editModalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Upravit accordion",
+          "en": "Edit accordion",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  linkTitle={
+    <span
+      className="uu-bricks-1jt2d61"
+    >
+      <Panel
+        alwaysExpanded={false}
+        bgStyle={null}
+        bgStyleContent={null}
+        bgStyleHeader={null}
+        borderRadius={null}
+        className={null}
+        colorSchema={null}
+        content="Text in Panel"
+        contentEditable={true}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        expanded={false}
+        footer={null}
+        header={null}
+        hidden={false}
+        iconAlign={null}
+        iconCollapsed={null}
+        iconExpanded={null}
+        id="childrenID"
+        ignoreInnerHTML={false}
+        increaseLevel={false}
+        level={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        onClick={[Function]}
+        openClick={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        size="m"
+        style={null}
+        tooltip={null}
+        underline={false}
+      />
+    </span>
+  }
+  modalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Akordeon",
+          "en": "Accordion",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  renderEditationMode={[Function]}
+/>
+`;
 
-exports[`UU5.Bricks.Accordion props nestingLevel="smallBoxCollection" 1`] = `""`;
+exports[`UU5.Bricks.Accordion props nestingLevel="smallBoxCollection" 1`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "__isMounted": true,
+      "_domNode": null,
+      "_isMounted": true,
+      "_resizeCallbacks": Object {},
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.NestingLevelMixin",
+        "UU5.Common.ColorSchemaMixin",
+        "UU5.Common.ContentMixin",
+        "UU5.Common.PureRenderMixin",
+        "UU5.Common.EditableMixin",
+      ],
+      "props": Object {
+        "allowTags": Array [],
+        "checkGrammar": undefined,
+        "checkHighlight": undefined,
+        "checkSpaces": undefined,
+        "children": Array [
+          <Panel
+            alwaysExpanded={false}
+            bgStyle={null}
+            bgStyleContent={null}
+            bgStyleHeader={null}
+            borderRadius={null}
+            className={null}
+            colorSchema={null}
+            content="Text in Panel"
+            contentEditable={true}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            elevation={null}
+            expanded={false}
+            footer={null}
+            header={null}
+            hidden={false}
+            iconAlign={null}
+            iconCollapsed={null}
+            iconExpanded={null}
+            id="childrenID"
+            ignoreInnerHTML={false}
+            increaseLevel={false}
+            level={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            onClick={null}
+            openClick={null}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            size="m"
+            style={null}
+            tooltip={null}
+            underline={false}
+          />,
+        ],
+        "className": null,
+        "colorSchema": null,
+        "content": null,
+        "contentEditable": true,
+        "controlled": true,
+        "disabled": false,
+        "dynamic": false,
+        "getEditablePropValue": undefined,
+        "hidden": false,
+        "iconAlign": null,
+        "iconCollapsed": null,
+        "iconExpanded": null,
+        "id": "uuID",
+        "ignoreInnerHTML": false,
+        "mainAttrs": null,
+        "mountPanelContent": undefined,
+        "name": null,
+        "nestingLevel": "smallBoxCollection",
+        "noIndex": false,
+        "onClick": null,
+        "onClickNotCollapseOthers": false,
+        "openClick": null,
+        "panels": null,
+        "parent": null,
+        "pureRender": false,
+        "ref_": null,
+        "selected": false,
+        "size": "m",
+        "style": null,
+        "textCorrector": undefined,
+        "tooltip": null,
+      },
+      "refs": Object {},
+      "renderedChildren": Array [],
+      "renderedChildrenIdList": Object {},
+      "renderedChildrenNameList": Object {},
+      "state": Object {
+        "disabled": false,
+        "editableComponentLazyLoaded": false,
+        "editation": false,
+        "hidden": false,
+        "mode": undefined,
+        "nestingLevel": null,
+        "selected": false,
+      },
+      "tagName": "UU5.Bricks.Accordion",
+    }
+  }
+  editModalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Upravit accordion",
+          "en": "Edit accordion",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  linkTitle={
+    <span
+      className="uu-bricks-1jt2d61"
+    >
+      <Panel
+        alwaysExpanded={false}
+        bgStyle={null}
+        bgStyleContent={null}
+        bgStyleHeader={null}
+        borderRadius={null}
+        className={null}
+        colorSchema={null}
+        content="Text in Panel"
+        contentEditable={true}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        expanded={false}
+        footer={null}
+        header={null}
+        hidden={false}
+        iconAlign={null}
+        iconCollapsed={null}
+        iconExpanded={null}
+        id="childrenID"
+        ignoreInnerHTML={false}
+        increaseLevel={false}
+        level={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        onClick={[Function]}
+        openClick={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        size="m"
+        style={null}
+        tooltip={null}
+        underline={false}
+      />
+    </span>
+  }
+  modalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Akordeon",
+          "en": "Accordion",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  renderEditationMode={[Function]}
+/>
+`;
 
 exports[`UU5.Bricks.Accordion props nestingLevel="spa" 1`] = `
 <div

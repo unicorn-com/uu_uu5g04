@@ -13,10 +13,11 @@
 
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
-import "uu5g04-bricks";
 import ns from "./bricks-editable-ns.js";
+import Lsi from "../lsi.js";
+import Panel from "../panel.js";
 import EditableLsi from "./bricks-editable-lsi.js";
-import { EditItemInfo } from "./modal-editation-components";
+import { EditItemInfo } from "./modal-editation-components.js";
 //@@viewOff:imports
 
 const DEFAULT_PROPS_MAP = {
@@ -38,10 +39,10 @@ const editablePropsComponentSetup = [
     label: EditableLsi.common.sizeLabel,
     getProps: () => ({
       items: [
-        { value: "s", content: <UU5.Bricks.Lsi lsi={EditableLsi.common.sizeValueS} /> },
-        { value: "m", content: <UU5.Bricks.Lsi lsi={EditableLsi.common.sizeValueM} /> },
-        { value: "l", content: <UU5.Bricks.Lsi lsi={EditableLsi.common.sizeValueL} /> },
-        { value: "xl", content: <UU5.Bricks.Lsi lsi={EditableLsi.common.sizeValueXL} /> },
+        { value: "s", content: <Lsi lsi={EditableLsi.common.sizeValueS} /> },
+        { value: "m", content: <Lsi lsi={EditableLsi.common.sizeValueM} /> },
+        { value: "l", content: <Lsi lsi={EditableLsi.common.sizeValueL} /> },
+        { value: "xl", content: <Lsi lsi={EditableLsi.common.sizeValueXL} /> },
       ],
     }),
   },
@@ -55,9 +56,9 @@ const editablePropsComponentSetup = [
     label: EditableLsi.panel.iconAlignLabel,
     getProps: () => ({
       items: [
-        { value: "left", content: <UU5.Bricks.Lsi lsi={EditableLsi.panel.iconAlignValueLeft} /> },
-        { value: "right", content: <UU5.Bricks.Lsi lsi={EditableLsi.panel.iconAlignValueRight} /> },
-        { value: "after", content: <UU5.Bricks.Lsi lsi={EditableLsi.panel.iconAlignValueAfter} /> },
+        { value: "left", content: <Lsi lsi={EditableLsi.panel.iconAlignValueLeft} /> },
+        { value: "right", content: <Lsi lsi={EditableLsi.panel.iconAlignValueRight} /> },
+        { value: "after", content: <Lsi lsi={EditableLsi.panel.iconAlignValueAfter} /> },
       ],
     }),
   },
@@ -72,8 +73,8 @@ const editableAdditionalPropsSetup = [
     getProps: ({ value }) => ({
       value: value || "header",
       items: [
-        { value: "header", content: <UU5.Bricks.Lsi lsi={EditableLsi.panel.openClickValueHeader} /> },
-        { value: "icon", content: <UU5.Bricks.Lsi lsi={EditableLsi.panel.openClickValueIcon} /> },
+        { value: "header", content: <Lsi lsi={EditableLsi.panel.openClickValueHeader} /> },
+        { value: "icon", content: <Lsi lsi={EditableLsi.panel.openClickValueIcon} /> },
       ],
     }),
   },
@@ -85,25 +86,25 @@ const editableAdditionalPropsSetup = [
       items: [
         {
           value: "onEachExpand",
-          content: <UU5.Bricks.Lsi lsi={EditableLsi.accordion.mountPanelContentValueOnEachExpand} />,
+          content: <Lsi lsi={EditableLsi.accordion.mountPanelContentValueOnEachExpand} />,
         },
         {
           value: "onFirstExpand",
-          content: <UU5.Bricks.Lsi lsi={EditableLsi.accordion.mountPanelContentValueOnFirstExpand} />,
+          content: <Lsi lsi={EditableLsi.accordion.mountPanelContentValueOnFirstExpand} />,
         },
       ],
-      message: <UU5.Bricks.Lsi lsi={EditableLsi.accordion.mountPanelContentDescription} />,
+      message: <Lsi lsi={EditableLsi.accordion.mountPanelContentDescription} />,
     }),
   },
 ];
 
 const editablePropsSetup = [
   {
-    name: <UU5.Bricks.Lsi lsi={EditableLsi.common.componentPropsLabel} />,
+    name: <Lsi lsi={EditableLsi.common.componentPropsLabel} />,
     setup: editablePropsComponentSetup,
   },
   {
-    name: <UU5.Bricks.Lsi lsi={EditableLsi.common.advancedPropsLabel} />,
+    name: <Lsi lsi={EditableLsi.common.advancedPropsLabel} />,
     setup: editableAdditionalPropsSetup,
   },
 ];
@@ -230,12 +231,12 @@ export const AccordionEditable = UU5.Common.VisualComponent.create({
           }}
           componentPropsForm={editablePropsSetup}
           itemsSource={itemsSource}
-          itemName={UU5.Bricks.Panel.tagName}
-          itemDefaultProps={UU5.Bricks.Panel.defaultProps}
+          itemName={Panel.tagName}
+          itemDefaultProps={Panel.defaultProps}
           itemPropsForm={editableItemPropsSetup}
           newItem={newEditableItem}
           getItemLabel={getEditableItemLabel}
-          header={<UU5.Bricks.Lsi lsi={EditableLsi.accordion.modalHeader} />}
+          header={<Lsi lsi={EditableLsi.accordion.modalHeader} />}
         />
       </UU5.Common.Suspense>
     );
@@ -253,8 +254,11 @@ export const AccordionEditable = UU5.Common.VisualComponent.create({
     } else {
       return null;
     }
-
-    return this.props.component.buildChildren({ content });
+    if (this.props.inline) {
+      return this.props.component.buildChildren({ content }, () => ({ parent: null, nestingLevel: "bigBox" }));
+    } else {
+      this.props.component.buildChildren({ content });
+    }
   },
   //@@viewOff:private
 

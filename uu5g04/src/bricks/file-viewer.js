@@ -271,7 +271,7 @@ export const FileViewer = UU5.Common.VisualComponent.create({
         component =
           this.state.callFeedback === "ready" ? (
             <span>
-              <Modal ref_={(modal) => (this._modal = modal)}>{this._getMainChild()}</Modal>
+              <Modal header={FileViewer.displayName} ref_={(modal) => (this._modal = modal)}>{this._getMainChild()}</Modal>
               <Link onClick={() => this._modal.open()} content={this.props.src} />
             </span>
           ) : null;

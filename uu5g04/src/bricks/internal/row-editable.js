@@ -13,11 +13,13 @@
 
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
-import "uu5g04-bricks";
-//import "uu5g04-bricks-editable";
 
 import ns from "./bricks-editable-ns.js";
-import Lsi from "./bricks-editable-lsi.js";
+import Column from "../column.js";
+import Footer from "../footer.js";
+import Header from "../header.js";
+import Lsi from "../lsi.js";
+import EditableLsi from "./bricks-editable-lsi.js";
 import Css from "./css.js";
 import { PresetEditComponent, ColWidthEditComponent } from "./modal-editation-components.js";
 //@@viewOff:imports
@@ -39,35 +41,35 @@ const NAME = ns.name("Row");
 
 const propsSetup = [
   {
-    name: <UU5.Bricks.Lsi lsi={Lsi.row.mainPropertiesLabel} />,
+    name: <Lsi lsi={EditableLsi.row.mainPropertiesLabel} />,
     setup: [
       PresetEditComponent,
       {
         name: "display",
         type: "switchSelector",
-        label: Lsi.row.displayLabel,
+        label: EditableLsi.row.displayLabel,
         getProps: () => ({
           items: [
-            { value: "standard", content: <UU5.Bricks.Lsi lsi={Lsi.row.displayValueStandard} /> },
-            { value: "flex", content: <UU5.Bricks.Lsi lsi={Lsi.row.displayValueFlex} /> },
+            { value: "standard", content: <Lsi lsi={EditableLsi.row.displayValueStandard} /> },
+            { value: "flex", content: <Lsi lsi={EditableLsi.row.displayValueFlex} /> },
           ],
         }),
       },
       {
         name: "noSpacing",
         type: "switchSelector",
-        label: Lsi.row.horizontalPaddingLabel,
+        label: EditableLsi.row.horizontalPaddingLabel,
         getProps: () => ({
           items: [
-            { value: false, content: <UU5.Bricks.Lsi lsi={Lsi.row.horizontalPaddingValueStandard} /> },
-            { value: true, content: <UU5.Bricks.Lsi lsi={Lsi.row.horizontalPaddingValueNone} /> },
+            { value: false, content: <Lsi lsi={EditableLsi.row.horizontalPaddingValueStandard} /> },
+            { value: true, content: <Lsi lsi={EditableLsi.row.horizontalPaddingValueNone} /> },
           ],
         }),
       },
       {
         name: "className",
         type: "text",
-        label: <UU5.Bricks.Lsi lsi={Lsi.row.classNameLabel} />,
+        label: <Lsi lsi={EditableLsi.row.classNameLabel} />,
       },
     ],
   },
@@ -79,18 +81,18 @@ const editableItemPropsSetup = {
     {
       name: "noSpacing",
       type: "switchSelector",
-      label: Lsi.row.horizontalPaddingLabel,
+      label: EditableLsi.row.horizontalPaddingLabel,
       getProps: () => ({
         items: [
-          { value: false, content: <UU5.Bricks.Lsi lsi={Lsi.row.horizontalPaddingValueStandard} /> },
-          { value: true, content: <UU5.Bricks.Lsi lsi={Lsi.row.horizontalPaddingValueNone} /> },
+          { value: false, content: <Lsi lsi={EditableLsi.row.horizontalPaddingValueStandard} /> },
+          { value: true, content: <Lsi lsi={EditableLsi.row.horizontalPaddingValueNone} /> },
         ],
       }),
     },
     {
       name: "className",
       type: "text",
-      label: <UU5.Bricks.Lsi lsi={Lsi.row.classNameLabel} />,
+      label: <Lsi lsi={EditableLsi.row.classNameLabel} />,
     },
   ],
 };
@@ -158,7 +160,7 @@ export const Row = UU5.Common.VisualComponent.create({
           }
         `),
     },
-    lsi: () => ({ ...Lsi.row, ...Lsi.common }),
+    lsi: () => ({ ...EditableLsi.row, ...EditableLsi.common }),
   },
   //@@viewOff:statics
 
@@ -368,8 +370,8 @@ export const Row = UU5.Common.VisualComponent.create({
           componentName={this.props.component.getTagName()}
           componentProps={this.props.component.getEditablePropsValues(Object.keys(this.props.component.props))}
           componentPropsForm={propsSetup}
-          itemName={UU5.Bricks.Column.tagName}
-          itemDefaultProps={UU5.Bricks.Column.defaultProps}
+          itemName={Column.tagName}
+          itemDefaultProps={Column.defaultProps}
           itemPropsForm={editableItemPropsSetup}
           newItem={newEditableItem}
           getItemLabel={getEditableItemLabel}
@@ -399,13 +401,9 @@ export const Row = UU5.Common.VisualComponent.create({
                 key="headerInput"
               >
                 {({ children }) => (
-                  <UU5.Bricks.Header
-                    underline={this.state.underline}
-                    level={this.state.level}
-                    parent={this.props.component}
-                  >
+                  <Header underline={this.state.underline} level={this.state.level} parent={this.props.component}>
                     {children}
-                  </UU5.Bricks.Header>
+                  </Header>
                 )}
               </UU5.BricksEditable.Input>
             ) : null,
@@ -417,7 +415,7 @@ export const Row = UU5.Common.VisualComponent.create({
                 onChange={this._changeFooterContent}
                 key="footerInput"
               >
-                {({ children }) => <UU5.Bricks.Footer parent={this.props.component}>{children}</UU5.Bricks.Footer>}
+                {({ children }) => <Footer parent={this.props.component}>{children}</Footer>}
               </UU5.BricksEditable.Input>
             ) : null,
           ]}

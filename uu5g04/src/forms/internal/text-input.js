@@ -165,6 +165,7 @@ export default UU5.Common.LsiMixin.withContext(
 
           return Css.css(styles.join(" "));
         },
+        withIcon: ns.css("input-with-icon"),
       },
     },
     //@@viewOff:statics
@@ -586,6 +587,10 @@ export default UU5.Common.LsiMixin.withContext(
           className = className.replace(/ ?color-schema-[a-z-]+ ?/, "");
           className += " color-schema-" + UU5.Environment.getColorSchema("danger");
           break;
+      }
+
+      if (this.props.icon) {
+        className += " " + this.getClassName("withIcon");
       }
 
       return className;

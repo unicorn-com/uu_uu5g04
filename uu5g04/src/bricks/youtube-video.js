@@ -14,12 +14,13 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+import { InlineMode } from "./internal/inline-mode.js";
 import YoutubeUrlBuilder from "./models/youtube-url-builder";
 
 import "./youtube-video.less";
 //@@viewOff:imports
 
-export const YoutubeVideo = UU5.Common.VisualComponent.create({
+let YoutubeVideo = UU5.Common.VisualComponent.create({
   displayName: "YoutubeVideo", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, UU5.Common.NestingLevelMixin],
@@ -129,11 +130,21 @@ export const YoutubeVideo = UU5.Common.VisualComponent.create({
         {this.getDisabledCover()}
         <iframe {...this._buildMainAttrs()} allowFullScreen />
       </UU5.Bricks.Span>
-    ) : null;
+    ) : (
+      <InlineMode
+        component={this}
+        Component={UU5.Bricks.YoutubeVideo}
+        modalHeader={YoutubeVideo.displayName}
+        linkTitle={this.props.src}
+        getPropsToSave={this.onBeforeForceEndEditation_}
+      />
+    );
   },
   //@@viewOff:render
 });
 
 YoutubeVideo.validateUrl = (url) => (typeof url === "string" ? YoutubeUrlBuilder.getUrlParts(url) !== null : false);
+
+export { YoutubeVideo };
 
 export default YoutubeVideo;

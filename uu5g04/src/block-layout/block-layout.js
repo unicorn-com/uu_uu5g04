@@ -11,17 +11,10 @@
  * at the email: info@unicorn.com.
  */
 
-import * as UU5 from "uu5g04";
-
+// devkit-pure-exports
 export * from "./tile.js";
 export * from "./block.js";
 export * from "./row.js";
 export * from "./column.js";
 export * from "./text.js";
 export * from "./line.js";
-
-UU5.Environment.addRuntimeLibrary({
-  name: `${UU5.Environment.name}-blocklayout`,
-  version: process.env.VERSION,
-  namespace: "UU5.BlockLayout", // TODO Use process.env.NAMESPACE after upgrading to devkit 3.x.
-});

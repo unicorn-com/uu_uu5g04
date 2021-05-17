@@ -345,6 +345,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
     shown: UU5.PropTypes.bool,
     size: UU5.PropTypes.oneOf(["s", "m", "l", "auto", "max"]),
     saveButtonProps: UU5.PropTypes.shape(UU5.Bricks.Button.propTypes || {}),
+    onChange: UU5.PropTypes.func,
   },
   //@@viewOff:propTypes
 
@@ -366,6 +367,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
       onCancel: undefined,
       saveButtonProps: undefined,
       menuWidth: 250,
+      onChange: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -382,7 +384,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
     let items;
     let propValues = { ...this.props.componentProps };
 
-    if (this.props.itemName) {
+    if (this.props.itemName || this.props.itemsSource) {
       this._itemsSource = "children";
       if (this.props.itemsSource) {
         items = propValues[this.props.itemsSource];
@@ -405,21 +407,23 @@ const ModalBody = UU5.Common.VisualComponent.create({
           this._itemsInUU5String = false;
           items = items.map((item) => {
             const isElement = UU5.Common.Element.isValid(item);
-            return {
-              tagName: isElement ? item.type.tagName : this.props.itemName,
+            let result = {
               props: isElement ? UU5.Common.Tools.mergeDeep({}, item.props) : item,
               isElement,
             };
+            let tagName = isElement ? item.type.tagName : this.props.itemName;
+            if (tagName) result.tagName = tagName;
+            return result;
           });
         } else if (items && typeof items === "object" && items.type) {
           const isElement = UU5.Common.Element.isValid(items);
-          items = [
-            {
-              tagName: isElement ? items.type.tagName : this.props.itemName,
-              props: isElement ? UU5.Common.Tools.mergeDeep({}, items.props) : items,
-              isElement,
-            },
-          ];
+          let item = {
+            props: isElement ? UU5.Common.Tools.mergeDeep({}, items.props) : items,
+            isElement,
+          };
+          let tagName = isElement ? items.type.tagName : this.props.itemName;
+          if (tagName) item.tagName = tagName;
+          items = [item];
         }
       }
 
@@ -476,8 +480,28 @@ const ModalBody = UU5.Common.VisualComponent.create({
     }
   },
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps, prevState) {
     this._setMenuHeight();
+
+    if (
+      !this._preventNextOnChange &&
+      typeof this.props.onChange === "function" &&
+      (this.state.items !== prevState.items || this.state.componentProps !== prevState.componentProps)
+    ) {
+      let params = {
+        componentProps: this.state.propValues,
+        items: this.state.items,
+      };
+      this.props.onChange(params);
+      // instance of params has to remain, but componentProps can change, which will trigger
+      // a write to state
+      if (params.componentProps !== this.state.propValues) {
+        this._preventNextOnChange = true;
+        this._setPropValues(params.componentProps);
+      }
+    } else if (this._preventNextOnChange) {
+      this._preventNextOnChange = false;
+    }
   },
   //@@viewOff:reactLifeCycle
 
@@ -492,7 +516,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
       });
     }
 
-    if (this.props.itemName && this._itemsSource && this._contentChanged) {
+    if ((this.props.itemName || this.props.itemsSource) && this._itemsSource && this._contentChanged) {
       let items;
 
       if (this.state.items) {
@@ -915,6 +939,21 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
       return { validation: this._getComponentValidationResult(validation, itemIndex, propName, feedback) };
     });
+  },
+
+  _setPropValues(propValues) {
+    if (Object.keys(propValues).indexOf(this._itemsSource) !== -1) {
+      this._contentChanged = true;
+    }
+    Object.keys(propValues).forEach((changedPropName) => {
+      if (
+        this._propsToReturn.indexOf(changedPropName) === -1 &&
+        this.state.propValues[changedPropName] !== propValues[changedPropName]
+      ) {
+        this._propsToReturn.push(changedPropName);
+      }
+    });
+    this.setState({ propValues });
   },
 
   _itemInsertBefore(index) {
@@ -1652,9 +1691,9 @@ const ModalBody = UU5.Common.VisualComponent.create({
     const menu = (
       <UU5.Common.Fragment>
         <UU5.Bricks.Row className={this.getClassName("categoriesRow")}>{this._getCategoriesMenu()}</UU5.Bricks.Row>
-        {this.props.itemName && (
+        {this.props.itemName || this.props.itemsSource ? (
           <UU5.Bricks.Row className={this.getClassName("itemListRow")}>{this._getItemsMenu()}</UU5.Bricks.Row>
-        )}
+        ) : null}
       </UU5.Common.Fragment>
     );
 

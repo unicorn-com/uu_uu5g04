@@ -21,10 +21,11 @@ import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
 import Panel from "./panel.js";
+import Css from "./internal/css.js";
+import { InlineMode } from "./internal/inline-mode.js";
+import Lsi from "./bricks-lsi.js";
 
 import "./accordion.less";
-import Lsi from "./internal/bricks-editable-lsi.js";
-
 const EditationComponent = UU5.Common.Component.lazy(async () => {
   await SystemJS.import("uu5g04-forms");
   await SystemJS.import("uu5g04-bricks-editable");
@@ -39,7 +40,26 @@ const MOUNT_CONTENT_VALUES = {
   onEachExpand: "onEachExpand",
 };
 
-export const Accordion = UU5.Common.VisualComponent.create({
+const CLASS_NAMES = {
+  inline: (renderDots) => {
+    let dots = renderDots ? "..." : "";
+    return Css.css(`
+      & > *{
+        pointer-events: none;
+        &::after {
+          content: ", ";
+        }
+        &:last-child{
+          &::after {
+            content: "${dots}";
+          }
+        }
+      }
+    `);
+  },
+};
+
+let Accordion = UU5.Common.VisualComponent.create({
   displayName: "Accordion", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [
@@ -70,7 +90,7 @@ export const Accordion = UU5.Common.VisualComponent.create({
       nestingLevelWrapper: true,
     },
     editMode: {
-      name: Lsi.accordion.name,
+      name: Lsi.inlineComponentHeaders.accordionName,
       backgroundColor: "rgba(0,0,0,.2)",
       color: "rgba(0,0,0,.87)",
       highlightColor: "#CCCCCC",
@@ -327,10 +347,10 @@ export const Accordion = UU5.Common.VisualComponent.create({
     return editationLazyLoaded;
   },
 
-  _renderEditationMode() {
+  _renderEditationMode(inline = false) {
     return (
       <UU5.Common.Suspense fallback={<span ref={this._registerNull} />}>
-        <EditationComponent component={this} ref_={this._registerEditableComponent} />
+        <EditationComponent inline={inline} component={this} ref_={this._registerEditableComponent} />
       </UU5.Common.Suspense>
     );
   },
@@ -403,6 +423,17 @@ export const Accordion = UU5.Common.VisualComponent.create({
 
     return this.buildChildren(childrenProps);
   },
+
+  _prepareInlineTitle: function () {
+    let titles = this._buildChildren();
+    let renderDots = titles.length > 3 ? true : false;
+    if (Array.isArray(titles)) {
+      titles = titles.slice(0, 3);
+
+      return <span className={CLASS_NAMES.inline(renderDots)}>{titles.map((header) => header)}</span>;
+    }
+    return undefined;
+  },
   //@@viewOff:private
 
   //@@viewOn:render
@@ -419,9 +450,20 @@ export const Accordion = UU5.Common.VisualComponent.create({
           ) : null}
         </>
       </div>
-    ) : null;
+    ) : (
+      <InlineMode
+        component={this}
+        Component={UU5.Bricks.Accordion}
+        editModalHeader={<UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.accordionEditHeader} />}
+        linkTitle={this._prepareInlineTitle() || <UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.accordionName} />}
+        modalHeader={<UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.accordionName} />}
+        getPropsToSave={this._editableSection ? this._editableSection : undefined}
+        renderEditationMode={this._renderEditationMode}
+      />
+    );
   },
   //@@viewOff:render
 });
 
+export { Accordion };
 export default Accordion;

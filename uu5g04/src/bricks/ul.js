@@ -15,6 +15,7 @@
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import { ListContext, Context } from "./list-context.js";
+import Css from "./internal/css.js";
 
 import "./ul.less";
 //@@viewOff:imports
@@ -41,6 +42,33 @@ export const Ul = Context.withListContext(
         main: ns.css("ul"),
         type: ns.css("ul-type-"),
         customMarker: ns.css("ul-custom-marker"),
+        inline: Css.css(`
+        list-style-type: none;
+        padding:0;
+        margin:0;
+
+        &&& ul{
+          display:inline-flex;
+          width: auto;
+          list-style:none;
+          padding:0;
+          margin:0;
+          padding-left: 0px;
+        };
+
+        && > li{
+          float:left;
+          display:inline-flex;
+          list-style:none;
+          text-decoration:none;
+          margin-left:0px;
+          ::before{
+            width:16px;
+            padding:0px 12px;
+            left: 0;
+            position: initial;
+          }
+      `),
       },
       defaults: {
         childTagName: "UU5.Bricks.Li",
@@ -117,27 +145,28 @@ export const Ul = Context.withListContext(
       };
     },
 
-    _getMainAttrs() {
+    _getMainAttrs(notInline) {
       const mainAttrs = this.getMainAttrs();
       mainAttrs.type = this.props.type;
       this.props.type && (mainAttrs.className += " " + this.getClassName("type") + this.props.type);
       this.props.markerIcon && (mainAttrs.className += " " + this.getClassName("customMarker"));
+      !notInline && (mainAttrs.className += " " + this.getClassName("inline"));
       return mainAttrs;
     },
     //@@viewOff:private
 
     //@@viewOn:render
     render() {
-      return this.getNestingLevel() ? (
+      return (
         <ListContext.Provider value={this._getContextValues()}>
-          <ul {...this._getMainAttrs()}>
+          <ul {...this._getMainAttrs(this.getNestingLevel())}>
             {this.getHeaderChild()}
             {this.getChildren()}
             {this.getFooterChild()}
             {this.getDisabledCover()}
           </ul>
         </ListContext.Provider>
-      ) : null;
+      )
     },
     //@@viewOff:render
   })

@@ -14,6 +14,7 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+import { InlineMode } from "./internal/inline-mode.js";
 
 import TableCol from "./table-col.js";
 import TableColGroup from "./table-col-group.js";
@@ -23,6 +24,7 @@ import TableTFoot from "./table-tfoot.js";
 import TableTh from "./table-th.js";
 import TableTHead from "./table-thead.js";
 import TableTr from "./table-tr.js";
+import Lsi from "./bricks-lsi.js";
 
 import "./table.less";
 //@@viewOff:imports
@@ -146,7 +148,15 @@ export const Table = UU5.Common.VisualComponent.create({
         {this.getFooterChild()}
         {this.getDisabledCover()}
       </div>
-    ) : null;
+    ) : (
+      <InlineMode
+        component={this}
+        Component={UU5.Bricks.Table}
+        editModalHeader={this.props.header || <UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.tableName}/>}
+        linkTitle={this.props.header || <UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.tableName}/>}
+        modalHeader={this.props.header || <UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.tableName}/>}
+      />
+    );
   },
   //@@viewOff:render
 });

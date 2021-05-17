@@ -16,6 +16,8 @@ import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Null from "./null.js";
 import Css from "./internal/css.js";
+import { InlineMode } from "./internal/inline-mode.js";
+import Lsi from "./bricks-lsi.js";
 //@@viewOff:imports
 
 const QRCodeGenerator = UU5.Common.Component.lazy ? UU5.Common.Component.lazy(() => import("qrcode.react")) : Null;
@@ -25,15 +27,16 @@ const EditationComponent = UU5.Common.Component.lazy(async () => {
   return import("./internal/q-r-code-editable.js");
 });
 
-export const QRCode = UU5.Common.VisualComponent.create({
+let QRCode = UU5.Common.VisualComponent.create({
   displayName: "QRCode", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
-  mixins: [UU5.Common.BaseMixin, UU5.Common.EditableMixin],
+  mixins: [UU5.Common.BaseMixin, UU5.Common.EditableMixin, UU5.Common.NestingLevelMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
   statics: {
     tagName: ns.name("QRCode"),
+    nestingLevelList: UU5.Environment.getNestingLevelList("bigBox", "smallBox"),
     classNames: {
       main:
         ns.css("q-r-code") +
@@ -44,7 +47,7 @@ export const QRCode = UU5.Common.VisualComponent.create({
     },
     editMode: {
       displayType: "inline",
-    }
+    },
   },
   //@@viewOff:statics
 
@@ -116,20 +119,37 @@ export const QRCode = UU5.Common.VisualComponent.create({
   //@@viewOn:render
   render() {
     return (
-      <span {...this.getMainAttrs()}>
-        <UU5.Common.Suspense fallback="">
-          <QRCodeGenerator
-            value={this.props.value}
-            level={this._getCorrectionLevel()}
-            size={this.props.size}
-            renderAs="svg"
+      <>
+        {this.getNestingLevel() ? (
+          <span {...this.getMainAttrs()}>
+            <UU5.Common.Suspense fallback="">
+              <QRCodeGenerator
+                value={this.props.value}
+                level={this._getCorrectionLevel()}
+                size={this.props.size}
+                renderAs="svg"
+              />
+              {this.state.editation ? this._renderEditationMode() : null}
+            </UU5.Common.Suspense>
+          </span>
+        ) : (
+          <InlineMode
+            component={this}
+            Component={UU5.Bricks.QRCode}
+            editModalHeader={<UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.qRCodeModalHeader} />}
+            linkTitle={this.props.value}
+            modalHeader={<UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.qRCodeName} />}
+            getPropsToSave={this.onBeforeForceEndEditation_}
+            modalProps={{ size: "auto" }}
+            renderEditationMode={this._renderEditationMode}
           />
-          {this.state.editation ? this._renderEditationMode() : null}
-        </UU5.Common.Suspense>
-      </span>
+        )}
+      </>
     );
   },
   //@@viewOff:render
 });
+
+export { QRCode };
 
 export default QRCode;

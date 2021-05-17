@@ -402,7 +402,7 @@ export const EditationPanel = UU5.Common.VisualComponent.create({
               <UU5.Bricks.Icon icon="mdi-settings" />
             </UU5.Bricks.Button>,
             this.props.settingsItems && (
-              <UU5.Bricks.Popover key="edit-popover" ref_={this._registerPopover} forceRender controlled={false}>
+              <UU5.Bricks.Popover key="edit-popover" ref_={this._registerPopover} location="portal" controlled={false}>
                 {this._getSettingsComponents(this.props.settingsItems)}
               </UU5.Bricks.Popover>
             ),

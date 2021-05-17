@@ -19,6 +19,7 @@
 
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+import { InlineMode } from "./internal/inline-mode.js";
 
 import "./video.less";
 //@@viewOff:imports
@@ -27,7 +28,7 @@ const VideoHls = UU5.Common.Component.lazy
   ? UU5.Common.Component.lazy(() => import("./video-hls.js"))
   : (props) => <video {...props.mainAttrs} />;
 
-export const Video = UU5.Common.VisualComponent.create({
+let Video = UU5.Common.VisualComponent.create({
   displayName: "Video", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.PureRenderMixin, UU5.Common.ElementaryMixin, UU5.Common.NestingLevelMixin],
@@ -221,9 +222,18 @@ export const Video = UU5.Common.VisualComponent.create({
           )
         ) : null}
       </UU5.Bricks.Span>
-    ) : null;
+    ) : (
+      <InlineMode
+        component={this}
+        Component={UU5.Bricks.Video}
+        modalHeader={Video.displayName}
+        linkTitle={this.props.src}
+      />
+    );
   },
   //@@viewOff:render
 });
+
+export { Video };
 
 export default Video;

@@ -39,8 +39,9 @@ export const Li = Context.withListItemContext(
       tagName: ns.name("Li"),
       nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "inline"),
       classNames: {
-        main: (props) => {
-          let classNames = [ns.css("li")];
+        main: ns.css("li"),
+        mainClass: (props, nestingLevel) => {
+          let classNames = [];
 
           if (!props.ordered || (props.ordered && props.type === "1.1")) {
             classNames.push(Css.css`
@@ -57,11 +58,34 @@ export const Li = Context.withListItemContext(
             }
           }
 
-          if (props.ordered && props.type === "1.1" && props.counterId) {
+          if (
+            (props.ordered && props.type === "1.1" && props.counterId) ||
+            (nestingLevel === "inline" && props.ordered)
+          ) {
+            let counterStyle;
+            switch (props.type) {
+              case "1.1":
+                counterStyle = '"."';
+                break;
+              case "i":
+                counterStyle = '".", lower-roman';
+                break;
+              case "I":
+                counterStyle = '".", upper-roman';
+                break;
+              case "a":
+                counterStyle = '".", lower-latin';
+                break;
+              case "A":
+                counterStyle = '".", upper-latin';
+                break;
+              default:
+                ".";
+            }
             classNames.push(Css.css`
               &::before {
                 counter-increment: ${props.counterId};
-                content: counters(${props.counterId}, ".") ". ";
+                content: counters(${props.counterId}, ${counterStyle}) ". ";
                 display: inline-block;
                 position: relative;
                 width: 0;
@@ -157,9 +181,10 @@ export const Li = Context.withListItemContext(
 
     //@@viewOn:render
     render: function () {
+      let mainClassName = this.getClassName().mainClass(this.props, this.getNestingLevel());
       return this.getNestingLevel() ? (
         <ListContext.Provider value={this._getContextValues()}>
-          <li {...getMainAttrs(this.props, this.getMainAttrs())}>
+          <li {...getMainAttrs(this.props, this.getMainAttrs(), mainClassName)}>
             <span>{this.getChildren()}</span>
             {this.getDisabledCover()}
           </li>
@@ -185,9 +210,12 @@ const getIconColor = (colorSchema) => {
     : "";
 };
 
-const getMainAttrs = function (props, attrs) {
+const getMainAttrs = function (props, attrs, mainClassName) {
+  attrs.className = mainClassName + (attrs.className ? " " + attrs.className : "");
+  
   if (!props.ordered && props.markerIcon) {
     let splitter = props.markerIcon.split("-");
+
     if (splitter) {
       let iconsName = splitter[0];
       UU5.Environment.IconManager.addIcons(iconsName);

@@ -22,6 +22,7 @@ import ns from "../forms-ns.js";
 import InputMixin from "./input-mixin.js";
 
 import Option from "./../select-option.js";
+import "./group-mixin.less";
 
 export const TextInputMixin = {
   //@@viewOn:mixins

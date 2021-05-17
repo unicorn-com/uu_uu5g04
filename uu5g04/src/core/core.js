@@ -11,125 +11,14 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
+import "./core-startup.js";
 
-// startup environment (merge)
-import "./startup-environment.js";
-
-if (!React.lazy || !React.Suspense) {
-  console.warn(
-    `For full functionality of ${process.env.NAME} use React version >= 16.6.0. In-page React version: ${React.version}`
-  );
-}
+import * as Exports from "./core-exports.js";
+export * from "./core-exports.js";
 
 const UU5 = window.UU5 || {};
-
-import Environment from "./environment/environment.js";
-
-let environment = Environment;
-
-import Speech from "./environment/speech.js";
-
-Environment.Speech = new Speech();
-
-import * as Common from "./common/common.js";
-
-export { Common };
-UU5.Common = Common;
-
-import EventListener from "./common/event-listener.js";
-
-environment.EventListener = new EventListener();
-
-import CommonLsi from "./common/common-lsi.js";
-
-environment.Lsi.Common = CommonLsi;
-
-export { environment as Environment };
-UU5.Environment = environment;
-
-import * as Icons from "./environment/icons.js";
-
-export { Icons };
-UU5.Icons = Icons;
-
-import { PropTypes } from "uu5g05";
-export { PropTypes };
-UU5.PropTypes = PropTypes;
-
-import * as Utils from "./utils/utils.js";
-export { Utils };
-UU5.Utils = Utils;
-
-export const createVisualComponent = Common.VisualComponent.create;
-UU5.createVisualComponent = createVisualComponent;
-
-export const createComponent = Common.Component.create;
-UU5.createComponent = createComponent;
-
-export const createHoc = Common.Component.createHoc;
-UU5.createHoc = createHoc;
-
-// workaround so that on-demand loaded UU5 modules can insert their own components
-// into UU5 exports; i.e. if an application uses following:
-//  import * as UU5 from "uu5g04";  // UU5 is a local variable containing new (separate) instance of exports
-//  import "uu5g04-forms";
-// then uu5g04-forms (UU5 module) wants to add "Forms" key into "root" of uu5g04 exports which
-// isn't possible (exports are frozen by SystemJS), so instead uu5g04-forms will inject its components into
-// pre-existing "Forms" key within uu5g04 exports
-const Bricks = (UU5.Bricks = {});
-export { Bricks };
-
-const BricksEditable = (UU5.BricksEditable = {});
-export { BricksEditable };
-
-const Forms = (UU5.Forms = {});
-export { Forms };
-
-const CodeKit = (UU5.CodeKit = {});
-export { CodeKit };
-
-const Calendar = (UU5.Calendar = {});
-export { Calendar };
-
-const Imaging = (UU5.Imaging = {});
-export { Imaging };
-
-const ParamQuery = (UU5.ParamQuery = {});
-export { ParamQuery };
-
-const Math = (UU5.Math = {});
-export { Math };
-
-const Tree = (UU5.Tree = {});
-export { Tree };
-
-const DataTable = (UU5.DataTable = {});
-export { DataTable };
-
-const Chart = (UU5.Chart = {});
-export { Chart };
-
-const SimpleChart = (UU5.SimpleChart = {});
-export { SimpleChart };
-
-const LibraryRegistry = (UU5.LibraryRegistry = {});
-export { LibraryRegistry };
-
-const ComponentCatalogue = (UU5.ComponentCatalogue = {});
-export { ComponentCatalogue };
-
-const Tiles = (UU5.Tiles = {});
-export { Tiles };
-
-const RichText = (UU5.RichText = {});
-export { RichText };
-
-const BlockLayout = (UU5.BlockLayout = {});
-export { BlockLayout };
-
-const Test = (UU5.Test = {});
-export { Test };
-
+Object.defineProperties(UU5, Object.getOwnPropertyDescriptors(Exports));
 window.UU5 = UU5;
+
+// for backward compatibility; otherwise we should do just `export default Exports;`
 export default UU5;

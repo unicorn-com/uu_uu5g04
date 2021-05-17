@@ -253,15 +253,6 @@ export const Error = VisualComponent.create({
     let stackTrace;
     if (this.props.error) {
       stackTrace = this.props.error.stack;
-    } else {
-      stackTrace = new window.Error().stack;
-      if (!stackTrace) {
-        try {
-          throw new Error();
-        } catch (e) {
-          stackTrace = e.stack;
-        }
-      }
     }
 
     return {

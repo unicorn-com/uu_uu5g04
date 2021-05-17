@@ -872,31 +872,96 @@ exports[`UU5.Bricks.GoogleMap nestingLevel="container" 1`] = `
 `;
 
 exports[`UU5.Bricks.GoogleMap nestingLevel="inline" 1`] = `
-<span>
-  <ForwardRef
-    disabled={false}
-    ref_={[Function]}
-  >
-    <div
-      className="uu5-bricks-google-map"
-      id="uuID"
-      style={Object {}}
-      title={null}
-    >
-      <div
-        style={
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "__isMounted": true,
+      "_isMounted": true,
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.NestingLevelMixin",
+        "UU5.Common.PureRenderMixin",
+      ],
+      "props": Object {
+        "className": null,
+        "controlled": true,
+        "disableDefaultUI": false,
+        "disableZoom": false,
+        "disabled": false,
+        "draggable": true,
+        "googleApiKey": null,
+        "height": "400px",
+        "hidden": false,
+        "id": "uuID",
+        "latitude": 50.107799,
+        "longitude": 14.453689,
+        "mainAttrs": null,
+        "mapStyle": null,
+        "mapType": "roadmap",
+        "markers": Array [],
+        "name": null,
+        "nestingLevel": "inline",
+        "noIndex": false,
+        "parent": null,
+        "pureRender": false,
+        "ref_": null,
+        "selected": false,
+        "style": null,
+        "tooltip": null,
+        "width": "100%",
+        "zoom": 14,
+      },
+      "refs": Object {},
+      "state": Object {
+        "disabled": false,
+        "hidden": false,
+        "nestingLevel": "inline",
+        "selected": false,
+      },
+      "tagName": "UU5.Bricks.GoogleMap",
+    }
+  }
+  linkTitle="lo: 14.453689, la: 50.107799"
+  modalHeader={
+    <React.Fragment>
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
           Object {
-            "height": "400px",
-            "width": "100%",
+            "cs": "Mapa",
+            "en": "Map",
           }
         }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
       />
-    </div>
-  </ForwardRef>
-  <Link
-    onClick={[Function]}
-  />
-</span>
+       (lo: 14.453689, la: 
+                  50.107799)
+    </React.Fragment>
+  }
+/>
 `;
 
 exports[`UU5.Bricks.GoogleMap nestingLevel="page" 1`] = `

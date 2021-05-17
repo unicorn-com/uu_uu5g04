@@ -139,6 +139,7 @@ export const Toolbar = UU5.Common.VisualComponent.create({
 
         const key =
           props.key ||
+          contentItem.key ||
           (this.state.activeInput ? this.state.activeInput.getId() + " " + index : UU5.Common.Tools.generateUUID());
 
         if (contentItem.type !== "separator") {

@@ -14,11 +14,12 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+import withLinkModal from "./internal/with-link-modal";
 
 import "./todo.less";
 //@@viewOff:imports
 
-export const Todo = UU5.Common.VisualComponent.create({
+let Todo = UU5.Common.VisualComponent.create({
   displayName: "Todo", // for backward compatibility (test snapshots)
 
   //@@viewOn:mixins
@@ -74,5 +75,9 @@ export const Todo = UU5.Common.VisualComponent.create({
   },
   //@@viewOff:render
 });
+
+Todo = withLinkModal(Todo, Todo.displayName, Todo.nestingLevel, Todo.displayName);
+
+export { Todo };
 
 export default Todo;

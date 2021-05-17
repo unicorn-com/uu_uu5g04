@@ -2301,7 +2301,134 @@ exports[`UU5.Bricks.Panel nestingLevel="container" 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Panel nestingLevel="inline" 1`] = `""`;
+exports[`UU5.Bricks.Panel nestingLevel="inline" 1`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "__isMounted": true,
+      "_blockNextChildUpdate": false,
+      "_domNode": null,
+      "_isMounted": true,
+      "_resizeCallbacks": Object {},
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.PureRenderMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.ColorSchemaMixin",
+        "UU5.Common.ContentMixin",
+        "UU5.Common.LevelMixin",
+        "UU5.Common.SectionMixin",
+        "UU5.Common.NestingLevelMixin",
+        "UU5.Common.EditableMixin",
+      ],
+      "props": Object {
+        "alwaysExpanded": false,
+        "bgStyle": null,
+        "bgStyleContent": null,
+        "bgStyleHeader": null,
+        "borderRadius": null,
+        "checkGrammar": undefined,
+        "checkHighlight": undefined,
+        "checkSpaces": undefined,
+        "className": null,
+        "colorSchema": null,
+        "content": null,
+        "contentEditable": true,
+        "controlled": true,
+        "disableHeaderClick": undefined,
+        "disabled": false,
+        "dynamic": false,
+        "elevation": null,
+        "expanded": false,
+        "footer": null,
+        "getEditablePropValue": undefined,
+        "header": null,
+        "hidden": false,
+        "iconAlign": null,
+        "iconCollapsed": null,
+        "iconExpanded": null,
+        "id": "uuID",
+        "ignoreInnerHTML": false,
+        "increaseLevel": false,
+        "level": null,
+        "mainAttrs": null,
+        "mountContent": undefined,
+        "name": null,
+        "nestingLevel": "inline",
+        "noIndex": false,
+        "onClick": null,
+        "openClick": null,
+        "parent": null,
+        "pureRender": false,
+        "ref_": null,
+        "selected": false,
+        "size": "m",
+        "style": null,
+        "textCorrector": undefined,
+        "tooltip": null,
+        "underline": false,
+      },
+      "refs": Object {},
+      "renderedChildren": Array [],
+      "renderedChildrenIdList": Object {},
+      "renderedChildrenNameList": Object {},
+      "renderedFooterChild": null,
+      "renderedHeaderChild": null,
+      "state": Object {
+        "disabled": false,
+        "editableComponentLazyLoaded": false,
+        "editation": false,
+        "editationLazyLoaded": false,
+        "expanded": false,
+        "hidden": false,
+        "level": 0,
+        "mode": undefined,
+        "nestingLevel": null,
+        "renderChild": true,
+        "selected": false,
+      },
+      "tagName": "UU5.Bricks.Panel",
+    }
+  }
+  editModalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Upravit panel",
+          "en": "Edit panel",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  getPropsToSave={[Function]}
+  linkTitle="Panel"
+  modalHeader="Panel"
+/>
+`;
 
 exports[`UU5.Bricks.Panel nestingLevel="page" 1`] = `
 <div
@@ -2334,9 +2461,263 @@ exports[`UU5.Bricks.Panel nestingLevel="page" 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Panel nestingLevel="smallBox" 1`] = `""`;
+exports[`UU5.Bricks.Panel nestingLevel="smallBox" 1`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "__isMounted": true,
+      "_blockNextChildUpdate": false,
+      "_domNode": null,
+      "_isMounted": true,
+      "_resizeCallbacks": Object {},
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.PureRenderMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.ColorSchemaMixin",
+        "UU5.Common.ContentMixin",
+        "UU5.Common.LevelMixin",
+        "UU5.Common.SectionMixin",
+        "UU5.Common.NestingLevelMixin",
+        "UU5.Common.EditableMixin",
+      ],
+      "props": Object {
+        "alwaysExpanded": false,
+        "bgStyle": null,
+        "bgStyleContent": null,
+        "bgStyleHeader": null,
+        "borderRadius": null,
+        "checkGrammar": undefined,
+        "checkHighlight": undefined,
+        "checkSpaces": undefined,
+        "className": null,
+        "colorSchema": null,
+        "content": null,
+        "contentEditable": true,
+        "controlled": true,
+        "disableHeaderClick": undefined,
+        "disabled": false,
+        "dynamic": false,
+        "elevation": null,
+        "expanded": false,
+        "footer": null,
+        "getEditablePropValue": undefined,
+        "header": null,
+        "hidden": false,
+        "iconAlign": null,
+        "iconCollapsed": null,
+        "iconExpanded": null,
+        "id": "uuID",
+        "ignoreInnerHTML": false,
+        "increaseLevel": false,
+        "level": null,
+        "mainAttrs": null,
+        "mountContent": undefined,
+        "name": null,
+        "nestingLevel": "smallBox",
+        "noIndex": false,
+        "onClick": null,
+        "openClick": null,
+        "parent": null,
+        "pureRender": false,
+        "ref_": null,
+        "selected": false,
+        "size": "m",
+        "style": null,
+        "textCorrector": undefined,
+        "tooltip": null,
+        "underline": false,
+      },
+      "refs": Object {},
+      "renderedChildren": Array [],
+      "renderedChildrenIdList": Object {},
+      "renderedChildrenNameList": Object {},
+      "renderedFooterChild": null,
+      "renderedHeaderChild": null,
+      "state": Object {
+        "disabled": false,
+        "editableComponentLazyLoaded": false,
+        "editation": false,
+        "editationLazyLoaded": false,
+        "expanded": false,
+        "hidden": false,
+        "level": 0,
+        "mode": undefined,
+        "nestingLevel": null,
+        "renderChild": true,
+        "selected": false,
+      },
+      "tagName": "UU5.Bricks.Panel",
+    }
+  }
+  editModalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Upravit panel",
+          "en": "Edit panel",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  getPropsToSave={[Function]}
+  linkTitle="Panel"
+  modalHeader="Panel"
+/>
+`;
 
-exports[`UU5.Bricks.Panel nestingLevel="smallBoxCollection" 1`] = `""`;
+exports[`UU5.Bricks.Panel nestingLevel="smallBoxCollection" 1`] = `
+<UU5.BricksEditable.InlineMode
+  Component={[Function]}
+  component={
+    Object {
+      "__isMounted": true,
+      "_blockNextChildUpdate": false,
+      "_domNode": null,
+      "_isMounted": true,
+      "_resizeCallbacks": Object {},
+      "context": Object {},
+      "id": "uuID",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.PureRenderMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.ColorSchemaMixin",
+        "UU5.Common.ContentMixin",
+        "UU5.Common.LevelMixin",
+        "UU5.Common.SectionMixin",
+        "UU5.Common.NestingLevelMixin",
+        "UU5.Common.EditableMixin",
+      ],
+      "props": Object {
+        "alwaysExpanded": false,
+        "bgStyle": null,
+        "bgStyleContent": null,
+        "bgStyleHeader": null,
+        "borderRadius": null,
+        "checkGrammar": undefined,
+        "checkHighlight": undefined,
+        "checkSpaces": undefined,
+        "className": null,
+        "colorSchema": null,
+        "content": null,
+        "contentEditable": true,
+        "controlled": true,
+        "disableHeaderClick": undefined,
+        "disabled": false,
+        "dynamic": false,
+        "elevation": null,
+        "expanded": false,
+        "footer": null,
+        "getEditablePropValue": undefined,
+        "header": null,
+        "hidden": false,
+        "iconAlign": null,
+        "iconCollapsed": null,
+        "iconExpanded": null,
+        "id": "uuID",
+        "ignoreInnerHTML": false,
+        "increaseLevel": false,
+        "level": null,
+        "mainAttrs": null,
+        "mountContent": undefined,
+        "name": null,
+        "nestingLevel": "smallBoxCollection",
+        "noIndex": false,
+        "onClick": null,
+        "openClick": null,
+        "parent": null,
+        "pureRender": false,
+        "ref_": null,
+        "selected": false,
+        "size": "m",
+        "style": null,
+        "textCorrector": undefined,
+        "tooltip": null,
+        "underline": false,
+      },
+      "refs": Object {},
+      "renderedChildren": Array [],
+      "renderedChildrenIdList": Object {},
+      "renderedChildrenNameList": Object {},
+      "renderedFooterChild": null,
+      "renderedHeaderChild": null,
+      "state": Object {
+        "disabled": false,
+        "editableComponentLazyLoaded": false,
+        "editation": false,
+        "editationLazyLoaded": false,
+        "expanded": false,
+        "hidden": false,
+        "level": 0,
+        "mode": undefined,
+        "nestingLevel": null,
+        "renderChild": true,
+        "selected": false,
+      },
+      "tagName": "UU5.Bricks.Panel",
+    }
+  }
+  editModalHeader={
+    <Lsi
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      language={null}
+      lsi={
+        Object {
+          "cs": "Upravit panel",
+          "en": "Edit panel",
+        }
+      }
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      params={null}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+  getPropsToSave={[Function]}
+  linkTitle="Panel"
+  modalHeader="Panel"
+/>
+`;
 
 exports[`UU5.Bricks.Panel nestingLevel="spa" 1`] = `
 <div

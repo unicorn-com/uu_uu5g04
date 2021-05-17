@@ -14,6 +14,7 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+import Css from "./internal/css.js";
 
 import "./blockquote-footer.less";
 //@@viewOff:imports
@@ -38,6 +39,10 @@ export default UU5.Common.VisualComponent.create({
       main: ns.css("blockquote-footer"),
       right: ns.css("blockquote-footer-right"),
       left: ns.css("blockquote-footer-left"),
+      inline: () => Css.css`
+      padding-left: 8px;
+      display: inline-block;
+    `,
     },
     opt: {
       nestingLevelWrapper: true,
@@ -69,17 +74,19 @@ export default UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _buildMainAttrs: function () {
+  _buildMainAttrs: function (inline) {
     var mainAttrs = this.getMainAttrs();
     this.props.alignment === "right" && (mainAttrs.className += " " + this.getClassName().right);
     this.props.alignment === "left" && (mainAttrs.className += " " + this.getClassName().left);
+    !inline && (mainAttrs.className += " " + this.getClassName("inline"));
     return mainAttrs;
   },
   //@@viewOff:private
 
   //@@viewOn:render
   render: function () {
-    return this.getNestingLevel() ? <footer {...this._buildMainAttrs()}>{this.getChildren()}</footer> : null;
+    let nestingLevel = this.props.nestingLevel;
+    return <footer {...this._buildMainAttrs()}>{this.getChildren(nestingLevel)}</footer>;
   },
   //@@viewOff:render
 });

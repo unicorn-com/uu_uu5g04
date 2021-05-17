@@ -15,8 +15,9 @@
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Section from "./section.js";
+import { InlineMode } from "./internal/inline-mode.js";
 import "./newspaper.less";
-import Lsi from "./internal/bricks-editable-lsi.js";
+import Lsi from "./bricks-lsi.js";
 
 const EditationComponent = UU5.Common.Component.lazy(async () => {
   await SystemJS.import("uu5g04-forms");
@@ -50,7 +51,7 @@ export const Newspaper = UU5.Common.VisualComponent.create({
       columns: "uu5-common-newspaper-layout-",
     },
     editMode: {
-      name: Lsi.newspaper.name,
+      name: Lsi.inlineComponentHeaders.newspaperName,
       backgroundColor: "rgba(0,0,0,.2)",
       color: "rgba(0,0,0,.87)",
       highlightColor: "#CCCCCC",
@@ -93,21 +94,41 @@ export const Newspaper = UU5.Common.VisualComponent.create({
     this._editableComponent = ref;
   },
 
-  _renderEditationMode() {
+  _renderEditationMode(renderInline) {
     return (
       <UU5.Common.Suspense fallback={this.getEditingLoading()}>
-        <EditationComponent component={this} ref_={this._registerEditableComponent} renderView={this._renderView} />
+        <EditationComponent
+          renderInline={renderInline}
+          component={this}
+          ref_={this._registerEditableComponent}
+          renderView={this._renderView}
+        />
       </UU5.Common.Suspense>
     );
   },
 
-  _renderView(forcedContent) {
+  _renderView(forcedContent, nestingLevel, isEdited) {
     let props = this._getMainProps(this.isInlineEdited());
     if (forcedContent) {
       props.content = forcedContent;
     }
-
-    return <Section {...props}>{this.props.children && UU5.Common.Children.toArray(this.props.children)}</Section>;
+    let header = {};
+    let inlineProps = {};
+    let headerToUse = nestingLevel
+      ? this.props.header
+      : this.props.header || <UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.newspaperName} />;
+    if (!isEdited) {
+      header.header = headerToUse;
+    }
+    if (!nestingLevel) {
+      inlineProps.nestingLevel = "bigBox";
+      inlineProps.parent = null;
+    }
+    return (
+      <Section {...props} {...inlineProps} {...header}>
+        {this.props.children && UU5.Common.Children.toArray(this.props.children)}
+      </Section>
+    );
   },
 
   _getMainProps(editation) {
@@ -128,12 +149,23 @@ export const Newspaper = UU5.Common.VisualComponent.create({
 
   //@@viewOn:render
   render() {
-    return this.getNestingLevel() ? (
+    let nestingLevel = this.getNestingLevel();
+    return nestingLevel ? (
       <>
         {this.isInlineEdited() && this._renderEditationMode()}
-        {this.isNotInlineEdited() && this._renderView()}
+        {this.isNotInlineEdited() && this._renderView(null, nestingLevel)}
       </>
-    ) : null;
+    ) : (
+      <InlineMode
+        component={this}
+        Component={UU5.Bricks.Newspaper}
+        editModalHeader={<UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.newspaperEditHeader} />}
+        modalHeader={this.props.header || <UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.newspaperName} />}
+        linkTitle={this.props.header || <UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.newspaperName} />}
+        getPropsToSave={this.onBeforeForceEndEditation_}
+        renderEditationMode={this.renderEditationMode}
+      />
+    );
   },
   //@@viewOff:render
 });

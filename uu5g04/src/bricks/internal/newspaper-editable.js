@@ -274,38 +274,43 @@ export const NewspaperEditable = UU5.Common.VisualComponent.create({
         settingsItems={this._getToolbarSettings()}
         items={this._getToolbarItems()}
       >
-        {this.props.renderView([
-          this.state.showHeader ? (
-            <UU5.BricksEditable.Input
-              value={this.state.header || ""}
-              placeholder={this.getLsi("headerPlaceholder")}
-              onChange={this._changeHeaderContent}
-              toolbarItems={this._getHeaderToolbarItems()}
-              key="headerInput"
-            >
-              {({ children }) => (
-                <UU5.Bricks.Header
-                  underline={this.state.underline}
-                  level={this.state.level}
-                  parent={this.props.component}
-                >
-                  {children}
-                </UU5.Bricks.Header>
-              )}
-            </UU5.BricksEditable.Input>
-          ) : null,
-          this.props.component.getChildren(),
-          this.state.showFooter ? (
-            <UU5.BricksEditable.Input
-              value={this.state.footer || ""}
-              placeholder={this.getLsi("footerPlaceholder")}
-              onChange={this._changeFooterContent}
-              key="footerInput"
-            >
-              {({ children }) => <UU5.Bricks.Footer parent={this.props.component}>{children}</UU5.Bricks.Footer>}
-            </UU5.BricksEditable.Input>
-          ) : null,
-        ])}
+        {this.props.renderView(
+          [
+            this.state.showHeader ? (
+              <UU5.BricksEditable.Input
+                value={this.state.header || ""}
+                placeholder={this.getLsi("headerPlaceholder")}
+                onChange={this._changeHeaderContent}
+                toolbarItems={this._getHeaderToolbarItems()}
+                key="headerInput"
+              >
+                {({ children }) => (
+                  <UU5.Bricks.Header
+                    underline={this.state.underline}
+                    level={this.state.level}
+                    parent={this.props.renderInline ? undefined : this.props.component}
+                    nestingLevel={undefined}
+                  >
+                    {children}
+                  </UU5.Bricks.Header>
+                )}
+              </UU5.BricksEditable.Input>
+            ) : null,
+            this.props.component.getChildren(),
+            this.state.showFooter ? (
+              <UU5.BricksEditable.Input
+                value={this.state.footer || ""}
+                placeholder={this.getLsi("footerPlaceholder")}
+                onChange={this._changeFooterContent}
+                key="footerInput"
+              >
+                {({ children }) => <UU5.Bricks.Footer parent={this.props.component}>{children}</UU5.Bricks.Footer>}
+              </UU5.BricksEditable.Input>
+            ) : null,
+          ],
+          undefined,
+          true
+        )}
       </UU5.BricksEditable.Toolbar>
     );
   },

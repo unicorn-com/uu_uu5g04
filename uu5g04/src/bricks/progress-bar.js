@@ -16,6 +16,7 @@ import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Cover from "./progress-bar-cover.js";
 import Item from "./progress-bar-item.js";
+import Css from "./internal/css.js";
 import "./progress-bar.less";
 
 const EditationComponent = UU5.Common.Component.lazy(async () => {
@@ -46,6 +47,10 @@ export const ProgressBar = UU5.Common.VisualComponent.create({
     classNames: {
       main: ns.css("progress-bar"),
       size: ns.css("progress-bar-size-"),
+      inlineText: Css.css(`
+      display: inline;
+      padding-right: 8px;
+    `),
     },
     defaults: {
       childTagName: "UU5.Bricks.ProgressBar.Item",
@@ -57,7 +62,7 @@ export const ProgressBar = UU5.Common.VisualComponent.create({
     },
     editMode: {
       enablePlaceholder: false,
-    }
+    },
   },
   //@@viewOff:statics
 
@@ -213,7 +218,28 @@ export const ProgressBar = UU5.Common.VisualComponent.create({
         <Cover {...this._getMainProps()}>{this.props.children ? this.getChildren() : this._buildChild()}</Cover>
         {this.isInlineEdited() && this._renderEditationMode()}
       </UU5.Common.Fragment>
-    ) : null;
+    ) : this.props.children ? (
+      <span>
+        {this.getChildren().map((component, index) => {
+          return (
+            <UU5.Bricks.Text
+              className={this.getClassName("inlineText")}
+              colorSchema={component.props.colorSchema}
+              key={index}
+            >
+              {component.props.progress}%
+            </UU5.Bricks.Text>
+          );
+        })}
+      </span>
+    ) : (
+      <>
+        <UU5.Bricks.Text className={this.getClassName("inlineText")} colorSchema={this.props.colorSchema}>
+          {this._buildChild().props.progress}%
+        </UU5.Bricks.Text>
+        {this.isInlineEdited() && this._renderEditationMode()}
+      </>
+    );
   },
   //@@viewOff:render
 });

@@ -14,6 +14,7 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+import Css from "./internal/css.js";
 
 import "./dl.less";
 //@@viewOff:imports
@@ -37,6 +38,16 @@ export const Dl = UU5.Common.VisualComponent.create({
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "smallBox"),
     classNames: {
       main: ns.css("dl"),
+      inline: Css.css(`
+      dt{
+        display: inline;
+      }
+      dd{
+        display: inline;
+        margin-inline-start: 16px;
+        margin-inline-end: 16px;
+      }
+    `),
     },
     defaults: {
       childTagNames: ["UU5.Bricks.Dd", "UU5.Bricks.Dt"],
@@ -82,18 +93,23 @@ export const Dl = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
+  _buildMainAttrs(notInline) {
+    var mainAttrs = this.getMainAttrs();
+    !notInline && (mainAttrs.className += " " + this.getClassName("inline"));
+    return mainAttrs;
+  },
   //@@viewOff:private
 
   //@@viewOn:render
   render: function () {
-    return this.getNestingLevel() ? (
-      <dl {...this.getMainAttrs()}>
+    return (
+      <dl {...this._buildMainAttrs(this.getNestingLevel())}>
         {this.getHeaderChild()}
         {this.getChildren()}
         {this.getFooterChild()}
         {this.getDisabledCover()}
       </dl>
-    ) : null;
+    );
   },
   //@@viewOff:render
 });

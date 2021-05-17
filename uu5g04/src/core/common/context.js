@@ -21,7 +21,7 @@ const REACT_MAJOR_VERSION = parseInt(React.version.match(/\d+/)[0]);
 const REACT_MINOR_VERSION = parseInt(React.version.match(/\.(\d+)/)[1]);
 const allowContext = REACT_MAJOR_VERSION > 16 || (REACT_MAJOR_VERSION === 16 && REACT_MINOR_VERSION >= 4);
 
-class Context {
+export class Context {
   static create(defaultValue = {}) {
     let context;
 

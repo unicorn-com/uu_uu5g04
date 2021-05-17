@@ -1,525 +1,226 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UU5.Bricks.Console className="my-classname" 1`] = `
-<Pre
-  className="uu5-bricks-console my-classname"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
+<Console
+  className="my-classname"
+  id="uuID"
 />
 `;
 
 exports[`UU5.Bricks.Console controlled=false 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
+<Console
+  controlled={false}
+  id="uuID"
 />
 `;
 
 exports[`UU5.Bricks.Console controlled=true 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
+<Console
+  id="uuID"
 />
 `;
 
 exports[`UU5.Bricks.Console default props 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
+<Console
+  id="uuID"
 />
 `;
 
 exports[`UU5.Bricks.Console disabled=false 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
+<Console
+  id="uuID"
 />
 `;
 
 exports[`UU5.Bricks.Console disabled=true 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
+<Console
   disabled={true}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
+  id="uuID"
 />
 `;
 
 exports[`UU5.Bricks.Console hidden=false 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
+<Console
+  id="uuID"
 />
 `;
 
 exports[`UU5.Bricks.Console hidden=true 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
+<Console
   hidden={true}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
+  id="uuID"
 />
 `;
 
 exports[`UU5.Bricks.Console id="myId" 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="myId-inner"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
+<Console
+  id="myId"
 />
 `;
 
 exports[`UU5.Bricks.Console mainAttrs=undefined 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
+<Console
+  id="uuID"
 />
 `;
 
 exports[`UU5.Bricks.Console name="myName" 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name="myName-inner"
-  nestingLevel={null}
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
+<Console
+  id="uuID"
+  name="myName"
 />
 `;
 
 exports[`UU5.Bricks.Console nestingLevel="bigBox" 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
+<Console
+  id="uuID"
   nestingLevel="bigBox"
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Console nestingLevel="bigBoxCollection" 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
+<Console
+  id="uuID"
   nestingLevel="bigBoxCollection"
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Console nestingLevel="box" 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
+<Console
+  id="uuID"
   nestingLevel="box"
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Console nestingLevel="boxCollection" 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
+<Console
+  id="uuID"
   nestingLevel="boxCollection"
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Console nestingLevel="container" 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
+<Console
+  id="uuID"
   nestingLevel="container"
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Console nestingLevel="inline" 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="inline"
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
+<UU5.Bricks.LinkModal
+  component={
+    <Console
+      className={null}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      id="uuID"
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      parent={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  }
+>
+  Console
+</UU5.Bricks.LinkModal>
 `;
 
 exports[`UU5.Bricks.Console nestingLevel="page" 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
+<Console
+  id="uuID"
   nestingLevel="page"
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Console nestingLevel="smallBox" 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
+<Console
+  id="uuID"
   nestingLevel="smallBox"
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Console nestingLevel="smallBoxCollection" 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
+<Console
+  id="uuID"
   nestingLevel="smallBoxCollection"
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Console nestingLevel="spa" 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
+<Console
+  id="uuID"
   nestingLevel="spa"
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Console noIndex=false 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
+<Console
+  id="uuID"
 />
 `;
 
 exports[`UU5.Bricks.Console noIndex=true 1`] = `
-<Pre
-  className="uu5-bricks-console uu5-noindex"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
+<Console
+  id="uuID"
+  noIndex={true}
 />
 `;
 
 exports[`UU5.Bricks.Console pureRender=false 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
+<Console
+  id="uuID"
 />
 `;
 
 exports[`UU5.Bricks.Console pureRender=true 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
+<Console
+  id="uuID"
   pureRender={true}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Console selected=false 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
+<Console
+  id="uuID"
 />
 `;
 
 exports[`UU5.Bricks.Console selected=true 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  pureRender={false}
+<Console
+  id="uuID"
   selected={true}
-  style={null}
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Console style="padding:8px; borderRadius: 2px" 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  pureRender={false}
-  selected={false}
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  tooltip={null}
+<Console
+  id="uuID"
+  style="padding:8px; borderRadius: 2px"
 />
 `;
 
 exports[`UU5.Bricks.Console style={"backgroundColor":"red","color":"blue"} 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  pureRender={false}
-  selected={false}
+<Console
+  id="uuID"
   style={
     Object {
       "backgroundColor": "red",
       "color": "blue",
     }
   }
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Console tooltip="My Tooltip" 1`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-inner"
-  mainAttrs={
-    Object {
-      "title": "My Tooltip",
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  pureRender={false}
-  selected={false}
-  style={null}
+<Console
+  id="uuID"
   tooltip="My Tooltip"
 />
 `;

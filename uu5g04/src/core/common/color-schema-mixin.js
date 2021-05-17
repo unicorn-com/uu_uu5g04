@@ -14,30 +14,6 @@
 import React from "react";
 import Environment from "../environment/environment.js";
 
-// FIXME MODULES Commented out due to dependencies "common => forms".
-import "./color-schema.less";
-// import './color-schema/default.less';
-// import './color-schema/yellow.less';
-// import './color-schema/yellow-rich.less';
-// import './color-schema/orange.less';
-// import './color-schema/orange-rich.less';
-// import './color-schema/pink.less';
-// import './color-schema/pink-rich.less';
-// import './color-schema/red.less';
-// import './color-schema/red-rich.less';
-// import './color-schema/purple.less';
-// import './color-schema/purple-rich.less';
-// import './color-schema/cyan.less';
-// import './color-schema/cyan-rich.less';
-// import './color-schema/blue.less';
-// import './color-schema/blue-rich.less';
-// import './color-schema/green.less';
-// import './color-schema/green-rich.less';
-// import './color-schema/brown.less';
-// import './color-schema/brown-rich.less';
-// import './color-schema/grey.less';
-// import './color-schema/grey-rich.less';
-
 export const ColorSchemaMixin = {
   //@@viewOn:statics
   statics: {

@@ -11,14 +11,16 @@
  * at the email: info@unicorn.com.
  */
 
+//@@viewOn:imports
 import * as UU5 from "uu5g04";
-import "uu5g04-bricks";
-//import "uu5g04-forms";
-//import "uu5g04-bricks-editable";
 
 import ns from "./bricks-editable-ns.js";
-import Lsi from "./bricks-editable-lsi.js";
+import Footer from "../footer.js";
+import Header from "../header.js";
+import Lsi from "../lsi.js";
+import EditableLsi from "./bricks-editable-lsi.js";
 import Css from "./css.js";
+//@@viewOff:imports
 
 const DEFAULT_PROPS_MAP = {
   contentEditable: false,
@@ -54,30 +56,30 @@ const propsSetup = [
       {
         name: "colWidth",
         type: "text",
-        label: Lsi.column.colWidthLabel,
+        label: EditableLsi.column.colWidthLabel,
         getProps: (props) => ({
           value: getColWidthValue(props.value),
-          message: <UU5.Bricks.Lsi lsi={Lsi.column.colWidthTooltip} />,
+          message: <Lsi lsi={EditableLsi.column.colWidthTooltip} />,
           onChange: ({ value, component }) => {
-            component.setFeedback("initial", <UU5.Bricks.Lsi lsi={Lsi.column.colWidthTooltip} />, value);
+            component.setFeedback("initial", <Lsi lsi={EditableLsi.column.colWidthTooltip} />, value);
           },
         }),
       },
       {
         name: "noSpacing",
         type: "switchSelector",
-        label: Lsi.column.horizontalPaddingLabel,
+        label: EditableLsi.column.horizontalPaddingLabel,
         getProps: () => ({
           items: [
-            { value: false, content: <UU5.Bricks.Lsi lsi={Lsi.column.horizontalPaddingValueStandard} /> },
-            { value: true, content: <UU5.Bricks.Lsi lsi={Lsi.column.horizontalPaddingValueNone} /> },
+            { value: false, content: <Lsi lsi={EditableLsi.column.horizontalPaddingValueStandard} /> },
+            { value: true, content: <Lsi lsi={EditableLsi.column.horizontalPaddingValueNone} /> },
           ],
         }),
       },
       {
         name: "className",
         type: "text",
-        label: <UU5.Bricks.Lsi lsi={Lsi.column.classNameLabel} />,
+        label: <Lsi lsi={EditableLsi.column.classNameLabel} />,
       },
     ],
   },
@@ -167,7 +169,7 @@ export const Column = UU5.Common.VisualComponent.create({
           }
         `),
     },
-    lsi: () => ({ ...Lsi.column, ...Lsi.common }),
+    lsi: () => ({ ...EditableLsi.column, ...EditableLsi.common }),
     defaults: {
       colWidthRegexp: /([a-z])+(?:-)?(\d+)/,
     },
@@ -439,13 +441,9 @@ export const Column = UU5.Common.VisualComponent.create({
                 key="headerInput"
               >
                 {({ children }) => (
-                  <UU5.Bricks.Header
-                    underline={this.state.underline}
-                    level={this.state.level}
-                    parent={this.props.component}
-                  >
+                  <Header underline={this.state.underline} level={this.state.level} parent={this.props.component}>
                     {children}
-                  </UU5.Bricks.Header>
+                  </Header>
                 )}
               </UU5.BricksEditable.Input>
             ) : null,
@@ -457,7 +455,7 @@ export const Column = UU5.Common.VisualComponent.create({
                 onChange={this._changeFooterContent}
                 key="footerInput"
               >
-                {({ children }) => <UU5.Bricks.Footer parent={this.props.component}>{children}</UU5.Bricks.Footer>}
+                {({ children }) => <Footer parent={this.props.component}>{children}</Footer>}
               </UU5.BricksEditable.Input>
             ) : null,
           ]}

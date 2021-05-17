@@ -1,9 +1,11 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
-import "uu5g04-bricks";
-import ns from "../../bricks-editable/bricks-editable-ns";
-import Lsi from "./bricks-editable-lsi.js";
-import Css from "./css";
+import ns from "./bricks-editable-ns.js";
+import ConfirmModal from "../confirm-modal.js";
+import Icon from "../icon.js";
+import Lsi from "../lsi.js";
+import EditableLsi from "./bricks-editable-lsi.js";
+import Css from "./css.js";
 //@@viewOff:imports
 
 //@@viewOn:revision
@@ -30,7 +32,7 @@ export const PresetEditComponent = UU5.Common.VisualComponent.create({
     classNames: {
       main: ns.css("row-properties-category"),
     },
-    lsi: () => Lsi.row,
+    lsi: () => EditableLsi.row,
   },
   //@@viewOff:statics
 
@@ -135,7 +137,7 @@ export const PresetEditComponent = UU5.Common.VisualComponent.create({
 
   _getConfirmModal() {
     return (
-      <UU5.Bricks.ConfirmModal
+      <ConfirmModal
         onRefuse={this._onRefuse}
         onConfirm={this._onConfirm}
         content={this.getLsiComponent("layoutConfirmModalContent")}
@@ -234,7 +236,7 @@ export const ColWidthEditComponent = UU5.Common.VisualComponent.create({
     classNames: {
       main: ns.css("colwidth-edit-component"),
     },
-    lsi: () => Lsi.row,
+    lsi: () => EditableLsi.row,
   },
   //@@viewOff:statics
 
@@ -343,8 +345,8 @@ export const ColWidthEditComponent = UU5.Common.VisualComponent.create({
 
 export const EditItemInfo = () => (
   <div className={EditItemInfoClassNames.main}>
-    <UU5.Bricks.Icon icon="mdi-information" className={EditItemInfoClassNames.icon} />
-    <UU5.Bricks.Lsi lsi={Lsi.common.itemInfo} />
+    <Icon icon="mdi-information" className={EditItemInfoClassNames.icon} />
+    <Lsi lsi={EditableLsi.common.itemInfo} />
   </div>
 );
 const EditItemInfoClassNames = {
@@ -367,7 +369,7 @@ export const QRCodeSize = ({ componentProps, onChangeProps, errors }) => (
     step={32}
     suffix="px"
     valueType="number"
-    label={<UU5.Bricks.Lsi lsi={Lsi.qRCode.sizeLabel} />}
+    label={<Lsi lsi={EditableLsi.qRCode.sizeLabel} />}
     value={componentProps.size}
     feedback={errors && errors.size ? "error" : undefined}
     onChange={({ value }) => onChangeProps({ size: value }, { size: value < 32 || isNaN(value) })}
@@ -378,11 +380,11 @@ export const QRCodeSize = ({ componentProps, onChangeProps, errors }) => (
 export const CardInline = ({ componentProps, onChangeProps }) => (
   <UU5.Forms.SwitchSelector
     items={[
-      { content: <UU5.Bricks.Lsi lsi={Lsi.common.valueFalse} />, value: false },
-      { content: <UU5.Bricks.Lsi lsi={Lsi.common.valueTrue} />, value: true },
+      { content: <Lsi lsi={EditableLsi.common.valueFalse} />, value: false },
+      { content: <Lsi lsi={EditableLsi.common.valueTrue} />, value: true },
     ]}
     value={componentProps.inline}
-    label={<UU5.Bricks.Lsi lsi={Lsi.card.inlineLabel} />}
+    label={<Lsi lsi={EditableLsi.card.inlineLabel} />}
     onChange={({ value }) => {
       onChangeProps({
         inline: value,
@@ -396,11 +398,11 @@ export const CardInline = ({ componentProps, onChangeProps }) => (
 export const ProgressBarStriped = ({ componentProps, onChangeProps }) => (
   <UU5.Forms.SwitchSelector
     items={[
-      { content: <UU5.Bricks.Lsi lsi={Lsi.progressBar.stripedValueFalse} />, value: false },
-      { content: <UU5.Bricks.Lsi lsi={Lsi.progressBar.stripedValueTrue} />, value: true },
+      { content: <Lsi lsi={EditableLsi.progressBar.stripedValueFalse} />, value: false },
+      { content: <Lsi lsi={EditableLsi.progressBar.stripedValueTrue} />, value: true },
     ]}
     value={componentProps.striped}
-    label={<UU5.Bricks.Lsi lsi={Lsi.progressBar.stripedLabel} />}
+    label={<Lsi lsi={EditableLsi.progressBar.stripedLabel} />}
     onChange={({ value }) => {
       onChangeProps({
         striped: value,
@@ -417,11 +419,11 @@ export const ProgressBarItemStriped = ({ onChangeItems, items, editedItemId }) =
   return (
     <UU5.Forms.SwitchSelector
       items={[
-        { content: <UU5.Bricks.Lsi lsi={Lsi.progressBar.stripedValueFalse} />, value: false },
-        { content: <UU5.Bricks.Lsi lsi={Lsi.progressBar.stripedValueTrue} />, value: true },
+        { content: <Lsi lsi={EditableLsi.progressBar.stripedValueFalse} />, value: false },
+        { content: <Lsi lsi={EditableLsi.progressBar.stripedValueTrue} />, value: true },
       ]}
       value={editedItem.props.striped}
-      label={<UU5.Bricks.Lsi lsi={Lsi.progressBar.stripedLabel} />}
+      label={<Lsi lsi={EditableLsi.progressBar.stripedLabel} />}
       onChange={({ value }) => {
         let newItems = items.map((item) => ({ id: item.id }));
         if (!newItems[editedItemIndex].props) {
@@ -439,18 +441,18 @@ export const LineVertical = ({ componentProps, onChangeProps }) => (
   <UU5.Common.Fragment>
     <UU5.Forms.SwitchSelector
       items={[
-        { content: <UU5.Bricks.Lsi lsi={Lsi.line.verticalValueFalse} />, value: false },
-        { content: <UU5.Bricks.Lsi lsi={Lsi.line.verticalValueTrue} />, value: true },
+        { content: <Lsi lsi={EditableLsi.line.verticalValueFalse} />, value: false },
+        { content: <Lsi lsi={EditableLsi.line.verticalValueTrue} />, value: true },
       ]}
       value={!!componentProps.vertical || typeof componentProps.vertical === "number"}
-      label={<UU5.Bricks.Lsi lsi={Lsi.line.verticalLabel} />}
+      label={<Lsi lsi={EditableLsi.line.verticalLabel} />}
       onChange={({ value }) => {
         onChangeProps({ vertical: value });
       }}
     />
     <UU5.Forms.Number
       value={typeof componentProps.vertical === "number" ? componentProps.vertical : undefined}
-      label={<UU5.Bricks.Lsi lsi={Lsi.line.verticalHeightLabel} />}
+      label={<Lsi lsi={EditableLsi.line.verticalHeightLabel} />}
       disabled={!componentProps.vertical && typeof componentProps.vertical !== "number"}
       valueType="number"
       min={1}
@@ -470,7 +472,7 @@ export const ContentInput = ({ componentProps, onChangeProps }) => {
       onBlur={({ value }) => {
         onChangeProps({ [usedContentProp]: value });
       }}
-      label={<UU5.Bricks.Lsi lsi={Lsi.common.contentLabel} />}
+      label={<Lsi lsi={EditableLsi.common.contentLabel} />}
     />
   );
 };

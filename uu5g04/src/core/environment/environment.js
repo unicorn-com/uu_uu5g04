@@ -628,9 +628,6 @@ Environment.isProduction = function () {
   return Environment.mode === "production";
 };
 
-// Version
-process.env.NODE_ENV !== "test" && console.log(Environment.licence);
-
 Environment.changeColorSchema = function (key, colorSchema, src) {
   Environment.colorSchemaMap[key] = Environment.colorSchemaMap[key] || {};
   // save original color - only first time to prevent rewrite original value

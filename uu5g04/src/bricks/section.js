@@ -14,9 +14,8 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
-
 import { Div } from "./factory.js";
-
+import { InlineMode } from "./internal/inline-mode.js";
 const EditableSection = UU5.Common.Component.lazy(async () => {
   await SystemJS.import("uu5g04-forms");
   await SystemJS.import("uu5g04-bricks-editable");
@@ -26,10 +25,10 @@ const EditableSection = UU5.Common.Component.lazy(async () => {
 let editationLazyLoaded = false;
 
 import "./section.less";
-import Lsi from "./internal/bricks-editable-lsi.js";
+import Lsi from "./bricks-lsi.js";
 //@@viewOff:imports
 
-export const Section = UU5.Common.VisualComponent.create({
+let Section = UU5.Common.VisualComponent.create({
   displayName: "Section", // for backward compatibility (test snapshots)
 
   //@@viewOn:mixins
@@ -55,11 +54,11 @@ export const Section = UU5.Common.VisualComponent.create({
       nestingLevelWrapper: true,
     },
     editMode: {
-      name: Lsi.section.name,
+      name: Lsi.inlineComponentHeaders.sectionName,
       backgroundColor: "rgba(0,0,0,.2)",
       color: "rgba(0,0,0,.87)",
       highlightColor: "#CCCCCC",
-      enablePlaceholder: true
+      enablePlaceholder: true,
     },
   },
   //@@viewOff:statics
@@ -124,10 +123,10 @@ export const Section = UU5.Common.VisualComponent.create({
     return editationLazyLoaded;
   },
 
-  _renderEditationMode() {
+  _renderEditationMode(inline = false) {
     return (
       <UU5.Common.Suspense fallback={<span ref={this._registerNull} />}>
-        <EditableSection component={this} ref_={this._registerEditableSection} />
+        <EditableSection inline={inline} component={this} ref_={this._registerEditableSection} />
       </UU5.Common.Suspense>
     );
   },
@@ -135,8 +134,12 @@ export const Section = UU5.Common.VisualComponent.create({
   _registerEditableSection(section) {
     this._editableSection = section;
   },
-  //@@viewOff:private
 
+  _registerEditableModal(ref) {
+    this._editModal = ref;
+    this._editModal.open();
+  },
+  //@@viewOff:private
   //@@viewOn:render
   render: function () {
     return this.getNestingLevel() ? (
@@ -146,9 +149,21 @@ export const Section = UU5.Common.VisualComponent.create({
           ? [this.getHeaderChild(), this.getChildren(), this.getFooterChild()]
           : null}
       </Div>
-    ) : null;
+    ) : (
+      <InlineMode
+        component={this}
+        Component={UU5.Bricks.Section}
+        editModalHeader={<UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.sectionEditHeader} />}
+        modalHeader={this.props.header || <UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.sectionName} />}
+        linkTitle={this.props.header || <UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.sectionName} />}
+        getPropsToSave={this.onBeforeForceEndEditation_}
+        renderEditationMode={this._renderEditationMode}
+      />
+    );
   },
   //@@viewOff:render
 });
+
+export { Section };
 
 export default Section;

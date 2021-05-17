@@ -14,11 +14,12 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
-
-import "./carousel.less";
 import CarouselItem from "./carousel-item.js";
 import Icon from "./icon.js";
-import Lsi from "./internal/bricks-editable-lsi.js";
+import { InlineMode } from "./internal/inline-mode.js";
+import Lsi from "./bricks-lsi.js";
+
+import "./carousel.less";
 
 const EditationComponent = UU5.Common.Component.lazy(async () => {
   await SystemJS.import("uu5g04-forms");
@@ -39,12 +40,14 @@ export const Carousel = UU5.Common.VisualComponent.create({
     UU5.Common.ColorSchemaMixin,
     UU5.Common.SwipeMixin,
     UU5.Common.EditableMixin,
+    UU5.Common.NestingLevelMixin,
   ],
   //@@viewOff:mixins
 
   //@@viewOn:statics
   statics: {
     tagName: ns.name("Carousel"),
+    nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
       main: ns.css("carousel"),
       controls: ns.css("carousel-controls"),
@@ -60,7 +63,7 @@ export const Carousel = UU5.Common.VisualComponent.create({
       colorSchema: "default",
     },
     editMode: {
-      name: Lsi.carousel.name,
+      name: Lsi.inlineComponentHeaders.carouselName,
       backgroundColor: "rgba(0,0,0,.2)",
       color: "rgba(0,0,0,.87)",
       highlightColor: "#CCCCCC",
@@ -280,11 +283,11 @@ export const Carousel = UU5.Common.VisualComponent.create({
     return editationLazyLoaded;
   },
 
-  _renderEditationMode() {
+  _renderEditationMode(inline = false) {
     this._pauseAutoSlide();
     return (
       <UU5.Common.Suspense fallback={<span ref={this._registerNull} />}>
-        <EditationComponent component={this} ref_={this._registerEditableComponent} />
+        <EditationComponent inline={inline} component={this} ref_={this._registerEditableComponent} />
       </UU5.Common.Suspense>
     );
   },
@@ -296,7 +299,7 @@ export const Carousel = UU5.Common.VisualComponent.create({
   _getMaxHeight() {
     let maxHeight = 0;
     this.eachRenderedChild((child) => {
-      if (child) {
+      if (child?.isRendered?.()) {
         let height = UU5.Common.Tools.getOuterHeight(child, true);
         maxHeight = height > maxHeight ? height : maxHeight;
       }
@@ -625,14 +628,27 @@ export const Carousel = UU5.Common.VisualComponent.create({
   //@@viewOn:render
   render() {
     return this.state.renderedChildren || this.state.tmpChildren ? (
-      <>
-        {this.state.editation ? this._renderEditationMode() : null}
-        {!this.state.editation || !this._isEditationLazyLoaded() ? this._renderComponent() : null}
-      </>
+      this.getNestingLevel() ? (
+        <>
+          {this.state.editation ? this._renderEditationMode() : null}
+          {!this.state.editation || !this._isEditationLazyLoaded() ? this._renderComponent() : null}
+        </>
+      ) : (
+        <InlineMode
+          component={this}
+          Component={UU5.Bricks.Carousel}
+          editModalHeader={<UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.carouselEditHeader} />}
+          linkTitle={Carousel.displayName}
+          modalHeader={Carousel.displayName}
+          getPropsToSave={this.onBeforeForceEndEditation_}
+          renderEditationMode={this._renderEditationMode}
+        />
+      )
     ) : null;
   },
   //@@viewOff:render
 });
 
 Carousel.Item = CarouselItem;
+
 export default Carousel;

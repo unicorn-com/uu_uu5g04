@@ -19,6 +19,8 @@ import Header from "./panel-header.js";
 import Body from "./panel-body.js";
 import Css from "./internal/css.js";
 import PanelStyles from "./internal/panel-styles.js";
+import { InlineMode } from "./internal/inline-mode.js";
+import Lsi from "./bricks-lsi.js";
 
 import "./panel.less";
 //@@viewOff:imports
@@ -450,7 +452,16 @@ export const Panel = UU5.Common.VisualComponent.create({
           ? [this._buildChildren(), this.getDisabledCover()]
           : null}
       </div>
-    ) : null;
+    ) : (
+      <InlineMode
+        component={this}
+        Component={UU5.Bricks.Panel}
+        editModalHeader={<UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.panelEditHeader} />}
+        modalHeader={this.props.header || Panel.displayName}
+        linkTitle={this.props.header || Panel.displayName}
+        getPropsToSave={this.onBeforeForceEndEditation_}
+      />
+    );
   },
   //@@viewOff:render
 });

@@ -16,6 +16,7 @@ import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "./forms-ns.js";
 
+import "./mixins/group-mixin.less";
 import "./select-option.less";
 //@@viewOff:imports
 

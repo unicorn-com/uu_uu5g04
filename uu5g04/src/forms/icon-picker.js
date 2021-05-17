@@ -186,7 +186,7 @@ export const IconPicker = Context.withContext(
           }),
         ])
       ),
-      selectedCategory: UU5.PropTypes.oneOf(ICON_LIBRARIES),
+      selectedCategory: UU5.PropTypes.string,
       placeholder: UU5.PropTypes.string,
       required: UU5.PropTypes.bool,
       requiredMessage: UU5.PropTypes.any,

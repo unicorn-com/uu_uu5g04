@@ -14,6 +14,7 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+import { InlineMode } from "./internal/inline-mode.js";
 
 const EditableContainer = UU5.Common.Component.lazy(async () => {
   await SystemJS.import("uu5g04-forms");
@@ -24,10 +25,10 @@ const EditableContainer = UU5.Common.Component.lazy(async () => {
 let editationLazyLoaded = false;
 
 import "./container.less";
-import Lsi from "./internal/bricks-editable-lsi.js";
+import Lsi from "./bricks-lsi.js";
 //@@viewOff:imports
 
-export const Container = UU5.Common.VisualComponent.create({
+let Container = UU5.Common.VisualComponent.create({
   displayName: "Container", // for backward compatibility (test snapshots)
 
   //@@viewOn:mixins
@@ -52,7 +53,7 @@ export const Container = UU5.Common.VisualComponent.create({
       editation: ns.css("container-editation"),
     },
     editMode: {
-      name: Lsi.container.name,
+      name: Lsi.inlineComponentHeaders.containerName,
       enablePlaceholder: true,
     },
   },
@@ -117,10 +118,15 @@ export const Container = UU5.Common.VisualComponent.create({
     return editationLazyLoaded;
   },
 
-  _renderEditationMode() {
+  _renderEditationMode(inline = false) {
     return (
       <UU5.Common.Suspense fallback={<span ref={this._registerNull} />}>
-        <EditableContainer component={this} ref_={this._registerEditableContainer} />
+        <EditableContainer
+          inline={inline}
+          level={this.getLevel()}
+          component={this}
+          ref_={this._registerEditableContainer}
+        />
       </UU5.Common.Suspense>
     );
   },
@@ -139,9 +145,20 @@ export const Container = UU5.Common.VisualComponent.create({
           ? [this.getHeaderChild(), this.getChildren(), this.getFooterChild(), this.getDisabledCover()]
           : null}
       </div>
-    ) : null;
+    ) : (
+      <InlineMode
+        component={this}
+        Component={UU5.Bricks.Container}
+        modalHeader={this.props.header || <UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.containerName} />}
+        editModalHeader={<UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.containerEditHeader} />}
+        linkTitle={this.props.header || <UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.containerName} />}
+        getPropsToSave={this.onBeforeForceEndEditation_}
+        renderEditationMode={this._renderEditationMode}
+      />
+    );
   },
   //@@viewOff:render
 });
 
+export { Container };
 export default Container;

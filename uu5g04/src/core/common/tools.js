@@ -529,7 +529,7 @@ Tools.getServerRequest = function (src, parameters, contentType, done, fail) {
   request.send(parameters);
 };
 
-Tools._merge = function (args, deep) {
+Tools._merge = function (args, deep, preserveRefs) {
   //   var result;
   //   if(args.length){
   //     result = window.Immutable.fromJS(args[0]);
@@ -544,19 +544,19 @@ Tools._merge = function (args, deep) {
 
   var result;
   if (args.length) {
-    var data = deep ? [true, {}] : [{}];
+    var data = deep ? [!!preserveRefs, true, {}] : [!!preserveRefs, {}];
 
     for (var i = 0; i < args.length; i++) {
       data.push(args[i]);
     }
 
-    result = Tools.extend.apply(null, data);
+    result = Tools._extend.apply(null, data);
   }
   return result;
 };
 
 Tools.mergeDeep = function () {
-  return Tools._merge(arguments, true);
+  return Tools._merge(arguments, true, true);
 };
 
 Tools.merge = function () {
@@ -1526,16 +1526,20 @@ Tools.formatDate = (date, format, timeZone = null) => {
   return format;
 };
 
-Tools.extend = function () {
+Tools.extend = function (...args) {
+  return Tools._extend(false, ...args);
+};
+
+Tools._extend = function (preserveRefs, ...args) {
   let src,
     copyIsArray,
     copy,
     name,
     options,
     clone,
-    target = arguments[0] || {},
+    target = args[0] || {},
     i = 1,
-    length = arguments.length,
+    length = args.length,
     deep = false;
 
   // Handle a deep copy situation
@@ -1543,7 +1547,7 @@ Tools.extend = function () {
     deep = target;
 
     // skip the boolean and the target
-    target = arguments[i] || {};
+    target = args[i] || {};
     i++;
   }
 
@@ -1561,7 +1565,7 @@ Tools.extend = function () {
   let targetIsArray = Array.isArray(target);
   for (; i < length; i++) {
     // Only deal with non-null/undefined values
-    if ((options = arguments[i]) != null) {
+    if ((options = args[i]) != null) {
       // Extend the base object
 
       // merge React elements via Element.clone (clone props separately, then do cloneElement)
@@ -1571,8 +1575,9 @@ Tools.extend = function () {
         if (options.props) {
           for (let k in options.props) {
             let v = options.props[k];
-            if (v && Array.isArray(v)) newProps[k] = Tools.extend(deep, [], v);
-            else if (v && Tools.isPlainObject(v)) newProps[k] = Tools.extend(deep, {}, v);
+            if (preserveRefs && k === "ref_" && v && typeof v === "object") newProps[k] = v;
+            else if (v && Array.isArray(v)) newProps[k] = Tools._extend(preserveRefs, deep, [], v);
+            else if (v && Tools.isPlainObject(v)) newProps[k] = Tools._extend(preserveRefs, deep, {}, v);
             else newProps[k] = v;
           }
         }
@@ -1609,7 +1614,7 @@ Tools.extend = function () {
             }
 
             // Never move original objects, clone them
-            target[name] = Tools.extend(deep, clone, copy);
+            target[name] = Tools._extend(preserveRefs, deep, clone, copy);
 
             // Don't bring in undefined values (do for arrays as it might change their length otherwise)
           } else if (copy !== undefined || targetIsArray) {
@@ -2635,134 +2640,7 @@ Tools.getLSIItemByLanguage = (lsi, params, languages) => {
  * // Cancel the trailing debounced invocation.
  * jQuery(window).on('popstate', debounced.cancel);
  */
-Tools.debounce = (func, wait = 0, options = {}) => {
-  var lastArgs,
-    lastThis,
-    maxWait,
-    result,
-    timerId,
-    lastCallTime,
-    lastInvokeTime = 0,
-    leading = false,
-    maxing = false,
-    trailing = true;
-
-  if (typeof func !== "function") {
-    throw new TypeError("Expected a function");
-  }
-  //wait = toNumber(wait) || 0;
-  //if (isObject(options)) {
-  if (typeof options === "object") {
-    leading = !!options.leading;
-    maxing = "maxWait" in options;
-    //maxWait = maxing ? nativeMax(toNumber(options.maxWait) || 0, wait) : maxWait;
-    maxWait = options.maxWait ? Math.max(options.maxWait, wait) : maxWait;
-    trailing = "trailing" in options ? !!options.trailing : trailing;
-  }
-
-  function invokeFunc(time) {
-    var args = lastArgs,
-      thisArg = lastThis;
-
-    lastArgs = lastThis = undefined;
-    lastInvokeTime = time;
-    result = func.apply(thisArg, args);
-    return result;
-  }
-
-  function leadingEdge(time) {
-    // Reset any `maxWait` timer.
-    lastInvokeTime = time;
-    // Start the timer for the trailing edge.
-    timerId = setTimeout(timerExpired, wait);
-    // Invoke the leading edge.
-    return leading ? invokeFunc(time) : result;
-  }
-
-  function remainingWait(time) {
-    var timeSinceLastCall = time - lastCallTime,
-      timeSinceLastInvoke = time - lastInvokeTime,
-      result = wait - timeSinceLastCall;
-
-    return maxing ? Math.min(result, maxWait - timeSinceLastInvoke) : result;
-  }
-
-  function shouldInvoke(time) {
-    var timeSinceLastCall = time - lastCallTime,
-      timeSinceLastInvoke = time - lastInvokeTime;
-
-    // Either this is the first call, activity has stopped and we're at the
-    // trailing edge, the system time has gone backwards and we're treating
-    // it as the trailing edge, or we've hit the `maxWait` limit.
-    return (
-      lastCallTime === undefined ||
-      timeSinceLastCall >= wait ||
-      timeSinceLastCall < 0 ||
-      (maxing && timeSinceLastInvoke >= maxWait)
-    );
-  }
-
-  function timerExpired() {
-    var time = Date.now();
-    if (shouldInvoke(time)) {
-      return trailingEdge(time);
-    }
-    // Restart the timer.
-    timerId = setTimeout(timerExpired, remainingWait(time));
-  }
-
-  function trailingEdge(time) {
-    timerId = undefined;
-
-    // Only invoke if we have `lastArgs` which means `func` has been
-    // debounced at least once.
-    if (trailing && lastArgs) {
-      return invokeFunc(time);
-    }
-    lastArgs = lastThis = undefined;
-    return result;
-  }
-
-  function cancel() {
-    if (timerId !== undefined) {
-      clearTimeout(timerId);
-    }
-    lastInvokeTime = 0;
-    lastArgs = lastCallTime = lastThis = timerId = undefined;
-  }
-
-  function flush() {
-    return timerId === undefined ? result : trailingEdge(Date.now());
-  }
-
-  function debounced() {
-    var time = Date.now(),
-      isInvoking = shouldInvoke(time);
-
-    lastArgs = arguments;
-    lastThis = this;
-    lastCallTime = time;
-
-    if (isInvoking) {
-      if (timerId === undefined) {
-        return leadingEdge(lastCallTime);
-      }
-      if (maxing) {
-        // Handle invocations in a tight loop.
-        timerId = setTimeout(timerExpired, wait);
-        return invokeFunc(lastCallTime);
-      }
-    }
-    if (timerId === undefined) {
-      timerId = setTimeout(timerExpired, wait);
-    }
-    return result;
-  }
-
-  debounced.cancel = cancel;
-  debounced.flush = flush;
-  return debounced;
-};
+Tools.debounce = Utils.Function.debounce;
 
 /**
  * Creates a throttled function that only invokes `func` at most once per

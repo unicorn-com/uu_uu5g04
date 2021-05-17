@@ -32,7 +32,7 @@ export const withUserPreferences = (Component, mapping) => {
           } else {
             usedContextValues = context;
           }
-          return <Component {...props} {...usedContextValues} ref={ref} />;
+          return <Component {...usedContextValues} {...props} ref={ref} />;
         }}
       </UU5.Common.UserPreferencesContext.Consumer>
     );

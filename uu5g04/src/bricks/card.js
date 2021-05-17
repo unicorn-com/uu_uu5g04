@@ -16,7 +16,8 @@ import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Section from "./section.js";
 import Css from "./internal/css.js";
-import Lsi from "./internal/bricks-editable-lsi.js";
+import { InlineMode } from "./internal/inline-mode.js";
+import Lsi from "./bricks-lsi.js";
 const ClassNames = UU5.Common.ClassNames;
 
 import "./card.less";
@@ -27,7 +28,7 @@ const CardEditable = UU5.Common.Component.lazy(async () => {
 });
 //@@viewOff:imports
 
-export const Card = UU5.Common.VisualComponent.create({
+let Card = UU5.Common.VisualComponent.create({
   displayName: "Card", // for backward compatibility (test snapshots)
 
   //@@viewOn:mixins
@@ -59,7 +60,7 @@ export const Card = UU5.Common.VisualComponent.create({
       enablePlaceholder: true,
       displayType: "inline",
       startMode: "button",
-      name: Lsi.card.name,
+      name: Lsi.inlineComponentHeaders.cardName,
     },
   },
   //@@viewOff:statics
@@ -158,21 +159,35 @@ export const Card = UU5.Common.VisualComponent.create({
     return mainProps;
   },
 
-  _renderEditationMode() {
+  _renderEditationMode(inline = false) {
     return (
       <UU5.Common.Suspense fallback={this.getEditingLoading()}>
-        <CardEditable component={this} ref_={this._registerEditableComponent} renderView={this._renderView} />
+        <CardEditable
+          inline={inline}
+          component={this}
+          ref_={this._registerEditableComponent}
+          renderView={this._renderView}
+        />
       </UU5.Common.Suspense>
     );
   },
 
-  _renderView(forcedContent) {
+  _renderView(forcedContent, isInline) {
     let props = this._getMainProps(this.isInlineEdited());
+    let inlineProps = {};
     if (forcedContent) {
       props.content = forcedContent;
     }
+    if (isInline) {
+      inlineProps.parent = undefined;
+      inlineProps.nestingLevel = "bigBox";
+    }
 
-    return <Section {...props}>{this.props.children && UU5.Common.Children.toArray(this.props.children)}</Section>;
+    return (
+      <Section {...props} {...inlineProps}>
+        {this.props.children && UU5.Common.Children.toArray(this.props.children)}
+      </Section>
+    );
   },
   //@@viewOff:private
 
@@ -185,11 +200,22 @@ export const Card = UU5.Common.VisualComponent.create({
             {this.isInlineEdited() && this._renderEditationMode()}
             {this.isNotInlineEdited() && this._renderView()}
           </>
-        ) : null}
+        ) : (
+          <InlineMode
+            component={this}
+            Component={UU5.Bricks.Card}
+            editModalHeader={<UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.cardEditHeader} />}
+            linkTitle={this.props.header || <UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.cardName} />}
+            modalHeader={this.props.header || <UU5.Bricks.Lsi lsi={Lsi.inlineComponentHeaders.cardName} />}
+            getPropsToSave={this.onBeforeForceEndEditation_}
+            renderEditationMode={this._renderEditationMode}
+          />
+        )}
       </>
     );
   },
   //@@viewOff:render
 });
 
+export { Card };
 export default Card;

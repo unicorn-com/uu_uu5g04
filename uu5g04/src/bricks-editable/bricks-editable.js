@@ -11,6 +11,9 @@
  * at the email: info@unicorn.com.
  */
 
+// devkit-pure-exports
+export * from "./bricks-editable-extra-exports.js";
+
 /* DEPRECATED */
 export * from "./button.js";
 export * from "./dropdown.js";
@@ -23,6 +26,3 @@ export * from "./toolbar.js";
 export * from "./end-editation.js";
 export * from "./input.js";
 export * from "./modal.js";
-
-export const bookKitUrl =
-  "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page";

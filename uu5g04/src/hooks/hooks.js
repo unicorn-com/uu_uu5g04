@@ -10,7 +10,9 @@
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
-import UU5 from "uu5g04";
+
+// devkit-pure-exports
+export * from "./hooks-extra-exports.js";
 
 export {
   useCallback,
@@ -41,10 +43,12 @@ export { useDataController, DataControllerProvider } from "uu5g05";
 export { useDataFilter, useDataSelection, useDataSorter } from "uu5g05";
 export { useDataStore, DataStoreProvider } from "uu5g05";
 export { useDevice, DeviceProvider } from "uu5g05";
+export { useElementSize } from "uu5g05";
 export { useEvent } from "uu5g05";
 export { useLsi } from "uu5g05";
 export { useLsiValues } from "uu5g05";
 export { usePreviousValue } from "uu5g05";
+export { useSession } from "uu5g05";
 export { useTimeZone, TimeZoneProvider } from "uu5g05";
 export { useUnmountedRef } from "uu5g05";
 export { useUserPreferences, UserPreferencesProvider } from "uu5g05";
@@ -53,13 +57,8 @@ export { useCall } from "uu5g05";
 export { useDataObject } from "uu5g05";
 export { useDataList } from "uu5g05";
 
-export { useData } from "./use-data";
-export * from "./use-element-size.js";
-export { useListData } from "./use-list-data";
-export { usePagingListData } from "./use-paging-list-data";
-export * from "./paging-auto-load";
-export * from "./with-resize";
-
-const { _Provider: SessionProvider } = UU5.Common.Session;
-export { useSession } from "uu5g05";
-export { SessionProvider };
+export { useData } from "./use-data.js";
+export { useListData } from "./use-list-data.js";
+export { usePagingListData } from "./use-paging-list-data.js";
+export * from "./paging-auto-load.js";
+export * from "./with-resize.js";

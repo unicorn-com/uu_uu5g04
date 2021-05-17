@@ -16,13 +16,12 @@ import "uu5g04-bricks";
 
 const { mount, shallow, wait } = UU5.Test.Tools;
 
-// NOTE For this test only we'll overwrite UU5.Bricks.Modal with non-HOC variant (without modal bus HOC).
+// NOTE For this test only we'll use non-HOC variant of UU5.Bricks.Modal (without modal bus HOC).
 const NonHocModal = UU5.Bricks.Modal._originalComponent;
-UU5.Bricks.Modal = NonHocModal;
 
 describe(`UU5.Bricks.Modal interface testing`, () => {
   it("open(content-props, callback)", () => {
-    const wrapper = shallow(<UU5.Bricks.Modal id={"uuID-modal"} header="Jest modal"></UU5.Bricks.Modal>);
+    const wrapper = shallow(<NonHocModal id={"uuID-modal"} header="Jest modal"></NonHocModal>);
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.hidden).toBeTruthy();
     expect(wrapper.instance().isHidden()).toBeTruthy();
@@ -44,7 +43,7 @@ describe(`UU5.Bricks.Modal interface testing`, () => {
 
   it("close(callback)", () => {
     jest.useFakeTimers();
-    const wrapper = shallow(<UU5.Bricks.Modal id={"uuID-modal"} shown={true} header="Jest modal"></UU5.Bricks.Modal>);
+    const wrapper = shallow(<NonHocModal id={"uuID-modal"} shown={true} header="Jest modal"></NonHocModal>);
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.hidden).toBeFalsy();
     expect(wrapper.instance().isHidden()).toBeFalsy();
@@ -62,7 +61,7 @@ describe(`UU5.Bricks.Modal interface testing`, () => {
 
   it("isSticky() - modal is sticky", () => {
     const wrapper = shallow(
-      <UU5.Bricks.Modal id={"uuID-modal"} shown={true} header="Jest modal" sticky={true}></UU5.Bricks.Modal>
+      <NonHocModal id={"uuID-modal"} shown={true} header="Jest modal" sticky={true}></NonHocModal>
     );
     expect(wrapper.instance().state.hidden).toBeFalsy();
     expect(wrapper.instance().isHidden()).toBeFalsy();
@@ -72,7 +71,7 @@ describe(`UU5.Bricks.Modal interface testing`, () => {
 
   it("isSticky() - modal is not sticky", () => {
     const wrapper = shallow(
-      <UU5.Bricks.Modal id={"uuID-modal"} shown={true} header="Jest modal" sticky={false}></UU5.Bricks.Modal>
+      <NonHocModal id={"uuID-modal"} shown={true} header="Jest modal" sticky={false}></NonHocModal>
     );
     expect(wrapper.instance().state.hidden).toBeFalsy();
     expect(wrapper.instance().isHidden()).toBeFalsy();
@@ -82,7 +81,7 @@ describe(`UU5.Bricks.Modal interface testing`, () => {
 
   it("toggle() - should close window", () => {
     jest.useFakeTimers();
-    const wrapper = shallow(<UU5.Bricks.Modal id={"uuID-modal"} shown={true} header="Jest modal"></UU5.Bricks.Modal>);
+    const wrapper = shallow(<NonHocModal id={"uuID-modal"} shown={true} header="Jest modal"></NonHocModal>);
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.hidden).toBeFalsy();
     expect(wrapper.instance().isHidden()).toBeFalsy();
@@ -100,7 +99,7 @@ describe(`UU5.Bricks.Modal interface testing`, () => {
 
   it("toggle() - should open window", () => {
     jest.useFakeTimers();
-    const wrapper = shallow(<UU5.Bricks.Modal id={"uuID-modal"} shown={false} header="Jest modal"></UU5.Bricks.Modal>);
+    const wrapper = shallow(<NonHocModal id={"uuID-modal"} shown={false} header="Jest modal"></NonHocModal>);
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.hidden).toBeTruthy();
     expect(wrapper.instance().isHidden()).toBeTruthy();

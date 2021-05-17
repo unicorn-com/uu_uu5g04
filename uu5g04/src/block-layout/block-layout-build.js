@@ -12,15 +12,15 @@
  */
 
 import UU5 from "uu5g04";
+import "./block-layout-startup.js";
 
-import * as BlockLayout from "./block-layout.js";
-
+import * as Exports from "./block-layout.js";
 export * from "./block-layout.js";
-export default BlockLayout;
+export default Exports;
 
 // merge into UU5
 // NOTE "uu5g04" must ensure that the key already exists there, otherwise following usage wouldn't work:
 //   import * as UU5 from "uu5g04";
 //   import "uu5g04-forms";
 //   console.log(UU5.Forms.TextArea);
-for (let k in BlockLayout) UU5.BlockLayout[k] = BlockLayout[k];
+Object.defineProperties(UU5.BlockLayout, Object.getOwnPropertyDescriptors(Exports));

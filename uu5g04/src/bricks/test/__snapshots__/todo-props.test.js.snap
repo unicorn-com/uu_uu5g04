@@ -1,670 +1,531 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UU5.Bricks.Todo checkGrammar=false 1`] = `
-<Section
+<Todo
   checkGrammar={false}
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+  id="uuID"
+/>
 `;
 
 exports[`UU5.Bricks.Todo checkGrammar=true 1`] = `
-<Section
+<Todo
   checkGrammar={true}
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+  id="uuID"
+/>
 `;
 
 exports[`UU5.Bricks.Todo checkHighlight=false 1`] = `
-<Section
+<Todo
   checkHighlight={false}
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+  id="uuID"
+/>
 `;
 
 exports[`UU5.Bricks.Todo checkHighlight=true 1`] = `
-<Section
+<Todo
   checkHighlight={true}
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+  id="uuID"
+/>
 `;
 
 exports[`UU5.Bricks.Todo checkSpaces=false 1`] = `
-<Section
+<Todo
   checkSpaces={false}
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+  id="uuID"
+/>
 `;
 
 exports[`UU5.Bricks.Todo checkSpaces=true 1`] = `
-<Section
+<Todo
   checkSpaces={true}
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+  id="uuID"
+/>
 `;
 
 exports[`UU5.Bricks.Todo className="my-classname" 1`] = `
-<Section
-  className="uu5-bricks-todo my-classname"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+<Todo
+  className="my-classname"
+  id="uuID"
+/>
 `;
 
 exports[`UU5.Bricks.Todo content="This is Content from ContentMixin" 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+<Todo
+  content="This is Content from ContentMixin"
+  id="uuID"
+/>
 `;
 
 exports[`UU5.Bricks.Todo content=12345 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+<Todo
+  content={12345}
+  id="uuID"
+/>
 `;
 
 exports[`UU5.Bricks.Todo controlled=false 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+<Todo
+  controlled={false}
+  id="uuID"
+/>
 `;
 
 exports[`UU5.Bricks.Todo controlled=true 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+<Todo
+  id="uuID"
+/>
 `;
 
 exports[`UU5.Bricks.Todo default props 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+<Todo
+  id="uuID"
+/>
 `;
 
 exports[`UU5.Bricks.Todo disabled=false 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+<Todo
+  id="uuID"
+/>
 `;
 
 exports[`UU5.Bricks.Todo disabled=true 1`] = `
-<Section
-  className="uu5-bricks-todo"
+<Todo
   disabled={true}
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+  id="uuID"
+/>
 `;
 
 exports[`UU5.Bricks.Todo docKit examples UU5.Bricks.Todo should render without crash 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre>
-    {
-  "key": "value",
-  "num": 3,
-  "bool": true
-}
-  </Pre>
-</Section>
+<Todo
+  id="uuID"
+  props={
+    Object {
+      "bool": true,
+      "key": "value",
+      "num": 3,
+    }
+  }
+/>
 `;
 
 exports[`UU5.Bricks.Todo dynamic=false 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+<Todo
+  id="uuID"
+/>
 `;
 
 exports[`UU5.Bricks.Todo dynamic=true 1`] = `
-<Section
-  className="uu5-bricks-todo"
+<Todo
   dynamic={true}
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+  id="uuID"
+/>
 `;
 
 exports[`UU5.Bricks.Todo footer={"type":"div","key":null,"ref":null,"props":{"children":"Footer of section"},"_owner":null,"_store":{}} 1`] = `
-<Section
-  className="uu5-bricks-todo"
+<Todo
   footer={
     <div>
       Footer of section
     </div>
   }
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+  id="uuID"
+/>
 `;
 
 exports[`UU5.Bricks.Todo header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
-<Section
-  className="uu5-bricks-todo"
+<Todo
   header={
     <div>
       Header of section
     </div>
   }
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+  id="uuID"
+/>
 `;
 
 exports[`UU5.Bricks.Todo hidden=false 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+<Todo
+  id="uuID"
+/>
 `;
 
 exports[`UU5.Bricks.Todo hidden=true 1`] = `
-<Section
-  className="uu5-bricks-todo"
+<Todo
   hidden={true}
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+  id="uuID"
+/>
 `;
 
 exports[`UU5.Bricks.Todo id="myId" 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="myId-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+<Todo
+  id="myId"
+/>
 `;
 
 exports[`UU5.Bricks.Todo ignoreHTML=false 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+<Todo
+  id="uuID"
+  ignoreHTML={false}
+/>
 `;
 
 exports[`UU5.Bricks.Todo ignoreHTML=true 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+<Todo
+  id="uuID"
+  ignoreHTML={true}
+/>
 `;
 
 exports[`UU5.Bricks.Todo level="0" 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
+<Todo
+  id="uuID"
   level="0"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+/>
 `;
 
 exports[`UU5.Bricks.Todo level="1" 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
+<Todo
+  id="uuID"
   level="1"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+/>
 `;
 
 exports[`UU5.Bricks.Todo level="2" 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
+<Todo
+  id="uuID"
   level="2"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+/>
 `;
 
 exports[`UU5.Bricks.Todo level="3" 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
+<Todo
+  id="uuID"
   level="3"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+/>
 `;
 
 exports[`UU5.Bricks.Todo level="4" 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
+<Todo
+  id="uuID"
   level="4"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+/>
 `;
 
 exports[`UU5.Bricks.Todo level="5" 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
+<Todo
+  id="uuID"
   level="5"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+/>
 `;
 
 exports[`UU5.Bricks.Todo level="6" 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
+<Todo
+  id="uuID"
   level="6"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+/>
 `;
 
 exports[`UU5.Bricks.Todo level=0 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
+<Todo
+  id="uuID"
   level={0}
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+/>
 `;
 
 exports[`UU5.Bricks.Todo level=1 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
+<Todo
+  id="uuID"
   level={1}
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+/>
 `;
 
 exports[`UU5.Bricks.Todo level=2 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
+<Todo
+  id="uuID"
   level={2}
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+/>
 `;
 
 exports[`UU5.Bricks.Todo level=3 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
+<Todo
+  id="uuID"
   level={3}
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+/>
 `;
 
 exports[`UU5.Bricks.Todo level=4 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
+<Todo
+  id="uuID"
   level={4}
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+/>
 `;
 
 exports[`UU5.Bricks.Todo level=5 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
+<Todo
+  id="uuID"
   level={5}
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+/>
 `;
 
 exports[`UU5.Bricks.Todo level=6 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
+<Todo
+  id="uuID"
   level={6}
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+/>
 `;
 
 exports[`UU5.Bricks.Todo mainAttrs=undefined 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+<Todo
+  id="uuID"
+/>
 `;
 
 exports[`UU5.Bricks.Todo name="myName" 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  name="myName-inner"
->
-  <Pre />
-</Section>
+<Todo
+  id="uuID"
+  name="myName"
+/>
 `;
 
 exports[`UU5.Bricks.Todo nestingLevel="bigBox" 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
+<Todo
+  id="uuID"
   nestingLevel="bigBox"
->
-  <Pre />
-</Section>
+/>
 `;
 
 exports[`UU5.Bricks.Todo nestingLevel="bigBoxCollection" 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
+<Todo
+  id="uuID"
   nestingLevel="bigBoxCollection"
->
-  <Pre />
-</Section>
+/>
 `;
 
 exports[`UU5.Bricks.Todo nestingLevel="box" 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
+<Todo
+  id="uuID"
   nestingLevel="box"
->
-  <Pre />
-</Section>
+/>
 `;
 
 exports[`UU5.Bricks.Todo nestingLevel="boxCollection" 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
+<Todo
+  id="uuID"
   nestingLevel="boxCollection"
->
-  <Pre />
-</Section>
+/>
 `;
 
 exports[`UU5.Bricks.Todo nestingLevel="container" 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
+<Todo
+  id="uuID"
   nestingLevel="container"
->
-  <Pre />
-</Section>
+/>
 `;
 
-exports[`UU5.Bricks.Todo nestingLevel="inline" 1`] = `""`;
+exports[`UU5.Bricks.Todo nestingLevel="inline" 1`] = `
+<UU5.Bricks.LinkModal
+  component={
+    <Todo
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={false}
+      id="uuID"
+      ignoreInnerHTML={false}
+      increaseLevel={false}
+      level={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      parent={null}
+      props={null}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+    />
+  }
+>
+  Todo
+</UU5.Bricks.LinkModal>
+`;
 
 exports[`UU5.Bricks.Todo nestingLevel="page" 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
+<Todo
+  id="uuID"
   nestingLevel="page"
->
-  <Pre />
-</Section>
+/>
 `;
 
-exports[`UU5.Bricks.Todo nestingLevel="smallBox" 1`] = `""`;
+exports[`UU5.Bricks.Todo nestingLevel="smallBox" 1`] = `
+<UU5.Bricks.LinkModal
+  component={
+    <Todo
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={false}
+      id="uuID"
+      ignoreInnerHTML={false}
+      increaseLevel={false}
+      level={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      parent={null}
+      props={null}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+    />
+  }
+>
+  Todo
+</UU5.Bricks.LinkModal>
+`;
 
-exports[`UU5.Bricks.Todo nestingLevel="smallBoxCollection" 1`] = `""`;
+exports[`UU5.Bricks.Todo nestingLevel="smallBoxCollection" 1`] = `
+<UU5.Bricks.LinkModal
+  component={
+    <Todo
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={false}
+      id="uuID"
+      ignoreInnerHTML={false}
+      increaseLevel={false}
+      level={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      parent={null}
+      props={null}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+    />
+  }
+>
+  Todo
+</UU5.Bricks.LinkModal>
+`;
 
 exports[`UU5.Bricks.Todo nestingLevel="spa" 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
+<Todo
+  id="uuID"
   nestingLevel="spa"
->
-  <Pre />
-</Section>
+/>
 `;
 
 exports[`UU5.Bricks.Todo noIndex=false 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+<Todo
+  id="uuID"
+/>
 `;
 
 exports[`UU5.Bricks.Todo noIndex=true 1`] = `
-<Section
-  className="uu5-bricks-todo uu5-noindex"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+<Todo
+  id="uuID"
+  noIndex={true}
+/>
 `;
 
 exports[`UU5.Bricks.Todo props={"key":"value","num":3,"bool":true} 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre>
-    {
-  "key": "value",
-  "num": 3,
-  "bool": true
-}
-  </Pre>
-</Section>
+<Todo
+  id="uuID"
+  props={
+    Object {
+      "bool": true,
+      "key": "value",
+      "num": 3,
+    }
+  }
+/>
 `;
 
 exports[`UU5.Bricks.Todo selected=false 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+<Todo
+  id="uuID"
+/>
 `;
 
 exports[`UU5.Bricks.Todo selected=true 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
+<Todo
+  id="uuID"
   selected={true}
->
-  <Pre />
-</Section>
+/>
 `;
 
 exports[`UU5.Bricks.Todo style="padding:8px; borderRadius: 2px" 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
->
-  <Pre />
-</Section>
+<Todo
+  id="uuID"
+  style="padding:8px; borderRadius: 2px"
+/>
 `;
 
 exports[`UU5.Bricks.Todo style={"backgroundColor":"red","color":"blue"} 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
+<Todo
+  id="uuID"
   style={
     Object {
       "backgroundColor": "red",
       "color": "blue",
     }
   }
->
-  <Pre />
-</Section>
+/>
 `;
 
 exports[`UU5.Bricks.Todo textCorrector=false 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
+<Todo
+  id="uuID"
   textCorrector={false}
->
-  <Pre />
-</Section>
+/>
 `;
 
 exports[`UU5.Bricks.Todo textCorrector=true 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
+<Todo
+  id="uuID"
   textCorrector={true}
->
-  <Pre />
-</Section>
+/>
 `;
 
 exports[`UU5.Bricks.Todo tooltip="My Tooltip" 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={
-    Object {
-      "title": "My Tooltip",
-    }
-  }
+<Todo
+  id="uuID"
   tooltip="My Tooltip"
->
-  <Pre />
-</Section>
+/>
 `;
 
 exports[`UU5.Bricks.Todo underline=false 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+<Todo
+  id="uuID"
+/>
 `;
 
 exports[`UU5.Bricks.Todo underline=true 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  id="uuID-inner"
-  mainAttrs={Object {}}
->
-  <Pre />
-</Section>
+<Todo
+  id="uuID"
+  underline={true}
+/>
 `;

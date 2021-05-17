@@ -11,14 +11,9 @@
  * at the email: info@unicorn.com.
  */
 
-import { Utils, Fragment, Suspense } from "uu5g05";
-
-import "./normalize.less";
-import "./common.less";
-import "./font-size.less";
-import "./internal/bg-styles.js";
-
-const Children = Utils.Content;
+// devkit-pure-exports
+export * from "./common-extra-exports.js";
+export { Fragment } from "uu5g05";
 
 export * from "./css.js";
 export * from "./tools.js";
@@ -66,8 +61,7 @@ export * from "./session.js";
 export * from "./identity.js";
 export * from "./redirect.js";
 
-import Context from "./context.js";
-export { Context };
+export { Context } from "./context.js";
 
 export { TimeZoneContext } from "../uu5g05-integration/use-time-zone";
 export { UserPreferencesContext, UserPreferencesProvider } from "../uu5g05-integration/use-user-preferences";
@@ -83,12 +77,3 @@ export { VisualComponent } from "./visual-component.js";
 export * from "./modal-bus-context";
 
 export * from "./with-visibility-check.js";
-
-export { Children, Fragment };
-
-const UU5Suspense = ({ loading, ...props }) => <Suspense {...props} fallback={props.fallback || props.loading || ""} />;
-UU5Suspense.displayName = "Suspense";
-export { UU5Suspense as Suspense };
-
-export const bookKitUrl =
-  "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page";
