@@ -130,7 +130,11 @@ export const TagSelect = Context.withContext(
         }
 
         if (opt._data.state && this._checkRequired(opt._data.state)) {
-          this.setState({ ...opt._data.state }, () => this._onOpen(setStateCallback));
+          // if required check has passed reset feedback and message
+          this.setState({ ...opt._data.state }, () => {
+            this.setInitial(undefined, this.state.value);
+            this._onOpen(setStateCallback);
+          });
         }
       }
 

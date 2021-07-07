@@ -1,14 +1,16 @@
 /**
- * Copyright (C) 2019 Unicorn a.s.
+ * Copyright (C) 2021 Unicorn a.s.
  *
- * This program is free software; you can use it under the terms of the UAF Open License v01 or
- * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
+ * License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  *
- * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
- * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License at
+ * <https://gnu.org/licenses/> for more details.
  *
- * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
- * at the email: info@unicorn.com.
+ * You may obtain additional information at <https://unicorn.com> or contact Unicorn a.s. at address: V Kapslovne 2767/2,
+ * Praha 3, Czech Republic or at the email: info@unicorn.com.
  */
 
 //@@viewOn:revision
@@ -28,6 +30,7 @@ import Context from "./form-context.js";
 import DateTools from "./internal/date-tools.js";
 import withUserPreferences from "../common/user-preferences";
 
+import "./calendar.less";
 import "./date-time-range-picker.less";
 //@@viewOff:imports
 
@@ -140,6 +143,7 @@ let DateTimeRangePicker = Context.withContext(
       timeZone: UU5.PropTypes.number,
       popoverLocation: UU5.PropTypes.oneOf(["local", "portal"]),
       weekStartDay: UU5.PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7]),
+      valueType: UU5.PropTypes.oneOf(["date", "iso", "isoLocal"]),
     },
     //@@viewOff:propTypes
 
@@ -176,6 +180,7 @@ let DateTimeRangePicker = Context.withContext(
         timeZone: undefined,
         popoverLocation: "local", // "local" <=> backward-compatible behaviour
         weekStartDay: 1,
+        valueType: "date",
       };
     },
     //@@viewOff:getDefaultProps
@@ -593,6 +598,7 @@ let DateTimeRangePicker = Context.withContext(
         "timeFormat",
         "timeZone",
         "seconds",
+        "valueType",
       ];
 
       for (let i = 0; i < formattingKeys.length; i++) {
@@ -607,16 +613,20 @@ let DateTimeRangePicker = Context.withContext(
 
       let getSingleOutputValue = (singleValue) => {
         if (singleValue) {
-          let dateObject = this._parseDate(singleValue);
+          singleValue = this._parseDate(singleValue);
 
-          if (typeof timeZone === "number") {
+          if (typeof timeZone === "number" && this._formattingValues.valueType !== "isoLocal") {
             singleValue = UU5.Common.Tools.adjustForTimezone(
-              dateObject,
-              -dateObject.getTimezoneOffset() / 60,
+              singleValue,
+              -singleValue.getTimezoneOffset() / 60,
               timeZone
             );
-          } else {
-            singleValue = dateObject;
+          }
+
+          if (this._formattingValues.valueType === "iso") {
+            singleValue = DateTools.getISO(singleValue);
+          } else if (this._formattingValues.valueType === "isoLocal" && singleValue) {
+            singleValue = DateTools.getISOLocal(singleValue, this._formattingValues.timeZone);
           }
         }
 

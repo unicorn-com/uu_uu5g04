@@ -2,6 +2,8 @@ const fs = require("fs");
 const path = require("path");
 const DocKitClient = require("./bookkit-client.js");
 
+const hasDoc = fs.existsSync("doc");
+
 module.exports = class Component {
   constructor(tag_name, tid_awid) {
     this.tag_name = tag_name;
@@ -15,7 +17,7 @@ module.exports = class Component {
     let num = i.toString();
     if (num.length < 2) num = "0" + num;
     let code = `${base_code}${num}`;
-    let file_path = `./doc/${file_name}/e${num}.html`;
+    let file_path = `./${hasDoc ? "doc" : "demo"}/${file_name}/e${num}.html`;
 
     await this._update_file(file_path, code);
   }

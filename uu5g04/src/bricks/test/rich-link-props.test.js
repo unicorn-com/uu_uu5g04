@@ -1,14 +1,16 @@
 /**
- * Copyright (C) 2019 Unicorn a.s.
+ * Copyright (C) 2021 Unicorn a.s.
  *
- * This program is free software; you can use it under the terms of the UAF Open License v01 or
- * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
+ * License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  *
- * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
- * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License at
+ * <https://gnu.org/licenses/> for more details.
  *
- * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
- * at the email: info@unicorn.com.
+ * You may obtain additional information at <https://unicorn.com> or contact Unicorn a.s. at address: V Kapslovne 2767/2,
+ * Praha 3, Czech Republic or at the email: info@unicorn.com.
  */
 
 //@@viewOn:imports
@@ -40,8 +42,8 @@ const MIXED_DATA = `<html><head>
   <meta name="twitter:image" content="http://example.com/twitter-image">
   <meta itemprop="description" content="itemprop-description">
   <meta itemprop="image" content="http://example.com/itemprop-image">
-  <meta property="og:title" content="og-title"/> 
-  <meta property="og:description" content="og-description"/> 
+  <meta property="og:title" content="og-title"/>
+  <meta property="og:description" content="og-description"/>
   <meta property="og:image" content="http://example.com/og-image" />
   <link rel="icon" href="http://example.com/favicon.ico"/>
 </head></html>`;
@@ -57,15 +59,15 @@ const ITEMPROP_DATA = `<html><head>
   <link rel="icon" href="http://example.com/favicon.ico"/>
 </head></html>`;
 const NO_IMAGE_DATA = `<html><head>
-  <meta property="og:title" content="og-title"/> 
+  <meta property="og:title" content="og-title"/>
   <link rel="icon" href="http://example.com/favicon.ico"/>
 </head></html>`;
 const GUESS_BASE_URI_DATA = String.raw`<html><head>
-  <meta property="og:title" content="og-title"/> 
+  <meta property="og:title" content="og-title"/>
   <script>document.write("<link rel=\"icon\" href=\"" + appBaseUrlPath + appAssetsRelativeUrlPath + "favicon.ico\">");</script>
 </head></html>`;
 const NO_FAVICON_DATA = String.raw`<html><head>
-  <meta property="og:title" content="og-title"/> 
+  <meta property="og:title" content="og-title"/>
 </head></html>`;
 
 let origGet;

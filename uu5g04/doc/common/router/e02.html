@@ -113,6 +113,10 @@
                 content="setRoute('home', params)"
               />
               <UU5.Bricks.Button
+                onClick={() => UU5.Environment.getRouter().setRoute("home", { param2: "value2" }, "fragment", true)} // replace current route in history
+                content="setRoute('home', params2, 'fragment', true)"
+              />
+              <UU5.Bricks.Button
                 content="setRoute({url:{useCase, parameters}, noHistory})"
                 onClick={() =>
                   UU5.Environment.setRoute({
@@ -145,6 +149,15 @@
                   })
                 }
                 content="setRoute({component,url})"
+              />
+              <UU5.Bricks.Button
+                onClick={() =>
+                  UU5.Environment.getRouter().setRoute({
+                    component: <RouteComponent content="component, replace previous UC in history" />,
+                    replace: true
+                  })
+                }
+                content="setRoute({component,replace})"
               />
 
               <UU5.Bricks.Div>

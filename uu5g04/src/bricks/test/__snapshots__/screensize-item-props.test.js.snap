@@ -1,135 +1,153 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Mixin Props testing Default values 1`] = `
-<screen-size-item
-  id="uuID4"
-  key="uuID4"
-  nestingLevel="spa"
-  screenSize="l"
->
-  <Span
-    content="Content for M-XL"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="uuID4"
+    key="uuID4"
+    nestingLevel="spa"
+    screenSize="l"
+  >
+    <Span
+      content="Content for M-XL"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`Mixin Props testing props of BaseMixin 1`] = `
-<screen-size-item
-  className="my-classname"
-  id="myId"
-  key="myId"
-  mainAttrs={
-    Object {
-      "style": Array [
-        Object {
-          "backgroundColor": "red",
-          "color": "blue",
-        },
-      ],
+<Fragment>
+  <screen-size-item
+    className="my-classname"
+    id="myId"
+    key="myId"
+    mainAttrs={
+      Object {
+        "style": Array [
+          Object {
+            "backgroundColor": "red",
+            "color": "blue",
+          },
+        ],
+      }
     }
-  }
-  name="myName"
-  nestingLevel="spa"
-  noIndex={true}
-  screenSize="l"
-  style="padding:8px; borderRadius: 2px"
-  tooltip="My Tooltip"
->
-  <Span
-    content="Content for M-XL"
-  />
-</screen-size-item>
+    name="myName"
+    nestingLevel="spa"
+    noIndex={true}
+    screenSize="l"
+    style="padding:8px; borderRadius: 2px"
+    tooltip="My Tooltip"
+  >
+    <Span
+      content="Content for M-XL"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`Mixin Props testing props of ElementaryMixin 1`] = `
-<screen-size-item
-  id="uuID4"
-  key="uuID4"
-  nestingLevel="spa"
-  screenSize="l"
->
-  <Span
-    content="Content for M-XL"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="uuID4"
+    key="uuID4"
+    nestingLevel="spa"
+    screenSize="l"
+  >
+    <Span
+      content="Content for M-XL"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`Mixin Props testing props of NestingLevelMixin 1`] = `
-<screen-size-item
-  id="uuID4"
-  key="uuID4"
-  nestingLevel="spa"
-  screenSize="l"
->
-  <Span
-    content="Content for M-XL"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="uuID4"
+    key="uuID4"
+    nestingLevel="spa"
+    screenSize="l"
+  >
+    <Span
+      content="Content for M-XL"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`Test UU5.bricks.ScreenSize.items own props props.ScreeSize - test 1`] = `
-<screen-size-item
-  id="uuID4"
-  key="uuID4"
-  nestingLevel="spa"
-  screenSize="l"
->
-  <Span
-    content="Content for M-XL"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="uuID4"
+    key="uuID4"
+    nestingLevel="spa"
+    screenSize="l"
+  >
+    <Span
+      content="Content for M-XL"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`Test UU5.bricks.ScreenSize.items own props props.ScreeSize - test 2`] = `
-<screen-size-item
-  id="uuID4"
-  key="uuID4"
-  nestingLevel="spa"
-  screenSize="l"
->
-  <Span
-    content="Content for M-XL"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="uuID4"
+    key="uuID4"
+    nestingLevel="spa"
+    screenSize="l"
+  >
+    <Span
+      content="Content for M-XL"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`Test UU5.bricks.ScreenSize.items own props props.ScreeSize - test 3`] = `
-<screen-size-item
-  id="uuID4"
-  key="uuID4"
-  nestingLevel="spa"
-  screenSize="l"
->
-  <Span
-    content="Content for M-XL"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="uuID4"
+    key="uuID4"
+    nestingLevel="spa"
+    screenSize="l"
+  >
+    <Span
+      content="Content for M-XL"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`Test UU5.bricks.ScreenSize.items own props props.ScreeSize - test 4`] = `
-<screen-size-item
-  id="uuID4"
-  key="uuID4"
-  nestingLevel="spa"
-  screenSize="l"
->
-  <Span
-    content="Content for M-XL"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="uuID4"
+    key="uuID4"
+    nestingLevel="spa"
+    screenSize="l"
+  >
+    <Span
+      content="Content for M-XL"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`Test UU5.bricks.ScreenSize.items own props props.ScreeSize - test 5`] = `
-<screen-size-item
-  id="uuID4"
-  key="uuID4"
-  nestingLevel="spa"
-  screenSize="l"
->
-  <Span
-    content="Content for M-XL"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="uuID4"
+    key="uuID4"
+    nestingLevel="spa"
+    screenSize="l"
+  >
+    <Span
+      content="Content for M-XL"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize.Item checkGrammar=false 1`] = `
@@ -254,9 +272,7 @@ exports[`UU5.Bricks.ScreenSize.Item disabled=true 1`] = `
 `;
 
 exports[`UU5.Bricks.ScreenSize.Item docKit examples UU5.Bricks.ScreenSize.Item should render without crash 1`] = `
-Array [
-  "",
-  "",
+<Fragment>
   <screen-size-item
     id="uuID4"
     key="uuID4"
@@ -272,8 +288,8 @@ Array [
     <Span
       content="Content for M-XL"
     />
-  </screen-size-item>,
-]
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize.Item dynamic=false 1`] = `

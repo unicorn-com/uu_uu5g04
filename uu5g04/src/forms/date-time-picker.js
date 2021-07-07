@@ -1,14 +1,16 @@
 /**
- * Copyright (C) 2019 Unicorn a.s.
+ * Copyright (C) 2021 Unicorn a.s.
  *
- * This program is free software; you can use it under the terms of the UAF Open License v01 or
- * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
+ * License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  *
- * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
- * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License at
+ * <https://gnu.org/licenses/> for more details.
  *
- * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
- * at the email: info@unicorn.com.
+ * You may obtain additional information at <https://unicorn.com> or contact Unicorn a.s. at address: V Kapslovne 2767/2,
+ * Praha 3, Czech Republic or at the email: info@unicorn.com.
  */
 
 //@@viewOn:revision
@@ -28,6 +30,7 @@ import Context from "./form-context.js";
 import DateTools from "./internal/date-tools.js";
 import withUserPreferences from "../common/user-preferences";
 
+import "./calendar.less";
 import "./date-time-picker.less";
 //@@viewOff:imports
 
@@ -117,9 +120,18 @@ let DateTimePicker = Context.withContext(
         format: null,
         timeFormat: null,
         country: null,
-        nanMessage: "Please insert a valid date and time.",
-        beforeRangeMessage: "Date and time is out of range.",
-        afterRangeMessage: "Date and time is out of range.",
+        nanMessage: {
+          cs: "Prosím zadejte čas a datum ve správném formátu.",
+          en: "Please insert a valid date and time.",
+        },
+        beforeRangeMessage: {
+          cs: "Datum a čas jsou mimo rozsah.",
+          en: "Date and time is out of range.",
+        },
+        afterRangeMessage: {
+          cs: "Datum a čas jsou mimo rozsah.",
+          en: "Date and time is out of range.",
+        },
         parseDate: null,
         placeholderTime: null,
         dateIcon: "mdi-calendar",
@@ -553,8 +565,10 @@ let DateTimePicker = Context.withContext(
           } else {
             value = dateObject;
           }
-          value = DateTools.getISO(value);
-        } else if (this._formattingValues.valueType === "isoLocal") {
+          if (value) {
+            value = DateTools.getISO(value);
+          }
+        } else if (this._formattingValues.valueType === "isoLocal" && dateObject) {
           value = DateTools.getISOLocal(dateObject, this._formattingValues.timeZone);
         }
       }

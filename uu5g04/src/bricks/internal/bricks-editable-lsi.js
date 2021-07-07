@@ -648,6 +648,14 @@ export const EditableLsi = {
       cs: "Upravit carousel",
       en: "Edit carousel",
     },
+    height: {
+      cs: "Výška",
+      en: "Height",
+    },
+    minHeight: {
+      cs: "Minimální Výška",
+      en: "Minimal height",
+    },
     hideControlsLabel: {
       cs: "Skrýt ovládací prvky",
       en: "Hide controls",
@@ -701,6 +709,11 @@ export const EditableLsi = {
       en: "Item ${itemNumber}",
     },
     name: { en: "Carousel", cs: "Carousel" },
+    heightMessage: {
+      cs:"Pokud v této komponentě používáte obrázky (nebo jiné asynchronní načítání), je nutné jim nastavit pevnou výšku nebo nastavit pevnou výšku komponentě!",
+      en:
+        "If you use images in this component (or other asynchronous loading), it is required to set them a fixed height or set fixed height to the component!",
+    },
   },
   panel: {
     modalHeader: {
@@ -1141,6 +1154,31 @@ export const EditableLsi = {
     itemTypeValueHeader: {
       en: "Header",
       cs: "Hlavička",
+    },
+  },
+  screenSize: {
+    name: {
+      en: "Screen size",
+      cs: "Screen size",
+    },
+    sizes: {
+      en: "Screen sizes",
+      cs: "Screen sizes",
+    },
+    componentInfo: {
+      cs: "Náhlédni do dokumentace",
+      en: "Consult documentation of",
+    },
+    sameScreenSizeInfo: {
+      cs:
+        "V případě, že jsou vloženy dvě či více komponent se stejnou hodnotou vlastnosti screenSize, bude použita pouze komponenta, která je uvedena nejpozději.",
+      en:
+        "If two or more components with the same screenSize property value are inserted, only the component that is listed at the latest will be used.",
+    },
+    otherLabel: { cs: "ostatní", en: "other" },
+    itemLabel: {
+      cs: "Položka ${itemNumber}",
+      en: "Item ${itemNumber}",
     },
   },
   header: {

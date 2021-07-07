@@ -1,23 +1,34 @@
 /**
- * Copyright (C) 2019 Unicorn a.s.
+ * Copyright (C) 2021 Unicorn a.s.
  *
- * This program is free software; you can use it under the terms of the UAF Open License v01 or
- * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
+ * License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  *
- * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
- * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License at
+ * <https://gnu.org/licenses/> for more details.
  *
- * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
- * at the email: info@unicorn.com.
+ * You may obtain additional information at <https://unicorn.com> or contact Unicorn a.s. at address: V Kapslovne 2767/2,
+ * Praha 3, Czech Republic or at the email: info@unicorn.com.
  */
 
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import ScreenSizeItem from "./screen-size-item.js";
+import Lsi from "./internal/bricks-editable-lsi.js";
 
 import "./screen-size.less";
+
+const EditationComponent = UU5.Common.Component.lazy(async () => {
+  await SystemJS.import("uu5g04-forms");
+  await SystemJS.import("uu5g04-bricks-editable");
+  return import("./internal/screen-size-editable.js");
+});
 //@@viewOff:imports
+
+let editationLazyLoaded = false;
 
 export const ScreenSize = UU5.Common.VisualComponent.create({
   displayName: "ScreenSize", // for backward compatibility (test snapshots)
@@ -28,6 +39,7 @@ export const ScreenSize = UU5.Common.VisualComponent.create({
     UU5.Common.ContentMixin,
     UU5.Common.ScreenSizeMixin,
     UU5.Common.NestingLevelMixin,
+    UU5.Common.EditableMixin,
   ],
   //@@viewOff:mixins
 
@@ -43,6 +55,14 @@ export const ScreenSize = UU5.Common.VisualComponent.create({
     },
     opt: {
       nestingLevelWrapper: true,
+    },
+    editMode: {
+      name: Lsi.screenSize.name,
+      backgroundColor: "rgba(0,0,0,.2)",
+      color: "rgba(0,0,0,.87)",
+      highlightColor: "#CCCCCC",
+      enablePlaceholder: true,
+      startMode: "button",
     },
   },
   //@@viewOff:statics
@@ -62,6 +82,11 @@ export const ScreenSize = UU5.Common.VisualComponent.create({
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
+  getInitialState() {
+    return {
+      editationLazyLoaded: false,
+    };
+  },
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
@@ -71,6 +96,9 @@ export const ScreenSize = UU5.Common.VisualComponent.create({
   //@@viewOff:interface
 
   //@@viewOn:overriding
+  onBeforeForceEndEditation_() {
+    return this._editableComponent ? this._editableComponent.getPropsToSave() : undefined;
+  },
   //@@viewOff:overriding
 
   //@@viewOn:private
@@ -134,11 +162,32 @@ export const ScreenSize = UU5.Common.VisualComponent.create({
 
     return children || null;
   },
+
+  _isEditationLazyLoaded() {
+    return editationLazyLoaded;
+  },
+
+  _registerEditableComponent(component) {
+    this._editableComponent = component;
+  },
+
+  _renderEditationMode() {
+    return (
+      <UU5.Common.Suspense fallback={this.getEditingLoading()}>
+        <EditationComponent component={this} ref_={this._registerEditableComponent} />
+      </UU5.Common.Suspense>
+    );
+  },
   //@@viewOff:private
 
   //@@viewOn:render
   render: function () {
-    return this.getNestingLevel() ? this._getChildren() : null;
+    return this.getNestingLevel() ? (
+      <>
+        {this.isInlineEdited() ? this._renderEditationMode() : null}
+        {this.isNotInlineEdited()  ? this._getChildren() : null}
+      </>
+    ) : null;
   },
   //@@viewOff:render
 });

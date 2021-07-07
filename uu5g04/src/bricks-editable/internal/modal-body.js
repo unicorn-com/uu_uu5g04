@@ -1,14 +1,16 @@
 /**
- * Copyright (C) 2019 Unicorn a.s.
+ * Copyright (C) 2021 Unicorn a.s.
  *
- * This program is free software; you can use it under the terms of the UAF Open License v01 or
- * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
+ * License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  *
- * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
- * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License at
+ * <https://gnu.org/licenses/> for more details.
  *
- * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
- * at the email: info@unicorn.com.
+ * You may obtain additional information at <https://unicorn.com> or contact Unicorn a.s. at address: V Kapslovne 2767/2,
+ * Praha 3, Czech Republic or at the email: info@unicorn.com.
  */
 
 //@@viewOn:revision
@@ -324,7 +326,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
         formProps: UU5.PropTypes.object,
         setup: EDITATION_SETUP_PROPS,
       })
-    ).isRequired,
+    ),
     itemName: UU5.PropTypes.string,
     itemDefaultProps: UU5.PropTypes.object,
     itemPropsForm: UU5.PropTypes.shape({
@@ -448,7 +450,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
       this._itemsSource = this.props.itemsSource;
     }
 
-    return {
+    let initialState = {
       propValues,
       items,
       activeCategoryIndex: 0,
@@ -456,11 +458,23 @@ const ModalBody = UU5.Common.VisualComponent.create({
       shown: false,
       editMenuOpen: false,
       menuHeight: undefined,
-      validation: this.props.componentPropsForm.map(() => undefined),
+      validation: (this.props.componentPropsForm || []).map(() => undefined),
       itemsValidation: items ? items.map(() => undefined) : undefined,
       itemMoveModalShown: false,
       confirmModalProps: undefined,
     };
+
+    if (!this.props.componentPropsForm && this.props.itemPropsForm) {
+      initialState.activeCategoryIndex = undefined;
+      if (items && items.length) {
+        initialState.activeItemId = items[0].id;
+      }
+    } else {
+      initialState.activeCategoryIndex = 0;
+      initialState.activeItemId = undefined;
+    }
+
+    return initialState;
   },
 
   componentDidMount() {
@@ -668,30 +682,32 @@ const ModalBody = UU5.Common.VisualComponent.create({
   },
 
   _validateCategories(setStateCallback) {
-    let validation = this.props.componentPropsForm.map(() => undefined);
+    let validation = (this.props.componentPropsForm || []).map(() => undefined);
 
-    this.props.componentPropsForm.forEach((validatedItem, validatedItemIndex) => {
-      if (Helpers.isComponent(validatedItem.setup)) {
-        if (typeof validatedItem.setup.isValid === "function") {
-          validation[validatedItemIndex] = validatedItem.setup.isValid({
-            componentProps: this.state.propValues,
-            items: this.state.items,
-          });
-        } else {
-          validation[validatedItemIndex] = this.state.validation[validatedItemIndex];
-        }
-      } else {
-        validatedItem.setup.forEach((setup) => {
-          if (Array.isArray(setup)) {
-            setup.forEach((setupItem) => {
-              this._validateOneCategory(setupItem, validation, validatedItemIndex);
+    if (this.props.componentPropsForm) {
+      this.props.componentPropsForm.forEach((validatedItem, validatedItemIndex) => {
+        if (Helpers.isComponent(validatedItem.setup)) {
+          if (typeof validatedItem.setup.isValid === "function") {
+            validation[validatedItemIndex] = validatedItem.setup.isValid({
+              componentProps: this.state.propValues,
+              items: this.state.items,
             });
           } else {
-            this._validateOneCategory(setup, validation, validatedItemIndex);
+            validation[validatedItemIndex] = this.state.validation[validatedItemIndex];
           }
-        });
-      }
-    });
+        } else {
+          validatedItem.setup.forEach((setup) => {
+            if (Array.isArray(setup)) {
+              setup.forEach((setupItem) => {
+                this._validateOneCategory(setupItem, validation, validatedItemIndex);
+              });
+            } else {
+              this._validateOneCategory(setup, validation, validatedItemIndex);
+            }
+          });
+        }
+      });
+    }
 
     this.setState({ validation }, setStateCallback);
   },
@@ -923,21 +939,20 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
     this.setState((state) => {
       let itemIndex;
-      let validation;
       let feedback = {
         feedback: opt.feedback,
         message: opt.message,
       };
 
       if (state.activeCategoryIndex === undefined) {
-        itemIndex = state.activeItemIndex;
-        validation = state.itemsValidation;
+        itemIndex = state.items.findIndex((item) => item.id === state.activeItemId);
+        return {
+          itemsValidation: this._getComponentValidationResult(state.itemsValidation, itemIndex, propName, feedback),
+        };
       } else {
         itemIndex = state.activeCategoryIndex;
-        validation = state.validation;
+        return { validation: this._getComponentValidationResult(state.validation, itemIndex, propName, feedback) };
       }
-
-      return { validation: this._getComponentValidationResult(validation, itemIndex, propName, feedback) };
     });
   },
 

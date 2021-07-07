@@ -12,10 +12,10 @@ export const withResize = (Component, reserveSpace) =>
 
       render(props, ref) {
         if (Component.isStateless) ref = undefined;
-        let { Resizer, width, height } = useParentSize();
+        let { Resizer, contentWidth, contentHeight } = useParentSize();
 
-        let usedWidth = props.width || width;
-        let usedHeight = props.height || height;
+        let usedWidth = props.width || contentWidth;
+        let usedHeight = props.height || contentHeight;
         let shouldRender = useRef(false);
         if (!shouldRender.current && usedWidth && usedHeight) {
           shouldRender.current = true;

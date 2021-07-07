@@ -1,14 +1,16 @@
 /**
- * Copyright (C) 2019 Unicorn a.s.
+ * Copyright (C) 2021 Unicorn a.s.
  *
- * This program is free software; you can use it under the terms of the UAF Open License v01 or
- * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
+ * License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  *
- * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
- * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License at
+ * <https://gnu.org/licenses/> for more details.
  *
- * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
- * at the email: info@unicorn.com.
+ * You may obtain additional information at <https://unicorn.com> or contact Unicorn a.s. at address: V Kapslovne 2767/2,
+ * Praha 3, Czech Republic or at the email: info@unicorn.com.
  */
 
 //@@viewOn:revision
@@ -165,7 +167,11 @@ let Number = Context.withContext(
 
         result = result || this._setNumberResult({ value: nextProps.value });
 
-        if (this.props.onValidate && typeof this.props.onValidate === "function") {
+        if (
+          nextProps.onValidate &&
+          typeof nextProps.onValidate === "function" &&
+          (!nextProps.onChange || (this._isFocused && nextProps.validateOnChange))
+        ) {
           this._validateOnChange({ value: result.value, event: null, component: this }, true);
         } else if (result) {
           if (typeof result === "object") {
@@ -687,7 +693,7 @@ let Number = Context.withContext(
 
     _onChange(e) {
       this._correctCursorPosition(e);
-      let inputValue = e.target.value;
+      let inputValue = (e.target.value || "").replace(/\s/g, "");
       let opt = { value: inputValue, event: e, component: this, _data: { type: "input" } };
       this.props.prefix || this.props.suffix ? (opt.value = this._removePrefixandSuffix(opt.value)) : null;
       let checkNumberResult = this._checkNumberResultChange(opt);

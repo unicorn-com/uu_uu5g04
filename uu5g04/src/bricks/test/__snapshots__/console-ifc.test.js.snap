@@ -1,103 +1,131 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UU5.Bricks.Console interface testing error(input) 1`] = `
-<Console
+<withLinkModal(Console)
   id="uuID-console"
   ref_={[Function]}
-/>
-`;
-
-exports[`UU5.Bricks.Console interface testing error(input) 2`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-console-inner"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
-  <Div
-    key="0"
+  <Console
+    id="uuID-console"
+    ref_={[Function]}
   >
-    <Text
-      className="uu5-bricks-console-with-arrow"
-      colorSchema="danger"
-      content="\\"Log Error\\""
-    />
-  </Div>
-</Pre>
-`;
-
-exports[`UU5.Bricks.Console interface testing info(input) 1`] = `
-<Console
-  id="uuID-console"
-  ref_={[Function]}
-/>
-`;
-
-exports[`UU5.Bricks.Console interface testing info(input) 2`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-console-inner"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Div
-    key="0"
-  >
-    <Text
-      className="uu5-bricks-console-with-arrow"
-      colorSchema="info"
-      content="\\"Log Info\\""
-    />
-  </Div>
-</Pre>
+    <Pre
+      className="uu5-bricks-console"
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      id="uuID-console-inner"
+      mainAttrs={Object {}}
+      name={null}
+      nestingLevel={null}
+      pureRender={false}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      <pre
+        className="uu5-bricks-pre uu5-bricks-pre uu5-bricks-console"
+        disabled={false}
+        hidden={false}
+        id="uuID-console-inner"
+      >
+        <Div
+          key="0"
+          nestingLevel="bigBoxCollection"
+        >
+          <div
+            className="uu5-common-div"
+            style={Object {}}
+            title={null}
+          >
+            <Text
+              className="uu5-bricks-console-with-arrow"
+              colorSchema="danger"
+              content="\\"Log Error\\""
+              key="uu5-content-0"
+            >
+              <div
+                className="color-schema-red color-schema-danger uu5-bricks-text uu5-common-text uu5-bricks-console-with-arrow uu5-bricks-text-nesting-level-small-box"
+                style={Object {}}
+                title={null}
+              >
+                <UU5.Common.TextCorrectorContextConsumer
+                  key="0"
+                  text="\\"Log Error\\""
+                >
+                  "Log Error"
+                </UU5.Common.TextCorrectorContextConsumer>
+              </div>
+            </Text>
+          </div>
+        </Div>
+      </pre>
+    </Pre>
+  </Console>
+</withLinkModal(Console)>
 `;
 
 exports[`UU5.Bricks.Console interface testing warning(input) 1`] = `
-<Console
+<withLinkModal(Console)
   id="uuID-console"
   ref_={[Function]}
-/>
-`;
-
-exports[`UU5.Bricks.Console interface testing warning(input) 2`] = `
-<Pre
-  className="uu5-bricks-console"
-  controlled={true}
-  disabled={false}
-  hidden={false}
-  id="uuID-console-inner"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  pureRender={false}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
-  <Div
-    key="0"
+  <Console
+    id="uuID-console"
+    ref_={[Function]}
   >
-    <Text
-      className="uu5-bricks-console-with-arrow"
-      colorSchema="warning"
-      content="\\"Log Warning\\""
-    />
-  </Div>
-</Pre>
+    <Pre
+      className="uu5-bricks-console"
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      id="uuID-console-inner"
+      mainAttrs={Object {}}
+      name={null}
+      nestingLevel={null}
+      pureRender={false}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      <pre
+        className="uu5-bricks-pre uu5-bricks-pre uu5-bricks-console"
+        disabled={false}
+        hidden={false}
+        id="uuID-console-inner"
+      >
+        <Div
+          key="0"
+          nestingLevel="bigBoxCollection"
+        >
+          <div
+            className="uu5-common-div"
+            style={Object {}}
+            title={null}
+          >
+            <Text
+              className="uu5-bricks-console-with-arrow"
+              colorSchema="warning"
+              content="\\"Log Warning\\""
+              key="uu5-content-0"
+            >
+              <div
+                className="color-schema-orange color-schema-warning uu5-bricks-text uu5-common-text uu5-bricks-console-with-arrow uu5-bricks-text-nesting-level-small-box"
+                style={Object {}}
+                title={null}
+              >
+                <UU5.Common.TextCorrectorContextConsumer
+                  key="0"
+                  text="\\"Log Warning\\""
+                >
+                  "Log Warning"
+                </UU5.Common.TextCorrectorContextConsumer>
+              </div>
+            </Text>
+          </div>
+        </Div>
+      </pre>
+    </Pre>
+  </Console>
+</withLinkModal(Console)>
 `;

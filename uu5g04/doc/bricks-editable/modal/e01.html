@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"
+    />
+    <title>Custom Input Editation Demo</title>
+
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+    <script>
+      SystemJS.config({
+        paths: {
+          systemjs: "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          react: "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+          uu_dynamiccomponentcontentg02:
+            "https://cdn.plus4u.net/uu-dynamiccomponentcontentg02/2.0.0/uu_dynamiccomponentcontentg02.min.js",
+          uu5codekitg01: "https://cdn.plus4u.net/uu-uu5codekitg01/1.0.0/uu5codekitg01.min.js",
+          "uu5codekitg01-markdown": "https://cdn.plus4u.net/uu-uu5codekitg01/1.0.0/uu5codekitg01-markdown.min.js",
+          uu5richtextg01: "https://cdn.plus4u.net/uu-uu5richtextg01/1.0.0/uu5richtextg01.min.js",
+          immutable: "https://cdn.plus4u.net/libs/immutable/3.8.2/immutable.min.js",
+
+          uu5g04: "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+          "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+          "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js",
+          "uu5g04-bricks-editable": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks-editable.js",
+        },
+      });
+    </script>
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+      import "uu5g04-bricks-editable";
+      import * as UuDcc from "uu_dynamiccomponentcontentg02";
+
+      UU5.Common.Tools.setLanguage("en");
+
+      //@@viewOn:example
+      /* link-view.js */
+      const STATICS = {
+        displayName: "UU5.Demo.Link.View",
+        nestingLevel: "inline",
+      };
+
+      const LinkView = UU5.Common.VisualComponent.create({
+        ...STATICS,
+
+        propTypes: {
+          href: UU5.PropTypes.string,
+          tooltip: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.object]),
+        },
+
+        defaultProps: {
+          href: undefined,
+          tooltip: undefined,
+        },
+
+        render() {
+          let usedTooltip;
+          if (this.props.tooltip && typeof this.props.tooltip === "object") {
+            usedTooltip = UU5.Common.Tools.getLsiItemByLanguage(this.props.tooltip);
+          } else {
+            usedTooltip = this.props.tooltip;
+          }
+          return (
+            <UU5.Bricks.Link href={this.props.href} tooltip={usedTooltip}>
+              {this.props.children}
+            </UU5.Bricks.Link>
+          );
+        },
+      });
+
+      /* link.js */
+      const Link = UU5.Common.Component.create({
+        displayName: "UU5.Demo.Link",
+
+        mixins: [UU5.Common.BaseMixin, UU5.Common.EditableMixin],
+
+        render() {
+          return (
+            <UU5.Common.Fragment>
+              {this.isInlineEdited() && (
+                <UU5.Common.Suspense fallback={this.getEditingLoading()}>
+                  <LinkEditable props={this.props} onClose={this.endEditation} />
+                </UU5.Common.Suspense>
+              )}
+              <LinkView {...this.props} />
+            </UU5.Common.Fragment>
+          );
+        },
+      });
+
+      /* tooltip-input.js */
+      const TooltipInput = UU5.Common.Component.create({
+        displayName: "UU5.Demo.Link.TooltipInput",
+
+        propTypes: {
+          componentProps: UU5.PropTypes.object,
+          onChangeProps: UU5.PropTypes.func,
+        },
+
+        getInitialState() {
+          let tooltip = this.props.componentProps.tooltip;
+          return { language: tooltip && typeof tooltip === "object" ? Object.keys(tooltip)[0] : "all" };
+        },
+
+        _onChangeLanguage({ value }) {
+          this.setState({ language: value });
+        },
+
+        _onChangeValue({ value }) {
+          let resultTooltip;
+          if (this.state.language === "all") {
+            // value is used as received from the Text input
+            resultTooltip = value;
+          } else {
+            // place the received value to the correct object key
+            if (typeof this.props.componentProps.tooltip === "string") {
+              resultTooltip = { [this.state.language]: value };
+            } else {
+              resultTooltip = { ...this.props.componentProps.tooltip, [this.state.language]: value };
+            }
+          }
+          // save new tooltip value
+          this.props.onChangeProps({ tooltip: resultTooltip });
+        },
+
+        render() {
+          let value;
+          let language = this.state.language;
+          let propValue = this.props.componentProps.tooltip;
+          if (language === "all") {
+            if (typeof propValue === "string") value = propValue;
+            else value = undefined;
+          } else {
+            if (typeof propValue === "string") value = undefined;
+            else value = propValue[language];
+          }
+          return (
+            <UU5.Bricks.Row spaceAround={false}>
+              <UU5.Bricks.Column colWidth="s-12 m-4">
+                <UU5.Forms.Select
+                  value={language}
+                  onChange={this._onChangeLanguage}
+                  popoverLocation="portal"
+                  label="Tooltip"
+                  inputColWidth="xs-12"
+                  labelColWidth="xs-12"
+                >
+                  <UU5.Forms.Select.Option value="all" content="All" />
+                  <UU5.Forms.Select.Option value="en" content="en" />
+                  <UU5.Forms.Select.Option value="cs" content="cs" />
+                  <UU5.Forms.Select.Option value="sk" content="sk" />
+                  <UU5.Forms.Select.Option value="uk" content="uk" />
+                </UU5.Forms.Select>
+              </UU5.Bricks.Column>
+              <UU5.Bricks.Column colWidth="s-12 m-8">
+                {/* spacing is used vertically align the Select and Text inputs because the Select also contains a label */}
+                <UU5.Forms.Text value={value} onBlur={this._onChangeValue} spacing={43} />
+              </UU5.Bricks.Column>
+            </UU5.Bricks.Row>
+          );
+        },
+      });
+
+      /* link-editable.js */
+      const LINK_EDITABLE_FORM = [
+        {
+          name: "Properties",
+          setup: [
+            {
+              name: "children",
+              type: "text",
+              label: "Content",
+            },
+            {
+              name: "href",
+              type: "text",
+              label: "Href",
+              getProps: () => ({ pattern: /^https:\/\//, patternMessage: 'Value must start with "https://"' }),
+            },
+            TooltipInput,
+          ],
+        },
+      ];
+
+      const LinkEditable = UU5.Common.Component.create({
+        displayName: "UU5.Demo.Link.Editable",
+
+        getPropsToSave() {
+          return this._modalRef ? this._modalRef.getPropsToSave() : undefined;
+        },
+
+        _ref(modal) {
+          this._modalRef = modal;
+        },
+
+        render() {
+          return (
+            <UU5.BricksEditable.Modal
+              shown
+              onClose={this.props.onClose}
+              componentName="UU5.Demo.Link"
+              header="UU5.Demo.Link editation"
+              componentProps={this.props.props}
+              componentPropsForm={LINK_EDITABLE_FORM}
+              ref_={this._ref}
+            />
+          );
+        },
+      });
+      //@@viewOff:example
+
+      UU5.Demo = { Link };
+
+      const DccComponent = UU5.Common.Component.create({
+        mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.CcrReaderMixin, UuDcc.Common.DccMixin],
+
+        getDccLanguages_() {
+          return ["cs", "en"];
+        },
+
+        onDccDataChange_(data, doneFn, failFn) {
+          doneFn();
+        },
+
+        render() {
+          return <UU5.Bricks.Div content={this.dcc.render()} />;
+        },
+      });
+
+      /*@@viewOff:0*/
+
+      function Page() {
+        return (
+          <UU5.Bricks.Page modal={<UU5.Bricks.Modal />}>
+            <UU5.Bricks.Container>
+              <DccComponent
+                dccData={`<uu5string/><UU5.Demo.Link href="https://unicorn.com/" tooltip='<uu5json/>{"cs": "firma", "en": "company"}'>unicorn</UU5.Demo.Link>`}
+              />
+            </UU5.Bricks.Container>
+          </UU5.Bricks.Page>
+        );
+      }
+
+      UU5.Common.DOM.render(<Page />, document.getElementById("renderHere"));
+    </script>
+  </body>
+</html>

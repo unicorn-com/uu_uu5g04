@@ -1,14 +1,16 @@
 /**
- * Copyright (C) 2019 Unicorn a.s.
+ * Copyright (C) 2021 Unicorn a.s.
  *
- * This program is free software; you can use it under the terms of the UAF Open License v01 or
- * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
+ * License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  *
- * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
- * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License at
+ * <https://gnu.org/licenses/> for more details.
  *
- * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
- * at the email: info@unicorn.com.
+ * You may obtain additional information at <https://unicorn.com> or contact Unicorn a.s. at address: V Kapslovne 2767/2,
+ * Praha 3, Czech Republic or at the email: info@unicorn.com.
  */
 
 //@@viewOn:imports
@@ -199,25 +201,33 @@ export const Router = VisualComponent.create({
 
   //@@viewOn:interface
   // newRoute =
-  //   {component, noHistory, url, notFoundRoute: {} || < />, tag, props, source}
+  //   {component, noHistory, url, notFoundRoute: {} || < />, tag, props, source} ||
   //   "route name" ||
   //   {useCase, params, config} ||     (used only from goTo methods)
   //   @deprecated   <Node ... />
   // params =
   //   a) {url, noHistory, title}  if newRoute is <Node ... />
   //   b) {...}   if newRoute is "route name" (will be used as prop "params" for the component)
-  setRoute(newRoute, /* params?, fragment?, setStateCallback? */ ...args) {
+  setRoute(newRoute, /* params?, fragment?, replace?, setStateCallback? */ ...args) {
     let setStateCallback = typeof args[args.length - 1] === "function" ? args.pop() : undefined; // always last
     let params = args.shift();
     let fragment = args.shift();
-    if (newRoute && typeof newRoute === "object" && newRoute.url && newRoute.url.fragment) {
-      // fix API of using this object in the rest of the compnent - copy url.fragment into deprecated url.hash
-      newRoute = { ...newRoute, url: { ...newRoute.url, hash: newRoute.url.fragment } };
+    let replace = args.shift();
+    if (newRoute && typeof newRoute === "object") {
+      if (newRoute.url && newRoute.url.fragment) {
+        // fix API of using this object in the rest of the compnent - copy url.fragment into deprecated url.hash
+        newRoute = { ...newRoute, url: { ...newRoute.url, hash: newRoute.url.fragment } };
+      }
+      if ("replace" in newRoute) {
+        replace = newRoute.replace;
+        newRoute = { ...newRoute };
+        delete newRoute.replace;
+      }
     }
     if (this._shouldImport(newRoute)) {
       this._importRoute(newRoute, params, setStateCallback);
     } else {
-      this._setRoute(newRoute, params, null, fragment, setStateCallback);
+      this._setRoute(newRoute, params, null, fragment, setStateCallback, replace);
     }
     return this;
   },
@@ -347,12 +357,12 @@ export const Router = VisualComponent.create({
     return this;
   },
 
-  _setRoute(newRoute, params, props, frag, setStateCallback) {
+  _setRoute(newRoute, params, props, frag, setStateCallback, replace = null) {
     props = props || this.props;
     let { route, fragment, applyRouteFn } = this._buildRoute(
       newRoute,
       params,
-      null,
+      replace,
       props,
       frag,
       null,
@@ -692,6 +702,7 @@ export const Router = VisualComponent.create({
                 config: Tools.mergeDeep({}, config),
                 fragment: usedFragment,
                 isFromHistory: isFromHistory,
+                replace,
               };
 
               // 1st part of config.goTo issue - some apps don't simply call router.setRoute(newRoute) so we don't get
@@ -718,14 +729,16 @@ export const Router = VisualComponent.create({
                   this._routeIndex = 0;
                   this._history.push({ useCase, params, config, fragment: usedFragment });
                 }
-              } else if (!replace) {
-                let leavingRoute = this._history[this._routeIndex];
-                let leavingFromNoHistory = leavingRoute && leavingRoute.config && leavingRoute.config.noHistory;
-                if (!leavingFromNoHistory) {
-                  this._routeIndex++;
-                  method = "pushState";
+              } else {
+                if (!replace) {
+                  let leavingRoute = this._history[this._routeIndex];
+                  let leavingFromNoHistory = leavingRoute && leavingRoute.config && leavingRoute.config.noHistory;
+                  if (!leavingFromNoHistory) {
+                    this._routeIndex++;
+                    method = "pushState";
+                  }
                 }
-                this._history.splice(this._routeIndex, this._history.length - 1);
+                this._history.splice(this._routeIndex, this._history.length - this._routeIndex);
                 this._history.push({ useCase, params, config, fragment: usedFragment });
               }
 
@@ -810,14 +823,16 @@ export const Router = VisualComponent.create({
                   this._routeIndex = 0;
                   this._history.push({ path: path, component: foundRoute, fragment: usedFragment, config });
                 }
-              } else if (!replace) {
-                let leavingRoute = this._history[this._routeIndex];
-                let leavingFromNoHistory = leavingRoute && leavingRoute.config && leavingRoute.config.noHistory;
-                if (!leavingFromNoHistory) {
-                  this._routeIndex++;
-                  method = "pushState";
+              } else {
+                if (!replace) {
+                  let leavingRoute = this._history[this._routeIndex];
+                  let leavingFromNoHistory = leavingRoute && leavingRoute.config && leavingRoute.config.noHistory;
+                  if (!leavingFromNoHistory) {
+                    this._routeIndex++;
+                    method = "pushState";
+                  }
                 }
-                this._history.splice(this._routeIndex, this._history.length - 1);
+                this._history.splice(this._routeIndex, this._history.length - this._routeIndex);
                 this._history.push({ path: path, component: foundRoute, fragment: usedFragment, config });
               }
 

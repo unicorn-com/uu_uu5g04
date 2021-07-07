@@ -1,14 +1,16 @@
 /**
- * Copyright (C) 2019 Unicorn a.s.
+ * Copyright (C) 2021 Unicorn a.s.
  *
- * This program is free software; you can use it under the terms of the UAF Open License v01 or
- * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
+ * License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  *
- * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
- * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License at
+ * <https://gnu.org/licenses/> for more details.
  *
- * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
- * at the email: info@unicorn.com.
+ * You may obtain additional information at <https://unicorn.com> or contact Unicorn a.s. at address: V Kapslovne 2767/2,
+ * Praha 3, Czech Republic or at the email: info@unicorn.com.
  */
 
 //@@viewOn:imports
@@ -16,6 +18,7 @@ import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import CarouselItem from "./carousel-item.js";
 import Icon from "./icon.js";
+import Css from "./internal/css.js";
 import { InlineMode } from "./internal/inline-mode.js";
 import Lsi from "./bricks-lsi.js";
 
@@ -56,6 +59,9 @@ export const Carousel = UU5.Common.VisualComponent.create({
       leftArrow: ns.css("carousel-left"),
       rightArrow: ns.css("carousel-right"),
       lastArrow: ns.css("carousel-last"),
+      minHeight: ({ minHeight }) => Css.css`
+        min-height: ${UU5.Common.Tools.fillUnit(minHeight)}
+      `,
     },
     defaults: {
       minAngle: 22.5,
@@ -85,6 +91,8 @@ export const Carousel = UU5.Common.VisualComponent.create({
     stepByOne: UU5.PropTypes.bool,
     allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
     onIndexChange: UU5.PropTypes.func,
+    height: UU5.PropTypes.number,
+    minHeight: UU5.PropTypes.number,
   },
   //@@viewOff:propTypes
 
@@ -103,6 +111,8 @@ export const Carousel = UU5.Common.VisualComponent.create({
       allowTags: [],
       onIndexChange: undefined,
       contentEditable: false,
+      height: null,
+      minHeight: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -298,12 +308,16 @@ export const Carousel = UU5.Common.VisualComponent.create({
 
   _getMaxHeight() {
     let maxHeight = 0;
-    this.eachRenderedChild((child) => {
-      if (child?.isRendered?.()) {
-        let height = UU5.Common.Tools.getOuterHeight(child, true);
-        maxHeight = height > maxHeight ? height : maxHeight;
-      }
-    });
+    if (this.props.height) {
+      maxHeight = this.props.height;
+    } else {
+      this.eachRenderedChild((child) => {
+        if (child?.isRendered?.()) {
+          let height = UU5.Common.Tools.getOuterHeight(child, true);
+          maxHeight = height > maxHeight ? height : maxHeight;
+        }
+      });
+    }
     return maxHeight;
   },
 
@@ -532,7 +546,6 @@ export const Carousel = UU5.Common.VisualComponent.create({
   _getChildrenStyle(position, displayedItems, height) {
     displayedItems = displayedItems || this.props.displayedItems;
     !height && (height = this.state.rowHeight);
-
     return {
       width: 100 / displayedItems + "%",
       transform: `translateX(${position}%)`,
@@ -572,6 +585,10 @@ export const Carousel = UU5.Common.VisualComponent.create({
     if (this.props.interval > 0) {
       mainAttrs.onMouseOver = this._pauseAutoSlide;
       mainAttrs.onMouseLeave = this._startAutoSlide;
+    }
+
+    if (this.props.minHeight) {
+      mainAttrs.className += " " + this.getClassName("minHeight");
     }
 
     return mainAttrs;

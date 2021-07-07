@@ -1,14 +1,16 @@
 /**
- * Copyright (C) 2019 Unicorn a.s.
+ * Copyright (C) 2021 Unicorn a.s.
  *
- * This program is free software; you can use it under the terms of the UAF Open License v01 or
- * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
+ * License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  *
- * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
- * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License at
+ * <https://gnu.org/licenses/> for more details.
  *
- * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
- * at the email: info@unicorn.com.
+ * You may obtain additional information at <https://unicorn.com> or contact Unicorn a.s. at address: V Kapslovne 2767/2,
+ * Praha 3, Czech Republic or at the email: info@unicorn.com.
  */
 
 //@@viewOn:imports
@@ -74,7 +76,11 @@ export const Text = Context.withContext(
 
     UNSAFE_componentWillReceiveProps(nextProps) {
       if (nextProps.controlled) {
-        if (this.props.onValidate && typeof this.props.onValidate === "function") {
+        if (
+          nextProps.onValidate &&
+          typeof nextProps.onValidate === "function" &&
+          (!nextProps.onChange || (this._isFocused && nextProps.validateOnChange))
+        ) {
           this._validateOnChange({ value: nextProps.value, event: null, component: this }, true);
         } else {
           this.setFeedback(nextProps.feedback, nextProps.message, nextProps.value);
@@ -172,7 +178,6 @@ export const Text = Context.withContext(
           } else {
             this.showError("validateError", null, {
               context: {
-                event: e,
                 func: this.props.onValidate,
                 result: result,
               },
@@ -189,6 +194,7 @@ export const Text = Context.withContext(
     },
 
     _onBlur(opt) {
+      this._isFocused = false;
       opt.component = this;
 
       if (typeof this.props.onBlur === "function") {
@@ -199,6 +205,7 @@ export const Text = Context.withContext(
     },
 
     _onFocus(opt) {
+      this._isFocused = true;
       opt.component = this;
 
       if (typeof this.props.onFocus === "function") {

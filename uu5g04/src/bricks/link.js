@@ -1,14 +1,16 @@
 /**
- * Copyright (C) 2019 Unicorn a.s.
+ * Copyright (C) 2021 Unicorn a.s.
  *
- * This program is free software; you can use it under the terms of the UAF Open License v01 or
- * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
+ * License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  *
- * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
- * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License at
+ * <https://gnu.org/licenses/> for more details.
  *
- * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
- * at the email: info@unicorn.com.
+ * You may obtain additional information at <https://unicorn.com> or contact Unicorn a.s. at address: V Kapslovne 2767/2,
+ * Praha 3, Czech Republic or at the email: info@unicorn.com.
  */
 
 //@@viewOn:imports
@@ -118,7 +120,7 @@ export const Link = UU5.Common.VisualComponent.create({
   },
 
   _shouldOnWheelClick() {
-    return typeof this.props.onWheelClick === "function" || this._isRoute();
+    return typeof this.props.onWheelClick === "function";
   },
 
   _shouldOnClick() {
@@ -241,11 +243,14 @@ export const Link = UU5.Common.VisualComponent.create({
             typeof onMouseDown === "function" && onMouseDown(e, this);
           };
 
+          let onWheelClickDefaultPrevented = false;
           let onMouseUp = mainAttrs.onMouseUp;
           mainAttrs.onMouseUp = (e) => {
+            onWheelClickDefaultPrevented = false;
             if (e.button === 1) {
-              e.preventDefault();
               this._onWheelClick(e);
+              if (e.defaultPrevented) onWheelClickDefaultPrevented = true;
+              e.preventDefault();
 
               // stop pending "click" event because e.preventDefault() doesn't stop it in FF
               let clickHandler = (e) => {
@@ -256,6 +261,14 @@ export const Link = UU5.Common.VisualComponent.create({
               setTimeout(() => document.removeEventListener("click", clickHandler, true), 0);
             }
             typeof onMouseUp === "function" && onMouseUp(e, this);
+          };
+
+          // to prevent opening of window we need to prevent onAuxClick that happens after onMouseUp
+          let onAuxClick = mainAttrs.onAuxClick;
+          mainAttrs.onAuxClick = (e) => {
+            if (onWheelClickDefaultPrevented) e.preventDefault();
+            onWheelClickDefaultPrevented = false;
+            if (typeof onAuxClick === "function") onAuxClick(e, this);
           };
         }
       }

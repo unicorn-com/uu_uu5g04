@@ -126,7 +126,7 @@ const editableAdditionalPropsSetup = [
     label: EditableLsi.tabs.initialActiveNameLabel,
     getProps: (props, componentProps, items) => {
       let usedItems = items.map((item) => ({
-        content: item.props.name || item.props.id + "",
+        content: item.props.header || item.props.name || item.props.id + "",
         value: item.props.name || item.props.id + "",
       }));
       let hasValue = items.some((item) => item.props.name === props.value || item.props.id === props.value);
@@ -178,7 +178,6 @@ const editablePropsSetup = [
 
 const editableItemPropsSetup = {
   setup: [
-    { name: "name", type: "text", label: <UU5.Bricks.Lsi lsi={EditableLsi.tabs.tabNameLabel} />, required: true },
     { name: "header", type: "text", label: <UU5.Bricks.Lsi lsi={EditableLsi.tabs.tabHeaderLabel} />, required: true },
   ],
 };
@@ -230,7 +229,7 @@ export const TabsEditable = UU5.Common.VisualComponent.create({
 
   _onCloseEditationModal(newProps) {
     if (!newProps) newProps = {};
-    this.props.component.endEditation({ ...newProps, mountContent: newProps.mountTabContent || "onActive" });
+    this.props.component.endEditation({ ...newProps, mountTabContent: newProps.mountTabContent || "onActive" });
   },
   //@@viewOff:private
 
@@ -244,6 +243,7 @@ export const TabsEditable = UU5.Common.VisualComponent.create({
         componentProps={{
           ...props,
           mountTabContent: props.mountTabContent || "onActive",
+          activeName: this.props.activeName,
         }}
         onClose={this._onCloseEditationModal}
         itemName={TabsItem.tagName}

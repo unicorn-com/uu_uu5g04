@@ -1,4 +1,5 @@
 @import "./forms-ns.less";
+@import "../color-schema/default.less";
 
 .@{name}-select-option {
   border: none;
@@ -7,4 +8,12 @@
 }
 .@{name}-select-option.uu5-common-disabled {
   color: rgba(0,0,0,0.24) !important;
+}
+
+.@{name}-select-option.uu5-bricks-link {
+  &:focus,
+  &:active,
+  &:hover {
+    background-color: @grey-300;
+  }
 }

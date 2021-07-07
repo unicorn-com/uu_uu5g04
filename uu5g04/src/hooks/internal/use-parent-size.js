@@ -1,7 +1,7 @@
 import { useRef, useElementSize } from "uu5g05";
 
 function useParentSize(params) {
-  const { ref, width, height } = useElementSize(params);
+  const { ref, width, height, contentWidth, contentHeight } = useElementSize(params);
 
   const componentRef = useRef();
   if (componentRef.current == null) {
@@ -11,7 +11,7 @@ function useParentSize(params) {
     };
   }
 
-  return { Resizer: componentRef.current, width, height };
+  return { Resizer: componentRef.current, width, height, contentWidth, contentHeight };
 }
 
 export { useParentSize };

@@ -72,6 +72,14 @@
         onClick={() => UU5.Environment.setRoute("no-history")}
       />
       <UU5.Bricks.Button
+        content="Home2 (replace)"
+        onClick={() => UU5.Environment.setRoute("replaced", undefined, undefined, true)}
+      />
+      <UU5.Bricks.Button
+        content="Home2 (replace + params)"
+        onClick={() => UU5.Environment.setRoute("replaced", { param1: "value1", param2: "value2" }, undefined, true)}
+      />
+      <UU5.Bricks.Button
         content="History"
         onClick={() => UU5.Environment.setRoute({
           component: { tag: "UU5.Example.History", props: { param: "urlParam" } },
@@ -146,6 +154,23 @@
     render() {
       return (
         <UU5.Bricks.Section level={1} header="Home">
+          {JSON.stringify(this.props.params)}
+          {renderContent()}
+        </UU5.Bricks.Section>
+      );
+    }
+  });
+  
+  const Home2 = createReactClass({
+
+    mixins: [
+      UU5.Common.BaseMixin,
+      UU5.Common.RouteMixin
+    ],
+
+    render() {
+      return (
+        <UU5.Bricks.Section level={1} header="Home2">
           {JSON.stringify(this.props.params)}
           {renderContent()}
         </UU5.Bricks.Section>
@@ -324,6 +349,7 @@
                 "home": "",
                 "router.html": "",
                 "no-history": { component: <Home />, noHistory: true },
+                "replaced": { component: <Home2 /> },
                 "history": { component: { tag: "UU5.Example.History" } },
                 "pageLeaveDefault": { component: <PageLeaveDefault /> },
                 "pageLeaveCustom": { component: <PageLeaveCustom /> },

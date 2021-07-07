@@ -25,6 +25,27 @@ const editableComponentPropsSetup = [
       ],
     }),
   },
+  [
+    {
+      name: "height",
+      type: "number",
+      label: EditableLsi.carousel.height,
+      getProps: () => ({
+        suffix: "px",
+        message: <UU5.Bricks.Lsi lsi={EditableLsi.carousel.heightMessage} />,
+        step: 8,
+      }),
+    },
+    {
+      name: "minHeight",
+      type: "number",
+      label: EditableLsi.carousel.minHeight,
+      getProps: () => ({
+        suffix: "px",
+        step: 8,
+      }),
+    },
+  ],
   {
     name: "interval",
     type: "number",

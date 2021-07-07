@@ -1,14 +1,16 @@
 /**
- * Copyright (C) 2019 Unicorn a.s.
+ * Copyright (C) 2021 Unicorn a.s.
  *
- * This program is free software; you can use it under the terms of the UAF Open License v01 or
- * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
+ * License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  *
- * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
- * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License at
+ * <https://gnu.org/licenses/> for more details.
  *
- * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
- * at the email: info@unicorn.com.
+ * You may obtain additional information at <https://unicorn.com> or contact Unicorn a.s. at address: V Kapslovne 2767/2,
+ * Praha 3, Czech Republic or at the email: info@unicorn.com.
  */
 
 import React from "react";
@@ -158,8 +160,11 @@ Tools.findComponent = (tag, props, content, error, onLoad) => {
       <UU5.Common.NotFoundTag key={props.key} tagName={newTag} id={props.id} ref_={props.ref_} error={error} />
     );
     if (callOnLoad) {
-      if (component) onLoad(component);
-      else onLoad(null, new Error(`Component ${newTag} has not been found.`));
+      if (component) {
+        onLoad(component);
+      } else {
+        onLoad(null, new Error(`Component ${newTag} has not been found.`));
+      }
     }
   }
 
@@ -187,7 +192,7 @@ Object.defineProperty(Tools, "loadLibrary", {
 
 Tools.loadLibraryCache = {};
 
-Tools.buildAttributes = function (attrsString) {
+Tools.buildAttributes = function(attrsString) {
   Tools.warning("UU5.Common.Tools.buildAttributes is deprecated. Use UU5.Common.UU5String.buildAttributes instead.");
 
   let attrs = {};
@@ -220,9 +225,11 @@ Tools.buildAttributes = function (attrsString) {
       }
     } else if (matchValue != null) {
       // unescape quoted value
-      if (matchValue[0] === "'") matchValue = matchValue.substr(1, matchValue.length - 2).replace(/\\([\\'])/g, "$1");
-      else if (matchValue[0] === '"')
+      if (matchValue[0] === "'") {
+        matchValue = matchValue.substr(1, matchValue.length - 2).replace(/\\([\\'])/g, "$1");
+      } else if (matchValue[0] === '"') {
         matchValue = matchValue.substr(1, matchValue.length - 2).replace(/\\([\\"])/g, "$1");
+      }
 
       let matchValueType = matchValue.match(ATTR_VALUE_TYPE_REGEXP);
       if (matchValueType[1]) {
@@ -261,7 +268,7 @@ Tools.isUU5String = (uu5String) => {
   return typeof uu5String === "string" && !!uu5String.match(REGEXP.uu5string);
 };
 
-Tools.getChildrenFromUu5String = function (uu5String, opt) {
+Tools.getChildrenFromUu5String = function(uu5String, opt) {
   Tools.warning("UU5.Common.Tools.getChildrenFromUu5String is deprecated. Use UU5.Common.UU5String instead.");
 
   // opt (Object) - tagsRegExp, checkSpaces, checkGrammar, language - defaults from UU5.Common.TextCorrector
@@ -350,17 +357,18 @@ Tools.getChildrenFromUu5String = function (uu5String, opt) {
             }
             pointer.content[pointer.content.length - 1] = body
               ? {
-                  tag: tagObj.tag,
-                  props: props,
-                }
+                tag: tagObj.tag,
+                props: props,
+              }
               : this.findComponent(tagObj.tag, tagObj.attrs, Utils.Content.toArray(tagObj.content));
           }
         } else {
           pre = childTag === "uu5string.pre";
           tagObj = { tag: childTag, content: [], index: matchS.index };
 
-          if (tagsRegExp && !tagsRegExp.test(childTag)) tagObj.forbidden = true;
-          else if (attrs) {
+          if (tagsRegExp && !tagsRegExp.test(childTag)) {
+            tagObj.forbidden = true;
+          } else if (attrs) {
             try {
               tagObj.attrs = this.buildAttributes(attrs);
             } catch (err) {
@@ -396,13 +404,14 @@ Tools.getChildrenFromUu5String = function (uu5String, opt) {
               //meta-tag uu5string.*
               let s = this.execMetaTag(childTag, tagObj.attrs);
               if (s) s.forEach((item) => pointer.content.push(item));
-            } else
+            } else {
               body
                 ? pointer.content.push({
-                    tag: tagObj.tag,
-                    props: tagObj.attrs,
-                  })
+                  tag: tagObj.tag,
+                  props: tagObj.attrs,
+                })
                 : pointer.content.push(this.findComponent(tagObj.tag, tagObj.attrs, null));
+            }
           } else {
             //common tag
             pointer.content.push(tagObj);
@@ -462,7 +471,7 @@ Tools.execMetaTag = (tag, args) => {
   return r;
 };
 
-Tools.parseFromUu5JSON = function (uu5Json) {
+Tools.parseFromUu5JSON = function(uu5Json) {
   uu5Json = uu5Json.replace(REGEXP.uu5json, "");
   let value = null;
   try {
@@ -482,15 +491,17 @@ Tools.parseFromUu5JSON = function (uu5Json) {
   return value;
 };
 
-Tools.parseFromUu5Data = function (uu5data) {
+Tools.parseFromUu5Data = function(uu5data) {
   uu5data = uu5data.replace(REGEXP.uu5data, "");
   let parts = uu5data.split(".");
   let data = UU5.Environment.uu5DataMap;
-  while (data != null && parts.length > 0) data = data[parts.shift()];
+  while (data != null && parts.length > 0) {
+    data = data[parts.shift()];
+  }
   typeof data === "undefined" &&
-    Tools.warning(`There is no component data in UU5.Environment.uu5DataMap for uu5Data: ${uu5data} !`, {
-      string: uu5data,
-    });
+  Tools.warning(`There is no component data in UU5.Environment.uu5DataMap for uu5Data: ${uu5data} !`, {
+    string: uu5data,
+  });
   return data;
 };
 
@@ -498,14 +509,14 @@ Tools.replaceTextEntity = (text) => {
   return Utils.Uu5String._textEntityMap.replace(text);
 };
 
-Tools.pad = function (n, width, z) {
+Tools.pad = function(n, width, z) {
   //return width times leading z for n ... pad(99,5,'-') -> '---99'
   z = z || "0";
   n = n + "";
   return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
 };
 
-Tools.getServerRequest = function (src, parameters, contentType, done, fail) {
+Tools.getServerRequest = function(src, parameters, contentType, done, fail) {
   let request = new XMLHttpRequest();
   request.open("GET", src, true);
 
@@ -529,7 +540,7 @@ Tools.getServerRequest = function (src, parameters, contentType, done, fail) {
   request.send(parameters);
 };
 
-Tools._merge = function (args, deep, preserveRefs) {
+Tools._merge = function(args, deep, preserveRefs) {
   //   var result;
   //   if(args.length){
   //     result = window.Immutable.fromJS(args[0]);
@@ -555,25 +566,25 @@ Tools._merge = function (args, deep, preserveRefs) {
   return result;
 };
 
-Tools.mergeDeep = function () {
+Tools.mergeDeep = function() {
   return Tools._merge(arguments, true, true);
 };
 
-Tools.merge = function () {
+Tools.merge = function() {
   return Tools._merge(arguments);
 };
 
-Tools.mergeEnvironmentUu5DataMap = function (uu5DataMap) {
+Tools.mergeEnvironmentUu5DataMap = function(uu5DataMap) {
   Environment.uu5DataMap = Tools.merge(Environment.uu5DataMap || {}, uu5DataMap);
 };
 
-Tools.getUrlParam = function (name) {
+Tools.getUrlParam = function(name) {
   var results = new RegExp("[?&]" + name + "=([^&#]*)").exec(window.location.href);
   return results ? results[1] : null;
 };
 
 // used for error context which is sent to server
-Tools.getBasicObject = function (object) {
+Tools.getBasicObject = function(object) {
   var result = {};
 
   if (object["$$typeof"]) {
@@ -598,7 +609,7 @@ Tools.getBasicObject = function (object) {
   return result;
 };
 
-Tools.getNavigator = function () {
+Tools.getNavigator = function() {
   var navigator = window.navigator;
   return {
     vendor: navigator.vendor,
@@ -639,15 +650,15 @@ Tools.getNavigator = function () {
 //   );
 // };
 
-Tools.getFileName = function (path) {
+Tools.getFileName = function(path) {
   return path.replace(REGEXP.slashes, "");
 };
 
-Tools.getCamelCase = function (string, firstCharLowerCase = false) {
+Tools.getCamelCase = function(string, firstCharLowerCase = false) {
   var camelCase = string || "";
   if (camelCase) {
     if (!firstCharLowerCase) camelCase = camelCase.charAt(0).toUpperCase() + camelCase.slice(1);
-    camelCase = camelCase.replace(REGEXP.char, function ($1) {
+    camelCase = camelCase.replace(REGEXP.char, function($1) {
       return $1.toUpperCase().replace("-", "");
     });
   }
@@ -689,7 +700,7 @@ Tools.getDocumentWidth = () => {
   return Math.max(body.scrollWidth, body.offsetWidth, html.clientWidth, html.scrollWidth, html.offsetWidth);
 };
 
-Tools.getWidth = function (element) {
+Tools.getWidth = function(element) {
   let paddingLeft = parseInt(
     window.getComputedStyle(DOM.findNode(element), null).getPropertyValue("padding-left").replace("px", "") || "0"
   );
@@ -699,11 +710,11 @@ Tools.getWidth = function (element) {
   return DOM.findNode(element).clientWidth - paddingLeft - paddingRight;
 };
 
-Tools.getInnerWidth = function (element) {
+Tools.getInnerWidth = function(element) {
   return DOM.findNode(element).clientWidth;
 };
 
-Tools.getOuterWidth = function (element, withMargin) {
+Tools.getOuterWidth = function(element, withMargin) {
   let result = DOM.findNode(element).offsetWidth;
   if (withMargin) {
     let marginLeft = parseInt(
@@ -717,7 +728,7 @@ Tools.getOuterWidth = function (element, withMargin) {
   return result;
 };
 
-Tools.getHeight = function (element) {
+Tools.getHeight = function(element) {
   let paddingTop = parseInt(
     window.getComputedStyle(DOM.findNode(element), null).getPropertyValue("padding-top").replace("px", "") || "0"
   );
@@ -727,11 +738,11 @@ Tools.getHeight = function (element) {
   return DOM.findNode(element).clientHeight - paddingTop - paddingBottom;
 };
 
-Tools.getInnerHeight = function (element) {
+Tools.getInnerHeight = function(element) {
   return DOM.findNode(element).clientHeight;
 };
 
-Tools.getOuterHeight = function (element, withMargin) {
+Tools.getOuterHeight = function(element, withMargin) {
   let result = DOM.findNode(element).offsetHeight;
   if (withMargin) {
     let marginTop = parseInt(
@@ -745,7 +756,7 @@ Tools.getOuterHeight = function (element, withMargin) {
   return result;
 };
 
-Tools.calculateTextWidth = function (text, style) {
+Tools.calculateTextWidth = function(text, style) {
   let fontSize = style ? style.fontSize : "12px";
   let tempElement = document.createElement("div");
 
@@ -772,7 +783,7 @@ Tools.calculateTextWidth = function (text, style) {
   return width;
 };
 
-Tools.getOffsetTop = function (offsetElement, scrollElement) {
+Tools.getOffsetTop = function(offsetElement, scrollElement) {
   let offsetTop = 0;
 
   if (offsetElement) {
@@ -785,7 +796,7 @@ Tools.getOffsetTop = function (offsetElement, scrollElement) {
   return offsetTop;
 };
 
-Tools.getOffsetLeft = function (offsetElement, scrollElement) {
+Tools.getOffsetLeft = function(offsetElement, scrollElement) {
   let offsetLeft = 0;
 
   if (offsetElement) {
@@ -798,32 +809,32 @@ Tools.getOffsetLeft = function (offsetElement, scrollElement) {
   return offsetLeft;
 };
 
-Tools.getChildTag = function (child) {
+Tools.getChildTag = function(child) {
   // react child type
   return child.type;
 };
 
-Tools.getChildDisplayName = function (child) {
+Tools.getChildDisplayName = function(child) {
   var tag = Tools.getChildTag(child);
   return typeof tag === "function" ? tag.displayName : tag;
 };
 
-Tools.getChildTagName = function (child) {
+Tools.getChildTagName = function(child) {
   // UU5 tagNames or standard DOM tags ('div', 'span',...)
   var tag = Tools.getChildTag(child);
   return tag && tag.tagName ? tag.tagName : tag;
 };
 
 // Environment
-Tools.isMobileOrTablet = (function () {
+Tools.isMobileOrTablet = (function() {
   var check = false;
-  (function (a) {
+  (function(a) {
     if (REGEXP.mobile1.test(a) || REGEXP.mobile2.test(a.substr(0, 4))) check = true;
   })(navigator.userAgent || navigator.vendor || window.opera);
   return check;
 })();
 
-Tools.getMobileOS = function () {
+Tools.getMobileOS = function() {
   var userAgent = navigator.userAgent || navigator.vendor || window.opera;
   var os = "unknown";
 
@@ -841,52 +852,52 @@ Tools.getMobileOS = function () {
   return os;
 };
 
-Tools.isMobileIOS = function () {
+Tools.isMobileIOS = function() {
   return this.getMobileOS() === "iOS";
 };
 
-Tools.isMobileAndroid = function () {
+Tools.isMobileAndroid = function() {
   return this.getMobileOS() === "android";
 };
 
-Tools.isSafari = function () {
+Tools.isSafari = function() {
   var userAgent = window.navigator.userAgent;
   return this.isMobileIOS() && userAgent.indexOf("Safari") > -1 && userAgent.indexOf("CriOS") === -1;
 };
 
-Tools.isChrome = function () {
+Tools.isChrome = function() {
   var userAgent = window.navigator.userAgent;
   return REGEXP.chrome.test(userAgent) && userAgent.indexOf("Version") === -1 && !Tools.isEdge();
 };
 
-Tools.isEdge = function () {
+Tools.isEdge = function() {
   var userAgent = window.navigator.userAgent;
   return REGEXP.edge.test(userAgent) && userAgent.indexOf("Version") === -1;
 };
 
-Tools.isIE = function () {
+Tools.isIE = function() {
   var userAgent = window.navigator.userAgent;
   return REGEXP.ie.test(userAgent) && userAgent.indexOf("Version") === -1;
 };
 
-Tools.isAndroidChrome = function () {
+Tools.isAndroidChrome = function() {
   return this.isMobileAndroid() && this.isChrome();
 };
 
-Tools.isMac = function () {
+Tools.isMac = function() {
   return window.navigator.platform && window.navigator.platform.match(/Mac/) ? true : false;
 };
 
-Tools.getBrowserLanguage = function () {
+Tools.getBrowserLanguage = function() {
   return window.navigator.language ? window.navigator.language.toLowerCase() : "en";
 };
 
-Tools.getMobileOSVersion = function () {
+Tools.getMobileOSVersion = function() {
   var version = window.navigator.userAgent.match(REGEXP.mobile);
   return version && version[2] ? +version[2].replace("_", ".") : 0;
 };
 
-Tools.isTablet = function () {
+Tools.isTablet = function() {
   var userAgent = window.navigator.userAgent;
   return (
     (this.isSafari() && userAgent.indexOf("iPad") > -1) ||
@@ -895,14 +906,14 @@ Tools.isTablet = function () {
 };
 
 // Cookies
-Tools.setCookie = function (cookieName, cookieValue, expireDays) {
+Tools.setCookie = function(cookieName, cookieValue, expireDays) {
   var d = new Date();
   d.setTime(d.getTime() + expireDays * 24 * 60 * 60 * 1000);
   var expires = "expires=" + d.toUTCString();
   document.cookie = cookieName + "=" + cookieValue + "; " + expires;
 };
 
-Tools.getCookie = function (cookieName) {
+Tools.getCookie = function(cookieName) {
   var name = cookieName + "=";
   var ca = document.cookie.split(";");
   for (var i = 0; i < ca.length; i++) {
@@ -920,12 +931,12 @@ Tools.getCookie = function (cookieName) {
 // languagesString = 'cs-CZ,en;q=0.6,sk;q=0.8' => [{language: 'cs', location: 'cs-cz', q: 1.0}, {language: 'sk', q:
 // 0.8}, {language: 'en', q: 0.6}] languagesString = 'cs' => [{language: 'cs', q: 1.0}] languagesString =
 // 'en;q=0.6,sk;q=0.8' => [{language: 'sk', q: 0.8}, {language: 'en', q: 0.6}]
-Tools.sortLanguages = function (languagesString) {
+Tools.sortLanguages = function(languagesString) {
   // languagesString = 'cs-CZ,en;q=0.6,sk;q=0.8' => languagesSplitter = ['cs-CZ', 'en;q=0.6', 'sk;q=0.8']
   var languagesSplitter = languagesString.toLowerCase().split(",");
 
   var languages = {};
-  languagesSplitter.forEach(function (lang) {
+  languagesSplitter.forEach(function(lang) {
     var lang = lang.trim();
     var language = {};
 
@@ -964,7 +975,7 @@ Tools.sortLanguages = function (languagesString) {
     });
 
   // [{language: 'cs', location: 'cs-CZ', q: 1.0}, {language: 'sk', q: 0.8}, {language: 'en', q: 0.6}]
-  return languagesArray.sort(function (lang1, lang2) {
+  return languagesArray.sort(function(lang1, lang2) {
     var result = 0;
     if (lang1.q < lang2.q) {
       result = 1;
@@ -983,16 +994,16 @@ Tools.joinClassNames = (className1, className2) => {
   return [className1, className2].join(" ").replace(REGEXP.whiteSpaces, " ").trim();
 };
 
-Tools.buildClasses = function (classes, keys) {
+Tools.buildClasses = function(classes, keys) {
   var className = "";
   classes &&
-    keys.forEach(function (v) {
-      classes[v] && (className += " " + classes[v]);
-    });
+  keys.forEach(function(v) {
+    classes[v] && (className += " " + classes[v]);
+  });
   return className.trim();
 };
 
-Tools.isInClasses = function (classes, regExp) {
+Tools.isInClasses = function(classes, regExp) {
   var classesArray = classes ? classes.split(" ") : [];
   var result = false;
   while (!result && classesArray.length) {
@@ -1002,7 +1013,7 @@ Tools.isInClasses = function (classes, regExp) {
   return result;
 };
 
-Tools.addClassName = function (newClassName, classes) {
+Tools.addClassName = function(newClassName, classes) {
   if (classes && classes.indexOf(newClassName) > -1) {
     classes = classes.replace(newClassName, "");
     classes = classes.replace(REGEXP.whiteSpaces, " ");
@@ -1017,7 +1028,7 @@ Tools.addClassName = function (newClassName, classes) {
   return classes;
 };
 
-Tools.buildCounterCallback = function (callback, count) {
+Tools.buildCounterCallback = function(callback, count) {
   /*
    Method wrap (function) callback by newCallBack.
    If newCallBack is used, increase closureCounter
@@ -1029,7 +1040,7 @@ Tools.buildCounterCallback = function (callback, count) {
   var newCallback = null;
   if (typeof callback === "function") {
     var closureCounter = 0;
-    newCallback = function () {
+    newCallback = function() {
       closureCounter++;
       closureCounter === count && callback.apply(null, arguments);
     };
@@ -1037,7 +1048,7 @@ Tools.buildCounterCallback = function (callback, count) {
   return newCallback;
 };
 
-Tools.formatString = function (string, stringParams) {
+Tools.formatString = function(string, stringParams) {
   let paramList = Array.isArray(stringParams) ? stringParams : arguments.length >= 2 ? [stringParams] : [];
   return Utils.String.format(string, ...paramList);
 };
@@ -1247,7 +1258,7 @@ Tools.scrollToTarget = (id, smoothScroll, offset, scrollElement, stickToPosition
   return this;
 };
 
-Tools.error = function (msg, context) {
+Tools.error = function(msg, context) {
   // if (Environment.isProduction()) {
   //   console.error('For debugging use development mode.');
   // } else {
@@ -1293,7 +1304,7 @@ Tools.error = function (msg, context) {
   }
 };
 
-Tools.warning = function (msg, context = {}) {
+Tools.warning = function(msg, context = {}) {
   if (!Environment.isProduction() || (Environment.isProduction() && Environment.showProductionWarning)) {
     console.warn(msg, context);
   }
@@ -1303,7 +1314,7 @@ Tools.repeat = (value, count) => {
   let rpt = "";
   let str = value + "";
 
-  for (;;) {
+  for (; ;) {
     if ((count & 1) == 1) {
       rpt += str;
     }
@@ -1362,15 +1373,15 @@ Tools.decimalAdjust = (type = "round", value, exp) => {
 };
 
 // Decimal round
-Tools.round10 = function (value, exp) {
+Tools.round10 = function(value, exp) {
   return Tools.decimalAdjust("round", value, exp);
 };
 // Decimal floor
-Tools.floor10 = function (value, exp) {
+Tools.floor10 = function(value, exp) {
   return Tools.decimalAdjust("floor", value, exp);
 };
 // Decimal ceil
-Tools.ceil10 = function (value, exp) {
+Tools.ceil10 = function(value, exp) {
   return Tools.decimalAdjust("ceil", value, exp);
 };
 
@@ -1526,11 +1537,11 @@ Tools.formatDate = (date, format, timeZone = null) => {
   return format;
 };
 
-Tools.extend = function (...args) {
+Tools.extend = function(...args) {
   return Tools._extend(false, ...args);
 };
 
-Tools._extend = function (preserveRefs, ...args) {
+Tools._extend = function(preserveRefs, ...args) {
   let src,
     copyIsArray,
     copy,
@@ -1575,10 +1586,15 @@ Tools._extend = function (preserveRefs, ...args) {
         if (options.props) {
           for (let k in options.props) {
             let v = options.props[k];
-            if (preserveRefs && k === "ref_" && v && typeof v === "object") newProps[k] = v;
-            else if (v && Array.isArray(v)) newProps[k] = Tools._extend(preserveRefs, deep, [], v);
-            else if (v && Tools.isPlainObject(v)) newProps[k] = Tools._extend(preserveRefs, deep, {}, v);
-            else newProps[k] = v;
+            if (preserveRefs && k === "ref_" && v && typeof v === "object") {
+              newProps[k] = v;
+            } else if (v && Array.isArray(v)) {
+              newProps[k] = Tools._extend(preserveRefs, deep, [], v);
+            } else if (v && Tools.isPlainObject(v)) {
+              newProps[k] = Tools._extend(preserveRefs, deep, {}, v);
+            } else {
+              newProps[k] = v;
+            }
           }
         }
         let newChildren = newProps.children;
@@ -1590,9 +1606,13 @@ Tools._extend = function (preserveRefs, ...args) {
         // if the target is a React element, then "merge" by actually replacing the element,
         // otherwise just copy all keys
         if (target && typeof target === "object" && Element.isValid(target)) {
-          for (let k in target) delete target[k];
+          for (let k in target) {
+            delete target[k];
+          }
         }
-        for (let k in clonedReactEl) target[k] = clonedReactEl[k];
+        for (let k in clonedReactEl) {
+          target[k] = clonedReactEl[k];
+        }
       } else {
         for (name in options) {
           src = target[name];
@@ -1756,16 +1776,16 @@ Tools.hasProfileOnly = (sourceProfileList, requestedProfile) => {
 Tools.hasSomeProfiles = (sourceProfileList, requestedProfileList) => {
   return requestedProfileList
     ? requestedProfileList.some((v) => {
-        return Tools.hasProfile(sourceProfileList, v);
-      })
+      return Tools.hasProfile(sourceProfileList, v);
+    })
     : false;
 };
 
 Tools.hasEveryProfiles = (sourceProfileList, requestedProfileList) => {
   return requestedProfileList
     ? requestedProfileList.every((v) => {
-        return Tools.hasProfile(sourceProfileList, v);
-      })
+      return Tools.hasProfile(sourceProfileList, v);
+    })
     : false;
 };
 
@@ -1832,7 +1852,7 @@ Tools.getLsiKey = (lsi, languages, language, defaultLanguage) => {
         resLang = lang.language;
         break;
       } else {
-        let lsiKeys = keys.filter(function (key) {
+        let lsiKeys = keys.filter(function(key) {
           return key.match("^" + lang.language);
         });
 
@@ -1964,8 +1984,8 @@ Tools.getLocaleFormat = (locale) => {
       .map((it) =>
         it.type === "literal"
           ? typeof it.value === "string"
-            ? it.value.replace(/\u200E/g, "")
-            : it.value
+          ? it.value.replace(/\u200E/g, "")
+          : it.value
           : formattingCharacters[it.type]
       )
       .filter(Boolean)
@@ -2211,17 +2231,23 @@ Tools.parseDate = (anyDate, opt = {}) => {
     // let val = { y: date.getFullYear(), M: date.getMonth() + 1, d: date.getDate(), q: Math.floor(date.getMonth() / 3) };
     let val = { y: 0, M: undefined, d: undefined, q: 0 };
     let formatIdx = 0;
-    for (let i = 0, len = stringDate.length; i < len && formatIdx < format.length; ) {
+    for (let i = 0, len = stringDate.length; i < len && formatIdx < format.length;) {
       // skip whitespaces and get format portion (e.g. "MMM")
-      while (formatIdx < format.length && format.charAt(formatIdx).match(/\s/)) ++formatIdx;
+      while (formatIdx < format.length && format.charAt(formatIdx).match(/\s/)) {
+        ++formatIdx;
+      }
       if (formatIdx == format.length) break;
       let formatLen = formatIdx;
       let formatChar = format.charAt(formatIdx++);
-      while (formatIdx < format.length && format.charAt(formatIdx) == formatChar) ++formatIdx;
+      while (formatIdx < format.length && format.charAt(formatIdx) == formatChar) {
+        ++formatIdx;
+      }
       formatLen = formatIdx - formatLen;
 
       // skip whitespaces
-      while (i < len && stringDate.charAt(i).match(/\s/)) ++i;
+      while (i < len && stringDate.charAt(i).match(/\s/)) {
+        ++i;
+      }
       if (i == len) break;
 
       switch (formatChar) {
@@ -2527,19 +2553,19 @@ Tools.formatNumber = (
     const thousandSep =
       thousandSeparator == null
         ? numberFormat.thousandSeparator == null
-          ? ""
-          : numberFormat.thousandSeparator
+        ? ""
+        : numberFormat.thousandSeparator
         : thousandSeparator;
     const decimalSep =
       decimalSeparator == null
         ? numberFormat.decimalSeparator == null
-          ? "."
-          : numberFormat.decimalSeparator
+        ? "."
+        : numberFormat.decimalSeparator
         : decimalSeparator;
 
     const formattedArr = [num.replace(REGEXP.numberParts, thousandSep)];
 
-    if (minDecimals != null || numDecimals) {
+    if (minDecimals > 0 || numDecimals) {
       formattedArr.push(Tools.ljust(numDecimals || "0", minDecimals, "0"));
     }
 
@@ -2728,11 +2754,11 @@ Tools.buildColWidthClassName = (colWidth) => {
   ["xs", "s", "m", "l", "xl"].forEach((size) => {
     typeof newBsColWidth[size] !== "number" && typeof lowerWidth === "number" && (newBsColWidth[size] = lowerWidth);
     (lowerWidth = newBsColWidth[size]) &&
-      typeof lowerWidth === "number" &&
-      sizeClassNames.push(`uu5-col-${size}` + newBsColWidth[size]);
+    typeof lowerWidth === "number" &&
+    sizeClassNames.push(`uu5-col-${size}` + newBsColWidth[size]);
 
     typeof newBsColWidth[`offset-${size}`] === "number" &&
-      sizeClassNames.push(`uu5-col-offset-${size}` + newBsColWidth[`offset-${size}`]);
+    sizeClassNames.push(`uu5-col-offset-${size}` + newBsColWidth[`offset-${size}`]);
   });
 
   return sizeClassNames.join(" ");
@@ -2757,7 +2783,7 @@ Tools.fillUnit = (value, defaultUnit = "px") => {
   }
 };
 
-Tools.getCallToken = async function (url, session) {
+Tools.getCallToken = async function(url, session) {
   let token;
   if (session) {
     let a = document.createElement("a");
@@ -2773,11 +2799,11 @@ Tools.getCallToken = async function (url, session) {
   return token;
 };
 
-Tools.getCsrfToken = function () {
+Tools.getCsrfToken = function() {
   return Tools.getCookie(COOKIE_CSRF_TOKEN);
 };
 
-Tools.getAuthenticatedUrl = async function (url, session, accessToken = undefined, csrfToken = undefined) {
+Tools.getAuthenticatedUrl = async function(url, session, accessToken = undefined, csrfToken = undefined) {
   let parameterName;
   let value = accessToken === undefined ? await Tools.getCallToken(url, session) : accessToken;
   if (value) {
@@ -2794,11 +2820,12 @@ Tools.getAuthenticatedUrl = async function (url, session, accessToken = undefine
   return result;
 };
 
-Tools.getAuthenticatedHeaders = async function (url, session, accessToken = undefined, csrfToken = undefined) {
+Tools.getAuthenticatedHeaders = async function(url, session, accessToken = undefined, csrfToken = undefined) {
   let headers = {};
   let token1 = accessToken === undefined ? await Tools.getCallToken(url, session) : accessToken;
-  if (token1) headers["Authorization"] = "Bearer " + token1;
-  else {
+  if (token1) {
+    headers["Authorization"] = "Bearer " + token1;
+  } else {
     let token2 = csrfToken === undefined ? Tools.getCsrfToken() : csrfToken;
     if (token2) headers["X-Csrf-Token"] = token2;
   }
@@ -2810,7 +2837,7 @@ Tools.deepSortObjectKeys = (object) => {
 
   Object.keys(object)
     .sort()
-    .forEach(function (key) {
+    .forEach(function(key) {
       let value = object[key];
       sortedObject[key] = value && typeof value === "object" ? Tools.deepSortObjectKeys(value) : value;
     });
@@ -2819,7 +2846,7 @@ Tools.deepSortObjectKeys = (object) => {
 };
 
 const groupCallCache = {};
-Tools.groupCall = (uri, dtoIn, doLoadFn) => {
+Tools.groupCall = (uri, dtoIn, doLoadFn, { maxAge = 100 } = {}) => {
   if (!groupCallCache.data) groupCallCache.data = {};
   const cacheKey = uri + " " + JSON.stringify(Tools.deepSortObjectKeys(dtoIn));
   let data = groupCallCache.data[cacheKey];
@@ -2833,14 +2860,14 @@ Tools.groupCall = (uri, dtoIn, doLoadFn) => {
         data.result = result;
         setTimeout(() => {
           delete groupCallCache.data[cacheKey];
-        }, 100);
+        }, maxAge);
         return result;
       },
       (error) => {
         data.error = error;
         setTimeout(() => {
           delete groupCallCache.data[cacheKey];
-        }, 100);
+        }, maxAge);
         return Promise.reject(error);
       }
     );
@@ -2876,11 +2903,15 @@ if (Tools.isMobileIOS()) {
 }
 
 let ua;
-if (navigator.userAgent.match(/MSIE|Trident/)) ua = "uu5-ua-ie";
-else if (navigator.userAgent.match(/Edge/)) ua = "uu5-ua-edge";
-else if (navigator.userAgent.match(/Chrome/)) ua = "uu5-ua-chrome";
-else if (navigator.userAgent.match(/Safari/)) ua = "uu5-ua-safari";
-else if (navigator.userAgent.match(/Mozilla/)) ua = "uu5-ua-ff";
+if (navigator.userAgent.match(/MSIE|Trident/)) {
+  ua = "uu5-ua-ie";
+} else if (navigator.userAgent.match(/Edge/)) {
+  ua = "uu5-ua-edge";
+} else if (navigator.userAgent.match(/Chrome/)) {
+  ua = "uu5-ua-chrome";
+} else if (navigator.userAgent.match(/Safari/)) {
+  ua = "uu5-ua-safari";
+} else if (navigator.userAgent.match(/Mozilla/)) ua = "uu5-ua-ff";
 if (ua) document.documentElement.classList.add(ua);
 
 export default Tools;

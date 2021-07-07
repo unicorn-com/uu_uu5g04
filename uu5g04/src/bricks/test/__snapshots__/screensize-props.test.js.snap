@@ -1,505 +1,562 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Mixin Props testing Default values 1`] = `
-<screen-size-item
-  id="uuID4"
-  key="uuID4"
-  nestingLevel="spa"
-  screenSize="l"
->
-  <Span
-    content="Content for M-XL"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="uuID4"
+    key="uuID4"
+    nestingLevel="spa"
+    screenSize="l"
+  >
+    <Span
+      content="Content for M-XL"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`Mixin Props testing props of BaseMixin 1`] = `
-<screen-size-item
-  id="uuID4"
-  key="uuID4"
-  nestingLevel="spa"
-  screenSize="l"
->
-  <Span
-    content="Content for M-XL"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="uuID4"
+    key="uuID4"
+    nestingLevel="spa"
+    screenSize="l"
+  >
+    <Span
+      content="Content for M-XL"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`Mixin Props testing props of ContentMixin 1`] = `
-<Outline
-  element={
-    Object {
-      "__isMounted": true,
-      "_isMounted": true,
-      "context": Object {},
-      "id": "uuIDroot",
-      "mixinRegister": Array [
-        "UU5.Common.BaseMixin",
-        "UU5.Common.ElementaryMixin",
-        "UU5.Common.ContentMixin",
-        "UU5.Common.ScreenSizeMixin",
-        "UU5.Common.NestingLevelMixin",
-      ],
-      "props": Object {
-        "_contextScreenSize": undefined,
-        "checkGrammar": true,
-        "checkHighlight": true,
-        "checkSpaces": true,
-        "children": <screen-size-item
-          className={null}
-          content={null}
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
-          id="uuID4"
-          ignoreInnerHTML={false}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          parent={null}
-          ref_={null}
-          screenSize="xl"
-          selected={false}
-          style={null}
-          tooltip={null}
-        >
-          <Span
+<Fragment>
+  <Outline
+    element={
+      Object {
+        "__isMounted": true,
+        "_domNode": null,
+        "_isMounted": true,
+        "_resizeCallbacks": Object {},
+        "context": Object {},
+        "id": "uuIDroot",
+        "mixinRegister": Array [
+          "UU5.Common.BaseMixin",
+          "UU5.Common.ElementaryMixin",
+          "UU5.Common.ContentMixin",
+          "UU5.Common.ScreenSizeMixin",
+          "UU5.Common.NestingLevelMixin",
+          "UU5.Common.EditableMixin",
+        ],
+        "props": Object {
+          "_contextScreenSize": undefined,
+          "checkGrammar": true,
+          "checkHighlight": true,
+          "checkSpaces": true,
+          "children": <screen-size-item
             className={null}
-            content="Content for M-XL"
+            content={null}
             controlled={true}
             disabled={false}
             dynamic={false}
             hidden={false}
-            id={null}
+            id="uuID4"
             ignoreInnerHTML={false}
             mainAttrs={null}
             name={null}
+            nestingLevel={null}
             noIndex={false}
             parent={null}
-            pureRender={false}
             ref_={null}
+            screenSize="xl"
             selected={false}
             style={null}
             tooltip={null}
-          />
-        </screen-size-item>,
-        "className": null,
-        "content": "This is Content from ContentMixin",
-        "controlled": true,
-        "disabled": false,
-        "dynamic": true,
-        "hidden": false,
-        "id": "uuIDroot",
-        "ignoreHTML": true,
-        "ignoreInnerHTML": false,
-        "mainAttrs": null,
-        "mode": "outline",
-        "name": null,
-        "nestingLevel": null,
-        "noIndex": false,
-        "parent": null,
-        "ref_": null,
-        "screenSize": null,
-        "selected": false,
-        "style": null,
-        "textCorrector": true,
-        "tooltip": null,
-      },
-      "refs": Object {},
-      "renderedChildren": Array [],
-      "renderedChildrenIdList": Object {},
-      "renderedChildrenNameList": Object {},
-      "state": Object {
-        "children": <UU5.Common.TextCorrectorContextConsumer
-          checkGrammar={true}
-          checkHighlight={true}
-          checkSpaces={true}
-          text="This is Content from ContentMixin"
-        />,
-        "disabled": false,
-        "filter": null,
-        "filteredProps": null,
-        "hidden": false,
-        "mode": "outline",
-        "nestingLevel": "spa",
-        "screenSize": "l",
-        "selected": false,
-        "sortedIds": null,
-        "sorter": null,
-      },
-      "tagName": "UU5.Bricks.ScreenSize",
+          >
+            <Span
+              className={null}
+              content="Content for M-XL"
+              controlled={true}
+              disabled={false}
+              dynamic={false}
+              hidden={false}
+              id={null}
+              ignoreInnerHTML={false}
+              mainAttrs={null}
+              name={null}
+              noIndex={false}
+              parent={null}
+              pureRender={false}
+              ref_={null}
+              selected={false}
+              style={null}
+              tooltip={null}
+            />
+          </screen-size-item>,
+          "className": null,
+          "content": "This is Content from ContentMixin",
+          "controlled": true,
+          "disabled": false,
+          "dynamic": true,
+          "getEditablePropValue": undefined,
+          "hidden": false,
+          "id": "uuIDroot",
+          "ignoreHTML": true,
+          "ignoreInnerHTML": false,
+          "mainAttrs": null,
+          "mode": "outline",
+          "name": null,
+          "nestingLevel": null,
+          "noIndex": false,
+          "parent": null,
+          "ref_": null,
+          "screenSize": null,
+          "selected": false,
+          "style": null,
+          "textCorrector": true,
+          "tooltip": null,
+        },
+        "refs": Object {},
+        "renderedChildren": Array [],
+        "renderedChildrenIdList": Object {},
+        "renderedChildrenNameList": Object {},
+        "state": Object {
+          "children": <UU5.Common.TextCorrectorContextConsumer
+            checkGrammar={true}
+            checkHighlight={true}
+            checkSpaces={true}
+            text="This is Content from ContentMixin"
+          />,
+          "disabled": false,
+          "editableComponentLazyLoaded": false,
+          "editation": false,
+          "editationLazyLoaded": false,
+          "filter": null,
+          "filteredProps": null,
+          "hidden": false,
+          "mode": "outline",
+          "nestingLevel": "spa",
+          "screenSize": "l",
+          "selected": false,
+          "sortedIds": null,
+          "sorter": null,
+        },
+        "tagName": "UU5.Bricks.ScreenSize",
+      }
     }
-  }
-  key="0"
-  screenSize="l"
-/>
+    key="0"
+    screenSize="l"
+  />
+</Fragment>
 `;
 
 exports[`Mixin Props testing props of ElementaryMixin 1`] = `
-<screen-size-item
-  disabled={true}
-  hidden={true}
-  id="uuID4"
-  key="uuID4"
-  nestingLevel="spa"
-  screenSize="l"
-  selected={true}
->
-  <Span
-    content="Content for M-XL"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    disabled={true}
+    hidden={true}
+    id="uuID4"
+    key="uuID4"
+    nestingLevel="spa"
+    screenSize="l"
+    selected={true}
+  >
+    <Span
+      content="Content for M-XL"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`Mixin Props testing props of NestingLevelMixin 1`] = `
-<screen-size-item
-  id="uuID4"
-  key="uuID4"
-  nestingLevel="boxCollection"
-  screenSize="l"
->
-  <Span
-    content="Content for M-XL"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="uuID4"
+    key="uuID4"
+    nestingLevel="boxCollection"
+    screenSize="l"
+  >
+    <Span
+      content="Content for M-XL"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`Mixin Props testing props of ScreenSize 1`] = `
-<screen-size-item
-  id="uuID4"
-  key="uuID4"
-  nestingLevel="spa"
-  screenSize="l"
->
-  <Span
-    content="Content for M-XL"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="uuID4"
+    key="uuID4"
+    nestingLevel="spa"
+    screenSize="l"
+  >
+    <Span
+      content="Content for M-XL"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`Test UU5.bricks.ScreenSize own props props.ScreeSize - test 1`] = `
-<screen-size-item
-  id="uuID4"
-  key="uuID4"
-  nestingLevel="spa"
-  screenSize="l"
->
-  <Span
-    content="Content for M-XL"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="uuID4"
+    key="uuID4"
+    nestingLevel="spa"
+    screenSize="l"
+  >
+    <Span
+      content="Content for M-XL"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`Test UU5.bricks.ScreenSize own props props.ScreeSize - test 2`] = `
-<screen-size-item
-  id="uuID4"
-  key="uuID4"
-  nestingLevel="spa"
-  screenSize="l"
->
-  <Span
-    content="Content for M-XL"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="uuID4"
+    key="uuID4"
+    nestingLevel="spa"
+    screenSize="l"
+  >
+    <Span
+      content="Content for M-XL"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`Test UU5.bricks.ScreenSize own props props.ScreeSize - test 3`] = `
-<screen-size-item
-  id="uuID4"
-  key="uuID4"
-  nestingLevel="spa"
-  screenSize="l"
->
-  <Span
-    content="Content for M-XL"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="uuID4"
+    key="uuID4"
+    nestingLevel="spa"
+    screenSize="l"
+  >
+    <Span
+      content="Content for M-XL"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`Test UU5.bricks.ScreenSize own props props.ScreeSize - test 4`] = `
-<screen-size-item
-  id="uuID4"
-  key="uuID4"
-  nestingLevel="spa"
-  screenSize="l"
->
-  <Span
-    content="Content for M-XL"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="uuID4"
+    key="uuID4"
+    nestingLevel="spa"
+    screenSize="l"
+  >
+    <Span
+      content="Content for M-XL"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`Test UU5.bricks.ScreenSize own props props.ScreeSize - test 5`] = `
-<screen-size-item
-  id="uuID4"
-  key="uuID4"
-  nestingLevel="spa"
-  screenSize="l"
->
-  <Span
-    content="Content for M-XL"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="uuID4"
+    key="uuID4"
+    nestingLevel="spa"
+    screenSize="l"
+  >
+    <Span
+      content="Content for M-XL"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize checkGrammar=false 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize checkGrammar=true 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize checkHighlight=false 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize checkHighlight=true 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize checkSpaces=false 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize checkSpaces=true 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize className="my-classname" 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize content="This is Content from ContentMixin" 1`] = `
-<UU5.Common.TextCorrectorContextConsumer
-  key="0"
-  screenSize="l"
-  text="This is Content from ContentMixin"
-/>
+<Fragment>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    screenSize="l"
+    text="This is Content from ContentMixin"
+  />
+</Fragment>
 `;
 
-exports[`UU5.Bricks.ScreenSize content=12345 1`] = `12345`;
+exports[`UU5.Bricks.ScreenSize content=12345 1`] = `
+<Fragment>
+  12345
+</Fragment>
+`;
 
 exports[`UU5.Bricks.ScreenSize controlled=false 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize controlled=true 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize default props 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize disabled=false 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize disabled=true 1`] = `
-<screen-size-item
-  disabled={true}
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    disabled={true}
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize docKit examples UU5.Bricks.ScreenSize should render without crash 1`] = `
-Array [
-  "",
-  "",
+<Fragment>
   <screen-size-item
     id="uuID4"
     key="uuID4"
@@ -515,668 +572,734 @@ Array [
     <Span
       content="Content for M-XL"
     />
-  </screen-size-item>,
-]
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize dynamic=false 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize dynamic=true 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize hidden=false 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize hidden=true 1`] = `
-<screen-size-item
-  hidden={true}
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    hidden={true}
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize id="myId" 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize ignoreHTML=false 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize ignoreHTML=true 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize mainAttrs=undefined 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize name="myName" 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize nestingLevel="bigBox" 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="bigBox"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="bigBox"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize nestingLevel="bigBoxCollection" 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="bigBoxCollection"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="bigBoxCollection"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize nestingLevel="box" 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="box"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="box"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize nestingLevel="boxCollection" 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="boxCollection"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="boxCollection"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize nestingLevel="container" 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="container"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="container"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize nestingLevel="inline" 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="inline"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="inline"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize nestingLevel="page" 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="page"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="page"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize nestingLevel="smallBox" 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="smallBox"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="smallBox"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize nestingLevel="smallBoxCollection" 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="smallBoxCollection"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="smallBoxCollection"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize nestingLevel="spa" 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize noIndex=false 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize noIndex=true 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize screenSize="l" 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize screenSize="m" 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize screenSize="s" 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize screenSize="xl" 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize screenSize="xs" 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize selected=false 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize selected=true 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={true}
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+    selected={true}
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize style="padding:8px; borderRadius: 2px" 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize style={"backgroundColor":"red","color":"blue"} 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize textCorrector=false 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize textCorrector=true 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;
 
 exports[`UU5.Bricks.ScreenSize tooltip="My Tooltip" 1`] = `
-<screen-size-item
-  id="childID"
-  key="childID"
-  nestingLevel="spa"
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
->
-  <Span
-    content="Content for M-XL"
-    id="childID02"
-  />
-</screen-size-item>
+<Fragment>
+  <screen-size-item
+    id="childID"
+    key="childID"
+    nestingLevel="spa"
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+  >
+    <Span
+      content="Content for M-XL"
+      id="childID02"
+    />
+  </screen-size-item>
+</Fragment>
 `;

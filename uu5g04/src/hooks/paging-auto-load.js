@@ -63,6 +63,7 @@ export const PagingAutoLoad = createComponent({
         await loadMore();
         setAutoLoadError(null);
       } catch (e) {
+        console.error(e);
         setAutoLoadError({ key: totalLoadedCount, error: e });
       }
     }, [loadMore, totalLoadedCount]);
