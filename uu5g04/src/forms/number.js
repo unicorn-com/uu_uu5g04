@@ -616,7 +616,9 @@ let Number = Context.withContext(
         } else {
           this._isNaN = false;
         }
-        isComma && (opt.value = opt.value.replace(".", ","));
+        if (isComma && this.props.decimalSeparator === "," && this.props.thousandSeparator !== ".") {
+          opt.value = opt.value.replace(".", ",");
+        }
       }
       return opt;
     },
@@ -640,8 +642,9 @@ let Number = Context.withContext(
             opt.feedback = "error";
             opt.message = this.props.upperMessage || this.getLsiComponent("upperMessage", null, this.props.max);
           }
-
-          isComma && (opt.value = opt.value.replace(".", ","));
+          if (isComma && this.props.decimalSeparator === "," && this.props.thousandSeparator !== ".") {
+            opt.value = opt.value.replace(".", ",");
+          }
         } else if (opt.value === "-" && (this.props.min > 0 || this.props.min === 0)) {
           // beware of null
           opt.feedback = "error";
@@ -693,9 +696,10 @@ let Number = Context.withContext(
 
     _onChange(e) {
       this._correctCursorPosition(e);
-      let inputValue = (e.target.value || "").replace(/\s/g, "");
+      let inputValue = e.target.value || "";
+      if (this.props.prefix || this.props.suffix) inputValue = this._removePrefixandSuffix(inputValue);
+      inputValue = inputValue.replace(/\s/g, "");
       let opt = { value: inputValue, event: e, component: this, _data: { type: "input" } };
-      this.props.prefix || this.props.suffix ? (opt.value = this._removePrefixandSuffix(opt.value)) : null;
       let checkNumberResult = this._checkNumberResultChange(opt);
 
       if (checkNumberResult.feedback && checkNumberResult.feedback === "warning") {

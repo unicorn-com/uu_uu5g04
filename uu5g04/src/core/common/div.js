@@ -65,7 +65,7 @@ export const Div = VisualComponent.create({
   render: function () {
     return this.getNestingLevel()
       ? Element.create("div", this.getMainAttrs(), this.getChildren(), this.getDisabledCover())
-      : null;
+      : Element.create("span", this.getMainAttrs(), this.getChildren(), this.getDisabledCover());
   },
   //@@viewOff:render
 });

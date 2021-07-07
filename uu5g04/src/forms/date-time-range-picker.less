@@ -333,6 +333,7 @@
       & > .uu5-bricks-icon {
         left: 0;
         right: inherit;
+        height: auto;
       }
     }
 
@@ -456,6 +457,28 @@
   && {
     border-top: solid 1px fade(#bdbdbd, 50%);
   }
+
+  .uu5-bricks-button {
+    width: auto;
+    height: auto;
+    border-radius: 2px;
+    font-family: ClearSans-Medium;
+    color: #2196f3;
+    background-color: transparent;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:active:focus,
+    &:active:hover {
+      color: #0d47a1;
+      background-color: #e3f2fd;
+    }
+
+    & + .uu5-bricks-button {
+      margin-left: 8px;
+    }
+  }
 }
 
 .@{name}-datetimerangepicker-calendars {
@@ -491,26 +514,6 @@
 .@{name}-datetimerangepicker-custom-content {
   && {
     border-left: solid 1px fade(#bdbdbd, 50%);
-  }
-}
-
-.@{name}-datetimerangepicker-today-button {
-  && {
-    width: auto;
-    height: auto;
-    border-radius: 2px;
-    font-family: ClearSans-Medium;
-    color: #2196f3;
-    background-color: transparent;
-
-    &:hover,
-    &:active,
-    &:focus,
-    &:active:focus,
-    &:active:hover {
-      color: #0d47a1;
-      background-color: #e3f2fd;
-    }
   }
 }
 

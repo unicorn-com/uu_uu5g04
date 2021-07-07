@@ -96,6 +96,7 @@ export const TouchIcon = UU5.Common.VisualComponent.create({
     borderRadius: UU5.PropTypes.string,
     bgStyle: UU5.PropTypes.oneOf(["filled", "transparent"]),
     lines: UU5.PropTypes.oneOf([0, 2, 3]),
+    iconContent: UU5.PropTypes.node,
   },
   //@@viewOff:propTypes
 
@@ -111,6 +112,7 @@ export const TouchIcon = UU5.Common.VisualComponent.create({
       borderRadius: null,
       bgStyle: "filled",
       lines: 2,
+      iconContent: null,
     };
   },
   //@@viewOff:getDefaultProps
@@ -172,9 +174,11 @@ export const TouchIcon = UU5.Common.VisualComponent.create({
           </UU5.Common.Suspense>
         )}
         <Link {...this._getMainAttrs()}>
-          <div {...this._getBodyAttrs()}>
-            <Icon icon={this.props.icon} className={this.getClassName().icon} />
-          </div>
+          {this.props.iconContent || (
+            <div {...this._getBodyAttrs()}>
+              <Icon icon={this.props.icon} className={this.getClassName().icon} />
+            </div>
+          )}
           {this.props.lines !== 0 && <div className={this.getClassName("label")}>{this.getChildren()}</div>}
         </Link>
       </>

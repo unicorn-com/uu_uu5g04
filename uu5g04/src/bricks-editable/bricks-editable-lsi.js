@@ -296,6 +296,18 @@ export const FormsLsi = {
       en: "Edit Well",
     },
   },
+  spacesInput: {
+    infoMessagePartOne: {
+      cs: "Lze použít různé jednotky (px, em, vw,% a další). Pokud jednotka není zadána, použije se px.",
+      en: "Different units can be used (px, em, vw, % and others). If the unit is not specified, px is used.",
+    },
+    infoMessagePartTwo: {
+      cs:
+        "Hodnoty se ve výchozím nastavení dědí z nadřazeného prvku, pokud zadáte hodnoty pro menší rozlišení, použijí se automaticky pro nespecifikovaná větší.",
+      en:
+        "Values are inherited from parent by default, if you specify values for smaller resolutions, they are used automaticaly for unspecified bigger ones.",
+    },
+  },
 };
 
 export default FormsLsi;

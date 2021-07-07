@@ -28,6 +28,10 @@ function createDateFromDateParts(dateParts) {
   return Date.UTC(utcParts[0], utcParts[1] - 1, utcParts[2], utcParts[3], utcParts[4]);
 }
 
+export const UNSPECIFIED_FROM = new Date("1900-01-01T00:00:00");
+export const UNSPECIFIED_TO = new Date("2099-12-31T00:00:00");
+export const UNSPECIFIED_CHAR = "∞";
+
 export const DateTools = {
   setupLimits: (props) => {
     let timeFrom = undefined;
@@ -229,6 +233,7 @@ export const DateTools = {
     };
   },
   getISO(dateValue, ignoreTime) {
+    if (!dateValue) return dateValue;
     let result;
 
     if (ignoreTime) {
@@ -241,6 +246,7 @@ export const DateTools = {
     return result;
   },
   getISOLocal(dateValue, timeZone) {
+    if (!dateValue) return dateValue;
     let utcDiff = -dateValue.getTimezoneOffset() / 60;
 
     if (typeof timeZone === "number") {
@@ -322,19 +328,63 @@ export const DateTools = {
 
     return DateTools.correctDateRange(resultRange);
   },
-  correctDateRange(dateRange) {
+  correctDateRange(dateRange, isTo = false) {
     if (Array.isArray(dateRange)) {
-      dateRange[0].setHours(0);
-      dateRange[0].setMinutes(0);
-      dateRange[0].setSeconds(0);
-      dateRange[0].setMilliseconds(0);
-      dateRange[1].setHours(23);
-      dateRange[1].setMinutes(59);
-      dateRange[1].setSeconds(59);
-      dateRange[1].setMilliseconds(999);
+      if (dateRange[0] instanceof Date) {
+        dateRange[0].setHours(0);
+        dateRange[0].setMinutes(0);
+        dateRange[0].setSeconds(0);
+        dateRange[0].setMilliseconds(0);
+      }
+      if (dateRange[1] instanceof Date) {
+        dateRange[1].setHours(23);
+        dateRange[1].setMinutes(59);
+        dateRange[1].setSeconds(59);
+        dateRange[1].setMilliseconds(999);
+      }
+    } else if (dateRange instanceof Date) {
+      if (isTo) {
+        dateRange.setHours(23);
+        dateRange.setMinutes(59);
+        dateRange.setSeconds(59);
+        dateRange.setMilliseconds(999);
+      } else {
+        dateRange.setHours(0);
+        dateRange.setMinutes(0);
+        dateRange.setSeconds(0);
+        dateRange.setMilliseconds(0);
+      }
     }
 
     return dateRange;
+  },
+  isAllowedFromUnspecifiedRange(props) {
+    let { allowUnspecifiedRange, dateFrom, strictSelection, step } = props;
+    return (
+      (allowUnspecifiedRange === true || allowUnspecifiedRange === "from") &&
+      !dateFrom &&
+      !strictSelection &&
+      step !== "years" &&
+      step !== "months"
+    );
+  },
+  isAllowedToUnspecifiedRange(props) {
+    let { allowUnspecifiedRange, dateTo, strictSelection, step } = props;
+    return (
+      (allowUnspecifiedRange === true || allowUnspecifiedRange === "to") &&
+      !dateTo &&
+      !strictSelection &&
+      step !== "years" &&
+      step !== "months"
+    );
+  },
+  unspecifiedRangeValueToDate(value, allowFrom, allowTo) {
+    let singleValueFn = (singleValue, index) => {
+      if (allowFrom && index === 0 && singleValue === null) return UNSPECIFIED_FROM;
+      else if (allowTo && index === 1 && singleValue === null) return UNSPECIFIED_TO;
+      return singleValue;
+    };
+    return Array.isArray(value) ? value.map(singleValueFn) : singleValueFn(value);
   },
 };
 

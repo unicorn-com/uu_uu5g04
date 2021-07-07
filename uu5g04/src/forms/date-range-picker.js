@@ -26,8 +26,9 @@ import ItemsInput from "./internal/items-input.js";
 import TextInput from "./internal/text-input.js";
 import Label from "./internal/label.js";
 import Context from "./form-context.js";
-import DateTools from "./internal/date-tools.js";
+import DateTools, { UNSPECIFIED_FROM, UNSPECIFIED_TO, UNSPECIFIED_CHAR } from "./internal/date-tools.js";
 import withUserPreferences from "../common/user-preferences";
+import Css from "./internal/css";
 
 import "./calendar.less";
 import "./date-range-picker.less";
@@ -82,6 +83,7 @@ let DateRangePicker = Context.withContext(
         inputPlaceholder: ns.css("input-placeholder"),
         labelBogus: ns.css("datetimerangepicker-label-bogus"),
         popover: ns.css("daterangepicker-popover"),
+        resetButton: () => Css.css`&&&& { margin-left: auto; }`,
       },
       defaults: {
         format: "dd.mm.Y",
@@ -92,7 +94,13 @@ let DateRangePicker = Context.withContext(
         dateFromGreaterThanDateTo: "The property dateFrom is greater than the property dateTo.",
         firstGreaterThanSecond: "The first date of range is greater than the second date of range.",
       },
-      lsi: () => UU5.Common.Tools.merge({}, UU5.Environment.Lsi.Bricks.calendar, UU5.Environment.Lsi.Forms.message),
+      lsi: () =>
+        UU5.Common.Tools.merge(
+          {},
+          UU5.Environment.Lsi.Bricks.calendar,
+          UU5.Environment.Lsi.Forms.message,
+          UU5.Environment.Lsi.Forms.datePicker
+        ),
     },
     //@@viewOff:statics
 
@@ -125,6 +133,7 @@ let DateRangePicker = Context.withContext(
       strictSelection: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
       weekStartDay: UU5.PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7]),
       valueType: UU5.PropTypes.oneOf(["date", "iso"]),
+      allowUnspecifiedRange: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.oneOf(["from", "to"])]),
     },
     //@@viewOff:propTypes
 
@@ -158,12 +167,15 @@ let DateRangePicker = Context.withContext(
         strictSelection: undefined,
         weekStartDay: 1,
         valueType: "date",
+        allowUnspecifiedRange: false,
       };
     },
     //@@viewOff:getDefaultProps
 
     //@@viewOn:reactLifeCycle
     getInitialState() {
+      this._isAllowedFromUnspecifiedRange = DateTools.isAllowedFromUnspecifiedRange(this.props);
+      this._isAllowedToUnspecifiedRange = DateTools.isAllowedToUnspecifiedRange(this.props);
       this._formattingValues = {};
       this._setFormattingValues(this.props);
       let propValue = Array.isArray(this.props.value) && this.props.value.length > 1 ? this.props.value : null;
@@ -260,7 +272,9 @@ let DateRangePicker = Context.withContext(
     },
 
     UNSAFE_componentWillReceiveProps(nextProps) {
-      if (this.props.controlled) {
+      if (nextProps.controlled) {
+        this._isAllowedFromUnspecifiedRange = DateTools.isAllowedFromUnspecifiedRange(nextProps);
+        this._isAllowedToUnspecifiedRange = DateTools.isAllowedToUnspecifiedRange(nextProps);
         this._setFormattingValues(nextProps);
 
         let propValue = Array.isArray(nextProps.value) && nextProps.value.length > 1 ? nextProps.value : null;
@@ -372,6 +386,7 @@ let DateRangePicker = Context.withContext(
     },
 
     setValue_(value, setStateCallback) {
+      value = this._unspecifiedRangeValueToDate(value);
       let devValidation = this._validateDevProps(value, this.props.dateFrom, this.props.dateTo);
       if (devValidation.valid) {
         if (Array.isArray(value) && value.length < 2) {
@@ -395,6 +410,7 @@ let DateRangePicker = Context.withContext(
     },
 
     setFeedback_(feedback, message, value, setStateCallback) {
+      value = this._unspecifiedRangeValueToDate(value);
       if (value === "") {
         value = null;
       }
@@ -462,6 +478,7 @@ let DateRangePicker = Context.withContext(
 
     setChangeFeedback__(opt, setStateCallback) {
       let value = this.parseDate(opt.value);
+      value = this._unspecifiedRangeValueToDate(value);
       let newState = this._getInnerState(value);
       newState.feedback = opt.feedback;
       newState.message = opt.message;
@@ -470,9 +487,12 @@ let DateRangePicker = Context.withContext(
     },
 
     getInitialValue_(propValue) {
+      this._isAllowedFromUnspecifiedRange = DateTools.isAllowedFromUnspecifiedRange(this.props);
+      this._isAllowedToUnspecifiedRange = DateTools.isAllowedToUnspecifiedRange(this.props);
       this._formattingValues = this._formattingValues || {};
       this._setFormattingValues(this.props);
       let stateValue = !Array.isArray(propValue) || propValue.length < 2 ? null : propValue;
+      stateValue = this._unspecifiedRangeValueToDate(stateValue);
 
       if (stateValue) {
         stateValue = this.parseDate(stateValue);
@@ -525,23 +545,38 @@ let DateRangePicker = Context.withContext(
     },
 
     _getOutcomingValue(value) {
-      let getSingleOutputValue = (singleValue) => {
-        singleValue = this._parseDate(singleValue);
+      let getSingleOutputValue = (singleValue, index) => {
+        if (singleValue) {
+          singleValue = this._parseDate(singleValue);
 
-        if (this._formattingValues.valueType === "iso" && singleValue) {
-          singleValue = DateTools.getISO(singleValue);
-        }
+          if (
+            (index === 0 &&
+              this._isAllowedFromUnspecifiedRange &&
+              singleValue &&
+              singleValue.getTime() === UNSPECIFIED_FROM.getTime()) ||
+            (index === 1 &&
+              this._isAllowedToUnspecifiedRange &&
+              singleValue &&
+              singleValue.getTime() === UNSPECIFIED_TO.getTime())
+          ) {
+            singleValue = null;
+          } else {
+            if (this._formattingValues.valueType === "iso" && this._formattingValues.step === "days" && singleValue) {
+              singleValue = DateTools.getISO(singleValue);
+            }
 
-        if (
-          (this._formattingValues.step === "years" || this._formattingValues.step === "months") &&
-          !this._formattingValues.format &&
-          !this._formattingValues.country
-        ) {
-          singleValue = DateTools.getShortenedValueDateString(
-            singleValue,
-            "-",
-            this._formattingValues.step === "years"
-          );
+            if (
+              (this._formattingValues.step === "years" || this._formattingValues.step === "months") &&
+              !this._formattingValues.format &&
+              !this._formattingValues.country
+            ) {
+              singleValue = DateTools.getShortenedValueDateString(
+                singleValue,
+                "-",
+                this._formattingValues.step === "years"
+              );
+            }
+          }
         }
 
         return singleValue;
@@ -898,6 +933,51 @@ let DateRangePicker = Context.withContext(
       }
     },
 
+    _onClickUnspecifiedRange(e) {
+      let opt = { event: e, component: this, _data: { type: "calendar" } };
+      let value;
+      let executeOnChange = false;
+
+      if (this.state.tempValue) {
+        value = [this.state.tempValue, UNSPECIFIED_TO];
+        executeOnChange = true;
+      } else {
+        value = [UNSPECIFIED_FROM];
+      }
+
+      opt.value = this._getOutcomingValue(value);
+      opt._data.value = value;
+      opt._data.executeOnChange = executeOnChange;
+      if (executeOnChange && typeof this.props.onChange === "function") {
+        this.props.onChange(opt);
+      } else {
+        this.onChangeDefault(opt);
+      }
+    },
+
+    _unspecifiedRangeValueToDate(value) {
+      return DateTools.unspecifiedRangeValueToDate(
+        value,
+        this._isAllowedFromUnspecifiedRange,
+        this._isAllowedToUnspecifiedRange
+      );
+    },
+
+    _onClickReset(e) {
+      let opt = { event: e, component: this, _data: { type: "calendar" } };
+      let value = undefined;
+      let executeOnChange = false;
+
+      opt.value = this._getOutcomingValue(value);
+      opt._data.value = value;
+      opt._data.executeOnChange = executeOnChange;
+      if (executeOnChange && typeof this.props.onChange === "function") {
+        this.props.onChange(opt);
+      } else {
+        this.onChangeDefault(opt);
+      }
+    },
+
     _onInputChange(opt) {
       // The code below tries to parse values of both inputs and validate them towards eachother.
       // If the second (right) value (date) isnt greater than the first (left) value (date), then
@@ -1058,8 +1138,7 @@ let DateRangePicker = Context.withContext(
     },
 
     _onCalendarValueChangeDefault(opt, setStateCallback) {
-      let right = (this.isXs() || this.isS()) && opt._data._right;
-      let value = right && Array.isArray(opt.value) && opt.value.length === 1 ? [null, opt.value[0]] : opt.value;
+      let value = opt.value;
       let innerState = this._getInnerState(value);
       let feedback;
       let _callCallback = typeof setStateCallback === "function";
@@ -1135,6 +1214,7 @@ let DateRangePicker = Context.withContext(
       let initialFeedback = { feedback: "initial", message: null };
       let state = {};
       let fromValue, toValue, fromInputValidateResult, toInputValidateResult;
+      value = this._unspecifiedRangeValueToDate(value);
 
       if (value) {
         if (!Array.isArray(value)) {
@@ -1667,7 +1747,7 @@ let DateRangePicker = Context.withContext(
     },
 
     _getCalendarValue() {
-      let value = this.getValue();
+      let value = this.parseDate(this.state.value);
       let firstDate, secondDate;
 
       if (value && value.length === 2) {
@@ -1804,6 +1884,17 @@ let DateRangePicker = Context.withContext(
           props.feedback = this.state.fromFeedback.feedback;
           props.prefix = this.props.pickerLabelFrom;
           props.ref_ = (item) => (this._leftTextInput = item);
+        }
+      }
+
+      let parsedValue = this._parseDate(props.value);
+      if (parsedValue) {
+        if (
+          (!right && parsedValue.getTime() === UNSPECIFIED_FROM.getTime()) ||
+          (right && parsedValue.getTime() === UNSPECIFIED_TO.getTime())
+        ) {
+          props.value = undefined;
+          props.placeholder = this._isSorXs() ? UNSPECIFIED_CHAR : this.getLsiValue("unspecifiedRange");
         }
       }
 
@@ -1949,32 +2040,41 @@ let DateRangePicker = Context.withContext(
       let secondDate = this._getToValue();
 
       if (firstDate && secondDate) {
-        let stringDate1 = this._getDateString(firstDate);
-        let stringDate2 = this._getDateString(secondDate);
-        let separator =
-          this._formattingValues.format && this.props.step === "days"
-            ? this._formattingValues.format.match(/[^dmy]/i)[0]
-            : stringDate1
-            ? stringDate1.match(/\W/) && stringDate1.match(/\W/)[0]
-            : ".";
-        let partialyShortenValue = separator === "." && !UU5.Common.Tools.isDateReversed();
-        let regExp;
+        let stringDate1 =
+          firstDate.getTime() === UNSPECIFIED_FROM.getTime() ? UNSPECIFIED_CHAR : this._getDateString(firstDate);
+        let stringDate2 =
+          secondDate.getTime() === UNSPECIFIED_TO.getTime() ? UNSPECIFIED_CHAR : this._getDateString(secondDate);
 
-        if (this._compareDates(firstDate, secondDate, "equals")) {
-          stringDate1 = "";
-        } else if (partialyShortenValue) {
-          if (firstDate.getMonth() === secondDate.getMonth() && firstDate.getFullYear() === secondDate.getFullYear()) {
-            regExp = new RegExp("(^.+?)" + "\\" + separator, "g");
-            stringDate1 = stringDate1.match(regExp)[0];
-          } else if (firstDate.getFullYear() === secondDate.getFullYear()) {
-            regExp = new RegExp(firstDate.getFullYear(), "g");
-            stringDate1 = stringDate1.replace(regExp, "");
+        if (stringDate1 !== UNSPECIFIED_CHAR && stringDate2 !== UNSPECIFIED_CHAR) {
+          let separator =
+            this._formattingValues.format && this.props.step === "days"
+              ? this._formattingValues.format.match(/[^dmy]/i)[0]
+              : stringDate1
+              ? stringDate1.match(/\W/) && stringDate1.match(/\W/)[0]
+              : ".";
+          let partialyShortenValue = separator === "." && !UU5.Common.Tools.isDateReversed();
+          let regExp;
+
+          if (this._compareDates(firstDate, secondDate, "equals")) {
+            stringDate1 = "";
+          } else if (partialyShortenValue) {
+            if (
+              firstDate.getMonth() === secondDate.getMonth() &&
+              firstDate.getFullYear() === secondDate.getFullYear()
+            ) {
+              regExp = new RegExp("(^.+?)" + "\\" + separator, "g");
+              stringDate1 = stringDate1.match(regExp)[0];
+            } else if (firstDate.getFullYear() === secondDate.getFullYear()) {
+              regExp = new RegExp(firstDate.getFullYear(), "g");
+              stringDate1 = stringDate1.replace(regExp, "");
+            }
           }
         }
 
         result = stringDate1 + (stringDate1 ? " - " : "") + stringDate2;
       } else if (firstDate) {
-        let stringDate1 = this._getDateString(firstDate);
+        let stringDate1 =
+          firstDate.getTime() === UNSPECIFIED_FROM.getTime() ? UNSPECIFIED_CHAR : this._getDateString(firstDate);
         result = stringDate1;
       }
 
@@ -2059,6 +2159,48 @@ let DateRangePicker = Context.withContext(
       return result;
     },
 
+    _getSecondRow() {
+      let buttons = [];
+
+      if (this.props.showTodayButton) {
+        buttons.push(
+          <UU5.Bricks.Button
+            content={this.getLsiComponent("today")}
+            className={this.getClassName("todayButton")}
+            onClick={this._goToToday}
+            key="today"
+          />
+        );
+      }
+
+      if (this._isAllowedFromUnspecifiedRange || this._isAllowedToUnspecifiedRange) {
+        let disabled = false;
+        if (!this._isAllowedToUnspecifiedRange && this.state.tempValue) disabled = true;
+        if (!this._isAllowedFromUnspecifiedRange && (!this.state.tempValue || this.state.value)) disabled = true;
+        buttons.push(
+          <UU5.Bricks.Button
+            content={this.getLsiComponent("unspecifiedRange")}
+            onClick={this._onClickUnspecifiedRange}
+            disabled={disabled}
+            key="unspecifiedRange"
+          />
+        );
+      }
+
+      if (!this._isSorXs() || buttons.length < 2) {
+        buttons.push(
+          <UU5.Bricks.Button
+            content={this.getLsiComponent("reset")}
+            onClick={this._onClickReset}
+            key="reset"
+            className={this.getClassName("resetButton")}
+          />
+        );
+      }
+
+      return buttons.length ? <div className={this.getClassName("secondRow")}>{buttons}</div> : null;
+    },
+
     _normalRender(inputId, sizeClass) {
       let mainClassName = this.getClassName("mainInput");
       if (this.isOpen()) {
@@ -2115,15 +2257,7 @@ let DateRangePicker = Context.withContext(
                     {this.isOpen() && <UU5.Bricks.Calendar {...this._getCalendarProps(false, true)} />}
                   </div>
                 </div>
-                {this.props.showTodayButton ? (
-                  <div className={this.getClassName("secondRow")}>
-                    <UU5.Bricks.Button
-                      content={this.getLsiComponent("today")}
-                      className={this.getClassName("todayButton")}
-                      onClick={this._goToToday}
-                    />
-                  </div>
-                ) : null}
+                {this._getSecondRow()}
               </div>
               {this._getCustomContent()}
             </UU5.Bricks.Popover>
@@ -2138,7 +2272,7 @@ let DateRangePicker = Context.withContext(
           {this._getLabels(inputId)}
           {this.getInputWrapper([
             <TextInput id={inputId} {...this._getCalendarInputProps(true, false, sizeClass)} key="input1" />,
-            <TextInput id={inputId} {...this._getCalendarInputProps(true, true, sizeClass)} key="input2" />,
+            <TextInput id={inputId + "-2"} {...this._getCalendarInputProps(true, true, sizeClass)} key="input2" />,
             <UU5.Bricks.Popover {...this._getPopoverProps()} key="popover">
               <div className={this.getClassName("calendars") + " uu5-forms-input-m"}>
                 <div className={this.getClassName("firstRow")}>
@@ -2146,15 +2280,7 @@ let DateRangePicker = Context.withContext(
                     {this.isOpen() && <UU5.Bricks.Calendar {...this._getCalendarProps(true, false)} />}
                   </div>
                 </div>
-                {this.props.showTodayButton ? (
-                  <div className={this.getClassName("secondRow")}>
-                    <UU5.Bricks.Button
-                      content={this.getLsiComponent("today")}
-                      className={this.getClassName("todayButton")}
-                      onClick={this._goToToday}
-                    />
-                  </div>
-                ) : null}
+                {this._getSecondRow()}
               </div>
             </UU5.Bricks.Popover>,
           ])}

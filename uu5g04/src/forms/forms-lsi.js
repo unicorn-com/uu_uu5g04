@@ -248,6 +248,20 @@ export const FormsLsi = {
       uk: "Вставте тег в поле для вводу нижче.",
     },
   },
+  datePicker: {
+    unspecifiedRange: {
+      cs: "Nespecifikováno",
+      en: "Unspecified",
+    },
+    reset: {
+      cs: "Vymazat",
+      en: "Reset",
+    },
+    invalidTimeMessage: {
+      cs: "Please insert a valid time",
+      en: "Zadejte prosím validní čas",
+    },
+  },
 };
 
 export default FormsLsi;

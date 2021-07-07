@@ -182,6 +182,21 @@ describe(`UU5.Forms.DateTimeRangePicker props`, () => {
     expect(wrapper.findWhere((node) => node.text() === "From")).not.toBe(0);
     expect(wrapper.findWhere((node) => node.text() === "To")).not.toBe(0);
   });
+
+  fit(`timeStep + strictTimeStep`, () => {
+    let wrapper;
+    [
+      { timeStep: undefined, feedback: "initial" },
+      { timeStep: 10, feedback: "initial" },
+      { timeStep: 30, feedback: "error" },
+      { timeStep: 45, feedback: "error" },
+    ].forEach((testMap) => {
+      wrapper = mount(<UU5.Forms.DateTimeRangePicker timeStep={testMap.timeStep} strictTimeStep />);
+      wrapper.instance().setValue(["2019-01-01T00:10:00", "2019-01-01T01:00:00"]);
+      wrapper.update();
+      expect(wrapper.instance().getFeedback()).toBe(testMap.feedback);
+    });
+  });
 });
 
 describe(`UU5.Forms.DateTimeRangePicker props function -> Text.InputMixin`, () => {

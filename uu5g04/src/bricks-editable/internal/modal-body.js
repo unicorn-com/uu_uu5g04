@@ -79,6 +79,11 @@ const Message = UU5.Common.Component.lazy(async () => {
   return import("./message.js");
 });
 
+const SpacesInput = UU5.Common.Component.lazy(async () => {
+  await importHooks();
+  return import("./spaces-input.js");
+});
+
 const FORM_PROPS = {
   spacing: 16,
   inputColWidth: "xs-12",
@@ -334,11 +339,14 @@ const ModalBody = UU5.Common.VisualComponent.create({
       formProps: UU5.PropTypes.object,
       setup: EDITATION_SETUP_PROPS,
     }),
-    newItem: UU5.PropTypes.shape({
-      formProps: UU5.PropTypes.object,
-      tagName: UU5.PropTypes.string,
-      props: UU5.PropTypes.object,
-    }),
+    newItem: UU5.PropTypes.oneOfType([
+      UU5.PropTypes.shape({
+        tagName: UU5.PropTypes.string,
+        props: UU5.PropTypes.object,
+      }),
+      UU5.PropTypes.func,
+    ]),
+    newItemButtonLabel: UU5.PropTypes.oneOfType([UU5.PropTypes.node, UU5.PropTypes.object]),
     menuWidth: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
     itemsSource: UU5.PropTypes.string,
     getItemLabel: UU5.PropTypes.func,
@@ -359,6 +367,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
       itemComponent: undefined,
       propsForm: undefined,
       newItem: undefined,
+      newItemButtonLabel: undefined,
       itemsSource: undefined,
       getItemLabel: undefined,
       header: undefined,
@@ -891,15 +900,16 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
     this.setState((state) => {
       // get edited items' props and merge with state.items' props
-      let newItems = editedItems.map((item) => {
+      let newItems = editedItems.map((item, index) => {
         if (!item.id) {
           item.id = UU5.Common.Tools.generateUUID();
         }
 
         let matchingStateItem = state.items ? state.items[this._getItemIndexById(state.items, item.id)] : null;
 
-        if (!matchingStateItem && this.props.newItem) {
-          item.props = { ...this.props.newItem.props, ...item.props };
+        let newItem = this._getNewItem(index) || {};
+        if (!matchingStateItem && newItem) {
+          item.props = { ...newItem.props, ...item.props };
         }
 
         if (item.props) {
@@ -911,7 +921,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
         }
 
         return {
-          ...(matchingStateItem || { tagName: this.props.newItem.tagName, id: item.id }),
+          ...(matchingStateItem || { tagName: newItem.tagName, id: item.id }),
           props: { ...(matchingStateItem ? matchingStateItem.props : {}), ...item.props },
         };
       });
@@ -935,8 +945,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
   },
 
   _onInputChangeFeedback(propName, opt) {
-    opt.component.onChangeFeedbackDefault(opt);
-
+    opt.component?.onChangeFeedbackDefault?.(opt);
     this.setState((state) => {
       let itemIndex;
       let feedback = {
@@ -976,7 +985,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
     this.setState((state) => {
       let items = [...state.items];
-      let newItem = this._getNewItem();
+      let newItem = this._getNewItem(index);
       items.splice(index, 0, newItem);
 
       if (newItem.props) {
@@ -992,7 +1001,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
     this.setState((state) => {
       let items = [...state.items];
-      let newItem = this._getNewItem();
+      let newItem = this._getNewItem(index + 1);
       items.splice(index + 1, 0, newItem);
 
       if (newItem.props) {
@@ -1066,7 +1075,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
     this.setState((state) => {
       let items = [...state.items];
       let itemsValidation = state.itemsValidation ? [...state.itemsValidation] : [];
-      let newItem = this._getNewItem();
+      let newItem = this._getNewItem(index);
       newItem.props = items[index].props;
       let newItemsIndex = index + 1;
       items.splice(newItemsIndex, 0, newItem);
@@ -1130,7 +1139,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
         items = [];
       }
 
-      let newItem = this._getNewItem();
+      let newItem = this._getNewItem(items.length);
 
       if (newItem.props) {
         this._itemsPropsToReturn[newItem.id] = Object.keys(newItem.props);
@@ -1151,9 +1160,14 @@ const ModalBody = UU5.Common.VisualComponent.create({
     return index < this.state.items.length - 1;
   },
 
-  _getNewItem() {
-    let props = this.props.newItem.props || {};
-    return { ...this.props.newItem, props, id: UU5.Common.Tools.generateUUID() };
+  _getNewItem(index) {
+    let itemId = UU5.Common.Tools.generateUUID();
+    if (typeof this.props.newItem === "function") {
+      return { ...this.props.newItem(index), id: itemId };
+    } else {
+      let props = this.props.newItem.props || {};
+      return { ...this.props.newItem, props, id: itemId };
+    }
   },
 
   _setActiveCategoryIndex(index) {
@@ -1310,6 +1324,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
         activeItemIndex={this._getItemIndexById()}
         onItemClick={this._setActiveItem}
         onAddItem={this._addItem}
+        addItemLabel={this.props.newItemButtonLabel}
         controls={controls}
       />
     );
@@ -1395,6 +1410,18 @@ const ModalBody = UU5.Common.VisualComponent.create({
         case "size":
           result.Component = SizeInput;
           result.props.popoverLocation = "portal";
+          break;
+        case "spaces":
+          result.Component = SpacesInput;
+          result.props.popoverLocation = "portal";
+          result.value = value;
+          result.props.padding = valueSource.padding;
+          result.props.hidePaddingHorizontal = valueSource.hidePaddingHorizontal;
+          result.props.hidePaddingVertical = valueSource.hidePaddingVertical;
+          result.props.hideMarginVertical = valueSource.hideMarginVertical;
+          result.props.hideMarginHorizontal  = valueSource.hideMarginHorizontal;
+          result.props.screenSizeList = valueSource.screenSizeList;
+          result.props.valuePlaceholder = valueSource.valuePlaceholder;
           break;
         case "iconPicker":
           result.Component = "UU5.Forms.IconPicker";

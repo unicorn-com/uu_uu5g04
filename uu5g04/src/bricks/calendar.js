@@ -647,18 +647,22 @@ export const Calendar = withUserPreferences(
 
       _getWeeks() {
         let dayNames = [...this.getLsiValue("dayNames")];
+        let dayNamesShort = [...this.getLsiValue("dayNamesShort")];
         if (this.props.weekStartDay) {
           let weekStartDayIndex = this.props.weekStartDay - 1;
           let firstDayNamesArray = dayNames.slice(weekStartDayIndex);
+          let firstDayNamesShortArray = dayNamesShort.slice(weekStartDayIndex);
           dayNames.splice(weekStartDayIndex, 7 - weekStartDayIndex);
+          dayNamesShort.splice(weekStartDayIndex, 7 - weekStartDayIndex);
           dayNames = [...firstDayNamesArray, ...dayNames];
+          dayNamesShort = [...firstDayNamesShortArray, ...dayNamesShort];
         } else {
           dayNames = this.getLsiValue("dayNames");
         }
-        let ths = dayNames.map((dayName) => {
+        let ths = dayNames.map((dayName, index) => {
           return (
             <th className={this.getClassName().dayName} title={dayName} key={dayName}>
-              <div className={this.getClassName("dayCell")}>{dayName.substr(0, 2)}</div>
+              <div className={this.getClassName("dayCell")}>{dayNamesShort[index]}</div>
             </th>
           );
         });

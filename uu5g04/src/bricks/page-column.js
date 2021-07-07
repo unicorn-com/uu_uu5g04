@@ -411,8 +411,11 @@ export const PageColumn = UU5.Common.VisualComponent.create({
     if (this.props.showToggleButton) {
       let icon;
 
-      if (this.isOpen()) icon = this.props.right ? "mdi-chevron-right" : "mdi-chevron-left";
-      else icon = this.props.right ? "mdi-chevron-left" : "mdi-chevron-right";
+      if (this.isOpen()) {
+        icon = this.props.right ? "mdi-chevron-right" : "mdi-chevron-left";
+      } else {
+        icon = this.props.right ? "mdi-chevron-left" : "mdi-chevron-right";
+      }
 
       let transformXFirst = "0vw";
       let transformXSecond = (this.props.right ? `-` : `+`) + (this.isOpen() ? `50%` : `100%`);
@@ -439,14 +442,14 @@ export const PageColumn = UU5.Common.VisualComponent.create({
           border-radius: 4px;
         }
         ${
-          showOnHover &&
-          `
+        showOnHover &&
+        `
           .uu5-bricks-page-column-wrapper:hover &,
           &:hover {
             visibility: visible;
           }
         `
-        }
+      }
       `;
 
       buttonStyle += " " + this.getClassName("zIndex") + this.props.elevation;
@@ -497,11 +500,15 @@ export const PageColumn = UU5.Common.VisualComponent.create({
 
       if (typeof offsetTop === "number" && this.props.overlayTop) {
         newState.style.marginTop = offsetTop + "px";
-      } else offsetTop = 0;
+      } else {
+        offsetTop = 0;
+      }
 
       if (typeof offsetBottom === "number" && this.props.overlayBottom) {
         newState.style.marginBottom = offsetBottom + "px";
-      } else offsetBottom = 0;
+      } else {
+        offsetBottom = 0;
+      }
     }
 
     let oldState = { ...this.state };
@@ -581,8 +588,8 @@ export const PageColumn = UU5.Common.VisualComponent.create({
 
     this._prevWidth =
       (this._columnRef === undefined || this._columnRef instanceof HTMLElement
-        ? this._columnRef
-        : this._columnRef.findDOMNode()
+          ? this._columnRef
+          : this._columnRef.findDOMNode()
       ).getBoundingClientRect().width + "px";
 
     UU5.Environment.EventListener.addWindowEvent("mouseup", this.getId(), this._onDragMouseUp);
@@ -719,12 +726,12 @@ export const PageColumn = UU5.Common.VisualComponent.create({
     let styles = `
       & {
         transition: ${buildTransitionRule(
-          transformTransitions,
-          visibilityTransitions,
-          widthTransitions,
-          marginTransitions,
-          heightTransitions
-        )};
+      transformTransitions,
+      visibilityTransitions,
+      widthTransitions,
+      marginTransitions,
+      heightTransitions
+    )};
         transform: ${transform};
       }
 
@@ -972,9 +979,9 @@ export const PageColumn = UU5.Common.VisualComponent.create({
 
     let style = getStyles
       ? UU5.Common.Tools.merge(props.style || {}, this.state.style, {
-          width: this.state.width,
-          maxWidth,
-        })
+        width: this.state.width,
+        maxWidth,
+      })
       : {};
 
     // bottom and top margins destroys column layout. Ghoust is needed only to reflect width of the column, not height
@@ -1071,22 +1078,24 @@ export const PageColumn = UU5.Common.VisualComponent.create({
       if (!this.props.block) {
         result = UU5.Common.Tools.wrapIfExists(
           UU5.Common.Fragment,
-          <div {...this._getWrapperProps()} ref={(comp) => (this._columnRef = comp)}>
+          <>
             {!this.props.relative ? <Backdrop {...this._getBackdropProps()} /> : null}
-            <Column {...this._getMainProps(false)}>
-              {UU5.Common.Tools.wrapIfExists(
-                AreaWrapper,
-                <UpdateWrapper preventRender={this._preventContentRender}>
-                  {content}
-                  <div className={this.getClassName().buttonWrapper}>
-                    {this.props.button && (this.props.right ? right : left)}
-                  </div>
-                </UpdateWrapper>
-              )}
-              {this._getDragElement()}
-            </Column>
-            {this._getToggleButton()}
-          </div>,
+            <div {...this._getWrapperProps()} ref={(comp) => (this._columnRef = comp)}>
+              <Column {...this._getMainProps(false)}>
+                {UU5.Common.Tools.wrapIfExists(
+                  AreaWrapper,
+                  <UpdateWrapper preventRender={this._preventContentRender}>
+                    {content}
+                    <div className={this.getClassName().buttonWrapper}>
+                      {this.props.button && (this.props.right ? right : left)}
+                    </div>
+                  </UpdateWrapper>
+                )}
+                {this._getDragElement()}
+              </Column>
+              {this._getToggleButton()}
+            </div>
+          </>,
           <div {...this._getWrapperGhostProps()} ref={(element) => (this._ghost = element)}>
             <Column {...this._getMainGhostProps()} />
           </div>

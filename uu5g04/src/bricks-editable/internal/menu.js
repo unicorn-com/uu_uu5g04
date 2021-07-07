@@ -20,6 +20,7 @@ import "uu5g04-bricks";
 import Css from "./css.js";
 import ns from "../bricks-editable-ns.js";
 import MenuItem from "./menu-item.js";
+import Helpers from "./helpers.js";
 import Lsi from "../bricks-editable-lsi.js";
 //@@viewOff:imports
 
@@ -79,6 +80,7 @@ const Menu = UU5.Common.VisualComponent.create({
     withDnD: UU5.PropTypes.bool,
     onItemClick: UU5.PropTypes.func,
     onAddItem: UU5.PropTypes.func,
+    addItemLabel: UU5.PropTypes.oneOfType([UU5.PropTypes.node, UU5.PropTypes.object]),
   },
   //@@viewOff:propTypes
 
@@ -91,6 +93,7 @@ const Menu = UU5.Common.VisualComponent.create({
       withDnD: false,
       onItemClick: undefined,
       onAddItem: undefined,
+      addItemLabel: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -138,14 +141,19 @@ const Menu = UU5.Common.VisualComponent.create({
   },
 
   _getAddItemButton() {
+    let label = this.props.addItemLabel;
+    let icon = "mdi-plus-circle-outline";
+    if (!label) label = this.getLsiComponent("addItemButton");
+    else if (Helpers.isComponent(label)) {
+      icon = undefined;
+    } else if (typeof label === "object") {
+      // is lsi
+      label = <UU5.Bricks.Lsi lsi={label} />;
+    }
     return (
       <ul className={this.getClassName("list")}>
-        <MenuItem
-          icon="mdi-plus-circle-outline"
-          onClick={this.props.onAddItem}
-          className={this.getClassName("addItemButton")}
-        >
-          {this.getLsiComponent("addItemButton")}
+        <MenuItem icon={icon} onClick={this.props.onAddItem} className={this.getClassName("addItemButton")}>
+          {label}
         </MenuItem>
       </ul>
     );

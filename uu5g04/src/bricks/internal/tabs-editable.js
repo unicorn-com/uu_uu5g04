@@ -14,13 +14,14 @@ const getEditableItemLabel = (itemProps, itemIndex) => {
   }
 };
 
-const newEditableItem = {
+const getNewEditableItem = () => ({
   tagName: "UU5.Bricks.Tabs.Item",
   props: {
-    header: "New Item",
+    header: `New Item`,
+    name: UU5.Common.Tools.generateUUID(8),
     contentEditable: true,
   },
-};
+});
 
 const editableComponentPropsSetup = [
   {
@@ -211,6 +212,11 @@ export const TabsEditable = UU5.Common.VisualComponent.create({
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
+  getInitialState() {
+    return {
+      props: { ...this.props.component.getEditablePropsValues(Object.keys(this.props.component.props)) },
+    };
+  },
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
@@ -228,21 +234,32 @@ export const TabsEditable = UU5.Common.VisualComponent.create({
   },
 
   _onCloseEditationModal(newProps) {
+    let initialActiveName = newProps.initialActiveName || this.state.props.initialActiveName;
+    if (newProps.children && initialActiveName) {
+      let newChildren = UU5.Common.UU5String.toChildren(newProps.children);
+      let initialActiveTab = newChildren.some((child) => child.props.name === initialActiveName);
+      let initialActiveNameIndex = this.props.component
+        .getChildren()
+        .findIndex((child) => child.props.name === this.state.props.initialActiveName);
+      if (!initialActiveTab) {
+        newProps.initialActiveName = newChildren[0].props.name;
+      }
+    }
+
     if (!newProps) newProps = {};
-    this.props.component.endEditation({ ...newProps, mountTabContent: newProps.mountTabContent || "onActive" });
+    this.props.component.endEditation({ ...newProps });
   },
   //@@viewOff:private
 
   //@@viewOn:render
   render() {
-    let props = this.props.component.getEditablePropsValues(Object.keys(this.props.component.props));
     return (
       <UU5.BricksEditable.Modal
         shown
         componentName={this.props.component.getTagName()}
         componentProps={{
-          ...props,
-          mountTabContent: props.mountTabContent || "onActive",
+          ...this.state.props,
+          mountTabContent: this.state.props.mountTabContent || "onActive",
           activeName: this.props.activeName,
         }}
         onClose={this._onCloseEditationModal}
@@ -251,7 +268,7 @@ export const TabsEditable = UU5.Common.VisualComponent.create({
         ref_={this._registerEditModal}
         componentPropsForm={editablePropsSetup}
         itemPropsForm={editableItemPropsSetup}
-        newItem={newEditableItem}
+        newItem={getNewEditableItem}
         itemsSource="children"
         getItemLabel={getEditableItemLabel}
       />

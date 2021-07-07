@@ -217,7 +217,8 @@ export const Tabs = UU5.Common.VisualComponent.create({
     );
   },
 
-  onChangeDefault(tab) {
+  onChangeDefault(opt) {
+    let tab = opt.tab ? opt.tab : opt;
     this.setState((state) => {
       return {
         activeName: tab.props.name || tab.props.id,

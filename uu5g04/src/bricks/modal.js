@@ -23,6 +23,7 @@ import Footer from "./modal-footer.js";
 import Css from "./internal/css.js";
 import { enableBodyScrolling, disableBodyScrolling } from "./internal/page-utils.js";
 import { RenderIntoPortal } from "./internal/portal.js";
+import OptionalLibraries from "./internal/optional-libraries.js";
 
 import "./modal.less";
 //@@viewOff:imports
@@ -792,9 +793,41 @@ const _Modal = UU5.Common.VisualComponent.create({
   },
 
   _renderModal(getContentFn) {
-    let { location } = this.props;
+    let { location, _render } = this.props;
     let result;
-    if (location === "portal") {
+    let { Uu5Elements } = OptionalLibraries;
+    if (Uu5Elements) {
+      let { header, content, footer } = this.state;
+      // TODO Use "size", "registerToModalBus" settings.
+      result = (
+        <Uu5Elements.Modal
+          {...this.getMainPropsToPass()}
+          className={[this.props.className, this.state.className].filter((v) => v).join(" ")} // omit main className (.uu5-bricks-modal)
+          open={!this.state.hidden}
+          onClose={() => this.close()}
+          header={header}
+          footer={footer}
+          closeOnEsc={!this.isSticky()}
+          closeOnOverlayClick={this.state.stickyBackground === false}
+          nestingLevel={this.getNestingLevel()}
+        >
+          {content}
+        </Uu5Elements.Modal>
+      );
+    } else if (_render && !this.state.hidden && this.state.registerToModalBus) {
+      result = this.props._render(
+        <div className={this.getClassName("layoutWrapper")}>{this._buildChildren()}</div>,
+        "id-" + this.getId(),
+        {
+          viewContentClassName: this._getModalBusClassName(),
+          open: true,
+          closeOnEsc: !this.isSticky(),
+          closeOnOverlayClick: this.state.stickyBackground === false,
+          scrollableBackground: undefined,
+          onClose: this.close,
+        }
+      );
+    } else if (location === "portal") {
       let { openKey } = this.state;
       let isClosing = this.isHidden() && this._prevHidden === false;
       let mountContent = getMountContent(this.props, this.state);
@@ -858,33 +891,23 @@ const _Modal = UU5.Common.VisualComponent.create({
     }
 
     return this.getNestingLevel()
-      ? this.props._render && !this.state.hidden && this.state.registerToModalBus
-        ? this.props._render(
-            <div className={`${this.getClassName("layoutWrapper")}`}>{this._buildChildren()}</div>,
-            "id-" + this.getId(),
-            {
-              viewContentClassName: this._getModalBusClassName(),
-              stickyBackground: this.state.stickyBackground,
-            },
-            this.close
-          )
-        : this._renderModal((hidden) => (
-            <div {...this._getMainAttrs(hidden)}>
-              <div
-                className={`${this.getClassName("dialog")} ${this.getClassName("modalSize")}${
-                  this.state.size
-                } ${this.getClassName("layoutWrapper")}`}
-              >
-                {this._buildChildren()}
-                {this.getDisabledCover()}
-              </div>
-            </div>
-          ))
+      ? this._renderModal((hidden) => (
+        <div {...this._getMainAttrs(hidden)}>
+          <div
+            className={`${this.getClassName("dialog")} ${this.getClassName("modalSize")}${
+              this.state.size
+            } ${this.getClassName("layoutWrapper")}`}
+          >
+            {this._buildChildren()}
+            {this.getDisabledCover()}
+          </div>
+        </div>
+      ))
       : null;
   },
   //@@viewOff:render
 });
-_Modal._onCloseESC = function (e) {
+_Modal._onCloseESC = function(e) {
   if (e.which === 27) {
     let lastModal = openedModalStack[openedModalStack.length - 1];
     if (lastModal && !lastModal.isSticky()) {

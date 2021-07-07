@@ -2530,7 +2530,7 @@ Tools.compareTimeObjects = (firstTime, secondTime, method) => {
 };
 
 Tools.cloneDateObject = (dateObject) => {
-  let result = null;
+  let result = undefined;
 
   if (dateObject instanceof Date) {
     result = new Date(dateObject.valueOf());

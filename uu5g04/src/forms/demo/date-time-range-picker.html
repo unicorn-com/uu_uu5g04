@@ -156,6 +156,9 @@
                 }}
               />
               <UU5.Forms.DateTimeRangePicker label="dateFrom, dateTo" dateFrom={date1} dateTo={date2} />
+              <UU5.Forms.DateTimeRangePicker label="allowUnspecifiedRange" allowUnspecifiedRange value={[null, null]} />
+              <UU5.Forms.DateTimeRangePicker label="allowUnspecifiedRange='from'" allowUnspecifiedRange="from" />
+              <UU5.Forms.DateTimeRangePicker label="allowUnspecifiedRange='to'" allowUnspecifiedRange="to" />
               <UU5.Forms.DateTimeRangePicker label="hideWeekNumber" hideWeekNumber />
               <UU5.Forms.DateTimeRangePicker label="showTodayButton" showTodayButton />
               <UU5.Forms.DateTimeRangePicker label="disabled" disabled />
@@ -164,6 +167,7 @@
               <UU5.Forms.DateTimeRangePicker label="seconds" seconds />
               <UU5.Forms.DateTimeRangePicker label="timeFormat" timeFormat="12" />
               <UU5.Forms.DateTimeRangePicker label="timeStep" timeStep={30} />
+              <UU5.Forms.DateTimeRangePicker label="timeStep + strictTimeStep" timeStep={30} strictTimeStep />
               <UU5.Forms.DateTimeRangePicker label="disableBackdrop" disableBackdrop />
             </UU5.Bricks.Container>
           );

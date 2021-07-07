@@ -9,7 +9,8 @@
 import { Utils } from "uu5g05";
 import UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
-import ModalBusView from "./internal/modal-bus-view";
+import OptionalLibraries from "./internal/optional-libraries.js";
+import ModalBusView from "./internal/modal-bus-view.js";
 import ModalCoverView from "./internal/modal-bus-cover-view.js";
 //@@viewOff:imports
 
@@ -39,7 +40,7 @@ const getProviderValue = Utils.Function.memo((addItem, removeItem, updateItem, i
   };
 });
 
-export const ModalBus = UU5.Common.VisualComponent.create({
+const ModalBus = UU5.Common.VisualComponent.create({
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin],
   //@@viewOff:mixins
@@ -135,24 +136,32 @@ export const ModalBus = UU5.Common.VisualComponent.create({
   //@@viewOn:render
   render() {
     const { children } = this.props;
-    const { itemList, activeItemId } = this.state;
+    let result;
+    let { Uu5Elements } = OptionalLibraries;
+    if (!Uu5Elements) {
+      const { itemList, activeItemId } = this.state;
 
-    const value = getProviderValue(this._addItem, this._removeItem, this._updateItem, this._isClosableItem);
-    return (
-      <ModalContext.Provider value={value}>
-        {children}
+      const value = getProviderValue(this._addItem, this._removeItem, this._updateItem, this._isClosableItem);
+      result = (
+        <ModalContext.Provider value={value}>
+          {children}
 
-        <ModalBusView
-          itemList={itemList}
-          activeItemId={activeItemId || itemList[itemList.length - 1]?.id || null}
-          onChange={this._setActiveItem}
-          setNext={this._setNext}
-          setPrevious={this._setPrevious}
-        />
-      </ModalContext.Provider>
-    );
+          <ModalBusView
+            itemList={itemList}
+            activeItemId={activeItemId || itemList[itemList.length - 1]?.id || null}
+            onChange={this._setActiveItem}
+            setNext={this._setNext}
+            setPrevious={this._setPrevious}
+          />
+        </ModalContext.Provider>
+      );
+    } else {
+      result = <Uu5Elements.ModalBus {...this.getMainPropsToPass()} />;
+    }
+    return result;
   },
   //@@viewOff:render
 });
 
+export { ModalBus };
 export default ModalBus;

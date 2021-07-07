@@ -27,8 +27,9 @@ import TextInput from "./internal/text-input.js";
 import Label from "./internal/label.js";
 import Time from "./time.js";
 import Context from "./form-context.js";
-import DateTools from "./internal/date-tools.js";
+import DateTools, { UNSPECIFIED_FROM, UNSPECIFIED_TO, UNSPECIFIED_CHAR } from "./internal/date-tools.js";
 import withUserPreferences from "../common/user-preferences";
+import Css from "./internal/css";
 
 import "./calendar.less";
 import "./date-time-range-picker.less";
@@ -98,6 +99,7 @@ let DateTimeRangePicker = Context.withContext(
         withEnglishFormat: ns.css("datetimerangepicker-english-format"),
         inputPlaceholder: ns.css("input-placeholder"),
         popover: ns.css("datetimerangepicker-popover"),
+        resetButton: () => Css.css`&&&& { margin-left: auto; }`,
       },
       defaults: {
         format: "dd.mm.Y",
@@ -107,7 +109,13 @@ let DateTimeRangePicker = Context.withContext(
         dateFromGreaterThanDateTo: "The property dateFrom is greater than the property dateTo.",
         firstGreaterThanSecond: "The first date of range is greater than the second date of range.",
       },
-      lsi: () => UU5.Common.Tools.merge({}, UU5.Environment.Lsi.Bricks.calendar, UU5.Environment.Lsi.Forms.message),
+      lsi: () =>
+        UU5.Common.Tools.merge(
+          {},
+          UU5.Environment.Lsi.Bricks.calendar,
+          UU5.Environment.Lsi.Forms.message,
+          UU5.Environment.Lsi.Forms.datePicker
+        ),
     },
     //@@viewOff:statics
 
@@ -139,11 +147,13 @@ let DateTimeRangePicker = Context.withContext(
       innerLabel: UU5.PropTypes.bool,
       timeFormat: UU5.PropTypes.oneOf(["12", "24", 12, 24]),
       timeStep: UU5.PropTypes.number,
+      strictTimeStep: UU5.PropTypes.bool,
       timePickerType: UU5.PropTypes.oneOf(["single-column", "multi-column"]),
       timeZone: UU5.PropTypes.number,
       popoverLocation: UU5.PropTypes.oneOf(["local", "portal"]),
       weekStartDay: UU5.PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7]),
       valueType: UU5.PropTypes.oneOf(["date", "iso", "isoLocal"]),
+      allowUnspecifiedRange: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.oneOf(["from", "to"])]),
     },
     //@@viewOff:propTypes
 
@@ -176,17 +186,21 @@ let DateTimeRangePicker = Context.withContext(
         innerLabel: false,
         timeFormat: 24,
         timeStep: 1,
+        strictTimeStep: false,
         timePickerType: "multi-column",
         timeZone: undefined,
         popoverLocation: "local", // "local" <=> backward-compatible behaviour
         weekStartDay: 1,
         valueType: "date",
+        allowUnspecifiedRange: false,
       };
     },
     //@@viewOff:getDefaultProps
 
     //@@viewOn:reactLifeCycle
     getInitialState() {
+      this._isAllowedFromUnspecifiedRange = DateTools.isAllowedFromUnspecifiedRange(this.props);
+      this._isAllowedToUnspecifiedRange = DateTools.isAllowedToUnspecifiedRange(this.props);
       this._formattingValues = {};
       this._setFormattingValues(this.props);
       this._allowTimeZoneAdjustment = true;
@@ -285,7 +299,9 @@ let DateTimeRangePicker = Context.withContext(
     },
 
     UNSAFE_componentWillReceiveProps(nextProps) {
-      if (this.props.controlled) {
+      if (nextProps.controlled) {
+        this._isAllowedFromUnspecifiedRange = DateTools.isAllowedFromUnspecifiedRange(nextProps);
+        this._isAllowedToUnspecifiedRange = DateTools.isAllowedToUnspecifiedRange(nextProps);
         this._setFormattingValues(nextProps);
         this._setUpLimits(nextProps);
 
@@ -409,7 +425,7 @@ let DateTimeRangePicker = Context.withContext(
 
     reset_(setStateCallback) {
       this._allowTimeZoneAdjustment = true;
-      let newState = this._getInnerState(this.props.value, false, true);
+      let newState = this._getInnerState(this.props.value, "interface", true);
       newState.message = this.props.message;
       newState.feedback = this.props.feedback;
       newState.readOnly = this.props.readOnly;
@@ -419,6 +435,7 @@ let DateTimeRangePicker = Context.withContext(
 
     setValue_(value, setStateCallback) {
       this._allowTimeZoneAdjustment = true;
+      value = this._unspecifiedRangeValueToDate(value);
       value = this._getInitialValue(value);
       let devValidation = this._validateDevProps(value, this.props.dateFrom, this.props.dateTo);
       if (devValidation.valid) {
@@ -429,7 +446,7 @@ let DateTimeRangePicker = Context.withContext(
 
         if (this._checkRequired({ value: value })) {
           let initialFeedback = { feedback: "initial", message: null };
-          let state = { ...initialFeedback, ...this._getInnerState(value, false, true) };
+          let state = { ...initialFeedback, ...this._getInnerState(value, "interface", true) };
 
           if (typeof this.props.onValidate === "function") {
             this._validateOnChange({ value: value, event: null, component: this }, setStateCallback);
@@ -449,6 +466,7 @@ let DateTimeRangePicker = Context.withContext(
     },
 
     setFeedback_(feedback, message, value, setStateCallback) {
+      value = this._unspecifiedRangeValueToDate(value);
       if (value === "") {
         value = null;
       }
@@ -539,6 +557,7 @@ let DateTimeRangePicker = Context.withContext(
     setChangeFeedback__(opt, setStateCallback) {
       this._allowTimeZoneAdjustment = true;
       let value = this._getInitialValue(opt.value);
+      value = this._unspecifiedRangeValueToDate(value);
       let newState = this._getInnerState(value);
       newState.feedback = opt.feedback;
       newState.message = opt.message;
@@ -547,9 +566,12 @@ let DateTimeRangePicker = Context.withContext(
     },
 
     getInitialValue_(propValue) {
+      this._isAllowedFromUnspecifiedRange = DateTools.isAllowedFromUnspecifiedRange(this.props);
+      this._isAllowedToUnspecifiedRange = DateTools.isAllowedToUnspecifiedRange(this.props);
       this._formattingValues = this._formattingValues || {};
       this._setFormattingValues(this.props);
       let stateValue = !Array.isArray(propValue) || propValue.length < 2 ? null : propValue;
+      stateValue = this._unspecifiedRangeValueToDate(stateValue);
 
       if (stateValue) {
         this._allowTimeZoneAdjustment = true;
@@ -576,7 +598,7 @@ let DateTimeRangePicker = Context.withContext(
 
       if (this._isSorXs() && (this.props.inputWidth || this.props.labelWidth)) {
         props.colWidth = UU5.Common.Tools.buildColWidthClassName(
-          props.label !== null ? this.props.inputColWidth : "xs12"
+          props.label != null ? this.props.inputColWidth : "xs12"
         );
       }
 
@@ -593,6 +615,7 @@ let DateTimeRangePicker = Context.withContext(
         "format",
         "country",
         "timeStep",
+        "strictTimeStep",
         "parseDate",
         "valueType",
         "timeFormat",
@@ -611,11 +634,22 @@ let DateTimeRangePicker = Context.withContext(
     _getOutcomingValue(value) {
       let { timeZone } = this._formattingValues;
 
-      let getSingleOutputValue = (singleValue) => {
+      let getSingleOutputValue = (singleValue, index) => {
         if (singleValue) {
           singleValue = this._parseDate(singleValue);
 
-          if (typeof timeZone === "number" && this._formattingValues.valueType !== "isoLocal") {
+          if (
+            (index === 0 &&
+              this._isAllowedFromUnspecifiedRange &&
+              singleValue &&
+              singleValue.getTime() === UNSPECIFIED_FROM.getTime()) ||
+            (index === 1 &&
+              this._isAllowedToUnspecifiedRange &&
+              singleValue &&
+              singleValue.getTime() === UNSPECIFIED_TO.getTime())
+          ) {
+            singleValue = null;
+          } else if (typeof timeZone === "number" && this._formattingValues.valueType !== "isoLocal") {
             singleValue = UU5.Common.Tools.adjustForTimezone(
               singleValue,
               -singleValue.getTimezoneOffset() / 60,
@@ -634,7 +668,7 @@ let DateTimeRangePicker = Context.withContext(
       };
 
       if (Array.isArray(value)) {
-        value = value.map((singleValue) => getSingleOutputValue(singleValue)).filter((singleValue) => !!singleValue);
+        value = value.map(getSingleOutputValue);
       } else {
         value = getSingleOutputValue(value);
       }
@@ -841,7 +875,7 @@ let DateTimeRangePicker = Context.withContext(
     },
 
     _getFromValue(value = this.state.value) {
-      let result = null;
+      let result = undefined;
 
       if (Array.isArray(value) && value.length >= 1) {
         result = value[0];
@@ -859,7 +893,7 @@ let DateTimeRangePicker = Context.withContext(
     },
 
     _getToValue(value = this.state.value) {
-      let result = null;
+      let result = undefined;
 
       if (Array.isArray(value) && value.length >= 2) {
         result = UU5.Common.Tools.cloneDateObject(this._parseDate(value[1]));
@@ -923,6 +957,19 @@ let DateTimeRangePicker = Context.withContext(
             result.feedback = opt ? opt.feedback || "initial" : "initial";
             result.message = opt ? opt.message || null : null;
             result.value = date;
+          }
+        }
+
+        if (opt.value && result.feedback !== "error") {
+          let timeString = this._getTimeString(date);
+          let parsedTime = this._parseTime(timeString);
+          if (
+            parsedTime &&
+            this._formattingValues.strictTimeStep &&
+            parsedTime.minutes % this._formattingValues.timeStep > 0
+          ) {
+            result.feedback = "error";
+            result.message = this.getLsiValue("invalidTimeMessage");
           }
         }
       }
@@ -1061,13 +1108,13 @@ let DateTimeRangePicker = Context.withContext(
         let fromDate = this._setDayPart(this._getFromValue() || this.state.tempValue, fromPrevPart);
         let toDate = this._setDayPart(this._getToValue(), toNextPart);
         value = [fromDate, toDate];
-        state = this._getInnerState(value, true);
+        state = this._getInnerState(value, "input");
         state.toDayPart = toNextPart;
       } else {
         let fromDate = this._setDayPart(this._getFromValue() || this.state.tempValue, fromNextPart);
         let toDate = this._setDayPart(this._getToValue(), toPrevPart);
         value = [fromDate, toDate];
-        state = this._getInnerState(value, true);
+        state = this._getInnerState(value, "input");
         state.fromDayPart = fromNextPart;
       }
 
@@ -1244,25 +1291,25 @@ let DateTimeRangePicker = Context.withContext(
         if (right) {
           state = this._getInnerState(
             [this.state.value ? this.state.value[0] : this.state.tempValue, parsedDate],
-            true,
+            "input",
             true,
             true
           );
           state.toDateInputValue = opt.value;
         } else {
-          state = this._getInnerState([parsedDate, this.state.value ? this.state.value[1] : null], true, true);
+          state = this._getInnerState([parsedDate, this.state.value ? this.state.value[1] : null], "input", true);
           state.fromDateInputValue = opt.value;
         }
       } else if (!opt.value) {
         if (right) {
           if (!this.state.toTimeInputValue && !this.state.fromTimeInputValue && !this.state.fromDateInputValue) {
-            state = this._getInnerState(null, true, true, true);
+            state = this._getInnerState(null, "input", true, true);
           } else {
             state.toDateInputValue = opt.value;
           }
         } else {
           if (!this.state.fromTimeInputValue && !this.state.toTimeInputValue && !this.state.toDateInputValue) {
-            state = this._getInnerState(null, true, true, true);
+            state = this._getInnerState(null, "input", true, true);
           } else {
             state.fromDateInputValue = opt.value;
           }
@@ -1272,9 +1319,9 @@ let DateTimeRangePicker = Context.withContext(
       state.fromTimeInputValue = state.fromTimeInputValue || this.state.fromTimeInputValue;
       state.toTimeInputValue = state.toTimeInputValue || this.state.toTimeInputValue;
 
-      if (state.value === null && this.state.value) {
+      if (state.value == null && this.state.value) {
         executeOnChange = true;
-      } else if (this.state.value === null && state.value) {
+      } else if (this.state.value == null && state.value) {
         executeOnChange = true;
       } else if (state.value && this.state.value && state.value.length === 2 && this.state.value.length === 2) {
         if (
@@ -1321,23 +1368,23 @@ let DateTimeRangePicker = Context.withContext(
         if (right) {
           state = this._getInnerState(
             [this.state.value ? this.state.value[0] : this.state.tempValue, parsedDate],
-            true,
+            "input",
             true,
             true
           );
         } else {
-          state = this._getInnerState([parsedDate, this.state.value ? this.state.value[1] : null], true, true);
+          state = this._getInnerState([parsedDate, this.state.value ? this.state.value[1] : undefined], "input", true);
         }
       } else if (!opt.value) {
         if (right && !this.state.toDateInputValue && !this.state.fromTimeInputValue && !this.state.fromDateInputValue) {
-          state = this._getInnerState(null, true, true, true);
+          state = this._getInnerState(null, "input", true, true);
         } else if (
           !right &&
           !this.state.fromDateInputValue &&
           !this.state.toTimeInputValue &&
           !this.state.toDateInputValue
         ) {
-          state = this._getInnerState(null, true, true, true);
+          state = this._getInnerState(null, "input", true, true);
         }
       }
 
@@ -1349,9 +1396,9 @@ let DateTimeRangePicker = Context.withContext(
         state.toTimeInputValue = this.state.toTimeInputValue;
       }
 
-      if (state.value === null && this.state.value) {
+      if (state.value == null && this.state.value) {
         executeOnChange = true;
-      } else if (this.state.value === null && state.value) {
+      } else if (this.state.value == null && state.value) {
         executeOnChange = true;
       } else if (state.value && this.state.value && state.value.length === 2 && this.state.value.length === 2) {
         if (
@@ -1379,7 +1426,7 @@ let DateTimeRangePicker = Context.withContext(
       let right = this._isSorXs() ? opt._data.right : false;
       let value = opt._data ? opt._data.value : opt.value;
       value = right && Array.isArray(value) && value.length === 1 ? [null, value[0]] : value;
-      let innerState = this._getInnerState(value, true);
+      let innerState = this._getInnerState(value, "input");
       let feedback;
       let _callCallback = typeof setStateCallback === "function";
 
@@ -1417,9 +1464,7 @@ let DateTimeRangePicker = Context.withContext(
     },
 
     _onCalendarChangeDefault(opt, setStateCallback) {
-      let right = this._isSorXs() ? opt._data.right : false;
       let value = opt._data ? opt._data.value : opt.value;
-      value = right && Array.isArray(value) && value.length === 1 ? [null, value[0]] : value;
       let innerState = this._getInnerState(value);
       let feedback;
       let _callCallback = typeof setStateCallback === "function";
@@ -1434,8 +1479,8 @@ let DateTimeRangePicker = Context.withContext(
       }
 
       if (innerState.tempValue) {
-        innerState.activeInput = "fromTime";
-      } else if (innerState.value) {
+        innerState.activeInput = innerState.tempValue.getTime() === UNSPECIFIED_FROM.getTime() ? "toDate" : "fromTime";
+      } else if (innerState.value && innerState.value[1]?.getTime() === UNSPECIFIED_FROM.getTime()) {
         innerState.activeInput = "toTime";
       }
 
@@ -1491,10 +1536,56 @@ let DateTimeRangePicker = Context.withContext(
       }
     },
 
-    _getInnerState(value, inputChange, adjustDisplayDate, preferRightDisplayDate) {
+    _onClickUnspecifiedRange(e) {
+      let opt = { event: e, component: this, _data: { type: "calendar" } };
+      let value;
+      let executeOnChange = false;
+
+      if (this.state.tempValue) {
+        value = [this.state.tempValue, UNSPECIFIED_TO];
+        executeOnChange = true;
+      } else {
+        value = [UNSPECIFIED_FROM];
+      }
+
+      opt.value = this._getOutcomingValue(value);
+      opt._data.value = value;
+      opt._data.executeOnChange = executeOnChange;
+      if (executeOnChange && typeof this.props.onChange === "function") {
+        this.props.onChange(opt);
+      } else {
+        this.onChangeDefault(opt);
+      }
+    },
+
+    _unspecifiedRangeValueToDate(value) {
+      return DateTools.unspecifiedRangeValueToDate(
+        value,
+        this._isAllowedFromUnspecifiedRange,
+        this._isAllowedToUnspecifiedRange
+      );
+    },
+
+    _onClickReset(e) {
+      let opt = { event: e, component: this, _data: { type: "calendar" } };
+      let value = undefined;
+      let executeOnChange = false;
+
+      opt.value = this._getOutcomingValue(value);
+      opt._data.value = value;
+      opt._data.executeOnChange = executeOnChange;
+      if (executeOnChange && typeof this.props.onChange === "function") {
+        this.props.onChange(opt);
+      } else {
+        this.onChangeDefault(opt);
+      }
+    },
+
+    _getInnerState(value, changeType, adjustDisplayDate, preferRightDisplayDate) {
       let initialFeedback = { feedback: "initial", message: null };
       let state = {};
       let fromValue, toValue, fromInputValidateResult, toInputValidateResult;
+      value = this._unspecifiedRangeValueToDate(value);
 
       if (value) {
         if (!Array.isArray(value)) {
@@ -1532,7 +1623,7 @@ let DateTimeRangePicker = Context.withContext(
           delete fromInputValidateResult.value;
           delete toInputValidateResult.value;
 
-          if (!inputChange) {
+          if (changeType !== "input") {
             if (
               this._compareDates(fromValue, toValue, "greater") ||
               (!fromValue && toValue && this.state.fromDateInputValue)
@@ -1606,22 +1697,22 @@ let DateTimeRangePicker = Context.withContext(
 
         state.fromFeedback = this.state.fromDateInputValue ? fromInputValidateResult : initialFeedback;
         state.toFeedback = this.state.toDateInputValue ? toInputValidateResult : initialFeedback;
-        if (inputChange) {
+        if (changeType === "input") {
           // Don't set formated date immediately (it will be changed on blur)
           delete state.fromDateInputValue;
           delete state.toDateInputValue;
+        }
 
-          if (fromValue && toValue) {
-            let inputFeedback = this._getInputValidationResult(fromValue, toValue);
-            state.fromFeedback = inputFeedback.fromFeedback;
-            state.toFeedback = inputFeedback.toFeedback;
+        if (fromValue && toValue) {
+          let inputFeedback = this._getInputValidationResult(fromValue, toValue);
+          state.fromFeedback = inputFeedback.fromFeedback;
+          state.toFeedback = inputFeedback.toFeedback;
 
-            if (state.fromFeedback.feedback === "error" || state.toFeedback.feedback === "error") {
-              delete state.fromDisplayDate;
-              delete state.toDisplayDate;
-              adjustDisplayDate = false;
-              delete state.value;
-            }
+          if (state.fromFeedback.feedback === "error" || state.toFeedback.feedback === "error") {
+            delete state.fromDisplayDate;
+            delete state.toDisplayDate;
+            adjustDisplayDate = false;
+            delete state.value;
           }
         }
       } else {
@@ -1659,6 +1750,20 @@ let DateTimeRangePicker = Context.withContext(
         } else if (toValue) {
           state.toDisplayDate = toValue;
           state.toDisplayDate = DateTools.decreaseDate(toValue, undefined, 1);
+        }
+      }
+
+      if (changeType === "interface") {
+        if (!state.feedback || state.feedback === "initial") {
+          if (state.fromFeedback.feedback !== "initial") {
+            state.feedback = state.fromFeedback.feedback;
+            state.message = state.fromFeedback.message;
+          }
+
+          if (state.toFeedback.feedback !== "initial") {
+            state.feedback = state.toFeedback.feedback;
+            state.message = state.toFeedback.message;
+          }
         }
       }
 
@@ -1990,6 +2095,12 @@ let DateTimeRangePicker = Context.withContext(
         else if (clickData.fromTimeInput) activeInput = "fromTime";
         else if (clickData.toTimeInput) activeInput = "toTime";
 
+        let isDisabled =
+          (activeInput === "fromTime" && this._isFromUnspecified()) ||
+          (activeInput === "toTime" && this._isToUnspecified());
+
+        if (isDisabled) return;
+
         if (activeInput) {
           opt._data = { activeInput };
         }
@@ -2254,7 +2365,7 @@ let DateTimeRangePicker = Context.withContext(
     },
 
     _getCalendarValue(right) {
-      let value = this.getValue();
+      let value = this.parseDate(this.state.value);
       let firstDate, secondDate;
 
       if (value && value.length === 2) {
@@ -2315,6 +2426,16 @@ let DateTimeRangePicker = Context.withContext(
       }
 
       return time ? this._parseTime(time) : time;
+    },
+
+    _isFromUnspecified() {
+      let parsedValue = this._parseDate(this.state.fromDateInputValue);
+      return parsedValue && parsedValue.getTime() === UNSPECIFIED_FROM.getTime();
+    },
+
+    _isToUnspecified() {
+      let parsedValue = this._parseDate(this.state.toDateInputValue);
+      return parsedValue && parsedValue.getTime() === UNSPECIFIED_TO.getTime();
     },
 
     _getTimeProps(right) {
@@ -2393,7 +2514,7 @@ let DateTimeRangePicker = Context.withContext(
       return props;
     },
 
-    _getDateInputProps(props, right, isSorXs) {
+    _getDateInputProps(props, right, isSorXs, isUnspecified) {
       props.className = this.getClassName("dateInput");
       props.onChange = (e) =>
         this._onChange({
@@ -2405,10 +2526,15 @@ let DateTimeRangePicker = Context.withContext(
       props.value = (right ? this.state.toDateInputValue : this.state.fromDateInputValue) || "";
       props.icon = isSorXs ? this.props.dateIcon : null;
 
+      if (isUnspecified) {
+        props.value = undefined;
+        props.placeholder = this._isSorXs() ? UNSPECIFIED_CHAR : this.getLsiValue("unspecifiedRange");
+      }
+
       return props;
     },
 
-    _getTimeInputProps(props, right, isSorXs) {
+    _getTimeInputProps(props, right, isSorXs, isUnspecified) {
       props.className = this.getClassName("timeInput");
       props.onChange = (e) =>
         this._onChange({
@@ -2420,14 +2546,28 @@ let DateTimeRangePicker = Context.withContext(
       props.value = (right ? this.state.toTimeInputValue : this.state.fromTimeInputValue) || "";
       props.icon = isSorXs ? this.props.timeIcon : null;
 
+      if (isUnspecified) {
+        props.value = undefined;
+        props.disabled = true;
+        props.onFocus = undefined;
+        props.mainAttrs.onFocus = undefined;
+      }
+
       return props;
     },
 
-    _getDayPartInputProps(props, right) {
+    _getDayPartInputProps(props, right, isUnspecified) {
       props.className = this.getClassName("dayPartInput");
       props.value = right ? this.state.toDayPart : this.state.fromDayPart;
+      props.disabled = isUnspecified;
       props.mainAttrs = {};
       props.mainAttrs.onClick = () => this._onClickDayPart(right);
+
+      if (isUnspecified) {
+        props.disabled = true;
+        props.onFocus = undefined;
+        props.mainAttrs.onClick = undefined;
+      }
 
       return props;
     },
@@ -2540,12 +2680,14 @@ let DateTimeRangePicker = Context.withContext(
         };
       }
 
+      let isUnspecified = right ? this._isToUnspecified() : this._isFromUnspecified();
+
       if (type === "date") {
-        props = this._getDateInputProps(props, right, isSorXs);
+        props = this._getDateInputProps(props, right, isSorXs, isUnspecified);
       } else if (type === "time") {
-        props = this._getTimeInputProps(props, right, isSorXs);
+        props = this._getTimeInputProps(props, right, isSorXs, isUnspecified);
       } else if (type === "dayPart") {
-        props = this._getDayPartInputProps(props, right);
+        props = this._getDayPartInputProps(props, right, isUnspecified);
       }
 
       return props;
@@ -2635,21 +2777,30 @@ let DateTimeRangePicker = Context.withContext(
       let secondDate = this._getToValue();
 
       if (firstDate && secondDate) {
-        let stringDate1 = this._getDateString(firstDate);
+        let stringDate1 =
+          firstDate.getTime() === UNSPECIFIED_FROM.getTime() ? UNSPECIFIED_CHAR : this._getDateString(firstDate);
+        let stringDate2 =
+          secondDate.getTime() === UNSPECIFIED_TO.getTime() ? UNSPECIFIED_CHAR : this._getDateString(secondDate);
         let stringTime1 = this._getTimeString(firstDate, this.props, true);
-        let stringDate2 = this._getDateString(secondDate);
         let stringTime2 = this._getTimeString(secondDate, this.props, true);
+        let totalDate1 = stringDate1;
+        let totalDate2 = stringDate2;
 
-        if (this._compareDates(firstDate, secondDate, "equals")) {
-          stringDate1 = "";
-          stringTime1 = "";
+        if (stringDate1 !== UNSPECIFIED_CHAR) totalDate1 += " " + stringTime1;
+        if (stringDate2 !== UNSPECIFIED_CHAR) totalDate2 += " " + stringTime2;
+        if (stringDate1 !== UNSPECIFIED_CHAR && stringDate2 !== UNSPECIFIED_CHAR) {
+          if (this._compareDates(firstDate, secondDate, "equals")) {
+            totalDate1 = "";
+          }
         }
 
-        result = stringDate1 + " " + stringTime1 + (stringDate1 ? " - " : "") + stringDate2 + " " + stringTime2;
+        result = totalDate1 + (totalDate1 ? " - " : "") + totalDate2;
       } else if (firstDate) {
-        let stringDate1 = this._getDateString(firstDate);
+        let stringDate1 =
+          firstDate.getTime() === UNSPECIFIED_FROM.getTime() ? UNSPECIFIED_CHAR : this._getDateString(firstDate);
         let stringTime1 = this._getTimeString(firstDate, this.props, true);
-        result = stringDate1 + " " + stringTime1;
+        if (stringDate1 === UNSPECIFIED_CHAR) result = stringDate1;
+        else result = stringDate1 + " " + stringTime1;
       }
 
       if (result) {
@@ -2740,6 +2891,48 @@ let DateTimeRangePicker = Context.withContext(
       return result;
     },
 
+    _getSecondRow() {
+      let buttons = [];
+
+      if (this.props.showTodayButton) {
+        buttons.push(
+          <UU5.Bricks.Button
+            content={this.getLsiComponent("today")}
+            className={this.getClassName("todayButton")}
+            onClick={this._goToToday}
+            key="today"
+          />
+        );
+      }
+
+      if (this._isAllowedFromUnspecifiedRange || this._isAllowedToUnspecifiedRange) {
+        let disabled = false;
+        if (!this._isAllowedToUnspecifiedRange && this.state.tempValue) disabled = true;
+        if (!this._isAllowedFromUnspecifiedRange && (!this.state.tempValue || this.state.value)) disabled = true;
+        buttons.push(
+          <UU5.Bricks.Button
+            content={this.getLsiComponent("unspecifiedRange")}
+            onClick={this._onClickUnspecifiedRange}
+            disabled={disabled}
+            key="unspecifiedRange"
+          />
+        );
+      }
+
+      if (!this._isSorXs() || buttons.length < 2) {
+        buttons.push(
+          <UU5.Bricks.Button
+            content={this.getLsiComponent("reset")}
+            onClick={this._onClickReset}
+            key="reset"
+            className={this.getClassName("resetButton")}
+          />
+        );
+      }
+
+      return buttons.length ? <div className={this.getClassName("secondRow")}>{buttons}</div> : null;
+    },
+
     _normalRender(inputId, sizeClass) {
       let mainClassName = this.getClassName("mainInput");
       if (this.isOpen()) {
@@ -2810,15 +3003,7 @@ let DateTimeRangePicker = Context.withContext(
                           <UU5.Bricks.Calendar {...this._getCalendarProps(false, true)} />
                         </div>
                       </div>
-                      {this.props.showTodayButton ? (
-                        <div className={this.getClassName("secondRow")}>
-                          <UU5.Bricks.Button
-                            content={this.getLsiComponent("today")}
-                            className={this.getClassName("todayButton")}
-                            onClick={this._goToToday}
-                          />
-                        </div>
-                      ) : null}
+                      {this._getSecondRow()}
                     </div>,
                     this._getCustomContent()
                   )
@@ -2838,7 +3023,11 @@ let DateTimeRangePicker = Context.withContext(
               {this.getInputWrapper(
                 [
                   <TextInput id={inputId} {...this._getCalendarInputProps("date", true, false)} key="dateInput" />,
-                  <TextInput id={inputId} {...this._getCalendarInputProps("time", true, false)} key="timeInput" />,
+                  <TextInput
+                    id={inputId + "-2"}
+                    {...this._getCalendarInputProps("time", true, false)}
+                    key="timeInput"
+                  />,
                 ],
                 null,
                 { type: "fromWrapper" }
@@ -2855,16 +3044,7 @@ let DateTimeRangePicker = Context.withContext(
                         <Time {...this._getTimeProps(false)} />
                       )}
                     </div>
-                    {!this.state.activeInput ||
-                    (this.state.activeInput.match(/date/i) && this.props.showTodayButton) ? (
-                      <div className={this.getClassName("secondRow")}>
-                        <UU5.Bricks.Button
-                          content={this.getLsiComponent("today")}
-                          className={this.getClassName("todayButton")}
-                          onClick={this._goToToday}
-                        />
-                      </div>
-                    ) : null}
+                    {!this.state.activeInput || this.state.activeInput.match(/date/i) ? this._getSecondRow() : null}
                   </div>
                 ) : null}
               </UU5.Bricks.Popover>
@@ -2875,8 +3055,16 @@ let DateTimeRangePicker = Context.withContext(
               {this._getLabel(inputId, false, true)}
               {this.getInputWrapper(
                 [
-                  <TextInput id={inputId} {...this._getCalendarInputProps("date", true, true)} key="dateInput" />,
-                  <TextInput id={inputId} {...this._getCalendarInputProps("time", true, true)} key="timeInput" />,
+                  <TextInput
+                    id={inputId + "-3"}
+                    {...this._getCalendarInputProps("date", true, true)}
+                    key="dateInput"
+                  />,
+                  <TextInput
+                    id={inputId + "-4"}
+                    {...this._getCalendarInputProps("time", true, true)}
+                    key="timeInput"
+                  />,
                 ],
                 null,
                 { type: "toWrapper" }
@@ -2893,16 +3081,7 @@ let DateTimeRangePicker = Context.withContext(
                         <Time {...this._getTimeProps(true)} />
                       )}
                     </div>
-                    {!this.state.activeInput ||
-                    (this.state.activeInput.match(/date/i) && this.props.showTodayButton) ? (
-                      <div className={this.getClassName("secondRow")}>
-                        <UU5.Bricks.Button
-                          content={this.getLsiComponent("today")}
-                          className={this.getClassName("todayButton")}
-                          onClick={this._goToToday}
-                        />
-                      </div>
-                    ) : null}
+                    {!this.state.activeInput || this.state.activeInput.match(/date/i) ? this._getSecondRow() : null}
                   </div>
                 ) : null}
               </UU5.Bricks.Popover>

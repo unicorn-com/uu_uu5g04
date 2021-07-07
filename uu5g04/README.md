@@ -3,6 +3,7 @@
 - uuApp Local Deployment
 - uuApp Distribution Package Creation
 - Other
+- Creating uuAppBox while uu5g05 1.x is not public
 
 # uuApp Local Deployment
 
@@ -112,3 +113,16 @@ Prepare workspace according to the [documentation](https://plus4u.net/ues/sesm?S
     file `target/uu5g04-offline.zip` (possibly from previous build) will be used.
 
     Login is by default taken from `~/.uu/login` file.
+
+# Creating uuAppBox while uu5g05 1.x is not public
+
+1. If there are not-yet-released changes in uu5g05 and uu5stringg01 that need to be present for uu5g04:
+
+    - Build uu5g05 / uu5stringg01 locally (`npm run package` in respective Git root).
+    - Copy contents of built `target/uu5g05-<version>.tgz` into `uu5g04/node_modules/uu5g05/`. Similar for uu5stringg01.
+
+2. If there are no such changes then just ensure that your uu5g05 and uu5stringg01 versions are up-to-date (`uu5g04/node_modules/uu5g05/package.json` has latest version; similar for uu5stringgg01).
+
+    - If versions are not latest or if installed devkit is &lt; 4.2.0, update uu5g05 version in `devDependencies` in uu5g04's `package.json` and re-install modules (remove `package-lock.json` and `node_modules` and then do `npm install`).
+
+3. Run `npm run uuAppBox` in uu5g04 Git root.

@@ -16,6 +16,7 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+import Css from "./internal/css.js";
 
 import { Div } from "./factory.js";
 import Row from "./row.js";
@@ -317,9 +318,9 @@ export const Page = UU5.Common.VisualComponent.create({
     this._pendingPortalEls = {}; // created elements (for portals) that were not attached to DOM yet because Page didn't have its own DOM element itself yet
 
     this.props.userLayerContent &&
-      UU5.Common.Tools.warning("Property 'userLayerContent' is deprecated! Use 'appLayerContent' instead.");
+    UU5.Common.Tools.warning("Property 'userLayerContent' is deprecated! Use 'appLayerContent' instead.");
     this.props.userLayerWrapperProps &&
-      UU5.Common.Tools.warning("Property 'userLayerWrapperProps' is deprecated! Use 'appLayerWrapperProps' instead.");
+    UU5.Common.Tools.warning("Property 'userLayerWrapperProps' is deprecated! Use 'appLayerWrapperProps' instead.");
     // NOTE We need onscroll processed sooner than scroll handlers in nested components
     // (e.g. if app uses uu5-bricks-page-scrolled-down CSS class for restyling top bar
     // then we need PageTop to already have those styles applied in its scroll handler).
@@ -560,9 +561,11 @@ export const Page = UU5.Common.VisualComponent.create({
     // layers: https://uuos9.plus4u.net/uu-dockitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=spa_page_01
     // returning nested child <div/> which is fully unmanaged by React (whereas _modalPortalRef/...Ref is managed by React)
     let result;
-    if (layer === LAYER.MODAL) result = this._getOrCreatePortalEl(this._modalPortalRef, layer);
-    else if (layer === LAYER.ALERT_BUS) result = this._getOrCreatePortalEl(this._alertBusPortalRef, layer);
-    else if (layer === LAYER.POPOVER) result = this._getOrCreatePortalEl(this._popoverPortalRef, layer);
+    if (layer === LAYER.MODAL) {
+      result = this._getOrCreatePortalEl(this._modalPortalRef, layer);
+    } else if (layer === LAYER.ALERT_BUS) {
+      result = this._getOrCreatePortalEl(this._alertBusPortalRef, layer);
+    } else if (layer === LAYER.POPOVER) result = this._getOrCreatePortalEl(this._popoverPortalRef, layer);
     return result;
   },
   _getOrCreatePortalEl(domEl, layer) {
@@ -1454,8 +1457,8 @@ export const Page = UU5.Common.VisualComponent.create({
         {this._getAppLayer()}
         {this._getSystemLayer()}
 
-        {this._getAlertBus()}
         {this._getModal()}
+        {this._getAlertBus()}
         {this._getPopover()}
 
         <Div
@@ -1478,12 +1481,12 @@ export const Page = UU5.Common.VisualComponent.create({
         {this._getAppLayer()}
         {this._getSystemLayer()}
 
-        {this._getAlertBus()}
         {this._getModal()}
+        {this._getAlertBus()}
         {this._getPopover()}
 
         {this._getTop()}
-        <Row display={"flex"} className={this._getFullPageClass(true) + " " + this.getClassName("IEBottomFix")}>
+        <Row display={"flex"} className={[this._getFullPageClass(), this.getClassName("IEBottomFix"), Css.css`position: relative;`].join(" ")}>
           <PageColumn
             {...this._getColumnProps(
               this.props.leftWrapperProps,
@@ -1544,8 +1547,8 @@ export const Page = UU5.Common.VisualComponent.create({
         {this._getAppLayer()}
         {this._getSystemLayer()}
 
-        {this._getAlertBus()}
         {this._getModal()}
+        {this._getAlertBus()}
         {this._getPopover()}
 
         {this._getTop()}
@@ -1615,11 +1618,11 @@ export const Page = UU5.Common.VisualComponent.create({
         {this._getAppLayer()}
         {this._getSystemLayer()}
 
-        {this._getAlertBus()}
         {this._getModal()}
+        {this._getAlertBus()}
         {this._getPopover()}
 
-        <Row display={"flex"} className={this._getFullPageClass(true)}>
+        <Row display={"flex"} className={[this._getFullPageClass(), Css.css`position: relative;`].join(" ")}>
           <PageColumn
             {...this._getColumnProps(
               this.props.leftWrapperProps,
@@ -1687,8 +1690,8 @@ export const Page = UU5.Common.VisualComponent.create({
         {this._getAppLayer()}
         {this._getSystemLayer()}
 
-        {this._getAlertBus()}
         {this._getModal()}
+        {this._getAlertBus()}
         {this._getPopover()}
 
         <Row display={"flex"} className={this._getFullPageClass(true) + " " + this.getClassName("IEBottomFix")}>
@@ -1758,8 +1761,8 @@ export const Page = UU5.Common.VisualComponent.create({
         {this._getAppLayer()}
         {this._getSystemLayer()}
 
-        {this._getAlertBus()}
         {this._getModal()}
+        {this._getAlertBus()}
         {this._getPopover()}
 
         {this._getTop()}
@@ -1889,8 +1892,8 @@ export const Page = UU5.Common.VisualComponent.create({
           />
         </Row>
 
-        {this._getAlertBus()}
         {this._getModal()}
+        {this._getAlertBus()}
         {this._getPopover()}
       </Wrapper>
     );
@@ -1906,8 +1909,8 @@ export const Page = UU5.Common.VisualComponent.create({
         {this._getAppLayer()}
         {this._getSystemLayer()}
 
-        {this._getAlertBus()}
         {this._getModal()}
+        {this._getAlertBus()}
         {this._getPopover()}
 
         <Row display="flex" className={this._getFullPageClass(true) + " " + this.getClassName("IEBottomFix")}>
@@ -1978,8 +1981,8 @@ export const Page = UU5.Common.VisualComponent.create({
         {this._getAppLayer()}
         {this._getSystemLayer()}
 
-        {this._getAlertBus()}
         {this._getModal()}
+        {this._getAlertBus()}
         {this._getPopover()}
 
         <Row display={"flex"} className={this._getFullPageClass(true) + " " + this.getClassName("IEBottomFix")}>
@@ -2048,8 +2051,8 @@ export const Page = UU5.Common.VisualComponent.create({
         {this._getAppLayer()}
         {this._getSystemLayer()}
 
-        {this._getAlertBus()}
         {this._getModal()}
+        {this._getAlertBus()}
         {this._getPopover()}
 
         <Row display={"flex"} className={this._getFullPageClass(true)}>
@@ -2120,8 +2123,8 @@ export const Page = UU5.Common.VisualComponent.create({
         {this._getAppLayer()}
         {this._getSystemLayer()}
 
-        {this._getAlertBus()}
         {this._getModal()}
+        {this._getAlertBus()}
         {this._getPopover()}
 
         <Row display={"flex"} className={this._getFullPageClass(true)}>
@@ -2194,8 +2197,8 @@ export const Page = UU5.Common.VisualComponent.create({
         {this._getAppLayer()}
         {this._getSystemLayer()}
 
-        {this._getAlertBus()}
         {this._getModal()}
+        {this._getAlertBus()}
         {this._getPopover()}
 
         <Row display={"flex"} className={this._getFullPageClass(true)}>
@@ -2268,8 +2271,8 @@ export const Page = UU5.Common.VisualComponent.create({
         {this._getAppLayer()}
         {this._getSystemLayer()}
 
-        {this._getAlertBus()}
         {this._getModal()}
+        {this._getAlertBus()}
         {this._getPopover()}
 
         <Row display={"flex"} className={this._getFullPageClass(true)}>
@@ -2342,8 +2345,8 @@ export const Page = UU5.Common.VisualComponent.create({
         {this._getAppLayer()}
         {this._getSystemLayer()}
 
-        {this._getAlertBus()}
         {this._getModal()}
+        {this._getAlertBus()}
         {this._getPopover()}
 
         <Row display={"flex"} className={this._getFullPageClass(true)}>
@@ -2416,8 +2419,8 @@ export const Page = UU5.Common.VisualComponent.create({
         {this._getAppLayer()}
         {this._getSystemLayer()}
 
-        {this._getAlertBus()}
         {this._getModal()}
+        {this._getAlertBus()}
         {this._getPopover()}
 
         <Row display={"flex"} className={this._getFullPageClass(true)}>
