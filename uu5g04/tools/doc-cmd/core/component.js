@@ -88,9 +88,10 @@ module.exports = class Component {
           e.dtoOut &&
           e.dtoOut.uuAppErrorMap &&
           (e.dtoOut.uuAppErrorMap["uu-app-binarystore/uuBinaryUpdateBinaryData/uuBinaryDaoUpdateByCodeFailed"] ||
-            e.dtoOut.uuAppErrorMap["uu-app-binarystore/updateBinaryData/uuBinaryDaoUpdateByCodeFailed"]);
+            e.dtoOut.uuAppErrorMap["uu-app-binarystore/updateBinaryData/uuBinaryDaoUpdateByCodeFailed"] || 
+            e.dtoOut.uuAppErrorMap["uu-appbinarystore/binaryDoesNotExist"]);
         while (err && err.cause) err = err.cause.uuAppErrorMap;
-        if (err && err["uu-app-binarystore/objectNotFound"]) {
+        if (err && (err["uu-app-binarystore/objectNotFound"] || err["uu-appbinarystore-main/binary/update/binaryDoesNotExist"])) {
           try {
             delete params["revisionStrategy"];
             await this._client().uuAppBinaryStore_createBinary(params);

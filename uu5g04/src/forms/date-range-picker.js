@@ -278,6 +278,7 @@ let DateRangePicker = Context.withContext(
         this._setFormattingValues(nextProps);
 
         let propValue = Array.isArray(nextProps.value) && nextProps.value.length > 1 ? nextProps.value : null;
+        propValue = this._unspecifiedRangeValueToDate(propValue);
         propValue = this.parseDate(propValue);
         let calendarView = DateTools.getCalendarStartView(nextProps);
 
@@ -1375,6 +1376,18 @@ let DateRangePicker = Context.withContext(
         displayDates = DateTools.getDisplayDates(today, view);
       }
 
+      if (
+        displayDates.dateFrom.getTime() === UNSPECIFIED_FROM.getTime() ||
+        displayDates.dateTo.getTime() === UNSPECIFIED_TO.getTime()
+      ) {
+        if (this.state) {
+          displayDates.dateFrom = this.state.fromDisplayDate;
+          displayDates.dateTo = this.state.toDisplayDate;
+        } else {
+          displayDates = DateTools.getDisplayDates(today, view);
+        }
+      }
+
       return { fromDisplayDate: displayDates.dateFrom, toDisplayDate: displayDates.dateTo };
     },
 
@@ -1499,7 +1512,10 @@ let DateRangePicker = Context.withContext(
 
         let value = null;
         if (this.state.tempValue && !this._getToValue()) {
-          value = [this.state.tempValue, this.state.tempValue];
+          let fromValue = this.state.tempValue;
+          let toValue = this.state.tempValue;
+          if (fromValue.getTime() === UNSPECIFIED_FROM.getTime()) toValue = new Date(Date.now());
+          value = [fromValue, toValue];
           opt.value = value;
           opt._data.value = value;
           state = { ...state, value, ...this._getInnerState(value) };

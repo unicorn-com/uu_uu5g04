@@ -2,6 +2,7 @@ import * as UU5 from "uu5g04";
 
 import ns from "../bricks-editable-ns.js";
 import Css from "./css.js";
+import Helpers from "./helpers.js";
 
 const classNames = {
   main: () =>
@@ -28,7 +29,7 @@ export const ComponentInfo = (props) => {
   return (
     <div className={classNames.main()}>
       {props.icon ? <UU5.Bricks.Icon className={classNames.icon(props)} icon={props.icon} /> : null}
-      <div>{props.children}</div>
+      <div>{Helpers.getLabel(props.children)}</div>
     </div>
   );
 };

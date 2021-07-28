@@ -110,7 +110,22 @@ const MarginInput = createVisualComponent({
     //@@viewOn:render
     return (
       <div className={CLASS_NAMES.outerContainer(hidePadding)}>
-        {props.children}
+        <SpaceInput
+          onChange={onChange}
+          value={value?.top}
+          placeholder={placeholder?.top}
+          className={CLASS_NAMES.marginVertical(hideMarginVertical, "top", screenSize, hidePadding)}
+          position="top"
+          feedback={feedback}
+        />
+        <SpaceInput
+          onChange={onChange}
+          value={value?.right}
+          placeholder={placeholder?.right}
+          className={CLASS_NAMES.marginHorizontal(hideMarginHorizontal, "right", screenSize, hidePadding)}
+          position="right"
+          feedback={feedback}
+        />
         <SpaceInput
           onChange={onChange}
           value={value?.bottom}
@@ -127,22 +142,7 @@ const MarginInput = createVisualComponent({
           position="left"
           feedback={feedback}
         />
-        <SpaceInput
-          onChange={onChange}
-          value={value?.right}
-          placeholder={placeholder?.right}
-          className={CLASS_NAMES.marginHorizontal(hideMarginHorizontal, "right", screenSize, hidePadding)}
-          position="right"
-          feedback={feedback}
-        />
-        <SpaceInput
-          onChange={onChange}
-          value={value?.top}
-          placeholder={placeholder?.top}
-          className={CLASS_NAMES.marginVertical(hideMarginVertical, "top", screenSize, hidePadding)}
-          position="top"
-          feedback={feedback}
-        />
+        {props.children}
       </div>
     );
     //@@viewOff:render

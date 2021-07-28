@@ -219,6 +219,8 @@ export const DateTools = {
       dateFrom = new Date();
     }
 
+    if (dateFrom.getTime?.() === UNSPECIFIED_FROM.getTime()) dateFrom = new Date(Date.now());
+
     if (view === "days" || !view) {
       dateTo = DateTools.increaseDate(dateFrom, undefined, 1);
     } else if (view === "months") {

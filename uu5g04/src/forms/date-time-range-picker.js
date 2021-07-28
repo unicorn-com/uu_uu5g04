@@ -306,8 +306,9 @@ let DateTimeRangePicker = Context.withContext(
         this._setUpLimits(nextProps);
 
         this._allowTimeZoneAdjustment = true;
-        let value = this._getInitialValue(nextProps.value, nextProps);
-        let devValidation = this._validateDevProps(nextProps.value, nextProps.dateFrom, nextProps.dateTo);
+        let value = this._unspecifiedRangeValueToDate(nextProps.value);
+        let devValidation = this._validateDevProps(value, nextProps.dateFrom, nextProps.dateTo);
+        value = this._getInitialValue(value, nextProps);
         if (devValidation.valid) {
           let result = this._validateDateRangeResult(
             { value, message: nextProps.message, feedback: nextProps.feedback },
@@ -318,11 +319,7 @@ let DateTimeRangePicker = Context.withContext(
               let displayValue;
               if (result.feedback) {
                 displayValue = result.value;
-                this._privateSetFeedback(
-                  result.feedback,
-                  result.message,
-                  result.feedback === "error" ? null : result.value
-                );
+                this._privateSetFeedback(result.feedback, result.message, result.value);
               } else {
                 displayValue = value;
                 this._privateSetFeedback(nextProps.feedback, nextProps.message, value);
@@ -1319,7 +1316,10 @@ let DateTimeRangePicker = Context.withContext(
       state.fromTimeInputValue = state.fromTimeInputValue || this.state.fromTimeInputValue;
       state.toTimeInputValue = state.toTimeInputValue || this.state.toTimeInputValue;
 
-      if (state.value == null && this.state.value) {
+      let allInputsEmpty =
+        !state.fromDateInputValue && !state.toDateInputValue && !state.fromTimeInputValue && !state.toTimeInputValue;
+
+      if (state.value == null && allInputsEmpty && this.state.value) {
         executeOnChange = true;
       } else if (this.state.value == null && state.value) {
         executeOnChange = true;
@@ -1396,7 +1396,10 @@ let DateTimeRangePicker = Context.withContext(
         state.toTimeInputValue = this.state.toTimeInputValue;
       }
 
-      if (state.value == null && this.state.value) {
+      let allInputsEmpty =
+        !state.fromDateInputValue && !state.toDateInputValue && !state.fromTimeInputValue && !state.toTimeInputValue;
+
+      if (state.value == null && allInputsEmpty && this.state.value) {
         executeOnChange = true;
       } else if (this.state.value == null && state.value) {
         executeOnChange = true;
@@ -1474,7 +1477,7 @@ let DateTimeRangePicker = Context.withContext(
           feedback: "error",
           message: this.props.requiredMessage || this.getLsiComponent("requiredMessage"),
         };
-      } else if (innerState.value || (!innerState.value && this.state.value)) {
+      } else if (innerState.value || (!innerState.value && this.state.value && (!value || value.length === 2))) {
         feedback = { feedback: "initial", message: null };
       }
 
@@ -1815,11 +1818,11 @@ let DateTimeRangePicker = Context.withContext(
       let fromDisplayDate, toDisplayDate;
       let valueFrom = this._getFromValue(value);
       let valueTo = this._getToValue(value);
+      let today = this._getToday();
 
       if (valueFrom && valueTo) {
         fromDisplayDate = valueFrom;
       } else if (dateFrom || dateTo) {
-        let today = this._getToday();
         if (
           dateFrom &&
           this._compareDates(today, dateFrom, "greater") &&
@@ -1831,8 +1834,15 @@ let DateTimeRangePicker = Context.withContext(
           fromDisplayDate = this._getFromValue(this._parseDate(dateFrom || dateTo));
         }
       } else {
-        let today = this._getToday();
         fromDisplayDate = today;
+      }
+
+      if (fromDisplayDate.getTime() === UNSPECIFIED_FROM.getTime()) {
+        if (this.state) {
+          fromDisplayDate = this.state.fromDisplayDate;
+        } else {
+          fromDisplayDate = today;
+        }
       }
 
       if (this._isSorXs()) {
@@ -1987,7 +1997,10 @@ let DateTimeRangePicker = Context.withContext(
 
         let value = null;
         if (this.state.tempValue && !this._getToValue()) {
-          value = [this.state.tempValue, this.state.tempValue];
+          let fromValue = this.state.tempValue;
+          let toValue = this.state.tempValue;
+          if (fromValue.getTime() === UNSPECIFIED_FROM.getTime()) toValue = new Date(Date.now());
+          value = [fromValue, toValue];
           opt.value = value;
           opt._data.value = value;
           state = { ...state, value, ...this._getInnerState(value) };

@@ -94,18 +94,10 @@ const PaddingInput = createVisualComponent({
       <div className={CLASS_NAMES.innerContainer(hidePadding)}>
         <SpaceInput
           onChange={onChange}
-          value={value?.bottom}
-          placeholder={placeholder?.bottom}
-          className={CLASS_NAMES.paddingVertical(props.hidePaddingVertical, "bottom", hidePadding)}
-          position="bottom"
-          feedback={feedback}
-        />
-        <SpaceInput
-          onChange={onChange}
-          value={value?.left}
-          placeholder={placeholder?.left}
-          className={CLASS_NAMES.paddingHorizontal(props.hidePaddingHorizontal, "left", hidePadding)}
-          position="left"
+          value={value?.top}
+          placeholder={placeholder?.top}
+          className={CLASS_NAMES.paddingVertical(props.hidePaddingVertical, "top", hidePadding)}
+          position="top"
           feedback={feedback}
         />
         <SpaceInput
@@ -118,10 +110,18 @@ const PaddingInput = createVisualComponent({
         />
         <SpaceInput
           onChange={onChange}
-          value={value?.top}
-          placeholder={placeholder?.top}
-          className={CLASS_NAMES.paddingVertical(props.hidePaddingVertical, "top", hidePadding)}
-          position="top"
+          value={value?.bottom}
+          placeholder={placeholder?.bottom}
+          className={CLASS_NAMES.paddingVertical(props.hidePaddingVertical, "bottom", hidePadding)}
+          position="bottom"
+          feedback={feedback}
+        />
+        <SpaceInput
+          onChange={onChange}
+          value={value?.left}
+          placeholder={placeholder?.left}
+          className={CLASS_NAMES.paddingHorizontal(props.hidePaddingHorizontal, "left", hidePadding)}
+          position="left"
           feedback={feedback}
         />
       </div>

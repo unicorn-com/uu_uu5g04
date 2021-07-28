@@ -54,6 +54,33 @@ const CLASS_NAMES = {
 
 const { createVisualComponent } = LazyLoadedLibraries["uu5g04-hooks"];
 
+const marginValueRegExp = /^(-)?((\d*(?!\s)(?:.)(px|vh|vw|%|em)?)|auto)$/;
+const paddingValueRegExp = /^((\d*(?!\s)(?:.)(px|vh|vw|%|em)?)|auto)$/;
+const sideList = ["top", "right", "bottom", "left"];
+
+const getUsedPlaceholders = (placeholders, values, screenSizeList) => {
+  // if placeholder isnt explicitly defined inherit it from any higher screen size's value.
+  // E.g. if S left margin is 8px and L left margin doesnt have a defined placeholder, it will be 8px.
+  for (let i = 0; i < screenSizeList.length; i++) {
+    let placeholder = placeholders ? { ...placeholders[screenSizeList[i]] } : {};
+    placeholders[screenSizeList[i]] = placeholder;
+    for (let j = 0; j < sideList.length; j++) {
+      let side = sideList[j];
+      let sidePlaceholder = placeholder[side];
+      if (!sidePlaceholder) {
+        for (let k = i - 1; k >= 0; k--) {
+          let inheritedValue = values[screenSizeList[k]]?.[side];
+          if (inheritedValue) {
+            placeholders[screenSizeList[i]][side] = inheritedValue;
+            break;
+          }
+        }
+      }
+    }
+  }
+  return placeholders;
+};
+
 //@@viewOn:statics
 const STATICS = {
   displayName: ns.name("SpacesInput"),
@@ -72,6 +99,7 @@ const SpacesInput = createVisualComponent({
     value: UU5.PropTypes.object,
     valuePlaceholder: UU5.PropTypes.object,
     onChange: UU5.PropTypes.func,
+    inheritValues: UU5.PropTypes.bool,
   },
   //@@viewOff:propTypes
 
@@ -86,6 +114,7 @@ const SpacesInput = createVisualComponent({
     value: undefined,
     valuePlaceholder: undefined,
     onChange: UU5.PropTypes.func,
+    inheritValues: true,
   },
   //@@viewOff:defaultProps
   onChangeFeedbackDefault: () => {},
@@ -98,12 +127,17 @@ const SpacesInput = createVisualComponent({
     onChange,
     screenSizeList,
     onChangeFeedback,
+    inheritValues,
     ...props
   }) {
     let padding = { ...props.value.padding };
     let margin = { ...props.value.margin };
     let paddingPlaceholder = { ...props?.valuePlaceholder?.padding };
     let marginPlaceholder = { ...props?.valuePlaceholder?.margin };
+    if (inheritValues) {
+      paddingPlaceholder = getUsedPlaceholders(paddingPlaceholder, padding, screenSizeList);
+      marginPlaceholder = getUsedPlaceholders(marginPlaceholder, margin, screenSizeList);
+    }
     let onChangeView = (position) => (opt) => {
       let screenSizes = {
         padding: { ...padding, [position]: opt.padding },
@@ -112,13 +146,13 @@ const SpacesInput = createVisualComponent({
       let spaces = ["padding", "margin"];
       let newFeedback = "";
       for (let x = 0; x < spaces.length; x++) {
+        let space = spaces[x];
         for (let i = 0; i < screenSizeList.length; i++) {
-          for (const item in screenSizes[spaces[x]][screenSizeList[i]]) {
-            if (screenSizes[spaces[x]][screenSizeList[i]][item]) {
-              let value = screenSizes[spaces[x]][screenSizeList[i]][item].trim();
-
-              let match = /^(-)?((\d*(?!\s)(?:.)(px|vh|vw|%|em)?)|auto)$/.test(value);
-              if (screenSizes[spaces[x]][screenSizeList[i]][item] && !match) {
+          for (const item in screenSizes[space][screenSizeList[i]]) {
+            if (screenSizes[space][screenSizeList[i]][item]) {
+              let value = screenSizes[space][screenSizeList[i]][item].trim();
+              let match = (space === "margin" ? marginValueRegExp : paddingValueRegExp).test(value);
+              if (screenSizes[space][screenSizeList[i]][item] && !match) {
                 newFeedback = "error";
               }
             }
@@ -194,7 +228,9 @@ const SpacesInput = createVisualComponent({
           />
         )}
         <UU5.Bricks.Lsi className={CLASS_NAMES.message()} lsi={Lsi.spacesInput.infoMessagePartOne} />
-        <UU5.Bricks.Lsi className={CLASS_NAMES.message()} lsi={Lsi.spacesInput.infoMessagePartTwo} />
+        {inheritValues ? (
+          <UU5.Bricks.Lsi className={CLASS_NAMES.message()} lsi={Lsi.spacesInput.infoMessagePartTwo} />
+        ) : null}
       </UU5.Bricks.Section>
     );
     //@@viewOff:render

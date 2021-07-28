@@ -797,8 +797,7 @@ const _Modal = UU5.Common.VisualComponent.create({
     let result;
     let { Uu5Elements } = OptionalLibraries;
     if (Uu5Elements) {
-      let { header, content, footer } = this.state;
-      // TODO Use "size", "registerToModalBus" settings.
+      let { header, content, footer, size } = this.state;
       result = (
         <Uu5Elements.Modal
           {...this.getMainPropsToPass()}
@@ -809,7 +808,10 @@ const _Modal = UU5.Common.VisualComponent.create({
           footer={footer}
           closeOnEsc={!this.isSticky()}
           closeOnOverlayClick={this.state.stickyBackground === false}
+          closeOnButtonClick={!this.isSticky()}
           nestingLevel={this.getNestingLevel()}
+          skipModalBus={!this.state.registerToModalBus}
+          width={size === "s" ? 300 : size === "m" ? 600 : size === "l" ? 900 : size === "max" ? "full" : null}
         >
           {content}
         </Uu5Elements.Modal>

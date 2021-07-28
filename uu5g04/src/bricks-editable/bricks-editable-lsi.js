@@ -68,7 +68,7 @@ export const FormsLsi = {
   },
   modal: {
     componentInfo: {
-      cs: "Náhlédni do dokumentace",
+      cs: "Nahlédni do dokumentace",
       en: "Consult documentation of",
       sk: "Nahliadni do dokumentácie",
       uk: "Перевірте документацію",

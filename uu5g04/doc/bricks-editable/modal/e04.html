@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"
+    />
+    <title>Custom Input Editation Demo</title>
+
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+    <script>
+      SystemJS.config({
+        paths: {
+          systemjs: "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          react: "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+          uu_dynamiccomponentcontentg02:
+            "https://cdn.plus4u.net/uu-dynamiccomponentcontentg02/2.0.0/uu_dynamiccomponentcontentg02.min.js",
+          uu5codekitg01: "https://cdn.plus4u.net/uu-uu5codekitg01/1.0.0/uu5codekitg01.min.js",
+          "uu5codekitg01-markdown": "https://cdn.plus4u.net/uu-uu5codekitg01/1.0.0/uu5codekitg01-markdown.min.js",
+          uu5richtextg01: "https://cdn.plus4u.net/uu-uu5richtextg01/1.0.0/uu5richtextg01.min.js",
+          immutable: "https://cdn.plus4u.net/libs/immutable/3.8.2/immutable.min.js",
+
+          uu5g04: "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+          "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+          "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js",
+          "uu5g04-bricks-editable": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks-editable.js",
+        },
+      });
+    </script>
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+      import "uu5g04-bricks-editable";
+      import * as UuDcc from "uu_dynamiccomponentcontentg02";
+
+      UU5.Common.Tools.setLanguage("en");
+
+      //@@viewOn:example
+      /* icon-view.js */
+      const STATICS = {
+        displayName: "UU5.Demo.Icon.View",
+        nestingLevel: "inline",
+      };
+
+      const IconView = UU5.Common.VisualComponent.create({
+        ...STATICS,
+
+        render() {
+          return <UU5.Bricks.Icon icon={this.props.icon} />;
+        },
+      });
+
+      /* icon.js */
+      const Icon = UU5.Common.Component.create({
+        displayName: "UU5.Demo.Icon",
+
+        mixins: [UU5.Common.BaseMixin, UU5.Common.EditableMixin],
+
+        propTypes: {
+          type: UU5.PropTypes.oneOf(["uu5", "plus4u5"]),
+          icon: UU5.PropTypes.string,
+        },
+
+        defaultProps: {
+          type: "uu5",
+          icon: "",
+        },
+
+        render() {
+          return (
+            <UU5.Common.Fragment>
+              {this.isInlineEdited() && (
+                <UU5.Common.Suspense fallback={this.getEditingLoading()}>
+                  <IconEditable props={this.props} onClose={this.endEditation} />
+                </UU5.Common.Suspense>
+              )}
+              <IconView {...this.props} />
+            </UU5.Common.Fragment>
+          );
+        },
+      });
+
+      const ICON_LIST = {
+        uu5: [
+          "uu5-alert-circle",
+          "uu5-arrow-down",
+          "uu5-arrow-left",
+          "uu5-arrow-right",
+          "uu5-arrow-up",
+          "uu5-calendar",
+          "uu5-clock",
+          "uu5-cross",
+          "uu5-error-circle",
+          "uu5-finder",
+          "uu5-flag-upload",
+          "uu5-menu",
+          "uu5-minus",
+          "uu5-ok",
+          "uu5-ok-circle",
+          "uu5-person",
+          "uu5-picture",
+          "uu5-plus",
+          "uu5-point",
+          "uu5-thumb",
+        ],
+        plus4u5: [
+          "plus4u-account",
+          "plus4u-activity",
+          "plus4u-add-component",
+          "plus4u-align-center",
+          "plus4u-align-justify",
+          "plus4u-align-left",
+          "plus4u-align-right",
+          "plus4u-anchor",
+          "plus4u-arrow-down",
+          "plus4u-arrow-down-double",
+          "plus4u-arrow-down-line",
+          "plus4u-arrow-down-max",
+          "plus4u-arrow-down-more",
+          "plus4u-arrow-left",
+          "plus4u-arrow-left-double",
+          "plus4u-arrow-left-line",
+          "plus4u-arrow-left-max",
+          "plus4u-arrow-left-more",
+          "plus4u-arrow-right",
+          "plus4u-arrow-right-double",
+          "plus4u-arrow-right-line",
+          "plus4u-arrow-right-max",
+          "plus4u-arrow-right-more",
+          "plus4u-arrow-up",
+          "plus4u-arrow-up-double",
+          "plus4u-arrow-up-line",
+          "plus4u-arrow-up-max",
+          "plus4u-arrow-up-more",
+          "plus4u-artifact",
+          "plus4u-attachment",
+          "plus4u-bg-color",
+          "plus4u-bin",
+          "plus4u-bin-strike",
+          "plus4u-bold",
+          "plus4u-book",
+          "plus4u-bookmark",
+          "plus4u-boy",
+          "plus4u-business-case",
+          "plus4u-business-territory",
+          "plus4u-calendar",
+          "plus4u-cancel",
+          "plus4u-car",
+          "plus4u-chain",
+          "plus4u-circle",
+          "plus4u-clear-format",
+          "plus4u-clipboard",
+          "plus4u-clock",
+          "plus4u-club",
+          "plus4u-code",
+          "plus4u-columns",
+          "plus4u-company",
+          "plus4u-company-card",
+          "plus4u-contract",
+          "plus4u-control-panel",
+          "plus4u-copy",
+          "plus4u-databox",
+          "plus4u-decide",
+          "plus4u-discussion",
+          "plus4u-do-it",
+          "plus4u-dog",
+          "plus4u-dot",
+          "plus4u-drink",
+          "plus4u-earth",
+          "plus4u-east",
+          "plus4u-elephant",
+        ],
+      };
+
+      function validateIcon(icon, type) {
+        return ICON_LIST[type].some((item) => item === icon);
+      }
+
+      /* icon-input.js */
+      const TypeInput = UU5.Common.Component.create({
+        displayName: "UU5.Demo.Link.TypeInput",
+
+        propTypes: {
+          componentProps: UU5.PropTypes.object,
+          onChangeProps: UU5.PropTypes.func,
+        },
+
+        _onChangeType({ value }) {
+          let isValid = validateIcon(this.props.componentProps.icon, value);
+          this.props.onChangeProps(
+            { type: value },
+            { icon: isValid ? { sectionId: "icon" } : { message: "Choose a diferent icon, please", feedback: "error", sectionId: "icon" } }
+          );
+        },
+
+        render() {
+          let type = this.props.componentProps.type;
+          return (
+            <UU5.Forms.SwitchSelector
+              value={type}
+              onChange={this._onChangeType}
+              popoverLocation="portal"
+              label="Type"
+              items={Object.keys(ICON_LIST).map((type) => ({ value: type, content: type }))}
+            />
+          );
+        },
+      });
+
+      /* type-input.js */
+      const IconInput = UU5.Common.Component.create({
+        displayName: "UU5.Demo.Link.IconInput",
+
+        propTypes: {
+          componentProps: UU5.PropTypes.object,
+          onChangeProps: UU5.PropTypes.func,
+          errors: UU5.PropTypes.object,
+        },
+
+        _onChangeIcon({ value }) {
+          let isValid = validateIcon(value, this.props.componentProps.type);
+          this.props.onChangeProps(
+            { icon: value },
+            { icon: isValid ? { sectionId: "icon" } : { message: "Choose a diferent icon, please", feedback: "error", sectionId: "icon" } }
+          );
+        },
+
+        render() {
+          let type = this.props.componentProps.type;
+          let icon = this.props.componentProps.icon;
+          return (
+            <UU5.Forms.Select value={icon} onChange={this._onChangeIcon} popoverLocation="portal" label="Icon">
+              {ICON_LIST[type].map((item) => (
+                <UU5.Forms.Select.Option value={item} content={item} key={item} />
+              ))}
+            </UU5.Forms.Select>
+          );
+        },
+      });
+
+      /* icon-editable.js */
+      const ICON_EDITABLE_FORM = [
+        {
+          name: "Properties",
+          setup: [TypeInput],
+        },
+        {
+          name: "Choose an Icon",
+          id: "icon",
+          setup: [IconInput],
+        },
+      ];
+
+      const IconEditable = UU5.Common.Component.create({
+        displayName: "UU5.Demo.Icon.Editable",
+
+        getPropsToSave() {
+          return this._modalRef ? this._modalRef.getPropsToSave() : undefined;
+        },
+
+        _ref(modal) {
+          this._modalRef = modal;
+        },
+
+        render() {
+          return (
+            <UU5.BricksEditable.Modal
+              shown
+              onClose={this.props.onClose}
+              componentName="UU5.Demo.Icon"
+              header="UU5.Demo.Icon editation"
+              componentProps={this.props.props}
+              componentPropsForm={ICON_EDITABLE_FORM}
+              ref_={this._ref}
+            />
+          );
+        },
+      });
+      //@@viewOff:example
+
+      UU5.Demo = { Icon };
+
+      const DccComponent = UU5.Common.Component.create({
+        mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.CcrReaderMixin, UuDcc.Common.DccMixin],
+
+        getDccLanguages_() {
+          return ["cs", "en"];
+        },
+
+        onDccDataChange_(data, doneFn, failFn) {
+          doneFn();
+        },
+
+        render() {
+          return <UU5.Bricks.Div content={this.dcc.render()} />;
+        },
+      });
+
+      /*@@viewOff:0*/
+
+      function Page() {
+        return (
+          <UU5.Bricks.Page modal={<UU5.Bricks.Modal />}>
+            <UU5.Bricks.Container>
+              <DccComponent dccData={`<uu5string/><UU5.Demo.Icon icon="uu5-alert-circle">unicorn</UU5.Demo.Icon>`} />
+            </UU5.Bricks.Container>
+          </UU5.Bricks.Page>
+        );
+      }
+
+      UU5.Common.DOM.render(<Page />, document.getElementById("renderHere"));
+    </script>
+  </body>
+</html>

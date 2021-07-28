@@ -1,6 +1,6 @@
 {
   "name": "uu5g04",
-  "version": "1.47.2",
+  "version": "1.48.0",
   "description": "",
   "license": "UAF",
   "namespace": "UU5",
@@ -393,15 +393,16 @@
   "devDependencies": {
     "babel-plugin-emotion": "9.2.11",
     "eslint-plugin-react-hooks": "2.3.0",
+    "fs-extra": "*",
     "react-dnd": "7.0.2",
     "react-dnd-html5-backend": "7.0.2",
     "systemjs": "0.19.47",
     "url-polyfill": "1.1.12",
     "uu_appg01": "^4.4.0",
     "uu_appg01_devkit": "^4.0.0",
-    "uu5g05": "^0.10.0",
-    "uu5g05-browser-compatibility": "^0.10.0",
-    "uu5g05-test": "^0.10.0",
+    "uu5g05": "^0.x",
+    "uu5g05-browser-compatibility": "^0.x",
+    "uu5g05-test": "^0.x",
     "write-file-atomic": "2.3.0"
   },
   "engines": {

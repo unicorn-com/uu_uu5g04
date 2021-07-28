@@ -234,13 +234,10 @@ export const TabsEditable = UU5.Common.VisualComponent.create({
   },
 
   _onCloseEditationModal(newProps) {
-    let initialActiveName = newProps.initialActiveName || this.state.props.initialActiveName;
-    if (newProps.children && initialActiveName) {
+    let initialActiveName = newProps?.initialActiveName || this.state.props?.initialActiveName;
+    if (newProps?.children && initialActiveName) {
       let newChildren = UU5.Common.UU5String.toChildren(newProps.children);
       let initialActiveTab = newChildren.some((child) => child.props.name === initialActiveName);
-      let initialActiveNameIndex = this.props.component
-        .getChildren()
-        .findIndex((child) => child.props.name === this.state.props.initialActiveName);
       if (!initialActiveTab) {
         newProps.initialActiveName = newChildren[0].props.name;
       }

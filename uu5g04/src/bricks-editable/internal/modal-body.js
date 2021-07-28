@@ -165,11 +165,8 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
             .uu5-bricks-modal-footer {
               border-top: solid 1px #E0E0E0;
-              display: flex;
-              justify-content: flex-end;
               padding: 8px 64px;
               ${UU5.Utils.ScreenSize.getMaxMediaQueries("m", `padding: 8px 32px;`)}
-              ${UU5.Common.Tools.isIE() ? "background-color: #FFFFFF" : ""}
             }
 
             .uu5-bricks-modal-body {
@@ -177,6 +174,11 @@ const ModalBody = UU5.Common.VisualComponent.create({
               height: 100%;
               display: flex;
               flex: 1 1 auto;
+            }
+
+            ${/* uu5g05 Modal - set body padding to 0 */ ""}
+            &>:last-child:not(.uu5-bricks-modal-dialog)>:first-child {
+              padding: 0;
             }
           `)
         );
@@ -205,6 +207,11 @@ const ModalBody = UU5.Common.VisualComponent.create({
         text-overflow: ellipsis;
         white-space: nowrap;
       `),
+      footer: () => Css.css`
+        display: flex;
+        justify-content: flex-end;
+        ${UU5.Common.Tools.isIE() ? "background-color: #FFFFFF" : ""}
+      `,
       cancelButton: () =>
         Css.css(`
         margin-right: 8px;
@@ -212,7 +219,6 @@ const ModalBody = UU5.Common.VisualComponent.create({
       standardEditMenu: (props) =>
         Css.css(`
         font-size: 15px;
-        height: 100%;
         display: flex;
         flex-direction: column;
         border-style: solid;
@@ -468,7 +474,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
       editMenuOpen: false,
       menuHeight: undefined,
       validation: (this.props.componentPropsForm || []).map(() => undefined),
-      itemsValidation: items ? items.map(() => undefined) : undefined,
+      itemsValidation: items ? items.map(() => undefined) : [],
       itemMoveModalShown: false,
       confirmModalProps: undefined,
     };
@@ -509,7 +515,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
     if (
       !this._preventNextOnChange &&
       typeof this.props.onChange === "function" &&
-      (this.state.items !== prevState.items || this.state.componentProps !== prevState.componentProps)
+      (this.state.items !== prevState.items || this.state.propValues !== prevState.propValues)
     ) {
       let params = {
         componentProps: this.state.propValues,
@@ -754,8 +760,9 @@ const ModalBody = UU5.Common.VisualComponent.create({
   _getComponentValidationResult(validation, itemIndex, propName, feedback) {
     validation = [...validation];
     let validatedItem = validation[itemIndex];
+    if (validatedItem && typeof validatedItem === "object") validatedItem = { ...validatedItem };
 
-    if (!feedback && validatedItem && validatedItem[propName]) {
+    if (validatedItem && validatedItem[propName]) {
       delete validatedItem[propName];
       if (Object.keys(validatedItem).length === 0) validatedItem = undefined;
     } else if (feedback) {
@@ -769,64 +776,82 @@ const ModalBody = UU5.Common.VisualComponent.create({
   },
 
   _getCustomComponentValidationResult(state, errors, componentIndex) {
-    let validationResult;
+    let validation = [...state.validation];
+    let itemsValidation = [...state.itemsValidation];
 
-    if (typeof state.activeCategoryIndex === "number") {
-      validationResult = [...state.validation];
-      if (componentIndex === undefined) {
-        // a whole custom category
-        validationResult[state.activeCategoryIndex] = errors;
-      } else {
-        // a single custom component/input
-        let validatedSection = validationResult[state.activeCategoryIndex];
-        if (validatedSection === undefined) {
-          validatedSection = {};
+    for (let key in errors) {
+      let error = errors[key];
+      let sectionIds = error ? error.sectionId : undefined;
+      if (sectionIds && !Array.isArray(sectionIds)) sectionIds = [sectionIds];
+      let itemIds = error ? error.itemId : undefined;
+      if (itemIds && !Array.isArray(itemIds)) itemIds = [itemIds];
+      let sectionIndexes = sectionIds
+        ? sectionIds.map((sectionId) => this.props.componentPropsForm.findIndex((section) => section.id === sectionId))
+        : undefined;
+      if (!sectionIds && !itemIds && typeof state.activeCategoryIndex === "number")
+        sectionIndexes = [state.activeCategoryIndex];
+      if (sectionIndexes) {
+        for (let i = 0; i < sectionIndexes.length; i++) {
+          let sectionIndex = sectionIndexes[i];
+          if (sectionIndex > -1) {
+            if (componentIndex === undefined) {
+              // a whole custom category
+              validation[sectionIndex][key] = error;
+            } else {
+              // a single custom component/input
+              let validatedSection = validation[sectionIndex];
+              if (validatedSection === undefined) {
+                validatedSection = {};
+                validation[sectionIndex] = validatedSection;
+              }
+              validatedSection[key] = error;
+            }
+          }
         }
-        validatedSection[componentIndex] = errors;
-        validationResult[state.activeCategoryIndex] = validatedSection;
       }
-    } else {
-      validationResult = [...state.itemsValidation];
-      let activeItemIndex = state.items.findIndex((item) => item.id === state.activeItemId);
-      if (componentIndex === undefined) {
-        // a whole custom category
-        validationResult[activeItemIndex] = errors;
-      } else {
-        // a single custom component/input
-        let validatedItem = validationResult[activeItemIndex];
-        if (validatedItem === undefined) {
-          validatedItem = {};
+
+      let itemIndexes = itemIds
+        ? itemIds.map((itemId) => state.items.findIndex((item) => item.id === itemId))
+        : undefined;
+      if (!itemIds && !sectionIds && typeof state.activeItemId === "number") {
+        itemIndexes = [state.items.findIndex((item) => item.id === state.activeItemId)];
+      }
+      if (itemIndexes) {
+        for (let i = 0; i < itemIndexes.length; i++) {
+          let itemIndex = itemIndexes[i];
+          if (componentIndex === undefined) {
+            // a whole custom category
+            itemsValidation[itemIndex][key] = error;
+          } else {
+            // a single custom component/input
+            let validatedItem = itemsValidation[itemIndex];
+            if (validatedItem === undefined) {
+              validatedItem = {};
+              itemsValidation[itemIndex] = validatedItem;
+            }
+            validatedItem[key] = error;
+          }
         }
-        validatedItem[componentIndex] = errors;
-        validationResult[activeItemIndex] = validatedItem;
       }
     }
 
-    return validationResult;
+    return { validation, itemsValidation };
   },
 
-  _getValidationResultToPass(componentIndex) {
+  _getValidationResultToPass() {
     let result;
 
     if (typeof this.state.activeCategoryIndex === "number") {
       let validatedSection = this.state.validation[this.state.activeCategoryIndex];
       if (validatedSection) {
-        if (componentIndex === undefined) {
-          result = validatedSection;
-        } else {
-          result = validatedSection[componentIndex];
-        }
+        result = validatedSection;
       }
     } else {
       let itemIndex = this.state.items.findIndex((item) => item.id === this.state.activeItemId);
       let validatedItem = this.state.itemsValidation[itemIndex];
 
       if (validatedItem) {
-        if (componentIndex === undefined) {
-          result = validatedItem;
-        } else {
-          result = validatedItem[componentIndex];
-        }
+        result = validatedItem;
       }
     }
 
@@ -884,12 +909,9 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
     this.setState((state) => {
       let newState = { ...state, propValues: { ...state.propValues, ...newPropValues } };
-      let validationResult = this._getCustomComponentValidationResult(state, errors, componentIndex);
-      if (typeof this.state.activeCategoryIndex === "number") {
-        newState.validation = validationResult;
-      } else {
-        newState.itemsValidation = validationResult;
-      }
+      let { validation, itemsValidation } = this._getCustomComponentValidationResult(state, errors, componentIndex);
+      newState.validation = validation;
+      newState.itemsValidation = itemsValidation;
 
       return newState;
     });
@@ -933,12 +955,9 @@ const ModalBody = UU5.Common.VisualComponent.create({
         newState.itemsValidation = undefined;
       }
 
-      let validationResult = this._getCustomComponentValidationResult(state, errors, componentIndex);
-      if (typeof this.state.activeCategoryIndex === "number") {
-        newState.validation = validationResult;
-      } else {
-        newState.itemsValidation = validationResult;
-      }
+      let { validation, itemsValidation } = this._getCustomComponentValidationResult(state, errors, componentIndex);
+      newState.validation = validation;
+      newState.itemsValidation = itemsValidation;
 
       return newState;
     });
@@ -1280,7 +1299,10 @@ const ModalBody = UU5.Common.VisualComponent.create({
         const iconTypeIndex = availableIconTypes.findIndex((item) => item.feedback === feedback);
         const iconData = availableIconTypes[iconTypeIndex];
 
-        if (iconTypeIndex > -1) {
+        if (
+          iconTypeIndex > -1 &&
+          !infoIcons.some((icon) => icon.colorSchema === iconData.colorSchema && icon.icon === iconData.icon)
+        ) {
           infoIcons.push({ icon: iconData.icon, colorSchema: iconData.colorSchema });
           availableIconTypes.slice(iconTypeIndex, 1);
         }
@@ -1293,9 +1315,15 @@ const ModalBody = UU5.Common.VisualComponent.create({
   },
 
   _getItemsMenu() {
-    let controls = [
-      { label: this.getLsiComponent("menuItemInsertBefore"), onClick: this._itemInsertBefore },
-      { label: this.getLsiComponent("menuItemInsertAfter"), onClick: this._itemInsertAfter },
+    let controls = [];
+    if (this.props.newItem) {
+      controls = [
+        { label: this.getLsiComponent("menuItemInsertBefore"), onClick: this._itemInsertBefore },
+        { label: this.getLsiComponent("menuItemInsertAfter"), onClick: this._itemInsertAfter },
+      ];
+    }
+    controls = [
+      ...controls,
       { label: this.getLsiComponent("menuItemMoveToPosition"), onClick: this._openItemMoveModal },
       { label: this.getLsiComponent("menuItemDuplicate"), onClick: this._itemDuplicate },
       { label: this.getLsiComponent("menuItemDelete"), onClick: this._itemRemove },
@@ -1323,7 +1351,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
         items={items}
         activeItemIndex={this._getItemIndexById()}
         onItemClick={this._setActiveItem}
-        onAddItem={this._addItem}
+        onAddItem={this.props.newItem ? this._addItem : undefined}
         addItemLabel={this.props.newItemButtonLabel}
         controls={controls}
       />
@@ -1419,7 +1447,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
           result.props.hidePaddingHorizontal = valueSource.hidePaddingHorizontal;
           result.props.hidePaddingVertical = valueSource.hidePaddingVertical;
           result.props.hideMarginVertical = valueSource.hideMarginVertical;
-          result.props.hideMarginHorizontal  = valueSource.hideMarginHorizontal;
+          result.props.hideMarginHorizontal = valueSource.hideMarginHorizontal;
           result.props.screenSizeList = valueSource.screenSizeList;
           result.props.valuePlaceholder = valueSource.valuePlaceholder;
           break;
@@ -1499,6 +1527,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
     }
 
     if (validation) {
+      if (validation === true) validation = { feedback: "error" };
       result.props = { ...result.props, ...validation };
     }
 
@@ -1523,7 +1552,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
           items={this.state.items}
           onChangeProps={(...args) => this._onCustomChangeProps(index, ...args)}
           onChangeItems={(...args) => this._onCustomChangeItems(index, ...args)}
-          errors={this._getValidationResultToPass(index)}
+          errors={this._getValidationResultToPass()}
           editedItemId={activeIdentifier}
           key={key}
         />
@@ -1722,7 +1751,6 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
     return (
       <div className={this.getClassName("headerContent")}>
-        {hasMenu(this.props) && isCompactVersion ? this._renderEditMenu() : null}
         <div className={this.getClassName("headerLeftWrapper")}>{headerContent}</div>
         <div>{closeButton}</div>
       </div>
@@ -1785,7 +1813,10 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
   _renderCompactLayout() {
     return (
-      <UU5.Bricks.Row className={this.getClassName("compactLayoutWrapper")}>{this._getEditation()}</UU5.Bricks.Row>
+      <>
+        {hasMenu(this.props) ? this._renderEditMenu() : null}
+        <UU5.Bricks.Row className={this.getClassName("compactLayoutWrapper")}>{this._getEditation()}</UU5.Bricks.Row>
+      </>
     );
   },
 
@@ -1816,14 +1847,14 @@ const ModalBody = UU5.Common.VisualComponent.create({
         header={this._renderModalHeader()}
         underline={!this._isCompactVersion()}
         footer={
-          <UU5.Common.Fragment>
+          <div className={this.getClassName("footer")}>
             <UU5.Bricks.Button onClick={this._cancel} className={this.getClassName("cancelButton")}>
               {this.getLsiComponent("cancelButton")}
             </UU5.Bricks.Button>
             <UU5.Bricks.Button colorSchema="blue" {...this.props.saveButtonProps} onClick={this._save}>
               {this.getLsiComponent("saveButton")}
             </UU5.Bricks.Button>
-          </UU5.Common.Fragment>
+          </div>
         }
       >
         {this._isCompactVersion() ? this._renderCompactLayout() : this._renderStandardLayout()}

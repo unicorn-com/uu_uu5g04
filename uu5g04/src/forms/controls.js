@@ -125,9 +125,10 @@ export const Controls = UU5.Common.VisualComponent.create({
 
   _getButtonState(buttonName) {
     let buttonState = this.state[this._getButtonKeyName(buttonName)];
+    let formPending = this.getForm()?.isFormPending?.();
     return {
       ...buttonState,
-      disabled: typeof buttonState.disabled === "boolean" ? buttonState.disabled : this.isDisabled(),
+      disabled: formPending || (typeof buttonState.disabled === "boolean" ? buttonState.disabled : this.isDisabled()),
     };
   },
 

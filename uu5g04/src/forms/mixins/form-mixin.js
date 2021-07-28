@@ -129,6 +129,7 @@ export const FormMixin = {
   //@@viewOn:reactLifeCycle
   getInitialState() {
     this.pendingComponents = {};
+    this._formPending = false;
     return {
       readOnly: this.props.readOnly,
       values: this.props.values,
@@ -506,6 +507,7 @@ export const FormMixin = {
   },
 
   setPending(setStateCallback) {
+    this._formPending = true;
     let inputs = this.getInputs();
     unblockPending(inputs, this.pendingComponents);
     Object.keys(inputs).forEach((key) => {
@@ -533,6 +535,7 @@ export const FormMixin = {
   },
 
   setReady(setStateCallback) {
+    this._formPending = false;
     unblockPending(this.getInputs(), this.pendingComponents);
 
     let alertBus = this.getAlertBus();
@@ -636,6 +639,10 @@ export const FormMixin = {
 
   isReadOnly() {
     return this.state.readOnly;
+  },
+
+  isFormPending() {
+    return this._formPending;
   },
   //@@viewOff:interface
 

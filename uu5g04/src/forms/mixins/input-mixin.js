@@ -523,7 +523,7 @@ export const InputMixin = {
   },
 
   isComputedDisabled() {
-    return this.isDisabled() || this.isLoading();
+    return this.isDisabled() || this.isLoading() || this._getForm()?.isFormPending?.();
   },
 
   shouldValidateRequired() {
@@ -916,3 +916,4 @@ InputMixin.ERROR_FEEDBACK = ERROR_FEEDBACK;
 InputMixin.LOADING_FEEDBACK = LOADING_FEEDBACK;
 
 export default InputMixin;
+   

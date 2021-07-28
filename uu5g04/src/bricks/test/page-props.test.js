@@ -254,10 +254,18 @@ const CONFIG = {
     rightResizable: {
       values: [true, false],
     },
-    leftResizableMinWidth: [undefined, 100],
-    leftResizableMaxWidth: [undefined, 100],
-    rightResizableMinWidth: [undefined, 100],
-    rightResizableMaxWidth: [undefined, 100],
+    leftResizableMinWidth: {
+      values: [undefined, 100],
+    },
+    leftResizableMaxWidth: {
+      values: [undefined, 100],
+    },
+    rightResizableMinWidth: {
+      values: [undefined, 100],
+    },
+    rightResizableMaxWidth: {
+      values: [undefined, 100],
+    },
   },
   requiredProps: {},
   opt: {
