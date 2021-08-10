@@ -64,7 +64,8 @@ function isG05Opts(obj) {
   return (
     obj &&
     typeof obj === "object" &&
-    (Object.keys(obj).length === 0 || "uu5DataMap" in obj || "templateDataMap" in obj || "initFn" in obj)
+    Object.keys(obj).length > 0 &&
+    ("uu5DataMap" in obj || "templateDataMap" in obj || "initFn" in obj)
   );
 }
 
@@ -186,39 +187,50 @@ class UU5StringProps extends Uu5String.Props {
 }
 
 class UU5String extends Uu5String {
-  constructor(uu5string, data = {}, initFn = null) {
+  constructor(uu5string, data = undefined, initFn = null) {
     super(
       uu5string,
       omitUndefineds({
-        templateDataMap: { ...EXTRA_TEMPLATE_DATA, ...data },
+        // intentionally ==, not ===
+        templateDataMap: data == null ? data : { ...EXTRA_TEMPLATE_DATA, ...data },
         uu5DataMap: Environment.uu5DataMap,
         _factory: G04_FACTORY,
         initFn,
       })
     );
     this.data = this.templateDataMap;
-    wrap(this, "toChildren", function (origFn, data = this.templateDataMap, filterFn, buildChildFn) {
+    wrap(this, "toChildren", function (origFn, data = this.templateDataMap || {}, filterFn, buildChildFn) {
       if (arguments.length <= 2 && isG05Opts(arguments[1])) return origFn.call(this, arguments[1]);
       return origFn.call(
         this,
         omitUndefineds({
-          templateDataMap: data,
+          templateDataMap: data === null ? data : { ...EXTRA_TEMPLATE_DATA, ...data },
           filterFn,
           buildChildFn: typeof buildChildFn === "function" ? buildChildFn : undefined,
         })
       );
     });
-    wrap(this, "toString", function (origFn, data = this.templateDataMap, filterFn) {
+    wrap(this, "toString", function (origFn, data = this.templateDataMap || null, filterFn) {
       if (arguments.length <= 2 && isG05Opts(arguments[1])) return origFn.call(this, arguments[1]);
-      return origFn.call(this, omitUndefineds({ templateDataMap: data, filterFn }));
+      return origFn.call(
+        this,
+        omitUndefineds({ templateDataMap: data === null ? data : { ...EXTRA_TEMPLATE_DATA, ...data }, filterFn })
+      );
     });
-    wrap(this, "toPlainText", function (origFn, data = this.templateDataMap, filterFn) {
+    wrap(this, "toPlainText", function (origFn, data = this.templateDataMap || {}, filterFn) {
       if (arguments.length <= 2 && isG05Opts(arguments[1])) return origFn.call(this, arguments[1]);
-      return origFn.call(this, omitUndefineds({ templateDataMap: data, filterFn }));
+      return origFn.call(
+        this,
+        omitUndefineds({ templateDataMap: data === null ? data : { ...EXTRA_TEMPLATE_DATA, ...data }, filterFn })
+      );
     });
     wrap(this, "clone", function (origFn, data = this.templateDataMap, initFn = this.initFn) {
       if (arguments.length <= 2 && isG05Opts(arguments[1])) return origFn.call(this, arguments[1]);
-      return origFn.call(this, omitUndefineds({ templateDataMap: data, initFn }));
+      return origFn.call(
+        this,
+        // intentionally ==, not ===
+        omitUndefineds({ templateDataMap: data == null ? data : { ...EXTRA_TEMPLATE_DATA, ...data }, initFn })
+      );
     });
   }
   static parse(uu5string, buildItem) {
@@ -236,7 +248,7 @@ class UU5String extends Uu5String {
     return Uu5String.toChildren(
       uu5string,
       omitUndefineds({
-        templateDataMap: { ...EXTRA_TEMPLATE_DATA, ...data },
+        templateDataMap: data === null ? null : { ...EXTRA_TEMPLATE_DATA, ...data },
         uu5DataMap: Environment.uu5DataMap,
         filterFn,
         buildChildFn: typeof buildChildFn === "function" ? buildChildFn : undefined,
@@ -248,7 +260,8 @@ class UU5String extends Uu5String {
     return Uu5String.toString(
       uu5string,
       omitUndefineds({
-        templateDataMap: { ...EXTRA_TEMPLATE_DATA, ...data },
+        // intentionally only ==, not ===
+        templateDataMap: data == null ? null : { ...EXTRA_TEMPLATE_DATA, ...data },
         filterFn,
       })
     );
@@ -258,7 +271,7 @@ class UU5String extends Uu5String {
     return Uu5String.toPlainText(
       uu5string,
       omitUndefineds({
-        templateDataMap: { ...EXTRA_TEMPLATE_DATA, ...data },
+        templateDataMap: data === null ? null : { ...EXTRA_TEMPLATE_DATA, ...data },
         uu5DataMap: Environment.uu5DataMap,
         filterFn,
       })
@@ -269,7 +282,7 @@ class UU5String extends Uu5String {
     return Uu5String.contentToChildren(
       content,
       omitUndefineds({
-        templateDataMap: { ...EXTRA_TEMPLATE_DATA, ...data },
+        templateDataMap: data === null ? null : { ...EXTRA_TEMPLATE_DATA, ...data },
         uu5DataMap: Environment.uu5DataMap,
         filterFn,
         buildChildFn: typeof buildChildFn === "function" ? buildChildFn : undefined,
@@ -281,7 +294,8 @@ class UU5String extends Uu5String {
     return Uu5String.contentToString(
       content,
       omitUndefineds({
-        templateDataMap: { ...EXTRA_TEMPLATE_DATA, ...data },
+        // intentionally only ==, not ===
+        templateDataMap: data == null ? data : { ...EXTRA_TEMPLATE_DATA, ...data },
         filterFn,
       })
     );
@@ -291,7 +305,7 @@ class UU5String extends Uu5String {
     return Uu5String.contentToPlainText(
       content,
       omitUndefineds({
-        templateDataMap: { ...EXTRA_TEMPLATE_DATA, ...data },
+        templateDataMap: data === null ? null : { ...EXTRA_TEMPLATE_DATA, ...data },
         uu5DataMap: Environment.uu5DataMap,
         filterFn,
       })

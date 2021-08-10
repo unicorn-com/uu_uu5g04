@@ -93,6 +93,9 @@ const CONFIG = {
     offsetTop: {
       values: ["auto", 200],
     },
+    fullscreen: {
+      values: [true, false],
+    },
     //onClose
 
     // NOTE Skipping because controlled/hidden doesn't work properly with each other and there's

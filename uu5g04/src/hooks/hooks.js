@@ -51,6 +51,7 @@ export { useLsi } from "uu5g05";
 export { useLsiValues } from "uu5g05";
 export { usePreviousValue } from "uu5g05";
 export { useSession } from "uu5g05";
+export { useStickyTop } from "uu5g05";
 export { useTimeZone, TimeZoneProvider } from "uu5g05";
 export { useUnmountedRef } from "uu5g05";
 export { useUserPreferences, UserPreferencesProvider } from "uu5g05";

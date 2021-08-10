@@ -244,6 +244,9 @@ const _Modal = UU5.Common.VisualComponent.create({
           return Css.css`${styles}`;
         }
       },
+      fullscreen: () => {
+        return Css.css({ width: "100%", height: "100%", margin: 0, maxHeight: "none" });
+      },
       modalSize: ns.css("modal-"),
       isFooter: ns.css("modal-isfooter"),
       overflow: ns.css("modal-overflow"),
@@ -272,6 +275,7 @@ const _Modal = UU5.Common.VisualComponent.create({
     offsetTop: UU5.PropTypes.oneOfType([UU5.PropTypes.number, UU5.PropTypes.string]),
     location: UU5.PropTypes.oneOf(["local", "portal"]),
     registerToModalBus: UU5.PropTypes.bool,
+    fullscreen: UU5.PropTypes.bool,
 
     _render: UU5.PropTypes.func,
     _allowClose: UU5.PropTypes.func,
@@ -293,6 +297,7 @@ const _Modal = UU5.Common.VisualComponent.create({
       offsetTop: null,
       location: undefined,
       registerToModalBus: true,
+      fullscreen: false,
       _render: undefined,
       _allowClose: undefined,
     };
@@ -319,6 +324,7 @@ const _Modal = UU5.Common.VisualComponent.create({
       overflow: this.props.overflow,
       openKey: this.props.shown ? this._openCounter++ : undefined,
       registerToModalBus: this.props.registerToModalBus,
+      fullscreen: this.props.fullscreen,
     };
   },
 
@@ -715,6 +721,7 @@ const _Modal = UU5.Common.VisualComponent.create({
     newProps.mountContent = props.mountContent === undefined ? this.props.mountContent : props.mountContent;
     newProps.registerToModalBus =
       props.registerToModalBus === undefined ? this.props.registerToModalBus : props.registerToModalBus;
+    newProps.fullscreen = props.fullscreen === undefined ? this.props.fullscreen : props.fullscreen;
 
     if ((newProps.content === undefined || newProps.content === null) && (this.props.children || props.children)) {
       newProps.content = props.children === undefined ? this.props.children : props.children;
@@ -797,7 +804,7 @@ const _Modal = UU5.Common.VisualComponent.create({
     let result;
     let { Uu5Elements } = OptionalLibraries;
     if (Uu5Elements) {
-      let { header, content, footer, size } = this.state;
+      let { header, content, footer, size, fullscreen } = this.state;
       result = (
         <Uu5Elements.Modal
           {...this.getMainPropsToPass()}
@@ -811,6 +818,7 @@ const _Modal = UU5.Common.VisualComponent.create({
           closeOnButtonClick={!this.isSticky()}
           nestingLevel={this.getNestingLevel()}
           skipModalBus={!this.state.registerToModalBus}
+          fullscreen={fullscreen}
           width={size === "s" ? 300 : size === "m" ? 600 : size === "l" ? 900 : size === "max" ? "full" : null}
         >
           {content}
@@ -894,22 +902,27 @@ const _Modal = UU5.Common.VisualComponent.create({
 
     return this.getNestingLevel()
       ? this._renderModal((hidden) => (
-        <div {...this._getMainAttrs(hidden)}>
-          <div
-            className={`${this.getClassName("dialog")} ${this.getClassName("modalSize")}${
-              this.state.size
-            } ${this.getClassName("layoutWrapper")}`}
-          >
-            {this._buildChildren()}
-            {this.getDisabledCover()}
+          <div {...this._getMainAttrs(hidden)}>
+            <div
+              className={[
+                this.getClassName("dialog"),
+                this.getClassName("modalSize") + this.state.size,
+                this.getClassName("layoutWrapper"),
+                this.state.fullscreen ? this.getClassName("fullscreen") : undefined,
+              ]
+                .filter(Boolean)
+                .join(" ")}
+            >
+              {this._buildChildren()}
+              {this.getDisabledCover()}
+            </div>
           </div>
-        </div>
-      ))
+        ))
       : null;
   },
   //@@viewOff:render
 });
-_Modal._onCloseESC = function(e) {
+_Modal._onCloseESC = function (e) {
   if (e.which === 27) {
     let lastModal = openedModalStack[openedModalStack.length - 1];
     if (lastModal && !lastModal.isSticky()) {

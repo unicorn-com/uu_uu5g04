@@ -296,7 +296,7 @@ let DateRangePicker = Context.withContext(
                 let displayValue;
                 if (result.feedback) {
                   displayValue = result.value;
-                  this.setFeedback(result.feedback, result.message, result.feedback === "error" ? null : result.value);
+                  this.setFeedback(result.feedback, result.message, result.value);
                 } else {
                   displayValue = propValue;
                   this.setFeedback(nextProps.feedback, nextProps.message, propValue);
@@ -857,7 +857,7 @@ let DateRangePicker = Context.withContext(
       delete result.toFeedback.value;
 
       if (this._compareDates(fromValue, toValue, "greater")) {
-        result.toFeedback = { feedback: "error", message: this.getLsiComponent("dateInPast") };
+        result.toFeedback = { feedback: "error", message: this.getLsiValue("dateInPast") };
       }
 
       return result;

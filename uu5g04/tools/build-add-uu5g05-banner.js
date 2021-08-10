@@ -9,6 +9,7 @@ const pkg = require("../package.json");
 //     (watchout if SystemJS version gets updated)
 
 let g05Banners = {};
+let uu5stringg01CdnVersion;
 function getG05Banner(isMinified, filename) {
   if (g05Banners[isMinified] === undefined) {
     g05Banners[isMinified] = fs.readFileSync(
@@ -16,10 +17,25 @@ function getG05Banner(isMinified, filename) {
       "utf-8"
     );
   }
+
+  if (uu5stringg01CdnVersion === undefined) {
+    let uu5g05Pkg = require("uu5g05/package.json");
+    let uu5stringg01VersionSpec = (uu5g05Pkg.dependencies || {})["uu5stringg01"] || "";
+    let match = uu5stringg01VersionSpec.match(/^([^]?)(\d+)\.\d+\.\d+$/);
+    if (match) {
+      uu5stringg01CdnVersion = match[2] + ".0.0";
+    } else {
+      let uu5g05Dir = require.resolve("uu5g05/package.json").replace(/[/\\][^/\\]*$/, "");
+      let uu5stringg01Pkg = require(require.resolve("uu5stringg01/package.json", { paths: [uu5g05Dir] }));
+      uu5stringg01CdnVersion = uu5stringg01Pkg.version.replace(/\..*/, "") + ".0.0";
+    }
+  }
+
   return replaceExpressions(g05Banners[isMinified], {
     NAME_REGEXP: filename.replace(/[.?*+^$[\]\\(){}|]/g, "\\$&").replace(/(\\\.min)?\\\.js$/, "(?:\\.min)?\\.js"),
     VERSION: pkg.version,
     MAJOR_VERSION: pkg.version.replace(/\..*/, ""),
+    UU5STRINGG01_CDN_VERSION: uu5stringg01CdnVersion,
   });
 }
 

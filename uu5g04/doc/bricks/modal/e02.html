@@ -24,8 +24,8 @@
     SystemJS.config({
       "paths": {
         "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
-        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
-        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
         "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
         "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
 
@@ -105,11 +105,19 @@
             size="max"
             header='size="max"'
           >
-            This modal has props <UU5.Bricks.Code content='size'/> of value <UU5.Bricks.Code content='"max"'/> and therefore will always take up the whole screen.
+            This modal has props <UU5.Bricks.Code content='size'/> of value <UU5.Bricks.Code content='"max"'/> and therefore will always take up the whole screen width.
           </UU5.Bricks.Modal>
 
           <UU5.Bricks.Modal
             ref_={modal => this.modal7 = modal}
+            fullscreen
+            header='fullscreen'
+          >
+            This modal has props <UU5.Bricks.Code content='fullscreen'/> of value <UU5.Bricks.Code content='true'/> and therefore will always take up the whole screen.
+          </UU5.Bricks.Modal>
+
+          <UU5.Bricks.Modal
+            ref_={modal => this.modal8 = modal}
             offsetTop={200}
             header='offsetTop={200}'
           >
@@ -117,7 +125,7 @@
           </UU5.Bricks.Modal>
 
           <UU5.Bricks.Modal
-            ref_={modal => this.modal8 = modal}
+            ref_={modal => this.modal9 = modal}
             offsetTop="auto"
             header='offsetTop="auto"'
           >
@@ -125,7 +133,7 @@
           </UU5.Bricks.Modal>
 
           <UU5.Bricks.Modal
-            ref_={modal => this.modal9 = modal}
+            ref_={modal => this.modal10 = modal}
             onClose={(object) => {
               object.component.close(false);
               alert('Closed by ' + object.closeType);
@@ -172,20 +180,26 @@
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
 
+          <UU5.Bricks.Section header="fullscreen">
+            {/*@@viewOn:0*/}
+            <UU5.Bricks.Button content='fullscreen' onClick={() => this.modal7.open()}/>
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
           <UU5.Bricks.Section header="offsetTop">
             {/*@@viewOn:0*/}
-            <UU5.Bricks.Button content='offsetTop={200}' onClick={() => this.modal7.open()}/>
+            <UU5.Bricks.Button content='offsetTop={200}' onClick={() => this.modal8.open()}/>
             {/*@@viewOff:0*/}
             <br />
             <br />
             {/*@@viewOn:0*/}
-            <UU5.Bricks.Button content='offsetTop="auto"' onClick={() => this.modal8.open()}/>
+            <UU5.Bricks.Button content='offsetTop="auto"' onClick={() => this.modal9.open()}/>
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
 
           <UU5.Bricks.Section header="onClose">
             {/*@@viewOn:0*/}
-            <UU5.Bricks.Button content='onClose' onClick={() => this.modal9.open()}/>
+            <UU5.Bricks.Button content='onClose' onClick={() => this.modal10.open()}/>
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
 

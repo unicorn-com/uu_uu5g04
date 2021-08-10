@@ -35,9 +35,10 @@ if (typeof SystemJS !== "undefined" && SystemJS && typeof SystemJS.normalizeSync
           var normalizedNameUu5stringg01 = SystemJS.normalizeSync("uu5stringg01");
           var isConfiguredUu5stringg01 = !normalizedNameUu5stringg01.match(/uu5stringg01$/);
           if (!isConfiguredUu5stringg01) {
+            var cdnBaseUri = (typeof UU5 !== "undefined" && (UU5.Environment || {}).cdnBaseUri || "https://cdn.plus4u.net").replace(/\/*$/, "");
             SystemJS.config({
               paths: {
-                "uu5stringg01": baseUri + "uu5stringg01/uu5stringg01" + minSuffix + ".js"
+                "uu5stringg01": cdnBaseUri + "/uu-uu5stringg01/<%=UU5STRINGG01_CDN_VERSION%>/uu5stringg01" + minSuffix + ".js"
               }
             });
           }

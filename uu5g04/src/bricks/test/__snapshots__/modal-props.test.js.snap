@@ -690,6 +690,72 @@ exports[`UU5.Bricks.Modal props forceRender=true 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Modal props fullscreen=false 1`] = `
+<div
+  className="uu5-bricks-modal uu5-common-hidden"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper"
+  >
+    <modal-header
+      _onClose={[Function]}
+      content="noHeader"
+      id="uuID-header"
+      key="uuID-header"
+      underline={false}
+    />
+    <modal-body
+      content="noBody"
+      id="uuID-body"
+      key="uuID-body"
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Modal props fullscreen=true 1`] = `
+<div
+  className="uu5-bricks-modal uu5-common-hidden"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m uu5-bricks-modal-layout-wrapper uu-bricks-r58rvk"
+  >
+    <modal-header
+      _onClose={[Function]}
+      content="noHeader"
+      id="uuID-header"
+      key="uuID-header"
+      underline={false}
+    />
+    <modal-body
+      content="noBody"
+      id="uuID-body"
+      key="uuID-body"
+    />
+  </div>
+</div>
+`;
+
 exports[`UU5.Bricks.Modal props header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <div
   className="uu5-bricks-modal uu5-common-hidden"

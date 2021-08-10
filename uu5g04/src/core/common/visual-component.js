@@ -48,68 +48,12 @@ export class VisualComponent {
 
   static create(componentDescriptor) {
     return createComponent(componentDescriptor, true);
-
-    // TODO Optimization is temporarily disabled, until it gets fully tested.
-    // // NOTE Assuming that we perform postponing of createReactClass() calls also in "test" environment,
-    // // there'll be the following issue: UU5.Bricks.Button would be a forwardRef component, <UU5.Bricks.Button />
-    // // would be an element but its "type" wouldn't be UU5.Bricks.Button (because UU5.Common.Element.create in element.js
-    // // is used and it replaces it with lazy-initialized original Button class, not forwardRef),
-    // // therefore `wrapper.find(UU5.Bricks.Button)` wouldn't work.
-    // //   => skip the optimization in "test" environments
-    // if (process.env.NODE_ENV === "test") return createComponent(componentDescriptor, true);
-
-    // // skip the optimization for simple components (not worth introducing forwardRef)
-    // if (!componentDescriptor.mixins) return createComponent(componentDescriptor, true);
-
-    // // postpone the actual component creation until its 1st render
-    // let Component;
-    // let Wrapper = React.forwardRef((props, ref) => {
-    //   if (Component === undefined) init();
-    //   return <Component {...props} ref={ref} />;
-    // });
-
-    // let { statics, displayName, propTypes, getDefaultProps, mixins } = componentDescriptor;
-    // let tagName = (statics || {}).tagName;
-    // if (!displayName) displayName = tagName;
-    // if (tagName) Wrapper.tagName = tagName;
-    // if (displayName) Wrapper.displayName = displayName;
-    // if (propTypes) Wrapper["prop" + "Types"] = propTypes; // NOTE This prevents this line to be removed by babel-plugin-transform-react-remove-prop-types (some libraries use propTypes even in minified versions, e.g. uu_productcatalogueg01@1.12.0).
-    // if (getDefaultProps || mixins) {
-    //   Wrapper.getDefaultProps = function() {
-    //     return (Component || init()).getDefaultProps();
-    //   };
-    //   if (process.env.NODE_ENV !== "production") Wrapper.getDefaultProps.isReactClassApproved = true;
-    // }
-    // Wrapper.isUu5PureComponent = true;
-
-    // let init = function() {
-    //   if (!Component) {
-    //     Component = createComponent(componentDescriptor, true);
-    //     for (let k of Object.getOwnPropertyNames(Wrapper)) {
-    //       try {
-    //         if (!(k in Component)) Component[k] = Wrapper[k];
-    //       } catch (e) {} // needed for IE for special properties like "caller"
-    //     }
-    //     Wrapper[SYMBOL_COMPONENT] = Component;
-    //   }
-    //   return Component;
-    // };
-    // Wrapper[SYMBOL_INIT] = init;
-    // Object.defineProperty(Wrapper, SYMBOL_GUARD, {
-    //   enumerable: false,
-    //   configurable: false,
-    //   value: Wrapper
-    // });
-
-    // if (statics) {
-    //   for (let k in statics) Wrapper[k] = statics[k]; // so that component's own statics (defaults, opt, ...) are available
-    // }
-
-    // return Wrapper;
   }
 
   static getAttrs(props, nextClassName) {
-    return Utils.VisualComponent.getAttrs(props, nextClassName);
+    const attrs = Utils.VisualComponent.getAttrs({ ...props, elementAttrs: props.mainAttrs }, nextClassName);
+    delete attrs.ref;
+    return attrs;
   }
 }
 
@@ -131,7 +75,7 @@ function addBasicVisualPropsPreprocessor(componentDescriptor) {
         };
       } else if (typeof componentDescriptor.getDefaultProps === "function") {
         let origGDP = componentDescriptor.getDefaultProps;
-        componentDescriptor.getDefaultProps = function () {
+        componentDescriptor.getDefaultProps = function() {
           let result = origGDP.apply(this);
           return {
             ...VisualComponent.defaultProps,
@@ -145,6 +89,7 @@ function addBasicVisualPropsPreprocessor(componentDescriptor) {
   }
   return componentDescriptor;
 }
+
 addBasicVisualPropsPreprocessor.isVisual = true;
 
 export default VisualComponent;

@@ -72,6 +72,8 @@ const TIME_FORMAT_24 = "24";
 const COOKIE_CSRF_TOKEN = "uu.app.csrf";
 
 export const Tools = {
+  _languageProviderValue: null, // for sync-ing Tools.setLanguage, getLanguage with root LanguageProvider
+
   ELEVATIONS: {
     "-1": "inset 0 1px 5px 0 rgba(0,0,0,.14),inset 0 2px 4px 0 rgba(0,0,0,.3),inset 0 1px 5px 0 rgba(0,0,0,.15)",
     "1": "0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.12),0 1px 5px 0 rgba(0,0,0,.2)",
@@ -1798,6 +1800,9 @@ Tools.getLanguages = (language) => {
 };
 
 Tools.getLanguage = () => {
+  if (Tools._languageProviderValue) {
+    return Tools._languageProviderValue.language;
+  }
   return EnvTools.getLanguage();
 };
 
@@ -1805,7 +1810,11 @@ Tools.setLanguage = (language) => {
   Tools.setLanguages(language);
   let lang = Environment.languages[0];
   if (lang) {
-    Lsi.setLanguage(lang.location || lang.language);
+    if (Tools._languageProviderValue) {
+      Tools._languageProviderValue.setLanguage(lang.location || lang.language);
+    } else {
+      Lsi.setLanguage(lang.location || lang.language);
+    }
     Environment.setDateTimeCountry(lang.language);
     Environment.setNumberCountry(lang.language);
   }

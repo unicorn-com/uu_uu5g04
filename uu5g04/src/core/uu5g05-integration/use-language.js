@@ -13,11 +13,30 @@
  * Praha 3, Czech Republic or at the email: info@unicorn.com.
  */
 
-import { useLanguage, useContext, useEffect, useRef, useState, usePreviousValue, Utils } from "uu5g05";
+import {
+  useLanguage,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+  usePreviousValue,
+  Utils,
+  LanguageProvider,
+} from "uu5g05";
 import Tools from "../common/tools";
 
 const Language = Utils.Language;
 const LanguageContext = useLanguage._context;
+
+LanguageProvider._uu5g04Integrate = (ctxValue) => {
+  let parentCtxValue = useContext(LanguageContext);
+  let isRoot = !parentCtxValue || Object.keys(parentCtxValue).length === 0;
+  if (isRoot) Tools._languageProviderValue = ctxValue;
+  useEffect(() => {
+    return () => Tools._languageProviderValue = null;
+  }, []);
+};
+
 useLanguage._override = function (g05Hook, ...hookArgs) {
   const { language, setLanguage } = useLanguageContext();
   const [lang, setLang] = useState(() => Language.getLanguage());

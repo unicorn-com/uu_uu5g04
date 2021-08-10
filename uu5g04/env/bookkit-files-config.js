@@ -180,6 +180,7 @@ module.exports = {
     // "UU5.Common.UU5Json",
     // "UU5.Common.UU5String",
     // "UU5.Common.VucMixin",
+    // "UU5.Common.withStickyTop",
     // "UU5.Common.withVisibilityCheck",
     // "UU5.Environment.Speech",
     // "UU5.Forms.ColorPicker",
@@ -230,6 +231,7 @@ module.exports = {
     // "UU5.Hooks.usePreviousValue",
     // "UU5.Hooks.useScreenSize",
     // "UU5.Hooks.useSession",
+    // "UU5.Hooks.useStickyTop",
     // "UU5.Hooks.useUnmountedRef",
   ]
 };

@@ -1151,7 +1151,7 @@ let DateTimeRangePicker = Context.withContext(
       delete result.toFeedback.value;
 
       if (this._compareDates(fromValue, toValue, "greater")) {
-        result.toFeedback = { feedback: "error", message: this.getLsiComponent("dateInPast") };
+        result.toFeedback = { feedback: "error", message: this.getLsiValue("dateInPast") };
       }
 
       return result;

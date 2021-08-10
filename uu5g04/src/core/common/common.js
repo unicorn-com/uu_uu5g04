@@ -15,7 +15,7 @@
 
 // devkit-pure-exports
 export * from "./common-extra-exports.js";
-export { Fragment } from "uu5g05";
+export { Fragment, withStickyTop } from "uu5g05";
 
 export * from "./css.js";
 export * from "./tools.js";

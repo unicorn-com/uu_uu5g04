@@ -18,8 +18,9 @@ import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-bricks";
 import "uu5g04-forms";
+import { LanguageProvider, useLanguage } from "uu5g05";
 
-const { mount, shallow, wait } = UU5.Test.Tools;
+const { mount, shallow, wait, initHookRenderer, act } = UU5.Test.Tools;
 
 //NOTE: scrollToFragment and CopyToClipboard ifc will be tested by selenium.
 
@@ -424,6 +425,24 @@ describe("UU5.Common.Tools interface", () => {
     expect(UU5.Common.Tools.getLanguage()).toMatchSnapshot();
     const newLanguage2 = UU5.Common.Tools.setLanguage("cs-CZ");
     expect(UU5.Common.Tools.getLanguage()).toMatchSnapshot();
+  });
+
+  it("Tools.setLanguage(language) syncing with top-level LanguageProvider", () => {
+    let { lastResult, HookComponent } = initHookRenderer(useLanguage);
+    UU5.Common.Tools.setLanguage("en");
+    mount(
+      <LanguageProvider initialLanguage="en">
+        <HookComponent />
+      </LanguageProvider>
+    );
+    act(() => {
+      lastResult()[1]("cs");
+    });
+    expect(UU5.Common.Tools.getLanguage()).toEqual("cs");
+    act(() => {
+      UU5.Common.Tools.setLanguage("sk");
+    });
+    expect(UU5.Common.Tools.getLanguage()).toEqual("sk");
   });
 
   it("Tools.getLsiValue(lsi, language, params)", () => {

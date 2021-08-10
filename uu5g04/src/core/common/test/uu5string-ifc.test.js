@@ -540,7 +540,7 @@ describe("UU5.Common.Uu5.String. - test of interface of class", () => {
     let props = uu5string.toChildren()[0].props;
     expect(props.propWithDefault).toEqual("default");
     expect(props.prop).toEqual("${temp}");
-    expect(uu5string.toString()).toEqual('<UU5.Bricks.Div propWithDefault="default" prop="${temp}"/>');
+    expect(uu5string.toString()).toEqual('<UU5.Bricks.Div propWithDefault="${temp:default}" prop="${temp}"/>');
 
     // null data - templates does not been evaluated at all
     props = uu5string.toChildren(null)[0].props;

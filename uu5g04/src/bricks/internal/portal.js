@@ -12,6 +12,7 @@ export const PortalElementContext = UU5.Common.Context.create({
     if (!result) {
       result = document.createElement("div");
       result.setAttribute("id", "uu5-common-portal-" + layer);
+      if (layer === "alert-bus") result.style.cssText = "z-index: 1100; position: fixed; top: 0; left: 0; right: 0;";
       document.body.appendChild(result);
     }
     return result;

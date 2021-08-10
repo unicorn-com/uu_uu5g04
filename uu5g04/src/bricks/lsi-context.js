@@ -19,7 +19,7 @@ import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 //@@viewOff:imports
 
-export const LsiContext = UU5.Common.VisualComponent.create({
+let LsiContext = UU5.Common.VisualComponent.create({
   displayName: "LsiContext", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
   mixins: [UU5.Common.BaseMixin, UU5.Common.ContentMixin],
@@ -51,7 +51,7 @@ export const LsiContext = UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     this._listeners = {};
-    this._globalLanguage = UU5.Common.Tools.getLanguage();
+    this._globalLanguage = this.props._nonLsiContextLanguageProviderValue?.language || UU5.Common.Tools.getLanguage();
     this._localLanguage = this._globalLanguage;
     return {
       providerValue: {
@@ -59,6 +59,7 @@ export const LsiContext = UU5.Common.VisualComponent.create({
         getLanguage: this.getLanguage,
         registerLsi: this._registerLsi,
         unregisterLsi: this._unregisterLsi,
+        _nonLsiContextLanguageProviderValue: this.props._nonLsiContextLanguageProviderValue,
       },
     };
   },
@@ -69,6 +70,14 @@ export const LsiContext = UU5.Common.VisualComponent.create({
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (this.props.localLsi !== nextProps.localLsi) {
+      this._fireEvent(this._getContextLanguage(nextProps));
+    } else if (this.props._nonLsiContextLanguageProviderValue !== nextProps._nonLsiContextLanguageProviderValue) {
+      this.setState((v) => ({
+        providerValue: {
+          ...v.providerValue,
+          _nonLsiContextLanguageProviderValue: nextProps._nonLsiContextLanguageProviderValue,
+        },
+      }));
       this._fireEvent(this._getContextLanguage(nextProps));
     }
   },
@@ -127,12 +136,17 @@ export const LsiContext = UU5.Common.VisualComponent.create({
     if (props.localLsi) {
       return this._localLanguage;
     }
+    if (props._nonLsiContextLanguageProviderValue) {
+      return props._nonLsiContextLanguageProviderValue.language;
+    }
     return this._globalLanguage;
   },
 
   _setContextLanguage(language) {
     if (this.props.localLsi) {
       this._setLocalLanguage(language);
+    } else if (this.props._nonLsiContextLanguageProviderValue) {
+      this.props._nonLsiContextLanguageProviderValue.setLanguage(language);
     } else {
       // cause _onChangeLanguage
       UU5.Common.Tools.setLanguage(language);
@@ -148,7 +162,7 @@ export const LsiContext = UU5.Common.VisualComponent.create({
 
   _setGlobalLanguage(language) {
     this._globalLanguage = language;
-    if (!this.props.localLsi) {
+    if (!this.props.localLsi && !this.props._nonLsiContextLanguageProviderValue) {
       this._fireEvent(language);
     }
   },
@@ -171,4 +185,39 @@ export const LsiContext = UU5.Common.VisualComponent.create({
   //@@viewOff:render
 });
 
+// uu5g05 integration - when using localLsi=false we want to ignore our parent LanguageProvider (more precisely parent LsiContext)
+// and instead use root LanguageProvider (nearest LanguageProvider that isn't LsiContext); because uu5g05 doesn't have "global" language
+function withNearestNonLsiContextLanguageProvider(Component) {
+  let forwardRef = UU5.Common.Reference.forward((props, ref) => {
+    return (
+      <UU5.Common.LsiMixin.Context.Consumer>
+        {(ctxValue) => {
+          let { setLanguage, language, _nonLsiContextLanguageProviderValue } = ctxValue;
+          let isFromHookProvider = typeof setLanguage === "function" && language !== undefined;
+          if (isFromHookProvider) _nonLsiContextLanguageProviderValue = ctxValue;
+          if (!_nonLsiContextLanguageProviderValue || Object.keys(_nonLsiContextLanguageProviderValue).length === 0) {
+            _nonLsiContextLanguageProviderValue = null;
+          }
+          return (
+            <Component {...props} ref={ref} _nonLsiContextLanguageProviderValue={_nonLsiContextLanguageProviderValue} />
+          );
+        }}
+      </UU5.Common.LsiMixin.Context.Consumer>
+    );
+  });
+
+  forwardRef.isUu5PureComponent = true;
+  forwardRef.displayName = `forwardRef(${Component.displayName || Component.name || "Component"})`;
+  forwardRef.tagName = Component.tagName;
+  Object.assign(forwardRef, getStatics(Component)); // statics have to be added because DccWrapper reads them
+
+  return forwardRef;
+}
+function getStatics({ classNames, defaults, nestingLevel, lsi, errors, warnings, opt }) {
+  return { classNames, defaults, nestingLevel, lsi, errors, warnings, opt };
+}
+
+LsiContext = withNearestNonLsiContextLanguageProvider(LsiContext);
+
+export { LsiContext };
 export default LsiContext;
