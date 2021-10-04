@@ -71,6 +71,12 @@ const CONFIG = {
     hideOtherSections: {
       values: [true, false],
     },
+    clickableWeekNumber: {
+      values: [true, false],
+      requiredProps: {
+        selectionMode: "range",
+      },
+    },
     // onChange
     // onNextSelection
     // onPrevSelection

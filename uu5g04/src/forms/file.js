@@ -728,6 +728,7 @@ export const File = Context.withContext(
     _getFileInput() {
       return (
         <input
+          {...this.props.inputAttrs}
           key="fileinput"
           type="file"
           id={this.getId() + "-file"}

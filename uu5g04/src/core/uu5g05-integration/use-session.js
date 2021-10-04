@@ -117,9 +117,9 @@ const SessionProvider = createComponent({
         sessionState = "notAuthenticated";
       }
 
-      // NOTE Keep value in sync with uu5g04/src/core/common/session.js.
+      // NOTE Keep value in sync with uu5g05.
       return {
-        sessionState,
+        state: sessionState,
         identity,
         isExpiring,
         session,

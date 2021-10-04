@@ -757,6 +757,1525 @@ exports[`UU5.Bricks.Calendar className="my-classname" 1`] = `
 </div>
 `;
 
+exports[`UU5.Bricks.Calendar clickableWeekNumber=false 1`] = `
+<div
+  className="uu5-bricks-calendar uu5-forms-calendar uu5-bricks-calendar-range uu5-forms-calendar-range"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-bricks-calendar-main-wrapper uu5-forms-calendar-main-wrapper"
+  >
+    <span
+      className="uu5-bricks-calendar-week-highlight uu5-forms-calendar-week-highlight"
+    />
+    <table
+      cellPadding={0}
+      className="uu5-bricks-calendar-table table-condensed uu5-forms-calendar-table uu5-bricks-calendar-month-table uu5-forms-calendar-month-table"
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <thead
+        className="uu5-bricks-calendar-thead uu5-forms-calendar-thead"
+      >
+        <tr
+          className="uu5-bricks-calendar-head-row uu5-forms-calendar-head-row"
+        >
+          <th
+            className="uu5-bricks-calendar-head-cell-prev uu5-forms-calendar-head-cell-prev"
+            onClick={[Function]}
+          >
+            <Icon
+              className="uu5-bricks-calendar-icon uu5-forms-calendar-icon"
+              icon="mdi-chevron-left"
+            />
+          </th>
+          <th
+            className="uu5-bricks-calendar-head-cell-header uu5-forms-calendar-head-cell-header"
+            colSpan="6"
+            onClick={[Function]}
+          >
+            January 2019
+          </th>
+          <th
+            className="uu5-bricks-calendar-head-cell-next uu5-forms-calendar-head-cell-next"
+            onClick={[Function]}
+          >
+            <Icon
+              className="uu5-bricks-calendar-icon uu5-forms-calendar-icon"
+              icon="mdi-chevron-right"
+            />
+          </th>
+        </tr>
+        <tr
+          className="uu5-bricks-calendar-day-names uu5-forms-calendar-day-names"
+        >
+          <th
+            className="uu5-bricks-calendar-day-name uu5-forms-calendar-day-name"
+            key="weekNumber"
+          >
+            <div
+              className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+            />
+          </th>
+          <th
+            className="uu5-bricks-calendar-day-name uu5-forms-calendar-day-name"
+            key="Monday"
+            title="Monday"
+          >
+            <div
+              className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+            >
+              Mo
+            </div>
+          </th>
+          <th
+            className="uu5-bricks-calendar-day-name uu5-forms-calendar-day-name"
+            key="Tuesday"
+            title="Tuesday"
+          >
+            <div
+              className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+            >
+              Tu
+            </div>
+          </th>
+          <th
+            className="uu5-bricks-calendar-day-name uu5-forms-calendar-day-name"
+            key="Wednesday"
+            title="Wednesday"
+          >
+            <div
+              className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+            >
+              We
+            </div>
+          </th>
+          <th
+            className="uu5-bricks-calendar-day-name uu5-forms-calendar-day-name"
+            key="Thursday"
+            title="Thursday"
+          >
+            <div
+              className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+            >
+              Th
+            </div>
+          </th>
+          <th
+            className="uu5-bricks-calendar-day-name uu5-forms-calendar-day-name"
+            key="Friday"
+            title="Friday"
+          >
+            <div
+              className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+            >
+              Fr
+            </div>
+          </th>
+          <th
+            className="uu5-bricks-calendar-day-name uu5-forms-calendar-day-name"
+            key="Saturday"
+            title="Saturday"
+          >
+            <div
+              className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+            >
+              Sa
+            </div>
+          </th>
+          <th
+            className="uu5-bricks-calendar-day-name uu5-forms-calendar-day-name"
+            key="Sunday"
+            title="Sunday"
+          >
+            <div
+              className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+            >
+              Su
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          className="uu5-bricks-calendar-week uu5-forms-calendar-week"
+          key="row-2019-01-05T23:00:00.000Z"
+        >
+          <th
+            className="uu5-bricks-calendar-week-number uu5-forms-calendar-week-number"
+            key="week-1"
+          >
+            <div
+              className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+            >
+              1.
+            </div>
+          </th>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-another-section uu5-forms-calendar-another-section"
+            key="day-2018-12-30T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                31
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2018-12-31T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                1
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-01T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                2
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-02T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                3
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-03T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                4
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-04T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                5
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-05T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                6
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="uu5-bricks-calendar-week uu5-forms-calendar-week"
+          key="row-2019-01-12T23:00:00.000Z"
+        >
+          <th
+            className="uu5-bricks-calendar-week-number uu5-forms-calendar-week-number"
+            key="week-2"
+          >
+            <div
+              className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+            >
+              2.
+            </div>
+          </th>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-06T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                7
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-07T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                8
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-08T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                9
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-09T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                10
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-10T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                11
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-11T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                12
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-12T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                13
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="uu5-bricks-calendar-week uu5-forms-calendar-week"
+          key="row-2019-01-19T23:00:00.000Z"
+        >
+          <th
+            className="uu5-bricks-calendar-week-number uu5-forms-calendar-week-number"
+            key="week-3"
+          >
+            <div
+              className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+            >
+              3.
+            </div>
+          </th>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-13T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                14
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-14T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                15
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-15T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                16
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-16T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                17
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-17T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                18
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-18T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                19
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-19T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                20
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="uu5-bricks-calendar-week uu5-forms-calendar-week"
+          key="row-2019-01-26T23:00:00.000Z"
+        >
+          <th
+            className="uu5-bricks-calendar-week-number uu5-forms-calendar-week-number"
+            key="week-4"
+          >
+            <div
+              className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+            >
+              4.
+            </div>
+          </th>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-20T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                21
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-21T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                22
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-22T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                23
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-23T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                24
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-today uu5-forms-calendar-today"
+            key="day-2019-01-24T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                <span
+                  className="uu5-bricks-calendar-underline uu5-forms-calendar-underline"
+                >
+                  25
+                </span>
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-25T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                26
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-26T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                27
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="uu5-bricks-calendar-week uu5-forms-calendar-week"
+          key="row-2019-02-02T23:00:00.000Z"
+        >
+          <th
+            className="uu5-bricks-calendar-week-number uu5-forms-calendar-week-number"
+            key="week-5"
+          >
+            <div
+              className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+            >
+              5.
+            </div>
+          </th>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-27T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                28
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-28T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                29
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-29T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                30
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-30T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                31
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-another-section uu5-forms-calendar-another-section"
+            key="day-2019-01-31T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                1
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-another-section uu5-forms-calendar-another-section"
+            key="day-2019-02-01T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                2
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-another-section uu5-forms-calendar-another-section"
+            key="day-2019-02-02T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                3
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="uu5-bricks-calendar-filler-day-row"
+          key="filler-row"
+        />
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Calendar clickableWeekNumber=true 1`] = `
+<div
+  className="uu5-bricks-calendar uu5-forms-calendar uu5-bricks-calendar-range uu5-forms-calendar-range"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-bricks-calendar-main-wrapper uu5-forms-calendar-main-wrapper"
+  >
+    <span
+      className="uu5-bricks-calendar-week-highlight uu5-forms-calendar-week-highlight"
+    />
+    <table
+      cellPadding={0}
+      className="uu5-bricks-calendar-table table-condensed uu5-forms-calendar-table uu5-bricks-calendar-month-table uu5-forms-calendar-month-table"
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <thead
+        className="uu5-bricks-calendar-thead uu5-forms-calendar-thead"
+      >
+        <tr
+          className="uu5-bricks-calendar-head-row uu5-forms-calendar-head-row"
+        >
+          <th
+            className="uu5-bricks-calendar-head-cell-prev uu5-forms-calendar-head-cell-prev"
+            onClick={[Function]}
+          >
+            <Icon
+              className="uu5-bricks-calendar-icon uu5-forms-calendar-icon"
+              icon="mdi-chevron-left"
+            />
+          </th>
+          <th
+            className="uu5-bricks-calendar-head-cell-header uu5-forms-calendar-head-cell-header"
+            colSpan="6"
+            onClick={[Function]}
+          >
+            January 2019
+          </th>
+          <th
+            className="uu5-bricks-calendar-head-cell-next uu5-forms-calendar-head-cell-next"
+            onClick={[Function]}
+          >
+            <Icon
+              className="uu5-bricks-calendar-icon uu5-forms-calendar-icon"
+              icon="mdi-chevron-right"
+            />
+          </th>
+        </tr>
+        <tr
+          className="uu5-bricks-calendar-day-names uu5-forms-calendar-day-names"
+        >
+          <th
+            className="uu5-bricks-calendar-day-name uu5-forms-calendar-day-name"
+            key="weekNumber"
+          >
+            <div
+              className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+            />
+          </th>
+          <th
+            className="uu5-bricks-calendar-day-name uu5-forms-calendar-day-name"
+            key="Monday"
+            title="Monday"
+          >
+            <div
+              className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+            >
+              Mo
+            </div>
+          </th>
+          <th
+            className="uu5-bricks-calendar-day-name uu5-forms-calendar-day-name"
+            key="Tuesday"
+            title="Tuesday"
+          >
+            <div
+              className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+            >
+              Tu
+            </div>
+          </th>
+          <th
+            className="uu5-bricks-calendar-day-name uu5-forms-calendar-day-name"
+            key="Wednesday"
+            title="Wednesday"
+          >
+            <div
+              className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+            >
+              We
+            </div>
+          </th>
+          <th
+            className="uu5-bricks-calendar-day-name uu5-forms-calendar-day-name"
+            key="Thursday"
+            title="Thursday"
+          >
+            <div
+              className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+            >
+              Th
+            </div>
+          </th>
+          <th
+            className="uu5-bricks-calendar-day-name uu5-forms-calendar-day-name"
+            key="Friday"
+            title="Friday"
+          >
+            <div
+              className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+            >
+              Fr
+            </div>
+          </th>
+          <th
+            className="uu5-bricks-calendar-day-name uu5-forms-calendar-day-name"
+            key="Saturday"
+            title="Saturday"
+          >
+            <div
+              className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+            >
+              Sa
+            </div>
+          </th>
+          <th
+            className="uu5-bricks-calendar-day-name uu5-forms-calendar-day-name"
+            key="Sunday"
+            title="Sunday"
+          >
+            <div
+              className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+            >
+              Su
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          className="uu5-bricks-calendar-week uu5-forms-calendar-week"
+          key="row-2019-01-05T23:00:00.000Z"
+        >
+          <th
+            className="uu5-bricks-calendar-week-number uu5-forms-calendar-week-number uu-bricks-17waqzb"
+            key="week-1"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+            >
+              1.
+            </div>
+          </th>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-another-section uu5-forms-calendar-another-section"
+            key="day-2018-12-30T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                31
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2018-12-31T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                1
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-01T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                2
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-02T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                3
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-03T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                4
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-04T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                5
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-05T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                6
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="uu5-bricks-calendar-week uu5-forms-calendar-week"
+          key="row-2019-01-12T23:00:00.000Z"
+        >
+          <th
+            className="uu5-bricks-calendar-week-number uu5-forms-calendar-week-number uu-bricks-17waqzb"
+            key="week-2"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+            >
+              2.
+            </div>
+          </th>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-06T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                7
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-07T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                8
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-08T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                9
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-09T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                10
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-10T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                11
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-11T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                12
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-12T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                13
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="uu5-bricks-calendar-week uu5-forms-calendar-week"
+          key="row-2019-01-19T23:00:00.000Z"
+        >
+          <th
+            className="uu5-bricks-calendar-week-number uu5-forms-calendar-week-number uu-bricks-17waqzb"
+            key="week-3"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+            >
+              3.
+            </div>
+          </th>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-13T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                14
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-14T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                15
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-15T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                16
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-16T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                17
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-17T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                18
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-18T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                19
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-19T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                20
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="uu5-bricks-calendar-week uu5-forms-calendar-week"
+          key="row-2019-01-26T23:00:00.000Z"
+        >
+          <th
+            className="uu5-bricks-calendar-week-number uu5-forms-calendar-week-number uu-bricks-17waqzb"
+            key="week-4"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+            >
+              4.
+            </div>
+          </th>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-20T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                21
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-21T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                22
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-22T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                23
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-23T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                24
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-today uu5-forms-calendar-today"
+            key="day-2019-01-24T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                <span
+                  className="uu5-bricks-calendar-underline uu5-forms-calendar-underline"
+                >
+                  25
+                </span>
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-25T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                26
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-26T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                27
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="uu5-bricks-calendar-week uu5-forms-calendar-week"
+          key="row-2019-02-02T23:00:00.000Z"
+        >
+          <th
+            className="uu5-bricks-calendar-week-number uu5-forms-calendar-week-number uu-bricks-17waqzb"
+            key="week-5"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+            >
+              5.
+            </div>
+          </th>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-27T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                28
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-28T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                29
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-29T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                30
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-active-section uu5-forms-calendar-active-section"
+            key="day-2019-01-30T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                31
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-another-section uu5-forms-calendar-another-section"
+            key="day-2019-01-31T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                1
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-another-section uu5-forms-calendar-another-section"
+            key="day-2019-02-01T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                2
+              </div>
+            </div>
+          </td>
+          <td
+            className="uu5-bricks-calendar-cell uu5-forms-calendar-cell uu5-bricks-calendar-day uu5-forms-calendar-day uu5-bricks-calendar-another-section uu5-forms-calendar-another-section"
+            key="day-2019-02-02T23:00:00.000Z"
+            onClick={[Function]}
+          >
+            <div
+              className="uu5-bricks-calendar-range-selection uu5-bricks-calendar-day-cell-selection uu5-forms-calendar-day-cell-selection"
+            >
+              <div
+                className="uu5-bricks-calendar-day-cell uu5-forms-calendar-day-cell"
+              >
+                3
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="uu5-bricks-calendar-filler-day-row"
+          key="filler-row"
+        />
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
 exports[`UU5.Bricks.Calendar controlled=false 1`] = `
 <div
   className="uu5-bricks-calendar uu5-forms-calendar"

@@ -560,6 +560,8 @@ export const InputMixin = {
       component: this,
     };
     if (typeof this.props.onChangeFeedback === "function") {
+      opt.callback = () => {};
+      this.setState({}, setStateCallback);
       this.props.onChangeFeedback(opt);
     } else {
       this.onChangeFeedbackDefault(opt);

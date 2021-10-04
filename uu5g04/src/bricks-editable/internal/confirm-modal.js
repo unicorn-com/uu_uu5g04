@@ -82,8 +82,10 @@ export const ConfirmModal = UU5.Common.VisualComponent.create({
         content={this.props.bodyContent}
         size="m"
         header={this.props.headerContent}
+        registerToModalBus={false}
         confirmButtonProps={{
           content: this.props.confirmButtonContent,
+          colorSchema: "danger",
         }}
         refuseButtonProps={{
           content: this.props.refuseButtonContent,

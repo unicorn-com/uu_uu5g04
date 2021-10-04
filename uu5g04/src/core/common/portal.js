@@ -16,6 +16,7 @@
 import { Utils } from "uu5g05";
 
 export class Portal {
-  static create = Utils.DOM.createPortal;
+  // TODO Remove Utils.DOM after uu5g05 >= 0.15.0 release.
+  static create = (Utils.Dom || Utils.DOM).createPortal;
 }
 export default Portal;

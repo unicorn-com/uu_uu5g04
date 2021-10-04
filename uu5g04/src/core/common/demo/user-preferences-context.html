@@ -48,7 +48,7 @@
         let forwardRef = UU5.Common.Reference.forward((props, ref) => {
           return (
             <UU5.Common.UserPreferencesContext.Consumer>
-              {(context) => <Component {...context} {...props} ref={ref} />}
+              {(context = {}) => <Component {...(context.userPreferences || context)} {...props} ref={ref} />}
             </UU5.Common.UserPreferencesContext.Consumer>
           );
         });

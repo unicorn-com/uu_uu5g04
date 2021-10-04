@@ -40,8 +40,8 @@
     .@{name}-input-form-item-value,
     .@{name}-daterangepicker-input-text,
     .@{name}-daterangepicker-input-value {
-      height: 32px;
-      line-height: 32px;
+      height: 30px;
+      line-height: 30px;
     }
 
     .@{name}-input-form-item-value {
@@ -62,8 +62,8 @@
     .@{name}-input-form-item-value,
     .@{name}-daterangepicker-input-text,
     .@{name}-daterangepicker-input-value {
-      height: 40px;
-      line-height: 40px;
+      height: 38px;
+      line-height: 38px;
     }
 
     .@{name}-input-form-item-value {
@@ -84,8 +84,8 @@
     .@{name}-input-form-item-value,
     .@{name}-daterangepicker-input-text,
     .@{name}-daterangepicker-input-value {
-      height: 48px;
-      line-height: 48px;
+      height: 46px;
+      line-height: 46px;
     }
 
     .@{name}-input-form-item-value {
@@ -237,98 +237,93 @@
         display: inline-flex !important; // important because of width measuring while popover is being positioned (white still hidden)
       }
     }
+  }
 
-    @media @isS {
-      .@{name}-input-wrapper-cover {
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
+  @media @isS {
+    .@{name}-input-wrapper-cover {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .@{name}-daterangepicker-from-label,
+    .@{name}-daterangepicker-to-label,
+    .@{name}-daterangepicker-calendar-input {
+      width: calc(50% - 4px);
+    }
+  }
+
+  @media @isXs {
+    .@{name}-input-wrapper-cover {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .@{name}-daterangepicker-calendar-input {
+      background-color: transparent;
+      width: calc(50% - 4px);
+    }
+  }
+
+  @media @isXs, @isS {
+    .uu5-bricks-popover {
+      min-width: auto;
+    }
+
+    .@{name}-daterangepicker-from-label,
+    .@{name}-daterangepicker-to-label,
+    .@{name}-daterangepicker-calendar-input {
+      width: calc(50% - 4px);
+    }
+
+    .@{name}-daterangepicker-from-input,
+    .@{name}-daterangepicker-from-label {
+      margin-right: 8px;
+    }
+
+    .@{name}-text-input.@{name}-daterangepicker-from-input,
+    .@{name}-text-input.@{name}-daterangepicker-to-input {
+      & > .uu5-bricks-icon {
+        left: 0;
+        right: inherit;
       }
 
-      .@{name}-daterangepicker-from-label,
-      .@{name}-daterangepicker-to-label,
-      .@{name}-daterangepicker-calendar-input {
-        width: calc(50% - 4px);
+      &.@{name}-input-s > input {
+        padding-left: 24px;
+      }
+
+      &.@{name}-input-m > input {
+        padding-left: 32px;
+      }
+
+      &.@{name}-input-l > input {
+        padding-left: 40px;
+      }
+
+      &.@{name}-input-xl > input {
+        padding-left: 48px;
       }
     }
 
-    @media @isXs {
-      .uu5-bricks-popover {
-        position: relative;
-        display: inline-flex;
-      }
-
-      .@{name}-input-wrapper-cover {
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-      }
-
-      .@{name}-daterangepicker-calendar-input {
-        background-color: transparent;
-        width: calc(50% - 4px);
-      }
-    }
-
-    @media @isXs, @isS {
-      .uu5-bricks-popover {
-        min-width: auto;
-      }
-
-      .@{name}-daterangepicker-from-label,
-      .@{name}-daterangepicker-to-label,
-      .@{name}-daterangepicker-calendar-input {
-        width: calc(50% - 4px);
-      }
-
-      .@{name}-daterangepicker-from-input,
-      .@{name}-daterangepicker-from-label {
-        margin-right: 8px;
-      }
-
+    &.@{name}-input-auto-width,
+    &.@{name}-input-label-width {
       .@{name}-text-input.@{name}-daterangepicker-from-input,
       .@{name}-text-input.@{name}-daterangepicker-to-input {
-        & > .uu5-bricks-icon {
-          left: 0;
-          right: inherit;
+        &.@{name}-input-s {
+          width: 112px;
         }
 
-        &.@{name}-input-s > input {
-          padding-left: 24px;
+        &.@{name}-input-m {
+          width: 136px;
         }
 
-        &.@{name}-input-m > input {
-          padding-left: 32px;
+        &.@{name}-input-l {
+          width: 160px;
         }
 
-        &.@{name}-input-l > input {
-          padding-left: 40px;
-        }
-
-        &.@{name}-input-xl > input {
-          padding-left: 48px;
-        }
-      }
-
-      &.@{name}-input-auto-width,
-      &.@{name}-input-label-width {
-        .@{name}-text-input.@{name}-daterangepicker-from-input,
-        .@{name}-text-input.@{name}-daterangepicker-to-input {
-          &.@{name}-input-s {
-            width: 112px;
-          }
-
-          &.@{name}-input-m {
-            width: 136px;
-          }
-
-          &.@{name}-input-l {
-            width: 160px;
-          }
-
-          &.@{name}-input-xl {
-            width: 180px;
-          }
+        &.@{name}-input-xl {
+          width: 180px;
         }
       }
     }

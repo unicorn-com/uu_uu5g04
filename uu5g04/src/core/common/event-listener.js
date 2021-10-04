@@ -102,7 +102,8 @@ export class EventListener {
   }
 
   triggerEvent() {
-    Utils.DOM._batchedUpdates(() => {
+    // TODO Remove Utils.DOM after uu5g05 >= 0.15.0 release.
+    (Utils.Dom || Utils.DOM)._batchedUpdates(() => {
       // i.e. arguments = ['lsi', 'cs-cz']
       let [key, ...params] = arguments;
       if (key === "lsi") key = "language";

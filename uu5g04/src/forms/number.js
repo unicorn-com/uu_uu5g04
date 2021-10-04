@@ -53,6 +53,7 @@ let Number = Context.withContext(
       },
       defaults: {
         regexpNumberParts: /\B(?=(\d{3})+(?!\d))/g,
+        regexpExponent: /e\+\d+$/,
         inputColWidth: "xs12 s4 m4 l3 xl3",
       },
       lsi: () => UU5.Common.Tools.merge({}, UU5.Environment.Lsi.Forms.number, UU5.Environment.Lsi.Forms.message),
@@ -110,6 +111,12 @@ let Number = Context.withContext(
     //@@viewOff:getDefaultProps
 
     //@@viewOn:reactLifeCycle
+    getInitialState() {
+      this._currentProps = {};
+      this._setCurrentProps(this.props);
+      return {};
+    },
+
     UNSAFE_componentWillMount() {
       let value = this.state.value;
       this._isNaN = isNaN(value);
@@ -117,17 +124,20 @@ let Number = Context.withContext(
       if (typeof value === "number") {
         // to string
         value = this._isNaN ? "" : value + "";
-        const multiplicator = Math.pow(10, this.props.decimals);
+        const multiplicator = Math.pow(10, this._currentProps.decimals);
         value =
-          this.props.rounded && typeof this.props.decimals === "number"
+          this._currentProps.rounded && typeof this._currentProps.decimals === "number"
             ? Math.round(value * multiplicator) / multiplicator
             : value;
-        value = this.props.rounded && this.props.decimals ? Math.round(value * multiplicator) / multiplicator : value;
+        value =
+          this._currentProps.rounded && this._currentProps.decimals
+            ? Math.round(value * multiplicator) / multiplicator
+            : value;
       }
 
       let result = this._setNumberResult({ value });
 
-      if (this.props.onValidate && typeof this.props.onValidate === "function") {
+      if (this._currentProps.onValidate && typeof this._currentProps.onValidate === "function") {
         if (result) {
           if (typeof result === "object") {
             if (result.feedback) {
@@ -144,9 +154,9 @@ let Number = Context.withContext(
     },
 
     UNSAFE_componentWillReceiveProps(nextProps) {
-      if (this.props.controlled) {
+      if (nextProps.controlled) {
+        this._setCurrentProps(nextProps);
         let result;
-
         // if input is focused and current value is for example "-" and new value is NaN we can be sure that
         // nextProps value was returned by onChange callback and set into props by updating state of the parent component
         // that means that value wasn't change and we can use formated value from input as a new value
@@ -201,7 +211,7 @@ let Number = Context.withContext(
     // TODO: tohle je ještě otázka - je potřeba nastavit hodnotu z jiné komponenty (musí být validace) a z onChange (neměla by být validace)
     setValue_(value, setStateCallback) {
       if (this._checkRequiredValue({ value })) {
-        if (typeof this.props.onValidate === "function") {
+        if (typeof this._currentProps.onValidate === "function") {
           this._validateOnChange({ value: value, event: null, component: this });
         } else {
           this.setInitial(null, value, setStateCallback);
@@ -229,7 +239,7 @@ let Number = Context.withContext(
 
       // set feedback runs all validations but in exception of onChange validation input isn"t marked as focused
       this._updateFeedback(this.state.feedback, null, this.state.value, () => {
-        if (this._isNaN && !this.props.onValidate) {
+        if (this._isNaN && !this._currentProps.onValidate) {
           blurResult = { feedback: "initial", message: null, value: this.state.value };
         } else {
           opt = this._getOutputResult(opt);
@@ -244,7 +254,10 @@ let Number = Context.withContext(
           setNumberResult.required = this.props.required;
           this._updateFeedback(setNumberResult.feedback, setNumberResult.message, setNumberResult.value);
         } else if (!this.props.validateOnChange) {
-          this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessage"), setNumberResult.value);
+          this.setError(
+            this._currentProps.requiredMessage || this.getLsiComponent("requiredMessage"),
+            setNumberResult.value
+          );
         } else {
           this._updateFeedback(setNumberResult.feedback, setNumberResult.message, setNumberResult.value);
         }
@@ -254,7 +267,7 @@ let Number = Context.withContext(
     },
 
     onFocusDefault_(opt) {
-      let value = this._removePrefixandSuffix(this.state.value);
+      let value = this._removePrefixAndSuffix(this.state.value);
       let numericString = this._parseNumberFromString(value);
       let result = this.getFocusFeedback({ opt, value: numericString });
       if (result) {
@@ -285,6 +298,35 @@ let Number = Context.withContext(
     //@@viewOff:overriding
 
     //@@viewOn:private
+    // Used to hold current values of props/state which is used for formatting.
+    // These values are used on various places and its value has to be always
+    // updated (e.g. in functions called from willReceiveProps)
+    _setCurrentProps(props) {
+      let formattingKeys = [
+        "min",
+        "max",
+        "rounded",
+        "decimals",
+        "thousandSeparator",
+        "decimalSeparator",
+        "nanMessage",
+        "lowerMessage",
+        "upperMessage",
+        "onValidate",
+        "valueType",
+        "requiredMessage",
+        "prefix",
+        "suffix",
+      ];
+
+      for (let i = 0; i < formattingKeys.length; i++) {
+        let key = formattingKeys[i];
+        let value = props[key];
+        if (key === "country" && !value) value = UU5.Common.Tools.getLanguage();
+        this._currentProps[key] = value;
+      }
+    },
+
     _registerInput(input) {
       this._textInput = input;
     },
@@ -309,7 +351,7 @@ let Number = Context.withContext(
           result._data = { value: numericStringValue };
         }
 
-        if (this.props.valueType === "number") {
+        if (this._currentProps.valueType === "number") {
           let resultValue = parseFloat(numericStringValue);
           result.value = resultValue || (typeof resultValue === "number" && !isNaN(resultValue)) ? resultValue : null;
         }
@@ -371,11 +413,13 @@ let Number = Context.withContext(
     },
 
     _onMouseUp(e) {
-      if (this.props.prefix || this.props.suffix) {
+      if (this._currentProps.prefix || this._currentProps.suffix) {
         e.persist();
         let cursorPosition = this._doGetCaretPosition(e);
-        let maxPosition = this.props.suffix ? e.target.value.length - this.props.suffix.length : e.target.value.length;
-        let minPosition = this.props.prefix ? this.props.prefix.length : 0;
+        let maxPosition = this._currentProps.suffix
+          ? e.target.value.length - this._currentProps.suffix.length
+          : e.target.value.length;
+        let minPosition = this._currentProps.prefix ? this._currentProps.prefix.length : 0;
         if (this._isFocused) {
           if (!this.props.hideSuffixOnFocus && cursorPosition === e.target.value.length) {
             this._setCaretPosition(maxPosition);
@@ -383,14 +427,14 @@ let Number = Context.withContext(
             this._setCaretPosition(minPosition);
           }
         }
-        if (this.props.prefix && this._isFocused && !this.props.hidePrefixOnFocus) {
+        if (this._currentProps.prefix && this._isFocused && !this.props.hidePrefixOnFocus) {
           if (cursorPosition < minPosition) {
             setTimeout(() => {
               this._setCaretPosition(minPosition);
             }, 0);
           }
         }
-        if (this.props.suffix && this._isFocused && !this.props.hideSuffixOnFocus) {
+        if (this._currentProps.suffix && this._isFocused && !this.props.hideSuffixOnFocus) {
           if (cursorPosition >= maxPosition) {
             setTimeout(() => {
               this._setCaretPosition(maxPosition);
@@ -401,14 +445,14 @@ let Number = Context.withContext(
     },
 
     _onKeyDown(e) {
-      if (this.props.prefix || this.props.suffix) {
+      if (this._currentProps.prefix || this._currentProps.suffix) {
         e.persist();
         if (!e.shiftKey) {
           let cursorPosition = this._doGetCaretPosition(e);
-          let maxPosition = this.props.suffix
-            ? e.target.value.length - this.props.suffix.length
+          let maxPosition = this._currentProps.suffix
+            ? e.target.value.length - this._currentProps.suffix.length
             : e.target.value.length;
-          let minPosition = this.props.prefix ? this.props.prefix.length : 0;
+          let minPosition = this._currentProps.prefix ? this._currentProps.prefix.length : 0;
           // 36 - Home, 40 - ArrowDown, 37 - ArrowLeft
           if (
             (!this.props.hidePrefixOnFocus && this._isFocused && e.keyCode === 36) ||
@@ -429,7 +473,7 @@ let Number = Context.withContext(
             this._setCaretPosition(maxPosition);
             return;
           }
-          if (!this.props.hidePrefixOnFocus && this._isFocused && this.props.prefix) {
+          if (!this.props.hidePrefixOnFocus && this._isFocused && this._currentProps.prefix) {
             // 37 - ArrowLeft, 8 - Backspace
             if (e.keyCode === 37 || e.keyCode === 8) {
               if (cursorPosition <= minPosition) {
@@ -439,7 +483,7 @@ let Number = Context.withContext(
                 }, 0);
               }
             }
-            if (!this.props.hideSuffixOnFocus && this._isFocused && this.props.suffix) {
+            if (!this.props.hideSuffixOnFocus && this._isFocused && this._currentProps.suffix) {
               // 39 - Arrowright, 40 - ArrowDown, 32 - space, 46 - Delete
               if (e.keyCode === 39 || e.keyCode === 32 || e.keyCode === 46) {
                 if (cursorPosition >= maxPosition) {
@@ -465,14 +509,13 @@ let Number = Context.withContext(
       return number.toString();
     },
 
-    _parseNumberFromString(
-      value = this.state.value,
-      decimalSeparator = this.props.decimalSeparator,
-      thousandSeparator = this.props.thousandSeparator
-    ) {
-      let parsedNumber = UU5.Common.Tools.normalizeNumberSeparators(value, { thousandSeparator, decimalSeparator });
+    _parseNumberFromString(value = this.state.value) {
+      let parsedNumber = UU5.Common.Tools.normalizeNumberSeparators(value, {
+        thousandSeparator: this._currentProps.thousandSeparator,
+        decimalSeparator: this._currentProps.decimalSeparator,
+      });
       parsedNumber = this._transformNumberToString(parsedNumber);
-      return this._removePrefixandSuffix(parsedNumber);
+      return this._removePrefixAndSuffix(parsedNumber);
     },
 
     _formatOutput(value, maxDecimals, showThousandSeparator) {
@@ -491,16 +534,16 @@ let Number = Context.withContext(
       return UU5.Common.Tools.formatNumber(numberValue, {
         minDecimals,
         maxDecimals,
-        roundType: this.props.decimalsViewRounded,
-        thousandSeparator: showThousandSeparator ? this.props.thousandSeparator : "",
-        decimalSeparator: this.props.decimalSeparator,
+        roundType: this._currentProps.decimalsViewRounded,
+        thousandSeparator: showThousandSeparator ? this._currentProps.thousandSeparator : "",
+        decimalSeparator: this._currentProps.decimalSeparator,
       });
     },
 
-    _removePrefixandSuffix(value) {
+    _removePrefixAndSuffix(value) {
       if (typeof value === "string") {
-        value = this.props.prefix ? value.replace(this.props.prefix, "") : value;
-        value = this.props.suffix ? value.replace(this.props.suffix, "") : value;
+        value = this._currentProps.prefix ? value.replace(this._currentProps.prefix, "") : value;
+        value = this._currentProps.suffix ? value.replace(this._currentProps.suffix, "") : value;
       }
 
       return value;
@@ -509,8 +552,8 @@ let Number = Context.withContext(
     _suffix() {
       let suffix;
       suffix = "";
-      if (this.props.suffix) {
-        suffix = this.props.suffix;
+      if (this._currentProps.suffix) {
+        suffix = this._currentProps.suffix;
         if (this.props.hideSuffixOnFocus && this._isFocused) {
           suffix = "";
         }
@@ -521,8 +564,8 @@ let Number = Context.withContext(
     _prefix() {
       let prefix;
       prefix = "";
-      if (this.props.prefix) {
-        prefix = this.props.prefix;
+      if (this._currentProps.prefix) {
+        prefix = this._currentProps.prefix;
         if (this.props.hidePrefixOnFocus && this._isFocused) {
           prefix = "";
         }
@@ -531,11 +574,11 @@ let Number = Context.withContext(
     },
 
     _hasSuffix(value) {
-      return !!value.endsWith(this.props.suffix);
+      return !!value.endsWith(this._currentProps.suffix);
     },
 
     _hasPrefix(value) {
-      let prefixRegExp = new RegExp(`^\\${this.props.suffix}`, "g");
+      let prefixRegExp = new RegExp(`^\\${this._currentProps.suffix}`, "g");
       return !!value.match(prefixRegExp);
     },
 
@@ -546,14 +589,14 @@ let Number = Context.withContext(
       let isIE = UU5.Common.Tools.isIE();
       if (isFireFox || isIE) {
         let cursorPosition = this._doGetCaretPosition(e);
-        if (!this.props.suffix && !this.props.prefix) {
+        if (!this._currentProps.suffix && !this._currentProps.prefix) {
           setTimeout(() => {
             this._setCaretPosition(cursorPosition);
           }, 0);
-        } else if (this.props.suffix || this.props.prefix) {
-          let minPosition = this.props.prefix ? this.props.prefix.length : 0;
-          let maxPosition = this.props.suffix
-            ? e.target.value.length - this.props.suffix.length
+        } else if (this._currentProps.suffix || this._currentProps.prefix) {
+          let minPosition = this._currentProps.prefix ? this._currentProps.prefix.length : 0;
+          let maxPosition = this._currentProps.suffix
+            ? e.target.value.length - this._currentProps.suffix.length
             : e.target.value.length;
           if ((isFireFox || isIE) && cursorPosition > minPosition && cursorPosition < maxPosition) {
             setTimeout(() => {
@@ -567,12 +610,12 @@ let Number = Context.withContext(
     _correctCursorPosition(e) {
       e.preventDefault();
       // correct cursor position onChange when is before prefix or after suffix
-      if (this.props.prefix || this.props.suffix) {
+      if (this._currentProps.prefix || this._currentProps.suffix) {
         let cursorPosition = this._doGetCaretPosition(e);
         let hasSuffix = this._hasSuffix(e.target.value);
-        let minPosition = this.props.prefix ? this.props.prefix.length : 0;
-        let maxPosition = this.props.suffix
-          ? e.target.value.length - (hasSuffix ? this.props.suffix.length : 0)
+        let minPosition = this._currentProps.prefix ? this._currentProps.prefix.length : 0;
+        let maxPosition = this._currentProps.suffix
+          ? e.target.value.length - (hasSuffix ? this._currentProps.suffix.length : 0)
           : e.target.value.length;
         if (this._isFocused && !this.props.hidePrefixOnFocus) {
           if (cursorPosition < minPosition) {
@@ -582,7 +625,7 @@ let Number = Context.withContext(
           }
         }
         if (this._isFocused && !this.props.hideSuffixOnFocus) {
-          if (cursorPosition > maxPosition || (this.props.suffix && !hasSuffix)) {
+          if (cursorPosition > maxPosition || (this._currentProps.suffix && !hasSuffix)) {
             setTimeout(() => {
               this._setCaretPosition(maxPosition);
             }, 0);
@@ -595,16 +638,19 @@ let Number = Context.withContext(
       if (opt.value) {
         opt.value = this._transformNumberToString(opt.value);
         let isComma = opt.value.indexOf(",") > 0;
-        opt.value = this._parseNumberFromString(opt.value, this.props.decimalSeparator, this.props.thousandSeparator);
+        opt.value = this._parseNumberFromString(opt.value);
         let isNan = isNaN(opt.value);
         if (isNan) {
-          if (opt.value !== "-" || ((this.props.min || this.props.min === 0) && this.props.min >= 0)) {
+          if (
+            opt.value !== "-" ||
+            ((this._currentProps.min || this._currentProps.min === 0) && this._currentProps.min >= 0)
+          ) {
             this._updateRange = this._doGetCaretPosition() - 1;
             opt.feedback = "warning";
             opt.message =
-              opt.value === "-" && this.props.min >= 0
-                ? this.props.lowerMessage || this.getLsiComponent("lowerMessage", null, this.props.min)
-                : this.props.nanMessage || this.getLsiComponent("nanMessage");
+              opt.value === "-" && this._currentProps.min >= 0
+                ? this._currentProps.lowerMessage || this.getLsiComponent("lowerMessage", null, this._currentProps.min)
+                : this._currentProps.nanMessage || this.getLsiComponent("nanMessage");
 
             opt.value =
               isNaN(typeof this.state.value === "string" ? this.state.value.replace(",", ".") : this.state.value) &&
@@ -616,7 +662,7 @@ let Number = Context.withContext(
         } else {
           this._isNaN = false;
         }
-        if (isComma && this.props.decimalSeparator === "," && this.props.thousandSeparator !== ".") {
+        if (isComma && this._currentProps.decimalSeparator === "," && this._currentProps.thousandSeparator !== ".") {
           opt.value = opt.value.replace(".", ",");
         }
       }
@@ -633,22 +679,25 @@ let Number = Context.withContext(
         let number = parseFloat(opt.value);
 
         if (!isNaN(number)) {
-          if ((this.props.min || this.props.min === 0) && number < this.props.min) {
+          if ((this._currentProps.min || this._currentProps.min === 0) && number < this._currentProps.min) {
             opt.feedback = "error";
-            opt.message = this.props.lowerMessage || this.getLsiComponent("lowerMessage", null, this.props.min);
+            opt.message =
+              this._currentProps.lowerMessage || this.getLsiComponent("lowerMessage", null, this._currentProps.min);
           }
 
-          if ((this.props.max || this.props.max === 0) && number > this.props.max) {
+          if ((this._currentProps.max || this._currentProps.max === 0) && number > this._currentProps.max) {
             opt.feedback = "error";
-            opt.message = this.props.upperMessage || this.getLsiComponent("upperMessage", null, this.props.max);
+            opt.message =
+              this._currentProps.upperMessage || this.getLsiComponent("upperMessage", null, this._currentProps.max);
           }
-          if (isComma && this.props.decimalSeparator === "," && this.props.thousandSeparator !== ".") {
+          if (isComma && this._currentProps.decimalSeparator === "," && this._currentProps.thousandSeparator !== ".") {
             opt.value = opt.value.replace(".", ",");
           }
-        } else if (opt.value === "-" && (this.props.min > 0 || this.props.min === 0)) {
+        } else if (opt.value === "-" && (this._currentProps.min > 0 || this._currentProps.min === 0)) {
           // beware of null
           opt.feedback = "error";
-          opt.message = this.props.lowerMessage || this.getLsiComponent("lowerMessage", null, this.props.min);
+          opt.message =
+            this._currentProps.lowerMessage || this.getLsiComponent("lowerMessage", null, this._currentProps.min);
         }
       }
 
@@ -664,26 +713,35 @@ let Number = Context.withContext(
         // round only valid number value
         if (number !== "NaN") {
           // do not rounded a value if input is focused
-          if (this.props.rounded && typeof this.props.decimals === "number" && number && !this._isFocused) {
-            let exp = this.props.decimals ? -1 * this.props.decimals : 0;
+          if (
+            this._currentProps.rounded &&
+            typeof this._currentProps.decimals === "number" &&
+            number &&
+            !this._isFocused
+          ) {
+            let exp = this._currentProps.decimals ? -1 * this._currentProps.decimals : 0;
             number = this._transformNumberToString(UU5.Common.Tools.round10(parseFloat(number), exp));
           }
 
           let numberParts = number.split(".");
 
-          if (this.props.thousandSeparator) {
-            numberParts[0] = numberParts[0].replace(this.getDefault().regexpNumberParts, this.props.thousandSeparator);
+          if (this._currentProps.thousandSeparator) {
+            numberParts[0] = numberParts[0].replace(
+              this.getDefault().regexpNumberParts,
+              this._currentProps.thousandSeparator
+            );
           }
           // do not rounded a value if input is focused
           if (numberParts.length > 1) {
             if (
-              typeof this.props.decimals === "number" &&
-              this.props.decimals < numberParts[1].length &&
-              !this._isFocused
+              typeof this._currentProps.decimals === "number" &&
+              this._currentProps.decimals < numberParts[1].length &&
+              !this._isFocused &&
+              !this.getDefault("regexpExponent").test(number)
             ) {
-              numberParts[1] = numberParts[1].slice(0, this.props.decimals - numberParts[1].length);
+              numberParts[1] = numberParts[1].slice(0, this._currentProps.decimals - numberParts[1].length);
             }
-            resultValue = numberParts[0] + this.props.decimalSeparator + numberParts[1];
+            resultValue = numberParts[0] + this._currentProps.decimalSeparator + numberParts[1];
           } else {
             resultValue = numberParts[0];
           }
@@ -697,7 +755,7 @@ let Number = Context.withContext(
     _onChange(e) {
       this._correctCursorPosition(e);
       let inputValue = e.target.value || "";
-      if (this.props.prefix || this.props.suffix) inputValue = this._removePrefixandSuffix(inputValue);
+      if (this._currentProps.prefix || this._currentProps.suffix) inputValue = this._removePrefixAndSuffix(inputValue);
       inputValue = inputValue.replace(/\s/g, "");
       let opt = { value: inputValue, event: e, component: this, _data: { type: "input" } };
       let checkNumberResult = this._checkNumberResultChange(opt);
@@ -710,7 +768,7 @@ let Number = Context.withContext(
         let newValue = this._getOutputResult({ ...opt, _data: { ...opt._data } });
 
         // check if value is changed
-        if (this.props.valueType === "string") {
+        if (this._currentProps.valueType === "string") {
           if (currentValue.value === newValue.value) {
             this.onChangeDefault({ ...opt, value: inputValue, _data: { ...opt._data, value: inputValue } });
             return;
@@ -834,7 +892,7 @@ let Number = Context.withContext(
       let _callCallback = typeof setStateCallback === "function";
 
       if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
-        let result = typeof this.props.onValidate === "function" ? this.props.onValidate(opt) : null;
+        let result = typeof this._currentProps.onValidate === "function" ? this._currentProps.onValidate(opt) : null;
         if (result) {
           if (typeof result === "object") {
             if (result.feedback) {
@@ -849,7 +907,7 @@ let Number = Context.withContext(
           } else {
             this.showError("validateError", null, {
               context: {
-                func: this.props.onValidate,
+                func: this._currentProps.onValidate,
                 result: result,
               },
             });
@@ -866,9 +924,10 @@ let Number = Context.withContext(
 
     _decrease(e) {
       //TODO: optimize
-      let value = this.state.value || this.state.value === 0 ? this.state.value : this.props.min + this.props.step;
-      let number = this._formatOutput(value).replace(this.props.decimalSeparator, ".");
-      let decimal = this._formatOutput(value).split(this.props.decimalSeparator);
+      let value =
+        this.state.value || this.state.value === 0 ? this.state.value : this._currentProps.min + this.props.step;
+      let number = this._formatOutput(value).replace(this._currentProps.decimalSeparator, ".");
+      let decimal = this._formatOutput(value).split(this._currentProps.decimalSeparator);
       let valueDecimals = decimal[1] ? decimal[1].length : 0;
       let stepDecimals = this.props.step.toString().split(".")[1] ? this.props.step.toString().split(".")[1].length : 0;
       if (valueDecimals > 0 || stepDecimals > 0) {
@@ -900,9 +959,10 @@ let Number = Context.withContext(
 
     _increase(e) {
       //TODO: optimize
-      let value = this.state.value || this.state.value === 0 ? this.state.value : this.props.min - this.props.step;
-      let number = this._formatOutput(value).replace(this.props.decimalSeparator, ".");
-      let decimal = this._formatOutput(value).split(this.props.decimalSeparator);
+      let value =
+        this.state.value || this.state.value === 0 ? this.state.value : this._currentProps.min - this.props.step;
+      let number = this._formatOutput(value).replace(this._currentProps.decimalSeparator, ".");
+      let decimal = this._formatOutput(value).split(this._currentProps.decimalSeparator);
       let valueDecimals = decimal[1] ? decimal[1].length : 0;
       let stepDecimals = this.props.step.toString().split(".")[1] ? this.props.step.toString().split(".")[1].length : 0;
       if (valueDecimals > 0 || stepDecimals > 0) {
@@ -936,13 +996,13 @@ let Number = Context.withContext(
 
       if (this.state.value || this.state.value === 0) {
         let value = this.state.value || 0;
-        let number = parseFloat(this._transformNumberToString(value).replace(this.props.decimalSeparator, "."));
-        if (type === "min" && typeof this.props.min === "number") {
-          if (number <= this.props.min) {
+        let number = parseFloat(this._transformNumberToString(value).replace(this._currentProps.decimalSeparator, "."));
+        if (type === "min" && typeof this._currentProps.min === "number") {
+          if (number <= this._currentProps.min) {
             result = true;
           }
-        } else if (type === "max" && typeof this.props.max === "number") {
-          if (number >= this.props.max) {
+        } else if (type === "max" && typeof this._currentProps.max === "number") {
+          if (number >= this._currentProps.max) {
             result = true;
           }
         }
@@ -975,9 +1035,9 @@ let Number = Context.withContext(
     _checkRequiredValue({ value }) {
       // check required value as a string, number 0 is filled value
       let checkValue = this._parseNumberFromString(value);
-      if (this.props.valueType === "number" && isNaN(checkValue) && value !== "-" && this.props.required) {
+      if (this._currentProps.valueType === "number" && isNaN(checkValue) && value !== "-" && this.props.required) {
         // manual validation ... there is no possible
-        this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessage"), value);
+        this.setError(this._currentProps.requiredMessage || this.getLsiComponent("requiredMessage"), value);
         return false;
       }
       return this._checkRequired({ value: value != null ? "" + value : value });
@@ -1028,7 +1088,7 @@ let Number = Context.withContext(
         if (this._isFocused) {
           value += this._transformNumberToString(this.state.value);
         } else {
-          value += this._formatOutput(this.state.value, this.props.decimalsView, true);
+          value += this._formatOutput(this.state.value, this._currentProps.decimalsView, true);
         }
         if (!this._hasSuffix(value)) value += this._suffix();
       } else {

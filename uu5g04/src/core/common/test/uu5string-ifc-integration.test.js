@@ -65,7 +65,8 @@ describe("UU5.Common.UU5String", () => {
     expect(rendered).toMatchObject([{ props: { data: "value" } }]);
   });
 
-  it("should use UU5.Environment.textEntityReplace setting", () => {
+  // disabled because changes to Environment are now not taken into consideration
+  it.skip("should use UU5.Environment.textEntityReplace setting", () => {
     UU5.Environment.textEntityReplace = true;
     let result = UU5.Common.UU5String.toChildren("<uu5string/>:-)");
     expect(result).toMatchObject(["😃"]);

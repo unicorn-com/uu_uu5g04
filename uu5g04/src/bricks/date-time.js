@@ -64,7 +64,7 @@ function formatDateByIntl(date, { country, format, timeZone, timeOnly, dateOnly,
 
     format.replace(/[DMYHms]+/g, (m) => {
       let key = FORMAT_MAP[m[0]];
-      opt[key] = m.length === 1 ? "numeric" : m.length === 2 ? "2-digit" : "long";
+      opt[key] = m.length === 1 || (key === "year" && m.length > 2) ? "numeric" : m.length === 2 ? "2-digit" : "long";
     });
     let parts = new Intl.DateTimeFormat(country, opt).formatToParts(date);
     return format.replace(/[DMYHms]+/g, (m) => {

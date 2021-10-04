@@ -16,7 +16,7 @@ import ModalCoverView from "./internal/modal-bus-cover-view.js";
 
 const ModalContext = UU5.Common.ModalBusContext;
 
-const getProviderValue = Utils.Function.memo((addItem, removeItem, updateItem, isClosableItem) => {
+const getProviderValue = Utils.Function.memo((addItem, removeItem, updateItem, isClosableItem, portalElement) => {
   return {
     render(children, id, settings, close) {
       return UU5.Common.Portal.create(
@@ -33,7 +33,7 @@ const getProviderValue = Utils.Function.memo((addItem, removeItem, updateItem, i
         >
           {children}
         </ModalCoverView>,
-        document.getElementById("modal-bus")
+        portalElement
       );
     },
     allowClose: isClosableItem,
@@ -59,10 +59,15 @@ const ModalBus = UU5.Common.VisualComponent.create({
 
   //@@viewOn:reactLifeCycle
   getInitialState() {
+    this._modalBusViewPortalElement = document.createElement("div");
     return {
       itemList: [],
       activeItemId: null,
     };
+  },
+
+  componentWillUnmount() {
+    delete this._modalBusViewPortalElement;
   },
   //@@viewOff:reactLifeCycle
 
@@ -141,7 +146,13 @@ const ModalBus = UU5.Common.VisualComponent.create({
     if (!Uu5Elements) {
       const { itemList, activeItemId } = this.state;
 
-      const value = getProviderValue(this._addItem, this._removeItem, this._updateItem, this._isClosableItem);
+      const value = getProviderValue(
+        this._addItem,
+        this._removeItem,
+        this._updateItem,
+        this._isClosableItem,
+        this._modalBusViewPortalElement
+      );
       result = (
         <ModalContext.Provider value={value}>
           {children}
@@ -152,6 +163,16 @@ const ModalBus = UU5.Common.VisualComponent.create({
             onChange={this._setActiveItem}
             setNext={this._setNext}
             setPrevious={this._setPrevious}
+            // NOTE We have to pass portal element that was prepared beforehand because:
+            // 1. ModalBusView needs to wait for UU5.Bricks.Page, Page is inside of ModalBus (ModalBusView itself must be
+            //    inside of Page's portal element for modals). I.e. ModalBusView skips 1st render and re-renders
+            //    right after mount (Page is ready then).
+            // 2. Modal-s do attempt to render themselves during 1st/2nd render, i.e. they need to have ModalBusView's own
+            //    element ready - which becomes present in DOM *after* 2nd render and that's not good enough.
+            //      => we'll prepare the element right now and pass it to ModalBusView in a prop; when Modal-s attempt to render
+            //         themselves, they'll use it (even though it is not attached to DOM yet but that does not seem to be an issue)
+            //         and ModalBusView will attach it to DOM when the view is ready
+            portalElement={this._modalBusViewPortalElement}
           />
         </ModalContext.Provider>
       );

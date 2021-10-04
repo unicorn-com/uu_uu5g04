@@ -23,6 +23,14 @@ const getNewEditableItem = () => ({
   },
 });
 
+const getDuplicatedItem = (index, props) => ({
+  tagName: "UU5.Bricks.Tabs.Item",
+  props: {
+    ...props,
+    name: UU5.Common.Tools.generateUUID(8),
+  },
+});
+
 const editableComponentPropsSetup = [
   {
     name: "type",
@@ -179,7 +187,15 @@ const editablePropsSetup = [
 
 const editableItemPropsSetup = {
   setup: [
-    { name: "header", type: "text", label: <UU5.Bricks.Lsi lsi={EditableLsi.tabs.tabHeaderLabel} />, required: true },
+    {
+      name: "header",
+      type: "text",
+      label: <UU5.Bricks.Lsi lsi={EditableLsi.tabs.tabHeaderLabel} />,
+      required: true,
+      getProps: () => ({
+        inputAttrs: { autoFocus: true },
+      }),
+    },
   ],
 };
 
@@ -268,6 +284,7 @@ export const TabsEditable = UU5.Common.VisualComponent.create({
         newItem={getNewEditableItem}
         itemsSource="children"
         getItemLabel={getEditableItemLabel}
+        duplicateItem={getDuplicatedItem}
       />
     );
   },

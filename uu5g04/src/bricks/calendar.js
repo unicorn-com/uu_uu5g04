@@ -81,6 +81,9 @@ export const Calendar = withUserPreferences(
           fillerDaysRow: ns.css("calendar-filler-day-row"),
           week: ns.css("calendar-week uu5-forms-calendar-week"),
           weekNumber: ns.css("calendar-week-number uu5-forms-calendar-week-number"),
+          clickableWeekNumber: () => Css.css`
+            cursor: pointer;
+          `,
           day: ns.css("calendar-day uu5-forms-calendar-day"),
           dayCell: ns.css("calendar-day-cell uu5-forms-calendar-day-cell"),
           selection: ns.css(
@@ -165,6 +168,7 @@ export const Calendar = withUserPreferences(
         onPrevSelection: UU5.PropTypes.func,
         monthNameFormat: UU5.PropTypes.oneOf(["abbr", "roman"]),
         weekStartDay: UU5.PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7]),
+        clickableWeekNumber: UU5.PropTypes.bool,
       },
       //@@viewOff:propTypes
 
@@ -189,6 +193,7 @@ export const Calendar = withUserPreferences(
           hideOtherSections: false,
           monthNameFormat: "roman",
           weekStartDay: 1,
+          clickableWeekNumber: false,
         };
       },
       //@@viewOff:getDefaultProps
@@ -298,7 +303,9 @@ export const Calendar = withUserPreferences(
         let value = opt.value;
 
         if (this.props.selectionMode === "range") {
-          if (this.state.value && this.state.value.length === 1) {
+          if (Array.isArray(value)) {
+            // value = value;
+          } else if (this.state.value && this.state.value.length === 1) {
             if (
               this._compareDates(value, this.state.value[0], "greater") ||
               this._compareDates(value, this.state.value[0], "equals")
@@ -315,14 +322,16 @@ export const Calendar = withUserPreferences(
         let parsedValue = this._parseDate(value);
         let dateInfo;
 
-        if (Array.isArray(parsedValue)) {
-          if (parsedValue.length > 1) {
-            dateInfo = this._getDisplayedDate(parsedValue[1]);
+        if (!opt._data?.preventDisplayDateChange) {
+          if (Array.isArray(parsedValue)) {
+            if (parsedValue.length > 1) {
+              dateInfo = this._getDisplayedDate(parsedValue[1]);
+            } else {
+              dateInfo = this._getDisplayedDate(parsedValue[0]);
+            }
           } else {
-            dateInfo = this._getDisplayedDate(parsedValue[0]);
+            dateInfo = this._getDisplayedDate(parsedValue);
           }
-        } else {
-          dateInfo = this._getDisplayedDate(parsedValue);
         }
 
         let validateResult = this._validateDates(value);
@@ -678,8 +687,8 @@ export const Calendar = withUserPreferences(
         return <tr className={this.getClassName().dayNames}>{ths}</tr>;
       },
 
-      _setSelectedDate(date, e) {
-        let opt = { value: date, event: e, component: this, _data: { type: "click" } };
+      _setSelectedDate(date, e, preventDisplayDateChange) {
+        let opt = { value: date, event: e, component: this, _data: { type: "click", preventDisplayDateChange } };
         this._onChange(opt);
       },
 
@@ -690,6 +699,11 @@ export const Calendar = withUserPreferences(
 
       _setDay(date, e) {
         this._setSelectedDate(date, e);
+        return this;
+      },
+
+      _setWeek(date, e) {
+        this._setSelectedDate(date, e, true);
         return this;
       },
 
@@ -849,8 +863,17 @@ export const Calendar = withUserPreferences(
           );
           if (activeDate.getDay() === firstWeekDay && !this.props.hideWeekNumber) {
             let weekNum = this._getWeek(activeDate);
+            let clickableWeekNumber = this.props.clickableWeekNumber && this.props.selectionMode === "range";
+            let weekRange = getWeek(activeDate, this.props.weekStartDay);
             tds.unshift(
-              <th key={"week-" + weekNum} className={this.getClassName("weekNumber")}>
+              <th
+                key={"week-" + weekNum}
+                className={
+                  this.getClassName("weekNumber") +
+                  (clickableWeekNumber ? " " + this.getClassName("clickableWeekNumber") : "")
+                }
+                onClick={clickableWeekNumber ? (e) => this._setWeek(weekRange, e) : undefined}
+              >
                 <div className={this.getClassName("dayCell")}>{weekNum + "."}</div>
               </th>
             );
@@ -1085,8 +1108,11 @@ export const Calendar = withUserPreferences(
       },
 
       _onChange(opt) {
-        let dateInfo = this._getDisplayedDate(opt.value);
-        let formatedDate = dateInfo ? UU5.Common.Tools.getDateString(opt.value) : null;
+        let preventDisplayDateChange = opt._data?.preventDisplayDateChange;
+        let dateInfo = this._getDisplayedDate(Array.isArray(opt.value) ? opt.value[0] : opt.value);
+        let formatedDate = dateInfo
+          ? UU5.Common.Tools.getDateString(Array.isArray(opt.value) ? opt.value[0] : opt.value)
+          : null;
         let value = null;
 
         if (formatedDate) {
@@ -1104,7 +1130,7 @@ export const Calendar = withUserPreferences(
           opt._data = {};
         }
 
-        opt._data.state = { ...dateInfo, value };
+        opt._data.state = { ...(preventDisplayDateChange ? {} : dateInfo), value };
 
         if (typeof this.props.onChange === "function") {
           this.props.onChange(opt);

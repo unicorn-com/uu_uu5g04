@@ -17,8 +17,8 @@
 import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
 import TextInput from "./internal/text-input.js";
-import Time from "./time.js";
 import TextInputMixin from "./mixins/text-input-mixin.js";
+import Time from "./time.js";
 import Context from "./form-context.js";
 import DateTools, { REGEXP } from "./internal/date-tools.js";
 import withUserPreferences from "../common/user-preferences";

@@ -17,9 +17,12 @@ import { useLevel, useContext } from "uu5g05";
 
 const LevelContext = useLevel._context;
 useLevel._override = function (g05Hook, ...hookArgs) {
+  // eslint-disable-next-line uu5/hooks-rules
   let contextValue = useContext(LevelContext);
-  let result = computeComponentLevel(contextValue, true);
-  return result;
+  let level = computeComponentLevel(contextValue, true);
+  // TODO Remove g05Result after release of uu5g05 0.15.0 and then always return array.
+  let g05Result = g05Hook(...hookArgs);
+  return Array.isArray(g05Result) ? [level, contextValue.setLevel] : level;
 };
 
 function computeComponentLevel(contextValue, skipIncrease = false) {

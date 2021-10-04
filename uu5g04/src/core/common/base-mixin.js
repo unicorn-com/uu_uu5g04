@@ -575,7 +575,7 @@ export const BaseMixin = {
     context.thisProps = this.props;
     context.thisState = this.state;
 
-    return [title + msgWithParams, context];
+    return [title + msgWithParams, context, this.constructor.logger];
   },
 
   __styleStringToObject(style) {

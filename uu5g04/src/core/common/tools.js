@@ -23,6 +23,7 @@ import ScreenSize from "../utils/screen-size.js";
 import Lsi from "../utils/lsi.js";
 import DOM from "./dom.js";
 import Url from "./url.js";
+import { LoggerFactory } from "../utils/logger-factory.js";
 import { checkTag } from "../uu5g05-integration/use-dynamic-library-component.js";
 
 export const REGEXP = {
@@ -1260,11 +1261,13 @@ Tools.scrollToTarget = (id, smoothScroll, offset, scrollElement, stickToPosition
   return this;
 };
 
-Tools.error = function(msg, context) {
+const logger = LoggerFactory.get("UU5.Common.Tools");
+Tools.error = function (msg, context, _logger = null) {
   // if (Environment.isProduction()) {
   //   console.error('For debugging use development mode.');
   // } else {
-  console.error(msg, context);
+  let usedLogger = typeof _logger?.error !== "function" ? logger : _logger;
+  usedLogger.error(msg, context);
   // }
 
   if (Environment.logErrorFunction) {
@@ -1306,10 +1309,9 @@ Tools.error = function(msg, context) {
   }
 };
 
-Tools.warning = function(msg, context = {}) {
-  if (!Environment.isProduction() || (Environment.isProduction() && Environment.showProductionWarning)) {
-    console.warn(msg, context);
-  }
+Tools.warning = function (msg, context, _logger = null) {
+  let usedLogger = typeof _logger?.warn !== "function" ? logger : _logger;
+  usedLogger.warn(msg, context);
 };
 
 Tools.repeat = (value, count) => {
@@ -2892,7 +2894,7 @@ Tools.openWindow = (url, target) => {
   if (target === "_blank" && (Tools.isChrome() || navigator.userAgent.match(/\bfirefox\//i))) {
     features = "noopener";
   }
-  return window.open(url, target, features);
+  return window.open(Url.getAbsoluteUri(url), target, features);
 };
 
 // userLanguage for IE

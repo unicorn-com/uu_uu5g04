@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example 00</title>
+
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js" crossorigin="anonymous"></script>
+    <script>
+      SystemJS.config({
+        paths: {
+          react: "https://cdn.plus4u.net/libs/react/17.0.1/react.min.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/17.0.1/react-dom.min.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+
+          uu5g04: "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+          "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        },
+      });
+    </script>
+
+    <style>
+      body {
+        padding: 16px 32px;
+      }
+    </style>
+
+    <script>
+      const envMap = {
+        uu5g05: {
+          uu5g05_libraryLoadUri: "https://libraryRegistry.com/load",
+          uu5g05_libraryLoadDisabled: true,
+          uu5g05_libraryStatsUri: "https://libraryRegistry.com/stats",
+          uu5g05_libraryStatsDisabled: true,
+          uu5g05_logLevel: "warn",
+          uu5g05_defaultLanguage: "fr",
+          uu5g05_fontUri: "https://cdn.plus4u.net/libs/clearsans/1.0.0/fonts/clear-sans.min.css",
+          uu5stringg01_textEntityDisabled: true,
+          
+          uu5g05_iconLibraryMap: {
+            uu5: "https://example.com/uu5",
+          },
+          // cdnBaseUri: "https://example.com",
+          uu5g05_trustedUriRegExp: ".*",
+          extra: "asdf",
+        },
+        uu5g04: {
+          COMPONENT_REGISTRY_URL: "https://libraryRegistry.com/load",
+          useLibraryRegistry: false,
+          statisticsLogLibrariesUri: "https://libraryRegistry.com/stats",
+          allowStatistics: false,
+          defaultLanguage: "fr",
+          fontCssUrl: "https://cdn.plus4u.net/libs/clearsans/1.0.0/fonts/clear-sans.min.css",
+          textEntityReplace: false,
+          iconLibraries: {
+            uu5: "https://example.com/uu5",
+          },
+          // cdnBaseUri: "https://example.com",
+          trustedDomainRegexp: ".*",
+          extra: "asdf",
+        },
+      };
+
+      const lsKey = "uu5g04-demo-env";
+      const lsValue = localStorage.getItem(lsKey) || "none";
+      let configVar;
+      let configValue;
+      if (lsValue === "uu5g05") {
+        window.uu5Environment = configValue = envMap[lsValue];
+        configVar = "uu5Environment";
+      }
+      if (lsValue === "uu5g04" || lsValue === "uu5g05 in UU5.Environment") {
+        window.UU5 = { Environment: (configValue = envMap[lsValue.replace(/ .*/, "")]) };
+        configVar = "UU5.Environment";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="uu5">Loading...</div>
+
+    <script
+      src="https://cdn.plus4u.net/uu-app-templateg01/1.0.0/in-browser-transpilation.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/babel">
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+
+      //@@viewOn:example
+      //@@viewOff:example
+
+      console.log(UU5.Environment);
+
+      function Demo() {
+        return (
+          <div>
+            {["none", "uu5g05", "uu5g05 in UU5.Environment", "uu5g04"].map((name) => (
+              <UU5.Bricks.Button
+                key={name}
+                pressed={name === lsValue}
+                onClick={() => {
+                  localStorage.setItem(lsKey, name);
+                  location.reload();
+                }}
+              >
+                {name}
+              </UU5.Bricks.Button>
+            ))}
+
+            <div>
+              {configVar ? (
+                <pre>{configVar + " = " + JSON.stringify(configValue, null, 2)}</pre>
+              ) : (
+                <i>default environment</i>
+              )}
+            </div>
+
+            <h3>Dynamic component - should {configVar ? "fail" : "work"}</h3>
+            {UU5.Common.Tools.findComponent("UU5.Forms.Controls")}
+
+            <h3>defaultLanguage: {configVar ? "fr" : "unspecified"}</h3>
+            <UU5.Bricks.Lsi lsi={{ en: "EN lsi", fr: "FR lsi" }} />
+
+            <h3>text entities: false (should be text)</h3>
+            <UU5.Bricks.Div content={`<uu5string/>:-)`} />
+
+            <h3>mdi-car icon - should work</h3>
+            <UU5.Bricks.Icon icon="mdi-car" />
+
+            {/* for uu5g05 it should work even though URL is bad, because uu5g04's Environment has bigger priority for iconLibraries */}
+            <h3>uu5-calendar icon - should {lsValue === "uu5g04" ? "fail" : "work"}</h3>
+            <UU5.Bricks.Icon icon="uu5-calendar" />
+
+            <h3>UU5.Environment (partially filtered)</h3>
+            <pre>
+              {JSON.stringify(
+                Object.keys(UU5.Environment)
+                  .filter(
+                    (k) =>
+                      typeof UU5.Environment[k] !== "function" &&
+                      !k.match(
+                        /^(_|colorSchemaMap|nestingLevel|colors|colorSchema|languageList|textEntityMap|stateIconList|Lsi|IconManager)/
+                      )
+                  )
+                  .reduce((r, k) => ((r[k] = UU5.Environment[k]), r), {}),
+                null,
+                2
+              )}
+            </pre>
+          </div>
+        );
+      }
+
+      UU5.Common.DOM.render(<Demo />, document.getElementById("uu5"));
+    </script>
+  </body>
+</html>

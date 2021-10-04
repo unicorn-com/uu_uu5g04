@@ -183,7 +183,7 @@ describe(`UU5.Forms.DateTimeRangePicker props`, () => {
     expect(wrapper.findWhere((node) => node.text() === "To")).not.toBe(0);
   });
 
-  fit(`timeStep + strictTimeStep`, () => {
+  it(`timeStep + strictTimeStep`, () => {
     let wrapper;
     [
       { timeStep: undefined, feedback: "initial" },
@@ -197,6 +197,22 @@ describe(`UU5.Forms.DateTimeRangePicker props`, () => {
       expect(wrapper.instance().getFeedback()).toBe(testMap.feedback);
     });
   });
+
+  // Not sure why this doesnt work
+  // it(`hideResetButton`, () => {
+  //   let wrapper = mount(<UU5.Forms.DateTimeRangePicker />);
+  //   wrapper.instance().open();
+  //   console.log(wrapper.find(".uu5-forms-datetimerangepicker-popover-second-row"));
+  //   expect(
+  //     wrapper
+  //       .find(".uu5-forms-datetimerangepicker-popover-second-row .uu5-bricks-button")
+  //       .findWhere((node) => node.name() === "button" && node.text() === "Reset").length
+  //   ).toBe(1);
+  //   wrapper = mount(<UU5.Forms.DateTimeRangePicker hideResetButton />);
+  //   wrapper.instance().open();
+  //   wrapper.update();
+  //   expect(wrapper.find(".uu5-forms-datetimerangepicker-popover-second-row").length).toBe(0);
+  // });
 });
 
 describe(`UU5.Forms.DateTimeRangePicker props function -> Text.InputMixin`, () => {

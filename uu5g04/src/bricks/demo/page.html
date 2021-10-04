@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Page Demo</title>
+
+    <script>
+      // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      // var appAssetsRelativeUrlPath = "public/";
+      // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    </script>
+
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+          "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/4.0.0/uu_appg01_core.min.js",
+          "uu_appg01": "https://cdn.plus4u.net/uu-appg01/4.0.0/uu_appg01.min.js",
+          "uu_appg01_oidc": "https://cdn.plus4u.net/uu-appg01-oidc/2.0.0/uu_appg01_oidc.min.js",
+          "uu_plus4u5g01": "https://cdn.plus4u.net/uu-plus4u5g01/4.0.0/uu_plus4u5g01.js",
+          "uu_plus4u5g01-bricks": "https://cdn.plus4u.net/uu-plus4u5g01/4.0.0/uu_plus4u5g01-bricks.js",
+          "uu_plus4u5g01-app": "https://cdn.plus4u.net/uu-plus4u5g01/4.0.0/uu_plus4u5g01-app.js",
+
+          "uu5g04": "/uu5g04.js",
+          "uu5g04-bricks": "/uu5g04-bricks.js",
+          "uu5g04-forms": "/uu5g04-forms.js",
+          "uu5g04-hooks": "/uu5g04-hooks.js",
+        }
+      });
+    </script>
+
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import { useState, useRef } from "uu5g04-hooks";
+      import Plus4U5 from "uu_plus4u5g01";
+      import "uu_plus4u5g01-app";
+
+      function ModalButton({ children, text, location }) {
+        const modal = useRef();
+
+        return (
+          <UU5.Common.Fragment>
+            <UU5.Bricks.Button
+              onClick={() => modal.current.open({ header: text, content: children })}
+            >
+              {text}
+            </UU5.Bricks.Button>
+            <UU5.Bricks.Modal ref_={modal} location={location} />
+          </UU5.Common.Fragment>
+        )
+      }
+
+      function AlertBusButton({ text, location }) {
+        const alertBus = useRef();
+
+        return (
+          <UU5.Common.Fragment>
+            <UU5.Bricks.Button
+              onClick={() => alertBus.current.addAlert({ content: "text", closeTimer: 100000 })}
+            >
+              {text}
+            </UU5.Bricks.Button>
+            <UU5.Bricks.Dropdown label="Dropdown" popoverLocation={location}>
+              <UU5.Bricks.Dropdown.Item label="Profile" onClick={() => alert("item")} />
+            </UU5.Bricks.Dropdown>
+            <UU5.Bricks.AlertBus ref_={alertBus} location={location} />
+          </UU5.Common.Fragment>
+        )
+      }
+
+      function Page() {
+        const [page, setPage] = useState(true);
+
+        const content = (
+          <UU5.Bricks.Container>
+            <UU5.Bricks.Button onClick={() => setPage(page => !page)}>Toggle Page</UU5.Bricks.Button>
+            <p>Page: {page + ""}</p>
+            <UU5.Bricks.Section header="portal">
+              <ModalButton text="Open 1" location="portal">
+                <ModalButton text="Open 2" location="portal">
+                  <AlertBusButton text="Open Alert" location="portal" />
+                </ModalButton>
+              </ModalButton>
+            </UU5.Bricks.Section>
+            <UU5.Bricks.Section header="undefined">
+              <ModalButton text="Open 1">
+                <ModalButton text="Open 2">
+                  <AlertBusButton text="Open Alert" />
+                </ModalButton>
+              </ModalButton>
+            </UU5.Bricks.Section>
+            <UU5.Bricks.Section header="local">
+              <ModalButton text="Open 1" location="local">
+                <ModalButton text="Open 2" location="local">
+                  <AlertBusButton text="Open Alert" location="local" />
+                </ModalButton>
+              </ModalButton>
+            </UU5.Bricks.Section>
+          </UU5.Bricks.Container>
+        );
+
+        return (
+          <UU5.Bricks.ModalBus key={page}>
+            {page ? (
+              <Plus4U5.App.Spa
+                appName="Spa Demo"
+                baseUri="https://uuapp.plus4u.net/uu-bookkit-maing01/b858ae7d7f8041249f4830277b674990"
+              >
+                <Plus4U5.App.Page top={<Plus4U5.App.Top content="Spa Demo" />}>
+                  {content}
+                </Plus4U5.App.Page>
+              </Plus4U5.App.Spa>
+            ) : content}
+          </UU5.Bricks.ModalBus>
+        );
+      }
+
+      UU5.Common.DOM.render(<Page />, document.getElementById('renderHere'));
+    </script>
+  </body>
+</html>

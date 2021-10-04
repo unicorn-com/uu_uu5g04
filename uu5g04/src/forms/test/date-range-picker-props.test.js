@@ -84,6 +84,9 @@ const CONFIG = {
     disableBackdrop: {
       values: [true, false],
     },
+    singleCalendar: {
+      values: [true],
+    },
     // parseDate - In agreement with developers, this props need not be tested.
   },
   requiredProps: {
@@ -206,6 +209,27 @@ describe(`UU5.Forms.DateRangePicker props`, () => {
     wrapper.instance().open();
     wrapper.update();
     expect(wrapper.find(UU5.Bricks.Calendar).first().instance().props.weekStartDay).toBe(7);
+  });
+
+  it(`singleCalendar`, () => {
+    const wrapper = mount(<UU5.Forms.DateRangePicker singleCalendar />);
+    wrapper.instance().open();
+    wrapper.update();
+    expect(wrapper.find(".uu5-bricks-calendar").length).toBe(1);
+  });
+
+  it(`hideResetButton`, () => {
+    let wrapper = mount(<UU5.Forms.DateRangePicker />);
+    wrapper.instance().open();
+    expect(
+      wrapper
+        .find(".uu5-forms-daterangepicker-popover-second-row .uu5-bricks-button")
+        .findWhere((node) => node.name() === "button" && node.text() === "Reset").length
+    ).toBe(1);
+    wrapper = mount(<UU5.Forms.DateRangePicker hideResetButton />);
+    wrapper.instance().open();
+    wrapper.update();
+    expect(wrapper.find(".uu5-forms-daterangepicker-popover-second-row").length).toBe(0);
   });
 });
 

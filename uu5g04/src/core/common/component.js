@@ -19,6 +19,7 @@ import createReactClass from "create-react-class";
 import { lazy as _lazy } from "./suspense.js";
 import Element from "./element";
 import { preprocessors, postprocessors } from "./component-processors.js";
+import { LoggerFactory } from "../utils/logger-factory.js";
 //@@viewOff:imports
 
 export function createComponent(componentDescriptor, isVisual = false) {
@@ -30,6 +31,17 @@ export function createComponent(componentDescriptor, isVisual = false) {
   for (let processor of postprocessors) {
     if (isVisual || !processor.isVisual) result = processor(result, componentDescriptor, ctx);
   }
+
+  let logger;
+  Object.defineProperty(result, "logger", {
+    get: function () {
+      if (!logger) logger = LoggerFactory.get(result.tagName || result.displayName || "UnnamedComponent");
+      return logger;
+    },
+    set: function (value) {
+      logger = value;
+    },
+  });
 
   return result;
 }

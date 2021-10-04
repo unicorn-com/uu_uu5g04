@@ -368,7 +368,7 @@ export const Dropdown = UU5.Common.VisualComponent.create({
 
     let icon = null;
     if (!this.props.split) {
-      buttonProps.className = this.getClassName().dropdownBtn;
+      buttonProps.className = [buttonProps.className, this.getClassName().dropdownBtn].filter(v => !!v).join(" ");
       icon = this._getIcon();
     }
 

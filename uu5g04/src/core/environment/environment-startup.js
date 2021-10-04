@@ -32,12 +32,13 @@ if (initialEnvironment) {
     Object.defineProperty(Environment, k, desc);
   }
 
-  // some settings are to be taken from g04 instead of g05 - propagate them to g05 (property descriptor setters will do that)
-  Environment.iconLibraries = {
+  // some settings are to be taken from g04 instead of g05 - propagate them to g05
+  let finalIconLibraries = {
     ...Environment.iconLibraries,
     ...iconLibraries,
     ...window.UU5?.Environment?.iconLibraries,
   };
+  for (let k in finalIconLibraries) Environment.iconLibraries[k] = finalIconLibraries[k];
 }
 
 Environment.IconManager = new IconManager(Environment.iconLibraries);

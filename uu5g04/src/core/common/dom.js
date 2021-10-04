@@ -15,7 +15,8 @@
 
 import { Utils } from "uu5g05";
 
-const g05DOM = Utils.DOM;
+// TODO Remove Utils.DOM after uu5g05 >= 0.15.0 release.
+const g05DOM = Utils.Dom || Utils.DOM;
 
 export class DOM {
   static render(...args) {

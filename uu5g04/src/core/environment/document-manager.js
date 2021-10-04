@@ -32,7 +32,8 @@ export class DocumentManager {
     return false;
   }
 
-  static addUniqueCss = Utils.DOM.addCss;
+  // TODO Remove Utils.DOM after uu5g05 >= 0.15.0 release.
+  static addUniqueCss = (Utils.Dom || Utils.DOM).addCss;
 }
 
 function _toAbsoluteUri(uri) {

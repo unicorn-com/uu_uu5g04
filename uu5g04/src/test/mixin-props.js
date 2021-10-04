@@ -93,9 +93,9 @@ export const MixinProps = {
   "UU5.Common.NestingLevelMixin": {
     nestingLevel: {
       values: [
-        "spa",
-        "container",
-        "page",
+        // "spa",
+        // "container",
+        // "page",
         "bigBoxCollection",
         "bigBox",
         "boxCollection",

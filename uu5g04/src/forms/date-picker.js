@@ -287,9 +287,10 @@ let DatePicker = Context.withContext(
       let value = opt._data ? opt._data.value : opt.value;
       let formatedValue = this._getDateString(value);
       if (this._checkRequired({ value: formatedValue || value }) && !this.props.validateOnChange) {
-        opt.value = formatedValue || value;
+        opt.value = this._getOutcomingValue(value);
         opt.required = this.props.required;
         let blurResult = this.getBlurFeedback(opt);
+        blurResult.value = value;
         let result = this._validateDate(blurResult);
 
         this._updateState(result);
@@ -320,7 +321,7 @@ let DatePicker = Context.withContext(
     // These values are used on various places and its value has to be always
     // updated (e.g. in functions called from willReceiveProps)
     _setFormattingValues(props) {
-      let formattingKeys = ["format", "country", "step", "parseDate", "valueType"];
+      let formattingKeys = ["format", "country", "step", "parseDate", "valueType", "dateFrom", "dateTo"];
 
       for (let i = 0; i < formattingKeys.length; i++) {
         let key = formattingKeys[i];
@@ -595,6 +596,20 @@ let DatePicker = Context.withContext(
         newState.message = this.state.message || null;
       }
 
+      if (
+        "feedback" in newState &&
+        (this.state.feedback !== newState.feedback ||
+          ("message" in newState && this.state.message !== newState.message)) &&
+        typeof this.props.onChangeFeedback === "function"
+      ) {
+        this.props.onChangeFeedback({
+          feedback: newState.feedback,
+          message: newState.message,
+          value: newState.value,
+          component: this,
+        });
+      }
+
       this.setState(newState, setStateCallback);
     },
 
@@ -689,6 +704,7 @@ let DatePicker = Context.withContext(
         }
 
         if (!this.isReadOnly() && !this.isComputedDisabled()) {
+          this._addEvent();
           if (typeof this.props.onFocus === "function") {
             this.props.onFocus(opt);
           } else {
@@ -704,7 +720,7 @@ let DatePicker = Context.withContext(
         this._hasFocus = false;
 
         if (opt._data) {
-          opt._data.value = opt.value;
+          opt._data.value = opt._data.value || opt.value;
           opt.value = this._getOutcomingValue(opt.value);
         } else {
           opt._data = { value: opt.value };
@@ -772,15 +788,17 @@ let DatePicker = Context.withContext(
       if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
         opt.component = this;
         opt.required = this.props.required;
-
-        if (this.props.valueType == "date" && opt.value) {
-          opt.value = this._parseDate(opt.value);
-        }
+        opt.value = this._getOutcomingValue(opt.value);
 
         result = typeof this.props.onValidate === "function" ? this.props.onValidate(opt) : null;
-        if (result && typeof result === "object" && result.feedback) {
-          _callCallback = false;
-          this._updateState(result, setStateCallback);
+        if (result && typeof result === "object") {
+          if (result.value) {
+            result.value = this._getDateString(result.value);
+          }
+          if (result.feedback) {
+            _callCallback = false;
+            this._updateState(result, setStateCallback);
+          }
         }
       }
 
@@ -824,11 +842,11 @@ let DatePicker = Context.withContext(
 
     _getDateFrom() {
       let dateFrom;
-      if (this.props.dateFrom) {
-        if (typeof this.props.dateFrom === "string") {
-          dateFrom = this._parseDate(this.props.dateFrom);
-        } else if (this.props.dateFrom instanceof Date) {
-          dateFrom = this.props.dateFrom;
+      if (this._formattingValues.dateFrom) {
+        if (typeof this._formattingValues.dateFrom === "string") {
+          dateFrom = this._parseDate(this._formattingValues.dateFrom);
+        } else if (this._formattingValues.dateFrom instanceof Date) {
+          dateFrom = this._formattingValues.dateFrom;
         }
       }
       return dateFrom;
@@ -836,11 +854,11 @@ let DatePicker = Context.withContext(
 
     _getDateTo() {
       let dateTo;
-      if (this.props.dateTo) {
-        if (typeof this.props.dateTo === "string") {
-          dateTo = this._parseDate(this.props.dateTo);
-        } else if (this.props.dateTo instanceof Date) {
-          dateTo = this.props.dateTo;
+      if (this._formattingValues.dateTo) {
+        if (typeof this._formattingValues.dateTo === "string") {
+          dateTo = this._parseDate(this._formattingValues.dateTo);
+        } else if (this._formattingValues.dateTo instanceof Date) {
+          dateTo = this._formattingValues.dateTo;
         }
       }
       return dateTo;

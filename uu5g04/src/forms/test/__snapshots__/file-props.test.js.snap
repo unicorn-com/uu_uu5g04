@@ -3082,8 +3082,13 @@ exports[`UU5.Forms.File props inputAttrs={"type":"email","width":"150px"} 1`] = 
         id="uuID-file"
         key="fileinput"
         multiple={false}
+        onBlur={[Function]}
         onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        tabIndex="0"
         type="file"
+        width="150px"
       />
     </Div>
   </InputWrapper>

@@ -6,19 +6,20 @@
 //@@viewOn:revision
 
 //@@viewOn:imports
-import UU5 from "uu5g04";
+import UU5, { createComponent } from "uu5g04";
 import ModalBusToolbar from "./modal-bus-toolbar";
 import withPosition from "./with-position.js";
 
 import Css from "./css";
 import ns from "../bricks-ns.js";
+import { LAYER, RenderIntoPortal } from "./portal.js";
 //@@viewOff:imports
 
 const MAGNETIC_OFFSET = 64;
 
 const classNames = {
-  modalBusViewMask: () => {
-    return Css.css`
+  modalBusViewMask: ({ itemList }) => {
+    let staticClassName = Css.css`
       position: fixed;
       top: 0;
       bottom: 0;
@@ -28,6 +29,8 @@ const classNames = {
       background-color: rgba(0, 0, 0, 0.4);
       overflow: auto;
     `;
+    let dynamicClassName = Css.css({ display: itemList.length > 0 ? "block" : "none" });
+    return [staticClassName, dynamicClassName].join(" ");
   },
   modalBusViewContent: (minWidth, collapse) => {
     return Css.css`
@@ -41,6 +44,7 @@ const classNames = {
     `;
   },
 
+  modalBusViewPortalContainer: () => Css.css({ display: "inline-flex" }),
   modalBusViewPortal: (activeItemId, itemList, collapse, minWidth, allowClose) => {
     return Css.css`
     display: ${collapse && itemList.length > 1 ? "none" : "flex"};
@@ -91,7 +95,7 @@ const classNames = {
   },
 };
 
-export const ModalBusView = withPosition(
+let ModalBusView = withPosition(
   UU5.Common.Component.create({
     //@@viewOn:mixins
     //@@viewOff:mixins
@@ -107,6 +111,7 @@ export const ModalBusView = withPosition(
       onChange: UU5.PropTypes.func,
       itemList: UU5.PropTypes.array,
       activeItemId: UU5.PropTypes.string,
+      portalElement: UU5.PropTypes.object.isRequired,
     },
     //@@viewOff:propTypes
 
@@ -116,6 +121,7 @@ export const ModalBusView = withPosition(
         onChange: undefined,
         itemList: undefined,
         activeItemId: undefined,
+        portalElement: undefined,
       };
     },
     //@@viewOff:getDefaultProps
@@ -123,7 +129,7 @@ export const ModalBusView = withPosition(
     //@@viewOn:reactLifeCycle
     getInitialState() {
       this._contentRef = UU5.Common.Reference.create();
-      this._portalRef = UU5.Common.Reference.create();
+      this._containerRef = UU5.Common.Reference.create();
       return {
         collapse: false,
         minWidth: this.props.position.width || 0,
@@ -131,6 +137,10 @@ export const ModalBusView = withPosition(
     },
 
     componentDidMount() {
+      this._containerRef.current.appendChild(this.props.portalElement);
+      this._syncPortalElement();
+      this._updatePositionOnActiveItemChange({});
+
       // focusCapturer is used to capture focus in inactive modal
       this._focusCapturerId = UU5.Common.Tools.generateUUID();
       let focusCapturer = document.createElement("div");
@@ -138,16 +148,22 @@ export const ModalBusView = withPosition(
       focusCapturer.style.cssText = "opacity: 0.01; height: 0; width: 0;";
       focusCapturer.tabIndex = "0";
       focusCapturer.onfocus = this._onFocusInput;
-      this._portalRef.current.insertBefore(focusCapturer, this._portalRef.current.firstChild);
+      this.props.portalElement.insertBefore(focusCapturer, this.props.portalElement.firstChild);
       this._eventId = UU5.Common.Tools.generateUUID();
       UU5.Environment.EventListener.addWindowEvent("resize", this._eventId, this._onResize);
     },
 
     componentWillUnmount() {
       UU5.Environment.EventListener.removeWindowEvent("resize", this._eventId);
+      this.props.portalElement.removeChild(this.props.portalElement.firstChild); // focusCapturer
+      this._containerRef.current.removeChild(this._containerRef.current.lastChild);
     },
 
     componentWillReceiveProps(nextProps) {
+      if (process.env.NODE_ENV === "development" && this.props.portalElement !== nextProps.portalElement) {
+        console.error("ModalBusView does not support changing of props.portalElement!");
+      }
+
       if (this.props.activeItemId !== nextProps.activeItemId && nextProps.activeItemId) {
         this._updatePosition = true;
       }
@@ -161,14 +177,8 @@ export const ModalBusView = withPosition(
     },
 
     componentDidUpdate(prevProps) {
-      if (typeof this.props.updatePosition === "function") {
-        if (!prevProps.activeItemId && this.props.activeItemId) {
-          this.props.updatePosition(this._contentRef.current, "center");
-        } else if (!this.props.isInitialPosition && this._updatePosition) {
-          this._updatePosition = false;
-          this.props.updatePosition(this._contentRef.current, "optimize");
-        }
-      }
+      this._syncPortalElement();
+      this._updatePositionOnActiveItemChange(prevProps);
 
       if (this.props.activeItemId === this.props.itemList[this.props.itemList.length - 1]?.id) {
         document.getElementById(this._focusCapturerId).tabIndex = "-1";
@@ -182,6 +192,33 @@ export const ModalBusView = withPosition(
     //@@viewOff:interface
 
     //@@viewOn:private
+    _updatePositionOnActiveItemChange(prevProps) {
+      if (typeof this.props.updatePosition === "function") {
+        if (!prevProps.activeItemId && this.props.activeItemId) {
+          this.props.updatePosition(this._contentRef.current, "center");
+        } else if (!this.props.isInitialPosition && this._updatePosition) {
+          this._updatePosition = false;
+          this.props.updatePosition(this._contentRef.current, "optimize");
+        }
+      }
+    },
+
+    _syncPortalElement() {
+      const { portalElement, activeItemId, itemList } = this.props;
+      let componentWidth = this.state.minWidth;
+      let isClosable = itemList[itemList.length - 1]?.id === activeItemId;
+
+      portalElement.dataset.name = "ModalBusViewPortal";
+      portalElement.id = "modal-bus";
+      portalElement.className = classNames.modalBusViewPortal(
+        activeItemId,
+        itemList,
+        this.state.collapse,
+        componentWidth,
+        isClosable
+      );
+    },
+
     _onFocusInput() {
       this._contentRef.current.querySelector("button")?.focus();
     },
@@ -249,7 +286,6 @@ export const ModalBusView = withPosition(
       let componentWidth = this.state.minWidth;
       let activeItem = activeItemId ? itemList.find((item) => item.id === activeItemId) : undefined;
       let settings = activeItem?.settings;
-      let isClosable = itemList[itemList.length - 1]?.id === activeItemId;
       let style = { top, right };
 
       if (isInitialPosition) {
@@ -260,7 +296,7 @@ export const ModalBusView = withPosition(
       return (
         <div
           data-name="ModalBusViewMask"
-          className={itemList.length ? classNames.modalBusViewMask() : undefined}
+          className={classNames.modalBusViewMask(this.props)}
           onClick={() => this._onClickMask(itemList, activeItem, settings)}
         >
           <div
@@ -283,18 +319,7 @@ export const ModalBusView = withPosition(
               </div>
             )}
 
-            <div
-              data-name="ModalBusViewPortal"
-              id="modal-bus"
-              className={classNames.modalBusViewPortal(
-                activeItemId,
-                itemList,
-                this.state.collapse,
-                componentWidth,
-                isClosable
-              )}
-              ref={this._portalRef}
-            />
+            <div ref={this._containerRef} className={classNames.modalBusViewPortalContainer()}></div>
           </div>
         </div>
       );
@@ -304,4 +329,33 @@ export const ModalBusView = withPosition(
   MAGNETIC_OFFSET
 );
 
+//@@viewOn:helpers
+function withPagePortals(Component) {
+  return createComponent({
+    displayName: `withPagePortals(${Component.displayName})`,
+    getInitialState() {
+      return { pageReady: false };
+    },
+    componentDidMount() {
+      this.setState({ pageReady: true });
+    },
+    render() {
+      // NOTE ModalBus is above Page in hierarchy, but we need to know portal element used by Page
+      // (ModalBusView needs to be rendered there, so that e.g. Popover-s are above ModalBusView)
+      //   => assume that Page gets readied during mount and re-render ourselves after mount
+      const page = UU5.Environment.page;
+      const portalElement = page?.getPortalElement(LAYER.MODAL);
+      return !this.state.pageReady ? null : (
+        <RenderIntoPortal layer={LAYER.MODAL} portalElement={portalElement || undefined}>
+          <Component {...this.props} />
+        </RenderIntoPortal>
+      );
+    },
+  });
+}
+//@@viewOff:helpers
+
+ModalBusView = withPagePortals(ModalBusView);
+
+export { ModalBusView };
 export default ModalBusView;

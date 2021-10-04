@@ -26,13 +26,15 @@ export const withUserPreferences = (Component, mapping) => {
     return (
       <UU5.Common.UserPreferencesContext.Consumer>
         {(context) => {
+          // TODO remove condition, it is only for backward compatibility until all libs will use only uu5g05 > 1.0.0
+          const userPreferences = context?.userPreferences || context;
           let usedContextValues = {};
           if (mapping) {
             for (let key in mapping) {
-              usedContextValues[key] = context[mapping[key]];
+              usedContextValues[key] = userPreferences[mapping[key]];
             }
           } else {
-            usedContextValues = context;
+            usedContextValues = userPreferences;
           }
           return <Component {...usedContextValues} {...props} ref={ref} />;
         }}

@@ -36,7 +36,7 @@ if (initialEnvironment?.basePath === "string") {
 }
 
 let cdnBaseUri;
-if (initialEnvironment?.cdnBaseUri === "string") {
+if (typeof initialEnvironment?.cdnBaseUri === "string") {
   cdnBaseUri = initialEnvironment.cdnBaseUri;
   delete initialEnvironment.cdnBaseUri; // remove as we'll possibly update the value a bit and startup-environment.js then merges the environment from global (original) to our; // TODO Do full merging in this file.
 }

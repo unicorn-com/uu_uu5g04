@@ -154,6 +154,9 @@ let DateTimeRangePicker = Context.withContext(
       weekStartDay: UU5.PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7]),
       valueType: UU5.PropTypes.oneOf(["date", "iso", "isoLocal"]),
       allowUnspecifiedRange: UU5.PropTypes.oneOfType([UU5.PropTypes.bool, UU5.PropTypes.oneOf(["from", "to"])]),
+      hideResetButton: UU5.PropTypes.bool,
+      timeFromDefault: UU5.PropTypes.string,
+      timeToDefault: UU5.PropTypes.string,
     },
     //@@viewOff:propTypes
 
@@ -193,6 +196,9 @@ let DateTimeRangePicker = Context.withContext(
         weekStartDay: 1,
         valueType: "date",
         allowUnspecifiedRange: false,
+        hideResetButton: false,
+        timeFromDefault: undefined,
+        timeToDefault: undefined,
       };
     },
     //@@viewOff:getDefaultProps
@@ -534,11 +540,11 @@ let DateTimeRangePicker = Context.withContext(
 
     onBlurDefault_(opt) {
       let value = opt._data ? opt._data.value : opt.value;
-      opt.value = value;
+      opt.value = this._getOutcomingValue(value);
 
       if (this._checkRequired({ value: opt.value }) && !this.props.validateOnChange) {
         opt.required = this.props.required;
-        let blurResult = this.getBlurFeedback(opt);
+        let blurResult = this.getBlurFeedback({ ...opt, value });
 
         if (typeof this.props.onChangeFeedback === "function") {
           this.props.onChangeFeedback({ ...blurResult, component: this });
@@ -619,6 +625,12 @@ let DateTimeRangePicker = Context.withContext(
         "timeZone",
         "seconds",
         "valueType",
+        "timeFromDefault",
+        "timeToDefault",
+        "dateFrom",
+        "dateTo",
+        "beforeRangeMessage",
+        "afterRangeMessage",
       ];
 
       for (let i = 0; i < formattingKeys.length; i++) {
@@ -633,7 +645,7 @@ let DateTimeRangePicker = Context.withContext(
 
       let getSingleOutputValue = (singleValue, index) => {
         if (singleValue) {
-          singleValue = this._parseDate(singleValue);
+          singleValue = this._parseDate(singleValue, index === 1);
 
           if (
             (index === 0 &&
@@ -688,19 +700,19 @@ let DateTimeRangePicker = Context.withContext(
       let result = null;
 
       if (Array.isArray(value)) {
-        let parseString = (string) => {
-          let dateObject = this._parseDate(string);
+        let parseString = (string, index) => {
+          let dateObject = this._parseDate(string, index === 1);
           let timeString = this._getTimeString(dateObject, props, true);
           let dateString = this._getDateString(dateObject);
 
           return this._getFullDate(dateString, timeString);
         };
 
-        result = value.map((value) => {
+        result = value.map((value, index) => {
           if (typeof value === "string") {
-            return parseString(value);
+            return parseString(value, index);
           } else if (value instanceof Date) {
-            return this._parseDate(value);
+            return this._parseDate(value, index === 1);
           }
         });
       }
@@ -739,11 +751,41 @@ let DateTimeRangePicker = Context.withContext(
       }
     },
 
-    _parseDate(dates) {
+    _getAutofilledTime(isEndDate) {
+      let time = this._formattingValues.timeFormat == TIME_FORMAT_12 ? "12:00" : "00:00";
+      let seconds = "00";
+      let dayPart = TIME_FORMAT_AM;
+      let usedDefault = this._formattingValues[isEndDate ? "timeToDefault" : "timeFromDefault"];
+
+      if (usedDefault) {
+        let timeDefault = usedDefault;
+        if (this._formattingValues.timeFormat == TIME_FORMAT_12 && !/AM|PM/.test(timeDefault)) {
+          timeDefault = DateTools.timeFormat24to12(timeDefault);
+        }
+        let parts = timeDefault.trim().split(" ");
+        dayPart = parts[1];
+        parts = parts[0].split(":");
+        time = parts[0] + ":" + (parts[1] || "00");
+        seconds = parts[2];
+      }
+
+      if (this._formattingValues.seconds) {
+        time += ":" + seconds;
+      }
+
+      if (this._formattingValues.timeFormat == TIME_FORMAT_12) {
+        time += " " + dayPart;
+      }
+
+      return time;
+    },
+
+    _parseDate(dates, isEndDate, applyTimeAutofill = true) {
       let result = null;
       let { parseDate, timeZone } = this._formattingValues;
 
-      let parseSingleDate = (date) => {
+      let parseSingleDate = (date, index) => {
+        isEndDate = index === 1;
         let resultDate = null;
 
         if (typeof date !== "string") {
@@ -762,6 +804,7 @@ let DateTimeRangePicker = Context.withContext(
           }
 
           let timeString = this._getTimeString(date, true);
+          if (applyTimeAutofill && !timeString) timeString = this._getAutofilledTime(isEndDate);
           if (timeString && resultDate instanceof Date) {
             let timeData = this._parseTime(timeString);
             if (timeData) {
@@ -781,11 +824,11 @@ let DateTimeRangePicker = Context.withContext(
       };
 
       if (Array.isArray(dates)) {
-        result = dates.map((date) => parseSingleDate(date)).filter((date) => !!date);
+        result = dates.map(parseSingleDate).filter((date) => !!date);
         if (result.length === 0) result = null;
         result = this._adjustTimeZone(result, timeZone);
       } else {
-        result = parseSingleDate(dates);
+        result = parseSingleDate(dates, isEndDate ? 1 : 0);
       }
 
       return result;
@@ -853,11 +896,11 @@ let DateTimeRangePicker = Context.withContext(
     },
 
     _getDateFrom(date) {
-      return this._parseDate(date || this.props.dateFrom);
+      return this._parseDate(date || this.props.dateFrom, false, false);
     },
 
     _getDateTo(date) {
-      return this._parseDate(date || this.props.dateTo);
+      return this._parseDate(date || this.props.dateTo, true, false);
     },
 
     _getToday() {
@@ -893,9 +936,9 @@ let DateTimeRangePicker = Context.withContext(
       let result = undefined;
 
       if (Array.isArray(value) && value.length >= 2) {
-        result = UU5.Common.Tools.cloneDateObject(this._parseDate(value[1]));
+        result = UU5.Common.Tools.cloneDateObject(this._parseDate(value[1], true));
       } else {
-        result = UU5.Common.Tools.cloneDateObject(this._parseDate(value));
+        result = UU5.Common.Tools.cloneDateObject(this._parseDate(value, true));
       }
 
       return result;
@@ -905,7 +948,10 @@ let DateTimeRangePicker = Context.withContext(
       let _callCallback = typeof setStateCallback === "function";
 
       if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
-        let result = typeof this.props.onValidate === "function" ? this.props.onValidate(opt) : null;
+        let result =
+          typeof this.props.onValidate === "function"
+            ? this.props.onValidate({ ...opt, value: this._getOutcomingValue(opt.value) })
+            : null;
         if (result) {
           if (typeof result === "object") {
             if (result.feedback) {
@@ -920,7 +966,7 @@ let DateTimeRangePicker = Context.withContext(
               context: { event: null, func: this.props.onValidate, result: result },
             });
           }
-        } else if (opt._data.state) {
+        } else if (opt._data?.state) {
           _callCallback = false;
           this.setState({ ...opt._data.state }, setStateCallback);
         } else if (opt.value) {
@@ -936,20 +982,20 @@ let DateTimeRangePicker = Context.withContext(
       return this;
     },
 
-    _validateDateResult(opt, props = this.props) {
+    _validateDateResult(opt, isEndDate) {
       let result = opt;
 
       if (opt) {
-        let date = this._parseDate(opt.value);
+        let date = this._parseDate(opt.value, isEndDate);
         date = this._getOutcomingValue(date);
 
         if (!opt.value || date) {
-          if (this._compareDates(date, props.dateFrom, "lesser")) {
+          if (this._compareDates(date, this._formattingValues.dateFrom, "lesser")) {
             result.feedback = "error";
-            result.message = props.beforeRangeMessage;
-          } else if (this._compareDates(date, props.dateTo, "greater")) {
+            result.message = this._formattingValues.beforeRangeMessage;
+          } else if (this._compareDates(date, this._formattingValues.dateTo, "greater")) {
             result.feedback = "error";
-            result.message = props.afterRangeMessage;
+            result.message = this._formattingValues.afterRangeMessage;
           } else {
             result.feedback = opt ? opt.feedback || "initial" : "initial";
             result.message = opt ? opt.message || null : null;
@@ -1140,11 +1186,11 @@ let DateTimeRangePicker = Context.withContext(
 
     _getInputValidationResult(fromValue, toValue) {
       fromValue = this._parseDate(fromValue);
-      toValue = this._parseDate(toValue);
+      toValue = this._parseDate(toValue, true);
 
       let result = {
         fromFeedback: this._validateDateResult({ value: fromValue }),
-        toFeedback: this._validateDateResult({ value: toValue }),
+        toFeedback: this._validateDateResult({ value: toValue }, true),
       };
 
       delete result.fromFeedback.value;
@@ -1193,12 +1239,15 @@ let DateTimeRangePicker = Context.withContext(
           this._compareDates(value, this.state.tempValue, "greater") ||
           this._compareDates(value, this.state.tempValue, "equals")
         ) {
+          if (this.props.timeToDefault) DateTools.setTimeToDate(value, this.props.timeToDefault);
           value = [this.state.tempValue, value];
           executeOnChange = true;
         } else {
+          if (this.props.timeFromDefault) DateTools.setTimeToDate(value, this.props.timeFromDefault);
           value = [value];
         }
       } else {
+        if (this.props.timeFromDefault) DateTools.setTimeToDate(value, this.props.timeFromDefault);
         value = [value];
       }
 
@@ -1255,7 +1304,7 @@ let DateTimeRangePicker = Context.withContext(
       // the value isnt valid and thus it basically is null. It means that onChange cannot be executed
       let right = opt._data.right;
       let dateInputValue = opt.value;
-      let parsedDate = this._parseDate(dateInputValue);
+      let parsedDate = this._parseDate(dateInputValue, right);
       let state = {
         fromFeedback: this.state.fromFeedback,
         toFeedback: this.state.toFeedback,
@@ -1286,6 +1335,7 @@ let DateTimeRangePicker = Context.withContext(
 
       if (parsedDate) {
         if (right) {
+          if (this.props.timeToDefault) DateTools.setTimeToDate(parsedDate, this.props.timeToDefault);
           state = this._getInnerState(
             [this.state.value ? this.state.value[0] : this.state.tempValue, parsedDate],
             "input",
@@ -1294,6 +1344,7 @@ let DateTimeRangePicker = Context.withContext(
           );
           state.toDateInputValue = opt.value;
         } else {
+          if (this.props.timeFromDefault) DateTools.setTimeToDate(parsedDate, this.props.timeFromDefault);
           state = this._getInnerState([parsedDate, this.state.value ? this.state.value[1] : null], "input", true);
           state.fromDateInputValue = opt.value;
         }
@@ -1482,8 +1533,15 @@ let DateTimeRangePicker = Context.withContext(
       }
 
       if (innerState.tempValue) {
-        innerState.activeInput = innerState.tempValue.getTime() === UNSPECIFIED_FROM.getTime() ? "toDate" : "fromTime";
-      } else if (innerState.value && innerState.value[1]?.getTime() === UNSPECIFIED_FROM.getTime()) {
+        innerState.activeInput =
+          this._isAllowedFromUnspecifiedRange && innerState.tempValue.getTime() === UNSPECIFIED_FROM.getTime()
+            ? "toDate"
+            : "fromTime";
+      } else if (
+        this._isAllowedToUnspecifiedRange &&
+        innerState.value &&
+        innerState.value[1]?.getTime() === UNSPECIFIED_FROM.getTime()
+      ) {
         innerState.activeInput = "toTime";
       }
 
@@ -1594,14 +1652,14 @@ let DateTimeRangePicker = Context.withContext(
         if (!Array.isArray(value)) {
           // value isnt array
           fromValue = this._parseDate(value);
-          toValue = this._parseDate(value);
+          toValue = this._parseDate(value, true);
           fromInputValidateResult =
             fromValue || this.state.fromDateInputValue
               ? this._validateDateResult({ value: fromValue || this.state.fromDateInputValue })
               : initialFeedback;
           toInputValidateResult =
             toValue || this.state.toDateInputValue
-              ? this._validateDateResult({ value: toValue || this.state.toDateInputValue })
+              ? this._validateDateResult({ value: toValue || this.state.toDateInputValue }, true)
               : initialFeedback;
           delete fromInputValidateResult.value;
           delete toInputValidateResult.value;
@@ -1614,14 +1672,14 @@ let DateTimeRangePicker = Context.withContext(
         } else if (Array.isArray(value)) {
           // value is array
           fromValue = this._parseDate(value[0]);
-          toValue = this._parseDate(value[1]);
+          toValue = this._parseDate(value[1], true);
           fromInputValidateResult =
             fromValue || this.state.fromDateInputValue
               ? this._validateDateResult({ value: fromValue || this.state.fromDateInputValue })
               : initialFeedback;
           toInputValidateResult =
             toValue || this.state.toDateInputValue
-              ? this._validateDateResult({ value: toValue || this.state.toDateInputValue })
+              ? this._validateDateResult({ value: toValue || this.state.toDateInputValue }, true)
               : initialFeedback;
           delete fromInputValidateResult.value;
           delete toInputValidateResult.value;
@@ -1638,7 +1696,7 @@ let DateTimeRangePicker = Context.withContext(
 
           if (!toValue) {
             if (this.state.toDateInputValue && !this.state.value) {
-              toValue = this._parseDate(this.state.toDateInputValue);
+              toValue = this._parseDate(this.state.toDateInputValue, true);
 
               if (toValue) {
                 if (!this._compareDates(toValue, fromValue, "lesser")) {
@@ -1837,7 +1895,7 @@ let DateTimeRangePicker = Context.withContext(
         fromDisplayDate = today;
       }
 
-      if (fromDisplayDate.getTime() === UNSPECIFIED_FROM.getTime()) {
+      if (this._isAllowedFromUnspecifiedRange && fromDisplayDate.getTime() === UNSPECIFIED_FROM.getTime()) {
         if (this.state) {
           fromDisplayDate = this.state.fromDisplayDate;
         } else {
@@ -1857,7 +1915,7 @@ let DateTimeRangePicker = Context.withContext(
     _compareDates(date1, date2, method) {
       let result = false;
       date1 = this._parseDate(date1);
-      date2 = this._parseDate(date2);
+      date2 = this._parseDate(date2, true);
 
       if (date1 && date2) {
         date1 = Date.UTC(
@@ -1999,7 +2057,8 @@ let DateTimeRangePicker = Context.withContext(
         if (this.state.tempValue && !this._getToValue()) {
           let fromValue = this.state.tempValue;
           let toValue = this.state.tempValue;
-          if (fromValue.getTime() === UNSPECIFIED_FROM.getTime()) toValue = new Date(Date.now());
+          if (this._isAllowedFromUnspecifiedRange && fromValue.getTime() === UNSPECIFIED_FROM.getTime())
+            toValue = new Date(Date.now());
           value = [fromValue, toValue];
           opt.value = value;
           opt._data.value = value;
@@ -2013,7 +2072,7 @@ let DateTimeRangePicker = Context.withContext(
             origCallback(opt);
           };
         } else if (this.state.toDateInputValue && !this.state.fromDateInputValue) {
-          value = [this._parseDate(this.state.toDateInputValue), this._parseDate(this.state.toDateInputValue)];
+          value = [this._parseDate(this.state.toDateInputValue), this._parseDate(this.state.toDateInputValue, true)];
           if (!value[0] || !value[1]) value = null;
           opt.value = value;
           opt._data.value = value;
@@ -2443,12 +2502,12 @@ let DateTimeRangePicker = Context.withContext(
 
     _isFromUnspecified() {
       let parsedValue = this._parseDate(this.state.fromDateInputValue);
-      return parsedValue && parsedValue.getTime() === UNSPECIFIED_FROM.getTime();
+      return this._isAllowedFromUnspecifiedRange && parsedValue && parsedValue.getTime() === UNSPECIFIED_FROM.getTime();
     },
 
     _isToUnspecified() {
-      let parsedValue = this._parseDate(this.state.toDateInputValue);
-      return parsedValue && parsedValue.getTime() === UNSPECIFIED_TO.getTime();
+      let parsedValue = this._parseDate(this.state.toDateInputValue, true);
+      return this._isAllowedToUnspecifiedRange && parsedValue && parsedValue.getTime() === UNSPECIFIED_TO.getTime();
     },
 
     _getTimeProps(right) {
@@ -2791,9 +2850,13 @@ let DateTimeRangePicker = Context.withContext(
 
       if (firstDate && secondDate) {
         let stringDate1 =
-          firstDate.getTime() === UNSPECIFIED_FROM.getTime() ? UNSPECIFIED_CHAR : this._getDateString(firstDate);
+          this._isAllowedFromUnspecifiedRange && firstDate.getTime() === UNSPECIFIED_FROM.getTime()
+            ? UNSPECIFIED_CHAR
+            : this._getDateString(firstDate);
         let stringDate2 =
-          secondDate.getTime() === UNSPECIFIED_TO.getTime() ? UNSPECIFIED_CHAR : this._getDateString(secondDate);
+          this._isAllowedToUnspecifiedRange && secondDate.getTime() === UNSPECIFIED_TO.getTime()
+            ? UNSPECIFIED_CHAR
+            : this._getDateString(secondDate);
         let stringTime1 = this._getTimeString(firstDate, this.props, true);
         let stringTime2 = this._getTimeString(secondDate, this.props, true);
         let totalDate1 = stringDate1;
@@ -2810,7 +2873,9 @@ let DateTimeRangePicker = Context.withContext(
         result = totalDate1 + (totalDate1 ? " - " : "") + totalDate2;
       } else if (firstDate) {
         let stringDate1 =
-          firstDate.getTime() === UNSPECIFIED_FROM.getTime() ? UNSPECIFIED_CHAR : this._getDateString(firstDate);
+          this._isAllowedFromUnspecifiedRange && firstDate.getTime() === UNSPECIFIED_FROM.getTime()
+            ? UNSPECIFIED_CHAR
+            : this._getDateString(firstDate);
         let stringTime1 = this._getTimeString(firstDate, this.props, true);
         if (stringDate1 === UNSPECIFIED_CHAR) result = stringDate1;
         else result = stringDate1 + " " + stringTime1;
@@ -2932,7 +2997,7 @@ let DateTimeRangePicker = Context.withContext(
         );
       }
 
-      if (!this._isSorXs() || buttons.length < 2) {
+      if (!this.props.hideResetButton && (!this._isSorXs() || buttons.length < 2)) {
         buttons.push(
           <UU5.Bricks.Button
             content={this.getLsiComponent("reset")}

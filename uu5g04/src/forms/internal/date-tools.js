@@ -239,8 +239,12 @@ export const DateTools = {
     let result;
 
     if (ignoreTime) {
-      result = DateTools.getISOLocal(dateValue);
-      result = result.replace(/T.*$/, "");
+      result =
+        dateValue.getFullYear() +
+        "-" +
+        (dateValue.getMonth() + 1 + "").padStart(2, "0") +
+        "-" +
+        (dateValue.getDate() + "").padStart(2, "0");
     } else {
       result = dateValue.toISOString();
     }
@@ -387,6 +391,33 @@ export const DateTools = {
       return singleValue;
     };
     return Array.isArray(value) ? value.map(singleValueFn) : singleValueFn(value);
+  },
+  timeFormat24to12(time) {
+    let parts = time.split(":");
+    let hours = parseInt(parts[0]);
+    let timeFormat = hours >= 12 ? "PM" : "AM";
+    hours = hours > 12 ? hours - 12 : hours === 0 ? 12 : hours;
+    parts[0] = hours;
+    return parts.join(":") + " " + timeFormat;
+  },
+  timeFormat12to24(time) {
+    let parts = time.split(" ");
+    let dayPart = parts[1];
+    parts = parts[0].split(":");
+    let hours = parseInt(parts[0]);
+    if (dayPart === "PM" && hours < 12) {
+      hours += 12;
+    } else if (dayPart === "AM" && hours >= 12) {
+      hours -= 12;
+    }
+    return parts.join(":") + " " + dayPart;
+  },
+  setTimeToDate(dateObject, timeString) {
+    if (/(AM|PM)$/.test(timeString)) timeString = DateTools.timeFormat12to24(timeString);
+    let parts = timeString.split(":");
+    dateObject.setHours(parts[0]);
+    dateObject.setMinutes(parts[1] || 0);
+    dateObject.setSeconds(parts[2] || 0);
   },
 };
 

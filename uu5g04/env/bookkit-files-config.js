@@ -233,5 +233,6 @@ module.exports = {
     // "UU5.Hooks.useSession",
     // "UU5.Hooks.useStickyTop",
     // "UU5.Hooks.useUnmountedRef",
+    // "UU5.Utils.LoggerFactory",
   ]
 };

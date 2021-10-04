@@ -55,7 +55,7 @@ export const Helpers = {
   isComponent: (component) => {
     if (typeof component === "function") {
       return true;
-    } else if (typeof component === "object" && component.type) {
+    } else if (typeof component === "object" && (component.type || component.isUu5PureComponent)) {
       return true;
     } else {
       return false;

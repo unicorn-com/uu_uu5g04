@@ -330,7 +330,7 @@ export const Page = UU5.Common.VisualComponent.create({
       widths: this._setWidths(),
       scrolledDown: this.props.topFixed === "always" && window.pageYOffset >= this.props.topFixedScrolledDownOffset,
       popoverProviderValue: { getPopover: this.getPopover },
-      portalElementProviderValue: { getPortalElement: this._getPortalElement },
+      portalElementProviderValue: { getPortalElement: this.getPortalElement },
     };
   },
 
@@ -551,13 +551,8 @@ export const Page = UU5.Common.VisualComponent.create({
       this._setNewWidths(opt.nextWidth, opt.screenSize, true);
     }
   },
-  //@@viewOff:interface
 
-  //@@viewOn:overriding
-  //@@viewOff:overriding
-
-  //@@viewOn:private
-  _getPortalElement(layer) {
+  getPortalElement(layer) {
     // layers: https://uuos9.plus4u.net/uu-dockitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=spa_page_01
     // returning nested child <div/> which is fully unmanaged by React (whereas _modalPortalRef/...Ref is managed by React)
     let result;
@@ -565,9 +560,17 @@ export const Page = UU5.Common.VisualComponent.create({
       result = this._getOrCreatePortalEl(this._modalPortalRef, layer);
     } else if (layer === LAYER.ALERT_BUS) {
       result = this._getOrCreatePortalEl(this._alertBusPortalRef, layer);
-    } else if (layer === LAYER.POPOVER) result = this._getOrCreatePortalEl(this._popoverPortalRef, layer);
+    } else if (layer === LAYER.POPOVER) {
+      result = this._getOrCreatePortalEl(this._popoverPortalRef, layer);
+    }
     return result;
   },
+  //@@viewOff:interface
+
+  //@@viewOn:overriding
+  //@@viewOff:overriding
+
+  //@@viewOn:private
   _getOrCreatePortalEl(domEl, layer) {
     let pendingPortalEls = this._pendingPortalEls;
     let result;
