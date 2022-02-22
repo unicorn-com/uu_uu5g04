@@ -176,31 +176,32 @@ let DateTimePicker = Context.withContext(
       this._setUpLimits(this.props);
 
       let value = this._parseDate(this.props.value);
-      let validationResult = this._validateOnChange({
-        value: this._getOutcomingValue(value),
-        event: null,
-        component: this,
-        _data: { value, timeZoneAdjusted: true },
-      });
 
-      if (validationResult) {
-        this._updateState(validationResult);
+      let dateObject = this._parseDate(value);
+      let dateString = this._getDateString(dateObject);
+      let timeString = this._getTimeString(dateObject);
+      if (dateString && timeString) {
+        value = dateString + " " + timeString;
       } else {
-        let dateObject = this._parseDate(value);
-        let dateString = this._getDateString(dateObject);
-        let timeString = this._getTimeString(dateObject);
-        if (dateString && timeString) {
-          value = dateString + " " + timeString;
-        } else {
-          value = null;
-        }
+        value = null;
+      }
 
-        validationResult = this._validateDateTime({ value });
-        if (validationResult.feedback === "initial") {
+      let validationResult = this._validateDateTime({ value });
+      if (validationResult.feedback === "initial") {
+        let customValidationResult = this._validateOnChange({
+          value: this._getOutcomingValue(value),
+          event: null,
+          component: this,
+          _data: { value, timeZoneAdjusted: true },
+        });
+        if (customValidationResult) {
+          this._updateState(customValidationResult);
+        } else {
           validationResult.feedback = this.props.feedback || validationResult.feedback;
           validationResult.message = this.props.message || validationResult.message;
+          this._updateState(validationResult);
         }
-
+      } else {
         this._updateState(validationResult);
       }
 
@@ -218,34 +219,31 @@ let DateTimePicker = Context.withContext(
 
         this._allowTimeZoneAdjustment = true;
         let value = this._parseDate(nextProps.value);
-        let validationResult = this._validateOnChange(
-          {
-            value: this._getOutcomingValue(value, nextProps),
-            event: null,
-            component: this,
-            _data: { value, timeZoneAdjusted: true },
-          },
-          true
-        );
 
-        if (validationResult) {
-          this._updateState(validationResult);
-        } else {
-          if (this._getDateString(value) && !this._getTimeString(value)) {
-            value += " " + this._getAutofilledTime();
-          }
+        if (this._getDateString(value) && !this._getTimeString(value)) {
+          value += " " + this._getAutofilledTime();
+        }
 
-          validationResult = this._validateDateTime({ value });
-          if (validationResult.feedback === "initial") {
+        let validationResult = this._validateDateTime({ value });
+        if (validationResult.feedback === "initial") {
+          let customValidationResult = this._validateOnChange(
+            {
+              value: this._getOutcomingValue(value, nextProps),
+              event: null,
+              component: this,
+              _data: { value, timeZoneAdjusted: true },
+            },
+            true
+          );
+          if (customValidationResult) {
+            this._updateState(customValidationResult, false, true);
+          } else {
             validationResult.feedback = nextProps.feedback || validationResult.feedback;
             validationResult.message = nextProps.message || validationResult.message;
+            this._updateState(validationResult, false, true);
           }
-
-          this._updateState(
-            validationResult,
-            this._hasInputFocus() && !(validationResult.value instanceof Date),
-            validationResult.feedback === "initial"
-          );
+        } else {
+          this._updateState(validationResult, this._hasInputFocus() && !(validationResult.value instanceof Date), true);
         }
       }
 
@@ -403,11 +401,12 @@ let DateTimePicker = Context.withContext(
 
       let _callCallback = typeof setStateCallback === "function";
       let opt = { value: this._getOutcomingValue(value), _data: { value, timeZoneAdjusted: true } };
+      let validationResult = this._validateDateTime({ value });
 
-      if (!this._validateOnChange(opt, false)) {
+      if (validationResult.feedback === "initial" && !this._validateOnChange(opt, false)) {
         this._checkRequiredDateTime({ value });
         _callCallback = false;
-        this._updateState(this._validateDateTime({ value }), this._hasInputFocus(), false, setStateCallback);
+        this._updateState(validationResult, this._hasInputFocus(), false, setStateCallback);
       }
 
       if (_callCallback) {
@@ -429,10 +428,10 @@ let DateTimePicker = Context.withContext(
       if (this._checkRequiredDateTime({ value }) && !this.props.validateOnChange) {
         opt.value = this._getOutcomingValue(value);
         opt.required = this.props.required;
-        let blurResult = this.getBlurFeedback(opt);
-        blurResult.value = value;
-        let result = this._validateDateTime(blurResult);
-        this._updateState(result);
+        let validationResult = this._validateDateTime(opt);
+        if (validationResult.feedback === "initial") validationResult = this.getBlurFeedback(opt);
+        validationResult = { feedback: "initial", message: null, ...validationResult };
+        this._updateState({ ...validationResult, value });
       }
     },
 
@@ -1418,10 +1417,11 @@ let DateTimePicker = Context.withContext(
       let _callCallback = typeof setStateCallback === "function";
 
       if (this.props.validateOnChange) {
-        if (!this._validateOnChange(opt, false)) {
+        let validationResult = this._validateDateTime(opt);
+        if (validationResult.feedback === "initial" && !this._validateOnChange(opt, false)) {
           this._checkRequiredDateTime(opt);
           _callCallback = false;
-          this._updateState(this._validateDateTime(opt), false, false, setStateCallback);
+          this._updateState(validationResult, false, false, setStateCallback);
         }
       } else {
         this._checkRequiredDateTime({ value });
@@ -1451,10 +1451,11 @@ let DateTimePicker = Context.withContext(
       let value = opt._data ? opt._data.value : opt.value;
 
       if (this.props.validateOnChange) {
-        if (!this._validateOnChange(opt)) {
+        let validationResult = this._validateDateTime(opt);
+        if (validationResult.feedback === "initial" && !this._validateOnChange(opt, false)) {
           this._checkRequiredDateTime(opt);
           _callCallback = false;
-          this._updateState(this._validateDateTime(opt), false, false, setStateCallback);
+          this._updateState(validationResult, false, false, setStateCallback);
         }
       } else {
         if (value === "") {

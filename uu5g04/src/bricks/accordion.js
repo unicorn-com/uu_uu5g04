@@ -279,11 +279,18 @@ let Accordion = UU5.Common.VisualComponent.create({
 
   //@@viewOn:overriding
   shouldChildRender_: function (child) {
-    let childTagName = UU5.Common.Tools.getChildTagName(child);
+    let childTagName = child;
+    while (typeof childTagName !== "string" && childTagName) {
+      let childTag = UU5.Common.Tools.getChildTag(childTagName);
+      childTagName = childTag ? childTag.uu5Tag || childTag.tagName || childTag.displayName || childTag : childTag;
+    }
     let defaultChildTagName = this.getDefault().validChildTagName;
 
     let childTagNames = this.props.allowTags.concat(defaultChildTagName);
-    let result = childTagNames.indexOf(childTagName) > -1 || childTagName === "UuDcc.Bricks.ComponentWrapper";
+    let result =
+      childTagNames.indexOf(childTagName) > -1 ||
+      childTagName === "UuDcc.Bricks.ComponentWrapper" ||
+      childTagName === "UuEcc.ComponentWrapper";
 
     if (!result && (typeof child !== "string" || child.trim())) {
       if (childTagName)

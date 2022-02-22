@@ -1,242 +1,616 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
-  <title>Code Demo</title>
+  <head>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"
+    />
+    <title>Code Demo</title>
 
-  <script>
-    if (!location.href.match(/^(about:|file:)/)) {
-      var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
-      var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
-      if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
-      var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+bplSegmentCount).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
-      var appAssetsRelativeUrlPath = "public/0.0.0/";
-      document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
-    }
-  </script>
-
-  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
-
-  <script>
-    SystemJS.config({
-      "paths": {
-        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
-        "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
-        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
-        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
-        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
-
-        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
-        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
-        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+    <script>
+      if (!location.href.match(/^(about:|file:)/)) {
+        var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+        var bplSegmentCount = bplCookie ? Number(bplCookie[2]) : null;
+        if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+        var appBaseUrlPath = (
+          location.pathname
+            .split(/\//)
+            .slice(0, 1 + bplSegmentCount)
+            .join("/") + "/"
+        )
+          .replace(/\/+/g, "/")
+          .replace(/"/g, "");
+        var appAssetsRelativeUrlPath = "public/0.0.0/";
+        document.write(
+          '<base href="' +
+            appBaseUrlPath +
+            appAssetsRelativeUrlPath +
+            '" data-uu-app-base="' +
+            appBaseUrlPath +
+            '" data-uu-app-assets-base="' +
+            appAssetsRelativeUrlPath +
+            '">'
+        );
       }
-    });
+    </script>
 
-    // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
-    //   "uuoidc.redirectUri":"callbacks/login-callback.html"
-    // }}));
-  </script>
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
 
-</head>
-<body>
-<div id="renderHere"></div>
+    <script>
+      SystemJS.config({
+        paths: {
+          systemjs: "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          react: "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
 
-<!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
-<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
-<script type="text/babel">
-  import UU5 from "uu5g04";
-  import "uu5g04-bricks";
-  import "uu5g04-forms";
+          uu5g04: "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+          "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+          "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js",
+        },
+      });
 
+      // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+      //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+      // }}));
+    </script>
+  </head>
+  <body>
+    <div id="renderHere"></div>
 
-  var Page = UU5.Common.VisualComponent.create({
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
 
-          render: function () {
-            return (
-              <UU5.Bricks.Container>
-                {/*@@viewOn:0*/}
+      var Page = UU5.Common.VisualComponent.create({
+        render: function () {
+          return (
+            <UU5.Bricks.Container>
+              {/*@@viewOn:0*/}
+              <UU5.Bricks.Section header="colorSchema">
                 <UU5.Bricks.Tabs colorSchema="default">
-                  <UU5.Bricks.Tabs.Item header='Tab 1'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
-                  <UU5.Bricks.Tabs.Item header='Tab 2'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
-                  <UU5.Bricks.Tabs.Item header='Tab 3'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
-                  </UU5.Bricks.Tabs.Item>
-                </UU5.Bricks.Tabs>
-                <br/>
-                <br/>
-                <UU5.Bricks.Tabs colorSchema="yellow">
-                  <UU5.Bricks.Tabs.Item header='Tab 1'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
-                  </UU5.Bricks.Tabs.Item>
-                  <UU5.Bricks.Tabs.Item header='Tab 2'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
-                  </UU5.Bricks.Tabs.Item>
-                  <UU5.Bricks.Tabs.Item header='Tab 3'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
                 </UU5.Bricks.Tabs>
-                <br/>
-                <br/>
-                <UU5.Bricks.Tabs colorSchema="orange">
-                  <UU5.Bricks.Tabs.Item header='Tab 1'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                <br />
+                <br />
+                <UU5.Bricks.Tabs colorSchema="yellow" headerColorSchema="blue">
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
-                  <UU5.Bricks.Tabs.Item header='Tab 2'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
-                  <UU5.Bricks.Tabs.Item header='Tab 3'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
                 </UU5.Bricks.Tabs>
-                <br/>
-                <br/>
+                <br />
+                <br />
+                <UU5.Bricks.Tabs colorSchema="orange" contentColorSchema="green">
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                </UU5.Bricks.Tabs>
+                <br />
+                <br />
                 <UU5.Bricks.Tabs colorSchema="red">
-                  <UU5.Bricks.Tabs.Item header='Tab 1'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
-                  <UU5.Bricks.Tabs.Item header='Tab 2'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
-                  <UU5.Bricks.Tabs.Item header='Tab 3'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
                 </UU5.Bricks.Tabs>
-                <br/>
-                <br/>
+                <br />
+                <br />
                 <UU5.Bricks.Tabs colorSchema="pink">
-                  <UU5.Bricks.Tabs.Item header='Tab 1'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
-                  <UU5.Bricks.Tabs.Item header='Tab 2'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
-                  <UU5.Bricks.Tabs.Item header='Tab 3'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
                 </UU5.Bricks.Tabs>
-                <br/>
-                <br/>
+                <br />
+                <br />
                 <UU5.Bricks.Tabs colorSchema="purple">
-                  <UU5.Bricks.Tabs.Item header='Tab 1'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
-                  <UU5.Bricks.Tabs.Item header='Tab 2'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
-                  <UU5.Bricks.Tabs.Item header='Tab 3'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
                 </UU5.Bricks.Tabs>
-                <br/>
-                <br/>
+                <br />
+                <br />
                 <UU5.Bricks.Tabs colorSchema="blue">
-                  <UU5.Bricks.Tabs.Item header='Tab 1'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
-                  <UU5.Bricks.Tabs.Item header='Tab 2'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
-                  <UU5.Bricks.Tabs.Item header='Tab 3'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
                 </UU5.Bricks.Tabs>
-                <br/>
-                <br/>
+                <br />
+                <br />
                 <UU5.Bricks.Tabs colorSchema="cyan">
-                  <UU5.Bricks.Tabs.Item header='Tab 1'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
-                  <UU5.Bricks.Tabs.Item header='Tab 2'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
-                  <UU5.Bricks.Tabs.Item header='Tab 3'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
                 </UU5.Bricks.Tabs>
-                <br/>
-                <br/>
+                <br />
+                <br />
                 <UU5.Bricks.Tabs colorSchema="green">
-                  <UU5.Bricks.Tabs.Item header='Tab 1'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
-                  <UU5.Bricks.Tabs.Item header='Tab 2'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
-                  <UU5.Bricks.Tabs.Item header='Tab 3'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
                 </UU5.Bricks.Tabs>
-                <br/>
-                <br/>
+                <br />
+                <br />
                 <UU5.Bricks.Tabs colorSchema="brown">
-                  <UU5.Bricks.Tabs.Item header='Tab 1'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
-                  <UU5.Bricks.Tabs.Item header='Tab 2'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
-                  <UU5.Bricks.Tabs.Item header='Tab 3'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
                 </UU5.Bricks.Tabs>
-                <br/>
-                <br/>
+                <br />
+                <br />
                 <UU5.Bricks.Tabs colorSchema="grey">
-                  <UU5.Bricks.Tabs.Item header='Tab 1'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
-                  <UU5.Bricks.Tabs.Item header='Tab 2'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
-                  <UU5.Bricks.Tabs.Item header='Tab 3'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad
-                    litora
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
                   </UU5.Bricks.Tabs.Item>
                 </UU5.Bricks.Tabs>
-                {/*@@viewOff:0*/}
-              </UU5.Bricks.Container>
-            );
-          }
-        }
-      );
+              </UU5.Bricks.Section>
+              {/*@@viewOff:0*/}
+              {/*@@viewOn:0*/}
+              <UU5.Bricks.Section header="colorSchemaHeader">
+                <UU5.Bricks.Tabs colorSchemaHeader="default">
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                </UU5.Bricks.Tabs>
+                <br />
+                <br />
+                <UU5.Bricks.Tabs colorSchemaHeader="yellow">
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                </UU5.Bricks.Tabs>
+                <br />
+                <br />
+                <UU5.Bricks.Tabs colorSchemaHeader="orange">
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                </UU5.Bricks.Tabs>
+                <br />
+                <br />
+                <UU5.Bricks.Tabs colorSchemaHeader="red">
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                </UU5.Bricks.Tabs>
+                <br />
+                <br />
+                <UU5.Bricks.Tabs colorSchemaHeader="pink">
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                </UU5.Bricks.Tabs>
+                <br />
+                <br />
+                <UU5.Bricks.Tabs colorSchemaHeader="purple">
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                </UU5.Bricks.Tabs>
+                <br />
+                <br />
+                <UU5.Bricks.Tabs colorSchemaHeader="blue">
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                </UU5.Bricks.Tabs>
+                <br />
+                <br />
+                <UU5.Bricks.Tabs colorSchemaHeader="cyan">
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                </UU5.Bricks.Tabs>
+                <br />
+                <br />
+                <UU5.Bricks.Tabs colorSchemaHeader="green">
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                </UU5.Bricks.Tabs>
+                <br />
+                <br />
+                <UU5.Bricks.Tabs colorSchemaHeader="brown">
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                </UU5.Bricks.Tabs>
+                <br />
+                <br />
+                <UU5.Bricks.Tabs colorSchemaHeader="grey">
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                </UU5.Bricks.Tabs>
+              </UU5.Bricks.Section>
+              {/*@@viewOff:0*/}
+              {/*@@viewOn:0*/}
+              <UU5.Bricks.Section header="colorSchemaContent">
+                <UU5.Bricks.Tabs colorSchemaContent="default">
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                </UU5.Bricks.Tabs>
+                <br />
+                <br />
+                <UU5.Bricks.Tabs colorSchemaContent="yellow">
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                </UU5.Bricks.Tabs>
+                <br />
+                <br />
+                <UU5.Bricks.Tabs colorSchemaContent="orange">
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                </UU5.Bricks.Tabs>
+                <br />
+                <br />
+                <UU5.Bricks.Tabs colorSchemaContent="red">
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                </UU5.Bricks.Tabs>
+                <br />
+                <br />
+                <UU5.Bricks.Tabs colorSchemaContent="pink">
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                </UU5.Bricks.Tabs>
+                <br />
+                <br />
+                <UU5.Bricks.Tabs colorSchemaContent="purple">
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                </UU5.Bricks.Tabs>
+                <br />
+                <br />
+                <UU5.Bricks.Tabs colorSchemaContent="blue">
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                </UU5.Bricks.Tabs>
+                <br />
+                <br />
+                <UU5.Bricks.Tabs colorSchemaContent="cyan">
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                </UU5.Bricks.Tabs>
+                <br />
+                <br />
+                <UU5.Bricks.Tabs colorSchemaContent="green">
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                </UU5.Bricks.Tabs>
+                <br />
+                <br />
+                <UU5.Bricks.Tabs colorSchemaContent="brown">
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                </UU5.Bricks.Tabs>
+                <br />
+                <br />
+                <UU5.Bricks.Tabs colorSchemaContent="grey">
+                  <UU5.Bricks.Tabs.Item header="Tab 1">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 2">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                  <UU5.Bricks.Tabs.Item header="Tab 3">
+                    <UU5.Bricks.Button /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti
+                    sociosqu ad litora
+                  </UU5.Bricks.Tabs.Item>
+                </UU5.Bricks.Tabs>
+              </UU5.Bricks.Section>
+              {/*@@viewOff:0*/}
+            </UU5.Bricks.Container>
+          );
+        },
+      });
 
-      UU5.Common.DOM.render(UU5.Common.Element.create(Page, null), document.getElementById('renderHere'));
+      UU5.Common.DOM.render(UU5.Common.Element.create(Page, null), document.getElementById("renderHere"));
     </script>
   </body>
 </html>

@@ -136,18 +136,19 @@ let DatePicker = Context.withContext(
       this._hasFocus = false;
       let value = this._getIncomingValue(this.props.value);
       value = this._getDateString(value) || value;
-      let validationResult = this._validateOnChange({ value, event: null, component: this });
 
-      if (validationResult) {
-        this._updateState(validationResult);
-      } else {
-        value = this._getDateString(value);
-        validationResult = this._validateDate({ value });
-        if (validationResult.feedback === "initial") {
+      value = this._getDateString(value);
+      let validationResult = this._validateDate({ value });
+      if (validationResult.feedback === "initial") {
+        let customValidationResult = this._validateOnChange({ value, event: null, component: this });
+        if (customValidationResult) {
+          this._updateState(customValidationResult);
+        } else {
           validationResult.feedback = this.props.feedback || validationResult.feedback;
           validationResult.message = this.props.message || validationResult.message;
+          this._updateState(validationResult);
         }
-
+      } else {
         this._updateState(validationResult);
       }
 
@@ -163,19 +164,20 @@ let DatePicker = Context.withContext(
         this._setFormattingValues(nextProps);
         let value = this._getIncomingValue(nextProps.value);
         value = this._hasInputFocus() && !(value instanceof Date) ? value : this._getDateString(value) || value;
-        let validationResult = this._validateOnChange({ value, event: null, component: this }, true);
 
-        if (validationResult) {
-          this._updateState(validationResult);
-        } else {
-          value = this._getDateString(value);
-          validationResult = this._validateDate({ value });
-          if (validationResult.feedback === "initial") {
+        value = this._getDateString(value);
+        let validationResult = this._validateDate({ value });
+        if (validationResult.feedback === "initial") {
+          let customValidationResult = this._validateOnChange({ value, event: null, component: this }, true);
+          if (customValidationResult) {
+            this._updateState(customValidationResult);
+          } else {
             validationResult.feedback = nextProps.feedback || validationResult.feedback;
             validationResult.message = nextProps.message || validationResult.message;
+            this._updateState(validationResult, true);
           }
-
-          this._updateState(validationResult, validationResult.feedback === "initial");
+        } else {
+          this._updateState(validationResult, true);
         }
       }
 
@@ -235,10 +237,11 @@ let DatePicker = Context.withContext(
       let _callCallback = typeof setStateCallback === "function";
       value = this._parseDate(value);
       value = this._hasInputFocus() && !(value instanceof Date) ? value : this._getDateString(value) || value;
-      if (!this._validateOnChange({ value }, false)) {
-        if (this._checkRequired({ value })) {
+      if (this._checkRequired({ value })) {
+        let validationResult = this._validateDate({ value });
+        if (validationResult.feedback === "initial" && !this._validateOnChange({ value }, false)) {
           _callCallback = false;
-          this._updateState(this._validateDate({ value }), false, setStateCallback);
+          this._updateState(validationResult, false, setStateCallback);
         }
       }
 
@@ -284,11 +287,10 @@ let DatePicker = Context.withContext(
       if (this._checkRequired({ value: formatedValue || value }) && !this.props.validateOnChange) {
         opt.value = this._getOutcomingValue(value);
         opt.required = this.props.required;
-        let blurResult = this.getBlurFeedback(opt);
-        blurResult.value = value;
-        let result = this._validateDate(blurResult);
-
-        this._updateState(result);
+        let validationResult = this._validateDate(opt);
+        if (validationResult.feedback === "initial") validationResult = this.getBlurFeedback(opt);
+        validationResult = { feedback: "initial", message: null, ...validationResult };
+        this._updateState({ ...validationResult, value });
       } else {
         this.setState({ value: formatedValue || value });
       }
@@ -644,7 +646,10 @@ let DatePicker = Context.withContext(
           }
         }
       } else {
-        if (!this._hasFocus) this._onFocus(opt); // make sure that the component knows that it has focus
+        if (!this._hasFocus) {
+          this._onFocus(opt); // make sure that the component knows that it has focus
+          opt.value = e.target.value;
+        }
         this._updateState({ value: opt.value });
       }
       return this;
@@ -666,10 +671,11 @@ let DatePicker = Context.withContext(
 
       if (this.props.validateOnChange) {
         opt.value = opt._data.value;
-        if (!this._validateOnChange(opt)) {
-          if (this._checkRequired(opt)) {
+        if (this._checkRequired(opt)) {
+          let validationResult = this._validateDate(opt);
+          if (validationResult.feedback === "initial" && !this._validateOnChange(opt)) {
             _callCallback = false;
-            this._updateState(this._validateDate(opt), false, callback);
+            this._updateState(validationResult, false, callback);
           }
         }
       } else {

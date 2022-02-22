@@ -84,8 +84,13 @@
   }
 
   &.uu5-forms-items-input {
-    &:focus, &.uu5-forms-items-input-open {
-      background-color: @bg-hover;
+    &:focus,
+    &.uu5-forms-items-input-open {
+      & when not (@class-name = uu5-common-bg-style-outline) {
+        & when not (@class-name = uu5-common-bg-style-underline) {
+          background-color: @bg-hover;
+        }
+      }
       .border(@border-hover);
 
       & when not (@color-schema = default) {

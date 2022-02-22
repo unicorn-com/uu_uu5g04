@@ -155,6 +155,8 @@ export const Tabs = UU5.Common.VisualComponent.create({
       MOUNT_TAB_CONTENT_VALUES.onFirstActive,
       MOUNT_TAB_CONTENT_VALUES.onActive,
     ]),
+    headerColorSchema: UU5.PropTypes.string,
+    contentColorSchema: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
@@ -176,6 +178,8 @@ export const Tabs = UU5.Common.VisualComponent.create({
       underline: true,
       lineProps: null,
       mountTabContent: undefined,
+      headerColorSchema: undefined,
+      contentColorSchema: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -183,12 +187,18 @@ export const Tabs = UU5.Common.VisualComponent.create({
   //@@viewOn:reactLifeCycle
   getInitialState() {
     this._btn = {};
+    UU5.Environment.getColorSchema(this.props.contentColorSchema);
 
     return this._getState(this.props);
   },
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     this.setState((state) => this._getState(nextProps, state));
+    if (nextProps.controlled) {
+      if (this.props.contentColorSchema !== nextProps.contentColorSchema) {
+        UU5.Environment.getColorSchema(nextProps.contentColorSchema);
+      }
+    }
   },
 
   //@@viewOff:reactLifeCycle
@@ -481,6 +491,7 @@ export const Tabs = UU5.Common.VisualComponent.create({
             borderRadius={this.props.borderRadius}
             controlled={tab.props.controlled}
             hidden={tab.props.hidden}
+            colorSchema={this.props.headerColorSchema ? this.props.headerColorSchema : this.props.colorSchema}
           />
         </li>
       );
@@ -505,6 +516,7 @@ export const Tabs = UU5.Common.VisualComponent.create({
             content={tab.props.header}
             controlled={tab.props.controlled}
             hidden={tab.props.hidden}
+            colorSchema={this.props.headerColorSchema ? this.props.headerColorSchema : this.props.colorSchema}
           />
         </li>
       );
@@ -550,7 +562,7 @@ export const Tabs = UU5.Common.VisualComponent.create({
 
   _prepareInlineTitle() {
     let titles = this.getChildren();
-    let renderDots = titles.length > 3 ? true : false;
+    let renderDots = titles.length > 3;
     titles = titles.slice(0, 3);
 
     return (
@@ -567,7 +579,10 @@ export const Tabs = UU5.Common.VisualComponent.create({
   render() {
     const { items, children } = this._getItems();
     const mainAttrs = this.getMainAttrs();
-    mainAttrs.className += " " + this.getClassName("size") + this.props.size;
+    mainAttrs.className = mainAttrs.className.replace(/color-schema-[a-z-]+ ?/, "");
+
+    let contentColorSchema = this.props.contentColorSchema ? this.props.contentColorSchema : this.props.colorSchema;
+    contentColorSchema = "color-schema-" + contentColorSchema;
 
     return this.getNestingLevel() ? (
       <UU5.Common.Fragment>
@@ -577,7 +592,7 @@ export const Tabs = UU5.Common.VisualComponent.create({
             {this.props.underline ? <Line {...this._getLineProps()} /> : null}
           </ul>
 
-          <div className={this.getClassName().content}>{children}</div>
+          <div className={this.getClassName().content + " " + contentColorSchema}>{children}</div>
           {this.getDisabledCover()}
         </div>
         {this.state.editation ? this._renderEditationMode() : null}

@@ -410,7 +410,10 @@ describe(`UU5.Forms.TimePicker default props check`, () => {
     expect(wrapper.instance().props.iconOpen).toMatch(/mdi-clock-outline/);
     expect(wrapper.instance().props.iconClosed).toMatch(/mdi-clock-outline/);
     expect(wrapper.instance().props.format).toBe("24");
-    expect(wrapper.instance().props.nanMessage).toMatch(/Please insert a valid time./);
+    expect(wrapper.instance().props.nanMessage).toMatchObject({
+      cs: "Prosím zadejte čas ve správném formátu.",
+      en: "Please insert a valid time.",
+    });
     expect(wrapper.instance().props.seconds).toBeFalsy();
     expect(wrapper.instance().props.valueType).toBeNull();
   });

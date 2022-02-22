@@ -2,6 +2,14 @@
 @import "../tools.less";
 
 .@{name}-daterangepicker {
+  &.uu5-common-disabled {
+    opacity: 1;
+
+    .@{name}-input-wrapper {
+      opacity: 0.4;
+    }
+  }
+
   .@{name}-daterangepicker-input-text {
     color: #454545;
   }
@@ -389,7 +397,7 @@
       width: auto;
       height: auto;
       border-radius: 2px;
-      font-family: ClearSans-Medium;
+      font-weight: 500;
       color: #2196f3;
       background-color: transparent;
 

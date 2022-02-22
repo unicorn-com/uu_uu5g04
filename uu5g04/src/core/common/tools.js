@@ -72,6 +72,15 @@ const TIME_FORMAT_24 = "24";
 
 const COOKIE_CSRF_TOKEN = "uu.app.csrf";
 
+const MathTools = {
+  // JS by default has different rounding logic of negative numbers
+  // Math.round(-12.5) = -13
+  // but we want to have rounding toward zero, so rounding of egative and positive numbers have same result with different sign
+  round(number) {
+    return Math.sign(number) * Math.round(Math.abs(number));
+  },
+};
+
 export const Tools = {
   _languageProviderValue: null, // for sync-ing Tools.setLanguage, getLanguage with root LanguageProvider
 
@@ -1267,7 +1276,8 @@ Tools.error = function (msg, context, _logger = null) {
   //   console.error('For debugging use development mode.');
   // } else {
   let usedLogger = typeof _logger?.error !== "function" ? logger : _logger;
-  usedLogger.error(msg, context);
+  let args = [...arguments].slice(0, 2); // [msg] or [msg, context]; we don't want to send extra arguments
+  usedLogger.error(...args);
   // }
 
   if (Environment.logErrorFunction) {
@@ -1311,7 +1321,8 @@ Tools.error = function (msg, context, _logger = null) {
 
 Tools.warning = function (msg, context, _logger = null) {
   let usedLogger = typeof _logger?.warn !== "function" ? logger : _logger;
-  usedLogger.warn(msg, context);
+  let args = [...arguments].slice(0, 2); // [msg] or [msg, context]; we don't want to send extra arguments
+  usedLogger.warn(...args);
 };
 
 Tools.repeat = (value, count) => {
@@ -1360,7 +1371,7 @@ Tools.ljust = (string, length, padding) => {
 Tools.decimalAdjust = (type = "round", value, exp) => {
   // If the exp is undefined or zero...
   if (typeof exp === "undefined" || +exp === 0) {
-    return Math[type](value);
+    return (MathTools[type] || Math[type])(value);
   }
   value = +value;
   exp = +exp;
@@ -1370,7 +1381,7 @@ Tools.decimalAdjust = (type = "round", value, exp) => {
   }
   // Shift
   value = value.toString().split("e");
-  value = Math[type](+(value[0] + "e" + (value[1] ? +value[1] - exp : -exp)));
+  value = (MathTools[type] || Math[type])(+(value[0] + "e" + (value[1] ? +value[1] - exp : -exp)));
   // Shift back
   value = value.toString().split("e");
   return +(value[0] + "e" + (value[1] ? +value[1] + exp : exp));
@@ -2065,10 +2076,18 @@ Tools.getTimeString = (dateTime, displaySeconds, timeFormat, includeTimeFormat, 
       }
 
       if (time) {
-        dateObject = new Date();
-        dateObject.setHours(time.split(":")[0]);
-        dateObject.setMinutes(time.split(":")[1] || 0);
-        dateObject.setSeconds(time.split(":")[2] || 0);
+        let hours = time.split(":")[0];
+        let minutes = time.split(":")[1] || 0;
+        let seconds = time.split(":")[2] || 0;
+        if (
+          (timeFormat == TIME_FORMAT_12 && Number(hours) <= 12) ||
+          (timeFormat != TIME_FORMAT_12 && Number(hours) <= 24 && Number(minutes) <= 60 && Number(seconds) <= 60)
+        ) {
+          dateObject = new Date();
+          dateObject.setHours(time.split(":")[0]);
+          dateObject.setMinutes(time.split(":")[1] || 0);
+          dateObject.setSeconds(time.split(":")[2] || 0);
+        }
       }
     } else if (dateTime instanceof Date) {
       dateObject = dateTime;
@@ -2862,7 +2881,7 @@ Tools.deepSortObjectKeys = (object) => {
 const groupCallCache = {};
 Tools.groupCall = (uri, dtoIn, doLoadFn, { maxAge = 100 } = {}) => {
   if (!groupCallCache.data) groupCallCache.data = {};
-  const cacheKey = uri + " " + JSON.stringify(Tools.deepSortObjectKeys(dtoIn));
+  const cacheKey = uri + " " + JSON.stringify(Tools.deepSortObjectKeys(dtoIn ?? {}));
   let data = groupCallCache.data[cacheKey];
 
   if (!data) {

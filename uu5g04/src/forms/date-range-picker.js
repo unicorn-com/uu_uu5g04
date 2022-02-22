@@ -288,17 +288,22 @@ let DateRangePicker = Context.withContext(
           // value probably isnt valid
           value = this.parseDate(this.props.value);
 
-          if (this.props.onValidate && typeof this.props.onValidate === "function") {
-            this._validateOnChange({ value, event: null, component: this });
+          let validateResult = { feedback: "initial" };
+          if (Array.isArray(value) && value.length === 1) {
+            this.setValue(null);
           } else {
-            if (Array.isArray(value) && value.length === 1) {
-              this.setValue(null);
-            } else {
-              let validateResult = this._validateDateRangeResult({ value });
-              if (validateResult.feedback === "error") {
-                this.setError(validateResult.message, null);
-              }
+            let validateResult = this._validateDateRangeResult({ value });
+            if (validateResult.feedback === "error") {
+              this.setError(validateResult.message, null);
             }
+          }
+
+          if (
+            validateResult.feedback === "initial" &&
+            this.props.onValidate &&
+            typeof this.props.onValidate === "function"
+          ) {
+            this._validateOnChange({ value, event: null, component: this });
           }
         } else {
           // there is no value
@@ -336,7 +341,7 @@ let DateRangePicker = Context.withContext(
           );
           if (result) {
             if (typeof result === "object") {
-              if (nextProps.onValidate && typeof nextProps.onValidate === "function") {
+              if (result.feedback === "initial" && nextProps.onValidate && typeof nextProps.onValidate === "function") {
                 this._validateOnChange({ value: result.value, event: null, component: this }, true);
               } else {
                 let displayValue;

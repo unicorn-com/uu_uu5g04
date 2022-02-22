@@ -179,7 +179,6 @@ const ButtonEditable = createVisualComponent({
 
   _getProps() {
     let props = this.props.component.getEditablePropsValues(Object.keys(this.props.component.props));
-    if (props.children) props.children = "<uu5string />" + props.children;
     return props;
   },
   //@@viewOff:private

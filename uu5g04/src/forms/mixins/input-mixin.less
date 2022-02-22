@@ -7,6 +7,18 @@
   flex-wrap: wrap;
   margin-top: 24px;
 
+  &.uu5-common-disabled {
+    opacity: 1;
+
+    .@{name}-input-wrapper {
+      opacity: 0.4;
+
+      .@{name}-input-wrapper {
+        opacity: 1;
+      }
+    }
+  }
+
   &.@{name}-input-inline::before {
     // secures a vertical align to baseline when a component doesnt have a label
     content: "\200b";
@@ -529,8 +541,8 @@
   width: 2.45em;
   height: 2.45em;
   border-radius: 50%;
-  -webkit-animation: "@{name}-input-load" 1.4s infinite linear;
-  animation: "@{name}-input-load" 1.4s infinite linear;
+  -webkit-animation: ~"@{name}-input-load" 1.4s infinite linear;
+  animation: ~"@{name}-input-load" 1.4s infinite linear;
   position: absolute;
   flex: none;
   right: 1.5em;
@@ -686,7 +698,7 @@
   //}
 }
 
-@-webkit-keyframes "@{name}-input-load" {
+@-webkit-keyframes ~"@{name}-input-load" {
   0% {
     transform: rotate(0deg);
   }
@@ -695,7 +707,7 @@
   }
 }
 
-@keyframes "@{name}-input-load" {
+@keyframes ~"@{name}-input-load" {
   0% {
     transform: rotate(0deg);
   }

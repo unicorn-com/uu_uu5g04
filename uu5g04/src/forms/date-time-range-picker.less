@@ -2,6 +2,14 @@
 @import "../tools.less";
 
 .@{name}-datetimerangepicker {
+  &.uu5-common-disabled {
+    opacity: 1;
+
+    .@{name}-input-wrapper {
+      opacity: 0.4;
+    }
+  }
+
   .@{name}-time {
     margin-top: 0px;
     position: relative;
@@ -462,7 +470,7 @@
     width: auto;
     height: auto;
     border-radius: 2px;
-    font-family: ClearSans-Medium;
+    font-weight: 500;
     color: #2196f3;
     background-color: transparent;
 

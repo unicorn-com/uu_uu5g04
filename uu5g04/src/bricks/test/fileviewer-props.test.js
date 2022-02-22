@@ -26,7 +26,6 @@ const CONFIG = {
     "UU5.Common.PureRenderMixin",
   ],
   props: {
-    src: "https://cdn.plus4u.net/libs/clearsans/1.0.0/fonts/clear-sans.css",
     parameters: {
       values: [{ example: "some" }],
     },
@@ -59,7 +58,7 @@ describe(`UU5.Bricks.FileViewer`, () => {
 
   it("Default values detailed", () => {
     const wrapper = shallow(
-      <UU5.Bricks.FileViewer id={"FV"} src="https://cdn.plus4u.net/libs/clearsans/1.0.0/fonts/clear-sans.css" />
+      <UU5.Bricks.FileViewer id={"FV"} src="https://cdn.plus4u.net/libs/roboto/1.0.0/roboto.css" />
     );
     //here is save default values
     expect(wrapper).toMatchSnapshot();

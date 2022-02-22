@@ -378,7 +378,7 @@ describe(`UU5.Forms.Number props function -> Text.InputMixin`, () => {
         validateOnChange={true}
         onValidate={(opt) => {
           let feedback;
-          if (opt.value !== null) {
+          if (opt.value) {
             feedback = {
               feedback: "success",
               message: "Is valid.",

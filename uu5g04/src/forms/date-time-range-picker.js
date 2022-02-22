@@ -551,6 +551,7 @@ let DateTimeRangePicker = Context.withContext(
       if (this._checkRequired({ value: opt.value }) && !this.props.validateOnChange) {
         opt.required = this.props.required;
         let blurResult = this.getBlurFeedback({ ...opt, value });
+        blurResult = { feedback: "initial", message: null, ...blurResult };
 
         if (typeof this.props.onChangeFeedback === "function") {
           this.props.onChangeFeedback({ ...blurResult, component: this });

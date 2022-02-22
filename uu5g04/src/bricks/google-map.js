@@ -148,7 +148,8 @@ export const GoogleMap = UU5.Common.VisualComponent.create({
         UU5.Environment.EventListener.registerLoadLibs(this.getId(), this._initMap);
       }
     } else {
-      this._loadLibraries(markers).this._initMap(markers);
+      this._loadLibraries(markers);
+      this._initMap(markers);
     }
   },
 

@@ -27,38 +27,25 @@ async function run() {
   let outputFile = `target/uu5g04-${version}-offline.zip`;
   let output = fs.createWriteStream(outputFile);
 
-  await zip(async zipArchive => {
+  await zip(async (zipArchive) => {
     zipArchive.pipe(output);
     zipArchive.directory("target/dist/", "");
     let workers = [];
 
-    // 1. download & zip clearsans.min.css, clearsans.css, fonty
-    let fontStylesBaseUri = "https://cdn.plus4u.net/libs/clearsans/2.0.0/fonts/";
-    let fontStylesFiles = [
-      "clear-sans.css",
-      "clear-sans.min.css",
-      "ClearSans-Regular.woff2",
-      "ClearSans-Regular.woff",
-      "ClearSans-Thin.woff2",
-      "ClearSans-Thin.woff",
-      "ClearSans-Light.woff2",
-      "ClearSans-Light.woff",
-      "ClearSans-Italic.woff2",
-      "ClearSans-Italic.woff",
-      "ClearSans-Medium.woff2",
-      "ClearSans-Medium.woff",
-      "ClearSans-MediumItalic.woff2",
-      "ClearSans-MediumItalic.woff",
-      "ClearSans-Bold.woff2",
-      "ClearSans-Bold.woff",
-      "ClearSans-BoldItalic.woff2",
-      "ClearSans-BoldItalic.woff"
-    ];
-    let fontStylesInZipPrefix = "assets/clearsans/2.0.0/fonts/";
-    workers.push(
-      ...fontStylesFiles.map(async file => {
+    // 1. download & zip roboto.min.css, roboto.css, fonts
+    let fontStylesBaseUri = "https://cdn.plus4u.net/libs/roboto/1.0.0/";
+    let fontStylesInZipPrefix = "assets/roboto/1.0.0/";
+    let fontFiles = new Set();
+    await Promise.all(
+      ["roboto.css", "roboto.min.css"].map(async (file) => {
         let content = await download(fontStylesBaseUri + file);
-        if (file.match(/\.css$/)) content = content.toString().replace(/https:\/\/cdn\.plus4u.*?fonts\//g, "");
+        content.toString().replace(/url\(\s*['"]?([^'")]*)/g, (m, g) => fontFiles.add(g.replace(/^\.\//, "").trim()));
+        zipArchive.append(content, { name: fontStylesInZipPrefix + file });
+      })
+    );
+    workers.push(
+      ...[...fontFiles].map(async (file) => {
+        let content = await download(fontStylesBaseUri + file);
         zipArchive.append(content, { name: fontStylesInZipPrefix + file });
       })
     );
@@ -70,12 +57,13 @@ async function run() {
       "uu5g04_icons.min.css",
       "uu5g04-icons.ttf",
       "uu5g04-icons.woff",
+      "uu5g04-icons.woff2",
       "uu5g04-icons.eot",
-      "uu5g04-icons.svg"
+      "uu5g04-icons.svg",
     ];
     let uu5g04IconsInZipPrefix = "assets/uu-uu5g04-icons/1.0.0/";
     workers.push(
-      ...uu5g04IconsFiles.map(async file => {
+      ...uu5g04IconsFiles.map(async (file) => {
         let content = await download(uu5g04IconsBaseUri + file);
         zipArchive.append(content, { name: uu5g04IconsInZipPrefix + file });
       })
@@ -90,19 +78,19 @@ async function run() {
 async function download(url) {
   return new Promise((resolve, reject) => {
     https
-      .get(url, res => {
+      .get(url, (res) => {
         if (res.statusCode >= 300)
           return reject(new Error("Got status " + res.statusCode + " while downloading " + url));
         let chunks = [];
-        res.on("data", data => chunks.push(data));
+        res.on("data", (data) => chunks.push(data));
         res.on("end", () => resolve(Buffer.concat(chunks)));
       })
-      .on("error", e => reject(e));
+      .on("error", (e) => reject(e));
   });
 }
 
 async function zip(builderFn) {
-  return new Promise(async function(resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     let zipBuilder = archiver("zip", { zlib: { level: 9 } });
     zipBuilder.on("error", () => reject());
     zipBuilder.on("end", () => resolve());

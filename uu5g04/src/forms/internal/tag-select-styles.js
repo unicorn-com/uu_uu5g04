@@ -124,6 +124,7 @@ const CommonClassNames = {
   },
   itemsInput: (props) => {
     return Css.css`
+      border-radius: 2px;
       & > .uu5-forms-input-form-item-value {
         display: flex;
         flex-grow: 1;
@@ -196,14 +197,15 @@ const CommonClassNames = {
   textInput: (props, state) => {
     let padding;
     let showPlaceholder = !state.searchValue && (props.multiple || !hasValue(state.value));
-    let placeholder = showPlaceholder
-      ? props.placeholder || UU5.Common.BaseMixin.getLsiItem(UU5.Environment.Lsi.Forms.tagSelect.placeholder)
-      : null;
+    let placeholder = showPlaceholder ? props.placeholder || UU5.Environment.Lsi.Forms.tagSelect.placeholder : null;
     let placeholderWidth = showPlaceholder
-      ? UU5.Common.Tools.calculateTextWidth(placeholder, {
-          fontSize: `${INPUT_FONT_SIZE[props.size]}`,
-          whiteSpace: "pre",
-        })
+      ? UU5.Common.Tools.calculateTextWidth(
+          typeof placeholder === "string" ? placeholder : UU5.Common.BaseMixin.getLsiItem(placeholder),
+          {
+            fontSize: `${INPUT_FONT_SIZE[props.size]}`,
+            whiteSpace: "pre",
+          }
+        )
       : undefined;
 
     if (props.multiple) {
@@ -237,10 +239,11 @@ const CommonClassNames = {
         padding: 0;
         max-width: 100%;
         background-color: transparent;
+        user-select: none;
+        ${UU5.Common.Tools.isIE() ? "&::-ms-clear { display: none; }" : ""}
+      }
 
-      ${UU5.Common.Tools.isIE() ? "&::-ms-clear { display: none; }" : ""}
-
-      &&& > input:focus {
+      &&&&&& > input:focus {
         background-color: transparent;
       }
     `;
@@ -282,6 +285,7 @@ const CommonClassNames = {
       }
     `;
   },
+  noMatchItem: () => Css.css({ pointerEvents: "none" }),
 };
 
 function getStandardColors(colorShades) {

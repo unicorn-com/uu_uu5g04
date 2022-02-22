@@ -177,7 +177,7 @@ const ModalBus = UU5.Common.VisualComponent.create({
         </ModalContext.Provider>
       );
     } else {
-      result = <Uu5Elements.ModalBus {...this.getMainPropsToPass()} />;
+      result = <Uu5Elements.ModalBus {...this.getMainPropsToPass()}>{children}</Uu5Elements.ModalBus>;
     }
     return result;
   },

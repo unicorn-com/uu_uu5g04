@@ -31,7 +31,15 @@ import withUserPreferences from "../common/user-preferences";
 import "./number.less";
 //@@viewOff:imports
 
-let Number = Context.withContext(
+function isSameNumber(a, b) {
+  return (
+    (a === b && a) || // check if both values are same, except 0 (0 === -0) and NaN (NaN !== NaN)
+    (Number.isNaN(a) && Number.isNaN(b)) || // check if both values are NaN
+    (a === 0 && b === 0 && 1 / a === 1 / b) // check if both values are same zero (positive or negative)
+  );
+}
+
+let NumberComponent = Context.withContext(
   UU5.Common.VisualComponent.create({
     displayName: "Number", // for backward compatibility (test snapshots)
     //@@viewOn:mixins
@@ -113,83 +121,83 @@ let Number = Context.withContext(
     //@@viewOn:reactLifeCycle
     getInitialState() {
       this._currentProps = {};
+      this._localizedValueStack = [];
       this._setCurrentProps(this.props);
       return {};
     },
 
     UNSAFE_componentWillMount() {
-      let value = this.state.value;
-      this._isNaN = isNaN(value);
-
-      if (typeof value === "number") {
-        // to string
-        value = this._isNaN ? "" : value + "";
-        const multiplicator = Math.pow(10, this._currentProps.decimals);
-        value =
-          this._currentProps.rounded && typeof this._currentProps.decimals === "number"
-            ? Math.round(value * multiplicator) / multiplicator
-            : value;
-        value =
-          this._currentProps.rounded && this._currentProps.decimals
-            ? Math.round(value * multiplicator) / multiplicator
-            : value;
-      }
-
-      let result = this._setNumberResult({ value });
-
-      if (this._currentProps.onValidate && typeof this._currentProps.onValidate === "function") {
-        if (result) {
-          if (typeof result === "object") {
-            if (result.feedback) {
-              this.setFeedback(result.feedback, result.message, result.value);
-            } else {
-              this._validateOnChange({ value, event: null, component: this });
-            }
-          }
+      // !!! Value in state must always be "localized", i.e. it's what user sees and will be editing, and it uses separators from props.
+      let value = this.state.value; // value in state is wrong (non-localized) because it was copied there from props.value in mixin and props.value
+      let { feedback, message, value: localizedValue } = this._getLocalizedValueWithFeedback(value, false);
+      if (typeof this._currentProps.onValidate === "function") {
+        if (feedback) {
+          this._localizedSetFeedback(feedback, message, localizedValue);
+        } else {
+          let valueTypedValue = this._getValueTypedValue(localizedValue);
+          this._validateOnChange({
+            value: valueTypedValue,
+            event: null,
+            component: this,
+            _data: { value: localizedValue },
+          });
         }
       } else {
-        this.setState({ value: result.value });
+        this.setState({ value: localizedValue });
       }
       return this;
     },
 
     UNSAFE_componentWillReceiveProps(nextProps) {
       if (nextProps.controlled) {
-        this._setCurrentProps(nextProps);
         let result;
         // if input is focused and current value is for example "-" and new value is NaN we can be sure that
         // nextProps value was returned by onChange callback and set into props by updating state of the parent component
         // that means that value wasn't change and we can use formated value from input as a new value
         // otherwise is impossible to update value in prop in onChange callback
-        if (this._isFocused && nextProps.valueType === "number" && typeof nextProps.value === "number") {
-          let inputNode = UU5.Common.DOM.findNode(this._textInput);
-          let inputValue = inputNode && inputNode.querySelector("input");
-          let currentValue = inputValue ? parseFloat(inputValue.value) : NaN;
-          // check if both values are same
-          if (
-            (currentValue === nextProps.value && currentValue) || // check if both values are same, except 0 (0 === -0) and NaN (NaN !== NaN)
-            (isNaN(currentValue) && isNaN(nextProps.value)) || // check if both values are NaN
-            (currentValue === 0 && nextProps.value === 0 && 1 / currentValue === 1 / nextProps.value) // check if both values are same zero (positive or negative)
-          ) {
-            result = { value: inputValue.value };
-          }
+        let currentLocalizedValue = this.state.value;
+        if (this._isFocused) {
+          let rootNode = UU5.Common.DOM.findNode(this._textInput);
+          let inputNode = rootNode && rootNode.querySelector("input");
+          if (inputNode) currentLocalizedValue = this._removePrefixAndSuffix(inputNode.value);
+        }
+        let currentNumber = this._parseNumberFromLocalizedString(currentLocalizedValue);
+
+        // if new value from prop is logically same number as the one in our state then use
+        // current state instead of formatting the props.value
+        this._setCurrentProps(nextProps);
+        result = this._getLocalizedValueWithFeedback(nextProps.value, false);
+        let nextNumber = this._parseNumberFromLocalizedString(result.value);
+        if (
+          isSameNumber(nextNumber, currentNumber) &&
+          this.props.thousandSeparator === nextProps.thousandSeparator &&
+          this.props.decimalSeparator === nextProps.decimalSeparator
+        ) {
+          result.value = currentLocalizedValue;
         }
 
-        result = result || this._setNumberResult({ value: nextProps.value });
+        // see comment in _getValueTypedValue
+        if (nextProps.value == null && currentLocalizedValue === "-") {
+          result.value = currentLocalizedValue;
+        }
 
-        if (
+        if (result.value === currentLocalizedValue) {
+          this.setState({ value: currentLocalizedValue });
+        } else if (
           nextProps.onValidate &&
           typeof nextProps.onValidate === "function" &&
           (!nextProps.onChange || (this._isFocused && nextProps.validateOnChange))
         ) {
-          this._validateOnChange({ value: result.value, event: null, component: this }, true);
-        } else if (result) {
-          if (typeof result === "object") {
-            if (result.feedback) {
-              this.setFeedback(result.feedback, result.message, result.value);
-            } else {
-              this.setFeedback(nextProps.feedback, nextProps.message, result.value);
-            }
+          let valueTypedValue = this._getValueTypedValue(result.value);
+          this._validateOnChange(
+            { value: valueTypedValue, event: null, component: this, _data: { value: result.value } },
+            true
+          );
+        } else {
+          if (result.feedback) {
+            this._updateFeedback(result.feedback, result.message, result.value);
+          } else {
+            this._updateFeedback(nextProps.feedback, nextProps.message, result.value);
           }
         }
       }
@@ -208,13 +216,33 @@ let Number = Context.withContext(
     //@@viewOff:interface
 
     //@@viewOn:overriding
+    setFeedback_(feedback, message, value, setStateCallback) {
+      // NOTE This component requires state.value to be "localizedValue", but API methods require sending of value-typed value
+      // so we pretty much assume that developer doesn't change the value that we're sending to onChangeFeedback(), ... methods
+      // and take "localizedValue" that we wanted to use when we were triggerring that onChangeFeedback(), ... method
+      // (and only if this setFeedback() got called explicitly outside of our component then convert it to localized value directly).
+      let localizedValue =
+        this._localizedValueStack.length > 0
+          ? this._localizedValueStack[this._localizedValueStack.length - 1]
+          : this._getLocalizedValueWithFeedback(value).value;
+      return this.setFeedbackDefault(feedback, message, localizedValue, setStateCallback);
+    },
+
     // TODO: tohle je ještě otázka - je potřeba nastavit hodnotu z jiné komponenty (musí být validace) a z onChange (neměla by být validace)
-    setValue_(value, setStateCallback) {
-      if (this._checkRequiredValue({ value })) {
-        if (typeof this._currentProps.onValidate === "function") {
-          this._validateOnChange({ value: value, event: null, component: this });
+    setValue_(valueInUnknownFormat, setStateCallback) {
+      let validationResult = this._getLocalizedValueWithFeedback(valueInUnknownFormat, false);
+      let { feedback, value: localizedValue } = validationResult;
+      if (this._checkRequiredValue({ value: localizedValue })) {
+        if ((feedback === "initial" || feedback === undefined) && typeof this._currentProps.onValidate === "function") {
+          let valueTypedValue = this._getValueTypedValue(localizedValue);
+          this._validateOnChange(
+            { value: valueTypedValue, event: null, component: this, _data: { value: localizedValue } },
+            false,
+            false,
+            setStateCallback
+          );
         } else {
-          this.setInitial(null, value, setStateCallback);
+          this._localizedSetInitial(null, localizedValue, setStateCallback);
         }
       }
 
@@ -233,31 +261,32 @@ let Number = Context.withContext(
     },
 
     onBlurDefault_(opt) {
-      let blurResult;
-
+      // NOTE opt.value is value-typed.
       // set feedback runs all validations but in exception of onChange validation input isn"t marked as focused
       this._updateFeedback(this.state.feedback, null, this.state.value, () => {
-        if (this._isNaN && !this._currentProps.onValidate) {
-          blurResult = { feedback: "initial", message: null, value: this.state.value };
+        let localizedResult;
+        if (Number.isNaN(this._parseNumberFromLocalizedString(this.state.value)) && !this._currentProps.onValidate) {
+          localizedResult = { feedback: "initial", message: null, value: this.state.value };
         } else {
-          opt = this._getOutputResult(opt);
-          blurResult = this.getBlurFeedback(opt);
+          let result = this._getLocalizedValueWithFeedback(opt.value, true);
+          if (!result.feedback || result.feedback === "initial") {
+            localizedResult = this.getBlurFeedback(opt);
+          } else {
+            localizedResult = {};
+          }
+          Object.assign(localizedResult, this._getLocalizedValueWithFeedback(opt.value, true));
         }
 
-        this._isNaN = false;
-
-        let setNumberResult = this._setNumberResult(blurResult);
-        let hasRequiredValue = this._checkRequiredValue({ value: setNumberResult.value });
+        let hasRequiredValue = this._checkRequiredValue({ value: localizedResult.value });
         if (hasRequiredValue && !this.props.validateOnChange) {
-          setNumberResult.required = this.props.required;
-          this._updateFeedback(setNumberResult.feedback, setNumberResult.message, setNumberResult.value);
-        } else if (!this.props.validateOnChange) {
-          this.setError(
+          this._updateFeedback(localizedResult.feedback, localizedResult.message, localizedResult.value);
+        } else if (!hasRequiredValue && !this.props.validateOnChange) {
+          this._localizedSetError(
             this._currentProps.requiredMessage || this.getLsiComponent("requiredMessage"),
-            setNumberResult.value
+            localizedResult.value
           );
         } else {
-          this._updateFeedback(setNumberResult.feedback, setNumberResult.message, setNumberResult.value);
+          this._updateFeedback(localizedResult.feedback, localizedResult.message, localizedResult.value);
         }
       });
 
@@ -265,33 +294,22 @@ let Number = Context.withContext(
     },
 
     onFocusDefault_(opt) {
-      let value = this._removePrefixAndSuffix(this.state.value);
-      let numericString = this._parseNumberFromString(value);
-      let result = this.getFocusFeedback({ opt, value: numericString });
+      let result = this.getFocusFeedback();
       if (result) {
-        this._updateFeedback(result.feedback, result.message, result.value);
+        this._updateFeedback(result.feedback, result.message, opt._data.value);
       } else {
-        this._updateFeedback(
-          this.state.feedback,
-          this.state.message,
-          this.state.value === null ? this.state.value : numericString
-        );
+        this._updateFeedback(this.state.feedback, this.state.message, opt._data.value);
       }
 
       return this;
     },
 
     getValue_() {
-      let value = this._getOutputResult({ value: this.state.value }).value;
-
-      return value;
+      return this._getValueTypedValue(this.state.value);
     },
 
     isValid_() {
-      let value = this.getValue();
-      let result = this._checkRequiredValue({ value });
-
-      return result;
+      return this._checkRequiredValue({ value: this.state.value });
     },
     //@@viewOff:overriding
 
@@ -301,20 +319,23 @@ let Number = Context.withContext(
     // updated (e.g. in functions called from willReceiveProps)
     _setCurrentProps(props) {
       let formattingKeys = [
-        "min",
-        "max",
-        "rounded",
         "decimals",
-        "thousandSeparator",
         "decimalSeparator",
-        "nanMessage",
+        "decimalsView",
+        "decimalsViewRounded",
         "lowerMessage",
-        "upperMessage",
+        "max",
+        "min",
+        "nanMessage",
         "onValidate",
-        "valueType",
-        "requiredMessage",
         "prefix",
+        "required",
+        "requiredMessage",
+        "rounded",
         "suffix",
+        "thousandSeparator",
+        "upperMessage",
+        "valueType",
       ];
 
       for (let i = 0; i < formattingKeys.length; i++) {
@@ -329,37 +350,61 @@ let Number = Context.withContext(
       this._textInput = input;
     },
 
-    _updateFeedback(feedback, message, value, setStateCallback) {
+    _updateFeedback(feedback, message, localizedValue, setStateCallback) {
       if (this.getFeedback() === feedback) {
         // update feedback/value but doesn't call props.onChangeFeedback
-        this.setFeedback(feedback, message, value, setStateCallback);
+        this._localizedSetFeedback(feedback, message, localizedValue, setStateCallback);
       } else {
         // update feedback/value and call props.onChangeFeedback
-        this._setFeedback(feedback, message, value, setStateCallback);
+        this._localized_setFeedback(feedback, message, localizedValue, setStateCallback);
+      }
+    },
+    _localizedSetFeedback(feedback, message, localizedValue, setStateCallback) {
+      this._localizedValueStack.push(localizedValue);
+      try {
+        return this.setFeedback(feedback, message, this._getValueTypedValue(localizedValue), setStateCallback);
+      } finally {
+        this._localizedValueStack.pop();
+      }
+    },
+    _localized_setFeedback(feedback, message, localizedValue, setStateCallback) {
+      this._localizedValueStack.push(localizedValue);
+      try {
+        return this._setFeedback(feedback, message, this._getValueTypedValue(localizedValue), setStateCallback);
+      } finally {
+        this._localizedValueStack.pop();
+      }
+    },
+    _localizedSetError(message, localizedValue, setStateCallback) {
+      this._localizedValueStack.push(localizedValue);
+      try {
+        return this.setError(message, this._getValueTypedValue(localizedValue), setStateCallback);
+      } finally {
+        this._localizedValueStack.pop();
+      }
+    },
+    _localizedSetInitial(message, localizedValue, setStateCallback) {
+      this._localizedValueStack.push(localizedValue);
+      try {
+        return this.setInitial(message, this._getValueTypedValue(localizedValue), setStateCallback);
+      } finally {
+        this._localizedValueStack.pop();
       }
     },
 
-    _getOutputResult(result) {
-      if (result.value !== undefined) {
-        let numericStringValue = this._parseNumberFromString(result.value);
-
-        if (typeof result._data === "object") {
-          result._data.value = numericStringValue;
-        } else {
-          result._data = { value: numericStringValue };
-        }
-
-        if (this._currentProps.valueType === "number") {
-          let resultValue = parseFloat(numericStringValue);
-          result.value = resultValue || (typeof resultValue === "number" && !isNaN(resultValue)) ? resultValue : null;
-        }
+    _getValueTypedValue(localizedValue) {
+      let number = this._parseNumberFromLocalizedString(localizedValue);
+      let result;
+      if (this._currentProps.valueType === "number") {
+        result = Number.isNaN(number) ? null : number;
+        // :-( g04 Number API doesn't distinguish between undefined (empty value) & null (unparsable value) so there is no way to propagate
+        // upwards that the value is unparsable.
+        // On the other hand, the only unparsable value that can be actually entered is "-" so we'll handle it specially in willReceiveProps.
+        if (result === undefined) result = null;
+      } else {
+        result = Number.isNaN(number) ? null : number === undefined ? "" : number + "";
       }
-
       return result;
-    },
-
-    _regexpQuote(text) {
-      return text.replace(/[.?*+^$[\]\\(){}|]/g, "\\$&");
     },
 
     _doGetCaretPosition(e) {
@@ -368,7 +413,7 @@ let Number = Context.withContext(
         return;
       }
       // check selection start
-      if (e && !isNaN(e.target.selectionStart)) {
+      if (e && !Number.isNaN(e.target.selectionStart)) {
         return e.target.selectionStart;
       }
 
@@ -497,33 +542,26 @@ let Number = Context.withContext(
       }
     },
 
-    _transformNumberToString(number) {
-      if (typeof number !== "number") return number;
-
-      // check negative zero ... standard default toString function transform -0 to "0"
-      // -0 === 0
-      // 1 / -0 = NEGATIVE_INFINITY
-      if (number === 0 && 1 / number < 0) return "-0";
-      return number.toString();
+    _parseNumberFromLocalizedString(localizedValue, applyDecimals = true) {
+      let engNumberString =
+        UU5.Common.Tools.normalizeNumberSeparators(localizedValue, {
+          thousandSeparator: this._currentProps.thousandSeparator,
+          decimalSeparator: this._currentProps.decimalSeparator,
+        }) || "";
+      engNumberString = engNumberString.replace(/\s+/g, ""); // remove any remaining spaces
+      let number = engNumberString ? Number(engNumberString) : undefined;
+      if (number === 0 && 1 / number === -Infinity) number = 0;
+      if (number === Infinity || number === -Infinity) number = NaN;
+      if (applyDecimals) number = this._applyDecimals(number);
+      return number; // number | NaN | undefined
     },
 
-    _parseNumberFromString(value = this.state.value) {
-      let parsedNumber = UU5.Common.Tools.normalizeNumberSeparators(value, {
-        thousandSeparator: this._currentProps.thousandSeparator,
-        decimalSeparator: this._currentProps.decimalSeparator,
-      });
-      parsedNumber = this._transformNumberToString(parsedNumber);
-      return this._removePrefixAndSuffix(parsedNumber);
-    },
-
-    _formatOutput(value, maxDecimals, showThousandSeparator) {
-      let numberValue;
-
-      numberValue = typeof value === "string" ? this._parseNumberFromString(value) : value;
+    _formatToUnfocusedValue(localizedValue, maxDecimals, showThousandSeparator) {
+      let numberValue = this._parseNumberFromLocalizedString(localizedValue);
 
       let minDecimals;
       if (numberValue) {
-        let decimals = this._transformNumberToString(numberValue).split(".");
+        let decimals = (numberValue + "").split(".");
         if (decimals[1] && decimals[1].length >= maxDecimals) {
           minDecimals = maxDecimals;
         }
@@ -632,164 +670,149 @@ let Number = Context.withContext(
       }
     },
 
-    _checkNumberResultChange(opt) {
-      if (opt.value) {
-        opt.value = this._transformNumberToString(opt.value);
-        let isComma = opt.value.indexOf(",") > 0;
-        opt.value = this._parseNumberFromString(opt.value);
-        let isNan = isNaN(opt.value);
-        if (isNan) {
-          if (
-            opt.value !== "-" ||
-            ((this._currentProps.min || this._currentProps.min === 0) && this._currentProps.min >= 0)
-          ) {
+    _checkNaNAndGetFeedback(localizedValue) {
+      let result;
+      if (localizedValue) {
+        let number = this._parseNumberFromLocalizedString(localizedValue);
+        if (Number.isNaN(number)) {
+          if (localizedValue !== "-") {
             this._updateRange = this._doGetCaretPosition() - 1;
-            opt.feedback = "warning";
-            opt.message =
-              opt.value === "-" && this._currentProps.min >= 0
-                ? this._currentProps.lowerMessage || this.getLsiComponent("lowerMessage", null, this._currentProps.min)
+            result = {};
+            result.feedback = "warning";
+            result.message =
+              localizedValue.startsWith("-") && this._currentProps.min != null && this._currentProps.min >= 0
+                ? this._currentProps.lowerMessage ||
+                  this.getLsiComponent("lowerMessage", null, [this._currentProps.min])
                 : this._currentProps.nanMessage || this.getLsiComponent("nanMessage");
-
-            opt.value =
-              isNaN(typeof this.state.value === "string" ? this.state.value.replace(",", ".") : this.state.value) &&
-              this.state.value !== "-"
-                ? ""
-                : "" + this.state.value; // update value to string
           }
-          this._isNaN = true;
-        } else {
-          this._isNaN = false;
-        }
-        if (isComma && this._currentProps.decimalSeparator === "," && this._currentProps.thousandSeparator !== ".") {
-          opt.value = opt.value.replace(".", ",");
         }
       }
-      return opt;
+      return result;
     },
 
-    _checkNumberResult(opt) {
-      opt = { ...opt };
+    _checkNaNMinMaxAndGetFeedback(localizedValue) {
+      let result;
 
-      if (opt.value || opt.value === 0) {
-        opt = this._checkNumberResultChange(opt);
-        let isComma = opt.value && opt.value.indexOf(",") > 0;
-        opt.value = this._parseNumberFromString(opt.value);
-        let number = parseFloat(opt.value);
-
-        if (!isNaN(number)) {
-          if ((this._currentProps.min || this._currentProps.min === 0) && number < this._currentProps.min) {
-            opt.feedback = "error";
-            opt.message =
-              this._currentProps.lowerMessage || this.getLsiComponent("lowerMessage", null, this._currentProps.min);
-          }
-
-          if ((this._currentProps.max || this._currentProps.max === 0) && number > this._currentProps.max) {
-            opt.feedback = "error";
-            opt.message =
-              this._currentProps.upperMessage || this.getLsiComponent("upperMessage", null, this._currentProps.max);
-          }
-          if (isComma && this._currentProps.decimalSeparator === "," && this._currentProps.thousandSeparator !== ".") {
-            opt.value = opt.value.replace(".", ",");
-          }
-        } else if (opt.value === "-" && (this._currentProps.min > 0 || this._currentProps.min === 0)) {
-          // beware of null
-          opt.feedback = "error";
-          opt.message =
-            this._currentProps.lowerMessage || this.getLsiComponent("lowerMessage", null, this._currentProps.min);
-        }
-      }
-
-      return opt;
-    },
-
-    _setNumberResult(opt) {
-      opt = { ...opt };
-      let resultValue;
-      if (opt.value || opt.value === 0) {
-        let number = this._parseNumberFromString(opt.value);
-
-        // round only valid number value
-        if (number !== "NaN") {
-          // do not rounded a value if input is focused
-          if (
-            this._currentProps.rounded &&
-            typeof this._currentProps.decimals === "number" &&
-            number &&
-            !this._isFocused
-          ) {
-            let exp = this._currentProps.decimals ? -1 * this._currentProps.decimals : 0;
-            number = this._transformNumberToString(UU5.Common.Tools.round10(parseFloat(number), exp));
-          }
-
-          let numberParts = number.split(".");
-
-          if (this._currentProps.thousandSeparator) {
-            numberParts[0] = numberParts[0].replace(
-              this.getDefault().regexpNumberParts,
-              this._currentProps.thousandSeparator
-            );
-          }
-          // do not rounded a value if input is focused
-          if (numberParts.length > 1) {
-            if (
-              typeof this._currentProps.decimals === "number" &&
-              this._currentProps.decimals < numberParts[1].length &&
-              !this._isFocused &&
-              !this.getDefault("regexpExponent").test(number)
-            ) {
-              numberParts[1] = numberParts[1].slice(0, this._currentProps.decimals - numberParts[1].length);
+      if (localizedValue) {
+        result = this._checkNaNAndGetFeedback(localizedValue);
+        if (!result) {
+          // NOTE There are some values that are NaN but have no feedback, e.g. "-".
+          let number = this._parseNumberFromLocalizedString(localizedValue);
+          if (!Number.isNaN(number)) {
+            if (this._currentProps.min != null && number != null && number < this._currentProps.min) {
+              result = {};
+              result.feedback = "error";
+              result.message =
+                this._currentProps.lowerMessage || this.getLsiComponent("lowerMessage", null, [this._currentProps.min]);
             }
-            resultValue = numberParts[0] + this._currentProps.decimalSeparator + numberParts[1];
-          } else {
-            resultValue = numberParts[0];
+
+            if (this._currentProps.max != null && number != null && number > this._currentProps.max) {
+              result = {};
+              result.feedback = "error";
+              result.message =
+                this._currentProps.upperMessage || this.getLsiComponent("upperMessage", null, [this._currentProps.max]);
+            }
           }
         }
       }
 
-      let result = this._checkNumberResult({ ...opt, value: resultValue || opt.value });
-      return this._getOutputResult(result);
+      return result;
+    },
+
+    _formatNumberToLocalizedStringEditable(number) {
+      if (Number.isNaN(number) || number == null || typeof number !== "number") return "";
+      return UU5.Common.Tools.formatNumber(number, {
+        thousandSeparator: "",
+        decimalSeparator: this._currentProps.decimalSeparator,
+      });
+    },
+
+    _applyDecimals(number) {
+      let result = number;
+      if (this._currentProps.decimals != null && number !== undefined && !Number.isNaN(number)) {
+        let exp = this._currentProps.decimals ? -1 * this._currentProps.decimals : 0;
+        result = UU5.Common.Tools.round10(number, exp);
+      }
+      return result;
+    },
+
+    _getLocalizedValueWithFeedback(valueInUnknownFormat, isSurelyValueTyped) {
+      // NOTE valueInUnknownFormat is from props, or it is from "our" code (and then it is known to be value-typed,
+      // ie. either typeof number or English PC string).
+      let localizedValue;
+      let number;
+      if (typeof valueInUnknownFormat === "number") {
+        number = this._applyDecimals(valueInUnknownFormat);
+        localizedValue = this._formatNumberToLocalizedStringEditable(number);
+      } else if (
+        valueInUnknownFormat &&
+        (isSurelyValueTyped || /^[-+]?\d+(\.\d+)?(e[-+]?\d+)?$/.test(valueInUnknownFormat))
+      ) {
+        // assume API string (computer English PC number) - "12345.5"
+        number = this._applyDecimals(Number(valueInUnknownFormat));
+        localizedValue = this._formatNumberToLocalizedStringEditable(number);
+      } else if (valueInUnknownFormat === "NaN") {
+        // for backward compatibility (no idea whether this value was really being used in production; it was in our tests)
+        number = Number.NaN;
+        localizedValue = "";
+      } else if (valueInUnknownFormat) {
+        // NOTE If we came here, it means props.value contained localized value (which is bad, but it was supported...).
+        // localized string - "12,345.5" or "12.345,5" or "12 345,5" or ...
+        number = this._parseNumberFromLocalizedString(valueInUnknownFormat, true);
+        localizedValue =
+          this._formatNumberToLocalizedStringEditable(number) ||
+          (valueInUnknownFormat == null ? "" : valueInUnknownFormat + "");
+      } else {
+        number = undefined;
+        localizedValue = "";
+      }
+
+      let feedbackObj = this._checkNaNMinMaxAndGetFeedback(localizedValue);
+      let result = { ...feedbackObj, value: localizedValue };
+      return result;
     },
 
     _onChange(e) {
       this._correctCursorPosition(e);
-      let inputValue = e.target.value || "";
-      if (this._currentProps.prefix || this._currentProps.suffix) inputValue = this._removePrefixAndSuffix(inputValue);
-      inputValue = inputValue.replace(/\s/g, "");
-      let opt = { value: inputValue, event: e, component: this, _data: { type: "input" } };
-      let checkNumberResult = this._checkNumberResultChange(opt);
+      let newLocalizedValue = this._removePrefixAndSuffix(e.target.value || "");
 
-      if (checkNumberResult.feedback && checkNumberResult.feedback === "warning") {
-        this._updateFeedback(checkNumberResult.feedback, checkNumberResult.message, checkNumberResult.value);
-      } else {
-        let currentValue = this._getOutputResult({ ...opt, value: this.state.value, _data: { ...opt._data } });
-        // prevent changing original value
-        let newValue = this._getOutputResult({ ...opt, _data: { ...opt._data } });
+      // don't allow entering spaces (e.g. when pasting / typing)
+      if (/\s/.test(newLocalizedValue)) {
+        newLocalizedValue = newLocalizedValue.replace(/\s+/g, "");
+        e.target.value = newLocalizedValue;
+      }
 
-        // check if value is changed
-        if (this._currentProps.valueType === "string") {
-          if (currentValue.value === newValue.value) {
-            this.onChangeDefault({ ...opt, value: inputValue, _data: { ...opt._data, value: inputValue } });
-            return;
-          }
-        } else {
-          // valueType is number
-          let currentNumber = this._setNumberResult(currentValue).value;
-          let number = this._setNumberResult({ ...newValue, _data: { ...newValue._data } }).value;
-          if ((isNaN(currentNumber) && isNaN(number)) || currentNumber === number) {
-            // no change in component value -> don't call onChange callback
-            this.onChangeDefault({ ...opt, value: inputValue, _data: { ...opt._data, value: inputValue } });
-            return;
-          }
-
-          // update value in opt to number
-          opt = this._setNumberResult(opt);
+      let nanFeedbackObject = this._checkNaNAndGetFeedback(newLocalizedValue);
+      if (nanFeedbackObject) {
+        // newLocalizedValue is invalid; if user had valid value before (or "-") then forbid changing
+        // into invalid
+        let currentNumber = this._parseNumberFromLocalizedString(this.state.value);
+        if (this.state.value === "-" || !Number.isNaN(currentNumber)) {
+          newLocalizedValue = this.state.value;
         }
+        this._updateFeedback(nanFeedbackObject.feedback, nanFeedbackObject.message, newLocalizedValue);
+      } else {
+        let currentNumber = this._parseNumberFromLocalizedString(this.state.value);
+        let newNumber = this._parseNumberFromLocalizedString(newLocalizedValue);
 
-        if (!this.isComputedDisabled() && !this.isReadOnly()) {
-          if (typeof this.props.onChange === "function") {
-            this.props.onChange(opt);
-          } else {
-            this.onChangeDefault(opt);
+        if (isSameNumber(currentNumber, newNumber)) {
+          // the parsed value did not change (the result of parsing string into number is same)
+          // but the input value might be different (e.g. user added space or thousand separator), i.e. simply store it in state
+          this.setState({ value: newLocalizedValue });
+        } else {
+          if (!this.isComputedDisabled() && !this.isReadOnly()) {
+            let valueTypedValue = this._getValueTypedValue(newLocalizedValue);
+            let opt = {
+              value: valueTypedValue,
+              event: e,
+              component: this,
+              _data: { type: "input", value: newLocalizedValue },
+            };
+            if (typeof this.props.onChange === "function") {
+              this.props.onChange(opt);
+            } else {
+              this.onChangeDefault(opt);
+            }
           }
         }
       }
@@ -803,13 +826,11 @@ let Number = Context.withContext(
         _callCallback = false;
         this._validateOnChange(opt, false, false, setStateCallback);
       } else {
-        if (this._checkRequiredValue({ value: opt.value })) {
-          opt = { ...opt };
-          opt.value = opt._data.value !== undefined ? opt._data.value : opt.value;
-          opt.required = this.props.required;
-          let result = this.getChangeFeedback(opt);
+        let localizedValue = opt._data.value;
+        if (this._checkRequiredValue({ value: localizedValue })) {
+          let { feedback, message } = this.getChangeFeedback(opt);
           _callCallback = false;
-          this._updateFeedback(result.feedback, result.message, result.value, setStateCallback);
+          this._updateFeedback(feedback, message, localizedValue, setStateCallback);
         }
       }
 
@@ -819,38 +840,28 @@ let Number = Context.withContext(
     },
 
     _onIncreaseDecreaseDefault(opt, type, setStateCallback) {
-      let feedback = opt._data.feedback;
-      opt = { ...opt };
-      opt.value = opt._data.value;
+      // we need to run all validations, similarly how it is in onBlurDefault_ (but we can be sure
+      // that value is parsable, otherwise increase/decrease change wouldn't have triggerred)
 
-      if (feedback === "error") {
-        this.setError(opt.message || opt._data.message, opt.value, () => {
-          if (type === "increase") this._increaseEnd();
-          else this._decreaseEnd();
-
-          if (typeof setStateCallback === "function") {
-            setStateCallback();
-          }
-        });
-      } else {
-        if (this._checkRequiredValue({ value: opt.value })) {
-          if (typeof this._currentProps.onValidate === "function") {
-            this._validateOnChange({ value: opt.value, event: null, component: this }, false, true);
-          } else {
-            this.setInitial(null, opt.value, setStateCallback);
-          }
-        }
-      }
-
-      return this;
+      // NOTE Cannot call this.getBlurFeedback(opt) followed by _updateFeedback(...) right away
+      // because feedback would get overwritten, probably due to parent re-render.
+      //   => call it in callback
+      let localizedValue = opt._data.value;
+      this._updateFeedback(this.state.feedback, null, localizedValue, () => {
+        let { feedback, message } = this.getBlurFeedback(opt);
+        this._updateFeedback(feedback, message, this.state.value, setStateCallback);
+      });
     },
 
     _onBlur(e) {
       this._isFocused = false;
-      let opt = { value: e.target.value, event: e, component: this };
-      opt.value = opt.value ? this._parseNumberFromString(opt.value) : opt.value;
-      opt = this._getOutputResult(opt);
-
+      let localizedValue = this._removePrefixAndSuffix(e.target.value);
+      let opt = {
+        value: this._getValueTypedValue(localizedValue),
+        event: e,
+        component: this,
+        _data: { value: localizedValue },
+      };
       if (typeof this.props.onBlur === "function") {
         this.props.onBlur(opt);
       } else {
@@ -863,9 +874,23 @@ let Number = Context.withContext(
     _onFocus(e) {
       this._isFocused = true;
       this._correctCursorFireFoxAndIe(e);
-      let opt = { value: e.target.value, event: e, component: this };
-      opt = this._getOutputResult(opt);
+      // NOTE Not using e.target.value because while input is not focused, it might be displaying incomplete
+      // value (due to props.decimalsView).
+      let localizedValue = this.state.value;
+      let number = this._parseNumberFromLocalizedString(localizedValue);
+      let editableLocalizedValue;
+      if (number !== undefined && !Number.isNaN(number)) {
+        editableLocalizedValue = this._formatNumberToLocalizedStringEditable(number);
+      } else {
+        editableLocalizedValue = localizedValue;
+      }
 
+      let opt = {
+        value: this._getValueTypedValue(localizedValue),
+        event: e,
+        component: this,
+        _data: { value: editableLocalizedValue },
+      };
       if (typeof this.props.onFocus === "function") {
         this.props.onFocus(opt);
       } else {
@@ -876,25 +901,24 @@ let Number = Context.withContext(
     },
 
     _validateOnChange(opt, checkValue, callOnChangeFeedback, setStateCallback) {
+      // NOTE opt.value is value-typed; needs to have opt._data.value present.
       let _callCallback = typeof setStateCallback === "function";
 
-      if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
+      if (!checkValue || this._hasValueChanged(this._getValueTypedValue(this.state.value), opt.value)) {
         let result = typeof this._currentProps.onValidate === "function" ? this._currentProps.onValidate(opt) : null;
         if (result) {
           if (typeof result === "object") {
             if (result.feedback) {
               _callCallback = false;
-              this[callOnChangeFeedback ? "_updateFeedback" : "setFeedback"](
+              this[callOnChangeFeedback ? "_updateFeedback" : "_localizedSetFeedback"](
                 result.feedback,
                 result.message,
-                result.value,
+                opt._data?.value ?? opt.value,
                 setStateCallback
               );
             } else {
               _callCallback = false;
-              opt = { ...opt };
-              opt.value = opt._data && opt._data.value !== undefined ? opt._data.value : opt.value;
-              this.setState({ value: opt.value }, setStateCallback);
+              this.setState({ value: opt._data?.value ?? opt.value }, setStateCallback);
             }
           } else {
             this.showError("validateError", null, {
@@ -915,86 +939,47 @@ let Number = Context.withContext(
     },
 
     _decrease(e) {
-      //TODO: optimize
-      let value =
-        this.state.value || this.state.value === 0 ? this.state.value : this._currentProps.min + this.props.step;
-      let number = this._formatOutput(value).replace(this._currentProps.decimalSeparator, ".");
-      let decimal = this._formatOutput(value).split(this._currentProps.decimalSeparator);
-      let valueDecimals = decimal[1] ? decimal[1].length : 0;
-      let stepDecimals = this.props.step.toString().split(".")[1] ? this.props.step.toString().split(".")[1].length : 0;
-      if (valueDecimals > 0 || stepDecimals > 0) {
-        let pow = Math.pow(10, valueDecimals > stepDecimals ? valueDecimals : stepDecimals);
-        number = (number * pow - this.props.step * pow) / pow;
-      } else {
-        number = parseInt(number) - this.props.step;
-      }
-
-      let result = this._setNumberResult({ value: this._transformNumberToString(number) });
-      let opt = {
-        value: result.value,
-        event: e,
-        component: this,
-        _data: { type: "decrease", feedback: result.feedback, message: result.message },
-      };
-      opt = this._getOutputResult(opt);
-
-      if (typeof this.props.onChange === "function") {
-        if (result.feedback !== this.state.feedback) {
-          this._setFeedback(result.feedback, result.message, result.value);
-        }
-        this.props.onChange(opt);
-      } else {
-        this.onChangeDefault(opt);
-      }
-      return this;
+      this._increaseDecrease(e, "decrease");
     },
 
     _increase(e) {
-      //TODO: optimize
-      let value =
-        this.state.value || this.state.value === 0 ? this.state.value : this._currentProps.min - this.props.step;
-      let number = this._formatOutput(value).replace(this._currentProps.decimalSeparator, ".");
-      let decimal = this._formatOutput(value).split(this._currentProps.decimalSeparator);
-      let valueDecimals = decimal[1] ? decimal[1].length : 0;
-      let stepDecimals = this.props.step.toString().split(".")[1] ? this.props.step.toString().split(".")[1].length : 0;
-      if (valueDecimals > 0 || stepDecimals > 0) {
-        let pow = Math.pow(10, valueDecimals > stepDecimals ? valueDecimals : stepDecimals);
-        number = (number * pow + this.props.step * pow) / pow;
-      } else {
-        number = parseInt(number) + this.props.step;
-      }
-      let result = this._setNumberResult({ value: this._transformNumberToString(number) });
-      let opt = {
-        value: result.value,
-        event: e,
-        component: this,
-        _data: { type: "increase", feedback: result.feedback, message: result.message },
-      };
-      opt = this._getOutputResult(opt);
+      this._increaseDecrease(e, "increase");
+    },
 
-      if (typeof this.props.onChange === "function") {
-        if (result.feedback !== this.state.feedback) {
-          this._setFeedback(result.feedback, result.message, result.value);
+    _increaseDecrease(e, type) {
+      let number = this._parseNumberFromLocalizedString(this.state.value);
+      let initialValue = (type === "decrease" ? this._currentProps.max : this._currentProps.min) ?? 0;
+      let direction = type === "decrease" ? -1 : 1;
+      let newNumber = number === undefined ? initialValue : number + direction * (this.props.step ?? 1);
+      if (!Number.isNaN(newNumber)) {
+        newNumber = Math.max(
+          Math.min(newNumber, this._currentProps.max ?? newNumber),
+          this._currentProps.min ?? newNumber
+        );
+        if (newNumber !== number) {
+          let newLocalizedValue = this._formatNumberToLocalizedStringEditable(newNumber);
+          let newTypedValue = this._getValueTypedValue(newLocalizedValue);
+          let opt = { value: newTypedValue, event: e, component: this, _data: { type, value: newLocalizedValue } };
+          if (typeof this.props.onChange === "function") {
+            this.props.onChange(opt);
+          } else {
+            this.onChangeDefault(opt);
+          }
         }
-        this.props.onChange(opt);
-      } else {
-        this.onChangeDefault(opt);
       }
-      return this;
     },
 
     _isDisabled(type) {
       let result = false;
 
-      if (this.state.value || this.state.value === 0) {
-        let value = this.state.value || 0;
-        let number = parseFloat(this._transformNumberToString(value).replace(this._currentProps.decimalSeparator, "."));
+      if (this.state.value) {
+        let number = this._parseNumberFromLocalizedString(this.state.value);
         if (type === "min" && typeof this._currentProps.min === "number") {
-          if (number <= this._currentProps.min) {
+          if (Number.isNaN(number) || number <= this._currentProps.min) {
             result = true;
           }
         } else if (type === "max" && typeof this._currentProps.max === "number") {
-          if (number >= this._currentProps.max) {
+          if (Number.isNaN(number) || number >= this._currentProps.max) {
             result = true;
           }
         }
@@ -1025,14 +1010,12 @@ let Number = Context.withContext(
     },
 
     _checkRequiredValue({ value }) {
-      // check required value as a string, number 0 is filled value
-      let checkValue = this._parseNumberFromString(value);
-      if (this._currentProps.valueType === "number" && isNaN(checkValue) && value !== "-" && this.props.required) {
-        // manual validation ... there is no possible
-        this.setError(this._currentProps.requiredMessage || this.getLsiComponent("requiredMessage"), value);
+      let number = this._parseNumberFromLocalizedString(value);
+      if (this._currentProps.required && (number === undefined || Number.isNaN(number))) {
+        this._localizedSetError(this._currentProps.requiredMessage || this.getLsiComponent("requiredMessage"), value);
         return false;
       }
-      return this._checkRequired({ value: value != null ? "" + value : value });
+      return true;
     },
     //@@viewOff:private
 
@@ -1075,14 +1058,14 @@ let Number = Context.withContext(
       inputAttrs.onKeyDown = this._onKeyDown;
       let value;
 
-      if (this.state.value || this.state.value === 0) {
+      if (this.state.value) {
         value = this._prefix();
-        if (this._isFocused) {
-          value += this._transformNumberToString(this.state.value);
+        if (this._isFocused || Number.isNaN(this._parseNumberFromLocalizedString(this.state.value))) {
+          value += this.state.value;
         } else {
-          value += this._formatOutput(this.state.value, this._currentProps.decimalsView, true);
+          value += this._formatToUnfocusedValue(this.state.value, this.props.decimalsView, true);
         }
-        if (!this._hasSuffix(value)) value += this._suffix();
+        value += this._suffix();
       } else {
         value = "";
       }
@@ -1136,10 +1119,10 @@ let Number = Context.withContext(
   })
 );
 
-Number = withUserPreferences(Number, {
+NumberComponent = withUserPreferences(NumberComponent, {
   thousandSeparator: "numberGroupingSeparator",
   decimalSeparator: "numberDecimalSeparator",
 });
 
-export { Number };
-export default Number;
+export { NumberComponent as Number };
+export default NumberComponent;

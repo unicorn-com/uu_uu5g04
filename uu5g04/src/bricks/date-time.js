@@ -26,9 +26,9 @@ import { withUserPreferencesAndTimeZone } from "../common/user-preferences";
 import "./date-time.less";
 //@@viewOff:imports
 
-const FORMAT_MAP = { D: "day", M: "month", Y: "year", H: "hour", m: "minute", s: "second" };
+const FORMAT_MAP = { D: "day", M: "month", Y: "year", H: "hour", m: "minute", s: "second", A: "dayPeriod" };
 
-function formatDateByIntl(date, { country, format, timeZone, timeOnly, dateOnly, secondsDisabled } = {}) {
+function formatDateByIntl(date, { country, format, timeZone, hourFormat, timeOnly, dateOnly, secondsDisabled } = {}) {
   let opt = {
     timeZone,
     year: "numeric",
@@ -37,6 +37,7 @@ function formatDateByIntl(date, { country, format, timeZone, timeOnly, dateOnly,
     hour: "numeric",
     minute: "numeric",
     second: "numeric",
+    hourCycle: hourFormat === 12 ? "h12" : "h24",
   };
 
   if (timeOnly) {
@@ -60,6 +61,7 @@ function formatDateByIntl(date, { country, format, timeZone, timeOnly, dateOnly,
     if (!dateOnly) {
       format += " HH:mm";
       if (!secondsDisabled) format += ":ss";
+      if (!dateOnly && hourFormat === 12) format += " A";
     }
 
     format.replace(/[DMYHms]+/g, (m) => {
@@ -67,7 +69,7 @@ function formatDateByIntl(date, { country, format, timeZone, timeOnly, dateOnly,
       opt[key] = m.length === 1 || (key === "year" && m.length > 2) ? "numeric" : m.length === 2 ? "2-digit" : "long";
     });
     let parts = new Intl.DateTimeFormat(country, opt).formatToParts(date);
-    return format.replace(/[DMYHms]+/g, (m) => {
+    return format.replace(/[DMYHmsA]+/g, (m) => {
       let key = FORMAT_MAP[m[0]];
       let part = parts.find((it) => it.type === key);
       return part ? part.value : m;
@@ -114,6 +116,7 @@ let DateTime = UU5.Common.VisualComponent.create({
     secondsDisabled: UU5.PropTypes.bool,
     _contextTimeZone: UU5.PropTypes.string, // prop for internal usage (not documented)
     _contextFormat: UU5.PropTypes.string, // prop for internal usage (not documented)
+    _contextHourFormat: UU5.PropTypes.number, // prop for internal usage (not documented)
   },
   //@@viewOff:propTypes
 
@@ -129,6 +132,7 @@ let DateTime = UU5.Common.VisualComponent.create({
       secondsDisabled: false,
       _contextTimeZone: undefined,
       _contextFormat: undefined,
+      _contextHourFormat: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -341,6 +345,7 @@ let DateTime = UU5.Common.VisualComponent.create({
         country,
         format: this.props._contextFormat,
         timeZone: this.props._contextTimeZone,
+        hourFormat: this.props._contextHourFormat,
         timeOnly: this.props.timeOnly,
         dateOnly: this.props.dateOnly,
         secondsDisabled: this.props.secondsDisabled,
@@ -406,6 +411,7 @@ let DateTime = UU5.Common.VisualComponent.create({
 DateTime = withUserPreferencesAndTimeZone(DateTime, {
   _contextFormat: "shortDateFormat",
   _contextTimeZone: "timeZone",
+  _contextHourFormat: "hourFormat",
 });
 
 export { DateTime };

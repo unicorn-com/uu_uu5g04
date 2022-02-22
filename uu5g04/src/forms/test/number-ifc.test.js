@@ -17,111 +17,93 @@ import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-forms";
 
-const { mount, shallow, wait } = UU5.Test.Tools;
+const { mount } = UU5.Test.Tools;
 
 describe("UU5.Forms.InputMixin interface testing", () => {
   it("isInput()", () => {
-    const wrapper = shallow(
-      <UU5.Forms.Number id={"idText"} label="Number of items" min={0} max={300} step={1} required={false} />
-    );
-    expect(wrapper.instance().isInput()).toBeTruthy();
-    expect(wrapper).toMatchSnapshot();
+    const ref = UU5.Common.Reference.create();
+    mount(<UU5.Forms.Number ref_={ref} min={0} max={300} step={1} required={false} />);
+    expect(ref.current?.isInput()).toBeTruthy();
   });
 
   it("getValue() should return value", () => {
-    const wrapper = shallow(
-      <UU5.Forms.Number id={"idText"} label="Number of items" value={100} min={0} max={300} step={1} required={false} />
-    );
-    expect(wrapper.instance().getValue()).toBe("100");
-    expect(wrapper).toMatchSnapshot();
+    const ref = UU5.Common.Reference.create();
+    mount(<UU5.Forms.Number ref_={ref} value={100} min={0} max={300} step={1} required={false} />);
+    expect(ref.current?.getValue()).toBe("100");
   });
 
   it("getValue() value is empty. Should return empty string.", () => {
-    const wrapper = shallow(
-      <UU5.Forms.Number id={"idText"} label="Number of items" min={0} max={300} step={1} required={false} />
-    );
-    expect(wrapper.instance().getValue()).toBe(null);
-    expect(wrapper).toMatchSnapshot();
+    const ref = UU5.Common.Reference.create();
+    mount(<UU5.Forms.Number ref_={ref} min={0} max={300} step={1} required={false} />);
+    expect(ref.current?.getValue() ?? "").toBe("");
   });
 
   it("setValue(value,setStateCallBack)", () => {
-    const wrapper = shallow(
-      <UU5.Forms.Number id={"idText"} label="Number of items" min={0} max={300} step={1} required={false} />
-    );
-    expect(wrapper.instance().getValue()).toBeNull();
-    const mockFunc = jest.fn();
-    expect(wrapper).toMatchSnapshot();
-    const returnValue = wrapper.instance().setValue(100, mockFunc);
-    wrapper.update();
-    expect(mockFunc).toBeCalled();
+    const ref = UU5.Common.Reference.create();
+    mount(<UU5.Forms.Number ref_={ref} min={0} max={300} step={1} required={false} />);
+    let mockFunc = jest.fn();
+    let returnValue = ref.current?.setValue(100, mockFunc);
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue === wrapper.instance()).toBe(true);
-    expect(wrapper.instance().getValue()).toBe(100);
-    expect(wrapper).toMatchSnapshot();
+    expect(returnValue === ref.current).toBe(true);
+    expect(ref.current?.getValue()).toBe("100");
+
+    mount(<UU5.Forms.Number ref_={ref} min={0} max={300} step={1} required={false} valueType="number" />);
+    mockFunc = jest.fn();
+    returnValue = ref.current?.setValue(200, mockFunc);
+    expect(mockFunc).toHaveBeenCalledTimes(1);
+    expect(returnValue === ref.current).toBe(true);
+    expect(ref.current?.getValue()).toBe(200);
   });
 
   it("getMessage()", () => {
-    const wrapper = shallow(
-      <UU5.Forms.Number id={"idText"} label="Number of items" min={0} max={300} step={1} required={false} />
-    );
-    expect(wrapper.instance().getMessage()).toBe(null);
-    expect(wrapper).toMatchSnapshot();
+    const ref = UU5.Common.Reference.create();
+    const wrapper = mount(<UU5.Forms.Number ref_={ref} min={0} max={300} step={1} required={false} />);
+    expect(ref.current?.getMessage()).toBe(null);
     wrapper.setProps({ message: "New Setting message" });
-    expect(wrapper.instance().getMessage()).toEqual("New Setting message");
+    expect(ref.current?.getMessage()).toEqual("New Setting message");
   });
 
   it("setMessage(msg, setStateCallBack)", () => {
-    const wrapper = shallow(
-      <UU5.Forms.Number id={"idText"} label="Number of items" min={0} max={300} step={1} required={false} />
-    );
+    const ref = UU5.Common.Reference.create();
+    const wrapper = mount(<UU5.Forms.Number ref_={ref} min={0} max={300} step={1} required={false} />);
     const mockFunc = jest.fn();
-    expect(wrapper).toMatchSnapshot();
-    expect(wrapper.instance().getMessage()).toBeNull();
-    const returnValue = wrapper.instance().setMessage("New Message", mockFunc);
+    const returnValue = ref.current?.setMessage("New Message", mockFunc);
     wrapper.update();
-    expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue === wrapper.instance()).toBe(true);
-    expect(wrapper.instance().getMessage()).toEqual("New Message");
-    expect(wrapper).toMatchSnapshot();
+    expect(returnValue === ref.current).toBe(true);
+    expect(ref.current?.getMessage()).toEqual("New Message");
   });
 
   it("getFeedBack()", () => {
-    const wrapper = shallow(
-      <UU5.Forms.Number id={"idText"} label="Number of items" min={0} max={300} step={1} required={false} />
-    );
-    expect(wrapper.instance().getFeedback()).toEqual("initial");
-    expect(wrapper).toMatchSnapshot();
+    const ref = UU5.Common.Reference.create();
+    const wrapper = mount(<UU5.Forms.Number ref_={ref} min={0} max={300} step={1} required={false} />);
+    expect(ref.current?.getFeedback()).toEqual("initial");
     wrapper.setProps({ feedback: "success" });
     wrapper.update();
-    expect(wrapper.instance().getFeedback()).toEqual("success");
-    expect(wrapper).toMatchSnapshot();
+    expect(ref.current?.getFeedback()).toEqual("success");
   });
 
   it("setFeedBack(feedback, message, value, setStateCallBack)", () => {
-    const wrapper = shallow(
-      <UU5.Forms.Number id={"idText"} label="Number of items" min={0} max={300} step={1} required={false} />
-    );
-    expect(wrapper.instance().getFeedback()).toEqual("initial");
-    expect(wrapper.instance().getMessage()).toBe(null);
-    expect(wrapper.instance().getValue()).toBeNull();
+    const ref = UU5.Common.Reference.create();
+    const wrapper = mount(<UU5.Forms.Number ref_={ref} min={0} max={300} step={1} required={false} />);
+    expect(ref.current?.getFeedback()).toEqual("initial");
+    expect(ref.current?.getMessage()).toBe(null);
+    expect(ref.current?.getValue() ?? "").toBe("");
     const mockFunc = jest.fn();
-    expect(wrapper).toMatchSnapshot();
-    const returnValue = wrapper.instance().setFeedback("success", "This is valid message.", 100, mockFunc);
+    const returnValue = ref.current?.setFeedback("success", "This is valid message.", 100, mockFunc);
     wrapper.update();
-    expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue === wrapper.instance()).toBe(true);
-    expect(wrapper.instance().getFeedback()).toEqual("success");
-    expect(wrapper.instance().getMessage()).toEqual("This is valid message.");
-    expect(wrapper.instance().getValue()).toBe(100);
-    expect(wrapper).toMatchSnapshot();
+    expect(returnValue === ref.current).toBe(true);
+    expect(ref.current?.getFeedback()).toEqual("success");
+    expect(ref.current?.getMessage()).toEqual("This is valid message.");
+    expect(ref.current?.getValue()).toBe("100");
   });
 
   it("setInitial(msg, value, setStateCallBack)", () => {
-    const wrapper = shallow(
+    const ref = UU5.Common.Reference.create();
+    const wrapper = mount(
       <UU5.Forms.Number
-        id={"idText"}
+        ref_={ref}
         label="Number of items"
         min={0}
         max={700}
@@ -133,131 +115,109 @@ describe("UU5.Forms.InputMixin interface testing", () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(wrapper).toMatchSnapshot();
-    expect(wrapper.instance().getFeedback()).toEqual("error");
-    expect(wrapper.instance().getValue()).toBeNull();
-    expect(wrapper.instance().getMessage()).toEqual("This input is required");
-    expect(wrapper.instance().isInitial()).toBeFalsy();
-    const returnValue = wrapper.instance().setInitial("Initial Message", 666, mockFunc);
+    expect(ref.current?.getFeedback()).toEqual("error");
+    expect(ref.current?.getValue() ?? "").toBe("");
+    expect(ref.current?.getMessage()).toEqual("This input is required");
+    expect(ref.current?.isInitial()).toBeFalsy();
+    const returnValue = ref.current?.setInitial("Initial Message", 666, mockFunc);
     wrapper.update();
-    expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue === wrapper.instance()).toBe(true);
-    expect(wrapper.instance().getFeedback()).toEqual("initial");
-    expect(wrapper.instance().getValue()).toBe(666);
-    expect(wrapper.instance().getMessage()).toEqual("Initial Message");
-    expect(wrapper.instance().isInitial()).toBeTruthy();
-    expect(wrapper).toMatchSnapshot();
+    expect(returnValue === ref.current).toBe(true);
+    expect(ref.current?.getFeedback()).toEqual("initial");
+    expect(ref.current?.getValue()).toBe("666");
+    expect(ref.current?.getMessage()).toEqual("Initial Message");
+    expect(ref.current?.isInitial()).toBeTruthy();
   });
 
   it("isInitial()", () => {
-    const wrapper = shallow(
-      <UU5.Forms.Number id={"idText"} label="Number of items" min={0} max={300} step={1} required={false} size="s" />
-    );
+    const ref = UU5.Common.Reference.create();
+    const wrapper = mount(<UU5.Forms.Number ref_={ref} min={0} max={300} step={1} required={false} size="s" />);
     const mockFunc = jest.fn();
-    expect(wrapper.instance().isInitial()).toBeTruthy();
-    expect(wrapper).toMatchSnapshot();
-    wrapper.instance().setFeedback("error", "Error messagess", "1000", mockFunc);
+    expect(ref.current?.isInitial()).toBeTruthy();
+    ref.current?.setFeedback("error", "Error messagess", "1000", mockFunc);
     wrapper.update();
-    expect(wrapper.instance().isInitial()).toBeFalsy();
-    expect(wrapper).toMatchSnapshot();
+    expect(ref.current?.isInitial()).toBeFalsy();
   });
 
   it("setLoading(message, value, setStateCallBack)", () => {
-    const wrapper = shallow(
-      <UU5.Forms.Number id={"idText"} label="Number of items" min={0} max={300} step={1} required={false} size="s" />
-    );
+    const ref = UU5.Common.Reference.create();
+    const wrapper = mount(<UU5.Forms.Number ref_={ref} min={0} max={300} step={1} required={false} size="s" />);
     const mockFunc = jest.fn();
-    expect(wrapper).toMatchSnapshot();
-    expect(wrapper.instance().getValue()).toBeNull();
-    expect(wrapper.instance().getMessage()).toBeNull();
-    expect(wrapper.instance().isLoading()).toBeFalsy();
-    const returnValue = wrapper.instance().setLoading("Loading messsagess", 100, mockFunc);
+    expect(ref.current?.getValue() ?? "").toBe("");
+    expect(ref.current?.getMessage()).toBeNull();
+    expect(ref.current?.isLoading()).toBeFalsy();
+    const returnValue = ref.current?.setLoading("Loading messsagess", 100, mockFunc);
     wrapper.update();
-    expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue === wrapper.instance()).toBe(true);
-    expect(wrapper.instance().isLoading()).toBeTruthy();
-    expect(wrapper.instance().getMessage()).toEqual("Loading messsagess");
-    expect(wrapper.instance().getValue()).toBe(100);
-    expect(wrapper).toMatchSnapshot();
+    expect(returnValue === ref.current).toBe(true);
+    expect(ref.current?.isLoading()).toBeTruthy();
+    expect(ref.current?.getMessage()).toEqual("Loading messsagess");
+    expect(ref.current?.getValue()).toBe("100");
   });
 
   it("isLoading()", () => {
-    const wrapper = shallow(
-      <UU5.Forms.Number id={"idText"} label="Number of items" min={0} max={300} step={1} required={false} size="s" />
-    );
-    expect(wrapper.instance().isLoading()).toBeFalsy();
-    expect(wrapper).toMatchSnapshot();
+    const ref = UU5.Common.Reference.create();
+    mount(<UU5.Forms.Number ref_={ref} min={0} max={300} step={1} required={false} size="s" />);
+    expect(ref.current?.isLoading()).toBeFalsy();
   });
 
   it("setSuccess(message, value, setStateCallBack)", () => {
-    const wrapper = shallow(
-      <UU5.Forms.Number id={"idText"} label="Number of items" min={0} max={300} step={1} required={false} size="s" />
-    );
+    const ref = UU5.Common.Reference.create();
+    const wrapper = mount(<UU5.Forms.Number ref_={ref} min={0} max={300} step={1} required={false} size="s" />);
     const mockFunc = jest.fn();
-    expect(wrapper.instance().getFeedback()).toEqual("initial");
-    expect(wrapper.instance().getMessage()).toBeNull();
-    expect(wrapper.instance().getValue()).toBeNull();
-    expect(wrapper).toMatchSnapshot();
-    const returnValue = wrapper.instance().setSuccess("This is success message", 69, mockFunc);
+    expect(ref.current?.getFeedback()).toEqual("initial");
+    expect(ref.current?.getMessage()).toBeNull();
+    expect(ref.current?.getValue() ?? "").toBe("");
+    const returnValue = ref.current?.setSuccess("This is success message", 69, mockFunc);
     wrapper.update();
-    expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue === wrapper.instance()).toBe(true);
-    expect(wrapper.instance().getFeedback()).toEqual("success");
-    expect(wrapper.instance().getMessage()).toEqual("This is success message");
-    expect(wrapper.instance().getValue()).toBe(69);
-    expect(wrapper.instance().isSuccess()).toBeTruthy();
-    expect(wrapper).toMatchSnapshot();
+    expect(returnValue === ref.current).toBe(true);
+    expect(ref.current?.getFeedback()).toEqual("success");
+    expect(ref.current?.getMessage()).toEqual("This is success message");
+    expect(ref.current?.getValue()).toBe("69");
+    expect(ref.current?.isSuccess()).toBeTruthy();
   });
 
-  it("isSuccess() fisr return false, second return true", () => {
-    const wrapper = shallow(
-      <UU5.Forms.Number id={"idText"} label="Number of items" min={0} max={300} step={1} required={true} size="s" />
-    );
+  it("isSuccess()", () => {
+    const ref = UU5.Common.Reference.create();
+    const wrapper = mount(<UU5.Forms.Number ref_={ref} min={0} max={300} step={1} required={true} size="s" />);
     const mockFunc = jest.fn();
-    expect(wrapper.instance().isSuccess()).toBeFalsy();
-    const returnValue = wrapper.instance().setSuccess("This is success message", 100, mockFunc);
+    expect(ref.current?.isSuccess()).toBeFalsy();
+    const returnValue = ref.current?.setSuccess("This is success message", 100, mockFunc);
     wrapper.update();
-    expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue === wrapper.instance()).toBe(true);
-    expect(wrapper.instance().getFeedback()).toEqual("success");
-    expect(wrapper.instance().getMessage()).toEqual("This is success message");
-    expect(wrapper.instance().getValue()).toEqual(100);
-    expect(wrapper.instance().isSuccess()).toBeTruthy();
-    expect(wrapper).toMatchSnapshot();
+    expect(returnValue === ref.current).toBe(true);
+    expect(ref.current?.getFeedback()).toEqual("success");
+    expect(ref.current?.getMessage()).toEqual("This is success message");
+    expect(ref.current?.getValue()).toEqual("100");
+    expect(ref.current?.isSuccess()).toBeTruthy();
   });
 
   it("setWarning(message, value, setStateCallBack)", () => {
-    const wrapper = shallow(
-      <UU5.Forms.Number id={"idText"} label="Number of items" min={0} max={300} step={1} required={false} size="s" />
-    );
+    const ref = UU5.Common.Reference.create();
+    const wrapper = mount(<UU5.Forms.Number ref_={ref} min={0} max={300} step={1} required={false} size="s" />);
     const mockFunc = jest.fn();
-    expect(wrapper.instance().getFeedback()).toEqual("initial");
-    expect(wrapper.instance().getMessage()).toBeNull();
-    expect(wrapper.instance().getValue()).toBeNull();
-    expect(wrapper).toMatchSnapshot();
-    expect(wrapper.instance().isSuccess()).toBeFalsy();
-    expect(wrapper.instance().isWarning()).toBeFalsy();
-    const returnValue = wrapper.instance().setWarning("This is warning message", 100, mockFunc);
+    expect(ref.current?.getFeedback()).toEqual("initial");
+    expect(ref.current?.getMessage()).toBeNull();
+    expect(ref.current?.getValue() ?? "").toBe("");
+    expect(ref.current?.isSuccess()).toBeFalsy();
+    expect(ref.current?.isWarning()).toBeFalsy();
+    const returnValue = ref.current?.setWarning("This is warning message", 100, mockFunc);
     wrapper.update();
-    expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue === wrapper.instance()).toBe(true);
-    expect(wrapper.instance().getFeedback()).toEqual("warning");
-    expect(wrapper.instance().getMessage()).toEqual("This is warning message");
-    expect(wrapper.instance().getValue()).toBe(100);
-    expect(wrapper.instance().isWarning()).toBeTruthy();
-    expect(wrapper.instance().isSuccess()).toBeFalsy();
-    expect(wrapper).toMatchSnapshot();
+    expect(returnValue === ref.current).toBe(true);
+    expect(ref.current?.getFeedback()).toEqual("warning");
+    expect(ref.current?.getMessage()).toEqual("This is warning message");
+    expect(ref.current?.getValue()).toBe("100");
+    expect(ref.current?.isWarning()).toBeTruthy();
+    expect(ref.current?.isSuccess()).toBeFalsy();
   });
 
   it("isWarning()", () => {
-    const wrapper = shallow(
+    const ref = UU5.Common.Reference.create();
+    const wrapper = mount(
       <UU5.Forms.Number
-        id={"idText"}
+        ref_={ref}
         label="Number of items"
         min={0}
         max={300}
@@ -269,50 +229,45 @@ describe("UU5.Forms.InputMixin interface testing", () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(wrapper.instance().getFeedback()).toEqual("warning");
-    expect(wrapper.instance().getMessage()).toEqual("Warning message");
-    expect(wrapper.instance().isWarning()).toBeTruthy();
-    expect(wrapper).toMatchSnapshot();
-    const setRetVal = wrapper.instance().setFeedback("success", "success message", 100, mockFunc);
+    expect(ref.current?.getFeedback()).toEqual("warning");
+    expect(ref.current?.getMessage()).toEqual("Warning message");
+    expect(ref.current?.isWarning()).toBeTruthy();
+    const setRetVal = ref.current?.setFeedback("success", "success message", 100, mockFunc);
     wrapper.update();
-    expect(mockFunc).toBeCalled();
-    expect(setRetVal === wrapper.instance()).toBe(true);
-    expect(wrapper.instance().isWarning()).toBeFalsy();
-    expect(wrapper).toMatchSnapshot();
+    expect(mockFunc).toHaveBeenCalledTimes(1);
+    expect(setRetVal === ref.current).toBe(true);
+    expect(ref.current?.isWarning()).toBeFalsy();
   });
 
   it("setError(message, value, setStateCallBack)", () => {
-    const wrapper = shallow(
-      <UU5.Forms.Number id={"idText"} label="Number of items" min={0} max={300} step={1} required={false} size="s" />
-    );
+    const ref = UU5.Common.Reference.create();
+    const wrapper = mount(<UU5.Forms.Number ref_={ref} min={0} max={300} step={1} required={false} size="s" />);
     const mockFunc = jest.fn();
-    expect(wrapper.instance().isError()).toBeFalsy();
-    expect(wrapper.instance().isWarning()).toBeFalsy();
-    expect(wrapper.instance().isSuccess()).toBeFalsy();
-    expect(wrapper.instance().isInitial()).toBeTruthy();
-    expect(wrapper.instance().getValue()).toBeNull();
-    expect(wrapper.instance().getFeedback()).toEqual("initial");
-    expect(wrapper.instance().getMessage()).toBeNull();
-    expect(wrapper).toMatchSnapshot();
-    const returnValue = wrapper.instance().setError("This is error mesage", 100, mockFunc);
+    expect(ref.current?.isError()).toBeFalsy();
+    expect(ref.current?.isWarning()).toBeFalsy();
+    expect(ref.current?.isSuccess()).toBeFalsy();
+    expect(ref.current?.isInitial()).toBeTruthy();
+    expect(ref.current?.getValue() ?? "").toBe("");
+    expect(ref.current?.getFeedback()).toEqual("initial");
+    expect(ref.current?.getMessage()).toBeNull();
+    const returnValue = ref.current?.setError("This is error mesage", 100, mockFunc);
     wrapper.update();
-    expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue === wrapper.instance()).toBe(true);
-    expect(wrapper.instance().isWarning()).toBeFalsy();
-    expect(wrapper.instance().isSuccess()).toBeFalsy();
-    expect(wrapper.instance().isInitial()).toBeFalsy;
-    expect(wrapper.instance().isError()).toBeTruthy();
-    expect(wrapper.instance().getValue()).toBe(100);
-    expect(wrapper.instance().getFeedback()).toEqual("error");
-    expect(wrapper.instance().getMessage()).toEqual("This is error mesage");
-    expect(wrapper).toMatchSnapshot();
+    expect(returnValue === ref.current).toBe(true);
+    expect(ref.current?.isWarning()).toBeFalsy();
+    expect(ref.current?.isSuccess()).toBeFalsy();
+    expect(ref.current?.isInitial()).toBeFalsy();
+    expect(ref.current?.isError()).toBeTruthy();
+    expect(ref.current?.getValue()).toBe("100");
+    expect(ref.current?.getFeedback()).toEqual("error");
+    expect(ref.current?.getMessage()).toEqual("This is error mesage");
   });
 
   it("isError()", () => {
-    const wrapper = shallow(
+    const ref = UU5.Common.Reference.create();
+    const wrapper = mount(
       <UU5.Forms.Number
-        id={"idText"}
+        ref_={ref}
         label="Number of items"
         min={0}
         max={300}
@@ -324,77 +279,71 @@ describe("UU5.Forms.InputMixin interface testing", () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(wrapper.instance().getFeedback()).toEqual("error");
-    expect(wrapper.instance().getMessage()).toEqual("Error message");
-    expect(wrapper.instance().isError()).toBeTruthy();
-    expect(wrapper).toMatchSnapshot();
-    const setRetVal = wrapper.instance().setFeedback("success", "success message", 100, mockFunc);
+    expect(ref.current?.getFeedback()).toEqual("error");
+    expect(ref.current?.getMessage()).toEqual("Error message");
+    expect(ref.current?.isError()).toBeTruthy();
+    const setRetVal = ref.current?.setFeedback("success", "success message", 100, mockFunc);
     wrapper.update();
-    expect(mockFunc).toBeCalled();
-    expect(setRetVal === wrapper.instance()).toBe(true);
-    expect(wrapper.instance().isError()).toBeFalsy();
-    expect(wrapper).toMatchSnapshot();
+    expect(mockFunc).toHaveBeenCalledTimes(1);
+    expect(setRetVal === ref.current).toBe(true);
+    expect(ref.current?.isError()).toBeFalsy();
   });
 
   it("reset(setStateCallBack)", () => {
-    const wrapper = shallow(
-      <UU5.Forms.Number id={"idText"} label="Number of items" min={0} max={300} step={1} required={true} size="s" />
-    );
+    const ref = UU5.Common.Reference.create();
+    const wrapper = mount(<UU5.Forms.Number ref_={ref} min={0} max={300} step={1} required={true} size="s" />);
     const mockFunc = jest.fn();
-    wrapper.instance().setFeedback("success", "New Message", 100, mockFunc);
+    const mockFunc2 = jest.fn();
+    const mockFunc3 = jest.fn();
+    ref.current?.setFeedback("success", "New Message", 100, mockFunc);
     wrapper.update();
-    wrapper.instance().readOnly(mockFunc);
+    ref.current?.readOnly(mockFunc2);
     wrapper.update();
-    expect(wrapper.instance().getFeedback()).toEqual("success");
-    expect(wrapper.instance().getMessage()).toEqual("New Message");
-    expect(wrapper.instance().getValue()).toBe(100);
-    expect(wrapper.instance().isReadOnly()).toBeTruthy();
-    expect(mockFunc).toBeCalled();
-    expect(wrapper).toMatchSnapshot();
+    expect(ref.current?.getFeedback()).toEqual("success");
+    expect(ref.current?.getMessage()).toEqual("New Message");
+    expect(ref.current?.getValue()).toBe("100");
+    expect(ref.current?.isReadOnly()).toBeTruthy();
+    expect(mockFunc).toHaveBeenCalledTimes(1);
+    expect(mockFunc2).toHaveBeenCalledTimes(1);
     //Now we reset setting value.
-    const returnValue = wrapper.instance().reset(mockFunc);
+    const returnValue = ref.current?.reset(mockFunc3);
     wrapper.update();
-    expect(mockFunc).toBeCalled();
-    expect(mockFunc).toHaveBeenCalledTimes(3);
-    expect(returnValue === wrapper.instance()).toBe(true);
-    expect(wrapper.instance().getValue()).toBeNull();
-    expect(wrapper.instance().getFeedback()).toEqual("initial");
-    expect(wrapper.instance().getMessage()).toBeNull();
-    expect(wrapper.instance().isReadOnly()).toBeFalsy();
-    expect(wrapper).toMatchSnapshot();
+    expect(mockFunc3).toHaveBeenCalledTimes(1);
+    expect(returnValue === ref.current).toBe(true);
+    expect(ref.current?.getValue() ?? "").toBe("");
+    expect(ref.current?.getFeedback()).toEqual("initial");
+    expect(ref.current?.getMessage()).toBeNull();
+    expect(ref.current?.isReadOnly()).toBeFalsy();
   });
 
   it("getChangeFeedback()", () => {
-    const wrapper = shallow(
-      <UU5.Forms.Number id={"idText"} label="Number of items" min={0} max={300} step={1} required={true} size="s" />
-    );
-    expect(wrapper.instance().getChangeFeedback({})).toEqual(
+    const ref = UU5.Common.Reference.create();
+    mount(<UU5.Forms.Number ref_={ref} min={0} max={300} step={1} required={true} size="s" />);
+    expect(ref.current?.getChangeFeedback({})).toEqual(
       expect.objectContaining({
         feedback: "initial",
         message: null,
-        value: null,
+        value: "",
         foundAutocompleteItems: null,
         selectedIndex: null,
       })
     );
-    expect(wrapper).toMatchSnapshot();
   });
 
   it("setChangeFeedback()", () => {
-    const wrapper = shallow(
-      <UU5.Forms.Number id={"idText"} label="Number of items" min={0} max={300} step={1} required={true} size="s" />
-    );
+    const ref = UU5.Common.Reference.create();
+    const wrapper = mount(<UU5.Forms.Number ref_={ref} min={0} max={300} step={1} required={true} size="s" />);
     const mockFunc = jest.fn();
-    expect(wrapper.instance().getChangeFeedback({})).toEqual(
+    expect(ref.current?.getChangeFeedback({})).toEqual(
       expect.objectContaining({
         feedback: "initial",
         message: null,
-        value: null,
+        value: "",
         foundAutocompleteItems: null,
         selectedIndex: null,
       })
     );
-    const returnValue = wrapper.instance().setChangeFeedback(
+    const returnValue = ref.current?.setChangeFeedback(
       {
         feedback: "error",
         message: "Error message from setChangeFeedback",
@@ -403,33 +352,30 @@ describe("UU5.Forms.InputMixin interface testing", () => {
       mockFunc
     );
     wrapper.update();
-    expect(returnValue === wrapper.instance()).toBe(true);
+    expect(returnValue === ref.current).toBe(true);
     expect(mockFunc).toBeCalled();
-    expect(wrapper.instance().state.value).toMatch(/NaN/);
-    expect(wrapper.instance().state.feedback).toEqual("error");
-    expect(wrapper.instance().state.message).toEqual("Error message from setChangeFeedback");
-    expect(wrapper).toMatchSnapshot();
+    expect(ref.current?.state.value).toMatch(/NaN/);
+    expect(ref.current?.state.feedback).toEqual("error");
+    expect(ref.current?.state.message).toEqual("Error message from setChangeFeedback");
   });
 
   it("isReadOnly()", () => {
-    const wrapper = shallow(
-      <UU5.Forms.Number id={"idText"} label="Number of items" min={0} max={300} step={1} required={true} size="s" />
-    );
+    const ref = UU5.Common.Reference.create();
+    const wrapper = mount(<UU5.Forms.Number ref_={ref} min={0} max={300} step={1} required={true} size="s" />);
     const mockFunc = jest.fn();
-    expect(wrapper.instance().isReadOnly()).toBeFalsy();
-    expect(wrapper).toMatchSnapshot();
-    const returnValue = wrapper.instance().readOnly(mockFunc);
+    expect(ref.current?.isReadOnly()).toBeFalsy();
+    const returnValue = ref.current?.readOnly(mockFunc);
     wrapper.update();
-    expect(mockFunc).toBeCalled();
-    expect(returnValue === wrapper.instance()).toBe(true);
-    expect(wrapper.instance().isReadOnly()).toBeTruthy();
-    expect(wrapper).toMatchSnapshot();
+    expect(mockFunc).toHaveBeenCalledTimes(1);
+    expect(returnValue === ref.current).toBe(true);
+    expect(ref.current?.isReadOnly()).toBeTruthy();
   });
 
   it("setEditableValue(true, setStateCallback)", () => {
-    const wrapper = shallow(
+    const ref = UU5.Common.Reference.create();
+    const wrapper = mount(
       <UU5.Forms.Number
-        id={"idText"}
+        ref_={ref}
         label="Number of items"
         min={0}
         max={300}
@@ -439,27 +385,26 @@ describe("UU5.Forms.InputMixin interface testing", () => {
         size="s"
       />
     );
-    const mockFunc = jest.fn();
-    expect(wrapper).toMatchSnapshot();
-    expect(wrapper.instance().isReadOnly()).toBeFalsy();
-    expect(wrapper.instance().editable(mockFunc)).toBeTruthy();
-    expect(mockFunc).toBeCalled();
-    wrapper.instance().readOnly(mockFunc);
+    const mockFunc1 = jest.fn();
+    const mockFunc2 = jest.fn();
+    expect(ref.current?.isReadOnly()).toBeFalsy();
+    expect(ref.current?.editable(mockFunc1)).toBeTruthy();
+    expect(mockFunc1).toHaveBeenCalledTimes(1);
+    ref.current?.readOnly();
     wrapper.update();
-    const returnValue = wrapper.instance().setEditableValue(true, mockFunc);
+    const returnValue = ref.current?.setEditableValue(true, mockFunc2);
     wrapper.update();
-    expect(mockFunc).toHaveBeenCalledTimes(3);
-    expect(returnValue === wrapper.instance()).toBe(true);
-    expect(wrapper.instance().isReadOnly()).toBeFalsy();
-    expect(wrapper.instance().editable(mockFunc)).toBeTruthy();
-    expect(wrapper).toMatchSnapshot();
-    expect(mockFunc).toHaveBeenCalledTimes(4);
+    expect(mockFunc2).toHaveBeenCalledTimes(1);
+    expect(returnValue === ref.current).toBe(true);
+    expect(ref.current?.isReadOnly()).toBeFalsy();
+    expect(ref.current?.editable()).toBeTruthy();
   });
 
   it("setEditableValue(false, setStateCallback)", () => {
-    const wrapper = shallow(
+    const ref = UU5.Common.Reference.create();
+    const wrapper = mount(
       <UU5.Forms.Number
-        id={"idText"}
+        ref_={ref}
         label="Number of items"
         min={0}
         max={300}
@@ -469,26 +414,25 @@ describe("UU5.Forms.InputMixin interface testing", () => {
         size="s"
       />
     );
-    const mockFunc = jest.fn();
-    expect(wrapper).toMatchSnapshot();
-    expect(wrapper.instance().isReadOnly()).toBeFalsy();
-    expect(wrapper.instance().editable(mockFunc)).toBeTruthy();
-    expect(mockFunc).toBeCalled();
-    wrapper.instance().readOnly(mockFunc);
+    const mockFunc1 = jest.fn();
+    const mockFunc2 = jest.fn();
+    expect(ref.current?.isReadOnly()).toBeFalsy();
+    expect(ref.current?.editable(mockFunc1)).toBeTruthy();
+    expect(mockFunc1).toHaveBeenCalledTimes(1);
+    ref.current?.readOnly();
     wrapper.update();
-    const returnValue = wrapper.instance().setEditableValue(false, mockFunc);
+    const returnValue = ref.current?.setEditableValue(false, mockFunc2);
     wrapper.update();
-    expect(mockFunc).toHaveBeenCalledTimes(3);
-    expect(returnValue === wrapper.instance()).toBe(true);
-    expect(wrapper.instance().isReadOnly()).toBeTruthy();
-    expect(wrapper).toMatchSnapshot();
-    expect(mockFunc).toHaveBeenCalledTimes(3);
+    expect(mockFunc2).toHaveBeenCalledTimes(1);
+    expect(returnValue === ref.current).toBe(true);
+    expect(ref.current?.isReadOnly()).toBeTruthy();
   });
 
   it("readOnly(setStatecallback)", () => {
-    const wrapper = shallow(
+    const ref = UU5.Common.Reference.create();
+    const wrapper = mount(
       <UU5.Forms.Number
-        id={"idText"}
+        ref_={ref}
         label="Number of items"
         min={0}
         max={300}
@@ -498,22 +442,20 @@ describe("UU5.Forms.InputMixin interface testing", () => {
         size="s"
       />
     );
-    expect(wrapper.instance().isReadOnly()).toBeFalsy();
+    expect(ref.current?.isReadOnly()).toBeFalsy();
     const mockFunc = jest.fn();
-    expect(wrapper).toMatchSnapshot();
-    const returnValue = wrapper.instance().readOnly(mockFunc);
+    const returnValue = ref.current?.readOnly(mockFunc);
     wrapper.update();
-    expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue === wrapper.instance()).toBe(true);
-    expect(wrapper.instance().isReadOnly()).toBeTruthy();
-    expect(wrapper).toMatchSnapshot();
+    expect(returnValue === ref.current).toBe(true);
+    expect(ref.current?.isReadOnly()).toBeTruthy();
   });
 
   it("editable(setStatecallback)", () => {
-    const wrapper = shallow(
+    const ref = UU5.Common.Reference.create();
+    const wrapper = mount(
       <UU5.Forms.Number
-        id={"idText"}
+        ref_={ref}
         label="Number of items"
         min={0}
         max={300}
@@ -524,27 +466,22 @@ describe("UU5.Forms.InputMixin interface testing", () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(wrapper.instance().isReadOnly()).toBeFalsy();
-    expect(wrapper.instance().state.readOnly).toBeFalsy();
-    wrapper.instance().readOnly(mockFunc);
+    expect(ref.current?.isReadOnly()).toBeFalsy();
+    ref.current?.readOnly();
     wrapper.update();
-    expect(wrapper.instance().isReadOnly()).toBeTruthy();
-    expect(wrapper.instance().state.readOnly).toBeTruthy();
-    expect(wrapper).toMatchSnapshot();
-    const returnValue = wrapper.instance().editable(mockFunc);
+    expect(ref.current?.isReadOnly()).toBeTruthy();
+    const returnValue = ref.current?.editable(mockFunc);
     wrapper.update();
-    expect(mockFunc).toBeCalled();
-    expect(mockFunc).toHaveBeenCalledTimes(2);
-    expect(returnValue === wrapper.instance()).toBe(true);
-    expect(wrapper.instance().isReadOnly()).toBeFalsy();
-    expect(wrapper.instance().state.readOnly).toBeFalsy();
-    expect(wrapper).toMatchSnapshot();
+    expect(mockFunc).toHaveBeenCalledTimes(1);
+    expect(returnValue === ref.current).toBe(true);
+    expect(ref.current?.isReadOnly()).toBeFalsy();
   });
 
   it("getLabel(idinput)", () => {
-    const wrapper = shallow(
+    const ref = UU5.Common.Reference.create();
+    mount(
       <UU5.Forms.Number
-        id={"idText"}
+        ref_={ref}
         label="Number of items"
         min={0}
         max={300}
@@ -554,18 +491,17 @@ describe("UU5.Forms.InputMixin interface testing", () => {
         size="s"
       />
     );
-    expect(wrapper.instance().getLabel()).not.toBeNull();
-    expect(wrapper.instance().getLabel()).not.toBeUndefined();
-    expect(() => wrapper.instance().getLabel()).not.toThrow();
-    expect(wrapper.instance().getLabel()).toEqual(expect.any(Object));
-    expect(wrapper.instance().getLabel()).toBeInstanceOf(Object);
-    expect(wrapper).toMatchSnapshot();
+    expect(ref.current?.getLabel()).not.toBeNull();
+    expect(ref.current?.getLabel()).not.toBeUndefined();
+    expect(ref.current?.getLabel()).toEqual(expect.any(Object));
+    expect(ref.current?.getLabel()).toBeInstanceOf(Object);
   });
 
   it("getInputWrapper(inpuid)", () => {
-    const wrapper = shallow(
+    const ref = UU5.Common.Reference.create();
+    const wrapper = mount(
       <UU5.Forms.Number
-        id={"idText"}
+        ref_={ref}
         label="Number of items"
         min={0}
         max={300}
@@ -575,48 +511,40 @@ describe("UU5.Forms.InputMixin interface testing", () => {
         size="s"
       />
     );
-    expect(wrapper.instance().getInputWrapper()).not.toBeNull();
-    expect(wrapper.instance().getInputWrapper()).not.toBeUndefined();
-    expect(() => wrapper.instance().getInputWrapper()).not.toThrow();
-    expect(wrapper.instance().getInputWrapper()).toEqual(expect.any(Object));
-    expect(wrapper.instance().getInputWrapper()).toBeInstanceOf(Object);
-    expect(wrapper).toMatchSnapshot();
+    expect(ref.current?.getInputWrapper()).not.toBeNull();
+    expect(ref.current?.getInputWrapper()).not.toBeUndefined();
+    expect(ref.current?.getInputWrapper()).toEqual(expect.any(Object));
+    expect(ref.current?.getInputWrapper()).toBeInstanceOf(Object);
   });
 });
 
 describe("UU5.Forms.TextInputMixin interface testing", () => {
   it("isTextInput() should return true", () => {
-    const wrapper = shallow(
-      <UU5.Forms.Number id={"idText"} label="Number of items" min={0} max={300} step={1} value={100} size="s" />
-    );
-    expect(wrapper.instance().isTextInput()).toBeTruthy();
-    expect(wrapper).toMatchSnapshot();
+    const ref = UU5.Common.Reference.create();
+    mount(<UU5.Forms.Number ref_={ref} min={0} max={300} step={1} value={100} size="s" />);
+    expect(ref.current?.isTextInput()).toBeTruthy();
   });
 
   it("getInput()", () => {
-    const wrapper = mount(
-      <UU5.Forms.Number id={"idText"} label="Number of items" min={0} max={300} step={1} value={100} size="s" />
-    );
-    expect(wrapper.instance().getInput()).toBe(wrapper.find("text-input").instance());
-    expect(wrapper.instance().getInput()).toEqual(expect.any(Object));
-    expect(wrapper.instance().getInput()).toBeInstanceOf(Object);
-    expect(wrapper.instance().getInput()).not.toBe(undefined);
+    const ref = UU5.Common.Reference.create();
+    const wrapper = mount(<UU5.Forms.Number ref_={ref} min={0} max={300} step={1} value={100} size="s" />);
+    expect(ref.current?.getInput()).toBe(wrapper.find("text-input").instance());
+    expect(ref.current?.getInput()).toEqual(expect.any(Object));
+    expect(ref.current?.getInput()).toBeInstanceOf(Object);
+    expect(ref.current?.getInput()).not.toBe(undefined);
   });
 
   it("focus()", () => {
-    const wrapper = shallow(
-      <UU5.Forms.Number id={"idText"} label="Number of items" min={0} max={300} step={1} value={100} size="s" />
-    );
-    expect(wrapper).toMatchSnapshot();
-    wrapper.instance().focus();
-    wrapper.update();
-    expect(wrapper).toMatchSnapshot();
+    const ref = UU5.Common.Reference.create();
+    mount(<UU5.Forms.Number ref_={ref} min={0} max={300} step={1} value={100} size="s" />);
+    ref.current?.focus();
   });
 
   it("isValid()", () => {
-    const wrapper = shallow(
+    const ref = UU5.Common.Reference.create();
+    mount(
       <UU5.Forms.Number
-        id={"idText"}
+        ref_={ref}
         label="Number of items"
         min={0}
         max={300}
@@ -626,23 +554,21 @@ describe("UU5.Forms.TextInputMixin interface testing", () => {
         size="s"
       />
     );
-    expect(wrapper.instance().isValid()).toBeTruthy();
-    expect(wrapper).toMatchSnapshot();
+    expect(ref.current?.isValid()).toBeTruthy();
   });
 
   it("isValid() should return false", () => {
-    const wrapper = shallow(
-      <UU5.Forms.Number id={"idText"} label="Number of items" min={0} max={300} step={1} required={true} size="s" />
-    );
-    expect(wrapper.instance().isValid()).toBeFalsy();
-    expect(wrapper).toMatchSnapshot();
+    const ref = UU5.Common.Reference.create();
+    mount(<UU5.Forms.Number ref_={ref} min={0} max={300} step={1} required={true} size="s" />);
+    expect(ref.current?.isValid()).toBeFalsy();
   });
 
   it("getFocusFeedback()", () => {
+    const ref = UU5.Common.Reference.create();
     const focusMessage = "Message";
-    const wrapper = shallow(
+    const wrapper = mount(
       <UU5.Forms.Number
-        id={"idText"}
+        ref_={ref}
         label="Number of items"
         focusMessage={focusMessage}
         value={0}
@@ -653,31 +579,27 @@ describe("UU5.Forms.TextInputMixin interface testing", () => {
         size="s"
       />
     );
-    expect(wrapper).toMatchSnapshot();
-    wrapper.instance().focus();
+    ref.current?.focus();
     wrapper.update();
-    expect(wrapper.instance().getFocusFeedback({})).toEqual({ feedback: "initial", value: "0", message: focusMessage });
-    expect(wrapper).toMatchSnapshot();
+    expect(ref.current?.getFocusFeedback({})).toEqual({ feedback: "initial", value: "0", message: focusMessage });
   });
 
   it("getBlurFeedback()", () => {
-    const wrapper = shallow(
-      <UU5.Forms.Number id={"idText"} label="Number of items" min={0} max={300} step={10} required={true} size="s" />
-    );
-    expect(wrapper.instance().getBlurFeedback({})).toEqual(
+    const ref = UU5.Common.Reference.create();
+    mount(<UU5.Forms.Number ref_={ref} min={0} max={300} step={10} required={true} size="s" />);
+    expect(ref.current?.getBlurFeedback({})).toEqual(
       expect.objectContaining({
         feedback: "initial",
         message: null,
-        value: undefined,
       })
     );
-    expect(wrapper).toMatchSnapshot();
   });
 
   it("setAutocompleteItems(items,opt,setStateCallBack)", () => {
-    const wrapper = shallow(
+    const ref = UU5.Common.Reference.create();
+    const wrapper = mount(
       <UU5.Forms.Number
-        id={"idText"}
+        ref_={ref}
         label="Number of items"
         min={0}
         max={300}
@@ -688,9 +610,8 @@ describe("UU5.Forms.TextInputMixin interface testing", () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(wrapper).toMatchSnapshot();
-    expect(wrapper.instance().state.autocompleteItems).toBe(null);
-    const returnValue = wrapper.instance().setAutoCompleteItems(
+    expect(ref.current?.state.autocompleteItems).toBe(null);
+    const returnValue = ref.current?.setAutoCompleteItems(
       [
         {
           value: 10,
@@ -709,13 +630,11 @@ describe("UU5.Forms.TextInputMixin interface testing", () => {
       mockFunc
     );
     wrapper.update();
-    expect(wrapper.instance().state.autocompleteItems).not.toBe(null);
-    expect(wrapper.instance().state.autocompleteItems).toEqual(
+    expect(ref.current?.state.autocompleteItems).not.toBe(null);
+    expect(ref.current?.state.autocompleteItems).toEqual(
       expect.arrayContaining([{ value: 10 }, { value: 20 }, { value: 30 }, { value: 40 }])
     );
-    expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(returnValue === wrapper.instance()).toBe(true);
-    expect(wrapper).toMatchSnapshot();
+    expect(returnValue === ref.current).toBe(true);
   });
 });

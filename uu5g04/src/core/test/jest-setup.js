@@ -15,8 +15,8 @@
 
 // for legacy purposes, if the current project doesn't know about uu5g05 then mock it
 // so that it loads from inside of uu5g04, to be backward compatible
-//    uu5g05        => uu5g04/dist/uu5g05/uu5g05.js
-//    uu5stringg01  => uu5g04/dist/uu5stringg01/uu5stringg01.js
+//    uu5g05        => uu5g04/dist-node/uu5g05/uu5g05.js
+//    uu5stringg01  => uu5g04/dist-node/uu5stringg01/uu5stringg01.js
 const path = require("path");
 function makeFallbackToInternal(name, internalBasedIn) {
   let actual;
@@ -31,7 +31,7 @@ function makeFallbackToInternal(name, internalBasedIn) {
           let basedInPath = require.resolve(internalBasedIn);
           let usedPath = basedInPath.replace(
             new RegExp("^(.*" + internalBasedIn + ")([/\\\\]).*$"),
-            (m, g1, sep) => g1 + sep + "dist" + sep + name + sep + name + ".js"
+            (m, g1, sep) => g1 + sep + "dist-node" + sep + name + sep + name + ".js"
           );
           actual = require("./" + path.relative(__dirname, usedPath).replace(/\\/g, "/"));
         }

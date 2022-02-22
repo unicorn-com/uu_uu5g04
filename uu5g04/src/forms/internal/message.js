@@ -52,8 +52,11 @@ export default UU5.Common.VisualComponent.create({
           result +=
             " " +
             Css.css`
-            animation: ${animationKeyframes} 200ms step-end both;
-          `;
+              position: absolute;
+              visibility: hidden;
+              bottom: 0;
+              animation: ${animationKeyframes} 200ms step-end both;
+            `;
         } else {
           result += " " + Css.css`${finalStyle}`;
         }

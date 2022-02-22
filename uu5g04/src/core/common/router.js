@@ -16,6 +16,7 @@
 //@@viewOn:imports
 import React from "react";
 import { Fragment, PropTypes, Utils } from "uu5g05";
+import { RouteLeaveContext } from "../uu5g05-integration/use-route-leave.js";
 import ns from "./common-ns.js";
 import Tools from "./tools.js";
 import Environment from "../environment/environment.js";
@@ -127,6 +128,16 @@ export const Router = VisualComponent.create({
       route: null,
       routeError: null,
       requestedRoute: null, // info about requested route for cases when it's invalid (wrong component tag / ...)
+      // integration with uu5g05 (so that useRouteLeave works)
+      routeLeaveCtxValue: {
+        id: null,
+        nextRoute: null,
+        prevent: this._routeLeaveCtxPrevent,
+        allow: this._routeLeaveCtxAllow,
+        confirm: this._routeLeaveCtxConfirm,
+        refuse: this._routeLeaveCtxRefuse,
+        _intermediaryConfirm: null,
+      },
     };
   },
 
@@ -293,6 +304,7 @@ export const Router = VisualComponent.create({
         this._preventLeaveUnkeyed = curMaxValue ? Number(curMaxValue.replace("_default_", "")) + 1 : 0;
       }
     }
+    this._routeLeaveCtxAllowed(key, allowAll);
     if (!Object.keys(this._preventLeave).length) Environment.EventListener.unregisterBeforeUnload();
   },
 
@@ -903,11 +915,48 @@ export const Router = VisualComponent.create({
     // (we don't want to re-scroll elsewhere if user scrolled somewhere)
     if (!this._isScrollDueToRender) delete this._pendingFragmentToScrollTo;
   },
+
+  // integration with uu5g05 (so that useRouteLeave works)
+  _routeLeaveCtxPrevent(id) {
+    this.preventPageLeave(id, (_intermediaryConfirm) => {
+      this.setState((state) => ({
+        routeLeaveCtxValue: { ...state.routeLeaveCtxValue, id, _intermediaryConfirm, nextRoute: {} }, // for simplicity we send empty nextRoute (missing uu5Route & params); what's important is that nextRoute is not null
+      }));
+      return false;
+    });
+  },
+  _routeLeaveCtxAllow(id) {
+    if (this.state.routeLeaveCtxValue.id === id) this._routeLeaveCtxConfirm(id);
+    this.allowPageLeave(id);
+  },
+  _routeLeaveCtxConfirm(id) {
+    if (this.state.routeLeaveCtxValue.id !== id) return;
+    this.state.routeLeaveCtxValue._intermediaryConfirm(true);
+  },
+  _routeLeaveCtxRefuse(id) {
+    if (this.state.routeLeaveCtxValue.id !== id) return;
+    this.state.routeLeaveCtxValue._intermediaryConfirm(false);
+    this.setState((state) => ({
+      routeLeaveCtxValue: { ...state.routeLeaveCtxValue, id: null, _intermediaryConfirm: null, nextRoute: null },
+    }));
+  },
+  _routeLeaveCtxAllowed(id, allowedAll) {
+    this.setState((state) => {
+      if (!state.routeLeaveCtxValue.id || (!allowedAll && id !== state.routeLeaveCtxValue.id)) return;
+      return {
+        routeLeaveCtxValue: { ...state.routeLeaveCtxValue, id: null, _intermediaryConfirm: null, nextRoute: null },
+      };
+    });
+  },
   //@@viewOff:private
 
   //@@viewOn:render
   render() {
-    return this._buildChild();
+    let result = this._buildChild();
+    if (RouteLeaveContext) {
+      result = <RouteLeaveContext.Provider value={this.state.routeLeaveCtxValue}>{result}</RouteLeaveContext.Provider>;
+    }
+    return result;
   },
   //@@viewOff:render
 });

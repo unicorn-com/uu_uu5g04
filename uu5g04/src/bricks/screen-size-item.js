@@ -46,6 +46,7 @@ export default UU5.Common.VisualComponent.create({
     },
     editMode: {
       enableWrapper: false,
+      enablePlaceholder: true,
     },
   },
   //@@viewOff:statics

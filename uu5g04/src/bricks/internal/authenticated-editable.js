@@ -54,6 +54,7 @@ export const AuthorizedEditable = UU5.Common.VisualComponent.create({
   //@@viewOn:propTypes
   propTypes: {
     component: UU5.PropTypes.object.isRequired,
+    editMode: UU5.PropTypes.object,
   },
   //@@viewOff:propTypes
 
@@ -119,7 +120,7 @@ export const AuthorizedEditable = UU5.Common.VisualComponent.create({
     }
   },
 
-  _getToolbarItems() {
+  _getToolbarItems(disabled) {
     return authenticatedStates.map((value) => {
       let isSelected = this.state[value] === true;
       return (
@@ -130,6 +131,7 @@ export const AuthorizedEditable = UU5.Common.VisualComponent.create({
           pressed={isSelected}
           // eslint-disable-next-line react/jsx-no-bind
           onClick={() => this._onChangeAuthState(value)}
+          disabled={disabled}
         >
           {this.getLsiComponent(value)}
         </Button>
@@ -140,7 +142,13 @@ export const AuthorizedEditable = UU5.Common.VisualComponent.create({
 
   //@@viewOn:render
   render() {
-    return (
+    // for case when section editation is turned on but component itself is not edited
+    return this.props.editMode && !this.props.editMode.edit ? (
+      <>
+        {this._getToolbarItems(true)}
+        {this.props.component.getChildren()}
+      </>
+    ) : (
       <UU5.BricksEditable.Toolbar
         {...this.getMainPropsToPass()}
         ref_={this._registerEditToolbar}

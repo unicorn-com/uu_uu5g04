@@ -103,6 +103,7 @@ export const Panel = UU5.Common.VisualComponent.create({
     },
     editMode: {
       startMode: "button",
+      enablePlaceholder: true,
     },
     defaults: {
       parentTagName: "UU5.Bricks.Accordion",

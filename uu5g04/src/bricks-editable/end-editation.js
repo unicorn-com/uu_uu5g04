@@ -22,7 +22,7 @@ export const EndEditation = UU5.Common.LsiMixin.withContext(
           Css.css(`
           color: #4CAF50;
           background-color: transparent;
-          font-family: ClearSans-Medium;
+          font-weight: 500;
           border-radius: 2px;
           margin: 8px 8px 8px 0;
 

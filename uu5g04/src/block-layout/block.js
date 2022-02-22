@@ -107,7 +107,6 @@ export const Block = UU5.Common.VisualComponent.create({
         itemList: UU5.PropTypes.arrayOf(
           UU5.PropTypes.shape({
             content: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string]),
-            activeContent: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string]),
             disabled: UU5.PropTypes.bool,
             onClick: UU5.PropTypes.func,
             onCtrlClick: UU5.PropTypes.func,
@@ -144,7 +143,8 @@ export const Block = UU5.Common.VisualComponent.create({
 
   //@@viewOn:private
   _getButton(item, i) {
-    let icon = <UU5.Bricks.Icon icon={getItemIcon(item)} key="icon" />;
+    let icon = getItemIcon(item);
+    if (icon) icon = <UU5.Bricks.Icon icon={icon} key="icon" />;
     let content = null;
     if (item.activeContent) {
       content = getItemContent(item, true);

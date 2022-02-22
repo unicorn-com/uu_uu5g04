@@ -141,7 +141,7 @@ const getBgStyles = (bgStyle) => {
 
       &.uu5-forms-items-input {
         &:focus, &.uu5-forms-items-input-open {
-          background-color: ${colors.bgColorHover};
+          ${bgStyle !== "outline" && bgStyle !== "underline" ? `background-color: ${colors.bgColorHover}` : ""};
           border-color: ${colors.borderColorHover};
 
           ${colorSchema !== "default" ? `color: ${colors.textColorHover};` : ""}

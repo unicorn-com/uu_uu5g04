@@ -95,6 +95,7 @@ const CLASS_NAMES = {
         ? `flex-basis: 100%;`
         : `
       width: ${sizeToUse};
+      max-width: 100%;
     `;
 
     return Css.css`
@@ -121,6 +122,7 @@ export const ScreenSizeEditable = UU5.Common.VisualComponent.create({
   //@@viewOn:propTypes
   propTypes: {
     component: UU5.PropTypes.object.isRequired,
+    editMode: UU5.PropTypes.object,
   },
   //@@viewOff:propTypes
 
@@ -348,7 +350,14 @@ export const ScreenSizeEditable = UU5.Common.VisualComponent.create({
       }
     }
 
-    return (
+    return this.props.editMode && !this.props.editMode.edit ? (
+      <>
+        {this._getToolbarItems(this.state.children)}
+        <span className={CLASS_NAMES.sideColumns()} />
+        {this._renderItem(this.state.children)}
+        <span className={CLASS_NAMES.sideColumns()} />
+      </>
+    ) : (
       <>
         <UU5.BricksEditable.Toolbar
           {...this.getMainPropsToPass()}
@@ -358,9 +367,9 @@ export const ScreenSizeEditable = UU5.Common.VisualComponent.create({
           onClose={this._onEndEditation}
         >
           <UU5.Bricks.Div className={CLASS_NAMES.flexContainer()} ref_={this._registerDiv}>
-            <span className={CLASS_NAMES.sideColumns()}></span>
+            <span className={CLASS_NAMES.sideColumns()} />
             {this._renderItem(this.state.children)}
-            <span className={CLASS_NAMES.sideColumns()}></span>
+            <span className={CLASS_NAMES.sideColumns()} />
           </UU5.Bricks.Div>
         </UU5.BricksEditable.Toolbar>
         {this._renderMoreSettingsModal()}

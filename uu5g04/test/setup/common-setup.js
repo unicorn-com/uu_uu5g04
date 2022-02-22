@@ -100,7 +100,8 @@ expect.addSnapshotSerializer({
 
 // for legacy purposes, if the current project doesn't know about uu_plus4u5g02 then mock it
 // so that it loads from inside of uu_plus4u5g01 to be backward compatible;
-//    uu_plus4u5g02 => uu_plus4u5g01/dist/uu_plus4u5g02/uu_plus4u5g02.js
+//    uu_plus4u5g02 => uu_plus4u5g01/dist-node/uu_plus4u5g02/uu_plus4u5g02.js with fall back to
+//                     uu_plus4u5g01/dist/uu_plus4u5g02/uu_plus4u5g02.js (because uu_plus4u5g01 on prod doesn't yet have dist-node/uu_plus4u5g02/)
 // TODO Should be in uu_plus4u5g01 but devkit doesn't support custom test setups (at least not ones that
 // are loaded automatically) so until then we'll configure it here.
 function makeFallbackToInternal(name, internalBasedIn) {
@@ -116,10 +117,19 @@ function makeFallbackToInternal(name, internalBasedIn) {
           let basedInPath = require.resolve(internalBasedIn);
           let usedPath = basedInPath.replace(
             new RegExp("^(.*" + internalBasedIn + ")([/\\\\]).*$"),
-            (m, g1, sep) => g1 + sep + "dist" + sep + name + sep + name + ".js"
+            (m, g1, sep) => g1 + sep + "dist-node" + sep + name + sep + name + ".js"
           );
           const path = require("path");
-          actual = require("./" + path.relative(__dirname, usedPath).replace(/\\/g, "/"));
+          try {
+            actual = require("./" + path.relative(__dirname, usedPath).replace(/\\/g, "/"));
+          } catch (e) {
+            if (e.code !== "MODULE_NOT_FOUND") throw e;
+            usedPath = basedInPath.replace(
+              new RegExp("^(.*" + internalBasedIn + ")([/\\\\]).*$"),
+              (m, g1, sep) => g1 + sep + "dist" + sep + name + sep + name + ".js"
+            );
+            actual = require("./" + path.relative(__dirname, usedPath).replace(/\\/g, "/"));
+          }
         }
       }
       return actual;

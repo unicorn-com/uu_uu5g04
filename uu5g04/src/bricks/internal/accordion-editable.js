@@ -259,7 +259,7 @@ export const AccordionEditable = UU5.Common.VisualComponent.create({
     if (this.props.inline) {
       return this.props.component.buildChildren({ content }, () => ({ parent: null, nestingLevel: "bigBox" }));
     } else {
-      this.props.component.buildChildren({ content });
+      return this.props.component.buildChildren({ content });
     }
   },
   //@@viewOff:private

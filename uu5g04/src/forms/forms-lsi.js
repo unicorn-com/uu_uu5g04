@@ -247,6 +247,10 @@ export const FormsLsi = {
       sk: "Vložte tag pomocou vstupného poľa nižšie.",
       uk: "Вставте тег в поле для вводу нижче.",
     },
+    noItemsAvailable: {
+      cs: "Žádné položky k dispozici",
+      en: "No items available",
+    },
   },
   datePicker: {
     unspecifiedRange: {

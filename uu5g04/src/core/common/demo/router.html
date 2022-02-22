@@ -23,6 +23,9 @@
         "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
         "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
 
+        "uu5g05": "https://cdn.plus4u.net/uu-uu5g05/1.0.0/uu5g05.js",
+        "uu5stringg01": "https://cdn.plus4u.net/uu-uu5stringg01/1.0.0/uu5stringg01.js",
+
         "uu5g04": "/uu5g04.js",
         "uu5g04-forms": "/uu5g04-forms.js",
         "uu5g04-bricks": "/uu5g04-bricks.js"
@@ -47,6 +50,7 @@
   import ReactDOM from "react-dom";
   import UU5 from "uu5g04";
   import "uu5g04-bricks";
+  import { useRouteLeave, createVisualComponent, DynamicLibraryComponent } from "uu5g05";
 
   /*@@viewOn:0*/
   let renderButtons = () => (
@@ -93,6 +97,10 @@
       <UU5.Bricks.Button
         content="Page leave - custom dialog"
         onClick={() => UU5.Environment.setRoute("pageLeaveCustom")}
+      />
+      <UU5.Bricks.Button
+        content="Page leave - uu5g05 useRouteLeave"
+        onClick={() => UU5.Environment.setRoute("pageLeaveG05")}
       />
       <UU5.Bricks.Button
         content="Non-existing route"
@@ -219,7 +227,6 @@
             onClick={() => UU5.Environment.getRouter().allowPageLeave()}
             content="Remove confirmation dialog"
           />
-          <PageLeaveCustom />
           {renderContent()}
         </UU5.Bricks.Section>
       );
@@ -259,6 +266,44 @@
         </UU5.Bricks.Section>
       );
     }
+  });
+
+  const PageLeaveG05 = createVisualComponent({
+    render(props) {
+      let { prevent, allow, nextRoute, refuse } = useRouteLeave(); // initially prevented; will become allowed on unmount
+      return (
+        <UU5.Bricks.Section level={1} header="Page leave - uu5g05 useRouteLeave">
+          <UU5.Bricks.Button
+            onClick={() => allow()}
+            content={"Remove confirmation dialog"}
+          />
+          {renderContent()}
+          <PageLeaveG05Dialog open={!!nextRoute} allow={allow} refuse={refuse} />
+        </UU5.Bricks.Section>
+      );
+    }
+  });
+  const PageLeaveG05Dialog = createVisualComponent({
+    render(props) {
+      let { allow, refuse, ...restProps } = props;
+      return (
+        <DynamicLibraryComponent
+          uu5Tag="Uu5Elements.Dialog"
+          props={{
+            header: "Do you want to leave this page?",
+            icon: "mdi-reload-alert",
+            actionDirection: "horizontal",
+            actionList: [
+              { children: "Stay", onClick: () => refuse() },
+              { children: "Leave", onClick: () => allow(), colorScheme: "negative", significance: "highlighted" },
+            ],
+            ...restProps,
+            onClose: () => refuse(),
+            children: "Changes you made may not be saved.",
+          }}
+        />
+      );
+    },
   });
 
   const NotFoundRoute = createReactClass({
@@ -353,6 +398,7 @@
                 "history": { component: { tag: "UU5.Example.History" } },
                 "pageLeaveDefault": { component: <PageLeaveDefault /> },
                 "pageLeaveCustom": { component: <PageLeaveCustom /> },
+                "pageLeaveG05": { component: <PageLeaveG05 /> },
                 "pageLoadMixin": { component: <PageLoadMixin /> },
                 "lazyLoad": { component: <LazyLoad /> },
                 "lazyLoadError": { component: <LazyLoadError /> },

@@ -239,11 +239,11 @@ export const Checkbox = Context.withContext(
         }
       };
 
-      if (!mainAttrs.onClick) {
-        mainAttrs.onClick = (e) => {
-          handleClick(e);
-        };
-      }
+      let origOnClick = mainAttrs.onClick;
+      mainAttrs.onClick = (e) => {
+        if (typeof origOnClick === "function") origOnClick(e);
+        if (!e.isDefaultPrevented()) handleClick(e);
+      };
 
       return mainAttrs;
     },

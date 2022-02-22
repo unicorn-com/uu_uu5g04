@@ -60,7 +60,7 @@ let Card = UU5.Common.VisualComponent.create({
     },
     editMode: {
       enablePlaceholder: true,
-      displayType: "inline",
+      displayType: "block", // Temporary solution for rendering by uuEccg03
       startMode: "button",
       name: Lsi.inlineComponentHeaders.cardName,
     },

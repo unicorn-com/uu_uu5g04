@@ -271,7 +271,7 @@ export const Environment = {
   CDN_URL: cdnBaseUri.replace(/^(.+?)\/+$/, "$1"), // for backward compatibility only
   COMPONENT_RENDER_UVE:
     "https://uuapp.plus4u.net/uu-plus4ugo-maing01/f34b62a867db4bd89490534bb26451ad/component/render",
-  fontCssUrl: cdnBaseUri + "libs/clearsans/2.0.0/fonts/clear-sans.min.css",
+  fontCssUrl: cdnBaseUri + "libs/roboto/1.0.0/roboto.min.css",
   resizeInterval: 150,
   holdTimeout: 500,
   holdDiff: 20,

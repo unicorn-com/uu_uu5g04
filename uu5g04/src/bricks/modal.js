@@ -430,31 +430,7 @@ const _Modal = UU5.Common.VisualComponent.create({
   },
 
   close(shouldOnClose = true, setStateCallback) {
-    let _referrer;
-    if (typeof shouldOnClose === "function") {
-      setStateCallback = shouldOnClose;
-      shouldOnClose = true;
-    } else if (shouldOnClose != null && typeof shouldOnClose === "object") {
-      _referrer = shouldOnClose._referrer;
-      shouldOnClose = shouldOnClose.shouldOnClose;
-    }
-
-    // check if component that closing modal is the same that opens it
-    if (_referrer && this.state._referrer !== _referrer) {
-      // modal is trying to be close by another component that opens it
-      return this;
-    }
-
-    if (this._shouldOpenPageModal()) {
-      let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
-      let centralModal = page.getModal();
-      centralModal.close({ shouldOnClose, _referrer }, setStateCallback);
-    } else if (typeof this.state.onClose === "function" && shouldOnClose !== false) {
-      this.state.onClose({ component: this, closeType: this.getDefault().closeTypes.ifc, callback: setStateCallback });
-    } else {
-      this._close(setStateCallback);
-    }
-    return this;
+    return this._doClose(shouldOnClose, this.getDefault().closeTypes.ifc, setStateCallback);
   },
 
   toggle(setStateCallback) {
@@ -602,6 +578,38 @@ const _Modal = UU5.Common.VisualComponent.create({
       this.state.onClose({ component: this, event: e, closeType: this.getDefault().closeTypes.blur });
     } else {
       this._close();
+    }
+    return this;
+  },
+
+  _doClose(shouldOnClose, closeType, setStateCallback) {
+    let _referrer;
+    if (typeof shouldOnClose === "function") {
+      setStateCallback = shouldOnClose;
+      shouldOnClose = true;
+    } else if (shouldOnClose != null && typeof shouldOnClose === "object") {
+      _referrer = shouldOnClose._referrer;
+      shouldOnClose = shouldOnClose.shouldOnClose;
+    }
+
+    // check if component that closing modal is the same that opens it
+    if (_referrer && this.state._referrer !== _referrer) {
+      // modal is trying to be close by another component that opens it
+      return this;
+    }
+
+    if (this._shouldOpenPageModal()) {
+      let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
+      let centralModal = page.getModal();
+      centralModal.close({ shouldOnClose, _referrer }, setStateCallback);
+    } else if (typeof this.state.onClose === "function" && shouldOnClose !== false) {
+      this.state.onClose({
+        component: this,
+        closeType,
+        callback: setStateCallback,
+      });
+    } else {
+      this._close(setStateCallback);
     }
     return this;
   },
@@ -810,7 +818,9 @@ const _Modal = UU5.Common.VisualComponent.create({
           {...this.getMainPropsToPass()}
           className={[this.props.className, this.state.className].filter((v) => v).join(" ")} // omit main className (.uu5-bricks-modal)
           open={!this.state.hidden}
-          onClose={() => this.close()}
+          onClose={(e) =>
+            this._doClose(true, this.getDefault().closeTypes[e?.type === "click" ? "closedButton" : "blur"])
+          }
           header={header}
           footer={footer}
           closeOnEsc={!this.isSticky()}
@@ -819,6 +829,7 @@ const _Modal = UU5.Common.VisualComponent.create({
           nestingLevel={this.getNestingLevel()}
           skipModalBus={!this.state.registerToModalBus}
           fullscreen={fullscreen}
+          //scrollable={!this.state.overflow} // temporary removed because uu5g05 Modal does not render paddings if scrollable is false
           width={size === "s" ? 300 : size === "m" ? 600 : size === "l" ? 900 : size === "max" ? "full" : null}
         >
           {content}

@@ -114,7 +114,7 @@ export const Authenticated = UU5.Common.VisualComponent.create({
   _renderEditationMode() {
     return (
       <UU5.Common.Suspense fallback={<span ref={this._registerNull} />}>
-        <EditationComponent component={this} ref_={this._registerEditableComponent} />
+        <EditationComponent component={this} ref_={this._registerEditableComponent} editMode={this.props.editMode} />
       </UU5.Common.Suspense>
     );
   },
@@ -139,8 +139,10 @@ export const Authenticated = UU5.Common.VisualComponent.create({
 
     return (
       <>
-        {this.state.editation ? this._renderEditationMode() : null}
-        {renderContent && (!this.state.editation || !this._isEditationLazyLoaded()) ? this.getChildren() : null}
+        {this.state.editation || this.props.editMode ? this._renderEditationMode() : null}
+        {renderContent && (!this.state.editation || !this._isEditationLazyLoaded()) && !this.props.editMode
+          ? this.getChildren()
+          : null}
       </>
     );
   },

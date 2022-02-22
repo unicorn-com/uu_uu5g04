@@ -92,7 +92,10 @@ let TimePicker = Context.withContext(
         iconOpen: "mdi-clock-outline",
         iconClosed: "mdi-clock-outline",
         format: TIME_FORMAT_24,
-        nanMessage: "Please insert a valid time.",
+        nanMessage: {
+          cs: "Prosím zadejte čas ve správném formátu.",
+          en: "Please insert a valid time.",
+        },
         seconds: false,
         valueType: null,
         openToContent: "xs",
@@ -123,17 +126,18 @@ let TimePicker = Context.withContext(
       this._setUpLimits(this.props);
 
       let value = this._formatTime(this.props.value) || this.props.value;
-      let validationResult = this._validateOnChange({ value, event: null, component: this });
 
-      if (validationResult) {
-        this._updateState(validationResult);
-      } else {
-        validationResult = this._validateTime({ value });
-        if (validationResult.feedback === "initial") {
+      let validationResult = this._validateTime({ value });
+      if (validationResult.feedback === "initial") {
+        let customValidationResult = this._validateOnChange({ value, event: null, component: this });
+        if (customValidationResult) {
+          this._updateState(customValidationResult);
+        } else {
           validationResult.feedback = this.props.feedback || validationResult.feedback;
           validationResult.message = this.props.message || validationResult.message;
+          this._updateState(validationResult);
         }
-
+      } else {
         this._updateState(validationResult);
       }
 
@@ -149,17 +153,18 @@ let TimePicker = Context.withContext(
           this._hasInputFocus() && !(nextProps.value instanceof Date)
             ? nextProps.value
             : this._formatTime(nextProps.value) || nextProps.value;
-        let validationResult = this._validateOnChange({ value, event: null, component: this }, true);
 
-        if (validationResult) {
-          this._updateState(validationResult);
-        } else {
-          validationResult = this._validateTime({ value });
-          if (validationResult.feedback === "initial") {
+        let validationResult = this._validateTime({ value });
+        if (validationResult.feedback === "initial") {
+          let customValidationResult = this._validateOnChange({ value, event: null, component: this }, true);
+          if (customValidationResult) {
+            this._updateState(customValidationResult);
+          } else {
             validationResult.feedback = nextProps.feedback || validationResult.feedback;
             validationResult.message = nextProps.message || validationResult.message;
+            this._updateState(validationResult);
           }
-
+        } else {
           this._updateState(validationResult);
         }
       }
@@ -206,10 +211,11 @@ let TimePicker = Context.withContext(
     setValue_(value, setStateCallback) {
       let _callCallback = typeof setStateCallback === "function";
       value = this._hasInputFocus() && !(value instanceof Date) ? value : this._formatTime(value) || value;
-      if (!this._validateOnChange({ value }, false)) {
-        if (this._checkRequired({ value })) {
+      if (this._checkRequired({ value })) {
+        let validationResult = this._validateTime({ value });
+        if (validationResult.feedback === "initial" && !this._validateOnChange({ value }, false)) {
           _callCallback = false;
-          this._updateState(this._validateTime({ value }), false, setStateCallback);
+          this._updateState(validationResult, false, setStateCallback);
         }
       }
 
@@ -282,6 +288,7 @@ let TimePicker = Context.withContext(
         opt.required = this.props.required;
         let blurResult = this.getBlurFeedback(opt);
         let result = this._validateTime(blurResult);
+        result = { feedback: "initial", message: null, ...result };
 
         this._updateState(result);
       } else {
@@ -512,8 +519,8 @@ let TimePicker = Context.withContext(
 
       if (this.props.validateOnChange) {
         opt.value = value;
-        if (!this._validateOnChange(opt)) {
-          if (this._checkRequired(opt)) {
+        if (this._checkRequired(opt)) {
+          if (!this._validateOnChange(opt)) {
             _callCallback = false;
             this._updateState(opt, false, callback);
           }

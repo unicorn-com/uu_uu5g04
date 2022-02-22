@@ -16,9 +16,71 @@
 //@@viewOn:imports
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+import Css from "./internal/css.js";
 
 import "./link.less";
 //@@viewOff:imports
+
+function getFileName(contentDisposition) {
+  let regex = /filename[^;=\n]*=(?:(\\?['"])(.*?)\1|(?:[^\s]+'.*?')?([^;\n]*))/g;
+  let match;
+  let results = [];
+  while ((match = regex.exec(contentDisposition)) != null) {
+    results = results.concat(match.slice(1).filter((m) => m));
+  }
+
+  let last = results[results.length - 1];
+
+  return last ? decodeURIComponent(last) : null;
+}
+
+async function downloadFile(url, session, fileName, onDownloadStart, onDownloadEnd) {
+  let headers;
+  if (session && session.isAuthenticated() && UU5.Environment.isTrustedDomain(url)) {
+    headers = (await UU5.Common.Tools.getAuthenticatedHeaders(url, session)) || {};
+    for (var k in headers) if (headers[k] == null) delete headers[k];
+  }
+  onDownloadStart();
+  let response = await fetch(url, { headers });
+  let blob = await response.blob();
+  let contentDisposition;
+  try {
+    contentDisposition = response.headers.get("content-disposition");
+    // eslint-disable-next-line no-empty
+  } catch (e) {}
+  fileName = fileName || (contentDisposition && getFileName(contentDisposition)) || "blob";
+  let fileBlob = new Blob([blob], { type: "application/octet-stream" });
+  // save blob in IE and Edge - standard click on a link doesn't work in this browsers
+  if (typeof navigator.msSaveBlob === "function") {
+    navigator.msSaveBlob(fileBlob, fileName);
+    return;
+  }
+  let fileUrl = window.URL.createObjectURL(fileBlob);
+  // to set name for the file we need to create link element and set name into download attribute
+  let link = document.createElement("a");
+  link.href = fileUrl;
+  link.download = fileName;
+  link.style = "display: none;";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  onDownloadEnd();
+  setTimeout(() => {
+    window.URL.revokeObjectURL(fileUrl);
+  }, 60000);
+}
+
+let downloadAnimationKeyframes = Css.keyframes({
+  "0%": {
+    left: 0,
+  },
+  "50%": {
+    left: "66%",
+  },
+  "100%": {
+    left: 0,
+  },
+});
 
 export const Link = UU5.Common.VisualComponent.create({
   displayName: "Link", // for backward compatibility (test snapshots)
@@ -38,7 +100,31 @@ export const Link = UU5.Common.VisualComponent.create({
     tagName: ns.name("Link"),
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "inline"),
     classNames: {
-      main: ns.css("link"),
+      main: (props, state) => {
+        let className = [ns.css("link")];
+        if (state.downloadId) {
+          className.push(
+            Css.css({
+              position: "relative",
+              cursor: "default",
+              "&:hover": {
+                textDecoration: "none",
+              },
+              "&::before": {
+                content: '" "',
+                position: "absolute",
+                left: 0,
+                width: "50%",
+                height: "100%",
+                background:
+                  "linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 20%, rgba(255, 255, 255, 0.6) 80%, rgba(255, 255, 255, 0) 100%)",
+                animation: `${downloadAnimationKeyframes} 1.5s infinite`,
+              },
+            })
+          );
+        }
+        return className.join(" ");
+      },
     },
     defaults: {
       content: "noText",
@@ -82,6 +168,7 @@ export const Link = UU5.Common.VisualComponent.create({
   getInitialState() {
     return {
       authenticatedUrl: undefined,
+      downloadId: undefined,
     };
   },
   //@@viewOff:reactLifeCycle
@@ -128,7 +215,8 @@ export const Link = UU5.Common.VisualComponent.create({
       typeof this.props.onClick === "function" ||
       typeof this.props.onCtrlClick === "function" ||
       this._isFragmentLink() ||
-      this._isRoute()
+      this._isRoute() ||
+      (this.props.authenticate && this.props.download)
     );
   },
 
@@ -221,7 +309,9 @@ export const Link = UU5.Common.VisualComponent.create({
     let mainAttrs = this.getMainAttrs();
 
     if (!this.isDisabled()) {
-      mainAttrs.href = this._getHref();
+      if (!this.props.authenticate || !this.props.download) {
+        mainAttrs.href = this._getHref();
+      }
 
       if (this._shouldOnClick() || this._shouldOnWheelClick()) {
         mainAttrs.onClick = (e) => {
@@ -233,6 +323,16 @@ export const Link = UU5.Common.VisualComponent.create({
             } else if (e.button !== 1) {
               this._onClick(e);
             }
+          }
+
+          if (this.props.authenticate && this.props.download && !this.state.downloadId) {
+            downloadFile(
+              this.props.href,
+              UU5.Environment.getSession(),
+              typeof this.props.download === "string" ? this.props.download : undefined,
+              () => this.setState({ downloadId: UU5.Common.Tools.generateUUID() }),
+              () => this.setState({ downloadId: undefined })
+            );
           }
         };
 

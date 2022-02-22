@@ -51,7 +51,7 @@ export const TagSelect = Context.withContext(
       borderRadius: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.number]),
       bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
       elevation: UU5.PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5]),
-      placeholder: UU5.PropTypes.string,
+      placeholder: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.object]),
       required: UU5.PropTypes.bool,
       requiredMessage: UU5.PropTypes.any,
       popoverLocation: UU5.PropTypes.oneOf(["local", "portal"]),
@@ -115,6 +115,12 @@ export const TagSelect = Context.withContext(
       }
     },
 
+    componentDidUpdate(prevProps, prevState) {
+      if (prevState.language !== this.state.language) {
+        this._initAvailableTags(this.props);
+      }
+    },
+
     componentWillUnmount() {
       this._removeEvent();
     },
@@ -148,7 +154,7 @@ export const TagSelect = Context.withContext(
       let value = this.getValue();
       let result = true;
 
-      if (this.props.required && !this._hasValue(this.state.value)) {
+      if (this.props.required && !this._hasValidValue(this.state.value)) {
         this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessage"));
         result = false;
       } else if (feedback === "error" && !this.props.onValidate) {
@@ -231,7 +237,7 @@ export const TagSelect = Context.withContext(
       let result = true;
 
       if (this.props.required) {
-        if (!opt || !this._hasValue(opt.value)) {
+        if (!opt || !this._hasValidValue(opt.value)) {
           result = false;
           let value = opt && opt.value ? opt.value : [];
           this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessage"), value, setStateCallback);
@@ -339,6 +345,11 @@ export const TagSelect = Context.withContext(
       return !!(value && value.length);
     },
 
+    _hasValidValue(value) {
+      if (value && value.length) return value.some((v) => !!v);
+      else return false;
+    },
+
     _validate(opt, checkValue, setStateCallback) {
       let _callCallback = typeof setStateCallback === "function";
 
@@ -384,12 +395,13 @@ export const TagSelect = Context.withContext(
 
     _close(setStateCallback) {
       if (this._itemList) {
-        this._itemList.close(() =>
+        this._itemList.close(() => {
+          this._checkRequired({ value: this.state.value });
           this.setState(
             { open: false },
             typeof this.props.onClose === "function" ? () => this.props.onClose(setStateCallback) : setStateCallback
-          )
-        );
+          );
+        });
       } else if (typeof setStateCallback === "function") {
         setStateCallback();
       }
@@ -447,7 +459,7 @@ export const TagSelect = Context.withContext(
       let newData = { state: {}, availableTags: this._availableTags };
       let isValid = true;
       value = typeof value === "string" ? value.trim() : value;
-      if (!value) return null;
+      if (value == undefined) return null;
       // validate value towards ignored tags
       if (this.props.ignoreTags && this.props.ignoreTags.find((ignoreTag) => ignoreTag === value)) {
         this._hasTempFeedback = true;
@@ -514,7 +526,10 @@ export const TagSelect = Context.withContext(
 
         if (isValid) {
           if (typeof this.props.onChange === "function") {
-            this.props.onChange({ component: this, value: newData.state.value, _data: newData });
+            let onChangeFn = () => this.props.onChange({ component: this, value: newData.state.value, _data: newData });
+            // Set open state in case onChangeDefault is not called by a developer
+            if (typeof newData.state.open === "boolean") this.setState({ open: newData.state.open }, onChangeFn);
+            else onChangeFn();
             return;
           }
         }
@@ -536,29 +551,42 @@ export const TagSelect = Context.withContext(
         itemList = this._itemList;
         items = itemList && itemList.getRenderedChildren();
 
-        if (items && e.which === 13) {
-          // enter
-          if (this.state.open) {
-            e.preventDefault();
-          } else {
-            setTimeout(() => {
-              this._onMainInputFocus();
-            });
-          }
-        } else if (items && (e.which === 38 || e.which === 40)) {
-          // top / bottom
-          e.preventDefault();
-        } else if (this._hasFocus && e.which === 9) {
-          // tab
-          if (this.state.open) {
-            this._close(this._onTextInputBlur);
-          } else {
-            this._onTextInputBlur();
-          }
-        } else if (items && e.which === 27 && this.state.open) {
-          // esc
-          e.preventDefault();
-          this._close(this._focusInput);
+        switch (e.which) {
+          case 9: // tab
+            if (this._hasFocus) {
+              if (this.state.open) {
+                this._close(this._onTextInputBlur);
+              } else {
+                this._onTextInputBlur();
+              }
+            } else {
+              // Tabbing away
+              this._removeEvent();
+            }
+            break;
+          case 13: // enter
+            if (items) {
+              if (this.state.open) {
+                e.preventDefault();
+              } else {
+                setTimeout(() => {
+                  this._onMainInputFocus();
+                });
+              }
+            }
+            break;
+          case 27: // esc
+            if (items && this.state.open) {
+              e.preventDefault();
+              this._close(this._focusInput);
+            }
+            break;
+          case 38: // top
+          case 40: // bottom
+            if (items) {
+              e.preventDefault();
+            }
+            break;
         }
       });
 
@@ -568,6 +596,8 @@ export const TagSelect = Context.withContext(
             if (items) {
               if (this.state.open && items[current]) {
                 itemList.changeValue(items[current].props.value, e, this._onTextInputBlur);
+              } else {
+                this._onTextInputBlur();
               }
             }
             break;
@@ -719,7 +749,7 @@ export const TagSelect = Context.withContext(
 
         this._hasFocus = false;
         this._removeEvent();
-        this.setState((state) => (state.open ? { open: false, searchValue: "" } : undefined), callback);
+        this.setState((state) => (state.open ? { open: false, searchValue: "" } : { searchValue: "" }), callback);
       }
     },
 
@@ -767,7 +797,7 @@ export const TagSelect = Context.withContext(
                 iconOnClick={
                   this.isReadOnly() || this.isComputedDisabled() ? null : (_, e) => this._removeTagValue(e, value)
                 }
-                icon="mdi-close"
+                icon={!this.isComputedDisabled() && !this.isReadOnly() ? "mdi-close" : undefined}
                 className={this.getClassName("tag")}
                 tooltip={this._getTagTooltip(tag)}
               >
@@ -826,15 +856,27 @@ export const TagSelect = Context.withContext(
         foundAutocompleteItems = this._getMatchingTags(this.state.searchValue.trim(), foundAutocompleteItems);
       }
 
-      return foundAutocompleteItems.map((item, i) => (
-        <Option
-          className={this.getClassName("item")}
-          key={i}
-          value={item.value}
-          content={this._getTagContent(item)}
-          mainAttrs={{ id: this.getId() + "-item-" + i, tabIndex: 0 }}
-        />
-      ));
+      if (foundAutocompleteItems.length) {
+        return foundAutocompleteItems.map((item, i) => (
+          <Option
+            className={this.getClassName("item")}
+            key={i}
+            value={item.value}
+            content={this._getTagContent(item)}
+            mainAttrs={{ id: this.getId() + "-item-" + i, tabIndex: 0 }}
+          />
+        ));
+      } else if (!this.props.allowCustomTags) {
+        return [
+          <Option
+            className={this.getClassName("item") + " " + this.getClassName("noMatchItem")}
+            content={this.getLsiComponent("noItemsAvailable")}
+            value="noMatch"
+            key="no-match"
+            disabled
+          />,
+        ];
+      }
     },
 
     _getInputContent() {
@@ -875,7 +917,7 @@ export const TagSelect = Context.withContext(
       return (
         <div className={this.getClassName("inputValueWrapper")}>
           <div className={this.getClassName("inputValue")}>{value}</div>
-          {this._hasValue(this.state.value) && !this.isComputedDisabled() ? (
+          {this._hasValidValue(this.state.value) && !this.isComputedDisabled() && !this.isReadOnly() ? (
             <div className={this.getClassName("inputResetIconWrapper")}>
               <UU5.Bricks.Icon
                 icon="mdi-close"
@@ -898,7 +940,7 @@ export const TagSelect = Context.withContext(
       if (this.state.open) {
         let items = this._getItemListItems();
 
-        if (items.length) {
+        if (items?.length) {
           let className = this.getClassName("itemList");
           if (this.props.popoverLocation === "portal") {
             className += " " + this.getClassName("input", "UU5.Forms.InputMixin") + this.props.size;

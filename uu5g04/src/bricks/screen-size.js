@@ -174,7 +174,7 @@ export const ScreenSize = UU5.Common.VisualComponent.create({
   _renderEditationMode() {
     return (
       <UU5.Common.Suspense fallback={this.getEditingLoading()}>
-        <EditationComponent component={this} ref_={this._registerEditableComponent} />
+        <EditationComponent component={this} ref_={this._registerEditableComponent} editMode={this.props.editMode} />
       </UU5.Common.Suspense>
     );
   },
@@ -184,8 +184,8 @@ export const ScreenSize = UU5.Common.VisualComponent.create({
   render: function () {
     return this.getNestingLevel() ? (
       <>
-        {this.isInlineEdited() ? this._renderEditationMode() : null}
-        {this.isNotInlineEdited()  ? this._getChildren() : null}
+        {this.isInlineEdited() || this.props.editMode ? this._renderEditationMode() : null}
+        {this.isNotInlineEdited() && !this.props.editMode ? this._getChildren() : null}
       </>
     ) : null;
   },
