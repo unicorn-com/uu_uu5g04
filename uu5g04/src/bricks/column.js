@@ -65,7 +65,6 @@ export const Column = UU5.Common.VisualComponent.create({
       color: "#4A148C",
       highlightColor: "rgba(227,195,233,.45)",
       enablePlaceholder: true,
-      enableWrapper: false,
     },
   },
   //@@viewOff:statics

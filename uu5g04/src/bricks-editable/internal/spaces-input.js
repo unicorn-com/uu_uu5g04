@@ -100,6 +100,7 @@ const SpacesInput = createVisualComponent({
     valuePlaceholder: UU5.PropTypes.object,
     onChange: UU5.PropTypes.func,
     inheritValues: UU5.PropTypes.bool,
+    onChangeFeedback: UU5.PropTypes.func,
   },
   //@@viewOff:propTypes
 
@@ -113,11 +114,11 @@ const SpacesInput = createVisualComponent({
     hideHorizontalMargin: false,
     value: undefined,
     valuePlaceholder: undefined,
-    onChange: UU5.PropTypes.func,
+    onChange: undefined,
+    onChangeFeedback: undefined,
     inheritValues: true,
   },
   //@@viewOff:defaultProps
-  onChangeFeedbackDefault: () => {},
 
   render({
     hidePaddingHorizontal,
@@ -159,8 +160,12 @@ const SpacesInput = createVisualComponent({
           }
         }
       }
-      onChange({ value: screenSizes });
-      onChangeFeedback({ feedback: newFeedback });
+      if (typeof onChange === "function") {
+        onChange({ value: screenSizes });
+      }
+      if (typeof onChangeFeedback === "function") {
+        onChangeFeedback({ feedback: newFeedback });
+      }
     };
     let commonProps = {
       hidePaddingHorizontal,

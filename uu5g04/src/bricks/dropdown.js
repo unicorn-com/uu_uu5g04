@@ -85,6 +85,7 @@ export const Dropdown = UU5.Common.VisualComponent.create({
         box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.34);
         background-clip: padding-box;
       `,
+      displayBlock: () => Css.css`display: block;`,
     },
     defaults: {
       childTagName: DropdownItem.tagName,
@@ -433,6 +434,11 @@ export const Dropdown = UU5.Common.VisualComponent.create({
     } else {
       className += " " + this.getClassName().autoDropdown;
     }
+
+    if (this.props.buttonProps?.displayBlock) {
+      className += " " + this.getClassName("displayBlock");
+    }
+
     return className.substr(1);
   },
 

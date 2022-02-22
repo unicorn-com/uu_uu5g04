@@ -585,7 +585,7 @@ export const Time = UU5.Common.VisualComponent.create({
           hours = 12;
         }
       } else {
-        if (hours >= 24) {
+        if (!this._show24 && hours >= 24) {
           hours = hours % 24;
         }
       }

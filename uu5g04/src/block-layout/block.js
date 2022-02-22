@@ -20,6 +20,26 @@ import Row from "./row.js";
 import LsiButton from "./_lsi-button.js";
 //@@viewOff:imports
 
+function getItemContent(item, isActive) {
+  let content = isActive ? item.activeContent : item.content;
+  if (content) return typeof content === "string" ? content : <UU5.Bricks.Lsi lsi={content} />;
+  else return undefined;
+}
+
+function getItemIcon(item) {
+  return item.activeIcon || item.icon || undefined;
+}
+
+function getDropdownItemList(itemList) {
+  return itemList.map((item) => ({
+    label: getItemContent(item),
+    disabled: item.disabled,
+    onClick: item.onClick,
+    onCtrlClick: item.onCtrlClick,
+    onWheelClick: item.onWheelClick,
+  }));
+}
+
 export const Block = UU5.Common.VisualComponent.create({
   displayName: "Block", // for backward compatibility (test snapshots)
   //@@viewOn:mixins
@@ -51,6 +71,7 @@ export const Block = UU5.Common.VisualComponent.create({
       `,
       buttons: () => css`
         white-space: nowrap;
+        flex: none;
       `,
       button: () => css`
         margin-left: 8px;
@@ -64,9 +85,16 @@ export const Block = UU5.Common.VisualComponent.create({
 
   //@@viewOn:propTypes
   propTypes: {
+    // content x activeContent and icon x activeIcon props currently behave in a weird way.
+    // - if one of active, activeIcon or activeContent is defined, the item is automatically active
+    // - if item is active then either icon or activeIcon is used
+    // - if item is not active then neither icon or activeIcon is used
+    // - if item is not active then content is used and if item is active then activeContent is used (that makes sense)
     actions: UU5.PropTypes.arrayOf(
       UU5.PropTypes.shape({
-        onClick: UU5.PropTypes.func.isRequired,
+        onClick: UU5.PropTypes.func,
+        onCtrlClick: UU5.PropTypes.func,
+        onWheelClick: UU5.PropTypes.func,
         icon: UU5.PropTypes.string,
         content: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string]),
         active: UU5.PropTypes.bool,
@@ -76,6 +104,16 @@ export const Block = UU5.Common.VisualComponent.create({
         borderRadius: UU5.PropTypes.string,
         disabled: UU5.PropTypes.bool,
         colorSchema: UU5.PropTypes.string,
+        itemList: UU5.PropTypes.arrayOf(
+          UU5.PropTypes.shape({
+            content: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string]),
+            activeContent: UU5.PropTypes.oneOfType([UU5.PropTypes.object, UU5.PropTypes.string]),
+            disabled: UU5.PropTypes.bool,
+            onClick: UU5.PropTypes.func,
+            onCtrlClick: UU5.PropTypes.func,
+            onWheelClick: UU5.PropTypes.func,
+          })
+        ),
       })
     ),
     menuColorSchema: UU5.PropTypes.string,
@@ -106,46 +144,81 @@ export const Block = UU5.Common.VisualComponent.create({
 
   //@@viewOn:private
   _getButton(item, i) {
-    let content = [];
-
-    if (item.activeIcon || item.icon) {
-      content.push(<UU5.Bricks.Icon icon={item.activeIcon || item.icon} key="icon" />);
+    let icon = <UU5.Bricks.Icon icon={getItemIcon(item)} key="icon" />;
+    let content = null;
+    if (item.activeContent) {
+      content = getItemContent(item, true);
     }
 
-    if (item.activeContent) {
-      content.push(
-        typeof item.activeContent === "string" ? item.activeContent : <UU5.Bricks.Lsi lsi={item.activeContent} />
+    if (Array.isArray(item.itemList)) {
+      content = <span key="content">{content}</span>;
+      return (
+        <UU5.Bricks.Dropdown
+          key={i}
+          className={this.getClassName("button")}
+          bgStyle={item.bgStyle || "outline"}
+          borderRadius={item.borderRadius}
+          disabled={item.disabled}
+          tooltip={item.content}
+          label={[icon, content]}
+          colorSchema={item.colorSchema}
+          items={getDropdownItemList(item.itemList)}
+        />
+      );
+    } else {
+      return (
+        <LsiButton
+          key={i}
+          className={this.getClassName("button")}
+          onClick={item.onClick}
+          onCtrlClick={item.onCtrlClick}
+          onWheelClick={item.onWheelClick}
+          bgStyle={item.bgStyle || "outline"}
+          borderRadius={item.borderRadius}
+          disabled={item.disabled}
+          tooltip={item.content}
+          content={[icon, content]}
+          colorSchema={item.colorSchema}
+        />
       );
     }
-
-    return (
-      <LsiButton
-        key={i}
-        className={this.getClassName("button")}
-        onClick={item.onClick}
-        bgStyle={item.bgStyle || "outline"}
-        borderRadius={item.borderRadius}
-        disabled={item.disabled}
-        tooltip={item.content}
-        content={content}
-        colorSchema={item.colorSchema}
-      />
-    );
   },
 
   _getButtons(actions) {
     let buttons = [];
     let dropdownItems = [];
+    let addDivider = undefined;
 
     actions.forEach((item, i) => {
       if (item.active || item.activeContent || item.activeIcon) {
         buttons.push(this._getButton(item, i));
       } else {
-        dropdownItems.push({
-          label: typeof item.content === "string" ? item.content : <UU5.Bricks.Lsi lsi={item.content} />,
-          onClick: item.onClick,
-          disabled: item.disabled,
-        });
+        if (addDivider) {
+          dropdownItems.push({ divider: true });
+          addDivider = false;
+        } else {
+          addDivider = undefined;
+        }
+        if (Array.isArray(item.itemList)) {
+          if (addDivider !== false && dropdownItems.length) dropdownItems.push({ divider: true });
+          item.itemList.forEach((item) => {
+            dropdownItems.push({
+              label: getItemContent(item, false),
+              icon: item.icon,
+              onClick: item.onClick,
+              onCtrlClick: item.onCtrlClick,
+              onWheelClick: item.onWheelClick,
+              disabled: item.disabled,
+            });
+          });
+          addDivider = true;
+        } else {
+          dropdownItems.push({
+            label: getItemContent(item, false),
+            onClick: item.onClick,
+            disabled: item.disabled,
+          });
+        }
       }
     });
 

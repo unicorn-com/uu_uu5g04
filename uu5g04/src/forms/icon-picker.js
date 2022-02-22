@@ -27,9 +27,8 @@ import "./icon-picker.less";
 //@@viewOff:imports
 
 let _icons = {};
-const ICON_LIBRARIES = Object.keys(UU5.Environment.iconLibraries);
 
-const ALL_ICONS_ID = UU5.Common.Tools.generateUUID();
+const ALL_ICONS_NAME = "all";
 
 function isStandardObject(label) {
   return label && typeof label === "object" && !label.type;
@@ -54,7 +53,7 @@ function getIconLibrariesFromIconList(iconList) {
 }
 
 function getIconLibrariesFromCategory(category, availableCategories) {
-  if (category === ALL_ICONS_ID) {
+  if (category === ALL_ICONS_NAME) {
     let result = [];
 
     for (let i = 0; i < availableCategories.length; i++) {
@@ -91,7 +90,7 @@ function getIconsToRender(icons, category, availableCategories, hideEmptyIcon) {
         icon && typeof icon === "object" ? { ...icon, category: selectedCategoryDefinition.code } : icon
       ),
     ];
-  } else if (category === ALL_ICONS_ID) {
+  } else if (category === ALL_ICONS_NAME) {
     for (let availableCategory of availableCategories) {
       let categoryIcons =
         typeof availableCategory === "object" && availableCategory.iconList
@@ -232,9 +231,14 @@ export const IconPicker = Context.withContext(
 
     //@@viewOn:reactLifeCycle
     getInitialState() {
-      let selectedCategory = this.props.categories.find((item) => item === this.props.selectedCategory)
-        ? this.props.selectedCategory
-        : this.props.categories[0];
+      let selectedCategory = this.props.categories?.[0];
+      if (this.props.selectedCategory === ALL_ICONS_NAME) {
+        selectedCategory = ALL_ICONS_NAME;
+      } else if (this.props.selectedCategory) {
+        selectedCategory = this.props.categories.find((item) => item === this.props.selectedCategory)
+          ? this.props.selectedCategory
+          : this.props.categories[0];
+      }
       if (selectedCategory && typeof selectedCategory === "object") {
         selectedCategory = selectedCategory.code;
       }
@@ -852,7 +856,7 @@ export const IconPicker = Context.withContext(
         }
       });
       if (this.props.categories.length > 1) {
-        categories.unshift({ content: this.getLsiComponent("selectAll"), value: ALL_ICONS_ID });
+        categories.unshift({ content: this.getLsiComponent("selectAll"), value: ALL_ICONS_NAME });
       }
 
       return (

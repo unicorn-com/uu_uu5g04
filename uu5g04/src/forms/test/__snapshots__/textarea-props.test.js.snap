@@ -15,6 +15,7 @@ exports[`UU5.Forms.TextArea check default default props from Mixins UU5.Forms.In
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -45,6 +46,7 @@ exports[`UU5.Forms.TextArea check default default props from Mixins UU5.Forms.Te
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -75,6 +77,7 @@ exports[`UU5.Forms.TextArea check default default props from Mixins UU5.Forms.Te
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -105,6 +108,7 @@ exports[`UU5.Forms.TextArea default props UU5.Forms.TextArea check default props
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -135,6 +139,7 @@ exports[`UU5.Forms.TextArea props autoResize=false 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -166,6 +171,7 @@ exports[`UU5.Forms.TextArea props autoResize=true 1`] = `
       autoResize={true}
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -196,6 +202,7 @@ exports[`UU5.Forms.TextArea props autocompleteItems=undefined 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -226,6 +233,7 @@ exports[`UU5.Forms.TextArea props className="my-classname" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -257,6 +265,7 @@ exports[`UU5.Forms.TextArea props colorSchema="brown" 1`] = `
       colorSchema="brown"
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -288,6 +297,7 @@ exports[`UU5.Forms.TextArea props colorSchema="brown-rich" 1`] = `
       colorSchema="brown-rich"
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -319,6 +329,7 @@ exports[`UU5.Forms.TextArea props colorSchema="cyan" 1`] = `
       colorSchema="cyan"
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -350,6 +361,7 @@ exports[`UU5.Forms.TextArea props colorSchema="cyan-rich" 1`] = `
       colorSchema="cyan-rich"
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -381,6 +393,7 @@ exports[`UU5.Forms.TextArea props colorSchema="default" 1`] = `
       colorSchema="default"
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -412,6 +425,7 @@ exports[`UU5.Forms.TextArea props colorSchema="green" 1`] = `
       colorSchema="green"
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -443,6 +457,7 @@ exports[`UU5.Forms.TextArea props colorSchema="green-rich" 1`] = `
       colorSchema="green-rich"
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -474,6 +489,7 @@ exports[`UU5.Forms.TextArea props colorSchema="grey" 1`] = `
       colorSchema="grey"
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -505,6 +521,7 @@ exports[`UU5.Forms.TextArea props colorSchema="grey-rich" 1`] = `
       colorSchema="grey-rich"
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -536,6 +553,7 @@ exports[`UU5.Forms.TextArea props colorSchema="orange" 1`] = `
       colorSchema="orange"
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -567,6 +585,7 @@ exports[`UU5.Forms.TextArea props colorSchema="orange-rich" 1`] = `
       colorSchema="orange-rich"
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -598,6 +617,7 @@ exports[`UU5.Forms.TextArea props colorSchema="pink" 1`] = `
       colorSchema="pink"
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -629,6 +649,7 @@ exports[`UU5.Forms.TextArea props colorSchema="pink-rich" 1`] = `
       colorSchema="pink-rich"
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -660,6 +681,7 @@ exports[`UU5.Forms.TextArea props colorSchema="purple" 1`] = `
       colorSchema="purple"
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -691,6 +713,7 @@ exports[`UU5.Forms.TextArea props colorSchema="purple-rich" 1`] = `
       colorSchema="purple-rich"
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -722,6 +745,7 @@ exports[`UU5.Forms.TextArea props colorSchema="red" 1`] = `
       colorSchema="red"
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -753,6 +777,7 @@ exports[`UU5.Forms.TextArea props colorSchema="red-rich" 1`] = `
       colorSchema="red-rich"
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -784,6 +809,7 @@ exports[`UU5.Forms.TextArea props colorSchema="yellow" 1`] = `
       colorSchema="yellow"
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -815,6 +841,7 @@ exports[`UU5.Forms.TextArea props colorSchema="yellow-rich" 1`] = `
       colorSchema="yellow-rich"
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -845,6 +872,7 @@ exports[`UU5.Forms.TextArea props controlled=false 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -875,6 +903,7 @@ exports[`UU5.Forms.TextArea props controlled=true 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -905,6 +934,7 @@ exports[`UU5.Forms.TextArea props default props 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -935,6 +965,7 @@ exports[`UU5.Forms.TextArea props disabled=false 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -966,6 +997,7 @@ exports[`UU5.Forms.TextArea props disabled=true 1`] = `
       disabled={true}
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -997,6 +1029,7 @@ exports[`UU5.Forms.TextArea props feedback="error" 1`] = `
     <text-input
       feedback="error"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -1027,6 +1060,7 @@ exports[`UU5.Forms.TextArea props feedback="initial" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -1059,6 +1093,7 @@ exports[`UU5.Forms.TextArea props feedback="loading" 1`] = `
       disabled={true}
       feedback="loading"
       id="uuID-input"
+      key="input"
       loading={true}
       mainAttrs={Object {}}
       name="uuID-input"
@@ -1091,6 +1126,7 @@ exports[`UU5.Forms.TextArea props feedback="success" 1`] = `
     <text-input
       feedback="success"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -1122,6 +1158,7 @@ exports[`UU5.Forms.TextArea props feedback="warning" 1`] = `
     <text-input
       feedback="warning"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -1152,6 +1189,7 @@ exports[`UU5.Forms.TextArea props focusMessage="Bedlivě hlídám co píšete." 
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -1380,6 +1418,7 @@ exports[`UU5.Forms.TextArea props function -> Text.InputMixin validateOnChange()
     <text-input
       feedback="error"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -1416,6 +1455,7 @@ exports[`UU5.Forms.TextArea props function -> Text.InputMixin validateOnChange()
     <text-input
       feedback="success"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -1447,6 +1487,7 @@ exports[`UU5.Forms.TextArea props hidden=false 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -1477,6 +1518,7 @@ exports[`UU5.Forms.TextArea props hidden=true 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -1507,6 +1549,7 @@ exports[`UU5.Forms.TextArea props id="myId" 1`] = `
     <text-input
       feedback="initial"
       id="myId-input"
+      key="input"
       mainAttrs={Object {}}
       name="myId-input"
       onBlur={[Function]}
@@ -1537,6 +1580,7 @@ exports[`UU5.Forms.TextArea props inputAttrs={"type":"email","width":"150px"} 1`
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={
         Object {
           "type": "email",
@@ -1572,6 +1616,7 @@ exports[`UU5.Forms.TextArea props inputColWidth="xs12 s6 m8 l9" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -1602,6 +1647,7 @@ exports[`UU5.Forms.TextArea props inputColWidth="xs12 s9" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -1636,6 +1682,7 @@ exports[`UU5.Forms.TextArea props label="Your personal email" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -1666,6 +1713,7 @@ exports[`UU5.Forms.TextArea props labelAlignment="xs-left s-right" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -1696,6 +1744,7 @@ exports[`UU5.Forms.TextArea props labelAlignment="xs-right s-left" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -1726,6 +1775,7 @@ exports[`UU5.Forms.TextArea props labelColWidth="xs12 s3" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -1756,6 +1806,7 @@ exports[`UU5.Forms.TextArea props labelColWidth="xs12 s6 m4 l3" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -1786,6 +1837,7 @@ exports[`UU5.Forms.TextArea props mainAttrs=undefined 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -1816,6 +1868,7 @@ exports[`UU5.Forms.TextArea props maxRows=3 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       maxRows={3}
       name="uuID-input"
@@ -1848,6 +1901,7 @@ exports[`UU5.Forms.TextArea props message="Your password is too short!" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -1879,6 +1933,7 @@ exports[`UU5.Forms.TextArea props name="myName" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="myName"
       onBlur={[Function]}
@@ -1909,6 +1964,7 @@ exports[`UU5.Forms.TextArea props noIndex=false 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -1939,6 +1995,7 @@ exports[`UU5.Forms.TextArea props noIndex=true 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -1969,6 +2026,7 @@ exports[`UU5.Forms.TextArea props patternMessage="Hodnota inputu není validní.
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -1999,6 +2057,7 @@ exports[`UU5.Forms.TextArea props placeholder="Prosím vyplňte požadované pol
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -2030,6 +2089,7 @@ exports[`UU5.Forms.TextArea props placeholder="např.: +420 000 000 000" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -2061,6 +2121,7 @@ exports[`UU5.Forms.TextArea props pureRender=false 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -2091,6 +2152,7 @@ exports[`UU5.Forms.TextArea props pureRender=true 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -2121,6 +2183,7 @@ exports[`UU5.Forms.TextArea props readOnly=false 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -2151,6 +2214,7 @@ exports[`UU5.Forms.TextArea props readOnly=true 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -2181,6 +2245,7 @@ exports[`UU5.Forms.TextArea props required=false 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -2212,6 +2277,7 @@ exports[`UU5.Forms.TextArea props required=true 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -2242,6 +2308,7 @@ exports[`UU5.Forms.TextArea props requiredMessage="Bez tohoto pole se nehnete d�
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -2272,6 +2339,7 @@ exports[`UU5.Forms.TextArea props rows=10 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -2302,6 +2370,7 @@ exports[`UU5.Forms.TextArea props selected=false 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -2332,6 +2401,7 @@ exports[`UU5.Forms.TextArea props selected=true 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -2362,6 +2432,7 @@ exports[`UU5.Forms.TextArea props size="l" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -2393,6 +2464,7 @@ exports[`UU5.Forms.TextArea props size="m" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -2423,6 +2495,7 @@ exports[`UU5.Forms.TextArea props size="s" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -2459,6 +2532,7 @@ exports[`UU5.Forms.TextArea props style="padding:8px; borderRadius: 2px" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -2494,6 +2568,7 @@ exports[`UU5.Forms.TextArea props style={"backgroundColor":"red","color":"blue"}
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -2524,6 +2599,7 @@ exports[`UU5.Forms.TextArea props tooltip="My Tooltip" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}
@@ -2554,6 +2630,7 @@ exports[`UU5.Forms.TextArea props value="Hodnota" 1`] = `
     <text-input
       feedback="initial"
       id="uuID-input"
+      key="input"
       mainAttrs={Object {}}
       name="uuID-input"
       onBlur={[Function]}

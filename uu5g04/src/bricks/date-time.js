@@ -404,7 +404,7 @@ let DateTime = UU5.Common.VisualComponent.create({
 });
 
 DateTime = withUserPreferencesAndTimeZone(DateTime, {
-  _contextFormat: "mediumDateFormat",
+  _contextFormat: "shortDateFormat",
   _contextTimeZone: "timeZone",
 });
 

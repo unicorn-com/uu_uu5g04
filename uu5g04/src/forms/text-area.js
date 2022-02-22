@@ -19,11 +19,7 @@ import "uu5g04-bricks";
 import ns from "./forms-ns.js";
 
 import TextInput from "./internal/text-input.js";
-
 import TextInputMixin from "./mixins/text-input-mixin.js";
-
-import ItemList from "./internal/item-list.js";
-
 import Context from "./form-context.js";
 
 import "./text-area.less";
@@ -82,7 +78,11 @@ export const TextArea = Context.withContext(
 
     UNSAFE_componentWillReceiveProps(nextProps) {
       if (this.props.controlled) {
-        if (this.props.onValidate && typeof this.props.onValidate === "function") {
+        if (
+          this.props.onValidate &&
+          typeof this.props.onValidate === "function" &&
+          (!nextProps.onChange || (this._isFocused && nextProps.validateOnChange))
+        ) {
           this._validateOnChange({ value: nextProps.value, event: null, component: this }, true);
         } else {
           this.setFeedback(nextProps.feedback, nextProps.message, nextProps.value);
@@ -149,21 +149,27 @@ export const TextArea = Context.withContext(
       return this;
     },
 
-    /* _getFeedbackIcon(){
-      let icon = this.props.required ? this.props.successIcon : null;
-      switch (this.getFeedback()) {
-        case 'success':
-          icon = this.props.successIcon;
-          break;
-        case 'warning':
-          icon = this.props.warningIcon;
-          break;
-        case 'error':
-          icon = this.props.errorIcon;
-          break;
+    _onFocus(e) {
+      let opt = { value: e.target.value, event: e, component: this };
+      this._isFocused = true;
+
+      if (typeof this.props.onFocus === "function") {
+        this.props.onFocus(opt);
+      } else {
+        this.onFocusDefault(opt);
       }
-      return icon;
-    },*/
+    },
+
+    _onBlur(e) {
+      let opt = { value: e.target.value, event: e, component: this };
+      this._isFocused = false;
+
+      if (typeof this.props.onBlur === "function") {
+        this.props.onBlur(opt);
+      } else {
+        this.onBlurDefault(opt);
+      }
+    },
     //@@viewOff:private
 
     //@@viewOn:render
@@ -201,6 +207,7 @@ export const TextArea = Context.withContext(
               inputWidth={this._getInputWidth()}
               colorSchema={this.props.colorSchema}
               size={this.props.size}
+              key="input"
             />,
           ])}
         </div>

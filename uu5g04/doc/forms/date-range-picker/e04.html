@@ -77,7 +77,7 @@
                 <UU5.Forms.DateRangePicker
                   onChange={(opt) => opt.component.setValue(opt.value)}
                   label="Reservation"
-                  value={["1.1.2019", "15.2.2019"]}
+                  value={["2019-01-01", "2019-02-15"]}
                 />
                 {/*@@viewOff:0*/}
               </UU5.Bricks.Section>
@@ -86,9 +86,9 @@
                 {/*@@viewOn:0*/}
                 <UU5.Forms.DateRangePicker
                   label="Reservation"
-                  value={["5.1.2019", "5.2.2019"]}
-                  dateFrom="1.1.2019"
-                  dateTo="20.2.2019"
+                  value={["2019-01-05", "2019-02-05"]}
+                  dateFrom="2019-01-01"
+                  dateTo="2019-02-20"
                 />
                 {/*@@viewOff:0*/}
               </UU5.Bricks.Section>
@@ -157,9 +157,9 @@
                   label="Reservation"
                   beforeRangeMessage="Date is too small."
                   afterRangeMessage="Date is too big."
-                  value={["5.1.2019", "10.1.2019"]}
-                  dateFrom="1.1.2019"
-                  dateTo="15.1.2019"
+                  value={["2019-05-01", "2019-10-01"]}
+                  dateFrom="2019-01-01"
+                  dateTo="2019-01-15"
                 />
                 {/*@@viewOff:0*/}
               </UU5.Bricks.Section>

@@ -19,10 +19,9 @@ import * as UU5 from "uu5g04";
 import ns from "./bricks-editable-ns.js";
 import Footer from "../footer.js";
 import Header from "../header.js";
-import EditableLsi from "./bricks-editable-lsi.js";
 import Css from "./css.js";
-
 import ColorPicker from "./color-picker.js";
+import EditableLsi from "./bricks-editable-lsi.js";
 //@@viewOff:imports
 
 const DEFAULT_PROPS_MAP = {
@@ -34,6 +33,7 @@ const DEFAULT_PROPS_MAP = {
   colorSchema: "default",
   content: null,
   children: null,
+  pageBreakBefore: false,
 };
 
 const MAIN_CLASS_NAME = ns.css("section");
@@ -149,6 +149,15 @@ export const Section = UU5.Common.VisualComponent.create({
     );
   },
 
+  _togglePageBreakBefore(value, setStateCallback) {
+    this.setState(
+      (state) => ({
+        pageBreakBefore: !state.pageBreakBefore,
+      }),
+      setStateCallback
+    );
+  },
+
   _toggleUnderline() {
     this.setState((state) => ({ underline: !state.underline }));
   },
@@ -225,6 +234,11 @@ export const Section = UU5.Common.VisualComponent.create({
         value: this.state.showFooter,
         onClick: this._toggleFooter,
         label: this.getLsiComponent("showFooterCheckboxLabel"),
+      },
+      {
+        value: this.state.pageBreakBefore,
+        onClick: this._togglePageBreakBefore,
+        label: this.getLsiComponent("pageBreakBeforeCheckboxLabel"),
       },
     ];
   },

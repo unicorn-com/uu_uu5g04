@@ -37,7 +37,8 @@ export const Row = UU5.Common.VisualComponent.create({
     classNames: {
       main: () => css`
         margin: 4px 0;
-        width: 100%;
+        min-width: 0;
+        flex: 1;
         padding: 3px 0 4px;
       `,
       ellipsis: () => css`

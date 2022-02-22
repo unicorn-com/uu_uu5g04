@@ -21,7 +21,8 @@ if (typeof Uu5Loader !== "undefined" && Uu5Loader || typeof SystemJS !== "undefi
       if (myUri) {
         var minSuffix = myUri.match(/\.min\.js(\?|$)/) ? ".min" : "";
         if (!uu5g05Uri) {
-          var cdnBaseUri = (typeof UU5 !== "undefined" && (UU5.Environment || {}).cdnBaseUri || "https://cdn.plus4u.net").replace(/\/*$/, "");
+          var env = typeof uu5Environment !== "undefined" ? uu5Environment || {} : typeof UU5 !== "undefined" ? (UU5.Environment || {}) : {};
+          var cdnBaseUri = (env.cdnBaseUri || "https://cdn.plus4u.net").replace(/\/*$/, "");
           doConfig({
             "uu5g05": cdnBaseUri + "/uu-uu5g05/<%=UU5G05_CDN_VERSION%>/uu5g05" + minSuffix + ".js"
           });

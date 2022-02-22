@@ -77,15 +77,19 @@ const CONFIG = {
     "UU5.Common.BaseMixin",
     "UU5.Common.ElementaryMixin",
     "UU5.Common.PureRenderMixin",
+    "UU5.Common.ScreenSizeMixin",
     "UU5.Forms.InputMixin",
     "UU5.Common.ColorSchemaMixin",
   ],
   props: {
     categories: {
-      values: ["mdi", "fa", "glyphicon", "uu5", "plus4u", "plus4u5"],
+      values: [["mdi", "fa", "glyphicon", "uu5"], ["plus4u", "plus4u5"], undefined],
     },
     selectedCategory: {
-      values: ["mdi", "fa", "glyphicon", "uu5", "plus4u", "plus4u5"],
+      values: ["mdi", "fa", "glyphicon", "uu5", "plus4u", "plus4u5", "all"],
+      requiredProps: {
+        categories: ["mdi", "fa", "glyphicon", "uu5", "plus4u", "plus4u5"],
+      },
     },
     placeholder: {
       value: ["placeholder"],
@@ -100,6 +104,10 @@ const CONFIG = {
     },
   },
 };
+
+describe(`UU5.Forms.IconPicker props`, () => {
+  UU5.Test.Tools.testProperties(UU5.Forms.IconPicker, CONFIG);
+});
 
 describe(`UU5.Forms.IconPicker props function -> InputMixin`, () => {
   it("onChange()", () => {

@@ -67,7 +67,12 @@ export const AuthorizedEditable = UU5.Common.VisualComponent.create({
 
   //@@viewOn:reactLifeCycle
   getInitialState() {
-    return { ...this.props.component.getEditablePropsValues(Object.keys(DEFAULT_PROPS_MAP)) };
+    let propsState = this.props.component.getEditablePropsValues(Object.keys(DEFAULT_PROPS_MAP));
+    if (!authenticatedStates.some((authState) => propsState[authState])) {
+      // If none of the auth state props is true, set authenticated as true by default
+      propsState.authenticated = true;
+    }
+    return propsState;
   },
   //@@viewOff:reactLifeCycle
 
@@ -109,7 +114,9 @@ export const AuthorizedEditable = UU5.Common.VisualComponent.create({
     } else {
       newState[value] = true;
     }
-    this.setState(newState);
+    if (authenticatedStates.some((authState) => ({ ...this.state, ...newState }[authState]))) {
+      this.setState(newState);
+    }
   },
 
   _getToolbarItems() {

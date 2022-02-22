@@ -18,6 +18,7 @@ import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import { Div } from "./factory.js";
 import { InlineMode } from "./internal/inline-mode.js";
+import Css from "./internal/css.js";
 const EditableSection = UU5.Common.Component.lazy(async () => {
   await SystemJS.import("uu5g04-forms");
   await SystemJS.import("uu5g04-bricks-editable");
@@ -51,6 +52,7 @@ let Section = UU5.Common.VisualComponent.create({
     nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "box"),
     classNames: {
       main: ns.css("section"),
+      pageBreakBefore: () => Css.css`break-before: page;`,
     },
     opt: {
       nestingLevelWrapper: true,
@@ -66,9 +68,17 @@ let Section = UU5.Common.VisualComponent.create({
   //@@viewOff:statics
 
   //@@viewOn:propTypes
+  propTypes: {
+    pageBreakBefore: UU5.PropTypes.bool,
+  },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
+  getDefaultProps() {
+    return {
+      pageBreakBefore: false,
+    };
+  },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:reactLifeCycle
@@ -99,7 +109,9 @@ let Section = UU5.Common.VisualComponent.create({
 
   //@@viewOn:private
   _getPropsToPass() {
-    return UU5.Common.Tools.merge(this.getMainPropsToPass(), {
+    let propsToPass = this.getMainPropsToPass();
+    if (this.props.pageBreakBefore) propsToPass.className += " " + this.getClassName("pageBreakBefore");
+    return UU5.Common.Tools.merge(propsToPass, {
       content: null,
       header: null,
       footer: null,

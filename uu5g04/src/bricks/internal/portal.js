@@ -12,21 +12,20 @@ function getDefaultPortalElement(layer) {
     result = document.createElement("div");
     result.setAttribute("id", "uu5-common-portal-" + layer);
     if (layer === "alert-bus") result.style.cssText = "z-index: 1100; position: fixed; top: 0; left: 0; right: 0;";
-    document.body.appendChild(result);
+    // layers must be in the order modal -> alert-bus -> popover
+    let insertBeforeEl;
+    for (let followingLayer of [LAYER.POPOVER, LAYER.ALERT_BUS, LAYER.MODAL]) {
+      if (followingLayer === layer) break;
+      let el = document.getElementById("uu5-common-portal-" + layer);
+      if (el) insertBeforeEl = el;
+    }
+    document.body.insertBefore(result, insertBeforeEl);
   }
   return result;
 }
 
-const PortalElementContext = UU5.Common.Context.create({
-  getPortalElement: getDefaultPortalElement,
-});
-
 const RenderIntoPortal = function ({ layer = LAYER.MODAL, portalElement, children }) {
-  return (
-    <PortalElementContext.Consumer>
-      {({ getPortalElement }) => UU5.Common.Portal.create(children, portalElement || getPortalElement(layer))}
-    </PortalElementContext.Consumer>
-  );
+  return UU5.Common.Portal.create(children, portalElement || getDefaultPortalElement(layer));
 };
 
-export { LAYER, PortalElementContext, RenderIntoPortal };
+export { LAYER, RenderIntoPortal, getDefaultPortalElement };

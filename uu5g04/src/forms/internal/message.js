@@ -17,9 +17,13 @@
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "../forms-ns.js";
+import Css from "./css.js";
 
 import "./message.less";
 //@@viewOff:imports
+
+const finalStyle = `position: static; visibility: visible; bottom: auto;`;
+let animationKeyframes = Css.keyframes`100% {${finalStyle}}`;
 
 export default UU5.Common.VisualComponent.create({
   displayName: "message", // for backward compatibility (test snapshots)
@@ -31,7 +35,31 @@ export default UU5.Common.VisualComponent.create({
   statics: {
     tagName: ns.name("Message"),
     classNames: {
-      main: ns.css("message"),
+      main: () => {
+        let result = ns.css("message");
+        let animate = true;
+
+        if (navigator.userAgent.match("Safari") && !navigator.userAgent.match("Chrome/")) {
+          // Change of position by animation isnt supported in Safari <14
+          let version = parseFloat(navigator.userAgent.toLowerCase().split("version/")[1] || 14);
+          if (version < 14) animate = false;
+        }
+
+        if (animate) {
+          // postpone displaying for scenario: Modal with empty focused required Input, click on Cancel button,
+          // i.e. mousedown -> blur shows "required" message & Cancel button gets moved down -> mouseup is
+          // outside of Cancel -> nothing happens
+          result +=
+            " " +
+            Css.css`
+            animation: ${animationKeyframes} 200ms step-end both;
+          `;
+        } else {
+          result += " " + Css.css`${finalStyle}`;
+        }
+
+        return result;
+      },
     },
   },
   //@@viewOff:statics

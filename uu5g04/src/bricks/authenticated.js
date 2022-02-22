@@ -36,9 +36,9 @@ export const Authenticated = UU5.Common.VisualComponent.create({
   //@@viewOn:statics
   statics: {
     tagName: ns.name("Authenticated"),
-    warnings: {
+    errors: {
       noPropsGiven:
-        "The component will never show any content - you should always set at least one of the props 'pending', 'authenticated', 'notAuthenticated'.",
+        "The component will never show any content - you should always set at least one of the props 'pending', 'authenticated', 'notAuthenticated' to true.",
     },
     editMode: {
       name: Lsi.authenticated.name,
@@ -62,9 +62,9 @@ export const Authenticated = UU5.Common.VisualComponent.create({
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      authenticated: null, // using null-s to be able to show development warning if none of these 3 props was given
-      notAuthenticated: null,
-      pending: null,
+      authenticated: false,
+      notAuthenticated: false,
+      pending: false,
       contentEditable: true,
     };
   },
@@ -124,8 +124,8 @@ export const Authenticated = UU5.Common.VisualComponent.create({
   },
 
   _checkProps(props) {
-    if (props.pending == null && props.authenticated == null && props.notAuthenticated == null) {
-      this.showWarning("noPropsGiven");
+    if (!props.pending && !props.authenticated && !props.notAuthenticated) {
+      this.showError("noPropsGiven");
     }
   },
   //@@viewOff:private

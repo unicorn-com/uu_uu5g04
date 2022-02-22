@@ -125,7 +125,11 @@ export const Select = Context.withContext(
       let value = this._valuesToValuesArray(nextProps.value, this.buildChildren(nextProps));
       if (nextProps.controlled) {
         if (nextProps.required && this.state.value.length > 0 && (value.length < 1 || value === null)) {
-          this.setError(nextProps.requiredMessage || this.getLsiComponent("requiredMessageChoice"));
+          this._updateFeedback(
+            "error",
+            nextProps.requiredMessage || this.getLsiComponent("requiredMessageChoice"),
+            this.state.value
+          );
         } else if (this.props.onValidate && typeof this.props.onValidate === "function") {
           this._validateOnChange({ value, event: null, component: this }, true);
         } else {
@@ -241,7 +245,11 @@ export const Select = Context.withContext(
 
     removeValue(opt, setStateCallback) {
       if (this.props.required && this.state.value.length === 1) {
-        this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessageChoice"), null);
+        this._updateFeedback(
+          "error",
+          this.props.requiredMessage || this.getLsiComponent("requiredMessageChoice"),
+          null
+        );
       }
       opt.component = this;
       opt._data = { type: "remove", callback: setStateCallback, value: opt.value };
@@ -298,7 +306,7 @@ export const Select = Context.withContext(
         if (typeof this.props.onValidate === "function") {
           this._validateOnChange({ value, event: null, component: this });
         } else {
-          this._setCustomFeedback("initial", null, value, setStateCallback);
+          this._updateFeedback("initial", null, value, setStateCallback);
         }
       }
     },
@@ -542,13 +550,23 @@ export const Select = Context.withContext(
         let opt = {
           feedback,
           message,
-          value: value[0] || null,
+          value: value?.[0] || null,
           callback: setStateCallback,
           component: this,
         };
         this.props.onChangeFeedback(opt);
       } else {
         this.setState({ feedback, message, value: value || [] }, setStateCallback);
+      }
+    },
+
+    _updateFeedback(feedback, message, value, setStateCallback) {
+      if (this.getFeedback() === feedback) {
+        // update feedback/value but doesn't call props.onChangeFeedback
+        this._onChangeFeedback(feedback, message, value, setStateCallback);
+      } else {
+        // update feedback/value and call props.onChangeFeedback
+        this._setCustomFeedback(feedback, message, value, setStateCallback);
       }
     },
 
@@ -561,7 +579,7 @@ export const Select = Context.withContext(
           if (typeof result === "object") {
             if (result.feedback) {
               _callCallback = false;
-              this._onChangeFeedback(result.feedback, result.message, result.value, setStateCallback);
+              this._updateFeedback(result.feedback, result.message, result.value, setStateCallback);
             } else {
               let value = opt.value.slice();
               _callCallback = false;
@@ -569,12 +587,12 @@ export const Select = Context.withContext(
             }
           } else {
             this.showError("validateError", null, {
-              context: { event: e, func: this.props.onValidate, result: result },
+              context: { event: opt.event, func: this.props.onValidate, result: result },
             });
           }
         } else {
           _callCallback = false;
-          this._setCustomFeedback("initial", null, opt.value, setStateCallback);
+          this._updateFeedback("initial", null, opt.value, setStateCallback);
         }
       }
 
@@ -636,17 +654,21 @@ export const Select = Context.withContext(
             : null
         );
       } else {
-        this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessageChoice"), null, () =>
-          this.toggle(() =>
-            this.isOpen() && this._shouldOpenToContent()
-              ? UU5.Common.Tools.scrollToTarget(
-                  this.getId() + "-input",
-                  false,
-                  UU5.Environment._fixedOffset + 20,
-                  scrollElement
-                )
-              : null
-          )
+        this._updateFeedback(
+          "error",
+          this.props.requiredMessage || this.getLsiComponent("requiredMessageChoice"),
+          null,
+          () =>
+            this.toggle(() =>
+              this.isOpen() && this._shouldOpenToContent()
+                ? UU5.Common.Tools.scrollToTarget(
+                    this.getId() + "-input",
+                    false,
+                    UU5.Environment._fixedOffset + 20,
+                    scrollElement
+                  )
+                : null
+            )
         );
       }
     },
@@ -700,7 +722,11 @@ export const Select = Context.withContext(
           }
           multiple ? this.props.onChange(opt) : this.close(() => this.props.onChange(opt));
         } else if (!requiredResult) {
-          this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessageChoice"), null);
+          this._updateFeedback(
+            "error",
+            this.props.requiredMessage || this.getLsiComponent("requiredMessageChoice"),
+            null
+          );
         } else {
           this.onChangeDefault(opt);
         }
@@ -717,7 +743,11 @@ export const Select = Context.withContext(
 
       if (!requiredResult) {
         _callCallback = false;
-        this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessageChoice"), null);
+        this._updateFeedback(
+          "error",
+          this.props.requiredMessage || this.getLsiComponent("requiredMessageChoice"),
+          null
+        );
         this.close(setStateCallback);
       } else if (typeof this.props.onValidate === "function") {
         opt.component = this;
@@ -727,32 +757,15 @@ export const Select = Context.withContext(
           opt.value = result[0];
         }
 
-        result = this.props.onValidate(opt);
-        if (result && typeof result === "object") {
-          let callback = () => {
-            if (typeof result.setStateCallback === "function") {
-              result.setStateCallback();
-            }
-
-            if (typeof setStateCallback === "function") {
-              setStateCallback();
-            }
-          };
-          let onChangeFeedbackOpt = {
-            feedback: result.feedback,
-            message: result.message,
-            value: result.value,
-            callback,
+        this._validateOnChange(
+          {
+            event: opt.event,
+            value: this._valuesToValuesArray(opt.value),
             component: this,
-          };
-          if (typeof this.props.onChangeFeedback === "function") {
-            _callCallback = false;
-            this.props.onChangeFeedback(onChangeFeedbackOpt);
-          } else {
-            _callCallback = false;
-            this.onChangeFeedbackDefault(onChangeFeedbackOpt);
-          }
-        }
+          },
+          false
+        );
+        this.close(setStateCallback);
       } else {
         _callCallback = false;
 
@@ -763,9 +776,9 @@ export const Select = Context.withContext(
         result = this._valuesToValuesArray(result);
 
         if (multiple) {
-          this._setCustomFeedback("initial", null, result, setStateCallback);
+          this._updateFeedback("initial", null, result, setStateCallback);
         } else {
-          this._setCustomFeedback("initial", null, result);
+          this._updateFeedback("initial", null, result);
           this.close(setStateCallback);
         }
       }
@@ -813,10 +826,14 @@ export const Select = Context.withContext(
           }
         } else {
           _callCallback = false;
-          this._setCustomFeedback("initial", null, value, setStateCallback);
+          this._updateFeedback("initial", null, value, setStateCallback);
         }
       } else {
-        this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessageChoice"), null);
+        this._updateFeedback(
+          "error",
+          this.props.requiredMessage || this.getLsiComponent("requiredMessageChoice"),
+          null
+        );
       }
 
       if (_callCallback) {
@@ -872,7 +889,11 @@ export const Select = Context.withContext(
 
     _validateRequired() {
       if (!this._checkRequired(this.state.value)) {
-        this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessageChoice"));
+        this._updateFeedback(
+          "error",
+          this.props.requiredMessage || this.getLsiComponent("requiredMessageChoice"),
+          this.state.value
+        );
       }
     },
 
@@ -1035,6 +1056,9 @@ export const Select = Context.withContext(
       let opt = { value: value, component: this, _data: { type: "selectAll", value: result } };
 
       if (typeof this.props.onChange === "function") {
+        if (this.state.feedback) {
+          this._updateFeedback(undefined, undefined, result);
+        }
         this.props.onChange(opt);
       } else {
         this.onChangeDefault(opt);

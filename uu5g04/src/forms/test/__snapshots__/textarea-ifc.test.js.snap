@@ -21,6 +21,7 @@ exports[`UU5.Forms.InputMixin interface editable(setStatecallback) 1`] = `
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -60,6 +61,7 @@ exports[`UU5.Forms.InputMixin interface editable(setStatecallback) 2`] = `
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -99,6 +101,7 @@ exports[`UU5.Forms.InputMixin interface getChangeFeedback() 1`] = `
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -136,6 +139,7 @@ exports[`UU5.Forms.InputMixin interface getFeedBack() 1`] = `
       autoResize={true}
       feedback="initial"
       id="idTextArea-input"
+      key="input"
       mainAttrs={Object {}}
       maxRows={10}
       name="idTextArea-input"
@@ -173,6 +177,7 @@ exports[`UU5.Forms.InputMixin interface getFeedBack() 2`] = `
       autoResize={true}
       feedback="success"
       id="idTextArea-input"
+      key="input"
       mainAttrs={Object {}}
       maxRows={10}
       name="idTextArea-input"
@@ -210,6 +215,7 @@ exports[`UU5.Forms.InputMixin interface getInputWrapper(inpuid) 1`] = `
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -249,6 +255,7 @@ exports[`UU5.Forms.InputMixin interface getLabel(idinput) 1`] = `
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -287,6 +294,7 @@ exports[`UU5.Forms.InputMixin interface getMessage() should return null, second:
       autoResize={true}
       feedback="initial"
       id="idTextArea-input"
+      key="input"
       mainAttrs={Object {}}
       maxRows={10}
       name="idTextArea-input"
@@ -323,6 +331,7 @@ exports[`UU5.Forms.InputMixin interface getValue() should return value 1`] = `
       autoResize={true}
       feedback="initial"
       id="idTextArea-input"
+      key="input"
       mainAttrs={Object {}}
       maxRows={10}
       name="idTextArea-input"
@@ -360,6 +369,7 @@ exports[`UU5.Forms.InputMixin interface getValue() value is empty. Should return
       autoResize={true}
       feedback="initial"
       id="idTextArea-input"
+      key="input"
       mainAttrs={Object {}}
       maxRows={10}
       name="idTextArea-input"
@@ -399,6 +409,7 @@ exports[`UU5.Forms.InputMixin interface isError() 1`] = `
     <text-input
       feedback="error"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -439,6 +450,7 @@ exports[`UU5.Forms.InputMixin interface isError() 2`] = `
     <text-input
       feedback="success"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -476,6 +488,7 @@ exports[`UU5.Forms.InputMixin interface isInitial() 1`] = `
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -514,6 +527,7 @@ exports[`UU5.Forms.InputMixin interface isInitial() 2`] = `
     <text-input
       feedback="error"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -551,6 +565,7 @@ exports[`UU5.Forms.InputMixin interface isInput() 1`] = `
       autoResize={true}
       feedback="initial"
       id="idTextArea-input"
+      key="input"
       mainAttrs={Object {}}
       maxRows={10}
       name="idTextArea-input"
@@ -586,6 +601,7 @@ exports[`UU5.Forms.InputMixin interface isLoading() 1`] = `
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -624,6 +640,7 @@ exports[`UU5.Forms.InputMixin interface isReadOnly() 1`] = `
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -662,6 +679,7 @@ exports[`UU5.Forms.InputMixin interface isReadOnly() 2`] = `
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -702,6 +720,7 @@ exports[`UU5.Forms.InputMixin interface isSuccess() fisr return false, second re
     <text-input
       feedback="success"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -743,6 +762,7 @@ exports[`UU5.Forms.InputMixin interface isWarning() 1`] = `
     <text-input
       feedback="warning"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -783,6 +803,7 @@ exports[`UU5.Forms.InputMixin interface isWarning() 2`] = `
     <text-input
       feedback="success"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -822,6 +843,7 @@ exports[`UU5.Forms.InputMixin interface readOnly(setStatecallback) 1`] = `
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -861,6 +883,7 @@ exports[`UU5.Forms.InputMixin interface readOnly(setStatecallback) 2`] = `
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -902,6 +925,7 @@ exports[`UU5.Forms.InputMixin interface reset(setStateCallBack) 1`] = `
     <text-input
       feedback="success"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -941,6 +965,7 @@ exports[`UU5.Forms.InputMixin interface reset(setStateCallBack) 2`] = `
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -981,6 +1006,7 @@ exports[`UU5.Forms.InputMixin interface setChangeFeedback() 1`] = `
     <text-input
       feedback="error"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -1020,6 +1046,7 @@ exports[`UU5.Forms.InputMixin interface setEditableValue(false, setStateCallback
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -1059,6 +1086,7 @@ exports[`UU5.Forms.InputMixin interface setEditableValue(false, setStateCallback
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -1098,6 +1126,7 @@ exports[`UU5.Forms.InputMixin interface setEditableValue(true, setStateCallback)
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -1137,6 +1166,7 @@ exports[`UU5.Forms.InputMixin interface setEditableValue(true, setStateCallback)
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -1174,6 +1204,7 @@ exports[`UU5.Forms.InputMixin interface setError(message, value, setStateCallBac
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -1212,6 +1243,7 @@ exports[`UU5.Forms.InputMixin interface setError(message, value, setStateCallBac
     <text-input
       feedback="error"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -1250,6 +1282,7 @@ exports[`UU5.Forms.InputMixin interface setFeedBack(feedback, message, value, se
       autoResize={true}
       feedback="initial"
       id="idTextArea-input"
+      key="input"
       mainAttrs={Object {}}
       maxRows={10}
       name="idTextArea-input"
@@ -1288,6 +1321,7 @@ exports[`UU5.Forms.InputMixin interface setFeedBack(feedback, message, value, se
       autoResize={true}
       feedback="success"
       id="idTextArea-input"
+      key="input"
       mainAttrs={Object {}}
       maxRows={10}
       name="idTextArea-input"
@@ -1328,6 +1362,7 @@ exports[`UU5.Forms.InputMixin interface setInitial(msg, value, setStateCallBack)
     <text-input
       feedback="error"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -1367,6 +1402,7 @@ exports[`UU5.Forms.InputMixin interface setInitial(msg, value, setStateCallBack)
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -1403,6 +1439,7 @@ exports[`UU5.Forms.InputMixin interface setLoading(message, value, setStateCallB
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -1442,6 +1479,7 @@ exports[`UU5.Forms.InputMixin interface setLoading(message, value, setStateCallB
       disabled={true}
       feedback="loading"
       id="idText-input"
+      key="input"
       loading={true}
       mainAttrs={Object {}}
       name="idText-input"
@@ -1481,6 +1519,7 @@ exports[`UU5.Forms.InputMixin interface setMessage(msg, setStateCallBack) 1`] = 
       autoResize={true}
       feedback="initial"
       id="idTextArea-input"
+      key="input"
       mainAttrs={Object {}}
       maxRows={10}
       name="idTextArea-input"
@@ -1518,6 +1557,7 @@ exports[`UU5.Forms.InputMixin interface setMessage(msg, setStateCallBack) 2`] = 
       autoResize={true}
       feedback="initial"
       id="idTextArea-input"
+      key="input"
       mainAttrs={Object {}}
       maxRows={10}
       name="idTextArea-input"
@@ -1553,6 +1593,7 @@ exports[`UU5.Forms.InputMixin interface setSuccess(message, value, setStateCallB
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -1591,6 +1632,7 @@ exports[`UU5.Forms.InputMixin interface setSuccess(message, value, setStateCallB
     <text-input
       feedback="success"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -1629,6 +1671,7 @@ exports[`UU5.Forms.InputMixin interface setValue(value,setStateCallBack) 1`] = `
       autoResize={true}
       feedback="initial"
       id="idTextArea-input"
+      key="input"
       mainAttrs={Object {}}
       maxRows={10}
       name="idTextArea-input"
@@ -1665,6 +1708,7 @@ exports[`UU5.Forms.InputMixin interface setValue(value,setStateCallBack) 2`] = `
       autoResize={true}
       feedback="initial"
       id="idTextArea-input"
+      key="input"
       mainAttrs={Object {}}
       maxRows={10}
       name="idTextArea-input"
@@ -1701,6 +1745,7 @@ exports[`UU5.Forms.InputMixin interface setWarning(message, value, setStateCallB
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -1739,6 +1784,7 @@ exports[`UU5.Forms.InputMixin interface setWarning(message, value, setStateCallB
     <text-input
       feedback="warning"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -1776,6 +1822,7 @@ exports[`UU5.Forms.TextInputMixin interface focus() 1`] = `
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -1813,6 +1860,7 @@ exports[`UU5.Forms.TextInputMixin interface focus() 2`] = `
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -1852,6 +1900,7 @@ exports[`UU5.Forms.TextInputMixin interface getBlurFeedback() 1`] = `
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -1890,6 +1939,7 @@ exports[`UU5.Forms.TextInputMixin interface isOpen() should return false 1`] = `
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -1926,6 +1976,7 @@ exports[`UU5.Forms.TextInputMixin interface isTextInput() should return true 1`]
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -1965,6 +2016,7 @@ exports[`UU5.Forms.TextInputMixin interface isValid() 1`] = `
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -2038,6 +2090,7 @@ exports[`UU5.Forms.TextInputMixin interface isValid() should return false 1`] = 
     <text-input
       feedback="error"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -2074,6 +2127,7 @@ exports[`UU5.Forms.TextInputMixin interface setAutocompleteItems(items,opt,setSt
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}
@@ -2110,6 +2164,7 @@ exports[`UU5.Forms.TextInputMixin interface setAutocompleteItems(items,opt,setSt
     <text-input
       feedback="initial"
       id="idText-input"
+      key="input"
       mainAttrs={Object {}}
       name="idText-input"
       onBlur={[Function]}

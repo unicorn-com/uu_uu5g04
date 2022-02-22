@@ -308,6 +308,12 @@ export const FormsLsi = {
         "Values are inherited from parent by default, if you specify values for smaller resolutions, they are used automaticaly for unspecified bigger ones.",
     },
   },
+  marginInput: {
+    header: {
+      cs: "Margin",
+      en: "Margin",
+    },
+  },
 };
 
 export default FormsLsi;

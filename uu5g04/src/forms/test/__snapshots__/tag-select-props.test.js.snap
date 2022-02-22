@@ -1,0 +1,5397 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Forms.TagSelect props testing bgStyle="filled" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      bgStyle="filled"
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing bgStyle="outline" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      bgStyle="outline"
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing bgStyle="transparent" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      bgStyle="transparent"
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing bgStyle="underline" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      bgStyle="underline"
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing bgStyle=undefined 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing borderRadius="50%" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      borderRadius="50%"
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing borderRadius=8 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      borderRadius="8px"
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing borderRadius=undefined 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing className="my-classname" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj my-classname uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing controlled=false 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing controlled=true 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing default props 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing disabled=false 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing disabled=true 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={true}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-1h675ly"
+      disabled={true}
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-1ih24j3"
+              colorSchema={null}
+              controlled={true}
+              disabled={true}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={null}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": undefined,
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing elevation=-1 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      elevation={-1}
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing elevation=1 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      elevation={1}
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing elevation=5 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      elevation={5}
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing elevation=undefined 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing feedback="error" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    feedback="error"
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="error"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing feedback="initial" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing feedback="loading" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    feedback="loading"
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      disabled={true}
+      feedback="loading"
+      id="uuID-input"
+      inputWidth={null}
+      loading={true}
+      mainAttrs={
+        Object {
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-1ih24j3"
+              colorSchema={null}
+              controlled={true}
+              disabled={true}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={null}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": undefined,
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing feedback="success" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    feedback="success"
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="success"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing feedback="warning" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    feedback="warning"
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="warning"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing hidden=false 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing hidden=true 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing id="myId" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="myId"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="myId-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="myId-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing inputAttrs={"type":"email","width":"150px"} 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+          "type": "email",
+          "width": "150px",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing inputColWidth="xs12 s6 m8 l9" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing inputColWidth="xs12 s9" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing label="Your personal email" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+>
+  <label
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    content="Your personal email"
+    for="uuID-input"
+  />
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing labelAlignment="xs-left s-right" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing labelAlignment="xs-right s-left" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing labelColWidth="xs12 s3" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing labelColWidth="xs12 s6 m4 l3" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing language="cs" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Název tagu"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing language="de" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing language="en" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing language="en-gb" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing language="en-us" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing language="es" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing language="fr" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing language="ru" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing language="sk" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Názov tagu"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing language="uk" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Назва тегу"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing mainAttrs=undefined 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing message="Your password is too short!" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    message="Your password is too short!"
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing name="myName" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  name="myName"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="myName"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing noIndex=false 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing noIndex=true 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing readOnly=false 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing readOnly=true 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={true}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={true}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-1ih24j3"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={null}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={true}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": undefined,
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing selected=false 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing selected=true 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing size="l" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-l uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-139k25g"
+        >
+          <div
+            className="uu-forms-65hiwb"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-17mv3gi"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing size="m" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing size="s" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-tuqwpx"
+        >
+          <div
+            className="uu-forms-zwaq1b"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-10vb2x4"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing size="xl" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-xl uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-1079pzc"
+        >
+          <div
+            className="uu-forms-1711d8i"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-mtsxns"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing style="padding:8px; borderRadius: 2px" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": "2px",
+      "padding": "8px",
+    }
+  }
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing style={"backgroundColor":"red","color":"blue"} 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={
+    Object {
+      "backgroundColor": "red",
+      "color": "blue",
+    }
+  }
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing tooltip="My Tooltip" 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title="My Tooltip"
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing value=["Brno","Ostrava","Liberec"] 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+            <div
+              className="uu-forms-15wl1fb"
+              title="Brno"
+            >
+              <div>
+                Brno
+              </div>
+            </div>
+          </div>
+          <div
+            className="uu-forms-116wd1u"
+          >
+            <Icon
+              authenticate={false}
+              className="uu-forms-1y7lsa4"
+              clickable={true}
+              controlled={true}
+              disabled={false}
+              hidden={false}
+              icon="mdi-close"
+              id={null}
+              mainAttrs={
+                Object {
+                  "onClick": [Function],
+                  "onKeyPress": [Function],
+                  "tabIndex": "0",
+                }
+              }
+              name={null}
+              nestingLevel={null}
+              noIndex={false}
+              parent={null}
+              pureRender={false}
+              ref_={null}
+              selected={false}
+              src=""
+              style={null}
+              tooltip={null}
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing value=["Prg"] 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+            <div
+              className="uu-forms-15wl1fb"
+              title="Prague"
+            >
+              Prague
+            </div>
+          </div>
+          <div
+            className="uu-forms-116wd1u"
+          >
+            <Icon
+              authenticate={false}
+              className="uu-forms-1y7lsa4"
+              clickable={true}
+              controlled={true}
+              disabled={false}
+              hidden={false}
+              icon="mdi-close"
+              id={null}
+              mainAttrs={
+                Object {
+                  "onClick": [Function],
+                  "onKeyPress": [Function],
+                  "tabIndex": "0",
+                }
+              }
+              name={null}
+              nestingLevel={null}
+              noIndex={false}
+              parent={null}
+              pureRender={false}
+              ref_={null}
+              selected={false}
+              src=""
+              style={null}
+              tooltip={null}
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;
+
+exports[`UU5.Forms.TagSelect props testing value=undefined 1`] = `
+<Div
+  className="uu5-forms-tag-select uu-forms-1nfgwdj uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  >
+    <items-input
+      className="uu-forms-zxr5gw"
+      feedback="initial"
+      id="uuID-input"
+      inputWidth={null}
+      mainAttrs={
+        Object {
+          "onClick": [Function],
+          "onFocus": [Function],
+          "tabIndex": "-1",
+        }
+      }
+      name="uuID-input"
+      readonly={false}
+      ref_={[Function]}
+      value={
+        <div
+          className="uu-forms-143pzz5"
+        >
+          <div
+            className="uu-forms-1liv0v9"
+          >
+            <text-input
+              autoResize={false}
+              bgStyle="transparent"
+              borderRadius={null}
+              className="uu-forms-ascuk0"
+              colorSchema={null}
+              controlled={true}
+              disabled={false}
+              elevation={null}
+              feedback={null}
+              hidden={false}
+              icon={null}
+              iconOnClick={null}
+              id={null}
+              inputWidth={null}
+              language={null}
+              loading={false}
+              mainAttrs={null}
+              maxRows={null}
+              name={null}
+              noIndex={false}
+              onBlur={null}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              parent={null}
+              placeholder="Tag Name"
+              readonly={false}
+              ref_={[Function]}
+              rows={null}
+              selected={false}
+              size="m"
+              style={null}
+              tooltip={null}
+              type="text"
+              value=""
+              wrapperAttrs={
+                Object {
+                  "onClick": [Function],
+                }
+              }
+            />
+          </div>
+        </div>
+      }
+    />
+  </InputWrapper>
+</Div>
+`;

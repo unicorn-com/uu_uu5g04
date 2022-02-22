@@ -183,8 +183,14 @@ let DateRangePicker = Context.withContext(
         dateTo: null,
         format: null,
         country: null,
-        beforeRangeMessage: "Date is out of range.",
-        afterRangeMessage: "Date is out of range.",
+        beforeRangeMessage: {
+          cs: "Datum je mimo rozsah.",
+          en: "Date is out of range.",
+        },
+        afterRangeMessage: {
+          cs: "Datum je mimo rozsah.",
+          en: "Date is out of range.",
+        },
         parseDate: null,
         icon: "mdi-calendar",
         iconOpen: "mdi-menu-down",
@@ -748,10 +754,10 @@ let DateRangePicker = Context.withContext(
         if (!opt.value || date) {
           if (this._compareDates(date, props.dateFrom, "lesser")) {
             result.feedback = "error";
-            result.message = props.beforeRangeMessage;
+            result.message = this.getLsiItem(props.beforeRangeMessage);
           } else if (this._compareDates(date, props.dateTo, "greater")) {
             result.feedback = "error";
-            result.message = props.afterRangeMessage;
+            result.message = this.getLsiItem(props.afterRangeMessage);
           } else {
             result.feedback = opt ? opt.feedback || "initial" : "initial";
             result.message = opt ? opt.message || null : null;
@@ -780,10 +786,10 @@ let DateRangePicker = Context.withContext(
             result = false;
           } else if (dateFrom && valueFrom < dateFrom) {
             result.feedback = "error";
-            result.message = this.props.beforeRangeMessage;
+            result.message = this.getLsiItem(this.props.beforeRangeMessage);
           } else if (dateTo && valueTo > dateTo) {
             result.feedback = "error";
-            result.message = this.props.afterRangeMessage;
+            result.message = this.getLsiItem(this.props.afterRangeMessage);
           }
         }
       }
@@ -1009,10 +1015,9 @@ let DateRangePicker = Context.withContext(
 
     _onClickReset(e) {
       let opt = { event: e, component: this, _data: { type: "calendar" } };
-      let value = undefined;
-      let executeOnChange = false;
-
-      opt.value = this._getOutcomingValue(value);
+      let value = this._getOutcomingValue(value) || null;
+      let executeOnChange = value !== this.state.value;
+      opt.value = value;
       opt._data.value = value;
       opt._data.executeOnChange = executeOnChange;
       if (executeOnChange && typeof this.props.onChange === "function") {
@@ -1567,7 +1572,7 @@ let DateRangePicker = Context.withContext(
           let toValue = this.state.tempValue;
           if (fromValue.getTime() === UNSPECIFIED_FROM.getTime()) toValue = new Date(Date.now());
           value = [fromValue, toValue];
-          opt.value = value;
+          opt.value = this._getOutcomingValue(value);
           opt._data.value = value;
           state = { ...state, value, ...this._getInnerState(value) };
           let origCallback = callback;
@@ -1581,7 +1586,7 @@ let DateRangePicker = Context.withContext(
         } else if (this.state.toInputValue && !this.state.fromInputValue) {
           value = [this.parseDate(this.state.toInputValue), this.parseDate(this.state.toInputValue)];
           if (!value[0] || !value[1]) value = null;
-          opt.value = value;
+          opt.value = this._getOutcomingValue(value);
           opt._data.value = value;
           state = { ...state, value, ...this._getInnerState(value) };
           let origCallback = callback;

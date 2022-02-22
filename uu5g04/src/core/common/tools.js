@@ -1798,6 +1798,9 @@ Tools.getScreenSize = () => {
 };
 
 Tools.getLanguages = (language) => {
+  if (!language && Tools._languageProviderValue) {
+    return Tools.sortLanguages(Tools._languageProviderValue.language);
+  }
   return language ? Tools.sortLanguages(language) : Environment.languages;
 };
 

@@ -175,7 +175,7 @@ let DatePicker = Context.withContext(
             validationResult.message = nextProps.message || validationResult.message;
           }
 
-          this._updateState(validationResult);
+          this._updateState(validationResult, validationResult.feedback === "initial");
         }
       }
 
@@ -238,7 +238,7 @@ let DatePicker = Context.withContext(
       if (!this._validateOnChange({ value }, false)) {
         if (this._checkRequired({ value })) {
           _callCallback = false;
-          this._updateState(this._validateDate({ value }), setStateCallback);
+          this._updateState(this._validateDate({ value }), false, setStateCallback);
         }
       }
 
@@ -275,12 +275,7 @@ let DatePicker = Context.withContext(
 
     onChangeDefault_(opt, setStateCallback) {
       let type = opt._data.type;
-
-      if (type == "input") {
-        this._onChangeInputDefault(opt, setStateCallback);
-      } else if (type == "picker") {
-        this._onChangePickerDefault(opt, setStateCallback);
-      }
+      this._onChangeDefault(opt, type == "picker", setStateCallback);
     },
 
     onBlurDefault_(opt) {
@@ -321,7 +316,16 @@ let DatePicker = Context.withContext(
     // These values are used on various places and its value has to be always
     // updated (e.g. in functions called from willReceiveProps)
     _setFormattingValues(props) {
-      let formattingKeys = ["format", "country", "step", "parseDate", "valueType", "dateFrom", "dateTo"];
+      let formattingKeys = [
+        "format",
+        "country",
+        "step",
+        "parseDate",
+        "valueType",
+        "dateFrom",
+        "dateTo",
+        "onChangeFeedback",
+      ];
 
       for (let i = 0; i < formattingKeys.length; i++) {
         let key = formattingKeys[i];
@@ -520,7 +524,7 @@ let DatePicker = Context.withContext(
       this._formattingValues.format = format;
       this._formattingValues.country = country;
       let value = this._getDateString(dateValue);
-      this._updateState({ value }, setStateCallback);
+      this._updateState({ value }, false, setStateCallback);
     },
 
     _onOpen(setStateCallback) {
@@ -581,7 +585,7 @@ let DatePicker = Context.withContext(
       return result;
     },
 
-    _updateState(newState, setStateCallback) {
+    _updateState(newState, preventOnChangeFeedback, setStateCallback) {
       if (newState.value !== undefined) {
         if (newState.value === null) {
           newState.value = "";
@@ -597,15 +601,15 @@ let DatePicker = Context.withContext(
       }
 
       if (
+        !preventOnChangeFeedback &&
         "feedback" in newState &&
-        (this.state.feedback !== newState.feedback ||
-          ("message" in newState && this.state.message !== newState.message)) &&
-        typeof this.props.onChangeFeedback === "function"
+        this.state.feedback !== newState.feedback &&
+        typeof this._formattingValues.onChangeFeedback === "function"
       ) {
-        this.props.onChangeFeedback({
+        this._formattingValues.onChangeFeedback({
           feedback: newState.feedback,
           message: newState.message,
-          value: newState.value,
+          value: this._getOutcomingValue(newState.value),
           component: this,
         });
       }
@@ -632,6 +636,7 @@ let DatePicker = Context.withContext(
             opt.value = date;
           }
           opt.value = this._getOutcomingValue(opt.value);
+          if (!this._hasFocus) this._onFocus(opt); // make sure that the component knows that it has focus
           if (typeof this.props.onChange === "function") {
             this.props.onChange(opt);
           } else {
@@ -639,21 +644,32 @@ let DatePicker = Context.withContext(
           }
         }
       } else {
+        if (!this._hasFocus) this._onFocus(opt); // make sure that the component knows that it has focus
         this._updateState({ value: opt.value });
       }
       return this;
     },
 
-    _onChangeInputDefault(opt, setStateCallback) {
+    _onChangeDefault(opt, closeOnChange, setStateCallback) {
       let value = opt._data ? opt._data.value : opt.value;
       let _callCallback = typeof setStateCallback === "function";
+      let callback = () => {
+        if (closeOnChange) {
+          this._onBlur(opt);
+          if (opt._data.setToday !== true) {
+            this.close(setStateCallback);
+          }
+        } else if (typeof setStateCallback === "function") {
+          setStateCallback();
+        }
+      };
 
       if (this.props.validateOnChange) {
         opt.value = opt._data.value;
         if (!this._validateOnChange(opt)) {
           if (this._checkRequired(opt)) {
             _callCallback = false;
-            this._updateState(this._validateDate(opt), setStateCallback);
+            this._updateState(this._validateDate(opt), false, callback);
           }
         }
       } else {
@@ -661,33 +677,21 @@ let DatePicker = Context.withContext(
           if (this._checkRequired({ value })) {
             opt.required = this.props.required;
             opt.value = value;
+            opt.feedback = this.getFeedback();
+            opt.message = this.getMessage();
             let result = this.getChangeFeedback(opt);
             _callCallback = false;
-            this._updateState(result, setStateCallback);
+            this._updateState(result, closeOnChange, callback);
           }
         } else {
           _callCallback = false;
-          this.setState({ value }, setStateCallback);
+          this.setState({ value }, callback);
         }
       }
 
       if (_callCallback) {
-        setStateCallback();
+        callback();
       }
-
-      return this;
-    },
-
-    _onChangePickerDefault(opt, setStateCallback) {
-      let value = opt._data ? opt._data.value : opt.value;
-      this.setValue(value, () => {
-        this._onBlur(opt);
-        if (opt._data.setToday !== true) {
-          this.close(setStateCallback);
-        }
-      });
-
-      return this;
     },
 
     _onFocus(opt) {
@@ -785,7 +789,7 @@ let DatePicker = Context.withContext(
       let _callCallback = typeof setStateCallback === "function";
       let result;
 
-      if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
+      if (!checkValue || this._hasValueChanged(this.state.value, opt.value, ["", null, undefined])) {
         opt.component = this;
         opt.required = this.props.required;
         opt.value = this._getOutcomingValue(opt.value);
@@ -797,7 +801,7 @@ let DatePicker = Context.withContext(
           }
           if (result.feedback) {
             _callCallback = false;
-            this._updateState(result, setStateCallback);
+            this._updateState(result, false, setStateCallback);
           }
         }
       }
@@ -828,7 +832,7 @@ let DatePicker = Context.withContext(
       }
       opt.value = this._getOutcomingValue(opt.value);
 
-      if (!this._hasValueChanged(this.state.value, date)) {
+      if (!this._hasValueChanged(this.state.value, date, ["", null, undefined])) {
         this.setState({ open: false });
       } else {
         if (typeof this.props.onChange === "function") {

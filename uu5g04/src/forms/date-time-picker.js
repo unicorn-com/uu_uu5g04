@@ -241,7 +241,11 @@ let DateTimePicker = Context.withContext(
             validationResult.message = nextProps.message || validationResult.message;
           }
 
-          this._updateState(validationResult, this._hasInputFocus() && !(validationResult.value instanceof Date));
+          this._updateState(
+            validationResult,
+            this._hasInputFocus() && !(validationResult.value instanceof Date),
+            validationResult.feedback === "initial"
+          );
         }
       }
 
@@ -369,6 +373,7 @@ let DateTimePicker = Context.withContext(
             message,
           },
           this._hasInputFocus(),
+          false,
           setStateCallback
         );
       } else {
@@ -378,6 +383,7 @@ let DateTimePicker = Context.withContext(
             message,
           },
           this._hasInputFocus(),
+          true,
           setStateCallback
         );
       }
@@ -401,7 +407,7 @@ let DateTimePicker = Context.withContext(
       if (!this._validateOnChange(opt, false)) {
         this._checkRequiredDateTime({ value });
         _callCallback = false;
-        this._updateState(this._validateDateTime({ value }), this._hasInputFocus(), setStateCallback);
+        this._updateState(this._validateDateTime({ value }), this._hasInputFocus(), false, setStateCallback);
       }
 
       if (_callCallback) {
@@ -421,9 +427,12 @@ let DateTimePicker = Context.withContext(
       let value = opt._data ? opt._data.value : opt.value;
 
       if (this._checkRequiredDateTime({ value }) && !this.props.validateOnChange) {
-        let validationResult = this._getBlurFeedback(opt);
-        validationResult.value = value;
-        this._updateState(validationResult);
+        opt.value = this._getOutcomingValue(value);
+        opt.required = this.props.required;
+        let blurResult = this.getBlurFeedback(opt);
+        blurResult.value = value;
+        let result = this._validateDateTime(blurResult);
+        this._updateState(result);
       }
     },
 
@@ -439,6 +448,10 @@ let DateTimePicker = Context.withContext(
       } else if (type == "timePicker") {
         this._onChangeTimePickerDefault(opt, setStateCallback);
       }
+    },
+
+    onChangeFeedbackDefault_(opt) {
+      this._updateState(opt, false, true, opt.callback);
     },
 
     open_(setStateCallback) {
@@ -484,7 +497,7 @@ let DateTimePicker = Context.withContext(
         feedback: this.props.feedback,
         readOnly: this.props.readOnly,
       };
-      this._updateState(newState, false, setStateCallback);
+      this._updateState(newState, false, false, setStateCallback);
     },
     //@@viewOff:overriding
 
@@ -504,6 +517,7 @@ let DateTimePicker = Context.withContext(
         "seconds",
         "dateFrom",
         "dateTo",
+        "onChangeFeedback",
       ];
 
       for (let i = 0; i < formattingKeys.length; i++) {
@@ -626,7 +640,9 @@ let DateTimePicker = Context.withContext(
       return date;
     },
 
-    _updateState(newState, preventFormatting, setStateCallback) {
+    _updateState(newState, preventFormatting, preventOnChangeFeedback, setStateCallback) {
+      let isTimeStringChange = "timeString" in newState && !("dateString" in newState || "value" in newState);
+
       if (newState.value === null || newState.value === "") {
         newState.dateString = null;
         newState.timeString = null;
@@ -652,19 +668,20 @@ let DateTimePicker = Context.withContext(
       if (newState.value === undefined) {
         if (newState.dateString !== undefined && newState.timeString !== undefined) {
           newState.value = this._getFullDate(newState.dateString, newState.timeString);
+          if (isTimeStringChange && !this._getTimeString(newState.value)) delete newState.value;
         }
       }
 
       if (
+        !preventOnChangeFeedback &&
         "feedback" in newState &&
-        (this.state.feedback !== newState.feedback ||
-          ("message" in newState && this.state.message !== newState.message)) &&
-        typeof this.props.onChangeFeedback === "function"
+        this.state.feedback !== newState.feedback &&
+        typeof this._formattingValues.onChangeFeedback === "function"
       ) {
-        this.props.onChangeFeedback({
+        this._formattingValues.onChangeFeedback({
           feedback: newState.feedback,
           message: newState.message,
-          value: newState.value,
+          value: this._getOutcomingValue(newState.value),
           component: this,
         });
       }
@@ -1041,7 +1058,7 @@ let DateTimePicker = Context.withContext(
       this._formattingValues.format = format;
       this._formattingValues.country = country;
       let dateString = this._getDateString(this.state.value);
-      this._updateState({ dateString }, undefined, setStateCallback);
+      this._updateState({ dateString }, false, false, setStateCallback);
     },
 
     _onResize() {
@@ -1089,16 +1106,6 @@ let DateTimePicker = Context.withContext(
       return result;
     },
 
-    _getBlurFeedback(opt) {
-      let validationResult = this._validateOnChange(opt);
-
-      if (!validationResult) {
-        validationResult = this._validateDateTime(opt);
-      }
-
-      return validationResult;
-    },
-
     _checkRequiredDateTime(opt) {
       let result = true;
       if (this.props.required && !opt.value) {
@@ -1115,7 +1122,7 @@ let DateTimePicker = Context.withContext(
     _validateDate(opt, props = this.props) {
       let result = { ...opt };
       let validationValue = opt._data ? opt._data.value : opt.value;
-      let date = this._parseDate(validationValue ? validationValue : this.state.dateString);
+      let date = this._parseDate(validationValue !== undefined ? validationValue : this.state.dateString);
       result.feedback = result.feedback || "initial";
       result.message = result.message || null;
 
@@ -1191,7 +1198,7 @@ let DateTimePicker = Context.withContext(
       opt = { ...opt };
       let value = opt._data ? opt._data.value : opt.value;
 
-      if (!checkValue || this._hasValueChanged(this.state.value, value)) {
+      if (!checkValue || this._hasValueChanged(this.state.value, value, ["", null, undefined])) {
         opt.component = this;
         opt.required = this.props.required;
 
@@ -1203,7 +1210,7 @@ let DateTimePicker = Context.withContext(
         if (result && typeof result === "object" && result.feedback) {
           _callCallback = false;
           this._allowTimeZoneAdjustment = true;
-          this._updateState(result, undefined, setStateCallback);
+          this._updateState(result, false, false, setStateCallback);
         }
       }
 
@@ -1274,7 +1281,7 @@ let DateTimePicker = Context.withContext(
             component: this,
             _data: { type: "calendarInput", dateString, value, timeZoneAdjusted: true },
           };
-
+          if (!this._hasFocus) this._onFocus(opt); // make sure that the component knows that it has focus
           if (typeof this.props.onChange === "function") {
             this.props.onChange(opt);
           } else {
@@ -1282,7 +1289,8 @@ let DateTimePicker = Context.withContext(
           }
         }
       } else {
-        this._updateState({ dateString: value });
+        if (!this._hasFocus) this._onFocus({ value, event: e, component: this }); // make sure that the component knows that it has focus
+        this._updateState({ dateString: value, timeString: this.state.timeString });
       }
     },
 
@@ -1316,12 +1324,14 @@ let DateTimePicker = Context.withContext(
         isValidValue =
           !!(hours && hours.length == 2 && minutes && minutes.length == 2) &&
           (this.props.timeFormat == "12" ? dayPart : true);
-        if (!hours && !minutes && !dayPart) {
+        if (!hours && !minutes && !dayPart && !this.state.dateString) {
+          // both inputs are empty
           isValidValue = true;
         }
       }
 
-      if (value === "" || this._parseTime(value)) {
+      if ((value === "" && !this.state.dateString) || (value && this._parseTime(value))) {
+        // both inputs are empty or time is valid
         if (!this.isComputedDisabled() && !this.isReadOnly()) {
           if (isEmpty) {
             value = null;
@@ -1340,6 +1350,7 @@ let DateTimePicker = Context.withContext(
             _data: { type: "timeInput", timeString, value, timeZoneAdjusted: true },
           };
 
+          if (!this._hasFocus) this._onFocus(opt); // make sure that the component knows that it has focus
           if (typeof this.props.onChange === "function" && isValidValue) {
             this.props.onChange(opt);
           } else {
@@ -1347,6 +1358,7 @@ let DateTimePicker = Context.withContext(
           }
         }
       } else {
+        if (!this._hasFocus) this._onFocus({ value, event: e, component: this }); // make sure that the component knows that it has focus
         this._updateState({ timeString: value });
       }
     },
@@ -1366,7 +1378,7 @@ let DateTimePicker = Context.withContext(
         _data: { type: "calendarPicker", dateString, value, timeZoneAdjusted: true, ...setToday },
       };
 
-      if (!this._hasValueChanged(this.state.dateString, dateString)) {
+      if (!this._hasValueChanged(this.state.dateString, dateString, ["", null, undefined])) {
         this.close();
       } else {
         if (typeof this.props.onChange === "function") {
@@ -1409,12 +1421,12 @@ let DateTimePicker = Context.withContext(
         if (!this._validateOnChange(opt, false)) {
           this._checkRequiredDateTime(opt);
           _callCallback = false;
-          this._updateState(this._validateDateTime(opt), false, setStateCallback);
+          this._updateState(this._validateDateTime(opt), false, false, setStateCallback);
         }
       } else {
         this._checkRequiredDateTime({ value });
         _callCallback = false;
-        this._updateState({ dateString: opt._data.dateString }, false, setStateCallback);
+        this._updateState({ dateString: opt._data.dateString }, false, false, setStateCallback);
       }
 
       if (_callCallback) {
@@ -1426,7 +1438,7 @@ let DateTimePicker = Context.withContext(
 
     _onChangeDatePickerDefault(opt, setStateCallback) {
       let calendarOpen = opt._data.setToday === true ? { calendarOpen: true } : { calendarOpen: false };
-      this._updateState({ ...calendarOpen, dateString: opt._data.dateString }, undefined, () => {
+      this._updateState({ ...calendarOpen, dateString: opt._data.dateString }, false, false, () => {
         this._onBlur(opt);
         if (typeof setStateCallback === "function") {
           setStateCallback();
@@ -1442,7 +1454,7 @@ let DateTimePicker = Context.withContext(
         if (!this._validateOnChange(opt)) {
           this._checkRequiredDateTime(opt);
           _callCallback = false;
-          this._updateState(this._validateDateTime(opt), false, setStateCallback);
+          this._updateState(this._validateDateTime(opt), false, false, setStateCallback);
         }
       } else {
         if (value === "") {
@@ -1459,10 +1471,10 @@ let DateTimePicker = Context.withContext(
             (this.props.timeFormat == TIME_FORMAT_24 && result.value.match(this.getDefault().regexpFormat2))
           ) {
             _callCallback = false;
-            this._updateState({ timeString: opt._data.timeString || null }, false, setStateCallback);
+            this._updateState({ timeString: opt._data.timeString || null }, false, false, setStateCallback);
           } else {
             _callCallback = false;
-            this._updateState({ timeString: opt._data.timeString }, false, setStateCallback);
+            this._updateState({ timeString: opt._data.timeString }, false, false, setStateCallback);
           }
         }
       }
@@ -1475,7 +1487,8 @@ let DateTimePicker = Context.withContext(
     _onChangeTimePickerDefault(opt, setStateCallback) {
       this._updateState(
         { timeOpen: this.props.timePickerType === "single-column" ? false : true, timeString: opt._data.timeString },
-        undefined,
+        false,
+        false,
         this.props.timePickerType === "single-column"
           ? () => {
               this._onBlur(opt);

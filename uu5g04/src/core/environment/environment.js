@@ -35,13 +35,10 @@ if (initialEnvironment?.basePath === "string") {
   uu5BaseUrl = uri ? uri.replace(/^(.*\/).*/, "$1") : "./";
 }
 
-let cdnBaseUri;
-if (typeof initialEnvironment?.cdnBaseUri === "string") {
-  cdnBaseUri = initialEnvironment.cdnBaseUri;
-  delete initialEnvironment.cdnBaseUri; // remove as we'll possibly update the value a bit and startup-environment.js then merges the environment from global (original) to our; // TODO Do full merging in this file.
-}
+let cdnBaseUri = initialEnvironment.cdnBaseUri;
 if (!cdnBaseUri) cdnBaseUri = "https://cdn.plus4u.net/";
 else if (cdnBaseUri.charAt(cdnBaseUri.length - 1) !== "/") cdnBaseUri += "/";
+initialEnvironment.cdnBaseUri = cdnBaseUri;
 
 export const Environment = {
   name: process.env.NAME,

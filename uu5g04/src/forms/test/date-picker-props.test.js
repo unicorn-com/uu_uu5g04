@@ -17,6 +17,7 @@
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-forms";
+import { OnChangeFeedbackAndOnValidate } from "./helpers";
 //@@viewOff:imports
 
 const { mount, shallow, wait } = UU5.Test.Tools;
@@ -384,6 +385,20 @@ describe(`UU5.Forms.DatePicker props function -> Forms.InputMixin`, () => {
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onChangeFeedback event has been called.");
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it("onChangeFeedback + onValidate controlled", () => {
+    let onChangeFeedback = jest.fn();
+    let onValidate = jest.fn();
+    mount(
+      <OnChangeFeedbackAndOnValidate
+        component={UU5.Forms.DatePicker}
+        onChangeFeedback={onChangeFeedback}
+        onValidate={onValidate}
+      />
+    );
+    expect(onChangeFeedback).toHaveBeenCalledTimes(2);
+    expect(onValidate).toHaveBeenCalledTimes(1);
   });
 });
 

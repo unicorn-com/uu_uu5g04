@@ -1,6 +1,26 @@
 import UU5, { createHoc } from "uu5g04";
 import Link from "./link";
 
+const getHref = (href, uveProps) => {
+  const { componentName, componentProps } = uveProps;
+  const { parent, ...compProps } = componentProps;
+
+  const params = {};
+
+  if (componentName) params["_component"] = componentName;
+
+  for (let prop in uveProps) {
+    if (uveProps[prop] !== undefined) params["_" + prop] = uveProps[prop];
+  }
+
+  for (let prop in compProps) {
+    if (compProps[prop] !== undefined) params[prop] = compProps[prop];
+  }
+
+  if (Object.keys(params).length) href += UU5.Common.Tools.encodeQuery(params);
+  return href;
+};
+
 export const LinkUve = createHoc({
   displayName: "UU5.Bricks.LinkUve",
 
@@ -32,26 +52,13 @@ export const LinkUve = createHoc({
 
   getProps(props) {
     const { uveProps, componentName, componentProps, content, ...linkProps } = props;
-    const { parent, ...compProps } = componentProps;
 
-    let href = linkProps.href || UU5.Environment.COMPONENT_RENDER_UVE;
-    const params = {};
-
-    if (componentName) params["_component"] = componentName;
-
-    if (uveProps.top === undefined && typeof linkProps.children === "string") {
-      uveProps.top = linkProps.children;
-    }
-
-    for (let prop in uveProps) {
-      if (uveProps[prop] !== undefined) params["_" + prop] = uveProps[prop];
-    }
-
-    for (let prop in compProps) {
-      if (compProps[prop] !== undefined) params[prop] = compProps[prop];
-    }
-
-    if (Object.keys(params).length) href += UU5.Common.Tools.encodeQuery(params);
+    const href = getHref(linkProps.href || UU5.Environment.COMPONENT_RENDER_UVE, {
+      ...uveProps,
+      componentName,
+      componentProps,
+      top: uveProps.top || (typeof linkProps.children === "string" ? linkProps.children : undefined),
+    });
 
     return {
       ...linkProps,
@@ -60,4 +67,5 @@ export const LinkUve = createHoc({
   },
 });
 
+export { getHref };
 export default LinkUve;

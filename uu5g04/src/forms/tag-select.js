@@ -40,6 +40,8 @@ export const TagSelect = Context.withContext(
         UU5.PropTypes.shape({
           value: UU5.PropTypes.string,
           content: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.object]),
+          colorSchema: UU5.PropTypes.string,
+          bgStyle: UU5.PropTypes.oneOf(["filled", "outline", "transparent", "underline"]),
         })
       ),
       ignoreTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
@@ -281,7 +283,7 @@ export const TagSelect = Context.withContext(
     _initAvailableTags(props = this.props) {
       this._availableTags = props.availableTags
         ? props.availableTags.map((tag) => ({
-            value: tag.value,
+            ...tag,
             content: tag.content || tag.value,
             searchValue: this._getTagSearchValue(tag),
           }))
@@ -699,7 +701,7 @@ export const TagSelect = Context.withContext(
       if (this._hasFocus) {
         let callback = this._hasTempFeedback ? this.setInitial : undefined;
 
-        if (!this.props.multiple && this.state.searchValue && this.state.searchValue.trim()) {
+        if (this.state.searchValue && this.state.searchValue.trim()) {
           let potentialValue;
 
           if (this.props.allowCustomTags) {
@@ -758,7 +760,8 @@ export const TagSelect = Context.withContext(
             return (
               <UU5.Bricks.Label
                 key={value}
-                colorSchema="custom"
+                bgStyle={tag.bgStyle}
+                colorSchema={tag.colorSchema || "custom"}
                 // Arrow fn because sending tag is necessary
                 // eslint-disable-next-line react/jsx-no-bind
                 iconOnClick={

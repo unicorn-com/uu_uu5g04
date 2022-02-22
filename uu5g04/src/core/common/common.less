@@ -192,6 +192,12 @@ body {
   text-decoration: underline;
 }
 
+@media print {
+  .@{name}-noprint, .noprint {
+    display: none !important;
+  }
+}
+
 .uu5-common-temp-textarea {
   opacity: 0;
   position: absolute;

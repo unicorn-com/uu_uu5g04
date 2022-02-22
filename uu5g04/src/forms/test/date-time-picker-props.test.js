@@ -17,6 +17,7 @@
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-forms";
+import { OnChangeFeedbackAndOnValidate } from "./helpers";
 //@@viewOff:imports
 
 const { mount, shallow, wait, setInputValue } = UU5.Test.Tools;
@@ -296,6 +297,20 @@ describe("TextInputMixin props.function", () => {
     let wrapper = shallow(<UU5.Forms.DateTimePicker />);
     wrapper.instance().onChangeDefault({ _data: { type: "calendarPicker" } }, callback);
     expect(callback).toBeCalled();
+  });
+
+  it("onChangeFeedback + onValidate controlled", () => {
+    let onChangeFeedback = jest.fn();
+    let onValidate = jest.fn();
+    mount(
+      <OnChangeFeedbackAndOnValidate
+        component={UU5.Forms.DateTimePicker}
+        onChangeFeedback={onChangeFeedback}
+        onValidate={onValidate}
+      />
+    );
+    expect(onChangeFeedback).toHaveBeenCalledTimes(2);
+    expect(onValidate).toHaveBeenCalledTimes(1);
   });
 
   it("onFocus()", () => {

@@ -184,18 +184,15 @@ export const EditableLsi = {
       cs: "Doba scrollování k fragmentu",
     },
     smoothScrollMessage: {
-      en:
-        "The time it takes to scroll to the location that is defined by the URL adress. The location is defined by an element's id. E.g. https://unicorn.com#contacts",
-      cs:
-        "Doba scrollování k lokaci definované v URL adrese. Lokace je definována atributem id elementu. Např. https://unicorn.com#contacts",
+      en: "The time it takes to scroll to the location that is defined by the URL adress. The location is defined by an element's id. E.g. https://unicorn.com#contacts",
+      cs: "Doba scrollování k lokaci definované v URL adrese. Lokace je definována atributem id elementu. Např. https://unicorn.com#contacts",
     },
     offsetLabel: {
       en: "Distance from the target location",
       cs: "Odstup od cílové lokace",
     },
     offsetMessage: {
-      en:
-        "The number of pixels that will end up being between the target location defined in URL address and the top viewport border",
+      en: "The number of pixels that will end up being between the target location defined in URL address and the top viewport border",
       cs: "Vzdálenost jaká zůstane mezi lokací definovanou v URL adrese a mezi horní hranou viewportu",
     },
     elevationLabel: {
@@ -209,6 +206,7 @@ export const EditableLsi = {
   },
   section: {
     name: { en: "Section", cs: "Sekce" },
+    pageBreakBeforeCheckboxLabel: { en: "Print on new page", cs: "Tisknout na nové stránce" },
   },
   container: {
     noSpacingTooltip: {
@@ -227,10 +225,8 @@ export const EditableLsi = {
       en: "Same column height",
     },
     componentDescription: {
-      cs:
-        "<uu5string />Komponenta <UU5.Bricks.Link href='https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksRow' content='UU5.Bricks.Row' /> se používá uvnitř komponenty UU5.Bricks.Container a představuje řádek. Lze ji využít pro naformátování textu a komponent do jednotlivých řádků.",
-      en:
-        "<uu5string />The <UU5.Bricks.Link href='https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksRow' content='UU5.Bricks.Row' /> component is used as a child component of the UU5.Bricks.Container component and represents a row. It is used to format text and components into individual rows.",
+      cs: "<uu5string />Komponenta <UU5.Bricks.Link href='https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksRow' content='UU5.Bricks.Row' /> se používá uvnitř komponenty UU5.Bricks.Container a představuje řádek. Lze ji využít pro naformátování textu a komponent do jednotlivých řádků.",
+      en: "<uu5string />The <UU5.Bricks.Link href='https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksRow' content='UU5.Bricks.Row' /> component is used as a child component of the UU5.Bricks.Container component and represents a row. It is used to format text and components into individual rows.",
     },
     layoutTooltip: {
       cs: "Rozvržení",
@@ -289,10 +285,8 @@ export const EditableLsi = {
       en: "Column Width",
     },
     colWidthTooltip: {
-      cs:
-        "Můžete definovat šířku sloupce pomocí standardních CSS jednotek, např. 200px, 10em nebo 33%. Také ale můžete použít jednotky pro responzivní zobrazení, např „xs-6 m-3”.",
-      en:
-        "You can define column’s width with standard CSS values like 200px, 10em or 33%. You can also use values for responsive grid like „xs-6 m-3”.",
+      cs: "Můžete definovat šířku sloupce pomocí standardních CSS jednotek, např. 200px, 10em nebo 33%. Také ale můžete použít jednotky pro responzivní zobrazení, např „xs-6 m-3”.",
+      en: "You can define column’s width with standard CSS values like 200px, 10em or 33%. You can also use values for responsive grid like „xs-6 m-3”.",
     },
     columnsWidthPresetLabel: {
       cs: "Přednastavé šířky sloupců",
@@ -302,20 +296,16 @@ export const EditableLsi = {
   column: {
     name: { en: "Column", cs: "Sloupec" },
     componentDescription: {
-      cs:
-        "<uu5string />Komponenta <UU5.Bricks.Link href='https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksColumn' content='UU5.Bricks.Column' /> je založena na nápadu a implementaci Bootstrap mřížky (viz <UU5.Bricks.Link href='https://www.w3schools.com/bootstrap/bootstrap_grid_basic.asp' target='_blank' content='W3Schools - Bootstrap Grid System'/>) a reprezentuje sloupec. Tato komponenta musí být obalena komponentou UU5.Bricks.Row jinak by mohlo dojít k překrývání obsahu sloupce elementy, které v dokumentu následují. Šířka komponenty může být nastavena pomocí props a může se lišit pro různé velikosti obrazovky.",
-      en:
-        "<uu5string />The <UU5.Bricks.Link href='https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksColumn' content='UU5.Bricks.Column' /> component is based on the Bootstrap grid implementation (see <UU5.Bricks.Link href='https://www.w3schools.com/bootstrap/bootstrap_grid_basic.asp' target='_blank' content='W3Schools - Bootstrap Grid System'/>) and represents a column. This component must be wrapped by the UU5.Bricks.Row component (otherwise, the contents of the column may overlap with the elements that follow in the document). The component width can be adjusted by built-in properties and can differ for different screen sizes.",
+      cs: "<uu5string />Komponenta <UU5.Bricks.Link href='https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksColumn' content='UU5.Bricks.Column' /> je založena na nápadu a implementaci Bootstrap mřížky (viz <UU5.Bricks.Link href='https://www.w3schools.com/bootstrap/bootstrap_grid_basic.asp' target='_blank' content='W3Schools - Bootstrap Grid System'/>) a reprezentuje sloupec. Tato komponenta musí být obalena komponentou UU5.Bricks.Row jinak by mohlo dojít k překrývání obsahu sloupce elementy, které v dokumentu následují. Šířka komponenty může být nastavena pomocí props a může se lišit pro různé velikosti obrazovky.",
+      en: "<uu5string />The <UU5.Bricks.Link href='https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksColumn' content='UU5.Bricks.Column' /> component is based on the Bootstrap grid implementation (see <UU5.Bricks.Link href='https://www.w3schools.com/bootstrap/bootstrap_grid_basic.asp' target='_blank' content='W3Schools - Bootstrap Grid System'/>) and represents a column. This component must be wrapped by the UU5.Bricks.Row component (otherwise, the contents of the column may overlap with the elements that follow in the document). The component width can be adjusted by built-in properties and can differ for different screen sizes.",
     },
     widthInputLabel: {
       cs: "Šířka",
       en: "Width",
     },
     widthInputMessage: {
-      cs:
-        "<uu5string />Lze nastavit hodnoty pro <UU5.Bricks.Code content='width' /> nebo <UU5.Bricks.Code content='colWidth' /> dle <UU5.Bricks.Link href='https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksColumn' content='dokumentace' />.",
-      en:
-        "<uu5string />Values for <UU5.Bricks.Code content='width' /> or <UU5.Bricks.Code content='colWidth' /> are allowed according to the <UU5.Bricks.Link href='https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksColumn' content='documentation' />.",
+      cs: "<uu5string />Lze nastavit hodnoty pro <UU5.Bricks.Code content='width' /> nebo <UU5.Bricks.Code content='colWidth' /> dle <UU5.Bricks.Link href='https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksColumn' content='dokumentace' />.",
+      en: "<uu5string />Values for <UU5.Bricks.Code content='width' /> or <UU5.Bricks.Code content='colWidth' /> are allowed according to the <UU5.Bricks.Link href='https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksColumn' content='documentation' />.",
     },
     noSpacingTooltip: {
       cs: "Nulové odsazení",
@@ -342,10 +332,8 @@ export const EditableLsi = {
       en: "Column Width",
     },
     colWidthTooltip: {
-      cs:
-        "Můžete definovat šířku sloupce pomocí standardních CSS jednotek, např. 200px, 10em nebo 33%. Také ale můžete použít jednotky pro responzivní zobrazení, např „xs-6 m-3”.",
-      en:
-        "You can define column’s width with standard CSS values like 200px, 10em or 33%. You can also use values for responsive grid like „xs-6 m-3”.",
+      cs: "Můžete definovat šířku sloupce pomocí standardních CSS jednotek, např. 200px, 10em nebo 33%. Také ale můžete použít jednotky pro responzivní zobrazení, např „xs-6 m-3”.",
+      en: "You can define column’s width with standard CSS values like 200px, 10em or 33%. You can also use values for responsive grid like „xs-6 m-3”.",
     },
   },
   block: {
@@ -710,9 +698,8 @@ export const EditableLsi = {
     },
     name: { en: "Carousel", cs: "Carousel" },
     heightMessage: {
-      cs:"Pokud v této komponentě používáte obrázky (nebo jiné asynchronní načítání), je nutné jim nastavit pevnou výšku nebo nastavit pevnou výšku komponentě!",
-      en:
-        "If you use images in this component (or other asynchronous loading), it is required to set them a fixed height or set fixed height to the component!",
+      cs: "Pokud v této komponentě používáte obrázky (nebo jiné asynchronní načítání), je nutné jim nastavit pevnou výšku nebo nastavit pevnou výšku komponentě!",
+      en: "If you use images in this component (or other asynchronous loading), it is required to set them a fixed height or set fixed height to the component!",
     },
   },
   panel: {
@@ -1170,10 +1157,8 @@ export const EditableLsi = {
       en: "Consult documentation of",
     },
     sameScreenSizeInfo: {
-      cs:
-        "V případě, že jsou vloženy dvě či více komponent se stejnou hodnotou vlastnosti screenSize, bude použita pouze komponenta, která je uvedena nejpozději.",
-      en:
-        "If two or more components with the same screenSize property value are inserted, only the component that is listed at the latest will be used.",
+      cs: "V případě, že jsou vloženy dvě či více komponent se stejnou hodnotou vlastnosti screenSize, bude použita pouze komponenta, která je uvedena nejpozději.",
+      en: "If two or more components with the same screenSize property value are inserted, only the component that is listed at the latest will be used.",
     },
     otherLabel: { cs: "ostatní", en: "other" },
     itemLabel: {

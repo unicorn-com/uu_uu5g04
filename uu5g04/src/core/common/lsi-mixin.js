@@ -16,6 +16,7 @@
 import React from "react";
 import { PropTypes } from "uu5g05";
 import Tools from "./tools.js";
+import { postprocessors } from "./component-processors.js";
 import { LsiContext, withLsiContext } from "./internal/lsi-context.js";
 
 export const LsiMixin = {
@@ -137,6 +138,24 @@ export const LsiMixin = {
   },
   //@@viewOff:private
 };
+
+// fixes issue with <LsiContext localLsi=true /> component working properly only in case that nested
+// LsiMixin components use withLsiContext() HOC
+postprocessors.push(function LsiMixinVCPostprocessor(Component, componentDescriptor, ctx) {
+  let mixins = componentDescriptor && Array.isArray(componentDescriptor.mixins) ? componentDescriptor.mixins : null;
+  if (mixins && mixins.includes(LsiMixin)) {
+    // wrap with withLsiContext
+    let ResultComponent = withLsiContext(Component);
+    for (let k of Object.getOwnPropertyNames(Component)) {
+      if (k === "constructor" || k === "name" || k === "length" || k === "caller" || k === "arguments") continue;
+      try {
+        if (!(k in ResultComponent)) ResultComponent[k] = Component[k];
+      } catch (e) {} // needed for IE for special properties like "caller"
+    }
+    return ResultComponent;
+  }
+  return Component;
+});
 
 LsiMixin.Context = LsiContext;
 

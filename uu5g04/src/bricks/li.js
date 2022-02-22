@@ -99,6 +99,9 @@ export const Li = Context.withListItemContext(
 
           return classNames.join(" ");
         },
+        contentWrapper: () => Css.css`
+          display: block;
+        `,
       },
       defaults: {
         parentTagNames: ["UU5.Bricks.Ul", "UU5.Bricks.Ol"],
@@ -187,7 +190,7 @@ export const Li = Context.withListItemContext(
       return this.getNestingLevel() ? (
         <ListContext.Provider value={this._getContextValues()}>
           <li {...getMainAttrs(this.props, this.getMainAttrs(), mainClassName)}>
-            <span>{this.getChildren()}</span>
+            <span className={this.getClassName("contentWrapper")}>{this.getChildren()}</span>
             {this.getDisabledCover()}
           </li>
         </ListContext.Provider>

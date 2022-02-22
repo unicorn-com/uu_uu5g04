@@ -172,18 +172,14 @@ export const File = Context.withContext(
     },
 
     onChangeDefault(opt, setStateCallback) {
-      if (this.props.onValidate && typeof this.props.onValidate === "function") {
+      if (typeof this.props.onValidate === "function") {
         this._validateOnChange({ value: opt.value, event: opt.event, component: this }, false, setStateCallback);
       } else {
         let result = this.getChangeFeedback(opt);
-        this.setState(
-          {
-            feedback: result.feedback,
-            message: result.message,
-            value: result.value,
-          },
-          setStateCallback
-        );
+
+        if (this._checkRequired(result)) {
+          this._updateFeedback(result.feedback, result.message, result.value, setStateCallback);
+        }
       }
 
       return this;
@@ -278,6 +274,16 @@ export const File = Context.withContext(
       return result;
     },
 
+    _updateFeedback(feedback, message, value, setStateCallback) {
+      if (this.getFeedback() === feedback) {
+        // update feedback/value but doesn't call props.onChangeFeedback
+        this.setFeedback(feedback, message, value, setStateCallback);
+      } else {
+        // update feedback/value and call props.onChangeFeedback
+        this._setFeedback(feedback, message, value, setStateCallback);
+      }
+    },
+
     _changeValue(value, e) {
       let opt = { value: value, event: e, component: this };
 
@@ -286,12 +292,17 @@ export const File = Context.withContext(
         this._onBlur();
       }
 
-      if (this._checkRequired({ value })) {
-        this.setInitial(null, value);
+      let requiredCheck = this._checkRequired({ value });
+      if (requiredCheck) {
+        // This is wrong, as value should only be changed if props.onChange isnt defined, but
+        // has to stay due to some apps (e.g. uuBudgetMan) relying on it.
+        this.setState({ value });
       }
 
       if (typeof this.props.onChange === "function") {
         this.props.onChange(opt);
+      } else if (!requiredCheck) {
+        this._updateFeedback("initial", undefined, this.state.value);
       } else {
         this.onChangeDefault(opt);
       }
@@ -300,6 +311,7 @@ export const File = Context.withContext(
 
     _onChange(e) {
       if (!this.isComputedDisabled() && !this.isReadOnly()) {
+        if ("length" in e.target.files && e.target.files.length === 0) return; // no files were selected - cancel button pressed
         this._changeValue(this._buildNewValue(e.target.files), e);
       }
       return this;
@@ -369,7 +381,7 @@ export const File = Context.withContext(
           if (typeof result === "object") {
             if (result.feedback) {
               _callCallback = false;
-              this.setFeedback(result.feedback, result.message, result.value, setStateCallback);
+              this._updateFeedback(result.feedback, result.message, result.value, setStateCallback);
             } else {
               _callCallback = false;
               this.setState({ value: opt.value }, setStateCallback);
@@ -377,7 +389,7 @@ export const File = Context.withContext(
           } else {
             this.showError("validateError", null, {
               context: {
-                event: e,
+                event: opt.event,
                 func: this.props.onValidate,
                 result: result,
               },
@@ -627,8 +639,12 @@ export const File = Context.withContext(
           onClick: () => navigator.msSaveOrOpenBlob(item.file, item.name),
         };
       } else {
+        let download = item.name;
+        // Only set download prop if the file shouldn't be opened in new tab (typically images, text files, pdfs)
+        if (!item.file || item.file.type.match(/^(image|text|)\/|^application\/pdf$/)) download = false;
         result = {
           target: "_blank",
+          download,
           href: this._getUrl(item.url, "inline") || (item.file && this._getCachedFileUrl(item.file)), // prefer opening via remote (to have nice URL in address bar)
         };
       }

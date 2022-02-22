@@ -122,7 +122,7 @@ let TimePicker = Context.withContext(
       this._allowBlur = false;
       this._setUpLimits(this.props);
 
-      let value = this._formatTime(this.props.value, false) || this.props.value;
+      let value = this._formatTime(this.props.value) || this.props.value;
       let validationResult = this._validateOnChange({ value, event: null, component: this });
 
       if (validationResult) {
@@ -148,7 +148,7 @@ let TimePicker = Context.withContext(
         let value =
           this._hasInputFocus() && !(nextProps.value instanceof Date)
             ? nextProps.value
-            : this._formatTime(nextProps.value, false) || nextProps.value;
+            : this._formatTime(nextProps.value) || nextProps.value;
         let validationResult = this._validateOnChange({ value, event: null, component: this }, true);
 
         if (validationResult) {
@@ -199,17 +199,17 @@ let TimePicker = Context.withContext(
 
     //@@viewOn:overriding
     setFeedback_(feedback, message, value, setStateCallback) {
-      value = this._hasInputFocus() && !(value instanceof Date) ? value : this._formatTime(value, false) || value;
+      value = this._hasInputFocus() && !(value instanceof Date) ? value : this._formatTime(value) || value;
       this.setFeedbackDefault(feedback, message, value, setStateCallback);
     },
 
     setValue_(value, setStateCallback) {
       let _callCallback = typeof setStateCallback === "function";
-      value = this._hasInputFocus() && !(value instanceof Date) ? value : this._formatTime(value, false) || value;
+      value = this._hasInputFocus() && !(value instanceof Date) ? value : this._formatTime(value) || value;
       if (!this._validateOnChange({ value }, false)) {
         if (this._checkRequired({ value })) {
           _callCallback = false;
-          this._updateState(this._validateTime({ value }), setStateCallback);
+          this._updateState(this._validateTime({ value }), false, setStateCallback);
         }
       }
 
@@ -264,13 +264,8 @@ let TimePicker = Context.withContext(
 
     onChangeDefault_(opt, setStateCallback) {
       let type = opt._data.type;
-      opt.value = opt._data.value;
-
-      if (type == "input") {
-        this._onChangeInputDefault(opt, setStateCallback);
-      } else if (type == "picker" || type == "switchDayPart") {
-        this._onChangePickerDefault(opt, setStateCallback);
-      }
+      if (opt._data && "value" in opt._data) opt.value = opt._data.value;
+      this._onChangeDefault(opt, type == "picker" && this.props.pickerType === "single-column", setStateCallback);
     },
 
     onFocusDefault_(opt) {
@@ -280,7 +275,7 @@ let TimePicker = Context.withContext(
     },
 
     onBlurDefault_(opt) {
-      let value = opt._data ? opt._data.value : opt.value;
+      let value = opt._data && "value" in opt._data ? opt._data.value : opt.value;
       let formatedValue = this._formatTime(value);
       if (this._checkRequired({ value: formatedValue || value }) && !this.props.validateOnChange) {
         opt.value = formatedValue || value;
@@ -310,7 +305,7 @@ let TimePicker = Context.withContext(
     // These values are used on various places and its value has to be always
     // updated (e.g. in functions called from willReceiveProps)
     _setFormattingValues(props) {
-      let formattingKeys = ["format", "seconds", "step", "show24"];
+      let formattingKeys = ["format", "seconds", "step", "show24", "onChangeFeedback"];
 
       for (let i = 0; i < formattingKeys.length; i++) {
         let key = formattingKeys[i];
@@ -502,79 +497,59 @@ let TimePicker = Context.withContext(
       return result;
     },
 
-    _onChange(e, opt) {
-      this._valueOverMidnight = false;
-      opt = opt || { value: e.target.value, event: e, component: this };
+    _onChangeDefault(opt, closeOnChange, setStateCallback) {
+      let value = opt._data && "value" in opt._data ? opt._data.value : opt.value;
+      let _callCallback = typeof setStateCallback === "function";
+      let callback = () => {
+        if (closeOnChange) {
+          this._allowBlur = true;
+          this._onBlur(opt);
+          this.close(setStateCallback);
+        } else if (typeof setStateCallback === "function") {
+          setStateCallback();
+        }
+      };
 
-      if (opt.value === "" || this._parseTime(opt.value)) {
-        if (!this.isComputedDisabled() && !this.isReadOnly()) {
-          opt.required = this.props.required;
-          let result = this.getChangeFeedback(opt);
-          opt._data = { type: "input", required: this.props.required, result: result };
-          if (typeof this.props.onChange === "function") {
-            this.props.onChange(opt);
-          } else {
-            this.onChangeDefault(opt);
+      if (this.props.validateOnChange) {
+        opt.value = value;
+        if (!this._validateOnChange(opt)) {
+          if (this._checkRequired(opt)) {
+            _callCallback = false;
+            this._updateState(opt, false, callback);
           }
         }
       } else {
-        this.setState({ value: opt.value });
-      }
-
-      return this;
-    },
-
-    _onChangeInputDefault(opt, setStateCallback) {
-      let _callCallback = typeof setStateCallback === "function";
-
-      if (this.props.validateOnChange) {
-        _callCallback = false;
-        this._validateOnChange(opt._data.result, false, setStateCallback);
-      } else {
-        if (opt._data.result.value === "") {
+        if (value === "") {
           _callCallback = false;
-          this.setState({ value: opt.value }, setStateCallback);
-        } else if (this._checkRequired({ value: opt._data.result.value })) {
+          this.setState({ value }, callback);
+        } else if (this._checkRequired({ value })) {
           opt.required = this.props.required;
-          let result = opt._data.result || this.getChangeFeedback(opt);
-
+          opt.feedback = this.getFeedback();
+          opt.message = this.getMessage();
+          let result = this.getChangeFeedback(opt);
+          let formattedValue = this._formatTime(value);
           if (
-            !result.value ||
-            (this.props.format == TIME_FORMAT_12 && result.value.match(REGEXP.timeFormat12)) ||
+            !formattedValue ||
+            (this.props.format == TIME_FORMAT_12 && formattedValue.match(REGEXP.timeFormat12)) ||
             (this.props.seconds &&
               this.props.step === 1 &&
               this.props.format == TIME_FORMAT_12 &&
-              result.value.match(REGEXP.timeFormat12seconds)) ||
-            (this.props.format == TIME_FORMAT_24 && result.value.match(REGEXP.timeFormat24)) ||
+              formattedValue.match(REGEXP.timeFormat12seconds)) ||
+            (this.props.format == TIME_FORMAT_24 && formattedValue.match(REGEXP.timeFormat24)) ||
             (this.props.seconds &&
               this.props.step === 1 &&
               this.props.format == TIME_FORMAT_24 &&
-              result.value.match(REGEXP.timeFormat24seconds))
+              formattedValue.match(REGEXP.timeFormat24seconds))
           ) {
             _callCallback = false;
-            this._updateState(result, setStateCallback);
+            this._updateState(result, closeOnChange, callback);
           }
         }
       }
 
       if (_callCallback) {
-        setStateCallback();
+        callback();
       }
-
-      return this;
-    },
-
-    _onChangePickerDefault(opt, setStateCallback) {
-      this.setValue_(
-        this._formatTime(opt.value),
-        this.props.pickerType === "single-column"
-          ? () => this.close(setStateCallback)
-          : typeof setStateCallback === "function"
-          ? setStateCallback()
-          : null
-      );
-
-      return this;
     },
 
     _onFocus(opt) {
@@ -660,7 +635,7 @@ let TimePicker = Context.withContext(
         result = typeof this.props.onValidate === "function" ? this.props.onValidate(opt) : null;
         if (result && typeof result === "object" && result.feedback) {
           _callCallback = false;
-          this._updateState(result, setStateCallback);
+          this._updateState(result, false, setStateCallback);
         }
       }
 
@@ -675,14 +650,33 @@ let TimePicker = Context.withContext(
       return this.isOpen() ? this.props.iconOpen : this.props.iconClosed;
     },
 
+    _onChange(e, opt) {
+      this._valueOverMidnight = false;
+      opt = opt || { value: e.target.value, event: e, component: this };
+
+      if (opt.value === "" || this._parseTime(opt.value)) {
+        if (!this.isComputedDisabled() && !this.isReadOnly()) {
+          opt._data = { type: "input", required: this.props.required, value: e.target.value };
+          if (typeof this.props.onChange === "function") {
+            this.props.onChange(opt);
+          } else {
+            this.onChangeDefault(opt);
+          }
+        }
+      } else {
+        this.setState({ value: opt.value });
+      }
+
+      return this;
+    },
+
     _onTimeChange(opt) {
       opt.component = this;
-      opt._data = { type: "picker", value: UU5.Common.Tools.merge({}, opt.value) };
+      opt._data = { type: "picker" };
 
       if (opt.value && opt.value.hours > 24) {
         this._valueOverMidnight = true;
         opt.value.hours = opt.value.hours % 24;
-        opt._data.value.hours = opt._data.value.hours % 24;
       } else {
         this._valueOverMidnight = false;
       }
@@ -734,12 +728,12 @@ let TimePicker = Context.withContext(
       };
     },
 
-    _updateState(newState, setStateCallback) {
+    _updateState(newState, preventOnChangeFeedback, setStateCallback) {
       if (newState.value !== undefined) {
         if (newState.value === null) {
           newState.value = "";
         } else if (newState.value instanceof Date) {
-          newState.value = UU5.Common.Tools.getTimeString(newState.value);
+          newState.value = this._formatTime(newState.value);
         }
       } else {
         newState.value = this.state.value;
@@ -749,20 +743,37 @@ let TimePicker = Context.withContext(
         newState.message = this.state.message || null;
       }
 
+      if (
+        !preventOnChangeFeedback &&
+        "feedback" in newState &&
+        this.state.feedback !== newState.feedback &&
+        typeof this._formattingValues.onChangeFeedback === "function"
+      ) {
+        this._formattingValues.onChangeFeedback({
+          feedback: newState.feedback,
+          message: newState.message,
+          value: newState.value,
+          component: this,
+        });
+      }
+
       this.setState(newState, setStateCallback);
     },
 
-    _formatTime(value, autofill) {
+    _formatTime(value) {
       let { format, seconds, step } = this._formattingValues;
       if (value && !UU5.Common.Tools.isPlainObject(value)) {
-        value = this._parseTime(value, autofill);
+        value = this._parseTime(value);
       }
 
       return UU5.Common.Tools.formatTime(value, seconds, format, true, step, true);
     },
 
     _parseTime(timeString, autofill = true) {
-      let { format, show24 } = this._formattingValues;
+      let { format, show24, seconds } = this._formattingValues;
+      if (timeString instanceof Date) {
+        timeString = UU5.Common.Tools.getTimeString(timeString, seconds, format, true);
+      }
       return UU5.Common.Tools.parseTime(timeString, format, autofill, show24);
     },
 

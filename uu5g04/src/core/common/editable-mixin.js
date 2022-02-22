@@ -93,7 +93,7 @@ export const EditableMixin = {
     this.registerMixin(EDITABLE_MIXIN_NAME);
     this._resizeCallbacks = {};
     return {
-      editation: this.props.editMode ? this.props.editMode.edit : false,
+      editation: false,
       editableComponentLazyLoaded: false,
     };
   },
@@ -101,6 +101,7 @@ export const EditableMixin = {
   componentDidMount() {
     // init dom node
     this._domNode = this.findDOMNode();
+    if (this.props.editMode?.edit) this.startEditation(this._eccEditEnd, this._eccUpdateProps);
   },
 
   componentWillUnmount() {
@@ -109,7 +110,7 @@ export const EditableMixin = {
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.editMode && nextProps.editMode.edit !== this.state.editation) {
-      nextProps.editMode.edit ? this.startEditation(this._eccEditEnd) : this.forceEndEditation();
+      nextProps.editMode.edit ? this.startEditation(this._eccEditEnd, this._eccUpdateProps) : this.forceEndEditation();
     }
   },
 
@@ -121,6 +122,11 @@ export const EditableMixin = {
   _eccEditEnd(component, newProps) {
     // await this.props.editMode.onChange({ props: newProps })
     this.props.editMode.onEditEnd({ props: newProps });
+  },
+
+  _eccUpdateProps(component, newProps) {
+    // await this.props.editMode.onChange({ props: newProps })
+    this.props.editMode.onChange({ props: newProps });
   },
   //@@viewOff:reactLifeCycle
 

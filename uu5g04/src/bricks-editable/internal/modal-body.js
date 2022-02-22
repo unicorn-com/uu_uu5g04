@@ -84,12 +84,20 @@ const SpacesInput = UU5.Common.Component.lazy(async () => {
   return import("./spaces-input.js");
 });
 
+const EditationModalMarginInput = UU5.Common.Component.lazy(async () => {
+  await importHooks();
+  return import("./editation-modal-margin-input.js");
+});
+
+
 const FORM_PROPS = {
   spacing: 16,
   inputColWidth: "xs-12",
   labelColWidth: "xs-12",
   labelAlignment: "left",
 };
+
+
 const EDITATION_COMPONENT_PROPS = UU5.PropTypes.oneOfType([
   UU5.PropTypes.func,
   UU5.PropTypes.shape({
@@ -410,22 +418,23 @@ const ModalBody = UU5.Common.VisualComponent.create({
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      component: undefined,
-      getPropValues: undefined,
-      itemComponent: undefined,
-      propsForm: undefined,
+      onClose: undefined,
+      componentName: undefined,
+      componentProps: undefined,
+      componentPropsForm: undefined,
+      itemName: undefined,
+      itemDefaultProps: undefined,
+      itemPropsForm: undefined,
       newItem: undefined,
       newItemButtonLabel: undefined,
+      menuWidth: 250,
       itemsSource: undefined,
       getItemLabel: undefined,
       header: undefined,
       screenSize: undefined,
       shown: false,
       size: undefined,
-      onSaveAndClose: undefined,
-      onCancel: undefined,
       saveButtonProps: undefined,
-      menuWidth: 250,
       onChange: undefined,
       duplicateItem: undefined,
     };
@@ -1301,7 +1310,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
 
     if (typeof uu5string === "string") {
       items = UU5.Common.UU5String.parse(uu5string);
-      items = items.filter((item) => typeof item !== "string" || item.trim() !== ""); // filter out white spaces
+      items = items.filter((item) => typeof item !== "string"); // filter out white spaces
       items = items.map((item) => {
         let props = { ...item.props.toObject() };
         if (item.children.length) {
@@ -1419,7 +1428,7 @@ const ModalBody = UU5.Common.VisualComponent.create({
     );
   },
 
-  _getEditationComponent(componentData, valueSource, validationSource) {
+  _getEditationComponent(componentData, valueSource, validationSource, index) {
     let value = valueSource[componentData.name];
     let validation = validationSource ? validationSource[componentData.name] : undefined;
     let result = { props: {} };
@@ -1511,6 +1520,17 @@ const ModalBody = UU5.Common.VisualComponent.create({
           result.props.hideMarginHorizontal = valueSource.hideMarginHorizontal;
           result.props.screenSizeList = valueSource.screenSizeList;
           result.props.valuePlaceholder = valueSource.valuePlaceholder;
+          break;
+        case "margin": //TODO what if someone already use margin for example as text input?
+          result.Component = EditationModalMarginInput;
+          result.props.popoverLocation = "portal";
+          result.props.hideMarginVertical = valueSource.hideMarginVertical;
+          result.props.hideMarginHorizontal = valueSource.hideMarginHorizontal;
+          result.props.screenSizeList = valueSource.screenSizeList;
+          result.props.valuePlaceholder = valueSource.valuePlaceholder;
+          result.props.onChangeProps = (...args) => this._onCustomChangeProps(index, ...args);
+          result.props.propName = componentData.name;
+          result.props.componentProps = this.props.componentProps;
           break;
         case "iconPicker":
           result.Component = "UU5.Forms.IconPicker";
@@ -1619,7 +1639,12 @@ const ModalBody = UU5.Common.VisualComponent.create({
         />
       );
     } else {
-      let { Component, children, props = {} } = this._getEditationComponent(component, valueSource, validationSource);
+      let { Component, children, props = {} } = this._getEditationComponent(
+        component,
+        valueSource,
+        validationSource,
+        index
+      );
       props.key = key;
 
       if (typeof Component === "string") {

@@ -223,10 +223,8 @@ let Number = Context.withContext(
 
     onChangeDefault_(opt, setStateCallback) {
       let type = opt._data.type;
-      if (type == "increase") {
-        this._onIncreaseDefault(opt, setStateCallback);
-      } else if (type == "decrease") {
-        this._onDecreaseDefault(opt, setStateCallback);
+      if (type == "increase" || type == "decrease") {
+        this._onIncreaseDecreaseDefault(opt, type, setStateCallback);
       } else if (type == "input") {
         this._onChangeInputDefault(opt, setStateCallback);
       }
@@ -803,7 +801,7 @@ let Number = Context.withContext(
 
       if (this.props.validateOnChange) {
         _callCallback = false;
-        this._validateOnChange(opt, false, setStateCallback);
+        this._validateOnChange(opt, false, false, setStateCallback);
       } else {
         if (this._checkRequiredValue({ value: opt.value })) {
           opt = { ...opt };
@@ -820,39 +818,28 @@ let Number = Context.withContext(
       }
     },
 
-    _onDecreaseDefault(opt, setStateCallback) {
+    _onIncreaseDecreaseDefault(opt, type, setStateCallback) {
       let feedback = opt._data.feedback;
       opt = { ...opt };
       opt.value = opt._data.value;
 
       if (feedback === "error") {
         this.setError(opt.message || opt._data.message, opt.value, () => {
-          this._decreaseEnd();
+          if (type === "increase") this._increaseEnd();
+          else this._decreaseEnd();
+
           if (typeof setStateCallback === "function") {
             setStateCallback();
           }
         });
       } else {
-        this.setValue_(opt.value, setStateCallback);
-      }
-
-      return this;
-    },
-
-    _onIncreaseDefault(opt, setStateCallback) {
-      let feedback = opt._data.feedback;
-      opt = { ...opt };
-      opt.value = opt._data.value;
-
-      if (feedback === "error") {
-        this.setError(opt.message || opt._data.message, opt.value, () => {
-          this._increaseEnd();
-          if (typeof setStateCallback === "function") {
-            setStateCallback();
+        if (this._checkRequiredValue({ value: opt.value })) {
+          if (typeof this._currentProps.onValidate === "function") {
+            this._validateOnChange({ value: opt.value, event: null, component: this }, false, true);
+          } else {
+            this.setInitial(null, opt.value, setStateCallback);
           }
-        });
-      } else {
-        this.setValue_(opt.value, setStateCallback);
+        }
       }
 
       return this;
@@ -888,7 +875,7 @@ let Number = Context.withContext(
       return this;
     },
 
-    _validateOnChange(opt, checkValue, setStateCallback) {
+    _validateOnChange(opt, checkValue, callOnChangeFeedback, setStateCallback) {
       let _callCallback = typeof setStateCallback === "function";
 
       if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
@@ -897,7 +884,12 @@ let Number = Context.withContext(
           if (typeof result === "object") {
             if (result.feedback) {
               _callCallback = false;
-              this.setFeedback(result.feedback, result.message, result.value, setStateCallback);
+              this[callOnChangeFeedback ? "_updateFeedback" : "setFeedback"](
+                result.feedback,
+                result.message,
+                result.value,
+                setStateCallback
+              );
             } else {
               _callCallback = false;
               opt = { ...opt };

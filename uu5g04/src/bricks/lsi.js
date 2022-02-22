@@ -27,138 +27,136 @@ import LsiItem from "./lsi-item.js";
 import "./lsi.less";
 //@@viewOff:imports
 
-export const Lsi = UU5.Common.LsiMixin.withContext(
-  UU5.Common.VisualComponent.create({
-    displayName: "Lsi", // for backward compatibility (test snapshots)
-    //@@viewOn:mixins
-    mixins: [
-      UU5.Common.BaseMixin,
-      UU5.Common.PureRenderMixin,
-      UU5.Common.ElementaryMixin,
-      UU5.Common.ContentMixin,
-      UU5.Common.LsiMixin,
-      UU5.Common.NestingLevelMixin,
-    ],
-    //@@viewOff:mixins
+export const Lsi = UU5.Common.VisualComponent.create({
+  displayName: "Lsi", // for backward compatibility (test snapshots)
+  //@@viewOn:mixins
+  mixins: [
+    UU5.Common.BaseMixin,
+    UU5.Common.PureRenderMixin,
+    UU5.Common.ElementaryMixin,
+    UU5.Common.ContentMixin,
+    UU5.Common.LsiMixin,
+    UU5.Common.NestingLevelMixin,
+  ],
+  //@@viewOff:mixins
 
-    //@@viewOn:statics
-    statics: {
-      tagName: ns.name("Lsi"),
-      nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "inline"),
-      classNames: {
-        main: ns.css("lsi"),
-      },
-      defaults: {
-        childTagName: "UU5.Bricks.Lsi.Item",
-      },
-      opt: {
-        nestingLevelWrapper: true,
-      },
+  //@@viewOn:statics
+  statics: {
+    tagName: ns.name("Lsi"),
+    nestingLevelList: UU5.Environment.getNestingLevelList("bigBoxCollection", "inline"),
+    classNames: {
+      main: ns.css("lsi"),
     },
-    //@@viewOff:statics
-
-    //@@viewOn:propTypes
-    propTypes: {
-      lsi: UU5.PropTypes.object,
-      allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
-      params: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.array, UU5.PropTypes.object]),
+    defaults: {
+      childTagName: "UU5.Bricks.Lsi.Item",
     },
-    //@@viewOff:propTypes
-
-    //@@viewOn:getDefaultProps
-    getDefaultProps: function () {
-      return {
-        lsi: null,
-        allowTags: [],
-        params: null,
-      };
+    opt: {
+      nestingLevelWrapper: true,
     },
-    //@@viewOff:getDefaultProps
+  },
+  //@@viewOff:statics
 
-    //@@viewOn:reactLifeCycle
-    //@@viewOff:reactLifeCycle
+  //@@viewOn:propTypes
+  propTypes: {
+    lsi: UU5.PropTypes.object,
+    allowTags: UU5.PropTypes.arrayOf(UU5.PropTypes.string),
+    params: UU5.PropTypes.oneOfType([UU5.PropTypes.string, UU5.PropTypes.array, UU5.PropTypes.object]),
+  },
+  //@@viewOff:propTypes
 
-    //@@viewOn:interface
-    isLsi() {
-      return true;
-    },
-    //@@viewOff:interface
+  //@@viewOn:getDefaultProps
+  getDefaultProps: function () {
+    return {
+      lsi: null,
+      allowTags: [],
+      params: null,
+    };
+  },
+  //@@viewOff:getDefaultProps
 
-    //@@viewOn:overriding
-    //@@viewOff:overriding
+  //@@viewOn:reactLifeCycle
+  //@@viewOff:reactLifeCycle
 
-    //@@viewOn:private
-    _expandChildProps: function (child) {
-      let newChildProps = child ? { ...child.props } : {};
+  //@@viewOn:interface
+  isLsi() {
+    return true;
+  },
+  //@@viewOff:interface
 
-      newChildProps.id = newChildProps.id || this.getId() + "-inner";
-      newChildProps.controlled = true;
-      newChildProps.hidden = this.isHidden();
-      newChildProps.disabled = this.isDisabled();
-      newChildProps.selected = this.isSelected();
-      newChildProps.nestingLevel = this.getNestingLevel();
+  //@@viewOn:overriding
+  //@@viewOff:overriding
 
-      return newChildProps;
-    },
+  //@@viewOn:private
+  _expandChildProps: function (child) {
+    let newChildProps = child ? { ...child.props } : {};
 
-    _getChildren() {
-      let child;
+    newChildProps.id = newChildProps.id || this.getId() + "-inner";
+    newChildProps.controlled = true;
+    newChildProps.hidden = this.isHidden();
+    newChildProps.disabled = this.isDisabled();
+    newChildProps.selected = this.isSelected();
+    newChildProps.nestingLevel = this.getNestingLevel();
 
-      if (typeof this.props.children === "function") {
-        child = this.props.children({ language: this.getLanguage() });
-      } else {
-        let children = this.getChildren();
+    return newChildProps;
+  },
 
-        if (children) {
-          let lsi = {};
-          if (!Array.isArray(children)) children = [children];
-          child = children.map((child) => {
-            let newChild = child;
+  _getChildren() {
+    let child;
 
-            if (UU5.Common.Element.isValid(child)) {
-              if (child.type.tagName === this.getDefault("childTagName")) {
-                // Lsi.Item
-                let childContent = child.props?.content || child.props?.children;
-                if (childContent && (typeof childContent !== "string" || !childContent.match(/^\s*$/))) {
-                  lsi[child.props.language] = child;
-                }
-              } else {
-                // language as prop
-                newChild = UU5.Common.Element.clone(child, { language: this.getLanguage() });
+    if (typeof this.props.children === "function") {
+      child = this.props.children({ language: this.getLanguage() });
+    } else {
+      let children = this.getChildren();
+
+      if (children) {
+        let lsi = {};
+        if (!Array.isArray(children)) children = [children];
+        child = children.map((child) => {
+          let newChild = child;
+
+          if (UU5.Common.Element.isValid(child)) {
+            if (child.type.tagName === this.getDefault("childTagName")) {
+              // Lsi.Item
+              let childContent = child.props?.content || child.props?.children;
+              if (childContent && (typeof childContent !== "string" || !childContent.match(/^\s*$/))) {
+                lsi[child.props.language] = child;
               }
+            } else {
+              // language as prop
+              newChild = UU5.Common.Element.clone(child, { language: this.getLanguage() });
             }
-
-            return newChild;
-          });
-
-          if (Object.keys(lsi).length) {
-            child = this.getLsiItem(lsi, this.props.params, this.getLanguage());
-            child = child ? UU5.Common.Element.clone(child, this._expandChildProps(child)) : null;
           }
-        } else {
-          child = (
-            <LsiItem
-              {...this.getMainPropsToPass(["UU5.Common.BaseMixin", "UU5.Common.ElementaryMixin"])}
-              controlled
-              language={this.getLanguage()}
-              content={this.getLsiItem(this.props.lsi, this.props.params)}
-              nestingLevel={this.getNestingLevel()}
-            />
-          );
+
+          return newChild;
+        });
+
+        if (Object.keys(lsi).length) {
+          child = this.getLsiItem(lsi, this.props.params, this.getLanguage());
+          child = child ? UU5.Common.Element.clone(child, this._expandChildProps(child)) : null;
         }
+      } else {
+        child = (
+          <LsiItem
+            {...this.getMainPropsToPass(["UU5.Common.BaseMixin", "UU5.Common.ElementaryMixin"])}
+            controlled
+            language={this.getLanguage()}
+            content={this.getLsiItem(this.props.lsi, this.props.params)}
+            nestingLevel={this.getNestingLevel()}
+          />
+        );
       }
+    }
 
-      return child;
-    },
-    //@@viewOff:private
+    return child;
+  },
+  //@@viewOff:private
 
-    //@@viewOn:render
-    render: function () {
-      return this.getNestingLevel() ? this._getChildren() : null;
-    },
-    //@@viewOff:render
-  })
-);
+  //@@viewOn:render
+  render: function () {
+    return this.getNestingLevel() ? this._getChildren() : null;
+  },
+  //@@viewOff:render
+});
 
 Lsi.Item = LsiItem;
 

@@ -212,14 +212,15 @@ export const DateTools = {
     let dateTo;
 
     if (Array.isArray(dateValue)) {
-      dateFrom = dateValue[0];
+      dateFrom = UU5.Common.Tools.cloneDateObject(dateValue[0]);
     } else if (dateValue) {
-      dateFrom = dateValue;
+      dateFrom = UU5.Common.Tools.cloneDateObject(dateValue);
     } else {
       dateFrom = new Date();
     }
 
     if (dateFrom.getTime?.() === UNSPECIFIED_FROM.getTime()) dateFrom = new Date(Date.now());
+    dateFrom.setDate(1);
 
     if (view === "days" || !view) {
       dateTo = DateTools.increaseDate(dateFrom, undefined, 1);

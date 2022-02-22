@@ -868,8 +868,17 @@ export const InputMixin = {
     };
   },
 
-  _hasValueChanged(prevValue, nextValue) {
+  _hasValueChanged(prevValue, nextValue, emptyValueList) {
     let result = false;
+
+    if (
+      Array.isArray(emptyValueList) &&
+      emptyValueList.indexOf(prevValue) > -1 &&
+      emptyValueList.indexOf(nextValue) > -1
+    ) {
+      // value may have changed but it still represents empty value, so act as if it didn't change
+      return result;
+    }
 
     if (typeof prevValue !== typeof nextValue) {
       result = true;
@@ -878,7 +887,7 @@ export const InputMixin = {
       if ((typeof nextValue === "string" || typeof nextValue === "number") && prevValue !== nextValue) {
         result = true;
       } else if (typeof nextValue === "object" && nextValue instanceof Date) {
-        if (UU5.Common.Tools.compareDates(prevValue, nextValue, "equals")) {
+        if (!UU5.Common.Tools.compareDates(prevValue, nextValue, "equals")) {
           result = true;
         }
       } else if (Array.isArray(nextValue) || (typeof nextValue === "object" && nextValue !== null)) {
@@ -918,4 +927,3 @@ InputMixin.ERROR_FEEDBACK = ERROR_FEEDBACK;
 InputMixin.LOADING_FEEDBACK = LOADING_FEEDBACK;
 
 export default InputMixin;
-   

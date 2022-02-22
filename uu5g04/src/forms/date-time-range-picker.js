@@ -168,8 +168,14 @@ let DateTimeRangePicker = Context.withContext(
         dateTo: null,
         format: null,
         country: null,
-        beforeRangeMessage: "Date is out of range.",
-        afterRangeMessage: "Date is out of range.",
+        beforeRangeMessage: {
+          cs: "Datum a čas je mimo rozsah.",
+          en: "Date and time is out of range.",
+        },
+        afterRangeMessage: {
+          cs: "Datum a čas je mimo rozsah.",
+          en: "Date and time is out of range.",
+        },
         parseDate: null,
         dateIcon: "mdi-calendar",
         timeIcon: "mdi-clock-outline",
@@ -228,7 +234,7 @@ let DateTimeRangePicker = Context.withContext(
         if (validateResult.feedback === "error") propValue = null;
         else if (Array.isArray(propValue) && propValue.length === 1) propValue = null;
 
-        if (fromValue && toValue) {
+        if (propValue && fromValue && toValue) {
           fromDateInputValue = this._getDateString(propValue[0]);
           fromTimeInputValue = this._getTimeString(propValue[0], this.props, this._isSorXs());
           toDateInputValue = this._getDateString(propValue[1]);
@@ -992,10 +998,10 @@ let DateTimeRangePicker = Context.withContext(
         if (!opt.value || date) {
           if (this._compareDates(date, this._formattingValues.dateFrom, "lesser")) {
             result.feedback = "error";
-            result.message = this._formattingValues.beforeRangeMessage;
+            result.message = this.getLsiItem(this._formattingValues.beforeRangeMessage);
           } else if (this._compareDates(date, this._formattingValues.dateTo, "greater")) {
             result.feedback = "error";
-            result.message = this._formattingValues.afterRangeMessage;
+            result.message = this.getLsiItem(this._formattingValues.afterRangeMessage);
           } else {
             result.feedback = opt ? opt.feedback || "initial" : "initial";
             result.message = opt ? opt.message || null : null;
@@ -1037,10 +1043,10 @@ let DateTimeRangePicker = Context.withContext(
             result = false;
           } else if (dateFrom && valueFrom < dateFrom) {
             result.feedback = "error";
-            result.message = this.props.beforeRangeMessage;
+            result.message = this.getLsiItem(this.props.beforeRangeMessage);
           } else if (dateTo && valueTo > dateTo) {
             result.feedback = "error";
-            result.message = this.props.afterRangeMessage;
+            result.message = this.getLsiItem(this.props.afterRangeMessage);
           }
         }
       }
@@ -1629,10 +1635,9 @@ let DateTimeRangePicker = Context.withContext(
 
     _onClickReset(e) {
       let opt = { event: e, component: this, _data: { type: "calendar" } };
-      let value = undefined;
-      let executeOnChange = false;
-
-      opt.value = this._getOutcomingValue(value);
+      let value = this._getOutcomingValue(value) || null;
+      let executeOnChange = value !== this.state.value;
+      opt.value = value;
       opt._data.value = value;
       opt._data.executeOnChange = executeOnChange;
       if (executeOnChange && typeof this.props.onChange === "function") {
@@ -1769,11 +1774,30 @@ let DateTimeRangePicker = Context.withContext(
           state.fromFeedback = inputFeedback.fromFeedback;
           state.toFeedback = inputFeedback.toFeedback;
 
-          if (state.fromFeedback.feedback === "error" || state.toFeedback.feedback === "error") {
+          if (state.fromFeedback.feedback === "error") {
             delete state.fromDisplayDate;
+            if (state.value) {
+              if (this.state.value) {
+                state.value[0] = this.state.value[0];
+              } else {
+                delete state.value;
+              }
+            }
+          }
+
+          if (state.toFeedback.feedback === "error") {
             delete state.toDisplayDate;
+            if (state.value) {
+              if (this.state.value) {
+                state.value[1] = this.state.value[1];
+              } else {
+                delete state.value;
+              }
+            }
+          }
+
+          if (state.fromFeedback.feedback === "error" && state.toFeedback.feedback === "error") {
             adjustDisplayDate = false;
-            delete state.value;
           }
         }
       } else {

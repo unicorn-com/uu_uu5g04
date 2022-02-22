@@ -238,6 +238,10 @@ export const Popover = withContext(
     //@@viewOff:overriding
 
     //@@viewOn:private
+    _registerBody(ref) {
+      this._body = ref;
+    },
+
     _open(checkWrongUsage, opt, setStateCallback) {
       // check temporarily disabled because we have it wrong in:
       //   - context-menu.js, date-*-picker.js, time-picker.js, item-list.js, color-picker.js
@@ -294,6 +298,8 @@ export const Popover = withContext(
         let footerClassName = opt.footerClassName || null;
         let autoResize = opt.autoResize != null ? opt.autoResize : this.props.autoResize;
         let fitWidthToAroundElement = opt.fitWidthToAroundElement;
+        let fitHeightToViewport =
+          "fitHeightToViewport" in opt ? opt.fitHeightToViewport : this.props.fitHeightToViewport;
 
         this.setState(
           {
@@ -319,7 +325,7 @@ export const Popover = withContext(
             width: fitWidthToAroundElement && opt.aroundElement ? this._getAroundElementWidth(opt.aroundElement) : null,
           },
           () => {
-            this._addEvent(onBeforeClose, onClose);
+            this._addEvent(onBeforeClose, onClose, fitHeightToViewport);
             this._setPosition(opt, setStateCallback);
             // This is a workaround. Otherwise the first click outside of popover after opening it doesnt close it
             setTimeout(() => (this._stopPropagation = false));
@@ -458,10 +464,22 @@ export const Popover = withContext(
 
     _getPosition(requiredPosition, aroundElementRect, offset = 0, fitHeightToViewport, horizontalOnly) {
       let element = UU5.Common.DOM.findNode(this);
+
+      let origBodyMaxHeight = this._body?.style.maxHeight;
+      let origBodyScrollTop = this._body?.scrollTop;
+      if (this._body) {
+        this._body.style.maxHeight = "";
+      }
+
       let isRelative = getComputedStyle(element).position === "relative";
       let elementRect = UU5.Common.Tools.merge(element.getBoundingClientRect(), {});
       aroundElementRect = UU5.Common.Tools.merge(aroundElementRect, {});
       let availableAreaRect;
+
+      if (this._body) {
+        this._body.style.maxHeight = origBodyMaxHeight;
+        this._body.scrollTop = origBodyScrollTop;
+      }
 
       if (isRelative) {
         availableAreaRect = {
@@ -727,15 +745,16 @@ export const Popover = withContext(
       return result;
     },
 
-    _addEvent(onBeforeClose, onClose) {
+    _addEvent(onBeforeClose, onClose, resize) {
       this._stopPropagation = true;
 
       if (this._closeListener) this._removeEvent();
       if (!this.state.disableBackdrop && !this.props.disableBackdrop) {
         this._closeListener = (e) => {
           let isPopover = this._findTarget(e.target);
+          let looksLikeSelect = e.type === "click" && this._lastMouseDownTarget !== e.target;
 
-          if (!this._stopPropagation && !isPopover && !this.isHidden()) {
+          if (!this._stopPropagation && !isPopover && !this.isHidden() && !looksLikeSelect) {
             if (typeof onBeforeClose === "function") {
               onBeforeClose();
             }
@@ -747,6 +766,9 @@ export const Popover = withContext(
 
         window.addEventListener("click", this._closeListener);
         window.addEventListener("contextmenu", this._closeListener);
+        if (resize) window.addEventListener("resize", this._onResize);
+
+        window.addEventListener("mousedown", this._onMouseDown);
       }
     },
 
@@ -754,8 +776,14 @@ export const Popover = withContext(
       if (this._closeListener) {
         window.removeEventListener("click", this._closeListener);
         window.removeEventListener("contextmenu", this._closeListener);
+        window.removeEventListener("resize", this._onResize);
+        window.removeEventListener("mousedown", this._onMouseDown);
         this._closeListener = null;
       }
+    },
+
+    _onMouseDown(e) {
+      this._lastMouseDownTarget = e.target;
     },
 
     _getMainAttrs() {
@@ -819,7 +847,7 @@ export const Popover = withContext(
         children: this.props.children,
       });
       if (children) {
-        let props = {};
+        let props = { ref: this._registerBody };
         if (this.state.maxHeight) {
           props.style = { maxHeight: this.state.maxHeight, overflowY: "auto" };
         }

@@ -51,22 +51,21 @@ describe("[uu5g04-hooks] useLanguage", () => {
 });
 
 describe("[uu5g04-hooks] useLanguage; legacy integration", () => {
-  // NOTE Components using LsiMixin not wrapped by LsiMixin.withContext
-  // always use global language (not tested here).
+  // NOTE Components using LsiMixin are now auto-wrapped by LsiMixin.withContext.
+  // Previous note: "Components using LsiMixin not wrapped by LsiMixin.withContext
+  // always use global language (not tested here)."
 
   UU5.Environment._allowTestContext = true;
-  const WithLsiContextHoc = UU5.Common.LsiMixin.withContext(
-    UU5.Common.Component.create({
-      mixins: [UU5.Common.BaseMixin, UU5.Common.LsiMixin],
-      onChangeLanguage_(...args) {
-        this.onChangeLanguageDefault(...args);
-        this.props.onChangeLanguageCheck(...args);
-      },
-      render() {
-        return this.props.children(this.props);
-      },
-    })
-  );
+  const WithLsiContextHoc = UU5.Common.Component.create({
+    mixins: [UU5.Common.BaseMixin, UU5.Common.LsiMixin],
+    onChangeLanguage_(...args) {
+      this.onChangeLanguageDefault(...args);
+      this.props.onChangeLanguageCheck(...args);
+    },
+    render() {
+      return this.props.children(this.props);
+    },
+  });
   UU5.Environment._allowTestContext = false;
 
   it("should receive changes from legacy (UU5.Bricks.LsiContext)", async () => {

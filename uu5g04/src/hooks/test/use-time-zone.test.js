@@ -4,7 +4,7 @@ import { mount, act, initHookRenderer, renderHook } from "uu5g05-test";
 describe("[uu5g04-hooks] useTimeZone", () => {
   it("result, timeZone; should return default timeZone", async () => {
     let { lastResult } = renderHook(useTimeZone);
-    expect(lastResult()).toEqual([undefined, expect.any(Function)]);
+    expect(lastResult()).toEqual(["Europe/Prague", expect.any(Function)]);
   });
 
   it("result, timeZone; should return context timeZone", async () => {

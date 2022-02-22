@@ -3,6 +3,7 @@ import UU5 from "uu5g04";
 
 import TabsItem from "../tabs-item.js";
 import ns from "./bricks-editable-ns.js";
+import { TabsItemNameFix } from "./modal-editation-components.js";
 import EditableLsi from "./bricks-editable-lsi.js";
 //@@viewOff:imports
 
@@ -125,6 +126,7 @@ const editableComponentPropsSetup = [
       ],
     }),
   },
+  TabsItemNameFix,
 ];
 
 const editableAdditionalPropsSetup = [
@@ -134,10 +136,12 @@ const editableAdditionalPropsSetup = [
     type: "switchSelector",
     label: EditableLsi.tabs.initialActiveNameLabel,
     getProps: (props, componentProps, items) => {
-      let usedItems = items.map((item) => ({
-        content: item.props.header || item.props.name || item.props.id + "",
-        value: item.props.name || item.props.id + "",
-      }));
+      let usedItems = items.map((item) => {
+        return {
+          content: item.props.header || item.props.name || item.props.id + "",
+          value: item.props.name || item.props.id + "",
+        };
+      });
       let hasValue = items.some((item) => item.props.name === props.value || item.props.id === props.value);
       return {
         ...props,

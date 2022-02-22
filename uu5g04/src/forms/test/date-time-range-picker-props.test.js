@@ -524,8 +524,14 @@ describe(`UU5.Forms.DateTimeRangePicker check default values`, () => {
     expect(wrapper.instance().props.hideWeekNumber).toBe(false);
     expect(wrapper.instance().props.showTodayButton).toBe(false);
     expect(wrapper.instance().props.country).toBe(null);
-    expect(wrapper.instance().props.beforeRangeMessage).toMatch(/Date is out of range./);
-    expect(wrapper.instance().props.afterRangeMessage).toMatch(/Date is out of range./);
+    expect(wrapper.instance().props.beforeRangeMessage).toMatchObject({
+      cs: "Datum a čas je mimo rozsah.",
+      en: "Date and time is out of range.",
+    });
+    expect(wrapper.instance().props.afterRangeMessage).toMatchObject({
+      cs: "Datum a čas je mimo rozsah.",
+      en: "Date and time is out of range.",
+    });
     expect(wrapper.instance().props.parseDate).toBe(null);
     expect(wrapper.instance().props.disableBackdrop).toBeFalsy();
     expect(wrapper.instance().props.openToContent).toBe("xs");

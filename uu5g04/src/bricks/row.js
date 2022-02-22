@@ -75,7 +75,7 @@ export const Row = UU5.Common.VisualComponent.create({
       backgroundColor: "rgba(209,196,233,.8)",
       color: "#311B92",
       highlightColor: "rgba(218,208,237,.45)",
-      enablePlaceholder: true,
+      enablePlaceholder: false,
     },
   },
   //@@viewOff:statics

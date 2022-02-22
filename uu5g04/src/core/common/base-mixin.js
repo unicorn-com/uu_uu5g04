@@ -289,7 +289,7 @@ export const BaseMixin = {
 
   getId: function () {
     var id = this.id;
-    !id &&
+    id === null &&
       this.showError("idMissing", id, {
         mixinName: "UU5.Common.BaseMixin",
       });

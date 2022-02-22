@@ -1,5 +1,5 @@
 //@@viewOn:imports
-import * as UU5 from "uu5g04";
+import UU5, {createComponent} from "uu5g04";
 import ns from "./bricks-editable-ns.js";
 import ConfirmModal from "../confirm-modal.js";
 import Icon from "../icon.js";
@@ -477,6 +477,28 @@ export const ContentInput = ({ componentProps, onChangeProps }) => {
   );
 };
 
+export const TabsItemNameFix = createComponent({
+  //@@viewOn:reactLifeCycle
+  getInitialState() {
+    let fixedItems = this.props.items.map((item) => ({
+      ...item,
+      props: {
+        ...item.props,
+        name: item.props.name ?? UU5.Common.Tools.generateUUID(8),
+      },
+    }));
+    this.props.onChangeItems(fixedItems);
+    return {};
+  },
+  //@@viewOff:reactLifeCycle
+
+  //@@viewOn:render
+  render() {
+    return null;
+  },
+  //@@viewOff:render
+});
+
 export default {
   PresetEditComponent,
   ColWidthEditComponent,
@@ -487,4 +509,5 @@ export default {
   ProgressBarItemStriped,
   LineVertical,
   ContentInput,
+  TabsItemNameFix,
 };
