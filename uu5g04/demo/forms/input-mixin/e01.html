@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example UU5.Forms.InputMixin 01</title>
+
+  <link type="text/css" rel="stylesheet"
+        href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+  <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+
+  <script>
+    Uu5Loader.config({
+      "imports": {
+        "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+      }
+    });
+  </script>
+</head>
+
+<body>
+
+  <div id="uu5Example"></div>
+
+  <script type="text/babel">
+    import UU5 from "uu5g04";
+    import "uu5g04-bricks";
+    import "uu5g04-forms";
+
+    const Page = UU5.Common.VisualComponent.create({
+
+      statics: {
+        tagName: 'UU5.Examples.Forms.InputMixin-2',
+        classNames: {
+          main: 'uu5-examples-forms-inputmixin'
+        },
+        pageHeader: "Example UU5.Forms.InputMixin 02",
+        pageFooter: "Made by <UU5.DocKit.Bricks.LinkUU5/>",
+        sourceCode: "exampleUU5FormsInputMixin02.html"
+      },
+
+      mixins: [
+        UU5.Common.BaseMixin
+      ],
+
+      render() {
+        return (
+          <UU5.Bricks.Page>
+
+            <UU5.Bricks.Box className='padding-10'>
+              <UU5.Bricks.Well>
+                <UU5.Bricks.Header level='3' content='InputMixin methods example'/>
+                {/*@@viewOn:examples*/}
+                <UU5.Forms.Text
+                  ref_={(_textInput) => {
+                    this.textInput = _textInput;
+                  }}
+                  label="Value"
+                  placeholder="Simple placeholder that gonna be changed"
+                />
+                <UU5.Forms.TextArea
+                  ref_={(_textArea) => {
+                    this.textArea = _textArea;
+                  }}
+                  readOnly={true}
+                  label="Readonly information"/><br/>
+                <UU5.Bricks.Div colWidth="col-xs-12 col-sm-12 col-md-9 col-lg-9" className="uu5-col-offset-m5 uu5-col-offset-l5 padding-5">
+                  <UU5.Bricks.ButtonGroup>
+                    <UU5.Bricks.Button content="Set value to textarea" onClick={() => {
+                      this.textArea.setValue(this.textInput.getValue());
+                    }}/>
+                    <UU5.Bricks.Button content="Set textarea as editable" onClick={() => {
+                      this.textArea.editable();
+                    }}/>
+                    <UU5.Bricks.Button className="margin-right-10" content="Set textarea as readonly"
+                                       onClick={() => {
+                                         this.textArea.readOnly();
+                                       }}/>
+                  </UU5.Bricks.ButtonGroup><br />
+                  <UU5.Bricks.ButtonGroup>
+                    <UU5.Bricks.Button content="Set initial to textarea" onClick={() => {
+                      this.textArea.setInitial('Setting initial', 'Initial value');
+                    }}/>
+                    <UU5.Bricks.Button className="margin-right-10" content="Set loading to textarea" onClick={() => {
+                      this.textArea.setLoading('Loading text...', '');
+                    }}/>
+                    <UU5.Bricks.Button content="Reset" onClick={() => {
+                      this.textArea.reset();
+                    }}/>
+                  </UU5.Bricks.ButtonGroup>
+                </UU5.Bricks.Div>
+                {/*@@viewOff:examples*/}
+              </UU5.Bricks.Well>
+            </UU5.Bricks.Box>
+
+          </UU5.Bricks.Page>
+        )
+      }
+    });
+
+    UU5.Common.DOM.render(<Page/>, document.getElementById('uu5Example'));
+  </script>
+
+</body>
+</html>

@@ -4,19 +4,12 @@
   <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
   <title>Code Demo</title>
 
-  <script>
-    // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
-    // var appAssetsRelativeUrlPath = "public/";
-    // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
-  </script>
-
   <!---->
-  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+  <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
 
   <script>
-    SystemJS.config({
-      "paths": {
-        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+    Uu5Loader.config({
+      "imports": {
         "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
         "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
           "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
@@ -29,18 +22,12 @@
         "uu5g04-bricks": "/uu5g04-bricks.js"
       }
     });
-
-    // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
-    //   "uuoidc.redirectUri":"callbacks/login-callback.html"
-    // }}));
   </script>
 
 </head>
 <body>
 <div id="renderHere"></div>
 
-<!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
-<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
 <script type="text/babel">
   import UU5 from "uu5g04";
   import "uu5g04-bricks";
@@ -51,15 +38,26 @@
           render: function () {
             return (
               <UU5.Bricks.Container>
+                <UU5.Bricks.CookieBar
+                  fixed="top"
+                  colorSchema="grey"
+                  infoText="More Info"
+                  agreedText={<UU5.Bricks.Lsi lsi={{ cs: "Přijmout vše", en: "Accept all" }} />}
+                  agreedBgStyle="filled"
+                  agreedColorSchema="primary"
+                  onClose={e => console.log("close", e)}
+                  expireDays={365}
+                  cookieKey="my-uuapp-demo"
+                />
+
                 <UU5.Bricks.Header level="1">UU5.Bricks.CookieBar</UU5.Bricks.Header>
+
+                <UU5.Bricks.Button content="Clear cookies" onClick={() => {
+                  localStorage.removeItem("uu5-cookies");
+                  UU5.Common.Tools.setCookie("my-uuapp-demo", "", 0);
+                }} />
+
                 <UU5.Bricks.CookieBar />
-
-                <UU5.Bricks.CookieBar fixed="top" colorSchema="red" infoText="More Info" useLocalStorage />
-
-
-                  <UU5.Bricks.Button content='Clear cookies' onClick={() => localStorage.removeItem('uu5-cookies')} />
-
-
               </UU5.Bricks.Container>
             );
           }

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 06 - create without reload</title>
+
+  <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+  <script>
+    Uu5Loader.config({
+      "imports": {
+        "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/4.0.0/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/4.0.0/uu_appg01.min.js",
+        "uu_appg01_oidc": "https://cdn.plus4u.net/uu-appg01-oidc/2.0.0/uu_appg01_oidc.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/beta/uu-uu5g04/1.33.0-hooks.2/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/beta/uu-uu5g04/1.33.0-hooks.2/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/beta/uu-uu5g04/1.33.0-hooks.2/uu5g04-forms.min.js",
+        "uu5g04-block-layout": "https://cdn.plus4u.net/beta/uu-uu5g04/1.33.0-hooks.2/uu5g04-block-layout.min.js",
+        "uu5g04-hooks": "https://cdn.plus4u.net/beta/uu-uu5g04/1.33.0-hooks.2/uu5g04-hooks.min.js",
+      }
+    });
+  </script>
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+  import "uu5g04-block-layout";
+  import { useDataList, createVisualComponent, useState, useRef, PagingAutoLoad, useMemo, useCallback, useEffect, useUnmountedRef } from "uu5g04-hooks";
+  import { Session } from "uu_appg01_oidc";
+  import { Client } from "uu_appg01";
+
+  let callDelay = 1500;
+  let error = false;
+
+  /*@@viewOn:example*/
+  const Calls = {
+    // ...
+    load(dtoIn) {
+      const commandUri = Calls.getCommandUri("joke/list");
+      return Calls.call("get", commandUri, dtoIn);
+    },
+
+    loadItem(dtoIn) {
+      const commandUri = Calls.getCommandUri("joke/get");
+      return Calls.call("get", commandUri, dtoIn);
+    },
+
+    updateItem(newData) {
+      const commandUri = Calls.getCommandUri("joke/update");
+      return Calls.call("post", commandUri, newData);
+    },
+
+    createItem(newData) {
+      const commandUri = Calls.getCommandUri("joke/create");
+      return Calls.call("post", commandUri, newData);
+    },
+
+    deleteItem(dtoIn) {
+      const commandUri = Calls.getCommandUri("joke/delete");
+      return Calls.call("post", commandUri, dtoIn);
+    },
+  };
+  /*@@viewOff:example*/
+
+  Calls.call = async (method, uri, dtoIn) => {
+    const startTime = Date.now();
+    try {
+      const clientOptions = error ? { headers: { authorization: null } } : undefined;
+      const response = await Client[method](uri, dtoIn, clientOptions);
+      return response.data;
+    } finally {
+      await new Promise(resolve => setTimeout(resolve, Math.max(0, callDelay - (Date.now() - startTime))));
+    }
+  };
+  Calls.getCommandUri = useCase => "https://uuappg01-eu-w-1.plus4u.net/uu-jokes-maing01/4ef6a7b01b5942ecbfb925b249af987f/" + useCase;
+
+  const ControlPanel = createVisualComponent({
+    render(props) {
+      const { dataListResult } = props;
+      const { state, data, newData, errorData, pendingData, handlerMap } = dataListResult;
+      const [errorFlag, setErrorFlag] = useState(false);
+
+      return (
+        <UU5.Bricks.Panel
+          className={UU5.Common.Css.css`margin: 16px 0;`}
+          iconExpanded="mdi-chevron-up"
+          iconCollapsed="mdi-chevron-down"
+          mountContent="onFirstExpand"
+          expanded={false}
+          controlled={false}
+          header="Settings"
+        >
+          <UU5.Forms.Checkbox
+            label="Server Error"
+            inputWidth="32px"
+            value={errorFlag}
+            onChange={({ value }) => {
+              error = value;
+              setErrorFlag(value)
+            }}
+          />
+          <UU5.Forms.Slider
+            label="Server Call Delay [ms]"
+            labelWidth="auto"
+            value={callDelay}
+            controlled={false}
+            onChange={opt => {
+              opt.component.onChangeDefault(opt);
+              callDelay = opt.value;
+            }}
+            min={0}
+            max={5000}
+            step={500}
+          />
+          <UU5.Bricks.Pre className={UU5.Common.Css.css`height: 400px; overflow: auto;`}>
+            {JSON.stringify({
+              state,
+              data: data ? JSON.stringify(data).replace(/"/g, "'") : null,
+              newData: newData ? JSON.stringify(newData).replace(/"/g, "'") : null,
+              pendingData: pendingData ? JSON.stringify(pendingData).replace(/"/g, "'") : null,
+              errorData,
+              handlerMap: Object.keys(handlerMap).reduce((r, k) => (r[k] = handlerMap[k] ? "fn(...)" : null, r), {}),
+              "data[0].handlerMap": data && data[0] ? Object.keys(data[0].handlerMap).reduce((r, k) => (r[k] = data[0].handlerMap[k] ? "fn(...)" : null, r), {}) : null,
+            }, null, 2)}
+          </UU5.Bricks.Pre>
+        </UU5.Bricks.Panel>
+      );
+    }
+  });
+
+  /*@@viewOn:example*/
+  const Example = createVisualComponent({
+    render() {
+      const pageSize = 8;
+      const dataListResult = useDataList({
+        pageSize,
+        handlerMap: {
+          load: Calls.load,
+          createItem: Calls.createItem,
+        },
+        itemHandlerMap: {
+          load: Calls.loadItem,
+          update: Calls.updateItem,
+          delete: Calls.deleteItem,
+        }
+        // skipInitialLoad: false,
+        // initialDtoIn: undefined,
+        // initialData: undefined, // [{"name":"A0 Skydiving","text":"Why don't blind people skydive? Because it scares the crap out of their dogs.","averageRating":0,"ratingCount":0,"visibility":false,"uuIdentity":"127-0000-0000-1","uuIdentityName":"Milan Šatka","awid":"4ef6a7b01b5942ecbfb925b249af987f","categoryList":[],"sys":{"cts":"2020-06-09T08:23:30.699Z","mts":"2020-06-09T08:23:30.699Z","rev":0},"id":"5edf47021d5ce800255e7000","uuAppErrorMap":{}}]
+      });
+      const { state, data, newData, errorData, pendingData, handlerMap } = dataListResult;
+      console.log(dataListResult);
+
+      const modalRef = useRef();
+      const alertBusRef = useRef();
+
+      const firstNotYetLoadedIndex = data ? data.findIndex(it => it == null) : 0;
+      const dataToRender = data && firstNotYetLoadedIndex >= 0 ? data.slice(0, firstNotYetLoadedIndex) : data || [];
+      const unmountedRef = useUnmountedRef();
+
+      const showModal = useCallback((joke, onSave) => {
+        const modal = modalRef.current;
+        modal.open({
+          header: joke ? "Edit Joke" : "Create Joke",
+          content: (
+            <UU5.Forms.Form
+              onSave={onSave}
+              onSaveDone={opt => {
+                modal.close();
+              }}
+              onSaveFail={opt => {
+                opt.component.getAlertBus().setAlert(
+                  { content: `${joke ? "Updating" : "Creating"} on server failed.`, colorSchema: "danger" }
+                );
+              }}
+              onCancel={() => modal.close()}
+              controlled={false}
+            >
+              <UU5.Forms.Text label="Name" name="name" value={joke ? joke.name : undefined} controlled={false} />
+              <UU5.Forms.TextArea label="Text" name="text" value={joke ? joke.text : undefined} controlled={false} />
+              <UU5.Forms.Controls controlled={false} />
+            </UU5.Forms.Form>
+          )
+        });
+      }, []);
+
+      const handleJokeUpdate = useCallback((item) => {
+        showModal(item.data, async ({ component, values }) => {
+          let data, error;
+          try {
+            data = await item.handlerMap.update(values);
+          } catch (e) {
+            error = e;
+          }
+          if (unmountedRef.current) return;
+          if (error) component.saveFail(error);
+          else component.saveDone(data);
+        });
+      }, [showModal, unmountedRef]);
+
+      const handleJokeDelete = useCallback((item) => {
+        item.handlerMap.delete();
+      }, []);
+
+      return (
+        <UU5.Bricks.Div>
+          <UU5.Bricks.Button
+            disabled={!handlerMap.createItem}
+            colorSchema="success"
+            onClick={() => {
+              showModal(null, async ({ component, values }) => {
+                let data, error;
+                try {
+                  data = await handlerMap.createItem(values);
+                } catch (e) {
+                  error = e;
+                }
+                if (unmountedRef.current) return;
+                if (error) component.saveFail(error);
+                else component.saveDone(data);
+                alertBusRef.current.setAlert({
+                  content: error ? `Creating joke '${values.name}' failed.` : (
+                    <div>
+                      Joke <UU5.Bricks.Link href={"#" + data.id}>{data.name}</UU5.Bricks.Link> has been created.
+                    </div>
+                  ),
+                  colorSchema: error ? "danger" : undefined
+                });
+              });
+            }}
+          >
+            Create item
+          </UU5.Bricks.Button>{" "}
+          <UU5.Bricks.Button disabled={!handlerMap.load} onClick={() => handlerMap.load()}>
+            Load 1st page & reset others
+          </UU5.Bricks.Button>{" "}
+
+          <ControlPanel dataListResult={dataListResult} />
+
+          <UU5.Bricks.AlertBus ref_={alertBusRef} />
+
+          <UU5.Bricks.Section header="New Data" level={3}>
+            {newData.length === 0 ? "No new data." : (
+              <UU5.Bricks.Row display="flex">
+                {newData.map(item => (
+                  <UU5.Bricks.Column colWidth="m-6 l-4 xl-3" key={item.data.id}>
+                    <Joke
+                      id={item.data.id}
+                      data={item.data}
+                      onUpdate={!item.handlerMap.update ? null : handleJokeUpdate}
+                      onDelete={!item.handlerMap.delete ? null : handleJokeDelete}
+                      processingItem={item}
+                    />
+                  </UU5.Bricks.Column>
+                ))}
+              </UU5.Bricks.Row>
+            )}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="Data" level={3}>
+            <UU5.Bricks.Row display="flex">
+              {dataToRender.map(item => (
+                <UU5.Bricks.Column colWidth="m-6 l-4 xl-3" key={item.data.id}>
+                  <Joke
+                    id={item.data.id}
+                    data={item.data}
+                    onUpdate={!item.handlerMap.update ? null : handleJokeUpdate}
+                    onDelete={!item.handlerMap.delete ? null : handleJokeDelete}
+                    processingItem={item}
+                  />
+                </UU5.Bricks.Column>
+              ))}
+            </UU5.Bricks.Row>
+
+            <PagingAutoLoad
+              data={data}
+              handleLoad={handlerMap.loadNext}
+              distance={window.innerHeight}
+              pageSize={pageSize}
+              error={
+                ({error, reload}) => !pendingData || pendingData.operation !== "loadNext" ? (
+                  <UU5.Bricks.Button onClick={() => reload()} content="Load more (auto-load failed)" />
+                ) : (
+                  <UU5.Common.Fragment>
+                    <UU5.Bricks.Loading />
+                    <UU5.Bricks.Div className="uu5-common-center">(loading {pageSize} more...)</UU5.Bricks.Div>
+                  </UU5.Common.Fragment>
+                )
+              }
+            >
+              <UU5.Bricks.Loading />
+              <UU5.Bricks.Div className="uu5-common-center">(loading {pageSize} more...)</UU5.Bricks.Div>
+            </PagingAutoLoad>
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Modal controlled={false} ref_={modalRef} mountContent="onEachOpen" />
+        </UU5.Bricks.Div>
+      );
+    }
+  });
+  /*@@viewOff:example*/
+
+  const Joke = UU5.Common.Component.memo(createVisualComponent({
+    render(props) {
+      const { onUpdate, onDelete, data, processingItem = {} } = props;
+      const attrs = UU5.Common.VisualComponent.getAttrs(props);
+      return (
+        <UU5.BlockLayout.Tile {...attrs} colorSchema={processingItem.errorData ? "danger" : undefined}>
+          <UU5.BlockLayout.Block
+            actions={[
+              {
+                content: "Update",
+                icon: "mdi-update",
+                active: true,
+                disabled: !onUpdate,
+                colorSchema: "primary",
+                onClick: () => onUpdate(processingItem)
+              },
+              {
+                content: "Delete",
+                icon: "mdi-delete",
+                active: true,
+                disabled: !onDelete,
+                colorSchema: "danger",
+                onClick: () => onDelete(processingItem)
+              }
+            ]}
+          >
+            <UU5.BlockLayout.Row weight="primary" ellipses>
+              {data.name}
+            </UU5.BlockLayout.Row>
+            <UU5.BlockLayout.Row>
+              {data.text}
+            </UU5.BlockLayout.Row>
+          </UU5.BlockLayout.Block>
+        </UU5.BlockLayout.Tile>
+      );
+    }
+  }));
+
+  const Page = createVisualComponent({
+    render() {
+      return (
+        <UU5.Bricks.Container>
+          <UU5.Common.Session session={Session.currentSession}>
+            <UU5.Common.Identity>
+              <UU5.Common.Identity.Item notAuthenticated>
+                <UU5.Bricks.Button onClick={() => Session.currentSession.login()}>Login</UU5.Bricks.Button>
+              </UU5.Common.Identity.Item>
+              <UU5.Common.Identity.Item pending></UU5.Common.Identity.Item>
+
+              <UU5.Common.Identity.Item authenticated>
+                <Example />
+              </UU5.Common.Identity.Item>
+            </UU5.Common.Identity>
+          </UU5.Common.Session>
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  UU5.Common.DOM.render(<Page />, document.getElementById("uu5Example"));
+</script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Example 00</title>
+
+    <link type="text/css" rel="stylesheet"
+          href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+    <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+
+    <script>
+      Uu5Loader.config({
+        "imports": {
+          "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+          "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+          "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+          "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+        }
+      });
+    </script>
+    <style>
+      .padding {
+        padding: 31px;
+      }
+
+    </style>
+
+  </head>
+  <body>
+
+    <div id="uu5Example"></div>
+
+    <script type="text/babel">
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+
+      const Page = UU5.Common.VisualComponent.create({
+
+        mixins: [
+          UU5.Common.BaseMixin
+        ],
+
+        render() {
+          return (
+            /*@@viewOn:0*/
+            <UU5.Bricks.Page
+              ref_={(page) => this._page = page}
+              type="1"
+              leftWrapperProps={{ style: { backgroundColor: '#fafafa' } }}
+              top={
+                <UU5.Bricks.Box colorSchema="blue-rich">
+                  uuDocKit
+                  <UU5.Bricks.Page.MenuButton menu='right' style={{float: "right"}} />
+                </UU5.Bricks.Box>
+
+              }
+              bottom={<UU5.Bricks.Box colorSchema="grey">Bottom Panel</UU5.Bricks.Box>}
+              left={
+                <UU5.Bricks.Div>
+                  <UU5.Bricks.Box colorSchema='primary' content='Menu' />
+                  <UU5.Bricks.Ul>
+                    <UU5.Bricks.Li>
+                      Home
+                    </UU5.Bricks.Li>
+                    <UU5.Bricks.Li>
+                      Content
+                    </UU5.Bricks.Li>
+                    <UU5.Bricks.Li>
+                      About
+                    </UU5.Bricks.Li>
+                    <UU5.Bricks.Li>
+                      About Authors
+                    </UU5.Bricks.Li>
+                  </UU5.Bricks.Ul>
+                  <UU5.Bricks.Paragraph /><br/>
+                  <UU5.Bricks.Paragraph /><br/>
+                  <UU5.Bricks.Paragraph /><br/>
+                  <UU5.Bricks.Paragraph /><br/>
+                  <UU5.Bricks.Paragraph /><br/>
+                  <UU5.Bricks.Paragraph /><br/>
+                  <UU5.Bricks.Paragraph /><br/>
+                  <UU5.Bricks.Paragraph /><br/>
+                  <UU5.Bricks.Paragraph /><br/>
+                </UU5.Bricks.Div>
+              }
+              right={
+                <UU5.Bricks.Section>
+                  <br />
+                  <UU5.Bricks.Column>
+                    <UU5.Bricks.ButtonGroup vertical>
+                      <UU5.Bricks.Button colorSchema="primary" onClick={() => {
+                        this._page.toggleRight()
+                      }}>
+                        <UU5.Bricks.Icon icon="mdi-arrow-left-bold-circle-outline" />
+                      </UU5.Bricks.Button>
+                      <UU5.Bricks.Button colorSchema="primary" onClick={() => {
+                        window.open(location.href, '_blank');
+                      }}>
+                        <UU5.Bricks.Icon icon="mdi-window-restore" />
+                      </UU5.Bricks.Button>
+                    </UU5.Bricks.ButtonGroup>
+                  </UU5.Bricks.Column>
+                </UU5.Bricks.Section>
+              }
+              leftWidth="xs-25 s-20 m-15 l-15 xl-15"
+              rightWidth="!xs-10 !s-10 !m-10 !l-10 !xl-10"
+              leftFixed={true}
+              rightFixed={true}
+              topFixed={"smart"}
+              leftSwipe={true}
+              rightSwipe={true}
+            >
+              <UU5.Bricks.Section className="padding" header="Content" level={1}>
+                <UU5.Bricks.Block><UU5.Bricks.Icon icon="mdi-exclamation" />
+                  - pokud je v nastavení <b>LeftWidth</b> nebo <b>RightWidth</b> pro danou velikost viewportu
+                  vykřičník, znamená to, že sloupec bude moci vyjíždět a zajíždět. Pokud tam
+                  vykřičník není, sloupec bude vždy viditelný (fixed).<br /><br />
+                  <b>První číslo</b> - první číslo určuje šířku sloupce, když je zavřený. To znamená, že
+                  left lze zobrazit např. jako úzkou lištu s ovládacími prvky.
+                  Pokud je zadáno pouze jedno číslo, sloupec nebude vidět vůbec.<br /><br />
+                  <b>Druhé číslo</b> - druhé číslo určuje šířku sloupce, když je otevřený.
+                  Obě čísla mohou být zadána v různých jednotkách - např. em, px, %, ...<br />
+                  (viz. <UU5.Bricks.Link href=" https://www.w3schools.com/cssref/css_units.asp" />).
+                  Zápis pak může vypadat např.
+                  <UU5.Bricks.Code>leftWidth="xs-10em-50px sm-20 md-15px-60 lg-15-60rem"</UU5.Bricks.Code>.
+                  Pokud jednotky specifikovány nejsou, pak se s číslem zachází jako s procenty.</UU5.Bricks.Block>
+              </UU5.Bricks.Section>
+            </UU5.Bricks.Page>
+            /*@@viewOff:0*/
+          );
+        }
+      });
+
+      UU5.Common.DOM.render(<Page />, document.getElementById('uu5Example'));
+    </script>
+  </body>
+</html>

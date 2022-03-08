@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Example 00</title>
+
+    <link type="text/css" rel="stylesheet"
+          href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+    <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+
+    <script>
+      Uu5Loader.config({
+        "imports": {
+          "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+          "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/4.0.0/uu_appg01_core.min.js",
+          "uu_appg01": "https://cdn.plus4u.net/uu-appg01/4.0.0/uu_appg01.min.js",
+          "uu_appg01_oidc": "https://cdn.plus4u.net/uu-appg01-oidc/2.0.0/uu_appg01_oidc.min.js",
+
+          "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+          "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js"
+        }
+      });
+    </script>
+
+    <style>
+      .loading:after {
+        display: inline-block;
+        animation: dotty steps(1, end) 1s infinite;
+        content: '';
+      }
+
+      @keyframes dotty {
+        0% {
+          content: '';
+        }
+        25% {
+          content: '.';
+        }
+        50% {
+          content: '..';
+        }
+        75% {
+          content: '...';
+        }
+        100% {
+          content: '';
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="uu5Example"></div>
+
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import {Session} from "uu_appg01_oidc";
+
+      /*@@viewOn:0*/
+      UU5.Environment.setSession(Session);
+
+      const Page = createReactClass({
+        mixins: [
+          UU5.Common.BaseMixin,
+          UU5.Common.ElementaryMixin,
+          UU5.Common.IdentityMixin
+        ],
+
+        render() {
+          let paragraph;
+          if (this.isPending()) {
+            paragraph = <UU5.Bricks.P className="loading" />;
+          } else if (this.isAuthenticated()) {
+            paragraph = <UU5.Bricks.P>Logged in as {this.getIdentity().name}.</UU5.Bricks.P>;
+          } else {
+            paragraph = (
+              <UU5.Bricks.P>
+                Please <UU5.Bricks.Link onClick={() => this.login()}>log in</UU5.Bricks.Link> first...
+              </UU5.Bricks.P>
+            );
+          }
+
+          return (
+            <UU5.Bricks.Container>
+              <UU5.Bricks.Row>
+                <UU5.Bricks.Column colWidth="s-6">
+                  {paragraph}
+                  <UU5.Bricks.Button onClick={() => this._console.info(this.getIdentity())} content="Get identity" />
+                  <UU5.Bricks.Button onClick={() => this.logout()} content="Logout" />
+                </UU5.Bricks.Column>
+                <UU5.Bricks.Column colWidth="s-6">
+                  <UU5.Bricks.Console ref_={(console) => this._console = console} />
+                </UU5.Bricks.Column>
+              </UU5.Bricks.Row>
+            </UU5.Bricks.Container>
+          );
+        }
+      });
+      /*@@viewOff:0*/
+
+      ReactDOM.render(<Page />, document.getElementById('uu5Example'));
+    </script>
+  </body>
+</html>

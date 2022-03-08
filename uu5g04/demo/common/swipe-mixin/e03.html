@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Example 03</title>
+
+    <link type="text/css" rel="stylesheet"
+          href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+    <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+
+    <script>
+      Uu5Loader.config({
+        "imports": {
+          "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+          "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+          "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+          "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+        }
+      });
+    </script>
+    <style>
+      .uu5-bricks-div{
+        background: #E0E0E0;
+        width: 100%;
+        height: 71em;
+        font-size: 20px;
+        text-align: left;
+        padding-top: 10px;
+        padding-left: 5px;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <div id="uu5Example"></div>
+
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+
+      const Page = createReactClass({
+        mixins:[
+          UU5.Common.BaseMixin,
+          UU5.Common.SwipeMixin
+        ],
+
+        render() {
+          return (
+            <UU5.Bricks.Container>
+              {/*@@viewOn:0*/}
+              <UU5.Bricks.Header level={2} underline>Swipe</UU5.Bricks.Header>
+              <UU5.Bricks.Div className="uu5-bricks-div" mainAttrs={{
+                onTouchStart: this.swipeOnTouchStart,
+                onTouchMove: this.swipeOnTouchMove.bind(this, () => this.forceUpdate()),
+                onTouchEnd: this.swipeOnTouchEnd.bind(this, () => this.forceUpdate())
+              }}
+              >
+                Length: <b>{this.getSwipeLength()}</b>
+                <p>getAngle: <b>{this.getAngle()}</b></p>
+                <p>isSwipedHorizontal: <b>{this.isSwipedHorizontal().toString()}</b></p>
+                <p>isSwipedVertical: <b>{this.isSwipedVertical().toString()}</b></p>
+                <p>isSwiped: <b>{this.isSwiped().toString()}</b></p>
+                <p>isSwipedShort: <b>{this.isSwipedShort().toString()}</b></p>
+                <p>isSwipedLong: <b>{this.isSwipedLong().toString()}</b></p>
+                <p>isSwipedSlow: <b>{this.isSwipedSlow().toString()}</b></p>
+                <p>isSwipedFast: <b>{this.isSwipedFast().toString()}</b></p>
+                <p>isSwipedUp: <b>{this.isSwipedUp().toString()}</b></p>
+                <p>isSwipedRight: <b>{this.isSwipedRight().toString()}</b></p>
+                <p>isSwipedDown: <b>{this.isSwipedDown().toString()}</b></p>
+                <p>isSwipedLeft: <b>{this.isSwipedLeft().toString()}</b></p>
+                <p>isSwipedUpRight: <b>{this.isSwipedUpRight().toString()}</b></p>
+                <p>isSwipedDownRight: <b>{this.isSwipedDownRight().toString()}</b></p>
+                <p>isSwipedUpLeft: <b>{this.isSwipedUpLeft().toString()}</b></p>
+                <p>isSwipedUpShort: <b>{this.isSwipedUpShort().toString()}</b></p>
+                <p>isSwipedRightShort: <b>{this.isSwipedRightShort().toString()}</b></p>
+                <p>isSwipedDownShort: <b>{this.isSwipedDownShort().toString()}</b></p>
+                <p>isSwipedLeftShort: <b>{this.isSwipedLeftShort().toString()}</b></p>
+                <p>isSwipedUpRightShort: <b>{this.isSwipedUpRightShort().toString()}</b></p>
+                <p>isSwipedDownRightShort: <b>{this.isSwipedDownRightShort().toString()}</b></p>
+                <p>isSwipedUpLeftShort: <b>{this.isSwipedUpLeftShort().toString()}</b></p>
+                <p>isSwipedDownLeftShort: <b>{this.isSwipedDownLeftShort().toString()}</b></p>
+                <p>isSwipedUpLong: <b>{this.isSwipedUpLong().toString()}</b></p>
+                <p>isSwipedRightLong: <b>{this.isSwipedRightLong().toString()}</b></p>
+                <p>isSwipedDownLong: <b>{this.isSwipedDownLong().toString()}</b></p>
+                <p>isSwipedLeftLong: <b>{this.isSwipedLeftLong().toString()}</b></p>
+                <p>isSwipedUpRightLong: <b>{this.isSwipedUpRightLong().toString()}</b></p>
+                <p>isSwipedDownRightLong: <b>{this.isSwipedDownRightLong().toString()}</b></p>
+                <p>isSwipedUpLeftLong: <b>{this.isSwipedUpLeftLong().toString()}</b></p>
+                <p>isSwipedDownLeftLong: <b>{this.isSwipedDownLeftLong().toString()}</b></p>
+                <p>angle: <b>{this.angle(12,32,54,7).toString()}</b></p>
+              </UU5.Bricks.Div>
+              {/*@@viewOff:0*/}
+            </UU5.Bricks.Container>
+          );
+        }
+      });
+
+      ReactDOM.render(<Page />, document.getElementById('uu5Example'));
+    </script>
+  </body>
+</html>

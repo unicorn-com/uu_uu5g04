@@ -53,7 +53,7 @@ export const CookieBar = UU5.Common.VisualComponent.create({
     defaults: {
       content:
         "Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use.",
-      expireDays: 10 * 365.25,
+      expireDays: 365,
     },
     opt: {
       nestingLevelRoot: true,
@@ -71,6 +71,9 @@ export const CookieBar = UU5.Common.VisualComponent.create({
     expireDays: UU5.PropTypes.number,
     cookieKey: UU5.PropTypes.string,
     cookieValue: UU5.PropTypes.string,
+    agreedText: UU5.PropTypes.node,
+    agreedBgStyle: UU5.PropTypes.string,
+    agreedColorSchema: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
@@ -85,6 +88,9 @@ export const CookieBar = UU5.Common.VisualComponent.create({
       expireDays: null,
       cookieKey: "uu5-cookies",
       cookieValue: "yes",
+      agreedText: undefined,
+      agreedBgStyle: "transparent",
+      agreedColorSchema: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -95,7 +101,7 @@ export const CookieBar = UU5.Common.VisualComponent.create({
   },
 
   UNSAFE_componentWillReceiveProps(nextProps) {
-    this.props.expireDays ? this._checkCookies() : this._checkLocalStorageItem();
+    this.props.expireDays ? this._checkCookies(nextProps) : this._checkLocalStorageItem(nextProps);
   },
   //@@viewOff:reactLifeCycle
 
@@ -110,18 +116,18 @@ export const CookieBar = UU5.Common.VisualComponent.create({
   //@@viewOff:overriding
 
   //@@viewOn:private
-  _checkCookies() {
-    if (UU5.Common.Tools.getCookie(this.props.cookieKey) === this.props.cookieValue && !this._isAgreed) {
+  _checkCookies(props = this.props) {
+    if (UU5.Common.Tools.getCookie(props.cookieKey) === props.cookieValue && !this._isAgreed) {
       this._isAgreed = true;
-      this.setState({ hidden: true }, this.props.onClose);
+      this.setState({ hidden: true }, props.onClose);
     }
     return this;
   },
 
-  _checkLocalStorageItem() {
-    const item = localStorage && localStorage.getItem(this.props.cookieKey);
-    if (item === this.props.cookieValue) {
-      this.setState({ hidden: true }, this.props.onClose);
+  _checkLocalStorageItem(props = this.props) {
+    const item = localStorage && localStorage.getItem(props.cookieKey);
+    if (item === props.cookieValue) {
+      this.setState({ hidden: true }, props.onClose);
     }
     return this;
   },
@@ -154,12 +160,11 @@ export const CookieBar = UU5.Common.VisualComponent.create({
     return (
       <Button
         className={this.getClassName("button")}
-        bgStyle="transparent"
-        colorSchema={this.props.colorSchema !== "black" ? "custom" : null}
-        size="s"
+        bgStyle={this.props.agreedBgStyle}
+        colorSchema={this.props.agreedColorSchema || (this.props.colorSchema !== "black" ? "custom" : null)}
         onClick={this.props.expireDays ? this._confirm : this._setLocalStorageItem}
       >
-        <Icon icon="mdi-close" />
+        {this.props.agreedText || <Icon icon="mdi-close" />}
       </Button>
     );
   },
@@ -175,6 +180,7 @@ export const CookieBar = UU5.Common.VisualComponent.create({
           href={this.props.infoHref || undefined}
           className={this.getClassName().link}
           target={this.props.infoTarget}
+          colorSchema="default"
         />
       );
     }
@@ -196,8 +202,10 @@ export const CookieBar = UU5.Common.VisualComponent.create({
   render() {
     return (
       <Div {...this._getMainProps()}>
-        {this._getText()}
-        {this._getLink()}
+        <div>
+          {this._getText()}
+          {this._getLink()}
+        </div>
         {this._getButton()}
       </Div>
     );

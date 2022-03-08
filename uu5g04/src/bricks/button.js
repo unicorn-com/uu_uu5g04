@@ -263,7 +263,7 @@ let Button = UU5.Common.VisualComponent.create({
       regexpHash: /^#/,
       httpRegexp: /^(\/|[a-z0-9\-+.]+:)/,
     },
-    editMode: { startMode: "button", displayType: "inline"},
+    editMode: { startMode: "button", displayType: "inline" },
   },
   //@@viewOff:statics
 

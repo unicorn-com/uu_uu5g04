@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Example 00</title>
+
+    <link type="text/css" rel="stylesheet"
+          href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+    <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+
+    <script>
+      Uu5Loader.config({
+        "imports": {
+          "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+          "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+          "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+          "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+        }
+      });
+    </script>
+    <style>
+      .uu5-bricks-p {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="uu5Example"></div>
+
+    <script type="text/babel">
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+
+      const Page = UU5.Common.VisualComponent.create({
+        render() {
+          return (
+            <UU5.Bricks.Container>
+
+              <UU5.Bricks.Swiper
+                ref_={(swiper) => this._swiper = swiper}
+                style={{
+                  backgroundColor: "lightblue",
+                  minHeight: "200px",
+                  width: "100%"
+                }}
+              >
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.Swiper.Menu style={{ backgroundColor: "lightgrey" }}>
+                  <UU5.Bricks.Button content="Close" onClick={() => this._swiper.closeLeftMenu()} />
+                </UU5.Bricks.Swiper.Menu>
+
+                <UU5.Bricks.Swiper.Menu pullRight style={{ backgroundColor: "lightgrey" }}>
+                  <UU5.Bricks.Button content="Close" onClick={() => this._swiper.closeRightMenu()} />
+                </UU5.Bricks.Swiper.Menu>
+                {/*@@viewOff:0*/}
+
+                <UU5.Bricks.Swiper.Body>
+                  <UU5.Bricks.P className="center">
+                    On touch screen you can open menus by swipe on blue area. If you don't have touchscreen, turn on
+                    console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the
+                    console or by pressing ctrl+shift+M.
+                  </UU5.Bricks.P>
+                </UU5.Bricks.Swiper.Body>
+              </UU5.Bricks.Swiper>
+              <UU5.Bricks.Button content="Toggle left" onClick={() => this._swiper.toggleLeftMenu()} />
+              <UU5.Bricks.Button content="pullRight Menu" onClick={() => this._swiper.toggleRightMenu()} />
+            </UU5.Bricks.Container>
+          );
+        }
+      });
+
+      UU5.Common.DOM.render(<Page />, document.getElementById("uu5Example"));
+    </script>
+  </body>
+</html>

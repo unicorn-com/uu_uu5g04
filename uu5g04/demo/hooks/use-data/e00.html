@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 00</title>
+
+  <link type="text/css" rel="stylesheet"
+        href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+  <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+
+  <script>
+    Uu5Loader.config({
+      "imports": {
+        "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js",
+        "uu5g04-block-layout": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-block-layout.min.js",
+        "uu5g04-hooks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-hooks.min.js",
+      }
+    });
+  </script>
+
+  <style>
+    .margin {
+      margin-top: 16px !important;
+    }
+
+    .uu5-bricks-button + .uu5-bricks-button {
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script type="text/babel">
+  import UU5, { createVisualComponent } from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+  import { useData, useEffect } from "uu5g04-hooks";
+
+  let error = false;
+  let localStorage = {};
+
+  class LocalStorage {
+
+    static DELAY = 1000;
+
+    constructor(key, defaultData = []) {
+      this.key = key;
+      this.defaultData = defaultData;
+    }
+
+    async get() {
+      return await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (!error) {
+            let json = localStorage[this.key];
+            resolve(json ? JSON.parse(json) : JSON.parse(JSON.stringify(this.defaultData)));
+          } else {
+            let error = new Error("Test Error");
+            error.status = 500;
+            reject(error);
+          }
+        }, this.constructor.DELAY);
+      });
+    }
+
+    async set(data = this.defaultData) {
+      return await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (!error) {
+            let json = JSON.stringify(data);
+            localStorage[this.key] = json;
+            resolve(JSON.parse(json));
+          } else {
+            let error = new Error("Test Error");
+            error.status = 500;
+            reject(error);
+          }
+        }, this.constructor.DELAY);
+      });
+    }
+  }
+
+  const db = new LocalStorage("uu5g04-hooks-usedata.0", { date: new Date() });
+
+  /*@@viewOn:example*/
+  const Calls = {
+    async load(dtoIn) {
+      return Calls.call("get", "loadData", dtoIn);
+    },
+
+    async update(newData) {
+      return Calls.call("post", "updateData", newData);
+    },
+  };
+  /*@@viewOff:example*/
+
+  // server mock
+  Calls.call = async (method, uri, dtoIn) => {
+    return db[method === "get" ? "get" : "set"](dtoIn);
+  };
+
+  /*@@viewOn:example*/
+  function Example({ pessimistic }) {
+    let dataValues = useData({
+      onLoad: Calls.load,
+      onUpdate: Calls.update
+    });
+    let { viewState, errorState, error, syncData, asyncData, operations, handleLoad, handleUpdate } = dataValues;
+    let data = pessimistic ? asyncData : syncData;
+
+    useEffect(() => {
+      console.table(operations, ["id", "type", "state", "result", "args"]);
+    }, [operations]);
+
+    return (
+      <UU5.Bricks.Div>
+        <UU5.Bricks.Button
+          disabled={!data}
+          onClick={() => {
+            handleLoad(data)
+              .then(data => console.log("load ok", data))
+              .catch(data => console.log("load ko", data))
+          }}
+        >
+          Load
+        </UU5.Bricks.Button>
+        <UU5.Bricks.Button
+          disabled={!data}
+          colorSchema="success"
+          onClick={() => {
+            data = { ...data };
+            data.date = new Date();
+
+            handleUpdate(data)
+              .then(data => console.log("update ok", data))
+              .catch(data => console.log("update ko", data))
+          }}
+        >
+          Update
+        </UU5.Bricks.Button>
+        <UU5.Bricks.Pre className="margin">
+          {JSON.stringify({
+            viewState, errorState, error,
+            data: data,
+            handleLoad: "handleLoad(dtoIn)",
+            handleUpdate: "handleUpdate(newData)",
+          }, null, 2)}
+        </UU5.Bricks.Pre>
+      </UU5.Bricks.Div>
+    );
+  }
+  /*@@viewOff:example*/
+
+  const Page = createVisualComponent({
+    getInitialState() {
+      return {
+        pessimistic: false,
+        error: false
+      }
+    },
+
+    render() {
+      return (
+        <UU5.Bricks.Container>
+          <UU5.Forms.Checkbox
+            label="Pessimistic"
+            inputWidth="32px"
+            value={this.state.pessimistic}
+            onChange={({ value }) => this.setState({ pessimistic: value })}
+          />
+          <UU5.Forms.Checkbox
+            label="Server Error"
+            inputWidth="32px"
+            value={this.state.error}
+            onChange={({ value }) => {
+              error = value;
+              this.setState({ error: value })
+            }}
+          />
+
+          <Example
+            pessimistic={this.state.pessimistic}
+          />
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  UU5.Common.DOM.render(<Page />, document.getElementById("uu5Example"));
+</script>
+</body>
+</html>

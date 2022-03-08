@@ -1,17 +1,16 @@
 {
   "name": "uu5g04",
-  "version": "1.52.0",
+  "version": "1.53.2",
   "private": true,
   "workspaces": [
     "uu5g04"
   ],
   "description": "",
   "license": "UAF",
-  "spec": "nodejs-multi; uu_appg01_devkit@4.0.0",
-  "dependencies": {},
+  "spec": "nodejs-multi; uu_appg01_devkit@5.2.2",
   "uuBuildSettings": {},
   "devDependencies": {
-    "uu_appg01_devkit": "^4.0.0"
+    "uu_appg01_devkit": "^5.2.2"
   },
   "scripts": {
     "clean": "uu_appg01_devkit clean",

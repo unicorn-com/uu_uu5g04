@@ -3,27 +3,27 @@
 @import "../tools.less";
 
 .@{name}-cookie-bar {
-  padding: 8px 40px 8px 8px;
+  padding: 16px 8px 16px 16px;
   width: 100%;
   text-align: center;
   opacity: 1;
   background-color: #FFFFFF;
-}
-
-.@{name}-cookie-bar > * {
-  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
 }
 
 .@{name}-cookie-bar-top {
   top: 0;
   left: 0;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.34);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.34);
 }
 
 .@{name}-cookie-bar-bottom {
   bottom: 0;
   left: 0;
-  box-shadow: 0 -2px 4px 0 rgba(0,0,0,0.34);
+  box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.34);
 }
 
 .@{name}-cookie-bar-top, .@{name}-cookie-bar-bottom {
@@ -32,29 +32,33 @@
 }
 
 .@{name}-cookie-bar-button {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-}
-
-.@{name}-cookie-bar-button.@{name}-button-transparent {
-  &:hover, &:active {
-   background-color: transparent;
-  }
+  white-space: nowrap;
 }
 
 .@{name}-cookie-bar .@{name}-link {
-  color: inherit;
   margin-left: 8px;
 }
 
 .@{name}-cookie-bar.uu5-common-hidden {
-  display: block !important;
+  display: flex !important;
   visibility: hidden;
   opacity: 0;
   transition: ~"opacity linear 0.5s, visibility linear 0.5s";
+  pointer-events: none;
+  z-index: -1000;
 }
 
 .@{name}-cookie-bar.uu5-common-disabled {
   position: fixed !important;
+}
+
+@media @isXs {
+  .@{name}-cookie-bar {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .@{name}-cookie-bar-button {
+    align-self: flex-end;
+  }
 }

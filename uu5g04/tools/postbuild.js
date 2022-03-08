@@ -36,7 +36,7 @@ async function run() {
       VERSION: pkg.version,
       TARGET_ENVIRONMENT: "browser",
     };
-    let babelConfig = require("uu_appg01_devkit/src/config/.babelrc.js")("development", processEnv);
+    let babelConfig = require("uu_appg01_devkit/src/config/.babelrc.js").getOptions("development", processEnv);
     let exportsReader = new Es6ExportsReader(babelConfig);
     let testExports = exportsReader.getExportsFromFile("src/test/test-build.js");
     let typingsTest = new ExportsToTypings().serialize(testExports, "UU5.Test", "");

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Context 03</title>
+
+  <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+  <script>
+    Uu5Loader.config({
+      "imports": {
+        "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-hooks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-hooks.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js"
+      }
+    });
+  </script>
+
+  <style>
+    .uu5-bricks-box {
+      overflow: visible !important;
+    }
+
+    .uu5-bricks-button + .uu5-bricks-button {
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body>
+<div id="uu5Example"></div>
+
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import {
+    createComponent,
+    createVisualComponent,
+    useState,
+    useContext,
+    useMemo,
+    useRef,
+    useEffect
+  } from "uu5g04-hooks";
+  import "uu5g04-bricks";
+
+  //@@viewOn:example
+  const ColorContext = UU5.Common.Context.create();
+
+  const { common, ...colorsConfig } = UU5.Environment.colors;
+  const COLORS = Object.keys(colorsConfig);
+
+  function getRandomColor() {
+    return COLORS[Math.floor(Math.random() * COLORS.length)]
+  }
+
+  const Box = createVisualComponent({
+
+    //@@viewOn:statics
+    displayName: "UU5.Demo.Box",
+    nestingLevel: "box",
+    //@@viewOff:statics
+
+    render(props) {
+      //@@viewOn:hooks
+      //@@viewOff:hooks
+
+      //@@viewOn:interface
+      //@@viewOff:interface
+
+      //@@viewOn:private
+      console.log("box render");
+      //@@viewOff:private
+
+      //@@viewOn:render
+      return (
+        <ColorContext.Consumer>
+          {colorCtx => {
+            const level = colorCtx.parents.length + 1;
+            console.log("box consumer render", level);
+
+            return (
+              <UU5.Bricks.Box colorSchema={colorCtx.color}>
+                {UU5.Common.Element.create("h" + (level), null, level)}
+                <UU5.Bricks.Button
+                  children="Set color"
+                  onClick={() => colorCtx.setColor(getRandomColor())}
+                />
+                {colorCtx.parents.map((ctx, i) => {
+                  return (
+                    <UU5.Bricks.Button
+                      key={i}
+                      children={`Set parent ${colorCtx.parents.length - i} color`}
+                      onClick={() => ctx.setColor(getRandomColor())}
+                    />
+                  )
+                })}
+              </UU5.Bricks.Box>
+            )
+          }}
+        </ColorContext.Consumer>
+      );
+      //@@viewOff:render
+    }
+  });
+
+  const ColorProvider = createComponent({
+
+    //@@viewOn:statics
+    displayName: "UU5.Demo.ColorProvider",
+    //@@viewOff:statics
+
+    render(props) {
+      //@@viewOn:hooks
+      const [myColor, setMyColor] = useState(props.color);
+      //@@viewOff:hooks
+
+      //@@viewOn:interface
+      //@@viewOff:interface
+
+      //@@viewOn:private
+      console.log("provider render");
+      //@@viewOff:private
+
+      //@@viewOn:render
+      return (
+        <ColorContext.Consumer>
+          {colorCtx => {
+
+            const myParents = colorCtx.parents
+              ? [{ color: colorCtx.color, setColor: colorCtx.setColor }, ...colorCtx.parents]
+              : [];
+
+            const value = { color: myColor || colorCtx.color, setColor: setMyColor, parents: myParents };
+
+            console.log("provider consumer render", colorCtx.parents ? colorCtx.parents.length + 2 : 1, value);
+
+            return (
+              <ColorContext.Provider value={value}>
+                {props.children}
+              </ColorContext.Provider>
+            )
+          }}
+        </ColorContext.Consumer>
+      );
+      //@@viewOff:render
+    }
+  });
+
+  function Page() {
+    return (
+      <UU5.Bricks.Container>
+        <ColorProvider color="yellow">
+          <Box />
+
+          <ColorProvider>
+            <Box />
+
+            <ColorProvider>
+              <Box />
+
+              <ColorProvider color="blue">
+                <Box />
+              </ColorProvider>
+
+              <Box />
+            </ColorProvider>
+
+            <Box />
+          </ColorProvider>
+
+          <Box />
+        </ColorProvider>
+      </UU5.Bricks.Container>
+    );
+  }
+
+  /*@@viewOff:example*/
+
+  UU5.Common.DOM.render(<Page />, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

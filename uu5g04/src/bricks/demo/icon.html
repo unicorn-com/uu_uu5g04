@@ -4,18 +4,11 @@
     <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
     <title>Icon Demo</title>
 
-    <script>
-      // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
-      // var appAssetsRelativeUrlPath = "public/";
-      // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
-    </script>
-
-    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+    <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
 
     <script>
-      SystemJS.config({
-        "paths": {
-          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+      Uu5Loader.config({
+        "imports": {
           "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
           "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
           "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
@@ -41,8 +34,6 @@
   <body>
     <div id="renderHere"></div>
 
-    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
-    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
     <script type="text/babel">
       import UU5 from "uu5g04";
       import "uu5g04-bricks";

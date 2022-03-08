@@ -85,7 +85,7 @@ export const Header = UU5.Common.VisualComponent.create({
 
   //@@viewOn:overriding
   onBeforeForceEndEditation_() {
-    return this._editRef ? this._editRef.getPropsToSave() : undefined;
+    return this._editableComponent ? this._editableComponent.getPropsToSave() : undefined;
   },
   //@@viewOff:overriding
 

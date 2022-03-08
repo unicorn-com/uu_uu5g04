@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>SwitchSelector Demo</title>
+
+  <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+  <script>
+    Uu5Loader.config({
+      "imports": {
+        "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js",
+        "uu5codekitg01": "https://cdn.plus4u.net/uu-uu5codekitg01/1.0.0/uu5codekitg01.min.js"
+      }
+    });
+  </script>
+</head>
+<body>
+<div id="renderHere"></div>
+
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+  import "uu5codekitg01";
+
+  const items = [
+    { content: "Low", value: "low" },
+    { content: "Medium", value: "medium" },
+    { content: "High", value: "high" }
+  ];
+
+  const defaultProps = { ...UU5.Forms.InputMixin.getDefaultProps(), ...UU5.Bricks.SwitchSelector.getDefaultProps() };
+
+  const SwitchSelectorStateFull = UU5.Common.VisualComponent.create({
+    getInitialState() {
+      return { value: this.props.value || (this.props.items || UU5.Bricks.SwitchSelector.getDefaultProps().items)[0].value }
+    },
+
+    _onChange(opt) {
+      this.setState({ value: opt.value });
+      typeof this.props.onChange === "function" && this.props.onChange(opt);
+    },
+
+    render() {
+      return <UU5.Bricks.SwitchSelector {...this.props} value={this.state.value} onChange={this._onChange} />
+    }
+  });
+
+  function getProps(allProps, defaultProps) {
+    const props = {};
+    for (let prop in allProps) {
+      if (defaultProps[prop] !== allProps[prop]) props[prop] = allProps[prop];
+    }
+    return props;
+  }
+
+  //@@viewOn:example
+  const Page = UU5.Common.VisualComponent.create({
+
+    getInitialState() {
+      return {
+        label: "Label",
+        message: undefined,
+        feedback: "initial",
+        size: "m",
+        disabled: false,
+        readOnly: false,
+        labelColWidth: undefined,
+        inputColWidth: undefined,
+        inputWidth: undefined,
+        labelWidth: undefined,
+        spacing: undefined,
+        tooltip: undefined,
+        tooltipIcon: undefined,
+        labelAlignment: undefined,
+
+        bgStyle: "outline",
+        colorSchema: undefined,
+        elevation: undefined,
+        borderRadius: 2
+      };
+    },
+
+    render() {
+      return (
+        <UU5.Bricks.Container className={UU5.Common.Css.css`max-width: 768px; margin: 0 auto;`}>
+          <UU5.Forms.Form
+            className={UU5.Common.Css.css`margin-bottom: 32px; .uu5-bricks-switch-selector { width: 100%; }`}
+            padding={0}
+            spacing={8}
+            labelColWidth="xs-12"
+            inputColWidth="xs-12"
+          >
+            <UU5.Bricks.Row
+              className={UU5.Common.Css.css`margin: 0 -8px; .uu5-forms-input:last-child { margin-bottom: 0; }`}>
+              <UU5.Bricks.Column colWidth="m-6">
+                <UU5.Forms.Text
+                  label="Label"
+                  value={this.state.label}
+                  onBlur={({ value }) => this.setState({ label: value })}
+                />
+              </UU5.Bricks.Column>
+              <UU5.Bricks.Column colWidth="m-6">
+                <UU5.Forms.SwitchSelector
+                  items={["s", "m", "l", "xl"].map(value => ({ value }))}
+                  label="Size"
+                  value={this.state.size}
+                  onChange={({ value }) => this.setState({ size: value })}
+                />
+              </UU5.Bricks.Column>
+            </UU5.Bricks.Row>
+            <UU5.Bricks.Row
+              className={UU5.Common.Css.css`margin: 0 -8px; .uu5-forms-input:last-child { margin-bottom: 0; }`}>
+              <UU5.Bricks.Column colWidth="m-6">
+                <UU5.Forms.Select
+                  label="ColorSchema"
+                  value={this.state.colorSchema + ""}
+                  onChange={({ value }) => this.setState({ colorSchema: value === "undefined" ? undefined : value })}
+                >
+                  {[undefined, ...UU5.Environment.colorSchema].map(value => (
+                    <UU5.Forms.Select.Option key={value + ""} value={value + ""} />
+                  ))}
+                </UU5.Forms.Select>
+              </UU5.Bricks.Column>
+              <UU5.Bricks.Column colWidth="m-6">
+                <UU5.Forms.SwitchSelector
+                  items={["filled", "outline", "transparent", "underline"].map(value => ({ value }))}
+                  label="BgStyle"
+                  value={this.state.bgStyle}
+                  onChange={({ value }) => this.setState({ bgStyle: value })}
+                />
+              </UU5.Bricks.Column>
+            </UU5.Bricks.Row>
+            <UU5.Bricks.Row
+              className={UU5.Common.Css.css`margin: 0 -8px; .uu5-forms-input:last-child { margin-bottom: 0; }`}>
+              <UU5.Bricks.Column colWidth="m-6">
+                <UU5.Forms.Text
+                  label="BorderRadius"
+                  value={this.state.borderRadius == null ? "" : this.state.borderRadius + ""}
+                  onBlur={({ value }) => this.setState({ borderRadius: /^\d+$/.test(value) ? +value : (value || undefined) })}
+                />
+              </UU5.Bricks.Column>
+              <UU5.Bricks.Column colWidth="m-6">
+                <UU5.Forms.SwitchSelector
+                  items={["undefined", -1, 1, 2, 3, 4, 5].map(value => ({ value }))}
+                  label="Elevation"
+                  value={this.state.elevation + ""}
+                  onChange={({ value }) => this.setState({ elevation: value === "undefined" ? undefined : +value })}
+                />
+              </UU5.Bricks.Column>
+            </UU5.Bricks.Row>
+            <UU5.Bricks.Row
+              className={UU5.Common.Css.css`margin: 0 -8px; .uu5-forms-input:last-child { margin-bottom: 0; }`}>
+              <UU5.Bricks.Column colWidth="m-6">
+                <UU5.Forms.Select
+                  label="Feedback"
+                  value={this.state.feedback}
+                  onChange={({ value }) => this.setState({ feedback: value })}
+                >
+                  {["initial", "error", "warning", "success", "loading"].map(value => (
+                    <UU5.Forms.Select.Option key={value} value={value} />
+                  ))}
+                </UU5.Forms.Select>
+              </UU5.Bricks.Column>
+              <UU5.Bricks.Column colWidth="m-6">
+                <UU5.Forms.Text
+                  label="Message"
+                  value={this.state.message}
+                  onBlur={({ value }) => this.setState({ message: value || undefined })}
+                />
+              </UU5.Bricks.Column>
+            </UU5.Bricks.Row>
+            <UU5.Bricks.Row
+              className={UU5.Common.Css.css`margin: 0 -8px; .uu5-forms-input:last-child { margin-bottom: 0; }`}>
+              <UU5.Bricks.Column colWidth="m-6">
+                <UU5.Forms.Text
+                  label="Label ColWidth"
+                  value={this.state.labelColWidth}
+                  onBlur={({ value }) => this.setState({ labelColWidth: value || undefined })}
+                />
+              </UU5.Bricks.Column>
+              <UU5.Bricks.Column colWidth="m-6">
+                <UU5.Forms.Text
+                  label="Input ColWidth"
+                  value={this.state.inputColWidth}
+                  onBlur={({ value }) => this.setState({ inputColWidth: value || undefined })}
+                />
+              </UU5.Bricks.Column>
+            </UU5.Bricks.Row>
+            <UU5.Bricks.Row
+              className={UU5.Common.Css.css`margin: 0 -8px; .uu5-forms-input:last-child { margin-bottom: 0; }`}>
+              <UU5.Bricks.Column colWidth="m-6">
+                <UU5.Forms.Text
+                  label="Label Width"
+                  value={this.state.labelWidth == null ? "" : this.state.labelWidth + ""}
+                  onBlur={({ value }) => this.setState({ labelWidth: /^\d+$/.test(value) ? +value : (value || undefined) })}
+                />
+              </UU5.Bricks.Column>
+              <UU5.Bricks.Column colWidth="m-6">
+                <UU5.Forms.Text
+                  label="Input Width"
+                  value={this.state.inputWidth == null ? "" : this.state.inputWidth + ""}
+                  onBlur={({ value }) => this.setState({ inputWidth: /^\d+$/.test(value) ? +value : (value || undefined) })}
+                />
+              </UU5.Bricks.Column>
+            </UU5.Bricks.Row>
+            <UU5.Bricks.Row
+              className={UU5.Common.Css.css`margin: 0 -8px; .uu5-forms-input:last-child { margin-bottom: 0; }`}>
+              <UU5.Bricks.Column colWidth="m-6">
+                <UU5.Forms.Number
+                  label="Spacing"
+                  value={this.state.spacing}
+                  onBlur={({ value }) => this.setState({ spacing: value ? +value : undefined })}
+                  buttonHidden
+                />
+              </UU5.Bricks.Column>
+              <UU5.Bricks.Column colWidth="m-6">
+                <UU5.Forms.Text
+                  label="Label Alignment"
+                  value={this.state.labelAlignment}
+                  onBlur={({ value }) => this.setState({ labelAlignment: value || undefined })}
+                />
+              </UU5.Bricks.Column>
+            </UU5.Bricks.Row>
+            <UU5.Bricks.Row
+              className={UU5.Common.Css.css`margin: 0 -8px; .uu5-forms-input:last-child { margin-bottom: 0; }`}>
+              <UU5.Bricks.Column colWidth="m-6">
+                <UU5.Forms.Text
+                  label="Tooltip"
+                  value={this.state.tooltip}
+                  onBlur={({ value }) => this.setState({ tooltip: value || undefined })}
+                />
+              </UU5.Bricks.Column>
+              <UU5.Bricks.Column colWidth="m-6">
+                <UU5.Forms.Text
+                  label="Tooltip Icon"
+                  value={this.state.tooltipIcon}
+                  onBlur={({ value }) => this.setState({ tooltipIcon: value || undefined })}
+                />
+              </UU5.Bricks.Column>
+            </UU5.Bricks.Row>
+            <UU5.Bricks.Row
+              className={UU5.Common.Css.css`margin: 0 -8px; .uu5-forms-input:last-child { margin-bottom: 0; }`}>
+              <UU5.Bricks.Column colWidth="xs-6">
+                <UU5.Forms.Checkbox
+                  label="Disabled"
+                  value={this.state.disabled}
+                  onChange={({ value }) => this.setState({ disabled: value })}
+                  labelPosition="right"
+                  type={2}
+                />
+              </UU5.Bricks.Column>
+              <UU5.Bricks.Column colWidth="xs-6">
+                <UU5.Forms.Checkbox
+                  label="ReadOnly"
+                  value={this.state.readOnly}
+                  onChange={({ value }) => this.setState({ readOnly: value })}
+                  labelPosition="right"
+                  type={2}
+                />
+              </UU5.Bricks.Column>
+            </UU5.Bricks.Row>
+          </UU5.Forms.Form>
+
+          <UU5.Bricks.Row>
+            <UU5.Forms.SwitchSelector items={items} {...this.state} />
+            <UU5.Bricks.CodePreview
+              tagName="UU5.Forms.SwitchSelector"
+              props={getProps(this.state, defaultProps)}
+            />
+          </UU5.Bricks.Row>
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+  //@@viewOff:example
+
+  UU5.Common.DOM.render(<Page />, document.getElementById('renderHere'));
+</script>
+</body>
+</html>

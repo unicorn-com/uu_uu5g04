@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 00</title>
+
+  <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+  <script>
+    Uu5Loader.config({
+      "imports": {
+        "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/4.0.0/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/4.0.0/uu_appg01.min.js",
+        "uu_appg01_oidc": "https://cdn.plus4u.net/uu-appg01-oidc/2.0.0/uu_appg01_oidc.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+      }
+    });
+  </script>
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+  import "uu_appg01_oidc";
+
+  const Page = UU5.Common.VisualComponent.create({
+    mixins: [UU5.Common.BaseMixin, UU5.Common.IdentityMixin],
+    getInitialState() {
+      return {
+        authenticated: true,
+        pending: true,
+        notAuthenticated: false
+      }
+    },
+    render() {
+      return (
+        <UU5.Bricks.Container>
+          <UU5.Bricks.Div>
+            <UU5.Bricks.Button content="Login" onClick={() => UU5.Environment.getSession().login()} />{" "}
+            <UU5.Bricks.Button content="Logout" onClick={() => UU5.Environment.getSession().logout()} />{" "}
+          </UU5.Bricks.Div>
+
+          {/*@@viewOn:0*/}
+          <UU5.Bricks.Div style="marginTop: 24px">
+            Authentication state: <b>{this.getIdentityFeedback()}</b>
+          </UU5.Bricks.Div>
+
+          <UU5.Bricks.Div>
+            Component props:
+            <UU5.Forms.Checkboxes
+              label={null}
+              value={[
+                {label: 'authenticated', name: 'authenticated', value: this.state.authenticated},
+                {label: 'notAuthenticated', name: 'notAuthenticated', value: this.state.notAuthenticated},
+                {label: 'pending', name: 'pending', value: this.state.pending}
+              ]}
+              onChange={e => this.setState(e.value)}
+            />
+          </UU5.Bricks.Div>
+
+          <UU5.Bricks.Authenticated
+            authenticated={this.state.authenticated}
+            pending={this.state.pending}
+            notAuthenticated={this.state.notAuthenticated}
+          >
+            This sentence is visible depending on authentication state and component props.
+          </UU5.Bricks.Authenticated>
+          {/*@@viewOff:0*/}
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  UU5.Common.DOM.render(<Page/>, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

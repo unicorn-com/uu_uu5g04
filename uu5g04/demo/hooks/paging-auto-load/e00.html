@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 00</title>
+
+  <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+  <script>
+    Uu5Loader.config({
+      "imports": {
+        "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/4.0.0/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/4.0.0/uu_appg01.min.js",
+        "uu_appg01_oidc": "https://cdn.plus4u.net/uu-appg01-oidc/2.0.0/uu_appg01_oidc.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js",
+        "uu5g04-block-layout": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-block-layout.min.js",
+        "uu5g04-hooks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-hooks.min.js",
+      }
+    });
+
+    var updatedUrl = location.href.replace(/([?&])access_token=[^&#]*(&)?/, (m, g1, g2) => (g2 ? g1 : ""));
+    if (updatedUrl !== location.href) {
+      history.replaceState(history.state, "", updatedUrl);
+    }
+  </script>
+
+  <style>
+    .uu5-bricks-button + .uu5-bricks-button {
+      margin-left: 8px;
+    }
+
+    .uu5-bricks-column {
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+  import "uu5g04-block-layout";
+  import { Session } from "uu_appg01_oidc";
+  import { Client as UuAppClient } from "uu_appg01";
+  import {
+    PagingAutoLoad,
+    usePagingListData,
+    useRef,
+    useState,
+    useEffect,
+    useLayoutEffect,
+    createComponent,
+    createVisualComponent
+  } from "uu5g04-hooks";
+
+  // import { Client } from "uu_appg01";
+  // mock Client for example
+  let serverList = null;
+  const Client = {
+    async get(uri, data) {
+      // let response = await UuAppClient.get(uri, data);
+
+      // mock loading of data so that loading next data page after delete/create/update doesn't
+      // rollback those operations; we'll initially load (umocked) 100 items and then the rest will be mocked
+      if (!serverList) {
+        let response = await UuAppClient.get(uri, { ...data, pageInfo: { pageIndex: 0, pageSize: 100 } });
+        serverList = response.data.itemList;
+      }
+
+      let { pageIndex = 0, pageSize } = data.pageInfo;
+      console.log(uri.split("/").slice(-2).join("/") + "?pageInfo=" + JSON.stringify({ pageIndex, pageSize }));
+      let itemList = serverList.slice(pageIndex * pageSize, pageIndex * pageSize + pageSize);
+      let response = { data: { itemList, pageInfo: { pageIndex, pageSize, total: serverList.length } } };
+
+      let partialList = response.data.itemList;
+      let oldLoadedList = await db.get();
+      let loadedList = new Array(response.data.pageInfo.total).fill(undefined);
+      let from = response.data.pageInfo.pageIndex * response.data.pageInfo.pageSize;
+      let to = from + Math.min(from + response.data.pageInfo.pageSize, partialList.length);
+      for (let i = 0; i < loadedList.length; i++) {
+        loadedList[i] = (from <= i && i < to ? partialList[i - from]
+          : oldLoadedList[i]) || null;
+      }
+      db.setSync(loadedList);
+
+      return response;
+    },
+
+    async post(uri, data) {
+      let list = db.getSync();
+      let item;
+      switch (uri.match(/[^/]+$/)[0]) {
+        case "create":
+          data = { ...data, id: UU5.Common.Tools.generateUUID() };
+          list.push(data);
+          if (serverList) serverList.push(data);
+          item = data;
+          break;
+        case "update":
+          let i = list.findIndex(item => item && item.id === data.id);
+          item = list[i] = { ...list[i], ...data };
+          if (serverList) serverList[serverList.findItem(item => item && item.id === data.id)] = item;
+          break;
+        case "delete":
+          let j = list.findIndex(item => item && item.id === data.id);
+          item = null;
+          list.splice(j, 1);
+          if (serverList) serverList.splice(serverList.findIndex(item => item && item.id === data.id), 1);
+          break;
+      }
+
+      await db.set(list);
+      return { data: JSON.parse(JSON.stringify(item)) };
+    }
+  };
+
+  let error = false;
+  let localStorage = {};
+
+  class LocalStorage {
+
+    static DELAY = 1000;
+
+    constructor(key, defaultData = []) {
+      this.key = key;
+      this.defaultData = defaultData;
+    }
+
+    getSync() {
+      let json = localStorage[this.key];
+      return json ? JSON.parse(json) : JSON.parse(JSON.stringify(this.defaultData));
+    }
+
+    async get() {
+      return await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (!error) {
+            resolve(this.getSync());
+          } else {
+            let error = new Error("Test Error");
+            error.status = 500;
+            reject(error);
+          }
+        }, this.constructor.DELAY);
+      });
+    }
+
+    setSync(data = this.defaultData) {
+      let json = JSON.stringify(data);
+      localStorage[this.key] = json;
+      return JSON.parse(json);
+    }
+
+    async set(data = this.defaultData) {
+      return await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (!error) {
+            resolve(this.setSync(data));
+          } else {
+            let error = new Error("Test Error");
+            error.status = 500;
+            reject(error);
+          }
+        }, this.constructor.DELAY);
+      });
+    }
+  }
+
+  const db = new LocalStorage("uu5g04-hooks-usepaginglistdata.0", []);
+
+  const Calls = {
+    async load(dtoIn) {
+      let commandUri = Calls.getCommandUri("joke/list");
+      let data = await Calls.call("get", commandUri, dtoIn);
+      return data;
+    }
+  };
+
+  // server mock
+  Calls.getCommandUri = useCase => {
+    return "https://uuappg01-eu-w-1.plus4u.net/uu-jokes-maing01/4ef6a7b01b5942ecbfb925b249af987f/" + useCase;
+  };
+
+  Calls.call = async (method, uri, dtoIn) => {
+    let response = await Client[method](uri, dtoIn);
+    return response.data;
+  };
+
+  const Joke = createVisualComponent({
+    propTypes: {
+      data: UU5.PropTypes.shape({
+        id: UU5.PropTypes.string,
+        name: UU5.PropTypes.string,
+        text: UU5.PropTypes.string,
+        error: UU5.PropTypes.bool
+      })
+    },
+
+    defaultProps: {
+      data: {}
+    },
+
+    render(props) {
+      let attrs = UU5.Common.VisualComponent.getAttrs(props);
+      return (
+        <UU5.BlockLayout.Tile {...attrs} colorSchema={props.data.error ? "danger" : undefined}>
+          <UU5.BlockLayout.Block>
+            <UU5.BlockLayout.Row weight="primary" ellipses>
+              {props.data.name}
+            </UU5.BlockLayout.Row>
+            <UU5.BlockLayout.Row>
+              {props.data.text}
+            </UU5.BlockLayout.Row>
+          </UU5.BlockLayout.Block>
+        </UU5.BlockLayout.Tile>
+      );
+    }
+  });
+
+  function Example({ pessimistic }) {
+    let pageSize = 8;
+    let listDataValues = usePagingListData({ onLoad: Calls.load, pageSize });
+    let { viewState, errorState, error, syncData, asyncData, pageInfo, handleLoad } = listDataValues;
+    let data = pessimistic ? asyncData : syncData;
+
+    let firstNotYetLoadedIndex = data ? data.findIndex(it => it == null) : 0;
+    let dataToRender = data && firstNotYetLoadedIndex >= 0 ? data.slice(0, firstNotYetLoadedIndex) : data || [];
+
+    return (
+      <UU5.Bricks.Div>
+        <UU5.Bricks.Row display="flex">
+          {dataToRender.map(item => (
+            <UU5.Bricks.Column colWidth="m-6 l-4 xl-3" key={item.id}>
+              <Joke data={item} />
+            </UU5.Bricks.Column>
+          ))}
+        </UU5.Bricks.Row>
+        {/*@@viewOn:example*/}
+        <PagingAutoLoad
+          data={data}
+          handleLoad={handleLoad}
+          distance={window.innerHeight}
+          pageSize={pageSize}
+          error={({ error, reload }) => (
+            <UU5.Bricks.Button onClick={() => reload()} content="Load more (auto-load failed)" />
+          )}
+        >
+          <UU5.Bricks.Loading />
+        </PagingAutoLoad>
+        {/*@@viewOff:example*/}
+      </UU5.Bricks.Div>
+    );
+  }
+
+  const Page = createVisualComponent({
+    render(props) {
+      return (
+        <UU5.Bricks.Container header="Scroll down" level={3}>
+          <Example />
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  const AuthPage = createVisualComponent({
+    render() {
+      return (
+        <UU5.Common.Session session={Session.currentSession}>
+          <UU5.Common.Identity>
+            {({ identity, login, logout, ...opt }) => {
+              return (
+                identity ? <Page /> : identity === null ?
+                  <UU5.Bricks.Button onClick={() => login()} content="Log in" /> : null
+              )
+            }}
+          </UU5.Common.Identity>
+        </UU5.Common.Session>
+      )
+    }
+  });
+
+  UU5.Common.DOM.render(<AuthPage />, document.getElementById("uu5Example"));
+</script>
+</body>
+</html>

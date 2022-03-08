@@ -8,16 +8,10 @@
     />
     <title>UserPreferencesContext Demo</title>
 
+    <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
     <script>
-      // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
-      // var appAssetsRelativeUrlPath = "public/";
-      // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
-    </script>
-
-    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
-    <script>
-      SystemJS.config({
-        paths: {
+      Uu5Loader.config({
+        imports: {
           systemjs: "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
           react: "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
           "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
@@ -35,7 +29,6 @@
   <body>
     <div id="renderHere"></div>
 
-    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
     <script type="text/babel">
       import React from "react";
       import ReactDOM from "react-dom";

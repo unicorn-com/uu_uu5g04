@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example</title>
+
+  <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+  <script>
+    Uu5Loader.config({
+      "imports": {
+        "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js"
+      }
+    });
+  </script>
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+
+  const items = [
+    {
+      header: "Apple",
+      content: "<uu5string/><UU5.Bricks.P>An apple is a sweet, edible fruit produced by an apple tree (Malus domestica). Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today. Apples have been grown for thousands of years in Asia and Europe and were brought to North America by European colonists. Apples have religious and mythological significance in many cultures, including Norse, Greek and European Christian tradition.</UU5.Bricks.P>"
+    },
+    {
+      header: "Banana",
+      content: <UU5.Bricks.P>A banana is an edible fruit – botanically a berry – produced by several kinds of large
+        herbaceous flowering plants in the genus Musa. In some countries, bananas used for cooking may be called
+        "plantains", distinguishing them from dessert bananas. The fruit is variable in size, color, and firmness, but
+        is usually elongated and curved, with soft flesh rich in starch covered with a rind, which may be green, yellow,
+        red, purple, or brown when ripe. The fruits grow in clusters hanging from the top of the plant. Almost all
+        modern edible seedless (parthenocarp) bananas come from two wild species – Musa acuminata and Musa balbisiana.
+        The scientific names of most cultivated bananas are Musa acuminata, Musa balbisiana, and Musa × paradisiaca for
+        the hybrid Musa acuminata × M. balbisiana, depending on their genomic constitution. The old scientific name for
+        this hybrid, Musa sapientum, is no longer used.</UU5.Bricks.P>
+    }
+  ];
+
+  //@@viewOn:example
+  const Fruits = UU5.Common.VisualComponent.create({
+    //@@viewOn:mixins
+    mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.NestingLevelMixin],
+    //@@viewOff:mixins
+
+    //@@viewOn:statics
+    statics: {
+      tagName: "UU5.Demo.Fruits",
+      nestingLevelList: UU5.Environment.getNestingLevelList("bigBox", "box")
+    },
+    //@@viewOff:statics
+
+    //@@viewOn:propTypes
+    //@@viewOff:propTypes
+
+    //@@viewOn:defaultProps
+    getDefaultProps() {
+      return {
+        items
+      };
+    },
+    //@@viewOff:defaultProps
+
+    //@@viewOn:getInitialState
+    //@@viewOff:getInitialState
+
+    //@@viewOn:lifeCycle
+    //@@viewOff:lifeCycle
+
+    //@@viewOn:interface
+    //@@viewOff:interface
+
+    //@@viewOn:overriding
+    //@@viewOff:overriding
+
+    //@@viewOn:private
+    //@@viewOff:private
+
+    //@@viewOn:render
+    render() {
+      const component = (
+        <UU5.Bricks.Accordion panels={this.props.items} {...this.getMainPropsToPass()} parent={null} />
+      );
+
+      return this.getNestingLevel() ? component : (
+        <UU5.Bricks.LinkModal
+          children="Fruits"
+          hidden={this.isHidden()}
+          component={component}
+        />
+      );
+    }
+    //@@viewOff:render
+  });
+
+  //@@viewOff:example
+
+  function Page() {
+    return (
+      <UU5.Bricks.Container>
+        <UU5.Bricks.Section header="bigBox" level={2}>
+          <Fruits />
+        </UU5.Bricks.Section>
+
+        <UU5.Bricks.Section header="not in range" level={2}>
+          <UU5.Bricks.Div nestingLevel="box">
+            <Fruits />
+          </UU5.Bricks.Div>
+        </UU5.Bricks.Section>
+      </UU5.Bricks.Container>
+    );
+  }
+
+  UU5.Common.DOM.render(<Page />, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

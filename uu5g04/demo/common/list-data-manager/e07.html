@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 07</title>
+
+  <link type="text/css" rel="stylesheet"
+        href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+  <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+
+  <script>
+    Uu5Loader.config({
+      "imports": {
+        "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+      }
+    });
+  </script>
+
+  <style>
+    .margin {
+      margin-top: 16px !important;
+      margin-bottom: 16px !important;
+      padding-left: 48px !important;
+      position: relative;
+    }
+
+    .margin .uu5-forms-checkbox {
+      position: absolute;
+      left: 24px;
+      top: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      text-align: center;
+    }
+
+    .uu5-bricks-button + .uu5-bricks-button {
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script type="text/babel">
+  import React from "react";
+  import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+
+  const BULK_SIZE = 5;
+  let error = false;
+  let localStorage = {};
+
+  class LocalStorage {
+
+    static LIMIT = 1000;
+
+    constructor(key, defaultData = []) {
+      this.key = key;
+      this.defaultData = defaultData;
+    }
+
+    async get() {
+      return await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (!error) {
+            let json = localStorage[this.key];
+            resolve(json ? JSON.parse(json) : JSON.parse(JSON.stringify(this.defaultData)));
+          } else {
+            reject({ status: 500, message: "Test Error" });
+          }
+        }, this.constructor.LIMIT);
+      });
+    }
+
+    async bulkCreate(items) {
+      return await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (!error) {
+            let json = localStorage[this.key];
+            let data = json ? JSON.parse(json) : JSON.parse(JSON.stringify(this.defaultData));
+            data = data.concat(items);
+            json = JSON.stringify(data);
+            localStorage[this.key] = json;
+            resolve({ data: [...items] });
+          } else {
+            reject({ status: 500, message: "TestError" });
+          }
+        }, this.constructor.LIMIT);
+      });
+    }
+
+    async bulkUpdate(ids, items) {
+      return await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (!error) {
+            let json = localStorage[this.key];
+            let data = JSON.parse(json);
+            ids.forEach((id, i) => {
+              let updatedItem = data.find(it => it.id === id);
+              let index = data.indexOf(updatedItem);
+              if (index > -1) {
+                data[index] = { ...data[index], ...items[i] };
+              }
+            });
+            json = JSON.stringify(data);
+            localStorage[this.key] = json;
+            resolve({ data: ids.map(id => data.find(it => it.id === id)) });
+          } else {
+            reject({ status: 500, message: "TestError" });
+          }
+        }, this.constructor.LIMIT);
+      });
+    }
+
+    async bulkDelete(ids) {
+      return await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (!error) {
+            let json = localStorage[this.key];
+            let data = JSON.parse(json);
+            let removedItems = [];
+            ids.forEach(id => {
+              let removedItem = data.find(it => it.id === id);
+              removedItems.push(null);
+              let index = data.indexOf(removedItem);
+              if (index > -1) {
+                data.splice(index, 1);
+              }
+            });
+            json = JSON.stringify(data);
+            localStorage[this.key] = json;
+            resolve({ data: removedItems });
+          } else {
+            reject({ status: 500, message: "TestError" });
+          }
+        }, this.constructor.LIMIT);
+      });
+    }
+  }
+
+  const db = new LocalStorage("uu5g05-listdatamanager.3", [
+    { id: UU5.Common.Tools.generateUUID(), date: new Date().toLocaleString() },
+    { id: UU5.Common.Tools.generateUUID(), date: new Date("2019-01-31").toLocaleString() }
+  ]);
+
+  /*@@viewOn:example*/
+  const Calls = {
+    load(dtoInData) {
+      return new Promise((resolve, reject) => {
+        Calls.call("get", "loadBook", {
+          data: dtoInData, done: resolve, fail: reject
+        });
+      });
+    },
+
+    bulkCreate(newBooksData) {
+      return new Promise((resolve, reject) => {
+        Calls.call("post", "createBooks", {
+          data: newBooksData, done: resolve, fail: reject
+        });
+      });
+    },
+
+    bulkUpdate(ids, updatedBooksData) {
+      return new Promise((resolve, reject) => {
+        let updatedBookMap = ids.reduce((r, id, i) => (r[id] = updatedBooksData[i], r), {});
+        Calls.call("post", "updateBooks", {
+          data: updatedBookMap, done: resolve, fail: reject
+        });
+      });
+    },
+
+    bulkDelete(ids) {
+      return new Promise((resolve, reject) => {
+        Calls.call("post", "deleteBooks", {
+          data: ids, done: resolve, fail: reject
+        });
+      });
+    }
+  };
+
+  /*@@viewOff:example*/
+
+  // server mock
+  Calls.call = async (method, uri, dtoIn) => {
+    if (method === "get") {
+      db.get().then(dtoIn.done).catch(dtoIn.fail);
+    } else {
+      switch (uri) {
+        case "createBooks":
+          db.bulkCreate(dtoIn.data).then(dtoIn.done).catch(dtoIn.fail);
+          break;
+        case "updateBooks":
+          db.bulkUpdate(Object.keys(dtoIn.data), Object.keys(dtoIn.data).map(k => dtoIn.data[k])).then(dtoIn.done).catch(dtoIn.fail);
+          break;
+        case "deleteBooks":
+          db.bulkDelete(dtoIn.data).then(dtoIn.done).catch(dtoIn.fail);
+          break;
+      }
+    }
+  };
+
+  const Page = createReactClass({
+
+    getInitialState() {
+      return {
+        error: null
+      }
+    },
+
+    componentDidCatch(e) {
+      this.setState({ error: e });
+    },
+
+    render() {
+      if (this.state.error) {
+        return (
+          <UU5.Bricks.Container>
+            <UU5.Common.Error>
+              It will be ready after uu5 1.17.0
+            </UU5.Common.Error>
+          </UU5.Bricks.Container>
+        )
+      }
+
+      return (
+        <UU5.Bricks.Container>
+          {/*@@viewOn:example*/}
+          <UU5.Common.ListDataManager
+            onLoad={Calls.load}
+            onBulkCreate={Calls.bulkCreate}
+            onBulkUpdate={Calls.bulkUpdate}
+            onBulkDelete={Calls.bulkDelete}
+          >
+            {({ viewState, errorState, errorData, data, handleBulkCreate, handleBulkUpdate, handleBulkDelete }) => {
+              if (errorState) {
+                // error
+                return "Error";
+              } else if (data) {
+                // ready
+                return (
+                  <UU5.Bricks.Div>
+                    <UU5.Bricks.Button
+                      colorSchema="success"
+                      onClick={() => {
+                        handleBulkCreate(new Array(BULK_SIZE).fill(null).map(() => ({
+                          id: UU5.Common.Tools.generateUUID(),
+                          date: new Date().toLocaleString()
+                        })))
+                          .then(data => console.log("bulk create ok", data))
+                          .catch(data => console.log("bulk create ko", data))
+                      }}
+                    >
+                      Bulk Create ({BULK_SIZE})
+                    </UU5.Bricks.Button>
+                    <UU5.Bricks.Button
+                      onClick={() => {
+                        let formValues = this._form.getValues();
+                        let indices = Object.keys(formValues).filter(k => formValues[k] && k.match(/^bulk/)).map(k => Number(k.replace("bulk", "")));
+                        let items = indices.map(index => data[index]);
+                        handleBulkUpdate(items.map(it => it.id), new Array(indices.length).fill(null).map(() => ({
+                          date: new Date().toLocaleString()
+                        })))
+                          .then(data => console.log("bulk update ok", data))
+                          .catch(data => console.log("bulk update ko", data))
+                      }}
+                    >
+                      Bulk Update
+                    </UU5.Bricks.Button>
+                    <UU5.Bricks.Button
+                      disabled={!data}
+                      colorSchema="danger"
+                      onClick={() => {
+                        let formValues = this._form.getValues();
+                        let indices = Object.keys(formValues).filter(k => formValues[k] && k.match(/^bulk/)).map(k => Number(k.replace("bulk", "")));
+                        let items = indices.map(index => data[index]);
+                        handleBulkDelete(items.map(it => it.id))
+                          .then(data => console.log("bulk delete ok", data))
+                          .catch(data => console.log("bulk delete ko", data))
+                      }}
+                    >
+                      Bulk Delete
+                    </UU5.Bricks.Button>
+
+                    <UU5.Forms.Form ref_={form => this._form = form}>
+                      <UU5.Bricks.Div>
+                        {data.map((item, i) => (
+                          <UU5.Bricks.Box className="margin" colorSchema="grey" bgStyle="outline" key={item.id}>
+                            <UU5.Forms.Checkbox inputWidth="30px" name={"bulk" + i} controlled={false} />
+                            {item.id}<br />
+                            {item.date}
+                          </UU5.Bricks.Box>
+                        ))}
+                      </UU5.Bricks.Div>
+                    </UU5.Forms.Form>
+                  </UU5.Bricks.Div>
+                )
+              } else {
+                // loading
+                return <UU5.Bricks.Loading />;
+              }
+            }}
+          </UU5.Common.ListDataManager>
+          {/*@@viewOff:example*/}
+        </UU5.Bricks.Container>
+      )
+    }
+  });
+
+  ReactDOM.render(<Page />, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

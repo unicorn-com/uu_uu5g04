@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Example 03</title>
+
+    <link type="text/css" rel="stylesheet"
+          href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+    <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+
+    <script>
+      Uu5Loader.config({
+        "imports": {
+          "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+          "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+          "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+          "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+        }
+      });
+    </script>
+
+  </head>
+  <body>
+
+    <div id="uu5Example"></div>
+
+    <script type="text/babel">
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+
+      const Page = UU5.Common.VisualComponent.create({
+        render() {
+          return (
+            <UU5.Bricks.Container>
+                <UU5.Bricks.ProgressBar>
+                  <UU5.Bricks.ProgressBar.Item
+                    progress={40}
+                    colorSchema="blue"
+                    animated
+                    striped
+                    ref_={(progress2) => this.progress2 = progress2}
+                    content="number"
+                  />
+                  <UU5.Bricks.ProgressBar.Item
+                    progress={35}
+                    colorSchema="purple"
+                    ref_={(progress1) => this.progress1 = progress1}
+                  />
+                </UU5.Bricks.ProgressBar>
+              <br />
+              <UU5.Bricks.ButtonGroup>
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.Button onClick={() => {
+                  alert(this.progress2.getProgress())
+                }} content="getProgress()"/>
+
+                <UU5.Bricks.Button onClick={() => {
+                  alert(this.progress2.getProgressContent())
+                }} content="getProgressContent()"/>
+
+                <UU5.Bricks.Button onClick={() => {
+                  alert(this.progress2.isStriped())
+                }} content="isStriped()"/>
+
+                <UU5.Bricks.Button onClick={() => {
+                  alert(this.progress2.isAnimated())
+                }} content="isAnimated()"/>
+
+                <UU5.Bricks.Button onClick={() => {
+                  this.progress2.setProgress({value:20, colorSchema:"green", content:"10100"})
+                }} content="setProgress()"/>
+
+                <UU5.Bricks.Button onClick={() => {
+                  this.progress1.increase({value:20, content:"Increased"})
+                }} content="increase({value:20, content:'Increased'})" />
+
+                <UU5.Bricks.Button onClick={() => {
+                  this.progress1.decrease({value:30, content:"New content"})
+                }} content="decrease({value:30, content:'New content'})" />
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.ButtonGroup>
+
+            </UU5.Bricks.Container>
+          );
+
+        }
+      });
+
+      UU5.Common.DOM.render(<Page />, document.getElementById('uu5Example'));
+    </script>
+  </body>
+</html>

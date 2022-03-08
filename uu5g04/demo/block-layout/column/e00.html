@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 00</title>
+
+  <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+  <script>
+    Uu5Loader.config({
+      "imports": {
+        "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-block-layout": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-block-layout.min.js"
+      }
+    });
+  </script>
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-block-layout";
+
+  const Page = UU5.Common.VisualComponent.create({
+
+    render() {
+      return (
+        <UU5.Bricks.Container>
+          <UU5.BlockLayout.Tile margin="32px 0 0">
+            <UU5.BlockLayout.Block
+              actions={[
+                { icon: "mdi-dots-vertical", content: "Settings", active: true, onClick: () => alert("settings") }
+              ]}
+            >
+              <UU5.BlockLayout.Row weight="primary">
+                Ing. Alexandra Henderson Alsop Ph.D.
+              </UU5.BlockLayout.Row>
+            </UU5.BlockLayout.Block>
+            <UU5.BlockLayout.Block>
+              <UU5.BlockLayout.Row>
+                <UU5.BlockLayout.Column width={150}>
+                  <UU5.BlockLayout.Text weight="secondary">
+                     Phone
+                  </UU5.BlockLayout.Text>
+                </UU5.BlockLayout.Column>
+                <UU5.BlockLayout.Column>
+                  +420 722 430 696
+                </UU5.BlockLayout.Column>
+              </UU5.BlockLayout.Row>
+              <UU5.BlockLayout.Row>
+                <UU5.BlockLayout.Column width={150}>
+                  <UU5.BlockLayout.Text weight="secondary">
+                    E-mail
+                  </UU5.BlockLayout.Text>
+                </UU5.BlockLayout.Column>
+                <UU5.BlockLayout.Column>
+                  <UU5.Bricks.Link content="alexandra.alsop@gmail.com" />
+                </UU5.BlockLayout.Column>
+              </UU5.BlockLayout.Row>
+            </UU5.BlockLayout.Block>
+            <UU5.BlockLayout.Line />
+            <UU5.BlockLayout.Block
+              actions={[
+                { icon: "mdi-account-network", content: "Account Settings", active: true, onClick: () => alert("settings") }
+              ]}
+            >
+              <UU5.BlockLayout.Row>
+                <UU5.BlockLayout.Column width={150}>
+                  <UU5.BlockLayout.Text weight="secondary">
+                    Plus4U Person
+                  </UU5.BlockLayout.Text>
+                </UU5.BlockLayout.Column>
+                <UU5.BlockLayout.Column>
+                  <UU5.Bricks.Link content="Alexandra Henderson Alsop" />
+                </UU5.BlockLayout.Column>
+              </UU5.BlockLayout.Row>
+            </UU5.BlockLayout.Block>
+          </UU5.BlockLayout.Tile>
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  UU5.Common.DOM.render(<Page />, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

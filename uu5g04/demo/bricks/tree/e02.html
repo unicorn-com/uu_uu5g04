@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Example 02</title>
+
+    <link type="text/css" rel="stylesheet"
+          href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+    <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+
+    <script>
+      Uu5Loader.config({
+        "imports": {
+          "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+          "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+          "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+          "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+        }
+      });
+    </script>
+
+  </head>
+  <body>
+
+    <div id="uu5Example"></div>
+
+    <script type="text/babel">
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+
+      const Page = UU5.Common.VisualComponent.create({
+        render() {
+          return (
+            <UU5.Bricks.Container>
+              <UU5.Bricks.Column colWidth="xs-12 s-4 m-4" header="items">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.Tree>
+                  <UU5.Bricks.Tree.Item label='Movies' expanded>
+                    <UU5.Bricks.Tree.Item label='Comedies'>
+                      <UU5.Bricks.Tree.Item label='Anchorman' />
+                      <UU5.Bricks.Tree.Item label='Yesman' />
+                    </UU5.Bricks.Tree.Item>
+                    <UU5.Bricks.Tree.Item label='Drama'>
+                      <UU5.Bricks.Tree.Item label='Forrest Gump' />
+                      <UU5.Bricks.Tree.Item label='Saving Private Ryan' />
+                    </UU5.Bricks.Tree.Item>
+                    <UU5.Bricks.Tree.Item label='TV Shows'>
+                      <UU5.Bricks.Tree.Item label='Blackbooks' />
+                      <UU5.Bricks.Tree.Item label='The Big Bang Theory' className='font-size-sm' />
+                    </UU5.Bricks.Tree.Item>
+                  </UU5.Bricks.Tree.Item>
+                </UU5.Bricks.Tree>
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Column>
+
+              <UU5.Bricks.Column colWidth="xs-12 s-6 m-5" header="iconExpanded">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.Tree iconExpanded="mdi-arrow-down-bold-circle">
+                  <UU5.Bricks.Tree.Item label='Movies' expanded>
+                    <UU5.Bricks.Tree.Item label='Comedies'>
+                      <UU5.Bricks.Tree.Item label='Anchorman' />
+                      <UU5.Bricks.Tree.Item label='Yesman' />
+                    </UU5.Bricks.Tree.Item>
+                    <UU5.Bricks.Tree.Item label='Drama'>
+                      <UU5.Bricks.Tree.Item label='Forrest Gump' />
+                      <UU5.Bricks.Tree.Item label='Saving Private Ryan' />
+                    </UU5.Bricks.Tree.Item>
+                    <UU5.Bricks.Tree.Item label='TV Shows'>
+                      <UU5.Bricks.Tree.Item label='Blackbooks' />
+                      <UU5.Bricks.Tree.Item label='The Big Bang Theory' className='font-size-sm' />
+                    </UU5.Bricks.Tree.Item>
+                  </UU5.Bricks.Tree.Item>
+                </UU5.Bricks.Tree>
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Column>
+
+              <UU5.Bricks.Column colWidth="xs-12 s-6 m-5" header="iconCollapsed">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.Tree iconCollapsed="mdi-arrow-right-bold-circle">
+                  <UU5.Bricks.Tree.Item label='Movies' >
+                    <UU5.Bricks.Tree.Item label='Comedies'>
+                      <UU5.Bricks.Tree.Item label='Anchorman' />
+                      <UU5.Bricks.Tree.Item label='Yesman' />
+                    </UU5.Bricks.Tree.Item>
+                    <UU5.Bricks.Tree.Item label='Drama'>
+                      <UU5.Bricks.Tree.Item label='Forrest Gump' />
+                      <UU5.Bricks.Tree.Item label='Saving Private Ryan' />
+                    </UU5.Bricks.Tree.Item>
+                    <UU5.Bricks.Tree.Item label='TV Shows'>
+                      <UU5.Bricks.Tree.Item label='Blackbooks' />
+                      <UU5.Bricks.Tree.Item label='The Big Bang Theory' className='font-size-sm' />
+                    </UU5.Bricks.Tree.Item>
+                  </UU5.Bricks.Tree.Item>
+                </UU5.Bricks.Tree>
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Column>
+
+              <UU5.Bricks.Column colWidth="xs-12 s-4 m-4" header="size">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.Tree size="xl">
+                  <UU5.Bricks.Tree.Item label='Movies' expanded>
+                    <UU5.Bricks.Tree.Item label='Comedies'>
+                      <UU5.Bricks.Tree.Item label='Anchorman' />
+                      <UU5.Bricks.Tree.Item label='Yesman' />
+                    </UU5.Bricks.Tree.Item>
+                    <UU5.Bricks.Tree.Item label='Drama'>
+                      <UU5.Bricks.Tree.Item label='Forrest Gump' />
+                      <UU5.Bricks.Tree.Item label='Saving Private Ryan' />
+                    </UU5.Bricks.Tree.Item>
+                    <UU5.Bricks.Tree.Item label='TV Shows'>
+                      <UU5.Bricks.Tree.Item label='Blackbooks' />
+                      <UU5.Bricks.Tree.Item label='The Big Bang Theory' className='font-size-sm' />
+                    </UU5.Bricks.Tree.Item>
+                  </UU5.Bricks.Tree.Item>
+                </UU5.Bricks.Tree>
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Column>
+            </UU5.Bricks.Container>
+          );
+        }
+      });
+
+      UU5.Common.DOM.render(<Page />, document.getElementById('uu5Example'));
+    </script>
+  </body>
+</html>

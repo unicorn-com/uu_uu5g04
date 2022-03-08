@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>SwitchSelector Demo</title>
+
+  <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+  <script>
+    Uu5Loader.config({
+      "imports": {
+        "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js",
+      }
+    });
+  </script>
+</head>
+<body>
+<div id="renderHere"></div>
+
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+
+  UU5.Common.Tools.setLanguage("en")
+
+  const Lsi = {
+    colorLabel: {
+      en: "Color",
+      cs: "Barva"
+    },
+    semanticColorLabel: {
+      en: "Semantic Color",
+      cs: "Logická barva"
+    }
+  };
+
+  // colors in color schema
+  const colors = [
+  { content: <UU5.Bricks.Lsi lsi={{ en: "Yellow", cs: "Žlutá" }} />, value: "yellow" },
+  { content: <UU5.Bricks.Lsi lsi={{ en: "Orange", cs: "Oranžová" }} />, value: "orange" },
+  { content: <UU5.Bricks.Lsi lsi={{ en: "Pink", cs: "Růžová" }} />, value: "pink" },
+  { content: <UU5.Bricks.Lsi lsi={{ en: "Red", cs: "Červená" }} />, value: "red" },
+  { content: <UU5.Bricks.Lsi lsi={{ en: "Purple", cs: "Fialová" }} />, value: "purple" },
+  { content: <UU5.Bricks.Lsi lsi={{ en: "Cyan", cs: "Tyrkysová" }} />, value: "cyan" },
+  { content: <UU5.Bricks.Lsi lsi={{ en: "Blue", cs: "Modrá" }} />, value: "blue" },
+  { content: <UU5.Bricks.Lsi lsi={{ en: "Green", cs: "Zelená" }} />, value: "green" },
+  { content: <UU5.Bricks.Lsi lsi={{ en: "Brown", cs: "Hnědá" }} />, value: "brown" },
+  { content: <UU5.Bricks.Lsi lsi={{ en: "Amber", cs: "Jantarová" }} />, value: "amber" },
+  { content: <UU5.Bricks.Lsi lsi={{ en: "Deep Orange", cs: "Tmavě oranžová" }} />, value: "deep-orange" },
+  { content: <UU5.Bricks.Lsi lsi={{ en: "Deep Purple", cs: "Tmavě fialová" }} />, value: "deep-purple" },
+  { content: <UU5.Bricks.Lsi lsi={{ en: "Indigo", cs: "Indigová" }} />, value: "indigo" },
+  { content: <UU5.Bricks.Lsi lsi={{ en: "Teal", cs: "Šedozelená" }} />, value: "teal" },
+  { content: <UU5.Bricks.Lsi lsi={{ en: "Light Green", cs: "Světle zelená" }} />, value: "light-green" },
+  { content: <UU5.Bricks.Lsi lsi={{ en: "Light Blue", cs: "Světle modrá" }} />, value: "light-blue" },
+  { content: <UU5.Bricks.Lsi lsi={{ en: "Lime", cs: "Limetková" }} />, value: "lime" },
+  { content: <UU5.Bricks.Lsi lsi={{ en: "Blue Grey", cs: "Modrošedá" }} />, value: "blue-grey" },
+  { content: <UU5.Bricks.Lsi lsi={{ en: "Grey", cs: "Šedá" }} />, value: "grey" },
+  { content: <UU5.Bricks.Lsi lsi={{ en: "Black", cs: "Černá" }} />, value: "black" },
+  { content: <UU5.Bricks.Lsi lsi={{ en: "White", cs: "Bílá" }} />, value: "white" }
+  ];
+
+  // logical colors in color schema
+  const semanticColors = [
+    { content: <UU5.Bricks.Lsi lsi={{ en: "Default", cs: "Výchozí" }} />, value: "default" },
+    { content: <UU5.Bricks.Lsi lsi={{ en: "Primary", cs: "Hlavní" }} />, value: "primary" },
+    { content: <UU5.Bricks.Lsi lsi={{ en: "Success", cs: "Úspěch" }} />, value: "success" },
+    { content: <UU5.Bricks.Lsi lsi={{ en: "Info", cs: "Informace" }} />, value: "info" },
+    { content: <UU5.Bricks.Lsi lsi={{ en: "Warning", cs: "Varování" }} />, value: "warning" },
+    { content: <UU5.Bricks.Lsi lsi={{ en: "Danger", cs: "Pozor" }} />, value: "danger" },
+    { content: <UU5.Bricks.Lsi lsi={{ en: "Custom", cs: "Vlastní" }} />, value: "custom" }
+  ];
+
+  //@@viewOn:example
+  const Page = () => (
+    <UU5.Bricks.Container>
+      <UU5.Forms.Form>
+        <UU5.Bricks.Well>
+          <UU5.Bricks.Code>UU5.Forms.SwitchSelector</UU5.Bricks.Code> displays as <UU5.Bricks.Code>UU5.Forms.Select</UU5.Bricks.Code> if it's items don't fit in one row.<br/>
+          First SwitchSelector contains {colors.length} items, second one contains {semanticColors.length} items.
+        </UU5.Bricks.Well>
+        <UU5.Bricks.Row>
+          <UU5.Forms.SwitchSelector label={<UU5.Bricks.Lsi lsi={Lsi.colorLabel} />} items={colors} labelColWidth="xs-12" inputColWidth="xs-12"/>
+          <UU5.Forms.SwitchSelector label={<UU5.Bricks.Lsi lsi={Lsi.semanticColorLabel} />} items={semanticColors} labelColWidth="xs-12" inputColWidth="xs-12" />
+        </UU5.Bricks.Row>
+      </UU5.Forms.Form>
+    </UU5.Bricks.Container>
+  );
+  //@@viewOff:example
+
+  UU5.Common.DOM.render(<Page />, document.getElementById('renderHere'));
+</script>
+</body>
+</html>

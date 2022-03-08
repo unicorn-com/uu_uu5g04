@@ -14,16 +14,43 @@
  */
 
 //@@viewOn:imports
-import * as UU5 from "uu5g04";
+import UU5 from "uu5g04";
+import { Content } from "uu5g05";
 import ns from "./bricks-ns.js";
 
 import Modal from "./modal.js";
 import { RenderIntoPortal } from "./internal/portal.js";
+import OptionalLibraries from "./internal/optional-libraries.js";
 
 import "./confirm-modal.less";
 //@@viewOff:imports
 
+function g04ButtonToG05ButtonProps(g04Props) {
+  if (!g04Props) return;
+  const {
+    colorSchema,
+    bgStyle,
+    elevation,
+    elevationHover,
+    borderRadius, // TODO Maybe map to "elementary", "moderate", ...
+    smoothScroll,
+    baseline,
+    displayBlock,
+    offset,
+    // TODO href, target, onWheelClick, onCtrlClick
+    ...result
+  } = g04Props;
+  result.colorScheme = UU5.Utils.ColorSchema._toGdsColorScheme(colorSchema);
+  let significance;
+  if (bgStyle === "filled") significance = colorSchema?.endsWith("-rich") ? "highlighted" : "common";
+  else if (bgStyle === "outline" || bgStyle === "underline") significance = "distinct";
+  else if (bgStyle === "transparent") significance = "subdued";
+  if (significance) result.significance = significance;
+  return result;
+}
+
 export const ConfirmModal = UU5.Common.VisualComponent.create({
+  // eslint-disable-next-line uu5/component-comments
   displayName: "ConfirmModal", // for backward compatibility (test snapshots)
 
   //@@viewOn:mixins
@@ -67,19 +94,18 @@ export const ConfirmModal = UU5.Common.VisualComponent.create({
       stickyBackground: true,
     };
   },
+  //@@viewOff:getDefaultProps
 
+  //@@viewOn:reactLifeCycle
   getInitialState() {
     // initialize object for comopnent Modal
     this._refs = {};
 
     return {
       props: {},
-      isOpened: false,
+      isOpened: undefined,
     };
   },
-  //@@viewOff:getDefaultProps
-
-  //@@viewOn:reactLifeCycle
   //@@viewOff:reactLifeCycle
 
   //@@viewOn:interface
@@ -168,29 +194,66 @@ export const ConfirmModal = UU5.Common.VisualComponent.create({
   //@@viewOn:render
   render() {
     // onConfirm and onRefuse is used only to filter this props from propagation to component Modal
-    // eslint-disable-next-line no-unused-vars
-    let { confirmButtonProps, refuseButtonProps, confirmButtonLeft, onRefuse, onConfirm, ...props } = {
+    let { confirmButtonProps, refuseButtonProps, confirmButtonLeft, onRefuse, onConfirm, ...modalProps } = {
       ...this.props,
       ...this.state.props,
     };
+    let { size, children, content } = modalProps;
 
-    return this.state.isOpened ? (
-      <RenderIntoPortal>
-        <Modal
-          {...props}
-          ref_={this._registerModal}
-          onClose={this._refuse}
-          forceRender={true}
-          footer={this._renderFooter({
-            confirmButtonProps,
-            refuseButtonProps,
-            confirmButtonLeft,
-            onRefuse: this._refuse,
-            onConfirm: this._confirm,
-          })}
-        />
-      </RenderIntoPortal>
-    ) : null;
+    let result;
+    let { Uu5Elements } = OptionalLibraries;
+    if (Uu5Elements) {
+      let actionList = [
+        {
+          children: this.getLsiValue("refuseButtonText"),
+          significance: "distinct",
+          ...g04ButtonToG05ButtonProps(refuseButtonProps),
+          onClick: this._refuse,
+        },
+        {
+          children: this.getLsiValue("confirmButtonText"),
+          significance: "highlighted",
+          ...g04ButtonToG05ButtonProps({
+            ...confirmButtonProps,
+            colorSchema: confirmButtonProps?.colorSchema || "primary",
+          }),
+          onClick: this._confirm,
+        },
+      ];
+      if (confirmButtonLeft) actionList = [actionList[1], actionList[0]];
+      result =
+        this.state.isOpened != null ? (
+          <Uu5Elements.Dialog
+            open={this.state.isOpened}
+            onClose={() => this._close()}
+            actionList={actionList}
+            width={size === "s" ? 300 : size === "m" ? 600 : size === "l" ? 900 : size === "max" ? "full" : null}
+            actionDirection="horizontal"
+          >
+            {content != null ? <Content>{content}</Content> : children}
+          </Uu5Elements.Dialog>
+        ) : null;
+    } else {
+      result = this.state.isOpened ? (
+        <RenderIntoPortal>
+          <Modal
+            {...modalProps}
+            ref_={this._registerModal}
+            onClose={this._refuse}
+            forceRender={true}
+            footer={this._renderFooter({
+              confirmButtonProps,
+              refuseButtonProps,
+              confirmButtonLeft,
+              onRefuse: this._refuse,
+              onConfirm: this._confirm,
+            })}
+          />
+        </RenderIntoPortal>
+      ) : null;
+    }
+
+    return result;
   },
   //@@viewOff:render
 });

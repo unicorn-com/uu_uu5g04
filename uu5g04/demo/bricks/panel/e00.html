@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 00</title>
+
+  <link type="text/css" rel="stylesheet"
+        href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+  <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+
+  <script>
+    Uu5Loader.config({
+      "imports": {
+        "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+      }
+    });
+  </script>
+
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+
+  const Page = UU5.Common.VisualComponent.create({
+    render() {
+      return (
+        <UU5.Bricks.Container>
+          <UU5.Bricks.Panel header="Panel" content="Panel content"/><br/>
+
+          <UU5.Bricks.Row>
+            <UU5.Bricks.Column colWidth="xs-12 s-3">
+              {/*@@viewOn:0*/}
+
+              <UU5.Bricks.Panel size="s" header="Size S"/>
+              {/*@@viewOff:0*/}
+            </UU5.Bricks.Column>
+            <UU5.Bricks.Column colWidth="xs-12 s-3">
+              {/*@@viewOn:0*/}
+
+              <UU5.Bricks.Panel size="m" header="Size M"/>
+              {/*@@viewOff:0*/}
+            </UU5.Bricks.Column>
+            <UU5.Bricks.Column colWidth="xs-12 s-3">
+              {/*@@viewOn:0*/}
+
+              <UU5.Bricks.Panel size="l" header="Size L"/>
+              {/*@@viewOff:0*/}
+            </UU5.Bricks.Column>
+            <UU5.Bricks.Column colWidth="xs-12 s-3">
+              {/*@@viewOn:0*/}
+
+              <UU5.Bricks.Panel size="xl" header="Size XL"/>
+              {/*@@viewOff:0*/}
+            </UU5.Bricks.Column>
+          </UU5.Bricks.Row>
+          <br/><br/>
+          {/*@@viewOn:0*/}
+
+          <UU5.Bricks.Panel
+            header="Primary color with icons"
+            colorSchema="primary"
+            iconExpanded="mdi-chevron-up"
+            iconCollapsed="mdi-chevron-down"
+          />
+          <br/>
+          <UU5.Bricks.Panel
+            header="Default color with icons"
+            iconExpanded="mdi-chevron-up"
+            iconCollapsed="mdi-chevron-down"
+          />
+          {/*@@viewOff:0*/}
+          <br/><br/>
+          {/*@@viewOn:0*/}
+
+          <UU5.Bricks.Panel
+            ref_={(panel) => this._panel = panel}
+            disableHeaderClick
+            header={<UU5.Bricks.Button content="Click to open" colorSchema="orange" onClick={() => {
+              this._panel.toggle()
+            }}/>}
+            content="Sed dui diam, consectetur eget ultricies ut, mollis quis dui. Phasellus semper neque quis lacus
+                 pharetra, ut bibendum sem porta. Pellentesque mollis enim quis nulla suscipit imperdiet. Vestibulum
+                 tincidunt felis ut facilisis ullamcorper. Nunc velit erat, convallis auctor turpis imperdiet, gravida
+                 lacinia risus. Nam sodales in leo vel facilisis. Phasellus nisi ex, interdum a egestas sit amet,
+                 eleifend in odio. Mauris finibus egestas enim sed eleifend. Sed mi magna, venenatis ut malesuada sit
+                 amet, fermentum vel orci. Fusce eu elementum sem."
+          />
+          {/*@@viewOff:0*/}
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  UU5.Common.DOM.render(<Page/>, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

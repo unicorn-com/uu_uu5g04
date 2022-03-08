@@ -8,19 +8,13 @@
     />
     <title>DateRangePicker Demo</title>
 
-    <script>
-      // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
-      // var appAssetsRelativeUrlPath = "public/";
-      // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
-    </script>
-
     <!--<link type="text/css" rel="stylesheet" href="https://cdn.plus4u.net/libs/bootstrap/3.3.7/css/bootstrap.min.css">-->
     <link
       type="text/css"
       rel="stylesheet"
       href="https://cdn.plus4u.net/libs/materialdesignicons/3.5.95/css/materialdesignicons.css"
     />
-    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+    <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
 
     <script>
       var uu5g04 = "";
@@ -29,8 +23,8 @@
       });
       var uu5g04Base = uu5g04 === "" ? "/" : "https://cdn.plus4u.net/uu-uu5g04/" + uu5g04 + "/";
 
-      SystemJS.config({
-        paths: {
+      Uu5Loader.config({
+        imports: {
           systemjs: "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
           react: "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
           "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
@@ -45,10 +39,6 @@
           "uu5g04-forms": uu5g04Base + "uu5g04-forms.js",
         },
       });
-
-      // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
-      //   "uuoidc.redirectUri":"callbacks/login-callback.html"
-      // }}));
     </script>
     <style>
       .uu5-forms-daterangepicker-custom-content {
@@ -65,8 +55,6 @@
   <body>
     <div id="renderHere"></div>
 
-    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
-    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
     <script type="text/babel">
       import UU5 from "uu5g04";
       import "uu5g04-forms";

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Example 04</title>
+
+    <link type="text/css" rel="stylesheet"
+          href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+    <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+
+    <script>
+      Uu5Loader.config({
+        "imports": {
+          "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+          "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+          "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+          "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+        }
+      });
+    </script>
+
+  </head>
+  <body>
+
+    <div id="uu5Example"></div>
+
+    <script type="text/babel">
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+
+      const Page = UU5.Common.VisualComponent.create({
+        /*@@viewOn:0*/
+        _addAlert(){
+          let alertBus = this._alertBus;
+
+          var props = {
+            colorSchema: ['success', 'info', 'warning'][Math.floor(Math.random() * 3)],
+            closeTimer: Math.random() > 0.5 ? null : 5000,
+            content: <UU5.Bricks.Strong>{String(new Date())}</UU5.Bricks.Strong>,
+            onClose: function (alert) {
+              console.log("alert close", alert.getId());
+            }
+          };
+
+          alertBus.addAlert(props, () => { console.log("_onAdd callback")});
+
+          return this;
+        },
+
+        _addAlertToPosition(){
+          let alertBus = this._alertBus;
+
+          var props = {
+            colorSchema: 'danger',
+            closeTimer: Math.random() > 0.5 ? null : 5000,
+            content: <UU5.Bricks.Strong>{String(new Date())}</UU5.Bricks.Strong>,
+            onClose: function (alert) {
+              console.log("alert close", alert.getId());
+            }
+          };
+
+          alertBus.addAlertToPosition(1, props, () => { console.log("_onAddAlertToPosition callback")});
+
+          return this;
+        },
+
+        _setAlert(){
+          let alertBus = this._alertBus;
+
+          var props = {
+            colorSchema: 'yellow',
+            closeTimer: Math.random() > 0.5 ? null : 5000,
+            content: <UU5.Bricks.Strong>{String(new Date())}</UU5.Bricks.Strong>,
+            onClose: function (alert) {
+              console.log("alert close", alert.getId());
+            }
+          };
+
+          alertBus.setAlert(props, () => { console.log("_onSetAlert callback")});
+
+          return this;
+        },
+
+        _setAlerts(){
+          let alertBus = this._alertBus;
+
+         var alertStack = alertBus.getAlerts();
+         alertStack.map((alert) => {
+           alert.colorSchema = 'blue';
+         });
+
+          alertBus.setAlerts(alertStack, () => { console.log("_onSetAlerts callback")});
+
+          return this;
+        },
+
+        _removeAlert(){
+          let alertBus = this._alertBus;
+
+          let alert = alertBus.getAlerts()[0];
+
+          alert && alertBus.removeAlert(alert.id, () => { console.log("_onRemoveAlert callback")});
+
+          return this;
+        },
+
+        _clearAlerts(){
+          let alertBus = this._alertBus;
+
+          alertBus.clearAlerts(() => { console.log("_onClearAlerts callback")});
+
+          return this;
+        },
+
+        _getAlerts(){
+          let alertBus = this._alertBus;
+
+          console.log("Get alerts: ", alertBus.getAlerts());
+
+          return this;
+        },
+        /*@@viewOff:0*/
+
+        render() {
+          return (
+            <UU5.Bricks.Container>
+              <UU5.Bricks.Paragraph />
+              {/*@@viewOn:0*/}
+              <UU5.Bricks.ButtonGroup>
+                <UU5.Bricks.Button content="Add alert" onClick={this._addAlert} />
+                <UU5.Bricks.Button content="Add alert to position" onClick={this._addAlertToPosition} />
+                <UU5.Bricks.Button content="Set alert" onClick={this._setAlert} />
+                <UU5.Bricks.Button content="Set alerts" onClick={this._setAlerts} />
+                <UU5.Bricks.Button content="Remove alert" onClick={this._removeAlert} />
+                <UU5.Bricks.Button content="Clear alerts" onClick={this._clearAlerts} />
+                <UU5.Bricks.Button content="Get alerts" onClick={this._getAlerts} />
+              </UU5.Bricks.ButtonGroup>
+              <br /><br />
+
+              <UU5.Bricks.AlertBus ref_={(alertBus) => this._alertBus = alertBus} />
+              {/*@@viewOff:0*/}
+            </UU5.Bricks.Container>
+          );
+        }
+      });
+
+      UU5.Common.DOM.render(<Page />, document.getElementById('uu5Example'));
+    </script>
+  </body>
+</html>

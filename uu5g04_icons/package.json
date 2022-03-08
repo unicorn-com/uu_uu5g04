@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "Icons for UU5",
   "license": "UAF",
-  "spec": "uu5-lib; uu_appg01_devkit@4.0.0",
+  "spec": "uu5-lib; uu_appg01_devkit@4.2.0",
   "dependencies": {},
   "uuBuildSettings": {
     "packs": [
@@ -17,7 +17,7 @@
     ]
   },
   "devDependencies": {
-    "uu_appg01_devkit": "^4.0.0"
+    "uu_appg01_devkit": "^5.2.0"
   },
   "engines": {
     "node": ">=8.9.0"

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Example 02</title>
+
+    <link type="text/css" rel="stylesheet"
+          href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+    <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+
+    <script>
+      Uu5Loader.config({
+        "imports": {
+          "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+          "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+          "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+          "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+        }
+      });
+    </script>
+
+  </head>
+  <body>
+
+    <div id="uu5Example"></div>
+
+    <script type="text/babel">
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+
+      const Page = UU5.Common.VisualComponent.create({
+        render() {
+          return (
+            <UU5.Bricks.Container>
+              <UU5.Bricks.Row>
+                <UU5.Bricks.Column colWidth="xs-12 s-4" header="value">
+                  {/*@@viewOn:0*/}
+                  <UU5.Bricks.DateTime value={new Date()} />
+                  {/*@@viewOff:0*/}
+                </UU5.Bricks.Column>
+                <UU5.Bricks.Column colWidth="xs-12 s-4" header="format">
+                  {/*@@viewOn:0*/}
+                  <UU5.Bricks.DateTime value={new Date(2017, 2, 10, 13, 20, 15, 356)}
+                                       format="mm.dd.y HH:MM:SS T Z (w/52)" />
+                  {/*@@viewOff:0*/}
+                </UU5.Bricks.Column>
+                <UU5.Bricks.Column colWidth="xs-12 s-4" header="country">
+                  {/*@@viewOn:0*/}
+                  <UU5.Bricks.DateTime country="en-us" />
+                  {/*@@viewOff:0*/}
+                </UU5.Bricks.Column>
+              </UU5.Bricks.Row>
+              <UU5.Bricks.Row>
+                <UU5.Bricks.Column colWidth="xs-12 s-4" header="timeZone">
+                  {/*@@viewOn:0*/}
+                  <UU5.Bricks.DateTime timeOnly value={new Date()} timeZone={-3.5} />
+                  {/*@@viewOff:0*/}
+                </UU5.Bricks.Column>
+                <UU5.Bricks.Column colWidth="xs-12 s-4" header="dateOnly">
+                  {/*@@viewOn:0*/}
+                  <UU5.Bricks.DateTime dateOnly />
+                  {/*@@viewOff:0*/}
+                </UU5.Bricks.Column>
+                <UU5.Bricks.Column colWidth="xs-12 s-4" header="timeOnly">
+                  {/*@@viewOn:0*/}
+                  <UU5.Bricks.DateTime timeOnly />
+                  {/*@@viewOff:0*/}
+                </UU5.Bricks.Column>
+              </UU5.Bricks.Row>
+              <UU5.Bricks.Row>
+                <UU5.Bricks.Column colWidth="xs-12 s-5 m-6" header="secondsDisabled">
+                  {/*@@viewOn:0*/}
+                  <UU5.Bricks.DateTime secondsDisabled />
+                  {/*@@viewOff:0*/}
+                </UU5.Bricks.Column>
+              </UU5.Bricks.Row>
+            </UU5.Bricks.Container>
+          );
+        }
+      });
+
+      UU5.Common.DOM.render(<Page />, document.getElementById('uu5Example'));
+    </script>
+  </body>
+</html>

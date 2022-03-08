@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 00</title>
+
+  <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+  <script>
+    Uu5Loader.config({
+      "imports": {
+        "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js"
+      }
+    });
+  </script>
+
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+
+  const Page = UU5.Common.VisualComponent.create({
+    render() {
+      return (
+        <UU5.Bricks.Container>
+          {/*@@viewOn:0*/}
+          <UU5.Bricks.PortalModal ref_={modal => this._modal = modal} />
+          <UU5.Bricks.Button
+            content="Default modal with content"
+            onClick={() => this._modal.open({ content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis urna vel ex interdum, nec auctor mauris sollicitudin. Vivamus ut erat massa. Aenean placerat orci in erat aliquet, in molestie sem sagittis. Quisque euismod est nulla, ut gravida lorem molestie non. Duis vitae augue id eros euismod condimentum vitae gravida lacus. Aliquam erat volutpat. Sed condimentum nisi ac erat consequat, quis lacinia eros mollis. Vivamus placerat magna sit amet tortor imperdiet lobortis. Maecenas imperdiet, justo in bibendum condimentum, lacus magna rutrum eros, vitae vehicula dolor augue non neque. Curabitur faucibus fermentum tellus ut maximus. Curabitur condimentum aliquam dui non condimentum. Fusce et purus vel lacus feugiat vulputate pharetra eu arcu. Cras iaculis ut justo eget viverra. Vivamus fermentum quam sem, in mollis massa aliquam eget." })}
+          />
+          <br /><br />
+          <UU5.Bricks.Button
+            content="Modal with header, footer and content"
+            onClick={() => this._modal.open({
+              header: "Header",
+              footer: "Footer",
+              content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis urna vel ex interdum, nec auctor mauris sollicitudin. Vivamus ut erat massa. Aenean placerat orci in erat aliquet, in molestie sem sagittis. Quisque euismod est nulla, ut gravida lorem molestie non. Duis vitae augue id eros euismod condimentum vitae gravida lacus. Aliquam erat volutpat."
+            })}
+          />
+          <br /><br />
+          <UU5.Bricks.Button
+            content="Size S"
+            onClick={() => this._modal.open({ size: "s", header: "Size S" })}
+          />
+          <UU5.Bricks.Button
+            content="Size M"
+            onClick={() => this._modal.open({ size: "m", header: "Size M" })}
+          />
+          <UU5.Bricks.Button
+            content="Size L"
+            onClick={() => this._modal.open({ size: "l", header: "Size L" })}
+          />
+          <UU5.Bricks.Button
+            content="Size Auto"
+            onClick={() => this._modal.open({ size: "auto", header: "Size Auto" })}
+          />
+          <UU5.Bricks.Button
+            content="Size Max"
+            onClick={() => this._modal.open({ size: "max", header: "Size Max" })}
+          />
+          {/*@@viewOff:0*/}
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  UU5.Common.DOM.render(<Page />, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

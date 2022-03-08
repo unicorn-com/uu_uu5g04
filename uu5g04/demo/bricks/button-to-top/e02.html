@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Example 02</title>
+
+    <link type="text/css" rel="stylesheet"
+          href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+    <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+
+    <script>
+      Uu5Loader.config({
+        "imports": {
+          "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+          "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+          "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+          "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+        }
+      });
+    </script>
+
+    <style>
+      /*Nastavení relativní pozice tlačítka pro seřezení vedle sebe. Použito pro příklad Dema.*/
+      .relative.uu5-bricks-button-to-top.uu5-bricks-button {
+        position: relative;
+        right: auto;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <div id="uu5Example"></div>
+
+    <script type="text/babel">
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+
+      const Page = UU5.Common.VisualComponent.create({
+
+        //Automatické scrollování pouze pro příklad Dema
+        componentDidMount() {
+          UU5.Common.Tools.scrollToTarget(null, 0, 1);
+        },
+
+        render: function () {
+          return (
+            <UU5.Bricks.Container>
+              <UU5.Bricks.Section header="icon">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.ButtonToTop
+                  className="relative"
+                  size="l"
+                  bgStyle="filled"
+                  offset={0}
+                  icon="mdi-arrow-up"
+                />
+                <UU5.Bricks.ButtonToTop
+                  className="relative"
+                  size="l"
+                  colorSchema="blue"
+                  bgStyle="filled"
+                  offset={0}
+                  icon="mdi-arrow-up-bold"
+                />
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section header="size">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.ButtonToTop
+                  className="relative"
+                  size="s"
+                  colorSchema="red"
+                  offset={0}
+                />
+                <UU5.Bricks.ButtonToTop
+                  className="relative"
+                  size="m"
+                  colorSchema="pink"
+                  offset={0}
+                />
+                <UU5.Bricks.ButtonToTop
+                  className="relative"
+                  size="l"
+                  colorSchema="purple"
+                  offset={0}
+                />
+                <UU5.Bricks.ButtonToTop
+                  className="relative"
+                  size="xl"
+                  colorSchema="blue"
+                  offset={0}
+                />
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section header="bgStyle">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.ButtonToTop
+                  className="relative"
+                  size="l"
+                  colorSchema="cyan"
+                  bgStyle="filled"
+                  offset={0}
+                />
+                <UU5.Bricks.ButtonToTop
+                  className="relative"
+                  size="l"
+                  colorSchema="blue"
+                  bgStyle="transparent"
+                  offset={0}
+                />
+                <UU5.Bricks.ButtonToTop
+                  className="relative"
+                  size="l"
+                  colorSchema="red"
+                  bgStyle="outline"
+                  offset={0}
+                />
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section header="offset">
+                <br />
+                <UU5.Bricks.Blockquote>
+                  <UU5.Bricks.Icon icon="mdi-information" /> The button will appear in the right-bottom corner of the window after scrolling 200px.
+                </UU5.Bricks.Blockquote>
+                <br />
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.ButtonToTop
+                  size="l"
+                  colorSchema="orange"
+                  bgStyle="filled"
+                  offset={200}
+                />
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section header="scrollDuration">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.ButtonToTop
+                  className="relative"
+                  size="l"
+                  icon="mdi-play"
+                  colorSchema="red"
+                  scrollDuration={10000}
+                  offset={0}
+                />
+                <UU5.Bricks.ButtonToTop
+                  className="relative"
+                  size="l"
+                  icon="mdi-fast-forward"
+                  colorSchema="brown"
+                  scrollDuration={300}
+                  offset={0}
+                />
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section header="elevation">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.ButtonToTop
+                  className="relative"
+                  size="l"
+                  colorSchema="red"
+                  elevation="3"
+                  offset={0}
+                />
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section header="elevationHover">
+                <UU5.Bricks.ButtonToTop
+                  className="relative"
+                  size="l"
+                  colorSchema="red"
+                  elevationHover="3"
+                  offset={0}
+                />
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section header="borderRadius">
+                <UU5.Bricks.ButtonToTop
+                  className="relative"
+                  size="l"
+                  colorSchema="red"
+                  borderRadius="8px"
+                  offset={0}
+                />
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+            </UU5.Bricks.Container>
+          );
+        }
+      });
+
+      UU5.Common.DOM.render(<Page />, document.getElementById('uu5Example'));
+    </script>
+  </body>
+</html>

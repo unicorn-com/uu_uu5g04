@@ -28,13 +28,9 @@ export {
   useRef,
   useState,
 } from "uu5g05";
-export {
-  createComponent,
-  createComponentWithRef,
-  createVisualComponent,
-  createVisualComponentWithRef,
-  createHoc,
-} from "uu5g05";
+export { createComponent, createComponentWithRef, createHoc } from "uu5g05";
+export * from "./create-visual-component.js";
+export * from "./create-visual-component-with-ref.js";
 
 export { useCall } from "./use-call.js";
 export { useLanguage, LanguageProvider } from "./use-language.js";

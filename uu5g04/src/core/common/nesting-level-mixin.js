@@ -13,8 +13,7 @@
  * Praha 3, Czech Republic or at the email: info@unicorn.com.
  */
 
-import React from "react";
-import { PropTypes } from "uu5g05";
+import { PropTypes, Utils } from "uu5g05";
 import Environment from "../environment/environment.js";
 
 export const NestingLevelMixin = {
@@ -40,7 +39,7 @@ export const NestingLevelMixin = {
 
   //@@viewOn:propTypes
   propTypes: {
-    nestingLevel: PropTypes.oneOf(Environment.nestingLevelList),
+    nestingLevel: PropTypes.oneOf(Environment.nestingLevelList.concat(Utils.NestingLevel.valueList)),
   },
   //@@viewOff:propTypes
 
@@ -107,9 +106,11 @@ export const NestingLevelMixin = {
     // 2. Additionally, nestingLevel prop is "maximal" nesting level, therefore invalid nesting never happens... and
     //    therefore all warnings are now commented out.
 
+    let propsNestingLevel = Utils.NestingLevel._denormalizeLevel?.(props.nestingLevel) ?? props.nestingLevel;
+
     //step 1 - check prop nestingLevel
-    let nestingLevelEnvIndex = Environment.nestingLevelList.indexOf(props.nestingLevel);
-    let nestingLevel = nestingLevelEnvIndex > -1 ? props.nestingLevel : null;
+    let nestingLevelEnvIndex = Environment.nestingLevelList.indexOf(propsNestingLevel);
+    let nestingLevel = nestingLevelEnvIndex > -1 ? propsNestingLevel : null;
     //console.log("step 1 requestedNestingLevel:",nestingLevel);
 
     //step 2 - check nestingLevelList
@@ -117,8 +118,8 @@ export const NestingLevelMixin = {
     // let origNestingLevelList = nestingLevelList;
     //console.log("step 2 requestedNestingLevel:",nestingLevel,"nestingLevelList:",nestingLevelList,"parent::",parentNestingLevelComponent);
 
-    if (props.nestingLevel && nestingLevelEnvIndex === -1) {
-      this.showError("unsupportedNestingLevel", [props.nestingLevel, JSON.stringify(nestingLevelList)], {
+    if (propsNestingLevel && nestingLevelEnvIndex === -1) {
+      this.showError("unsupportedNestingLevel", [propsNestingLevel, JSON.stringify(nestingLevelList)], {
         mixinName: "UU5.Common.NestingLevelMixin",
       });
     }
@@ -197,12 +198,12 @@ export const NestingLevelMixin = {
 
     // //check nestingLevel rule nestingLevelMismatch
     // if (nestingLevelEnvIndex < calculatedNestingLevelIndex) {
-    //   if (props.nestingLevel) {
+    //   if (propsNestingLevel) {
     //     this.showError(
     //       "nestingLevelMismatchExplicitProp",
     //       [
     //         this.getTagName(),
-    //         props.nestingLevel,
+    //         propsNestingLevel,
     //         parentNestingLevelComponent.getTagName(),
     //         parentNestingLevel,
     //         JSON.stringify(calculatedNestingLevelList)

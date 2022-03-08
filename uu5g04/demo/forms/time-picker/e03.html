@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 03</title>
+
+  <link type="text/css" rel="stylesheet"
+        href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+  <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+
+  <script>
+    Uu5Loader.config({
+      "imports": {
+        "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+      }
+    });
+  </script>
+
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+
+  const Page = UU5.Common.VisualComponent.create({
+    render() {
+      return (
+        <UU5.Bricks.Container>
+          <UU5.Bricks.Section header="placeholder">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.TimePicker
+              label="Start of event"
+              placeholder="12:30"
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="required & requiredMessage">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.TimePicker
+              label="Start of event"
+              required
+              requiredMessage="This text input is required."
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="focusMessage">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.TimePicker
+              label="Start of event"
+              focusMessage='Enter beginning time of event, e.g 12:30.'
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="onFocus">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.TimePicker
+              label="Start of event"
+              onFocus={opt => {
+                console.log('onFocus', opt);
+              }}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="onBlur">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.TimePicker
+              label="Start of event"
+              onBlur={opt => {
+                alert('onBlur');
+                console.log("onBlur", opt);
+              }}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="onEnter">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.TimePicker
+              label="Start of event"
+              onEnter={opt => {
+                alert('onEnter');
+                console.log('onEnter', opt)
+              }}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="validateOnChange">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.TimePicker
+              label="Start of event"
+              validateOnChange
+              onValidate={opt => {
+                let feedback;
+                const pattern = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/;
+                if (pattern.test(opt.value)) {
+                  feedback = {
+                    feedback: 'success',
+                    message: 'Is valid.',
+                    value: opt.value
+                  };
+                } else {
+                  feedback = {
+                    feedback: 'error',
+                    message: 'Not valid.',
+                    value: opt.value
+                  };
+                }
+
+                return feedback;
+              }}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="bgStyle">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.TimePicker
+              label="filled"
+              bgStyle="filled"
+              colorSchema="blue"
+              placeholder="With colorSchema blue"
+            />
+
+            <UU5.Forms.TimePicker
+              label="outline"
+              bgStyle="outline"
+              colorSchema="blue"
+              placeholder="With colorSchema blue"
+            />
+
+            <UU5.Forms.TimePicker
+              label="underline"
+              bgStyle="underline"
+              colorSchema="blue"
+              placeholder="With colorSchema blue"
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="elevation">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.TimePicker
+              label="elevation -1"
+              elevation="-1"
+            />
+
+            <UU5.Forms.TimePicker
+              label="elevation 1"
+              elevation="1"
+            />
+
+            <UU5.Forms.TimePicker
+              label= "elevation 5"
+              elevation="5"
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="borderRadius">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.TimePicker
+              label="8px"
+              borderRadius="8px"
+            />
+
+            <UU5.Forms.TimePicker
+              label="8px"
+              borderRadius="8px"
+              bgStyle="filled"
+              colorSchema="blue"
+              placeholder="with bgStyle filled and colorSchema blue"
+            />
+
+            <UU5.Forms.TimePicker
+              label="8px"
+              borderRadius="8px"
+              bgStyle="outline"
+              colorSchema="blue"
+              placeholder="with bgStyle outline and colorSchema blue"
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  UU5.Common.DOM.render(<Page/>, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

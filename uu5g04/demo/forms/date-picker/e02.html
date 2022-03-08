@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example 02</title>
+
+  <link type="text/css" rel="stylesheet"
+        href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+  <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+
+  <script>
+    Uu5Loader.config({
+      "imports": {
+        "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+      }
+    });
+  </script>
+
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+
+  const Page = UU5.Common.VisualComponent.create({
+    getInitialState() {
+      return {
+        value1: '',
+        value2: '',
+        message2: null,
+        feedback2: null,
+      }
+    },
+
+    render() {
+      return (
+        <UU5.Bricks.Container>
+          <UU5.Bricks.Section header="label">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DatePicker
+              label='This is label'
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="message & feedback">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DatePicker
+              label="Date of birth"
+              feedback="warning"
+              message="Warning message"
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="placeholder">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DatePicker
+              label="Date of birth"
+              placeholder={UU5.Common.Tools.getDateString("1990-11-21", { country: "cs-cz" })}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="readOnly">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DatePicker
+              label="Date of birth"
+              value="1990-11-21"
+              readOnly
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="size">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DatePicker
+              label='Size s'
+              size="s"
+            />
+
+            <UU5.Forms.DatePicker
+              label='Size m'
+              size="m"
+            />
+
+            <UU5.Forms.DatePicker
+              label='Size l'
+              size="l"
+            />
+
+            <UU5.Forms.DatePicker
+              label='Size xl'
+              size="xl"
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="onChange">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DatePicker
+              label="Date of birth"
+              valueType="iso"
+              onChange={opt => {
+                this.setState({
+                  value1: opt.value
+                });
+              }}
+              value={this.state.value1}
+              feedback={new Date(this.state.value1) < new Date() ? 'error' : 'success'}
+              message={new Date(this.state.value1) < new Date() ?
+                'Value is incorrect.' :
+                'Value is correct.'
+              }
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="onChangeFeedback">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DatePicker
+              label="Date of birth"
+              valueType="iso"
+              onChangeFeedback={opt => {
+                this.setState({feedback2: opt.feedback, message2: opt.message});
+              }}
+              onChange={opt => {
+                this.setState({value2: opt.value});
+                if (new Date(opt.value) < new Date()) {
+                  opt.component.setSuccess('Value is correct.');
+                } else {
+                  opt.component.setError('Value is incorrect.');
+                }
+              }}
+              feedback={this.state.feedback2}
+              message={this.state.message2}
+              value={this.state.value2}
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="onValidate">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DatePicker
+              label="Date of birth"
+              valueType="iso"
+              onValidate={opt => {
+                let feedback;
+                if (new Date(opt.value) < new Date()) {
+                  feedback = {
+                    feedback: 'success',
+                    message: 'Value is correct.',
+                    value: opt.value
+                  };
+                } else {
+                  feedback = {
+                    feedback: 'error',
+                    message: 'Value is incorrect.',
+                    value: opt.value
+                  };
+                }
+
+                return feedback;
+              }}
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="labelColWidth inputColWidth">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DatePicker
+              label="Date of birth"
+              inputColWidth="xs-12 s-9"
+              labelColWidth="xs-12 s-3"
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="labelAlignment">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.Text
+              label="Date of birth"
+              labelAlignment="xs-right s-left"
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="inputWidth">
+            {/*@@viewOn:0*/}
+            Lorem ipsum<UU5.Forms.DatePicker label="label" inputWidth="auto" />dolor sit amet
+            <br />
+            <br />
+            Lorem ipsum<UU5.Forms.DatePicker label="label" inputWidth="150px" />dolor sit amet
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="spacing">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DatePicker label="unset spacing" required />
+            <UU5.Forms.DatePicker label="unset spacing" required />
+            <UU5.Forms.DatePicker label="spacing={9}" spacing={9} required />
+            <UU5.Forms.DatePicker label="spacing={4}" spacing={4} required />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="tooltip && tooltipIcon">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DatePicker label="Date of birth" tooltip={"Tooltip"} />
+            <UU5.Forms.DatePicker label="Date of birth" tooltipIcon="mdi-comment-question" tooltip={"Tooltip"} />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  UU5.Common.DOM.render(<Page/>, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 04</title>
+
+  <link type="text/css" rel="stylesheet"
+        href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+  <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+
+  <script>
+    Uu5Loader.config({
+      "imports": {
+        "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+      }
+    });
+  </script>
+
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+
+  const Page = UU5.Common.VisualComponent.create({
+    render() {
+      return (
+        <UU5.Bricks.Container>
+          <UU5.Bricks.Section header="categories">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.IconPicker
+              label="Icon"
+              categories={["uu5", "fa", "uubml"]}
+            />
+            {/*@@viewOff:0*/}
+            <UU5.Forms.IconPicker
+              label="Icon"
+              categories={["uu5", "fa", { code: "stateIcons", label: { cs: "stavové ikony", en: "state icons" }, iconList: ["uubml-state-s06", "uubml-state-s04"] }]}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="selectedCategory">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.IconPicker
+              label='"uu5"'
+              categories={["uu5", "mdi"]}
+              selectedCategory="uu5"
+            />
+            <UU5.Forms.IconPicker
+              label='"all"'
+              categories={["uu5", "mdi"]}
+              selectedCategory="all"
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="placeholder">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.IconPicker
+              label="Icon"
+              placeholder="Choose an icon"
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="disableBackdrop">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.IconPicker
+              label="Icon"
+              disableBackdrop
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="openToContent">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.IconPicker openToContent={true} />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="bgStyle">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.IconPicker
+              label="filled with colorSchema blue"
+              bgStyle="filled"
+              colorSchema="blue"
+            />
+
+            <UU5.Forms.IconPicker
+              label="outline with colorSchema blue"
+              bgStyle="outline"
+              colorSchema="blue"
+            />
+
+            <UU5.Forms.IconPicker
+              label="underline with colorSchema blue"
+              bgStyle="underline"
+              colorSchema="blue"
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="elevation">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.IconPicker
+              label="elevation -1"
+              elevation="-1"
+            />
+
+            <UU5.Forms.IconPicker
+              label="elevation 1"
+              elevation="1"
+            />
+
+            <UU5.Forms.IconPicker
+              label= "elevation 5"
+              elevation="5"
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="borderRadius">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.IconPicker
+              label="8px"
+              borderRadius="8px"
+            />
+
+            <UU5.Forms.IconPicker
+              label="8px with bgStyle filled and colorSchema blue"
+              borderRadius="8px"
+              bgStyle="filled"
+              colorSchema="blue"
+            />
+
+            <UU5.Forms.IconPicker
+              label="8px with bgStyle filled and colorSchema blue"
+              borderRadius="8px"
+              bgStyle="outline"
+              colorSchema="blue"
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="hideSearchInput">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.IconPicker
+              label="Icon"
+              hideSearchInput
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  UU5.Common.DOM.render(<Page/>, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

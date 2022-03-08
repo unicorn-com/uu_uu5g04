@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 01</title>
+
+  <link type="text/css" rel="stylesheet"
+        href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+  <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+
+  <script>
+    Uu5Loader.config({
+      "imports": {
+        "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+      }
+    });
+  </script>
+
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+
+  const Page = UU5.Common.VisualComponent.create({
+    render() {
+      return (
+        <UU5.Bricks.Container>
+          <UU5.Bricks.Row>
+            <UU5.Bricks.Column colWidth="xs-12 s-4">
+              {/*@@viewOn:0*/}
+              <UU5.Bricks.Button colorSchema="default">Default<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="yellow">Yellow<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="orange">Orange<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="red">Red<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="pink">Pink<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="purple">Purple<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="blue">Blue<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="cyan">Cyan<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="green">Green<UU5.Bricks.Icon icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="brown">Brown<UU5.Bricks.Icon icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="grey">Grey<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+
+              {/*@@viewOff:0*/}
+            </UU5.Bricks.Column>
+            <UU5.Bricks.Column colWidth="xs-12 s-4">
+              {/*@@viewOn:0*/}
+              <UU5.Bricks.Button colorSchema="default" bgStyle="outline">Default<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="yellow" bgStyle="outline">Yellow<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="orange" bgStyle="outline">Orange<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="red" bgStyle="outline">Red<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="pink" bgStyle="outline">Pink<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="purple" bgStyle="outline">Purple<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="blue" bgStyle="outline">Blue<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="cyan" bgStyle="outline">Cyan<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="green" bgStyle="outline">Green<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="brown" bgStyle="outline">Brown<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="grey" bgStyle="outline">Grey<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+
+              {/*@@viewOff:0*/}
+            </UU5.Bricks.Column>
+            <UU5.Bricks.Column colWidth="xs-12 s-4">
+              {/*@@viewOn:0*/}
+              <UU5.Bricks.Button colorSchema="default" bgStyle="transparent">Default<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="yellow" bgStyle="transparent">Yellow<UU5.Bricks.Icon icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="orange" bgStyle="transparent">Orange<UU5.Bricks.Icon icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="red" bgStyle="transparent">Red<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="pink" bgStyle="transparent">Pink<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="purple" bgStyle="transparent">Purple<UU5.Bricks.Icon icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="blue" bgStyle="transparent">Blue<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="cyan" bgStyle="transparent">Cyan<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="green" bgStyle="transparent">Green<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="brown" bgStyle="transparent">Brown<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+              <UU5.Bricks.Button colorSchema="grey" bgStyle="transparent">Grey<UU5.Bricks.Icon
+                icon="mdi-magnify"/></UU5.Bricks.Button><br/><br/>
+
+              {/*@@viewOff:0*/}
+            </UU5.Bricks.Column>
+          </UU5.Bricks.Row>
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  UU5.Common.DOM.render(<Page/>, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

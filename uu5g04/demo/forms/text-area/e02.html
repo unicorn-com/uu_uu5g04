@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example 02</title>
+
+  <link type="text/css" rel="stylesheet"
+        href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+  <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+
+  <script>
+    Uu5Loader.config({
+      "imports": {
+        "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+      }
+    });
+  </script>
+
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+
+  const Page = UU5.Common.VisualComponent.create({
+    getInitialState() {
+      return {
+        value1: 'John Smith',
+        value2: '',
+        message2: '',
+        feedback2: '',
+      }
+    },
+
+    render() {
+      return (
+        <UU5.Bricks.Container>
+          <UU5.Bricks.Section header="label">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.TextArea
+              label='This is label'
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="message & feedback">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.TextArea
+              label='Description'
+              placeholder='Insert text here.'
+              feedback="warning"
+              message="Warning message"
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="readOnly">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.TextArea
+              label='Description'
+              placeholder='Insert text here.'
+              value='Some description'
+              readOnly
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="size">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.TextArea
+              label='Size s'
+              size="s"
+            />
+
+            <UU5.Forms.TextArea
+              label='Size m'
+              size="m"
+            />
+
+            <UU5.Forms.TextArea
+              label='Size l'
+              size="l"
+            />
+
+            <UU5.Forms.TextArea
+              label='Size xl'
+              size="xl"
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="onChange">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.TextArea
+              label='Description'
+              placeholder='Insert text here.'
+              onChange={opt => {
+                this.setState({
+                  value1: opt.value
+                });
+              }}
+              value={this.state.value1}
+              feedback={this.state.value1.length < 5 ? 'error' : 'success'}
+              message={this.state.value1.length < 5 ?
+                'Value has less than 5 characters.' :
+                'Value has more than 5 characters.'
+              }
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="onChangeFeedback">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.TextArea
+              label='Description'
+              placeholder='Insert text here.'
+              onChangeFeedback={opt => {
+                this.setState({feedback2: opt.feedback, message2: opt.message});
+              }}
+              onChange={opt => {
+                this.setState({value2: opt.value});
+                if (opt.value && opt.value.length > 8) {
+                  opt.component.setSuccess('Value has more than 8 characters.');
+                } else if (opt.value && opt.value.length > 3) {
+                  opt.component.setWarning('Value has less than 7 characters.');
+                } else {
+                  opt.component.setError('Value has less than 3 characters.');
+                }
+              }}
+              feedback={this.state.feedback2}
+              message={this.state.message2}
+              value={this.state.value2}
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="onValidate">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.TextArea
+              label='Description'
+              placeholder='Insert text here.'
+              onValidate={opt => {
+                let feedback;
+                if (opt.value && opt.value.length > 5) {
+                  feedback = {
+                    feedback: 'success',
+                    message: 'Value has more than 5 characters.',
+                    value: opt.value
+                  };
+                } else {
+                  feedback = {
+                    feedback: 'error',
+                    message: 'Value has less than 5 characters.',
+                    value: opt.value
+                  };
+                }
+
+                return feedback;
+              }}
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="labelColWidth inputColWidth">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.TextArea
+              label='Description'
+              placeholder='Insert text here.'
+              inputColWidth="xs-12 s-9"
+              labelColWidth="xs-12 s-3"
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="labelAlignment">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.TextArea
+              label='Description'
+              placeholder='Insert text here.'
+              labelAlignment="xs-right s-left"
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="inputAttrs">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.TextArea
+              label='Description'
+              placeholder='Insert text here.'
+              inputAttrs={{
+                onClick: () => {
+                  const color = 'rgb(' +
+                    Math.ceil(Math.random() * 255) + ',' +
+                    Math.ceil(Math.random() * 255) + ',' +
+                    Math.ceil(Math.random() * 255) + ')';
+                  this.setState({bgColor: color});
+                },
+                style: {backgroundColor: this.state.bgColor}
+              }}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="inputWidth">
+            {/*@@viewOn:0*/}
+            Lorem ipsum<UU5.Forms.TextArea label="label" inputWidth="auto" />dolor sit amet
+            <br />
+            <br />
+            Lorem ipsum<UU5.Forms.TextArea label="label" inputWidth="150px" />dolor sit amet
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="spacing">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.TextArea label="unset spacing" required />
+            <UU5.Forms.TextArea label="unset spacing" required />
+            <UU5.Forms.TextArea label="spacing={9}" spacing={9} required />
+            <UU5.Forms.TextArea label="spacing={4}" spacing={4} required />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="tooltip && tooltipIcon">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.TextArea label="label" tooltip="Tooltip" />
+            <UU5.Forms.TextArea label="label" tooltipIcon="mdi-comment-question" tooltip="Tooltip" />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  UU5.Common.DOM.render(<Page/>, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

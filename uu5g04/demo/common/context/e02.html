@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Context 02</title>
+
+  <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+  <script>
+    Uu5Loader.config({
+      "imports": {
+        "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-hooks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-hooks.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js"
+      }
+    });
+  </script>
+
+  <style>
+    .uu5-bricks-box {
+      overflow: visible !important;
+    }
+  </style>
+</head>
+<body>
+<div id="uu5Example"></div>
+
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import { createComponent, createVisualComponent, useState, useContext, useMemo } from "uu5g04-hooks";
+  import "uu5g04-bricks";
+
+  //@@viewOn:example
+  const LanguageContext = UU5.Common.Context.create();
+
+  function useLanguage() {
+    return useContext(LanguageContext);
+  }
+
+  const Language = createComponent({
+    //@@viewOn:statics
+    displayName: "UU5.Demo.Language",
+    //@@viewOff:statics
+
+    //@@viewOn:propTypes
+    propTypes: {
+      lsi: UU5.PropTypes.object
+    },
+    //@@viewOff:propTypes
+
+    //@@viewOn:defaultProps
+    defaultProps: {
+      lsi: {}
+    },
+    //@@viewOff:defaultProps
+
+    render(props) {
+      //@@viewOn:hooks
+      const { language } = useLanguage();
+      //@@viewOff:hooks
+
+      //@@viewOn:interface
+      //@@viewOff:interface
+
+      //@@viewOn:private
+      //@@viewOff:private
+
+      //@@viewOn:render
+      return props.lsi[language] || null;
+      //@@viewOff:render
+    }
+  });
+
+  const LanguageProvider = createComponent({
+    //@@viewOn:statics
+    displayName: "UU5.Demo.LanguageProvider",
+    //@@viewOff:statics
+
+    //@@viewOn:propTypes
+    //@@viewOff:propTypes
+
+    //@@viewOn:defaultProps
+    //@@viewOff:defaultProps
+
+    render(props) {
+      //@@viewOn:hooks
+      const [language, setLanguage] = useState("en");
+
+      const value = useMemo(() => ({ language, setLanguage }), [language, setLanguage]);
+      //@@viewOff:hooks
+
+      //@@viewOn:interface
+      //@@viewOff:interface
+
+      //@@viewOn:private
+      //@@viewOff:private
+
+      //@@viewOn:render
+      return (
+        <LanguageContext.Provider value={value}>
+          {props.children}
+        </LanguageContext.Provider>
+      )
+      //@@viewOff:render
+    }
+  });
+
+  const LANGUAGES = ["cs", "en", "sk"];
+
+  const LanguageSelector = createVisualComponent({
+    //@@viewOn:statics
+    displayName: "UU5.Demo.LanguageSelector",
+    nestingLevel: "smallBox",
+    //@@viewOff:statics
+
+    //@@viewOn:propTypes
+    //@@viewOff:propTypes
+
+    //@@viewOn:defaultProps
+    //@@viewOff:defaultProps
+
+    render(props) {
+      //@@viewOn:hooks
+      const { language, setLanguage } = useLanguage();
+      //@@viewOff:hooks
+
+      //@@viewOn:interface
+      //@@viewOff:interface
+
+      //@@viewOn:private
+      const languages = [...LANGUAGES];
+      const index = languages.indexOf(language.replace("-.*", ""));
+      languages.splice(index, 1);
+      //@@viewOff:private
+
+      //@@viewOn:render
+      return (
+        <UU5.Bricks.Dropdown
+          label={language}
+          items={languages.map(lang => ({ label: lang, onClick: () => setLanguage(lang) }))}
+        />
+      );
+      //@@viewOff:render
+    }
+  });
+
+  const LSI = { cs: "Borůvka", en: "Blueberry", sk: "Čučoriedka" };
+
+  function Page() {
+    return (
+      <UU5.Bricks.Container>
+        <UU5.Bricks.Box colorSchema="info">
+          <LanguageProvider>
+            <LanguageSelector /><br />
+            <Language lsi={LSI} />
+
+            <UU5.Bricks.Box colorSchema="danger">
+              <LanguageProvider>
+                <LanguageSelector /><br />
+                <Language lsi={LSI} />
+              </LanguageProvider>
+            </UU5.Bricks.Box>
+
+            <Language lsi={LSI} />
+          </LanguageProvider>
+        </UU5.Bricks.Box>
+      </UU5.Bricks.Container>
+    );
+  }
+
+  /*@@viewOff:example*/
+
+  UU5.Common.DOM.render(<Page />, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

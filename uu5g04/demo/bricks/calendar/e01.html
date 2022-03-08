@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example 01</title>
+
+  <link type="text/css" rel="stylesheet"
+        href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+  <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+
+  <script>
+    Uu5Loader.config({
+      "imports": {
+        "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js"
+      }
+    });
+  </script>
+
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+
+  const Page = UU5.Common.VisualComponent.create({
+    render() {
+      return (
+        <UU5.Bricks.Container>
+          {/*@@viewOn:0*/}
+
+          <UU5.Bricks.Section header="color-schema-default" colorSchema="default" level={4}>
+            <UU5.Bricks.Calendar colorSchema="default" />
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="color-schema-yellow" colorSchema="yellow" level={4}>
+            <UU5.Bricks.Calendar colorSchema="yellow" />
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="color-schema-orange" colorSchema="orange" level={4}>
+            <UU5.Bricks.Calendar colorSchema="orange" />
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="color-schema-red" colorSchema="red" level={4}>
+            <UU5.Bricks.Calendar colorSchema="red" />
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="color-schema-pink" colorSchema="pink" level={4}>
+            <UU5.Bricks.Calendar colorSchema="pink" />
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="color-schema-purple" colorSchema="purple" level={4}>
+            <UU5.Bricks.Calendar colorSchema="purple" />
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="color-schema-blue" colorSchema="blue" level={4}>
+            <UU5.Bricks.Calendar colorSchema="blue" />
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="color-schema-cyan" colorSchema="cyan" level={4}>
+            <UU5.Bricks.Calendar colorSchema="cyan" />
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="color-schema-green" colorSchema="green" level={4}>
+            <UU5.Bricks.Calendar colorSchema="green" />
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="color-schema-brown" colorSchema="brown" level={4}>
+            <UU5.Bricks.Calendar colorSchema="brown" />
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="color-schema-grey" colorSchema="grey" level={4}>
+            <UU5.Bricks.Calendar colorSchema="grey" />
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="color-schema-custom" colorSchema="custom" level={4}>
+            <UU5.Bricks.Calendar colorSchema="custom" />
+          </UU5.Bricks.Section>
+          {/*@@viewOff:0*/}
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  UU5.Common.DOM.render(<Page/>, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

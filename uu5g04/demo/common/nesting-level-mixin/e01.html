@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Example 01</title>
+
+    <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+
+    <script>
+      Uu5Loader.config({
+        "imports": {
+          "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+          "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+          "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+          "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+        }
+      });
+    </script>
+    <style>
+      html {
+        height: inherit !important;
+      }
+
+
+      .uu5-bricks-page-content,
+      .uu5-bricks-container > .uu5-bricks-row,
+      .uu5-bricks-section,
+      .uu5-bricks-box .uu5-bricks-box,
+      .uu5-common-div > .uu5-bricks-row {
+        background-color: #e0f7fa;
+        padding: 0 24px 24px 24px;
+      }
+
+      .uu5-example-spacomponent,
+      .uu5-bricks-container,
+      .uu5-bricks-box,
+      .uu5-bricks-column {
+        background-color: #00bcd4;
+        padding: 0 24px 24px 24px;
+      }
+
+      .uu5-bricks-container > .uu5-bricks-row > .uu5-bricks-column,
+      .uu5-bricks-column .uu5-bricks-box {
+        padding: 0 24px 24px 24px !important;
+      }
+
+      .uu5-example-spacomponent,
+      .uu5-bricks-section {
+        overflow: auto;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <div id="uu5Example"></div>
+
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+
+      const SpaComponent = createReactClass({
+
+        mixins: [
+          UU5.Common.BaseMixin,
+          UU5.Common.ElementaryMixin,
+          UU5.Common.NestingLevelMixin,
+          UU5.Common.SectionMixin
+        ],
+
+        statics: {
+          tagName: 'UU5.Example.SpaComponent',
+          nestingLevel: 'spa',
+          classNames: {
+            main: 'uu5-example-spacomponent'
+          }
+        },
+
+        render() {
+          return (
+            this.getNestingLevel()
+              ? (
+                <div {...this.getMainAttrs()}>
+                  {this.getHeaderChild()}
+                  {this.getChildren()}
+                  {this.getDisabledCover()}
+                </div>
+              ) : null
+          );
+        }
+      });
+
+      const Page = createReactClass({
+        render() {
+          return (
+            /*@@viewOn:0*/
+            <SpaComponent header="Spa - spa" level="1">
+              <UU5.Bricks.Page
+                top={<UU5.Bricks.Header>Page - page</UU5.Bricks.Header>}
+              >
+                <UU5.Bricks.Container header="Container - container">
+                  <UU5.Bricks.Row header="Row - bigBoxCollection">
+                    <UU5.Bricks.Column header="Column - bigBox" nestingLevel="bigBox">
+                      <UU5.Bricks.Section header="Section - boxCollection" level="5" nestingLevel="boxCollection">
+                        <UU5.Bricks.Box nestingLevel="box">
+                          Box - box
+                          <UU5.Bricks.Box>
+                            Box - smallBoxCollection<br/>
+                            <UU5.Bricks.Button colorSchema="cyan">
+                              Button - smallBox <UU5.Bricks.Label colorSchema="cyan-rich" content="Label - inline" />
+                            </UU5.Bricks.Button>
+                          </UU5.Bricks.Box>
+                        </UU5.Bricks.Box>
+                      </UU5.Bricks.Section>
+                    </UU5.Bricks.Column>
+                  </UU5.Bricks.Row>
+                </UU5.Bricks.Container>
+              </UU5.Bricks.Page>
+            </SpaComponent>
+            /*@@viewOff:0*/
+          );
+        }
+      });
+
+      ReactDOM.render(<Page />, document.getElementById('uu5Example'));
+    </script>
+  </body>
+</html>

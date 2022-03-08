@@ -67,10 +67,10 @@ describe("UU5.Utils.NestingLevel", () => {
     expect(level).toBe("smallBoxCollection");
 
     level = UU5.Utils.NestingLevel.getNestingLevel({ nestingLevel: "asdf" }, {});
-    expect(level).toBe("bigBoxCollection");
+    expect(level).toBe(UU5.Utils.NestingLevel.values[0]);
 
     level = UU5.Utils.NestingLevel.getNestingLevel({}, {});
-    expect(level).toBe("bigBoxCollection");
+    expect(level).toBe(UU5.Utils.NestingLevel.values[0]);
 
     // test finding of nearest parent with NestingLevelMixin and using its nestingLevel
     // (which child will then use to derive its own nesting level)
@@ -150,10 +150,10 @@ describe("UU5.Utils.NestingLevel", () => {
     expect(level).toBe("smallBoxCollection");
 
     level = UU5.Utils.NestingLevel.getChildNestingLevel({ nestingLevel: "asdf" }, {});
-    expect(level).toBe("bigBoxCollection");
+    expect(level).toBe(UU5.Utils.NestingLevel.values[1]);
 
     level = UU5.Utils.NestingLevel.getChildNestingLevel({}, {});
-    expect(level).toBe("bigBoxCollection");
+    expect(level).toBe(UU5.Utils.NestingLevel.values[1]);
 
     // test finding of nearest parent with NestingLevelMixin and using its nestingLevel
     // (which child will then use to derive its own nesting level)

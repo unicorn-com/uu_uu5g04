@@ -8,42 +8,15 @@
     />
     <title>SwitchSelector Demo</title>
 
-    <script>
-      if (!location.href.match(/^(about:|file:)/)) {
-        var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
-        var bplSegmentCount = bplCookie ? Number(bplCookie[2]) : null;
-        if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
-        var appBaseUrlPath = (
-          location.pathname
-            .split(/\//)
-            .slice(0, 1 + bplSegmentCount)
-            .join("/") + "/"
-        )
-          .replace(/\/+/g, "/")
-          .replace(/"/g, "");
-        var appAssetsRelativeUrlPath = "public/0.0.0/";
-        document.write(
-          '<base href="' +
-            appBaseUrlPath +
-            appAssetsRelativeUrlPath +
-            '" data-uu-app-base="' +
-            appBaseUrlPath +
-            '" data-uu-app-assets-base="' +
-            appAssetsRelativeUrlPath +
-            '">'
-        );
-      }
-    </script>
-
-    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+    <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
     <script>
       var uu5g04 = "";
       location.search.replace(/[?&]uu5g04=([^&#]*)/, function(m, g1) {
         uu5g04 = g1;
       });
       var uu5g04Base = uu5g04 === "" ? "/" : "https://cdn.plus4u.net/uu-uu5g04/" + uu5g04 + "/";
-      SystemJS.config({
-        paths: {
+      Uu5Loader.config({
+        imports: {
           systemjs: "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
           react: "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
           "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
@@ -60,8 +33,6 @@
   <body>
     <div id="renderHere"></div>
 
-    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
-    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
     <script type="text/babel">
       import React from "react";
       import createReactClass from "create-react-class";

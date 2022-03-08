@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 03</title>
+
+  <link type="text/css" rel="stylesheet"
+        href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+  <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+
+  <script>
+    Uu5Loader.config({
+      "imports": {
+        "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+      }
+    });
+  </script>
+
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+
+  const Page = UU5.Common.VisualComponent.create({
+    render() {
+      return (
+        <UU5.Bricks.Container>
+          <UU5.Bricks.Section header="value">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.Radios
+              label="What kind of pets do you like?"
+              value={[
+                {label: 'Dogs', name: 'dogs', value: true},
+                {label: 'Cats', name: 'cats'},
+                {label: 'Yaks', name: 'yaks', disabled: true},
+                {label: 'Rabbits', name: 'rabbits', value: true},
+                {label: 'Hamsters', name: 'hamsters'}
+              ]}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="required & requiredMessage">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.Radios
+              label="What kind of pets do you like?"
+              required
+              requiredMessage="Choose at least one option."
+              value={[
+                {label: 'Dogs', name: 'dogs'},
+                {label: 'Cats', name: 'cats'},
+                {label: 'Yaks', name: 'yaks'},
+              ]}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+
+          <UU5.Bricks.Section header="onIcon offIcon">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.Radios
+              label="What kind of pets do you like?"
+              onIcon="mdi-star"
+              offIcon="mdi-calendar"
+              value={[
+                {label: 'Dogs', name: 'dogs'},
+                {label: 'Cats', name: 'cats'},
+                {label: 'Yaks', name: 'yaks'},
+              ]}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="inline">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.Radios
+              label="What kind of pets do you like?"
+              inline
+              value={[
+                {label: 'Dogs', name: 'dogs'},
+                {label: 'Cats', name: 'cats'},
+                {label: 'Yaks', name: 'yaks'},
+              ]}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="labelPosition">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.Radios
+              label="What kind of pets do you like?"
+              labelPosition="left"
+              value={[
+                {label: 'Dogs', name: 'dogs'},
+                {label: 'Cats', name: 'cats'},
+                {label: 'Yaks', name: 'yaks'},
+              ]}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  UU5.Common.DOM.render(<Page/>, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 01</title>
+
+  <link type="text/css" rel="stylesheet"
+        href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+  <script src="https://cdn.plus4u.net/uu-uu5loaderg01/1.0.0/uu5loaderg01.min.js" crossorigin="anonymous"></script>
+
+  <script>
+    Uu5Loader.config({
+      "imports": {
+        "react": "https://cdn.plus4u.net/libs/react/16.14.0/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.14.0/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+      }
+    });
+  </script>
+
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script type="text/babel">
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+
+  const Page = UU5.Common.VisualComponent.create({
+    render() {
+      return (
+        <UU5.Bricks.Container>
+          <UU5.Bricks.Column colWidth="xs-12 s-6">
+            {/*@@viewOn:0*/}
+            <UU5.Bricks.Alert
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+              header="Default" block/>
+            <UU5.Bricks.Alert
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+              header="Yellow" colorSchema="yellow" block/>
+            <UU5.Bricks.Alert
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+              header="Orange" colorSchema="orange" block/>
+            <UU5.Bricks.Alert
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+              header="Red" colorSchema="red" block/>
+            <UU5.Bricks.Alert
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+              header="Pink" colorSchema="pink" block/>
+            <UU5.Bricks.Alert
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+              header="Purple" colorSchema="purple" block/>
+            <UU5.Bricks.Alert
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+              header="Blue" colorSchema="blue" block/>
+            <UU5.Bricks.Alert
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+              header="Cyan" colorSchema="cyan" block/>
+            <UU5.Bricks.Alert
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+              header="Green" colorSchema="green" block/>
+            <UU5.Bricks.Alert
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+              header="Brown" colorSchema="brown" block/>
+            <UU5.Bricks.Alert
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+              header="Grey" colorSchema="grey" block/>
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Column>
+          <UU5.Bricks.Column colWidth="xs-12 s-6">
+            {/*@@viewOn:0*/}
+            <UU5.Bricks.Alert
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+              header="Default" block/>
+            <UU5.Bricks.Alert
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+              header="Yellow-rich" colorSchema="yellow-rich" block/>
+            <UU5.Bricks.Alert
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+              header="Orange-rich" colorSchema="orange-rich" block/>
+            <UU5.Bricks.Alert
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+              header="Red-rich" colorSchema="red-rich" block/>
+            <UU5.Bricks.Alert
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+              header="Pink-rich" colorSchema="pink-rich" block/>
+            <UU5.Bricks.Alert
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+              header="Purple-rich" colorSchema="purple-rich" block/>
+            <UU5.Bricks.Alert
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+              header="Blue-rich" colorSchema="blue-rich" block/>
+            <UU5.Bricks.Alert
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+              header="Cyan-rich" colorSchema="cyan-rich" block/>
+            <UU5.Bricks.Alert
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+              header="Green-rich" colorSchema="green-rich" block/>
+            <UU5.Bricks.Alert
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+              header="Brown-rich" colorSchema="brown-rich" block/>
+            <UU5.Bricks.Alert
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum placerat tristique."
+              header="Grey-rich" colorSchema="grey-rich" block/>
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Column>
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  UU5.Common.DOM.render(<Page/>, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>
