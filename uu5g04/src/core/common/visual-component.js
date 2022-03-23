@@ -18,11 +18,13 @@ import { Utils, PropTypes } from "uu5g05";
 import Environment from "../environment/environment.js";
 import { createComponent } from "./component.js";
 import { preprocessors } from "./component-processors.js";
+import Tools from "./tools.js";
 // import { SYMBOL_COMPONENT, SYMBOL_INIT, SYMBOL_GUARD } from "./component-symbols";
 //@@viewOff:imports
 
-preprocessors.push(addBasicVisualPropsPreprocessor);
+let warnedNoIndexGlobally = false;
 
+preprocessors.push(addBasicVisualPropsPreprocessor);
 export class VisualComponent {
   static propTypes = Object.freeze({
     id: PropTypes.string,
@@ -31,7 +33,7 @@ export class VisualComponent {
     disabled: PropTypes.bool,
     hidden: PropTypes.bool,
     mainAttrs: PropTypes.object,
-    noIndex: PropTypes.bool,
+    fullTextSearchPriority: PropTypes.oneOf([0, 1, 2, 3, 4, 5]),
     nestingLevel: PropTypes.oneOf(Environment.nestingLevelList),
   });
 
@@ -42,7 +44,7 @@ export class VisualComponent {
     disabled: undefined,
     hidden: undefined,
     mainAttrs: undefined,
-    noIndex: undefined,
+    fullTextSearchPriority: undefined,
     nestingLevel: undefined,
   });
 
@@ -51,7 +53,22 @@ export class VisualComponent {
   }
 
   static getAttrs(props, nextClassName) {
-    const attrs = Utils.VisualComponent.getAttrs({ ...props, elementAttrs: props.mainAttrs }, nextClassName);
+    if (process.env.NODE_ENV === "development") {
+      if (props.noIndex && !warnedNoIndexGlobally) {
+        warnedNoIndexGlobally = true;
+        Tools.warning('Property "noIndex" is deprecated! Use "fullTextSearchPriority=0" instead.');
+      }
+    }
+    const { className, mainAttrs, noIndex, fullTextSearchPriority, ...restProps } = props;
+    const attrs = Utils.VisualComponent.getAttrs(
+      {
+        ...restProps,
+        elementAttrs: mainAttrs,
+        className: noIndex ? (className ? className + " " : "") + "uu5-noindex" : className,
+        fullTextSearchPriority: fullTextSearchPriority ?? (noIndex ? 0 : undefined),
+      },
+      nextClassName
+    );
     delete attrs.ref;
     return attrs;
   }
@@ -75,7 +92,7 @@ function addBasicVisualPropsPreprocessor(componentDescriptor) {
         };
       } else if (typeof componentDescriptor.getDefaultProps === "function") {
         let origGDP = componentDescriptor.getDefaultProps;
-        componentDescriptor.getDefaultProps = function() {
+        componentDescriptor.getDefaultProps = function () {
           let result = origGDP.apply(this);
           return {
             ...VisualComponent.defaultProps,

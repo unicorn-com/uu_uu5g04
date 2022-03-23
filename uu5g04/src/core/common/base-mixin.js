@@ -20,6 +20,8 @@ import Style from "../utils/style.js";
 import DOM from "./dom";
 import RefUsageTelemetry from "./internal/ref-usage-telemetry.js";
 
+let warnedNoIndexGlobally = false;
+
 export const BaseMixin = {
   //@@viewOn:statics
   statics: {
@@ -57,7 +59,7 @@ export const BaseMixin = {
     mainAttrs: PropTypes.object,
     parent: PropTypes.object,
     ref_: PropTypes.oneOfType([PropTypes.func, PropTypes.shape({ current: PropTypes.any })]),
-    noIndex: PropTypes.bool,
+    fullTextSearchPriority: PropTypes.oneOf([0, 1, 2, 3, 4, 5]),
     editable: PropTypes.bool,
     contentEditable: PropTypes.bool,
   },
@@ -74,7 +76,7 @@ export const BaseMixin = {
       mainAttrs: null,
       parent: null,
       ref_: null,
-      noIndex: false,
+      fullTextSearchPriority: undefined,
     };
   },
   //@@viewOff:getDefaultProps
@@ -90,6 +92,11 @@ export const BaseMixin = {
   },
 
   componentDidMount: function () {
+    if (this.props.noIndex && !warnedNoIndexGlobally) {
+      warnedNoIndexGlobally = true;
+      this.showWarning('Property "noIndex" is deprecated! Use "fullTextSearchPriority=0" instead.');
+    }
+
     if (
       (typeof this.props.ref_ === "function" || (typeof this.props.ref_ === "object" && this.props.ref_ !== null)) &&
       (!this.constructor.opt || !this.constructor.opt.hoc)
@@ -462,8 +469,12 @@ export const BaseMixin = {
       mainAttrs: this.props.mainAttrs && this.props.mainAttrs.className,
     };
 
+    if (typeof this.props.fullTextSearchPriority === "number" && !this.getOpt("hoc")) {
+      classes.main += " uu-fulltextsearch-" + this.props.fullTextSearchPriority;
+    }
     if (this.props.noIndex && !this.getOpt("hoc")) {
       classes.main += " uu5-noindex";
+      if (typeof this.props.fullTextSearchPriority !== "number") classes.main += " uu-fulltextsearch-0";
     }
 
     this.getMixinRegister().forEach(function (v) {

@@ -601,6 +601,14 @@ const BricksLsi = {
       en: "Edit panel",
     },
   },
+  cookieBar: {
+    close: {
+      cs: "Zavřít",
+      en: "Close",
+      sk: "Zavrieť",
+      uk: "Закрити",
+    }
+  }
 };
 
 function getWeekDayNamesShort(lang) {

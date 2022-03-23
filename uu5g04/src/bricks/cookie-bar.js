@@ -24,6 +24,8 @@ import Button from "./button.js";
 import Icon from "./icon.js";
 
 import "./cookie-bar.less";
+import Lsi from "./lsi.js";
+import lsi from "./bricks-lsi.js";
 //@@viewOff:imports
 
 export const CookieBar = UU5.Common.VisualComponent.create({
@@ -49,6 +51,7 @@ export const CookieBar = UU5.Common.VisualComponent.create({
       bottom: ns.css("cookie-bar-bottom"),
       button: ns.css("cookie-bar-button"),
       link: ns.css("cookie-bar-link"),
+      controls: ns.css("cookie-bar-controls"),
     },
     defaults: {
       content:
@@ -74,6 +77,9 @@ export const CookieBar = UU5.Common.VisualComponent.create({
     agreedText: UU5.PropTypes.node,
     agreedBgStyle: UU5.PropTypes.string,
     agreedColorSchema: UU5.PropTypes.string,
+    closedText: UU5.PropTypes.node,
+    closedBgStyle: UU5.PropTypes.string,
+    closedColorSchema: UU5.PropTypes.string,
   },
   //@@viewOff:propTypes
 
@@ -91,6 +97,9 @@ export const CookieBar = UU5.Common.VisualComponent.create({
       agreedText: undefined,
       agreedBgStyle: "transparent",
       agreedColorSchema: undefined,
+      closedText: undefined,
+      closedBgStyle: undefined,
+      closedColorSchema: "default",
     };
   },
   //@@viewOff:getDefaultProps
@@ -156,19 +165,6 @@ export const CookieBar = UU5.Common.VisualComponent.create({
     return <Span content={content}>{this.props.children && UU5.Common.Children.toArray(this.props.children)}</Span>;
   },
 
-  _getButton() {
-    return (
-      <Button
-        className={this.getClassName("button")}
-        bgStyle={this.props.agreedBgStyle}
-        colorSchema={this.props.agreedColorSchema || (this.props.colorSchema !== "black" ? "custom" : null)}
-        onClick={this.props.expireDays ? this._confirm : this._setLocalStorageItem}
-      >
-        {this.props.agreedText || <Icon icon="mdi-close" />}
-      </Button>
-    );
-  },
-
   _getLink() {
     var link = null;
 
@@ -206,7 +202,26 @@ export const CookieBar = UU5.Common.VisualComponent.create({
           {this._getText()}
           {this._getLink()}
         </div>
-        {this._getButton()}
+        <div className={this.getClassName("controls")}>
+          <Button
+            className={this.getClassName("button")}
+            bgStyle={this.props.agreedBgStyle}
+            colorSchema={this.props.agreedColorSchema || (this.props.colorSchema !== "black" ? "custom" : null)}
+            onClick={this.props.expireDays ? this._confirm : this._setLocalStorageItem}
+          >
+            {this.props.agreedText || <Icon icon="mdi-close" />}
+          </Button>
+          {this.props.agreedText ? (
+            <Button
+              className={this.getClassName("button")}
+              bgStyle={this.props.closedBgStyle}
+              colorSchema={this.props.closedColorSchema}
+              onClick={() => this.hide(this.props.onClose)}
+            >
+              {this.props.closedText || <Lsi lsi={lsi.cookieBar.close} />}
+            </Button>
+          ) : null}
+        </div>
       </Div>
     );
   },
